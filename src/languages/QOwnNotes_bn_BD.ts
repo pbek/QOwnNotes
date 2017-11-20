@@ -53,7 +53,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="80"/>
       <source>To get such an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes..." in the File menu.</source>
-      <translation type="unfinished">To get such an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes..." in the File menu.</translation>
+      <translation>Enex ফাইল পেতে আপনি এক বা একাধিক নোট Evernotes ডেস্কটপ ক্লায়েন্ট নির্বাচন করুন এবং ক্লিক করুন 'নোট... ফাইল মেনুতে রপ্তানি' দরকার।</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="101"/>
@@ -117,7 +117,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="271"/>
       <source>If you have created a nice color schema please export it and share it with everyone!</source>
-      <translation type="unfinished">If you have created a nice color schema please export it and share it with everyone!</translation>
+      <translation>আপনি সুন্দর রং স্কীমা তৈরি করে থাকেন, দয়া করে তা রপ্তানি এবং তা সবার সাথে শেয়ার করুন!</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="155"/>
@@ -270,53 +270,53 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="209"/>
       <source>Horizontal rule</source>
-      <translation type="unfinished">Horizontal rule</translation>
+      <translation>অনুভূমিক রুল</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="217"/>
       <source>Current line background color</source>
-      <translation type="unfinished">Current line background color</translation>
+      <translation>বর্তমান লাইনের পটভূমির রং</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="227"/>
       <source>This item will be used to preset colors for the other items</source>
-      <translation type="unfinished">This item will be used to preset colors for the other items</translation>
+      <translation>এই আইটেমটি রং অন্যান্য বিষয়োপকরণের জন্য টুল পরামর্শসমূহ সম্পুরক নিধারন করতে ব্যবহার করা হবে</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="458"/>
       <source>Copy color schema</source>
-      <translation type="unfinished">Copy color schema</translation>
+      <translation>রং স্কীমা কপি</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="459"/>
       <source>Color schema name</source>
-      <translation type="unfinished">Color schema name</translation>
+      <translation>রঙ স্কীমার নাম</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="583"/>
       <source>Remove schema</source>
-      <translation type="unfinished">Remove schema</translation>
+      <translation>স্কীমা অপসারণ করুন</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="584"/>
       <source>Remove current schema? This cannot be undone!</source>
-      <translation type="unfinished">Remove current schema? This cannot be undone!</translation>
+      <translation>বর্তমান স্কীমা অপসারণ করা হবে? পূর্বাবস্থা করা যাবে না!</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="585"/>
       <source>Remove</source>
-      <translation type="unfinished">Remove</translation>
+      <translation>অপসারণ করুন</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="585"/>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>বাতিল</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="632"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="675"/>
       <source>INI files</source>
-      <translation type="unfinished">INI files</translation>
+      <translation>INI ফাইল</translation>
     </message>
   </context>
   <context>
@@ -324,37 +324,37 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="14"/>
       <source>Link an url or note</source>
-      <translation type="unfinished">Link an url or note</translation>
+      <translation>ইউআরএল বা নোট লিংক</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="44"/>
       <source>Enter URL</source>
-      <translation type="unfinished">Enter URL</translation>
+      <translation>URL প্রবেশ করান</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="53"/>
       <source>Enter an URL to link to</source>
-      <translation type="unfinished">Enter an URL to link to</translation>
+      <translation>লিঙ্ক করা ইউআরএল প্রবেশ করান</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="76"/>
       <source>Search for notes or create new notes by entering text and pressing return</source>
-      <translation type="unfinished">Search for notes or create new notes by entering text and pressing return</translation>
+      <translation>লোকেদের বা নতুন নোট লেখা লিখে আর ফিরে যেতে চাপ সৃষ্টি</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="91"/>
       <source>Search for a note to link to</source>
-      <translation type="unfinished">Search for a note to link to</translation>
+      <translation>নোট করতে লিঙ্ক খুঁজুন</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="63"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;select local file to link to&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;select local file to link to&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;নির্বাচন স্থানীয় ফাইলের সাথে যোগসূত্র করা&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.cpp" line="191"/>
       <source>Select file to link to</source>
-      <translation type="unfinished">Select file to link to</translation>
+      <translation>লিঙ্ক থেকে ফাইল নির্বাচন করুন</translation>
     </message>
   </context>
   <context>
@@ -362,58 +362,58 @@
     <message>
       <location filename="../widgets/logwidget.ui" line="26"/>
       <source>Logs</source>
-      <translation type="unfinished">Logs</translation>
+      <translation>লগ</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="114"/>
       <source>Fatal</source>
-      <translation type="unfinished">Fatal</translation>
+      <translation>মারাত্মক</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="100"/>
       <source>Warning</source>
-      <translation type="unfinished">Warning</translation>
+      <translation>সতর্কতা</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="107"/>
       <source>Critical</source>
-      <translation type="unfinished">Critical</translation>
+      <translation>সমালোচনা</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="86"/>
       <source>Debug</source>
-      <translation type="unfinished">Debug</translation>
+      <translation>ডিবাগ করুন</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="93"/>
       <source>Info</source>
-      <translation type="unfinished">Info</translation>
+      <translation>তথ্য</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="121"/>
       <source>Status</source>
-      <translation type="unfinished">Status</translation>
+      <translation>মর্যাদা</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="128"/>
       <source>Scripting</source>
-      <translation type="unfinished">Scripting</translation>
+      <translation>স্ক্রিপ্টিং</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="135"/>
       <location filename="../widgets/logwidget.cpp" line="376"/>
       <source>Clear log</source>
-      <translation type="unfinished">Clear log</translation>
+      <translation>লগ মুছুন</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.cpp" line="374"/>
       <source>Show options</source>
-      <translation type="unfinished">Show options</translation>
+      <translation>বিকল্পসমূহ দেখান</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.cpp" line="374"/>
       <source>Hide options</source>
-      <translation type="unfinished">Hide options</translation>
+      <translation>বিকল্পসমূহ লুকান</translation>
     </message>
   </context>
   <context>
@@ -421,104 +421,104 @@
     <message>
       <location filename="../mainwindow.ui" line="512"/>
       <source>add a tag to this note</source>
-      <translation type="unfinished">add a tag to this note</translation>
+      <translation>এই লেখাটি থেকে একটি ট্যাগ যুক্ত করুন</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="515"/>
       <source>Add tag</source>
-      <translation type="unfinished">Add tag</translation>
+      <translation>ট্যাগ যুক্ত করুন</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="387"/>
       <location filename="../mainwindow.ui" line="717"/>
       <location filename="../mainwindow.cpp" line="598"/>
       <source>Navigation</source>
-      <translation type="unfinished">Navigation</translation>
+      <translation>পরিভ্রমণ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="675"/>
       <source>&amp;Note</source>
-      <translation type="unfinished">&amp;Note</translation>
+      <translation>&amp;নোট</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="679"/>
       <source>Note &amp;folders</source>
-      <translation type="unfinished">Note &amp;folders</translation>
+      <translation>নোট এবং ফোল্ডারসমূহ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="684"/>
       <source>Sort by</source>
-      <translation type="unfinished">Sort by</translation>
+      <translation>দ্বারা বাছাই করুন</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="777"/>
       <source>&amp;Help</source>
-      <translation type="unfinished">&amp;Help</translation>
+      <translation>&amp;সাহায্য</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="913"/>
       <source>Editor width in distraction free mode</source>
-      <translation type="unfinished">Editor width in distraction free mode</translation>
+      <translation>বিক্ষেপ মুক্ত অবস্থায় সম্পাদক প্রস্থ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="916"/>
       <source>Editor width</source>
-      <translation type="unfinished">Editor width</translation>
+      <translation>সম্পাদক প্রস্থ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="992"/>
       <source>Custom actions</source>
-      <translation type="unfinished">Custom actions</translation>
+      <translation>পছন্দসই কাজ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1011"/>
       <source>main toolbar</source>
-      <translation type="unfinished">main toolbar</translation>
+      <translation>প্রধান টুলবার</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1043"/>
       <source>&amp;Quit</source>
-      <translation type="unfinished">&amp;Quit</translation>
+      <translation>&amp;বন্ধ করুন</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1058"/>
       <source>&amp;Setup note folders</source>
-      <translation type="unfinished">&amp;Setup note folders</translation>
+      <translation>&amp;নোট ফোল্ডার সেট করুন</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1067"/>
       <source>&amp;Find note</source>
-      <translation type="unfinished">&amp;Find note</translation>
+      <translation>&amp;নোট খুঁজুন</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1079"/>
       <source>&amp;Remove current note</source>
-      <translation type="unfinished">&amp;Remove current note</translation>
+      <translation>&amp;বর্তমান নোট অপসারণ করুন</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1091"/>
       <source>About &amp;QOwnNotes...</source>
-      <translation type="unfinished">About &amp;QOwnNotes...</translation>
+      <translation>&amp;QOwnNotes সম্পর্কে</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1103"/>
       <source>&amp;New note</source>
-      <translation type="unfinished">&amp;New note</translation>
+      <translation>&amp;নতুন নোট</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1115"/>
       <source>Check for &amp;updates</source>
-      <translation type="unfinished">Check for &amp;updates</translation>
+      <translation>&amp;আপডেট চেক করুন</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1127"/>
       <source>Report &amp;issues or ideas</source>
-      <translation type="unfinished">Report &amp;issues or ideas</translation>
+      <translation>&amp;প্রতিবেদন ও বিষয় বা ধারণা</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1135"/>
       <source>Alphabetical</source>
-      <translation type="unfinished">Alphabetical</translation>
+      <translation>বর্ণমালাক্রম</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1138"/>
@@ -970,232 +970,231 @@
       <location filename="../mainwindow.ui" line="2011"/>
       <location filename="../mainwindow.ui" line="2014"/>
       <source>Find an action from the menu</source>
-      <translation type="unfinished">Find an action from the menu</translation>
+      <translation>অ্যাকশন মেনু থেকে পাওয়া</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2026"/>
       <source>Insert table</source>
-      <translation type="unfinished">Insert table</translation>
+      <translation>টেবিল প্রবেশ করান</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2038"/>
       <source>Insert block &amp;quote</source>
-      <translation type="unfinished">Insert block &amp;quote</translation>
+      <translation>অবরোধ ও উদ্ধৃতি সন্নিবেশ করুন</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2046"/>
       <location filename="../mainwindow.cpp" line="5345"/>
       <source>Search text on the web</source>
-      <translation type="unfinished">Search text on the web</translation>
+      <translation>লেখা ওয়েবে সন্ধান করুন</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2054"/>
       <source>Delete line</source>
-      <translation type="unfinished">Delete line</translation>
+      <translation>লাইন মুছে ফেলো</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2062"/>
       <source>Delete word</source>
-      <translation type="unfinished">Delete word</translation>
+      <translation>শব্দ মুছে ফেলুন</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2074"/>
       <location filename="../mainwindow.cpp" line="8282"/>
       <source>Open note in different window</source>
-      <translation type="unfinished">Open note in different window</translation>
+      <translation>ভিন্ন ভিন্ন উইন্ডোতে ওপেন নোট</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2086"/>
       <source>Save modified notes</source>
-      <translation type="unfinished">Save modified notes</translation>
+      <translation>সংশোধিত নোট সংরক্ষণ করুন</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2097"/>
       <source>Ascending</source>
-      <translation type="unfinished">Ascending</translation>
+      <translation>আরোহণ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2105"/>
       <source>Descending</source>
-      <translation type="unfinished">Descending</translation>
+      <translation>অবতরণ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2114"/>
       <location filename="../mainwindow.cpp" line="8289"/>
       <source>Show note git versions</source>
-      <translation type="unfinished">Show note git versions</translation>
+      <translation>নোট এবং সংস্করণ দেখান</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2123"/>
       <source>Find scripts in script repository</source>
-      <translation type="unfinished">Find scripts in script repository</translation>
+      <translation>স্ক্রিপ্ট স্থানে, স্ক্রিপ্ট পাবেন</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2135"/>
       <source>Script settings</source>
-      <translation type="unfinished">Script settings</translation>
+      <translation>স্ক্রিপ্ট সেটিংস</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2144"/>
       <source>Insert attachment</source>
-      <translation type="unfinished">Insert attachment</translation>
+      <translation>অ্যাটাচমেন্ট আমদানি করুন</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1653"/>
       <source>Use &amp;vertical preview layout</source>
-      <translation type="unfinished">Use &amp;vertical preview layout</translation>
+      <translation>ব্যবহার ও উল্লম্ব প্রিভিউ লে-আউট</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1656"/>
       <location filename="../mainwindow.ui" line="1659"/>
       <source>The note edit panel will be above the preview panel</source>
-      <translation type="unfinished">The note edit panel will be above the preview panel</translation>
+      <translation>প্রিভিউ প্যানেল থেকে নোট সম্পাদনা প্যানেল করা হবে</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1668"/>
       <source>Replace in current note</source>
-      <translation type="unfinished">Replace in current note</translation>
+      <translation>বর্তমান লেখায় প্রতিস্থাপন করুন</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1676"/>
       <source>Autocomplete, solve equation or open URL</source>
-      <translation type="unfinished">Autocomplete, solve equation or open URL</translation>
+      <translation>স্বয়ংক্রিয় সমাপ্তি, সমীকরণ সমাধান বা URL খুলতে</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1679"/>
       <source>Solve a simple equation like '(2+3)*6=' in the current line</source>
-      <translation type="unfinished">Solve a simple equation like '(2+3)*6=' in the current line</translation>
+      <translation>যেমন সহজ সমীকরণ সমাধান '(2+3) * 6 =' টি বর্তমান লাইন আছে</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1687"/>
       <source>Select note folder</source>
-      <translation type="unfinished">Select note folder</translation>
+      <translation>উল্লেখ্য ফোল্ডার নির্বাচন করুন</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1702"/>
       <source>Reload scripting engine</source>
-      <translation type="unfinished">Reload scripting engine</translation>
+      <translation>স্ক্রিপ্টিং ইঞ্জিন পুনরায় লোড করুন</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1735"/>
       <location filename="../mainwindow.ui" line="1738"/>
       <source>Open the #qownnotes IRC channel, you have to stay online to get a response</source>
-      <translation type="unfinished">Open the #qownnotes IRC channel, you have to stay online to get a response</translation>
+      <translation>#qownnotes IRC চ্যানেল খুলতে, আপনার জবাব পেতে অনলাইনে থাকতে হয়</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1875"/>
       <source>Show note list under tag pane</source>
-      <translation type="unfinished">Show note list under tag pane</translation>
+      <translation>পেনের নিচে নোট তালিকা প্রদর্শন করা হবে</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1940"/>
       <location filename="../mainwindow.ui" line="1943"/>
       <source>Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</source>
-      <translation type="unfinished">Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</translation>
+      <translation>Qownnotes Gitter রুম খোলা, আপনাকে গিটহাব বা টুইটার অ্যাকাউন্টে লগ-ইন করতে হবে, কিন্তু আপনি অফলাইনে বার্তা পাবেন</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="781"/>
       <source>Open chat</source>
-      <translation type="unfinished">Open chat</translation>
+      <translation>ওপেন আলাপ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1311"/>
       <source>&amp;Export note as PDF</source>
-      <translation type="unfinished">&amp;Export note as PDF</translation>
+      <translation>এবং নোট PDF হিসেবে এক্সপোর্ট করুন</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1747"/>
       <source>Insert headline from note filename</source>
-      <translation type="unfinished">Insert headline from note filename</translation>
+      <translation>শিরোনাম থেকে নোট ফাইলের নাম প্রবেশ করান।</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1761"/>
       <source>Use softwrap in note editor and preview</source>
-      <translation type="unfinished">Use softwrap in note editor and preview</translation>
+      <translation>প্রাক্-বীক্ষণ এবং নোট সম্পাদক softwrap ব্যবহার করুন</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1769"/>
       <source>Show status bar</source>
-      <translation type="unfinished">Show status bar</translation>
+      <translation>স্ট্যাটাস-বার প্রদর্শন করা হবে</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1784"/>
       <source>Share note</source>
-      <translation type="unfinished">Share note</translation>
+      <translation>অংশ দ্রষ্টব্য</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1814"/>
       <source>Markdown cheatsheet</source>
-      <translation type="unfinished">Markdown cheatsheet</translation>
+      <translation>মার্ক ডাউন চিটশিট</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1823"/>
       <source>Strike out text</source>
-      <translation type="unfinished">Strike out text</translation>
+      <translation>টেক্সট স্ট্রাইক আউট</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1834"/>
       <source>Use one column mode</source>
-      <translation type="unfinished">Use one column mode</translation>
+      <translation>এক কলাম পরিমণ্ডল ব্যবহার করুন</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1837"/>
       <location filename="../mainwindow.ui" line="1840"/>
       <source>Use a one column minimal mode (like NVAlt)</source>
-      <translation type="unfinished">Use a one column minimal mode (like NVAlt)</translation>
+      <translation>(যেমন NVAlt) একটি কলাম ন্যূনতম পরিমণ্ডল ব্যবহার করুন</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1852"/>
       <source>Show menu bar</source>
-      <translation type="unfinished">Show menu bar</translation>
+      <translation>মেনু বার-এ প্রদর্শন করা হবে</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1864"/>
       <source>Split note at cursor position</source>
-      <translation type="unfinished">Split note at cursor position</translation>
+      <translation>কার্সারের অবস্থানে বিভাজন নোট</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1884"/>
       <source>Donate</source>
-      <translation type="unfinished">Donate</translation>
+      <translation>দান করুন</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1904"/>
       <location filename="../mainwindow.ui" line="1907"/>
       <source>Start hidden</source>
-      <translation type="unfinished">Start hidden</translation>
+      <translation>লুকিয়ে রেখে শুরু করুন</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1910"/>
       <source>Starts the application hidden if the system tray icon is shown</source>
-      <translation type="unfinished">Starts the application hidden if the system tray icon is shown</translation>
+      <translation>সিস্টেম ট্রে আইকন দেখা যায় তাহলে গোপন আবেদন শুরু</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1919"/>
       <source>Import notes from Evernote</source>
-      <translation type="unfinished">Import notes from Evernote</translation>
+      <translation>নোট Evernote থেকে আমদানি করুন</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1928"/>
       <source>Delete orphaned image files</source>
-      <translation type="unfinished">Delete orphaned image files</translation>
+      <translation>অনাথ ইমেজ ফাইল মুছে ফেলুন</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2361"/>
       <source>Note was removed externally!</source>
-      <translation type="unfinished">Note was removed externally!</translation>
+      <translation>উল্লেখ্য এক্সপোজ অপসারণ করা হয়েছে।</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2362"/>
       <source>Current note was removed outside of this application!
 Restore current note?</source>
-      <translation type="unfinished">Current note was removed outside of this application!
-Restore current note?</translation>
+      <translation>এই অ্যাপ্লিকেশন এর বাইরে বর্তমান নোট অপসারণ করা হয়েছে। বর্তমান নোট আবার চালু করব?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2364"/>
       <source>&amp;Restore</source>
-      <translation type="unfinished">&amp;Restore</translation>
+      <translation>&amp;পুনঃস্থাপন করুন</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2364"/>
@@ -1212,7 +1211,7 @@ Restore current note?</translation>
       <location filename="../mainwindow.cpp" line="8350"/>
       <location filename="../mainwindow.cpp" line="9265"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>&amp;বাতিল</translation>
     </message>
     <message numerus="yes">
       <source>stored %n note(s) to disk</source>
@@ -1224,27 +1223,27 @@ Restore current note?</translation>
     <message>
       <location filename="../mainwindow.cpp" line="2567"/>
       <source>new version %1 available</source>
-      <translation type="unfinished">new version %1 available</translation>
+      <translation>নতুন সংস্করণ %1 পাওয়া যায়</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2943"/>
       <source>Please select the folder where your notes will get stored</source>
-      <translation type="unfinished">Please select the folder where your notes will get stored</translation>
+      <translation>দয়া করে যেখানে আপনার নোট সংরক্ষণ পেতে হবে সেই ফোল্ডারটি নির্বাচন করুন</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2970"/>
       <source>No folder was selected</source>
-      <translation type="unfinished">No folder was selected</translation>
+      <translation>কোনো ফোল্ডার নির্বাচিত হন</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2971"/>
       <source>You have to select your ownCloud notes folder to make this software work!</source>
-      <translation type="unfinished">You have to select your ownCloud notes folder to make this software work!</translation>
+      <translation>এই সফটওয়্যারটি তৈরি করতে আপনার ownCloud নোট ফোল্ডার নির্বাচন করতে হবে কাজ।</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2973"/>
       <source>&amp;Retry</source>
-      <translation type="unfinished">&amp;Retry</translation>
+      <translation>&amp;পুনরায় চেষ্টা করুন</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2973"/>
@@ -1548,186 +1547,186 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="7380"/>
       <source>Move to the root</source>
       <comment>to move a tag to the current tag in the tag context menu</comment>
-      <translation type="unfinished">Move to the root</translation>
+      <translation>গোড়া থেকে সরিয়ে নিন</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7813"/>
       <source>An url was opened at the current cursor position</source>
-      <translation type="unfinished">An url was opened at the current cursor position</translation>
+      <translation>একটি ইউআরএল এর বর্তমান কার্সারের অবস্থানে খোলা হয়েছে</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7891"/>
       <source>No equation was found in front of the cursor</source>
-      <translation type="unfinished">No equation was found in front of the cursor</translation>
+      <translation>কার্সর সামনে কোনো সমীকরণ খুঁজে পাওয়া যায়নি</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7908"/>
       <source>Result for equation: %1 = %2</source>
-      <translation type="unfinished">Result for equation: %1 = %2</translation>
+      <translation>ফলাফলের জন্য সমীকরণ: %1 = %2</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7982"/>
       <source>The scripting engine was reloaded</source>
-      <translation type="unfinished">The scripting engine was reloaded</translation>
+      <translation>স্ক্রিপ্টিং ইঞ্জিন পুনরায় লোড হয়েছে</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8017"/>
       <source>HTML files</source>
-      <translation type="unfinished">HTML files</translation>
+      <translation>এইচটিএমএল ফাইল</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8191"/>
       <source>Rename note</source>
-      <translation type="unfinished">Rename note</translation>
+      <translation>উল্লেখ্য পুনঃনামকরণ করুন</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8192"/>
       <source>Allows you to rename the filename of the note</source>
-      <translation type="unfinished">Allows you to rename the filename of the note</translation>
+      <translation>উল্লেখ্য নাম নাম পরিবর্তন করতে আপনাকে সম্মতি দেয়।</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8345"/>
       <source>Note renaming not enabled!</source>
-      <translation type="unfinished">Note renaming not enabled!</translation>
+      <translation>উল্লেখ্য, সক্রিয় পুনরায় নামকরণ করা হচ্ছে।</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8509"/>
       <source>Rename subfolder</source>
-      <translation type="unfinished">Rename subfolder</translation>
+      <translation>সাব-ফোল্ডার পুনঃনামকরণ করুন</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9055"/>
       <source>Create new workspace</source>
-      <translation type="unfinished">Create new workspace</translation>
+      <translation>নতুন টেবিলটা তৈরি করুন</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9055"/>
       <location filename="../mainwindow.cpp" line="9302"/>
       <source>Workspace name:</source>
-      <translation type="unfinished">Workspace name:</translation>
+      <translation>টেবিলটা নাম:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9177"/>
       <source>full</source>
       <comment>full workspace</comment>
-      <translation type="unfinished">full</translation>
+      <translation>পূর্ণ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9184"/>
       <source>minimal</source>
       <comment>minimal workspace</comment>
-      <translation type="unfinished">minimal</translation>
+      <translation>সংক্ষিপ্ত</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9264"/>
       <source>Remove the current workspace?</source>
-      <translation type="unfinished">Remove the current workspace?</translation>
+      <translation>বর্তমান টেবিলটা সরিয়ে?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9302"/>
       <source>Rename workspace</source>
-      <translation type="unfinished">Rename workspace</translation>
+      <translation>টেবিলটা পুনঃনামকরণ করুন</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="9437"/>
       <source>%n chars</source>
       <comment>characters</comment>
-      <translation type="unfinished">
-        <numerusform>%n chars</numerusform>
-        <numerusform>%n chars</numerusform>
+      <translation>
+        <numerusform>অক্ষর %n</numerusform>
+        <numerusform>অক্ষর %n</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9560"/>
       <source>Copy image file path</source>
-      <translation type="unfinished">Copy image file path</translation>
+      <translation>কপি ছবির ফাইলের পাথ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9699"/>
       <source>Select file to insert</source>
-      <translation type="unfinished">Select file to insert</translation>
+      <translation>ঢোকাও ফাইল নির্বাচন করুন</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="982"/>
       <location filename="../mainwindow.cpp" line="3948"/>
       <source>&amp;Tag</source>
-      <translation type="unfinished">&amp;Tag</translation>
+      <translation>&amp;ট্যাগ করুন</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4014"/>
       <source>Remove tag from selected notes</source>
-      <translation type="unfinished">Remove tag from selected notes</translation>
+      <translation>নির্বাচিত নোট থেকে ট্যাগ অপসারণ করুন</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4015"/>
       <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
-        <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
+      <translation>
+        <numerusform>ট্যাগ &lt;strong&gt;%1&lt;/strong&gt; %n থেকে নির্বাচিত note(s) অপসারণ করা হবে?</numerusform>
+        <numerusform>ট্যাগ &lt;strong&gt;%1&lt;/strong&gt; %n থেকে নির্বাচিত note(s) অপসারণ করা হবে?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4070"/>
       <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
-      <translation type="unfinished">
-        <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
-        <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
+      <translation>
+        <numerusform>%n note(s) থেকে &lt;strong&gt;%1&lt;/strong&gt; ট্যাগ অপসারণ করা হয়েছে</numerusform>
+        <numerusform>%n note(s) থেকে &lt;strong&gt;%1&lt;/strong&gt; ট্যাগ অপসারণ করা হয়েছে</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4114"/>
       <source>Current notes folder: </source>
-      <translation type="unfinished">Current notes folder: </translation>
+      <translation>বর্তমান ফোল্ডার জানাচ্ছে: </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4116"/>
       <source>Set the notes folder. Current notes folder: </source>
-      <translation type="unfinished">Set the notes folder. Current notes folder: </translation>
+      <translation>নোট ফোল্ডার সেট করুন। বর্তমান ফোল্ডার জানাচ্ছে: </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4298"/>
       <source>Print note</source>
-      <translation type="unfinished">Print note</translation>
+      <translation>নোট মুদ্রণ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4347"/>
       <source>Letter</source>
-      <translation type="unfinished">Letter</translation>
+      <translation>চিঠি</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4373"/>
       <source>Portrait</source>
-      <translation type="unfinished">Portrait</translation>
+      <translation>ছবি</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4373"/>
       <source>Landscape</source>
-      <translation type="unfinished">Landscape</translation>
+      <translation>প্রাকিতিক ভূ-দৃশ্য</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4378"/>
       <source>Orientation</source>
-      <translation type="unfinished">Orientation</translation>
+      <translation>সভা</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4378"/>
       <source>Orientation:</source>
-      <translation type="unfinished">Orientation:</translation>
+      <translation>পরিচিতি:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4398"/>
       <source>Export current note as PDF</source>
-      <translation type="unfinished">Export current note as PDF</translation>
+      <translation>বর্তমান নোট PDF হিসেবে এক্সপোর্ট করুন</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4486"/>
       <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
-      <translation type="unfinished">You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</translation>
+      <translation>আপনার কোন todo তালিকা। নির্বাচিত না &lt; br / &gt; আপনার &lt;strong&gt;Todo&lt;/strong&gt; কনফিগারেশন সেটিংস চেক করুন!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5150"/>
       <source>Open QOwnNotes</source>
-      <translation type="unfinished">Open QOwnNotes</translation>
+      <translation>খোলা QOwnNotes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4902"/>
@@ -1735,91 +1734,91 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="8186"/>
       <location filename="../mainwindow.cpp" line="8507"/>
       <source>New note</source>
-      <translation type="unfinished">New note</translation>
+      <translation>&amp;নতুন নোট</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5175"/>
       <source>Recent notes</source>
-      <translation type="unfinished">Recent notes</translation>
+      <translation>সাম্প্রতিক টীকা</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5205"/>
       <source>Show todo lists</source>
-      <translation type="unfinished">Show todo lists</translation>
+      <translation>Todo তালিকা প্রদর্শন করা হবে</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5216"/>
       <source>Recent tasks</source>
-      <translation type="unfinished">Recent tasks</translation>
+      <translation>সাম্প্রতিক কার্যাবলী</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5248"/>
       <source>Quit</source>
-      <translation type="unfinished">Quit</translation>
+      <translation>বন্ধ করুন</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6413"/>
       <source>show notes from all note subfolders (%1)</source>
-      <translation type="unfinished">show notes from all note subfolders (%1)</translation>
+      <translation>সব নোট উপফোল্ডার (%1) থেকে নোট প্রদর্শন করা হবে</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6431"/>
       <source>show notes in note root folder (%1)</source>
-      <translation type="unfinished">show notes in note root folder (%1)</translation>
+      <translation>উল্লেখ্য রুট ফোল্ডারে (%1) নোট প্রদর্শন করা হবে</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="316"/>
       <location filename="../mainwindow.cpp" line="580"/>
       <location filename="../mainwindow.cpp" line="6440"/>
       <source>Note folder</source>
-      <translation type="unfinished">Note folder</translation>
+      <translation>উল্লেখ্য ফোল্ডার</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7527"/>
       <source>Copy to note folder</source>
-      <translation type="unfinished">Copy to note folder</translation>
+      <translation>ফোল্ডার তথ্য কপি</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7528"/>
       <source>Move to note folder</source>
-      <translation type="unfinished">Move to note folder</translation>
+      <translation>উল্লেখ্য, ফোল্ডার সরান</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7529"/>
       <source>Copy to this subfolder</source>
-      <translation type="unfinished">Copy to this subfolder</translation>
+      <translation>এই সাব-ফোল্ডার অনুলিপি করুন</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7530"/>
       <source>Move to this subfolder</source>
-      <translation type="unfinished">Move to this subfolder</translation>
+      <translation>এই সাব-ফোল্ডার সরান</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7581"/>
       <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
-        <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>সাব-ফোল্ডার &lt;strong&gt;%2&lt;/strong&gt; কাছে %n নির্বাচিত note(s) চলে?</numerusform>
+        <numerusform>সাব-ফোল্ডার &lt;strong&gt;%2&lt;/strong&gt; কাছে %n নির্বাচিত note(s) চলে?</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7589"/>
       <source>Move</source>
-      <translation type="unfinished">Move</translation>
+      <translation>চাল</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4212"/>
       <location filename="../mainwindow.cpp" line="7589"/>
       <location filename="../mainwindow.cpp" line="7673"/>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>বাতিল</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7644"/>
       <source>%n note(s) were moved to note subfolder "%2"</source>
-      <translation type="unfinished">
-        <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
-        <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
+      <translation>
+        <numerusform>%n note(s) সাবফোল্ডার '%2 ' উল্লেখ্য, সরিয়ে নেওয়া হয়েছে</numerusform>
+        <numerusform>%n note(s) সাবফোল্ডার '%2 ' উল্লেখ্য, সরিয়ে নেওয়া হয়েছে</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -2087,151 +2086,151 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="589"/>
       <source>Note list</source>
-      <translation type="unfinished">Note list</translation>
+      <translation>উল্লেখ্য তালিকা</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="612"/>
       <source>Note edit</source>
-      <translation type="unfinished">Note edit</translation>
+      <translation>উল্লেখ্য সম্পাদনা</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="621"/>
       <source>Note tags</source>
-      <translation type="unfinished">Note tags</translation>
+      <translation>ট্যাগ দ্রষ্টব্য</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="630"/>
       <source>Note preview</source>
-      <translation type="unfinished">Note preview</translation>
+      <translation>উল্লেখ্য প্রাকদর্শন</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="637"/>
       <source>Log</source>
-      <translation type="unfinished">Log</translation>
+      <translation>লগ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="644"/>
       <source>Scripting</source>
-      <translation type="unfinished">Scripting</translation>
+      <translation>স্ক্রিপ্টিং</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="884"/>
       <source>formatting toolbar</source>
-      <translation type="unfinished">formatting toolbar</translation>
+      <translation>টুলবারের বিন্যাস</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="893"/>
       <source>inserting toolbar</source>
-      <translation type="unfinished">inserting toolbar</translation>
+      <translation>টুলবার ঢোকানো হচ্ছে।</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="900"/>
       <source>encryption toolbar</source>
-      <translation type="unfinished">encryption toolbar</translation>
+      <translation>এনক্রিপশন টুলবার</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="907"/>
       <source>window toolbar</source>
-      <translation type="unfinished">window toolbar</translation>
+      <translation>উইন্ডো টুলবার</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="912"/>
       <source>custom action toolbar</source>
-      <translation type="unfinished">custom action toolbar</translation>
+      <translation>নিজস্ব ক্রিয়া টুলবার</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="932"/>
       <source>Workspace selector</source>
-      <translation type="unfinished">Workspace selector</translation>
+      <translation>টেবিলটা নির্বাচক</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1064"/>
       <source>Show %1 panel</source>
-      <translation type="unfinished">Show %1 panel</translation>
+      <translation>%1 প্যানেল প্রদর্শন করা হবে</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1107"/>
       <source>Show %1</source>
-      <translation type="unfinished">Show %1</translation>
+      <translation>%1 প্রদর্শন করুন</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1881"/>
       <source>show notes in folder '%1' (%2)</source>
-      <translation type="unfinished">show notes in folder '%1' (%2)</translation>
+      <translation>ফোল্ডারের মধ্যে '%1' (%2) নোট প্রদর্শন করা হবে</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1921"/>
       <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
-      <translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</translation>
+      <translation>&lt;strong&gt;%1&lt;/strong&gt; &lt; br / &gt; শেষ বার পরিমার্জিত: %2</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1926"/>
       <source>&lt;br /&gt;path: %1</source>
-      <translation type="unfinished">&lt;br /&gt;path: %1</translation>
+      <translation>&lt;br /&gt; পাথ: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2067"/>
       <source>Toolbar could not be loaded without name</source>
-      <translation type="unfinished">Toolbar could not be loaded without name</translation>
+      <translation>নাম না করেই টুলবার লোড করা যায়নি</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2319"/>
       <source>Overwriting external changes of: %1</source>
-      <translation type="unfinished">Overwriting external changes of: %1</translation>
+      <translation>বহিস্থিত পরিবর্তন মুছে-%1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2341"/>
       <source>Loading external changes from: %1</source>
-      <translation type="unfinished">Loading external changes from: %1</translation>
+      <translation>লোড করা হচ্ছে বাহ্যিক পরিবর্তন থেকে: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2378"/>
       <location filename="../mainwindow.cpp" line="4843"/>
       <source>Current note could not be stored to disk</source>
-      <translation type="unfinished">Current note could not be stored to disk</translation>
+      <translation>বর্তমান নোট সংরক্ষণ করতে পারে না ডিস্ক</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2541"/>
       <source>Line numbers</source>
-      <translation type="unfinished">Line numbers</translation>
+      <translation>লাইন সংখ্যা</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2551"/>
       <source>Click here to see what has changed and to be able to update to the latest version</source>
-      <translation type="unfinished">Click here to see what has changed and to be able to update to the latest version</translation>
+      <translation>যা পরিবর্তিত হয়েছে, দেখার জন্য এবং সর্বশেষ সংস্করণে হালনাগাদ করতে পারবেন এখানে ক্লিক করুন</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3998"/>
       <source>%n note(s) were tagged with "%2"</source>
-      <translation type="unfinished">
-        <numerusform>%n note(s) were tagged with "%2"</numerusform>
-        <numerusform>%n note(s) were tagged with "%2"</numerusform>
+      <translation>
+        <numerusform>%n note(s) '%2' দিয়ে ট্যাগ করা হয়েছে</numerusform>
+        <numerusform>%n note(s) '%2' দিয়ে ট্যাগ করা হয়েছে</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4902"/>
       <source>Note headline</source>
-      <translation type="unfinished">Note headline</translation>
+      <translation>উল্লেখ্য শিরোনাম</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5270"/>
       <source>You may want to enable that only one app instance is allowed at the same time in the settings to make full use of the this feature.</source>
-      <translation type="unfinished">You may want to enable that only one app instance is allowed at the same time in the settings to make full use of the this feature.</translation>
+      <translation>আপনি এই মাত্র একটি অ্যাপ সক্রিয় করতে চান হতে পারে বর্তমান অনুমতি সেটিংস-এ একই সময়ে এর পরিপূর্ণ ব্যবহার করার বৈশিষ্ট্য।</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6136"/>
       <source>Downloading images finished</source>
-      <translation type="unfinished">Downloading images finished</translation>
+      <translation>চিত্র ডাউনলোড করা শেষ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6251"/>
       <source>Increased font size to %1 pt</source>
-      <translation type="unfinished">Increased font size to %1 pt</translation>
+      <translation>%1 পিটি করতে বর্ধিত ফন্টের আকার</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6268"/>
       <source>Decreased font size to %1 pt</source>
-      <translation type="unfinished">Decreased font size to %1 pt</translation>
+      <translation>%1 পিটি করতে বর্ধিত ফন্টের আকার</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4463"/>
@@ -2239,47 +2238,47 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="5274"/>
       <location filename="../mainwindow.cpp" line="8349"/>
       <source>Open &amp;settings</source>
-      <translation type="unfinished">Open &amp;settings</translation>
+      <translation>খোলা &amp;সেটিংস</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1415"/>
       <source>leave</source>
-      <translation type="unfinished">leave</translation>
+      <translation>ছুটি</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1418"/>
       <source>leave distraction free mode</source>
-      <translation type="unfinished">leave distraction free mode</translation>
+      <translation>বিক্ষেপ মুক্ত মোড ত্যাগ করুন</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5475"/>
       <source>Select image to insert</source>
-      <translation type="unfinished">Select image to insert</translation>
+      <translation>চিত্র সন্নিবেশ করতে নির্বাচন করুন</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5607"/>
       <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
-      <translation type="unfinished">Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</translation>
+      <translation>অনুগ্রহ করে নোট। সঙ্কেতায়িত করতে &lt;strong&gt;গুপ্ত-সংকেত&lt;/strong&gt; প্রবেশ করান &lt; বিআর / &gt; তোমাদের &lt;strong&gt;স্মরণ&lt;/strong&gt; করতে নোট লেখা পড়ার জন্য আপনার গুপ্ত-সংকেত নেই। মনে রাখবেন &lt; br / &gt; আর আপনি পারেন &lt;strong&gt;শুধু&lt;/strong&gt; যে &lt;strong&gt;QOwnNotes আছে&lt;/strong&gt; কি!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5662"/>
       <source>Decrypt note and store it as plain text</source>
-      <translation type="unfinished">Decrypt note and store it as plain text</translation>
+      <translation>নোট ডিক্রিপ্ট করুন এবং তা সরল পাঠ হিসেবে সংরক্ষণ করুন</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5667"/>
       <source>&amp;Decrypt</source>
-      <translation type="unfinished">&amp;Decrypt</translation>
+      <translation>&amp;ডিক্রিপ্ট করুন</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5692"/>
       <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
-      <translation type="unfinished">&lt;br /&gt;You will be able to edit your encrypted note.</translation>
+      <translation>&lt;br /&gt; আপনার এনক্রিপ্ট করা চিঠির সম্পাদনা করতে পারবেন।</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5749"/>
       <source>Export current note as Markdown file</source>
-      <translation type="unfinished">Export current note as Markdown file</translation>
+      <translation>বর্তমান নোট Markdown ফাইল হিসেবে রপ্তানি করো</translation>
     </message>
   </context>
   <context>
@@ -2287,7 +2286,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../widgets/navigationwidget.cpp" line="99"/>
       <source>headline %1</source>
-      <translation type="unfinished">headline %1</translation>
+      <translation>%1 শিরোনাম</translation>
     </message>
   </context>
   <context>
@@ -2295,7 +2294,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/notedialog.ui" line="14"/>
       <source>Note</source>
-      <translation type="unfinished">Note</translation>
+      <translation>নোট</translation>
     </message>
   </context>
   <context>
@@ -2303,42 +2302,42 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="17"/>
       <source>Note was modified externally!</source>
-      <translation type="unfinished">Note was modified externally!</translation>
+      <translation>উল্লেখ্য এক্সপোজ অপসারণ করা হয়েছে।</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="41"/>
       <source>The current note was modified outside of this application!</source>
-      <translation type="unfinished">The current note was modified outside of this application!</translation>
+      <translation>এই অ্যাপ্লিকেশন এর বাইরে বর্তমান নোট পাল্টেছে!</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="48"/>
       <source>Differences:</source>
-      <translation type="unfinished">Differences:</translation>
+      <translation>পার্থক্য:</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="76"/>
       <source>Always accept external changes in the future</source>
-      <translation type="unfinished">Always accept external changes in the future</translation>
+      <translation>সবসময় ভবিষ্যতের বাহ্যিক পরিবর্তন গ্রহণ করুন</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="83"/>
       <source>Accept external changes?</source>
-      <translation type="unfinished">Accept external changes?</translation>
+      <translation>বাহ্যিক পরিবর্তন গ্রহণ করে?</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="69"/>
       <source>Ignore all external modifications in the future</source>
-      <translation type="unfinished">Ignore all external modifications in the future</translation>
+      <translation>ভবিষ্যতে সমস্ত বহিস্থিত পরিবর্তন অগ্রাহ্য করুন</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.cpp" line="32"/>
       <source>Yes</source>
-      <translation type="unfinished">Yes</translation>
+      <translation>হ্যাঁ</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.cpp" line="37"/>
       <source>No</source>
-      <translation type="unfinished">No</translation>
+      <translation>না</translation>
     </message>
   </context>
   <context>
@@ -2346,12 +2345,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="14"/>
       <source>Orphaned images</source>
-      <translation type="unfinished">Orphaned images</translation>
+      <translation>অনাথ ছবি</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="80"/>
       <source>Delete selected images</source>
-      <translation type="unfinished">Delete selected images</translation>
+      <translation>নির্বাচিত ছবি মুছে ফেলুন</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="83"/>
@@ -2626,22 +2625,22 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="187"/>
       <source>Replace</source>
-      <translation type="unfinished">Replace</translation>
+      <translation>প্রতিস্থাপন করুন</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="197"/>
       <source>Replace All</source>
-      <translation type="unfinished">Replace All</translation>
+      <translation>সব প্রতিস্থাপন করুন</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="210"/>
       <source>Mode:</source>
-      <translation type="unfinished">Mode:</translation>
+      <translation>মোড:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="220"/>
       <source>Match case sensitive</source>
-      <translation type="unfinished">Match case sensitive</translation>
+      <translation>অক্ষরের ছাঁদ সংবেদনশীল মেলে</translation>
     </message>
   </context>
   <context>
@@ -2649,17 +2648,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/databaseservice.cpp" line="77"/>
       <source>Cannot open memory database</source>
-      <translation type="unfinished">Cannot open memory database</translation>
+      <translation>স্মৃতি ডাটাবেস খোলা সম্ভব না</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="78"/>
       <source>Unable to establish a memory database connection.</source>
-      <translation type="unfinished">Unable to establish a memory database connection.</translation>
+      <translation>স্মৃতি ডেটাবেস সংযোগ স্থাপন করতে অক্ষম।</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="94"/>
       <source>Cannot open disk database</source>
-      <translation type="unfinished">Cannot open disk database</translation>
+      <translation>স্মৃতি ডাটাবেস খোলা সম্ভব না</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="95"/>

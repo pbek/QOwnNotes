@@ -58,7 +58,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="101"/>
       <source>Import attachments</source>
-      <translation type="unfinished">Import attachments</translation>
+      <translation>Učitaj privitak</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="39"/>
@@ -275,7 +275,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="217"/>
       <source>Current line background color</source>
-      <translation type="unfinished">Current line background color</translation>
+      <translation>Boja pozadine trenutne linije</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="227"/>
@@ -640,12 +640,12 @@
     <message>
       <location filename="../mainwindow.ui" line="730"/>
       <source>Print</source>
-      <translation type="unfinished">Print</translation>
+      <translation>Ispis</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="741"/>
       <source>View note</source>
-      <translation type="unfinished">View note</translation>
+      <translation>Pregled bilješke</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="806"/>
@@ -655,32 +655,32 @@
     <message>
       <location filename="../mainwindow.ui" line="810"/>
       <source>Insert</source>
-      <translation type="unfinished">Insert</translation>
+      <translation>Umetni</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="827"/>
       <source>Format</source>
-      <translation type="unfinished">Format</translation>
+      <translation>Oblikuj</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="840"/>
       <source>Extra</source>
-      <translation type="unfinished">Extra</translation>
+      <translation>Dodatno</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="853"/>
       <source>Edit</source>
-      <translation type="unfinished">Edit</translation>
+      <translation>Uredi</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="865"/>
       <source>Versioning</source>
-      <translation type="unfinished">Versioning</translation>
+      <translation>Verzioniranje</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="876"/>
       <source>Encryption</source>
-      <translation type="unfinished">Encryption</translation>
+      <translation>Šifriranje</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="903"/>
@@ -712,12 +712,12 @@
       <location filename="../mainwindow.ui" line="940"/>
       <source>Show</source>
       <extracomment>To show or hide stuff</extracomment>
-      <translation type="unfinished">Show</translation>
+      <translation>Prikaži</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="955"/>
       <source>Workspace</source>
-      <translation type="unfinished">Workspace</translation>
+      <translation>Radna površina</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="988"/>
@@ -1002,7 +1002,7 @@
       <location filename="../mainwindow.ui" line="2074"/>
       <location filename="../mainwindow.cpp" line="8282"/>
       <source>Open note in different window</source>
-      <translation type="unfinished">Open note in different window</translation>
+      <translation>Otvori bilješku u drugom prozoru</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2086"/>
@@ -1023,12 +1023,12 @@
       <location filename="../mainwindow.ui" line="2114"/>
       <location filename="../mainwindow.cpp" line="8289"/>
       <source>Show note git versions</source>
-      <translation type="unfinished">Show note git versions</translation>
+      <translation>Prikaži git verzije bilješke</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2123"/>
       <source>Find scripts in script repository</source>
-      <translation type="unfinished">Find scripts in script repository</translation>
+      <translation>Potraži skripte u repozitoriju skripti</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2135"/>
@@ -1229,7 +1229,7 @@ Restore current note?</source>
     <message>
       <location filename="../mainwindow.cpp" line="2943"/>
       <source>Please select the folder where your notes will get stored</source>
-      <translation type="unfinished">Please select the folder where your notes will get stored</translation>
+      <translation>Molim odaberi mapu u koju će bilješke biti spremljene</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2970"/>
@@ -1330,10 +1330,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3758"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
-      <translation type="unfinished">
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; oznaku ukloniti? Nijedna bilješka pritom neće biti uklonjena.</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; oznake ukloniti? Nijedna bilješka pritom neće biti uklonjena.</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; oznaku/oznake ukloniti? Nijedna bilješka pritom neće biti uklonjena.</numerusform>
       </translation>
     </message>
     <message>
@@ -1345,10 +1345,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3814"/>
       <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
-        <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>Premjestiti %n odabranu bilješku u &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Premjestiti %n odabrane bilješke u &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Premjestiti %n odabranih bilješki u &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
@@ -1448,7 +1448,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="5663"/>
       <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
-      <translation type="unfinished">Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</translation>
+      <translation>Bilješka će biti dešifrirana i pohranjena kao otvoreni tekst. Imaj na umu da će tako dešifrirana vjerojatno biti sinkronizirana na poslužitelju i vrlo vjerojatno izložena drugima!&lt;br /&gt;Stvarno dešifrirati bilješku?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5748"/>
@@ -1594,7 +1594,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="8345"/>
       <source>Note renaming not enabled!</source>
-      <translation type="unfinished">Note renaming not enabled!</translation>
+      <translation>Promjena naziva bilješki nije aktivirana!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8509"/>
@@ -1731,7 +1731,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="4486"/>
       <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
-      <translation type="unfinished">You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</translation>
+      <translation>Niste odabrali ni jednu listu zadataka.&lt;br /&gt;Molimo provjeri konfiguraciju &lt;strong&gt;Zadataka&lt;/strong&gt; u postavkama!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5150"/>
@@ -1806,10 +1806,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7581"/>
       <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
-        <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>Premjestiti %n odabranu bilješku u &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Premjestiti %n odabranih bilješki u &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Premjestiti %n odabranih bilješki u &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
@@ -1827,19 +1827,19 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7644"/>
       <source>%n note(s) were moved to note subfolder "%2"</source>
-      <translation type="unfinished">
-        <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
-        <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
-        <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
+      <translation>
+        <numerusform>%n bilješka preseljena u podmapu "%2"</numerusform>
+        <numerusform>%n bilješki preseljeno u podmapu "%2"</numerusform>
+        <numerusform>%n bilješki preseljeno u podmapu "%2"</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7665"/>
       <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
-        <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>Kopiraj %n odabranu bilješku u podmapu &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Kopiraj %n odabrane bilješke u podmapu &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Kopiraj %n odabrane bilješke u podmapu &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
@@ -1850,10 +1850,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7716"/>
       <source>%n note(s) were copied to note subfolder "%2"</source>
-      <translation type="unfinished">
-        <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
-        <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
-        <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
+      <translation>
+        <numerusform>%n bilješka kopirana u podmapu "%2"</numerusform>
+        <numerusform>%n bilješke kopirane u podmapu "%2"</numerusform>
+        <numerusform>%n bilješke kopirane u podmapu "%2"</numerusform>
       </translation>
     </message>
     <message>
@@ -1879,7 +1879,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="8346"/>
       <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
-      <translation type="unfinished">If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</translation>
+      <translation>Ako želite preimenovati bilješku morate aktivirati opciju koja omogućuje da se ime datoteke i naslov razlikuju.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8508"/>
@@ -1960,7 +1960,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="8245"/>
       <source>&amp;Tag selected notes with...</source>
-      <translation type="unfinished">&amp;Tag selected notes with...</translation>
+      <translation>&amp;Označi izabranu bilješku sa...</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8267"/>
@@ -2001,7 +2001,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="2422"/>
       <source>Notes directory was modified externally</source>
-      <translation type="unfinished">Notes directory was modified externally</translation>
+      <translation>Mapa sa bilješkama je promijenjena eksterno</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="2488"/>
@@ -2226,7 +2226,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="4902"/>
       <source>Note headline</source>
-      <translation type="unfinished">Note headline</translation>
+      <translation>Naslov bilješke</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5270"/>

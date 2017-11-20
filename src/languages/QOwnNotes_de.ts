@@ -1002,7 +1002,7 @@
       <location filename="../mainwindow.ui" line="2074"/>
       <location filename="../mainwindow.cpp" line="8282"/>
       <source>Open note in different window</source>
-      <translation type="unfinished">Open note in different window</translation>
+      <translation>Notiz in anderem Fenster öffnen</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2086"/>
@@ -1229,7 +1229,7 @@ Notiz wiederherstellen?</translation>
     <message>
       <location filename="../mainwindow.cpp" line="2943"/>
       <source>Please select the folder where your notes will get stored</source>
-      <translation type="unfinished">Please select the folder where your notes will get stored</translation>
+      <translation>Bitte den Ordner auswählen, in dem die Notizen gespeichert werden sollen</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2970"/>
@@ -2226,12 +2226,12 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
     <message>
       <location filename="../mainwindow.cpp" line="6251"/>
       <source>Increased font size to %1 pt</source>
-      <translation>Notiz-Textgröße wurde auf %1 Punkte erhöht</translation>
+      <translation>Notiz-Schriftgröße wurde auf %1 Punkte erhöht</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6268"/>
       <source>Decreased font size to %1 pt</source>
-      <translation>Notiz-Textgröße wurde auf %1 Punkte verringert</translation>
+      <translation>Notiz-Schriftgröße wurde auf %1 Punkte verringert</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4463"/>
@@ -4063,7 +4063,7 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2310"/>
       <source>Toolbar icon size:</source>
-      <translation>Icon-Größe der Symbollisten-Elemente:</translation>
+      <translation>Icon-Größe der Symbolleisten:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2300"/>

@@ -1002,7 +1002,7 @@
       <location filename="../mainwindow.ui" line="2074"/>
       <location filename="../mainwindow.cpp" line="8282"/>
       <source>Open note in different window</source>
-      <translation type="unfinished">Open note in different window</translation>
+      <translation>Obre la nota en una finestra diferent</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2086"/>
@@ -1229,7 +1229,7 @@ Voleu restaurar-la?</translation>
     <message>
       <location filename="../mainwindow.cpp" line="2943"/>
       <source>Please select the folder where your notes will get stored</source>
-      <translation type="unfinished">Please select the folder where your notes will get stored</translation>
+      <translation>Seleccioneu la carpeta on es desaran les vostres notes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2970"/>
@@ -3591,7 +3591,7 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2217"/>
       <source>Enable dark mode application icon and tray icon</source>
-      <translation type="unfinished">Enable dark mode application icon and tray icon</translation>
+      <translation>Habilita el mode fosc a la icona de l'aplicació i de la safata</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2257"/>

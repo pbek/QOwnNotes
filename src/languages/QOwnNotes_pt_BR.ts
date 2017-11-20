@@ -1002,7 +1002,7 @@
       <location filename="../mainwindow.ui" line="2074"/>
       <location filename="../mainwindow.cpp" line="8282"/>
       <source>Open note in different window</source>
-      <translation type="unfinished">Open note in different window</translation>
+      <translation>Nota aberta em outra janela</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2086"/>
@@ -1229,7 +1229,7 @@ Restaurar a nota atual? </translation>
     <message>
       <location filename="../mainwindow.cpp" line="2943"/>
       <source>Please select the folder where your notes will get stored</source>
-      <translation type="unfinished">Please select the folder where your notes will get stored</translation>
+      <translation>Por favor, selecione a pasta onde suas anotações ficarão armazenadas</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2970"/>
