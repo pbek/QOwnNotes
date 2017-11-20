@@ -11,7 +11,7 @@
   set in the in the *Editor settings* now also work for other Markdown
   text-edits, like the *Debug panel*, the separate note-views and the
   *Debug settings* (for [#778](https://github.com/pbek/QOwnNotes/issues/778))
-- the disabling of the setting `Show with full` in the *Panel settings* now 
+- the disabling of the setting `Show with full path` in the *Panel settings* now 
   also works under *Windows* (for [#777](https://github.com/pbek/QOwnNotes/issues/777))
 - added more German, Catalan, Italian, Spanish, Brazilian Portuguese and
   Croatian translation (thank you rakekniven, MGuerra, soysexy03, mlocati,
