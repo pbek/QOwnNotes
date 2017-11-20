@@ -3,6 +3,10 @@
 ## 17.11.3
 - lists with `+` will now also continued when pressing <kbd>Return</kbd>
   (for [#782](https://github.com/pbek/QOwnNotes/issues/782), thank you @sanderboom)
+- the default foreground and background colors for the note text-edit, that was
+  set in the in the *Editor settings* now also work for other Markdown
+  text-edits, like the *Debug panel*, the separate note-views and the
+  *Debug settings* (for [#778](https://github.com/pbek/QOwnNotes/issues/778))
 
 ## 17.11.2
 - when formatting bold or italic now leading and trailing spaces in the selected

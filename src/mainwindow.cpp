@@ -1261,10 +1261,7 @@ void MainWindow::initStyling() {
             MarkdownHighlighter::HighlighterState::NoState).name();
 
     // set the foreground and background color for the note text edits
-    appStyleSheet += QString("QPlainTextEdit#noteTextEdit,"
-                                     "QPlainTextEdit#encryptedNoteTextEdit"
-                                              "{color: %1;"
-                                              "background-color: %2;}")
+    appStyleSheet += QString("QMarkdownTextEdit{color:%1;background-color:%2;}")
             .arg(fgColorName, bgColorName);
 
     // set the background color for the note tag frame and its children QFrames
