@@ -222,6 +222,8 @@ private slots:
 
     void on_cursorWidthResetButton_clicked();
 
+    void on_showSystemTrayCheckBox_toggled(bool checked);
+
 private:
 
     Ui::SettingsDialog *ui;

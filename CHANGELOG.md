@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 17.11.4
+- the settings to show the system tray icon and to start the application hidden 
+  if the system tray icon is enabled were moved from the main menu to the 
+  *Interface settings* (for [#769](https://github.com/pbek/QOwnNotes/issues/769))
+    - if the user enables the system tray icon the setting to only start one 
+      instance of the application will also be enabled automatically if you are
+      on Linux or Windows (macOS does that by itself)
+
 ## 17.11.3
 - added **Bengali translation** (a big thank you to mrrifat1!)
     - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes/)

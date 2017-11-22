@@ -2263,6 +2263,35 @@
                    </widget>
                   </item>
                   <item>
+                   <widget class="QGroupBox" name="groupBox_27">
+                    <property name="title">
+                     <string>System tray</string>
+                    </property>
+                    <layout class="QGridLayout" name="gridLayout_62">
+                     <item row="0" column="0">
+                      <widget class="QCheckBox" name="showSystemTrayCheckBox">
+                       <property name="toolTip">
+                        <string>You need to restart the application to let this setting take effect</string>
+                       </property>
+                       <property name="text">
+                        <string>Show system tray icon</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QCheckBox" name="startHiddenCheckBox">
+                       <property name="toolTip">
+                        <string>You need to restart the application to let this setting take effect</string>
+                       </property>
+                       <property name="text">
+                        <string>Start application hidden</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
                    <widget class="QGroupBox" name="groupBox_24">
                     <property name="title">
                      <string>Interface style</string>
@@ -3200,16 +3229,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                    <widget class="QCheckBox" name="allowOnlyOneAppInstanceCheckBox">
                     <property name="text">
                      <string>Only allow one app instance at the same time</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="1" column="0">
-                   <widget class="QLabel" name="label_9">
-                    <property name="text">
-                     <string>You need to restart the application to let these changes take action.</string>
-                    </property>
-                    <property name="wordWrap">
-                     <bool>true</bool>
                     </property>
                    </widget>
                   </item>
@@ -4622,8 +4641,8 @@ git config --global user.name &quot;Your name&quot;</string>
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../breeze-qownnotes.qrc"/>
   <include location="../breeze-dark-qownnotes.qrc"/>
+  <include location="../breeze-qownnotes.qrc"/>
  </resources>
  <connections>
   <connection>

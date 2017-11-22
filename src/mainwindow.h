@@ -190,8 +190,6 @@ private slots:
 
     void systemTrayIconClicked(QSystemTrayIcon::ActivationReason reason);
 
-    void on_actionShow_system_tray_triggered(bool checked);
-
     void on_action_Settings_triggered();
 
     void on_actionShow_versions_triggered();
@@ -415,8 +413,6 @@ private slots:
     void on_actionDonate_triggered();
 
     void on_actionFind_notes_in_all_subfolders_triggered();
-
-    void on_actionStart_hidden_triggered(bool checked);
 
     void on_actionImport_notes_from_Evernote_triggered();
 

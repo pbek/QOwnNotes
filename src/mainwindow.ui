@@ -946,7 +946,6 @@ p, li { white-space: pre-wrap; }
      <addaction name="actionShow_menu_bar"/>
      <addaction name="actionShow_toolbar"/>
      <addaction name="actionShow_status_bar"/>
-     <addaction name="actionShow_system_tray"/>
      <addaction name="actionShow_log"/>
      <addaction name="actionShow_all_panels"/>
     </widget>
@@ -964,7 +963,6 @@ p, li { white-space: pre-wrap; }
     <addaction name="menuPanels"/>
     <addaction name="menuWorkspaces"/>
     <addaction name="actionUnlock_panels"/>
-    <addaction name="actionStart_hidden"/>
     <addaction name="separator"/>
     <addaction name="menuWorkspace"/>
     <addaction name="separator"/>
@@ -1147,14 +1145,6 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="toolTip">
     <string>Sort by date</string>
-   </property>
-  </action>
-  <action name="actionShow_system_tray">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="text">
-    <string>Sh&amp;ow in system tray</string>
    </property>
   </action>
   <action name="action_Settings">
@@ -1896,20 +1886,6 @@ p, li { white-space: pre-wrap; }
     <string notr="true">Alt+F</string>
    </property>
   </action>
-  <action name="actionStart_hidden">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="text">
-    <string>Start hidden</string>
-   </property>
-   <property name="toolTip">
-    <string>Start hidden</string>
-   </property>
-   <property name="statusTip">
-    <string>Starts the application hidden if the system tray icon is shown</string>
-   </property>
-  </action>
   <action name="actionImport_notes_from_Evernote">
    <property name="icon">
     <iconset theme="text-xml" resource="breeze-qownnotes.qrc">
@@ -2172,9 +2148,9 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="breeze-qownnotes.qrc"/>
-  <include location="images.qrc"/>
   <include location="breeze-dark-qownnotes.qrc"/>
+  <include location="images.qrc"/>
+  <include location="breeze-qownnotes.qrc"/>
  </resources>
  <connections/>
 </ui>

@@ -172,6 +172,10 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
             this, SLOT(needRestart()));
     connect(ui->allowOnlyOneAppInstanceCheckBox, SIGNAL(toggled(bool)),
             this, SLOT(needRestart()));
+    connect(ui->showSystemTrayCheckBox, SIGNAL(toggled(bool)),
+            this, SLOT(needRestart()));
+    connect(ui->startHiddenCheckBox, SIGNAL(toggled(bool)),
+            this, SLOT(needRestart()));
 
     // connect the panel sort radio buttons
     connect(ui->notesPanelSortAlphabeticalRadioButton, SIGNAL(toggled(bool)),
@@ -185,6 +189,11 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
 
     // setup the search engine combo-box
     initSearchEngineComboBox();
+
+#ifdef Q_OS_MAC
+    // there is no system tray in OS X
+    ui->showSystemTrayCheckBox->setText(tr("Show menu bar item"));
+#endif
 }
 
 /**
@@ -672,6 +681,11 @@ void SettingsDialog::storeSettings() {
 
     settings.setValue("SearchEngineId",
                     ui->searchEngineSelectionComboBox->currentData().toInt());
+
+    settings.setValue("ShowSystemTray",
+                      ui->showSystemTrayCheckBox->isChecked());
+    settings.setValue("StartHidden",
+                      ui->startHiddenCheckBox->isChecked());
 }
 
 /**
@@ -997,6 +1011,16 @@ void SettingsDialog::readSettings() {
     // set the cursor width spinbox value
     ui->cursorWidthSpinBox->setValue(
             settings.value("cursorWidth", 1).toInt());
+
+    const QSignalBlocker blocker8(this->ui->showSystemTrayCheckBox);
+    Q_UNUSED(blocker8);
+    bool showSystemTray = settings.value("ShowSystemTray").toBool();
+    ui->showSystemTrayCheckBox->setChecked(showSystemTray);
+    ui->startHiddenCheckBox->setEnabled(showSystemTray);
+    ui->startHiddenCheckBox->setChecked(settings.value("StartHidden").toBool());
+    if (!showSystemTray) {
+        ui->startHiddenCheckBox->setChecked(false);
+    }
 }
 
 /**
@@ -3411,4 +3435,23 @@ void SettingsDialog::on_interfaceStyleComboBox_currentTextChanged(
  */
 void SettingsDialog::on_cursorWidthResetButton_clicked() {
     ui->cursorWidthSpinBox->setValue(1);
+}
+
+/**
+ * Also enable the single instance feature if the system tray icon is turned on
+ */
+void SettingsDialog::on_showSystemTrayCheckBox_toggled(bool checked)
+{
+    // we don't need to do that on macOS
+#ifndef Q_OS_MAC
+    if (checked) {
+        ui->allowOnlyOneAppInstanceCheckBox->setChecked(true);
+    }
+#endif
+
+    ui->startHiddenCheckBox->setEnabled(checked);
+
+    if (!checked) {
+        ui->startHiddenCheckBox->setChecked(false);
+    }
 }

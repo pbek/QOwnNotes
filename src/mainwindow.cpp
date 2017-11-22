@@ -217,9 +217,6 @@ MainWindow::MainWindow(QWidget *parent) :
     // check if we want to start the application hidden
     initShowHidden();
 
-    // set the show in system tray checkbox
-    ui->actionShow_system_tray->setChecked(showSystemTray);
-
     createSystemTrayIcon();
     buildNotesIndexAndLoadNoteDirectoryList();
 
@@ -705,8 +702,6 @@ void MainWindow::releaseDockWidgetSizes() {
 void MainWindow::initShowHidden() {
     QSettings settings;
     bool startHidden = settings.value("StartHidden", false).toBool();
-    ui->actionStart_hidden->setChecked(startHidden);
-    ui->actionStart_hidden->setEnabled(showSystemTray);
     if (startHidden) {
         QTimer::singleShot(250, this, SLOT(hide()));
     }
@@ -1287,9 +1282,6 @@ void MainWindow::initStyling() {
 
     // add some margins in OS X to match the styling of the note list
     ui->navigationFrame->setContentsMargins(3, 0, 3, 0);
-
-    // there is no system tray in OS X
-    ui->actionShow_system_tray->setText(tr("Show menu bar item"));
 
     // add a padding for the note tag frame so the `add tag` button doesn't
     // stick to the right corner
@@ -3210,8 +3202,6 @@ void MainWindow::storeSettings() {
         settings.setValue("MainWindow/menuBarGeometry",
                           ui->menuBar->saveGeometry());
     }
-
-    settings.setValue("ShowSystemTray", showSystemTray);
 
     // store a NoteHistoryItem to open the note again after the app started
     NoteHistoryItem noteHistoryItem(&currentNote, ui->noteTextEdit);
@@ -5250,35 +5240,6 @@ void MainWindow::generateSystemTrayContextMenu() {
             this, SLOT(on_action_Quit_triggered()));
 
     trayIcon->setContextMenu(menu);
-}
-
-void MainWindow::on_actionShow_system_tray_triggered(bool checked) {
-    showSystemTray = checked;
-    ui->actionStart_hidden->setEnabled(checked);
-
-    if (checked) {
-        trayIcon->show();
-
-        QSettings settings;
-        if (!settings.value("allowOnlyOneAppInstance").toBool())  {
-            if (QMessageBox::information(
-                    this,
-                    "QOwnNotes",
-                    tr("You may want to enable that only one app instance is "
-                               "allowed at the same time in the settings to "
-                               "make full use of the this feature."),
-                    tr("&Ok"),
-                    tr("Open &settings"),
-                    QString::null, 0, 1) == 1) {
-                openSettingsDialog(SettingsDialog::GeneralPage);
-            }
-        }
-    } else {
-        trayIcon->hide();
-
-        // turn off "Start hidden"
-        on_actionStart_hidden_triggered(false);
-    }
 }
 
 void MainWindow::on_action_Settings_triggered() {
@@ -8924,20 +8885,6 @@ void MainWindow::selectAllNotesInTagTreeWidget() const {
     QKeyEvent *event = new QKeyEvent(QEvent::KeyPress, Qt::Key_Home,
                                      Qt::NoModifier);
     QCoreApplication::postEvent(ui->tagTreeWidget, event);
-}
-
-/**
- * Toggle if we want to start the app hidden
- */
-void MainWindow::on_actionStart_hidden_triggered(bool checked) {
-    QSettings settings;
-    settings.setValue("StartHidden", checked);
-
-    const QSignalBlocker blocker(ui->actionStart_hidden);
-    {
-        Q_UNUSED(blocker);
-        ui->actionStart_hidden->setChecked(checked);
-    }
 }
 
 void MainWindow::on_actionImport_notes_from_Evernote_triggered() {
