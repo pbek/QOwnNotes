@@ -10,6 +10,9 @@
 - added more German, Catalan, Italian, Spanish, Brazilian Portuguese, French,
   Hungarian and Dutch translation translation (thank you rakekniven, MGuerra,
   mlocati, richarson, mlimacarlos, mcsa, bepolymathe and Fabijenna)
+- there now is a software repository for **Fedora 27**
+    - please visit the [Fedora installation page](http://www.qownnotes.org/installation#Fedora)
+      for instructions
 
 ## 17.11.3
 - added **Bengali translation** (a big thank you to mrrifat1!)
