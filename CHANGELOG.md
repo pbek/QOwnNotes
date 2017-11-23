@@ -7,6 +7,9 @@
     - if the user enables the system tray icon the setting to only start one 
       instance of the application will also be enabled automatically if you are
       on Linux or Windows (macOS does that by itself)
+- added more German, Catalan, Italian, Spanish, Brazilian Portuguese, French,
+  Hungarian and Dutch translation translation (thank you rakekniven, MGuerra,
+  mlocati, richarson, mlimacarlos, mcsa, bepolymathe and Fabijenna)
 
 ## 17.11.3
 - added **Bengali translation** (a big thank you to mrrifat1!)
