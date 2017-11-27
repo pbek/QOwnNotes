@@ -12,6 +12,8 @@
     - if turned off you cannot enter text into the note text edit and a lot 
       of menu- and toolbar-items to edit the note are turned off too
     - there also in a new button in the *Main toolbar* if you reset your toolbars 
+- added more German, Catalan, Arabic, Spanish, French, Hungarian and Dutch
+  translation (thank you MGuerra, sosozozo, richarson, bepolymathe and Fabijenna)
 
 ## 17.11.4
 - the settings to show the system tray icon and to start the application hidden 
@@ -21,8 +23,8 @@
       instance of the application will also be enabled automatically if you are
       on Linux or Windows (macOS does that by itself)
 - added more German, Catalan, Italian, Spanish, Brazilian Portuguese, French,
-  Hungarian and Dutch translation translation (thank you rakekniven, MGuerra,
-  mlocati, richarson, mlimacarlos, mcsa, bepolymathe and Fabijenna)
+  Hungarian and Dutch translation (thank you rakekniven, MGuerra, mlocati,
+  richarson, mlimacarlos, mcsa, bepolymathe and Fabijenna)
 - there now is a software repository for **Fedora 27**
     - please visit the [Fedora installation page](http://www.qownnotes.org/installation#Fedora)
       for instructions
