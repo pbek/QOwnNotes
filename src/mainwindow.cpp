@@ -2051,7 +2051,7 @@ void MainWindow::readSettings() {
 
 /**
  * Returns if "allowNoteEditing" is turned on
- * 
+ *
  * @return
  */
 bool MainWindow::allowNoteEditing() const {
