@@ -66,6 +66,11 @@ Author
 Patrizio Bekerle <patrizio@bekerle.com>
 
 
+# Fedora 27 wasn't able to create debug packages
+%if 0%{?fedora} == 27
+%global debug_package %{nil}
+%endif
+
 %prep
 %setup -q
 mkdir build
