@@ -2263,7 +2263,7 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QGroupBox" name="groupBox_27">
+                   <widget class="QGroupBox" name="systemTrayGroupBox">
                     <property name="title">
                      <string>System tray</string>
                     </property>

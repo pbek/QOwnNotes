@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 17.11.5
+- changed `System tray` text in the *Interface settings* on macOS to `Menu bar`
+
 ## 17.11.4
 - the settings to show the system tray icon and to start the application hidden 
   if the system tray icon is enabled were moved from the main menu to the 

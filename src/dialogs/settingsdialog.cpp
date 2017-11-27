@@ -192,6 +192,7 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
 
 #ifdef Q_OS_MAC
     // there is no system tray in OS X
+    ui->systemTrayGroupBox->setTitle(tr("Menu bar"));
     ui->showSystemTrayCheckBox->setText(tr("Show menu bar item"));
 #endif
 }
