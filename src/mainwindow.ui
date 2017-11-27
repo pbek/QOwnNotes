@@ -848,7 +848,7 @@ p, li { white-space: pre-wrap; }
      <addaction name="actionDelete_orphaned_images"/>
      <addaction name="actionSplit_note_at_cursor_position"/>
     </widget>
-    <widget class="QMenu" name="menuEdit_2">
+    <widget class="QMenu" name="menuEditNote">
      <property name="title">
       <string>Edit</string>
      </property>
@@ -883,7 +883,8 @@ p, li { white-space: pre-wrap; }
      <addaction name="actionEdit_encrypted_note"/>
      <addaction name="actionDecrypt_note"/>
     </widget>
-    <addaction name="menuEdit_2"/>
+    <addaction name="menuEditNote"/>
+    <addaction name="actionAllow_note_editing"/>
     <addaction name="action_Remove_note"/>
     <addaction name="separator"/>
     <addaction name="action_Find_text_in_note"/>
@@ -1018,6 +1019,7 @@ p, li { white-space: pre-wrap; }
    <addaction name="action_Find_note"/>
    <addaction name="action_Remove_note"/>
    <addaction name="action_Open_note_in_external_editor"/>
+   <addaction name="actionAllow_note_editing"/>
    <addaction name="separator"/>
    <addaction name="action_Back_in_note_history"/>
    <addaction name="action_Forward_in_note_history"/>
@@ -2121,6 +2123,21 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="shortcut">
     <string notr="true">Ctrl+Shift+E</string>
+   </property>
+  </action>
+  <action name="actionAllow_note_editing">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset theme="document-save" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Allow note editing</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Alt+Shift+E</string>
    </property>
   </action>
  </widget>

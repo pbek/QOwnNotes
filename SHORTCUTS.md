@@ -16,6 +16,7 @@ Important Shortcuts
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>O</kbd> opens the current note in an external editor
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>O</kbd> opens the current note in a view
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> shows the current note in the file manager
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>E</kbd> enables or disables editing of notes
 - <kbd>Alt</kbd> + <kbd>Up</kbd> jumps to the previous visible note
     - alternate shortcut is <kbd>Ctrl</kbd> + <kbd>PgUp</kbd>
 - <kbd>Alt</kbd> + <kbd>Down</kbd> jumps to the next visible note
@@ -110,6 +111,7 @@ Important Shortcuts
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>O</kbd> opens the current note in an external editor
 - <kbd>Opt</kbd> + <kbd>⇧</kbd> + <kbd>O</kbd> opens the current note in a view
 - <kbd>Opt</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> opens the folder of the current note in Finder
+- <kbd>Opt</kbd> + <kbd>⇧</kbd> + <kbd>E</kbd> enables or disables editing of notes
 - <kbd>Opt</kbd> + <kbd>Up</kbd> jumps to the previous visible note
     - alternate shortcut is <kbd>⌘</kbd> + <kbd>PgUp</kbd>
 - <kbd>Opt</kbd> + <kbd>Down</kbd> jumps to the next visible note

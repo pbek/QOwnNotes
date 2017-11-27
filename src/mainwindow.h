@@ -490,6 +490,8 @@ private slots:
 
     void on_actionInsert_attachment_triggered();
 
+    void on_actionAllow_note_editing_triggered(bool checked);
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;
@@ -851,4 +853,8 @@ private:
 
     void directoryWatcherWorkaround(bool isNotesDirectoryWasModifiedDisabled,
                                     bool alsoHandleNotesWereModified = false);
+
+    bool allowNoteEditing() const;
+
+    void setMenuEnabled(QMenu* menu, bool enabled);
 };

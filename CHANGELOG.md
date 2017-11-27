@@ -4,6 +4,12 @@
 - changed `System tray` text in the *Interface settings* on macOS to `Menu bar`
 - expanded the valid list-characters by `- [ ] `, `- [x] `, `* [ ] `, `* [x] `,
   `+ [ ] ` and `+ [x] ` (for [#789](https://github.com/pbek/QOwnNotes/issues/789), thank you @sanderboom)
+- there now is a new item in the *Edit menu* to allow note editing (on by default) 
+  (for [#787](https://github.com/pbek/QOwnNotes/issues/787))
+    - it can be toggled with a keyboard shortcut <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>E</kbd>
+    - if turned off you cannot enter text into the note text edit and a lot 
+      of menu- and toolbar-items to edit the note are turned off too
+    - there also in a new button in the *Main toolbar* if you reset your toolbars 
 
 ## 17.11.4
 - the settings to show the system tray icon and to start the application hidden 

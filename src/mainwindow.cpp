@@ -2036,6 +2036,27 @@ void MainWindow::readSettings() {
     bool showMenuBar =
             settings.value("showMenuBar", !ui->menuBar->isHidden()).toBool();
     on_actionShow_menu_bar_triggered(showMenuBar);
+
+    {
+        const QSignalBlocker blocker(ui->actionAllow_note_editing);
+        Q_UNUSED(blocker);
+
+        bool isAllowNoteEditing = allowNoteEditing();
+        ui->actionAllow_note_editing->setChecked(isAllowNoteEditing);
+        // we want to trigger the method regardless if the button was toggled
+        // or not
+        on_actionAllow_note_editing_triggered(isAllowNoteEditing);
+    }
+}
+
+/**
+ * Returns if "allowNoteEditing" is turned on
+ * 
+ * @return
+ */
+bool MainWindow::allowNoteEditing() const {
+    QSettings settings;
+    return settings.value("allowNoteEditing", true).toBool();
 }
 
 /**
@@ -3012,7 +3033,8 @@ void MainWindow::setCurrentNote(Note note,
 
     // set the note text edit to readonly if the note does not exist or the
     // note file is not writable
-    setNoteTextEditReadOnly(!(note.exists() && note.fileWriteable()));
+    setNoteTextEditReadOnly(!(note.exists() && note.fileWriteable() &&
+            allowNoteEditing()));
 
     // find and set the current item
     if (updateSelectedNote) {
@@ -5291,6 +5313,7 @@ void MainWindow::on_actionSelect_all_notes_triggered() {
 void MainWindow::on_noteTextEdit_customContextMenuRequested(const QPoint &pos) {
     QPoint globalPos = ui->noteTextEdit->mapToGlobal(pos);
     QMenu *menu = ui->noteTextEdit->createStandardContextMenu();
+    bool isAllowNoteEditing = allowNoteEditing();
 
     menu->addSeparator();
 
@@ -5299,12 +5322,14 @@ void MainWindow::on_noteTextEdit_customContextMenuRequested(const QPoint &pos) {
                 tr("&Link selected text") : tr("Insert &link");
     QAction *linkTextAction = menu->addAction(linkTextActionName);
     linkTextAction->setShortcut(ui->actionInsert_Link_to_note->shortcut());
+    linkTextAction->setEnabled(isAllowNoteEditing);
 
     QAction *searchAction = menu->addAction(tr("Search text on the web"));
     searchAction->setShortcut(ui->actionSearch_text_on_the_web->shortcut());
 
     QAction *pasteMediaAction = menu->addAction(tr("Paste HTML or media"));
     pasteMediaAction->setShortcut(ui->actionPaste_image->shortcut());
+    pasteMediaAction->setEnabled(isAllowNoteEditing);
 
     // add the custom actions to the context menu
     if (!_noteTextEditContextMenuActions.isEmpty()) {
@@ -9651,4 +9676,36 @@ void MainWindow::on_actionInsert_attachment_triggered() {
             insertAttachment(&file);
         }
     }
+}
+
+/**
+ * Turns note editing on or off
+ *
+ * @param checked
+ */
+void MainWindow::on_actionAllow_note_editing_triggered(bool checked) {
+    QSettings settings;
+    settings.setValue("allowNoteEditing", checked);
+
+    setNoteTextEditReadOnly(!checked);
+    setMenuEnabled(ui->menuEditNote, checked);
+    setMenuEnabled(ui->menuInsert, checked);
+    setMenuEnabled(ui->menuFormat, checked);
+    ui->actionPaste_image->setEnabled(checked);
+    ui->actionReplace_in_current_note->setEnabled(checked);
+}
+
+/**
+ * Enables or disables a menu and all its actions
+ *
+ * @param menu
+ * @param enabled
+ */
+void MainWindow::setMenuEnabled(QMenu* menu, bool enabled) {
+    menu->setEnabled(enabled);
+
+    // loop through all actions of the menu
+    foreach(QAction* action, menu->actions()) {
+            action->setEnabled(enabled);
+        }
 }
