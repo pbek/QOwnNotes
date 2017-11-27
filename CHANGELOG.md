@@ -2,6 +2,7 @@
 
 ## 17.11.5
 - changed `System tray` text in the *Interface settings* on macOS to `Menu bar`
+  (for [#769](https://github.com/pbek/QOwnNotes/issues/769))
 - expanded the valid list-characters by `- [ ] `, `- [x] `, `* [ ] `, `* [x] `,
   `+ [ ] ` and `+ [x] ` (for [#789](https://github.com/pbek/QOwnNotes/issues/789), thank you @sanderboom)
 - auto-completion of list-items now also works when soft-wraps are enabled
