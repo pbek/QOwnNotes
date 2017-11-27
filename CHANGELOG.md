@@ -2,6 +2,8 @@
 
 ## 17.11.5
 - changed `System tray` text in the *Interface settings* on macOS to `Menu bar`
+- expanded the valid list-characters by `- [ ] `, `- [x] `, `* [ ] `, `* [x] `,
+  `+ [ ] ` and `+ [x] ` (for [#789](https://github.com/pbek/QOwnNotes/issues/789), thank you @sanderboom)
 
 ## 17.11.4
 - the settings to show the system tray icon and to start the application hidden 
