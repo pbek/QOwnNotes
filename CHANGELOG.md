@@ -3,6 +3,7 @@
 ## 17.11.6
 - you can now enable debug output in release-builds of QOwnNotes
   (for [#759](https://github.com/pbek/QOwnNotes/issues/759))
+- for headlines a whitespace after the last `#` is now mandatory
 
 ## 17.11.5
 - changed `System tray` text in the *Interface settings* on macOS to `Menu bar`
