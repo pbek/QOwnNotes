@@ -83,6 +83,7 @@ void ClientProxy::setupQtProxyFromSettings()
         QNetworkProxy::setApplicationProxy(proxy);
         break;
     default:
+        qDebug() << "ProxyType was not found!";
         break;
     }
 }
