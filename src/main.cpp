@@ -213,12 +213,50 @@ bool mainStartupMisc(const QStringList arguments) {
 //            "files into <directory>.");
 //}
 
+/**
+ * Temporary log output until LogWidget::logMessageOutput takes over
+ */
+void tempLogMessageOutput(
+        QtMsgType type, const QMessageLogContext &context, const QString &msg) {
+    QByteArray localMsg = msg.toLocal8Bit();
+
+    switch (type) {
+        case QtDebugMsg:
+            // only print debug messages in debug-mode, because we don't know
+            // yet if the user wants to see them
+#ifdef QT_DEBUG
+            fprintf(stderr, "Debug: %s\n", localMsg.constData());
+#endif
+            break;
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
+        case QtInfoMsg:
+            fprintf(stderr, "Info: %s (%s:%u, %s)\n", localMsg.constData(),
+                    context.file, context.line, context.function);
+            break;
+#endif
+        case QtWarningMsg:
+            fprintf(stderr, "Warning: %s (%s:%u, %s)\n", localMsg.constData(),
+                    context.file, context.line, context.function);
+            break;
+        case QtCriticalMsg:
+            fprintf(stderr, "Critical: %s (%s:%u, %s)\n", localMsg.constData(),
+                    context.file, context.line, context.function);
+            break;
+        case QtFatalMsg:
+            fprintf(stderr, "Fatal: %s (%s:%u, %s)\n", localMsg.constData(),
+                    context.file, context.line, context.function);
+    }
+}
+
 int main(int argc, char *argv[]) {
     // register NoteHistoryItem so we can store it to the settings
     // we need to do that before we are accessing QSettings or the
     // NoteHistoryItem instances in the settings will get destroyed
     qRegisterMetaTypeStreamOperators<NoteHistoryItem>("NoteHistoryItem");
     qRegisterMetaType<NoteHistoryItem>("NoteHistoryItem");
+
+    // temporary log output until LogWidget::logMessageOutput takes over
+    qInstallMessageHandler(tempLogMessageOutput);
 
     QString release = RELEASE;
     bool portable = false;

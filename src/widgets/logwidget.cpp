@@ -116,6 +116,13 @@ void LogWidget::log(LogType logType, QString text) {
             if (!ui->debugCheckBox->isChecked()) {
                 return;
             }
+
+            // print debug messages to stderr if in release-mode but debug
+            // logging is enabled in the log panel
+#ifndef QT_DEBUG
+            fprintf(stderr, "Debug: %s\n", text.toLocal8Bit().constData());
+#endif
+
             // gray
             color = QColor(98, 98, 98);
             break;
@@ -279,7 +286,7 @@ LogWidget * LogWidget::createInstance(QWidget *parent) {
 }
 
 /**
- * This is our custom log output
+ * Custom log output
  */
 void LogWidget::logMessageOutput(
         QtMsgType type, const QMessageLogContext &context, const QString &msg) {
@@ -290,7 +297,10 @@ void LogWidget::logMessageOutput(
         case QtDebugMsg:
 //            fprintf(stderr, "Debug: %s (%s:%u, %s)\n", localMsg.constData(),
 //                    context.file, context.line, context.function);
+            // only print debug messages in debug-mode
+#ifdef QT_DEBUG
             fprintf(stderr, "Debug: %s\n", localMsg.constData());
+#endif
             logType = LogType::DebugLogType;
             break;
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))

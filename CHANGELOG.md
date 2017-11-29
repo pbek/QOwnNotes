@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 17.11.6
+- you can now enable debug output in release-builds of QOwnNotes
+  (for [#759](https://github.com/pbek/QOwnNotes/issues/759))
+
 ## 17.11.5
 - changed `System tray` text in the *Interface settings* on macOS to `Menu bar`
   (for [#769](https://github.com/pbek/QOwnNotes/issues/769))

@@ -260,6 +260,8 @@ CONFIG(debug, debug|release) {
     message("Currently in DEBUG mode.")
 } else {
     DEFINES += QT_NO_DEBUG
-    DEFINES += QT_NO_DEBUG_OUTPUT
+
+    # We want to allow optional debug output in releases
+#    DEFINES += QT_NO_DEBUG_OUTPUT
     message("Currently in RELEASE mode.")
 }
