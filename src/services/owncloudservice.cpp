@@ -270,11 +270,7 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
             return;
         } else if (!todoCalendarServerUrlPath.isEmpty() &&
                 urlPath.endsWith(todoCalendarServerUrlPath)) {
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
-            qInfo() << "Reply from ownCloud calendar page: " << data;
-#else
             qDebug() << "Reply from ownCloud calendar page" << data;
-#endif
 
             QList<CalDAVCalendarData> calendarDataList =
                     parseCalendarData(data);
