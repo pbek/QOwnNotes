@@ -123,7 +123,7 @@ http://www.example.com or <http://www.example.com>
 [1]: http://www.qownnotes.org
 
 
-## Code and Syntax Highlighting
+## Inline code and code blocks
 
 ```markdown
 Inline `code` has `back-ticks around` it.
@@ -131,7 +131,7 @@ Inline `code` has `back-ticks around` it.
 
 Inline `code` has `back-ticks around` it.
 
-Blocks of code are either fenced by lines with three back-ticks, or are indented with four spaces. I recommend only using the fenced code blocks -- they're easier and only they support syntax highlighting.
+Blocks of code are either fenced by lines with three back-ticks, or are indented with four spaces.
 
 ```markdown
 	s = "Code with space indent"
