@@ -120,6 +120,9 @@ public:
     Q_INVOKABLE QVariant getApplicationSettingsVariable(
             const QString &key, const QVariant &defaultValue = QVariant());
 
+    Q_INVOKABLE bool jumpToNoteSubFolder(const QString &noteSubFolderPath,
+                                         QString separator = "/");
+
 private:
     QQmlEngine *_engine;
     NoteApi *_currentNoteApi;

@@ -645,6 +645,36 @@ You may want to take a look at the example
 `journal-entry.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/journal-entry.qml>`__.
 
 
+Jumping to a note subfolder
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Parameters
+^^^^^^^^^^
+
+.. code:: cpp
+
+    /**
+     * Jumps to a note subfolder
+     *
+     * @param noteSubFolderPath {QString} path of the subfolder, relative to the note folder
+     * @param separator {QString} separator between parts of the path, default "/"
+     * @return true if jump was successful
+     */
+    bool ScriptingService::jumpToNoteSubFolder(const QString &noteSubFolderPath,
+                                               QString separator);
+
+Usage in QML
+^^^^^^^^^^^^
+
+.. code:: javascript
+
+    // jump to the note subfolder "a sub folder"
+    script.jumpToNoteSubFolder("a sub folder/sub");
+
+    // jump to the note subfolder "sub" inside of "a sub folder"
+    script.jumpToNoteSubFolder("a sub folder/sub");
+
+
 Showing an information message box
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

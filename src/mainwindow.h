@@ -138,6 +138,8 @@ public:
 
     QList<Note> selectedNotes();
 
+    bool jumpToNoteSubFolder(int noteSubFolderId);
+
 protected:
     void closeEvent(QCloseEvent *event);
 

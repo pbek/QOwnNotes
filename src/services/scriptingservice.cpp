@@ -1333,6 +1333,9 @@ QString ScriptingService::inputDialogGetText(
  */
 void ScriptingService::setPersistentVariable(const QString &key,
                                              const QVariant &value) {
+    MetricsService::instance()->sendVisitIfEnabled(
+            "scripting/" + QString(__func__));
+
     QSettings settings;
     settings.setValue(QString(PERSISTENT_VARIABLE_SETTINGS_PREFIX) + "/" + key,
                       value);
@@ -1348,6 +1351,9 @@ void ScriptingService::setPersistentVariable(const QString &key,
  */
 QVariant ScriptingService::getPersistentVariable(const QString &key,
                                                  const QVariant &defaultValue) {
+    MetricsService::instance()->sendVisitIfEnabled(
+            "scripting/" + QString(__func__));
+
     QSettings settings;
     return settings.value(
             QString(PERSISTENT_VARIABLE_SETTINGS_PREFIX) + "/" + key,
@@ -1365,4 +1371,38 @@ QVariant ScriptingService::getApplicationSettingsVariable(
         const QString &key, const QVariant &defaultValue) {
     QSettings settings;
     return settings.value(key, defaultValue);
+}
+
+/**
+ * Jumps to a note subfolder
+ *
+ * @param noteSubFolderPath {QString} path of the subfolder, relative to the note folder
+ * @param separator {QString} separator between parts of the path, default "/"
+ * @return true if jump was successful
+ */
+bool ScriptingService::jumpToNoteSubFolder(const QString &noteSubFolderPath,
+                                           QString separator) {
+    MetricsService::instance()->sendVisitIfEnabled(
+            "scripting/" + QString(__func__));
+
+#ifndef INTEGRATION_TESTS
+    MainWindow *mainWindow = MainWindow::instance();
+    if (mainWindow == Q_NULLPTR) {
+        return false;
+    }
+
+    NoteSubFolder folder = NoteSubFolder::fetchByPathData(noteSubFolderPath,
+                                                          separator);
+
+    if (!folder.isFetched()) {
+        return false;
+    }
+
+    // jump to the note subfolder
+    return mainWindow->jumpToNoteSubFolder(folder.getId());
+#else
+    Q_UNUSED(noteSubFolderPath);
+    Q_UNUSED(separator);
+    return false;
+#endif
 }

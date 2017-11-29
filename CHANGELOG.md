@@ -4,6 +4,10 @@
 - you can now enable debug output in release-builds of QOwnNotes
   (for [#759](https://github.com/pbek/QOwnNotes/issues/759))
 - for headlines a whitespace after the last `#` is now mandatory
+- you can now use the new scripting function `script.jumpToNoteSubFolder()`
+  to jump to a note-subfolder in scripts (for [#792](https://github.com/pbek/QOwnNotes/issues/792))
+  - for more information please take a look at the
+    [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#jumping-to-a-note-subfolder)
 
 ## 17.11.5
 - changed `System tray` text in the *Interface settings* on macOS to `Menu bar`

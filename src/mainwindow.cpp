@@ -2939,6 +2939,30 @@ bool MainWindow::jumpToNoteName(QString name) {
     return false;
 }
 
+/**
+ * Jumps to a note subfolder in the note subfolder selector
+ *
+ * @param noteSubFolderId
+ * @return
+ */
+bool MainWindow::jumpToNoteSubFolder(int noteSubFolderId) {
+    QList<QTreeWidgetItem *> items = ui->noteSubFolderTreeWidget->findItems(
+            QString("*"), Qt::MatchWrap | Qt::MatchWildcard |
+                    Qt::MatchRecursive);
+
+    Q_FOREACH(QTreeWidgetItem *item, items) {
+            int id = item->data(0, Qt::UserRole).toInt();
+            qDebug() << __func__ << " - 'id': " << id;
+
+            if (id == noteSubFolderId) {
+                ui->noteSubFolderTreeWidget->setCurrentItem(item);
+                return true;
+            }
+        }
+
+    return false;
+}
+
 QString MainWindow::selectOwnCloudNotesFolder() {
     QString path = this->notesPath;
 
