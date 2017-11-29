@@ -1038,7 +1038,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2137"/>
       <source>Allow note editing</source>
-      <translation type="unfinished">Allow note editing</translation>
+      <translation>Permitir a edição da nota</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1645"/>
@@ -4372,7 +4372,7 @@ Mensagem de erro: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="195"/>
       <source>Menu bar</source>
-      <translation type="unfinished">Menu bar</translation>
+      <translation>Barra de menus</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="196"/>

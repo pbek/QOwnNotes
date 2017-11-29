@@ -1038,7 +1038,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2137"/>
       <source>Allow note editing</source>
-      <translation type="unfinished">Allow note editing</translation>
+      <translation>Autoriser la modification de la note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1645"/>

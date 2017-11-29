@@ -8,6 +8,8 @@
   to jump to a note-subfolder in scripts (for [#792](https://github.com/pbek/QOwnNotes/issues/792))
   - for more information please take a look at the
     [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#jumping-to-a-note-subfolder)
+- added more Catalan, Italian, Spanish, Brazilian Portuguese and French
+  (thank you MGuerra, mlocati, richarson, mlimacarlos and bepolymathe)
 
 ## 17.11.5
 - changed `System tray` text in the *Interface settings* on macOS to `Menu bar`

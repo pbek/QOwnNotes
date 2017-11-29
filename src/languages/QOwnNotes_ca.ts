@@ -1038,7 +1038,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2137"/>
       <source>Allow note editing</source>
-      <translation type="unfinished">Allow note editing</translation>
+      <translation>Permet l'edició de la nota</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1645"/>
@@ -4374,7 +4374,7 @@ Missatge de l'error de connexió: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="195"/>
       <source>Menu bar</source>
-      <translation type="unfinished">Menu bar</translation>
+      <translation>Barra de menú</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="196"/>
