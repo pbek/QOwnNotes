@@ -246,10 +246,10 @@ Usage in QML
     // add a custom action with a button
     script.registerCustomAction("mycustomaction1", "Menu text", "Button text");
 
-    // add a custom action with a button and freedesktop theme icon 
+    // add a custom action with a button and freedesktop theme icon
     script.registerCustomAction("mycustomaction1", "Menu text", "Button text", "task-new");
 
-    // add a custom action with a button and an icon from a file 
+    // add a custom action with a button and an icon from a file
     script.registerCustomAction("mycustomaction1", "Menu text", "Button text", "/usr/share/icons/breeze/actions/24/view-calendar-tasks.svg");
 
 You may then want to use the identifier with function
@@ -483,8 +483,8 @@ Parameters
 
     /**
      * Adds a custom stylesheet to the application
-     * 
-     * @param stylesheet 
+     *
+     * @param stylesheet
      */
     void ScriptingService::addStyleSheet(QString stylesheet);
 
@@ -669,7 +669,7 @@ Usage in QML
 .. code:: javascript
 
     // jump to the note subfolder "a sub folder"
-    script.jumpToNoteSubFolder("a sub folder/sub");
+    script.jumpToNoteSubFolder("a sub folder");
 
     // jump to the note subfolder "sub" inside of "a sub folder"
     script.jumpToNoteSubFolder("a sub folder/sub");
@@ -1147,7 +1147,7 @@ insertMediaHook
     /**
      * This function is called when media file is inserted into the note
      * If this function is defined in multiple scripts, then the first script that returns a non-empty string wins
-     * 
+     *
      * @param fileName string the file path of the source media file before it was copied to the media folder
      * @param mediaMarkdownText string the markdown text of the media file, e.g. ![my-image](file://media/505671508.jpg)
      * @return string the new markdown text of the media file
@@ -1164,7 +1164,7 @@ insertingFromMimeDataHook
 
     /**
      * This function is called when html or a media file is pasted to a note with `Ctrl + Shift + V`
-     * 
+     *
      * @param text text of the QMimeData object
      * @param html html of the QMimeData object
      * @returns the string that should be inserted instead of the text from the QMimeData object
@@ -1183,15 +1183,15 @@ handleNoteTextFileNameHook
 
     /**
      * This function is called when a note gets stored to disk if
-     * "Allow note file name to be different from headline" is enabled 
+     * "Allow note file name to be different from headline" is enabled
      * in the settings
-     * 
+     *
      * It allows you to modify the name of the note file
      * Keep in mind that you have to care about duplicate names yourself!
      *
-     * Return an empty string if the file name of the note should 
+     * Return an empty string if the file name of the note should
      * not be modified
-     * 
+     *
      * @param {NoteApi} note - the note object of the stored note
      * @return {string} the file name of the note
      */
@@ -1254,7 +1254,7 @@ encryptionHook
 
     /**
      * This function is called when text has to be encrypted or decrypted
-     * 
+     *
      * @param text string the text to encrypt or decrypt
      * @param password string the password
      * @param decrypt bool if false encryption is demanded, if true decryption is demanded
