@@ -2543,79 +2543,79 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
     </message>
   </context>
   <context>
-    <name>QTextEditSearchWidget</name>
+    <name>QPlainTextEditSearchWidget</name>
     <message>
-      <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="62"/>
+      <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="62"/>
       <source>close search</source>
       <translation>cerrar búsqueda</translation>
     </message>
     <message>
-      <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="52"/>
+      <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="52"/>
       <source>Find:</source>
       <translation>Encontrar:</translation>
     </message>
     <message>
-      <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="32"/>
+      <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="32"/>
       <source>replace text</source>
       <translation>Reemplazar texto</translation>
     </message>
     <message>
-      <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="79"/>
+      <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="79"/>
       <source>find in text</source>
       <translation>buscar en el texto</translation>
     </message>
     <message>
-      <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="86"/>
+      <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="86"/>
       <source>search forward</source>
       <translation>buscar siguiente</translation>
     </message>
     <message>
-      <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="103"/>
+      <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="103"/>
       <source>search backward</source>
       <translation>buscar previa</translation>
     </message>
     <message>
-      <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="120"/>
+      <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="120"/>
       <source>replace with</source>
       <translation>Reemplazar con</translation>
     </message>
     <message>
-      <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="127"/>
+      <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="127"/>
       <source>Replace:</source>
       <translation>Reemplazar:</translation>
     </message>
     <message>
-      <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="156"/>
+      <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="156"/>
       <source>Plain text</source>
       <translation>Texto sin formato</translation>
     </message>
     <message>
-      <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="161"/>
+      <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="161"/>
       <source>Whole words</source>
       <translation>Palabras completas</translation>
     </message>
     <message>
-      <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="166"/>
+      <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="166"/>
       <source>Regular expression</source>
       <translation>Expresión regular</translation>
     </message>
     <message>
-      <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="187"/>
+      <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="187"/>
       <source>Replace</source>
       <translation>Reemplazar</translation>
     </message>
     <message>
-      <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="197"/>
+      <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="197"/>
       <source>Replace All</source>
       <translation>Reemplazar todo</translation>
     </message>
     <message>
-      <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="210"/>
+      <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="210"/>
       <source>Mode:</source>
       <translation>Modo:</translation>
     </message>
     <message>
-      <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="220"/>
+      <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="220"/>
       <source>Match case sensitive</source>
       <translation>Coincidir mayúsculas y minúsculas</translation>
     </message>

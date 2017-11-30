@@ -36,8 +36,8 @@ qt5_wrap_ui(dialogs/ui_orphanedimagesdialog.h orphanedimagesdialog.ui)
 qt5_wrap_ui(dialogs/ui_actiondialog.h actiondialog.ui)
 qt5_wrap_ui(dialogs/ui_tabledialog.h tabledialog.ui)
 qt5_wrap_ui(dialogs/ui_notedialog.h notedialog.ui)
-qt5_wrap_ui(libraries/qmarkdowntextedit/ui_qtexteditsearchwidget.h
-        libraries/qmarkdowntextedit/qtexteditsearchwidget.ui)
+qt5_wrap_ui(libraries/qmarkdowntextedit/ui_qplaintexteditsearchwidget.h
+        libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui)
 qt5_wrap_ui(libraries/qttoolbareditor/src/toolbar_editor.hpp
         libraries/qttoolbareditor/src/toolbar_editor.ui)
 
@@ -163,9 +163,9 @@ set(SOURCE_FILES
     libraries/qmarkdowntextedit/markdownhighlighter.h
     libraries/qmarkdowntextedit/qmarkdowntextedit.cpp
     libraries/qmarkdowntextedit/qmarkdowntextedit.h
-    libraries/qmarkdowntextedit/qtexteditsearchwidget.cpp
-    libraries/qmarkdowntextedit/qtexteditsearchwidget.h
-    libraries/qmarkdowntextedit/qtexteditsearchwidget.ui
+    libraries/qmarkdowntextedit/qplaintexteditsearchwidget.cpp
+    libraries/qmarkdowntextedit/qplaintexteditsearchwidget.h
+    libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui
     libraries/simplecrypt/simplecrypt.cpp
     libraries/simplecrypt/simplecrypt.h
     libraries/versionnumber/versionnumber.cpp
