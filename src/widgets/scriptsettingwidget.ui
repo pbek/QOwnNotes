@@ -38,13 +38,6 @@
       <item row="5" column="0" colspan="2">
        <widget class="QPlainTextEdit" name="textEdit"/>
       </item>
-      <item row="0" column="0">
-       <widget class="QLabel" name="nameLabel">
-        <property name="text">
-         <string>The setting name</string>
-        </property>
-       </widget>
-      </item>
       <item row="6" column="0">
        <widget class="QLineEdit" name="filePathLineEdit">
         <property name="clearButtonEnabled">
@@ -56,13 +49,6 @@
        <widget class="QLineEdit" name="stringLineEdit">
         <property name="clearButtonEnabled">
          <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QLabel" name="descriptionLabel">
-        <property name="text">
-         <string notr="true">Description</string>
         </property>
        </widget>
       </item>
@@ -81,6 +67,26 @@
        <widget class="QCheckBox" name="booleanCheckBox">
         <property name="text">
          <string notr="true">CheckBox</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" colspan="2">
+       <widget class="QLabel" name="descriptionLabel">
+        <property name="text">
+         <string notr="true">Description</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0" colspan="2">
+       <widget class="QLabel" name="nameLabel">
+        <property name="text">
+         <string>The setting name</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
         </property>
        </widget>
       </item>

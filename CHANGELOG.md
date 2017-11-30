@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 17.12.0
+- enabled text wrapping for the script settings (for [#792](https://github.com/pbek/QOwnNotes/issues/792))
+
 ## 17.11.6
 - you can now enable debug output in release-builds of QOwnNotes
   (for [#759](https://github.com/pbek/QOwnNotes/issues/759))
