@@ -361,7 +361,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>15</number>
+            <number>7</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -3017,7 +3017,7 @@
               <number>0</number>
              </property>
              <item>
-              <layout class="QVBoxLayout" name="verticalLayout_4" stretch="0,0,0,0,0">
+              <layout class="QVBoxLayout" name="verticalLayout_4" stretch="0,0,0,0,0,0">
                <property name="leftMargin">
                 <number>0</number>
                </property>
@@ -3267,6 +3267,28 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                    <widget class="QComboBox" name="searchEngineSelectionComboBox">
                     <property name="editable">
                      <bool>false</bool>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QGroupBox" name="groupBox_27">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="title">
+                  <string>Message boxes</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_21">
+                  <item>
+                   <widget class="QPushButton" name="resetMessageBoxesButton">
+                    <property name="text">
+                     <string>Reset message boxes</string>
                     </property>
                    </widget>
                   </item>

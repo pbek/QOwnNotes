@@ -19,6 +19,7 @@
 #include <services/scriptingservice.h>
 #include <QMimeDatabase>
 #include <QTemporaryFile>
+#include <utils/gui.h>
 
 
 Note::Note() {
@@ -2169,7 +2170,7 @@ void Note::handleNoteRenaming(QString oldFileName, QString newFileName) {
     QString oldUrl = getNoteURL(oldFileName);
     QString newUrl = getNoteURL(newFileName);
 
-    if (QMessageBox::information(
+    if (Utils::Gui::question(
             Q_NULLPTR,
             QObject::tr("Note filename changed"),
             QObject::tr("A change of the note name was detected. Would you "
@@ -2178,7 +2179,7 @@ void Note::handleNoteRenaming(QString oldFileName, QString newFileName) {
                                 "<strong>%2</strong>"
                                 " in <strong>%n</strong> note file(s)?", "",
                         noteCount).arg(oldUrl, newUrl),
-            QMessageBox::Yes, QMessageBox::No) == QMessageBox::Yes) {
+            "note-replace-links") == QMessageBox::Yes) {
         // replace the urls in all found notes
         Q_FOREACH(int noteId, noteIdList) {
                 Note note = Note::fetch(noteId);

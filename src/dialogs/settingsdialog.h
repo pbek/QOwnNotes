@@ -224,6 +224,8 @@ private slots:
 
     void on_showSystemTrayCheckBox_toggled(bool checked);
 
+    void on_resetMessageBoxesButton_clicked();
+
 private:
 
     Ui::SettingsDialog *ui;

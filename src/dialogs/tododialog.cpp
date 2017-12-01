@@ -8,6 +8,7 @@
 #include <QShortcut>
 #include <QMenu>
 #include <services/metricsservice.h>
+#include <utils/gui.h>
 
 TodoDialog::TodoDialog(MainWindow *mainWindow, QString taskUid,
                        QWidget *parent) :
@@ -573,11 +574,10 @@ void TodoDialog::on_newItemEdit_returnPressed() {
  * @brief Removes the currently selected task from the ownCloud server
  */
 void TodoDialog::on_removeButton_clicked() {
-    if (QMessageBox::information(
+    if (Utils::Gui::question(
                 this, tr("Remove todo item"),
                 tr("Remove the selected todo item?\nThis cannot be undone!"),
-                tr("&Remove"), tr("&Cancel"), QString::null,
-                0, 1) == 0) {
+                "remove-todo-items") == QMessageBox::Yes) {
         CalendarItem calItem = currentCalendarItem;
 
         // remove the calendar item from the list widget

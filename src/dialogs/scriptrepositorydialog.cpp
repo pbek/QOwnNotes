@@ -10,6 +10,7 @@
 #include <QtWidgets/QMessageBox>
 #include <services/metricsservice.h>
 #include <libraries/versionnumber/versionnumber.h>
+#include <utils/gui.h>
 #include "scriptrepositorydialog.h"
 #include "ui_scriptrepositorydialog.h"
 
@@ -409,8 +410,9 @@ void ScriptRepositoryDialog::on_installButton_clicked() {
                 "script-repository/install/" + identifier);
         reloadCurrentScriptInfo();
 
-        QMessageBox::information(this, tr("Install successful"),
-                                 tr("The script was successfully installed!"));
+        Utils::Gui::information(this, tr("Install successful"),
+                                tr("The script was successfully installed!"),
+                                "script-install-successful");
     } else {
         QMessageBox::warning(this, tr("Download failed"),
                                  tr("The script could not be downloaded!"));

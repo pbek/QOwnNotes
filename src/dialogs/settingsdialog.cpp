@@ -1874,8 +1874,9 @@ void SettingsDialog::on_reinitializeDatabaseButton_clicked() {
         DatabaseService::reinitializeDiskDatabase();
         NoteFolder::migrateToNoteFolders();
 
-        QMessageBox::information(this, tr("Database"),
-                                 tr("The Database was reinitialized."));
+        Utils::Gui::information(this, tr("Database"),
+                                 tr("The Database was reinitialized."),
+                                "database-reinitialized");
     }
 }
 
@@ -2171,13 +2172,12 @@ void SettingsDialog::on_noteFolderRemoveButton_clicked()
         return;
     }
 
-    if (QMessageBox::information(
+    if (Utils::Gui::question(
             this,
             tr("Remove note folder"),
             tr("Remove the current note folder <strong>%1</strong>?")
                     .arg(_selectedNoteFolder.getName()),
-            tr("&Remove"), tr("&Cancel"), QString::null,
-            0, 1) == 0) {
+            "remove-note-folder") == QMessageBox::Yes) {
         bool wasCurrent = _selectedNoteFolder.isCurrent();
 
         QSettings settings;
@@ -2538,13 +2538,12 @@ void SettingsDialog::on_scriptRemoveButton_clicked() {
         return;
     }
 
-    if (QMessageBox::information(
+    if (Utils::Gui::question(
             this,
             tr("Remove script"),
             tr("Remove the current script <strong>%1</strong>?")
                     .arg(_selectedScript.getName()),
-            tr("&Remove"), tr("&Cancel"), QString::null,
-            0, 1) == 0) {
+            "remove-script") == QMessageBox::Yes) {
         // remove the script from the database
         _selectedScript.remove();
 
@@ -3088,8 +3087,9 @@ void SettingsDialog::on_calendarPlusRadioButton_toggled(bool checked) {
 void SettingsDialog::on_emptyCalendarCachePushButton_clicked() {
     CalendarItem::removeAll();
 
-    QMessageBox::information(this, tr("Calendar cache emptied"),
-                             tr("Your calendar cache was emptied."));
+    Utils::Gui::information(this, tr("Calendar cache emptied"),
+                             tr("Your calendar cache was emptied."),
+                            "calendar-cache-emptied");
 }
 
 /**
@@ -3332,10 +3332,10 @@ void SettingsDialog::on_clearLogFileButton_clicked() {
     // remove the log file
     removeLogFile();
 
-    QMessageBox::information(
+    Utils::Gui::information(
             this, tr("Log file cleared"),
             tr("The log file <strong>%1</strong> was cleared"".").arg(
-                    Utils::Misc::logFilePath()));
+                    Utils::Misc::logFilePath()), "log-file-cleared");
 }
 
 /**
@@ -3454,5 +3454,22 @@ void SettingsDialog::on_showSystemTrayCheckBox_toggled(bool checked)
 
     if (!checked) {
         ui->startHiddenCheckBox->setChecked(false);
+    }
+}
+
+/**
+ * Resets the overrides for all message boxes
+ */
+void SettingsDialog::on_resetMessageBoxesButton_clicked() {
+    if (QMessageBox::question(
+            this, tr("Reset message boxes"),
+            tr("Do you really want to reset the overrides of all message "
+                       "boxes?")) == QMessageBox::Yes) {
+        QSettings settings;
+
+        // remove all settings in the group
+        settings.beginGroup("MessageBoxOverride");
+        settings.remove("");
+        settings.endGroup();
     }
 }

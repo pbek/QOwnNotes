@@ -5,6 +5,7 @@
 #include <QTreeWidgetItem>
 #include <QGraphicsPixmapItem>
 #include <QtWidgets/QMessageBox>
+#include <utils/gui.h>
 #include "orphanedimagesdialog.h"
 #include "ui_orphanedimagesdialog.h"
 
@@ -115,13 +116,12 @@ void OrphanedImagesDialog::on_deleteButton_clicked() {
         return;
     }
 
-    if (QMessageBox::information(
+    if (Utils::Gui::question(
             this,
             tr("Delete selected files"),
             tr("Delete <strong>%n</strong> selected files(s)?",
                "", selectedItemsCount),
-            tr("&Delete"), tr("&Cancel"), QString::null,
-            0, 1) == 1) {
+            "delete-files") != QMessageBox::Yes) {
         return;
     }
 

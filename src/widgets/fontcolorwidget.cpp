@@ -25,6 +25,7 @@
 #include <QDesktopServices>
 #include <utils/misc.h>
 #include <dialogs/filedialog.h>
+#include <utils/gui.h>
 #include "fontcolorwidget.h"
 #include "ui_fontcolorwidget.h"
 #include "utils/schema.h"
@@ -578,12 +579,11 @@ void FontColorWidget::on_deleteSchemeButton_clicked() {
         return;
     }
 
-    if (QMessageBox::information(
+    if (Utils::Gui::question(
             this,
             tr("Remove schema"),
             tr("Remove current schema? This cannot be undone!"),
-             tr("Remove"), tr("Cancel"), QString::null,
-             0, 1) != 0) {
+            "remove-color-schema") != QMessageBox::Yes) {
         return;
     }
 

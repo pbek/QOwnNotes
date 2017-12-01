@@ -5,6 +5,10 @@
 - you can now also search for text in the note-preview with <kbd>Ctrl</kbd> + <kbd>F</kbd>
     - please visit [QOwnNotes shortcuts](http://www.qownnotes.org/shortcuts/QOwnNotes)
       for a list of all shortcuts
+- there is now a checkbox `Don't ask again!` for most confirmation message 
+  boxes and a checkbox `Don't show again!` for most information message boxes
+  to override the answer for all future prompts of that message boxes
+    - you can reset the overrides in the *General settings*
 
 ## 17.11.6
 - you can now enable debug output in release-builds of QOwnNotes

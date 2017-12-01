@@ -15,6 +15,7 @@
 #pragma once
 
 #include <QTreeWidgetItem>
+#include <QMessageBox>
 
 /*  Gui functions that can be useful */
 
@@ -40,5 +41,25 @@ namespace Utils {
         void searchForTextInTreeWidget(
                 QTreeWidget *treeWidget, QString text,
                 TreeWidgetSearchFlags searchFlags = None);
+
+        QMessageBox::StandardButton showMessageBox(
+                QWidget *parent, QMessageBox::Icon icon,
+                const QString &title, const QString &text,
+                const QString &identifier,
+                QMessageBox::StandardButtons buttons,
+                QMessageBox::StandardButton defaultButton);
+
+        QMessageBox::StandardButton information(
+                QWidget *parent, const QString &title, const QString &text,
+                const QString &identifier = "default",
+                QMessageBox::StandardButtons buttons = QMessageBox::Ok,
+                QMessageBox::StandardButton defaultButton = QMessageBox::NoButton);
+
+        QMessageBox::StandardButton question(
+                QWidget *parent, const QString &title, const QString &text,
+                const QString &identifier = "default",
+                QMessageBox::StandardButtons buttons =
+                QMessageBox::StandardButtons(QMessageBox::Yes | QMessageBox::No),
+                QMessageBox::StandardButton defaultButton = QMessageBox::NoButton);
     }
 }

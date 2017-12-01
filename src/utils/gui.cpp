@@ -14,6 +14,10 @@
 
 #include "gui.h"
 #include <QDebug>
+#include <QDialogButtonBox>
+#include <QCheckBox>
+#include <QPushButton>
+#include <QSettings>
 
 
 /**
@@ -86,4 +90,115 @@ void Utils::Gui::searchForTextInTreeWidget(QTreeWidget *treeWidget,
                 item->setHidden(false);
             }
     }
+}
+
+/**
+ * Shows an information message box with a checkbox to override the message box
+ * in the future
+ *
+ * @param parent
+ * @param title
+ * @param text
+ * @param identifier
+ * @param buttons
+ * @param defaultButton
+ * @return
+ */
+QMessageBox::StandardButton Utils::Gui::information(
+        QWidget *parent, const QString &title, const QString& text,
+        const QString &identifier,
+        QMessageBox::StandardButtons buttons,
+        QMessageBox::StandardButton defaultButton)
+{
+    return showMessageBox(parent, QMessageBox::Icon::Information, title, text,
+                          identifier, buttons, defaultButton);
+}
+
+/**
+ * Shows a question message box with a checkbox to override the message box in
+ * the future
+ *
+ * @param parent
+ * @param title
+ * @param text
+ * @param identifier
+ * @param buttons
+ * @param defaultButton
+ * @return
+ */
+QMessageBox::StandardButton Utils::Gui::question(
+        QWidget *parent, const QString &title, const QString &text,
+        const QString &identifier,
+        QMessageBox::StandardButtons buttons,
+        QMessageBox::StandardButton defaultButton) {
+    return showMessageBox(parent, QMessageBox::Icon::Question, title, text,
+                          identifier, buttons, defaultButton);
+}
+
+/**
+ * Shows a message box with a checkbox to override the message box in the future
+ *
+ * @param parent
+ * @param icon
+ * @param title
+ * @param text
+ * @param identifier
+ * @param buttons
+ * @param defaultButton
+ * @return
+ */
+QMessageBox::StandardButton
+Utils::Gui::showMessageBox(QWidget *parent, QMessageBox::Icon icon,
+                           const QString &title, const QString &text,
+                           const QString &identifier,
+                           QMessageBox::StandardButtons buttons,
+                           QMessageBox::StandardButton defaultButton) {
+    QSettings settings;
+    const QString settingsKey = "MessageBoxOverride/" + identifier;
+    auto overrideButton = static_cast<QMessageBox::StandardButton>(
+            settings.value(settingsKey, QMessageBox::NoButton).toInt());
+
+    // check if we want to override the message box
+    if (overrideButton != QMessageBox::NoButton) {
+        return overrideButton;
+    }
+
+    QMessageBox msgBox(icon, title, text, QMessageBox::NoButton, parent);
+    auto *buttonBox = msgBox.findChild<QDialogButtonBox*>();
+    Q_ASSERT(buttonBox != nullptr);
+    QCheckBox *checkBox = new QCheckBox(
+            icon == QMessageBox::Icon::Question ?
+            QObject::tr("Don't ask again!") : QObject::tr("Don't show again!"),
+            parent);
+    msgBox.setCheckBox(checkBox);
+
+    uint mask = QMessageBox::FirstButton;
+    while (mask <= QMessageBox::LastButton) {
+        auto sb = static_cast<uint>(buttons & mask);
+        mask <<= 1;
+        if (!sb)
+            continue;
+        QPushButton *button = msgBox.addButton((QMessageBox::StandardButton)sb);
+
+        // choose the first accept role as the default
+        if (msgBox.defaultButton())
+            continue;
+        if ((defaultButton == QMessageBox::NoButton &&
+                buttonBox->buttonRole(button) == QDialogButtonBox::AcceptRole)
+            || (defaultButton != QMessageBox::NoButton &&
+                sb == uint(defaultButton)))
+            msgBox.setDefaultButton(button);
+    }
+
+    if (msgBox.exec() == -1)
+        return QMessageBox::Cancel;
+
+    auto result = msgBox.standardButton(msgBox.clickedButton());
+
+    // store the override for the message box
+    if (checkBox->isChecked()) {
+        settings.setValue(settingsKey, result);
+    }
+
+    return result;
 }

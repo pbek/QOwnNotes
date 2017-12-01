@@ -2368,41 +2368,34 @@ void MainWindow::notesWereModified(const QString &str) {
 
             qDebug() << "Current note was removed externally!";
 
-            switch (QMessageBox::information(
+            if (Utils::Gui::question(
                     this, tr("Note was removed externally!"),
                     tr("Current note was removed outside of this application!\n"
                             "Restore current note?"),
-                     tr("&Restore"), tr("&Cancel"), QString::null,
-                                             0, 1)) {
-                case 0: {
-                    const QSignalBlocker blocker(this->noteDirectoryWatcher);
-                    Q_UNUSED(blocker);
+                    "restore-note") == QMessageBox::Yes) {
+                const QSignalBlocker blocker(this->noteDirectoryWatcher);
+                Q_UNUSED(blocker);
 
-                    QString text = this->ui->noteTextEdit->toPlainText();
-                    note.storeNewText(text);
+                QString text = this->ui->noteTextEdit->toPlainText();
+                note.storeNewText(text);
 
-                    // store note to disk again
-                    bool noteWasStored = note.storeNoteTextFileToDisk();
-                    showStatusBarMessage(
-                            noteWasStored ?
-                            tr("Stored current note to disk") :
-                            tr("Current note could not be stored to disk"),
-                            3000);
+                // store note to disk again
+                bool noteWasStored = note.storeNoteTextFileToDisk();
+                showStatusBarMessage(
+                        noteWasStored ?
+                        tr("Stored current note to disk") :
+                        tr("Current note could not be stored to disk"),
+                        3000);
 
-                    // rebuild and reload the notes directory list
-                    buildNotesIndexAndLoadNoteDirectoryList();
+                // rebuild and reload the notes directory list
+                buildNotesIndexAndLoadNoteDirectoryList();
 
-                    // fetch note new (because all the IDs have changed
-                    // after the buildNotesIndex()
-                    note.refetch();
+                // fetch note new (because all the IDs have changed
+                // after the buildNotesIndex()
+                note.refetch();
 
-                    // restore old selected row (but don't update the note text)
-                    setCurrentNote(note, false);
-                }
-                    break;
-                case 1:
-                default:
-                    break;
+                // restore old selected row (but don't update the note text)
+                setCurrentNote(note, false);
             }
         }
     } else {
@@ -3179,52 +3172,44 @@ void MainWindow::removeCurrentNote() {
     // store updated notes to disk
     storeUpdatedNotesToDisk();
 
-    switch (QMessageBox::information(this, tr("Remove current note"),
+    if (Utils::Gui::question(this, tr("Remove current note"),
                      tr("Remove current note: <strong>%1</strong>?")
                              .arg(this->currentNote.getName()),
-                     tr("&Remove"), tr("&Cancel"), QString::null,
-                     0, 1)) {
-        case 0: {
-            const QSignalBlocker blocker2(ui->noteTextEdit);
-            Q_UNUSED(blocker2);
+                                 "remove-note") == QMessageBox::Yes) {
+        const QSignalBlocker blocker2(ui->noteTextEdit);
+        Q_UNUSED(blocker2);
 
-            const QSignalBlocker blocker3(ui->noteTextView);
-            Q_UNUSED(blocker3);
+        const QSignalBlocker blocker3(ui->noteTextView);
+        Q_UNUSED(blocker3);
 
-            const QSignalBlocker blocker4(ui->encryptedNoteTextEdit);
-            Q_UNUSED(blocker4);
+        const QSignalBlocker blocker4(ui->encryptedNoteTextEdit);
+        Q_UNUSED(blocker4);
 
-            const QSignalBlocker blocker5(noteDirectoryWatcher);
-            Q_UNUSED(blocker5);
+        const QSignalBlocker blocker5(noteDirectoryWatcher);
+        Q_UNUSED(blocker5);
 
-            // we try to fix problems with note subfolders
-            directoryWatcherWorkaround(true);
+        // we try to fix problems with note subfolders
+        directoryWatcherWorkaround(true);
 
-            {
-                const QSignalBlocker blocker1(ui->noteTreeWidget);
-                Q_UNUSED(blocker1);
+        {
+            const QSignalBlocker blocker1(ui->noteTreeWidget);
+            Q_UNUSED(blocker1);
 
-                // delete note in database and on file system
-                currentNote.remove(true);
+            // delete note in database and on file system
+            currentNote.remove(true);
 
-                unsetCurrentNote();
-                loadNoteDirectoryList();
-            }
-
-            // set a new first note
-            resetCurrentNote();
-
-            // we try to fix problems with note subfolders
-            // we need to wait some time to turn the watcher on again because
-            // something is happening after this method that reloads the
-            // note folder
-            directoryWatcherWorkaround(false);
-
-            break;
+            unsetCurrentNote();
+            loadNoteDirectoryList();
         }
-        case 1:
-        default:
-            break;
+
+        // set a new first note
+        resetCurrentNote();
+
+        // we try to fix problems with note subfolders
+        // we need to wait some time to turn the watcher on again because
+        // something is happening after this method that reloads the
+        // note folder
+        directoryWatcherWorkaround(false);
     }
 }
 
@@ -3671,7 +3656,7 @@ void MainWindow::removeSelectedNotes() {
         return;
     }
 
-    if (QMessageBox::information(
+    if (Utils::Gui::question(
             this,
             tr("Remove selected notes"),
             Utils::Misc::replaceOwnCloudText(
@@ -3679,9 +3664,7 @@ void MainWindow::removeSelectedNotes() {
                     "If the trash is enabled on your "
                     "ownCloud server you should be able to restore "
                     "them from there.",
-               "", selectedItemsCount)),
-             tr("&Remove"), tr("&Cancel"), QString::null,
-             0, 1) == 0) {
+               "", selectedItemsCount)), "remove-notes") == QMessageBox::Yes) {
         const QSignalBlocker blocker(this->noteDirectoryWatcher);
         Q_UNUSED(blocker);
 
@@ -3754,7 +3737,7 @@ void MainWindow::removeSelectedNoteSubFolders() {
         return;
     }
 
-    if (QMessageBox::information(
+    if (Utils::Gui::question(
             this,
             tr("Remove selected folders"),
             tr("Remove <strong>%n</strong> selected folder(s)?"
@@ -3763,8 +3746,7 @@ void MainWindow::removeSelectedNoteSubFolders() {
                        " well!",
                "", selectedItemsCount).arg(noteSubFolderPathList.join(
                     "</li><li>")),
-             tr("&Remove"), tr("&Cancel"), QString::null,
-             0, 1) == 0) {
+            "remove-folders") == QMessageBox::Yes) {
         // delete the note subfolders
         Q_FOREACH(NoteSubFolder noteSubFolder, noteSubFolderList) {
                 // remove the directory recursively from the file system
@@ -3786,14 +3768,13 @@ void MainWindow::removeSelectedTags() {
         return;
     }
 
-    if (QMessageBox::information(
+    if (Utils::Gui::question(
             this,
             tr("Remove selected tags"),
             tr("Remove <strong>%n</strong> selected tag(s)? No notes will "
                        "be removed in this process.",
                "", selectedItemsCount),
-             tr("&Remove"), tr("&Cancel"), QString::null,
-             0, 1) == 0) {
+            "remove-tags") == QMessageBox::Yes) {
         const QSignalBlocker blocker(this->noteDirectoryWatcher);
         Q_UNUSED(blocker);
 
@@ -3842,13 +3823,12 @@ void MainWindow::moveSelectedNotesToFolder(QString destinationFolder) {
 
     int selectedItemsCount = ui->noteTreeWidget->selectedItems().size();
 
-    if (QMessageBox::information(
+    if (Utils::Gui::question(
             this,
             tr("Move selected notes"),
             tr("Move %n selected note(s) to <strong>%2</strong>?", "",
                selectedItemsCount).arg(destinationFolder),
-            tr("&Move"), tr("&Cancel"), QString::null,
-            0, 1) == 0) {
+            "move-notes") == QMessageBox::Yes) {
         const QSignalBlocker blocker(this->noteDirectoryWatcher);
         Q_UNUSED(blocker);
 
@@ -3936,12 +3916,12 @@ void MainWindow::unsetCurrentNote() {
 void MainWindow::copySelectedNotesToFolder(QString destinationFolder) {
     int selectedItemsCount = ui->noteTreeWidget->selectedItems().size();
 
-    if (QMessageBox::information(
+    if (Utils::Gui::question(
             this,
             tr("Copy selected notes"),
             tr("Copy %n selected note(s) to <strong>%2</strong>?", "",
                selectedItemsCount).arg(destinationFolder),
-            tr("&Copy"), tr("&Cancel"), QString::null, 0, 1) == 0) {
+            "copy-notes") == QMessageBox::Yes) {
         int copyCount = 0;
         Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
                 int noteId = item->data(0, Qt::UserRole).toInt();
@@ -3961,10 +3941,10 @@ void MainWindow::copySelectedNotesToFolder(QString destinationFolder) {
                 }
             }
 
-        QMessageBox::information(
+        Utils::Gui::information(
                 this, tr("Done"),
                 tr("%n note(s) were copied to <strong>%2</strong>.", "",
-                   copyCount).arg(destinationFolder));
+                   copyCount).arg(destinationFolder), "notes-copied");
     }
 }
 
@@ -3974,12 +3954,12 @@ void MainWindow::copySelectedNotesToFolder(QString destinationFolder) {
 void MainWindow::tagSelectedNotes(Tag tag) {
     int selectedItemsCount = ui->noteTreeWidget->selectedItems().size();
 
-    if (QMessageBox::information(
+    if (Utils::Gui::question(
             this,
             tr("Tag selected notes"),
             tr("Tag %n selected note(s) with <strong>%2</strong>?", "",
                selectedItemsCount).arg(tag.getName()),
-            tr("&Tag"), tr("&Cancel"), QString::null, 0, 1) == 0) {
+            "tag-notes") == QMessageBox::Yes) {
         int tagCount = 0;
         bool useScriptingEngine = ScriptingService::instance()
                 ->noteTaggingHookExists();
@@ -4043,12 +4023,12 @@ void MainWindow::tagSelectedNotes(Tag tag) {
 void MainWindow::removeTagFromSelectedNotes(Tag tag) {
     int selectedItemsCount = ui->noteTreeWidget->selectedItems().size();
 
-    if (QMessageBox::information(
+    if (Utils::Gui::question(
             this,
             tr("Remove tag from selected notes"),
             tr("Remove tag <strong>%1</strong> from %n selected note(s)?", "",
                selectedItemsCount).arg(tag.getName()),
-            tr("&Remove"), tr("&Cancel"), QString::null, 0, 1) == 0) {
+            "remove-tag-from-notes") == QMessageBox::Yes) {
         int tagCount = 0;
         bool useScriptingEngine = ScriptingService::instance()
                 ->noteTaggingHookExists();
@@ -4099,10 +4079,10 @@ void MainWindow::removeTagFromSelectedNotes(Tag tag) {
         reloadTagTree();
         filterNotesByTag();
 
-        QMessageBox::information(
+        Utils::Gui::information(
                 this, tr("Done"),
                 tr("Tag <strong>%1</strong> was removed from %n note(s)", "",
-                   tagCount).arg(tag.getName()));
+                   tagCount).arg(tag.getName()), "tag-removed-from-notes");
 
         // turn off the workaround again
         directoryWatcherWorkaround(false, true);
@@ -7588,11 +7568,11 @@ void MainWindow::moveSelectedNotesToNoteSubFolder(NoteSubFolder noteSubFolder) {
                               "<strong>%2</strong>?", "",
                       selectedItemsCount).arg(noteSubFolder.getName());
 
-    if (QMessageBox::information(
+    if (Utils::Gui::question(
             this,
             tr("Move selected notes"),
             text,
-            tr("Move"), tr("Cancel"), QString::null, 0, 1) == 0) {
+            "move-notes") == QMessageBox::Yes) {
         const QSignalBlocker blocker(this->noteDirectoryWatcher);
         Q_UNUSED(blocker);
 
@@ -7672,11 +7652,11 @@ void MainWindow::copySelectedNotesToNoteSubFolder(NoteSubFolder noteSubFolder) {
                        "<strong>%2</strong>?", "",
                       selectedItemsCount).arg(noteSubFolder.getName());
 
-    if (QMessageBox::information(
+    if (Utils::Gui::question(
             this,
             tr("Copy selected notes"),
             text,
-            tr("Copy"), tr("Cancel"), QString::null, 0, 1) == 0) {
+            "copy-notes") == QMessageBox::Yes) {
         const QSignalBlocker blocker(this->noteDirectoryWatcher);
         Q_UNUSED(blocker);
 
@@ -9250,12 +9230,11 @@ void MainWindow::on_actionRemove_current_workspace_triggered() {
     }
 
     // ask for permission
-    if (QMessageBox::information(
+    if (Utils::Gui::question(
             this,
             tr("Remove current workspace"),
             tr("Remove the current workspace?"),
-            tr("&Remove"), tr("&Cancel"), QString::null,
-            0, 1) != 0) {
+            "remove-workspace") == QMessageBox::Yes) {
         return;
     }
 

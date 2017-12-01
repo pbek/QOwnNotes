@@ -13,6 +13,7 @@
 #include <QDir>
 #include <QTemporaryFile>
 #include <services/metricsservice.h>
+#include <utils/gui.h>
 
 UpdateDialog::UpdateDialog(QWidget *parent, QString changesHtml,
                            QString releaseUrl, QString releaseVersionString,
@@ -325,12 +326,11 @@ bool UpdateDialog::initializeMacOSUpdateProcess(QString releaseUrl) {
                     applicationDirPath, appPathPart);
     }
 
-    if (QMessageBox::information(
+    if (Utils::Gui::question(
             this,
             tr("Proceed with update"),
             tr("Do you want to update and restart QOwnNotes?"),
-            tr("&Update and restart"), tr("&Cancel"), QString::null,
-            0, 1) == 1) {
+            "update-and-restart") != QMessageBox::Yes) {
         return false;
     }
 
@@ -482,13 +482,12 @@ bool UpdateDialog::initializeWindowsUpdateProcess(QString filePath) {
         return false;
     }
 
-    if (QMessageBox::information(
+    if (Utils::Gui::question(
             this,
             tr("Proceed with update"),
             tr("The download is now finished. Do you want to update and "
                        "restart QOwnNotes?"),
-            tr("&Update and restart"), tr("&Cancel"), QString::null,
-            0, 1) == 1) {
+            "update-and-restart") != QMessageBox::Yes) {
         return false;
     }
 
