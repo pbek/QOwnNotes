@@ -8,7 +8,10 @@
 - there is now a checkbox `Don't ask again!` for most confirmation message 
   boxes and a checkbox `Don't show again!` for most information message boxes
   to override the answer for all future prompts of that message boxes
-    - you can reset the overrides in the *General settings*
+  (for [#485](https://github.com/pbek/QOwnNotes/issues/485) and
+  [#706](https://github.com/pbek/QOwnNotes/issues/706))
+    - the message boxes will not be shown again until you reset the override
+    - you can reset all overrides in the *General settings*
 
 ## 17.11.6
 - you can now enable debug output in release-builds of QOwnNotes
