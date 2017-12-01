@@ -47,13 +47,12 @@ Important Shortcuts
 - <kbd>Ctrl</kbd> + <kbd>A</kbd> selects all notes (to move, copy or remove them with a right click)
 - <kbd>Tab</kbd> or <kbd>Return</kbd> lets you edit the current note
 
-### In the note text edit area (in edit mode)
+### In the note text edit panel
 
 - <kbd>Ctrl</kbd> + <kbd>Click</kbd> on a link to open it
 - <kbd>Ctrl</kbd> + <kbd>F</kbd> lets you search in the current note
-    - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys to jump to the previous and next matches
-    - use <kbd>F3</kbd> and <kbd>⇧</kbd> + <kbd>F3</kbd> keys to jump to the 
-      previous and next matches even if the search widget doesn't have the focus
+    - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and 
+      <kbd>⇧</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
     - <kbd>Esc</kbd> closes the search bar
 - <kbd>Ctrl</kbd> + <kbd>R</kbd> lets you search and replace in the current note
 - <kbd>Ctrl</kbd> + <kbd>D</kbd> duplicates the current line or the selected text
@@ -88,6 +87,13 @@ Important Shortcuts
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> inserts a headline from the note filename at the top of the note
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> splits the current note into two notes at the current cursor position
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>W</kbd> searches for the selected text on the web
+
+### In the note preview panel
+
+- <kbd>Ctrl</kbd> + <kbd>F</kbd> lets you search in the current note
+    - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and 
+      <kbd>⇧</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
+    - <kbd>Esc</kbd> closes the search bar
 
 ### In the Todo list
 
@@ -142,13 +148,12 @@ Important Shortcuts
 - <kbd>⌘</kbd> + <kbd>A</kbd> selects all notes (to move, copy or remove them with a right click)
 - <kbd>Tab</kbd> or <kbd>Return</kbd> lets you edit the current note
 
-### In the note text edit area (in edit mode)
+### In the note text edit panel
 
 - <kbd>⌘</kbd> + <kbd>Click</kbd> on a link to open it
 - <kbd>⌘</kbd> + <kbd>F</kbd> lets you search in the current note
-    - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys to jump to the previous and next matches
-    - use <kbd>F3</kbd> and <kbd>⇧</kbd> + <kbd>F3</kbd> keys to jump to the 
-      previous and next matches even if the search widget doesn't have the focus
+    - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and 
+      <kbd>⇧</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
     - <kbd>Esc</kbd> closes the search bar
 - <kbd>⌘</kbd> + <kbd>R</kbd> lets you search and replace in the current note
 - <kbd>⌘</kbd> + <kbd>D</kbd> duplicates the current line or the selected text
@@ -183,6 +188,13 @@ Important Shortcuts
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> inserts a headline from the note filename at the top of the note
 - <kbd>Opt</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> splits the current note into two notes at the current cursor position
 - <kbd>Opt</kbd> + <kbd>⇧</kbd> + <kbd>W</kbd> searches for the selected text on the web
+
+### In the note preview panel
+
+- <kbd>⌘</kbd> + <kbd>F</kbd> lets you search in the current note
+    - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys or <kbd>F3</kbd> and 
+      <kbd>⇧</kbd> + <kbd>F3</kbd> keys to jump to the previous and next matches
+    - <kbd>Esc</kbd> closes the search bar
 
 ### In the Todo list
 

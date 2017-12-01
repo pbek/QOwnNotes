@@ -153,6 +153,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->noteTextEdit->initSearchFrame(ui->noteTextEditSearchFrame, darkMode);
     ui->encryptedNoteTextEdit->initSearchFrame(ui->noteTextEditSearchFrame,
                                                darkMode);
+    ui->noteTextView->initSearchFrame(ui->noteTextViewSearchFrame, darkMode);
 
     // set the main window for accessing it's public methods
     ui->noteTextEdit->setMainWindow(this);

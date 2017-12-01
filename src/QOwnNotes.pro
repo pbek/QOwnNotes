@@ -111,6 +111,7 @@ SOURCES += main.cpp\
     widgets/scriptsettingwidget.cpp \
     api/scriptapi.cpp \
     widgets/label.cpp \
+    widgets/qtexteditsearchwidget.cpp \
     widgets/scriptlistwidget.cpp
 
 HEADERS  += mainwindow.h \
@@ -185,6 +186,7 @@ HEADERS  += mainwindow.h \
     widgets/scriptsettingwidget.h \
     api/scriptapi.h \
     widgets/label.h \
+    widgets/qtexteditsearchwidget.h \
     widgets/scriptlistwidget.h
 
 FORMS    += mainwindow.ui \
@@ -208,6 +210,7 @@ FORMS    += mainwindow.ui \
     dialogs/tabledialog.ui \
     dialogs/notedialog.ui \
     dialogs/scriptrepositorydialog.ui \
+    widgets/qtexteditsearchwidget.ui \
     widgets/scriptsettingwidget.ui
 
 RESOURCES += \

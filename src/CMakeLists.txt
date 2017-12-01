@@ -223,6 +223,9 @@ set(SOURCE_FILES
     widgets/scriptsettingwidget.cpp
     widgets/scriptsettingwidget.h
     widgets/scriptsettingwidget.ui
+    widgets/qtexteditsearchwidget.cpp
+    widgets/qtexteditsearchwidget.h
+    widgets/qtexteditsearchwidget.ui
     utils/misc.cpp
     utils/misc.h
     utils/git.cpp

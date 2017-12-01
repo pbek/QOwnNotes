@@ -2,6 +2,9 @@
 
 ## 17.12.0
 - enabled text wrapping for the script settings (for [#792](https://github.com/pbek/QOwnNotes/issues/792))
+- you can now also search for text in the note-preview with <kbd>Ctrl</kbd> + <kbd>F</kbd>
+    - please visit [QOwnNotes shortcuts](http://www.qownnotes.org/shortcuts/QOwnNotes)
+      for a list of all shortcuts
 
 ## 17.11.6
 - you can now enable debug output in release-builds of QOwnNotes
