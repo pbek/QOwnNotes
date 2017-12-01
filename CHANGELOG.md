@@ -12,6 +12,8 @@
   [#706](https://github.com/pbek/QOwnNotes/issues/706))
     - the message boxes will not be shown again until you reset the override
     - you can reset all overrides in the *General settings*
+- added more German, Bengali, Spanish and French translation (thank you
+  mrrifat1, richarson and bepolymathe)
 
 ## 17.11.6
 - you can now enable debug output in release-builds of QOwnNotes
@@ -21,7 +23,7 @@
   to jump to a note-subfolder in scripts (for [#792](https://github.com/pbek/QOwnNotes/issues/792))
   - for more information please take a look at the
     [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#jumping-to-a-note-subfolder)
-- added more Catalan, Italian, Spanish, Brazilian Portuguese and French
+- added more Catalan, Italian, Spanish, Brazilian Portuguese and French translation
   (thank you MGuerra, mlocati, richarson, mlimacarlos and bepolymathe)
 
 ## 17.11.5
