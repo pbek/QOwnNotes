@@ -1086,7 +1086,7 @@ void SettingsDialog::loadInterfaceStyleComboBox() const {
 void SettingsDialog::readPanelSettings() {
     QSettings settings;
     // Notes Panel Options
-    if (settings.value("notesPanelSort").toInt() == SORT_ALPHABETICAL) {
+    if (settings.value("notesPanelSort", SORT_BY_LAST_CHANGE).toInt() == SORT_ALPHABETICAL) {
         ui->notesPanelSortAlphabeticalRadioButton->setChecked(true);
         ui->notesPanelOrderGroupBox->setEnabled(true);
     } else {

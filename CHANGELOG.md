@@ -3,6 +3,8 @@
 ## 17.12.1
 - fixed the confirmation for removing the current workspace
   (for [#802](https://github.com/pbek/QOwnNotes/issues/802))
+- changed the default note sort order back to "by date" after it was set to 
+  "alphabetically" in a pull request for [#369](https://github.com/pbek/QOwnNotes/issues/369)
 
 ## 17.12.0
 - enabled text wrapping for the script settings (for [#792](https://github.com/pbek/QOwnNotes/issues/792))

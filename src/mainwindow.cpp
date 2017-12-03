@@ -1793,7 +1793,7 @@ void MainWindow::loadNoteDirectoryList() {
 
     // sort alphabetically again if necessary
     QSettings settings;
-    if (settings.value("notesPanelSort").toInt() == SORT_ALPHABETICAL) {
+    if (settings.value("notesPanelSort", SORT_BY_LAST_CHANGE).toInt() == SORT_ALPHABETICAL) {
         ui->noteTreeWidget->sortItems(0, toQtOrder(settings.value("notesPanelOrder").toInt()));
     }
 
@@ -1851,7 +1851,7 @@ bool MainWindow::addNoteToNoteTreeWidget(Note note) {
     ui->noteTreeWidget->addTopLevelItem(noteItem);
 
 //    QSettings settings;
-//    if (settings.value("notesPanelSort").toInt() == SORT_ALPHABETICAL) {
+//    if (settings.value("notesPanelSort", SORT_BY_LAST_CHANGE).toInt() == SORT_ALPHABETICAL) {
 //        ui->noteTreeWidget->addTopLevelItem(noteItem);
 //    } else {
 //        ui->noteTreeWidget->insertTopLevelItem(0, noteItem);
@@ -4560,7 +4560,7 @@ void MainWindow::on_noteTextEdit_textChanged() {
         updateEncryptNoteButtons();
 
         QSettings settings;
-        if (settings.value("notesPanelSort").toInt() == SORT_BY_LAST_CHANGE) {
+        if (settings.value("notesPanelSort", SORT_BY_LAST_CHANGE).toInt() == SORT_BY_LAST_CHANGE) {
             makeCurrentNoteFirstInNoteList();
         }
 
@@ -8380,7 +8380,7 @@ void MainWindow::on_noteTreeWidget_itemChanged(QTreeWidgetItem *item,
 
                 // sort notes if note name has changed
                 QSettings settings;
-                if (settings.value("notesPanelSort").toInt() == SORT_ALPHABETICAL) {
+                if (settings.value("notesPanelSort", SORT_BY_LAST_CHANGE).toInt() == SORT_ALPHABETICAL) {
                     ui->noteTreeWidget->sortItems(0, toQtOrder(settings.value("notesPanelOrder").toInt()));
                     ui->noteTreeWidget->scrollToItem(item);
                 }
@@ -9647,7 +9647,7 @@ void MainWindow::updatePanelsSortOrder() {
 
 void MainWindow::updateNotesPanelSortOrder() {
     QSettings settings;
-    int sort = settings.value("notesPanelSort").toInt();
+    int sort = settings.value("notesPanelSort", SORT_BY_LAST_CHANGE).toInt();
     ui->actionAlphabetical->setChecked(sort == SORT_ALPHABETICAL);
     ui->actionBy_date->setChecked(sort == SORT_BY_LAST_CHANGE);
 
