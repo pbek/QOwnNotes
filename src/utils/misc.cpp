@@ -397,6 +397,11 @@ QString Utils::Misc::defaultNotesPath() {
     // check if the ownCloud path already exists (because the user is using
     // ownCloud), if not use Nextcloud
     if (!isInPortableMode()) {
+        // we don't want to use the regular sync path for debugging
+#ifdef QT_DEBUG
+        path.append(".test");
+#endif
+
         QDir dir(path);
         if (!dir.exists()) {
             path = QDir::homePath() + Utils::Misc::dirSeparator() + "Nextcloud";
