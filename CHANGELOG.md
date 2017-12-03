@@ -5,6 +5,9 @@
   (for [#802](https://github.com/pbek/QOwnNotes/issues/802))
 - changed the default note sort order back to "by date" after it was set to 
   "alphabetically" in a pull request for [#369](https://github.com/pbek/QOwnNotes/issues/369)
+- the welcome dialog now detects if an *ownCloud* or *Nextcloud* sync folder is 
+  already existing and suggests it for placing the notes folder in it
+    - if none was present the default *Nextcloud* folder will be suggested
 
 ## 17.12.0
 - enabled text wrapping for the script settings (for [#792](https://github.com/pbek/QOwnNotes/issues/792))

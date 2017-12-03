@@ -394,6 +394,15 @@ QString Utils::Misc::defaultNotesPath() {
                    portableDataPath() :
                    QDir::homePath() + Utils::Misc::dirSeparator() + "ownCloud";
 
+    // check if the ownCloud path already exists (because the user is using
+    // ownCloud), if not use Nextcloud
+    if (!isInPortableMode()) {
+        QDir dir(path);
+        if (!dir.exists()) {
+            path = QDir::homePath() + Utils::Misc::dirSeparator() + "Nextcloud";
+        }
+    }
+
     path += Utils::Misc::dirSeparator() + "Notes";
 
     // remove the snap path for Snapcraft builds
