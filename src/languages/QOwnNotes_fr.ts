@@ -2477,12 +2477,12 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     <message>
       <location filename="../utils/gui.cpp" line="171"/>
       <source>Don't ask again!</source>
-      <translation type="unfinished">Don't ask again!</translation>
+      <translation>Ne demandez pas à nouveau !</translation>
     </message>
     <message>
       <location filename="../utils/gui.cpp" line="171"/>
       <source>Don't show again!</source>
-      <translation type="unfinished">Don't show again!</translation>
+      <translation>Ne plus afficher !</translation>
     </message>
   </context>
   <context>
@@ -3635,13 +3635,13 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3285"/>
       <source>Message boxes</source>
-      <translation type="unfinished">Message boxes</translation>
+      <translation>Boîtes de dialogue</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3291"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3465"/>
       <source>Reset message boxes</source>
-      <translation type="unfinished">Reset message boxes</translation>
+      <translation>Réinitialiser les boîtes de dialogue</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4135"/>
@@ -4506,7 +4506,7 @@ Le message d'erreur est : </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3466"/>
       <source>Do you really want to reset the overrides of all message boxes?</source>
-      <translation type="unfinished">Do you really want to reset the overrides of all message boxes?</translation>
+      <translation>Voulez-vous vraiment réinitialiser les substitutions de toutes les boîtes de dialogue ?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1878"/>

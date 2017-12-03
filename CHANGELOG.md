@@ -8,6 +8,8 @@
 - the welcome dialog now detects if an *ownCloud* or *Nextcloud* sync folder is 
   already existing and suggests it for placing the notes folder in it
     - if none was present the default *Nextcloud* folder will be suggested
+- added more German, Bengali, Brazilian Portuguese and French translation
+  (thank you rakekniven, mrrifat1, mlimacarlos and bepolymathe)
 
 ## 17.12.0
 - enabled text wrapping for the script settings (for [#792](https://github.com/pbek/QOwnNotes/issues/792))

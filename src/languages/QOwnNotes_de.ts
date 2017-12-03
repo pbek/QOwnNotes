@@ -3636,13 +3636,13 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3285"/>
       <source>Message boxes</source>
-      <translation type="unfinished">Message boxes</translation>
+      <translation>Nachrichten-Boxen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3291"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3465"/>
       <source>Reset message boxes</source>
-      <translation type="unfinished">Reset message boxes</translation>
+      <translation>Nachrichten-Boxen zurücksetzen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4135"/>
@@ -4508,7 +4508,7 @@ Fehlermeldung: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3466"/>
       <source>Do you really want to reset the overrides of all message boxes?</source>
-      <translation type="unfinished">Do you really want to reset the overrides of all message boxes?</translation>
+      <translation>Möchten Sie wirklich die Einstellungen für alle Nachrichten-Boxen zurücksetzen?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1878"/>
