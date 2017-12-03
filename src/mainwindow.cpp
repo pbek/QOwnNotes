@@ -9234,7 +9234,7 @@ void MainWindow::on_actionRemove_current_workspace_triggered() {
             this,
             tr("Remove current workspace"),
             tr("Remove the current workspace?"),
-            "remove-workspace") == QMessageBox::Yes) {
+            "remove-workspace") != QMessageBox::Yes) {
         return;
     }
 

@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 17.12.1
+- fixed the confirmation for removing the current workspace
+  (for [#802](https://github.com/pbek/QOwnNotes/issues/802))
+
 ## 17.12.0
 - enabled text wrapping for the script settings (for [#792](https://github.com/pbek/QOwnNotes/issues/792))
 - you can now also search for text in the note-preview with <kbd>Ctrl</kbd> + <kbd>F</kbd>
