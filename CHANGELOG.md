@@ -1,12 +1,13 @@
 # QOwnNotes Changelog
 
 ## 17.12.2
-- when formatting text with strike-out now leading and trailing spaces in the 
+- when formatting text with strikeout now leading and trailing spaces in the 
   selected text will be placed before and after the formatting markers to prevent 
   malformed markdown code (for [#767](https://github.com/pbek/QOwnNotes/issues/767))
-- bold, italic or strike-out formatting can now be undone if the selected 
+- bold, italic or strikeout formatting can now be undone if the selected 
   text is surrounded by the corresponding formatter characters
   (for [#756](https://github.com/pbek/QOwnNotes/issues/756))
+- added more Catalan translation (thank you MGuerra)
 
 ## 17.12.1
 - fixed the confirmation for removing the current workspace
