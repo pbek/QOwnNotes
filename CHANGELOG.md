@@ -7,6 +7,8 @@
 - bold, italic or strikeout formatting can now be undone if the selected 
   text is surrounded by the corresponding formatter characters
   (for [#756](https://github.com/pbek/QOwnNotes/issues/756))
+- encrypted notes are now shown decrypted when using `Open note in different window`
+  if you previously entered the password (for [#805](https://github.com/pbek/QOwnNotes/issues/805))
 - added more Catalan translation (thank you MGuerra)
 
 ## 17.12.1

@@ -12,7 +12,11 @@ NoteDialog::NoteDialog(QWidget *parent) :
 
 void NoteDialog::setNote(Note note) {
     setWindowTitle(note.getName());
-    ui->textEdit->setPlainText(note.getNoteText());
+
+    // show the decrypted text if possible
+    QString text = note.hasEncryptedNoteText() && note.canDecryptNoteText() ?
+                   note.getDecryptedNoteText() : note.getNoteText();
+    ui->textEdit->setPlainText(text);
 }
 
 NoteDialog::~NoteDialog() {
