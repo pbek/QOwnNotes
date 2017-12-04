@@ -859,4 +859,8 @@ private:
     bool allowNoteEditing() const;
 
     void setMenuEnabled(QMenu* menu, bool enabled);
+
+    bool undoFormatting(QString formatter);
+
+    void applyFormatter(QString formatter);
 };

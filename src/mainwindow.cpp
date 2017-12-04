@@ -6175,49 +6175,75 @@ void MainWindow::on_actionShow_note_in_file_manager_triggered() {
 }
 
 /**
- * Inserts a bold block at the current cursor position
+ * Attempts to undo the formatting on a selected string
+ *
+ * @param formatter
+ * @return
  */
-void MainWindow::on_actionFormat_text_bold_triggered() {
+bool MainWindow::undoFormatting(QString formatter) {
+    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QTextCursor c = textEdit->textCursor();
+    QString selectedText = c.selectedText();
+    int formatterLength = formatter.length();
+    int selectionStart = c.selectionStart();
+    int selectionEnd = c.selectionEnd();
+
+    c.setPosition(selectionStart - formatterLength);
+    c.setPosition(selectionEnd + formatterLength, QTextCursor::KeepAnchor);
+    QString selectedTextWithFormatter = c.selectedText();
+
+    // if the formatter characters were found we remove them
+    if (selectedTextWithFormatter.startsWith(formatter) &&
+            selectedTextWithFormatter.endsWith(formatter)) {
+        c.insertText(selectedText);
+        return true;
+    }
+
+    return false;
+}
+
+/**
+ * Applies a formatter to a selected string
+ *
+ * @param formatter
+ */
+void MainWindow::applyFormatter(QString formatter) {
     QMarkdownTextEdit* textEdit = activeNoteTextEdit();
     QTextCursor c = textEdit->textCursor();
     QString selectedText = c.selectedText();
 
+    // first try to undo an existing formatting
+    if (undoFormatting(formatter)) {
+        return;
+    }
+
     if (selectedText.isEmpty()) {
-        c.insertText("****");
-        c.movePosition(QTextCursor::Left, QTextCursor::MoveAnchor, 2);
+        c.insertText(formatter.repeated(2));
+        c.movePosition(QTextCursor::Left, QTextCursor::MoveAnchor,
+                       formatter.length());
         textEdit->setTextCursor(c);
     } else {
        QRegularExpressionMatch match =
-                QRegularExpression(R"(^(\s*)(.+?)(\s*)$)").match
-                        (selectedText);
+               QRegularExpression(R"(^(\s*)(.+?)(\s*)$)").match(selectedText);
         if (match.hasMatch()) {
-            c.insertText(match.captured(1) + "**" + match.captured(2) + "**" +
-                         match.captured(3));
+            c.insertText(match.captured(1) + formatter + match.captured(2) +
+                                 formatter + match.captured(3));
         }
     }
+}
+
+/**
+ * Inserts a bold block at the current cursor position
+ */
+void MainWindow::on_actionFormat_text_bold_triggered() {
+    applyFormatter("**");
 }
 
 /**
  * Inserts an italic block at the current cursor position
  */
 void MainWindow::on_actionFormat_text_italic_triggered() {
-    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
-    QTextCursor c = textEdit->textCursor();
-    QString selectedText = c.selectedText();
-
-    if (selectedText.isEmpty()) {
-        c.insertText("**");
-        c.movePosition(QTextCursor::Left, QTextCursor::MoveAnchor);
-        textEdit->setTextCursor(c);
-    } else {
-        QRegularExpressionMatch match =
-                QRegularExpression(R"(^(\s*)(.+?)(\s*)$)").match
-                        (selectedText);
-        if (match.hasMatch()) {
-            c.insertText(match.captured(1) + "*" + match.captured(2) + "*" +
-                         match.captured(3));
-        }
-    }
+    applyFormatter("*");
 }
 
 /**
@@ -8633,17 +8659,7 @@ void MainWindow::on_actionMarkdown_cheatsheet_triggered() {
  * Strikes out the selected text
  */
 void MainWindow::on_actionStrike_out_text_triggered() {
-    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
-    QTextCursor c = textEdit->textCursor();
-    QString selectedText = textEdit->textCursor().selectedText();
-
-    if (selectedText.isEmpty()) {
-        c.insertText("~~~~");
-        c.movePosition(QTextCursor::Left, QTextCursor::MoveAnchor, 2);
-        textEdit->setTextCursor(c);
-    } else {
-        c.insertText("~~" + selectedText + "~~");
-    }
+    applyFormatter("~~");
 }
 
 /**
