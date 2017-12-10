@@ -1663,17 +1663,20 @@ QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth,
                                                                   fileName));
         } else {
             // for preview
-            // cap the image width at 980px or the note text view width
-            if (image.width() > maxImageWidth) {
-                result.replace(
-                        QRegularExpression("<img src=\"file:\\/\\/" +
-                                           QRegularExpression::escape
-                                                   (windowsSlash + fileName) +
-                                           "\""),
-                        QString("<img width=\"%1\" src=\"file://%2\"").arg(
-                                QString::number(maxImageWidth), windowsSlash +
-                                fileName));
-            }
+            // cap the image width at maxImageWidth (note text view width)
+            int originalWidth = image.width();
+            int displayWidth = (originalWidth > maxImageWidth)
+                    ? maxImageWidth
+                    : originalWidth;
+
+            result.replace(
+                    QRegularExpression("<img src=\"file:\\/\\/" +
+                                       QRegularExpression::escape
+                                               (windowsSlash + fileName) +
+                                       "\""),
+                    QString("<img width=\"%1\" src=\"file://%2\"").arg(
+                            QString::number(displayWidth), windowsSlash +
+                            fileName));
         }
 
         // encode the image base64
