@@ -40,8 +40,8 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
         MasterDialog(parent), ui(new Ui::SettingsDialog) {
     ui->setupUi(this);
 
-    // we must not do that because XFCE really resizes the window to 1x1
-//    resize(1, 1);
+    // we must not use resize(1, 1) because XFCE really resizes the window to 1x1
+    resize(400, 300);
 
     ui->connectionTestLabel->hide();
     ui->darkModeInfoLabel->hide();

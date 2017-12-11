@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1592</width>
-    <height>1126</height>
+    <width>600</width>
+    <height>400</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -4437,13 +4437,6 @@ git config --global user.name &quot;Your name&quot;</string>
                   </layout>
                  </widget>
                 </item>
-                <item row="1" column="0" colspan="2">
-                 <widget class="QCheckBox" name="taggingShowNotesRecursivelyCheckBox">
-                  <property name="text">
-                   <string>Show all notes of a tag including the notes of their children-tags</string>
-                  </property>
-                 </widget>
-                </item>
                 <item row="0" column="0" colspan="2">
                  <widget class="QCheckBox" name="tagsPanelHideSearchCheckBox">
                   <property name="text">
@@ -4543,7 +4536,7 @@ git config --global user.name &quot;Your name&quot;</string>
                 <string>Notes panel</string>
                </property>
                <layout class="QGridLayout" name="gridLayout_61">
-                <item row="1" column="2">
+                <item row="2" column="2">
                  <widget class="QGroupBox" name="notesPanelOrderGroupBox">
                   <property name="enabled">
                    <bool>true</bool>
@@ -4572,7 +4565,14 @@ git config --global user.name &quot;Your name&quot;</string>
                   </layout>
                  </widget>
                 </item>
-                <item row="1" column="1">
+                <item row="0" column="1" colspan="2">
+                 <widget class="QCheckBox" name="noteSubfoldersPanelShowNotesRecursivelyCheckBox">
+                  <property name="text">
+                   <string>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
                  <widget class="QGroupBox" name="notesPanelSortGroupBox">
                   <property name="title">
                    <string>Sort</string>
@@ -4595,10 +4595,10 @@ git config --global user.name &quot;Your name&quot;</string>
                   </layout>
                  </widget>
                 </item>
-                <item row="0" column="1" colspan="2">
-                 <widget class="QCheckBox" name="noteSubfoldersPanelShowNotesRecursivelyCheckBox">
+                <item row="1" column="1">
+                 <widget class="QCheckBox" name="taggingShowNotesRecursivelyCheckBox">
                   <property name="text">
-                   <string>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</string>
+                   <string>Show all notes of a tag including the notes of their children-tags</string>
                   </property>
                  </widget>
                 </item>
