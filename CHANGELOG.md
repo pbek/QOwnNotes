@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 17.12.3
+- you now can choose to show all notes of a tag including the notes of their 
+  children-tags (for [#137](https://github.com/pbek/QOwnNotes/issues/137))
+    - there is a new setting `Show all notes of a tag including the notes of their children-tags`
+      in the *Panel settings*
+- a `width` attribute is now always added to images in the preview to make the 
+  life of script developers easier (for [#808](https://github.com/pbek/QOwnNotes/issues/808))
+
 ## 17.12.2
 - when formatting text with strikeout now leading and trailing spaces in the 
   selected text will be placed before and after the formatting markers to prevent 

@@ -361,7 +361,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>7</number>
+            <number>16</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -2678,8 +2678,8 @@
                           <rect>
                            <x>0</x>
                            <y>0</y>
-                           <width>845</width>
-                           <height>944</height>
+                           <width>347</width>
+                           <height>454</height>
                           </rect>
                          </property>
                          <layout class="QGridLayout" name="gridLayout_55">
@@ -4391,30 +4391,7 @@ git config --global user.name &quot;Your name&quot;</string>
                 <string>Tags panel</string>
                </property>
                <layout class="QGridLayout" name="gridLayout_57">
-                <item row="1" column="1">
-                 <widget class="QGroupBox" name="tagsPanelOrderGroupBox">
-                  <property name="title">
-                   <string>Order</string>
-                  </property>
-                  <layout class="QVBoxLayout" name="verticalLayout_20">
-                   <item>
-                    <widget class="QRadioButton" name="tagsPanelOrderAscendingRadioButton">
-                     <property name="text">
-                      <string>Ascending</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QRadioButton" name="tagsPanelOrderDescendingRadioButton">
-                     <property name="text">
-                      <string>Descending</string>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
-                <item row="1" column="0">
+                <item row="2" column="0">
                  <widget class="QGroupBox" name="tagsPanelSortGroupBox">
                   <property name="title">
                    <string>Sort</string>
@@ -4437,7 +4414,37 @@ git config --global user.name &quot;Your name&quot;</string>
                   </layout>
                  </widget>
                 </item>
-                <item row="0" column="0">
+                <item row="2" column="1">
+                 <widget class="QGroupBox" name="tagsPanelOrderGroupBox">
+                  <property name="title">
+                   <string>Order</string>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_20">
+                   <item>
+                    <widget class="QRadioButton" name="tagsPanelOrderAscendingRadioButton">
+                     <property name="text">
+                      <string>Ascending</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QRadioButton" name="tagsPanelOrderDescendingRadioButton">
+                     <property name="text">
+                      <string>Descending</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item row="1" column="0" colspan="2">
+                 <widget class="QCheckBox" name="taggingShowNotesRecursivelyCheckBox">
+                  <property name="text">
+                   <string>Show all notes of a tag including the notes of their children-tags</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="0" colspan="2">
                  <widget class="QCheckBox" name="tagsPanelHideSearchCheckBox">
                   <property name="text">
                    <string>Hide 'Find or create tag' search</string>

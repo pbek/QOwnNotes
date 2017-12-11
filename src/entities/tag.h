@@ -105,6 +105,10 @@ public:
 
     static QStringList fetchAllNamesOfNote(Note note);
 
+    static QList<Tag> fetchRecursivelyByParentId(int parentId);
+
+    static bool isTaggingShowNotesRecursively();
+
 protected:
     int id;
     QString name;

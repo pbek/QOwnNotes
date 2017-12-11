@@ -263,6 +263,31 @@ QList<Tag> Tag::fetchAllByParentId(int parentId) {
     return tagList;
 }
 
+/**
+ * Fetches a list of all tags recursively by a parent id
+ * The tag of the parent id is also included in the list
+ *
+ * @param parentId
+ * @return
+ */
+QList<Tag> Tag::fetchRecursivelyByParentId(int parentId) {
+    QList<Tag> tagList = QList<Tag>() << fetch(parentId);
+
+    Q_FOREACH(Tag tag, fetchAllByParentId(parentId)) {
+            tagList << fetchRecursivelyByParentId(tag.getId());
+        }
+
+    return tagList;
+}
+
+/**
+ * Checks if taggingShowNotesRecursively is set
+ */
+bool Tag::isTaggingShowNotesRecursively() {
+    QSettings settings;
+    return settings.value("taggingShowNotesRecursively").toBool();
+}
+
 int Tag::countAllParentId(int parentId) {
     QSqlDatabase db = QSqlDatabase::database("note_folder");
     QSqlQuery query(db);

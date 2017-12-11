@@ -733,6 +733,9 @@ void SettingsDialog::storePanelSettings() {
     settings.setValue("tagsPanelHideSearch", ui->tagsPanelHideSearchCheckBox
             ->isChecked());
 
+    settings.setValue("taggingShowNotesRecursively",
+                      ui->taggingShowNotesRecursivelyCheckBox->isChecked());
+
     ui->tagsPanelSortAlphabeticalRadioButton->isChecked() ?
                 settings.setValue("tagsPanelSort", SORT_ALPHABETICAL) :
                 settings.setValue("tagsPanelSort", SORT_BY_LAST_CHANGE);
@@ -1137,6 +1140,9 @@ void SettingsDialog::readPanelSettings() {
     // Tags Panel Options
     ui->tagsPanelHideSearchCheckBox->setChecked(settings.value(
             "tagsPanelHideSearch").toBool());
+
+    ui->taggingShowNotesRecursivelyCheckBox->setChecked(settings.value(
+            "taggingShowNotesRecursively").toBool());
 
     if (settings.value("tagsPanelSort").toInt() == SORT_ALPHABETICAL) {
         ui->tagsPanelSortAlphabeticalRadioButton->setChecked(true);

@@ -4699,15 +4699,29 @@ void MainWindow::filterNotesByTag() {
             break;
         default:
             // check if there is an active tag
-            Tag tag = Tag::activeTag();
+            Tag activeTag = Tag::activeTag();
 
-            if (!tag.isFetched()) {
+            if (!activeTag.isFetched()) {
                 return;
             }
 
-            // fetch all linked note names
-            fileNameList = tag.fetchAllLinkedNoteFileNames(
-                        _showNotesFromAllNoteSubFolders);
+            QList<Tag> tags;
+
+            // check if the notes should be viewed recursively
+            if (Tag::isTaggingShowNotesRecursively()) {
+                tags = Tag::fetchRecursivelyByParentId(activeTag.getId());
+            } else {
+                tags << activeTag;
+            }
+
+            qDebug() << __func__ << " - 'tags': " << tags;
+
+            Q_FOREACH(Tag tag, tags) {
+                    // fetch all linked note names
+                    fileNameList << tag.fetchAllLinkedNoteFileNames(
+                            _showNotesFromAllNoteSubFolders);
+                }
+
             break;
     }
 
@@ -4748,7 +4762,6 @@ void MainWindow::filterNotesByNoteSubFolders() {
     }
 
     qDebug() << __func__ << " - 'noteSubFolderIds': " << noteSubFolderIds;
-
 
     // get the notes from the subfolders
     Q_FOREACH(int noteSubFolderId, noteSubFolderIds) {
