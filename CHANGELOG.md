@@ -3,7 +3,7 @@
 ## 17.12.4
 - fixed a possible problem with the settings dialog size for new installations
 - moved the setting `Show all notes of a tag including the notes of their children-tags`
-  in the *Panel settings* to the settings for the *Note pane*
+  in the *Panel settings* to the settings for the *Note panel*
 
 ## 17.12.3
 - you now can choose to show all notes of a tag including the notes of their 
