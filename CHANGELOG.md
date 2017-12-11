@@ -7,6 +7,8 @@
       in the *Panel settings*
 - a `width` attribute is now always added to images in the preview to make the 
   life of script developers easier (for [#808](https://github.com/pbek/QOwnNotes/issues/808))
+- added more Spanish, Italian, Swedish, Dutch, Hungarian and French translation
+  (thank you richarson, mlocati, druus, Fabijenna and bepolymathe)
 
 ## 17.12.2
 - when formatting text with strikeout now leading and trailing spaces in the 
