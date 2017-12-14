@@ -4,6 +4,8 @@
 - There now is a new menu entry `Check for script updates` in the *Scripting*
   menu and the *Scripting settings* to open a dialog where you can update 
   scripts that needs an update
+- added more Spanish, Italian, Japanese, Catalan, German, Dutch and Hungarian
+  translation (thank you richarson, mlocati, piyo, MGuerra, German and Fabijenna)
 
 ## 17.12.4
 - fixed a possible problem with the settings dialog size for new installations
