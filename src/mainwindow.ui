@@ -1000,6 +1000,7 @@ p, li { white-space: pre-wrap; }
     </widget>
     <addaction name="actionScript_repository"/>
     <addaction name="actionScript_settings"/>
+    <addaction name="actionCheck_for_script_updates"/>
     <addaction name="separator"/>
     <addaction name="actionReload_scripting_engine"/>
     <addaction name="menuCustom_actions"/>
@@ -2145,6 +2146,15 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="shortcut">
     <string notr="true">Alt+Shift+E</string>
+   </property>
+  </action>
+  <action name="actionCheck_for_script_updates">
+   <property name="icon">
+    <iconset theme="svn-update" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/svn-update.svg</normaloff>:/icons/breeze-qownnotes/16x16/svn-update.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Check for script updates</string>
    </property>
   </action>
  </widget>

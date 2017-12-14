@@ -2461,6 +2461,14 @@ void SettingsDialog::setupScriptingPage() {
     connect(searchScriptAction, SIGNAL(triggered()),
             this, SLOT(searchScriptInRepository()));
 
+    QAction *updateScriptAction = addScriptMenu->addAction(
+            tr("Check for script updates"));
+    updateScriptAction->setIcon(QIcon::fromTheme(
+            "svn-update",
+            QIcon(":icons/breeze-qownnotes/16x16/svn-update.svg")));
+    connect(updateScriptAction, SIGNAL(triggered()),
+            this, SLOT(checkForScriptUpdates()));
+
     QAction *addAction = addScriptMenu->addAction(tr("Add local script"));
     addAction->setIcon(QIcon::fromTheme(
             "document-new",
@@ -3402,8 +3410,9 @@ void SettingsDialog::on_setGitPathToolButton_clicked() {
 /**
  * Opens a dialog to search for scripts in the script repository
  */
-void SettingsDialog::searchScriptInRepository() {
-    ScriptRepositoryDialog *dialog = new ScriptRepositoryDialog(this);
+void SettingsDialog::searchScriptInRepository(bool checkForUpdates) {
+    ScriptRepositoryDialog *dialog = new ScriptRepositoryDialog(
+            this, checkForUpdates);
     dialog->exec();
     delete(dialog);
 
@@ -3412,6 +3421,13 @@ void SettingsDialog::searchScriptInRepository() {
 
     // reload the scripting engine
     ScriptingService::instance()->reloadEngine();
+}
+
+/**
+ * Opens a dialog to check for script updates
+ */
+void SettingsDialog::checkForScriptUpdates() {
+    searchScriptInRepository(true);
 }
 
 /**

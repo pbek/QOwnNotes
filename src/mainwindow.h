@@ -494,6 +494,8 @@ private slots:
 
     void on_actionAllow_note_editing_triggered(bool checked);
 
+    void on_actionCheck_for_script_updates_triggered();
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;

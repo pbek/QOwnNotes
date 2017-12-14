@@ -84,6 +84,7 @@
 #include <utils/schema.h>
 #include <utils/git.h>
 #include <dialogs/filedialog.h>
+#include <dialogs/scriptrepositorydialog.h>
 
 MainWindow::MainWindow(QWidget *parent) :
         QMainWindow(parent),
@@ -9741,4 +9742,13 @@ void MainWindow::setMenuEnabled(QMenu* menu, bool enabled) {
     foreach(QAction* action, menu->actions()) {
             action->setEnabled(enabled);
         }
+}
+
+void MainWindow::on_actionCheck_for_script_updates_triggered() {
+    ScriptRepositoryDialog *dialog = new ScriptRepositoryDialog(this, true);
+    dialog->exec();
+    delete(dialog);
+
+    // reload the scripting engine
+    ScriptingService::instance()->reloadEngine();
 }

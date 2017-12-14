@@ -44,6 +44,8 @@ public:
 class Script
 {
 public:
+    static const QString ScriptRepositoryRawContentUrlPrefix;
+
     explicit Script();
 
     int getId();
@@ -89,6 +91,7 @@ public:
     static Script fetchByIdentifier(QString identifier);
     bool refetch();
     bool fillFromId(int id);
+    QUrl repositoryInfoJsonUrl();
 
 private:
     int id;

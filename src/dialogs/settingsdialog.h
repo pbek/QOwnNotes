@@ -214,7 +214,9 @@ private slots:
 
     void on_setGitPathToolButton_clicked();
 
-    void searchScriptInRepository();
+    void searchScriptInRepository(bool checkForUpdates = false);
+
+    void checkForScriptUpdates();
 
     void on_scriptListWidget_itemChanged(QListWidgetItem *item);
 

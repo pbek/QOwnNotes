@@ -27,6 +27,9 @@
 #include <libraries/versionnumber/versionnumber.h>
 #include <version.h>
 
+const QString Script::ScriptRepositoryRawContentUrlPrefix =
+        QString("https://raw.githubusercontent.com/qownnotes/scripts/master/");
+
 
 Script::Script() {
     id = 0;
@@ -605,4 +608,13 @@ ScriptInfoJson::ScriptInfoJson(QJsonObject jsonObject) {
     // check if app version is supported
     appVersionSupported = VersionNumber(VERSION) >=
             VersionNumber(minAppVersion);
+}
+
+/**
+ * Returns the URL of the info.json file of the script repository
+ *
+ * @return
+ */
+QUrl Script::repositoryInfoJsonUrl() {
+    return ScriptRepositoryRawContentUrlPrefix + getIdentifier() + "/info.json";
 }

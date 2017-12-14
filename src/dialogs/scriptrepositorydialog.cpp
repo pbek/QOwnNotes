@@ -14,7 +14,8 @@
 #include "scriptrepositorydialog.h"
 #include "ui_scriptrepositorydialog.h"
 
-ScriptRepositoryDialog::ScriptRepositoryDialog(QWidget *parent) :
+ScriptRepositoryDialog::ScriptRepositoryDialog(QWidget *parent,
+                                               bool checkForUpdates) :
     MasterDialog(parent),
     ui(new Ui::ScriptRepositoryDialog) {
     ui->setupUi(this);
@@ -25,14 +26,22 @@ ScriptRepositoryDialog::ScriptRepositoryDialog(QWidget *parent) :
                      this, SLOT(slotReplyFinished(QNetworkReply *)));
 
     _codeSearchUrl = "https://api.github.com/search/code";
-    _rawContentUrlPrefix = "https://raw.githubusercontent.com/qownnotes/"
-            "scripts/master/";
+    _rawContentUrlPrefix = Script::ScriptRepositoryRawContentUrlPrefix;
+    _checkForUpdates = checkForUpdates;
 
     ui->downloadProgressBar->hide();
     ui->searchScriptEdit->setFocus();
     ui->scriptTreeWidget->sortByColumn(0, Qt::AscendingOrder);
     enableOverview(true);
-    searchScript();
+
+    if (checkForUpdates) {
+        ui->searchScriptEdit->hide();
+        setWindowTitle(tr("Script updates"));
+        ui->overviewLabel->setText(tr("All scripts are up-to-date."));
+        searchForUpdates();
+    } else {
+        searchScript();
+    }
 }
 
 ScriptRepositoryDialog::~ScriptRepositoryDialog() {
@@ -71,6 +80,35 @@ void ScriptRepositoryDialog::searchScript() {
 
     ui->downloadProgressBar->show();
     ui->downloadProgressBar->reset();
+}
+
+/**
+ * Searches for script updates
+ */
+void ScriptRepositoryDialog::searchForUpdates() {
+    ui->selectFrame->hide();
+    ui->scriptTreeWidget->clear();
+    enableOverview(true);
+
+    Q_FOREACH(Script script, Script::fetchAll()) {
+            if (!script.isScriptFromRepository()) {
+                continue;
+            }
+
+            QUrl url = script.repositoryInfoJsonUrl();
+            QNetworkRequest networkRequest(url);
+
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
+            networkRequest.setAttribute(
+                    QNetworkRequest::FollowRedirectsAttribute, true);
+#endif
+
+            // try to ensure the network is accessible
+            _networkManager->setNetworkAccessible(QNetworkAccessManager::Accessible);
+
+            _networkManager->get(networkRequest);
+
+        }
 }
 
 /**
@@ -163,6 +201,26 @@ void ScriptRepositoryDialog::parseInfoQMLReply(const QByteArray &arr) const {
     QJsonDocument jsonResponse = QJsonDocument::fromJson(arr);
     QJsonObject jsonObject = jsonResponse.object();
     ScriptInfoJson infoJson(jsonObject);
+
+    // if we are doing an update check we only want to view scripts that
+    // needs an update
+    if (_checkForUpdates) {
+        Script script = Script::fetchByIdentifier(infoJson.identifier);
+        if (!script.isFetched()) {
+            return;
+        }
+        VersionNumber remoteVersion = VersionNumber(infoJson.version);
+
+        ScriptInfoJson scriptInfoJson = script.getScriptInfoJson();
+        VersionNumber localVersion = VersionNumber(scriptInfoJson.version);
+
+        if (localVersion >= remoteVersion) {
+            return;
+        }
+
+        ui->selectFrame->show();
+    }
+
     QString name = infoJson.name;
 
     QTreeWidgetItem *item = new QTreeWidgetItem();
@@ -413,6 +471,10 @@ void ScriptRepositoryDialog::on_installButton_clicked() {
         Utils::Gui::information(this, tr("Install successful"),
                                 tr("The script was successfully installed!"),
                                 "script-install-successful");
+
+        if (_checkForUpdates) {
+            searchForUpdates();
+        }
     } else {
         QMessageBox::warning(this, tr("Download failed"),
                                  tr("The script could not be downloaded!"));

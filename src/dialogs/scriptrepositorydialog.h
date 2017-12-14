@@ -15,7 +15,8 @@ class ScriptRepositoryDialog : public MasterDialog
     Q_OBJECT
 
 public:
-    explicit ScriptRepositoryDialog(QWidget *parent = 0);
+    explicit ScriptRepositoryDialog(QWidget *parent = 0,
+                                    bool checkForUpdates = false);
     ~ScriptRepositoryDialog();
 
 private slots:
@@ -34,6 +35,7 @@ private:
     QString _codeSearchUrl;
     QString _rawContentUrlPrefix;
     QSplitter *_mainSplitter;
+    bool _checkForUpdates;
 
     void searchScript();
 
@@ -52,4 +54,6 @@ private:
     QString getCurrentInfoJsonString();
 
     void reloadCurrentScriptInfo();
+
+    void searchForUpdates();
 };
