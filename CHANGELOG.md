@@ -3,7 +3,7 @@
 ## 17.12.5
 - there now is a new menu entry `Check for script updates` in the *Scripting*
   menu and the *Scripting settings* to open a dialog where you can update 
-  scripts that needs an update
+  scripts that need an update
 - added more Spanish, Italian, Japanese, Catalan, German, Dutch and Hungarian
   translation (thank you richarson, mlocati, piyo, MGuerra, German and Fabijenna)
 
