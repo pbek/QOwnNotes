@@ -1033,7 +1033,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2157"/>
       <source>Check for script updates</source>
-      <translation type="unfinished">Check for script updates</translation>
+      <translation>Verificar atualizações para scripts</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1653"/>
@@ -2737,12 +2737,12 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="39"/>
       <source>Script updates</source>
-      <translation type="unfinished">Script updates</translation>
+      <translation>Atualizações de script</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="40"/>
       <source>All scripts are up-to-date.</source>
-      <translation type="unfinished">All scripts are up-to-date.</translation>
+      <translation>Todos os scripts estão atualizados.</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="305"/>
@@ -3086,44 +3086,44 @@ Do you want to install it anyway?</source>
       <translation>Outro servidor CalDAV</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2235"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2246"/>
       <source>Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</source>
       <translation>Somente algumas cores será adaptadas, tema do seu desktop irá controlar o resto. Você precisa reiniciar o aplicativo para permitir que essas alterações tenham efeito.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2238"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2249"/>
       <source>Optimize preview colors for dark mode desktop themes</source>
       <translation>Otimizar a visualização de cores para o tema escuro</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2245"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2256"/>
       <source>This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</source>
       <translation>Isso habilitará o dark mode, interface e ícones serão modificados. Você precisará reiniciar o aplicativo para que as alterações tenham efeito.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2248"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2259"/>
       <source>Enable dark mode</source>
       <translation>Ativar dark mode</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2274"/>
-      <location filename="../dialogs/settingsdialog.ui" line="2284"/>
-      <location filename="../dialogs/settingsdialog.ui" line="2315"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2285"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2295"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2326"/>
       <source>You need to restart the application to let this setting take effect</source>
       <translation>Talvez seja necessário reiniciar o aplicativo para deixar essas alterações tenham efeito</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2334"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2345"/>
       <source>Item sizes in the main window</source>
       <translation>Tamanho dos itens na janela principal</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4103"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4114"/>
       <source>Markdown highlighting</source>
       <translation>Markdown highlighting</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4109"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4120"/>
       <source>Enable markdown highlighting</source>
       <translation>Habilitar markdown highlighting</translation>
     </message>
@@ -3148,39 +3148,39 @@ Do you want to install it anyway?</source>
       <translation>Atalhos</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3623"/>
-      <location filename="../dialogs/settingsdialog.ui" line="3792"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3634"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3803"/>
       <source>Default font:</source>
       <translation>Fonte padrão:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3665"/>
-      <location filename="../dialogs/settingsdialog.ui" line="3816"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3676"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3827"/>
       <source>Code font:</source>
       <translation>Código da Fonte:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2448"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2459"/>
       <source>Main window shortcuts</source>
       <translation>Atalhos da janela principal</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3105"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3116"/>
       <source>Do this at your own risk!</source>
       <translation>Fazer isso em seu próprio risco!</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3108"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3119"/>
       <source>Ignore all external note folder changes</source>
       <translation>Ignorar todas as ações externas na pasta da nota</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3585"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3596"/>
       <source>No two spaces to do a line break are added here if checked</source>
       <translation>Não foi detectado dois espaços para fazer a quebra de linha por isso será adicionado aqui se for verificado</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3588"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3599"/>
       <source>Use GitHub line breaks</source>
       <translation>Use quebra de linhas no padrão GitHub</translation>
     </message>
@@ -3200,7 +3200,7 @@ Do you want to install it anyway?</source>
       <translation>Polonês</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2160"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2171"/>
       <source>Chinese</source>
       <translation>Chinês</translation>
     </message>
@@ -3230,7 +3230,7 @@ Do you want to install it anyway?</source>
       <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Se você quiser ajudar a traduzir QOwnNotes ou atualizar uma tradução existente por favor leia: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt; como posso ajudar a traduzir QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2219"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2230"/>
       <source>Dark mode</source>
       <translation>Tema Escuro</translation>
     </message>
@@ -3260,22 +3260,22 @@ Do you want to install it anyway?</source>
       <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Você pode querer considerar começar um certificado SSL livre de &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2182"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2193"/>
       <source>If you change the language you have to restart the application for the changes to take action.</source>
       <translation>Se você modificar o idioma, terá que reiniciar o aplicativo para que as mudanças tenham efeito. </translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2868"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2879"/>
       <source>You need to reload the scripting engine if you modify a script file</source>
       <translation>Você precisa atualizar o mecanismo de script se você modificar um arquivo de script</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2871"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2882"/>
       <source>Reload scripting engine</source>
       <translation>Recarregar o script</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2861"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2872"/>
       <source>Validate script</source>
       <translation>Validar o script</translation>
     </message>
@@ -3285,18 +3285,18 @@ Do you want to install it anyway?</source>
       <translation>Geral</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3033"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3044"/>
       <source>Notes</source>
       <translation>Notas</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3056"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3067"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Se você selecionar você sempre irá ser notificado sobre modificações externas,mesmo se a nota atual não estiver editável no ultimo minuto. Recomendável não  &lt;span style=" font-style:italic;"&gt;checar.&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3125"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4251"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3136"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4262"/>
       <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
       <translation>Você talvez encontre problemas de sincronização com versões mais antigas do OwnCloud quando estiver abaixo de 10 segundos.
@@ -3308,66 +3308,66 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
       <translation>Japonês</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3129"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3140"/>
       <source>note save interval time [sec]</source>
       <translation>intervalo de auto-salvamento das notas [sec]</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3059"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3070"/>
       <source>Notify about all external modifications of the current note</source>
       <translation>Notificação sobre todas as modificações externas na nota atual</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3478"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3489"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1874"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1883"/>
       <source>Database</source>
       <translation>Base de Dados</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3494"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3505"/>
       <source>Reinitialize Database</source>
       <translation>Reinicializar Base de Dados</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3446"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3457"/>
       <source>Clear application data and exit</source>
       <translation>Limpar os dados da aplicação e sair</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3452"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3463"/>
       <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
       <translation>Este botão permite que você limpe todas as configurações, removendo a base local de Tarefas e sair do QOwnNotes.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3462"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3473"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1943"/>
       <source>Clear app data and exit</source>
       <translation>Limpar dados do aplicativo e sair</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3241"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3252"/>
       <source>Update dialog</source>
       <translation>Caixa de diálogo de update</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3321"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3332"/>
       <source>Default note file extension</source>
       <translation>Extensão padrão do arquivo de notas</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3406"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3417"/>
       <source>External editor</source>
       <translation>Editor externo</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3419"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3430"/>
       <source>path to external editor, leave empty for default</source>
       <translation>caminho para o editor externo, deixe em branco para o editor padrão do sistema</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3429"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4330"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3440"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4341"/>
       <source>set external editor</source>
       <translation>Configurar editor externo</translation>
     </message>
@@ -3407,17 +3407,17 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
       <translation>Scripting</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2515"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2526"/>
       <source>Your scripts</source>
       <translation>Seus scripts</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2599"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2610"/>
       <source>&amp;Remove script</source>
       <translation>&amp;Remover script</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2878"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2889"/>
       <source>Click here to select your QML script</source>
       <translation>Clique aqui para selecionar seu script QML</translation>
     </message>
@@ -3499,7 +3499,7 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="728"/>
-      <location filename="../dialogs/settingsdialog.ui" line="2689"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2700"/>
       <source>Name:</source>
       <translation>Nome:</translation>
     </message>
@@ -3606,191 +3606,196 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
       <translation>Sueco</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2228"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2149"/>
+      <source>Turkish</source>
+      <translation type="unfinished">Turkish</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="2239"/>
       <source>Enable dark mode application icon and tray icon</source>
       <translation>Ativar o dark mode e o ícone da bandeja</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2268"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2279"/>
       <source>System tray</source>
       <translation>Ícone na bandeja</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2277"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2288"/>
       <source>Show system tray icon</source>
       <translation>Mostrar ícone na banjeda</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2287"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2298"/>
       <source>Start application hidden</source>
       <translation>Iniciar o aplicativo oculto</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2297"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2308"/>
       <source>Interface style</source>
       <translation>Estilo de interface</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3212"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3223"/>
       <source>By default the headline will generated automatically</source>
       <translation>Por padrão o título será gerado automaticamente</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3215"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3226"/>
       <source>The shortcut to create a new note asks for a headline</source>
       <translation>O atalho para criar uma nova nota pede um título</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3263"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3274"/>
       <source>Search engine</source>
       <translation>Mecanismo de busca</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3285"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3296"/>
       <source>Message boxes</source>
       <translation>Caixas de mensagem</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3291"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3302"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3487"/>
       <source>Reset message boxes</source>
       <translation>Redefinir as caixas de mensagem</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4135"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4146"/>
       <source>Note-edit cursor width:</source>
       <translation>Largura do cursor do editor de nota:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4145"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4156"/>
       <source>Reset the cursor width</source>
       <translation>Redefinir a largura do cursor</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4265"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4276"/>
       <source>External git log command to show the git versions of a note</source>
       <translation>Comando externo de log do git para mostrar as versões da nota</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4271"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4282"/>
       <source>Enter a command to be used to show a git log (like for example "gitk")</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
       <translation>Entre com o comando utilizado para mostrar o log do git (por exemplo "gitk")</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4291"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4302"/>
       <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
       <translation>Ao utilizar essa configuração uma nova entrada no menu será adicionada para mostrar as versões git se você clicar com o botão direito na nota.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4601"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4612"/>
       <source>Show all notes of a tag including the notes of their children-tags</source>
-      <translation type="unfinished">Show all notes of a tag including the notes of their children-tags</translation>
+      <translation>Mostrar todas as notas com uma tag incluindo as notas com subníveis de tags</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4571"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4582"/>
       <source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
       <translation>Mostras todas as notas nas pastas, incluindo as suas sub-pastas (funciona apenas se as sub-pastas estão habilitadas)</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4084"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4095"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Talvez você queira dar uma olhada em todos os &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;formatos de data/hora&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4159"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4170"/>
       <source>Highlight the current line</source>
       <translation>Marcar a linha atual</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4358"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4369"/>
       <source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
       <translation>Não se esqueça de habilitar o git para o seu diretório de notas e configurar o nome e email no git client, por exemplo com esses comandos numa janela de terminal:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4391"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4402"/>
       <source>Tags panel</source>
       <translation>Painel de Tags</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4420"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4496"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4545"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4431"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4507"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4556"/>
       <source>Order</source>
       <translation>Ordem</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4426"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4502"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4554"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4437"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4513"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4565"/>
       <source>Ascending</source>
       <translation>Ascendente</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4433"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4509"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4561"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4444"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4520"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4572"/>
       <source>Descending</source>
       <translation>Descendente</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4397"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4466"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4578"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4408"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4477"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4589"/>
       <source>Sort</source>
       <translation>Ordem</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4403"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4472"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4584"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4414"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4483"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4595"/>
       <source>Alphabetical</source>
       <translation>Em ordem alfabética</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4410"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4421"/>
       <source>By last change / use</source>
       <translation>Pela última alteração / uso</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4443"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4454"/>
       <source>Hide 'Find or create tag' search</source>
       <translation>Esconder 'Pesquisar ou criar tag'</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4453"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4464"/>
       <source>Note subfolders panel</source>
       <translation>Painel de subdiretórios</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4459"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4470"/>
       <source>Show with full path</source>
       <translation>Mostrar com o caminho completo</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4479"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4591"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4490"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4602"/>
       <source>By last change</source>
       <translation>Pela última alteração</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4489"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4500"/>
       <source>Show root folder name</source>
       <translation>Mostrar o nome da pasta raiz</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4519"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4530"/>
       <source>Hide 'Find or create note subfolder' search</source>
       <translation>Escoder 'Procurar ou criar uma subpasta'</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4526"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4537"/>
       <source>Display note subfolders as full tree</source>
       <translation>Mostrar os subdiretórios como uma árvore completa</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4536"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4547"/>
       <source>Notes panel</source>
       <translation>Painel de Notas</translation>
     </message>
@@ -3800,39 +3805,39 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
       <translation>Procurar um repositório de script</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4281"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4292"/>
       <source>You optionally can use "%notePath%" for the path of the note.</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
       <translation>Opcionalmente, você pode usar "%notePath%" para o caminho da nota.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4304"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4315"/>
       <source>Git client</source>
       <translation>Cliente de git</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4320"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4331"/>
       <source>Path to git executable:</source>
       <translation>Caminho para o executável do git:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4310"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4321"/>
       <source>Path to git client, leave empty for default</source>
       <translation>Caminho para o cliente git, deixe em branco para o padrão</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4229"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4240"/>
       <source>Commit interval</source>
       <translation>Intervalo de commit</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4235"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4246"/>
       <source>sec</source>
       <extracomment>seconds</extracomment>
       <translation>seg</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4255"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4266"/>
       <source>git commit interval time [sec]</source>
       <translation>intervalo de auto-commit das notas [sec]</translation>
     </message>
@@ -3892,32 +3897,32 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
       <translation>Português do Brasil</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2149"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2160"/>
       <source>Ukrainian</source>
       <translation>Ucraniano</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2255"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2266"/>
       <source>You might also want to choose an other editor color schema in the editor settings in dark mode.</source>
       <translation>Você também pode escolher um outro esquema de cores nas configurações do dark mode.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2990"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3001"/>
       <source>The name</source>
       <translation>O nome</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3164"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3175"/>
       <source>Maximum height:</source>
       <translation>Altura máxima:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3171"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3182"/>
       <source>Maximum width:</source>
       <translation>Largura Máxima:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3049"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3060"/>
       <source>Scale images down when inserted into notes</source>
       <translation>Diminuir imagens ao inserí-las dentro da nota</translation>
     </message>
@@ -3927,138 +3932,138 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
       <translation>Croata</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2905"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2916"/>
       <source>Path to your QML file</source>
       <translation>Caminho para o arquivo QML</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2696"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2707"/>
       <source>Script name</source>
       <translation>Nome do script</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2718"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2729"/>
       <source>Description:</source>
       <translation>Descrição:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2800"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2811"/>
       <source>Version:</source>
       <translation>Versão:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2761"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2772"/>
       <source>Repository:</source>
       <translation>Repositório:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2588"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2599"/>
       <source>&amp;Add script...</source>
       <translation>&amp;Adicionar script...</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2738"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2749"/>
       <source>Author(s):</source>
       <translation>Autor(es):</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3039"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3050"/>
       <source>Check this if you want to accept all external modifications while you are editing the current note.</source>
       <translation>Clique aqui se você quiser aceitar todas as modificações externas enquanto você edita a nota atual.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3042"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3053"/>
       <source>Accept all external modifications of the current note</source>
       <translation>Aceitar todas as modificações externas da nota atual</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3098"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3109"/>
       <source>Use UNIX newline instead of native newline characters</source>
       <translation>Use o caractere UNIX para nova linha ao invés dos caracteres nativos</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3201"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3212"/>
       <source>When opening notes the cursor position inside the note will now be restored
   to the position when the note was last visited in the current session</source>
       <translation>Ao abrir as notas o ponteiro do cursos da nota será restaurado para a posição quando a nota foi vista da última vez na sessão atual</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3205"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3216"/>
       <source>Restore cursor position when opening a note</source>
       <translation>Restaurar a posição do cursor quando abrir uma nota</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3484"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3495"/>
       <source>Be warned that this will also remove your cached todo items and configured note folders and scripts!</source>
       <translation>Aviso que isso removerá também seus itens em cache todo e configurações de diretório de notas e scripts!</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3908"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3919"/>
       <source>Apply toolbar configuration</source>
       <translation>Aplicar a configuração da barra de ferramentas</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3922"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3933"/>
       <source>Reset toolbars</source>
       <translation>Redefinir barras de ferramentas</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3950"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3961"/>
       <source>Enable logging to file</source>
       <translation>Habilitar o log de arquivo</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3957"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3968"/>
       <source>Clear log file</source>
       <translation>Limpar o arquivo de log</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3968"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3979"/>
       <source>Fake old version number to trigger update</source>
       <translation>Número de versão antiga falso para acionar o update</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3996"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4007"/>
       <source>Log file path:</source>
       <translation>Caminho do arquivo de log:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4058"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4069"/>
       <source>Here you can set your own time format for inserting the current time into a note.</source>
       <translation>Aqui você pode definir seu próprio formato de hora para inserir a hora atual em uma nota.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4061"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4072"/>
       <source>Insert current time</source>
       <translation>Inserir hora atual</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4067"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4078"/>
       <source>Time format:</source>
       <translation>Formato de hora:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4074"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4085"/>
       <source>Enter your custom time format, like "dd.MM.yyyy hh:mm"</source>
       <translation>Insira o seu formato de tempo personalizada, como "dd.MM.yyyy hh:mm"</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4119"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4130"/>
       <source>Editor options</source>
       <translation>Opções do editor</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4176"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4187"/>
       <source>Enable automatic closing of brackets and markdown formatting characters</source>
       <translation>Habilitar o fechamento automático de parênteses e formatação markdown</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4166"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4177"/>
       <source>You have to use the backspace key to remove the opening character</source>
       <translation>Você tem que usar a tecla backspace para remover o caractere de abertura</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4169"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4180"/>
       <source>Enable automatic removal of matching closing characters</source>
       <translation>Permitir a remoção automática de correspondência de caracteres de fechamento</translation>
     </message>
@@ -4103,37 +4108,37 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
       <translation>&amp;Recarregar a lista de calendários</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2225"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2236"/>
       <source>You may need to restart the application to let these changes take effect</source>
       <translation>Talvez seja necessário reiniciar o aplicativo para deixar essas alterações tenham efeito</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2350"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2361"/>
       <source>Toolbar icon size:</source>
       <translation>Tamanho dos ícones na barra de ferramentas:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2340"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2351"/>
       <source>List and tree item height:</source>
       <translation>Altura do item na árvore e na lista:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2373"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2384"/>
       <source>Reset the icon size</source>
       <translation>Redefinir o tamanho do ícone</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2387"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2398"/>
       <source>Reset the item height</source>
       <translation>Redefinir a altura do item</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3868"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3879"/>
       <source>View text right to left (RTL)</source>
       <translation>Ver texto direita para a esquerda (RTL)</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2466"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2477"/>
       <source>Search for shortcut</source>
       <translation>Pesquisar atalho</translation>
     </message>
@@ -4143,22 +4148,22 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
       <translation>Ignorar os calendários que não oferecem suporte a tarefas</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2171"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2182"/>
       <source>Arabic</source>
       <translation>Árabe</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2309"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2320"/>
       <source>Icons</source>
       <translation>Ícones</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2318"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2329"/>
       <source>Use internal icon theme instead of system icon theme</source>
       <translation>Utilizar o tema interno ao invés do tema do sistema</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2854"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2865"/>
       <source>Script path:</source>
       <translation>Caminho do script:</translation>
     </message>
@@ -4168,89 +4173,89 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
       <translation>Nome da pasta nota</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3115"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3126"/>
       <source>Allow the note file name to be different from the headline.&lt;br&gt;Be aware of that ownCloud notes needs them to be the same!</source>
       <translation>Permitir que o nome do arquivo de nota ser diferente a manchete. &lt;br&gt;Estar ciente de que o ownCloud notas precisa deles para ser o mesmo!</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3118"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3129"/>
       <source>Allow note file name to be different from headline</source>
       <translation>Permitir que o nome do arquivo de nota ser diferente da manchete</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3066"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3077"/>
       <source>Check this if you want to ignore all external modifications while you are editing the current note.</source>
       <translation>Clique aqui se você quiser ignorar todas as modificações externas enquanto você edita a nota atual.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3069"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3080"/>
       <source>Ignore all external modifications of the current note</source>
       <translation>Ignorar todas as modificações externas da nota atual</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3095"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3106"/>
       <source>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</source>
       <translation>Você pode usar isso por exemplo no Windows se você tem problemas com quebras de linha no ownCloud / Nextcloud</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3225"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3236"/>
       <source>App instance</source>
       <translation>Instâncias do aplicativo</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3231"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3242"/>
       <source>Only allow one app instance at the same time</source>
       <translation>Permitir apenas uma instância de aplicativo ao mesmo tempo</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3327"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3338"/>
       <source>Add a custom file extension</source>
       <translation>Adicionar uma extensão de arquivo personalizado</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3341"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3352"/>
       <source>Remove a custom file extension</source>
       <translation>Remover uma extensão de arquivo personalizado</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3380"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3391"/>
       <source>If you add custom extensions just type in the extension, like "taskpaper".</source>
       <translation>Se você adicionar extensões personalizadas basta digitar a extensão, como "taskpaper".</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3384"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3395"/>
       <source>Text file (txt)</source>
       <translation>Arquivo de Testo (txt)</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3412"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3423"/>
       <source>Path to external editor:</source>
       <translation>Caminho para o editor externo:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3247"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3258"/>
       <source>Don't show the update dialog automatically</source>
       <translation>Não mostrar a caixa de diálogo de update automaticamente</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3617"/>
-      <location filename="../dialogs/settingsdialog.ui" line="3772"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3628"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3783"/>
       <source>Fonts</source>
       <translation>Fontes</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3640"/>
-      <location filename="../dialogs/settingsdialog.ui" line="3682"/>
-      <location filename="../dialogs/settingsdialog.ui" line="3840"/>
-      <location filename="../dialogs/settingsdialog.ui" line="3854"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3651"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3693"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3851"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3865"/>
       <source>Set a new font</source>
       <translation>Definir uma nova fonte</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3651"/>
-      <location filename="../dialogs/settingsdialog.ui" line="3696"/>
-      <location filename="../dialogs/settingsdialog.ui" line="3778"/>
-      <location filename="../dialogs/settingsdialog.ui" line="3802"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3662"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3707"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3789"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3813"/>
       <source>Reset font</source>
       <translation>Resetar a fonte</translation>
     </message>
@@ -4260,17 +4265,17 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
       <translation>Depurar</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3535"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3546"/>
       <source>Debug information</source>
       <translation>Informação de debug</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3551"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3562"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Você pode &lt;span style="font-weight:600;"&gt; copiar e colar&lt;/span&gt; este texto (ou partes deste texto) em uma &lt;span style="font-weight:600;"&gt; questão&lt;/span&gt; na &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt; página de questões QOwnNotes&lt;/a&gt; se você tiver &lt;span style="font-weight:600;"&gt; dúvidas ou problemas&lt;/span&gt; com QOwnNotes. Dados que é demasiado sensíveis estão escondidos nestas informações.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3564"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3575"/>
       <source>&amp;Save debug information</source>
       <translation>&amp;Salvar e Debugar informações</translation>
     </message>
@@ -4402,7 +4407,7 @@ Mensagem de erro: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2465"/>
       <source>Check for script updates</source>
-      <translation type="unfinished">Check for script updates</translation>
+      <translation>Verificar atualizações para scripts</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2472"/>

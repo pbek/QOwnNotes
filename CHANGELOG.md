@@ -1,11 +1,22 @@
 # QOwnNotes Changelog
 
+## 17.12.6
+- added **Turkish translation** (a big thank you to omeratagun, realinfo,
+  ihtiht and Apsimati)
+    - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes/)
+      to make QOwnNotes available in more languages or help with the current 
+      translation
+- added more Indonesian, French, Spanish, Brazilian Portuguese, Polish, German,
+  Catalan, Italian, Hungarian and Dutch translation (thank you zikraa,
+  bepolymathe, richarson, mlimacarlos, lucjan, rakekniven, MGuerra, mlocati 
+  and Fabijenna)
+
 ## 17.12.5
 - there now is a new menu entry `Check for script updates` in the *Scripting*
   menu and the *Scripting settings* to open a dialog where you can update
   scripts that need an update (for [#792](https://github.com/pbek/QOwnNotes/issues/792))
 - added more Spanish, Italian, Japanese, Catalan, German, Dutch and Hungarian
-  translation (thank you richarson, mlocati, piyo, MGuerra, German and Fabijenna)
+  translation (thank you richarson, mlocati, piyo, MGuerra, rakekniven and Fabijenna)
 
 ## 17.12.4
 - fixed a possible problem with the settings dialog size for new installations

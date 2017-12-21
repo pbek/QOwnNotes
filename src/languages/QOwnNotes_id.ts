@@ -86,7 +86,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="80"/>
       <source>Family:</source>
-      <translation type="unfinished">Family:</translation>
+      <translation>Keluarga:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="103"/>
@@ -387,7 +387,7 @@
     <message>
       <location filename="../widgets/logwidget.ui" line="128"/>
       <source>Scripting</source>
-      <translation type="unfinished">Scripting</translation>
+      <translation>Scripting</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="135"/>
@@ -580,7 +580,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1245"/>
       <source>&amp;Back in note history</source>
-      <translation type="unfinished">&amp;Back in note history</translation>
+      <translation>&amp; Kembali ke riwayat catatan&amp; Kembali ke riwayat catatan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1166"/>
@@ -660,7 +660,7 @@
     <message>
       <location filename="../mainwindow.ui" line="872"/>
       <source>Versioning</source>
-      <translation type="unfinished">Versioning</translation>
+      <translation>Versi</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="883"/>
@@ -670,7 +670,7 @@
     <message>
       <location filename="../mainwindow.ui" line="911"/>
       <source>To&amp;do</source>
-      <translation type="unfinished">To&amp;do</translation>
+      <translation>Melakukan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="917"/>
@@ -707,12 +707,12 @@
     <message>
       <location filename="../mainwindow.ui" line="994"/>
       <source>&amp;Scripting</source>
-      <translation type="unfinished">&amp;Scripting</translation>
+      <translation>&amp; Scripting</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1257"/>
       <source>Forward in note history</source>
-      <translation type="unfinished">Forward in note history</translation>
+      <translation>Teruskan dalam catatan sejarah</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1269"/>
@@ -722,7 +722,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1278"/>
       <source>&amp;Knowledge base</source>
-      <translation type="unfinished">&amp;Knowledge base</translation>
+      <translation>Dasar pengetahuan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1287"/>
@@ -732,7 +732,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1299"/>
       <source>Show &amp;Todo List</source>
-      <translation type="unfinished">Show &amp;Todo List</translation>
+      <translation>Tampilkan &amp; Daftar Todo</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1320"/>
@@ -987,7 +987,7 @@
       <location filename="../mainwindow.ui" line="2060"/>
       <location filename="../mainwindow.cpp" line="8308"/>
       <source>Open note in different window</source>
-      <translation type="unfinished">Open note in different window</translation>
+      <translation>Buka catatan di jendela yang berbeda</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2072"/>
@@ -1028,12 +1028,12 @@
     <message>
       <location filename="../mainwindow.ui" line="2145"/>
       <source>Allow note editing</source>
-      <translation type="unfinished">Allow note editing</translation>
+      <translation>Izinkan pengeditan catatan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2157"/>
       <source>Check for script updates</source>
-      <translation type="unfinished">Check for script updates</translation>
+      <translation>Periksa pembaruan naskah</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1653"/>
@@ -1069,7 +1069,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1702"/>
       <source>Reload scripting engine</source>
-      <translation type="unfinished">Reload scripting engine</translation>
+      <translation>Muat ulang mesin scripting</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1735"/>
@@ -1197,7 +1197,7 @@ Pulihkan catatan saat ini?</translation>
     <message>
       <location filename="../mainwindow.cpp" line="2972"/>
       <source>Please select the folder where your notes will get stored</source>
-      <translation type="unfinished">Please select the folder where your notes will get stored</translation>
+      <translation>Silakan pilih folder tempat catatan Anda akan disimpan</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2999"/>
@@ -1394,7 +1394,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud Anda, Anda bisa memulihkan
     <message>
       <location filename="../mainwindow.cpp" line="5804"/>
       <source>Bookmarked note position at slot %1</source>
-      <translation type="unfinished">Bookmarked note position at slot %1</translation>
+      <translation>Posisi catatan bertanda di slot %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5820"/>
@@ -1504,7 +1504,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud Anda, Anda bisa memulihkan
     <message>
       <location filename="../mainwindow.cpp" line="8008"/>
       <source>The scripting engine was reloaded</source>
-      <translation type="unfinished">The scripting engine was reloaded</translation>
+      <translation>Mesin scripted reloaded</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8043"/>
@@ -1624,17 +1624,17 @@ Jika keranjang sampah diaktifkan pada server ownCloud Anda, Anda bisa memulihkan
     <message>
       <location filename="../mainwindow.cpp" line="4362"/>
       <source>Letter</source>
-      <translation type="unfinished">Letter</translation>
+      <translation>Surat</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4388"/>
       <source>Portrait</source>
-      <translation type="unfinished">Portrait</translation>
+      <translation>Potret</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4388"/>
       <source>Landscape</source>
-      <translation type="unfinished">Landscape</translation>
+      <translation>Pemandangan</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4393"/>
@@ -1654,7 +1654,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud Anda, Anda bisa memulihkan
     <message>
       <location filename="../mainwindow.cpp" line="4501"/>
       <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
-      <translation type="unfinished">You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</translation>
+      <translation>Anda belum memilih daftar todo apa pun. &lt;br /&gt; Mohon periksa konfigurasi &lt;strong&gt; Todo &lt;/strong&gt; Anda di setelan!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5178"/>
@@ -1677,7 +1677,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud Anda, Anda bisa memulihkan
     <message>
       <location filename="../mainwindow.cpp" line="5233"/>
       <source>Show todo lists</source>
-      <translation type="unfinished">Show todo lists</translation>
+      <translation>Tampilkan todo daftar</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5244"/>
@@ -1888,7 +1888,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud Anda, Anda bisa memulihkan
       <location filename="../mainwindow.cpp" line="2387"/>
       <location filename="../mainwindow.cpp" line="4870"/>
       <source>Stored current note to disk</source>
-      <translation type="unfinished">Stored current note to disk</translation>
+      <translation>Disimpan catatan saat ini ke disk</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2406"/>
@@ -1903,8 +1903,8 @@ Jika keranjang sampah diaktifkan pada server ownCloud Anda, Anda bisa memulihkan
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="2493"/>
       <source>Stored %n note(s) to disk</source>
-      <translation type="unfinished">
-        <numerusform>Stored %n note(s) to disk</numerusform>
+      <translation>
+        <numerusform>Disimpan %n catatan ke disk</numerusform>
       </translation>
     </message>
     <message>
@@ -1956,7 +1956,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud Anda, Anda bisa memulihkan
     <message>
       <location filename="../mainwindow.cpp" line="7498"/>
       <source>Moved tag '%1' to new tag</source>
-      <translation type="unfinished">Moved tag '%1' to new tag</translation>
+      <translation>Pindah tag '%1' ke tag baru</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6628"/>
@@ -1976,7 +1976,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud Anda, Anda bisa memulihkan
     <message>
       <location filename="../mainwindow.cpp" line="4500"/>
       <source>No selected todo lists!</source>
-      <translation type="unfinished">No selected todo lists!</translation>
+      <translation>Tidak ada daftar todo yang dipilih!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="550"/>
@@ -2021,7 +2021,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud Anda, Anda bisa memulihkan
     <message>
       <location filename="../mainwindow.cpp" line="643"/>
       <source>Scripting</source>
-      <translation type="unfinished">Scripting</translation>
+      <translation>Scripting</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="881"/>
@@ -2119,7 +2119,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud Anda, Anda bisa memulihkan
     <message>
       <location filename="../mainwindow.cpp" line="4930"/>
       <source>Note headline</source>
-      <translation type="unfinished">Note headline</translation>
+      <translation>Perhatikan judul</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6138"/>
@@ -2364,7 +2364,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud Anda, Anda bisa memulihkan
       <location filename="../services/owncloudservice.cpp" line="1164"/>
       <location filename="../services/owncloudservice.cpp" line="1190"/>
       <source>Error while loading todo lists!</source>
-      <translation type="unfinished">Error while loading todo lists!</translation>
+      <translation>Kesalahan saat memuat daftar todo!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1165"/>
@@ -2410,7 +2410,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud Anda, Anda bisa memulihkan
     <message>
       <location filename="../entities/notefolder.cpp" line="448"/>
       <source>default</source>
-      <translation type="unfinished">default</translation>
+      <translation>default</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="870"/>
@@ -2458,12 +2458,12 @@ Jika keranjang sampah diaktifkan pada server ownCloud Anda, Anda bisa memulihkan
     <message>
       <location filename="../utils/gui.cpp" line="171"/>
       <source>Don't ask again!</source>
-      <translation type="unfinished">Don't ask again!</translation>
+      <translation>Jangan tanya lagi!</translation>
     </message>
     <message>
       <location filename="../utils/gui.cpp" line="171"/>
       <source>Don't show again!</source>
-      <translation type="unfinished">Don't show again!</translation>
+      <translation>Jangan tampilkan lagi!</translation>
     </message>
   </context>
   <context>
@@ -2471,77 +2471,77 @@ Jika keranjang sampah diaktifkan pada server ownCloud Anda, Anda bisa memulihkan
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="62"/>
       <source>close search</source>
-      <translation type="unfinished">close search</translation>
+      <translation>cari dekat</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="52"/>
       <source>Find:</source>
-      <translation type="unfinished">Find:</translation>
+      <translation>Menemukan:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="32"/>
       <source>replace text</source>
-      <translation type="unfinished">replace text</translation>
+      <translation>ganti teks</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="79"/>
       <source>find in text</source>
-      <translation type="unfinished">find in text</translation>
+      <translation>temukan di teks</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="86"/>
       <source>search forward</source>
-      <translation type="unfinished">search forward</translation>
+      <translation>cari maju</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="103"/>
       <source>search backward</source>
-      <translation type="unfinished">search backward</translation>
+      <translation>cari mundur</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="120"/>
       <source>replace with</source>
-      <translation type="unfinished">replace with</translation>
+      <translation>ubah dengan</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="127"/>
       <source>Replace:</source>
-      <translation type="unfinished">Replace:</translation>
+      <translation>Menggantikan:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="156"/>
       <source>Plain text</source>
-      <translation type="unfinished">Plain text</translation>
+      <translation>Teks biasa</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="161"/>
       <source>Whole words</source>
-      <translation type="unfinished">Whole words</translation>
+      <translation>Kata-kata utuh</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="166"/>
       <source>Regular expression</source>
-      <translation type="unfinished">Regular expression</translation>
+      <translation>Ekspresi reguler</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="187"/>
       <source>Replace</source>
-      <translation type="unfinished">Replace</translation>
+      <translation>Menggantikan</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="197"/>
       <source>Replace All</source>
-      <translation type="unfinished">Replace All</translation>
+      <translation>Menggantikan semua</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="210"/>
       <source>Mode:</source>
-      <translation type="unfinished">Mode:</translation>
+      <translation>Mode:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="220"/>
       <source>Match case sensitive</source>
-      <translation type="unfinished">Match case sensitive</translation>
+      <translation>Cocokkan case sensitive</translation>
     </message>
   </context>
   <context>
@@ -2716,12 +2716,12 @@ Apakah folder dan berkas tersebut bisa ditulis?</translation>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="39"/>
       <source>Script updates</source>
-      <translation type="unfinished">Script updates</translation>
+      <translation>Pembaruan naskah</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="40"/>
       <source>All scripts are up-to-date.</source>
-      <translation type="unfinished">All scripts are up-to-date.</translation>
+      <translation>Semua skrip sudah mutakhir.</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="305"/>
@@ -3048,7 +3048,7 @@ Apakah Anda tetap ingin memasangnya?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="156"/>
       <source>Todo</source>
-      <translation type="unfinished">Todo</translation>
+      <translation>Todo</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1618"/>
@@ -3066,44 +3066,44 @@ Apakah Anda tetap ingin memasangnya?</translation>
       <translation>Server CalDAV lainnya</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2235"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2246"/>
       <source>Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</source>
       <translation>Hanya beberapa warna yang akan disesuaikan, tema desktop Anda akan mengontrol sisanya. Anda perlu memulai ulang aplikasi agar perubahan ini memiliki dampak.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2238"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2249"/>
       <source>Optimize preview colors for dark mode desktop themes</source>
       <translation>Optimalkan warna pratinjau untuk tema desktop mode gelap</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2245"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2256"/>
       <source>This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</source>
       <translation>Ini mengaktifkan mode gelap, amtarmuka dan ikon akan dimodifikasi. Anda perlu memulai ulang aplikasi agar perubahan ini memiliki dampak.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2248"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2259"/>
       <source>Enable dark mode</source>
       <translation>Aktifkan mode gelap</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2274"/>
-      <location filename="../dialogs/settingsdialog.ui" line="2284"/>
-      <location filename="../dialogs/settingsdialog.ui" line="2315"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2285"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2295"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2326"/>
       <source>You need to restart the application to let this setting take effect</source>
       <translation>Anda perlu memulai ulang aplikasi agar perubahan ini memiliki dampak</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2334"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2345"/>
       <source>Item sizes in the main window</source>
       <translation>Ukuran item di jendela utama</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4103"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4114"/>
       <source>Markdown highlighting</source>
       <translation>Penyorotan markdown</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4109"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4120"/>
       <source>Enable markdown highlighting</source>
       <translation>Aktifkan penyorotan markdown</translation>
     </message>
@@ -3128,39 +3128,39 @@ Apakah Anda tetap ingin memasangnya?</translation>
       <translation>Pintasan</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3623"/>
-      <location filename="../dialogs/settingsdialog.ui" line="3792"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3634"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3803"/>
       <source>Default font:</source>
       <translation>Fon baku:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3665"/>
-      <location filename="../dialogs/settingsdialog.ui" line="3816"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3676"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3827"/>
       <source>Code font:</source>
       <translation>Fon kode:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2448"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2459"/>
       <source>Main window shortcuts</source>
       <translation>Pintasan jendela utama</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3105"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3116"/>
       <source>Do this at your own risk!</source>
       <translation>Lakukan ini dengan resiko Anda sendiri!</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3108"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3119"/>
       <source>Ignore all external note folder changes</source>
       <translation>Abaikan semua perubahan eksternal folder catatan</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3585"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3596"/>
       <source>No two spaces to do a line break are added here if checked</source>
       <translation>Tidak perlu dua spasi untuk membuat baris baru jika opsi ini diaktifkan</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3588"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3599"/>
       <source>Use GitHub line breaks</source>
       <translation>Gunakan jeda baris GitHub</translation>
     </message>
@@ -3180,7 +3180,7 @@ Apakah Anda tetap ingin memasangnya?</translation>
       <translation>Polandia</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2160"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2171"/>
       <source>Chinese</source>
       <translation>Cina</translation>
     </message>
@@ -3210,7 +3210,7 @@ Apakah Anda tetap ingin memasangnya?</translation>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Jika Anda ingin membantu menerjemahkan QOwnNotes atau memperbarui terjemahan yang sudah ada, silakan baca: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt;Bagaimana saya membantu menerjemahkan QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2219"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2230"/>
       <source>Dark mode</source>
       <translation>Mode gelap</translation>
     </message>
@@ -3240,22 +3240,22 @@ Apakah Anda tetap ingin memasangnya?</translation>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Anda mungkin ingin mempertimbangkan mendapatkan sertifikat SSL gratis dari &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2182"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2193"/>
       <source>If you change the language you have to restart the application for the changes to take action.</source>
       <translation>Jika Anda mengubah bahasa, Anda harus memulai ulang aplikasi agar perubahan memiliki dampak.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2868"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2879"/>
       <source>You need to reload the scripting engine if you modify a script file</source>
-      <translation type="unfinished">You need to reload the scripting engine if you modify a script file</translation>
+      <translation>Anda perlu memuat ulang mesin script jika Anda memodifikasi file skrip</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2871"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2882"/>
       <source>Reload scripting engine</source>
-      <translation type="unfinished">Reload scripting engine</translation>
+      <translation>Muat ulang mesin scripting</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2861"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2872"/>
       <source>Validate script</source>
       <translation>Validasi skrip</translation>
     </message>
@@ -3265,18 +3265,18 @@ Apakah Anda tetap ingin memasangnya?</translation>
       <translation>Umum</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3033"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3044"/>
       <source>Notes</source>
       <translation>Catatan</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3056"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3067"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Jika dicentang Anda akan selalu diberitahu tentang perubahan eksternal, walaupun catatan tidak disunting dalam beberapa menit terakhir. Direkomendasikan untuk &lt;span style=" font-style:italic;"&gt;tidak dicentang&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3125"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4251"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3136"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4262"/>
       <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
       <translation>Anda mungkin akan mengalami masalah sinkronisasi dengan versi lama ownCloud sync jika durasi berada di bawah 10 detik.
@@ -3288,66 +3288,66 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi.</t
       <translation>Jepang</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3129"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3140"/>
       <source>note save interval time [sec]</source>
       <translation>interval waktu simpan catatan [sec]</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3059"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3070"/>
       <source>Notify about all external modifications of the current note</source>
       <translation>Beritahu tentang semua perubahan eksternal dari catatan saat ini</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3478"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3489"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1874"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1883"/>
       <source>Database</source>
       <translation>Basis data</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3494"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3505"/>
       <source>Reinitialize Database</source>
       <translation>Inisialisasi ulang basis data</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3446"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3457"/>
       <source>Clear application data and exit</source>
       <translation>Hapus data aplikasi dan keluar</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3452"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3463"/>
       <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
-      <translation type="unfinished">This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</translation>
+      <translation>Tombol ini memungkinkan Anda untuk menghapus semua pengaturan, menghapus database todo lokal dan keluar dari QOwnNotes.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3462"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3473"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1943"/>
       <source>Clear app data and exit</source>
       <translation>Hapus data apl dan keluar</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3241"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3252"/>
       <source>Update dialog</source>
       <translation>Dialog pembaruan</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3321"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3332"/>
       <source>Default note file extension</source>
       <translation>Ekstensi baku berkas catatan</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3406"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3417"/>
       <source>External editor</source>
       <translation>Penyunting eksternal</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3419"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3430"/>
       <source>path to external editor, leave empty for default</source>
       <translation>jalur ke penyunting eksternal, biarkan kosong untuk bawaan</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3429"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4330"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3440"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4341"/>
       <source>set external editor</source>
       <translation>tetapkan penyunting eksternal</translation>
     </message>
@@ -3384,20 +3384,20 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="252"/>
       <source>Scripting</source>
-      <translation type="unfinished">Scripting</translation>
+      <translation>Scripting</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2515"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2526"/>
       <source>Your scripts</source>
       <translation>Skrip Anda</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2599"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2610"/>
       <source>&amp;Remove script</source>
       <translation>&amp;Buang skrip</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2878"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2889"/>
       <source>Click here to select your QML script</source>
       <translation>Klik di sini untuk memilih skrip QML Anda</translation>
     </message>
@@ -3439,7 +3439,7 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="287"/>
       <source>Git versioning</source>
-      <translation type="unfinished">Git versioning</translation>
+      <translation>Versi git</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="311"/>
@@ -3479,7 +3479,7 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi.</t
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="728"/>
-      <location filename="../dialogs/settingsdialog.ui" line="2689"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2700"/>
       <source>Name:</source>
       <translation>Nama:</translation>
     </message>
@@ -3553,17 +3553,17 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1771"/>
       <source>Select the calendars you want to use for the Todo list</source>
-      <translation type="unfinished">Select the calendars you want to use for the Todo list</translation>
+      <translation>Pilih kalender yang ingin Anda gunakan untuk daftar Todo</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1846"/>
       <source>Todo list settings</source>
-      <translation type="unfinished">Todo list settings</translation>
+      <translation>Pengaturan daftar Todo</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1852"/>
       <source>Saving an item also closes the Todo list</source>
-      <translation type="unfinished">Saving an item also closes the Todo list</translation>
+      <translation>Menyimpan barang juga menutup daftar Todo</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1951"/>
@@ -3573,7 +3573,7 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1962"/>
       <source>Bengali</source>
-      <translation type="unfinished">Bengali</translation>
+      <translation>Bengali</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1973"/>
@@ -3586,191 +3586,196 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi.</t
       <translation>Swedia</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2228"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2149"/>
+      <source>Turkish</source>
+      <translation type="unfinished">Turkish</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="2239"/>
       <source>Enable dark mode application icon and tray icon</source>
-      <translation type="unfinished">Enable dark mode application icon and tray icon</translation>
+      <translation>Aktifkan ikon aplikasi mode gelap dan ikon baki</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2268"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2279"/>
       <source>System tray</source>
-      <translation type="unfinished">System tray</translation>
+      <translation>Baki sistem</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2277"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2288"/>
       <source>Show system tray icon</source>
-      <translation type="unfinished">Show system tray icon</translation>
+      <translation>Tampilkan ikon baki sistem</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2287"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2298"/>
       <source>Start application hidden</source>
-      <translation type="unfinished">Start application hidden</translation>
+      <translation>Mulai aplikasi tersembunyi</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2297"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2308"/>
       <source>Interface style</source>
       <translation>Gaya antarmuka</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3212"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3223"/>
       <source>By default the headline will generated automatically</source>
-      <translation type="unfinished">By default the headline will generated automatically</translation>
+      <translation>Secara default judul akan dihasilkan secara otomatis</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3215"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3226"/>
       <source>The shortcut to create a new note asks for a headline</source>
-      <translation type="unfinished">The shortcut to create a new note asks for a headline</translation>
+      <translation>Jalan pintas untuk membuat catatan baru meminta tajuk utama</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3263"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3274"/>
       <source>Search engine</source>
       <translation>Mesin pencari</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3285"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3296"/>
       <source>Message boxes</source>
-      <translation type="unfinished">Message boxes</translation>
+      <translation>Kotak pesan</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3291"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3302"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3487"/>
       <source>Reset message boxes</source>
-      <translation type="unfinished">Reset message boxes</translation>
+      <translation>Setel ulang kotak pesan</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4135"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4146"/>
       <source>Note-edit cursor width:</source>
-      <translation type="unfinished">Note-edit cursor width:</translation>
+      <translation>Catatan-edit lebar kursor:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4145"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4156"/>
       <source>Reset the cursor width</source>
       <translation>Setel ulang lebar kursor</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4265"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4276"/>
       <source>External git log command to show the git versions of a note</source>
-      <translation type="unfinished">External git log command to show the git versions of a note</translation>
+      <translation>Perintah git log eksternal untuk menampilkan versi git dari sebuah catatan</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4271"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4282"/>
       <source>Enter a command to be used to show a git log (like for example "gitk")</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
       <translation>Masukkan perintah yang akan digunakan untuk menampilkan log git (contohnya "gitk")</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4291"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4302"/>
       <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
-      <translation type="unfinished">If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</translation>
+      <translation>Jika Anda menggunakan setelan ini, Anda akan mendapatkan entri menu baru untuk menampilkan versi git jika Anda mengklik kanan sebuah catatan.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4601"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4612"/>
       <source>Show all notes of a tag including the notes of their children-tags</source>
-      <translation type="unfinished">Show all notes of a tag including the notes of their children-tags</translation>
+      <translation>Tampilkan semua catatan tag termasuk catatan tag anak-anak mereka</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4571"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4582"/>
       <source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
-      <translation type="unfinished">Show all notes in a folder including their subfolders (only works if subfolders are turned on)</translation>
+      <translation>Tampilkan semua catatan dalam folder termasuk subfoldernya (hanya berfungsi jika subfolder dihidupkan)</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4084"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4095"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Anda mungkin ingin melihat semua &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;format waktu&lt;/a&gt; yang tersedia.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4159"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4170"/>
       <source>Highlight the current line</source>
       <translation>Sorot baris saat ini</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4358"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4369"/>
       <source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
       <translation>Jangan lupa mengaktifkan dukungan git untuk folder catatan Anda dan atur nama dan alamat surel untuk aplikasi git Anda, contohnya dengan perintah terminal berikut ini:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4391"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4402"/>
       <source>Tags panel</source>
       <translation>Panel tag</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4420"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4496"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4545"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4431"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4507"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4556"/>
       <source>Order</source>
       <translation>Urutan</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4426"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4502"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4554"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4437"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4513"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4565"/>
       <source>Ascending</source>
       <translation>Naik</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4433"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4509"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4561"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4444"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4520"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4572"/>
       <source>Descending</source>
       <translation>Menurun</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4397"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4466"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4578"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4408"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4477"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4589"/>
       <source>Sort</source>
       <translation>Urutkan</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4403"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4472"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4584"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4414"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4483"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4595"/>
       <source>Alphabetical</source>
       <translation>Abjad</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4410"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4421"/>
       <source>By last change / use</source>
       <translation>Terakhir diubah / digunakan</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4443"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4454"/>
       <source>Hide 'Find or create tag' search</source>
       <translation>Sembunyikan kotak masukan 'Temukan atau buat tag'</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4453"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4464"/>
       <source>Note subfolders panel</source>
       <translation>Panel subfolder catatan</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4459"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4470"/>
       <source>Show with full path</source>
       <translation>Tampilkan dengan jalur penuh</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4479"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4591"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4490"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4602"/>
       <source>By last change</source>
       <translation>Terakhir diubah</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4489"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4500"/>
       <source>Show root folder name</source>
       <translation>Tampilkan nama folder root</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4519"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4530"/>
       <source>Hide 'Find or create note subfolder' search</source>
       <translation>Sembunyikan kotak masukan 'Temukan atau buat subfolder catatan'</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4526"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4537"/>
       <source>Display note subfolders as full tree</source>
-      <translation type="unfinished">Display note subfolders as full tree</translation>
+      <translation>Tampilkan subfolder catatan sebagai pohon penuh</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4536"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4547"/>
       <source>Notes panel</source>
       <translation>Panel catatan</translation>
     </message>
@@ -3780,39 +3785,39 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi.</t
       <translation>Cari repositori skrip</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4281"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4292"/>
       <source>You optionally can use "%notePath%" for the path of the note.</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
       <translation>Secara opsional Anda bisa menggunakan %notePath% untuk jalur catatan.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4304"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4315"/>
       <source>Git client</source>
       <translation>Klien git</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4320"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4331"/>
       <source>Path to git executable:</source>
       <translation>Jalur ke binari git:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4310"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4321"/>
       <source>Path to git client, leave empty for default</source>
       <translation>Jalur ke aplikasi git, kosongkan untuk bawaan</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4229"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4240"/>
       <source>Commit interval</source>
       <translation>Interval commit</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4235"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4246"/>
       <source>sec</source>
       <extracomment>seconds</extracomment>
       <translation>det</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4255"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4266"/>
       <source>git commit interval time [sec]</source>
       <translation>interval waktu commit git [sec]</translation>
     </message>
@@ -3872,32 +3877,32 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi.</t
       <translation>Portugis Brasil</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2149"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2160"/>
       <source>Ukrainian</source>
       <translation>Ukraina</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2255"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2266"/>
       <source>You might also want to choose an other editor color schema in the editor settings in dark mode.</source>
       <translation>Anda mungkin juga ingin memilih skema warna penyunting lainnya dalam pengaturan penyunting dalam mode gelap.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2990"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3001"/>
       <source>The name</source>
       <translation>Nama</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3164"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3175"/>
       <source>Maximum height:</source>
       <translation>Tinggi maksimum:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3171"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3182"/>
       <source>Maximum width:</source>
       <translation>Lebar maksimum:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3049"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3060"/>
       <source>Scale images down when inserted into notes</source>
       <translation>Perkecil skala gambar saat disisipkan ke dalam catatan</translation>
     </message>
@@ -3907,139 +3912,139 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi.</t
       <translation>Kroasia</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2905"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2916"/>
       <source>Path to your QML file</source>
       <translation>Jalur ke berkas QML Anda</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2696"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2707"/>
       <source>Script name</source>
       <translation>Nama skrip</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2718"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2729"/>
       <source>Description:</source>
       <translation>Deskripsi:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2800"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2811"/>
       <source>Version:</source>
       <translation>Versi:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2761"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2772"/>
       <source>Repository:</source>
       <translation>Repositori:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2588"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2599"/>
       <source>&amp;Add script...</source>
       <translation>&amp;Tambah skrip...</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2738"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2749"/>
       <source>Author(s):</source>
       <translation>Penulis:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3039"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3050"/>
       <source>Check this if you want to accept all external modifications while you are editing the current note.</source>
       <translation>Centang ini jika Anda ingin menerima semua perubahan eksternal saat Anda sedang menyunting catatan.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3042"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3053"/>
       <source>Accept all external modifications of the current note</source>
       <translation>Terima semua perubahan eksternal catatan saat ini</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3098"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3109"/>
       <source>Use UNIX newline instead of native newline characters</source>
       <translation>Gunakan newline UNIX bukan karakter newline bawaan</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3201"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3212"/>
       <source>When opening notes the cursor position inside the note will now be restored
   to the position when the note was last visited in the current session</source>
       <translation>Ketika membuka catatan, posisi kursor di dalam catatan sekarang akan dipulihkan
   ke posisi terakhir saat catatan dikunjungi dalam sesi saat ini</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3205"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3216"/>
       <source>Restore cursor position when opening a note</source>
       <translation>Pulihkan posisi kursor ketika membuka sebuah catatan</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3484"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3495"/>
       <source>Be warned that this will also remove your cached todo items and configured note folders and scripts!</source>
-      <translation type="unfinished">Be warned that this will also remove your cached todo items and configured note folders and scripts!</translation>
+      <translation>Berhati-hatilah bahwa ini juga akan menghapus item todo cache Anda dan folder catatan dan skrip yang dikonfigurasi!</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3908"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3919"/>
       <source>Apply toolbar configuration</source>
       <translation>Terapkan konfigurasi bilah perkakas</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3922"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3933"/>
       <source>Reset toolbars</source>
       <translation>Setel ulang bilah perkakas</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3950"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3961"/>
       <source>Enable logging to file</source>
       <translation>Aktifkan pencatatan log ke berkas</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3957"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3968"/>
       <source>Clear log file</source>
       <translation>Hapus berkas log</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3968"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3979"/>
       <source>Fake old version number to trigger update</source>
       <translation>Palsukan angka versi lama untuk memicu pembaruan</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3996"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4007"/>
       <source>Log file path:</source>
       <translation>Jalur berkas log:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4058"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4069"/>
       <source>Here you can set your own time format for inserting the current time into a note.</source>
       <translation>Di sini Anda bisa mengatur format waktu Anda sendiri untuk disisipkan ke dalam catatan.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4061"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4072"/>
       <source>Insert current time</source>
       <translation>Sisipkan waktu saat ini</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4067"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4078"/>
       <source>Time format:</source>
       <translation>Format waktu:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4074"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4085"/>
       <source>Enter your custom time format, like "dd.MM.yyyy hh:mm"</source>
       <translation>Masukkan format waktu khusus, contoh "dd.MM.yyyy hh:mm"</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4119"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4130"/>
       <source>Editor options</source>
       <translation>Opsi penyunting</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4176"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4187"/>
       <source>Enable automatic closing of brackets and markdown formatting characters</source>
       <translation>Aktifkan penutupan tanda kurung dan format karakter markdown secara otomatis</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4166"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4177"/>
       <source>You have to use the backspace key to remove the opening character</source>
       <translation>Anda harus menggunakan tombol backspace untuk membuang karakter pembuka</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4169"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4180"/>
       <source>Enable automatic removal of matching closing characters</source>
       <translation>Aktifkan penghapusan karakter tutup yang cocok secara otomatis</translation>
     </message>
@@ -4066,7 +4071,7 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1793"/>
       <source>This causes all todo list items to be reloaded from your server the next time you open your todo dialog.</source>
-      <translation type="unfinished">This causes all todo list items to be reloaded from your server the next time you open your todo dialog.</translation>
+      <translation>Hal ini menyebabkan semua item daftar todo harus dimuat ulang dari server Anda saat Anda membuka dialog todo Anda lagi.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1796"/>
@@ -4084,62 +4089,62 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi.</t
       <translation>&amp;Muat ulang daftar kalender</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2225"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2236"/>
       <source>You may need to restart the application to let these changes take effect</source>
       <translation>Anda mungkin perlu memulai ulang aplikasi agar perubahan ini memiliki dampak</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2350"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2361"/>
       <source>Toolbar icon size:</source>
       <translation>Ukuran ikon bilah perkakas:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2340"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2351"/>
       <source>List and tree item height:</source>
       <translation>Tinggi item daftar dan pohon:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2373"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2384"/>
       <source>Reset the icon size</source>
       <translation>Setel ulang ukuran ikon</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2387"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2398"/>
       <source>Reset the item height</source>
       <translation>Setel ulang tinggi item</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3868"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3879"/>
       <source>View text right to left (RTL)</source>
       <translation>Lihat teks kanan ke kiri (RTL)</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2466"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2477"/>
       <source>Search for shortcut</source>
       <translation>Cari pintasan</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1836"/>
       <source>Ignore calendars that don't support todo items</source>
-      <translation type="unfinished">Ignore calendars that don't support todo items</translation>
+      <translation>Abaikan kalender yang tidak mendukung item</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2171"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2182"/>
       <source>Arabic</source>
       <translation>Arab</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2309"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2320"/>
       <source>Icons</source>
       <translation>Ikon</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2318"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2329"/>
       <source>Use internal icon theme instead of system icon theme</source>
       <translation>Gunakan tema ikon internal bukan tema ikon sistem</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2854"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2865"/>
       <source>Script path:</source>
       <translation>Jalur skrip:</translation>
     </message>
@@ -4149,89 +4154,89 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi.</t
       <translation>Nama folder catatan</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3115"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3126"/>
       <source>Allow the note file name to be different from the headline.&lt;br&gt;Be aware of that ownCloud notes needs them to be the same!</source>
       <translation>Izinkan nama berkas catatan berbeda dari tajuk judul.&lt;br&gt;Berharti-hatilah bahwa catatan ownCloud perlu keduanya tetap sama!</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3118"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3129"/>
       <source>Allow note file name to be different from headline</source>
       <translation>Izinkan nama berkas catatan berbeda dari judul tajuk</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3066"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3077"/>
       <source>Check this if you want to ignore all external modifications while you are editing the current note.</source>
       <translation>Centang ini jika Anda ingin mengabaikan semua perubahan eksternal saat Anda sedang menyunting catatan tersebut saat ini.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3069"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3080"/>
       <source>Ignore all external modifications of the current note</source>
       <translation>Abaikan semua perubahan eksternal catatan saat ini</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3095"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3106"/>
       <source>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</source>
       <translation>Di Windows, Anda bisa menggunakan ini sebagai contoh jika ada masalah dengan newline dalam apl catatan ownCloud / Nextcloud</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3225"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3236"/>
       <source>App instance</source>
       <translation>Jendela apl</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3231"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3242"/>
       <source>Only allow one app instance at the same time</source>
       <translation>Hanya izinkan satu jendela apl pada saat yang bersamaan</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3327"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3338"/>
       <source>Add a custom file extension</source>
       <translation>Tambah ekstensi khusus berkas</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3341"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3352"/>
       <source>Remove a custom file extension</source>
       <translation>Buang ekstensi khusus berkas</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3380"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3391"/>
       <source>If you add custom extensions just type in the extension, like "taskpaper".</source>
       <translation>Jika Anda menambahkan ekstensi khusus, cukup ketik ekstensinya saja, sebagai contoh "jurnal".</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3384"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3395"/>
       <source>Text file (txt)</source>
       <translation>Berkas teks (txt)</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3412"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3423"/>
       <source>Path to external editor:</source>
       <translation>Jalur ke penyunting eksternal:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3247"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3258"/>
       <source>Don't show the update dialog automatically</source>
       <translation>Jangan tampilkan dialog pembaruan secara otomatis</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3617"/>
-      <location filename="../dialogs/settingsdialog.ui" line="3772"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3628"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3783"/>
       <source>Fonts</source>
       <translation>Fon</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3640"/>
-      <location filename="../dialogs/settingsdialog.ui" line="3682"/>
-      <location filename="../dialogs/settingsdialog.ui" line="3840"/>
-      <location filename="../dialogs/settingsdialog.ui" line="3854"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3651"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3693"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3851"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3865"/>
       <source>Set a new font</source>
       <translation>Tetapkan fon baru</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3651"/>
-      <location filename="../dialogs/settingsdialog.ui" line="3696"/>
-      <location filename="../dialogs/settingsdialog.ui" line="3778"/>
-      <location filename="../dialogs/settingsdialog.ui" line="3802"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3662"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3707"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3789"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3813"/>
       <source>Reset font</source>
       <translation>Setel ulang fon</translation>
     </message>
@@ -4241,17 +4246,17 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi.</t
       <translation>Awakutu</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3535"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3546"/>
       <source>Debug information</source>
       <translation>Informasi awakutu</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3551"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3562"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Anda bisa &lt;span style=" font-weight:600;"&gt;salin dan tempel&lt;/span&gt; teks ini (atau sebagian dari teks) ke dalam &lt;span style=" font-weight:600;"&gt;masalah&lt;/span&gt; pada &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;halaman masalah QOwnNotes&lt;/a&gt;, jika Anda memiliki &lt;span style=" font-weight:600;"&gt;pertanyaan atau kesulitan&lt;/span&gt; dengan QOwnNotes. Data yang sifatnya sangat sensitif, akan selalu tersembunyi di dalam informasi ini.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3564"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3575"/>
       <source>&amp;Save debug information</source>
       <translation>&amp;Simpan informasi awakutu</translation>
     </message>
@@ -4288,7 +4293,7 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1218"/>
       <source>Undefined key</source>
-      <translation type="unfinished">Undefined key</translation>
+      <translation>Kunci yang tidak ditentukan</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1223"/>
@@ -4373,7 +4378,7 @@ Pesan kesalahan koneksi: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2442"/>
       <source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
-      <translation type="unfinished">Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</translation>
+      <translation>Lihat dokumentasi &lt;a href="%1"&gt; Scripting &lt;/a&gt; untuk memulai dengan cepat.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2444"/>
@@ -4383,7 +4388,7 @@ Pesan kesalahan koneksi: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2465"/>
       <source>Check for script updates</source>
-      <translation type="unfinished">Check for script updates</translation>
+      <translation>Periksa pembaruan naskah</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2472"/>
@@ -4403,12 +4408,12 @@ Pesan kesalahan koneksi: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="195"/>
       <source>Menu bar</source>
-      <translation type="unfinished">Menu bar</translation>
+      <translation>Menu bar</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="196"/>
       <source>Show menu bar item</source>
-      <translation type="unfinished">Show menu bar item</translation>
+      <translation>Tampilkan item menu bar</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2557"/>
@@ -4511,7 +4516,7 @@ Pesan kesalahan koneksi: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3488"/>
       <source>Do you really want to reset the overrides of all message boxes?</source>
-      <translation type="unfinished">Do you really want to reset the overrides of all message boxes?</translation>
+      <translation>Apakah Anda benar-benar ingin menyetel ulang penggantian semua kotak pesan?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1884"/>
@@ -4602,7 +4607,7 @@ Catatan Anda akan tetap utuh!</translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1875"/>
       <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
-      <translation type="unfinished">Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</translation>
+      <translation>Apakah Anda benar-benar ingin menghapus database lokal? Ini juga akan menghapus folder catatan yang dikonfigurasi dan item todo tembolok Anda!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1878"/>
@@ -4683,7 +4688,7 @@ Catatan Anda akan tetap utuh!</translation>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="133"/>
       <source>The amount of dash characters in the separator</source>
-      <translation type="unfinished">The amount of dash characters in the separator</translation>
+      <translation>Jumlah karakter dasbor dalam pemisah</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="150"/>
@@ -4759,7 +4764,7 @@ Catatan Anda akan tetap utuh!</translation>
     <message>
       <location filename="../dialogs/tododialog.ui" line="14"/>
       <source>Todo</source>
-      <translation type="unfinished">Todo</translation>
+      <translation>Todo</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="78"/>
@@ -4805,32 +4810,32 @@ Catatan Anda akan tetap utuh!</translation>
     <message>
       <location filename="../dialogs/tododialog.ui" line="285"/>
       <source>Reload the todo list from server</source>
-      <translation type="unfinished">Reload the todo list from server</translation>
+      <translation>Muat ulang todo list dari server</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="319"/>
       <source>Search or create todo item</source>
-      <translation type="unfinished">Search or create todo item</translation>
+      <translation>Cari atau buat todo item</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="302"/>
       <source>select your todo list</source>
-      <translation type="unfinished">select your todo list</translation>
+      <translation>pilih daftar todo anda</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="188"/>
       <source>Save the current todo item</source>
-      <translation type="unfinished">Save the current todo item</translation>
+      <translation>Simpan item todo saat ini</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="104"/>
       <source>Save the current todo item and insert a link to it into the current note</source>
-      <translation type="unfinished">Save the current todo item and insert a link to it into the current note</translation>
+      <translation>Simpan item todo saat ini dan masukkan link ke catatan saat ini</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="113"/>
       <source>Import the current todo item as new note</source>
-      <translation type="unfinished">Import the current todo item as new note</translation>
+      <translation>Impor item todo saat ini sebagai catatan baru</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="109"/>
@@ -4840,7 +4845,7 @@ Catatan Anda akan tetap utuh!</translation>
     <message>
       <location filename="../dialogs/tododialog.ui" line="205"/>
       <source>Remove the current todo item</source>
-      <translation type="unfinished">Remove the current todo item</translation>
+      <translation>Hapus item todo saat ini</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="288"/>
@@ -4850,7 +4855,7 @@ Catatan Anda akan tetap utuh!</translation>
     <message>
       <location filename="../dialogs/tododialog.ui" line="309"/>
       <source>Todo list items are being loaded from the server</source>
-      <translation type="unfinished">Todo list items are being loaded from the server</translation>
+      <translation>Item daftar Todo sedang dimuat dari server</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="124"/>
@@ -4875,14 +4880,14 @@ Catatan Anda akan tetap utuh!</translation>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="578"/>
       <source>Remove todo item</source>
-      <translation type="unfinished">Remove todo item</translation>
+      <translation>Hapus todo item</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="579"/>
       <source>Remove the selected todo item?
 This cannot be undone!</source>
-      <translation type="unfinished">Remove the selected todo item?
-This cannot be undone!</translation>
+      <translation>Hapus item todo yang dipilih?
+Ini tidak dapat dibatalkan!</translation>
     </message>
   </context>
   <context>
@@ -5078,7 +5083,7 @@ This cannot be undone!</translation>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="83"/>
       <source>Keep in mind that QOwnNotes needs to run from a location where you have write access to for the automatic update to work!</source>
-      <translation type="unfinished">Keep in mind that QOwnNotes needs to run from a location where you have write access to for the automatic update to work!</translation>
+      <translation>Perlu diingat bahwa QOwnNotes perlu dijalankan dari lokasi di mana Anda memiliki akses tulis agar pembaruan otomatis dapat berjalan dengan baik!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="93"/>
@@ -5222,22 +5227,22 @@ This cannot be undone!</translation>
       <location filename="../services/updateservice.cpp" line="116"/>
       <location filename="../services/updateservice.cpp" line="135"/>
       <source>Update-checker error</source>
-      <translation type="unfinished">Update-checker error</translation>
+      <translation>Kesalahan pemeriksa update</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="103"/>
       <source>Network reply error: %1</source>
-      <translation type="unfinished">Network reply error: %1</translation>
+      <translation>Kesalahan balasan jaringan: %1</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="117"/>
       <source>No data was received by the network request!</source>
-      <translation type="unfinished">No data was received by the network request!</translation>
+      <translation>Tidak ada data yang diterima oleh permintaan jaringan!</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="136"/>
       <source>The data from the network request could not be interpreted!</source>
-      <translation type="unfinished">The data from the network request could not be interpreted!</translation>
+      <translation>Data dari permintaan jaringan tidak bisa ditafsirkan!</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="228"/>
@@ -5260,7 +5265,7 @@ This cannot be undone!</translation>
     <message>
       <location filename="../dialogs/versiondialog.ui" line="65"/>
       <source>Diff</source>
-      <translation type="unfinished">Diff</translation>
+      <translation>Diff</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.ui" line="98"/>
@@ -5392,7 +5397,7 @@ This cannot be undone!</translation>
     <message>
       <location filename="../main.cpp" line="77"/>
       <source>Runs the application in a different context for settings and internal files.</source>
-      <translation type="unfinished">Runs the application in a different context for settings and internal files.</translation>
+      <translation>Menjalankan aplikasi dalam konteks yang berbeda untuk pengaturan dan file internal.</translation>
     </message>
   </context>
 </TS>

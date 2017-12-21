@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="hr" sourcelanguage="en">
+<TS version="2.1" language="tr" sourcelanguage="en">
   <context>
     <name>AboutDialog</name>
     <message>
       <location filename="../dialogs/aboutdialog.ui" line="14"/>
       <source>About QOwnNotes</source>
-      <translation>O QOwnNotes</translation>
+      <translation>QOwnNotes Hakkında</translation>
     </message>
   </context>
   <context>
@@ -15,7 +15,7 @@
       <location filename="../dialogs/actiondialog.ui" line="14"/>
       <location filename="../dialogs/actiondialog.ui" line="46"/>
       <source>Find action</source>
-      <translation>Nađi akcije</translation>
+      <translation>Eylem bul</translation>
     </message>
   </context>
   <context>
@@ -23,52 +23,52 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="14"/>
       <source>Evernote Import</source>
-      <translation>Import iz Evernote</translation>
+      <translation>Evernote İçe Aktar</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="90"/>
       <source>Select file</source>
-      <translation>Odaberite datoteku</translation>
+      <translation>Dosya seç</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="40"/>
       <source>Please select the Evernote enex file you want to import:</source>
-      <translation>Odaberite Evernote enex datoteku koju želite importirati:</translation>
+      <translation>Lütfen içe aktarmak istediğiniz Evernote enex dosyasını seçin:</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="47"/>
       <source>Import images</source>
-      <translation>Importiranje slika</translation>
+      <translation>Görüntüleri içe aktar</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="23"/>
       <source>Evernote enex file</source>
-      <translation>Evernote enex datoteka</translation>
+      <translation>Evernote enex dosyası</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="33"/>
       <source>%v of %m note(s) imported</source>
-      <translation>%v od %m bilješki importirano</translation>
+      <translation>%m notun %v'si içe aktarıldı</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="80"/>
       <source>To get such an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes..." in the File menu.</source>
-      <translation>Da biste dobili enex datoteku, odaberite jednu ili više bilješki u vašem Evernotes programu i kliknite "Izvezi bilješke..." u izborniku datoteka.</translation>
+      <translation>Böyle bir eneks dosyası almak için Evernotes masaüstü istemcinizden bir veya daha fazla not seçmeniz ve Dosya menüsündeki "Notları dışa aktar..." seçeneğini tıklamanız gerekir.</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="101"/>
       <source>Import attachments</source>
-      <translation>Učitaj privitak</translation>
+      <translation>Ekleri içe aktar</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="39"/>
       <source>Enex files</source>
-      <translation>Enex datoteke</translation>
+      <translation>Eneks dosyaları</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="40"/>
       <source>Select Evernote enex file to import</source>
-      <translation>Odaberite Evernote enex datoteku za import</translation>
+      <translation>İçe aktarılacak Evernote eneks dosyası seçin</translation>
     </message>
   </context>
   <context>
@@ -76,140 +76,140 @@
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="38"/>
       <source>Text font</source>
-      <translation>Font teksta</translation>
+      <translation>Metin yazı tipi</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="73"/>
       <source>Size:</source>
-      <translation>Veličina:</translation>
+      <translation>Boyut:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="80"/>
       <source>Family:</source>
-      <translation>Obitelj:</translation>
+      <translation>Aile:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="103"/>
       <source>Color schema</source>
-      <translation>Postavke boje</translation>
+      <translation>Renk şeması</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="124"/>
       <source>Delete schema</source>
-      <translation>Obriši postavke</translation>
+      <translation>Şemayı sil</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="127"/>
       <source>Delete</source>
-      <translation>Brisanje</translation>
+      <translation>Sil</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="169"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="633"/>
       <source>Export schema</source>
-      <translation>Eksport postavki</translation>
+      <translation>Şemayı dışa aktar</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="172"/>
       <source>Export</source>
-      <translation>Eksport</translation>
+      <translation>Dışa aktar</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="271"/>
       <source>If you have created a nice color schema please export it and share it with everyone!</source>
-      <translation>Ako ste pripremili lijepe postavke boja, eksportirajte ih i podijelite sa svima!</translation>
+      <translation>Güzel bir renk şeması oluşturduysanız, lütfen dışa aktarın ve herkesle paylaşın!</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="155"/>
       <source>Copy schema</source>
-      <translation>Kopiraj postavke</translation>
+      <translation>Şemayı kopyala</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="158"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="462"/>
       <source>Copy</source>
-      <translation>Kopiraj</translation>
+      <translation>Kopyala</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="141"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="676"/>
       <source>Import schema</source>
-      <translation>Importiraj postavke</translation>
+      <translation>Şemayı içe aktar</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="144"/>
       <source>Import</source>
-      <translation>Import</translation>
+      <translation>İçe aktar</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="315"/>
       <source>Share schema</source>
-      <translation>Podijeli postavke</translation>
+      <translation>Şemayı paylaş</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="288"/>
       <source>Background:</source>
-      <translation>Pozadina:</translation>
+      <translation>Arkaplan:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="281"/>
       <source>Foreground:</source>
-      <translation>Prednji plan:</translation>
+      <translation>Önplan:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="264"/>
       <source>Bold</source>
-      <translation>Podebljano</translation>
+      <translation>Kalın</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="244"/>
       <source>Italic</source>
-      <translation>Kurziv</translation>
+      <translation>İtalik</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="237"/>
       <source>Adapt font size:</source>
-      <translation>Prilagodi veličinu fonta:</translation>
+      <translation>Yazı tipi boyutunu uyarla:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="208"/>
       <source>Underline</source>
-      <translation>Podcrtano</translation>
+      <translation>Altıçizili</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="195"/>
       <source>Text preset</source>
-      <translation>Predpodešeni tekst</translation>
+      <translation>Önceden ayarlanmış metin</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="196"/>
       <source>Emphasized text</source>
-      <translation>Istaknuti tekst</translation>
+      <translation>Vurgulanmış metin</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="197"/>
       <source>Strong text</source>
-      <translation>Podebljani tekst</translation>
+      <translation>Güçlü metin</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="214"/>
       <source>(HTML) Comment</source>
-      <translation>(HTML) komentar</translation>
+      <translation>(HTML) Yorum</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="204"/>
       <source>Header, level 1</source>
-      <translation>Zaglavlje, razina 1</translation>
+      <translation>Başlık, Seviye 1</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="198"/>
       <source>Link</source>
-      <translation>Poveznica</translation>
+      <translation>Link</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="199"/>
       <source>Image</source>
-      <translation>Slika</translation>
+      <translation>Görüntü</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="200"/>
@@ -219,94 +219,94 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="201"/>
       <source>Code (inline)</source>
-      <translation>Kod (inline)</translation>
+      <translation>Kod (satır içi)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="203"/>
       <source>List item</source>
-      <translation>Stavka liste</translation>
+      <translation>Liste öğesi</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="205"/>
       <source>Header, level 2</source>
-      <translation>Zaglavlje, razina 2</translation>
+      <translation>Başlık, seviye 2</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="206"/>
       <source>Header, level 3</source>
-      <translation>Zaglavlje, razina 3</translation>
+      <translation>Başlık, seviye 3</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="207"/>
       <source>Header, level 4</source>
-      <translation>Zaglavlje, razina 4</translation>
+      <translation>Başlık, seviye 4</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="208"/>
       <source>Header, level 5</source>
-      <translation>Zaglavlje, razina 5</translation>
+      <translation>Başlık, seviye 5</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="209"/>
       <source>Header, level 6</source>
-      <translation>Zaglavlje, razina 6</translation>
+      <translation>Başlık, seviye 6</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="212"/>
       <source>Block quote</source>
-      <translation>Citat</translation>
+      <translation>Blok alıntı</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="213"/>
       <source>Table</source>
-      <translation>Tablica</translation>
+      <translation>Tablo</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="215"/>
       <source>Masked syntax</source>
       <comment>text that will highlighted in a way that it's barely visible</comment>
-      <translation>Označena sintaksa</translation>
+      <translation>Maskelenmiş sözdizimi</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="210"/>
       <source>Horizontal rule</source>
-      <translation>Vodoravna linija</translation>
+      <translation>Yatay kural</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="218"/>
       <source>Current line background color</source>
-      <translation>Boja pozadine trenutne linije</translation>
+      <translation>Geçerli satır arka plan rengi</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="228"/>
       <source>This item will be used to preset colors for the other items</source>
-      <translation>Ova stavka će biti korištena kao pohrana boja za ostale stavke</translation>
+      <translation>Bu öğe, diğer öğeler için önceden ayarlanmış renkler kullanacak</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="459"/>
       <source>Copy color schema</source>
-      <translation>Kopiraj postavke boje</translation>
+      <translation>Renk şemasını kopyala</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="460"/>
       <source>Color schema name</source>
-      <translation>Naziv postavke boja</translation>
+      <translation>Renk şeması adı</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="584"/>
       <source>Remove schema</source>
-      <translation>Izbriši postavke</translation>
+      <translation>Şemayı kaldır</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="585"/>
       <source>Remove current schema? This cannot be undone!</source>
-      <translation>Brisanje trenutnih postavki? To ne može biti poništeno!</translation>
+      <translation>Geçerli şema kaldırılsın mı? Bu geri alınamaz!</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="632"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="675"/>
       <source>INI files</source>
-      <translation>INI datoteka</translation>
+      <translation>INI dosyaları</translation>
     </message>
   </context>
   <context>
@@ -314,37 +314,37 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="14"/>
       <source>Link an url or note</source>
-      <translation>Povezivanje sa URL ili bilješkom</translation>
+      <translation>Bir URL'ye veya nota bağlantı</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="44"/>
       <source>Enter URL</source>
-      <translation>Unesite URL</translation>
+      <translation>URL giriniz</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="53"/>
       <source>Enter an URL to link to</source>
-      <translation>Unesite URL za povezivanje s</translation>
+      <translation>Bağlantı için bir URL giriniz</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="76"/>
       <source>Search for notes or create new notes by entering text and pressing return</source>
-      <translation>Potražite bilješke ili kreiraj nove bilješke unosom teksta i pritiskom na povrat</translation>
+      <translation>Metin girip dönüş düğmesine basarak not arayın veya yeni notlar oluşturun</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="91"/>
       <source>Search for a note to link to</source>
-      <translation>Potraži bilješku za povezivanje</translation>
+      <translation>Bağlantı kurmak için bir not arayın</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="63"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;select local file to link to&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Odaberite lokalnu datoteku za povezivanje&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;bağlantı kurmak için yerel dosya seçin&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.cpp" line="191"/>
       <source>Select file to link to</source>
-      <translation>Odaberite datoteku koju želite povezati</translation>
+      <translation>Bağlantı kurmak için dosya seçin</translation>
     </message>
   </context>
   <context>
@@ -352,58 +352,58 @@
     <message>
       <location filename="../widgets/logwidget.ui" line="26"/>
       <source>Logs</source>
-      <translation>Protokoli</translation>
+      <translation>Günlükler</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="114"/>
       <source>Fatal</source>
-      <translation>Kobna</translation>
+      <translation>Vahim</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="100"/>
       <source>Warning</source>
-      <translation>Upozorenje</translation>
+      <translation>Uyarı</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="107"/>
       <source>Critical</source>
-      <translation>Kritična</translation>
+      <translation>Kritik</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="86"/>
       <source>Debug</source>
-      <translation>Ispravljanje pogrešaka</translation>
+      <translation>Hata ayıklama</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="93"/>
       <source>Info</source>
-      <translation>Informacije</translation>
+      <translation>Bilgi</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="121"/>
       <source>Status</source>
-      <translation>Status</translation>
+      <translation>Durum</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="128"/>
       <source>Scripting</source>
-      <translation>Skriptiranje</translation>
+      <translation>Scripting</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="135"/>
       <location filename="../widgets/logwidget.cpp" line="386"/>
       <source>Clear log</source>
-      <translation>Očisti protokol</translation>
+      <translation>Günlüğü temizle</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.cpp" line="384"/>
       <source>Show options</source>
-      <translation>Pokaži izbor</translation>
+      <translation>Ayarları göster</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.cpp" line="384"/>
       <source>Hide options</source>
-      <translation>Sakrij izbor</translation>
+      <translation>Ayarları gizle</translation>
     </message>
   </context>
   <context>
@@ -411,781 +411,781 @@
     <message>
       <location filename="../mainwindow.ui" line="512"/>
       <source>add a tag to this note</source>
-      <translation>dodaj oznaku ovoj bilješci</translation>
+      <translation>bu nota bir etiket ekleyin</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="515"/>
       <source>Add tag</source>
-      <translation>Dodaj oznaku</translation>
+      <translation>Etiket ekle</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="387"/>
       <location filename="../mainwindow.ui" line="724"/>
       <location filename="../mainwindow.cpp" line="597"/>
       <source>Navigation</source>
-      <translation>Navigacija</translation>
+      <translation>Navigasyon</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="682"/>
       <source>&amp;Note</source>
-      <translation>&amp;Bilješka</translation>
+      <translation>&amp;Not</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="686"/>
       <source>Note &amp;folders</source>
-      <translation>&amp;Mape s bilješkama</translation>
+      <translation>Not &amp;klasörleri</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="691"/>
       <source>Sort by</source>
-      <translation>Poredaj po</translation>
+      <translation>Olarak sırala</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="784"/>
       <source>&amp;Help</source>
-      <translation>&amp;Pomoć</translation>
+      <translation>&amp;Yardım</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="921"/>
       <source>Editor width in distraction free mode</source>
-      <translation>Proširi urednik u modus bez ometanja</translation>
+      <translation>Oyalama içermeyen modda düzenleyici genişliği</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="924"/>
       <source>Editor width</source>
-      <translation>Širina urednika</translation>
+      <translation>Düzenleyici genişliği</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="998"/>
       <source>Custom actions</source>
-      <translation>Korisničke akcije</translation>
+      <translation>Özel eylemler</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1018"/>
       <source>main toolbar</source>
-      <translation>glavna alatna traka</translation>
+      <translation>ana araç çubuğu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1051"/>
       <source>&amp;Quit</source>
-      <translation>&amp;Završi</translation>
+      <translation>&amp;Çıkış</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1066"/>
       <source>&amp;Setup note folders</source>
-      <translation>&amp;Postavljanje mapa bilješki</translation>
+      <translation>&amp;Not klasörleri kurulumu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1075"/>
       <source>&amp;Find note</source>
-      <translation>&amp;Nađi bilješku</translation>
+      <translation>&amp;Not bul</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1087"/>
       <source>&amp;Remove current note</source>
-      <translation>&amp;Izbriši izabranu bilješku</translation>
+      <translation>&amp;Geçerli notu kaldır</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1099"/>
       <source>About &amp;QOwnNotes...</source>
-      <translation>O &amp;QOwnNotes...</translation>
+      <translation>&amp;QOwnNotes Hakkında...</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1111"/>
       <source>&amp;New note</source>
-      <translation>&amp;Nova bilješka</translation>
+      <translation>&amp;Yeni not</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1123"/>
       <source>Check for &amp;updates</source>
-      <translation>Provjeri &amp;ažuriranja</translation>
+      <translation>&amp;Güncellemeleri kontrol et</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1135"/>
       <source>Report &amp;issues or ideas</source>
-      <translation>Objavi &amp;probleme ili ideje</translation>
+      <translation>&amp;Sorunları veya fikirleri bildir</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1143"/>
       <source>Alphabetical</source>
-      <translation>Abecedi</translation>
+      <translation>Alfabetik</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1146"/>
       <source>Sort alphabetical</source>
-      <translation>Poredaj po abecedi</translation>
+      <translation>Alfabetik sıralama</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1154"/>
       <source>By date</source>
-      <translation>Po datumu</translation>
+      <translation>Tarihe göre</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1157"/>
       <source>Sort by date</source>
-      <translation>Poredaj po datumu</translation>
+      <translation>Tarihe göre sıralama</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1181"/>
       <source>Show note &amp;versions</source>
-      <translation>Pokaži &amp;verzije bilješke</translation>
+      <translation>Not &amp;sürümlerini göster</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1184"/>
       <source>Show note versions on server</source>
-      <translation>Pokaži verzije bilješke na serveru</translation>
+      <translation>Not sürümlerini sunucuda göster</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1193"/>
       <source>Show &amp;trash</source>
-      <translation>Pokaži &amp;obrisano</translation>
+      <translation>Göster &amp;çöp</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1196"/>
       <source>Show trashed notes on server</source>
-      <translation>Pokaži obrisane bilješke na serveru</translation>
+      <translation>Çöpe gönderilen notları sunucuda göster</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1201"/>
       <location filename="../mainwindow.cpp" line="8328"/>
       <source>Select &amp;all notes</source>
-      <translation>Izaberi &amp;sve bilješke</translation>
+      <translation>Seç &amp;tüm notlar</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1210"/>
       <location filename="../mainwindow.cpp" line="5341"/>
       <source>Insert &amp;link</source>
-      <translation>Umetni &amp;poveznicu</translation>
+      <translation>Ekle &amp;link</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1213"/>
       <source>Insert link to an url or a note</source>
-      <translation>Umetni poveznicu na URL ili bilješku</translation>
+      <translation>Bir URL'ye veya bir nota link ekle</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1225"/>
       <source>&amp;Find in current note</source>
-      <translation>&amp;Nađi u izabranoj bilješci</translation>
+      <translation>&amp;Geçerli notta bul</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1228"/>
       <source>Find text in current note</source>
-      <translation>Traži tekst u izabranoj bilješci</translation>
+      <translation>Geçerli notta metin bul</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1233"/>
       <source>&amp;Duplicate text</source>
-      <translation>&amp;Udvostruči tekst</translation>
+      <translation>&amp;Metin çoğalt</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1245"/>
       <source>&amp;Back in note history</source>
-      <translation>&amp;Vrati na prijašnju verziju bilješke</translation>
+      <translation>&amp;Not geçmişine dön</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1166"/>
       <source>&amp;Settings</source>
-      <translation>&amp;Postavke</translation>
+      <translation>&amp;Ayarlar</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="119"/>
       <source>Find or create note sub folder</source>
-      <translation>Nađi ili stvori podmapu bilješke</translation>
+      <translation>Not alt klasörü bul veya oluştur</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="196"/>
       <source>Find or create tag</source>
-      <translation>Nađi ili stvori oznaku</translation>
+      <translation>Etiket bul veya oluştur</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="292"/>
       <source>Search for notes or create new notes by entering text and pressing return</source>
-      <translation>Potražite bilješke ili kreiraj nove bilješke unosom teksta i pritiskom na povrat</translation>
+      <translation>Metin girip dönüş düğmesine basarak not arayın veya yeni notlar oluşturun</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="306"/>
       <source>Search or create note</source>
-      <translation>Nađi ili stvori bilješku</translation>
+      <translation>Not ara veya oluştur</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="526"/>
       <source>New tag</source>
-      <translation>Nova oznaka</translation>
+      <translation>Yeni etiket</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="701"/>
       <source>Export</source>
-      <translation>Eksport</translation>
+      <translation>Dışa aktar</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="714"/>
       <source>Import</source>
-      <translation>Import</translation>
+      <translation>İçe aktar</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="737"/>
       <source>Print</source>
-      <translation>Ispis</translation>
+      <translation>Yazdır</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="748"/>
       <source>View note</source>
-      <translation>Pregled bilješke</translation>
+      <translation>Not görüntüle</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="813"/>
       <source>&amp;Edit</source>
-      <translation>&amp;Uredi</translation>
+      <translation>&amp;Düzenle</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="817"/>
       <source>Insert</source>
-      <translation>Umetni</translation>
+      <translation>Ekle</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="834"/>
       <source>Format</source>
-      <translation>Oblikuj</translation>
+      <translation>Format</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="847"/>
       <source>Extra</source>
-      <translation>Dodatno</translation>
+      <translation>Ekstra</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="860"/>
       <source>Edit</source>
-      <translation>Uredi</translation>
+      <translation>Düzenle</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="872"/>
       <source>Versioning</source>
-      <translation>Verzioniranje</translation>
+      <translation>Sürüm oluşturma</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="883"/>
       <source>Encryption</source>
-      <translation>Šifriranje</translation>
+      <translation>Şifreleme</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="911"/>
       <source>To&amp;do</source>
-      <translation>&amp;Zadatci</translation>
+      <translation>Yapılacaklar</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="917"/>
       <source>&amp;Window</source>
-      <translation>&amp;Prozor</translation>
+      <translation>&amp;Pencere</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="933"/>
       <location filename="../mainwindow.cpp" line="536"/>
       <source>Workspaces</source>
-      <translation>Radne površine</translation>
+      <translation>Çalışma alanı</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="938"/>
       <source>Panels</source>
-      <translation>Ploče</translation>
+      <translation>Paneller</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="943"/>
       <source>Toolbars</source>
-      <translation>Alatne trake</translation>
+      <translation>Araç çubukları</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="948"/>
       <source>Show</source>
       <extracomment>To show or hide stuff</extracomment>
-      <translation>Prikaži</translation>
+      <translation>Göster</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="962"/>
       <source>Workspace</source>
-      <translation>Radna površina</translation>
+      <translation>Çalışma alanı</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="994"/>
       <source>&amp;Scripting</source>
-      <translation>&amp;Skriptiranje</translation>
+      <translation>&amp;Scripting</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1257"/>
       <source>Forward in note history</source>
-      <translation>Naprijed u povijesti bilješke</translation>
+      <translation>Not geçmişine ilerle</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1269"/>
       <source>Show shortcuts</source>
-      <translation>Prikaži kratice</translation>
+      <translation>Kısayolları göster</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1278"/>
       <source>&amp;Knowledge base</source>
-      <translation>&amp;Baza znanja</translation>
+      <translation>&amp;Bilgi bankası</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1287"/>
       <source>Insert current &amp;time</source>
-      <translation>Umetni trenutno &amp;vrijeme</translation>
+      <translation>Geçerli &amp;zaman ekle</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1299"/>
       <source>Show &amp;Todo List</source>
-      <translation>Prikaži &amp;listu zadataka</translation>
+      <translation>&amp;Yapılacaklar listesini göster</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1320"/>
       <source>&amp;Export note as PDF (text)</source>
-      <translation>&amp;Eksport bilješke u PDF (tekst)</translation>
+      <translation>Notu PDF (metin) olarak &amp;Dışa aktar</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1329"/>
       <source>&amp;Print note (text)</source>
-      <translation>&amp;Ispiši bilješku (tekst)</translation>
+      <translation>Notu (metin) &amp;yazdır</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1341"/>
       <source>&amp;Print note (markdown)</source>
-      <translation>&amp;Ispiši bilješku (smanjenje)</translation>
+      <translation>Notu (markdown) &amp;Yazdır</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1353"/>
       <source>Insert &amp;image</source>
-      <translation>Umetni &amp;sliku</translation>
+      <translation>&amp;Görüntü ekle</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1356"/>
       <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
-      <translation>Umetni sliku (slika će biti kopirana u mapu 'medija' izabrene bilješke)</translation>
+      <translation>Görüntü ekle (görüntü geçerli notlar klasöründeki `media` klasörüne kopyalanacaktır)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1368"/>
       <source>Show &amp;changelog</source>
-      <translation>Prikaži &amp;protokol promjena</translation>
+      <translation>&amp;Değişiklikleri göster</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1377"/>
       <source>&amp;Encrypt note</source>
-      <translation>&amp;Šifriraj bilješku</translation>
+      <translation>&amp;Şifreleme notu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1386"/>
       <source>Edit encrypted note</source>
-      <translation>Uredi šifriranu bilješku</translation>
+      <translation>Şifrelenmiş notu düzenle</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1398"/>
       <source>Decrypt note</source>
-      <translation>Dešifriraj bilješku</translation>
+      <translation>Not şifresini çöz</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1407"/>
       <source>&amp;Open note in external editor</source>
-      <translation>&amp;Otvori bilješku u vanjskom uredniku</translation>
+      <translation>Harici editörde notu &amp;aç</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1419"/>
       <source>&amp;Export note as markdown file</source>
-      <translation>&amp;Eksport bilješke u sažetu datoteku</translation>
+      <translation>&amp;Notu markdown dosyası olarak dışa aktar</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1428"/>
       <source>&amp;Get involved</source>
-      <translation>&amp;Uključi se</translation>
+      <translation>&amp;Yer al</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1437"/>
       <source>Insert &amp;code block</source>
-      <translation>Umetni &amp;kod blok</translation>
+      <translation>&amp;Kod bloğu ekle</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1449"/>
       <source>Next note</source>
-      <translation>Sljedeća bilješka</translation>
+      <translation>Sonraki not</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1461"/>
       <source>Previous note</source>
-      <translation>Prethodna bilješka</translation>
+      <translation>Önceki not</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1473"/>
       <source>&amp;Distraction free mode</source>
-      <translation>&amp;Modus bez ometanja</translation>
+      <translation>&amp;Oyalamayan mod</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1476"/>
       <source>Distraction free mode, you can leave it with a button on the bottom right</source>
-      <translation>Modus bez ometanja, možete ga napustiti pritiskom na gumb u donjem desnom kutu</translation>
+      <translation>Oyalamayan mod, sağ alt taraftaki düşme ile ondan ayrılabilirsiniz</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1487"/>
       <source>Show &amp;toolbar</source>
-      <translation>Prikaži &amp;alatnu traku</translation>
+      <translation>&amp;Araç kutusunu göster</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1495"/>
       <source>Narrow</source>
-      <translation>Usko</translation>
+      <translation>Dar</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1506"/>
       <source>Medium</source>
-      <translation>Srednje</translation>
+      <translation>Orta</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1517"/>
       <source>Wide</source>
-      <translation>Široko</translation>
+      <translation>Geniş</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1528"/>
       <source>Full</source>
-      <translation>Potpuno</translation>
+      <translation>Tam</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1540"/>
       <source>Paste html or media</source>
-      <translation>Zalijepi html ili medij</translation>
+      <translation>Html veya meyda yapıştır</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1543"/>
       <location filename="../mainwindow.ui" line="1546"/>
       <source>Paste images, notes and html from the clipboard</source>
-      <translation>Zalijepi slike, bilješke i html iz međuspremnika</translation>
+      <translation>Panodan görüntüler, notlar ve html yapıştır</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1558"/>
       <source>Show note in &amp;file manager</source>
-      <translation>Prikaz bilješki u &amp;upravljaču datoteka</translation>
+      <translation>&amp;Dosya yöneticisinde notu göster</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1570"/>
       <source>Format text &amp;bold</source>
-      <translation>Format teksta &amp;podebljano</translation>
+      <translation>Metni &amp;kalın biçimlendir</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1582"/>
       <source>Format text &amp;italic</source>
-      <translation>Format teksta &amp;kurziv</translation>
+      <translation>Metni &amp;italik biçimlendir</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1594"/>
       <source>&amp;Increase note text size</source>
-      <translation>&amp;Povećaj veličinu teksta bilješke</translation>
+      <translation>&amp;Not metin boyutunu arttır</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1606"/>
       <source>&amp;Decrease note text size</source>
-      <translation>&amp;Smanji veličinu teksta bilješke</translation>
+      <translation>&amp;Not metin boyutunu azalt</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1618"/>
       <source>&amp;Reset note text size</source>
-      <translation>&amp;Povrati veličinu teksta bilješke</translation>
+      <translation>&amp;Not metin boyutunu sıfırla</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1630"/>
       <source>&amp;Add tag to note</source>
-      <translation>&amp;Dodaj oznaku bilješki</translation>
+      <translation>&amp;Nota etiket ekle</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1642"/>
       <source>&amp;Reload note folder</source>
-      <translation>&amp;Ponovno učitaj mapu bilježaka</translation>
+      <translation>&amp;Not klasörünü yeniden yükle</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1714"/>
       <source>Show log</source>
-      <translation>Prikaz protokola</translation>
+      <translation>Günlüğü göster</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1723"/>
       <source>Export note as HTML</source>
-      <translation>Eksportiraj bilješku kao HTML</translation>
+      <translation>Notu HTML olarak dışa aktar</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1802"/>
       <source>Cycle text case</source>
-      <translation>Promijeni verzal teksta</translation>
+      <translation>Döngü metin durumu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1893"/>
       <source>Find notes in all tags / subfolders</source>
-      <translation>Pronađi bilješke u svim oznakama / podmapama</translation>
+      <translation>Tüm etiketlerde / alt klasörlerde notları bul</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1941"/>
       <source>Unlock panels</source>
-      <translation>Otključaj kontrolnu ploču</translation>
+      <translation>Panellerin kilidini aç</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1950"/>
       <location filename="../mainwindow.cpp" line="9265"/>
       <source>Remove current workspace</source>
-      <translation>Ukloni izabrani radni prostor</translation>
+      <translation>Geçerli çalışma alanını kaldır</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1959"/>
       <source>Add new workspace</source>
-      <translation>Dodaj novi radni prostor</translation>
+      <translation>Yeni çalışma alanı ekle</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1968"/>
       <source>Rename current workspace</source>
-      <translation>Preimenuj izabrani radni prostor</translation>
+      <translation>Geçerli çalışma alanını yeniden adlandır</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1977"/>
       <source>Switch to previous workspace</source>
-      <translation>Prebaci na prethodni radni prostor</translation>
+      <translation>Önceki çalışma alanına geç</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1985"/>
       <source>Show all panels</source>
-      <translation>Prikaži sve kontrolne ploče</translation>
+      <translation>Tüm panelleri göster</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1994"/>
       <source>Find action</source>
-      <translation>Nađi akciju</translation>
+      <translation>Eylem bul</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1997"/>
       <location filename="../mainwindow.ui" line="2000"/>
       <source>Find an action from the menu</source>
-      <translation>Pronađi akciju na izborniku</translation>
+      <translation>Menüden bir eylem bul</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2012"/>
       <source>Insert table</source>
-      <translation>Umetni tablicu</translation>
+      <translation>Tablo ekle</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2024"/>
       <source>Insert block &amp;quote</source>
-      <translation>Umetni &amp;citat blok</translation>
+      <translation>Blok &amp;alıntı ekle</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2032"/>
       <location filename="../mainwindow.cpp" line="5346"/>
       <source>Search text on the web</source>
-      <translation>Nađi tekst na web-u</translation>
+      <translation>Webde metin ara</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2040"/>
       <source>Delete line</source>
-      <translation>Izbriši redak</translation>
+      <translation>Satırı sil</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2048"/>
       <source>Delete word</source>
-      <translation>Izbriši riječ</translation>
+      <translation>Kelimeyi sil</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2060"/>
       <location filename="../mainwindow.cpp" line="8308"/>
       <source>Open note in different window</source>
-      <translation>Otvori bilješku u drugom prozoru</translation>
+      <translation>Notu farklı pencerede aç</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2072"/>
       <source>Save modified notes</source>
-      <translation>Spremi promjene u bilješci</translation>
+      <translation>Değiştirilmiş notları kaydet</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2083"/>
       <source>Ascending</source>
-      <translation>Uzlazno</translation>
+      <translation>Artan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2091"/>
       <source>Descending</source>
-      <translation>Silazno</translation>
+      <translation>Azalan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2100"/>
       <location filename="../mainwindow.cpp" line="8315"/>
       <source>Show note git versions</source>
-      <translation>Prikaži git verzije bilješke</translation>
+      <translation>Not git sürümlerini göster</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2109"/>
       <source>Find scripts in script repository</source>
-      <translation>Potraži skripte u repozitoriju skripti</translation>
+      <translation>Script deposunda script bul</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2121"/>
       <source>Script settings</source>
-      <translation>Postavke skripta</translation>
+      <translation>Script ayarları</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2130"/>
       <source>Insert attachment</source>
-      <translation>Umetni privitak</translation>
+      <translation>Ek ekle</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2145"/>
       <source>Allow note editing</source>
-      <translation type="unfinished">Allow note editing</translation>
+      <translation>Not düzenlemeye izin ver</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2157"/>
       <source>Check for script updates</source>
-      <translation type="unfinished">Check for script updates</translation>
+      <translation>Script güncellemelerini kontrol et</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1653"/>
       <source>Use &amp;vertical preview layout</source>
-      <translation>Upotrijebi &amp;vertikalni pretpregled izgleda</translation>
+      <translation>&amp;Yatay önizleme düzenini kullan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1656"/>
       <location filename="../mainwindow.ui" line="1659"/>
       <source>The note edit panel will be above the preview panel</source>
-      <translation>Korisnička ploča za uređivanje bilješki biti će iznad ploče za prepregled</translation>
+      <translation>Not düzenleme paneli önizleme panelinin üstünde olacak</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1668"/>
       <source>Replace in current note</source>
-      <translation>Zamijeni u izabranoj bilješci</translation>
+      <translation>Geçerli notta değiştir</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1676"/>
       <source>Autocomplete, solve equation or open URL</source>
-      <translation>Dopuni automatski, riješi jednadžbu ili otvori URL</translation>
+      <translation>Otomatik tamamlama, denklemi çöz veya URL'yi aç</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1679"/>
       <source>Solve a simple equation like '(2+3)*6=' in the current line</source>
-      <translation>Riješi jednostavne jednadžbe kao '(2+3) * 6 =' u izabranom redku</translation>
+      <translation>Geçerli satırda '(2+3)*6' gibi basit bir denklemi çöz</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1687"/>
       <source>Select note folder</source>
-      <translation>Odaberi mapu bilježke</translation>
+      <translation>Not klasörü seç</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1702"/>
       <source>Reload scripting engine</source>
-      <translation>Ponovno učitaj skripting modul</translation>
+      <translation>Komut dosyası motorunu yeniden yükle</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1735"/>
       <location filename="../mainwindow.ui" line="1738"/>
       <source>Open the #qownnotes IRC channel, you have to stay online to get a response</source>
-      <translation>Otvori #qownnotes IRC kanal, ostani na vezi za odgovor</translation>
+      <translation>#qownnotes IRC kanalını açın, yanıt almak için çevrimiçi kalmanız gerekir</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1875"/>
       <source>Show note list under tag pane</source>
-      <translation>Pokaži popis bilješki pod panelom oznake</translation>
+      <translation>Not listesini etiket bölmesinde göster</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1926"/>
       <location filename="../mainwindow.ui" line="1929"/>
       <source>Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</source>
-      <translation>Otvori qownnotes Gitter sobu, potreban je GitHub ili Twitter račun za prijavu, možete primiti poruke offline</translation>
+      <translation>Qownnotes Gitter odasını açın, giriş yapmak için bir GitHub veya Twitter hesabına ihtiyacınız vardır, ancak çevrimdışı mesajlar alabilirsiniz</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="788"/>
       <source>Open chat</source>
-      <translation>Otvori razgovor</translation>
+      <translation>Chati aç</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1311"/>
       <source>&amp;Export note as PDF</source>
-      <translation>&amp;Eksportiraj bilješku kao PDF</translation>
+      <translation>Notu PDF olarak &amp;Dışa aktar</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1747"/>
       <source>Insert headline from note filename</source>
-      <translation>Umetni naslov iz naziva datoteke bilješke</translation>
+      <translation>Not dosya adından başlık ekle</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1761"/>
       <source>Use softwrap in note editor and preview</source>
-      <translation>Koristi prijelom u uređivaču bilješki i pregledu</translation>
+      <translation>Not editöründe ve önizlemede yumuşak sargı kullanma</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1769"/>
       <source>Show status bar</source>
-      <translation>Prikaži traku statusa</translation>
+      <translation>Durum çubuğunu göster</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1784"/>
       <source>Share note</source>
-      <translation>Podijeli bilješku</translation>
+      <translation>Not paylaş</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1814"/>
       <source>Markdown cheatsheet</source>
-      <translation>Stranica sa oznakama</translation>
+      <translation>Markdown kopya kağıdı</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1823"/>
       <source>Strike out text</source>
-      <translation>Precrtaj tekst</translation>
+      <translation>Metin vurgusu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1834"/>
       <source>Use one column mode</source>
-      <translation>Koristi jedan stupac</translation>
+      <translation>Tek kolon modunu kullan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1837"/>
       <location filename="../mainwindow.ui" line="1840"/>
       <source>Use a one column minimal mode (like NVAlt)</source>
-      <translation>Koristi jedan stupac u minimalnom načinu (kao NVAlt)</translation>
+      <translation>Bir tek kolon minimal modu kullan (NVAlt gibi)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1852"/>
       <source>Show menu bar</source>
-      <translation>Prikaz trake izbornika</translation>
+      <translation>Menü çubuğunu göster</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1864"/>
       <source>Split note at cursor position</source>
-      <translation>Podijeli bilješku na položaju pokazivača</translation>
+      <translation>İmleç konumunda notu böl</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1884"/>
       <source>Donate</source>
-      <translation>Daruj</translation>
+      <translation>Bağış</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1905"/>
       <source>Import notes from Evernote</source>
-      <translation>Importiraj bilješke iz Evernote</translation>
+      <translation>Evernote'dan notları içe aktar</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1914"/>
       <source>Delete orphaned image files</source>
-      <translation>Obriši slikovne datoteke bez bilješke</translation>
+      <translation>Tek kalmış görüntü dosyalarını sil</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2373"/>
       <source>Note was removed externally!</source>
-      <translation>Bilješka je obrisana izvana!</translation>
+      <translation>Not harici olarak kaldırılmıştır!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2374"/>
       <source>Current note was removed outside of this application!
 Restore current note?</source>
-      <translation>Izabrana bilješka je izbrisana izvan ovog programa! Povrat izabrane bilješke?</translation>
+      <translation>Geçerli not bu uygulama dışına kaldırıldı!
+Geçerli not geri yüklensin mi?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4505"/>
       <location filename="../mainwindow.cpp" line="5669"/>
       <location filename="../mainwindow.cpp" line="8376"/>
       <source>&amp;Cancel</source>
-      <translation>&amp;Odustani</translation>
+      <translation>&amp;İptal</translation>
     </message>
     <message numerus="yes">
       <source>stored %n note(s) to disk</source>
       <translation type="unfinished">
-        <numerusform>stored %n note(s) to disk</numerusform>
         <numerusform>stored %n note(s) to disk</numerusform>
         <numerusform>stored %n note(s) to disk</numerusform>
       </translation>
@@ -1193,62 +1193,62 @@ Restore current note?</source>
     <message>
       <location filename="../mainwindow.cpp" line="2572"/>
       <source>new version %1 available</source>
-      <translation>nova verzija %1 dostupna</translation>
+      <translation>yeni sürüm %1 mevcut</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2972"/>
       <source>Please select the folder where your notes will get stored</source>
-      <translation>Molim odaberi mapu u koju će bilješke biti spremljene</translation>
+      <translation>Lütfen notlarınızın saklandığı klasörü seçin</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2999"/>
       <source>No folder was selected</source>
-      <translation>Mapa nije izabrana</translation>
+      <translation>Hiçbir klasör seçilmedi</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3000"/>
       <source>You have to select your ownCloud notes folder to make this software work!</source>
-      <translation>Morate odabrati mapu ownCloud bilješki kako bi ovaj softver radio!</translation>
+      <translation>Bu yazılımı çalıştırmak için ownCloud notlar klasörünü seçmelisin!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3002"/>
       <source>&amp;Retry</source>
-      <translation>&amp;Ponovi</translation>
+      <translation>&amp;Tekrar dene</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3002"/>
       <source>&amp;Exit</source>
-      <translation>&amp;Izlaz</translation>
+      <translation>&amp;Çıkış</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3176"/>
       <source>Remove current note</source>
-      <translation>&amp;Izbriši izabranu bilješku</translation>
+      <translation>Geçerli notu sil</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3177"/>
       <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation>Izbriši izabranu bilješku: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+      <translation>Geçerli notu sil:&lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3488"/>
       <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
-      <translation>Unesi &lt;strong&gt;lozinku&lt;/strong&gt; za kodiranje ove bilješke.</translation>
+      <translation>Lütfen şifrelenmiş notun &lt;strong&gt;şifresini&lt;/strong&gt; girin.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3512"/>
       <source>Note can't be decrypted!</source>
-      <translation>Bilješku nije moguće dekodirati!</translation>
+      <translation>Notun şifresi çözülemez!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3513"/>
       <source>It seems that your password is not valid!</source>
-      <translation>Čini se da lozinka nije valjana!</translation>
+      <translation>Anlaşılan şifreniz geçerli değil!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3662"/>
       <source>Remove selected notes</source>
-      <translation>Izbriši odabrane bilješke</translation>
+      <translation>Seçili notları kaldır</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3664"/>
@@ -1256,435 +1256,426 @@ Restore current note?</source>
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
       <translation>
-        <numerusform>Izbrisati izabranu bilješku &lt;strong&gt;%n&lt;/strong&gt;? Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali bi biti u mogućnosti povratiti je odande.</numerusform>
-        <numerusform>Izbrisati izabrane bilješke &lt;strong&gt;%n&lt;/strong&gt;? Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali bi biti u mogućnosti povratiti ih odande.</numerusform>
-        <numerusform>Izbrisati izabrane bilješke &lt;strong&gt;%n&lt;/strong&gt;? Ako je kanta za smeće aktivirana na poslužitelju ownCloud trebali bi biti u mogućnosti povratiti ih odande.</numerusform>
+        <numerusform>Seçili notlar &lt;strong&gt;%n&lt;/strong&gt; kaldırılsın mı?
+
+Çöp kutusu ownCloud sunucunuzda etkinse, buradan onları geri yükleyebilmeniz gerekir.</numerusform>
+        <numerusform>Seçili not(lar) &lt;strong&gt;%n&lt;/strong&gt; kaldırılsın mı?
+
+Çöp kutusu ownCloud sunucunuzda etkinse, buradan onları geri yükleyebilmeniz gerekir.</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3743"/>
       <location filename="../mainwindow.cpp" line="8536"/>
       <source>Remove selected folders</source>
-      <translation>Izbriši odabrane mape</translation>
+      <translation>Seçili klasörleri sil</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3744"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
       <translation>
-        <numerusform>Izbrisati izabranu &lt;strong&gt;%n&lt;/strong&gt; mapu? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt; Sve datoteke i mape u toj mapi bit će također izbrisani!</numerusform>
-        <numerusform>Izbrisati izabrane &lt;strong&gt;%n&lt;/strong&gt; mape? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt; Sve datoteke i mape u tim mapama bit će također izbrisani!</numerusform>
-        <numerusform>Izbrisati izabrane &lt;strong&gt;%n&lt;/strong&gt; mape? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt; Sve datoteke i mape u tim mapama bit će također izbrisani!</numerusform>
+        <numerusform>Seçilen klasör(ler) &lt;strong&gt;%n&lt;/strong&gt; kaldırılsın mı? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Bu klasörlerdeki tüm dosyalar ve klasörler de kaldırılmış olacak!</numerusform>
+        <numerusform>Seçilen klasör(ler) &lt;strong&gt;%n&lt;/strong&gt; kaldırılsın mı? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt; Bu klasörlerdeki tüm dosyalar ve klasörler de kaldırılmış olacak!</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3755"/>
       <source>Removed note subfolder: %1</source>
-      <translation>Izbriši podmapu bilješki: %1</translation>
+      <translation>Not alt klasörü kaldırıldı: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3774"/>
       <source>Remove selected tags</source>
-      <translation>Izbriši odabrane oznake</translation>
+      <translation>Seçilen etiketleri kaldır</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3775"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
       <translation>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; oznaku ukloniti? Nijedna bilješka pritom neće biti uklonjena.</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; oznake ukloniti? Nijedna bilješka pritom neće biti uklonjena.</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; oznaku/oznake ukloniti? Nijedna bilješka pritom neće biti uklonjena.</numerusform>
+        <numerusform>Seçilen etiket(ler) &lt;strong&gt;%n&lt;/strong&gt; kaldırılsın mı? Bu süreçte hiçbir not kaldırılmayacaktır.</numerusform>
+        <numerusform>Seçilen etiket(ler) &lt;strong&gt;%n&lt;/strong&gt; kaldırılsın mı? Bu süreçte hiçbir not kaldırılmayacaktır.</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3829"/>
       <location filename="../mainwindow.cpp" line="7613"/>
       <source>Move selected notes</source>
-      <translation>Premjesti odabrane bilješke</translation>
+      <translation>Seçilen notları kaldır</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3830"/>
       <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
-        <numerusform>Premjestiti %n odabranu bilješku u &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Premjestiti %n odabrane bilješke u &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Premjestiti %n odabranih bilješki u &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Seçilen %n not(lar) &lt;strong&gt;%2&lt;/strong&gt;a taşınsın mı?</numerusform>
+        <numerusform>Seçilen %n not(lar) &lt;strong&gt;%2&lt;/strong&gt;a taşınsın mı?</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3922"/>
       <location filename="../mainwindow.cpp" line="7697"/>
       <source>Copy selected notes</source>
-      <translation>Kopiraj odabrane bilješke</translation>
+      <translation>Seçilen notları kopyala</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3923"/>
       <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
-        <numerusform>Kopirati odabranu bilješku %n &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Kopirati odabrane bilješke %n &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Kopirati odabrane bilješke %n &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Seçilen %n not(lar) &lt;strong&gt;%2&lt;/strong&gt;a kopyalansın mı?</numerusform>
+        <numerusform>Seçilen %n not(lar) &lt;strong&gt;%2&lt;/strong&gt;a kopyalansın mı?</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3946"/>
       <location filename="../mainwindow.cpp" line="4084"/>
       <source>Done</source>
-      <translation>Završeno</translation>
+      <translation>Tamam</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3947"/>
       <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
       <translation>
-        <numerusform>%n bilješka kopirana na &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
-        <numerusform>%n bilješke kopirane na &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
-        <numerusform>%n bilješke kopirane na &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
+        <numerusform>%n not(lar) &lt;strong&gt;%2&lt;/strong&gt;a kopyalandı.</numerusform>
+        <numerusform>%n not(lar) &lt;strong&gt;%2&lt;/strong&gt;a kopyalandı.</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3960"/>
       <source>Tag selected notes</source>
-      <translation>Označi odabrane bilježke</translation>
+      <translation>Seçilen notları etiketle</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3961"/>
       <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
-        <numerusform>Označiti %n odabranu bilješku s &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Označiti %n odabrane bilješke s &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Označiti %n odabrane bilješke s &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Seşilen %n not(lar) &lt;strong&gt;%2&lt;/strong&gt; ile etiketlensin mi?</numerusform>
+        <numerusform>Seşilen %n not(lar) &lt;strong&gt;%2&lt;/strong&gt; ile etiketlensin mi?</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4213"/>
       <source>Restart application</source>
-      <translation>Ponovno pokreni aplikaciju</translation>
+      <translation>Uygulamayı yeniden başlat</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4219"/>
       <source>You may need to restart the application manually to let the changes take effect.</source>
-      <translation>Da aktivirate promjene ručno ponovno pokrenite aplikaciju.</translation>
+      <translation>Değişikliklerin etkili olabilmesi için uygulamayı manuel olarak yeniden başlatmanız gerekebilir.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4224"/>
       <source>You may need to restart the application to let the changes take effect.</source>
-      <translation>Da aktivirate promjene ponovno pokrenite aplikaciju.</translation>
+      <translation>Değişikliklerin etkili olabilmesi için uygulamayı yeniden başlatmanız gerekebilir.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4226"/>
       <source>Restart</source>
-      <translation>Ponovno pokretanje</translation>
+      <translation>Yeniden başlat</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4412"/>
       <source>PDF files</source>
-      <translation>PDF datoteke</translation>
+      <translation>PDF dosyaları</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5299"/>
       <source>Note versions are currently loaded from your ownCloud server</source>
-      <translation>Verzije bilješki se trenutno učitavaju s poslužitelja ownCloud</translation>
+      <translation>Not sürümleri şu anda ownCloud sunucunuzdan yüklenmiştir</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5313"/>
       <source>Trashed notes are currently loaded from your ownCloud server</source>
-      <translation>Izbrisane bilješke trenutno se učitavaju s poslužitelja ownCloud</translation>
+      <translation>Çöp kutusundaki notlar şu anda ownCloud sunucunuzdan yüklendi</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5476"/>
       <source>Image files</source>
-      <translation>Slikovne datoteke</translation>
+      <translation>Görüntü dosyaları</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5665"/>
       <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
-      <translation>Bilješka će biti dešifrirana i pohranjena kao otvoreni tekst. Imaj na umu da će tako dešifrirana vjerojatno biti sinkronizirana na poslužitelju i vrlo vjerojatno izložena drugima!&lt;br /&gt;Stvarno dešifrirati bilješku?</translation>
+      <translation>Notunuzun şifresi çözülecek ve tekrar düz metin olarak saklanacaktır. Şifrelenmemiş notun muhtemelen sunucunuza senkronize edileceğini ve hassas metinlerin görülebileceğini unutmayın!&lt;br /&gt;Notunuzu şifresini çözmek istiyor musun?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5750"/>
       <source>Markdown files</source>
-      <translation>Datoteke oznaka</translation>
+      <translation>Markdown dosyaları</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5804"/>
       <source>Bookmarked note position at slot %1</source>
-      <translation>Bilješka označena na mjestu %1</translation>
+      <translation>%1 slotundaki yer işaretli not konumu</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5820"/>
       <source>Jumped to bookmark position at slot %1</source>
-      <translation>Skok na oznaku na mjestu %1</translation>
+      <translation>%1 slotundaki yer işaretine atlandı</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6022"/>
       <location filename="../mainwindow.cpp" line="6090"/>
       <source>Inserting image</source>
-      <translation>Umetanje slike</translation>
+      <translation>Görüntü ekleniyor</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6027"/>
       <location filename="../mainwindow.cpp" line="6093"/>
       <source>Done inserting image</source>
-      <translation>Umetanje slike završeno</translation>
+      <translation>Görüntü eklemeyi tamamla</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6029"/>
       <source>Inserting attachment</source>
-      <translation>Umetanje privitka</translation>
+      <translation>Ek ekleniyor</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6034"/>
       <source>Done inserting attachment</source>
-      <translation>Umetanje privitka završeno</translation>
+      <translation>Ek eklemeyi tamamla</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="6044"/>
       <source>Copied %n note(s) to %1</source>
       <translation>
-        <numerusform>Kopiraj %n bilješku na %1</numerusform>
-        <numerusform>Kopiraj %n bilješke na %1</numerusform>
-        <numerusform>Kopiraj %n bilješke na %1</numerusform>
+        <numerusform>%n not(lar) %1'a kopyalandı</numerusform>
+        <numerusform>%n not(lar) %1'a kopyalandı</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="6053"/>
       <source>Failed to copy %n note(s) (most likely already existing)</source>
       <translation>
-        <numerusform>Neuspjelo kopiranje %n bilješke (vjerojatno već postoji)</numerusform>
-        <numerusform>Neuspjelo kopiranje %n bilješki (vjerojatno već postoje)</numerusform>
-        <numerusform>Neuspjelo kopiranje %n bilješki (vjerojatno već postoje)</numerusform>
+        <numerusform>Not(lar) %n kopyalanamadı. (büyük olasılıkla zaten mevcut)</numerusform>
+        <numerusform>Not(lar) %n kopyalanamadı. (büyük olasılıkla zaten mevcut)</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="6063"/>
       <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
       <translation>
-        <numerusform>Izostavljeno kopiranje %n bilješke (nema oznaku ili je tekst datoteke nečitak)</numerusform>
-        <numerusform>Izostavljeno kopiranje %n bilješki (nemaju oznaku ili su tekstovi datoteke nečitki)</numerusform>
-        <numerusform>Izostavljeno kopiranje %n bilješki (nemaju oznaku ili su tekstovi datoteke nečitki)</numerusform>
+        <numerusform>Not(lar) ın %n kopyalanması geçildi (işaretleme veya metin dosyası yok veya okunabilir değil)</numerusform>
+        <numerusform>Not(lar) ın %n kopyalanması geçildi (işaretleme veya metin dosyası yok veya okunabilir değil)</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6077"/>
       <source>Saving temporary image</source>
-      <translation>Spremanje privremene slike</translation>
+      <translation>Geçici görüntü kaydediliyor</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6096"/>
       <source>Temporary file can't be opened</source>
-      <translation>Privremenu datoteku nije moguće otvoriti</translation>
+      <translation>Geçici dosya açılamıyor</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6127"/>
       <source>Downloading %1</source>
-      <translation>Skidanje %1</translation>
+      <translation>İndiriliyor %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6304"/>
       <source>Reset font size to %1 pt</source>
       <comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
-      <translation>Vrati veličinu fonta na %1 pt</translation>
+      <translation>Yazı tipi boyutunu %1 puntoya ayarla</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7181"/>
       <source>Rename tag</source>
-      <translation>Preimenuj oznaku</translation>
+      <translation>Etiketi yeniden adlandır</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7182"/>
       <source>Assign color</source>
-      <translation>Odredi boju</translation>
+      <translation>Renk ata</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7183"/>
       <source>Disable color</source>
-      <translation>Isključi boju</translation>
+      <translation>Rengi devre dışı bırak</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7406"/>
       <source>Move to the root</source>
       <comment>to move a tag to the current tag in the tag context menu</comment>
-      <translation>Premjesti u korijen</translation>
+      <translation>Kök dizine taşı</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7839"/>
       <source>An url was opened at the current cursor position</source>
-      <translation>Url je otvoren na trenutnoj poziciji pokazivača</translation>
+      <translation>Mevcut imleç konumunda bir URL açıldı</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7917"/>
       <source>No equation was found in front of the cursor</source>
-      <translation>Jednadžba nije pronađena ispred pokazivča</translation>
+      <translation>İmlecin önünde denklem bulunamadı</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7934"/>
       <source>Result for equation: %1 = %2</source>
-      <translation>Rezultat jednadžbe: %1 = %2</translation>
+      <translation>Denklem için sonuç: %1=%2</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8008"/>
       <source>The scripting engine was reloaded</source>
-      <translation>Mehanizam skriptiranja je ponovno učitan</translation>
+      <translation>Komut dosyası motoru yeniden yüklendi</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8043"/>
       <source>HTML files</source>
-      <translation>HTML datoteke</translation>
+      <translation>HTML dosyaları</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8217"/>
       <source>Rename note</source>
-      <translation>Preimenuj bilješku</translation>
+      <translation>Notu yeniden adlandır</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8218"/>
       <source>Allows you to rename the filename of the note</source>
-      <translation>Omogućuje vam preimenovanje imena bilješke</translation>
+      <translation>Notun dosya adını değiştirmenize izin verir</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8371"/>
       <source>Note renaming not enabled!</source>
-      <translation>Promjena naziva bilješki nije aktivirana!</translation>
+      <translation>Not yeniden adlandırma etkin değil!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8535"/>
       <source>Rename subfolder</source>
-      <translation>Preimenuj podmapu</translation>
+      <translation>Alt klasörü yeniden adlandır</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9057"/>
       <source>Create new workspace</source>
-      <translation>Stvori novu radnu površinu</translation>
+      <translation>Yeni çalışma alanı oluştur</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9057"/>
       <location filename="../mainwindow.cpp" line="9303"/>
       <source>Workspace name:</source>
-      <translation>Naziv radne površine:</translation>
+      <translation>Çalışma alanı adı:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9179"/>
       <source>full</source>
       <comment>full workspace</comment>
-      <translation>potpuna</translation>
+      <translation>dolu</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9186"/>
       <source>minimal</source>
       <comment>minimal workspace</comment>
-      <translation>minimalna</translation>
+      <translation>en az</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9266"/>
       <source>Remove the current workspace?</source>
-      <translation>Obrisati trenutnu radnu površinu?</translation>
+      <translation>Mevcut çalışma alanını kaldırılsın mı?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9303"/>
       <source>Rename workspace</source>
-      <translation>Preimenuj radnu površinu</translation>
+      <translation>Çalışma alanını yeniden adlandır</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="9438"/>
       <source>%n chars</source>
       <comment>characters</comment>
       <translation>
-        <numerusform>%n znak</numerusform>
-        <numerusform>%n znakova</numerusform>
-        <numerusform>%n znakova</numerusform>
+        <numerusform>%n karakterler</numerusform>
+        <numerusform>%n karakter</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9561"/>
       <source>Copy image file path</source>
-      <translation>Kopiraj put do datoteke slike</translation>
+      <translation>Görüntü dosyası yolunu kopyala</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9700"/>
       <source>Select file to insert</source>
-      <translation>Odaberi datoteku za umetanje</translation>
+      <translation>Eklenecek dosyayı seçin</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="988"/>
       <source>&amp;Tag</source>
-      <translation>&amp;Oznaka</translation>
+      <translation>&amp;Etiket</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4029"/>
       <source>Remove tag from selected notes</source>
-      <translation>Ukloni oznaku iz odabranih bilježki</translation>
+      <translation>Seçilmiş notlardan etiketi kaldır</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4030"/>
       <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
       <translation>
-        <numerusform>Ukloniti oznaku &lt;strong&gt;%1&lt;/strong&gt; %n s izabrane bilježke?</numerusform>
-        <numerusform>Ukloniti oznake &lt;strong&gt;%1&lt;/strong&gt; %n s izabranih bilježki?</numerusform>
-        <numerusform>Ukloniti oznake &lt;strong&gt;%1&lt;/strong&gt; %n s izabranih bilježki?</numerusform>
+        <numerusform>Seçilmiş notlardan %n &lt;strong&gt;%1&lt;/strong&gt; etiketi kaldır?</numerusform>
+        <numerusform>Seçilmiş notlardan %n &lt;strong&gt;%1&lt;/strong&gt; etiketi kaldır?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4085"/>
       <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
       <translation>
-        <numerusform>Oznaka &lt;strong&gt;%1&lt;/strong&gt; je uklonjena iz %n bilješke</numerusform>
-        <numerusform>Oznake &lt;strong&gt;%1&lt;/strong&gt; su uklonjene iz %n bilješki</numerusform>
-        <numerusform>Oznake &lt;strong&gt;%1&lt;/strong&gt; su uklonjene iz %n bilješki</numerusform>
+        <numerusform>Etiket &lt;strong&gt;%1&lt;/strong&gt; %n not(lar) dan kaldırılmış</numerusform>
+        <numerusform>Etiket &lt;strong&gt;%1&lt;/strong&gt; %n not(lar) dan kaldırılmış</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4129"/>
       <source>Current notes folder: </source>
-      <translation>Trenutna mapa bilješke: </translation>
+      <translation>Geçerli notlar dosyası: </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4131"/>
       <source>Set the notes folder. Current notes folder: </source>
-      <translation>Postavljanje mape bilješke. Mapa izabrane bilješke: </translation>
+      <translation>Notlar dosyasını ayarlayın. Varsayılan notların dosyası: </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4313"/>
       <source>Print note</source>
-      <translation>Ispis bilješke</translation>
+      <translation>Notu yazdır</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4362"/>
       <source>Letter</source>
-      <translation>Pismo</translation>
+      <translation>Mektup</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4388"/>
       <source>Portrait</source>
-      <translation>Vertikalno</translation>
+      <translation>Portre</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4388"/>
       <source>Landscape</source>
-      <translation>Horizontalno</translation>
+      <translation>Manzara</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4393"/>
       <source>Orientation</source>
-      <translation>Orijentacija</translation>
+      <translation>Oryentasyon</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4393"/>
       <source>Orientation:</source>
-      <translation>Orijentacija:</translation>
+      <translation>Oryentasyon:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4413"/>
       <source>Export current note as PDF</source>
-      <translation>Eksportiraj izabranu bilješku kao PDF</translation>
+      <translation>Varsayılan notu PDF olarak ihraç et</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4501"/>
       <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
-      <translation>Niste odabrali ni jednu listu zadataka.&lt;br /&gt;Molimo provjeri konfiguraciju &lt;strong&gt;Zadataka&lt;/strong&gt; u postavkama!</translation>
+      <translation>Herhangi bir yapılacak işler listesi seçmediniz. Lütfen &lt;br /&gt; &lt;strong&gt; yapılacak işler &lt;/strong&gt; yapılandırma ayarlarını gözden geçirin!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5178"/>
       <source>Open QOwnNotes</source>
-      <translation>Otvori QOwnNotes</translation>
+      <translation>QOwnNotes'ı açın</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4930"/>
@@ -1692,533 +1683,527 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="8212"/>
       <location filename="../mainwindow.cpp" line="8533"/>
       <source>New note</source>
-      <translation>Nova bilješka</translation>
+      <translation>Yeni not</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5203"/>
       <source>Recent notes</source>
-      <translation>Nedavne bilješke</translation>
+      <translation>Son notlar</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5233"/>
       <source>Show todo lists</source>
-      <translation>Prikaži listu zadataka</translation>
+      <translation>Yapılacak işler listesini göster</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5244"/>
       <source>Recent tasks</source>
-      <translation>Nedavni zadatci</translation>
+      <translation>Son görevler</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5276"/>
       <source>Quit</source>
-      <translation>Završi</translation>
+      <translation>Çıkış</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6439"/>
       <source>show notes from all note subfolders (%1)</source>
-      <translation>pokaži bilješke iz svih podmapa bilješki (%1)</translation>
+      <translation>tüm not altdosyalarındaki (%1) notları göster</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6457"/>
       <source>show notes in note root folder (%1)</source>
-      <translation>pokaži bilješke iz korijenske mape (%1)</translation>
+      <translation>kaynak dosyadaki (%1) notları göster</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="316"/>
       <location filename="../mainwindow.cpp" line="579"/>
       <location filename="../mainwindow.cpp" line="6466"/>
       <source>Note folder</source>
-      <translation>Mapa bilješki</translation>
+      <translation>Not dosyası</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7553"/>
       <source>Copy to note folder</source>
-      <translation>Kopiraj u mapu bilješke</translation>
+      <translation>Not dosyasına kopyala</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7554"/>
       <source>Move to note folder</source>
-      <translation>Premjesti u mapu bilješke</translation>
+      <translation>Not dosyasına taşı</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7555"/>
       <source>Copy to this subfolder</source>
-      <translation>Kopiraj u ovu podmapu</translation>
+      <translation>Şu altdosyaya kopyala</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7556"/>
       <source>Move to this subfolder</source>
-      <translation>Premjesti u ovu podmapu</translation>
+      <translation>Şu altdosyaya taşı</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7607"/>
       <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
-        <numerusform>Premjestiti %n odabranu bilješku u &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Premjestiti %n odabranih bilješki u &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Premjestiti %n odabranih bilješki u &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Seçilmiş %n not(lar) not altdosyasına taşınsın mı &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Seçilmiş %n not(lar) not altdosyasına taşınsın mı &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4227"/>
       <source>Cancel</source>
-      <translation>Odustani</translation>
+      <translation>İptal et</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7670"/>
       <source>%n note(s) were moved to note subfolder "%2"</source>
       <translation>
-        <numerusform>%n bilješka preseljena u podmapu "%2"</numerusform>
-        <numerusform>%n bilješki preseljeno u podmapu "%2"</numerusform>
-        <numerusform>%n bilješki preseljeno u podmapu "%2"</numerusform>
+        <numerusform>%n not(lar) not altdosyasına taşındı %2</numerusform>
+        <numerusform>%n not(lar) not altdosyasına taşındı %2</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7691"/>
       <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
-        <numerusform>Kopiraj %n odabranu bilješku u podmapu &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Kopiraj %n odabrane bilješke u podmapu &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Kopiraj %n odabrane bilješke u podmapu &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Seçilmiş %n not(lar) not altdosyasına kopyalansın mı &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Seçilmiş %n not(lar) not altdosyasına kopyalansın mı &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7742"/>
       <source>%n note(s) were copied to note subfolder "%2"</source>
       <translation>
-        <numerusform>%n bilješka kopirana u podmapu "%2"</numerusform>
-        <numerusform>%n bilješke kopirane u podmapu "%2"</numerusform>
-        <numerusform>%n bilješke kopirane u podmapu "%2"</numerusform>
+        <numerusform>%n not(lar) not altdosyasına kopyalandı %2</numerusform>
+        <numerusform>%n not(lar) not altdosyasına kopyalandı %2</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8259"/>
       <source>Move notes to subfolder...</source>
-      <translation>Premjesti bilješke u podmapu...</translation>
+      <translation>Notları altdosyaya taşı...</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8263"/>
       <source>Copy notes to subfolder...</source>
-      <translation>Kopiraj bilješke u podmapu...</translation>
+      <translation>Notları altdosyaya kopyala...</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8306"/>
       <source>Open note in external editor</source>
-      <translation>Otvori bilješku u vanjskom uredniku</translation>
+      <translation>Notu harici düzenleyicide aç</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8310"/>
       <source>Show note in file manager</source>
-      <translation>Prikaži bilješku u upravljaču datoteka</translation>
+      <translation>Notu dosya yöneticisinde göster</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8372"/>
       <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
-      <translation>Ako želite preimenovati bilješku morate aktivirati opciju koja omogućuje da se ime datoteke i naslov razlikuju.</translation>
+      <translation>Notunuzu yeniden adlandırmak için dosya adını başlıktan farklı olacak şekilde ayarlamanız gerekir.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8534"/>
       <source>New subfolder</source>
-      <translation>Nova podmapa</translation>
+      <translation>Yeni altdosya</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8538"/>
       <source>Show folder in file manager</source>
-      <translation>Prikaži mapu u upravljaču datoteka</translation>
+      <translation>Dosyayı dosya yöneticisinde göster</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8574"/>
       <source>Create a new folder</source>
-      <translation>Stvori novu mapu</translation>
+      <translation>Yeni bir dosya oluştur</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8574"/>
       <source>Folder name:</source>
-      <translation>Naziv mape:</translation>
+      <translation>Dosya adı:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6400"/>
       <source>show all untagged notes (%1)</source>
-      <translation>pokaži sve nestrukturirane bilješke (%1)</translation>
+      <translation>tüm etiketsiz notları göster (%1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6403"/>
       <source>Untagged notes</source>
-      <translation>Nestrukturirane bilješke</translation>
+      <translation>Etiketsiz notlar</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8044"/>
       <source>Export current note as HTML file</source>
-      <translation>Eksportiraj izabranu bilješku kao HTML datoteku</translation>
+      <translation>Geçerli notu HTML dosyası olarak dışa aktar</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4371"/>
       <source>Page size</source>
-      <translation>Veličina stranice</translation>
+      <translation>Sayfa boyutu</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="914"/>
       <source>quit toolbar</source>
-      <translation>zatvori alatnu traku</translation>
+      <translation>araç çubuğundan çık</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4371"/>
       <source>Page size:</source>
-      <translation>Veličina stranice:</translation>
+      <translation>Sayfa boyutu:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4473"/>
       <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
-      <translation>QOwnNotes anonimno bilježi korištenje podataka, to nam pomaže odlučiti koje dijelove QOwnNotes moramo poboljšati i također naći i popraviti bugove. To možete onemogućiti u postavkama.</translation>
+      <translation>QOwnNotes anonim kullanım verilerini izleyecek, bu QOwnNotes'un daha sonra hangi bölümlerinin geliştirileceğine karar vermeye ve bulmaya yardımcı oluyor ve bugları düzeltiyor. Bu hareketi ayarlardan devre dışı bırakabilirsiniz.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4477"/>
       <source>&amp;Ok</source>
-      <translation>&amp;U redu</translation>
+      <translation>&amp;Tamam</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8229"/>
       <source>&amp;Move notes to...</source>
-      <translation>&amp;Premjesti bilješke u...</translation>
+      <translation>&amp;Notları şuraya taşı...</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8230"/>
       <source>&amp;Copy notes to...</source>
-      <translation>&amp;Kopiraj bilješke u...</translation>
+      <translation>&amp;Notları şuraya kopyala...</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8271"/>
       <source>&amp;Tag selected notes with...</source>
-      <translation>&amp;Označi izabranu bilješku sa...</translation>
+      <translation>&amp;Seçilen notları şununla etiketle...</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8293"/>
       <source>&amp;Remove tag from selected notes...</source>
-      <translation>&amp;Makni oznake iz odabrane bilješke...</translation>
+      <translation>&amp;Seçili notlardan etiketi kaldır...</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8221"/>
       <source>&amp;Remove notes</source>
-      <translation>&amp;Izbriši bilješke</translation>
+      <translation>&amp;Notları kaldır</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5341"/>
       <source>&amp;Link selected text</source>
-      <translation>&amp;Poveži odabrani tekst</translation>
+      <translation>&amp;Seçili metni linkle</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="835"/>
       <source>Your tasks are being loaded from your server</source>
-      <translation>Zadaci se preuzimaju s poslužitelja</translation>
+      <translation>Görevleriniz sunucunuzdan yükleniyor</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2305"/>
       <source>Current note was modified externally</source>
-      <translation>Izabrana bilješka je promijenjena izvana</translation>
+      <translation>Geçerli not harici olarak değiştirildi</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2387"/>
       <location filename="../mainwindow.cpp" line="4870"/>
       <source>Stored current note to disk</source>
-      <translation>Izabrana bilješka spremljena na disk</translation>
+      <translation>Diske saklanan geçerli not</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2406"/>
       <source>Note was modified externally: %1</source>
-      <translation>Bilješka je promijenjena izvana: %1</translation>
+      <translation>Not harici olarak değiştirildi: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2427"/>
       <source>Notes directory was modified externally</source>
-      <translation>Mapa sa bilješkama je promijenjena eksterno</translation>
+      <translation>Notlar dizini harici olarak değiştirildi</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="2493"/>
       <source>Stored %n note(s) to disk</source>
       <translation>
-        <numerusform>Bilješka %n pohranjena na disk</numerusform>
-        <numerusform>Bilješke %n pohranjene na disk</numerusform>
-        <numerusform>Bilješke %n pohranjene na disk</numerusform>
+        <numerusform>Diskte depolanan %n not(lar)</numerusform>
+        <numerusform>Diskte depolanan %n not(lar)</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5349"/>
       <source>Paste HTML or media</source>
-      <translation>Ubaci HTML ili medij</translation>
+      <translation>HTML veya medya yapıştır</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6370"/>
       <source>show all notes (%1)</source>
-      <translation>prikaži sve bilješke (%1)</translation>
+      <translation>tüm notları göster (%1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6373"/>
       <location filename="../mainwindow.cpp" line="6443"/>
       <source>All notes</source>
-      <translation>Sve bilješke</translation>
+      <translation>Tüm notlar</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7173"/>
       <source>&amp;Add tag</source>
-      <translation>&amp;Dodaj oznaku</translation>
+      <translation>&amp;Etiket ekle</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7187"/>
       <source>&amp;Move tags to...</source>
-      <translation>&amp;Premjesti oznake u...</translation>
+      <translation>&amp;Etiketleri şuraya taşı...</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7222"/>
       <source>Tag could not be created!</source>
-      <translation>Oznaka ne može biti stvorena!</translation>
+      <translation>Etiket oluşturulamadı!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7407"/>
       <source>Move to this tag</source>
-      <translation>Premjesti u ovu oznaku</translation>
+      <translation>Bu etikete taşı</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7457"/>
       <source>Tag this</source>
-      <translation>Označi</translation>
+      <translation>Bunu etiketle</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7487"/>
       <source>Cannot move tag '%1' to this tag</source>
-      <translation>Ne možete premjestiti oznaku '%1' u ovu oznaku</translation>
+      <translation>Etiket '%1' bu etikete taşınamıyor</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7498"/>
       <source>Moved tag '%1' to new tag</source>
-      <translation>Oznaka '%1' pomaknuta u novu oznaku</translation>
+      <translation>Yeni etikete taşınan etiket '%1'</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6628"/>
       <source>show all notes tagged with '%1' (%2)</source>
-      <translation>pokaži sve bilješke označene sa '%1' (%2)</translation>
+      <translation>'%1' ile etiketlenen tüm notları göster (%2)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7044"/>
       <source>remove tag '%1' from note</source>
-      <translation>ukloni oznaku '%1' iz bilješke</translation>
+      <translation>'%1' etiketini nottan kaldır</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7184"/>
       <source>&amp;Remove tags</source>
-      <translation>&amp;Ukloni oznake</translation>
+      <translation>&amp;Etiketleri kaldır</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4500"/>
       <source>No selected todo lists!</source>
-      <translation>Nema odabranih listi zadataka!</translation>
+      <translation>Seçilen yapılacaklar listesi yok!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="550"/>
       <source>Subfolders</source>
-      <translation>Podmape</translation>
+      <translation>Alt klasörler</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="561"/>
       <source>Tags</source>
-      <translation>Oznake</translation>
+      <translation>Etiketler</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="570"/>
       <source>Note search</source>
-      <translation>Pretraživanje bilješki</translation>
+      <translation>Not arama</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="588"/>
       <source>Note list</source>
-      <translation>Popis bilješki</translation>
+      <translation>Not listesi</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="611"/>
       <source>Note edit</source>
-      <translation>Uredi biješku</translation>
+      <translation>Not düzenleme</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="620"/>
       <source>Note tags</source>
-      <translation>Oznaka bilježaka</translation>
+      <translation>Not etiketleri</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="629"/>
       <source>Note preview</source>
-      <translation>Pretpregled bilješke</translation>
+      <translation>Not ön izleme</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="636"/>
       <source>Log</source>
-      <translation>Protokol</translation>
+      <translation>Günlük</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="643"/>
       <source>Scripting</source>
-      <translation>Skriptiranje</translation>
+      <translation>Scripting</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="881"/>
       <source>formatting toolbar</source>
-      <translation>oblikovanje alatne trake</translation>
+      <translation>araç çubuğu biçimleniyor</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="890"/>
       <source>inserting toolbar</source>
-      <translation>umetanje alatne trake</translation>
+      <translation>araç çubuğu ekleniyor</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="897"/>
       <source>encryption toolbar</source>
-      <translation>alatna traka šifriranja</translation>
+      <translation>araç çubuğu şifreleme</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="904"/>
       <source>window toolbar</source>
-      <translation>alatna traka prozora</translation>
+      <translation>pencere araç çubuğu</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="909"/>
       <source>custom action toolbar</source>
-      <translation>alatna traka prilagođenih akcija</translation>
+      <translation>özel göre araç çubuğu</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="929"/>
       <source>Workspace selector</source>
-      <translation>Odabir radnog prostora</translation>
+      <translation>Çalışma alanı seçici</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1061"/>
       <source>Show %1 panel</source>
-      <translation>Prikaz %1 ploče</translation>
+      <translation>%1 panel göster</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1104"/>
       <source>Show %1</source>
-      <translation>Pokaži %1</translation>
+      <translation>%1 göster</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1872"/>
       <source>show notes in folder '%1' (%2)</source>
-      <translation>prikaži bilješke u mapi '%1' (%2)</translation>
+      <translation>'%1' klasöründeki notları göster (%2)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1912"/>
       <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
-      <translation>&lt;strong&gt;%1&lt;/strong&gt; &lt;br /&gt;zadnja izmjena: %2</translation>
+      <translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt; son düzenlenme: %2</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1917"/>
       <source>&lt;br /&gt;path: %1</source>
-      <translation>&lt;br /&gt; put: %1</translation>
+      <translation>&lt;br /&gt;yol: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2079"/>
       <source>Toolbar could not be loaded without name</source>
-      <translation>Alatna traka se ne može učitati bez imena</translation>
+      <translation>Araç çubuğu isimsiz olarak yüklenemedi</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2331"/>
       <source>Overwriting external changes of: %1</source>
-      <translation>Prepisivanje vanjskih promjena: %1</translation>
+      <translation>Dış değişikliklerinin üzerine yazılıyor: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2353"/>
       <source>Loading external changes from: %1</source>
-      <translation>Učitavanje vanjskih promjena iz: %1</translation>
+      <translation>Dış değişikliklerinden yükleniyor: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2388"/>
       <location filename="../mainwindow.cpp" line="4871"/>
       <source>Current note could not be stored to disk</source>
-      <translation>Trenutna bilješka nije mogla biti spremljena na disk</translation>
+      <translation>Geçerli not diske depolanamadı</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2546"/>
       <source>Line numbers</source>
-      <translation>Brojevi redaka</translation>
+      <translation>Satır numaraları</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2556"/>
       <source>Click here to see what has changed and to be able to update to the latest version</source>
-      <translation>Kliknite ovdje da biste vidjeli promjene te da ažurirate na najnoviju inačicu</translation>
+      <translation>Nelerin değiştiğini görmek ve en yeni sürümü güncelleyebilmek için buraya tıkla</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4013"/>
       <source>%n note(s) were tagged with "%2"</source>
       <translation>
-        <numerusform>%n bilješka označena sa "%2"</numerusform>
-        <numerusform>%n bilješke označene sa "%2"</numerusform>
-        <numerusform>%n bilješke označene sa "%2"</numerusform>
+        <numerusform>%n not(lar) "%2" ile etiketlendi</numerusform>
+        <numerusform>%n not(lar) "%2" ile etiketlendi</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4930"/>
       <source>Note headline</source>
-      <translation>Naslov bilješke</translation>
+      <translation>Not başlığı</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6138"/>
       <source>Downloading images finished</source>
-      <translation>Preuzimanje slika završeno</translation>
+      <translation>Görüntü indirme bitti</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6277"/>
       <source>Increased font size to %1 pt</source>
-      <translation>Veličina fonta povećana za %1 pt</translation>
+      <translation>%1 puntoya arttırılan yazı tipi boyutu</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6294"/>
       <source>Decreased font size to %1 pt</source>
-      <translation>Veličina fonta smanjena za %1 pt</translation>
+      <translation>%1 puntoya azaltılan yazı tipi boyutu</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4478"/>
       <location filename="../mainwindow.cpp" line="4504"/>
       <location filename="../mainwindow.cpp" line="8375"/>
       <source>Open &amp;settings</source>
-      <translation>Otvori &amp;postavke</translation>
+      <translation>&amp;Ayarları aç</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1406"/>
       <source>leave</source>
-      <translation>ostavi</translation>
+      <translation>ayrıl</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1409"/>
       <source>leave distraction free mode</source>
-      <translation>napusti način rada bez ometanja</translation>
+      <translation>oyalamayan moddan ayrıl</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5477"/>
       <source>Select image to insert</source>
-      <translation>Odaberi sliku za umetanje</translation>
+      <translation>Eklemek için görüntü seçin</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5609"/>
       <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
-      <translation>Unesi &lt;strong&gt;zaporku&lt;/strong&gt; za šifriranje bilješke. &lt;br /&gt;&lt;strong&gt;Zapamti&lt;/strong&gt; zaporku za čitanje sadržaja poruke.&lt;br /&gt;Šifrirana poruka može biti dešifrirana &lt;strong&gt;isključivo u QOwnNotes&lt;/strong&gt;!</translation>
+      <translation>Lütfen notu şifrelemek için &lt;strong&gt;şifrenizi&lt;/strong&gt; girin. &lt;br /&gt;Not içeriğini okumak için şifrenizi &lt;strong&gt;hatırlamanız&lt;/strong&gt; gerektiği aklınızda bulunsun&lt;br /&gt; ve bunu &lt;strong&gt;sadece&lt;/strong&gt; &lt;strong&gt;QOwnNotes&lt;/strong&gt; içinde yapabileceğiniz!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5664"/>
       <source>Decrypt note and store it as plain text</source>
-      <translation>Dešifriraj bilješku i spremi kao otvoren tekst</translation>
+      <translation>Not şifresini çöz ve sade metin olarak depola</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5669"/>
       <source>&amp;Decrypt</source>
-      <translation>&amp;Dešifriraj</translation>
+      <translation>&amp;Şifre çöz</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5694"/>
       <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
-      <translation>&lt;br /&gt;Biti ćete u mogućnosti urediti šifriranu bilješku.</translation>
+      <translation>&lt;br /&gt;Şifrelenmiş notunuzu düzenleyebileceksiniz.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5751"/>
       <source>Export current note as Markdown file</source>
-      <translation>Eksportiraj izabranu bilješku kao datoteku oznake</translation>
+      <translation>Geçerli notu Markdown dosyası olarak dışa aktar</translation>
     </message>
   </context>
   <context>
@@ -2226,7 +2211,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../widgets/navigationwidget.cpp" line="99"/>
       <source>headline %1</source>
-      <translation>naslov %1</translation>
+      <translation>başlık %1</translation>
     </message>
   </context>
   <context>
@@ -2234,7 +2219,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/notedialog.ui" line="14"/>
       <source>Note</source>
-      <translation>Bilješka</translation>
+      <translation>Not</translation>
     </message>
   </context>
   <context>
@@ -2242,42 +2227,42 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="17"/>
       <source>Note was modified externally!</source>
-      <translation>Bilješka je promijenjena izvana!</translation>
+      <translation>Not harici olarak değiştirildi!</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="41"/>
       <source>The current note was modified outside of this application!</source>
-      <translation>Izabrana bilješka je promijenjena izvan ovog programa!</translation>
+      <translation>Geçerli not bu uygulamanın dışında değiştirildi!</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="48"/>
       <source>Differences:</source>
-      <translation>Razlike:</translation>
+      <translation>Farklar:</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="76"/>
       <source>Always accept external changes in the future</source>
-      <translation>U budućnosti uvijek preuzmi vanjske promjene</translation>
+      <translation>Gelecekteki harici değişiklikleri her zaman kabul et</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="83"/>
       <source>Accept external changes?</source>
-      <translation>Prihvati vanjske promjene?</translation>
+      <translation>Harici değişiklikler kabul edilsin mi?</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="69"/>
       <source>Ignore all external modifications in the future</source>
-      <translation>U budućnosti odbaci sve vanjske promjene</translation>
+      <translation>Gelecekteki tüm harici değişiklikleri yoksay</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.cpp" line="32"/>
       <source>Yes</source>
-      <translation>Da</translation>
+      <translation>Evet</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.cpp" line="37"/>
       <source>No</source>
-      <translation>Ne</translation>
+      <translation>Hayır</translation>
     </message>
   </context>
   <context>
@@ -2285,40 +2270,39 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="14"/>
       <source>Orphaned images</source>
-      <translation>Slike bez bilješke</translation>
+      <translation>Tek kalmış görüntüler</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="80"/>
       <source>Delete selected images</source>
-      <translation>Brisanje odabranih slika</translation>
+      <translation>Seçilen görüntüleri sil</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="83"/>
       <source>Delete</source>
-      <translation>Brisanje</translation>
+      <translation>Sil</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="132"/>
       <source>Images that are not used in notes:</source>
-      <translation>Slike koje se ne koriste u bilješkama:</translation>
+      <translation>Notlarda kullanılmayan görüntüler:</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.cpp" line="62"/>
       <source>Last modified at %1</source>
-      <translation>Zadnja izmjena %1</translation>
+      <translation>%1'de son düzenleme</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.cpp" line="121"/>
       <source>Delete selected files</source>
-      <translation>Brisanje odabranih datoteka</translation>
+      <translation>Seçilen dosyaları sil</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/orphanedimagesdialog.cpp" line="122"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
       <translation>
-        <numerusform>Brisanje &lt;strong&gt;%n&lt;/strong&gt; odabrane datoteke (s)?</numerusform>
-        <numerusform>Brisanje &lt;strong&gt;%n&lt;/strong&gt; odabranih datoteka(s)?</numerusform>
-        <numerusform>Brisanje &lt;strong&gt;%n&lt;/strong&gt; odabranih datoteka(s)?</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; Seçilen dosya(lar) silinsin mi?</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; Seçilen dosya(lar) silinsin mi?</numerusform>
       </translation>
     </message>
   </context>
@@ -2327,93 +2311,93 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="183"/>
       <source>Username / password error</source>
-      <translation>Greška u korisničkom imenu / zaporki</translation>
+      <translation>Kullanıcı adı / şifre hatası</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="184"/>
       <source>Your calendar username or password is incorrect!</source>
-      <translation>Korisničko ime ili zaporka za kalendar nisu ispravni!</translation>
+      <translation>Takvim kullanıcı adı veya şifreniz yanlış!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="504"/>
       <source>API app version too low</source>
-      <translation>API verzija aplikacije preniska</translation>
+      <translation>API app versiyonu çok düşük</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="505"/>
       <source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
-      <translation>Molimo razmislite o ažuriranju vaše QOwnNotesAPI aplikacije na vašem serveru, vaša verzija aplikacije %1 je preniska i može uzrokovati probleme u QOwnNotes.</translation>
+      <translation>Lütfen sunucunuzdaki QOwnNotesAPI uygulamasını güncellemeye dikkat edin,%1 uygulama sürümü çok düşük ve QOwnNotes'da sorunlara neden olabilir.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="967"/>
       <source>ownCloud server connection error</source>
-      <translation>greška u povezivanju sa ownCloud poslužiteljom</translation>
+      <translation>ownCloud sunucusu bağlantı hatası</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="971"/>
       <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
-      <translation>greška na ownCloud poslužitelju: &lt;strong&gt;%1&lt;/strong&gt; &lt;br /&gt; molimo provjerite vašu ownCloud konfiguraciju.</translation>
+      <translation>ownCloud sunucu hatası: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt; Lütfen ownCloud yapılandırmalarınızı kontrol edin.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="987"/>
       <source>You need to setup your ownCloud server!</source>
-      <translation>ownCloud poslužitelj mora bili konfiguriran!</translation>
+      <translation>ownCloud sunucunuzu kurmanız gerek!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="993"/>
       <source>Open &amp;settings</source>
-      <translation>Otvori &amp;postavke</translation>
+      <translation>&amp;Ayarları aç</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="993"/>
       <source>&amp;Cancel</source>
-      <translation>&amp;Odustani</translation>
+      <translation>&amp;İptal</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1038"/>
       <source>Done with loading note versions</source>
-      <translation>Završeno učitavanje verzija bilješke</translation>
+      <translation>Not sürümleri yüklemesiyle tamamla</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1077"/>
       <source>No versions found</source>
-      <translation>Verzije nisu nađene</translation>
+      <translation>Bulunan sürüm yok</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1078"/>
       <source>There are no versions for this note or the note wasn't found on the server.</source>
-      <translation>Verzije ove bilješke ne postoje ili bilješka nije pronađena na poslužitelju.</translation>
+      <translation>Bu not için herhangi bir sürüm yok veya not sunucuda bulunamadı.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1099"/>
       <source>Done with loading trashed notes</source>
-      <translation>Završeno učitavanje obrisanih bilješki</translation>
+      <translation>Çöpe atılan notları yükleyerek tamamla</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1140"/>
       <source>No trashed notes</source>
-      <translation>Nema obrisanih bilješki</translation>
+      <translation>Çöpe atılan not yok</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1141"/>
       <source>No trashed notes were found on the server.</source>
-      <translation>Nema obrisanih bilješki na poslužitelju.</translation>
+      <translation>Sunucuda çöpe atılan not bulunamadı.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1164"/>
       <location filename="../services/owncloudservice.cpp" line="1190"/>
       <source>Error while loading todo lists!</source>
-      <translation>Pogreška tijekom učitavanja liste zadataka!</translation>
+      <translation>Yapılacaklar listesini yüklerken hata oluştu!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1165"/>
       <source>Your CalDAV server didn't reply anything!</source>
-      <translation type="unfinished">Your CalDAV server didn't reply anything!</translation>
+      <translation>CalDAV sunucunuz hiçbirşeye cevap vermedi!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1191"/>
       <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation type="unfinished">Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</translation>
+      <translation>CalDaV sunucunuzdan hata mesajı: &lt;strong&gt;%1&lt;/strong&gt;</translation>
     </message>
   </context>
   <context>
@@ -2421,27 +2405,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/passworddialog.ui" line="14"/>
       <source>Please enter your password</source>
-      <translation>Molim unesite vašu zaporku</translation>
+      <translation>Lütfen şifrenizi girin</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="24"/>
       <source>Enter your password:</source>
-      <translation>Unesite zaporku:</translation>
+      <translation>Şifrenizi girin:</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="34"/>
       <source>Password</source>
-      <translation>Zaporka</translation>
+      <translation>Şifre</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="44"/>
       <source>Re-enter password</source>
-      <translation>Ponovo unesite zaporku</translation>
+      <translation>Şifrenizi tekrar girin</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="54"/>
       <source>Passwords don't match!</source>
-      <translation>Zaporke se ne podudaraju!</translation>
+      <translation>Girdiğiniz şifreler uyuşmuyor!</translation>
     </message>
   </context>
   <context>
@@ -2449,62 +2433,61 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../entities/notefolder.cpp" line="448"/>
       <source>default</source>
-      <translation>standard</translation>
+      <translation>varsayılan</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="870"/>
       <source>Could not store note file: %1 - Error message: %2</source>
-      <translation>Datoteka bilješke ne može bitl pohranjena: %1 - poruka o grešci: %2</translation>
+      <translation>Not dosyası kaydedilmedi: %1 - Hata mesajı: %2</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="932"/>
       <source>Renamed note-file was removed: %1</source>
-      <translation type="unfinished">Renamed note-file was removed: %1</translation>
+      <translation>Yeniden isimlendirilen not dosyası kaldırıldı: %1</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="940"/>
       <source>Could not remove renamed note-file: %1 - Error message: %2</source>
-      <translation type="unfinished">Could not remove renamed note-file: %1 - Error message: %2</translation>
+      <translation>Yeniden isimlendirilen not dosyası kaldırılamadı: %1 - Hata mesajı: %2</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="1687"/>
       <source>Could not read image file: %1</source>
-      <translation>Ne mogu pročitati datoteku slike: %1</translation>
+      <translation>Resim dosyası okunamadı: %1</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="2178"/>
       <source>Note filename changed</source>
-      <translation>Promijenjen naziv datoteke bilješke</translation>
+      <translation>Not dosya adı değiştirildi</translation>
     </message>
     <message numerus="yes">
       <location filename="../entities/note.cpp" line="2179"/>
       <source>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
-      <translation type="unfinished">
-        <numerusform>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
-        <numerusform>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
-        <numerusform>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
+      <translation>
+        <numerusform>Not adı değişikliği algılandı. &lt;strong&gt;% n &lt;/ strong&gt; not dosyalarında ki tüm &lt;strong&gt;% 1 &lt;/ strong&gt; bağlantılarının yerini &lt;strong&gt;% 2 &lt;/ strong&gt; ile değiştirmek ister misiniz?</numerusform>
+        <numerusform>Not adı değişikliği algılandı. &lt;strong&gt;% n &lt;/ strong&gt; not dosyalarında ki tüm &lt;strong&gt;% 1 &lt;/ strong&gt; bağlantılarının yerini &lt;strong&gt;% 2 &lt;/ strong&gt; ile değiştirmek ister misiniz?</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../helpers/toolbarcontainer.cpp" line="37"/>
       <location filename="../helpers/toolbarcontainer.cpp" line="112"/>
       <source>Unknown action %1</source>
-      <translation>Nepoznata akcija %1</translation>
+      <translation>Bilinmeyen eylem %1</translation>
     </message>
     <message>
       <location filename="../helpers/toolbarcontainer.cpp" line="94"/>
       <source>Workspace selector</source>
-      <translation>Odabir radnog prostora</translation>
+      <translation>Çalışma alanı seçici</translation>
     </message>
     <message>
       <location filename="../utils/gui.cpp" line="171"/>
       <source>Don't ask again!</source>
-      <translation type="unfinished">Don't ask again!</translation>
+      <translation>Tekrar sorma!</translation>
     </message>
     <message>
       <location filename="../utils/gui.cpp" line="171"/>
       <source>Don't show again!</source>
-      <translation type="unfinished">Don't show again!</translation>
+      <translation>Tekrar gösterme!</translation>
     </message>
   </context>
   <context>
@@ -2512,77 +2495,77 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="62"/>
       <source>close search</source>
-      <translation type="unfinished">close search</translation>
+      <translation>aramayı kapat</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="52"/>
       <source>Find:</source>
-      <translation type="unfinished">Find:</translation>
+      <translation>Bul:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="32"/>
       <source>replace text</source>
-      <translation type="unfinished">replace text</translation>
+      <translation>metni değiştir</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="79"/>
       <source>find in text</source>
-      <translation type="unfinished">find in text</translation>
+      <translation>metni bul</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="86"/>
       <source>search forward</source>
-      <translation type="unfinished">search forward</translation>
+      <translation>ileri doğru arama</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="103"/>
       <source>search backward</source>
-      <translation type="unfinished">search backward</translation>
+      <translation>geriye doğru arama</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="120"/>
       <source>replace with</source>
-      <translation type="unfinished">replace with</translation>
+      <translation>ile değiştir</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="127"/>
       <source>Replace:</source>
-      <translation type="unfinished">Replace:</translation>
+      <translation>Değiştir:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="156"/>
       <source>Plain text</source>
-      <translation type="unfinished">Plain text</translation>
+      <translation>Düz metin</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="161"/>
       <source>Whole words</source>
-      <translation type="unfinished">Whole words</translation>
+      <translation>Bütün kelimeler</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="166"/>
       <source>Regular expression</source>
-      <translation type="unfinished">Regular expression</translation>
+      <translation>Düzenli anlatım</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="187"/>
       <source>Replace</source>
-      <translation type="unfinished">Replace</translation>
+      <translation>Değiştir</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="197"/>
       <source>Replace All</source>
-      <translation type="unfinished">Replace All</translation>
+      <translation>Tümünü Değiştir</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="210"/>
       <source>Mode:</source>
-      <translation type="unfinished">Mode:</translation>
+      <translation>Mod:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="220"/>
       <source>Match case sensitive</source>
-      <translation type="unfinished">Match case sensitive</translation>
+      <translation>Büyük/küçük harfe hassas</translation>
     </message>
   </context>
   <context>
@@ -2590,77 +2573,77 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="32"/>
       <source>replace text</source>
-      <translation>zamjeni tekst</translation>
+      <translation>metni değiştir</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="52"/>
       <source>Find:</source>
-      <translation>Pronađi:</translation>
+      <translation>Ara:</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="62"/>
       <source>close search</source>
-      <translation>zatvori pretragu</translation>
+      <translation>aramayı kapat</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="79"/>
       <source>find in text</source>
-      <translation>pronađi u tekstu</translation>
+      <translation>metinde ara</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="86"/>
       <source>search forward</source>
-      <translation>pretraži prema naprijed</translation>
+      <translation>ileri doğru arama</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="103"/>
       <source>search backward</source>
-      <translation>pretraži prema natrag</translation>
+      <translation>geriye doğru arama</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="120"/>
       <source>replace with</source>
-      <translation>zamijeni s</translation>
+      <translation>ile değiştir</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="127"/>
       <source>Replace:</source>
-      <translation>Zamijeni:</translation>
+      <translation>Değiştir:</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="156"/>
       <source>Plain text</source>
-      <translation>Običan tekst</translation>
+      <translation>Düz metin</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="161"/>
       <source>Whole words</source>
-      <translation>Cijele riječi</translation>
+      <translation>Tüm kelimeler</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="166"/>
       <source>Regular expression</source>
-      <translation>Regularni izraz</translation>
+      <translation>Düzenli anlatım</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="187"/>
       <source>Replace</source>
-      <translation>Zamijeni</translation>
+      <translation>Değiştir</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="197"/>
       <source>Replace All</source>
-      <translation>Zamijeni sve</translation>
+      <translation>Tümünü değiştir</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="210"/>
       <source>Mode:</source>
-      <translation>Način rada:</translation>
+      <translation>Mod:</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="220"/>
       <source>Match case sensitive</source>
-      <translation>Podudaranje velikih i malih slova</translation>
+      <translation>Büyük/küçük harfe hassas</translation>
     </message>
   </context>
   <context>
@@ -2668,29 +2651,30 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/databaseservice.cpp" line="77"/>
       <source>Cannot open memory database</source>
-      <translation>Ne mogu otvoriti memorijsku bazu podataka</translation>
+      <translation>Bellek veritabanı açılmıyor</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="78"/>
       <source>Unable to establish a memory database connection.</source>
-      <translation>Ne mogu povezati memorijsku bazu podataka.</translation>
+      <translation>Bellek veritabanı bağlantısı kurulamadı.</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="94"/>
       <source>Cannot open disk database</source>
-      <translation>Ne mogu otvoriti bazu podataka na disku</translation>
+      <translation>Disk veritabanı açılamıyor</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="95"/>
       <location filename="../services/databaseservice.cpp" line="117"/>
       <source>Unable to establish a database connection with file '%1'.
 Are the folder and the file writeable?</source>
-      <translation>Ne mogu povezati bazu podataka s datotekom '%1'. Može li se snimati u mapu i datoteku?</translation>
+      <translation>Dosya '%1' ile bellek veritabanı bağlantısı kurulamadı.
+Klasör ve dosya yazılabilir mi?</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="116"/>
       <source>Cannot open note folder database</source>
-      <translation>Ne mogu otvoriti bazu podataka sa mapom bilješki</translation>
+      <translation>Not klasör veritabanı açılamıyor</translation>
     </message>
   </context>
   <context>
@@ -2698,162 +2682,162 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="14"/>
       <source>Script repository</source>
-      <translation>Repozitorij skripte</translation>
+      <translation>Script deposu</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="55"/>
       <source>To search for a script please enter your query text and press &lt;i&gt;Return&lt;/i&gt;.</source>
-      <translation type="unfinished">To search for a script please enter your query text and press &lt;i&gt;Return&lt;/i&gt;.</translation>
+      <translation>Bir script aramak için lütfen sorgu metinini girin ve &lt;i&gt;Dönüş&lt;/i&gt;e basın.</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="127"/>
       <source>Currently installed version:</source>
-      <translation>Trenutačno instalirana verzija:</translation>
+      <translation>Geçerli yüklü sürüm:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="278"/>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="335"/>
       <source>Installs the script</source>
-      <translation>Instalira skriptu</translation>
+      <translation>Scripti yükle</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="281"/>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="334"/>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="395"/>
       <source>Install</source>
-      <translation>Instaliraj</translation>
+      <translation>Yükle</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="228"/>
       <source>Version:</source>
-      <translation>Verzija:</translation>
+      <translation>Sürüm:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="202"/>
       <source>Repository:</source>
-      <translation>Repozitorij:</translation>
+      <translation>Depo:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="137"/>
       <source>Minimum app version:</source>
-      <translation>Minimalna verzija aplikacije:</translation>
+      <translation>Minimum app sürümü:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="413"/>
       <source>Name</source>
-      <translation>Ime</translation>
+      <translation>İsim</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="428"/>
       <source>Enter your query text</source>
-      <translation type="unfinished">Enter your query text</translation>
+      <translation>Sorgu metninizi girin</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="431"/>
       <source>Find script</source>
-      <translation>Pronalazi skriptu</translation>
+      <translation>Script bul</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="39"/>
       <source>Script updates</source>
-      <translation type="unfinished">Script updates</translation>
+      <translation>Script güncellemeleri</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="40"/>
       <source>All scripts are up-to-date.</source>
-      <translation type="unfinished">All scripts are up-to-date.</translation>
+      <translation>Tüm scriptler güncel.</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="305"/>
       <source>Authors</source>
-      <translation>Autori</translation>
+      <translation>Yazarlar</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="305"/>
       <source>Author</source>
-      <translation>Autor</translation>
+      <translation>Yazar</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="308"/>
       <source>Supported platforms</source>
-      <translation>Podržane platforme</translation>
+      <translation>Desteklenen platformlar</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="309"/>
       <source>Supported platform</source>
-      <translation>Podržana platforma</translation>
+      <translation>Desteklenen platform</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="312"/>
       <source>Open repository</source>
-      <translation>Otvori repozitorij</translation>
+      <translation>Açık depo</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="323"/>
       <source>Update</source>
-      <translation>Ažuriranje</translation>
+      <translation>Güncelle</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="324"/>
       <source>Updates the script</source>
-      <translation>Obnavlja skriptu</translation>
+      <translation>Scripti günceller</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="326"/>
       <source>Reinstall</source>
-      <translation>Ponovo instaliraj</translation>
+      <translation>Tekrar yükle</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="327"/>
       <source>Reinstalls the script</source>
-      <translation>Ponovno instalira skriptu</translation>
+      <translation>Scripti tekrar yükler</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="392"/>
       <source>Platform not supported!</source>
-      <translation>Platforma nije podržana!</translation>
+      <translation>Platform desteklenmiyor!</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="393"/>
       <source>Your platform is not supported by this script!
 Do you want to install it anyway?</source>
-      <translation>Vaša platforma ne podržava ovu skriptu!
-Želite li je ipak instalirati?</translation>
+      <translation>Platformunuz bu script tarafından desteklenmiyor!
+Yine de yüklemek istiyor musunuz?</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="395"/>
       <source>Cancel</source>
-      <translation>Odustani</translation>
+      <translation>İptal</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="403"/>
       <source>Update app</source>
-      <translation>Ažuriraj aplikaciju</translation>
+      <translation>Uygulama güncelle</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="404"/>
       <source>Please don't forget to update your installation of QOwnNotes to make this script work!</source>
-      <translation>Molimo ne zaboravite ažurirati vašu verziju QQownNotes kako bi ova skripta funkcionirala!</translation>
+      <translation>Bu scriptin çalışması için lütfen QOwnNotes yüklemenizi güncellemeyi unutmayın!</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="471"/>
       <source>Install successful</source>
-      <translation>Instalacija uspješna</translation>
+      <translation>Başarılı yükle</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="472"/>
       <source>The script was successfully installed!</source>
-      <translation>Skripta je uspješno instalirana!</translation>
+      <translation>Script başarıyla yüklendi!</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="479"/>
       <source>Download failed</source>
-      <translation>Preuzimanje nije uspjelo</translation>
+      <translation>İndirme başarısız oldu</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="480"/>
       <source>The script could not be downloaded!</source>
-      <translation>Nije moguće preuzeti skriptu!</translation>
+      <translation>Komut dosyası karşıdan yüklenemedi!</translation>
     </message>
   </context>
   <context>
@@ -2861,12 +2845,12 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../widgets/scriptsettingwidget.ui" line="86"/>
       <source>The setting name</source>
-      <translation>Naziv postavke</translation>
+      <translation>Ayar adı</translation>
     </message>
     <message>
       <location filename="../widgets/scriptsettingwidget.cpp" line="158"/>
       <source>Please select a file</source>
-      <translation>Odaberite datoteku</translation>
+      <translation>Lütfen bir dosya seçin</translation>
     </message>
   </context>
   <context>
@@ -2874,7 +2858,7 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../services/scriptingservice.cpp" line="243"/>
       <source>file doesn't exist</source>
-      <translation>datoteka ne postoji</translation>
+      <translation>dosya yok</translation>
     </message>
   </context>
   <context>
@@ -2882,87 +2866,87 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="26"/>
       <source>Settings</source>
-      <translation>Postavke</translation>
+      <translation>Ayarlar</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="120"/>
       <source>Note folders</source>
-      <translation>Mape s bilješkama</translation>
+      <translation>Not dosyaları</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="383"/>
       <source>Your note folders</source>
-      <translation>Vaše mape s bilješkama</translation>
+      <translation>Sizin not dosyalarınız</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="450"/>
       <source>&amp;Add folder</source>
-      <translation>&amp;Dodavanje mape</translation>
+      <translation>&amp;Dosya ekle</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="474"/>
       <source>&amp;Remove folder</source>
-      <translation>&amp;Brisanje mape</translation>
+      <translation>&amp;Dosya kaldır</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="688"/>
       <source>This name will be viewed in all the menus.</source>
-      <translation>Ovaj naziv će biti prikazan u svim izbornicima.</translation>
+      <translation>Bu ad tüm menülerde görüntülenecek.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="530"/>
       <source>Set the ownCloud path where the note folder path will be synced to on your ownCloud server.</source>
-      <translation>Podesi ownCloud put s kojim će put mape bilješki biti sinkroniziran na poslužitelju ownCloud.</translation>
+      <translation>OwnCloud yolunu not dosyası yolunu sizin ownCloud sunucunuza senkronize edecek şekilde ayarlayın.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="704"/>
       <source>Use as active note folder</source>
-      <translation>Koristi kao aktivna mapu bilješke</translation>
+      <translation>Etkin not dosyası olarak kullan</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="807"/>
       <source>Your ownCloud server</source>
-      <translation>Vaš ownCloud poslužitelj</translation>
+      <translation>Sizin ownCloud sunucunuz</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="931"/>
       <source>ownCloud server url:</source>
-      <translation>url ownCloud poslužitelja:</translation>
+      <translation>ownCloud sunucu url'i:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="953"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Unesite URL ownCloud poslužitelja, na primjer: &lt;span style="font-style:italic;"&gt; https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lütfen ownCloud sunucunuzun url'ını giriniz, örneğin: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="991"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Unesite korisničko ime na ownCloud poslužitelju.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Lütfen ownCloud sunucunuza kullanıcı adı giriniz. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1026"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Unesite zaporku za svoje korisničko ime. &lt;br/&gt;Zaporka će biti kodirana i pohranjena s drugim postavkama, to nije vrlo sigurno.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Lütfen kullanıcı adınıza şifre giriniz. &lt;br/&gt; Mevcur şifreniz diğer ayarlarla birlikte şifrelenmiş halde depolanacaktır, ancak bu çok ta güvenli değildir. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1104"/>
       <source>connection to web server</source>
-      <translation>veza s web-poslužiteljom</translation>
+      <translation>web sunucusuna bağlanalım</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1121"/>
       <source>ownCloud server detected</source>
-      <translation>ownCloud poslužitelj pronađen</translation>
+      <translation>ownCloud sunucusu tespit edildi</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1155"/>
       <source>connection to QOwnNotesAPI</source>
-      <translation>veza s QOwnNotesAPI</translation>
+      <translation>QOwnNotesAPI'ya bağlantı</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1138"/>
       <source>username and password correct</source>
-      <translation>korisničko ime i zaporka ispravni</translation>
+      <translation>kullanıcı adı ve şifre doğru</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1094"/>
@@ -2973,658 +2957,657 @@ Do you want to install it anyway?</source>
       <location filename="../dialogs/settingsdialog.ui" line="1179"/>
       <location filename="../dialogs/settingsdialog.ui" line="1196"/>
       <source>unknown</source>
-      <translation>nepoznato</translation>
+      <translation>bilinmeyen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1054"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Kliknite ovdje za provjeru veze s ownCloud poslužiteljem.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Kendi ownCloud sunucunuza bağlantıyı test etmek için buraya tıklayın.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1172"/>
       <source>versions app enabled on server</source>
-      <translation>aplikacija verzioniranja aktivirana na poslužitelju</translation>
+      <translation>sunucuda sürümler uygulaması mevcuttur</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1189"/>
       <source>trash app enabled on server</source>
-      <translation>aplikacija za brisanje na poslužitelju aktivirana</translation>
+      <translation>sunucuda çöp uygulaması mevcuttur</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1206"/>
       <source>notes path found on server</source>
-      <translation>pronađena staza do bilješki na poslužitelju</translation>
+      <translation>sunucuda not yolu bulundu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="866"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Otvara stranicu &lt;span style="font-weight:600;"&gt;konfiguracija aplikacija&lt;/span&gt; na vašem ownCloud poslužitelju u pregledniku da instalirate ili ažurirate QOwnNotesAPI te omogućite ključne aplikacije &lt;span style="font-weight:600;"&gt; verzioniranje&lt;/span&gt; i &lt;span style="font-weight:600;"&gt;izbrisane datoteke&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; ownCloud sunucunuzu açar&lt;span style=" font-weight:600;"&gt; Webtarayıcınızdaki uygulama yapılandırma &lt;/span&gt; sayfası QOwnNotesAPI'ı yükler ya da güncelleştirir ve çekirdek uygulamayı aktıfleştirir &lt;span style=" font-weight:600;"&gt; Sürümler &lt;/span&gt; ve &lt;span style=" font-weight:600;"&gt; Silinen dosyalar&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="670"/>
       <source>path</source>
-      <translation>put</translation>
+      <translation>yol</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="506"/>
       <source>Click here to select your local note path</source>
-      <translation>Klikni ovdje za odabir lokalnog puta bilješki</translation>
+      <translation>Yerel Not yolunuzu seçmek için buraya tıklayın</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="583"/>
       <source>Click here to select your remote note path on your ownCloud server</source>
-      <translation>Klikni ovdje za odabir puta bilješki na ownCloud poslužitelju</translation>
+      <translation>Uzaktaki not yolunuzu ownCloud sunucunuzdan seçmek için buraya tıklayın</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="636"/>
       <source>Click here to use the selected folder from your server as note folder</source>
-      <translation>Klikni ovdje za korištenje odabrane mape s vašeg poslužitelja kao mape bilješki</translation>
+      <translation>Seçilmiş dosyayı sunucunuzdan not dosyası olarak kullanmak için buraya tıklayın</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="821"/>
       <source>Please install the latest version of &lt;a href="https://apps.owncloud.com/content/show.php?content=173817"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
-      <translation>Molimo instalirajte najnoviju verziju &lt;a href="https://apps.owncloud.com/content/show.php?content=173817"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (barem verzija
-QOWNNOTESAPI_MIN_VERSION) na Vašem ownCloud serveru ako želite da QOwnNotes bude u mogućnosti pristupiti note verzijama i uništenim bilješkama.</translation>
+      <translation>Lütfen QOwnCloudNotes'un ownCloud sunucunuzdaki not sürümlerine ve çöp norlara ulaşabilmesi için &lt;a href="https://apps.owncloud.com/content/show.php?content=173817"&gt;&lt;span style=" font-weight:600;"&gt; QOwnNotesAPI'ın &lt;/span&gt;&lt;/a&gt; son sürümünü yükleyin (en azından QOWNNOTESAPI_MIN_VERSION sürümünü).</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="834"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ayriyeten iki ownCloud çekirdek uygulamasına sahip olmalısınız&lt;span style=" font-weight:600;"&gt;Versiyon&lt;/span&gt;ve&lt;span style=" font-weight:600;"&gt;Silinen dosyalar&lt;/span&gt;sizin ownCloud sunucunuzda etkin (bu varsayılan olmalı)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="847"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or an other desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or an other desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Yinede notlarınızı senkronize etmek için&lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;&lt;span style=" font-weight:600"&gt;ownCloud senkronizasyon istemcisine ihtiyacınız olacak&lt;/span&gt;&lt;/a&gt;(ya da başka bir masaüstü senkronizasyon istemcisine)!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="913"/>
       <source>Error Message</source>
-      <translation>Poruka o pogrešci</translation>
+      <translation>Hatalı mesaj</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="144"/>
       <source>Network</source>
-      <translation>Mreža</translation>
+      <translation>Ağ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1237"/>
       <source>Proxy Settings</source>
-      <translation>Postavke proxy poslužitelja</translation>
+      <translation>Proxy ayarları</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1243"/>
       <source>No Proxy</source>
-      <translation>Nema Proxy poslužitelja</translation>
+      <translation>Proxy yok</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1253"/>
       <source>Use system proxy</source>
-      <translation>Koristi proxy sustava</translation>
+      <translation>Sistem vekilini kullan</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1260"/>
       <source>Specify proxy manually as</source>
-      <translation>Definiraj proxy ručno kao</translation>
+      <translation>Proxy'yı elden belirleyin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1285"/>
       <source>Host</source>
-      <translation>Domaćin</translation>
+      <translation>Ana sistem</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1336"/>
       <source>Proxy server requires authentication</source>
-      <translation>Proxy poslužitelj zahtijeva provjeru autentičnosti</translation>
+      <translation>Proxy sunucusu kimlik doğrulama gerektirir</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1393"/>
       <source>SSL Settings</source>
-      <translation>Postavke SSL-a</translation>
+      <translation>SSL ayarları</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1399"/>
       <source>Ignore SSL errors</source>
-      <translation>Zanemari pogreške SSL</translation>
+      <translation>SSL hatalarını yoksay</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="156"/>
       <source>Todo</source>
-      <translation>Zadaci</translation>
+      <translation>Yapılacak işler</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1618"/>
       <source>Default ownCloud calendar</source>
-      <translation>Osnovni ownCloud kalendar</translation>
+      <translation>Mevcut ownCloud takvimi</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="168"/>
       <source>Interface</source>
-      <translation>Sučelje</translation>
+      <translation>Arayüz</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1608"/>
       <source>Other CalDAV server</source>
-      <translation>Drugi CalDAV poslužitelj</translation>
+      <translation>Diğer CalDAV sunucusu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2246"/>
       <source>Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</source>
-      <translation type="unfinished">Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</translation>
+      <translation>Sadece bazı renkler uyumlu olacaktır, masaüstü temanız geri kalanı kontrol edecek. Değişiklikler için uygulamayı yeniden başlatmanız gerekiyor.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2249"/>
       <source>Optimize preview colors for dark mode desktop themes</source>
-      <translation type="unfinished">Optimize preview colors for dark mode desktop themes</translation>
+      <translation>Daha koyu modlu masaüstü temaları için önizleme renklerini optimize edin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2256"/>
       <source>This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</source>
-      <translation type="unfinished">This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</translation>
+      <translation>Bu karanlık modu aktif eder, arayüz ve simgeler modifiye edilecektir. Yapılanları değiştirmek için uygulamayı yeniden başlatmanız gerekir.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2259"/>
       <source>Enable dark mode</source>
-      <translation>Aktiviraj tamni način rada</translation>
+      <translation>Karanlık modu etkinleştir</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2285"/>
       <location filename="../dialogs/settingsdialog.ui" line="2295"/>
       <location filename="../dialogs/settingsdialog.ui" line="2326"/>
       <source>You need to restart the application to let this setting take effect</source>
-      <translation type="unfinished">You need to restart the application to let this setting take effect</translation>
+      <translation>Bu ayarların etkienleşmesi için uygulamayı yeniden başlatmanız gerekli</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2345"/>
       <source>Item sizes in the main window</source>
-      <translation type="unfinished">Item sizes in the main window</translation>
+      <translation>Ana penceredeki nesne boyutları</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4114"/>
       <source>Markdown highlighting</source>
-      <translation type="unfinished">Markdown highlighting</translation>
+      <translation>Markdown vurgulama</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4120"/>
       <source>Enable markdown highlighting</source>
-      <translation type="unfinished">Enable markdown highlighting</translation>
+      <translation>Markdown vurgulama etkin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1920"/>
       <source>Interface language</source>
-      <translation>Jezik sučelja</translation>
+      <translation>Dil arayüzü</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1940"/>
       <source>Automatic</source>
-      <translation>Automatski</translation>
+      <translation>Otomatik</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2006"/>
       <source>English</source>
-      <translation>Engleski</translation>
+      <translation>İngilizce</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="240"/>
       <source>Shortcuts</source>
-      <translation>Kratice</translation>
+      <translation>Kısayollar</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3634"/>
       <location filename="../dialogs/settingsdialog.ui" line="3803"/>
       <source>Default font:</source>
-      <translation>Zadani font:</translation>
+      <translation>Varsayılan yazı tipi:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3676"/>
       <location filename="../dialogs/settingsdialog.ui" line="3827"/>
       <source>Code font:</source>
-      <translation type="unfinished">Code font:</translation>
+      <translation>Kod yazı tipi:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2459"/>
       <source>Main window shortcuts</source>
-      <translation type="unfinished">Main window shortcuts</translation>
+      <translation>Ana ekran kısayolları</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3116"/>
       <source>Do this at your own risk!</source>
-      <translation>Učini to na vlastiti rizik!</translation>
+      <translation>Bunu yapmak kendi sorumluluğunda!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3119"/>
       <source>Ignore all external note folder changes</source>
-      <translation type="unfinished">Ignore all external note folder changes</translation>
+      <translation>Tüm harici not klasörü değişikliklerini yoksay</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3596"/>
       <source>No two spaces to do a line break are added here if checked</source>
-      <translation type="unfinished">No two spaces to do a line break are added here if checked</translation>
+      <translation>Kontrol edilseydi satır sonu yapmak için iki boşluk bırakılmazdı</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3599"/>
       <source>Use GitHub line breaks</source>
-      <translation type="unfinished">Use GitHub line breaks</translation>
+      <translation>GitHub satır sonları kullan</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1995"/>
       <source>German</source>
-      <translation>Njemački</translation>
+      <translation>Almanca</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2028"/>
       <source>French</source>
-      <translation>Francuski</translation>
+      <translation>Fransızca</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2094"/>
       <source>Polish</source>
-      <translation>Poljski</translation>
+      <translation>Lehçe</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2171"/>
       <source>Chinese</source>
-      <translation>Kineski</translation>
+      <translation>Çince</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2116"/>
       <source>Portuguese</source>
-      <translation>Portugalski</translation>
+      <translation>Portekizce</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2083"/>
       <source>Dutch</source>
-      <translation>Nizozemski</translation>
+      <translation>Flemenkçe</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2061"/>
       <source>Hungarian</source>
-      <translation>Mađarski</translation>
+      <translation>Macarca</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2017"/>
       <source>Spanish</source>
-      <translation>Španjolski</translation>
+      <translation>İspanyolca</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1926"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Eğer QOwnNotes' tercüme etmeye yardımcı olacaksanız ya da mevcut tercümeleri güncelleştirmek isterseniz okuyunuz: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt; QOwnNotes nasıl tercüme edilir?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2230"/>
       <source>Dark mode</source>
-      <translation type="unfinished">Dark mode</translation>
+      <translation>Karanlık mod</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1453"/>
       <source>Disable tracking of usage data</source>
-      <translation type="unfinished">Disable tracking of usage data</translation>
+      <translation>Kullanım verilerini izlemeyi devre dışı bırak</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1497"/>
       <source>Usage tracking is done on a private Piwik server.</source>
-      <translation type="unfinished">Usage tracking is done on a private Piwik server.</translation>
+      <translation>Kullanım izlenimi özel Piwik sunucusu ile gerçekleştirilir.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1557"/>
       <source>Disable heartbeat</source>
-      <translation type="unfinished">Disable heartbeat</translation>
+      <translation>Kalp atışını devre dışı bırak</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2127"/>
       <source>Russian</source>
-      <translation>Ruski</translation>
+      <translation>Rusça</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1406"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href="https://letsencrypt.org/"&gt;'dan ücretsiz SSL sertifikası edinmeyi düşünebilirsiniz. Haydi şifreleyelim&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2193"/>
       <source>If you change the language you have to restart the application for the changes to take action.</source>
-      <translation type="unfinished">If you change the language you have to restart the application for the changes to take action.</translation>
+      <translation>Eğer dili değiştirirseniz, değişikliğin aktif olması için uygulamayı yeniden başlatmanız gerekir.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2879"/>
       <source>You need to reload the scripting engine if you modify a script file</source>
-      <translation type="unfinished">You need to reload the scripting engine if you modify a script file</translation>
+      <translation>Eğer bir komut dosyasını modifiye ederseniz komut motorunu yeniden yüklemeniz gerekmektedir</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2882"/>
       <source>Reload scripting engine</source>
-      <translation type="unfinished">Reload scripting engine</translation>
+      <translation>Komut dosyası motoronu yeniden yükle</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2872"/>
       <source>Validate script</source>
-      <translation type="unfinished">Validate script</translation>
+      <translation>Komut dosyasını doğrula</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="264"/>
       <source>General</source>
-      <translation>Opće</translation>
+      <translation>Genel</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3044"/>
       <source>Notes</source>
-      <translation>Bilješke</translation>
+      <translation>Notlar</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3067"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Denetlendiği takdirde harici müdahelelerde bildirim alısınız, mevcut not son anda düzeltilmemiş olsa bile. Denetleninmemesi &lt;span style=" font-style:italic;"&gt; tavsiye edilir&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3136"/>
       <location filename="../dialogs/settingsdialog.ui" line="4262"/>
       <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
-      <translation type="unfinished">You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
-Just test yourself if you get sync conflicts and set a higher value if so.</translation>
+      <translation>Eşleştirme işlemi 10 sn altında hareket ederse ownCloud eşleştirmenin eski sürümleri ile ilgili sıkıntı çıkabilir.
+Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yükseltin.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2072"/>
       <source>Japanese</source>
-      <translation>Japanski</translation>
+      <translation>Japonca</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3140"/>
       <source>note save interval time [sec]</source>
-      <translation type="unfinished">note save interval time [sec]</translation>
+      <translation>not kaydetme zaman aralığı [sec]</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3070"/>
       <source>Notify about all external modifications of the current note</source>
-      <translation type="unfinished">Notify about all external modifications of the current note</translation>
+      <translation>Tüm harici değişiklikleri mevcut notta bildir</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3489"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1874"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1883"/>
       <source>Database</source>
-      <translation>Baza podataka</translation>
+      <translation>Veritabanı</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3505"/>
       <source>Reinitialize Database</source>
-      <translation type="unfinished">Reinitialize Database</translation>
+      <translation>Veritabanını yeniden başlat</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3457"/>
       <source>Clear application data and exit</source>
-      <translation>Brisanje podataka aplikacije i izlaz</translation>
+      <translation>Uygulama verisini temizle ve çıkış yap</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3463"/>
       <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
-      <translation type="unfinished">This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</translation>
+      <translation>Bu buton bütün yapılan değişiklikleri temizlemenizi sağlar, yerel todo veritabanından kaldırır ve QOwnnotes'dan çıkmanızı sağlar.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3473"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1943"/>
       <source>Clear app data and exit</source>
-      <translation>Brisanje podataka aplikacije i izlaz</translation>
+      <translation>Uygulama verisini temizle ve çıkış yap</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3252"/>
       <source>Update dialog</source>
-      <translation>Ažuriraj dijalog</translation>
+      <translation>İletiyi güncelleştir</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3332"/>
       <source>Default note file extension</source>
-      <translation type="unfinished">Default note file extension</translation>
+      <translation>Varsayılan not dosya uzantısı</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3417"/>
       <source>External editor</source>
-      <translation>Vanjski editor</translation>
+      <translation>Harici düzenleyici</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3430"/>
       <source>path to external editor, leave empty for default</source>
-      <translation type="unfinished">path to external editor, leave empty for default</translation>
+      <translation>harici düzenleyici yolu, varsayılan için boş bırakın</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3440"/>
       <location filename="../dialogs/settingsdialog.ui" line="4341"/>
       <source>set external editor</source>
-      <translation type="unfinished">set external editor</translation>
+      <translation>harici düzenleyiciyi belirle</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1422"/>
       <source>App metrics</source>
-      <translation type="unfinished">App metrics</translation>
+      <translation>Uygulama ölçümleri</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1440"/>
       <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</source>
-      <translation type="unfinished">Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</translation>
+      <translation>Anonim veri kullanımı hataları bulmak ve düzeltmek için QOwnNotes'u geliştirmeye yardımcı olur. Eğer bununla yaşamayacağınızı düşünüyorsanız lütfen devre dışı bırakın.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1472"/>
       <source>This data includes anonymous information about what features of the app are used.</source>
-      <translation type="unfinished">This data includes anonymous information about what features of the app are used.</translation>
+      <translation>Bu veri uygulamanın hangi özelliklerinin kullanıldığına dair gizli bilgiler içerir.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1526"/>
       <source>App heartbeat</source>
-      <translation type="unfinished">App heartbeat</translation>
+      <translation>Uygulama kalp atışı</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1544"/>
       <source>A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</source>
-      <translation type="unfinished">A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</translation>
+      <translation>QOwnNotes çalışırken düzenli olarak küçük kalp atışı isteği gönderir. Geliştiricinin, birilerinin QOwnnotes'u kullandığını bilmesini sağlayarak onu mutlu edin.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2050"/>
       <source>Italian</source>
-      <translation>Talijanski</translation>
+      <translation>İtalyan</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="252"/>
       <source>Scripting</source>
-      <translation type="unfinished">Scripting</translation>
+      <translation>Scripting</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2526"/>
       <source>Your scripts</source>
-      <translation type="unfinished">Your scripts</translation>
+      <translation>Komut dosyalarınız</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2610"/>
       <source>&amp;Remove script</source>
-      <translation type="unfinished">&amp;Remove script</translation>
+      <translation>&amp; Komut dosyalarını kaldır</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2889"/>
       <source>Click here to select your QML script</source>
-      <translation type="unfinished">Click here to select your QML script</translation>
+      <translation>QML komut dosyanızı seçmek için buraya tıklayın</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="92"/>
       <source>Find setting</source>
-      <translation type="unfinished">Find setting</translation>
+      <translation>Ayar bul</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="179"/>
       <source>Editor</source>
-      <translation>Editor</translation>
+      <translation>Düzenleyici</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="190"/>
       <source>Editor fonts &amp; colors</source>
-      <translation>Editor fontova i boja</translation>
+      <translation>Düzenleyici yazı tipleri &amp;renkleri</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="203"/>
       <source>Panels</source>
-      <translation>Ploče</translation>
+      <translation>Paneller</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="215"/>
       <source>Preview fonts</source>
-      <translation>Pretpregled fontova</translation>
+      <translation>Önceki yazı tipleri</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="227"/>
       <source>Toolbars</source>
-      <translation type="unfinished">Toolbars</translation>
+      <translation>Araç çubukları</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="275"/>
       <source>Portable mode</source>
-      <translation type="unfinished">Portable mode</translation>
+      <translation>Taşınabilir mod</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="287"/>
       <source>Git versioning</source>
-      <translation type="unfinished">Git versioning</translation>
+      <translation>Git sürümü oluşturma</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="311"/>
       <source>Debug options</source>
-      <translation type="unfinished">Debug options</translation>
+      <translation>Hata ayıklama seçenekleri</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="523"/>
       <source>Path where your notes are stored locally</source>
-      <translation type="unfinished">Path where your notes are stored locally</translation>
+      <translation>Notlarınızın yerel olarak depolandığı yol</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="533"/>
       <source>"Notes" path on your server</source>
       <extracomment>"Notes" should not be translated</extracomment>
-      <translation type="unfinished">"Notes" path on your server</translation>
+      <translation>"Notlar" yolu sunucunuzda</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="639"/>
       <source>&amp;Use as ownCloud path</source>
-      <translation type="unfinished">&amp;Use as ownCloud path</translation>
+      <translation>&amp;ownCloud yolu olarak kullan</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="678"/>
       <source>Please select your note folder on your ownCloud server:</source>
-      <translation type="unfinished">Please select your note folder on your ownCloud server:</translation>
+      <translation>Lütfen Not klasörünüze ownCloud sunucunuzdan seçin:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="711"/>
       <source>ownCloud server:</source>
-      <translation type="unfinished">ownCloud server:</translation>
+      <translation>ownCloud sunucusu:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="721"/>
       <source>Path on your ownCloud server:</source>
-      <translation type="unfinished">Path on your ownCloud server:</translation>
+      <translation>Sizin ownCloud sunucunuzun konumu:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="728"/>
       <location filename="../dialogs/settingsdialog.ui" line="2700"/>
       <source>Name:</source>
-      <translation type="unfinished">Name:</translation>
+      <translation>İsim:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="735"/>
       <source>Note folder path:</source>
-      <translation type="unfinished">Note folder path:</translation>
+      <translation>Not klasörü konumu:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="742"/>
       <source>Be aware that the ownCloud notes app doesn't support sub-folders!</source>
-      <translation type="unfinished">Be aware that the ownCloud notes app doesn't support sub-folders!</translation>
+      <translation>OwnCloud notes uygulamasının alt klasörleri desteklemediğini unutmayın!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="745"/>
       <source>Use note sub-folders</source>
-      <translation type="unfinished">Use note sub-folders</translation>
+      <translation>Not alt-klasörlerini kullan</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="752"/>
       <source>You need to have git installed to make this work!</source>
-      <translation type="unfinished">You need to have git installed to make this work!</translation>
+      <translation>Bunu gerçekleştirmek için git yüklü olmalı!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="755"/>
       <source>Use git to keep a local history of your notes</source>
-      <translation type="unfinished">Use git to keep a local history of your notes</translation>
+      <translation>Notlarınızın yerel geçmişini korumak için git'i kullanın</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="784"/>
       <source>ownCloud support</source>
-      <translation>Podrška za ownCloud</translation>
+      <translation>ownCloud Desteği</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="790"/>
       <source>Enable ownCloud support</source>
-      <translation>Uključi ownCloud podršku</translation>
+      <translation>OwnCloud desteği etkinleştir</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="969"/>
       <location filename="../dialogs/settingsdialog.ui" line="1695"/>
       <source>Username:</source>
-      <translation>Korisničko ime:</translation>
+      <translation>Kullanıcı adı:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="994"/>
       <source>Your ownCloud username</source>
-      <translation>Korisničko ime na ownCloud poslužitelju</translation>
+      <translation>Sizin ownCloud kullanıcı adınız</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1004"/>
       <location filename="../dialogs/settingsdialog.ui" line="1730"/>
       <source>Password:</source>
-      <translation>Zaporka:</translation>
+      <translation>Parola:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1032"/>
       <source>Your ownCloud password</source>
-      <translation>Zaporka na OwnCloud poslužitelju</translation>
+      <translation>Sizin ownCloud parolanız</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1060"/>
       <source>&amp;Connect to ownCloud server</source>
-      <translation>&amp;povezivanje s ownCloud poslužiteljom</translation>
+      <translation>&amp;ownCloud sunucusuna bağlan</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1087"/>
       <source>Connection status</source>
-      <translation>Stanje veze</translation>
+      <translation>Bağlantı durumu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1771"/>
       <source>Select the calendars you want to use for the Todo list</source>
-      <translation type="unfinished">Select the calendars you want to use for the Todo list</translation>
+      <translation>Yapılacaklar listesi için istediğiniz takvimi seçin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1846"/>
       <source>Todo list settings</source>
-      <translation type="unfinished">Todo list settings</translation>
+      <translation>Yapılacaklar listesi ayarları</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1852"/>
       <source>Saving an item also closes the Todo list</source>
-      <translation type="unfinished">Saving an item also closes the Todo list</translation>
+      <translation>Bir öğeyi kaydetmek Yapılacaklar listesini kapatır</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1951"/>
       <source>Indonesian</source>
-      <translation type="unfinished">Indonesian</translation>
+      <translation>Endonezya dili</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1962"/>
       <source>Bengali</source>
-      <translation type="unfinished">Bengali</translation>
+      <translation>Bengal dili</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1973"/>
       <source>Catalan</source>
-      <translation type="unfinished">Catalan</translation>
+      <translation>Katalanca</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2138"/>
       <source>Swedish</source>
-      <translation type="unfinished">Swedish</translation>
+      <translation>İsveçce</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2149"/>
@@ -3634,636 +3617,636 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2239"/>
       <source>Enable dark mode application icon and tray icon</source>
-      <translation type="unfinished">Enable dark mode application icon and tray icon</translation>
+      <translation>Karanlık mod uygulaması butonunu ve ana ekranda butonu etkinleştir</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2279"/>
       <source>System tray</source>
-      <translation type="unfinished">System tray</translation>
+      <translation>Sistem tepsisi</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2288"/>
       <source>Show system tray icon</source>
-      <translation type="unfinished">Show system tray icon</translation>
+      <translation>Sistem tepsisi simgesini göster</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2298"/>
       <source>Start application hidden</source>
-      <translation type="unfinished">Start application hidden</translation>
+      <translation>Uygulamayı gizli başlat</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2308"/>
       <source>Interface style</source>
-      <translation type="unfinished">Interface style</translation>
+      <translation>Arayüz stili</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3223"/>
       <source>By default the headline will generated automatically</source>
-      <translation type="unfinished">By default the headline will generated automatically</translation>
+      <translation>Varsayılan olarak başlık otomatik oluşturulur</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3226"/>
       <source>The shortcut to create a new note asks for a headline</source>
-      <translation type="unfinished">The shortcut to create a new note asks for a headline</translation>
+      <translation>Yeni bir not oluşturmak için yapılan kısayolda bir başlık istenir</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3274"/>
       <source>Search engine</source>
-      <translation type="unfinished">Search engine</translation>
+      <translation>Arama motoru</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3296"/>
       <source>Message boxes</source>
-      <translation type="unfinished">Message boxes</translation>
+      <translation>Mesaj kutusu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3302"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3487"/>
       <source>Reset message boxes</source>
-      <translation type="unfinished">Reset message boxes</translation>
+      <translation>Mesaj kutusunu sıfırla</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4146"/>
       <source>Note-edit cursor width:</source>
-      <translation type="unfinished">Note-edit cursor width:</translation>
+      <translation>Not imleç genişliğini düzenle:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4156"/>
       <source>Reset the cursor width</source>
-      <translation type="unfinished">Reset the cursor width</translation>
+      <translation>İmleç genişliğini sıfırla</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4276"/>
       <source>External git log command to show the git versions of a note</source>
-      <translation type="unfinished">External git log command to show the git versions of a note</translation>
+      <translation>Harici git günlüğü, bir notun git sürümlerini görmek için</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4282"/>
       <source>Enter a command to be used to show a git log (like for example "gitk")</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
-      <translation type="unfinished">Enter a command to be used to show a git log (like for example "gitk")</translation>
+      <translation>Kullanılan git günlüğünü görmek için bir komut girin (örneğin "gitk" gibi)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4302"/>
       <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
-      <translation type="unfinished">If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</translation>
+      <translation>Bu ayarı kullanırsanız, bir nota sağ tıkladığınızda git sürümlerini gösteren yeni bir menü açılacak.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4612"/>
       <source>Show all notes of a tag including the notes of their children-tags</source>
-      <translation type="unfinished">Show all notes of a tag including the notes of their children-tags</translation>
+      <translation>Bir etiketin alt etiket notları içeren tüm notlarını aç</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4582"/>
       <source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
-      <translation type="unfinished">Show all notes in a folder including their subfolders (only works if subfolders are turned on)</translation>
+      <translation>Tüm notları alt klasörlerde dahil olmak üzere tek klasörde göster (yalnızca alt klasörler açıksa çalışır)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4095"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kullanılabilir saat biçimlerine bakmak isterseniz &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt; burdan göz atabilirsiniz &lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4170"/>
       <source>Highlight the current line</source>
-      <translation type="unfinished">Highlight the current line</translation>
+      <translation>Geçerli satırı vurgula</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4369"/>
       <source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
-      <translation type="unfinished">Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</translation>
+      <translation>Not klasörleriniz için git desteğini etkinleştirmeyi ve istemciniz için adınızı ve e-posta adresinizi yapılandırmayı unutmayın, örneğin bu terminal komutlarıyla:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4402"/>
       <source>Tags panel</source>
-      <translation type="unfinished">Tags panel</translation>
+      <translation>Etiket paneli</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4431"/>
       <location filename="../dialogs/settingsdialog.ui" line="4507"/>
       <location filename="../dialogs/settingsdialog.ui" line="4556"/>
       <source>Order</source>
-      <translation>Redoslijed</translation>
+      <translation>Düzen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4437"/>
       <location filename="../dialogs/settingsdialog.ui" line="4513"/>
       <location filename="../dialogs/settingsdialog.ui" line="4565"/>
       <source>Ascending</source>
-      <translation>Uzlazno</translation>
+      <translation>Artan</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4444"/>
       <location filename="../dialogs/settingsdialog.ui" line="4520"/>
       <location filename="../dialogs/settingsdialog.ui" line="4572"/>
       <source>Descending</source>
-      <translation>Silazno</translation>
+      <translation>Azalan</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4408"/>
       <location filename="../dialogs/settingsdialog.ui" line="4477"/>
       <location filename="../dialogs/settingsdialog.ui" line="4589"/>
       <source>Sort</source>
-      <translation>Sortiranje</translation>
+      <translation>Sıralama</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4414"/>
       <location filename="../dialogs/settingsdialog.ui" line="4483"/>
       <location filename="../dialogs/settingsdialog.ui" line="4595"/>
       <source>Alphabetical</source>
-      <translation>Abecedno</translation>
+      <translation>Alfabetik</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4421"/>
       <source>By last change / use</source>
-      <translation>Po zadnjoj izmjeni / korištenju</translation>
+      <translation>Son değişiklik / kullanıma göre</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4454"/>
       <source>Hide 'Find or create tag' search</source>
-      <translation type="unfinished">Hide 'Find or create tag' search</translation>
+      <translation>'Etiket ara veya oluştur' yazısını gizle</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4464"/>
       <source>Note subfolders panel</source>
-      <translation type="unfinished">Note subfolders panel</translation>
+      <translation>Not altklasör paneli</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4470"/>
       <source>Show with full path</source>
-      <translation type="unfinished">Show with full path</translation>
+      <translation>Tüm yol ile göster</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4490"/>
       <location filename="../dialogs/settingsdialog.ui" line="4602"/>
       <source>By last change</source>
-      <translation>Po zadnjoj izmjeni</translation>
+      <translation>Son değişime göre</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4500"/>
       <source>Show root folder name</source>
-      <translation type="unfinished">Show root folder name</translation>
+      <translation>Kök klasör ismini göster</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4530"/>
       <source>Hide 'Find or create note subfolder' search</source>
-      <translation type="unfinished">Hide 'Find or create note subfolder' search</translation>
+      <translation>'Not altklasörü bul veya oluştur' aramayı gizle</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4537"/>
       <source>Display note subfolders as full tree</source>
-      <translation type="unfinished">Display note subfolders as full tree</translation>
+      <translation>Not altkasörlerini full ağaç olarak göster</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4547"/>
       <source>Notes panel</source>
-      <translation type="unfinished">Notes panel</translation>
+      <translation>Notlar paneli</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2455"/>
       <source>Search script repository</source>
-      <translation type="unfinished">Search script repository</translation>
+      <translation>Script deposu ara</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4292"/>
       <source>You optionally can use "%notePath%" for the path of the note.</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
-      <translation type="unfinished">You optionally can use "%notePath%" for the path of the note.</translation>
+      <translation>İsteğe bağlı olarak not yolu için "%notePath%" kullanabilirsiniz.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4315"/>
       <source>Git client</source>
-      <translation type="unfinished">Git client</translation>
+      <translation>Git client</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4331"/>
       <source>Path to git executable:</source>
-      <translation type="unfinished">Path to git executable:</translation>
+      <translation>Git yürütülebilir yol:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4321"/>
       <source>Path to git client, leave empty for default</source>
-      <translation type="unfinished">Path to git client, leave empty for default</translation>
+      <translation>Git clienti yolu, varsayılan için boş bırakın</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4240"/>
       <source>Commit interval</source>
-      <translation type="unfinished">Commit interval</translation>
+      <translation>Aralık işle</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4246"/>
       <source>sec</source>
       <extracomment>seconds</extracomment>
-      <translation>sekunda</translation>
+      <translation>sn</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4266"/>
       <source>git commit interval time [sec]</source>
-      <translation type="unfinished">git commit interval time [sec]</translation>
+      <translation>git aralık işleme süresi [sec]</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="869"/>
       <source>Open your ownCloud server &amp;Apps page</source>
-      <translation type="unfinished">Open your ownCloud server &amp;Apps page</translation>
+      <translation>ownCloud sunucu &amp;Uygulama sayfanızı açın</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1602"/>
       <source>Which calendar backend do you want to use?</source>
-      <translation type="unfinished">Which calendar backend do you want to use?</translation>
+      <translation>Hangi takvim arka ucunu kullanmak istersiniz?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1615"/>
       <source>For most current ownCloud and Nextcloud installations</source>
-      <translation type="unfinished">For most current ownCloud and Nextcloud installations</translation>
+      <translation>En geçerli ownCloud ve Nextcloud için yüklemeler</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1635"/>
       <source>For older versions of ownCloud where the default setting doesn't work</source>
-      <translation type="unfinished">For older versions of ownCloud where the default setting doesn't work</translation>
+      <translation>Varsayılan ayarların çalışmadığı yerdeki ownCloud eski sürümleri için</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1638"/>
       <source>Legacy ownCloud calendar</source>
-      <translation type="unfinished">Legacy ownCloud calendar</translation>
+      <translation>ownCloud takvim mirası</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1651"/>
       <source>CalDAV server settings</source>
-      <translation>Postavke CalDAV poslužitelja</translation>
+      <translation>CalDAV sunucu ayarları</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1660"/>
       <source>Calendar base url:</source>
-      <translation type="unfinished">Calendar base url:</translation>
+      <translation>Takvim temel URL:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1682"/>
       <source>Please enter the CalDAV base url to your calendar.</source>
-      <translation type="unfinished">Please enter the CalDAV base url to your calendar.</translation>
+      <translation>Lütfen takviminize CalDAV temel URL giriniz.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1752"/>
       <source>Please enter the password for your CalDAV username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.</source>
-      <translation type="unfinished">Please enter the password for your CalDAV username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.</translation>
+      <translation>Lütfen CalDav kullanıcı adınızın şifresini girin.&lt;br/&gt;Şu anda şifreniz kriptoplanmış şekilde diğer ayarlar ile birlikte kayıt edilecek ancak bu çok güvenli değil.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1984"/>
       <source>Czech</source>
-      <translation>Češki</translation>
+      <translation>Çekçe</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2105"/>
       <source>Brazilian Portuguese</source>
-      <translation>Brazilski portugalski</translation>
+      <translation>Brezilya Portekizcesi</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2160"/>
       <source>Ukrainian</source>
-      <translation>Ukrajinski</translation>
+      <translation>Ukraynaca</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2266"/>
       <source>You might also want to choose an other editor color schema in the editor settings in dark mode.</source>
-      <translation type="unfinished">You might also want to choose an other editor color schema in the editor settings in dark mode.</translation>
+      <translation>Karanlık moddaki düzenleyici ayarlarında başka bir düzenleyici renk şeması seçmeyi de isteyebilirsiniz.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3001"/>
       <source>The name</source>
-      <translation type="unfinished">The name</translation>
+      <translation>İsim</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3175"/>
       <source>Maximum height:</source>
-      <translation>Maksimalna visina:</translation>
+      <translation>Maksimum yükseklik:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3182"/>
       <source>Maximum width:</source>
-      <translation>Maksimalna širina:</translation>
+      <translation>Maksimum genişlik:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3060"/>
       <source>Scale images down when inserted into notes</source>
-      <translation type="unfinished">Scale images down when inserted into notes</translation>
+      <translation>Notlara eklendiklerinde görüntüleri ölçeklendir</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2039"/>
       <source>Croatian</source>
-      <translation>Hrvatski</translation>
+      <translation>Hırvatça</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2916"/>
       <source>Path to your QML file</source>
-      <translation type="unfinished">Path to your QML file</translation>
+      <translation>QML dosya yolu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2707"/>
       <source>Script name</source>
-      <translation type="unfinished">Script name</translation>
+      <translation>Script adı</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2729"/>
       <source>Description:</source>
-      <translation type="unfinished">Description:</translation>
+      <translation>Açıklama:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2811"/>
       <source>Version:</source>
-      <translation type="unfinished">Version:</translation>
+      <translation>Sürüm:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2772"/>
       <source>Repository:</source>
-      <translation type="unfinished">Repository:</translation>
+      <translation>Depo:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2599"/>
       <source>&amp;Add script...</source>
-      <translation type="unfinished">&amp;Add script...</translation>
+      <translation>&amp;Script ekle...</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2749"/>
       <source>Author(s):</source>
-      <translation type="unfinished">Author(s):</translation>
+      <translation>Yazar(lar):</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3050"/>
       <source>Check this if you want to accept all external modifications while you are editing the current note.</source>
-      <translation type="unfinished">Check this if you want to accept all external modifications while you are editing the current note.</translation>
+      <translation>Geçerli notu düzenlerken tüm harici değişiklikleri kabul etmek istiyorsanız bunu işaretleyin.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3053"/>
       <source>Accept all external modifications of the current note</source>
-      <translation type="unfinished">Accept all external modifications of the current note</translation>
+      <translation>Geçerli nottaki tüm harici değişiklikleri kabul et</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3109"/>
       <source>Use UNIX newline instead of native newline characters</source>
-      <translation type="unfinished">Use UNIX newline instead of native newline characters</translation>
+      <translation>Yerli yeni satır karakterleri yerine UNIX yeni satır karakterlerini kullan</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3212"/>
       <source>When opening notes the cursor position inside the note will now be restored
   to the position when the note was last visited in the current session</source>
-      <translation type="unfinished">When opening notes the cursor position inside the note will now be restored
-  to the position when the note was last visited in the current session</translation>
+      <translation>Not açıldığında, notun içindeki imleç konumu, not mevcut oturumda 
+  en son ziyaret edildiğinde konumuna geri yüklenecek</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3216"/>
       <source>Restore cursor position when opening a note</source>
-      <translation type="unfinished">Restore cursor position when opening a note</translation>
+      <translation>Not açarken imleç konumunu geri yükle</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3495"/>
       <source>Be warned that this will also remove your cached todo items and configured note folders and scripts!</source>
-      <translation type="unfinished">Be warned that this will also remove your cached todo items and configured note folders and scripts!</translation>
+      <translation>Bilmelisiniz ki bu, önbelleklenmiş todo eşyalarınızı ve yapılandırılmış not klasörlerinizi, komut dosyalarınızı silecektir!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3919"/>
       <source>Apply toolbar configuration</source>
-      <translation type="unfinished">Apply toolbar configuration</translation>
+      <translation>Araç çubuğu yapılandırmasını uygula</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3933"/>
       <source>Reset toolbars</source>
-      <translation type="unfinished">Reset toolbars</translation>
+      <translation>Araç çubuğunu sıfırla</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3961"/>
       <source>Enable logging to file</source>
-      <translation type="unfinished">Enable logging to file</translation>
+      <translation>Günlüğe kaydetmeyi etkinleştir</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3968"/>
       <source>Clear log file</source>
-      <translation type="unfinished">Clear log file</translation>
+      <translation>Günlük dosyasını temizle</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3979"/>
       <source>Fake old version number to trigger update</source>
-      <translation type="unfinished">Fake old version number to trigger update</translation>
+      <translation>Güncellemeyi başlatmak için sahte versiyon numarası</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4007"/>
       <source>Log file path:</source>
-      <translation type="unfinished">Log file path:</translation>
+      <translation>Günlük dosyası konumu:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4069"/>
       <source>Here you can set your own time format for inserting the current time into a note.</source>
-      <translation type="unfinished">Here you can set your own time format for inserting the current time into a note.</translation>
+      <translation>Buradan geçerli saati not'a eklemek için kendi saat diliminizi ayarlayabilirsiniz.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4072"/>
       <source>Insert current time</source>
-      <translation>Umetni trenutno &amp;vrijeme</translation>
+      <translation>Geçerli saati ekle</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4078"/>
       <source>Time format:</source>
-      <translation>Format vremena:</translation>
+      <translation>Saat biçimi:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4085"/>
       <source>Enter your custom time format, like "dd.MM.yyyy hh:mm"</source>
-      <translation>Unesite prilagođeni format vremena, npr. "dd. MM.yyyy hh: mm"</translation>
+      <translation>"gg.aa.yy ss.dd" gibi özel tarih biçiminizi girin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4130"/>
       <source>Editor options</source>
-      <translation>Opcije editora</translation>
+      <translation>Editör ayarları</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4187"/>
       <source>Enable automatic closing of brackets and markdown formatting characters</source>
-      <translation type="unfinished">Enable automatic closing of brackets and markdown formatting characters</translation>
+      <translation>Köşeli parantezleri ve markdown formatı karakterlerinin otomatik tamamlanmasını etkinleştir</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4177"/>
       <source>You have to use the backspace key to remove the opening character</source>
-      <translation type="unfinished">You have to use the backspace key to remove the opening character</translation>
+      <translation>Açılış karakterini kaldırmak için silme tuşunu kullanmanız gerekiyor</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4180"/>
       <source>Enable automatic removal of matching closing characters</source>
-      <translation type="unfinished">Enable automatic removal of matching closing characters</translation>
+      <translation>Kapanış karakterlerin karşılaşmasını otomatik kaldırmayı etkin kıl</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1685"/>
       <source>Your CalDAV calendar base url</source>
-      <translation type="unfinished">Your CalDAV calendar base url</translation>
+      <translation>Sizin CalDAV takvimi temel urlsi</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1717"/>
       <source>Please enter the username of your CalDAV server.</source>
-      <translation type="unfinished">Please enter the username of your CalDAV server.</translation>
+      <translation>Lütfen CalDAV sunucunuzun kullanıcı adını girin.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1720"/>
       <source>Your CalDAV username</source>
-      <translation>CalDAV korisničko ime</translation>
+      <translation>CalDAV kullanıcı adınız</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1758"/>
       <source>Your CalDAV password</source>
-      <translation>CalDAV zaporka</translation>
+      <translation>CalDAV parolanız</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1793"/>
       <source>This causes all todo list items to be reloaded from your server the next time you open your todo dialog.</source>
-      <translation type="unfinished">This causes all todo list items to be reloaded from your server the next time you open your todo dialog.</translation>
+      <translation>Bu eylem, bütün todo listesi eşyalarınızın bir sonraki seferde todo diyaloğunu açtığınızda sunucudan yeniden yüklenmesine sebep olur.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1796"/>
       <source>Empty calendar item cache</source>
-      <translation type="unfinished">Empty calendar item cache</translation>
+      <translation>Takvim önbelleğini boşalt</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1819"/>
       <source>Click here to reload the list of calendars from your calendar server.</source>
-      <translation type="unfinished">Click here to reload the list of calendars from your calendar server.</translation>
+      <translation>Takvim sunucunuzdaki takvim listesini yeniden yüklemek için buraya tıklayın.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1825"/>
       <source>&amp;Reload calendar list</source>
-      <translation type="unfinished">&amp;Reload calendar list</translation>
+      <translation>&amp;Takvim listesini yeniden yükle</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2236"/>
       <source>You may need to restart the application to let these changes take effect</source>
-      <translation type="unfinished">You may need to restart the application to let these changes take effect</translation>
+      <translation>Değişikliklerin etkili olabilmesi için uygulamayı yeniden başlatmanız gerekebilir</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2361"/>
       <source>Toolbar icon size:</source>
-      <translation type="unfinished">Toolbar icon size:</translation>
+      <translation>Araç çubuğu simge boyutu:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2351"/>
       <source>List and tree item height:</source>
-      <translation type="unfinished">List and tree item height:</translation>
+      <translation>Liste ve ağaç öğesi yüksekliği:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2384"/>
       <source>Reset the icon size</source>
-      <translation type="unfinished">Reset the icon size</translation>
+      <translation>Simge boyutunu Sıfırla</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2398"/>
       <source>Reset the item height</source>
-      <translation type="unfinished">Reset the item height</translation>
+      <translation>Öğe yüksekliğini sıfırla</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3879"/>
       <source>View text right to left (RTL)</source>
-      <translation type="unfinished">View text right to left (RTL)</translation>
+      <translation>Metni sağdan sola (RTL) göster</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2477"/>
       <source>Search for shortcut</source>
-      <translation type="unfinished">Search for shortcut</translation>
+      <translation>Kısayol için arama</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1836"/>
       <source>Ignore calendars that don't support todo items</source>
-      <translation type="unfinished">Ignore calendars that don't support todo items</translation>
+      <translation>Yapılacaklar işler öğesini desteklemeyen takvimleri yoksay</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2182"/>
       <source>Arabic</source>
-      <translation>Arapski</translation>
+      <translation>Arapça</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2320"/>
       <source>Icons</source>
-      <translation>Ikone</translation>
+      <translation>Simgeler</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2329"/>
       <source>Use internal icon theme instead of system icon theme</source>
-      <translation type="unfinished">Use internal icon theme instead of system icon theme</translation>
+      <translation>Sistem ikonu teması yerine dahili ikon teması kullan</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2865"/>
       <source>Script path:</source>
-      <translation type="unfinished">Script path:</translation>
+      <translation>Komut dosyası yolu:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="694"/>
       <source>Note folder name</source>
-      <translation type="unfinished">Note folder name</translation>
+      <translation>Not klasör adı</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3126"/>
       <source>Allow the note file name to be different from the headline.&lt;br&gt;Be aware of that ownCloud notes needs them to be the same!</source>
-      <translation type="unfinished">Allow the note file name to be different from the headline.&lt;br&gt;Be aware of that ownCloud notes needs them to be the same!</translation>
+      <translation>Notunuzun dosya adının başlıktan farklı olmasına izin ver.&lt;br&gt; ownCloud notlarının onların aynı olmasına ihtiyacı olduğundan haberdar ol!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3129"/>
       <source>Allow note file name to be different from headline</source>
-      <translation type="unfinished">Allow note file name to be different from headline</translation>
+      <translation>Not dosya adının başlıktan farklı olmasına izin ver</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3077"/>
       <source>Check this if you want to ignore all external modifications while you are editing the current note.</source>
-      <translation type="unfinished">Check this if you want to ignore all external modifications while you are editing the current note.</translation>
+      <translation>Geçerli notunuzu düzenlerken tüm dış değişiklikler gözardı etmek istiyorsanız bunu işaretleyin.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3080"/>
       <source>Ignore all external modifications of the current note</source>
-      <translation type="unfinished">Ignore all external modifications of the current note</translation>
+      <translation>Mevcut notta tüm harici değişiklikleri gözardı et</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3106"/>
       <source>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</source>
-      <translation type="unfinished">You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</translation>
+      <translation>OwnCloud / Nextcloud notlar uygulamasının yeni çizimlerinde sorun yaşıyorsanız bunu Windows altında örnek olarak kullanabilirsiniz</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3236"/>
       <source>App instance</source>
-      <translation type="unfinished">App instance</translation>
+      <translation>Uygumala örneği</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3242"/>
       <source>Only allow one app instance at the same time</source>
-      <translation type="unfinished">Only allow one app instance at the same time</translation>
+      <translation>Aynı zamanda sadece bir uygulama örneğine izin ver</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3338"/>
       <source>Add a custom file extension</source>
-      <translation type="unfinished">Add a custom file extension</translation>
+      <translation>Özel dosya uzantısı ekle</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3352"/>
       <source>Remove a custom file extension</source>
-      <translation type="unfinished">Remove a custom file extension</translation>
+      <translation>Özel dosya uzantısını kaldır</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3391"/>
       <source>If you add custom extensions just type in the extension, like "taskpaper".</source>
-      <translation type="unfinished">If you add custom extensions just type in the extension, like "taskpaper".</translation>
+      <translation>Eğer özel uzantı eklerseniz bunu uzantıya yazın, "taskpaper" gibi.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3395"/>
       <source>Text file (txt)</source>
-      <translation type="unfinished">Text file (txt)</translation>
+      <translation>Metin dostası (txt)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3423"/>
       <source>Path to external editor:</source>
-      <translation type="unfinished">Path to external editor:</translation>
+      <translation>Harici düzenleyici yolu:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3258"/>
       <source>Don't show the update dialog automatically</source>
-      <translation type="unfinished">Don't show the update dialog automatically</translation>
+      <translation>İletişim güncelleştirmesini otomatik gösterme</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3628"/>
       <location filename="../dialogs/settingsdialog.ui" line="3783"/>
       <source>Fonts</source>
-      <translation>Fontovi</translation>
+      <translation>Yazı tipleri</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3651"/>
@@ -4271,7 +4254,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
       <location filename="../dialogs/settingsdialog.ui" line="3851"/>
       <location filename="../dialogs/settingsdialog.ui" line="3865"/>
       <source>Set a new font</source>
-      <translation>Postavi novi font</translation>
+      <translation>Yeni yazı tipi belirle</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3662"/>
@@ -4279,81 +4262,81 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
       <location filename="../dialogs/settingsdialog.ui" line="3789"/>
       <location filename="../dialogs/settingsdialog.ui" line="3813"/>
       <source>Reset font</source>
-      <translation>Ponovno postavi font</translation>
+      <translation>Yazı tipini sıfırla</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="300"/>
       <source>Debug</source>
-      <translation>Ispravljanje pogrešaka</translation>
+      <translation>Hata ayıklama</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3546"/>
       <source>Debug information</source>
-      <translation>Informacije za ispravljanje pogrešaka</translation>
+      <translation>Hata ayıklama bilgileri</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3562"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Eğer QOwnNotes ile ilgili &lt;span style=" font-weight:600;"&gt;sorularınız veya sorunlarınız&lt;/span&gt; varsa bu metni &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes sorunlar sayfasında&lt;/a&gt; &lt;span style=" font-weight:600;"&gt;kopyala yapıştır&lt;/span&gt; yapabilirsin. Bu bilgide çok hassas olan veriler gizlidir. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3575"/>
       <source>&amp;Save debug information</source>
-      <translation type="unfinished">&amp;Save debug information</translation>
+      <translation>&amp;Hata ayıklama bilgisini kaydet</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="348"/>
       <source>hostname of proxy server</source>
-      <translation type="unfinished">hostname of proxy server</translation>
+      <translation>proxy sunucu host adı</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="349"/>
       <source>username for proxy server</source>
-      <translation type="unfinished">username for proxy server</translation>
+      <translation>proxy sunucu kullanıcı adı</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="350"/>
       <source>password for proxy server</source>
-      <translation type="unfinished">password for proxy server</translation>
+      <translation>proxy sunucu şifresi</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="352"/>
       <source>HTTP(S) proxy</source>
-      <translation>HTTP(S) Proxy</translation>
+      <translation>HTTP(s) proxy</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="353"/>
       <source>SOCKS5 proxy</source>
-      <translation type="unfinished">SOCKS5 proxy</translation>
+      <translation>SOCKS5 proxy</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1069"/>
       <source>Automatic (needs restart)</source>
-      <translation type="unfinished">Automatic (needs restart)</translation>
+      <translation>Otomatik (yeniden başlatma gerektirir)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1218"/>
       <source>Undefined key</source>
-      <translation type="unfinished">Undefined key</translation>
+      <translation>Tanımsız anahtar</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1223"/>
       <source>Assign a new key</source>
-      <translation type="unfinished">Assign a new key</translation>
+      <translation>Yeni bir anahtar ata</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1224"/>
       <source>Reset to default key</source>
-      <translation type="unfinished">Reset to default key</translation>
+      <translation>Varsayılan anahtara sıfırla</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1609"/>
       <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
-      <translation type="unfinished">The connection was made successfully!
-Server version: %1
-QOwnNotesAPI version: %2</translation>
+      <translation>Bağlantı başarıyla sağlandı!
+Sunucu sürümü: %1
+QOwnNotesAPI sürümü:%2</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1620"/>
@@ -4361,304 +4344,302 @@ QOwnNotesAPI version: %2</translation>
 You also need to have the QOwnNotesAPI app installed and enabled!
 
 Connection error message: </source>
-      <translation type="unfinished">There was an error connecting to the ownCloud Server!
-You also need to have the QOwnNotesAPI app installed and enabled!
-
-Connection error message: </translation>
+      <translation>OwnCloud sunucusuna bağlanırken hata oluştu!
+QownnotesAPI'nin kurulmuş ve aktif olması gerekiyor!
+Bağlantı hata mesajı: </translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1896"/>
       <source>Markdown files</source>
-      <translation type="unfinished">Markdown files</translation>
+      <translation>Markdown dosyaları</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1923"/>
       <source>Disable usage tracking</source>
-      <translation type="unfinished">Disable usage tracking</translation>
+      <translation>Kullanım izlemeyi devre dışı bırak</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1924"/>
       <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
-      <translation type="unfinished">Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</translation>
+      <translation>Anonim veri kullanımı, hataları bulmak ve düzeltmek için QOwnNotes'u geliştirmeye yardımcı olur.&lt;br /&gt; Eğer bununla yaşamayacağınızı düşünüyorsanız lütfen devre dışı bırakın.&lt;br /&gt;&lt;br /&gt; Gerçekten izlemeyi devre dışı bırakmak istiyor musunuz?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2145"/>
       <source>new folder</source>
-      <translation>nova mapa</translation>
+      <translation>yeni klasör</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2183"/>
       <source>Remove note folder</source>
-      <translation type="unfinished">Remove note folder</translation>
+      <translation>Not klasörünü kaldır</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2184"/>
       <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation type="unfinished">Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+      <translation>Geçerli not klasörü &lt;strong&gt;%1&lt;/strong&gt; kaldırılsın mı?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2258"/>
       <source>Please select the folder where your notes will get stored to</source>
-      <translation>Molim odaberi mapu gdje će bilješke biti spremljene</translation>
+      <translation>Lütfen notlarınızın depolanacağını klasör seçin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2295"/>
       <source>Loading folders from server</source>
-      <translation type="unfinished">Loading folders from server</translation>
+      <translation>Klasörler sunucudan yükleniyor</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2309"/>
       <source>No more folders were found in the current folder</source>
-      <translation type="unfinished">No more folders were found in the current folder</translation>
+      <translation>Geçerli klasörde daha fazla klasör bulunamadı</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2382"/>
       <source>Loading folders in '%1' from server</source>
-      <translation type="unfinished">Loading folders in '%1' from server</translation>
+      <translation>Sunucudan '%1' içinde klasörler yükleniyor</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2442"/>
       <source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
-      <translation type="unfinished">Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</translation>
+      <translation>Şuna bir göz atın. Hızlı başlangıç için &lt;a href="%1"&gt; scripting belgeleme &lt;/a&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2444"/>
       <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
-      <translation type="unfinished">If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</translation>
+      <translation>QOwnNotes'da belirli bir işlevselliğe erişmeniz gerekiyorsa lütfen &lt;a href="%1"&gt; QOwnNotes konu sayfası üzerinde bir konu açın &lt;/a&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2465"/>
       <source>Check for script updates</source>
-      <translation type="unfinished">Check for script updates</translation>
+      <translation>Script güncellemelerine göz at</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2472"/>
       <source>Add local script</source>
-      <translation type="unfinished">Add local script</translation>
+      <translation>Yerel script ekle</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2476"/>
       <source>Add an existing, local script</source>
-      <translation type="unfinished">Add an existing, local script</translation>
+      <translation>Mevcut, yerel bir script ekle</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2459"/>
       <source>Find a script in the script repository</source>
-      <translation type="unfinished">Find a script in the script repository</translation>
+      <translation>Script deposunda bir script bul</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="195"/>
       <source>Menu bar</source>
-      <translation type="unfinished">Menu bar</translation>
+      <translation>Menü çubuğu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="196"/>
       <source>Show menu bar item</source>
-      <translation type="unfinished">Show menu bar item</translation>
+      <translation>Menü çubuğu öğesini göster</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2557"/>
       <source>Remove script</source>
-      <translation type="unfinished">Remove script</translation>
+      <translation>Script kaldır</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2558"/>
       <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation type="unfinished">Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+      <translation>Geçerli script &lt;strong&gt;%1&lt;/strong&gt; kaldırılsın mı?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2609"/>
       <source>QML files</source>
-      <translation type="unfinished">QML files</translation>
+      <translation>QML dosyaları</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2610"/>
       <source>Please select your QML file</source>
-      <translation type="unfinished">Please select your QML file</translation>
+      <translation>Lütfen QML dosyanızı seçin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2699"/>
       <source>Open repository</source>
-      <translation type="unfinished">Open repository</translation>
+      <translation>Depoyu aç</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2759"/>
       <source>Your script seems to be valid</source>
-      <translation type="unfinished">Your script seems to be valid</translation>
+      <translation>Scriptiniz geçerli görünüyor</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2760"/>
       <source>There were script errors:
 %1</source>
-      <translation type="unfinished">There were script errors:
+      <translation>Script hataları vardı:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2829"/>
       <source>File extension</source>
-      <translation type="unfinished">File extension</translation>
+      <translation>Dosya uzantısı</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2830"/>
       <source>Enter your custom file extension:</source>
-      <translation type="unfinished">Enter your custom file extension:</translation>
+      <translation>Özel dosya uzantınızı girin:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3104"/>
       <source>Calendar cache emptied</source>
-      <translation type="unfinished">Calendar cache emptied</translation>
+      <translation>Takvim önbelleği boşaltıldı</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3105"/>
       <source>Your calendar cache was emptied.</source>
-      <translation type="unfinished">Your calendar cache was emptied.</translation>
+      <translation>Takvim önbelleğiniz boşaltılmış.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3183"/>
       <source>Reset toolbars and exit</source>
-      <translation type="unfinished">Reset toolbars and exit</translation>
+      <translation>Araç çubuğunu sıfırla ve çık</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3184"/>
       <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
-      <translation type="unfinished">Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</translation>
+      <translation>Tüm araç menülerini sıfırlamak istiyor musunuz? İşlem esnasında uygulama kaptılacak, varsayılan araç menüleri uygulama tekrar başladığında geri yüklenecektir.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3188"/>
       <source>Reset and &amp;exit</source>
-      <translation type="unfinished">Reset and &amp;exit</translation>
+      <translation>Yeniden başlat ve &amp;çık</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3350"/>
       <source>Log file cleared</source>
-      <translation type="unfinished">Log file cleared</translation>
+      <translation>Kayıt dosyası temizlendi</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3351"/>
       <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
-      <translation type="unfinished">The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</translation>
+      <translation>Günlük dosyası &lt;strong&gt;%1&lt;/strong&gt; temizlendi.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3387"/>
       <source>Executable files</source>
-      <translation type="unfinished">Executable files</translation>
+      <translation>Çalıştırılabilir dosyalar</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3388"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3390"/>
       <source>All files</source>
-      <translation type="unfinished">All files</translation>
+      <translation>Tüm dosyalar</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3398"/>
       <source>Please select the path of your git executable</source>
-      <translation type="unfinished">Please select the path of your git executable</translation>
+      <translation>Lütfen git yürütülebilirinizin yolunu seçin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3488"/>
       <source>Do you really want to reset the overrides of all message boxes?</source>
-      <translation type="unfinished">Do you really want to reset the overrides of all message boxes?</translation>
+      <translation>Gerçekten tüm mesaj kutularının geçersiz kılınmasını sıfırlamak istiyor musunuz?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1884"/>
       <source>The Database was reinitialized.</source>
-      <translation type="unfinished">The Database was reinitialized.</translation>
+      <translation>Veritabanı yeniden başlatıldı.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="53"/>
       <source>New script</source>
-      <translation type="unfinished">New script</translation>
+      <translation>Yeni script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="56"/>
       <source>You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</source>
-      <translation type="unfinished">You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</translation>
+      <translation>Git clientinizi buradan indirebilirsiniz:&lt;a href="%url"&gt; Windows için Git&lt;/a&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="307"/>
       <source>enabled</source>
-      <translation type="unfinished">enabled</translation>
+      <translation>etkin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="307"/>
       <source>disabled</source>
-      <translation type="unfinished">disabled</translation>
+      <translation>devre dışı</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="310"/>
       <source>Portable mode is currently:</source>
-      <translation type="unfinished">Portable mode is currently:</translation>
+      <translation>Taşınabilir mod şu anda:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="313"/>
       <source>In portable mode</source>
-      <translation type="unfinished">In portable mode</translation>
+      <translation>Taşınabilir modunda</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="314"/>
       <source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary's location</source>
-      <translation type="unfinished">the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary's location</translation>
+      <translation>dahili sqlite veritabanı ve ayarları &lt;code&gt; Veri &lt;/code&gt; çiftli konumundaki dosyada depolanır</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="317"/>
       <source>the settings will be stored in an ini file</source>
-      <translation type="unfinished">the settings will be stored in an ini file</translation>
+      <translation>ayarlar ini dosyasında depolanır</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="318"/>
       <source>the note folders, script paths and path to an external editor will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders, scripts and external editor will be loaded regardless where your QOwnNotes installation is currently located</source>
-      <translation type="unfinished">the note folders, script paths and path to an external editor will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders, scripts and external editor will be loaded regardless where your QOwnNotes installation is currently located</translation>
+      <translation>not dosyaları, komut dosyası yolları ve harıcı düzenleyiciye giden yol göreceli şekilde otomatik olara &lt;code&gt; Veri &lt;/code&gt; dosyasında depolanır, QOwnNotes yüklemenizin mevcut konumu nerede olursa olsun konum dosyası ve harici düzenleyici yüklenecektir</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="326"/>
       <source>It will be activated if you run QOwnNotes with the parameter &lt;code&gt;--portable&lt;/code&gt;.</source>
-      <translation type="unfinished">It will be activated if you run QOwnNotes with the parameter &lt;code&gt;--portable&lt;/code&gt;.</translation>
+      <translation>QOwnNotes'u &lt;code&gt; taşınabilir &lt;/code&gt; parametreleri ile çalıştırırsanız aktive olacaktır.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1897"/>
       <source>Save debug information</source>
-      <translation type="unfinished">Save debug information</translation>
+      <translation>Hatası ayıklanmış bilgiyi kaydet</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1944"/>
       <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
-      <translation type="unfinished">Do you really want to clear all settings, remove the database and exit QOwnNotes?
-
-Your notes will stay intact!</translation>
+      <translation>Gerçekten bütün ayarları temizlemek, veritabanını silmek ve QOwnNotes'dan çıkmak istiyor musunuz?
+Notelarınız bozulmamış olarak kalacak!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1947"/>
       <source>Clear and &amp;exit</source>
-      <translation type="unfinished">Clear and &amp;exit</translation>
+      <translation>Temizle ve &amp;çıkış</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1878"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1947"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3188"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>&amp;İptal</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="331"/>
       <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
-      <translation type="unfinished">You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</translation>
+      <translation>Mevcut yayın yolunuzda QOwnNotes'ı taşınabilir modda çalıştırırsanız &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; ile karşılaşacaksınız.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1875"/>
       <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
-      <translation type="unfinished">Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</translation>
+      <translation>Yerel veritabanınızı temizlemek istediğinizden emin misiniz? Bu aynı zamanda yapılandırılmış not dosyalarınızı ve önbelleğe alınmış yapılacak işler ögenizi de siler!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1878"/>
       <source>Clear &amp;database</source>
-      <translation type="unfinished">Clear &amp;database</translation>
+      <translation>Temizle &amp;veritabanı</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2058"/>
       <source>Select editor application</source>
-      <translation type="unfinished">Select editor application</translation>
+      <translation>Düzenleyici uygulaması seçin</translation>
     </message>
   </context>
   <context>
@@ -4666,17 +4647,17 @@ Your notes will stay intact!</translation>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="20"/>
       <source>Share note</source>
-      <translation type="unfinished">Share note</translation>
+      <translation>Not paylaş</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="30"/>
       <source>Share note on ownCloud</source>
-      <translation type="unfinished">Share note on ownCloud</translation>
+      <translation>ownCloud üzerinden not paylaş</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="37"/>
       <source>The public url of your note</source>
-      <translation type="unfinished">The public url of your note</translation>
+      <translation>Notunuzun açık URL'si</translation>
     </message>
   </context>
   <context>
@@ -4684,102 +4665,102 @@ Your notes will stay intact!</translation>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="14"/>
       <source>Insert table</source>
-      <translation type="unfinished">Insert table</translation>
+      <translation>Tablo ekle</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="24"/>
       <source>Create table</source>
-      <translation type="unfinished">Create table</translation>
+      <translation>Tablo oluştur</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="30"/>
       <source>Column width:</source>
-      <translation type="unfinished">Column width:</translation>
+      <translation>Sütun genişliği:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="37"/>
       <source>Insert a table heading separator</source>
-      <translation type="unfinished">Insert a table heading separator</translation>
+      <translation>Bir tablo başlık ayırıcı ekle</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="47"/>
       <source>Columns:</source>
-      <translation>Stupci:</translation>
+      <translation>Sütunlar:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="67"/>
       <source>Rows:</source>
-      <translation>Reci:</translation>
+      <translation>Satırlar:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="87"/>
       <source>The amount of spaces in a column</source>
-      <translation type="unfinished">The amount of spaces in a column</translation>
+      <translation>Bir sütundaki boşluk miktarı</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="119"/>
       <source>Select table layout:</source>
-      <translation type="unfinished">Select table layout:</translation>
+      <translation>Tablo düzeni seç:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="126"/>
       <source>Separator column width:</source>
-      <translation type="unfinished">Separator column width:</translation>
+      <translation>Ayırıcı sütun genişliği:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="133"/>
       <source>The amount of dash characters in the separator</source>
-      <translation type="unfinished">The amount of dash characters in the separator</translation>
+      <translation>Ayırıcıdaki tire karakteri miktarı</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="150"/>
       <source>Import CSV file</source>
-      <translation type="unfinished">Import CSV file</translation>
+      <translation>CSV dosyası içe aktar</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="173"/>
       <source>Separator:</source>
-      <translation>Razdjelnik:</translation>
+      <translation>Ayırıcı:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="180"/>
       <source>Select file</source>
-      <translation>Odaberi datoteku</translation>
+      <translation>Dosya seç</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="191"/>
       <source>Please select the CSV file you want to import:</source>
-      <translation type="unfinished">Please select the CSV file you want to import:</translation>
+      <translation>İçe aktarmak istediğiniz CSV dosyasını seçin:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="231"/>
       <source>CSV file</source>
-      <translation type="unfinished">CSV file</translation>
+      <translation>CSV dosyası</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="238"/>
       <source>First line is the table heading</source>
-      <translation type="unfinished">First line is the table heading</translation>
+      <translation>İlk satır tablo başlığıdır</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="261"/>
       <source>Text-delimiter:</source>
-      <translation type="unfinished">Text-delimiter:</translation>
+      <translation>Metin-sınırlayıcı:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.cpp" line="148"/>
       <source>CSV files</source>
-      <translation type="unfinished">CSV files</translation>
+      <translation>CSV dosyaları</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.cpp" line="149"/>
       <source>All files</source>
-      <translation type="unfinished">All files</translation>
+      <translation>Tüm dosyalar</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.cpp" line="154"/>
       <source>Select CSV file to import</source>
-      <translation type="unfinished">Select CSV file to import</translation>
+      <translation>İçe aktarmak için CSV dosyası seç</translation>
     </message>
   </context>
   <context>
@@ -4787,17 +4768,17 @@ Your notes will stay intact!</translation>
     <message>
       <location filename="../dialogs/tagadddialog.ui" line="20"/>
       <source>Add a new tag</source>
-      <translation type="unfinished">Add a new tag</translation>
+      <translation>Yeni bir etiket ekle</translation>
     </message>
     <message>
       <location filename="../dialogs/tagadddialog.ui" line="30"/>
       <source>Add new tag</source>
-      <translation type="unfinished">Add new tag</translation>
+      <translation>Yeni etiket ekle</translation>
     </message>
     <message>
       <location filename="../dialogs/tagadddialog.ui" line="47"/>
       <source>New tag</source>
-      <translation type="unfinished">New tag</translation>
+      <translation>Yeni etiket</translation>
     </message>
   </context>
   <context>
@@ -4805,129 +4786,130 @@ Your notes will stay intact!</translation>
     <message>
       <location filename="../dialogs/tododialog.ui" line="14"/>
       <source>Todo</source>
-      <translation>Zadaci</translation>
+      <translation>Yapılacak</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="78"/>
       <location filename="../dialogs/tododialog.ui" line="85"/>
       <source>Priority</source>
-      <translation type="unfinished">Priority</translation>
+      <translation>Öncelik</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="113"/>
       <source>Reminder</source>
-      <translation type="unfinished">Reminder</translation>
+      <translation>Hatırlatıcı</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="157"/>
       <source>Summary</source>
-      <translation type="unfinished">Summary</translation>
+      <translation>Özet</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="191"/>
       <source>Save</source>
-      <translation type="unfinished">Save</translation>
+      <translation>Kaydet</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="100"/>
       <source>Save and insert into note</source>
-      <translation type="unfinished">Save and insert into note</translation>
+      <translation>Kaydet ve notun içine ekle</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="208"/>
       <source>Remove</source>
-      <translation type="unfinished">Remove</translation>
+      <translation>Kaldır</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="222"/>
       <source>Note...</source>
-      <translation type="unfinished">Note...</translation>
+      <translation>Not...</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="278"/>
       <source>Show completed items</source>
-      <translation type="unfinished">Show completed items</translation>
+      <translation>Tamamlanan öğeleri göster</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="285"/>
       <source>Reload the todo list from server</source>
-      <translation type="unfinished">Reload the todo list from server</translation>
+      <translation>Sunucudan yapılacak listesini yeniden yükle</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="319"/>
       <source>Search or create todo item</source>
-      <translation>Tražei ili stvori zadatak</translation>
+      <translation>Yapılacak öğesi ara veya oluştur</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="302"/>
       <source>select your todo list</source>
-      <translation>odaberi listu zadataka</translation>
+      <translation>yapılacaklar listenizi seçin</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="188"/>
       <source>Save the current todo item</source>
-      <translation type="unfinished">Save the current todo item</translation>
+      <translation>Geçerli yapılacaklar öğesini kaydet</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="104"/>
       <source>Save the current todo item and insert a link to it into the current note</source>
-      <translation type="unfinished">Save the current todo item and insert a link to it into the current note</translation>
+      <translation>Geçerli yapılacaklar öğesini kaydet ve geçerli not içesine bir link ekle</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="113"/>
       <source>Import the current todo item as new note</source>
-      <translation type="unfinished">Import the current todo item as new note</translation>
+      <translation>Geçerli yapılacaklar öğesini yeni not olarak içe aktar</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="109"/>
       <source>Import as note</source>
-      <translation type="unfinished">Import as note</translation>
+      <translation>Not olarak içe aktar</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="205"/>
       <source>Remove the current todo item</source>
-      <translation type="unfinished">Remove the current todo item</translation>
+      <translation>Geçerli yapılacak öğesini kaldır</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="288"/>
       <source>Reload...</source>
-      <translation type="unfinished">Reload...</translation>
+      <translation>Yeniden yükle...</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="309"/>
       <source>Todo list items are being loaded from the server</source>
-      <translation type="unfinished">Todo list items are being loaded from the server</translation>
+      <translation>Yapılacak listesi öğeleri sunucudan yükleniyor</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="124"/>
       <source>Reload from server</source>
-      <translation type="unfinished">Reload from server</translation>
+      <translation>Sunucudan yeniden yükle</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="128"/>
       <source>Reload tasks from server</source>
-      <translation type="unfinished">Reload tasks from server</translation>
+      <translation>Görevleri sunucudan yeniden yükle</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="133"/>
       <source>Clear cache and reload</source>
-      <translation type="unfinished">Clear cache and reload</translation>
+      <translation>Önbelleği temizle ve yeniden yükle</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="137"/>
       <source>Clear calendar cache and reload tasks from server</source>
-      <translation type="unfinished">Clear calendar cache and reload tasks from server</translation>
+      <translation>Takvim önbelleğini temizle ve görevleri sunucudan yeniden yükle</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="578"/>
       <source>Remove todo item</source>
-      <translation>Ukloni zadatak</translation>
+      <translation>Yapılacak öğesini kaldır</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="579"/>
       <source>Remove the selected todo item?
 This cannot be undone!</source>
-      <translation>Ukloniti odabrani zadatak? To ne može biti poništeno!</translation>
+      <translation>Seçilen yapılacak öğesi kaldırılsın mı?
+Bu geri alınamaz!</translation>
     </message>
   </context>
   <context>
@@ -4935,134 +4917,134 @@ This cannot be undone!</source>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="23"/>
       <source>Select a menu</source>
-      <translation type="unfinished">Select a menu</translation>
+      <translation>Bir menü seç</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="26"/>
       <source>Lists the avaliable menus to get the corresponding actions</source>
-      <translation type="unfinished">Lists the avaliable menus to get the corresponding actions</translation>
+      <translation>İlgili işlemleri almak için kullanılabilir menüleri listeler</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="33"/>
       <source>Select toolbar</source>
-      <translation type="unfinished">Select toolbar</translation>
+      <translation>Araç çubuğu seç</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="36"/>
       <source>List the available toolbars. The selected one will be edited</source>
-      <translation type="unfinished">List the available toolbars. The selected one will be edited</translation>
+      <translation>Kullanılabilir araç çubuklarını listele. Seçilmiş olan düzenlenmiş olacak</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="43"/>
       <source>Lists the actions in the selected toolbar</source>
-      <translation type="unfinished">Lists the actions in the selected toolbar</translation>
+      <translation>Seçilen araç çubuğunda görevleri listeler</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="52"/>
       <source>Add new Toolbar</source>
-      <translation type="unfinished">Add new Toolbar</translation>
+      <translation>Yeni Araç çubuğu ekle</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="55"/>
       <source>New</source>
-      <translation type="unfinished">New</translation>
+      <translation>Yeni</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="66"/>
       <source>Delete selected toolbar</source>
-      <translation type="unfinished">Delete selected toolbar</translation>
+      <translation>Seçilen araç çubuğunu sil</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="69"/>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="168"/>
       <source>Remove</source>
-      <translation type="unfinished">Remove</translation>
+      <translation>Kaldır</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="82"/>
       <source>Lists the available actions for the selected menu</source>
-      <translation type="unfinished">Lists the available actions for the selected menu</translation>
+      <translation>Seçilen menü için kullanılabilir görevleri listeler</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="104"/>
       <source>Move Up</source>
-      <translation type="unfinished">Move Up</translation>
+      <translation>Yukarı Taşı</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="107"/>
       <source>Moves the selected toolbar item up</source>
-      <translation type="unfinished">Moves the selected toolbar item up</translation>
+      <translation>Seçilen araç çubuğu öğesini yukarı taşır</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="110"/>
       <source>Move &amp;Up</source>
-      <translation type="unfinished">Move &amp;Up</translation>
+      <translation>Yukarı &amp;Taşı</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="121"/>
       <source>Move Down</source>
-      <translation type="unfinished">Move Down</translation>
+      <translation>Aşağı Taşı</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="124"/>
       <source>moves the selected toolbar item down</source>
-      <translation type="unfinished">moves the selected toolbar item down</translation>
+      <translation>seçilen araç çubuğu öğesini aşağı taşır</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="127"/>
       <source>Move &amp;Down</source>
-      <translation type="unfinished">Move &amp;Down</translation>
+      <translation>Aşağı &amp;Taşı</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="151"/>
       <source>Insert</source>
-      <translation type="unfinished">Insert</translation>
+      <translation>Ekle</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="154"/>
       <source>Adds the selected menu action to the toolbar</source>
-      <translation type="unfinished">Adds the selected menu action to the toolbar</translation>
+      <translation>Araç çubuğuna seçilen menü görevini ekler</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="157"/>
       <source>&amp;Insert</source>
-      <translation type="unfinished">&amp;Insert</translation>
+      <translation>&amp;Ekle</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="171"/>
       <source>Removes the selected item from the active toolbar</source>
-      <translation type="unfinished">Removes the selected item from the active toolbar</translation>
+      <translation>Aktif araç çubuğundan seçilen öğeleri kaldırır</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="174"/>
       <source>&amp;Remove</source>
-      <translation type="unfinished">&amp;Remove</translation>
+      <translation>&amp;Kaldır</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="198"/>
       <source>Separator</source>
-      <translation type="unfinished">Separator</translation>
+      <translation>Ayırıcı</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="201"/>
       <source>&amp;Separator</source>
-      <translation type="unfinished">&amp;Separator</translation>
+      <translation>&amp;Ayırıcı</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="190"/>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="214"/>
       <source>--(separator)--</source>
-      <translation type="unfinished">--(separator)--</translation>
+      <translation>--(ayırıcı)--</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="307"/>
       <source>Remove current toolbar</source>
-      <translation type="unfinished">Remove current toolbar</translation>
+      <translation>Geçerli araç çubuğunu kaldır</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="308"/>
       <source>Remove the current toolbar?</source>
-      <translation type="unfinished">Remove the current toolbar?</translation>
+      <translation>Geçerli araç çubuğu kaldırılsın mı?</translation>
     </message>
   </context>
   <context>
@@ -5070,32 +5052,32 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/trashdialog.ui" line="14"/>
       <source>Trashed notes</source>
-      <translation type="unfinished">Trashed notes</translation>
+      <translation>Çöpe atılan notlar</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="24"/>
       <source>&amp;Restore selected note on server</source>
-      <translation type="unfinished">&amp;Restore selected note on server</translation>
+      <translation>&amp;Sunucudaki seçilen notları onar</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="25"/>
       <source>&lt;h3&gt;Slower, but with note versions&lt;/h3&gt;&lt;p&gt;The note will be restored on your ownCloud server with all versions.&lt;/p&gt;&lt;p&gt;You will have to wait until it is synced to QOwnNotes by ownCloud sync.&lt;/p&gt;</source>
-      <translation type="unfinished">&lt;h3&gt;Slower, but with note versions&lt;/h3&gt;&lt;p&gt;The note will be restored on your ownCloud server with all versions.&lt;/p&gt;&lt;p&gt;You will have to wait until it is synced to QOwnNotes by ownCloud sync.&lt;/p&gt;</translation>
+      <translation>&lt;h3&gt;Daha yavaş, fakat not sürümleriyle&lt;/h3&gt;&lt;p&gt;Tüm sürümleriyle ownCloud sunucunuzda not onarılmış olacak.&lt;/p&gt;&lt;p&gt;ownCloud senkronizasyonu ile QOwnNotes senkronize edilene kadar beklemek zorunda kalacaksınız.&lt;/p&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="38"/>
       <source>&amp;Download selected note</source>
-      <translation>&amp;Skini odabranu bilješku</translation>
+      <translation>&amp;Seçilen notu indir</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="39"/>
       <source>&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</source>
-      <translation type="unfinished">&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</translation>
+      <translation>&lt;h3&gt;Daha hızlı, fakat sürümler olmadan&lt;/h3&gt;&lt;p&gt; not önizlemeden metinle oluşturulmuş olacak.&lt;/p&gt;&lt;p&gt; ownCloud sunucunuzdaki not sürümleri onarılmış olmayacak ve not not çöpte kalacak.&lt;/p&gt;&lt;p&gt;Notu ve sürümlerine daha sonra her zaman onarabilirsiniz.&lt;/p&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="52"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>&amp;İptal</translation>
     </message>
   </context>
   <context>
@@ -5103,106 +5085,106 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="14"/>
       <source>Update available</source>
-      <translation type="unfinished">Update available</translation>
+      <translation>Güncelleme mevcut</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="26"/>
       <source>A new update of QOwnNotes is available!</source>
-      <translation type="unfinished">A new update of QOwnNotes is available!</translation>
+      <translation>Yeni bir QOwnNotes güncellemesi mevcut!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="69"/>
       <source>Do you want to download the new version?</source>
-      <translation type="unfinished">Do you want to download the new version?</translation>
+      <translation>Yeni sürümü indirmek istiyor musunuz?</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="76"/>
       <source>QOwnNotes will be downloaded in your default browser.</source>
-      <translation type="unfinished">QOwnNotes will be downloaded in your default browser.</translation>
+      <translation>QOwnNotes varsayılan tarayıcınıza indirilmiş olacak.</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="83"/>
       <source>Keep in mind that QOwnNotes needs to run from a location where you have write access to for the automatic update to work!</source>
-      <translation type="unfinished">Keep in mind that QOwnNotes needs to run from a location where you have write access to for the automatic update to work!</translation>
+      <translation>Otomatik güncellemenin çalışması için yazma erişiminizin olduğu bir konumdan QOwnNotes'un çalışması gerektiğini unutmayın!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="93"/>
       <source>&lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes"&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
-      <translation type="unfinished">&lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes"&gt;Get involved with QOwnNotes&lt;/a&gt;</translation>
+      <translation>&lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes"&gt;QOwnNotes'a dahil ol&lt;/a&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="106"/>
       <source>%p% downloaded</source>
-      <translation type="unfinished">%p% downloaded</translation>
+      <translation>%p% indirildi</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="45"/>
       <source>&amp;Update</source>
-      <translation type="unfinished">&amp;Update</translation>
+      <translation>&amp;Güncelle</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="58"/>
       <source>&amp;Download latest</source>
-      <translation type="unfinished">&amp;Download latest</translation>
+      <translation>&amp;En sonu indir</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="56"/>
       <source>Just download</source>
-      <translation type="unfinished">Just download</translation>
+      <translation>&amp;İndir</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="72"/>
       <source>&amp;Skip version</source>
-      <translation type="unfinished">&amp;Skip version</translation>
+      <translation>&amp;Sürümü geç</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="82"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>&amp;İptal</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="230"/>
       <source>Download error</source>
-      <translation type="unfinished">Download error</translation>
+      <translation>İndirme hatası</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="231"/>
       <source>Error while downloading:
 %1</source>
-      <translation type="unfinished">Error while downloading:
+      <translation>İndirme sırasında hata:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="233"/>
       <source>network error: %1</source>
-      <translation type="unfinished">network error: %1</translation>
+      <translation>ağ hatası:%1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="256"/>
       <location filename="../dialogs/updatedialog.cpp" line="277"/>
       <location filename="../dialogs/updatedialog.cpp" line="374"/>
       <source>File error</source>
-      <translation type="unfinished">File error</translation>
+      <translation>Dosya hatası</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="257"/>
       <location filename="../dialogs/updatedialog.cpp" line="375"/>
       <source>Could not open temporary file:
 %1</source>
-      <translation type="unfinished">Could not open temporary file:
+      <translation>Geçici dosya açılamadı:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="278"/>
       <source>Could not store downloaded file:
 %1</source>
-      <translation type="unfinished">Could not store downloaded file:
+      <translation>İndirilen dosya depolanamadı:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="332"/>
       <source>Do you want to update and restart QOwnNotes?</source>
-      <translation type="unfinished">Do you want to update and restart QOwnNotes?</translation>
+      <translation>QOwnNotes'u güncellemek ve yeniden başlatmak istiyor musunuz?</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="347"/>
@@ -5213,51 +5195,51 @@ This cannot be undone!</source>
       <location filename="../dialogs/updatedialog.cpp" line="471"/>
       <location filename="../dialogs/updatedialog.cpp" line="480"/>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Hata</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="348"/>
       <source>Could not find updater file:
 %1</source>
-      <translation type="unfinished">Could not find updater file:
+      <translation>Güncelleyici dosya bulunamadı:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="435"/>
       <source>Updater script '%1' doesn't exist!</source>
-      <translation type="unfinished">Updater script '%1' doesn't exist!</translation>
+      <translation>Güncelleyici script '%1' yok!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="444"/>
       <source>Updater unzip executable '%1' doesn't exist!</source>
-      <translation type="unfinished">Updater unzip executable '%1' doesn't exist!</translation>
+      <translation>Güncelleyici unzip yürütülebilir '%1' yok!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="453"/>
       <location filename="../dialogs/updatedialog.cpp" line="462"/>
       <source>Could not copy updater script '%1' to '%2'!</source>
-      <translation type="unfinished">Could not copy updater script '%1' to '%2'!</translation>
+      <translation>Güncelleyici script '%1' '%2'ye kopyalanamadı!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="472"/>
       <source>Couldn't find updater script: %1</source>
-      <translation type="unfinished">Couldn't find updater script: %1</translation>
+      <translation>Güncelleyici script bulunamadı: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="481"/>
       <source>Couldn't find unzip executable: %1</source>
-      <translation type="unfinished">Couldn't find unzip executable: %1</translation>
+      <translation>Unzip yürütülebilir bulunamadı: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="331"/>
       <location filename="../dialogs/updatedialog.cpp" line="487"/>
       <source>Proceed with update</source>
-      <translation type="unfinished">Proceed with update</translation>
+      <translation>Güncelleme ile devam et</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="488"/>
       <source>The download is now finished. Do you want to update and restart QOwnNotes?</source>
-      <translation type="unfinished">The download is now finished. Do you want to update and restart QOwnNotes?</translation>
+      <translation>İndirme şimdi bitirildi. QOwnNotes'u güncellemek ve yeniden başlatmak istiyor musunuz?</translation>
     </message>
   </context>
   <context>
@@ -5267,32 +5249,32 @@ This cannot be undone!</source>
       <location filename="../services/updateservice.cpp" line="116"/>
       <location filename="../services/updateservice.cpp" line="135"/>
       <source>Update-checker error</source>
-      <translation type="unfinished">Update-checker error</translation>
+      <translation>Güncelleme-denetleyici hatası</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="103"/>
       <source>Network reply error: %1</source>
-      <translation type="unfinished">Network reply error: %1</translation>
+      <translation>Ağ cevap hatası: %1</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="117"/>
       <source>No data was received by the network request!</source>
-      <translation type="unfinished">No data was received by the network request!</translation>
+      <translation>Ağ isteğinden veri alınmadı!</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="136"/>
       <source>The data from the network request could not be interpreted!</source>
-      <translation type="unfinished">The data from the network request could not be interpreted!</translation>
+      <translation>Ağ isteğindeki veriler yorumlanamadı!</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="228"/>
       <source>No updates</source>
-      <translation type="unfinished">No updates</translation>
+      <translation>Güncelleme yok</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="229"/>
       <source>There are no updates available.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; is the latest version.</source>
-      <translation type="unfinished">There are no updates available.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; is the latest version.</translation>
+      <translation>Mevcut güncelleme yok.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; son sürümdür.</translation>
     </message>
   </context>
   <context>
@@ -5300,27 +5282,27 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/versiondialog.ui" line="14"/>
       <source>Note versions on your ownCloud server</source>
-      <translation type="unfinished">Note versions on your ownCloud server</translation>
+      <translation>ownCloud sunucunuzdaki not sürümleri</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.ui" line="65"/>
       <source>Diff</source>
-      <translation type="unfinished">Diff</translation>
+      <translation>Diff</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.ui" line="98"/>
       <source>Note text</source>
-      <translation type="unfinished">Note text</translation>
+      <translation>Not metni</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.cpp" line="25"/>
       <source>&amp;Restore selected version</source>
-      <translation type="unfinished">&amp;Restore selected version</translation>
+      <translation>&amp;Seçilen sürümü onar</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.cpp" line="34"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>&amp;İptal</translation>
     </message>
   </context>
   <context>
@@ -5329,97 +5311,97 @@ This cannot be undone!</source>
       <location filename="../dialogs/welcomedialog.ui" line="14"/>
       <location filename="../dialogs/welcomedialog.ui" line="56"/>
       <source>Welcome to QOwnNotes</source>
-      <translation type="unfinished">Welcome to QOwnNotes</translation>
+      <translation>QOwnNotes'a hoş geldiniz</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="24"/>
       <source>the plain-text file notepad with markdown support and ownCloud integration</source>
-      <translation type="unfinished">the plain-text file notepad with markdown support and ownCloud integration</translation>
+      <translation>markdown desteği ve ownCloud entegrasyonu ile düz metin dosyası not defteri</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="88"/>
       <source>&amp;Back</source>
-      <translation type="unfinished">&amp;Back</translation>
+      <translation>&amp;Geri</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="99"/>
       <source>&amp;Next</source>
-      <translation type="unfinished">&amp;Next</translation>
+      <translation>&amp;Sonraki</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="116"/>
       <source>&amp;Finished</source>
-      <translation type="unfinished">&amp;Finished</translation>
+      <translation>&amp;Bitirildi</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="139"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>&amp;İptal</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="168"/>
       <source>Note folder</source>
-      <translation type="unfinished">Note folder</translation>
+      <translation>&amp;Not klasörü</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="184"/>
       <source>Create note folder if not existing</source>
-      <translation type="unfinished">Create note folder if not existing</translation>
+      <translation>Mevcut değilse not klasörü oluşturun</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="225"/>
       <source>Note folder path</source>
-      <translation type="unfinished">Note folder path</translation>
+      <translation>Not klasörü yolu</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="232"/>
       <source>Select folder</source>
-      <translation>Odaberi mapu</translation>
+      <translation>Klasör seç</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="307"/>
       <source>Open ownCloud settings</source>
-      <translation type="unfinished">Open ownCloud settings</translation>
+      <translation>ownCloud ayarlarını aç</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="349"/>
       <source>Open network settings</source>
-      <translation type="unfinished">Open network settings</translation>
+      <translation>Ağ ayarlarını aç</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="194"/>
       <source>Please select where you want to store your notes:</source>
-      <translation type="unfinished">Please select where you want to store your notes:</translation>
+      <translation>Lütfen notlarınızı depolamak istediğiniz yeri seçin:</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="284"/>
       <source>If you want to be able to access your note versions and your trashed notes on your ownCloud server you can configure QOwnNotes for it now. You can also do so at later.</source>
-      <translation type="unfinished">If you want to be able to access your note versions and your trashed notes on your ownCloud server you can configure QOwnNotes for it now. You can also do so at later.</translation>
+      <translation>Not sürümlerinize ve çöp kutusundaki notlarınıza ownCloud sunucunuzdaki notlarınıza erişebilmek istiyorsanız, QOwnNotes'u şu an için yapılandırabilirsiniz. Bunu daha sonra da yapabilirsiniz.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="314"/>
       <source>In any case you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</source>
-      <translation type="unfinished">In any case you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</translation>
+      <translation>Her durumda ownCloud senkron istemcisini (veya herhangi bir senkron istemcisi) ownCloud sunucuzla notlarınıza senkronizasyon etmeniz gerekir.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="356"/>
       <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
-      <translation type="unfinished">QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</translation>
+      <translation>QOwnNotes anonim kullanım verilerini izleyecek, bu QOwnNotes'un hangi bölümlerinin iyileştirileceğine karar vermeye ve bulmaya yardımcı oluyor ve bugları düzeltiyor. Bu hareketi ayarlardan devre dışı bırakabilirsiniz.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="77"/>
       <source>Cannot create note path!</source>
-      <translation type="unfinished">Cannot create note path!</translation>
+      <translation>Not yolu oluşturulamıyor!</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="82"/>
       <source>This note path doesn't exist!</source>
-      <translation type="unfinished">This note path doesn't exist!</translation>
+      <translation>Bu not yolu yok!</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="145"/>
       <source>Please select the folder where your notes will get stored to</source>
-      <translation type="unfinished">Please select the folder where your notes will get stored to</translation>
+      <translation>Lütfen notlarınızın depolanacağı klasör seçin</translation>
     </message>
   </context>
   <context>
@@ -5427,17 +5409,17 @@ This cannot be undone!</source>
     <message>
       <location filename="../main.cpp" line="69"/>
       <source>Runs the application in portable mode.</source>
-      <translation type="unfinished">Runs the application in portable mode.</translation>
+      <translation>Uygumayı taşınabilir modda çalıştırır.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="73"/>
       <source>Clears the settings and runs the application.</source>
-      <translation type="unfinished">Clears the settings and runs the application.</translation>
+      <translation>Ayarları temizler ve uygulamayı çalıştırır.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="77"/>
       <source>Runs the application in a different context for settings and internal files.</source>
-      <translation type="unfinished">Runs the application in a different context for settings and internal files.</translation>
+      <translation>Ayarlar ve dahili dosyalar için uygulamayı farklı bir durumda çalıştırır.</translation>
     </message>
   </context>
 </TS>

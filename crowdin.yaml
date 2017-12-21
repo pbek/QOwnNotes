@@ -42,6 +42,7 @@ files:
         "uk_UA" : "uk",
         "zh_CN" : "zh",
         "id_ID" : "id",
-        "bn_BD" : "bn"
+        "bn_BD" : "bn",
+        "tr_TR" : "tr"
       }
     }

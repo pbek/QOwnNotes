@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>600</width>
-    <height>400</height>
+    <width>1175</width>
+    <height>1025</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -361,7 +361,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>16</number>
+            <number>4</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -2139,6 +2139,17 @@
                         </property>
                         <property name="whatsThis">
                          <string notr="true">sv</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string notr="true">Türkçe</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Turkish</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">tr</string>
                         </property>
                        </item>
                        <item>
@@ -4642,6 +4653,11 @@ git config --global user.name &quot;Your name&quot;</string>
  </widget>
  <customwidgets>
   <customwidget>
+   <class>Label</class>
+   <extends>QLabel</extends>
+   <header location="global">widgets/label.h</header>
+  </customwidget>
+  <customwidget>
    <class>QOwnNotesMarkdownTextEdit</class>
    <extends>QPlainTextEdit</extends>
    <header location="global">widgets/qownnotesmarkdowntextedit.h</header>
@@ -4659,19 +4675,14 @@ git config --global user.name &quot;Your name&quot;</string>
    <container>1</container>
   </customwidget>
   <customwidget>
-   <class>Label</class>
-   <extends>QLabel</extends>
-   <header location="global">widgets/label.h</header>
-  </customwidget>
-  <customwidget>
    <class>ScriptListWidget</class>
    <extends>QListWidget</extends>
    <header>widgets/scriptlistwidget.h</header>
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../breeze-dark-qownnotes.qrc"/>
   <include location="../breeze-qownnotes.qrc"/>
+  <include location="../breeze-dark-qownnotes.qrc"/>
  </resources>
  <connections>
   <connection>
