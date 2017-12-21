@@ -6,6 +6,7 @@
     - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes/)
       to make QOwnNotes available in more languages or help with the current 
       translation
+- added some preset text when opening a GitHug issue to share a new editor schema
 - added more Indonesian, French, Spanish, Brazilian Portuguese, Polish, German,
   Catalan, Italian, Hungarian and Dutch translation (thank you zikraa,
   bepolymathe, richarson, mlimacarlos, lucjan, rakekniven, MGuerra, mlocati 

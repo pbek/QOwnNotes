@@ -753,10 +753,15 @@ void FontColorWidget::on_fontSizeAdaptionSpinBox_valueChanged(int value) {
 }
 
 /**
- * Open the GitHub issues page to share a schema
+ * Opens a new GitHub issue to share a schema
  */
 void FontColorWidget::on_shareSchemaPushButton_clicked() {
-    QDesktopServices::openUrl(QUrl("https://github.com/pbek/QOwnNotes/issues"));
+    QDesktopServices::openUrl(
+            QUrl("https://github.com/pbek/QOwnNotes/issues/new?title=" +
+                   QUrl::toPercentEncoding("New editor schema: <schema-name>") +
+                   "&body=" + QUrl::toPercentEncoding(
+                    "I want to submit a new editor schema.\n\n"
+                            "(upload your schema)")));
 }
 
 /**
