@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1175</width>
-    <height>1025</height>
+    <width>600</width>
+    <height>400</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -4395,7 +4395,7 @@ git config --global user.name &quot;Your name&quot;</string>
             <property name="enabled">
              <bool>true</bool>
             </property>
-            <layout class="QGridLayout" name="gridLayout_55">
+            <layout class="QGridLayout" name="gridLayout_63">
              <item row="3" column="0">
               <widget class="QGroupBox" name="tagsPanelGroupBox">
                <property name="title">
