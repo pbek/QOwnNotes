@@ -5,6 +5,8 @@
   in the *Editor settings* that you can turn off so you can use the *Editor width*
   setting from the *Window menu* also if you are not in the distraction free mode
   (for [#814](https://github.com/pbek/QOwnNotes/issues/814))
+- added more Indonesian, Spanish, Brazilian Portuguese, Catalan and Italian
+  translation (thank you zmni, richarson, mlimacarlos, MGuerra and mlocati)
 
 ## 17.12.6
 - added **Turkish translation** (a big thank you to omeratagun, realinfo,
