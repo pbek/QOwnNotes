@@ -496,6 +496,10 @@ private slots:
 
     void on_actionCheck_for_script_updates_triggered();
 
+    void noteTextEditResize(QResizeEvent *event);
+
+    void encryptedNoteTextEditResize(QResizeEvent *event);
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;

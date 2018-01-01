@@ -205,13 +205,16 @@ void QOwnNotesMarkdownTextEdit::setPaperMargins(int width) {
     QSettings settings;
     bool isInDistractionFreeMode =
             settings.value("DistractionFreeMode/isEnabled").toBool();
+    bool editorWidthInDFMOnly =
+            settings.value("Editor/editorWidthInDFMOnly", true).toBool();
 
-    if (width == -1) {
-        width = this->width();
-    }
-
-    if (isInDistractionFreeMode) {
+    if (isInDistractionFreeMode || !editorWidthInDFMOnly) {
         int margin = 0;
+
+        if (width == -1) {
+            width = this->width();
+        }
+
         int editorWidthMode =
                 settings.value("DistractionFreeMode/editorWidthMode").toInt();
 
@@ -252,6 +255,11 @@ void QOwnNotesMarkdownTextEdit::setPaperMargins(int width) {
     } else {
         setViewportMargins(10, 10, 10, 0);
     }
+}
+
+void QOwnNotesMarkdownTextEdit::resizeEvent(QResizeEvent* event) {
+    emit resize(event);
+    QMarkdownTextEdit::resizeEvent(event);
 }
 
 /**

@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 18.01.0
+- there now is a new setting `Only use editor width setting in distraction free mode`
+  in the *Editor settings* that you can turn off so you can use the *Editor width*
+  setting from the *Window menu* also if you are not in the distraction free mode
+  (for [#814](https://github.com/pbek/QOwnNotes/issues/814))
+
 ## 17.12.6
 - added **Turkish translation** (a big thank you to omeratagun, realinfo,
   ihtiht and Apsimati)

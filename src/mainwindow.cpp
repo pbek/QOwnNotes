@@ -293,18 +293,18 @@ MainWindow::MainWindow(QWidget *parent) :
             QStringList() << "note" << "task");
 
     // handle note url externally in the note text edit
-    QObject::connect(
-            ui->noteTextEdit,
-            SIGNAL(urlClicked(QString)),
-            this,
-            SLOT(openLocalUrl(QString)));
+    QObject::connect(ui->noteTextEdit, SIGNAL(urlClicked(QString)),
+                     this, SLOT(openLocalUrl(QString)));
 
     // also handle note url externally in the encrypted note text edit
-    QObject::connect(
-            ui->encryptedNoteTextEdit,
-            SIGNAL(urlClicked(QString)),
-            this,
-            SLOT(openLocalUrl(QString)));
+    QObject::connect(ui->encryptedNoteTextEdit, SIGNAL(urlClicked(QString)),
+                     this, SLOT(openLocalUrl(QString)));
+
+    // handle note text edit resize events
+    QObject::connect(ui->noteTextEdit, SIGNAL(resize(QResizeEvent *)),
+                     this, SLOT(noteTextEditResize(QResizeEvent *)));
+    QObject::connect(ui->encryptedNoteTextEdit, SIGNAL(resize(QResizeEvent *)),
+                     this, SLOT(encryptedNoteTextEditResize(QResizeEvent *)));
 
     // set the tab stop to the width of 4 spaces in the editor
     const int tabStop = 4;
@@ -2212,6 +2212,9 @@ void MainWindow::readSettingsFromSettingsDialog() {
     int cursorWidth = settings.value("cursorWidth", 1).toInt();
     ui->noteTextEdit->setCursorWidth(cursorWidth);
     ui->encryptedNoteTextEdit->setCursorWidth(cursorWidth);
+
+    ui->noteTextEdit->setPaperMargins();
+    ui->encryptedNoteTextEdit->setPaperMargins();
 }
 
 /**
@@ -5900,12 +5903,11 @@ void MainWindow::trackAction(QAction *action) {
 }
 
 void MainWindow::resizeEvent(QResizeEvent* event) {
-    ui->noteTextEdit->setPaperMargins(event->size().width());
-    ui->encryptedNoteTextEdit->setPaperMargins(event->size().width());
     ui->tagTreeWidget->resizeColumnToContents(0);
     ui->tagTreeWidget->resizeColumnToContents(1);
     ui->noteSubFolderTreeWidget->resizeColumnToContents(0);
     ui->noteSubFolderTreeWidget->resizeColumnToContents(1);
+    QMainWindow::resizeEvent(event);
 }
 
 /**
@@ -9751,4 +9753,12 @@ void MainWindow::on_actionCheck_for_script_updates_triggered() {
 
     // reload the scripting engine
     ScriptingService::instance()->reloadEngine();
+}
+
+void MainWindow::noteTextEditResize(QResizeEvent* event) {
+    ui->noteTextEdit->setPaperMargins();
+}
+
+void MainWindow::encryptedNoteTextEditResize(QResizeEvent* event) {
+    ui->encryptedNoteTextEdit->setPaperMargins();
 }

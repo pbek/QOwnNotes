@@ -36,6 +36,7 @@ public:
 
 protected:
     void insertFromMimeData(const QMimeData * source);
+    void resizeEvent(QResizeEvent* event);
 
 private slots:
     void highlightCurrentLine();
@@ -44,6 +45,9 @@ private:
     MainWindow *mainWindow;
 
     void setFormatStyle(MarkdownHighlighter::HighlighterState index);
+
+Q_SIGNALS:
+    void resize(QResizeEvent* event);
 };
 
 #endif // QOWNNOTESMARKDOWNTEXTEDIT_H
