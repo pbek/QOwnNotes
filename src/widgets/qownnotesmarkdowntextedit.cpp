@@ -38,8 +38,8 @@ void QOwnNotesMarkdownTextEdit::setStyles() {
     MarkdownHighlighter::HighlightingOptions options;
 
     if (settings.value("fullyHighlightedBlockquotes").toBool()) {
-        options.setFlag(MarkdownHighlighter::HighlightingOption
-                        ::FullyHighlightedBlockQuote);
+        options |= MarkdownHighlighter::HighlightingOption
+            ::FullyHighlightedBlockQuote;
     }
 
     _highlighter = new MarkdownHighlighter(document(), options);
