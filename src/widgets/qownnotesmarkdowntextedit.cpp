@@ -34,6 +34,16 @@ void QOwnNotesMarkdownTextEdit::setFormatStyle(
  * Sets the highlighting styles for the text edit
  */
 void QOwnNotesMarkdownTextEdit::setStyles() {
+    QSettings settings;
+    MarkdownHighlighter::HighlightingOptions options;
+
+    if (settings.value("fullyHighlightedBlockquotes").toBool()) {
+        options.setFlag(MarkdownHighlighter::HighlightingOption
+                        ::FullyHighlightedBlockQuote);
+    }
+
+    _highlighter = new MarkdownHighlighter(document(), options);
+
     QFont font = Utils::Schema::getEditorTextFont();
     setFont(font);
 

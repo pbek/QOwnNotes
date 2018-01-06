@@ -535,6 +535,8 @@ void SettingsDialog::storeSettings() {
                       getSelectedListWidgetValue(ui->languageListWidget));
     settings.setValue("markdownHighlightingEnabled",
                       ui->markdownHighlightingCheckBox->isChecked());
+    settings.setValue("fullyHighlightedBlockquotes",
+                      ui->fullyHighlightedBlockquotesCheckBox->isChecked());
     settings.setValue("MainWindow/noteTextView.rtl",
                       ui->noteTextViewRTLCheckBox->isChecked());
     settings.setValue("Debug/fakeOldVersionNumber",
@@ -824,6 +826,8 @@ void SettingsDialog::readSettings() {
             settings.value("Editor/editorWidthInDFMOnly", true).toBool());
     ui->markdownHighlightingCheckBox->setChecked(
             settings.value("markdownHighlightingEnabled", true).toBool());
+    ui->fullyHighlightedBlockquotesCheckBox->setChecked(
+            settings.value("fullyHighlightedBlockquotes").toBool());
     ui->allowOnlyOneAppInstanceCheckBox->setChecked(settings.value(
             "allowOnlyOneAppInstance").toBool());
     ui->closeTodoListAfterSaveCheckBox->setChecked(settings.value(
@@ -3498,4 +3502,8 @@ void SettingsDialog::on_resetMessageBoxesButton_clicked() {
         settings.remove("");
         settings.endGroup();
     }
+}
+
+void SettingsDialog::on_markdownHighlightingCheckBox_toggled(bool checked) {
+    ui->markdownHighlightingFrame->setEnabled(checked);
 }

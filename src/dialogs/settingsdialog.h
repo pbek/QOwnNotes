@@ -228,6 +228,8 @@ private slots:
 
     void on_resetMessageBoxesButton_clicked();
 
+    void on_markdownHighlightingCheckBox_toggled(bool checked);
+
 private:
 
     Ui::SettingsDialog *ui;

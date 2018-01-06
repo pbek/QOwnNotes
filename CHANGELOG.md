@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 18.01.1
+- there now is a new checkbox in the *Editor settings* to fully highlight blockquotes
+  instead of just the `>` (for [#822](https://github.com/pbek/QOwnNotes/issues/822))
+
 ## 18.01.0
 - there now is a new setting `Only use editor width setting in distraction free mode`
   in the *Editor settings* that you can turn off so you can use the *Editor width*
