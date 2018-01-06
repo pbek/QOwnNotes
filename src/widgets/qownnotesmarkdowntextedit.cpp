@@ -72,8 +72,6 @@ void QOwnNotesMarkdownTextEdit::setStyles() {
     setFormatStyle(MarkdownHighlighter::HighlighterState::Table);
 
 #ifdef Q_OS_WIN32
-    QSettings settings;
-
     // set the selection background color to a light blue if not in dark mode
     if (!settings.value("darkMode").toBool()) {
         // light green (#9be29b) could be an other choice, but be aware that
