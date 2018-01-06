@@ -1770,6 +1770,8 @@ QIcon MainWindow::getSystemTrayIcon() {
  * folder tables
  */
 void MainWindow::loadNoteDirectoryList() {
+    qDebug() << __func__;
+
     const QSignalBlocker blocker(ui->noteTextEdit);
     Q_UNUSED(blocker);
 
@@ -3038,6 +3040,10 @@ void MainWindow::setCurrentNote(Note note,
                                 bool updateNoteText,
                                 bool updateSelectedNote,
                                 bool addNoteToHistory) {
+    qDebug() << __func__ << " - 'note': " << note
+             << " - 'updateNoteText': " << updateNoteText
+             << " - 'updateSelectedNote': " << updateSelectedNote;
+
     MetricsService::instance()->sendVisitIfEnabled("note/current-note/changed");
 
     enableShowVersionsButton();
@@ -8190,7 +8196,7 @@ void MainWindow::on_noteTreeWidget_currentItemChanged(
 
     int noteId = current->data(0, Qt::UserRole).toInt();
     Note note = Note::fetch(noteId);
-    qDebug() << "currentItemChanged " << note;
+    qDebug() << __func__;
 
     setCurrentNote(note, true, false);
 
