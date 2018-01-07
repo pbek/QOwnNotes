@@ -4,8 +4,9 @@ os: unstable
 skip_tags: true
 
 install:
-#  - set QTDIR=C:\Qt\5.6\mingw49_32
-  - set QTDIR=C:\Qt\5.7\mingw53_32
+  # https://www.appveyor.com/docs/build-environment/
+#  - set QTDIR=C:\Qt\5.7\mingw53_32
+  - set QTDIR=C:\Qt\5.9.2\mingw53_32
   - set PATH=%PATH%;%QTDIR%\bin;C:\MinGW\bin
   - set RELEASE_PATH=appveyor\release
 
@@ -54,7 +55,7 @@ build_script:
   - copy "..\libstdc++-6.dll" . /y
   # for some reason AppVeyor or windeployqt uses a copy of the German
   # translation file as English one, which screws up the English user interface
-  - del "translations\qt_en.qm"
+  #- del "translations\qt_en.qm"
 
 artifacts:
   # pushing entire folder as a zip archive
