@@ -4,6 +4,7 @@
 - attempted to fix drawing problems in the note edit widget and possible 
   crashes in Windows (for [#826](https://github.com/pbek/QOwnNotes/issues/826)
   and [#717](https://github.com/pbek/QOwnNotes/issues/717))
+- the Windows release is now built with Qt 5.9.2
 - attempted to fix some character-set issues with snaps (thank you @popey)
 
 ## 18.01.1
