@@ -19,6 +19,8 @@ apps:
       - network
       - network-bind
       - home
+      - desktop
+      - desktop-legacy
 
 parts:
   qownnotes:
