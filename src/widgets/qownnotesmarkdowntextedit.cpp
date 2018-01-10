@@ -15,6 +15,16 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
     connect(this, SIGNAL(cursorPositionChanged()),
             this, SLOT(highlightCurrentLine()));
     highlightCurrentLine();
+
+    QSettings settings;
+    MarkdownHighlighter::HighlightingOptions options;
+
+    if (settings.value("fullyHighlightedBlockquotes").toBool()) {
+        options |= MarkdownHighlighter::HighlightingOption
+        ::FullyHighlightedBlockQuote;
+    }
+
+    _highlighter = new MarkdownHighlighter(document(), options);
 }
 
 /**
@@ -34,16 +44,6 @@ void QOwnNotesMarkdownTextEdit::setFormatStyle(
  * Sets the highlighting styles for the text edit
  */
 void QOwnNotesMarkdownTextEdit::setStyles() {
-    QSettings settings;
-    MarkdownHighlighter::HighlightingOptions options;
-
-    if (settings.value("fullyHighlightedBlockquotes").toBool()) {
-        options |= MarkdownHighlighter::HighlightingOption
-            ::FullyHighlightedBlockQuote;
-    }
-
-    _highlighter = new MarkdownHighlighter(document(), options);
-
     QFont font = Utils::Schema::getEditorTextFont();
     setFont(font);
 
@@ -72,6 +72,8 @@ void QOwnNotesMarkdownTextEdit::setStyles() {
     setFormatStyle(MarkdownHighlighter::HighlighterState::Table);
 
 #ifdef Q_OS_WIN32
+    QSettings settings;
+
     // set the selection background color to a light blue if not in dark mode
     if (!settings.value("darkMode").toBool()) {
         // light green (#9be29b) could be an other choice, but be aware that
