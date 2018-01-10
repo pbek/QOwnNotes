@@ -3667,7 +3667,7 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4148"/>
       <source>Fully highlight blockquotes</source>
-      <translation type="unfinished">Fully highlight blockquotes</translation>
+      <translation>Block-Zitate vollständig hervorheben</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4181"/>
@@ -3757,7 +3757,7 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4238"/>
       <source>Only use editor width setting in distraction free mode</source>
-      <translation type="unfinished">Only use editor width setting in distraction free mode</translation>
+      <translation>Die Breiteneinstellung für den Editor nur im ablenkungsfreien Modus verwenden</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4452"/>

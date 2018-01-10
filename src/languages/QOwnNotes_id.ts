@@ -3644,7 +3644,7 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4148"/>
       <source>Fully highlight blockquotes</source>
-      <translation type="unfinished">Fully highlight blockquotes</translation>
+      <translation>Sorot blockquote sepenuhnya</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4181"/>

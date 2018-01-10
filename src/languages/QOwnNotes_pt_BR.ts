@@ -3664,7 +3664,7 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4148"/>
       <source>Fully highlight blockquotes</source>
-      <translation type="unfinished">Fully highlight blockquotes</translation>
+      <translation>Usar blocos destacados</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4181"/>
@@ -3754,7 +3754,7 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4238"/>
       <source>Only use editor width setting in distraction free mode</source>
-      <translation type="unfinished">Only use editor width setting in distraction free mode</translation>
+      <translation>Utilizar o editor no modo livre de distração</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4452"/>

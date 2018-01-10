@@ -3666,7 +3666,7 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4148"/>
       <source>Fully highlight blockquotes</source>
-      <translation type="unfinished">Fully highlight blockquotes</translation>
+      <translation>Destaca citacions completament</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4181"/>

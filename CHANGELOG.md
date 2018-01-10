@@ -6,6 +6,9 @@
   and [#717](https://github.com/pbek/QOwnNotes/issues/717))
 - the Windows release is now built with Qt 5.9.2
 - attempted to fix some character-set issues with snaps (thank you @popey)
+- added more Indonesian, French, German, Italian, Spanish, Brazilian Portuguese, 
+  Catalan, Hungarian and Dutch translation (thank you zmni, bepolymathe,
+  rakekniven, mlocati, UgoYak, mlimacarlos, MGuerra and Fabijenna)
 
 ## 18.01.1
 - there now is a new checkbox in the *Editor settings* to fully highlight blockquotes

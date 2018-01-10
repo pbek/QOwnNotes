@@ -3667,7 +3667,7 @@ Tesztelje, ha szinkronizációs konfliktus lép fel és állítson be ilyen eset
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4148"/>
       <source>Fully highlight blockquotes</source>
-      <translation type="unfinished">Fully highlight blockquotes</translation>
+      <translation>Teljesen kiemeli a blokkvázlatokat</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4181"/>
