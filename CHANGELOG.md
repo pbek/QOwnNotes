@@ -4,7 +4,8 @@
 - attempted to fix drawing problems in the note edit widget and possible 
   crashes in Windows (for [#826](https://github.com/pbek/QOwnNotes/issues/826)
   and [#717](https://github.com/pbek/QOwnNotes/issues/717))
-   
+- attempted to fix some character-set issues with snaps (thank you @popey)
+
 ## 18.01.1
 - there now is a new checkbox in the *Editor settings* to fully highlight blockquotes
   instead of just the `>` (for [#822](https://github.com/pbek/QOwnNotes/issues/822))
