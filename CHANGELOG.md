@@ -11,9 +11,9 @@
 - attempted to fix translations for the QOwnNotes snap
 - QOwnNotes is now also built with Qt 5.7 to allow Windows XP users to 
   still use it (for [#828](https://github.com/pbek/QOwnNotes/issues/828))
-    - although you have to download the latest `master` build from
+    - although you have to seek out the latest `master` build from
       [AppVeyor](https://ci.appveyor.com/project/pbek/qownnotes/history) 
-      yourself and choose the Qt 5.7 *artifact*
+      yourself, choose the Qt 5.7 environment and download the artifact
 - added more Chinese translation (thank you bsapwindows)
 
 ## 18.01.2
