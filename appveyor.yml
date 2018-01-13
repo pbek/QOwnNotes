@@ -3,10 +3,23 @@
 os: unstable
 skip_tags: true
 
+environment:
+  qtdir57: C:\Qt\5.7\mingw53_32
+  qtdir59: C:\Qt\5.9.2\mingw53_32
+
+  matrix:
+    # Qt 5.9
+    - qtdir: %qtdir59%
+    # Qt 5.7 (for Windows XP)
+    - qtdir: %qtdir57%
+  allow_failures:
+    - qtdir: %qtdir57%
+
 install:
   # https://www.appveyor.com/docs/build-environment/
 #  - set QTDIR=C:\Qt\5.7\mingw53_32
-  - set QTDIR=C:\Qt\5.9.2\mingw53_32
+#  - set QTDIR=C:\Qt\5.9.2\mingw53_32
+  - set QTDIR=%qtdir%
   - set PATH=%PATH%;%QTDIR%\bin;C:\MinGW\bin
   - set RELEASE_PATH=appveyor\release
 
@@ -72,6 +85,7 @@ deploy:
       secure: spcyN/Dz3B2GXBPii8IywDLq6vfxC1SrN+xR2wMerFM7g2nTy0Lrh5agQONFoInR
     on:
       branch: master
+      qtdir: %qtdir59%
 #      branch: develop
 
 notifications:
