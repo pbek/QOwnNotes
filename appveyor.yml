@@ -85,7 +85,7 @@ deploy:
       secure: spcyN/Dz3B2GXBPii8IywDLq6vfxC1SrN+xR2wMerFM7g2nTy0Lrh5agQONFoInR
     on:
       branch: master
-      qtdir: %qtdir59%
+      qtdir: C:\Qt\5.9.2\mingw53_32
 #      branch: develop
 
 notifications:
