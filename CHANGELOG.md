@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 18.01.3
+- there now also is set a foreground color for code-blocks and inline-code in the
+  preview so the code will be visible if the user uses a dark desktop theme but
+  doesn't use the dark-mode preview colors yet
+  (for [#830](https://github.com/pbek/QOwnNotes/issues/830))
+
 ## 18.01.2
 - attempted to fix drawing problems in the note edit widget and possible 
   crashes in Windows (for [#826](https://github.com/pbek/QOwnNotes/issues/826)

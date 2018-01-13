@@ -1594,13 +1594,15 @@ QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth,
 
     bool darkModeColors = settings.value("darkModeColors").toBool();
 
+    QString codeForegroundColor = darkModeColors ? "#ffffff" : "#000000";
     QString codeBackgroundColor = darkModeColors ? "#444444" : "#f1f1f1";
 
     // do some more code formatting
     codeStyleSheet += QString(
             "pre, code { padding: 16px; overflow: auto;"
                     " line-height: 1.45em; background-color: %1;"
-                    " border-radius: 3px; }").arg(codeBackgroundColor);
+                    " border-radius: 3px; color: %2; }").arg(
+                codeBackgroundColor, codeForegroundColor);
 
     // remove double code blocks
     result.replace("<pre><code>", "<pre>")
