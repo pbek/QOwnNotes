@@ -5,6 +5,10 @@
   preview so the code will be visible if the user uses a dark desktop theme but
   doesn't use the dark-mode preview colors yet (for [#830](https://github.com/pbek/QOwnNotes/issues/830))
 - fixed the disabling of the markdown highlighting
+- attempted to fix drawing problems in the note edit widget and possible 
+  crashes in Windows (for [#826](https://github.com/pbek/QOwnNotes/issues/826)
+  and [#717](https://github.com/pbek/QOwnNotes/issues/717))
+- attempted to fix translations for the QOwnNotes snap
 
 ## 18.01.2
 - attempted to fix drawing problems in the note edit widget and possible 

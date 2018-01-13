@@ -36,6 +36,8 @@
     app.installTranslator(&translator4); \
     translator5.load("../src/languages/QOwnNotes_" + locale); \
     app.installTranslator(&translator5); \
+    translator6.load("../share/QOwnNotes/languages/QOwnNotes_" + locale); \
+    app.installTranslator(&translator6); \
     translatorLocal.load("QOwnNotes_" + locale); \
     app.installTranslator(&translatorLocal);
 
@@ -382,6 +384,7 @@ int main(int argc, char *argv[]) {
     QTranslator translator3;
     QTranslator translator4;
     QTranslator translator5;
+    QTranslator translator6;
     QTranslator translatorLocal;
 
     bool allowOnlyOneAppInstance = settings.value(
