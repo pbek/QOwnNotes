@@ -987,7 +987,7 @@
       <location filename="../mainwindow.ui" line="2060"/>
       <location filename="../mainwindow.cpp" line="8310"/>
       <source>Open note in different window</source>
-      <translation type="unfinished">Open note in different window</translation>
+      <translation>在新窗口中打开笔记</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2072"/>
@@ -1028,12 +1028,12 @@
     <message>
       <location filename="../mainwindow.ui" line="2145"/>
       <source>Allow note editing</source>
-      <translation type="unfinished">Allow note editing</translation>
+      <translation>允许编辑笔记</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2157"/>
       <source>Check for script updates</source>
-      <translation type="unfinished">Check for script updates</translation>
+      <translation>检查脚本更新</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1653"/>
@@ -1196,7 +1196,7 @@ Restore current note?</source>
     <message>
       <location filename="../mainwindow.cpp" line="2975"/>
       <source>Please select the folder where your notes will get stored</source>
-      <translation type="unfinished">Please select the folder where your notes will get stored</translation>
+      <translation>请选择笔记存储文件夹</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3002"/>
@@ -2455,12 +2455,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../utils/gui.cpp" line="171"/>
       <source>Don't ask again!</source>
-      <translation type="unfinished">Don't ask again!</translation>
+      <translation>不再询问</translation>
     </message>
     <message>
       <location filename="../utils/gui.cpp" line="171"/>
       <source>Don't show again!</source>
-      <translation type="unfinished">Don't show again!</translation>
+      <translation>不再显示</translation>
     </message>
   </context>
   <context>
@@ -2468,77 +2468,77 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="62"/>
       <source>close search</source>
-      <translation type="unfinished">close search</translation>
+      <translation>关闭搜索</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="52"/>
       <source>Find:</source>
-      <translation type="unfinished">Find:</translation>
+      <translation>查找︰</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="32"/>
       <source>replace text</source>
-      <translation type="unfinished">replace text</translation>
+      <translation>替换文本</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="79"/>
       <source>find in text</source>
-      <translation type="unfinished">find in text</translation>
+      <translation>在文本中查找</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="86"/>
       <source>search forward</source>
-      <translation type="unfinished">search forward</translation>
+      <translation>向前搜索</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="103"/>
       <source>search backward</source>
-      <translation type="unfinished">search backward</translation>
+      <translation>向后搜索</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="120"/>
       <source>replace with</source>
-      <translation type="unfinished">replace with</translation>
+      <translation>替换为</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="127"/>
       <source>Replace:</source>
-      <translation type="unfinished">Replace:</translation>
+      <translation>替换︰</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="156"/>
       <source>Plain text</source>
-      <translation type="unfinished">Plain text</translation>
+      <translation>纯文本</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="161"/>
       <source>Whole words</source>
-      <translation type="unfinished">Whole words</translation>
+      <translation>全字匹配</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="166"/>
       <source>Regular expression</source>
-      <translation type="unfinished">Regular expression</translation>
+      <translation>正则表达式</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="187"/>
       <source>Replace</source>
-      <translation type="unfinished">Replace</translation>
+      <translation>替换</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="197"/>
       <source>Replace All</source>
-      <translation type="unfinished">Replace All</translation>
+      <translation>替换全部</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="210"/>
       <source>Mode:</source>
-      <translation type="unfinished">Mode:</translation>
+      <translation>模式︰</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="220"/>
       <source>Match case sensitive</source>
-      <translation type="unfinished">Match case sensitive</translation>
+      <translation>区分大小写</translation>
     </message>
   </context>
   <context>
@@ -2712,12 +2712,12 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="39"/>
       <source>Script updates</source>
-      <translation type="unfinished">Script updates</translation>
+      <translation>脚本更新</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="40"/>
       <source>All scripts are up-to-date.</source>
-      <translation type="unfinished">All scripts are up-to-date.</translation>
+      <translation>所有脚本已是最新版本。</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="305"/>
@@ -3568,7 +3568,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1962"/>
       <source>Bengali</source>
-      <translation type="unfinished">Bengali</translation>
+      <translation>孟加拉语</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1973"/>
@@ -3583,27 +3583,27 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2149"/>
       <source>Turkish</source>
-      <translation type="unfinished">Turkish</translation>
+      <translation>土耳其语</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2239"/>
       <source>Enable dark mode application icon and tray icon</source>
-      <translation type="unfinished">Enable dark mode application icon and tray icon</translation>
+      <translation>启用深色程序图标与托盘图标</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2279"/>
       <source>System tray</source>
-      <translation type="unfinished">System tray</translation>
+      <translation>系统托盘</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2288"/>
       <source>Show system tray icon</source>
-      <translation type="unfinished">Show system tray icon</translation>
+      <translation>显示系统托盘图标</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2298"/>
       <source>Start application hidden</source>
-      <translation type="unfinished">Start application hidden</translation>
+      <translation>启动后隐藏</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2308"/>
@@ -3628,18 +3628,18 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3296"/>
       <source>Message boxes</source>
-      <translation type="unfinished">Message boxes</translation>
+      <translation>消息框</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3302"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3495"/>
       <source>Reset message boxes</source>
-      <translation type="unfinished">Reset message boxes</translation>
+      <translation>重置消息框</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4148"/>
       <source>Fully highlight blockquotes</source>
-      <translation type="unfinished">Fully highlight blockquotes</translation>
+      <translation>完全高亮引用区域</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4181"/>
@@ -3671,7 +3671,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4650"/>
       <source>Show all notes of a tag including the notes of their children-tags</source>
-      <translation type="unfinished">Show all notes of a tag including the notes of their children-tags</translation>
+      <translation>显示标签下所有笔记（包含子标签）</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4620"/>
@@ -3729,7 +3729,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4238"/>
       <source>Only use editor width setting in distraction free mode</source>
-      <translation type="unfinished">Only use editor width setting in distraction free mode</translation>
+      <translation>仅在免打扰模式下使用编辑器宽度设置</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4452"/>
@@ -4387,7 +4387,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2473"/>
       <source>Check for script updates</source>
-      <translation type="unfinished">Check for script updates</translation>
+      <translation>检查脚本更新</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2480"/>
@@ -4407,12 +4407,12 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="195"/>
       <source>Menu bar</source>
-      <translation type="unfinished">Menu bar</translation>
+      <translation>菜单栏</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="196"/>
       <source>Show menu bar item</source>
-      <translation type="unfinished">Show menu bar item</translation>
+      <translation>显示菜单栏</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2565"/>
@@ -4514,7 +4514,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3496"/>
       <source>Do you really want to reset the overrides of all message boxes?</source>
-      <translation type="unfinished">Do you really want to reset the overrides of all message boxes?</translation>
+      <translation>您确定要重置所有消息框吗？</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1892"/>

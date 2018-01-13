@@ -9,6 +9,12 @@
   crashes in Windows (for [#826](https://github.com/pbek/QOwnNotes/issues/826)
   and [#717](https://github.com/pbek/QOwnNotes/issues/717))
 - attempted to fix translations for the QOwnNotes snap
+- QOwnNotes is now also built with Qt 5.7 to allow Windows XP users to 
+  still use it (for [#828](https://github.com/pbek/QOwnNotes/issues/828))
+    - although you have to download the latest `master` build from
+      [AppVeyor](https://ci.appveyor.com/project/pbek/qownnotes/history) 
+      yourself and choose the Qt 5.7 *artifact*
+- added more Chinese translation (thank you bsapwindows)
 
 ## 18.01.2
 - attempted to fix drawing problems in the note edit widget and possible 
