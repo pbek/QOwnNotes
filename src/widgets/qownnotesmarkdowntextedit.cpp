@@ -24,7 +24,13 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
         ::FullyHighlightedBlockQuote;
     }
 
-    _highlighter = new MarkdownHighlighter(document(), options);
+    // set the highlighting options
+    _highlighter->setHighlightingOptions(options);
+
+    // re-initialize the highlighting rules if we are using some options
+    if (options != MarkdownHighlighter::HighlightingOption::None) {
+        _highlighter->initHighlightingRules();
+    }
 }
 
 /**
