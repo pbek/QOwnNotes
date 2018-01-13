@@ -13,7 +13,7 @@ environment:
     # Qt 5.7 (for Windows XP)
     - qtdir: qtdir57
   allow_failures:
-    - qtdir: %qtdir57%
+    - qtdir: C:\Qt\5.7\mingw53_32
 
 install:
   # https://www.appveyor.com/docs/build-environment/
@@ -85,7 +85,7 @@ deploy:
       secure: spcyN/Dz3B2GXBPii8IywDLq6vfxC1SrN+xR2wMerFM7g2nTy0Lrh5agQONFoInR
     on:
       branch: master
-      qtdir: qtdir59
+      qtdir: %qtdir59%
 #      branch: develop
 
 notifications:
