@@ -1,17 +1,23 @@
 # AppVeyor build configuration
-# http://www.appveyor.com/docs/build-configuration
+#
+# doc: http://www.appveyor.com/docs/build-configuration
+# validator: https://ci.appveyor.com/tools/validate-yaml
+
 os: unstable
 skip_tags: true
 
 environment:
-  qtdir57: C:\Qt\5.7\mingw53_32
-  qtdir59: C:\Qt\5.9.2\mingw53_32
+  global:
+    qtdir57: C:\Qt\5.7\mingw53_32
+    qtdir59: C:\Qt\5.9.2\mingw53_32
 
   matrix:
     # Qt 5.9
-    - qtdir: C:\Qt\5.9.2\mingw53_32
+    - qtdir: "C:\\Qt\\5.9.2\\mingw53_32"
     # Qt 5.7 (for Windows XP)
-    - qtdir: C:\Qt\5.7\mingw53_32
+    - qtdir: "C:\\Qt\\5.7\\mingw53_32"
+
+matrix:
   allow_failures:
     - qtdir: "C:\\Qt\\5.7\\mingw53_32"
 
