@@ -4324,7 +4324,7 @@ bool MainWindow::preparePrintNotePrinter(QPrinter *printer) {
 }
 
 /**
- * @brief Prints the content of a text edit widget
+ * @brief Prints the content of a plain text edit widget
  * @param textEdit
  */
 void MainWindow::printNote(QPlainTextEdit *textEdit) {
@@ -5342,6 +5342,49 @@ void MainWindow::on_noteTextEdit_customContextMenuRequested(const QPoint &pos) {
     QPoint globalPos = ui->noteTextEdit->mapToGlobal(pos);
     QMenu *menu = ui->noteTextEdit->createStandardContextMenu();
     bool isAllowNoteEditing = allowNoteEditing();
+    bool isTextSelected = isNoteTextSelected();
+
+    menu->addSeparator();
+
+    // add the print menu
+    QMenu *printMenu = menu->addMenu(tr("Print"));
+    QIcon printIcon = QIcon::fromTheme(
+            "document-print",
+            QIcon(":icons/breeze-qownnotes/16x16/document-print.svg"));
+    printMenu->setIcon(printIcon);
+
+    // add the print selected text action
+    QAction *printTextAction = printMenu->addAction(tr("Print selected text"));
+    printTextAction->setEnabled(isTextSelected);
+    printTextAction->setIcon(printIcon);
+
+    // add the print selected text (preview) action
+    QAction *printHTMLAction = printMenu->addAction(
+            tr("Print selected text (preview)"));
+    printHTMLAction->setEnabled(isTextSelected);
+    printHTMLAction->setIcon(printIcon);
+
+    // add the export menu
+    QMenu *exportMenu = menu->addMenu(tr("Export"));
+    exportMenu->setIcon(QIcon::fromTheme(
+            "document-export",
+            QIcon(":icons/breeze-qownnotes/16x16/document-export.svg")));
+
+    QIcon pdfIcon = QIcon::fromTheme(
+            "application-pdf",
+            QIcon(":icons/breeze-qownnotes/16x16/application-pdf.svg"));
+
+    // add the export selected text action
+    QAction *exportTextAction = exportMenu->addAction(
+            tr("Export selected text as PDF"));
+    exportTextAction->setEnabled(isTextSelected);
+    exportTextAction->setIcon(pdfIcon);
+
+    // add the export selected text (preview) action
+    QAction *exportHTMLAction = exportMenu->addAction(
+            tr("Export selected text as PDF (preview)"));
+    exportHTMLAction->setEnabled(isTextSelected);
+    exportHTMLAction->setIcon(pdfIcon);
 
     menu->addSeparator();
 
@@ -5379,8 +5422,47 @@ void MainWindow::on_noteTextEdit_customContextMenuRequested(const QPoint &pos) {
         } else if (selectedItem == searchAction) {
             // search for the selected text on the web
             on_actionSearch_text_on_the_web_triggered();
+        } else if (selectedItem == printTextAction) {
+            // print the selected text
+            QOwnNotesMarkdownTextEdit *textEdit =
+                    new QOwnNotesMarkdownTextEdit(this);
+            textEdit->setPlainText(selectedNoteTextEditText());
+            printNote(textEdit);
+        } else if (selectedItem == printHTMLAction) {
+            // print the selected text (preview)
+            QString html = currentNote.textToMarkdownHtml(
+                    selectedNoteTextEditText(), NoteFolder::currentLocalPath(),
+                    getMaxImageWidth());
+            QTextEdit *textEdit = new QTextEdit(this);
+            textEdit->setHtml(html);
+            printNote(textEdit);
+        } else if (selectedItem == exportTextAction) {
+            // export the selected text as PDF
+            QOwnNotesMarkdownTextEdit *textEdit =
+                    new QOwnNotesMarkdownTextEdit(this);
+            textEdit->setPlainText(selectedNoteTextEditText());
+            exportNoteAsPDF(textEdit);
+        } else if (selectedItem == exportHTMLAction) {
+            // export the selected text (preview) as PDF
+            QString html = currentNote.textToMarkdownHtml(
+                    selectedNoteTextEditText(), NoteFolder::currentLocalPath(),
+                    getMaxImageWidth());
+            QTextEdit *textEdit = new QTextEdit(this);
+            textEdit->setHtml(html);
+            exportNoteAsPDF(textEdit);
         }
     }
+}
+
+/**
+ * Checks if text in a note is selected
+ *
+ * @return
+ */
+bool MainWindow::isNoteTextSelected() {
+    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QString selectedText = textEdit->textCursor().selectedText().trimmed();
+    return !selectedText.isEmpty();
 }
 
 void MainWindow::on_actionInsert_Link_to_note_triggered() {

@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 18.01.4
+- you can now **print the selected text** in the note text edit as highlighted 
+  text or as rendered markdown html (like in the preview)
+- you can now **export the selected text** in the note text edit as highlighted 
+  text or as rendered markdown html (like in the preview)
+
 ## 18.01.3
 - there now also is set a foreground color for code-blocks and inline-code in the
   preview so the code will be visible if the user uses a dark desktop theme but

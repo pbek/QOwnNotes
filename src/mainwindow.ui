@@ -1308,7 +1308,10 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/application-pdf.svg</normaloff>:/icons/breeze-qownnotes/16x16/application-pdf.svg</iconset>
    </property>
    <property name="text">
-    <string>&amp;Export note as PDF</string>
+    <string>&amp;Export note as PDF (preview)</string>
+   </property>
+   <property name="toolTip">
+    <string>Export note as PDF (preview)</string>
    </property>
   </action>
   <action name="action_Export_note_as_PDF_text">
@@ -1338,7 +1341,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/document-print.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-print.svg</iconset>
    </property>
    <property name="text">
-    <string>&amp;Print note (markdown)</string>
+    <string>&amp;Print note (preview)</string>
    </property>
    <property name="shortcut">
     <string notr="true">Ctrl+Shift+P</string>
@@ -2182,9 +2185,9 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="breeze-dark-qownnotes.qrc"/>
   <include location="breeze-qownnotes.qrc"/>
   <include location="images.qrc"/>
+  <include location="breeze-dark-qownnotes.qrc"/>
  </resources>
  <connections/>
 </ui>

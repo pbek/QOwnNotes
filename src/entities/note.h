@@ -229,6 +229,10 @@ public:
 
     void generateFileNameFromName();
 
+    QString textToMarkdownHtml(QString str, QString notesPath,
+                               int maxImageWidth = 980, bool forExport = false,
+                               bool base64Images = false);
+
 protected:
     int id;
     QString name;

@@ -1479,6 +1479,29 @@ QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth,
         return _noteTextHtml;
     }
 
+    QString result = textToMarkdownHtml(str, notesPath, maxImageWidth,
+                                        forExport, base64Images);
+
+    // cache the html output and conversion hash
+    _noteTextHtmlConversionHash = hash;
+    _noteTextHtml = result;
+
+    return result;
+}
+
+/**
+ * Converts a markdown string for a note to html
+ *
+ * @param str
+ * @param notesPath
+ * @param maxImageWidth
+ * @param forExport
+ * @param base64Images
+ * @return
+ */
+QString Note::textToMarkdownHtml(QString str, QString notesPath,
+                                 int maxImageWidth,
+                                 bool forExport, bool base64Images) {
     hoedown_renderer *renderer =
             hoedown_html_renderer_new(HOEDOWN_HTML_USE_XHTML, 32);
 
@@ -1487,7 +1510,7 @@ QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth,
     // HOEDOWN_EXT_MATH and HOEDOWN_EXT_MATH_EXPLICIT don't seem to do anything
     hoedown_extensions extensions =
             (hoedown_extensions) ((HOEDOWN_EXT_BLOCK | HOEDOWN_EXT_SPAN |
-                    HOEDOWN_EXT_MATH_EXPLICIT) & ~HOEDOWN_EXT_QUOTE);
+                                   HOEDOWN_EXT_MATH_EXPLICIT) & ~HOEDOWN_EXT_QUOTE);
     hoedown_document *document = hoedown_document_new(renderer, extensions, 32);
 
     QString windowsSlash = "";
@@ -1602,7 +1625,7 @@ QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth,
             "pre, code { padding: 16px; overflow: auto;"
                     " line-height: 1.45em; background-color: %1;"
                     " border-radius: 3px; color: %2; }").arg(
-                codeBackgroundColor, codeForegroundColor);
+            codeBackgroundColor, codeForegroundColor);
 
     // remove double code blocks
     result.replace("<pre><code>", "<pre>")
@@ -1629,20 +1652,20 @@ QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth,
         }
 
         result = QString("<html><head><meta charset=\"utf-8\"/><style>"
-                    "h1 { margin: 5px 0 20px 0; }"
-                    "h2, h3 { margin: 10px 0 15px 0; }"
-                    "img { max-width: 100%; }"
-                    "a { color: #FF9137; text-decoration: none; } %1 %2 %4"
-                    "</style></head><body>%3</body></html>")
-            .arg(codeStyleSheet, exportStyleSheet, result, rtlStyle);
+                                 "h1 { margin: 5px 0 20px 0; }"
+                                 "h2, h3 { margin: 10px 0 15px 0; }"
+                                 "img { max-width: 100%; }"
+                                 "a { color: #FF9137; text-decoration: none; } %1 %2 %4"
+                                 "</style></head><body>%3</body></html>")
+                .arg(codeStyleSheet, exportStyleSheet, result, rtlStyle);
     } else {
         // for preview
         result = QString("<html><head><style>"
-                    "h1 { margin: 5px 0 20px 0; }"
-                    "h2, h3 { margin: 10px 0 15px 0; }"
-                    "a { color: #FF9137; text-decoration: none; } %1 %3"
-                    "</style></head><body>%2</body></html>")
-            .arg(codeStyleSheet, result, rtlStyle);
+                                 "h1 { margin: 5px 0 20px 0; }"
+                                 "h2, h3 { margin: 10px 0 15px 0; }"
+                                 "a { color: #FF9137; text-decoration: none; } %1 %3"
+                                 "</style></head><body>%2</body></html>")
+                .arg(codeStyleSheet, result, rtlStyle);
     }
 
     // check if width of embedded local images is too high
@@ -1662,14 +1685,14 @@ QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth,
                                                                   fileName) +
                                        "\""),
                     QString("<img src=\"file://%2\"").arg(windowsSlash +
-                                                                  fileName));
+                                                          fileName));
         } else {
             // for preview
             // cap the image width at maxImageWidth (note text view width)
             int originalWidth = image.width();
             int displayWidth = (originalWidth > maxImageWidth)
-                    ? maxImageWidth
-                    : originalWidth;
+                               ? maxImageWidth
+                               : originalWidth;
 
             result.replace(
                     QRegularExpression("<img src=\"file:\\/\\/" +
@@ -1678,7 +1701,7 @@ QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth,
                                        "\""),
                     QString("<img width=\"%1\" src=\"file://%2\"").arg(
                             QString::number(displayWidth), windowsSlash +
-                            fileName));
+                                                           fileName));
         }
 
         // encode the image base64
@@ -1714,11 +1737,6 @@ QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth,
     }
 
 //    qDebug() << __func__ << " - 'result': " << result;
-
-    // cache the html output and conversion hash
-    _noteTextHtmlConversionHash = hash;
-    _noteTextHtml = result;
-
     return result;
 }
 

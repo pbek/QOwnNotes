@@ -869,4 +869,6 @@ private:
     bool undoFormatting(QString formatter);
 
     void applyFormatter(QString formatter);
+
+    bool isNoteTextSelected();
 };
