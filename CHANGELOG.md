@@ -5,6 +5,7 @@
   text or as rendered markdown html (like in the preview)
 - you can now **export the selected text** in the note text edit as highlighted 
   text or as rendered markdown html (like in the preview)
+- added more German and Chinese translation (thank you bsapwindows)
 
 ## 18.01.3
 - there now also is set a foreground color for code-blocks and inline-code in the
