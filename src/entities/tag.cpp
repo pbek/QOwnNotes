@@ -379,6 +379,30 @@ QStringList Tag::fetchAllNamesOfNote(Note note) {
 }
 
 /**
+ * Fetches the names by substring searching for the name
+ */
+QStringList Tag::searchAllNamesByName(QString name) {
+    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlQuery query(db);
+    QStringList tagNameList;
+
+    query.prepare("SELECT name FROM tag "
+                          "WHERE name LIKE :name "
+                          "ORDER BY priority ASC, name ASC");
+    query.bindValue(":name", "%" + name + "%");
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        for (int r = 0; query.next(); r++) {
+            tagNameList << query.value("name").toString();
+        }
+    }
+
+    return tagNameList;
+}
+
+/**
  * Fetches one Tag of a note that has a color
  */
 Tag Tag::fetchOneOfNoteWithColor(Note note) {

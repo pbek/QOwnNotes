@@ -436,6 +436,38 @@ bool ScriptingService::noteTaggingHookExists() {
 }
 
 /**
+ * Calls the autocompletionHook function for all script components
+ * This function is called when autocompletion is invoked in a note
+ *
+ * @return QStringList of text for the autocomplete list
+ */
+QStringList ScriptingService::callAutocompletionHook() {
+    QMapIterator<int, ScriptComponent> i(_scriptComponents);
+    QStringList results;
+
+    while (i.hasNext()) {
+        i.next();
+        ScriptComponent scriptComponent = i.value();
+        QVariant result;
+
+        if (methodExistsForObject(
+                scriptComponent.object,
+                "autocompletionHook()")) {
+            QMetaObject::invokeMethod(scriptComponent.object,
+                                      "autocompletionHook",
+                                      Q_RETURN_ARG(QVariant, result));
+
+            if (!result.isNull()) {
+                results.append(result.toStringList());
+            }
+        }
+    }
+
+    results.sort();
+    return results;
+}
+
+/**
  * Calls the insertingFromMimeDataHook function for an object
  */
 QString ScriptingService::callInsertingFromMimeDataHookForObject(
@@ -807,6 +839,27 @@ QString ScriptingService::noteTextEditSelectedText() {
     MainWindow *mainWindow = MainWindow::instance();
     return mainWindow != Q_NULLPTR ?
            mainWindow->selectedNoteTextEditText() : "";
+#else
+    return "";
+#endif
+}
+
+/**
+ * Reads the current word in the note text edit
+ *
+ * @param withPreviousCharacters also get more characters at the beginning
+ *                               to get characters like "@" that are not
+ *                               word-characters
+ * @return
+ */
+QString ScriptingService::noteTextEditCurrentWord(bool withPreviousCharacters) {
+    MetricsService::instance()->sendVisitIfEnabled(
+            "scripting/" + QString(__func__));
+
+#ifndef INTEGRATION_TESTS
+    MainWindow *mainWindow = MainWindow::instance();
+    return mainWindow != Q_NULLPTR ?
+           mainWindow->noteTextEditCurrentWord(withPreviousCharacters) : "";
 #else
     return "";
 #endif
@@ -1405,4 +1458,18 @@ bool ScriptingService::jumpToNoteSubFolder(const QString &noteSubFolderPath,
     Q_UNUSED(separator);
     return false;
 #endif
+}
+
+/**
+ * Fetches all tags by doing a substring search on the name field
+ *
+ * @param name {QString} name to search for
+ * @return {QStringList} list of tag names
+ */
+QStringList ScriptingService::searchTagsByName(QString name) {
+    MetricsService::instance()->sendVisitIfEnabled(
+            "scripting/" + QString(__func__));
+
+    QStringList tags = Tag::searchAllNamesByName(name);
+    return tags;
 }

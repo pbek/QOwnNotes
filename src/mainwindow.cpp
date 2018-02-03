@@ -7949,6 +7949,20 @@ void MainWindow::on_actionAutocomplete_triggered() {
             }
     }
 
+    // load texts from scripts to show in the autocompletion list
+    QStringList autocompletionList = ScriptingService::instance()
+            ->callAutocompletionHook();
+    if (!autocompletionList.isEmpty()) {
+        QAction *action = menu.addAction("");
+        action->setSeparator(true);
+
+        Q_FOREACH(QString text, autocompletionList) {
+                QAction *action = menu.addAction(text);
+                action->setData(text);
+                action->setWhatsThis("autocomplete");
+            }
+    }
+
     QPoint globalPos = textEdit->mapToGlobal(
             textEdit->cursorRect().bottomRight());
 
@@ -8037,24 +8051,51 @@ bool MainWindow::solveEquationInNoteTextEdit(double &returnValue) {
 }
 
 /**
+ * Returns the text from the current cursor to the start of the word in the
+ * note text edit
+ *
+ * @param withPreviousCharacters also get more characters at the beginning
+ *                               to get characters like "@" that are not
+ *                               word-characters
+ * @return
+ */
+QString MainWindow::noteTextEditCurrentWord(bool withPreviousCharacters) {
+    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QTextCursor c = textEdit->textCursor();
+
+    // get the text from the current word
+    c.movePosition(QTextCursor::EndOfWord);
+    c.movePosition(QTextCursor::StartOfWord, QTextCursor::KeepAnchor);
+
+    QString text = c.selectedText();
+
+    if (withPreviousCharacters) {
+        QRegularExpression re("^[\\s\\n][^\\s]*");
+        do {
+            c.movePosition(QTextCursor::Left, QTextCursor::KeepAnchor);
+            text = c.selectedText();
+        } while (!(re.match(text).hasMatch() || c.atBlockStart()));
+    }
+
+    return  text.trimmed();
+}
+
+/**
  * Tries to find words that start with the current word in the note text edit
  *
  * @param resultList
  * @return
  */
 bool MainWindow::noteTextEditAutoComplete(QStringList &resultList) {
-    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
-    QTextCursor c = textEdit->textCursor();
-
-    // get the text from the current cursor to the start of the line
-    c.movePosition(QTextCursor::StartOfWord, QTextCursor::KeepAnchor);
-    QString text = c.selectedText();
+    // get the text from the current cursor to the start of the word
+    QString text = noteTextEditCurrentWord();
     qDebug() << __func__ << " - 'text': " << text;
 
     if (text.isEmpty()) {
         return false;
     }
 
+    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
     QString noteText = textEdit->toPlainText();
 
     // find all items that match our current word

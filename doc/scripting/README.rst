@@ -426,6 +426,35 @@ Usage in QML
 You might want to look at the custom action ``transformTextRot13`` in
 the example `custom-actions.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/custom-actions.qml>`__.
 
+Read the current word from the note text edit
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Parameters
+^^^^^^^^^^
+
+.. code:: cpp
+
+    /**
+     * Reads the current word in the note text edit
+     *
+     * @param withPreviousCharacters also get more characters at the beginning
+     *                               to get characters like "@" that are not
+     *                               word-characters
+     * @return
+     */
+    QString ScriptingService::noteTextEditCurrentWord(bool withPreviousCharacters);
+
+Usage in QML
+^^^^^^^^^^^^
+
+.. code:: javascript
+
+    // read the current word in the note text edit
+    var text = script.noteTextEditCurrentWord();
+
+You may want to take a look at the example
+`autocompletion.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/autocompletion.qml>`__.
+
 Check whether platform is Linux, OS X or Windows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -472,6 +501,33 @@ Usage in QML
 
 You might want to look at the custom action ``favoriteNote`` in the
 example `favorite-note.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/favorite-note.qml>`__.
+
+Search for tags by name
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Parameters
+^^^^^^^^^^
+
+.. code:: cpp
+
+    /**
+     * Fetches all tags by doing a substring search on the name field
+     *
+     * @param name {QString} name to search for
+     * @return {QStringList} list of tag names
+     */
+    QStringList ScriptingService::searchTagsByName(QString name);
+
+Usage in QML
+^^^^^^^^^^^^
+
+.. code:: javascript
+
+    // searches for all tags with the word game in it
+    var tags = script.searchTagsByName("game");
+
+You may want to take a look at the example
+`autocompletion.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/autocompletion.qml>`__.
 
 Add a custom stylesheet
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -1313,6 +1369,25 @@ text in your note like ``@tag1``, ``@tag2``, ``@tag3``.
 You may want to take a look at the example
 `note-tagging.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/note-tagging.qml>`__
 to implement your own tagging mechanism.
+
+autocompletionHook
+~~~~~~~~~~~~~~~~~~
+
+You can return a list of strings to be added to the autocompletion list when
+the autocompletion is invoked.
+
+.. code:: javascript
+
+    /**
+     * Calls the autocompletionHook function for all script components
+     * This function is called when autocompletion is invoked in a note
+     *
+     * @return QStringList of text for the autocomplete list
+     */
+    function callAutocompletionHook();
+
+You may want to take a look at the example
+`autocompletion.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/autocompletion.qml>`__.
 
 
 Exposed classes

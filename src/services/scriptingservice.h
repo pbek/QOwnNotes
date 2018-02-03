@@ -58,6 +58,8 @@ public:
     Q_INVOKABLE QString clipboard(bool asHtml = false);
     Q_INVOKABLE void noteTextEditWrite(QString text);
     Q_INVOKABLE QString noteTextEditSelectedText();
+    Q_INVOKABLE QString noteTextEditCurrentWord(
+            bool withPreviousCharacters = false);
     Q_INVOKABLE void encryptionDisablePassword();
     Q_INVOKABLE bool platformIsLinux();
     Q_INVOKABLE bool platformIsOSX();
@@ -122,6 +124,9 @@ public:
 
     Q_INVOKABLE bool jumpToNoteSubFolder(const QString &noteSubFolderPath,
                                          QString separator = "/");
+    QStringList callAutocompletionHook();
+
+    Q_INVOKABLE QStringList searchTagsByName(QString name);
 
 private:
     QQmlEngine *_engine;

@@ -1,5 +1,21 @@
 # QOwnNotes Changelog
 
+## 18.02.0
+- there now is a new scripting hook `autocompletionHook()` to return a list of
+  strings to be added to the autocompletion list when the autocompletion is
+  invoked by pressing <kbd>Ctrl</kbd> + <kbd>Space</kbd>
+  (for [#842](https://github.com/pbek/QOwnNotes/issues/842))
+    - for more information please take a look at the [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#autocompletionhook)
+- there now is a new scripting function `script.noteTextEditCurrentWord()` to 
+  read the current word in the note text edit (for [#842](https://github.com/pbek/QOwnNotes/issues/842))
+    - for more information please take a look at the [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#read-the-current-word-from-the-note-text-edit)
+- there now is a new scripting function `script.searchTagsByName()` to 
+  fetches all tags by doing a substring search on the name field
+  (for [#842](https://github.com/pbek/QOwnNotes/issues/842))
+    - for more information please take a look at the [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#search-for-tags-by-name)
+- the script `@tag tagging in note text` was updated to use autocompletion
+  (for [#842](https://github.com/pbek/QOwnNotes/issues/842))
+
 ## 18.01.4
 - you can now **print the selected text** in the note text edit as highlighted 
   text or as rendered markdown html (like in the preview)

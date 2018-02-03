@@ -140,6 +140,8 @@ public:
 
     bool jumpToNoteSubFolder(int noteSubFolderId);
 
+    QString noteTextEditCurrentWord(bool withPreviousCharacters = false);
+
 protected:
     void closeEvent(QCloseEvent *event);
 
