@@ -1,6 +1,7 @@
 # AppVeyor build configuration
 #
 # doc: http://www.appveyor.com/docs/build-configuration
+# Qt-versions: https://www.appveyor.com/docs/build-environment/#qt
 # validator: https://ci.appveyor.com/tools/validate-yaml
 
 os: unstable
@@ -12,7 +13,7 @@ environment:
     qtdir59: C:\Qt\5.10.0\mingw53_32
 
   matrix:
-    # Qt 5.9
+    # Qt 5.10
     - qtdir: "C:\\Qt\\5.10.0\\mingw53_32"
     # Qt 5.7 (for Windows XP)
     - qtdir: "C:\\Qt\\5.7\\mingw53_32"
@@ -22,7 +23,7 @@ matrix:
     - qtdir: "C:\\Qt\\5.7\\mingw53_32"
 
 install:
-  # https://www.appveyor.com/docs/build-environment/#qt
+  # Qt-versions: https://www.appveyor.com/docs/build-environment/#qt
 #  - set QTDIR=C:\Qt\5.7\mingw53_32
 #  - set QTDIR=C:\Qt\5.10.0\mingw53_32
   - set QTDIR=%qtdir%
