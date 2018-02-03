@@ -739,12 +739,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1311"/>
       <source>&amp;Export note as PDF (preview)</source>
-      <translation type="unfinished">&amp;Export note as PDF (preview)</translation>
+      <translation>&amp;Exporter la note en PDF (aperçu)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1314"/>
       <source>Export note as PDF (preview)</source>
-      <translation type="unfinished">Export note as PDF (preview)</translation>
+      <translation>Exporter la note en PDF (aperçu)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1323"/>
@@ -1103,7 +1103,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1344"/>
       <source>&amp;Print note (preview)</source>
-      <translation type="unfinished">&amp;Print note (preview)</translation>
+      <translation>&amp; Imprimer la note (aperçu)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1750"/>
@@ -1396,22 +1396,22 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     <message>
       <location filename="../mainwindow.cpp" line="5357"/>
       <source>Print selected text</source>
-      <translation type="unfinished">Print selected text</translation>
+      <translation>Imprimer le texte sélectionné</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5363"/>
       <source>Print selected text (preview)</source>
-      <translation type="unfinished">Print selected text (preview)</translation>
+      <translation>Imprimer le texte sélectionné (aperçu)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5379"/>
       <source>Export selected text as PDF</source>
-      <translation type="unfinished">Export selected text as PDF</translation>
+      <translation>Exporter le texte sélectionné en PDF</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5385"/>
       <source>Export selected text as PDF (preview)</source>
-      <translation type="unfinished">Export selected text as PDF (preview)</translation>
+      <translation>Exporter le texte sélectionné au format PDF (aperçu)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5567"/>

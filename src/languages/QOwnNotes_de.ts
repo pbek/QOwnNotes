@@ -739,12 +739,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1311"/>
       <source>&amp;Export note as PDF (preview)</source>
-      <translation type="unfinished">&amp;Export note as PDF (preview)</translation>
+      <translation>Notiz als PDF &amp;exportieren (Vorschau)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1314"/>
       <source>Export note as PDF (preview)</source>
-      <translation type="unfinished">Export note as PDF (preview)</translation>
+      <translation>Notiz als PDF exportieren (Vorschau)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1323"/>
@@ -1103,7 +1103,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1344"/>
       <source>&amp;Print note (preview)</source>
-      <translation type="unfinished">&amp;Print note (preview)</translation>
+      <translation>Notiz &amp;drucken (Vorschau)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1750"/>
@@ -1396,22 +1396,22 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten 
     <message>
       <location filename="../mainwindow.cpp" line="5357"/>
       <source>Print selected text</source>
-      <translation type="unfinished">Print selected text</translation>
+      <translation>Markierten Text drucken</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5363"/>
       <source>Print selected text (preview)</source>
-      <translation type="unfinished">Print selected text (preview)</translation>
+      <translation>Markierten Text drucken (Vorschau)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5379"/>
       <source>Export selected text as PDF</source>
-      <translation type="unfinished">Export selected text as PDF</translation>
+      <translation>Markierten Text als PDF exportieren</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5385"/>
       <source>Export selected text as PDF (preview)</source>
-      <translation type="unfinished">Export selected text as PDF (preview)</translation>
+      <translation>Markierten Text als PDF exportieren (Vorschau)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5567"/>

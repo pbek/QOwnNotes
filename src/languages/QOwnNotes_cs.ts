@@ -58,7 +58,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="101"/>
       <source>Import attachments</source>
-      <translation type="unfinished">Import attachments</translation>
+      <translation>Import příloh</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="39"/>
@@ -627,7 +627,7 @@
       <location filename="../mainwindow.ui" line="737"/>
       <location filename="../mainwindow.cpp" line="5350"/>
       <source>Print</source>
-      <translation type="unfinished">Print</translation>
+      <translation>Tisk</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="748"/>
@@ -642,7 +642,7 @@
     <message>
       <location filename="../mainwindow.ui" line="817"/>
       <source>Insert</source>
-      <translation type="unfinished">Insert</translation>
+      <translation>Vložit</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="834"/>
@@ -667,7 +667,7 @@
     <message>
       <location filename="../mainwindow.ui" line="883"/>
       <source>Encryption</source>
-      <translation type="unfinished">Encryption</translation>
+      <translation>Šifrování</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="911"/>
@@ -699,12 +699,12 @@
       <location filename="../mainwindow.ui" line="948"/>
       <source>Show</source>
       <extracomment>To show or hide stuff</extracomment>
-      <translation type="unfinished">Show</translation>
+      <translation>Zobrazit</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="962"/>
       <source>Workspace</source>
-      <translation type="unfinished">Workspace</translation>
+      <translation>Pracovní plocha</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="994"/>
@@ -739,12 +739,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1311"/>
       <source>&amp;Export note as PDF (preview)</source>
-      <translation type="unfinished">&amp;Export note as PDF (preview)</translation>
+      <translation>&amp; Export poznámky ve formátu PDF (Náhled)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1314"/>
       <source>Export note as PDF (preview)</source>
-      <translation type="unfinished">Export note as PDF (preview)</translation>
+      <translation>&amp;Exportovat poznámku jako PDF (text)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1323"/>
@@ -860,7 +860,7 @@
       <location filename="../mainwindow.ui" line="1546"/>
       <location filename="../mainwindow.ui" line="1549"/>
       <source>Paste images, notes and html from the clipboard</source>
-      <translation type="unfinished">Paste images, notes and html from the clipboard</translation>
+      <translation>Vložit snímky, poznámky a html ze schránky</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1561"/>
@@ -1025,12 +1025,12 @@
     <message>
       <location filename="../mainwindow.ui" line="2124"/>
       <source>Script settings</source>
-      <translation type="unfinished">Script settings</translation>
+      <translation>Nastavení skriptu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2133"/>
       <source>Insert attachment</source>
-      <translation type="unfinished">Insert attachment</translation>
+      <translation>Vložit přílohu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2148"/>
@@ -1040,12 +1040,12 @@
     <message>
       <location filename="../mainwindow.ui" line="2160"/>
       <source>Check for script updates</source>
-      <translation type="unfinished">Check for script updates</translation>
+      <translation>Kontrola aktualizace skriptů</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1656"/>
       <source>Use &amp;vertical preview layout</source>
-      <translation type="unfinished">Use &amp;vertical preview layout</translation>
+      <translation>Použití rozvržení vertikálního náhledu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1659"/>

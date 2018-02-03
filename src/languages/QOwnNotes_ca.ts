@@ -739,12 +739,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1311"/>
       <source>&amp;Export note as PDF (preview)</source>
-      <translation type="unfinished">&amp;Export note as PDF (preview)</translation>
+      <translation>Exportar la nota com a PDF (vista prèvia)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1314"/>
       <source>Export note as PDF (preview)</source>
-      <translation type="unfinished">Export note as PDF (preview)</translation>
+      <translation>Exporta la nota com a PDF (vista prèvia)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1323"/>
@@ -1103,7 +1103,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1344"/>
       <source>&amp;Print note (preview)</source>
-      <translation type="unfinished">&amp;Print note (preview)</translation>
+      <translation>Imprimir nota (previsualització)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1750"/>
@@ -1394,22 +1394,22 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
     <message>
       <location filename="../mainwindow.cpp" line="5357"/>
       <source>Print selected text</source>
-      <translation type="unfinished">Print selected text</translation>
+      <translation>Imprimir el text seleccionat</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5363"/>
       <source>Print selected text (preview)</source>
-      <translation type="unfinished">Print selected text (preview)</translation>
+      <translation>Imprimir el text seleccionat (vista prèvia)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5379"/>
       <source>Export selected text as PDF</source>
-      <translation type="unfinished">Export selected text as PDF</translation>
+      <translation>Exportar el text seleccionat com a PDF</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5385"/>
       <source>Export selected text as PDF (preview)</source>
-      <translation type="unfinished">Export selected text as PDF (preview)</translation>
+      <translation>Exportar el text seleccionat com a PDF (vista prèvia)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5567"/>

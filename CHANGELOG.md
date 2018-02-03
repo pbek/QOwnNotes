@@ -15,6 +15,10 @@
     - for more information please take a look at the [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#search-for-tags-by-name)
 - the script `@tag tagging in note text` was updated to use autocompletion
   (for [#842](https://github.com/pbek/QOwnNotes/issues/842))
+- the Windows version of QOwnNotes is now built with Qt 5.10.0
+- added more Czech, Italian, German, French, Catalan, Indonesian, Spanish,
+  Dutch and Hungarian translation (thank you milazajicek, mlocati, rakekniven,
+  bepolymathe, MGuerra, zmni, richarson and Fabijenna)
 
 ## 18.01.4
 - you can now **print the selected text** in the note text edit as highlighted 

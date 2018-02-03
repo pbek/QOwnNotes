@@ -739,12 +739,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1311"/>
       <source>&amp;Export note as PDF (preview)</source>
-      <translation type="unfinished">&amp;Export note as PDF (preview)</translation>
+      <translation>&amp;Esporta nota come PDT (anteprima)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1314"/>
       <source>Export note as PDF (preview)</source>
-      <translation type="unfinished">Export note as PDF (preview)</translation>
+      <translation>Esporta nota come PDT (anteprima)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1323"/>
@@ -1103,7 +1103,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1344"/>
       <source>&amp;Print note (preview)</source>
-      <translation type="unfinished">&amp;Print note (preview)</translation>
+      <translation>Stam&amp;pa nota (anteprima)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1750"/>
@@ -1395,22 +1395,22 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
     <message>
       <location filename="../mainwindow.cpp" line="5357"/>
       <source>Print selected text</source>
-      <translation type="unfinished">Print selected text</translation>
+      <translation>Stampa testo selezionato</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5363"/>
       <source>Print selected text (preview)</source>
-      <translation type="unfinished">Print selected text (preview)</translation>
+      <translation>Stampa testo selezionato (anteprima)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5379"/>
       <source>Export selected text as PDF</source>
-      <translation type="unfinished">Export selected text as PDF</translation>
+      <translation>Esporta testo selezionato come PDF</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5385"/>
       <source>Export selected text as PDF (preview)</source>
-      <translation type="unfinished">Export selected text as PDF (preview)</translation>
+      <translation>Esporta testo selezionato come PDF (anteprima)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5567"/>
