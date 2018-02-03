@@ -22,7 +22,7 @@ matrix:
     - qtdir: "C:\\Qt\\5.7\\mingw53_32"
 
 install:
-  # https://www.appveyor.com/docs/build-environment/
+  # https://www.appveyor.com/docs/build-environment/#qt
 #  - set QTDIR=C:\Qt\5.7\mingw53_32
 #  - set QTDIR=C:\Qt\5.10.0\mingw53_32
   - set QTDIR=%qtdir%
