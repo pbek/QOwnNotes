@@ -33,6 +33,7 @@ public:
     void setMainWindow(MainWindow *mainWindow);
     int modifyFontSize(FontModificationMode mode);
     void updateSettings();
+    QMargins viewportMargins();
 
 protected:
     void insertFromMimeData(const QMimeData * source);

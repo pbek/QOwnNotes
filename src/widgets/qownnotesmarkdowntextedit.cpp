@@ -273,6 +273,10 @@ void QOwnNotesMarkdownTextEdit::setPaperMargins(int width) {
     }
 }
 
+QMargins QOwnNotesMarkdownTextEdit::viewportMargins() {
+    return QMarkdownTextEdit::viewportMargins();
+}
+
 void QOwnNotesMarkdownTextEdit::resizeEvent(QResizeEvent* event) {
     emit resize(event);
     QMarkdownTextEdit::resizeEvent(event);

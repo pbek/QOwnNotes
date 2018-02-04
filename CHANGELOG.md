@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 18.02.1
+- fixed autocompleter user interface offset, especially in the distraction free mode
+  (for [#842](https://github.com/pbek/QOwnNotes/issues/842))
+
 ## 18.02.0
 - there now is a new scripting hook `autocompletionHook()` to return a list of
   strings to be added to the autocompletion list when the autocompletion is

@@ -41,7 +41,7 @@
 #include "entities/notehistory.h"
 #include "dialogs/notediffdialog.h"
 #include "services/updateservice.h"
-#include "libraries/qmarkdowntextedit/qmarkdowntextedit.h"
+#include "widgets/qownnotesmarkdowntextedit.h"
 
 #define SORT_ALPHABETICAL 0
 #define SORT_BY_LAST_CHANGE 1
@@ -51,6 +51,8 @@
 namespace Ui {
 class MainWindow;
 }
+
+class QOwnNotesMarkdownTextEdit;
 
 // forward declaration because of "xxx does not name a type"
 class TodoDialog;
@@ -103,7 +105,7 @@ public:
 
     void handleInsertingFromMimeData(const QMimeData *mimeData);
 
-    QMarkdownTextEdit *activeNoteTextEdit();
+    QOwnNotesMarkdownTextEdit *activeNoteTextEdit();
 
     static MainWindow *instance();
 

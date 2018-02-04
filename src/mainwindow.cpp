@@ -4247,7 +4247,7 @@ bool MainWindow::showRestartNotificationIfNeeded() {
 /**
  * @brief Returns the active note text edit
  */
-QMarkdownTextEdit* MainWindow::activeNoteTextEdit() {
+QOwnNotesMarkdownTextEdit* MainWindow::activeNoteTextEdit() {
     return ui->noteTextEdit->isHidden() ?
                                   ui->encryptedNoteTextEdit : ui->noteTextEdit;
 }
@@ -4256,7 +4256,7 @@ QMarkdownTextEdit* MainWindow::activeNoteTextEdit() {
  * @brief Handles the linking of text
  */
 void MainWindow::handleTextNoteLinking() {
-    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
     LinkDialog *dialog = new LinkDialog("", this);
     dialog->exec();
 
@@ -5011,7 +5011,7 @@ void MainWindow::on_noteTextView_anchorClicked(const QUrl &url) {
  */
 void MainWindow::openLocalUrl(QString urlString) {
     // if urlString is no valid url we will try to convert it into a note url
-    if (!QMarkdownTextEdit::isValidUrl(urlString)) {
+    if (!QOwnNotesMarkdownTextEdit::isValidUrl(urlString)) {
         urlString = Note::getNoteURLFromFileName(urlString);
     }
 
@@ -5460,7 +5460,7 @@ void MainWindow::on_noteTextEdit_customContextMenuRequested(const QPoint &pos) {
  * @return
  */
 bool MainWindow::isNoteTextSelected() {
-    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
     QString selectedText = textEdit->textCursor().selectedText().trimmed();
     return !selectedText.isEmpty();
 }
@@ -5471,7 +5471,7 @@ void MainWindow::on_actionInsert_Link_to_note_triggered() {
 }
 
 void MainWindow::on_action_DuplicateText_triggered() {
-    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
     textEdit->duplicateText();
 }
 
@@ -5504,7 +5504,7 @@ void MainWindow::on_action_Knowledge_base_triggered() {
  * Inserts the current date
  */
 void MainWindow::on_actionInsert_current_time_triggered() {
-    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
     QTextCursor c = textEdit->textCursor();
     QDateTime dateTime = QDateTime::currentDateTime();
     QSettings settings;
@@ -5535,7 +5535,7 @@ void MainWindow::on_action_Export_note_as_PDF_markdown_triggered() {
  * @brief Exports the current note as PDF (text)
  */
 void MainWindow::on_action_Export_note_as_PDF_text_triggered() {
-    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
     exportNoteAsPDF(textEdit);
 }
 
@@ -5553,7 +5553,7 @@ void MainWindow::on_action_Print_note_markdown_triggered() {
  * @brief Prints the current note (text)
  */
 void MainWindow::on_action_Print_note_text_triggered() {
-    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
     printNote(textEdit);
 }
 
@@ -5592,7 +5592,7 @@ bool MainWindow::insertMedia(QFile *file) {
         text = scriptingService->callInsertMediaHook(file, text);
         qDebug() << __func__ << " - 'text': " << text;
 
-        QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+        QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
         QTextCursor c = textEdit->textCursor();
 
         // if we try to insert media in the first line of the note (aka.
@@ -5620,7 +5620,7 @@ bool MainWindow::insertAttachment(QFile *file) {
     if (!text.isEmpty()) {
         qDebug() << __func__ << " - 'text': " << text;
 
-        QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+        QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
         QTextCursor c = textEdit->textCursor();
 
         // if we try to insert the attachment in the first line of the note
@@ -5652,7 +5652,7 @@ bool MainWindow::insertAttachment(QFile *file) {
  */
 int MainWindow::currentNoteLineNumber()
 {
-    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
     QTextCursor cursor = textEdit->textCursor();
 
     QTextDocument *doc = textEdit->document();
@@ -5677,7 +5677,7 @@ void MainWindow::on_actionShow_changelog_triggered() {
 }
 
 void MainWindow::on_action_Find_text_in_note_triggered() {
-    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
     textEdit->searchWidget()->activate();
 }
 
@@ -5917,7 +5917,7 @@ void MainWindow::gotoNoteBookmark(int slot) {
  * Inserts a code block at the current cursor position
  */
 void MainWindow::on_actionInsert_code_block_triggered() {
-    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
     QTextCursor c = textEdit->textCursor();
     QString selectedText = c.selection().toPlainText();
 
@@ -6070,7 +6070,7 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
                 mimeData);
 
         if (!text.isEmpty()) {
-            QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+            QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
             QTextCursor c = textEdit->textCursor();
 
             // insert text from QML
@@ -6230,7 +6230,7 @@ void MainWindow::insertHtml(QString html) {
     // remove all html tags
     html.remove(QRegularExpression("<.+?>"));
 
-    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
     QTextCursor c = textEdit->textCursor();
 
     c.insertText(html);
@@ -6285,7 +6285,7 @@ void MainWindow::on_actionShow_note_in_file_manager_triggered() {
  * @return
  */
 bool MainWindow::undoFormatting(QString formatter) {
-    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
     QTextCursor c = textEdit->textCursor();
     QString selectedText = c.selectedText();
     int formatterLength = formatter.length();
@@ -6312,7 +6312,7 @@ bool MainWindow::undoFormatting(QString formatter) {
  * @param formatter
  */
 void MainWindow::applyFormatter(QString formatter) {
-    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
     QTextCursor c = textEdit->textCursor();
     QString selectedText = c.selectedText();
 
@@ -7860,7 +7860,7 @@ bool MainWindow::selectedNotesHaveTags() {
  * Opens the widget to replace text in the current note
  */
 void MainWindow::on_actionReplace_in_current_note_triggered() {
-    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
     textEdit->searchWidget()->activateReplace();
 }
 
@@ -7868,7 +7868,7 @@ void MainWindow::on_actionReplace_in_current_note_triggered() {
  * Jumps to the position that was clicked in the navigation widget
  */
 void MainWindow::onNavigationWidgetPositionClicked(int position) {
-    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
 
     // set the focus first so the preview also scrolls to the headline
     textEdit->setFocus();
@@ -7921,7 +7921,7 @@ void MainWindow::regenerateNotePreview() {
  * Tries to open a link at the current cursor position or solve an equation
  */
 void MainWindow::on_actionAutocomplete_triggered() {
-    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
 
     // try to open a link at the cursor position
     if (textEdit->openLinkAtCursorPosition()) {
@@ -7966,6 +7966,10 @@ void MainWindow::on_actionAutocomplete_triggered() {
     QPoint globalPos = textEdit->mapToGlobal(
             textEdit->cursorRect().bottomRight());
 
+    // compensate viewport margins
+    globalPos.setY(globalPos.y() + textEdit->viewportMargins().top());
+    globalPos.setX(globalPos.x() + textEdit->viewportMargins().left());
+
     if (menu.actions().count() > 0) {
         QAction *selectedItem = menu.exec(globalPos);
         if (selectedItem) {
@@ -7996,7 +8000,7 @@ void MainWindow::on_actionAutocomplete_triggered() {
  * @return
  */
 bool MainWindow::solveEquationInNoteTextEdit(double &returnValue) {
-    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
     QTextCursor c = textEdit->textCursor();
 
     // get the text from the current cursor to the start of the line
@@ -8060,7 +8064,7 @@ bool MainWindow::solveEquationInNoteTextEdit(double &returnValue) {
  * @return
  */
 QString MainWindow::noteTextEditCurrentWord(bool withPreviousCharacters) {
-    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
     QTextCursor c = textEdit->textCursor();
 
     // get the text from the current word
@@ -8095,7 +8099,7 @@ bool MainWindow::noteTextEditAutoComplete(QStringList &resultList) {
         return false;
     }
 
-    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
     QString noteText = textEdit->toPlainText();
 
     // find all items that match our current word
@@ -8273,7 +8277,7 @@ void MainWindow::initSavedSearchesCompleter() {
  */
 void MainWindow::on_actionInsert_headline_from_note_filename_triggered()
 {
-    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
     QTextCursor c = textEdit->textCursor();
     c.movePosition(QTextCursor::Start, QTextCursor::MoveAnchor);
 
@@ -8774,7 +8778,7 @@ void MainWindow::on_actionShare_note_triggered() {
  * Toggles the case of the selected text
  */
 void MainWindow::on_actionToggle_text_case_triggered() {
-    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
     QTextCursor c = textEdit->textCursor();
     QString selectedText = c.selectedText();
 
@@ -8923,7 +8927,7 @@ void MainWindow::on_actionSplit_note_at_cursor_position_triggered() {
     QString name = currentNote.getName();
     QList<Tag> tags = Tag::fetchAllOfNote(currentNote);
 
-    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
     QTextCursor c = textEdit->textCursor();
 
     // select the text to get into a new note
@@ -9105,7 +9109,7 @@ void MainWindow::on_actionDelete_orphaned_images_triggered() {
  * @param text
  */
 void MainWindow::writeToNoteTextEdit(QString text) {
-    QMarkdownTextEdit *textEdit = activeNoteTextEdit();
+    QOwnNotesMarkdownTextEdit *textEdit = activeNoteTextEdit();
     textEdit->insertPlainText(text);
 }
 
@@ -9115,7 +9119,7 @@ void MainWindow::writeToNoteTextEdit(QString text) {
  * @return
  */
 QString MainWindow::selectedNoteTextEditText() {
-    QMarkdownTextEdit *textEdit = activeNoteTextEdit();
+    QOwnNotesMarkdownTextEdit *textEdit = activeNoteTextEdit();
     QString selectedText = textEdit->textCursor().selectedText();
 
     // transform Unicode line endings
@@ -9505,7 +9509,7 @@ void MainWindow::on_actionInsert_table_triggered() {
  * Inserts a block quote character or formats the selected text as block quote
  */
 void MainWindow::on_actionInsert_block_quote_triggered() {
-    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
     QTextCursor c = textEdit->textCursor();
     QString selectedText = c.selectedText();
 
@@ -9532,7 +9536,7 @@ void MainWindow::on_actionInsert_block_quote_triggered() {
  * Searches for the selected text on the web
  */
 void MainWindow::on_actionSearch_text_on_the_web_triggered() {
-    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
     QString selectedText = textEdit->textCursor().selectedText().trimmed();
 
     if (selectedText.isEmpty()) {
@@ -9558,7 +9562,7 @@ void MainWindow::on_actionSearch_text_on_the_web_triggered() {
  * Updates the line number label
  */
 void MainWindow::noteEditCursorPositionChanged() {
-    QMarkdownTextEdit *textEdit = activeNoteTextEdit();
+    QOwnNotesMarkdownTextEdit *textEdit = activeNoteTextEdit();
     QTextCursor cursor = textEdit->textCursor();
     QString selectedText = cursor.selectedText();
     QString text;
@@ -9579,7 +9583,7 @@ void MainWindow::noteEditCursorPositionChanged() {
  * Deletes the current line in the active note text edit
  */
 void MainWindow::on_actionDelete_line_triggered() {
-    QMarkdownTextEdit *textEdit = activeNoteTextEdit();
+    QOwnNotesMarkdownTextEdit *textEdit = activeNoteTextEdit();
 
     // if the note text edit doesn't have the focus delegate the default
     // shortcut to the widget with the focus
@@ -9609,7 +9613,7 @@ void MainWindow::on_actionDelete_line_triggered() {
  * Deletes the current word in the active note text edit
  */
 void MainWindow::on_actionDelete_word_triggered() {
-    QMarkdownTextEdit *textEdit = activeNoteTextEdit();
+    QOwnNotesMarkdownTextEdit *textEdit = activeNoteTextEdit();
 
     // if the note text edit doesn't have the focus delegate the default
     // shortcut to the widget with the focus
