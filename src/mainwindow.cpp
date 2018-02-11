@@ -85,6 +85,7 @@
 #include <utils/git.h>
 #include <dialogs/filedialog.h>
 #include <dialogs/scriptrepositorydialog.h>
+#include <entities/trashitem.h>
 
 MainWindow::MainWindow(QWidget *parent) :
         QMainWindow(parent),

@@ -281,6 +281,17 @@ bool DatabaseService::setupNoteFolderTables() {
         version = 12;
     }
 
+    if (version < 13) {
+        queryDisk.exec("CREATE TABLE IF NOT EXISTS trashItem ("
+                               "id INTEGER PRIMARY KEY,"
+                               "file_name VARCHAR(255),"
+                               "file_size INTEGER,"
+                               "note_sub_folder_path_data TEXT,"
+                               "created DATETIME DEFAULT current_timestamp)");
+
+        version = 13;
+    }
+
     if (version != oldVersion) {
         setAppData("database_version",
                    QString::number(version), "note_folder");

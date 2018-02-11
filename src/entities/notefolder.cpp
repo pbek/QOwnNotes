@@ -377,6 +377,13 @@ QString NoteFolder::currentRootFolderName(bool fullPath) {
 }
 
 /**
+ * Fetches the current trash path
+ */
+QString NoteFolder::currentTrashPath() {
+    return NoteFolder::currentLocalPath() + QDir::separator() + "trash";
+}
+
+/**
  * Fetches the current media path
  */
 QString NoteFolder::currentMediaPath() {

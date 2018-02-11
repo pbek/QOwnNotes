@@ -70,6 +70,7 @@ SOURCES += main.cpp\
     dialogs/versiondialog.cpp \
     entities/calendaritem.cpp \
     entities/note.cpp \
+    entities/trashitem.cpp \
     entities/notesubfolder.cpp \
     entities/notehistory.cpp \
     entities/notefolder.cpp \
@@ -132,6 +133,7 @@ HEADERS  += mainwindow.h \
     libraries/singleapplication/singleapplication.h \
     entities/notehistory.h \
     entities/note.h \
+    entities/trashitem.h \
     entities/notesubfolder.h \
     entities/calendaritem.h \
     entities/notefolder.h \

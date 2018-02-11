@@ -15,6 +15,7 @@
 #include "libraries/botan/botan.h"
 #include "tag.h"
 #include "notesubfolder.h"
+#include "trashitem.h"
 #include <utils/misc.h>
 #include <services/scriptingservice.h>
 #include <QMimeDatabase>
@@ -845,6 +846,7 @@ bool Note::store() {
 bool Note::storeNoteTextFileToDisk() {
     QString oldName = name;
     QString oldNoteFilePath = fullNoteFilePath();
+    TrashItem trashItem = TrashItem::prepare(this);
 
     if (allowDifferentFileName()) {
         // check if a QML function wants to set an other note file name and
@@ -878,6 +880,11 @@ bool Note::storeNoteTextFileToDisk() {
 
     // assign the tags to the new name if the name has changed
     if (oldName != newName) {
+        qDebug() << __func__ << " - 'trashItem': " << trashItem;
+
+        // trash the old note
+        trashItem.doTrashing();
+
         // TODO(pbek): we need to heed note subfolders here
         Tag::renameNoteFileNamesOfLinks(oldName, newName);
 
@@ -1446,6 +1453,10 @@ bool Note::renameNoteFile(QString newName) {
 //
 bool Note::removeNoteFile() {
     if (this->fileExists()) {
+        // add note to trash
+        bool trashResult = TrashItem::add(this);
+        qDebug() << __func__ << " - 'trashResult': " << trashResult;
+
         QFile file(fullNoteFilePath());
         qDebug() << __func__ << " - 'this->fileName': " << this->fileName;
         qDebug() << __func__ << " - 'file': " << file.fileName();
