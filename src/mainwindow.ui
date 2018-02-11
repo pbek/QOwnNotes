@@ -755,11 +755,22 @@ p, li { white-space: pre-wrap; }
      <addaction name="actionShow_note_in_file_manager"/>
      <addaction name="actionView_note_in_new_window"/>
     </widget>
+    <widget class="QMenu" name="menuTrash">
+     <property name="title">
+      <string>Trash</string>
+     </property>
+     <property name="icon">
+      <iconset theme="trash-empty" resource="breeze-qownnotes.qrc">
+       <normaloff>:/icons/breeze-qownnotes/16x16/trash-empty.svg</normaloff>:/icons/breeze-qownnotes/16x16/trash-empty.svg</iconset>
+     </property>
+     <addaction name="actionShow_local_trash"/>
+     <addaction name="actionShow_trash"/>
+    </widget>
     <addaction name="action_New_note"/>
     <addaction name="action_Find_note"/>
     <addaction name="actionFind_notes_in_all_subfolders"/>
     <addaction name="menuNavigation"/>
-    <addaction name="actionShow_trash"/>
+    <addaction name="menuTrash"/>
     <addaction name="menuSort_by"/>
     <addaction name="separator"/>
     <addaction name="menuExport"/>
@@ -1190,7 +1201,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/trash-empty.svg</normaloff>:/icons/breeze-qownnotes/16x16/trash-empty.svg</iconset>
    </property>
    <property name="text">
-    <string>Show &amp;trash</string>
+    <string>Show remote trash</string>
    </property>
    <property name="toolTip">
     <string>Show trashed notes on server</string>
@@ -2160,6 +2171,15 @@ p, li { white-space: pre-wrap; }
     <string>Check for script updates</string>
    </property>
   </action>
+  <action name="actionShow_local_trash">
+   <property name="icon">
+    <iconset theme="trash-empty" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/trash-empty.svg</normaloff>:/icons/breeze-qownnotes/16x16/trash-empty.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Show local trash</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
@@ -2185,8 +2205,8 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="breeze-qownnotes.qrc"/>
   <include location="images.qrc"/>
+  <include location="breeze-qownnotes.qrc"/>
   <include location="breeze-dark-qownnotes.qrc"/>
  </resources>
  <connections/>

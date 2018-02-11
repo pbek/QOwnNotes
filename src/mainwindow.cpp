@@ -86,6 +86,7 @@
 #include <dialogs/filedialog.h>
 #include <dialogs/scriptrepositorydialog.h>
 #include <entities/trashitem.h>
+#include <dialogs/localtrashdialog.h>
 
 MainWindow::MainWindow(QWidget *parent) :
         QMainWindow(parent),
@@ -9895,4 +9896,10 @@ void MainWindow::noteTextEditResize(QResizeEvent* event) {
 
 void MainWindow::encryptedNoteTextEditResize(QResizeEvent* event) {
     ui->encryptedNoteTextEdit->setPaperMargins();
+}
+
+void MainWindow::on_actionShow_local_trash_triggered() {
+    LocalTrashDialog *dialog = new LocalTrashDialog(this);
+    dialog->exec();
+
 }

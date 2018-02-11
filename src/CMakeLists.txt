@@ -24,6 +24,7 @@ qt5_wrap_ui(dialogs/ui_tododialog.h tododialog.ui)
 qt5_wrap_ui(dialogs/ui_aboutdialog.h aboutdialog.ui)
 qt5_wrap_ui(widgets/ui_logwidget.h logwidget.ui)
 qt5_wrap_ui(dialogs/ui_trashdialog.h trashdialog.ui)
+qt5_wrap_ui(dialogs/ui_localtrashdialog.h localtrashdialog.ui)
 qt5_wrap_ui(dialogs/ui_linkdialog.h linkdialog.ui)
 qt5_wrap_ui(dialogs/ui_updatedialog.h updatedialog.ui)
 qt5_wrap_ui(dialogs/ui_notediffdialog.h notediffdialog.ui)
@@ -78,6 +79,9 @@ set(SOURCE_FILES
     dialogs/trashdialog.cpp
     dialogs/trashdialog.h
     dialogs/trashdialog.ui
+    dialogs/localtrashdialog.cpp
+    dialogs/localtrashdialog.h
+    dialogs/localtrashdialog.ui
     dialogs/updatedialog.cpp
     dialogs/updatedialog.h
     dialogs/updatedialog.ui

@@ -66,6 +66,7 @@ SOURCES += main.cpp\
     dialogs/settingsdialog.cpp \
     dialogs/tododialog.cpp \
     dialogs/trashdialog.cpp \
+    dialogs/localtrashdialog.cpp \
     dialogs/updatedialog.cpp \
     dialogs/versiondialog.cpp \
     entities/calendaritem.cpp \
@@ -145,6 +146,7 @@ HEADERS  += mainwindow.h \
     dialogs/settingsdialog.h \
     dialogs/tododialog.h \
     dialogs/trashdialog.h \
+    dialogs/localtrashdialog.h \
     dialogs/updatedialog.h \
     dialogs/versiondialog.h \
     services/owncloudservice.h \
@@ -199,6 +201,7 @@ FORMS    += mainwindow.ui \
     dialogs/settingsdialog.ui \
     dialogs/versiondialog.ui \
     dialogs/trashdialog.ui \
+    dialogs/localtrashdialog.ui \
     dialogs/linkdialog.ui \
     dialogs/tododialog.ui \
     dialogs/passworddialog.ui \

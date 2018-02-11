@@ -504,6 +504,8 @@ private slots:
 
     void encryptedNoteTextEditResize(QResizeEvent *event);
 
+    void on_actionShow_local_trash_triggered();
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;
