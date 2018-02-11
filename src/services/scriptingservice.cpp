@@ -861,6 +861,7 @@ QString ScriptingService::noteTextEditCurrentWord(bool withPreviousCharacters) {
     return mainWindow != Q_NULLPTR ?
            mainWindow->noteTextEditCurrentWord(withPreviousCharacters) : "";
 #else
+    Q_UNUSED(withPreviousCharacters);
     return "";
 #endif
 }
