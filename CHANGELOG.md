@@ -14,6 +14,9 @@
     - trashed files are stored per note folder in a new folder `trash`
         - additional information about the trashed files is stored in the 
           sqlite database of the note folder
+- added more Italian, German, French, Indonesian, Swedish, Brazilian Portuguese,
+  Dutch and Hungarian translation (thank you mlocati, rakekniven, bepolymathe,
+  zmni, ekblom, mlimacarlos and Fabijenna)
 
 ## 18.02.0
 - there now is a new scripting hook `autocompletionHook()` to return a list of
