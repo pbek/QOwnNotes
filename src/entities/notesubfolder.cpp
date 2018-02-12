@@ -113,7 +113,8 @@ QString NoteSubFolder::relativePath(QString separator) {
  * Gets the full path of the note sub folder
  */
 QString NoteSubFolder::fullPath() {
-    return Note::getFullNoteFilePathForFile(relativePath());
+    return Utils::Misc::removeIfEndsWith(
+            Note::getFullNoteFilePathForFile(relativePath()), "/");
 }
 
 /**

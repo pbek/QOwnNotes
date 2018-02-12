@@ -50,7 +50,8 @@ public:
         DebugOptionPage,
         EditorPage,
         GitPage,
-        PanelsPage
+        PanelsPage,
+        LocalTrashPage
     };
 
     explicit SettingsDialog(int page = 0,
@@ -229,6 +230,10 @@ private slots:
     void on_resetMessageBoxesButton_clicked();
 
     void on_markdownHighlightingCheckBox_toggled(bool checked);
+
+    void on_localTrashEnabledCheckBox_toggled(bool checked);
+
+    void on_localTrashClearCheckBox_toggled(bool checked);
 
 private:
 

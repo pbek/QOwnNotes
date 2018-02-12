@@ -1,20 +1,11 @@
 #include "entities/trashitem.h"
 #include <QDebug>
-#include <QSqlRecord>
-#include <QMessageBox>
-#include <QApplication>
 #include <QSettings>
 #include <QDir>
 #include <QSqlError>
-#include <QRegularExpression>
-#include <QCryptographicHash>
-#include "libraries/botan/botanwrapper.h"
+#include "notefolder.h"
 #include "notesubfolder.h"
 #include <utils/misc.h>
-#include <services/scriptingservice.h>
-#include <QMimeDatabase>
-#include <QTemporaryFile>
-#include <utils/gui.h>
 
 
 TrashItem::TrashItem() {
@@ -80,7 +71,7 @@ bool TrashItem::remove(bool withFile) {
         return false;
     } else {
         if (withFile) {
-            this->removeNoteFile();
+            this->removeFile();
         }
 
         return true;
@@ -88,12 +79,33 @@ bool TrashItem::remove(bool withFile) {
 }
 
 /**
- * Returns the full path of the note file
+ * Returns the full path of the trashed file
  */
-QString TrashItem::fullNoteFilePath() {
-    // TODO(pbek): implement
-    return "";
-//    return getFullNoteFilePathForFile(relativeNoteFilePath());
+QString TrashItem::fullFilePath() {
+    return NoteFolder::currentTrashPath() + QDir::separator() +
+            QString::number(getId());
+}
+
+/**
+ * Fetches the content of the trashed file
+ *
+ * @return
+ */
+QString TrashItem::loadFileFromDisk() {
+    QFile file(fullFilePath());
+
+    if (!file.open(QIODevice::ReadOnly)) {
+        qDebug() << __func__ << " - 'file': " << file.fileName();
+        qDebug() << __func__ << " - " << file.errorString();
+        return "";
+    }
+
+    QTextStream in(&file);
+    in.setCodec("UTF-8");
+    QString text = in.readAll();
+    file.close();
+
+    return text;
 }
 
 /**
@@ -157,6 +169,65 @@ bool TrashItem::doTrashing() {
 
     // copy file to trash folder
     return file.copy(destinationFileName);
+}
+
+/**
+ * Restores a trashed file and removes the trash item
+ *
+ * @return
+ */
+bool TrashItem::restoreFile() {
+    if (!fileExists()) {
+        return false;
+    }
+
+    QString newFilePath = restorationFilePath();
+    if (newFilePath.isEmpty()) {
+        return false;
+    }
+
+    QFile file(fullFilePath());
+    if (file.rename(newFilePath)) {
+        remove();
+        return true;
+    }
+
+    return false;
+}
+
+/**
+ * Returns the file path of the restored file
+ *
+ * @return
+ */
+QString TrashItem::restorationFilePath() {
+    auto noteSubFolder = NoteSubFolder::fetchByPathData(noteSubFolderPathData);
+    QString folderPath = noteSubFolder.fullPath();
+    QString filePath = folderPath + QDir::separator() + fileName;
+
+    QFile file(filePath);
+    // prepend the current timestamp if the file already exists
+    if ( file.exists() ) {
+        filePath = folderPath + QDir::separator() +
+                   QString::number(QDateTime::currentSecsSinceEpoch()) + "_" +
+                   fileName;
+    }
+
+    file.setFileName(filePath);
+    // if the file still exists use a random number
+    if ( file.exists() ) {
+        filePath = folderPath + QDir::separator() +
+                   QString::number(qrand()) + "_" +
+                   fileName;
+    }
+
+    file.setFileName(filePath);
+    // if the file still exists quit
+    if ( file.exists() ) {
+        return "";
+    }
+
+    return filePath;
 }
 
 void TrashItem::setNote(Note note) {
@@ -310,7 +381,7 @@ bool TrashItem::deleteAll() {
  * @return bool
  */
 bool TrashItem::fileExists() {
-    QFile file(fullNoteFilePath());
+    QFile file(fullFilePath());
     QFileInfo fileInfo(file);
     return file.exists() && fileInfo.isFile() && fileInfo.isReadable();
 }
@@ -326,8 +397,6 @@ bool TrashItem::exists() {
 bool TrashItem::fillFromId(int id) {
     QSqlDatabase db = QSqlDatabase::database("note_folder");
     QSqlQuery query(db);
-
-    Script script;
 
     query.prepare("SELECT * FROM trashItem WHERE id = :id");
     query.bindValue(":id", id);
@@ -367,9 +436,9 @@ QString TrashItem::fileBaseName(bool withFullName) {
 //
 // remove the file of the trashItem
 //
-bool TrashItem::removeNoteFile() {
+bool TrashItem::removeFile() {
     if (this->fileExists()) {
-        QFile file(fullNoteFilePath());
+        QFile file(fullFilePath());
         qDebug() << __func__ << " - 'this->fileName': " << this->fileName;
         qDebug() << __func__ << " - 'file': " << file.fileName();
         return file.remove();

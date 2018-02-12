@@ -355,29 +355,87 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/localtrashdialog.cpp" line="23"/>
-        <source>Restore</source>
+        <location filename="../dialogs/localtrashdialog.ui" line="42"/>
+        <source>Name</source>
+        <translation type="unfinished">Nom</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/localtrashdialog.ui" line="47"/>
+        <source>Trashed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/localtrashdialog.cpp" line="24"/>
+        <source>Restore</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/localtrashdialog.cpp" line="25"/>
+        <location filename="../dialogs/localtrashdialog.cpp" line="162"/>
         <source>Restore selected notes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/localtrashdialog.cpp" line="33"/>
+        <location filename="../dialogs/localtrashdialog.cpp" line="34"/>
         <source>Remove</source>
         <translation type="unfinished">Elimina</translation>
     </message>
     <message>
-        <location filename="../dialogs/localtrashdialog.cpp" line="34"/>
+        <location filename="../dialogs/localtrashdialog.cpp" line="35"/>
+        <location filename="../dialogs/localtrashdialog.cpp" line="208"/>
         <source>Remove selected notes</source>
         <translation type="unfinished">Elimina les notes seleccionades</translation>
     </message>
     <message>
-        <location filename="../dialogs/localtrashdialog.cpp" line="43"/>
+        <location filename="../dialogs/localtrashdialog.cpp" line="77"/>
+        <source>File will be restored to: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../dialogs/localtrashdialog.cpp" line="163"/>
+        <source>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location filename="../dialogs/localtrashdialog.cpp" line="186"/>
+        <source>Notes restored</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../dialogs/localtrashdialog.cpp" line="187"/>
+        <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) where restored</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../dialogs/localtrashdialog.cpp" line="209"/>
+        <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location filename="../dialogs/localtrashdialog.cpp" line="232"/>
+        <source>Notes removed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../dialogs/localtrashdialog.cpp" line="233"/>
+        <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) where removed</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
         <source>Cancel</source>
-        <translation type="unfinished">&amp;Cancel·la</translation>
+        <translation type="obsolete">&amp;Cancel·la</translation>
     </message>
 </context>
 <context>
@@ -2946,153 +3004,153 @@ Tot i així, el voleu instal·lar?</translation>
         <translation>Carpetes de notes</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="383"/>
+        <location filename="../dialogs/settingsdialog.ui" line="395"/>
         <source>Your note folders</source>
         <translation>Les vostres carpetes de notes</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="450"/>
+        <location filename="../dialogs/settingsdialog.ui" line="462"/>
         <source>&amp;Add folder</source>
         <translation>Afegeix carpeta</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="474"/>
+        <location filename="../dialogs/settingsdialog.ui" line="486"/>
         <source>&amp;Remove folder</source>
         <translation>Elimina carpeta</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="688"/>
+        <location filename="../dialogs/settingsdialog.ui" line="700"/>
         <source>This name will be viewed in all the menus.</source>
         <translation>Aquest nom es veurà en tots els menús.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="530"/>
+        <location filename="../dialogs/settingsdialog.ui" line="542"/>
         <source>Set the ownCloud path where the note folder path will be synced to on your ownCloud server.</source>
         <translation>Estableiu el camí d&apos;ownCloud on la carpeta de notes es sincronitzarà amb el vostre servidor d&apos;ownCloud.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="704"/>
+        <location filename="../dialogs/settingsdialog.ui" line="716"/>
         <source>Use as active note folder</source>
         <translation>Usa com a carpeta de notes activa</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="807"/>
+        <location filename="../dialogs/settingsdialog.ui" line="819"/>
         <source>Your ownCloud server</source>
         <translation>El vostre servidor ownCloud</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="931"/>
+        <location filename="../dialogs/settingsdialog.ui" line="943"/>
         <source>ownCloud server url:</source>
         <translation>url del servidor ownCloud:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="953"/>
+        <location filename="../dialogs/settingsdialog.ui" line="965"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=&quot; font-style:italic;&quot;&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Entreu la URL del vostre servidor ownCloud, per exemple: &lt;span style=&quot; font-style:italic;&quot;&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="991"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1003"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Entre el nom d&apos;usuari del vostre servidor ownCloud.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1026"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1038"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Entreu la contrasenya per al vostre nom d&apos;usuari.&lt;br/&gt;La contrasenya s&apos;emmagatzemarà xifrada amb la resta de paràmetres, però no és excessivament segur.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1104"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1116"/>
         <source>connection to web server</source>
         <translation>connexió al servidor web</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1121"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1133"/>
         <source>ownCloud server detected</source>
         <translation>detectar servidor ownCloud</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1155"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1167"/>
         <source>connection to QOwnNotesAPI</source>
         <translation>connexió a QOwnNotesAPI</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1138"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1150"/>
         <source>username and password correct</source>
         <translation>nom d&apos;usuari i contrasenya correctes</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1094"/>
-        <location filename="../dialogs/settingsdialog.ui" line="1111"/>
-        <location filename="../dialogs/settingsdialog.ui" line="1128"/>
-        <location filename="../dialogs/settingsdialog.ui" line="1145"/>
-        <location filename="../dialogs/settingsdialog.ui" line="1162"/>
-        <location filename="../dialogs/settingsdialog.ui" line="1179"/>
-        <location filename="../dialogs/settingsdialog.ui" line="1196"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1106"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1123"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1140"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1157"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1174"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1191"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1208"/>
         <source>unknown</source>
         <translation>desconegut</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1054"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1066"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cliqueu aqui per provar la connexió al vostre servidor ownCloud.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1172"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1184"/>
         <source>versions app enabled on server</source>
         <translation>habilitades l&apos;aplicació amb versions al servidor</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1189"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1201"/>
         <source>trash app enabled on server</source>
         <translation>aplicació de paperera habilitada al servidor</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1206"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1218"/>
         <source>notes path found on server</source>
         <translation>trobat el camí de les notes al servidor</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="866"/>
+        <location filename="../dialogs/settingsdialog.ui" line="878"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=&quot; font-weight:600;&quot;&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Obriu la pàgina de &lt;span style=&quot; font-weight:600;&quot;&gt;configuració de l&apos;aplicació&lt;/span&gt; del vostre servidor ownCloud al vostre navegador per instal·lar o actualitzar QOwnNotesAPI i per habilitar les aplicacions centrals: &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; i &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="670"/>
+        <location filename="../dialogs/settingsdialog.ui" line="682"/>
         <source>path</source>
         <translation>camí</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="506"/>
+        <location filename="../dialogs/settingsdialog.ui" line="518"/>
         <source>Click here to select your local note path</source>
         <translation>Cliqueu aquí per seleccionar el camí local de les vostres notes</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="583"/>
+        <location filename="../dialogs/settingsdialog.ui" line="595"/>
         <source>Click here to select your remote note path on your ownCloud server</source>
         <translation>Cliqueu aqui per seleccionar el camí remot de les notes al vostre servidor ownCloud</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="636"/>
+        <location filename="../dialogs/settingsdialog.ui" line="648"/>
         <source>Click here to use the selected folder from your server as note folder</source>
         <translation>Cliqueu aquí per usar la carpeta seleccionada al vostre servidor com a carpeta de notes</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="821"/>
+        <location filename="../dialogs/settingsdialog.ui" line="833"/>
         <source>Please install the latest version of &lt;a href=&quot;https://apps.owncloud.com/content/show.php?content=173817&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
         <translation>Instaleu, si us plau, la última versió de la &lt;a href=&quot;https://apps.owncloud.com/content/show.php?content=173817&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (com a mínim la versió QOWNNOTESAPI_MIN_VERSION) al vostre servidor ownCloud si voleu que el QOwnNotes pugui accedir a les versions de les notes i a les notes esborrades.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="834"/>
+        <location filename="../dialogs/settingsdialog.ui" line="846"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Necessitue també tenir les dues aplicacions base d&apos;ownCloud / NextCloud: &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; i &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt;activades al vostre servidor ownCloud (que haurien d&apos;estar-ho per defecte).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="847"/>
+        <location filename="../dialogs/settingsdialog.ui" line="859"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href=&quot;https://owncloud.org/&quot;&gt;&lt;span style=&quot; font-weight:600&quot;&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or an other desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tot i així, encara necessitareu &lt;a href=&quot;https://owncloud.org/&quot;&gt;&lt;span style=&quot; font-weight:600&quot;&gt;client de sincronització d&apos;ownCloud&lt;/span&gt;&lt;/a&gt; (o qualsevol altre client de sincronització d&apos;escriptori) per sincronitzar les vostres notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="913"/>
+        <location filename="../dialogs/settingsdialog.ui" line="925"/>
         <source>Error Message</source>
         <translation>Missatge d&apos;error</translation>
     </message>
@@ -3102,42 +3160,42 @@ Tot i així, el voleu instal·lar?</translation>
         <translation>Xarxa</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1237"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1249"/>
         <source>Proxy Settings</source>
         <translation>Configuració del proxy</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1243"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1255"/>
         <source>No Proxy</source>
         <translation>Sense proxy</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1253"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1265"/>
         <source>Use system proxy</source>
         <translation>Usa el proxy del sistema</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1260"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1272"/>
         <source>Specify proxy manually as</source>
         <translation>Indiqueu manualment el proxy com</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1285"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1297"/>
         <source>Host</source>
         <translation>Host</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1336"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1348"/>
         <source>Proxy server requires authentication</source>
         <translation>El servidor proxy requereix autenticació</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1393"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1405"/>
         <source>SSL Settings</source>
         <translation>Configuració de SSL</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1399"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1411"/>
         <source>Ignore SSL errors</source>
         <translation>Ignora els errors de SSL</translation>
     </message>
@@ -3147,7 +3205,7 @@ Tot i així, el voleu instal·lar?</translation>
         <translation>Tasques</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1618"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1630"/>
         <source>Default ownCloud calendar</source>
         <translation>Calendari ownCloud per defecte</translation>
     </message>
@@ -3157,64 +3215,64 @@ Tot i així, el voleu instal·lar?</translation>
         <translation>Interfície</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1608"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1620"/>
         <source>Other CalDAV server</source>
         <translation>Altre servidor CalDAV</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2246"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2258"/>
         <source>Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</source>
         <translation>Només s&apos;adaptaran alguns colors, la resta els controla el tema d&apos;escriptori. Heu de reiniciar l&apos;aplicació per tal que els canvis siguin efectius.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2249"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2261"/>
         <source>Optimize preview colors for dark mode desktop themes</source>
         <translation>Optimitza la previsualització de colors per als temes d&apos;escriptori de mode fosc</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2256"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2268"/>
         <source>This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</source>
         <translation>Això activa el mode fosc, i la interfície i les icones canviaran. Heu de reiniciar l&apos;aplicació per tal que els canvis siguin efectius.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2259"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2271"/>
         <source>Enable dark mode</source>
         <translation>Activa el mode fosc</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2285"/>
-        <location filename="../dialogs/settingsdialog.ui" line="2295"/>
-        <location filename="../dialogs/settingsdialog.ui" line="2326"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2297"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2307"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2338"/>
         <source>You need to restart the application to let this setting take effect</source>
         <translation>Heu de reiniciar l&apos;aplicació per tal que aquest paràmetre s&apos;apliqui</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2345"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2357"/>
         <source>Item sizes in the main window</source>
         <translation>Tamany dels elements a la finestra principal</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4114"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4126"/>
         <source>Markdown highlighting</source>
         <translation>Destacat markdown</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4120"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4132"/>
         <source>Enable markdown highlighting</source>
         <translation>Habilita destacat markdown</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1920"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1932"/>
         <source>Interface language</source>
         <translation>Idioma de la interfície</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1940"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1952"/>
         <source>Automatic</source>
         <translation>Automàtic</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2006"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2018"/>
         <source>English</source>
         <translation>Anglès</translation>
     </message>
@@ -3224,134 +3282,134 @@ Tot i així, el voleu instal·lar?</translation>
         <translation>Dreceres</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3634"/>
-        <location filename="../dialogs/settingsdialog.ui" line="3803"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3646"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3815"/>
         <source>Default font:</source>
         <translation>Tipus de lletra per defecte:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3676"/>
-        <location filename="../dialogs/settingsdialog.ui" line="3827"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3688"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3839"/>
         <source>Code font:</source>
         <translation>Codi font:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2459"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2471"/>
         <source>Main window shortcuts</source>
         <translation>Dreceres de la pantalla principal</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3116"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3128"/>
         <source>Do this at your own risk!</source>
         <translation>Feu això sota la vostra responsabilitat!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3119"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3131"/>
         <source>Ignore all external note folder changes</source>
         <translation>Ignora tots els canvis externs a la carpeta de notes</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3596"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3608"/>
         <source>No two spaces to do a line break are added here if checked</source>
         <translation>Si ho seleccioneu, no caldràn dos espais seguits per fer un canvi de línia</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3599"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3611"/>
         <source>Use GitHub line breaks</source>
         <translation>Utilitzar els salts de línia de GitHub</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1995"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2007"/>
         <source>German</source>
         <translation>Alemany</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2028"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2040"/>
         <source>French</source>
         <translation>Francès</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2094"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2106"/>
         <source>Polish</source>
         <translation>Polonès</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2171"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2183"/>
         <source>Chinese</source>
         <translation>Xinès</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2116"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2128"/>
         <source>Portuguese</source>
         <translation>Portuguès</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2083"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2095"/>
         <source>Dutch</source>
         <translation>Neerlandès</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2061"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2073"/>
         <source>Hungarian</source>
         <translation>Hongarès</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2017"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2029"/>
         <source>Spanish</source>
         <translation>Castellà</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1926"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1938"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes&quot;&gt;How can I help to translate QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Si voleu ajudar a traduïr QOwnNotes o actualitzar una traducció existent llegiu, si us plau, &lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes&quot;&gt;Com puc ajudar a traduïr QOwnNotes&lt;/a&gt;? (en anglès)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2230"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2242"/>
         <source>Dark mode</source>
         <translation>Mode fosc</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1453"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1465"/>
         <source>Disable tracking of usage data</source>
         <translation>Desactivar el seguiment de dades d&apos;ús</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1497"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1509"/>
         <source>Usage tracking is done on a private Piwik server.</source>
         <translation>El seguiment d&apos;ús es fa un servidor Piwik privat.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1557"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1569"/>
         <source>Disable heartbeat</source>
         <translation>Desactiva els batecs</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2127"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2139"/>
         <source>Russian</source>
         <translation>Rus</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1406"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1418"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href=&quot;https://letsencrypt.org/&quot;&gt;Let&apos;s encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Potser us interessa fer-vos amb un certificat SSL gratuït de &lt;a href=&quot;https://letsencrypt.org/&quot;&gt;Let&apos;s encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2193"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2205"/>
         <source>If you change the language you have to restart the application for the changes to take action.</source>
         <translation>Si heu canviat l&apos;idioma heu de reiniciar l&apos;aplicació per activar els canvis.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2879"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2891"/>
         <source>You need to reload the scripting engine if you modify a script file</source>
         <translation>Heu de recarregar el motor de scripting si voleu modificar un fitxer de scripts</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2882"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2894"/>
         <source>Reload scripting engine</source>
         <translation>Recarrega el motor de scripting</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2872"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2884"/>
         <source>Validate script</source>
         <translation>Valida script</translation>
     </message>
@@ -3361,119 +3419,120 @@ Tot i així, el voleu instal·lar?</translation>
         <translation>General</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3044"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3056"/>
         <source>Notes</source>
         <translation>Notes</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3067"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3079"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn&apos;t edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Si es comprova, sempre sereu notificats sobre modificacions externes, fins i tot si la nota actual no s&apos;ha editat durant l&apos;últim minut. L&apos;estat recomanat és &lt;span style=&quot; font-style:italic;&quot;&gt;sense marcar (unchecked)&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3136"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4300"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3148"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4312"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4719"/>
         <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
         <translation>Podeu trobar-vos amb problemes de sincronització amb versions velles d&apos;ownCloud si baixeu massa per sota dels 10 segons.
 Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2072"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2084"/>
         <source>Japanese</source>
         <translation>Japonès</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3140"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3152"/>
         <source>note save interval time [sec]</source>
         <translation>interval de temps per guardar la nota [sec]</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3070"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3082"/>
         <source>Notify about all external modifications of the current note</source>
         <translation>Notifica tot menys les modificacions externes de la nota actual</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3489"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3501"/>
         <location filename="../dialogs/settingsdialog.cpp" line="1884"/>
         <location filename="../dialogs/settingsdialog.cpp" line="1893"/>
         <source>Database</source>
         <translation>Base de dades</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3505"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3517"/>
         <source>Reinitialize Database</source>
         <translation>Reinicialitza la base de dades</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3457"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3469"/>
         <source>Clear application data and exit</source>
         <translation>Neteja les dades de l&apos;aplicació i surt</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3463"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3475"/>
         <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
         <translation>Aquest botó us permet netejar tots els paràmetres, esborrar la base de dades local de tasques i sortir de QOwnNotes.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3473"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3485"/>
         <location filename="../dialogs/settingsdialog.cpp" line="1953"/>
         <source>Clear app data and exit</source>
         <translation>Neteja les dades de l&apos;aplicació i surt</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3252"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3264"/>
         <source>Update dialog</source>
         <translation>Diàleg d&apos;actualització</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3332"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3344"/>
         <source>Default note file extension</source>
         <translation>Extensió per defecte dels fitxer de notes</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3417"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3429"/>
         <source>External editor</source>
         <translation>Editor extern</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3430"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3442"/>
         <source>path to external editor, leave empty for default</source>
         <translation>camí a l&apos;editor extern, deixeu-lo buit per defecte</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3440"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4379"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3452"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4391"/>
         <source>set external editor</source>
         <translation>establir l&apos;editor extern</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1422"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1434"/>
         <source>App metrics</source>
         <translation>Mètriques de l&apos;aplicació</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1440"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1452"/>
         <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can&apos;t live with it.</source>
         <translation>Les dades d&apos;ús anònimes ajuden a decidir quines parts de QOwnNotes son les pròximes a millorar i com arreglar errors. Si us plau, deshabiliteu-les només si us fan la vida impossible.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1472"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1484"/>
         <source>This data includes anonymous information about what features of the app are used.</source>
         <translation>Aquestes dades inclouen informació anònima sobre quines característiques de l&apos;aplicació es fan servir.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1526"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1538"/>
         <source>App heartbeat</source>
         <translation>Batecs de l&apos;aplicació</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1544"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1556"/>
         <source>A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</source>
         <translation>Un petit batec és enviat periòdicament mentre QOwnNotes s&apos;està executant. Feu feliç un desenvolupador fent-li saber que algú està usant el QOwnNotes.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2050"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2062"/>
         <source>Italian</source>
         <translation>Italià</translation>
     </message>
@@ -3483,17 +3542,17 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
         <translation>Scripting</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2526"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2538"/>
         <source>Your scripts</source>
         <translation>Els vostres scripts</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2610"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2622"/>
         <source>&amp;Remove script</source>
         <translation>Elimina script</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2889"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2901"/>
         <source>Click here to select your QML script</source>
         <translation>Cliqueu aquí per a seleccionar el vostre script QML</translation>
     </message>
@@ -3538,350 +3597,386 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
         <translation>Versionat git</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="311"/>
+        <location filename="../dialogs/settingsdialog.ui" line="299"/>
+        <source>Local trash</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="323"/>
         <source>Debug options</source>
         <translation>Opcions de depuració</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="523"/>
+        <location filename="../dialogs/settingsdialog.ui" line="535"/>
         <source>Path where your notes are stored locally</source>
         <translation>Camí on s&apos;emmagatzemen localment les vostres notes</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="533"/>
+        <location filename="../dialogs/settingsdialog.ui" line="545"/>
         <source>&quot;Notes&quot; path on your server</source>
         <extracomment>&quot;Notes&quot; should not be translated</extracomment>
         <translation>Camí de les &quot;Notes&quot; al servidor</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="639"/>
+        <location filename="../dialogs/settingsdialog.ui" line="651"/>
         <source>&amp;Use as ownCloud path</source>
         <translation>Usar com camí a ownCloud</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="678"/>
+        <location filename="../dialogs/settingsdialog.ui" line="690"/>
         <source>Please select your note folder on your ownCloud server:</source>
         <translation>Seleccioneu la carpeta de notes al vostre servidor ownCloud:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="711"/>
+        <location filename="../dialogs/settingsdialog.ui" line="723"/>
         <source>ownCloud server:</source>
         <translation>Servidor ownCloud:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="721"/>
+        <location filename="../dialogs/settingsdialog.ui" line="733"/>
         <source>Path on your ownCloud server:</source>
         <translation>Camí al vostre servidor ownCloud:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="728"/>
-        <location filename="../dialogs/settingsdialog.ui" line="2700"/>
+        <location filename="../dialogs/settingsdialog.ui" line="740"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2712"/>
         <source>Name:</source>
         <translation>Nom:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="735"/>
+        <location filename="../dialogs/settingsdialog.ui" line="747"/>
         <source>Note folder path:</source>
         <translation>Camí de la carpeta de notes:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="742"/>
+        <location filename="../dialogs/settingsdialog.ui" line="754"/>
         <source>Be aware that the ownCloud notes app doesn&apos;t support sub-folders!</source>
         <translation>Recordeu que l&apos;aplicació de notes d&apos;ownCloud no té suport per subcarpetes!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="745"/>
+        <location filename="../dialogs/settingsdialog.ui" line="757"/>
         <source>Use note sub-folders</source>
         <translation>Usa subcarpetes de notes</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="752"/>
+        <location filename="../dialogs/settingsdialog.ui" line="764"/>
         <source>You need to have git installed to make this work!</source>
         <translation>Heu de tenir instal·lat el git per tal que això funcioni!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="755"/>
+        <location filename="../dialogs/settingsdialog.ui" line="767"/>
         <source>Use git to keep a local history of your notes</source>
         <translation>Useu el git per desar un historial local de les vostres notes</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="784"/>
+        <location filename="../dialogs/settingsdialog.ui" line="796"/>
         <source>ownCloud support</source>
         <translation>suport per ownCloud</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="790"/>
+        <location filename="../dialogs/settingsdialog.ui" line="802"/>
         <source>Enable ownCloud support</source>
         <translation>Habilita el suport per ownCloud</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="969"/>
-        <location filename="../dialogs/settingsdialog.ui" line="1695"/>
+        <location filename="../dialogs/settingsdialog.ui" line="981"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1707"/>
         <source>Username:</source>
         <translation>Nom d&apos;usuari:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="994"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1006"/>
         <source>Your ownCloud username</source>
         <translation>El vostre nom d&apos;usuari d&apos;ownCloud</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1004"/>
-        <location filename="../dialogs/settingsdialog.ui" line="1730"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1016"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1742"/>
         <source>Password:</source>
         <translation>Contrasenya:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1032"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1044"/>
         <source>Your ownCloud password</source>
         <translation>La vostra contraseña d&apos;ownCloud</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1060"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1072"/>
         <source>&amp;Connect to ownCloud server</source>
         <translation>Connecta al servidor d&apos;ownCloud</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1087"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1099"/>
         <source>Connection status</source>
         <translation>Estat de la connexió</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1771"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1783"/>
         <source>Select the calendars you want to use for the Todo list</source>
         <translation>Seleccioneu els calendaris que voleu usar per la llista de Tasques</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1846"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1858"/>
         <source>Todo list settings</source>
         <translation>Configuració de la llista de Tasques</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1852"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1864"/>
         <source>Saving an item also closes the Todo list</source>
         <translation>Desar un element també tanca la llista de Tasques</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1951"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1963"/>
         <source>Indonesian</source>
         <translation>Indonesi</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1962"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1974"/>
         <source>Bengali</source>
         <translation>Bengalí</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1973"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1985"/>
         <source>Catalan</source>
         <translation>Català</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2138"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2150"/>
         <source>Swedish</source>
         <translation>Suec</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2149"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2161"/>
         <source>Turkish</source>
         <translation>Turc</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2239"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2251"/>
         <source>Enable dark mode application icon and tray icon</source>
         <translation>Habilita el mode fosc a la icona de l&apos;aplicació i de la safata</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2279"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2291"/>
         <source>System tray</source>
         <translation>Safata de sistema</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2288"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2300"/>
         <source>Show system tray icon</source>
         <translation>Mostra la icona a la safata de sistema</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2298"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2310"/>
         <source>Start application hidden</source>
         <translation>Inicia l&apos;aplicació amagada</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2308"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2320"/>
         <source>Interface style</source>
         <translation>Estil d&apos;interfície</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3223"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3235"/>
         <source>By default the headline will generated automatically</source>
         <translation>Per defecte el títol es generarà automàticament</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3226"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3238"/>
         <source>The shortcut to create a new note asks for a headline</source>
         <translation>La drecera per crear una nova nota demana un títol</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3274"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3286"/>
         <source>Search engine</source>
         <translation>Motor de cerca</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3296"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3308"/>
         <source>Message boxes</source>
         <translation>Quadres de missatge</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3302"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3314"/>
         <location filename="../dialogs/settingsdialog.cpp" line="3497"/>
         <source>Reset message boxes</source>
         <translation>Restablir els quadres de missatges</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4148"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4160"/>
         <source>Fully highlight blockquotes</source>
         <translation>Destaca citacions completament</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4181"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4193"/>
         <source>Note-edit cursor width:</source>
         <translation>Amplada del cursor d&apos;edició de la nota:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4167"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4689"/>
+        <source>Local trash settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="4723"/>
+        <source>Remove trashed notes after:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="4730"/>
+        <source> days</source>
+        <extracomment>seconds</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="4749"/>
+        <source>Automatically remove trashed notes after a certain time</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="4775"/>
+        <source>Local trash support</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="4781"/>
+        <source>Enable local trash</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="4179"/>
         <source>Reset the cursor width</source>
         <translation>Restablir l&apos;amplada del cursor</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4314"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4326"/>
         <source>External git log command to show the git versions of a note</source>
         <translation>Ordre externa del log del git per mostrar les versions d&apos;una nota</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4320"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4332"/>
         <source>Enter a command to be used to show a git log (like for example &quot;gitk&quot;)</source>
         <extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
         <translation>Entreu l&apos;ordre que s&apos;usarà per mostrar el log del git (per exemple, &quot;gitk&quot;)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4340"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4352"/>
         <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
         <extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
         <translation>Si useu aquest paràmetre tindreu una nova entrada de menú per mostrar les versions del git si cliqueu botó dret del ratolí a la nota.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4650"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4662"/>
         <source>Show all notes of a tag including the notes of their children-tags</source>
         <translation>Mostra totes les notes d&apos;una etiqueta incloent-hi totes les de les etiquetes filles</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4620"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4632"/>
         <source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
         <translation>Mostra totes les notes d&apos;una carpeta incloent les subcarpetes (només funciona si s&apos;ha activat treballar amb subcarpetes)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4095"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4107"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href=&quot;http://docs.qownnotes.org/en/develop/time-formats.html&quot;&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Potser voleu fer-li un cop d&apos;ull a tots els &lt;a href=&quot;http://docs.qownnotes.org/en/develop/time-formats.html&quot;&gt;formats de temps&lt;/a&gt; disponibles.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4231"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4243"/>
         <source>Highlight the current line</source>
         <translation>Destacar la línia activa</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4407"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4419"/>
         <source>Don&apos;t forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
         <translation>No oblideu habilitar el suport per git a la vostra carpeta de notes i de configurar el vostre nom i adreça de correu pel vostre client git; per exemple, amb aquestes comandes de terminal:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4440"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4452"/>
         <source>Tags panel</source>
         <translation>Panell d&apos;etiquetes</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4469"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4545"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4594"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4481"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4557"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4606"/>
         <source>Order</source>
         <translation>Ordre</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4475"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4551"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4603"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4487"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4563"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4615"/>
         <source>Ascending</source>
         <translation>Ascendent</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4482"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4558"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4610"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4494"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4570"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4622"/>
         <source>Descending</source>
         <translation>Descendent</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4446"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4515"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4627"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4458"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4527"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4639"/>
         <source>Sort</source>
         <translation>Ordena</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4238"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4250"/>
         <source>Only use editor width setting in distraction free mode</source>
         <translation>Useu la configuració de l&apos;amplada de l&apos;editor només en el mode sense distraccions</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4452"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4521"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4633"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4464"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4533"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4645"/>
         <source>Alphabetical</source>
         <translation>Ordre alfabètic</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4459"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4471"/>
         <source>By last change / use</source>
         <translation>Per últim canvi / ús</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4492"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4504"/>
         <source>Hide &apos;Find or create tag&apos; search</source>
         <translation>Amaga el cercador &apos;Cerca o crea una etiqueta&apos;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4502"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4514"/>
         <source>Note subfolders panel</source>
         <translation>Panell de subcarpetes de notes</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4508"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4520"/>
         <source>Show with full path</source>
         <translation>Mostra el camí sencer</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4528"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4640"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4540"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4652"/>
         <source>By last change</source>
         <translation>Per últim canvi</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4538"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4550"/>
         <source>Show root folder name</source>
         <translation>Mostra el nom de la carpeta arrel</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4568"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4580"/>
         <source>Hide &apos;Find or create note subfolder&apos; search</source>
         <translation>Amaga el cercador &apos;Cerca o crea una nota a la subcarpeta&apos;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4575"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4587"/>
         <source>Display note subfolders as full tree</source>
         <translation>Mostra les subcarpetes de notes com un arbre sencer</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4585"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4597"/>
         <source>Notes panel</source>
         <translation>Panell de notes</translation>
     </message>
@@ -3891,477 +3986,477 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
         <translation>Cerca al repositori de scripts</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4330"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4342"/>
         <source>You optionally can use &quot;%notePath%&quot; for the path of the note.</source>
         <extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
         <translation>Si voleu podeu usar &quot;%notePath%&quot; per indicar el camí de la nota.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4353"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4365"/>
         <source>Git client</source>
         <translation>Client de Git</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4369"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4381"/>
         <source>Path to git executable:</source>
         <translation>Camí a l&apos;executable git:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4359"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4371"/>
         <source>Path to git client, leave empty for default</source>
         <translation>Camí al client de git, deixeu-lo buit per defecte</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4278"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4290"/>
         <source>Commit interval</source>
         <translation>Interval per fer commit</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4284"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4296"/>
         <source>sec</source>
         <extracomment>seconds</extracomment>
         <translation>segons</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4304"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4316"/>
         <source>git commit interval time [sec]</source>
         <translation>interval de temps per fer commit al git [sec]</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="869"/>
+        <location filename="../dialogs/settingsdialog.ui" line="881"/>
         <source>Open your ownCloud server &amp;Apps page</source>
         <translation>Obriu la pàgina d&apos;aplicacions del vostre servidor ownCloud</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1602"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1614"/>
         <source>Which calendar backend do you want to use?</source>
         <translation>Quin servei de calendaris voleu usar?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1615"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1627"/>
         <source>For most current ownCloud and Nextcloud installations</source>
         <translation>Per a la majoria d&apos;instal·lacions actuals d&apos;ownCloud i NextCloud</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1635"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1647"/>
         <source>For older versions of ownCloud where the default setting doesn&apos;t work</source>
         <translation>Per versions antigues d&apos;ownCloud on el paràmetre per defecte no funciona</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1638"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1650"/>
         <source>Legacy ownCloud calendar</source>
         <translation>Calendari antic d&apos;ownCloud</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1651"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1663"/>
         <source>CalDAV server settings</source>
         <translation>Paràmetres del servidor CalDAV</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1660"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1672"/>
         <source>Calendar base url:</source>
         <translation>Url base del calendari:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1682"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1694"/>
         <source>Please enter the CalDAV base url to your calendar.</source>
         <translation>Entreu la url base del CalDAV al vostre calendari.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1752"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1764"/>
         <source>Please enter the password for your CalDAV username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.</source>
         <translation>Entreu la contrasenya per al vostre nom d&apos;usuari de CalDAV.&lt;br/&gt;La contrasenya s&apos;emmagatzemarà xifrada amb la resta de paràmetres, però no és excessivament segur.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1984"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1996"/>
         <source>Czech</source>
         <translation>Txec</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2105"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2117"/>
         <source>Brazilian Portuguese</source>
         <translation>Portuguès brasiler</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2160"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2172"/>
         <source>Ukrainian</source>
         <translation>Ucraïnès</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2266"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2278"/>
         <source>You might also want to choose an other editor color schema in the editor settings in dark mode.</source>
         <translation>Potser voleu escollir un altre esquema de colors en la configuració de l&apos;editor per al mode fosc.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3001"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3013"/>
         <source>The name</source>
         <translation>El nom</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3175"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3187"/>
         <source>Maximum height:</source>
         <translation>Alçada màxima:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3182"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3194"/>
         <source>Maximum width:</source>
         <translation>Amplada màxima:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3060"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3072"/>
         <source>Scale images down when inserted into notes</source>
         <translation>Escalar imatges (disminuint-les) en inserir-les a les notes</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2039"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2051"/>
         <source>Croatian</source>
         <translation>Croat</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2916"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2928"/>
         <source>Path to your QML file</source>
         <translation>Camí al vostre fitxer QML</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2707"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2719"/>
         <source>Script name</source>
         <translation>Nom de l&apos;script</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2729"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2741"/>
         <source>Description:</source>
         <translation>Descripció:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2811"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2823"/>
         <source>Version:</source>
         <translation>Versió:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2772"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2784"/>
         <source>Repository:</source>
         <translation>Repositori:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2599"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2611"/>
         <source>&amp;Add script...</source>
         <translation>Afegir script...</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2749"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2761"/>
         <source>Author(s):</source>
         <translation>Autor(s):</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3050"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3062"/>
         <source>Check this if you want to accept all external modifications while you are editing the current note.</source>
         <translation>Marqueu si voleu acceptar totes les modificacions externes mentre esteu editant la nota actual.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3053"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3065"/>
         <source>Accept all external modifications of the current note</source>
         <translation>Acceptar totes les modificacions externes de la nota actual</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3109"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3121"/>
         <source>Use UNIX newline instead of native newline characters</source>
         <translation>Usa el canvi de línia de UNIX en comptes dels caràcters de canvi de línia nadius</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3212"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3224"/>
         <source>When opening notes the cursor position inside the note will now be restored
   to the position when the note was last visited in the current session</source>
         <translation>En obrir notes el cursor es posicionarà a l&apos;últim lloc on estava durant la última visita durant la sessió en curs</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3216"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3228"/>
         <source>Restore cursor position when opening a note</source>
         <translation>Restaurar la posició del cursor en obrir una nota</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3495"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3507"/>
         <source>Be warned that this will also remove your cached todo items and configured note folders and scripts!</source>
         <translation>Tingueu en compte que això eliminarà les tasques i carpetes de notes configurades i scripts que hi hagi a la memòria cau!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3919"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3931"/>
         <source>Apply toolbar configuration</source>
         <translation>Aplica la configuració a la barra d&apos;eines</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3933"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3945"/>
         <source>Reset toolbars</source>
         <translation>Reinicialitza les barres d&apos;eines</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3961"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3973"/>
         <source>Enable logging to file</source>
         <translation>Habilita el bolcat del registre a un fitxer</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3968"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3980"/>
         <source>Clear log file</source>
         <translation>Neteja el fitxer de registre</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3979"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3991"/>
         <source>Fake old version number to trigger update</source>
         <translation>Número vell de versió per activar l&apos;actualització</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4007"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4019"/>
         <source>Log file path:</source>
         <translation>Camí del fitxer de registre:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4069"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4081"/>
         <source>Here you can set your own time format for inserting the current time into a note.</source>
         <translation>Aquí podeu posar el vostre propi format de data i hora per inserir la data i hora actual en les notes.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4072"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4084"/>
         <source>Insert current time</source>
         <translation>Insereix l&apos;hora actual</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4078"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4090"/>
         <source>Time format:</source>
         <translation>Format d&apos;hora:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4085"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4097"/>
         <source>Enter your custom time format, like &quot;dd.MM.yyyy hh:mm&quot;</source>
         <translation>Introduïu el format de temps que volgueu, com &quot;dd.MM.yyyy hh:mm&quot;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4161"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4173"/>
         <source>Editor options</source>
         <translation>Opcions de l&apos;editor</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4201"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4213"/>
         <source>Enable automatic closing of brackets and markdown formatting characters</source>
         <translation>Activa el tancat automàtic de claus i caràcters de formatat Markdown</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4221"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4233"/>
         <source>You have to use the backspace key to remove the opening character</source>
         <translation>Heu d&apos;usar la tecla d&apos;esborrar enrere per eliminar el primer caràcter</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4224"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4236"/>
         <source>Enable automatic removal of matching closing characters</source>
         <translation>Activa l&apos;eliminació automàtica de delimitadors</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1685"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1697"/>
         <source>Your CalDAV calendar base url</source>
         <translation>Url base del vostre calendari CalDAV</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1717"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1729"/>
         <source>Please enter the username of your CalDAV server.</source>
         <translation>Entreu el nom d&apos;usuari del vostre servidor CalDAV.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1720"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1732"/>
         <source>Your CalDAV username</source>
         <translation>El vostre nom d&apos;usuari de CalDAV</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1758"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1770"/>
         <source>Your CalDAV password</source>
         <translation>La vostra contrasenya de CalDAV</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1793"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1805"/>
         <source>This causes all todo list items to be reloaded from your server the next time you open your todo dialog.</source>
         <translation>Això fa que es recarreguin totes les llistes de tasques del vostre servidor la propera vegada que obriu el diàleg de tasques.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1796"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1808"/>
         <source>Empty calendar item cache</source>
         <translation>Buida els elements de calendari de la memòria cau</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1819"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1831"/>
         <source>Click here to reload the list of calendars from your calendar server.</source>
         <translation>Cliqueu aquí per recarregar la llista de calendaris del vostre servidor de calendaris.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1825"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1837"/>
         <source>&amp;Reload calendar list</source>
         <translation>Recarrega la llista del calendari</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2236"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2248"/>
         <source>You may need to restart the application to let these changes take effect</source>
         <translation>Us caldrà reiniciar l&apos;aplicació per tal que els canvis tinguin efecte</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2361"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2373"/>
         <source>Toolbar icon size:</source>
         <translation>Tamany de les icones a la barra d&apos;eines:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2351"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2363"/>
         <source>List and tree item height:</source>
         <translation>Alçada dels elements de llistes i arbres:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2384"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2396"/>
         <source>Reset the icon size</source>
         <translation>Restaura el tamany de les icones</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2398"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2410"/>
         <source>Reset the item height</source>
         <translation>Reestableix l&apos;alçada de l&apos;element</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3879"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3891"/>
         <source>View text right to left (RTL)</source>
         <translation>Mostra el text de dreta a esquerra (RTL)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2477"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2489"/>
         <source>Search for shortcut</source>
         <translation>Cerca una drecera</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1836"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1848"/>
         <source>Ignore calendars that don&apos;t support todo items</source>
         <translation>Ignora els calendaris que no suporten elements de tasques</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2182"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2194"/>
         <source>Arabic</source>
         <translation>Àrab</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2320"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2332"/>
         <source>Icons</source>
         <translation>Icones</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2329"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2341"/>
         <source>Use internal icon theme instead of system icon theme</source>
         <translation>Usa el tema d&apos;icones intern en comptes del tema d&apos;icones del sistema</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2865"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2877"/>
         <source>Script path:</source>
         <translation>Camí dels scripts:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="694"/>
+        <location filename="../dialogs/settingsdialog.ui" line="706"/>
         <source>Note folder name</source>
         <translation>Nom de la carpeta de notes</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3126"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3138"/>
         <source>Allow the note file name to be different from the headline.&lt;br&gt;Be aware of that ownCloud notes needs them to be the same!</source>
         <translation>Permet que el nom de la nota sigui diferent del títol.&lt;br&gt;Tingueu en compte que a ownCloud si que es necessita que siguin iguals!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3129"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3141"/>
         <source>Allow note file name to be different from headline</source>
         <translation>Permetre que el nom d&apos;arxiu de la nota sigui diferent de l&apos;encapçalement</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3077"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3089"/>
         <source>Check this if you want to ignore all external modifications while you are editing the current note.</source>
         <translation>Marqueu si voleu ignorar totes les modificacions externes mentre esteu editant la nota actual.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3080"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3092"/>
         <source>Ignore all external modifications of the current note</source>
         <translation>Ignora totes les modificacions externes de la nota actual</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3106"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3118"/>
         <source>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</source>
         <translation>Podeu usar això, per exemple a Windows, si teniu problemes amb noves línies en l&apos;aplicació de notes d&apos;ownCloud / Nextcloud</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3236"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3248"/>
         <source>App instance</source>
         <translation>Instància d&apos;aplicació</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3242"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3254"/>
         <source>Only allow one app instance at the same time</source>
         <translation>Permetre només una instància de l&apos;aplicació a la vegada</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3338"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3350"/>
         <source>Add a custom file extension</source>
         <translation>Afegir una extensió de fitxer d&apos;usuari</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3352"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3364"/>
         <source>Remove a custom file extension</source>
         <translation>Eliminar una extensió de fitxer d&apos;usuari</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3391"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3403"/>
         <source>If you add custom extensions just type in the extension, like &quot;taskpaper&quot;.</source>
         <translation>Si afegiu extensions d&apos;usuari teclegeu-ne l&apos;extensió, com &quot;fitxa&quot;.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3395"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3407"/>
         <source>Text file (txt)</source>
         <translation>Fitxer de text (txt)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3423"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3435"/>
         <source>Path to external editor:</source>
         <translation>Camí de l&apos;editor extern:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3258"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3270"/>
         <source>Don&apos;t show the update dialog automatically</source>
         <translation>No mostris el diàleg d&apos;actualització automàticament</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3628"/>
-        <location filename="../dialogs/settingsdialog.ui" line="3783"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3640"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3795"/>
         <source>Fonts</source>
         <translation>Tipus de lletra</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3651"/>
-        <location filename="../dialogs/settingsdialog.ui" line="3693"/>
-        <location filename="../dialogs/settingsdialog.ui" line="3851"/>
-        <location filename="../dialogs/settingsdialog.ui" line="3865"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3663"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3705"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3863"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3877"/>
         <source>Set a new font</source>
         <translation>Estableix un nou tipus de lletra</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3662"/>
-        <location filename="../dialogs/settingsdialog.ui" line="3707"/>
-        <location filename="../dialogs/settingsdialog.ui" line="3789"/>
-        <location filename="../dialogs/settingsdialog.ui" line="3813"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3674"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3719"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3801"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3825"/>
         <source>Reset font</source>
         <translation>Reinicialitza els tipus de lletra</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="300"/>
+        <location filename="../dialogs/settingsdialog.ui" line="312"/>
         <source>Debug</source>
         <translation>Depuració</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3546"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3558"/>
         <source>Debug information</source>
         <translation>Informació de depuració</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3562"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3574"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=&quot; font-weight:600;&quot;&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=&quot; font-weight:600;&quot;&gt;issue&lt;/span&gt; on the &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=&quot; font-weight:600;&quot;&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Podeu &lt;span style=&quot; font-weight:600;&quot;&gt;copiar i enganxar&lt;/span&gt; aquest text (o parts d&apos;ell) en una &lt;span style=&quot; font-weight:600;&quot;&gt;qüestió&lt;/span&gt; a la &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;pàgina de qüestions de QOwnNotes&lt;/a&gt; si teniu &lt;span style=&quot; font-weight:600;&quot;&gt;preguntes o problemes&lt;/span&gt; amb QOwnNotes. Les dades massa sensibles s&apos;amaguen en aquesta informació.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3575"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3587"/>
         <source>&amp;Save debug information</source>
         <translation>Desa la informació de depuració</translation>
     </message>

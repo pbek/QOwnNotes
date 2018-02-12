@@ -6,7 +6,6 @@
 #include <QAbstractButton>
 #include <QDialog>
 #include <QSplitter>
-#include <QJSValue>
 
 namespace Ui {
 class LocalTrashDialog;
@@ -22,8 +21,9 @@ public:
 
 private slots:
     void storeSettings();
-    void on_trashListWidget_currentRowChanged(int currentRow);
     void dialogButtonClicked(QAbstractButton *button);
+    void on_trashTreeWidget_currentItemChanged(QTreeWidgetItem *current, QTreeWidgetItem *previous);
+
 private:
     enum ButtonRole {
         Unset,  // nothing was selected
@@ -37,7 +37,12 @@ private:
     QStringList *dataList;
     QList<int> *timestampList;
     MainWindow *mainWindow;
+
     void setupMainSplitter();
 
     void loadTrashedNotes();
+
+    void restoreSelectedTrashItems();
+
+    void removeSelectedTrashItems();
 };

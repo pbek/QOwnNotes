@@ -3509,3 +3509,11 @@ void SettingsDialog::on_resetMessageBoxesButton_clicked() {
 void SettingsDialog::on_markdownHighlightingCheckBox_toggled(bool checked) {
     ui->markdownHighlightingFrame->setEnabled(checked);
 }
+
+void SettingsDialog::on_localTrashEnabledCheckBox_toggled(bool checked) {
+    ui->localTrashGroupBox->setEnabled(checked);
+}
+
+void SettingsDialog::on_localTrashClearCheckBox_toggled(bool checked) {
+    ui->localTrashClearFrame->setEnabled(checked);
+}

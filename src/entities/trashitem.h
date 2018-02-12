@@ -32,7 +32,7 @@ public:
 
     bool fillFromQuery(QSqlQuery query);
 
-    bool removeNoteFile();
+    bool removeFile();
 
     bool remove(bool withFile = false);
 
@@ -60,8 +60,6 @@ public:
 
     bool fillFromId(int id);
 
-    QString fullNoteFilePath();
-
     static bool add(Note note);
 
     static bool add(Note *note);
@@ -73,6 +71,14 @@ public:
     static TrashItem prepare(Note *note);
 
     bool doTrashing();
+
+    QString fullFilePath();
+
+    QString loadFileFromDisk();
+
+    bool restoreFile();
+
+    QString restorationFilePath();
 
 protected:
     int id;

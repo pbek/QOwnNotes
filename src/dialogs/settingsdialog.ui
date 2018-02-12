@@ -294,6 +294,18 @@
                <normaloff>:/icons/breeze-qownnotes/16x16/appointment-new.svg</normaloff>:/icons/breeze-qownnotes/16x16/appointment-new.svg</iconset>
              </property>
             </item>
+            <item>
+             <property name="text">
+              <string>Local trash</string>
+             </property>
+             <property name="whatsThis">
+              <string notr="true">17</string>
+             </property>
+             <property name="icon">
+              <iconset theme="trash-empty" resource="../breeze-qownnotes.qrc">
+               <normaloff>:/icons/breeze-qownnotes/16x16/trash-empty.svg</normaloff>:/icons/breeze-qownnotes/16x16/trash-empty.svg</iconset>
+             </property>
+            </item>
            </item>
            <item>
             <property name="text">
@@ -361,7 +373,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>14</number>
+            <number>17</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -4669,6 +4681,115 @@ git config --global user.name &quot;Your name&quot;</string>
              </item>
             </layout>
            </widget>
+           <widget class="QWidget" name="page">
+            <layout class="QGridLayout" name="gridLayout_64">
+             <item row="1" column="0">
+              <widget class="QGroupBox" name="localTrashGroupBox">
+               <property name="title">
+                <string>Local trash settings</string>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_66">
+                <item row="1" column="0">
+                 <widget class="QFrame" name="localTrashClearFrame">
+                  <property name="frameShape">
+                   <enum>QFrame::NoFrame</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Raised</enum>
+                  </property>
+                  <layout class="QHBoxLayout" name="horizontalLayout_8">
+                   <property name="spacing">
+                    <number>0</number>
+                   </property>
+                   <property name="leftMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>0</number>
+                   </property>
+                   <item>
+                    <widget class="QLabel" name="localTrashClearTimeLabel">
+                     <property name="toolTip">
+                      <string>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
+Just test yourself if you get sync conflicts and set a higher value if so.</string>
+                     </property>
+                     <property name="text">
+                      <string>Remove trashed notes after:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QSpinBox" name="localTrashClearTimeSpinBox">
+                     <property name="suffix">
+                      <string extracomment="seconds"> days</string>
+                     </property>
+                     <property name="minimum">
+                      <number>1</number>
+                     </property>
+                     <property name="maximum">
+                      <number>9999999</number>
+                     </property>
+                     <property name="value">
+                      <number>30</number>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QCheckBox" name="localTrashClearCheckBox">
+                  <property name="text">
+                   <string>Automatically remove trashed notes after a certain time</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <spacer name="verticalSpacer_15">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="0" column="0">
+              <widget class="QGroupBox" name="groupBox_29">
+               <property name="title">
+                <string>Local trash support</string>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_65">
+                <item row="0" column="0">
+                 <widget class="QCheckBox" name="localTrashEnabledCheckBox">
+                  <property name="text">
+                   <string>Enable local trash</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
           </widget>
          </item>
         </layout>
@@ -4691,14 +4812,14 @@ git config --global user.name &quot;Your name&quot;</string>
  </widget>
  <customwidgets>
   <customwidget>
-   <class>Label</class>
-   <extends>QLabel</extends>
-   <header location="global">widgets/label.h</header>
-  </customwidget>
-  <customwidget>
    <class>QOwnNotesMarkdownTextEdit</class>
    <extends>QPlainTextEdit</extends>
    <header location="global">widgets/qownnotesmarkdowntextedit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>Label</class>
+   <extends>QLabel</extends>
+   <header location="global">widgets/label.h</header>
   </customwidget>
   <customwidget>
    <class>FontColorWidget</class>
