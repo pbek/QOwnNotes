@@ -52,6 +52,9 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
     ui->calDavCalendarGroupBox->hide();
     _newScriptName = tr("New script");
 
+    // TODO(pbek): remove
+    ui->localTrashGroupBox->hide();
+
 #ifdef Q_OS_WIN32
     QString downloadText = tr("You can download your git client here: <a "
             "href=\"%url\">Git for Windows</a>");
@@ -519,6 +522,12 @@ void SettingsDialog::storeSettings() {
     settings.setValue("defaultNoteFileExtension",
                       getSelectedListWidgetValue(
                               ui->defaultNoteFileExtensionListWidget));
+    settings.setValue("localTrash/supportEnabled",
+                      ui->localTrashEnabledCheckBox->isChecked());
+    settings.setValue("localTrash/autoCleanupEnabled",
+                      ui->localTrashClearCheckBox->isChecked());
+    settings.setValue("localTrash/autoCleanupDays",
+                      ui->localTrashClearTimeSpinBox->value());
 
     // make the path relative to the portable data path if we are in
     // portable mode
@@ -799,6 +808,12 @@ void SettingsDialog::readSettings() {
             settings.value("newNoteAskHeadline").toBool());
     ui->useUNIXNewlineCheckBox->setChecked(
             settings.value("useUNIXNewline").toBool());
+    ui->localTrashEnabledCheckBox->setChecked(
+            settings.value("localTrash/supportEnabled", true).toBool());
+    ui->localTrashClearCheckBox->setChecked(
+            settings.value("localTrash/autoCleanupEnabled", true).toBool());
+    ui->localTrashClearTimeSpinBox->setValue(
+            settings.value("localTrash/autoCleanupDays").toInt());
 
 #ifdef Q_OS_MAC
     bool restoreCursorPositionDefault = false;

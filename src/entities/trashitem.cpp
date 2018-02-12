@@ -469,6 +469,11 @@ int TrashItem::countAll() {
     return 0;
 }
 
+bool TrashItem::isLocalTrashEnabled() {
+    QSettings settings;
+    return settings.value("localTrash/supportEnabled", true).toBool();
+}
+
 /**
  * Fetches all tags of the trashItem
  */

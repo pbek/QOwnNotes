@@ -3,6 +3,17 @@
 ## 18.02.1
 - fixed autocompleter user interface offset, especially in the distraction free mode
   (for [#842](https://github.com/pbek/QOwnNotes/issues/842))
+- there now is a **local trash** to gather your removed notes
+  (for [#674](https://github.com/pbek/QOwnNotes/issues/674))
+    - this also works when a note gets renamed because you are modifying the 
+      headline of the note
+    - there is a new panel *Local trash* in the setting where you can 
+      turn the local trash off
+    - there is a new menu entry for the *Local trash* that opens a dialog to 
+      view your trashed notes and to restore or remove them
+    - trashed files are stored per note folder in a new folder `trash`
+        - additional information about the trashed files is stored in the 
+          sqlite database of the note folder
 
 ## 18.02.0
 - there now is a new scripting hook `autocompletionHook()` to return a list of

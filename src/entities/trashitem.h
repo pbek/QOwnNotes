@@ -80,6 +80,8 @@ public:
 
     QString restorationFilePath();
 
+    static bool isLocalTrashEnabled();
+
 protected:
     int id;
     QString fileName;
