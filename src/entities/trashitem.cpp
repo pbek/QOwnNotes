@@ -209,7 +209,8 @@ QString TrashItem::restorationFilePath() {
     // prepend the current timestamp if the file already exists
     if ( file.exists() ) {
         filePath = folderPath + QDir::separator() +
-                   QString::number(QDateTime::currentSecsSinceEpoch()) + "_" +
+                   QString::number(
+                           QDateTime::currentMSecsSinceEpoch() / 1000) + "_" +
                    fileName;
     }
 
