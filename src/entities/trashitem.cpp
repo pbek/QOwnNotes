@@ -258,11 +258,16 @@ bool TrashItem::fillFromQuery(QSqlQuery query) {
     return true;
 }
 
+/**
+ * Fetches all items
+ *
+ * @return
+ */
 QList<TrashItem> TrashItem::fetchAll(int limit) {
     QSqlDatabase db = QSqlDatabase::database("note_folder");
     QSqlQuery query(db);
 
-    QList<TrashItem> noteList;
+    QList<TrashItem> trashItemList;
     QString sql = "SELECT * FROM trashItem ORDER BY created DESC";
 
     if (limit >= 0) {
@@ -280,11 +285,41 @@ QList<TrashItem> TrashItem::fetchAll(int limit) {
     } else {
         for (int r = 0; query.next(); r++) {
             TrashItem trashItem = trashItemFromQuery(query);
-            noteList.append(trashItem);
+            trashItemList.append(trashItem);
         }
     }
 
-    return noteList;
+    return trashItemList;
+}
+
+/**
+ * Fetches all items to expire
+ *
+ * @return
+ */
+QList<TrashItem> TrashItem::fetchAllExpired() {
+    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlQuery query(db);
+    QSettings settings;
+    QList<TrashItem> trashItemList;
+    int days = settings.value("localTrash/autoCleanupDays", 30).toInt();
+    QDateTime dateTime = QDateTime::currentDateTime().addDays(-1 * days);
+    QString sql = "SELECT * FROM trashItem WHERE created < :created "
+            "ORDER BY created DESC";
+
+    query.prepare(sql);
+    query.bindValue(":created", dateTime);
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        for (int r = 0; query.next(); r++) {
+            TrashItem trashItem = trashItemFromQuery(query);
+            trashItemList.append(trashItem);
+        }
+    }
+
+    return trashItemList;
 }
 
 //
@@ -453,7 +488,7 @@ bool TrashItem::isFetched() {
 }
 
 /**
- * Counts all notes
+ * Counts all trash items
  */
 int TrashItem::countAll() {
     QSqlDatabase db = QSqlDatabase::database("note_folder");
@@ -476,11 +511,30 @@ bool TrashItem::isLocalTrashEnabled() {
 }
 
 /**
- * Fetches all tags of the trashItem
+ * Removes too old trash items
+ *
+ * @return
  */
-//QList<Tag> TrashItem::tags() {
-//    return Tag::fetchAllOfNote(this);
-//}
+bool TrashItem::expireItems() {
+    QSettings settings;
+
+    if (!TrashItem::isLocalTrashEnabled() ||
+            !settings.value("localTrash/autoCleanupEnabled", true).toBool()) {
+        return false;
+    }
+
+    QList<TrashItem> trashItems = TrashItem::fetchAllExpired();
+    QListIterator<TrashItem> iterator(trashItems);
+
+    while (iterator.hasNext()) {
+        TrashItem trashItem = iterator.next();
+        trashItem.remove(true);
+        qDebug() << __func__ << " - 'trashItem': " << trashItem;
+    }
+
+    return true;
+}
+
 
 QDebug operator<<(QDebug dbg, const TrashItem &trashItem) {
     NoteSubFolder noteSubFolder = NoteSubFolder::fetchByPathData(trashItem.noteSubFolderPathData);

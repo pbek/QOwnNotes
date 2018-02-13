@@ -612,6 +612,13 @@ bool DatabaseService::setupTables() {
         version = 25;
     }
 
+    if (version < 26) {
+        // remove setting with wrong default value
+        settings.remove("localTrash/autoCleanupDays");
+
+        version = 26;
+    }
+
     if (version != oldVersion) {
         setAppData("database_version", QString::number(version));
     }

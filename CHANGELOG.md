@@ -11,6 +11,9 @@
     - the old note is now also added to the local trash if it was renamed 
       manually in the note list
     - sorting by trashing date in the trash dialog now works correctly
+    - trashed items are now by default expired after 30 days
+        - you can turn that off in the *Local trash* settings and also set 
+          the amount of days there
 
 ## 18.02.1
 - fixed autocompleter user interface offset, especially in the distraction free mode

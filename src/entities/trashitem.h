@@ -82,6 +82,10 @@ public:
 
     static bool isLocalTrashEnabled();
 
+    static bool expireItems();
+
+    static QList<TrashItem> fetchAllExpired();
+
 protected:
     int id;
     QString fileName;

@@ -52,9 +52,6 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
     ui->calDavCalendarGroupBox->hide();
     _newScriptName = tr("New script");
 
-    // TODO(pbek): remove
-    ui->localTrashGroupBox->hide();
-
 #ifdef Q_OS_WIN32
     QString downloadText = tr("You can download your git client here: <a "
             "href=\"%url\">Git for Windows</a>");
@@ -813,7 +810,7 @@ void SettingsDialog::readSettings() {
     ui->localTrashClearCheckBox->setChecked(
             settings.value("localTrash/autoCleanupEnabled", true).toBool());
     ui->localTrashClearTimeSpinBox->setValue(
-            settings.value("localTrash/autoCleanupDays").toInt());
+            settings.value("localTrash/autoCleanupDays", 30).toInt());
 
 #ifdef Q_OS_MAC
     bool restoreCursorPositionDefault = false;

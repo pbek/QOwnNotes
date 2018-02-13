@@ -329,6 +329,9 @@ MainWindow::MainWindow(QWidget *parent) :
     this->updateService = new UpdateService(this);
     this->updateService->checkForUpdates(this, UpdateService::AppStart);
 
+    // expire trashed items
+    TrashItem::expireItems();
+
     // we need to restore the current workspace a little later when
     // application window is maximized or in full-screen mode
     if (isMaximized() || isFullScreen()) {
@@ -2538,6 +2541,9 @@ void MainWindow::frequentPeriodicChecker() {
     } else if (lastUpdateCheck.addSecs(3600) <= QDateTime::currentDateTime()) {
         // check for updates every 1h
         updateService->checkForUpdates(this, UpdateService::Periodic);
+
+        // expire trashed items
+        TrashItem::expireItems();
     }
 }
 
