@@ -9891,10 +9891,12 @@ void MainWindow::on_actionCheck_for_script_updates_triggered() {
 }
 
 void MainWindow::noteTextEditResize(QResizeEvent* event) {
+    Q_UNUSED(event);
     ui->noteTextEdit->setPaperMargins();
 }
 
 void MainWindow::encryptedNoteTextEditResize(QResizeEvent* event) {
+    Q_UNUSED(event);
     ui->encryptedNoteTextEdit->setPaperMargins();
 }
 
