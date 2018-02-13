@@ -753,8 +753,50 @@ Usage in QML
 
 .. code:: javascript
 
-    // show a message box
+    // show a information message box
     script.informationMessageBox("The text I want to show", "Some optional title");
+
+
+Showing an question message box
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Parameters
+^^^^^^^^^^
+
+.. code:: cpp
+
+    /**
+     * Shows a question message box
+     *
+     * For information about buttons see:
+     * https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
+     *
+     * @param text
+     * @param title (optional)
+     * @param buttons buttons that should be shown (optional)
+     * @param defaultButton default button that will be selected (optional)
+     * @return id of pressed button
+     */
+    int ScriptingService::questionMessageBox(
+            QString text, QString title, int buttons, int defaultButton);
+
+
+Usage in QML
+^^^^^^^^^^^^
+
+.. code:: javascript
+
+    // show a question message box with an apply and a help button
+    // see: https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
+    var result = script.questionMessageBox(
+        "The text I want to show", "Some optional title", 0x01000000|0x02000000, 0x02000000);
+    script.log(result);
+
+For information about buttons see
+`StandardButton <https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum>`__.
+
+You may also want to take a look at the example
+`input-dialogs.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/input-dialogs.qml>`__.
 
 
 Showing an open file dialog

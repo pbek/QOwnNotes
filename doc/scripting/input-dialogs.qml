@@ -10,6 +10,7 @@ Script {
      */
     function init() {
         script.registerCustomAction("inputDialogGetItem", "Combo box");
+        script.registerCustomAction("questionMessageBox", "Question message box");
     }
 
     /**
@@ -26,6 +27,13 @@ Script {
             case "inputDialogGetItem":
                 var result = script.inputDialogGetItem(
                     "combo box", "Please select an item", ["Item 1", "Item 2", "Item 3"]);
+                script.log(result);
+                break;
+            case "questionMessageBox":
+                // show a question message box with an apply and a help button
+                // see: https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
+                var result = script.questionMessageBox(
+                    "The text I want to show", "Some optional title", 0x01000000|0x02000000, 0x02000000);
                 script.log(result);
                 break;
         }

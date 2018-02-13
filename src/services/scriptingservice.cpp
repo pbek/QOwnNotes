@@ -1236,6 +1236,41 @@ void ScriptingService::informationMessageBox(QString text, QString title) {
 }
 
 /**
+ * Shows a question message box
+ *
+ * For information about buttons see:
+ * https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum
+ *
+ * @param text
+ * @param title (optional)
+ * @param buttons buttons that should be shown (optional)
+ * @param defaultButton default button that will be selected (optional)
+ * @return id of pressed button
+ */
+int ScriptingService::questionMessageBox(
+        QString text, QString title, int buttons, int defaultButton) {
+    MetricsService::instance()->sendVisitIfEnabled(
+            "scripting/" + QString(__func__));
+
+#ifndef INTEGRATION_TESTS
+    MainWindow *mainWindow = MainWindow::instance();
+    if (mainWindow != Q_NULLPTR) {
+        return QMessageBox::question(mainWindow, title, text,
+                                     QMessageBox::StandardButtons(buttons),
+                                     QMessageBox::StandardButton(
+                                             defaultButton));
+    }
+#else
+    Q_UNUSED(text);
+    Q_UNUSED(title);
+    Q_UNUSED(buttons);
+    Q_UNUSED(defaultButton);
+#endif
+
+    return QMessageBox::NoButton;
+}
+
+/**
  * Shows an open file dialog
  *
  * @param caption (optional)

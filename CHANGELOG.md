@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 18.02.2
+- there now is a new scripting command to show a question message box
+  `script.questionMessageBox()` (for [#847](https://github.com/pbek/QOwnNotes/issues/847))
+    - for more information please take a look at
+      [Showing an information message box](http://docs.qownnotes.org/en/develop/scripting/README.html#showing-a-question-message-box)
+
 ## 18.02.1
 - fixed autocompleter user interface offset, especially in the distraction free mode
   (for [#842](https://github.com/pbek/QOwnNotes/issues/842))

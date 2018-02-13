@@ -12,6 +12,7 @@
 #include <QHash>
 #include <QMap>
 #include <api/noteapi.h>
+#include <QtSvg/QtSvg>
 
 #define PERSISTENT_VARIABLE_SETTINGS_PREFIX "PersistentScripting"
 
@@ -76,6 +77,12 @@ public:
     Q_INVOKABLE void setCurrentNote(NoteApi *note);
 
     Q_INVOKABLE void informationMessageBox(QString text, QString title = "");
+
+    Q_INVOKABLE int questionMessageBox(
+            QString text, QString title = "",
+            int buttons =
+            QMessageBox::StandardButtons(QMessageBox::Yes | QMessageBox::No),
+            int defaultButton = QMessageBox::NoButton);
 
     Q_INVOKABLE QString getOpenFileName(QString caption = "", QString dir = "",
                                         QString filter = "");
