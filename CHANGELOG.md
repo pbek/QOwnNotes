@@ -14,8 +14,8 @@
     - **trashed items** are now by default **expired after 30 days**
         - you can turn that off in the *Local trash* settings and also set 
           the amount of days there
-- when dropping a markdown file into QOwnNotes it will now be copied to the 
-  active note subfolder and not just to the current note folder
+- when **dropping a markdown file** into QOwnNotes it will now be **copied** to
+  the active **note subfolder** and not just to the current note folder
 - added more Italian, French, Japanese, Swedish, Brazilian Portuguese, Dutch
   and Hungarian translation (thank you mlocati, bepolymathe, piyo, ekblom,
   mlimacarlos and Fabijenna)
