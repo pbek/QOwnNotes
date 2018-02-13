@@ -14,6 +14,9 @@
     - trashed items are now by default expired after 30 days
         - you can turn that off in the *Local trash* settings and also set 
           the amount of days there
+- added more Italian, French, Japanese, Swedish, Brazilian Portuguese, Dutch
+  and Hungarian translation (thank you mlocati, bepolymathe, piyo, ekblom,
+  mlimacarlos and Fabijenna)
 
 ## 18.02.1
 - fixed autocompleter user interface offset, especially in the distraction free mode
