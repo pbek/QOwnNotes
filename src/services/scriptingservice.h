@@ -12,7 +12,7 @@
 #include <QHash>
 #include <QMap>
 #include <api/noteapi.h>
-#include <QtSvg/QtSvg>
+#include <QMessageBox>
 
 #define PERSISTENT_VARIABLE_SETTINGS_PREFIX "PersistentScripting"
 
