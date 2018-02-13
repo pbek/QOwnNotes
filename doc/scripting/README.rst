@@ -757,8 +757,8 @@ Usage in QML
     script.informationMessageBox("The text I want to show", "Some optional title");
 
 
-Showing an question message box
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Showing a question message box
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Parameters
 ^^^^^^^^^^
