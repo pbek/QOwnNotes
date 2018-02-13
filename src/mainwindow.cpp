@@ -2760,7 +2760,7 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
 
         // ignore some folders
         QStringList ignoreFolderList;
-        ignoreFolderList << "." << ".." << "media" << "attachments";
+        ignoreFolderList << "." << ".." << "media" << "attachments" << "trash";
 
         Q_FOREACH(QString folder, folders) {
                 if (ignoreFolderList.contains(folder)) {
