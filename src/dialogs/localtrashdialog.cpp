@@ -76,6 +76,18 @@ void LocalTrashDialog::loadTrashedNotes() {
 
         QString toolTipText = tr("File will be restored to: %1").arg(
                 trashItem.restorationFilePath());
+
+        // mark missing items if file is missing
+        if (!trashItem.fileExists()) {
+            item->setIcon(0,
+                    QIcon::fromTheme(
+                    "edit-delete",
+                    QIcon(":/icons/breeze-qownnotes/16x16/edit-delete.svg")));
+            toolTipText = tr("File <strong>%1</strong> isn't readable and can't"
+                                     " be restored!").arg(
+                    trashItem.fullFilePath());
+        }
+
         item->setToolTip(0, toolTipText);
         item->setToolTip(1, toolTipText);
 

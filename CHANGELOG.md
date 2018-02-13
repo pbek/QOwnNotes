@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 18.02.2
+- files that are missing in the local trash-folder will be now be marked in the
+  *Local trash* dialog so that you know that they can't be restored
 - there now is a new scripting command to show a question message box
   `script.questionMessageBox()` (for [#847](https://github.com/pbek/QOwnNotes/issues/847))
     - for more information please take a look at
