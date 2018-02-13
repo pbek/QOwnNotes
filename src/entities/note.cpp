@@ -1438,6 +1438,12 @@ bool Note::renameNoteFile(QString newName) {
         return false;
     }
 
+    if (TrashItem::isLocalTrashEnabled()) {
+        // add note to trash
+        bool trashResult = TrashItem::add(this);
+        qDebug() << __func__ << " - 'trashResult': " << trashResult;
+    }
+
     // get the note file to rename it
     QFile file(fullNoteFilePath());
 
