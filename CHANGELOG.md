@@ -10,6 +10,7 @@
       the *Local trash* dialog so that you know that they can't be restored
     - the old note is now also added to the local trash if it was renamed 
       manually in the note list
+    - sorting by trashing date in the trash dialog now works correctly
 
 ## 18.02.1
 - fixed autocompleter user interface offset, especially in the distraction free mode

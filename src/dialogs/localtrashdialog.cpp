@@ -7,6 +7,23 @@
 #include <entities/trashitem.h>
 #include <utils/gui.h>
 
+class LocalTrashTreeWidgetItem : public QTreeWidgetItem {
+public:
+    LocalTrashTreeWidgetItem(QTreeWidget* parent):QTreeWidgetItem(parent){}
+private:
+    bool operator<(const QTreeWidgetItem &other)const {
+        int column = treeWidget()->sortColumn();
+
+        // allow sorting for the date column
+        if (column == 1) {
+            return data(column, Qt::UserRole).toInt() <
+                    other.data(column, Qt::UserRole).toInt();
+        }
+
+        return text(column).toLower() < other.text(column).toLower();
+    }
+};
+
 LocalTrashDialog::LocalTrashDialog(MainWindow *mainWindow, QWidget *parent) :
         MasterDialog(parent),
         ui(new Ui::LocalTrashDialog) {
@@ -69,10 +86,13 @@ void LocalTrashDialog::loadTrashedNotes() {
     while (iterator.hasNext()) {
         TrashItem trashItem = iterator.next();
 
-        QTreeWidgetItem *item = new QTreeWidgetItem();
+        auto *item = new LocalTrashTreeWidgetItem(ui->trashTreeWidget);
         item->setText(0, trashItem.getFileName());
         item->setText(1, trashItem.getCreated().toString());
         item->setData(0, Qt::UserRole, trashItem.getId());
+        // add timestamp data to allow sorting
+        item->setData(1, Qt::UserRole,
+                      trashItem.getCreated().toMSecsSinceEpoch());
 
         QString toolTipText = tr("File will be restored to: %1").arg(
                 trashItem.restorationFilePath());
