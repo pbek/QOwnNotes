@@ -6105,9 +6105,13 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
 
                     // only allow markdown and text files to be copied as note
                     if (isValidNoteFile(file)) {
+                        NoteSubFolder noteSubFolder =
+                                NoteSubFolder::activeNoteSubFolder();
+                        QString noteSubFolderPath = noteSubFolder.fullPath();
+
                         // copy file to notes path
                         bool success = file->copy(
-                                notesPath + QDir::separator() +
+                                noteSubFolderPath + QDir::separator() +
                                 fileInfo.fileName());
 
                         if (success) {
