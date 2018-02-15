@@ -4326,9 +4326,18 @@ void MainWindow::setCurrentNoteFromHistoryItem(NoteHistoryItem item) {
  * @param textEdit
  */
 bool MainWindow::preparePrintNotePrinter(QPrinter *printer) {
+    Utils::Misc::loadPrinterSettings(printer, "Printer/NotePrinting");
+
     QPrintDialog dialog(printer, this);
     dialog.setWindowTitle(tr("Print note"));
-    return dialog.exec() == QDialog::Accepted;
+    int ret = dialog.exec();
+
+    if (ret != QDialog::Accepted) {
+        return false;
+    }
+
+    Utils::Misc::storePrinterSettings(printer, "Printer/NotePrinting");
+    return true;
 }
 
 /**
@@ -4362,6 +4371,8 @@ void MainWindow::printNote(QTextEdit *textEdit) {
  */
 bool MainWindow::prepareExportNoteAsPDFPrinter(QPrinter *printer) {
 #ifdef Q_OS_LINUX
+    Utils::Misc::loadPrinterSettings(printer, "Printer/NotePDFExport");
+
     // under Linux we use the the QPageSetupDialog to change layout
     // settings of the PDF export
     QPageSetupDialog pageSetupDialog(printer, this);
@@ -4369,9 +4380,13 @@ bool MainWindow::prepareExportNoteAsPDFPrinter(QPrinter *printer) {
     if (pageSetupDialog.exec() != QDialog::Accepted) {
         return false;
     }
+
+    Utils::Misc::storePrinterSettings(printer, "Printer/NotePDFExport");
 #else
     // under OS X and Windows the QPageSetupDialog dialog doesn't work,
     // we will use a workaround to select page sizes and the orientation
+
+    QSettings settings;
 
     // select the page size
     QStringList pageSizeStrings;
@@ -4386,7 +4401,9 @@ bool MainWindow::prepareExportNoteAsPDFPrinter(QPrinter *printer) {
     bool ok;
     QString pageSizeString = QInputDialog::getItem(
             this, tr("Page size"), tr("Page size:"),
-            pageSizeStrings, 4, false, &ok);
+            pageSizeStrings,
+            settings.value("Printer/NotePDFExportPageSize", 4).toInt(),
+            false, &ok);
 
     if (!ok || pageSizeString.isEmpty()) {
         return false;
@@ -4398,6 +4415,7 @@ bool MainWindow::prepareExportNoteAsPDFPrinter(QPrinter *printer) {
     }
 
     QPageSize pageSize(pageSizes.at(pageSizeIndex));
+    settings.setValue("Printer/NotePDFExportPageSize", pageSizeIndex);
     printer->setPageSize(pageSize);
 
     // select the orientation
@@ -4408,7 +4426,9 @@ bool MainWindow::prepareExportNoteAsPDFPrinter(QPrinter *printer) {
 
     QString orientationString = QInputDialog::getItem(
             this, tr("Orientation"), tr("Orientation:"),
-            orientationStrings, 0, false, &ok);
+            orientationStrings,
+            settings.value("Printer/NotePDFExportOrientation", 0).toInt(),
+            false, &ok);
 
     if (!ok || orientationString.isEmpty()) {
         return false;
@@ -4421,6 +4441,7 @@ bool MainWindow::prepareExportNoteAsPDFPrinter(QPrinter *printer) {
     }
 
     printer->setOrientation(orientations.at(orientationIndex));
+    settings.setValue("Printer/NotePDFExportOrientation", orientationIndex);
 #endif
 
     FileDialog dialog("NotePDFExport");

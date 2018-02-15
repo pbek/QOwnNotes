@@ -5,6 +5,11 @@
   (for [#674](https://github.com/pbek/QOwnNotes/issues/674))
     - you have to reset your toolbar in the *Toolbar settings* if you are 
       already using the app
+- added a workaround for certain translations of the word `ownCloud`
+  (for [#850](https://github.com/pbek/QOwnNotes/issues/850))
+- most settings of the page setup dialog will now be stored when you 
+  confirm the printing- and PDF-export-dialog and will be restored if you visit 
+  the dialog again (for [#704](https://github.com/pbek/QOwnNotes/issues/704))
 
 ## 18.02.2
 - there now is a new **scripting command** to show a **question message box**

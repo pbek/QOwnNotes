@@ -689,6 +689,10 @@ QString Utils::Misc::transformLineFeeds(QString text) {
  * @return
  */
 QString Utils::Misc::replaceOwnCloudText(QString text, bool useShortText) {
+    if (text.contains("Nextcloud")) {
+        return text;
+    }
+
     QString replaceText = useShortText ? "oC / NC" : "ownCloud / Nextcloud";
     return text.replace("ownCloud", replaceText, Qt::CaseInsensitive);
 }
@@ -873,4 +877,137 @@ void Utils::Misc::presetDisableAutomaticUpdateDialog() {
                        release.contains("AppVeyor") || release.contains("AppImage");
         settings.setValue("disableAutomaticUpdateDialog", !enabled);
     }
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// Write all available Attributes from QPrinter into stream
+///////////////////////////////////////////////////////////////////////////////
+
+template <typename t> void  writeStreamElement(QDataStream &os, t param) {
+    int i = static_cast<int>(param);
+    os << i;
+}
+
+template <> void writeStreamElement<QString>(QDataStream &os, QString s) {
+    os << s;
+}
+
+QDataStream& Utils::Misc::dataStreamWrite(QDataStream &os,
+                                          const QPrinter &printer)
+{
+    writeStreamElement(os, printer.printerName         ());
+    writeStreamElement(os, printer.pageSize            ());
+    writeStreamElement(os, printer.collateCopies       ());
+    writeStreamElement(os, printer.colorMode           ());
+    writeStreamElement(os, printer.copyCount           ());
+    writeStreamElement(os, printer.creator             ());
+    writeStreamElement(os, printer.docName             ());
+    writeStreamElement(os, printer.doubleSidedPrinting ());
+    writeStreamElement(os, printer.duplex              ());
+    writeStreamElement(os, printer.fontEmbeddingEnabled());
+    writeStreamElement(os, printer.fullPage            ());
+    writeStreamElement(os, printer.orientation         ());
+    writeStreamElement(os, printer.outputFileName      ());
+    writeStreamElement(os, printer.outputFormat        ());
+    writeStreamElement(os, printer.pageOrder           ());
+    writeStreamElement(os, printer.paperSize           ());
+    writeStreamElement(os, printer.paperSource         ());
+    writeStreamElement(os, printer.printProgram        ());
+    writeStreamElement(os, printer.printRange          ());
+    writeStreamElement(os, printer.printerName         ());
+    writeStreamElement(os, printer.resolution          ());
+    writeStreamElement(os, printer.winPageSize         ());
+
+    qreal left, top, right, bottom;
+    printer.getPageMargins(&left, &top, &right, &bottom, QPrinter::Millimeter);
+    os << left << top << right << bottom;
+
+    Q_ASSERT_X(os.status() == QDataStream::Ok, __FUNCTION__,
+               QString("Stream status = %1").arg(os.status()).toStdString().c_str());
+    return os;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+// Read all available Attributes from stream into QPrinter
+///////////////////////////////////////////////////////////////////////////////
+
+template <typename t> t readStreamElement(QDataStream &is) {
+    int i;
+    is >> i;
+    return static_cast<t>(i);
+}
+
+template <> QString readStreamElement<QString>(QDataStream &is) {
+    QString s;
+    is >> s;
+    return s;
+}
+
+QDataStream& Utils::Misc::dataStreamRead(QDataStream &is, QPrinter &printer) {
+    printer.setPrinterName              (readStreamElement<QString>                (is));
+    printer.setPageSize                 (readStreamElement<QPrinter::PaperSize>    (is));
+    printer.setCollateCopies            (readStreamElement<bool>                   (is));
+    printer.setColorMode                (readStreamElement<QPrinter::ColorMode>    (is));
+    printer.setCopyCount                (readStreamElement<int>                    (is));
+    printer.setCreator                  (readStreamElement<QString>                (is));
+    printer.setDocName                  (readStreamElement<QString>                (is));
+    printer.setDoubleSidedPrinting      (readStreamElement<bool>                   (is));
+    printer.setDuplex                   (readStreamElement<QPrinter::DuplexMode>   (is));
+    printer.setFontEmbeddingEnabled     (readStreamElement<bool>                   (is));
+    printer.setFullPage                 (readStreamElement<bool>                   (is));
+    printer.setOrientation              (readStreamElement<QPrinter::Orientation>  (is));
+    printer.setOutputFileName           (readStreamElement< QString >              (is));
+    printer.setOutputFormat             (readStreamElement<QPrinter::OutputFormat> (is));
+    printer.setPageOrder                (readStreamElement<QPrinter::PageOrder>    (is));
+    printer.setPaperSize                (readStreamElement<QPrinter::PaperSize>    (is));
+    printer.setPaperSource              (readStreamElement<QPrinter::PaperSource>  (is));
+    printer.setPrintProgram             (readStreamElement<QString>                (is));
+    printer.setPrintRange               (readStreamElement<QPrinter::PrintRange>   (is));
+    printer.setPrinterName              (readStreamElement<QString>                (is));
+    printer.setResolution               (readStreamElement<int>                    (is));
+    printer.setWinPageSize              (readStreamElement<int>                    (is));
+
+    qreal left, top, right, bottom;
+    is >> left >> top >> right >> bottom;
+
+    printer.setPageMargins(left, top, right, bottom, QPrinter::Millimeter);
+
+    Q_ASSERT_X(is.status() == QDataStream::Ok, __FUNCTION__,
+               QString("Stream status = %1").arg(is.status()).toStdString().c_str());
+
+    return is;
+}
+
+/**
+ * Stores the properties of a QPrinter to the settings
+ *
+ * @param printer
+ * @param settingsKey
+ */
+void Utils::Misc::storePrinterSettings(QPrinter *printer, QString settingsKey) {
+    QByteArray byteArr;
+    QDataStream os(&byteArr, QIODevice::WriteOnly);
+    dataStreamWrite(os, *printer);
+    QSettings settings;
+    settings.setValue(settingsKey, byteArr.toHex());
+}
+
+/**
+ * Loads the properties of a QPrinter from the settings
+ *
+ * @param printer
+ * @param settingsKey
+ */
+void Utils::Misc::loadPrinterSettings(QPrinter *printer, QString settingsKey) {
+    QSettings settings;
+
+    if (!settings.value(settingsKey).isValid()) {
+        return;
+    }
+
+    QByteArray printSetup = settings.value(settingsKey).toByteArray();
+    printSetup = QByteArray::fromHex(printSetup);
+    QDataStream is(&printSetup, QIODevice::ReadOnly);
+    dataStreamRead(is, *printer);
 }

@@ -18,6 +18,8 @@
 #include <QUrl>
 #include <QFile>
 #include <QByteArray>
+#include <QPrinter>
+#include <QDataStream>
 #include <QStringList>
 #include <QMap>
 
@@ -71,5 +73,13 @@ namespace Utils {
         int getDefaultSearchEngineId();
         void presetDisableAutomaticUpdateDialog();
         QList<int> getSearchEnginesIds();
+        QDataStream &dataStreamWrite(QDataStream &os, const QPrinter &printer);
+        QDataStream &dataStreamRead(QDataStream &is, QPrinter &printer);
+        void storePrinterSettings(QPrinter *printer, QString settingsKey);
+        void loadPrinterSettings(QPrinter *printer, QString settingsKey);
     }  // namespace Misc
 }  // namespace Utils
+
+
+QDataStream& operator<<(QDataStream &os, const QPrinter &printer);
+QDataStream& operator>>(QDataStream &is,  QPrinter &printer);
