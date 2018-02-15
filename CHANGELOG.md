@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 18.02.3
+- the *Local trash* button will now by default be shown in the main toolbar
+  (for [#674](https://github.com/pbek/QOwnNotes/issues/674))
+    - you have to reset your toolbar in the *Toolbar settings* if you are 
+      already using the app
+
 ## 18.02.2
 - there now is a new **scripting command** to show a **question message box**
   `script.questionMessageBox()` (for [#847](https://github.com/pbek/QOwnNotes/issues/847))

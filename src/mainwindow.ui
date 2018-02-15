@@ -1038,6 +1038,7 @@ p, li { white-space: pre-wrap; }
    <addaction name="action_Find_note"/>
    <addaction name="action_Remove_note"/>
    <addaction name="action_Open_note_in_external_editor"/>
+   <addaction name="actionShow_local_trash"/>
    <addaction name="actionAllow_note_editing"/>
    <addaction name="separator"/>
    <addaction name="action_Back_in_note_history"/>
