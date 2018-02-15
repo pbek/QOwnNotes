@@ -10,6 +10,8 @@
 - most settings of the page setup dialog will now be stored when you 
   confirm the printing- and PDF-export-dialog and will be restored if you visit 
   the dialog again (for [#704](https://github.com/pbek/QOwnNotes/issues/704))
+- added more German, Italian, Japanese, Brazilian Portuguese and Spanish
+  translation (thank you rakekniven, mlocati, piyo, mlimacarlos and richarson)
 
 ## 18.02.2
 - there now is a new **scripting command** to show a **question message box**

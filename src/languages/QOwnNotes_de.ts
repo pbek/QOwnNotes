@@ -352,7 +352,7 @@
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="14"/>
       <source>Locally trashed notes</source>
-      <translation>Lokal gelöschte Notizen</translation>
+      <translation>Notizen im lokalen Papierkorb</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="42"/>
@@ -362,7 +362,7 @@
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="47"/>
       <source>Trashed</source>
-      <translation>Gelöscht</translation>
+      <translation>Im Papierkorb</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="41"/>
@@ -394,13 +394,13 @@
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="106"/>
       <source>File &lt;strong&gt;%1&lt;/strong&gt; isn't readable and can't be restored!</source>
-      <translation type="unfinished">File &lt;strong&gt;%1&lt;/strong&gt; isn't readable and can't be restored!</translation>
+      <translation>Datei &lt;strong&gt;%1&lt;/strong&gt; ist nicht lesbar und kann daher nicht wiederhergestellt werden!</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="195"/>
       <source>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; ausgewählte Notiz wiederherstellen?</numerusform>
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; ausgewählte Notizen wiederherstellen?</numerusform>
       </translation>
     </message>
@@ -412,16 +412,16 @@
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="219"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) where restored</source>
-      <translation type="unfinished">
+      <translation>
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; Notiz wurde wiederhergestellt</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) where restored</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; Notizen wurden wiederhergestellt</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="241"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; ausgewählte Notiz entfernen?</numerusform>
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; ausgewählte Notizen entfernen?</numerusform>
       </translation>
     </message>
@@ -433,8 +433,8 @@
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="265"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) where removed</source>
-      <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) where removed</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; Notiz wurde entfernt</numerusform>
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; Notizen wurden entfernt</numerusform>
       </translation>
     </message>
@@ -2500,12 +2500,12 @@ Falls Sie die Papierkorb-App auf Ihrem Nextcloud/ownCloud-Server aktiviert haben
     <message>
       <location filename="../services/owncloudservice.cpp" line="1099"/>
       <source>Done with loading trashed notes</source>
-      <translation>Laden der gelöschten Notizen abgeschlossen</translation>
+      <translation>Laden der Papierkorb-Notizen abgeschlossen</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1140"/>
       <source>No trashed notes</source>
-      <translation>Keine gelöschten Notizen</translation>
+      <translation>Keine Notizen im Papierkorb</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1141"/>
@@ -3597,7 +3597,7 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="299"/>
       <source>Local trash</source>
-      <translation type="unfinished">Local trash</translation>
+      <translation>Lokaler Papierkorb</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="323"/>
@@ -3812,33 +3812,33 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4689"/>
       <source>Local trash settings</source>
-      <translation type="unfinished">Local trash settings</translation>
+      <translation>Einstellungen des lokalen Papierkorbs</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4723"/>
       <source>Remove trashed notes after:</source>
-      <translation type="unfinished">Remove trashed notes after:</translation>
+      <translation>Notizen im Papierkorb endgültig entfernen nach:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4730"/>
       <source> days</source>
       <extracomment>seconds</extracomment>
-      <translation type="unfinished"> days</translation>
+      <translation> Tagen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4749"/>
       <source>Automatically remove trashed notes after a certain time</source>
-      <translation type="unfinished">Automatically remove trashed notes after a certain time</translation>
+      <translation>Notizen im Papierkorb nach einer einstellbaren Zeit automatisch entfernen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4775"/>
       <source>Local trash support</source>
-      <translation type="unfinished">Local trash support</translation>
+      <translation>Unterstützung für lokalen Papierkorb</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4781"/>
       <source>Enable local trash</source>
-      <translation type="unfinished">Enable local trash</translation>
+      <translation>Lokalen Papierkorb aktivieren</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4179"/>
@@ -5226,7 +5226,7 @@ Kann nicht rückgängig gemacht werden!</translation>
     <message>
       <location filename="../dialogs/trashdialog.ui" line="14"/>
       <source>Trashed notes</source>
-      <translation>gelöschte Notizen</translation>
+      <translation>Notizen im Papierkorb</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="24"/>

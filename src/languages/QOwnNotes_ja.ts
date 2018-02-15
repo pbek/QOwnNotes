@@ -3801,7 +3801,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4749"/>
       <source>Automatically remove trashed notes after a certain time</source>
-      <translation type="unfinished">Automatically remove trashed notes after a certain time</translation>
+      <translation>ごみ箱内のノートを一定期間後に自動で削除する</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4775"/>
@@ -3896,7 +3896,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4250"/>
       <source>Only use editor width setting in distraction free mode</source>
-      <translation type="unfinished">Only use editor width setting in distraction free mode</translation>
+      <translation>エディターの幅の設定は没入モードだけに適用する</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4464"/>
