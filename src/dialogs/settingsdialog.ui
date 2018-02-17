@@ -830,7 +830,7 @@
                   <item>
                    <widget class="Label" name="installInfoTextLabel1">
                     <property name="text">
-                     <string>Please install the latest version of &lt;a href=&quot;https://apps.nextcloud.com/apps/qownnotesapi&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</string>
+                     <string>Please install the latest version of &lt;a href=&quot;https://github.com/pbek/qownnotesapi&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</string>
                     </property>
                     <property name="wordWrap">
                      <bool>true</bool>
