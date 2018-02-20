@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 18.02.4
+- fixed a problem with downloading media files on Arch Linux
+  (for [#857](https://github.com/pbek/QOwnNotes/issues/857))
+
 ## 18.02.3
 - the *Local trash* button will now by default be shown in the main toolbar
   (for [#674](https://github.com/pbek/QOwnNotes/issues/674))
