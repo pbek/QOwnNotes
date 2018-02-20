@@ -2263,7 +2263,7 @@ QString Note::createNoteHeader(QString name) {
  */
 QString Note::getInsertMediaMarkdown(QFile *file, bool addNewLine,
                                      bool returnUrlOnly) {
-    if (file->exists() && (file->size() > 0)) {
+    if (QFile::exists(file->fileName()) && (file->size() > 0)) {
         QDir mediaDir(NoteFolder::currentMediaPath());
 
         // created the media folder if it doesn't exist
