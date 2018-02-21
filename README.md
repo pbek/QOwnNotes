@@ -8,8 +8,8 @@
 [Documentation](http://docs.qownnotes.org) |
 [Knowledge base](http://www.qownnotes.org/Knowledge-base) |
 [Screenshots](http://www.qownnotes.org) |
-[ownCloud Apps](https://marketplace.owncloud.com/) |
-[Nextcloud Apps](https://apps.nextcloud.com/) |
+[ownCloud API](https://marketplace.owncloud.com/apps/qownnotesapi) |
+[Nextcloud API](https://apps.nextcloud.com/apps/qownnotesapi) |
 [IRC Chat](https://kiwiirc.com/client/irc.freenode.net/#qownnotes) |
 [Gitter Chat](https://gitter.im/qownnotes/qownnotes)
 
