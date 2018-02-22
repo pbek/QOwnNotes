@@ -15,6 +15,7 @@
 #pragma once
 
 #include <QFrame>
+#include <QEvent>
 
 namespace Ui {
 class LogWidget;

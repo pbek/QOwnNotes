@@ -3,6 +3,7 @@
 #include <QScrollBar>
 #include <QMenu>
 #include <QFile>
+#include <QKeyEvent>
 #include <QDebug>
 #include <utils/misc.h>
 #include "logwidget.h"
@@ -427,7 +428,9 @@ bool LogWidget::eventFilter(QObject *obj, QEvent *event) {
 
         // hide the option frame on Escape key
         if (keyEvent->key() == Qt::Key_Escape) {
+#ifndef INTEGRATION_TESTS
             ui->buttonFrame->hide();
+#endif
             return false;
         }
     }
