@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 18.02.5
+- the options in the *Log panel* can now be closed with the <kbd>Esc</kbd> key 
+
 ## 18.02.4
 - fixed a problem with downloading media files on Arch Linux
   (for [#857](https://github.com/pbek/QOwnNotes/issues/857))

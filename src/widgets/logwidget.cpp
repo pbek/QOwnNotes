@@ -62,6 +62,9 @@ LogWidget::LogWidget(QWidget *parent) :
     connect(ui->statusCheckBox, SIGNAL(clicked()), this, SLOT(storeSettings()));
     connect(ui->scriptingCheckBox, SIGNAL(clicked()),
             this, SLOT(storeSettings()));
+
+    ui->logTextEdit->installEventFilter(this);
+    ui->buttonFrame->installEventFilter(this);
 #endif
 }
 
@@ -409,4 +412,25 @@ void LogWidget::onDestroyed(QObject *obj) {
 #ifndef INTEGRATION_TESTS
     qApp->setProperty("loggingEnabled", false);
 #endif
+}
+
+/**
+ * Event filters
+ *
+ * @param obj
+ * @param event
+ * @return
+ */
+bool LogWidget::eventFilter(QObject *obj, QEvent *event) {
+    if (event->type() == QEvent::KeyPress) {
+        QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
+
+        // hide the option frame on Escape key
+        if (keyEvent->key() == Qt::Key_Escape) {
+            ui->buttonFrame->hide();
+            return false;
+        }
+    }
+
+    return QFrame::eventFilter(obj, event);
 }

@@ -44,6 +44,7 @@ public:
             QtMsgType type,
             const QMessageLogContext &context,
             const QString &msg);
+    bool eventFilter(QObject *obj, QEvent *event);
 
 private slots:
     void storeSettings() const;
