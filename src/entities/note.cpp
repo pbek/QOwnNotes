@@ -1650,10 +1650,6 @@ QString Note::textToMarkdownHtml(QString str, QString notesPath,
                     " border-radius: 3px; color: %2; }").arg(
             codeBackgroundColor, codeForegroundColor);
 
-    // remove double code blocks
-    result.replace("<pre><code>", "<pre>")
-            .replace("</code></pre>", "</pre>");
-
     // correct the strikeout tag
     result.replace(QRegularExpression("<del>([^<]+)<\\/del>"), "<s>\\1</s>");
     bool rtl = settings.value("MainWindow/noteTextView.rtl").toBool();
