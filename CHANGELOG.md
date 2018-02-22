@@ -2,6 +2,13 @@
 
 ## 18.02.5
 - the options in the *Log panel* can now be closed with the <kbd>Esc</kbd> key 
+- added **Filipino translation** and **Tagalog translation** (a big thank you to
+  sageneil, deboyz18, saducasjohncarl and franzancot)
+    - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes/)
+      to make QOwnNotes available in more languages or help with the current 
+      translation
+- added more French, German, Indonesian, Catalan and Chinese translation (thank
+  you dev2a, rakekniven, rizki271197, MGuerra and hermitwhite)
 
 ## 18.02.4
 - fixed a problem with downloading media files on Arch Linux

@@ -30,3 +30,5 @@ mv QOwnNotes_sv_SE.ts QOwnNotes_sv.ts
 mv QOwnNotes_id_ID.ts QOwnNotes_id.ts
 mv QOwnNotes_bn_BD.ts QOwnNotes_bn.ts
 mv QOwnNotes_tr_TR.ts QOwnNotes_tr.ts
+mv QOwnNotes_tl_PH.ts QOwnNotes_tl.ts
+mv QOwnNotes_fil_PH.ts QOwnNotes_fil.ts

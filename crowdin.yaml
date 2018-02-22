@@ -43,6 +43,8 @@ files:
         "zh_CN" : "zh",
         "id_ID" : "id",
         "bn_BD" : "bn",
-        "tr_TR" : "tr"
+        "tr_TR" : "tr",
+        "tl_PH" : "tl",
+        "fil_PH" : "fil"
       }
     }
