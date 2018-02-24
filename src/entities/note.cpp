@@ -1645,14 +1645,10 @@ QString Note::textToMarkdownHtml(QString str, QString notesPath,
 
     // do some more code formatting
     codeStyleSheet += QString(
-            "pre, code { padding: 16px; overflow: auto;"
+            "code { padding: 16px; overflow: auto;"
                     " line-height: 1.45em; background-color: %1;"
                     " border-radius: 3px; color: %2; }").arg(
             codeBackgroundColor, codeForegroundColor);
-
-    // remove double code blocks
-    result.replace("<pre><code>", "<pre>")
-            .replace("</code></pre>", "</pre>");
 
     // correct the strikeout tag
     result.replace(QRegularExpression("<del>([^<]+)<\\/del>"), "<s>\\1</s>");
