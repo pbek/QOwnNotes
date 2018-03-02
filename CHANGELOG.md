@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 18.03.0
+- added **Cebuano translation** and **Hindi translation** (a big thank you to
+  sageneil, valcarsido, loydjayme25, jbeguna04 and cryptoexplorer7)
+    - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes/)
+      to make QOwnNotes available in more languages or help with the current 
+      translation
+
 ## 18.02.5
 - the options in the *Log panel* can now be closed with the <kbd>Esc</kbd> key 
 - added **Filipino translation** and **Tagalog translation** (a big thank you to

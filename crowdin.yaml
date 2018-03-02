@@ -45,6 +45,8 @@ files:
         "bn_BD" : "bn",
         "tr_TR" : "tr",
         "tl_PH" : "tl",
-        "fil_PH" : "fil"
+        "fil_PH" : "fil",
+        "ceb_PH" : "ceb",
+        "hi_IN" : "hi"
       }
     }

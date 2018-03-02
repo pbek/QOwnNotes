@@ -34,4 +34,6 @@ languages/QOwnNotes_bn.qm usr/share/QOwnNotes/languages
 languages/QOwnNotes_tr.qm usr/share/QOwnNotes/languages
 languages/QOwnNotes_tl.qm usr/share/QOwnNotes/languages
 languages/QOwnNotes_fil.qm usr/share/QOwnNotes/languages
+languages/QOwnNotes_ceb.qm usr/share/QOwnNotes/languages
+languages/QOwnNotes_hi.qm usr/share/QOwnNotes/languages
 QOwnNotes usr/bin

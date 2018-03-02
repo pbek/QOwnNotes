@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="zh-TW" sourcelanguage="en">
+<TS version="2.1" language="ur-PK" sourcelanguage="en">
   <context>
     <name>AboutDialog</name>
     <message>
       <location filename="../dialogs/aboutdialog.ui" line="14"/>
       <source>About QOwnNotes</source>
-      <translation>關於 QOwnNotes</translation>
+      <translation type="unfinished">About QOwnNotes</translation>
     </message>
   </context>
   <context>
@@ -15,7 +15,7 @@
       <location filename="../dialogs/actiondialog.ui" line="14"/>
       <location filename="../dialogs/actiondialog.ui" line="46"/>
       <source>Find action</source>
-      <translation>查詢操作</translation>
+      <translation type="unfinished">Find action</translation>
     </message>
   </context>
   <context>
@@ -23,52 +23,52 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="14"/>
       <source>Evernote Import</source>
-      <translation>Evernote 匯入</translation>
+      <translation type="unfinished">Evernote Import</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="90"/>
       <source>Select file</source>
-      <translation>選擇檔案</translation>
+      <translation type="unfinished">Select file</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="40"/>
       <source>Please select the Evernote enex file you want to import:</source>
-      <translation>請選擇欲匯入的 Evernote enex 檔案：</translation>
+      <translation type="unfinished">Please select the Evernote enex file you want to import:</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="47"/>
       <source>Import images</source>
-      <translation>匯入圖片</translation>
+      <translation type="unfinished">Import images</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="23"/>
       <source>Evernote enex file</source>
-      <translation>Evernote enex 檔案</translation>
+      <translation type="unfinished">Evernote enex file</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="33"/>
       <source>%v of %m note(s) imported</source>
-      <translation>已匯入 %m 份筆記中的 %v 份</translation>
+      <translation type="unfinished">%v of %m note(s) imported</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="80"/>
       <source>To get such an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes..." in the File menu.</source>
-      <translation>您必須在 Evernotes 桌面程式中選取一份以上的筆記，並在 File 選單中點選「Export notes...」，以獲得此 enex 檔案。</translation>
+      <translation type="unfinished">To get such an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes..." in the File menu.</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="101"/>
       <source>Import attachments</source>
-      <translation>匯入附件</translation>
+      <translation type="unfinished">Import attachments</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="39"/>
       <source>Enex files</source>
-      <translation>Enex 檔案</translation>
+      <translation type="unfinished">Enex files</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="40"/>
       <source>Select Evernote enex file to import</source>
-      <translation>選擇欲匯入的 Evernote enex 檔案</translation>
+      <translation type="unfinished">Select Evernote enex file to import</translation>
     </message>
   </context>
   <context>
@@ -76,237 +76,237 @@
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="38"/>
       <source>Text font</source>
-      <translation>文字字體</translation>
+      <translation type="unfinished">Text font</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="73"/>
       <source>Size:</source>
-      <translation>大小︰</translation>
+      <translation type="unfinished">Size:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="80"/>
       <source>Family:</source>
-      <translation>字型：</translation>
+      <translation type="unfinished">Family:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="103"/>
       <source>Color schema</source>
-      <translation>顏色配置</translation>
+      <translation type="unfinished">Color schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="124"/>
       <source>Delete schema</source>
-      <translation>刪除配色</translation>
+      <translation type="unfinished">Delete schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="127"/>
       <source>Delete</source>
-      <translation>刪除</translation>
+      <translation type="unfinished">Delete</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="169"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="633"/>
       <source>Export schema</source>
-      <translation>匯出配色</translation>
+      <translation type="unfinished">Export schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="172"/>
       <source>Export</source>
-      <translation>匯出</translation>
+      <translation type="unfinished">Export</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="271"/>
       <source>If you have created a nice color schema please export it and share it with everyone!</source>
-      <translation>如果你調出了很好的配色，請匯出並和大家分享！</translation>
+      <translation type="unfinished">If you have created a nice color schema please export it and share it with everyone!</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="155"/>
       <source>Copy schema</source>
-      <translation>複製配色</translation>
+      <translation type="unfinished">Copy schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="158"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="462"/>
       <source>Copy</source>
-      <translation>複製</translation>
+      <translation type="unfinished">Copy</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="141"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="676"/>
       <source>Import schema</source>
-      <translation>匯入配色</translation>
+      <translation type="unfinished">Import schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="144"/>
       <source>Import</source>
-      <translation>匯入</translation>
+      <translation type="unfinished">Import</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="315"/>
       <source>Share schema</source>
-      <translation>分享配色</translation>
+      <translation type="unfinished">Share schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="288"/>
       <source>Background:</source>
-      <translation>背景：</translation>
+      <translation type="unfinished">Background:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="281"/>
       <source>Foreground:</source>
-      <translation>前景︰</translation>
+      <translation type="unfinished">Foreground:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="264"/>
       <source>Bold</source>
-      <translation>粗體</translation>
+      <translation type="unfinished">Bold</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="244"/>
       <source>Italic</source>
-      <translation>斜體</translation>
+      <translation type="unfinished">Italic</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="237"/>
       <source>Adapt font size:</source>
-      <translation>調整字體大小︰</translation>
+      <translation type="unfinished">Adapt font size:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="208"/>
       <source>Underline</source>
-      <translation>底線</translation>
+      <translation type="unfinished">Underline</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="195"/>
       <source>Text preset</source>
-      <translation>基本字體</translation>
+      <translation type="unfinished">Text preset</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="196"/>
       <source>Emphasized text</source>
-      <translation>強調的字體</translation>
+      <translation type="unfinished">Emphasized text</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="197"/>
       <source>Strong text</source>
-      <translation>粗體</translation>
+      <translation type="unfinished">Strong text</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="214"/>
       <source>(HTML) Comment</source>
-      <translation>(HTML) 註解</translation>
+      <translation type="unfinished">(HTML) Comment</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="204"/>
       <source>Header, level 1</source>
-      <translation>標題 1</translation>
+      <translation type="unfinished">Header, level 1</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="198"/>
       <source>Link</source>
-      <translation>連結</translation>
+      <translation type="unfinished">Link</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="199"/>
       <source>Image</source>
-      <translation>圖片</translation>
+      <translation type="unfinished">Image</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="200"/>
       <source>Code (block)</source>
-      <translation>程式碼（區塊）</translation>
+      <translation type="unfinished">Code (block)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="201"/>
       <source>Code (inline)</source>
-      <translation>程式碼（行內）</translation>
+      <translation type="unfinished">Code (inline)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="203"/>
       <source>List item</source>
-      <translation>清單項目</translation>
+      <translation type="unfinished">List item</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="205"/>
       <source>Header, level 2</source>
-      <translation>標題 2</translation>
+      <translation type="unfinished">Header, level 2</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="206"/>
       <source>Header, level 3</source>
-      <translation>標題 3</translation>
+      <translation type="unfinished">Header, level 3</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="207"/>
       <source>Header, level 4</source>
-      <translation>標題 4</translation>
+      <translation type="unfinished">Header, level 4</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="208"/>
       <source>Header, level 5</source>
-      <translation>標題 5</translation>
+      <translation type="unfinished">Header, level 5</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="209"/>
       <source>Header, level 6</source>
-      <translation>標題 6</translation>
+      <translation type="unfinished">Header, level 6</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="212"/>
       <source>Block quote</source>
-      <translation>引用區塊</translation>
+      <translation type="unfinished">Block quote</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="213"/>
       <source>Table</source>
-      <translation>表格</translation>
+      <translation type="unfinished">Table</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="215"/>
       <source>Masked syntax</source>
       <comment>text that will highlighted in a way that it's barely visible</comment>
-      <translation>隱藏字</translation>
+      <translation type="unfinished">Masked syntax</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="210"/>
       <source>Horizontal rule</source>
-      <translation>水平標線</translation>
+      <translation type="unfinished">Horizontal rule</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="218"/>
       <source>Current line background color</source>
-      <translation>目前所在行的背景色</translation>
+      <translation type="unfinished">Current line background color</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="228"/>
       <source>This item will be used to preset colors for the other items</source>
-      <translation>本項為其他項目的預設配色</translation>
+      <translation type="unfinished">This item will be used to preset colors for the other items</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="459"/>
       <source>Copy color schema</source>
-      <translation>複製配色</translation>
+      <translation type="unfinished">Copy color schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="460"/>
       <source>Color schema name</source>
-      <translation>配色名稱</translation>
+      <translation type="unfinished">Color schema name</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="584"/>
       <source>Remove schema</source>
-      <translation>刪除配色</translation>
+      <translation type="unfinished">Remove schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="585"/>
       <source>Remove current schema? This cannot be undone!</source>
-      <translation>是否要刪除目前的配色？本操作無法復原！</translation>
+      <translation type="unfinished">Remove current schema? This cannot be undone!</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="632"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="675"/>
       <source>INI files</source>
-      <translation>INI 檔案</translation>
+      <translation type="unfinished">INI files</translation>
     </message>
   </context>
   <context>
@@ -314,37 +314,37 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="14"/>
       <source>Link an url or note</source>
-      <translation>連結到網址或筆記</translation>
+      <translation type="unfinished">Link an url or note</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="44"/>
       <source>Enter URL</source>
-      <translation>輸入網址</translation>
+      <translation type="unfinished">Enter URL</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="53"/>
       <source>Enter an URL to link to</source>
-      <translation>輸入欲連結的網址</translation>
+      <translation type="unfinished">Enter an URL to link to</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="76"/>
       <source>Search for notes or create new notes by entering text and pressing return</source>
-      <translation>輸入文字以搜尋或新增筆記</translation>
+      <translation type="unfinished">Search for notes or create new notes by entering text and pressing return</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="91"/>
       <source>Search for a note to link to</source>
-      <translation>搜尋欲連結的筆記</translation>
+      <translation type="unfinished">Search for a note to link to</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="63"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;select local file to link to&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;選擇欲連結的本地檔案&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;select local file to link to&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.cpp" line="191"/>
       <source>Select file to link to</source>
-      <translation>選擇欲連結的檔案</translation>
+      <translation type="unfinished">Select file to link to</translation>
     </message>
   </context>
   <context>
@@ -352,86 +352,90 @@
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="14"/>
       <source>Locally trashed notes</source>
-      <translation>本地的已刪除筆記</translation>
+      <translation type="unfinished">Locally trashed notes</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="42"/>
       <source>Name</source>
-      <translation>標題</translation>
+      <translation type="unfinished">Name</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="47"/>
       <source>Trashed</source>
-      <translation>刪除於</translation>
+      <translation type="unfinished">Trashed</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="41"/>
       <source>Restore</source>
-      <translation>還原</translation>
+      <translation type="unfinished">Restore</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="42"/>
       <location filename="../dialogs/localtrashdialog.cpp" line="194"/>
       <source>Restore selected notes</source>
-      <translation>還原選擇的筆記</translation>
+      <translation type="unfinished">Restore selected notes</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="51"/>
       <source>Remove</source>
-      <translation>移除</translation>
+      <translation type="unfinished">Remove</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="52"/>
       <location filename="../dialogs/localtrashdialog.cpp" line="240"/>
       <source>Remove selected notes</source>
-      <translation>移除選擇的筆記</translation>
+      <translation type="unfinished">Remove selected notes</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="97"/>
       <source>File will be restored to: %1</source>
-      <translation>檔案將還原至：%1</translation>
+      <translation type="unfinished">File will be restored to: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="106"/>
       <source>File &lt;strong&gt;%1&lt;/strong&gt; isn't readable and can't be restored!</source>
-      <translation>無法讀取檔案 &lt;strong&gt;%1&lt;/strong&gt;，還原失敗！</translation>
+      <translation type="unfinished">File &lt;strong&gt;%1&lt;/strong&gt; isn't readable and can't be restored!</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="195"/>
       <source>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
-      <translation>
-        <numerusform>還原所選取的 &lt;strong&gt;%n&lt;/strong&gt; 份筆記？</numerusform>
+      <translation type="unfinished">
+        <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
+        <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="218"/>
       <source>Notes restored</source>
-      <translation>筆記已還原</translation>
+      <translation type="unfinished">Notes restored</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="219"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) where restored</source>
-      <translation>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; 份筆記已還原</numerusform>
+      <translation type="unfinished">
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) where restored</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) where restored</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="241"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
-      <translation>
-        <numerusform>移除所選取的 &lt;strong&gt;%n&lt;/strong&gt; 份筆記？</numerusform>
+      <translation type="unfinished">
+        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
+        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="264"/>
       <source>Notes removed</source>
-      <translation>筆記已移除</translation>
+      <translation type="unfinished">Notes removed</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="265"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) where removed</source>
-      <translation>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; 份筆記已移除</numerusform>
+      <translation type="unfinished">
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) where removed</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) where removed</numerusform>
       </translation>
     </message>
   </context>
@@ -440,58 +444,58 @@
     <message>
       <location filename="../widgets/logwidget.ui" line="26"/>
       <source>Logs</source>
-      <translation>日誌</translation>
+      <translation type="unfinished">Logs</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="114"/>
       <source>Fatal</source>
-      <translation>致命錯誤</translation>
+      <translation type="unfinished">Fatal</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="100"/>
       <source>Warning</source>
-      <translation>警告</translation>
+      <translation type="unfinished">Warning</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="107"/>
       <source>Critical</source>
-      <translation>嚴重錯誤</translation>
+      <translation type="unfinished">Critical</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="86"/>
       <source>Debug</source>
-      <translation>除錯</translation>
+      <translation type="unfinished">Debug</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="93"/>
       <source>Info</source>
-      <translation>訊息</translation>
+      <translation type="unfinished">Info</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="121"/>
       <source>Status</source>
-      <translation>狀態</translation>
+      <translation type="unfinished">Status</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="128"/>
       <source>Scripting</source>
-      <translation>腳本</translation>
+      <translation type="unfinished">Scripting</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="135"/>
       <location filename="../widgets/logwidget.cpp" line="389"/>
       <source>Clear log</source>
-      <translation>清除日誌</translation>
+      <translation type="unfinished">Clear log</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.cpp" line="387"/>
       <source>Show options</source>
-      <translation>顯示選項</translation>
+      <translation type="unfinished">Show options</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.cpp" line="387"/>
       <source>Hide options</source>
-      <translation>隱藏選項</translation>
+      <translation type="unfinished">Hide options</translation>
     </message>
   </context>
   <context>
@@ -499,218 +503,218 @@
     <message>
       <location filename="../mainwindow.ui" line="512"/>
       <source>add a tag to this note</source>
-      <translation>給這份筆記新增標籤</translation>
+      <translation type="unfinished">add a tag to this note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="515"/>
       <source>Add tag</source>
-      <translation>新增標籤</translation>
+      <translation type="unfinished">Add tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="387"/>
       <location filename="../mainwindow.ui" line="724"/>
       <location filename="../mainwindow.cpp" line="602"/>
       <source>Navigation</source>
-      <translation>導覽</translation>
+      <translation type="unfinished">Navigation</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="682"/>
       <source>&amp;Note</source>
-      <translation>筆記（&amp;N）</translation>
+      <translation type="unfinished">&amp;Note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="686"/>
       <source>Note &amp;folders</source>
-      <translation>筆記資料夾</translation>
+      <translation type="unfinished">Note &amp;folders</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="691"/>
       <source>Sort by</source>
-      <translation>依排序</translation>
+      <translation type="unfinished">Sort by</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="795"/>
       <source>&amp;Help</source>
-      <translation>說明(&amp;H)</translation>
+      <translation type="unfinished">&amp;Help</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="932"/>
       <source>Editor width in distraction free mode</source>
-      <translation>專注模式的瀏覽器寬度</translation>
+      <translation type="unfinished">Editor width in distraction free mode</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="935"/>
       <source>Editor width</source>
-      <translation>編輯器寬度</translation>
+      <translation type="unfinished">Editor width</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1009"/>
       <source>Custom actions</source>
-      <translation>自訂動作</translation>
+      <translation type="unfinished">Custom actions</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1029"/>
       <source>main toolbar</source>
-      <translation>主工具列</translation>
+      <translation type="unfinished">main toolbar</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1063"/>
       <source>&amp;Quit</source>
-      <translation>離開</translation>
+      <translation type="unfinished">&amp;Quit</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1078"/>
       <source>&amp;Setup note folders</source>
-      <translation>設定筆記資料夾（&amp;S）</translation>
+      <translation type="unfinished">&amp;Setup note folders</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1087"/>
       <source>&amp;Find note</source>
-      <translation>尋找筆記（&amp;F）</translation>
+      <translation type="unfinished">&amp;Find note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1099"/>
       <source>&amp;Remove current note</source>
-      <translation>移除目前筆記（&amp;R）</translation>
+      <translation type="unfinished">&amp;Remove current note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1111"/>
       <source>About &amp;QOwnNotes...</source>
-      <translation>關於 &amp;QOwnNotes...</translation>
+      <translation type="unfinished">About &amp;QOwnNotes...</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1123"/>
       <source>&amp;New note</source>
-      <translation>新筆記(&amp;N)</translation>
+      <translation type="unfinished">&amp;New note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1135"/>
       <source>Check for &amp;updates</source>
-      <translation>檢查更新（&amp;u）</translation>
+      <translation type="unfinished">Check for &amp;updates</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1147"/>
       <source>Report &amp;issues or ideas</source>
-      <translation>問題回報與建議(&amp;I)</translation>
+      <translation type="unfinished">Report &amp;issues or ideas</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1155"/>
       <source>Alphabetical</source>
-      <translation>依字母順</translation>
+      <translation type="unfinished">Alphabetical</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1158"/>
       <source>Sort alphabetical</source>
-      <translation>依字母排序</translation>
+      <translation type="unfinished">Sort alphabetical</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1166"/>
       <source>By date</source>
-      <translation>依日期</translation>
+      <translation type="unfinished">By date</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1169"/>
       <source>Sort by date</source>
-      <translation>依日期排序</translation>
+      <translation type="unfinished">Sort by date</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1193"/>
       <source>Show note &amp;versions</source>
-      <translation>顯示筆記版本(&amp;V)</translation>
+      <translation type="unfinished">Show note &amp;versions</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1196"/>
       <source>Show note versions on server</source>
-      <translation>顯示遠端的筆記版本</translation>
+      <translation type="unfinished">Show note versions on server</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1208"/>
       <source>Show trashed notes on server</source>
-      <translation>顯示伺服器上已刪除的筆記</translation>
+      <translation type="unfinished">Show trashed notes on server</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1213"/>
       <location filename="../mainwindow.cpp" line="8496"/>
       <source>Select &amp;all notes</source>
-      <translation>選擇所有筆記(&amp;A)</translation>
+      <translation type="unfinished">Select &amp;all notes</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1222"/>
       <location filename="../mainwindow.cpp" line="5422"/>
       <source>Insert &amp;link</source>
-      <translation>插入連結(&amp;L)</translation>
+      <translation type="unfinished">Insert &amp;link</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1225"/>
       <source>Insert link to an url or a note</source>
-      <translation>插入指向網址或筆記的連結</translation>
+      <translation type="unfinished">Insert link to an url or a note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1237"/>
       <source>&amp;Find in current note</source>
-      <translation>在目前筆記中尋找(&amp;F)</translation>
+      <translation type="unfinished">&amp;Find in current note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1240"/>
       <source>Find text in current note</source>
-      <translation>在目前筆記尋找文字</translation>
+      <translation type="unfinished">Find text in current note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1245"/>
       <source>&amp;Duplicate text</source>
-      <translation>貼上文字副本(&amp;D)</translation>
+      <translation type="unfinished">&amp;Duplicate text</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1257"/>
       <source>&amp;Back in note history</source>
-      <translation>前一次開啟的筆記(&amp;B)</translation>
+      <translation type="unfinished">&amp;Back in note history</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1178"/>
       <source>&amp;Settings</source>
-      <translation>設定(&amp;S)</translation>
+      <translation type="unfinished">&amp;Settings</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="119"/>
       <source>Find or create note sub folder</source>
-      <translation>尋找或建立筆記子資料夾</translation>
+      <translation type="unfinished">Find or create note sub folder</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="196"/>
       <source>Find or create tag</source>
-      <translation>尋找或建立標籤</translation>
+      <translation type="unfinished">Find or create tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="292"/>
       <source>Search for notes or create new notes by entering text and pressing return</source>
-      <translation>輸入文字以搜尋或新增筆記</translation>
+      <translation type="unfinished">Search for notes or create new notes by entering text and pressing return</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="306"/>
       <source>Search or create note</source>
-      <translation>搜尋或新增筆記</translation>
+      <translation type="unfinished">Search or create note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="526"/>
       <source>New tag</source>
-      <translation>新增標籤</translation>
+      <translation type="unfinished">New tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="701"/>
       <location filename="../mainwindow.cpp" line="5397"/>
       <source>Export</source>
-      <translation>匯出</translation>
+      <translation type="unfinished">Export</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="714"/>
       <source>Import</source>
-      <translation>匯入</translation>
+      <translation type="unfinished">Import</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="737"/>
       <location filename="../mainwindow.cpp" line="5379"/>
       <source>Print</source>
-      <translation>列印</translation>
+      <translation type="unfinished">Print</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="748"/>
@@ -720,7 +724,7 @@
     <message>
       <location filename="../mainwindow.ui" line="760"/>
       <source>Trash</source>
-      <translation>垃圾桶</translation>
+      <translation type="unfinished">Trash</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="824"/>
@@ -781,33 +785,33 @@
     <message>
       <location filename="../mainwindow.ui" line="954"/>
       <source>Toolbars</source>
-      <translation>工具列</translation>
+      <translation type="unfinished">Toolbars</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="959"/>
       <source>Show</source>
       <extracomment>To show or hide stuff</extracomment>
-      <translation>顯示</translation>
+      <translation type="unfinished">Show</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="973"/>
       <source>Workspace</source>
-      <translation>工作區</translation>
+      <translation type="unfinished">Workspace</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1005"/>
       <source>&amp;Scripting</source>
-      <translation>脚本(&amp;S)</translation>
+      <translation type="unfinished">&amp;Scripting</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1205"/>
       <source>Show remote trash</source>
-      <translation>顯示遠端垃圾桶</translation>
+      <translation type="unfinished">Show remote trash</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1269"/>
       <source>Forward in note history</source>
-      <translation>後一次開啟的筆記</translation>
+      <translation type="unfinished">Forward in note history</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1281"/>
@@ -1013,7 +1017,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1908"/>
       <source>Find notes in all tags / subfolders</source>
-      <translation>在所有標籤/子資料夾中尋找筆記</translation>
+      <translation type="unfinished">Find notes in all tags / subfolders</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1956"/>
@@ -1049,7 +1053,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2009"/>
       <source>Find action</source>
-      <translation>搜尋動作</translation>
+      <translation type="unfinished">Find action</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2012"/>
@@ -1138,7 +1142,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2181"/>
       <source>Show local trash</source>
-      <translation>顯示本地垃圾桶</translation>
+      <translation type="unfinished">Show local trash</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1668"/>
@@ -1292,6 +1296,7 @@ Restore current note?</translation>
       <source>stored %n note(s) to disk</source>
       <translation type="unfinished">
         <numerusform>stored %n note(s) to disk</numerusform>
+        <numerusform>stored %n note(s) to disk</numerusform>
       </translation>
     </message>
     <message>
@@ -1359,10 +1364,13 @@ Restore current note?</translation>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
-      <translation>
-        <numerusform>刪除所選取的 &lt;strong&gt;%n&lt;/strong&gt; 份筆記？
+      <translation type="unfinished">
+        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
-若 ownCloud 伺服器的垃圾桶為啟用狀態，您應該能從那裡恢復刪除的筆記。</numerusform>
+If the trash is enabled on your ownCloud server you should be able to restore them from there.</numerusform>
+        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
+
+If the trash is enabled on your ownCloud server you should be able to restore them from there.</numerusform>
       </translation>
     </message>
     <message>
@@ -1374,8 +1382,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3761"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
-      <translation>
-        <numerusform>刪除所選取的 &lt;strong&gt;%n&lt;/strong&gt; 個資料夾？&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;資料夾裡的所有檔案與子資料夾都將被刪除！</numerusform>
+      <translation type="unfinished">
+        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
+        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
       </translation>
     </message>
     <message>
@@ -1393,6 +1402,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
       <translation type="unfinished">
         <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
+        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
       </translation>
     </message>
     <message>
@@ -1405,6 +1415,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="3847"/>
       <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation type="unfinished">
+        <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
         <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
@@ -1419,6 +1430,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation type="unfinished">
         <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
@@ -1432,6 +1444,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
       <translation type="unfinished">
         <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
+        <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
       </translation>
     </message>
     <message>
@@ -1443,6 +1456,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="3978"/>
       <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation type="unfinished">
+        <numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
         <numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
@@ -1553,6 +1567,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <source>Copied %n note(s) to %1</source>
       <translation type="unfinished">
         <numerusform>Copied %n note(s) to %1</numerusform>
+        <numerusform>Copied %n note(s) to %1</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -1560,12 +1575,14 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <source>Failed to copy %n note(s) (most likely already existing)</source>
       <translation type="unfinished">
         <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
+        <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="6186"/>
       <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
       <translation type="unfinished">
+        <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
         <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
       </translation>
     </message>
@@ -1695,6 +1712,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <comment>characters</comment>
       <translation type="unfinished">
         <numerusform>%n chars</numerusform>
+        <numerusform>%n chars</numerusform>
       </translation>
     </message>
     <message>
@@ -1722,12 +1740,14 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
       <translation type="unfinished">
         <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
+        <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4102"/>
       <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
       <translation type="unfinished">
+        <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
         <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
       </translation>
     </message>
@@ -1856,6 +1876,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation type="unfinished">
         <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
@@ -1868,6 +1889,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <source>%n note(s) were moved to note subfolder "%2"</source>
       <translation type="unfinished">
         <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
+        <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -1875,12 +1897,14 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation type="unfinished">
         <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7865"/>
       <source>%n note(s) were copied to note subfolder "%2"</source>
       <translation type="unfinished">
+        <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
         <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
       </translation>
     </message>
@@ -2029,6 +2053,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="2503"/>
       <source>Stored %n note(s) to disk</source>
       <translation type="unfinished">
+        <numerusform>Stored %n note(s) to disk</numerusform>
         <numerusform>Stored %n note(s) to disk</numerusform>
       </translation>
     </message>
@@ -2239,6 +2264,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <source>%n note(s) were tagged with "%2"</source>
       <translation type="unfinished">
         <numerusform>%n note(s) were tagged with "%2"</numerusform>
+        <numerusform>%n note(s) were tagged with "%2"</numerusform>
       </translation>
     </message>
     <message>
@@ -2405,6 +2431,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
       <translation type="unfinished">
         <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
+        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
       </translation>
     </message>
   </context>
@@ -2566,6 +2593,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../entities/note.cpp" line="2222"/>
       <source>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
       <translation type="unfinished">
+        <numerusform>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
         <numerusform>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
       </translation>
     </message>
@@ -3901,7 +3929,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
       <location filename="../dialogs/settingsdialog.ui" line="4549"/>
       <location filename="../dialogs/settingsdialog.ui" line="4661"/>
       <source>Sort</source>
-      <translation>排序方式</translation>
+      <translation type="unfinished">Sort</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4272"/>
@@ -5212,7 +5240,7 @@ This cannot be undone!</translation>
     <message>
       <location filename="../dialogs/trashdialog.ui" line="14"/>
       <source>Trashed notes</source>
-      <translation>已刪除的筆記</translation>
+      <translation type="unfinished">Trashed notes</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="24"/>
@@ -5232,7 +5260,7 @@ This cannot be undone!</translation>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="39"/>
       <source>&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</source>
-      <translation>&lt;h3&gt;較快速，但無版本控制&lt;/h3&gt;&lt;p&gt;這份筆記將以目前預覽的內容儲存。&lt;/p&gt;&lt;p&gt;您在 ownCloud 伺服器上的筆記版本不會被復原，並將留存於垃圾桶裡。&lt;/p&gt;&lt;p&gt;您之後仍可復原此筆記與其版本。&lt;/p&gt;</translation>
+      <translation type="unfinished">&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="52"/>
