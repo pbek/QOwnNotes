@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 18.03.1
+- fixed translation files
+
 ## 18.03.0
 - added **Cebuano translation** and **Hindi translation** (a big thank you to
   sageneil, valcarsido, loydjayme25, jbeguna04 and cryptoexplorer7)
