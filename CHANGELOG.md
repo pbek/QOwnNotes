@@ -6,6 +6,9 @@
     - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes/)
       to make QOwnNotes available in more languages or help with the current 
       translation
+- when copying or moving notes to another note-folder the embedded media files 
+  will now automatically be copied to the media folder of the note-folder
+  (for [#865](https://github.com/pbek/QOwnNotes/issues/865))
 
 ## 18.02.5
 - the options in the *Log panel* can now be closed with the <kbd>Esc</kbd> key 

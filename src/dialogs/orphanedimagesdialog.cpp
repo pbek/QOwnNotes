@@ -33,17 +33,10 @@ OrphanedImagesDialog::OrphanedImagesDialog(QWidget *parent) :
     ui->progressBar->show();
 
     Q_FOREACH(Note note, noteList) {
-            QString text = note.getNoteText();
-
-            // match image links like ![media-qV920](file://media/608766373.gif)
-            QRegularExpression re(
-                    "!\\[.*?\\]\\(file:\\/\\/media/(.+?)\\)");
-            QRegularExpressionMatchIterator i = re.globalMatch(text);
+            QStringList mediaFileList = note.getMediaFileList();
 
             // remove all found images from the orphaned files list
-            while (i.hasNext()) {
-                QRegularExpressionMatch match = i.next();
-                QString fileName = match.captured(1);
+            Q_FOREACH(QString fileName, mediaFileList) {
                 orphanedFiles.removeAll(fileName);
             }
 

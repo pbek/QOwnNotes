@@ -250,7 +250,36 @@ bool Note::copyToPath(QString destinationPath) {
             qDebug() << "New file name:" << destinationFileName;
         }
 
-        return file.copy(destinationFileName);
+        // copy the note file to the destination
+        bool isFileCopied = file.copy(destinationFileName);
+
+        if (isFileCopied) {
+            QStringList mediaFileList = getMediaFileList();
+
+            if (mediaFileList.count() > 0) {
+                QDir mediaDir(destinationPath + QDir::separator() + "media");
+
+                // created the media folder if it doesn't exist
+                if (!mediaDir.exists()) {
+                    mediaDir.mkpath(mediaDir.path());
+                }
+
+                if (mediaDir.exists()) {
+                    // copy all images to the media folder inside destinationPath
+                    Q_FOREACH(QString fileName, mediaFileList) {
+                            QFile mediaFile(NoteFolder::currentMediaPath() +
+                                            QDir::separator() + fileName);
+
+                            if (mediaFile.exists()) {
+                                mediaFile.copy(mediaDir.path() +
+                                               QDir::separator() + fileName);
+                            }
+                        }
+                }
+            }
+        }
+
+        return isFileCopied;
     }
 
     return false;
@@ -270,6 +299,29 @@ bool Note::moveToPath(QString destinationPath) {
     }
 
     return false;
+}
+
+/**
+ * Returns a list of all linked media file of the current note
+ * @return
+ */
+QStringList Note::getMediaFileList() {
+    QString text = getNoteText();
+    QStringList fileList;
+
+    // match image links like ![media-qV920](file://media/608766373.gif)
+    QRegularExpression re(
+            "!\\[.*?\\]\\(file:\\/\\/media/(.+?)\\)");
+    QRegularExpressionMatchIterator i = re.globalMatch(text);
+
+    // remove all found images from the orphaned files list
+    while (i.hasNext()) {
+        QRegularExpressionMatch match = i.next();
+        QString fileName = match.captured(1);
+        fileList << fileName;
+    }
+
+    return fileList;
 }
 
 /**
