@@ -9,6 +9,10 @@
 - when copying or moving notes to another note-folder the embedded media files 
   will now automatically be copied to the media folder of the note-folder
   (for [#865](https://github.com/pbek/QOwnNotes/issues/865))
+- added more Tagalog, Filipino, Indonesian, French, Czech, Chinese, Arabic,
+  German, Spanish, Swedish, French, Dutch and Hungarian translation (thank you
+  sageneil, Janelbrian, saducasjohncarl, rizki271197, bepolymathe, echo511,
+  hermitwhite, wael87, deletescape, Fabijenna, richarson, ekblom and dev2a)
 
 ## 18.02.5
 - the options in the *Log panel* can now be closed with the <kbd>Esc</kbd> key 
