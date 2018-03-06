@@ -202,6 +202,36 @@ You may want to take a look at the example
 `paste-latex-image.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/paste-latex-image.qml>`__.
 
 
+Inserting a media file into the media folder
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Parameters
+^^^^^^^^^^
+
+.. code:: cpp
+
+    /**
+     * QML wrapper to insert a media file into the media folder and returning
+     * the media url or the markdown image text of the media
+     *
+     * @param {QString} mediaFilePath
+     * @param {bool} returnUrlOnly if true only the media url will be returned (default false)
+     * @return {QString} the media markdown or url
+     */
+    QString ScriptingService::insertMedia(QString mediaFilePath,
+                                          bool returnUrlOnly) {
+
+Usage in QML
+^^^^^^^^^^^^
+
+.. code:: javascript
+
+    var markdown = script.insertMedia("/path/to/your/image.png");
+
+You may want to take a look at the example
+`scribble.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/scribble.qml>`__.
+
+
 Registering a custom action
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

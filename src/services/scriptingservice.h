@@ -50,6 +50,8 @@ public:
     Q_INVOKABLE QString downloadUrlToString(QUrl url);
     Q_INVOKABLE QString downloadUrlToMedia(QUrl url,
                                            bool returnUrlOnly = false);
+    Q_INVOKABLE QString insertMedia(QString mediaFilePath,
+                                    bool returnUrlOnly = false);
     Q_INVOKABLE void registerCustomAction(
             QString identifier, QString menuText, QString buttonText = "",
             QString icon = "", bool useInNoteEditContextMenu = false,

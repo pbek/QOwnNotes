@@ -916,13 +916,35 @@ QString ScriptingService::downloadUrlToString(QUrl url) {
  *
  * @param {QString} url
  * @param {bool} returnUrlOnly if true only the media url will be returned (default false)
- * @return {QString} the media url
+ * @return {QString} the media markdown or url
  */
 QString ScriptingService::downloadUrlToMedia(QUrl url, bool returnUrlOnly) {
     MetricsService::instance()->sendVisitIfEnabled(
             "scripting/" + QString(__func__));
 
     return Note::downloadUrlToMedia(url, returnUrlOnly);
+}
+
+/**
+ * QML wrapper to insert a media file into the media folder and returning
+ * the media url or the markdown image text of the media
+ *
+ * @param {QString} mediaFilePath
+ * @param {bool} returnUrlOnly if true only the media url will be returned (default false)
+ * @return {QString} the media markdown or url
+ */
+QString ScriptingService::insertMedia(QString mediaFilePath,
+                                      bool returnUrlOnly) {
+    MetricsService::instance()->sendVisitIfEnabled(
+            "scripting/" + QString(__func__));
+
+    QFile *mediaFile = new QFile(mediaFilePath);
+
+    if (!mediaFile->exists()) {
+        return "";
+    }
+
+    return Note::getInsertMediaMarkdown(mediaFile, true, returnUrlOnly);
 }
 
 /**
