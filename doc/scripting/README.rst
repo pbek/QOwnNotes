@@ -187,7 +187,7 @@ Parameters
      *
      * @param {QString} url
      * @param {bool} returnUrlOnly if true only the media url will be returned (default false)
-     * @return {QString} the media url
+     * @return {QString} the media markdown or url
      */
     QString downloadUrlToMedia(QUrl url, bool returnUrlOnly);
 
@@ -196,7 +196,7 @@ Usage in QML
 
 .. code:: javascript
 
-    var html = script.downloadUrlToMedia("http://latex.codecogs.com/gif.latex?\frac{1}{1+sin(x)}");
+    var markdown = script.downloadUrlToMedia("http://latex.codecogs.com/gif.latex?\frac{1}{1+sin(x)}");
 
 You may want to take a look at the example
 `paste-latex-image.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/paste-latex-image.qml>`__.
