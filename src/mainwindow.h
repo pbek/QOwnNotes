@@ -144,8 +144,6 @@ public:
 
     QString noteTextEditCurrentWord(bool withPreviousCharacters = false);
 
-    void regenerateNotePreview();
-
 protected:
     void closeEvent(QCloseEvent *event);
 
@@ -155,6 +153,8 @@ protected:
 
 public slots:
     void setCurrentNoteFromNoteId(int noteId);
+
+    void regenerateNotePreview();
 
 private slots:
 
