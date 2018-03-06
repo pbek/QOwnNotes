@@ -12,8 +12,8 @@
   description text (for [#869](https://github.com/pbek/QOwnNotes/issues/869))
     - for more information please take a look at the [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#registering-script-settings-variables)
 - there now is a new script `Scribble` in the *Scripting repository* to insert a
-  scribble image to the media-folder, that will be edited by an external 
-  image manipulation application (for [#869](https://github.com/pbek/QOwnNotes/issues/869))
+  scribble image to the media-folder, that will be edited by an external image
+  editor (for [#869](https://github.com/pbek/QOwnNotes/issues/869))
 - switched from SourceForge to TuxFamily for the hosting of the sourcecode 
   archives for the releases of AUR, Snap, Slackware and Gentoo
     - you will find the archives on [QOwnNotes archives](https://download.tuxfamily.org/qownnotes/src)

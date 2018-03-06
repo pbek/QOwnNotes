@@ -2,8 +2,10 @@ import QtQml 2.0
 import QOwnNotesTypes 1.0
 
 /**
- * This script adds a menu entry to the context menu of the note list to diff selected notes in an external diff program
- * The path of the diff program can be selected in the script settings of the script
+ * This script adds a menu entry to the context menu of the note edit to insert a
+ * scribble image to the media-folder, that will be edited by an external image editor
+ * 
+ * The path of the image editor and the image template can be selected in the script settings of the script
  */
 Script {
     property string executablePath;
