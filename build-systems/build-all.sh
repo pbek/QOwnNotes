@@ -5,7 +5,8 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-# Upload source archive to TuxFamily
+# Upload source archive to TuxFamily, be aware that it usually can take a
+# minute until the files are accessible via https://download.tuxfamily.org/qownnotes/src
 $DIR/tuxfamily/build-tuxfamily-src.sh
 
 # Upload source archive to SourceForge

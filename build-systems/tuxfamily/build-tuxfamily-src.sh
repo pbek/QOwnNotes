@@ -12,6 +12,9 @@
 # Files will be accessible like that:
 # https://download.tuxfamily.org/qownnotes/src/qownnotes-18.03.2.tar.xz
 #
+# Be aware that it usually can take a minute until the files are accessible
+# at that url
+#
 
 # uncomment this if you want to force a version
 #QOWNNOTES_VERSION=1.1.3.2
