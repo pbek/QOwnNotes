@@ -9,7 +9,7 @@
 # https://sourceforge.net/projects/qownnotes/files/src/
 #
 # Files will be accessible like that:
-# https://download.tuxfamily.org/qownnotes/src/qownnotes-16.05.2.tar.xz
+# http://downloads.sourceforge.net/project/qownnotes/src/qownnotes-16.05.2.tar.xz
 #
 
 # uncomment this if you want to force a version
