@@ -3760,7 +3760,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2194"/>
       <source>Tagalog</source>
-      <translation type="unfinished">Tagalog</translation>
+      <translation>Tagalog</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2205"/>

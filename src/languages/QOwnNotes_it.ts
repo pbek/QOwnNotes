@@ -3739,7 +3739,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1996"/>
       <source>Cebuano</source>
-      <translation type="unfinished">Cebuano</translation>
+      <translation>Cebuano</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2051"/>
@@ -3749,7 +3749,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2073"/>
       <source>Hindi</source>
-      <translation type="unfinished">Hindi</translation>
+      <translation>Hindi</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2183"/>

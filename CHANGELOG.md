@@ -17,6 +17,10 @@
 - switched from SourceForge to TuxFamily for the hosting of the sourcecode 
   archives for the releases of AUR, Snap, Slackware and Gentoo
     - you will find the archives on [QOwnNotes archives](https://download.tuxfamily.org/qownnotes/src)
+- added more Hindi, Tagalog, Bengali, Italian, German, Cebuano, Brazilian
+  Portuguese, French, Dutch and Hungarian translation (thank you 
+  cryptoexplorer7, sageneil, nizam8089, mlocati, rakekniven, cyyy1998, dev2a,
+  mlimacarlos and Fabijenna)
 
 ## 18.03.1
 - fixed translation files

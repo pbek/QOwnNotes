@@ -3738,7 +3738,7 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1996"/>
       <source>Cebuano</source>
-      <translation type="unfinished">Cebuano</translation>
+      <translation>Cebuano</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2051"/>
@@ -3748,7 +3748,7 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2073"/>
       <source>Hindi</source>
-      <translation type="unfinished">Hindi</translation>
+      <translation>Hindi</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2183"/>
