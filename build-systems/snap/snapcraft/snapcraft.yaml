@@ -24,7 +24,7 @@ apps:
 
 parts:
   qownnotes:
-    source: http://downloads.sourceforge.net/project/qownnotes/src/qownnotes-VERSION-STRING.tar.xz
+    source: https://download.tuxfamily.org/qownnotes/src/qownnotes-VERSION-STRING.tar.xz
     plugin: qmake
     qt-version: qt5
     build-packages:

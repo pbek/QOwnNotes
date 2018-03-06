@@ -44,7 +44,7 @@ fi
 cd ..
 
 ARCHIVE_FILE=qownnotes-${QOWNNOTES_VERSION}.tar.xz
-wget http://downloads.sourceforge.net/project/qownnotes/src/${ARCHIVE_FILE}
+wget https://download.tuxfamily.org/qownnotes/src/${ARCHIVE_FILE}
 
 ARCHIVE_SHA512=`sha512sum ${ARCHIVE_FILE} | awk '{ print $1 }'`
 ARCHIVE_SIZE=`stat -c "%s" ${ARCHIVE_FILE}`

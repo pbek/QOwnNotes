@@ -12,7 +12,7 @@ inherit qmake-utils eutils
 
 DESCRIPTION="A plain-text file notepad with markdown support and ownCloud/NC integration"
 HOMEPAGE="http://www.qownnotes.org/"
-SRC_URI="http://downloads.sourceforge.net/project/${PN}/src/${P}.tar.xz"
+SRC_URI="https://download.tuxfamily.org/${PN}/src/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"

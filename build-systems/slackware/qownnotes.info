@@ -1,7 +1,7 @@
 PRGNAM="qownnotes"
 VERSION="VERSION-STRING"
 HOMEPAGE="http://www.qownnotes.org/"
-DOWNLOAD="http://downloads.sourceforge.net/project/qownnotes/src/qownnotes-VERSION-STRING.tar.xz"
+DOWNLOAD="https://download.tuxfamily.org/qownnotes/src/qownnotes-VERSION-STRING.tar.xz"
 MD5SUM="ARCHIVE-MD5"
 DOWNLOAD_x86_64=""
 MD5SUM_x86_64=""
