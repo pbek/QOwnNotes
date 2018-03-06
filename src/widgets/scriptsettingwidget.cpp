@@ -19,6 +19,7 @@ ScriptSettingWidget::ScriptSettingWidget(QWidget *parent, Script script,
     QString type = variableMap["type"].toString();
     QString description = variableMap["description"].toString();
     QString identifier = variableMap["identifier"].toString();
+    QString text = variableMap["text"].toString();
 
     ui->nameLabel->setText("<b>" + name + "</b>");
     ui->descriptionLabel->setText(description);
@@ -52,11 +53,17 @@ ScriptSettingWidget::ScriptSettingWidget(QWidget *parent, Script script,
             value = variableMap["default"].toBool();
         }
 
+        if (text.isEmpty()) {
+            // fallback if no text was set
+            ui->booleanCheckBox->setText(description.isEmpty() ?
+                                         name : description);
+            ui->descriptionLabel->hide();
+        } else {
+            ui->booleanCheckBox->setText(text);
+        }
+
         ui->booleanCheckBox->setChecked(value);
-        ui->booleanCheckBox->setText(description.isEmpty() ?
-                                     name : description);
         ui->booleanCheckBox->show();
-        ui->descriptionLabel->hide();
     } else if (type == "string") {
         QString value = jsonObject.value(identifier).toString();
 

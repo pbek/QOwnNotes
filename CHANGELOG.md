@@ -1,9 +1,16 @@
 # QOwnNotes Changelog
 
 ## 18.03.2
-- there now is a new scripting function `script.insertMedia()` to insert a media
-  file into the media folder (for [#869](https://github.com/pbek/QOwnNotes/issues/869))
+- there now is a new scripting function `script.insertMediaFile()` to insert a
+  media file into the media folder (for [#869](https://github.com/pbek/QOwnNotes/issues/869))
     - for more information please take a look at the [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#inserting-a-media-file-into-the-media-folder)
+- there now is a new scripting function `script.regenerateNotePreview()` to
+  regenerate the note preview (for [#869](https://github.com/pbek/QOwnNotes/issues/869))
+    - for more information please take a look at the [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#inserting-a-media-file-into-the-media-folder)
+- the *checkbox* properties for the *script settings variables* did get a `text`
+  attribute for the checkbox text along with the `description` now used for the
+  description text (for [#869](https://github.com/pbek/QOwnNotes/issues/869))
+    - for more information please take a look at the [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#registering-script-settings-variables)
 - there now is a new script `Scribble` in the *Scripting repository* to insert a
   scribble image to the media-folder, that will be edited by an external 
   image manipulation application (for [#869](https://github.com/pbek/QOwnNotes/issues/869))

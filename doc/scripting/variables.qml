@@ -29,7 +29,8 @@ Script {
         {
             "identifier": "myBoolean",
             "name": "I am a checkbox",
-            "description": "Check this checkbox",
+            "description": "Some description",
+            "text": "Check this checkbox",
             "type": "boolean",
             "default": true,
         },

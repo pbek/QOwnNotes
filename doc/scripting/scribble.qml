@@ -8,6 +8,7 @@ import QOwnNotesTypes 1.0
 Script {
     property string executablePath;
     property string imagePath;
+    property bool executeInBackground;
 
     // the path to the script's directory will be set here
     property string scriptDirPath;
@@ -16,7 +17,7 @@ Script {
     property variant settingsVariables: [
         {
             "identifier": "executablePath",
-            "name": "Path of external image manipulation application",
+            "name": "Path of external image editor",
             "description": "Please select the path of the executable:",
             "type": "file",
             "default": "gimp",
@@ -27,6 +28,14 @@ Script {
             "description": "Please select the path of the template image:",
             "type": "file",
             "default": scriptDirPath + "/scribble.png",
+        },
+        {
+            "identifier": "executeInBackground",
+            "name": "Execute image editor in background",
+            "description": "If the image editor is executed in the background you will be able to work with QOwnNotes while you are editing the scribble, but the note preview will not be refreshed automatically after you close the image editor.",
+            "text": "Execute in background",
+            "type": "boolean",
+            "default": false,
         }
     ];
 
@@ -49,14 +58,20 @@ Script {
         }
         
         // insert the scribble template image as media file
-        var mediaFile = script.insertMedia(imagePath, true);
+        var mediaFile = script.insertMediaFile(imagePath, true);
         var mediaFilePath = mediaFile.replace("file://media", script.currentNoteFolderPath() + "/media");
 
         // write the scribble image to the note
-        script.noteTextEditWrite("![scribble](" + mediaFile + ")");
+        script.noteTextEditWrite("![scribble](" + mediaFile + ")\n");
+
+        var params = [mediaFilePath];
         
         // edit the scribble image
-        var params = [mediaFilePath];
-        script.startDetachedProcess(executablePath, params);
+        if (executeInBackground) {
+            script.startDetachedProcess(executablePath, params);
+        } else {
+            script.startSynchronousProcess(executablePath, params);
+            script.regenerateNotePreview();
+        }
     }
 }

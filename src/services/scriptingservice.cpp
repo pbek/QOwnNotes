@@ -933,8 +933,8 @@ QString ScriptingService::downloadUrlToMedia(QUrl url, bool returnUrlOnly) {
  * @param {bool} returnUrlOnly if true only the media url will be returned (default false)
  * @return {QString} the media markdown or url
  */
-QString ScriptingService::insertMedia(QString mediaFilePath,
-                                      bool returnUrlOnly) {
+QString ScriptingService::insertMediaFile(QString mediaFilePath,
+                                          bool returnUrlOnly) {
     MetricsService::instance()->sendVisitIfEnabled(
             "scripting/" + QString(__func__));
 
@@ -945,6 +945,22 @@ QString ScriptingService::insertMedia(QString mediaFilePath,
     }
 
     return Note::getInsertMediaMarkdown(mediaFile, true, returnUrlOnly);
+}
+
+/**
+ * Regenerates the note preview
+ */
+void ScriptingService::regenerateNotePreview() {
+#ifndef INTEGRATION_TESTS
+    MainWindow *mainWindow = MainWindow::instance();
+
+    if (mainWindow != Q_NULLPTR) {
+        MetricsService::instance()->sendVisitIfEnabled(
+                "scripting/" + QString(__func__));
+
+        mainWindow->regenerateNotePreview();
+    }
+#endif
 }
 
 /**

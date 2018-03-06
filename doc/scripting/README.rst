@@ -218,15 +218,39 @@ Parameters
      * @param {bool} returnUrlOnly if true only the media url will be returned (default false)
      * @return {QString} the media markdown or url
      */
-    QString ScriptingService::insertMedia(QString mediaFilePath,
-                                          bool returnUrlOnly) {
+    QString ScriptingService::insertMediaFile(QString mediaFilePath,
+                                          bool returnUrlOnly);
 
 Usage in QML
 ^^^^^^^^^^^^
 
 .. code:: javascript
 
-    var markdown = script.insertMedia("/path/to/your/image.png");
+    var markdown = script.insertMediaFile("/path/to/your/image.png");
+
+You may want to take a look at the example
+`scribble.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/scribble.qml>`__.
+
+
+Regenerating the note preview
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Parameters
+^^^^^^^^^^
+
+.. code:: cpp
+
+    /**
+     * Regenerates the note preview
+     */
+    QString ScriptingService::regenerateNotePreview();
+
+Usage in QML
+^^^^^^^^^^^^
+
+.. code:: javascript
+
+    script.regenerateNotePreview();
 
 You may want to take a look at the example
 `scribble.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/scribble.qml>`__.
@@ -869,6 +893,7 @@ The user can then set these properties in the script settings.
 
     // you have to define your registered variables so you can access them later
     property string myString;
+    property bool myBoolean;
     property string myText;
     property int myInt;
     property string myFile;
@@ -886,6 +911,14 @@ The user can then set these properties in the script settings.
             "description": "Please enter a valid string:",
             "type": "string",
             "default": "My default value",
+        },
+        {
+            "identifier": "myBoolean",
+            "name": "I am a checkbox",
+            "description": "Some description",
+            "text": "Check this checkbox",
+            "type": "boolean",
+            "default": true,
         },
         {
             "identifier": "myText",

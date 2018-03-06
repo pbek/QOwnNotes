@@ -144,6 +144,8 @@ public:
 
     QString noteTextEditCurrentWord(bool withPreviousCharacters = false);
 
+    void regenerateNotePreview();
+
 protected:
     void closeEvent(QCloseEvent *event);
 
@@ -343,8 +345,6 @@ private slots:
     void startNavigationParser();
 
     void onNoteTextViewResize(QSize size, QSize oldSize);
-
-    void regenerateNotePreview();
 
     void on_actionAutocomplete_triggered();
 

@@ -7929,7 +7929,7 @@ void MainWindow::onNavigationWidgetPositionClicked(int position) {
 }
 
 /**
- * Start a note preview regeneration to resize too large images
+ * Starts a note preview regeneration to resize too large images
  */
 void MainWindow::onNoteTextViewResize(QSize size, QSize oldSize) {
     Q_UNUSED(size);
@@ -7943,7 +7943,7 @@ void MainWindow::onNoteTextViewResize(QSize size, QSize oldSize) {
 }
 
 /**
- * Regenerate the note preview by converting the markdown to html again
+ * Regenerates the note preview by converting the markdown to html again
  */
 void MainWindow::regenerateNotePreview() {
     setNoteTextFromNote(&currentNote, true);
