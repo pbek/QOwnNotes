@@ -235,6 +235,8 @@ You may want to take a look at the example
 Regenerating the note preview
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Refreshes the note preview.
+
 Parameters
 ^^^^^^^^^^
 

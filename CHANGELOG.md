@@ -6,7 +6,7 @@
     - for more information please take a look at the [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#inserting-a-media-file-into-the-media-folder)
 - there now is a new scripting function `script.regenerateNotePreview()` to
   regenerate the note preview (for [#869](https://github.com/pbek/QOwnNotes/issues/869))
-    - for more information please take a look at the [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#inserting-a-media-file-into-the-media-folder)
+    - for more information please take a look at the [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#regenerating-the-note-preview)
 - the *checkbox* properties for the *script settings variables* did get a `text`
   attribute for the checkbox text along with the `description` now used for the
   description text (for [#869](https://github.com/pbek/QOwnNotes/issues/869))
