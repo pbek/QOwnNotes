@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 18.03.3
+- the menu entries to autocomplete, solve equations or open URLs and the menu 
+  entry to split a note at the cursor position of the *Edit/Extra* menu were 
+  also added to the context menu of the note text edit (for [#866](https://github.com/pbek/QOwnNotes/issues/866))
+- the context menu options of the note text edit now also works for encrypted
+  notes while editing them
+
 ## 18.03.2
 - there now is a new scripting function `script.insertMediaFile()` to insert a
   media file into the media folder (for [#869](https://github.com/pbek/QOwnNotes/issues/869))

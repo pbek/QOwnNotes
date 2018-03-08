@@ -447,7 +447,7 @@
             <bool>true</bool>
            </property>
            <property name="contextMenuPolicy">
-            <enum>Qt::DefaultContextMenu</enum>
+            <enum>Qt::CustomContextMenu</enum>
            </property>
            <property name="styleSheet">
             <string notr="true">QPlainTextEdit {
@@ -2044,7 +2044,10 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionSearch_text_on_the_web">
    <property name="text">
-    <string>Search text on the web</string>
+    <string>Search selected text on the web</string>
+   </property>
+   <property name="toolTip">
+    <string>Search selected text on the web</string>
    </property>
    <property name="shortcut">
     <string notr="true">Alt+Shift+W</string>
@@ -2207,8 +2210,8 @@ p, li { white-space: pre-wrap; }
  </customwidgets>
  <resources>
   <include location="images.qrc"/>
-  <include location="breeze-qownnotes.qrc"/>
   <include location="breeze-dark-qownnotes.qrc"/>
+  <include location="breeze-qownnotes.qrc"/>
  </resources>
  <connections/>
 </ui>

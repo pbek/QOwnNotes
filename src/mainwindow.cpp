@@ -5363,13 +5363,36 @@ void MainWindow::on_actionSelect_all_notes_triggered() {
     selectAllNotes();
 }
 
+
 /**
- * @brief create the additional menu entries for the note text edit field
+ * Creates the additional menu entries for the note text edit field
+ *
  * @param pos
  */
 void MainWindow::on_noteTextEdit_customContextMenuRequested(const QPoint &pos) {
-    QPoint globalPos = ui->noteTextEdit->mapToGlobal(pos);
-    QMenu *menu = ui->noteTextEdit->createStandardContextMenu();
+    noteTextEditCustomContextMenuRequested(ui->noteTextEdit, pos);
+}
+
+/**
+ * Creates the additional menu entries for the encrypted note text edit field
+ *
+ * @param pos
+ */
+void MainWindow::on_encryptedNoteTextEdit_customContextMenuRequested(
+        const QPoint &pos) {
+    noteTextEditCustomContextMenuRequested(ui->encryptedNoteTextEdit, pos);
+}
+
+/**
+ * Creates the additional menu entries for a note text edit field
+ *
+ * @param noteTextEdit
+ * @param pos
+ */
+void MainWindow::noteTextEditCustomContextMenuRequested(
+        QOwnNotesMarkdownTextEdit *noteTextEdit, const QPoint &pos) {
+    QPoint globalPos = noteTextEdit->mapToGlobal(pos);
+    QMenu *menu = noteTextEdit->createStandardContextMenu();
     bool isAllowNoteEditing = allowNoteEditing();
     bool isTextSelected = isNoteTextSelected();
 
@@ -5417,19 +5440,21 @@ void MainWindow::on_noteTextEdit_customContextMenuRequested(const QPoint &pos) {
 
     menu->addSeparator();
 
-    QString linkTextActionName =
-            ui->noteTextEdit->textCursor().selectedText() != "" ?
+    QString linkTextActionName = isTextSelected ?
                 tr("&Link selected text") : tr("Insert &link");
     QAction *linkTextAction = menu->addAction(linkTextActionName);
     linkTextAction->setShortcut(ui->actionInsert_Link_to_note->shortcut());
     linkTextAction->setEnabled(isAllowNoteEditing);
 
-    QAction *searchAction = menu->addAction(tr("Search text on the web"));
+    QAction *searchAction = menu->addAction(
+            ui->actionSearch_text_on_the_web->text());
     searchAction->setShortcut(ui->actionSearch_text_on_the_web->shortcut());
+    searchAction->setEnabled(isTextSelected);
 
-    QAction *pasteMediaAction = menu->addAction(tr("Paste HTML or media"));
-    pasteMediaAction->setShortcut(ui->actionPaste_image->shortcut());
-    pasteMediaAction->setEnabled(isAllowNoteEditing);
+    // add some other existing menu entries
+    menu->addAction(ui->actionPaste_image);
+    menu->addAction(ui->actionAutocomplete);
+    menu->addAction(ui->actionSplit_note_at_cursor_position);
 
     // add the custom actions to the context menu
     if (!_noteTextEditContextMenuActions.isEmpty()) {
@@ -5445,9 +5470,6 @@ void MainWindow::on_noteTextEdit_customContextMenuRequested(const QPoint &pos) {
         if (selectedItem == linkTextAction) {
             // handle the linking of text with a note
             handleTextNoteLinking();
-        } else if (selectedItem == pasteMediaAction) {
-            // paste HTML or media into the note
-            pasteMediaIntoNote();
         } else if (selectedItem == searchAction) {
             // search for the selected text on the web
             on_actionSearch_text_on_the_web_triggered();

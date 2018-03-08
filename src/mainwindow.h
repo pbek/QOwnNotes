@@ -506,6 +506,8 @@ private slots:
 
     void on_actionShow_local_trash_triggered();
 
+    void on_encryptedNoteTextEdit_customContextMenuRequested(const QPoint &pos);
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;
@@ -877,4 +879,7 @@ private:
     void applyFormatter(QString formatter);
 
     bool isNoteTextSelected();
+
+    void noteTextEditCustomContextMenuRequested(
+            QOwnNotesMarkdownTextEdit *noteTextEdit, const QPoint &pos);
 };
