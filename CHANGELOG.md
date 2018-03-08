@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 18.03.4
+- if you scroll to the bottom of the script list in the *Script repository* now
+  the next 30 scripts will be loaded
+- if you clear the text in the search bar of the *Script repository* the 
+  script list will be reloaded with the first 30 of all scripts
+
 ## 18.03.3
 - the menu entries to autocomplete, solve equations or open URLs and the menu 
   entry to split a note at the cursor position of the *Edit/Extra* menu were 

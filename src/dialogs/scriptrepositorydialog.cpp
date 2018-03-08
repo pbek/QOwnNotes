@@ -8,6 +8,8 @@
 #include <QtCore/QFile>
 #include <utils/misc.h>
 #include <QtWidgets/QMessageBox>
+#include <QScrollBar>
+#include <QtMath>
 #include <services/metricsservice.h>
 #include <libraries/versionnumber/versionnumber.h>
 #include <utils/gui.h>
@@ -28,6 +30,9 @@ ScriptRepositoryDialog::ScriptRepositoryDialog(QWidget *parent,
     _codeSearchUrl = "https://api.github.com/search/code";
     _rawContentUrlPrefix = Script::ScriptRepositoryRawContentUrlPrefix;
     _checkForUpdates = checkForUpdates;
+    _searchString.clear();
+    _page = 1;
+    _totalCount = 0;
 
     ui->downloadProgressBar->hide();
     ui->searchScriptEdit->setFocus();
@@ -40,6 +45,10 @@ ScriptRepositoryDialog::ScriptRepositoryDialog(QWidget *parent,
         ui->overviewLabel->setText(tr("All scripts are up-to-date."));
         searchForUpdates();
     } else {
+        QObject::connect(ui->scriptTreeWidget->verticalScrollBar(),
+                         SIGNAL(valueChanged(int)),
+                         this, SLOT(scriptTreeWidgetSliderValueChanged(int)));
+
         searchScript();
     }
 }
@@ -47,6 +56,19 @@ ScriptRepositoryDialog::ScriptRepositoryDialog(QWidget *parent,
 ScriptRepositoryDialog::~ScriptRepositoryDialog() {
     storeSettings();
     delete ui;
+}
+
+/**
+ * Moves the note view scrollbar when the note edit scrollbar was moved
+ */
+void ScriptRepositoryDialog::scriptTreeWidgetSliderValueChanged(int value) {
+    if (ui->scriptTreeWidget->verticalScrollBar()->maximum() == value) {
+        bool hasMoreItems = qCeil((qreal)_totalCount / _itemsPerPage) > _page;
+
+        if (hasMoreItems) {
+            searchScript(_page + 1);
+        }
+    }
 }
 
 /**
@@ -62,11 +84,16 @@ void ScriptRepositoryDialog::enableOverview(bool enable) {
 /**
  * Searches for script in the script repository
  */
-void ScriptRepositoryDialog::searchScript() {
-    QString query = QUrl::toPercentEncoding(ui->searchScriptEdit->text());
-    QUrl url(_codeSearchUrl +"?q=" + query +
-                     "+in:file+language:json+repo:qownnotes/scripts");
+void ScriptRepositoryDialog::searchScript(int page) {
+    if (page == 1) {
+        _searchString = ui->searchScriptEdit->text();
+    }
+
+    QString query = QUrl::toPercentEncoding(_searchString);
+    QUrl url(_codeSearchUrl +"?q=" + query + "+in:file+language:json"
+                     "+repo:qownnotes/scripts&page=" + QString::number(page));
     QNetworkRequest networkRequest(url);
+    _page = page;
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
     networkRequest.setAttribute(
@@ -150,8 +177,13 @@ void ScriptRepositoryDialog::slotReplyFinished(QNetworkReply *reply) {
 void ScriptRepositoryDialog::parseCodeSearchReply(const QByteArray &arr) {
     QJsonDocument jsonResponse = QJsonDocument::fromJson(arr);
     QJsonObject jsonObject = jsonResponse.object();
+    _totalCount = jsonObject.value("total_count").toInt();
     QJsonArray items = jsonObject.value("items").toArray();
-    ui->scriptTreeWidget->clear();
+
+    if (_page == 1) {
+        ui->scriptTreeWidget->clear();
+    }
+
     enableOverview(true);
 
     foreach(const QJsonValue &value, items) {
@@ -478,5 +510,13 @@ void ScriptRepositoryDialog::on_installButton_clicked() {
     } else {
         QMessageBox::warning(this, tr("Download failed"),
                                  tr("The script could not be downloaded!"));
+    }
+}
+
+void ScriptRepositoryDialog::on_searchScriptEdit_textChanged(
+        const QString &arg1) {
+    // list all scripts again if the search bar was cleared
+    if (!_checkForUpdates && arg1.isEmpty()) {
+        searchScript();
     }
 }

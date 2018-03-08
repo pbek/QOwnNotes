@@ -29,6 +29,10 @@ private slots:
 
     void on_installButton_clicked();
 
+    void scriptTreeWidgetSliderValueChanged(int value);
+
+    void on_searchScriptEdit_textChanged(const QString &arg1);
+
 private:
     Ui::ScriptRepositoryDialog *ui;
     QNetworkAccessManager *_networkManager;
@@ -36,8 +40,12 @@ private:
     QString _rawContentUrlPrefix;
     QSplitter *_mainSplitter;
     bool _checkForUpdates;
+    int _page = 1;
+    int _totalCount = 0;
+    static const int _itemsPerPage = 30;
+    QString _searchString;
 
-    void searchScript();
+    void searchScript(int page = 1);
 
     void setupMainSplitter();
 
