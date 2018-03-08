@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl" sourcelanguage="en">
+<TS version="2.1" language="hil" sourcelanguage="en">
   <context>
     <name>AboutDialog</name>
     <message>
       <location filename="../dialogs/aboutdialog.ui" line="14"/>
       <source>About QOwnNotes</source>
-      <translation>O QOwnNotes</translation>
+      <translation>Parti sa QOwnNotes</translation>
     </message>
   </context>
   <context>
@@ -15,7 +15,7 @@
       <location filename="../dialogs/actiondialog.ui" line="14"/>
       <location filename="../dialogs/actiondialog.ui" line="46"/>
       <source>Find action</source>
-      <translation>Znajdź działanie</translation>
+      <translation>Pangitaon ang aksyon</translation>
     </message>
   </context>
   <context>
@@ -23,52 +23,52 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="14"/>
       <source>Evernote Import</source>
-      <translation>Import z Evernote</translation>
+      <translation>Pag angkat sa evernote</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="90"/>
       <source>Select file</source>
-      <translation>Wybierz plik</translation>
+      <translation>Pili-on ang file</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="40"/>
       <source>Please select the Evernote enex file you want to import:</source>
-      <translation>Proszę wybrać plik Evernote w formacie enex, który chcesz importować:</translation>
+      <translation>Palihog pili sang evernote enex file nga gusto mo i-angkat:</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="47"/>
       <source>Import images</source>
-      <translation>Importowanie obrazów</translation>
+      <translation>I-angkat ang piktyur</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="23"/>
       <source>Evernote enex file</source>
-      <translation>Plik Evernote w formacie enex</translation>
+      <translation>Evernote enex file</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="33"/>
       <source>%v of %m note(s) imported</source>
-      <translation>Zaimportowano notatek: %v z %m </translation>
+      <translation>%v sang %m listahan sang gin angkat</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="80"/>
       <source>To get such an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes..." in the File menu.</source>
-      <translation>Aby uzyskać pliku enex należy wybrać jedną lub więcej notatek w programie Evernote i wybrać pozycję „Eksportuj notatki...” z menu „Plik”.</translation>
+      <translation>Para makakuha sang amo ni nga enex file kinanglan mo mag pili sang isa ukon damo nga listahan sa imo nga evernotes nga desktop client kag i-click ang "Export notes..." sa File menu.</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="101"/>
       <source>Import attachments</source>
-      <translation>Importuj załączniki</translation>
+      <translation>Gin pilit ang gin angkat</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="39"/>
       <source>Enex files</source>
-      <translation>Pliki ENEX</translation>
+      <translation>Enex files</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="40"/>
       <source>Select Evernote enex file to import</source>
-      <translation>Wybierz plik Evernote w formacie enex do importowania</translation>
+      <translation>Pili-on ang evernote enex file para i-angkat</translation>
     </message>
   </context>
   <context>
@@ -76,237 +76,237 @@
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="38"/>
       <source>Text font</source>
-      <translation>Czcionka tekstu</translation>
+      <translation>Kadako-on sang text</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="73"/>
       <source>Size:</source>
-      <translation>Rozmiar:</translation>
+      <translation>Kadako-on:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="80"/>
       <source>Family:</source>
-      <translation>Rodzina:</translation>
+      <translation>Pamilya:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="103"/>
       <source>Color schema</source>
-      <translation>Schemat kolorów</translation>
+      <translation>Kolor sang panukala</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="124"/>
       <source>Delete schema</source>
-      <translation>Usuń schemat</translation>
+      <translation>Erason ang panukala</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="127"/>
       <source>Delete</source>
-      <translation>Usuń</translation>
+      <translation>Erason</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="169"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="633"/>
       <source>Export schema</source>
-      <translation>Eksportuj schemat</translation>
+      <translation>I-export ang panukala</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="172"/>
       <source>Export</source>
-      <translation>Eksportuj</translation>
+      <translation>I-export</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="271"/>
       <source>If you have created a nice color schema please export it and share it with everyone!</source>
-      <translation>Jeżeli stworzyłeś atrakcyjny schemat kolorów wyeksportuj go i podziel się nim z innymi użytkownikami programu!</translation>
+      <translation>Kon ikaw may gin create nga nami nga color sang panukala palihog i-export ni kag i-share ini sa tanan!</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="155"/>
       <source>Copy schema</source>
-      <translation>Kopiuj schemat</translation>
+      <translation>Kopyha ang panukala</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="158"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="462"/>
       <source>Copy</source>
-      <translation>Kopiuj</translation>
+      <translation>Kopyhon</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="141"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="676"/>
       <source>Import schema</source>
-      <translation>Importuj schemat</translation>
+      <translation>I-angkat ang panukala</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="144"/>
       <source>Import</source>
-      <translation>Importuj</translation>
+      <translation>I-angkat</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="315"/>
       <source>Share schema</source>
-      <translation>Współdziel schemat</translation>
+      <translation>I-share ang panukala</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="288"/>
       <source>Background:</source>
-      <translation>Tło:</translation>
+      <translation>Background:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="281"/>
       <source>Foreground:</source>
-      <translation>Pierwszy plan:</translation>
+      <translation>Atubangan:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="264"/>
       <source>Bold</source>
-      <translation>Pogrubienie</translation>
+      <translation>Damol</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="244"/>
       <source>Italic</source>
-      <translation>Kursywa</translation>
+      <translation>Italic</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="237"/>
       <source>Adapt font size:</source>
-      <translation>Skala czcionki:</translation>
+      <translation>Sundon ang kadamulon kag kadak-on:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="208"/>
       <source>Underline</source>
-      <translation>Podkreślenie</translation>
+      <translation>Kurit sa idalom</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="195"/>
       <source>Text preset</source>
-      <translation>Ustawienie tekstu</translation>
+      <translation>Namion ang texto</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="196"/>
       <source>Emphasized text</source>
-      <translation>Wyróżniony tekst</translation>
+      <translation>Tagaan importansya ang teksto</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="197"/>
       <source>Strong text</source>
-      <translation>Mocny tekst</translation>
+      <translation>Baskog nga teksto</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="214"/>
       <source>(HTML) Comment</source>
-      <translation>(HTML) Komentarz</translation>
+      <translation>(HTML) komentar</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="204"/>
       <source>Header, level 1</source>
-      <translation>Nagłówek, poziom 1</translation>
+      <translation>Ulo, isa ka lebel</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="198"/>
       <source>Link</source>
-      <translation>Łącze</translation>
+      <translation>Nka konekta</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="199"/>
       <source>Image</source>
-      <translation>Obraz</translation>
+      <translation>Imahi</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="200"/>
       <source>Code (block)</source>
-      <translation>Kod (blok)</translation>
+      <translation>Kode (gin balabagan)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="201"/>
       <source>Code (inline)</source>
-      <translation>Kod (w linii)</translation>
+      <translation>Kode (ara sa linya)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="203"/>
       <source>List item</source>
-      <translation>Element listy</translation>
+      <translation>Listahan sang mga aytem</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="205"/>
       <source>Header, level 2</source>
-      <translation>Nagłówek, poziom 2</translation>
+      <translation>Ulo, duha ka lebel</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="206"/>
       <source>Header, level 3</source>
-      <translation>Nagłówek, poziom 3</translation>
+      <translation>Ulo, duha ka lebel</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="207"/>
       <source>Header, level 4</source>
-      <translation>Nagłówek, poziom 4</translation>
+      <translation>Ulo, ika apat nga lebel</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="208"/>
       <source>Header, level 5</source>
-      <translation>Nagłówek, poziom 5</translation>
+      <translation>Ulo, ika lima nga lebel</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="209"/>
       <source>Header, level 6</source>
-      <translation>Nagłówek, poziom 6</translation>
+      <translation>Ulo, ika anom nga lebel</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="212"/>
       <source>Block quote</source>
-      <translation>Cytat blokowy</translation>
+      <translation>Balagabagan ang qoute</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="213"/>
       <source>Table</source>
-      <translation>Tabela</translation>
+      <translation>Lamesa</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="215"/>
       <source>Masked syntax</source>
       <comment>text that will highlighted in a way that it's barely visible</comment>
-      <translation>Składnia maskowana</translation>
+      <translation>Naka masakara nga syntax</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="210"/>
       <source>Horizontal rule</source>
-      <translation>Linia pozioma</translation>
+      <translation>Gahigda nga layi</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="218"/>
       <source>Current line background color</source>
-      <translation>Kolor tła bieżącego wiersza</translation>
+      <translation>Sa subong nga linya ang background kay kolor</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="228"/>
       <source>This item will be used to preset colors for the other items</source>
-      <translation>Ten element będzie używany do ustawień kolorów dla innych elementów</translation>
+      <translation>Ang ini nga aytem pwede gamiton sa prisit nga kolors para sa iban nga aytem</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="459"/>
       <source>Copy color schema</source>
-      <translation>Kopiuj kolor schematu</translation>
+      <translation>Kopyhon ang kolor sang panukala</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="460"/>
       <source>Color schema name</source>
-      <translation>Nazwa schematu kolorów</translation>
+      <translation>Koloran ang pangalan sang panukala</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="584"/>
       <source>Remove schema</source>
-      <translation>Usunięcie schematu</translation>
+      <translation>Kakson ang panukala</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="585"/>
       <source>Remove current schema? This cannot be undone!</source>
-      <translation>Usuń bieżący schemat? Tego nie będzie można cofnąć!</translation>
+      <translation>Kakson ang subong nga panukala? ini hindi pwede himuon!</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="632"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="675"/>
       <source>INI files</source>
-      <translation>Pliki INI</translation>
+      <translation>Ini nga papeles</translation>
     </message>
   </context>
   <context>
@@ -314,37 +314,37 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="14"/>
       <source>Link an url or note</source>
-      <translation>Link do URL albo notatki</translation>
+      <translation>I-konek ang url ukon listahan</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="44"/>
       <source>Enter URL</source>
-      <translation>Wprowadź adres URL</translation>
+      <translation>Pasulod ang url</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="53"/>
       <source>Enter an URL to link to</source>
-      <translation>Wprowadź adres URL aby połączyć z</translation>
+      <translation>Ipasulod ang url kag i-konekta sa</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="76"/>
       <source>Search for notes or create new notes by entering text and pressing return</source>
-      <translation>Znajdź notatki lub utwórz nową wpisując tekst i naciskając klawisz return</translation>
+      <translation>Pangita-a para sa listahan ukon ma obra sang bag-o nga listahan paagi sa pagpasulod sang teksto kag i-tum-ok ang balik</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="91"/>
       <source>Search for a note to link to</source>
-      <translation>Wyszukaj notatkę do której ma być utworzone łącze</translation>
+      <translation>Pangita-on para ang listahan para makakonek sa</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="63"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;select local file to link to&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;wpisz adres lokalnej pliku&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;pili-a ang lokal nga papeles para maka konek sa&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.cpp" line="191"/>
       <source>Select file to link to</source>
-      <translation>wpisz adres notatki</translation>
+      <translation>Pili-on ang papeles para makakonek sa</translation>
     </message>
   </context>
   <context>
@@ -352,98 +352,90 @@
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="14"/>
       <source>Locally trashed notes</source>
-      <translation type="unfinished">Locally trashed notes</translation>
+      <translation>Gin basura nga listahan sang lokal</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="42"/>
       <source>Name</source>
-      <translation type="unfinished">Name</translation>
+      <translation>Ngalan</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="47"/>
       <source>Trashed</source>
-      <translation type="unfinished">Trashed</translation>
+      <translation>Basura</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="41"/>
       <source>Restore</source>
-      <translation type="unfinished">Restore</translation>
+      <translation>Balikon</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="42"/>
       <location filename="../dialogs/localtrashdialog.cpp" line="194"/>
       <source>Restore selected notes</source>
-      <translation type="unfinished">Restore selected notes</translation>
+      <translation>Balikon kag pili-on ang listahan</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="51"/>
       <source>Remove</source>
-      <translation type="unfinished">Remove</translation>
+      <translation>Kakson</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="52"/>
       <location filename="../dialogs/localtrashdialog.cpp" line="240"/>
       <source>Remove selected notes</source>
-      <translation type="unfinished">Remove selected notes</translation>
+      <translation>Kakson kag pili-on ang listahan</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="97"/>
       <source>File will be restored to: %1</source>
-      <translation type="unfinished">File will be restored to: %1</translation>
+      <translation>Ang papeles i-balik sa: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="106"/>
       <source>File &lt;strong&gt;%1&lt;/strong&gt; isn't readable and can't be restored!</source>
-      <translation type="unfinished">File &lt;strong&gt;%1&lt;/strong&gt; isn't readable and can't be restored!</translation>
+      <translation>Papeles&lt;strong&gt;%1&lt;/strong&gt;hindi mabasahan kag hindi mabalik!</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="195"/>
       <source>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
-        <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
-        <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
-        <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
+      <translation>
+        <numerusform>Ibalik&lt;strong&gt;%n&lt;/strong&gt;pili-on ang listahan?</numerusform>
+        <numerusform>Ibalik&lt;strong&gt;%n&lt;/strong&gt;pili-on ang listahan?</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="218"/>
       <source>Notes restored</source>
-      <translation type="unfinished">Notes restored</translation>
+      <translation>Ginbalik ang listahan</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="219"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) where restored</source>
-      <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) where restored</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) where restored</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) where restored</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) where restored</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt;listahan kon di-in gin balik</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt;listahan kon di-in gin balik</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="241"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
+      <translation>
+        <numerusform>Kakson&lt;strong&gt;%n&lt;/strong&gt;ang napili-an nga listahan?</numerusform>
+        <numerusform>Kakson&lt;strong&gt;%n&lt;/strong&gt;ang napili-an nga listahan?</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="264"/>
       <source>Notes removed</source>
-      <translation type="unfinished">Notes removed</translation>
+      <translation>Gin kakas nga listahan</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="265"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) where removed</source>
-      <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) where removed</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) where removed</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) where removed</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) where removed</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt;listahan kon di-in ginkakas</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt;listahan kon di-in ginkakas</numerusform>
       </translation>
     </message>
   </context>
@@ -452,58 +444,58 @@
     <message>
       <location filename="../widgets/logwidget.ui" line="26"/>
       <source>Logs</source>
-      <translation>Dzienniki zdarzeń</translation>
+      <translation>Sulod</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="114"/>
       <source>Fatal</source>
-      <translation>Krytyczny</translation>
+      <translation>Makalamatay</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="100"/>
       <source>Warning</source>
-      <translation>Ostrzeżenie</translation>
+      <translation>Halong</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="107"/>
       <source>Critical</source>
-      <translation>Krytyczny</translation>
+      <translation>Dilikado</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="86"/>
       <source>Debug</source>
-      <translation>Debugowanie</translation>
+      <translation>Dibag</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="93"/>
       <source>Info</source>
-      <translation>Informacja</translation>
+      <translation>Para mabal-an</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="121"/>
       <source>Status</source>
-      <translation>Status</translation>
+      <translation>Katindogan</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="128"/>
       <source>Scripting</source>
-      <translation>Skrypty</translation>
+      <translation>Skrip</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="135"/>
       <location filename="../widgets/logwidget.cpp" line="390"/>
       <source>Clear log</source>
-      <translation>Wyczyść dziennik zdarzeń</translation>
+      <translation>Gin panas ang pagsulod</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.cpp" line="388"/>
       <source>Show options</source>
-      <translation>Pokaż opcje</translation>
+      <translation>Ipakita ang mga opsyon</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.cpp" line="388"/>
       <source>Hide options</source>
-      <translation>Ukryj opcje</translation>
+      <translation>Tago-on ang opsyon</translation>
     </message>
   </context>
   <context>
@@ -511,573 +503,573 @@
     <message>
       <location filename="../mainwindow.ui" line="512"/>
       <source>add a tag to this note</source>
-      <translation>dodaj etykietkę do notatki</translation>
+      <translation>dugangan ang tag sa sini nga listahan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="515"/>
       <source>Add tag</source>
-      <translation>Dodaj etykietkę</translation>
+      <translation>Dugangan tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="387"/>
       <location filename="../mainwindow.ui" line="724"/>
       <location filename="../mainwindow.cpp" line="602"/>
       <source>Navigation</source>
-      <translation>Nawigacja</translation>
+      <translation>Maglayag</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="682"/>
       <source>&amp;Note</source>
-      <translation>&amp;Notatka</translation>
+      <translation>&amp;listahan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="686"/>
       <source>Note &amp;folders</source>
-      <translation>&amp;Folder notatki</translation>
+      <translation>Listahan &amp; polder</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="691"/>
       <source>Sort by</source>
-      <translation>Sortuj według</translation>
+      <translation>Gin plaster</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="795"/>
       <source>&amp;Help</source>
-      <translation>Pomoc</translation>
+      <translation>&amp;bulig</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="932"/>
       <source>Editor width in distraction free mode</source>
-      <translation>Szerokość edytora w widoku bez rozpraszania</translation>
+      <translation>Ang kalapadon sang editor naga sabad sa free mode</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="935"/>
       <source>Editor width</source>
-      <translation>Szerokość edytora</translation>
+      <translation>Kalapadon sang editor</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1009"/>
       <source>Custom actions</source>
-      <translation>Akcje niestandardowe</translation>
+      <translation>Giho sang custom</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1029"/>
       <source>main toolbar</source>
-      <translation>główny pasek narzędzi</translation>
+      <translation>ang pinakauna nga bulutangan sang gamit</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1063"/>
       <source>&amp;Quit</source>
-      <translation>Wyjście</translation>
+      <translation>&amp;nag untat</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1078"/>
       <source>&amp;Setup note folders</source>
-      <translation>Kon&amp;figuracja folderów notatek</translation>
+      <translation>&amp;ginplastar nga listaha sang polder</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1087"/>
       <source>&amp;Find note</source>
-      <translation>Znajdź notatkę</translation>
+      <translation>&amp;pangita-on nga listahan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1099"/>
       <source>&amp;Remove current note</source>
-      <translation>Usuń wybraną notatkę</translation>
+      <translation>&amp;kakson ang subong nga listahan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1111"/>
       <source>About &amp;QOwnNotes...</source>
-      <translation>O &amp;QOwnNotes...</translation>
+      <translation>Parti sa &amp; QOwnNotes...</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1123"/>
       <source>&amp;New note</source>
-      <translation>&amp;Nowa notatka</translation>
+      <translation>&amp;bag-o nga listahan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1135"/>
       <source>Check for &amp;updates</source>
-      <translation>Sprawdź akt&amp;ualizację</translation>
+      <translation>Usisa-on ang &amp; kon ano ang bag-o</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1147"/>
       <source>Report &amp;issues or ideas</source>
-      <translation>Zgłoś problemy lub pomysły</translation>
+      <translation>Isugid &amp; isyu ukon ideya</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1155"/>
       <source>Alphabetical</source>
-      <translation>Alfabetycznie</translation>
+      <translation>Alpabeto</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1158"/>
       <source>Sort alphabetical</source>
-      <translation>Sortuj alfabetycznie</translation>
+      <translation>Gin plastar nga alpabito</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1166"/>
       <source>By date</source>
-      <translation>Według daty</translation>
+      <translation>Paagi sang adlaw</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1169"/>
       <source>Sort by date</source>
-      <translation>Sortuj po dacie</translation>
+      <translation>Gin plastar paagi sang adlaw</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1193"/>
       <source>Show note &amp;versions</source>
-      <translation>Pokaż wersję notatki</translation>
+      <translation>Ipakita ang listahan &amp; bersyon</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1196"/>
       <source>Show note versions on server</source>
-      <translation>Pokaż wersję notatki na serwerze</translation>
+      <translation>Ipakita ang listahan bersyun sa serber</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1208"/>
       <source>Show trashed notes on server</source>
-      <translation>Pokaż usunięte notatki na serwerze</translation>
+      <translation>Ipakita ang ginpilak nga listahan sa serber</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1213"/>
       <location filename="../mainwindow.cpp" line="8524"/>
       <source>Select &amp;all notes</source>
-      <translation>Wybierz wszystkie not&amp;atki </translation>
+      <translation>Pilion &amp; tanan nga listahan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1222"/>
       <location filename="../mainwindow.cpp" line="5444"/>
       <source>Insert &amp;link</source>
-      <translation>Wstaw &amp;link</translation>
+      <translation>Isal-ot &amp;nakakonek</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1225"/>
       <source>Insert link to an url or a note</source>
-      <translation>Wstaw link do URL albo notatki</translation>
+      <translation>Isal-ot ang link sa url or sa listahan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1237"/>
       <source>&amp;Find in current note</source>
-      <translation>Znajdź w bieżącej notatce</translation>
+      <translation>&amp;pangita-on ang subong nga listahan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1240"/>
       <source>Find text in current note</source>
-      <translation>Znajdź tekst w bieżącej notatce</translation>
+      <translation>Pangita-on ang teksto sa subong nga listahan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1245"/>
       <source>&amp;Duplicate text</source>
-      <translation>&amp;Duplikuj tekst</translation>
+      <translation>&amp; parehos nga teksto</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1257"/>
       <source>&amp;Back in note history</source>
-      <translation>Wróć w historii notatki</translation>
+      <translation>&amp;balin sa listahan ng istory</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1178"/>
       <source>&amp;Settings</source>
-      <translation>Ustawienia</translation>
+      <translation>&amp;sitings</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="119"/>
       <source>Find or create note sub folder</source>
-      <translation>Znajdź lub utwórz podfolder notatki</translation>
+      <translation>Pangita-on ukon maghimo sang listahan sub polder</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="196"/>
       <source>Find or create tag</source>
-      <translation>Znajdź lub utwórz etykietkę</translation>
+      <translation>Pangita-on or maghimo sang tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="292"/>
       <source>Search for notes or create new notes by entering text and pressing return</source>
-      <translation>Znajdź notatki lub utwórz nową wpisując tekst i naciskając klawisz return</translation>
+      <translation>Pangita-on sa listahan ukon mag himo sang bag-o nga listahan pa-agi sa pagsulod sa teksto kag pag tum-ok sang balik</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="306"/>
       <source>Search or create note</source>
-      <translation>Szukaj bądź utwórz notatkę</translation>
+      <translation>Pangita-a ukon maghimo listahan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="526"/>
       <source>New tag</source>
-      <translation>Nowa etykietka</translation>
+      <translation>Bag-o nga tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="701"/>
       <location filename="../mainwindow.cpp" line="5420"/>
       <source>Export</source>
-      <translation>Eksportuj</translation>
+      <translation>Ipilak</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="714"/>
       <source>Import</source>
-      <translation>Importuj</translation>
+      <translation>Halin sa gwa</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="737"/>
       <location filename="../mainwindow.cpp" line="5402"/>
       <source>Print</source>
-      <translation>Drukuj</translation>
+      <translation>Isulat sa papel</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="748"/>
       <source>View note</source>
-      <translation>Pokaż notatkę</translation>
+      <translation>Tan-awon ang listahan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="760"/>
       <source>Trash</source>
-      <translation type="unfinished">Trash</translation>
+      <translation>Basura</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="824"/>
       <source>&amp;Edit</source>
-      <translation>&amp;Edycja</translation>
+      <translation>&amp;ilisan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="828"/>
       <source>Insert</source>
-      <translation>Wstaw</translation>
+      <translation>Sal-ot</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="845"/>
       <source>Format</source>
-      <translation>Format</translation>
+      <translation>Porma</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="858"/>
       <source>Extra</source>
-      <translation>Dodatkowe</translation>
+      <translation>Dugang</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="871"/>
       <source>Edit</source>
-      <translation>Edycja</translation>
+      <translation>Ilisan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="883"/>
       <source>Versioning</source>
-      <translation>Kontrola wersji</translation>
+      <translation>Gina bersyon</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="894"/>
       <source>Encryption</source>
-      <translation>Szyfrowanie</translation>
+      <translation>Gina enkrip</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="922"/>
       <source>To&amp;do</source>
-      <translation>&amp;Zadania</translation>
+      <translation>Sa&amp;obra</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="928"/>
       <source>&amp;Window</source>
-      <translation>&amp;Okno</translation>
+      <translation>&amp;bintana</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="944"/>
       <location filename="../mainwindow.cpp" line="541"/>
       <source>Workspaces</source>
-      <translation>Obszary robocze</translation>
+      <translation>Workspaces</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="949"/>
       <source>Panels</source>
-      <translation>Panele</translation>
+      <translation>Panil</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="954"/>
       <source>Toolbars</source>
-      <translation>Paski narzędzi</translation>
+      <translation>Bulutangan gamit</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="959"/>
       <source>Show</source>
       <extracomment>To show or hide stuff</extracomment>
-      <translation>Pokaż</translation>
+      <translation>Ipakita</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="973"/>
       <source>Workspace</source>
-      <translation>Obszar roboczy</translation>
+      <translation>Lugar sang ulubrahan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1005"/>
       <source>&amp;Scripting</source>
-      <translation>&amp;Skrypty</translation>
+      <translation>&amp;skrip</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1205"/>
       <source>Show remote trash</source>
-      <translation type="unfinished">Show remote trash</translation>
+      <translation>Pakita ang rimot nga ginpilak</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1269"/>
       <source>Forward in note history</source>
-      <translation>Do przodu w historii notatki</translation>
+      <translation>Ipasa sa listahan sang istory</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1281"/>
       <source>Show shortcuts</source>
-      <translation>Pokaż skróty klawiszowe</translation>
+      <translation>Ipakita ang para sa lapit</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1290"/>
       <source>&amp;Knowledge base</source>
-      <translation>Baza wiedzy</translation>
+      <translation>&amp;alam ang basehan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1299"/>
       <source>Insert current &amp;time</source>
-      <translation>Ws&amp;taw bieżącą datę</translation>
+      <translation>Ipakita ang subong&amp;oras</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1311"/>
       <source>Show &amp;Todo List</source>
-      <translation>Pokaż listę zadań</translation>
+      <translation>Ipakita &amp; ang himo-on nga listahan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1323"/>
       <source>&amp;Export note as PDF (preview)</source>
-      <translation type="unfinished">&amp;Export note as PDF (preview)</translation>
+      <translation>&amp;ipilak ang listahan nga PDF (makita tanan)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1326"/>
       <source>Export note as PDF (preview)</source>
-      <translation type="unfinished">Export note as PDF (preview)</translation>
+      <translation>Ipilak ang listahan nga PDF (makita tanan)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1335"/>
       <source>&amp;Export note as PDF (text)</source>
-      <translation>&amp;Eksportuj notatkę jako PDF (tekst)</translation>
+      <translation>&amp;ipilak ang listahan nga PDF (teksto)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1344"/>
       <source>&amp;Print note (text)</source>
-      <translation>Wydrukuj notatkę (tekst)</translation>
+      <translation>(isulat sa papel (teksto)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1368"/>
       <source>Insert &amp;image</source>
-      <translation>Wstaw obraz</translation>
+      <translation>Isal-ot&amp;imahin</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1371"/>
       <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
-      <translation>Wstaw obraz (obraz zostanie skopiowany do folderu „media” w obecnym folderze notatek)</translation>
+      <translation>Isal-ot ang imahe (ang imahe ay kopyahon sa `medya` nga papeles sa subong nga listahan sa polder)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1383"/>
       <source>Show &amp;changelog</source>
-      <translation>Pokaż listę zmian</translation>
+      <translation>Ipakita&amp;pag-ilis sa log</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1392"/>
       <source>&amp;Encrypt note</source>
-      <translation>Zaszyfruj notatkę</translation>
+      <translation>&amp;enkrip ang listahan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1401"/>
       <source>Edit encrypted note</source>
-      <translation>Edytuj zaszyfrowaną notatkę</translation>
+      <translation>Islan enkrip nga listahan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1413"/>
       <source>Decrypt note</source>
-      <translation>Odszyfruj notatkę</translation>
+      <translation>Dekrip nga listahan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1422"/>
       <source>&amp;Open note in external editor</source>
-      <translation>&amp;Otwórz notatkę w zewnętrznym edytorze</translation>
+      <translation>&amp;abrihan ang listahan sa gwa sang editor</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1434"/>
       <source>&amp;Export note as markdown file</source>
-      <translation>&amp;Eksportuj notatkę jako plik markdown</translation>
+      <translation>&amp;ipilak nga listahan bilang markdown nga papeles</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1443"/>
       <source>&amp;Get involved</source>
-      <translation>Zaangażuj się</translation>
+      <translation>&amp;mag intra</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1452"/>
       <source>Insert &amp;code block</source>
-      <translation>Wstaw blok kodu</translation>
+      <translation>Isal-ot &amp;kode damul</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1464"/>
       <source>Next note</source>
-      <translation>Następna notatka</translation>
+      <translation>Sunod nga listahan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1476"/>
       <source>Previous note</source>
-      <translation>Poprzednia notatka</translation>
+      <translation>Nagligad nga listahan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1488"/>
       <source>&amp;Distraction free mode</source>
-      <translation>Widok bez rozpraszania</translation>
+      <translation>&amp;sabad nga libre nga mode</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1491"/>
       <source>Distraction free mode, you can leave it with a button on the bottom right</source>
-      <translation>Widok bez rozpraszania, możesz go opuścić przyciskiem w prawym dolnym rogu</translation>
+      <translation>Sabad nga libre nga mode, pwede mo na bya-an nga may pindotan sa idalom sa to-o</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1502"/>
       <source>Show &amp;toolbar</source>
-      <translation>Pokaż pasek &amp;narzędzi</translation>
+      <translation>Ipakita&amp; bulutangan sang gamit</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1510"/>
       <source>Narrow</source>
-      <translation>Wąski</translation>
+      <translation>Kitid</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1521"/>
       <source>Medium</source>
-      <translation>Średni</translation>
+      <translation>Katunga</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1532"/>
       <source>Wide</source>
-      <translation>Szeroki</translation>
+      <translation>Lapad</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1543"/>
       <source>Full</source>
-      <translation>Pełny</translation>
+      <translation>Puno</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1555"/>
       <source>Paste html or media</source>
-      <translation>Wklej html bądź media</translation>
+      <translation>Ipapilit ang html ukon medya</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1558"/>
       <location filename="../mainwindow.ui" line="1561"/>
       <source>Paste images, notes and html from the clipboard</source>
-      <translation>Wklej zdjecia, notatki albo html ze schowka</translation>
+      <translation>Ipapilit ang imahe, listahan kag html sa klipbord</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1573"/>
       <source>Show note in &amp;file manager</source>
-      <translation>Pokaż notatkę w menadżerze plików</translation>
+      <translation>Ipakita ang listahan sa&amp; papeles manager</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1585"/>
       <source>Format text &amp;bold</source>
-      <translation>Sformatuj tekst jako pogrubienie</translation>
+      <translation>Pormat teksto&amp;damol</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1597"/>
       <source>Format text &amp;italic</source>
-      <translation>Sformatuj tekst jako &amp;kursywę</translation>
+      <translation>Pormat teksto &amp;tinilabid</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1609"/>
       <source>&amp;Increase note text size</source>
-      <translation>Zwiększ rozmiar tekstu</translation>
+      <translation>&amp;isaka ang listahan nga teksto sa kadakoon</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1621"/>
       <source>&amp;Decrease note text size</source>
-      <translation>&amp;Zmniejsz rozmiar tekstu notatki</translation>
+      <translation>&amp;ipanubo ang listhatan teksto sa kadakoon</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1633"/>
       <source>&amp;Reset note text size</source>
-      <translation>Przywróć domyślny rozmiar tekstu</translation>
+      <translation>&amp;risit listhan teksto sa kadakoon</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1645"/>
       <source>&amp;Add tag to note</source>
-      <translation>&amp;Dodaj etykietkę do notatki</translation>
+      <translation>&amp;idugang ang tag sa listahan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1657"/>
       <source>&amp;Reload note folder</source>
-      <translation>W&amp;czytaj ponownie folder notatek</translation>
+      <translation>&amp;relod ang listahan nga polder</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1729"/>
       <source>Show log</source>
-      <translation>Pokaż dziennik zdarzeń</translation>
+      <translation>Ipagkita ang log</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1738"/>
       <source>Export note as HTML</source>
-      <translation>Eksportuj notatkę jako HTML</translation>
+      <translation>Ipilak ang listahan bilang HTML</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1817"/>
       <source>Cycle text case</source>
-      <translation>Przełącz wielkość znaków</translation>
+      <translation>Patiyog ang teksto nga sulodlan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1908"/>
       <source>Find notes in all tags / subfolders</source>
-      <translation>Szukaj we wszystkich etykietach i podfolderach</translation>
+      <translation>Pangita-on ang listahan sa tanan nga tags/upod nga polders</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1956"/>
       <source>Unlock panels</source>
-      <translation>Odblokuj panele</translation>
+      <translation>Hindi pag lock ang panels</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1965"/>
       <location filename="../mainwindow.cpp" line="9461"/>
       <source>Remove current workspace</source>
-      <translation>Usuń bieżący obszar roboczy</translation>
+      <translation>Kason ang subong nga lugar sang ulubrahan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1974"/>
       <source>Add new workspace</source>
-      <translation>Dodaj nowy obszar roboczy</translation>
+      <translation>Dugangan sang bag-o nga lugar nga ulubrahan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1983"/>
       <source>Rename current workspace</source>
-      <translation>Zmień nazwę bieżącego obszaru roboczego</translation>
+      <translation>Liwaton ang pangalan sang subong nga lugar sang ulubrahan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1992"/>
       <source>Switch to previous workspace</source>
-      <translation>Przełącz na poprzedni obszar roboczy</translation>
+      <translation>Saylo sa nagligad nga lugar nga ulubrahan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2000"/>
       <source>Show all panels</source>
-      <translation>Pokaż wszystkie panele</translation>
+      <translation>Pakita ang tanan nga panels</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2009"/>
       <source>Find action</source>
-      <translation>Znajdź działanie</translation>
+      <translation>Pangita-on ang aksyon</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2012"/>
       <location filename="../mainwindow.ui" line="2015"/>
       <source>Find an action from the menu</source>
-      <translation>Znajdź działanie z menu</translation>
+      <translation>Pangita-on ang aksyon halin sa menu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2027"/>
       <source>Insert table</source>
-      <translation>Wstaw tabelę</translation>
+      <translation>Isal-ot ang lamesa</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2039"/>
       <source>Insert block &amp;quote</source>
-      <translation>Wstaw cytat &amp;blokowy</translation>
+      <translation>Isal-ot abg damol&amp;kota</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2047"/>
@@ -1088,763 +1080,726 @@
     <message>
       <location filename="../mainwindow.ui" line="2058"/>
       <source>Delete line</source>
-      <translation>Usuń wiersz</translation>
+      <translation>Ereson ang linya</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2066"/>
       <source>Delete word</source>
-      <translation>Usuń wyraz</translation>
+      <translation>Erason ang ambal</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2078"/>
       <location filename="../mainwindow.cpp" line="8504"/>
       <source>Open note in different window</source>
-      <translation>Otwórz notatkę w innym oknie</translation>
+      <translation>Abrehan ang listahan sa lain-lain nga bintana</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2090"/>
       <source>Save modified notes</source>
-      <translation>Zapisz zmodyfikowane notatki</translation>
+      <translation>Sulbaron ang gin liwat nga listahan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2101"/>
       <source>Ascending</source>
-      <translation>Rosnąco</translation>
+      <translation>Gasaka</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2109"/>
       <source>Descending</source>
-      <translation>Malejąco</translation>
+      <translation>Pababang</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2118"/>
       <location filename="../mainwindow.cpp" line="8511"/>
       <source>Show note git versions</source>
-      <translation>Pokaż wersję git notatki</translation>
+      <translation>Ipakita ang listahan kag magkuha sang bersyon</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2127"/>
       <source>Find scripts in script repository</source>
-      <translation>Wyszukaj skrypty w repozytorium skryptów</translation>
+      <translation>Pangita-on ang skrip sa skrip nga talambakan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2139"/>
       <source>Script settings</source>
-      <translation>Ustawienia skryptów</translation>
+      <translation>Skrip pagtatakda</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2148"/>
       <source>Insert attachment</source>
-      <translation>Wstaw załącznik</translation>
+      <translation>Isal-ot ang gin atach</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2163"/>
       <source>Allow note editing</source>
-      <translation>Zezwalaj na edycję notatki</translation>
+      <translation>Pasugtan ang listahan sa pag-ilis</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2175"/>
       <source>Check for script updates</source>
-      <translation>Sprawdź aktualizacje skryptu</translation>
+      <translation>Usi-saon ang skrip nga bag-o</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2184"/>
       <source>Show local trash</source>
-      <translation type="unfinished">Show local trash</translation>
+      <translation>Ipakita nag lokal nga basura</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1668"/>
       <source>Use &amp;vertical preview layout</source>
-      <translation>Poziome o&amp;kno podglądu</translation>
+      <translation>Gamiton &amp;gatindog nga nakita sa layout</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1671"/>
       <location filename="../mainwindow.ui" line="1674"/>
       <source>The note edit panel will be above the preview panel</source>
-      <translation>Panel edycji notatki będzie wyświetlony nas panelem podglądu</translation>
+      <translation>Ang listahan sa edit panel ay ara sa babaw sang preview panel</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1683"/>
       <source>Replace in current note</source>
-      <translation>Zastąp w bieżącej notatce</translation>
+      <translation>Ilisan ang subong nga listahan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1691"/>
       <source>Autocomplete, solve equation or open URL</source>
-      <translation>Autouzupełnianie, rozwiąż działanie lub otwórz adres URL</translation>
+      <translation>Ga automatik komplete, sulbaron ang equation ukon abrehan ang url</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1694"/>
       <source>Solve a simple equation like '(2+3)*6=' in the current line</source>
-      <translation>Oblicza proste działania – jak na przykład „(2+3)*6*” w bieżącej linii</translation>
+      <translation>Sulbaron ang simpli nga equation parehas sa '(2+3)*6=' sa subong nga linya</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1702"/>
       <source>Select note folder</source>
-      <translation>Wybierz folder notatek</translation>
+      <translation>Pili-on ang listahan nga polder</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1717"/>
       <source>Reload scripting engine</source>
-      <translation>Uruchom ponownie silnik skrytów</translation>
+      <translation>Relod ang skrip nga makina</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1750"/>
       <location filename="../mainwindow.ui" line="1753"/>
       <source>Open the #qownnotes IRC channel, you have to stay online to get a response</source>
-      <translation>Otwórz kanał IRC #qownnotes, musisz pozostać online aby otrzymać odpowiedź</translation>
+      <translation>Abrihan ang #qownotes irc channel, dapat nga mag online para makakuha sang risponse</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1890"/>
       <source>Show note list under tag pane</source>
-      <translation>Pokaż listę notatek pod panelem etykietek</translation>
+      <translation>Ipakita ang listahan paagisa tag pane</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1941"/>
       <location filename="../mainwindow.ui" line="1944"/>
       <source>Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</source>
-      <translation>Otwórz pokój rozmów qownnotes w serwisie Gitter, musisz posiadać konto GitHub lub Twitter aby się zalogować, ale możesz otrzymywać wiadomości offline</translation>
+      <translation>Abrehan ang qownnotes gitter nga kwarto, kinahanglan mo sang github or twitter nga akawnt para makasulod, pero makabaton ka sang offline nga mensahe</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="799"/>
       <source>Open chat</source>
-      <translation>Otwórz czat</translation>
+      <translation>Abrehan ang chat</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1356"/>
       <source>&amp;Print note (preview)</source>
-      <translation type="unfinished">&amp;Print note (preview)</translation>
+      <translation>&amp;isulat sa listahan (makita tanan)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1762"/>
       <source>Insert headline from note filename</source>
-      <translation>Wstaw nazwę notatki jako nagłówek</translation>
+      <translation>Isal-ot ang linya sa ulo halin sa listahan sang pangalan sang pile</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1776"/>
       <source>Use softwrap in note editor and preview</source>
-      <translation>Zawijaj długie linie tekstu w oknie edycji i podglądu</translation>
+      <translation>Gamiton ang softwrap sa listahan sang editor kag pakita tanan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1784"/>
       <source>Show status bar</source>
-      <translation>Pokaż pasek statusu</translation>
+      <translation>Pakita ang sitwasyon sang bar</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1799"/>
       <source>Share note</source>
-      <translation>Udostępnij notatkę</translation>
+      <translation>Partida nga listahan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1829"/>
       <source>Markdown cheatsheet</source>
-      <translation>Ściąga składni Markdown</translation>
+      <translation>Ilista ang kodigo nga listahan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1838"/>
       <source>Strike out text</source>
-      <translation>Przekreślenie</translation>
+      <translation>Igo-on ang ara sa gwa nga teksto</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1849"/>
       <source>Use one column mode</source>
-      <translation>Tryb jednej kolumny</translation>
+      <translation>Gamiton ang isa ka kulom mode</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1852"/>
       <location filename="../mainwindow.ui" line="1855"/>
       <source>Use a one column minimal mode (like NVAlt)</source>
-      <translation>Tryb jednej kolumny uproszczony (jak nvALT)</translation>
+      <translation>Gamiton ang isa ka kulom sa dutay nga mode</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1867"/>
       <source>Show menu bar</source>
-      <translation>Pokaż pasek menu</translation>
+      <translation>Ipakita ang menu bar</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1879"/>
       <source>Split note at cursor position</source>
-      <translation>Podziel notatkę na pozycji kursora</translation>
+      <translation>Itunga ang listahan sa kursor nga pwesto</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1899"/>
       <source>Donate</source>
-      <translation>Darowizna</translation>
+      <translation>Ihatag</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1920"/>
       <source>Import notes from Evernote</source>
-      <translation>Importowanie notatek z Evernote</translation>
+      <translation>Ipasulod ang listahan halin sa evernote</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1929"/>
       <source>Delete orphaned image files</source>
-      <translation>Usuń porzucone pliki obrazów</translation>
+      <translation>Erason ang siya lang isa nga imahe nga piles</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2383"/>
       <source>Note was removed externally!</source>
-      <translation>Notatka została zmodyfikowana poza programem!</translation>
+      <translation>Ang listahan gin kakas sa gwa!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2384"/>
       <source>Current note was removed outside of this application!
 Restore current note?</source>
-      <translation>Obecna notatka została usunięta poza programem!
-Przywrócić notatkę?</translation>
+      <translation>Ang subong nga listahan ginakaks sa gwa sa sini nga application! ibalik pa ang subong nga listahan?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4543"/>
       <location filename="../mainwindow.cpp" line="5817"/>
       <location filename="../mainwindow.cpp" line="8572"/>
       <source>&amp;Cancel</source>
-      <translation>&amp;Anuluj</translation>
+      <translation>&amp;kansel</translation>
     </message>
     <message numerus="yes">
       <source>stored %n note(s) to disk</source>
       <translation type="unfinished">
-        <numerusform>zapisano  %n notatkę na dysk</numerusform>
-        <numerusform>zapisano  %n notatki na dysk</numerusform>
         <numerusform>stored %n note(s) to disk</numerusform>
-        <numerusform>zapisano  %n notatek na dysk</numerusform>
+        <numerusform>stored %n note(s) to disk</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2585"/>
       <source>new version %1 available</source>
-      <translation>wersja %1 dostępna</translation>
+      <translation>bag-o nga bersyon %1 ang pwede</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2985"/>
       <source>Please select the folder where your notes will get stored</source>
-      <translation type="unfinished">Please select the folder where your notes will get stored</translation>
+      <translation>Palihog pili sang polder kon di-in ang imo listahan makakuha sa gin tampok</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3012"/>
       <source>No folder was selected</source>
-      <translation>Nie zaznaczono folderu</translation>
+      <translation>Wala kapili sang polder</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3013"/>
       <source>You have to select your ownCloud notes folder to make this software work!</source>
-      <translation>Musisz określić swój folder notatek ownCloud aby ten program działał!</translation>
+      <translation>Kinanglan mapili ka sang imo nga owncloud listahan nga polder para makahimo sang amo ni software nga ulubrahon!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3015"/>
       <source>&amp;Retry</source>
-      <translation>Ponów</translation>
+      <translation>&amp;liwat</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3015"/>
       <source>&amp;Exit</source>
-      <translation>Wyjdź</translation>
+      <translation>&amp;mag gwa</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3193"/>
       <source>Remove current note</source>
-      <translation>Usuń wybraną notatkę</translation>
+      <translation>Kakson ang subong nga listahan</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3194"/>
       <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation>Usunąć wybraną notatkę: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+      <translation>Kakson ang subong nga listahan:&lt;strong&gt;%1&lt;/strong&gt;&gt;?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3505"/>
       <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
-      <translation>Wpisz  &lt;strong&gt;hasło&lt;/strong&gt; zaszyfrowanej notatki.</translation>
+      <translation>Palihog sulod sang &lt;strong&gt;pasword&lt;/strong&gt;sa amo ni nga na enkrip nga listahan.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3529"/>
       <source>Note can't be decrypted!</source>
-      <translation>Notatka nie może zostać odszyfrowana!</translation>
+      <translation>Ang listahan hindi ma dekrip!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3530"/>
       <source>It seems that your password is not valid!</source>
-      <translation>Twoje hasło nie jest poprawne!</translation>
+      <translation>Daw hindi amo ang imo nga password!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3679"/>
       <source>Remove selected notes</source>
-      <translation>Usuń zaznaczone notatki</translation>
+      <translation>Kakson ang napili-an nga listahan</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3681"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
-      <translation type="unfinished">
-        <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt;zaznaczoną notatkę?
-
-Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywrócić na stronie.</numerusform>
-        <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt;zaznaczone notatki?
-
-Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywrócić na stronie.</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
-
-If the trash is enabled on your ownCloud server you should be able to restore them from there.</numerusform>
-        <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt;zaznaczonych notatek?
-
-Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywrócić na stronie.</numerusform>
+      <translation>
+        <numerusform>Kakson &lt;strong&gt;%n&lt;/strong&gt;ang napili-an nga listahan(s).</numerusform>
+        <numerusform>Kakson &lt;strong&gt;%n&lt;/strong&gt;ang napili-an nga listahan(s).</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3760"/>
       <location filename="../mainwindow.cpp" line="8732"/>
       <source>Remove selected folders</source>
-      <translation>Usuń zaznaczone foldery</translation>
+      <translation>Kakson ang napili-an nga polders</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3761"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
-      <translation type="unfinished">
-        <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; wybrany folder?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Usunięte zostaną także wszystkie notatki i foldery w nim zawarte!</numerusform>
-        <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; wybrane foldery?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Usunięte zostaną także wszystkie notatki i foldery w nich zawarte!</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
-        <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; wybrane foldery?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Usunięte zostaną także wszystkie notatki i foldery w nich zawarte!</numerusform>
+      <translation>
+        <numerusform>Kakson&lt;strong&gt;%n&lt;/strong&gt;ang napili-an nga polder(s)?&lt;ul&gt;%1&lt;/ul&gt;tanan nga piles kag polders sa amo ni nga polders ay kakson man!</numerusform>
+        <numerusform>Kakson&lt;strong&gt;%n&lt;/strong&gt;ang napili-an nga polder(s)?&lt;ul&gt;%1&lt;/ul&gt;tanan nga piles kag polders sa amo ni nga polders ay kakson man!</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3772"/>
       <source>Removed note subfolder: %1</source>
-      <translation>Usuń podfolder: %1</translation>
+      <translation>Kakson ang listahan subfolder:%1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3791"/>
       <source>Remove selected tags</source>
-      <translation>Usuń zaznaczone etykietki</translation>
+      <translation>Kakson ang napili-an nga tags</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3792"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
-      <translation type="unfinished">
-        <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; wybraną etykietę? Żadna notatka nie zostanie usunięta.</numerusform>
-        <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; wybrane etykiety? Żadna notatka nie zostanie usunięta.</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
-        <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; wybranych etykiet? Żadna notatka nie zostanie usunięta.</numerusform>
+      <translation>
+        <numerusform>Kakson&lt;strong&gt;%n&lt;/strong&gt;ang napili-an nga tag(s)? wala sang listahan nga kakson sa sini nga pama-agi.</numerusform>
+        <numerusform>Kakson&lt;strong&gt;%n&lt;/strong&gt;ang napili-an nga tag(s)? wala sang listahan nga kakson sa sini nga pama-agi.</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3846"/>
       <location filename="../mainwindow.cpp" line="7764"/>
       <source>Move selected notes</source>
-      <translation>Przenieś zaznaczone notatki</translation>
+      <translation>Pahalinon ang napili-an nga listahan</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3847"/>
       <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
-        <numerusform>Przenieść %n zaznaczoną notatkę do &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Przenieść %n zaznaczone notatki do &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Przenieść %n zaznaczonych notatek do &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>Pahalinon %n ang napili-an nga listahan(s) sa &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Pahalinon %n ang napili-an nga listahan(s) sa &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3939"/>
       <location filename="../mainwindow.cpp" line="7848"/>
       <source>Copy selected notes</source>
-      <translation>Skopiuj zaznaczone notatki</translation>
+      <translation>Kopyahon ang napili-an nga listahan</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3940"/>
       <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
-        <numerusform>Skopiować %n zaznaczoną notatkę do &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Skopiować %n zaznaczone notatki do &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Skopiować %n zaznaczonych notatek do &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>Kopyahon %n ang napili-an nga listahan(s) sa &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Kopyahon %n ang napili-an nga listahan(s) sa &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3963"/>
       <location filename="../mainwindow.cpp" line="4101"/>
       <source>Done</source>
-      <translation>Zrobione</translation>
+      <translation>Tapos na</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3964"/>
       <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
-      <translation type="unfinished">
-        <numerusform>%n notatka została skopiowana do &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
-        <numerusform>%n notatki zostały skopiowane do &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
-        <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
-        <numerusform>%n notatek zostało skopiowanych do &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
+      <translation>
+        <numerusform>%n listahan ay nakopya sa &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
+        <numerusform>%n listahan ay nakopya sa &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3977"/>
       <source>Tag selected notes</source>
-      <translation>Oznacz wybrane notatki</translation>
+      <translation>Tag ang napili-an nga listahan</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3978"/>
       <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
-        <numerusform>Dodać do %n zaznaczonej notatki etykietę &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Dodać do %n zaznaczonych notatek etykietę &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Dodać do %n zaznaczonych notatek etykietę &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>Tag %n ang napili-an nga listahan sa &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Tag %n ang napili-an nga listahan sa &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4230"/>
       <source>Restart application</source>
-      <translation>Uruchom ponownie aplikację</translation>
+      <translation>Liwaton ang aplikasyon</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4236"/>
       <source>You may need to restart the application manually to let the changes take effect.</source>
-      <translation>Może być konieczne ręczne ponowne uruchomienie aplikacji aby zmiany zostały zastosowane.</translation>
+      <translation>Kinanglan mo cgro liwaton ang aplikasyon pa agi sa mano-mana para ang kaliwatan epektado.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4241"/>
       <source>You may need to restart the application to let the changes take effect.</source>
-      <translation>Może być konieczne ponowne uruchomienie aplikacji aby zmiany zostały zastosowane.</translation>
+      <translation>Kinanglan mo cigoro liwaton ang aplikasyon para ang kaliwatan epektado.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4243"/>
       <source>Restart</source>
-      <translation>Uruchom ponownie</translation>
+      <translation>Liwaton</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4450"/>
       <source>PDF files</source>
-      <translation>Pliki PDF</translation>
+      <translation>Pdf piles</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5337"/>
       <source>Note versions are currently loaded from your ownCloud server</source>
-      <translation>Wersje notatek są ładowane z Twojego serwera ownCloud</translation>
+      <translation>Ang beryson sang listahan sa subong kay puno pa halin sa akon owncloud nga serber</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5351"/>
       <source>Trashed notes are currently loaded from your ownCloud server</source>
-      <translation>Skasowane notatki są ładowane z Twojego serwera ownCloud</translation>
+      <translation>Ang basura nga listahan sa subong kay puno pa halin sa imo nga owncloud serber</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5409"/>
       <source>Print selected text</source>
-      <translation type="unfinished">Print selected text</translation>
+      <translation>Isulat sa papel ang ginpili nga teksto</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5415"/>
       <source>Print selected text (preview)</source>
-      <translation type="unfinished">Print selected text (preview)</translation>
+      <translation>Isulat sa papel ang ginpili nga teksto (ipakita tanan)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5431"/>
       <source>Export selected text as PDF</source>
-      <translation type="unfinished">Export selected text as PDF</translation>
+      <translation>I-ixport ang ginpili nga teksto nga PDF</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5437"/>
       <source>Export selected text as PDF (preview)</source>
-      <translation type="unfinished">Export selected text as PDF (preview)</translation>
+      <translation>I-ixport ang ginpili nga teksto nga PDF(makita tanan)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5624"/>
       <source>Image files</source>
-      <translation>Pliki obrazów</translation>
+      <translation>Imahin sang piles</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5813"/>
       <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
-      <translation>Notatka zostanie odszyfrowana i zapisana jako otwarty tekst. Pamiętaj, że niezaszyfrowana notatka będzie najpewniej zsynchronizowana z Twoim serwerem i wrażliwe informacje mogą zostać ujawnione. &lt;br /&gt;Czy chcesz odszyfrować notatkę?</translation>
+      <translation>Ang imo listahan ay ma dekrip kag mabutang sa plain teks liwat. Ipasulod sa utok nga nag wala na enkrip nga listahan ay may posibilidad nga ma sync sa imo serber kag ang sensitibo nga teksto ay mabuking!&lt;br /&gt;gusto mo gid ma dekrip ang imo listahan?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5898"/>
       <source>Markdown files</source>
-      <translation>Pliki markdown</translation>
+      <translation>Marakahan padalom nga piles</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5952"/>
       <source>Bookmarked note position at slot %1</source>
-      <translation>Stworzono zakładkę notatki na pozycji %1</translation>
+      <translation>Ang borkmark nga listahan gin posisyon sa bulutangan %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5968"/>
       <source>Jumped to bookmark position at slot %1</source>
-      <translation>Przejście do zakładki na pozycji %1</translation>
+      <translation>Lukso sa borkmark nga listahan gin posisyon sa bulutangan %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6173"/>
       <location filename="../mainwindow.cpp" line="6241"/>
       <source>Inserting image</source>
-      <translation>Wstawianie obrazu</translation>
+      <translation>Idas-ok ang imahe</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6178"/>
       <location filename="../mainwindow.cpp" line="6244"/>
       <source>Done inserting image</source>
-      <translation>Wstawiono obraz</translation>
+      <translation>Tapos na dasok sang imahe</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6180"/>
       <source>Inserting attachment</source>
-      <translation>Wstawianie załącznika</translation>
+      <translation>Idasok ang attachment</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6185"/>
       <source>Done inserting attachment</source>
-      <translation>Wstawiono załącznik</translation>
+      <translation>Tapos na dasok sang attachment</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="6195"/>
       <source>Copied %n note(s) to %1</source>
-      <translation type="unfinished">
-        <numerusform>Skopiowano %n notatkę do %1</numerusform>
-        <numerusform>Skopiowano %n notatki do %1</numerusform>
-        <numerusform>Copied %n note(s) to %1</numerusform>
-        <numerusform>Skopiowano %n notatek do %1</numerusform>
+      <translation>
+        <numerusform>Nakopya na %n listahan(s) sa %1</numerusform>
+        <numerusform>Nakopya na %n listahan(s) sa %1</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="6204"/>
       <source>Failed to copy %n note(s) (most likely already existing)</source>
-      <translation type="unfinished">
-        <numerusform>Nie udało się skopiować %n notatki (najprawdopodobniej już istnieje)</numerusform>
-        <numerusform>Nie udało się skopiować %n notatek (najprawdopodobniej już istnieją)</numerusform>
-        <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
-        <numerusform>Nie udało się skopiować %n notatek (najprawdopodobniej już istnieją)</numerusform>
+      <translation>
+        <numerusform>Wala na kopy %n ang listahan(s) (ari na)</numerusform>
+        <numerusform>Wala na kopy %n ang listahan(s) (ari na)</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="6214"/>
       <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-      <translation type="unfinished">
-        <numerusform>Pominięto kopiowanie %n notatki (plik nie do odczytu lub uszkodzony)</numerusform>
-        <numerusform>Pominięto kopiowanie %n notatek (pliki nie do odczytu lub uszkodzone)</numerusform>
-        <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
-        <numerusform>Pominięto kopiowanie %n notatek (pliki nie do odczytu lub uszkodzone)</numerusform>
+      <translation>
+        <numerusform>Laktawan ang kopy sang %n listahan(s)(wala namarkahan ukon Teks pile ukon hindi mabasahan</numerusform>
+        <numerusform>Laktawan ang kopy sang %n listahan(s)(wala namarkahan ukon Teks pile ukon hindi mabasahan</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6228"/>
       <source>Saving temporary image</source>
-      <translation>Zapisywanie tymczasowego obrazu</translation>
+      <translation>Sulbaron ang temporaryo nga imahe</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6247"/>
       <source>Temporary file can't be opened</source>
-      <translation>Plik tymczasowy nie mógł zostać otwarty</translation>
+      <translation>Ang temproraryo nga pile hindi ma abrehan</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6278"/>
       <source>Downloading %1</source>
-      <translation>Pobieranie %1</translation>
+      <translation>Gina download%1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6455"/>
       <source>Reset font size to %1 pt</source>
       <comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
-      <translation>Ustaw rozmiar czcionki na domyślne %1 pt</translation>
+      <translation>Liwaton ang kadamulon kag kadakoon sa %1 pt</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7332"/>
       <source>Rename tag</source>
-      <translation>Zmień nazwę etykiety</translation>
+      <translation>Liwaton ang ngalan sang tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7333"/>
       <source>Assign color</source>
-      <translation>Przypisz kolor</translation>
+      <translation>Mag hatag sang kolor</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7334"/>
       <source>Disable color</source>
-      <translation>Wyłącz kolor</translation>
+      <translation>Hindi pag ganahon ang kolor</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7557"/>
       <source>Move to the root</source>
       <comment>to move a tag to the current tag in the tag context menu</comment>
-      <translation>Przenieś do katalogu głównego</translation>
+      <translation>Halin sa gamot</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7990"/>
       <source>An url was opened at the current cursor position</source>
-      <translation>Adres URL z bieżącej pozycji kursora został otwarty</translation>
+      <translation>Ang url ay na abrihan sa subong nga kursor nga pwesto</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8086"/>
       <source>No equation was found in front of the cursor</source>
-      <translation>Nie znaleziono działania przed kursorem</translation>
+      <translation>Wala sang equation nga nakita sa atubangan sang kursor</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8103"/>
       <source>Result for equation: %1 = %2</source>
-      <translation>Wynik działania: %1 = %2</translation>
+      <translation>Ang resulta sa equation:%1=%2</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8204"/>
       <source>The scripting engine was reloaded</source>
-      <translation>Silnik skryptów został uruchomiony ponownie</translation>
+      <translation>Ang skrip engine naga relod pa</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8239"/>
       <source>HTML files</source>
-      <translation>Pliki HTML</translation>
+      <translation>HTML papeles</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8413"/>
       <source>Rename note</source>
-      <translation>Zmień nazwę notatki</translation>
+      <translation>Liwaton ang ngalan sang listahan</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8414"/>
       <source>Allows you to rename the filename of the note</source>
-      <translation>Pozwala zmienić nazwę pliku notatki</translation>
+      <translation>Gina pasugtan ka magliwat sang ngalan sang ngalan sang pile ng listahan</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8567"/>
       <source>Note renaming not enabled!</source>
-      <translation>Zmienianie nazw notatek nie jest włączone!</translation>
+      <translation>Ang pagliwat sa ngalan sang listahan wala naga gana!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8731"/>
       <source>Rename subfolder</source>
-      <translation>Zmień nazwę podfolderu</translation>
+      <translation>Liwaton ang ngalan sang subfolder</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9253"/>
       <source>Create new workspace</source>
-      <translation>Utwórz nowy obszar roboczy</translation>
+      <translation>Mag obra sang bag-o nga lugar para sa ulubrahan</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9253"/>
       <location filename="../mainwindow.cpp" line="9499"/>
       <source>Workspace name:</source>
-      <translation>Nazwa obszaru roboczego:</translation>
+      <translation>Ngalan sang lugar nga ulubrahan:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9375"/>
       <source>full</source>
       <comment>full workspace</comment>
-      <translation>pełny</translation>
+      <translation>puno</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9382"/>
       <source>minimal</source>
       <comment>minimal workspace</comment>
-      <translation>minimalny</translation>
+      <translation>pinaka gamay</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9462"/>
       <source>Remove the current workspace?</source>
-      <translation>Usunąć bieżący obszar roboczy?</translation>
+      <translation>Kakson ang subong nga lugar sang ulubrahan?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9499"/>
       <source>Rename workspace</source>
-      <translation>Zmień nazwę obszaru roboczego</translation>
+      <translation>Liwaton ang ngalan sang lugar sang ulubrahan</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="9634"/>
       <source>%n chars</source>
       <comment>characters</comment>
-      <translation type="unfinished">
-        <numerusform>%n znak</numerusform>
-        <numerusform>%n znaki</numerusform>
-        <numerusform>%n chars</numerusform>
-        <numerusform>%n znaków</numerusform>
+      <translation>
+        <numerusform>%n karakter</numerusform>
+        <numerusform>%n karakter</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9757"/>
       <source>Copy image file path</source>
-      <translation>Skopiuj ścieżkę obrazu</translation>
+      <translation>Kopyahon kon di-in naghalin ang imahe</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9896"/>
       <source>Select file to insert</source>
-      <translation>Wybierz plik do wstawienia</translation>
+      <translation>Pili-on ang papeles para makasal-ot</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="999"/>
       <source>&amp;Tag</source>
-      <translation>&amp;Etykietka</translation>
+      <translation>&amp;tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4046"/>
       <source>Remove tag from selected notes</source>
-      <translation>Usuń etykietkę z wybranych notatek</translation>
+      <translation>Kakson ang tag halin sa gin pili nga listahan</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4047"/>
       <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Usuń etykietę &lt;strong&gt;%1&lt;/strong&gt; z %n zaznaczonej notatki?</numerusform>
-        <numerusform>Usuń etykietę &lt;strong&gt;%1&lt;/strong&gt; z %n zaznaczonych notatek?</numerusform>
-        <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
-        <numerusform>Usuń etykietę &lt;strong&gt;%1&lt;/strong&gt; z %n zaznaczonych notatek?</numerusform>
+      <translation>
+        <numerusform>Kakson ang tag &lt;strong&gt;%1&lt;/strong&gt;halin%nginpili nga listahan(s)?</numerusform>
+        <numerusform>Kakson ang tag &lt;strong&gt;%1&lt;/strong&gt;halin%nginpili nga listahan(s)?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4102"/>
       <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
-      <translation type="unfinished">
-        <numerusform>Etykieta &lt;strong&gt;%1&lt;/strong&gt; została usunięta z %n notatki</numerusform>
-        <numerusform>Etykieta &lt;strong&gt;%1&lt;/strong&gt; została usunięta z %n notatek</numerusform>
-        <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
-        <numerusform>Etykieta &lt;strong&gt;%1&lt;/strong&gt; została usunięta z %n notatek</numerusform>
+      <translation>
+        <numerusform>Tag&lt;strong&gt;%1&lt;/strong&gt;ginkakas halin sa %n nga listahan(s)</numerusform>
+        <numerusform>Tag&lt;strong&gt;%1&lt;/strong&gt;ginkakas halin sa %n nga listahan(s)</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4146"/>
       <source>Current notes folder: </source>
-      <translation>Aktualny folder notatek:</translation>
+      <translation>Subong nga listahan nga polder: </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4148"/>
       <source>Set the notes folder. Current notes folder: </source>
-      <translation>Wybierz folder notatek. Obecny folder notatek: </translation>
+      <translation>Iplastar ang listahan nga polder. subong nga listahan nga polder: </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4332"/>
       <source>Print note</source>
-      <translation>Wydrukuj notatkę</translation>
+      <translation>I-print ang listahan</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4394"/>
       <source>Letter</source>
-      <translation>Letter</translation>
+      <translation>Letra</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4423"/>
       <source>Portrait</source>
-      <translation>Pionowa</translation>
+      <translation>Portrayt</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4423"/>
       <source>Landscape</source>
-      <translation>Pozioma</translation>
+      <translation>Landskape</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4428"/>
       <source>Orientation</source>
-      <translation>Orientacja</translation>
+      <translation>Oryenta</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4428"/>
       <source>Orientation:</source>
-      <translation>Orientacja:</translation>
+      <translation>Oryenta:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4451"/>
       <source>Export current note as PDF</source>
-      <translation>Eksportuj notatkę jako PDF</translation>
+      <translation>I-export ang subong nga listahan dw PDF</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4539"/>
       <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
-      <translation>Nie wybrałeś żadnych list zadań.&lt;br /&gt;Sprawdź swoją konfigurację &lt;strong&gt;List zadań&lt;/strong&gt; w ustawieniach!</translation>
+      <translation>Wala ka gid naka pili biska isa sa todo lists&gt;&lt;br /&gt;palihog tan-aw sa imong &lt;strong&gt;todo&lt;/strong&gt;tarungon sa sittings!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5216"/>
       <source>Open QOwnNotes</source>
-      <translation>Otwórz QOwnNotes</translation>
+      <translation>Abrihan ang qownnotes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4968"/>
@@ -1852,539 +1807,527 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
       <location filename="../mainwindow.cpp" line="8408"/>
       <location filename="../mainwindow.cpp" line="8729"/>
       <source>New note</source>
-      <translation>Nowa notatka</translation>
+      <translation>Bag-o nga listahan</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5241"/>
       <source>Recent notes</source>
-      <translation>Ostatnie notatki</translation>
+      <translation>Nagligad nga listahan</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5271"/>
       <source>Show todo lists</source>
-      <translation>Pokaż listę rzeczy do zrobienia (TODO)</translation>
+      <translation>Ipakita ang todo nga listahan</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5282"/>
       <source>Recent tasks</source>
-      <translation>Ostatnie zadania</translation>
+      <translation>Nagligad nga gin pa obra</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5314"/>
       <source>Quit</source>
-      <translation>Wyjście</translation>
+      <translation>Untat</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6590"/>
       <source>show notes from all note subfolders (%1)</source>
-      <translation>pokaż notatki z wszystkich podfolderów (%1)</translation>
+      <translation>ipakita ang mga listahan halin sa listahan sang subfolders (%1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6608"/>
       <source>show notes in note root folder (%1)</source>
-      <translation>pokaż notatki w folderze głównym (%1)</translation>
+      <translation>ipakita ang listan sa listahan sang gamot nga polder (%1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="316"/>
       <location filename="../mainwindow.cpp" line="584"/>
       <location filename="../mainwindow.cpp" line="6617"/>
       <source>Note folder</source>
-      <translation>Folder notatek</translation>
+      <translation>Listahan sang polder</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7704"/>
       <source>Copy to note folder</source>
-      <translation>Kopiuj do folderu notatek</translation>
+      <translation>Kopyahon sa listahan nga polder</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7705"/>
       <source>Move to note folder</source>
-      <translation>Przenieś do folderu notatek</translation>
+      <translation>Makadto sa listahan sang polder</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7706"/>
       <source>Copy to this subfolder</source>
-      <translation>Kopiuj do tego podfolderu</translation>
+      <translation>Kopyahon ni sa subfolder</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7707"/>
       <source>Move to this subfolder</source>
-      <translation>Przenieś do tego podfolderu</translation>
+      <translation>Pakadto-on ni sa subfolder</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7758"/>
       <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
-        <numerusform>Przenieść %n wybraną notatkę do podfolderu &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Przenieść %n wybrane notatki do podfolderu &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Przenieść %n wybranych notatek do podfolderu &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>Makadto %n ang gin pili nga listahan(s) sa listahan sang subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Makadto %n ang gin pili nga listahan(s) sa listahan sang subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4244"/>
       <source>Cancel</source>
-      <translation>Anuluj</translation>
+      <translation>Kansel</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7821"/>
       <source>%n note(s) were moved to note subfolder "%2"</source>
-      <translation type="unfinished">
-        <numerusform>%n notatka została przeniesiona do podfolderu „%2”</numerusform>
-        <numerusform>%n notatki zostały przeniesione do podfolderu „%2”</numerusform>
-        <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
-        <numerusform>%n notatek zostało przeniesionych do podfolderu „%2”</numerusform>
+      <translation>
+        <numerusform>%n ang listahan(s) ginbutang sa listahan sang subfolder "%2"</numerusform>
+        <numerusform>%n ang listahan(s) ginbutang sa listahan sang subfolder "%2"</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7842"/>
       <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
-        <numerusform>Skopiować %n wybraną notatkę do podfolderu &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Skopiować %n wybrane notatki do podfolderu &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Skopiować %n wybranych notatek do podfolderu &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>Kopyahon%n ang napili nga listahan(s) para ma lista sa subpolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Kopyahon%n ang napili nga listahan(s) para ma lista sa subpolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7893"/>
       <source>%n note(s) were copied to note subfolder "%2"</source>
-      <translation type="unfinished">
-        <numerusform>%n notatka została skopiowana do podfolderu „%2”</numerusform>
-        <numerusform>%n notatki zostały skopiowane do podfolderu „%2”</numerusform>
-        <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
-        <numerusform>%n notatek zostało skopiowanych do podfolderu „%2”</numerusform>
+      <translation>
+        <numerusform>%n listahan(s) ay nakopy sa listahan sang subpolder "%2"</numerusform>
+        <numerusform>%n listahan(s) ay nakopy sa listahan sang subpolder "%2"</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8455"/>
       <source>Move notes to subfolder...</source>
-      <translation>Przenieś notatki do podfolderu…</translation>
+      <translation>Idugon ang listahan sa subpolder...</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8459"/>
       <source>Copy notes to subfolder...</source>
-      <translation>Kopiuj notatki do podfolderu…</translation>
+      <translation>Kopyahon ang listahan sa subpolder...</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8502"/>
       <source>Open note in external editor</source>
-      <translation>Otwórz notatkę w zewnętrznym edytorze</translation>
+      <translation>Abrihan ang listahan sa gwa sang editor</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8506"/>
       <source>Show note in file manager</source>
-      <translation>Pokaż notatkę w menadżerze plików</translation>
+      <translation>Ipakita ang listahan sang papeles sa manager</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8568"/>
       <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
-      <translation>Jeżeli chcesz zmienić nazwę notatki musisz włączyć opcję zezwalania na inną nazwę notatki niż jej nagłówek.</translation>
+      <translation>Kon gusto mo liwaton ang ngalan sang imo listahan kinanglan paganahon ang opsyon para pasugtan ang listahan sang pilname nga ma iban sa hedline.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8730"/>
       <source>New subfolder</source>
-      <translation>Nowy podfolder</translation>
+      <translation>Bag-o nga subpolder</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8734"/>
       <source>Show folder in file manager</source>
-      <translation>Pokaż folder w menadżerze plików</translation>
+      <translation>Ipakita ang polder sang papeles sa manager</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8770"/>
       <source>Create a new folder</source>
-      <translation>Utwórz nowy folder</translation>
+      <translation>Maghimo sang bag-o nga polder</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8770"/>
       <source>Folder name:</source>
-      <translation>Nazwa folderu:</translation>
+      <translation>Ngalan sang polder:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6551"/>
       <source>show all untagged notes (%1)</source>
-      <translation>pokaż wszystkie notatki bez etykietek (%1)</translation>
+      <translation>ipakita ang tanan nga wala nga tag sa sini nga listahan(%1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6554"/>
       <source>Untagged notes</source>
-      <translation>Notatki bez etykietek</translation>
+      <translation>Wala na tag nga listahan</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8240"/>
       <source>Export current note as HTML file</source>
-      <translation>Eksportuj notatkę jako plik HTML</translation>
+      <translation>I-export ang subong nga listahan nga dw HTML nga papeles</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4403"/>
       <source>Page size</source>
-      <translation>Rozmiar strony</translation>
+      <translation>Kadako-on sang pahina</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="919"/>
       <source>quit toolbar</source>
-      <translation>Pasek zamykania</translation>
+      <translation>halin sa bulutangan sang gamit</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4403"/>
       <source>Page size:</source>
-      <translation>Rozmiar strony:</translation>
+      <translation>Kadako-on sang pahina:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4511"/>
       <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
-      <translation>QOwnNotes będzie zbierać anonimowe dane na temat użytkowania aplikacji, które pomogą ocenić co należy dalej rozwijać, a także by znaleźć i naprawić błędy. Możesz wyłączyć tę opcję w ustawieniach.</translation>
+      <translation type="unfinished">QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4515"/>
       <source>&amp;Ok</source>
-      <translation>&amp;Ok</translation>
+      <translation>&amp;okay</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8425"/>
       <source>&amp;Move notes to...</source>
-      <translation>&amp;Przenieś notatki do...</translation>
+      <translation>&amp;idogon ang listahan sa...</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8426"/>
       <source>&amp;Copy notes to...</source>
-      <translation>Skopiuj notatki do...</translation>
+      <translation>&amp;kopyahon ang listahan sa...</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8467"/>
       <source>&amp;Tag selected notes with...</source>
-      <translation>&amp;Oznacz wybrane notatki etykietką...</translation>
+      <translation>&amp;tag ang napili-an nga listahan sa...</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8489"/>
       <source>&amp;Remove tag from selected notes...</source>
-      <translation>&amp;Usuń etykietkę z wybranych notatek...</translation>
+      <translation>kakson ang tag halin sa gin pili nga listahan...</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8417"/>
       <source>&amp;Remove notes</source>
-      <translation>Usuń notatki</translation>
+      <translation>&amp;kakson ang listahan</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5444"/>
       <source>&amp;Link selected text</source>
-      <translation>Zalinkuj zaznaczony tekst</translation>
+      <translation type="unfinished">&amp;Link selected text</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="840"/>
       <source>Your tasks are being loaded from your server</source>
-      <translation>Twoje zadania są ładowane z serwera</translation>
+      <translation type="unfinished">Your tasks are being loaded from your server</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2315"/>
       <source>Current note was modified externally</source>
-      <translation>Bieżąca notatka została zmodyfikowana w innym programie</translation>
+      <translation type="unfinished">Current note was modified externally</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2397"/>
       <location filename="../mainwindow.cpp" line="4908"/>
       <source>Stored current note to disk</source>
-      <translation>Zapisano bieżącą notatkę na dysk</translation>
+      <translation type="unfinished">Stored current note to disk</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2416"/>
       <source>Note was modified externally: %1</source>
-      <translation>Notatka została zmodyfikowana w innym programie: %1</translation>
+      <translation type="unfinished">Note was modified externally: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2437"/>
       <source>Notes directory was modified externally</source>
-      <translation>Folder notatek został zmodyfikowany przez inny program</translation>
+      <translation type="unfinished">Notes directory was modified externally</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="2503"/>
       <source>Stored %n note(s) to disk</source>
       <translation type="unfinished">
-        <numerusform>Zapisano %n notatkę na dysku</numerusform>
-        <numerusform>Zapisano %n notatki na dysku</numerusform>
         <numerusform>Stored %n note(s) to disk</numerusform>
-        <numerusform>Zapisano %n notatek na dysku</numerusform>
+        <numerusform>Stored %n note(s) to disk</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5454"/>
       <source>Paste HTML or media</source>
-      <translation>Wklej kod html bądź media</translation>
+      <translation type="unfinished">Paste HTML or media</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6521"/>
       <source>show all notes (%1)</source>
-      <translation>Pokaż wszystkie notatki (%1)</translation>
+      <translation>pakita ang tanan nga listahan (%1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6524"/>
       <location filename="../mainwindow.cpp" line="6594"/>
       <source>All notes</source>
-      <translation>Wszystkie notatki</translation>
+      <translation>Tanan nga listahan</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7324"/>
       <source>&amp;Add tag</source>
-      <translation>&amp;Dodaj etykietkę</translation>
+      <translation>&amp;dugangan tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7338"/>
       <source>&amp;Move tags to...</source>
-      <translation>&amp;Przenieś etykietki do...</translation>
+      <translation>&amp;idogon ang listahan sa...</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7373"/>
       <source>Tag could not be created!</source>
-      <translation>Etykietka nie może zostać utworzona!</translation>
+      <translation>Hindi maka obra sang tag!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7558"/>
       <source>Move to this tag</source>
-      <translation>Przenieś do tej etykietki</translation>
+      <translation>Idogon sa ini nga tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7608"/>
       <source>Tag this</source>
-      <translation>Oznacz to</translation>
+      <translation>I-tag ni</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7638"/>
       <source>Cannot move tag '%1' to this tag</source>
-      <translation>Nie można przenieść '%1' do tej etykietki</translation>
+      <translation>Hindi ma idog ini nga tag '%1' sa ini nga tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7649"/>
       <source>Moved tag '%1' to new tag</source>
-      <translation>Przeniesiono '%1' do nowej etykietki</translation>
+      <translation>Idogon ini nga tag '%1' sa bag-o nga tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6779"/>
       <source>show all notes tagged with '%1' (%2)</source>
-      <translation>pokaż wszystkie notatki oznaczone '%1' (%2)</translation>
+      <translation>ipakita tanan nga listahan sa na taggan sa '%1' (%2)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7195"/>
       <source>remove tag '%1' from note</source>
-      <translation>usuń etykietkę '%1' z notatki</translation>
+      <translation>kakson tag '%1' halin sa listahan</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7335"/>
       <source>&amp;Remove tags</source>
-      <translation>&amp;Usuń etykietki</translation>
+      <translation>&amp;kakson ang tags</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4538"/>
       <source>No selected todo lists!</source>
-      <translation>Nie zaznaczono listy zadań!</translation>
+      <translation>Wala may napili-an sa todo lists!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="555"/>
       <source>Subfolders</source>
-      <translation>Podfoldery</translation>
+      <translation>Subpolders</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="566"/>
       <source>Tags</source>
-      <translation>Etykiety</translation>
+      <translation>Tags</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="575"/>
       <source>Note search</source>
-      <translation>Wyszukiwanie notatek</translation>
+      <translation>Pangita-on nga listahan</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="593"/>
       <source>Note list</source>
-      <translation>Lista notatek</translation>
+      <translation>Listahan sang lista</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="616"/>
       <source>Note edit</source>
-      <translation>Edytuj notatkę</translation>
+      <translation>Na edit nga listahan</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="625"/>
       <source>Note tags</source>
-      <translation>Etykiety notatki</translation>
+      <translation>Listahan sa na tags</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="634"/>
       <source>Note preview</source>
-      <translation>Podgląd notatki</translation>
+      <translation>Listahan sang makita tanan</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="641"/>
       <source>Log</source>
-      <translation>Dziennik zdarzeń</translation>
+      <translation>Log</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="648"/>
       <source>Scripting</source>
-      <translation>Skrypty</translation>
+      <translation>Skrip</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="886"/>
       <source>formatting toolbar</source>
-      <translation>Pasek formatowania</translation>
+      <translation type="unfinished">formatting toolbar</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="895"/>
       <source>inserting toolbar</source>
-      <translation>Pasek wstawiania</translation>
+      <translation type="unfinished">inserting toolbar</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="902"/>
       <source>encryption toolbar</source>
-      <translation>Pasek szyfrowania</translation>
+      <translation type="unfinished">encryption toolbar</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="909"/>
       <source>window toolbar</source>
-      <translation>Pasek widoku</translation>
+      <translation type="unfinished">window toolbar</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="914"/>
       <source>custom action toolbar</source>
-      <translation>Pasek akcji niestandardowych</translation>
+      <translation type="unfinished">custom action toolbar</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="934"/>
       <source>Workspace selector</source>
-      <translation>Wybór obszaru roboczego</translation>
+      <translation type="unfinished">Workspace selector</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1066"/>
       <source>Show %1 panel</source>
-      <translation>Pokaż panel %1</translation>
+      <translation type="unfinished">Show %1 panel</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1109"/>
       <source>Show %1</source>
-      <translation>Pokaż %1</translation>
+      <translation type="unfinished">Show %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1879"/>
       <source>show notes in folder '%1' (%2)</source>
-      <translation>pokaż notatki w folderze '%1' (%2)</translation>
+      <translation type="unfinished">show notes in folder '%1' (%2)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1919"/>
       <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
-      <translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;ostatnio zmodyfikowany: %2</translation>
+      <translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1924"/>
       <source>&lt;br /&gt;path: %1</source>
-      <translation>&lt;br /&gt;ścieżka: %1</translation>
+      <translation type="unfinished">&lt;br /&gt;path: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2086"/>
       <source>Toolbar could not be loaded without name</source>
-      <translation>Nie można załadować paska narzędzi bez nazwy</translation>
+      <translation type="unfinished">Toolbar could not be loaded without name</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2341"/>
       <source>Overwriting external changes of: %1</source>
-      <translation>Nadpisz zewnętrzne zmiany w: %1</translation>
+      <translation type="unfinished">Overwriting external changes of: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2363"/>
       <source>Loading external changes from: %1</source>
-      <translation>Ładowanie zewnętrznych zmian z: %1</translation>
+      <translation type="unfinished">Loading external changes from: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2398"/>
       <location filename="../mainwindow.cpp" line="4909"/>
       <source>Current note could not be stored to disk</source>
-      <translation>Bieżąca notatka nie może zostać zapisana na dysku</translation>
+      <translation type="unfinished">Current note could not be stored to disk</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2559"/>
       <source>Line numbers</source>
-      <translation>Numery linii</translation>
+      <translation type="unfinished">Line numbers</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2569"/>
       <source>Click here to see what has changed and to be able to update to the latest version</source>
-      <translation>Kliknij tutaj, aby zobaczyć, co się zmieniło i aby móc zaktualizować do najnowszej wersji</translation>
+      <translation type="unfinished">Click here to see what has changed and to be able to update to the latest version</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4030"/>
       <source>%n note(s) were tagged with "%2"</source>
       <translation type="unfinished">
-        <numerusform>%n notatka została oznaczona tagiem „%2”</numerusform>
-        <numerusform>%n notatki zostały oznaczone tagiem „%2”</numerusform>
         <numerusform>%n note(s) were tagged with "%2"</numerusform>
-        <numerusform>%n notatek zostało oznaczonych tagiem „%2”</numerusform>
+        <numerusform>%n note(s) were tagged with "%2"</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4968"/>
       <source>Note headline</source>
-      <translation>Nagłówek notatki</translation>
+      <translation type="unfinished">Note headline</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6289"/>
       <source>Downloading images finished</source>
-      <translation>Pobieranie obrazów zakończone</translation>
+      <translation type="unfinished">Downloading images finished</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6428"/>
       <source>Increased font size to %1 pt</source>
-      <translation>Zwiększ rozmiar czcionki do %1 pt</translation>
+      <translation type="unfinished">Increased font size to %1 pt</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6445"/>
       <source>Decreased font size to %1 pt</source>
-      <translation>Zmniejsz rozmiar czcionki do %1 pt</translation>
+      <translation type="unfinished">Decreased font size to %1 pt</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4516"/>
       <location filename="../mainwindow.cpp" line="4542"/>
       <location filename="../mainwindow.cpp" line="8571"/>
       <source>Open &amp;settings</source>
-      <translation>Otwórz u&amp;stawienia</translation>
+      <translation type="unfinished">Open &amp;settings</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1411"/>
       <source>leave</source>
-      <translation>wyjdź</translation>
+      <translation>halin</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1414"/>
       <source>leave distraction free mode</source>
-      <translation>wyjdź z trybu bez rozpraszania</translation>
+      <translation type="unfinished">leave distraction free mode</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5625"/>
       <source>Select image to insert</source>
-      <translation>Zaznacz obraz do wstawienia</translation>
+      <translation type="unfinished">Select image to insert</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5757"/>
       <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
-      <translation>Wpisz &lt;strong&gt;hasło&lt;/strong&gt; aby zaszyfrować notatkę.&lt;br /&gt;Pamiętaj, aby  &lt;strong&gt;zapamiętać&lt;/strong&gt; hasło aby móc odczytać zawartość notatki&lt;br /&gt; a także, że możesz ją odczytać  &lt;strong&gt;tylko w QOwnNotes&lt;/strong&gt;!</translation>
+      <translation type="unfinished">Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5812"/>
       <source>Decrypt note and store it as plain text</source>
-      <translation>Odszyfruj notatkę i zapisz odkrytym tekstem</translation>
+      <translation type="unfinished">Decrypt note and store it as plain text</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5817"/>
       <source>&amp;Decrypt</source>
-      <translation>Odszyfruj</translation>
+      <translation type="unfinished">&amp;Decrypt</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5842"/>
       <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
-      <translation>&lt;br /&gt;Będziesz mógł edytować zaszyfrowaną notatkę.</translation>
+      <translation type="unfinished">&lt;br /&gt;You will be able to edit your encrypted note.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5899"/>
       <source>Export current note as Markdown file</source>
-      <translation>Exportuj notatkę jako plik Markdown</translation>
+      <translation type="unfinished">Export current note as Markdown file</translation>
     </message>
   </context>
   <context>
@@ -2392,7 +2335,7 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message>
       <location filename="../widgets/navigationwidget.cpp" line="99"/>
       <source>headline %1</source>
-      <translation>Nagłówek %1</translation>
+      <translation type="unfinished">headline %1</translation>
     </message>
   </context>
   <context>
@@ -2400,7 +2343,7 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message>
       <location filename="../dialogs/notedialog.ui" line="14"/>
       <source>Note</source>
-      <translation>Notatka</translation>
+      <translation>Listahan</translation>
     </message>
   </context>
   <context>
@@ -2408,42 +2351,42 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="17"/>
       <source>Note was modified externally!</source>
-      <translation>Notatka została zmodyfikowana w innym programie!</translation>
+      <translation>Ang listahan gin liwat sa gwa!</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="41"/>
       <source>The current note was modified outside of this application!</source>
-      <translation>Bieżąca notatka została zmodyfikowana poza tą aplikacją!</translation>
+      <translation type="unfinished">The current note was modified outside of this application!</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="48"/>
       <source>Differences:</source>
-      <translation>Różnice:</translation>
+      <translation type="unfinished">Differences:</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="76"/>
       <source>Always accept external changes in the future</source>
-      <translation>W przyszłości zawsze akceptuj zewnętrzne zmiany</translation>
+      <translation>Permi batuna ang kaliwatan sa gwa para buwas</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="83"/>
       <source>Accept external changes?</source>
-      <translation>Zaakceptować zewnętrzne zmiany?</translation>
+      <translation>Batuna ang kaliwatan sa gwa?</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="69"/>
       <source>Ignore all external modifications in the future</source>
-      <translation>Ignoruj wszystkie zewnętrzne zmiany w przyszłości</translation>
+      <translation>Hindi pag sapaka ang kaliwatan sa gwa para buas</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.cpp" line="32"/>
       <source>Yes</source>
-      <translation>Tak</translation>
+      <translation>Oo</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.cpp" line="37"/>
       <source>No</source>
-      <translation>Nie</translation>
+      <translation>Hindi</translation>
     </message>
   </context>
   <context>
@@ -2451,41 +2394,39 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="14"/>
       <source>Orphaned images</source>
-      <translation>Porzucone obrazy</translation>
+      <translation type="unfinished">Orphaned images</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="80"/>
       <source>Delete selected images</source>
-      <translation>Usuń wybrane obrazy</translation>
+      <translation>Erason ang ginpili nga imahe</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="83"/>
       <source>Delete</source>
-      <translation>Usuń</translation>
+      <translation>Erason</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="132"/>
       <source>Images that are not used in notes:</source>
-      <translation>Obrazy nie używane w notatkach:</translation>
+      <translation>Mga imahe nga wala nagamit sa listahan:</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.cpp" line="55"/>
       <source>Last modified at %1</source>
-      <translation>Ostatnio zmodyfikowane o %1</translation>
+      <translation>Ulihi nga ginliwat sa %1</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.cpp" line="114"/>
       <source>Delete selected files</source>
-      <translation>Usuń zaznaczone obrazy</translation>
+      <translation>Gin eras ang ginpili nga papeles</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/orphanedimagesdialog.cpp" line="115"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczony obraz?</numerusform>
-        <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczone obrazy?</numerusform>
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
-        <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczonych obrazów?</numerusform>
+      <translation>
+        <numerusform>Kakson&lt;strong&gt;%n&lt;/strong&gt;ang napili-an nga papeles(s)?</numerusform>
+        <numerusform>Kakson&lt;strong&gt;%n&lt;/strong&gt;ang napili-an nga papeles(s)?</numerusform>
       </translation>
     </message>
   </context>
@@ -2494,93 +2435,93 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message>
       <location filename="../services/owncloudservice.cpp" line="183"/>
       <source>Username / password error</source>
-      <translation>Błędne hasło lub nazwa użytkownika</translation>
+      <translation>Ngalan sang naga gamit/ hindi amo ang password</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="184"/>
       <source>Your calendar username or password is incorrect!</source>
-      <translation>Nazwa użytkownika lub hasło do Twojego kalendarza jest nieprawidłowa!</translation>
+      <translation>Ang ngalan sang naga gamit sa imong kalendaryo ukon password hindi amo!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="504"/>
       <source>API app version too low</source>
-      <translation>Wersja aplikacji API jest zbyt niska</translation>
+      <translation>API app nga bersyon ay pinaka nubo</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="505"/>
       <source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
-      <translation>Proszę rozważyć aktualizację aplikacji QOwnNotesAPI na serwerze, twoja wersja %1 jest zbyt niska i może powodować problemy z QOwnNotes.</translation>
+      <translation type="unfinished">Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="967"/>
       <source>ownCloud server connection error</source>
-      <translation>Błąd połączenia z serwerem ownCloud</translation>
+      <translation type="unfinished">ownCloud server connection error</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="971"/>
       <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
-      <translation>Błąd serwera ownCloud: &lt;strong&gt;%1&lt;/strong&gt; &lt; br /&gt; Sprawdź konfigurację ownCloud.</translation>
+      <translation type="unfinished">ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="987"/>
       <source>You need to setup your ownCloud server!</source>
-      <translation>Musisz skonfigurować swój serwer ownCloud!</translation>
+      <translation type="unfinished">You need to setup your ownCloud server!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="993"/>
       <source>Open &amp;settings</source>
-      <translation>Otwórz u&amp;stawienia</translation>
+      <translation type="unfinished">Open &amp;settings</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="993"/>
       <source>&amp;Cancel</source>
-      <translation>Anuluj</translation>
+      <translation type="unfinished">&amp;Cancel</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1038"/>
       <source>Done with loading note versions</source>
-      <translation>Zakończono ładowanie wersji notatki</translation>
+      <translation type="unfinished">Done with loading note versions</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1077"/>
       <source>No versions found</source>
-      <translation>Nie znaleziono wersji</translation>
+      <translation type="unfinished">No versions found</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1078"/>
       <source>There are no versions for this note or the note wasn't found on the server.</source>
-      <translation>Nie znaleziono żadnej wersji tej notatki lub nie ma notatki na serwerze.</translation>
+      <translation type="unfinished">There are no versions for this note or the note wasn't found on the server.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1099"/>
       <source>Done with loading trashed notes</source>
-      <translation>Zakończono ładowanie notatek w koszu</translation>
+      <translation type="unfinished">Done with loading trashed notes</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1140"/>
       <source>No trashed notes</source>
-      <translation>Brak skasowanych notatek</translation>
+      <translation type="unfinished">No trashed notes</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1141"/>
       <source>No trashed notes were found on the server.</source>
-      <translation>Nie znaleziono żadnej skasowanej notatki na serwerze.</translation>
+      <translation type="unfinished">No trashed notes were found on the server.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1164"/>
       <location filename="../services/owncloudservice.cpp" line="1190"/>
       <source>Error while loading todo lists!</source>
-      <translation>Błąd podczas ładowania listy zadań!</translation>
+      <translation type="unfinished">Error while loading todo lists!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1165"/>
       <source>Your CalDAV server didn't reply anything!</source>
-      <translation>Twój serwer CalDAV nie przesłał żadnej odpowiedzi!</translation>
+      <translation type="unfinished">Your CalDAV server didn't reply anything!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1191"/>
       <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation>Komunikat o błędzie z Twojego serwera CalDAV: &lt;strong&gt;%1&lt;/strong&gt;</translation>
+      <translation type="unfinished">Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</translation>
     </message>
   </context>
   <context>
@@ -2588,27 +2529,27 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message>
       <location filename="../dialogs/passworddialog.ui" line="14"/>
       <source>Please enter your password</source>
-      <translation>Wpisz swoje hasło</translation>
+      <translation type="unfinished">Please enter your password</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="24"/>
       <source>Enter your password:</source>
-      <translation>Wpisz swoje hasło:</translation>
+      <translation type="unfinished">Enter your password:</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="34"/>
       <source>Password</source>
-      <translation>Hasło</translation>
+      <translation type="unfinished">Password</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="44"/>
       <source>Re-enter password</source>
-      <translation>Wprowadź hasło ponownie</translation>
+      <translation type="unfinished">Re-enter password</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="54"/>
       <source>Passwords don't match!</source>
-      <translation>Podane hasła są różne!</translation>
+      <translation type="unfinished">Passwords don't match!</translation>
     </message>
   </context>
   <context>
@@ -2616,12 +2557,12 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message>
       <location filename="../entities/notefolder.cpp" line="455"/>
       <source>default</source>
-      <translation>Domyślny</translation>
+      <translation type="unfinished">default</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="924"/>
       <source>Could not store note file: %1 - Error message: %2</source>
-      <translation>Ni można zapisać pliku notatki: %1 – komunikat błędu: %2</translation>
+      <translation type="unfinished">Could not store note file: %1 - Error message: %2</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="993"/>
@@ -2636,43 +2577,41 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message>
       <location filename="../entities/note.cpp" line="1783"/>
       <source>Could not read image file: %1</source>
-      <translation>Nie można odczytać pliku obrazu: %1</translation>
+      <translation type="unfinished">Could not read image file: %1</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="2269"/>
       <source>Note filename changed</source>
-      <translation>Nazwa pliku notatki została zmieniona</translation>
+      <translation type="unfinished">Note filename changed</translation>
     </message>
     <message numerus="yes">
       <location filename="../entities/note.cpp" line="2270"/>
       <source>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
       <translation type="unfinished">
-        <numerusform>Wykryto zmianę nazwy notatki. Czy chcesz zamienić wszystkie wystąpienia odnośnika &lt;strong&gt;%1&lt;/strong&gt; na &lt;strong&gt;%2&lt;/strong&gt; w &lt;strong&gt;%n&lt;/strong&gt; notatce?</numerusform>
-        <numerusform>Wykryto zmianę nazwy notatki. Czy chcesz zamienić wszystkie wystąpienia odnośnika &lt;strong&gt;%1&lt;/strong&gt; na &lt;strong&gt;%2&lt;/strong&gt; we wszystkich &lt;strong&gt;%n&lt;/strong&gt; notatkach?</numerusform>
         <numerusform>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
-        <numerusform>Wykryto zmianę nazwy notatki. Czy chcesz zamienić wszystkie wystąpienia odnośnika &lt;strong&gt;%1&lt;/strong&gt; na &lt;strong&gt;%2&lt;/strong&gt; we wszystkich &lt;strong&gt;%n&lt;/strong&gt; notatkach?</numerusform>
+        <numerusform>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../helpers/toolbarcontainer.cpp" line="37"/>
       <location filename="../helpers/toolbarcontainer.cpp" line="112"/>
       <source>Unknown action %1</source>
-      <translation>Nierozpoznana akcja %1</translation>
+      <translation type="unfinished">Unknown action %1</translation>
     </message>
     <message>
       <location filename="../helpers/toolbarcontainer.cpp" line="94"/>
       <source>Workspace selector</source>
-      <translation>Wybór obszaru roboczego</translation>
+      <translation type="unfinished">Workspace selector</translation>
     </message>
     <message>
       <location filename="../utils/gui.cpp" line="171"/>
       <source>Don't ask again!</source>
-      <translation>Nie pytaj ponownie!</translation>
+      <translation type="unfinished">Don't ask again!</translation>
     </message>
     <message>
       <location filename="../utils/gui.cpp" line="171"/>
       <source>Don't show again!</source>
-      <translation>Nie pokazuj ponownie!</translation>
+      <translation type="unfinished">Don't show again!</translation>
     </message>
   </context>
   <context>
@@ -2685,7 +2624,7 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="52"/>
       <source>Find:</source>
-      <translation>Znajdź:</translation>
+      <translation type="unfinished">Find:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="32"/>
@@ -2715,42 +2654,42 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="127"/>
       <source>Replace:</source>
-      <translation>Zastąp:</translation>
+      <translation type="unfinished">Replace:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="156"/>
       <source>Plain text</source>
-      <translation>Zwykły tekst</translation>
+      <translation type="unfinished">Plain text</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="161"/>
       <source>Whole words</source>
-      <translation>Całe wyrazy</translation>
+      <translation type="unfinished">Whole words</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="166"/>
       <source>Regular expression</source>
-      <translation>Wyrażenie regularne</translation>
+      <translation type="unfinished">Regular expression</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="187"/>
       <source>Replace</source>
-      <translation>Zastąp</translation>
+      <translation type="unfinished">Replace</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="197"/>
       <source>Replace All</source>
-      <translation>Zastąp wszystko</translation>
+      <translation type="unfinished">Replace All</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="210"/>
       <source>Mode:</source>
-      <translation>Tryb:</translation>
+      <translation type="unfinished">Mode:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="220"/>
       <source>Match case sensitive</source>
-      <translation>Uwzględnij wielkość liter</translation>
+      <translation type="unfinished">Match case sensitive</translation>
     </message>
   </context>
   <context>
@@ -2758,77 +2697,77 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="32"/>
       <source>replace text</source>
-      <translation>Zastąp tekst</translation>
+      <translation type="unfinished">replace text</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="52"/>
       <source>Find:</source>
-      <translation>Znajdź:</translation>
+      <translation type="unfinished">Find:</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="62"/>
       <source>close search</source>
-      <translation>zamknij wyszukiwanie</translation>
+      <translation type="unfinished">close search</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="79"/>
       <source>find in text</source>
-      <translation>znajdź w tekście</translation>
+      <translation type="unfinished">find in text</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="86"/>
       <source>search forward</source>
-      <translation>szukaj w przód</translation>
+      <translation type="unfinished">search forward</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="103"/>
       <source>search backward</source>
-      <translation>szukaj w tył</translation>
+      <translation type="unfinished">search backward</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="120"/>
       <source>replace with</source>
-      <translation>zastąp na</translation>
+      <translation type="unfinished">replace with</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="127"/>
       <source>Replace:</source>
-      <translation>Zastąp:</translation>
+      <translation type="unfinished">Replace:</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="156"/>
       <source>Plain text</source>
-      <translation>Zwykły tekst</translation>
+      <translation type="unfinished">Plain text</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="161"/>
       <source>Whole words</source>
-      <translation>Całe wyrazy</translation>
+      <translation type="unfinished">Whole words</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="166"/>
       <source>Regular expression</source>
-      <translation>Wyrażenie regularne</translation>
+      <translation type="unfinished">Regular expression</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="187"/>
       <source>Replace</source>
-      <translation>Zastąp</translation>
+      <translation type="unfinished">Replace</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="197"/>
       <source>Replace All</source>
-      <translation>Zastąp wszystko</translation>
+      <translation type="unfinished">Replace All</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="210"/>
       <source>Mode:</source>
-      <translation>Tryb:</translation>
+      <translation type="unfinished">Mode:</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="220"/>
       <source>Match case sensitive</source>
-      <translation>Uwzględnij wielkość liter</translation>
+      <translation type="unfinished">Match case sensitive</translation>
     </message>
   </context>
   <context>
@@ -2836,29 +2775,30 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message>
       <location filename="../services/databaseservice.cpp" line="77"/>
       <source>Cannot open memory database</source>
-      <translation>Nie można otworzyć bazy danych (w pamięci)</translation>
+      <translation type="unfinished">Cannot open memory database</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="78"/>
       <source>Unable to establish a memory database connection.</source>
-      <translation>Nie można ustanowić połączenia z bazą danych w pamięci.</translation>
+      <translation type="unfinished">Unable to establish a memory database connection.</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="94"/>
       <source>Cannot open disk database</source>
-      <translation>Nie można otworzyć bazy danych (na dysku)</translation>
+      <translation type="unfinished">Cannot open disk database</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="95"/>
       <location filename="../services/databaseservice.cpp" line="117"/>
       <source>Unable to establish a database connection with file '%1'.
 Are the folder and the file writeable?</source>
-      <translation>Nie można ustanowić połączenia z bazą danych z pliku '%1'. czy folder i plik są zapisywalne?</translation>
+      <translation type="unfinished">Unable to establish a database connection with file '%1'.
+Are the folder and the file writeable?</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="116"/>
       <source>Cannot open note folder database</source>
-      <translation>Nie można otworzyć bazy danych (w pliku)</translation>
+      <translation type="unfinished">Cannot open note folder database</translation>
     </message>
   </context>
   <context>
@@ -2866,161 +2806,162 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="14"/>
       <source>Script repository</source>
-      <translation>Repozytorium skryptów</translation>
+      <translation type="unfinished">Script repository</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="55"/>
       <source>To search for a script please enter your query text and press &lt;i&gt;Return&lt;/i&gt;.</source>
-      <translation>Do wyszukiwania dla skryptu wpisz tekst kwerendy i naciśnij klawisz &lt;i&gt;Return/Enter&lt;/i&gt;.</translation>
+      <translation type="unfinished">To search for a script please enter your query text and press &lt;i&gt;Return&lt;/i&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="127"/>
       <source>Currently installed version:</source>
-      <translation>Aktualnie zainstalowana wersja:</translation>
+      <translation type="unfinished">Currently installed version:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="278"/>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="335"/>
       <source>Installs the script</source>
-      <translation>Instaluje skrypt</translation>
+      <translation type="unfinished">Installs the script</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="281"/>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="334"/>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="395"/>
       <source>Install</source>
-      <translation>Zainstaluj</translation>
+      <translation type="unfinished">Install</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="228"/>
       <source>Version:</source>
-      <translation>Wersja:</translation>
+      <translation type="unfinished">Version:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="202"/>
       <source>Repository:</source>
-      <translation>Repozytorium:</translation>
+      <translation type="unfinished">Repository:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="137"/>
       <source>Minimum app version:</source>
-      <translation>Minimalna wersja aplikacji:</translation>
+      <translation type="unfinished">Minimum app version:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="413"/>
       <source>Name</source>
-      <translation>Nazwa</translation>
+      <translation type="unfinished">Name</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="428"/>
       <source>Enter your query text</source>
-      <translation>Wprowadź tekst kwerendy</translation>
+      <translation type="unfinished">Enter your query text</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="431"/>
       <source>Find script</source>
-      <translation>Znajdź skrypt</translation>
+      <translation type="unfinished">Find script</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="39"/>
       <source>Script updates</source>
-      <translation>Aktualizacje skryptu</translation>
+      <translation type="unfinished">Script updates</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="40"/>
       <source>All scripts are up-to-date.</source>
-      <translation>Wszystkie skrypty są aktualne.</translation>
+      <translation type="unfinished">All scripts are up-to-date.</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="305"/>
       <source>Authors</source>
-      <translation>Autorzy</translation>
+      <translation type="unfinished">Authors</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="305"/>
       <source>Author</source>
-      <translation>Autor</translation>
+      <translation type="unfinished">Author</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="308"/>
       <source>Supported platforms</source>
-      <translation>Obsługiwane platformy</translation>
+      <translation type="unfinished">Supported platforms</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="309"/>
       <source>Supported platform</source>
-      <translation>Obsługiwana platforma</translation>
+      <translation type="unfinished">Supported platform</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="312"/>
       <source>Open repository</source>
-      <translation>Otwarte repozytorium</translation>
+      <translation type="unfinished">Open repository</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="323"/>
       <source>Update</source>
-      <translation>Aktualizuj</translation>
+      <translation type="unfinished">Update</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="324"/>
       <source>Updates the script</source>
-      <translation>Aktualizuje skrypt</translation>
+      <translation type="unfinished">Updates the script</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="326"/>
       <source>Reinstall</source>
-      <translation>Zainstaluj ponownie</translation>
+      <translation type="unfinished">Reinstall</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="327"/>
       <source>Reinstalls the script</source>
-      <translation>Instaluje ponownie skrypt</translation>
+      <translation type="unfinished">Reinstalls the script</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="392"/>
       <source>Platform not supported!</source>
-      <translation>Nie obsługiwana platforma!</translation>
+      <translation type="unfinished">Platform not supported!</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="393"/>
       <source>Your platform is not supported by this script!
 Do you want to install it anyway?</source>
-      <translation>Twoja platforma nie jest obsługiwany przez ten skrypt! Czy chcesz go, mimo wszystko, zainstalować?</translation>
+      <translation type="unfinished">Your platform is not supported by this script!
+Do you want to install it anyway?</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="395"/>
       <source>Cancel</source>
-      <translation>Anuluj</translation>
+      <translation type="unfinished">Cancel</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="403"/>
       <source>Update app</source>
-      <translation>Aktualizuj aplikację</translation>
+      <translation type="unfinished">Update app</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="404"/>
       <source>Please don't forget to update your installation of QOwnNotes to make this script work!</source>
-      <translation>Proszę nie zapomnij zaktualizować QOwnNotes aby ten skrypt zadziałał!</translation>
+      <translation type="unfinished">Please don't forget to update your installation of QOwnNotes to make this script work!</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="471"/>
       <source>Install successful</source>
-      <translation>Instalacja powiodła się</translation>
+      <translation type="unfinished">Install successful</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="472"/>
       <source>The script was successfully installed!</source>
-      <translation>Skrypt został pomyślnie zainstalowany!</translation>
+      <translation type="unfinished">The script was successfully installed!</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="479"/>
       <source>Download failed</source>
-      <translation>Pobieranie nie powiodło się</translation>
+      <translation type="unfinished">Download failed</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="480"/>
       <source>The script could not be downloaded!</source>
-      <translation>Nie można pobrać skryptu!</translation>
+      <translation type="unfinished">The script could not be downloaded!</translation>
     </message>
   </context>
   <context>
@@ -3028,12 +2969,12 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../widgets/scriptsettingwidget.ui" line="86"/>
       <source>The setting name</source>
-      <translation>Nazwa ustawienia</translation>
+      <translation type="unfinished">The setting name</translation>
     </message>
     <message>
       <location filename="../widgets/scriptsettingwidget.cpp" line="165"/>
       <source>Please select a file</source>
-      <translation>Wybierz plik</translation>
+      <translation type="unfinished">Please select a file</translation>
     </message>
   </context>
   <context>
@@ -3041,7 +2982,7 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../services/scriptingservice.cpp" line="243"/>
       <source>file doesn't exist</source>
-      <translation>plik nie istnieje</translation>
+      <translation type="unfinished">file doesn't exist</translation>
     </message>
   </context>
   <context>
@@ -3049,87 +2990,87 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="26"/>
       <source>Settings</source>
-      <translation>Ustawienia</translation>
+      <translation type="unfinished">Settings</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="120"/>
       <source>Note folders</source>
-      <translation>Foldery notatek</translation>
+      <translation type="unfinished">Note folders</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="395"/>
       <source>Your note folders</source>
-      <translation>Twoje foldery notatek</translation>
+      <translation type="unfinished">Your note folders</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="462"/>
       <source>&amp;Add folder</source>
-      <translation>&amp;Dodaj folder</translation>
+      <translation type="unfinished">&amp;Add folder</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="486"/>
       <source>&amp;Remove folder</source>
-      <translation>Usuń folder</translation>
+      <translation type="unfinished">&amp;Remove folder</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="700"/>
       <source>This name will be viewed in all the menus.</source>
-      <translation>Ta nazwa będzie widoczne we wszystkich menu.</translation>
+      <translation type="unfinished">This name will be viewed in all the menus.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="542"/>
       <source>Set the ownCloud path where the note folder path will be synced to on your ownCloud server.</source>
-      <translation>Wprowadź ścieżkę notatek, która ma być synchronizowana, na serwerze ownCloud.</translation>
+      <translation type="unfinished">Set the ownCloud path where the note folder path will be synced to on your ownCloud server.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="716"/>
       <source>Use as active note folder</source>
-      <translation>Ustaw jako aktywny folder notatek</translation>
+      <translation type="unfinished">Use as active note folder</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="819"/>
       <source>Your ownCloud server</source>
-      <translation>Twój serwer ownCloud</translation>
+      <translation type="unfinished">Your ownCloud server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="943"/>
       <source>ownCloud server url:</source>
-      <translation>Link do serwera ownCloud:</translation>
+      <translation type="unfinished">ownCloud server url:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="965"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wpisz adres swojego serwera ownCloud, na przykład: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1003"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wpisz swoją nazwę użytkownika na serwerze ownCloud.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1038"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wpisz swoje hasło.&lt;br/&gt;Hasło zostanie zapisane jako zaszyfrowane wraz z innymi ustawieniami, jednak nie jest to bezpieczne.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1116"/>
       <source>connection to web server</source>
-      <translation>połączenie z serwerem</translation>
+      <translation type="unfinished">connection to web server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1133"/>
       <source>ownCloud server detected</source>
-      <translation>serwer ownCloud wykryty</translation>
+      <translation type="unfinished">ownCloud server detected</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1167"/>
       <source>connection to QOwnNotesAPI</source>
-      <translation>połączenie z QOwnNotesAPI</translation>
+      <translation type="unfinished">connection to QOwnNotesAPI</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1150"/>
       <source>username and password correct</source>
-      <translation>użytkownik i hasło poprawne</translation>
+      <translation type="unfinished">username and password correct</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1106"/>
@@ -3140,341 +3081,341 @@ Do you want to install it anyway?</source>
       <location filename="../dialogs/settingsdialog.ui" line="1191"/>
       <location filename="../dialogs/settingsdialog.ui" line="1208"/>
       <source>unknown</source>
-      <translation>nieznane</translation>
+      <translation type="unfinished">unknown</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1066"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kliknij tutaj by przetestować połączenie z serwerem ownCloud.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1184"/>
       <source>versions app enabled on server</source>
-      <translation>wersjonowanie uruchomione na serwerze</translation>
+      <translation type="unfinished">versions app enabled on server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1201"/>
       <source>trash app enabled on server</source>
-      <translation>kosz uruchomiony na serwerze</translation>
+      <translation type="unfinished">trash app enabled on server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1218"/>
       <source>notes path found on server</source>
-      <translation>notatki znalezione na serwerze</translation>
+      <translation type="unfinished">notes path found on server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="878"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Otwiera &lt;span style=" font-weight:600;"&gt;konfigurację aplikacji&lt;/span&gt; na Twoim serwerze, aby zainstalować bądź uaktualnić QOwnNotesAPI, a także by uruchomić podstawowe aplikacje &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; oraz &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="682"/>
       <source>path</source>
-      <translation>ścieżka</translation>
+      <translation type="unfinished">path</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="518"/>
       <source>Click here to select your local note path</source>
-      <translation>Kliknij tutaj, aby wybrać swoją lokalną ścieżkę notatek</translation>
+      <translation type="unfinished">Click here to select your local note path</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="595"/>
       <source>Click here to select your remote note path on your ownCloud server</source>
-      <translation>Kliknij tutaj aby wybrać zdalną ścieżkę notatek ma Twoim serwerze ownCloud</translation>
+      <translation type="unfinished">Click here to select your remote note path on your ownCloud server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="648"/>
       <source>Click here to use the selected folder from your server as note folder</source>
-      <translation>Kliknij tutaj aby wybrać folder z Twojego serwera jako folder notatek</translation>
+      <translation type="unfinished">Click here to use the selected folder from your server as note folder</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="846"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Musisz także mieć włączone podstawowe aplikacje ownCloud &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; i &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; (to jest ustawienie domyślne).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="859"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or an other desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nadal będziesz także potrzebował &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;oryginalnego klienta synchronizacji ownCloud&lt;/span&gt;&lt;/a&gt; (lub innego desktopowego klienta) aby synchronizować Twoje notatki!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or an other desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="925"/>
       <source>Error Message</source>
-      <translation>Informacja o błędzie</translation>
+      <translation type="unfinished">Error Message</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="144"/>
       <source>Network</source>
-      <translation>Sieć</translation>
+      <translation type="unfinished">Network</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1249"/>
       <source>Proxy Settings</source>
-      <translation>Ustawienia Proxy</translation>
+      <translation type="unfinished">Proxy Settings</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1255"/>
       <source>No Proxy</source>
-      <translation>Brak Proxy</translation>
+      <translation type="unfinished">No Proxy</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1265"/>
       <source>Use system proxy</source>
-      <translation>Używaj domyślnego proxy</translation>
+      <translation type="unfinished">Use system proxy</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1272"/>
       <source>Specify proxy manually as</source>
-      <translation>Określ proxy ręcznie jako</translation>
+      <translation type="unfinished">Specify proxy manually as</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1297"/>
       <source>Host</source>
-      <translation>Host</translation>
+      <translation type="unfinished">Host</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1348"/>
       <source>Proxy server requires authentication</source>
-      <translation>Serwer proxy wymaga autoryzacji</translation>
+      <translation type="unfinished">Proxy server requires authentication</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1405"/>
       <source>SSL Settings</source>
-      <translation>Ustawienia SSL</translation>
+      <translation type="unfinished">SSL Settings</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1411"/>
       <source>Ignore SSL errors</source>
-      <translation>Ignoruj błędy SSL</translation>
+      <translation type="unfinished">Ignore SSL errors</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="156"/>
       <source>Todo</source>
-      <translation>Zadania</translation>
+      <translation type="unfinished">Todo</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1630"/>
       <source>Default ownCloud calendar</source>
-      <translation>Standardowy kalendarz ownCloud</translation>
+      <translation type="unfinished">Default ownCloud calendar</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="168"/>
       <source>Interface</source>
-      <translation>Interfejs</translation>
+      <translation type="unfinished">Interface</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1620"/>
       <source>Other CalDAV server</source>
-      <translation>Inny serwer CalDAV</translation>
+      <translation type="unfinished">Other CalDAV server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2302"/>
       <source>Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</source>
-      <translation>Tylko niektóre kolory zostaną zastosowane, reszta będzie kontrolowana przez ustawienia systemowe. Aby zmiany zostały zastosowane należy uruchomić ponownie program.</translation>
+      <translation type="unfinished">Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2305"/>
       <source>Optimize preview colors for dark mode desktop themes</source>
-      <translation>Optymalizowanie kolorów dla ciemnego trybu kompozycji pulpitu</translation>
+      <translation type="unfinished">Optimize preview colors for dark mode desktop themes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2312"/>
       <source>This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</source>
-      <translation>Ro spowoduje włączenie tryby ciemnego, interfejs oraz ikony zostaną zmodyfikowane. Musisz uruchomić ponownie aplikację aby zmiany odniosły skutek.</translation>
+      <translation type="unfinished">This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2315"/>
       <source>Enable dark mode</source>
-      <translation>Włącz tryb ciemny</translation>
+      <translation type="unfinished">Enable dark mode</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2341"/>
       <location filename="../dialogs/settingsdialog.ui" line="2351"/>
       <location filename="../dialogs/settingsdialog.ui" line="2382"/>
       <source>You need to restart the application to let this setting take effect</source>
-      <translation>Musisz ponownie uruchomić aplikację aby uaktywnić zmiany.</translation>
+      <translation type="unfinished">You need to restart the application to let this setting take effect</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2401"/>
       <source>Item sizes in the main window</source>
-      <translation>Rozmiary elementów w oknie głównym</translation>
+      <translation type="unfinished">Item sizes in the main window</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4170"/>
       <source>Markdown highlighting</source>
-      <translation>Podświetlanie znaczników</translation>
+      <translation type="unfinished">Markdown highlighting</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4176"/>
       <source>Enable markdown highlighting</source>
-      <translation>Włącz podświetlanie znaczników</translation>
+      <translation type="unfinished">Enable markdown highlighting</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1932"/>
       <source>Interface language</source>
-      <translation>Język aplikacji</translation>
+      <translation type="unfinished">Interface language</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1952"/>
       <source>Automatic</source>
-      <translation>Automatyczny</translation>
+      <translation type="unfinished">Automatic</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2029"/>
       <source>English</source>
-      <translation>Angielski</translation>
+      <translation type="unfinished">English</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="240"/>
       <source>Shortcuts</source>
-      <translation>Skróty klawiszowe</translation>
+      <translation type="unfinished">Shortcuts</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3690"/>
       <location filename="../dialogs/settingsdialog.ui" line="3859"/>
       <source>Default font:</source>
-      <translation>Domyślna czcionka:</translation>
+      <translation type="unfinished">Default font:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3732"/>
       <location filename="../dialogs/settingsdialog.ui" line="3883"/>
       <source>Code font:</source>
-      <translation>Czcionka o stałej szerokości:</translation>
+      <translation type="unfinished">Code font:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2515"/>
       <source>Main window shortcuts</source>
-      <translation>Skróty głównego okna</translation>
+      <translation type="unfinished">Main window shortcuts</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3172"/>
       <source>Do this at your own risk!</source>
-      <translation>Robisz to na własną odpowiedzialność!</translation>
+      <translation type="unfinished">Do this at your own risk!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3175"/>
       <source>Ignore all external note folder changes</source>
-      <translation>Ignoruj wszystkie zewnętrzne zmiany folderu notatki</translation>
+      <translation type="unfinished">Ignore all external note folder changes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3652"/>
       <source>No two spaces to do a line break are added here if checked</source>
-      <translation>Po zaznaczeniu, podwójne spacje nie zostaną dodane w celu wymuszenia nowej linii</translation>
+      <translation type="unfinished">No two spaces to do a line break are added here if checked</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3655"/>
       <source>Use GitHub line breaks</source>
-      <translation>Użyj znaków nowego wiersza GitHub</translation>
+      <translation type="unfinished">Use GitHub line breaks</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2018"/>
       <source>German</source>
-      <translation>Niemiecki</translation>
+      <translation type="unfinished">German</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2062"/>
       <source>French</source>
-      <translation>Francuski</translation>
+      <translation type="unfinished">French</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2139"/>
       <source>Polish</source>
-      <translation>Polski</translation>
+      <translation type="unfinished">Polish</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2227"/>
       <source>Chinese</source>
-      <translation>Chiński</translation>
+      <translation type="unfinished">Chinese</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2161"/>
       <source>Portuguese</source>
-      <translation>Portugalski</translation>
+      <translation type="unfinished">Portuguese</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2128"/>
       <source>Dutch</source>
-      <translation>Holenderski</translation>
+      <translation type="unfinished">Dutch</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2106"/>
       <source>Hungarian</source>
-      <translation>Węgierski</translation>
+      <translation type="unfinished">Hungarian</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2040"/>
       <source>Spanish</source>
-      <translation>Hiszpański</translation>
+      <translation type="unfinished">Spanish</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1938"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Jeżeli chcesz pomóc tłumaczyć QOwnNotes lub zaktualizować obecne tłumaczenie przeczytaj: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt;Jak mogę pomóc tłumaczyć QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2286"/>
       <source>Dark mode</source>
-      <translation>Tryb ciemny</translation>
+      <translation type="unfinished">Dark mode</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1465"/>
       <source>Disable tracking of usage data</source>
-      <translation>Wyłącz zbieranie anonimowych danych</translation>
+      <translation type="unfinished">Disable tracking of usage data</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1509"/>
       <source>Usage tracking is done on a private Piwik server.</source>
-      <translation>Zbieranie danych o użytkowaniu jest robione na prywatnym serwerze Piwik.</translation>
+      <translation type="unfinished">Usage tracking is done on a private Piwik server.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1569"/>
       <source>Disable heartbeat</source>
-      <translation>Wyłącz bicie serca</translation>
+      <translation type="unfinished">Disable heartbeat</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2172"/>
       <source>Russian</source>
-      <translation>Rosyjski</translation>
+      <translation type="unfinished">Russian</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1418"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Warto rozważyć uzyskanie bezpłatnego certyfikatu SSL od &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2249"/>
       <source>If you change the language you have to restart the application for the changes to take action.</source>
-      <translation>Musisz zrestartować aplikację, by zmiana języka przyniosła efekt.</translation>
+      <translation type="unfinished">If you change the language you have to restart the application for the changes to take action.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2935"/>
       <source>You need to reload the scripting engine if you modify a script file</source>
-      <translation>Musisz uruchomić ponownie silnik skryptów, jeśli zmodyfikowałeś plik skryptu</translation>
+      <translation type="unfinished">You need to reload the scripting engine if you modify a script file</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2938"/>
       <source>Reload scripting engine</source>
-      <translation>Uruchom ponownie silnik skrytów</translation>
+      <translation type="unfinished">Reload scripting engine</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2928"/>
       <source>Validate script</source>
-      <translation>Sprawdź skrypt</translation>
+      <translation type="unfinished">Validate script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="264"/>
       <source>General</source>
-      <translation>Ogólne</translation>
+      <translation type="unfinished">General</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3100"/>
       <source>Notes</source>
-      <translation>Notatki</translation>
+      <translation type="unfinished">Notes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3123"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Jeśli zaznaczone, będziesz zawsze informowany o zewnętrznych modyfikacjach, nawet jeżeli bieżąca notatka nie była edytowana w ostatnim czasie. Zalecane: &lt;span style=" font-style:italic;"&gt;niezaznaczone&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3192"/>
@@ -3482,167 +3423,167 @@ Do you want to install it anyway?</source>
       <location filename="../dialogs/settingsdialog.ui" line="4763"/>
       <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
-      <translation>Możesz napotkać problemy z synchronizacją ze starszymi wersjami serwera ownCloud, jeśli zejdziesz poniżej 10 sekund. 
-Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translation>
+      <translation type="unfinished">You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
+Just test yourself if you get sync conflicts and set a higher value if so.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2117"/>
       <source>Japanese</source>
-      <translation>Japoński</translation>
+      <translation type="unfinished">Japanese</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3196"/>
       <source>note save interval time [sec]</source>
-      <translation>interwał zapisu notatki [sec]</translation>
+      <translation type="unfinished">note save interval time [sec]</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3126"/>
       <source>Notify about all external modifications of the current note</source>
-      <translation>Informuj o wszystkich zewnętrznych zmianach bieżącej notatki</translation>
+      <translation type="unfinished">Notify about all external modifications of the current note</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3545"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1896"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1905"/>
       <source>Database</source>
-      <translation>Baza danych</translation>
+      <translation type="unfinished">Database</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3561"/>
       <source>Reinitialize Database</source>
-      <translation>Zainicjalizuj ponownie bazę danych</translation>
+      <translation type="unfinished">Reinitialize Database</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3513"/>
       <source>Clear application data and exit</source>
-      <translation>Wyczyść dane aplikacji i wyjdź</translation>
+      <translation type="unfinished">Clear application data and exit</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3519"/>
       <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
-      <translation>Ten przycisk pozwala na wyczyszczenie ustawień, usunięcie lokalnej bazy danych z zadaniami, oraz wyjście z QOwnNotes.</translation>
+      <translation type="unfinished">This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3529"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1965"/>
       <source>Clear app data and exit</source>
-      <translation>Wyczyść dane aplikacji i wyjdź</translation>
+      <translation type="unfinished">Clear app data and exit</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3308"/>
       <source>Update dialog</source>
-      <translation>Okno aktualizacji</translation>
+      <translation type="unfinished">Update dialog</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3388"/>
       <source>Default note file extension</source>
-      <translation>Domyślne rozszerzenie pliku</translation>
+      <translation type="unfinished">Default note file extension</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3473"/>
       <source>External editor</source>
-      <translation>Zewnętrzny edytor</translation>
+      <translation type="unfinished">External editor</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3486"/>
       <source>path to external editor, leave empty for default</source>
-      <translation>ścieżka do zewnętrznego edytora, zostaw puste dla domyślnej wartości</translation>
+      <translation type="unfinished">path to external editor, leave empty for default</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3496"/>
       <location filename="../dialogs/settingsdialog.ui" line="4435"/>
       <source>set external editor</source>
-      <translation>wybierz zewnętrzny edytor</translation>
+      <translation type="unfinished">set external editor</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1434"/>
       <source>App metrics</source>
-      <translation>Zbieranie danych o aplikacji</translation>
+      <translation type="unfinished">App metrics</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1452"/>
       <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</source>
-      <translation>Anonimowe dane dotyczące korzystania z aplikacji pomagają zdecydować, które części QOwnNotes wymagają poprawy, a także pomagają znaleźć i naprawiać błędy. Prosimy o wyłączenie tej opcji tylko, jeżeli nie możesz bez tego żyć.</translation>
+      <translation type="unfinished">Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1484"/>
       <source>This data includes anonymous information about what features of the app are used.</source>
-      <translation>Dane te uwzględniają anonimowe informacje o tym jakie funkcjonalności aplikacji są używane.</translation>
+      <translation type="unfinished">This data includes anonymous information about what features of the app are used.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1538"/>
       <source>App heartbeat</source>
-      <translation>"Bicie serca"</translation>
+      <translation type="unfinished">App heartbeat</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1556"/>
       <source>A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</source>
-      <translation>„Bicie serca” to mały pakiet wysyłany podczas pracy QOwnNotes. Uszczęśliw deweloperów informacją, że ktoś używa QOwnNotes.</translation>
+      <translation type="unfinished">A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2095"/>
       <source>Italian</source>
-      <translation>Włoski</translation>
+      <translation type="unfinished">Italian</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="252"/>
       <source>Scripting</source>
-      <translation>Skrypty</translation>
+      <translation type="unfinished">Scripting</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2582"/>
       <source>Your scripts</source>
-      <translation>Twoje skrypty</translation>
+      <translation type="unfinished">Your scripts</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2666"/>
       <source>&amp;Remove script</source>
-      <translation>&amp;Usuń skrypt</translation>
+      <translation type="unfinished">&amp;Remove script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2945"/>
       <source>Click here to select your QML script</source>
-      <translation>Kliknij tutaj, aby wybrać swój skrypt QML</translation>
+      <translation type="unfinished">Click here to select your QML script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="92"/>
       <source>Find setting</source>
-      <translation>Znajdź ustawienie</translation>
+      <translation type="unfinished">Find setting</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="179"/>
       <source>Editor</source>
-      <translation>Edytor</translation>
+      <translation type="unfinished">Editor</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="190"/>
       <source>Editor fonts &amp; colors</source>
-      <translation>Edytor czcionek i kolorów</translation>
+      <translation type="unfinished">Editor fonts &amp; colors</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="203"/>
       <source>Panels</source>
-      <translation>Panele</translation>
+      <translation type="unfinished">Panels</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="215"/>
       <source>Preview fonts</source>
-      <translation>Czcionki podglądu</translation>
+      <translation type="unfinished">Preview fonts</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="227"/>
       <source>Toolbars</source>
-      <translation>Paski narzędzi</translation>
+      <translation type="unfinished">Toolbars</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="275"/>
       <source>Portable mode</source>
-      <translation>Tryb przenośny</translation>
+      <translation type="unfinished">Portable mode</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="287"/>
       <source>Git versioning</source>
-      <translation>System kontroli wersji Git</translation>
+      <translation type="unfinished">Git versioning</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="299"/>
@@ -3652,79 +3593,79 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="323"/>
       <source>Debug options</source>
-      <translation>Opcje debugowania</translation>
+      <translation type="unfinished">Debug options</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="535"/>
       <source>Path where your notes are stored locally</source>
-      <translation>Lokalna ścieżka przechowywania notatek</translation>
+      <translation type="unfinished">Path where your notes are stored locally</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="545"/>
       <source>"Notes" path on your server</source>
       <extracomment>"Notes" should not be translated</extracomment>
-      <translation>Ścieżka „notatek” na serwerze</translation>
+      <translation type="unfinished">"Notes" path on your server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="651"/>
       <source>&amp;Use as ownCloud path</source>
-      <translation>&amp;Użyj jako ścieżki ownCloud</translation>
+      <translation type="unfinished">&amp;Use as ownCloud path</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="690"/>
       <source>Please select your note folder on your ownCloud server:</source>
-      <translation>Wybierz folder notatek na Twoim serwerze ownCloud:</translation>
+      <translation type="unfinished">Please select your note folder on your ownCloud server:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="723"/>
       <source>ownCloud server:</source>
-      <translation>Serwer ownCloud:</translation>
+      <translation type="unfinished">ownCloud server:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="733"/>
       <source>Path on your ownCloud server:</source>
-      <translation>Ścieżka na twoim serwerze ownCloud:</translation>
+      <translation type="unfinished">Path on your ownCloud server:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="740"/>
       <location filename="../dialogs/settingsdialog.ui" line="2756"/>
       <source>Name:</source>
-      <translation>Nazwa:</translation>
+      <translation type="unfinished">Name:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="747"/>
       <source>Note folder path:</source>
-      <translation>Ścieżka folderu notatek:</translation>
+      <translation type="unfinished">Note folder path:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="754"/>
       <source>Be aware that the ownCloud notes app doesn't support sub-folders!</source>
-      <translation>Należy pamiętać, że aplikacja Notatki ownCloud nie obsługuje podkatalogów!</translation>
+      <translation type="unfinished">Be aware that the ownCloud notes app doesn't support sub-folders!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="757"/>
       <source>Use note sub-folders</source>
-      <translation>Używaj podfolderów notatek</translation>
+      <translation type="unfinished">Use note sub-folders</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="764"/>
       <source>You need to have git installed to make this work!</source>
-      <translation>Aby ta funkcja działała musisz mieć zainstalowany git!</translation>
+      <translation type="unfinished">You need to have git installed to make this work!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="767"/>
       <source>Use git to keep a local history of your notes</source>
-      <translation>Używaj git do lokalnego przechowania historii twoich notatek</translation>
+      <translation type="unfinished">Use git to keep a local history of your notes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="796"/>
       <source>ownCloud support</source>
-      <translation>Wsparcie ownCloud</translation>
+      <translation type="unfinished">ownCloud support</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="802"/>
       <source>Enable ownCloud support</source>
-      <translation>Włącz wsparcie ownCloud</translation>
+      <translation type="unfinished">Enable ownCloud support</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="833"/>
@@ -3735,43 +3676,43 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
       <location filename="../dialogs/settingsdialog.ui" line="981"/>
       <location filename="../dialogs/settingsdialog.ui" line="1707"/>
       <source>Username:</source>
-      <translation>Użytkownik:</translation>
+      <translation type="unfinished">Username:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1006"/>
       <source>Your ownCloud username</source>
-      <translation>Twoja nazwa użytkownika na serwerze ownCloud</translation>
+      <translation type="unfinished">Your ownCloud username</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1016"/>
       <location filename="../dialogs/settingsdialog.ui" line="1742"/>
       <source>Password:</source>
-      <translation>Hasło:</translation>
+      <translation type="unfinished">Password:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1044"/>
       <source>Your ownCloud password</source>
-      <translation>Twoje hasło do serwera ownCloud</translation>
+      <translation type="unfinished">Your ownCloud password</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1072"/>
       <source>&amp;Connect to ownCloud server</source>
-      <translation>&amp;Połącz z serwerem ownCloud</translation>
+      <translation type="unfinished">&amp;Connect to ownCloud server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1099"/>
       <source>Connection status</source>
-      <translation>Status połączenia</translation>
+      <translation type="unfinished">Connection status</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1783"/>
       <source>Select the calendars you want to use for the Todo list</source>
-      <translation>Wybierz kalendarze, których chcesz używać z listą zadań</translation>
+      <translation type="unfinished">Select the calendars you want to use for the Todo list</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1858"/>
       <source>Todo list settings</source>
-      <translation>Ustawienia listy zadań</translation>
+      <translation type="unfinished">Todo list settings</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1864"/>
@@ -3781,17 +3722,17 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1963"/>
       <source>Indonesian</source>
-      <translation>Indonezyjski</translation>
+      <translation type="unfinished">Indonesian</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1974"/>
       <source>Bengali</source>
-      <translation>Bengalski</translation>
+      <translation type="unfinished">Bengali</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1985"/>
       <source>Catalan</source>
-      <translation>Kataloński</translation>
+      <translation type="unfinished">Catalan</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1996"/>
@@ -3811,7 +3752,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2183"/>
       <source>Swedish</source>
-      <translation>Szwedzki</translation>
+      <translation type="unfinished">Swedish</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2194"/>
@@ -3826,17 +3767,17 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2295"/>
       <source>Enable dark mode application icon and tray icon</source>
-      <translation>Włącz tryb ciemny dla ikony aplikacji i ikony zasobnika systemowego</translation>
+      <translation type="unfinished">Enable dark mode application icon and tray icon</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2335"/>
       <source>System tray</source>
-      <translation>Zasobnik systemowy</translation>
+      <translation type="unfinished">System tray</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2344"/>
       <source>Show system tray icon</source>
-      <translation>Pokaż ikonę w zasobniku systemowym</translation>
+      <translation type="unfinished">Show system tray icon</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2354"/>
@@ -3846,27 +3787,27 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2364"/>
       <source>Interface style</source>
-      <translation>Styl interfejsu</translation>
+      <translation type="unfinished">Interface style</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3279"/>
       <source>By default the headline will generated automatically</source>
-      <translation>Domyślnie nagłówek będzie generowany automatycznie</translation>
+      <translation type="unfinished">By default the headline will generated automatically</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3282"/>
       <source>The shortcut to create a new note asks for a headline</source>
-      <translation>Podczas tworzenia nowej notatki pytaj o nagłówek</translation>
+      <translation type="unfinished">The shortcut to create a new note asks for a headline</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3330"/>
       <source>Search engine</source>
-      <translation>Wyszukiwarka</translation>
+      <translation type="unfinished">Search engine</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3352"/>
       <source>Message boxes</source>
-      <translation>Okna komunikatów</translation>
+      <translation type="unfinished">Message boxes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3358"/>
@@ -3882,7 +3823,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4237"/>
       <source>Note-edit cursor width:</source>
-      <translation>Szerokość kursora w edytorze notatek:</translation>
+      <translation type="unfinished">Note-edit cursor width:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4733"/>
@@ -3918,7 +3859,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4223"/>
       <source>Reset the cursor width</source>
-      <translation>Przywróć domyślną szerokość kursora</translation>
+      <translation type="unfinished">Reset the cursor width</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4370"/>
@@ -3950,12 +3891,12 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4151"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sprawdź dostępne &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;formaty daty i czasu&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4287"/>
       <source>Highlight the current line</source>
-      <translation>Podświetl bieżący wiersz</translation>
+      <translation type="unfinished">Highlight the current line</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4463"/>
@@ -3965,35 +3906,35 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4496"/>
       <source>Tags panel</source>
-      <translation>Panel znaczników</translation>
+      <translation type="unfinished">Tags panel</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4525"/>
       <location filename="../dialogs/settingsdialog.ui" line="4601"/>
       <location filename="../dialogs/settingsdialog.ui" line="4650"/>
       <source>Order</source>
-      <translation>Kolejność</translation>
+      <translation type="unfinished">Order</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4531"/>
       <location filename="../dialogs/settingsdialog.ui" line="4607"/>
       <location filename="../dialogs/settingsdialog.ui" line="4659"/>
       <source>Ascending</source>
-      <translation>Rosnąco</translation>
+      <translation type="unfinished">Ascending</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4538"/>
       <location filename="../dialogs/settingsdialog.ui" line="4614"/>
       <location filename="../dialogs/settingsdialog.ui" line="4666"/>
       <source>Descending</source>
-      <translation>Malejąco</translation>
+      <translation type="unfinished">Descending</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4502"/>
       <location filename="../dialogs/settingsdialog.ui" line="4571"/>
       <location filename="../dialogs/settingsdialog.ui" line="4683"/>
       <source>Sort</source>
-      <translation>Sortowanie</translation>
+      <translation type="unfinished">Sort</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4294"/>
@@ -4005,498 +3946,498 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
       <location filename="../dialogs/settingsdialog.ui" line="4577"/>
       <location filename="../dialogs/settingsdialog.ui" line="4689"/>
       <source>Alphabetical</source>
-      <translation>Alfabetycznie</translation>
+      <translation type="unfinished">Alphabetical</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4515"/>
       <source>By last change / use</source>
-      <translation>Według ostatniej zmiany/użycia</translation>
+      <translation type="unfinished">By last change / use</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4548"/>
       <source>Hide 'Find or create tag' search</source>
-      <translation>Ukryj „Znajdź lub utworzyć tag”</translation>
+      <translation type="unfinished">Hide 'Find or create tag' search</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4558"/>
       <source>Note subfolders panel</source>
-      <translation>Panel podfolderów notatki</translation>
+      <translation type="unfinished">Note subfolders panel</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4564"/>
       <source>Show with full path</source>
-      <translation>Pokaż z pełną ścieżką</translation>
+      <translation type="unfinished">Show with full path</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4584"/>
       <location filename="../dialogs/settingsdialog.ui" line="4696"/>
       <source>By last change</source>
-      <translation>Według ostatniej zmiany</translation>
+      <translation type="unfinished">By last change</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4594"/>
       <source>Show root folder name</source>
-      <translation>Pokaż nazwę folderu głównego</translation>
+      <translation type="unfinished">Show root folder name</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4624"/>
       <source>Hide 'Find or create note subfolder' search</source>
-      <translation>Ukryj „Znajdź lub utwórz podfolder notatek”</translation>
+      <translation type="unfinished">Hide 'Find or create note subfolder' search</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4631"/>
       <source>Display note subfolders as full tree</source>
-      <translation>Wyświetlaj podfoldery w formie pełnego drzewa</translation>
+      <translation type="unfinished">Display note subfolders as full tree</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4641"/>
       <source>Notes panel</source>
-      <translation>Panelu notatek</translation>
+      <translation type="unfinished">Notes panel</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2477"/>
       <source>Search script repository</source>
-      <translation>Przeszukaj repozytorium skryptów</translation>
+      <translation type="unfinished">Search script repository</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4386"/>
       <source>You optionally can use "%notePath%" for the path of the note.</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
-      <translation>Opcjonalnie możesz użyć „%notePath%” w celu podstawienia ścieżki notatki.</translation>
+      <translation type="unfinished">You optionally can use "%notePath%" for the path of the note.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4409"/>
       <source>Git client</source>
-      <translation>Klient Git</translation>
+      <translation type="unfinished">Git client</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4425"/>
       <source>Path to git executable:</source>
-      <translation>Ścieżka do pliku wykonywalnego git:</translation>
+      <translation type="unfinished">Path to git executable:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4415"/>
       <source>Path to git client, leave empty for default</source>
-      <translation>Ścieżka do klienta git, pozostaw pole puste aby użyć domyślnej</translation>
+      <translation type="unfinished">Path to git client, leave empty for default</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4334"/>
       <source>Commit interval</source>
-      <translation>Częstotliwość przesyłania wersji</translation>
+      <translation type="unfinished">Commit interval</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4340"/>
       <source>sec</source>
       <extracomment>seconds</extracomment>
-      <translation>sek.</translation>
+      <translation type="unfinished">sec</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4360"/>
       <source>git commit interval time [sec]</source>
-      <translation>Częstotliwość przesyłania wersji git [sec]</translation>
+      <translation type="unfinished">git commit interval time [sec]</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="881"/>
       <source>Open your ownCloud server &amp;Apps page</source>
-      <translation>Otwórz stronę &amp;Aplikacje na Twoim serwerze ownCloud</translation>
+      <translation type="unfinished">Open your ownCloud server &amp;Apps page</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1614"/>
       <source>Which calendar backend do you want to use?</source>
-      <translation>Którego backendu kalendarza chcesz użyć?</translation>
+      <translation type="unfinished">Which calendar backend do you want to use?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1627"/>
       <source>For most current ownCloud and Nextcloud installations</source>
-      <translation>Dla najnowszych wersji ownCloud i Nextcloud</translation>
+      <translation type="unfinished">For most current ownCloud and Nextcloud installations</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1647"/>
       <source>For older versions of ownCloud where the default setting doesn't work</source>
-      <translation>Dla starszych wersji ownCloud, w przypadku których domyślne ustawienia nie działają</translation>
+      <translation type="unfinished">For older versions of ownCloud where the default setting doesn't work</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1650"/>
       <source>Legacy ownCloud calendar</source>
-      <translation>Starsza wersja kalendarza ownCloud</translation>
+      <translation type="unfinished">Legacy ownCloud calendar</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1663"/>
       <source>CalDAV server settings</source>
-      <translation>Ustawienia serwera CalDAV</translation>
+      <translation type="unfinished">CalDAV server settings</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1672"/>
       <source>Calendar base url:</source>
-      <translation>Podstawowy adres URL kalendarza:</translation>
+      <translation type="unfinished">Calendar base url:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1694"/>
       <source>Please enter the CalDAV base url to your calendar.</source>
-      <translation>Wprowadź podstawowy adres URL CalDAV do kalendarza.</translation>
+      <translation type="unfinished">Please enter the CalDAV base url to your calendar.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1764"/>
       <source>Please enter the password for your CalDAV username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.</source>
-      <translation>Wprowadź hasło dla użytkownika CalDAV.&lt;br/&gt;Hasło będą zaszyfrowane i przechowywane wraz z innymi ustawieniami, ale nie jest to w pełni bezpieczne.</translation>
+      <translation type="unfinished">Please enter the password for your CalDAV username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2007"/>
       <source>Czech</source>
-      <translation>Czeski</translation>
+      <translation type="unfinished">Czech</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2150"/>
       <source>Brazilian Portuguese</source>
-      <translation>Portugalski brazylijski</translation>
+      <translation type="unfinished">Brazilian Portuguese</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2216"/>
       <source>Ukrainian</source>
-      <translation>Ukraiński</translation>
+      <translation type="unfinished">Ukrainian</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2322"/>
       <source>You might also want to choose an other editor color schema in the editor settings in dark mode.</source>
-      <translation>Możesz również wybrać inny schemat kolorów edytora w ustawieniach edytora trybu ciemnego.</translation>
+      <translation type="unfinished">You might also want to choose an other editor color schema in the editor settings in dark mode.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3057"/>
       <source>The name</source>
-      <translation>Nazwa</translation>
+      <translation type="unfinished">The name</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3231"/>
       <source>Maximum height:</source>
-      <translation>Maksymalna wysokość:</translation>
+      <translation type="unfinished">Maximum height:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3238"/>
       <source>Maximum width:</source>
-      <translation>Maksymalna Szerokość:</translation>
+      <translation type="unfinished">Maximum width:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3116"/>
       <source>Scale images down when inserted into notes</source>
-      <translation>Zmniejsz rozmiar zdjęć podczas wstawiania do notatek</translation>
+      <translation type="unfinished">Scale images down when inserted into notes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2084"/>
       <source>Croatian</source>
-      <translation>Chorwacki</translation>
+      <translation type="unfinished">Croatian</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2972"/>
       <source>Path to your QML file</source>
-      <translation>Ścieżka do pliku QML</translation>
+      <translation type="unfinished">Path to your QML file</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2763"/>
       <source>Script name</source>
-      <translation>Nazwa skryptu</translation>
+      <translation type="unfinished">Script name</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2785"/>
       <source>Description:</source>
-      <translation>Opis:</translation>
+      <translation type="unfinished">Description:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2867"/>
       <source>Version:</source>
-      <translation>Wersja:</translation>
+      <translation type="unfinished">Version:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2828"/>
       <source>Repository:</source>
-      <translation>Repozytorium:</translation>
+      <translation type="unfinished">Repository:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2655"/>
       <source>&amp;Add script...</source>
-      <translation>&amp;Dodaj skrypt…</translation>
+      <translation type="unfinished">&amp;Add script...</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2805"/>
       <source>Author(s):</source>
-      <translation>Autorzy:</translation>
+      <translation type="unfinished">Author(s):</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3106"/>
       <source>Check this if you want to accept all external modifications while you are editing the current note.</source>
-      <translation>Zaznacz, jeżeli chcesz akceptować wszystkie zewnętrzne zmiany podczas edycji bieżącej notatki.</translation>
+      <translation type="unfinished">Check this if you want to accept all external modifications while you are editing the current note.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3109"/>
       <source>Accept all external modifications of the current note</source>
-      <translation>Akceptuj wszystkie zewnętrzne zmiany w bieżącej notatce</translation>
+      <translation type="unfinished">Accept all external modifications of the current note</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3165"/>
       <source>Use UNIX newline instead of native newline characters</source>
-      <translation>Używaj znaku przejścia do nowego wiersza systemu Unix zamiast natywnego</translation>
+      <translation type="unfinished">Use UNIX newline instead of native newline characters</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3268"/>
       <source>When opening notes the cursor position inside the note will now be restored
   to the position when the note was last visited in the current session</source>
-      <translation>Podczas otwierania notatki, pozycja kursora wewnątrz notatki będzie przywrócona do pozycji gdy notatka była poprzednio oglądana w trakcie bieżącej sesji</translation>
+      <translation type="unfinished">When opening notes the cursor position inside the note will now be restored
+  to the position when the note was last visited in the current session</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3272"/>
       <source>Restore cursor position when opening a note</source>
-      <translation>Przywróć pozycję kursora podczas otwierania notatki</translation>
+      <translation type="unfinished">Restore cursor position when opening a note</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3551"/>
       <source>Be warned that this will also remove your cached todo items and configured note folders and scripts!</source>
-      <translation>Uwaga, spowoduje to także usunięcie zadań z pamięci podręcznej oraz skonfigurowanych notatek i skryptów!</translation>
+      <translation type="unfinished">Be warned that this will also remove your cached todo items and configured note folders and scripts!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3975"/>
       <source>Apply toolbar configuration</source>
-      <translation>Zastosuj konfigurację pasków narzędzi</translation>
+      <translation type="unfinished">Apply toolbar configuration</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3989"/>
       <source>Reset toolbars</source>
-      <translation>Przywróć domyślne ustawienia pasków narzędzi</translation>
+      <translation type="unfinished">Reset toolbars</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4017"/>
       <source>Enable logging to file</source>
-      <translation>Włącz dziennik zdarzeń</translation>
+      <translation type="unfinished">Enable logging to file</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4024"/>
       <source>Clear log file</source>
-      <translation>Wyczyść dziennik zdarzeń</translation>
+      <translation type="unfinished">Clear log file</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4035"/>
       <source>Fake old version number to trigger update</source>
-      <translation>Imituj starszą wersję aby wymusić aktualizację</translation>
+      <translation type="unfinished">Fake old version number to trigger update</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4063"/>
       <source>Log file path:</source>
-      <translation>Ścieżka do pliku dziennika zdarzeń:</translation>
+      <translation type="unfinished">Log file path:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4125"/>
       <source>Here you can set your own time format for inserting the current time into a note.</source>
-      <translation>Tutaj możesz wprowadzić swój własny format daty i czasu, który będzie używany podczas wstawiania do notatek.</translation>
+      <translation type="unfinished">Here you can set your own time format for inserting the current time into a note.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4128"/>
       <source>Insert current time</source>
-      <translation>Wstaw bieżącą datę i czas</translation>
+      <translation type="unfinished">Insert current time</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4134"/>
       <source>Time format:</source>
-      <translation>Format daty i czasu:</translation>
+      <translation type="unfinished">Time format:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4141"/>
       <source>Enter your custom time format, like "dd.MM.yyyy hh:mm"</source>
-      <translation>Wprowadź swój format daty i czasu, np.: „yyyy.MM.dd hh:mm”</translation>
+      <translation type="unfinished">Enter your custom time format, like "dd.MM.yyyy hh:mm"</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4217"/>
       <source>Editor options</source>
-      <translation>Opcje edytora</translation>
+      <translation type="unfinished">Editor options</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4257"/>
       <source>Enable automatic closing of brackets and markdown formatting characters</source>
-      <translation>Włącz automatycznie domykanie nawiasów i znaczników formatujących markdown</translation>
+      <translation type="unfinished">Enable automatic closing of brackets and markdown formatting characters</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4277"/>
       <source>You have to use the backspace key to remove the opening character</source>
-      <translation>Musisz użyć klawisza backspace, aby usunąć znak otwierający</translation>
+      <translation type="unfinished">You have to use the backspace key to remove the opening character</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4280"/>
       <source>Enable automatic removal of matching closing characters</source>
-      <translation>Włącz automatyczne usuwanie odpowiadającego znaku zamykającego</translation>
+      <translation type="unfinished">Enable automatic removal of matching closing characters</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1697"/>
       <source>Your CalDAV calendar base url</source>
-      <translation>Twój podstawowy adres URL kalendarza CalDAV</translation>
+      <translation type="unfinished">Your CalDAV calendar base url</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1729"/>
       <source>Please enter the username of your CalDAV server.</source>
-      <translation>Podaj nazwę użytkownika na serwerze CalDAV.</translation>
+      <translation type="unfinished">Please enter the username of your CalDAV server.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1732"/>
       <source>Your CalDAV username</source>
-      <translation>Nazwa użytkownika CalDAV</translation>
+      <translation type="unfinished">Your CalDAV username</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1770"/>
       <source>Your CalDAV password</source>
-      <translation>Hasło CalDAV</translation>
+      <translation type="unfinished">Your CalDAV password</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1805"/>
       <source>This causes all todo list items to be reloaded from your server the next time you open your todo dialog.</source>
-      <translation>Kliknięcie spowoduje, że wszystkie pozycje listy zadań zostaną ponownie wczytane z Twojego serwera gdy następnym razem otworzysz okno zadań.</translation>
+      <translation type="unfinished">This causes all todo list items to be reloaded from your server the next time you open your todo dialog.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1808"/>
       <source>Empty calendar item cache</source>
-      <translation>Wyczyść pamięć podręczną elementów kalendarza</translation>
+      <translation type="unfinished">Empty calendar item cache</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1831"/>
       <source>Click here to reload the list of calendars from your calendar server.</source>
-      <translation>Kliknij aby przeładować listę kalendarzy z Twojego serwera.</translation>
+      <translation type="unfinished">Click here to reload the list of calendars from your calendar server.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1837"/>
       <source>&amp;Reload calendar list</source>
-      <translation>&amp;Przeładuj listę kalendarzy</translation>
+      <translation type="unfinished">&amp;Reload calendar list</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2292"/>
       <source>You may need to restart the application to let these changes take effect</source>
-      <translation>Może być konieczny restart aplikacji aby zmiany zostały zastosowane</translation>
+      <translation type="unfinished">You may need to restart the application to let these changes take effect</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2417"/>
       <source>Toolbar icon size:</source>
-      <translation>Rozmiar ikon paska narzędzi:</translation>
+      <translation type="unfinished">Toolbar icon size:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2407"/>
       <source>List and tree item height:</source>
-      <translation>Wysokość elementu listy i drzewa:</translation>
+      <translation type="unfinished">List and tree item height:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2440"/>
       <source>Reset the icon size</source>
-      <translation>Przywróć domyślny rozmiar ikon</translation>
+      <translation type="unfinished">Reset the icon size</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2454"/>
       <source>Reset the item height</source>
-      <translation>Przywróć domyślny rozmiar elementów</translation>
+      <translation type="unfinished">Reset the item height</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3935"/>
       <source>View text right to left (RTL)</source>
-      <translation>Wyświetlaj tekst od prawej do lewej (RTL)</translation>
+      <translation type="unfinished">View text right to left (RTL)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2533"/>
       <source>Search for shortcut</source>
-      <translation>Szukaj wśród skrótów</translation>
+      <translation type="unfinished">Search for shortcut</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1848"/>
       <source>Ignore calendars that don't support todo items</source>
-      <translation>Ignoruj kalendarze, które nie obsługują zadań</translation>
+      <translation type="unfinished">Ignore calendars that don't support todo items</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2238"/>
       <source>Arabic</source>
-      <translation>Arabski</translation>
+      <translation type="unfinished">Arabic</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2376"/>
       <source>Icons</source>
-      <translation>Ikony</translation>
+      <translation type="unfinished">Icons</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2385"/>
       <source>Use internal icon theme instead of system icon theme</source>
-      <translation>Użyj wewnętrznych ikon tematu zamiast ikon tematu systemu</translation>
+      <translation type="unfinished">Use internal icon theme instead of system icon theme</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2921"/>
       <source>Script path:</source>
-      <translation>Ścieżka skryptu:</translation>
+      <translation type="unfinished">Script path:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="706"/>
       <source>Note folder name</source>
-      <translation>Nazwa folderu notatek</translation>
+      <translation type="unfinished">Note folder name</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3182"/>
       <source>Allow the note file name to be different from the headline.&lt;br&gt;Be aware of that ownCloud notes needs them to be the same!</source>
-      <translation>Zezwól na to aby nazwa pliku notatki była inna niż nagłówek.&lt;br&gt;Uwaga – ownCloud notes wymagają aby były takie same!</translation>
+      <translation type="unfinished">Allow the note file name to be different from the headline.&lt;br&gt;Be aware of that ownCloud notes needs them to be the same!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3185"/>
       <source>Allow note file name to be different from headline</source>
-      <translation>Zezwól na to aby nazwa pliku notatki była inna niż nagłówek</translation>
+      <translation type="unfinished">Allow note file name to be different from headline</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3133"/>
       <source>Check this if you want to ignore all external modifications while you are editing the current note.</source>
-      <translation>Sprawdź to, jeśli chcesz ignorować wszystkie zewnętrzne zmiany podczas edycji bieżącej notatki.</translation>
+      <translation type="unfinished">Check this if you want to ignore all external modifications while you are editing the current note.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3136"/>
       <source>Ignore all external modifications of the current note</source>
-      <translation>Ignoruj wszystkie zewnętrzne zmiany w bieżącej notatce</translation>
+      <translation type="unfinished">Ignore all external modifications of the current note</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3162"/>
       <source>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</source>
-      <translation>Możesz użyć tego, na przykład w systemie Windows, jeżeli masz problem z 
- wstawieniem nowej linii w aplikacji notatek ownCloud/Nextcloud</translation>
+      <translation type="unfinished">You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3292"/>
       <source>App instance</source>
-      <translation>Wystąpienie aplikacji</translation>
+      <translation type="unfinished">App instance</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3298"/>
       <source>Only allow one app instance at the same time</source>
-      <translation>Zezwalaj na tylko jedno wystąpienie aplikacji w tym samym czasie</translation>
+      <translation type="unfinished">Only allow one app instance at the same time</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3394"/>
       <source>Add a custom file extension</source>
-      <translation>Dodaj niestandardowe rozszerzenie</translation>
+      <translation type="unfinished">Add a custom file extension</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3408"/>
       <source>Remove a custom file extension</source>
-      <translation>Usuń niestandardowe rozszerzenie</translation>
+      <translation type="unfinished">Remove a custom file extension</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3447"/>
       <source>If you add custom extensions just type in the extension, like "taskpaper".</source>
-      <translation>Jeśli dodasz niestandardowe rozszerzenie wystarczy wpisać rozszerzenie, takie jak "taskpaper".</translation>
+      <translation type="unfinished">If you add custom extensions just type in the extension, like "taskpaper".</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3451"/>
       <source>Text file (txt)</source>
-      <translation>Plik tekstowy (.txt)</translation>
+      <translation type="unfinished">Text file (txt)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3479"/>
       <source>Path to external editor:</source>
-      <translation>Ścieżka do zewnętrznego edytora:</translation>
+      <translation type="unfinished">Path to external editor:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3314"/>
       <source>Don't show the update dialog automatically</source>
-      <translation>Nie pokazuj okna aktualizacji automatycznie</translation>
+      <translation type="unfinished">Don't show the update dialog automatically</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3684"/>
       <location filename="../dialogs/settingsdialog.ui" line="3839"/>
       <source>Fonts</source>
-      <translation>Czcionki</translation>
+      <translation type="unfinished">Fonts</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3707"/>
@@ -4504,7 +4445,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
       <location filename="../dialogs/settingsdialog.ui" line="3907"/>
       <location filename="../dialogs/settingsdialog.ui" line="3921"/>
       <source>Set a new font</source>
-      <translation>Ustaw nową czcionkę</translation>
+      <translation type="unfinished">Set a new font</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3718"/>
@@ -4512,81 +4453,81 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
       <location filename="../dialogs/settingsdialog.ui" line="3845"/>
       <location filename="../dialogs/settingsdialog.ui" line="3869"/>
       <source>Reset font</source>
-      <translation>Zresetuj czcionkę</translation>
+      <translation type="unfinished">Reset font</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="312"/>
       <source>Debug</source>
-      <translation>Debugowanie</translation>
+      <translation type="unfinished">Debug</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3602"/>
       <source>Debug information</source>
-      <translation>Informacje do debugowania</translation>
+      <translation type="unfinished">Debug information</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3618"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Jeżeli masz jakieś &lt;span style=" font-weight:600;"&gt;pytania lub problemy&lt;/span&gt; odnośnie QOwnNotes możesz &lt;span style=" font-weight:600;"&gt;skopiować i wkleić&lt;/span&gt; ten tekst (lub jego część) na &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;stronie zgłaszania problemów QOwnNotes&lt;/a&gt; na zakładce &lt;span style=" font-weight:600;"&gt;problemy&lt;/span&gt;. Informacje wrażliwe zostały ukryte.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3631"/>
       <source>&amp;Save debug information</source>
-      <translation>&amp;Zapisz debug loga</translation>
+      <translation type="unfinished">&amp;Save debug information</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="350"/>
       <source>hostname of proxy server</source>
-      <translation>adres serwera proxy</translation>
+      <translation type="unfinished">hostname of proxy server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="351"/>
       <source>username for proxy server</source>
-      <translation>użytkownik serwera proxy</translation>
+      <translation type="unfinished">username for proxy server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="352"/>
       <source>password for proxy server</source>
-      <translation>hasło do serwera proxy</translation>
+      <translation type="unfinished">password for proxy server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="354"/>
       <source>HTTP(S) proxy</source>
-      <translation>Serwer proxy HTTP(S)</translation>
+      <translation type="unfinished">HTTP(S) proxy</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="355"/>
       <source>SOCKS5 proxy</source>
-      <translation>SOCKS5 proxy</translation>
+      <translation type="unfinished">SOCKS5 proxy</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1091"/>
       <source>Automatic (needs restart)</source>
-      <translation>Automatyczny (wymaga ponownego uruchomienia)</translation>
+      <translation type="unfinished">Automatic (needs restart)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1240"/>
       <source>Undefined key</source>
-      <translation>Niezdefiniowany klucz</translation>
+      <translation type="unfinished">Undefined key</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1245"/>
       <source>Assign a new key</source>
-      <translation>Przypisz nowy klucz</translation>
+      <translation type="unfinished">Assign a new key</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1246"/>
       <source>Reset to default key</source>
-      <translation>Przywrócić domyślny klucz</translation>
+      <translation type="unfinished">Reset to default key</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1631"/>
       <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
-      <translation>Połączenie powiodło się!
-Wersja serwera: %1
-Wersja QOwnNotesAPI: %2</translation>
+      <translation type="unfinished">The connection was made successfully!
+Server version: %1
+QOwnNotesAPI version: %2</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1642"/>
@@ -4594,197 +4535,198 @@ Wersja QOwnNotesAPI: %2</translation>
 You also need to have the QOwnNotesAPI app installed and enabled!
 
 Connection error message: </source>
-      <translation>Nie udało się połączyć z serwerem ownCloud!
-Pamiętaj, że musisz mieć zainstalowane i uruchomione QOwnNotesAPI!
+      <translation type="unfinished">There was an error connecting to the ownCloud Server!
+You also need to have the QOwnNotesAPI app installed and enabled!
 
-Wiadomość błędu: </translation>
+Connection error message: </translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1918"/>
       <source>Markdown files</source>
-      <translation>Pliki markdown</translation>
+      <translation type="unfinished">Markdown files</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1945"/>
       <source>Disable usage tracking</source>
-      <translation>Wyłącz rejestrowanie sposobu używania</translation>
+      <translation type="unfinished">Disable usage tracking</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1946"/>
       <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
-      <translation>Anonimowe dane dotyczące korzystania z aplikacji pomagają zdecydować, które części QOwnNotes wymagają poprawy, a także pomagają znaleźć i naprawiać błędy.&lt;br /&gt;Prosimy o wyłączenie tej opcji tylko, jeżeli nie możesz bez tego żyć.&lt;br /&gt;&lt;br /&gt;Na pewno wyłączyć rejestrowanie sposobu używania?</translation>
+      <translation type="unfinished">Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2167"/>
       <source>new folder</source>
-      <translation>Nowy folder</translation>
+      <translation type="unfinished">new folder</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2205"/>
       <source>Remove note folder</source>
-      <translation>Usuń folder notatek</translation>
+      <translation type="unfinished">Remove note folder</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2206"/>
       <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation>Usunąć bieżący folder &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+      <translation type="unfinished">Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2280"/>
       <source>Please select the folder where your notes will get stored to</source>
-      <translation>Zaznacz folder do którego będą zapisywane notatki</translation>
+      <translation type="unfinished">Please select the folder where your notes will get stored to</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2317"/>
       <source>Loading folders from server</source>
-      <translation>Ładowanie folderów z serwera</translation>
+      <translation type="unfinished">Loading folders from server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2331"/>
       <source>No more folders were found in the current folder</source>
-      <translation>Nie znaleziono więcej folderów w bieżącym folderze</translation>
+      <translation type="unfinished">No more folders were found in the current folder</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2404"/>
       <source>Loading folders in '%1' from server</source>
-      <translation>Ładowanie folderów do '%1' z serwera</translation>
+      <translation type="unfinished">Loading folders in '%1' from server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2464"/>
       <source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
-      <translation>Aby szybko rozpocząć pracę zapoznaj się z &lt;a href="%1"&gt;dokumentacją tworzenia skryptów&lt;/a&gt;.</translation>
+      <translation type="unfinished">Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2466"/>
       <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
-      <translation>Jeżeli potrzebujesz dostępu do konkretnych funkcji z QOwnNotes otwórz zdarzenie na &lt;a href="%1"&gt;stronie propozycji QOwnNotes&lt;/a&gt;.</translation>
+      <translation type="unfinished">If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2487"/>
       <source>Check for script updates</source>
-      <translation>Sprawdź aktualizacje skryptu</translation>
+      <translation type="unfinished">Check for script updates</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2494"/>
       <source>Add local script</source>
-      <translation>Dodaj skrypt lokalny</translation>
+      <translation type="unfinished">Add local script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2498"/>
       <source>Add an existing, local script</source>
-      <translation>Dodaj istniejący skrypt lokalny</translation>
+      <translation type="unfinished">Add an existing, local script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2481"/>
       <source>Find a script in the script repository</source>
-      <translation>Wyszukaj skrypt w repozytorium skryptów</translation>
+      <translation type="unfinished">Find a script in the script repository</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="197"/>
       <source>Menu bar</source>
-      <translation>Pasek menu</translation>
+      <translation type="unfinished">Menu bar</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="198"/>
       <source>Show menu bar item</source>
-      <translation>Pokaż element paska menu</translation>
+      <translation type="unfinished">Show menu bar item</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2579"/>
       <source>Remove script</source>
-      <translation>Usuń skrypt</translation>
+      <translation type="unfinished">Remove script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2580"/>
       <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation>Usunąć bieżący skrypt &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+      <translation type="unfinished">Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2631"/>
       <source>QML files</source>
-      <translation>Pliki QML</translation>
+      <translation type="unfinished">QML files</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2632"/>
       <source>Please select your QML file</source>
-      <translation>Proszę wybrać plik QML</translation>
+      <translation type="unfinished">Please select your QML file</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2721"/>
       <source>Open repository</source>
-      <translation>Otwarte repozytorium</translation>
+      <translation type="unfinished">Open repository</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2781"/>
       <source>Your script seems to be valid</source>
-      <translation>Twój skrypt wydaje się być poprawnym</translation>
+      <translation type="unfinished">Your script seems to be valid</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2782"/>
       <source>There were script errors:
 %1</source>
-      <translation>Wystąpiły błędy skryptu:&lt;br&gt;%1</translation>
+      <translation type="unfinished">There were script errors:
+%1</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2851"/>
       <source>File extension</source>
-      <translation>Rozszerzenie pliku</translation>
+      <translation type="unfinished">File extension</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2852"/>
       <source>Enter your custom file extension:</source>
-      <translation>Wprowadź swoje niestandardowe rozszerzenia:</translation>
+      <translation type="unfinished">Enter your custom file extension:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3126"/>
       <source>Calendar cache emptied</source>
-      <translation>Pamięć podręczna oczyszczona</translation>
+      <translation type="unfinished">Calendar cache emptied</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3127"/>
       <source>Your calendar cache was emptied.</source>
-      <translation>Pamięć podręczna została oczyszczona.</translation>
+      <translation type="unfinished">Your calendar cache was emptied.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3205"/>
       <source>Reset toolbars and exit</source>
-      <translation>Przywróć domyślne ustawienia pasków narzędzi i wyjdź</translation>
+      <translation type="unfinished">Reset toolbars and exit</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3206"/>
       <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
-      <translation>Czy naprawdę chcesz zresetować wszystkie paski narzędzi? Aplikacja zostanie zamknięta, a domyślne paski narzędzi zostaną przywrócone gdy ponownie uruchomisz program.</translation>
+      <translation type="unfinished">Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3210"/>
       <source>Reset and &amp;exit</source>
-      <translation>Zresetuj i &amp;wyjdź</translation>
+      <translation type="unfinished">Reset and &amp;exit</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3372"/>
       <source>Log file cleared</source>
-      <translation>Dziennik zdarzeń został wyczyszczony</translation>
+      <translation type="unfinished">Log file cleared</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3373"/>
       <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
-      <translation>Plik dziennika zdarzeń &lt;strong&gt;%1&lt;/strong&gt; został wyczyszczony.</translation>
+      <translation type="unfinished">The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3409"/>
       <source>Executable files</source>
-      <translation>Pliki wykonywalne</translation>
+      <translation type="unfinished">Executable files</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3410"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3412"/>
       <source>All files</source>
-      <translation>Wszystkie pliki</translation>
+      <translation type="unfinished">All files</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3420"/>
       <source>Please select the path of your git executable</source>
-      <translation>Proszę wybrać ścieżkę do pliku wykonywalnego git</translation>
+      <translation type="unfinished">Please select the path of your git executable</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3510"/>
@@ -4794,103 +4736,103 @@ Wiadomość błędu: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1906"/>
       <source>The Database was reinitialized.</source>
-      <translation>Baza danych została reinicjalizowana.</translation>
+      <translation type="unfinished">The Database was reinitialized.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="53"/>
       <source>New script</source>
-      <translation>Nowy skrypt</translation>
+      <translation type="unfinished">New script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="56"/>
       <source>You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</source>
-      <translation>Łącze do pobrania klienta git: &lt;a href="%url"&gt;Git dla systemu Windows&lt;/a&gt;</translation>
+      <translation type="unfinished">You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="309"/>
       <source>enabled</source>
-      <translation>wyłączony</translation>
+      <translation type="unfinished">enabled</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="309"/>
       <source>disabled</source>
-      <translation>włączony</translation>
+      <translation type="unfinished">disabled</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="312"/>
       <source>Portable mode is currently:</source>
-      <translation>Tryb przenośny jest obecnie:</translation>
+      <translation type="unfinished">Portable mode is currently:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="315"/>
       <source>In portable mode</source>
-      <translation>W trybie przenośnym:</translation>
+      <translation type="unfinished">In portable mode</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="316"/>
       <source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary's location</source>
-      <translation>Wewnętrzna baza sqllite oraz ustawienia programu będą przechowywane w podfolderze &lt;code&gt;Data&lt;/code&gt; folderu, w którym znajduje się program.</translation>
+      <translation type="unfinished">the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary's location</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="319"/>
       <source>the settings will be stored in an ini file</source>
-      <translation>Ustawienia będą przechowywane w pliku ini.</translation>
+      <translation type="unfinished">the settings will be stored in an ini file</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="320"/>
       <source>the note folders, script paths and path to an external editor will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders, scripts and external editor will be loaded regardless where your QOwnNotes installation is currently located</source>
-      <translation>Foldery notatek, ścieżki skryptów i ścieżka do zewnętrznego edytora będą automatycznie tworzone jako podfoldery folderu &lt;code&gt;Data&lt;/code&gt; aby zapewnić poprawne ich ładowanie niezależnie od tego skąd uruchamiasz QOwnNotes.</translation>
+      <translation type="unfinished">the note folders, script paths and path to an external editor will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders, scripts and external editor will be loaded regardless where your QOwnNotes installation is currently located</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="328"/>
       <source>It will be activated if you run QOwnNotes with the parameter &lt;code&gt;--portable&lt;/code&gt;.</source>
-      <translation>Tryb przenośny będzie aktywowany jeżeli uruchomisz QOwnNotes z parametrem &lt;code&gt;--portable&lt;/code&gt;.</translation>
+      <translation type="unfinished">It will be activated if you run QOwnNotes with the parameter &lt;code&gt;--portable&lt;/code&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1919"/>
       <source>Save debug information</source>
-      <translation>Zapisz informację do debugowania</translation>
+      <translation type="unfinished">Save debug information</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1966"/>
       <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
-      <translation>Czy na pewno chcesz wyczyścić wszystkie ustawienia, usunąć bazę danych i zamknąć QOwnNotes?
+      <translation type="unfinished">Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
-Twoje notatki pozostaną nietknięte!</translation>
+Your notes will stay intact!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1969"/>
       <source>Clear and &amp;exit</source>
-      <translation>Wyczyść i wyjdź</translation>
+      <translation type="unfinished">Clear and &amp;exit</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1900"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1969"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3210"/>
       <source>&amp;Cancel</source>
-      <translation>Anuluj</translation>
+      <translation type="unfinished">&amp;Cancel</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="333"/>
       <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
-      <translation>Aby włączyć QOwnNotes w trybie przenośnym uruchom skrypt &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; znajdujący się w folderze programu.</translation>
+      <translation type="unfinished">You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1897"/>
       <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
-      <translation>Czy naprawdę chcesz wymazać lokalną bazę danych? To usunie także konfigurację folderów notatek i zadania z pamięci podręcznej!</translation>
+      <translation type="unfinished">Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1900"/>
       <source>Clear &amp;database</source>
-      <translation>Wymaż &amp;bazę danych</translation>
+      <translation type="unfinished">Clear &amp;database</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2080"/>
       <source>Select editor application</source>
-      <translation>Wybierz edytor</translation>
+      <translation type="unfinished">Select editor application</translation>
     </message>
   </context>
   <context>
@@ -4898,17 +4840,17 @@ Twoje notatki pozostaną nietknięte!</translation>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="20"/>
       <source>Share note</source>
-      <translation>Udostępnij notatkę</translation>
+      <translation type="unfinished">Share note</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="30"/>
       <source>Share note on ownCloud</source>
-      <translation>Udostępnij notatkę za pomocą ownCloud</translation>
+      <translation type="unfinished">Share note on ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="37"/>
       <source>The public url of your note</source>
-      <translation>Publiczny adres url notatki</translation>
+      <translation type="unfinished">The public url of your note</translation>
     </message>
   </context>
   <context>
@@ -4916,102 +4858,102 @@ Twoje notatki pozostaną nietknięte!</translation>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="14"/>
       <source>Insert table</source>
-      <translation>Wstaw tabelę</translation>
+      <translation type="unfinished">Insert table</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="24"/>
       <source>Create table</source>
-      <translation>Utwórz tabelę</translation>
+      <translation type="unfinished">Create table</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="30"/>
       <source>Column width:</source>
-      <translation>Szerokość kolumny:</translation>
+      <translation type="unfinished">Column width:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="37"/>
       <source>Insert a table heading separator</source>
-      <translation>Wstaw separator nagłówka tabeli</translation>
+      <translation type="unfinished">Insert a table heading separator</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="47"/>
       <source>Columns:</source>
-      <translation>Kolumny:</translation>
+      <translation type="unfinished">Columns:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="67"/>
       <source>Rows:</source>
-      <translation>Wiersze:</translation>
+      <translation type="unfinished">Rows:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="87"/>
       <source>The amount of spaces in a column</source>
-      <translation>Ilość miejsc w kolumnie</translation>
+      <translation type="unfinished">The amount of spaces in a column</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="119"/>
       <source>Select table layout:</source>
-      <translation>Wybierz układ tabeli:</translation>
+      <translation type="unfinished">Select table layout:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="126"/>
       <source>Separator column width:</source>
-      <translation>Szerokość separatora kolumny:</translation>
+      <translation type="unfinished">Separator column width:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="133"/>
       <source>The amount of dash characters in the separator</source>
-      <translation>Ilość znaków pauzy w separatorze</translation>
+      <translation type="unfinished">The amount of dash characters in the separator</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="150"/>
       <source>Import CSV file</source>
-      <translation>Importuj plik CSV</translation>
+      <translation type="unfinished">Import CSV file</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="173"/>
       <source>Separator:</source>
-      <translation>Separator:</translation>
+      <translation type="unfinished">Separator:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="180"/>
       <source>Select file</source>
-      <translation>Wybierz plik</translation>
+      <translation type="unfinished">Select file</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="191"/>
       <source>Please select the CSV file you want to import:</source>
-      <translation>Proszę wybrać plik CSV, który chcesz importować:</translation>
+      <translation type="unfinished">Please select the CSV file you want to import:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="231"/>
       <source>CSV file</source>
-      <translation>Pliku CSV</translation>
+      <translation type="unfinished">CSV file</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="238"/>
       <source>First line is the table heading</source>
-      <translation>Pierwszy wiersz to nagłówek tabeli</translation>
+      <translation type="unfinished">First line is the table heading</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="261"/>
       <source>Text-delimiter:</source>
-      <translation>Ogranicznik tekstu:</translation>
+      <translation type="unfinished">Text-delimiter:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.cpp" line="148"/>
       <source>CSV files</source>
-      <translation>Pliki CSV</translation>
+      <translation type="unfinished">CSV files</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.cpp" line="149"/>
       <source>All files</source>
-      <translation>Wszystkie pliki</translation>
+      <translation type="unfinished">All files</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.cpp" line="154"/>
       <source>Select CSV file to import</source>
-      <translation>Wybierz plik CSV do importowania</translation>
+      <translation type="unfinished">Select CSV file to import</translation>
     </message>
   </context>
   <context>
@@ -5019,17 +4961,17 @@ Twoje notatki pozostaną nietknięte!</translation>
     <message>
       <location filename="../dialogs/tagadddialog.ui" line="20"/>
       <source>Add a new tag</source>
-      <translation>Dodaj nową etykietkę</translation>
+      <translation type="unfinished">Add a new tag</translation>
     </message>
     <message>
       <location filename="../dialogs/tagadddialog.ui" line="30"/>
       <source>Add new tag</source>
-      <translation>Dodaj nową etykietkę</translation>
+      <translation type="unfinished">Add new tag</translation>
     </message>
     <message>
       <location filename="../dialogs/tagadddialog.ui" line="47"/>
       <source>New tag</source>
-      <translation>Nowa etykietka</translation>
+      <translation type="unfinished">New tag</translation>
     </message>
   </context>
   <context>
@@ -5037,130 +4979,130 @@ Twoje notatki pozostaną nietknięte!</translation>
     <message>
       <location filename="../dialogs/tododialog.ui" line="14"/>
       <source>Todo</source>
-      <translation>Zadania</translation>
+      <translation type="unfinished">Todo</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="78"/>
       <location filename="../dialogs/tododialog.ui" line="85"/>
       <source>Priority</source>
-      <translation>Priorytet</translation>
+      <translation type="unfinished">Priority</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="113"/>
       <source>Reminder</source>
-      <translation>Przypomnienie</translation>
+      <translation type="unfinished">Reminder</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="157"/>
       <source>Summary</source>
-      <translation>Podsumowanie</translation>
+      <translation type="unfinished">Summary</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="191"/>
       <source>Save</source>
-      <translation>Zapisz</translation>
+      <translation type="unfinished">Save</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="100"/>
       <source>Save and insert into note</source>
-      <translation>Zapisz i wstaw do notatki</translation>
+      <translation type="unfinished">Save and insert into note</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="208"/>
       <source>Remove</source>
-      <translation>Usuń</translation>
+      <translation type="unfinished">Remove</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="222"/>
       <source>Note...</source>
-      <translation>Notatka…</translation>
+      <translation type="unfinished">Note...</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="278"/>
       <source>Show completed items</source>
-      <translation>Pokaż zakończone zadania</translation>
+      <translation type="unfinished">Show completed items</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="285"/>
       <source>Reload the todo list from server</source>
-      <translation>Wczytuje ponownie zadania z serwera</translation>
+      <translation type="unfinished">Reload the todo list from server</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="319"/>
       <source>Search or create todo item</source>
-      <translation>Szukaj albo stwórz zadanie</translation>
+      <translation type="unfinished">Search or create todo item</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="302"/>
       <source>select your todo list</source>
-      <translation>wybierz swoją listę zadań</translation>
+      <translation type="unfinished">select your todo list</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="188"/>
       <source>Save the current todo item</source>
-      <translation>Zapisz bieżące zadanie</translation>
+      <translation type="unfinished">Save the current todo item</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="104"/>
       <source>Save the current todo item and insert a link to it into the current note</source>
-      <translation>Zapisz bieżące zadanie i wstaw łącze do niego w bieżącej notatce</translation>
+      <translation type="unfinished">Save the current todo item and insert a link to it into the current note</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="113"/>
       <source>Import the current todo item as new note</source>
-      <translation>Importuj bieżące zadanie jako nową notatkę</translation>
+      <translation type="unfinished">Import the current todo item as new note</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="109"/>
       <source>Import as note</source>
-      <translation>Importuj jako notatkę</translation>
+      <translation type="unfinished">Import as note</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="205"/>
       <source>Remove the current todo item</source>
-      <translation>Usuń bieżące zadanie</translation>
+      <translation type="unfinished">Remove the current todo item</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="288"/>
       <source>Reload...</source>
-      <translation>Wczytaj ponownie…</translation>
+      <translation type="unfinished">Reload...</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="309"/>
       <source>Todo list items are being loaded from the server</source>
-      <translation>Lista zadań jest wczytywana z serwera</translation>
+      <translation type="unfinished">Todo list items are being loaded from the server</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="124"/>
       <source>Reload from server</source>
-      <translation>Wczytaj ponownie z serwera</translation>
+      <translation type="unfinished">Reload from server</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="128"/>
       <source>Reload tasks from server</source>
-      <translation>Wczytaj ponownie zadania z serwera</translation>
+      <translation type="unfinished">Reload tasks from server</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="133"/>
       <source>Clear cache and reload</source>
-      <translation>Wyczyść pamięć podręczną i załaduj ponownie</translation>
+      <translation type="unfinished">Clear cache and reload</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="137"/>
       <source>Clear calendar cache and reload tasks from server</source>
-      <translation>Wyczyść pamięć podręczną kalendarza i wczytaj ponownie zadania z serwera</translation>
+      <translation type="unfinished">Clear calendar cache and reload tasks from server</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="578"/>
       <source>Remove todo item</source>
-      <translation>Usuń zadanie</translation>
+      <translation type="unfinished">Remove todo item</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="579"/>
       <source>Remove the selected todo item?
 This cannot be undone!</source>
-      <translation>Usunąć zaznaczone zadanie?
-Nie można tego cofnąć!</translation>
+      <translation type="unfinished">Remove the selected todo item?
+This cannot be undone!</translation>
     </message>
   </context>
   <context>
@@ -5168,134 +5110,134 @@ Nie można tego cofnąć!</translation>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="23"/>
       <source>Select a menu</source>
-      <translation>Wybierz menu</translation>
+      <translation type="unfinished">Select a menu</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="26"/>
       <source>Lists the avaliable menus to get the corresponding actions</source>
-      <translation>Wyświetla dostępne pozycje menu aby umożliwić wybranie odpowiedniej akcji</translation>
+      <translation type="unfinished">Lists the avaliable menus to get the corresponding actions</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="33"/>
       <source>Select toolbar</source>
-      <translation>Wybierz pasek narzędzi</translation>
+      <translation type="unfinished">Select toolbar</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="36"/>
       <source>List the available toolbars. The selected one will be edited</source>
-      <translation>Lista dostępnych pasków narzędzi. Zaznaczony pasek będzie edytowany</translation>
+      <translation type="unfinished">List the available toolbars. The selected one will be edited</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="43"/>
       <source>Lists the actions in the selected toolbar</source>
-      <translation>Wyświetla akcje dostępne w wybranym pasku narzędzi</translation>
+      <translation type="unfinished">Lists the actions in the selected toolbar</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="52"/>
       <source>Add new Toolbar</source>
-      <translation>Dodaj nowy pasek narzędzi</translation>
+      <translation type="unfinished">Add new Toolbar</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="55"/>
       <source>New</source>
-      <translation>Nowy</translation>
+      <translation type="unfinished">New</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="66"/>
       <source>Delete selected toolbar</source>
-      <translation>Skasuj zaznaczony pasek narzędzi</translation>
+      <translation type="unfinished">Delete selected toolbar</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="69"/>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="168"/>
       <source>Remove</source>
-      <translation>Usuń</translation>
+      <translation type="unfinished">Remove</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="82"/>
       <source>Lists the available actions for the selected menu</source>
-      <translation>Lista akcji dostępnych dla wybranego menu</translation>
+      <translation type="unfinished">Lists the available actions for the selected menu</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="104"/>
       <source>Move Up</source>
-      <translation>W górę</translation>
+      <translation type="unfinished">Move Up</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="107"/>
       <source>Moves the selected toolbar item up</source>
-      <translation>Przesuwa wybrany element paska narzędzi do góry</translation>
+      <translation type="unfinished">Moves the selected toolbar item up</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="110"/>
       <source>Move &amp;Up</source>
-      <translation>W &amp;górę</translation>
+      <translation type="unfinished">Move &amp;Up</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="121"/>
       <source>Move Down</source>
-      <translation>W dół</translation>
+      <translation type="unfinished">Move Down</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="124"/>
       <source>moves the selected toolbar item down</source>
-      <translation>Przesuwa wybrany element paska narzędzi na dół</translation>
+      <translation type="unfinished">moves the selected toolbar item down</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="127"/>
       <source>Move &amp;Down</source>
-      <translation>W &amp;dół</translation>
+      <translation type="unfinished">Move &amp;Down</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="151"/>
       <source>Insert</source>
-      <translation>Wstaw</translation>
+      <translation type="unfinished">Insert</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="154"/>
       <source>Adds the selected menu action to the toolbar</source>
-      <translation>Dodaj wybraną z menu akcję do paska zadań</translation>
+      <translation type="unfinished">Adds the selected menu action to the toolbar</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="157"/>
       <source>&amp;Insert</source>
-      <translation>&amp;Wstaw</translation>
+      <translation type="unfinished">&amp;Insert</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="171"/>
       <source>Removes the selected item from the active toolbar</source>
-      <translation>Usuwa wybrany element z bieżącego paska zadań</translation>
+      <translation type="unfinished">Removes the selected item from the active toolbar</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="174"/>
       <source>&amp;Remove</source>
-      <translation>&amp;Usuń</translation>
+      <translation type="unfinished">&amp;Remove</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="198"/>
       <source>Separator</source>
-      <translation>Odstęp</translation>
+      <translation type="unfinished">Separator</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="201"/>
       <source>&amp;Separator</source>
-      <translation>&amp;Odstęp</translation>
+      <translation type="unfinished">&amp;Separator</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="190"/>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="214"/>
       <source>--(separator)--</source>
-      <translation>--(odstęp)--</translation>
+      <translation type="unfinished">--(separator)--</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="307"/>
       <source>Remove current toolbar</source>
-      <translation>Usuń bieżący pasek narzędzi</translation>
+      <translation type="unfinished">Remove current toolbar</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="308"/>
       <source>Remove the current toolbar?</source>
-      <translation>Usunąć bieżący pasek narzędzi?</translation>
+      <translation type="unfinished">Remove the current toolbar?</translation>
     </message>
   </context>
   <context>
@@ -5303,32 +5245,32 @@ Nie można tego cofnąć!</translation>
     <message>
       <location filename="../dialogs/trashdialog.ui" line="14"/>
       <source>Trashed notes</source>
-      <translation>Usunięte notatki</translation>
+      <translation type="unfinished">Trashed notes</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="24"/>
       <source>&amp;Restore selected note on server</source>
-      <translation>&amp;Przywróć zaznaczone notatki na serwerze</translation>
+      <translation type="unfinished">&amp;Restore selected note on server</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="25"/>
       <source>&lt;h3&gt;Slower, but with note versions&lt;/h3&gt;&lt;p&gt;The note will be restored on your ownCloud server with all versions.&lt;/p&gt;&lt;p&gt;You will have to wait until it is synced to QOwnNotes by ownCloud sync.&lt;/p&gt;</source>
-      <translation>&lt;h3&gt;Wolniej, ale z wersjonowaniem notatek&lt;/h3&gt;&lt;p&gt;Notatka zostanie przywrócona na serwerze ownCloud ze wszystkimi jej wersjami&lt;/p&gt;&lt;p&gt;Musisz poczekać, aż przeprowadzona zostanie synchronizacja.&lt;/p&gt;</translation>
+      <translation type="unfinished">&lt;h3&gt;Slower, but with note versions&lt;/h3&gt;&lt;p&gt;The note will be restored on your ownCloud server with all versions.&lt;/p&gt;&lt;p&gt;You will have to wait until it is synced to QOwnNotes by ownCloud sync.&lt;/p&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="38"/>
       <source>&amp;Download selected note</source>
-      <translation>Ściągnij wybrane notatki</translation>
+      <translation type="unfinished">&amp;Download selected note</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="39"/>
       <source>&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</source>
-      <translation>&lt;h3&gt;Szybciej, ale bez wersjonowania&lt;/h3&gt;&lt;p&gt;Notatka zostanie utworzona przy użyciu tekstu z podglądu&lt;/p&gt;&lt;p&gt;Wersje notatki nie będą przywracane, a notatka pozostanie w koszu.&lt;/p&gt;&lt;p&gt;Zawsze możesz przywrócić notatkę i jej wersje później.&lt;/p&gt;</translation>
+      <translation type="unfinished">&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="52"/>
       <source>&amp;Cancel</source>
-      <translation>Anuluj</translation>
+      <translation type="unfinished">&amp;Cancel</translation>
     </message>
   </context>
   <context>
@@ -5336,22 +5278,22 @@ Nie można tego cofnąć!</translation>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="14"/>
       <source>Update available</source>
-      <translation>Aktualizacja dostępna</translation>
+      <translation type="unfinished">Update available</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="26"/>
       <source>A new update of QOwnNotes is available!</source>
-      <translation>Nowa wersja QOwnNotes jest dostępna!</translation>
+      <translation type="unfinished">A new update of QOwnNotes is available!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="69"/>
       <source>Do you want to download the new version?</source>
-      <translation>Czy chciałbyś ściągnąć nową wersję?</translation>
+      <translation type="unfinished">Do you want to download the new version?</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="76"/>
       <source>QOwnNotes will be downloaded in your default browser.</source>
-      <translation>QOwnNotes zostanie ściągnięte w Twojej domyślnej przeglądarce.</translation>
+      <translation type="unfinished">QOwnNotes will be downloaded in your default browser.</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="83"/>
@@ -5361,81 +5303,81 @@ Nie można tego cofnąć!</translation>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="93"/>
       <source>&lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes"&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
-      <translation>&lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes"&gt;Zaangażuj się w QOwnNotes&lt;/a&gt;</translation>
+      <translation type="unfinished">&lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes"&gt;Get involved with QOwnNotes&lt;/a&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="106"/>
       <source>%p% downloaded</source>
-      <translation>Pobrano: %p% </translation>
+      <translation type="unfinished">%p% downloaded</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="45"/>
       <source>&amp;Update</source>
-      <translation>&amp;Aktualizuj</translation>
+      <translation type="unfinished">&amp;Update</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="58"/>
       <source>&amp;Download latest</source>
-      <translation>Ściągnij najnowszy</translation>
+      <translation type="unfinished">&amp;Download latest</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="56"/>
       <source>Just download</source>
-      <translation>Tylko pobierz</translation>
+      <translation type="unfinished">Just download</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="72"/>
       <source>&amp;Skip version</source>
-      <translation>Pomiń wersję</translation>
+      <translation type="unfinished">&amp;Skip version</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="82"/>
       <source>&amp;Cancel</source>
-      <translation>Anuluj</translation>
+      <translation type="unfinished">&amp;Cancel</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="230"/>
       <source>Download error</source>
-      <translation>Błąd pobierania</translation>
+      <translation type="unfinished">Download error</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="231"/>
       <source>Error while downloading:
 %1</source>
-      <translation>Wystąpił błąd podczas pobierania:
+      <translation type="unfinished">Error while downloading:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="233"/>
       <source>network error: %1</source>
-      <translation>błąd sieci: %1</translation>
+      <translation type="unfinished">network error: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="256"/>
       <location filename="../dialogs/updatedialog.cpp" line="277"/>
       <location filename="../dialogs/updatedialog.cpp" line="374"/>
       <source>File error</source>
-      <translation>Błąd pliku</translation>
+      <translation type="unfinished">File error</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="257"/>
       <location filename="../dialogs/updatedialog.cpp" line="375"/>
       <source>Could not open temporary file:
 %1</source>
-      <translation>Nie można otworzyć pliku tymczasowego:
+      <translation type="unfinished">Could not open temporary file:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="278"/>
       <source>Could not store downloaded file:
 %1</source>
-      <translation>Nie można zachować pobranego pliku:
+      <translation type="unfinished">Could not store downloaded file:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="332"/>
       <source>Do you want to update and restart QOwnNotes?</source>
-      <translation>Czy chcesz zaktualizować i uruchomić ponownie QOwnNotes?</translation>
+      <translation type="unfinished">Do you want to update and restart QOwnNotes?</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="347"/>
@@ -5446,50 +5388,51 @@ Nie można tego cofnąć!</translation>
       <location filename="../dialogs/updatedialog.cpp" line="471"/>
       <location filename="../dialogs/updatedialog.cpp" line="480"/>
       <source>Error</source>
-      <translation>Błąd</translation>
+      <translation type="unfinished">Error</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="348"/>
       <source>Could not find updater file:
 %1</source>
-      <translation>Nie można znaleźć pliku aktualizacji: %1</translation>
+      <translation type="unfinished">Could not find updater file:
+%1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="435"/>
       <source>Updater script '%1' doesn't exist!</source>
-      <translation>Skrypt aktualizacji '%1' nie istnieje!</translation>
+      <translation type="unfinished">Updater script '%1' doesn't exist!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="444"/>
       <source>Updater unzip executable '%1' doesn't exist!</source>
-      <translation>Plik wykonywalny unzip pakietu aktualizacyjnego '%1' nie istnieje!</translation>
+      <translation type="unfinished">Updater unzip executable '%1' doesn't exist!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="453"/>
       <location filename="../dialogs/updatedialog.cpp" line="462"/>
       <source>Could not copy updater script '%1' to '%2'!</source>
-      <translation>Nie można skopiować skryptu aktualizacji z '%1' do '%2'!</translation>
+      <translation type="unfinished">Could not copy updater script '%1' to '%2'!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="472"/>
       <source>Couldn't find updater script: %1</source>
-      <translation>Nie można znaleźć skryptu aktualizacji: %1</translation>
+      <translation type="unfinished">Couldn't find updater script: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="481"/>
       <source>Couldn't find unzip executable: %1</source>
-      <translation>Nie można znaleźć pliku wykonywalnego unzip: %1</translation>
+      <translation type="unfinished">Couldn't find unzip executable: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="331"/>
       <location filename="../dialogs/updatedialog.cpp" line="487"/>
       <source>Proceed with update</source>
-      <translation>Wykonaj aktualizację</translation>
+      <translation type="unfinished">Proceed with update</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="488"/>
       <source>The download is now finished. Do you want to update and restart QOwnNotes?</source>
-      <translation>Pobieranie zostało zakończone. Czy chcesz zaktualizować i ponownie uruchomić QOwnNotes?</translation>
+      <translation type="unfinished">The download is now finished. Do you want to update and restart QOwnNotes?</translation>
     </message>
   </context>
   <context>
@@ -5519,12 +5462,12 @@ Nie można tego cofnąć!</translation>
     <message>
       <location filename="../services/updateservice.cpp" line="228"/>
       <source>No updates</source>
-      <translation>Brak aktualizacji</translation>
+      <translation type="unfinished">No updates</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="229"/>
       <source>There are no updates available.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; is the latest version.</source>
-      <translation>Nie ma żadnych nowych aktualizacji.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; jest najnowszą wersją.</translation>
+      <translation type="unfinished">There are no updates available.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; is the latest version.</translation>
     </message>
   </context>
   <context>
@@ -5532,27 +5475,27 @@ Nie można tego cofnąć!</translation>
     <message>
       <location filename="../dialogs/versiondialog.ui" line="14"/>
       <source>Note versions on your ownCloud server</source>
-      <translation>Wersje notatek na Twoim serwerze ownCloud</translation>
+      <translation type="unfinished">Note versions on your ownCloud server</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.ui" line="65"/>
       <source>Diff</source>
-      <translation>Diff</translation>
+      <translation type="unfinished">Diff</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.ui" line="98"/>
       <source>Note text</source>
-      <translation>Treść notatki</translation>
+      <translation type="unfinished">Note text</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.cpp" line="25"/>
       <source>&amp;Restore selected version</source>
-      <translation>Przywróć zaznaczoną wersję</translation>
+      <translation type="unfinished">&amp;Restore selected version</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.cpp" line="34"/>
       <source>&amp;Cancel</source>
-      <translation>Anuluj</translation>
+      <translation type="unfinished">&amp;Cancel</translation>
     </message>
   </context>
   <context>
@@ -5561,97 +5504,97 @@ Nie można tego cofnąć!</translation>
       <location filename="../dialogs/welcomedialog.ui" line="14"/>
       <location filename="../dialogs/welcomedialog.ui" line="56"/>
       <source>Welcome to QOwnNotes</source>
-      <translation>Witamy w QOwnNotes</translation>
+      <translation type="unfinished">Welcome to QOwnNotes</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="24"/>
       <source>the plain-text file notepad with markdown support and ownCloud integration</source>
-      <translation>notes ze wsparciem dla Markdown i integracją z ownCloud</translation>
+      <translation type="unfinished">the plain-text file notepad with markdown support and ownCloud integration</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="88"/>
       <source>&amp;Back</source>
-      <translation>Wstecz</translation>
+      <translation type="unfinished">&amp;Back</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="99"/>
       <source>&amp;Next</source>
-      <translation>Dalej</translation>
+      <translation type="unfinished">&amp;Next</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="116"/>
       <source>&amp;Finished</source>
-      <translation>Zakończ</translation>
+      <translation type="unfinished">&amp;Finished</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="139"/>
       <source>&amp;Cancel</source>
-      <translation>Anuluj</translation>
+      <translation type="unfinished">&amp;Cancel</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="168"/>
       <source>Note folder</source>
-      <translation>Folder notatek</translation>
+      <translation type="unfinished">Note folder</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="184"/>
       <source>Create note folder if not existing</source>
-      <translation>Utwórz folder notatek jeżeli nie istnieje</translation>
+      <translation type="unfinished">Create note folder if not existing</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="225"/>
       <source>Note folder path</source>
-      <translation>Ścieżka folderu notatek</translation>
+      <translation type="unfinished">Note folder path</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="232"/>
       <source>Select folder</source>
-      <translation>Wybierz folder</translation>
+      <translation type="unfinished">Select folder</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="307"/>
       <source>Open ownCloud settings</source>
-      <translation>Otwórz ustawienia ownCloud</translation>
+      <translation type="unfinished">Open ownCloud settings</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="349"/>
       <source>Open network settings</source>
-      <translation>Otwiera ustawienia sieci</translation>
+      <translation type="unfinished">Open network settings</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="194"/>
       <source>Please select where you want to store your notes:</source>
-      <translation>Zaznacz gdzie chcesz zapisywać notatki:</translation>
+      <translation type="unfinished">Please select where you want to store your notes:</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="284"/>
       <source>If you want to be able to access your note versions and your trashed notes on your ownCloud server you can configure QOwnNotes for it now. You can also do so at later.</source>
-      <translation>Jeżeli chcesz uzyskać dostęp do wersji notatek oraz kosza na serwerze ownCloud możesz teraz odpowiednio skonfigurować QOwnNotes. Możesz także zrobić to później.</translation>
+      <translation type="unfinished">If you want to be able to access your note versions and your trashed notes on your ownCloud server you can configure QOwnNotes for it now. You can also do so at later.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="314"/>
       <source>In any case you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</source>
-      <translation>W każdym razie potrzebujesz klienta synchronizacji ownCloud (lub innego klienta synchronizacji), aby zsynchronizować swoje notatki z serwerem ownCloud.</translation>
+      <translation type="unfinished">In any case you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="356"/>
       <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
-      <translation>QOwnNotes będzie zbierał anonimowe dane o użytkowaniu programu, które pomogą ustalić jak dalej rozwijać aplikację, a także pomogą w znajdywaniu i naprawianiu błędów. Możesz wyłączyć tą funkcję w ustawieniach.</translation>
+      <translation type="unfinished">QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="77"/>
       <source>Cannot create note path!</source>
-      <translation>Nie można utworzyć ścieżki!</translation>
+      <translation type="unfinished">Cannot create note path!</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="82"/>
       <source>This note path doesn't exist!</source>
-      <translation>Ścieżka notatki nie istnieje!</translation>
+      <translation type="unfinished">This note path doesn't exist!</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="145"/>
       <source>Please select the folder where your notes will get stored to</source>
-      <translation>Zaznacz folder do którego będą zapisywane notatki</translation>
+      <translation type="unfinished">Please select the folder where your notes will get stored to</translation>
     </message>
   </context>
   <context>

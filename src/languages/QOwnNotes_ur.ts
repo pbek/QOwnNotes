@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="mr" sourcelanguage="en">
+<TS version="2.1" language="ur-PK" sourcelanguage="en">
   <context>
     <name>AboutDialog</name>
     <message>
       <location filename="../dialogs/aboutdialog.ui" line="14"/>
       <source>About QOwnNotes</source>
-      <translation type="unfinished">About QOwnNotes</translation>
+      <translation>QOwnNotes کے بارے میں</translation>
     </message>
   </context>
   <context>
@@ -15,7 +15,7 @@
       <location filename="../dialogs/actiondialog.ui" line="14"/>
       <location filename="../dialogs/actiondialog.ui" line="46"/>
       <source>Find action</source>
-      <translation type="unfinished">Find action</translation>
+      <translation>عمل تلاش کریں</translation>
     </message>
   </context>
   <context>
@@ -23,52 +23,52 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="14"/>
       <source>Evernote Import</source>
-      <translation type="unfinished">Evernote Import</translation>
+      <translation>Evernote درآمد</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="90"/>
       <source>Select file</source>
-      <translation type="unfinished">Select file</translation>
+      <translation>فائل منتخب کریں</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="40"/>
       <source>Please select the Evernote enex file you want to import:</source>
-      <translation type="unfinished">Please select the Evernote enex file you want to import:</translation>
+      <translation>برائے مہربانی Evernote enex کی فائل جو آپ درآمد کرنا چاہتے ہیں منتخب کریں:</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="47"/>
       <source>Import images</source>
-      <translation type="unfinished">Import images</translation>
+      <translation>تصاویر درآمد کریں</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="23"/>
       <source>Evernote enex file</source>
-      <translation type="unfinished">Evernote enex file</translation>
+      <translation>Evernote enex فائل</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="33"/>
       <source>%v of %m note(s) imported</source>
-      <translation type="unfinished">%v of %m note(s) imported</translation>
+      <translation>%v کا %m درآمدشدہ نوٹس</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="80"/>
       <source>To get such an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes..." in the File menu.</source>
-      <translation type="unfinished">To get such an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes..." in the File menu.</translation>
+      <translation>اس طرح کے enex فائل کو حاصل کرنے کے لیے آپ کو اپنے Evernotes ڈیسک ٹاپ کلائنٹ میں ایک یا ایک سے زیادہ نوٹ منتخب کرنے کی ضرورت ہے اور برآمدی مینو سے ’’نوٹ برآمد‘‘  پر کلک کریں۔</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="101"/>
       <source>Import attachments</source>
-      <translation type="unfinished">Import attachments</translation>
+      <translation>منسلکہ فائلز درآمد کریں</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="39"/>
       <source>Enex files</source>
-      <translation type="unfinished">Enex files</translation>
+      <translation>Enex فائلز</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="40"/>
       <source>Select Evernote enex file to import</source>
-      <translation type="unfinished">Select Evernote enex file to import</translation>
+      <translation>درآمد کرنے لیے Evernot enex کی فائل منتخب کریں</translation>
     </message>
   </context>
   <context>
@@ -76,237 +76,237 @@
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="38"/>
       <source>Text font</source>
-      <translation type="unfinished">Text font</translation>
+      <translation>متن فونٹ</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="73"/>
       <source>Size:</source>
-      <translation type="unfinished">Size:</translation>
+      <translation>جسامت:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="80"/>
       <source>Family:</source>
-      <translation type="unfinished">Family:</translation>
+      <translation>خاندان:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="103"/>
       <source>Color schema</source>
-      <translation type="unfinished">Color schema</translation>
+      <translation>رنگ خاکہ</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="124"/>
       <source>Delete schema</source>
-      <translation type="unfinished">Delete schema</translation>
+      <translation>خاکہ حذف کریں</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="127"/>
       <source>Delete</source>
-      <translation type="unfinished">Delete</translation>
+      <translation>حذف کریں</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="169"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="633"/>
       <source>Export schema</source>
-      <translation type="unfinished">Export schema</translation>
+      <translation>خاکہ برآمد کریں</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="172"/>
       <source>Export</source>
-      <translation type="unfinished">Export</translation>
+      <translation>برآمد کرنا</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="271"/>
       <source>If you have created a nice color schema please export it and share it with everyone!</source>
-      <translation type="unfinished">If you have created a nice color schema please export it and share it with everyone!</translation>
+      <translation>اگر آپ نے ایک اچھا رنگ کا خاکہ بنایا ہے تو براہ مہربانی اسے برآمد کر کے سب کے ساتھ شئیر کریں!</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="155"/>
       <source>Copy schema</source>
-      <translation type="unfinished">Copy schema</translation>
+      <translation>خاکہ کاپی کریں</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="158"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="462"/>
       <source>Copy</source>
-      <translation type="unfinished">Copy</translation>
+      <translation>کاپی</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="141"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="676"/>
       <source>Import schema</source>
-      <translation type="unfinished">Import schema</translation>
+      <translation>خاکہ درآمد کریں</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="144"/>
       <source>Import</source>
-      <translation type="unfinished">Import</translation>
+      <translation>درآمد کریں</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="315"/>
       <source>Share schema</source>
-      <translation type="unfinished">Share schema</translation>
+      <translation>خاکہ شئیر کریں</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="288"/>
       <source>Background:</source>
-      <translation type="unfinished">Background:</translation>
+      <translation>پس منظر:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="281"/>
       <source>Foreground:</source>
-      <translation type="unfinished">Foreground:</translation>
+      <translation>پیش منظر:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="264"/>
       <source>Bold</source>
-      <translation type="unfinished">Bold</translation>
+      <translation>بولڈ</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="244"/>
       <source>Italic</source>
-      <translation type="unfinished">Italic</translation>
+      <translation>ترچھا</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="237"/>
       <source>Adapt font size:</source>
-      <translation type="unfinished">Adapt font size:</translation>
+      <translation>فونٹ سائز اپنائیں:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="208"/>
       <source>Underline</source>
-      <translation type="unfinished">Underline</translation>
+      <translation>نیچے لائن لگانا</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="195"/>
       <source>Text preset</source>
-      <translation type="unfinished">Text preset</translation>
+      <translation>متن کی ترتیب</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="196"/>
       <source>Emphasized text</source>
-      <translation type="unfinished">Emphasized text</translation>
+      <translation>زور دیا گیا متن</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="197"/>
       <source>Strong text</source>
-      <translation type="unfinished">Strong text</translation>
+      <translation>متن کو مضبوط بنانا</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="214"/>
       <source>(HTML) Comment</source>
-      <translation type="unfinished">(HTML) Comment</translation>
+      <translation>(HTML) کومنٹ</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="204"/>
       <source>Header, level 1</source>
-      <translation type="unfinished">Header, level 1</translation>
+      <translation>ہیڈر، مرحلہ 1</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="198"/>
       <source>Link</source>
-      <translation type="unfinished">Link</translation>
+      <translation>لنک</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="199"/>
       <source>Image</source>
-      <translation type="unfinished">Image</translation>
+      <translation>تصویر</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="200"/>
       <source>Code (block)</source>
-      <translation type="unfinished">Code (block)</translation>
+      <translation>کوڈ (بلاک)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="201"/>
       <source>Code (inline)</source>
-      <translation type="unfinished">Code (inline)</translation>
+      <translation>کوڈ (ترتیب سے)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="203"/>
       <source>List item</source>
-      <translation type="unfinished">List item</translation>
+      <translation>اشیاء کی ترتیب</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="205"/>
       <source>Header, level 2</source>
-      <translation type="unfinished">Header, level 2</translation>
+      <translation>ہیڈر، مرحلہ 2</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="206"/>
       <source>Header, level 3</source>
-      <translation type="unfinished">Header, level 3</translation>
+      <translation>ہیڈر، مرحلہ 3</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="207"/>
       <source>Header, level 4</source>
-      <translation type="unfinished">Header, level 4</translation>
+      <translation>ہیڈر، مرحلہ 4</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="208"/>
       <source>Header, level 5</source>
-      <translation type="unfinished">Header, level 5</translation>
+      <translation>ہیڈر، مرحلہ 5</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="209"/>
       <source>Header, level 6</source>
-      <translation type="unfinished">Header, level 6</translation>
+      <translation>ہیڈر، مرحلہ 6</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="212"/>
       <source>Block quote</source>
-      <translation type="unfinished">Block quote</translation>
+      <translation>بلاک اقتباس</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="213"/>
       <source>Table</source>
-      <translation type="unfinished">Table</translation>
+      <translation>جدول</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="215"/>
       <source>Masked syntax</source>
       <comment>text that will highlighted in a way that it's barely visible</comment>
-      <translation type="unfinished">Masked syntax</translation>
+      <translation>مخفی الفاظ کی ترتیب</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="210"/>
       <source>Horizontal rule</source>
-      <translation type="unfinished">Horizontal rule</translation>
+      <translation>افقی اصول</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="218"/>
       <source>Current line background color</source>
-      <translation type="unfinished">Current line background color</translation>
+      <translation>حالیہ لائن کے پس منظر کا رنگ</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="228"/>
       <source>This item will be used to preset colors for the other items</source>
-      <translation type="unfinished">This item will be used to preset colors for the other items</translation>
+      <translation>یہ شے دوسری اشیاء کو پری سیٹ رنگوں کے لیے استعمال کیا جائے گا</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="459"/>
       <source>Copy color schema</source>
-      <translation type="unfinished">Copy color schema</translation>
+      <translation>رنگ خاکہ</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="460"/>
       <source>Color schema name</source>
-      <translation type="unfinished">Color schema name</translation>
+      <translation>رنگ خاکہ</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="584"/>
       <source>Remove schema</source>
-      <translation type="unfinished">Remove schema</translation>
+      <translation>شجرہ ہٹائیں</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="585"/>
       <source>Remove current schema? This cannot be undone!</source>
-      <translation type="unfinished">Remove current schema? This cannot be undone!</translation>
+      <translation>حالیہ شجرہ ہٹائیں؟ یہ واپس نہیں ہو سکتا!</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="632"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="675"/>
       <source>INI files</source>
-      <translation type="unfinished">INI files</translation>
+      <translation>INI فائلز</translation>
     </message>
   </context>
   <context>
@@ -314,37 +314,37 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="14"/>
       <source>Link an url or note</source>
-      <translation type="unfinished">Link an url or note</translation>
+      <translation>ایک یو آر ایل یا نوٹ کا لنک دیں</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="44"/>
       <source>Enter URL</source>
-      <translation type="unfinished">Enter URL</translation>
+      <translation>یو آر ایل درج کریں</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="53"/>
       <source>Enter an URL to link to</source>
-      <translation type="unfinished">Enter an URL to link to</translation>
+      <translation>ایک یو آر ایل کو لنک کرنے کے لیے درج کریں</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="76"/>
       <source>Search for notes or create new notes by entering text and pressing return</source>
-      <translation type="unfinished">Search for notes or create new notes by entering text and pressing return</translation>
+      <translation>نوٹس تلاش کریں یا ٹیکسٹ درج کر کے اور واپس دبانے سے نئے نوٹس بنائیں</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="91"/>
       <source>Search for a note to link to</source>
-      <translation type="unfinished">Search for a note to link to</translation>
+      <translation>ایک نوٹ کو لنک کرنے کے لیے تلاش کریں</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="63"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;select local file to link to&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;select local file to link to&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;لنک کرنے کے لیے مقامی فائل منتخب کریں&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.cpp" line="191"/>
       <source>Select file to link to</source>
-      <translation type="unfinished">Select file to link to</translation>
+      <translation>لنک کرنے کے لیے فائل منتخب کریں</translation>
     </message>
   </context>
   <context>
@@ -352,90 +352,90 @@
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="14"/>
       <source>Locally trashed notes</source>
-      <translation type="unfinished">Locally trashed notes</translation>
+      <translation>مقامی طور پر بیکار کردہ نوٹس</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="42"/>
       <source>Name</source>
-      <translation type="unfinished">Name</translation>
+      <translation>نام</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="47"/>
       <source>Trashed</source>
-      <translation type="unfinished">Trashed</translation>
+      <translation>بے کار کردیا گیا</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="41"/>
       <source>Restore</source>
-      <translation type="unfinished">Restore</translation>
+      <translation>بحال کرنا</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="42"/>
       <location filename="../dialogs/localtrashdialog.cpp" line="194"/>
       <source>Restore selected notes</source>
-      <translation type="unfinished">Restore selected notes</translation>
+      <translation>منتخب شدہ نوٹس بحال کریں</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="51"/>
       <source>Remove</source>
-      <translation type="unfinished">Remove</translation>
+      <translation>ہٹا دیں</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="52"/>
       <location filename="../dialogs/localtrashdialog.cpp" line="240"/>
       <source>Remove selected notes</source>
-      <translation type="unfinished">Remove selected notes</translation>
+      <translation>منتخب شدہ نوٹس ہٹا دیں</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="97"/>
       <source>File will be restored to: %1</source>
-      <translation type="unfinished">File will be restored to: %1</translation>
+      <translation>فائل بحال کر دی جائے گی1:%</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="106"/>
       <source>File &lt;strong&gt;%1&lt;/strong&gt; isn't readable and can't be restored!</source>
-      <translation type="unfinished">File &lt;strong&gt;%1&lt;/strong&gt; isn't readable and can't be restored!</translation>
+      <translation>فائل &lt;strong&gt;%1&lt;/strong&gt; پڑھی نہیں جا سکتی اور نہ ہی بحال ہو سکتی ہے!</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="195"/>
       <source>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
-        <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
+      <translation>
+        <numerusform>منتخب کردہ نوٹس بحال &lt;strong&gt;%n&lt;/strong&gt; کریں؟</numerusform>
+        <numerusform>منتخب کردہ نوٹس بحال &lt;strong&gt;%n&lt;/strong&gt; کریں؟</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="218"/>
       <source>Notes restored</source>
-      <translation type="unfinished">Notes restored</translation>
+      <translation>نوٹس بحال کر دیے گئے</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="219"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) where restored</source>
-      <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) where restored</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) where restored</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; نوٹس بحال کیے گئے</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; نوٹس بحال کیے گئے</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="241"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
+      <translation>
+        <numerusform>منتخب کردہ نوٹس ہٹا &lt;strong&gt;%n&lt;/strong&gt; دیں؟</numerusform>
+        <numerusform>منتخب کردہ نوٹس ہٹا &lt;strong&gt;%n&lt;/strong&gt; دیں؟</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="264"/>
       <source>Notes removed</source>
-      <translation type="unfinished">Notes removed</translation>
+      <translation>نوٹس ہٹا دیے گئے</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="265"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) where removed</source>
-      <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) where removed</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) where removed</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; نوٹس جو ہٹا دیے گئے</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; نوٹس جو ہٹا دیے گئے</numerusform>
       </translation>
     </message>
   </context>
@@ -444,58 +444,58 @@
     <message>
       <location filename="../widgets/logwidget.ui" line="26"/>
       <source>Logs</source>
-      <translation type="unfinished">Logs</translation>
+      <translation>لوگوز</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="114"/>
       <source>Fatal</source>
-      <translation type="unfinished">Fatal</translation>
+      <translation>مہلک</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="100"/>
       <source>Warning</source>
-      <translation type="unfinished">Warning</translation>
+      <translation>انتباہ</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="107"/>
       <source>Critical</source>
-      <translation type="unfinished">Critical</translation>
+      <translation>نازک</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="86"/>
       <source>Debug</source>
-      <translation type="unfinished">Debug</translation>
+      <translation>مشکلات دور کرنا</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="93"/>
       <source>Info</source>
-      <translation type="unfinished">Info</translation>
+      <translation>معلومات</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="121"/>
       <source>Status</source>
-      <translation type="unfinished">Status</translation>
+      <translation>سٹیٹس</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="128"/>
       <source>Scripting</source>
-      <translation type="unfinished">Scripting</translation>
+      <translation>تحریر کرنا</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="135"/>
       <location filename="../widgets/logwidget.cpp" line="390"/>
       <source>Clear log</source>
-      <translation type="unfinished">Clear log</translation>
+      <translation>لاگ خالی کر دیں</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.cpp" line="388"/>
       <source>Show options</source>
-      <translation type="unfinished">Show options</translation>
+      <translation>اختیارات ظاہر کریں</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.cpp" line="388"/>
       <source>Hide options</source>
-      <translation type="unfinished">Hide options</translation>
+      <translation>اختیارات چھپادیں</translation>
     </message>
   </context>
   <context>
@@ -503,794 +503,794 @@
     <message>
       <location filename="../mainwindow.ui" line="512"/>
       <source>add a tag to this note</source>
-      <translation type="unfinished">add a tag to this note</translation>
+      <translation>اس نوٹ پہ ایک ٹیگز کا اضافہ کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="515"/>
       <source>Add tag</source>
-      <translation type="unfinished">Add tag</translation>
+      <translation>ٹیگ کا اضافہ کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="387"/>
       <location filename="../mainwindow.ui" line="724"/>
       <location filename="../mainwindow.cpp" line="602"/>
       <source>Navigation</source>
-      <translation type="unfinished">Navigation</translation>
+      <translation>نیویگینش</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="682"/>
       <source>&amp;Note</source>
-      <translation type="unfinished">&amp;Note</translation>
+      <translation>&amp;نوٹ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="686"/>
       <source>Note &amp;folders</source>
-      <translation type="unfinished">Note &amp;folders</translation>
+      <translation>نوٹ &amp;فولڈرز</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="691"/>
       <source>Sort by</source>
-      <translation type="unfinished">Sort by</translation>
+      <translation>کے حساب سے درجہ بندی</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="795"/>
       <source>&amp;Help</source>
-      <translation type="unfinished">&amp;Help</translation>
+      <translation>&amp;مدد</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="932"/>
       <source>Editor width in distraction free mode</source>
-      <translation type="unfinished">Editor width in distraction free mode</translation>
+      <translation>توجہ ہٹانے سے آزاد کے موڈ میں ایڈیٹر کی چوڑائی</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="935"/>
       <source>Editor width</source>
-      <translation type="unfinished">Editor width</translation>
+      <translation>ایڈیٹر کی چوڑائی</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1009"/>
       <source>Custom actions</source>
-      <translation type="unfinished">Custom actions</translation>
+      <translation>اختیاری اعمال</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1029"/>
       <source>main toolbar</source>
-      <translation type="unfinished">main toolbar</translation>
+      <translation>مرکزی ٹول بار</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1063"/>
       <source>&amp;Quit</source>
-      <translation type="unfinished">&amp;Quit</translation>
+      <translation>&amp;بند کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1078"/>
       <source>&amp;Setup note folders</source>
-      <translation type="unfinished">&amp;Setup note folders</translation>
+      <translation>&amp;سیٹ اپ نوٹ فولڈز</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1087"/>
       <source>&amp;Find note</source>
-      <translation type="unfinished">&amp;Find note</translation>
+      <translation>&amp;نوٹ ڈھونڈیں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1099"/>
       <source>&amp;Remove current note</source>
-      <translation type="unfinished">&amp;Remove current note</translation>
+      <translation>&amp;حالیہ نوٹ ہٹائیں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1111"/>
       <source>About &amp;QOwnNotes...</source>
-      <translation type="unfinished">About &amp;QOwnNotes...</translation>
+      <translation>&amp;QOwnNotes کے بارے میں...</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1123"/>
       <source>&amp;New note</source>
-      <translation type="unfinished">&amp;New note</translation>
+      <translation>&amp;نیا نوٹ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1135"/>
       <source>Check for &amp;updates</source>
-      <translation type="unfinished">Check for &amp;updates</translation>
+      <translation>&amp;اپ ڈیٹس کے لیے چیک کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1147"/>
       <source>Report &amp;issues or ideas</source>
-      <translation type="unfinished">Report &amp;issues or ideas</translation>
+      <translation>&amp;مسائل یا خیالات رپورٹ کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1155"/>
       <source>Alphabetical</source>
-      <translation type="unfinished">Alphabetical</translation>
+      <translation>حروف تہجی کے اعتبار سے</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1158"/>
       <source>Sort alphabetical</source>
-      <translation type="unfinished">Sort alphabetical</translation>
+      <translation>حروف تہجی کے اعتبار سے ترتیب دیں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1166"/>
       <source>By date</source>
-      <translation type="unfinished">By date</translation>
+      <translation>تاریخ کے اعتبار سے</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1169"/>
       <source>Sort by date</source>
-      <translation type="unfinished">Sort by date</translation>
+      <translation>تاریخ کے اعتبار سے ترتیب دیں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1193"/>
       <source>Show note &amp;versions</source>
-      <translation type="unfinished">Show note &amp;versions</translation>
+      <translation>نوٹ &amp;ورژنز دکھائیں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1196"/>
       <source>Show note versions on server</source>
-      <translation type="unfinished">Show note versions on server</translation>
+      <translation>سرور پر نوٹ کا ورژن دکھائیں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1208"/>
       <source>Show trashed notes on server</source>
-      <translation type="unfinished">Show trashed notes on server</translation>
+      <translation>بیکار کیے گئے نوٹس کو سرور پر دکھائیں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1213"/>
-      <location filename="../mainwindow.cpp" line="8496"/>
+      <location filename="../mainwindow.cpp" line="8524"/>
       <source>Select &amp;all notes</source>
-      <translation type="unfinished">Select &amp;all notes</translation>
+      <translation>&amp;تمام نوٹس منتخب کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1222"/>
-      <location filename="../mainwindow.cpp" line="5422"/>
+      <location filename="../mainwindow.cpp" line="5444"/>
       <source>Insert &amp;link</source>
-      <translation type="unfinished">Insert &amp;link</translation>
+      <translation>&amp;لنک داخل کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1225"/>
       <source>Insert link to an url or a note</source>
-      <translation type="unfinished">Insert link to an url or a note</translation>
+      <translation>ایک یو آر ایل یا نوٹ پہ لنک داخل کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1237"/>
       <source>&amp;Find in current note</source>
-      <translation type="unfinished">&amp;Find in current note</translation>
+      <translation>موجودہ نوٹ &amp;تلاش کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1240"/>
       <source>Find text in current note</source>
-      <translation type="unfinished">Find text in current note</translation>
+      <translation>موجودہ نوٹ میں ٹیکسٹ تلاش کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1245"/>
       <source>&amp;Duplicate text</source>
-      <translation type="unfinished">&amp;Duplicate text</translation>
+      <translation>&amp;ہوبہو ٹیکسٹ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1257"/>
       <source>&amp;Back in note history</source>
-      <translation type="unfinished">&amp;Back in note history</translation>
+      <translation>نوٹ کی تاریخ میں &amp;واپس</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1178"/>
       <source>&amp;Settings</source>
-      <translation type="unfinished">&amp;Settings</translation>
+      <translation>&amp;ترتیبات</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="119"/>
       <source>Find or create note sub folder</source>
-      <translation type="unfinished">Find or create note sub folder</translation>
+      <translation>نوٹ کا سب فولڈر تلاش یا تخلیق کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="196"/>
       <source>Find or create tag</source>
-      <translation type="unfinished">Find or create tag</translation>
+      <translation>ٹیگ تلاش یا تخلیق کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="292"/>
       <source>Search for notes or create new notes by entering text and pressing return</source>
-      <translation type="unfinished">Search for notes or create new notes by entering text and pressing return</translation>
+      <translation>نوٹس کی تلاش کریں یا نئے نوٹس کو ٹیکسٹ داخل کر کے اور واپس دبانے سے تخلیق کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="306"/>
       <source>Search or create note</source>
-      <translation type="unfinished">Search or create note</translation>
+      <translation>نوٹ تلاش یا تخلیق کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="526"/>
       <source>New tag</source>
-      <translation type="unfinished">New tag</translation>
+      <translation>نیا ٹیگ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="701"/>
-      <location filename="../mainwindow.cpp" line="5397"/>
+      <location filename="../mainwindow.cpp" line="5420"/>
       <source>Export</source>
-      <translation type="unfinished">Export</translation>
+      <translation>برآمد کرنا</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="714"/>
       <source>Import</source>
-      <translation type="unfinished">Import</translation>
+      <translation>درآمد کرنا</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="737"/>
-      <location filename="../mainwindow.cpp" line="5379"/>
+      <location filename="../mainwindow.cpp" line="5402"/>
       <source>Print</source>
-      <translation type="unfinished">Print</translation>
+      <translation>پرنٹ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="748"/>
       <source>View note</source>
-      <translation type="unfinished">View note</translation>
+      <translation>نوٹ دیکھیں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="760"/>
       <source>Trash</source>
-      <translation type="unfinished">Trash</translation>
+      <translation>ردی</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="824"/>
       <source>&amp;Edit</source>
-      <translation type="unfinished">&amp;Edit</translation>
+      <translation>&amp;ترمیم</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="828"/>
       <source>Insert</source>
-      <translation type="unfinished">Insert</translation>
+      <translation>داخل کرنا</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="845"/>
       <source>Format</source>
-      <translation type="unfinished">Format</translation>
+      <translation>فارمیٹ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="858"/>
       <source>Extra</source>
-      <translation type="unfinished">Extra</translation>
+      <translation>اضافی</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="871"/>
       <source>Edit</source>
-      <translation type="unfinished">Edit</translation>
+      <translation>ترمیم</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="883"/>
       <source>Versioning</source>
-      <translation type="unfinished">Versioning</translation>
+      <translation>ورژننگ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="894"/>
       <source>Encryption</source>
-      <translation type="unfinished">Encryption</translation>
+      <translation>انکرپشن</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="922"/>
       <source>To&amp;do</source>
-      <translation type="unfinished">To&amp;do</translation>
+      <translation>کرنے &amp;کے لیے</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="928"/>
       <source>&amp;Window</source>
-      <translation type="unfinished">&amp;Window</translation>
+      <translation>&amp;ونڈو</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="944"/>
       <location filename="../mainwindow.cpp" line="541"/>
       <source>Workspaces</source>
-      <translation type="unfinished">Workspaces</translation>
+      <translation>ورک سپیس</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="949"/>
       <source>Panels</source>
-      <translation type="unfinished">Panels</translation>
+      <translation>پینلز</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="954"/>
       <source>Toolbars</source>
-      <translation type="unfinished">Toolbars</translation>
+      <translation>ٹول بارز</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="959"/>
       <source>Show</source>
       <extracomment>To show or hide stuff</extracomment>
-      <translation type="unfinished">Show</translation>
+      <translation>دکھائیں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="973"/>
       <source>Workspace</source>
-      <translation type="unfinished">Workspace</translation>
+      <translation>ورک سپیس</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1005"/>
       <source>&amp;Scripting</source>
-      <translation type="unfinished">&amp;Scripting</translation>
+      <translation>&amp;سکرپٹنگ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1205"/>
       <source>Show remote trash</source>
-      <translation type="unfinished">Show remote trash</translation>
+      <translation>دور دراز کی ردی دکھائیں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1269"/>
       <source>Forward in note history</source>
-      <translation type="unfinished">Forward in note history</translation>
+      <translation>نوٹ کی تاریخ میں آگے بھیجنا</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1281"/>
       <source>Show shortcuts</source>
-      <translation type="unfinished">Show shortcuts</translation>
+      <translation>شارٹ کٹس دکھائیں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1290"/>
       <source>&amp;Knowledge base</source>
-      <translation type="unfinished">&amp;Knowledge base</translation>
+      <translation>&amp;نالج بیس</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1299"/>
       <source>Insert current &amp;time</source>
-      <translation type="unfinished">Insert current &amp;time</translation>
+      <translation>موجودہ &amp;وقت داخل کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1311"/>
       <source>Show &amp;Todo List</source>
-      <translation type="unfinished">Show &amp;Todo List</translation>
+      <translation>&amp;ٹوڈو فہرست ظاہر کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1323"/>
       <source>&amp;Export note as PDF (preview)</source>
-      <translation type="unfinished">&amp;Export note as PDF (preview)</translation>
+      <translation>نوٹ کوPDF(پیش نظر) کے طور پر &amp;برآمد کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1326"/>
       <source>Export note as PDF (preview)</source>
-      <translation type="unfinished">Export note as PDF (preview)</translation>
+      <translation>نوٹ کوPDF(پیش نظر) کے طور پر برآمد کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1335"/>
       <source>&amp;Export note as PDF (text)</source>
-      <translation type="unfinished">&amp;Export note as PDF (text)</translation>
+      <translation>نوٹ کوPDF(ٹیکسٹ) کے طور پر &amp;برآمد کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1344"/>
       <source>&amp;Print note (text)</source>
-      <translation type="unfinished">&amp;Print note (text)</translation>
+      <translation>&amp;پرنٹ نوٹ (ٹیکسٹ)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1368"/>
       <source>Insert &amp;image</source>
-      <translation type="unfinished">Insert &amp;image</translation>
+      <translation>&amp;تصویر داخل کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1371"/>
       <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
-      <translation type="unfinished">Insert image (the image will be copied to the `media` folder in the current notes folder)</translation>
+      <translation>تصویر داخل کریں (تصویر موجودہ نوٹس فولڈر کے `میڈیا` فولڈر میں نقل کی جائے گی)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1383"/>
       <source>Show &amp;changelog</source>
-      <translation type="unfinished">Show &amp;changelog</translation>
+      <translation>&amp;تبدیلی لاگ ظاہر کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1392"/>
       <source>&amp;Encrypt note</source>
-      <translation type="unfinished">&amp;Encrypt note</translation>
+      <translation>نوٹ کو &amp;خفیہ بنائیں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1401"/>
       <source>Edit encrypted note</source>
-      <translation type="unfinished">Edit encrypted note</translation>
+      <translation>خفیہ نوٹ میں ترمیم کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1413"/>
       <source>Decrypt note</source>
-      <translation type="unfinished">Decrypt note</translation>
+      <translation>خفیہ نوٹ کو اصل حالت میں لائیں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1422"/>
       <source>&amp;Open note in external editor</source>
-      <translation type="unfinished">&amp;Open note in external editor</translation>
+      <translation>نوٹ کو بیرونی ایڈیٹر میں &amp;کھولیں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1434"/>
       <source>&amp;Export note as markdown file</source>
-      <translation type="unfinished">&amp;Export note as markdown file</translation>
+      <translation>نوٹ کو مارک ڈاؤن فائل کے طور پر &amp;برآمد کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1443"/>
       <source>&amp;Get involved</source>
-      <translation type="unfinished">&amp;Get involved</translation>
+      <translation>شامل &amp;ہو جائیں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1452"/>
       <source>Insert &amp;code block</source>
-      <translation type="unfinished">Insert &amp;code block</translation>
+      <translation>&amp;کوڈ بلاک داخل کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1464"/>
       <source>Next note</source>
-      <translation type="unfinished">Next note</translation>
+      <translation>اگلا نوٹ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1476"/>
       <source>Previous note</source>
-      <translation type="unfinished">Previous note</translation>
+      <translation>پچھلا نوٹ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1488"/>
       <source>&amp;Distraction free mode</source>
-      <translation type="unfinished">&amp;Distraction free mode</translation>
+      <translation>&amp;توجہ ہٹانے سے آزاد موڈ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1491"/>
       <source>Distraction free mode, you can leave it with a button on the bottom right</source>
-      <translation type="unfinished">Distraction free mode, you can leave it with a button on the bottom right</translation>
+      <translation>توجہ ہٹانے سے آزاد موڈ، آپ اسکو دائیں طرف سب سے نیچے بٹن کے ساتھ چھوڑ سکتے ہیں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1502"/>
       <source>Show &amp;toolbar</source>
-      <translation type="unfinished">Show &amp;toolbar</translation>
+      <translation>&amp;ٹول بار دکھائیں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1510"/>
       <source>Narrow</source>
-      <translation type="unfinished">Narrow</translation>
+      <translation>تنگ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1521"/>
       <source>Medium</source>
-      <translation type="unfinished">Medium</translation>
+      <translation>درمیانہ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1532"/>
       <source>Wide</source>
-      <translation type="unfinished">Wide</translation>
+      <translation>چوڑا</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1543"/>
       <source>Full</source>
-      <translation type="unfinished">Full</translation>
+      <translation>مکمل</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1555"/>
       <source>Paste html or media</source>
-      <translation type="unfinished">Paste html or media</translation>
+      <translation>ایچ ٹی ایم ایل یا میڈیا پیسٹ کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1558"/>
       <location filename="../mainwindow.ui" line="1561"/>
       <source>Paste images, notes and html from the clipboard</source>
-      <translation type="unfinished">Paste images, notes and html from the clipboard</translation>
+      <translation>کلپ بورڈ سے تصاویر، نوٹس اور ایچ ٹی ایم ایل پیسٹ کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1573"/>
       <source>Show note in &amp;file manager</source>
-      <translation type="unfinished">Show note in &amp;file manager</translation>
+      <translation>نوٹ کو &amp;فائل مینیجر میں ظاہر کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1585"/>
       <source>Format text &amp;bold</source>
-      <translation type="unfinished">Format text &amp;bold</translation>
+      <translation>ٹیکسٹ کو &amp;بولڈ فارمیٹ کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1597"/>
       <source>Format text &amp;italic</source>
-      <translation type="unfinished">Format text &amp;italic</translation>
+      <translation>ٹیکسٹ کو &amp;ترچھا فارمیٹ کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1609"/>
       <source>&amp;Increase note text size</source>
-      <translation type="unfinished">&amp;Increase note text size</translation>
+      <translation>نوٹ ٹیکسٹ کا سائز &amp;بڑھائیں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1621"/>
       <source>&amp;Decrease note text size</source>
-      <translation type="unfinished">&amp;Decrease note text size</translation>
+      <translation>نوٹ ٹیکسٹ کا سائز &amp;گھٹائیں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1633"/>
       <source>&amp;Reset note text size</source>
-      <translation type="unfinished">&amp;Reset note text size</translation>
+      <translation>نوٹ ٹیکسٹ کا سائز &amp;پھرسیٹ کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1645"/>
       <source>&amp;Add tag to note</source>
-      <translation type="unfinished">&amp;Add tag to note</translation>
+      <translation>نوٹ کے ساتھ ٹیگ کا &amp;اضافہ کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1657"/>
       <source>&amp;Reload note folder</source>
-      <translation type="unfinished">&amp;Reload note folder</translation>
+      <translation>نوٹ فولڈر کو &amp;دوبارہ لوڈ کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1729"/>
       <source>Show log</source>
-      <translation type="unfinished">Show log</translation>
+      <translation>لاگ ظاہر کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1738"/>
       <source>Export note as HTML</source>
-      <translation type="unfinished">Export note as HTML</translation>
+      <translation>نوٹ کو ایچ ٹی ایم ایل کے طور پر برآمد کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1817"/>
       <source>Cycle text case</source>
-      <translation type="unfinished">Cycle text case</translation>
+      <translation>سائیکل ٹیکسٹ کیس</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1908"/>
       <source>Find notes in all tags / subfolders</source>
-      <translation type="unfinished">Find notes in all tags / subfolders</translation>
+      <translation>تمام ٹیگز / سب فولڈرز سے نوٹس تلاش کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1956"/>
       <source>Unlock panels</source>
-      <translation type="unfinished">Unlock panels</translation>
+      <translation>پینلز ان لاک کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1965"/>
-      <location filename="../mainwindow.cpp" line="9433"/>
+      <location filename="../mainwindow.cpp" line="9461"/>
       <source>Remove current workspace</source>
-      <translation type="unfinished">Remove current workspace</translation>
+      <translation>موجودہ ورک سپیس ہٹا دیں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1974"/>
       <source>Add new workspace</source>
-      <translation type="unfinished">Add new workspace</translation>
+      <translation>نئی ورک سپیس کا اضافہ کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1983"/>
       <source>Rename current workspace</source>
-      <translation type="unfinished">Rename current workspace</translation>
+      <translation>موجود ورک سپیس کو دوبارہ نام دیں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1992"/>
       <source>Switch to previous workspace</source>
-      <translation type="unfinished">Switch to previous workspace</translation>
+      <translation>پچھلی ورک سپیس پہ منتقل ہوں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2000"/>
       <source>Show all panels</source>
-      <translation type="unfinished">Show all panels</translation>
+      <translation>تمام پینلز ظاہر کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2009"/>
       <source>Find action</source>
-      <translation type="unfinished">Find action</translation>
+      <translation>اختیار تلاش کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2012"/>
       <location filename="../mainwindow.ui" line="2015"/>
       <source>Find an action from the menu</source>
-      <translation type="unfinished">Find an action from the menu</translation>
+      <translation>مینیو میں سے ایک اختیار تلاش کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2027"/>
       <source>Insert table</source>
-      <translation type="unfinished">Insert table</translation>
+      <translation>جدول داخل کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2039"/>
       <source>Insert block &amp;quote</source>
-      <translation type="unfinished">Insert block &amp;quote</translation>
+      <translation>بلاک &amp;کوٹ داخل کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2047"/>
-      <location filename="../mainwindow.cpp" line="5427"/>
-      <source>Search text on the web</source>
-      <translation type="unfinished">Search text on the web</translation>
+      <location filename="../mainwindow.ui" line="2050"/>
+      <source>Search selected text on the web</source>
+      <translation type="unfinished">Search selected text on the web</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2055"/>
+      <location filename="../mainwindow.ui" line="2058"/>
       <source>Delete line</source>
-      <translation type="unfinished">Delete line</translation>
+      <translation>لائن حذف کریں</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2063"/>
+      <location filename="../mainwindow.ui" line="2066"/>
       <source>Delete word</source>
-      <translation type="unfinished">Delete word</translation>
+      <translation>لفظ حذف کریں</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2075"/>
-      <location filename="../mainwindow.cpp" line="8476"/>
+      <location filename="../mainwindow.ui" line="2078"/>
+      <location filename="../mainwindow.cpp" line="8504"/>
       <source>Open note in different window</source>
-      <translation type="unfinished">Open note in different window</translation>
+      <translation>نوٹ کو مختلف ونڈو میں کھولیں</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2087"/>
+      <location filename="../mainwindow.ui" line="2090"/>
       <source>Save modified notes</source>
-      <translation type="unfinished">Save modified notes</translation>
+      <translation>ترمیم شدہ نوٹس کو محفوظ کریں</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2098"/>
+      <location filename="../mainwindow.ui" line="2101"/>
       <source>Ascending</source>
-      <translation type="unfinished">Ascending</translation>
+      <translation>اوپر سے نیچے کی ترتیب</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2106"/>
+      <location filename="../mainwindow.ui" line="2109"/>
       <source>Descending</source>
-      <translation type="unfinished">Descending</translation>
+      <translation>نیچے سے اوپر کی ترتیب</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2115"/>
-      <location filename="../mainwindow.cpp" line="8483"/>
+      <location filename="../mainwindow.ui" line="2118"/>
+      <location filename="../mainwindow.cpp" line="8511"/>
       <source>Show note git versions</source>
-      <translation type="unfinished">Show note git versions</translation>
+      <translation>نوٹ کا گٹ ورژن دکھائیں</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2124"/>
+      <location filename="../mainwindow.ui" line="2127"/>
       <source>Find scripts in script repository</source>
-      <translation type="unfinished">Find scripts in script repository</translation>
+      <translation>سکرپٹ رپوزیٹری میں سکرپٹس تلاش کریں</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2136"/>
+      <location filename="../mainwindow.ui" line="2139"/>
       <source>Script settings</source>
-      <translation type="unfinished">Script settings</translation>
+      <translation>سکرپٹ کی ترتیبات</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2145"/>
+      <location filename="../mainwindow.ui" line="2148"/>
       <source>Insert attachment</source>
-      <translation type="unfinished">Insert attachment</translation>
+      <translation>اٹیچمنٹ داخل کریں</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2160"/>
+      <location filename="../mainwindow.ui" line="2163"/>
       <source>Allow note editing</source>
-      <translation type="unfinished">Allow note editing</translation>
+      <translation>نوٹ کی ترمیم کی اجازت دیں</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2172"/>
+      <location filename="../mainwindow.ui" line="2175"/>
       <source>Check for script updates</source>
-      <translation type="unfinished">Check for script updates</translation>
+      <translation>سکرپٹ کی اپڈیٹس کے لیے چیک کریں</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2181"/>
+      <location filename="../mainwindow.ui" line="2184"/>
       <source>Show local trash</source>
-      <translation type="unfinished">Show local trash</translation>
+      <translation>مقامی ردی دکھائیں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1668"/>
       <source>Use &amp;vertical preview layout</source>
-      <translation type="unfinished">Use &amp;vertical preview layout</translation>
+      <translation>عمودی پیش منظر لے آؤٹ &amp;استعمال کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1671"/>
       <location filename="../mainwindow.ui" line="1674"/>
       <source>The note edit panel will be above the preview panel</source>
-      <translation type="unfinished">The note edit panel will be above the preview panel</translation>
+      <translation>نوٹ میں ترمیم کا پینل پیش نظر پینل کے اوپر ہو گا</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1683"/>
       <source>Replace in current note</source>
-      <translation type="unfinished">Replace in current note</translation>
+      <translation>حالیہ نوٹ میں بدلاؤ کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1691"/>
       <source>Autocomplete, solve equation or open URL</source>
-      <translation type="unfinished">Autocomplete, solve equation or open URL</translation>
+      <translation>خود بخود مکمل، مساوات حل کریں یا یو آر ایل کھولیں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1694"/>
       <source>Solve a simple equation like '(2+3)*6=' in the current line</source>
-      <translation type="unfinished">Solve a simple equation like '(2+3)*6=' in the current line</translation>
+      <translation>موجودہ لائن میں اس طرح کی سادہ مساوات حل کریں '(2+3) 6*='</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1702"/>
       <source>Select note folder</source>
-      <translation type="unfinished">Select note folder</translation>
+      <translation>نوٹ فولڈر منتخب کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1717"/>
       <source>Reload scripting engine</source>
-      <translation type="unfinished">Reload scripting engine</translation>
+      <translation>سکرپٹنگ انجن کو دوبارہ لوڈ کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1750"/>
       <location filename="../mainwindow.ui" line="1753"/>
       <source>Open the #qownnotes IRC channel, you have to stay online to get a response</source>
-      <translation type="unfinished">Open the #qownnotes IRC channel, you have to stay online to get a response</translation>
+      <translation>#qownnotes IRC چینل کھولیں، آپکو جواب حاصل کرنے کے لیے آن لائن رہنا ہو گا</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1890"/>
       <source>Show note list under tag pane</source>
-      <translation type="unfinished">Show note list under tag pane</translation>
+      <translation>نوٹ فہرست کو ٹیگ پین کے نیچے دکھائیں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1941"/>
       <location filename="../mainwindow.ui" line="1944"/>
       <source>Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</source>
-      <translation type="unfinished">Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</translation>
+      <translation>qownnotes گٹر روم کھولیں، آپکو لاگ ان کرنے کیلئے گٹ ہب یا ٹویٹر اکاؤنٹ کی ضرورت ہے، لیکن آپ آف لائن پیغامات حاصل کرسکتے ہیں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="799"/>
       <source>Open chat</source>
-      <translation type="unfinished">Open chat</translation>
+      <translation>چیٹ کھولیں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1356"/>
       <source>&amp;Print note (preview)</source>
-      <translation type="unfinished">&amp;Print note (preview)</translation>
+      <translation>&amp;پرنٹ نوٹ (پیش نظر)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1762"/>
       <source>Insert headline from note filename</source>
-      <translation type="unfinished">Insert headline from note filename</translation>
+      <translation>نوٹ فائل نام سے شہ سرخی داخل کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1776"/>
       <source>Use softwrap in note editor and preview</source>
-      <translation type="unfinished">Use softwrap in note editor and preview</translation>
+      <translation>نوٹ ایڈیٹر اور پیش نظارہ میں سافٹ ریپ کا استعمال کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1784"/>
       <source>Show status bar</source>
-      <translation type="unfinished">Show status bar</translation>
+      <translation>سٹیٹس بار ظاہر کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1799"/>
       <source>Share note</source>
-      <translation type="unfinished">Share note</translation>
+      <translation>نوٹ شئیر کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1829"/>
       <source>Markdown cheatsheet</source>
-      <translation type="unfinished">Markdown cheatsheet</translation>
+      <translation>مارک ڈاؤن چیٹ شیٹ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1838"/>
       <source>Strike out text</source>
-      <translation type="unfinished">Strike out text</translation>
+      <translation>ٹیکسٹ کے اوپر لائن لگائیں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1849"/>
       <source>Use one column mode</source>
-      <translation type="unfinished">Use one column mode</translation>
+      <translation>ایک کالم موڈ کا استعمال کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1852"/>
       <location filename="../mainwindow.ui" line="1855"/>
       <source>Use a one column minimal mode (like NVAlt)</source>
-      <translation type="unfinished">Use a one column minimal mode (like NVAlt)</translation>
+      <translation>ایک کالم کا کم سے کم موڈ استعمال کریں (جیسے NVAlt)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1867"/>
       <source>Show menu bar</source>
-      <translation type="unfinished">Show menu bar</translation>
+      <translation>مینیو بار ظاہر کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1879"/>
       <source>Split note at cursor position</source>
-      <translation type="unfinished">Split note at cursor position</translation>
+      <translation>کرسر پوزیشن پر نوٹ کو تقسیم کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1899"/>
       <source>Donate</source>
-      <translation type="unfinished">Donate</translation>
+      <translation>وقف کرنا</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1920"/>
       <source>Import notes from Evernote</source>
-      <translation type="unfinished">Import notes from Evernote</translation>
+      <translation>Evernote سے نوٹس درآمد کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1929"/>
       <source>Delete orphaned image files</source>
-      <translation type="unfinished">Delete orphaned image files</translation>
+      <translation>آرفنڈ امیج فائلز حذف کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2383"/>
       <source>Note was removed externally!</source>
-      <translation type="unfinished">Note was removed externally!</translation>
+      <translation>نوٹ کو بیرونی طور پر ہٹا دیا گیا تھا!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2384"/>
       <source>Current note was removed outside of this application!
 Restore current note?</source>
-      <translation type="unfinished">Current note was removed outside of this application!
-Restore current note?</translation>
+      <translation>موجودہ نوٹ اس اپلیکیشن کے باہر سے مٹایا گیا تھا!
+موجودہ نوٹ بحال کریں؟</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4543"/>
-      <location filename="../mainwindow.cpp" line="5789"/>
-      <location filename="../mainwindow.cpp" line="8544"/>
+      <location filename="../mainwindow.cpp" line="5817"/>
+      <location filename="../mainwindow.cpp" line="8572"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>&amp;منسوخ کریں</translation>
     </message>
     <message numerus="yes">
       <source>stored %n note(s) to disk</source>
@@ -1302,89 +1302,87 @@ Restore current note?</translation>
     <message>
       <location filename="../mainwindow.cpp" line="2585"/>
       <source>new version %1 available</source>
-      <translation type="unfinished">new version %1 available</translation>
+      <translation>نیا ورژن %1 دستیاب ہے</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2985"/>
       <source>Please select the folder where your notes will get stored</source>
-      <translation type="unfinished">Please select the folder where your notes will get stored</translation>
+      <translation>برائے مہربانی وہ فولڈر منتخب کریں جہاں پہ آپکے نوٹس محفوظ ہوں گے</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3012"/>
       <source>No folder was selected</source>
-      <translation type="unfinished">No folder was selected</translation>
+      <translation>کوئی بھی فولڈر منتخب نہیں کیا گیا تھا</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3013"/>
       <source>You have to select your ownCloud notes folder to make this software work!</source>
-      <translation type="unfinished">You have to select your ownCloud notes folder to make this software work!</translation>
+      <translation>آپ کواس سافٹ ویئرکو کام میں لانے کے لۓ اپنے ownCloud نوٹس فولڈر کو منتخب کرنا ہوگا!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3015"/>
       <source>&amp;Retry</source>
-      <translation type="unfinished">&amp;Retry</translation>
+      <translation>&amp;دوبار کوشش</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3015"/>
       <source>&amp;Exit</source>
-      <translation type="unfinished">&amp;Exit</translation>
+      <translation>&amp;باہر نکلیں</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3193"/>
       <source>Remove current note</source>
-      <translation type="unfinished">Remove current note</translation>
+      <translation>موجودہ نوٹ ہٹائیں</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3194"/>
       <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation type="unfinished">Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+      <translation>موجودہ نوٹ ہٹائیں &lt;strong&gt;%1&lt;/strong&gt;؟</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3505"/>
       <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
-      <translation type="unfinished">Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</translation>
+      <translation>برائے مہربانی اس خفیہ نوٹ کا &lt;strong&gt;پاسورڈ&lt;/strong&gt; داخل کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3529"/>
       <source>Note can't be decrypted!</source>
-      <translation type="unfinished">Note can't be decrypted!</translation>
+      <translation>خفیہ نوٹ کو اصل حالت میں نہیں لایا جا سکتا!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3530"/>
       <source>It seems that your password is not valid!</source>
-      <translation type="unfinished">It seems that your password is not valid!</translation>
+      <translation>ایسا لگتا ہے کہ آپ کا پاسورڈ ٹھیک نہیں ہے!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3679"/>
       <source>Remove selected notes</source>
-      <translation type="unfinished">Remove selected notes</translation>
+      <translation>منتخب کردہ نوٹس کو ہٹا دیں</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3681"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
-      <translation type="unfinished">
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
-
-If the trash is enabled on your ownCloud server you should be able to restore them from there.</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
-
-If the trash is enabled on your ownCloud server you should be able to restore them from there.</numerusform>
+      <translation>
+        <numerusform>منتخب کردہ &lt;strong&gt;%n&lt;/strong&gt; نوٹس ہٹا دیں؟
+اگر آپ کے ownCloud سرور میں ردی فعال ہے تو آپ اسکو وہاں سے بحال کرنے کے قابل ہو سکتے ہیں.</numerusform>
+        <numerusform>منتخب کردہ &lt;strong&gt;%n&lt;/strong&gt; نوٹس ہٹا دیں؟
+اگر آپ کے ownCloud سرور میں ردی فعال ہے تو آپ اسکو وہاں سے بحال کرنے کے قابل ہو سکتے ہیں.</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3760"/>
-      <location filename="../mainwindow.cpp" line="8704"/>
+      <location filename="../mainwindow.cpp" line="8732"/>
       <source>Remove selected folders</source>
-      <translation type="unfinished">Remove selected folders</translation>
+      <translation>منتخب کردہ نوٹس ہٹا دیں</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3761"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
-      <translation type="unfinished">
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
+      <translation>
+        <numerusform>منتخب کردہ &lt;strong&gt;%n&lt;/strong&gt; فولڈر(ز) ہٹا دیں؟&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;اسی طرح ان فولڈرز میں موجود تمام فائلیں اور فولڈرز بھی ہٹا دیے جائیں گے!</numerusform>
+        <numerusform>منتخب کردہ &lt;strong&gt;%n&lt;/strong&gt; فولڈر(ز) ہٹا دیں؟&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;اسی طرح ان فولڈرز میں موجود تمام فائلیں اور فولڈرز بھی ہٹا دیے جائیں گے!</numerusform>
       </translation>
     </message>
     <message>
@@ -1407,7 +1405,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3846"/>
-      <location filename="../mainwindow.cpp" line="7736"/>
+      <location filename="../mainwindow.cpp" line="7764"/>
       <source>Move selected notes</source>
       <translation type="unfinished">Move selected notes</translation>
     </message>
@@ -1421,7 +1419,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3939"/>
-      <location filename="../mainwindow.cpp" line="7820"/>
+      <location filename="../mainwindow.cpp" line="7848"/>
       <source>Copy selected notes</source>
       <translation type="unfinished">Copy selected notes</translation>
     </message>
@@ -1496,74 +1494,74 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation type="unfinished">Trashed notes are currently loaded from your ownCloud server</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5386"/>
+      <location filename="../mainwindow.cpp" line="5409"/>
       <source>Print selected text</source>
       <translation type="unfinished">Print selected text</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5392"/>
+      <location filename="../mainwindow.cpp" line="5415"/>
       <source>Print selected text (preview)</source>
       <translation type="unfinished">Print selected text (preview)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5408"/>
+      <location filename="../mainwindow.cpp" line="5431"/>
       <source>Export selected text as PDF</source>
       <translation type="unfinished">Export selected text as PDF</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5414"/>
+      <location filename="../mainwindow.cpp" line="5437"/>
       <source>Export selected text as PDF (preview)</source>
       <translation type="unfinished">Export selected text as PDF (preview)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5596"/>
+      <location filename="../mainwindow.cpp" line="5624"/>
       <source>Image files</source>
       <translation type="unfinished">Image files</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5785"/>
+      <location filename="../mainwindow.cpp" line="5813"/>
       <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
       <translation type="unfinished">Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5870"/>
+      <location filename="../mainwindow.cpp" line="5898"/>
       <source>Markdown files</source>
       <translation type="unfinished">Markdown files</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5924"/>
+      <location filename="../mainwindow.cpp" line="5952"/>
       <source>Bookmarked note position at slot %1</source>
       <translation type="unfinished">Bookmarked note position at slot %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5940"/>
+      <location filename="../mainwindow.cpp" line="5968"/>
       <source>Jumped to bookmark position at slot %1</source>
       <translation type="unfinished">Jumped to bookmark position at slot %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6145"/>
-      <location filename="../mainwindow.cpp" line="6213"/>
+      <location filename="../mainwindow.cpp" line="6173"/>
+      <location filename="../mainwindow.cpp" line="6241"/>
       <source>Inserting image</source>
       <translation type="unfinished">Inserting image</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6150"/>
-      <location filename="../mainwindow.cpp" line="6216"/>
+      <location filename="../mainwindow.cpp" line="6178"/>
+      <location filename="../mainwindow.cpp" line="6244"/>
       <source>Done inserting image</source>
       <translation type="unfinished">Done inserting image</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6152"/>
+      <location filename="../mainwindow.cpp" line="6180"/>
       <source>Inserting attachment</source>
       <translation type="unfinished">Inserting attachment</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6157"/>
+      <location filename="../mainwindow.cpp" line="6185"/>
       <source>Done inserting attachment</source>
       <translation type="unfinished">Done inserting attachment</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="6167"/>
+      <location filename="../mainwindow.cpp" line="6195"/>
       <source>Copied %n note(s) to %1</source>
       <translation type="unfinished">
         <numerusform>Copied %n note(s) to %1</numerusform>
@@ -1571,7 +1569,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="6176"/>
+      <location filename="../mainwindow.cpp" line="6204"/>
       <source>Failed to copy %n note(s) (most likely already existing)</source>
       <translation type="unfinished">
         <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
@@ -1579,7 +1577,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="6186"/>
+      <location filename="../mainwindow.cpp" line="6214"/>
       <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
       <translation type="unfinished">
         <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
@@ -1587,179 +1585,179 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6200"/>
+      <location filename="../mainwindow.cpp" line="6228"/>
       <source>Saving temporary image</source>
       <translation type="unfinished">Saving temporary image</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6219"/>
+      <location filename="../mainwindow.cpp" line="6247"/>
       <source>Temporary file can't be opened</source>
       <translation type="unfinished">Temporary file can't be opened</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6250"/>
+      <location filename="../mainwindow.cpp" line="6278"/>
       <source>Downloading %1</source>
       <translation type="unfinished">Downloading %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6427"/>
+      <location filename="../mainwindow.cpp" line="6455"/>
       <source>Reset font size to %1 pt</source>
       <comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
       <translation type="unfinished">Reset font size to %1 pt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7304"/>
+      <location filename="../mainwindow.cpp" line="7332"/>
       <source>Rename tag</source>
       <translation type="unfinished">Rename tag</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7305"/>
+      <location filename="../mainwindow.cpp" line="7333"/>
       <source>Assign color</source>
       <translation type="unfinished">Assign color</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7306"/>
+      <location filename="../mainwindow.cpp" line="7334"/>
       <source>Disable color</source>
       <translation type="unfinished">Disable color</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7529"/>
+      <location filename="../mainwindow.cpp" line="7557"/>
       <source>Move to the root</source>
       <comment>to move a tag to the current tag in the tag context menu</comment>
       <translation type="unfinished">Move to the root</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7962"/>
+      <location filename="../mainwindow.cpp" line="7990"/>
       <source>An url was opened at the current cursor position</source>
       <translation type="unfinished">An url was opened at the current cursor position</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8058"/>
+      <location filename="../mainwindow.cpp" line="8086"/>
       <source>No equation was found in front of the cursor</source>
       <translation type="unfinished">No equation was found in front of the cursor</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8075"/>
+      <location filename="../mainwindow.cpp" line="8103"/>
       <source>Result for equation: %1 = %2</source>
       <translation type="unfinished">Result for equation: %1 = %2</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8176"/>
+      <location filename="../mainwindow.cpp" line="8204"/>
       <source>The scripting engine was reloaded</source>
       <translation type="unfinished">The scripting engine was reloaded</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8211"/>
+      <location filename="../mainwindow.cpp" line="8239"/>
       <source>HTML files</source>
       <translation type="unfinished">HTML files</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8385"/>
+      <location filename="../mainwindow.cpp" line="8413"/>
       <source>Rename note</source>
       <translation type="unfinished">Rename note</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8386"/>
+      <location filename="../mainwindow.cpp" line="8414"/>
       <source>Allows you to rename the filename of the note</source>
       <translation type="unfinished">Allows you to rename the filename of the note</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8539"/>
+      <location filename="../mainwindow.cpp" line="8567"/>
       <source>Note renaming not enabled!</source>
       <translation type="unfinished">Note renaming not enabled!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8703"/>
+      <location filename="../mainwindow.cpp" line="8731"/>
       <source>Rename subfolder</source>
-      <translation type="unfinished">Rename subfolder</translation>
+      <translation>سب فولڈر کو نیا نام دیں</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9225"/>
+      <location filename="../mainwindow.cpp" line="9253"/>
       <source>Create new workspace</source>
-      <translation type="unfinished">Create new workspace</translation>
+      <translation>نئی ورک سپیس بنائیں</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9225"/>
-      <location filename="../mainwindow.cpp" line="9471"/>
+      <location filename="../mainwindow.cpp" line="9253"/>
+      <location filename="../mainwindow.cpp" line="9499"/>
       <source>Workspace name:</source>
-      <translation type="unfinished">Workspace name:</translation>
+      <translation>ورک سپیس کا نام:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9347"/>
+      <location filename="../mainwindow.cpp" line="9375"/>
       <source>full</source>
       <comment>full workspace</comment>
-      <translation type="unfinished">full</translation>
+      <translation>مکمل</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9354"/>
+      <location filename="../mainwindow.cpp" line="9382"/>
       <source>minimal</source>
       <comment>minimal workspace</comment>
-      <translation type="unfinished">minimal</translation>
+      <translation>کم سے کم</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9434"/>
+      <location filename="../mainwindow.cpp" line="9462"/>
       <source>Remove the current workspace?</source>
-      <translation type="unfinished">Remove the current workspace?</translation>
+      <translation>موجودہ ورک سپیس ہٹا دیں؟</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9471"/>
+      <location filename="../mainwindow.cpp" line="9499"/>
       <source>Rename workspace</source>
-      <translation type="unfinished">Rename workspace</translation>
+      <translation>ورک سپیس کو دوبارہ نام دیں</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="9606"/>
+      <location filename="../mainwindow.cpp" line="9634"/>
       <source>%n chars</source>
       <comment>characters</comment>
-      <translation type="unfinished">
+      <translation>
         <numerusform>%n chars</numerusform>
         <numerusform>%n chars</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9729"/>
+      <location filename="../mainwindow.cpp" line="9757"/>
       <source>Copy image file path</source>
-      <translation type="unfinished">Copy image file path</translation>
+      <translation>تصویر کی فائل کا راسہ نقل کریں</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9868"/>
+      <location filename="../mainwindow.cpp" line="9896"/>
       <source>Select file to insert</source>
-      <translation type="unfinished">Select file to insert</translation>
+      <translation>داخل کرنے کے لیے فائل منتخب کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="999"/>
       <source>&amp;Tag</source>
-      <translation type="unfinished">&amp;Tag</translation>
+      <translation>&amp;ٹیگ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4046"/>
       <source>Remove tag from selected notes</source>
-      <translation type="unfinished">Remove tag from selected notes</translation>
+      <translation>منتخب کردہ نوٹس میں سے ٹیگ ہٹا دیں</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4047"/>
       <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
-        <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
+      <translation>
+        <numerusform>منتخب کردہ n% نوٹس میں سے &lt;strong&gt;%1&lt;/strong&gt; ٹیگ ہٹا دیں؟</numerusform>
+        <numerusform>منتخب کردہ n% نوٹس میں سے &lt;strong&gt;%1&lt;/strong&gt; ٹیگ ہٹا دیں؟</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4102"/>
       <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
-      <translation type="unfinished">
-        <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
-        <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%1&lt;/strong&gt; ٹیگ %n نوٹس میں سے ہٹا دیا گیا تھا</numerusform>
+        <numerusform>&lt;strong&gt;%1&lt;/strong&gt; ٹیگ %n نوٹس میں سے ہٹا دیا گیا تھا</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4146"/>
       <source>Current notes folder: </source>
-      <translation type="unfinished">Current notes folder: </translation>
+      <translation>موجودہ نوٹس فولڈر: </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4148"/>
       <source>Set the notes folder. Current notes folder: </source>
-      <translation type="unfinished">Set the notes folder. Current notes folder: </translation>
+      <translation>نوٹس فولڈر سیٹ کریں. موجودہ نوٹس فولڈر: </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4332"/>
@@ -1809,8 +1807,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="4968"/>
       <location filename="../mainwindow.cpp" line="5225"/>
-      <location filename="../mainwindow.cpp" line="8380"/>
-      <location filename="../mainwindow.cpp" line="8701"/>
+      <location filename="../mainwindow.cpp" line="8408"/>
+      <location filename="../mainwindow.cpp" line="8729"/>
       <source>New note</source>
       <translation type="unfinished">New note</translation>
     </message>
@@ -1835,44 +1833,44 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation type="unfinished">Quit</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6562"/>
+      <location filename="../mainwindow.cpp" line="6590"/>
       <source>show notes from all note subfolders (%1)</source>
       <translation type="unfinished">show notes from all note subfolders (%1)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6580"/>
+      <location filename="../mainwindow.cpp" line="6608"/>
       <source>show notes in note root folder (%1)</source>
       <translation type="unfinished">show notes in note root folder (%1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="316"/>
       <location filename="../mainwindow.cpp" line="584"/>
-      <location filename="../mainwindow.cpp" line="6589"/>
+      <location filename="../mainwindow.cpp" line="6617"/>
       <source>Note folder</source>
       <translation type="unfinished">Note folder</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7676"/>
+      <location filename="../mainwindow.cpp" line="7704"/>
       <source>Copy to note folder</source>
       <translation type="unfinished">Copy to note folder</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7677"/>
+      <location filename="../mainwindow.cpp" line="7705"/>
       <source>Move to note folder</source>
       <translation type="unfinished">Move to note folder</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7678"/>
+      <location filename="../mainwindow.cpp" line="7706"/>
       <source>Copy to this subfolder</source>
       <translation type="unfinished">Copy to this subfolder</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7679"/>
+      <location filename="../mainwindow.cpp" line="7707"/>
       <source>Move to this subfolder</source>
       <translation type="unfinished">Move to this subfolder</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="7730"/>
+      <location filename="../mainwindow.cpp" line="7758"/>
       <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation type="unfinished">
         <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -1885,7 +1883,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation type="unfinished">Cancel</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="7793"/>
+      <location filename="../mainwindow.cpp" line="7821"/>
       <source>%n note(s) were moved to note subfolder "%2"</source>
       <translation type="unfinished">
         <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
@@ -1893,7 +1891,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="7814"/>
+      <location filename="../mainwindow.cpp" line="7842"/>
       <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation type="unfinished">
         <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -1901,7 +1899,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="7865"/>
+      <location filename="../mainwindow.cpp" line="7893"/>
       <source>%n note(s) were copied to note subfolder "%2"</source>
       <translation type="unfinished">
         <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
@@ -1909,62 +1907,62 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8427"/>
+      <location filename="../mainwindow.cpp" line="8455"/>
       <source>Move notes to subfolder...</source>
       <translation type="unfinished">Move notes to subfolder...</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8431"/>
+      <location filename="../mainwindow.cpp" line="8459"/>
       <source>Copy notes to subfolder...</source>
       <translation type="unfinished">Copy notes to subfolder...</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8474"/>
+      <location filename="../mainwindow.cpp" line="8502"/>
       <source>Open note in external editor</source>
       <translation type="unfinished">Open note in external editor</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8478"/>
+      <location filename="../mainwindow.cpp" line="8506"/>
       <source>Show note in file manager</source>
       <translation type="unfinished">Show note in file manager</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8540"/>
+      <location filename="../mainwindow.cpp" line="8568"/>
       <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
       <translation type="unfinished">If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8702"/>
+      <location filename="../mainwindow.cpp" line="8730"/>
       <source>New subfolder</source>
       <translation type="unfinished">New subfolder</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8706"/>
+      <location filename="../mainwindow.cpp" line="8734"/>
       <source>Show folder in file manager</source>
       <translation type="unfinished">Show folder in file manager</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8742"/>
+      <location filename="../mainwindow.cpp" line="8770"/>
       <source>Create a new folder</source>
       <translation type="unfinished">Create a new folder</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8742"/>
+      <location filename="../mainwindow.cpp" line="8770"/>
       <source>Folder name:</source>
       <translation type="unfinished">Folder name:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6523"/>
+      <location filename="../mainwindow.cpp" line="6551"/>
       <source>show all untagged notes (%1)</source>
       <translation type="unfinished">show all untagged notes (%1)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6526"/>
+      <location filename="../mainwindow.cpp" line="6554"/>
       <source>Untagged notes</source>
       <translation type="unfinished">Untagged notes</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8212"/>
+      <location filename="../mainwindow.cpp" line="8240"/>
       <source>Export current note as HTML file</source>
       <translation type="unfinished">Export current note as HTML file</translation>
     </message>
@@ -1994,32 +1992,32 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation type="unfinished">&amp;Ok</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8397"/>
+      <location filename="../mainwindow.cpp" line="8425"/>
       <source>&amp;Move notes to...</source>
       <translation type="unfinished">&amp;Move notes to...</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8398"/>
+      <location filename="../mainwindow.cpp" line="8426"/>
       <source>&amp;Copy notes to...</source>
       <translation type="unfinished">&amp;Copy notes to...</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8439"/>
+      <location filename="../mainwindow.cpp" line="8467"/>
       <source>&amp;Tag selected notes with...</source>
       <translation type="unfinished">&amp;Tag selected notes with...</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8461"/>
+      <location filename="../mainwindow.cpp" line="8489"/>
       <source>&amp;Remove tag from selected notes...</source>
       <translation type="unfinished">&amp;Remove tag from selected notes...</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8389"/>
+      <location filename="../mainwindow.cpp" line="8417"/>
       <source>&amp;Remove notes</source>
       <translation type="unfinished">&amp;Remove notes</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5422"/>
+      <location filename="../mainwindow.cpp" line="5444"/>
       <source>&amp;Link selected text</source>
       <translation type="unfinished">&amp;Link selected text</translation>
     </message>
@@ -2058,68 +2056,68 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5430"/>
+      <location filename="../mainwindow.cpp" line="5454"/>
       <source>Paste HTML or media</source>
       <translation type="unfinished">Paste HTML or media</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6493"/>
+      <location filename="../mainwindow.cpp" line="6521"/>
       <source>show all notes (%1)</source>
       <translation type="unfinished">show all notes (%1)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6496"/>
-      <location filename="../mainwindow.cpp" line="6566"/>
+      <location filename="../mainwindow.cpp" line="6524"/>
+      <location filename="../mainwindow.cpp" line="6594"/>
       <source>All notes</source>
       <translation type="unfinished">All notes</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7296"/>
+      <location filename="../mainwindow.cpp" line="7324"/>
       <source>&amp;Add tag</source>
       <translation type="unfinished">&amp;Add tag</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7310"/>
+      <location filename="../mainwindow.cpp" line="7338"/>
       <source>&amp;Move tags to...</source>
       <translation type="unfinished">&amp;Move tags to...</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7345"/>
+      <location filename="../mainwindow.cpp" line="7373"/>
       <source>Tag could not be created!</source>
       <translation type="unfinished">Tag could not be created!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7530"/>
+      <location filename="../mainwindow.cpp" line="7558"/>
       <source>Move to this tag</source>
       <translation type="unfinished">Move to this tag</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7580"/>
+      <location filename="../mainwindow.cpp" line="7608"/>
       <source>Tag this</source>
       <translation type="unfinished">Tag this</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7610"/>
+      <location filename="../mainwindow.cpp" line="7638"/>
       <source>Cannot move tag '%1' to this tag</source>
       <translation type="unfinished">Cannot move tag '%1' to this tag</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7621"/>
+      <location filename="../mainwindow.cpp" line="7649"/>
       <source>Moved tag '%1' to new tag</source>
       <translation type="unfinished">Moved tag '%1' to new tag</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6751"/>
+      <location filename="../mainwindow.cpp" line="6779"/>
       <source>show all notes tagged with '%1' (%2)</source>
       <translation type="unfinished">show all notes tagged with '%1' (%2)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7167"/>
+      <location filename="../mainwindow.cpp" line="7195"/>
       <source>remove tag '%1' from note</source>
       <translation type="unfinished">remove tag '%1' from note</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7307"/>
+      <location filename="../mainwindow.cpp" line="7335"/>
       <source>&amp;Remove tags</source>
       <translation type="unfinished">&amp;Remove tags</translation>
     </message>
@@ -2273,24 +2271,24 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation type="unfinished">Note headline</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6261"/>
+      <location filename="../mainwindow.cpp" line="6289"/>
       <source>Downloading images finished</source>
       <translation type="unfinished">Downloading images finished</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6400"/>
+      <location filename="../mainwindow.cpp" line="6428"/>
       <source>Increased font size to %1 pt</source>
       <translation type="unfinished">Increased font size to %1 pt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6417"/>
+      <location filename="../mainwindow.cpp" line="6445"/>
       <source>Decreased font size to %1 pt</source>
       <translation type="unfinished">Decreased font size to %1 pt</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4516"/>
       <location filename="../mainwindow.cpp" line="4542"/>
-      <location filename="../mainwindow.cpp" line="8543"/>
+      <location filename="../mainwindow.cpp" line="8571"/>
       <source>Open &amp;settings</source>
       <translation type="unfinished">Open &amp;settings</translation>
     </message>
@@ -2305,32 +2303,32 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation type="unfinished">leave distraction free mode</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5597"/>
+      <location filename="../mainwindow.cpp" line="5625"/>
       <source>Select image to insert</source>
       <translation type="unfinished">Select image to insert</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5729"/>
+      <location filename="../mainwindow.cpp" line="5757"/>
       <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
       <translation type="unfinished">Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5784"/>
+      <location filename="../mainwindow.cpp" line="5812"/>
       <source>Decrypt note and store it as plain text</source>
       <translation type="unfinished">Decrypt note and store it as plain text</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5789"/>
+      <location filename="../mainwindow.cpp" line="5817"/>
       <source>&amp;Decrypt</source>
       <translation type="unfinished">&amp;Decrypt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5814"/>
+      <location filename="../mainwindow.cpp" line="5842"/>
       <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
       <translation type="unfinished">&lt;br /&gt;You will be able to edit your encrypted note.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5871"/>
+      <location filename="../mainwindow.cpp" line="5899"/>
       <source>Export current note as Markdown file</source>
       <translation type="unfinished">Export current note as Markdown file</translation>
     </message>
@@ -2417,17 +2415,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation type="unfinished">Images that are not used in notes:</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedimagesdialog.cpp" line="62"/>
+      <location filename="../dialogs/orphanedimagesdialog.cpp" line="55"/>
       <source>Last modified at %1</source>
       <translation type="unfinished">Last modified at %1</translation>
     </message>
     <message>
-      <location filename="../dialogs/orphanedimagesdialog.cpp" line="121"/>
+      <location filename="../dialogs/orphanedimagesdialog.cpp" line="114"/>
       <source>Delete selected files</source>
       <translation type="unfinished">Delete selected files</translation>
     </message>
     <message numerus="yes">
-      <location filename="../dialogs/orphanedimagesdialog.cpp" line="122"/>
+      <location filename="../dialogs/orphanedimagesdialog.cpp" line="115"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
       <translation type="unfinished">
         <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
@@ -2565,32 +2563,32 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation type="unfinished">default</translation>
     </message>
     <message>
-      <location filename="../entities/note.cpp" line="872"/>
+      <location filename="../entities/note.cpp" line="924"/>
       <source>Could not store note file: %1 - Error message: %2</source>
       <translation type="unfinished">Could not store note file: %1 - Error message: %2</translation>
     </message>
     <message>
-      <location filename="../entities/note.cpp" line="941"/>
+      <location filename="../entities/note.cpp" line="993"/>
       <source>Renamed note-file was removed: %1</source>
       <translation type="unfinished">Renamed note-file was removed: %1</translation>
     </message>
     <message>
-      <location filename="../entities/note.cpp" line="949"/>
+      <location filename="../entities/note.cpp" line="1001"/>
       <source>Could not remove renamed note-file: %1 - Error message: %2</source>
       <translation type="unfinished">Could not remove renamed note-file: %1 - Error message: %2</translation>
     </message>
     <message>
-      <location filename="../entities/note.cpp" line="1731"/>
+      <location filename="../entities/note.cpp" line="1783"/>
       <source>Could not read image file: %1</source>
       <translation type="unfinished">Could not read image file: %1</translation>
     </message>
     <message>
-      <location filename="../entities/note.cpp" line="2217"/>
+      <location filename="../entities/note.cpp" line="2269"/>
       <source>Note filename changed</source>
       <translation type="unfinished">Note filename changed</translation>
     </message>
     <message numerus="yes">
-      <location filename="../entities/note.cpp" line="2218"/>
+      <location filename="../entities/note.cpp" line="2270"/>
       <source>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
       <translation type="unfinished">
         <numerusform>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
@@ -2977,7 +2975,7 @@ Do you want to install it anyway?</translation>
       <translation type="unfinished">The setting name</translation>
     </message>
     <message>
-      <location filename="../widgets/scriptsettingwidget.cpp" line="158"/>
+      <location filename="../widgets/scriptsettingwidget.cpp" line="165"/>
       <source>Please select a file</source>
       <translation type="unfinished">Please select a file</translation>
     </message>

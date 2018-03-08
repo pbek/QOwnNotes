@@ -6,6 +6,8 @@
   also added to the context menu of the note text edit (for [#866](https://github.com/pbek/QOwnNotes/issues/866))
 - the context menu options of the note text edit now also works for encrypted
   notes while editing them
+- added more Bengali, French, Catalan, Tagalog, German and Spanish translation 
+  (thank you AnikHasan, nizam8089, bepolymathe, MGuerra, sageneil and UgoYak)
 
 ## 18.03.2
 - there now is a new scripting function `script.insertMediaFile()` to insert a
