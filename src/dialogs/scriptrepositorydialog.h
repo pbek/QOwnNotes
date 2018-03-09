@@ -33,6 +33,8 @@ private slots:
 
     void on_searchScriptEdit_textChanged(const QString &arg1);
 
+    void on_loadMoreScriptsButton_clicked();
+
 private:
     Ui::ScriptRepositoryDialog *ui;
     QNetworkAccessManager *_networkManager;
@@ -64,4 +66,8 @@ private:
     void reloadCurrentScriptInfo();
 
     void searchForUpdates();
+
+    bool hasMoreItems() const;
+
+    void loadMoreItems();
 };

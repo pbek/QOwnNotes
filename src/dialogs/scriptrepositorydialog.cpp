@@ -35,6 +35,7 @@ ScriptRepositoryDialog::ScriptRepositoryDialog(QWidget *parent,
     _totalCount = 0;
 
     ui->downloadProgressBar->hide();
+    ui->loadMoreScriptsButton->hide();
     ui->searchScriptEdit->setFocus();
     ui->scriptTreeWidget->sortByColumn(0, Qt::AscendingOrder);
     enableOverview(true);
@@ -63,12 +64,27 @@ ScriptRepositoryDialog::~ScriptRepositoryDialog() {
  */
 void ScriptRepositoryDialog::scriptTreeWidgetSliderValueChanged(int value) {
     if (ui->scriptTreeWidget->verticalScrollBar()->maximum() == value) {
-        bool hasMoreItems = qCeil((qreal)_totalCount / _itemsPerPage) > _page;
-
-        if (hasMoreItems) {
-            searchScript(_page + 1);
-        }
+        loadMoreItems();
     }
+}
+
+/**
+ * Attempts to load more items
+ */
+void ScriptRepositoryDialog::loadMoreItems() {
+    if (hasMoreItems()) {
+        searchScript(_page + 1);
+    }
+}
+
+/**
+ * Checks if there are more items to load
+ * 
+ * @return
+ */
+bool ScriptRepositoryDialog::hasMoreItems() const {
+    bool hasMoreItems = qCeil((qreal) _totalCount / _itemsPerPage) > _page;
+    return hasMoreItems;
 }
 
 /**
@@ -131,10 +147,9 @@ void ScriptRepositoryDialog::searchForUpdates() {
 #endif
 
             // try to ensure the network is accessible
-            _networkManager->setNetworkAccessible(QNetworkAccessManager::Accessible);
-
+            _networkManager->setNetworkAccessible(
+                    QNetworkAccessManager::Accessible);
             _networkManager->get(networkRequest);
-
         }
 }
 
@@ -179,12 +194,13 @@ void ScriptRepositoryDialog::parseCodeSearchReply(const QByteArray &arr) {
     QJsonObject jsonObject = jsonResponse.object();
     _totalCount = jsonObject.value("total_count").toInt();
     QJsonArray items = jsonObject.value("items").toArray();
+    ui->loadMoreScriptsButton->setVisible(hasMoreItems());
 
     if (_page == 1) {
         ui->scriptTreeWidget->clear();
     }
 
-    enableOverview(true);
+    enableOverview(_page == 1);
 
     foreach(const QJsonValue &value, items) {
             QJsonObject obj = value.toObject();
@@ -265,7 +281,11 @@ void ScriptRepositoryDialog::parseInfoQMLReply(const QByteArray &arr) const {
 
     ui->scriptTreeWidget->addTopLevelItem(item);
     ui->scriptTreeWidget->resizeColumnToContents(0);
-    ui->scriptTreeWidget->setCurrentItem(ui->scriptTreeWidget->topLevelItem(0));
+
+    if (_page == 1) {
+        ui->scriptTreeWidget->setCurrentItem(
+                ui->scriptTreeWidget->topLevelItem(0));
+    }
 }
 
 /**
@@ -519,4 +539,8 @@ void ScriptRepositoryDialog::on_searchScriptEdit_textChanged(
     if (!_checkForUpdates && arg1.isEmpty()) {
         searchScript();
     }
+}
+
+void ScriptRepositoryDialog::on_loadMoreScriptsButton_clicked() {
+    loadMoreItems();
 }

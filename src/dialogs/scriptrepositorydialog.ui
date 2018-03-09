@@ -400,22 +400,7 @@
         <property name="bottomMargin">
          <number>0</number>
         </property>
-        <item row="1" column="0">
-         <widget class="QTreeWidget" name="scriptTreeWidget">
-          <property name="rootIsDecorated">
-           <bool>false</bool>
-          </property>
-          <property name="sortingEnabled">
-           <bool>true</bool>
-          </property>
-          <column>
-           <property name="text">
-            <string>Name</string>
-           </property>
-          </column>
-         </widget>
-        </item>
-        <item row="2" column="0">
+        <item row="3" column="0">
          <widget class="QProgressBar" name="downloadProgressBar">
           <property name="value">
            <number>24</number>
@@ -432,6 +417,32 @@
           </property>
           <property name="clearButtonEnabled">
            <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QTreeWidget" name="scriptTreeWidget">
+          <property name="rootIsDecorated">
+           <bool>false</bool>
+          </property>
+          <property name="sortingEnabled">
+           <bool>true</bool>
+          </property>
+          <column>
+           <property name="text">
+            <string>Name</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QPushButton" name="loadMoreScriptsButton">
+          <property name="text">
+           <string>Load more scripts</string>
+          </property>
+          <property name="icon">
+           <iconset theme="edit-download" resource="../breeze-qownnotes.qrc">
+            <normaloff>:/icons/breeze-qownnotes/16x16/edit-download.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-download.svg</iconset>
           </property>
          </widget>
         </item>
