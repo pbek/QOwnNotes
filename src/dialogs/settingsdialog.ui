@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>600</width>
-    <height>400</height>
+    <width>1175</width>
+    <height>815</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -2080,7 +2080,7 @@
                         <property name="text">
                          <string notr="true">Hrvatski</string>
                         </property>
-                        <property name="statusTip">
+                        <property name="toolTip">
                          <string>Croatian</string>
                         </property>
                         <property name="whatsThis">
@@ -2089,9 +2089,20 @@
                        </item>
                        <item>
                         <property name="text">
+                         <string notr="true">Ilonggo</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Hiligaynon</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">hil</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
                          <string notr="true">Italiano</string>
                         </property>
-                        <property name="statusTip">
+                        <property name="toolTip">
                          <string>Italian</string>
                         </property>
                         <property name="whatsThis">
@@ -2217,6 +2228,17 @@
                         </property>
                         <property name="whatsThis">
                          <string notr="true">uk</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string notr="true">اُردُو‬</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Urdu</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">ur</string>
                         </property>
                        </item>
                        <item>

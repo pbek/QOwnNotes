@@ -1,5 +1,17 @@
 # QOwnNotes Changelog
 
+## 18.03.5
+- added **Hiligaynon translation** and **Urdu translation** (a big thank you to
+  BaTz and mr_aamirijaz)
+    - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes/)
+      to make QOwnNotes available in more languages or help with the current 
+      translation
+- there now is a button `Load more scripts` in the *Script repository* that 
+  will be shown if there are more scripts available to load from the GitHub
+  script repository
+- added more Brazilian Portuguese, Spanish, Italian, German and Bengali
+  translation (thank you AnikHasan, mlocati, richarson and mlimacarlos)
+
 ## 18.03.4
 - if you scroll to the bottom of the script list in the *Script repository* now
   the next 30 scripts will be loaded
