@@ -6,6 +6,9 @@
     - the text was changed to `Allow all note editing` if note editing is 
       disabled and `Disallow all note editing` if note editing is enabled
 - fixed possible duplicate list entries in the *Script repository*
+- added more Czech, French, Catalan, German, Tagalog, Brazilian Portuguese,
+  Italian and Spanish translation (thank you hruban, bepolymathe, rakekniven,
+  deletescape, richarson, Janelbrian, MGuerra, mlimacarlos and mlocati)
 
 ## 18.03.5
 - added **Hiligaynon translation** and **Urdu translation** (a big thank you to
