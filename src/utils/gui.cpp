@@ -93,6 +93,24 @@ void Utils::Gui::searchForTextInTreeWidget(QTreeWidget *treeWidget,
 }
 
 /**
+ * Checks if a variant exists as user data in a tree widget
+ */
+bool Utils::Gui::userDataInTreeWidgetExists(QTreeWidget *treeWidget,
+                                            QVariant variant, int column) {
+    // get all items
+    QList<QTreeWidgetItem*> allItems = treeWidget->
+            findItems("", Qt::MatchContains | Qt::MatchRecursive);
+
+    Q_FOREACH(QTreeWidgetItem *item, allItems) {
+            if (variant == item->data(column, Qt::UserRole)) {
+                return true;
+            }
+        }
+
+    return false;
+}
+
+/**
  * Shows an information message box with a checkbox to override the message box
  * in the future
  *

@@ -61,5 +61,9 @@ namespace Utils {
                 QMessageBox::StandardButtons buttons =
                 QMessageBox::StandardButtons(QMessageBox::Yes | QMessageBox::No),
                 QMessageBox::StandardButton defaultButton = QMessageBox::NoButton);
+
+        bool userDataInTreeWidgetExists(QTreeWidget *treeWidget,
+                                        QVariant variant,
+                                        int column = 1);
     }
 }

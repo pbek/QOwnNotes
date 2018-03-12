@@ -269,11 +269,19 @@ void ScriptRepositoryDialog::parseInfoQMLReply(const QByteArray &arr) const {
         ui->selectFrame->show();
     }
 
+    QString jsonData = QString(arr);
+
+    // check if script item already exists in tree widget
+    if (Utils::Gui::userDataInTreeWidgetExists(
+            ui->scriptTreeWidget, jsonData)) {
+        return;
+    }
+
     QString name = infoJson.name;
 
     QTreeWidgetItem *item = new QTreeWidgetItem();
     item->setText(0, name);
-    item->setData(0, Qt::UserRole, QString(arr));
+    item->setData(0, Qt::UserRole, jsonData);
 
     if (!infoJson.platformSupported || !infoJson.appVersionSupported) {
         item->setTextColor(0, QColor("#aaaaaa"));
