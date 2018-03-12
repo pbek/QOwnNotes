@@ -772,6 +772,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="menuNavigation"/>
     <addaction name="menuTrash"/>
     <addaction name="menuSort_by"/>
+    <addaction name="actionAllow_note_editing"/>
     <addaction name="separator"/>
     <addaction name="menuExport"/>
     <addaction name="menuImport"/>
@@ -902,7 +903,6 @@ p, li { white-space: pre-wrap; }
      <addaction name="actionDecrypt_note"/>
     </widget>
     <addaction name="menuEditNote"/>
-    <addaction name="actionAllow_note_editing"/>
     <addaction name="action_Remove_note"/>
     <addaction name="separator"/>
     <addaction name="action_Find_text_in_note"/>
@@ -2160,7 +2160,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</iconset>
    </property>
    <property name="text">
-    <string>Allow note editing</string>
+    <string>Allow all note editing</string>
    </property>
    <property name="shortcut">
     <string notr="true">Alt+Shift+E</string>

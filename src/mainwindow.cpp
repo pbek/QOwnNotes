@@ -9917,6 +9917,10 @@ void MainWindow::on_actionAllow_note_editing_triggered(bool checked) {
     setMenuEnabled(ui->menuFormat, checked);
     ui->actionPaste_image->setEnabled(checked);
     ui->actionReplace_in_current_note->setEnabled(checked);
+
+    ui->actionAllow_note_editing->setText(checked ?
+                                          tr("Disallow all note editing") :
+                                          tr("Allow all note editing"));
 }
 
 /**

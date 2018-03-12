@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 18.03.6
+- the `Allow note editing` menu item was moved to the `Note` menu
+  (for [#866](https://github.com/pbek/QOwnNotes/issues/866))
+    - the text was changed to `Allow all note editing` if note editing is 
+      disabled and `Disallow all note editing` if note editing is enabled
+- fixed possible duplicate list entries in the *Script repository*
+
 ## 18.03.5
 - added **Hiligaynon translation** and **Urdu translation** (a big thank you to
   BaTz and mr_aamirijaz)
