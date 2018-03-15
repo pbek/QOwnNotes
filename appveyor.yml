@@ -10,11 +10,11 @@ skip_tags: true
 environment:
   global:
     qtdir57: C:\Qt\5.7\mingw53_32
-    qtdir59: C:\Qt\5.10.0\mingw53_32
+    qtdir59: C:\Qt\5.10.1\mingw53_32
 
   matrix:
     # Qt 5.10
-    - qtdir: "C:\\Qt\\5.10.0\\mingw53_32"
+    - qtdir: "C:\\Qt\\5.10.1\\mingw53_32"
     # Qt 5.7 (for Windows XP)
     - qtdir: "C:\\Qt\\5.7\\mingw53_32"
 
@@ -25,7 +25,7 @@ matrix:
 install:
   # Qt-versions: https://www.appveyor.com/docs/build-environment/#qt
 #  - set QTDIR=C:\Qt\5.7\mingw53_32
-#  - set QTDIR=C:\Qt\5.10.0\mingw53_32
+#  - set QTDIR=C:\Qt\5.10.1\mingw53_32
   - set QTDIR=%qtdir%
   - set PATH=%PATH%;%QTDIR%\bin;C:\MinGW\bin
   - set RELEASE_PATH=appveyor\release
