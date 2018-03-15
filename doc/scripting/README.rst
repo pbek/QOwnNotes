@@ -670,6 +670,34 @@ Usage in QML
     script.fetchNoteByFileName("my note.md");
 
 
+Fetching a note by its id
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Parameters
+^^^^^^^^^^
+
+.. code:: cpp
+
+    /**
+     * Fetches a note by its id
+     *
+     * @param id int the id of the note
+     * @return NoteApi*
+     */
+    NoteApi* ScriptingService::fetchNoteById(int id) {
+
+Usage in QML
+^^^^^^^^^^^^
+
+.. code:: javascript
+
+    // fetch note by id
+    script.fetchNoteById(243);
+
+You may want to take a look at the example
+`export-notes-as-one-html.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/export-notes-as-one-html.qml>`__.
+
+
 Checking if a note exists by its file name
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -881,6 +909,37 @@ Usage in QML
 
     // show an open file dialog
     var fileName = script.getOpenFileName("Please select an image", "/home/user/images", "Images (*.png *.xpm *.jpg)");
+
+
+Showing an save file dialog
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Properties
+^^^^^^^^^^
+
+.. code:: cpp
+
+    /**
+     * Shows an save file dialog
+     *
+     * @param caption (optional)
+     * @param dir (optional)
+     * @param filter (optional)
+     * @return QString
+     */
+    QString ScriptingService::getSaveFileName(QString caption, QString dir,
+                                              QString filter);
+
+Usage in QML
+^^^^^^^^^^^^
+
+.. code:: javascript
+
+    // show a save file dialog
+    var fileName = script.getSaveFileName("Please select HTML file to save", "output.html", "HTML (*.html)");
+
+You may want to take a look at the example
+`export-notes-as-one-html.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/export-notes-as-one-html.qml>`__.
 
 
 Registering script settings variables
@@ -1183,6 +1242,34 @@ You may want to take a look at the example
 `external-note-diff.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/external-note-diff.qml>`__.
 
 
+Getting a list of the ids of all selected notes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Properties
+^^^^^^^^^^
+
+.. code:: cpp
+
+    /**
+     * Returns a list of the ids of all selected notes
+     *
+     * @return {QList<int>} list of selected note ids
+     */
+    QList<int> ScriptingService::selectedNotesIds();
+
+
+Usage in QML
+^^^^^^^^^^^^
+
+.. code:: javascript
+
+    // returns a list of the ids of all selected notes
+    script.log(script.selectedNotesIds());
+
+You may want to take a look at the example
+`export-notes-as-one-html.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/export-notes-as-one-html.qml>`__.
+
+
 Opening an input dialog with a select box
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -1247,6 +1334,36 @@ Usage in QML
     var result = script.inputDialogGetText(
         "line edit", "Please enter a name", "current text");
     script.log(result);
+
+
+Writing text to a file
+~~~~~~~~~~~~~~~~~~~~~~
+
+Properties
+^^^^^^^^^^
+
+.. code:: cpp
+
+    /**
+     * Writes a text to a file
+     *
+     * @param filePath
+     * @param data
+     * @return
+     */
+    bool ScriptingService::writeToFile(const QString &filePath, const QString &data);
+
+
+Usage in QML
+^^^^^^^^^^^^
+
+.. code:: javascript
+
+    var result = script.writeToFile(filePath, html);;
+    script.log(result);
+
+You may want to take a look at the example
+`export-notes-as-one-html.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/export-notes-as-one-html.qml>`__.
 
 
 Working with websockets
@@ -1520,6 +1637,7 @@ Note
         Q_INVOKABLE QStringList tagNames();
         Q_INVOKABLE bool addTag(QString tagName);
         Q_INVOKABLE bool removeTag(QString tagName);
+        Q_INVOKABLE QString toMarkdownHtml(bool forExport = true);
     };
 
 You can use the methods from `Date <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date>`__

@@ -24,6 +24,7 @@ class NoteApi : public QObject, public Note {
 
 private:
     QList<TagApi *> _tags;
+    Note _note;
 
 public:
     NoteApi *fetch(int id);
@@ -36,4 +37,5 @@ public:
     Q_INVOKABLE bool removeTag(QString tagName);
     Q_INVOKABLE QQmlListProperty<NoteApi> fetchAll(int limit = -1,
                                                    int offset = -1);
+    Q_INVOKABLE QString toMarkdownHtml(bool forExport = true);
 };

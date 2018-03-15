@@ -1,5 +1,26 @@
 # QOwnNotes Changelog
 
+## 18.03.7
+- there now is a new scripting command `script.fetchNoteById()` to fetch a note
+  by its id (for [#871](https://github.com/pbek/QOwnNotes/issues/871))
+    - for more information please take a look at the [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#fetching-a-note-by-its-id)
+- there now is a new scripting command `script.getSaveFileName()` to show a 
+  save file dialog (for [#871](https://github.com/pbek/QOwnNotes/issues/871))
+    - for more information please take a look at
+      [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#showing-a-save-file-dialog)
+- there now is a new scripting command `script.selectedNotesIds()` to return a
+  list of the ids of all selected notes (for [#871](https://github.com/pbek/QOwnNotes/issues/871))
+    - for more information please take a look at
+      [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#getting-a-list-of-the-ids-of-all-selected-notes)
+- there now is a new scripting command `script.writeToFile()` to write text 
+  to a file (for [#871](https://github.com/pbek/QOwnNotes/issues/871))
+    - for more information please take a look at
+      [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#writing-text-to-a-file)
+- there now is a new method `toMarkdownHtml()` for `NoteApi` to get the
+  generated html of a note (for [#871](https://github.com/pbek/QOwnNotes/issues/871))
+    - for more information please take a look at
+      [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#note)
+
 ## 18.03.6
 - the `Allow note editing` menu item was moved to the `Note` menu
   (for [#866](https://github.com/pbek/QOwnNotes/issues/866))

@@ -1189,6 +1189,21 @@ NoteApi* ScriptingService::fetchNoteByFileName(QString fileName,
 }
 
 /**
+ * Fetches a note by its id
+ *
+ * @param id int the id of the note
+ * @return NoteApi*
+ */
+NoteApi* ScriptingService::fetchNoteById(int id) {
+    MetricsService::instance()->sendVisitIfEnabled(
+            "scripting/" + QString(__func__));
+
+    NoteApi *note = new NoteApi();
+    note->fetch(id);
+    return note;
+}
+
+/**
  * Checks if a note file exists by its file name
  *
  * @param fileName string the file name of the note (mandatory)
@@ -1336,6 +1351,33 @@ QString ScriptingService::getOpenFileName(QString caption, QString dir,
 }
 
 /**
+ * Shows an save file dialog
+ *
+ * @param caption (optional)
+ * @param dir (optional)
+ * @param filter (optional)
+ * @return QString
+ */
+QString ScriptingService::getSaveFileName(QString caption, QString dir,
+                                          QString filter) {
+    MetricsService::instance()->sendVisitIfEnabled(
+            "scripting/" + QString(__func__));
+
+#ifndef INTEGRATION_TESTS
+    MainWindow *mainWindow = MainWindow::instance();
+    if (mainWindow != Q_NULLPTR) {
+        return QFileDialog::getSaveFileName(mainWindow, caption, dir, filter);
+    }
+#else
+    Q_UNUSED(caption);
+    Q_UNUSED(dir);
+    Q_UNUSED(filter);
+#endif
+
+    return "";
+}
+
+/**
  * Returns path with the '/' separators converted to separators that are
  * appropriate for the underlying operating system.
  *
@@ -1395,6 +1437,32 @@ QStringList ScriptingService::selectedNotesPaths() {
 #endif
 
     return selectedNotePaths;
+}
+
+/**
+ * Returns a list of the ids of all selected notes
+ *
+ * Unfortunately there is no easy way to use a QList<NoteApi*> in QML, so we
+ * only will transfer the note ids
+ *
+ * @return {QList<int>} list of selected note ids
+ */
+QList<int> ScriptingService::selectedNotesIds() {
+    QList<int> selectedNotesIds;
+    MetricsService::instance()->sendVisitIfEnabled(
+            "scripting/" + QString(__func__));
+
+#ifndef INTEGRATION_TESTS
+    MainWindow *mainWindow = MainWindow::instance();
+
+    if (mainWindow != Q_NULLPTR) {
+        Q_FOREACH(Note note, mainWindow->selectedNotes()) {
+                selectedNotesIds << note.getId();
+            }
+    }
+#endif
+
+    return selectedNotesIds;
 }
 
 /**
@@ -1546,4 +1614,26 @@ QStringList ScriptingService::searchTagsByName(QString name) {
 
     QStringList tags = Tag::searchAllNamesByName(name);
     return tags;
+}
+
+/**
+ * Writes a text to a file
+ *
+ * @param filePath
+ * @param data
+ * @return
+ */
+bool ScriptingService::writeToFile(const QString &filePath, const QString &data)
+{
+    if (filePath.isEmpty())
+        return false;
+
+    QFile file(filePath);
+    if (!file.open(QFile::WriteOnly | QFile::Truncate))
+        return false;
+
+    QTextStream out(&file);
+    out << data;
+    file.close();
+    return true;
 }

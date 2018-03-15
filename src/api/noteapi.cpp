@@ -1,19 +1,20 @@
 #include <entities/tag.h>
+#include <entities/notefolder.h>
 #include "noteapi.h"
 
 NoteApi* NoteApi::fetch(int id) {
-    Note note = Note::fetch(id);
+    _note = Note::fetch(id);
 
-    if (note.isFetched()) {
-        this->id = note.getId();
-        name = note.getName();
-        fileName = note.getFileName();
-        noteText = note.getNoteText();
-        hasDirtyData = note.getHasDirtyData();
-        noteSubFolderId = note.getNoteSubFolderId();
-        decryptedNoteText = note.getDecryptedNoteText();
-        fileCreated = note.getFileCreated();
-        fileLastModified = note.getFileLastModified();
+    if (_note.isFetched()) {
+        this->id = _note.getId();
+        name = _note.getName();
+        fileName = _note.getFileName();
+        noteText = _note.getNoteText();
+        hasDirtyData = _note.getHasDirtyData();
+        noteSubFolderId = _note.getNoteSubFolderId();
+        decryptedNoteText = _note.getDecryptedNoteText();
+        fileCreated = _note.getFileCreated();
+        fileLastModified = _note.getFileLastModified();
     }
 
     return this;
@@ -131,4 +132,15 @@ QQmlListProperty<NoteApi> NoteApi::fetchAll(int limit, int offset) {
         }
 
     return QQmlListProperty<NoteApi>(this, notes);
+}
+
+/**
+ * Returns the generated html for a note
+ *
+ * @param forExport if true (default) the export-html will be generated
+ * @return
+ */
+QString NoteApi::toMarkdownHtml(bool forExport) {
+    return _note.toMarkdownHtml(NoteFolder::currentLocalPath(), 980, forExport,
+                                true, true);
 }
