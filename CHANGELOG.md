@@ -22,6 +22,9 @@
       [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#note)
 - there now is a new script `Export notes as one HTML file` in the
   *Script repository* to export multiple notes as one HTML file (for [#871](https://github.com/pbek/QOwnNotes/issues/871))
+- the text case toggling feature now automatically selects the word under the 
+  cursor if no text was selected (thank you @schittli)
+    - additionally, the original cursor- and text-selection will be restored
 - added more Czech, Dutch, Catalan, German, Indonesian, Brazilian Portuguese,
   Italian and Spanish translation (thank you hruban, rizki271197, rakekniven,
   Fabijenna, richarson, MGuerra, mlimacarlos and mlocati)
