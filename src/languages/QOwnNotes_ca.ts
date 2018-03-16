@@ -401,7 +401,7 @@
       <source>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
       <translation type="unfinished">
         <numerusform>Restaurar &lt;strong&gt;%n&lt;/strong&gt; nota(es) seleccionada(es)?</numerusform>
-        <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
+        <numerusform>Restaurar &lt;strong&gt;%n&lt;/strong&gt; nota(es) seleccionada(es)?</numerusform>
       </translation>
     </message>
     <message>
@@ -414,7 +414,7 @@
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) where restored</source>
       <translation type="unfinished">
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; nota(es) s'han restaurat</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) where restored</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; nota(es) s'han restaurat</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -422,7 +422,7 @@
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
       <translation type="unfinished">
         <numerusform>Eliminar &lt;strong&gt;%n&lt;/strong&gt; nota(es) seleccionada(es)?</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
+        <numerusform>Eliminar &lt;strong&gt;%n&lt;/strong&gt; nota(es) seleccionada(es)?</numerusform>
       </translation>
     </message>
     <message>
@@ -435,7 +435,7 @@
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) where removed</source>
       <translation type="unfinished">
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; nota(es) s'han eliminat</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) where removed</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; nota(es) s'han eliminat</numerusform>
       </translation>
     </message>
   </context>
@@ -1291,7 +1291,7 @@ Voleu restaurar-la?</translation>
       <source>stored %n note(s) to disk</source>
       <translation type="unfinished">
         <numerusform>desada(es) %n nota(es) al disc</numerusform>
-        <numerusform>stored %n note(s) to disk</numerusform>
+        <numerusform>desada(es) %n nota(es) al disc</numerusform>
       </translation>
     </message>
     <message>
@@ -1721,13 +1721,13 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
     <message>
       <location filename="../mainwindow.cpp" line="9922"/>
       <source>Disallow all note editing</source>
-      <translation type="unfinished">Disallow all note editing</translation>
+      <translation>Deshabilitar l'edició de totes les notes</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2163"/>
       <location filename="../mainwindow.cpp" line="9923"/>
       <source>Allow all note editing</source>
-      <translation type="unfinished">Allow all note editing</translation>
+      <translation>Habilitar l'edició de totes les notes</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="999"/>
@@ -3761,7 +3761,7 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2095"/>
       <source>Hiligaynon</source>
-      <translation type="unfinished">Hiligaynon</translation>
+      <translation>Hiligainó</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2194"/>
@@ -3781,7 +3781,7 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2238"/>
       <source>Urdu</source>
-      <translation type="unfinished">Urdu</translation>
+      <translation>Urdú</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2317"/>

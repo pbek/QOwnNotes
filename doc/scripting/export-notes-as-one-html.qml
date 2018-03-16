@@ -3,7 +3,7 @@ import QOwnNotesTypes 1.0
 import com.qownnotes.noteapi 1.0
 
 /**
- * This scripts exports multiple notes as one HTML file
+ * This script exports multiple notes as one HTML file
  */
 Script {
     /**

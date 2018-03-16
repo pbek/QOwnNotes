@@ -1071,7 +1071,7 @@
       <location filename="../mainwindow.ui" line="2047"/>
       <location filename="../mainwindow.ui" line="2050"/>
       <source>Search selected text on the web</source>
-      <translation type="unfinished">Search selected text on the web</translation>
+      <translation>Cari teks yang dipilih di web</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2058"/>

@@ -1075,7 +1075,7 @@
       <location filename="../mainwindow.ui" line="2047"/>
       <location filename="../mainwindow.ui" line="2050"/>
       <source>Search selected text on the web</source>
-      <translation type="unfinished">Search selected text on the web</translation>
+      <translation>Geselecteerde tekst op het web zoeken</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2058"/>
@@ -1722,13 +1722,13 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
     <message>
       <location filename="../mainwindow.cpp" line="9922"/>
       <source>Disallow all note editing</source>
-      <translation type="unfinished">Disallow all note editing</translation>
+      <translation>Verbied alle opmerking bewerken</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2163"/>
       <location filename="../mainwindow.cpp" line="9923"/>
       <source>Allow all note editing</source>
-      <translation type="unfinished">Allow all note editing</translation>
+      <translation>Alle opmerkingen bewerken toestaan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="999"/>
@@ -2838,7 +2838,7 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="441"/>
       <source>Load more scripts</source>
-      <translation type="unfinished">Load more scripts</translation>
+      <translation>Laden van meer scripts</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="228"/>

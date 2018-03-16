@@ -184,7 +184,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="196"/>
       <source>Emphasized text</source>
-      <translation type="unfinished">Emphasized text</translation>
+      <translation>Zvýrazněný text</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="197"/>
@@ -265,7 +265,7 @@
       <location filename="../widgets/fontcolorwidget.cpp" line="215"/>
       <source>Masked syntax</source>
       <comment>text that will highlighted in a way that it's barely visible</comment>
-      <translation type="unfinished">Masked syntax</translation>
+      <translation>Maskovaná syntaxe</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="210"/>
@@ -280,7 +280,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="228"/>
       <source>This item will be used to preset colors for the other items</source>
-      <translation type="unfinished">This item will be used to preset colors for the other items</translation>
+      <translation>Tato položka bude použita k přednastavení barvy pro ostatní položky</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="459"/>
@@ -440,8 +440,8 @@
       <location filename="../dialogs/localtrashdialog.cpp" line="265"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) where removed</source>
       <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) where removed</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) where removed</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; poznámka(ky) byla odstraněna</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; poznámka(ky) byla odstraněna</numerusform>
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) where removed</numerusform>
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) where removed</numerusform>
       </translation>
@@ -904,7 +904,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1443"/>
       <source>&amp;Get involved</source>
-      <translation type="unfinished">&amp;Get involved</translation>
+      <translation>Zapojit se</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1452"/>
@@ -929,12 +929,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1491"/>
       <source>Distraction free mode, you can leave it with a button on the bottom right</source>
-      <translation type="unfinished">Distraction free mode, you can leave it with a button on the bottom right</translation>
+      <translation>Volný režim psaní bez rozptylování (mód nerušit), můžete jej opustit tlačítkem vpravo dole</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1502"/>
       <source>Show &amp;toolbar</source>
-      <translation type="unfinished">Show &amp;toolbar</translation>
+      <translation>Zobrazit &amp; nástroje</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1510"/>
@@ -1125,7 +1125,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2127"/>
       <source>Find scripts in script repository</source>
-      <translation type="unfinished">Find scripts in script repository</translation>
+      <translation>Najít skripty v repozitáři skriptů</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2139"/>
@@ -1233,7 +1233,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1829"/>
       <source>Markdown cheatsheet</source>
-      <translation type="unfinished">Markdown cheatsheet</translation>
+      <translation>Markdown nápověda</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1838"/>
@@ -1243,7 +1243,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1849"/>
       <source>Use one column mode</source>
-      <translation type="unfinished">Use one column mode</translation>
+      <translation>Použít režim s jedním sloupcem</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1852"/>
@@ -1441,7 +1441,7 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
       <location filename="../mainwindow.cpp" line="3940"/>
       <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation type="unfinished">
-        <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Přesunout %n vybraných poznámek do &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
         <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
         <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
         <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -1486,12 +1486,12 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
     <message>
       <location filename="../mainwindow.cpp" line="4236"/>
       <source>You may need to restart the application manually to let the changes take effect.</source>
-      <translation type="unfinished">You may need to restart the application manually to let the changes take effect.</translation>
+      <translation>Budete muset restartovat aplikaci ručně, aby se změny projevily.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4241"/>
       <source>You may need to restart the application to let the changes take effect.</source>
-      <translation type="unfinished">You may need to restart the application to let the changes take effect.</translation>
+      <translation>Budete muset restartovat aplikaci ručně, aby se změny projevily.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4243"/>
@@ -1506,7 +1506,7 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
     <message>
       <location filename="../mainwindow.cpp" line="5337"/>
       <source>Note versions are currently loaded from your ownCloud server</source>
-      <translation type="unfinished">Note versions are currently loaded from your ownCloud server</translation>
+      <translation>Verze poznámek jsou právě načteny z Vašeho serveru ownCloud</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5351"/>
@@ -1584,7 +1584,7 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
       <location filename="../mainwindow.cpp" line="6189"/>
       <source>Copied %n note(s) to %1</source>
       <translation type="unfinished">
-        <numerusform>Copied %n note(s) to %1</numerusform>
+        <numerusform>Zkopírovano %n poznámek do %1</numerusform>
         <numerusform>Copied %n note(s) to %1</numerusform>
         <numerusform>Copied %n note(s) to %1</numerusform>
         <numerusform>Copied %n note(s) to %1</numerusform>
@@ -1634,7 +1634,7 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
     <message>
       <location filename="../mainwindow.cpp" line="7326"/>
       <source>Rename tag</source>
-      <translation type="unfinished">Rename tag</translation>
+      <translation>Přejmenovat štítek</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7327"/>
@@ -1680,22 +1680,22 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
     <message>
       <location filename="../mainwindow.cpp" line="8407"/>
       <source>Rename note</source>
-      <translation type="unfinished">Rename note</translation>
+      <translation>Přejmenovat poznámku</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8408"/>
       <source>Allows you to rename the filename of the note</source>
-      <translation type="unfinished">Allows you to rename the filename of the note</translation>
+      <translation>Umožnit přejmenování souborového názvu poznámky</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8561"/>
       <source>Note renaming not enabled!</source>
-      <translation type="unfinished">Note renaming not enabled!</translation>
+      <translation>Přejmenování poznámky není povoleno!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8725"/>
       <source>Rename subfolder</source>
-      <translation type="unfinished">Rename subfolder</translation>
+      <translation>Přejmenovat podsložku</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9247"/>
@@ -1744,23 +1744,23 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
     <message>
       <location filename="../mainwindow.cpp" line="9751"/>
       <source>Copy image file path</source>
-      <translation type="unfinished">Copy image file path</translation>
+      <translation>Kopíruj cestu k souboru obrázku</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9890"/>
       <source>Select file to insert</source>
-      <translation type="unfinished">Select file to insert</translation>
+      <translation>Vyberte soubor který chcete vložit</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9922"/>
       <source>Disallow all note editing</source>
-      <translation type="unfinished">Disallow all note editing</translation>
+      <translation>Znemožnit úpravu všech poznámek</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2163"/>
       <location filename="../mainwindow.cpp" line="9923"/>
       <source>Allow all note editing</source>
-      <translation type="unfinished">Allow all note editing</translation>
+      <translation>Povolit úpravu všech poznámek</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="999"/>
@@ -1776,7 +1776,7 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
       <location filename="../mainwindow.cpp" line="4047"/>
       <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
       <translation type="unfinished">
-        <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
+        <numerusform>Odstranit &lt;strong&gt;%n&lt;/strong&gt; štítků z %n vybraných poznámek?</numerusform>
         <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
         <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
         <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
@@ -2323,7 +2323,7 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
     <message>
       <location filename="../mainwindow.cpp" line="6283"/>
       <source>Downloading images finished</source>
-      <translation type="unfinished">Downloading images finished</translation>
+      <translation>Stahování obrázků dokončeno</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6422"/>
@@ -2355,7 +2355,7 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
     <message>
       <location filename="../mainwindow.cpp" line="5619"/>
       <source>Select image to insert</source>
-      <translation type="unfinished">Select image to insert</translation>
+      <translation>Vyberte obrázek, který chcete vložit</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5751"/>
@@ -2452,7 +2452,7 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="80"/>
       <source>Delete selected images</source>
-      <translation type="unfinished">Delete selected images</translation>
+      <translation>Odstranit vybrané obrázky</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="83"/>
@@ -2589,7 +2589,7 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
     <message>
       <location filename="../dialogs/passworddialog.ui" line="24"/>
       <source>Enter your password:</source>
-      <translation type="unfinished">Enter your password:</translation>
+      <translation>Zadejte své heslo:</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="34"/>
@@ -2686,62 +2686,62 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="32"/>
       <source>replace text</source>
-      <translation type="unfinished">replace text</translation>
+      <translation>nahradit text</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="79"/>
       <source>find in text</source>
-      <translation type="unfinished">find in text</translation>
+      <translation>vyhledat v textu</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="86"/>
       <source>search forward</source>
-      <translation type="unfinished">search forward</translation>
+      <translation>najít další</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="103"/>
       <source>search backward</source>
-      <translation type="unfinished">search backward</translation>
+      <translation>najít předchozí</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="120"/>
       <source>replace with</source>
-      <translation type="unfinished">replace with</translation>
+      <translation>nahradit s</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="127"/>
       <source>Replace:</source>
-      <translation type="unfinished">Replace:</translation>
+      <translation>Nahradit:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="156"/>
       <source>Plain text</source>
-      <translation type="unfinished">Plain text</translation>
+      <translation>Prostý text</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="161"/>
       <source>Whole words</source>
-      <translation type="unfinished">Whole words</translation>
+      <translation>Celá slova</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="166"/>
       <source>Regular expression</source>
-      <translation type="unfinished">Regular expression</translation>
+      <translation>Regulerní výraz</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="187"/>
       <source>Replace</source>
-      <translation type="unfinished">Replace</translation>
+      <translation>Nahradit</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="197"/>
       <source>Replace All</source>
-      <translation type="unfinished">Replace All</translation>
+      <translation>Nahradit vše</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="210"/>
       <source>Mode:</source>
-      <translation type="unfinished">Mode:</translation>
+      <translation>Režim:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="220"/>
@@ -2832,7 +2832,7 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
     <message>
       <location filename="../services/databaseservice.cpp" line="77"/>
       <source>Cannot open memory database</source>
-      <translation type="unfinished">Cannot open memory database</translation>
+      <translation>Nelze otevřít databázi paměti</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="78"/>
@@ -2842,7 +2842,7 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
     <message>
       <location filename="../services/databaseservice.cpp" line="94"/>
       <source>Cannot open disk database</source>
-      <translation type="unfinished">Cannot open disk database</translation>
+      <translation>Nelze otevřít databázi disku</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="95"/>
@@ -2936,32 +2936,32 @@ Are the folder and the file writeable?</translation>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="357"/>
       <source>Authors</source>
-      <translation type="unfinished">Authors</translation>
+      <translation>Autoři</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="357"/>
       <source>Author</source>
-      <translation type="unfinished">Author</translation>
+      <translation>Autor</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="360"/>
       <source>Supported platforms</source>
-      <translation type="unfinished">Supported platforms</translation>
+      <translation>Podporované platformy</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="361"/>
       <source>Supported platform</source>
-      <translation type="unfinished">Supported platform</translation>
+      <translation>Podporovaná platforma</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="364"/>
       <source>Open repository</source>
-      <translation type="unfinished">Open repository</translation>
+      <translation>Otevři repozitář</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="375"/>
       <source>Update</source>
-      <translation type="unfinished">Update</translation>
+      <translation>Aktualizovat</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="376"/>
@@ -2971,17 +2971,17 @@ Are the folder and the file writeable?</translation>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="378"/>
       <source>Reinstall</source>
-      <translation type="unfinished">Reinstall</translation>
+      <translation>Přeinstalovat</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="379"/>
       <source>Reinstalls the script</source>
-      <translation type="unfinished">Reinstalls the script</translation>
+      <translation>Přeinstalovat skript</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="444"/>
       <source>Platform not supported!</source>
-      <translation type="unfinished">Platform not supported!</translation>
+      <translation>Platforma není podporována!</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="445"/>
@@ -2993,7 +2993,7 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="447"/>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Zrušit</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="455"/>
@@ -3310,7 +3310,7 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4198"/>
       <source>Enable markdown highlighting</source>
-      <translation type="unfinished">Enable markdown highlighting</translation>
+      <translation>Umožnit zvýraznění markdown</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1932"/>

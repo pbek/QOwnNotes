@@ -20,6 +20,11 @@
   generated html of a note (for [#871](https://github.com/pbek/QOwnNotes/issues/871))
     - for more information please take a look at
       [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#note)
+- there now is a new script `Export notes as one HTML file` in the
+  *Script repository* to export multiple notes as one HTML file (for [#871](https://github.com/pbek/QOwnNotes/issues/871))
+- added more Czech, Dutch, Catalan, German, Indonesian, Brazilian Portuguese,
+  Italian and Spanish translation (thank you hruban, rizki271197, rakekniven,
+  Fabijenna, richarson, MGuerra, mlimacarlos and mlocati)
 
 ## 18.03.6
 - the `Allow note editing` menu item was moved to the `Note` menu
