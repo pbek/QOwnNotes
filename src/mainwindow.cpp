@@ -8830,23 +8830,43 @@ void MainWindow::on_actionShare_note_triggered() {
 }
 
 /**
- * Toggles the case of the selected text
+ * Toggles the case of the word under the Cursor or the selected text
  */
 void MainWindow::on_actionToggle_text_case_triggered() {
     QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
     QTextCursor c = textEdit->textCursor();
-    QString selectedText = c.selectedText();
+    // Save positions to restore everything at the end
+    int selectionStart = c.selectionStart();
+    int selectionEnd = c.selectionEnd();
+    int cPos = c.position();
 
+    QString selectedText = c.selectedText();
+    bool textWasSelected = ! selectedText.isEmpty();
+
+    // if no text is selected: automatically select the Word under the Cursor
     if (selectedText.isEmpty()) {
-        return;
+        c.select(QTextCursor::WordUnderCursor);
+        selectedText = c.selectedText();
     }
 
     // cycle text through lowercase, uppercase, start case, and sentence case
     c.insertText(Utils::Misc::cycleTextCase(selectedText));
 
-    // select the text again to maybe do an other operation on it
-    c.movePosition(
-            QTextCursor::Left, QTextCursor::KeepAnchor, selectedText.count());
+    if (textWasSelected) {
+        // select the text again to maybe do an other operation on it
+        // keep the original cursor position
+        if (cPos == selectionStart) {
+            c.setPosition(selectionEnd, QTextCursor::MoveAnchor);
+            c.setPosition(selectionStart, QTextCursor::KeepAnchor);
+        } else {
+            c.setPosition(selectionStart, QTextCursor::MoveAnchor);
+            c.setPosition(selectionEnd, QTextCursor::KeepAnchor);
+        }
+    } else {
+        // Just restore the Cursor Position if no text was selected
+        c.setPosition(cPos , QTextCursor::MoveAnchor);
+    }
+    // Restore the visible cursor
     textEdit->setTextCursor(c);
 }
 
