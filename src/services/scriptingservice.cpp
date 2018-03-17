@@ -1633,6 +1633,7 @@ bool ScriptingService::writeToFile(const QString &filePath, const QString &data)
         return false;
 
     QTextStream out(&file);
+    out.setCodec("UTF-8");
     out << data;
     file.close();
     return true;

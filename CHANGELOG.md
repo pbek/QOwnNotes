@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 18.03.8
+- the scripting command `script.writeToFile()` now writes text to a file
+  in the UTF-8 character set (for [script issue #25](https://github.com/qownnotes/scripts/issues/25))
+    - for more information about the command please take a look at
+      [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#writing-text-to-a-file)
+
 ## 18.03.7
 - there now is a new scripting command `script.fetchNoteById()` to fetch a note
   by its id (for [#871](https://github.com/pbek/QOwnNotes/issues/871))
