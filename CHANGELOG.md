@@ -5,6 +5,10 @@
   in the UTF-8 character set (for [script issue #25](https://github.com/qownnotes/scripts/issues/25))
     - for more information about the command please take a look at
       [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#writing-text-to-a-file)
+- added the plug `opengl` to the snapped version of QOwnNotes to prevent 
+  OpenGL AppArmor errors (for [#875](https://github.com/pbek/QOwnNotes/issues/875))
+- added the plug `removable-media` to the snapped version of QOwnNotes to
+  allow access to mounted folders (for [#876](https://github.com/pbek/QOwnNotes/issues/876))
 
 ## 18.03.7
 - there now is a new scripting command `script.fetchNoteById()` to fetch a note
