@@ -21,6 +21,8 @@ apps:
       - home
       - desktop
       - desktop-legacy
+      - removable-media
+      - opengl
 
 parts:
   qownnotes:
