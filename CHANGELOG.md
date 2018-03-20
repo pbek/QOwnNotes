@@ -9,6 +9,7 @@
   OpenGL AppArmor errors (for [#875](https://github.com/pbek/QOwnNotes/issues/875))
 - added the plug `removable-media` to the snapped version of QOwnNotes to
   allow access to mounted folders (for [#876](https://github.com/pbek/QOwnNotes/issues/876))
+- added more Japanese, Dutch and Hungarian translation (thank you piyo and Fabijenna)
 
 ## 18.03.7
 - there now is a new scripting command `script.fetchNoteById()` to fetch a note

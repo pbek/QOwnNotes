@@ -394,7 +394,7 @@
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="106"/>
       <source>File &lt;strong&gt;%1&lt;/strong&gt; isn't readable and can't be restored!</source>
-      <translation type="unfinished">File &lt;strong&gt;%1&lt;/strong&gt; isn't readable and can't be restored!</translation>
+      <translation>ファイル &lt;strong&gt;%1&lt;/strong&gt; が読み込めないため復元できません。</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="195"/>
@@ -1071,7 +1071,7 @@
       <location filename="../mainwindow.ui" line="2047"/>
       <location filename="../mainwindow.ui" line="2050"/>
       <source>Search selected text on the web</source>
-      <translation type="unfinished">Search selected text on the web</translation>
+      <translation>選択テキストをWebで検索</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2058"/>
@@ -1705,13 +1705,13 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
     <message>
       <location filename="../mainwindow.cpp" line="9922"/>
       <source>Disallow all note editing</source>
-      <translation type="unfinished">Disallow all note editing</translation>
+      <translation>すべてのノートの編集を禁止する</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2163"/>
       <location filename="../mainwindow.cpp" line="9923"/>
       <source>Allow all note editing</source>
-      <translation type="unfinished">Allow all note editing</translation>
+      <translation>すべてのノートの編集を許可する</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="999"/>
@@ -2546,12 +2546,12 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
     <message>
       <location filename="../entities/note.cpp" line="993"/>
       <source>Renamed note-file was removed: %1</source>
-      <translation type="unfinished">Renamed note-file was removed: %1</translation>
+      <translation>古い名前のノートを削除しました: %1</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="1001"/>
       <source>Could not remove renamed note-file: %1 - Error message: %2</source>
-      <translation type="unfinished">Could not remove renamed note-file: %1 - Error message: %2</translation>
+      <translation>古い名前のノートを削除できません: %1 - エラー メッセージ: %2</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="1783"/>
@@ -2812,7 +2812,7 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="441"/>
       <source>Load more scripts</source>
-      <translation type="unfinished">Load more scripts</translation>
+      <translation>スクリプトをさらに読み込む</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="228"/>
@@ -2924,7 +2924,7 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="456"/>
       <source>Please don't forget to update your installation of QOwnNotes to make this script work!</source>
-      <translation type="unfinished">Please don't forget to update your installation of QOwnNotes to make this script work!</translation>
+      <translation>このスクリプトの動作には、QOwnNotesの更新が必要です。忘れずに更新してください。</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="523"/>
@@ -3476,7 +3476,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
       <location filename="../dialogs/settingsdialog.ui" line="3518"/>
       <location filename="../dialogs/settingsdialog.ui" line="4457"/>
       <source>set external editor</source>
-      <translation>外部エディターの設定</translation>
+      <translation>参照</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1434"/>
@@ -3653,7 +3653,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="833"/>
       <source>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
-      <translation type="unfinished">Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</translation>
+      <translation>QOwnNotes でノートの過去バージョンと削除したノートにアクセスしたい場合は、最新の &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (少なくともバージョン QOWNNOTESAPI_MIN_VERSION) をあなたの ownCloud サーバーにインストールしてください。</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="981"/>
@@ -3894,7 +3894,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4485"/>
       <source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
-      <translation type="unfinished">Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</translation>
+      <translation>あなたのノート フォルダーでGitを有効にし、Gitクライアントにあなたの名前とメールアドレスを忘れずに構成してください。ターミナル コマンドでの設定例:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4518"/>
@@ -4001,7 +4001,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4431"/>
       <source>Git client</source>
-      <translation type="unfinished">Git client</translation>
+      <translation>Git クライアント</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4447"/>
@@ -4011,7 +4011,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4437"/>
       <source>Path to git client, leave empty for default</source>
-      <translation type="unfinished">Path to git client, leave empty for default</translation>
+      <translation>Git クライアントへのパス。空白の場合は既定の場所</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4356"/>
@@ -4590,7 +4590,7 @@ QOwnNotesAPI アプリをインストールして有効にする必要もあり�
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2466"/>
       <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
-      <translation type="unfinished">If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</translation>
+      <translation>QOwnNotes の特定の機能にアクセスが必要な時は &lt;a href="%1"&gt; QOwnNotes Issue ページ&lt;/a&gt; に新しい Issueを作成してください。</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2487"/>
@@ -4605,7 +4605,7 @@ QOwnNotesAPI アプリをインストールして有効にする必要もあり�
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2498"/>
       <source>Add an existing, local script</source>
-      <translation type="unfinished">Add an existing, local script</translation>
+      <translation>既存のローカル スクリプトを追加</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2481"/>
@@ -4738,7 +4738,7 @@ QOwnNotesAPI アプリをインストールして有効にする必要もあり�
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="56"/>
       <source>You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</source>
-      <translation type="unfinished">You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</translation>
+      <translation>ここからGitクライアントをダウンロードできます: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="309"/>

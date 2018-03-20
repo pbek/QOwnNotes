@@ -1075,7 +1075,7 @@
       <location filename="../mainwindow.ui" line="2047"/>
       <location filename="../mainwindow.ui" line="2050"/>
       <source>Search selected text on the web</source>
-      <translation type="unfinished">Search selected text on the web</translation>
+      <translation>Szöveg keresése a weben</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2058"/>
@@ -1722,13 +1722,13 @@ Ha a kuka a ownCloud kiszolgálón engedélyezett, onnan visszaállítható.</nu
     <message>
       <location filename="../mainwindow.cpp" line="9922"/>
       <source>Disallow all note editing</source>
-      <translation type="unfinished">Disallow all note editing</translation>
+      <translation>Letilt minden jegyztet szerkesztést</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2163"/>
       <location filename="../mainwindow.cpp" line="9923"/>
       <source>Allow all note editing</source>
-      <translation type="unfinished">Allow all note editing</translation>
+      <translation>Engedélyez minden jegyztet szerkesztést</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="999"/>
@@ -2839,7 +2839,7 @@ A mappa és a fájl írható?</translation>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="441"/>
       <source>Load more scripts</source>
-      <translation type="unfinished">Load more scripts</translation>
+      <translation>További szkriptek töltése</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="228"/>
@@ -3762,7 +3762,7 @@ Tesztelje, ha szinkronizációs konfliktus lép fel és állítson be ilyen eset
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2095"/>
       <source>Hiligaynon</source>
-      <translation type="unfinished">Hiligaynon</translation>
+      <translation>Klasszikus nahuatli</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2194"/>
@@ -3782,7 +3782,7 @@ Tesztelje, ha szinkronizációs konfliktus lép fel és állítson be ilyen eset
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2238"/>
       <source>Urdu</source>
-      <translation type="unfinished">Urdu</translation>
+      <translation>Urdu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2317"/>
