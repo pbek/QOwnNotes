@@ -4973,12 +4973,7 @@ void MainWindow::on_action_New_note_triggered() {
         }
 
         if (!headline.isEmpty()) {
-            this->ui->searchLineEdit->setText(headline);
-
-            // create a new note or jump to the existing
-            jumpToNoteOrCreateNew();
-
-            return;
+            return createNewNote(headline, false);
         }
     }
 
@@ -4991,23 +4986,25 @@ void MainWindow::on_action_New_note_triggered() {
  *
  * @param noteName
  */
-void MainWindow::createNewNote(QString noteName) {
+void MainWindow::createNewNote(QString noteName, bool withNameAppend) {
     // show the window in case we are using the system tray
     show();
-
-    QDateTime currentDate = QDateTime::currentDateTime();
 
     if (noteName.isEmpty()) {
         noteName = "Note";
     }
 
-    // replacing ":" with "_" for Windows systems
-    QString text = noteName + " " + currentDate.toString(Qt::ISODate)
-                                     .replace(":", ".");
+    if (withNameAppend) {
+        QDateTime currentDate = QDateTime::currentDateTime();
 
-    this->ui->searchLineEdit->setText(text);
+        // replacing ":" with "_" for Windows systems
+        noteName = noteName + " " + currentDate.toString(Qt::ISODate)
+                .replace(":", ".");
+    }
 
-    // create a new note
+    this->ui->searchLineEdit->setText(noteName);
+
+    // create a new note or jump to the existing
     jumpToNoteOrCreateNew();
 }
 
@@ -5072,6 +5069,12 @@ void MainWindow::openLocalUrl(QString urlString) {
                 QRegularExpression("^\\w+:\\/\\/(\\d+)$").match(urlString);
         QString fileName = match.hasMatch() ? match.captured(1) : url.host();
 
+        if (fileName.isEmpty()) {
+            return;
+        }
+
+        QString originalFileName = fileName;
+
         // add a ".com" to the filename to simulate a valid domain
         fileName += ".com";
 
@@ -5117,6 +5120,7 @@ void MainWindow::openLocalUrl(QString urlString) {
         // search for files with that name
         files = currentDir.entryList(fileSearchList,
                                      QDir::Files | QDir::NoSymLinks);
+        bool noteWasFound = false;
 
         // did we find files?
         if (files.length() > 0) {
@@ -5130,10 +5134,28 @@ void MainWindow::openLocalUrl(QString urlString) {
             if (note.isFetched()) {
                 // set current note
                 setCurrentNote(note);
+
+                noteWasFound = true;
+            }
+        }
+
+        // ask if we want to create a new note if note wasn't found
+        if (!noteWasFound) {
+            originalFileName = Utils::Misc::toStartCase(
+                    originalFileName.replace("_", " "));
+
+            if (Utils::Gui::question(
+                    this,
+                    tr("Note was not found"),
+                    tr("Note was not found, create new note "
+                               "<strong>%1</strong>?")
+                            .arg(originalFileName), "open-url-create-note") ==
+                    QMessageBox::Yes) {
+                return createNewNote(originalFileName, false);
             }
         }
     } else if (scheme == "task") {
-        openTodoDialog(url.host());
+        return openTodoDialog(url.host());
     }
 }
 

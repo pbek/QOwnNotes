@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 18.03.9
+- you can now choose to create a new note when clicking on a "broken" note-link
+  in the note edit or the preview (for [#736](https://github.com/pbek/QOwnNotes/issues/736))
+
 ## 18.03.8
 - the scripting command `script.writeToFile()` now writes text to a file
   in the UTF-8 character set (for [script issue #25](https://github.com/qownnotes/scripts/issues/25))

@@ -776,7 +776,7 @@ private:
 
     void copySelectedNotesToNoteSubFolder(NoteSubFolder noteSubFolder);
 
-    void createNewNote(QString noteName = "");
+    void createNewNote(QString noteName = "", bool withNameAppend = true);
 
     bool selectedNotesHaveTags();
 
