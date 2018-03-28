@@ -9,6 +9,7 @@
 
 QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
         : QMarkdownTextEdit(parent) {
+    _highlighter = new QOwnNotesMarkdownHighlighter(document());
     setStyles();
     updateSettings();
 
@@ -76,6 +77,7 @@ void QOwnNotesMarkdownTextEdit::setStyles() {
     setFormatStyle(MarkdownHighlighter::HighlighterState::InlineCodeBlock);
     setFormatStyle(MarkdownHighlighter::HighlighterState::Link);
     setFormatStyle(MarkdownHighlighter::HighlighterState::Table);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::BrokenLink);
 
 #ifdef Q_OS_WIN32
     QSettings settings;

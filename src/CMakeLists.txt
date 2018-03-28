@@ -141,6 +141,8 @@ set(SOURCE_FILES
     helpers/clientproxy.h
     helpers/toolbarcontainer.cpp
     helpers/toolbarcontainer.h
+    helpers/qownnotesmarkdownhighlighter.cpp
+    helpers/qownnotesmarkdownhighlighter.h
     api/noteapi.cpp
     api/noteapi.h
     api/tagapi.cpp

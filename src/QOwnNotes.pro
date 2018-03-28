@@ -88,6 +88,7 @@ SOURCES += main.cpp\
     helpers/htmlentities.cpp \
     helpers/clientproxy.cpp \
     helpers/toolbarcontainer.cpp \
+    helpers/qownnotesmarkdownhighlighter.cpp \
     services/databaseservice.cpp \
     widgets/qownnotesmarkdowntextedit.cpp \
     dialogs/passworddialog.cpp \
@@ -161,6 +162,7 @@ HEADERS  += mainwindow.h \
     helpers/htmlentities.h \
     helpers/clientproxy.h \
     helpers/toolbarcontainer.h \
+    helpers/qownnotesmarkdownhighlighter.h \
     services/databaseservice.h \
     release.h \
     widgets/qownnotesmarkdowntextedit.h \

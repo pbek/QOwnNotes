@@ -2,6 +2,7 @@
 #define QOWNNOTESMARKDOWNTEXTEDIT_H
 
 #include <QObject>
+#include <helpers/qownnotesmarkdownhighlighter.h>
 #include "libraries/qmarkdowntextedit/qmarkdowntextedit.h"
 #include "mainwindow.h"
 
@@ -36,6 +37,7 @@ public:
     QMargins viewportMargins();
 
 protected:
+    QOwnNotesMarkdownHighlighter *_highlighter;
     void insertFromMimeData(const QMimeData * source);
     void resizeEvent(QResizeEvent* event);
 

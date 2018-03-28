@@ -2478,6 +2478,86 @@ bool Note::scaleDownImageFileIfNeeded(QFile &file) {
 }
 
 /**
+ * Trys to fetch a note from an url string
+ *
+ * @param urlString
+ * @return
+ */
+Note Note::fetchByUrlString(QString urlString) {
+    QUrl url = QUrl(urlString);
+
+    // if the name of the linked note only consists of numbers we cannot use
+    // host() to get the filename, it would get converted to an ip-address
+    QRegularExpressionMatch match =
+            QRegularExpression(R"(^\w+:\/\/(\d+)$)").match(urlString);
+    QString fileName = match.hasMatch() ? match.captured(1) : url.host();
+
+    if (fileName.isEmpty()) {
+        return Note();
+    }
+
+    // add a ".com" to the filename to simulate a valid domain
+    fileName += ".com";
+
+    // convert the ACE to IDN (internationalized domain names) to support
+    // links to notes with unicode characters in their names
+    // then remove the ".com" again
+    fileName = Utils::Misc::removeIfEndsWith(
+            QUrl::fromAce(fileName.toLatin1()), ".com");
+
+    // if it seem we have unicode characters in our filename let us use
+    // wildcards for each number, because full width numbers get somehow
+    // translated to normal numbers by the QTextEdit
+    if (fileName != url.host()) {
+        fileName.replace("1", "[1１]")
+                .replace("2", "[2２]")
+                .replace("3", "[3３]")
+                .replace("4", "[4４]")
+                .replace("5", "[5５]")
+                .replace("6", "[6６]")
+                .replace("7", "[7７]")
+                .replace("8", "[8８]")
+                .replace("9", "[9９]")
+                .replace("0", "[0０]");
+    }
+
+    // this makes it possible to search for file names containing spaces
+    // instead of spaces a "-" has to be used in the note link
+    // example: note://my-note-with-spaces-in-the-name
+    fileName.replace("-", "?").replace("_", "?");
+
+    // we need to search for the case sensitive filename,
+    // we only get it lowercase by QUrl
+    QDir currentDir = QDir(NoteSubFolder::activeNoteSubFolder().fullPath());
+
+    QStringList files;
+    QStringList fileSearchList =
+            QStringList() << fileName + ".txt" << fileName + ".md";
+
+    // append the files with custom extension
+    fileSearchList.append(
+            Note::customNoteFileExtensionList(fileName + "."));
+
+    // search for files with that name
+    files = currentDir.entryList(fileSearchList,
+                                 QDir::Files | QDir::NoSymLinks);
+    bool noteWasFound = false;
+
+    // did we find files?
+    if (files.length() > 0) {
+        // take the first found file
+        fileName = files.first();
+
+        // try to fetch note
+        Note note = Note::fetchByFileName(fileName);
+
+        return note;
+    }
+
+    return Note();
+}
+
+/**
  * Fetches all tags of the note
  */
 //QList<Tag> Note::tags() {

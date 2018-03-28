@@ -5063,95 +5063,34 @@ void MainWindow::openLocalUrl(QString urlString) {
     QString scheme = url.scheme();
 
     if (scheme == "note") {
-        // if the name of the linked note only consists of numbers we cannot use
-        // host() to get the filename, it would get converted to an ip-address
-        QRegularExpressionMatch match =
-                QRegularExpression("^\\w+:\\/\\/(\\d+)$").match(urlString);
-        QString fileName = match.hasMatch() ? match.captured(1) : url.host();
+        // try to fetch a note from the url string
+        Note note = Note::fetchByUrlString(urlString);
 
-        if (fileName.isEmpty()) {
-            return;
-        }
+        // does this note really exist?
+        if (note.isFetched()) {
+            // set current note
+            setCurrentNote(note);
+        } else {
+            // if the name of the linked note only consists of numbers we cannot
+            // use host() to get the filename, it would get converted to an
+            // ip-address
+            QRegularExpressionMatch match =
+                    QRegularExpression(R"(^\w+:\/\/(\d+)$)").match(urlString);
+            QString fileName = match.hasMatch() ?
+                               match.captured(1) : url.host();
 
-        QString originalFileName = fileName;
+            // try to generate a useful title for the note
+            fileName = Utils::Misc::toStartCase(fileName.replace("_", " "));
 
-        // add a ".com" to the filename to simulate a valid domain
-        fileName += ".com";
-
-        // convert the ACE to IDN (internationalized domain names) to support
-        // links to notes with unicode characters in their names
-        // then remove the ".com" again
-        fileName = Utils::Misc::removeIfEndsWith(
-                QUrl::fromAce(fileName.toLatin1()), ".com");
-
-        // if it seem we have unicode characters in our filename let us use
-        // wildcards for each number, because full width numbers get somehow
-        // translated to normal numbers by the QTextEdit
-        if (fileName != url.host()) {
-            fileName.replace("1", "[1１]")
-                    .replace("2", "[2２]")
-                    .replace("3", "[3３]")
-                    .replace("4", "[4４]")
-                    .replace("5", "[5５]")
-                    .replace("6", "[6６]")
-                    .replace("7", "[7７]")
-                    .replace("8", "[8８]")
-                    .replace("9", "[9９]")
-                    .replace("0", "[0０]");
-        }
-
-        // this makes it possible to search for file names containing spaces
-        // instead of spaces a "-" has to be used in the note link
-        // example: note://my-note-with-spaces-in-the-name
-        fileName.replace("-", "?").replace("_", "?");
-
-        // we need to search for the case sensitive filename,
-        // we only get it lowercase by QUrl
-        QDir currentDir = QDir(NoteSubFolder::activeNoteSubFolder().fullPath());
-
-        QStringList files;
-        QStringList fileSearchList =
-                QStringList() << fileName + ".txt" << fileName + ".md";
-
-        // append the files with custom extension
-        fileSearchList.append(
-                Note::customNoteFileExtensionList(fileName + "."));
-
-        // search for files with that name
-        files = currentDir.entryList(fileSearchList,
-                                     QDir::Files | QDir::NoSymLinks);
-        bool noteWasFound = false;
-
-        // did we find files?
-        if (files.length() > 0) {
-            // take the first found file
-            fileName = files.first();
-
-            // try to fetch note
-            Note note = Note::fetchByFileName(fileName);
-
-            // does this note really exist?
-            if (note.isFetched()) {
-                // set current note
-                setCurrentNote(note);
-
-                noteWasFound = true;
-            }
-        }
-
-        // ask if we want to create a new note if note wasn't found
-        if (!noteWasFound) {
-            originalFileName = Utils::Misc::toStartCase(
-                    originalFileName.replace("_", " "));
-
+            // ask if we want to create a new note if note wasn't found
             if (Utils::Gui::question(
                     this,
                     tr("Note was not found"),
                     tr("Note was not found, create new note "
                                "<strong>%1</strong>?")
-                            .arg(originalFileName), "open-url-create-note") ==
+                            .arg(fileName), "open-url-create-note") ==
                     QMessageBox::Yes) {
-                return createNewNote(originalFileName, false);
+                return createNewNote(fileName, false);
             }
         }
     } else if (scheme == "task") {

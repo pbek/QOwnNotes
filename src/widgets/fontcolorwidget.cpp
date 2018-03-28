@@ -217,6 +217,7 @@ void FontColorWidget::initTextTreeWidgetItems() {
                           MarkdownHighlighter::MaskedSyntax);
     addTextTreeWidgetItem(tr("Current line background color"),
                           MarkdownHighlighter::CurrentLineBackgroundColor);
+    addTextTreeWidgetItem(tr("Broken link"), MarkdownHighlighter::BrokenLink);
 }
 
 void FontColorWidget::addTextTreeWidgetItem(QString text, int index) {

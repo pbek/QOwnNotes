@@ -235,6 +235,8 @@ public:
 
     QStringList getMediaFileList();
 
+    static Note fetchByUrlString(QString urlString);
+
 protected:
     int id;
     QString name;
