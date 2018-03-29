@@ -1,11 +1,14 @@
 # QOwnNotes Changelog
 
 ## 18.03.10
-- broken note-links are now highlighted in the note edit (for [#736](https://github.com/pbek/QOwnNotes/issues/736))
+- **broken note-links** are now **highlighted** in the note edit (for [#736](https://github.com/pbek/QOwnNotes/issues/736))
     - there is a new entry `Broken link` in the *Color schema* settings where
       you can change the styling
 - years were bumped to 2018
-- added repositories for SUSE Linux Enterprise 15 and SUSE Linux Enterprise 12 SP3
+- added repositories for **openSUSE Leap 15**, **SUSE Linux Enterprise 15** and
+  **SUSE Linux Enterprise 12 SP3**
+    - please visit the [openSUSE installation page](http://www.qownnotes.org/installation#openSUSE)
+      for instructions
 - added more Brazilian Portuguese, Italian, Catalan, Spanish, German, French,
   Dutch and Hungarian translation (thank you mlimacarlos, mlocati, MGuerra,
   richarson, rakekniven, bepolymathe and Fabijenna)
