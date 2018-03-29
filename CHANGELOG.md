@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 18.03.10
+- broken note-links are now highlighted in the note edit (for [#736](https://github.com/pbek/QOwnNotes/issues/736))
+    - there is a new entry `Broken link` in the *Color schema* settings where
+      you can change the styling
+
 ## 18.03.9
 - you can now choose to create a new note when clicking on a "broken" note-link
   in the note edit or the preview (for [#736](https://github.com/pbek/QOwnNotes/issues/736))
