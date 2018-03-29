@@ -5,6 +5,10 @@
     - there is a new entry `Broken link` in the *Color schema* settings where
       you can change the styling
 - years were bumped to 2018
+- added repositories for SUSE Linux Enterprise 15 and SUSE Linux Enterprise 12 SP3
+- added more Brazilian Portuguese, Italian, Catalan, Spanish, German, French,
+  Dutch and Hungarian translation (thank you mlimacarlos, mlocati, MGuerra,
+  richarson, rakekniven, bepolymathe and Fabijenna)
 
 ## 18.03.9
 - you can now choose to create a new note when clicking on a "broken" note-link
