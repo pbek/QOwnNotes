@@ -1,14 +1,20 @@
 # QOwnNotes Changelog
 
+## 18.04.0
+- description text of script options in the *Script settings* is now selectable
+  and links are clickable (for [#882](https://github.com/pbek/QOwnNotes/issues/882))
+- fixed a problem in the *Script repository* where searching for a script 
+  would also trigger the loading of more items
+
 ## 18.03.10
 - **broken note-links** are now **highlighted** in the note edit (for [#736](https://github.com/pbek/QOwnNotes/issues/736))
     - there is a new entry `Broken link` in the *Color schema* settings where
       you can change the styling
-- years were bumped to 2018
 - added repositories for **openSUSE Leap 15**, **SUSE Linux Enterprise 15** and
   **SUSE Linux Enterprise 12 SP3**
     - please visit the [openSUSE installation page](http://www.qownnotes.org/installation#openSUSE)
       for instructions
+- years were bumped to 2018
 - added more Brazilian Portuguese, Italian, Catalan, Spanish, German, French,
   Dutch and Hungarian translation (thank you mlimacarlos, mlocati, MGuerra,
   richarson, rakekniven, bepolymathe and Fabijenna)

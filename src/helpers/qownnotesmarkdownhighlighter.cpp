@@ -30,7 +30,9 @@
  */
 QOwnNotesMarkdownHighlighter::QOwnNotesMarkdownHighlighter(
         QTextDocument *parent, HighlightingOptions highlightingOptions)
-        : MarkdownHighlighter(parent) {
+        : MarkdownHighlighter(parent, highlightingOptions) {
+    Q_UNUSED(parent);
+    Q_UNUSED(highlightingOptions);
 }
 
 /**

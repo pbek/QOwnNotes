@@ -460,7 +460,7 @@ void FontColorWidget::on_copySchemeButton_clicked() {
     QString name = QInputDialog::getText(this, tr("Copy color schema"),
                           tr("Color schema name"), QLineEdit::Normal,
                           ui->colorSchemeComboBox->currentText() + " (" +
-                                  tr("Copy") + ")");
+                                  tr("Copy", "as noun") + ")");
 
     if (name.isEmpty()) {
         return;
