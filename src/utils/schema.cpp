@@ -224,8 +224,11 @@ void Utils::Schema::setFormatStyle(MarkdownHighlighter::HighlighterState index,
 void Utils::Schema::adaptFontSize(int index, QFont &font) {
     int adaption = getSchemaValue(textSettingsKey("FontSizeAdaption", index),
                                   100).toInt();
+    double fontSize = round(font.pointSize() * adaption / 100);
 
-    font.setPointSize(round(font.pointSize() * adaption / 100));
+    if (fontSize > 0) {
+        font.setPointSize(fontSize);
+    }
 }
 
 /**
