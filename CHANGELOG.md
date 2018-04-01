@@ -1,11 +1,15 @@
 # QOwnNotes Changelog
 
 ## 18.04.0
+- fixed a problem with the highlighting of headlines in a non-default 
+  highlighting schema on Windows 10 (for [#883](https://github.com/pbek/QOwnNotes/issues/883))
 - description text of script options in the *Script settings* is now selectable
   and links are clickable (for [#882](https://github.com/pbek/QOwnNotes/issues/882))
 - fixed a problem in the *Script repository* where searching for a script 
   would also trigger the loading of more items
 - fixed possible `setPointSizeF` warnings
+- added more Polish, Italian, Catalan, Spanish, German, Dutch and Hungarian
+  translation (thank you lucjan, mlocati, MGuerra, richarson, rakekniven and Fabijenna)
 
 ## 18.03.10
 - **broken note-links** are now **highlighted** in the note edit (for [#736](https://github.com/pbek/QOwnNotes/issues/736))

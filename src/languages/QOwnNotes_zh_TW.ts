@@ -126,7 +126,6 @@
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="158"/>
-      <location filename="../widgets/fontcolorwidget.cpp" line="463"/>
       <source>Copy</source>
       <translation>複製</translation>
     </message>
@@ -296,6 +295,12 @@
       <location filename="../widgets/fontcolorwidget.cpp" line="461"/>
       <source>Color schema name</source>
       <translation>配色名稱</translation>
+    </message>
+    <message>
+      <location filename="../widgets/fontcolorwidget.cpp" line="463"/>
+      <source>Copy</source>
+      <comment>as noun</comment>
+      <translation type="unfinished">Copy</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="585"/>
@@ -2825,7 +2830,7 @@ Are the folder and the file writeable?</translation>
       <translation type="unfinished">Install</translation>
     </message>
     <message>
-      <location filename="../dialogs/scriptrepositorydialog.ui" line="441"/>
+      <location filename="../dialogs/scriptrepositorydialog.ui" line="444"/>
       <source>Load more scripts</source>
       <translation type="unfinished">Load more scripts</translation>
     </message>
@@ -2965,7 +2970,7 @@ Do you want to install it anyway?</translation>
   <context>
     <name>ScriptSettingWidget</name>
     <message>
-      <location filename="../widgets/scriptsettingwidget.ui" line="86"/>
+      <location filename="../widgets/scriptsettingwidget.ui" line="92"/>
       <source>The setting name</source>
       <translation type="unfinished">The setting name</translation>
     </message>
