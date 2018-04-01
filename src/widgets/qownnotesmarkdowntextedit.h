@@ -37,7 +37,8 @@ public:
     QMargins viewportMargins();
 
 protected:
-    QOwnNotesMarkdownHighlighter *_highlighter;
+    // we must not override _highlighter or Windows will create a QOwnNotesMarkdownHighlighter and MarkdownHighlighter instance
+//    QOwnNotesMarkdownHighlighter *_highlighter;
     void insertFromMimeData(const QMimeData * source);
     void resizeEvent(QResizeEvent* event);
 

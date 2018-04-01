@@ -8,7 +8,7 @@
 #include "qownnotesmarkdowntextedit.h"
 
 QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
-        : QMarkdownTextEdit(parent) {
+        : QMarkdownTextEdit(parent, false) {
     _highlighter = new QOwnNotesMarkdownHighlighter(document());
     setStyles();
     updateSettings();
