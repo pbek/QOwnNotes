@@ -5036,6 +5036,10 @@ void MainWindow::on_noteTextView_anchorClicked(const QUrl &url) {
  * - <note://my-note-with-spaces-in-the-name> opens the note "My Note with spaces in the name"
  */
 void MainWindow::openLocalUrl(QString urlString) {
+    if (urlString.isEmpty()) {
+        return;
+    }
+
     // if urlString is no valid url we will try to convert it into a note url
     if (!QOwnNotesMarkdownTextEdit::isValidUrl(urlString)) {
         urlString = Note::getNoteURLFromFileName(urlString);

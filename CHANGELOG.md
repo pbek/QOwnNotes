@@ -1,7 +1,11 @@
 # QOwnNotes Changelog
 
+## 18.04.1
+- fixed mistakenly questions about creating a new note when <kbd>Ctrl</kbd> +
+  clicking on a note or pressing <kbd>Ctrl</kbd> + <kbd>Space</kbd> in a note
+
 ## 18.04.0
-- fixed a problem with the highlighting of headlines in a non-default 
+- fixed a problem with the highlighting of headlines in a non-default
   highlighting schema on Windows 10 (for [#883](https://github.com/pbek/QOwnNotes/issues/883))
 - description text of script options in the *Script settings* is now selectable
   and links are clickable (for [#882](https://github.com/pbek/QOwnNotes/issues/882))
