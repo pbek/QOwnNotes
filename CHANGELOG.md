@@ -10,6 +10,8 @@
     - for running sessions of QOwnNotes this will be disabled by default
     - if this is disabled you are able to create more complex panel layouts,
       but all panels will be resized if the window is resized
+- added more Brazilian Portuguese, Spanish and Indonesian translation
+  (thank you mlimacarlos, richarson, zmni)
 
 ## 18.04.0
 - fixed a problem with the highlighting of headlines in a non-default
