@@ -178,6 +178,8 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
             this, SLOT(needRestart()));
     connect(ui->fullyHighlightedBlockquotesCheckBox, SIGNAL(toggled(bool)),
             this, SLOT(needRestart()));
+    connect(ui->noteEditCentralWidgetCheckBox, SIGNAL(toggled(bool)),
+            this, SLOT(needRestart()));
 
     // connect the panel sort radio buttons
     connect(ui->notesPanelSortAlphabeticalRadioButton, SIGNAL(toggled(bool)),
@@ -545,6 +547,8 @@ void SettingsDialog::storeSettings() {
                       ui->markdownHighlightingCheckBox->isChecked());
     settings.setValue("fullyHighlightedBlockquotes",
                       ui->fullyHighlightedBlockquotesCheckBox->isChecked());
+    settings.setValue("noteEditIsCentralWidget",
+                      ui->noteEditCentralWidgetCheckBox->isChecked());
     settings.setValue("MainWindow/noteTextView.rtl",
                       ui->noteTextViewRTLCheckBox->isChecked());
     settings.setValue("Debug/fakeOldVersionNumber",
@@ -842,6 +846,8 @@ void SettingsDialog::readSettings() {
             settings.value("markdownHighlightingEnabled", true).toBool());
     ui->fullyHighlightedBlockquotesCheckBox->setChecked(
             settings.value("fullyHighlightedBlockquotes").toBool());
+    ui->noteEditCentralWidgetCheckBox->setChecked(
+            settings.value("noteEditIsCentralWidget", true).toBool());
     ui->allowOnlyOneAppInstanceCheckBox->setChecked(settings.value(
             "allowOnlyOneAppInstance").toBool());
     ui->closeTodoListAfterSaveCheckBox->setChecked(settings.value(

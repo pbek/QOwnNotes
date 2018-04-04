@@ -373,7 +373,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>4</number>
+            <number>16</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -3668,7 +3668,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                   </property>
                  </widget>
                 </item>
-                <item row="2" column="0">
+                <item row="4" column="0">
                  <widget class="QCheckBox" name="gitHubLineBreaksCheckBox">
                   <property name="toolTip">
                    <string>No two spaces to do a line break are added here if checked</string>
@@ -4513,68 +4513,6 @@ git config --global user.name &quot;Your name&quot;</string>
             </property>
             <layout class="QGridLayout" name="gridLayout_63">
              <item row="3" column="0">
-              <widget class="QGroupBox" name="tagsPanelGroupBox">
-               <property name="title">
-                <string>Tags panel</string>
-               </property>
-               <layout class="QGridLayout" name="gridLayout_57">
-                <item row="2" column="0">
-                 <widget class="QGroupBox" name="tagsPanelSortGroupBox">
-                  <property name="title">
-                   <string>Sort</string>
-                  </property>
-                  <layout class="QVBoxLayout" name="verticalLayout_19">
-                   <item>
-                    <widget class="QRadioButton" name="tagsPanelSortAlphabeticalRadioButton">
-                     <property name="text">
-                      <string>Alphabetical</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QRadioButton" name="tagsPanelSortByLastChangeRadioButton">
-                     <property name="text">
-                      <string>By last change / use</string>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
-                <item row="2" column="1">
-                 <widget class="QGroupBox" name="tagsPanelOrderGroupBox">
-                  <property name="title">
-                   <string>Order</string>
-                  </property>
-                  <layout class="QVBoxLayout" name="verticalLayout_20">
-                   <item>
-                    <widget class="QRadioButton" name="tagsPanelOrderAscendingRadioButton">
-                     <property name="text">
-                      <string>Ascending</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QRadioButton" name="tagsPanelOrderDescendingRadioButton">
-                     <property name="text">
-                      <string>Descending</string>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
-                <item row="0" column="0" colspan="2">
-                 <widget class="QCheckBox" name="tagsPanelHideSearchCheckBox">
-                  <property name="text">
-                   <string>Hide 'Find or create tag' search</string>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </widget>
-             </item>
-             <item row="2" column="0">
               <widget class="QGroupBox" name="noteSubfoldersPanelGroupBox">
                <property name="title">
                 <string>Note subfolders panel</string>
@@ -4660,7 +4598,7 @@ git config --global user.name &quot;Your name&quot;</string>
              <item row="1" column="0">
               <widget class="QGroupBox" name="notesPanelGroupBox">
                <property name="title">
-                <string>Notes panel</string>
+                <string>Note list panel</string>
                </property>
                <layout class="QGridLayout" name="gridLayout_61">
                 <item row="2" column="2">
@@ -4732,7 +4670,7 @@ git config --global user.name &quot;Your name&quot;</string>
                </layout>
               </widget>
              </item>
-             <item row="4" column="0">
+             <item row="5" column="0">
               <spacer name="verticalSpacer_14">
                <property name="orientation">
                 <enum>Qt::Vertical</enum>
@@ -4744,6 +4682,87 @@ git config --global user.name &quot;Your name&quot;</string>
                 </size>
                </property>
               </spacer>
+             </item>
+             <item row="4" column="0">
+              <widget class="QGroupBox" name="tagsPanelGroupBox">
+               <property name="title">
+                <string>Tags panel</string>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_57">
+                <item row="2" column="0">
+                 <widget class="QGroupBox" name="tagsPanelSortGroupBox">
+                  <property name="title">
+                   <string>Sort</string>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_19">
+                   <item>
+                    <widget class="QRadioButton" name="tagsPanelSortAlphabeticalRadioButton">
+                     <property name="text">
+                      <string>Alphabetical</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QRadioButton" name="tagsPanelSortByLastChangeRadioButton">
+                     <property name="text">
+                      <string>By last change / use</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QGroupBox" name="tagsPanelOrderGroupBox">
+                  <property name="title">
+                   <string>Order</string>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_20">
+                   <item>
+                    <widget class="QRadioButton" name="tagsPanelOrderAscendingRadioButton">
+                     <property name="text">
+                      <string>Ascending</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QRadioButton" name="tagsPanelOrderDescendingRadioButton">
+                     <property name="text">
+                      <string>Descending</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item row="0" column="0" colspan="2">
+                 <widget class="QCheckBox" name="tagsPanelHideSearchCheckBox">
+                  <property name="text">
+                   <string>Hide 'Find or create tag' search</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QGroupBox" name="noteEditPanelGroupBox">
+               <property name="title">
+                <string>Note edit panel</string>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_67">
+                <item row="0" column="1" colspan="2">
+                 <widget class="QCheckBox" name="noteEditCentralWidgetCheckBox">
+                  <property name="toolTip">
+                   <string>If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</string>
+                  </property>
+                  <property name="text">
+                   <string>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
              </item>
             </layout>
            </widget>
@@ -4906,8 +4925,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../breeze-dark-qownnotes.qrc"/>
   <include location="../breeze-qownnotes.qrc"/>
+  <include location="../breeze-dark-qownnotes.qrc"/>
  </resources>
  <connections>
   <connection>

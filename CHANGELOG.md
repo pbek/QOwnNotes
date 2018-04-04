@@ -3,6 +3,13 @@
 ## 18.04.1
 - fixed mistakenly questions about creating a new note when <kbd>Ctrl</kbd> +
   clicking on a note or pressing <kbd>Ctrl</kbd> + <kbd>Space</kbd> in a note
+- there now is a new checkbox in the *Panels settings* to use the note edit
+  panel as fixed central widget to be **resized** if the **window** or other
+  **panels** are **resized** (for [#420](https://github.com/pbek/QOwnNotes/issues/420))
+    - for new installations of QOwnNotes this will be enabled by default
+    - for running sessions of QOwnNotes this will be disabled by default
+    - if this is disabled you are able to create more complex panel layouts,
+      but all panels will be resized if the window is resized
 
 ## 18.04.0
 - fixed a problem with the highlighting of headlines in a non-default

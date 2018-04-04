@@ -100,6 +100,10 @@ MainWindow::MainWindow(QWidget *parent) :
     QApplication::instance()->setAttribute(Qt::AA_DontShowIconsInMenus, true);
 #endif
 
+    QSettings settings;
+    _noteEditIsCentralWidget = settings.value(
+            "noteEditIsCentralWidget", true).toBool();
+
     ui->setupUi(this);
     setWindowIcon(getSystemTrayIcon());
 
@@ -151,7 +155,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->encryptedNoteTextEdit->hide();
 
     // set the search frames for the note text edits
-    QSettings settings;
     bool darkMode = settings.value("darkMode").toBool();
     ui->noteTextEdit->initSearchFrame(ui->noteTextEditSearchFrame, darkMode);
     ui->encryptedNoteTextEdit->initSearchFrame(ui->noteTextEditSearchFrame,
@@ -613,14 +616,17 @@ void MainWindow::initDockWidgets() {
     splitDockWidget(_noteListDockWidget, _noteNavigationDockWidget,
                     Qt::Vertical);
 
-    _noteEditDockWidget = new QDockWidget(tr("Note edit"), this);
-    _noteEditDockWidget->setObjectName("noteEditDockWidget");
-    _noteEditDockWidget->setWidget(ui->noteEditFrame);
-    _noteEditDockTitleBarWidget = _noteEditDockWidget->titleBarWidget();
-    sizePolicy = _noteEditDockWidget->sizePolicy();
-    sizePolicy.setHorizontalStretch(5);
-    _noteEditDockWidget->setSizePolicy(sizePolicy);
-    addDockWidget(Qt::RightDockWidgetArea, _noteEditDockWidget, Qt::Horizontal);
+    if (!_noteEditIsCentralWidget) {
+        _noteEditDockWidget = new QDockWidget(tr("Note edit"), this);
+        _noteEditDockWidget->setObjectName("noteEditDockWidget");
+        _noteEditDockWidget->setWidget(ui->noteEditFrame);
+        _noteEditDockTitleBarWidget = _noteEditDockWidget->titleBarWidget();
+        sizePolicy = _noteEditDockWidget->sizePolicy();
+        sizePolicy.setHorizontalStretch(5);
+        _noteEditDockWidget->setSizePolicy(sizePolicy);
+        addDockWidget(Qt::RightDockWidgetArea, _noteEditDockWidget,
+                      Qt::Horizontal);
+    }
 
     _noteTagDockWidget = new QDockWidget(tr("Note tags"), this);
     _noteTagDockWidget->setObjectName("noteTagDockWidget");
@@ -629,7 +635,9 @@ void MainWindow::initDockWidgets() {
     sizePolicy = _noteTagDockWidget->sizePolicy();
     sizePolicy.setHorizontalStretch(5);
     _noteTagDockWidget->setSizePolicy(sizePolicy);
-    addDockWidget(Qt::RightDockWidgetArea, _noteTagDockWidget, Qt::Vertical);
+    addDockWidget(_noteEditIsCentralWidget ?
+                  Qt::LeftDockWidgetArea : Qt::RightDockWidgetArea,
+                  _noteTagDockWidget, Qt::Vertical);
 
     _notePreviewDockWidget = new QDockWidget(tr("Note preview"), this);
     _notePreviewDockWidget->setObjectName("notePreviewDockWidget");
@@ -679,7 +687,12 @@ void MainWindow::initDockWidgets() {
 //    ui->noteEditFrame->layout()->setContentsMargins(0, 0, 0, 0);
 
     setDockNestingEnabled(true);
-    setCentralWidget(Q_NULLPTR);
+    setCentralWidget(_noteEditIsCentralWidget ? ui->noteEditFrame : Q_NULLPTR);
+
+    if (_noteEditIsCentralWidget) {
+        ui->noteTextEdit->setFrameShape(QFrame::StyledPanel);
+        ui->encryptedNoteTextEdit->setFrameShape(QFrame::StyledPanel);
+    }
 
     // restore the current workspace
     restoreCurrentWorkspace();
@@ -1392,8 +1405,10 @@ void MainWindow::setDistractionFreeMode(bool enabled) {
                 toolbar->hide();
             }
 
-        // show the note edit dock widget
-        _noteEditDockWidget->show();
+        if (!_noteEditIsCentralWidget) {
+            // show the note edit dock widget
+            _noteEditDockWidget->show();
+        }
 
         // hide all dock widgets but the note edit dock widget
         QList<QDockWidget*> dockWidgets = findChildren<QDockWidget*>();
@@ -4684,7 +4699,7 @@ bool MainWindow::isMarkdownViewEnabled() {
  * Checks if the note edit pane is enabled
  */
 bool MainWindow::isNoteEditPaneEnabled() {
-    return _noteEditDockWidget->isVisible();
+    return _noteEditIsCentralWidget ? true : _noteEditDockWidget->isVisible();
 }
 
 /**
@@ -9210,7 +9225,11 @@ void MainWindow::on_actionUnlock_panels_toggled(bool arg1) {
         _noteListDockWidget->setTitleBarWidget(_noteListDockTitleBarWidget);
         _noteNavigationDockWidget->setTitleBarWidget(
                 _noteNavigationDockTitleBarWidget);
-        _noteEditDockWidget->setTitleBarWidget(_noteEditDockTitleBarWidget);
+
+        if (!_noteEditIsCentralWidget) {
+            _noteEditDockWidget->setTitleBarWidget(_noteEditDockTitleBarWidget);
+        }
+
         _noteTagDockWidget->setTitleBarWidget(_noteTagDockTitleBarWidget);
         _notePreviewDockWidget->setTitleBarWidget(
                 _notePreviewDockTitleBarWidget);

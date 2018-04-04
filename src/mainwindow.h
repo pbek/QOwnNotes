@@ -590,6 +590,7 @@ private:
     QList<QAction *> _noteListContextMenuActions;
     QString _notePreviewHash;
     int _gitCommitInterval;
+    bool _noteEditIsCentralWidget;
 
     void createSystemTrayIcon();
 

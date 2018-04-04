@@ -619,6 +619,16 @@ bool DatabaseService::setupTables() {
         version = 26;
     }
 
+    if (version < 27) {
+        // if the application was not started for the first time we want to
+        // disable that the note edit is the central widget
+        if (oldVersion != 0) {
+            settings.setValue("noteEditIsCentralWidget", false);
+        }
+
+        version = 27;
+    }
+
     if (version != oldVersion) {
         setAppData("database_version", QString::number(version));
     }
