@@ -7,6 +7,7 @@
 #include <QNetworkRequest>
 #include <QNetworkReply>
 #include <QFileDialog>
+#include <QSettings>
 #include "entities/note.h"
 #include "helpers/htmlentities.h"
 
@@ -187,11 +188,19 @@ QString LinkDialog::getTitleForUrl(QUrl url) {
  * Selects a local file to link to
  */
 void LinkDialog::on_fileUrlButton_clicked() {
-    QUrl fileUrl = QFileDialog::getOpenFileUrl(this,
-                                               tr("Select file to link to"));
-    QString fileUrlString = fileUrl.toString();
+    QSettings settings;
+    // load last url
+    QUrl fileUrl = settings.value("LinkDialog/lastSelectedFileUrl").toUrl();
 
-    if (fileUrlString != "") {
+    fileUrl = QFileDialog::getOpenFileUrl(this, tr("Select file to link to"),
+                                          fileUrl);
+    QString fileUrlString = fileUrl.toString(QUrl::FullyEncoded);
+
+    if (!fileUrlString.isEmpty()) {
+        // store url for the next time
+        settings.setValue("LinkDialog/lastSelectedFileUrl", fileUrlString);
+
+        // write the file-url to the url text-edit
         ui->urlEdit->setText(fileUrlString);
     }
 }

@@ -1,5 +1,15 @@
 # QOwnNotes Changelog
 
+## 18.04.2
+- added a small note edit styling change for Windows and macOS in the
+  note edit is configured as central widget (for [#420](https://github.com/pbek/QOwnNotes/issues/420))
+- fixed links to files with spaces in the file-path when creating the
+  link with the *Link dialog*
+- in the *Link dialog* the the last selected file will now be remembered
+  in the open-file dialog
+- attempted to fix a non-reproducible crash in Windows 7 when a note is
+  stored by clicking the close button (for [#886](https://github.com/pbek/QOwnNotes/issues/886))
+
 ## 18.04.1
 - fixed mistakenly questions about creating a new note when <kbd>Ctrl</kbd> +
   clicking on a note or pressing <kbd>Ctrl</kbd> + <kbd>Space</kbd> in a note

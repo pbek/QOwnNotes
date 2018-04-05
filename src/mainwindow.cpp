@@ -689,10 +689,13 @@ void MainWindow::initDockWidgets() {
     setDockNestingEnabled(true);
     setCentralWidget(_noteEditIsCentralWidget ? ui->noteEditFrame : Q_NULLPTR);
 
+    // macOS and Windows will look better without this
+#ifdef Q_OS_LINUX
     if (_noteEditIsCentralWidget) {
         ui->noteTextEdit->setFrameShape(QFrame::StyledPanel);
         ui->encryptedNoteTextEdit->setFrameShape(QFrame::StyledPanel);
     }
+#endif
 
     // restore the current workspace
     restoreCurrentWorkspace();
@@ -3293,6 +3296,8 @@ void MainWindow::closeEvent(QCloseEvent *event) {
         hide();
         event->ignore();
     } else {
+        storeUpdatedNotesToDisk();
+
         MetricsService::instance()->sendVisitIfEnabled("app/end", "app end");
         qApp->setProperty("loggingEnabled", false);
 
