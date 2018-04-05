@@ -300,7 +300,7 @@
       <location filename="../widgets/fontcolorwidget.cpp" line="463"/>
       <source>Copy</source>
       <comment>as noun</comment>
-      <translation type="unfinished">Copy</translation>
+      <translation>Copia</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="585"/>
@@ -409,7 +409,7 @@
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="195"/>
       <source>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
-      <translation type="unfinished">
+      <translation>
         <numerusform>Restaurar &lt;strong&gt;%n&lt;/strong&gt; nota(es) seleccionada(es)?</numerusform>
         <numerusform>Restaurar &lt;strong&gt;%n&lt;/strong&gt; nota(es) seleccionada(es)?</numerusform>
       </translation>
@@ -422,7 +422,7 @@
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="219"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) where restored</source>
-      <translation type="unfinished">
+      <translation>
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; nota(es) s'han restaurat</numerusform>
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; nota(es) s'han restaurat</numerusform>
       </translation>
@@ -430,7 +430,7 @@
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="241"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
-      <translation type="unfinished">
+      <translation>
         <numerusform>Eliminar &lt;strong&gt;%n&lt;/strong&gt; nota(es) seleccionada(es)?</numerusform>
         <numerusform>Eliminar &lt;strong&gt;%n&lt;/strong&gt; nota(es) seleccionada(es)?</numerusform>
       </translation>
@@ -443,7 +443,7 @@
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="265"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) where removed</source>
-      <translation type="unfinished">
+      <translation>
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; nota(es) s'han eliminat</numerusform>
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; nota(es) s'han eliminat</numerusform>
       </translation>
@@ -861,12 +861,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1344"/>
       <source>&amp;Print note (text)</source>
-      <translation>Imprimeix nota (text)</translation>
+      <translation>Imprimir nota (text)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1368"/>
       <source>Insert &amp;image</source>
-      <translation>Inserir &amp;imatge</translation>
+      <translation>Insereix una &amp;imatge</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1371"/>
@@ -977,7 +977,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1585"/>
       <source>Format text &amp;bold</source>
-      <translation>Formats el text en negreta</translation>
+      <translation>Formata el text en negreta</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1597"/>
@@ -1137,7 +1137,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2148"/>
       <source>Insert attachment</source>
-      <translation>Inserta un adjunt</translation>
+      <translation>Insereix un adjunt</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2175"/>
@@ -3867,22 +3867,22 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4601"/>
       <source>Note list panel</source>
-      <translation type="unfinished">Note list panel</translation>
+      <translation>Panell de llista de notes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4751"/>
       <source>Note edit panel</source>
-      <translation type="unfinished">Note edit panel</translation>
+      <translation>Panell d'edició de notes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4757"/>
       <source>If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</source>
-      <translation type="unfinished">If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</translation>
+      <translation>Si això està deshabilitat podeu crear distribucions de panells més complexes, però tots els panells es redimensionaran si la finestra es redimensiona</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4760"/>
       <source>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</source>
-      <translation type="unfinished">Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</translation>
+      <translation>Useu el panell d'edició de notes com el giny central per redimensionar si la finestra o d'altres panells es redimensionen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4774"/>
@@ -4269,7 +4269,7 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4057"/>
       <source>Fake old version number to trigger update</source>
-      <translation>Número vell de versió per activar l'actualització</translation>
+      <translation>Fals número de versió antic per activar l'actualització</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4085"/>

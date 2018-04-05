@@ -9,6 +9,9 @@
   in the open-file dialog
 - attempted to fix a non-reproducible crash in Windows 7 when a note is
   stored by clicking the close button (for [#886](https://github.com/pbek/QOwnNotes/issues/886))
+- added more Brazilian Portuguese, Indonesian, Catalan, French, Spanish,
+  Italian, Dutch and Hungarian translation (thank you mlimacarlos, zmni,
+  MGuerra, bepolymathe, asoliverez, mlocati and Fabijenna)
 
 ## 18.04.1
 - fixed mistakenly questions about creating a new note when <kbd>Ctrl</kbd> +
