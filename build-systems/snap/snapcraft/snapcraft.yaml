@@ -12,7 +12,7 @@ description: |
 apps:
   qownnotes:
     command: desktop-launch ${SNAP}/usr/bin/QOwnNotes -style=Fusion --snap
-    # see https://developer.ubuntu.com/en/snappy/guides/interfaces
+    # see https://docs.snapcraft.io/reference/interfaces
     plugs:
       - x11
       - unity7
@@ -27,6 +27,7 @@ apps:
 parts:
   qownnotes:
     source: https://download.tuxfamily.org/qownnotes/src/qownnotes-VERSION-STRING.tar.xz
+    # see https://docs.snapcraft.io/reference/plugins/qmake
     plugin: qmake
     qt-version: qt5
     build-packages:
