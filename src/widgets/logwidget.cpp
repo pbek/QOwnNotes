@@ -336,9 +336,11 @@ void LogWidget::logMessageOutput(
             logType = LogType::FatalLogType;
     }
 
+#ifndef INTEGRATION_TESTS
     // handle logging as signal/slot to even more prevent crashes when
     // writing to the log-widget while the app is shutting down
     emit(MainWindow::instance()->log(logType, msg));
+#endif
 
     // it's harder to debug a problem if we abort here
 //    if (type == QtFatalMsg) {
