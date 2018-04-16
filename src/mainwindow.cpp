@@ -91,6 +91,11 @@
 MainWindow::MainWindow(QWidget *parent) :
         QMainWindow(parent),
         ui(new Ui::MainWindow) {
+    // handle logging as signal/slot to even more prevent crashes when
+    // writing to the log-widget while the app is shutting down
+    connect(this, SIGNAL(log(LogWidget::LogType, QString)),
+            LogWidget::instance(), SLOT(log(LogWidget::LogType, QString)));
+
     // use our custom log handler
     qInstallMessageHandler(LogWidget::logMessageOutput);
     qApp->setProperty("loggingEnabled", true);
@@ -1482,7 +1487,7 @@ void MainWindow::showStatusBarMessage(const QString & message, int timeout) {
     }
 
     // write to the log widget
-    LogWidget::instance()->log(LogWidget::StatusLogType, message);
+    emit(log(LogWidget::StatusLogType, message));
 }
 
 /**
@@ -9969,5 +9974,4 @@ void MainWindow::encryptedNoteTextEditResize(QResizeEvent* event) {
 void MainWindow::on_actionShow_local_trash_triggered() {
     LocalTrashDialog *dialog = new LocalTrashDialog(this);
     dialog->exec();
-
 }

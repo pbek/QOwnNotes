@@ -102,7 +102,7 @@ void LogWidget::storeSettings() const {
 /**
  * Adds a log entry
  */
-void LogWidget::log(LogType logType, QString text) {
+void LogWidget::log(LogWidget::LogType logType, QString text) {
     // ignore libpng sRGB profile warnings
     if (logType == WarningLogType && text.contains(
             "libpng warning: iCCP: known incorrect sRGB profile")) {
@@ -336,7 +336,9 @@ void LogWidget::logMessageOutput(
             logType = LogType::FatalLogType;
     }
 
-    LogWidget::instance()->log(logType, msg);
+    // handle logging as signal/slot to even more prevent crashes when
+    // writing to the log-widget while the app is shutting down
+    emit(MainWindow::instance()->log(logType, msg));
 
     // it's harder to debug a problem if we abort here
 //    if (type == QtFatalMsg) {

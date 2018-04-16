@@ -894,7 +894,13 @@ void ScriptingService::log(QString text) {
     MetricsService::instance()->sendVisitIfEnabled(
             "scripting/" + QString(__func__));
 
-    LogWidget::instance()->log(LogWidget::ScriptingLogType, text);
+#ifndef INTEGRATION_TESTS
+    MainWindow *mainWindow = MainWindow::instance();
+
+    if (mainWindow != Q_NULLPTR) {
+        emit(mainWindow->log(LogWidget::ScriptingLogType, text));
+    }
+#endif
 }
 
 /**

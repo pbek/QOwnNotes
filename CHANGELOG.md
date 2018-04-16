@@ -2,6 +2,8 @@
 
 ## 18.04.3
 - `libpng warning: iCCP: known incorrect sRGB profile` warnings are now suppressed 
+- parts of the logging-handling was rewritten to even more prevent crashes 
+  when logging to the log widget while the app is shutting down
  
 ## 18.04.2
 - added a small note edit styling change for Windows and macOS in the

@@ -40,12 +40,14 @@ public:
     ~LogWidget();
     static LogWidget *instance();
     static LogWidget *createInstance(QWidget *parent);
-    void log(LogType logType, QString text);
     static void logMessageOutput(
             QtMsgType type,
             const QMessageLogContext &context,
             const QString &msg);
     bool eventFilter(QObject *obj, QEvent *event);
+
+public slots:
+    void log(LogWidget::LogType logType, QString text);
 
 private slots:
     void storeSettings() const;

@@ -38,6 +38,7 @@
 #include <dialogs/tododialog.h>
 #include <dialogs/settingsdialog.h>
 #include <QPrinter>
+#include <widgets/logwidget.h>
 #include "entities/notehistory.h"
 #include "dialogs/notediffdialog.h"
 #include "services/updateservice.h"
@@ -65,6 +66,7 @@ class MainWindow : public QMainWindow {
 
 Q_SIGNALS:
     void currentNoteChanged(Note &note);
+    void log(LogWidget::LogType logType, QString text);
 
 public:
     enum CreateNewNoteOption {
