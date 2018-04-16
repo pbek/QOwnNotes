@@ -103,6 +103,12 @@ void LogWidget::storeSettings() const {
  * Adds a log entry
  */
 void LogWidget::log(LogType logType, QString text) {
+    // ignore libpng sRGB profile warnings
+    if (logType == WarningLogType && text.contains(
+            "libpng warning: iCCP: known incorrect sRGB profile")) {
+        return;
+    }
+
 #ifndef INTEGRATION_TESTS
     // log to the log file
     logToFileIfAllowed(logType, text);

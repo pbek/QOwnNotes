@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 18.04.3
+- `libpng warning: iCCP: known incorrect sRGB profile` warnings are now suppressed 
+ 
 ## 18.04.2
 - added a small note edit styling change for Windows and macOS in the
   note edit is configured as central widget (for [#420](https://github.com/pbek/QOwnNotes/issues/420))
