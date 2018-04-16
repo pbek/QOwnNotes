@@ -337,9 +337,13 @@ void LogWidget::logMessageOutput(
     }
 
 #ifndef INTEGRATION_TESTS
-    // handle logging as signal/slot to even more prevent crashes when
-    // writing to the log-widget while the app is shutting down
-    emit(MainWindow::instance()->log(logType, msg));
+    MainWindow *mainWindow = MainWindow::instance();
+
+    if (mainWindow != Q_NULLPTR) {
+        // handle logging as signal/slot to even more prevent crashes when
+        // writing to the log-widget while the app is shutting down
+        emit(mainWindow->log(logType, msg));
+    }
 #endif
 
     // it's harder to debug a problem if we abort here
