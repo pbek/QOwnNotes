@@ -2,6 +2,10 @@
 
 ## 18.04.4
 - fixed a warning if you are un-indenting text at the start or end of the note
+- you can now scroll the note content up and down with <kbd>Ctrl</kbd> + <kbd>Up</kbd>
+  and <kbd>Ctrl</kbd> + <kbd>Down</kbd> (for [#872](https://github.com/pbek/QOwnNotes/issues/872))
+    - please visit [QOwnNotes shortcuts](http://www.qownnotes.org/shortcuts/QOwnNotes)
+      for a list of all shortcuts
 
 ## 18.04.3
 - `libpng warning: iCCP: known incorrect sRGB profile` warnings are now suppressed 

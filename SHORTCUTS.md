@@ -87,6 +87,8 @@ Important Shortcuts
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> inserts a headline from the note filename at the top of the note
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> splits the current note into two notes at the current cursor position
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>W</kbd> searches for the selected text on the web
+- <kbd>Ctrl</kbd> + <kbd>Up</kbd> scrolls the content up
+- <kbd>Ctrl</kbd> + <kbd>Down</kbd> scrolls the content down
 
 ### In the note preview panel
 
@@ -188,6 +190,8 @@ Important Shortcuts
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> inserts a headline from the note filename at the top of the note
 - <kbd>Opt</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> splits the current note into two notes at the current cursor position
 - <kbd>Opt</kbd> + <kbd>⇧</kbd> + <kbd>W</kbd> searches for the selected text on the web
+- <kbd>⌘</kbd> + <kbd>Up</kbd> scrolls the content up
+- <kbd>⌘</kbd> + <kbd>Down</kbd> scrolls the content down
 
 ### In the note preview panel
 
