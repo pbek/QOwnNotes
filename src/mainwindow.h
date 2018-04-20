@@ -510,6 +510,8 @@ private slots:
 
     void on_encryptedNoteTextEdit_customContextMenuRequested(const QPoint &pos);
 
+    void on_actionJump_to_note_text_edit_triggered();
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;

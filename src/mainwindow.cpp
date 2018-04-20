@@ -9975,3 +9975,11 @@ void MainWindow::on_actionShow_local_trash_triggered() {
     LocalTrashDialog *dialog = new LocalTrashDialog(this);
     dialog->exec();
 }
+
+void MainWindow::on_actionJump_to_note_text_edit_triggered() {
+    if (!_noteEditIsCentralWidget) {
+        _noteEditDockWidget->show();
+    }
+
+    activeNoteTextEdit()->setFocus();
+}

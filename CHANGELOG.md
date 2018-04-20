@@ -6,6 +6,11 @@
   and <kbd>Ctrl</kbd> + <kbd>Down</kbd> (for [#872](https://github.com/pbek/QOwnNotes/issues/872))
     - please visit [QOwnNotes shortcuts](http://www.qownnotes.org/shortcuts/QOwnNotes)
       for a list of all shortcuts
+- you can now use the shortcut <kbd>F4</kbd> to jump to the *Note edit panel*
+  (for [#877](https://github.com/pbek/QOwnNotes/issues/877))
+    - if the *Note edit panel* was disabled it will be enabled first
+    - please visit [QOwnNotes shortcuts](http://www.qownnotes.org/shortcuts/QOwnNotes)
+      for a list of all shortcuts
 
 ## 18.04.3
 - `libpng warning: iCCP: known incorrect sRGB profile` warnings are now suppressed 

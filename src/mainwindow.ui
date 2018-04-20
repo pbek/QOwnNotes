@@ -978,6 +978,7 @@ p, li { white-space: pre-wrap; }
      <addaction name="actionSwitch_to_previous_workspace"/>
     </widget>
     <addaction name="menuShow"/>
+    <addaction name="actionJump_to_note_text_edit"/>
     <addaction name="menuToolbars"/>
     <addaction name="menuPanels"/>
     <addaction name="menuWorkspaces"/>
@@ -2184,6 +2185,17 @@ p, li { white-space: pre-wrap; }
     <string>Show local trash</string>
    </property>
   </action>
+  <action name="actionJump_to_note_text_edit">
+   <property name="text">
+    <string>Jump to note edit panel</string>
+   </property>
+   <property name="toolTip">
+    <string>Jump to note edit panel</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">F4</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
@@ -2209,9 +2221,9 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="images.qrc"/>
   <include location="breeze-dark-qownnotes.qrc"/>
   <include location="breeze-qownnotes.qrc"/>
+  <include location="images.qrc"/>
  </resources>
  <connections/>
 </ui>
