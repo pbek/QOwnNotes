@@ -1,11 +1,14 @@
 # QOwnNotes Changelog
 
+## 18.04.4
+- fixed a warning if you are un-indenting text at the start or end of the note
+
 ## 18.04.3
 - `libpng warning: iCCP: known incorrect sRGB profile` warnings are now suppressed 
 - parts of the logging-handling was rewritten to even more prevent crashes 
   when logging to the log widget while the app is shutting down
 - added more German translation (thank you rakekniven)
- 
+
 ## 18.04.2
 - added a small note edit styling change for Windows and macOS in the
   note edit is configured as central widget (for [#420](https://github.com/pbek/QOwnNotes/issues/420))
