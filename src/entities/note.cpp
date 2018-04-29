@@ -1165,6 +1165,10 @@ bool Note::canWriteToNoteFile() {
 }
 
 bool Note::updateNoteTextFromDisk() {
+    if (!isFetched()) {
+        return false;
+    }
+
     QFile file(fullNoteFilePath());
 
     if (!file.open(QIODevice::ReadOnly)) {
