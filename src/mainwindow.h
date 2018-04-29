@@ -512,6 +512,8 @@ private slots:
 
     void on_actionJump_to_note_text_edit_triggered();
 
+    void allowNoteEditing();
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;
@@ -541,6 +543,7 @@ private:
     QHash<int, NoteHistoryItem> noteBookmarks;
     QPushButton *_updateAvailableButton;
     QLabel *_noteEditLineNumberLabel;
+    QPushButton *_readOnlyButton;
     QPushButton *_leaveDistractionFreeModeButton;
     QToolBar *_formattingToolbar;
     QToolBar *_customActionToolbar;

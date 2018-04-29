@@ -134,6 +134,7 @@ MainWindow::MainWindow(QWidget *parent) :
     _noteFolderDockWidgetWasVisible = true;
     _noteSubFolderDockWidgetVisible = true;
     _noteExternallyRemovedCheckEnabled = true;
+    _readOnlyButton = new QPushButton(this);
 
     this->setWindowTitle(
             "QOwnNotes - version " + QString(VERSION) +
@@ -2073,7 +2074,7 @@ void MainWindow::readSettings() {
         const QSignalBlocker blocker(ui->actionAllow_note_editing);
         Q_UNUSED(blocker);
 
-        bool isAllowNoteEditing = Utils::Misc::allowNoteEditing();
+        bool isAllowNoteEditing = Utils::Misc::isNoteEditingAllowed();
         ui->actionAllow_note_editing->setChecked(isAllowNoteEditing);
         // we want to trigger the method regardless if the button was toggled
         // or not
@@ -2565,7 +2566,25 @@ void MainWindow::frequentPeriodicChecker() {
  */
 void MainWindow::setupStatusBarWidgets() {
     /*
-     * setup of update available button
+     * setup of readonly button
+     */
+    _readOnlyButton->setText(tr("Read-only"));
+    _readOnlyButton->setToolTip(tr("Note editing is disabled, click to "
+                                   "enable"));
+    _readOnlyButton->setStyleSheet("QPushButton {padding: 0 5px}");
+    _readOnlyButton->setFlat(true);
+    _readOnlyButton->setHidden(Utils::Misc::isNoteEditingAllowed());
+
+    QObject::connect(
+            _readOnlyButton,
+            SIGNAL(pressed()),
+            this,
+            SLOT(allowNoteEditing()));
+
+    ui->statusBar->addPermanentWidget(_readOnlyButton);
+
+    /*
+     * setup of line number label
      */
     _noteEditLineNumberLabel = new QLabel(this);
     _noteEditLineNumberLabel->setText("0:0");
@@ -3083,7 +3102,7 @@ void MainWindow::setCurrentNote(Note note,
     // set the note text edit to readonly if the note does not exist or the
     // note file is not writable
     setNoteTextEditReadOnly(!(note.exists() && note.fileWriteable() &&
-            Utils::Misc::allowNoteEditing()));
+            Utils::Misc::isNoteEditingAllowed()));
 
     // find and set the current item
     if (updateSelectedNote) {
@@ -5373,7 +5392,7 @@ void MainWindow::noteTextEditCustomContextMenuRequested(
         QOwnNotesMarkdownTextEdit *noteTextEdit, const QPoint &pos) {
     QPoint globalPos = noteTextEdit->mapToGlobal(pos);
     QMenu *menu = noteTextEdit->createStandardContextMenu();
-    bool isAllowNoteEditing = Utils::Misc::allowNoteEditing();
+    bool isAllowNoteEditing = Utils::Misc::isNoteEditingAllowed();
     bool isTextSelected = isNoteTextSelected();
 
     menu->addSeparator();
@@ -9921,10 +9940,17 @@ void MainWindow::on_actionAllow_note_editing_triggered(bool checked) {
     setMenuEnabled(ui->menuFormat, checked);
     ui->actionPaste_image->setEnabled(checked);
     ui->actionReplace_in_current_note->setEnabled(checked);
+    _readOnlyButton->setHidden(checked);
 
     ui->actionAllow_note_editing->setText(checked ?
                                           tr("Disallow all note editing") :
                                           tr("Allow all note editing"));
+}
+
+void MainWindow::allowNoteEditing() {
+    if (!ui->actionAllow_note_editing->isChecked()) {
+        ui->actionAllow_note_editing->trigger();
+    }
 }
 
 /**

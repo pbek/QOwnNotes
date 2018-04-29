@@ -1017,7 +1017,7 @@ void Utils::Misc::loadPrinterSettings(QPrinter *printer, QString settingsKey) {
  *
  * @return
  */
-bool Utils::Misc::allowNoteEditing() {
+bool Utils::Misc::isNoteEditingAllowed() {
     QSettings settings;
     return settings.value("allowNoteEditing", true).toBool();
 }

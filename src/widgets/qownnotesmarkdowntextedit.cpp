@@ -392,7 +392,7 @@ bool QOwnNotesMarkdownTextEdit::eventFilter(QObject *obj, QEvent *event) {
              objectName() == "noteTextEdit") && isReadOnly() &&
              (keyEvent->key() < 128) &&
             keyEvent->modifiers().testFlag(Qt::NoModifier) &&
-                !Utils::Misc::allowNoteEditing()) {
+                !Utils::Misc::isNoteEditingAllowed()) {
             Utils::Gui::information(this, tr("Note editing disabled"),
                                     tr("Note editing is currently disabled, "
                                        "please allow it again in the "
