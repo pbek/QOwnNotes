@@ -9,6 +9,9 @@
 - double-clicking on a tag now assigns the tag to the current note
   (for [#896](https://github.com/pbek/QOwnNotes/issues/896))
 - `QXcbConnection: XCB error: 8` warnings are now suppressed
+- added more Brazilian Portuguese, Indonesian, Catalan, German, Spanish,
+  Italian, Dutch and Hungarian translation (thank you mlimacarlos, zmni,
+  MGuerra, rakekniven, richarson, mlocati and Fabijenna)
 
 ## 18.04.4
 - fixed a warning if you are un-indenting text at the start or end of the note
