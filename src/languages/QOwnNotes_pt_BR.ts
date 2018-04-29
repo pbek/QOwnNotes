@@ -2645,6 +2645,19 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
     </message>
 </context>
 <context>
+    <name>QOwnNotesMarkdownTextEdit</name>
+    <message>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="392"/>
+        <source>Note editing disabled</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="393"/>
+        <source>Note editing is currently disabled, please allow it again in the &lt;i&gt;Note-menu&lt;/i&gt;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>QPlainTextEditSearchWidget</name>
     <message>
         <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="62"/>

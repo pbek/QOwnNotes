@@ -41,6 +41,7 @@ protected:
 //    QOwnNotesMarkdownHighlighter *_highlighter;
     void insertFromMimeData(const QMimeData * source);
     void resizeEvent(QResizeEvent* event);
+    bool eventFilter(QObject *obj, QEvent *event);
 
 private slots:
     void highlightCurrentLine();

@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 18.04.5
+- if note editing was disabled now a notification dialog will open if you start 
+  typing in the note edit (for [#900](https://github.com/pbek/QOwnNotes/issues/900))
+
 ## 18.04.4
 - fixed a warning if you are un-indenting text at the start or end of the note
 - you can now scroll the note content up and down with <kbd>Ctrl</kbd> + <kbd>Up</kbd>

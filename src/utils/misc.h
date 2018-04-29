@@ -77,6 +77,7 @@ namespace Utils {
         QDataStream &dataStreamRead(QDataStream &is, QPrinter &printer);
         void storePrinterSettings(QPrinter *printer, QString settingsKey);
         void loadPrinterSettings(QPrinter *printer, QString settingsKey);
+        bool allowNoteEditing();
     }  // namespace Misc
 }  // namespace Utils
 

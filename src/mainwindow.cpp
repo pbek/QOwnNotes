@@ -2073,22 +2073,12 @@ void MainWindow::readSettings() {
         const QSignalBlocker blocker(ui->actionAllow_note_editing);
         Q_UNUSED(blocker);
 
-        bool isAllowNoteEditing = allowNoteEditing();
+        bool isAllowNoteEditing = Utils::Misc::allowNoteEditing();
         ui->actionAllow_note_editing->setChecked(isAllowNoteEditing);
         // we want to trigger the method regardless if the button was toggled
         // or not
         on_actionAllow_note_editing_triggered(isAllowNoteEditing);
     }
-}
-
-/**
- * Returns if "allowNoteEditing" is turned on
- *
- * @return
- */
-bool MainWindow::allowNoteEditing() const {
-    QSettings settings;
-    return settings.value("allowNoteEditing", true).toBool();
 }
 
 /**
@@ -3093,7 +3083,7 @@ void MainWindow::setCurrentNote(Note note,
     // set the note text edit to readonly if the note does not exist or the
     // note file is not writable
     setNoteTextEditReadOnly(!(note.exists() && note.fileWriteable() &&
-            allowNoteEditing()));
+            Utils::Misc::allowNoteEditing()));
 
     // find and set the current item
     if (updateSelectedNote) {
@@ -5383,7 +5373,7 @@ void MainWindow::noteTextEditCustomContextMenuRequested(
         QOwnNotesMarkdownTextEdit *noteTextEdit, const QPoint &pos) {
     QPoint globalPos = noteTextEdit->mapToGlobal(pos);
     QMenu *menu = noteTextEdit->createStandardContextMenu();
-    bool isAllowNoteEditing = allowNoteEditing();
+    bool isAllowNoteEditing = Utils::Misc::allowNoteEditing();
     bool isTextSelected = isNoteTextSelected();
 
     menu->addSeparator();

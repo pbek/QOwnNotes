@@ -5,6 +5,8 @@
 #include <QMimeData>
 #include <QFontDatabase>
 #include <utils/schema.h>
+#include <utils/gui.h>
+#include <utils/misc.h>
 #include "qownnotesmarkdowntextedit.h"
 
 QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
@@ -378,4 +380,26 @@ void QOwnNotesMarkdownTextEdit::highlightCurrentLine()
     // be aware that extra selections, like for global searching, gets
     // removed when the current line gets highlighted
     setExtraSelections(extraSelections);
+}
+
+bool QOwnNotesMarkdownTextEdit::eventFilter(QObject *obj, QEvent *event) {
+    if (event->type() == QEvent::KeyPress) {
+        QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
+
+        // show notification if user tries to edit a note while note editing
+        // is turned off
+        if ((objectName() == "encryptedNoteTextEdit" ||
+             objectName() == "noteTextEdit") && isReadOnly() &&
+             (keyEvent->key() < 128) &&
+            keyEvent->modifiers().testFlag(Qt::NoModifier) &&
+                !Utils::Misc::allowNoteEditing()) {
+            Utils::Gui::information(this, tr("Note editing disabled"),
+                                    tr("Note editing is currently disabled, "
+                                       "please allow it again in the "
+                                       "<i>Note-menu</i>."),
+                                    "readonly-mode");
+        }
+    }
+
+    return QMarkdownTextEdit::eventFilter(obj, event);
 }

@@ -1011,3 +1011,13 @@ void Utils::Misc::loadPrinterSettings(QPrinter *printer, QString settingsKey) {
     QDataStream is(&printSetup, QIODevice::ReadOnly);
     dataStreamRead(is, *printer);
 }
+
+/**
+ * Returns if "allowNoteEditing" is turned on
+ *
+ * @return
+ */
+bool Utils::Misc::allowNoteEditing() {
+    QSettings settings;
+    return settings.value("allowNoteEditing", true).toBool();
+}
