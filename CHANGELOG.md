@@ -4,8 +4,10 @@
 - if note editing was disabled now a notification dialog will open if you start 
   typing in the note edit (for [#900](https://github.com/pbek/QOwnNotes/issues/900))
     - in addition a button with the text `Read-only` will be viewed in the 
-      status bar if not editing is disabled
+      status bar if note editing is disabled
     - you can click this button to enable note editing again
+- double-clicking on a tag now assigns the tag to the current note
+  (for [#896](https://github.com/pbek/QOwnNotes/issues/896))
 
 ## 18.04.4
 - fixed a warning if you are un-indenting text at the start or end of the note

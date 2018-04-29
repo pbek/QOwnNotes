@@ -9999,3 +9999,16 @@ void MainWindow::on_actionJump_to_note_text_edit_triggered() {
 
     activeNoteTextEdit()->setFocus();
 }
+
+/**
+ * Double-clicking a tag assigns the tag to the current note
+ */
+void MainWindow::on_tagTreeWidget_itemDoubleClicked(
+        QTreeWidgetItem *item, int column) {
+    Q_UNUSED(column);
+    Tag tag = Tag::fetch(item->data(0, Qt::UserRole).toInt());
+
+    if (tag.isFetched()) {
+        tag.linkToNote(currentNote);
+    }
+}

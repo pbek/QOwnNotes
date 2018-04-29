@@ -514,6 +514,8 @@ private slots:
 
     void allowNoteEditing();
 
+    void on_tagTreeWidget_itemDoubleClicked(QTreeWidgetItem *item, int column);
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;
