@@ -75,7 +75,6 @@
 #include <dialogs/evernoteimportdialog.h>
 #include <widgets/logwidget.h>
 #include <dialogs/sharedialog.h>
-#include <dialogs/orphanedimagesdialog.h>
 #include <helpers/toolbarcontainer.h>
 #include <libraries/qttoolbareditor/src/toolbar_editor.hpp>
 #include <dialogs/actiondialog.h>
@@ -449,6 +448,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     _actionDialog = Q_NULLPTR;
     _todoDialog = Q_NULLPTR;
+    _orphanedImagesDialog = Q_NULLPTR;
     _settingsDialog = Q_NULLPTR;
 
     // track cursor position changes for the line number label
@@ -9172,9 +9172,9 @@ void MainWindow::on_actionImport_notes_from_Evernote_triggered() {
  * Shows a dialog to delete orphaned images
  */
 void MainWindow::on_actionDelete_orphaned_images_triggered() {
-    OrphanedImagesDialog* dialog = new OrphanedImagesDialog(this);
-    dialog->exec();
-    delete(dialog);
+    delete(_orphanedImagesDialog);
+    _orphanedImagesDialog = new OrphanedImagesDialog(this);
+    _orphanedImagesDialog->show();
 }
 
 /**

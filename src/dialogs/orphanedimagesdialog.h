@@ -26,6 +26,8 @@ private slots:
 
     void on_deleteButton_clicked();
 
+    void on_insertButton_clicked();
+
 private:
     Ui::OrphanedImagesDialog *ui;
 

@@ -6,6 +6,7 @@
 #include <QGraphicsPixmapItem>
 #include <QtWidgets/QMessageBox>
 #include <utils/gui.h>
+#include <mainwindow.h>
 #include "orphanedimagesdialog.h"
 #include "ui_orphanedimagesdialog.h"
 
@@ -152,4 +153,34 @@ bool OrphanedImagesDialog::eventFilter(QObject *obj, QEvent *event) {
     }
 
     return MasterDialog::eventFilter(obj, event);
+}
+
+void OrphanedImagesDialog::on_insertButton_clicked() {
+#ifndef INTEGRATION_TESTS
+    MainWindow *mainWindow = MainWindow::instance();
+    if (mainWindow == Q_NULLPTR) {
+        return;
+    }
+#else
+    return;
+#endif
+
+    int selectedItemsCount = ui->fileTreeWidget->selectedItems().count();
+
+    if (selectedItemsCount == 0) {
+        return;
+    }
+
+    QOwnNotesMarkdownTextEdit *textEdit = mainWindow->activeNoteTextEdit();
+
+    // insert all selected images
+    Q_FOREACH(QTreeWidgetItem *item, ui->fileTreeWidget->selectedItems()) {
+            QString filePath = getFilePath(item);
+            QFileInfo fileInfo(filePath);
+            QString mediaUrlString = "file://media/" + fileInfo.fileName();
+            QString imageLink = "![" + fileInfo.baseName() + "](" +
+                             mediaUrlString + ")\n";
+            textEdit->insertPlainText(imageLink);
+            delete item;
+    }
 }

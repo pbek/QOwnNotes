@@ -39,6 +39,7 @@
 #include <dialogs/settingsdialog.h>
 #include <QPrinter>
 #include <widgets/logwidget.h>
+#include <dialogs/orphanedimagesdialog.h>
 #include "entities/notehistory.h"
 #include "dialogs/notediffdialog.h"
 #include "services/updateservice.h"
@@ -593,6 +594,7 @@ private:
     bool _noteSubFolderDockWidgetVisible;
     ActionDialog *_actionDialog;
     TodoDialog *_todoDialog;
+    OrphanedImagesDialog *_orphanedImagesDialog;
     SettingsDialog *_settingsDialog;
     bool _noteExternallyRemovedCheckEnabled;
     QList<QAction *> _noteTextEditContextMenuActions;

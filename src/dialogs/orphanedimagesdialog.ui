@@ -88,6 +88,27 @@
         </property>
        </widget>
       </item>
+      <item row="4" column="0">
+       <widget class="QPushButton" name="insertButton">
+        <property name="toolTip">
+         <string>Add selected images to note</string>
+        </property>
+        <property name="text">
+         <string>Add to note</string>
+        </property>
+        <property name="icon">
+         <iconset theme="list-add" resource="../breeze-qownnotes.qrc">
+          <normaloff>:/icons/breeze-qownnotes/16x16/list-add.svg</normaloff>:/icons/breeze-qownnotes/16x16/list-add.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QProgressBar" name="progressBar">
+        <property name="value">
+         <number>0</number>
+        </property>
+       </widget>
+      </item>
       <item row="1" column="0">
        <widget class="QTreeWidget" name="fileTreeWidget">
         <property name="selectionMode">
@@ -104,13 +125,6 @@
           <string notr="true">1</string>
          </property>
         </column>
-       </widget>
-      </item>
-      <item row="2" column="0">
-       <widget class="QProgressBar" name="progressBar">
-        <property name="value">
-         <number>0</number>
-        </property>
        </widget>
       </item>
      </layout>
