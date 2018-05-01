@@ -845,6 +845,21 @@ QString ScriptingService::noteTextEditSelectedText() {
 }
 
 /**
+ * Selects all text in the note text edit
+ */
+void ScriptingService::noteTextEditSelectAll() {
+    MetricsService::instance()->sendVisitIfEnabled(
+            "scripting/" + QString(__func__));
+
+#ifndef INTEGRATION_TESTS
+    MainWindow *mainWindow = MainWindow::instance();
+    if (mainWindow != Q_NULLPTR) {
+        mainWindow->activeNoteTextEdit()->selectAll();
+    }
+#endif
+}
+
+/**
  * Reads the current word in the note text edit
  *
  * @param withPreviousCharacters also get more characters at the beginning

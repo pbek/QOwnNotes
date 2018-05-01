@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 18.05.0
+- there now is a new scripting command `script.noteTextEditSelectAll()` to 
+  select all text in the note text edit(for [#902](https://github.com/pbek/QOwnNotes/issues/902))
+    - you can use this together with `script.noteTextEditWrite()` to overwrite
+      the whole text of the current note
+    - for more information please take a look at the [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#select-all-text-in-the-note-text-edit)
+
 ## 18.04.5
 - if note editing was disabled now a notification dialog will open if you start 
   typing in the note edit (for [#900](https://github.com/pbek/QOwnNotes/issues/900))

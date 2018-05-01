@@ -456,6 +456,9 @@ Usage in QML
 You might want to look at the custom action ``transformTextRot13`` in
 the example `custom-actions.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/custom-actions.qml>`__.
 
+You can use this together with ``noteTextEditSelectAll`` to overwrite the whole
+text of the current note.
+
 Read the selected text in the note text edit
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -481,6 +484,29 @@ Usage in QML
 
 You might want to look at the custom action ``transformTextRot13`` in
 the example `custom-actions.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/custom-actions.qml>`__.
+
+Select all text in the note text edit
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Parameters
+^^^^^^^^^^
+
+.. code:: cpp
+
+    /**
+     * Selects all text in the note text edit
+     */
+    void ScriptingService::noteTextEditSelectAll() {
+
+Usage in QML
+^^^^^^^^^^^^
+
+.. code:: javascript
+
+    script.noteTextEditSelectAll();
+
+You can use this together with ``noteTextEditWrite`` to overwrite the whole
+text of the current note.
 
 Read the current word from the note text edit
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
