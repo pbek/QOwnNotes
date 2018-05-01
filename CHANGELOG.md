@@ -2,7 +2,7 @@
 
 ## 18.05.0
 - there now is a new scripting command `script.noteTextEditSelectAll()` to 
-  select all text in the note text edit(for [#902](https://github.com/pbek/QOwnNotes/issues/902))
+  select all text in the note text edit (for [#902](https://github.com/pbek/QOwnNotes/issues/902))
     - you can use this together with `script.noteTextEditWrite()` to overwrite
       the whole text of the current note
     - for more information please take a look at the [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#select-all-text-in-the-note-text-edit)
