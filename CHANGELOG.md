@@ -8,6 +8,8 @@
     - for more information please take a look at the [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#select-all-text-in-the-note-text-edit)
 - the dialog to delete orphaned images isn't modal any more and you can now 
   also use it to insert those images into the current note
+- added more Indonesian, Catalan and German translation (thank you zmni, MGuerra
+  and rakekniven)
 
 ## 18.04.5
 - if note editing was disabled now a notification dialog will open if you start 
