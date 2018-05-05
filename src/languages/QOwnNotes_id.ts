@@ -1028,7 +1028,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1930"/>
       <source>Manage orphaned image files</source>
-      <translation type="unfinished">Manage orphaned image files</translation>
+      <translation>Kelola berkas gambar yang tidak digunakan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1957"/>
@@ -2425,12 +2425,12 @@ Jika keranjang sampah diaktifkan pada server ownCloud Anda, Anda bisa memulihkan
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="94"/>
       <source>Add selected images to note</source>
-      <translation type="unfinished">Add selected images to note</translation>
+      <translation>Tambahkan gambar yang dipilih ke catatan</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="97"/>
       <source>Add to note</source>
-      <translation type="unfinished">Add to note</translation>
+      <translation>Tambahkan ke catatan</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="146"/>

@@ -1032,7 +1032,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1930"/>
       <source>Manage orphaned image files</source>
-      <translation type="unfinished">Manage orphaned image files</translation>
+      <translation>Elárvult kép fájlok törlése</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1957"/>
@@ -2278,12 +2278,12 @@ Ha a kuka a ownCloud kiszolgálón engedélyezett, onnan visszaállítható.</nu
     <message>
       <location filename="../mainwindow.cpp" line="2572"/>
       <source>Read-only</source>
-      <translation type="unfinished">Read-only</translation>
+      <translation>Csak olvasható</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2573"/>
       <source>Note editing is disabled, click to enable</source>
-      <translation type="unfinished">Note editing is disabled, click to enable</translation>
+      <translation>Jegyzet szerkesztése le van tiltva, kattintson az engedélyezéshez</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2592"/>
@@ -2450,12 +2450,12 @@ Ha a kuka a ownCloud kiszolgálón engedélyezett, onnan visszaállítható.</nu
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="94"/>
       <source>Add selected images to note</source>
-      <translation type="unfinished">Add selected images to note</translation>
+      <translation>Hozzáadja a kiválasztott képeket a jegyzethez</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="97"/>
       <source>Add to note</source>
-      <translation type="unfinished">Add to note</translation>
+      <translation>Hozzáadja a jegyzethez</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="146"/>

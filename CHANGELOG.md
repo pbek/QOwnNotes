@@ -8,6 +8,12 @@
     - there now is a new script `Unique note id` in the *Script repository*
       that generates a 10 character alphanumeric id for the current note and
       also allows to jump to the note by it
+- there now is a software repository for **Fedora 28**
+    - please visit the [Fedora installation page](http://www.qownnotes.org/installation#Fedora)
+      for instructions
+- added more Brazilian Portuguese, Indonesian, German, Spanish, Italian, Dutch
+  and Hungarian translation (thank you mlimacarlos, zmni, rakekniven, richarson,
+  mlocati and Fabijenna)
 
 ## 18.05.0
 - there now is a new scripting command `script.noteTextEditSelectAll()` to 

@@ -1032,7 +1032,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1930"/>
       <source>Manage orphaned image files</source>
-      <translation type="unfinished">Manage orphaned image files</translation>
+      <translation>Verwaiste Bilddateien verwalten</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1957"/>
@@ -1539,7 +1539,7 @@ Falls Sie die Papierkorb-App auf Ihrem Nextcloud/ownCloud-Server aktiviert haben
     <message>
       <location filename="../mainwindow.cpp" line="5618"/>
       <source>Image files</source>
-      <translation>Bild-Dateien</translation>
+      <translation>Bilddateien</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5807"/>
@@ -2451,12 +2451,12 @@ Falls Sie die Papierkorb-App auf Ihrem Nextcloud/ownCloud-Server aktiviert haben
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="94"/>
       <source>Add selected images to note</source>
-      <translation type="unfinished">Add selected images to note</translation>
+      <translation>Ausgewählte Bilder zur Notiz hinzufügen</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="97"/>
       <source>Add to note</source>
-      <translation type="unfinished">Add to note</translation>
+      <translation>Zur Notiz hinzufügen</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="146"/>
@@ -2629,7 +2629,7 @@ Falls Sie die Papierkorb-App auf Ihrem Nextcloud/ownCloud-Server aktiviert haben
     <message>
       <location filename="../entities/note.cpp" line="1787"/>
       <source>Could not read image file: %1</source>
-      <translation>Bild-Datei konnte nicht gelesen werden: %1</translation>
+      <translation>Bilddatei konnte nicht gelesen werden: %1</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="2273"/>
