@@ -611,6 +611,42 @@ Usage in QML
 You may want to take a look at the example
 `autocompletion.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/autocompletion.qml>`__.
 
+
+Search for notes by note text
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Parameters
+^^^^^^^^^^
+
+.. code:: cpp
+
+    /**
+     * Returns a list of note ids of all notes with a certain text in the note text
+     *
+     * Unfortunately there is no easy way to use a QList<NoteApi*> in QML, so we
+     * can only transfer the note ids
+     *
+     * @return {QList<int>} list of note ids
+     */
+    QList<int> ScriptingService::fetchNoteIdsByNoteTextPart(QString text);
+
+Usage in QML
+^^^^^^^^^^^^
+
+.. code:: javascript
+
+    var noteIds = script.fetchNoteIdsByNoteTextPart("mytext");
+
+    noteIds.forEach(function (noteId){
+        var note = script.fetchNoteById(noteId);
+
+        // do something with the note
+    });
+
+You may want to take a look at the example
+`unique-note-id.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/unique-note-id.qml>`__.
+
+
 Add a custom stylesheet
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -1345,7 +1381,7 @@ Properties
      *
      * @param title {QString} title of the dialog
      * @param label {QString} label text of the dialog
-     * @param text {QString} text in the dialog
+     * @param text {QString} text in the dialog (optional)
      * @return
      */
     QString ScriptingService::inputDialogGetText(

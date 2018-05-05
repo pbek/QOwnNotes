@@ -125,7 +125,7 @@ public:
             const QStringList &items, int current = 0, bool editable = false);
 
     Q_INVOKABLE QString inputDialogGetText(
-            const QString &title, const QString &label, const QString &text);
+            const QString &title, const QString &label, const QString &text = "");
 
     Q_INVOKABLE void setPersistentVariable(const QString &key,
                                            const QVariant &value);
@@ -147,6 +147,8 @@ public:
     Q_INVOKABLE QList<int> selectedNotesIds();
 
     Q_INVOKABLE bool writeToFile(const QString &filePath, const QString &data);
+
+    Q_INVOKABLE QList<int> fetchNoteIdsByNoteTextPart(QString text);
 
 private:
     QQmlEngine *_engine;

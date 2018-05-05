@@ -1487,6 +1487,19 @@ QList<int> ScriptingService::selectedNotesIds() {
 }
 
 /**
+ * Returns a list of note ids of all notes with a certain text in the note text
+ *
+ * Unfortunately there is no easy way to use a QList<NoteApi*> in QML, so we
+ * can only transfer the note ids
+ *
+ * @return {QList<int>} list of note ids
+ */
+QList<int> ScriptingService::fetchNoteIdsByNoteTextPart(QString text) {
+    QList<int> noteIds = Note::fetchAllIdsByNoteTextPart(text);
+    return noteIds;
+}
+
+/**
  * Opens an input dialog with a select box
  *
  * @param title {QString} title of the dialog
@@ -1520,7 +1533,7 @@ QString ScriptingService::inputDialogGetItem(
  *
  * @param title {QString} title of the dialog
  * @param label {QString} label text of the dialog
- * @param text {QString} text in the dialog
+ * @param text {QString} text in the dialog (optional)
  * @return
  */
 QString ScriptingService::inputDialogGetText(

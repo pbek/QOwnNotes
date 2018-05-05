@@ -1,5 +1,14 @@
 # QOwnNotes Changelog
 
+## 18.05.1
+- there now is a new scripting command `script.fetchNoteIdsByNoteTextPart()` to 
+  fetch the ids of all notes with a certain text in the note text
+  (for [#904](https://github.com/pbek/QOwnNotes/issues/904))
+    - for more information please take a look at the [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#search-for-notes-by-note-text)
+    - there now is a new script `Unique note id` in the *Script repository*
+      that generates a 10 character alphanumeric id for the current note and
+      also allows to jump to the note by it
+
 ## 18.05.0
 - there now is a new scripting command `script.noteTextEditSelectAll()` to 
   select all text in the note text edit (for [#902](https://github.com/pbek/QOwnNotes/issues/902))
