@@ -237,6 +237,8 @@ public:
 
     static Note fetchByUrlString(QString urlString);
 
+    static QList<int> fetchAllIdsByNoteTextPart(QString textPart);
+
 protected:
     int id;
     QString name;

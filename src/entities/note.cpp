@@ -761,6 +761,27 @@ QStringList Note::fetchNoteFileNames() {
     return list;
 }
 
+QList<int> Note::fetchAllIdsByNoteTextPart(QString textPart) {
+    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlQuery query(db);
+
+    QList<int> list;
+
+    query.prepare("SELECT id FROM note WHERE note_text LIKE :text "
+                          "ORDER BY file_last_modified DESC");
+    query.bindValue(":text", "%" + textPart + "%");
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        for (int r = 0; query.next(); r++) {
+            list.append(query.value("id").toInt());
+        }
+    }
+
+    return list;
+}
+
 bool Note::storeNewText(QString text) {
     this->noteText = text;
     this->hasDirtyData = true;
@@ -2545,8 +2566,6 @@ Note Note::fetchByUrlString(QString urlString) {
     // search for files with that name
     files = currentDir.entryList(fileSearchList,
                                  QDir::Files | QDir::NoSymLinks);
-    bool noteWasFound = false;
-
     // did we find files?
     if (files.length() > 0) {
         // take the first found file
