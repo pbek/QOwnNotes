@@ -89,7 +89,6 @@ void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(QString text) {
     }
 
     auto state = HighlighterState(HighlighterState::BrokenLink);
-    QTextCharFormat &format = _formats[state];
 
     setFormat(match.capturedStart(0), match.capturedLength(0), _formats[state]);
 }
