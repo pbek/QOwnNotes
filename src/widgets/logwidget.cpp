@@ -106,7 +106,7 @@ void LogWidget::log(LogWidget::LogType logType, QString text) {
     // ignore "libpng sRGB profile" and "QXcbConnection: XCB error: 8" warnings
     if (logType == WarningLogType &&
         (text.contains("libpng warning: iCCP: known incorrect sRGB profile") ||
-         text.contains("QXcbConnection: XCB error: 8"))) {
+         text.contains("QXcbConnection: XCB error:"))) {
         return;
     }
 
