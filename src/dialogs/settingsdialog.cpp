@@ -595,12 +595,14 @@ void SettingsDialog::storeSettings() {
                       ui->internalIconThemeCheckBox->isChecked());
 
     QStringList todoCalendarUrlList;
+    QStringList todoCalendarDisplayNameList;
     QStringList todoCalendarEnabledList;
     QStringList todoCalendarEnabledUrlList;
     for (int i = 0; i < ui->todoCalendarListWidget->count(); i++) {
         QListWidgetItem *item = ui->todoCalendarListWidget->item(i);
 
         todoCalendarUrlList.append(item->toolTip());
+        todoCalendarDisplayNameList.append(item->text());
 
         if (item->checkState() == Qt::Checked) {
             todoCalendarEnabledList.append(item->text());
@@ -610,6 +612,8 @@ void SettingsDialog::storeSettings() {
 
     // store the tasks calendar data to the settings
     settings.setValue("ownCloud/todoCalendarUrlList", todoCalendarUrlList);
+    settings.setValue("ownCloud/todoCalendarDisplayNameList",
+                      todoCalendarDisplayNameList);
     settings.setValue("ownCloud/todoCalendarEnabledList",
                       todoCalendarEnabledList);
     settings.setValue("ownCloud/todoCalendarEnabledUrlList",
@@ -964,9 +968,6 @@ void SettingsDialog::readSettings() {
     ui->ignoreNonTodoCalendarsCheckBox->setChecked(settings.value(
             "ownCloud/ignoreNonTodoCalendars", true).toBool());
 
-    // reload the calendar list
-    reloadCalendarList();
-
     ui->calDavServerUrlEdit->setText(settings.value(
             "ownCloud/todoCalendarCalDAVServerUrl").toString());
     ui->calDavUsernameEdit->setText(settings.value(
@@ -994,6 +995,11 @@ void SettingsDialog::readSettings() {
     }
     // load the tasks calendar list and set the checked state
     refreshTodoCalendarList(calendarDataList, true);
+
+    // reload the calendar list if it was empty
+    if (todoCalendarUrlListCount == 0) {
+        reloadCalendarList();
+    }
 
     // loads the custom note file extensions
     QListIterator<QString> itr(Note::customNoteFileExtensionList());

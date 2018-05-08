@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 18.05.2
+- the todo calendar list in the *Settings dialog* will now only be reloaded 
+  if it was empty or was reloaded manually to prevent a clearing of the list 
+  when the server is not reachable
+    - the display names of the CalDav calendars will now be stored too
+  
 ## 18.05.1
 - there now is a new scripting command `script.fetchNoteIdsByNoteTextPart()` to 
   fetch the ids of all notes with a certain text in the note text
