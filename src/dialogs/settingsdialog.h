@@ -14,6 +14,7 @@
 #include <services/owncloudservice.h>
 #include <QCheckBox>
 #include <QtCore/QSettings>
+#include <libraries/qkeysequencewidget/qkeysequencewidget/src/qkeysequencewidget.h>
 #include "masterdialog.h"
 
 namespace Ui {
@@ -235,6 +236,8 @@ private slots:
 
     void on_localTrashClearCheckBox_toggled(bool checked);
 
+    void keySequenceEvent(QString objectName);
+
 private:
 
     Ui::SettingsDialog *ui;
@@ -336,6 +339,8 @@ private:
     void loadInterfaceStyleComboBox() const;
 
     void initSearchEngineComboBox() const;
+
+    QKeySequenceWidget *findKeySequenceWidget(QString objectName);
 };
 
 #endif // SETTINGSDIALOG_H

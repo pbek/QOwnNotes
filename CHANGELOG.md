@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 18.05.3
+- you will now get a notification if you assign a shortcut that is already 
+  used in the *Shortcuts settings* (for [#912](https://github.com/pbek/QOwnNotes/issues/912))
+
 ## 18.05.2
 - the todo calendar list in the *Settings dialog* will now only be reloaded 
   if it was empty or was reloaded manually to prevent a clearing of the list 

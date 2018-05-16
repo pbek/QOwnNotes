@@ -1239,7 +1239,7 @@ void SettingsDialog::loadShortcutSettings() {
                     QTreeWidgetItem *actionItem = new QTreeWidgetItem();
                     actionItem->setText(0, action->text().remove("&"));
                     actionItem->setToolTip(0, action->objectName());
-                    actionItem->setData(Qt::UserRole, 1, action->objectName());
+                    actionItem->setData(1, Qt::UserRole, action->objectName());
                     menuItem->addChild(actionItem);
 
                     // create the key widget
@@ -1259,6 +1259,14 @@ void SettingsDialog::loadShortcutSettings() {
                     keyWidget->setDefaultKeySequence(action->data().toString());
                     keyWidget->setKeySequence(action->shortcut());
 
+                    QObject::connect(keyWidget,
+                                     SIGNAL(keySequenceAccepted(QKeySequence)),
+                                     _keyWidgetSignalMapper, SLOT(map()));
+
+                    // add a parameter to the signal mapper
+                    _keyWidgetSignalMapper->setMapping(
+                            keyWidget, action->objectName());
+
                     ui->shortcutTreeWidget->setItemWidget(
                             actionItem, 1, keyWidget);
 
@@ -1273,7 +1281,89 @@ void SettingsDialog::loadShortcutSettings() {
             }
     }
 
+    QObject::connect(_keyWidgetSignalMapper,
+                     SIGNAL(mapped(QString)),
+                     this,
+                     SLOT(keySequenceEvent(QString)));
+
     ui->shortcutTreeWidget->resizeColumnToContents(0);
+}
+
+/**
+ * Show an information if a shortcut was already used elsewhere
+ *
+ * @param objectName
+ */
+void SettingsDialog::keySequenceEvent(QString objectName) {
+    QKeySequenceWidget *keySequenceWidget = findKeySequenceWidget(objectName);
+
+    if (keySequenceWidget == Q_NULLPTR) {
+        return;
+    }
+
+    QKeySequence eventKeySequence = keySequenceWidget->keySequence();
+
+    // loop all top level tree widget items (menus)
+    for (int i = 0; i < ui->shortcutTreeWidget->topLevelItemCount(); i++) {
+        QTreeWidgetItem *menuItem = ui->shortcutTreeWidget->topLevelItem(i);
+
+        // loop all tree widget items of the menu (action shortcuts)
+        for (int j = 0; j < menuItem->childCount(); j++) {
+            QTreeWidgetItem *shortcutItem = menuItem->child(j);
+
+            if (shortcutItem->data(1, Qt::UserRole).toString() == objectName) {
+                continue;
+            }
+
+            auto keyWidget = static_cast<QKeySequenceWidget *>(
+                    ui->shortcutTreeWidget->itemWidget(shortcutItem, 1));
+
+            if (keyWidget == Q_NULLPTR) {
+                continue;
+            }
+
+            QKeySequence keySequence = keyWidget->keySequence();
+            QKeySequence defaultKeySequence = keyWidget->defaultKeySequence();
+
+            // show an information if the shortcut was already used elsewhere
+            if (keySequence == eventKeySequence) {
+                Utils::Gui::information(
+                        this, tr("Shortcut already assigned"),
+                        tr("The shortcut <strong>%1</strong> is already "
+                           "assigned to <strong>%2</strong>!").arg(
+                                   eventKeySequence.toString(),
+                                   shortcutItem->text(0)),
+                        "settings-shortcut-already-assigned");
+
+                return;
+            }
+        }
+    }
+}
+
+/**
+ * Finds a QKeySequenceWidget in the shortcutTreeWidget by the objectName
+ * of the assigned menu action
+ */
+QKeySequenceWidget *SettingsDialog::findKeySequenceWidget(QString objectName) {
+    // loop all top level tree widget items (menus)
+    for (int i = 0; i < ui->shortcutTreeWidget->topLevelItemCount(); i++) {
+        QTreeWidgetItem *menuItem = ui->shortcutTreeWidget->topLevelItem(i);
+
+        // loop all tree widget items of the menu (action shortcuts)
+        for (int j = 0; j < menuItem->childCount(); j++) {
+            QTreeWidgetItem *shortcutItem = menuItem->child(j);
+
+            QString name = shortcutItem->data(1, Qt::UserRole).toString();
+
+            if (name == objectName) {
+                return static_cast <QKeySequenceWidget *>(
+                        ui->shortcutTreeWidget->itemWidget(shortcutItem, 1));
+            }
+        }
+    }
+
+    return Q_NULLPTR;
 }
 
 /**
