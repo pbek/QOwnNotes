@@ -2,7 +2,9 @@
 
 ## 18.05.3
 - you will now get a notification if you assign a shortcut that is already 
-  used in the *Shortcuts settings* (for [#912](https://github.com/pbek/QOwnNotes/issues/912))
+  used by an other menu item in the *Shortcuts settings*
+  (for [#912](https://github.com/pbek/QOwnNotes/issues/912))
+- added more Catalan and German translation (thank you MGuerra and rakekniven)
 
 ## 18.05.2
 - the todo calendar list in the *Settings dialog* will now only be reloaded 
