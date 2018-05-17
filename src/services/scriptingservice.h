@@ -114,6 +114,7 @@ public:
     QString callEncryptionHook(QString text, QString password,
                                bool decrypt = false);
     void callHandleNoteOpenedHook(Note *note);
+    void callHandleNoteDoubleClickedHook(Note *note);
     QList<QVariant> getSettingsVariables(int scriptId);
     Q_INVOKABLE QString toNativeDirSeparators(QString path);
     Q_INVOKABLE QString fromNativeDirSeparators(QString path);

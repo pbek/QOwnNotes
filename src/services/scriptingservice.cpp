@@ -579,7 +579,7 @@ QString ScriptingService::callHandleNewNoteHeadlineHookForObject(
 }
 
 /**
- * Calls the handleNoteOpenedHook function for all script components
+ * Calls the noteOpenedHook function for all script components
  */
 void ScriptingService::callHandleNoteOpenedHook(Note *note) {
     QMapIterator<int, ScriptComponent> i(_scriptComponents);
@@ -721,6 +721,27 @@ QString ScriptingService::callEncryptionHook(QString text, QString password,
     return "";
 }
 
+/**
+ * Calls the noteDoubleClickedHook function for all script components
+ */
+void ScriptingService::callHandleNoteDoubleClickedHook(Note *note) {
+    QMapIterator<int, ScriptComponent> i(_scriptComponents);
+
+    while (i.hasNext()) {
+        i.next();
+        ScriptComponent scriptComponent = i.value();
+        QObject *object = scriptComponent.object;
+
+        if (methodExistsForObject(object, "noteDoubleClickedHook(QVariant)")) {
+            NoteApi *noteApi = new NoteApi();
+            noteApi->fetch(note->getId());
+
+            QMetaObject::invokeMethod(object, "noteDoubleClickedHook",
+                                      Q_ARG(QVariant, QVariant::fromValue(
+                                              static_cast<QObject*>(noteApi))));
+        }
+    }
+}
 /**
  * QML wrapper to start a detached process
  *

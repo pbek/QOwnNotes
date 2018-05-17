@@ -10012,3 +10012,15 @@ void MainWindow::on_tagTreeWidget_itemDoubleClicked(
         tag.linkToNote(currentNote);
     }
 }
+
+/**
+ * Double-clicking a note calls a hook
+ */
+void MainWindow::on_noteTreeWidget_itemDoubleClicked(QTreeWidgetItem *item,
+                                                     int column) {
+    Q_UNUSED(item);
+    Q_UNUSED(column);
+
+    // call a script hook that a new note was double clicked
+    ScriptingService::instance()->callHandleNoteDoubleClickedHook(&currentNote);
+}

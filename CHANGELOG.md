@@ -6,6 +6,15 @@
   (for [#912](https://github.com/pbek/QOwnNotes/issues/912))
     - the duplicate dialog if assigning a conflicting shortcut if no shortcut
       was defined before was fixed
+- added a new scripting hook `noteDoubleClickedHook(note)` that is called every
+  time a note is double clicked in the note list (for [#913](https://github.com/pbek/QOwnNotes/issues/913))
+    - take a look at the
+      [noteDoubleClickedHook documentation](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/README.md#noteDoubleClickedHook)
+      for more information
+    - there is an example script at
+      [external-note-open.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/external-note-open.qml)
+    - you will also find a script `External note open` in the script repository
+      that uses the new hook
 
 ## 18.05.3
 - you will now get a notification if you assign a shortcut that is already 

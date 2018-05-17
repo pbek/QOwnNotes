@@ -1481,6 +1481,21 @@ noteOpenedHook
 You may want to take a look at the example
 `on-note-opened.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/on-note-opened.qml>`__.
 
+noteDoubleClickedHook
+~~~~~~~~~~~~~~~~~~~~~
+
+.. code:: javascript
+
+    /**
+     * This function is called after a note was double clicked
+     *
+     * @param {NoteApi} note - the note object that was clicked
+     */
+    function noteDoubleClickedHook(note);
+
+You may want to take a look at the example
+`external-note-open.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/external-note-open.qml>`__.
+
 insertMediaHook
 ~~~~~~~~~~~~~~~
 
