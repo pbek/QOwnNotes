@@ -15,6 +15,8 @@
       [external-note-open.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/external-note-open.qml)
     - you will also find a script `External note open` in the script repository
       that uses the new hook
+- added more Brazilian Portuguese, Italian, Dutch and Hungarian translation
+  (thank you mlimacarlos, mlocati and Fabijenna)
 
 ## 18.05.3
 - you will now get a notification if you assign a shortcut that is already 
