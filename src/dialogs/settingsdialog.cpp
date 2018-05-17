@@ -1303,6 +1303,11 @@ void SettingsDialog::keySequenceEvent(QString objectName) {
 
     QKeySequence eventKeySequence = keySequenceWidget->keySequence();
 
+    // skip events with empty key sequence
+    if (eventKeySequence.isEmpty()) {
+        return;
+    }
+
     // loop all top level tree widget items (menus)
     for (int i = 0; i < ui->shortcutTreeWidget->topLevelItemCount(); i++) {
         QTreeWidgetItem *menuItem = ui->shortcutTreeWidget->topLevelItem(i);
@@ -1311,6 +1316,7 @@ void SettingsDialog::keySequenceEvent(QString objectName) {
         for (int j = 0; j < menuItem->childCount(); j++) {
             QTreeWidgetItem *shortcutItem = menuItem->child(j);
 
+            // skip the item that threw the event
             if (shortcutItem->data(1, Qt::UserRole).toString() == objectName) {
                 continue;
             }
@@ -1327,13 +1333,19 @@ void SettingsDialog::keySequenceEvent(QString objectName) {
 
             // show an information if the shortcut was already used elsewhere
             if (keySequence == eventKeySequence) {
-                Utils::Gui::information(
+                if (Utils::Gui::information(
                         this, tr("Shortcut already assigned"),
                         tr("The shortcut <strong>%1</strong> is already "
-                           "assigned to <strong>%2</strong>!").arg(
-                                   eventKeySequence.toString(),
-                                   shortcutItem->text(0)),
-                        "settings-shortcut-already-assigned");
+                           "assigned to <strong>%2</strong>! Do you want to "
+                           "jump to the shortcut?").arg(
+                                eventKeySequence.toString(),
+                                shortcutItem->text(0)),
+                        "settings-shortcut-already-assigned",
+                        QMessageBox::Yes | QMessageBox::Cancel,
+                        QMessageBox::Yes) ==
+                    QMessageBox::Yes) {
+                    ui->shortcutTreeWidget->scrollToItem(shortcutItem);
+                }
 
                 return;
             }
