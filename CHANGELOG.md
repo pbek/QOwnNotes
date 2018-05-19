@@ -4,6 +4,8 @@
 - a conflicting keyboard shortcut will now be highlighted if you jump to it 
   while assigning a shortcut in the *Shortcuts settings*
   (for [#912](https://github.com/pbek/QOwnNotes/issues/912))
+- all export methods in the *Export menu* and the note text-edit context menu
+  will now open the folder of the exported file after exporting
 
 ## 18.05.4
 - you are now able to jump to the conflicting keyboard shortcut if you assign a

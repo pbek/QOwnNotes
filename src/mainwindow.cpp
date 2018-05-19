@@ -4514,6 +4514,7 @@ void MainWindow::exportNoteAsPDF(QPlainTextEdit *textEdit) {
 
     if (prepareExportNoteAsPDFPrinter(printer)) {
         textEdit->document()->print(printer);
+        Utils::Misc::openFolderSelect(printer->outputFileName());
     }
 }
 
@@ -4526,6 +4527,7 @@ void MainWindow::exportNoteAsPDF(QTextEdit *textEdit) {
 
     if (prepareExportNoteAsPDFPrinter(printer)) {
         textEdit->document()->print(printer);
+        Utils::Misc::openFolderSelect(printer->outputFileName());
     }
 }
 
@@ -5914,6 +5916,7 @@ void MainWindow::on_action_Export_note_as_markdown_triggered() {
             out << ui->noteTextEdit->toPlainText();
             file.flush();
             file.close();
+            Utils::Misc::openFolderSelect(fileName);
         }
     }
 }
@@ -8257,6 +8260,7 @@ void MainWindow::on_actionExport_preview_HTML_triggered() {
                     true, true);
             file.flush();
             file.close();
+            Utils::Misc::openFolderSelect(fileName);
         }
     }
 }
