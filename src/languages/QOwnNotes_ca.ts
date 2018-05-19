@@ -4615,7 +4615,7 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1337"/>
       <source>Shortcut already assigned</source>
-      <translation type="unfinished">Shortcut already assigned</translation>
+      <translation>Drecera ja assignada</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1745"/>
@@ -4730,7 +4730,7 @@ Missatge de l'error de connexió: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1338"/>
       <source>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</source>
-      <translation type="unfinished">The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</translation>
+      <translation>La drecera &lt;strong&gt;%1&lt;/strong&gt; ja està assignada a &lt;strong&gt;%2&lt;/strong&gt;. Voleu anar-hi?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2693"/>

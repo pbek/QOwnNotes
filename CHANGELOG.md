@@ -6,6 +6,9 @@
   (for [#912](https://github.com/pbek/QOwnNotes/issues/912))
 - all export methods in the *Export menu* and the note text-edit context menu
   will now open the folder of the exported file after exporting
+- added more Brazilian Portuguese, Italian, Catalan, Spanish and German
+  translation (thank you mlimacarlos, mlocati, MGuerra, richarson and 
+  rakekniven)
 
 ## 18.05.4
 - you are now able to jump to the conflicting keyboard shortcut if you assign a

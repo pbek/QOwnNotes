@@ -826,7 +826,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1282"/>
       <source>Show shortcuts</source>
-      <translation>Tastaturkürzel anzeigen</translation>
+      <translation>Tastaturbefehle anzeigen</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1291"/>
@@ -3354,7 +3354,7 @@ Möchten Sie es trotzdem installieren?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2537"/>
       <source>Main window shortcuts</source>
-      <translation>Hauptfenster-Tastaturkürzel</translation>
+      <translation>Hauptfenster-Tastaturbefehle</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3194"/>
@@ -3876,7 +3876,7 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3304"/>
       <source>The shortcut to create a new note asks for a headline</source>
-      <translation>Die Verknüpfung zum Erstellen einer neuen Notiz fragt nach einer Überschrift</translation>
+      <translation>Der Tastaturbefehl zum Erstellen einer neuen Notiz fragt nach einer Überschrift</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3352"/>
@@ -4616,7 +4616,7 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1337"/>
       <source>Shortcut already assigned</source>
-      <translation type="unfinished">Shortcut already assigned</translation>
+      <translation>Tastaturbefehl bereits in Verwendung</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1745"/>
@@ -4731,7 +4731,7 @@ Fehlermeldung: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1338"/>
       <source>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</source>
-      <translation type="unfinished">The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</translation>
+      <translation>Der Tastaturbefehl &lt;strong&gt;%1&lt;/strong&gt; wird bereits für &lt;strong&gt;%2&lt;/strong&gt; verwendet! Möchten Sie zum Tastaturbefehl wechseln?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2693"/>
