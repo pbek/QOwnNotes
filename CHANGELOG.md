@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 18.05.6
+- fixed a Segmentation fault when opening the settings dialog from the welcome dialog
+  (for [#912](https://github.com/pbek/QOwnNotes/issues/912))
+
 ## 18.05.5
 - a conflicting keyboard shortcut will now be highlighted if you jump to it 
   while assigning a shortcut in the *Shortcuts settings*

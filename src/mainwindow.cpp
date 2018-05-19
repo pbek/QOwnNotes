@@ -134,6 +134,7 @@ MainWindow::MainWindow(QWidget *parent) :
     _noteSubFolderDockWidgetVisible = true;
     _noteExternallyRemovedCheckEnabled = true;
     _readOnlyButton = new QPushButton(this);
+    _settingsDialog = Q_NULLPTR;
 
     this->setWindowTitle(
             "QOwnNotes - version " + QString(VERSION) +
@@ -449,7 +450,6 @@ MainWindow::MainWindow(QWidget *parent) :
     _actionDialog = Q_NULLPTR;
     _todoDialog = Q_NULLPTR;
     _orphanedImagesDialog = Q_NULLPTR;
-    _settingsDialog = Q_NULLPTR;
 
     // track cursor position changes for the line number label
     QObject::connect(ui->noteTextEdit,
