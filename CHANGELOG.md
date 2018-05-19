@@ -2,7 +2,7 @@
 
 ## 18.05.6
 - fixed a Segmentation fault when opening the settings dialog from the welcome dialog
-  (for [#912](https://github.com/pbek/QOwnNotes/issues/912))
+  (for [#914](https://github.com/pbek/QOwnNotes/issues/914))
 
 ## 18.05.5
 - a conflicting keyboard shortcut will now be highlighted if you jump to it 
