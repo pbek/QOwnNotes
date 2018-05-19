@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 18.05.5
+- a conflicting keyboard shortcut will now be highlighted if you jump to it 
+  while assigning a shortcut in the *Shortcuts settings*
+  (for [#912](https://github.com/pbek/QOwnNotes/issues/912))
+
 ## 18.05.4
 - you are now able to jump to the conflicting keyboard shortcut if you assign a
   shortcut that is already used by an other menu item in the *Shortcuts settings*

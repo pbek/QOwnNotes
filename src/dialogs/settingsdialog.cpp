@@ -1345,6 +1345,8 @@ void SettingsDialog::keySequenceEvent(QString objectName) {
                         QMessageBox::Yes) ==
                     QMessageBox::Yes) {
                     ui->shortcutTreeWidget->scrollToItem(shortcutItem);
+                    ui->shortcutTreeWidget->clearSelection();
+                    shortcutItem->setSelected(true);
                 }
 
                 return;
