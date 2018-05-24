@@ -6,6 +6,14 @@
   (for [#918](https://github.com/pbek/QOwnNotes/issues/918))
     - the QOwnNotes webpage <http://www.qownnotes.org> will now also be 
       automatically redirected to <https://www.qownnotes.org>
+- it now will not be attempted to store a new note text if the note file is read-only
+  (for [#916](https://github.com/pbek/QOwnNotes/issues/916))
+    - this was especially a problem for the `noteTaggingHook` scripting 
+      method, because the note text is modified there most of the time
+        - but the user interface still might think that a tag was added to or
+          removed from a note, because the `noteTaggingHook` scripting method 
+          might not necessarily modify the note text, but use for example an 
+          external database
 
 ## 18.05.6
 - fixed a Segmentation fault when opening the settings dialog from the welcome dialog

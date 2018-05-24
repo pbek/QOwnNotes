@@ -783,6 +783,10 @@ QList<int> Note::fetchAllIdsByNoteTextPart(QString textPart) {
 }
 
 bool Note::storeNewText(QString text) {
+    if (!this->fileWriteable()) {
+        return false;
+    }
+
     this->noteText = text;
     this->hasDirtyData = true;
 

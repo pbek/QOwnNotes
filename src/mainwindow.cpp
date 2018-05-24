@@ -7006,7 +7006,10 @@ void MainWindow::handleScriptingNoteTagging(Note note, QString tagName,
         return;
     }
 
-    note.storeNewText(noteText);
+    // return if note could not be stored
+    if (!note.storeNewText(noteText)) {
+        return;
+    }
 
     // do some stuff to get the UI updated
     if (triggerPostMethods) {
