@@ -10,6 +10,9 @@
 #include "evernoteimportdialog.h"
 #include "ui_evernoteimportdialog.h"
 #include "filedialog.h"
+#include <QRegularExpression>
+#include <QRegularExpressionMatch>
+#include <QRegularExpressionMatchIterator>
 
 EvernoteImportDialog::EvernoteImportDialog(QWidget *parent) :
         MasterDialog(parent),

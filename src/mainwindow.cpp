@@ -86,6 +86,9 @@
 #include <dialogs/scriptrepositorydialog.h>
 #include <entities/trashitem.h>
 #include <dialogs/localtrashdialog.h>
+#include <QRegularExpression>
+#include <QRegularExpressionMatch>
+#include <QRegularExpressionMatchIterator>
 
 MainWindow::MainWindow(QWidget *parent) :
         QMainWindow(parent),

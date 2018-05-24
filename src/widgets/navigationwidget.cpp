@@ -15,6 +15,7 @@
 #include <QDebug>
 #include <libraries/qmarkdowntextedit/markdownhighlighter.h>
 #include "navigationwidget.h"
+#include <QRegularExpression>
 
 
 NavigationWidget::NavigationWidget(QWidget *parent)

@@ -15,6 +15,7 @@
 
 #include <QDebug>
 #include <QRegularExpression>
+#include <QRegularExpressionMatch>
 #include <entities/note.h>
 #include "qownnotesmarkdownhighlighter.h"
 

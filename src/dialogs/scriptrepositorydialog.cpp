@@ -15,6 +15,8 @@
 #include <utils/gui.h>
 #include "scriptrepositorydialog.h"
 #include "ui_scriptrepositorydialog.h"
+#include <QRegularExpression>
+#include <QRegularExpressionMatch>
 
 ScriptRepositoryDialog::ScriptRepositoryDialog(QWidget *parent,
                                                bool checkForUpdates) :

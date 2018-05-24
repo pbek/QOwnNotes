@@ -17,6 +17,7 @@
 #include <QDir>
 #include <QUrl>
 #include <QRegularExpression>
+#include <QRegularExpressionMatch>
 #include <QDebug>
 #include <QTime>
 #include <QCoreApplication>

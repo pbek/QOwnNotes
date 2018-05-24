@@ -7,6 +7,8 @@
 #include <QDir>
 #include <QSqlError>
 #include <QRegularExpression>
+#include <QRegularExpressionMatch>
+#include <QRegularExpressionMatchIterator>
 #include <QUrl>
 #include <QCryptographicHash>
 #include "libraries/simplecrypt/simplecrypt.h"

@@ -36,6 +36,8 @@
 #include <widgets/scriptsettingwidget.h>
 #include <QStyleFactory>
 #include <QButtonGroup>
+#include <QRegularExpression>
+#include <QRegularExpressionMatch>
 
 SettingsDialog::SettingsDialog(int page, QWidget *parent) :
         MasterDialog(parent), ui(new Ui::SettingsDialog) {

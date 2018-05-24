@@ -10,6 +10,8 @@
 #include <QSettings>
 #include "entities/note.h"
 #include "helpers/htmlentities.h"
+#include <QRegularExpression>
+#include <QRegularExpressionMatch>
 
 LinkDialog::LinkDialog(QString dialogTitle, QWidget *parent) :
         MasterDialog(parent),

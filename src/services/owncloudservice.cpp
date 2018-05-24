@@ -22,6 +22,8 @@
 #include "libraries/versionnumber/versionnumber.h"
 #include "entities/calendaritem.h"
 #include "cryptoservice.h"
+#include <QRegularExpression>
+#include <QRegularExpressionMatch>
 
 const QString OwnCloudService::rootPath =
         "/index.php/apps/qownnotesapi/api/v1/";
