@@ -6,6 +6,7 @@
 #include <QDebug>
 #include <QSettings>
 #include <QTimer>
+#include <QButtonGroup>
 
 NoteDiffDialog::NoteDiffDialog(QWidget *parent, QString html) :
         MasterDialog(parent),

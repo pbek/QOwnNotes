@@ -14,6 +14,7 @@
           removed from a note, because the `noteTaggingHook` scripting method 
           might not necessarily modify the note text, but use for example an 
           external database
+- did some Qt 5.11 build fixing
 
 ## 18.05.6
 - fixed a Segmentation fault when opening the settings dialog from the welcome dialog
