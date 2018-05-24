@@ -14,6 +14,9 @@
           removed from a note, because the `noteTaggingHook` scripting method 
           might not necessarily modify the note text, but use for example an 
           external database
+- when pasting HTML code with <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>V</kbd>
+  the escaped characters `&gt;`,`&lt;` and `&amp;` will now be unescaped to 
+  `>`, `<` and `&` (for [#922](https://github.com/pbek/QOwnNotes/issues/922))
 - did some Qt 5.11 build fixing
 
 ## 18.05.6

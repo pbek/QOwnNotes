@@ -1021,3 +1021,21 @@ bool Utils::Misc::isNoteEditingAllowed() {
     QSettings settings;
     return settings.value("allowNoteEditing", true).toBool();
 }
+
+/**
+ * Unescapes some html special characters
+ *
+ * @param html
+ * @return
+ */
+QString Utils::Misc::unescapeHtml(QString html) {
+    html.replace("&lt;","<");
+    html.replace("&gt;",">");
+    html.replace("&amp;","&");
+    return html;
+
+//    QTextEdit textEdit;
+//    textEdit.setHtml(html);
+//    QString ret = textEdit.toPlainText();
+//    return ret;
+}

@@ -6287,6 +6287,9 @@ void MainWindow::insertHtml(QString html) {
     // remove all html tags
     html.remove(QRegularExpression("<.+?>"));
 
+    // unescape some html special characters
+    html = Utils::Misc::unescapeHtml(html);
+
     QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
     QTextCursor c = textEdit->textCursor();
 

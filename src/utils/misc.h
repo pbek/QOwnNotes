@@ -78,6 +78,7 @@ namespace Utils {
         void storePrinterSettings(QPrinter *printer, QString settingsKey);
         void loadPrinterSettings(QPrinter *printer, QString settingsKey);
         bool isNoteEditingAllowed();
+        QString unescapeHtml(QString html);
     }  // namespace Misc
 }  // namespace Utils
 
