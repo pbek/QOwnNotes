@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 18.05.7
+- despite users having problems in the past with fetching the update request 
+  via SSL are we trying to use https for the update request again
+  (for [#918](https://github.com/pbek/QOwnNotes/issues/918))
+    - the QOwnNotes webpage <http://www.qownnotes.org> will now also be 
+      automatically redirected to <https://www.qownnotes.org>
+
 ## 18.05.6
 - fixed a Segmentation fault when opening the settings dialog from the welcome dialog
   (for [#914](https://github.com/pbek/QOwnNotes/issues/914))

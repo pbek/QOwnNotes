@@ -42,9 +42,9 @@ void UpdateService::checkForUpdates(MainWindow *mainWindow,
     isDebug = true;
 #endif
 
-    // there are troubles with https by default on different platforms,
-    // so we are using http everywhere for now
-    QUrl url("http://www.qownnotes.org/api/v1/last_release/QOwnNotes/" +
+    // there were troubles with https by default on different platforms,
+    // so we were using http until now
+    QUrl url("https://www.qownnotes.org/api/v1/last_release/QOwnNotes/" +
              QString(PLATFORM) + ".json");
 
     QUrlQuery q;
@@ -52,7 +52,7 @@ void UpdateService::checkForUpdates(MainWindow *mainWindow,
 
     // check if we want to fake the version number to trigger an update
     if (settings.value("Debug/fakeOldVersionNumber").toBool()) {
-        version = "16.10.9";
+        version = "17.5.0";
         isDebug = true;
     }
 
