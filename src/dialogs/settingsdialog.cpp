@@ -35,6 +35,7 @@
 #include <QProcess>
 #include <widgets/scriptsettingwidget.h>
 #include <QStyleFactory>
+#include <QButtonGroup>
 
 SettingsDialog::SettingsDialog(int page, QWidget *parent) :
         MasterDialog(parent), ui(new Ui::SettingsDialog) {
