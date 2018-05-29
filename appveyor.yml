@@ -4,7 +4,6 @@
 # Qt-versions: https://www.appveyor.com/docs/build-environment/#qt
 # validator: https://ci.appveyor.com/tools/validate-yaml
 
-os: unstable
 skip_tags: true
 
 environment:
