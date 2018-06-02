@@ -1408,7 +1408,7 @@ void SettingsDialog::storeShortcutSettings() {
             QKeySequence keySequence = keyWidget->keySequence();
             QKeySequence defaultKeySequence = keyWidget->defaultKeySequence();
             QString actionObjectName =
-                    shortcutItem->data(Qt::UserRole, 1).toString();
+                    shortcutItem->data(1, Qt::UserRole).toString();
 
             QString settingsKey = "Shortcuts/MainWindow-" + actionObjectName;
 
