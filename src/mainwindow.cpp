@@ -3102,11 +3102,6 @@ void MainWindow::setCurrentNote(Note note,
     QString name = note.getName();
     updateWindowTitle();
 
-    // set the note text edit to readonly if the note does not exist or the
-    // note file is not writable
-    setNoteTextEditReadOnly(!(note.exists() && note.fileWriteable() &&
-            Utils::Misc::isNoteEditingAllowed()));
-
     // find and set the current item
     if (updateSelectedNote) {
         QList<QTreeWidgetItem *> items = ui->noteTreeWidget->findItems(
@@ -3133,6 +3128,7 @@ void MainWindow::setCurrentNote(Note note,
 
     updateEncryptNoteButtons();
     reloadCurrentNoteTags();
+    updateNoteTextEditReadOnly();
 
     ScriptingService::instance()->onCurrentNoteChanged(&currentNote);
 
@@ -3171,6 +3167,20 @@ void MainWindow::setCurrentNote(Note note,
     }
 
     noteEditCursorPositionChanged();
+}
+
+/**
+ * Sets the note text edit to readonly if the note does not exist or the
+ * note file is not writable or the note is encrypted
+ */
+void MainWindow::updateNoteTextEditReadOnly() {
+    setNoteTextEditReadOnly(
+            !(currentNote.exists() && currentNote.fileWriteable() &&
+              Utils::Misc::isNoteEditingAllowed()));
+
+    if (ui->noteTextEdit->isVisible() && currentNote.hasEncryptedNoteText()) {
+        ui->noteTextEdit->setReadOnly(true);
+    }
 }
 
 /**
@@ -5783,6 +5793,7 @@ void MainWindow::on_action_Encrypt_note_triggered()
     // encrypt the note
     QString noteText = currentNote.encryptNoteText();
     ui->noteTextEdit->setPlainText(noteText);
+    updateNoteTextEditReadOnly();
 }
 
 /**
@@ -5824,6 +5835,7 @@ void MainWindow::on_actionDecrypt_note_triggered() {
         ui->noteTextEdit->setText(currentNote.getDecryptedNoteText());
         ui->noteTextEdit->show();
         ui->noteTextEdit->setFocus();
+        updateNoteTextEditReadOnly();
     }
 }
 
@@ -5848,6 +5860,7 @@ void MainWindow::on_actionEdit_encrypted_note_triggered() {
         ui->encryptedNoteTextEdit->show();
         ui->encryptedNoteTextEdit->setFocus();
         _noteViewNeedsUpdate = true;
+        updateNoteTextEditReadOnly();
     }
 }
 
@@ -9947,7 +9960,7 @@ void MainWindow::on_actionAllow_note_editing_triggered(bool checked) {
     QSettings settings;
     settings.setValue("allowNoteEditing", checked);
 
-    setNoteTextEditReadOnly(!checked);
+    updateNoteTextEditReadOnly();
     setMenuEnabled(ui->menuEditNote, checked);
     setMenuEnabled(ui->menuInsert, checked);
     setMenuEnabled(ui->menuFormat, checked);

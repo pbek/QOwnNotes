@@ -896,4 +896,6 @@ private:
 
     void noteTextEditCustomContextMenuRequested(
             QOwnNotesMarkdownTextEdit *noteTextEdit, const QPoint &pos);
+
+    void updateNoteTextEditReadOnly();
 };

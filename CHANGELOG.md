@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 18.06.0
+- encrypted notes are now read-only in the editor unless you are using
+  *Edit encrypted note* or you are decrypting it (for [#815](https://github.com/pbek/QOwnNotes/issues/815))
 - fixed storing of keyboard shortcuts in the *Shortcuts settings*
   (for [#912](https://github.com/pbek/QOwnNotes/issues/912))
 
