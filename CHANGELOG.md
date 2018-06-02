@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 18.06.0
+- fixed storing of keyboard shortcuts in the *Shortcuts settings*
+  (for [#912](https://github.com/pbek/QOwnNotes/issues/912))
+
 ## 18.05.7
 - despite users having problems in the past with fetching the update request 
   via SSL are we trying to use https for the update request again
