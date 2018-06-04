@@ -1,0 +1,37 @@
+{
+	"app-id": "org.qownnotes.QOwnNotes",
+	"runtime": "org.kde.Platform",
+	"runtime-version": "5.10",
+	"sdk": "org.kde.Sdk",
+	"command": "QOwnNotes",
+	"rename-desktop-file": "QOwnNotes.desktop",
+	"rename-icon": "QOwnNotes",
+	"rename-appdata-file": "qownnotes.appdata.xml",
+	"finish-args": [
+		"--socket=x11",
+		"--share=network",
+		"--device=dri",
+		"--filesystem=home"
+	],
+	"modules": [
+		{
+			"name": "QOwnNotes",
+			"buildsystem": "simple",
+			"subdir": "src",
+			"build-commands": [
+				"echo #define RELEASE \"Flatpak\" > release.h",
+				"qmake PREFIX=/app",
+				"make",
+				"make install"
+			],
+			"sources": [
+				{
+					"type": "git",
+					"url": "https://github.com/pbek/QOwnNotes",
+					"tag": "linux-b3610-135120",
+					"commit": "0db9717c1f1ae4333f20b4a09b15c309997138a8"
+				}
+			]
+		}
+	]
+}
