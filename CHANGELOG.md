@@ -4,6 +4,12 @@
 - when the application gets restarted from the *Settings dialog* a possible
   `--clear-settings` parameter will now not be appended as parameter, so the 
   settings will not get removed a second time after the restart
+- added a new scripting hook `handleNoteNameHook(note)` that is called when the
+  note name is determined for a note
+  (for [#929](https://github.com/pbek/QOwnNotes/issues/929))
+    - take a look at the
+      [handleNoteNameHook documentation](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/README.md#handlenotenamehook)
+      for more information
 
 ## 18.06.0
 - encrypted notes are now read-only in the editor unless you are using

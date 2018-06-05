@@ -1557,6 +1557,28 @@ handleNoteTextFileNameHook
 You may want to take a look at the example `example.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/example.qml>`__
 or `use-tag-names-in-filename.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/use-tag-names-in-filename.qml>`__.
 
+handleNoteNameHook
+~~~~~~~~~~~~~~~~~~
+
+.. code:: javascript
+
+    /**
+     * This function is called when the note name is determined for a note
+     *
+     * It allows you to modify the name of the note that is viewed
+     *
+     * Return an empty string if the name of the note should not be modified
+     *
+     * @param {NoteApi} note - the note object of the stored note
+     * @return {string} the name of the note
+     */
+    function handleNoteNameHook(note);
+
+You may want to take a look at the example `example.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/example.qml>`__.
+
+It may not be a good idea to use this hook if the setting to use the file
+name as note name is active.
+
 handleNewNoteHeadlineHook
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 

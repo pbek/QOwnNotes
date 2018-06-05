@@ -38,6 +38,8 @@ public:
     QVariant callNoteTaggingHook(Note note, QString action,
                                  QString tagName = "", QString newTagName = "");
     bool noteTaggingHookExists();
+    bool handleNoteNameHookExists();
+    bool methodExists(QString methodName);
     static bool validateScript(Script script, QString &errorMessage);
     Q_INVOKABLE bool startDetachedProcess(QString executablePath,
                                           QStringList parameters);
@@ -114,6 +116,7 @@ public:
     QString callEncryptionHook(QString text, QString password,
                                bool decrypt = false);
     void callHandleNoteOpenedHook(Note *note);
+    QString callHandleNoteNameHook(Note *note);
     void callHandleNoteDoubleClickedHook(Note *note);
     QList<QVariant> getSettingsVariables(int scriptId);
     Q_INVOKABLE QString toNativeDirSeparators(QString path);

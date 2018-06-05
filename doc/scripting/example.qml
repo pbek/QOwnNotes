@@ -54,7 +54,21 @@ QtObject {
         // don't actually change anything
         return "";
     }
-    
+
+    /**
+     * This function is called when the note name is determined for a note
+     *
+     * It allows you to modify the name of the note that is viewed
+     *
+     * Return an empty string if the name of the note should not be modified
+     *
+     * @param {NoteApi} note - the note object of the stored note
+     * @return {string} the name of the note
+     */
+    function handleNoteNameHook(note) {
+        return note.name + " some text";
+    }
+
     /**
      * This function is called when the markdown html of a note is generated
      * 
@@ -98,10 +112,10 @@ QtObject {
     }
     
     /**
-     * This starts a timer that triggers two seconds
+     * This starts a timer that triggers every 30 seconds
      */
     property QtObject timer: Timer {
-        interval: 2000
+        interval: 30000
         repeat: true
         running: true
         

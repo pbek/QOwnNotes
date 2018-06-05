@@ -2735,6 +2735,8 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
         NoteSubFolder::deleteAll();
     }
 
+    bool withNoteNameHook = ScriptingService::instance()->handleNoteNameHookExists();
+
     // create all notes from the files
     Q_FOREACH(QString fileName, files) {
             if (hasNoteSubFolder) {
@@ -2746,7 +2748,8 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
             QFile file(Note::getFullNoteFilePathForFile(fileName));
 
             // update or create a note from the file
-            Note note = Note::updateOrCreateFromFile(file, noteSubFolder);
+            Note note = Note::updateOrCreateFromFile(file, noteSubFolder,
+                    withNoteNameHook);
 
             // add the note id to in the end check if notes need to be removed
             _buildNotesIndexAfterNoteIdList << note.getId();
