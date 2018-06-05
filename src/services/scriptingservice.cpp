@@ -977,6 +977,8 @@ void ScriptingService::log(QString text) {
     if (mainWindow != Q_NULLPTR) {
         emit(mainWindow->log(LogWidget::ScriptingLogType, text));
     }
+#else
+    Q_UNUSED(text);
 #endif
 }
 

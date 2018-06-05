@@ -84,7 +84,7 @@ public:
 
     friend QDebug operator<<(QDebug dbg, const Note &note);
 
-    void createFromFile(QFile &file, int noteSubFolderId,
+    void createFromFile(QFile &file, int noteSubFolderId = 0,
                         bool withNoteNameHook = false);
 
     static bool deleteAll();
