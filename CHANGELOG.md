@@ -10,6 +10,8 @@
     - take a look at the
       [handleNoteNameHook documentation](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/README.md#handlenotenamehook)
       for more information
+    - the user interface will currently not be updated when the note text (that 
+      could result in a note name change with the new hook) is stored
 
 ## 18.06.0
 - encrypted notes are now read-only in the editor unless you are using
