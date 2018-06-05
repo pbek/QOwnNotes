@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 18.06.1
+- when the application gets restarted from the *Settings dialog* a possible
+  `--clear-settings` parameter will now not be appended as parameter, so the 
+  settings will not get removed a second time after the restart
+
 ## 18.06.0
 - encrypted notes are now read-only in the editor unless you are using
   *Edit encrypted note* or you are decrypting it (for [#815](https://github.com/pbek/QOwnNotes/issues/815))
