@@ -509,9 +509,9 @@ QStringList Tag::fetchAllLinkedNoteFileNames(bool fromAllSubfolders) {
         query.prepare("SELECT note_file_name FROM noteTagLink WHERE tag_id = :id");
     } else {
         query.prepare("SELECT note_file_name FROM noteTagLink WHERE tag_id = :id "
-                              "AND note_sub_folder_path = :noteSubFolderPath");
+                              "AND note_sub_folder_path LIKE :noteSubFolderPath");
         query.bindValue(":noteSubFolderPath",
-                    NoteSubFolder::activeNoteSubFolder().relativePath());
+                    NoteSubFolder::activeNoteSubFolder().relativePath() + "%");
     }
 
     query.bindValue(":id", this->id);
