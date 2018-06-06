@@ -568,17 +568,23 @@ QStringList Tag::fetchAllNames() {
 /**
  * Count the linked note file names
  */
-int Tag::countLinkedNoteFileNames(bool fromAllSubfolders) {
+int Tag::countLinkedNoteFileNames(bool fromAllSubfolders, bool recursive) {
     QSqlDatabase db = QSqlDatabase::database("note_folder");
     QSqlQuery query(db);
 
     if (fromAllSubfolders) {
     query.prepare("SELECT COUNT(note_file_name) AS cnt FROM noteTagLink "
                           "WHERE tag_id = :id");
-    } else {
+    } else if (recursive) {
         query.prepare("SELECT COUNT(note_file_name) AS cnt FROM noteTagLink "
                               "WHERE tag_id = :id AND "
-                              "note_sub_folder_path = :noteSubFolderPath");
+                              "note_sub_folder_path LIKE :noteSubFolderPath");
+        query.bindValue(":noteSubFolderPath",
+                        NoteSubFolder::activeNoteSubFolder().relativePath() + "%");
+    } else {
+        query.prepare("SELECT COUNT(note_file_name) AS cnt FROM noteTagLink "
+                      "WHERE tag_id = :id AND "
+                      "note_sub_folder_path = :noteSubFolderPath");
         query.bindValue(":noteSubFolderPath",
                         NoteSubFolder::activeNoteSubFolder().relativePath());
     }
