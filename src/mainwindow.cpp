@@ -6530,7 +6530,7 @@ void MainWindow::reloadTagTree() {
 
     ui->tagTreeWidget->clear();
 
-    int activeNoteSubFolderId = NoteSubFolder::activeNoteSubFolderId();
+    int activeNoteSubFolderId = _showNotesFromAllNoteSubFolders ? -1 : NoteSubFolder::activeNoteSubFolderId();
     QList<int> noteSubFolderIds;
     QList<int> noteIdList;
     int untaggedNoteCount = 0;
@@ -6547,8 +6547,7 @@ void MainWindow::reloadTagTree() {
     // get the notes from the subfolders
     Q_FOREACH(int noteSubFolderId, noteSubFolderIds) {
         // get all notes of a note sub folder
-        QList<Note> noteList = Note::fetchAllByNoteSubFolderId(
-                                                               noteSubFolderId);
+        QList<Note> noteList = Note::fetchAllByNoteSubFolderId(noteSubFolderId);
         untaggedNoteCount += Note::countAllNotTagged(noteSubFolderId);
         noteIdList << Note::noteIdListFromNoteList(noteList);
     }
@@ -6580,7 +6579,7 @@ void MainWindow::reloadTagTree() {
 
 
     // add an item to view untagged notes if there are any
-    linkCount = untaggedNoteCount;
+    linkCount = _showNotesFromAllNoteSubFolders ? Note::countAllNotTagged() : untaggedNoteCount;
 
     if (linkCount > 0) {
         toolTip = tr("show all untagged notes (%1)")
