@@ -23,6 +23,7 @@ apps:
       - desktop-legacy
       - removable-media
       - opengl
+      - cups-control
 
 parts:
   qownnotes:
