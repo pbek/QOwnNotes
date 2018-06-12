@@ -3,6 +3,8 @@
 ## 18.06.2
 - added `cups-control` to he snap version of QOwnNotes to possibly enable 
   support for printing to printers (for [#938](https://github.com/pbek/QOwnNotes/issues/938))
+- added tagging support for subfolders (for [#884](https://github.com/pbek/QOwnNotes/issues/884),
+  a big thank you to @cal2195)
 
 ## 18.06.1
 - when the application gets restarted from the *Settings dialog* a possible
