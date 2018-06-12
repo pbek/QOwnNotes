@@ -373,7 +373,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>16</number>
+            <number>4</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -2243,13 +2243,24 @@
                        </item>
                        <item>
                         <property name="text">
-                         <string notr="true">中文</string>
+                         <string notr="true">简化字</string>
                         </property>
                         <property name="toolTip">
-                         <string>Chinese</string>
+                         <string>Chinese Simplified</string>
                         </property>
                         <property name="whatsThis">
-                         <string notr="true">zh</string>
+                         <string notr="true">zh_CN</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string notr="true">正體字</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Chinese Traditional</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">zh_TW</string>
                         </property>
                        </item>
                        <item>

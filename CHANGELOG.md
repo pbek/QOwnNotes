@@ -5,6 +5,8 @@
   support for printing to printers (for [#938](https://github.com/pbek/QOwnNotes/issues/938))
 - added tagging support for subfolders (for [#884](https://github.com/pbek/QOwnNotes/issues/884),
   a big thank you to @cal2195)
+- added new **Chinese Traditional translation** (for [#934](https://github.com/pbek/QOwnNotes/issues/934), a big thank you to @abev66)
+    - the current translation `Chinese` is now named `Chinese Simplified`
 
 ## 18.06.1
 - when the application gets restarted from the *Settings dialog* a possible

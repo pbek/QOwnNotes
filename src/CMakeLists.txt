@@ -257,7 +257,8 @@ SET(QON_TS_FILES
     languages/QOwnNotes_de.ts
     languages/QOwnNotes_fr.ts
     languages/QOwnNotes_pl.ts
-    languages/QOwnNotes_zh.ts
+    languages/QOwnNotes_zh_CN.ts
+    languages/QOwnNotes_zh_TW.ts
     languages/QOwnNotes_ru.ts
     languages/QOwnNotes_pt_BR.ts
     languages/QOwnNotes_pt_PT.ts
