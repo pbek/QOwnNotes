@@ -106,7 +106,7 @@ popd
 
 # manually install desktop file for Fedora and CentOS 7
 %if 0%{?fedora} || 0%{?rhel} >= 7 || 0%{?centos} >= 7
-install -D -m 0644 QOwnNotes.desktop $RPM_BUILD_ROOT/%{_datadir}/applications/QOwnNotes.desktop
+install -D -m 0644 PBE.QOwnNotes.desktop $RPM_BUILD_ROOT/%{_datadir}/applications/PBE.QOwnNotes.desktop
 %endif
 
 install -D -m 0644 images/icons/128x128/apps/QOwnNotes.png $RPM_BUILD_ROOT/%{_datadir}/pixmaps/QOwnNotes.png
@@ -202,7 +202,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/QOwnNotes/languages/QOwnNotes_hi.qm
 %{_datadir}/QOwnNotes/languages/QOwnNotes_hil.qm
 %{_datadir}/QOwnNotes/languages/QOwnNotes_ur.qm
-%{_datadir}/applications/QOwnNotes.desktop
+%{_datadir}/applications/PBE.QOwnNotes.desktop
 
 %dir %{_datadir}/icons/hicolor/512x512/apps
 %dir %{_datadir}/icons/hicolor/256x256/apps

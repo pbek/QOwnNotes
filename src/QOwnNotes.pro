@@ -264,7 +264,7 @@ unix {
   target.files += QOwnNotes
 
   desktop.path = $$DATADIR/applications
-  desktop.files += QOwnNotes.desktop
+  desktop.files += PBE.QOwnNotes.desktop
 
   i18n.path = $$DATADIR/QOwnNotes/languages
   i18n.files += languages/*.qm

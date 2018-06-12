@@ -7,6 +7,8 @@
   a big thank you to @cal2195)
 - added new **Chinese Traditional translation** (for [#934](https://github.com/pbek/QOwnNotes/issues/934), a big thank you to @abev66)
     - the current translation `Chinese` is now named `Chinese Simplified`
+- the desktop file `QOwnNotes.desktop` was renamed to `PBE.QOwnNotes.desktop`
+  for the Wayland compositor (for [#933](https://github.com/pbek/QOwnNotes/issues/933))
 
 ## 18.06.1
 - when the application gets restarted from the *Settings dialog* a possible

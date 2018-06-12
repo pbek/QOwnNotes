@@ -53,5 +53,5 @@ src_install() {
 	insinto /usr/share/applications
 	doicon -s 128 images/icons/128x128/apps/QOwnNotes.png
 	doicon -s scalable images/icons/scalable/apps/QOwnNotes.svg
-	doins QOwnNotes.desktop
+	doins PBE.QOwnNotes.desktop
 }

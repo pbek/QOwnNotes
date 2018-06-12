@@ -4,7 +4,7 @@
 	"runtime-version": "5.10",
 	"sdk": "org.kde.Sdk",
 	"command": "QOwnNotes",
-	"rename-desktop-file": "QOwnNotes.desktop",
+	"rename-desktop-file": "PBE.QOwnNotes.desktop",
 	"rename-icon": "QOwnNotes",
 	"rename-appdata-file": "qownnotes.appdata.xml",
 	"finish-args": [
