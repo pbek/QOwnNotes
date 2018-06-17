@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 18.06.4
+- the pages in the *Settings dialog* are now scrollable to assure that all
+  settings can be viewed on very low screen resolutions like on netbooks
+  (for [#940](https://github.com/pbek/QOwnNotes/issues/940))
+
 ## 18.06.3
 - fixed the menu bar visibility after leaving the *distraction free mode* if it 
   was invisible when entering it (for [#941](https://github.com/pbek/QOwnNotes/issues/941))
