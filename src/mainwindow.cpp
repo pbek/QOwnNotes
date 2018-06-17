@@ -1400,12 +1400,21 @@ void MainWindow::setDistractionFreeMode(bool enabled) {
         // store the current workspace in case we changed something
         storeCurrentWorkspace();
 
+        bool menuBarWasVisible = ui->menuBar->isVisible();
+
+        // set the menu bar visible so we get the correct height
+        if (!menuBarWasVisible) {
+            ui->menuBar->setVisible(true);
+        }
+
         // remember states, geometry and sizes
         settings.setValue("DistractionFreeMode/windowState", saveState());
         settings.setValue("DistractionFreeMode/menuBarGeometry",
                           ui->menuBar->saveGeometry());
         settings.setValue("DistractionFreeMode/menuBarHeight",
                           ui->menuBar->height());
+        settings.setValue("DistractionFreeMode/menuBarVisible",
+                          menuBarWasVisible);
 
         // we must not hide the menu bar or else the shortcuts
         // will not work any more
@@ -1462,6 +1471,8 @@ void MainWindow::setDistractionFreeMode(bool enabled) {
         restoreState(
                 settings.value(
                         "DistractionFreeMode/windowState").toByteArray());
+        ui->menuBar->setVisible(
+                settings.value("DistractionFreeMode/menuBarVisible").toBool());
         ui->menuBar->restoreGeometry(
                 settings.value(
                         "DistractionFreeMode/menuBarGeometry").toByteArray());

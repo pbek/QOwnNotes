@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 18.06.3
+- fixed the menu bar visibility after leaving the *distraction free mode* if it 
+  was invisible when entering it (for [#941](https://github.com/pbek/QOwnNotes/issues/941))
+ 
 ## 18.06.2
 - added `cups-control` to he snap version of QOwnNotes to possibly enable 
   support for printing to printers (for [#938](https://github.com/pbek/QOwnNotes/issues/938))
