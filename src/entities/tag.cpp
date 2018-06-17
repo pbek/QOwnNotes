@@ -134,8 +134,8 @@ int Tag::countAll() {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else if (query.first()) {
-
         db.close();
+
         return query.value("cnt").toInt();
     }
 
@@ -170,8 +170,8 @@ bool Tag::remove() {
 
         if (!query.exec()) {
             qWarning() << __func__ << ": " << query.lastError();
-
             db.close();
+
             return false;
         } else {
 
@@ -458,6 +458,8 @@ int Tag::countAllOfNote(Note note) {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else if (query.first()) {
+        db.close();
+
         return query.value("cnt").toInt();
     }
 
@@ -485,6 +487,8 @@ bool Tag::isLinkedToNote(Note note) {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else if (query.first()) {
+        db.close();
+
         return query.value("cnt").toInt() > 0;
     }
 
@@ -631,8 +635,8 @@ int Tag::countLinkedNoteFileNames(bool fromAllSubfolders, bool recursive) {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else if (query.first()) {
-
         db.close();
+
         return query.value("cnt").toInt();
     }
 
@@ -736,6 +740,7 @@ bool Tag::linkToNote(Note note) {
 //        qWarning() << __func__ << ": " << query.lastError();
 
         db.close();
+
         return false;
     }
 
@@ -784,10 +789,12 @@ bool Tag::removeLinkToNote(Note note) {
         qWarning() << __func__ << ": " << query.lastError();
 
         db.close();
+
         return false;
     }
 
     db.close();
+
     return true;
 }
 
@@ -810,11 +817,12 @@ bool Tag::removeAllLinksToNote(Note note) {
         qWarning() << __func__ << ": " << query.lastError();
 
         db.close();
+
         return false;
     }
 
-
     db.close();
+
     return true;
 }
 

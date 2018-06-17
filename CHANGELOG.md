@@ -3,6 +3,8 @@
 ## 18.06.3
 - fixed the menu bar visibility after leaving the *distraction free mode* if it 
   was invisible when entering it (for [#941](https://github.com/pbek/QOwnNotes/issues/941))
+- the note folder database will now be explicitly closed for Windows after each
+  operation to prevent synchronization problems (for [#926](https://github.com/pbek/QOwnNotes/issues/926))
  
 ## 18.06.2
 - added `cups-control` to he snap version of QOwnNotes to possibly enable 

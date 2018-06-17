@@ -56,6 +56,7 @@ TrashItem TrashItem::fetch(int id) {
         }
     }
 
+    db.close();
     return trashItem;
 }
 
@@ -68,12 +69,14 @@ bool TrashItem::remove(bool withFile) {
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
+        db.close();
         return false;
     } else {
         if (withFile) {
             this->removeFile();
         }
 
+        db.close();
         return true;
     }
 }
@@ -289,6 +292,7 @@ QList<TrashItem> TrashItem::fetchAll(int limit) {
         }
     }
 
+    db.close();
     return trashItemList;
 }
 
@@ -319,6 +323,7 @@ QList<TrashItem> TrashItem::fetchAllExpired() {
         }
     }
 
+    db.close();
     return trashItemList;
 }
 
@@ -356,6 +361,7 @@ bool TrashItem::store() {
     // on error
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
+        db.close();
         return false;
     } else if (id == 0) {  // on insert
         id = query.lastInsertId().toInt();
@@ -364,6 +370,7 @@ bool TrashItem::store() {
         refetch();
     }
 
+    db.close();
     return true;
 }
 
@@ -405,8 +412,10 @@ bool TrashItem::deleteAll() {
     query.prepare("DELETE FROM trashItem");
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
+        db.close();
         return false;
     } else {
+        db.close();
         return true;
     }
 }
@@ -441,9 +450,11 @@ bool TrashItem::fillFromId(int id) {
         qWarning() << __func__ << ": " << query.lastError();
     } else if (query.first()) {
         fillFromQuery(query);
+        db.close();
         return true;
     }
 
+    db.close();
     return false;
 }
 
@@ -499,9 +510,11 @@ int TrashItem::countAll() {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else if (query.first()) {
+        db.close();
         return query.value("cnt").toInt();
     }
 
+    db.close();
     return 0;
 }
 
