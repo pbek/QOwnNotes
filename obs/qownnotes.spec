@@ -150,7 +150,8 @@ install -D -m 0644 languages/QOwnNotes_hil.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNo
 install -D -m 0644 languages/QOwnNotes_ur.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_ur.qm
 
 %if 0%{?suse_version}
-%suse_update_desktop_file -c  QOwnNotes QOwnNotes QOwnNotes QOwnNotes QOwnNotes "Utility;SyncUtility;"
+# see: https://de.opensuse.org/openSUSE:Paketbauvereinbarungen_zu_RPM-Makros
+%suse_update_desktop_file -c  PBE.QOwnNotes QOwnNotes QOwnNotes QOwnNotes QOwnNotes "Utility;SyncUtility;"
 %endif
 
 %fdupes $RPM_BUILD_ROOT/%{_prefix}
