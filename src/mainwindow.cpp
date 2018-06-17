@@ -2735,6 +2735,8 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
         NoteSubFolder::deleteAll();
     }
 
+    bool withNoteNameHook = ScriptingService::instance()->handleNoteNameHookExists();
+
     // create all notes from the files
     Q_FOREACH(QString fileName, files) {
             if (hasNoteSubFolder) {
@@ -2746,7 +2748,8 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
             QFile file(Note::getFullNoteFilePathForFile(fileName));
 
             // update or create a note from the file
-            Note note = Note::updateOrCreateFromFile(file, noteSubFolder);
+            Note note = Note::updateOrCreateFromFile(file, noteSubFolder,
+                    withNoteNameHook);
 
             // add the note id to in the end check if notes need to be removed
             _buildNotesIndexAfterNoteIdList << note.getId();
@@ -6527,12 +6530,30 @@ void MainWindow::reloadTagTree() {
 
     ui->tagTreeWidget->clear();
 
-    int activeNoteSubFolderId = NoteSubFolder::activeNoteSubFolderId();
+    int activeNoteSubFolderId = _showNotesFromAllNoteSubFolders ? -1 : NoteSubFolder::activeNoteSubFolderId();
+    QList<int> noteSubFolderIds;
+    QList<int> noteIdList;
+    int untaggedNoteCount = 0;
+    
+    // check if the notes should be viewed recursively
+    if (NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively()) {
+        noteSubFolderIds = NoteSubFolder::fetchIdsRecursivelyByParentId(activeNoteSubFolderId);
+    } else {
+        noteSubFolderIds << activeNoteSubFolderId;
+    }
+    
+    qDebug() << __func__ << " - 'noteSubFolderIds': " << noteSubFolderIds;
+    
+    // get the notes from the subfolders
+    Q_FOREACH(int noteSubFolderId, noteSubFolderIds) {
+        // get all notes of a note sub folder
+        QList<Note> noteList = Note::fetchAllByNoteSubFolderId(noteSubFolderId);
+        untaggedNoteCount += Note::countAllNotTagged(noteSubFolderId);
+        noteIdList << Note::noteIdListFromNoteList(noteList);
+    }
 
     // create an item to view all notes
-    int linkCount = _showNotesFromAllNoteSubFolders ? Note::countAll()
-                                                    : Note::countByNoteSubFolderId(
-                                                          activeNoteSubFolderId);
+    int linkCount = _showNotesFromAllNoteSubFolders ? Note::countAll() : noteIdList.count();
     QString toolTip = tr("show all notes (%1)").arg(QString::number(linkCount));
 
     QTreeWidgetItem *allItem = new QTreeWidgetItem();
@@ -6558,9 +6579,7 @@ void MainWindow::reloadTagTree() {
 
 
     // add an item to view untagged notes if there are any
-    linkCount = _showNotesFromAllNoteSubFolders ? Note::countAllNotTagged()
-                                                : Note::countAllNotTagged(
-                                                      activeNoteSubFolderId);
+    linkCount = _showNotesFromAllNoteSubFolders ? Note::countAllNotTagged() : untaggedNoteCount;
 
     if (linkCount > 0) {
         toolTip = tr("show all untagged notes (%1)")
@@ -6790,7 +6809,8 @@ QTreeWidgetItem *MainWindow::addTagToTagTreeWidget(
 
     QTreeWidgetItem *item = new QTreeWidgetItem();
     QString name = tag.getName();
-    int linkCount = tag.countLinkedNoteFileNames(_showNotesFromAllNoteSubFolders);
+    int linkCount = tag.countLinkedNoteFileNames(_showNotesFromAllNoteSubFolders,
+                            NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively());
     QString toolTip = tr("show all notes tagged with '%1' (%2)")
                     .arg(name, QString::number(linkCount));
     item->setData(0, Qt::UserRole, tagId);

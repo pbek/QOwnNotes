@@ -1,4 +1,4 @@
-QOwnNotes.desktop usr/share/applications
+PBE.QOwnNotes.desktop usr/share/applications
 images/icons/128x128/apps/QOwnNotes.png usr/share/pixmaps
 images/icons/16x16/apps/QOwnNotes.png usr/share/icons/hicolor/16x16/apps
 images/icons/24x24/apps/QOwnNotes.png usr/share/icons/hicolor/24x24/apps
@@ -14,7 +14,8 @@ languages/QOwnNotes_en.qm usr/share/QOwnNotes/languages
 languages/QOwnNotes_de.qm usr/share/QOwnNotes/languages
 languages/QOwnNotes_fr.qm usr/share/QOwnNotes/languages
 languages/QOwnNotes_pl.qm usr/share/QOwnNotes/languages
-languages/QOwnNotes_zh.qm usr/share/QOwnNotes/languages
+languages/QOwnNotes_zh_CN.qm usr/share/QOwnNotes/languages
+languages/QOwnNotes_zh_TW.qm usr/share/QOwnNotes/languages
 languages/QOwnNotes_ru.qm usr/share/QOwnNotes/languages
 languages/QOwnNotes_pt_BR.qm usr/share/QOwnNotes/languages
 languages/QOwnNotes_pt_PT.qm usr/share/QOwnNotes/languages

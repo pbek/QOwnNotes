@@ -712,6 +712,9 @@ void Utils::Misc::restartApplication() {
     QStringList parameters = QApplication::arguments();
     QString appPath = parameters.takeFirst();
 
+    // we don't want to have our settings cleared again after a restart
+    parameters.removeOne("--clear-settings");
+
     startDetachedProcess(appPath, parameters);
     QApplication::quit();
 }

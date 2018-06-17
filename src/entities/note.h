@@ -84,7 +84,8 @@ public:
 
     friend QDebug operator<<(QDebug dbg, const Note &note);
 
-    void createFromFile(QFile &file, int noteSubFolderId = 0);
+    void createFromFile(QFile &file, int noteSubFolderId = 0,
+                        bool withNoteNameHook = false);
 
     static bool deleteAll();
 
@@ -201,8 +202,8 @@ public:
 
     qint64 getFileSize();
 
-    static Note updateOrCreateFromFile(QFile &file,
-                                       NoteSubFolder noteSubFolder);
+    static Note updateOrCreateFromFile(QFile &file, NoteSubFolder noteSubFolder,
+                                           bool withNoteNameHook = false);
 
     static QList<int> fetchAllIds(int limit = -1, int offset = -1);
 

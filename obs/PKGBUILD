@@ -29,7 +29,7 @@ package() {
     install -D -m755 QOwnNotes "${pkgdir}/usr/bin/QOwnNotes"
 
     # install visuals
-    install -D -m644 QOwnNotes.desktop "${pkgdir}/usr/share/applications/QOwnNotes.desktop"
+    install -D -m644 PBE.QOwnNotes.desktop "${pkgdir}/usr/share/applications/PBE.QOwnNotes.desktop"
     install -D -m644 "images/icons/128x128/apps/QOwnNotes.png" "${pkgdir}/usr/share/pixmaps/QOwnNotes.png"
     for format in {16x16,24x24,32x32,48x48,64x64,96x96,128x128,256x256,512x512}; do
         install -D -m644 "images/icons/${format}/apps/QOwnNotes.png" "${pkgdir}/usr/share/icons/hicolor/$format/apps/QOwnNotes.png"

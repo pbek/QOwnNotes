@@ -20,7 +20,8 @@ RC_FILE = QOwnNotes.rc
 TRANSLATIONS = languages/QOwnNotes_en.ts \
     languages/QOwnNotes_de.ts \
     languages/QOwnNotes_fr.ts \
-    languages/QOwnNotes_zh.ts \
+    languages/QOwnNotes_zh_CN.ts \
+    languages/QOwnNotes_zh_TW.ts \
     languages/QOwnNotes_pl.ts \
     languages/QOwnNotes_ru.ts \
     languages/QOwnNotes_es.ts \
@@ -263,7 +264,7 @@ unix {
   target.files += QOwnNotes
 
   desktop.path = $$DATADIR/applications
-  desktop.files += QOwnNotes.desktop
+  desktop.files += PBE.QOwnNotes.desktop
 
   i18n.path = $$DATADIR/QOwnNotes/languages
   i18n.files += languages/*.qm

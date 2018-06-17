@@ -1368,7 +1368,8 @@ int Note::storeDirtyNotesToDisk(Note &currentNote, bool *currentNoteChanged,
     }
 }
 
-void Note::createFromFile(QFile &file, int noteSubFolderId) {
+void Note::createFromFile(QFile &file, int noteSubFolderId,
+                          bool withNoteNameHook) {
     if (file.open(QIODevice::ReadOnly)) {
         QTextStream in(&file);
         in.setCodec("UTF-8");
@@ -1394,6 +1395,17 @@ void Note::createFromFile(QFile &file, int noteSubFolderId) {
         this->fileCreated = fileInfo.created();
         this->fileLastModified = fileInfo.lastModified();
         this->store();
+
+        if (withNoteNameHook) {
+            // check if a name was set in a script
+            QString hookName = ScriptingService::instance()->
+                    callHandleNoteNameHook(this);
+
+            if (!hookName.isEmpty()) {
+                this->name = hookName;
+                this->store();
+            }
+        }
     }
 }
 
@@ -1404,7 +1416,8 @@ void Note::createFromFile(QFile &file, int noteSubFolderId) {
  * @param noteSubFolder
  * @return
  */
-Note Note::updateOrCreateFromFile(QFile &file, NoteSubFolder noteSubFolder) {
+Note Note::updateOrCreateFromFile(QFile &file, NoteSubFolder noteSubFolder,
+                                  bool withNoteNameHook) {
     QFileInfo fileInfo(file);
     Note note = fetchByFileName(fileInfo.fileName(), noteSubFolder.getId());
 
@@ -1414,7 +1427,7 @@ Note Note::updateOrCreateFromFile(QFile &file, NoteSubFolder noteSubFolder) {
     if ((fileInfo.size() != note.getFileSize()) ||
                 (fileInfo.lastModified() > note.getModified())) {
         // load file data and store note
-        note.createFromFile(file, noteSubFolder.getId());
+        note.createFromFile(file, noteSubFolder.getId(), withNoteNameHook);
 
 //        qDebug() << __func__ << " - 'file modified': " << file.fileName();
     }

@@ -419,15 +419,29 @@ QVariant ScriptingService::callNoteTaggingHook(Note note, QString action,
  * @return true if a function was found
  */
 bool ScriptingService::noteTaggingHookExists() {
+    return methodExists("noteTaggingHook(QVariant,QVariant,QVariant,QVariant)");
+}
+
+/**
+ * Checks if a handleNoteNameHook function exists in a script
+ * @return true if a function was found
+ */
+bool ScriptingService::handleNoteNameHookExists() {
+    return methodExists("handleNoteNameHook(QVariant)");
+}
+
+/**
+ * Checks if a method exists in a script
+ * @return true if method was found
+ */
+bool ScriptingService::methodExists(QString methodName) {
     QMapIterator<int, ScriptComponent> i(_scriptComponents);
 
     while (i.hasNext()) {
         i.next();
         ScriptComponent scriptComponent = i.value();
 
-        if (methodExistsForObject(
-                scriptComponent.object,
-                "noteTaggingHook(QVariant,QVariant,QVariant,QVariant)")) {
+        if (methodExistsForObject(scriptComponent.object, methodName)) {
             return true;
         }
     }
@@ -598,6 +612,33 @@ void ScriptingService::callHandleNoteOpenedHook(Note *note) {
                                               static_cast<QObject*>(noteApi))));
         }
     }
+}
+
+/**
+ * Calls the handleNoteNameHook function for all script components
+ */
+QString ScriptingService::callHandleNoteNameHook(Note *note) {
+    QMapIterator<int, ScriptComponent> i(_scriptComponents);
+
+    while (i.hasNext()) {
+        i.next();
+        ScriptComponent scriptComponent = i.value();
+        QObject *object = scriptComponent.object;
+
+        if (methodExistsForObject(object, "handleNoteNameHook(QVariant)")) {
+            NoteApi *noteApi = new NoteApi();
+            noteApi->fetch(note->getId());
+
+            QVariant text;
+            QMetaObject::invokeMethod(object, "handleNoteNameHook",
+                                      Q_RETURN_ARG(QVariant, text),
+                                      Q_ARG(QVariant, QVariant::fromValue(
+                                              static_cast<QObject*>(noteApi))));
+            return text.toString();
+        }
+    }
+
+    return "";
 }
 
 /**
@@ -936,6 +977,8 @@ void ScriptingService::log(QString text) {
     if (mainWindow != Q_NULLPTR) {
         emit(mainWindow->log(LogWidget::ScriptingLogType, text));
     }
+#else
+    Q_UNUSED(text);
 #endif
 }
 

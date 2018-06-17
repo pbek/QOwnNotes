@@ -106,7 +106,7 @@ popd
 
 # manually install desktop file for Fedora and CentOS 7
 %if 0%{?fedora} || 0%{?rhel} >= 7 || 0%{?centos} >= 7
-install -D -m 0644 QOwnNotes.desktop $RPM_BUILD_ROOT/%{_datadir}/applications/QOwnNotes.desktop
+install -D -m 0644 PBE.QOwnNotes.desktop $RPM_BUILD_ROOT/%{_datadir}/applications/PBE.QOwnNotes.desktop
 %endif
 
 install -D -m 0644 images/icons/128x128/apps/QOwnNotes.png $RPM_BUILD_ROOT/%{_datadir}/pixmaps/QOwnNotes.png
@@ -123,7 +123,8 @@ install -D -m 0644 languages/QOwnNotes_en.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNot
 install -D -m 0644 languages/QOwnNotes_de.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_de.qm
 install -D -m 0644 languages/QOwnNotes_fr.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_fr.qm
 install -D -m 0644 languages/QOwnNotes_pl.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_pl.qm
-install -D -m 0644 languages/QOwnNotes_zh.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_zh.qm
+install -D -m 0644 languages/QOwnNotes_zh_CN.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_zh_CN.qm
+install -D -m 0644 languages/QOwnNotes_zh_TW.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_zh_TW.qm
 install -D -m 0644 languages/QOwnNotes_ru.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_ru.qm
 install -D -m 0644 languages/QOwnNotes_pt_BR.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_pt_BR.qm
 install -D -m 0644 languages/QOwnNotes_pt_PT.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_pt_PT.qm
@@ -176,7 +177,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/QOwnNotes/languages/QOwnNotes_de.qm
 %{_datadir}/QOwnNotes/languages/QOwnNotes_fr.qm
 %{_datadir}/QOwnNotes/languages/QOwnNotes_pl.qm
-%{_datadir}/QOwnNotes/languages/QOwnNotes_zh.qm
+%{_datadir}/QOwnNotes/languages/QOwnNotes_zh_CN.qm
+%{_datadir}/QOwnNotes/languages/QOwnNotes_zh_TW.qm
 %{_datadir}/QOwnNotes/languages/QOwnNotes_ru.qm
 %{_datadir}/QOwnNotes/languages/QOwnNotes_pt_BR.qm
 %{_datadir}/QOwnNotes/languages/QOwnNotes_pt_PT.qm
@@ -200,7 +202,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/QOwnNotes/languages/QOwnNotes_hi.qm
 %{_datadir}/QOwnNotes/languages/QOwnNotes_hil.qm
 %{_datadir}/QOwnNotes/languages/QOwnNotes_ur.qm
-%{_datadir}/applications/QOwnNotes.desktop
+%{_datadir}/applications/PBE.QOwnNotes.desktop
 
 %dir %{_datadir}/icons/hicolor/512x512/apps
 %dir %{_datadir}/icons/hicolor/256x256/apps
