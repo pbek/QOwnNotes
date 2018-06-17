@@ -46,6 +46,27 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
     // we must not use resize(1, 1) because XFCE really resizes the window to 1x1
     resize(400, 300);
 
+    QList<QWidget*> pageWidgets;
+
+    // get a list of every settings page in the correct order
+    for (int index = 0; index < ui->settingsStackedWidget->count(); index++) {
+        pageWidgets.append(ui->settingsStackedWidget->widget(index));
+    }
+
+    Q_FOREACH(QWidget* pageWidget, pageWidgets) {
+            // make sure the margin of every page is 0
+            QLayout *layout = pageWidget->layout();
+            layout->setMargin(0);
+
+            // inject a scroll area to make each page scrollable
+            QScrollArea *scrollArea = new QScrollArea(
+                    ui->settingsStackedWidget);
+            scrollArea->setWidget(pageWidget);
+            scrollArea->setWidgetResizable(true);
+            scrollArea->setFrameShape(QFrame::NoFrame);
+            ui->settingsStackedWidget->addWidget(scrollArea);
+        }
+
     ui->connectionTestLabel->hide();
     ui->darkModeInfoLabel->hide();
     ui->connectButton->setDefault(true);
