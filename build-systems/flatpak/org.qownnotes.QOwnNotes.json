@@ -6,30 +6,28 @@
 	"command": "QOwnNotes",
 	"rename-desktop-file": "PBE.QOwnNotes.desktop",
 	"rename-icon": "QOwnNotes",
-	"rename-appdata-file": "qownnotes.appdata.xml",
 	"finish-args": [
+		"--socket=wayland",
 		"--socket=x11",
+		"--share=ipc",
 		"--share=network",
-		"--device=dri",
-		"--filesystem=home"
+		"--device=dri"
 	],
 	"modules": [
 		{
 			"name": "QOwnNotes",
-			"buildsystem": "simple",
+			"buildsystem": "qmake",
 			"subdir": "src",
-			"build-commands": [
-				"echo #define RELEASE \"Flatpak\" > release.h",
-				"qmake PREFIX=/app",
-				"make",
-				"make install"
-			],
 			"sources": [
 				{
 					"type": "git",
 					"url": "https://github.com/pbek/QOwnNotes",
-					"tag": "linux-b3610-135120",
-					"commit": "0db9717c1f1ae4333f20b4a09b15c309997138a8"
+					"tag": "linux-b3632-171559",
+					"commit": "4c8f78cc4797161f21f17556662c37a2f5784664"
+				},
+				{
+					"type": "file",
+					"path": "org.qownnotes.QOwnNotes.appdata.xml"
 				}
 			]
 		}
