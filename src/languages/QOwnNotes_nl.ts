@@ -3838,12 +3838,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2249"/>
       <source>Chinese Simplified</source>
-      <translation type="unfinished">Chinese Simplified</translation>
+      <translation>Vereenvoudigd Chinees</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2260"/>
       <source>Chinese Traditional</source>
-      <translation type="unfinished">Chinese Traditional</translation>
+      <translation>Traditioneel Chinees</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2328"/>

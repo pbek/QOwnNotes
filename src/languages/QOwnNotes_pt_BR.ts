@@ -3838,12 +3838,12 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2249"/>
       <source>Chinese Simplified</source>
-      <translation type="unfinished">Chinese Simplified</translation>
+      <translation>Chinês simplificado</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2260"/>
       <source>Chinese Traditional</source>
-      <translation type="unfinished">Chinese Traditional</translation>
+      <translation>Chinês tradicional</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2328"/>

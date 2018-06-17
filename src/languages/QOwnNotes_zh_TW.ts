@@ -596,7 +596,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1136"/>
       <source>Check for &amp;updates</source>
-      <translation>檢查更新（&amp;u）</translation>
+      <translation>檢查更新（&amp;U）</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1148"/>
@@ -807,7 +807,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1006"/>
       <source>&amp;Scripting</source>
-      <translation>脚本(&amp;S)</translation>
+      <translation>腳本(&amp;S)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1206"/>
@@ -867,7 +867,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1372"/>
       <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
-      <translation>插入圖片（圖片將複製至目前筆記資料夾下的 `media` 中）</translation>
+      <translation>插入圖片（圖片將複製至目前筆記資料夾下的「media」中）</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1384"/>
@@ -3815,12 +3815,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2249"/>
       <source>Chinese Simplified</source>
-      <translation type="unfinished">Chinese Simplified</translation>
+      <translation>簡體中文</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2260"/>
       <source>Chinese Traditional</source>
-      <translation type="unfinished">Chinese Traditional</translation>
+      <translation>繁體中文</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2328"/>
@@ -3974,7 +3974,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4320"/>
       <source>Highlight the current line</source>
-      <translation>突顯本行</translation>
+      <translation>突顯所在的那一行</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4496"/>

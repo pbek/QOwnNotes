@@ -5,7 +5,10 @@
   was invisible when entering it (for [#941](https://github.com/pbek/QOwnNotes/issues/941))
 - the note folder database will now be explicitly closed for Windows after each
   operation to prevent synchronization problems (for [#926](https://github.com/pbek/QOwnNotes/issues/926))
- 
+- added more Chinese Traditional, Brazilian Portuguese, Italian, Catalan, 
+  Spanish, German, Dutch and Hungarian translation (thank you abev66,
+  mlimacarlos, mlocati, MGuerra, richarson, rakekniven and Fabijenna)
+
 ## 18.06.2
 - added `cups-control` to he snap version of QOwnNotes to possibly enable 
   support for printing to printers (for [#938](https://github.com/pbek/QOwnNotes/issues/938))
