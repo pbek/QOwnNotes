@@ -1,8 +1,8 @@
 # QOwnNotes Changelog
 
 ## 18.06.5
-- fixed some problems with note tagging after closing the note folder database
-  (for [#926](https://github.com/pbek/QOwnNotes/issues/926))
+- disabled note folder database closing feature temporarily, since it breaks 
+  the application under Windows for new note folders (for [#926](https://github.com/pbek/QOwnNotes/issues/926))
 
 ## 18.06.4
 - the pages in the *Settings dialog* are now scrollable to assure that all
