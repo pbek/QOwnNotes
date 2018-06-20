@@ -297,7 +297,7 @@ bool DatabaseService::setupNoteFolderTables() {
                    QString::number(version), "note_folder");
     }
 
-    dbDisk.close();
+    Utils::Misc::closeDatabaseConnection(dbDisk);
 
     return true;
 }

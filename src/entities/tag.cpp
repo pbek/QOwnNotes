@@ -6,6 +6,7 @@
 #include <QSqlRecord>
 #include <QSqlError>
 #include <QSettings>
+#include <utils/misc.h>
 
 
 Tag::Tag() {
@@ -67,7 +68,7 @@ Tag Tag::fetch(int id) {
         tag.fillFromQuery(query);
     }
 
-    db.close();
+    Utils::Misc::closeDatabaseConnection(db);
 
     return tag;
 }
@@ -99,7 +100,7 @@ Tag Tag::fetchByName(QString name, bool startsWith) {
         tag.fillFromQuery(query);
     }
 
-    db.close();
+    Utils::Misc::closeDatabaseConnection(db);
 
     return tag;
 }
@@ -120,7 +121,7 @@ Tag Tag::fetchByName(QString name, int parentId) {
         tag.fillFromQuery(query);
     }
 
-    db.close();
+    Utils::Misc::closeDatabaseConnection(db);
 
     return tag;
 }
@@ -134,12 +135,12 @@ int Tag::countAll() {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else if (query.first()) {
-        db.close();
+        Utils::Misc::closeDatabaseConnection(db);
 
         return query.value("cnt").toInt();
     }
 
-    db.close();
+    Utils::Misc::closeDatabaseConnection(db);
 
     return 0;
 }
@@ -164,18 +165,20 @@ bool Tag::remove() {
                 tag.remove();
             }
 
+        QSqlDatabase db = QSqlDatabase::database("note_folder");
+        QSqlQuery query(db);
+
         // remove the note tag links
         query.prepare("DELETE FROM noteTagLink WHERE tag_id = :id");
         query.bindValue(":id", id);
 
         if (!query.exec()) {
             qWarning() << __func__ << ": " << query.lastError();
-            db.close();
+            Utils::Misc::closeDatabaseConnection(db);
 
             return false;
         } else {
-
-            db.close();
+            Utils::Misc::closeDatabaseConnection(db);
             return true;
         }
     }
@@ -239,7 +242,7 @@ QList<Tag> Tag::fetchAll() {
         }
     }
 
-    db.close();
+    Utils::Misc::closeDatabaseConnection(db);
 
     return tagList;
 }
@@ -276,7 +279,7 @@ QList<Tag> Tag::fetchAllByParentId(int parentId) {
         }
     }
 
-    db.close();
+    Utils::Misc::closeDatabaseConnection(db);
 
     return tagList;
 }
@@ -317,10 +320,11 @@ int Tag::countAllParentId(int parentId) {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else if (query.first()) {
+        Utils::Misc::closeDatabaseConnection(db);
         return query.value("cnt").toInt();
     }
 
-    db.close();
+    Utils::Misc::closeDatabaseConnection(db);
 
     return 0;
 }
@@ -367,7 +371,7 @@ QList<Tag> Tag::fetchAllOfNote(Note note) {
         }
     }
 
-    db.close();
+    Utils::Misc::closeDatabaseConnection(db);
 
     return tagList;
 }
@@ -397,7 +401,7 @@ QStringList Tag::fetchAllNamesOfNote(Note note) {
         }
     }
 
-    db.close();
+    Utils::Misc::closeDatabaseConnection(db);
 
     return tagNameList;
 }
@@ -423,7 +427,7 @@ QStringList Tag::searchAllNamesByName(QString name) {
         }
     }
 
-    db.close();
+    Utils::Misc::closeDatabaseConnection(db);
 
     return tagNameList;
 }
@@ -458,12 +462,12 @@ int Tag::countAllOfNote(Note note) {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else if (query.first()) {
-        db.close();
+        Utils::Misc::closeDatabaseConnection(db);
 
         return query.value("cnt").toInt();
     }
 
-    db.close();
+    Utils::Misc::closeDatabaseConnection(db);
 
     return 0;
 }
@@ -487,12 +491,12 @@ bool Tag::isLinkedToNote(Note note) {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else if (query.first()) {
-        db.close();
+        Utils::Misc::closeDatabaseConnection(db);
 
         return query.value("cnt").toInt() > 0;
     }
 
-    db.close();
+    Utils::Misc::closeDatabaseConnection(db);
 
     return false;
 }
@@ -527,7 +531,7 @@ QList<Tag> Tag::fetchAllWithLinkToNoteNames(QStringList noteNameList) {
         }
     }
 
-    db.close();
+    Utils::Misc::closeDatabaseConnection(db);
 
     return tagList;
 }
@@ -560,7 +564,7 @@ QStringList Tag::fetchAllLinkedNoteFileNames(bool fromAllSubfolders) {
         }
     }
 
-    db.close();
+    Utils::Misc::closeDatabaseConnection(db);
 
     return fileNameList;
 }
@@ -580,7 +584,7 @@ void Tag::convertDirSeparator() {
         qWarning() << __func__ << ": " << query.lastError();
     }
 
-    db.close();
+    Utils::Misc::closeDatabaseConnection(db);
 }
 
 /**
@@ -602,7 +606,7 @@ QStringList Tag::fetchAllNames() {
         }
     }
 
-    db.close();
+    Utils::Misc::closeDatabaseConnection(db);
 
     return nameList;
 }
@@ -635,12 +639,12 @@ int Tag::countLinkedNoteFileNames(bool fromAllSubfolders, bool recursive) {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else if (query.first()) {
-        db.close();
+        Utils::Misc::closeDatabaseConnection(db);
 
         return query.value("cnt").toInt();
     }
 
-    db.close();
+    Utils::Misc::closeDatabaseConnection(db);
 
     return 0;
 }
@@ -675,7 +679,7 @@ bool Tag::store() {
         // on error
         qWarning() << __func__ << ": " << query.lastError();
 
-        db.close();
+        Utils::Misc::closeDatabaseConnection(db);
         return false;
     } else if (this->id == 0) {
         // on insert
@@ -698,7 +702,7 @@ bool Tag::store() {
         }
     }
 
-    db.close();
+    Utils::Misc::closeDatabaseConnection(db);
 
     return true;
 }
@@ -739,7 +743,7 @@ bool Tag::linkToNote(Note note) {
         // link to a note already exists before we try to create an other link
 //        qWarning() << __func__ << ": " << query.lastError();
 
-        db.close();
+        Utils::Misc::closeDatabaseConnection(db);
 
         return false;
     }
@@ -760,7 +764,7 @@ bool Tag::linkToNote(Note note) {
         }
     }
 
-    db.close();
+    Utils::Misc::closeDatabaseConnection(db);
 
     return true;
 }
@@ -788,12 +792,12 @@ bool Tag::removeLinkToNote(Note note) {
         // on error
         qWarning() << __func__ << ": " << query.lastError();
 
-        db.close();
+        Utils::Misc::closeDatabaseConnection(db);
 
         return false;
     }
 
-    db.close();
+    Utils::Misc::closeDatabaseConnection(db);
 
     return true;
 }
@@ -816,12 +820,12 @@ bool Tag::removeAllLinksToNote(Note note) {
         // on error
         qWarning() << __func__ << ": " << query.lastError();
 
-        db.close();
+        Utils::Misc::closeDatabaseConnection(db);
 
         return false;
     }
 
-    db.close();
+    Utils::Misc::closeDatabaseConnection(db);
 
     return true;
 }
@@ -854,7 +858,7 @@ void Tag::removeBrokenLinks() {
         }
     }
 
-    db.close();
+    Utils::Misc::closeDatabaseConnection(db);
 }
 
 /**
@@ -873,11 +877,11 @@ bool Tag::removeNoteLinkById(int id) {
         // on error
         qWarning() << __func__ << ": " << query.lastError();
 
-        db.close();
+        Utils::Misc::closeDatabaseConnection(db);
         return false;
     }
 
-    db.close();
+    Utils::Misc::closeDatabaseConnection(db);
     return true;
 }
 
@@ -901,11 +905,11 @@ bool Tag::renameNoteFileNamesOfLinks(QString oldFileName, QString newFileName) {
         // on error
         qWarning() << __func__ << ": " << query.lastError();
 
-        db.close();
+        Utils::Misc::closeDatabaseConnection(db);
         return false;
     }
 
-    db.close();
+    Utils::Misc::closeDatabaseConnection(db);
 
     return true;
 }

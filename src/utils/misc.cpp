@@ -1043,3 +1043,14 @@ QString Utils::Misc::unescapeHtml(QString html) {
 //    QString ret = textEdit.toPlainText();
 //    return ret;
 }
+
+/**
+ * Closes a database connection if it was open
+ *
+ * @param db
+ */
+void Utils::Misc::closeDatabaseConnection(QSqlDatabase &db) {
+    if (db.isOpen()) {
+        db.close();
+    }
+}

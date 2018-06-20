@@ -22,6 +22,7 @@
 #include <QDataStream>
 #include <QStringList>
 #include <QMap>
+#include <QSqlDatabase>
 
 /*  Miscellaneous functions that can be useful */
 
@@ -79,6 +80,7 @@ namespace Utils {
         void loadPrinterSettings(QPrinter *printer, QString settingsKey);
         bool isNoteEditingAllowed();
         QString unescapeHtml(QString html);
+        void closeDatabaseConnection(QSqlDatabase &db);
     }  // namespace Misc
 }  // namespace Utils
 

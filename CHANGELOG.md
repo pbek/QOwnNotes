@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 18.06.5
+- fixed some problems with note tagging after closing the note folder database
+  (for [#926](https://github.com/pbek/QOwnNotes/issues/926))
+
 ## 18.06.4
 - the pages in the *Settings dialog* are now scrollable to assure that all
   settings can be viewed on very low screen resolutions like on netbooks
