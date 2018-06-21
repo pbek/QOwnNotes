@@ -43,8 +43,16 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
         MasterDialog(parent), ui(new Ui::SettingsDialog) {
     ui->setupUi(this);
 
-    // we must not use resize(1, 1) because XFCE really resizes the window to 1x1
-    resize(400, 300);
+    MainWindow *mainWindow = MainWindow::instance();
+
+    // if there was no size set yet and we already have a main window we'll
+    // mimic that size
+    if (mainWindow != Q_NULLPTR) {
+        resize(mainWindow->width(), mainWindow->height());
+    } else {
+        // we must not use resize(1, 1) because XFCE really resizes the window to 1x1
+        resize(800, 600);
+    }
 
     QList<QWidget*> pageWidgets;
 
@@ -142,8 +150,6 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
     ui->appInstanceGroupBox->setVisible(false);
     ui->allowOnlyOneAppInstanceCheckBox->setChecked(false);
 #endif
-
-    MainWindow *mainWindow = MainWindow::instance();
 
     // disable the shortcut page if there is no main window yet
     if (mainWindow == Q_NULLPTR) {
