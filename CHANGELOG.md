@@ -6,7 +6,7 @@
 - tags in the `tag selected notes with...` context menu of the note list are
   now sorted by name (for [#947](https://github.com/pbek/QOwnNotes/issues/947))
 - the search line edits in the note-, tag- and subfolder-lists can now be 
-  cleared with the `Escape` key (for [#948](https://github.com/pbek/QOwnNotes/issues/948))
+  cleared with the <kdb>Escape</kdb> key (for [#948](https://github.com/pbek/QOwnNotes/issues/948))
 
 ## 18.06.5
 - disabled note folder database closing feature temporarily, since it breaks 
