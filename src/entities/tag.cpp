@@ -247,7 +247,7 @@ QList<Tag> Tag::fetchAll() {
     return tagList;
 }
 
-QList<Tag> Tag::fetchAllByParentId(int parentId) {
+QList<Tag> Tag::fetchAllByParentId(int parentId, QString sortBy) {
     QSqlDatabase db = QSqlDatabase::database("note_folder");
     QSqlQuery query(db);
     QList<Tag> tagList;
@@ -267,7 +267,7 @@ QList<Tag> Tag::fetchAllByParentId(int parentId) {
                   "FROM tag t LEFT JOIN noteTagLink l ON t.id = l.tag_id "
                   "WHERE parent_id = :parentId "
                   "GROUP BY t.name "
-                  "ORDER BY created DESC");
+                  "ORDER BY " + sortBy);
     query.bindValue(":parentId", parentId);
 
     if (!query.exec()) {

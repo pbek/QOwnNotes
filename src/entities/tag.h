@@ -81,7 +81,7 @@ public:
 
     void setParentId(int id);
 
-    static QList<Tag> fetchAllByParentId(int parentId);
+    static QList<Tag> fetchAllByParentId(int parentId, QString sortBy = "created DESC");
 
     static int countAllParentId(int parentId);
 

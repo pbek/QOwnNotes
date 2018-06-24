@@ -7626,7 +7626,7 @@ void MainWindow::buildTagMoveMenuTree(QMenu *parentMenu,
  */
 void MainWindow::buildBulkNoteTagMenuTree(QMenu *parentMenu,
                                           int parentTagId) {
-    QList<Tag> tagList = Tag::fetchAllByParentId(parentTagId);
+    QList<Tag> tagList = Tag::fetchAllByParentId(parentTagId, "t.name ASC");
     QSignalMapper *signalMapper = new QSignalMapper(this);
 
     Q_FOREACH(Tag tag, tagList) {
