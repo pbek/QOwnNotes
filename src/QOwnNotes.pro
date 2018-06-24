@@ -122,6 +122,7 @@ SOURCES += main.cpp\
     widgets/scriptsettingwidget.cpp \
     api/scriptapi.cpp \
     widgets/label.cpp \
+    widgets/lineedit.cpp \
     widgets/qtexteditsearchwidget.cpp \
     widgets/scriptlistwidget.cpp
 
@@ -200,6 +201,7 @@ HEADERS  += mainwindow.h \
     widgets/scriptsettingwidget.h \
     api/scriptapi.h \
     widgets/label.h \
+    widgets/lineedit.h \
     widgets/qtexteditsearchwidget.h \
     widgets/scriptlistwidget.h
 

@@ -228,6 +228,8 @@ set(SOURCE_FILES
     widgets/logwidget.ui
     widgets/label.cpp
     widgets/label.h
+    widgets/lineedit.cpp
+    widgets/lineedit.h
     widgets/scriptsettingwidget.cpp
     widgets/scriptsettingwidget.h
     widgets/scriptsettingwidget.ui

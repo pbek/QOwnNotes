@@ -103,7 +103,7 @@
              <number>0</number>
             </property>
             <item>
-             <widget class="QLineEdit" name="noteSubFolderLineEdit">
+             <widget class="LineEdit" name="noteSubFolderLineEdit">
               <property name="styleSheet">
                <string notr="true">QLineEdit {
 	border: none;
@@ -180,7 +180,7 @@
              <number>0</number>
             </property>
             <item>
-             <widget class="QLineEdit" name="tagLineEdit">
+             <widget class="LineEdit" name="tagLineEdit">
               <property name="styleSheet">
                <string notr="true">QLineEdit {
 	border: none;
@@ -287,7 +287,7 @@
              <number>0</number>
             </property>
             <item>
-             <widget class="QLineEdit" name="searchLineEdit">
+             <widget class="LineEdit" name="searchLineEdit">
               <property name="toolTip">
                <string>Search for notes or create new notes by entering text and pressing return</string>
               </property>
@@ -2219,11 +2219,16 @@ p, li { white-space: pre-wrap; }
    <extends>QComboBox</extends>
    <header location="global">widgets/combobox.h</header>
   </customwidget>
+  <customwidget>
+   <class>LineEdit</class>
+   <extends>QLineEdit</extends>
+   <header location="global">widgets/lineedit.h</header>
+  </customwidget>
  </customwidgets>
  <resources>
-  <include location="images.qrc"/>
   <include location="breeze-qownnotes.qrc"/>
   <include location="breeze-dark-qownnotes.qrc"/>
+  <include location="images.qrc"/>
  </resources>
  <connections/>
 </ui>
