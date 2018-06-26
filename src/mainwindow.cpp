@@ -7574,7 +7574,7 @@ void MainWindow::disableColorOfTagItem(QTreeWidgetItem *item) {
  */
 void MainWindow::buildTagMoveMenuTree(QMenu *parentMenu,
                                       int parentTagId) {
-    QList<Tag> tagList = Tag::fetchAllByParentId(parentTagId);
+    QList<Tag> tagList = Tag::fetchAllByParentId(parentTagId, "t.name ASC");
     QSignalMapper *tagMovingSignalMapper = new QSignalMapper(this);
 
     Q_FOREACH(Tag tag, tagList) {

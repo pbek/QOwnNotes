@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 18.06.7
+- tags in the `Move tag to...` context menu of the tag list are now sorted by name
+ (for [#947](https://github.com/pbek/QOwnNotes/issues/947))
+
 ## 18.06.6
 - improved setting the size of the settings dialog if it was opened for the 
   first time
