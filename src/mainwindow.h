@@ -519,6 +519,8 @@ private slots:
 
     void on_noteTreeWidget_itemDoubleClicked(QTreeWidgetItem *item, int column);
 
+    void on_noteTreeWidget_itemSelectionChanged();
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;

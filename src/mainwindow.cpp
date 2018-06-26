@@ -771,6 +771,7 @@ void MainWindow::initTagButtonScrollArea() {
     ui->noteTagFrame->layout()->addWidget(_noteTagButtonScrollArea);
     ui->noteTagFrame->layout()->addWidget(ui->newNoteTagButton);
     ui->noteTagFrame->layout()->addWidget(ui->newNoteTagLineEdit);
+    ui->selectedTagsToolButton->setVisible(false);
 }
 
 /**
@@ -10080,4 +10081,15 @@ void MainWindow::on_noteTreeWidget_itemDoubleClicked(QTreeWidgetItem *item,
 
     // call a script hook that a new note was double clicked
     ScriptingService::instance()->callHandleNoteDoubleClickedHook(&currentNote);
+}
+
+void MainWindow::on_noteTreeWidget_itemSelectionChanged() {
+    int itemCount = ui->noteTreeWidget->selectedItems().count();
+    ui->selectedTagsToolButton->setVisible(itemCount > 1);
+
+    if ( itemCount > 1 ) {
+        ui->selectedTagsToolButton->setText(QString::number(itemCount));
+        ui->selectedTagsToolButton->setToolTip(
+                tr("%n tags selected", "", itemCount));
+    }
 }

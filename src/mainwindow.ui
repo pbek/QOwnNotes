@@ -483,6 +483,20 @@
            </property>
            <layout class="QHBoxLayout" name="horizontalLayout">
             <item>
+             <widget class="QToolButton" name="selectedTagsToolButton">
+              <property name="text">
+               <string notr="true">2</string>
+              </property>
+              <property name="icon">
+               <iconset theme="text-x-generic" resource="breeze-qownnotes.qrc">
+                <normaloff>:/icons/breeze-qownnotes/16x16/text-x-generic.svg</normaloff>:/icons/breeze-qownnotes/16x16/text-x-generic.svg</iconset>
+              </property>
+              <property name="toolButtonStyle">
+               <enum>Qt::ToolButtonTextBesideIcon</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
              <widget class="QFrame" name="noteTagButtonFrame">
               <property name="frameShape">
                <enum>QFrame::NoFrame</enum>
