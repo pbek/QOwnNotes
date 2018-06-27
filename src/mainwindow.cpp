@@ -6006,7 +6006,14 @@ void MainWindow::on_actionInsert_code_block_triggered() {
     QString selectedText = c.selection().toPlainText();
 
     if (selectedText.isEmpty()) {
-        c.insertText("``");
+        // insert multi-line code block if cursor is in an empty line
+        if (c.atBlockStart() && c.atBlockEnd()) {
+            c.insertText("```\n\n```");
+            c.movePosition(QTextCursor::Left, QTextCursor::MoveAnchor, 3);
+        } else {
+            c.insertText("``");
+        }
+
         c.movePosition(QTextCursor::Left, QTextCursor::MoveAnchor);
         textEdit->setTextCursor(c);
     } else {
