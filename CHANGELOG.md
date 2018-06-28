@@ -10,6 +10,9 @@
   will remove or add tags from/to all those notes (for [#946](https://github.com/pbek/QOwnNotes/issues/946))
     - if notes are selected there will be a symbol in front of the tags to 
       show you how many notes are selected
+- added more Chinese Traditional, Brazilian Portuguese, Italian, Catalan, 
+  Dutch and Hungarian translation (thank you abev66, mlimacarlos, mlocati, 
+  MGuerra and Fabijenna)
 
 ## 18.06.6
 - improved setting the size of the settings dialog if it was opened for the 
