@@ -296,6 +296,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->encryptedNoteTextEdit->viewport()->installEventFilter(this);
     ui->tagTreeWidget->installEventFilter(this);
     ui->newNoteTagLineEdit->installEventFilter(this);
+    ui->selectedTagsToolButton->installEventFilter(this);
 
     // init the saved searches completer
     initSavedSearchesCompleter();
@@ -3467,8 +3468,7 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
             }
             return false;
         }
-    }
-    if (event->type() == QEvent::MouseButtonRelease) {
+    } else if (event->type() == QEvent::MouseButtonRelease) {
         QMouseEvent *mouseEvent = static_cast<QMouseEvent *>(event);
 
         if ((mouseEvent->button() == Qt::BackButton)) {
@@ -3478,6 +3478,10 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
             // move forward in the note history
             on_action_Forward_in_note_history_triggered();
         }
+    } else if (event->type() == QEvent::MouseButtonPress &&
+               obj == ui->selectedTagsToolButton) {
+        // we don't want to make the button clickable
+        return true;
     }
 
     return QMainWindow::eventFilter(obj, event);

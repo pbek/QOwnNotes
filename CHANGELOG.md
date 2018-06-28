@@ -6,6 +6,10 @@
 - if a code block is inserted in an empty line then automatically a multi-line
   code block will be inserted instead of an inline code block
   (for [#912](https://github.com/pbek/QOwnNotes/issues/912))
+- the *Note tags* panel now shows the tags of all selected notes and also
+  will remove or add tags from/to all those notes (for [#946](https://github.com/pbek/QOwnNotes/issues/946))
+    - if notes are selected there will be a symbol in front of the tags to 
+      show you how many notes are selected
 
 ## 18.06.6
 - improved setting the size of the settings dialog if it was opened for the 
