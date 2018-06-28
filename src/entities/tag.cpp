@@ -158,6 +158,7 @@ bool Tag::remove() {
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
+        Utils::Misc::closeDatabaseConnection(db);
         return false;
     } else {
         // remove all children tags
@@ -374,6 +375,27 @@ QList<Tag> Tag::fetchAllOfNote(Note note) {
     Utils::Misc::closeDatabaseConnection(db);
 
     return tagList;
+}
+
+/**
+ * Fetches all linked tags of a list of notes
+ */
+QList<Tag> Tag::fetchAllOfNotes(QList<Note> notes) {
+    QList<Tag> resultTagList;
+
+    Q_FOREACH (Note note, notes) {
+            QList<Tag> tagList = Tag::fetchAllOfNote(note);
+
+            Q_FOREACH (Tag tag, tagList) {
+                    if (!resultTagList.contains(tag)) {
+                        resultTagList.append(tag);
+                    }
+            }
+    }
+
+    qSort(resultTagList);
+
+    return resultTagList;
 }
 
 /**
@@ -987,6 +1009,14 @@ void Tag::migrateDarkColors() {
 
     // set the dark mode to the old value
     settings.setValue("darkMode", darkMode);
+}
+
+bool Tag::operator==(const Tag &tag) const {
+    return id == tag.id;
+}
+
+bool Tag::operator<(const Tag &tag) const {
+    return name < tag.name;
 }
 
 QDebug operator<<(QDebug dbg, const Tag &tag) {

@@ -132,7 +132,8 @@ public:
 
     QString selectedNoteTextEditText();
 
-    void linkTagNameToCurrentNote(QString tagName);
+    void linkTagNameToCurrentNote(QString tagName,
+                                  bool linkToSelectedNotes = false);
 
     Q_INVOKABLE void reloadTagTree();
 
@@ -900,4 +901,6 @@ private:
             QOwnNotesMarkdownTextEdit *noteTextEdit, const QPoint &pos);
 
     void updateNoteTextEditReadOnly();
+
+    int getSelectedNotesCount() const;
 };

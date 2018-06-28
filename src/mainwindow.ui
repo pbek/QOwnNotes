@@ -523,7 +523,7 @@
             <item>
              <widget class="QPushButton" name="newNoteTagButton">
               <property name="toolTip">
-               <string>add a tag to this note</string>
+               <string>Add a tag to the current note</string>
               </property>
               <property name="text">
                <string>Add tag</string>

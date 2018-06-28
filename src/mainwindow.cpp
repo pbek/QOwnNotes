@@ -3374,7 +3374,7 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
                 Tag tag = Tag::fetchByName(ui->newNoteTagLineEdit->text(),
                                            true);
                 if (tag.isFetched()) {
-                    linkTagNameToCurrentNote(tag.getName());
+                    linkTagNameToCurrentNote(tag.getName(), true);
                 }
 
                 return false;
@@ -3730,7 +3730,7 @@ void MainWindow::removeSelectedNotes() {
     // store updated notes to disk
     storeUpdatedNotesToDisk();
 
-    int selectedItemsCount = ui->noteTreeWidget->selectedItems().count();
+    int selectedItemsCount = getSelectedNotesCount();
 
     if (selectedItemsCount == 0) {
         return;
@@ -7003,15 +7003,16 @@ void MainWindow::on_newNoteTagButton_clicked() {
  */
 void MainWindow::on_newNoteTagLineEdit_returnPressed() {
     QString text = ui->newNoteTagLineEdit->text();
-    linkTagNameToCurrentNote(text);
+    linkTagNameToCurrentNote(text, true);
 }
 
 /**
- * Links a tag to the current note
+ * Links a tag to the current note (or all selected notes)
  *
  * @param tagName
  */
-void MainWindow::linkTagNameToCurrentNote(QString tagName) {
+void MainWindow::linkTagNameToCurrentNote(QString tagName,
+                                          bool linkToSelectedNotes) {
     if (tagName.isEmpty()) {
         return;
     }
@@ -7031,10 +7032,26 @@ void MainWindow::linkTagNameToCurrentNote(QString tagName) {
         const QSignalBlocker blocker(noteDirectoryWatcher);
         Q_UNUSED(blocker);
 
-        tag.linkToNote(currentNote);
+        int selectedNotesCount = getSelectedNotesCount();
 
-        // add the tag to the note text if defined via scripting engine
-        handleScriptingNoteTagging(currentNote, tagName, false, false);
+        if (linkToSelectedNotes && selectedNotesCount > 1) {
+            Q_FOREACH (Note note, selectedNotes()) {
+                    if (tag.isLinkedToNote(note)) {
+                        continue;
+                    }
+
+                    tag.linkToNote(note);
+
+                    // add the tag to the note text if defined via scripting
+                    // engine
+                    handleScriptingNoteTagging(note, tagName, false, false);
+                }
+        } else {
+            tag.linkToNote(currentNote);
+
+            // add the tag to the note text if defined via scripting engine
+            handleScriptingNoteTagging(currentNote, tagName, false, false);
+        }
 
         reloadCurrentNoteTags();
         reloadTagTree();
@@ -7228,7 +7245,7 @@ void MainWindow::on_newNoteTagLineEdit_editingFinished() {
 }
 
 /**
- * Reloads the note tag buttons for the current note
+ * Reloads the note tag buttons for the current note (or the selected notes)
  */
 void MainWindow::reloadCurrentNoteTags() {
     // remove all remove-tag buttons
@@ -7238,8 +7255,26 @@ void MainWindow::reloadCurrentNoteTags() {
         delete child;
     }
 
+    int selectedNotesCount = getSelectedNotesCount();
+    bool currentNoteOnly = selectedNotesCount <= 1;
+    ui->selectedTagsToolButton->setVisible(!currentNoteOnly);
+    ui->newNoteTagButton->setToolTip(
+            currentNoteOnly ? tr( "Add a tag to the current note") :
+            tr("Add a tag to the selected notes"));
+    QList<Tag> tagList;
+
+    if (currentNoteOnly) {
+        tagList = Tag::fetchAllOfNote(currentNote);
+    } else {
+        tagList = Tag::fetchAllOfNotes(selectedNotes());
+
+        ui->selectedTagsToolButton->setText(QString::number(
+                selectedNotesCount));
+        ui->selectedTagsToolButton->setToolTip(
+                tr("%n notes selected", "", selectedNotesCount));
+    }
+
     // add all new remove-tag buttons
-    QList<Tag> tagList = Tag::fetchAllOfNote(currentNote);
     Q_FOREACH(Tag tag, tagList) {
             QPushButton* button = new QPushButton(
                     Utils::Misc::shorten(tag.getName(), 25),
@@ -7249,7 +7284,11 @@ void MainWindow::reloadCurrentNoteTags() {
                     QIcon(":icons/breeze-qownnotes/16x16/"
                                   "xml-attribute-delete.svg")));
             button->setToolTip(
-                    tr("remove tag '%1' from note").arg(tag.getName()));
+                    currentNoteOnly ?
+                    tr("Remove tag '%1' from the current note").arg(
+                            tag.getName()) :
+                    tr("Remove tag '%1' from the selected notes").arg(
+                            tag.getName()));
             button->setObjectName(
                     "removeNoteTag" + QString::number(tag.getId()));
 
@@ -7258,6 +7297,12 @@ void MainWindow::reloadCurrentNoteTags() {
 
             ui->noteTagButtonFrame->layout()->addWidget(button);
         }
+
+//    // find tags not in common of selected notes
+//    if (selectedNotesCount > 1) {
+//        QLabel *noteTagButtonFrame = new QLabel("+3 tags");
+//        ui->noteTagButtonFrame->layout()->addWidget(noteTagButtonFrame);
+//    }
 
     // add a spacer to prevent the button items to take the full width
     QSpacerItem *spacer = new QSpacerItem(0, 20,
@@ -7281,10 +7326,26 @@ void MainWindow::removeNoteTagClicked() {
         // workaround when signal blocking doesn't work correctly
         directoryWatcherWorkaround(true, true);
 
-        tag.removeLinkToNote(currentNote);
+        int selectedNotesCount = getSelectedNotesCount();
 
-        // remove the tag from the note text if defined via scripting engine
-        handleScriptingNoteTagging(currentNote, tag.getName(), true);
+        if (selectedNotesCount <= 1) {
+            tag.removeLinkToNote(currentNote);
+
+            // remove the tag from the note text if defined via scripting engine
+            handleScriptingNoteTagging(currentNote, tag.getName(), true);
+        } else {
+            Q_FOREACH (Note note, selectedNotes()) {
+                    if (!tag.isLinkedToNote(note)) {
+                        continue;
+                    }
+
+                    tag.removeLinkToNote(note);
+
+                    // remove the tag from the note text if defined via
+                    // scripting engine
+                    handleScriptingNoteTagging(note, tag.getName(), true);
+                }
+        }
 
         reloadCurrentNoteTags();
         reloadTagTree();
@@ -7296,6 +7357,10 @@ void MainWindow::removeNoteTagClicked() {
         // disable workaround
         directoryWatcherWorkaround(false, true);
     }
+}
+
+int MainWindow::getSelectedNotesCount() const {
+    return ui->noteTreeWidget->selectedItems().count();
 }
 
 /**
@@ -7953,7 +8018,7 @@ void MainWindow::copySelectedNotesToNoteSubFolder(NoteSubFolder noteSubFolder) {
 }
 
 /**
- * Retruns true if one of the selected notes has a linked tag
+ * Returns true if one of the selected notes has a linked tag
  *
  * @return
  */
@@ -10090,13 +10155,14 @@ void MainWindow::on_noteTreeWidget_itemDoubleClicked(QTreeWidgetItem *item,
     ScriptingService::instance()->callHandleNoteDoubleClickedHook(&currentNote);
 }
 
+/**
+ * Reloads the current note (and selected notes) tags if there were selected
+ * multiple notes
+ */
 void MainWindow::on_noteTreeWidget_itemSelectionChanged() {
-    int itemCount = ui->noteTreeWidget->selectedItems().count();
-    ui->selectedTagsToolButton->setVisible(itemCount > 1);
+    int itemCount = getSelectedNotesCount();
 
-    if ( itemCount > 1 ) {
-        ui->selectedTagsToolButton->setText(QString::number(itemCount));
-        ui->selectedTagsToolButton->setToolTip(
-                tr("%n tags selected", "", itemCount));
+    if (itemCount != 1) {
+        reloadCurrentNoteTags();
     }
 }

@@ -515,176 +515,181 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.ui" line="532"/>
         <source>add a tag to this note</source>
-        <translation>dodaj oznaku ovoj bilješci</translation>
+        <translation type="vanished">dodaj oznaku ovoj bilješci</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="535"/>
+        <location filename="../mainwindow.ui" line="529"/>
         <source>Add tag</source>
         <translation>Dodaj oznaku</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="387"/>
-        <location filename="../mainwindow.ui" line="744"/>
+        <location filename="../mainwindow.ui" line="738"/>
         <location filename="../mainwindow.cpp" line="614"/>
         <source>Navigation</source>
         <translation>Navigacija</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="702"/>
+        <location filename="../mainwindow.ui" line="526"/>
+        <location filename="../mainwindow.cpp" line="7262"/>
+        <source>Add a tag to the current note</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="696"/>
         <source>&amp;Note</source>
         <translation>&amp;Bilješka</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="706"/>
+        <location filename="../mainwindow.ui" line="700"/>
         <source>Note &amp;folders</source>
         <translation>&amp;Mape s bilješkama</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="711"/>
+        <location filename="../mainwindow.ui" line="705"/>
         <source>Sort by</source>
         <translation>Poredaj po</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="816"/>
+        <location filename="../mainwindow.ui" line="810"/>
         <source>&amp;Help</source>
         <translation>&amp;Pomoć</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="952"/>
+        <location filename="../mainwindow.ui" line="946"/>
         <source>Editor width in distraction free mode</source>
         <translation>Proširi urednik u modus bez ometanja</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="955"/>
+        <location filename="../mainwindow.ui" line="949"/>
         <source>Editor width</source>
         <translation>Širina urednika</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1030"/>
+        <location filename="../mainwindow.ui" line="1024"/>
         <source>Custom actions</source>
         <translation>Korisničke akcije</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1050"/>
+        <location filename="../mainwindow.ui" line="1044"/>
         <source>main toolbar</source>
         <translation>glavna alatna traka</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1084"/>
+        <location filename="../mainwindow.ui" line="1078"/>
         <source>&amp;Quit</source>
         <translation>&amp;Završi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1099"/>
+        <location filename="../mainwindow.ui" line="1093"/>
         <source>&amp;Setup note folders</source>
         <translation>&amp;Postavljanje mapa bilješki</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1108"/>
+        <location filename="../mainwindow.ui" line="1102"/>
         <source>&amp;Find note</source>
         <translation>&amp;Nađi bilješku</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1120"/>
+        <location filename="../mainwindow.ui" line="1114"/>
         <source>&amp;Remove current note</source>
         <translation>&amp;Izbriši izabranu bilješku</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1132"/>
+        <location filename="../mainwindow.ui" line="1126"/>
         <source>About &amp;QOwnNotes...</source>
         <translation>O &amp;QOwnNotes...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1144"/>
+        <location filename="../mainwindow.ui" line="1138"/>
         <source>&amp;New note</source>
         <translation>&amp;Nova bilješka</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1156"/>
+        <location filename="../mainwindow.ui" line="1150"/>
         <source>Check for &amp;updates</source>
         <translation>Provjeri &amp;ažuriranja</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1168"/>
+        <location filename="../mainwindow.ui" line="1162"/>
         <source>Report &amp;issues or ideas</source>
         <translation>Objavi &amp;probleme ili ideje</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1176"/>
+        <location filename="../mainwindow.ui" line="1170"/>
         <source>Alphabetical</source>
         <translation>Abecedi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1179"/>
+        <location filename="../mainwindow.ui" line="1173"/>
         <source>Sort alphabetical</source>
         <translation>Poredaj po abecedi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1187"/>
+        <location filename="../mainwindow.ui" line="1181"/>
         <source>By date</source>
         <translation>Po datumu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1190"/>
+        <location filename="../mainwindow.ui" line="1184"/>
         <source>Sort by date</source>
         <translation>Poredaj po datumu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1214"/>
+        <location filename="../mainwindow.ui" line="1208"/>
         <source>Show note &amp;versions</source>
         <translation>Pokaži &amp;verzije bilješke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1217"/>
+        <location filename="../mainwindow.ui" line="1211"/>
         <source>Show note versions on server</source>
         <translation>Pokaži verzije bilješke na serveru</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1229"/>
+        <location filename="../mainwindow.ui" line="1223"/>
         <source>Show trashed notes on server</source>
         <translation>Pokaži obrisane bilješke na serveru</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1234"/>
-        <location filename="../mainwindow.cpp" line="8575"/>
+        <location filename="../mainwindow.ui" line="1228"/>
+        <location filename="../mainwindow.cpp" line="8647"/>
         <source>Select &amp;all notes</source>
         <translation>Izaberi &amp;sve bilješke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1243"/>
+        <location filename="../mainwindow.ui" line="1237"/>
         <location filename="../mainwindow.cpp" line="5473"/>
         <source>Insert &amp;link</source>
         <translation>Umetni &amp;poveznicu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1246"/>
+        <location filename="../mainwindow.ui" line="1240"/>
         <source>Insert link to an url or a note</source>
         <translation>Umetni poveznicu na URL ili bilješku</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1258"/>
+        <location filename="../mainwindow.ui" line="1252"/>
         <source>&amp;Find in current note</source>
         <translation>&amp;Nađi u izabranoj bilješci</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1261"/>
+        <location filename="../mainwindow.ui" line="1255"/>
         <source>Find text in current note</source>
         <translation>Traži tekst u izabranoj bilješci</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1266"/>
+        <location filename="../mainwindow.ui" line="1260"/>
         <source>&amp;Duplicate text</source>
         <translation>&amp;Udvostruči tekst</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1278"/>
+        <location filename="../mainwindow.ui" line="1272"/>
         <source>&amp;Back in note history</source>
         <translation>&amp;Vrati na prijašnju verziju bilješke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1199"/>
+        <location filename="../mainwindow.ui" line="1193"/>
         <source>&amp;Settings</source>
         <translation>&amp;Postavke</translation>
     </message>
@@ -709,582 +714,587 @@
         <translation>Nađi ili stvori bilješku</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="546"/>
+        <location filename="../mainwindow.cpp" line="7263"/>
+        <source>Add a tag to the selected notes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="540"/>
         <source>New tag</source>
         <translation>Nova oznaka</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="721"/>
+        <location filename="../mainwindow.ui" line="715"/>
         <location filename="../mainwindow.cpp" line="5449"/>
         <source>Export</source>
         <translation>Eksport</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="734"/>
+        <location filename="../mainwindow.ui" line="728"/>
         <source>Import</source>
         <translation>Import</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="757"/>
+        <location filename="../mainwindow.ui" line="751"/>
         <location filename="../mainwindow.cpp" line="5431"/>
         <source>Print</source>
         <translation>Ispis</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="768"/>
+        <location filename="../mainwindow.ui" line="762"/>
         <source>View note</source>
         <translation>Pregled bilješke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="780"/>
+        <location filename="../mainwindow.ui" line="774"/>
         <source>Trash</source>
         <translation type="unfinished">Trash</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="845"/>
+        <location filename="../mainwindow.ui" line="839"/>
         <source>&amp;Edit</source>
         <translation>&amp;Uredi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="849"/>
+        <location filename="../mainwindow.ui" line="843"/>
         <source>Insert</source>
         <translation>Umetni</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="866"/>
+        <location filename="../mainwindow.ui" line="860"/>
         <source>Format</source>
         <translation>Oblikuj</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="879"/>
+        <location filename="../mainwindow.ui" line="873"/>
         <source>Extra</source>
         <translation>Dodatno</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="892"/>
+        <location filename="../mainwindow.ui" line="886"/>
         <source>Edit</source>
         <translation>Uredi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="904"/>
+        <location filename="../mainwindow.ui" line="898"/>
         <source>Versioning</source>
         <translation>Verzioniranje</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="915"/>
+        <location filename="../mainwindow.ui" line="909"/>
         <source>Encryption</source>
         <translation>Šifriranje</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="942"/>
+        <location filename="../mainwindow.ui" line="936"/>
         <source>To&amp;do</source>
         <translation>&amp;Zadatci</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="948"/>
+        <location filename="../mainwindow.ui" line="942"/>
         <source>&amp;Window</source>
         <translation>&amp;Prozor</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="964"/>
+        <location filename="../mainwindow.ui" line="958"/>
         <location filename="../mainwindow.cpp" line="553"/>
         <source>Workspaces</source>
         <translation>Radne površine</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="969"/>
+        <location filename="../mainwindow.ui" line="963"/>
         <source>Panels</source>
         <translation>Ploče</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="974"/>
+        <location filename="../mainwindow.ui" line="968"/>
         <source>Toolbars</source>
         <translation>Alatne trake</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="979"/>
+        <location filename="../mainwindow.ui" line="973"/>
         <source>Show</source>
         <extracomment>To show or hide stuff</extracomment>
         <translation>Prikaži</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="993"/>
+        <location filename="../mainwindow.ui" line="987"/>
         <source>Workspace</source>
         <translation>Radna površina</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1026"/>
+        <location filename="../mainwindow.ui" line="1020"/>
         <source>&amp;Scripting</source>
         <translation>&amp;Skriptiranje</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1226"/>
+        <location filename="../mainwindow.ui" line="1220"/>
         <source>Show remote trash</source>
         <translation type="unfinished">Show remote trash</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1290"/>
+        <location filename="../mainwindow.ui" line="1284"/>
         <source>Forward in note history</source>
         <translation>Naprijed u povijesti bilješke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1302"/>
+        <location filename="../mainwindow.ui" line="1296"/>
         <source>Show shortcuts</source>
         <translation>Prikaži kratice</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1311"/>
+        <location filename="../mainwindow.ui" line="1305"/>
         <source>&amp;Knowledge base</source>
         <translation>&amp;Baza znanja</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1320"/>
+        <location filename="../mainwindow.ui" line="1314"/>
         <source>Insert current &amp;time</source>
         <translation>Umetni trenutno &amp;vrijeme</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1332"/>
+        <location filename="../mainwindow.ui" line="1326"/>
         <source>Show &amp;Todo List</source>
         <translation>Prikaži &amp;listu zadataka</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1344"/>
+        <location filename="../mainwindow.ui" line="1338"/>
         <source>&amp;Export note as PDF (preview)</source>
         <translation type="unfinished">&amp;Export note as PDF (preview)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1347"/>
+        <location filename="../mainwindow.ui" line="1341"/>
         <source>Export note as PDF (preview)</source>
         <translation type="unfinished">Export note as PDF (preview)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1356"/>
+        <location filename="../mainwindow.ui" line="1350"/>
         <source>&amp;Export note as PDF (text)</source>
         <translation>&amp;Eksport bilješke u PDF (tekst)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1365"/>
+        <location filename="../mainwindow.ui" line="1359"/>
         <source>&amp;Print note (text)</source>
         <translation>&amp;Ispiši bilješku (tekst)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1389"/>
+        <location filename="../mainwindow.ui" line="1383"/>
         <source>Insert &amp;image</source>
         <translation>Umetni &amp;sliku</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1392"/>
+        <location filename="../mainwindow.ui" line="1386"/>
         <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
         <translation>Umetni sliku (slika će biti kopirana u mapu &apos;medija&apos; izabrene bilješke)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1404"/>
+        <location filename="../mainwindow.ui" line="1398"/>
         <source>Show &amp;changelog</source>
         <translation>Prikaži &amp;protokol promjena</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1413"/>
+        <location filename="../mainwindow.ui" line="1407"/>
         <source>&amp;Encrypt note</source>
         <translation>&amp;Šifriraj bilješku</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1422"/>
+        <location filename="../mainwindow.ui" line="1416"/>
         <source>Edit encrypted note</source>
         <translation>Uredi šifriranu bilješku</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1434"/>
+        <location filename="../mainwindow.ui" line="1428"/>
         <source>Decrypt note</source>
         <translation>Dešifriraj bilješku</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1443"/>
+        <location filename="../mainwindow.ui" line="1437"/>
         <source>&amp;Open note in external editor</source>
         <translation>&amp;Otvori bilješku u vanjskom uredniku</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1455"/>
+        <location filename="../mainwindow.ui" line="1449"/>
         <source>&amp;Export note as markdown file</source>
         <translation>&amp;Eksport bilješke u sažetu datoteku</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1464"/>
+        <location filename="../mainwindow.ui" line="1458"/>
         <source>&amp;Get involved</source>
         <translation>&amp;Uključi se</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1473"/>
+        <location filename="../mainwindow.ui" line="1467"/>
         <source>Insert &amp;code block</source>
         <translation>Umetni &amp;kod blok</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1485"/>
+        <location filename="../mainwindow.ui" line="1479"/>
         <source>Next note</source>
         <translation>Sljedeća bilješka</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1497"/>
+        <location filename="../mainwindow.ui" line="1491"/>
         <source>Previous note</source>
         <translation>Prethodna bilješka</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1509"/>
+        <location filename="../mainwindow.ui" line="1503"/>
         <source>&amp;Distraction free mode</source>
         <translation>&amp;Modus bez ometanja</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1512"/>
+        <location filename="../mainwindow.ui" line="1506"/>
         <source>Distraction free mode, you can leave it with a button on the bottom right</source>
         <translation>Modus bez ometanja, možete ga napustiti pritiskom na gumb u donjem desnom kutu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1523"/>
+        <location filename="../mainwindow.ui" line="1517"/>
         <source>Show &amp;toolbar</source>
         <translation>Prikaži &amp;alatnu traku</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1531"/>
+        <location filename="../mainwindow.ui" line="1525"/>
         <source>Narrow</source>
         <translation>Usko</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1542"/>
+        <location filename="../mainwindow.ui" line="1536"/>
         <source>Medium</source>
         <translation>Srednje</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1553"/>
+        <location filename="../mainwindow.ui" line="1547"/>
         <source>Wide</source>
         <translation>Široko</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1564"/>
+        <location filename="../mainwindow.ui" line="1558"/>
         <source>Full</source>
         <translation>Potpuno</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1576"/>
+        <location filename="../mainwindow.ui" line="1570"/>
         <source>Paste html or media</source>
         <translation>Zalijepi html ili medij</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1579"/>
-        <location filename="../mainwindow.ui" line="1582"/>
+        <location filename="../mainwindow.ui" line="1573"/>
+        <location filename="../mainwindow.ui" line="1576"/>
         <source>Paste images, notes and html from the clipboard</source>
         <translation>Zalijepi slike, bilješke i html iz međuspremnika</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1594"/>
+        <location filename="../mainwindow.ui" line="1588"/>
         <source>Show note in &amp;file manager</source>
         <translation>Prikaz bilješki u &amp;upravljaču datoteka</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1606"/>
+        <location filename="../mainwindow.ui" line="1600"/>
         <source>Format text &amp;bold</source>
         <translation>Format teksta &amp;podebljano</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1618"/>
+        <location filename="../mainwindow.ui" line="1612"/>
         <source>Format text &amp;italic</source>
         <translation>Format teksta &amp;kurziv</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1630"/>
+        <location filename="../mainwindow.ui" line="1624"/>
         <source>&amp;Increase note text size</source>
         <translation>&amp;Povećaj veličinu teksta bilješke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1642"/>
+        <location filename="../mainwindow.ui" line="1636"/>
         <source>&amp;Decrease note text size</source>
         <translation>&amp;Smanji veličinu teksta bilješke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1654"/>
+        <location filename="../mainwindow.ui" line="1648"/>
         <source>&amp;Reset note text size</source>
         <translation>&amp;Povrati veličinu teksta bilješke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1666"/>
+        <location filename="../mainwindow.ui" line="1660"/>
         <source>&amp;Add tag to note</source>
         <translation>&amp;Dodaj oznaku bilješki</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1678"/>
+        <location filename="../mainwindow.ui" line="1672"/>
         <source>&amp;Reload note folder</source>
         <translation>&amp;Ponovno učitaj mapu bilježaka</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1750"/>
+        <location filename="../mainwindow.ui" line="1744"/>
         <source>Show log</source>
         <translation>Prikaz protokola</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1759"/>
+        <location filename="../mainwindow.ui" line="1753"/>
         <source>Export note as HTML</source>
         <translation>Eksportiraj bilješku kao HTML</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1838"/>
+        <location filename="../mainwindow.ui" line="1832"/>
         <source>Cycle text case</source>
         <translation>Promijeni verzal teksta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1929"/>
+        <location filename="../mainwindow.ui" line="1923"/>
         <source>Find notes in all tags / subfolders</source>
         <translation>Pronađi bilješke u svim oznakama / podmapama</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1950"/>
+        <location filename="../mainwindow.ui" line="1944"/>
         <source>Manage orphaned image files</source>
         <translation type="unfinished">Manage orphaned image files</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1977"/>
+        <location filename="../mainwindow.ui" line="1971"/>
         <source>Unlock panels</source>
         <translation>Otključaj kontrolnu ploču</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1986"/>
-        <location filename="../mainwindow.cpp" line="9536"/>
+        <location filename="../mainwindow.ui" line="1980"/>
+        <location filename="../mainwindow.cpp" line="9608"/>
         <source>Remove current workspace</source>
         <translation>Ukloni izabrani radni prostor</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1995"/>
+        <location filename="../mainwindow.ui" line="1989"/>
         <source>Add new workspace</source>
         <translation>Dodaj novi radni prostor</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2004"/>
+        <location filename="../mainwindow.ui" line="1998"/>
         <source>Rename current workspace</source>
         <translation>Preimenuj izabrani radni prostor</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2013"/>
+        <location filename="../mainwindow.ui" line="2007"/>
         <source>Switch to previous workspace</source>
         <translation>Prebaci na prethodni radni prostor</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2021"/>
+        <location filename="../mainwindow.ui" line="2015"/>
         <source>Show all panels</source>
         <translation>Prikaži sve kontrolne ploče</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2030"/>
+        <location filename="../mainwindow.ui" line="2024"/>
         <source>Find action</source>
         <translation>Nađi akciju</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2033"/>
-        <location filename="../mainwindow.ui" line="2036"/>
+        <location filename="../mainwindow.ui" line="2027"/>
+        <location filename="../mainwindow.ui" line="2030"/>
         <source>Find an action from the menu</source>
         <translation>Pronađi akciju na izborniku</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2048"/>
+        <location filename="../mainwindow.ui" line="2042"/>
         <source>Insert table</source>
         <translation>Umetni tablicu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2060"/>
+        <location filename="../mainwindow.ui" line="2054"/>
         <source>Insert block &amp;quote</source>
         <translation>Umetni &amp;citat blok</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2068"/>
-        <location filename="../mainwindow.ui" line="2071"/>
+        <location filename="../mainwindow.ui" line="2062"/>
+        <location filename="../mainwindow.ui" line="2065"/>
         <source>Search selected text on the web</source>
         <translation type="unfinished">Search selected text on the web</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2079"/>
+        <location filename="../mainwindow.ui" line="2073"/>
         <source>Delete line</source>
         <translation>Izbriši redak</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2087"/>
+        <location filename="../mainwindow.ui" line="2081"/>
         <source>Delete word</source>
         <translation>Izbriši riječ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2099"/>
-        <location filename="../mainwindow.cpp" line="8555"/>
+        <location filename="../mainwindow.ui" line="2093"/>
+        <location filename="../mainwindow.cpp" line="8627"/>
         <source>Open note in different window</source>
         <translation>Otvori bilješku u drugom prozoru</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2111"/>
+        <location filename="../mainwindow.ui" line="2105"/>
         <source>Save modified notes</source>
         <translation>Spremi promjene u bilješci</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2122"/>
+        <location filename="../mainwindow.ui" line="2116"/>
         <source>Ascending</source>
         <translation>Uzlazno</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2130"/>
+        <location filename="../mainwindow.ui" line="2124"/>
         <source>Descending</source>
         <translation>Silazno</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2139"/>
-        <location filename="../mainwindow.cpp" line="8562"/>
+        <location filename="../mainwindow.ui" line="2133"/>
+        <location filename="../mainwindow.cpp" line="8634"/>
         <source>Show note git versions</source>
         <translation>Prikaži git verzije bilješke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2148"/>
+        <location filename="../mainwindow.ui" line="2142"/>
         <source>Find scripts in script repository</source>
         <translation>Potraži skripte u repozitoriju skripti</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2160"/>
+        <location filename="../mainwindow.ui" line="2154"/>
         <source>Script settings</source>
         <translation>Postavke skripta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2169"/>
+        <location filename="../mainwindow.ui" line="2163"/>
         <source>Insert attachment</source>
         <translation>Umetni privitak</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2196"/>
+        <location filename="../mainwindow.ui" line="2190"/>
         <source>Check for script updates</source>
         <translation type="unfinished">Check for script updates</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2205"/>
+        <location filename="../mainwindow.ui" line="2199"/>
         <source>Show local trash</source>
         <translation type="unfinished">Show local trash</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2210"/>
-        <location filename="../mainwindow.ui" line="2213"/>
+        <location filename="../mainwindow.ui" line="2204"/>
+        <location filename="../mainwindow.ui" line="2207"/>
         <source>Jump to note edit panel</source>
         <translation type="unfinished">Jump to note edit panel</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1689"/>
+        <location filename="../mainwindow.ui" line="1683"/>
         <source>Use &amp;vertical preview layout</source>
         <translation>Upotrijebi &amp;vertikalni pretpregled izgleda</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1692"/>
-        <location filename="../mainwindow.ui" line="1695"/>
+        <location filename="../mainwindow.ui" line="1686"/>
+        <location filename="../mainwindow.ui" line="1689"/>
         <source>The note edit panel will be above the preview panel</source>
         <translation>Korisnička ploča za uređivanje bilješki biti će iznad ploče za prepregled</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1704"/>
+        <location filename="../mainwindow.ui" line="1698"/>
         <source>Replace in current note</source>
         <translation>Zamijeni u izabranoj bilješci</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1712"/>
+        <location filename="../mainwindow.ui" line="1706"/>
         <source>Autocomplete, solve equation or open URL</source>
         <translation>Dopuni automatski, riješi jednadžbu ili otvori URL</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1715"/>
+        <location filename="../mainwindow.ui" line="1709"/>
         <source>Solve a simple equation like &apos;(2+3)*6=&apos; in the current line</source>
         <translation>Riješi jednostavne jednadžbe kao &apos;(2+3) * 6 =&apos; u izabranom redku</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1723"/>
+        <location filename="../mainwindow.ui" line="1717"/>
         <source>Select note folder</source>
         <translation>Odaberi mapu bilježke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1738"/>
+        <location filename="../mainwindow.ui" line="1732"/>
         <source>Reload scripting engine</source>
         <translation>Ponovno učitaj skripting modul</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1771"/>
-        <location filename="../mainwindow.ui" line="1774"/>
+        <location filename="../mainwindow.ui" line="1765"/>
+        <location filename="../mainwindow.ui" line="1768"/>
         <source>Open the #qownnotes IRC channel, you have to stay online to get a response</source>
         <translation>Otvori #qownnotes IRC kanal, ostani na vezi za odgovor</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1911"/>
+        <location filename="../mainwindow.ui" line="1905"/>
         <source>Show note list under tag pane</source>
         <translation>Pokaži popis bilješki pod panelom oznake</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1962"/>
-        <location filename="../mainwindow.ui" line="1965"/>
+        <location filename="../mainwindow.ui" line="1956"/>
+        <location filename="../mainwindow.ui" line="1959"/>
         <source>Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</source>
         <translation>Otvori qownnotes Gitter sobu, potreban je GitHub ili Twitter račun za prijavu, možete primiti poruke offline</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="820"/>
+        <location filename="../mainwindow.ui" line="814"/>
         <source>Open chat</source>
         <translation>Otvori razgovor</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1377"/>
+        <location filename="../mainwindow.ui" line="1371"/>
         <source>&amp;Print note (preview)</source>
         <translation type="unfinished">&amp;Print note (preview)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1783"/>
+        <location filename="../mainwindow.ui" line="1777"/>
         <source>Insert headline from note filename</source>
         <translation>Umetni naslov iz naziva datoteke bilješke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1797"/>
+        <location filename="../mainwindow.ui" line="1791"/>
         <source>Use softwrap in note editor and preview</source>
         <translation>Koristi prijelom u uređivaču bilješki i pregledu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1805"/>
+        <location filename="../mainwindow.ui" line="1799"/>
         <source>Show status bar</source>
         <translation>Prikaži traku statusa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1820"/>
+        <location filename="../mainwindow.ui" line="1814"/>
         <source>Share note</source>
         <translation>Podijeli bilješku</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1850"/>
+        <location filename="../mainwindow.ui" line="1844"/>
         <source>Markdown cheatsheet</source>
         <translation>Stranica sa oznakama</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1859"/>
+        <location filename="../mainwindow.ui" line="1853"/>
         <source>Strike out text</source>
         <translation>Precrtaj tekst</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1870"/>
+        <location filename="../mainwindow.ui" line="1864"/>
         <source>Use one column mode</source>
         <translation>Koristi jedan stupac</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1873"/>
-        <location filename="../mainwindow.ui" line="1876"/>
+        <location filename="../mainwindow.ui" line="1867"/>
+        <location filename="../mainwindow.ui" line="1870"/>
         <source>Use a one column minimal mode (like NVAlt)</source>
         <translation>Koristi jedan stupac u minimalnom načinu (kao NVAlt)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1888"/>
+        <location filename="../mainwindow.ui" line="1882"/>
         <source>Show menu bar</source>
         <translation>Prikaz trake izbornika</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1900"/>
+        <location filename="../mainwindow.ui" line="1894"/>
         <source>Split note at cursor position</source>
         <translation>Podijeli bilješku na položaju pokazivača</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1920"/>
+        <location filename="../mainwindow.ui" line="1914"/>
         <source>Donate</source>
         <translation>Daruj</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1941"/>
+        <location filename="../mainwindow.ui" line="1935"/>
         <source>Import notes from Evernote</source>
         <translation>Importiraj bilješke iz Evernote</translation>
     </message>
@@ -1302,7 +1312,7 @@ Restore current note?</source>
     <message>
         <location filename="../mainwindow.cpp" line="4607"/>
         <location filename="../mainwindow.cpp" line="5841"/>
-        <location filename="../mainwindow.cpp" line="8623"/>
+        <location filename="../mainwindow.cpp" line="8695"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Odustani</translation>
     </message>
@@ -1387,7 +1397,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3822"/>
-        <location filename="../mainwindow.cpp" line="8783"/>
+        <location filename="../mainwindow.cpp" line="8855"/>
         <source>Remove selected folders</source>
         <translation>Izbriši odabrane mape</translation>
     </message>
@@ -1421,7 +1431,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3908"/>
-        <location filename="../mainwindow.cpp" line="7814"/>
+        <location filename="../mainwindow.cpp" line="7886"/>
         <source>Move selected notes</source>
         <translation>Premjesti odabrane bilješke</translation>
     </message>
@@ -1436,7 +1446,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4001"/>
-        <location filename="../mainwindow.cpp" line="7898"/>
+        <location filename="../mainwindow.cpp" line="7970"/>
         <source>Copy selected notes</source>
         <translation>Kopiraj odabrane bilješke</translation>
     </message>
@@ -1569,29 +1579,29 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>Skok na oznaku na mjestu %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6200"/>
-        <location filename="../mainwindow.cpp" line="6268"/>
+        <location filename="../mainwindow.cpp" line="6207"/>
+        <location filename="../mainwindow.cpp" line="6275"/>
         <source>Inserting image</source>
         <translation>Umetanje slike</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6205"/>
-        <location filename="../mainwindow.cpp" line="6271"/>
+        <location filename="../mainwindow.cpp" line="6212"/>
+        <location filename="../mainwindow.cpp" line="6278"/>
         <source>Done inserting image</source>
         <translation>Umetanje slike završeno</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6207"/>
+        <location filename="../mainwindow.cpp" line="6214"/>
         <source>Inserting attachment</source>
         <translation>Umetanje privitka</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6212"/>
+        <location filename="../mainwindow.cpp" line="6219"/>
         <source>Done inserting attachment</source>
         <translation>Umetanje privitka završeno</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6222"/>
+        <location filename="../mainwindow.cpp" line="6229"/>
         <source>Copied %n note(s) to %1</source>
         <translation>
             <numerusform>Kopiraj %n bilješku na %1</numerusform>
@@ -1600,7 +1610,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6231"/>
+        <location filename="../mainwindow.cpp" line="6238"/>
         <source>Failed to copy %n note(s) (most likely already existing)</source>
         <translation>
             <numerusform>Neuspjelo kopiranje %n bilješke (vjerojatno već postoji)</numerusform>
@@ -1609,7 +1619,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6241"/>
+        <location filename="../mainwindow.cpp" line="6248"/>
         <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
         <translation>
             <numerusform>Izostavljeno kopiranje %n bilješke (nema oznaku ili je tekst datoteke nečitak)</numerusform>
@@ -1618,127 +1628,137 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6255"/>
+        <location filename="../mainwindow.cpp" line="6262"/>
         <source>Saving temporary image</source>
         <translation>Spremanje privremene slike</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6274"/>
+        <location filename="../mainwindow.cpp" line="6281"/>
         <source>Temporary file can&apos;t be opened</source>
         <translation>Privremenu datoteku nije moguće otvoriti</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6305"/>
+        <location filename="../mainwindow.cpp" line="6312"/>
         <source>Downloading %1</source>
         <translation>Skidanje %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6485"/>
+        <location filename="../mainwindow.cpp" line="6492"/>
         <source>Reset font size to %1 pt</source>
         <comment>Will be shown after the font size is reset by &apos;Reset note text size&apos;</comment>
         <translation>Vrati veličinu fonta na %1 pt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7382"/>
+        <location filename="../mainwindow.cpp" line="7288"/>
+        <source>Remove tag &apos;%1&apos; from the current note</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="7290"/>
+        <source>Remove tag &apos;%1&apos; from the selected notes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="7454"/>
         <source>Rename tag</source>
         <translation>Preimenuj oznaku</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7383"/>
+        <location filename="../mainwindow.cpp" line="7455"/>
         <source>Assign color</source>
         <translation>Odredi boju</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7384"/>
+        <location filename="../mainwindow.cpp" line="7456"/>
         <source>Disable color</source>
         <translation>Isključi boju</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7607"/>
+        <location filename="../mainwindow.cpp" line="7679"/>
         <source>Move to the root</source>
         <comment>to move a tag to the current tag in the tag context menu</comment>
         <translation>Premjesti u korijen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8040"/>
+        <location filename="../mainwindow.cpp" line="8112"/>
         <source>An url was opened at the current cursor position</source>
         <translation>Url je otvoren na trenutnoj poziciji pokazivača</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8136"/>
+        <location filename="../mainwindow.cpp" line="8208"/>
         <source>No equation was found in front of the cursor</source>
         <translation>Jednadžba nije pronađena ispred pokazivča</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8153"/>
+        <location filename="../mainwindow.cpp" line="8225"/>
         <source>Result for equation: %1 = %2</source>
         <translation>Rezultat jednadžbe: %1 = %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8254"/>
+        <location filename="../mainwindow.cpp" line="8326"/>
         <source>The scripting engine was reloaded</source>
         <translation>Mehanizam skriptiranja je ponovno učitan</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8289"/>
+        <location filename="../mainwindow.cpp" line="8361"/>
         <source>HTML files</source>
         <translation>HTML datoteke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8464"/>
+        <location filename="../mainwindow.cpp" line="8536"/>
         <source>Rename note</source>
         <translation>Preimenuj bilješku</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8465"/>
+        <location filename="../mainwindow.cpp" line="8537"/>
         <source>Allows you to rename the filename of the note</source>
         <translation>Omogućuje vam preimenovanje imena bilješke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8618"/>
+        <location filename="../mainwindow.cpp" line="8690"/>
         <source>Note renaming not enabled!</source>
         <translation>Promjena naziva bilješki nije aktivirana!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8782"/>
+        <location filename="../mainwindow.cpp" line="8854"/>
         <source>Rename subfolder</source>
         <translation>Preimenuj podmapu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9328"/>
+        <location filename="../mainwindow.cpp" line="9400"/>
         <source>Create new workspace</source>
         <translation>Stvori novu radnu površinu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9328"/>
-        <location filename="../mainwindow.cpp" line="9574"/>
+        <location filename="../mainwindow.cpp" line="9400"/>
+        <location filename="../mainwindow.cpp" line="9646"/>
         <source>Workspace name:</source>
         <translation>Naziv radne površine:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9450"/>
+        <location filename="../mainwindow.cpp" line="9522"/>
         <source>full</source>
         <comment>full workspace</comment>
         <translation>potpuna</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9457"/>
+        <location filename="../mainwindow.cpp" line="9529"/>
         <source>minimal</source>
         <comment>minimal workspace</comment>
         <translation>minimalna</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9537"/>
+        <location filename="../mainwindow.cpp" line="9609"/>
         <source>Remove the current workspace?</source>
         <translation>Obrisati trenutnu radnu površinu?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9574"/>
+        <location filename="../mainwindow.cpp" line="9646"/>
         <source>Rename workspace</source>
         <translation>Preimenuj radnu površinu</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="9709"/>
+        <location filename="../mainwindow.cpp" line="9781"/>
         <source>%n chars</source>
         <comment>characters</comment>
         <translation>
@@ -1748,23 +1768,23 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9832"/>
+        <location filename="../mainwindow.cpp" line="9904"/>
         <source>Copy image file path</source>
         <translation>Kopiraj put do datoteke slike</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9971"/>
+        <location filename="../mainwindow.cpp" line="10043"/>
         <source>Select file to insert</source>
         <translation>Odaberi datoteku za umetanje</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10004"/>
+        <location filename="../mainwindow.cpp" line="10076"/>
         <source>Disallow all note editing</source>
         <translation type="unfinished">Disallow all note editing</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="10093"/>
-        <source>%n tags selected</source>
+        <location filename="../mainwindow.cpp" line="7274"/>
+        <source>%n notes selected</source>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
@@ -1772,13 +1792,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2184"/>
-        <location filename="../mainwindow.cpp" line="10005"/>
+        <location filename="../mainwindow.ui" line="2178"/>
+        <location filename="../mainwindow.cpp" line="10077"/>
         <source>Allow all note editing</source>
         <translation type="unfinished">Allow all note editing</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1020"/>
+        <location filename="../mainwindow.ui" line="1014"/>
         <source>&amp;Tag</source>
         <translation>&amp;Oznaka</translation>
     </message>
@@ -1863,8 +1883,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
         <location filename="../mainwindow.cpp" line="5032"/>
         <location filename="../mainwindow.cpp" line="5254"/>
-        <location filename="../mainwindow.cpp" line="8459"/>
-        <location filename="../mainwindow.cpp" line="8780"/>
+        <location filename="../mainwindow.cpp" line="8531"/>
+        <location filename="../mainwindow.cpp" line="8852"/>
         <source>New note</source>
         <translation>Nova bilješka</translation>
     </message>
@@ -1889,44 +1909,44 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>Završi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6636"/>
+        <location filename="../mainwindow.cpp" line="6643"/>
         <source>show notes from all note subfolders (%1)</source>
         <translation>pokaži bilješke iz svih podmapa bilješki (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6654"/>
+        <location filename="../mainwindow.cpp" line="6661"/>
         <source>show notes in note root folder (%1)</source>
         <translation>pokaži bilješke iz korijenske mape (%1)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="316"/>
         <location filename="../mainwindow.cpp" line="596"/>
-        <location filename="../mainwindow.cpp" line="6663"/>
+        <location filename="../mainwindow.cpp" line="6670"/>
         <source>Note folder</source>
         <translation>Mapa bilješki</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7754"/>
+        <location filename="../mainwindow.cpp" line="7826"/>
         <source>Copy to note folder</source>
         <translation>Kopiraj u mapu bilješke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7755"/>
+        <location filename="../mainwindow.cpp" line="7827"/>
         <source>Move to note folder</source>
         <translation>Premjesti u mapu bilješke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7756"/>
+        <location filename="../mainwindow.cpp" line="7828"/>
         <source>Copy to this subfolder</source>
         <translation>Kopiraj u ovu podmapu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7757"/>
+        <location filename="../mainwindow.cpp" line="7829"/>
         <source>Move to this subfolder</source>
         <translation>Premjesti u ovu podmapu</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="7808"/>
+        <location filename="../mainwindow.cpp" line="7880"/>
         <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>Premjestiti %n odabranu bilješku u &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -1940,7 +1960,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>Odustani</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="7871"/>
+        <location filename="../mainwindow.cpp" line="7943"/>
         <source>%n note(s) were moved to note subfolder &quot;%2&quot;</source>
         <translation>
             <numerusform>%n bilješka preseljena u podmapu &quot;%2&quot;</numerusform>
@@ -1949,7 +1969,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="7892"/>
+        <location filename="../mainwindow.cpp" line="7964"/>
         <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>Kopiraj %n odabranu bilješku u podmapu &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -1958,7 +1978,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="7943"/>
+        <location filename="../mainwindow.cpp" line="8015"/>
         <source>%n note(s) were copied to note subfolder &quot;%2&quot;</source>
         <translation>
             <numerusform>%n bilješka kopirana u podmapu &quot;%2&quot;</numerusform>
@@ -1967,62 +1987,62 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8506"/>
+        <location filename="../mainwindow.cpp" line="8578"/>
         <source>Move notes to subfolder...</source>
         <translation>Premjesti bilješke u podmapu...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8510"/>
+        <location filename="../mainwindow.cpp" line="8582"/>
         <source>Copy notes to subfolder...</source>
         <translation>Kopiraj bilješke u podmapu...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8553"/>
+        <location filename="../mainwindow.cpp" line="8625"/>
         <source>Open note in external editor</source>
         <translation>Otvori bilješku u vanjskom uredniku</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8557"/>
+        <location filename="../mainwindow.cpp" line="8629"/>
         <source>Show note in file manager</source>
         <translation>Prikaži bilješku u upravljaču datoteka</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8619"/>
+        <location filename="../mainwindow.cpp" line="8691"/>
         <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
         <translation>Ako želite preimenovati bilješku morate aktivirati opciju koja omogućuje da se ime datoteke i naslov razlikuju.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8781"/>
+        <location filename="../mainwindow.cpp" line="8853"/>
         <source>New subfolder</source>
         <translation>Nova podmapa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8785"/>
+        <location filename="../mainwindow.cpp" line="8857"/>
         <source>Show folder in file manager</source>
         <translation>Prikaži mapu u upravljaču datoteka</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8821"/>
+        <location filename="../mainwindow.cpp" line="8893"/>
         <source>Create a new folder</source>
         <translation>Stvori novu mapu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8821"/>
+        <location filename="../mainwindow.cpp" line="8893"/>
         <source>Folder name:</source>
         <translation>Naziv mape:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6597"/>
+        <location filename="../mainwindow.cpp" line="6604"/>
         <source>show all untagged notes (%1)</source>
         <translation>pokaži sve nestrukturirane bilješke (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6600"/>
+        <location filename="../mainwindow.cpp" line="6607"/>
         <source>Untagged notes</source>
         <translation>Nestrukturirane bilješke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8290"/>
+        <location filename="../mainwindow.cpp" line="8362"/>
         <source>Export current note as HTML file</source>
         <translation>Eksportiraj izabranu bilješku kao HTML datoteku</translation>
     </message>
@@ -2052,27 +2072,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>&amp;U redu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8476"/>
+        <location filename="../mainwindow.cpp" line="8548"/>
         <source>&amp;Move notes to...</source>
         <translation>&amp;Premjesti bilješke u...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8477"/>
+        <location filename="../mainwindow.cpp" line="8549"/>
         <source>&amp;Copy notes to...</source>
         <translation>&amp;Kopiraj bilješke u...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8518"/>
+        <location filename="../mainwindow.cpp" line="8590"/>
         <source>&amp;Tag selected notes with...</source>
         <translation>&amp;Označi izabranu bilješku sa...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8540"/>
+        <location filename="../mainwindow.cpp" line="8612"/>
         <source>&amp;Remove tag from selected notes...</source>
         <translation>&amp;Makni oznake iz odabrane bilješke...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8468"/>
+        <location filename="../mainwindow.cpp" line="8540"/>
         <source>&amp;Remove notes</source>
         <translation>&amp;Izbriši bilješke</translation>
     </message>
@@ -2117,63 +2137,62 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6569"/>
+        <location filename="../mainwindow.cpp" line="6576"/>
         <source>show all notes (%1)</source>
         <translation>prikaži sve bilješke (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6572"/>
-        <location filename="../mainwindow.cpp" line="6640"/>
+        <location filename="../mainwindow.cpp" line="6579"/>
+        <location filename="../mainwindow.cpp" line="6647"/>
         <source>All notes</source>
         <translation>Sve bilješke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7374"/>
+        <location filename="../mainwindow.cpp" line="7446"/>
         <source>&amp;Add tag</source>
         <translation>&amp;Dodaj oznaku</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7388"/>
+        <location filename="../mainwindow.cpp" line="7460"/>
         <source>&amp;Move tags to...</source>
         <translation>&amp;Premjesti oznake u...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7423"/>
+        <location filename="../mainwindow.cpp" line="7495"/>
         <source>Tag could not be created!</source>
         <translation>Oznaka ne može biti stvorena!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7608"/>
+        <location filename="../mainwindow.cpp" line="7680"/>
         <source>Move to this tag</source>
         <translation>Premjesti u ovu oznaku</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7658"/>
+        <location filename="../mainwindow.cpp" line="7730"/>
         <source>Tag this</source>
         <translation>Označi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7688"/>
+        <location filename="../mainwindow.cpp" line="7760"/>
         <source>Cannot move tag &apos;%1&apos; to this tag</source>
         <translation>Ne možete premjestiti oznaku &apos;%1&apos; u ovu oznaku</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7699"/>
+        <location filename="../mainwindow.cpp" line="7771"/>
         <source>Moved tag &apos;%1&apos; to new tag</source>
         <translation>Oznaka &apos;%1&apos; pomaknuta u novu oznaku</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6826"/>
+        <location filename="../mainwindow.cpp" line="6833"/>
         <source>show all notes tagged with &apos;%1&apos; (%2)</source>
         <translation>pokaži sve bilješke označene sa &apos;%1&apos; (%2)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7245"/>
         <source>remove tag &apos;%1&apos; from note</source>
-        <translation>ukloni oznaku &apos;%1&apos; iz bilješke</translation>
+        <translation type="vanished">ukloni oznaku &apos;%1&apos; iz bilješke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7385"/>
+        <location filename="../mainwindow.cpp" line="7457"/>
         <source>&amp;Remove tags</source>
         <translation>&amp;Ukloni oznake</translation>
     </message>
@@ -2338,24 +2357,24 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>Naslov bilješke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6316"/>
+        <location filename="../mainwindow.cpp" line="6323"/>
         <source>Downloading images finished</source>
         <translation>Preuzimanje slika završeno</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6458"/>
+        <location filename="../mainwindow.cpp" line="6465"/>
         <source>Increased font size to %1 pt</source>
         <translation>Veličina fonta povećana za %1 pt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6475"/>
+        <location filename="../mainwindow.cpp" line="6482"/>
         <source>Decreased font size to %1 pt</source>
         <translation>Veličina fonta smanjena za %1 pt</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4580"/>
         <location filename="../mainwindow.cpp" line="4606"/>
-        <location filename="../mainwindow.cpp" line="8622"/>
+        <location filename="../mainwindow.cpp" line="8694"/>
         <source>Open &amp;settings</source>
         <translation>Otvori &amp;postavke</translation>
     </message>

@@ -111,6 +111,12 @@ public:
 
     static bool isTaggingShowNotesRecursively();
 
+    static QList<Tag> fetchAllOfNotes(QList<Note> notes);
+
+    bool operator ==(const Tag &tag) const;
+
+    bool operator <(const Tag &tag) const;
+
 protected:
     int id;
     QString name;
