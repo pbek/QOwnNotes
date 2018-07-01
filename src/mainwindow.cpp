@@ -2651,7 +2651,7 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
     bool hasNoteSubFolder = false;
     bool wasModified = false;
 
-//    qDebug() << __func__ << " - 'noteSubFolderId': " << noteSubFolderId;
+    qDebug() << __func__ << " - 'noteSubFolderId': " << noteSubFolderId;
 
     if (noteSubFolderId == 0) {
         // make sure we destroy nothing
@@ -6639,6 +6639,7 @@ void MainWindow::reloadTagTree() {
  * Reloads the note sub folder tree
  */
 void MainWindow::reloadNoteSubFolderTree() {
+    qDebug() << __func__;
     ui->noteSubFolderTreeWidget->clear();
     int activeNoteSubFolderId = NoteSubFolder::activeNoteSubFolderId();
     bool showAllNotesItem =
