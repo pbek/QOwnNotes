@@ -526,7 +526,7 @@
       <location filename="../mainwindow.ui" line="526"/>
       <location filename="../mainwindow.cpp" line="7262"/>
       <source>Add a tag to the current note</source>
-      <translation type="unfinished">Add a tag to the current note</translation>
+      <translation>Der aktuellen Notiz ein Schlagwort hinzufügen</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="696"/>
@@ -708,7 +708,7 @@
     <message>
       <location filename="../mainwindow.cpp" line="7263"/>
       <source>Add a tag to the selected notes</source>
-      <translation type="unfinished">Add a tag to the selected notes</translation>
+      <translation>Den ausgewählten Notizen ein Schlagwort hinzufügen</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="540"/>
@@ -1637,12 +1637,12 @@ Falls Sie die Papierkorb-App auf Ihrem Nextcloud/ownCloud-Server aktiviert haben
     <message>
       <location filename="../mainwindow.cpp" line="7288"/>
       <source>Remove tag '%1' from the current note</source>
-      <translation type="unfinished">Remove tag '%1' from the current note</translation>
+      <translation>Von der aktuellen Notiz das Schlagwort '%1' entfernen</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7290"/>
       <source>Remove tag '%1' from the selected notes</source>
-      <translation type="unfinished">Remove tag '%1' from the selected notes</translation>
+      <translation>Von den ausgewählten Notizen das Schlagwort '%1' entfernen</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7454"/>

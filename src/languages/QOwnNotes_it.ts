@@ -526,7 +526,7 @@
       <location filename="../mainwindow.ui" line="526"/>
       <location filename="../mainwindow.cpp" line="7262"/>
       <source>Add a tag to the current note</source>
-      <translation type="unfinished">Add a tag to the current note</translation>
+      <translation>Aggiungi un'etichetta alla nota corrente</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="696"/>
@@ -1636,12 +1636,12 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
     <message>
       <location filename="../mainwindow.cpp" line="7288"/>
       <source>Remove tag '%1' from the current note</source>
-      <translation type="unfinished">Remove tag '%1' from the current note</translation>
+      <translation>Rimuovi etichetta '%1' dalla nota corrente</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7290"/>
       <source>Remove tag '%1' from the selected notes</source>
-      <translation type="unfinished">Remove tag '%1' from the selected notes</translation>
+      <translation>Rimuovi etichetta '%1' dalle note selezionate</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7454"/>
@@ -1771,7 +1771,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
       <source>%n notes selected</source>
       <translation type="unfinished">
         <numerusform>%n notes selected</numerusform>
-        <numerusform>%n notes selected</numerusform>
+        <numerusform>%n note selezionate</numerusform>
       </translation>
     </message>
     <message>

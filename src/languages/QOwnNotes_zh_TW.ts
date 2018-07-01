@@ -522,7 +522,7 @@
       <location filename="../mainwindow.ui" line="526"/>
       <location filename="../mainwindow.cpp" line="7262"/>
       <source>Add a tag to the current note</source>
-      <translation type="unfinished">Add a tag to the current note</translation>
+      <translation>為此筆記新增一個標籤</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="696"/>
@@ -704,7 +704,7 @@
     <message>
       <location filename="../mainwindow.cpp" line="7263"/>
       <source>Add a tag to the selected notes</source>
-      <translation type="unfinished">Add a tag to the selected notes</translation>
+      <translation>為選取的筆記新增一個標籤</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="540"/>
@@ -1621,12 +1621,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="7288"/>
       <source>Remove tag '%1' from the current note</source>
-      <translation type="unfinished">Remove tag '%1' from the current note</translation>
+      <translation>從此筆記移除標籤「%1」</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7290"/>
       <source>Remove tag '%1' from the selected notes</source>
-      <translation type="unfinished">Remove tag '%1' from the selected notes</translation>
+      <translation>從已選取的筆記移除標籤「%1」</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7454"/>
@@ -1753,8 +1753,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7274"/>
       <source>%n notes selected</source>
-      <translation type="unfinished">
-        <numerusform>%n notes selected</numerusform>
+      <translation>
+        <numerusform>%n 則筆記已選取</numerusform>
       </translation>
     </message>
     <message>

@@ -5,6 +5,8 @@
   (for [#946](https://github.com/pbek/QOwnNotes/issues/946))
 - added some more debug messages for finding a problem under Windows
   (for [#951](https://github.com/pbek/QOwnNotes/issues/951))
+- added more Chinese Traditional, Italian, Spanish and German translation 
+  (thank you abev66, mlocati, richarson and rakekniven)
 
 ## 18.06.7
 - tags in the `Move tag to...` context menu of the tag list are now sorted by name

@@ -410,8 +410,8 @@
       <location filename="../dialogs/localtrashdialog.cpp" line="195"/>
       <source>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
       <translation type="unfinished">
-        <numerusform>¿Restaurar &lt;strong&gt;%n&lt;/strong&gt; nota(s) seleccionada(s)?</numerusform>
-        <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
+        <numerusform>¿Restaurar &lt;strong&gt;%n&lt;/strong&gt; nota seleccionada?</numerusform>
+        <numerusform>¿Restaurar &lt;strong&gt;%n&lt;/strong&gt; notas seleccionadas?</numerusform>
       </translation>
     </message>
     <message>
@@ -423,16 +423,16 @@
       <location filename="../dialogs/localtrashdialog.cpp" line="219"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) where restored</source>
       <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; nota(s) restaurada(s)</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) where restored</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; nota restaurada</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; notas restauradas</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="241"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
       <translation type="unfinished">
-        <numerusform>¿Eliminar &lt;strong&gt;%n&lt;/strong&gt; nota(s) seleccionada(s)?</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
+        <numerusform>¿Eliminar &lt;strong&gt;%n&lt;/strong&gt; nota seleccionada?</numerusform>
+        <numerusform>¿Eliminar &lt;strong&gt;%n&lt;/strong&gt; notas seleccionadas?</numerusform>
       </translation>
     </message>
     <message>
@@ -444,8 +444,8 @@
       <location filename="../dialogs/localtrashdialog.cpp" line="265"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) where removed</source>
       <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; nota(s) eliminada(s)</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) where removed</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; nota eliminada</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; notas eliminadas</numerusform>
       </translation>
     </message>
   </context>
@@ -526,7 +526,7 @@
       <location filename="../mainwindow.ui" line="526"/>
       <location filename="../mainwindow.cpp" line="7262"/>
       <source>Add a tag to the current note</source>
-      <translation type="unfinished">Add a tag to the current note</translation>
+      <translation>Agregar una etiqueta a la nota actual</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="696"/>
@@ -708,7 +708,7 @@
     <message>
       <location filename="../mainwindow.cpp" line="7263"/>
       <source>Add a tag to the selected notes</source>
-      <translation type="unfinished">Add a tag to the selected notes</translation>
+      <translation>Agregar una etiqueta a las notas seleccionadas</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="540"/>
@@ -1636,12 +1636,12 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
     <message>
       <location filename="../mainwindow.cpp" line="7288"/>
       <source>Remove tag '%1' from the current note</source>
-      <translation type="unfinished">Remove tag '%1' from the current note</translation>
+      <translation>Quitar la etiqueta '%1' de la nota actual</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7290"/>
       <source>Remove tag '%1' from the selected notes</source>
-      <translation type="unfinished">Remove tag '%1' from the selected notes</translation>
+      <translation>Quitar la etiqueta '%1' de las notas seleccionadas</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7454"/>
@@ -1769,9 +1769,9 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7274"/>
       <source>%n notes selected</source>
-      <translation type="unfinished">
-        <numerusform>%n notes selected</numerusform>
-        <numerusform>%n notes selected</numerusform>
+      <translation>
+        <numerusform>%n nota seleccionada</numerusform>
+        <numerusform>%n notas seleccionadas</numerusform>
       </translation>
     </message>
     <message>
