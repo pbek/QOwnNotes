@@ -508,12 +508,15 @@ bool MainWindow::restoreActiveNoteHistoryItem() {
 
         if (jumpToNoteName(noteHistoryItem.getNoteName())) {
             noteHistoryItem.restoreTextEditPosition(ui->noteTextEdit);
+            reloadCurrentNoteTags();
             return true;
         }
     }
 
     // if restoring the last note failed jump to the first note
     resetCurrentNote();
+
+    reloadCurrentNoteTags();
 
     return false;
 }
@@ -3143,7 +3146,8 @@ void MainWindow::setCurrentNote(Note note,
     }
 
     updateEncryptNoteButtons();
-    reloadCurrentNoteTags();
+    // we are doing that in on_noteTreeWidget_itemSelectionChanged now
+//    reloadCurrentNoteTags();
     updateNoteTextEditReadOnly();
 
     ScriptingService::instance()->onCurrentNoteChanged(&currentNote);
@@ -10164,9 +10168,5 @@ void MainWindow::on_noteTreeWidget_itemDoubleClicked(QTreeWidgetItem *item,
  * multiple notes
  */
 void MainWindow::on_noteTreeWidget_itemSelectionChanged() {
-    int itemCount = getSelectedNotesCount();
-
-    if (itemCount != 1) {
-        reloadCurrentNoteTags();
-    }
+    reloadCurrentNoteTags();
 }

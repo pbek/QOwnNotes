@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 18.07.0
+- fixed updating the *note tags panel* after multiple notes were selected
+  (for [#946](https://github.com/pbek/QOwnNotes/issues/946))
+
 ## 18.06.7
 - tags in the `Move tag to...` context menu of the tag list are now sorted by name
  (for [#947](https://github.com/pbek/QOwnNotes/issues/947))
