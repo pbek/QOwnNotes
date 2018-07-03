@@ -3,7 +3,10 @@
 ## 18.07.1
 - fixed displaying of tags when navigating notes with the arrow keys and when
   switching note folders (for [#958](https://github.com/pbek/QOwnNotes/issues/958))
- 
+- if the settings dialog is opened from the welcome dialog now only the one 
+  settings page requested is visible to prevent problems with a not finished 
+  setup process
+
 ## 18.07.0
 - fixed updating the *note tags panel* after multiple notes were selected
   (for [#946](https://github.com/pbek/QOwnNotes/issues/946))

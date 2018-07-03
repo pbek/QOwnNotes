@@ -43,6 +43,8 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
         MasterDialog(parent), ui(new Ui::SettingsDialog) {
     ui->setupUi(this);
 
+    bool fromWelcomeDialog = parent->objectName() == "WelcomeDialog";
+
     MainWindow *mainWindow = MainWindow::instance();
 
     // if there was no size set yet and we already have a main window we'll
@@ -121,11 +123,13 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
     // do the network proxy tab setup
     setupProxyPage();
 
-    // setup the note folder tab
-    setupNoteFolderPage();
+    if (!fromWelcomeDialog) {
+        // setup the note folder tab
+        setupNoteFolderPage();
 
-    // setup the scripting tab
-    setupScriptingPage();
+        // setup the scripting tab
+        setupScriptingPage();
+    }
 
     readSettings();
 
@@ -229,6 +233,11 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
     ui->systemTrayGroupBox->setTitle(tr("Menu bar"));
     ui->showSystemTrayCheckBox->setText(tr("Show menu bar item"));
 #endif
+
+    if (fromWelcomeDialog) {
+        // hide the whole left side frame with the settings menu tree
+        ui->leftSideFrame->setVisible(false);
+    }
 }
 
 /**
