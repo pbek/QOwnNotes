@@ -5,6 +5,7 @@
 #include <QSqlQuery>
 #include <QFile>
 #include <QUrl>
+#include <QRegularExpression>
 #include "notesubfolder.h"
 
 #define NOTE_TEXT_ENCRYPTION_PRE_STRING "<!-- BEGIN ENCRYPTED TEXT --"

@@ -1050,6 +1050,7 @@ QString Utils::Misc::unescapeHtml(QString html) {
  * @param db
  */
 void Utils::Misc::closeDatabaseConnection(QSqlDatabase &db) {
+    Q_UNUSED(db);
     // temporarily disabled
 //    if (db.isOpen()) {
 //        db.close();
