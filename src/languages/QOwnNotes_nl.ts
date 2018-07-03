@@ -526,7 +526,7 @@
       <location filename="../mainwindow.ui" line="526"/>
       <location filename="../mainwindow.cpp" line="7262"/>
       <source>Add a tag to the current note</source>
-      <translation type="unfinished">Add a tag to the current note</translation>
+      <translation>Een label toevoegen aan de huidige notitie</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="696"/>
@@ -708,7 +708,7 @@
     <message>
       <location filename="../mainwindow.cpp" line="7263"/>
       <source>Add a tag to the selected notes</source>
-      <translation type="unfinished">Add a tag to the selected notes</translation>
+      <translation>Een label toevoegen aan de geselecteerde notities</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="540"/>
@@ -1636,12 +1636,12 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
     <message>
       <location filename="../mainwindow.cpp" line="7288"/>
       <source>Remove tag '%1' from the current note</source>
-      <translation type="unfinished">Remove tag '%1' from the current note</translation>
+      <translation>Label '%1' verwijderen uit de huidige notitie</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7290"/>
       <source>Remove tag '%1' from the selected notes</source>
-      <translation type="unfinished">Remove tag '%1' from the selected notes</translation>
+      <translation>Label '%1' verwijderen uit de geselecteerde notities</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7454"/>
@@ -1769,9 +1769,9 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7274"/>
       <source>%n notes selected</source>
-      <translation type="unfinished">
-        <numerusform>%n notes selected</numerusform>
-        <numerusform>%n notes selected</numerusform>
+      <translation>
+        <numerusform>%n notitie geselecteerd</numerusform>
+        <numerusform>%n notities geselecteerd</numerusform>
       </translation>
     </message>
     <message>

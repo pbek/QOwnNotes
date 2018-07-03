@@ -526,7 +526,7 @@
       <location filename="../mainwindow.ui" line="526"/>
       <location filename="../mainwindow.cpp" line="7262"/>
       <source>Add a tag to the current note</source>
-      <translation type="unfinished">Add a tag to the current note</translation>
+      <translation>Afegir una etiqueta a la nota actual</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="696"/>
@@ -1635,12 +1635,12 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
     <message>
       <location filename="../mainwindow.cpp" line="7288"/>
       <source>Remove tag '%1' from the current note</source>
-      <translation type="unfinished">Remove tag '%1' from the current note</translation>
+      <translation>Treure l'etiqueta "%1" de la nota actual</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7290"/>
       <source>Remove tag '%1' from the selected notes</source>
-      <translation type="unfinished">Remove tag '%1' from the selected notes</translation>
+      <translation>Treure l'etiqueta "%1" de les notes seleccionades</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7454"/>
@@ -1768,9 +1768,9 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7274"/>
       <source>%n notes selected</source>
-      <translation type="unfinished">
-        <numerusform>%n notes selected</numerusform>
-        <numerusform>%n notes selected</numerusform>
+      <translation>
+        <numerusform>%n notes seleccionades</numerusform>
+        <numerusform>%n notes seleccionades</numerusform>
       </translation>
     </message>
     <message>

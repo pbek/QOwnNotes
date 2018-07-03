@@ -6,6 +6,7 @@
 - if the settings dialog is opened from the welcome dialog now only the one 
   settings page requested is visible to prevent problems with a not finished 
   setup process
+- added more Catalan, Dutch and Hungarian translation (thank you MGuerra and Fabijenna)
 
 ## 18.07.0
 - fixed updating the *note tags panel* after multiple notes were selected
