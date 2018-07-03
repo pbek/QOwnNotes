@@ -3146,8 +3146,9 @@ void MainWindow::setCurrentNote(Note note,
     }
 
     updateEncryptNoteButtons();
-    // we are doing that in on_noteTreeWidget_itemSelectionChanged now
-//    reloadCurrentNoteTags();
+    // we also need to do this in on_noteTreeWidget_itemSelectionChanged
+    // because of different timings
+    reloadCurrentNoteTags();
     updateNoteTextEditReadOnly();
 
     ScriptingService::instance()->onCurrentNoteChanged(&currentNote);
@@ -10169,5 +10170,6 @@ void MainWindow::on_noteTreeWidget_itemDoubleClicked(QTreeWidgetItem *item,
  * multiple notes
  */
 void MainWindow::on_noteTreeWidget_itemSelectionChanged() {
+    // we also need to do this in setCurrentNote because of different timings
     reloadCurrentNoteTags();
 }

@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 18.07.1
+- fixed displaying of tags when navigating notes with the arrow keys and when
+  switching note folders (for [#958](https://github.com/pbek/QOwnNotes/issues/958))
+ 
 ## 18.07.0
 - fixed updating the *note tags panel* after multiple notes were selected
   (for [#946](https://github.com/pbek/QOwnNotes/issues/946))
