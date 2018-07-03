@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include <QString>
+#include <QtSql/QSqlDatabase>
 
 
 class DatabaseService
@@ -21,6 +22,8 @@ public:
     static bool createNoteFolderConnection();
     static bool setupNoteFolderTables();
     static QString getDiskDatabasePath();
+    static QSqlDatabase getNoteFolderDatabase();
+    static void closeDatabaseConnection(QSqlDatabase &db);
 
 private:
     static QString getNoteFolderDatabasePath();

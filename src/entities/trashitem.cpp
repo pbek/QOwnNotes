@@ -6,6 +6,7 @@
 #include "notefolder.h"
 #include "notesubfolder.h"
 #include <utils/misc.h>
+#include <services/databaseservice.h>
 
 
 TrashItem::TrashItem() {
@@ -40,7 +41,7 @@ void TrashItem::setNoteSubFolder(NoteSubFolder noteSubFolder) {
 
 
 TrashItem TrashItem::fetch(int id) {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
     TrashItem trashItem;
@@ -56,12 +57,12 @@ TrashItem TrashItem::fetch(int id) {
         }
     }
 
-    Utils::Misc::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db);
     return trashItem;
 }
 
 bool TrashItem::remove(bool withFile) {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
     query.prepare("DELETE FROM trashItem WHERE id = :id");
@@ -69,14 +70,14 @@ bool TrashItem::remove(bool withFile) {
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
-        Utils::Misc::closeDatabaseConnection(db);
+        DatabaseService::closeDatabaseConnection(db);
         return false;
     } else {
         if (withFile) {
             this->removeFile();
         }
 
-        Utils::Misc::closeDatabaseConnection(db);
+        DatabaseService::closeDatabaseConnection(db);
         return true;
     }
 }
@@ -267,7 +268,7 @@ bool TrashItem::fillFromQuery(QSqlQuery query) {
  * @return
  */
 QList<TrashItem> TrashItem::fetchAll(int limit) {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
     QList<TrashItem> trashItemList;
@@ -292,7 +293,7 @@ QList<TrashItem> TrashItem::fetchAll(int limit) {
         }
     }
 
-    Utils::Misc::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db);
     return trashItemList;
 }
 
@@ -302,7 +303,7 @@ QList<TrashItem> TrashItem::fetchAll(int limit) {
  * @return
  */
 QList<TrashItem> TrashItem::fetchAllExpired() {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     QSettings settings;
     QList<TrashItem> trashItemList;
@@ -323,7 +324,7 @@ QList<TrashItem> TrashItem::fetchAllExpired() {
         }
     }
 
-    Utils::Misc::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db);
     return trashItemList;
 }
 
@@ -331,7 +332,7 @@ QList<TrashItem> TrashItem::fetchAllExpired() {
 // inserts or updates a trashItem object in the database
 //
 bool TrashItem::store() {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
     if (fileName.isEmpty()) {
@@ -361,7 +362,7 @@ bool TrashItem::store() {
     // on error
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
-        Utils::Misc::closeDatabaseConnection(db);
+        DatabaseService::closeDatabaseConnection(db);
         return false;
     } else if (id == 0) {  // on insert
         id = query.lastInsertId().toInt();
@@ -370,7 +371,7 @@ bool TrashItem::store() {
         refetch();
     }
 
-    Utils::Misc::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db);
     return true;
 }
 
@@ -405,17 +406,17 @@ QString TrashItem::getNoteSubFolderPathData() {
 // deletes all notes in the database
 //
 bool TrashItem::deleteAll() {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
     // no truncate in sqlite
     query.prepare("DELETE FROM trashItem");
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
-        Utils::Misc::closeDatabaseConnection(db);
+        DatabaseService::closeDatabaseConnection(db);
         return false;
     } else {
-        Utils::Misc::closeDatabaseConnection(db);
+        DatabaseService::closeDatabaseConnection(db);
         return true;
     }
 }
@@ -440,7 +441,7 @@ bool TrashItem::exists() {
 }
 
 bool TrashItem::fillFromId(int id) {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
     query.prepare("SELECT * FROM trashItem WHERE id = :id");
@@ -450,11 +451,11 @@ bool TrashItem::fillFromId(int id) {
         qWarning() << __func__ << ": " << query.lastError();
     } else if (query.first()) {
         fillFromQuery(query);
-        Utils::Misc::closeDatabaseConnection(db);
+        DatabaseService::closeDatabaseConnection(db);
         return true;
     }
 
-    Utils::Misc::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db);
     return false;
 }
 
@@ -502,7 +503,7 @@ bool TrashItem::isFetched() {
  * Counts all trash items
  */
 int TrashItem::countAll() {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
     query.prepare("SELECT COUNT(*) AS cnt FROM trashItem");
@@ -510,11 +511,11 @@ int TrashItem::countAll() {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else if (query.first()) {
-        Utils::Misc::closeDatabaseConnection(db);
+        DatabaseService::closeDatabaseConnection(db);
         return query.value("cnt").toInt();
     }
 
-    Utils::Misc::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db);
     return 0;
 }
 

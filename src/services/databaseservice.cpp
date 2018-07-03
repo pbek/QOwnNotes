@@ -129,7 +129,7 @@ bool DatabaseService::createNoteFolderConnection() {
  * Creates or updates the note folder tables
  */
 bool DatabaseService::setupNoteFolderTables() {
-    QSqlDatabase dbDisk = QSqlDatabase::database("note_folder");
+    QSqlDatabase dbDisk = getNoteFolderDatabase();
     QSqlQuery queryDisk(dbDisk);
 
     queryDisk.exec("CREATE TABLE IF NOT EXISTS appData ("
@@ -297,9 +297,27 @@ bool DatabaseService::setupNoteFolderTables() {
                    QString::number(version), "note_folder");
     }
 
-    Utils::Misc::closeDatabaseConnection(dbDisk);
+    closeDatabaseConnection(dbDisk);
 
     return true;
+}
+
+QSqlDatabase DatabaseService::getNoteFolderDatabase() {
+    // TODO(pbek): open database if it was closed in closeDatabaseConnection
+    return QSqlDatabase::database("note_folder");
+}
+
+/**
+ * Closes a database connection if it was open
+ *
+ * @param db
+ */
+void DatabaseService::closeDatabaseConnection(QSqlDatabase &db) {
+    Q_UNUSED(db);
+    // temporarily disabled
+//    if (db.isOpen()) {
+//        db.close();
+//    }
 }
 
 bool DatabaseService::setupTables() {

@@ -7,6 +7,7 @@
 #include <QSqlError>
 #include <QSettings>
 #include <utils/misc.h>
+#include <services/databaseservice.h>
 
 
 Tag::Tag() {
@@ -54,7 +55,7 @@ void Tag::setPriority(int value) {
 }
 
 Tag Tag::fetch(int id) {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
     Tag tag;
@@ -68,7 +69,7 @@ Tag Tag::fetch(int id) {
         tag.fillFromQuery(query);
     }
 
-    Utils::Misc::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db);
 
     return tag;
 }
@@ -81,7 +82,7 @@ Tag Tag::fetch(int id) {
  * @return
  */
 Tag Tag::fetchByName(QString name, bool startsWith) {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     Tag tag;
     QString sql = "SELECT * FROM tag WHERE name " +
@@ -100,13 +101,13 @@ Tag Tag::fetchByName(QString name, bool startsWith) {
         tag.fillFromQuery(query);
     }
 
-    Utils::Misc::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db);
 
     return tag;
 }
 
 Tag Tag::fetchByName(QString name, int parentId) {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     Tag tag;
 
@@ -121,13 +122,13 @@ Tag Tag::fetchByName(QString name, int parentId) {
         tag.fillFromQuery(query);
     }
 
-    Utils::Misc::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db);
 
     return tag;
 }
 
 int Tag::countAll() {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
     query.prepare("SELECT COUNT(*) AS cnt FROM tag");
@@ -135,12 +136,12 @@ int Tag::countAll() {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else if (query.first()) {
-        Utils::Misc::closeDatabaseConnection(db);
+        DatabaseService::closeDatabaseConnection(db);
 
         return query.value("cnt").toInt();
     }
 
-    Utils::Misc::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db);
 
     return 0;
 }
@@ -149,7 +150,7 @@ int Tag::countAll() {
  * Removes the tag, their children and its note link items
  */
 bool Tag::remove() {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
     // remove the tag
@@ -158,7 +159,7 @@ bool Tag::remove() {
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
-        Utils::Misc::closeDatabaseConnection(db);
+        DatabaseService::closeDatabaseConnection(db);
         return false;
     } else {
         // remove all children tags
@@ -166,7 +167,7 @@ bool Tag::remove() {
                 tag.remove();
             }
 
-        QSqlDatabase db = QSqlDatabase::database("note_folder");
+        QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
         QSqlQuery query(db);
 
         // remove the note tag links
@@ -175,11 +176,11 @@ bool Tag::remove() {
 
         if (!query.exec()) {
             qWarning() << __func__ << ": " << query.lastError();
-            Utils::Misc::closeDatabaseConnection(db);
+            DatabaseService::closeDatabaseConnection(db);
 
             return false;
         } else {
-            Utils::Misc::closeDatabaseConnection(db);
+            DatabaseService::closeDatabaseConnection(db);
             return true;
         }
     }
@@ -204,7 +205,7 @@ bool Tag::fillFromQuery(QSqlQuery query) {
 }
 
 QList<Tag> Tag::fetchAll() {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
     QList<Tag> tagList;
@@ -243,13 +244,13 @@ QList<Tag> Tag::fetchAll() {
         }
     }
 
-    Utils::Misc::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db);
 
     return tagList;
 }
 
 QList<Tag> Tag::fetchAllByParentId(int parentId, QString sortBy) {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     QList<Tag> tagList;
 
@@ -280,7 +281,7 @@ QList<Tag> Tag::fetchAllByParentId(int parentId, QString sortBy) {
         }
     }
 
-    Utils::Misc::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db);
 
     return tagList;
 }
@@ -311,7 +312,7 @@ bool Tag::isTaggingShowNotesRecursively() {
 }
 
 int Tag::countAllParentId(int parentId) {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
     query.prepare("SELECT COUNT(*) AS cnt FROM tag "
@@ -321,11 +322,11 @@ int Tag::countAllParentId(int parentId) {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else if (query.first()) {
-        Utils::Misc::closeDatabaseConnection(db);
+        DatabaseService::closeDatabaseConnection(db);
         return query.value("cnt").toInt();
     }
 
-    Utils::Misc::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db);
 
     return 0;
 }
@@ -349,7 +350,7 @@ bool Tag::hasChild(int tagId) {
  * Fetches all linked tags of a note
  */
 QList<Tag> Tag::fetchAllOfNote(Note note) {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
     QList<Tag> tagList;
@@ -372,7 +373,7 @@ QList<Tag> Tag::fetchAllOfNote(Note note) {
         }
     }
 
-    Utils::Misc::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db);
 
     return tagList;
 }
@@ -402,7 +403,7 @@ QList<Tag> Tag::fetchAllOfNotes(QList<Note> notes) {
  * Fetches the names of all linked tags of a note
  */
 QStringList Tag::fetchAllNamesOfNote(Note note) {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     QStringList tagNameList;
 
@@ -423,7 +424,7 @@ QStringList Tag::fetchAllNamesOfNote(Note note) {
         }
     }
 
-    Utils::Misc::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db);
 
     return tagNameList;
 }
@@ -432,7 +433,7 @@ QStringList Tag::fetchAllNamesOfNote(Note note) {
  * Fetches the names by substring searching for the name
  */
 QStringList Tag::searchAllNamesByName(QString name) {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     QStringList tagNameList;
 
@@ -449,7 +450,7 @@ QStringList Tag::searchAllNamesByName(QString name) {
         }
     }
 
-    Utils::Misc::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db);
 
     return tagNameList;
 }
@@ -471,7 +472,7 @@ Tag Tag::fetchOneOfNoteWithColor(Note note) {
  * Count all linked tags of a note
  */
 int Tag::countAllOfNote(Note note) {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
     query.prepare("SELECT COUNT(*) AS cnt FROM noteTagLink "
@@ -484,12 +485,12 @@ int Tag::countAllOfNote(Note note) {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else if (query.first()) {
-        Utils::Misc::closeDatabaseConnection(db);
+        DatabaseService::closeDatabaseConnection(db);
 
         return query.value("cnt").toInt();
     }
 
-    Utils::Misc::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db);
 
     return 0;
 }
@@ -498,7 +499,7 @@ int Tag::countAllOfNote(Note note) {
  * Checks if tag is linked to a note
  */
 bool Tag::isLinkedToNote(Note note) {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
     query.prepare("SELECT COUNT(*) AS cnt FROM noteTagLink "
@@ -513,12 +514,12 @@ bool Tag::isLinkedToNote(Note note) {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else if (query.first()) {
-        Utils::Misc::closeDatabaseConnection(db);
+        DatabaseService::closeDatabaseConnection(db);
 
         return query.value("cnt").toInt() > 0;
     }
 
-    Utils::Misc::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db);
 
     return false;
 }
@@ -527,7 +528,7 @@ bool Tag::isLinkedToNote(Note note) {
  * Returns all tags that are linked to certain note names
  */
 QList<Tag> Tag::fetchAllWithLinkToNoteNames(QStringList noteNameList) {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     QList<Tag> tagList;
     QString noteIdListString = noteNameList.join("','");
@@ -553,7 +554,7 @@ QList<Tag> Tag::fetchAllWithLinkToNoteNames(QStringList noteNameList) {
         }
     }
 
-    Utils::Misc::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db);
 
     return tagList;
 }
@@ -562,7 +563,7 @@ QList<Tag> Tag::fetchAllWithLinkToNoteNames(QStringList noteNameList) {
  * Fetches all linked note file names
  */
 QStringList Tag::fetchAllLinkedNoteFileNames(bool fromAllSubfolders) {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     QStringList fileNameList;
 
@@ -586,7 +587,7 @@ QStringList Tag::fetchAllLinkedNoteFileNames(bool fromAllSubfolders) {
         }
     }
 
-    Utils::Misc::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db);
 
     return fileNameList;
 }
@@ -596,7 +597,7 @@ QStringList Tag::fetchAllLinkedNoteFileNames(bool fromAllSubfolders) {
  * problems with Windows
  */
 void Tag::convertDirSeparator() {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
     query.prepare("UPDATE noteTagLink SET note_sub_folder_path = replace("
@@ -606,14 +607,14 @@ void Tag::convertDirSeparator() {
         qWarning() << __func__ << ": " << query.lastError();
     }
 
-    Utils::Misc::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db);
 }
 
 /**
  * Fetches all tag names
  */
 QStringList Tag::fetchAllNames() {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
     QStringList nameList;
@@ -628,7 +629,7 @@ QStringList Tag::fetchAllNames() {
         }
     }
 
-    Utils::Misc::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db);
 
     return nameList;
 }
@@ -637,7 +638,7 @@ QStringList Tag::fetchAllNames() {
  * Count the linked note file names
  */
 int Tag::countLinkedNoteFileNames(bool fromAllSubfolders, bool recursive) {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
     if (fromAllSubfolders) {
@@ -661,12 +662,12 @@ int Tag::countLinkedNoteFileNames(bool fromAllSubfolders, bool recursive) {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else if (query.first()) {
-        Utils::Misc::closeDatabaseConnection(db);
+        DatabaseService::closeDatabaseConnection(db);
 
         return query.value("cnt").toInt();
     }
 
-    Utils::Misc::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db);
 
     return 0;
 }
@@ -675,7 +676,7 @@ int Tag::countLinkedNoteFileNames(bool fromAllSubfolders, bool recursive) {
  * Inserts or updates a Tag object in the database
  */
 bool Tag::store() {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     QString colorField = colorFieldName();
 
@@ -701,7 +702,7 @@ bool Tag::store() {
         // on error
         qWarning() << __func__ << ": " << query.lastError();
 
-        Utils::Misc::closeDatabaseConnection(db);
+        DatabaseService::closeDatabaseConnection(db);
         return false;
     } else if (this->id == 0) {
         // on insert
@@ -724,7 +725,7 @@ bool Tag::store() {
         }
     }
 
-    Utils::Misc::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db);
 
     return true;
 }
@@ -748,7 +749,7 @@ bool Tag::linkToNote(Note note) {
         return false;
     }
 
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     query.prepare("INSERT INTO noteTagLink (tag_id, note_file_name, "
                           "note_sub_folder_path) "
@@ -765,7 +766,7 @@ bool Tag::linkToNote(Note note) {
         // link to a note already exists before we try to create an other link
 //        qWarning() << __func__ << ": " << query.lastError();
 
-        Utils::Misc::closeDatabaseConnection(db);
+        DatabaseService::closeDatabaseConnection(db);
 
         return false;
     }
@@ -786,7 +787,7 @@ bool Tag::linkToNote(Note note) {
         }
     }
 
-    Utils::Misc::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db);
 
     return true;
 }
@@ -799,7 +800,7 @@ bool Tag::removeLinkToNote(Note note) {
         return false;
     }
 
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     query.prepare("DELETE FROM noteTagLink WHERE tag_id = :tagId AND "
                           "note_file_name = :noteFileName AND "
@@ -814,12 +815,12 @@ bool Tag::removeLinkToNote(Note note) {
         // on error
         qWarning() << __func__ << ": " << query.lastError();
 
-        Utils::Misc::closeDatabaseConnection(db);
+        DatabaseService::closeDatabaseConnection(db);
 
         return false;
     }
 
-    Utils::Misc::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db);
 
     return true;
 }
@@ -828,7 +829,7 @@ bool Tag::removeLinkToNote(Note note) {
  * Removes all links to a note
  */
 bool Tag::removeAllLinksToNote(Note note) {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     query.prepare("DELETE FROM noteTagLink WHERE "
                           "note_file_name = :noteFileName AND "
@@ -842,12 +843,12 @@ bool Tag::removeAllLinksToNote(Note note) {
         // on error
         qWarning() << __func__ << ": " << query.lastError();
 
-        Utils::Misc::closeDatabaseConnection(db);
+        DatabaseService::closeDatabaseConnection(db);
 
         return false;
     }
 
-    Utils::Misc::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db);
 
     return true;
 }
@@ -856,7 +857,7 @@ bool Tag::removeAllLinksToNote(Note note) {
  * Removes all broken note tag links
  */
 void Tag::removeBrokenLinks() {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
     query.prepare("SELECT * FROM notetaglink");
@@ -880,7 +881,7 @@ void Tag::removeBrokenLinks() {
         }
     }
 
-    Utils::Misc::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db);
 }
 
 /**
@@ -890,7 +891,7 @@ void Tag::removeBrokenLinks() {
  * @return
  */
 bool Tag::removeNoteLinkById(int id) {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     query.prepare("DELETE FROM noteTagLink WHERE id = :id");
     query.bindValue(":id", id);
@@ -899,11 +900,11 @@ bool Tag::removeNoteLinkById(int id) {
         // on error
         qWarning() << __func__ << ": " << query.lastError();
 
-        Utils::Misc::closeDatabaseConnection(db);
+        DatabaseService::closeDatabaseConnection(db);
         return false;
     }
 
-    Utils::Misc::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db);
     return true;
 }
 
@@ -912,7 +913,7 @@ bool Tag::removeNoteLinkById(int id) {
  * Renames the note file name of note links
  */
 bool Tag::renameNoteFileNamesOfLinks(QString oldFileName, QString newFileName) {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     query.prepare("UPDATE noteTagLink SET note_file_name = :newFileName WHERE "
                           "note_file_name = :oldFileName AND "
@@ -927,11 +928,11 @@ bool Tag::renameNoteFileNamesOfLinks(QString oldFileName, QString newFileName) {
         // on error
         qWarning() << __func__ << ": " << query.lastError();
 
-        Utils::Misc::closeDatabaseConnection(db);
+        DatabaseService::closeDatabaseConnection(db);
         return false;
     }
 
-    Utils::Misc::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db);
 
     return true;
 }
