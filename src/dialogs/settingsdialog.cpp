@@ -93,6 +93,7 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
     ui->gitDownloadLabel->setText(downloadText);
 #else
     ui->gitDownloadLabel->hide();
+    ui->automaticNoteFolderDatabaseClosingCheckBox->hide();
 #endif
 
     _noteNotificationButtonGroup = new QButtonGroup(this);
@@ -746,6 +747,9 @@ void SettingsDialog::storeSettings() {
                       ui->showSystemTrayCheckBox->isChecked());
     settings.setValue("StartHidden",
                       ui->startHiddenCheckBox->isChecked());
+    settings.setValue("automaticNoteFolderDatabaseClosing",
+                      ui->automaticNoteFolderDatabaseClosingCheckBox->
+                              isChecked());
 }
 
 /**
@@ -1098,6 +1102,9 @@ void SettingsDialog::readSettings() {
     if (!showSystemTray) {
         ui->startHiddenCheckBox->setChecked(false);
     }
+
+    ui->automaticNoteFolderDatabaseClosingCheckBox->setChecked(
+            Utils::Misc::doAutomaticNoteFolderDatabaseClosing());
 }
 
 /**

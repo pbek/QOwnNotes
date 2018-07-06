@@ -1027,6 +1027,16 @@ bool Utils::Misc::isNoteEditingAllowed() {
 }
 
 /**
+ * Returns if "automaticNoteFolderDatabaseClosing" is turned on
+ *
+ * @return
+ */
+bool Utils::Misc::doAutomaticNoteFolderDatabaseClosing() {
+    QSettings settings;
+    return settings.value("automaticNoteFolderDatabaseClosing").toBool();
+}
+
+/**
  * Unescapes some html special characters
  *
  * @param html

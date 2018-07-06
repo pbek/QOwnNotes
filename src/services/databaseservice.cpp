@@ -304,8 +304,10 @@ bool DatabaseService::setupNoteFolderTables() {
 
 QSqlDatabase DatabaseService::getNoteFolderDatabase() {
 #ifdef Q_OS_WIN32
-    // open database if it was closed in closeDatabaseConnection
-    createNoteFolderConnection();
+    if (Utils::Misc::doAutomaticNoteFolderDatabaseClosing()) {
+        // open database if it was closed in closeDatabaseConnection
+        createNoteFolderConnection();
+    }
 #endif
 
     QSqlDatabase db = QSqlDatabase::database("note_folder");
@@ -323,10 +325,12 @@ void DatabaseService::closeDatabaseConnection(QSqlDatabase &db,
 //    Q_UNUSED(db);
 //    db.commit();
 #ifdef Q_OS_WIN32
-    query.clear();
+    if (Utils::Misc::doAutomaticNoteFolderDatabaseClosing()) {
+        query.clear();
 
-    if (db.isOpen()) {
-        db.close();
+        if (db.isOpen()) {
+            db.close();
+        }
     }
 #endif
 }
