@@ -1,8 +1,8 @@
 # QOwnNotes Changelog
 
 ## 18.07.2
-- added more debug output on the terminal when using the welcome dialog to 
-  setup the note folder to check for troubles on some Windows machines
+- added more debug output on the terminal and checks when using the welcome
+  dialog to setup the note folder to check for troubles on some Windows machines
   (for [#951](https://github.com/pbek/QOwnNotes/issues/951))
  
 ## 18.07.1
