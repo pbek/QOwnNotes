@@ -7,6 +7,7 @@
 - on Windows there now is a new experimental settings in the *General settings*
   to automatically close the note folder database to prevent problems with sync 
   tools (for [#926](https://github.com/pbek/QOwnNotes/issues/926))
+- added more Brazilian Portuguese translation (thank you mlimacarlos)
 
 ## 18.07.1
 - fixed displaying of tags when navigating notes with the arrow keys and when
