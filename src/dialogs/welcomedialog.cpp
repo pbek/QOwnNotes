@@ -73,11 +73,14 @@ bool WelcomeDialog::handleNoteFolderSetup() {
                 _notesPath));
     } else {
         if (ui->createNoteFolderCheckBox->isChecked()) {
-            if (dir.mkpath(_notesPath)) {
-                Utils::Misc::printInfo(
-                        QString("Note path '%1' doesn't exist yet and will "
-                                "be created.").arg(_notesPath));
+            Utils::Misc::printInfo(
+                    QString("Note path '%1' doesn't exist yet and will "
+                            "be created.").arg(_notesPath));
 
+            // mkpath should only return true if the path was created, but we
+            // want to double-check because there were some troubles on Windows
+            // see: https://github.com/pbek/QOwnNotes/issues/951
+            if (dir.mkpath(_notesPath)) {
                 if (dir.exists()) {
                     // everything is all right, the path was now created
                     _allowFinishButton = true;
