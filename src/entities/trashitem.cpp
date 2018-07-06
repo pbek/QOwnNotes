@@ -57,7 +57,7 @@ TrashItem TrashItem::fetch(int id) {
         }
     }
 
-    DatabaseService::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db, query);
     return trashItem;
 }
 
@@ -70,14 +70,14 @@ bool TrashItem::remove(bool withFile) {
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
-        DatabaseService::closeDatabaseConnection(db);
+        DatabaseService::closeDatabaseConnection(db, query);
         return false;
     } else {
         if (withFile) {
             this->removeFile();
         }
 
-        DatabaseService::closeDatabaseConnection(db);
+        DatabaseService::closeDatabaseConnection(db, query);
         return true;
     }
 }
@@ -293,7 +293,7 @@ QList<TrashItem> TrashItem::fetchAll(int limit) {
         }
     }
 
-    DatabaseService::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db, query);
     return trashItemList;
 }
 
@@ -324,7 +324,7 @@ QList<TrashItem> TrashItem::fetchAllExpired() {
         }
     }
 
-    DatabaseService::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db, query);
     return trashItemList;
 }
 
@@ -362,7 +362,7 @@ bool TrashItem::store() {
     // on error
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
-        DatabaseService::closeDatabaseConnection(db);
+        DatabaseService::closeDatabaseConnection(db, query);
         return false;
     } else if (id == 0) {  // on insert
         id = query.lastInsertId().toInt();
@@ -371,7 +371,7 @@ bool TrashItem::store() {
         refetch();
     }
 
-    DatabaseService::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db, query);
     return true;
 }
 
@@ -413,10 +413,10 @@ bool TrashItem::deleteAll() {
     query.prepare("DELETE FROM trashItem");
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
-        DatabaseService::closeDatabaseConnection(db);
+        DatabaseService::closeDatabaseConnection(db, query);
         return false;
     } else {
-        DatabaseService::closeDatabaseConnection(db);
+        DatabaseService::closeDatabaseConnection(db, query);
         return true;
     }
 }
@@ -451,11 +451,11 @@ bool TrashItem::fillFromId(int id) {
         qWarning() << __func__ << ": " << query.lastError();
     } else if (query.first()) {
         fillFromQuery(query);
-        DatabaseService::closeDatabaseConnection(db);
+        DatabaseService::closeDatabaseConnection(db, query);
         return true;
     }
 
-    DatabaseService::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db, query);
     return false;
 }
 
@@ -511,11 +511,13 @@ int TrashItem::countAll() {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else if (query.first()) {
-        DatabaseService::closeDatabaseConnection(db);
-        return query.value("cnt").toInt();
+        int result = query.value("cnt").toInt();
+        DatabaseService::closeDatabaseConnection(db, query);
+
+        return result;
     }
 
-    DatabaseService::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db, query);
     return 0;
 }
 

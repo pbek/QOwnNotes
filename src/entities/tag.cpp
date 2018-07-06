@@ -69,7 +69,7 @@ Tag Tag::fetch(int id) {
         tag.fillFromQuery(query);
     }
 
-    DatabaseService::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db, query);
 
     return tag;
 }
@@ -101,7 +101,7 @@ Tag Tag::fetchByName(QString name, bool startsWith) {
         tag.fillFromQuery(query);
     }
 
-    DatabaseService::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db, query);
 
     return tag;
 }
@@ -122,7 +122,7 @@ Tag Tag::fetchByName(QString name, int parentId) {
         tag.fillFromQuery(query);
     }
 
-    DatabaseService::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db, query);
 
     return tag;
 }
@@ -136,12 +136,13 @@ int Tag::countAll() {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else if (query.first()) {
-        DatabaseService::closeDatabaseConnection(db);
+        int result = query.value("cnt").toInt();
+        DatabaseService::closeDatabaseConnection(db, query);
 
-        return query.value("cnt").toInt();
+        return result;
     }
 
-    DatabaseService::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db, query);
 
     return 0;
 }
@@ -159,7 +160,7 @@ bool Tag::remove() {
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
-        DatabaseService::closeDatabaseConnection(db);
+        DatabaseService::closeDatabaseConnection(db, query);
         return false;
     } else {
         // remove all children tags
@@ -176,11 +177,11 @@ bool Tag::remove() {
 
         if (!query.exec()) {
             qWarning() << __func__ << ": " << query.lastError();
-            DatabaseService::closeDatabaseConnection(db);
+            DatabaseService::closeDatabaseConnection(db, query);
 
             return false;
         } else {
-            DatabaseService::closeDatabaseConnection(db);
+            DatabaseService::closeDatabaseConnection(db, query);
             return true;
         }
     }
@@ -244,7 +245,7 @@ QList<Tag> Tag::fetchAll() {
         }
     }
 
-    DatabaseService::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db, query);
 
     return tagList;
 }
@@ -281,7 +282,7 @@ QList<Tag> Tag::fetchAllByParentId(int parentId, QString sortBy) {
         }
     }
 
-    DatabaseService::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db, query);
 
     return tagList;
 }
@@ -322,11 +323,12 @@ int Tag::countAllParentId(int parentId) {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else if (query.first()) {
-        DatabaseService::closeDatabaseConnection(db);
-        return query.value("cnt").toInt();
+        int result = query.value("cnt").toInt();
+        DatabaseService::closeDatabaseConnection(db, query);
+        return result;
     }
 
-    DatabaseService::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db, query);
 
     return 0;
 }
@@ -373,7 +375,7 @@ QList<Tag> Tag::fetchAllOfNote(Note note) {
         }
     }
 
-    DatabaseService::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db, query);
 
     return tagList;
 }
@@ -424,7 +426,7 @@ QStringList Tag::fetchAllNamesOfNote(Note note) {
         }
     }
 
-    DatabaseService::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db, query);
 
     return tagNameList;
 }
@@ -450,7 +452,7 @@ QStringList Tag::searchAllNamesByName(QString name) {
         }
     }
 
-    DatabaseService::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db, query);
 
     return tagNameList;
 }
@@ -485,12 +487,13 @@ int Tag::countAllOfNote(Note note) {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else if (query.first()) {
-        DatabaseService::closeDatabaseConnection(db);
+        int result = query.value("cnt").toInt();
+        DatabaseService::closeDatabaseConnection(db, query);
 
-        return query.value("cnt").toInt();
+        return result;
     }
 
-    DatabaseService::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db, query);
 
     return 0;
 }
@@ -514,12 +517,13 @@ bool Tag::isLinkedToNote(Note note) {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else if (query.first()) {
-        DatabaseService::closeDatabaseConnection(db);
+        bool result = query.value("cnt").toInt() > 0;
+        DatabaseService::closeDatabaseConnection(db, query);
 
-        return query.value("cnt").toInt() > 0;
+        return result;
     }
 
-    DatabaseService::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db, query);
 
     return false;
 }
@@ -554,7 +558,7 @@ QList<Tag> Tag::fetchAllWithLinkToNoteNames(QStringList noteNameList) {
         }
     }
 
-    DatabaseService::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db, query);
 
     return tagList;
 }
@@ -587,7 +591,7 @@ QStringList Tag::fetchAllLinkedNoteFileNames(bool fromAllSubfolders) {
         }
     }
 
-    DatabaseService::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db, query);
 
     return fileNameList;
 }
@@ -607,7 +611,7 @@ void Tag::convertDirSeparator() {
         qWarning() << __func__ << ": " << query.lastError();
     }
 
-    DatabaseService::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db, query);
 }
 
 /**
@@ -629,7 +633,7 @@ QStringList Tag::fetchAllNames() {
         }
     }
 
-    DatabaseService::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db, query);
 
     return nameList;
 }
@@ -662,12 +666,13 @@ int Tag::countLinkedNoteFileNames(bool fromAllSubfolders, bool recursive) {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else if (query.first()) {
-        DatabaseService::closeDatabaseConnection(db);
+        int result = query.value("cnt").toInt();
+        DatabaseService::closeDatabaseConnection(db, query);
 
-        return query.value("cnt").toInt();
+        return result;
     }
 
-    DatabaseService::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db, query);
 
     return 0;
 }
@@ -702,7 +707,7 @@ bool Tag::store() {
         // on error
         qWarning() << __func__ << ": " << query.lastError();
 
-        DatabaseService::closeDatabaseConnection(db);
+        DatabaseService::closeDatabaseConnection(db, query);
         return false;
     } else if (this->id == 0) {
         // on insert
@@ -725,7 +730,7 @@ bool Tag::store() {
         }
     }
 
-    DatabaseService::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db, query);
 
     return true;
 }
@@ -766,7 +771,7 @@ bool Tag::linkToNote(Note note) {
         // link to a note already exists before we try to create an other link
 //        qWarning() << __func__ << ": " << query.lastError();
 
-        DatabaseService::closeDatabaseConnection(db);
+        DatabaseService::closeDatabaseConnection(db, query);
 
         return false;
     }
@@ -787,7 +792,7 @@ bool Tag::linkToNote(Note note) {
         }
     }
 
-    DatabaseService::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db, query);
 
     return true;
 }
@@ -815,12 +820,12 @@ bool Tag::removeLinkToNote(Note note) {
         // on error
         qWarning() << __func__ << ": " << query.lastError();
 
-        DatabaseService::closeDatabaseConnection(db);
+        DatabaseService::closeDatabaseConnection(db, query);
 
         return false;
     }
 
-    DatabaseService::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db, query);
 
     return true;
 }
@@ -843,12 +848,12 @@ bool Tag::removeAllLinksToNote(Note note) {
         // on error
         qWarning() << __func__ << ": " << query.lastError();
 
-        DatabaseService::closeDatabaseConnection(db);
+        DatabaseService::closeDatabaseConnection(db, query);
 
         return false;
     }
 
-    DatabaseService::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db, query);
 
     return true;
 }
@@ -881,7 +886,7 @@ void Tag::removeBrokenLinks() {
         }
     }
 
-    DatabaseService::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db, query);
 }
 
 /**
@@ -900,11 +905,11 @@ bool Tag::removeNoteLinkById(int id) {
         // on error
         qWarning() << __func__ << ": " << query.lastError();
 
-        DatabaseService::closeDatabaseConnection(db);
+        DatabaseService::closeDatabaseConnection(db, query);
         return false;
     }
 
-    DatabaseService::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db, query);
     return true;
 }
 
@@ -928,11 +933,11 @@ bool Tag::renameNoteFileNamesOfLinks(QString oldFileName, QString newFileName) {
         // on error
         qWarning() << __func__ << ": " << query.lastError();
 
-        DatabaseService::closeDatabaseConnection(db);
+        DatabaseService::closeDatabaseConnection(db, query);
         return false;
     }
 
-    DatabaseService::closeDatabaseConnection(db);
+    DatabaseService::closeDatabaseConnection(db, query);
 
     return true;
 }

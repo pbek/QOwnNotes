@@ -297,14 +297,18 @@ bool DatabaseService::setupNoteFolderTables() {
                    QString::number(version), "note_folder");
     }
 
-    closeDatabaseConnection(dbDisk);
+    closeDatabaseConnection(dbDisk, queryDisk);
 
     return true;
 }
 
 QSqlDatabase DatabaseService::getNoteFolderDatabase() {
     // TODO(pbek): open database if it was closed in closeDatabaseConnection
-    return QSqlDatabase::database("note_folder");
+//    createNoteFolderConnection();
+
+    QSqlDatabase db = QSqlDatabase::database("note_folder");
+//    db.transaction();
+    return db;
 }
 
 /**
@@ -312,9 +316,15 @@ QSqlDatabase DatabaseService::getNoteFolderDatabase() {
  *
  * @param db
  */
-void DatabaseService::closeDatabaseConnection(QSqlDatabase &db) {
+void DatabaseService::closeDatabaseConnection(QSqlDatabase &db,
+                                              QSqlQuery &query) {
     Q_UNUSED(db);
-    // temporarily disabled
+
+//    db.commit();
+#ifdef Q_OS_WIN32
+    query.clear();
+#endif
+
 //    if (db.isOpen()) {
 //        db.close();
 //    }

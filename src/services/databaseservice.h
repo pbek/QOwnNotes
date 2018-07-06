@@ -23,7 +23,7 @@ public:
     static bool setupNoteFolderTables();
     static QString getDiskDatabasePath();
     static QSqlDatabase getNoteFolderDatabase();
-    static void closeDatabaseConnection(QSqlDatabase &db);
+    static void closeDatabaseConnection(QSqlDatabase &db, QSqlQuery &query);
 
 private:
     static QString getNoteFolderDatabasePath();
