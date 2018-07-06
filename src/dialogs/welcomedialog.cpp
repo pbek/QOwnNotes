@@ -68,12 +68,29 @@ bool WelcomeDialog::handleNoteFolderSetup() {
     if (dir.exists()) {
         // everything is all right, the path already exists
         _allowFinishButton = true;
+
+        Utils::Misc::printInfo(QString("Note path '%1' exists.").arg(
+                _notesPath));
     } else {
         if (ui->createNoteFolderCheckBox->isChecked()) {
             if (dir.mkpath(_notesPath)) {
-                // everything is all right, the path was now created
-                _allowFinishButton = true;
+                Utils::Misc::printInfo(
+                        QString("Note path '%1' doesn't exist yet and will "
+                                "be created.").arg(_notesPath));
+
+                if (dir.exists()) {
+                    // everything is all right, the path was now created
+                    _allowFinishButton = true;
+                } else {
+                    qWarning() << "Cannot create note path with mkpath!";
+                    showNoteFolderErrorMessage(
+                            tr("Cannot create note path! You have to create "
+                               "the note folder manually!"));
+                    MetricsService::instance()->sendVisitIfEnabled(
+                            "welcome-dialog/note-folder/cannot-create-mkpath");
+                }
             } else {
+                qWarning() << "Cannot create note path!";
                 showNoteFolderErrorMessage(tr("Cannot create note path!"));
                 MetricsService::instance()->sendVisitIfEnabled(
                         "welcome-dialog/note-folder/cannot-create");

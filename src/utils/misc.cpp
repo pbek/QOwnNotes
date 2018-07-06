@@ -1043,3 +1043,16 @@ QString Utils::Misc::unescapeHtml(QString html) {
 //    QString ret = textEdit.toPlainText();
 //    return ret;
 }
+
+/**
+ * Outputs an info text
+ *
+ * @param text
+ */
+void Utils::Misc::printInfo(QString text) {
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
+    qInfo() << text;
+#else
+    printf(QString(text + "\n").toLatin1().data());
+#endif
+}
