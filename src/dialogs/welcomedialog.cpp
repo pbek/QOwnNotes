@@ -81,6 +81,10 @@ bool WelcomeDialog::handleNoteFolderSetup() {
                 if (dir.exists()) {
                     // everything is all right, the path was now created
                     _allowFinishButton = true;
+
+                    Utils::Misc::printInfo(
+                            QString("Note path '%1' was now created.").arg(
+                                    _notesPath));
                 } else {
                     qWarning() << "Cannot create note path with mkpath!";
                     showNoteFolderErrorMessage(
