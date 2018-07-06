@@ -4,7 +4,10 @@
 - added more debug output on the terminal and checks when using the welcome
   dialog to setup the note folder to check for troubles on some Windows machines
   (for [#951](https://github.com/pbek/QOwnNotes/issues/951))
- 
+- on Windows there now is a new experimental settings in the *General settings*
+  to automatically close the note folder database to prevent problems with sync 
+  tools (for [#926](https://github.com/pbek/QOwnNotes/issues/926))
+
 ## 18.07.1
 - fixed displaying of tags when navigating notes with the arrow keys and when
   switching note folders (for [#958](https://github.com/pbek/QOwnNotes/issues/958))
