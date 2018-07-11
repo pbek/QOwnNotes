@@ -1063,6 +1063,6 @@ void Utils::Misc::printInfo(QString text) {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
     qInfo() << text;
 #else
-    printf(QString(text + "\n").toLatin1().data());
+    printf("%s\n", text.toLatin1().data());
 #endif
 }
