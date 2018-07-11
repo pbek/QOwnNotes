@@ -28,7 +28,7 @@ install:
   - set QTDIR=%qtdir%
   - set PATH=%PATH%;%QTDIR%\bin;C:\MinGW\bin
   - set RELEASE_PATH=appveyor\release
-  - ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
+  - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 
 before_build:
   # getting submodules
@@ -37,9 +37,10 @@ before_build:
 build_script:
   # enable this to take a look if there are new qt versions
 #  - dir C:\Qt\
-  - dir C:\Qt\5.7.0
-  - dir C:\Qt\5.7.0\msvc2015
-  - dir C:\Qt\5.7.0\msvc2015\bin
+  - dir C:\Qt\
+#  - dir C:\Qt\5.7.0
+#  - dir C:\Qt\5.7.0\msvc2015
+#  - dir C:\Qt\5.7.0\msvc2015\bin
   - cd src
   # we need to modify that to make it running on AppVeyor
   - sed -i "s/CONFIG += c++11/QMAKE_CXXFLAGS += -std=gnu++0x/g" QOwnNotes.pro
