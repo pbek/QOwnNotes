@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 18.07.3
+- there now is a new checkbox in the *Panel settings* to show the notes in 
+  in the note list with a preview (for [#949](https://github.com/pbek/QOwnNotes/issues/949))
+    - this feature is still experimental and implementation is not finished yet
+    - manual renaming of the note name via the context menu is already implemented
+
 ## 18.07.2
 - added more debug output on the terminal and checks when using the welcome
   dialog to setup the note folder to check for troubles on some Windows machines

@@ -82,6 +82,7 @@ namespace Utils {
         QString unescapeHtml(QString html);
         void printInfo(QString text);
         bool doAutomaticNoteFolderDatabaseClosing();
+        bool isNoteListPreview();
     }  // namespace Misc
 }  // namespace Utils
 

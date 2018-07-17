@@ -236,6 +236,9 @@ set(SOURCE_FILES
     widgets/qtexteditsearchwidget.cpp
     widgets/qtexteditsearchwidget.h
     widgets/qtexteditsearchwidget.ui
+    widgets/notetreewidgetitem.cpp
+    widgets/notetreewidgetitem.h
+    widgets/notetreewidgetitem.ui
     utils/misc.cpp
     utils/misc.h
     utils/git.cpp

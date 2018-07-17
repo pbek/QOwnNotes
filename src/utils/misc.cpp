@@ -1037,6 +1037,16 @@ bool Utils::Misc::doAutomaticNoteFolderDatabaseClosing() {
 }
 
 /**
+ * Returns if "noteListPreview" is turned on
+ *
+ * @return
+ */
+bool Utils::Misc::isNoteListPreview() {
+    QSettings settings;
+    return settings.value("noteListPreview").toBool();
+}
+
+/**
  * Unescapes some html special characters
  *
  * @param html

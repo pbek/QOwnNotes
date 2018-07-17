@@ -903,4 +903,6 @@ private:
     void updateNoteTextEditReadOnly();
 
     int getSelectedNotesCount() const;
+
+    void updateNoteTreeWidgetItem(Note &note, QTreeWidgetItem *noteItem) const;
 };

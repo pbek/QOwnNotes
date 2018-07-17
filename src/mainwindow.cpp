@@ -89,6 +89,7 @@
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
 #include <QRegularExpressionMatchIterator>
+#include <widgets/notetreewidgetitem.h>
 
 MainWindow::MainWindow(QWidget *parent) :
         QMainWindow(parent),
@@ -1874,6 +1875,8 @@ bool MainWindow::addNoteToNoteTreeWidget(Note note) {
         return false;
     }
 
+    bool isNoteListPreview = Utils::Misc::isNoteListPreview();
+
     // add a note item to the tree
     QTreeWidgetItem *noteItem = new QTreeWidgetItem();
     setTreeWidgetItemToolTipForNote(noteItem, &note);
@@ -1901,6 +1904,10 @@ bool MainWindow::addNoteToNoteTreeWidget(Note note) {
     // strange things happen if we insert with insertTopLevelItem
     ui->noteTreeWidget->addTopLevelItem(noteItem);
 
+    if (isNoteListPreview) {
+        updateNoteTreeWidgetItem(note, noteItem);
+    }
+
 //    QSettings settings;
 //    if (settings.value("notesPanelSort", SORT_BY_LAST_CHANGE).toInt() == SORT_ALPHABETICAL) {
 //        ui->noteTreeWidget->addTopLevelItem(noteItem);
@@ -1909,6 +1916,26 @@ bool MainWindow::addNoteToNoteTreeWidget(Note note) {
 //    }
 
     return true;
+}
+
+void MainWindow::updateNoteTreeWidgetItem(
+        Note &note, QTreeWidgetItem *noteItem) const {
+    QWidget *widget = ui->noteTreeWidget->itemWidget(noteItem, 0);
+    NoteTreeWidgetItem *noteTreeWidgetItem =
+            dynamic_cast<NoteTreeWidgetItem*>(widget);
+
+    // check if we already set a NoteTreeWidgetItem in the past
+    if (noteTreeWidgetItem != nullptr) {
+        noteTreeWidgetItem->updateUserInterface(note);
+    } else {
+        noteTreeWidgetItem = new NoteTreeWidgetItem(note, ui->noteTreeWidget);
+    }
+
+    // TODO: set background color
+//    noteTreeWidgetItem->setBackground(noteItem->background(0).color());
+    // TODO: handle note renaming
+    // TODO: handle updating when note gets changed
+    ui->noteTreeWidget->setItemWidget(noteItem, 0, noteTreeWidgetItem);
 }
 
 /**
@@ -1968,6 +1995,8 @@ void MainWindow::setTreeWidgetItemToolTipForNote(
     }
 
     item->setToolTip(0, toolTipText);
+
+    // TODO: handle item widget too
 }
 
 /**
@@ -8692,9 +8721,22 @@ void MainWindow::on_noteTreeWidget_customContextMenuRequested(
             // show the git log of the current note
             on_actionShow_note_git_versions_triggered();
         } else if (selectedItem == renameAction) {
+            QTreeWidgetItem *item = ui->noteTreeWidget->currentItem();
+
             if (Note::allowDifferentFileName()) {
-                QTreeWidgetItem *item = ui->noteTreeWidget->currentItem();
-                ui->noteTreeWidget->editItem(item);
+                if (Utils::Misc::isNoteListPreview()) {
+                    bool ok;
+                    QString name = QInputDialog::getText(
+                            this, tr("Rename note"), tr("Name:"),
+                            QLineEdit::Normal, currentNote.getName(), &ok);
+
+                    if (ok && !name.isEmpty()) {
+                        item->setText(0, name);
+                        on_noteTreeWidget_itemChanged(item, 0);
+                    }
+                } else {
+                    ui->noteTreeWidget->editItem(item);
+                }
             } else {
                 if (QMessageBox::warning(
                         this, tr("Note renaming not enabled!"),
@@ -8762,6 +8804,10 @@ void MainWindow::on_noteTreeWidget_itemChanged(QTreeWidgetItem *item,
         // set old name back in case the renaming failed or the file name got
         // altered in the renaming process
         item->setText(0, note.getName());
+
+        if (Utils::Misc::isNoteListPreview()) {
+            updateNoteTreeWidgetItem(note, item);
+        }
     }
 }
 

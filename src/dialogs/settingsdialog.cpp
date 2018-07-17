@@ -215,6 +215,8 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
             this, SLOT(needRestart()));
     connect(ui->noteEditCentralWidgetCheckBox, SIGNAL(toggled(bool)),
             this, SLOT(needRestart()));
+    connect(ui->noteListPreviewCheckBox, SIGNAL(toggled(bool)),
+            this, SLOT(needRestart()));
 
     // connect the panel sort radio buttons
     connect(ui->notesPanelSortAlphabeticalRadioButton, SIGNAL(toggled(bool)),
@@ -238,6 +240,11 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
     if (fromWelcomeDialog) {
         // hide the whole left side frame with the settings menu tree
         ui->leftSideFrame->setVisible(false);
+    }
+
+    if (!ui->noteListPreviewCheckBox->text().contains("(experimental)")) {
+        ui->noteListPreviewCheckBox->setText(
+                ui->noteListPreviewCheckBox->text() + " (experimental)");
     }
 }
 
@@ -798,6 +805,8 @@ void SettingsDialog::storePanelSettings() {
 
     settings.setValue("taggingShowNotesRecursively",
                       ui->taggingShowNotesRecursivelyCheckBox->isChecked());
+    settings.setValue("noteListPreview",
+                      ui->noteListPreviewCheckBox->isChecked());
 
     ui->tagsPanelSortAlphabeticalRadioButton->isChecked() ?
                 settings.setValue("tagsPanelSort", SORT_ALPHABETICAL) :
@@ -1223,6 +1232,7 @@ void SettingsDialog::readPanelSettings() {
 
     ui->taggingShowNotesRecursivelyCheckBox->setChecked(settings.value(
             "taggingShowNotesRecursively").toBool());
+    ui->noteListPreviewCheckBox->setChecked(Utils::Misc::isNoteListPreview());
 
     if (settings.value("tagsPanelSort").toInt() == SORT_ALPHABETICAL) {
         ui->tagsPanelSortAlphabeticalRadioButton->setChecked(true);

@@ -124,7 +124,8 @@ SOURCES += main.cpp\
     widgets/label.cpp \
     widgets/lineedit.cpp \
     widgets/qtexteditsearchwidget.cpp \
-    widgets/scriptlistwidget.cpp
+    widgets/scriptlistwidget.cpp \
+    widgets/notetreewidgetitem.cpp
 
 HEADERS  += mainwindow.h \
     build_number.h \
@@ -203,7 +204,8 @@ HEADERS  += mainwindow.h \
     widgets/label.h \
     widgets/lineedit.h \
     widgets/qtexteditsearchwidget.h \
-    widgets/scriptlistwidget.h
+    widgets/scriptlistwidget.h \
+    widgets/notetreewidgetitem.h
 
 FORMS    += mainwindow.ui \
     dialogs/notediffdialog.ui \
@@ -228,7 +230,8 @@ FORMS    += mainwindow.ui \
     dialogs/notedialog.ui \
     dialogs/scriptrepositorydialog.ui \
     widgets/qtexteditsearchwidget.ui \
-    widgets/scriptsettingwidget.ui
+    widgets/scriptsettingwidget.ui \
+    widgets/notetreewidgetitem.ui
 
 RESOURCES += \
     images.qrc \
