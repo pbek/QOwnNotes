@@ -5,6 +5,10 @@
   in the note list with a preview (for [#949](https://github.com/pbek/QOwnNotes/issues/949))
     - this feature is still experimental and implementation is not finished yet
     - manual renaming of the note name via the context menu is already implemented
+- attempted to fix OBS builds for Debian 8, xUbuntu_15.10 and xUbuntu_15.04
+- added more Catalan, Chinese Traditional, Brazilian Portuguese, Indonesian, 
+  German, Spanish, Italian, Dutch and Hungarian translation (thank you MGuerra,
+  abev66, mlimacarlos, zmni, rakekniven, richarson, mlocati and Fabijenna)
 
 ## 18.07.2
 - added more debug output on the terminal and checks when using the welcome
