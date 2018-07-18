@@ -2,6 +2,8 @@
 
 ## 18.07.4
 - attempted to fix builds for older Qt versions
+- under Windows it is now checked if user chose a different drive for the note 
+  folder in the welcome dialog in portable mode (for [#971](https://github.com/pbek/QOwnNotes/issues/971))
 
 ## 18.07.3
 - there now is a new checkbox in the *Panel settings* to show the notes in 

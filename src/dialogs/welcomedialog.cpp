@@ -173,6 +173,23 @@ void WelcomeDialog::on_noteFolderButton_clicked() {
     QDir d = QDir(dir);
 
     if (d.exists() && (dir != "")) {
+#ifdef Q_OS_WIN32
+        // check if user chose a different drive in portable mode
+        if (Utils::Misc::isInPortableMode() &&
+                Utils::Misc::portableDataPath().toLower().at(0) !=
+                dir.toLower().at(0)) {
+            QMessageBox::information(
+                    this,
+                    tr("Note folder"),
+                    tr("Keep in mind that you the note folder will be "
+                       "stored relative to the directory where QOwnNotes "
+                       "resides in portable mode! So you need to stay on the "
+                       "same drive."));
+
+            return;
+        }
+#endif
+
         _notesPath = dir;
         ui->noteFolderLineEdit->setText(dir);
     }
