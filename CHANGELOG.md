@@ -1,11 +1,12 @@
 # QOwnNotes Changelog
 
 ## 18.07.4
-- attempted to fix builds for older Qt versions
 - under Windows it is now checked if user chose a different drive for the note 
   folder in the welcome dialog in portable mode (for [#971](https://github.com/pbek/QOwnNotes/issues/971))
 - the error dialog for errors while talking to your ownCloud server will not 
   be shown a 2nd time if it is already present on the screen (for [#950](https://github.com/pbek/QOwnNotes/issues/950)) 
+- attempted to fix builds for older Qt versions
+- added more Spanish translation (thank you richarson)
 
 ## 18.07.3
 - there now is a new checkbox in the *Panel settings* to show the notes in 
