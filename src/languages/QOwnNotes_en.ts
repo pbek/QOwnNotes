@@ -5675,6 +5675,7 @@ This cannot be undone!</source>
     </message>
     <message>
         <location filename="../dialogs/welcomedialog.ui" line="168"/>
+        <location filename="../dialogs/welcomedialog.cpp" line="183"/>
         <source>Note folder</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5741,6 +5742,11 @@ This cannot be undone!</source>
     <message>
         <location filename="../dialogs/welcomedialog.cpp" line="169"/>
         <source>Please select the folder where your notes will get stored to</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/welcomedialog.cpp" line="184"/>
+        <source>Keep in mind that you the note folder will be stored relative to the directory where QOwnNotes resides in portable mode! So you need to stay on the same drive.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
