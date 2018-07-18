@@ -18,6 +18,8 @@
 #include <QCheckBox>
 #include <QPushButton>
 #include <QSettings>
+#include <QApplication>
+#include <QMessageBox>
 
 
 /**
@@ -219,4 +221,18 @@ Utils::Gui::showMessageBox(QWidget *parent, QMessageBox::Icon icon,
     }
 
     return result;
+}
+
+/**
+ * Checks if a QMessageBox is already present on the screen
+ */
+bool Utils::Gui::isMessageBoxPresent() {
+    QWidgetList topWidgets = QApplication::topLevelWidgets();
+            foreach (QWidget *w, topWidgets) {
+            if (QMessageBox *mb = dynamic_cast<QMessageBox *>(w)) {
+                return true;
+            }
+        }
+
+    return false;
 }

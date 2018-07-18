@@ -24,6 +24,7 @@
 #include "cryptoservice.h"
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
+#include <utils/gui.h>
 
 const QString OwnCloudService::rootPath =
         "/index.php/apps/qownnotesapi/api/v1/";
@@ -181,9 +182,11 @@ void OwnCloudService::slotCalendarAuthenticationRequired(
     Q_UNUSED(authenticator);
     qWarning() << "Calendar username and/or password incorrect";
 
-    QMessageBox::warning(
-            0, tr("Username / password error"),
-            tr("Your calendar username or password is incorrect!"));
+    if (!Utils::Gui::isMessageBoxPresent()) {
+        QMessageBox::warning(
+                0, tr("Username / password error"),
+                tr("Your calendar username or password is incorrect!"));
+    }
 
     reply->abort();
 }
@@ -966,12 +969,15 @@ bool OwnCloudService::hasOwnCloudSettings(bool withEnabledCheck) {
  */
 void OwnCloudService::showOwnCloudServerErrorMessage(
         QString message, bool withSettingsButton) {
-    QString headline = tr("ownCloud server connection error");
+    QString headline = Utils::Misc::replaceOwnCloudText(
+            tr("ownCloud server connection error"));
     QString text = message.isEmpty() ?
             "Cannot connect to your ownCloud server! "
             "Please check your ownCloud configuration." :
             tr("ownCloud server error: <strong>%1</strong><br />"
             "Please check your ownCloud configuration.").arg(message);
+
+    text = Utils::Misc::replaceOwnCloudText(text);
 
     showOwnCloudMessage(headline, text, withSettingsButton);
 }
@@ -987,6 +993,13 @@ void OwnCloudService::showOwnCloudMessage(
 
     if (message.isEmpty()) {
         message = tr("You need to setup your ownCloud server!");
+    }
+
+    // don't show an actual message box if there already is one present on
+    // the screen
+    if (Utils::Gui::isMessageBoxPresent()) {
+        qWarning() << headline << ": " << message;
+        return;
     }
 
     if (withSettingsButton) {

@@ -65,5 +65,7 @@ namespace Utils {
         bool userDataInTreeWidgetExists(QTreeWidget *treeWidget,
                                         QVariant variant,
                                         int column = 1);
+
+        bool isMessageBoxPresent();
     }
 }
