@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 18.07.4
+- attempted to fix builds for older Qt versions
+
 ## 18.07.3
 - there now is a new checkbox in the *Panel settings* to show the notes in 
   in the note list with a preview (for [#949](https://github.com/pbek/QOwnNotes/issues/949))

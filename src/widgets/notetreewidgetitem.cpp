@@ -33,7 +33,8 @@ QString NoteTreeWidgetItem::getNotePreviewText(Note &note) const {
     noteText.remove(QRegularExpression("^# .+\n+"));
 
     // only take the first three lines
-    noteText = noteText.split("\n").mid(0, 3).join("\n");
+    const QStringList &lineList = noteText.split("\n").mid(0, 3);
+    noteText = lineList.join("\n");
 
     return noteText;
 }
