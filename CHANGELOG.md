@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 18.07.5
+- if you open the dialog to manage orphaned images the first item will now
+  automatically be selected
+
 ## 18.07.4
 - under Windows it is now checked if user chose a different drive for the note 
   folder in the welcome dialog in portable mode (for [#971](https://github.com/pbek/QOwnNotes/issues/971))

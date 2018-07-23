@@ -58,6 +58,13 @@ OrphanedImagesDialog::OrphanedImagesDialog(QWidget *parent) :
 
             ui->fileTreeWidget->addTopLevelItem(item);
         }
+
+    // jump to the first item
+    if (orphanedFiles.count() > 0) {
+        QKeyEvent *event = new QKeyEvent(QEvent::KeyPress, Qt::Key_Home,
+                                         Qt::NoModifier);
+        QApplication::postEvent(ui->fileTreeWidget, event);
+    }
 }
 
 OrphanedImagesDialog::~OrphanedImagesDialog() {
