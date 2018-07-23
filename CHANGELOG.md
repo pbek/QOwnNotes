@@ -6,7 +6,8 @@
 - there now is a new menu entry to **manage orphaned attachments** in the
   `Edit / Extra` menu (for [#895](https://github.com/pbek/QOwnNotes/issues/895))
     - you can view information about the attachment, add the attachment to the
-      current note or remove the attachment
+      current note, remove the attachment, open the attachment with an 
+      associated application or open the folder of the attachment
 
 ## 18.07.4
 - under Windows it is now checked if user chose a different drive for the note 

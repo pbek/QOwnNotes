@@ -28,6 +28,10 @@ private slots:
 
     void on_insertButton_clicked();
 
+    void on_openFileButton_clicked();
+
+    void on_openFolderButton_clicked();
+
 private:
     Ui::OrphanedAttachmentsDialog *ui;
 

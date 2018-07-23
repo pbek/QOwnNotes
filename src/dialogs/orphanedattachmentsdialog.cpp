@@ -210,3 +210,25 @@ void OrphanedAttachmentsDialog::on_insertButton_clicked() {
             delete item;
     }
 }
+
+void OrphanedAttachmentsDialog::on_openFileButton_clicked() {
+    QTreeWidgetItem *item = ui->fileTreeWidget->currentItem();
+
+    if (item == nullptr) {
+        return;
+    }
+
+    QString filePath = getFilePath(item);
+    Utils::Misc::openPath(filePath);
+}
+
+void OrphanedAttachmentsDialog::on_openFolderButton_clicked() {
+    QTreeWidgetItem *item = ui->fileTreeWidget->currentItem();
+
+    if (item == nullptr) {
+        return;
+    }
+
+    QString filePath = getFilePath(item);
+    Utils::Misc::openFolderSelect(filePath);
+}
