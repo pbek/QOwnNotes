@@ -181,7 +181,7 @@ void WelcomeDialog::on_noteFolderButton_clicked() {
             QMessageBox::information(
                     this,
                     tr("Note folder"),
-                    tr("Keep in mind that you the note folder will be "
+                    tr("Keep in mind that the note folder will be "
                        "stored relative to the directory where QOwnNotes "
                        "resides in portable mode! So you need to stay on the "
                        "same drive."));

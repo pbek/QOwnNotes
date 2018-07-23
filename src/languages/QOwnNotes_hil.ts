@@ -5812,8 +5812,12 @@ This cannot be undone!</translation>
     </message>
     <message>
         <location filename="../dialogs/welcomedialog.cpp" line="184"/>
+        <source>Keep in mind that the note folder will be stored relative to the directory where QOwnNotes resides in portable mode! So you need to stay on the same drive.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Keep in mind that you the note folder will be stored relative to the directory where QOwnNotes resides in portable mode! So you need to stay on the same drive.</source>
-        <translation type="unfinished">Keep in mind that you the note folder will be stored relative to the directory where QOwnNotes resides in portable mode! So you need to stay on the same drive.</translation>
+        <translation type="obsolete">Keep in mind that you the note folder will be stored relative to the directory where QOwnNotes resides in portable mode! So you need to stay on the same drive.</translation>
     </message>
 </context>
 <context>
