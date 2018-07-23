@@ -882,6 +882,7 @@ p, li { white-space: pre-wrap; }
      <addaction name="actionSearch_text_on_the_web"/>
      <addaction name="actionAutocomplete"/>
      <addaction name="actionDelete_orphaned_images"/>
+     <addaction name="actionManage_orphaned_attachments"/>
      <addaction name="actionSplit_note_at_cursor_position"/>
     </widget>
     <widget class="QMenu" name="menuEditNote">
@@ -2213,6 +2214,15 @@ p, li { white-space: pre-wrap; }
     <string notr="true">F4</string>
    </property>
   </action>
+  <action name="actionManage_orphaned_attachments">
+   <property name="icon">
+    <iconset theme="mail-attachment" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/mail-attachment.svg</normaloff>:/icons/breeze-qownnotes/16x16/mail-attachment.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Manage orphaned attachments</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
@@ -2243,9 +2253,9 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="breeze-qownnotes.qrc"/>
-  <include location="breeze-dark-qownnotes.qrc"/>
   <include location="images.qrc"/>
+  <include location="breeze-dark-qownnotes.qrc"/>
+  <include location="breeze-qownnotes.qrc"/>
  </resources>
  <connections/>
 </ui>

@@ -3,6 +3,10 @@
 ## 18.07.5
 - if you open the dialog to manage orphaned images the first item will now
   automatically be selected
+- there now is a new menu entry to **manage orphaned attachments** in the
+  `Edit / Extra` menu (for [#895](https://github.com/pbek/QOwnNotes/issues/895))
+    - you can view information about the attachment, add the attachment to the
+      current note or remove the attachment
 
 ## 18.07.4
 - under Windows it is now checked if user chose a different drive for the note 

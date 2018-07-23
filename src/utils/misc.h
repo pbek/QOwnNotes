@@ -83,6 +83,7 @@ namespace Utils {
         void printInfo(QString text);
         bool doAutomaticNoteFolderDatabaseClosing();
         bool isNoteListPreview();
+        QString toHumanReadableByteSize(qint64 size);
     }  // namespace Misc
 }  // namespace Utils
 

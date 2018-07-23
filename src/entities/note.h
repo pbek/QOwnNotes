@@ -241,6 +241,8 @@ public:
 
     static QList<int> fetchAllIdsByNoteTextPart(QString textPart);
 
+    QStringList getAttachmentsFileList();
+
 protected:
     int id;
     QString name;

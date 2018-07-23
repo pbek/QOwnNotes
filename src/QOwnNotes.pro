@@ -113,6 +113,7 @@ SOURCES += main.cpp\
     widgets/fontcolorwidget.cpp \
     dialogs/evernoteimportdialog.cpp \
     dialogs/orphanedimagesdialog.cpp \
+    dialogs/orphanedattachmentsdialog.cpp \
     dialogs/actiondialog.cpp \
     dialogs/tabledialog.cpp \
     libraries/qtcsv/src/sources/reader.cpp \
@@ -189,6 +190,7 @@ HEADERS  += mainwindow.h \
     widgets/fontcolorwidget.h \
     dialogs/evernoteimportdialog.h \
     dialogs/orphanedimagesdialog.h \
+    dialogs/orphanedattachmentsdialog.h \
     dialogs/actiondialog.h \
     dialogs/tabledialog.h \
     libraries/qtcsv/src/include/qtcsv_global.h \
@@ -225,6 +227,7 @@ FORMS    += mainwindow.ui \
     widgets/fontcolorwidget.ui \
     dialogs/evernoteimportdialog.ui \
     dialogs/orphanedimagesdialog.ui \
+    dialogs/orphanedattachmentsdialog.ui \
     dialogs/actiondialog.ui \
     dialogs/tabledialog.ui \
     dialogs/notedialog.ui \

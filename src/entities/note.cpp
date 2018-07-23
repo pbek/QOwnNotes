@@ -327,6 +327,29 @@ QStringList Note::getMediaFileList() {
 }
 
 /**
+ * Returns a list of all linked attachments of the current note
+ * @return
+ */
+QStringList Note::getAttachmentsFileList() {
+    QString text = getNoteText();
+    QStringList fileList;
+
+    // match image links like ![media-qV920](file://media/608766373.gif)
+    QRegularExpression re(
+            "!\\[.*?\\]\\(file:\\/\\/attachments/(.+?)\\)");
+    QRegularExpressionMatchIterator i = re.globalMatch(text);
+
+    // remove all found images from the orphaned files list
+    while (i.hasNext()) {
+        QRegularExpressionMatch match = i.next();
+        QString fileName = match.captured(1);
+        fileList << fileName;
+    }
+
+    return fileList;
+}
+
+/**
  * Fetches a note by its share id
  *
  * @param shareId

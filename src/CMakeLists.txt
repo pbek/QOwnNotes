@@ -34,6 +34,7 @@ qt5_wrap_ui(dialogs/ui_tagadddialog.h tagadddialog.ui)
 qt5_wrap_ui(widgets/ui_fontcolorwidget.h fontcolorwidget.ui)
 qt5_wrap_ui(widgets/ui_evernoteimportdialog.h ui_evernoteimportdialog.ui)
 qt5_wrap_ui(dialogs/ui_orphanedimagesdialog.h orphanedimagesdialog.ui)
+qt5_wrap_ui(dialogs/ui_orphanedattachmentsdialog.h orphanedattachmentsdialog.ui)
 qt5_wrap_ui(dialogs/ui_actiondialog.h actiondialog.ui)
 qt5_wrap_ui(dialogs/ui_tabledialog.h tabledialog.ui)
 qt5_wrap_ui(dialogs/ui_notedialog.h notedialog.ui)
@@ -105,6 +106,9 @@ set(SOURCE_FILES
     dialogs/orphanedimagesdialog.cpp
     dialogs/orphanedimagesdialog.h
     dialogs/orphanedimagesdialog.ui
+    dialogs/orphanedattachmentsdialog.cpp
+    dialogs/orphanedattachmentsdialog.h
+    dialogs/orphanedattachmentsdialog.ui
     dialogs/scriptrepositorydialog.cpp
     dialogs/scriptrepositorydialog.h
     dialogs/scriptrepositorydialog.ui

@@ -455,6 +455,7 @@ MainWindow::MainWindow(QWidget *parent) :
     _actionDialog = Q_NULLPTR;
     _todoDialog = Q_NULLPTR;
     _orphanedImagesDialog = Q_NULLPTR;
+    _orphanedAttachmentsDialog = Q_NULLPTR;
 
     // track cursor position changes for the line number label
     QObject::connect(ui->noteTextEdit,
@@ -10218,4 +10219,13 @@ void MainWindow::on_noteTreeWidget_itemDoubleClicked(QTreeWidgetItem *item,
 void MainWindow::on_noteTreeWidget_itemSelectionChanged() {
     // we also need to do this in setCurrentNote because of different timings
     reloadCurrentNoteTags();
+}
+
+/**
+ * Shows a dialog to delete orphaned attachments
+ */
+void MainWindow::on_actionManage_orphaned_attachments_triggered() {
+    delete(_orphanedAttachmentsDialog);
+    _orphanedAttachmentsDialog = new OrphanedAttachmentsDialog(this);
+    _orphanedAttachmentsDialog->show();
 }

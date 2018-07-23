@@ -40,6 +40,7 @@
 #include <QPrinter>
 #include <widgets/logwidget.h>
 #include <dialogs/orphanedimagesdialog.h>
+#include <dialogs/orphanedattachmentsdialog.h>
 #include "entities/notehistory.h"
 #include "dialogs/notediffdialog.h"
 #include "services/updateservice.h"
@@ -522,6 +523,8 @@ private slots:
 
     void on_noteTreeWidget_itemSelectionChanged();
 
+    void on_actionManage_orphaned_attachments_triggered();
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;
@@ -600,6 +603,7 @@ private:
     ActionDialog *_actionDialog;
     TodoDialog *_todoDialog;
     OrphanedImagesDialog *_orphanedImagesDialog;
+    OrphanedAttachmentsDialog *_orphanedAttachmentsDialog;
     SettingsDialog *_settingsDialog;
     bool _noteExternallyRemovedCheckEnabled;
     QList<QAction *> _noteTextEditContextMenuActions;
