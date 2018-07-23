@@ -8,6 +8,9 @@
     - you can view information about the attachment, add the attachment to the
       current note, remove the attachment, open the attachment with an 
       associated application or open the folder of the attachment
+- added more Catalan, Chinese Traditional, Brazilian Portuguese, Indonesian, 
+  German and Russian translation (thank you MGuerra, abev66, mlimacarlos, zmni,
+  rakekniven and pu.sash)
 
 ## 18.07.4
 - under Windows it is now checked if user chose a different drive for the note 
