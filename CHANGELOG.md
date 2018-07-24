@@ -3,6 +3,8 @@
 ## 18.07.6
 - fixed attachment detection and link generation in the new dialog to manage
   orphaned attachments (for [#895](https://github.com/pbek/QOwnNotes/issues/895))
+- did some improvements on updating the current note in the note list if the 
+  note list preview is turned on (for [#949](https://github.com/pbek/QOwnNotes/issues/949))
 
 ## 18.07.5
 - if you open the dialog to manage orphaned images the first item will now

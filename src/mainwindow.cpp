@@ -1920,7 +1920,11 @@ bool MainWindow::addNoteToNoteTreeWidget(Note note) {
 }
 
 void MainWindow::updateNoteTreeWidgetItem(
-        Note &note, QTreeWidgetItem *noteItem) const {
+        Note &note, QTreeWidgetItem *noteItem) {
+    if (noteItem == nullptr) {
+        noteItem = findNoteInNoteTreeWidget(note);
+    }
+
     QWidget *widget = ui->noteTreeWidget->itemWidget(noteItem, 0);
     NoteTreeWidgetItem *noteTreeWidgetItem =
             dynamic_cast<NoteTreeWidgetItem*>(widget);
@@ -1936,6 +1940,9 @@ void MainWindow::updateNoteTreeWidgetItem(
 //    noteTreeWidgetItem->setBackground(noteItem->background(0).color());
     // TODO: handle note renaming
     // TODO: handle updating when note gets changed
+    // TODO: handle updating in handleTreeWidgetItemTagColor
+
+    // this takes too long, it takes ages to do this on 1000 notes
     ui->noteTreeWidget->setItemWidget(noteItem, 0, noteTreeWidgetItem);
 }
 
@@ -2017,6 +2024,13 @@ void MainWindow::makeCurrentNoteFirstInNoteList() {
         // set the item as current item if it is visible
         if (!item->isHidden()) {
             ui->noteTreeWidget->setCurrentItem(item);
+
+            if (Utils::Misc::isNoteListPreview()) {
+                // ui->noteTreeWidget->setCurrentItem seems to destroy the
+                // NoteTreeWidgetItem
+                // TODO: the list symbol is still gone
+                updateNoteTreeWidgetItem(currentNote, item);
+            }
         }
 
 //        bool isInActiveNoteSubFolder =
@@ -4704,6 +4718,8 @@ void MainWindow::on_noteTextEdit_textChanged() {
         QSettings settings;
         if (settings.value("notesPanelSort", SORT_BY_LAST_CHANGE).toInt() == SORT_BY_LAST_CHANGE) {
             makeCurrentNoteFirstInNoteList();
+        } else if (Utils::Misc::isNoteListPreview()) {
+            updateNoteTreeWidgetItem(currentNote);
         }
 
         const QSignalBlocker blocker(ui->noteTreeWidget);

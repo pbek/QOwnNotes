@@ -908,5 +908,6 @@ private:
 
     int getSelectedNotesCount() const;
 
-    void updateNoteTreeWidgetItem(Note &note, QTreeWidgetItem *noteItem) const;
+    void updateNoteTreeWidgetItem(Note &note,
+                                  QTreeWidgetItem *noteItem = nullptr);
 };
