@@ -334,9 +334,9 @@ QStringList Note::getAttachmentsFileList() {
     QString text = getNoteText();
     QStringList fileList;
 
-    // match image links like ![media-qV920](file://media/608766373.gif)
+    // match attachment links like [956321614](file://attachments/956321614.pdf)
     QRegularExpression re(
-            "!\\[.*?\\]\\(file:\\/\\/attachments/(.+?)\\)");
+            "\\[.*?\\]\\(file:\\/\\/attachments/(.+?)\\)");
     QRegularExpressionMatchIterator i = re.globalMatch(text);
 
     // remove all found images from the orphaned files list

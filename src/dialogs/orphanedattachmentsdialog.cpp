@@ -204,7 +204,7 @@ void OrphanedAttachmentsDialog::on_insertButton_clicked() {
             QFileInfo fileInfo(filePath);
             QString attachmentsUrlString = "file://attachments/" +
                     fileInfo.fileName();
-            QString attachmentLink = "![" + fileInfo.baseName() + "](" +
+            QString attachmentLink = "[" + fileInfo.baseName() + "](" +
                              attachmentsUrlString + ")\n";
             textEdit->insertPlainText(attachmentLink);
             delete item;
