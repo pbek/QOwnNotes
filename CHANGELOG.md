@@ -3,6 +3,15 @@
 ## 18.07.7
 - attempted to fix a problem with Chinese and Japanese input methods
   (for [#976](https://github.com/pbek/QOwnNotes/issues/976))
+- added a script `Solar (Jalaali) calendar integration` to the *Script repository*
+  to attempt to integrate the solar (Jalaali) calendar into QOwnNotes
+  (for [#977](https://github.com/pbek/QOwnNotes/issues/977))
+    - it currently supports creating a headline for new notes with the current
+      Jalaali date and time
+    - take a look at [solar-calendar-integration](https://github.com/qownnotes/scripts/tree/master/solar-calendar-integration)
+      if you want to improve it
+- added more Brazilian Portuguese and Portuguese translation (thank you
+  mlimacarlos and mtbf99)
 
 ## 18.07.6
 - fixed attachment detection and link generation in the new dialog to manage

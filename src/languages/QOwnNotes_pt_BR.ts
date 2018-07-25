@@ -1169,7 +1169,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2223"/>
       <source>Manage orphaned attachments</source>
-      <translation type="unfinished">Manage orphaned attachments</translation>
+      <translation>Gerenciar anexos órfãos</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1687"/>
@@ -2474,74 +2474,74 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="14"/>
       <source>Orphaned attachments</source>
-      <translation type="unfinished">Orphaned attachments</translation>
+      <translation>Anexos órfãos</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="54"/>
       <source>Delete selected attachments</source>
-      <translation type="unfinished">Delete selected attachments</translation>
+      <translation>Excluir anexos selecionados</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="57"/>
       <source>Delete</source>
-      <translation type="unfinished">Delete</translation>
+      <translation>Excluir</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="86"/>
       <source>Add selected attachments to note</source>
-      <translation type="unfinished">Add selected attachments to note</translation>
+      <translation>Adicionar anexos selecionados a nota</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="89"/>
       <source>Add to note</source>
-      <translation type="unfinished">Add to note</translation>
+      <translation>Adicionar na nota</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="100"/>
       <source>Open &amp;attachment</source>
-      <translation type="unfinished">Open &amp;attachment</translation>
+      <translation>Abrir &amp;anexo</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="111"/>
       <source>Open &amp;folder</source>
-      <translation type="unfinished">Open &amp;folder</translation>
+      <translation>Abrir &amp;pasta</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="162"/>
       <source>File size:</source>
-      <translation type="unfinished">File size:</translation>
+      <translation>Tamanho do arquivo:</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="182"/>
       <source>File type:</source>
-      <translation type="unfinished">File type:</translation>
+      <translation>Tipo de arquivo:</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="199"/>
       <source>File path:</source>
-      <translation type="unfinished">File path:</translation>
+      <translation>Caminho do arquivo:</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="229"/>
       <source>Attachments that are not used in notes:</source>
-      <translation type="unfinished">Attachments that are not used in notes:</translation>
+      <translation>Anexos que não serão utilizados nas notas:</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="60"/>
       <source>Last modified at %1</source>
-      <translation type="unfinished">Last modified at %1</translation>
+      <translation>Última modificação em %1</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="140"/>
       <source>Delete selected files</source>
-      <translation type="unfinished">Delete selected files</translation>
+      <translation>Excluir arquivos selecionados</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="141"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
+      <translation>
+        <numerusform>Excluir arquivos &lt;strong&gt;%n&lt;/strong&gt; selecionado (s)?</numerusform>
+        <numerusform>Excluir arquivos &lt;strong&gt;%n&lt;/strong&gt; selecionados?</numerusform>
       </translation>
     </message>
   </context>
@@ -5837,7 +5837,7 @@ Isso não poderá ser desfeito!</translation>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="184"/>
       <source>Keep in mind that the note folder will be stored relative to the directory where QOwnNotes resides in portable mode! So you need to stay on the same drive.</source>
-      <translation type="unfinished">Keep in mind that the note folder will be stored relative to the directory where QOwnNotes resides in portable mode! So you need to stay on the same drive.</translation>
+      <translation>Tenha em mente que o diretório será armazenado em relação ao diretório onde o QOwnnotes está no modo portável! Então você precisa estar na mesma unidade.</translation>
     </message>
   </context>
   <context>

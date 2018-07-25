@@ -269,7 +269,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="220"/>
       <source>Broken link</source>
-      <translation type="unfinished">Broken link</translation>
+      <translation>Link quebrado</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="210"/>
@@ -300,7 +300,7 @@
       <location filename="../widgets/fontcolorwidget.cpp" line="463"/>
       <source>Copy</source>
       <comment>as noun</comment>
-      <translation type="unfinished">Copy</translation>
+      <translation>Copiar</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="585"/>
@@ -377,29 +377,29 @@
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="41"/>
       <source>Restore</source>
-      <translation type="unfinished">Restore</translation>
+      <translation>Recuperar</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="42"/>
       <location filename="../dialogs/localtrashdialog.cpp" line="194"/>
       <source>Restore selected notes</source>
-      <translation type="unfinished">Restore selected notes</translation>
+      <translation>Recuperar as notas selecionadas</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="51"/>
       <source>Remove</source>
-      <translation type="unfinished">Remove</translation>
+      <translation>Remover</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="52"/>
       <location filename="../dialogs/localtrashdialog.cpp" line="240"/>
       <source>Remove selected notes</source>
-      <translation type="unfinished">Remove selected notes</translation>
+      <translation>Remover as notas selecionadas</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="97"/>
       <source>File will be restored to: %1</source>
-      <translation type="unfinished">File will be restored to: %1</translation>
+      <translation>Ficheiro será restaurado para: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="106"/>
@@ -417,7 +417,7 @@
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="218"/>
       <source>Notes restored</source>
-      <translation type="unfinished">Notes restored</translation>
+      <translation>Notas recuperadas</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="219"/>
