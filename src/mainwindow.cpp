@@ -5106,6 +5106,11 @@ void MainWindow::on_action_New_note_triggered() {
  * @param noteName
  */
 void MainWindow::createNewNote(QString noteName, bool withNameAppend) {
+    // turn on note editing if it was disabled
+    if (!Utils::Misc::isNoteEditingAllowed()) {
+        ui->actionAllow_note_editing->trigger();
+    }
+
     // show the window in case we are using the system tray
     show();
 

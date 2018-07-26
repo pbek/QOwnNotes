@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 18.07.8
+- if note editing was disabled when you create a new note it is now turned on automatically
+
 ## 18.07.7
 - attempted to fix a problem with Chinese and Japanese input methods
   (for [#976](https://github.com/pbek/QOwnNotes/issues/976))
