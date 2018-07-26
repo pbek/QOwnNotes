@@ -2,6 +2,8 @@
 
 ## 18.07.8
 - if note editing was disabled when you create a new note it is now turned on automatically
+- when selecting multiple notes the note edit widget will now be hidden and 
+  the amount of selected notes will be shown (for [#949](https://github.com/pbek/QOwnNotes/issues/949))
 
 ## 18.07.7
 - attempted to fix a problem with Chinese and Japanese input methods

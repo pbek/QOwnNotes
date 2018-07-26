@@ -163,6 +163,10 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // hide the encrypted note text edit by default
     ui->encryptedNoteTextEdit->hide();
+    ui->multiSelectActionFrame->hide();
+
+    // TODO: #949, un-hide and implement
+    ui->moveNotesButton->hide();
 
     // set the search frames for the note text edits
     bool darkMode = settings.value("darkMode").toBool();
@@ -7324,15 +7328,24 @@ void MainWindow::reloadCurrentNoteTags() {
             tr("Add a tag to the selected notes"));
     QList<Tag> tagList;
 
+    ui->multiSelectActionFrame->setVisible(!currentNoteOnly);
+    ui->noteEditorFrame->setVisible(currentNoteOnly);
+
     if (currentNoteOnly) {
         tagList = Tag::fetchAllOfNote(currentNote);
     } else {
         tagList = Tag::fetchAllOfNotes(selectedNotes());
+        const QString &notesSelectedText = tr("%n notes selected", "",
+                                              selectedNotesCount);
 
         ui->selectedTagsToolButton->setText(QString::number(
                 selectedNotesCount));
-        ui->selectedTagsToolButton->setToolTip(
-                tr("%n notes selected", "", selectedNotesCount));
+        ui->selectedTagsToolButton->setToolTip(notesSelectedText);
+
+        ui->notesSelectedLabel->setText(notesSelectedText);
+
+        // TODO: #949, implement
+//        ui->moveNotesButton->setMenu();
     }
 
     // add all new remove-tag buttons
