@@ -534,7 +534,7 @@
       <location filename="../mainwindow.ui" line="529"/>
       <location filename="../mainwindow.cpp" line="7302"/>
       <source>Add a tag to the current note</source>
-      <translation type="unfinished">Add a tag to the current note</translation>
+      <translation>Dodaj etykietę do bieżącej notatki</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="699"/>
@@ -716,7 +716,7 @@
     <message>
       <location filename="../mainwindow.cpp" line="7303"/>
       <source>Add a tag to the selected notes</source>
-      <translation type="unfinished">Add a tag to the selected notes</translation>
+      <translation>Dodaj etykiety do zaznaczonych notatek</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="543"/>
@@ -1046,7 +1046,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1948"/>
       <source>Manage orphaned image files</source>
-      <translation type="unfinished">Manage orphaned image files</translation>
+      <translation>Zarządzaj porzuconymi plikami obrazów</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1975"/>
@@ -1172,12 +1172,12 @@
       <location filename="../mainwindow.ui" line="2208"/>
       <location filename="../mainwindow.ui" line="2211"/>
       <source>Jump to note edit panel</source>
-      <translation type="unfinished">Jump to note edit panel</translation>
+      <translation>Przejdź do panelu edycji notatki</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2223"/>
       <source>Manage orphaned attachments</source>
-      <translation type="unfinished">Manage orphaned attachments</translation>
+      <translation>Zarządzaj porzuconymi plikami załączników</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1687"/>
@@ -1676,7 +1676,7 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message>
       <location filename="../mainwindow.cpp" line="7328"/>
       <source>Remove tag '%1' from the current note</source>
-      <translation type="unfinished">Remove tag '%1' from the current note</translation>
+      <translation>Usuń etykietę '%1' z bieżącej notatki</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7330"/>
