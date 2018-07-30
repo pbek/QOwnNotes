@@ -322,7 +322,6 @@ QSqlDatabase DatabaseService::getNoteFolderDatabase() {
  */
 void DatabaseService::closeDatabaseConnection(QSqlDatabase &db,
                                               QSqlQuery &query) {
-//    Q_UNUSED(db);
 //    db.commit();
 #ifdef Q_OS_WIN32
     if (Utils::Misc::doAutomaticNoteFolderDatabaseClosing()) {
@@ -332,6 +331,9 @@ void DatabaseService::closeDatabaseConnection(QSqlDatabase &db,
             db.close();
         }
     }
+#else
+    Q_UNUSED(db);
+    Q_UNUSED(query);
 #endif
 }
 
