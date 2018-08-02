@@ -228,8 +228,9 @@ Utils::Gui::showMessageBox(QWidget *parent, QMessageBox::Icon icon,
  */
 bool Utils::Gui::isMessageBoxPresent() {
     QWidgetList topWidgets = QApplication::topLevelWidgets();
-            foreach (QWidget *w, topWidgets) {
+    foreach (QWidget *w, topWidgets) {
             if (QMessageBox *mb = dynamic_cast<QMessageBox *>(w)) {
+                Q_UNUSED(mb);
                 return true;
             }
         }
