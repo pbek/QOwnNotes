@@ -4,6 +4,7 @@
 - you can now enable a new **Vim mode** in the *Editor settings*
   (for [#205](https://github.com/pbek/QOwnNotes/issues/205))
     - keep in mind that some QOwnNotes shortcuts will not work correctly in that mode
+- added more Catalan and Polish translation (thank you MGuerra and lucjan)
 
 ## 18.07.8
 - if note editing was disabled when you create a new note it is now turned on automatically
