@@ -251,6 +251,7 @@ include(libraries/piwiktracker/piwiktracker.pri)
 include(libraries/botan/botan.pri)
 include(libraries/qkeysequencewidget/qkeysequencewidget/qkeysequencewidget.pri)
 include(libraries/qttoolbareditor/toolbar_editor.pri)
+include(libraries/fakevim/fakevim/fakevim.pri)
 
 unix {
 

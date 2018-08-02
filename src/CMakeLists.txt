@@ -193,6 +193,12 @@ set(SOURCE_FILES
     libraries/qtcsv/src/sources/reader.cpp
     libraries/qtcsv/src/sources/filechecker.h
     libraries/qtcsv/src/sources/symbols.h
+    libraries/fakevim/fakevim/fakevimactions.h
+    libraries/fakevim/fakevim/fakevimhandler.h
+    libraries/fakevim/fakevim/fakevimactions.cpp
+    libraries/fakevim/fakevim/fakevimhandler.cpp
+    libraries/fakevim/fakevim/utils/qtcassert.h
+    libraries/fakevim/fakevim/utils/qtcassert.cpp
     services/databaseservice.cpp
     services/databaseservice.h
     services/owncloudservice.cpp

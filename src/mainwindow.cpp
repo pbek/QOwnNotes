@@ -113,6 +113,13 @@ MainWindow::MainWindow(QWidget *parent) :
             "noteEditIsCentralWidget", true).toBool();
 
     ui->setupUi(this);
+
+    // setup vim mode
+    if (settings.value("Editor/vimMode").toBool()) {
+        initFakeVim(ui->noteTextEdit);
+        initFakeVim(ui->encryptedNoteTextEdit);
+    }
+
     setWindowIcon(getSystemTrayIcon());
 
     // initialize the workspace combo box
@@ -485,6 +492,31 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // attempt to check the api app version
     startAppVersionTest();
+}
+
+void MainWindow::initFakeVim(QOwnNotesMarkdownTextEdit *noteTextEdit) {
+    auto handler = new FakeVim::Internal::FakeVimHandler(noteTextEdit, this);
+    handler->installEventFilter();
+    handler->setupWidget();
+
+    // TODO: add handler for handleFakeVimExCommand
+//    QObject::connect(
+//            handler,
+//            SIGNAL(FakeVim::Internal::FakeVimHandler::handleExCommandRequested(
+//                    bool, FakeVim::Internal::ExCommand)),
+//            this,
+//            SLOT(handleFakeVimExCommand(bool, FakeVim::Internal::ExCommand)));
+
+//    QObject::connect(
+//            handler,
+//            &FakeVim::Internal::FakeVimHandler::handleExCommandRequested,
+//            this,
+//            &handleFakeVimExCommand);
+}
+
+void MainWindow::handleFakeVimExCommand(bool *handled,
+        const FakeVim::Internal::ExCommand &cmd) {
+    qDebug() << __func__ << " - 'cmd': " << cmd.cmd;
 }
 
 /**

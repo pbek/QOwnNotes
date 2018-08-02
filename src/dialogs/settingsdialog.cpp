@@ -217,6 +217,8 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
             this, SLOT(needRestart()));
     connect(ui->noteListPreviewCheckBox, SIGNAL(toggled(bool)),
             this, SLOT(needRestart()));
+    connect(ui->vimModeCheckBox, SIGNAL(toggled(bool)),
+            this, SLOT(needRestart()));
 
     // connect the panel sort radio buttons
     connect(ui->notesPanelSortAlphabeticalRadioButton, SIGNAL(toggled(bool)),
@@ -610,6 +612,8 @@ void SettingsDialog::storeSettings() {
                       ui->highlightCurrentLineCheckBox->isChecked());
     settings.setValue("Editor/editorWidthInDFMOnly",
                       ui->editorWidthInDFMOnlyCheckBox->isChecked());
+    settings.setValue("Editor/vimMode",
+                      ui->vimModeCheckBox->isChecked());
 
     if (!settings.value("appMetrics/disableTracking").toBool() &&
             ui->appMetricsCheckBox->isChecked()) {
@@ -898,6 +902,7 @@ void SettingsDialog::readSettings() {
             settings.value("Editor/highlightCurrentLine", true).toBool());
     ui->editorWidthInDFMOnlyCheckBox->setChecked(
             settings.value("Editor/editorWidthInDFMOnly", true).toBool());
+    ui->vimModeCheckBox->setChecked(settings.value("Editor/vimMode").toBool());
     ui->markdownHighlightingCheckBox->setChecked(
             settings.value("markdownHighlightingEnabled", true).toBool());
     ui->fullyHighlightedBlockquotesCheckBox->setChecked(

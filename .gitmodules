@@ -13,3 +13,6 @@
 [submodule "src/libraries/qtcsv"]
 	path = src/libraries/qtcsv
 	url = https://github.com/pbek/qtcsv.git
+[submodule "src/libraries/fakevim"]
+	path = src/libraries/fakevim
+	url = https://github.com/pbek/FakeVim.git

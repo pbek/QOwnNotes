@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 18.08.0
+- you can now enable a new **Vim mode** in the *Editor settings*
+  (for [#205](https://github.com/pbek/QOwnNotes/issues/205))
+    - keep in mind that some QOwnNotes shortcuts will not work correctly in that mode
+
 ## 18.07.8
 - if note editing was disabled when you create a new note it is now turned on automatically
 - when selecting multiple notes the note edit widget will now be hidden and 

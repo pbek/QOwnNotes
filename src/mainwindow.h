@@ -45,6 +45,7 @@
 #include "dialogs/notediffdialog.h"
 #include "services/updateservice.h"
 #include "widgets/qownnotesmarkdowntextedit.h"
+#include <libraries/fakevim/fakevim/fakevimhandler.h>
 
 #define SORT_ALPHABETICAL 0
 #define SORT_BY_LAST_CHANGE 1
@@ -525,6 +526,9 @@ private slots:
 
     void on_actionManage_orphaned_attachments_triggered();
 
+    void handleFakeVimExCommand(bool *handled,
+            const FakeVim::Internal::ExCommand &cmd);
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;
@@ -910,4 +914,6 @@ private:
 
     void updateNoteTreeWidgetItem(Note &note,
                                   QTreeWidgetItem *noteItem = nullptr);
+
+    void initFakeVim(QOwnNotesMarkdownTextEdit *noteTextEdit);
 };
