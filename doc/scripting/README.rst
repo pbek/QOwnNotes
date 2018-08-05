@@ -1345,7 +1345,7 @@ Properties
      *
      * @param objectName {QString} object name of the action to trigger
      * @param checked {QString} only trigger the action if checked-state is
-     *                          different than this parameter (can be 0 or 1)
+     *                          different than this parameter (optional, can be 0 or 1)
      */
     void ScriptingService::triggerMenuAction(QString objectName, QString checked);
 
