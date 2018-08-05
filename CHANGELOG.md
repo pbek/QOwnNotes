@@ -11,6 +11,8 @@
 - there now is a new script `Disable read-only mode` in the *Scripting repository*
   to disable the read-only mode if a note is double clicked
     - the note text edit will also be focused afterwards
+- added more Polish, Chinese Traditional, Brazilian Portuguese, German and
+  Italian translation (thank you lucjan, abev66, mlimacarlos, rakekniven and mlocati)
 
 ## 18.08.0
 - you can now enable a new **Vim mode** in the *Editor settings*

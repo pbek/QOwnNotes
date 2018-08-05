@@ -74,185 +74,186 @@
   <context>
     <name>FakeVim</name>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="162"/>
-      <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="170"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="166"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="174"/>
       <source>Unknown option: %1</source>
-      <translation type="unfinished">Unknown option: %1</translation>
+      <translation>Opção desconhecida: %1</translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="165"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="169"/>
       <source>Argument must be positive: %1=%2</source>
-      <translation type="unfinished">Argument must be positive: %1=%2</translation>
+      <translation>Argumento deve ser positivo: %1=%2</translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="956"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="958"/>
       <source>Mark "%1" not set.</source>
-      <translation type="unfinished">Mark "%1" not set.</translation>
+      <translation>Marca "%1" não está definido.</translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="2830"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="2836"/>
       <source>Recursive mapping</source>
-      <translation type="unfinished">Recursive mapping</translation>
+      <translation>Mapeamento recursivo</translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3695"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3705"/>
       <source>%1%2%</source>
-      <translation type="unfinished">%1%2%</translation>
+      <translation>%1 %2%</translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3697"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3707"/>
       <source>%1All</source>
-      <translation type="unfinished">%1All</translation>
+      <translation>%1 Todos</translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3711"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3721"/>
       <source>Not implemented in FakeVim.</source>
-      <translation type="unfinished">Not implemented in FakeVim.</translation>
+      <translation>Não implementado em FakeVim.</translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4291"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4301"/>
       <source>Type Alt-V, Alt-V to quit FakeVim mode.</source>
-      <translation type="unfinished">Type Alt-V, Alt-V to quit FakeVim mode.</translation>
-    </message>
-    <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5737"/>
-      <source>Unknown option:</source>
-      <translation type="unfinished">Unknown option:</translation>
-    </message>
-    <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5747"/>
-      <source>Invalid argument:</source>
-      <translation type="unfinished">Invalid argument:</translation>
+      <translation>Digite Alt-V, Alt-V para sair do modo de FakeVim.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5749"/>
+      <source>Unknown option:</source>
+      <translation>Opção desconhecida:</translation>
+    </message>
+    <message>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5759"/>
+      <source>Invalid argument:</source>
+      <translation>Argumento inválido:</translation>
+    </message>
+    <message>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5761"/>
       <source>Trailing characters:</source>
-      <translation type="unfinished">Trailing characters:</translation>
+      <translation>Caracteres a direita:</translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5831"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5843"/>
       <source>Move lines into themselves.</source>
-      <translation type="unfinished">Move lines into themselves.</translation>
+      <translation>Mover as linhas para elas mesmas.</translation>
     </message>
     <message numerus="yes">
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5873"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5885"/>
       <source>%n lines moved.</source>
-      <translation type="unfinished">
-        <numerusform>%n lines moved.</numerusform>
-        <numerusform>%n lines moved.</numerusform>
+      <translation>
+        <numerusform>%n linhas movidas.</numerusform>
+        <numerusform>%n linhas movidas.</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5934"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5946"/>
       <source>File "%1" exists (add ! to override)</source>
-      <translation type="unfinished">File "%1" exists (add ! to override)</translation>
+      <translation>O arquivo "%1" existe (adicionar ! para substituir)</translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5948"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5960"/>
       <source>Cannot open file "%1" for writing</source>
-      <translation type="unfinished">Cannot open file "%1" for writing</translation>
+      <translation>Não é possível abrir o arquivo "%1" para a escrita</translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5954"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5966"/>
       <source>"%1" %2 %3L, %4C written.</source>
-      <translation type="unfinished">"%1" %2 %3L, %4C written.</translation>
+      <translation>"%1" %2 %3L, %4C escrito.</translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5955"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5967"/>
       <source> [New] </source>
-      <translation type="unfinished"> [New] </translation>
+      <translation> [Novo] </translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5963"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5975"/>
       <source>Cannot open file "%1" for reading</source>
-      <translation type="unfinished">Cannot open file "%1" for reading</translation>
+      <translation>Não é possível abrir o arquivo "%1" para a leitura</translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5991"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6003"/>
       <source>"%1" %2L, %3C</source>
-      <translation type="unfinished">"%1" %2L, %3C</translation>
+      <translation>"%1" %2L, %3C</translation>
     </message>
     <message numerus="yes">
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6018"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6030"/>
       <source>%n lines filtered.</source>
-      <translation type="unfinished">
-        <numerusform>%n lines filtered.</numerusform>
-        <numerusform>%n lines filtered.</numerusform>
+      <translation>
+        <numerusform>%n linha filtrada.</numerusform>
+        <numerusform>%n linhas filtradas.</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6106"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6118"/>
       <source>Cannot open file %1</source>
-      <translation type="unfinished">Cannot open file %1</translation>
+      <translation>Não é possível abrir o arquivo %1</translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6179"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6191"/>
       <source>Not an editor command: %1</source>
-      <translation type="unfinished">Not an editor command: %1</translation>
+      <translation>Não é um comando de editor: %1</translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6273"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6285"/>
       <source>Invalid regular expression: %1</source>
-      <translation type="unfinished">Invalid regular expression: %1</translation>
+      <translation>Expressão regular inválida: %1</translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6309"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6321"/>
       <source>Pattern not found: %1</source>
-      <translation type="unfinished">Pattern not found: %1</translation>
+      <translation>Padrão não encontrado: %1</translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6313"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6325"/>
       <source>Search hit BOTTOM, continuing at TOP.</source>
-      <translation type="unfinished">Search hit BOTTOM, continuing at TOP.</translation>
+      <translation>A pesquisa atingiu o fim, continuando do inicio.</translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6314"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6326"/>
       <source>Search hit TOP, continuing at BOTTOM.</source>
-      <translation type="unfinished">Search hit TOP, continuing at BOTTOM.</translation>
+      <translation>Pesquisa atingiu o topo, continuando do fim.</translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6319"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6331"/>
       <source>Search hit BOTTOM without match for: %1</source>
-      <translation type="unfinished">Search hit BOTTOM without match for: %1</translation>
+      <translation>Pesquisa atingiu o fim sem correspondência para: %1</translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6320"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6332"/>
       <source>Search hit TOP without match for: %1</source>
-      <translation type="unfinished">Search hit TOP without match for: %1</translation>
+      <translation>Pesquisa atingiu o topo sem correspondência para: %1</translation>
     </message>
     <message numerus="yes">
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6427"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6439"/>
       <source>%n lines indented.</source>
-      <translation type="unfinished">
-        <numerusform>%n lines indented.</numerusform>
-        <numerusform>%n lines indented.</numerusform>
+      <translation>
+        <numerusform>%n linhas identadas.</numerusform>
+        <numerusform>%n linhas indentadas.</numerusform>
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6483"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6495"/>
       <source>%n lines %1ed %2 time.</source>
-      <translation type="unfinished">
-        <numerusform>%n lines %1ed %2 time.</numerusform>
-        <numerusform>%n lines %1ed %2 time.</numerusform>
+      <comment>%1 can be '&gt;' or '&lt;'</comment>
+      <translation>
+        <numerusform>%n linha %1ed %2 tempo.</numerusform>
+        <numerusform>%n linhas %1ed %2 tempo.</numerusform>
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7021"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7033"/>
       <source>%n lines yanked.</source>
-      <translation type="unfinished">
-        <numerusform>%n lines yanked.</numerusform>
-        <numerusform>%n lines yanked.</numerusform>
+      <translation>
+        <numerusform>%n linha removida.</numerusform>
+        <numerusform>%n linhas removidas.</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7750"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7766"/>
       <source>Already at oldest change.</source>
-      <translation type="unfinished">Already at oldest change.</translation>
+      <translation>Esta já é a alteração mais antiga.</translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7751"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7767"/>
       <source>Already at newest change.</source>
-      <translation type="unfinished">Already at newest change.</translation>
+      <translation>Esta já é a alteração mais nova.</translation>
     </message>
   </context>
   <context>
@@ -4219,7 +4220,7 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4344"/>
       <source>Enable Vim mode (some QOwnNotes shortcuts will not work)</source>
-      <translation type="unfinished">Enable Vim mode (some QOwnNotes shortcuts will not work)</translation>
+      <translation>Ativar o modo Vim (alguns atalhos de QOwnNotes não vão funcionar)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4629"/>

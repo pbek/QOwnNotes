@@ -74,68 +74,68 @@
   <context>
     <name>FakeVim</name>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="162"/>
-      <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="170"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="166"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="174"/>
       <source>Unknown option: %1</source>
       <translation type="unfinished">Unknown option: %1</translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="165"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="169"/>
       <source>Argument must be positive: %1=%2</source>
       <translation type="unfinished">Argument must be positive: %1=%2</translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="956"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="958"/>
       <source>Mark "%1" not set.</source>
       <translation type="unfinished">Mark "%1" not set.</translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="2830"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="2836"/>
       <source>Recursive mapping</source>
       <translation type="unfinished">Recursive mapping</translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3695"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3705"/>
       <source>%1%2%</source>
       <translation type="unfinished">%1%2%</translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3697"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3707"/>
       <source>%1All</source>
       <translation type="unfinished">%1All</translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3711"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3721"/>
       <source>Not implemented in FakeVim.</source>
       <translation type="unfinished">Not implemented in FakeVim.</translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4291"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4301"/>
       <source>Type Alt-V, Alt-V to quit FakeVim mode.</source>
       <translation type="unfinished">Type Alt-V, Alt-V to quit FakeVim mode.</translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5737"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5749"/>
       <source>Unknown option:</source>
       <translation type="unfinished">Unknown option:</translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5747"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5759"/>
       <source>Invalid argument:</source>
       <translation type="unfinished">Invalid argument:</translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5749"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5761"/>
       <source>Trailing characters:</source>
       <translation type="unfinished">Trailing characters:</translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5831"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5843"/>
       <source>Move lines into themselves.</source>
       <translation type="unfinished">Move lines into themselves.</translation>
     </message>
     <message numerus="yes">
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5873"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5885"/>
       <source>%n lines moved.</source>
       <translation type="unfinished">
         <numerusform>%n lines moved.</numerusform>
@@ -145,37 +145,37 @@
       </translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5934"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5946"/>
       <source>File "%1" exists (add ! to override)</source>
       <translation type="unfinished">File "%1" exists (add ! to override)</translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5948"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5960"/>
       <source>Cannot open file "%1" for writing</source>
       <translation type="unfinished">Cannot open file "%1" for writing</translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5954"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5966"/>
       <source>"%1" %2 %3L, %4C written.</source>
       <translation type="unfinished">"%1" %2 %3L, %4C written.</translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5955"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5967"/>
       <source> [New] </source>
       <translation type="unfinished"> [New] </translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5963"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5975"/>
       <source>Cannot open file "%1" for reading</source>
       <translation type="unfinished">Cannot open file "%1" for reading</translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5991"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6003"/>
       <source>"%1" %2L, %3C</source>
       <translation type="unfinished">"%1" %2L, %3C</translation>
     </message>
     <message numerus="yes">
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6018"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6030"/>
       <source>%n lines filtered.</source>
       <translation type="unfinished">
         <numerusform>%n lines filtered.</numerusform>
@@ -185,47 +185,47 @@
       </translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6106"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6118"/>
       <source>Cannot open file %1</source>
       <translation type="unfinished">Cannot open file %1</translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6179"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6191"/>
       <source>Not an editor command: %1</source>
       <translation type="unfinished">Not an editor command: %1</translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6273"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6285"/>
       <source>Invalid regular expression: %1</source>
       <translation type="unfinished">Invalid regular expression: %1</translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6309"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6321"/>
       <source>Pattern not found: %1</source>
       <translation type="unfinished">Pattern not found: %1</translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6313"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6325"/>
       <source>Search hit BOTTOM, continuing at TOP.</source>
       <translation type="unfinished">Search hit BOTTOM, continuing at TOP.</translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6314"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6326"/>
       <source>Search hit TOP, continuing at BOTTOM.</source>
       <translation type="unfinished">Search hit TOP, continuing at BOTTOM.</translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6319"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6331"/>
       <source>Search hit BOTTOM without match for: %1</source>
       <translation type="unfinished">Search hit BOTTOM without match for: %1</translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6320"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6332"/>
       <source>Search hit TOP without match for: %1</source>
       <translation type="unfinished">Search hit TOP without match for: %1</translation>
     </message>
     <message numerus="yes">
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6427"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6439"/>
       <source>%n lines indented.</source>
       <translation type="unfinished">
         <numerusform>%n lines indented.</numerusform>
@@ -235,8 +235,9 @@
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6483"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6495"/>
       <source>%n lines %1ed %2 time.</source>
+      <comment>%1 can be '&gt;' or '&lt;'</comment>
       <translation type="unfinished">
         <numerusform>%n lines %1ed %2 time.</numerusform>
         <numerusform>%n lines %1ed %2 time.</numerusform>
@@ -245,7 +246,7 @@
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7021"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7033"/>
       <source>%n lines yanked.</source>
       <translation type="unfinished">
         <numerusform>%n lines yanked.</numerusform>
@@ -255,12 +256,12 @@
       </translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7750"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7766"/>
       <source>Already at oldest change.</source>
       <translation type="unfinished">Already at oldest change.</translation>
     </message>
     <message>
-      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7751"/>
+      <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7767"/>
       <source>Already at newest change.</source>
       <translation type="unfinished">Already at newest change.</translation>
     </message>
@@ -603,11 +604,11 @@
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="195"/>
       <source>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
+      <translation>
+        <numerusform>Przywrócić &lt;strong&gt;%n&lt;/strong&gt; zaznaczoną notatkę?</numerusform>
         <numerusform>Przywrócić &lt;strong&gt;%n&lt;/strong&gt; zaznaczone notatki?</numerusform>
         <numerusform>Przywrócić &lt;strong&gt;%n&lt;/strong&gt; zaznaczonych notatek?</numerusform>
-        <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
+        <numerusform>Przywrócić &lt;strong&gt;%n&lt;/strong&gt; zaznaczonych notatek?</numerusform>
       </translation>
     </message>
     <message>
@@ -618,11 +619,11 @@
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="219"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) where restored</source>
-      <translation type="unfinished">
+      <translation>
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; notatka została przywrócona</numerusform>
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; notatki zostały przywrócone</numerusform>
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; notatek zostało przywróconych</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) where restored</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; notatek zostało przywróconych</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -1591,16 +1592,16 @@ Przywrócić notatkę?</translation>
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
       <translation type="unfinished">
-        <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt;zaznaczoną notatkę?
+        <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczoną notatkę?
 
 Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywrócić na stronie.</numerusform>
-        <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt;zaznaczone notatki?
+        <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczone notatki?
 
 Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywrócić na stronie.</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
+        <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczonych notatek?
 
-If the trash is enabled on your ownCloud server you should be able to restore them from there.</numerusform>
-        <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt;zaznaczonych notatek?
+Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywrócić na stronie.</numerusform>
+        <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczonych notatek?
 
 Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywrócić na stronie.</numerusform>
       </translation>
@@ -1875,7 +1876,7 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message>
       <location filename="../mainwindow.cpp" line="7396"/>
       <source>Remove tag '%1' from the selected notes</source>
-      <translation type="unfinished">Remove tag '%1' from the selected notes</translation>
+      <translation>Usuń etykietę „%1” z zaznaczonych notatek</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7560"/>
@@ -1937,7 +1938,7 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message>
       <location filename="../mainwindow.cpp" line="8797"/>
       <source>Name:</source>
-      <translation type="unfinished">Name:</translation>
+      <translation>Nazwa:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8809"/>
@@ -2013,9 +2014,9 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
       <source>%n notes selected</source>
       <translation type="unfinished">
         <numerusform>%n notes selected</numerusform>
-        <numerusform>%n notes selected</numerusform>
-        <numerusform>%n notes selected</numerusform>
-        <numerusform>%n notes selected</numerusform>
+        <numerusform>%n notatki zaznaczone</numerusform>
+        <numerusform>%n notatek zaznaczonych</numerusform>
+        <numerusform>%n notatek zaznaczonych</numerusform>
       </translation>
     </message>
     <message>
@@ -2555,12 +2556,12 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message>
       <location filename="../mainwindow.cpp" line="2670"/>
       <source>Read-only</source>
-      <translation type="unfinished">Read-only</translation>
+      <translation>Tylko do odczytu</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2671"/>
       <source>Note editing is disabled, click to enable</source>
-      <translation type="unfinished">Note editing is disabled, click to enable</translation>
+      <translation>Edycja notatek jest wyłączona, kliknij aby włączyć edycję</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2690"/>
@@ -2724,67 +2725,67 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="14"/>
       <source>Orphaned attachments</source>
-      <translation type="unfinished">Orphaned attachments</translation>
+      <translation>Porzucone załączniki</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="54"/>
       <source>Delete selected attachments</source>
-      <translation type="unfinished">Delete selected attachments</translation>
+      <translation>Usuń zaznaczone załączniki</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="57"/>
       <source>Delete</source>
-      <translation type="unfinished">Delete</translation>
+      <translation>Usuń</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="86"/>
       <source>Add selected attachments to note</source>
-      <translation type="unfinished">Add selected attachments to note</translation>
+      <translation>Dodaj zaznaczone załączniki do notatki</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="89"/>
       <source>Add to note</source>
-      <translation type="unfinished">Add to note</translation>
+      <translation>Dodaj do notatki</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="100"/>
       <source>Open &amp;attachment</source>
-      <translation type="unfinished">Open &amp;attachment</translation>
+      <translation>Otwórz &amp;załącznik</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="111"/>
       <source>Open &amp;folder</source>
-      <translation type="unfinished">Open &amp;folder</translation>
+      <translation>Otwórz &amp;folder</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="162"/>
       <source>File size:</source>
-      <translation type="unfinished">File size:</translation>
+      <translation>Rozmiar pliku:</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="182"/>
       <source>File type:</source>
-      <translation type="unfinished">File type:</translation>
+      <translation>Typ pliku:</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="199"/>
       <source>File path:</source>
-      <translation type="unfinished">File path:</translation>
+      <translation>Ścieżka do pliku:</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="229"/>
       <source>Attachments that are not used in notes:</source>
-      <translation type="unfinished">Attachments that are not used in notes:</translation>
+      <translation>Załączniki, które nie są używane w notatkach:</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="60"/>
       <source>Last modified at %1</source>
-      <translation type="unfinished">Last modified at %1</translation>
+      <translation>Ostatnio zmieniona %1</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="140"/>
       <source>Delete selected files</source>
-      <translation type="unfinished">Delete selected files</translation>
+      <translation>Usuń zaznaczone pliki</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="141"/>
@@ -2792,7 +2793,7 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
       <translation type="unfinished">
         <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
         <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
+        <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; zaznaczonych plików?</numerusform>
         <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
       </translation>
     </message>
@@ -2817,12 +2818,12 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="94"/>
       <source>Add selected images to note</source>
-      <translation type="unfinished">Add selected images to note</translation>
+      <translation>Dodaj zaznaczone obrazy do notatki</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="97"/>
       <source>Add to note</source>
-      <translation type="unfinished">Add to note</translation>
+      <translation>Dodaj do notatki</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="146"/>
@@ -3041,12 +3042,12 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="396"/>
       <source>Note editing disabled</source>
-      <translation type="unfinished">Note editing disabled</translation>
+      <translation>Edycja notatki jest wyłączona</translation>
     </message>
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="397"/>
       <source>Note editing is currently disabled, please allow it again in the &lt;i&gt;Note-menu&lt;/i&gt;.</source>
-      <translation type="unfinished">Note editing is currently disabled, please allow it again in the &lt;i&gt;Note-menu&lt;/i&gt;.</translation>
+      <translation>Edycja notatki jest obecnie wyłączona, możesz ją włączyć ponownie w &lt;i&gt;menu Notatka&lt;/i&gt;.</translation>
     </message>
   </context>
   <context>
@@ -4205,17 +4206,17 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2238"/>
       <source>Urdu</source>
-      <translation type="unfinished">Urdu</translation>
+      <translation>Urdu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2249"/>
       <source>Chinese Simplified</source>
-      <translation type="unfinished">Chinese Simplified</translation>
+      <translation>Chiński uproszczony</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2260"/>
       <source>Chinese Traditional</source>
-      <translation type="unfinished">Chinese Traditional</translation>
+      <translation>Chiński tradycyjny</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2328"/>
@@ -4332,22 +4333,22 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
       <location filename="../dialogs/settingsdialog.ui" line="4850"/>
       <source> days</source>
       <extracomment>seconds</extracomment>
-      <translation type="unfinished"> days</translation>
+      <translation> dni</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4869"/>
       <source>Automatically remove trashed notes after a certain time</source>
-      <translation type="unfinished">Automatically remove trashed notes after a certain time</translation>
+      <translation>Automatyczne usuwanie notatek z kosza po określonym czasie</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4895"/>
       <source>Local trash support</source>
-      <translation type="unfinished">Local trash support</translation>
+      <translation>Obsługa lokalnego kosza</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4901"/>
       <source>Enable local trash</source>
-      <translation type="unfinished">Enable local trash</translation>
+      <translation>Włącz kosz lokalny</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4266"/>
@@ -5938,17 +5939,17 @@ Nie można tego cofnąć!</translation>
       <location filename="../services/updateservice.cpp" line="116"/>
       <location filename="../services/updateservice.cpp" line="135"/>
       <source>Update-checker error</source>
-      <translation type="unfinished">Update-checker error</translation>
+      <translation>Błąd sprawdzania aktualizacji</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="103"/>
       <source>Network reply error: %1</source>
-      <translation type="unfinished">Network reply error: %1</translation>
+      <translation>Błąd odpowiedzi sieci: %1</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="117"/>
       <source>No data was received by the network request!</source>
-      <translation type="unfinished">No data was received by the network request!</translation>
+      <translation>Nie odebrano żadnych danych na żądanie sieciowe!</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="136"/>
@@ -6109,12 +6110,12 @@ Nie można tego cofnąć!</translation>
     <message>
       <location filename="../main.cpp" line="71"/>
       <source>Runs the application in portable mode.</source>
-      <translation type="unfinished">Runs the application in portable mode.</translation>
+      <translation>Uruchamia aplikację w trybie przenośnym.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="75"/>
       <source>Clears the settings and runs the application.</source>
-      <translation type="unfinished">Clears the settings and runs the application.</translation>
+      <translation>Czyści ustawienia i uruchamia aplikację.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="79"/>
