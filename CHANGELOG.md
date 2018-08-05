@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 18.08.1
+- if automatic bracket closing is enabled and if you are entering double quotes 
+  and the next character is already double quotes than the character will not
+  be entered, but the cursor will be moved to the right (for [#982](https://github.com/pbek/QOwnNotes/issues/982))
+
 ## 18.08.0
 - you can now enable a new **Vim mode** in the *Editor settings*
   (for [#205](https://github.com/pbek/QOwnNotes/issues/205))
