@@ -2,7 +2,7 @@
 
 ## 18.08.1
 - if automatic bracket closing is enabled and if you are entering double quotes 
-  and the next character is already double quotes than the character will not
+  and the next character is already a double quote then the character will not
   be entered, but the cursor will be moved to the right (for [#982](https://github.com/pbek/QOwnNotes/issues/982))
 - there now is a new scripting function `script.triggerMenuAction()` to trigger
   a menu action
