@@ -1736,3 +1736,50 @@ bool ScriptingService::writeToFile(const QString &filePath, const QString &data)
     file.close();
     return true;
 }
+
+/**
+ * Triggers a menu action
+ *
+ * @param objectName {QString} object name of the action to trigger
+ * @param checked {QString} only trigger the action if checked-state is
+ *                          different than this parameter (can be 0 or 1)
+ */
+void ScriptingService::triggerMenuAction(QString objectName, QString checked) {
+    MetricsService::instance()->sendVisitIfEnabled(
+            "scripting/" + QString(__func__));
+
+#ifndef INTEGRATION_TESTS
+    MainWindow *mainWindow = MainWindow::instance();
+    if (mainWindow == Q_NULLPTR) {
+        return;
+    }
+
+    QAction *action = mainWindow->findAction(objectName);
+
+    // return if action wasn't found
+    if (action == Q_NULLPTR) {
+        return;
+    }
+
+    // script wants to set a checked state
+    if (checked != "") {
+        // return if action is not checkable
+        if (!action->isCheckable()) {
+            return;
+        }
+
+        bool isChecked = checked == "1";
+
+        // return if action already had the desired checked state
+        if (isChecked && action->isChecked()) {
+            return;
+        }
+    }
+
+    // trigger the action
+    action->trigger();
+#else
+    Q_UNUSED(objectName);
+    Q_UNUSED(checked);
+#endif
+}

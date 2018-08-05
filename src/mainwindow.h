@@ -150,6 +150,8 @@ public:
 
     QString noteTextEditCurrentWord(bool withPreviousCharacters = false);
 
+    Q_INVOKABLE void focusNoteTextEdit();
+
 protected:
     void closeEvent(QCloseEvent *event);
 
@@ -631,8 +633,6 @@ private:
             bool updateNoteText = true,
             bool updateSelectedNote = true,
             bool addPreviousNoteToHistory = true);
-
-    void focusNoteTextEdit();
 
     void removeCurrentNote();
 

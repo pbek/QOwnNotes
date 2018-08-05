@@ -4,6 +4,13 @@
 - if automatic bracket closing is enabled and if you are entering double quotes 
   and the next character is already double quotes than the character will not
   be entered, but the cursor will be moved to the right (for [#982](https://github.com/pbek/QOwnNotes/issues/982))
+- there now is a new scripting function `script.triggerMenuAction()` to trigger
+  a menu action
+    - for more information please take a look at the [scripting documentation](https://docs.qownnotes.org/en/develop/scripting/README.html#triggering-a-menu-action)
+- you can now focus the note text edit in a script with `mainWindow.focusNoteTextEdit()`
+- there now is a new script `Disable read-only mode` in the *Scripting repository*
+  to disable the read-only mode if a note is double clicked
+    - the note text edit will also be focused afterwards
 
 ## 18.08.0
 - you can now enable a new **Vim mode** in the *Editor settings*

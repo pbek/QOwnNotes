@@ -1332,6 +1332,43 @@ You may want to take a look at the example
 `export-notes-as-one-html.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/export-notes-as-one-html.qml>`__.
 
 
+Triggering a menu action
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Properties
+^^^^^^^^^^
+
+.. code:: cpp
+
+    /**
+     * Triggers a menu action
+     *
+     * @param objectName {QString} object name of the action to trigger
+     * @param checked {QString} only trigger the action if checked-state is
+     *                          different than this parameter (can be 0 or 1)
+     */
+    void ScriptingService::triggerMenuAction(QString objectName, QString checked);
+
+
+Usage in QML
+^^^^^^^^^^^^
+
+.. code:: javascript
+
+    // toggle the read-only mode
+    script.triggerMenuAction("actionAllow_note_editing");
+
+    // disable the read-only mode
+    script.triggerMenuAction("actionAllow_note_editing", 1);
+
+
+You may want to take a look at the example
+`disable-readonly-mode.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/disable-readonly-mode.qml>`__.
+
+You can get the object names of the menu action from
+`mainwindow.ui <https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui>`__.
+
+
 Opening an input dialog with a select box
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -1770,6 +1807,7 @@ MainWindow
         Q_INVOKABLE void reloadNoteSubFolderTree();
         Q_INVOKABLE void buildNotesIndexAndLoadNoteDirectoryList(
                 bool forceBuild = false, bool forceLoad = false);
+        Q_INVOKABLE void focusNoteTextEdit();
     };
 
 For example:

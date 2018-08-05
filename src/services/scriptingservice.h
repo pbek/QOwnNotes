@@ -154,6 +154,8 @@ public:
 
     Q_INVOKABLE QList<int> fetchNoteIdsByNoteTextPart(QString text);
 
+    Q_INVOKABLE void triggerMenuAction(QString objectName, QString checked = "");
+
 private:
     QQmlEngine *_engine;
     NoteApi *_currentNoteApi;
