@@ -22,38 +22,52 @@
 #include <libraries/qmarkdowntextedit/markdownhighlighter.h>
 
 namespace Utils {
+
     namespace Schema {
+        /**
+         * @brief The Settings class
+         *
+         * This exists to centralize schema settings access, reducing redundant
+         * work whenever possible.
+         */
+        class Settings {
+        public:
+            Settings();
+
+            const QStringList& defaultSchemaKeys() const;
+            const QSettings& defaultSchemaSettings() const;
+
+            QString currentSchemaKey() const;
+            bool currentSchemaIsDefault() const;
+
+            QStringList getSchemaKeys(const QString& schema) const;
+
+            QVariant getSchemaValue(const QString& key,
+                                    const QVariant& defaultValue = QVariant()) const;
+            QColor getForegroundColor(int index) const;
+            QColor getBackgroundColor(int index) const;
+
+            void setFormatStyle(MarkdownHighlighter::HighlighterState index,
+                                QTextCharFormat &format) const;
+
+            QFont getEditorTextFont() const;
+            QFont getEditorFixedFont() const;
+            QFont getEditorFont(int index) const;
+
+            void adaptFontSize(int index, QFont &font) const;
+
+        private:
+            const QSettings _defaultSchemaSettings;
+            QMap<QString, int> _defaultSchemaSubkeys;
+            QStringList _defaultSchemaKeysList;
+            QVector<QStringList> _defaultSchemaSubkeylists;
+            mutable QFont _defaultTextEditFont;
+            mutable bool _defaultFontSet;
+        };
+
+        extern Settings* schemaSettings;
         const int TextPresetIndex = -1;
 
-        QStringList defaultSchemaKeys();
-
-        QString currentSchemaKey();
-
-        bool currentSchemaIsDefault();
-
-        QSettings *getSchemaSettings();
-
-        QVariant getSchemaValue(QString key,
-                                QVariant defaultValue = QVariant());
-
-        QString textSettingsKey(QString key, int index);
-
-        QVariant getDefaultTextSchemaValue(QString key,
-                                           QVariant defaultValue = QVariant());
-
-        QColor getForegroundColor(int index);
-
-        QColor getBackgroundColor(int index);
-
-        void setFormatStyle(MarkdownHighlighter::HighlighterState index,
-                            QTextCharFormat &format);
-
-        QFont getEditorTextFont();
-
-        QFont getEditorFixedFont();
-
-        QFont getEditorFont(int index);
-
-        void adaptFontSize(int index, QFont &font);
+        QString textSettingsKey(const QString& key, int index);
     }
 }

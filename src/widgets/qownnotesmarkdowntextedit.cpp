@@ -45,7 +45,7 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
 void QOwnNotesMarkdownTextEdit::setFormatStyle(
         MarkdownHighlighter::HighlighterState index) {
     QTextCharFormat format;
-    Utils::Schema::setFormatStyle(index, format);
+    Utils::Schema::schemaSettings->setFormatStyle(index, format);
     _highlighter->setTextFormat(index, format);
 }
 
@@ -53,7 +53,7 @@ void QOwnNotesMarkdownTextEdit::setFormatStyle(
  * Sets the highlighting styles for the text edit
  */
 void QOwnNotesMarkdownTextEdit::setStyles() {
-    QFont font = Utils::Schema::getEditorTextFont();
+    QFont font = Utils::Schema::schemaSettings->getEditorTextFont();
     setFont(font);
 
     // set the tab stop to the width of 4 spaces in the editor
@@ -365,7 +365,7 @@ void QOwnNotesMarkdownTextEdit::highlightCurrentLine()
         ensureCursorVisible();
         QTextEdit::ExtraSelection selection;
 
-        QColor lineColor = Utils::Schema::getBackgroundColor(
+        QColor lineColor = Utils::Schema::schemaSettings->getBackgroundColor(
                 MarkdownHighlighter::HighlighterState::
                 CurrentLineBackgroundColor);
 

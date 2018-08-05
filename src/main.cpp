@@ -3,15 +3,16 @@
 #include <QApplication>
 #include <QtGui>
 #include <QSettings>
+#include <QStyleFactory>
 #include <QTranslator>
 #include <services/metricsservice.h>
 #include <widgets/logwidget.h>
 #include <services/databaseservice.h>
-#include <utils/misc.h>
-#include <QStyleFactory>
 #include "libraries/singleapplication/singleapplication.h"
 #include "version.h"
 #include "release.h"
+#include <utils/misc.h>
+#include <utils/schema.h>
 
 /**
  * Macro for loading the translations
@@ -366,6 +367,9 @@ int main(int argc, char *argv[]) {
         locale = QLocale::system().name().section('_', 0, 0);
     }
     qDebug() << __func__ << " - 'locale': " << locale;
+
+    // setup default schema settings
+    Utils::Schema::schemaSettings = new Utils::Schema::Settings();
 
 #ifndef QT_DEBUG
     QTranslator translatorRelease;

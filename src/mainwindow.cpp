@@ -1325,9 +1325,9 @@ void MainWindow::initStyling() {
 
     // get the color name of the background color of the default text
     // highlighting item
-    QString fgColorName = Utils::Schema::getForegroundColor(
+    QString fgColorName = Utils::Schema::schemaSettings->getForegroundColor(
             MarkdownHighlighter::HighlighterState::NoState).name();
-    QString bgColorName = Utils::Schema::getBackgroundColor(
+    QString bgColorName = Utils::Schema::schemaSettings->getBackgroundColor(
             MarkdownHighlighter::HighlighterState::NoState).name();
 
     // set the foreground and background color for the note text edits
