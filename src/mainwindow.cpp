@@ -3209,6 +3209,9 @@ void MainWindow::setCurrentNote(Note note,
             const QSignalBlocker blocker(ui->noteTreeWidget);
             Q_UNUSED(blocker);
 
+            // to avoid that multiple notes will be selected
+            ui->noteTreeWidget->clearSelection();
+
             ui->noteTreeWidget->setCurrentItem(items[0]);
         }
     }

@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 18.08.2
+- significantly reduced application startup time (for [#985](https://github.com/pbek/QOwnNotes/issues/985),
+  a big thank you to @frsfnrrg)
+- when clicking a link to a note the currently selected notes will now be 
+  cleared to avoid that multiple notes are selected and thus the current note 
+  will not be shown
+
 ## 18.08.1
 - if automatic bracket closing is enabled and if you are entering double quotes 
   and the next character is already a double quote then the character will not
