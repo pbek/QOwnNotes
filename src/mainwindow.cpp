@@ -528,11 +528,6 @@ void MainWindow::initFakeVim(QOwnNotesMarkdownTextEdit *noteTextEdit) {
                      handler, [handler] (const QString &text) { handler->handleInput(text); });
 }
 
-void MainWindow::handleFakeVimExCommand(bool *handled,
-        const FakeVim::Internal::ExCommand &cmd) {
-    qDebug() << __func__ << " - 'cmd': " << cmd.cmd;
-}
-
 /**
  * Attempts to check the api app version
  */

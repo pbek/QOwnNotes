@@ -528,9 +528,6 @@ private slots:
 
     void on_actionManage_orphaned_attachments_triggered();
 
-    void handleFakeVimExCommand(bool *handled,
-            const FakeVim::Internal::ExCommand &cmd);
-
 private:
     Ui::MainWindow *ui;
     QString notesPath;
