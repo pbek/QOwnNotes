@@ -23,16 +23,50 @@
 #include "schema.h"
 #include "math.h"
 
+Utils::Schema::Settings* Utils::Schema::schemaSettings = nullptr;
+
+/** The default schema table is initialized here, precisely once, as loading
+ * a settings object from a resource is expensive, unlike most other uses of
+ * QSettings. Only call this once, when setting Utils::Schema::schemaSettings */
+Utils::Schema::Settings::Settings() :
+    _defaultSchemaSettings(":/configurations/schemes.conf", QSettings::IniFormat) {
+
+    _defaultFontSet = false;
+
+    _defaultSchemaKeysList = _defaultSchemaSettings.value("Editor/DefaultColorSchemes").toStringList();
+
+    // Determine the keys for a given schema
+    _defaultSchemaSubkeylists.reserve(_defaultSchemaKeysList.size());
+    Q_FOREACH(const QString& schema, _defaultSchemaKeysList) {
+        QStringList groupKeys;
+        Q_FOREACH(const QString& key, _defaultSchemaSettings.allKeys()) {
+            if (key.startsWith(schema)) {
+                groupKeys.append(QString(key).remove(0, schema.size()+1));
+            }
+        }
+        _defaultSchemaSubkeys.insert(schema, _defaultSchemaSubkeylists.size());
+        _defaultSchemaSubkeylists.append(groupKeys);
+    }
+}
+
+
 
 /**
  * Returns the default schema keys
  *
  * @return
  */
-QStringList Utils::Schema::defaultSchemaKeys() {
-    QSettings schemaSettings(":/configurations/schemes.conf",
-                             QSettings::IniFormat);
-    return schemaSettings.value("Editor/DefaultColorSchemes").toStringList();
+const QStringList& Utils::Schema::Settings::defaultSchemaKeys() const {
+    return _defaultSchemaKeysList;
+}
+
+/**
+ * Returns the default schema settings object
+ *
+ * @return
+ */
+const QSettings& Utils::Schema::Settings::defaultSchemaSettings() const {
+    return _defaultSchemaSettings;
 }
 
 /**
@@ -40,34 +74,38 @@ QStringList Utils::Schema::defaultSchemaKeys() {
  *
  * @return
  */
-QString Utils::Schema::currentSchemaKey() {
+QString Utils::Schema::Settings::currentSchemaKey() const {
     QSettings settings;
-    QStringList schemaKeys = defaultSchemaKeys();
-
     return settings.value(
             "Editor/CurrentSchemaKey",
-            schemaKeys.length() > 0 ? schemaKeys[0] : "")
+            _defaultSchemaKeysList.length() > 0 ? _defaultSchemaKeysList[0] : "DefaultSchema")
             .toString();
 }
 
 /**
- * Checks if the ucrrent schema is a default schema
+ * Checks if the current schema is a default schema
  *
  * @return
  */
-bool Utils::Schema::currentSchemaIsDefault() {
-    return defaultSchemaKeys().contains(currentSchemaKey());
+bool Utils::Schema::Settings::currentSchemaIsDefault() const {
+    return _defaultSchemaSubkeys.contains(currentSchemaKey());
 }
 
 /**
- * Returns the current schema settings
+ * Returns the list of keys for a given schema.
  *
+ * @param schema
  * @return
  */
-QSettings* Utils::Schema::getSchemaSettings() {
-    return currentSchemaIsDefault() ?
-           new QSettings(":/configurations/schemes.conf",
-                         QSettings::IniFormat) :new QSettings();
+QStringList Utils::Schema::Settings::getSchemaKeys(const QString& schema) const {
+    if (_defaultSchemaSubkeys.contains(schema)) {
+        return _defaultSchemaSubkeylists[_defaultSchemaSubkeys[schema]];
+    } else {
+        QStringList groupKeys;
+        QSettings s;
+        s.beginGroup(schema);
+        return s.allKeys();
+    }
 }
 
 /**
@@ -77,10 +115,13 @@ QSettings* Utils::Schema::getSchemaSettings() {
  * @param defaultValue
  * @return
  */
-QVariant Utils::Schema::getSchemaValue(QString key, QVariant defaultValue) {
-    QSettings *settings = Utils::Schema::getSchemaSettings();
-    settings->beginGroup(currentSchemaKey());
-    return settings->value(key, defaultValue);
+QVariant Utils::Schema::Settings::getSchemaValue(const QString& key, const QVariant& defaultValue) const {
+    const QString& schema = currentSchemaKey();
+    if (_defaultSchemaSubkeys.contains(schema)) {
+        return _defaultSchemaSettings.value(schema + '/' + key, defaultValue);
+    } else {
+        return QSettings().value(schema + '/' + key, defaultValue);
+    }
 }
 
 /**
@@ -90,21 +131,8 @@ QVariant Utils::Schema::getSchemaValue(QString key, QVariant defaultValue) {
  * @param index
  * @return
  */
-QString Utils::Schema::textSettingsKey(QString key, int index) {
+QString Utils::Schema::textSettingsKey(const QString& key, int index) {
     return key + "_" + QString::number(index);
-}
-
-/**
- * Returns a schema value for the default text
- *
- * @param key
- * @param defaultValue
- * @return
- */
-QVariant Utils::Schema::getDefaultTextSchemaValue(
-        QString key, QVariant defaultValue) {
-    return Utils::Schema::getSchemaValue(
-            Utils::Schema::textSettingsKey(key, TextPresetIndex), defaultValue);
 }
 
 /**
@@ -113,7 +141,7 @@ QVariant Utils::Schema::getDefaultTextSchemaValue(
  * @param index
  * @return
  */
-QColor Utils::Schema::getForegroundColor(int index) {
+QColor Utils::Schema::Settings::getForegroundColor(int index) const {
     // get the foreground color
     bool enabled = getSchemaValue(
             textSettingsKey("ForegroundColorEnabled", index)).toBool();
@@ -150,7 +178,7 @@ QColor Utils::Schema::getForegroundColor(int index) {
  * @param index
  * @return
  */
-QColor Utils::Schema::getBackgroundColor(int index) {
+QColor Utils::Schema::Settings::getBackgroundColor(int index) const {
     // get the foreground color
     bool enabled = getSchemaValue(
             textSettingsKey("BackgroundColorEnabled", index)).toBool();
@@ -181,8 +209,8 @@ QColor Utils::Schema::getBackgroundColor(int index) {
  * @param format
  * @param index
  */
-void Utils::Schema::setFormatStyle(MarkdownHighlighter::HighlighterState index,
-                                   QTextCharFormat &format) {
+void Utils::Schema::Settings::setFormatStyle(MarkdownHighlighter::HighlighterState index,
+                                   QTextCharFormat &format) const {
     // get the correct font
     QFont font = getEditorFont(index);
 
@@ -196,22 +224,22 @@ void Utils::Schema::setFormatStyle(MarkdownHighlighter::HighlighterState index,
     format.setFontPointSize(font.pointSize());
 
     // set the foreground color
-    format.setForeground(QBrush(Utils::Schema::getForegroundColor(index)));
+    format.setForeground(QBrush(getForegroundColor(index)));
 
     // set the background color
-    format.setBackground(QBrush(Utils::Schema::getBackgroundColor(index)));
+    format.setBackground(QBrush(getBackgroundColor(index)));
 
     // set the bold state
-    format.setFontWeight(Utils::Schema::getSchemaValue(
+    format.setFontWeight(getSchemaValue(
             Utils::Schema::textSettingsKey("Bold", index)).toBool() ?
                          QFont::Bold : QFont::Normal);
 
     // set the italic state
-    format.setFontItalic(Utils::Schema::getSchemaValue(
+    format.setFontItalic(getSchemaValue(
             Utils::Schema::textSettingsKey("Italic", index)).toBool());
 
     // set the underline state
-    format.setFontUnderline(Utils::Schema::getSchemaValue(
+    format.setFontUnderline(getSchemaValue(
             Utils::Schema::textSettingsKey("Underline", index)).toBool());
 }
 
@@ -221,7 +249,7 @@ void Utils::Schema::setFormatStyle(MarkdownHighlighter::HighlighterState index,
  * @param index
  * @param font
  */
-void Utils::Schema::adaptFontSize(int index, QFont &font) {
+void Utils::Schema::Settings::adaptFontSize(int index, QFont &font) const {
     int adaption = getSchemaValue(textSettingsKey("FontSizeAdaption", index),
                                   100).toInt();
     double fontSize = round(font.pointSize() * adaption / 100);
@@ -236,19 +264,22 @@ void Utils::Schema::adaptFontSize(int index, QFont &font) {
  *
  * @return
  */
-QFont Utils::Schema::getEditorTextFont() {
-    QTextEdit textEdit;
-    QFont font = textEdit.font();
+QFont Utils::Schema::Settings::getEditorTextFont() const {
+    if (!_defaultFontSet) {
+        _defaultTextEditFont = QTextEdit().font();
+        _defaultFontSet = true;
+    }
     QSettings settings;
     QString fontString = settings.value(
             "MainWindow/noteTextEdit.font").toString();
 
+    QFont font(_defaultTextEditFont);
     if (fontString != "") {
         // set the note text edit font
         font.fromString(fontString);
     } else {
         // store the default settings
-        fontString = textEdit.font().toString();
+        fontString = _defaultTextEditFont.toString();
         settings.setValue("MainWindow/noteTextEdit.font", fontString);
     }
 
@@ -260,13 +291,17 @@ QFont Utils::Schema::getEditorTextFont() {
  *
  * @return
  */
-QFont Utils::Schema::getEditorFixedFont() {
-    QTextEdit textEdit;
-    QFont font = textEdit.font();
+QFont Utils::Schema::Settings::getEditorFixedFont() const {
+    if (!_defaultFontSet) {
+        _defaultTextEditFont = QTextEdit().font();
+        _defaultFontSet = true;
+    }
+
     QSettings settings;
     QString fontString = settings.value(
             "MainWindow/noteTextEdit.code.font").toString();
 
+    QFont font(_defaultTextEditFont);
     if (fontString != "") {
         // set the code font
         font.fromString(fontString);
@@ -286,12 +321,12 @@ QFont Utils::Schema::getEditorFixedFont() {
  *
  * @return
  */
-QFont Utils::Schema::getEditorFont(int index) {
-    QList<int> fixedFontIndices;
-    fixedFontIndices << MarkdownHighlighter::CodeBlock
-                     << MarkdownHighlighter::InlineCodeBlock
-                     << MarkdownHighlighter::Table;
-
-    return fixedFontIndices.contains(index) ?
-        getEditorFixedFont() : getEditorTextFont();
+QFont Utils::Schema::Settings::getEditorFont(int index) const {
+    if (index == MarkdownHighlighter::CodeBlock ||
+            index == MarkdownHighlighter::InlineCodeBlock ||
+            index == MarkdownHighlighter::Table) {
+        return getEditorFixedFont();
+    } else {
+        return getEditorTextFont();
+    }
 }
