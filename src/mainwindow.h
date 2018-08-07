@@ -152,6 +152,8 @@ public:
 
     Q_INVOKABLE void focusNoteTextEdit();
 
+    void storeUpdatedNotesToDisk();
+
 protected:
     void closeEvent(QCloseEvent *event);
 
@@ -175,8 +177,6 @@ private slots:
     void notesDirectoryWasModified(const QString &str);
 
     void notesWereModified(const QString &str);
-
-    void storeUpdatedNotesToDisk();
 
     void on_actionSet_ownCloud_Folder_triggered();
 

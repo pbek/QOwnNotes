@@ -6,6 +6,12 @@
 - when clicking a link to a note the currently selected notes will now be 
   cleared to avoid that multiple notes are selected and thus the current note 
   will not be shown
+- added many improvements to the new **Vim mode** (for [#205](https://github.com/pbek/QOwnNotes/issues/205))
+    - visible commands in the status bar
+    - support for more commands like `:w`, `:q` and `:wq`
+    - searching and replacing with more feedback
+    - visual mode also works now with more feedback
+    - text indenting
 
 ## 18.08.1
 - if automatic bracket closing is enabled and if you are entering double quotes 

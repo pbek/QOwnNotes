@@ -264,7 +264,8 @@ set(SOURCE_FILES
     mainwindow.ui
     release.h
     version.h
-)
+    helpers/fakevimproxy.h
+    helpers/fakevimproxy.cpp)
 
 # Translation files
 SET(QON_TS_FILES

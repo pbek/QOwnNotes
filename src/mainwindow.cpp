@@ -90,6 +90,7 @@
 #include <QRegularExpressionMatch>
 #include <QRegularExpressionMatchIterator>
 #include <widgets/notetreewidgetitem.h>
+#include <helpers/fakevimproxy.h>
 
 MainWindow::MainWindow(QWidget *parent) :
         QMainWindow(parent),
@@ -499,19 +500,32 @@ void MainWindow::initFakeVim(QOwnNotesMarkdownTextEdit *noteTextEdit) {
     handler->installEventFilter();
     handler->setupWidget();
 
-    // TODO: add handler for handleFakeVimExCommand
-//    QObject::connect(
-//            handler,
-//            SIGNAL(FakeVim::Internal::FakeVimHandler::handleExCommandRequested(
-//                    bool, FakeVim::Internal::ExCommand)),
-//            this,
-//            SLOT(handleFakeVimExCommand(bool, FakeVim::Internal::ExCommand)));
+    auto proxy = new FakeVimProxy(noteTextEdit, this, handler);
 
-//    QObject::connect(
-//            handler,
-//            &FakeVim::Internal::FakeVimHandler::handleExCommandRequested,
-//            this,
-//            &handleFakeVimExCommand);
+    QObject::connect(handler, &FakeVim::Internal::FakeVimHandler::commandBufferChanged,
+                     proxy, &FakeVimProxy::changeStatusMessage);
+    QObject::connect(handler, &FakeVim::Internal::FakeVimHandler::extraInformationChanged,
+                     proxy, &FakeVimProxy::changeExtraInformation);
+    QObject::connect(handler, &FakeVim::Internal::FakeVimHandler::statusDataChanged,
+                     proxy, &FakeVimProxy::changeStatusData);
+    QObject::connect(handler, &FakeVim::Internal::FakeVimHandler::highlightMatches,
+                     proxy, &FakeVimProxy::highlightMatches);
+    QObject::connect(handler, &FakeVim::Internal::FakeVimHandler::handleExCommandRequested,
+                     proxy, &FakeVimProxy::handleExCommand);
+    QObject::connect(handler, &FakeVim::Internal::FakeVimHandler::requestSetBlockSelection,
+                     proxy, &FakeVimProxy::requestSetBlockSelection);
+    QObject::connect(handler, &FakeVim::Internal::FakeVimHandler::requestDisableBlockSelection,
+                     proxy, &FakeVimProxy::requestDisableBlockSelection);
+    QObject::connect(handler, &FakeVim::Internal::FakeVimHandler::requestHasBlockSelection,
+                     proxy, &FakeVimProxy::requestHasBlockSelection);
+
+    QObject::connect(handler, &FakeVim::Internal::FakeVimHandler::indentRegion,
+                     proxy, &FakeVimProxy::indentRegion);
+    QObject::connect(handler, &FakeVim::Internal::FakeVimHandler::checkForElectricCharacter,
+                     proxy, &FakeVimProxy::checkForElectricCharacter);
+
+    QObject::connect(proxy, &FakeVimProxy::handleInput,
+                     handler, [handler] (const QString &text) { handler->handleInput(text); });
 }
 
 void MainWindow::handleFakeVimExCommand(bool *handled,
