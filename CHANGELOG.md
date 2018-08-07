@@ -1,7 +1,7 @@
 # QOwnNotes Changelog
 
 ## 18.08.2
-- significantly reduced application startup time (for [#985](https://github.com/pbek/QOwnNotes/issues/985),
+- significantly **reduced application startup time** (for [#985](https://github.com/pbek/QOwnNotes/issues/985),
   a big thank you to @frsfnrrg)
 - when clicking a link to a note the currently selected notes will now be 
   cleared to avoid that multiple notes are selected and thus the current note 
