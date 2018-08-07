@@ -12,6 +12,7 @@
     - searching and replacing with more feedback
     - visual mode also works now with more feedback
     - text indenting
+- added more Polish and Spanish translation (thank you lucjan and richarson)
 
 ## 18.08.1
 - if automatic bracket closing is enabled and if you are entering double quotes 
