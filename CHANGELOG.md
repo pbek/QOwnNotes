@@ -3,6 +3,7 @@
 ## 18.08.3
 - fixed a problem with automatically storing modified notes (for [#987](https://github.com/pbek/QOwnNotes/issues/987))
 - updated QOwnNotesApi to be used with Nextcloud 14 (for [#20](https://github.com/pbek/qownnotesapi/issues/20))
+- added more Catalan and Hungarian translation (thank you MGuerra and Fabijenna)
 
 ## 18.08.2
 - significantly **reduced application startup time** (for [#985](https://github.com/pbek/QOwnNotes/issues/985),
