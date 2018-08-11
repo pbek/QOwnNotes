@@ -152,8 +152,6 @@ public:
 
     Q_INVOKABLE void focusNoteTextEdit();
 
-    void storeUpdatedNotesToDisk();
-
 protected:
     void closeEvent(QCloseEvent *event);
 
@@ -165,6 +163,8 @@ public slots:
     void setCurrentNoteFromNoteId(int noteId);
 
     void regenerateNotePreview();
+
+    void storeUpdatedNotesToDisk();
 
 private slots:
 
