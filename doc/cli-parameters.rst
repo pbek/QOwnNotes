@@ -20,9 +20,9 @@ You may run the application on the command line interface differently on differe
 +--------------+-------------------------------------------------------------------------+
 | Command      | Output                                                                  |
 +==============+=========================================================================+
-| `Linux`      | `QOwnNotes`                                                             |
+| Linux        | `QOwnNotes`                                                             |
 +--------------+-------------------------------------------------------------------------+
-| `macOS`      | `/Applications/QOwnNotes.app/Contents/MacOS/QOwnNotes`                  |
+| macOS        | `/Applications/QOwnNotes.app/Contents/MacOS/QOwnNotes`                  |
 +--------------+-------------------------------------------------------------------------+
-| `Windows`    | `QOwnNotes.exe`                                                         |
+| Windows      | `QOwnNotes.exe`                                                         |
 +--------------+-------------------------------------------------------------------------+
