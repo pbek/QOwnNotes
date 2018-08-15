@@ -8,11 +8,11 @@ You can use these parameters on the command line interface:
 +=====================+==============================================================================+
 | `--help`            | Shows the help screen                                                        |
 +---------------------+------------------------------------------------------------------------------+
-| `--portable`        | Runs the application in portable mode.                                       |
+| `--portable`        | Runs the application in portable mode                                        |
 +---------------------+------------------------------------------------------------------------------+
 | `--clear-settings`  | Clears the settings and runs the application                                 |
 +---------------------+------------------------------------------------------------------------------+
-| `--session <name>`  | Runs the application in a different context for settings and internal files. |
+| `--session <name>`  | Runs the application in a different context for settings and internal files  |
 +---------------------+------------------------------------------------------------------------------+
 
 You may run the application on the command line interface differently on different operating systems:
