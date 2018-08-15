@@ -25,4 +25,4 @@ You may run the application on the command line interface differently on differe
 | macOS            | `/Applications/QOwnNotes.app/Contents/MacOS/QOwnNotes`                  |
 +------------------+-------------------------------------------------------------------------+
 | Windows          | `QOwnNotes.exe`                                                         |
-+-------------------+-------------------------------------------------------------------------+
++------------------+-------------------------------------------------------------------------+
