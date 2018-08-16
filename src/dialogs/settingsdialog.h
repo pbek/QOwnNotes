@@ -238,6 +238,10 @@ private slots:
 
     void keySequenceEvent(QString objectName);
 
+    void on_exportSettingsButton_clicked();
+
+    void on_importSettingsButton_clicked();
+
 private:
 
     Ui::SettingsDialog *ui;

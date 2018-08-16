@@ -3706,3 +3706,59 @@ void SettingsDialog::on_localTrashEnabledCheckBox_toggled(bool checked) {
 void SettingsDialog::on_localTrashClearCheckBox_toggled(bool checked) {
     ui->localTrashClearFrame->setEnabled(checked);
 }
+
+void SettingsDialog::on_exportSettingsButton_clicked() {
+    FileDialog dialog("SettingsExport");
+    dialog.setFileMode(QFileDialog::AnyFile);
+    dialog.setAcceptMode(QFileDialog::AcceptSave);
+    dialog.setNameFilter(tr("INI files") + " (*.ini)");
+    dialog.setWindowTitle(tr("Export settings"));
+    dialog.selectFile("QOwnNotes.ini");
+    int ret = dialog.exec();
+
+    if (ret == QDialog::Accepted) {
+        QString fileName = dialog.selectedFile();
+
+        if (!fileName.isEmpty()) {
+            if (QFileInfo(fileName).suffix().isEmpty()) {
+                fileName.append(".ini");
+            }
+
+            QSettings exportSettings(fileName, QSettings::IniFormat);
+
+            // clear the settings in case the settings file already existed
+            exportSettings.clear();
+
+            QSettings settings;
+
+            const QStringList keys = settings.allKeys();
+            Q_FOREACH(QString key, keys) {
+                    exportSettings.setValue(key, settings.value(key));
+                }
+        }
+    }
+}
+
+void SettingsDialog::on_importSettingsButton_clicked() {
+    FileDialog dialog("SchemaImport");
+    dialog.setFileMode(QFileDialog::ExistingFiles);
+    dialog.setAcceptMode(QFileDialog::AcceptOpen);
+    dialog.setNameFilter(tr("INI files") + " (*.ini)");
+    dialog.setWindowTitle(tr("Import settings"));
+    int ret = dialog.exec();
+
+    if (ret == QDialog::Accepted) {
+        QString fileName = dialog.selectedFile();
+        QSettings settings;
+        QSettings importSettings(fileName, QSettings::IniFormat);
+
+        const QStringList keys = settings.allKeys();
+
+        Q_FOREACH(QString key, keys) {
+                QVariant value = importSettings.value(key);
+                settings.setValue(key, value);
+            }
+
+        // TODO: make sure settings will not get overwritten and restart app
+    }
+}

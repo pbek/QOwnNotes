@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1175</width>
-    <height>1072</height>
+    <height>1104</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -373,7 +373,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>14</number>
+            <number>7</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -2779,7 +2779,7 @@
                            <x>0</x>
                            <y>0</y>
                            <width>607</width>
-                           <height>890</height>
+                           <height>922</height>
                           </rect>
                          </property>
                          <layout class="QGridLayout" name="gridLayout_55">
@@ -3570,6 +3570,35 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                    <widget class="QPushButton" name="clearAppDataAndExitButton">
                     <property name="text">
                      <string>Clear app data and exit</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QGroupBox" name="groupBox_28">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="title">
+                  <string>Settings</string>
+                 </property>
+                 <layout class="QGridLayout" name="gridLayout_68">
+                  <item row="0" column="1">
+                   <widget class="QPushButton" name="importSettingsButton">
+                    <property name="text">
+                     <string>Import settings</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="0">
+                   <widget class="QPushButton" name="exportSettingsButton">
+                    <property name="text">
+                     <string>Export settings</string>
                     </property>
                    </widget>
                   </item>
