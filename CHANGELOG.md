@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 18.08.4
+- added a small fix for highlighting comment blocks (thank you @sdicke)
+- added documentation for command line parameters at [Command line interface parameters](http://docs.qownnotes.org/en/develop/cli-parameters.html)
+
 ## 18.08.3
 - fixed a problem with automatically storing modified notes (for [#987](https://github.com/pbek/QOwnNotes/issues/987))
 - updated QOwnNotesApi to be used with Nextcloud 14 (for [#20](https://github.com/pbek/qownnotesapi/issues/20))
