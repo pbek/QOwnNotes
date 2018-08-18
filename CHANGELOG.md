@@ -1,6 +1,12 @@
 # QOwnNotes Changelog
 
 ## 18.08.4
+- you can now **export and import your settings** (for [#989](https://github.com/pbek/QOwnNotes/issues/989))
+    - keep in mind that when importing your settings may get removed and not 
+      every setting will get restored, like the note folder settings and which
+      scripts you were using
+    - you also will need to adjust some settings, especially across platforms,
+      but your notes will stay intact
 - added a small fix for highlighting comment blocks (thank you @sdicke)
 - added documentation for command line parameters at [Command line interface parameters](http://docs.qownnotes.org/en/develop/cli-parameters.html)
 

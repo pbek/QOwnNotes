@@ -4222,13 +4222,14 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="3594"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3747"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3752"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3775"/>
         <source>Import settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="3601"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3715"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3718"/>
         <source>Export settings</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5060,10 +5061,25 @@ Connection error message: </source>
         <translation>Lägg till ett befintligt lokalt skript</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3714"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3746"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3717"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3774"/>
         <source>INI files</source>
         <translation type="unfinished">INI-filer</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.cpp" line="3753"/>
+        <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.cpp" line="3763"/>
+        <source>The application will be quit after the import.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.cpp" line="3764"/>
+        <source>The application will be restarted after the import.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.cpp" line="2658"/>

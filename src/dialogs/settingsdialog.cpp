@@ -3707,13 +3707,16 @@ void SettingsDialog::on_localTrashClearCheckBox_toggled(bool checked) {
     ui->localTrashClearFrame->setEnabled(checked);
 }
 
+/**
+ * Export settings
+ */
 void SettingsDialog::on_exportSettingsButton_clicked() {
     FileDialog dialog("SettingsExport");
     dialog.setFileMode(QFileDialog::AnyFile);
     dialog.setAcceptMode(QFileDialog::AcceptSave);
     dialog.setNameFilter(tr("INI files") + " (*.ini)");
     dialog.setWindowTitle(tr("Export settings"));
-    dialog.selectFile("QOwnNotes.ini");
+    dialog.selectFile("QOwnNotes-settings.ini");
     int ret = dialog.exec();
 
     if (ret == QDialog::Accepted) {
@@ -3729,6 +3732,9 @@ void SettingsDialog::on_exportSettingsButton_clicked() {
             // clear the settings in case the settings file already existed
             exportSettings.clear();
 
+            exportSettings.setValue("SettingsExport/platform",
+                    QString(PLATFORM));
+
             QSettings settings;
 
             const QStringList keys = settings.allKeys();
@@ -3739,26 +3745,59 @@ void SettingsDialog::on_exportSettingsButton_clicked() {
     }
 }
 
+/**
+ * Import settings
+ */
 void SettingsDialog::on_importSettingsButton_clicked() {
-    FileDialog dialog("SchemaImport");
+    QString title = tr("Import settings");
+    QString text = tr("Do you really want to import settings? Your current "
+                      "settings will get removed and not every setting may "
+                      "get restored, like the note folder settings and which "
+                      "scripts you were using. "
+                      "You also will need to adjust some settings, especially "
+                      "across platforms, but your notes will stay intact!") +
+                              "\n\n";
+    bool singleApplication = qApp->property("singleApplication").toBool();
+
+    text += singleApplication ?
+            tr("The application will be quit after the import.") :
+            tr("The application will be restarted after the import.");
+
+    if (QMessageBox::question(this, title, text, QMessageBox::Yes |
+    QMessageBox::No, QMessageBox::No) == QMessageBox::No) {
+        return;
+    }
+
+    FileDialog dialog("SettingsExport");
     dialog.setFileMode(QFileDialog::ExistingFiles);
     dialog.setAcceptMode(QFileDialog::AcceptOpen);
     dialog.setNameFilter(tr("INI files") + " (*.ini)");
     dialog.setWindowTitle(tr("Import settings"));
     int ret = dialog.exec();
 
-    if (ret == QDialog::Accepted) {
-        QString fileName = dialog.selectedFile();
-        QSettings settings;
-        QSettings importSettings(fileName, QSettings::IniFormat);
+    if (ret != QDialog::Accepted) {
+        return;
+    }
 
-        const QStringList keys = settings.allKeys();
+    QString fileName = dialog.selectedFile();
+    QSettings settings;
+    QSettings importSettings(fileName, QSettings::IniFormat);
+    settings.clear();
+    DatabaseService::removeDiskDatabase();
 
-        Q_FOREACH(QString key, keys) {
-                QVariant value = importSettings.value(key);
-                settings.setValue(key, value);
-            }
+    const QStringList keys = importSettings.allKeys();
 
-        // TODO: make sure settings will not get overwritten and restart app
+    Q_FOREACH(QString key, keys) {
+            QVariant value = importSettings.value(key);
+            settings.setValue(key, value);
+        }
+
+    // make sure no settings get written after after are quitting
+    qApp->setProperty("clearAppDataAndExit", true);
+
+    if (singleApplication) {
+        qApp->quit();
+    } else {
+        Utils::Misc::restartApplication();
     }
 }
