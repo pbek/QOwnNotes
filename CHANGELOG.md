@@ -9,6 +9,9 @@
       but your notes will stay intact
 - added a small fix for highlighting comment blocks (thank you @sdicke)
 - added documentation for command line parameters at [Command line interface parameters](http://docs.qownnotes.org/en/develop/cli-parameters.html)
+- added more Spanish, Italian, Chinese Traditional, Chinese Simplified,
+  Indonesian, German, Hungarian and Dutch translation (thank you richarson,
+  mlocati, abev66, wenzhuoz, zmni, rakekniven and Fabijenna)
 
 ## 18.08.3
 - fixed a problem with automatically storing modified notes (for [#987](https://github.com/pbek/QOwnNotes/issues/987))
