@@ -2132,11 +2132,16 @@ bool Note::canDecryptNoteText() {
 
     // check if a hook changed the text
     if (decryptedNoteText.isEmpty()) {
-        // decrypt the note text with Botan
-        BotanWrapper botanWrapper;
-        botanWrapper.setPassword(cryptoPassword);
-        botanWrapper.setSalt(BOTAN_SALT);
-        decryptedNoteText = botanWrapper.Decrypt(encryptedNoteText);
+        try {
+            // decrypt the note text with Botan
+            BotanWrapper botanWrapper;
+            botanWrapper.setPassword(cryptoPassword);
+            botanWrapper.setSalt(BOTAN_SALT);
+            decryptedNoteText = botanWrapper.Decrypt(encryptedNoteText);
+        }
+        catch (Botan::Exception exception) {
+            return false;
+        }
 
         // fallback to SimpleCrypt
         if (decryptedNoteText == "") {
@@ -2177,10 +2182,15 @@ QString Note::getDecryptedNoteText() {
     // check if a hook changed the text
     if (decryptedNoteText.isEmpty()) {
         // decrypt the note text
-        BotanWrapper botanWrapper;
-        botanWrapper.setPassword(cryptoPassword);
-        botanWrapper.setSalt(BOTAN_SALT);
-        decryptedNoteText = botanWrapper.Decrypt(encryptedNoteText);
+        try {
+            BotanWrapper botanWrapper;
+            botanWrapper.setPassword(cryptoPassword);
+            botanWrapper.setSalt(BOTAN_SALT);
+            decryptedNoteText = botanWrapper.Decrypt(encryptedNoteText);
+        }
+        catch (Botan::Exception exception) {
+
+        }
 
         // fallback to SimpleCrypt
         if (decryptedNoteText == "") {
