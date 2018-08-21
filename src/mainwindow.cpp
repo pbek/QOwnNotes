@@ -4462,7 +4462,18 @@ void MainWindow::handleTextNoteLinking() {
                     noteName = selectedText;
                 }
 
-                newText = "[" + noteName + "](note://" + noteNameForLink + ")";
+                QString noteUrl = "note://" + noteNameForLink;
+
+                // if the hostname of the url will get to long QUrl will not
+                // recognize it because of STD 3 rules, so we will use the
+                // username for the note name instead of the hostname
+                // the limit is 63 characters, but special characters use up
+                // far more space
+                if (noteNameForLink.length() > 46) {
+                    noteUrl += "@";
+                }
+
+                newText = "[" + noteName + "](" + noteUrl + ")";
             }
 
             textEdit->textCursor().insertText(newText);

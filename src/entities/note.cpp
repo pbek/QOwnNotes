@@ -2569,33 +2569,38 @@ Note Note::fetchByUrlString(QString urlString) {
             QRegularExpression(R"(^\w+:\/\/(\d+)$)").match(urlString);
     QString fileName = match.hasMatch() ? match.captured(1) : url.host();
 
-    if (fileName.isEmpty()) {
-        return Note();
-    }
+    // we are using the user name as fallback if the hostname was too long
+    if (!url.userName().isEmpty()) {
+        fileName = url.userName();
+    } else {
+        if (fileName.isEmpty()) {
+            return Note();
+        }
 
-    // add a ".com" to the filename to simulate a valid domain
-    fileName += ".com";
+        // add a ".com" to the filename to simulate a valid domain
+        fileName += ".com";
 
-    // convert the ACE to IDN (internationalized domain names) to support
-    // links to notes with unicode characters in their names
-    // then remove the ".com" again
-    fileName = Utils::Misc::removeIfEndsWith(
-            QUrl::fromAce(fileName.toLatin1()), ".com");
+        // convert the ACE to IDN (internationalized domain names) to support
+        // links to notes with unicode characters in their names
+        // then remove the ".com" again
+        fileName = Utils::Misc::removeIfEndsWith(
+                QUrl::fromAce(fileName.toLatin1()), ".com");
 
-    // if it seem we have unicode characters in our filename let us use
-    // wildcards for each number, because full width numbers get somehow
-    // translated to normal numbers by the QTextEdit
-    if (fileName != url.host()) {
-        fileName.replace("1", "[1１]")
-                .replace("2", "[2２]")
-                .replace("3", "[3３]")
-                .replace("4", "[4４]")
-                .replace("5", "[5５]")
-                .replace("6", "[6６]")
-                .replace("7", "[7７]")
-                .replace("8", "[8８]")
-                .replace("9", "[9９]")
-                .replace("0", "[0０]");
+        // if it seem we have unicode characters in our filename let us use
+        // wildcards for each number, because full width numbers get somehow
+        // translated to normal numbers by the QTextEdit
+        if (fileName != url.host()) {
+            fileName.replace("1", "[1１]")
+                    .replace("2", "[2２]")
+                    .replace("3", "[3３]")
+                    .replace("4", "[4４]")
+                    .replace("5", "[5５]")
+                    .replace("6", "[6６]")
+                    .replace("7", "[7７]")
+                    .replace("8", "[8８]")
+                    .replace("9", "[9９]")
+                    .replace("0", "[0０]");
+        }
     }
 
     // this makes it possible to search for file names containing spaces

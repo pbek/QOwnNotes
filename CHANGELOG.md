@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 18.08.5
+- linking to notes with long filenames now works
+    - this was a problem because of STD 3 restrictions limiting the hostname 
+      to 63 characters
+    - now we are using the username of an url for the note filename, instead of 
+      the hostname for long filenames
+    - for existing note-links just add a `@` at the end of the url to make it work
+
 ## 18.08.4
 - you can now **export and import your settings** (for [#989](https://github.com/pbek/QOwnNotes/issues/989))
     - keep in mind that when importing your settings may get removed and not 
