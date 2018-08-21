@@ -173,9 +173,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->encryptedNoteTextEdit->hide();
     ui->multiSelectActionFrame->hide();
 
-    // TODO: #949, un-hide and implement
-    ui->moveNotesButton->hide();
-
     // set the search frames for the note text edits
     bool darkMode = settings.value("darkMode").toBool();
     ui->noteTextEdit->initSearchFrame(ui->noteTextEditSearchFrame, darkMode);
@@ -7397,9 +7394,6 @@ void MainWindow::reloadCurrentNoteTags() {
         ui->selectedTagsToolButton->setToolTip(notesSelectedText);
 
         ui->notesSelectedLabel->setText(notesSelectedText);
-
-        // TODO: #949, implement
-//        ui->moveNotesButton->setMenu();
     }
 
     // add all new remove-tag buttons
@@ -8651,19 +8645,29 @@ void MainWindow::on_noteTreeWidget_currentItemChanged(
 void MainWindow::on_noteTreeWidget_customContextMenuRequested(
         const QPoint &pos) {
     QPoint globalPos = ui->noteTreeWidget->mapToGlobal(pos);
+    openNotesContextMenu(globalPos);
+}
+
+void MainWindow::openNotesContextMenu(
+        const QPoint &globalPos, bool multiNoteMenuEntriesOnly) {
     QMenu noteMenu;
     QMenu *moveDestinationMenu = new QMenu();
     QMenu *copyDestinationMenu = new QMenu();
     QMenu *tagRemoveMenu = new QMenu();
 
-    QAction *createNoteAction = noteMenu.addAction(tr("New note"));
-    connect(createNoteAction, SIGNAL(triggered()),
-            this, SLOT(on_action_New_note_triggered()));
+    QAction *createNoteAction;
+    QAction *renameAction;
 
-    QAction *renameAction = new QAction(this);
-    renameAction = noteMenu.addAction(tr("Rename note"));
-    renameAction->setToolTip(tr("Allows you to rename the filename of "
-                                          "the note"));
+    if (!multiNoteMenuEntriesOnly) {
+        createNoteAction = noteMenu.addAction(tr("New note"));
+        connect(createNoteAction, SIGNAL(triggered()),
+                this, SLOT(on_action_New_note_triggered()));
+
+        renameAction = new QAction(this);
+        renameAction = noteMenu.addAction(tr("Rename note"));
+        renameAction->setToolTip(tr("Allows you to rename the filename of "
+                                    "the note"));
+    }
 
     QAction *removeAction = noteMenu.addAction(tr("&Remove notes"));
     noteMenu.addSeparator();
@@ -8748,18 +8752,26 @@ void MainWindow::on_noteTreeWidget_customContextMenuRequested(
             }
     }
 
-    noteMenu.addSeparator();
-    QAction *openInExternalEditorAction = noteMenu.addAction(
-            tr("Open note in external editor"));
-    QAction *openNoteWindowAction = noteMenu.addAction(
-            tr("Open note in different window"));
-    QAction *showInFileManagerAction = noteMenu.addAction(
-            tr("Show note in file manager"));
+    QAction *openInExternalEditorAction;
+    QAction *openNoteWindowAction;
+    QAction *showInFileManagerAction;
+    QAction *showNoteGitLogAction;
 
-    QAction *showNoteGitLogAction = new QAction(this);
-    if (Utils::Git::isCurrentNoteFolderUseGit() &&
+    if (!multiNoteMenuEntriesOnly) {
+        noteMenu.addSeparator();
+        openInExternalEditorAction = noteMenu.addAction(
+                tr("Open note in external editor"));
+        openNoteWindowAction = noteMenu.addAction(
+                tr("Open note in different window"));
+        showInFileManagerAction = noteMenu.addAction(
+                tr("Show note in file manager"));
+
+        showNoteGitLogAction = new QAction(this);
+        if (Utils::Git::isCurrentNoteFolderUseGit() &&
             Utils::Git::hasLogCommand()) {
-        showNoteGitLogAction = noteMenu.addAction(tr("Show note git versions"));
+            showNoteGitLogAction = noteMenu.addAction(
+                    tr("Show note git versions"));
+        }
     }
 
     // add the custom actions to the context menu
@@ -8771,8 +8783,12 @@ void MainWindow::on_noteTreeWidget_customContextMenuRequested(
             }
     }
 
-    noteMenu.addSeparator();
-    QAction *selectAllAction = noteMenu.addAction(tr("Select &all notes"));
+    QAction *selectAllAction;
+
+    if (!multiNoteMenuEntriesOnly) {
+        noteMenu.addSeparator();
+        selectAllAction = noteMenu.addAction(tr("Select &all notes"));
+    }
 
     QAction *selectedItem = noteMenu.exec(globalPos);
     if (selectedItem) {
@@ -10316,4 +10332,10 @@ void MainWindow::on_actionManage_orphaned_attachments_triggered() {
     delete(_orphanedAttachmentsDialog);
     _orphanedAttachmentsDialog = new OrphanedAttachmentsDialog(this);
     _orphanedAttachmentsDialog->show();
+}
+
+void MainWindow::on_noteOperationsButton_clicked() {
+    QPoint globalPos = ui->noteOperationsButton->mapToGlobal(
+            QPoint(0, ui->noteOperationsButton->height()));
+    openNotesContextMenu(globalPos, true);
 }

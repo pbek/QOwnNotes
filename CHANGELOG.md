@@ -7,6 +7,10 @@
     - now we are using the username of an url for the note filename, instead of 
       the hostname for long filenames
     - for existing note-links just add a `@` at the end of the url to make it work
+- fixed some possible issues with the note encryption (thank you @sdicke)
+- if you select multiple notes you now can use the new `Note operations...` 
+  button in in the area where the note edit normally is displayed to do 
+  operations on multiple notes (for [#949](https://github.com/pbek/QOwnNotes/issues/949))
 
 ## 18.08.4
 - you can now **export and import your settings** (for [#989](https://github.com/pbek/QOwnNotes/issues/989))

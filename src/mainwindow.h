@@ -528,6 +528,8 @@ private slots:
 
     void on_actionManage_orphaned_attachments_triggered();
 
+    void on_noteOperationsButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;
@@ -913,4 +915,7 @@ private:
                                   QTreeWidgetItem *noteItem = nullptr);
 
     void initFakeVim(QOwnNotesMarkdownTextEdit *noteTextEdit);
+
+    void openNotesContextMenu(const QPoint &globalPos,
+            bool multiNoteMenuEntriesOnly = false);
 };
