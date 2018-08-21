@@ -8655,8 +8655,8 @@ void MainWindow::openNotesContextMenu(
     QMenu *copyDestinationMenu = new QMenu();
     QMenu *tagRemoveMenu = new QMenu();
 
-    QAction *createNoteAction;
-    QAction *renameAction;
+    QAction *createNoteAction = new QAction();
+    QAction *renameAction = new QAction();
 
     if (!multiNoteMenuEntriesOnly) {
         createNoteAction = noteMenu.addAction(tr("New note"));
@@ -8752,10 +8752,10 @@ void MainWindow::openNotesContextMenu(
             }
     }
 
-    QAction *openInExternalEditorAction;
-    QAction *openNoteWindowAction;
-    QAction *showInFileManagerAction;
-    QAction *showNoteGitLogAction;
+    QAction *openInExternalEditorAction = new QAction();
+    QAction *openNoteWindowAction = new QAction();
+    QAction *showInFileManagerAction = new QAction();
+    QAction *showNoteGitLogAction = new QAction();
 
     if (!multiNoteMenuEntriesOnly) {
         noteMenu.addSeparator();
@@ -8783,7 +8783,7 @@ void MainWindow::openNotesContextMenu(
             }
     }
 
-    QAction *selectAllAction;
+    QAction *selectAllAction = new QAction();
 
     if (!multiNoteMenuEntriesOnly) {
         noteMenu.addSeparator();
