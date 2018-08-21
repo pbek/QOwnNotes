@@ -11,6 +11,9 @@
 - if you select multiple notes you now can use the new `Note operations...` 
   button in in the area where the note edit normally is displayed to do 
   operations on multiple notes (for [#949](https://github.com/pbek/QOwnNotes/issues/949))
+- added more Spanish, Italian, Chinese Traditional, Chinese Simplified,
+  Indonesian, German, Hungarian and Dutch translation (thank you richarson,
+  mlocati, abev66, wenzhuoz, zmni, rakekniven and Fabijenna)
 
 ## 18.08.4
 - you can now **export and import your settings** (for [#989](https://github.com/pbek/QOwnNotes/issues/989))
