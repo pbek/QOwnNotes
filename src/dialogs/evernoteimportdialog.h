@@ -3,6 +3,7 @@
 #include <QDialog>
 #include <QXmlQuery>
 #include <entities/note.h>
+#include <QtWidgets/QTreeWidgetItem>
 #include "masterdialog.h"
 
 namespace Ui {
@@ -47,4 +48,17 @@ private:
     void tagNote(QXmlQuery &query, Note &note);
 
     QString importAttachments(QString content, QXmlQuery query);
+
+    QTreeWidgetItem *addMetaDataTreeWidgetItem(
+            QString name,
+            QString attributeName = "",
+            QTreeWidgetItem *parentItem = nullptr);
+
+    void setupMetaDataTreeWidgetItems();
+
+    bool isMetaDataChecked();
+
+    QString generateMetaDataMarkdown(QXmlQuery query);
+
+    void storeMetaDataTreeWidgetItemsCheckedState();
 };

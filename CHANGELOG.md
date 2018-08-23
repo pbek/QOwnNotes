@@ -1,5 +1,16 @@
 # QOwnNotes Changelog
 
+## 18.08.6
+- when importing from **Evernote** you can now also **import metadata** from 
+  your Evernote notes (for [#998](https://github.com/pbek/QOwnNotes/issues/998))
+    - you can select what metadata to import in the import dialog from a 
+      tree widget
+    - the dialog will remember which items you want to import
+    - the selected metadata will be imported as markdown table if available 
+      in the Evernote note 
+- the Evernote import dialog will now also remember if you want to import 
+  images or attachments
+
 ## 18.08.5
 - linking to notes with long filenames now works
     - this was a problem because of STD 3 restrictions limiting the hostname 

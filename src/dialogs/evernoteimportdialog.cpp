@@ -13,18 +13,34 @@
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
 #include <QRegularExpressionMatchIterator>
+#include <QtCore/QSettings>
 
 EvernoteImportDialog::EvernoteImportDialog(QWidget *parent) :
         MasterDialog(parent),
     ui(new Ui::EvernoteImportDialog) {
     ui->setupUi(this);
+    setupMetaDataTreeWidgetItems();
     ui->progressBar->hide();
     ui->progressBar->setMinimum(0);
     ui->progressBar->setValue(0);
     _importCount = 0;
+
+    QSettings settings;
+    ui->imageImportCheckBox->setChecked(settings.value(
+            "EvernoteImport/ImageImportCheckBoxChecked", true).toBool());
+    ui->attachmentImportCheckBox->setChecked(settings.value(
+            "EvernoteImport/AttachmentImportCheckBoxChecked", true).toBool());
 }
 
 EvernoteImportDialog::~EvernoteImportDialog() {
+    QSettings settings;
+    settings.setValue("EvernoteImport/ImageImportCheckBoxChecked",
+            ui->imageImportCheckBox->isChecked());
+    settings.setValue("EvernoteImport/AttachmentImportCheckBoxChecked",
+            ui->attachmentImportCheckBox->isChecked());
+
+    storeMetaDataTreeWidgetItemsCheckedState();
+
     delete ui;
 }
 
@@ -465,6 +481,8 @@ void EvernoteImportDialog::importNotes(QString data) {
     query.setFocus(data);
     query.setQuery("en-export/note");
 
+    bool importMetaData = isMetaDataChecked();
+
     QXmlResultItems result;
     if (query.isValid()) {
         query.evaluateTo(&result);
@@ -530,7 +548,13 @@ void EvernoteImportDialog::importNotes(QString data) {
             title.remove("\"");
 #endif
 
-            QString noteText = Note::createNoteHeader(title) + content;
+            QString noteText = Note::createNoteHeader(title);
+
+            if (importMetaData) {
+                noteText += generateMetaDataMarkdown(query);
+            }
+
+            noteText += content;
 
             Note note = Note();
 //            note.setName(title);
@@ -584,4 +608,148 @@ void EvernoteImportDialog::tagNote(QXmlQuery &query, Note &note) {
             tag.linkToNote(note);
         }
     }
+}
+
+/**
+ * Adds a metadata tree widget item
+ *
+ * @param name
+ * @param attributeName
+ * @param parentItem
+ * @return
+ */
+QTreeWidgetItem *EvernoteImportDialog::addMetaDataTreeWidgetItem(
+        QString name,
+        QString attributeName,
+        QTreeWidgetItem *parentItem) {
+    auto *item = new QTreeWidgetItem();
+    item->setText(0, name);
+
+    if (parentItem == nullptr) {
+        ui->metaDataTreeWidget->addTopLevelItem(item);
+        item->setExpanded(true);
+    } else {
+        item->setToolTip(0, attributeName);
+        item->setData(0, Qt::UserRole, attributeName);
+        item->setFlags(item->flags() | Qt::ItemIsUserCheckable);
+
+        QSettings settings;
+        auto metaDataUnCheckedList = settings.value(
+                "EvernoteImport/MetaDataUnCheckedList").toStringList();
+        item->setCheckState(0,
+                metaDataUnCheckedList.contains(attributeName) ?
+                Qt::Unchecked : Qt::Checked);
+
+        parentItem->addChild(item);
+    }
+
+    return item;
+}
+
+/**
+ * Setup the metadata tree widget items
+ */
+void EvernoteImportDialog::setupMetaDataTreeWidgetItems() {
+    auto *basicAttributesItem = addMetaDataTreeWidgetItem(
+            tr("Basic attributes"));
+    addMetaDataTreeWidgetItem(tr("Created date"), "created",
+            basicAttributesItem);
+    addMetaDataTreeWidgetItem(tr("Updated date"), "updated",
+            basicAttributesItem);
+
+    auto *noteAttributesItem = addMetaDataTreeWidgetItem(tr("Note attributes"));
+    addMetaDataTreeWidgetItem(tr("Subject date"),
+            "note-attributes/subject-date", noteAttributesItem);
+    addMetaDataTreeWidgetItem(tr("Latitude"),
+            "note-attributes/latitude", noteAttributesItem);
+    addMetaDataTreeWidgetItem(tr("Longitude"),
+            "note-attributes/longitude", noteAttributesItem);
+    addMetaDataTreeWidgetItem(tr("Altitude"),
+            "note-attributes/altitude", noteAttributesItem);
+    addMetaDataTreeWidgetItem(tr("Author"),
+            "note-attributes/author", noteAttributesItem);
+    addMetaDataTreeWidgetItem(tr("Source"),
+            "note-attributes/source", noteAttributesItem);
+    addMetaDataTreeWidgetItem(tr("Source url"),
+            "note-attributes/source-url", noteAttributesItem);
+    addMetaDataTreeWidgetItem(tr("Source application"),
+            "note-attributes/source-application", noteAttributesItem);
+}
+
+/**
+ * Setup the metadata tree widget items
+ */
+void EvernoteImportDialog::storeMetaDataTreeWidgetItemsCheckedState() {
+    QList<QTreeWidgetItem *> items = ui->metaDataTreeWidget->findItems(
+            QString("*"), Qt::MatchWrap | Qt::MatchWildcard |
+                          Qt::MatchRecursive);
+    QSettings settings;
+    QStringList metaDataUnCheckedList;
+
+    Q_FOREACH(QTreeWidgetItem *item, items) {
+            QString attributeName = item->data(0, Qt::UserRole).toString();
+
+            if (item->checkState(0) != Qt::Checked) {
+                metaDataUnCheckedList << attributeName;
+            }
+        }
+
+    settings.setValue("EvernoteImport/MetaDataUnCheckedList",
+            metaDataUnCheckedList);
+}
+
+/**
+ * Checks if a metadata attribute is checked
+ */
+bool EvernoteImportDialog::isMetaDataChecked() {
+    QList<QTreeWidgetItem *> items = ui->metaDataTreeWidget->findItems(
+            QString("*"), Qt::MatchWrap | Qt::MatchWildcard |
+                          Qt::MatchRecursive);
+
+    Q_FOREACH(QTreeWidgetItem *item, items) {
+            if (item->checkState(0) == Qt::Checked) {
+                return true;
+            }
+        }
+
+    return false;
+}
+
+/**
+ * Generates the metadata markdown table for a note
+ */
+QString EvernoteImportDialog::generateMetaDataMarkdown(QXmlQuery query) {
+    QString resultText;
+    QString tableText;
+    QList<QTreeWidgetItem *> items = ui->metaDataTreeWidget->findItems(
+            QString("*"), Qt::MatchWrap | Qt::MatchWildcard |
+                          Qt::MatchRecursive);
+
+    Q_FOREACH(QTreeWidgetItem *item, items) {
+            if (item->checkState(0) != Qt::Checked) {
+                continue;
+            }
+
+            QString name = item->text(0);
+            QString attributeName = item->data(0, Qt::UserRole).toString();
+
+            QString attribute;
+            query.setQuery(attributeName + "/text()");
+            query.evaluateTo(&attribute);
+            attribute = attribute.trimmed();
+
+            if (attribute.isEmpty()) {
+                continue;
+            }
+
+            tableText += "| " + name + " | " + attribute + " |\n";
+        }
+
+    if (!tableText.isEmpty()) {
+        resultText = "| " + tr("Attribute") + " | " + tr("Value") + " |\n"
+                     "|---|---|\n" +
+                     tableText;
+    }
+
+    return resultText;
 }
