@@ -486,7 +486,7 @@
             <item row="3" column="1">
              <widget class="QPushButton" name="noteOperationsButton">
               <property name="text">
-               <string>Note operations...</string>
+               <string>Note operations…</string>
               </property>
              </widget>
             </item>
@@ -2383,9 +2383,9 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
+  <include location="images.qrc"/>
   <include location="breeze-qownnotes.qrc"/>
   <include location="breeze-dark-qownnotes.qrc"/>
-  <include location="images.qrc"/>
  </resources>
  <connections/>
 </ui>

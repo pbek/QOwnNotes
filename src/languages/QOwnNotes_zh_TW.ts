@@ -786,9 +786,8 @@
         <translation>導覽</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="489"/>
         <source>Note operations...</source>
-        <translation type="unfinished">Note operations...</translation>
+        <translation type="obsolete">Note operations...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="659"/>
@@ -1497,6 +1496,11 @@
         <location filename="../mainwindow.ui" line="947"/>
         <source>Open chat</source>
         <translation>開啟交談</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="489"/>
+        <source>Note operations…</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1505"/>

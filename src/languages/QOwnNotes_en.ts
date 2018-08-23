@@ -791,11 +791,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="489"/>
-        <source>Note operations...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../mainwindow.ui" line="659"/>
         <location filename="../mainwindow.cpp" line="7378"/>
         <source>Add a tag to the current note</source>
@@ -1500,6 +1495,11 @@
     <message>
         <location filename="../mainwindow.ui" line="947"/>
         <source>Open chat</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="489"/>
+        <source>Note operations…</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
