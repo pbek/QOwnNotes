@@ -7579,7 +7579,7 @@ void MainWindow::on_tagTreeWidget_customContextMenuRequested(
         removeAction = menu.addAction(tr("&Remove tags"));
 
         // build the tag moving menu
-        QMenu *moveMenu = menu.addMenu(tr("&Move tags to..."));
+        QMenu *moveMenu = menu.addMenu(tr("&Move tags to…"));
         buildTagMoveMenuTree(moveMenu);
     }
 
@@ -8677,8 +8677,8 @@ void MainWindow::openNotesContextMenu(
     // show copy and move menu entries only if there
     // is at least one other note folder
     if (noteFolders.count() > 1) {
-        moveDestinationMenu = noteMenu.addMenu(tr("&Move notes to..."));
-        copyDestinationMenu = noteMenu.addMenu(tr("&Copy notes to..."));
+        moveDestinationMenu = noteMenu.addMenu(tr("&Move notes to…"));
+        copyDestinationMenu = noteMenu.addMenu(tr("&Copy notes to…"));
 
         Q_FOREACH(NoteFolder noteFolder, noteFolders) {
                 // don't show not existing folders or if path is empty
@@ -8707,11 +8707,11 @@ void MainWindow::openNotesContextMenu(
     bool showSubFolders = NoteFolder::isCurrentShowSubfolders();
     if (showSubFolders) {
         QMenu *subFolderMoveMenu = noteMenu.addMenu(
-                tr("Move notes to subfolder..."));
+                tr("Move notes to subfolder…"));
         buildBulkNoteSubFolderMenuTree(subFolderMoveMenu, false);
 
         QMenu *subFolderCopyMenu = noteMenu.addMenu(
-                tr("Copy notes to subfolder..."));
+                tr("Copy notes to subfolder…"));
         buildBulkNoteSubFolderMenuTree(subFolderCopyMenu, true);
     }
 
@@ -8719,7 +8719,7 @@ void MainWindow::openNotesContextMenu(
 
     // show the tagging menu if at least one tag is present
     if (tagList.count() > 0) {
-        QMenu *tagMenu = noteMenu.addMenu(tr("&Tag selected notes with..."));
+        QMenu *tagMenu = noteMenu.addMenu(tr("&Tag selected notes with…"));
         buildBulkNoteTagMenuTree(tagMenu);
     }
 
@@ -8741,7 +8741,7 @@ void MainWindow::openNotesContextMenu(
     // show the remove tags menu if at least one tag is present
     if (tagRemoveList.count() > 0) {
         tagRemoveMenu = noteMenu.addMenu(
-                tr("&Remove tag from selected notes..."));
+                tr("&Remove tag from selected notes…"));
 
         Q_FOREACH(Tag tag, tagRemoveList) {
                 QAction *action = tagRemoveMenu->addAction(

@@ -30,7 +30,7 @@
         <translation type="vanished">選擇檔案</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.ui" line="108"/>
+        <location filename="../dialogs/evernoteimportdialog.ui" line="113"/>
         <source>Please select the Evernote enex file you want to import:</source>
         <translation>請選擇欲匯入的 Evernote enex 檔案：</translation>
     </message>
@@ -40,17 +40,22 @@
         <translation>匯入圖片</translation>
     </message>
     <message>
+        <location filename="../dialogs/evernoteimportdialog.ui" line="20"/>
+        <source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click &quot;Export notes…&quot; in the File menu.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/evernoteimportdialog.ui" line="83"/>
         <source>Metadata to import</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.ui" line="118"/>
+        <location filename="../dialogs/evernoteimportdialog.ui" line="123"/>
         <source>Evernote enex file</source>
         <translation>Evernote enex 檔案</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.ui" line="125"/>
+        <location filename="../dialogs/evernoteimportdialog.ui" line="130"/>
         <source>Select file and import notes</source>
         <translation type="unfinished"></translation>
     </message>
@@ -60,9 +65,8 @@
         <translation>已匯入 %m 份筆記中的 %v 份</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.ui" line="20"/>
         <source>To get such an enex file you need to select one or multiple notes in your Evernotes desktop client and click &quot;Export notes...&quot; in the File menu.</source>
-        <translation>您必須在 Evernotes 桌面程式中選取一份以上的筆記，並在 File 選單中點選「Export notes...」，以獲得此 enex 檔案。</translation>
+        <translation type="vanished">您必須在 Evernotes 桌面程式中選取一份以上的筆記，並在 File 選單中點選「Export notes...」，以獲得此 enex 檔案。</translation>
     </message>
     <message>
         <location filename="../dialogs/evernoteimportdialog.ui" line="73"/>
@@ -856,9 +860,8 @@
         <translation>移除目前筆記（&amp;R）</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1260"/>
         <source>About &amp;QOwnNotes...</source>
-        <translation>關於 &amp;QOwnNotes...</translation>
+        <translation type="vanished">關於 &amp;QOwnNotes...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1272"/>
@@ -1085,6 +1088,11 @@
         <location filename="../mainwindow.ui" line="1154"/>
         <source>&amp;Scripting</source>
         <translation>腳本(&amp;S)</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="1260"/>
+        <source>About &amp;QOwnNotes…</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1354"/>
@@ -1925,6 +1933,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>停用色彩</translation>
     </message>
     <message>
+        <location filename="../mainwindow.cpp" line="7582"/>
+        <source>&amp;Move tags to…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../mainwindow.cpp" line="7801"/>
         <source>Move to the root</source>
         <comment>to move a tag to the current tag in the tag context menu</comment>
@@ -1965,6 +1978,36 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <location filename="../mainwindow.cpp" line="8668"/>
         <source>Allows you to rename the filename of the note</source>
         <translation>允許您修改筆記的檔名</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8680"/>
+        <source>&amp;Move notes to…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8681"/>
+        <source>&amp;Copy notes to…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8710"/>
+        <source>Move notes to subfolder…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8714"/>
+        <source>Copy notes to subfolder…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8722"/>
+        <source>&amp;Tag selected notes with…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8744"/>
+        <source>&amp;Remove tag from selected notes…</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="8835"/>
@@ -2228,14 +2271,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8710"/>
         <source>Move notes to subfolder...</source>
-        <translation>移動筆記至子資料夾…</translation>
+        <translation type="vanished">移動筆記至子資料夾…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8714"/>
         <source>Copy notes to subfolder...</source>
-        <translation>複製筆記至子資料夾…</translation>
+        <translation type="vanished">複製筆記至子資料夾…</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="8763"/>
@@ -2313,24 +2354,20 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>確定(&amp;O)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8680"/>
         <source>&amp;Move notes to...</source>
-        <translation>移動筆記至… (&amp;M)</translation>
+        <translation type="vanished">移動筆記至… (&amp;M)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8681"/>
         <source>&amp;Copy notes to...</source>
-        <translation>複製筆記至…(&amp;C)</translation>
+        <translation type="vanished">複製筆記至…(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8722"/>
         <source>&amp;Tag selected notes with...</source>
-        <translation>標記選取的筆記為… (&amp;T)</translation>
+        <translation type="vanished">標記選取的筆記為… (&amp;T)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8744"/>
         <source>&amp;Remove tag from selected notes...</source>
-        <translation>從選取筆記移除標籤…(&amp;R)</translation>
+        <translation type="vanished">從選取筆記移除標籤…(&amp;R)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="8672"/>
@@ -2392,9 +2429,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>新增標籤(&amp;A)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7582"/>
         <source>&amp;Move tags to...</source>
-        <translation>移動標籤至…(&amp;M)</translation>
+        <translation type="vanished">移動標籤至…(&amp;M)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7617"/>
@@ -4239,6 +4275,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>界面風格</translation>
     </message>
     <message>
+        <location filename="../dialogs/settingsdialog.ui" line="2688"/>
+        <source>&amp;Add script…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/settingsdialog.ui" line="3215"/>
         <source>By default the headline will generated automatically</source>
         <translation>預設情況下標題將自動產生</translation>
@@ -4649,9 +4690,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>庫：</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2688"/>
         <source>&amp;Add script...</source>
-        <translation>加入腳本(&amp;A)…</translation>
+        <translation type="vanished">加入腳本(&amp;A)…</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="2838"/>
@@ -5530,6 +5570,11 @@ Your notes will stay intact!</source>
         <translation>儲存</translation>
     </message>
     <message>
+        <location filename="../dialogs/tododialog.ui" line="222"/>
+        <source>Note…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/tododialog.cpp" line="100"/>
         <source>Save and insert into note</source>
         <translation>儲存並插入至筆記</translation>
@@ -5540,9 +5585,8 @@ Your notes will stay intact!</source>
         <translation>移除</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="222"/>
         <source>Note...</source>
-        <translation>筆記…</translation>
+        <translation type="vanished">筆記…</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="278"/>
@@ -5553,6 +5597,11 @@ Your notes will stay intact!</source>
         <location filename="../dialogs/tododialog.ui" line="285"/>
         <source>Reload the todo list from server</source>
         <translation>重新從伺服器載入待辦清單</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.ui" line="288"/>
+        <source>Reload…</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="319"/>
@@ -5590,9 +5639,8 @@ Your notes will stay intact!</source>
         <translation>移除目前的待辦事項</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="288"/>
         <source>Reload...</source>
-        <translation>重新載入…</translation>
+        <translation type="vanished">重新載入…</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="309"/>

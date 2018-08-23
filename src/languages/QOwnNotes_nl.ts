@@ -30,7 +30,7 @@
         <translation type="vanished">Selecteer bestand</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.ui" line="108"/>
+        <location filename="../dialogs/evernoteimportdialog.ui" line="113"/>
         <source>Please select the Evernote enex file you want to import:</source>
         <translation>Selecteer het Evernote enex bestand dat u wilt importeren:</translation>
     </message>
@@ -40,17 +40,22 @@
         <translation>Afbeeldingen importeren</translation>
     </message>
     <message>
+        <location filename="../dialogs/evernoteimportdialog.ui" line="20"/>
+        <source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click &quot;Export notes…&quot; in the File menu.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/evernoteimportdialog.ui" line="83"/>
         <source>Metadata to import</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.ui" line="118"/>
+        <location filename="../dialogs/evernoteimportdialog.ui" line="123"/>
         <source>Evernote enex file</source>
         <translation>Evernote enex bestand</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.ui" line="125"/>
+        <location filename="../dialogs/evernoteimportdialog.ui" line="130"/>
         <source>Select file and import notes</source>
         <translation type="unfinished"></translation>
     </message>
@@ -60,9 +65,8 @@
         <translation>%v van %m notities geïmporteerd</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.ui" line="20"/>
         <source>To get such an enex file you need to select one or multiple notes in your Evernotes desktop client and click &quot;Export notes...&quot; in the File menu.</source>
-        <translation>Om een een enex-bestand te genereren selecteer één of meerdere notities in uw Evernotes desktop client en klik op &quot;Notities exporteren...&quot; in het bestand menu.</translation>
+        <translation type="vanished">Om een een enex-bestand te genereren selecteer één of meerdere notities in uw Evernotes desktop client en klik op &quot;Notities exporteren...&quot; in het bestand menu.</translation>
     </message>
     <message>
         <location filename="../dialogs/evernoteimportdialog.ui" line="73"/>
@@ -865,9 +869,8 @@
         <translation>Huidige notitie verwijderen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1260"/>
         <source>About &amp;QOwnNotes...</source>
-        <translation>Over &amp;QOwnNotes...</translation>
+        <translation type="vanished">Over &amp;QOwnNotes...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1272"/>
@@ -1094,6 +1097,11 @@
         <location filename="../mainwindow.ui" line="1154"/>
         <source>&amp;Scripting</source>
         <translation>&amp;Scripting</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="1260"/>
+        <source>About &amp;QOwnNotes…</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1354"/>
@@ -1945,6 +1953,11 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
         <translation>Uitschakelen van kleur</translation>
     </message>
     <message>
+        <location filename="../mainwindow.cpp" line="7582"/>
+        <source>&amp;Move tags to…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../mainwindow.cpp" line="7801"/>
         <source>Move to the root</source>
         <comment>to move a tag to the current tag in the tag context menu</comment>
@@ -1985,6 +1998,36 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
         <location filename="../mainwindow.cpp" line="8668"/>
         <source>Allows you to rename the filename of the note</source>
         <translation>U kunt de naam van de bestandsnaam voor de notitie wijzigen</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8680"/>
+        <source>&amp;Move notes to…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8681"/>
+        <source>&amp;Copy notes to…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8710"/>
+        <source>Move notes to subfolder…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8714"/>
+        <source>Copy notes to subfolder…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8722"/>
+        <source>&amp;Tag selected notes with…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8744"/>
+        <source>&amp;Remove tag from selected notes…</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="8835"/>
@@ -2256,14 +2299,12 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8710"/>
         <source>Move notes to subfolder...</source>
-        <translation>Notities verplaatsen naar submap...</translation>
+        <translation type="vanished">Notities verplaatsen naar submap...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8714"/>
         <source>Copy notes to subfolder...</source>
-        <translation>Notities kopiëren naar submap...</translation>
+        <translation type="vanished">Notities kopiëren naar submap...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="8763"/>
@@ -2341,24 +2382,20 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
         <translation>&amp;OK</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8680"/>
         <source>&amp;Move notes to...</source>
-        <translation>&amp;Verplaats notities naar...</translation>
+        <translation type="vanished">&amp;Verplaats notities naar...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8681"/>
         <source>&amp;Copy notes to...</source>
-        <translation>&amp;Kopieer notities naar...</translation>
+        <translation type="vanished">&amp;Kopieer notities naar...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8722"/>
         <source>&amp;Tag selected notes with...</source>
-        <translation>&amp;Label geselecteerde notities met...</translation>
+        <translation type="vanished">&amp;Label geselecteerde notities met...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8744"/>
         <source>&amp;Remove tag from selected notes...</source>
-        <translation>&amp;Label verwijderen van geselecteerde notities...</translation>
+        <translation type="vanished">&amp;Label verwijderen van geselecteerde notities...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="8672"/>
@@ -2421,9 +2458,8 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
         <translation>&amp;Label toevoegen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7582"/>
         <source>&amp;Move tags to...</source>
-        <translation>&amp;Labels verplaatsen naar...</translation>
+        <translation type="vanished">&amp;Labels verplaatsen naar...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7617"/>
@@ -4269,6 +4305,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>Interface-stijl</translation>
     </message>
     <message>
+        <location filename="../dialogs/settingsdialog.ui" line="2688"/>
+        <source>&amp;Add script…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/settingsdialog.ui" line="3215"/>
         <source>By default the headline will generated automatically</source>
         <translation>Standaard wordt de kop automatisch gegenereerd</translation>
@@ -4679,9 +4720,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>Archief:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2688"/>
         <source>&amp;Add script...</source>
-        <translation>&amp;Voeg script toe...</translation>
+        <translation type="vanished">&amp;Voeg script toe...</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="2838"/>
@@ -5557,6 +5597,11 @@ Je notities zullen intact blijven!</translation>
         <translation>Opslaan</translation>
     </message>
     <message>
+        <location filename="../dialogs/tododialog.ui" line="222"/>
+        <source>Note…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/tododialog.cpp" line="100"/>
         <source>Save and insert into note</source>
         <translation>Opslaan en invoegen in notitie</translation>
@@ -5567,9 +5612,8 @@ Je notities zullen intact blijven!</translation>
         <translation>Verwijderen</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="222"/>
         <source>Note...</source>
-        <translation>Opmerking...</translation>
+        <translation type="vanished">Opmerking...</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="278"/>
@@ -5580,6 +5624,11 @@ Je notities zullen intact blijven!</translation>
         <location filename="../dialogs/tododialog.ui" line="285"/>
         <source>Reload the todo list from server</source>
         <translation>De takenlijst van de server herladen</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.ui" line="288"/>
+        <source>Reload…</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="319"/>
@@ -5617,9 +5666,8 @@ Je notities zullen intact blijven!</translation>
         <translation>Het huidige todo-item verwijderen</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="288"/>
         <source>Reload...</source>
-        <translation>Herladen...</translation>
+        <translation type="vanished">Herladen...</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="309"/>

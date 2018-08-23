@@ -10,6 +10,7 @@
       in the Evernote note 
 - the Evernote import dialog will now also remember if you want to import 
   images or attachments
+- a lot triple dots were changed to ellipsis in the user interface
 
 ## 18.08.5
 - linking to notes with long filenames now works

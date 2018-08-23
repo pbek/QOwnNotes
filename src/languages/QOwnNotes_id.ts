@@ -30,7 +30,7 @@
         <translation type="vanished">Pilih berkas</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.ui" line="108"/>
+        <location filename="../dialogs/evernoteimportdialog.ui" line="113"/>
         <source>Please select the Evernote enex file you want to import:</source>
         <translation>Silakan pilih berkas enex Evernote yang ingin Anda impor:</translation>
     </message>
@@ -40,17 +40,22 @@
         <translation>Impor gambar</translation>
     </message>
     <message>
+        <location filename="../dialogs/evernoteimportdialog.ui" line="20"/>
+        <source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click &quot;Export notes…&quot; in the File menu.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/evernoteimportdialog.ui" line="83"/>
         <source>Metadata to import</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.ui" line="118"/>
+        <location filename="../dialogs/evernoteimportdialog.ui" line="123"/>
         <source>Evernote enex file</source>
         <translation>Berkas enex Evernote</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.ui" line="125"/>
+        <location filename="../dialogs/evernoteimportdialog.ui" line="130"/>
         <source>Select file and import notes</source>
         <translation type="unfinished"></translation>
     </message>
@@ -60,9 +65,8 @@
         <translation>%v dari %m catatan diimpor</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.ui" line="20"/>
         <source>To get such an enex file you need to select one or multiple notes in your Evernotes desktop client and click &quot;Export notes...&quot; in the File menu.</source>
-        <translation>Untuk mendapatkan berkas enex, Anda harus memilih satu atau lebih catatan di aplikasi desktop Evernote Anda dan klik &quot;Ekspor catatan...&quot; di dalam menu Berkas.</translation>
+        <translation type="vanished">Untuk mendapatkan berkas enex, Anda harus memilih satu atau lebih catatan di aplikasi desktop Evernote Anda dan klik &quot;Ekspor catatan...&quot; di dalam menu Berkas.</translation>
     </message>
     <message>
         <location filename="../dialogs/evernoteimportdialog.ui" line="73"/>
@@ -856,9 +860,8 @@
         <translation>&amp;Buang catatan saat ini</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1260"/>
         <source>About &amp;QOwnNotes...</source>
-        <translation>Tentang &amp;QOwnNotes...</translation>
+        <translation type="vanished">Tentang &amp;QOwnNotes...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1272"/>
@@ -1085,6 +1088,11 @@
         <location filename="../mainwindow.ui" line="1154"/>
         <source>&amp;Scripting</source>
         <translation>&amp;Skrip</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="1260"/>
+        <source>About &amp;QOwnNotes…</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1354"/>
@@ -1924,6 +1932,11 @@ Jika keranjang sampah diaktifkan pada server ownCloud Anda, Anda bisa memulihkan
         <translation>Nonaktifkan warna</translation>
     </message>
     <message>
+        <location filename="../mainwindow.cpp" line="7582"/>
+        <source>&amp;Move tags to…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../mainwindow.cpp" line="7801"/>
         <source>Move to the root</source>
         <comment>to move a tag to the current tag in the tag context menu</comment>
@@ -1964,6 +1977,36 @@ Jika keranjang sampah diaktifkan pada server ownCloud Anda, Anda bisa memulihkan
         <location filename="../mainwindow.cpp" line="8668"/>
         <source>Allows you to rename the filename of the note</source>
         <translation>Memungkinkan Anda mengubah nama berkas catatan</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8680"/>
+        <source>&amp;Move notes to…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8681"/>
+        <source>&amp;Copy notes to…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8710"/>
+        <source>Move notes to subfolder…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8714"/>
+        <source>Copy notes to subfolder…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8722"/>
+        <source>&amp;Tag selected notes with…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8744"/>
+        <source>&amp;Remove tag from selected notes…</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="8835"/>
@@ -2227,14 +2270,12 @@ Jika keranjang sampah diaktifkan pada server ownCloud Anda, Anda bisa memulihkan
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8710"/>
         <source>Move notes to subfolder...</source>
-        <translation>Pindah catatan ke subfolder...</translation>
+        <translation type="vanished">Pindah catatan ke subfolder...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8714"/>
         <source>Copy notes to subfolder...</source>
-        <translation>Salin catatan ke subfolder...</translation>
+        <translation type="vanished">Salin catatan ke subfolder...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="8763"/>
@@ -2312,24 +2353,20 @@ Jika keranjang sampah diaktifkan pada server ownCloud Anda, Anda bisa memulihkan
         <translation>&amp;Ok</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8680"/>
         <source>&amp;Move notes to...</source>
-        <translation>&amp;Pindah catatan ke...</translation>
+        <translation type="vanished">&amp;Pindah catatan ke...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8681"/>
         <source>&amp;Copy notes to...</source>
-        <translation>&amp;Salin catatan ke...</translation>
+        <translation type="vanished">&amp;Salin catatan ke...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8722"/>
         <source>&amp;Tag selected notes with...</source>
-        <translation>&amp;Tag catatan yang dipilih dengan...</translation>
+        <translation type="vanished">&amp;Tag catatan yang dipilih dengan...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8744"/>
         <source>&amp;Remove tag from selected notes...</source>
-        <translation>&amp;Buang tag dari catatan yang dipilih...</translation>
+        <translation type="vanished">&amp;Buang tag dari catatan yang dipilih...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="8672"/>
@@ -2391,9 +2428,8 @@ Jika keranjang sampah diaktifkan pada server ownCloud Anda, Anda bisa memulihkan
         <translation>&amp;Tambah tag</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7582"/>
         <source>&amp;Move tags to...</source>
-        <translation>&amp;Pindah tag ke...</translation>
+        <translation type="vanished">&amp;Pindah tag ke...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7617"/>
@@ -4238,6 +4274,11 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi.</t
         <translation>Gaya antarmuka</translation>
     </message>
     <message>
+        <location filename="../dialogs/settingsdialog.ui" line="2688"/>
+        <source>&amp;Add script…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/settingsdialog.ui" line="3215"/>
         <source>By default the headline will generated automatically</source>
         <translation>Secara bawaan judul akan dihasilkan secara otomatis</translation>
@@ -4648,9 +4689,8 @@ Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi.</t
         <translation>Repositori:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2688"/>
         <source>&amp;Add script...</source>
-        <translation>&amp;Tambah skrip...</translation>
+        <translation type="vanished">&amp;Tambah skrip...</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="2838"/>
@@ -5530,6 +5570,11 @@ Catatan Anda akan tetap utuh!</translation>
         <translation>Simpan</translation>
     </message>
     <message>
+        <location filename="../dialogs/tododialog.ui" line="222"/>
+        <source>Note…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/tododialog.cpp" line="100"/>
         <source>Save and insert into note</source>
         <translation>Simpan dan sisipkan ke dalam catatan</translation>
@@ -5540,9 +5585,8 @@ Catatan Anda akan tetap utuh!</translation>
         <translation>Buang</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="222"/>
         <source>Note...</source>
-        <translation>Catatan...</translation>
+        <translation type="vanished">Catatan...</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="278"/>
@@ -5553,6 +5597,11 @@ Catatan Anda akan tetap utuh!</translation>
         <location filename="../dialogs/tododialog.ui" line="285"/>
         <source>Reload the todo list from server</source>
         <translation>Muat ulang daftar todo dari server</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.ui" line="288"/>
+        <source>Reload…</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="319"/>
@@ -5590,9 +5639,8 @@ Catatan Anda akan tetap utuh!</translation>
         <translation>Buang item todo saat ini</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="288"/>
         <source>Reload...</source>
-        <translation>Muat ulang...</translation>
+        <translation type="vanished">Muat ulang...</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="309"/>

@@ -2473,7 +2473,7 @@
                         <string>Reset the icon size</string>
                        </property>
                        <property name="text">
-                        <string notr="true">...</string>
+                        <string notr="true">…</string>
                        </property>
                        <property name="icon">
                         <iconset theme="edit-clear" resource="../breeze-qownnotes.qrc">
@@ -2487,7 +2487,7 @@
                         <string>Reset the item height</string>
                        </property>
                        <property name="text">
-                        <string notr="true">...</string>
+                        <string notr="true">…</string>
                        </property>
                        <property name="icon">
                         <iconset theme="edit-clear" resource="../breeze-qownnotes.qrc">
@@ -2685,7 +2685,7 @@
                       <item row="0" column="1">
                        <widget class="QPushButton" name="scriptAddButton">
                         <property name="text">
-                         <string>&amp;Add script...</string>
+                         <string>&amp;Add script…</string>
                         </property>
                         <property name="icon">
                          <iconset theme="document-new" resource="../breeze-qownnotes.qrc">
@@ -3790,7 +3790,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                    <string>Reset font</string>
                   </property>
                   <property name="text">
-                   <string notr="true">...</string>
+                   <string notr="true">…</string>
                   </property>
                   <property name="icon">
                    <iconset theme="edit-clear" resource="../breeze-qownnotes.qrc">
@@ -3835,7 +3835,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                    <string>Reset font</string>
                   </property>
                   <property name="text">
-                   <string notr="true">...</string>
+                   <string notr="true">…</string>
                   </property>
                   <property name="icon">
                    <iconset theme="edit-clear" resource="../breeze-qownnotes.qrc">
@@ -3917,7 +3917,7 @@ p, li { white-space: pre-wrap; }
                    <string>Reset font</string>
                   </property>
                   <property name="text">
-                   <string notr="true">...</string>
+                   <string notr="true">…</string>
                   </property>
                   <property name="icon">
                    <iconset theme="edit-clear" resource="../breeze-qownnotes.qrc">
@@ -3941,7 +3941,7 @@ p, li { white-space: pre-wrap; }
                    <string>Reset font</string>
                   </property>
                   <property name="text">
-                   <string notr="true">...</string>
+                   <string notr="true">…</string>
                   </property>
                   <property name="icon">
                    <iconset theme="edit-clear" resource="../breeze-qownnotes.qrc">
@@ -4295,7 +4295,7 @@ p, li { white-space: pre-wrap; }
                    <string>Reset the cursor width</string>
                   </property>
                   <property name="text">
-                   <string notr="true">...</string>
+                   <string notr="true">…</string>
                   </property>
                   <property name="icon">
                    <iconset theme="edit-clear" resource="../breeze-qownnotes.qrc">
@@ -4549,7 +4549,7 @@ git config --global user.name &quot;Your name&quot;</string>
                 <item row="1" column="0">
                  <widget class="Label" name="gitDownloadLabel">
                   <property name="text">
-                   <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Download text entered in source code...&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Download text entered in source code…&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
                   <property name="textFormat">
                    <enum>Qt::RichText</enum>

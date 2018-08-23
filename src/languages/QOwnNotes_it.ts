@@ -30,7 +30,7 @@
         <translation type="vanished">Seleziona file</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.ui" line="108"/>
+        <location filename="../dialogs/evernoteimportdialog.ui" line="113"/>
         <source>Please select the Evernote enex file you want to import:</source>
         <translation>Seleziona l&apos;enex file di Evernote che vuoi importare:</translation>
     </message>
@@ -40,17 +40,22 @@
         <translation>Importa immagini</translation>
     </message>
     <message>
+        <location filename="../dialogs/evernoteimportdialog.ui" line="20"/>
+        <source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click &quot;Export notes…&quot; in the File menu.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/evernoteimportdialog.ui" line="83"/>
         <source>Metadata to import</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.ui" line="118"/>
+        <location filename="../dialogs/evernoteimportdialog.ui" line="123"/>
         <source>Evernote enex file</source>
         <translation>File enex di Evernote</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.ui" line="125"/>
+        <location filename="../dialogs/evernoteimportdialog.ui" line="130"/>
         <source>Select file and import notes</source>
         <translation type="unfinished"></translation>
     </message>
@@ -60,9 +65,8 @@
         <translation>%v di %m note importate</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.ui" line="20"/>
         <source>To get such an enex file you need to select one or multiple notes in your Evernotes desktop client and click &quot;Export notes...&quot; in the File menu.</source>
-        <translation>Per avere un file enex è necessario selezionare una o più note nell&apos;applicazione desktop di Evernote e fare clic su &quot;Esporta note...&quot; dal menù File.</translation>
+        <translation type="vanished">Per avere un file enex è necessario selezionare una o più note nell&apos;applicazione desktop di Evernote e fare clic su &quot;Esporta note...&quot; dal menù File.</translation>
     </message>
     <message>
         <location filename="../dialogs/evernoteimportdialog.ui" line="73"/>
@@ -865,9 +869,8 @@
         <translation>&amp;Rimuovi la nota attuale</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1260"/>
         <source>About &amp;QOwnNotes...</source>
-        <translation>Informazioni su &amp;QOwnNotes...</translation>
+        <translation type="vanished">Informazioni su &amp;QOwnNotes...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1272"/>
@@ -1094,6 +1097,11 @@
         <location filename="../mainwindow.ui" line="1154"/>
         <source>&amp;Scripting</source>
         <translation>&amp;Scripting</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="1260"/>
+        <source>About &amp;QOwnNotes…</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1354"/>
@@ -1945,6 +1953,11 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
         <translation>Disabilita colore</translation>
     </message>
     <message>
+        <location filename="../mainwindow.cpp" line="7582"/>
+        <source>&amp;Move tags to…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../mainwindow.cpp" line="7801"/>
         <source>Move to the root</source>
         <comment>to move a tag to the current tag in the tag context menu</comment>
@@ -1985,6 +1998,36 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
         <location filename="../mainwindow.cpp" line="8668"/>
         <source>Allows you to rename the filename of the note</source>
         <translation>Consente di rinominare il nome del file della nota</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8680"/>
+        <source>&amp;Move notes to…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8681"/>
+        <source>&amp;Copy notes to…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8710"/>
+        <source>Move notes to subfolder…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8714"/>
+        <source>Copy notes to subfolder…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8722"/>
+        <source>&amp;Tag selected notes with…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8744"/>
+        <source>&amp;Remove tag from selected notes…</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="8835"/>
@@ -2256,14 +2299,12 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8710"/>
         <source>Move notes to subfolder...</source>
-        <translation>Sposta note nella sotto-cartella...</translation>
+        <translation type="vanished">Sposta note nella sotto-cartella...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8714"/>
         <source>Copy notes to subfolder...</source>
-        <translation>Copia note nella sotto-cartella...</translation>
+        <translation type="vanished">Copia note nella sotto-cartella...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="8763"/>
@@ -2341,24 +2382,20 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
         <translation>&amp;OK</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8680"/>
         <source>&amp;Move notes to...</source>
-        <translation>&amp;Sposta note in...</translation>
+        <translation type="vanished">&amp;Sposta note in...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8681"/>
         <source>&amp;Copy notes to...</source>
-        <translation>&amp;Copia note in...</translation>
+        <translation type="vanished">&amp;Copia note in...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8722"/>
         <source>&amp;Tag selected notes with...</source>
-        <translation>Applica &amp;tag alle note selezionate con...</translation>
+        <translation type="vanished">Applica &amp;tag alle note selezionate con...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8744"/>
         <source>&amp;Remove tag from selected notes...</source>
-        <translation>&amp;Rimuovi tag dalle note selezionate...</translation>
+        <translation type="vanished">&amp;Rimuovi tag dalle note selezionate...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="8672"/>
@@ -2421,9 +2458,8 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
         <translation>&amp;Aggiungi tag</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7582"/>
         <source>&amp;Move tags to...</source>
-        <translation>&amp;Sposta tag in...</translation>
+        <translation type="vanished">&amp;Sposta tag in...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7617"/>
@@ -4270,6 +4306,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>Stile interfaccia</translation>
     </message>
     <message>
+        <location filename="../dialogs/settingsdialog.ui" line="2688"/>
+        <source>&amp;Add script…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/settingsdialog.ui" line="3215"/>
         <source>By default the headline will generated automatically</source>
         <translation>Come impostazione predefinita, il titolo verrà generato automaticamente</translation>
@@ -4680,9 +4721,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>Archivio:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2688"/>
         <source>&amp;Add script...</source>
-        <translation>&amp;Aggiungi script...</translation>
+        <translation type="vanished">&amp;Aggiungi script...</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="2838"/>
@@ -5562,6 +5602,11 @@ Le proprie note non verranno modificate!</translation>
         <translation>Salva</translation>
     </message>
     <message>
+        <location filename="../dialogs/tododialog.ui" line="222"/>
+        <source>Note…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/tododialog.cpp" line="100"/>
         <source>Save and insert into note</source>
         <translation>Salva e inserisci in nota</translation>
@@ -5572,9 +5617,8 @@ Le proprie note non verranno modificate!</translation>
         <translation>Rimuovi</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="222"/>
         <source>Note...</source>
-        <translation>Nota...</translation>
+        <translation type="vanished">Nota...</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="278"/>
@@ -5585,6 +5629,11 @@ Le proprie note non verranno modificate!</translation>
         <location filename="../dialogs/tododialog.ui" line="285"/>
         <source>Reload the todo list from server</source>
         <translation>Ricarica elenco dei compiti dal server</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.ui" line="288"/>
+        <source>Reload…</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="319"/>
@@ -5622,9 +5671,8 @@ Le proprie note non verranno modificate!</translation>
         <translation>Rimuovi il compito attuale</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="288"/>
         <source>Reload...</source>
-        <translation>Ricarica...</translation>
+        <translation type="vanished">Ricarica...</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="309"/>

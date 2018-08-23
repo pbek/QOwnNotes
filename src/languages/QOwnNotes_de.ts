@@ -30,7 +30,7 @@
         <translation type="vanished">Datei auswählen</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.ui" line="108"/>
+        <location filename="../dialogs/evernoteimportdialog.ui" line="113"/>
         <source>Please select the Evernote enex file you want to import:</source>
         <translation>Bitte wählen Sie die Evernote-Enex-Datei, die Sie importieren möchten:</translation>
     </message>
@@ -40,17 +40,22 @@
         <translation>Bilder importieren</translation>
     </message>
     <message>
+        <location filename="../dialogs/evernoteimportdialog.ui" line="20"/>
+        <source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click &quot;Export notes…&quot; in the File menu.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/evernoteimportdialog.ui" line="83"/>
         <source>Metadata to import</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.ui" line="118"/>
+        <location filename="../dialogs/evernoteimportdialog.ui" line="123"/>
         <source>Evernote enex file</source>
         <translation>Evernote-Enex-Datei</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.ui" line="125"/>
+        <location filename="../dialogs/evernoteimportdialog.ui" line="130"/>
         <source>Select file and import notes</source>
         <translation type="unfinished"></translation>
     </message>
@@ -60,9 +65,8 @@
         <translation>%v von %m Notiz(en) importiert</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.ui" line="20"/>
         <source>To get such an enex file you need to select one or multiple notes in your Evernotes desktop client and click &quot;Export notes...&quot; in the File menu.</source>
-        <translation>Um eine Enex-Datei zu generieren, wählen Sie eine oder mehrere Notizen in Ihrer Evernote-Anwendung aus und klicken Sie im Menü »Datei« auf »Notizen exportieren...«.</translation>
+        <translation type="vanished">Um eine Enex-Datei zu generieren, wählen Sie eine oder mehrere Notizen in Ihrer Evernote-Anwendung aus und klicken Sie im Menü »Datei« auf »Notizen exportieren...«.</translation>
     </message>
     <message>
         <location filename="../dialogs/evernoteimportdialog.ui" line="73"/>
@@ -865,9 +869,8 @@
         <translation>Aktuelle Notiz &amp;löschen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1260"/>
         <source>About &amp;QOwnNotes...</source>
-        <translation>Über &amp;QOwnNotes...</translation>
+        <translation type="vanished">Über &amp;QOwnNotes...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1272"/>
@@ -1094,6 +1097,11 @@
         <location filename="../mainwindow.ui" line="1154"/>
         <source>&amp;Scripting</source>
         <translation>&amp;Skripting</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="1260"/>
+        <source>About &amp;QOwnNotes…</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1354"/>
@@ -1946,6 +1954,11 @@ Falls Sie die Papierkorb-App auf Ihrem Nextcloud/ownCloud-Server aktiviert haben
         <translation>Farbe deaktivieren</translation>
     </message>
     <message>
+        <location filename="../mainwindow.cpp" line="7582"/>
+        <source>&amp;Move tags to…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../mainwindow.cpp" line="7801"/>
         <source>Move to the root</source>
         <comment>to move a tag to the current tag in the tag context menu</comment>
@@ -1986,6 +1999,36 @@ Falls Sie die Papierkorb-App auf Ihrem Nextcloud/ownCloud-Server aktiviert haben
         <location filename="../mainwindow.cpp" line="8668"/>
         <source>Allows you to rename the filename of the note</source>
         <translation>Ermöglicht das Umbenennen des Dateinamens der Notiz</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8680"/>
+        <source>&amp;Move notes to…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8681"/>
+        <source>&amp;Copy notes to…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8710"/>
+        <source>Move notes to subfolder…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8714"/>
+        <source>Copy notes to subfolder…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8722"/>
+        <source>&amp;Tag selected notes with…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8744"/>
+        <source>&amp;Remove tag from selected notes…</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="8835"/>
@@ -2257,14 +2300,12 @@ Falls Sie die Papierkorb-App auf Ihrem Nextcloud/ownCloud-Server aktiviert haben
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8710"/>
         <source>Move notes to subfolder...</source>
-        <translation>Notizen in Unterordner verschieben...</translation>
+        <translation type="vanished">Notizen in Unterordner verschieben...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8714"/>
         <source>Copy notes to subfolder...</source>
-        <translation>Notizen in Unterordner kopieren...</translation>
+        <translation type="vanished">Notizen in Unterordner kopieren...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="8763"/>
@@ -2342,24 +2383,20 @@ Falls Sie die Papierkorb-App auf Ihrem Nextcloud/ownCloud-Server aktiviert haben
         <translation>&amp;Ok</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8680"/>
         <source>&amp;Move notes to...</source>
-        <translation>&amp;Verschiebe Notizen nach...</translation>
+        <translation type="vanished">&amp;Verschiebe Notizen nach...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8681"/>
         <source>&amp;Copy notes to...</source>
-        <translation>&amp;Kopiere Notizen nach...</translation>
+        <translation type="vanished">&amp;Kopiere Notizen nach...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8722"/>
         <source>&amp;Tag selected notes with...</source>
-        <translation>Ausgewählte Notiz &amp;verschlagworten mit...</translation>
+        <translation type="vanished">Ausgewählte Notiz &amp;verschlagworten mit...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8744"/>
         <source>&amp;Remove tag from selected notes...</source>
-        <translation>Schlagwort aus ausgewählten Notizen &amp;entfernen...</translation>
+        <translation type="vanished">Schlagwort aus ausgewählten Notizen &amp;entfernen...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="8672"/>
@@ -2422,9 +2459,8 @@ Falls Sie die Papierkorb-App auf Ihrem Nextcloud/ownCloud-Server aktiviert haben
         <translation>Schlagwort &amp;hinzufügen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7582"/>
         <source>&amp;Move tags to...</source>
-        <translation>Schlagworte &amp;verschieben nach...</translation>
+        <translation type="vanished">Schlagworte &amp;verschieben nach...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7617"/>
@@ -4272,6 +4308,11 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
         <translation>Aussehen der Oberfläche</translation>
     </message>
     <message>
+        <location filename="../dialogs/settingsdialog.ui" line="2688"/>
+        <source>&amp;Add script…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/settingsdialog.ui" line="3215"/>
         <source>By default the headline will generated automatically</source>
         <translation>Standardmäßig wird die Überschrift wird automatisch erzeugt</translation>
@@ -4682,9 +4723,8 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
         <translation>Repository:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2688"/>
         <source>&amp;Add script...</source>
-        <translation>Skript &amp;hinzufügen...</translation>
+        <translation type="vanished">Skript &amp;hinzufügen...</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="2838"/>
@@ -5561,6 +5601,11 @@ Your notes will stay intact!</source>
         <translation>Speichern</translation>
     </message>
     <message>
+        <location filename="../dialogs/tododialog.ui" line="222"/>
+        <source>Note…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/tododialog.cpp" line="100"/>
         <source>Save and insert into note</source>
         <translation>Speichern und in Notiz einfügen</translation>
@@ -5571,9 +5616,8 @@ Your notes will stay intact!</source>
         <translation>Entfernen</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="222"/>
         <source>Note...</source>
-        <translation>Notiz...</translation>
+        <translation type="vanished">Notiz...</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="278"/>
@@ -5584,6 +5628,11 @@ Your notes will stay intact!</source>
         <location filename="../dialogs/tododialog.ui" line="285"/>
         <source>Reload the todo list from server</source>
         <translation>Aufgabenliste vom Server neu laden</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.ui" line="288"/>
+        <source>Reload…</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="319"/>
@@ -5621,9 +5670,8 @@ Your notes will stay intact!</source>
         <translation>Das aktuelle Aufgaben-Element entfernen</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="288"/>
         <source>Reload...</source>
-        <translation>Neu laden...</translation>
+        <translation type="vanished">Neu laden...</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="309"/>

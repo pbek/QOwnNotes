@@ -30,7 +30,7 @@
         <translation type="vanished">Pumili ng file</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.ui" line="108"/>
+        <location filename="../dialogs/evernoteimportdialog.ui" line="113"/>
         <source>Please select the Evernote enex file you want to import:</source>
         <translation>Pakipili ang Evernote enex na file na gusto mong i-import:</translation>
     </message>
@@ -40,17 +40,22 @@
         <translation>Mag-import ng mga larawan</translation>
     </message>
     <message>
+        <location filename="../dialogs/evernoteimportdialog.ui" line="20"/>
+        <source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click &quot;Export notes…&quot; in the File menu.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/evernoteimportdialog.ui" line="83"/>
         <source>Metadata to import</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.ui" line="118"/>
+        <location filename="../dialogs/evernoteimportdialog.ui" line="123"/>
         <source>Evernote enex file</source>
         <translation>Evernote enex file</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.ui" line="125"/>
+        <location filename="../dialogs/evernoteimportdialog.ui" line="130"/>
         <source>Select file and import notes</source>
         <translation type="unfinished"></translation>
     </message>
@@ -60,9 +65,8 @@
         <translation>%v ng %m note(s) sulat inangkat</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.ui" line="20"/>
         <source>To get such an enex file you need to select one or multiple notes in your Evernotes desktop client and click &quot;Export notes...&quot; in the File menu.</source>
-        <translation>Upang makakuha ng tulad ng isang enex file kailangan mong pumili ng isa o maraming mga tala sa iyong Evernotes desktop client at i-click ang &quot;I-export ang mga tala...&quot; sa menu ng File.</translation>
+        <translation type="vanished">Upang makakuha ng tulad ng isang enex file kailangan mong pumili ng isa o maraming mga tala sa iyong Evernotes desktop client at i-click ang &quot;I-export ang mga tala...&quot; sa menu ng File.</translation>
     </message>
     <message>
         <location filename="../dialogs/evernoteimportdialog.ui" line="73"/>
@@ -865,9 +869,8 @@
         <translation>&amp; Alisin ang kasalukuyang tala</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1260"/>
         <source>About &amp;QOwnNotes...</source>
-        <translation>Tungkol sa &amp; QOwnNotes...</translation>
+        <translation type="vanished">Tungkol sa &amp; QOwnNotes...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1272"/>
@@ -1094,6 +1097,11 @@
         <location filename="../mainwindow.ui" line="1154"/>
         <source>&amp;Scripting</source>
         <translation>&amp; Pag-Script</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="1260"/>
+        <source>About &amp;QOwnNotes…</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1354"/>
@@ -1941,6 +1949,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>Huwag paganahin ang kulay</translation>
     </message>
     <message>
+        <location filename="../mainwindow.cpp" line="7582"/>
+        <source>&amp;Move tags to…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../mainwindow.cpp" line="7801"/>
         <source>Move to the root</source>
         <comment>to move a tag to the current tag in the tag context menu</comment>
@@ -1981,6 +1994,36 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <location filename="../mainwindow.cpp" line="8668"/>
         <source>Allows you to rename the filename of the note</source>
         <translation>Nagbibigay-daan sa iyo upang palitan ang pangalan ng filename ng tala</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8680"/>
+        <source>&amp;Move notes to…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8681"/>
+        <source>&amp;Copy notes to…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8710"/>
+        <source>Move notes to subfolder…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8714"/>
+        <source>Copy notes to subfolder…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8722"/>
+        <source>&amp;Tag selected notes with…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8744"/>
+        <source>&amp;Remove tag from selected notes…</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="8835"/>
@@ -2252,14 +2295,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8710"/>
         <source>Move notes to subfolder...</source>
-        <translation>Ilipat itong notes sa subfolder...</translation>
+        <translation type="vanished">Ilipat itong notes sa subfolder...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8714"/>
         <source>Copy notes to subfolder...</source>
-        <translation>Copyahin ang notes sa subfolder...</translation>
+        <translation type="vanished">Copyahin ang notes sa subfolder...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="8763"/>
@@ -2337,24 +2378,20 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>&amp;ok</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8680"/>
         <source>&amp;Move notes to...</source>
-        <translation>&amp;ilipat ang mga tala...</translation>
+        <translation type="vanished">&amp;ilipat ang mga tala...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8681"/>
         <source>&amp;Copy notes to...</source>
-        <translation>&amp;Copyahin itong notes...</translation>
+        <translation type="vanished">&amp;Copyahin itong notes...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8722"/>
         <source>&amp;Tag selected notes with...</source>
-        <translation>&amp;Tag ang may napiling tala...</translation>
+        <translation type="vanished">&amp;Tag ang may napiling tala...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8744"/>
         <source>&amp;Remove tag from selected notes...</source>
-        <translation>&amp;Tanggalin ang tag sa napiling tala...</translation>
+        <translation type="vanished">&amp;Tanggalin ang tag sa napiling tala...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="8672"/>
@@ -2417,9 +2454,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>&amp;Add tag</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7582"/>
         <source>&amp;Move tags to...</source>
-        <translation>&amp;Moves tags to...</translation>
+        <translation type="vanished">&amp;Moves tags to...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7617"/>
@@ -4265,6 +4301,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>Style ng interface</translation>
     </message>
     <message>
+        <location filename="../dialogs/settingsdialog.ui" line="2688"/>
+        <source>&amp;Add script…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/settingsdialog.ui" line="3215"/>
         <source>By default the headline will generated automatically</source>
         <translation>Sa pagitan ng default ang headline ay bubuo automatically</translation>
@@ -4675,9 +4716,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>Imbakan:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2688"/>
         <source>&amp;Add script...</source>
-        <translation>&amp;magdagdag sa script...</translation>
+        <translation type="vanished">&amp;magdagdag sa script...</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="2838"/>
@@ -5549,6 +5589,11 @@ ang yong mga tala ay manatili ng buo!</translation>
         <translation>I-save</translation>
     </message>
     <message>
+        <location filename="../dialogs/tododialog.ui" line="222"/>
+        <source>Note…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/tododialog.cpp" line="100"/>
         <source>Save and insert into note</source>
         <translation>I-save at sumingit sa tala</translation>
@@ -5559,9 +5604,8 @@ ang yong mga tala ay manatili ng buo!</translation>
         <translation>Alisin</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="222"/>
         <source>Note...</source>
-        <translation>Tandaan...</translation>
+        <translation type="vanished">Tandaan...</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="278"/>
@@ -5572,6 +5616,11 @@ ang yong mga tala ay manatili ng buo!</translation>
         <location filename="../dialogs/tododialog.ui" line="285"/>
         <source>Reload the todo list from server</source>
         <translation>I-reload ang listahan ng todo mula sa server</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.ui" line="288"/>
+        <source>Reload…</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="319"/>
@@ -5609,9 +5658,8 @@ ang yong mga tala ay manatili ng buo!</translation>
         <translation>Alisin ang kasalukuyang todo item</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="288"/>
         <source>Reload...</source>
-        <translation>I-reload...</translation>
+        <translation type="vanished">I-reload...</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="309"/>

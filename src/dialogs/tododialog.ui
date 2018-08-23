@@ -219,7 +219,7 @@
            <item>
             <widget class="QPushButton" name="noteButton">
              <property name="text">
-              <string>Note...</string>
+              <string>Note…</string>
              </property>
              <property name="icon">
               <iconset resource="../breeze-qownnotes.qrc">
@@ -285,7 +285,7 @@
               <string>Reload the todo list from server</string>
              </property>
              <property name="text">
-              <string>Reload...</string>
+              <string>Reload…</string>
              </property>
              <property name="icon">
               <iconset theme="view-refresh" resource="../breeze-qownnotes.qrc">

@@ -30,7 +30,7 @@
         <translation type="vanished">फ़ाइल का चयन करें</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.ui" line="108"/>
+        <location filename="../dialogs/evernoteimportdialog.ui" line="113"/>
         <source>Please select the Evernote enex file you want to import:</source>
         <translation>कृपया ईवरोट्स एएनएक्स फ़ाइल का चयन करें जिसे आप आयात करना चाहते हैं:</translation>
     </message>
@@ -40,17 +40,22 @@
         <translation>आयात छवियां</translation>
     </message>
     <message>
+        <location filename="../dialogs/evernoteimportdialog.ui" line="20"/>
+        <source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click &quot;Export notes…&quot; in the File menu.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/evernoteimportdialog.ui" line="83"/>
         <source>Metadata to import</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.ui" line="118"/>
+        <location filename="../dialogs/evernoteimportdialog.ui" line="123"/>
         <source>Evernote enex file</source>
         <translation>ईवरोट् एएनएक्स फ़ाइल</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.ui" line="125"/>
+        <location filename="../dialogs/evernoteimportdialog.ui" line="130"/>
         <source>Select file and import notes</source>
         <translation type="unfinished"></translation>
     </message>
@@ -60,9 +65,8 @@
         <translation>%v of %m नोट (ओं) आयातित</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.ui" line="20"/>
         <source>To get such an enex file you need to select one or multiple notes in your Evernotes desktop client and click &quot;Export notes...&quot; in the File menu.</source>
-        <translation>ऐसी एएनएक्स फाइल प्राप्त करने के लिए आपको अपने ईवरोट्स डेस्कटॉप क्लाइंट में एक या एक से अधिक नोट्स को चुनना होगा और फ़ाइल मेनू में &quot;नोट्स निर्यात करें...&quot; पर क्लिक करें।.</translation>
+        <translation type="vanished">ऐसी एएनएक्स फाइल प्राप्त करने के लिए आपको अपने ईवरोट्स डेस्कटॉप क्लाइंट में एक या एक से अधिक नोट्स को चुनना होगा और फ़ाइल मेनू में &quot;नोट्स निर्यात करें...&quot; पर क्लिक करें।.</translation>
     </message>
     <message>
         <location filename="../dialogs/evernoteimportdialog.ui" line="73"/>
@@ -865,9 +869,8 @@
         <translation>&amp;निकालें वर्तमान नोट</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1260"/>
         <source>About &amp;QOwnNotes...</source>
-        <translation>बारे में &amp;क्यूंनोट</translation>
+        <translation type="vanished">बारे में &amp;क्यूंनोट</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1272"/>
@@ -1094,6 +1097,11 @@
         <location filename="../mainwindow.ui" line="1154"/>
         <source>&amp;Scripting</source>
         <translation>&amp;पटकथा</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="1260"/>
+        <source>About &amp;QOwnNotes…</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1354"/>
@@ -1946,6 +1954,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>रंग अक्षम करें</translation>
     </message>
     <message>
+        <location filename="../mainwindow.cpp" line="7582"/>
+        <source>&amp;Move tags to…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../mainwindow.cpp" line="7801"/>
         <source>Move to the root</source>
         <comment>to move a tag to the current tag in the tag context menu</comment>
@@ -1986,6 +1999,36 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <location filename="../mainwindow.cpp" line="8668"/>
         <source>Allows you to rename the filename of the note</source>
         <translation>आपको नोट के फ़ाइल नाम का नाम बदलने की अनुमति देता है</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8680"/>
+        <source>&amp;Move notes to…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8681"/>
+        <source>&amp;Copy notes to…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8710"/>
+        <source>Move notes to subfolder…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8714"/>
+        <source>Copy notes to subfolder…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8722"/>
+        <source>&amp;Tag selected notes with…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="8744"/>
+        <source>&amp;Remove tag from selected notes…</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="8835"/>
@@ -2257,14 +2300,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8710"/>
         <source>Move notes to subfolder...</source>
-        <translation>सबफ़ोल्डर में नोट्स को ले जाएं...</translation>
+        <translation type="vanished">सबफ़ोल्डर में नोट्स को ले जाएं...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8714"/>
         <source>Copy notes to subfolder...</source>
-        <translation>सबफ़ोल्डर में कॉपी कॉपी करें...</translation>
+        <translation type="vanished">सबफ़ोल्डर में कॉपी कॉपी करें...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="8763"/>
@@ -2342,24 +2383,20 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>&amp;ठीक</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8680"/>
         <source>&amp;Move notes to...</source>
-        <translation>&amp;नोट्स को ले जाएं...</translation>
+        <translation type="vanished">&amp;नोट्स को ले जाएं...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8681"/>
         <source>&amp;Copy notes to...</source>
-        <translation>&amp; कॉपी नोट(स) को तरफ़...</translation>
+        <translation type="vanished">&amp; कॉपी नोट(स) को तरफ़...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8722"/>
         <source>&amp;Tag selected notes with...</source>
-        <translation>&amp;टैग के साथ चयनित नोट्स को...</translation>
+        <translation type="vanished">&amp;टैग के साथ चयनित नोट्स को...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8744"/>
         <source>&amp;Remove tag from selected notes...</source>
-        <translation>&amp;चयनित नोट्स से टैग निकालें..</translation>
+        <translation type="vanished">&amp;चयनित नोट्स से टैग निकालें..</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="8672"/>
@@ -2422,9 +2459,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>&amp;जोड़ो टैग</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7582"/>
         <source>&amp;Move tags to...</source>
-        <translation>&amp;टैग ले जाएं...</translation>
+        <translation type="vanished">&amp;टैग ले जाएं...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7617"/>
@@ -4277,6 +4313,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>इंटरफ़ेस शैली</translation>
     </message>
     <message>
+        <location filename="../dialogs/settingsdialog.ui" line="2688"/>
+        <source>&amp;Add script…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/settingsdialog.ui" line="3215"/>
         <source>By default the headline will generated automatically</source>
         <translation>डिफ़ॉल्ट रूप से शीर्षक स्वचालित रूप से उत्पन्न होगा</translation>
@@ -4687,9 +4728,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>रिपॉजिटरी:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2688"/>
         <source>&amp;Add script...</source>
-        <translation>&amp;स्क्रिप्ट जोड़ें...</translation>
+        <translation type="vanished">&amp;स्क्रिप्ट जोड़ें...</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="2838"/>
@@ -5563,6 +5603,11 @@ Your notes will stay intact!</source>
         <translation>सहेजें</translation>
     </message>
     <message>
+        <location filename="../dialogs/tododialog.ui" line="222"/>
+        <source>Note…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/tododialog.cpp" line="100"/>
         <source>Save and insert into note</source>
         <translation>सहेजें और नोट में डालें</translation>
@@ -5573,9 +5618,8 @@ Your notes will stay intact!</source>
         <translation>हटाना</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="222"/>
         <source>Note...</source>
-        <translation>नोट...</translation>
+        <translation type="vanished">नोट...</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="278"/>
@@ -5586,6 +5630,11 @@ Your notes will stay intact!</source>
         <location filename="../dialogs/tododialog.ui" line="285"/>
         <source>Reload the todo list from server</source>
         <translation>सर्वर से कार्यसूची को पुन: लोड करें</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.ui" line="288"/>
+        <source>Reload…</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="319"/>
@@ -5623,9 +5672,8 @@ Your notes will stay intact!</source>
         <translation>वर्तमान कार्यसूची वस्तु को निकालें</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="288"/>
         <source>Reload...</source>
-        <translation type="unfinished">Reload...</translation>
+        <translation type="obsolete">Reload...</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="309"/>

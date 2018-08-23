@@ -63,7 +63,7 @@
            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;select local file to link to&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="text">
-           <string notr="true">...</string>
+           <string notr="true">…</string>
           </property>
          </widget>
         </item>

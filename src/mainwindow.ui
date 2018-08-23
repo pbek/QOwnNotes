@@ -1257,7 +1257,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/help-about.svg</normaloff>:/icons/breeze-qownnotes/16x16/help-about.svg</iconset>
    </property>
    <property name="text">
-    <string>About &amp;QOwnNotes...</string>
+    <string>About &amp;QOwnNotes…</string>
    </property>
    <property name="menuRole">
     <enum>QAction::AboutRole</enum>
