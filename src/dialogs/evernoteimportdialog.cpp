@@ -64,21 +64,6 @@ void EvernoteImportDialog::on_fileButton_clicked() {
 
         if (!fileName.isEmpty()) {
             ui->fileLineEdit->setText(fileName);
-
-            QFile file(fileName);
-
-            if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-                qCritical() << file.errorString() <<
-                                          " (path: " << fileName << ")";
-                return;
-            }
-
-            QString data = file.readAll();
-
-            QCoreApplication::processEvents();
-            initNoteCount(data);
-            QCoreApplication::processEvents();
-            importNotes(data);
         }
     }
 }
@@ -752,4 +737,33 @@ QString EvernoteImportDialog::generateMetaDataMarkdown(QXmlQuery query) {
     }
 
     return resultText;
+}
+
+/**
+ * Reads the enex files and imports the notes
+ */
+void EvernoteImportDialog::on_importButton_clicked() {
+    auto fileName = ui->fileLineEdit->text();
+
+    if (fileName.isEmpty()) {
+        return;
+    }
+
+    QFile file(fileName);
+
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        qCritical() << file.errorString() << " (path: " << fileName << ")";
+        return;
+    }
+
+    ui->importButton->setEnabled(false);
+
+    QString data = file.readAll();
+
+    QCoreApplication::processEvents();
+    initNoteCount(data);
+    QCoreApplication::processEvents();
+    importNotes(data);
+
+    ui->importButton->setEnabled(true);
 }

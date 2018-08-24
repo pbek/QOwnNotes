@@ -29,6 +29,8 @@ public:
 private slots:
     void on_fileButton_clicked();
 
+    void on_importButton_clicked();
+
 private:
     Ui::EvernoteImportDialog *ui;
     int _importCount;

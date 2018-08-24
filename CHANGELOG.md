@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 18.08.7
+- improved the user interface of the **Evernote import** (for [#998](https://github.com/pbek/QOwnNotes/issues/998))
+
 ## 18.08.6
 - when importing from **Evernote** you can now also **import metadata** from 
   your Evernote notes (for [#998](https://github.com/pbek/QOwnNotes/issues/998))
