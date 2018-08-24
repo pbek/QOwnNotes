@@ -243,6 +243,10 @@ public:
 
     QStringList getAttachmentsFileList();
 
+    QString getNotePreviewText();
+
+    static QString generateMultipleNotesPreviewText(QList<Note> notes);
+
 protected:
     int id;
     QString name;

@@ -20,7 +20,6 @@ public:
 private:
     Ui::NoteTreeWidgetItem *ui;
 
-    QString getNotePreviewText(Note &note) const;
 };
 
 #endif // NOTETREEWIDGETITEM_H

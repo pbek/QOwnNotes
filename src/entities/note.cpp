@@ -2002,6 +2002,22 @@ QString Note::generateTextForLink(QString text) {
             "[^\\d\\w]", QRegularExpression::CaseInsensitiveOption |
                     QRegularExpression::UseUnicodePropertiesOption);
     text.replace(re, "_");
+
+    // if there are only numbers we also want the "@" added, because
+    // otherwise the text will get interpreted as ip address
+    QRegularExpressionMatch match =
+            QRegularExpression(R"(^(\d+)$)").match(text);
+    bool onlyNumbers = match.hasMatch();
+
+    // if the hostname of the url will get to long QUrl will not
+    // recognize it because of STD 3 rules, so we will use the
+    // username for the note name instead of the hostname
+    // the limit is 63 characters, but special characters use up
+    // far more space
+    if (text.length() > 46 || onlyNumbers) {
+        text += "@";
+    }
+
     return text;
 }
 
@@ -2321,6 +2337,7 @@ const QString Note::getNoteURL(const QString &baseName) {
  */
 const QString Note::getNoteURLFromFileName(const QString &fileName) {
     QFileInfo info(fileName);
+    // TODO: baseName() will cut names like "Note 2018-07-26T18.24.22.md" down to "Note 2018-07-26T18"!
     return Note::getNoteURL(info.baseName());
 }
 
@@ -2635,6 +2652,85 @@ Note Note::fetchByUrlString(QString urlString) {
     }
 
     return Note();
+}
+
+/**
+ * Generates the preview text of the note
+ *
+ * @return
+ */
+QString Note::getNotePreviewText() {
+    QString noteText = getNoteText();
+
+    // remove headlines
+    noteText.remove(QRegularExpression("^.+\n=+\n+"));
+    noteText.remove(QRegularExpression("^# .+\n+"));
+
+    // only take the first three lines
+    const QStringList &lineList = noteText.split("\n").mid(0, 3);
+    noteText = lineList.join("\n");
+
+    return noteText;
+}
+
+/**
+ * Generate the preview text if multiple notes are selected
+ *
+ * @param notes
+ * @return
+ */
+QString Note::generateMultipleNotesPreviewText(QList<Note> notes) {
+    QSettings settings;
+    bool darkModeColors = settings.value("darkModeColors").toBool();
+    QString oddBackgroundColor = darkModeColors ? "#444444" : "#f1f1f1";
+    QString linkColor = darkModeColors ? "#eeeeee" : "#222222";
+
+    QString previewHtml =
+        "<html><head><style>"
+            "table, body {width: 100%;}"
+            "table td {padding: 10px}"
+            "table td.odd {background-color: " + oddBackgroundColor + ";}"
+            "p {margin: 0.5em 0 0 0;}"
+            "small {font-size: 0.8em;}"
+            "h2 {margin-bottom: 0.5em;}"
+            "h2 a {text-decoration: none; color: " + linkColor + "}"
+        "</style></head>"
+        "<body>"
+        "   <table>";
+
+    int notesCount = notes.count();
+    int displayedNotesCount = notesCount > 40 ? 40 : notesCount;
+
+    bool isOdd = false;
+    for (int i = 0; i < displayedNotesCount; i++) {
+        Note note = notes[i];
+        QString oddStyle = isOdd ? " class='odd'" : "";
+        QDateTime modified = note.getFileLastModified();
+        QString noteText = note.getNotePreviewText();
+        QString noteLink = getNoteURL(note.getName());
+        noteLink = Utils::Misc::appendIfDoesNotEndWith(noteLink, "@");
+
+        previewHtml +=
+            "<tr><td" + oddStyle + ">"
+            "<h2><a href='" + noteLink + "'>" + note.getName() + "</a></h2>"
+            "<small>" + modified.toString() + "</small>"
+            "<p>" + noteText + "</p>"
+            "</td></tr>";
+        isOdd = !isOdd;
+    }
+
+    if (displayedNotesCount < notesCount) {
+        previewHtml += "<tr><td>" + QObject::tr("…and %n more note(s)", "",
+                notesCount - displayedNotesCount) +
+                "</td></tr>";
+    }
+
+    previewHtml +=
+        "   </table>"
+        "</body>"
+        "</html>";
+
+    return previewHtml;
 }
 
 /**

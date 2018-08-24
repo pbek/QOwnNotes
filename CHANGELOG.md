@@ -2,6 +2,11 @@
 
 ## 18.08.7
 - improved the user interface of the **Evernote import** (for [#998](https://github.com/pbek/QOwnNotes/issues/998))
+- if you now **select multiple notes** a **small preview** of those notes will be 
+  viewed in the preview panel (for [#949](https://github.com/pbek/QOwnNotes/issues/949))
+    - you can click on the headlines of those notes to jump to the note
+    - only the first 40 selected notes will be shown to not decrease the 
+      performance when selecting a lot of notes
 
 ## 18.08.6
 - when importing from **Evernote** you can now also **import metadata** from 

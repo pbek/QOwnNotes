@@ -616,6 +616,7 @@ private:
     QString _notePreviewHash;
     int _gitCommitInterval;
     bool _noteEditIsCentralWidget;
+    bool _lastNotSelectionWasMultiple;
 
     void createSystemTrayIcon();
 
