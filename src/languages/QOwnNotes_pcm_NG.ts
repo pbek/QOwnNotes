@@ -26,42 +26,47 @@
       <translation>Evernote Import</translation>
     </message>
     <message>
-      <location filename="../dialogs/evernoteimportdialog.ui" line="20"/>
+      <location filename="../dialogs/evernoteimportdialog.ui" line="121"/>
       <source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</source>
       <translation type="unfinished">To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</translation>
     </message>
     <message>
-      <location filename="../dialogs/evernoteimportdialog.ui" line="113"/>
+      <location filename="../dialogs/evernoteimportdialog.ui" line="74"/>
       <source>Please select the Evernote enex file you want to import:</source>
       <translation>Abeg make you choose de Evernote enex file way you won import:</translation>
     </message>
     <message>
-      <location filename="../dialogs/evernoteimportdialog.ui" line="40"/>
+      <location filename="../dialogs/evernoteimportdialog.ui" line="30"/>
+      <source>Select file</source>
+      <translation type="unfinished">Select file</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/evernoteimportdialog.ui" line="54"/>
       <source>Import images</source>
       <translation>Import Images</translation>
     </message>
     <message>
-      <location filename="../dialogs/evernoteimportdialog.ui" line="83"/>
+      <location filename="../dialogs/evernoteimportdialog.ui" line="91"/>
       <source>Metadata to import</source>
       <translation type="unfinished">Metadata to import</translation>
     </message>
     <message>
-      <location filename="../dialogs/evernoteimportdialog.ui" line="123"/>
+      <location filename="../dialogs/evernoteimportdialog.ui" line="165"/>
+      <source>Import notes</source>
+      <translation type="unfinished">Import notes</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/evernoteimportdialog.ui" line="23"/>
       <source>Evernote enex file</source>
       <translation>Evernote enex file</translation>
     </message>
     <message>
-      <location filename="../dialogs/evernoteimportdialog.ui" line="130"/>
-      <source>Select file and import notes</source>
-      <translation type="unfinished">Select file and import notes</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/evernoteimportdialog.ui" line="33"/>
+      <location filename="../dialogs/evernoteimportdialog.ui" line="67"/>
       <source>%v of %m note(s) imported</source>
       <translation>%v of %m note(s) way don import</translation>
     </message>
     <message>
-      <location filename="../dialogs/evernoteimportdialog.ui" line="73"/>
+      <location filename="../dialogs/evernoteimportdialog.ui" line="81"/>
       <source>Import attachments</source>
       <translation>Import attachments</translation>
     </message>
@@ -76,72 +81,72 @@
       <translation>Choose Evernote enex way go import</translation>
     </message>
     <message>
-      <location filename="../dialogs/evernoteimportdialog.cpp" line="654"/>
+      <location filename="../dialogs/evernoteimportdialog.cpp" line="639"/>
       <source>Basic attributes</source>
       <translation type="unfinished">Basic attributes</translation>
     </message>
     <message>
-      <location filename="../dialogs/evernoteimportdialog.cpp" line="655"/>
+      <location filename="../dialogs/evernoteimportdialog.cpp" line="640"/>
       <source>Created date</source>
       <translation type="unfinished">Created date</translation>
     </message>
     <message>
-      <location filename="../dialogs/evernoteimportdialog.cpp" line="657"/>
+      <location filename="../dialogs/evernoteimportdialog.cpp" line="642"/>
       <source>Updated date</source>
       <translation type="unfinished">Updated date</translation>
     </message>
     <message>
-      <location filename="../dialogs/evernoteimportdialog.cpp" line="660"/>
+      <location filename="../dialogs/evernoteimportdialog.cpp" line="645"/>
       <source>Note attributes</source>
       <translation type="unfinished">Note attributes</translation>
     </message>
     <message>
-      <location filename="../dialogs/evernoteimportdialog.cpp" line="661"/>
+      <location filename="../dialogs/evernoteimportdialog.cpp" line="646"/>
       <source>Subject date</source>
       <translation type="unfinished">Subject date</translation>
     </message>
     <message>
-      <location filename="../dialogs/evernoteimportdialog.cpp" line="663"/>
+      <location filename="../dialogs/evernoteimportdialog.cpp" line="648"/>
       <source>Latitude</source>
       <translation type="unfinished">Latitude</translation>
     </message>
     <message>
-      <location filename="../dialogs/evernoteimportdialog.cpp" line="665"/>
+      <location filename="../dialogs/evernoteimportdialog.cpp" line="650"/>
       <source>Longitude</source>
       <translation type="unfinished">Longitude</translation>
     </message>
     <message>
-      <location filename="../dialogs/evernoteimportdialog.cpp" line="667"/>
+      <location filename="../dialogs/evernoteimportdialog.cpp" line="652"/>
       <source>Altitude</source>
       <translation type="unfinished">Altitude</translation>
     </message>
     <message>
-      <location filename="../dialogs/evernoteimportdialog.cpp" line="669"/>
+      <location filename="../dialogs/evernoteimportdialog.cpp" line="654"/>
       <source>Author</source>
       <translation type="unfinished">Author</translation>
     </message>
     <message>
-      <location filename="../dialogs/evernoteimportdialog.cpp" line="671"/>
+      <location filename="../dialogs/evernoteimportdialog.cpp" line="656"/>
       <source>Source</source>
       <translation type="unfinished">Source</translation>
     </message>
     <message>
-      <location filename="../dialogs/evernoteimportdialog.cpp" line="673"/>
+      <location filename="../dialogs/evernoteimportdialog.cpp" line="658"/>
       <source>Source url</source>
       <translation type="unfinished">Source url</translation>
     </message>
     <message>
-      <location filename="../dialogs/evernoteimportdialog.cpp" line="675"/>
+      <location filename="../dialogs/evernoteimportdialog.cpp" line="660"/>
       <source>Source application</source>
       <translation type="unfinished">Source application</translation>
     </message>
     <message>
-      <location filename="../dialogs/evernoteimportdialog.cpp" line="749"/>
+      <location filename="../dialogs/evernoteimportdialog.cpp" line="734"/>
       <source>Attribute</source>
       <translation type="unfinished">Attribute</translation>
     </message>
     <message>
-      <location filename="../dialogs/evernoteimportdialog.cpp" line="749"/>
+      <location filename="../dialogs/evernoteimportdialog.cpp" line="734"/>
       <source>Value</source>
       <translation type="unfinished">Value</translation>
     </message>

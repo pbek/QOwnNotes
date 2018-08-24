@@ -7,6 +7,8 @@
     - you can click on the headlines of those notes to jump to the note
     - only the first 40 selected notes will be shown to not decrease the 
       performance when selecting a lot of notes
+- added more Italian, Indonesian, German, Hungarian and Dutch translation (thank
+  you mlocati, zmni, kuik, rakekniven and Fabijenna)
 
 ## 18.08.6
 - when importing from **Evernote** you can now also **import metadata** from 
