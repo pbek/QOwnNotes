@@ -7395,6 +7395,7 @@ void MainWindow::reloadCurrentNoteTags() {
 
         ui->notesSelectedLabel->setText(notesSelectedText);
 
+        // overwrite the note preview with a preview of the selected notes
         QString previewHtml = Note::generateMultipleNotesPreviewText(notes);
         ui->noteTextView->setText(previewHtml);
     }
