@@ -28,7 +28,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="121"/>
       <source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</source>
-      <translation type="unfinished">To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</translation>
+      <translation>欲取得 enex 檔您需要在您的 Evernotes 桌面版中選擇至少一則筆記，並於檔案選單中選擇「匯出筆記」。</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="74"/>
@@ -38,7 +38,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="30"/>
       <source>Select file</source>
-      <translation type="unfinished">Select file</translation>
+      <translation>選擇檔案</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="54"/>
@@ -48,12 +48,12 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="91"/>
       <source>Metadata to import</source>
-      <translation type="unfinished">Metadata to import</translation>
+      <translation>匯入後設資料</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="165"/>
       <source>Import notes</source>
-      <translation type="unfinished">Import notes</translation>
+      <translation>匯入筆記</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="23"/>
@@ -83,72 +83,72 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="639"/>
       <source>Basic attributes</source>
-      <translation type="unfinished">Basic attributes</translation>
+      <translation>基本屬性</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="640"/>
       <source>Created date</source>
-      <translation type="unfinished">Created date</translation>
+      <translation>建立日期</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="642"/>
       <source>Updated date</source>
-      <translation type="unfinished">Updated date</translation>
+      <translation>更新日期</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="645"/>
       <source>Note attributes</source>
-      <translation type="unfinished">Note attributes</translation>
+      <translation>筆記屬性</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="646"/>
       <source>Subject date</source>
-      <translation type="unfinished">Subject date</translation>
+      <translation>主題日期</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="648"/>
       <source>Latitude</source>
-      <translation type="unfinished">Latitude</translation>
+      <translation>緯度</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="650"/>
       <source>Longitude</source>
-      <translation type="unfinished">Longitude</translation>
+      <translation>經度</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="652"/>
       <source>Altitude</source>
-      <translation type="unfinished">Altitude</translation>
+      <translation>高度</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="654"/>
       <source>Author</source>
-      <translation type="unfinished">Author</translation>
+      <translation>作者</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="656"/>
       <source>Source</source>
-      <translation type="unfinished">Source</translation>
+      <translation>來源</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="658"/>
       <source>Source url</source>
-      <translation type="unfinished">Source url</translation>
+      <translation>來源網址</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="660"/>
       <source>Source application</source>
-      <translation type="unfinished">Source application</translation>
+      <translation>來源應用程式</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="734"/>
       <source>Attribute</source>
-      <translation type="unfinished">Attribute</translation>
+      <translation>屬性</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="734"/>
       <source>Value</source>
-      <translation type="unfinished">Value</translation>
+      <translation>值</translation>
     </message>
   </context>
   <context>
@@ -1081,7 +1081,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1260"/>
       <source>About &amp;QOwnNotes…</source>
-      <translation type="unfinished">About &amp;QOwnNotes…</translation>
+      <translation>關於 &amp;QOwnNotes...</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1354"/>
@@ -1497,7 +1497,7 @@
     <message>
       <location filename="../mainwindow.ui" line="489"/>
       <source>Note operations…</source>
-      <translation type="unfinished">Note operations…</translation>
+      <translation>筆記操作…</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1505"/>
@@ -1924,7 +1924,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="7582"/>
       <source>&amp;Move tags to…</source>
-      <translation type="unfinished">&amp;Move tags to…</translation>
+      <translation>移動標籤至…(&amp;M)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7801"/>
@@ -1971,32 +1971,32 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="8680"/>
       <source>&amp;Move notes to…</source>
-      <translation type="unfinished">&amp;Move notes to…</translation>
+      <translation>移動筆記至… (&amp;M)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8681"/>
       <source>&amp;Copy notes to…</source>
-      <translation type="unfinished">&amp;Copy notes to…</translation>
+      <translation>複製筆記至…(&amp;C)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8710"/>
       <source>Move notes to subfolder…</source>
-      <translation type="unfinished">Move notes to subfolder…</translation>
+      <translation>移動筆記至子資料夾…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8714"/>
       <source>Copy notes to subfolder…</source>
-      <translation type="unfinished">Copy notes to subfolder…</translation>
+      <translation>複製筆記至子資料夾…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8722"/>
       <source>&amp;Tag selected notes with…</source>
-      <translation type="unfinished">&amp;Tag selected notes with…</translation>
+      <translation>標記選取的筆記為… (&amp;T)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8744"/>
       <source>&amp;Remove tag from selected notes…</source>
-      <translation type="unfinished">&amp;Remove tag from selected notes…</translation>
+      <translation>從選取筆記移除標籤…(&amp;R)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8835"/>
@@ -4238,7 +4238,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2688"/>
       <source>&amp;Add script…</source>
-      <translation type="unfinished">&amp;Add script…</translation>
+      <translation>加入腳本(&amp;A)…</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3215"/>
@@ -5529,7 +5529,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tododialog.ui" line="222"/>
       <source>Note…</source>
-      <translation type="unfinished">Note…</translation>
+      <translation>筆記…</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="100"/>
@@ -5554,7 +5554,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tododialog.ui" line="288"/>
       <source>Reload…</source>
-      <translation type="unfinished">Reload…</translation>
+      <translation>重新載入…</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="319"/>

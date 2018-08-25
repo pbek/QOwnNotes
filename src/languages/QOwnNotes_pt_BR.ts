@@ -28,7 +28,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="121"/>
       <source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</source>
-      <translation type="unfinished">To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</translation>
+      <translation>Para obter um arquivo enex você precisa selecionar uma ou várias notas no Evernotes e clique em "Exportar notas..." no menu arquivo.</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="74"/>
@@ -38,7 +38,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="30"/>
       <source>Select file</source>
-      <translation type="unfinished">Select file</translation>
+      <translation>Selecionar Arquivo</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="54"/>
@@ -48,12 +48,12 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="91"/>
       <source>Metadata to import</source>
-      <translation type="unfinished">Metadata to import</translation>
+      <translation>Metadados para importar</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="165"/>
       <source>Import notes</source>
-      <translation type="unfinished">Import notes</translation>
+      <translation>Importar notas</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="23"/>
@@ -83,72 +83,72 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="639"/>
       <source>Basic attributes</source>
-      <translation type="unfinished">Basic attributes</translation>
+      <translation>Atributos básicos</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="640"/>
       <source>Created date</source>
-      <translation type="unfinished">Created date</translation>
+      <translation>Data de criação</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="642"/>
       <source>Updated date</source>
-      <translation type="unfinished">Updated date</translation>
+      <translation>Data de atualização</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="645"/>
       <source>Note attributes</source>
-      <translation type="unfinished">Note attributes</translation>
+      <translation>Atributos da nota</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="646"/>
       <source>Subject date</source>
-      <translation type="unfinished">Subject date</translation>
+      <translation>Data do assunto</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="648"/>
       <source>Latitude</source>
-      <translation type="unfinished">Latitude</translation>
+      <translation>Latitude</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="650"/>
       <source>Longitude</source>
-      <translation type="unfinished">Longitude</translation>
+      <translation>Longitude</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="652"/>
       <source>Altitude</source>
-      <translation type="unfinished">Altitude</translation>
+      <translation>Altitude</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="654"/>
       <source>Author</source>
-      <translation type="unfinished">Author</translation>
+      <translation>Autor</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="656"/>
       <source>Source</source>
-      <translation type="unfinished">Source</translation>
+      <translation>Fonte</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="658"/>
       <source>Source url</source>
-      <translation type="unfinished">Source url</translation>
+      <translation>Url da fonte</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="660"/>
       <source>Source application</source>
-      <translation type="unfinished">Source application</translation>
+      <translation>Aplicativo de origem</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="734"/>
       <source>Attribute</source>
-      <translation type="unfinished">Attribute</translation>
+      <translation>Atributo</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="734"/>
       <source>Value</source>
-      <translation type="unfinished">Value</translation>
+      <translation>Valor</translation>
     </message>
   </context>
   <context>
@@ -341,7 +341,7 @@
     <message>
       <location filename="../helpers/fakevimproxy.cpp" line="26"/>
       <source>Information</source>
-      <translation type="unfinished">Information</translation>
+      <translation>Informações</translation>
     </message>
   </context>
   <context>
@@ -1090,7 +1090,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1260"/>
       <source>About &amp;QOwnNotes…</source>
-      <translation type="unfinished">About &amp;QOwnNotes…</translation>
+      <translation>Sobre o &amp;QOwnNotes…</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1354"/>
@@ -1505,7 +1505,7 @@
     <message>
       <location filename="../mainwindow.ui" line="489"/>
       <source>Note operations…</source>
-      <translation type="unfinished">Note operations…</translation>
+      <translation>Operações da nota…</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1505"/>
@@ -1943,7 +1943,7 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
     <message>
       <location filename="../mainwindow.cpp" line="7582"/>
       <source>&amp;Move tags to…</source>
-      <translation type="unfinished">&amp;Move tags to…</translation>
+      <translation>&amp;Mover as tags para…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7801"/>
@@ -1990,32 +1990,32 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
     <message>
       <location filename="../mainwindow.cpp" line="8680"/>
       <source>&amp;Move notes to…</source>
-      <translation type="unfinished">&amp;Move notes to…</translation>
+      <translation>&amp;Mover as notas para…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8681"/>
       <source>&amp;Copy notes to…</source>
-      <translation type="unfinished">&amp;Copy notes to…</translation>
+      <translation>&amp;Copiar as notas para…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8710"/>
       <source>Move notes to subfolder…</source>
-      <translation type="unfinished">Move notes to subfolder…</translation>
+      <translation>Mover as notas para a subpasta…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8714"/>
       <source>Copy notes to subfolder…</source>
-      <translation type="unfinished">Copy notes to subfolder…</translation>
+      <translation>Copiar as notas para a subpasta…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8722"/>
       <source>&amp;Tag selected notes with…</source>
-      <translation type="unfinished">&amp;Tag selected notes with…</translation>
+      <translation>&amp;Colocar tag nas notas selecionadas com…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8744"/>
       <source>&amp;Remove tag from selected notes…</source>
-      <translation type="unfinished">&amp;Remove tag from selected notes…</translation>
+      <translation>Remover a tag das notas selecionadas…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8835"/>
@@ -4268,7 +4268,7 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2688"/>
       <source>&amp;Add script…</source>
-      <translation type="unfinished">&amp;Add script…</translation>
+      <translation>&amp;Adicionar script…</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3215"/>
@@ -4311,13 +4311,13 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
       <location filename="../dialogs/settingsdialog.cpp" line="3752"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3775"/>
       <source>Import settings</source>
-      <translation type="unfinished">Import settings</translation>
+      <translation>Configurações de importação</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3601"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3718"/>
       <source>Export settings</source>
-      <translation type="unfinished">Export settings</translation>
+      <translation>Configurações de exportação</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4276"/>
@@ -5147,22 +5147,22 @@ Mensagem de erro: </translation>
       <location filename="../dialogs/settingsdialog.cpp" line="3717"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3774"/>
       <source>INI files</source>
-      <translation type="unfinished">INI files</translation>
+      <translation>Arquivos INI</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3753"/>
       <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
-      <translation type="unfinished">Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</translation>
+      <translation>Você quer realmente importar configurações? Suas configurações atuais vão ser removidas e não são todas as configurações que podem ser restaurada, como a pasta nota configurações e quais scripts que você estavam usando. Você também precisará ajustar algumas configurações, especialmente em todas as plataformas, mas suas notas permanecerão intactas!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3763"/>
       <source>The application will be quit after the import.</source>
-      <translation type="unfinished">The application will be quit after the import.</translation>
+      <translation>O aplicativo será encerrado após a importação.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3764"/>
       <source>The application will be restarted after the import.</source>
-      <translation type="unfinished">The application will be restarted after the import.</translation>
+      <translation>O aplicativo será reiniciado após a importação.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2658"/>
@@ -5558,7 +5558,7 @@ Suas Notas estarão intactas!</translation>
     <message>
       <location filename="../dialogs/tododialog.ui" line="222"/>
       <source>Note…</source>
-      <translation type="unfinished">Note…</translation>
+      <translation>Nota…</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="100"/>
@@ -5583,7 +5583,7 @@ Suas Notas estarão intactas!</translation>
     <message>
       <location filename="../dialogs/tododialog.ui" line="288"/>
       <source>Reload…</source>
-      <translation type="unfinished">Reload…</translation>
+      <translation>Recarregar…</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="319"/>

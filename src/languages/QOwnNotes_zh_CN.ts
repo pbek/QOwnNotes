@@ -28,7 +28,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="121"/>
       <source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</source>
-      <translation type="unfinished">To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</translation>
+      <translation>要获得enex文件，您需要在Evernotes桌面客户端中选择一个或多个笔记，然后在 “文件”菜单中单击“导出备注...”。</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="74"/>
@@ -38,7 +38,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="30"/>
       <source>Select file</source>
-      <translation type="unfinished">Select file</translation>
+      <translation>选择文件</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="54"/>
@@ -48,12 +48,12 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="91"/>
       <source>Metadata to import</source>
-      <translation type="unfinished">Metadata to import</translation>
+      <translation>要导入的元数据</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="165"/>
       <source>Import notes</source>
-      <translation type="unfinished">Import notes</translation>
+      <translation>导入笔记</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="23"/>
@@ -83,22 +83,22 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="639"/>
       <source>Basic attributes</source>
-      <translation type="unfinished">Basic attributes</translation>
+      <translation>基本属性</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="640"/>
       <source>Created date</source>
-      <translation type="unfinished">Created date</translation>
+      <translation>创建日期</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="642"/>
       <source>Updated date</source>
-      <translation type="unfinished">Updated date</translation>
+      <translation>更新日期</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="645"/>
       <source>Note attributes</source>
-      <translation type="unfinished">Note attributes</translation>
+      <translation>笔记属性</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="646"/>

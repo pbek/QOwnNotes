@@ -7,6 +7,8 @@
     - removed empty lines
     - showing 5 lines instead of 3
     - lines are truncated at 80 characters
+- added more Brazilian Portuguese, Chinese Traditional, Chinese Simplified,
+  and German translation (thank you richarson, abev66 and wenzhuoz)
 
 ## 18.08.7
 - improved the user interface of the **Evernote import** (for [#998](https://github.com/pbek/QOwnNotes/issues/998))

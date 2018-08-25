@@ -1756,8 +1756,8 @@ Falls Sie die Papierkorb-App auf Ihrem Nextcloud/ownCloud-Server aktiviert haben
       <location filename="../mainwindow.cpp" line="4138"/>
       <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
-        <numerusform>%n ausgewählte Notiz das Schlagwort &lt;strong&gt;%2&lt;/strong&gt; hinzufügen?</numerusform>
-        <numerusform>%n ausgewählten Notizen die Schlagworte &lt;strong&gt;%2&lt;/strong&gt; hinzufügen?</numerusform>
+        <numerusform>Einer ausgewählten Notiz das Schlagwort &lt;strong&gt;%2&lt;/strong&gt; hinzufügen?</numerusform>
+        <numerusform>%n ausgewählten Notizen das Schlagwort &lt;strong&gt;%2&lt;/strong&gt; hinzufügen?</numerusform>
       </translation>
     </message>
     <message>
@@ -2012,7 +2012,7 @@ Falls Sie die Papierkorb-App auf Ihrem Nextcloud/ownCloud-Server aktiviert haben
     <message>
       <location filename="../mainwindow.cpp" line="8722"/>
       <source>&amp;Tag selected notes with…</source>
-      <translation>Ausgewählte Notiz &amp;verschlagworten mit…</translation>
+      <translation>Ausgewählte Notizen &amp;verschlagworten mit…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8744"/>
