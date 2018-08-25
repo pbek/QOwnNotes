@@ -243,7 +243,7 @@ public:
 
     QStringList getAttachmentsFileList();
 
-    QString getNotePreviewText();
+    QString getNotePreviewText(bool asHtml = false, int lines = 3);
 
     static QString generateMultipleNotesPreviewText(QList<Note> notes);
 

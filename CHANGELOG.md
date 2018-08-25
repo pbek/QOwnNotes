@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 18.08.8
+- improved preview of multiple notes (for [#949](https://github.com/pbek/QOwnNotes/issues/949))
+    - implemented correct breaking of lines
+    - fixed preview if note text that was interpreted as html
+
 ## 18.08.7
 - improved the user interface of the **Evernote import** (for [#998](https://github.com/pbek/QOwnNotes/issues/998))
 - if you now **select multiple notes** a **small preview** of those notes will be 

@@ -2659,16 +2659,27 @@ Note Note::fetchByUrlString(QString urlString) {
  *
  * @return
  */
-QString Note::getNotePreviewText() {
+QString Note::getNotePreviewText(bool asHtml, int lines) {
     QString noteText = getNoteText();
+
+    // remove Windows line breaks
+    noteText.replace(QRegularExpression("\r\n"), "\n");
 
     // remove headlines
     noteText.remove(QRegularExpression("^.+\n=+\n+"));
     noteText.remove(QRegularExpression("^# .+\n+"));
 
+    // remove multiple line breaks
+    noteText.replace(QRegularExpression("\n\n+"), "\n");
+
     // only take the first three lines
-    const QStringList &lineList = noteText.split("\n").mid(0, 3);
+    const QStringList &lineList = noteText.split("\n").mid(0, lines);
     noteText = lineList.join("\n");
+
+    if (asHtml) {
+        noteText = Utils::Misc::htmlspecialchars(noteText);
+        noteText.replace("\n", "<br>");
+    }
 
     return noteText;
 }
@@ -2706,7 +2717,7 @@ QString Note::generateMultipleNotesPreviewText(QList<Note> notes) {
         Note note = notes[i];
         QString oddStyle = isOdd ? " class='odd'" : "";
         QDateTime modified = note.getFileLastModified();
-        QString noteText = note.getNotePreviewText();
+        QString noteText = note.getNotePreviewText(true, 5);
         QString noteLink = getNoteURL(note.getName());
         noteLink = Utils::Misc::appendIfDoesNotEndWith(noteLink, "@");
 

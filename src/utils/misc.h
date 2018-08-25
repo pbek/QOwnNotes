@@ -80,6 +80,7 @@ namespace Utils {
         void loadPrinterSettings(QPrinter *printer, QString settingsKey);
         bool isNoteEditingAllowed();
         QString unescapeHtml(QString html);
+        QString htmlspecialchars(QString text);
         void printInfo(QString text);
         bool doAutomaticNoteFolderDatabaseClosing();
         bool isNoteListPreview();
