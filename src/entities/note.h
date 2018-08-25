@@ -247,6 +247,8 @@ public:
 
     static QString generateMultipleNotesPreviewText(QList<Note> notes);
 
+    bool handleNoteTextFileName();
+
 protected:
     int id;
     QString name;
@@ -264,7 +266,6 @@ protected:
     QString cryptoPassword;
     QString shareUrl;
     int shareId;
-    bool handleNoteTextFileName();
     QRegularExpression getEncryptedNoteTextRegularExpression();
     QString getEncryptedNoteText();
     static QString cleanupFileName(QString name);

@@ -7,6 +7,11 @@
     - removed empty lines
     - showing 5 lines instead of 3
     - lines are truncated at 80 characters
+- more **Evernote import** improvements (for [#998](https://github.com/pbek/QOwnNotes/issues/998))
+    - fixed importing of notes if user enabled that the filename can be
+      different from the note name in the settings
+    - added more note note attribute metadata from the version 3 of the 
+      Evernote export file
 - added more Brazilian Portuguese, Chinese Traditional, Chinese Simplified,
   and German translation (thank you richarson, abev66 and wenzhuoz)
 

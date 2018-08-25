@@ -544,6 +544,11 @@ void EvernoteImportDialog::importNotes(QString data) {
             Note note = Note();
 //            note.setName(title);
             note.setNoteText(noteText);
+
+            // in case the user enabled that the filename can be different
+            // from the note name
+            note.handleNoteTextFileName();
+
             note.setNoteSubFolderId(noteSubFolder.getId());
             note.store();
             note.storeNoteTextFileToDisk();
@@ -659,6 +664,18 @@ void EvernoteImportDialog::setupMetaDataTreeWidgetItems() {
             "note-attributes/source-url", noteAttributesItem);
     addMetaDataTreeWidgetItem(tr("Source application"),
             "note-attributes/source-application", noteAttributesItem);
+    addMetaDataTreeWidgetItem(tr("Reminder order"),
+            "note-attributes/reminder-order", noteAttributesItem);
+    addMetaDataTreeWidgetItem(tr("Reminder time"),
+            "note-attributes/reminder-time", noteAttributesItem);
+    addMetaDataTreeWidgetItem(tr("Reminder done time"),
+            "note-attributes/reminder-done-time", noteAttributesItem);
+    addMetaDataTreeWidgetItem(tr("Place name"),
+            "note-attributes/place-name", noteAttributesItem);
+    addMetaDataTreeWidgetItem(tr("Content class"),
+            "note-attributes/content-class", noteAttributesItem);
+    addMetaDataTreeWidgetItem(tr("Application data"),
+            "note-attributes/application-data", noteAttributesItem);
 }
 
 /**
