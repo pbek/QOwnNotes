@@ -3,7 +3,10 @@
 ## 18.08.8
 - improved preview of multiple notes (for [#949](https://github.com/pbek/QOwnNotes/issues/949))
     - implemented correct breaking of lines
-    - fixed preview if note text that was interpreted as html
+    - fixed preview of note text that was interpreted as html
+    - removed empty lines
+    - showing 5 lines instead of 3
+    - lines are truncated at 80 characters
 
 ## 18.08.7
 - improved the user interface of the **Evernote import** (for [#998](https://github.com/pbek/QOwnNotes/issues/998))

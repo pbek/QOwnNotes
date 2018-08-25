@@ -2672,9 +2672,24 @@ QString Note::getNotePreviewText(bool asHtml, int lines) {
     // remove multiple line breaks
     noteText.replace(QRegularExpression("\n\n+"), "\n");
 
-    // only take the first three lines
-    const QStringList &lineList = noteText.split("\n").mid(0, lines);
-    noteText = lineList.join("\n");
+    const QStringList &lineList = noteText.split("\n");
+
+    if (lineList.isEmpty()) {
+        return "";
+    }
+
+    noteText = "";
+    for (int i = 0; i < min(lines, lineList.count()); i++) {
+        if (i > 0) {
+            noteText += "\n";
+        }
+
+        QString line = lineList.at(i);
+        line = line.trimmed();
+        line.truncate(80);
+
+        noteText += line;
+    }
 
     if (asHtml) {
         noteText = Utils::Misc::htmlspecialchars(noteText);
