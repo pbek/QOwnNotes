@@ -30,6 +30,7 @@ qt5_wrap_ui(dialogs/ui_updatedialog.h updatedialog.ui)
 qt5_wrap_ui(dialogs/ui_notediffdialog.h notediffdialog.ui)
 qt5_wrap_ui(dialogs/ui_versiondialog.h versiondialog.ui)
 qt5_wrap_ui(dialogs/ui_welcomedialog.h welcomedialog.ui)
+qt5_wrap_ui(dialogs/ui_issueassistantdialog.h issueassistantdialog.ui)
 qt5_wrap_ui(dialogs/ui_tagadddialog.h tagadddialog.ui)
 qt5_wrap_ui(widgets/ui_fontcolorwidget.h fontcolorwidget.ui)
 qt5_wrap_ui(widgets/ui_evernoteimportdialog.h ui_evernoteimportdialog.ui)
@@ -62,6 +63,9 @@ set(SOURCE_FILES
     dialogs/welcomedialog.cpp
     dialogs/welcomedialog.h
     dialogs/welcomedialog.ui
+    dialogs/issueassistantdialog.cpp
+    dialogs/issueassistantdialog.h
+    dialogs/issueassistantdialog.ui
     dialogs/aboutdialog.cpp
     dialogs/aboutdialog.h
     dialogs/aboutdialog.ui

@@ -77,6 +77,13 @@ LogWidget::~LogWidget()
 }
 
 /**
+ * Returns the text of the log widget
+ */
+QString LogWidget::getLogText() {
+    return ui->logTextEdit->toPlainText();
+}
+
+/**
  * Stores the settings of the dialog
  */
 void LogWidget::storeSettings() const {

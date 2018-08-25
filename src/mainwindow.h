@@ -41,6 +41,7 @@
 #include <widgets/logwidget.h>
 #include <dialogs/orphanedimagesdialog.h>
 #include <dialogs/orphanedattachmentsdialog.h>
+#include <dialogs/issueassistantdialog.h>
 #include "entities/notehistory.h"
 #include "dialogs/notediffdialog.h"
 #include "services/updateservice.h"
@@ -151,6 +152,8 @@ public:
     QString noteTextEditCurrentWord(bool withPreviousCharacters = false);
 
     Q_INVOKABLE void focusNoteTextEdit();
+
+    QString getLogText();
 
 protected:
     void closeEvent(QCloseEvent *event);
@@ -607,6 +610,7 @@ private:
     bool _noteSubFolderDockWidgetVisible;
     ActionDialog *_actionDialog;
     TodoDialog *_todoDialog;
+    IssueAssistantDialog *_issueAssistantDialog;
     OrphanedImagesDialog *_orphanedImagesDialog;
     OrphanedAttachmentsDialog *_orphanedAttachmentsDialog;
     SettingsDialog *_settingsDialog;

@@ -466,6 +466,7 @@ MainWindow::MainWindow(QWidget *parent) :
     _todoDialog = Q_NULLPTR;
     _orphanedImagesDialog = Q_NULLPTR;
     _orphanedAttachmentsDialog = Q_NULLPTR;
+    _issueAssistantDialog = Q_NULLPTR;
 
     // track cursor position changes for the line number label
     QObject::connect(ui->noteTextEdit,
@@ -5286,6 +5287,13 @@ void MainWindow::on_actionCheck_for_updates_triggered() {
  */
 void MainWindow::on_actionReport_problems_or_ideas_triggered() {
     QDesktopServices::openUrl(QUrl("https://github.com/pbek/QOwnNotes/issues"));
+
+//    if (_issueAssistantDialog == Q_NULLPTR) {
+//        _issueAssistantDialog = new IssueAssistantDialog(this);
+//    } else {
+//    }
+//
+//    _issueAssistantDialog->show();
 }
 
 void MainWindow::on_actionAlphabetical_triggered(bool checked) {
@@ -10344,4 +10352,12 @@ void MainWindow::on_noteOperationsButton_clicked() {
     QPoint globalPos = ui->noteOperationsButton->mapToGlobal(
             QPoint(0, ui->noteOperationsButton->height()));
     openNotesContextMenu(globalPos, true);
+}
+
+/**
+ * Returns the text of the log widget
+ */
+QString MainWindow::getLogText() {
+    auto *widget = dynamic_cast<LogWidget*>(_logDockWidget->widget());
+    return widget->getLogText();
 }

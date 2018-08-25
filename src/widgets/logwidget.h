@@ -45,6 +45,7 @@ public:
             const QMessageLogContext &context,
             const QString &msg);
     bool eventFilter(QObject *obj, QEvent *event);
+    QString getLogText();
 
 public slots:
     void log(LogWidget::LogType logType, QString text);

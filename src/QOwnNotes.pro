@@ -103,6 +103,7 @@ SOURCES += main.cpp\
     utils/gui.cpp \
     utils/schema.cpp \
     dialogs/welcomedialog.cpp \
+    dialogs/issueassistantdialog.cpp \
     dialogs/tagadddialog.cpp \
     widgets/navigationwidget.cpp \
     widgets/notepreviewwidget.cpp \
@@ -181,6 +182,7 @@ HEADERS  += mainwindow.h \
     utils/gui.h \
     utils/schema.h \
     dialogs/welcomedialog.h \
+    dialogs/issueassistantdialog.h \
     dialogs/tagadddialog.h \
     widgets/navigationwidget.h \
     widgets/notepreviewwidget.h \
@@ -223,6 +225,7 @@ FORMS    += mainwindow.ui \
     dialogs/tododialog.ui \
     dialogs/passworddialog.ui \
     dialogs/welcomedialog.ui \
+    dialogs/issueassistantdialog.ui \
     dialogs/tagadddialog.ui \
     widgets/logwidget.ui \
     dialogs/sharedialog.ui \
