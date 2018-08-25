@@ -80,7 +80,11 @@ LogWidget::~LogWidget()
  * Returns the text of the log widget
  */
 QString LogWidget::getLogText() {
+#ifndef INTEGRATION_TESTS
     return ui->logTextEdit->toPlainText();
+#else
+    return "";
+#endif
 }
 
 /**
@@ -352,6 +356,8 @@ void LogWidget::logMessageOutput(
         // writing to the log-widget while the app is shutting down
         emit(mainWindow->log(logType, msg));
     }
+#else
+    Q_UNUSED(logType);
 #endif
 
     // it's harder to debug a problem if we abort here
