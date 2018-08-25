@@ -1065,6 +1065,21 @@ QString Utils::Misc::unescapeHtml(QString html) {
 }
 
 /**
+ * Unescapes some html special characters
+ *
+ * @param text
+ * @return
+ */
+QString Utils::Misc::htmlspecialchars(QString text) {
+    text.replace("&", "&amp;");
+    text.replace("\"", "&quot;");
+    text.replace("'", "&apos;");
+    text.replace("<", "&lt;");
+    text.replace(">", "&gt;");
+    return text;
+}
+
+/**
  * Outputs an info text
  *
  * @param text
