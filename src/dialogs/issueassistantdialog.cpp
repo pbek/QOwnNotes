@@ -2,6 +2,9 @@
 #include <QSettings>
 #include <QFileDialog>
 #include <utils/misc.h>
+#include <QDesktopServices>
+#include <QClipboard>
+#include <utils/gui.h>
 #include "issueassistantdialog.h"
 #include "ui_issueassistantdialog.h"
 #include "settingsdialog.h"
@@ -12,10 +15,22 @@ IssueAssistantDialog::IssueAssistantDialog(QWidget *parent) :
     ui(new Ui::IssueAssistantDialog) {
     ui->setupUi(this);
     ui->backButton->setEnabled(false);
+    ui->nextButton->setEnabled(false);
 
     ui->stackedWidget->setCurrentIndex(IssueAssistantPages::IssuePage);
     on_issueTypeComboBox_currentIndexChanged(QuestionIssueType);
     ui->logOutputPlainTextEdit->setHighlightingEnabled(false);
+
+    QObject::connect(ui->titleLineEdit, SIGNAL(textChanged(QString)),
+                     this, SLOT(allowIssuePageNextButton()));
+    QObject::connect(ui->questionPlainTextEdit, SIGNAL(textChanged()),
+                     this, SLOT(allowIssuePageNextButton()));
+    QObject::connect(ui->expectedBehaviourPlainTextEdit, SIGNAL(textChanged()),
+                     this, SLOT(allowIssuePageNextButton()));
+    QObject::connect(ui->actualBehaviourPlainTextEdit, SIGNAL(textChanged()),
+                     this, SLOT(allowIssuePageNextButton()));
+    QObject::connect(ui->stepsPlainTextEdit, SIGNAL(textChanged()),
+                     this, SLOT(allowIssuePageNextButton()));
 }
 
 IssueAssistantDialog::~IssueAssistantDialog() {
@@ -33,16 +48,53 @@ void IssueAssistantDialog::on_nextButton_clicked() {
         ui->stackedWidget->setCurrentIndex(index);
     }
 
-    if (index == IssueAssistantPages::LogOutputPage) {
-        refreshLogOutput();
-    }
-
-    if (index == IssueAssistantPages::SubmitPage) {
-        generateSubmitPageContent();
-    }
+    refreshPage(index);
 
     ui->backButton->setEnabled(true);
     ui->nextButton->setEnabled(index < maxIndex);
+}
+
+void IssueAssistantDialog::allowIssuePageNextButton() const {
+    bool allow = ui->titleLineEdit->text().length() > 4;
+
+    if (ui->questionPlainTextEdit->isVisible()) {
+        allow = allow && ui->questionPlainTextEdit->toPlainText().length() > 10;
+    }
+
+    if (ui->expectedBehaviourPlainTextEdit->isVisible()) {
+        allow = allow && ui->expectedBehaviourPlainTextEdit->toPlainText().length() > 10;
+    }
+
+    if (ui->actualBehaviourPlainTextEdit->isVisible()) {
+        allow = allow && ui->actualBehaviourPlainTextEdit->toPlainText().length() > 10;
+    }
+
+    if (ui->stepsPlainTextEdit->isVisible()) {
+        allow = allow && ui->stepsPlainTextEdit->toPlainText().length() > 10;
+    }
+
+    ui->nextButton->setEnabled(allow);
+}
+
+void IssueAssistantDialog::refreshPage(int index) const {
+    switch(index) {
+        case LogOutputPage:
+            if (ui->logOutputPlainTextEdit->toPlainText().isEmpty()) {
+                refreshLogOutput();
+            }
+            break;
+        case DebugSettingsPage:
+            if (ui->debugOutputPlainTextEdit->toPlainText().isEmpty()) {
+                ui->debugOutputPlainTextEdit->setPlainText(
+                        Utils::Misc::generateDebugInformation(true));
+            }
+            break;
+        case SubmitPage:
+            generateSubmitPageContent();
+            break;
+        default:
+            break;
+    }
 }
 
 void IssueAssistantDialog::refreshLogOutput() const {
@@ -52,6 +104,7 @@ void IssueAssistantDialog::refreshLogOutput() const {
         return;
     }
 
+    mainWindow->turnOnDebugLogging();
     ui->logOutputPlainTextEdit->setPlainText(mainWindow->getLogText());
 }
 
@@ -68,29 +121,45 @@ void IssueAssistantDialog::generateSubmitPageContent() const {
         case ProblemIssueType:
             title = "[P]";
             break;
+        default:
+            break;
     }
 
     title += " " + ui->titleLineEdit->text();
     ui->submitTitleLineEdit->setText(title);
 
     QString body;
-    body += "#### Expected behaviour\n\n" +
-            ui->expectedBehaviourPlainTextEdit->toPlainText().trimmed() +
-            "\n\n";
 
-    body += "#### Actual behaviour\n\n" +
-            ui->actualBehaviourPlainTextEdit->toPlainText().trimmed() +
-            "\n\n";
+    switch(ui->issueTypeComboBox->currentIndex()) {
+        case QuestionIssueType:
+            body += "#### Question\n\n" +
+                ui->questionPlainTextEdit->toPlainText().trimmed() +
+                "\n\n";
+            break;
+        case FeatureRequestIssueType:
+        case ProblemIssueType:
+            body += "#### Expected behaviour\n\n" +
+                ui->expectedBehaviourPlainTextEdit->toPlainText().trimmed() +
+                "\n\n";
 
-    body += "#### Steps to reproduce\n\n" +
-            ui->stepsPlainTextEdit->toPlainText().trimmed() +
-            "\n\n";
+            body += "#### Actual behaviour\n\n" +
+                ui->actualBehaviourPlainTextEdit->toPlainText().trimmed() +
+                "\n\n";
 
-    body += "#### Relevant log output in the Log panel\n\n```" +
+            body += "#### Steps to reproduce\n\n" +
+                ui->stepsPlainTextEdit->toPlainText().trimmed() +
+                "\n\n";
+            break;
+        default:
+            break;
+    }
+
+    body += "#### Relevant log output in the Log panel\n\n```\n" +
             ui->logOutputPlainTextEdit->toPlainText().trimmed() +
-            "```\n\n";
+            "\n```\n\n";
 
-    body += "#### Output from the debug section in the settings dialog\n\n" +
+    body += "#### Information about the application, settings and "
+            "environment\n\n" +
             ui->debugOutputPlainTextEdit->toPlainText().trimmed() +
             "\n\n";
 
@@ -107,12 +176,10 @@ void IssueAssistantDialog::on_backButton_clicked() {
         ui->stackedWidget->setCurrentIndex(index);
     }
 
+    refreshPage(index);
+
     ui->nextButton->setEnabled(true);
     ui->backButton->setEnabled(index > 0);
-}
-
-void IssueAssistantDialog::on_finishButton_clicked() {
-    MetricsService::instance()->sendVisitIfEnabled("issue-assistant-dialog/finished");
 }
 
 void IssueAssistantDialog::on_issueTypeComboBox_currentIndexChanged(int index) {
@@ -134,4 +201,53 @@ void IssueAssistantDialog::on_issueTypeComboBox_currentIndexChanged(int index) {
 
 void IssueAssistantDialog::on_refreshLogButton_clicked() {
     refreshLogOutput();
+}
+
+void IssueAssistantDialog::on_postButton_clicked() {
+    MetricsService::instance()->sendVisitIfEnabled(
+            "issue-assistant-dialog/post");
+
+    QClipboard *clipboard = QApplication::clipboard();
+    clipboard->setText(ui->bodyPlainTextEdit->toPlainText());
+
+    QUrl url("https://github.com/pbek/QOwnNotes/issues/new?title=" +
+        QUrl::toPercentEncoding(ui->submitTitleLineEdit->text()) + "&body=" +
+        QUrl::toPercentEncoding("Please paste the text from the issue "
+                                "assistant here!"));
+
+    // we cannot add the body, this would make the url too long
+//    + "&body=" + QUrl::toPercentEncoding(ui->bodyPlainTextEdit->toPlainText()));
+
+    QDesktopServices::openUrl(url);
+}
+
+void IssueAssistantDialog::on_cancelButton_clicked() {
+    close();
+}
+
+void IssueAssistantDialog::on_searchIssueButton_clicked() {
+    QUrl url("https://github.com/pbek/QOwnNotes/issues?utf8=%E2%9C%93&q=" +
+        QUrl::toPercentEncoding(ui->titleLineEdit->text()));
+
+    QDesktopServices::openUrl(url);
+}
+
+void IssueAssistantDialog::on_newIssueButton_clicked() {
+    if (Utils::Gui::question(
+            this,
+            "Create new issue",
+            "Reset this dialog and create a new issue?",
+            "issue-dialog-new-issue") != QMessageBox::Yes) {
+        return;
+    }
+
+    ui->titleLineEdit->clear();
+    ui->questionPlainTextEdit->clear();
+    ui->expectedBehaviourPlainTextEdit->clear();
+    ui->actualBehaviourPlainTextEdit->clear();
+    ui->stepsPlainTextEdit->clear();
+    ui->backButton->setEnabled(false);
+    ui->nextButton->setEnabled(false);
+    ui->stackedWidget->setCurrentIndex(IssueAssistantPages::IssuePage);
+    ui->issueTypeComboBox->setCurrentIndex(QuestionIssueType);
 }

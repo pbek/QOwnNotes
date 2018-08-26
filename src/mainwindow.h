@@ -155,6 +155,10 @@ public:
 
     QString getLogText();
 
+    void turnOnDebugLogging();
+
+    void openIssueAssistantDialog();
+
 protected:
     void closeEvent(QCloseEvent *event);
 

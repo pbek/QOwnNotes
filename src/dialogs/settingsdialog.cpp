@@ -1540,247 +1540,13 @@ void SettingsDialog::setFontLabel(QLineEdit *label, QFont font) {
 }
 
 void SettingsDialog::outputSettings() {
-    QSettings settings;
-    QString output;
+    // store some data for Utils::Misc::generateDebugInformation
+    storeOwncloudDebugData();
 
-    output += "QOwnNotes Debug Information\n";
-    output += "===========================\n";
-
-    QDateTime dateTime = QDateTime::currentDateTime();
-
-    // add information about QOwnNotes
-    output += "\n## General Info\n\n";
-    output += prepareDebugInformationLine("Current Date", dateTime.toString());
-    output += prepareDebugInformationLine("Version", QString(VERSION));
-    output += prepareDebugInformationLine("Build date", QString(__DATE__));
-    output += prepareDebugInformationLine("Build number",
-                                          QString::number(BUILD));
-    output += prepareDebugInformationLine("Platform", QString(PLATFORM));
-
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-    output += prepareDebugInformationLine("Operating System",
-                                          QSysInfo::prettyProductName());
-    output += prepareDebugInformationLine("Build architecture",
-                                          QSysInfo::buildCpuArchitecture());
-    output += prepareDebugInformationLine("Current architecture",
-                                          QSysInfo::currentCpuArchitecture());
-#endif
-    output += prepareDebugInformationLine("Release",
-                                          qApp->property("release").toString());
-    output += prepareDebugInformationLine("Qt Version (build)", QT_VERSION_STR);
-    output += prepareDebugInformationLine("Qt Version (runtime)", qVersion());
-    output += prepareDebugInformationLine("Portable mode",
-                                          Utils::Misc::isInPortableMode() ?
-                                          "yes" : "no");
-    output += prepareDebugInformationLine("Settings path / key",
-                                          settings.fileName());
-    output += prepareDebugInformationLine("Application database path",
-            QDir::toNativeSeparators(DatabaseService::getDiskDatabasePath()));
-    output += prepareDebugInformationLine("Application arguments",
-            qApp->property("arguments").toStringList().join("`, `"));
-
-    QString debug = "0";
-#ifdef QT_DEBUG
-    debug = "1";
-#endif
-
-    output += prepareDebugInformationLine("Qt Debug", debug);
-
-    output += prepareDebugInformationLine("Locale (system)",
-                                          QLocale::system().name());
-    output += prepareDebugInformationLine("Locale (interface)",
-                                          settings.value("interfaceLanguage")
-                                                  .toString());
-
-    output += prepareDebugInformationLine("Icon theme",
-                                          QIcon::themeName());
-    output += prepareDebugInformationLine("Notes in current note folder",
-                                          QString::number(Note::countAll()));
-    output += prepareDebugInformationLine("Enabled scripts",
-                                          QString::number(
-                                                  Script::countEnabled()));
-
-    // add information about the server
-    output += "\n## Server Info\n\n";
-    output += prepareDebugInformationLine("serverUrl",
-                                          ui->serverUrlEdit->text());
-    output += prepareDebugInformationLine("appIsValid",
-                                          QString(appIsValid ? "yes" : "no"));
-    output += prepareDebugInformationLine("notesPathExists",
-                                          notesPathExistsText);
-    if (appIsValid) {
-        output += prepareDebugInformationLine("serverVersion", serverVersion);
-        output += prepareDebugInformationLine("appVersion", appVersion);
-    } else {
-        output += prepareDebugInformationLine("connectionErrorMessage",
-                                              connectionErrorMessage);
-    }
-
-    // add note folder information
-    output += "\n## Note folders\n\n";
-    output += prepareDebugInformationLine(
-            "currentNoteFolderId",
-            QString::number(NoteFolder::currentNoteFolderId()));
-
-    QList<NoteFolder> noteFolders = NoteFolder::fetchAll();
-    if (noteFolders.count() > 0) {
-        Q_FOREACH(NoteFolder noteFolder, noteFolders) {
-                output += "\n### Note folder `" + noteFolder.getName() +
-                        "`\n\n";
-                output += prepareDebugInformationLine(
-                        "id", QString::number(noteFolder.getId()));
-                output += prepareDebugInformationLine(
-                        "isCurrent",
-                        noteFolder.isCurrent() ? "yes" : "no");
-                output += prepareDebugInformationLine(
-                        "activeTagId",
-                        QString::number(noteFolder.getActiveTagId()));
-                output += prepareDebugInformationLine(
-                        "localPath", QDir::toNativeSeparators(
-                                noteFolder.getLocalPath()));
-                output += prepareDebugInformationLine(
-                        "remotePath", noteFolder.getRemotePath());
-                output += prepareDebugInformationLine(
-                        "isShowSubfolders",
-                        noteFolder.isShowSubfolders() ? "yes" : "no");
-                output += prepareDebugInformationLine(
-                        "isUseGit",
-                        noteFolder.isUseGit() ? "yes" : "no");
-                output += prepareDebugInformationLine(
-                        "activeNoteSubFolder name",
-                        noteFolder.getActiveNoteSubFolder().getName());
-                output += prepareDebugInformationLine(
-                        "database file",
-                        QDir::toNativeSeparators(noteFolder.getLocalPath() +
-                                                 "/notes.sqlite"));
-            }
-    }
-
-    // add script information
-    output += "\n## Enabled scripts\n";
-
-    QList<Script> scripts = Script::fetchAll(true);
-    if (noteFolders.count() > 0) {
-        Q_FOREACH(Script script, scripts) {
-                output += "\n### Script `" + script.getName() +
-                        "`\n\n";
-                output += prepareDebugInformationLine(
-                        "id", QString::number(script.getId()));
-                output += prepareDebugInformationLine(
-                        "path", QDir::toNativeSeparators(
-                                script.getScriptPath()));
-                output += prepareDebugInformationLine(
-                        "variablesJson", script.getSettingsVariablesJson());
-                if (script.isScriptFromRepository()) {
-                    ScriptInfoJson infoJson = script.getScriptInfoJson();
-
-                    output += prepareDebugInformationLine(
-                            "identifier", script.getIdentifier());
-                    output += prepareDebugInformationLine(
-                            "version", infoJson.version);
-                    output += prepareDebugInformationLine(
-                            "minAppVersion", infoJson.minAppVersion);
-                }
-            }
-    } else {
-        output += "\nThere are no enabled scripts.\n";
-    }
-
-    // add information about the settings
-    output += "\n## Settings\n\n";
-
-    // hide values of these keys
-    QStringList keyHiddenList = (QStringList() <<
-            "cryptoKey" <<
-            "ownCloud/password" <<
-            "ownCloud/todoCalendarCalDAVPassword" <<
-            "PiwikClientId" <<
-            "networking/proxyPassword");
-
-    // under OS X we have to ignore some keys
-#ifdef Q_OS_MAC
-    QStringList keyIgnoreList;
-    keyIgnoreList << "AKDeviceUnlockState" << "Apple" << "NS" << "NavPanel"
-    << "com/apple";
-#endif
-
-    QListIterator<QString> itr(settings.allKeys());
-    while (itr.hasNext()) {
-        QString key = itr.next();
-        QVariant value = settings.value(key);
-
-        // under OS X we have to ignore some keys
-#ifdef Q_OS_MAC
-        bool ignoreKey = false;
-
-        // ignore values of certain keys
-        QListIterator<QString> itr2(keyIgnoreList);
-        while (itr2.hasNext()) {
-            QString pattern = itr2.next();
-            if (key.startsWith(pattern)) {
-                ignoreKey = true;
-                break;
-            }
-        }
-
-        // check if key has to be ignored
-        if (ignoreKey) {
-            continue;
-        }
-#endif
-
-        // hide values of certain keys
-        if (keyHiddenList.contains(key)) {
-            output += prepareDebugInformationLine(key, "<hidden>");
-        } else {
-            switch (value.type()) {
-                case QVariant::StringList:
-                    output += prepareDebugInformationLine(
-                            key,
-                            value.toStringList().join(", "));
-                    break;
-                case QVariant::ByteArray:
-                    output += prepareDebugInformationLine(key, "<binary data>");
-                    break;
-                default:
-                    output += prepareDebugInformationLine(key,
-                                                          value.toString());
-            }
-        }
-    }
-
-    // add information about the system environment
-    output += "\n## System environment\n\n";
-
-    itr = QProcess::systemEnvironment();
-    while (itr.hasNext()) {
-        QStringList textList = itr.next().split("=");
-        QString key = textList.first();
-        textList.removeFirst();
-        QString value = textList.join("=");
-        output += prepareDebugInformationLine(key, value);
-    }
+    QString output = Utils::Misc::generateDebugInformation(
+            ui->gitHubLineBreaksCheckBox->isChecked());
 
     ui->debugInfoTextEdit->setPlainText(output);
-}
-
-/**
- * @brief Prepares the debug information to output it as markdown
- * @param headline
- * @param data
- */
-QString SettingsDialog::prepareDebugInformationLine(QString headline,
-                                                    QString data) {
-    // add two spaces if we don't want GitHub line breaks
-    QString spaces = ui->gitHubLineBreaksCheckBox->isChecked() ? "" : "  ";
-
-    if (data.contains("\n")) {
-        data = "\n```\n" + data.trimmed() + "\n```";
-    } else {
-        data = (data.isEmpty()) ? "*empty*" : "`" + data + "`";
-    }
-
-    return "**" + headline + "**: " + data + spaces + "\n";
 }
 
 /**
@@ -1801,6 +1567,9 @@ void SettingsDialog::connectTestCallback(bool appIsValid,
     this->serverVersion = serverVersion;
     this->notesPathExistsText = notesPathExistsText;
     this->connectionErrorMessage = connectionErrorMessage;
+
+    // store some data for Utils::Misc::generateDebugInformation
+    storeOwncloudDebugData();
 
     if (appIsValid) {
         ui->connectionTestLabel->setStyleSheet("color: green;");
@@ -3272,6 +3041,18 @@ void SettingsDialog::closeEvent(QCloseEvent *event) {
 }
 
 /**
+ * Stores some data for Utils::Misc::generateDebugInformation
+ */
+void SettingsDialog::storeOwncloudDebugData() const {
+    QSettings settings;
+    settings.setValue("ownCloudInfo/appIsValid", appIsValid);
+    settings.setValue("ownCloudInfo/notesPathExistsText", notesPathExistsText);
+    settings.setValue("ownCloudInfo/serverVersion", serverVersion);
+    settings.setValue("ownCloudInfo/connectionErrorMessage",
+                      connectionErrorMessage);
+}
+
+/**
  * Stores the splitter settings
  */
 void SettingsDialog::storeSplitterSettings() {
@@ -3800,4 +3581,19 @@ void SettingsDialog::on_importSettingsButton_clicked() {
     } else {
         Utils::Misc::restartApplication();
     }
+}
+
+void SettingsDialog::on_issueAssistantPushButton_clicked() {
+    MainWindow *mainWindow = MainWindow::instance();
+
+    if (mainWindow == nullptr) {
+        return;
+    }
+
+    storeSettings();
+    mainWindow->openIssueAssistantDialog();
+
+    // we need to close the modal settings dialog so the issue assistant
+    // dialog can be shown on the front
+    close();
 }

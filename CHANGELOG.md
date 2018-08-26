@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 18.08.9
+- there now is a new **Issue assistant** to post questions, feature requests or problems
+    - you will find it in the *Help menu*
+    - it will guide you to the steps to enter information and gathers all 
+    needed data to post an issue on the [Issue page](https://github.com/pbek/QOwnNotes/issues/new)
+  
 ## 18.08.8
 - improved preview of multiple notes (for [#949](https://github.com/pbek/QOwnNotes/issues/949))
     - implemented correct breaking of lines

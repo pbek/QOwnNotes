@@ -85,6 +85,10 @@ namespace Utils {
         bool doAutomaticNoteFolderDatabaseClosing();
         bool isNoteListPreview();
         QString toHumanReadableByteSize(qint64 size);
+        QString prepareDebugInformationLine(
+            const QString &headline, QString data,
+            bool withGitHubLineBreaks = true);
+        QString generateDebugInformation(bool withGitHubLineBreaks = true);
     }  // namespace Misc
 }  // namespace Utils
 

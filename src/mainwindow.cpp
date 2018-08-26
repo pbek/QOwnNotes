@@ -5286,14 +5286,18 @@ void MainWindow::on_actionCheck_for_updates_triggered() {
  * Open the issue page
  */
 void MainWindow::on_actionReport_problems_or_ideas_triggered() {
-    QDesktopServices::openUrl(QUrl("https://github.com/pbek/QOwnNotes/issues"));
+//    QDesktopServices::openUrl(QUrl("https://github.com/pbek/QOwnNotes/issues"));
 
-//    if (_issueAssistantDialog == Q_NULLPTR) {
-//        _issueAssistantDialog = new IssueAssistantDialog(this);
-//    } else {
-//    }
-//
-//    _issueAssistantDialog->show();
+    openIssueAssistantDialog();
+}
+
+void MainWindow::openIssueAssistantDialog() {
+    if (_issueAssistantDialog == Q_NULLPTR) {
+        _issueAssistantDialog = new IssueAssistantDialog(this);
+    } else {
+    }
+
+    _issueAssistantDialog->show();
 }
 
 void MainWindow::on_actionAlphabetical_triggered(bool checked) {
@@ -10360,4 +10364,20 @@ void MainWindow::on_noteOperationsButton_clicked() {
 QString MainWindow::getLogText() {
     auto *widget = dynamic_cast<LogWidget*>(_logDockWidget->widget());
     return widget->getLogText();
+}
+
+/**
+ * Enables all logging and shows the log panel
+ */
+void MainWindow::turnOnDebugLogging() {
+    QSettings settings;
+    settings.setValue("LogWidget/debugLog", true);
+    settings.setValue("LogWidget/infoLog", true);
+    settings.setValue("LogWidget/warningLog", true);
+    settings.setValue("LogWidget/criticalLog", true);
+    settings.setValue("LogWidget/fatalLog", true);
+    settings.setValue("LogWidget/statusLog", true);
+    settings.setValue("LogWidget/scriptingLog", true);
+
+    _logDockWidget->show();
 }

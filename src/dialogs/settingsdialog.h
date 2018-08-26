@@ -242,6 +242,8 @@ private slots:
 
     void on_importSettingsButton_clicked();
 
+    void on_issueAssistantPushButton_clicked();
+
 private:
 
     Ui::SettingsDialog *ui;
@@ -271,8 +273,6 @@ private:
     void setFontLabel(QLineEdit *label, QFont font);
 
     void outputSettings();
-
-    QString prepareDebugInformationLine(QString headline, QString data);
 
     static void selectListWidgetValue(QListWidget *listWidget, QString value);
 
@@ -345,6 +345,8 @@ private:
     void initSearchEngineComboBox() const;
 
     QKeySequenceWidget *findKeySequenceWidget(QString objectName);
+
+    void storeOwncloudDebugData() const;
 };
 
 #endif // SETTINGSDIALOG_H

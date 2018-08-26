@@ -33,11 +33,19 @@ private slots:
 
     void on_backButton_clicked();
 
-    void on_finishButton_clicked();
-
     void on_issueTypeComboBox_currentIndexChanged(int index);
 
     void on_refreshLogButton_clicked();
+
+    void on_postButton_clicked();
+
+    void allowIssuePageNextButton() const;
+
+    void on_cancelButton_clicked();
+
+    void on_searchIssueButton_clicked();
+
+    void on_newIssueButton_clicked();
 
 private:
     Ui::IssueAssistantDialog *ui;
@@ -45,4 +53,6 @@ private:
     void refreshLogOutput() const;
 
     void generateSubmitPageContent() const;
+
+    void refreshPage(int index) const;
 };
