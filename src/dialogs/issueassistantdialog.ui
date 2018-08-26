@@ -454,7 +454,7 @@
        <item row="2" column="0" colspan="3">
         <widget class="QLabel" name="label">
          <property name="text">
-          <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The issue text will be copied to your clipboard. The webpage to create a &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues/new&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#2980b9;&quot;&gt;new issue&lt;/span&gt;&lt;/a&gt; will open, and you will need to &lt;span style=&quot; font-weight:600;&quot;&gt;paste the issue text&lt;/span&gt; manually and then submit it.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The issue text will be copied to your clipboard. Then the webpage to create a &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues/new&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#2980b9;&quot;&gt;new issue&lt;/span&gt;&lt;/a&gt; will open and you will need to &lt;span style=&quot; font-weight:600;&quot;&gt;paste the issue text&lt;/span&gt; manually and submit the issue.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="wordWrap">
           <bool>true</bool>
