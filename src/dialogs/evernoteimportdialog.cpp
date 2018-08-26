@@ -660,7 +660,7 @@ void EvernoteImportDialog::setupMetaDataTreeWidgetItems() {
             "note-attributes/author", noteAttributesItem);
     addMetaDataTreeWidgetItem(tr("Source"),
             "note-attributes/source", noteAttributesItem);
-    addMetaDataTreeWidgetItem(tr("Source url"),
+    addMetaDataTreeWidgetItem(tr("Source URL"),
             "note-attributes/source-url", noteAttributesItem);
     addMetaDataTreeWidgetItem(tr("Source application"),
             "note-attributes/source-application", noteAttributesItem);

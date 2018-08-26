@@ -132,8 +132,12 @@
     </message>
     <message>
         <location filename="../dialogs/evernoteimportdialog.cpp" line="663"/>
+        <source>Source URL</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Source url</source>
-        <translation>Url sumber</translation>
+        <translation type="vanished">Url sumber</translation>
     </message>
     <message>
         <location filename="../dialogs/evernoteimportdialog.cpp" line="665"/>
