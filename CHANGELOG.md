@@ -4,7 +4,7 @@
 - there now is a new **Issue assistant** to post questions, feature requests or problems
     - you will find it in the *Help menu*
     - it will guide you to the steps to enter information and gathers all 
-    needed data to post an issue on the [Issue page](https://github.com/pbek/QOwnNotes/issues/new)
+      needed data to post an issue on the [Issue page](https://github.com/pbek/QOwnNotes/issues/new)
 - added more German, Hungarian and Dutch translation (thank you rakekniven and Fabijenna)
 
 ## 18.08.8
