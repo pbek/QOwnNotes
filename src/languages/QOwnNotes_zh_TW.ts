@@ -133,7 +133,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="663"/>
       <source>Source URL</source>
-      <translation type="unfinished">Source URL</translation>
+      <translation>來源網址</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="665"/>
@@ -143,32 +143,32 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="667"/>
       <source>Reminder order</source>
-      <translation type="unfinished">Reminder order</translation>
+      <translation>提醒順序</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="669"/>
       <source>Reminder time</source>
-      <translation type="unfinished">Reminder time</translation>
+      <translation>提醒時間</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="671"/>
       <source>Reminder done time</source>
-      <translation type="unfinished">Reminder done time</translation>
+      <translation>提醒完成時間</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="673"/>
       <source>Place name</source>
-      <translation type="unfinished">Place name</translation>
+      <translation>地點名稱</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="675"/>
       <source>Content class</source>
-      <translation type="unfinished">Content class</translation>
+      <translation>內容類別</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="677"/>
       <source>Application data</source>
-      <translation type="unfinished">Application data</translation>
+      <translation>程式資料</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="751"/>
@@ -1111,12 +1111,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1296"/>
       <source>Post questions, feature requests or problems</source>
-      <translation type="unfinished">Post questions, feature requests or problems</translation>
+      <translation>張貼問題或功能請求</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1299"/>
       <source>Post questions, feature requests or problems with the help of the issue assistant</source>
-      <translation type="unfinished">Post questions, feature requests or problems with the help of the issue assistant</translation>
+      <translation>使用問題助理張貼問題或功能請求</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1357"/>
@@ -3042,8 +3042,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../entities/note.cpp" line="2749"/>
       <source>…and %n more note(s)</source>
-      <translation type="unfinished">
-        <numerusform>…and %n more note(s)</numerusform>
+      <translation>
+        <numerusform>…以及%n則筆記</numerusform>
       </translation>
     </message>
     <message>
@@ -4334,12 +4334,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3740"/>
       <source>Open issue assistant</source>
-      <translation type="unfinished">Open issue assistant</translation>
+      <translation>啟動問題助手</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3751"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;張貼問題最棒的方法是透過下方的&lt;span style=" font-weight:600;"&gt;「啟動問題助理」&lt;/span&gt;按打開問題助理。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4307"/>

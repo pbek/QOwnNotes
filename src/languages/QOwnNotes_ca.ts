@@ -28,7 +28,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="121"/>
       <source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</source>
-      <translation type="unfinished">To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</translation>
+      <translation>Per obtenir un fitxer enex us cal seleccionar una o diverses notes al programa d'escriptori Evernotes i clicar "Exportar notes..." al menú Fitxer.</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="74"/>
@@ -38,7 +38,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="30"/>
       <source>Select file</source>
-      <translation type="unfinished">Select file</translation>
+      <translation>Seleccioneu el fitxer</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="54"/>
@@ -48,12 +48,12 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="91"/>
       <source>Metadata to import</source>
-      <translation type="unfinished">Metadata to import</translation>
+      <translation>Metadades per importar</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="165"/>
       <source>Import notes</source>
-      <translation type="unfinished">Import notes</translation>
+      <translation>Importa notes</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="23"/>
@@ -83,102 +83,102 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="644"/>
       <source>Basic attributes</source>
-      <translation type="unfinished">Basic attributes</translation>
+      <translation>Atributs bàsics</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="645"/>
       <source>Created date</source>
-      <translation type="unfinished">Created date</translation>
+      <translation>Creat el</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="647"/>
       <source>Updated date</source>
-      <translation type="unfinished">Updated date</translation>
+      <translation>Modificat el</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="650"/>
       <source>Note attributes</source>
-      <translation type="unfinished">Note attributes</translation>
+      <translation>Atributs de la nota</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="651"/>
       <source>Subject date</source>
-      <translation type="unfinished">Subject date</translation>
+      <translation>Data del títol</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="653"/>
       <source>Latitude</source>
-      <translation type="unfinished">Latitude</translation>
+      <translation>Latitud</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="655"/>
       <source>Longitude</source>
-      <translation type="unfinished">Longitude</translation>
+      <translation>Longitud</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="657"/>
       <source>Altitude</source>
-      <translation type="unfinished">Altitude</translation>
+      <translation>Altitud</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="659"/>
       <source>Author</source>
-      <translation type="unfinished">Author</translation>
+      <translation>Autor</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="661"/>
       <source>Source</source>
-      <translation type="unfinished">Source</translation>
+      <translation>Font</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="663"/>
       <source>Source URL</source>
-      <translation type="unfinished">Source URL</translation>
+      <translation>URL de la font</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="665"/>
       <source>Source application</source>
-      <translation type="unfinished">Source application</translation>
+      <translation>Aplicació d'origen</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="667"/>
       <source>Reminder order</source>
-      <translation type="unfinished">Reminder order</translation>
+      <translation>Ordre de recordatori</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="669"/>
       <source>Reminder time</source>
-      <translation type="unfinished">Reminder time</translation>
+      <translation>Hora del recordatori</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="671"/>
       <source>Reminder done time</source>
-      <translation type="unfinished">Reminder done time</translation>
+      <translation>Hora del recordatori efectuat</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="673"/>
       <source>Place name</source>
-      <translation type="unfinished">Place name</translation>
+      <translation>Nom del lloc</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="675"/>
       <source>Content class</source>
-      <translation type="unfinished">Content class</translation>
+      <translation>Classe del contingut</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="677"/>
       <source>Application data</source>
-      <translation type="unfinished">Application data</translation>
+      <translation>Dades d'aplicació</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="751"/>
       <source>Attribute</source>
-      <translation type="unfinished">Attribute</translation>
+      <translation>Atribut</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="751"/>
       <source>Value</source>
-      <translation type="unfinished">Value</translation>
+      <translation>Valor</translation>
     </message>
   </context>
   <context>
@@ -371,7 +371,7 @@
     <message>
       <location filename="../helpers/fakevimproxy.cpp" line="26"/>
       <source>Information</source>
-      <translation type="unfinished">Information</translation>
+      <translation>Informació</translation>
     </message>
   </context>
   <context>
@@ -1115,17 +1115,17 @@
     <message>
       <location filename="../mainwindow.ui" line="1260"/>
       <source>About &amp;QOwnNotes…</source>
-      <translation type="unfinished">About &amp;QOwnNotes…</translation>
+      <translation>Sobre &amp;QOwnNotes…</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1296"/>
       <source>Post questions, feature requests or problems</source>
-      <translation type="unfinished">Post questions, feature requests or problems</translation>
+      <translation>Enviar preguntes, peticions de noves funcionalitats o problemes</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1299"/>
       <source>Post questions, feature requests or problems with the help of the issue assistant</source>
-      <translation type="unfinished">Post questions, feature requests or problems with the help of the issue assistant</translation>
+      <translation>Enviar preguntes, peticions de noves funcionalitats o problemes amb l'ajuda de l'assistent</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1357"/>
@@ -1540,7 +1540,7 @@
     <message>
       <location filename="../mainwindow.ui" line="489"/>
       <source>Note operations…</source>
-      <translation type="unfinished">Note operations…</translation>
+      <translation>Operacions de la nota…</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1508"/>
@@ -1978,7 +1978,7 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
     <message>
       <location filename="../mainwindow.cpp" line="7600"/>
       <source>&amp;Move tags to…</source>
-      <translation type="unfinished">&amp;Move tags to…</translation>
+      <translation>Mou les etiquetes a…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7819"/>
@@ -2025,32 +2025,32 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
     <message>
       <location filename="../mainwindow.cpp" line="8698"/>
       <source>&amp;Move notes to…</source>
-      <translation type="unfinished">&amp;Move notes to…</translation>
+      <translation>Mou les notes a…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8699"/>
       <source>&amp;Copy notes to…</source>
-      <translation type="unfinished">&amp;Copy notes to…</translation>
+      <translation>Copia les notes a…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8728"/>
       <source>Move notes to subfolder…</source>
-      <translation type="unfinished">Move notes to subfolder…</translation>
+      <translation>Mou notes a la subcarpeta…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8732"/>
       <source>Copy notes to subfolder…</source>
-      <translation type="unfinished">Copy notes to subfolder…</translation>
+      <translation>Copia notes a la subcarpeta…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8740"/>
       <source>&amp;Tag selected notes with…</source>
-      <translation type="unfinished">&amp;Tag selected notes with…</translation>
+      <translation>Etiqueta les notes seleccionades amb…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8762"/>
       <source>&amp;Remove tag from selected notes…</source>
-      <translation type="unfinished">&amp;Remove tag from selected notes…</translation>
+      <translation>Elimina l'etiqueta de les notes seleccionades…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8853"/>
@@ -3074,9 +3074,9 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
     <message numerus="yes">
       <location filename="../entities/note.cpp" line="2749"/>
       <source>…and %n more note(s)</source>
-      <translation type="unfinished">
-        <numerusform>…and %n more note(s)</numerusform>
-        <numerusform>…and %n more note(s)</numerusform>
+      <translation>
+        <numerusform>... i %n nota(es) més</numerusform>
+        <numerusform>... i %n nota(es) més</numerusform>
       </translation>
     </message>
     <message>
@@ -4313,7 +4313,7 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2688"/>
       <source>&amp;Add script…</source>
-      <translation type="unfinished">&amp;Add script…</translation>
+      <translation>Afegir script…</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3215"/>
@@ -4356,23 +4356,23 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
       <location filename="../dialogs/settingsdialog.cpp" line="3533"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3556"/>
       <source>Import settings</source>
-      <translation type="unfinished">Import settings</translation>
+      <translation>Configuració d'importació</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3601"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3499"/>
       <source>Export settings</source>
-      <translation type="unfinished">Export settings</translation>
+      <translation>Configuració d'exportació</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3740"/>
       <source>Open issue assistant</source>
-      <translation type="unfinished">Open issue assistant</translation>
+      <translation>Obrir l'assistent de qüestions</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3751"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;La millor manera de publicar qüestions és usar l'assistent de qüestions prement el botó &lt;span style=" font-weight:600;"&gt;Obrir assistent de qüestions&lt;/span&gt; a la part inferior.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4307"/>
@@ -5202,22 +5202,22 @@ Missatge de l'error de connexió: </translation>
       <location filename="../dialogs/settingsdialog.cpp" line="3498"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3555"/>
       <source>INI files</source>
-      <translation type="unfinished">INI files</translation>
+      <translation>Arxius INI</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3534"/>
       <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
-      <translation type="unfinished">Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</translation>
+      <translation>De veritat voleu importar la configuració? La vostra configuració actual s'eliminarà i pot ser que no totes les configuracions quedin restaurades, com per exemple la configuració de la carpeta de notes i quins scripts hi useu. Necessitareu també ajustar alguns paràmetres, especialment entre plataformes, tot i que les notes quedaran intactes!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3544"/>
       <source>The application will be quit after the import.</source>
-      <translation type="unfinished">The application will be quit after the import.</translation>
+      <translation>L'aplicació es tancarà després de la importació.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3545"/>
       <source>The application will be restarted after the import.</source>
-      <translation type="unfinished">The application will be restarted after the import.</translation>
+      <translation>L'aplicació es rearrencarà després de la importació.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2427"/>
@@ -5614,7 +5614,7 @@ Les notes seguiran intactes!</translation>
     <message>
       <location filename="../dialogs/tododialog.ui" line="222"/>
       <source>Note…</source>
-      <translation type="unfinished">Note…</translation>
+      <translation>Nota…</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="100"/>
@@ -5639,7 +5639,7 @@ Les notes seguiran intactes!</translation>
     <message>
       <location filename="../dialogs/tododialog.ui" line="288"/>
       <source>Reload…</source>
-      <translation type="unfinished">Reload…</translation>
+      <translation>Recarrega…</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="319"/>

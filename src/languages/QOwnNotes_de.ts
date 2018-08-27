@@ -133,7 +133,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="663"/>
       <source>Source URL</source>
-      <translation type="unfinished">Source URL</translation>
+      <translation>Quell-URL</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="665"/>
@@ -1120,12 +1120,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1296"/>
       <source>Post questions, feature requests or problems</source>
-      <translation type="unfinished">Post questions, feature requests or problems</translation>
+      <translation>Schreibe bei Fragen, Verbesserungsvorschlägen oder Problemen</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1299"/>
       <source>Post questions, feature requests or problems with the help of the issue assistant</source>
-      <translation type="unfinished">Post questions, feature requests or problems with the help of the issue assistant</translation>
+      <translation>Schreibe bei Fragen, Verbesserungsvorschlägen oder Problemen mit der Hilfe des Frage-Assistenten</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1357"/>
@@ -4368,12 +4368,12 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3740"/>
       <source>Open issue assistant</source>
-      <translation type="unfinished">Open issue assistant</translation>
+      <translation>Frage-Assistent öffnen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3751"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nutzen Sie den Frage-Assistenten um ein Thema zu schreiben. Drücken Sie dazu den Knopf &lt;span style=" font-weight:600;"&gt;Frage-Assistent öffnen&lt;/span&gt; weiter unten.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4307"/>

@@ -28,7 +28,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="121"/>
       <source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</source>
-      <translation type="unfinished">To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</translation>
+      <translation>Para obtener un archivo enex necesitarás seleccionar una o varias notas en tu cliente de escritorio de Evernote y hacer clic en "Exportar notas…" en el menú Archivo.</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="74"/>
@@ -38,7 +38,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="30"/>
       <source>Select file</source>
-      <translation type="unfinished">Select file</translation>
+      <translation>Selecciona el archivo</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="54"/>
@@ -48,12 +48,12 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="91"/>
       <source>Metadata to import</source>
-      <translation type="unfinished">Metadata to import</translation>
+      <translation>Metadatos para importar</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="165"/>
       <source>Import notes</source>
-      <translation type="unfinished">Import notes</translation>
+      <translation>Importar notas</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="23"/>
@@ -83,102 +83,102 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="644"/>
       <source>Basic attributes</source>
-      <translation type="unfinished">Basic attributes</translation>
+      <translation>Atributos básicos</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="645"/>
       <source>Created date</source>
-      <translation type="unfinished">Created date</translation>
+      <translation>Fecha de creación</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="647"/>
       <source>Updated date</source>
-      <translation type="unfinished">Updated date</translation>
+      <translation>Fecha de actualización</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="650"/>
       <source>Note attributes</source>
-      <translation type="unfinished">Note attributes</translation>
+      <translation>Atributos de la nota</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="651"/>
       <source>Subject date</source>
-      <translation type="unfinished">Subject date</translation>
+      <translation>Fecha del asunto</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="653"/>
       <source>Latitude</source>
-      <translation type="unfinished">Latitude</translation>
+      <translation>Latitud</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="655"/>
       <source>Longitude</source>
-      <translation type="unfinished">Longitude</translation>
+      <translation>Longitud</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="657"/>
       <source>Altitude</source>
-      <translation type="unfinished">Altitude</translation>
+      <translation>Altitud</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="659"/>
       <source>Author</source>
-      <translation type="unfinished">Author</translation>
+      <translation>Autor</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="661"/>
       <source>Source</source>
-      <translation type="unfinished">Source</translation>
+      <translation>Origen</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="663"/>
       <source>Source URL</source>
-      <translation type="unfinished">Source URL</translation>
+      <translation>URL de origen</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="665"/>
       <source>Source application</source>
-      <translation type="unfinished">Source application</translation>
+      <translation>Aplicación de origen</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="667"/>
       <source>Reminder order</source>
-      <translation type="unfinished">Reminder order</translation>
+      <translation>Orden de recordatorio</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="669"/>
       <source>Reminder time</source>
-      <translation type="unfinished">Reminder time</translation>
+      <translation>Hora de recordatorio</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="671"/>
       <source>Reminder done time</source>
-      <translation type="unfinished">Reminder done time</translation>
+      <translation>Hora de fin de recordatorio</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="673"/>
       <source>Place name</source>
-      <translation type="unfinished">Place name</translation>
+      <translation>Nombre del lugar</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="675"/>
       <source>Content class</source>
-      <translation type="unfinished">Content class</translation>
+      <translation>Clase de contenido</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="677"/>
       <source>Application data</source>
-      <translation type="unfinished">Application data</translation>
+      <translation>Datos de la aplicación</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="751"/>
       <source>Attribute</source>
-      <translation type="unfinished">Attribute</translation>
+      <translation>Atributo</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="751"/>
       <source>Value</source>
-      <translation type="unfinished">Value</translation>
+      <translation>Valor</translation>
     </message>
   </context>
   <context>
@@ -1115,17 +1115,17 @@
     <message>
       <location filename="../mainwindow.ui" line="1260"/>
       <source>About &amp;QOwnNotes…</source>
-      <translation type="unfinished">About &amp;QOwnNotes…</translation>
+      <translation>Acerca de QOwnNotes…</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1296"/>
       <source>Post questions, feature requests or problems</source>
-      <translation type="unfinished">Post questions, feature requests or problems</translation>
+      <translation>Publicar preguntas, peticiones o problemas</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1299"/>
       <source>Post questions, feature requests or problems with the help of the issue assistant</source>
-      <translation type="unfinished">Post questions, feature requests or problems with the help of the issue assistant</translation>
+      <translation>Publicar preguntas, solicitudes o problemas con la ayuda del asistente de informes</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1357"/>
@@ -1540,7 +1540,7 @@
     <message>
       <location filename="../mainwindow.ui" line="489"/>
       <source>Note operations…</source>
-      <translation type="unfinished">Note operations…</translation>
+      <translation>Operar sobre las notas…</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1508"/>
@@ -1979,7 +1979,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
     <message>
       <location filename="../mainwindow.cpp" line="7600"/>
       <source>&amp;Move tags to…</source>
-      <translation type="unfinished">&amp;Move tags to…</translation>
+      <translation>&amp;Mover etiquetas a…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7819"/>
@@ -2026,32 +2026,32 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
     <message>
       <location filename="../mainwindow.cpp" line="8698"/>
       <source>&amp;Move notes to…</source>
-      <translation type="unfinished">&amp;Move notes to…</translation>
+      <translation>&amp;Mover notas a…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8699"/>
       <source>&amp;Copy notes to…</source>
-      <translation type="unfinished">&amp;Copy notes to…</translation>
+      <translation>&amp;Copiar notas a…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8728"/>
       <source>Move notes to subfolder…</source>
-      <translation type="unfinished">Move notes to subfolder…</translation>
+      <translation>Mover notas a subcarpeta…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8732"/>
       <source>Copy notes to subfolder…</source>
-      <translation type="unfinished">Copy notes to subfolder…</translation>
+      <translation>Copiar notas a subcarpeta…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8740"/>
       <source>&amp;Tag selected notes with…</source>
-      <translation type="unfinished">&amp;Tag selected notes with…</translation>
+      <translation>E&amp;tiquetar notas seleccionadas con…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8762"/>
       <source>&amp;Remove tag from selected notes…</source>
-      <translation type="unfinished">&amp;Remove tag from selected notes…</translation>
+      <translation>Elimina&amp;r etiqueta de las notas seleccionadas…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8853"/>
@@ -3075,9 +3075,9 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
     <message numerus="yes">
       <location filename="../entities/note.cpp" line="2749"/>
       <source>…and %n more note(s)</source>
-      <translation type="unfinished">
-        <numerusform>…and %n more note(s)</numerusform>
-        <numerusform>…and %n more note(s)</numerusform>
+      <translation>
+        <numerusform>…y %n nota más</numerusform>
+        <numerusform>…y %n notas más</numerusform>
       </translation>
     </message>
     <message>
@@ -4312,7 +4312,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2688"/>
       <source>&amp;Add script…</source>
-      <translation type="unfinished">&amp;Add script…</translation>
+      <translation>&amp;Añadir script…</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3215"/>
@@ -4366,12 +4366,12 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3740"/>
       <source>Open issue assistant</source>
-      <translation type="unfinished">Open issue assistant</translation>
+      <translation>Abrir el asistente de informes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3751"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;La mejor forma de publicar informes es utilizar al asistente de informes pulsando el botón &lt;span style=" font-weight:600;"&gt;Abrir el asistente de informes&lt;/span&gt; en la parte inferior.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4307"/>
@@ -5608,7 +5608,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tododialog.ui" line="222"/>
       <source>Note…</source>
-      <translation type="unfinished">Note…</translation>
+      <translation>Nota…</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="100"/>
@@ -5633,7 +5633,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tododialog.ui" line="288"/>
       <source>Reload…</source>
-      <translation type="unfinished">Reload…</translation>
+      <translation>Volver a cargar…</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="319"/>

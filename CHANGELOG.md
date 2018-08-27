@@ -10,6 +10,8 @@
       was updated
 - the **Find action** dialog now searches for every entered word (for [#1007](https://github.com/pbek/QOwnNotes/issues/1007))
     - all menu items that have one of the words in them will be shown
+- added more Spanish, Italian, Chinese Traditional, Catalan and German
+  translation (thank you richarson, mlocati, abev66, MGuerra and rakekniven)
 
 ## 18.08.9
 - there now is a new **Issue assistant** to post questions, feature requests or problems
