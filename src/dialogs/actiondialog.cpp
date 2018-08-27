@@ -49,7 +49,7 @@ void ActionDialog::buildActionTreeForMenu(QMenu *menu,
         return;
     }
 
-    QTreeWidgetItem *menuItem = new QTreeWidgetItem();
+    auto *menuItem = new QTreeWidgetItem();
     menuItem->setText(0, menuText);
 
     if (parentItem == Q_NULLPTR) {
@@ -77,7 +77,7 @@ void ActionDialog::buildActionTreeForMenu(QMenu *menu,
                 continue;
             }
 
-            QTreeWidgetItem *item = new QTreeWidgetItem();
+            auto *item = new QTreeWidgetItem();
             item->setData(0, Qt::UserRole, actionName);
             item->setText(0, text);
             item->setToolTip(0, action->toolTip());
@@ -145,7 +145,8 @@ void ActionDialog::on_actionLineEdit_textChanged(const QString &arg1) {
             ui->actionTreeWidget, arg1,
             Utils::Gui::TreeWidgetSearchFlags(
                     Utils::Gui::TreeWidgetSearchFlag::TooltipSearch |
-                    Utils::Gui::TreeWidgetSearchFlag::AllColumnsSearch));
+                    Utils::Gui::TreeWidgetSearchFlag::AllColumnsSearch |
+                    Utils::Gui::TreeWidgetSearchFlag::EveryWordSearch));
 }
 
 /**

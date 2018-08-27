@@ -31,7 +31,10 @@ namespace Utils {
             TooltipSearch = 0x0002,
 
             // search in all columns
-            AllColumnsSearch = 0x0004
+            AllColumnsSearch = 0x0004,
+
+            // search for every word in the search text
+            EveryWordSearch = 0x0008
         };
 
         Q_DECLARE_FLAGS(TreeWidgetSearchFlags, TreeWidgetSearchFlag)

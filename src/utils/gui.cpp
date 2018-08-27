@@ -42,6 +42,14 @@ bool Utils::Gui::isOneTreeWidgetItemChildVisible(QTreeWidgetItem *item) {
 void Utils::Gui::searchForTextInTreeWidget(QTreeWidget *treeWidget,
                                            QString text,
                                            TreeWidgetSearchFlags searchFlags) {
+    QStringList searchList;
+
+    if (searchFlags & TreeWidgetSearchFlag::EveryWordSearch) {
+        searchList = text.split(QRegularExpression("\\s+"));
+    } else {
+        searchList << text;
+    }
+
     // get all items
     QList<QTreeWidgetItem*> allItems = treeWidget->
             findItems("", Qt::MatchContains | Qt::MatchRecursive);
@@ -58,14 +66,17 @@ void Utils::Gui::searchForTextInTreeWidget(QTreeWidget *treeWidget,
 
                 // look in all columns that we want to search
                 for (int index = 0; index < searchColumnCount; index++) {
-                    // search for text in the columns
-                    show |= item->text(index).contains(
-                            text, Qt::CaseInsensitive);
+                    foreach(QString searchText, searchList) {
+                            // search for text in the columns
+                            show |= item->text(index).contains(
+                                    searchText, Qt::CaseInsensitive);
 
-                    // also show the item if the text was found in the tooltip
-                    if (searchFlags & TreeWidgetSearchFlag::TooltipSearch) {
-                        show |= item->toolTip(index).contains(
-                                text, Qt::CaseInsensitive);
+                            // also show the item if the text was found in the tooltip
+                            if (searchFlags &
+                                TreeWidgetSearchFlag::TooltipSearch) {
+                                show |= item->toolTip(index).contains(
+                                        searchText, Qt::CaseInsensitive);
+                            }
                     }
                 }
 
