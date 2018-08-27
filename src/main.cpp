@@ -64,7 +64,7 @@
  * Does the miscellaneous startup
  * If false is returned the app is supposed to quit
  */
-bool mainStartupMisc(const QStringList arguments) {
+bool mainStartupMisc(const QStringList &arguments) {
     QCommandLineParser parser;
     parser.setApplicationDescription("QOwnNotes " + QString(VERSION));
     const QCommandLineOption helpOption = parser.addHelpOption();
@@ -72,6 +72,12 @@ bool mainStartupMisc(const QStringList arguments) {
             "portable", QCoreApplication::translate("main", "Runs the "
                     "application in portable mode."));
     parser.addOption(portableOption);
+    const QCommandLineOption dumpSettingsOption(
+            "dump-settings", QCoreApplication::translate("main", "Prints out "
+                    "a dump of the settings and other information about the "
+                    "application and environment in GitHub Markdown and exits "
+                    "the application."));
+    parser.addOption(dumpSettingsOption);
     const QCommandLineOption clearSettingsOption(
             "clear-settings", QCoreApplication::translate("main", "Clears the "
                     "settings and runs the application."));
@@ -197,6 +203,12 @@ bool mainStartupMisc(const QStringList arguments) {
 
     // try to create note folders if they are missing
     NoteFolder::migrateToNoteFolders();
+
+    if (parser.isSet(dumpSettingsOption)) {
+        fprintf(stdout, "%s\n",
+                Utils::Misc::generateDebugInformation().toLocal8Bit().constData());
+        exit(0);
+    }
 
     return true;
 }

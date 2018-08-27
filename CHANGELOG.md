@@ -2,7 +2,12 @@
 
 ## 18.08.10
 - some restructuring of the **Issue assistant** was made and some additional
-  information to help the user was provided 
+  information to help the user was provided
+- added a new cli parameter `--dump-settings` that pout a dump of the settings
+  and other information about the application and environment in GitHub Markdown
+  and exits the application
+    - the documentation page [Command line interface parameters](http://docs.qownnotes.org/en/develop/cli-parameters.html)
+      was updated
 
 ## 18.08.9
 - there now is a new **Issue assistant** to post questions, feature requests or problems

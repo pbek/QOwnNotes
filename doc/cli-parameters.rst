@@ -12,6 +12,9 @@ You can use these parameters on the command line interface:
 +---------------------+------------------------------------------------------------------------------+
 | `--clear-settings`  | Clears the settings and runs the application                                 |
 +---------------------+------------------------------------------------------------------------------+
+| `--dump-settings`   | Prints out a dump of the settings and other information about the            |
+|                     | application and environment in GitHub Markdown and exits the application     |
++---------------------+------------------------------------------------------------------------------+
 | `--session <name>`  | Runs the application in a different context for settings and internal files  |
 +---------------------+------------------------------------------------------------------------------+
 
