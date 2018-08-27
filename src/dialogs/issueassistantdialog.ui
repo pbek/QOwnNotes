@@ -214,14 +214,14 @@
        <item row="0" column="1">
         <widget class="QGroupBox" name="issueTypeGroupBox">
          <property name="title">
-          <string notr="true">Type of issue</string>
+          <string notr="true">Type of inquiry</string>
          </property>
          <layout class="QGridLayout" name="gridLayout_3">
           <item row="0" column="0">
            <widget class="QComboBox" name="issueTypeComboBox">
             <item>
              <property name="text">
-              <string notr="true">Question</string>
+              <string notr="true">Issue</string>
              </property>
             </item>
             <item>
@@ -231,7 +231,7 @@
             </item>
             <item>
              <property name="text">
-              <string notr="true">Problem</string>
+              <string notr="true">General question</string>
              </property>
             </item>
            </widget>
@@ -254,7 +254,7 @@
        <item row="2" column="1">
         <widget class="QGroupBox" name="questionGroupBox">
          <property name="title">
-          <string notr="true">State your question</string>
+          <string notr="true">State your general question</string>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_3">
           <item>

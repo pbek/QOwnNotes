@@ -20,9 +20,9 @@ public:
     };
 
     enum IssueTypes {
-        QuestionIssueType,
+        ProblemIssueType,
         FeatureRequestIssueType,
-        ProblemIssueType
+        QuestionIssueType,
     };
 
     explicit IssueAssistantDialog(QWidget *parent = nullptr);
@@ -40,6 +40,10 @@ private slots:
     void on_postButton_clicked();
 
     void allowIssuePageNextButton() const;
+
+    void allowLogPageNextButton() const;
+
+    void allowDebugSettingsPageNextButton() const;
 
     void on_cancelButton_clicked();
 

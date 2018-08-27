@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 18.08.10
+- some restructuring of the **Issue assistant** was made and some additional
+  information to help the user was provided 
+
 ## 18.08.9
 - there now is a new **Issue assistant** to post questions, feature requests or problems
     - you will find it in the *Help menu*

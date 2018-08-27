@@ -18,7 +18,7 @@ IssueAssistantDialog::IssueAssistantDialog(QWidget *parent) :
     ui->nextButton->setEnabled(false);
 
     ui->stackedWidget->setCurrentIndex(IssueAssistantPages::IssuePage);
-    on_issueTypeComboBox_currentIndexChanged(QuestionIssueType);
+    on_issueTypeComboBox_currentIndexChanged(ProblemIssueType);
     ui->logOutputPlainTextEdit->setHighlightingEnabled(false);
 
     QObject::connect(ui->titleLineEdit, SIGNAL(textChanged(QString)),
@@ -31,6 +31,10 @@ IssueAssistantDialog::IssueAssistantDialog(QWidget *parent) :
                      this, SLOT(allowIssuePageNextButton()));
     QObject::connect(ui->stepsPlainTextEdit, SIGNAL(textChanged()),
                      this, SLOT(allowIssuePageNextButton()));
+    QObject::connect(ui->logOutputPlainTextEdit, SIGNAL(textChanged()),
+                     this, SLOT(allowLogPageNextButton()));
+    QObject::connect(ui->debugOutputPlainTextEdit, SIGNAL(textChanged()),
+                     this, SLOT(allowDebugSettingsPageNextButton()));
 }
 
 IssueAssistantDialog::~IssueAssistantDialog() {
@@ -76,9 +80,30 @@ void IssueAssistantDialog::allowIssuePageNextButton() const {
     ui->nextButton->setEnabled(allow);
 }
 
+void IssueAssistantDialog::allowLogPageNextButton() const {
+    bool allow = true;
+
+    if (ui->issueTypeComboBox->currentIndex() == ProblemIssueType) {
+        allow = ui->logOutputPlainTextEdit->toPlainText().length() > 10;
+    }
+
+    ui->nextButton->setEnabled(allow);
+}
+
+void IssueAssistantDialog::allowDebugSettingsPageNextButton() const {
+    bool allow = true;
+
+    if (ui->issueTypeComboBox->currentIndex() == ProblemIssueType) {
+        allow = ui->debugOutputPlainTextEdit->toPlainText().length() > 100;
+    }
+
+    ui->nextButton->setEnabled(allow);
+}
+
 void IssueAssistantDialog::refreshPage(int index) const {
     switch(index) {
         case LogOutputPage:
+            ui->nextButton->setEnabled(false);
             if (ui->logOutputPlainTextEdit->toPlainText().isEmpty()) {
                 refreshLogOutput();
             }
@@ -119,7 +144,7 @@ void IssueAssistantDialog::generateSubmitPageContent() const {
             title = "[F]";
             break;
         case ProblemIssueType:
-            title = "[P]";
+            title = "[I]";
             break;
         default:
             break;
@@ -132,7 +157,7 @@ void IssueAssistantDialog::generateSubmitPageContent() const {
 
     switch(ui->issueTypeComboBox->currentIndex()) {
         case QuestionIssueType:
-            body += "#### Question\n\n" +
+            body += "#### General question\n\n" +
                 ui->questionPlainTextEdit->toPlainText().trimmed() +
                 "\n\n";
             break;
@@ -213,7 +238,8 @@ void IssueAssistantDialog::on_postButton_clicked() {
     QUrl url("https://github.com/pbek/QOwnNotes/issues/new?title=" +
         QUrl::toPercentEncoding(ui->submitTitleLineEdit->text()) + "&body=" +
         QUrl::toPercentEncoding("Please paste the text from the issue "
-                                "assistant here!"));
+                                "assistant here. It should be already in "
+                                "your clipboard."));
 
     // we cannot add the body, this would make the url too long
 //    + "&body=" + QUrl::toPercentEncoding(ui->bodyPlainTextEdit->toPlainText()));
