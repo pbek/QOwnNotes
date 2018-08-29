@@ -17,7 +17,7 @@
    <iconset resource="../images.qrc">
     <normaloff>:/images/icon.png</normaloff>:/images/icon.png</iconset>
   </property>
-  <layout class="QGridLayout" name="gridLayout">
+  <layout class="QGridLayout" name="gridLayout_1">
    <item row="0" column="0">
     <widget class="QLabel" name="subHeadlineLabel">
      <property name="text">
@@ -387,7 +387,7 @@
       </layout>
      </widget>
      <widget class="QWidget" name="submitPage">
-      <layout class="QGridLayout" name="gridLayout">
+      <layout class="QGridLayout" name="gridLayout_9">
        <item row="1" column="0" colspan="3">
         <widget class="QGroupBox" name="groupBox_4">
          <property name="title">
