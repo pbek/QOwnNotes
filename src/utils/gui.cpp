@@ -66,18 +66,24 @@ void Utils::Gui::searchForTextInTreeWidget(QTreeWidget *treeWidget,
 
                 // look in all columns that we want to search
                 for (int index = 0; index < searchColumnCount; index++) {
+                    bool loopShow = true;
+
                     foreach(QString searchText, searchList) {
                             // search for text in the columns
-                            show |= item->text(index).contains(
+                            bool loopShow2 = item->text(index).contains(
                                     searchText, Qt::CaseInsensitive);
 
                             // also show the item if the text was found in the tooltip
                             if (searchFlags &
                                 TreeWidgetSearchFlag::TooltipSearch) {
-                                show |= item->toolTip(index).contains(
+                                loopShow2 |= item->toolTip(index).contains(
                                         searchText, Qt::CaseInsensitive);
                             }
+
+                            loopShow &= loopShow2;
                     }
+
+                    show |= loopShow;
                 }
 
                 // also show the item if an integer id is greater than 0

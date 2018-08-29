@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 18.08.11
+- the **Find action** dialog now searches for every entered word on in `and`-fashion
+  (for [#1007](https://github.com/pbek/QOwnNotes/issues/1007))
+    - all menu items that have all of the entered words (or parts of them) in 
+      the name or tooltip will be shown
+
 ## 18.08.10
 - some restructuring of the **Issue assistant** was made and some additional
   information to help the user was provided
@@ -8,7 +14,8 @@
   Markdown and exits the application
     - the documentation page [Command line interface parameters](http://docs.qownnotes.org/en/develop/cli-parameters.html)
       was updated
-- the **Find action** dialog now searches for every entered word (for [#1007](https://github.com/pbek/QOwnNotes/issues/1007))
+- the **Find action** dialog now searches for every entered word in an `or`-fashion
+  (for [#1007](https://github.com/pbek/QOwnNotes/issues/1007))
     - all menu items that have one of the words in them will be shown
 - added more Spanish, Italian, Chinese Traditional, Catalan and German
   translation (thank you richarson, mlocati, abev66, MGuerra and rakekniven)
