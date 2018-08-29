@@ -5,6 +5,8 @@
   (for [#1007](https://github.com/pbek/QOwnNotes/issues/1007))
     - all menu items that have all of the entered words (or parts of them) in 
       the name or tooltip will be shown
+- attempted to fix a reloading of the notes list problem on some installations
+  after importing notes from Evernote (for [#1006](https://github.com/pbek/QOwnNotes/issues/1006))
 
 ## 18.08.10
 - some restructuring of the **Issue assistant** was made and some additional

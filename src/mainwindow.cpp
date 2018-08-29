@@ -9471,7 +9471,7 @@ void MainWindow::on_actionImport_notes_from_Evernote_triggered() {
 
     if (dialog->getImportCount() > 0) {
         // reload the note folder after importing new notes
-        buildNotesIndexAndLoadNoteDirectoryList(true);
+        buildNotesIndexAndLoadNoteDirectoryList(true, true);
     }
 
     delete(dialog);
