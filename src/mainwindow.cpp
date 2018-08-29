@@ -5194,7 +5194,7 @@ void MainWindow::on_noteTextView_anchorClicked(const QUrl &url) {
     qDebug() << __func__ << " - 'url': " << url;
     QString scheme = url.scheme();
 
-    if ((scheme == "note" || scheme == "task")) {
+    if ((scheme == "note" || scheme == "noteid" || scheme == "task")) {
         openLocalUrl(url.toString());
     } else {
         ui->noteTextEdit->openUrl(url.toString());
@@ -5239,7 +5239,22 @@ void MainWindow::openLocalUrl(QString urlString) {
     QUrl url = QUrl(urlString);
     QString scheme = url.scheme();
 
-    if (scheme == "note") {
+    if (scheme == "noteid") { // jump to a note by note id
+        QRegularExpressionMatch match =
+                QRegularExpression(R"(^noteid:\/\/note-(\d+)$)").match(
+                        urlString);
+
+        if (match.hasMatch()) {
+            int noteId = match.captured(1).toInt();
+            Note note = Note::fetch(noteId);
+            if (note.isFetched()) {
+                // set current note
+                setCurrentNote(note);
+            }
+        } else {
+            qDebug() << "malformed url: " << urlString;
+        }
+    } else if (scheme == "note") { // jump to a note url string
         // try to fetch a note from the url string
         Note note = Note::fetchByUrlString(urlString);
 

@@ -249,6 +249,8 @@ public:
 
     bool handleNoteTextFileName();
 
+    QString getNoteIdURL();
+
 protected:
     int id;
     QString name;

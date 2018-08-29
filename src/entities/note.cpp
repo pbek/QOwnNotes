@@ -2330,6 +2330,15 @@ const QString Note::getNoteURL(const QString &baseName) {
 }
 
 /**
+ * Returns the note-id url to a note
+ *
+ * @return
+ */
+QString Note::getNoteIdURL() {
+    return "noteid://note-" + QString::number(getId());
+}
+
+/**
  * Returns the url to a note from a file name
  *
  * @param fileName
@@ -2733,8 +2742,7 @@ QString Note::generateMultipleNotesPreviewText(QList<Note> notes) {
         QString oddStyle = isOdd ? " class='odd'" : "";
         QDateTime modified = note.getFileLastModified();
         QString noteText = note.getNotePreviewText(true, 5);
-        QString noteLink = getNoteURL(note.getName());
-        noteLink = Utils::Misc::appendIfDoesNotEndWith(noteLink, "@");
+        QString noteLink = note.getNoteIdURL();
 
         previewHtml +=
             "<tr><td" + oddStyle + ">"

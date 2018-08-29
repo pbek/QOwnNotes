@@ -7,6 +7,10 @@
       the name or tooltip will be shown
 - attempted to fix a reloading of the notes list problem on some installations
   after importing notes from Evernote (for [#1006](https://github.com/pbek/QOwnNotes/issues/1006))
+- when selecting multiple notes clicking on the headlines of the selected 
+  notes in the note preview will now jump to the note when using subfolders and
+  `All notes` was selected, even if the note wasn't in the same note subfolder
+  (for [#949](https://github.com/pbek/QOwnNotes/issues/949))
 
 ## 18.08.10
 - some restructuring of the **Issue assistant** was made and some additional
