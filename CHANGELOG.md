@@ -11,6 +11,8 @@
   notes in the note preview will now jump to the note when using subfolders and
   `All notes` was selected, even if the note wasn't in the same note subfolder
   (for [#949](https://github.com/pbek/QOwnNotes/issues/949))
+- added more Czech, Japanese, Indonesian and German translation (thank you
+  hruban, piyo and zmni)
 
 ## 18.08.10
 - some restructuring of the **Issue assistant** was made and some additional

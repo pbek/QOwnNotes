@@ -902,6 +902,11 @@
       <translation type="unfinished">Check for &amp;updates</translation>
     </message>
     <message>
+      <location filename="../mainwindow.ui" line="1296"/>
+      <source>Post questions, feature requests or issues</source>
+      <translation type="unfinished">Post questions, feature requests or issues</translation>
+    </message>
+    <message>
       <location filename="../mainwindow.ui" line="1307"/>
       <source>Alphabetical</source>
       <translation type="unfinished">Alphabetical</translation>
@@ -1116,11 +1121,6 @@
       <location filename="../mainwindow.ui" line="1260"/>
       <source>About &amp;QOwnNotes…</source>
       <translation type="unfinished">About &amp;QOwnNotes…</translation>
-    </message>
-    <message>
-      <location filename="../mainwindow.ui" line="1296"/>
-      <source>Post questions, feature requests or problems</source>
-      <translation type="unfinished">Post questions, feature requests or problems</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1299"/>
@@ -3093,12 +3093,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation type="unfinished">Workspace selector</translation>
     </message>
     <message>
-      <location filename="../utils/gui.cpp" line="191"/>
+      <location filename="../utils/gui.cpp" line="202"/>
       <source>Don't ask again!</source>
       <translation type="unfinished">Don't ask again!</translation>
     </message>
     <message>
-      <location filename="../utils/gui.cpp" line="191"/>
+      <location filename="../utils/gui.cpp" line="202"/>
       <source>Don't show again!</source>
       <translation type="unfinished">Don't show again!</translation>
     </message>
@@ -6229,11 +6229,16 @@ This cannot be undone!</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="76"/>
+      <source>Prints out a dump of the settings and other information about the application and environment in GitHub Markdown and exits the application.</source>
+      <translation type="unfinished">Prints out a dump of the settings and other information about the application and environment in GitHub Markdown and exits the application.</translation>
+    </message>
+    <message>
+      <location filename="../main.cpp" line="82"/>
       <source>Clears the settings and runs the application.</source>
       <translation type="unfinished">Clears the settings and runs the application.</translation>
     </message>
     <message>
-      <location filename="../main.cpp" line="80"/>
+      <location filename="../main.cpp" line="86"/>
       <source>Runs the application in a different context for settings and internal files.</source>
       <translation type="unfinished">Runs the application in a different context for settings and internal files.</translation>
     </message>
