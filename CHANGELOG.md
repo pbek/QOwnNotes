@@ -1,7 +1,7 @@
 # QOwnNotes Changelog
 
 ## 18.08.11
-- the **Find action** dialog now searches for every entered word on in `and`-fashion
+- the **Find action** dialog now searches for every entered word in `and`-fashion
   (for [#1007](https://github.com/pbek/QOwnNotes/issues/1007))
     - all menu items that have all of the entered words (or parts of them) in 
       the name or tooltip will be shown
