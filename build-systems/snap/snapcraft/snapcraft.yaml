@@ -12,6 +12,8 @@ description: |
 apps:
   qownnotes:
     command: desktop-launch ${SNAP}/usr/bin/QOwnNotes -style=Fusion --snap
+    environment:
+        DISABLE_WAYLAND: 1
     # see https://docs.snapcraft.io/reference/interfaces
     plugs:
       - x11
@@ -50,6 +52,7 @@ parts:
       - libqt5xmlpatterns5
       - libqt5printsupport5
       - libqt5declarative5
+      - qtwayland5
     stage:
       - -usr/share/pkgconfig
     after: [desktop-qt5]
