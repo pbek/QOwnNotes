@@ -7,6 +7,9 @@
       the *General settings*
 - fixed opening of links like `[https://www.qownnotes.org](https://www.qownnotes.org)`
   when <kbd>Ctrl</kbd>-clicked in the note edit panel
+- added more Spanish, Italian, Chinese Traditional, Catalan, Arabic, Hungarian
+  and Dutch translation (thank you richarson, mlocati, abev66, MGuerra,
+  sosozozo and Fabijenna)
 
 ## 18.08.11
 - the **Find action** dialog now searches for every entered word in `and`-fashion
