@@ -79,6 +79,17 @@ UpdateDialog::UpdateDialog(QWidget *parent, QString changesHtml,
                                   "media-skip-forward.svg")));
     ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);
 
+    button = new QPushButton(tr("&Disable dialog"));
+    button->setToolTip(tr("Don't show this dialog automatically"));
+    button->setProperty("ActionRole", Disable);
+    button->setDefault(false);
+    button->setIcon(
+            QIcon::fromTheme(
+                    "window-close",
+                    QIcon(":/icons/breeze-qownnotes/16x16/"
+                                  "window-close.svg")));
+    ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);
+
     button = new QPushButton(tr("&Cancel"));
     button->setProperty("ActionRole", Cancel);
     button->setIcon(
@@ -126,6 +137,13 @@ void UpdateDialog::dialogButtonClicked(QAbstractButton *button) {
             QSettings settings;
             settings.setValue("skipVersion", this->releaseVersionString);
             qDebug() << "skip version";
+            break;
+        }
+        case Disable:
+        {
+            QSettings settings;
+            settings.setValue("disableAutomaticUpdateDialog", true);
+            qDebug() << "disable dialog";
             break;
         }
         case Download:

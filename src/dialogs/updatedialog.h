@@ -45,6 +45,7 @@ private:
         Update,
         Download,
         Skip,
+        Disable,
         Cancel
     };
 

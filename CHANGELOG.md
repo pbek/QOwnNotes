@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 18.09.0
+- there now is a new button in the *Update dialog* to don't show the dialog 
+  automatically any more (for [#813](https://github.com/pbek/QOwnNotes/issues/813))
+    - this button does the same as the checkbox to disable the update dialog in
+      the *General settings*
+
 ## 18.08.11
 - the **Find action** dialog now searches for every entered word in `and`-fashion
   (for [#1007](https://github.com/pbek/QOwnNotes/issues/1007))
