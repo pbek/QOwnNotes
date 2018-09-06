@@ -5,6 +5,8 @@
   automatically any more (for [#813](https://github.com/pbek/QOwnNotes/issues/813))
     - this button does the same as the checkbox to disable the update dialog in
       the *General settings*
+- fixed opening of links like `[https://www.qownnotes.org](https://www.qownnotes.org)`
+  when <kbd>Ctrl</kbd>-clicked in the note edit panel
 
 ## 18.08.11
 - the **Find action** dialog now searches for every entered word in `and`-fashion
