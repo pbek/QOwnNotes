@@ -1,7 +1,7 @@
 # QOwnNotes Changelog
 
 ## 18.09.1
-- prevented possible misbehavior when moving multiple tags to an other tag
+- prevented possible misbehavior when moving multiple tags to another tag
   (for [#1014](https://github.com/pbek/QOwnNotes/issues/1014))
 
 ## 18.09.0
