@@ -7905,7 +7905,10 @@ void MainWindow::buildBulkNoteTagMenuTree(QMenu *parentMenu,
  */
 void MainWindow::moveSelectedTagsToTagId(int tagId) {
     qDebug() << __func__ << " - 'tagId': " << tagId;
+    QList<Tag> tagList;
 
+    // gather tags to move (since we can't be sure the tag tree will not get
+    // reloaded when we are actually moving the first tag)
     Q_FOREACH(QTreeWidgetItem *item, ui->tagTreeWidget->selectedItems()) {
             int id = item->data(0, Qt::UserRole).toInt();
             Tag tag = Tag::fetch(id);
@@ -7916,18 +7919,25 @@ void MainWindow::moveSelectedTagsToTagId(int tagId) {
                                     .arg(tag.getName()),
                             3000);
                 } else {
-                    tag.setParentId(tagId);
-                    tag.store();
-
-                    reloadCurrentNoteTags();
-                    reloadTagTree();
-
-                    showStatusBarMessage(
-                            tr("Moved tag '%1' to new tag").arg(tag.getName()),
-                            3000);
+                    tagList << tag;
                 }
             }
         }
+
+    if (tagList.count() > 0) {
+        // move tags
+        Q_FOREACH(Tag tag, tagList) {
+                tag.setParentId(tagId);
+                tag.store();
+
+                showStatusBarMessage(
+                        tr("Moved tag '%1' to new tag").arg(tag.getName()),
+                        3000);
+            }
+
+        reloadCurrentNoteTags();
+        reloadTagTree();
+    }
 }
 
 /**
