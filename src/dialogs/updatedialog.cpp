@@ -162,7 +162,7 @@ void UpdateDialog::dialogButtonClicked(QAbstractButton *button) {
             } else {
                 // open the installation page
                 QDesktopServices::openUrl(
-                        QUrl("http://www.qownnotes.org/installation"));
+                        QUrl("https://www.qownnotes.org/installation"));
             }
             break;
         }

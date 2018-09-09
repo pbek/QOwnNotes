@@ -5187,7 +5187,7 @@ void MainWindow::createNewNote(QString noteName, bool withNameAppend) {
  * examples:
  * - <note://MyNote> opens the note "MyNote"
  * - <note://my-note-with-spaces-in-the-name> opens the note "My Note with spaces in the name"
- * - <http://www.qownnotes.org> opens the web page
+ * - <https://www.qownnotes.org> opens the web page
  * - <file:///path/to/my/file/QOwnNotes.pdf> opens the file "/path/to/my/file/QOwnNotes.pdf" if the operating system supports that handler
  */
 void MainWindow::on_noteTextView_anchorClicked(const QUrl &url) {
@@ -5730,11 +5730,11 @@ void MainWindow::on_action_Forward_in_note_history_triggered() {
 
 void MainWindow::on_action_Shortcuts_triggered() {
     QDesktopServices::openUrl(
-            QUrl("http://www.qownnotes.org/shortcuts/QOwnNotes"));
+            QUrl("https://www.qownnotes.org/shortcuts/QOwnNotes"));
 }
 
 void MainWindow::on_action_Knowledge_base_triggered() {
-    QDesktopServices::openUrl(QUrl("http://www.qownnotes.org/Knowledge-base"));
+    QDesktopServices::openUrl(QUrl("https://www.qownnotes.org/Knowledge-base"));
 }
 
 /**
@@ -5910,7 +5910,7 @@ int MainWindow::currentNoteLineNumber()
  */
 void MainWindow::on_actionShow_changelog_triggered() {
     QDesktopServices::openUrl(
-            QUrl("http://www.qownnotes.org/changelog/QOwnNotes"));
+            QUrl("https://www.qownnotes.org/changelog/QOwnNotes"));
 }
 
 void MainWindow::on_action_Find_text_in_note_triggered() {
@@ -6116,7 +6116,7 @@ void MainWindow::showEvent(QShowEvent* event) {
 
 void MainWindow::on_actionGet_invloved_triggered() {
     QDesktopServices::openUrl(
-            QUrl("http://www.qownnotes.org/Knowledge-base/"
+            QUrl("https://www.qownnotes.org/Knowledge-base/"
                          "How-can-I-get-involved-with-QOwnNotes"));
 }
 
@@ -9476,7 +9476,7 @@ void MainWindow::setScriptingLabelText(QString identifier, QString text) {
  */
 void MainWindow::on_actionDonate_triggered() {
     QDesktopServices::openUrl(
-            QUrl("http://www.qownnotes.org/donate"));
+            QUrl("https://www.qownnotes.org/donate"));
 }
 
 /**

@@ -9,7 +9,7 @@ QtObject {
      * Initializes the labels
      */
     function init() {
-        script.registerLabel("html-label", "<strong>Strong</strong> HTML text<br />with three lines<br />and a <a href='http://www.qownnotes.org'>link to a website</a>.");
+        script.registerLabel("html-label", "<strong>Strong</strong> HTML text<br />with three lines<br />and a <a href='https://www.qownnotes.org'>link to a website</a>.");
 
         script.registerLabel("long-label", "an other very long text, an other very long text, an other very long text, an other very long text, an other very long text, an other very long text, an other very long text, an other very long text, an other very long text, an other very long text, an other very long text that will wrap");
 

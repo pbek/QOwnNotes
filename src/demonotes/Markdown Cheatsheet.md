@@ -1,7 +1,7 @@
 Markdown Cheatsheet
 ===================
 
-This cheatsheet is intended as a quick reference and showcase of the markdown syntax in [QOwnNotes](http://www.qownnotes.org).
+This cheatsheet is intended as a quick reference and showcase of the markdown syntax in [QOwnNotes](https://www.qownnotes.org).
 
 ## Headers
 
@@ -108,7 +108,7 @@ There are two ways to create links.
 URLs and URLs in angle brackets will automatically get turned into links in the preview. 
 http://www.example.com or <http://www.example.com>
 
-[1]: http://www.qownnotes.org
+[1]: https://www.qownnotes.org
 ```
 
 [I'm an inline-style link](https://www.google.com)
@@ -120,7 +120,7 @@ http://www.example.com or <http://www.example.com>
 URLs and URLs in angle brackets will automatically get turned into links in the preview. 
 http://www.example.com or <http://www.example.com>
 
-[1]: http://www.qownnotes.org
+[1]: https://www.qownnotes.org
 
 
 ## Inline code and code blocks

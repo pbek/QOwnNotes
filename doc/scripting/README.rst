@@ -167,7 +167,7 @@ Usage in QML
 
 .. code:: javascript
 
-    var html = script.downloadUrlToString("http://www.qownnotes.org");
+    var html = script.downloadUrlToString("https://www.qownnotes.org");
 
 You may want to take a look at the example
 `insert-headline-with-link-from-github-url.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/insert-headline-with-link-from-github-url.qml>`__.
@@ -334,7 +334,7 @@ Usage in QML
 
 .. code:: javascript
 
-    script.registerLabel("html-label", "<strong>Strong</strong> HTML text<br />with three lines<br />and a <a href='http://www.qownnotes.org'>link to a website</a>.");
+    script.registerLabel("html-label", "<strong>Strong</strong> HTML text<br />with three lines<br />and a <a href='https://www.qownnotes.org'>link to a website</a>.");
 
     script.registerLabel("long-label", "an other very long text, an other very long text, an other very long text, an other very long text, an other very long text, an other very long text, an other very long text, an other very long text, an other very long text, an other very long text, an other very long text that will wrap");
 

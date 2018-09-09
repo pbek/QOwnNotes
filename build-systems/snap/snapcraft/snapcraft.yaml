@@ -7,7 +7,7 @@ description: |
   QOwnNotes is the open source (GPL) plain-text file notepad with markdown support
   and todo list manager for GNU/Linux, Mac OS X and Windows, that (optionally) works
   together with the notes application of ownCloud.
-  http://www.qownnotes.org/
+  https://www.qownnotes.org/
 
 apps:
   qownnotes:

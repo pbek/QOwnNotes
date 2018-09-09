@@ -4,7 +4,7 @@ Binary: qownnotes
 Architecture: any
 Version: VERSION-STRING-1
 Maintainer: Patrizio Bekerle <patrizio@bekerle.com>
-Homepage: http://www.qownnotes.org
+Homepage: https://www.qownnotes.org
 Standards-Version: 3.9.6
 Vcs-Browser: https://github.com/pbek/QOwnNotes/
 Vcs-Git: https://github.com/pbek/QOwnNotes.git

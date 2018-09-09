@@ -1,6 +1,6 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: qownnotes
-Source: http://www.qownnotes.org
+Source: https://www.qownnotes.org
 
 Files: *
 Copyright: 2014-2018 Patrizio Bekerle <patrizio@bekerle.com>

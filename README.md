@@ -1,13 +1,13 @@
-# [QOwnNotes](http://www.qownnotes.org "QOwnNotes Offical Site")
+# [QOwnNotes](https://www.qownnotes.org "QOwnNotes Offical Site")
 
-[Installation](http://www.qownnotes.org/installation) |
+[Installation](https://www.qownnotes.org/installation) |
 [Changelog](https://github.com/pbek/QOwnNotes/blob/develop/CHANGELOG.md) |
 [Issues](https://github.com/pbek/QOwnNotes/issues) |
 [Releases](https://github.com/pbek/QOwnNotes/releases) |
 [Shortcuts](https://github.com/pbek/QOwnNotes/blob/develop/SHORTCUTS.md) |
 [Documentation](http://docs.qownnotes.org) |
-[Knowledge base](http://www.qownnotes.org/Knowledge-base) |
-[Screenshots](http://www.qownnotes.org) |
+[Knowledge base](https://www.qownnotes.org/Knowledge-base) |
+[Screenshots](https://www.qownnotes.org) |
 [ownCloud API](https://marketplace.owncloud.com/apps/qownnotesapi) |
 [Nextcloud API](https://apps.nextcloud.com/apps/qownnotesapi) |
 [IRC Chat](https://kiwiirc.com/client/irc.freenode.net/#qownnotes) |
@@ -21,7 +21,7 @@
 [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/qownnotes/qownnotes)
 [![Documentation](https://readthedocs.org/projects/qownnotes/badge/?version=develop)](http://docs.qownnotes.org)
 
-[QOwnNotes](http://www.qownnotes.org) is the **open source notepad** with [**markdown support**](https://github.com/pbek/QOwnNotes/blob/develop/src/demonotes/Markdown%20Cheatsheet.md) and **todo list manager** for **GNU/Linux**, **Mac OS X** and **Windows**, that works together with the default notes application of [**ownCloud**](https://github.com/owncloud/notes) and [**Nextcloud**](https://github.com/Nextcloud/notes).
+[QOwnNotes](https://www.qownnotes.org) is the **open source notepad** with [**markdown support**](https://github.com/pbek/QOwnNotes/blob/develop/src/demonotes/Markdown%20Cheatsheet.md) and **todo list manager** for **GNU/Linux**, **Mac OS X** and **Windows**, that works together with the default notes application of [**ownCloud**](https://github.com/owncloud/notes) and [**Nextcloud**](https://github.com/Nextcloud/notes).
 
 You are able to **write down** your **thoughts** with **QOwnNotes** and **edit or search** for them later from your **mobile device**, like with [CloudNotes](http://peterandlinda.com/cloudnotes/) or the **ownCloud / Nextcloud web-service**.
 
@@ -30,7 +30,7 @@ Of course other software, like [Syncthing](https://syncthing.net) or [Dropbox](h
 
 I like the concept of having notes accessible in plain text files, like it is done in the ownCloud / Nextcloud notes apps, to gain a maximum of **freedom**, but I was not able to find a decent desktop note taking tool or a text editor, that handles them well. Out of this need **QOwnNotes** was born.
 
-Visit the project page here: [QOwnNotes project page](http://www.qownnotes.org)
+Visit the project page here: [QOwnNotes project page](https://www.qownnotes.org)
 
 To manage your **todo lists** in the web and on your mobile devices, you need to install the Tasks backend on [ownCloud](https://marketplace.owncloud.com/apps/tasks) or [Nextcloud](https://apps.nextcloud.com/apps/tasks).
 
@@ -47,7 +47,7 @@ On Android you could also use any sync-tool like *Synchronize Ultimate* or *Fold
 
 ![Screenhot](screenshots/screenshot.png)
 
-You can visit the [QOwnNotes project page](http://www.qownnotes.org) for more **screenshots**.
+You can visit the [QOwnNotes project page](https://www.qownnotes.org) for more **screenshots**.
 
 ## Features
 
@@ -73,7 +73,7 @@ You can visit the [QOwnNotes project page](http://www.qownnotes.org) for more **
   QOwnNotes supports Freedesktop icon themes
 - QOwnNotes is available in many different languages like English, German,
   French, Polish, Chinese, Russian, Portuguese, Hungarian, Dutch and Spanish
-    - [your kind help](http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes)
+    - [your kind help](https://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes)
       is needed to maintain these translations or to translate QOwnNotes
       in more languages
 - support for hierarchical note tagging and note subfolders
@@ -134,4 +134,4 @@ This SOFTWARE PRODUCT is provided by THE PROVIDER "as is" and "with all faults."
 
 There are inherent dangers in the use of any software, and you are solely responsible for determining whether this SOFTWARE PRODUCT is compatible with your equipment and other software installed on your equipment. You are also solely responsible for the protection of your equipment and backup of your data, and THE PROVIDER will not be liable for any damages you may suffer in connection with using, modifying, or distributing this SOFTWARE PRODUCT.
 
-[![Piwik Stats](https://p.bekerle.com/piwik.php?idsite=3&rec=1)](http://www.qownnotes.org)
+[![Piwik Stats](https://p.bekerle.com/piwik.php?idsite=3&rec=1)](https://www.qownnotes.org)

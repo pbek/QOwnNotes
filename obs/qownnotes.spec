@@ -43,7 +43,7 @@ Requires:   libQtQuick5
 License:        GPL-2.0
 Group:          System/GUI/Productivity
 Summary:        Note-taking app and todo list manager with ownCloud/Nextcloud integration
-Url:            http://www.qownnotes.org/
+Url:            https://www.qownnotes.org/
 Version:        VERSION-STRING
 Release:        1%{?dist}
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build

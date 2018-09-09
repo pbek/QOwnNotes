@@ -11,6 +11,8 @@
       sub-folder will be changed to that note sub-folder
     - highlighting of note links if they are broken also work over all note sub-folders
 - fixed possibly duplicate entries in the script list of the *Script repository*
+- changed a lot of links to QOwnNotes webpage in the application and
+  documentation from `http` to `https`
 
 ## 18.09.0
 - there now is a new button in the *Update dialog* to don't show the dialog 
@@ -390,7 +392,7 @@
       that generates a 10 character alphanumeric id for the current note and
       also allows to jump to the note by it
 - there now is a software repository for **Fedora 28**
-    - please visit the [Fedora installation page](http://www.qownnotes.org/installation#Fedora)
+    - please visit the [Fedora installation page](https://www.qownnotes.org/installation#Fedora)
       for instructions
 - added more Brazilian Portuguese, Indonesian, German, Spanish, Italian, Dutch
   and Hungarian translation (thank you mlimacarlos, zmni, rakekniven, richarson,
@@ -424,12 +426,12 @@
 - fixed a warning if you are un-indenting text at the start or end of the note
 - you can now scroll the note content up and down with <kbd>Ctrl</kbd> + <kbd>Up</kbd>
   and <kbd>Ctrl</kbd> + <kbd>Down</kbd> (for [#872](https://github.com/pbek/QOwnNotes/issues/872))
-    - please visit [QOwnNotes shortcuts](http://www.qownnotes.org/shortcuts/QOwnNotes)
+    - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/shortcuts/QOwnNotes)
       for a list of all shortcuts
 - you can now use the shortcut <kbd>F4</kbd> to jump to the *Note edit panel*
   (for [#877](https://github.com/pbek/QOwnNotes/issues/877))
     - if the *Note edit panel* was disabled it will be enabled first
-    - please visit [QOwnNotes shortcuts](http://www.qownnotes.org/shortcuts/QOwnNotes)
+    - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/shortcuts/QOwnNotes)
       for a list of all shortcuts
 
 ## 18.04.3
@@ -481,7 +483,7 @@
       you can change the styling
 - added repositories for **openSUSE Leap 15**, **SUSE Linux Enterprise 15** and
   **SUSE Linux Enterprise 12 SP3**
-    - please visit the [openSUSE installation page](http://www.qownnotes.org/installation#openSUSE)
+    - please visit the [openSUSE installation page](https://www.qownnotes.org/installation#openSUSE)
       for instructions
 - years were bumped to 2018
 - added more Brazilian Portuguese, Italian, Catalan, Spanish, German, French,
@@ -804,7 +806,7 @@
 ## 17.12.0
 - enabled text wrapping for the script settings (for [#792](https://github.com/pbek/QOwnNotes/issues/792))
 - you can now also search for text in the note-preview with <kbd>Ctrl</kbd> + <kbd>F</kbd>
-    - please visit [QOwnNotes shortcuts](http://www.qownnotes.org/shortcuts/QOwnNotes)
+    - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/shortcuts/QOwnNotes)
       for a list of all shortcuts
 - there is now a checkbox `Don't ask again!` for most confirmation message 
   boxes and a checkbox `Don't show again!` for most information message boxes
@@ -854,7 +856,7 @@
   Hungarian and Dutch translation (thank you rakekniven, MGuerra, mlocati,
   richarson, mlimacarlos, mcsa, bepolymathe and Fabijenna)
 - there now is a software repository for **Fedora 27**
-    - please visit the [Fedora installation page](http://www.qownnotes.org/installation#Fedora)
+    - please visit the [Fedora installation page](https://www.qownnotes.org/installation#Fedora)
       for instructions
 
 ## 17.11.3
@@ -1233,7 +1235,7 @@
   entry `Find notes in all tags / subfolders` (shortcut <kbd>Alt + F</kbd>)
   (for [#671](https://github.com/pbek/QOwnNotes/issues/671))
     - the menu entry `Find notes in all subfolders` was removed as a consequence
-    - please visit [QOwnNotes shortcuts](http://www.qownnotes.org/shortcuts/QOwnNotes)
+    - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/shortcuts/QOwnNotes)
       for a list of all shortcuts
 - added more French and Italian translation (thank you bepolymathe and mlocati)
 
@@ -1411,7 +1413,7 @@
 ## 17.07.0
 - there now is a repository with QOwnNotes built as **AppImage** for 32 and 64 
   bit systems (for [#534](https://github.com/pbek/QOwnNotes/issues/534))
-    - please visit the [AppImage installation page](http://www.qownnotes.org/installation#AppImage)
+    - please visit the [AppImage installation page](https://www.qownnotes.org/installation#AppImage)
       for instructions
     - if you run QOwnNotes from the AppImage the automatic updater will be 
       enabled by default and you will be led the the AppImage download page if 
@@ -1429,13 +1431,13 @@
       filename to be different than the headline in the *General settings*
 - the `Edit tag` context menu entry in the tag tree was renamed to `Rename tag`
 - there now is a software repository for **Debian Linux 9.0**
-    - please visit the [Debian installation page](http://www.qownnotes.org/installation#Debian)
+    - please visit the [Debian installation page](https://www.qownnotes.org/installation#Debian)
       for instructions
 - there now is a software repository for **Fedora 26**
-    - please visit the [Fedora installation page](http://www.qownnotes.org/installation#Fedora)
+    - please visit the [Fedora installation page](https://www.qownnotes.org/installation#Fedora)
       for instructions
 - there now is a software repository for **openSUSE Leap 42.3**
-    - please visit the [openSUSE installation page](http://www.qownnotes.org/installation#openSUSE)
+    - please visit the [openSUSE installation page](https://www.qownnotes.org/installation#openSUSE)
       for instructions
 - added more Japanese and German translation (thank you piyo and jmbm)
 
@@ -2145,7 +2147,7 @@
 - added a warning that the ownCloud notes app doesn't support sub-folders in 
   the note folder settings
 - there now is a repository for **Fedora 25**
-    - please visit the [QOwnNotes installation page](http://www.qownnotes.org/installation#Fedora)
+    - please visit the [QOwnNotes installation page](https://www.qownnotes.org/installation#Fedora)
       for instructions
 - added more markdown highlighting support
     - **multiple block quote characters** like `> > deeper level`
@@ -2345,7 +2347,7 @@
     - the mono-space code font is used for it
     - you can change the highlighting color and other styles in the settings
 - there now is a **Solus package** for QOwnNotes in the Solus main repository
-    - see [Solus package for QOwnNotes](http://www.qownnotes.org/Blog/Solus-package-for-QOwnNotes)
+    - see [Solus package for QOwnNotes](https://www.qownnotes.org/Blog/Solus-package-for-QOwnNotes)
       for more information
 - Nextcloud support is now mentioned a bit more often
 - to save memory the log output will now only be written to the log
@@ -2363,7 +2365,7 @@
 
 ## 16.11.13
 - QOwnNotes is now also available for Ubuntu 17.04
-    - see [Ubuntu installation](http://www.qownnotes.org/installation#Linux)
+    - see [Ubuntu installation](https://www.qownnotes.org/installation#Linux)
       for more information
 - fixed a problem with inserting images if application language is Italian
   (for [#391](https://github.com/pbek/QOwnNotes/issues/391))
@@ -2737,11 +2739,11 @@
   (for [#331](https://github.com/pbek/QOwnNotes/issues/331))
 - there now is a software repository for **openSUSE Leap 42.2**
     - please visit the
-      [openSUSE installation page](http://www.qownnotes.org/installation#openSUSE)
+      [openSUSE installation page](https://www.qownnotes.org/installation#openSUSE)
       for instructions
 - the Ubuntu Linux 14.04 package is now built with Qt 5.6.1
     - please visit the
-      [Ubuntu Linux installation page](http://www.qownnotes.org/installation#Linux)
+      [Ubuntu Linux installation page](https://www.qownnotes.org/installation#Linux)
       for more information
 - the preview will now only show the decrypted content of a note if the
   `edit encrypted note` button was pressed
@@ -3081,7 +3083,7 @@
     - there now is a list on the left to select the proper settings page
 - added a donate menu item to the help menu
     - since I've been repeatably asked where to deposit donations there
-      now is a donation page at [donations](http://www.qownnotes.org/donate)
+      now is a donation page at [donations](https://www.qownnotes.org/donate)
 - added more Italian, Portuguese, Polish, Dutch and Hungarian
   translation (thank you mlocati, mlimacarlos, lucjan and Fabijenna)
 
@@ -3423,12 +3425,12 @@
 - some debug output was added when the calendar list is reloaded in the 
   settings dialog, because there were some people who had some troubles to 
   connect to their ownCloud calendars
-    - please read [My calendars cannot be fetched from my ownCloud server](http://www.qownnotes.org/Knowledge-base/My-calendars-cannot-be-fetched-from-my-ownCloud-server)
+    - please read [My calendars cannot be fetched from my ownCloud server](https://www.qownnotes.org/Knowledge-base/My-calendars-cannot-be-fetched-from-my-ownCloud-server)
       for instructions
 - there are now QOwnNotes snap packages available for `amd64`, `i386`, `arm64` 
   and `armhf`
     - please visit the
-      [QOwnNotes installation page](http://www.qownnotes.org/installation#snap)
+      [QOwnNotes installation page](https://www.qownnotes.org/installation#snap)
       for instructions
 - added more Dutch, Portuguese and Russian translation (thank you hartwin,
   mlimacarlos and Maboroshy)
@@ -3504,12 +3506,12 @@
     - snaps are working on many Linux distributions like Arch Linux, Debian, 
       Fedora, Gentoo Linux and Ubuntu
     - please visit the
-      [QOwnNotes installation page](http://www.qownnotes.org/installation#snap)
+      [QOwnNotes installation page](https://www.qownnotes.org/installation#snap)
       for instructions
 - there now are community-created packages for **CentOS 7** for QOwnNotes 
   (thanks a lot to Jörg Woll)
     - please visit the
-      [QOwnNotes installation page](http://www.qownnotes.org/installation#CentOS)
+      [QOwnNotes installation page](https://www.qownnotes.org/installation#CentOS)
       for instructions
 - added more Russian, Italian, Hungarian and German translation (thank you 
   Maboroshy, mlocati, Fabijenna and bigant)
@@ -3555,11 +3557,11 @@
 - there now is a community maintained **KaOS repository** for QOwnNotes 
   (thanks a lot to @Adurol)
     - please visit the
-      [QOwnNotes installation page](http://www.qownnotes.org/installation#KaOS)
+      [QOwnNotes installation page](https://www.qownnotes.org/installation#KaOS)
       for instructions
 - there now is a repository for **SUSE Linux Enterprise 12 SP1 Backports**
     - please visit the
-      [QOwnNotes installation page](http://www.qownnotes.org/installation#openSUSE)
+      [QOwnNotes installation page](https://www.qownnotes.org/installation#openSUSE)
       for instructions
 - added more Portuguese and Russian translation (thank you mlimacarlos and 
   Maboroshy)
@@ -3569,7 +3571,7 @@
   **Ubuntu Linux 14.04**
   (for [#231](https://github.com/pbek/QOwnNotes/issues/231))
 	- please visit the 
-	  [QOwnNotes installation](http://www.qownnotes.org/installation#Ubuntu) 
+	  [QOwnNotes installation](https://www.qownnotes.org/installation#Ubuntu) 
 	  page for more information
 - first pre-alpha release of the **note sub-folder tree integration**
   (for [#183](https://github.com/pbek/QOwnNotes/issues/183))
@@ -3596,7 +3598,7 @@
 - there now is a **Slackware repository** for QOwnNotes (thanks a lot to 
   @richarson for the help)
   (for [#226](https://github.com/pbek/QOwnNotes/issues/226))
-    - please visit the [QOwnNotes installation page](http://www.qownnotes.org/installation#Slackware) for instructions
+    - please visit the [QOwnNotes installation page](https://www.qownnotes.org/installation#Slackware) for instructions
 - fixed some `database not open` errors and possible problems with the database
   (for [#226](https://github.com/pbek/QOwnNotes/issues/226))
 - added more Dutch translation (thank you Telesight)
@@ -3623,7 +3625,7 @@
   `libQt5Sql5-sqlite libQt5Gui5 libQt5Network5 libQt5Widgets5 libQt5Xml5`
   (for [#220](https://github.com/pbek/QOwnNotes/issues/220))
 - there now are repositories for **Fedora 24**
-    - please visit the [QOwnNotes installation page](http://www.qownnotes.org/installation#Fedora) for instructions
+    - please visit the [QOwnNotes installation page](https://www.qownnotes.org/installation#Fedora) for instructions
 - relative file urls like `[manual](file://../ownCloudUserManual.pdf)` and 
   `<file://../ownCloudUserManual.pdf>` now work in the note text edit and the
    note preview (for [#221](https://github.com/pbek/QOwnNotes/issues/221))
@@ -4031,7 +4033,7 @@
 ## 16.05.3
 - QOwnNotes will now be built from a **source archive** (like it should be) in 
   the AUR and in the Gentoo overlay (and not from git repositories)
-  - visit [Building QOwnNotes](http://www.qownnotes.org/installation#building) 
+  - visit [Building QOwnNotes](https://www.qownnotes.org/installation#building) 
   for more information on building QOwnNotes and source archives
 - the text is now also selected in the text replace dialog
 - added more Japanese translation (thank you piyo)
@@ -4100,7 +4102,7 @@
   (for [#149](https://github.com/pbek/QOwnNotes/issues/149))
     - The shortcut for removing the current note went to <kbd>Alt</kbd> + 
     <kbd>R</kbd>
-    - please visit [QOwnNotes shortcuts](http://www.qownnotes.org/shortcuts/QOwnNotes)
+    - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/shortcuts/QOwnNotes)
       for a list of all shortcuts
 - added more Portuguese, French, Russian, German and Japanese translation 
   (thank you mlimacarlos, Loelo, frostyland and piyo)
@@ -4390,7 +4392,7 @@
     - you can now remove tasks with the <kbd>Del</kbd> key
     - fixed the shortcuts of the *Store*, *Store and insert* and *Remove* 
       buttons
-        - please visit [QOwnNotes shortcuts](http://www.qownnotes.org/shortcuts/QOwnNotes)
+        - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/shortcuts/QOwnNotes)
           for a list of all shortcuts
 - added more German and Portuguese translation (thank you calis2002 and mlimacarlos)
 
@@ -4519,7 +4521,7 @@
     - a new png image will be created in the `media` folder of your notes folder 
     - use <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>V</kbd> as shortcut for 
     pasting image data
-    - please visit [QOwnNotes shortcuts](http://www.qownnotes.org/shortcuts/QOwnNotes)
+    - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/shortcuts/QOwnNotes)
       for a list of all shortcuts
 - added more Hungarian translation (thank you Fabijenna)
 
@@ -4557,7 +4559,7 @@
 - added more German translation
 - there now is a **Gentoo Linux overlay** for QOwnNotes (thanks a lot to 
   @internethering and @suhr for the help)
-    - please visit the [QOwnNotes installation page](http://www.qownnotes.org/installation#Gentoo) for instructions
+    - please visit the [QOwnNotes installation page](https://www.qownnotes.org/installation#Gentoo) for instructions
 
 ## 1.1
 - QOwnNotes now allows the usage of `# ` markdown headlines as note title
@@ -4594,7 +4596,7 @@
 - use <kbd>Ctrl</kbd> + <kbd>PgUp</kbd> and <kbd>Ctrl</kbd> + <kbd>PgDn</kbd>
   to **jump between visible notes**
   (for [#80](https://github.com/pbek/QOwnNotes/issues/80))
-    - please visit [QOwnNotes shortcuts](http://www.qownnotes.org/shortcuts/QOwnNotes)
+    - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/shortcuts/QOwnNotes)
       for a list of all shortcuts
     
 ## 1.0.5
@@ -4644,7 +4646,7 @@
 ## 1.0
 - yippee, **version 1.0**, so there were already 100 releases!?
     - want to get involved with QOwnNotes? read:
-    [Getting involved](http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes)
+    [Getting involved](https://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes)
 - updated German and Russian translation (thanks for your help, @elnull)
 - fixed the visual blocking of the note search bar by the scroll bar
 - the code font in the note Markdown view can now be configured in the settings
@@ -4740,7 +4742,7 @@
     - the fallback language is English
 - added **German translation** from @calis2002, thanks a lot for the great job!
 - if you feel like translating QOwnNotes to an other language please read
- [How can I help to translate QOwnNotes?](http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes)
+ [How can I help to translate QOwnNotes?](https://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes)
 - fixed a character in link titles that was disorienting the markdown 
   highlighter
 
@@ -4774,7 +4776,7 @@
 ## 0.86
 - tried to fix a sporadic crash on OS X
 - there now is a software repository for **Debian Linux 8.0**
-    - please visit the [QOwnNotes installation page](http://www.qownnotes.org/installation) for instructions
+    - please visit the [QOwnNotes installation page](https://www.qownnotes.org/installation) for instructions
 
 ## 0.85
 - you can now export the current note as markdown file
@@ -4784,10 +4786,10 @@
 
 ## 0.84
 - now non Travis CI or AppVeyor builds can perform an update check again, but 
-  will open the [QOwnNotes installation page](http://www.qownnotes.org/installation) 
+  will open the [QOwnNotes installation page](https://www.qownnotes.org/installation) 
   instead of downloading the app
 - there is a new software repository for **Arch Linux**
-    - please visit the [QOwnNotes installation page](http://www.qownnotes.org/installation) for instructions
+    - please visit the [QOwnNotes installation page](https://www.qownnotes.org/installation) for instructions
 
 ## 0.83
 - switched two buttons in the menu bar
@@ -4835,7 +4837,7 @@
 ## 0.77
 - the icon size in the main toolbar was set to a fixed `38x38` to try to prevent high-dpi problems in KDE Plasma
 - `libqt5sql5-sqlite` was added to the dependencies for the Ubuntu PPA build and the Ubuntu deb-package (for [#30](https://github.com/pbek/QOwnNotes/issues/30))
-- if you don't want to miss a single version of QOwnNotes you might want to take a look at [New release version RSS feed](http://www.qownnotes.org/Blog/New-release-version-RSS-feed)
+- if you don't want to miss a single version of QOwnNotes you might want to take a look at [New release version RSS feed](https://www.qownnotes.org/Blog/New-release-version-RSS-feed)
 
 ## 0.76
 - the Windows version of QOwnNotes now also includes the OpenSSL library, please report if you have any problems on the [QOwnNotes issue page](https://github.com/pbek/QOwnNotes/issues))
@@ -4874,15 +4876,15 @@
 
 ## 0.70
 - beside the new software repositories for **Ubuntu Linux** and **openSUSE Linux** there are now also repositories for **Fedora Linux**
-    - please visit the [QOwnNotes installation page](http://www.qownnotes.org/installation) for instructions
+    - please visit the [QOwnNotes installation page](https://www.qownnotes.org/installation) for instructions
 - tried to fix a crash that sometimes occurs on OSX after waking from sleep
 - you can now also export the text of notes as PDF
 
 ## 0.69
 - if you are using **Ubuntu Linux** or **openSUSE Linux** you can now take advantage of the brand new repositories for both distributions
-    - take a look at the [QOwnNotes installation page](http://www.qownnotes.org/installation) for instructions
+    - take a look at the [QOwnNotes installation page](https://www.qownnotes.org/installation) for instructions
     - the update check for these releases have been removed from the menu and you will not get a report for new software versions, since updates are done by your operating system
-    - you can always visit the [QOwnNotes changelog](http://www.qownnotes.org/changelog/QOwnNotes) to see what has changed in the versions
+    - you can always visit the [QOwnNotes changelog](https://www.qownnotes.org/changelog/QOwnNotes) to see what has changed in the versions
 - you can now export notes as PDF (for [#23](https://github.com/pbek/QOwnNotes/issues/23))
 
 ## 0.68
@@ -4956,7 +4958,7 @@
 - added a new shortcut `Ctrl + T` to insert the current date in ISO 8601 format
 
 ## 0.57
-- `Ctrl + Click` in edit mode now works on the whole portion of links like `[QOwnNotes - cross-platform open source notepad](http://www.qownnotes.org/)`, not just on the URL alone
+- `Ctrl + Click` in edit mode now works on the whole portion of links like `[QOwnNotes - cross-platform open source notepad](https://www.qownnotes.org/)`, not just on the URL alone
 - added a menu entry to the new knowledge base in the help menu
 - you can now change the font of the note text edit and the note markdown view in the settings (for [#19](https://github.com/pbek/QOwnNotes/issues/19))
 
