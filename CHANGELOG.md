@@ -5,8 +5,8 @@
   (for [#1014](https://github.com/pbek/QOwnNotes/issues/1014))
 - **note links** will now also jump to notes in **other note sub-folders**
   (for [#478](https://github.com/pbek/QOwnNotes/issues/478))
-    - first only the current note folder will be searched, if the note wasn't
-      found all note sub-folders will be searched
+    - first only the current note sub-folder will be searched, if the note 
+      wasn't found there all note sub-folders will be searched
     - if the linked note was in another note sub-folder the current note 
       sub-folder will be changed to that note sub-folder
     - the note link dialog now shows notes of all note sub-folders
