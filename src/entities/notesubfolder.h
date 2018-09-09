@@ -62,7 +62,7 @@ public:
 
     static NoteSubFolder activeNoteSubFolder();
 
-    static bool setAsActive(int tagId);
+    static bool setAsActive(int noteSubFolderId);
 
     void setAsActive();
 
