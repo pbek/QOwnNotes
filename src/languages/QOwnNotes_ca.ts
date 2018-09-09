@@ -5942,12 +5942,12 @@ Això no es pot desfer!</translation>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="82"/>
       <source>&amp;Disable dialog</source>
-      <translation type="unfinished">&amp;Disable dialog</translation>
+      <translation>Inhabilita el diàleg</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="83"/>
       <source>Don't show this dialog automatically</source>
-      <translation type="unfinished">Don't show this dialog automatically</translation>
+      <translation>No mostris aquest diàleg automàticament</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="93"/>

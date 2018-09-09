@@ -5941,12 +5941,12 @@ Kann nicht rückgängig gemacht werden!</translation>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="82"/>
       <source>&amp;Disable dialog</source>
-      <translation type="unfinished">&amp;Disable dialog</translation>
+      <translation>&amp;Dialog deaktivieren</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="83"/>
       <source>Don't show this dialog automatically</source>
-      <translation type="unfinished">Don't show this dialog automatically</translation>
+      <translation>Diesen Dialog nicht automatisch anzeigen</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="93"/>

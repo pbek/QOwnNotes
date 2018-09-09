@@ -18,6 +18,9 @@
   documentation from `http` to `https`
 - improved support for alternative links ending with `@` when automatically 
   updating links when notes are renamed
+- added more Spanish, Italian, Chinese Traditional, Catalan, German, Brazilian
+  Portuguese, Hungarian and Dutch translation (thank you richarson, mlocati,
+  abev66, MGuerra, rakekniven, mlimacarlos and Fabijenna)
 
 ## 18.09.0
 - there now is a new button in the *Update dialog* to don't show the dialog 

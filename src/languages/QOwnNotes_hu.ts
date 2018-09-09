@@ -5943,12 +5943,12 @@ Nem lehet visszavonni!</translation>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="82"/>
       <source>&amp;Disable dialog</source>
-      <translation type="unfinished">&amp;Disable dialog</translation>
+      <translation>Párbeszédpanel &amp;kikapcsolása</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="83"/>
       <source>Don't show this dialog automatically</source>
-      <translation type="unfinished">Don't show this dialog automatically</translation>
+      <translation>Ne jelenjen meg ez a panel automatikusan</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="93"/>

@@ -951,7 +951,7 @@
       <location filename="../mainwindow.ui" line="1374"/>
       <location filename="../mainwindow.cpp" line="5608"/>
       <source>Insert &amp;link</source>
-      <translation>Inserisci un &amp;link</translation>
+      <translation>Inserisci co&amp;llegamento</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1377"/>
@@ -1220,12 +1220,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1595"/>
       <source>&amp;Get involved</source>
-      <translation>&amp;Fatti coinvolgere nel progetto</translation>
+      <translation>&amp;Collabora al progetto</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1604"/>
       <source>Insert &amp;code block</source>
-      <translation>Inserisci un blocco di &amp;codice</translation>
+      <translation>Inserisci blocco di &amp;codice</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1616"/>
@@ -1291,17 +1291,17 @@
     <message>
       <location filename="../mainwindow.ui" line="1737"/>
       <source>Format text &amp;bold</source>
-      <translation>Imposta il &amp;grassetto al testo</translation>
+      <translation>Formatta il testo in &amp;grassetto</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1749"/>
       <source>Format text &amp;italic</source>
-      <translation>Imposta il cors&amp;ivo al testo</translation>
+      <translation>Formatta il testo in cors&amp;ivo</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1761"/>
       <source>&amp;Increase note text size</source>
-      <translation>&amp;Aumenta la dimensione del testo</translation>
+      <translation>&amp;Aumenta dimensione testo della nota</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1773"/>
@@ -1311,7 +1311,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1785"/>
       <source>&amp;Reset note text size</source>
-      <translation>&amp;Resetta la dimensione del testo</translation>
+      <translation>&amp;Ripristina dimensione testo della nota</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1797"/>
@@ -1420,7 +1420,7 @@
       <location filename="../mainwindow.ui" line="2230"/>
       <location filename="../mainwindow.cpp" line="8798"/>
       <source>Open note in different window</source>
-      <translation>Open note in different window</translation>
+      <translation>Apri nota in un'altra finestra</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2242"/>
@@ -1570,7 +1570,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1981"/>
       <source>Markdown cheatsheet</source>
-      <translation>Appunti su markdown</translation>
+      <translation>Consigli su markdown</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1990"/>
@@ -1596,7 +1596,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2031"/>
       <source>Split note at cursor position</source>
-      <translation>Dividi nota dalla posizione del cursore</translation>
+      <translation>Dividi nota alla posizione del cursore</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2051"/>
@@ -1676,7 +1676,7 @@ Restore current note?</source>
     <message>
       <location filename="../mainwindow.cpp" line="3667"/>
       <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
-      <translation>Per favore inserisci la &lt;strong&gt;password&lt;/strong&gt; di questa nota criptata.</translation>
+      <translation>Inserire la &lt;strong&gt;password&lt;/strong&gt; di questa nota criptata.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3691"/>
@@ -2691,7 +2691,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
     <message>
       <location filename="../mainwindow.cpp" line="5915"/>
       <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
-      <translation>Per favore, inserisci la tua &lt;strong&gt;password&lt;/strong&gt; per criptare la nota.&lt;br /&gt; Ricorda che devi &lt;strong&gt;ricordarti&lt;/strong&gt; la tua password per leggere il contenuto della nota&lt;br /&gt; e che puoi farlo &lt;strong&gt;solo&lt;/strong&gt; con &lt;strong&gt;QOwnNotes&lt;/strong&gt;!</translation>
+      <translation>Inserire la propria &lt;strong&gt;password&lt;/strong&gt; per crittografare la nota.&lt;br /&gt;Tenere presente che è necessario &lt;strong&gt;ricordarsi&lt;/strong&gt; la propria password per leggere il contenuto della nota&lt;br /&gt; e che è possibile farlo &lt;strong&gt;solo&lt;/strong&gt; con &lt;strong&gt;QOwnNotes&lt;/strong&gt;!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5971"/>
@@ -2940,12 +2940,12 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
     <message>
       <location filename="../services/owncloudservice.cpp" line="977"/>
       <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
-      <translation>errore del server ownCloud: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt; per favore controlla la tua configurazione di ownCloud.</translation>
+      <translation>Errore del server ownCloud: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Verificare la propria configurazione di ownCloud.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="995"/>
       <source>You need to setup your ownCloud server!</source>
-      <translation>È necessario configurare il vostro server ownCloud!</translation>
+      <translation>È necessario configurare il proprio server ownCloud!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1008"/>
@@ -3541,22 +3541,22 @@ Si desidera procedere con l'installazione comunque?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="943"/>
       <source>ownCloud server url:</source>
-      <translation>indirizzo url del server ownCloud:</translation>
+      <translation>Indirizzo url del server ownCloud:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="965"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Per favore, inserisci l'URL del server ownCloud, ad esempio: &lt;span style="font-style:italic;"&gt; https://cloud.server.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Inserire l'URL del proprio server ownCloud, ad esempio: &lt;span style="font-style:italic;"&gt; https://cloud.server.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1003"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Per favore inserisci l'username che usi sul tuo server ownCloud.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Inserire il nome utente del proprio server ownCloud.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1038"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Per favore inserisci la password per il tuo username.&lt;br/&gt;Attualmente la password verrà salvata in chiaro con le altre impostazioni, ma non è molto sicuro.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Inserire la password associata al proprio nome utente.&lt;br/&gt;Al momento la password verrà salvata forma crittografata con le altre impostazioni, ma non è molto sicuro.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1116"/>
@@ -3662,7 +3662,7 @@ Si desidera procedere con l'installazione comunque?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1255"/>
       <source>No Proxy</source>
-      <translation>Nessun Proxy</translation>
+      <translation>Nessun proxy</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1265"/>
@@ -3851,7 +3851,7 @@ Si desidera procedere con l'installazione comunque?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1938"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Se vuoi aiutare a tradurre QOwnNotes o aggiornare una traduzione esistente per favore leggi: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt; Come posso aiutare a tradurre QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Se vuoi aiutare a tradurre QOwnNotes o aggiornare una traduzione esistente, leggere: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt;Come posso aiutare a tradurre QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2319"/>
@@ -3951,7 +3951,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3633"/>
       <source>Reinitialize Database</source>
-      <translation>Reinizializzare Database</translation>
+      <translation>Reinizializza database</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3556"/>
@@ -4003,7 +4003,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1452"/>
       <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</source>
-      <translation>I dati di utilizzo anonimi aiutano a decidere quali parti di QOwnNotes sono da migliorare per la successiva versione e per trovare e correggere i bug. Per favore disattivalo solo se davvero non puoi vivere con questa impostazione attivata.</translation>
+      <translation>I dati di utilizzo anonimi aiutano a decidere quali parti di QOwnNotes sono da migliorare, nonché per trovare e correggere i bug. Disattivarlo solo se davvero non si può vivere con questa impostazione attivata.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1484"/>
@@ -4068,7 +4068,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="215"/>
       <source>Preview fonts</source>
-      <translation>Anteprima caratteri</translation>
+      <translation>Caratteri anteprima</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="227"/>
@@ -4371,7 +4371,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3751"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Il miglior modo di segnalare problemi è utilizzando l'assistente dei problemi premendo il pulsante &lt;span style=" font-weight:600;"&gt;Apri assistente dei problemi&lt;/span&gt; posto in fondo.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Il miglior modo di segnalare problemi è utilizzare l'assistente dei problemi premendo il pulsante &lt;span style=" font-weight:600;"&gt;Apri assistente dei problemi&lt;/span&gt; posto in fondo.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4307"/>
@@ -4396,7 +4396,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4761"/>
       <source>Show notes in the note list with preview</source>
-      <translation>Visualizza note nell'elenco delle note con anteprima</translation>
+      <translation>Mostra note nell'elenco delle note con anteprima</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4846"/>
@@ -4427,7 +4427,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
       <location filename="../dialogs/settingsdialog.ui" line="4910"/>
       <source> days</source>
       <extracomment>seconds</extracomment>
-      <translation>giorni</translation>
+      <translation> giorni</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4929"/>
@@ -4479,7 +4479,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4254"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Per visualizzare tutti i formati orari disponibili&lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;visitare questa pagina&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Per visualizzare tutti i formati orari disponibili &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;visitare questa pagina&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4390"/>
@@ -5046,7 +5046,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3717"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Puoi fare &lt;span style="font-weight:600;"&gt; copia e incolla&lt;/span&gt; di questo testo (o parti di esso) in una &lt;span style="font-weight:600;"&gt;segnalazione &lt;/span&gt; nella &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt; pagina segnalazioni di QOwnNotes&lt;/a&gt; se avete &lt;span style="font-weight:600;"&gt; domande o problemi&lt;/span&gt; con QOwnNotes. I dati sensibili verranno nascosti in queste informazioni.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;È possibile &lt;span style="font-weight:600;"&gt;copiare e incollare&lt;/span&gt; questo testo (o parti di esso) in una &lt;span style="font-weight:600;"&gt;segnalazione&lt;/span&gt; nella &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;pagina segnalazioni di QOwnNotes&lt;/a&gt; se si hanno &lt;span style="font-weight:600;"&gt;domande o problemi&lt;/span&gt; con QOwnNotes. I dati sensibili verranno nascosti in queste informazioni.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3693"/>
@@ -5360,7 +5360,7 @@ Messaggio di errore: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="360"/>
       <source>enabled</source>
-      <translation>abilitato</translation>
+      <translation>abilitata</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="360"/>
@@ -5942,12 +5942,12 @@ Non sarà possibile annullare l'operazione!</translation>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="82"/>
       <source>&amp;Disable dialog</source>
-      <translation type="unfinished">&amp;Disable dialog</translation>
+      <translation>&amp;Disabilita finestra di dialogo</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="83"/>
       <source>Don't show this dialog automatically</source>
-      <translation type="unfinished">Don't show this dialog automatically</translation>
+      <translation>Non mostrare automaticamente questa finestra di dialogo</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="93"/>
@@ -6184,7 +6184,7 @@ Non sarà possibile annullare l'operazione!</translation>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="194"/>
       <source>Please select where you want to store your notes:</source>
-      <translation>Per favore, seleziona dove vuoi memorizzare le tue note:</translation>
+      <translation>Selezionare dove si desidera memorizzare le proprie note:</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="284"/>

@@ -5938,12 +5938,12 @@ Dit kan niet ongedaan worden gemaakt!</translation>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="82"/>
       <source>&amp;Disable dialog</source>
-      <translation type="unfinished">&amp;Disable dialog</translation>
+      <translation>Dialoogvenster &amp;uitschakelen</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="83"/>
       <source>Don't show this dialog automatically</source>
-      <translation type="unfinished">Don't show this dialog automatically</translation>
+      <translation>Dit dialoogvenster niet automatisch weergeven</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="93"/>

@@ -5935,12 +5935,12 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="82"/>
       <source>&amp;Disable dialog</source>
-      <translation type="unfinished">&amp;Disable dialog</translation>
+      <translation>&amp;Desactivar el cuadro de diálogo</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="83"/>
       <source>Don't show this dialog automatically</source>
-      <translation type="unfinished">Don't show this dialog automatically</translation>
+      <translation>No mostrar este cuadro de diálogo automáticamente</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="93"/>
