@@ -9,7 +9,8 @@
       found all note sub-folders will be searched
     - if the linked note was in another note sub-folder the current note 
       sub-folder will be changed to that note sub-folder
-    - highlighting of note links if they are broken also work over all note sub-folders
+    - the note link dialog now shows notes of all note sub-folders
+    - highlighting of note links if they are broken also works over all note sub-folders
 - fixed possibly duplicate entries in the script list of the *Script repository*
 - changed a lot of links to QOwnNotes webpage in the application and
   documentation from `http` to `https`

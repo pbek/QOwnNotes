@@ -640,7 +640,8 @@ QList<Note> Note::search(QString text) {
     return noteList;
 }
 
-QList<QString> Note::searchAsNameList(QString text, bool searchInNameOnly) {
+QList<QString> Note::searchAsNameListInCurrentNoteSubFolder(
+        QString text, bool searchInNameOnly) {
     QSqlDatabase db = QSqlDatabase::database("memory");
     QSqlQuery query(db);
 
@@ -653,6 +654,28 @@ QList<QString> Note::searchAsNameList(QString text, bool searchInNameOnly) {
             "ORDER BY file_last_modified DESC");
     query.bindValue(":text", "%" + text + "%");
     query.bindValue(":note_sub_folder_id", noteSubFolderId);
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        for (int r = 0; query.next(); r++) {
+            nameList.append(query.value("name").toString());
+        }
+    }
+
+    return nameList;
+}
+
+QList<QString> Note::searchAsNameList(QString text, bool searchInNameOnly) {
+    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlQuery query(db);
+
+    QList<QString> nameList;
+    QString textSearchSql = !searchInNameOnly ? "OR note_text LIKE :text " : "";
+
+    query.prepare("SELECT name FROM note WHERE (name LIKE :text " +
+            textSearchSql + ") ORDER BY file_last_modified DESC");
+    query.bindValue(":text", "%" + text + "%");
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
@@ -775,7 +798,7 @@ QStringList Note::buildQueryStringList(QString searchString,
     return queryStrings;
 }
 
-QStringList Note::fetchNoteNames() {
+QStringList Note::fetchNoteNamesInCurrentNoteSubFolder() {
     QSqlDatabase db = QSqlDatabase::database("memory");
     QSqlQuery query(db);
 
@@ -786,6 +809,29 @@ QStringList Note::fetchNoteNames() {
                           "note_sub_folder_id = :note_sub_folder_id "
                           "ORDER BY file_last_modified DESC");
     query.bindValue(":note_sub_folder_id", noteSubFolderId);
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        for (int r = 0; query.next(); r++) {
+            QString name = query.value("name").toString();
+            if (!name.isEmpty()) {
+                list.append(name);
+            }
+        }
+    }
+
+    return list;
+}
+
+QStringList Note::fetchNoteNames() {
+    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlQuery query(db);
+
+    QStringList list;
+
+    query.prepare("SELECT DISTINCT(name) FROM note "
+                  "ORDER BY file_last_modified DESC");
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();

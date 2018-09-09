@@ -59,8 +59,13 @@ public:
 
     static QList<Note> search(QString text);
 
-    static QList<QString> searchAsNameList(QString text,
-                                           bool searchInNameOnly = false);
+    static QList<QString> searchAsNameListInCurrentNoteSubFolder(
+            QString text, bool searchInNameOnly = false);
+
+    static QList<QString> searchAsNameList(
+            QString text, bool searchInNameOnly = false);
+
+    static QStringList fetchNoteNamesInCurrentNoteSubFolder();
 
     static QStringList fetchNoteNames();
 
