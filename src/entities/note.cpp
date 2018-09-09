@@ -166,6 +166,30 @@ Note Note::fetch(int id) {
     return note;
 }
 
+/**
+ * Fetches a note by note name with a regular expression
+ *
+ * @param regExp
+ * @param noteSubFolderId if not set all notes will be searched
+ * @return
+ */
+Note Note::fetchByName(QRegularExpression regExp, int noteSubFolderId) {
+    QList<Note> noteList = noteSubFolderId == -1 ?
+            fetchAll() :
+            fetchAllByNoteSubFolderId(noteSubFolderId);
+
+    // since there is no regular expression search in Qt's sqlite
+    // implementation we have to iterate
+    Q_FOREACH(Note note, noteList) {
+            QRegularExpressionMatch match = regExp.match(note.getName());
+            if (match.hasMatch()) {
+                return note;
+            }
+    }
+
+    return Note();
+}
+
 Note Note::fetchByFileName(QString fileName, int noteSubFolderId) {
     Note note;
 
@@ -2581,7 +2605,7 @@ bool Note::scaleDownImageFileIfNeeded(QFile &file) {
 }
 
 /**
- * Trys to fetch a note from an url string
+ * Tries to fetch a note from an url string
  *
  * @param urlString
  * @return
@@ -2634,33 +2658,31 @@ Note Note::fetchByUrlString(QString urlString) {
     // example: note://my-note-with-spaces-in-the-name
     fileName.replace("-", "?").replace("_", "?");
 
-    // we need to search for the case sensitive filename,
-    // we only get it lowercase by QUrl
-    QDir currentDir = QDir(NoteSubFolder::activeNoteSubFolder().fullPath());
+    // create a regular expression to search in sqlite note table
+    QString escapedFileName = QRegularExpression::escape(fileName);
+    escapedFileName.replace("\\?", ".");
+    QRegularExpression regExp = QRegularExpression("^" + escapedFileName + "$",
+            QRegularExpression::CaseInsensitiveOption);
 
-    QStringList files;
-    QStringList fileSearchList =
-            QStringList() << fileName + ".txt" << fileName + ".md";
+    qDebug() << __func__ << " - 'regExp': " << regExp;
 
-    // append the files with custom extension
-    fileSearchList.append(
-            Note::customNoteFileExtensionList(fileName + "."));
+    const int noteSubFolderId = NoteSubFolder::activeNoteSubFolderId();
+    Note note;
 
-    // search for files with that name
-    files = currentDir.entryList(fileSearchList,
-                                 QDir::Files | QDir::NoSymLinks);
-    // did we find files?
-    if (files.length() > 0) {
-        // take the first found file
-        fileName = files.first();
+    qDebug() << __func__ << " - 'noteSubFolderId': " << noteSubFolderId;
 
-        // try to fetch note
-        Note note = Note::fetchByFileName(fileName);
-
-        return note;
+    if (noteSubFolderId > 0) {
+        note = Note::fetchByName(regExp, noteSubFolderId);
+        qDebug() << __func__ << " - 'note in sub folder': " << note;
     }
 
-    return Note();
+    // if we haven't found a note we try searching in all note subfolders
+    if (!note.isFetched()) {
+        note = Note::fetchByName(regExp);
+        qDebug() << __func__ << " - 'note in all sub folders': " << note;
+    }
+
+    return note;
 }
 
 /**

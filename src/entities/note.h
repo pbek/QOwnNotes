@@ -42,6 +42,9 @@ public:
 
     static Note fetch(int id);
 
+    static Note fetchByName(QRegularExpression regExp,
+                            int noteSubFolderId = -1);
+
     static Note fetchByFileName(QString fileName, int noteSubFolderId = -1);
 
     static Note fetchByName(QString name, int noteSubFolderId = -1);

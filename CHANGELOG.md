@@ -3,6 +3,11 @@
 ## 18.09.1
 - prevented possible misbehavior when moving multiple tags to another tag
   (for [#1014](https://github.com/pbek/QOwnNotes/issues/1014))
+- note links will now also jump to notes in other note sub-folders
+  (for [#478](https://github.com/pbek/QOwnNotes/issues/478))
+    - first only the current note folder will be searched, if the note wasn't
+      found all note sub-folders will be searched
+    - highlighting of note links if they are broken also work over all note sub-folders
 
 ## 18.09.0
 - there now is a new button in the *Update dialog* to don't show the dialog 
