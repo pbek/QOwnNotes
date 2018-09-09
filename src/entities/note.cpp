@@ -89,7 +89,7 @@ int Note::getNoteSubFolderId() {
     return this->noteSubFolderId;
 }
 
-const bool Note::isInCurrentNoteSubFolder() {
+bool Note::isInCurrentNoteSubFolder() {
     const int currentNoteSubFolderId = NoteSubFolder::activeNoteSubFolderId();
 
     if (currentNoteSubFolderId <= 0) {
