@@ -2391,9 +2391,16 @@ bool Note::isSameFile(Note note) {
  */
 QList<int> Note::findLinkedNotes(QString fileName) {
     QString linkText = getNoteURL(fileName);
-    QList<int> noteIdList = searchInNotes("<" + linkText + ">");
-    QList<int> noteIdList2 = searchInNotes("](" + linkText + ")");
-    noteIdList.append(noteIdList2);
+    QList<int> noteIdList;
+    noteIdList.append(searchInNotes("<" + linkText + ">", true));
+    noteIdList.append(searchInNotes("](" + linkText + ")", true));
+
+    // add support for alternative links ending with "@"
+    QString altLinkText = Utils::Misc::appendIfDoesNotEndWith(linkText, "@");
+    if (altLinkText != linkText) {
+        noteIdList.append(searchInNotes("<" + altLinkText + ">", true));
+        noteIdList.append(searchInNotes("](" + altLinkText + ")", true));
+    }
 
     // remove duplicates and return list
     return noteIdList.toSet().toList();

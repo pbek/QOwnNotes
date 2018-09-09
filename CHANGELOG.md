@@ -3,7 +3,7 @@
 ## 18.09.1
 - prevented possible misbehavior when moving multiple tags to another tag
   (for [#1014](https://github.com/pbek/QOwnNotes/issues/1014))
-- note links will now also jump to notes in other note sub-folders
+- **note links** will now also jump to notes in **other note sub-folders**
   (for [#478](https://github.com/pbek/QOwnNotes/issues/478))
     - first only the current note folder will be searched, if the note wasn't
       found all note sub-folders will be searched
@@ -11,9 +11,13 @@
       sub-folder will be changed to that note sub-folder
     - the note link dialog now shows notes of all note sub-folders
     - highlighting of note links if they are broken also works over all note sub-folders
+    - automatically updating links when notes are renamed should now also work
+      across note-subfolders 
 - fixed possibly duplicate entries in the script list of the *Script repository*
 - changed a lot of links to QOwnNotes webpage in the application and
   documentation from `http` to `https`
+- improved support for alternative links ending with `@` when automatically 
+  updating links when notes are renamed
 
 ## 18.09.0
 - there now is a new button in the *Update dialog* to don't show the dialog 
