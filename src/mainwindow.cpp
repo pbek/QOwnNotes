@@ -5262,6 +5262,28 @@ void MainWindow::openLocalUrl(QString urlString) {
         if (note.isFetched()) {
             // set current note
             setCurrentNote(note);
+
+            // if note sub-folder was different than the current we will
+            // switch to that note sub-folder
+            if (!note.isInCurrentNoteSubFolder()) {
+                qDebug() << "Switching note subfolder";
+
+                QTreeWidgetItem* item =
+                        Utils::Gui::getTreeWidgetItemWithUserData(
+                            ui->noteSubFolderTreeWidget,
+                            note.getNoteSubFolderId());
+
+                if (item != Q_NULLPTR) {
+                    const QSignalBlocker blocker(ui->noteSubFolderTreeWidget);
+                    Q_UNUSED(blocker);
+
+                    ui->noteSubFolderTreeWidget->clearSelection();
+                    item->setSelected(true);
+
+                    on_noteSubFolderTreeWidget_currentItemChanged(item, Q_NULLPTR);
+                }
+            }
+
         } else {
             // if the name of the linked note only consists of numbers we cannot
             // use host() to get the filename, it would get converted to an

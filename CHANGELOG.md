@@ -7,7 +7,10 @@
   (for [#478](https://github.com/pbek/QOwnNotes/issues/478))
     - first only the current note folder will be searched, if the note wasn't
       found all note sub-folders will be searched
+    - if the linked note was in another note sub-folder the current note 
+      sub-folder will be changed to that note sub-folder
     - highlighting of note links if they are broken also work over all note sub-folders
+- fixed possibly duplicate entries in the script list of the *Script repository*
 
 ## 18.09.0
 - there now is a new button in the *Update dialog* to don't show the dialog 

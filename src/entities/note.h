@@ -184,6 +184,8 @@ public:
 
     int getNoteSubFolderId();
 
+    const bool isInCurrentNoteSubFolder();
+
     QString relativeNoteFilePath(QString separator = "");
 
     QString relativeNoteSubFolderPath();
