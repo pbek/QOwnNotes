@@ -270,13 +270,14 @@ QList<int> NoteSubFolder::fetchAllIds() {
     return idList;
 }
 
-QList<NoteSubFolder> NoteSubFolder::fetchAllByParentId(int parentId) {
+QList<NoteSubFolder> NoteSubFolder::fetchAllByParentId(
+        int parentId, QString sortBy) {
     QSqlDatabase db = QSqlDatabase::database("memory");
     QSqlQuery query(db);
 
     QList<NoteSubFolder> noteSubFolderList;
     QString sql = "SELECT * FROM noteSubFolder WHERE parent_id = "
-            ":parent_id ORDER BY file_last_modified DESC";
+                  ":parent_id ORDER BY " + sortBy;
 
     query.prepare(sql);
     query.bindValue(":parent_id", parentId);

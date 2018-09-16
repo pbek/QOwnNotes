@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 18.09.2
+- the list of note sub-folders in the note list when moving notes to note 
+  sub-folders is now sorted alphabetically (for [#1022](https://github.com/pbek/QOwnNotes/issues/1022))
+
 ## 18.09.1
 - prevented possible misbehavior when moving multiple tags to another tag
   (for [#1014](https://github.com/pbek/QOwnNotes/issues/1014))

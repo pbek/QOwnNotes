@@ -52,7 +52,8 @@ public:
 
     NoteSubFolder getParent();
 
-    static QList<NoteSubFolder> fetchAllByParentId(int parentId);
+    static QList<NoteSubFolder> fetchAllByParentId(int parentId,
+            QString sortBy = "file_last_modified DESC");
 
     static QList<int> fetchIdsRecursivelyByParentId(int parentId);
 

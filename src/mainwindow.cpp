@@ -7981,7 +7981,7 @@ void MainWindow::tagSelectedNotesToTagId(int tagId) {
 void MainWindow::buildBulkNoteSubFolderMenuTree(QMenu *parentMenu, bool doCopy,
                                                 int parentNoteSubFolderId) {
     QList<NoteSubFolder> noteSubFolderList = NoteSubFolder::fetchAllByParentId(
-            parentNoteSubFolderId);
+            parentNoteSubFolderId, "name ASC");
     QSignalMapper *signalMapper = new QSignalMapper(this);
 
     Q_FOREACH(NoteSubFolder noteSubFolder, noteSubFolderList) {
