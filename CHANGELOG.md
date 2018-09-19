@@ -1,6 +1,9 @@
 # QOwnNotes Changelog
 
 ## 18.09.2
+- you can now **import text files as notes** from the *Note / Import* menu
+    - if no markdown headline was found in the file the basename of the file 
+      will be used as headline
 - the list of note sub-folders in the note list when moving notes to note 
   sub-folders is now sorted alphabetically (for [#1022](https://github.com/pbek/QOwnNotes/issues/1022))
 

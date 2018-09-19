@@ -865,6 +865,7 @@ p, li { white-space: pre-wrap; }
        <normaloff>.</normaloff>.</iconset>
      </property>
      <addaction name="actionImport_notes_from_Evernote"/>
+     <addaction name="actionImport_notes_from_text_files"/>
     </widget>
     <widget class="QMenu" name="menuNavigation">
      <property name="title">
@@ -2072,6 +2073,15 @@ p, li { white-space: pre-wrap; }
     <string>Import notes from Evernote</string>
    </property>
   </action>
+  <action name="actionImport_notes_from_text_files">
+   <property name="icon">
+    <iconset theme="text-x-generic" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/text-x-generic.svg</normaloff>:/icons/breeze-qownnotes/16x16/text-x-generic.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Import notes from text files</string>
+   </property>
+  </action>
   <action name="actionDelete_orphaned_images">
    <property name="icon">
     <iconset theme="archive-remove" resource="breeze-qownnotes.qrc">
@@ -2386,9 +2396,9 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
+  <include location="images.qrc"/>
   <include location="breeze-dark-qownnotes.qrc"/>
   <include location="breeze-qownnotes.qrc"/>
-  <include location="images.qrc"/>
  </resources>
  <connections/>
 </ui>

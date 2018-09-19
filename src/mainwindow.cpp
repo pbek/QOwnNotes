@@ -10428,3 +10428,41 @@ void MainWindow::turnOnDebugLogging() {
 
     _logDockWidget->show();
 }
+
+void MainWindow::on_actionImport_notes_from_text_files_triggered() {
+    FileDialog dialog("ImportTextFiles");
+    dialog.setFileMode(QFileDialog::ExistingFiles);
+    dialog.setAcceptMode(QFileDialog::AcceptOpen);
+    dialog.setWindowTitle(tr("Select text files to import"));
+    int ret = dialog.exec();
+
+    if (ret == QDialog::Accepted) {
+        QStringList fileNames = dialog.selectedFiles();
+        if (fileNames.size() == 0) {
+            return;
+        }
+
+        foreach (QString fileName, fileNames) {
+                QFile file(fileName);
+                QFileInfo fileInfo(file);
+
+                file.open(QFile::ReadOnly | QFile::Text);
+                QTextStream ts(&file);
+                QString text = ts.readAll();
+
+                QRegularExpressionMatch match =
+                        QRegularExpression(R"(^.+\n=+\n)",
+                                QRegularExpression::MultilineOption).match(
+                                        text);
+
+                CreateNewNoteOption options = CreateNewNoteOption::None;
+
+                // add a headline if none was found
+                if (!match.hasMatch()) {
+                    options = CreateNewNoteOption::UseNameAsHeadline;
+                }
+
+                createNewNote(fileInfo.baseName(), text, options);
+        }
+    }
+}

@@ -537,6 +537,8 @@ private slots:
 
     void on_noteOperationsButton_clicked();
 
+    void on_actionImport_notes_from_text_files_triggered();
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;
