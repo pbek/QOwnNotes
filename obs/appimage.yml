@@ -25,6 +25,6 @@ script:
   - qmake-qt5 QOwnNotes.pro PREFIX=/usr
   - make INSTALL_ROOT=$BUILD_APPDIR install
   - unset QTDIR; unset QT_PLUGIN_PATH; unset LD_LIBRARY_PATH
-  - linuxdeployqt $BUILD_APPDIR/usr/share/applications/*.desktop -bundle-non-qt-libs -verbose=2
+  - linuxdeployqt $BUILD_APPDIR/usr/share/applications/*.desktop -bundle-non-qt-libs -verbose=2 -no-strip
   - mkdir -p $BUILD_APPDIR/usr/share/metainfo
   - cp $BUILD_SOURCE_DIR/QOwnNotes/obs/qownnotes.appdata.xml $BUILD_APPDIR/usr/share/metainfo/qownnotes.appdata.xml
