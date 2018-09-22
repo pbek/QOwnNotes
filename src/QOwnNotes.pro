@@ -66,7 +66,6 @@ SOURCES += main.cpp\
     libraries/simplecrypt/simplecrypt.cpp \
     libraries/versionnumber/versionnumber.cpp \
     libraries/botan/botanwrapper.cpp \
-    libraries/singleapplication/singleapplication.cpp \
     dialogs/aboutdialog.cpp \
     dialogs/linkdialog.cpp \
     dialogs/notediffdialog.cpp \
@@ -144,7 +143,6 @@ HEADERS  += mainwindow.h \
     libraries/simplecrypt/simplecrypt.h \
     libraries/versionnumber/versionnumber.h \
     libraries/botan/botanwrapper.h \
-    libraries/singleapplication/singleapplication.h \
     entities/notehistory.h \
     entities/note.h \
     entities/trashitem.h \
@@ -257,6 +255,7 @@ include(libraries/botan/botan.pri)
 include(libraries/qkeysequencewidget/qkeysequencewidget/qkeysequencewidget.pri)
 include(libraries/qttoolbareditor/toolbar_editor.pri)
 include(libraries/fakevim/fakevim/fakevim.pri)
+include(libraries/singleapplication/singleapplication.pri)
 
 unix {
 
@@ -297,3 +296,5 @@ CONFIG(debug, debug|release) {
 #    DEFINES += QT_NO_DEBUG_OUTPUT
     message("Currently in RELEASE mode.")
 }
+
+DEFINES += QAPPLICATION_CLASS=QApplication

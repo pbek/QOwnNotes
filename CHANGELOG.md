@@ -1,6 +1,9 @@
 # QOwnNotes Changelog
 
 ## 18.09.3
+- attempted to improve *single application mode* (for [#1025](https://github.com/pbek/QOwnNotes/issues/1025)
+    - on certain occasions it was possible that the app wouldn't start a 2nd 
+      time even if it was closed, that should be fixed now
 - the **AppImage** version of QOwnNotes is working again
   (for [#1002](https://github.com/pbek/QOwnNotes/issues/1002), a big thank you
   to @fodrice for the patch)

@@ -188,6 +188,8 @@ set(SOURCE_FILES
     libraries/versionnumber/versionnumber.h
     libraries/singleapplication/singleapplication.h
     libraries/singleapplication/singleapplication.cpp
+    libraries/singleapplication/singleapplication_p.h
+    libraries/singleapplication/singleapplication_p.cpp
     libraries/qttoolbareditor/src/toolbar_editor.cpp
     libraries/qttoolbareditor/src/toolbar_editor.hpp
     libraries/qttoolbareditor/src/toolbar_editor.ui
@@ -361,3 +363,5 @@ target_link_libraries(QOwnNotes ${Qt5Widgets_LIBRARIES} ${Qt5Sql_LIBRARIES}
 # Sonnet support if we can get it to run in the future
 #find_package(KF5Sonnet)
 #target_link_libraries(KF5::SonnetCore KF5::SonnetUi)
+
+add_compile_definitions(QAPPLICATION_CLASS=QApplication)

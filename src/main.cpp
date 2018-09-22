@@ -435,7 +435,7 @@ int main(int argc, char *argv[]) {
 
         // raise the main window if app was started a 2nd time in single
         // application mode
-        QObject::connect(&app, &SingleApplication::showUp, [&] {
+        QObject::connect(&app, &SingleApplication::instanceStarted, [&] {
             w.show();
             w.raise();
             w.activateWindow();
