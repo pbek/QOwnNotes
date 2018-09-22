@@ -2474,6 +2474,12 @@ void Note::handleNoteRenaming(QString oldFileName, QString newFileName) {
                 QString text = note.getNoteText();
                 text.replace("<" + oldUrl + ">", "<" + newUrl + ">");
                 text.replace("](" + oldUrl + ")", "](" + newUrl + ")");
+
+                if (!oldUrl.contains("@")) {
+                    text.replace("<" + oldUrl + "@>", "<" + newUrl + ">");
+                    text.replace("](" + oldUrl + "@)", "](" + newUrl + ")");
+                }
+
                 note.storeNewText(text);
             }
     }
