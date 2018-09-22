@@ -8,6 +8,7 @@
   (for [#1002](https://github.com/pbek/QOwnNotes/issues/1002), a big thank you
   to @fodrice for the patch)
 - improved automatic note renaming for manually added note links that end with a `@`
+- replaced `ownCloud` by `ownCloud / Nextcloud` in the *Welcome dialog*
 
 ## 18.09.2
 - you can now **import text files as notes** from the *Note / Import* menu
