@@ -9,8 +9,8 @@
   to @fodrice for the patch)
 - improved automatic note renaming for manually added note links that end with a `@`
 - replaced `ownCloud` by `ownCloud / Nextcloud` in the *Welcome dialog*
-- added more Spanish, Italian, Chinese Traditional, Greek and German (thank you
-  richarson, mlocati, abev66, Soulrain and rakekniven)
+- added more Spanish, Italian, Chinese Traditional, Greek and German translation
+  (thank you richarson, mlocati, abev66, Soulrain and rakekniven)
 
 ## 18.09.2
 - you can now **import text files as notes** from the *Note / Import* menu
