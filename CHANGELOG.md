@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 18.09.3
+- the **AppImage** version of QOwnNotes is working again
+  (for [#1002](https://github.com/pbek/QOwnNotes/issues/1002), a big thank you
+  to @fodrice for the patch)
+
 ## 18.09.2
 - you can now **import text files as notes** from the *Note / Import* menu
     - if no markdown headline was found in the file the basename of the file 
