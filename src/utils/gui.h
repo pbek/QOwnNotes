@@ -16,6 +16,7 @@
 
 #include <QTreeWidgetItem>
 #include <QMessageBox>
+#include <QFontDialog>
 
 /*  Gui functions that can be useful */
 
@@ -74,5 +75,11 @@ namespace Utils {
                 int column = 0);
 
         bool isMessageBoxPresent();
+
+        QFont fontDialogGetFont(
+                bool *ok, const QFont &initial, QWidget *parent = nullptr,
+                const QString &title = QString(),
+                QFontDialog::FontDialogOptions options =
+                        QFontDialog::FontDialogOptions());
     }
 }

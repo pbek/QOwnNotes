@@ -1755,7 +1755,10 @@ void SettingsDialog::on_ownCloudServerAppPageButton_clicked() {
 
 void SettingsDialog::on_noteTextEditButton_clicked() {
     bool ok;
-    QFont font = QFontDialog::getFont(&ok, noteTextEditFont, this);
+    QFont font = Utils::Gui::fontDialogGetFont(&ok, noteTextEditFont, this);
+
+    qDebug() << __func__ << " - 'font': " << font;
+
     if (ok) {
         noteTextEditFont = font;
         setFontLabel(ui->noteTextEditFontLabel, noteTextEditFont);
@@ -1771,7 +1774,7 @@ void SettingsDialog::on_noteTextEditButton_clicked() {
 void SettingsDialog::on_noteTextEditCodeButton_clicked()
 {
     bool ok;
-    QFont font = QFontDialog::getFont(
+    QFont font = Utils::Gui::fontDialogGetFont(
             &ok, noteTextEditCodeFont, this,
             "", QFontDialog::MonospacedFonts);
     if (ok) {
@@ -1788,7 +1791,7 @@ void SettingsDialog::on_noteTextEditCodeButton_clicked()
 
 void SettingsDialog::on_noteTextViewButton_clicked() {
     bool ok;
-    QFont font = QFontDialog::getFont(&ok, noteTextViewFont, this);
+    QFont font = Utils::Gui::fontDialogGetFont(&ok, noteTextViewFont, this);
     if (ok) {
         noteTextViewFont = font;
         setFontLabel(ui->noteTextViewFontLabel, noteTextViewFont);
@@ -1798,7 +1801,7 @@ void SettingsDialog::on_noteTextViewButton_clicked() {
 void SettingsDialog::on_noteTextViewCodeButton_clicked()
 {
     bool ok;
-    QFont font = QFontDialog::getFont(
+    QFont font = Utils::Gui::fontDialogGetFont(
             &ok, noteTextViewCodeFont, this,
             "", QFontDialog::MonospacedFonts);
     if (ok) {

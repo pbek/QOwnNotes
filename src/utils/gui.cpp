@@ -267,3 +267,26 @@ bool Utils::Gui::isMessageBoxPresent() {
 
     return false;
 }
+
+/**
+ * Opens a font dialog to select a font
+ *
+ * @param ok
+ * @param initial
+ * @param parent
+ * @param title
+ * @param options
+ * @return
+ */
+QFont Utils::Gui::fontDialogGetFont(bool *ok, const QFont &initial,
+        QWidget *parent, const QString &title,
+        QFontDialog::FontDialogOptions options) {
+
+#ifdef Q_OS_MAC
+    // there was a bug in Qt 5.11.2 with the native dialog
+    // see: https://github.com/pbek/QOwnNotes/issues/1033
+    options |= QFontDialog::DontUseNativeDialog;
+#endif
+
+    return QFontDialog::getFont(ok, initial, parent, title, options);
+}
