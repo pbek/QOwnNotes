@@ -6247,7 +6247,7 @@ Això no es pot desfer!</translation>
     <message>
       <location filename="../main.cpp" line="76"/>
       <source>Prints out a dump of the settings and other information about the application and environment in GitHub Markdown and exits the application.</source>
-      <translation>Impressió en Markdown (de GitHub) d'una extracció dels paràmetres de configuració i altra informació sobre l'aplicació i l'entorn i sortida de l'aplicació.</translation>
+      <translation>Impressió en Markdown (versió GitHub) d'un bolcat dels paràmetres de configuració i altra informació sobre l'aplicació i el seu entorn, i sortida posterior de l'aplicació.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="82"/>

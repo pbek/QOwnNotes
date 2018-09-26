@@ -1346,7 +1346,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2085"/>
       <source>Import notes from text files</source>
-      <translation type="unfinished">Import notes from text files</translation>
+      <translation>Importeer notities uit tekstbestanden</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2094"/>
@@ -2133,7 +2133,7 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
     <message>
       <location filename="../mainwindow.cpp" line="10436"/>
       <source>Select text files to import</source>
-      <translation type="unfinished">Select text files to import</translation>
+      <translation>Selecteer de tekst die U wilt importeren</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7438"/>

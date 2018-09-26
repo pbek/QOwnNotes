@@ -3,6 +3,8 @@
 ## 18.09.4
 - fixed selecting editor and preview fonts in macOS under Qt 5.11.2
   (for [#1033](https://github.com/pbek/QOwnNotes/issues/1033)
+- added more Catalan, Dutch and German translation (thank you MGuerra, Fabijenna
+  and dgirke)
 
 ## 18.09.3
 - attempted to improve the *single application mode* (for [#1025](https://github.com/pbek/QOwnNotes/issues/1025))

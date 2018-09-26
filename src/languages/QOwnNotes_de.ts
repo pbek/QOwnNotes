@@ -83,7 +83,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="644"/>
       <source>Basic attributes</source>
-      <translation>Allgemeine Eigenschaften</translation>
+      <translation>Grundlegende Eigenschaften</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="645"/>
@@ -153,7 +153,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="671"/>
       <source>Reminder done time</source>
-      <translation>Erinnerungszeit der Erledigung</translation>
+      <translation>Erledigungszeitpunkt-Erinnerung</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="673"/>
@@ -197,7 +197,7 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="958"/>
       <source>Mark "%1" not set.</source>
-      <translation>Mark "%1" nicht gesetzt.</translation>
+      <translation>Merkmal "%1" nicht gesetzt.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="2836"/>
@@ -222,7 +222,7 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4301"/>
       <source>Type Alt-V, Alt-V to quit FakeVim mode.</source>
-      <translation>Geben Sie Alt-V, Alt-V ein um FakeVim-Modus zu beenden.</translation>
+      <translation>Geben Sie Alt-V, Alt-V ein um FakeVim-Modus zu verlassen.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5749"/>
@@ -232,7 +232,7 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5759"/>
       <source>Invalid argument:</source>
-      <translation>Ungültiges Argument:</translation>
+      <translation>Ungültiger Ausdruck:</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5761"/>
@@ -343,27 +343,27 @@
       <source>%n lines %1ed %2 time.</source>
       <comment>%1 can be '&gt;' or '&lt;'</comment>
       <translation>
-        <numerusform>%n Zeile %1ed %2-Zeit.</numerusform>
-        <numerusform>%n Zeilen %1ed %2-Zeit.</numerusform>
+        <numerusform>%n Zeilen %2 mal %1ed.</numerusform>
+        <numerusform>%n Zeilen %2 mal %1ed.</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7033"/>
       <source>%n lines yanked.</source>
       <translation>
-        <numerusform>%n Zeile gerissen.</numerusform>
-        <numerusform>%n Zeilen gerissen.</numerusform>
+        <numerusform>%n Zeilen herausgezogen.</numerusform>
+        <numerusform>%n Zeilen herausgezogen.</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7766"/>
       <source>Already at oldest change.</source>
-      <translation>Bereits an der ältesten Änderung.</translation>
+      <translation>Bereits bei der ältesten Änderung.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7767"/>
       <source>Already at newest change.</source>
-      <translation>Bereits an der neuesten Änderung.</translation>
+      <translation>Bereits bei der neuesten Änderung.</translation>
     </message>
   </context>
   <context>
@@ -371,7 +371,7 @@
     <message>
       <location filename="../helpers/fakevimproxy.cpp" line="26"/>
       <source>Information</source>
-      <translation>Informationen</translation>
+      <translation>Information</translation>
     </message>
   </context>
   <context>
@@ -2632,7 +2632,7 @@ Falls Sie die Papierkorb-App auf Ihrem Nextcloud/ownCloud-Server aktiviert haben
     <message>
       <location filename="../mainwindow.cpp" line="2678"/>
       <source>Read-only</source>
-      <translation>Schreibgeschützt</translation>
+      <translation>Nur lesbar</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2679"/>
@@ -2799,12 +2799,12 @@ Falls Sie die Papierkorb-App auf Ihrem Nextcloud/ownCloud-Server aktiviert haben
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="14"/>
       <source>Orphaned attachments</source>
-      <translation>Verwaiste Dateianhänge</translation>
+      <translation>Verwaiste Anhänge</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="54"/>
       <source>Delete selected attachments</source>
-      <translation>Ausgewählte Dateianhänge löschen</translation>
+      <translation>Ausgewählte Anhänge löschen</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="57"/>
@@ -2814,7 +2814,7 @@ Falls Sie die Papierkorb-App auf Ihrem Nextcloud/ownCloud-Server aktiviert haben
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="86"/>
       <source>Add selected attachments to note</source>
-      <translation>Ausgewählte Dateianhänge zur Notiz hinzufügen</translation>
+      <translation>Ausgewählte Anhänge zur Notiz hinzufügen</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="89"/>
@@ -2824,7 +2824,7 @@ Falls Sie die Papierkorb-App auf Ihrem Nextcloud/ownCloud-Server aktiviert haben
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="100"/>
       <source>Open &amp;attachment</source>
-      <translation>Dateian&amp;hänge öffnen</translation>
+      <translation>An&amp;hänge öffnen</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="111"/>
@@ -2849,7 +2849,7 @@ Falls Sie die Papierkorb-App auf Ihrem Nextcloud/ownCloud-Server aktiviert haben
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="229"/>
       <source>Attachments that are not used in notes:</source>
-      <translation>Dateianhänge, die nicht in Notizen verwendet werden:</translation>
+      <translation>Anhänge, die nicht in Notizen verwendet werden:</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="60"/>
@@ -2865,8 +2865,8 @@ Falls Sie die Papierkorb-App auf Ihrem Nextcloud/ownCloud-Server aktiviert haben
       <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="141"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
       <translation>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; ausgewählte Datei löschen?</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; ausgewählte Dateien löschen?</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; ausgewählte Datei(en) löschen?</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; ausgewählte Datei(en) löschen?</numerusform>
       </translation>
     </message>
   </context>
@@ -3087,8 +3087,8 @@ Falls Sie die Papierkorb-App auf Ihrem Nextcloud/ownCloud-Server aktiviert haben
       <location filename="../entities/note.cpp" line="2842"/>
       <source>…and %n more note(s)</source>
       <translation>
-        <numerusform>…und %n weitere Notiz</numerusform>
-        <numerusform>…und %n weitere Notizen</numerusform>
+        <numerusform>…und %n weitere Notiz(en)</numerusform>
+        <numerusform>…und %n weitere Notiz(en)</numerusform>
       </translation>
     </message>
     <message>
@@ -4339,7 +4339,7 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3322"/>
       <source>Automatically close the note folder database to prevent problems with sync tools</source>
-      <translation>Die Notizen-Ordner-Datenbank wird automatisch geschlossen um Probleme mit Synchronisierungswerkzeugen zu verhindern</translation>
+      <translation>Die Notizen-Ordner-Datenbank wird automatisch geschlossen, um Probleme mit Synchronisierungswerkzeugen zu verhindern</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3325"/>
@@ -4367,13 +4367,13 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
       <location filename="../dialogs/settingsdialog.cpp" line="3533"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3556"/>
       <source>Import settings</source>
-      <translation>Importeinstellungen</translation>
+      <translation>Einstellungen importieren</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3601"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3499"/>
       <source>Export settings</source>
-      <translation>Export-Einstellungen</translation>
+      <translation>Einstellungen exportieren</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3740"/>
@@ -4383,7 +4383,7 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3751"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nutzen Sie den Frage-Assistenten um ein Thema zu schreiben. Drücken Sie dazu den Knopf &lt;span style=" font-weight:600;"&gt;Frage-Assistent öffnen&lt;/span&gt; weiter unten.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nutzen Sie den Frage-Assistenten bei Schwierigkeiten oder Verbesserungsvorschlägen. Drücken Sie dazu den Knopf &lt;span style=" font-weight:600;"&gt;Frage-Assistent öffnen&lt;/span&gt; weiter unten.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4307"/>
@@ -5218,12 +5218,12 @@ Fehlermeldung: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3534"/>
       <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
-      <translation>Möchten Sie wirklich die Einstellungen importieren? Ihre aktuellen Einstellungen werden entfernt und nicht jede Einstellung kann wiederhergestellt werden, wie die Einstellungen des Notiz-Ordners und die Skripte die sie verwenden. Sie müssen auch einige Einstellungen, insbesondere auf verschiedenen Plattformen anpassen, aber Ihre Notizen bleiben intakt!</translation>
+      <translation>Möchten Sie wirklich die Einstellungen importieren? Ihre aktuellen Einstellungen werden entfernt und nicht jede Einstellung kann wiederhergestellt werden, wie z. B. die Einstellungen des Notiz-Ordners oder eigene Skripte. Einige Einstellungen, insbesondere auf verschiedenen Plattformen, müssen nachträglich gepasst werden. Ihre Notizen sind aber nicht betroffen und bleiben vollständig erhalten!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3544"/>
       <source>The application will be quit after the import.</source>
-      <translation>Die Anwendung wird nach dem Import beendet.</translation>
+      <translation>Die Anwendung wird nach dem Import geschlossen.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3545"/>
@@ -5248,7 +5248,7 @@ Fehlermeldung: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1399"/>
       <source>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</source>
-      <translation>Der Tastaturbefehl &lt;strong&gt;%1&lt;/strong&gt; wird bereits für &lt;strong&gt;%2&lt;/strong&gt; verwendet! Möchten Sie zum Tastaturbefehl wechseln?</translation>
+      <translation>Der Tastaturbefehl &lt;strong&gt;%1&lt;/strong&gt; wird bereits für &lt;strong&gt;%2&lt;/strong&gt; verwendet! Möchten Sie diesen Tastaturbefehl neu bearbeiten?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2525"/>
@@ -6213,7 +6213,7 @@ Kann nicht rückgängig gemacht werden!</translation>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="94"/>
       <source>Cannot create note path! You have to create the note folder manually!</source>
-      <translation>Der Notizenordner kann nicht erstellt werden! Erstellen Sie den Notizenordner manuell!</translation>
+      <translation>Der Notizenordner kann nicht erstellt werden! Erstellen Sie den Notizenordner bitte manuell!</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="101"/>
