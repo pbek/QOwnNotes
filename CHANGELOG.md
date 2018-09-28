@@ -1,8 +1,12 @@
 # QOwnNotes Changelog
 
+## 18.09.5
+- you can now create markdown new-lines (with two spaces at the end) by pressing
+  <kbd>Shift</kbd> + <kbd>Return</kbd> in the note editor (for [#1032](https://github.com/pbek/QOwnNotes/issues/1032))
+ 
 ## 18.09.4
 - fixed selecting editor and preview fonts in macOS under Qt 5.11.2
-  (for [#1033](https://github.com/pbek/QOwnNotes/issues/1033)
+  (for [#1033](https://github.com/pbek/QOwnNotes/issues/1033))
 - added more Catalan, Dutch and German translation (thank you MGuerra, Fabijenna
   and dgirke)
 
