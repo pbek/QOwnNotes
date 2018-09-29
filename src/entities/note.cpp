@@ -1821,7 +1821,7 @@ QString Note::textToMarkdownHtml(QString str, QString notesPath,
     hoedown_document_free(document);
     hoedown_html_renderer_free(renderer);
 
-    QSettings(settings);
+    QSettings settings;
     QString fontString = settings.value("MainWindow/noteTextView.code.font")
             .toString();
 
@@ -2235,7 +2235,7 @@ bool Note::canDecryptNoteText() {
             botanWrapper.setSalt(BOTAN_SALT);
             decryptedNoteText = botanWrapper.Decrypt(encryptedNoteText);
         }
-        catch (Botan::Exception exception) {
+        catch (Botan::Exception) {
             return false;
         }
 
@@ -2284,7 +2284,7 @@ QString Note::getDecryptedNoteText() {
             botanWrapper.setSalt(BOTAN_SALT);
             decryptedNoteText = botanWrapper.Decrypt(encryptedNoteText);
         }
-        catch (Botan::Exception exception) {
+        catch (Botan::Exception) {
 
         }
 
