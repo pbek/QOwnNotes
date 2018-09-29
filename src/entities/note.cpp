@@ -2285,7 +2285,6 @@ QString Note::getDecryptedNoteText() {
             decryptedNoteText = botanWrapper.Decrypt(encryptedNoteText);
         }
         catch (Botan::Exception) {
-
         }
 
         // fallback to SimpleCrypt
