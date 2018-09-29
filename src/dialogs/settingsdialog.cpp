@@ -2196,7 +2196,8 @@ void SettingsDialog::on_noteFolderRemoveButton_clicked()
  */
 void SettingsDialog::on_noteFolderNameLineEdit_editingFinished()
 {
-    QString text = ui->noteFolderNameLineEdit->text();
+    QString text = ui->noteFolderNameLineEdit->text().remove("\n").trimmed();
+    text.truncate(50);
     _selectedNoteFolder.setName(text);
     _selectedNoteFolder.store();
 

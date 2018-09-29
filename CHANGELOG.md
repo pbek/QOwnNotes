@@ -3,7 +3,9 @@
 ## 18.09.5
 - you can now create markdown new-lines (with two spaces at the end) by pressing
   <kbd>Shift</kbd> + <kbd>Return</kbd> in the note editor (for [#1032](https://github.com/pbek/QOwnNotes/issues/1032))
- 
+- note folder names in the *Note folders* settings will now be truncated at 50
+  characters and new-line characters will be removed (for [#1027](https://github.com/pbek/QOwnNotes/issues/1027))
+
 ## 18.09.4
 - fixed selecting editor and preview fonts in macOS under Qt 5.11.2
   (for [#1033](https://github.com/pbek/QOwnNotes/issues/1033))
