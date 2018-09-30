@@ -210,8 +210,6 @@ void SingleApplicationPrivate::connectToPrimary( int msecs, ConnectionType conne
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
         writeStream.setVersion(QDataStream::Qt_5_6);
-#else
-        writeStream.setVersion(QDataStream::Qt_DefaultCompiledVersion);
 #endif
 
         writeStream << blockServerName.toLatin1();
@@ -226,8 +224,6 @@ void SingleApplicationPrivate::connectToPrimary( int msecs, ConnectionType conne
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
         writeStream.setVersion(QDataStream::Qt_5_6);
-#else
-        writeStream.setVersion(QDataStream::Qt_DefaultCompiledVersion);
 #endif
         headerStream << static_cast <quint64>( initMsg.length() );
 
@@ -314,8 +310,6 @@ void SingleApplicationPrivate::readInitMessageHeader( QLocalSocket *sock )
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
     headerStream.setVersion(QDataStream::Qt_5_6);
-#else
-    headerStream.setVersion(QDataStream::Qt_DefaultCompiledVersion);
 #endif
 
     // Read the header to know the message length
@@ -349,8 +343,6 @@ void SingleApplicationPrivate::readInitMessageBody( QLocalSocket *sock )
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
     readStream.setVersion(QDataStream::Qt_5_6);
-#else
-    readStream.setVersion(QDataStream::Qt_DefaultCompiledVersion);
 #endif
 
     // server name
