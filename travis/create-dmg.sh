@@ -21,8 +21,8 @@ echo "Changing bundle identifier"
 sed -i -e 's/com.yourcompany.QOwnNotes/com.PBE.QOwnNotes/g' $APP.app/Contents/Info.plist
 
 # adding version number
-/usr/libexec/PlistBuddy -c "Set :CFBundleVersion $VERSION_NUMBER" $APP.app/Contents/Info.plist
-/usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString $VERSION_NUMBER" $APP.app/Contents/Info.plist
+/usr/libexec/PlistBuddy -c "Add :CFBundleVersion string $VERSION_NUMBER" $APP.app/Contents/Info.plist
+/usr/libexec/PlistBuddy -c "Add :CFBundleShortVersionString string $VERSION_NUMBER" $APP.app/Contents/Info.plist
 
 # removing backup plist
 rm -f $APP.app/Contents/Info.plist-e
