@@ -11,6 +11,7 @@ APP=QOwnNotes
 TEMPDIR=$APP
 SIGNATURE="Patrizio Bekerle"
 NAME=`uname`
+PLIST=$APP.app/Contents/Info.plist
 
 if [ "$NAME" != "Darwin" ]; then
     echo "This is not a Mac"
@@ -18,11 +19,14 @@ if [ "$NAME" != "Darwin" ]; then
 fi
 
 echo "Changing bundle identifier"
-sed -i -e 's/com.yourcompany.QOwnNotes/com.PBE.QOwnNotes/g' $APP.app/Contents/Info.plist
+sed -i -e 's/com.yourcompany.QOwnNotes/com.PBE.QOwnNotes/g' $PLIST
 
 # adding version number
-/usr/libexec/PlistBuddy -c "Add :CFBundleVersion string $VERSION_NUMBER" $APP.app/Contents/Info.plist
-/usr/libexec/PlistBuddy -c "Add :CFBundleShortVersionString string $VERSION_NUMBER" $APP.app/Contents/Info.plist
+/usr/libexec/PlistBuddy -c "Add :CFBundleVersion string $VERSION_NUMBER" $PLIST
+/usr/libexec/PlistBuddy -c "Add :CFBundleShortVersionString string $VERSION_NUMBER" $PLIST
+
+# removing CFBundleGetInfoString
+/usr/libexec/PlistBuddy -c "Delete :CFBundleGetInfoString" $PLIST
 
 # removing backup plist
 rm -f $APP.app/Contents/Info.plist-e
