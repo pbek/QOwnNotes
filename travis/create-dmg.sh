@@ -29,7 +29,7 @@ sed -i -e 's/com.yourcompany.QOwnNotes/com.PBE.QOwnNotes/g' $PLIST
 /usr/libexec/PlistBuddy -c "Delete :CFBundleGetInfoString" $PLIST
 
 # removing backup plist
-rm -f $APP.app/Contents/Info.plist-e
+rm -f ${PLIST}-e
 
 # copy translation files to app
 cp languages/*.qm $APP.app/Contents/Resources
