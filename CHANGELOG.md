@@ -16,6 +16,7 @@
 - a new community maintained repository for CentOS by Jörg Woll is now back again
     - visit [CentOS repository](https://www.qownnotes.org/installation#CentOS)
       for more information
+- added more French translation (thank you adrientaudiere)
 
 ## 18.09.5
 - you can now create markdown new-lines (with two spaces at the end) by pressing

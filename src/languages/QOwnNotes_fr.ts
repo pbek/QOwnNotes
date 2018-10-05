@@ -28,7 +28,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="121"/>
       <source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</source>
-      <translation type="unfinished">To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</translation>
+      <translation>Pour obtenir un fichier enex, vous devez sélectionner une ou plusieurs notes depuis votre application Evernote et cliquer sur "Exporter les notes..." dans le menu Fichier.</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="74"/>
@@ -38,7 +38,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="30"/>
       <source>Select file</source>
-      <translation type="unfinished">Select file</translation>
+      <translation>Sélectionnez le fichier</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="54"/>
@@ -48,12 +48,12 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="91"/>
       <source>Metadata to import</source>
-      <translation type="unfinished">Metadata to import</translation>
+      <translation>Métadonnées à importer</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="165"/>
       <source>Import notes</source>
-      <translation type="unfinished">Import notes</translation>
+      <translation>Importer des notes</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="23"/>
@@ -83,22 +83,22 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="644"/>
       <source>Basic attributes</source>
-      <translation type="unfinished">Basic attributes</translation>
+      <translation>Attributs de base</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="645"/>
       <source>Created date</source>
-      <translation type="unfinished">Created date</translation>
+      <translation>Date de création</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="647"/>
       <source>Updated date</source>
-      <translation type="unfinished">Updated date</translation>
+      <translation>Date de mise à jour</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="650"/>
       <source>Note attributes</source>
-      <translation type="unfinished">Note attributes</translation>
+      <translation>Attributs des notes</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="651"/>
@@ -108,32 +108,32 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="653"/>
       <source>Latitude</source>
-      <translation type="unfinished">Latitude</translation>
+      <translation>Latitude</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="655"/>
       <source>Longitude</source>
-      <translation type="unfinished">Longitude</translation>
+      <translation>Longitude</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="657"/>
       <source>Altitude</source>
-      <translation type="unfinished">Altitude</translation>
+      <translation>Altitude</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="659"/>
       <source>Author</source>
-      <translation type="unfinished">Author</translation>
+      <translation>Auteur</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="661"/>
       <source>Source</source>
-      <translation type="unfinished">Source</translation>
+      <translation>Source</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="663"/>
       <source>Source URL</source>
-      <translation type="unfinished">Source URL</translation>
+      <translation>URL de la source</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="665"/>
@@ -148,7 +148,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="669"/>
       <source>Reminder time</source>
-      <translation type="unfinished">Reminder time</translation>
+      <translation>Heure de rappel</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="671"/>
@@ -158,7 +158,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="673"/>
       <source>Place name</source>
-      <translation type="unfinished">Place name</translation>
+      <translation>Nom de lieu</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="675"/>
@@ -173,12 +173,12 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="751"/>
       <source>Attribute</source>
-      <translation type="unfinished">Attribute</translation>
+      <translation>Attribut</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="751"/>
       <source>Value</source>
-      <translation type="unfinished">Value</translation>
+      <translation>Valeur</translation>
     </message>
   </context>
   <context>
@@ -187,12 +187,12 @@
       <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="166"/>
       <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="174"/>
       <source>Unknown option: %1</source>
-      <translation type="unfinished">Unknown option: %1</translation>
+      <translation>Option inconnue : %1</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="169"/>
       <source>Argument must be positive: %1=%2</source>
-      <translation type="unfinished">Argument must be positive: %1=%2</translation>
+      <translation>L’argument doit être positif : %1=%2</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="958"/>
@@ -217,7 +217,7 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3721"/>
       <source>Not implemented in FakeVim.</source>
-      <translation type="unfinished">Not implemented in FakeVim.</translation>
+      <translation>Non implémenté dans FakeVim.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4301"/>
@@ -227,12 +227,12 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5749"/>
       <source>Unknown option:</source>
-      <translation type="unfinished">Unknown option:</translation>
+      <translation>Option inconnue :</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5759"/>
       <source>Invalid argument:</source>
-      <translation type="unfinished">Invalid argument:</translation>
+      <translation>Argument non valide :</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5761"/>
@@ -4288,12 +4288,12 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2249"/>
       <source>Chinese Simplified</source>
-      <translation type="unfinished">Chinese Simplified</translation>
+      <translation>Chinois simplifié</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2260"/>
       <source>Chinese Traditional</source>
-      <translation type="unfinished">Chinese Traditional</translation>
+      <translation>Chinois traditionnel</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2328"/>
@@ -4323,7 +4323,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2688"/>
       <source>&amp;Add script…</source>
-      <translation type="unfinished">&amp;Add script…</translation>
+      <translation>&amp;Ajouter un script…</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3215"/>
