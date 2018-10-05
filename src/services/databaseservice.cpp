@@ -666,6 +666,15 @@ bool DatabaseService::setupTables() {
         version = 27;
     }
 
+    if (version < 28) {
+#ifndef Q_OS_MAC
+        // we only want one app instance on Windows and Linux by default
+        settings.setValue("allowOnlyOneAppInstance", true);
+#endif
+
+        version = 28;
+    }
+
     if (version != oldVersion) {
         setAppData("database_version", QString::number(version));
     }

@@ -1,5 +1,22 @@
 # QOwnNotes Changelog
 
+## 18.10.0
+- on Linux and Windows now the setting to only run one app instance at the same 
+  time will be used by default
+    - macOS only runs one instance of apps, so we don't need this setting there
+    - you need to restart the app a second time to let this setting take effect
+    - you can still turn this off in the settings, but keep in mind that this
+      will cause problems with settings written by the multiple instances
+    - use the `--session` parameter to run QOwnNotes multiple times with 
+      different settings
+        - you can also export your settings from your first instance and import
+          them in your second instance
+- the macOS app file now has a version number that can be viewed with Finder
+  (for [#1038](https://github.com/pbek/QOwnNotes/issues/1038))
+- a new community maintained repository for CentOS by Jörg Woll is now back again
+    - visit [CentOS repository](https://www.qownnotes.org/installation#CentOS)
+      for more information
+
 ## 18.09.5
 - you can now create markdown new-lines (with two spaces at the end) by pressing
   <kbd>Shift</kbd> + <kbd>Return</kbd> in the note editor (for [#1032](https://github.com/pbek/QOwnNotes/issues/1032))

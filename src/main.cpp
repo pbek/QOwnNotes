@@ -403,8 +403,13 @@ int main(int argc, char *argv[]) {
     QTranslator translator6;
     QTranslator translatorLocal;
 
+#ifdef Q_OS_MAC
+    // we don't need this on macOS
+    bool allowOnlyOneAppInstance = false;
+#else
     bool allowOnlyOneAppInstance = settings.value(
-            "allowOnlyOneAppInstance", false).toBool();
+            "allowOnlyOneAppInstance", true).toBool();
+#endif
 
     // if only one app instance is allowed use SingleApplication
     if (allowOnlyOneAppInstance) {
