@@ -10,6 +10,7 @@
 [Screenshots](https://www.qownnotes.org) |
 [ownCloud API](https://marketplace.owncloud.com/apps/qownnotesapi) |
 [Nextcloud API](https://apps.nextcloud.com/apps/qownnotesapi) |
+[Telegram Group](https://t.me/QOwnNotes) |
 [IRC Chat](https://kiwiirc.com/client/irc.freenode.net/#qownnotes) |
 [Gitter Chat](https://gitter.im/qownnotes/qownnotes)
 
