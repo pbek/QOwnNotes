@@ -544,6 +544,7 @@ private:
     QString notesPath;
     QFileSystemWatcher noteDirectoryWatcher;
     Note currentNote;
+    QString _currentNoteTextHash;
     NoteDiffDialog *noteDiffDialog;
     QSignalMapper *recentNoteFolderSignalMapper;
     QSignalMapper *storeNoteBookmarkSignalMapper;
@@ -929,4 +930,6 @@ private:
 
     void openNotesContextMenu(const QPoint &globalPos,
             bool multiNoteMenuEntriesOnly = false);
+
+    void updateCurrentNoteTextHash();
 };

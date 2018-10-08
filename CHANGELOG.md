@@ -1,5 +1,15 @@
 # QOwnNotes Changelog
 
+## 18.10.1
+- changes of the current note outside of QOwnNotes will now not trigger the
+  `The current note was modified outside of this application!` dialog while 
+  editing the current note if the content of the note file wasn't really
+  modified (for [#1041](https://github.com/pbek/QOwnNotes/issues/1041))
+    - this was a problem because the Nextcloud / ownCloud sync client seems 
+      to write to the note files on some systems even if there were no actual
+      changes to be made, this spawned the dialog if the user was actively
+      editing the note
+
 ## 18.10.0
 - on Linux and Windows now the setting to only run one app instance at the same 
   time will be used by default

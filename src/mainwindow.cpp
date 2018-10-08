@@ -2418,15 +2418,25 @@ void MainWindow::notesWereModified(const QString &str) {
     // load note from disk if current note was changed
     if (note.getFileName() == this->currentNote.getFileName()) {
         if (note.fileExists()) {
-            // fetch current text
-            QString text1 = this->ui->noteTextEdit->toPlainText();
-
             // fetch text of note from disk
             note.updateNoteTextFromDisk();
-            QString text2 = Utils::Misc::transformLineFeeds(note.getNoteText());
+            QString noteTextOnDisk = Utils::Misc::transformLineFeeds(
+                    note.getNoteText());
 
-            // skip dialog if texts are equal
-            if (text1 == text2) {
+            QString noteTextOnDiskHash = QString(QCryptographicHash::hash(
+                    noteTextOnDisk.toLocal8Bit(), QCryptographicHash::Sha1).toHex());
+
+            // skip dialog if text of note file on disk and current note are equal
+            if (noteTextOnDiskHash == _currentNoteTextHash) {
+                return;
+            }
+
+            // fetch current text
+            QString noteTextEditText = this->ui->noteTextEdit->toPlainText();
+
+            // skip dialog if text of note file on disk text from note text
+            // edit are equal
+            if (noteTextEditText == noteTextOnDisk) {
                 return;
             }
 
@@ -2631,6 +2641,10 @@ void MainWindow::storeUpdatedNotesToDisk() {
         if (currentNoteChanged) {
             // just to make sure everything is up-to-date
             currentNote.refetch();
+
+            // create a hash of the text of the current note to be able if it
+            // was modified outside of QOwnNotes
+            updateCurrentNoteTextHash();
 
             if (oldNoteName != currentNote.getName()) {
                 // just to make sure the window title is set correctly
@@ -3279,6 +3293,20 @@ void MainWindow::setCurrentNote(Note note,
     }
 
     noteEditCursorPositionChanged();
+
+    // create a hash of the text of the current note to be able if it was
+    // modified outside of QOwnNotes
+    updateCurrentNoteTextHash();
+}
+
+/**
+ * Creates a hash of the text of the current note to be able if it was
+ * modified outside of QOwnNotes
+ */
+void MainWindow::updateCurrentNoteTextHash() {
+    _currentNoteTextHash = QString(QCryptographicHash::hash(
+            currentNote.getNoteText().toLocal8Bit(),
+            QCryptographicHash::Sha1).toHex());
 }
 
 /**
