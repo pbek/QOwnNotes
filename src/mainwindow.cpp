@@ -10494,3 +10494,10 @@ void MainWindow::on_actionImport_notes_from_text_files_triggered() {
         }
     }
 }
+
+/**
+ * Opens the Telegram group
+ */
+void MainWindow::on_actionTelegram_triggered() {
+    QDesktopServices::openUrl(QUrl("https://t.me/QOwnNotes"));
+}

@@ -9,6 +9,12 @@
       to write to the note files on some systems even if there were no actual
       changes to be made, this spawned the dialog if the user was actively
       editing the note
+- there now is a *Telegram* menu entry in the *Help / Open chat* menu to open
+  a browser window with the **QOwnNotes Telegram group**
+- there is a community-created QOwnNotes package for **FreeBSD** by *Matthew Stobbs*
+  at [QOwnNotes FreeBSD port](https://www.qownnotes.org/installation#FreeBSD)
+  (for [#969](https://github.com/pbek/QOwnNotes/issues/969), a big thank you
+  to Matthew!)
 
 ## 18.10.0
 - on Linux and Windows now the setting to only run one app instance at the same 

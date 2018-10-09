@@ -951,6 +951,7 @@ p, li { white-space: pre-wrap; }
       <iconset theme="im-user-online" resource="breeze-qownnotes.qrc">
        <normaloff>:/icons/breeze-qownnotes/16x16/im-user-online.svg</normaloff>:/icons/breeze-qownnotes/16x16/im-user-online.svg</iconset>
      </property>
+     <addaction name="actionTelegram"/>
      <addaction name="actionGitter"/>
      <addaction name="actionOpen_IRC_Channel"/>
     </widget>
@@ -2091,6 +2092,21 @@ p, li { white-space: pre-wrap; }
     <string>Manage orphaned image files</string>
    </property>
   </action>
+  <action name="actionTelegram">
+   <property name="icon">
+    <iconset theme="im-user-online" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/im-user-online.svg</normaloff>:/icons/breeze-qownnotes/16x16/im-user-online.svg</iconset>
+   </property>
+   <property name="text">
+    <string notr="true">Telegram</string>
+   </property>
+   <property name="toolTip">
+    <string>Open the Telegram group</string>
+   </property>
+   <property name="statusTip">
+    <string>Open the Telegram group</string>
+   </property>
+  </action>
   <action name="actionGitter">
    <property name="icon">
     <iconset theme="im-user-online" resource="breeze-qownnotes.qrc">
@@ -2396,8 +2412,8 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="images.qrc"/>
   <include location="breeze-dark-qownnotes.qrc"/>
+  <include location="images.qrc"/>
   <include location="breeze-qownnotes.qrc"/>
  </resources>
  <connections/>

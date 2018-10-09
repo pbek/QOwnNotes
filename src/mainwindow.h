@@ -539,6 +539,8 @@ private slots:
 
     void on_actionImport_notes_from_text_files_triggered();
 
+    void on_actionTelegram_triggered();
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;
