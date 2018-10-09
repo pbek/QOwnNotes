@@ -15,6 +15,7 @@
   at [QOwnNotes FreeBSD port](https://www.qownnotes.org/installation#FreeBSD)
   (for [#969](https://github.com/pbek/QOwnNotes/issues/969), a big thank you
   to Matthew!)
+- added more German translation
 
 ## 18.10.0
 - on Linux and Windows now the setting to only run one app instance at the same 
