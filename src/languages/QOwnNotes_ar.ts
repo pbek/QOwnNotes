@@ -1465,7 +1465,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2253"/>
-        <source>Copy headline</source>
+        <source>Copy note headline</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

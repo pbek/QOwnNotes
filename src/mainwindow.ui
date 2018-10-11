@@ -2250,7 +2250,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionCopy_headline">
    <property name="text">
-    <string>Copy headline</string>
+    <string>Copy note headline</string>
    </property>
    <property name="shortcut">
     <string notr="true">Alt+Shift+H</string>
