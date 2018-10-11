@@ -10501,3 +10501,33 @@ void MainWindow::on_actionImport_notes_from_text_files_triggered() {
 void MainWindow::on_actionTelegram_triggered() {
     QDesktopServices::openUrl(QUrl("https://t.me/QOwnNotes"));
 }
+
+/**
+ * Copies the headline of the current note
+ */
+void MainWindow::on_actionCopy_headline_triggered() {
+    QString noteText = currentNote.getNoteText();
+
+    // try regular headlines
+    QRegularExpressionMatch match =
+            QRegularExpression(R"(^(.+)\n=+)",
+                    QRegularExpression::MultilineOption).match(noteText);
+
+    QString headline;
+    if (match.hasMatch()) {
+        headline = match.captured(1);
+    } else {
+        // try alternative headlines
+        match = QRegularExpression(R"(^#+ (.+)$)",
+                QRegularExpression::MultilineOption).match(noteText);
+
+        if (match.hasMatch()) {
+            headline = match.captured(1);
+        }
+    }
+
+    if (!headline.isEmpty()) {
+        QClipboard *clipboard = QApplication::clipboard();
+        clipboard->setText(headline);
+    }
+}

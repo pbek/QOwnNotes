@@ -36,6 +36,7 @@ Important Shortcuts
 - <kbd>Ctrl</kbd> + <kbd>S</kbd> manually saves modified notes
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> opens the Script repository dialog
 - <kbd>F4</kbd> jumps to the note edit panel
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> copies the headline of the current note
 
 ### In the note search bar
 
@@ -140,6 +141,7 @@ Important Shortcuts
 - <kbd>⌘</kbd> + <kbd>S</kbd> manually saves modified notes
 - <kbd>Opt</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> opens the Script repository dialog
 - <kbd>F4</kbd> jumps to the note edit panel
+- <kbd>Opt</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> copies the headline of the current note
 
 ### In the note search bar
 

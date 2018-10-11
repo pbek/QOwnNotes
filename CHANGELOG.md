@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 18.10.2
+- You can now copy the headline of the current note with the shortcut 
+  <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd>
+
 ## 18.10.1
 - changes of the current note outside of QOwnNotes will now not trigger the
   `The current note was modified outside of this application!` dialog while 

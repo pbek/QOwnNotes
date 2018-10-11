@@ -1025,6 +1025,7 @@ p, li { white-space: pre-wrap; }
       <iconset theme="document-edit" resource="breeze-qownnotes.qrc">
        <normaloff>:/icons/breeze-qownnotes/16x16/document-edit.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-edit.svg</iconset>
      </property>
+     <addaction name="actionCopy_headline"/>
      <addaction name="action_DuplicateText"/>
      <addaction name="actionDelete_line"/>
      <addaction name="actionDelete_word"/>
@@ -2245,6 +2246,14 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="shortcut">
     <string notr="true">Ctrl+Backspace</string>
+   </property>
+  </action>
+  <action name="actionCopy_headline">
+   <property name="text">
+    <string>Copy headline</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Alt+Shift+H</string>
    </property>
   </action>
   <action name="actionView_note_in_new_window">

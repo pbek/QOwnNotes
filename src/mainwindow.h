@@ -541,6 +541,8 @@ private slots:
 
     void on_actionTelegram_triggered();
 
+    void on_actionCopy_headline_triggered();
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;
