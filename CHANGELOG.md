@@ -1,7 +1,7 @@
 # QOwnNotes Changelog
 
 ## 18.10.2
-- You can now copy the headline of the current note with the shortcut 
+- you can now **copy** the **headline** of the current note with the shortcut 
   <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd>
     - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/shortcuts/QOwnNotes)
       for a list of all shortcuts
