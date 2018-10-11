@@ -852,134 +852,134 @@
       <translation>&amp;Βοήθεια</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1082"/>
+      <location filename="../mainwindow.ui" line="1083"/>
       <source>Editor width in distraction free mode</source>
       <translation type="unfinished">Editor width in distraction free mode</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1085"/>
+      <location filename="../mainwindow.ui" line="1086"/>
       <source>Editor width</source>
       <translation>Πλάτος επεξεργαστή</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1160"/>
+      <location filename="../mainwindow.ui" line="1161"/>
       <source>Custom actions</source>
       <translation>Προσαρμοσμένες ενέργειες</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1180"/>
+      <location filename="../mainwindow.ui" line="1181"/>
       <source>main toolbar</source>
       <translation>κύρια γραμμή εργαλείων</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1214"/>
+      <location filename="../mainwindow.ui" line="1215"/>
       <source>&amp;Quit</source>
       <translation>&amp; Κλείσιμο</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1229"/>
+      <location filename="../mainwindow.ui" line="1230"/>
       <source>&amp;Setup note folders</source>
       <translation>&amp; Σημείωση φακέλων εγκατάστασης</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1238"/>
+      <location filename="../mainwindow.ui" line="1239"/>
       <source>&amp;Find note</source>
       <translation>&amp; Αναζήτηση σημείωσης</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1250"/>
+      <location filename="../mainwindow.ui" line="1251"/>
       <source>&amp;Remove current note</source>
       <translation>&amp; Κατάργηση της τρέχουσας σημείωσης</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1274"/>
+      <location filename="../mainwindow.ui" line="1275"/>
       <source>&amp;New note</source>
       <translation>&amp;Νέα Σημείωση</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1286"/>
+      <location filename="../mainwindow.ui" line="1287"/>
       <source>Check for &amp;updates</source>
       <translation>Έλεγχος για &amp;αναβαθμίσεις</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1298"/>
+      <location filename="../mainwindow.ui" line="1299"/>
       <source>Post questions, feature requests or issues</source>
       <translation type="unfinished">Post questions, feature requests or issues</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1309"/>
+      <location filename="../mainwindow.ui" line="1310"/>
       <source>Alphabetical</source>
       <translation>Αλφαβητική</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1312"/>
+      <location filename="../mainwindow.ui" line="1313"/>
       <source>Sort alphabetical</source>
       <translation>Αλφαβητική ταξινόμηση</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1320"/>
+      <location filename="../mainwindow.ui" line="1321"/>
       <source>By date</source>
       <translation>Από ημερομηνία</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1323"/>
+      <location filename="../mainwindow.ui" line="1324"/>
       <source>Sort by date</source>
       <translation>Ταξινόμηση ανά ημερομηνία</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1347"/>
+      <location filename="../mainwindow.ui" line="1348"/>
       <source>Show note &amp;versions</source>
       <translation>Εμφάνιση Σημείωση &amp; εκδόσεις</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1350"/>
+      <location filename="../mainwindow.ui" line="1351"/>
       <source>Show note versions on server</source>
       <translation>Εμφάνιση Σημείωση εκδόσεις στο διακομιστή</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1362"/>
+      <location filename="../mainwindow.ui" line="1363"/>
       <source>Show trashed notes on server</source>
       <translation>Show πατήθηκε σημειώσεις στο διακομιστή</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1367"/>
+      <location filename="../mainwindow.ui" line="1368"/>
       <location filename="../mainwindow.cpp" line="8883"/>
       <source>Select &amp;all notes</source>
       <translation>Επιλογή &amp;όλων των σημειώσεων</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1376"/>
+      <location filename="../mainwindow.ui" line="1377"/>
       <location filename="../mainwindow.cpp" line="5658"/>
       <source>Insert &amp;link</source>
       <translation>Εισαγωγή &amp;συνδέσμου</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1379"/>
+      <location filename="../mainwindow.ui" line="1380"/>
       <source>Insert link to an url or a note</source>
       <translation>Τοποθετήστε το σύνδεσμο για μια διεύθυνση url η μια σημείωση</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1391"/>
+      <location filename="../mainwindow.ui" line="1392"/>
       <source>&amp;Find in current note</source>
       <translation>&amp;Αναζήτηση στην τρέχουσα σημείωση</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1394"/>
+      <location filename="../mainwindow.ui" line="1395"/>
       <source>Find text in current note</source>
       <translation>Αναζήτηση κειμένου στην τρέχουσα σημείωση</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1399"/>
+      <location filename="../mainwindow.ui" line="1400"/>
       <source>&amp;Duplicate text</source>
       <translation>&amp;Διπλοποίηση κειμένου</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1411"/>
+      <location filename="../mainwindow.ui" line="1412"/>
       <source>&amp;Back in note history</source>
       <translation>Πίσω στο ιστορικό σημείωμα</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1332"/>
+      <location filename="../mainwindow.ui" line="1333"/>
       <source>&amp;Settings</source>
       <translation>&amp;Ρυθμίσεις</translation>
     </message>
@@ -1066,480 +1066,485 @@
       <translation>Επεξεργασία</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1034"/>
+      <location filename="../mainwindow.ui" line="1035"/>
       <source>Versioning</source>
       <translation>Versioning</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1045"/>
+      <location filename="../mainwindow.ui" line="1046"/>
       <source>Encryption</source>
       <translation>Κρυπτογράφηση</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1072"/>
+      <location filename="../mainwindow.ui" line="1073"/>
       <source>To&amp;do</source>
       <translation>To&amp;do</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1078"/>
+      <location filename="../mainwindow.ui" line="1079"/>
       <source>&amp;Window</source>
       <translation>%Παράθυρο</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1094"/>
+      <location filename="../mainwindow.ui" line="1095"/>
       <location filename="../mainwindow.cpp" line="603"/>
       <source>Workspaces</source>
       <translation>Χώροι εργασίας</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1099"/>
+      <location filename="../mainwindow.ui" line="1100"/>
       <source>Panels</source>
       <translation>Πάνελ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1104"/>
+      <location filename="../mainwindow.ui" line="1105"/>
       <source>Toolbars</source>
       <translation>Γραμμές εργαλείων</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1109"/>
+      <location filename="../mainwindow.ui" line="1110"/>
       <source>Show</source>
       <extracomment>To show or hide stuff</extracomment>
       <translation>Προβολή</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1123"/>
+      <location filename="../mainwindow.ui" line="1124"/>
       <source>Workspace</source>
       <translation>Χώρος εργασίας</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1156"/>
+      <location filename="../mainwindow.ui" line="1157"/>
       <source>&amp;Scripting</source>
       <translation type="unfinished">&amp;Scripting</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1262"/>
+      <location filename="../mainwindow.ui" line="1263"/>
       <source>About &amp;QOwnNotes…</source>
       <translation type="unfinished">About &amp;QOwnNotes…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1301"/>
+      <location filename="../mainwindow.ui" line="1302"/>
       <source>Post questions, feature requests or problems with the help of the issue assistant</source>
       <translation type="unfinished">Post questions, feature requests or problems with the help of the issue assistant</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1359"/>
+      <location filename="../mainwindow.ui" line="1360"/>
       <source>Show remote trash</source>
       <translation type="unfinished">Show remote trash</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1423"/>
+      <location filename="../mainwindow.ui" line="1424"/>
       <source>Forward in note history</source>
       <translation type="unfinished">Forward in note history</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1435"/>
+      <location filename="../mainwindow.ui" line="1436"/>
       <source>Show shortcuts</source>
       <translation type="unfinished">Show shortcuts</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1444"/>
+      <location filename="../mainwindow.ui" line="1445"/>
       <source>&amp;Knowledge base</source>
       <translation type="unfinished">&amp;Knowledge base</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1453"/>
+      <location filename="../mainwindow.ui" line="1454"/>
       <source>Insert current &amp;time</source>
       <translation type="unfinished">Insert current &amp;time</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1465"/>
+      <location filename="../mainwindow.ui" line="1466"/>
       <source>Show &amp;Todo List</source>
       <translation type="unfinished">Show &amp;Todo List</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1477"/>
+      <location filename="../mainwindow.ui" line="1478"/>
       <source>&amp;Export note as PDF (preview)</source>
       <translation type="unfinished">&amp;Export note as PDF (preview)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1480"/>
+      <location filename="../mainwindow.ui" line="1481"/>
       <source>Export note as PDF (preview)</source>
       <translation type="unfinished">Export note as PDF (preview)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1489"/>
+      <location filename="../mainwindow.ui" line="1490"/>
       <source>&amp;Export note as PDF (text)</source>
       <translation type="unfinished">&amp;Export note as PDF (text)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1498"/>
+      <location filename="../mainwindow.ui" line="1499"/>
       <source>&amp;Print note (text)</source>
       <translation type="unfinished">&amp;Print note (text)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1522"/>
+      <location filename="../mainwindow.ui" line="1523"/>
       <source>Insert &amp;image</source>
       <translation type="unfinished">Insert &amp;image</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1525"/>
+      <location filename="../mainwindow.ui" line="1526"/>
       <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
       <translation type="unfinished">Insert image (the image will be copied to the `media` folder in the current notes folder)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1537"/>
+      <location filename="../mainwindow.ui" line="1538"/>
       <source>Show &amp;changelog</source>
       <translation type="unfinished">Show &amp;changelog</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1546"/>
+      <location filename="../mainwindow.ui" line="1547"/>
       <source>&amp;Encrypt note</source>
       <translation type="unfinished">&amp;Encrypt note</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1555"/>
+      <location filename="../mainwindow.ui" line="1556"/>
       <source>Edit encrypted note</source>
       <translation type="unfinished">Edit encrypted note</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1567"/>
+      <location filename="../mainwindow.ui" line="1568"/>
       <source>Decrypt note</source>
       <translation type="unfinished">Decrypt note</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1576"/>
+      <location filename="../mainwindow.ui" line="1577"/>
       <source>&amp;Open note in external editor</source>
       <translation type="unfinished">&amp;Open note in external editor</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1588"/>
+      <location filename="../mainwindow.ui" line="1589"/>
       <source>&amp;Export note as markdown file</source>
       <translation type="unfinished">&amp;Export note as markdown file</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1597"/>
+      <location filename="../mainwindow.ui" line="1598"/>
       <source>&amp;Get involved</source>
       <translation type="unfinished">&amp;Get involved</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1606"/>
+      <location filename="../mainwindow.ui" line="1607"/>
       <source>Insert &amp;code block</source>
       <translation type="unfinished">Insert &amp;code block</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1618"/>
+      <location filename="../mainwindow.ui" line="1619"/>
       <source>Next note</source>
       <translation type="unfinished">Next note</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1630"/>
+      <location filename="../mainwindow.ui" line="1631"/>
       <source>Previous note</source>
       <translation type="unfinished">Previous note</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1642"/>
+      <location filename="../mainwindow.ui" line="1643"/>
       <source>&amp;Distraction free mode</source>
       <translation type="unfinished">&amp;Distraction free mode</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1645"/>
+      <location filename="../mainwindow.ui" line="1646"/>
       <source>Distraction free mode, you can leave it with a button on the bottom right</source>
       <translation type="unfinished">Distraction free mode, you can leave it with a button on the bottom right</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1656"/>
+      <location filename="../mainwindow.ui" line="1657"/>
       <source>Show &amp;toolbar</source>
       <translation type="unfinished">Show &amp;toolbar</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1664"/>
+      <location filename="../mainwindow.ui" line="1665"/>
       <source>Narrow</source>
       <translation type="unfinished">Narrow</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1675"/>
+      <location filename="../mainwindow.ui" line="1676"/>
       <source>Medium</source>
       <translation type="unfinished">Medium</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1686"/>
+      <location filename="../mainwindow.ui" line="1687"/>
       <source>Wide</source>
       <translation type="unfinished">Wide</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1697"/>
+      <location filename="../mainwindow.ui" line="1698"/>
       <source>Full</source>
       <translation type="unfinished">Full</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1709"/>
+      <location filename="../mainwindow.ui" line="1710"/>
       <source>Paste html or media</source>
       <translation type="unfinished">Paste html or media</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1712"/>
-      <location filename="../mainwindow.ui" line="1715"/>
+      <location filename="../mainwindow.ui" line="1713"/>
+      <location filename="../mainwindow.ui" line="1716"/>
       <source>Paste images, notes and html from the clipboard</source>
       <translation type="unfinished">Paste images, notes and html from the clipboard</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1727"/>
+      <location filename="../mainwindow.ui" line="1728"/>
       <source>Show note in &amp;file manager</source>
       <translation type="unfinished">Show note in &amp;file manager</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1739"/>
+      <location filename="../mainwindow.ui" line="1740"/>
       <source>Format text &amp;bold</source>
       <translation type="unfinished">Format text &amp;bold</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1751"/>
+      <location filename="../mainwindow.ui" line="1752"/>
       <source>Format text &amp;italic</source>
       <translation type="unfinished">Format text &amp;italic</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1763"/>
+      <location filename="../mainwindow.ui" line="1764"/>
       <source>&amp;Increase note text size</source>
       <translation type="unfinished">&amp;Increase note text size</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1775"/>
+      <location filename="../mainwindow.ui" line="1776"/>
       <source>&amp;Decrease note text size</source>
       <translation type="unfinished">&amp;Decrease note text size</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1787"/>
+      <location filename="../mainwindow.ui" line="1788"/>
       <source>&amp;Reset note text size</source>
       <translation type="unfinished">&amp;Reset note text size</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1799"/>
+      <location filename="../mainwindow.ui" line="1800"/>
       <source>&amp;Add tag to note</source>
       <translation type="unfinished">&amp;Add tag to note</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1811"/>
+      <location filename="../mainwindow.ui" line="1812"/>
       <source>&amp;Reload note folder</source>
       <translation type="unfinished">&amp;Reload note folder</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1883"/>
+      <location filename="../mainwindow.ui" line="1884"/>
       <source>Show log</source>
       <translation type="unfinished">Show log</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1892"/>
+      <location filename="../mainwindow.ui" line="1893"/>
       <source>Export note as HTML</source>
       <translation type="unfinished">Export note as HTML</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1971"/>
+      <location filename="../mainwindow.ui" line="1972"/>
       <source>Cycle text case</source>
       <translation type="unfinished">Cycle text case</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2062"/>
+      <location filename="../mainwindow.ui" line="2063"/>
       <source>Find notes in all tags / subfolders</source>
       <translation type="unfinished">Find notes in all tags / subfolders</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2083"/>
+      <location filename="../mainwindow.ui" line="2084"/>
       <source>Import notes from text files</source>
       <translation type="unfinished">Import notes from text files</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2092"/>
+      <location filename="../mainwindow.ui" line="2093"/>
       <source>Manage orphaned image files</source>
       <translation>Διαχείριση ορφανών αρχείων εικόνων</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2104"/>
-      <location filename="../mainwindow.ui" line="2107"/>
+      <location filename="../mainwindow.ui" line="2105"/>
+      <location filename="../mainwindow.ui" line="2108"/>
       <source>Open the Telegram group</source>
       <translation type="unfinished">Open the Telegram group</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2134"/>
+      <location filename="../mainwindow.ui" line="2135"/>
       <source>Unlock panels</source>
       <translation>Ξεκλείδωμα πάνελ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2143"/>
+      <location filename="../mainwindow.ui" line="2144"/>
       <location filename="../mainwindow.cpp" line="9862"/>
       <source>Remove current workspace</source>
       <translation>Αφαίρεση τρέχοντος χώρου εργασίας</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2152"/>
+      <location filename="../mainwindow.ui" line="2153"/>
       <source>Add new workspace</source>
       <translation>Προσθήκη νέου χώρου εργασίας</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2161"/>
+      <location filename="../mainwindow.ui" line="2162"/>
       <source>Rename current workspace</source>
       <translation type="unfinished">Rename current workspace</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2170"/>
+      <location filename="../mainwindow.ui" line="2171"/>
       <source>Switch to previous workspace</source>
       <translation type="unfinished">Switch to previous workspace</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2178"/>
+      <location filename="../mainwindow.ui" line="2179"/>
       <source>Show all panels</source>
       <translation type="unfinished">Show all panels</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2187"/>
+      <location filename="../mainwindow.ui" line="2188"/>
       <source>Find action</source>
       <translation type="unfinished">Find action</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2190"/>
-      <location filename="../mainwindow.ui" line="2193"/>
+      <location filename="../mainwindow.ui" line="2191"/>
+      <location filename="../mainwindow.ui" line="2194"/>
       <source>Find an action from the menu</source>
       <translation type="unfinished">Find an action from the menu</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2205"/>
+      <location filename="../mainwindow.ui" line="2206"/>
       <source>Insert table</source>
       <translation type="unfinished">Insert table</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2217"/>
+      <location filename="../mainwindow.ui" line="2218"/>
       <source>Insert block &amp;quote</source>
       <translation type="unfinished">Insert block &amp;quote</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2225"/>
-      <location filename="../mainwindow.ui" line="2228"/>
+      <location filename="../mainwindow.ui" line="2226"/>
+      <location filename="../mainwindow.ui" line="2229"/>
       <source>Search selected text on the web</source>
       <translation type="unfinished">Search selected text on the web</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2236"/>
+      <location filename="../mainwindow.ui" line="2237"/>
       <source>Delete line</source>
       <translation type="unfinished">Delete line</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2244"/>
+      <location filename="../mainwindow.ui" line="2245"/>
       <source>Delete word</source>
       <translation type="unfinished">Delete word</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2256"/>
+      <location filename="../mainwindow.ui" line="2253"/>
+      <source>Copy note headline</source>
+      <translation type="unfinished">Copy note headline</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.ui" line="2265"/>
       <location filename="../mainwindow.cpp" line="8858"/>
       <source>Open note in different window</source>
       <translation type="unfinished">Open note in different window</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2268"/>
+      <location filename="../mainwindow.ui" line="2277"/>
       <source>Save modified notes</source>
       <translation type="unfinished">Save modified notes</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2279"/>
+      <location filename="../mainwindow.ui" line="2288"/>
       <source>Ascending</source>
       <translation type="unfinished">Ascending</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2287"/>
+      <location filename="../mainwindow.ui" line="2296"/>
       <source>Descending</source>
       <translation type="unfinished">Descending</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2296"/>
+      <location filename="../mainwindow.ui" line="2305"/>
       <location filename="../mainwindow.cpp" line="8866"/>
       <source>Show note git versions</source>
       <translation type="unfinished">Show note git versions</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2305"/>
+      <location filename="../mainwindow.ui" line="2314"/>
       <source>Find scripts in script repository</source>
       <translation type="unfinished">Find scripts in script repository</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2317"/>
+      <location filename="../mainwindow.ui" line="2326"/>
       <source>Script settings</source>
       <translation type="unfinished">Script settings</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2326"/>
+      <location filename="../mainwindow.ui" line="2335"/>
       <source>Insert attachment</source>
       <translation type="unfinished">Insert attachment</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2353"/>
+      <location filename="../mainwindow.ui" line="2362"/>
       <source>Check for script updates</source>
       <translation type="unfinished">Check for script updates</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2362"/>
+      <location filename="../mainwindow.ui" line="2371"/>
       <source>Show local trash</source>
       <translation type="unfinished">Show local trash</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2367"/>
-      <location filename="../mainwindow.ui" line="2370"/>
+      <location filename="../mainwindow.ui" line="2376"/>
+      <location filename="../mainwindow.ui" line="2379"/>
       <source>Jump to note edit panel</source>
       <translation type="unfinished">Jump to note edit panel</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2382"/>
+      <location filename="../mainwindow.ui" line="2391"/>
       <source>Manage orphaned attachments</source>
       <translation type="unfinished">Manage orphaned attachments</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1822"/>
+      <location filename="../mainwindow.ui" line="1823"/>
       <source>Use &amp;vertical preview layout</source>
       <translation type="unfinished">Use &amp;vertical preview layout</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1825"/>
-      <location filename="../mainwindow.ui" line="1828"/>
+      <location filename="../mainwindow.ui" line="1826"/>
+      <location filename="../mainwindow.ui" line="1829"/>
       <source>The note edit panel will be above the preview panel</source>
       <translation type="unfinished">The note edit panel will be above the preview panel</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1837"/>
+      <location filename="../mainwindow.ui" line="1838"/>
       <source>Replace in current note</source>
       <translation type="unfinished">Replace in current note</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1845"/>
+      <location filename="../mainwindow.ui" line="1846"/>
       <source>Autocomplete, solve equation or open URL</source>
       <translation type="unfinished">Autocomplete, solve equation or open URL</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1848"/>
+      <location filename="../mainwindow.ui" line="1849"/>
       <source>Solve a simple equation like '(2+3)*6=' in the current line</source>
       <translation type="unfinished">Solve a simple equation like '(2+3)*6=' in the current line</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1856"/>
+      <location filename="../mainwindow.ui" line="1857"/>
       <source>Select note folder</source>
       <translation type="unfinished">Select note folder</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1871"/>
+      <location filename="../mainwindow.ui" line="1872"/>
       <source>Reload scripting engine</source>
       <translation type="unfinished">Reload scripting engine</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1904"/>
-      <location filename="../mainwindow.ui" line="1907"/>
+      <location filename="../mainwindow.ui" line="1905"/>
+      <location filename="../mainwindow.ui" line="1908"/>
       <source>Open the #qownnotes IRC channel, you have to stay online to get a response</source>
       <translation type="unfinished">Open the #qownnotes IRC channel, you have to stay online to get a response</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2044"/>
+      <location filename="../mainwindow.ui" line="2045"/>
       <source>Show note list under tag pane</source>
       <translation type="unfinished">Show note list under tag pane</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2119"/>
-      <location filename="../mainwindow.ui" line="2122"/>
+      <location filename="../mainwindow.ui" line="2120"/>
+      <location filename="../mainwindow.ui" line="2123"/>
       <source>Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</source>
       <translation type="unfinished">Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</translation>
     </message>
@@ -1554,68 +1559,68 @@
       <translation type="unfinished">Note operations…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1510"/>
+      <location filename="../mainwindow.ui" line="1511"/>
       <source>&amp;Print note (preview)</source>
       <translation type="unfinished">&amp;Print note (preview)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1916"/>
+      <location filename="../mainwindow.ui" line="1917"/>
       <source>Insert headline from note filename</source>
       <translation type="unfinished">Insert headline from note filename</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1930"/>
+      <location filename="../mainwindow.ui" line="1931"/>
       <source>Use softwrap in note editor and preview</source>
       <translation type="unfinished">Use softwrap in note editor and preview</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1938"/>
+      <location filename="../mainwindow.ui" line="1939"/>
       <source>Show status bar</source>
       <translation type="unfinished">Show status bar</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1953"/>
+      <location filename="../mainwindow.ui" line="1954"/>
       <source>Share note</source>
       <translation type="unfinished">Share note</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1983"/>
+      <location filename="../mainwindow.ui" line="1984"/>
       <source>Markdown cheatsheet</source>
       <translation type="unfinished">Markdown cheatsheet</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1992"/>
+      <location filename="../mainwindow.ui" line="1993"/>
       <source>Strike out text</source>
       <translation type="unfinished">Strike out text</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2003"/>
+      <location filename="../mainwindow.ui" line="2004"/>
       <source>Use one column mode</source>
       <translation type="unfinished">Use one column mode</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2006"/>
-      <location filename="../mainwindow.ui" line="2009"/>
+      <location filename="../mainwindow.ui" line="2007"/>
+      <location filename="../mainwindow.ui" line="2010"/>
       <source>Use a one column minimal mode (like NVAlt)</source>
       <translation type="unfinished">Use a one column minimal mode (like NVAlt)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2021"/>
+      <location filename="../mainwindow.ui" line="2022"/>
       <source>Show menu bar</source>
       <translation type="unfinished">Show menu bar</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2033"/>
+      <location filename="../mainwindow.ui" line="2034"/>
       <source>Split note at cursor position</source>
       <translation type="unfinished">Split note at cursor position</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2053"/>
+      <location filename="../mainwindow.ui" line="2054"/>
       <source>Donate</source>
       <translation type="unfinished">Donate</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2074"/>
+      <location filename="../mainwindow.ui" line="2075"/>
       <source>Import notes from Evernote</source>
       <translation type="unfinished">Import notes from Evernote</translation>
     </message>
@@ -2151,13 +2156,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2341"/>
+      <location filename="../mainwindow.ui" line="2350"/>
       <location filename="../mainwindow.cpp" line="10331"/>
       <source>Allow all note editing</source>
       <translation type="unfinished">Allow all note editing</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1150"/>
+      <location filename="../mainwindow.ui" line="1151"/>
       <source>&amp;Tag</source>
       <translation type="unfinished">&amp;Tag</translation>
     </message>
