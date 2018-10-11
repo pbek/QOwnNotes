@@ -675,7 +675,7 @@ void TodoDialog::on_newItemEdit_textChanged(const QString &arg1) {
 }
 
 /**
- * highlights all occurrences of tje search line text in the note text edit
+ * highlights all occurrences of the search line text in the note text edit
  */
 void TodoDialog::searchForSearchLineTextInNoteTextEdit() {
     QString searchString = ui->descriptionEdit->toPlainText();

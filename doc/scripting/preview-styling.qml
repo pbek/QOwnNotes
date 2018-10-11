@@ -12,7 +12,7 @@ QtObject {
      * 
      * @param {Note} note - the note object
      * @param {string} html - the html that is about to being rendered
-     * @return {string} the modfied html or an empty string if nothing should be modified
+     * @return {string} the modified html or an empty string if nothing should be modified
      */
     function noteToMarkdownHtmlHook(note, html) {
         // see http://doc.qt.io/qt-5/richtext-html-subset.html for a list of

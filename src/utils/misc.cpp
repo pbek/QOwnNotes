@@ -673,7 +673,7 @@ QString Utils::Misc::appDataPath() {
 }
 
 /**
- * Retruns the log file path
+ * Returns the log file path
  *
  * @return
  */

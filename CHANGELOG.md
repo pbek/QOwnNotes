@@ -3089,7 +3089,7 @@
 
 ## 16.09.2
 - fixed the tag tree reloading if a tag is added to or removed from a
-  note in the note edit oder via bulk tagging 
+  note in the note edit or via bulk tagging 
   (for [#311](https://github.com/pbek/QOwnNotes/issues/311))
 - attempted to fix the start problems of the snap version of QOwnNotes
   (popey, thank you for mentioning) 
@@ -4927,7 +4927,7 @@
 
 ## 0.75
 - added markdown highlighting to the debug information text box
-- added link clicking support, 4 characters tab stops, custom font support and block indention to all markdown highlighting editors
+- added link clicking support, 4 characters tab stops, custom font support and block indentation to all markdown highlighting editors
 
 ## 0.74
 - fixed another problem with todo lists if the server url contains a path (thanks again to Dirk for the report)

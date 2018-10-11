@@ -136,7 +136,7 @@ QString Utils::Schema::textSettingsKey(const QString& key, int index) {
 }
 
 /**
- * Trys to fetch the correct foreground color for an index
+ * Tries to fetch the correct foreground color for an index
  *
  * @param index
  * @return
@@ -173,7 +173,7 @@ QColor Utils::Schema::Settings::getForegroundColor(int index) const {
 }
 
 /**
- * Trys to fetch the correct background color for an index
+ * Tries to fetch the correct background color for an index
  *
  * @param index
  * @return

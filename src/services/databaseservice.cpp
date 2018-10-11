@@ -246,7 +246,7 @@ bool DatabaseService::setupNoteFolderTables() {
     if (version < 12) {
         // create new tag table, because
         //     ALTER TABLE tag ADD updated DEFAULT CURRENT_TIMESTAMP
-        // is not supported by sqlite -- you cant add a column with
+        // is not supported by sqlite -- you can't add a column with
         // a non-constant default value. And if collate ... is used
         // on a column, it's also defaulted to indices on that column.
         queryDisk.exec("ALTER TABLE tag RENAME TO _tag");
