@@ -188,7 +188,7 @@ void FakeVimProxy::indentRegion(int beginBlock, int endBlock, QChar typedChar) {
     QTextDocument *doc = ed->document();
     QTextBlock startBlock = doc->findBlockByNumber(beginBlock);
 
-    // Record line lenghts for mark adjustments
+    // Record line lengths for mark adjustments
     QVector<int> lineLengths(endBlock - beginBlock + 1);
     QTextBlock block = startBlock;
 

@@ -1,4 +1,4 @@
-# [QOwnNotes snapcraft](http://www.qownnotes.org "QOwnNotes Offical Site") 
+# [QOwnNotes snapcraft](http://www.qownnotes.org "QOwnNotes Official Site") 
 
 [Installation](http://www.qownnotes.org/installation) | 
 [Changelog](http://www.qownnotes.org/changelog/QOwnNotes) | 

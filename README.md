@@ -1,4 +1,4 @@
-# [QOwnNotes](https://www.qownnotes.org "QOwnNotes Offical Site")
+# [QOwnNotes](https://www.qownnotes.org "QOwnNotes Official Site")
 
 [Installation](https://www.qownnotes.org/installation) |
 [Changelog](https://github.com/pbek/QOwnNotes/blob/develop/CHANGELOG.md) |
