@@ -10529,5 +10529,8 @@ void MainWindow::on_actionCopy_headline_triggered() {
     if (!headline.isEmpty()) {
         QClipboard *clipboard = QApplication::clipboard();
         clipboard->setText(headline);
+        showStatusBarMessage(
+                tr("Note headline '%1' was copied to the clipboard").arg(
+                        headline), 3000);
     }
 }

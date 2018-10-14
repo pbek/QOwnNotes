@@ -2146,6 +2146,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <source>Select text files to import</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="10533"/>
+        <source>Note headline &apos;%1&apos; was copied to the clipboard</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message numerus="yes">
         <location filename="../mainwindow.cpp" line="7466"/>
         <source>%n notes selected</source>
