@@ -54,8 +54,14 @@ public:
     NoteHistoryItem getCurrentHistoryItem();
     void updateCursorPositionOfNote(Note note, QPlainTextEdit *textEdit);
     void clear();
-
     NoteHistoryItem getLastItemOfNote(Note note);
+    QList<NoteHistoryItem> noteHistoryItems() const;
+    void addNoteHistoryItem(NoteHistoryItem item);
 };
+
+// we want to store the class to the settings
+QDataStream &operator<<(QDataStream &out, const NoteHistory &history);
+QDataStream &operator>>(QDataStream &in, NoteHistory &history);
+Q_DECLARE_METATYPE(NoteHistory)
 
 #endif // NOTEHISTORY_H

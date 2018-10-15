@@ -4,6 +4,10 @@
 - a status message for the `Copy note headline` feature was added
 - the debug output in the *Debug settings* now supports more data-types for 
   setting entries and will also show the name of the data-types
+- the note history will now be stored when you switch note folders or quit 
+  the app and be restored accordingly (for [#1044](https://github.com/pbek/QOwnNotes/issues/1044))
+    - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/shortcuts/QOwnNotes)
+      for a list of all shortcuts to navigate the note history
 
 ## 18.10.2
 - you can now **copy** the **headline** of the current note with the shortcut 

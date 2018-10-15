@@ -283,3 +283,64 @@ QDebug operator<<(QDebug dbg, const NoteHistory &history) {
     " <noteHistorySize>" << history.noteHistory->size();
     return dbg.space();
 }
+
+/**
+ * Returns a list of NoteHistoryItems of the note history
+ *
+ * @return
+ */
+QList<NoteHistoryItem> NoteHistory::noteHistoryItems() const {
+    QList<NoteHistoryItem> items;
+
+    for (int i = 0; i < noteHistory->count(); i++) {
+        NoteHistoryItem item = noteHistory->at(i);
+
+        items.append(item);
+    }
+
+    return items;
+}
+
+/**
+ * Appends a NoteHistoryItem to the note history
+ *
+ * @param item
+ */
+void NoteHistory::addNoteHistoryItem(NoteHistoryItem item) {
+    noteHistory->append(item);
+}
+
+/**
+ * Stream operator for storing the class to QSettings
+ * Note: This method doesn't seem to get called when serializing for
+ *       writing to the settings
+ *
+ * @param out
+ * @param history
+ * @return
+ */
+QDataStream &operator<<(QDataStream &out, const NoteHistory &history) {
+    Q_FOREACH(NoteHistoryItem item, history.noteHistoryItems()) {
+        out << item;
+    }
+
+    return out;
+}
+
+/**
+ * Stream operator for loading the class from QSettings
+ *
+ * @param in
+ * @param history
+ * @return
+ */
+QDataStream &operator>>(QDataStream &in, NoteHistory &history) {
+    NoteHistoryItem item;
+
+    while (!in.atEnd()) {
+        in >> item;
+        history.addNoteHistoryItem(item);
+    }
+
+    return in;
+}

@@ -167,6 +167,10 @@ bool NoteFolder::remove() {
         qWarning() << __func__ << ": " << query.lastError();
         return false;
     } else {
+        // remove the note history settings of the note folder
+        QSettings settings;
+        settings.remove("NoteHistory-" + QString::number(this->id));
+
         return true;
     }
 }

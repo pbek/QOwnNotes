@@ -936,4 +936,8 @@ private:
             bool multiNoteMenuEntriesOnly = false);
 
     void updateCurrentNoteTextHash();
+
+    void storeNoteHistoryForCurrentNoteFolder();
+
+    void restoreNoteHistoryForCurrentNoteFolder();
 };

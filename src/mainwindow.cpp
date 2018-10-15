@@ -480,6 +480,9 @@ MainWindow::MainWindow(QWidget *parent) :
                      this,
                      SLOT(noteEditCursorPositionChanged()));
 
+    // restore the note history of the current note folder
+    restoreNoteHistoryForCurrentNoteFolder();
+
     // try to restore the last note before the app was quit
     // if that fails jump to the first note
     // we do that with a timer, because otherwise the scrollbar will not be
@@ -1682,6 +1685,44 @@ void MainWindow::loadNoteFolderListMenu() {
     }
 }
 
+/**
+ * Stores the note history for the current note folder
+ */
+void MainWindow::storeNoteHistoryForCurrentNoteFolder() {
+    QSettings settings;
+    int currentNoteFolderId = NoteFolder::currentNoteFolderId();
+    QVariantList noteHistoryVariantItems;
+
+    Q_FOREACH(NoteHistoryItem item, noteHistory.noteHistoryItems()) {
+            noteHistoryVariantItems.append(QVariant::fromValue(item));
+        }
+
+    // store the note history settings of the old note folder
+    settings.setValue("NoteHistory-" + QString::number(currentNoteFolderId),
+                      noteHistoryVariantItems);
+}
+
+/**
+ * Restores the note history for the current note folder
+ */
+void MainWindow::restoreNoteHistoryForCurrentNoteFolder() {
+    QSettings settings;
+    int currentNoteFolderId = NoteFolder::currentNoteFolderId();
+
+    // restore the note history of the new note folder
+    QVariantList noteHistoryVariantItems =  settings.value(
+            "NoteHistory-" + QString::number(currentNoteFolderId)).toList();
+
+    Q_FOREACH(QVariant item, noteHistoryVariantItems) {
+            // check if the NoteHistoryItem could be de-serialized
+            if (item.isValid()) {
+                NoteHistoryItem noteHistoryItem =
+                        item.value<NoteHistoryItem>();
+                noteHistory.addNoteHistoryItem(noteHistoryItem);
+            }
+        }
+}
+
 /*
  * Set a new note folder
  */
@@ -1691,6 +1732,9 @@ void MainWindow::changeNoteFolder(int noteFolderId, bool forceChange) {
     // store the current position in the note of the current note folder
     _activeNoteFolderNotePositions[currentNoteFolderId] = NoteHistoryItem(
             &currentNote, ui->noteTextEdit);
+
+    // store the note history of the old note folder
+    storeNoteHistoryForCurrentNoteFolder();
 
     NoteFolder noteFolder = NoteFolder::fetch(noteFolderId);
     if (!noteFolder.isFetched()) {
@@ -1746,6 +1790,9 @@ void MainWindow::changeNoteFolder(int noteFolderId, bool forceChange) {
 
         // clear the note history
         this->noteHistory.clear();
+
+        // restore the note history of the new note folder
+        restoreNoteHistoryForCurrentNoteFolder();
 
         // check if there is a note name set and jump to it
         QString noteName = _activeNoteFolderNotePositions[noteFolderId]
@@ -3443,6 +3490,9 @@ void MainWindow::storeSettings() {
     qDebug() << __func__ << " - 'noteHistoryItem': " << noteHistoryItem;
     settings.setValue("ActiveNoteHistoryItem",
                       QVariant::fromValue(noteHistoryItem));
+
+    // store the note history of the current note folder
+    storeNoteHistoryForCurrentNoteFolder();
 }
 
 
