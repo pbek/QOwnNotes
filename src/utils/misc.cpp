@@ -1130,7 +1130,8 @@ QString Utils::Misc::toHumanReadableByteSize(qint64 size)
  * @param data
  */
 QString Utils::Misc::prepareDebugInformationLine(
-        const QString &headline, QString data, bool withGitHubLineBreaks) {
+        const QString &headline, QString data, bool withGitHubLineBreaks,
+        QString typeText) {
     // add two spaces if we don't want GitHub line breaks
     QString spaces = withGitHubLineBreaks ? "" : "  ";
 
@@ -1140,7 +1141,14 @@ QString Utils::Misc::prepareDebugInformationLine(
         data = (data.isEmpty()) ? "*empty*" : "`" + data + "`";
     }
 
-    return "**" + headline + "**: " + data + spaces + "\n";
+    QString resultText = "**" + headline + "**";
+
+    if (!typeText.isEmpty()) {
+        resultText += " (" + typeText + ")";
+    }
+
+    resultText += ": " + data + spaces + "\n";
+    return resultText;
 }
 
 QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
@@ -1348,19 +1356,30 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
 
         // hide values of certain keys
         if (keyHiddenList.contains(key)) {
-            output += prepareDebugInformationLine(key, "<hidden>", withGitHubLineBreaks);
+            output += prepareDebugInformationLine(key, "<hidden>",
+                    withGitHubLineBreaks, value.typeName());
         } else {
             switch (value.type()) {
                 case QVariant::StringList:
                     output += prepareDebugInformationLine(
-                            key, value.toStringList().join(", "), withGitHubLineBreaks);
+                            key, value.toStringList().join(", "),
+                            withGitHubLineBreaks, value.typeName());
+                    break;
+                case QVariant::List:
+                    output += prepareDebugInformationLine(key,
+                            QString("<variant list with %1 item(s)>").arg(
+                                    value.toList().count()),
+                                    withGitHubLineBreaks, value.typeName());
                     break;
                 case QVariant::ByteArray:
-                    output += prepareDebugInformationLine(key, "<binary data>", withGitHubLineBreaks);
+                case QVariant::UserType:
+                    output += prepareDebugInformationLine(key, "<binary data>",
+                            withGitHubLineBreaks, value.typeName());
                     break;
                 default:
                     output += prepareDebugInformationLine(
-                            key, value.toString(), withGitHubLineBreaks);
+                            key, value.toString(), withGitHubLineBreaks,
+                            value.typeName());
             }
         }
     }

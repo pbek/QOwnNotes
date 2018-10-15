@@ -2,6 +2,8 @@
 
 ## 18.10.3
 - a status message for the `Copy note headline` feature was added
+- the debug output in the *Debug settings* now supports more data-types for 
+  setting entries and will also show the name of the data-types
 
 ## 18.10.2
 - you can now **copy** the **headline** of the current note with the shortcut 

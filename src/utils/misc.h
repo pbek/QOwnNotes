@@ -87,7 +87,8 @@ namespace Utils {
         QString toHumanReadableByteSize(qint64 size);
         QString prepareDebugInformationLine(
             const QString &headline, QString data,
-            bool withGitHubLineBreaks = true);
+            bool withGitHubLineBreaks = true,
+            QString typeText = "");
         QString generateDebugInformation(bool withGitHubLineBreaks = true);
     }  // namespace Misc
 }  // namespace Utils
