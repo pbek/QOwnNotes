@@ -8,3 +8,4 @@ Type=Application
 Terminal=false
 StartupNotify=true
 Categories=Utility;TextEditor;
+StartupWMClass=QOwnNotes

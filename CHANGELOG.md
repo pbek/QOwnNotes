@@ -12,6 +12,8 @@
     - if you have enabled the setting `Restore cursor position when opening a note`
       in the *General settings* your position in notes will be restored if 
       you restart the application or switch between note folders
+- fixed QOwnNotes favorite button in Gnome dash
+  (for [#1019](https://github.com/pbek/QOwnNotes/issues/1019))
 
 ## 18.10.2
 - you can now **copy** the **headline** of the current note with the shortcut 
