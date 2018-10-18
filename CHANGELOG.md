@@ -14,6 +14,9 @@
       you restart the application or switch between note folders
 - fixed QOwnNotes favorite button in Gnome dash
   (for [#1019](https://github.com/pbek/QOwnNotes/issues/1019))
+- added more Spanish, Italian, Chinese Traditional, Catalan, German, Brazilian
+  Portuguese and Hungarian translation (thank you richarson, mlocati, abev66,
+  MGuerra, rakekniven, mlimacarlos and Fabijenna)
 
 ## 18.10.2
 - you can now **copy** the **headline** of the current note with the shortcut 
