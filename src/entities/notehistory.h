@@ -55,10 +55,10 @@ public:
     void updateCursorPositionOfNote(Note note, QPlainTextEdit *textEdit);
     void clear();
     NoteHistoryItem getLastItemOfNote(Note note);
-    QList<NoteHistoryItem> noteHistoryItems() const;
+    QList<NoteHistoryItem> getNoteHistoryItems() const;
     void addNoteHistoryItem(NoteHistoryItem item);
-    int getCurrentIndex();
-    void setCurrentIndex(int index);
+    void storeForCurrentNoteFolder();
+    void restoreForCurrentNoteFolder();
 };
 
 // we want to store the class to the settings

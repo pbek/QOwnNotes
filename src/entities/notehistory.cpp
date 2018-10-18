@@ -1,6 +1,8 @@
 #include "notehistory.h"
 #include <QScrollBar>
+#include <QSettings>
 #include <QDebug>
+#include <entities/notefolder.h>
 
 /*
  * NoteHistoryItem implementation
@@ -277,6 +279,80 @@ void NoteHistory::clear() {
     noteHistory->clear();
     currentIndex = 0;
 }
+/**
+ * Stores the note history for the current note folder
+ */
+void NoteHistory::storeForCurrentNoteFolder() {
+    QSettings settings;
+    int currentNoteFolderId = NoteFolder::currentNoteFolderId();
+    QVariantList noteHistoryVariantItems;
+    const QList<NoteHistoryItem> &noteHistoryItems = getNoteHistoryItems();
+    const int noteHistoryItemCount = noteHistoryItems.count();
+
+    // we only want to store the last 200 note history items
+    const int maxCount = std::min(noteHistoryItemCount, 200);
+
+    if (maxCount == 0) {
+        return;
+    }
+
+    int newCurrentIndex = 0;
+    int count = 0;
+
+    // store the last
+    for (int i = noteHistoryItemCount - maxCount; i < noteHistoryItemCount; i++) {
+        noteHistoryVariantItems.append(QVariant::fromValue(
+                noteHistoryItems.at(i)));
+
+        if (i == currentIndex) {
+            newCurrentIndex = count;
+        }
+
+        count++;
+    }
+
+    // store the note history settings of the old note folder
+    settings.setValue("NoteHistory-" + QString::number(currentNoteFolderId),
+                      noteHistoryVariantItems);
+
+    settings.setValue("NoteHistoryCurrentIndex-" + QString::number(
+            currentNoteFolderId), newCurrentIndex);
+}
+
+/**
+ * Restores the note history for the current note folder
+ */
+void NoteHistory::restoreForCurrentNoteFolder() {
+    QSettings settings;
+    int currentNoteFolderId = NoteFolder::currentNoteFolderId();
+    clear();
+
+    // restore the note history of the new note folder
+    QVariantList noteHistoryVariantItems = settings.value(
+            "NoteHistory-" + QString::number(currentNoteFolderId)).toList();
+
+    if (noteHistoryVariantItems.count() == 0) {
+        return;
+    }
+
+    int maxIndex = -1;
+    Q_FOREACH(QVariant item, noteHistoryVariantItems) {
+            // check if the NoteHistoryItem could be de-serialized
+            if (item.isValid()) {
+                NoteHistoryItem noteHistoryItem =
+                        item.value<NoteHistoryItem>();
+                addNoteHistoryItem(noteHistoryItem);
+                maxIndex++;
+            }
+        }
+
+    int newCurrentIndex = settings.value("NoteHistoryCurrentIndex-" +
+                                      QString::number(currentNoteFolderId)).toInt();
+
+    if (newCurrentIndex > 0 && newCurrentIndex <= maxIndex) {
+        currentIndex = newCurrentIndex;
+    }
+}
 
 QDebug operator<<(QDebug dbg, const NoteHistory &history) {
     dbg.nospace() << "NoteHistory: <index>" << history.currentIndex <<
@@ -289,7 +365,7 @@ QDebug operator<<(QDebug dbg, const NoteHistory &history) {
  *
  * @return
  */
-QList<NoteHistoryItem> NoteHistory::noteHistoryItems() const {
+QList<NoteHistoryItem> NoteHistory::getNoteHistoryItems() const {
     QList<NoteHistoryItem> items;
 
     for (int i = 0; i < noteHistory->count(); i++) {
@@ -311,24 +387,6 @@ void NoteHistory::addNoteHistoryItem(NoteHistoryItem item) {
 }
 
 /**
- * Returns the current index
- *
- * @return
- */
-int NoteHistory::getCurrentIndex() {
-    return currentIndex;
-}
-
-/**
- * Sets the current index
- *
- * @param index
- */
-void NoteHistory::setCurrentIndex(int index) {
-    currentIndex = index;
-}
-
-/**
  * Stream operator for storing the class to QSettings
  * Note: This method doesn't seem to get called when serializing for
  *       writing to the settings
@@ -338,7 +396,7 @@ void NoteHistory::setCurrentIndex(int index) {
  * @return
  */
 QDataStream &operator<<(QDataStream &out, const NoteHistory &history) {
-    Q_FOREACH(NoteHistoryItem item, history.noteHistoryItems()) {
+    Q_FOREACH(NoteHistoryItem item, history.getNoteHistoryItems()) {
         out << item;
     }
 
