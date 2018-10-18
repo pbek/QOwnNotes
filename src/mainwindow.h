@@ -898,8 +898,6 @@ private:
                                     bool doRemove = false,
                                     bool triggerPostMethods = true);
 
-    void handleScriptingRemoveNoteTag(Note note, QString tagName);
-
     void handleScriptingNotesTagUpdating();
 
     void handleScriptingNotesTagRenaming(QString oldTagName, QString newTagName);
@@ -909,8 +907,6 @@ private:
 
     void directoryWatcherWorkaround(bool isNotesDirectoryWasModifiedDisabled,
                                     bool alsoHandleNotesWereModified = false);
-
-    bool allowNoteEditing() const;
 
     void setMenuEnabled(QMenu* menu, bool enabled);
 
