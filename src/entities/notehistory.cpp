@@ -311,6 +311,24 @@ void NoteHistory::addNoteHistoryItem(NoteHistoryItem item) {
 }
 
 /**
+ * Returns the current index
+ *
+ * @return
+ */
+int NoteHistory::getCurrentIndex() {
+    return currentIndex;
+}
+
+/**
+ * Sets the current index
+ *
+ * @param index
+ */
+void NoteHistory::setCurrentIndex(int index) {
+    currentIndex = index;
+}
+
+/**
  * Stream operator for storing the class to QSettings
  * Note: This method doesn't seem to get called when serializing for
  *       writing to the settings

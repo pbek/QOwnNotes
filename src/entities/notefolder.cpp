@@ -170,6 +170,7 @@ bool NoteFolder::remove() {
         // remove the note history settings of the note folder
         QSettings settings;
         settings.remove("NoteHistory-" + QString::number(this->id));
+        settings.remove("NoteHistoryCurrentIndex-" + QString::number(this->id));
 
         return true;
     }

@@ -57,6 +57,8 @@ public:
     NoteHistoryItem getLastItemOfNote(Note note);
     QList<NoteHistoryItem> noteHistoryItems() const;
     void addNoteHistoryItem(NoteHistoryItem item);
+    int getCurrentIndex();
+    void setCurrentIndex(int index);
 };
 
 // we want to store the class to the settings

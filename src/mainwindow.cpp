@@ -1692,14 +1692,38 @@ void MainWindow::storeNoteHistoryForCurrentNoteFolder() {
     QSettings settings;
     int currentNoteFolderId = NoteFolder::currentNoteFolderId();
     QVariantList noteHistoryVariantItems;
+    const QList<NoteHistoryItem> &noteHistoryItems =
+            noteHistory.noteHistoryItems();
+    const int noteHistoryItemCount = noteHistoryItems.count();
 
-    Q_FOREACH(NoteHistoryItem item, noteHistory.noteHistoryItems()) {
-            noteHistoryVariantItems.append(QVariant::fromValue(item));
+    // we only want to store the last 200 note history items
+    const int maxCount = std::min(noteHistoryItemCount, 200);
+
+    if (maxCount == 0) {
+        return;
+    }
+
+    int currentIndex = 0;
+    int count = 0;
+
+    // store the last
+    for (int i = noteHistoryItemCount - maxCount; i < noteHistoryItemCount; i++) {
+        noteHistoryVariantItems.append(QVariant::fromValue(
+                noteHistoryItems.at(i)));
+
+        if (i == noteHistory.getCurrentIndex()) {
+            currentIndex = count;
         }
+
+        count++;
+    }
 
     // store the note history settings of the old note folder
     settings.setValue("NoteHistory-" + QString::number(currentNoteFolderId),
                       noteHistoryVariantItems);
+
+    settings.setValue("NoteHistoryCurrentIndex-" + QString::number(
+            currentNoteFolderId), currentIndex);
 }
 
 /**
@@ -1708,19 +1732,33 @@ void MainWindow::storeNoteHistoryForCurrentNoteFolder() {
 void MainWindow::restoreNoteHistoryForCurrentNoteFolder() {
     QSettings settings;
     int currentNoteFolderId = NoteFolder::currentNoteFolderId();
+    noteHistory.clear();
 
     // restore the note history of the new note folder
-    QVariantList noteHistoryVariantItems =  settings.value(
+    QVariantList noteHistoryVariantItems = settings.value(
             "NoteHistory-" + QString::number(currentNoteFolderId)).toList();
 
+    if (noteHistoryVariantItems.count() == 0) {
+        return;
+    }
+
+    int maxIndex = -1;
     Q_FOREACH(QVariant item, noteHistoryVariantItems) {
             // check if the NoteHistoryItem could be de-serialized
             if (item.isValid()) {
                 NoteHistoryItem noteHistoryItem =
                         item.value<NoteHistoryItem>();
                 noteHistory.addNoteHistoryItem(noteHistoryItem);
+                maxIndex++;
             }
         }
+
+    int currentIndex = settings.value("NoteHistoryCurrentIndex-" +
+                   QString::number(currentNoteFolderId)).toInt();
+
+    if (currentIndex > 0 && currentIndex <= maxIndex) {
+        noteHistory.setCurrentIndex(currentIndex);
+    }
 }
 
 /*
@@ -1787,9 +1825,6 @@ void MainWindow::changeNoteFolder(int noteFolderId, bool forceChange) {
 
         // update the current folder tooltip
         updateCurrentFolderTooltip();
-
-        // clear the note history
-        this->noteHistory.clear();
 
         // restore the note history of the new note folder
         restoreNoteHistoryForCurrentNoteFolder();
