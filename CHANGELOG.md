@@ -3,6 +3,10 @@
 ## 18.10.4
 - the file open dialogs that can select multiple files now also remember the 
   previous directory correctly
+- **Importing notes from text files** was improved
+    - you will now see what file is imported in a progress bar
+    - you can now cancel the import process
+    - speed improvement when importing many files
 
 ## 18.10.3
 - a status message for the `Copy note headline` feature was added

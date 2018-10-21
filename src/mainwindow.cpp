@@ -91,6 +91,7 @@
 #include <QRegularExpressionMatchIterator>
 #include <widgets/notetreewidgetitem.h>
 #include <helpers/fakevimproxy.h>
+#include <QProgressDialog>
 
 MainWindow::MainWindow(QWidget *parent) :
         QMainWindow(parent),
@@ -3829,7 +3830,11 @@ void MainWindow::createNewNote(QString name, QString text,
 
     // create a new note
     ui->searchLineEdit->setText(name);
-    on_searchLineEdit_returnPressed();
+
+    bool disableLoadNoteDirectoryList = options &
+            CreateNewNoteOption::DisableLoadNoteDirectoryList;
+
+    jumpToNoteOrCreateNew(disableLoadNoteDirectoryList);
 
     // check if to append the text or replace the text of the note
     if (options & CreateNewNoteOption::UseNameAsHeadline) {
@@ -5049,7 +5054,7 @@ void MainWindow::on_searchLineEdit_returnPressed() {
 /**
  * Jumps to found note or create a new one if not found
  */
-void MainWindow::jumpToNoteOrCreateNew() {
+void MainWindow::jumpToNoteOrCreateNew(bool disableLoadNoteDirectoryList) {
     // ignore if `return` was pressed in the completer
     if (_searchLineEditFromCompleter) {
         _searchLineEditFromCompleter = false;
@@ -5122,7 +5127,9 @@ void MainWindow::jumpToNoteOrCreateNew() {
         }
 
 //        buildNotesIndex();
-        loadNoteDirectoryList();
+        if (!disableLoadNoteDirectoryList) {
+            loadNoteDirectoryList();
+        }
 
         // fetch note new (because all the IDs have changed after
         // the buildNotesIndex()
@@ -10473,35 +10480,58 @@ void MainWindow::on_actionImport_notes_from_text_files_triggered() {
     dialog.setWindowTitle(tr("Select text files to import"));
     int ret = dialog.exec();
 
-    if (ret == QDialog::Accepted) {
-        QStringList fileNames = dialog.selectedFiles();
-        if (fileNames.size() == 0) {
-            return;
-        }
-
-        foreach (QString fileName, fileNames) {
-                QFile file(fileName);
-                QFileInfo fileInfo(file);
-
-                file.open(QFile::ReadOnly | QFile::Text);
-                QTextStream ts(&file);
-                QString text = ts.readAll();
-
-                QRegularExpressionMatch match =
-                        QRegularExpression(R"(^.+\n=+\n)",
-                                QRegularExpression::MultilineOption).match(
-                                        text);
-
-                CreateNewNoteOption options = CreateNewNoteOption::None;
-
-                // add a headline if none was found
-                if (!match.hasMatch()) {
-                    options = CreateNewNoteOption::UseNameAsHeadline;
-                }
-
-                createNewNote(fileInfo.baseName(), text, options);
-        }
+    if (ret != QDialog::Accepted) {
+        return;
     }
+
+    QStringList fileNames = dialog.selectedFiles();
+    const int fileCount = fileNames.size();
+
+    if (fileCount == 0) {
+        return;
+    }
+
+    QProgressDialog progressDialog("", tr("Cancel"), 0, fileCount, this);
+    progressDialog.setWindowModality(Qt::WindowModal);
+
+    const QSignalBlocker blocker(noteDirectoryWatcher);
+    Q_UNUSED(blocker);
+
+    for (int i = 0; i < fileCount; i++) {
+        if (progressDialog.wasCanceled()) {
+            break;
+        }
+
+        const QString &fileName = fileNames.at(i);
+
+        QFile file(fileName);
+        QFileInfo fileInfo(file);
+        progressDialog.setLabelText(tr("Importing: %1").arg(
+                fileInfo.fileName()));
+
+        file.open(QFile::ReadOnly | QFile::Text);
+        QTextStream ts(&file);
+        QString text = ts.readAll().trimmed();
+
+        QRegularExpressionMatch match =
+                QRegularExpression(R"(^.+\n=+\n)",
+                        QRegularExpression::MultilineOption).match(text);
+
+        CreateNewNoteOptions options = CreateNewNoteOption::None;
+
+        // add a headline if none was found
+        if (!match.hasMatch()) {
+            options = CreateNewNoteOption::UseNameAsHeadline;
+        }
+
+        options |= CreateNewNoteOption::DisableLoadNoteDirectoryList;
+
+        createNewNote(fileInfo.baseName(), text, options);
+        progressDialog.setValue(i);
+    }
+
+    progressDialog.setValue(fileCount);
+    loadNoteDirectoryList();
 }
 
 /**

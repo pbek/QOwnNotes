@@ -81,6 +81,9 @@ public:
 
         // places the cursor at the end of the note
         CursorAtEnd = 0x0002,
+
+        // don't call loadNoteDirectoryList
+        DisableLoadNoteDirectoryList = 0x0004,
     };
 
     Q_DECLARE_FLAGS(CreateNewNoteOptions, CreateNewNoteOption)
@@ -803,7 +806,7 @@ private:
 
     QTreeWidgetItem *findNoteInNoteTreeWidget(Note note);
 
-    void jumpToNoteOrCreateNew();
+    void jumpToNoteOrCreateNew(bool disableLoadNoteDirectoryList = false);
 
     void updateShareButton();
 
