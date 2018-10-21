@@ -148,7 +148,7 @@ MainWindow::MainWindow(QWidget *parent) :
     _noteExternallyRemovedCheckEnabled = true;
     _readOnlyButton = new QPushButton(this);
     _settingsDialog = Q_NULLPTR;
-    _lastNotSelectionWasMultiple = false;
+    _lastNoteSelectionWasMultiple = false;
 
     this->setWindowTitle(
             "QOwnNotes - version " + QString(VERSION) +
@@ -7472,7 +7472,7 @@ void MainWindow::reloadCurrentNoteTags() {
 
         // only refresh the preview if we previously selected multiple notes
         // because we used it for showing note information
-        if (_lastNotSelectionWasMultiple) {
+        if (_lastNoteSelectionWasMultiple) {
             _notePreviewHash = "";
             regenerateNotePreview();
         }
@@ -7493,7 +7493,7 @@ void MainWindow::reloadCurrentNoteTags() {
         ui->noteTextView->setText(previewHtml);
     }
 
-    _lastNotSelectionWasMultiple = !currentNoteOnly;
+    _lastNoteSelectionWasMultiple = !currentNoteOnly;
 
     // add all new remove-tag buttons
     Q_FOREACH(Tag tag, tagList) {
