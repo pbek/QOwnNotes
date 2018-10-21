@@ -1011,6 +1011,7 @@ p, li { white-space: pre-wrap; }
       <iconset theme="split" resource="breeze-qownnotes.qrc">
        <normaloff>:/icons/breeze-qownnotes/16x16/split.svg</normaloff>:/icons/breeze-qownnotes/16x16/split.svg</iconset>
      </property>
+     <addaction name="actionCopy_headline"/>
      <addaction name="actionSearch_text_on_the_web"/>
      <addaction name="actionAutocomplete"/>
      <addaction name="actionDelete_orphaned_images"/>
@@ -1025,7 +1026,6 @@ p, li { white-space: pre-wrap; }
       <iconset theme="document-edit" resource="breeze-qownnotes.qrc">
        <normaloff>:/icons/breeze-qownnotes/16x16/document-edit.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-edit.svg</iconset>
      </property>
-     <addaction name="actionCopy_headline"/>
      <addaction name="action_DuplicateText"/>
      <addaction name="actionDelete_line"/>
      <addaction name="actionDelete_word"/>

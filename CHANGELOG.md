@@ -7,6 +7,7 @@
     - you will now see what file is imported in a progress bar
     - you can now cancel the import process
     - speed improvement when importing many files
+- the *Copy note headline* menu entry was moved to the *Edit / Extra* menu
 
 ## 18.10.3
 - a status message for the `Copy note headline` feature was added
