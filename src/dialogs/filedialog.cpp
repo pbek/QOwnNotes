@@ -33,6 +33,8 @@ FileDialog::FileDialog(QString name) {
         // store the directory for the next time the dialog opens
         connect(this, SIGNAL(fileSelected(QString)),
                 this, SLOT(storeDirectory(QString)));
+        connect(this, SIGNAL(filesSelected(QStringList)),
+                this, SLOT(storeDirectory(QStringList)));
     }
 }
 
@@ -57,6 +59,12 @@ void FileDialog::storeDirectory(QString path) {
 
     // this is the path for all FileDialog
     settings.setValue(_generalSettingsKey, path);
+}
+
+void FileDialog::storeDirectory(QStringList files) {
+    if (files.count() > 0) {
+        storeDirectory(files.at(0));
+    }
 }
 
 /**

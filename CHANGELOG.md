@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 18.10.4
+- the file open dialogs that can select multiple files now also remember the 
+  previous directory correctly
+
 ## 18.10.3
 - a status message for the `Copy note headline` feature was added
 - the debug output in the *Debug settings* now supports more data-types for 

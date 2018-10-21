@@ -18,6 +18,7 @@ private:
 
 protected slots:
     void storeDirectory(QString path);
+    void storeDirectory(QStringList files);
 };
 
 #endif // FILEDIALOG_H
