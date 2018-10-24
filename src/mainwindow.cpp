@@ -3840,7 +3840,7 @@ void MainWindow::createNewNote(QString name, QString text,
     // check if to append the text or replace the text of the note
     if (options & CreateNewNoteOption::UseNameAsHeadline) {
         QTextCursor c = ui->noteTextEdit->textCursor();
-        c.insertText(text);
+        c.insertText("\n\n" + text);
         ui->noteTextEdit->setTextCursor(c);
     } else {
         ui->noteTextEdit->setText(text);
@@ -10517,7 +10517,7 @@ void MainWindow::on_actionImport_notes_from_text_files_triggered() {
         QString text = ts.readAll().trimmed();
 
         QRegularExpressionMatch match =
-                QRegularExpression(R"(^.+\n=+\n)",
+                QRegularExpression(R"(^.+\n=+)",
                         QRegularExpression::MultilineOption).match(text);
 
         CreateNewNoteOptions options = CreateNewNoteOption::None;
