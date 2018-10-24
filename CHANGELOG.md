@@ -4,6 +4,8 @@
 - added a notification that you have to sync your notes yourself when sharing
   notes (for [#1049](https://github.com/pbek/QOwnNotes/issues/1049))
 - did more `ownCloud` to `ownCloud / Nextcloud` text replacing
+- the **Evernote importer** is now able to import **code blocks**
+  (for [#1047](https://github.com/pbek/QOwnNotes/issues/1047))
 
 ## 18.10.4
 - the file open dialogs that can select multiple files now also remember the 

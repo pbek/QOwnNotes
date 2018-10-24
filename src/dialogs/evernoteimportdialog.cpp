@@ -497,6 +497,11 @@ void EvernoteImportDialog::importNotes(QString data) {
 //            content.replace(QRegularExpression("<ul.*?>"), "\n<ul>");
 //            content.replace(QRegularExpression("<ol.*?>"), "\n<ol>");
 
+            // replace code blocks
+            content.replace(QRegularExpression(
+                    R"(<div.+-en-codeblock:true;"><div>(.+?)<\/div><\/div>)"),
+                            "```\n\\1\n```");
+
             // add a linebreak instead of div-containers
             content.replace(QRegularExpression("<\\/div>"), "\n");
 
