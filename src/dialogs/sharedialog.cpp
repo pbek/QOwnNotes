@@ -39,7 +39,7 @@ void ShareDialog::updateDialog() {
  * Shares or removes the share from the current note
  */
 void ShareDialog::on_linkCheckBox_toggled(bool checked) {
-    OwnCloudService *ownCloud = new OwnCloudService(this);
+    auto *ownCloud = new OwnCloudService(this);
 
     const QSignalBlocker blocker(ui->linkCheckBox);
     Q_UNUSED(blocker);

@@ -501,7 +501,7 @@ void OwnCloudService::checkAppVersion(QNetworkReply *reply) {
     if (serverAppVersion < minAppVersion) {
         MainWindow *mainWindow = MainWindow::instance();
 
-        if (mainWindow == NULL) {
+        if (mainWindow == nullptr) {
             return;
         }
 
@@ -799,7 +799,6 @@ void OwnCloudService::fetchShares(QString path) {
 void OwnCloudService::removeCalendarItem(CalendarItem calItem,
                                          TodoDialog *dialog) {
     this->todoDialog = dialog;
-    this->calendarName = calendarName;
 
     QUrl url(calItem.getUrl());
     QNetworkRequest r(url);
@@ -1010,7 +1009,7 @@ void OwnCloudService::showOwnCloudMessage(
 #ifndef INTEGRATION_TESTS
             MainWindow *mainWindow = MainWindow::instance();
 
-            if (mainWindow != NULL) {
+            if (mainWindow != nullptr) {
                 mainWindow->openSettingsDialog(SettingsDialog::OwnCloudPage);
             }
 #endif
@@ -1024,11 +1023,11 @@ void OwnCloudService::showOwnCloudMessage(
  * Returns the global OwnCloudService instance
  */
 OwnCloudService *OwnCloudService::instance() {
-    OwnCloudService *instance =
+    auto *instance =
             qApp->property("ownCloudService").value<OwnCloudService *>();
 
-    if (instance == NULL) {
-        instance = new OwnCloudService(NULL);
+    if (instance == nullptr) {
+        instance = new OwnCloudService(nullptr);
 
         qApp->setProperty("ownCloudService",
                           QVariant::fromValue<OwnCloudService *>(instance));
