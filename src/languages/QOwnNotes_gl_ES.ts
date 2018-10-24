@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="nl" sourcelanguage="en">
+<TS version="2.1" language="gl" sourcelanguage="en">
   <context>
     <name>AboutDialog</name>
     <message>
       <location filename="../dialogs/aboutdialog.ui" line="14"/>
       <source>About QOwnNotes</source>
-      <translation>Over QOwnNotes</translation>
+      <translation>Sobre QOwnNotes</translation>
     </message>
   </context>
   <context>
@@ -15,7 +15,7 @@
       <location filename="../dialogs/actiondialog.ui" line="14"/>
       <location filename="../dialogs/actiondialog.ui" line="46"/>
       <source>Find action</source>
-      <translation>Actie zoeken</translation>
+      <translation>Buscar acción</translation>
     </message>
   </context>
   <context>
@@ -23,162 +23,162 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="14"/>
       <source>Evernote Import</source>
-      <translation>Evernote importeren</translation>
+      <translation>Importar desde Evernote</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="121"/>
       <source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</source>
-      <translation>Om een een enex-bestand te krijgen selecteer één of meerdere notities in uw Evernotes desktop client en klik op "Notities exporteren..." in het menu bestand.</translation>
+      <translation>Para obter un ficheiro «enex» é preciso que selecciones unha ou varias notas no teu cliente de escritorio de Evernote, e facer clic en «Exportar notas...» no menú Ficheiro.</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="74"/>
       <source>Please select the Evernote enex file you want to import:</source>
-      <translation>Selecteer het Evernote enex bestand dat u wilt importeren:</translation>
+      <translation>Por favor, selecciona o ficheiro «enex» de Evernote a importar:</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="30"/>
       <source>Select file</source>
-      <translation>Selecteer bestand</translation>
+      <translation>Seleccionar ficheiro</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="54"/>
       <source>Import images</source>
-      <translation>Afbeeldingen importeren</translation>
+      <translation>Importar imaxes</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="91"/>
       <source>Metadata to import</source>
-      <translation>Metagegevens importeren</translation>
+      <translation>Metadatos para importar</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="165"/>
       <source>Import notes</source>
-      <translation>Notities importeren</translation>
+      <translation>Importar notas</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="23"/>
       <source>Evernote enex file</source>
-      <translation>Evernote enex bestand</translation>
+      <translation>Ficheiro «enex» de Evernote</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="67"/>
       <source>%v of %m note(s) imported</source>
-      <translation>%v van %m notities geïmporteerd</translation>
+      <translation>%v de %m nota/s importada/s</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="81"/>
       <source>Import attachments</source>
-      <translation>Importeren bijlagen</translation>
+      <translation>Importar adxuntos</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="58"/>
       <source>Enex files</source>
-      <translation>Enex bestanden</translation>
+      <translation>Ficheiros «enex»</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="59"/>
       <source>Select Evernote enex file to import</source>
-      <translation>Selecteer Evernote enex bestand om te importeren</translation>
+      <translation>Seleccionar ficheiros «enex» para importar</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="644"/>
       <source>Basic attributes</source>
-      <translation>Fundamentele kenmerken</translation>
+      <translation>Atributos básicos</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="645"/>
       <source>Created date</source>
-      <translation>Gemaakt op</translation>
+      <translation>Data de creación</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="647"/>
       <source>Updated date</source>
-      <translation>Bijgewerkte datum</translation>
+      <translation>Data de actualización</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="650"/>
       <source>Note attributes</source>
-      <translation>Notitie kenmerken</translation>
+      <translation>Atributos de nota</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="651"/>
       <source>Subject date</source>
-      <translation>Onderwerp datum</translation>
+      <translation>Data do asunto</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="653"/>
       <source>Latitude</source>
-      <translation>Breedte</translation>
+      <translation>Latitude</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="655"/>
       <source>Longitude</source>
-      <translation>Lengte</translation>
+      <translation>Lonxitude</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="657"/>
       <source>Altitude</source>
-      <translation>Hoogte</translation>
+      <translation>Altitude</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="659"/>
       <source>Author</source>
-      <translation>Auteur</translation>
+      <translation>Autor</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="661"/>
       <source>Source</source>
-      <translation>Bron</translation>
+      <translation>Fonte</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="663"/>
       <source>Source URL</source>
-      <translation>Bron URL</translation>
+      <translation>URL da fonte</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="665"/>
       <source>Source application</source>
-      <translation>Bron applicatie</translation>
+      <translation>Aplicativo de orixe</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="667"/>
       <source>Reminder order</source>
-      <translation>Volgorde van de herinnering</translation>
+      <translation>Orde do recordatorio</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="669"/>
       <source>Reminder time</source>
-      <translation>Herinneringstijd</translation>
+      <translation>Hora do recordatorio</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="671"/>
       <source>Reminder done time</source>
-      <translation>Reminder tijd voldaan</translation>
+      <translation>Hora de fin do recordatorio</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="673"/>
       <source>Place name</source>
-      <translation>Plaatsnaam</translation>
+      <translation>Nome do lugar</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="675"/>
       <source>Content class</source>
-      <translation>Inhoudsklasse</translation>
+      <translation>Clase de contido</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="677"/>
       <source>Application data</source>
-      <translation>Toepassingsgegevens</translation>
+      <translation>Datos do aplicativo</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="751"/>
       <source>Attribute</source>
-      <translation>Kenmerk</translation>
+      <translation>Atributo</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="751"/>
       <source>Value</source>
-      <translation>Waarde</translation>
+      <translation>Valor</translation>
     </message>
   </context>
   <context>
@@ -187,183 +187,183 @@
       <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="166"/>
       <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="174"/>
       <source>Unknown option: %1</source>
-      <translation>Onbekende optie: %1</translation>
+      <translation>Opción descoñecida: %1</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="169"/>
       <source>Argument must be positive: %1=%2</source>
-      <translation>Argument moet positief: %1=%2</translation>
+      <translation>O argumento debe ser positivo: %1=%2</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="958"/>
       <source>Mark "%1" not set.</source>
-      <translation>Mark '%1' is niet ingesteld.</translation>
+      <translation>A marca «%1» non está configurada.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="2836"/>
       <source>Recursive mapping</source>
-      <translation>Recursieve toewijzing</translation>
+      <translation>Mapeo recursivo</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3705"/>
       <source>%1%2%</source>
-      <translation>%1%2%</translation>
+      <translation>%1 %2%</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3707"/>
       <source>%1All</source>
-      <translation>%1All</translation>
+      <translation>%1 Todos</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3721"/>
       <source>Not implemented in FakeVim.</source>
-      <translation>Niet geïmplementeerd in FakeVim.</translation>
+      <translation>Non implementado en FakeVim.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4301"/>
       <source>Type Alt-V, Alt-V to quit FakeVim mode.</source>
-      <translation>Typ Alt-V, Alt-V om FakeVim modus te stoppen.</translation>
+      <translation>Pulsa Alt+V, Alt-V para saír do modo FakeVim.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5749"/>
       <source>Unknown option:</source>
-      <translation>Onbekende optie:</translation>
+      <translation>Opción descoñecida:</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5759"/>
       <source>Invalid argument:</source>
-      <translation>Ongeldig argument:</translation>
+      <translation>Argumento inválido:</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5761"/>
       <source>Trailing characters:</source>
-      <translation>Afsluitende tekens:</translation>
+      <translation type="unfinished">Trailing characters:</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5843"/>
       <source>Move lines into themselves.</source>
-      <translation>Regels verplaatsen in zichzelf.</translation>
+      <translation type="unfinished">Move lines into themselves.</translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5885"/>
       <source>%n lines moved.</source>
       <translation type="unfinished">
-        <numerusform>%n lijn verplaatst.</numerusform>
-        <numerusform>%n lijnen verplaatst.</numerusform>
+        <numerusform>%n lines moved.</numerusform>
+        <numerusform>%n lines moved.</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5946"/>
       <source>File "%1" exists (add ! to override)</source>
-      <translation>Bestand "%1" bestaat (voeg ! toe om te overschrijven)</translation>
+      <translation type="unfinished">File "%1" exists (add ! to override)</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5960"/>
       <source>Cannot open file "%1" for writing</source>
-      <translation>Kan bestand "%1" niet openen om te schrijven</translation>
+      <translation type="unfinished">Cannot open file "%1" for writing</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5966"/>
       <source>"%1" %2 %3L, %4C written.</source>
-      <translation>"%1" %2 %3L, %4C geschreven.</translation>
+      <translation type="unfinished">"%1" %2 %3L, %4C written.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5967"/>
       <source> [New] </source>
-      <translation> [Nieuw] </translation>
+      <translation type="unfinished"> [New] </translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5975"/>
       <source>Cannot open file "%1" for reading</source>
-      <translation>Kan bestand "%1" niet openen om te lezen</translation>
+      <translation type="unfinished">Cannot open file "%1" for reading</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6003"/>
       <source>"%1" %2L, %3C</source>
-      <translation>"%1" %2L, %3C</translation>
+      <translation type="unfinished">"%1" %2L, %3C</translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6030"/>
       <source>%n lines filtered.</source>
-      <translation>
-        <numerusform>%n regel gefilterd.</numerusform>
-        <numerusform>%n regels gefilterd.</numerusform>
+      <translation type="unfinished">
+        <numerusform>%n lines filtered.</numerusform>
+        <numerusform>%n lines filtered.</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6118"/>
       <source>Cannot open file %1</source>
-      <translation>Kan bestand %1 niet openen</translation>
+      <translation type="unfinished">Cannot open file %1</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6191"/>
       <source>Not an editor command: %1</source>
-      <translation>Geen editor bevel: %1</translation>
+      <translation type="unfinished">Not an editor command: %1</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6285"/>
       <source>Invalid regular expression: %1</source>
-      <translation>Ongeldige reguliere expressie: %1</translation>
+      <translation type="unfinished">Invalid regular expression: %1</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6321"/>
       <source>Pattern not found: %1</source>
-      <translation>Patroon niet gevonden: %1</translation>
+      <translation type="unfinished">Pattern not found: %1</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6325"/>
       <source>Search hit BOTTOM, continuing at TOP.</source>
-      <translation>Zoek hit BOTTOM, voortzetting van BOVEN.</translation>
+      <translation type="unfinished">Search hit BOTTOM, continuing at TOP.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6326"/>
       <source>Search hit TOP, continuing at BOTTOM.</source>
-      <translation>Zoek hit TOP, voortzetting van BOTTOM.</translation>
+      <translation type="unfinished">Search hit TOP, continuing at BOTTOM.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6331"/>
       <source>Search hit BOTTOM without match for: %1</source>
-      <translation>Zoek hit BOTTOM zonder match voor: %1</translation>
+      <translation type="unfinished">Search hit BOTTOM without match for: %1</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6332"/>
       <source>Search hit TOP without match for: %1</source>
-      <translation>Zoek hit TOP zonder match voor: %1</translation>
+      <translation type="unfinished">Search hit TOP without match for: %1</translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6439"/>
       <source>%n lines indented.</source>
-      <translation>
-        <numerusform>%n regel gefilterd.</numerusform>
-        <numerusform>%n regels gefilterd.</numerusform>
+      <translation type="unfinished">
+        <numerusform>%n lines indented.</numerusform>
+        <numerusform>%n lines indented.</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6495"/>
       <source>%n lines %1ed %2 time.</source>
       <comment>%1 can be '&gt;' or '&lt;'</comment>
-      <translation>
-        <numerusform>%n lijnen %1ed %2 tijd.</numerusform>
-        <numerusform>%n lijnen %1ed %2 tijd.</numerusform>
+      <translation type="unfinished">
+        <numerusform>%n lines %1ed %2 time.</numerusform>
+        <numerusform>%n lines %1ed %2 time.</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7033"/>
       <source>%n lines yanked.</source>
-      <translation>
-        <numerusform>%n lijnen verplaatst.</numerusform>
-        <numerusform>%n lijnen verplaatst.</numerusform>
+      <translation type="unfinished">
+        <numerusform>%n lines yanked.</numerusform>
+        <numerusform>%n lines yanked.</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7766"/>
       <source>Already at oldest change.</source>
-      <translation>Reeds bij de oudste wijziging.</translation>
+      <translation type="unfinished">Already at oldest change.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7767"/>
       <source>Already at newest change.</source>
-      <translation>Reeds bij de nieuwste wijziging.</translation>
+      <translation type="unfinished">Already at newest change.</translation>
     </message>
   </context>
   <context>
@@ -371,7 +371,7 @@
     <message>
       <location filename="../helpers/fakevimproxy.cpp" line="26"/>
       <source>Information</source>
-      <translation>Informatie</translation>
+      <translation type="unfinished">Information</translation>
     </message>
   </context>
   <context>
@@ -379,247 +379,247 @@
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="38"/>
       <source>Text font</source>
-      <translation>Lettertype</translation>
+      <translation type="unfinished">Text font</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="73"/>
       <source>Size:</source>
-      <translation>Grootte:</translation>
+      <translation type="unfinished">Size:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="80"/>
       <source>Family:</source>
-      <translation>Familie:</translation>
+      <translation type="unfinished">Family:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="103"/>
       <source>Color schema</source>
-      <translation>Kleurenschema</translation>
+      <translation type="unfinished">Color schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="124"/>
       <source>Delete schema</source>
-      <translation>Schema verwijderen</translation>
+      <translation type="unfinished">Delete schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="127"/>
       <source>Delete</source>
-      <translation>Verwijderen</translation>
+      <translation type="unfinished">Delete</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="169"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="631"/>
       <source>Export schema</source>
-      <translation>Schema exporteren</translation>
+      <translation type="unfinished">Export schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="172"/>
       <source>Export</source>
-      <translation>Exporteren</translation>
+      <translation type="unfinished">Export</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="271"/>
       <source>If you have created a nice color schema please export it and share it with everyone!</source>
-      <translation>Als U een mooie kleurenschema hebt gecreëerd, kunt U het exporteren en met iedereen delen!</translation>
+      <translation type="unfinished">If you have created a nice color schema please export it and share it with everyone!</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="155"/>
       <source>Copy schema</source>
-      <translation>Kopieer schema</translation>
+      <translation type="unfinished">Copy schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="158"/>
       <source>Copy</source>
-      <translation>Kopiëren</translation>
+      <translation type="unfinished">Copy</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="141"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="671"/>
       <source>Import schema</source>
-      <translation>Schema importeren</translation>
+      <translation type="unfinished">Import schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="144"/>
       <source>Import</source>
-      <translation>Importeren</translation>
+      <translation type="unfinished">Import</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="315"/>
       <source>Share schema</source>
-      <translation>Kleurenschema delen</translation>
+      <translation type="unfinished">Share schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="288"/>
       <source>Background:</source>
-      <translation>Achtergrond:</translation>
+      <translation type="unfinished">Background:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="281"/>
       <source>Foreground:</source>
-      <translation>Voorgrond:</translation>
+      <translation type="unfinished">Foreground:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="264"/>
       <source>Bold</source>
-      <translation>Vet</translation>
+      <translation type="unfinished">Bold</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="244"/>
       <source>Italic</source>
-      <translation>Cursief</translation>
+      <translation type="unfinished">Italic</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="237"/>
       <source>Adapt font size:</source>
-      <translation>Lettergrootte aanpassen:</translation>
+      <translation type="unfinished">Adapt font size:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="208"/>
       <source>Underline</source>
-      <translation>Onderstrepen</translation>
+      <translation type="unfinished">Underline</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="195"/>
       <source>Text preset</source>
-      <translation>Tekst voorinstelling</translation>
+      <translation type="unfinished">Text preset</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="196"/>
       <source>Emphasized text</source>
-      <translation>Benadrukte tekst</translation>
+      <translation type="unfinished">Emphasized text</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="197"/>
       <source>Strong text</source>
-      <translation>Sterke tekst</translation>
+      <translation type="unfinished">Strong text</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="214"/>
       <source>(HTML) Comment</source>
-      <translation>(HTML) Commentaar</translation>
+      <translation type="unfinished">(HTML) Comment</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="204"/>
       <source>Header, level 1</source>
-      <translation>Kop, niveau 1</translation>
+      <translation type="unfinished">Header, level 1</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="198"/>
       <source>Link</source>
-      <translation>Koppeling</translation>
+      <translation type="unfinished">Link</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="199"/>
       <source>Image</source>
-      <translation>Afbeelding</translation>
+      <translation type="unfinished">Image</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="200"/>
       <source>Code (block)</source>
-      <translation>Code (blok)</translation>
+      <translation type="unfinished">Code (block)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="201"/>
       <source>Code (inline)</source>
-      <translation>Code (inline)</translation>
+      <translation type="unfinished">Code (inline)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="203"/>
       <source>List item</source>
-      <translation>Item in de lijst</translation>
+      <translation type="unfinished">List item</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="205"/>
       <source>Header, level 2</source>
-      <translation>Kop, niveau 2</translation>
+      <translation type="unfinished">Header, level 2</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="206"/>
       <source>Header, level 3</source>
-      <translation>Kop, niveau 3</translation>
+      <translation type="unfinished">Header, level 3</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="207"/>
       <source>Header, level 4</source>
-      <translation>Kop, niveau 4</translation>
+      <translation type="unfinished">Header, level 4</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="208"/>
       <source>Header, level 5</source>
-      <translation>Kop, niveau 5</translation>
+      <translation type="unfinished">Header, level 5</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="209"/>
       <source>Header, level 6</source>
-      <translation>Kop, niveau 6</translation>
+      <translation type="unfinished">Header, level 6</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="212"/>
       <source>Block quote</source>
-      <translation>Blok quote</translation>
+      <translation type="unfinished">Block quote</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="213"/>
       <source>Table</source>
-      <translation>Tabel</translation>
+      <translation type="unfinished">Table</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="215"/>
       <source>Masked syntax</source>
       <comment>text that will highlighted in a way that it's barely visible</comment>
-      <translation>Gemaskerde syntaxis</translation>
+      <translation type="unfinished">Masked syntax</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="220"/>
       <source>Broken link</source>
-      <translation>Kapotte link</translation>
+      <translation type="unfinished">Broken link</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="210"/>
       <source>Horizontal rule</source>
-      <translation>Horizontale lijn</translation>
+      <translation type="unfinished">Horizontal rule</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="218"/>
       <source>Current line background color</source>
-      <translation>Huidige lijnkleur van achtergrond </translation>
+      <translation type="unfinished">Current line background color</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="229"/>
       <source>This item will be used to preset colors for the other items</source>
-      <translation>Dit item zal worden gebruikt om de kleur van andere items te bepalen</translation>
+      <translation type="unfinished">This item will be used to preset colors for the other items</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="460"/>
       <source>Copy color schema</source>
-      <translation>Kleurenschema kopieëren</translation>
+      <translation type="unfinished">Copy color schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="461"/>
       <source>Color schema name</source>
-      <translation>Kleurenschema naam</translation>
+      <translation type="unfinished">Color schema name</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="463"/>
       <source>Copy</source>
       <comment>as noun</comment>
-      <translation>Kopiëren</translation>
+      <translation type="unfinished">Copy</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="582"/>
       <source>Remove schema</source>
-      <translation>Schema verwijderen</translation>
+      <translation type="unfinished">Remove schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="583"/>
       <source>Remove current schema? This cannot be undone!</source>
-      <translation>Huidige schema verwijderen? Dit kan niet ongedaan worden gemaakt!</translation>
+      <translation type="unfinished">Remove current schema? This cannot be undone!</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="630"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="670"/>
       <source>INI files</source>
-      <translation>INI-bestanden</translation>
+      <translation type="unfinished">INI files</translation>
     </message>
   </context>
   <context>
@@ -627,37 +627,37 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="14"/>
       <source>Link an url or note</source>
-      <translation>Koppel een URL of notitie</translation>
+      <translation type="unfinished">Link an url or note</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="44"/>
       <source>Enter URL</source>
-      <translation>Voer URL in</translation>
+      <translation type="unfinished">Enter URL</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="53"/>
       <source>Enter an URL to link to</source>
-      <translation>Voer een URL in om te koppelen naar</translation>
+      <translation type="unfinished">Enter an URL to link to</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="76"/>
       <source>Search for notes or create new notes by entering text and pressing return</source>
-      <translation>Zoek naar notities of maak nieuwe notities door tekst in te voeren en op enter te drukken</translation>
+      <translation type="unfinished">Search for notes or create new notes by entering text and pressing return</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="91"/>
       <source>Search for a note to link to</source>
-      <translation>Zoek een notitie om te koppelen naar</translation>
+      <translation type="unfinished">Search for a note to link to</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="63"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;select local file to link to&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Selecteer een lokaal bestand om naar te koppelen&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;select local file to link to&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.cpp" line="197"/>
       <source>Select file to link to</source>
-      <translation>Selecteer lokaal bestand om naar te koppelen</translation>
+      <translation type="unfinished">Select file to link to</translation>
     </message>
   </context>
   <context>
@@ -665,90 +665,90 @@
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="14"/>
       <source>Locally trashed notes</source>
-      <translation>Lokaal gewisd notities</translation>
+      <translation type="unfinished">Locally trashed notes</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="42"/>
       <source>Name</source>
-      <translation>Naam</translation>
+      <translation type="unfinished">Name</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="47"/>
       <source>Trashed</source>
-      <translation>Prullenbak</translation>
+      <translation type="unfinished">Trashed</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="41"/>
       <source>Restore</source>
-      <translation>Herstellen</translation>
+      <translation type="unfinished">Restore</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="42"/>
       <location filename="../dialogs/localtrashdialog.cpp" line="194"/>
       <source>Restore selected notes</source>
-      <translation>Herstel geselecteerde notities</translation>
+      <translation type="unfinished">Restore selected notes</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="51"/>
       <source>Remove</source>
-      <translation>Verwijderen</translation>
+      <translation type="unfinished">Remove</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="52"/>
       <location filename="../dialogs/localtrashdialog.cpp" line="240"/>
       <source>Remove selected notes</source>
-      <translation>Verwijder geselecteerde notities</translation>
+      <translation type="unfinished">Remove selected notes</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="97"/>
       <source>File will be restored to: %1</source>
-      <translation>Bestand wordt teruggezet naar: %1</translation>
+      <translation type="unfinished">File will be restored to: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="106"/>
       <source>File &lt;strong&gt;%1&lt;/strong&gt; isn't readable and can't be restored!</source>
-      <translation>Bestand &lt;strong&gt;%1&lt;/strong&gt; is niet leesbaar en kan niet worden hersteld!</translation>
+      <translation type="unfinished">File &lt;strong&gt;%1&lt;/strong&gt; isn't readable and can't be restored!</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="195"/>
       <source>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
-      <translation>
-        <numerusform>Geselecteerde notitie herstellen?</numerusform>
-        <numerusform>Geselecteerde &lt;strong&gt;%n&lt;/strong&gt; notities herstellen?</numerusform>
+      <translation type="unfinished">
+        <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
+        <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="218"/>
       <source>Notes restored</source>
-      <translation>Notities hersteld</translation>
+      <translation type="unfinished">Notes restored</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="219"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) where restored</source>
-      <translation>
-        <numerusform>notitie werd hersteld</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; notities werden hersteld</numerusform>
+      <translation type="unfinished">
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) where restored</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) where restored</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="241"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
-      <translation>
-        <numerusform>Geselecteerde notitie verwijderen?</numerusform>
-        <numerusform>Geselecteerde &lt;strong&gt;%n&lt;/strong&gt; notities verwijderen?</numerusform>
+      <translation type="unfinished">
+        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
+        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="264"/>
       <source>Notes removed</source>
-      <translation>Notities hersteld</translation>
+      <translation type="unfinished">Notes removed</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="265"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) where removed</source>
-      <translation>
-        <numerusform>notitie werd verwijderd</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; notities werden verwijderd</numerusform>
+      <translation type="unfinished">
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) where removed</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) where removed</numerusform>
       </translation>
     </message>
   </context>
@@ -757,58 +757,58 @@
     <message>
       <location filename="../widgets/logwidget.ui" line="26"/>
       <source>Logs</source>
-      <translation>Logboeken</translation>
+      <translation type="unfinished">Logs</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="114"/>
       <source>Fatal</source>
-      <translation>Fataal</translation>
+      <translation type="unfinished">Fatal</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="100"/>
       <source>Warning</source>
-      <translation>Waarschuwing</translation>
+      <translation type="unfinished">Warning</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="107"/>
       <source>Critical</source>
-      <translation>Kritisch</translation>
+      <translation type="unfinished">Critical</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="86"/>
       <source>Debug</source>
-      <translation>Debug</translation>
+      <translation type="unfinished">Debug</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="93"/>
       <source>Info</source>
-      <translation>Informatie</translation>
+      <translation type="unfinished">Info</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="121"/>
       <source>Status</source>
-      <translation>Status</translation>
+      <translation type="unfinished">Status</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="128"/>
       <source>Scripting</source>
-      <translation>Scripting</translation>
+      <translation type="unfinished">Scripting</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="135"/>
       <location filename="../widgets/logwidget.cpp" line="418"/>
       <source>Clear log</source>
-      <translation>Logboek opschonen</translation>
+      <translation type="unfinished">Clear log</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.cpp" line="416"/>
       <source>Show options</source>
-      <translation>Toon opties</translation>
+      <translation type="unfinished">Show options</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.cpp" line="416"/>
       <source>Hide options</source>
-      <translation>Opties verbergen</translation>
+      <translation type="unfinished">Hide options</translation>
     </message>
   </context>
   <context>
@@ -816,1440 +816,1441 @@
     <message>
       <location filename="../mainwindow.ui" line="662"/>
       <source>Add tag</source>
-      <translation>Label toevoegen</translation>
+      <translation type="unfinished">Add tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="387"/>
       <location filename="../mainwindow.ui" line="872"/>
       <location filename="../mainwindow.cpp" line="668"/>
       <source>Navigation</source>
-      <translation>Navigatie</translation>
+      <translation type="unfinished">Navigation</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="659"/>
       <location filename="../mainwindow.cpp" line="7463"/>
       <source>Add a tag to the current note</source>
-      <translation>Een label toevoegen aan de huidige notitie</translation>
+      <translation type="unfinished">Add a tag to the current note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="829"/>
       <source>&amp;Note</source>
-      <translation>&amp;Notitie</translation>
+      <translation type="unfinished">&amp;Note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="833"/>
       <source>Note &amp;folders</source>
-      <translation>Notitie&amp;mappen</translation>
+      <translation type="unfinished">Note &amp;folders</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="838"/>
       <source>Sort by</source>
-      <translation>Sorteren op</translation>
+      <translation type="unfinished">Sort by</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="944"/>
       <source>&amp;Help</source>
-      <translation>&amp;Hulp</translation>
+      <translation type="unfinished">&amp;Help</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1083"/>
       <source>Editor width in distraction free mode</source>
-      <translation>Breedte van de editor in de afleidingsvrije modus</translation>
+      <translation type="unfinished">Editor width in distraction free mode</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1086"/>
       <source>Editor width</source>
-      <translation>Breedte van de editor</translation>
+      <translation type="unfinished">Editor width</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1161"/>
       <source>Custom actions</source>
-      <translation>Aangepaste acties</translation>
+      <translation type="unfinished">Custom actions</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1181"/>
       <source>main toolbar</source>
-      <translation>hoofdwerkbalk</translation>
+      <translation type="unfinished">main toolbar</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1215"/>
       <source>&amp;Quit</source>
-      <translation>&amp;Afsluiten</translation>
+      <translation type="unfinished">&amp;Quit</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1230"/>
       <source>&amp;Setup note folders</source>
-      <translation>&amp;Instellen notitiemappen</translation>
+      <translation type="unfinished">&amp;Setup note folders</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1239"/>
       <source>&amp;Find note</source>
-      <translation>Vind notitie</translation>
+      <translation type="unfinished">&amp;Find note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1251"/>
       <source>&amp;Remove current note</source>
-      <translation>Huidige notitie verwijderen</translation>
+      <translation type="unfinished">&amp;Remove current note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1275"/>
       <source>&amp;New note</source>
-      <translation>&amp;Nieuwe notitie</translation>
+      <translation type="unfinished">&amp;New note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1287"/>
       <source>Check for &amp;updates</source>
-      <translation>Controleer op &amp;updates</translation>
+      <translation type="unfinished">Check for &amp;updates</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1299"/>
       <source>Post questions, feature requests or issues</source>
-      <translation>Post vragen, functie aanvragen of problemen</translation>
+      <translation type="unfinished">Post questions, feature requests or issues</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1310"/>
       <source>Alphabetical</source>
-      <translation>Alfabetisch</translation>
+      <translation type="unfinished">Alphabetical</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1313"/>
       <source>Sort alphabetical</source>
-      <translation>Sorteer alfabetisch</translation>
+      <translation type="unfinished">Sort alphabetical</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1321"/>
       <source>By date</source>
-      <translation>Op datum</translation>
+      <translation type="unfinished">By date</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1324"/>
       <source>Sort by date</source>
-      <translation>Sorteer op datum</translation>
+      <translation type="unfinished">Sort by date</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1348"/>
       <source>Show note &amp;versions</source>
-      <translation>Toon notitie &amp; versies</translation>
+      <translation type="unfinished">Show note &amp;versions</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1351"/>
       <source>Show note versions on server</source>
-      <translation>Toon notitie versies op de server</translation>
+      <translation type="unfinished">Show note versions on server</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1363"/>
       <source>Show trashed notes on server</source>
-      <translation>Toon verwijderde notities op de server</translation>
+      <translation type="unfinished">Show trashed notes on server</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1368"/>
       <location filename="../mainwindow.cpp" line="8899"/>
       <source>Select &amp;all notes</source>
-      <translation>Selecteer &amp;alle notities</translation>
+      <translation type="unfinished">Select &amp;all notes</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1377"/>
       <location filename="../mainwindow.cpp" line="5674"/>
       <source>Insert &amp;link</source>
-      <translation>Voeg &amp;link in</translation>
+      <translation type="unfinished">Insert &amp;link</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1380"/>
       <source>Insert link to an url or a note</source>
-      <translation>Voeg link in naar een URL of een notitie</translation>
+      <translation type="unfinished">Insert link to an url or a note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1392"/>
       <source>&amp;Find in current note</source>
-      <translation>&amp;Zoek in huidige notitie</translation>
+      <translation type="unfinished">&amp;Find in current note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1395"/>
       <source>Find text in current note</source>
-      <translation>Zoek tekst in huidige notitie</translation>
+      <translation type="unfinished">Find text in current note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1400"/>
       <source>&amp;Duplicate text</source>
-      <translation>&amp;Dupliceer tekst</translation>
+      <translation type="unfinished">&amp;Duplicate text</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1412"/>
       <source>&amp;Back in note history</source>
-      <translation>&amp;Terug in de geschiedenis van de notitie</translation>
+      <translation type="unfinished">&amp;Back in note history</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1333"/>
       <source>&amp;Settings</source>
-      <translation>&amp;Instellingen</translation>
+      <translation type="unfinished">&amp;Settings</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="119"/>
       <source>Find or create note sub folder</source>
-      <translation>Zoek of maak een notitie submap</translation>
+      <translation type="unfinished">Find or create note sub folder</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="196"/>
       <source>Find or create tag</source>
-      <translation>Zoek of maak label</translation>
+      <translation type="unfinished">Find or create tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="292"/>
       <source>Search for notes or create new notes by entering text and pressing return</source>
-      <translation>Zoek naar notities of maak nieuwe notities door tekst in te voeren en op enter te drukken</translation>
+      <translation type="unfinished">Search for notes or create new notes by entering text and pressing return</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="306"/>
       <source>Search or create note</source>
-      <translation>Zoek of maak een notitie</translation>
+      <translation type="unfinished">Search or create note</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7464"/>
       <source>Add a tag to the selected notes</source>
-      <translation>Een label toevoegen aan de geselecteerde notities</translation>
+      <translation type="unfinished">Add a tag to the selected notes</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="673"/>
       <source>New tag</source>
-      <translation>Nieuw label</translation>
+      <translation type="unfinished">New tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="848"/>
       <location filename="../mainwindow.cpp" line="5650"/>
       <source>Export</source>
-      <translation>Exporteren</translation>
+      <translation type="unfinished">Export</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="861"/>
       <source>Import</source>
-      <translation>Importeren</translation>
+      <translation type="unfinished">Import</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="885"/>
       <location filename="../mainwindow.cpp" line="5632"/>
       <source>Print</source>
-      <translation>Afdrukken</translation>
+      <translation type="unfinished">Print</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="896"/>
       <source>View note</source>
-      <translation>Weergave van notitie</translation>
+      <translation type="unfinished">View note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="908"/>
       <source>Trash</source>
-      <translation>Prullenbak</translation>
+      <translation type="unfinished">Trash</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="974"/>
       <source>&amp;Edit</source>
-      <translation>&amp;Bewerken</translation>
+      <translation type="unfinished">&amp;Edit</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="978"/>
       <source>Insert</source>
-      <translation>Invoegen</translation>
+      <translation type="unfinished">Insert</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="995"/>
       <source>Format</source>
-      <translation>Indeling</translation>
+      <translation type="unfinished">Format</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1008"/>
       <source>Extra</source>
-      <translation>Extra</translation>
+      <translation type="unfinished">Extra</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1023"/>
       <source>Edit</source>
-      <translation>Bewerken</translation>
+      <translation type="unfinished">Edit</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1035"/>
       <source>Versioning</source>
-      <translation>Versiebeheer</translation>
+      <translation type="unfinished">Versioning</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1046"/>
       <source>Encryption</source>
-      <translation>Codering</translation>
+      <translation type="unfinished">Encryption</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1073"/>
       <source>To&amp;do</source>
-      <translation>To&amp;do</translation>
+      <translation type="unfinished">To&amp;do</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1079"/>
       <source>&amp;Window</source>
-      <translation>&amp;Venster</translation>
+      <translation type="unfinished">&amp;Window</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1095"/>
       <location filename="../mainwindow.cpp" line="607"/>
       <source>Workspaces</source>
-      <translation>Werkruimten</translation>
+      <translation type="unfinished">Workspaces</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1100"/>
       <source>Panels</source>
-      <translation>Panelen</translation>
+      <translation type="unfinished">Panels</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1105"/>
       <source>Toolbars</source>
-      <translation>Werkbalken</translation>
+      <translation type="unfinished">Toolbars</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1110"/>
       <source>Show</source>
       <extracomment>To show or hide stuff</extracomment>
-      <translation>Toon</translation>
+      <translation type="unfinished">Show</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1124"/>
       <source>Workspace</source>
-      <translation>Werkruimten</translation>
+      <translation type="unfinished">Workspace</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1157"/>
       <source>&amp;Scripting</source>
-      <translation>&amp;Scripting</translation>
+      <translation type="unfinished">&amp;Scripting</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1263"/>
       <source>About &amp;QOwnNotes…</source>
-      <translation>Over &amp;QOwnNotes…</translation>
+      <translation type="unfinished">About &amp;QOwnNotes…</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1302"/>
       <source>Post questions, feature requests or problems with the help of the issue assistant</source>
-      <translation>Post vragen, functie aanvragen of problemen met de hulp van de kwestie-assistent</translation>
+      <translation type="unfinished">Post questions, feature requests or problems with the help of the issue assistant</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1360"/>
       <source>Show remote trash</source>
-      <translation>Toon externe prullenbak</translation>
+      <translation type="unfinished">Show remote trash</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1424"/>
       <source>Forward in note history</source>
-      <translation>Vooruit in de geschiedenis van de notitie</translation>
+      <translation type="unfinished">Forward in note history</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1436"/>
       <source>Show shortcuts</source>
-      <translation>Toon snelkoppelingen</translation>
+      <translation type="unfinished">Show shortcuts</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1445"/>
       <source>&amp;Knowledge base</source>
-      <translation>&amp;Kennisbank</translation>
+      <translation type="unfinished">&amp;Knowledge base</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1454"/>
       <source>Insert current &amp;time</source>
-      <translation>Invoegen huidige &amp;tijd</translation>
+      <translation type="unfinished">Insert current &amp;time</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1466"/>
       <source>Show &amp;Todo List</source>
-      <translation>Toon takenlijst</translation>
+      <translation type="unfinished">Show &amp;Todo List</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1478"/>
       <source>&amp;Export note as PDF (preview)</source>
-      <translation>&amp;Exporteer notitie als PDF (voorbeeld)</translation>
+      <translation type="unfinished">&amp;Export note as PDF (preview)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1481"/>
       <source>Export note as PDF (preview)</source>
-      <translation>Exporteer notitie als PDF (voorbeeld)</translation>
+      <translation type="unfinished">Export note as PDF (preview)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1490"/>
       <source>&amp;Export note as PDF (text)</source>
-      <translation>Exporteer notitie als PDF (tekst)</translation>
+      <translation type="unfinished">&amp;Export note as PDF (text)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1499"/>
       <source>&amp;Print note (text)</source>
-      <translation>&amp;Druk notitie (tekst) af</translation>
+      <translation type="unfinished">&amp;Print note (text)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1523"/>
       <source>Insert &amp;image</source>
-      <translation>Voeg &amp;afbeelding in</translation>
+      <translation type="unfinished">Insert &amp;image</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1526"/>
       <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
-      <translation>Voeg afbeelding in (de afbeelding wordt gekopieerd naar de 'media' map in de huidige notities map)</translation>
+      <translation type="unfinished">Insert image (the image will be copied to the `media` folder in the current notes folder)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1538"/>
       <source>Show &amp;changelog</source>
-      <translation>Toon &amp;lijst van veranderingen </translation>
+      <translation type="unfinished">Show &amp;changelog</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1547"/>
       <source>&amp;Encrypt note</source>
-      <translation>&amp;codeer notitie</translation>
+      <translation type="unfinished">&amp;Encrypt note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1556"/>
       <source>Edit encrypted note</source>
-      <translation>Bewerk gecodeerde notitie</translation>
+      <translation type="unfinished">Edit encrypted note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1568"/>
       <source>Decrypt note</source>
-      <translation>Decodeer notitie</translation>
+      <translation type="unfinished">Decrypt note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1577"/>
       <source>&amp;Open note in external editor</source>
-      <translation>&amp;Open notitie in externe editor</translation>
+      <translation type="unfinished">&amp;Open note in external editor</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1589"/>
       <source>&amp;Export note as markdown file</source>
-      <translation>&amp;Export notitie als markdown bestand</translation>
+      <translation type="unfinished">&amp;Export note as markdown file</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1598"/>
       <source>&amp;Get involved</source>
-      <translation>&amp;Werk mee</translation>
+      <translation type="unfinished">&amp;Get involved</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1607"/>
       <source>Insert &amp;code block</source>
-      <translation>Plaats &amp;codeblok</translation>
+      <translation type="unfinished">Insert &amp;code block</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1619"/>
       <source>Next note</source>
-      <translation>Volgende notitie</translation>
+      <translation type="unfinished">Next note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1631"/>
       <source>Previous note</source>
-      <translation>Vorige notitie</translation>
+      <translation type="unfinished">Previous note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1643"/>
       <source>&amp;Distraction free mode</source>
-      <translation>&amp;Afleidingsvrije modus</translation>
+      <translation type="unfinished">&amp;Distraction free mode</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1646"/>
       <source>Distraction free mode, you can leave it with a button on the bottom right</source>
-      <translation>Afleidingsvrije modus, te verlaten met een knop rechtsonder</translation>
+      <translation type="unfinished">Distraction free mode, you can leave it with a button on the bottom right</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1657"/>
       <source>Show &amp;toolbar</source>
-      <translation>Toon &amp;werkbalk</translation>
+      <translation type="unfinished">Show &amp;toolbar</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1665"/>
       <source>Narrow</source>
-      <translation>Smal</translation>
+      <translation type="unfinished">Narrow</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1676"/>
       <source>Medium</source>
-      <translation>Medium</translation>
+      <translation type="unfinished">Medium</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1687"/>
       <source>Wide</source>
-      <translation>Breed</translation>
+      <translation type="unfinished">Wide</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1698"/>
       <source>Full</source>
-      <translation>Volledig</translation>
+      <translation type="unfinished">Full</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1710"/>
       <source>Paste html or media</source>
-      <translation>Html of media plakken</translation>
+      <translation type="unfinished">Paste html or media</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1713"/>
       <location filename="../mainwindow.ui" line="1716"/>
       <source>Paste images, notes and html from the clipboard</source>
-      <translation>Afbeeldingen, notities en Html-code van het klembord plakken</translation>
+      <translation type="unfinished">Paste images, notes and html from the clipboard</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1728"/>
       <source>Show note in &amp;file manager</source>
-      <translation>Toon notitie in &amp;bestandsmanager</translation>
+      <translation type="unfinished">Show note in &amp;file manager</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1740"/>
       <source>Format text &amp;bold</source>
-      <translation>Tekst opmaken &amp;vet</translation>
+      <translation type="unfinished">Format text &amp;bold</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1752"/>
       <source>Format text &amp;italic</source>
-      <translation>Tekst opmaken &amp;cursief</translation>
+      <translation type="unfinished">Format text &amp;italic</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1764"/>
       <source>&amp;Increase note text size</source>
-      <translation>&amp;Vergroot notitie tekst formaat</translation>
+      <translation type="unfinished">&amp;Increase note text size</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1776"/>
       <source>&amp;Decrease note text size</source>
-      <translation>&amp;Verklein notitie tekst formaat</translation>
+      <translation type="unfinished">&amp;Decrease note text size</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1788"/>
       <source>&amp;Reset note text size</source>
-      <translation>&amp; Opnieuw instellen notitie tekst grootte</translation>
+      <translation type="unfinished">&amp;Reset note text size</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1800"/>
       <source>&amp;Add tag to note</source>
-      <translation>&amp;Label toevoegen aan notitie</translation>
+      <translation type="unfinished">&amp;Add tag to note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1812"/>
       <source>&amp;Reload note folder</source>
-      <translation>&amp;Herlaad notitie map</translation>
+      <translation type="unfinished">&amp;Reload note folder</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1884"/>
       <source>Show log</source>
-      <translation>Toon logboek</translation>
+      <translation type="unfinished">Show log</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1893"/>
       <source>Export note as HTML</source>
-      <translation>Notitie exporteren als HTML</translation>
+      <translation type="unfinished">Export note as HTML</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1972"/>
       <source>Cycle text case</source>
-      <translation>Toggle tekst case</translation>
+      <translation type="unfinished">Cycle text case</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2063"/>
       <source>Find notes in all tags / subfolders</source>
-      <translation>Vind notities in alle labels / submappen</translation>
+      <translation type="unfinished">Find notes in all tags / subfolders</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2084"/>
       <source>Import notes from text files</source>
-      <translation>Importeer notities uit tekstbestanden</translation>
+      <translation type="unfinished">Import notes from text files</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2093"/>
       <source>Manage orphaned image files</source>
-      <translation>Beheer verweesde beeldbestanden</translation>
+      <translation type="unfinished">Manage orphaned image files</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2105"/>
       <location filename="../mainwindow.ui" line="2108"/>
       <source>Open the Telegram group</source>
-      <translation>Open de Telegram-groep</translation>
+      <translation type="unfinished">Open the Telegram group</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2135"/>
       <source>Unlock panels</source>
-      <translation>Ontgrendel panelen</translation>
+      <translation type="unfinished">Unlock panels</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2144"/>
       <location filename="../mainwindow.cpp" line="9878"/>
       <source>Remove current workspace</source>
-      <translation>Huidige werkruimte verwijderen</translation>
+      <translation type="unfinished">Remove current workspace</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2153"/>
       <source>Add new workspace</source>
-      <translation>Nieuwe werkruimte toevoegen</translation>
+      <translation type="unfinished">Add new workspace</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2162"/>
       <source>Rename current workspace</source>
-      <translation>Huidige werkruimte wijzigen</translation>
+      <translation type="unfinished">Rename current workspace</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2171"/>
       <source>Switch to previous workspace</source>
-      <translation>Overschakelen naar vorige werkruimte</translation>
+      <translation type="unfinished">Switch to previous workspace</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2179"/>
       <source>Show all panels</source>
-      <translation>Toon alle panelen</translation>
+      <translation type="unfinished">Show all panels</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2188"/>
       <source>Find action</source>
-      <translation>Actie zoeken</translation>
+      <translation type="unfinished">Find action</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2191"/>
       <location filename="../mainwindow.ui" line="2194"/>
       <source>Find an action from the menu</source>
-      <translation>Vinden van een actie in het menu</translation>
+      <translation type="unfinished">Find an action from the menu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2206"/>
       <source>Insert table</source>
-      <translation>Invoegen tabel</translation>
+      <translation type="unfinished">Insert table</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2218"/>
       <source>Insert block &amp;quote</source>
-      <translation>Invoegen &amp;blok citaat</translation>
+      <translation type="unfinished">Insert block &amp;quote</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2226"/>
       <location filename="../mainwindow.ui" line="2229"/>
       <source>Search selected text on the web</source>
-      <translation>Geselecteerde tekst op het web zoeken</translation>
+      <translation type="unfinished">Search selected text on the web</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2237"/>
       <source>Delete line</source>
-      <translation>Regel verwijderen</translation>
+      <translation type="unfinished">Delete line</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2245"/>
       <source>Delete word</source>
-      <translation>Woord verwijderen</translation>
+      <translation type="unfinished">Delete word</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2253"/>
       <source>Copy note headline</source>
-      <translation>Kopieer notitie kop</translation>
+      <translation type="unfinished">Copy note headline</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2265"/>
       <location filename="../mainwindow.cpp" line="8874"/>
       <source>Open note in different window</source>
-      <translation>Open notitie in ander venster</translation>
+      <translation type="unfinished">Open note in different window</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2277"/>
       <source>Save modified notes</source>
-      <translation>Gewijzigde notities opslaan</translation>
+      <translation type="unfinished">Save modified notes</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2288"/>
       <source>Ascending</source>
-      <translation>Oplopend</translation>
+      <translation type="unfinished">Ascending</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2296"/>
       <source>Descending</source>
-      <translation>Aflopend</translation>
+      <translation type="unfinished">Descending</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2305"/>
       <location filename="../mainwindow.cpp" line="8882"/>
       <source>Show note git versions</source>
-      <translation>Toon notitie git versies</translation>
+      <translation type="unfinished">Show note git versions</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2314"/>
       <source>Find scripts in script repository</source>
-      <translation>Vind scripts in script archief</translation>
+      <translation type="unfinished">Find scripts in script repository</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2326"/>
       <source>Script settings</source>
-      <translation>Script instellingen</translation>
+      <translation type="unfinished">Script settings</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2335"/>
       <source>Insert attachment</source>
-      <translation>Invoegen bijlage</translation>
+      <translation type="unfinished">Insert attachment</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2362"/>
       <source>Check for script updates</source>
-      <translation>Controleren op updates van script</translation>
+      <translation type="unfinished">Check for script updates</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2371"/>
       <source>Show local trash</source>
-      <translation>Toon lokale prullenbak</translation>
+      <translation type="unfinished">Show local trash</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2376"/>
       <location filename="../mainwindow.ui" line="2379"/>
       <source>Jump to note edit panel</source>
-      <translation>Ga naar het notitie bewerkingsvenster</translation>
+      <translation type="unfinished">Jump to note edit panel</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2391"/>
       <source>Manage orphaned attachments</source>
-      <translation>Zwevende bijlagen beheren</translation>
+      <translation type="unfinished">Manage orphaned attachments</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1823"/>
       <source>Use &amp;vertical preview layout</source>
-      <translation>Gebruik &amp;verticale voorvertoningslayout</translation>
+      <translation type="unfinished">Use &amp;vertical preview layout</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1826"/>
       <location filename="../mainwindow.ui" line="1829"/>
       <source>The note edit panel will be above the preview panel</source>
-      <translation>Het notitie bewerkingsvenster zal boven het deelvenster zijn</translation>
+      <translation type="unfinished">The note edit panel will be above the preview panel</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1838"/>
       <source>Replace in current note</source>
-      <translation>Vervang in de huidige notitie</translation>
+      <translation type="unfinished">Replace in current note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1846"/>
       <source>Autocomplete, solve equation or open URL</source>
-      <translation>Autocomplete, vergelijking oplossen of URL openen</translation>
+      <translation type="unfinished">Autocomplete, solve equation or open URL</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1849"/>
       <source>Solve a simple equation like '(2+3)*6=' in the current line</source>
-      <translation>Los een eenvoudige vergelijking op zoals '(2+3) * 6 =' in de huidige regel</translation>
+      <translation type="unfinished">Solve a simple equation like '(2+3)*6=' in the current line</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1857"/>
       <source>Select note folder</source>
-      <translation>Selecteer notitiemap</translation>
+      <translation type="unfinished">Select note folder</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1872"/>
       <source>Reload scripting engine</source>
-      <translation>Reload script-engine</translation>
+      <translation type="unfinished">Reload scripting engine</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1905"/>
       <location filename="../mainwindow.ui" line="1908"/>
       <source>Open the #qownnotes IRC channel, you have to stay online to get a response</source>
-      <translation>Open het #qownnotes IRC kanaal, je moet online blijven om een reactie te krijgen</translation>
+      <translation type="unfinished">Open the #qownnotes IRC channel, you have to stay online to get a response</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2045"/>
       <source>Show note list under tag pane</source>
-      <translation>Toon notitie lijst onder labelvenster</translation>
+      <translation type="unfinished">Show note list under tag pane</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2120"/>
       <location filename="../mainwindow.ui" line="2123"/>
       <source>Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</source>
-      <translation>Open de Qownnotes Gitter room, je hebt een GitHub of Twitter account nodig om in te loggen, maar je kunt offline berichten ontvangen</translation>
+      <translation type="unfinished">Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="948"/>
       <source>Open chat</source>
-      <translation>Chat openen</translation>
+      <translation type="unfinished">Open chat</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="489"/>
       <source>Note operations…</source>
-      <translation>Notitie operaties…</translation>
+      <translation type="unfinished">Note operations…</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1511"/>
       <source>&amp;Print note (preview)</source>
-      <translation>&amp;Druk notitie (voorbeeld) af</translation>
+      <translation type="unfinished">&amp;Print note (preview)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1917"/>
       <source>Insert headline from note filename</source>
-      <translation>Kop uit notitie bestandsnaam invoegen</translation>
+      <translation type="unfinished">Insert headline from note filename</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1931"/>
       <source>Use softwrap in note editor and preview</source>
-      <translation>Gebruik softwrap in note editor en preview</translation>
+      <translation type="unfinished">Use softwrap in note editor and preview</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1939"/>
       <source>Show status bar</source>
-      <translation>Toon de statusbalk</translation>
+      <translation type="unfinished">Show status bar</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1954"/>
       <source>Share note</source>
-      <translation>Deel notitie</translation>
+      <translation type="unfinished">Share note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1984"/>
       <source>Markdown cheatsheet</source>
-      <translation>Markdown cheatsheet</translation>
+      <translation type="unfinished">Markdown cheatsheet</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1993"/>
       <source>Strike out text</source>
-      <translation>Tekst doorhalen</translation>
+      <translation type="unfinished">Strike out text</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2004"/>
       <source>Use one column mode</source>
-      <translation>Gebruik één kolom modus</translation>
+      <translation type="unfinished">Use one column mode</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2007"/>
       <location filename="../mainwindow.ui" line="2010"/>
       <source>Use a one column minimal mode (like NVAlt)</source>
-      <translation>Gebruik een minimale modus van één kolom (zoals NVAlt)</translation>
+      <translation type="unfinished">Use a one column minimal mode (like NVAlt)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2022"/>
       <source>Show menu bar</source>
-      <translation>Toon menubalk</translation>
+      <translation type="unfinished">Show menu bar</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2034"/>
       <source>Split note at cursor position</source>
-      <translation>Split notitie op cursorpositie</translation>
+      <translation type="unfinished">Split note at cursor position</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2054"/>
       <source>Donate</source>
-      <translation>Doneren</translation>
+      <translation type="unfinished">Donate</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2075"/>
       <source>Import notes from Evernote</source>
-      <translation>Importeer notities van Evernote</translation>
+      <translation type="unfinished">Import notes from Evernote</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2521"/>
       <source>Note was removed externally!</source>
-      <translation>Notitie werd extern verwijderd!</translation>
+      <translation type="unfinished">Note was removed externally!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2522"/>
       <source>Current note was removed outside of this application!
 Restore current note?</source>
-      <translation>Huidige notitie werd buiten deze toepassing verwijderd! Actuele notitie herstellen?</translation>
+      <translation type="unfinished">Current note was removed outside of this application!
+Restore current note?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4751"/>
       <location filename="../mainwindow.cpp" line="6042"/>
       <location filename="../mainwindow.cpp" line="8961"/>
       <source>&amp;Cancel</source>
-      <translation>&amp;Annuleren</translation>
+      <translation type="unfinished">&amp;Cancel</translation>
     </message>
     <message numerus="yes">
       <source>stored %n note(s) to disk</source>
-      <translation>
-        <numerusform>%n notitie opgeslagen</numerusform>
-        <numerusform>%n notities opgeslagen</numerusform>
+      <translation type="unfinished">
+        <numerusform>stored %n note(s) to disk</numerusform>
+        <numerusform>stored %n note(s) to disk</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2745"/>
       <source>new version %1 available</source>
-      <translation>nieuwe versie %1 beschikbaar</translation>
+      <translation type="unfinished">new version %1 available</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3148"/>
       <source>Please select the folder where your notes will get stored</source>
-      <translation>Selecteer de map waarin uw notities zullen worden opgeslagen</translation>
+      <translation type="unfinished">Please select the folder where your notes will get stored</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3175"/>
       <source>No folder was selected</source>
-      <translation>Geen map geselecteerd</translation>
+      <translation type="unfinished">No folder was selected</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3176"/>
       <source>You have to select your ownCloud notes folder to make this software work!</source>
-      <translation>Je moet je ownCloud notitie map selecteren om deze software te laten werken!</translation>
+      <translation type="unfinished">You have to select your ownCloud notes folder to make this software work!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3178"/>
       <source>&amp;Retry</source>
-      <translation>&amp;opnieuw proberen</translation>
+      <translation type="unfinished">&amp;Retry</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3178"/>
       <source>&amp;Exit</source>
-      <translation>&amp;Afsluiten</translation>
+      <translation type="unfinished">&amp;Exit</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3385"/>
       <source>Remove current note</source>
-      <translation>Huidige notitie verwijderen</translation>
+      <translation type="unfinished">Remove current note</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3386"/>
       <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation>Verwijder huidige notitie: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+      <translation type="unfinished">Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3705"/>
       <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
-      <translation>Voer aub het &lt;strong&gt;wachtwoord&lt;/strong&gt; van deze gecodeerde notitie in.</translation>
+      <translation type="unfinished">Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3729"/>
       <source>Note can't be decrypted!</source>
-      <translation>Notitie kan niet worden gedecodeerd!</translation>
+      <translation type="unfinished">Note can't be decrypted!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3730"/>
       <source>It seems that your password is not valid!</source>
-      <translation>Het lijkt erop dat uw wachtwoord niet geldig is!</translation>
+      <translation type="unfinished">It seems that your password is not valid!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3883"/>
       <source>Remove selected notes</source>
-      <translation>Verwijder geselecteerde notities</translation>
+      <translation type="unfinished">Remove selected notes</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3885"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
-      <translation>
-        <numerusform>Verwijder de geselecteerde notitie? 
+      <translation type="unfinished">
+        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
-Als de prullenbak is ingeschakeld op je ownCloud server moet je in staat zijn om ze vanaf daar te herstellen.</numerusform>
-        <numerusform>Verwijder &lt;strong&gt;%n&lt;/strong&gt; geselecteerde notities? 
+If the trash is enabled on your ownCloud server you should be able to restore them from there.</numerusform>
+        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
-Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat zijn om ze vanaf daar te herstellen.</numerusform>
+If the trash is enabled on your ownCloud server you should be able to restore them from there.</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3964"/>
       <location filename="../mainwindow.cpp" line="9125"/>
       <source>Remove selected folders</source>
-      <translation>Geselecteerde mappen verwijderen</translation>
+      <translation type="unfinished">Remove selected folders</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3965"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
-      <translation>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; geselecteerde map verwijderen? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt; Alle bestanden en mappen in deze map zullen ook worden verwijderd!</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; geselecteerde mappen verwijderen? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt; Alle bestanden en mappen in deze mappen zullen ook worden verwijderd!</numerusform>
+      <translation type="unfinished">
+        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
+        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3976"/>
       <source>Removed note subfolder: %1</source>
-      <translation>submap met verwijderde notities: %1</translation>
+      <translation type="unfinished">Removed note subfolder: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3995"/>
       <source>Remove selected tags</source>
-      <translation>Verwijder geselecteerde labels</translation>
+      <translation type="unfinished">Remove selected tags</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3996"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
-      <translation>
-        <numerusform>geselecteerde label verwijderen? In dit proces worden geen notities verwijderd.</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; geselecteerde labels verwijderen? In dit proces worden geen notities verwijderd.</numerusform>
+      <translation type="unfinished">
+        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
+        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4050"/>
       <location filename="../mainwindow.cpp" line="8117"/>
       <source>Move selected notes</source>
-      <translation>Verplaats geselecteerde notities</translation>
+      <translation type="unfinished">Move selected notes</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4051"/>
       <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation>
-        <numerusform>Verplaats %n geselecteerde notitie naar &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Verplaats %n geselecteerde notities naar &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation type="unfinished">
+        <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4143"/>
       <location filename="../mainwindow.cpp" line="8201"/>
       <source>Copy selected notes</source>
-      <translation>Kopieer geselecteerde notities</translation>
+      <translation type="unfinished">Copy selected notes</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4144"/>
       <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation>
-        <numerusform>Kopiëer een geselecteerde notitie naar &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Kopiëer %n geselecteerde notities naar &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation type="unfinished">
+        <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4167"/>
       <location filename="../mainwindow.cpp" line="4305"/>
       <source>Done</source>
-      <translation>Klaar</translation>
+      <translation type="unfinished">Done</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4168"/>
       <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
-      <translation>
-        <numerusform>Een notitie is gekopiëerd naar &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
-        <numerusform>%n notities zijn gekopiëerd naar &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
+      <translation type="unfinished">
+        <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
+        <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4181"/>
       <source>Tag selected notes</source>
-      <translation>Geselecteerde notities labelen</translation>
+      <translation type="unfinished">Tag selected notes</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4182"/>
       <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation>
-        <numerusform>Label de geselecteerde notitie &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Label %n geselecteerde notities &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation type="unfinished">
+        <numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4434"/>
       <source>Restart application</source>
-      <translation>Toepassing opnieuw starten</translation>
+      <translation type="unfinished">Restart application</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4440"/>
       <source>You may need to restart the application manually to let the changes take effect.</source>
-      <translation>U moet wellicht de applicatie handmatig opnieuw starten om de wijzigingen toe te passen.</translation>
+      <translation type="unfinished">You may need to restart the application manually to let the changes take effect.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4445"/>
       <source>You may need to restart the application to let the changes take effect.</source>
-      <translation>U moet de applicatie wellicht opnieuw opstarten om deze wijzigingen toe te passen.</translation>
+      <translation type="unfinished">You may need to restart the application to let the changes take effect.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4447"/>
       <source>Restart</source>
-      <translation>Opnieuw opstarten</translation>
+      <translation type="unfinished">Restart</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4656"/>
       <source>PDF files</source>
-      <translation>PDF-bestanden</translation>
+      <translation type="unfinished">PDF files</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5346"/>
       <source>Note was not found</source>
-      <translation>Notitie werd niet gevonden</translation>
+      <translation type="unfinished">Note was not found</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5347"/>
       <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation>Notitie werd niet gevonden, maak nieuwe notitie &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+      <translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5567"/>
       <source>Note versions are currently loaded from your ownCloud server</source>
-      <translation>Notitie versies zijn van je ownCloud server geladen</translation>
+      <translation type="unfinished">Note versions are currently loaded from your ownCloud server</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5581"/>
       <source>Trashed notes are currently loaded from your ownCloud server</source>
-      <translation>Verwijderde notities zijn van je ownCloud server geladen</translation>
+      <translation type="unfinished">Trashed notes are currently loaded from your ownCloud server</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5639"/>
       <source>Print selected text</source>
-      <translation>Geselecteerde tekst afdrukken</translation>
+      <translation type="unfinished">Print selected text</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5645"/>
       <source>Print selected text (preview)</source>
-      <translation>Geselecteerde tekst afdrukken (voorbeeld)</translation>
+      <translation type="unfinished">Print selected text (preview)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5661"/>
       <source>Export selected text as PDF</source>
-      <translation>Geselecteerde tekst exporteren als PDF</translation>
+      <translation type="unfinished">Export selected text as PDF</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5667"/>
       <source>Export selected text as PDF (preview)</source>
-      <translation>Geselecteerde tekst exporteren als PDF (voorbeeld)</translation>
+      <translation type="unfinished">Export selected text as PDF (preview)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5848"/>
       <source>Image files</source>
-      <translation>Afbeeldingsbestanden</translation>
+      <translation type="unfinished">Image files</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6038"/>
       <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
-      <translation>Je notitie wordt gedecodeerd en opgeslagen als platte tekst. Houd in gedachten dat de ongecodeerde notitie eventueel zal worden gesynchroniseerd met je server en gevoelige teksten kunnen worden blootgesteld!&lt;br /&gt;Wilt u uw notitie decoderen?</translation>
+      <translation type="unfinished">Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6125"/>
       <source>Markdown files</source>
-      <translation>Markdown bestanden</translation>
+      <translation type="unfinished">Markdown files</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6180"/>
       <source>Bookmarked note position at slot %1</source>
-      <translation>Bookmarked notitie op positie 1%</translation>
+      <translation type="unfinished">Bookmarked note position at slot %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6196"/>
       <source>Jumped to bookmark position at slot %1</source>
-      <translation>Sprong naar bookmark positie op slot 1%</translation>
+      <translation type="unfinished">Jumped to bookmark position at slot %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6408"/>
       <location filename="../mainwindow.cpp" line="6476"/>
       <source>Inserting image</source>
-      <translation>Afbeelding invoegen</translation>
+      <translation type="unfinished">Inserting image</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6413"/>
       <location filename="../mainwindow.cpp" line="6479"/>
       <source>Done inserting image</source>
-      <translation>Klaar met het invoegen van de afbeelding</translation>
+      <translation type="unfinished">Done inserting image</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6415"/>
       <source>Inserting attachment</source>
-      <translation>Invoegen bijlage</translation>
+      <translation type="unfinished">Inserting attachment</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6420"/>
       <source>Done inserting attachment</source>
-      <translation>Bijlage invoegen klaar</translation>
+      <translation type="unfinished">Done inserting attachment</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="6430"/>
       <source>Copied %n note(s) to %1</source>
-      <translation>
-        <numerusform>%n notitie gekopieerd naar %1</numerusform>
-        <numerusform>%n notities gekopieerd naar %1</numerusform>
+      <translation type="unfinished">
+        <numerusform>Copied %n note(s) to %1</numerusform>
+        <numerusform>Copied %n note(s) to %1</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="6439"/>
       <source>Failed to copy %n note(s) (most likely already existing)</source>
-      <translation>
-        <numerusform>Kan notitie niet kopiëren (waarschijnlijk reeds bestaand)</numerusform>
-        <numerusform>Kan notities niet kopiëren (waarschijnlijk reeds bestaand)</numerusform>
+      <translation type="unfinished">
+        <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
+        <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="6449"/>
       <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-      <translation>
-        <numerusform>Kopiëren van %n notitie overgeslagen (geen markdown of tekst bestand, of niet leesbaar)</numerusform>
-        <numerusform>Kopiëren van %n notities overgeslagen (geen markdown of tekst bestand, of niet leesbaar)</numerusform>
+      <translation type="unfinished">
+        <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
+        <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6463"/>
       <source>Saving temporary image</source>
-      <translation>tijdelijke afbeelding opslaan</translation>
+      <translation type="unfinished">Saving temporary image</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6482"/>
       <source>Temporary file can't be opened</source>
-      <translation>tijdelijke bestand kan niet worden geopend</translation>
+      <translation type="unfinished">Temporary file can't be opened</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6513"/>
       <source>Downloading %1</source>
-      <translation>%1 aan het downloaden</translation>
+      <translation type="unfinished">Downloading %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6693"/>
       <source>Reset font size to %1 pt</source>
       <comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
-      <translation>Stel lettergrootte in op %1 pt</translation>
+      <translation type="unfinished">Reset font size to %1 pt</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7509"/>
       <source>Remove tag '%1' from the current note</source>
-      <translation>Label '%1' verwijderen uit de huidige notitie</translation>
+      <translation type="unfinished">Remove tag '%1' from the current note</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7511"/>
       <source>Remove tag '%1' from the selected notes</source>
-      <translation>Label '%1' verwijderen uit de geselecteerde notities</translation>
+      <translation type="unfinished">Remove tag '%1' from the selected notes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7675"/>
       <source>Rename tag</source>
-      <translation>Naam tag</translation>
+      <translation type="unfinished">Rename tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7676"/>
       <source>Assign color</source>
-      <translation>Kleur toewijzen</translation>
+      <translation type="unfinished">Assign color</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7677"/>
       <source>Disable color</source>
-      <translation>Uitschakelen van kleur</translation>
+      <translation type="unfinished">Disable color</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7681"/>
       <source>&amp;Move tags to…</source>
-      <translation>Labels &amp;verplaatsen naar…</translation>
+      <translation type="unfinished">&amp;Move tags to…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7900"/>
       <source>Move to the root</source>
       <comment>to move a tag to the current tag in the tag context menu</comment>
-      <translation>Verplaatsen naar de hoofdmap</translation>
+      <translation type="unfinished">Move to the root</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8343"/>
       <source>An url was opened at the current cursor position</source>
-      <translation>Een URL is geopend op de huidige cursorpositie</translation>
+      <translation type="unfinished">An url was opened at the current cursor position</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8439"/>
       <source>No equation was found in front of the cursor</source>
-      <translation>Er is geen vergelijking gevonden voor de cursorlokatie</translation>
+      <translation type="unfinished">No equation was found in front of the cursor</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8456"/>
       <source>Result for equation: %1 = %2</source>
-      <translation>Resultaat voor vergelijking: %1 = %2</translation>
+      <translation type="unfinished">Result for equation: %1 = %2</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8557"/>
       <source>The scripting engine was reloaded</source>
-      <translation>De script-engine is herladen</translation>
+      <translation type="unfinished">The scripting engine was reloaded</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8592"/>
       <source>HTML files</source>
-      <translation>HTML-bestanden</translation>
+      <translation type="unfinished">HTML files</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8776"/>
       <location filename="../mainwindow.cpp" line="8944"/>
       <source>Rename note</source>
-      <translation>Notitienaam wijzigen</translation>
+      <translation type="unfinished">Rename note</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8777"/>
       <source>Allows you to rename the filename of the note</source>
-      <translation>U kunt de naam van de bestandsnaam voor de notitie wijzigen</translation>
+      <translation type="unfinished">Allows you to rename the filename of the note</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8789"/>
       <source>&amp;Move notes to…</source>
-      <translation>Notities &amp;verplaatsen naar…</translation>
+      <translation type="unfinished">&amp;Move notes to…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8790"/>
       <source>&amp;Copy notes to…</source>
-      <translation>Notities &amp;kopiëren naar…</translation>
+      <translation type="unfinished">&amp;Copy notes to…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8819"/>
       <source>Move notes to subfolder…</source>
-      <translation>Notities verplaatsen naar submap…</translation>
+      <translation type="unfinished">Move notes to subfolder…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8823"/>
       <source>Copy notes to subfolder…</source>
-      <translation>Notities kopiëren naar submap…</translation>
+      <translation type="unfinished">Copy notes to subfolder…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8831"/>
       <source>&amp;Tag selected notes with…</source>
-      <translation>&amp;Label geselecteerde notities met…</translation>
+      <translation type="unfinished">&amp;Tag selected notes with…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8853"/>
       <source>&amp;Remove tag from selected notes…</source>
-      <translation>Label &amp;verwijderen van geselecteerde notities…</translation>
+      <translation type="unfinished">&amp;Remove tag from selected notes…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8944"/>
       <source>Name:</source>
-      <translation>Naam:</translation>
+      <translation type="unfinished">Name:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8956"/>
       <source>Note renaming not enabled!</source>
-      <translation>Opmerking hernoemen niet ingeschakeld!</translation>
+      <translation type="unfinished">Note renaming not enabled!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9124"/>
       <source>Rename subfolder</source>
-      <translation>Naam van de submap</translation>
+      <translation type="unfinished">Rename subfolder</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9670"/>
       <source>Create new workspace</source>
-      <translation>Nieuwe werkruimte maken</translation>
+      <translation type="unfinished">Create new workspace</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9670"/>
       <location filename="../mainwindow.cpp" line="9916"/>
       <source>Workspace name:</source>
-      <translation>Werkruimte naam:</translation>
+      <translation type="unfinished">Workspace name:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9792"/>
       <source>full</source>
       <comment>full workspace</comment>
-      <translation>volledig</translation>
+      <translation type="unfinished">full</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9799"/>
       <source>minimal</source>
       <comment>minimal workspace</comment>
-      <translation>minimaal</translation>
+      <translation type="unfinished">minimal</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9879"/>
       <source>Remove the current workspace?</source>
-      <translation>De huidige werkruimte verwijderen?</translation>
+      <translation type="unfinished">Remove the current workspace?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9916"/>
       <source>Rename workspace</source>
-      <translation>Naam van de werkruimte</translation>
+      <translation type="unfinished">Rename workspace</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="10051"/>
       <source>%n chars</source>
       <comment>characters</comment>
-      <translation>
-        <numerusform>%n teken</numerusform>
-        <numerusform>%n tekens</numerusform>
+      <translation type="unfinished">
+        <numerusform>%n chars</numerusform>
+        <numerusform>%n chars</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10174"/>
       <source>Copy image file path</source>
-      <translation>Kopie afbeeldingen bestandspad</translation>
+      <translation type="unfinished">Copy image file path</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10313"/>
       <source>Select file to insert</source>
-      <translation>Selecteer afbeelding om in te voegen</translation>
+      <translation type="unfinished">Select file to insert</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10346"/>
       <source>Disallow all note editing</source>
-      <translation>Verbied alle opmerking bewerken</translation>
+      <translation type="unfinished">Disallow all note editing</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10480"/>
       <source>Select text files to import</source>
-      <translation>Selecteer de tekst die U wilt importeren</translation>
+      <translation type="unfinished">Select text files to import</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10509"/>
       <source>Importing: %1</source>
-      <translation>Importeren: %1</translation>
+      <translation type="unfinished">Importing: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10572"/>
       <source>Note headline '%1' was copied to the clipboard</source>
-      <translation>Notitie kop '%1' gekopieerd naar het klembord</translation>
+      <translation type="unfinished">Note headline '%1' was copied to the clipboard</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7482"/>
       <source>%n notes selected</source>
-      <translation>
-        <numerusform>%n notitie geselecteerd</numerusform>
-        <numerusform>%n notities geselecteerd</numerusform>
+      <translation type="unfinished">
+        <numerusform>%n notes selected</numerusform>
+        <numerusform>%n notes selected</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2350"/>
       <location filename="../mainwindow.cpp" line="10347"/>
       <source>Allow all note editing</source>
-      <translation>Alle opmerkingen bewerken toestaan</translation>
+      <translation type="unfinished">Allow all note editing</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1151"/>
       <source>&amp;Tag</source>
-      <translation>&amp;Label</translation>
+      <translation type="unfinished">&amp;Tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4250"/>
       <source>Remove tag from selected notes</source>
-      <translation>Label verwijderen van geselecteerde notities</translation>
+      <translation type="unfinished">Remove tag from selected notes</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4251"/>
       <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
-      <translation>
-        <numerusform>Label &lt;strong&gt;%1&lt;/strong&gt; verwijderen van %n geselecteerde notities?</numerusform>
-        <numerusform>Label &lt;strong&gt;%1&lt;/strong&gt; verwijderen van %n geselecteerde notities?</numerusform>
+      <translation type="unfinished">
+        <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
+        <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4306"/>
       <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
-      <translation>
-        <numerusform>Label &lt;strong&gt;%1&lt;/strong&gt; werd verwijderd van een notitie</numerusform>
-        <numerusform>Label &lt;strong&gt;%1&lt;/strong&gt; werd verwijderd van %n notities</numerusform>
+      <translation type="unfinished">
+        <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
+        <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4350"/>
       <source>Current notes folder: </source>
-      <translation>Huidige notities map:</translation>
+      <translation type="unfinished">Current notes folder: </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4352"/>
       <source>Set the notes folder. Current notes folder: </source>
-      <translation>Stel de notities map in. Huidige notities map:</translation>
+      <translation type="unfinished">Set the notes folder. Current notes folder: </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4538"/>
       <source>Print note</source>
-      <translation>Druk notitie af</translation>
+      <translation type="unfinished">Print note</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4600"/>
       <source>Letter</source>
-      <translation>Brief</translation>
+      <translation type="unfinished">Letter</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4629"/>
       <source>Portrait</source>
-      <translation>Portret</translation>
+      <translation type="unfinished">Portrait</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4629"/>
       <source>Landscape</source>
-      <translation>Landschap</translation>
+      <translation type="unfinished">Landscape</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4634"/>
       <source>Orientation</source>
-      <translation>Afdrukstand</translation>
+      <translation type="unfinished">Orientation</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4634"/>
       <source>Orientation:</source>
-      <translation>Afdrukstand:</translation>
+      <translation type="unfinished">Orientation:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4657"/>
       <source>Export current note as PDF</source>
-      <translation>Export huidige notitie als PDF</translation>
+      <translation type="unfinished">Export current note as PDF</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4747"/>
       <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
-      <translation>U heeft geen takenlijsten gekozen. Controleer aub de &lt;strong&gt;Taken&lt;/strong&gt;configuratie in de instelingen!</translation>
+      <translation type="unfinished">You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5446"/>
       <source>Open QOwnNotes</source>
-      <translation>Open QOwnNotes</translation>
+      <translation type="unfinished">Open QOwnNotes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5180"/>
@@ -2257,493 +2258,493 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
       <location filename="../mainwindow.cpp" line="8771"/>
       <location filename="../mainwindow.cpp" line="9122"/>
       <source>New note</source>
-      <translation>Nieuwe notitie</translation>
+      <translation type="unfinished">New note</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5471"/>
       <source>Recent notes</source>
-      <translation>Recente notities</translation>
+      <translation type="unfinished">Recent notes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5501"/>
       <source>Show todo lists</source>
-      <translation>Toon takenlijsten</translation>
+      <translation type="unfinished">Show todo lists</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5512"/>
       <source>Recent tasks</source>
-      <translation>Recente taken</translation>
+      <translation type="unfinished">Recent tasks</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5544"/>
       <source>Quit</source>
-      <translation>Afsluiten</translation>
+      <translation type="unfinished">Quit</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6845"/>
       <source>show notes from all note subfolders (%1)</source>
-      <translation>toon alle notities van alle submappen (%1)</translation>
+      <translation type="unfinished">show notes from all note subfolders (%1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6862"/>
       <source>show notes in note root folder (%1)</source>
-      <translation>toon notities in notitie hoofdmap (%1)</translation>
+      <translation type="unfinished">show notes in note root folder (%1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="316"/>
       <location filename="../mainwindow.cpp" line="650"/>
       <location filename="../mainwindow.cpp" line="6871"/>
       <source>Note folder</source>
-      <translation>Notitiemap</translation>
+      <translation type="unfinished">Note folder</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8057"/>
       <source>Copy to note folder</source>
-      <translation>Kopiëren naar notitiemap</translation>
+      <translation type="unfinished">Copy to note folder</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8058"/>
       <source>Move to note folder</source>
-      <translation>Verplaatsen naar notitiemap</translation>
+      <translation type="unfinished">Move to note folder</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8059"/>
       <source>Copy to this subfolder</source>
-      <translation>Kopiëren naar deze submap</translation>
+      <translation type="unfinished">Copy to this subfolder</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8060"/>
       <source>Move to this subfolder</source>
-      <translation>Verplaatsen naar deze submap</translation>
+      <translation type="unfinished">Move to this subfolder</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="8111"/>
       <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation>
-        <numerusform>Verplaats de geselecteerde %n notitie naar notitie subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Verplaats de geselecteerde %n notities naar &lt;strong&gt;%2&lt;/strong&gt; submap?</numerusform>
+      <translation type="unfinished">
+        <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4448"/>
       <location filename="../mainwindow.cpp" line="10494"/>
       <source>Cancel</source>
-      <translation>Annuleren</translation>
+      <translation type="unfinished">Cancel</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="8174"/>
       <source>%n note(s) were moved to note subfolder "%2"</source>
-      <translation>
-        <numerusform>%n notitie werd verplaatst naar subfolder "%2" </numerusform>
-        <numerusform>%n notities werden verplaatst naar subfolder "%2"</numerusform>
+      <translation type="unfinished">
+        <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
+        <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="8195"/>
       <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation>
-        <numerusform>Kopieer de geselecteerde %n notitie naar &lt;strong&gt;%2&lt;/strong&gt; submap?</numerusform>
-        <numerusform>Kopieer de geselecteerde %n notities naar &lt;strong&gt;%2&lt;/strong&gt; submap?</numerusform>
+      <translation type="unfinished">
+        <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="8246"/>
       <source>%n note(s) were copied to note subfolder "%2"</source>
-      <translation>
-        <numerusform>%n notitie werd gecopieerd naar de "%2" submap</numerusform>
-        <numerusform>%n notities werden gecopieerd naar subfolder "%2"</numerusform>
+      <translation type="unfinished">
+        <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
+        <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8872"/>
       <source>Open note in external editor</source>
-      <translation>Open notitie in externe editor</translation>
+      <translation type="unfinished">Open note in external editor</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8876"/>
       <source>Show note in file manager</source>
-      <translation>Toon notitie in bestandsmanager</translation>
+      <translation type="unfinished">Show note in file manager</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8957"/>
       <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
-      <translation>Als u de naam wilt wijzigen van uw opmerking hebt om de mogelijkheid om de bestandsnaam van de opmerking te verschillen van de kop.</translation>
+      <translation type="unfinished">If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9123"/>
       <source>New subfolder</source>
-      <translation>Nieuwe submap</translation>
+      <translation type="unfinished">New subfolder</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9127"/>
       <source>Show folder in file manager</source>
-      <translation>Map weergeven in bestandsbeheerder</translation>
+      <translation type="unfinished">Show folder in file manager</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9163"/>
       <source>Create a new folder</source>
-      <translation>Maak een nieuwe map</translation>
+      <translation type="unfinished">Create a new folder</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9163"/>
       <source>Folder name:</source>
-      <translation>De naam van de map:</translation>
+      <translation type="unfinished">Folder name:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6805"/>
       <source>show all untagged notes (%1)</source>
-      <translation>Toon alle ongelabelde notities (%1)</translation>
+      <translation type="unfinished">show all untagged notes (%1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6808"/>
       <source>Untagged notes</source>
-      <translation>Niet-gelabelde notities</translation>
+      <translation type="unfinished">Untagged notes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8593"/>
       <source>Export current note as HTML file</source>
-      <translation>De huidige notitie exporteren als HTML-bestand</translation>
+      <translation type="unfinished">Export current note as HTML file</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4609"/>
       <source>Page size</source>
-      <translation>Paginagrootte</translation>
+      <translation type="unfinished">Page size</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="999"/>
       <source>quit toolbar</source>
-      <translation>werkbalk afsluiten</translation>
+      <translation type="unfinished">quit toolbar</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4609"/>
       <source>Page size:</source>
-      <translation>Paginagrootte:</translation>
+      <translation type="unfinished">Page size:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4719"/>
       <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
-      <translation>Quotes zal anonieme gebruiksgegevens volgen, dat helpt om te bepalen welke delen van QOwnNotes te verbeteren zijn en om bugs te vinden en op te lossen. U kunt dit gedrag in de instellingen uitschakelen.</translation>
+      <translation type="unfinished">QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4723"/>
       <source>&amp;Ok</source>
-      <translation>&amp;OK</translation>
+      <translation type="unfinished">&amp;Ok</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8781"/>
       <source>&amp;Remove notes</source>
-      <translation>&amp;Verwijder notities</translation>
+      <translation type="unfinished">&amp;Remove notes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5674"/>
       <source>&amp;Link selected text</source>
-      <translation>&amp;Link geselecteerde tekst</translation>
+      <translation type="unfinished">&amp;Link selected text</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="920"/>
       <source>Your tasks are being loaded from your server</source>
-      <translation>Uw taken worden geladen vanaf uw server</translation>
+      <translation type="unfinished">Your tasks are being loaded from your server</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2453"/>
       <source>Current note was modified externally</source>
-      <translation>Huidige notitie is extern bewerkt</translation>
+      <translation type="unfinished">Current note was modified externally</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2535"/>
       <location filename="../mainwindow.cpp" line="5118"/>
       <source>Stored current note to disk</source>
-      <translation>Huidige notitie is opgeslagen</translation>
+      <translation type="unfinished">Stored current note to disk</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2554"/>
       <source>Note was modified externally: %1</source>
-      <translation>Notitie is extern bewerkt: %1</translation>
+      <translation type="unfinished">Note was modified externally: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2575"/>
       <source>Notes directory was modified externally</source>
-      <translation>Notities map is extern bewerkt</translation>
+      <translation type="unfinished">Notes directory was modified externally</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="2641"/>
       <source>Stored %n note(s) to disk</source>
-      <translation>
-        <numerusform>%n notitie opgeslagen</numerusform>
-        <numerusform>%n notities opgeslagen</numerusform>
+      <translation type="unfinished">
+        <numerusform>Stored %n note(s) to disk</numerusform>
+        <numerusform>Stored %n note(s) to disk</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6777"/>
       <source>show all notes (%1)</source>
-      <translation>toon alle notities (%1)</translation>
+      <translation type="unfinished">show all notes (%1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6780"/>
       <location filename="../mainwindow.cpp" line="6848"/>
       <source>All notes</source>
-      <translation>Alle notities</translation>
+      <translation type="unfinished">All notes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7667"/>
       <source>&amp;Add tag</source>
-      <translation>&amp;Label toevoegen</translation>
+      <translation type="unfinished">&amp;Add tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7716"/>
       <source>Tag could not be created!</source>
-      <translation>Label kan niet worden gemaakt!</translation>
+      <translation type="unfinished">Tag could not be created!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7901"/>
       <source>Move to this tag</source>
-      <translation>Verplaatsen naar dit label</translation>
+      <translation type="unfinished">Move to this tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7951"/>
       <source>Tag this</source>
-      <translation>Label dit</translation>
+      <translation type="unfinished">Tag this</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7984"/>
       <source>Cannot move tag '%1' to this tag</source>
-      <translation>Kan label '%1' niet naar dit label verplaatsen</translation>
+      <translation type="unfinished">Cannot move tag '%1' to this tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8000"/>
       <source>Moved tag '%1' to new tag</source>
-      <translation>Label '%1' verplaatst naar nieuw label</translation>
+      <translation type="unfinished">Moved tag '%1' to new tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7034"/>
       <source>show all notes tagged with '%1' (%2)</source>
-      <translation>toon alle notities die gelabeld zijn met '%1' (%2)</translation>
+      <translation type="unfinished">show all notes tagged with '%1' (%2)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7678"/>
       <source>&amp;Remove tags</source>
-      <translation>&amp;Labels verwijderen</translation>
+      <translation type="unfinished">&amp;Remove tags</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4746"/>
       <source>No selected todo lists!</source>
-      <translation>Geen geselecteerde takenlijsten!</translation>
+      <translation type="unfinished">No selected todo lists!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="621"/>
       <source>Subfolders</source>
-      <translation>Submappen</translation>
+      <translation type="unfinished">Subfolders</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="632"/>
       <source>Tags</source>
-      <translation>Tags</translation>
+      <translation type="unfinished">Tags</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="641"/>
       <source>Note search</source>
-      <translation>Notities zoeken</translation>
+      <translation type="unfinished">Note search</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="659"/>
       <source>Note list</source>
-      <translation>Notitielijst</translation>
+      <translation type="unfinished">Note list</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="683"/>
       <source>Note edit</source>
-      <translation>Notitie bewerken</translation>
+      <translation type="unfinished">Note edit</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="694"/>
       <source>Note tags</source>
-      <translation>Notitielabels</translation>
+      <translation type="unfinished">Note tags</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="705"/>
       <source>Note preview</source>
-      <translation>Notitie preview</translation>
+      <translation type="unfinished">Note preview</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="712"/>
       <source>Log</source>
-      <translation>Logboek</translation>
+      <translation type="unfinished">Log</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="719"/>
       <source>Scripting</source>
-      <translation>Scripting</translation>
+      <translation type="unfinished">Scripting</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="966"/>
       <source>formatting toolbar</source>
-      <translation>Opmaak werkbalk</translation>
+      <translation type="unfinished">formatting toolbar</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="975"/>
       <source>inserting toolbar</source>
-      <translation>werkbalk invoegen</translation>
+      <translation type="unfinished">inserting toolbar</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="982"/>
       <source>encryption toolbar</source>
-      <translation>werkbalk codering</translation>
+      <translation type="unfinished">encryption toolbar</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="989"/>
       <source>window toolbar</source>
-      <translation>werkbalk venster</translation>
+      <translation type="unfinished">window toolbar</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="994"/>
       <source>custom action toolbar</source>
-      <translation>werkbalk aangepaste actie</translation>
+      <translation type="unfinished">custom action toolbar</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1014"/>
       <source>Workspace selector</source>
-      <translation>Werkruimte selector</translation>
+      <translation type="unfinished">Workspace selector</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1146"/>
       <source>Show %1 panel</source>
-      <translation>Toon %1</translation>
+      <translation type="unfinished">Show %1 panel</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1189"/>
       <source>Show %1</source>
-      <translation>Toon %1</translation>
+      <translation type="unfinished">Show %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2008"/>
       <source>show notes in folder '%1' (%2)</source>
-      <translation>toon notities in de map '%1' (%2)</translation>
+      <translation type="unfinished">show notes in folder '%1' (%2)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2048"/>
       <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
-      <translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;laatst bewerkt: %2</translation>
+      <translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2053"/>
       <source>&lt;br /&gt;path: %1</source>
-      <translation>&lt; br / &gt; pad: %1</translation>
+      <translation type="unfinished">&lt;br /&gt;path: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2214"/>
       <source>Toolbar could not be loaded without name</source>
-      <translation>Werkbalk kan niet worden geladen zonder naam</translation>
+      <translation type="unfinished">Toolbar could not be loaded without name</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2479"/>
       <source>Overwriting external changes of: %1</source>
-      <translation>Externe wijzigingen overschrijven: %1</translation>
+      <translation type="unfinished">Overwriting external changes of: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2501"/>
       <source>Loading external changes from: %1</source>
-      <translation>Externe veranderingen laden vanuit: %1</translation>
+      <translation type="unfinished">Loading external changes from: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2536"/>
       <location filename="../mainwindow.cpp" line="5119"/>
       <source>Current note could not be stored to disk</source>
-      <translation>Huidige notitie kon niet op schijf opgeslagen worden</translation>
+      <translation type="unfinished">Current note could not be stored to disk</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2699"/>
       <source>Read-only</source>
-      <translation>Alleen-lezen</translation>
+      <translation type="unfinished">Read-only</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2700"/>
       <source>Note editing is disabled, click to enable</source>
-      <translation>Nootbewerking is uitgeschakeld, klik om in te schakelen</translation>
+      <translation type="unfinished">Note editing is disabled, click to enable</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2719"/>
       <source>Line numbers</source>
-      <translation>Regelnummers</translation>
+      <translation type="unfinished">Line numbers</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2729"/>
       <source>Click here to see what has changed and to be able to update to the latest version</source>
-      <translation>Klik hier om te zien wat er veranderd is en om bij te werken naar de nieuwste versie</translation>
+      <translation type="unfinished">Click here to see what has changed and to be able to update to the latest version</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4234"/>
       <source>%n note(s) were tagged with "%2"</source>
-      <translation>
-        <numerusform>%n notitie werd gelabeld met "%2"</numerusform>
-        <numerusform>%n notities werden gelabeld met "%2"</numerusform>
+      <translation type="unfinished">
+        <numerusform>%n note(s) were tagged with "%2"</numerusform>
+        <numerusform>%n note(s) were tagged with "%2"</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5180"/>
       <source>Note headline</source>
-      <translation>Notitie kop</translation>
+      <translation type="unfinished">Note headline</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6524"/>
       <source>Downloading images finished</source>
-      <translation>Afbeeldingen downloaden voltooid</translation>
+      <translation type="unfinished">Downloading images finished</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6666"/>
       <source>Increased font size to %1 pt</source>
-      <translation>Verhoog tekengrootte naar %1 pt</translation>
+      <translation type="unfinished">Increased font size to %1 pt</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6683"/>
       <source>Decreased font size to %1 pt</source>
-      <translation>Verklein lettergrootte naar %1 pt</translation>
+      <translation type="unfinished">Decreased font size to %1 pt</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4724"/>
       <location filename="../mainwindow.cpp" line="4750"/>
       <location filename="../mainwindow.cpp" line="8960"/>
       <source>Open &amp;settings</source>
-      <translation>Open &amp;instellingen</translation>
+      <translation type="unfinished">Open &amp;settings</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1502"/>
       <source>leave</source>
-      <translation>verlaten</translation>
+      <translation type="unfinished">leave</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1505"/>
       <source>leave distraction free mode</source>
-      <translation>afleidingsvrije modus verlaten</translation>
+      <translation type="unfinished">leave distraction free mode</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5849"/>
       <source>Select image to insert</source>
-      <translation>Selecteer afbeelding om in te voegen</translation>
+      <translation type="unfinished">Select image to insert</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5981"/>
       <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
-      <translation>voer aub je&lt;strong&gt;wachtwoord&lt;/strong&gt; in om de notitie te decoderen.&lt;br /&gt;Herinner &lt;strong&gt; je &lt;/strong&gt; wachtwoord om de inhoud van de notitie te lezen &lt;br /&gt; en herinner dat je dat &lt;strong&gt;alleen kunt in&lt;/strong&gt; &lt;strong&gt; QOwnNotes&lt;/strong&gt;!</translation>
+      <translation type="unfinished">Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6037"/>
       <source>Decrypt note and store it as plain text</source>
-      <translation>Notitie decoderen en opslaan als tekst zonder opmaak</translation>
+      <translation type="unfinished">Decrypt note and store it as plain text</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6042"/>
       <source>&amp;Decrypt</source>
-      <translation>Decodeer</translation>
+      <translation type="unfinished">&amp;Decrypt</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6068"/>
       <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
-      <translation>&lt;br /&gt;Je zult in staat zijn om uw gecodeerde notitie te bewerken </translation>
+      <translation type="unfinished">&lt;br /&gt;You will be able to edit your encrypted note.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6126"/>
       <source>Export current note as Markdown file</source>
-      <translation>Export huidige notitie als Markdown bestand</translation>
+      <translation type="unfinished">Export current note as Markdown file</translation>
     </message>
   </context>
   <context>
@@ -2751,7 +2752,7 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
     <message>
       <location filename="../widgets/navigationwidget.cpp" line="100"/>
       <source>headline %1</source>
-      <translation>kop %1</translation>
+      <translation type="unfinished">headline %1</translation>
     </message>
   </context>
   <context>
@@ -2759,7 +2760,7 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
     <message>
       <location filename="../dialogs/notedialog.ui" line="14"/>
       <source>Note</source>
-      <translation>Notitie</translation>
+      <translation type="unfinished">Note</translation>
     </message>
   </context>
   <context>
@@ -2767,42 +2768,42 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="17"/>
       <source>Note was modified externally!</source>
-      <translation>Notitie werd extern gewijzigd!</translation>
+      <translation type="unfinished">Note was modified externally!</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="41"/>
       <source>The current note was modified outside of this application!</source>
-      <translation>Notitie werd extern gewijzigd!</translation>
+      <translation type="unfinished">The current note was modified outside of this application!</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="48"/>
       <source>Differences:</source>
-      <translation>Verschillen:</translation>
+      <translation type="unfinished">Differences:</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="76"/>
       <source>Always accept external changes in the future</source>
-      <translation>Externe wijzigingen in de toekomst altijd aanvaarden</translation>
+      <translation type="unfinished">Always accept external changes in the future</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="83"/>
       <source>Accept external changes?</source>
-      <translation>Externe wijzigingen accepteren?</translation>
+      <translation type="unfinished">Accept external changes?</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="69"/>
       <source>Ignore all external modifications in the future</source>
-      <translation>In de toekomst alle externe wijzigingen negeren</translation>
+      <translation type="unfinished">Ignore all external modifications in the future</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.cpp" line="33"/>
       <source>Yes</source>
-      <translation>Ja</translation>
+      <translation type="unfinished">Yes</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.cpp" line="38"/>
       <source>No</source>
-      <translation>Nee</translation>
+      <translation type="unfinished">No</translation>
     </message>
   </context>
   <context>
@@ -2812,7 +2813,7 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
       <location filename="../widgets/notetreewidgetitem.ui" line="25"/>
       <location filename="../widgets/notetreewidgetitem.ui" line="32"/>
       <source>TextLabel</source>
-      <translation>TextLabel</translation>
+      <translation type="unfinished">TextLabel</translation>
     </message>
   </context>
   <context>
@@ -2820,74 +2821,74 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="14"/>
       <source>Orphaned attachments</source>
-      <translation>Zwevende bijlagen beheren</translation>
+      <translation type="unfinished">Orphaned attachments</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="54"/>
       <source>Delete selected attachments</source>
-      <translation>Geselecteerde afbeeldingen verwijderen</translation>
+      <translation type="unfinished">Delete selected attachments</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="57"/>
       <source>Delete</source>
-      <translation>Verwijderen</translation>
+      <translation type="unfinished">Delete</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="86"/>
       <source>Add selected attachments to note</source>
-      <translation>Voeg geselecteerde afbeeldingen aan de notitie toe</translation>
+      <translation type="unfinished">Add selected attachments to note</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="89"/>
       <source>Add to note</source>
-      <translation>Aan notitie toevoegen</translation>
+      <translation type="unfinished">Add to note</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="100"/>
       <source>Open &amp;attachment</source>
-      <translation>Open &amp;bijlage</translation>
+      <translation type="unfinished">Open &amp;attachment</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="111"/>
       <source>Open &amp;folder</source>
-      <translation>Open &amp;map</translation>
+      <translation type="unfinished">Open &amp;folder</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="162"/>
       <source>File size:</source>
-      <translation>Bestandsgrootte:</translation>
+      <translation type="unfinished">File size:</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="182"/>
       <source>File type:</source>
-      <translation>Bestandstype:</translation>
+      <translation type="unfinished">File type:</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="199"/>
       <source>File path:</source>
-      <translation>Bestandspad:</translation>
+      <translation type="unfinished">File path:</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="229"/>
       <source>Attachments that are not used in notes:</source>
-      <translation>Afbeeldingen die niet worden gebruikt in notities:</translation>
+      <translation type="unfinished">Attachments that are not used in notes:</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="60"/>
       <source>Last modified at %1</source>
-      <translation>Laatst gewijzigd op %1</translation>
+      <translation type="unfinished">Last modified at %1</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="140"/>
       <source>Delete selected files</source>
-      <translation>Verwijder geselecteerde bestanden</translation>
+      <translation type="unfinished">Delete selected files</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="141"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-      <translation>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; geselecteerde bestanden verwijderen?</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; geselecteerde bestanden verwijderen?</numerusform>
+      <translation type="unfinished">
+        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
+        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
       </translation>
     </message>
   </context>
@@ -2896,49 +2897,49 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="14"/>
       <source>Orphaned images</source>
-      <translation>Zwevende afbeeldingen</translation>
+      <translation type="unfinished">Orphaned images</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="80"/>
       <source>Delete selected images</source>
-      <translation>Geselecteerde afbeeldingen verwijderen</translation>
+      <translation type="unfinished">Delete selected images</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="83"/>
       <source>Delete</source>
-      <translation>Verwijderen</translation>
+      <translation type="unfinished">Delete</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="94"/>
       <source>Add selected images to note</source>
-      <translation>Voeg geselecteerde afbeeldingen aan de notitie toe</translation>
+      <translation type="unfinished">Add selected images to note</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="97"/>
       <source>Add to note</source>
-      <translation>Notitie toevoegen</translation>
+      <translation type="unfinished">Add to note</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="146"/>
       <source>Images that are not used in notes:</source>
-      <translation>Afbeeldingen die niet worden gebruikt in notities:</translation>
+      <translation type="unfinished">Images that are not used in notes:</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.cpp" line="56"/>
       <source>Last modified at %1</source>
-      <translation>Laatst gewijzigd op %1</translation>
+      <translation type="unfinished">Last modified at %1</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.cpp" line="122"/>
       <source>Delete selected files</source>
-      <translation>Verwijder geselecteerde bestanden</translation>
+      <translation type="unfinished">Delete selected files</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-      <translation>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; geselecteerd bestand verwijderen?</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; geselecteerde bestanden verwijderen?</numerusform>
+      <translation type="unfinished">
+        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
+        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
       </translation>
     </message>
   </context>
@@ -2947,93 +2948,93 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
     <message>
       <location filename="../services/owncloudservice.cpp" line="187"/>
       <source>Username / password error</source>
-      <translation>Gebruikersnaam / wachtwoord fout</translation>
+      <translation type="unfinished">Username / password error</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="188"/>
       <source>Your calendar username or password is incorrect!</source>
-      <translation>Uw agenda gebruikersnaam of wachtwoord is onjuist!</translation>
+      <translation type="unfinished">Your calendar username or password is incorrect!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="509"/>
       <source>API app version too low</source>
-      <translation>API app versie te laag</translation>
+      <translation type="unfinished">API app version too low</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="510"/>
       <source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
-      <translation>Overweeg AUB het bijwerken van uw QOwnNotesAPI-app op uw server, uw app versie %1 is te laag en kan problemen veroorzaken in QOwnNotes.</translation>
+      <translation type="unfinished">Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="973"/>
       <source>ownCloud server connection error</source>
-      <translation>ownCloud server verbindingsfout</translation>
+      <translation type="unfinished">ownCloud server connection error</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="977"/>
       <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
-      <translation>ownCloud serverfout: &lt;strong&gt;%1&lt;/strong&gt; &lt;br /&gt; Controleer uw ownCloud configuratie.</translation>
+      <translation type="unfinished">ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="995"/>
       <source>You need to setup your ownCloud server!</source>
-      <translation>U moet uw eigen ownCloud server opstellen!</translation>
+      <translation type="unfinished">You need to setup your ownCloud server!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1008"/>
       <source>Open &amp;settings</source>
-      <translation>Open &amp;instellingen</translation>
+      <translation type="unfinished">Open &amp;settings</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1008"/>
       <source>&amp;Cancel</source>
-      <translation>&amp;Annuleren</translation>
+      <translation type="unfinished">&amp;Cancel</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1053"/>
       <source>Done with loading note versions</source>
-      <translation>Klaar met het laden van notitie versies</translation>
+      <translation type="unfinished">Done with loading note versions</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1092"/>
       <source>No versions found</source>
-      <translation>Geen versies gevonden</translation>
+      <translation type="unfinished">No versions found</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1093"/>
       <source>There are no versions for this note or the note wasn't found on the server.</source>
-      <translation>Er zijn geen versies voor deze nota of de opmerking was niet gevonden op de server.</translation>
+      <translation type="unfinished">There are no versions for this note or the note wasn't found on the server.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1114"/>
       <source>Done with loading trashed notes</source>
-      <translation>Klaar met het laden van verwijderde notities</translation>
+      <translation type="unfinished">Done with loading trashed notes</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1155"/>
       <source>No trashed notes</source>
-      <translation>Geen gewisd notities</translation>
+      <translation type="unfinished">No trashed notes</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1156"/>
       <source>No trashed notes were found on the server.</source>
-      <translation>Geen gewisd notities werden gevonden op de server.</translation>
+      <translation type="unfinished">No trashed notes were found on the server.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1179"/>
       <location filename="../services/owncloudservice.cpp" line="1205"/>
       <source>Error while loading todo lists!</source>
-      <translation>Fout tijdens het laden van de takenlijsten!</translation>
+      <translation type="unfinished">Error while loading todo lists!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1180"/>
       <source>Your CalDAV server didn't reply anything!</source>
-      <translation>Uw CalDAV-server antwoordt niet!</translation>
+      <translation type="unfinished">Your CalDAV server didn't reply anything!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1206"/>
       <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation>Foutmelding van uw CalDAV-server: &lt;strong&gt;%1&lt;/strong&gt;</translation>
+      <translation type="unfinished">Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</translation>
     </message>
   </context>
   <context>
@@ -3041,27 +3042,27 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
     <message>
       <location filename="../dialogs/passworddialog.ui" line="14"/>
       <source>Please enter your password</source>
-      <translation>voer aub je wachtwoord in</translation>
+      <translation type="unfinished">Please enter your password</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="24"/>
       <source>Enter your password:</source>
-      <translation>Voer je wachtwoord in:</translation>
+      <translation type="unfinished">Enter your password:</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="34"/>
       <source>Password</source>
-      <translation>Wachtwoord</translation>
+      <translation type="unfinished">Password</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="44"/>
       <source>Re-enter password</source>
-      <translation>Voer wachtwoord opnieuw in</translation>
+      <translation type="unfinished">Re-enter password</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="54"/>
       <source>Passwords don't match!</source>
-      <translation>Wachtwoorden komen niet overeen!</translation>
+      <translation type="unfinished">Passwords don't match!</translation>
     </message>
   </context>
   <context>
@@ -3069,69 +3070,69 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
     <message>
       <location filename="../entities/notefolder.cpp" line="460"/>
       <source>default</source>
-      <translation>standaard</translation>
+      <translation type="unfinished">default</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="1054"/>
       <source>Could not store note file: %1 - Error message: %2</source>
-      <translation>Kon notitiebestand niet opslaan: %1 - Foutmelding: %2</translation>
+      <translation type="unfinished">Could not store note file: %1 - Error message: %2</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="1123"/>
       <source>Renamed note-file was removed: %1</source>
-      <translation>Hernoemde Opmerking-bestand werd verwijderd: %1</translation>
+      <translation type="unfinished">Renamed note-file was removed: %1</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="1131"/>
       <source>Could not remove renamed note-file: %1 - Error message: %2</source>
-      <translation>Kon notitiebestand niet opslaan: %1 - Foutmelding: %2</translation>
+      <translation type="unfinished">Could not remove renamed note-file: %1 - Error message: %2</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="1930"/>
       <source>Could not read image file: %1</source>
-      <translation>Kon afbeeldingsbestand niet lezen: %1</translation>
+      <translation type="unfinished">Could not read image file: %1</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="2458"/>
       <source>Note filename changed</source>
-      <translation>Notitie bestandsnaam gewijzigd</translation>
+      <translation type="unfinished">Note filename changed</translation>
     </message>
     <message numerus="yes">
       <location filename="../entities/note.cpp" line="2459"/>
       <source>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
-      <translation>
-        <numerusform>Er is een wijziging van de notitienaam gedetecteerd. Wilt u alle voorkomingen van &lt;strong&gt;%1&lt;/strong&gt; links met &lt;strong&gt;%2&lt;/strong&gt; in de &lt;strong&gt;%n&lt;/strong&gt; notitiebestand vervangen?</numerusform>
-        <numerusform>Er is een wijziging van de notitienaam gedetecteerd. Wilt u alle voorkomingen van &lt;strong&gt;%1&lt;/strong&gt; links met &lt;strong&gt;%2&lt;/strong&gt; in de &lt;strong&gt;%n&lt;/strong&gt; notitiebestanden vervangen?</numerusform>
+      <translation type="unfinished">
+        <numerusform>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
+        <numerusform>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../entities/note.cpp" line="2847"/>
       <source>…and %n more note(s)</source>
-      <translation>
-        <numerusform>... en %n meer opmerking</numerusform>
-        <numerusform>... en %n meer opmerkingen</numerusform>
+      <translation type="unfinished">
+        <numerusform>…and %n more note(s)</numerusform>
+        <numerusform>…and %n more note(s)</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../helpers/toolbarcontainer.cpp" line="37"/>
       <location filename="../helpers/toolbarcontainer.cpp" line="112"/>
       <source>Unknown action %1</source>
-      <translation>Onbekende actie %1</translation>
+      <translation type="unfinished">Unknown action %1</translation>
     </message>
     <message>
       <location filename="../helpers/toolbarcontainer.cpp" line="94"/>
       <source>Workspace selector</source>
-      <translation>Werkruimte selector</translation>
+      <translation type="unfinished">Workspace selector</translation>
     </message>
     <message>
       <location filename="../utils/gui.cpp" line="221"/>
       <source>Don't ask again!</source>
-      <translation>Niet meer vragen!</translation>
+      <translation type="unfinished">Don't ask again!</translation>
     </message>
     <message>
       <location filename="../utils/gui.cpp" line="221"/>
       <source>Don't show again!</source>
-      <translation>Niet opnieuw weergeven!</translation>
+      <translation type="unfinished">Don't show again!</translation>
     </message>
   </context>
   <context>
@@ -3139,12 +3140,12 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="396"/>
       <source>Note editing disabled</source>
-      <translation>Het bewerken van de notitie is uitgeschakeld</translation>
+      <translation type="unfinished">Note editing disabled</translation>
     </message>
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="397"/>
       <source>Note editing is currently disabled, please allow it again in the &lt;i&gt;Note-menu&lt;/i&gt;.</source>
-      <translation>Het bewerken van de notitie is momenteel uitgeschakeld, schakel het aub in de&lt;i&gt; notitie menu&lt;/i&gt;weer in.</translation>
+      <translation type="unfinished">Note editing is currently disabled, please allow it again in the &lt;i&gt;Note-menu&lt;/i&gt;.</translation>
     </message>
   </context>
   <context>
@@ -3152,77 +3153,77 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="62"/>
       <source>close search</source>
-      <translation>in de buurt zoeken</translation>
+      <translation type="unfinished">close search</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="52"/>
       <source>Find:</source>
-      <translation>Vind:</translation>
+      <translation type="unfinished">Find:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="32"/>
       <source>replace text</source>
-      <translation>tekst vervangen</translation>
+      <translation type="unfinished">replace text</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="79"/>
       <source>find in text</source>
-      <translation>vind in tekst</translation>
+      <translation type="unfinished">find in text</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="86"/>
       <source>search forward</source>
-      <translation>zoek naar voren</translation>
+      <translation type="unfinished">search forward</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="103"/>
       <source>search backward</source>
-      <translation>zoek achterwaarts</translation>
+      <translation type="unfinished">search backward</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="120"/>
       <source>replace with</source>
-      <translation>vervangen door</translation>
+      <translation type="unfinished">replace with</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="127"/>
       <source>Replace:</source>
-      <translation>Vervangen:</translation>
+      <translation type="unfinished">Replace:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="156"/>
       <source>Plain text</source>
-      <translation>Tekst zonder opmaak</translation>
+      <translation type="unfinished">Plain text</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="161"/>
       <source>Whole words</source>
-      <translation>Hele woorden</translation>
+      <translation type="unfinished">Whole words</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="166"/>
       <source>Regular expression</source>
-      <translation>Reguliere expressie</translation>
+      <translation type="unfinished">Regular expression</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="187"/>
       <source>Replace</source>
-      <translation>Vervangen</translation>
+      <translation type="unfinished">Replace</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="197"/>
       <source>Replace All</source>
-      <translation>Alles vervangen</translation>
+      <translation type="unfinished">Replace All</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="210"/>
       <source>Mode:</source>
-      <translation>Modus:</translation>
+      <translation type="unfinished">Mode:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="220"/>
       <source>Match case sensitive</source>
-      <translation>Hoofdlettergevoelig</translation>
+      <translation type="unfinished">Match case sensitive</translation>
     </message>
   </context>
   <context>
@@ -3230,77 +3231,77 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="32"/>
       <source>replace text</source>
-      <translation>tekst vervangen</translation>
+      <translation type="unfinished">replace text</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="52"/>
       <source>Find:</source>
-      <translation>Vind:</translation>
+      <translation type="unfinished">Find:</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="62"/>
       <source>close search</source>
-      <translation>in de buurt zoeken</translation>
+      <translation type="unfinished">close search</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="79"/>
       <source>find in text</source>
-      <translation>Vind in tekst</translation>
+      <translation type="unfinished">find in text</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="86"/>
       <source>search forward</source>
-      <translation>Zoek naar voren</translation>
+      <translation type="unfinished">search forward</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="103"/>
       <source>search backward</source>
-      <translation>Zoek achterwaarts</translation>
+      <translation type="unfinished">search backward</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="120"/>
       <source>replace with</source>
-      <translation>vervangen door</translation>
+      <translation type="unfinished">replace with</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="127"/>
       <source>Replace:</source>
-      <translation>Vervangen:</translation>
+      <translation type="unfinished">Replace:</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="156"/>
       <source>Plain text</source>
-      <translation>Tekst zonder opmaak</translation>
+      <translation type="unfinished">Plain text</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="161"/>
       <source>Whole words</source>
-      <translation>Hele woorden</translation>
+      <translation type="unfinished">Whole words</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="166"/>
       <source>Regular expression</source>
-      <translation>Reguliere expressie</translation>
+      <translation type="unfinished">Regular expression</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="187"/>
       <source>Replace</source>
-      <translation>Vervangen</translation>
+      <translation type="unfinished">Replace</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="197"/>
       <source>Replace All</source>
-      <translation>Alles vervangen</translation>
+      <translation type="unfinished">Replace All</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="210"/>
       <source>Mode:</source>
-      <translation>Modus:</translation>
+      <translation type="unfinished">Mode:</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="220"/>
       <source>Match case sensitive</source>
-      <translation>Hoofdlettergevoelig</translation>
+      <translation type="unfinished">Match case sensitive</translation>
     </message>
   </context>
   <context>
@@ -3308,29 +3309,30 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
     <message>
       <location filename="../services/databaseservice.cpp" line="77"/>
       <source>Cannot open memory database</source>
-      <translation>Kan geheugen database niet openen</translation>
+      <translation type="unfinished">Cannot open memory database</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="78"/>
       <source>Unable to establish a memory database connection.</source>
-      <translation>Niet in staat om een geheugen databaseverbinding te maken.</translation>
+      <translation type="unfinished">Unable to establish a memory database connection.</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="94"/>
       <source>Cannot open disk database</source>
-      <translation>Kan schijf database niet openen</translation>
+      <translation type="unfinished">Cannot open disk database</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="95"/>
       <location filename="../services/databaseservice.cpp" line="117"/>
       <source>Unable to establish a database connection with file '%1'.
 Are the folder and the file writeable?</source>
-      <translation>Niet in staat om een databaseverbinding met bestand '%1' te maken. Zijn de map en het bestand beschrijfbaar?</translation>
+      <translation type="unfinished">Unable to establish a database connection with file '%1'.
+Are the folder and the file writeable?</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="116"/>
       <source>Cannot open note folder database</source>
-      <translation>Kan notitie map database niet openen</translation>
+      <translation type="unfinished">Cannot open note folder database</translation>
     </message>
   </context>
   <context>
@@ -3338,166 +3340,167 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="14"/>
       <source>Script repository</source>
-      <translation>Script archief</translation>
+      <translation type="unfinished">Script repository</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="55"/>
       <source>To search for a script please enter your query text and press &lt;i&gt;Return&lt;/i&gt;.</source>
-      <translation>Voer je zoekopdracht in en druk op &lt;i&gt;terugkeren&lt;/i&gt; om te zoeken naar een script.</translation>
+      <translation type="unfinished">To search for a script please enter your query text and press &lt;i&gt;Return&lt;/i&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="127"/>
       <source>Currently installed version:</source>
-      <translation>Huidige geïnstalleerde versie:</translation>
+      <translation type="unfinished">Currently installed version:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="278"/>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="397"/>
       <source>Installs the script</source>
-      <translation>Installeer het script</translation>
+      <translation type="unfinished">Installs the script</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="281"/>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="396"/>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="457"/>
       <source>Install</source>
-      <translation>Installeren</translation>
+      <translation type="unfinished">Install</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="444"/>
       <source>Load more scripts</source>
-      <translation>Laden van meer scripts</translation>
+      <translation type="unfinished">Load more scripts</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="228"/>
       <source>Version:</source>
-      <translation>Versie:</translation>
+      <translation type="unfinished">Version:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="202"/>
       <source>Repository:</source>
-      <translation>Opslagplaats:</translation>
+      <translation type="unfinished">Repository:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="137"/>
       <source>Minimum app version:</source>
-      <translation>Minimum app versie:</translation>
+      <translation type="unfinished">Minimum app version:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="433"/>
       <source>Name</source>
-      <translation>Naam</translation>
+      <translation type="unfinished">Name</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="413"/>
       <source>Enter your query text</source>
-      <translation>Voer hier je zoekopdracht in</translation>
+      <translation type="unfinished">Enter your query text</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="416"/>
       <source>Find script</source>
-      <translation>Vind script</translation>
+      <translation type="unfinished">Find script</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="47"/>
       <source>Script updates</source>
-      <translation>Script updates</translation>
+      <translation type="unfinished">Script updates</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="48"/>
       <source>All scripts are up-to-date.</source>
-      <translation>Alle scripts zijn up-to-date.</translation>
+      <translation type="unfinished">All scripts are up-to-date.</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="367"/>
       <source>Authors</source>
-      <translation>Auteur(s)</translation>
+      <translation type="unfinished">Authors</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="367"/>
       <source>Author</source>
-      <translation>Auteur</translation>
+      <translation type="unfinished">Author</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="370"/>
       <source>Supported platforms</source>
-      <translation>Ondersteunde platformen</translation>
+      <translation type="unfinished">Supported platforms</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="371"/>
       <source>Supported platform</source>
-      <translation>Ondersteund platform</translation>
+      <translation type="unfinished">Supported platform</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="374"/>
       <source>Open repository</source>
-      <translation>Open archief</translation>
+      <translation type="unfinished">Open repository</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="385"/>
       <source>Update</source>
-      <translation>Update</translation>
+      <translation type="unfinished">Update</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="386"/>
       <source>Updates the script</source>
-      <translation>Update het script</translation>
+      <translation type="unfinished">Updates the script</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="388"/>
       <source>Reinstall</source>
-      <translation>Herinstalleren</translation>
+      <translation type="unfinished">Reinstall</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="389"/>
       <source>Reinstalls the script</source>
-      <translation>Herinstalleer het script</translation>
+      <translation type="unfinished">Reinstalls the script</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="454"/>
       <source>Platform not supported!</source>
-      <translation>Het platform wordt niet ondersteund!</translation>
+      <translation type="unfinished">Platform not supported!</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="455"/>
       <source>Your platform is not supported by this script!
 Do you want to install it anyway?</source>
-      <translation>Uw platform wordt niet ondersteund door dit script! Wilt u het toch installeren?</translation>
+      <translation type="unfinished">Your platform is not supported by this script!
+Do you want to install it anyway?</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="457"/>
       <source>Cancel</source>
-      <translation>Annuleren</translation>
+      <translation type="unfinished">Cancel</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="465"/>
       <source>Update app</source>
-      <translation>Update app</translation>
+      <translation type="unfinished">Update app</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="466"/>
       <source>Please don't forget to update your installation of QOwnNotes to make this script work!</source>
-      <translation>Vergeet niet uw installatie van QOwnNotes om dit script werken bijwerken!</translation>
+      <translation type="unfinished">Please don't forget to update your installation of QOwnNotes to make this script work!</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="533"/>
       <source>Install successful</source>
-      <translation>Installatie succesvol</translation>
+      <translation type="unfinished">Install successful</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="534"/>
       <source>The script was successfully installed!</source>
-      <translation>Het script is succesvol geïnstalleerd!</translation>
+      <translation type="unfinished">The script was successfully installed!</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="541"/>
       <source>Download failed</source>
-      <translation>Download mislukt</translation>
+      <translation type="unfinished">Download failed</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="542"/>
       <source>The script could not be downloaded!</source>
-      <translation>Het script kon niet gedownload worden!</translation>
+      <translation type="unfinished">The script could not be downloaded!</translation>
     </message>
   </context>
   <context>
@@ -3505,12 +3508,12 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../widgets/scriptsettingwidget.ui" line="92"/>
       <source>The setting name</source>
-      <translation>De naam van de instelling</translation>
+      <translation type="unfinished">The setting name</translation>
     </message>
     <message>
       <location filename="../widgets/scriptsettingwidget.cpp" line="165"/>
       <source>Please select a file</source>
-      <translation>Selecteer een bestand</translation>
+      <translation type="unfinished">Please select a file</translation>
     </message>
   </context>
   <context>
@@ -3518,7 +3521,7 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../services/scriptingservice.cpp" line="243"/>
       <source>file doesn't exist</source>
-      <translation>bestand bestaat niet</translation>
+      <translation type="unfinished">file doesn't exist</translation>
     </message>
   </context>
   <context>
@@ -3527,87 +3530,87 @@ Do you want to install it anyway?</source>
       <location filename="../dialogs/settingsdialog.ui" line="26"/>
       <location filename="../dialogs/settingsdialog.ui" line="3588"/>
       <source>Settings</source>
-      <translation>Instellingen</translation>
+      <translation type="unfinished">Settings</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="120"/>
       <source>Note folders</source>
-      <translation>Notitie bestanden</translation>
+      <translation type="unfinished">Note folders</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="395"/>
       <source>Your note folders</source>
-      <translation>Uw notitie mappen</translation>
+      <translation type="unfinished">Your note folders</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="462"/>
       <source>&amp;Add folder</source>
-      <translation>&amp;Map toevoegen</translation>
+      <translation type="unfinished">&amp;Add folder</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="486"/>
       <source>&amp;Remove folder</source>
-      <translation>&amp;Map verwijderen</translation>
+      <translation type="unfinished">&amp;Remove folder</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="700"/>
       <source>This name will be viewed in all the menus.</source>
-      <translation>Deze naam wordt weergegeven in alle menu's.</translation>
+      <translation type="unfinished">This name will be viewed in all the menus.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="542"/>
       <source>Set the ownCloud path where the note folder path will be synced to on your ownCloud server.</source>
-      <translation>Stel het ownCloud pad in waar de notitie map naar wordt gesynchroniseerd op je ownCloud server.</translation>
+      <translation type="unfinished">Set the ownCloud path where the note folder path will be synced to on your ownCloud server.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="716"/>
       <source>Use as active note folder</source>
-      <translation>Gebruik als actieve notitie map</translation>
+      <translation type="unfinished">Use as active note folder</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="819"/>
       <source>Your ownCloud server</source>
-      <translation>Je ownCloud server</translation>
+      <translation type="unfinished">Your ownCloud server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="943"/>
       <source>ownCloud server url:</source>
-      <translation>de URL van je ownCloud server:</translation>
+      <translation type="unfinished">ownCloud server url:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="965"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vul de URL van je ownCloud server in, bijvoorbeeld: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1003"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Vul je gebruikersnaam op je ownCloud server in.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1038"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&gt;&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Voer aub het wachtwoord in voor uw gebruikersnaam.&lt;br/&gt; Momenteel wordt het wachtwoord gecodeerd opgeslagen met de andere instellingen, maar is niet erg veilig. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1116"/>
       <source>connection to web server</source>
-      <translation>verbinding naar de webserver</translation>
+      <translation type="unfinished">connection to web server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1133"/>
       <source>ownCloud server detected</source>
-      <translation>ownCloud server gedetecteerd</translation>
+      <translation type="unfinished">ownCloud server detected</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1167"/>
       <source>connection to QOwnNotesAPI</source>
-      <translation>verbinding naar QOwnNotesAPI</translation>
+      <translation type="unfinished">connection to QOwnNotesAPI</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1150"/>
       <source>username and password correct</source>
-      <translation>gebruikersnaam en wachtwoord correct</translation>
+      <translation type="unfinished">username and password correct</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1106"/>
@@ -3618,336 +3621,336 @@ Do you want to install it anyway?</source>
       <location filename="../dialogs/settingsdialog.ui" line="1191"/>
       <location filename="../dialogs/settingsdialog.ui" line="1208"/>
       <source>unknown</source>
-      <translation>onbekend</translation>
+      <translation type="unfinished">unknown</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1066"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Klik hier om de verbinding met je ownCloud server te testen. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1184"/>
       <source>versions app enabled on server</source>
-      <translation>versies app ingeschakeld op je server</translation>
+      <translation type="unfinished">versions app enabled on server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1201"/>
       <source>trash app enabled on server</source>
-      <translation>trash app ingeschakeld op je server</translation>
+      <translation type="unfinished">trash app enabled on server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1218"/>
       <source>notes path found on server</source>
-      <translation>notities pad gevonden op je server</translation>
+      <translation type="unfinished">notes path found on server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="878"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Open je ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; pagina in je web browser om QOwnNotesAPI te installeren of te updaten en om de kern apps mogelijk te maken &lt;span style=" font-weight:600;"&gt;Versies&lt;/span&gt; en &lt;span style=" font-weight:600;"&gt;Verwijderde bestanden &lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="682"/>
       <source>path</source>
-      <translation>pad</translation>
+      <translation type="unfinished">path</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="518"/>
       <source>Click here to select your local note path</source>
-      <translation>Klik hier om je lokale notitie pad te selecteren</translation>
+      <translation type="unfinished">Click here to select your local note path</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="595"/>
       <source>Click here to select your remote note path on your ownCloud server</source>
-      <translation>Klik hier om je externe notitie pad op je ownCloud server te selecteren</translation>
+      <translation type="unfinished">Click here to select your remote note path on your ownCloud server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="648"/>
       <source>Click here to use the selected folder from your server as note folder</source>
-      <translation>Klik hier om de geselecteerde map van je server als notitie map te gebruiken</translation>
+      <translation type="unfinished">Click here to use the selected folder from your server as note folder</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="846"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Je moet ook de twee ownCloud kern apps &lt;span style="font-weight:600;"&gt; versies&lt;/span&gt; en &lt;span style="font-weight:600;"&gt;Verwijderde bestanden&lt;/span&gt; op je ownCloud server ingeschakeld hebben (dat moet de standaard zijn).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="859"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or an other desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Je zal nog steeds de &lt;a href="https://owncloud.org/"&gt; &lt;span style="font-weight:600"&gt; ownCloud sync client&lt;/span&gt;&lt;/a&gt; (of een andere desktop sync client) nodig hebben om je notities te synchroniseren!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or an other desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="925"/>
       <source>Error Message</source>
-      <translation>Foutbericht</translation>
+      <translation type="unfinished">Error Message</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="144"/>
       <source>Network</source>
-      <translation>Netwerk</translation>
+      <translation type="unfinished">Network</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1249"/>
       <source>Proxy Settings</source>
-      <translation>Proxy instellingen</translation>
+      <translation type="unfinished">Proxy Settings</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1255"/>
       <source>No Proxy</source>
-      <translation>Geen Proxy</translation>
+      <translation type="unfinished">No Proxy</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1265"/>
       <source>Use system proxy</source>
-      <translation>Systeem proxy gebruiken</translation>
+      <translation type="unfinished">Use system proxy</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1272"/>
       <source>Specify proxy manually as</source>
-      <translation>Proxy handmatig opgeven als</translation>
+      <translation type="unfinished">Specify proxy manually as</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1297"/>
       <source>Host</source>
-      <translation>Host</translation>
+      <translation type="unfinished">Host</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1348"/>
       <source>Proxy server requires authentication</source>
-      <translation>Proxy server vereist verificatie</translation>
+      <translation type="unfinished">Proxy server requires authentication</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1405"/>
       <source>SSL Settings</source>
-      <translation>SSL-instellingen</translation>
+      <translation type="unfinished">SSL Settings</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1411"/>
       <source>Ignore SSL errors</source>
-      <translation>Negeer SSL fouten</translation>
+      <translation type="unfinished">Ignore SSL errors</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="156"/>
       <source>Todo</source>
-      <translation>Taken</translation>
+      <translation type="unfinished">Todo</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1630"/>
       <source>Default ownCloud calendar</source>
-      <translation>Standaard ownCloud kalender</translation>
+      <translation type="unfinished">Default ownCloud calendar</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="168"/>
       <source>Interface</source>
-      <translation>Interface</translation>
+      <translation type="unfinished">Interface</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1620"/>
       <source>Other CalDAV server</source>
-      <translation>Andere CalDAV-server</translation>
+      <translation type="unfinished">Other CalDAV server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2335"/>
       <source>Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</source>
-      <translation>Alleen bepaalde kleuren worden aangepast, je desktop thema regelt de rest. Je moet de applicatie herstarten om de wijzigingen te laten werken.</translation>
+      <translation type="unfinished">Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2338"/>
       <source>Optimize preview colors for dark mode desktop themes</source>
-      <translation>Voorbeeld kleuren voor donkere modus bureaubladthema's optimaliseren</translation>
+      <translation type="unfinished">Optimize preview colors for dark mode desktop themes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2345"/>
       <source>This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</source>
-      <translation>Dit zet de donkere modus aan, interface en icoontjes worden aangepast. Je moet de applicatie herstarten om de wijzigingen te laten werken.</translation>
+      <translation type="unfinished">This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2348"/>
       <source>Enable dark mode</source>
-      <translation>Zet donkere modus aan</translation>
+      <translation type="unfinished">Enable dark mode</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2374"/>
       <location filename="../dialogs/settingsdialog.ui" line="2384"/>
       <location filename="../dialogs/settingsdialog.ui" line="2415"/>
       <source>You need to restart the application to let this setting take effect</source>
-      <translation>Je most de toepassing opnieuw starten om deze instelling toe te passen</translation>
+      <translation type="unfinished">You need to restart the application to let this setting take effect</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2434"/>
       <source>Item sizes in the main window</source>
-      <translation>Item maten in het hoofdvenster</translation>
+      <translation type="unfinished">Item sizes in the main window</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4273"/>
       <source>Markdown highlighting</source>
-      <translation>Markdown markering</translation>
+      <translation type="unfinished">Markdown highlighting</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4279"/>
       <source>Enable markdown highlighting</source>
-      <translation>Markdown markeren inschakelen</translation>
+      <translation type="unfinished">Enable markdown highlighting</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1932"/>
       <source>Interface language</source>
-      <translation>Interface talen</translation>
+      <translation type="unfinished">Interface language</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1952"/>
       <source>Automatic</source>
-      <translation>Automatisch</translation>
+      <translation type="unfinished">Automatic</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2029"/>
       <source>English</source>
-      <translation>Engels</translation>
+      <translation type="unfinished">English</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="240"/>
       <source>Shortcuts</source>
-      <translation>Snelkoppelingen</translation>
+      <translation type="unfinished">Shortcuts</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3793"/>
       <location filename="../dialogs/settingsdialog.ui" line="3962"/>
       <source>Default font:</source>
-      <translation>Standaardlettertype:</translation>
+      <translation type="unfinished">Default font:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3835"/>
       <location filename="../dialogs/settingsdialog.ui" line="3986"/>
       <source>Code font:</source>
-      <translation>Codelettertype:</translation>
+      <translation type="unfinished">Code font:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2548"/>
       <source>Main window shortcuts</source>
-      <translation>Hoofdvenster van snelkoppelingen</translation>
+      <translation type="unfinished">Main window shortcuts</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3291"/>
       <source>Do this at your own risk!</source>
-      <translation>Doe dit op eigen risico!</translation>
+      <translation type="unfinished">Do this at your own risk!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3294"/>
       <source>Ignore all external note folder changes</source>
-      <translation>Alle externe wijzigingen aan de notitiemap negeren</translation>
+      <translation type="unfinished">Ignore all external note folder changes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3704"/>
       <source>No two spaces to do a line break are added here if checked</source>
-      <translation>Indien aangevinkt dan worden er geen twee spaties toegevoegd voor een regeleinde.</translation>
+      <translation type="unfinished">No two spaces to do a line break are added here if checked</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3707"/>
       <source>Use GitHub line breaks</source>
-      <translation>Gebruik de GitHub regeleinden</translation>
+      <translation type="unfinished">Use GitHub line breaks</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2018"/>
       <source>German</source>
-      <translation>Duits</translation>
+      <translation type="unfinished">German</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2062"/>
       <source>French</source>
-      <translation>Frans</translation>
+      <translation type="unfinished">French</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2150"/>
       <source>Polish</source>
-      <translation>Pools</translation>
+      <translation type="unfinished">Polish</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2172"/>
       <source>Portuguese</source>
-      <translation>Portugees</translation>
+      <translation type="unfinished">Portuguese</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2139"/>
       <source>Dutch</source>
-      <translation>Nederlands</translation>
+      <translation type="unfinished">Dutch</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2117"/>
       <source>Hungarian</source>
-      <translation>Hongaars</translation>
+      <translation type="unfinished">Hungarian</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2040"/>
       <source>Spanish</source>
-      <translation>Spaans</translation>
+      <translation type="unfinished">Spanish</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1938"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Als je wilt helpen bij het vertalen van QOwnNotes of een bestaande vertaling wilt bijwerken, lees: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt; Hoe kan ik helpen om QOwnNotes te vertalen?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2319"/>
       <source>Dark mode</source>
-      <translation>Donkere modus</translation>
+      <translation type="unfinished">Dark mode</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1465"/>
       <source>Disable tracking of usage data</source>
-      <translation>Schakel het bijhouden van gebruiksgegevens uit</translation>
+      <translation type="unfinished">Disable tracking of usage data</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1509"/>
       <source>Usage tracking is done on a private Piwik server.</source>
-      <translation>Gebruik bijhouden wordt gedaan op een prive Piwik server.</translation>
+      <translation type="unfinished">Usage tracking is done on a private Piwik server.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1569"/>
       <source>Disable heartbeat</source>
-      <translation>Heartbeat uitschakelen</translation>
+      <translation type="unfinished">Disable heartbeat</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2183"/>
       <source>Russian</source>
-      <translation>Russisch</translation>
+      <translation type="unfinished">Russian</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1418"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Je zou kunnen overwegen om een gratis SSL-certificaat te verkrijgen van &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2282"/>
       <source>If you change the language you have to restart the application for the changes to take action.</source>
-      <translation>Als u de taal wijzigt moet u de applicatie opnieuw opstarten voordat de veranderingen werken.</translation>
+      <translation type="unfinished">If you change the language you have to restart the application for the changes to take action.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2968"/>
       <source>You need to reload the scripting engine if you modify a script file</source>
-      <translation>U moet de script-engine herladen als U een scriptbestand wilt wijzigen</translation>
+      <translation type="unfinished">You need to reload the scripting engine if you modify a script file</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2971"/>
       <source>Reload scripting engine</source>
-      <translation>Herlaad script-engine</translation>
+      <translation type="unfinished">Reload scripting engine</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2961"/>
       <source>Validate script</source>
-      <translation>Script valideren</translation>
+      <translation type="unfinished">Validate script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="264"/>
       <source>General</source>
-      <translation>Algemeen</translation>
+      <translation type="unfinished">General</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3133"/>
       <source>Notes</source>
-      <translation>Notities</translation>
+      <translation type="unfinished">Notes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3242"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Indien aangevinkt zul je altijd geïnformeerd worden over externe wijzigingen, zelfs als de huidige notitie niet werd bewerkt gedurende de laatste minuut. Aanbevolen wordt &lt;span style=" font-style:italic;"&gt;niet aangevinkt&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3311"/>
@@ -3955,1097 +3958,1099 @@ Do you want to install it anyway?</source>
       <location filename="../dialogs/settingsdialog.ui" line="4899"/>
       <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
-      <translation>Je zou synchronisatieconflicten met oudere versies van ownCloud sync kunnen tegenkomen wanneer je ver onder de 10 sec gaat. Test zelf als je synchronisatieconflicten tegenkomt en stel een hogere waarde in als dat gebeurt.</translation>
+      <translation type="unfinished">You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
+Just test yourself if you get sync conflicts and set a higher value if so.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2128"/>
       <source>Japanese</source>
-      <translation>Japans</translation>
+      <translation type="unfinished">Japanese</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3315"/>
       <source>note save interval time [sec]</source>
-      <translation>notitie opslag interval [sec]</translation>
+      <translation type="unfinished">note save interval time [sec]</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3245"/>
       <source>Notify about all external modifications of the current note</source>
-      <translation>Informeer over alle externe wijzigingen van de huidige notitie</translation>
+      <translation type="unfinished">Notify about all external modifications of the current note</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3617"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1845"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1854"/>
       <source>Database</source>
-      <translation>Database</translation>
+      <translation type="unfinished">Database</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3633"/>
       <source>Reinitialize Database</source>
-      <translation>Herinitialiseer de database</translation>
+      <translation type="unfinished">Reinitialize Database</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3556"/>
       <source>Clear application data and exit</source>
-      <translation>Applicatie gegevens wissen en afsluiten</translation>
+      <translation type="unfinished">Clear application data and exit</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3562"/>
       <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
-      <translation>Met deze knop kun je alle instellingen wissen, de lokale taken database verwijderen en QOwnNotes afsluiten.</translation>
+      <translation type="unfinished">This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3572"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1914"/>
       <source>Clear app data and exit</source>
-      <translation>App-gegevens wissen en afsluiten</translation>
+      <translation type="unfinished">Clear app data and exit</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3351"/>
       <source>Update dialog</source>
-      <translation>Dialoogvenster bijwerken</translation>
+      <translation type="unfinished">Update dialog</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3431"/>
       <source>Default note file extension</source>
-      <translation>Standaard notitie bestandsextensie</translation>
+      <translation type="unfinished">Default note file extension</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3516"/>
       <source>External editor</source>
-      <translation>Externe editor</translation>
+      <translation type="unfinished">External editor</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3529"/>
       <source>path to external editor, leave empty for default</source>
-      <translation>pad naar externe editor, laat leeg voor de standaardwaarde</translation>
+      <translation type="unfinished">path to external editor, leave empty for default</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3539"/>
       <location filename="../dialogs/settingsdialog.ui" line="4545"/>
       <source>set external editor</source>
-      <translation>stel externe editor in</translation>
+      <translation type="unfinished">set external editor</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1434"/>
       <source>App metrics</source>
-      <translation>App statistieken</translation>
+      <translation type="unfinished">App metrics</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1452"/>
       <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</source>
-      <translation>Anonieme gebruiksgegevens helpen om te bepalen welke delen van QOwnNotes verbetert kunnen worden en om bugs te vinden en op te lossen. Aub alleen uitschakelen als je hier echt niet mee kunt leven.</translation>
+      <translation type="unfinished">Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1484"/>
       <source>This data includes anonymous information about what features of the app are used.</source>
-      <translation>Deze gegevens bevatten anonieme informatie over welke functies van de app worden gebruikt.</translation>
+      <translation type="unfinished">This data includes anonymous information about what features of the app are used.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1538"/>
       <source>App heartbeat</source>
-      <translation>App heartbeat</translation>
+      <translation type="unfinished">App heartbeat</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1556"/>
       <source>A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</source>
-      <translation>Een kleine heartbeat verzoek wordt periodiek verzonden terwijl QOwnNotes loopt. Maak een ontwikkelaar gelukkig door deze te laten weten dat er iemand is die QOwnNotes gebruikt.</translation>
+      <translation type="unfinished">A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2106"/>
       <source>Italian</source>
-      <translation>Italiaans</translation>
+      <translation type="unfinished">Italian</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="252"/>
       <source>Scripting</source>
-      <translation>Scripting</translation>
+      <translation type="unfinished">Scripting</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2615"/>
       <source>Your scripts</source>
-      <translation>Jouw scripts</translation>
+      <translation type="unfinished">Your scripts</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2699"/>
       <source>&amp;Remove script</source>
-      <translation>Verwijder script</translation>
+      <translation type="unfinished">&amp;Remove script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2978"/>
       <source>Click here to select your QML script</source>
-      <translation>Klik hier om je QML script te selecteren</translation>
+      <translation type="unfinished">Click here to select your QML script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="92"/>
       <source>Find setting</source>
-      <translation>Instellingen vinden</translation>
+      <translation type="unfinished">Find setting</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="179"/>
       <source>Editor</source>
-      <translation>Editor</translation>
+      <translation type="unfinished">Editor</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="190"/>
       <source>Editor fonts &amp; colors</source>
-      <translation>Redacteur lettertypen &amp; kleuren</translation>
+      <translation type="unfinished">Editor fonts &amp; colors</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="203"/>
       <source>Panels</source>
-      <translation>Panelen</translation>
+      <translation type="unfinished">Panels</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="215"/>
       <source>Preview fonts</source>
-      <translation>Voorbeeld lettertypen</translation>
+      <translation type="unfinished">Preview fonts</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="227"/>
       <source>Toolbars</source>
-      <translation>Werkbalken</translation>
+      <translation type="unfinished">Toolbars</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="275"/>
       <source>Portable mode</source>
-      <translation>Draagbare modus</translation>
+      <translation type="unfinished">Portable mode</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="287"/>
       <source>Git versioning</source>
-      <translation>Git versiebeheer</translation>
+      <translation type="unfinished">Git versioning</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="299"/>
       <source>Local trash</source>
-      <translation>Lokale prullenbak</translation>
+      <translation type="unfinished">Local trash</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="323"/>
       <source>Debug options</source>
-      <translation>Debug opties</translation>
+      <translation type="unfinished">Debug options</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="535"/>
       <source>Path where your notes are stored locally</source>
-      <translation>Pad waar je notities lokaal worden opgeslagen</translation>
+      <translation type="unfinished">Path where your notes are stored locally</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="545"/>
       <source>"Notes" path on your server</source>
       <extracomment>"Notes" should not be translated</extracomment>
-      <translation>"Notities" pad op uw server</translation>
+      <translation type="unfinished">"Notes" path on your server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="651"/>
       <source>&amp;Use as ownCloud path</source>
-      <translation>&amp;gebruiken als ownCloud pad</translation>
+      <translation type="unfinished">&amp;Use as ownCloud path</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="690"/>
       <source>Please select your note folder on your ownCloud server:</source>
-      <translation>Selecteer Uw notitie map op Uw ownCloud server:</translation>
+      <translation type="unfinished">Please select your note folder on your ownCloud server:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="723"/>
       <source>ownCloud server:</source>
-      <translation>ownCloud server:</translation>
+      <translation type="unfinished">ownCloud server:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="733"/>
       <source>Path on your ownCloud server:</source>
-      <translation>Pad op Uw ownCloud server:</translation>
+      <translation type="unfinished">Path on your ownCloud server:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="740"/>
       <location filename="../dialogs/settingsdialog.ui" line="2789"/>
       <source>Name:</source>
-      <translation>Naam:</translation>
+      <translation type="unfinished">Name:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="747"/>
       <source>Note folder path:</source>
-      <translation>Pad naar notitiemap:</translation>
+      <translation type="unfinished">Note folder path:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="754"/>
       <source>Be aware that the ownCloud notes app doesn't support sub-folders!</source>
-      <translation>Let erop dat de ownCloud nota's app geen sub-omslagen ondersteunt!</translation>
+      <translation type="unfinished">Be aware that the ownCloud notes app doesn't support sub-folders!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="757"/>
       <source>Use note sub-folders</source>
-      <translation>Gebruik notitie sub-omslagen</translation>
+      <translation type="unfinished">Use note sub-folders</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="764"/>
       <source>You need to have git installed to make this work!</source>
-      <translation>Je moet eerst git installeren im dit te laten werken!</translation>
+      <translation type="unfinished">You need to have git installed to make this work!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="767"/>
       <source>Use git to keep a local history of your notes</source>
-      <translation>Gebruik git om een lokale geschiedenis van uw notities te houden</translation>
+      <translation type="unfinished">Use git to keep a local history of your notes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="796"/>
       <source>ownCloud support</source>
-      <translation>ownCloud-ondersteuning</translation>
+      <translation type="unfinished">ownCloud support</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="802"/>
       <source>Enable ownCloud support</source>
-      <translation>OwnCloud-ondersteuning inschakelen</translation>
+      <translation type="unfinished">Enable ownCloud support</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="833"/>
       <source>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
-      <translation>Installeer de nieuwste versie van &lt;a href="https://apps.owncloud.com/content/show.php?content=173817"&gt; &lt;span style="font-weight:600;"&gt; QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (minimaal versie QOWNNOTESAPI_MIN_VERSION) op je ownCloud server als je toegang tot notitie versies en verwijderde notities op QOwnNotes wilt hebben.</translation>
+      <translation type="unfinished">Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="981"/>
       <location filename="../dialogs/settingsdialog.ui" line="1707"/>
       <source>Username:</source>
-      <translation>Gebruikersnaam:</translation>
+      <translation type="unfinished">Username:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1006"/>
       <source>Your ownCloud username</source>
-      <translation>Uw ownCloud gebruikersnaam</translation>
+      <translation type="unfinished">Your ownCloud username</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1016"/>
       <location filename="../dialogs/settingsdialog.ui" line="1742"/>
       <source>Password:</source>
-      <translation>Wachtwoord:</translation>
+      <translation type="unfinished">Password:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1044"/>
       <source>Your ownCloud password</source>
-      <translation>Uw ownCloud wachtwoord</translation>
+      <translation type="unfinished">Your ownCloud password</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1072"/>
       <source>&amp;Connect to ownCloud server</source>
-      <translation>&amp;Verbinding maken met Uw ownCloud server</translation>
+      <translation type="unfinished">&amp;Connect to ownCloud server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1099"/>
       <source>Connection status</source>
-      <translation>Verbindingsstatus</translation>
+      <translation type="unfinished">Connection status</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1783"/>
       <source>Select the calendars you want to use for the Todo list</source>
-      <translation>Selecteer de agenda's die U wilt gebruiken voor de takenlijst</translation>
+      <translation type="unfinished">Select the calendars you want to use for the Todo list</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1858"/>
       <source>Todo list settings</source>
-      <translation>Instellingen van de takenlijst</translation>
+      <translation type="unfinished">Todo list settings</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1864"/>
       <source>Saving an item also closes the Todo list</source>
-      <translation>Een item opslaan sluit hiermee ook de takenlijst</translation>
+      <translation type="unfinished">Saving an item also closes the Todo list</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1963"/>
       <source>Indonesian</source>
-      <translation>Indonesisch</translation>
+      <translation type="unfinished">Indonesian</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1974"/>
       <source>Bengali</source>
-      <translation>Bengaals</translation>
+      <translation type="unfinished">Bengali</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1985"/>
       <source>Catalan</source>
-      <translation>Catalaans</translation>
+      <translation type="unfinished">Catalan</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1996"/>
       <source>Cebuano</source>
-      <translation>Cebuano</translation>
+      <translation type="unfinished">Cebuano</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2051"/>
       <source>Filipino</source>
-      <translation>Filipijns</translation>
+      <translation type="unfinished">Filipino</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2073"/>
       <source>Hindi</source>
-      <translation>Hindi</translation>
+      <translation type="unfinished">Hindi</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2095"/>
       <source>Hiligaynon</source>
-      <translation>Hiligaynon</translation>
+      <translation type="unfinished">Hiligaynon</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2194"/>
       <source>Swedish</source>
-      <translation>Zweeds</translation>
+      <translation type="unfinished">Swedish</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2205"/>
       <source>Tagalog</source>
-      <translation>Tagalog</translation>
+      <translation type="unfinished">Tagalog</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2216"/>
       <source>Turkish</source>
-      <translation>Turks</translation>
+      <translation type="unfinished">Turkish</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2238"/>
       <source>Urdu</source>
-      <translation>Urdu</translation>
+      <translation type="unfinished">Urdu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2249"/>
       <source>Chinese Simplified</source>
-      <translation>Vereenvoudigd Chinees</translation>
+      <translation type="unfinished">Chinese Simplified</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2260"/>
       <source>Chinese Traditional</source>
-      <translation>Traditioneel Chinees</translation>
+      <translation type="unfinished">Chinese Traditional</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2328"/>
       <source>Enable dark mode application icon and tray icon</source>
-      <translation>Toepassingspictogram van de donkere modus en het pictogram in het systeemvak inschakelen</translation>
+      <translation type="unfinished">Enable dark mode application icon and tray icon</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2368"/>
       <source>System tray</source>
-      <translation>Systeemvak</translation>
+      <translation type="unfinished">System tray</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2377"/>
       <source>Show system tray icon</source>
-      <translation>Toon systeemvak icoon</translation>
+      <translation type="unfinished">Show system tray icon</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2387"/>
       <source>Start application hidden</source>
-      <translation>Start toepassing verborgen</translation>
+      <translation type="unfinished">Start application hidden</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2397"/>
       <source>Interface style</source>
-      <translation>Interface-stijl</translation>
+      <translation type="unfinished">Interface style</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2688"/>
       <source>&amp;Add script…</source>
-      <translation>&amp;Voeg script toe…</translation>
+      <translation type="unfinished">&amp;Add script…</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3215"/>
       <source>By default the headline will generated automatically</source>
-      <translation>Standaard wordt de kop automatisch gegenereerd</translation>
+      <translation type="unfinished">By default the headline will generated automatically</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3218"/>
       <source>The shortcut to create a new note asks for a headline</source>
-      <translation>De snelkoppeling naar een nieuwe notitie vraagt om een kop</translation>
+      <translation type="unfinished">The shortcut to create a new note asks for a headline</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3322"/>
       <source>Automatically close the note folder database to prevent problems with sync tools</source>
-      <translation>De notitie map database automatisch sluiten om te voorkomen dat problemen met synchronisatie tools ontstaan</translation>
+      <translation type="unfinished">Automatically close the note folder database to prevent problems with sync tools</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3325"/>
       <source>Automatically close the note folder database</source>
-      <translation>De notitie map database automatisch sluiten</translation>
+      <translation type="unfinished">Automatically close the note folder database</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3373"/>
       <source>Search engine</source>
-      <translation>Zoekmachine</translation>
+      <translation type="unfinished">Search engine</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3395"/>
       <source>Message boxes</source>
-      <translation>Berichtvensters</translation>
+      <translation type="unfinished">Message boxes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3401"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3471"/>
       <source>Reset message boxes</source>
-      <translation>Berichtvakken opnieuw instellen</translation>
+      <translation type="unfinished">Reset message boxes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3594"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3537"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3560"/>
       <source>Import settings</source>
-      <translation>Instellingen importeren</translation>
+      <translation type="unfinished">Import settings</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3601"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3503"/>
       <source>Export settings</source>
-      <translation>Instellingen exporteren</translation>
+      <translation type="unfinished">Export settings</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3740"/>
       <source>Open issue assistant</source>
-      <translation>Open kwestie assistent</translation>
+      <translation type="unfinished">Open issue assistant</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3751"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;De beste manier van het posten van problemen is het gebruik van de assistent door het drukken van de knoop &lt;span style=" font-weight:600;"&gt;Open kwestie assistent&lt;/span&gt; aan de onderzijde.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4307"/>
       <source>Fully highlight blockquotes</source>
-      <translation>Markeer blokquotes volledig</translation>
+      <translation type="unfinished">Fully highlight blockquotes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4340"/>
       <source>Note-edit cursor width:</source>
-      <translation>Opmerking-edit cursor breedte:</translation>
+      <translation type="unfinished">Note-edit cursor width:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4404"/>
       <source>Enable Vim mode (some QOwnNotes shortcuts will not work)</source>
-      <translation>Vim-modus inschakelen (sommige snelkoppelingen QOwnNotes zullen niet werken)</translation>
+      <translation type="unfinished">Enable Vim mode (some QOwnNotes shortcuts will not work)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4689"/>
       <source>Note list panel</source>
-      <translation>Paneel met notitielijsten</translation>
+      <translation type="unfinished">Note list panel</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4761"/>
       <source>Show notes in the note list with preview</source>
-      <translation>Show notities in de nootdeelvensterlijst met preview</translation>
+      <translation type="unfinished">Show notes in the note list with preview</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4846"/>
       <source>Note edit panel</source>
-      <translation>Notitie bewerkingspaneel</translation>
+      <translation type="unfinished">Note edit panel</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4852"/>
       <source>If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</source>
-      <translation>Als dit is uitgeschakeld, kunt u complexere panel layouts maken, maar alle panelen worden gewijzigd als het formaat van het venster wordt gewijzigd</translation>
+      <translation type="unfinished">If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4855"/>
       <source>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</source>
-      <translation>Gebruik de notitie bewerkingsvenster als vaste centrale widget om te worden aangepast als het formaat van het venster of andere panelen wordt gewijzigd</translation>
+      <translation type="unfinished">Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4869"/>
       <source>Local trash settings</source>
-      <translation>Lokale prullenbak-instellingen</translation>
+      <translation type="unfinished">Local trash settings</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4903"/>
       <source>Remove trashed notes after:</source>
-      <translation>Trashed notities verwijderen na:</translation>
+      <translation type="unfinished">Remove trashed notes after:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4910"/>
       <source> days</source>
       <extracomment>seconds</extracomment>
-      <translation> dagen</translation>
+      <translation type="unfinished"> days</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4929"/>
       <source>Automatically remove trashed notes after a certain time</source>
-      <translation>Verwijderd notities automatisch verwijderen na een bepaalde tijd</translation>
+      <translation type="unfinished">Automatically remove trashed notes after a certain time</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4955"/>
       <source>Local trash support</source>
-      <translation>Lokale prullenbak ondersteuning</translation>
+      <translation type="unfinished">Local trash support</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4961"/>
       <source>Enable local trash</source>
-      <translation>Lokale prullenbak inschakelen</translation>
+      <translation type="unfinished">Enable local trash</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4326"/>
       <source>Reset the cursor width</source>
-      <translation>Resetten van de cursor-breedte</translation>
+      <translation type="unfinished">Reset the cursor width</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4480"/>
       <source>External git log command to show the git versions of a note</source>
-      <translation>Externe git log commando om de git versies van een notitie te tonen</translation>
+      <translation type="unfinished">External git log command to show the git versions of a note</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4486"/>
       <source>Enter a command to be used to show a git log (like for example "gitk")</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
-      <translation>Voer een commando in die wordt gebruikt om een git log te tonen (zoals bijvoorbeeld "gitk")</translation>
+      <translation type="unfinished">Enter a command to be used to show a git log (like for example "gitk")</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4506"/>
       <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
-      <translation>Als u deze instelling gebruikt, krijgt u een nieuw menu-item om de git versies te tonen als u met de rechtermuisknop op een notitie klikt.</translation>
+      <translation type="unfinished">If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4754"/>
       <source>Show all notes of a tag including the notes of their children-tags</source>
-      <translation>Toon alle notities van een tag met inbegrip van de nota's van hun kinderen-tags</translation>
+      <translation type="unfinished">Show all notes of a tag including the notes of their children-tags</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4724"/>
       <source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
-      <translation>Toon alle notities in een map met inbegrip van de bijbehorende submappen (werkt alleen als submappen zijn ingeschakeld)</translation>
+      <translation type="unfinished">Show all notes in a folder including their subfolders (only works if subfolders are turned on)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4254"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;U wilt misschien alle beschikbare &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;tijdformaten&lt;/a&gt;bekijken. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4390"/>
       <source>Highlight the current line</source>
-      <translation>Markeer de huidige regel</translation>
+      <translation type="unfinished">Highlight the current line</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4573"/>
       <source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
-      <translation>Vergeet niet de git ondersteuning voor uw notitie mappen in te schakelen en configureer uw naam en een e-mailadres voor uw git-client, bijvoorbeeld met deze terminal commando's:</translation>
+      <translation type="unfinished">Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4784"/>
       <source>Tags panel</source>
-      <translation>Deelvenster Labels</translation>
+      <translation type="unfinished">Tags panel</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4649"/>
       <location filename="../dialogs/settingsdialog.ui" line="4698"/>
       <location filename="../dialogs/settingsdialog.ui" line="4813"/>
       <source>Order</source>
-      <translation>Bestelling</translation>
+      <translation type="unfinished">Order</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4655"/>
       <location filename="../dialogs/settingsdialog.ui" line="4707"/>
       <location filename="../dialogs/settingsdialog.ui" line="4819"/>
       <source>Ascending</source>
-      <translation>Oplopend</translation>
+      <translation type="unfinished">Ascending</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4662"/>
       <location filename="../dialogs/settingsdialog.ui" line="4714"/>
       <location filename="../dialogs/settingsdialog.ui" line="4826"/>
       <source>Descending</source>
-      <translation>Aflopend</translation>
+      <translation type="unfinished">Descending</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4619"/>
       <location filename="../dialogs/settingsdialog.ui" line="4731"/>
       <location filename="../dialogs/settingsdialog.ui" line="4790"/>
       <source>Sort</source>
-      <translation>Sorteren</translation>
+      <translation type="unfinished">Sort</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4397"/>
       <source>Only use editor width setting in distraction free mode</source>
-      <translation>Gebruik de instelling van de lijndikte van de editor alleen in de gratis afleiding vrije modus</translation>
+      <translation type="unfinished">Only use editor width setting in distraction free mode</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4625"/>
       <location filename="../dialogs/settingsdialog.ui" line="4737"/>
       <location filename="../dialogs/settingsdialog.ui" line="4796"/>
       <source>Alphabetical</source>
-      <translation>Alfabetisch</translation>
+      <translation type="unfinished">Alphabetical</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4803"/>
       <source>By last change / use</source>
-      <translation>Bij laatste wijziging / gebruik</translation>
+      <translation type="unfinished">By last change / use</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4836"/>
       <source>Hide 'Find or create tag' search</source>
-      <translation>Verberg 'Zoek of maak label' zoeken</translation>
+      <translation type="unfinished">Hide 'Find or create tag' search</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4606"/>
       <source>Note subfolders panel</source>
-      <translation>Notitie submappen paneel</translation>
+      <translation type="unfinished">Note subfolders panel</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4612"/>
       <source>Show with full path</source>
-      <translation>Toon met volledige pad</translation>
+      <translation type="unfinished">Show with full path</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4632"/>
       <location filename="../dialogs/settingsdialog.ui" line="4744"/>
       <source>By last change</source>
-      <translation>Bij laatste wijziging / gebruik</translation>
+      <translation type="unfinished">By last change</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4642"/>
       <source>Show root folder name</source>
-      <translation>Toon hoofdmap naam</translation>
+      <translation type="unfinished">Show root folder name</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4672"/>
       <source>Hide 'Find or create note subfolder' search</source>
-      <translation>Verberg 'Zoek of maak notitie submap' zoeken</translation>
+      <translation type="unfinished">Hide 'Find or create note subfolder' search</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4679"/>
       <source>Display note subfolders as full tree</source>
-      <translation>Toon notitie submappen als volledige boom</translation>
+      <translation type="unfinished">Display note subfolders as full tree</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2427"/>
       <source>Search script repository</source>
-      <translation>Zoek script archief</translation>
+      <translation type="unfinished">Search script repository</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4496"/>
       <source>You optionally can use "%notePath%" for the path of the note.</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
-      <translation>Je kunt als optie "%notePath%" voor het pad van de notitie gebruiken.</translation>
+      <translation type="unfinished">You optionally can use "%notePath%" for the path of the note.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4519"/>
       <source>Git client</source>
-      <translation>Git-client</translation>
+      <translation type="unfinished">Git client</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4535"/>
       <source>Path to git executable:</source>
-      <translation>Pad naar git uitvoerbaar:</translation>
+      <translation type="unfinished">Path to git executable:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4525"/>
       <source>Path to git client, leave empty for default</source>
-      <translation>Pad naar git client, leeg voor de standaardwaarde</translation>
+      <translation type="unfinished">Path to git client, leave empty for default</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4444"/>
       <source>Commit interval</source>
-      <translation>Plegen van interval</translation>
+      <translation type="unfinished">Commit interval</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4450"/>
       <source>sec</source>
       <extracomment>seconds</extracomment>
-      <translation>sec</translation>
+      <translation type="unfinished">sec</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4470"/>
       <source>git commit interval time [sec]</source>
-      <translation>git commit interval tijd [sec]</translation>
+      <translation type="unfinished">git commit interval time [sec]</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="881"/>
       <source>Open your ownCloud server &amp;Apps page</source>
-      <translation>Open je ownCloud server &amp;Apps pagina</translation>
+      <translation type="unfinished">Open your ownCloud server &amp;Apps page</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1614"/>
       <source>Which calendar backend do you want to use?</source>
-      <translation>Welke kalender backend wilt u gebruiken?</translation>
+      <translation type="unfinished">Which calendar backend do you want to use?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1627"/>
       <source>For most current ownCloud and Nextcloud installations</source>
-      <translation>Voor actuele ownCloud- en Nextcloud-installaties</translation>
+      <translation type="unfinished">For most current ownCloud and Nextcloud installations</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1647"/>
       <source>For older versions of ownCloud where the default setting doesn't work</source>
-      <translation>Voor oudere versies van ownCloud waarvoor de standaardinstelling niet werkt</translation>
+      <translation type="unfinished">For older versions of ownCloud where the default setting doesn't work</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1650"/>
       <source>Legacy ownCloud calendar</source>
-      <translation>Oude ownCloud-agenda</translation>
+      <translation type="unfinished">Legacy ownCloud calendar</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1663"/>
       <source>CalDAV server settings</source>
-      <translation>De instellingen van de server van de CalDAV</translation>
+      <translation type="unfinished">CalDAV server settings</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1672"/>
       <source>Calendar base url:</source>
-      <translation>Agenda de basis-url van de Commissie:</translation>
+      <translation type="unfinished">Calendar base url:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1694"/>
       <source>Please enter the CalDAV base url to your calendar.</source>
-      <translation>Voer de CalDAV basis-url aan uw agenda.</translation>
+      <translation type="unfinished">Please enter the CalDAV base url to your calendar.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1764"/>
       <source>Please enter the password for your CalDAV username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.</source>
-      <translation>Voer het wachtwoord voor de gebruikersnaam van uw CalDAV. &lt;br/&gt; Momenteel wordt het wachtwoord gecodeerd met de andere instellingen opgeslagen, maar het is niet erg veilig.</translation>
+      <translation type="unfinished">Please enter the password for your CalDAV username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2007"/>
       <source>Czech</source>
-      <translation>Tsjechisch</translation>
+      <translation type="unfinished">Czech</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2161"/>
       <source>Brazilian Portuguese</source>
-      <translation>Braziliaans Portugees</translation>
+      <translation type="unfinished">Brazilian Portuguese</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2227"/>
       <source>Ukrainian</source>
-      <translation>Oekraïens</translation>
+      <translation type="unfinished">Ukrainian</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2355"/>
       <source>You might also want to choose an other editor color schema in the editor settings in dark mode.</source>
-      <translation>U kunt ook kiezen voor een andere editor kleur schema in de instellingen van de editor in de donkere modus.</translation>
+      <translation type="unfinished">You might also want to choose an other editor color schema in the editor settings in dark mode.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3090"/>
       <source>The name</source>
-      <translation>De naam</translation>
+      <translation type="unfinished">The name</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3167"/>
       <source>Maximum height:</source>
-      <translation>Maximum hoogte:</translation>
+      <translation type="unfinished">Maximum height:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3174"/>
       <source>Maximum width:</source>
-      <translation>Maximum breedte:</translation>
+      <translation type="unfinished">Maximum width:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3235"/>
       <source>Scale images down when inserted into notes</source>
-      <translation>Plaatjes verkleineren als je ze in de notities invoegt</translation>
+      <translation type="unfinished">Scale images down when inserted into notes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2084"/>
       <source>Croatian</source>
-      <translation>Kroatisch</translation>
+      <translation type="unfinished">Croatian</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3005"/>
       <source>Path to your QML file</source>
-      <translation>Pad naar je QML bestand</translation>
+      <translation type="unfinished">Path to your QML file</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2796"/>
       <source>Script name</source>
-      <translation>Script naam</translation>
+      <translation type="unfinished">Script name</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2818"/>
       <source>Description:</source>
-      <translation>Beschrijving:</translation>
+      <translation type="unfinished">Description:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2900"/>
       <source>Version:</source>
-      <translation>Versie:</translation>
+      <translation type="unfinished">Version:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2861"/>
       <source>Repository:</source>
-      <translation>Archief:</translation>
+      <translation type="unfinished">Repository:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2838"/>
       <source>Author(s):</source>
-      <translation>Auteur(s):</translation>
+      <translation type="unfinished">Author(s):</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3225"/>
       <source>Check this if you want to accept all external modifications while you are editing the current note.</source>
-      <translation>Schakel dit selectievakje in als je alle externe wijzigingen tijdens het bewerken van de huidige notitie wilt negeren.</translation>
+      <translation type="unfinished">Check this if you want to accept all external modifications while you are editing the current note.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3228"/>
       <source>Accept all external modifications of the current note</source>
-      <translation>Alle externe wijzigingen van de huidige notitie accepteren</translation>
+      <translation type="unfinished">Accept all external modifications of the current note</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3284"/>
       <source>Use UNIX newline instead of native newline characters</source>
-      <translation>Gebruik altijd het UNIX-karakter voor een nieuwe regel in plaats van dat van het besturingssysteem</translation>
+      <translation type="unfinished">Use UNIX newline instead of native newline characters</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3204"/>
       <source>When opening notes the cursor position inside the note will now be restored
   to the position when the note was last visited in the current session</source>
-      <translation>Bij het openen van een notitie wordt de cursorpositie hersteld naar de plek waar deze stond toen de notitie voor het laatst werd geopend binnen de huidige sessie</translation>
+      <translation type="unfinished">When opening notes the cursor position inside the note will now be restored
+  to the position when the note was last visited in the current session</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3208"/>
       <source>Restore cursor position when opening a note</source>
-      <translation>Cursorpositie herstellen bij het openen van een notitie</translation>
+      <translation type="unfinished">Restore cursor position when opening a note</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3623"/>
       <source>Be warned that this will also remove your cached todo items and configured note folders and scripts!</source>
-      <translation>Wees gewaarschuwd dat dit ook uw cache todo items en geconfigureerde notaomslagen en scripts zal verwijderen!</translation>
+      <translation type="unfinished">Be warned that this will also remove your cached todo items and configured note folders and scripts!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4078"/>
       <source>Apply toolbar configuration</source>
-      <translation>Werkbalkconfiguratie toepassen</translation>
+      <translation type="unfinished">Apply toolbar configuration</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4092"/>
       <source>Reset toolbars</source>
-      <translation>Reset werkbalken</translation>
+      <translation type="unfinished">Reset toolbars</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4120"/>
       <source>Enable logging to file</source>
-      <translation>Schakel logboekregistratie in bestand in</translation>
+      <translation type="unfinished">Enable logging to file</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4127"/>
       <source>Clear log file</source>
-      <translation>Logboekbestand wissen</translation>
+      <translation type="unfinished">Clear log file</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4138"/>
       <source>Fake old version number to trigger update</source>
-      <translation>Fake oude versie nummer om de update te activeren</translation>
+      <translation type="unfinished">Fake old version number to trigger update</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4166"/>
       <source>Log file path:</source>
-      <translation>Pad van logboekbestand:</translation>
+      <translation type="unfinished">Log file path:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4228"/>
       <source>Here you can set your own time format for inserting the current time into a note.</source>
-      <translation>Hier kunt u uw eigen datum- en tijdnotatie voor het invoegen van de huidige datum en tijd in een notitie instellen.</translation>
+      <translation type="unfinished">Here you can set your own time format for inserting the current time into a note.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4231"/>
       <source>Insert current time</source>
-      <translation>Huidige datum en tijd invoegen</translation>
+      <translation type="unfinished">Insert current time</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4237"/>
       <source>Time format:</source>
-      <translation>Datum- en tijdnotatie:</translation>
+      <translation type="unfinished">Time format:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4244"/>
       <source>Enter your custom time format, like "dd.MM.yyyy hh:mm"</source>
-      <translation>Vul uw aangepaste datum- en tijdnotatie in, bijvoorbeeld "dd.MM.yyyy hh:mm"</translation>
+      <translation type="unfinished">Enter your custom time format, like "dd.MM.yyyy hh:mm"</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4320"/>
       <source>Editor options</source>
-      <translation>Editoropties</translation>
+      <translation type="unfinished">Editor options</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4360"/>
       <source>Enable automatic closing of brackets and markdown formatting characters</source>
-      <translation>Inschakelen automatische sluiting van haken en markdown opmaaktekens</translation>
+      <translation type="unfinished">Enable automatic closing of brackets and markdown formatting characters</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4380"/>
       <source>You have to use the backspace key to remove the opening character</source>
-      <translation>U moet de backspace-toets gebruiken om het voormalig teken te verwijderen</translation>
+      <translation type="unfinished">You have to use the backspace key to remove the opening character</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4383"/>
       <source>Enable automatic removal of matching closing characters</source>
-      <translation>Inschakelen automatische verwijdering van identieke afsluitende karakters</translation>
+      <translation type="unfinished">Enable automatic removal of matching closing characters</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1697"/>
       <source>Your CalDAV calendar base url</source>
-      <translation>Uw CalDAV agenda basis-url</translation>
+      <translation type="unfinished">Your CalDAV calendar base url</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1729"/>
       <source>Please enter the username of your CalDAV server.</source>
-      <translation>Geef de gebruikersnaam op de server van uw CalDAV aan.</translation>
+      <translation type="unfinished">Please enter the username of your CalDAV server.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1732"/>
       <source>Your CalDAV username</source>
-      <translation>Uw CalDAV-gebruikersnaam</translation>
+      <translation type="unfinished">Your CalDAV username</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1770"/>
       <source>Your CalDAV password</source>
-      <translation>Uw CalDAV-wachtwoord</translation>
+      <translation type="unfinished">Your CalDAV password</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1805"/>
       <source>This causes all todo list items to be reloaded from your server the next time you open your todo dialog.</source>
-      <translation>Dit zorgt ervoor dat alle todo lijstitems van de server worden herladen wanneer u uw dialoogvenster opent.</translation>
+      <translation type="unfinished">This causes all todo list items to be reloaded from your server the next time you open your todo dialog.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1808"/>
       <source>Empty calendar item cache</source>
-      <translation>Lege agenda item cache</translation>
+      <translation type="unfinished">Empty calendar item cache</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1831"/>
       <source>Click here to reload the list of calendars from your calendar server.</source>
-      <translation>Klik hier om de lijst met agenda's van uw kalender-server te herladen.</translation>
+      <translation type="unfinished">Click here to reload the list of calendars from your calendar server.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1837"/>
       <source>&amp;Reload calendar list</source>
-      <translation>&amp;herladen lijst met kalenders</translation>
+      <translation type="unfinished">&amp;Reload calendar list</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2325"/>
       <source>You may need to restart the application to let these changes take effect</source>
-      <translation>U moet de applicatie wellicht opnieuw opstarten om deze wijzigingen toe te passen</translation>
+      <translation type="unfinished">You may need to restart the application to let these changes take effect</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2450"/>
       <source>Toolbar icon size:</source>
-      <translation>De grootte van de pictogrammen van de werkbalk:</translation>
+      <translation type="unfinished">Toolbar icon size:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2440"/>
       <source>List and tree item height:</source>
-      <translation>Lijst en boom object hoogte:</translation>
+      <translation type="unfinished">List and tree item height:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2473"/>
       <source>Reset the icon size</source>
-      <translation>Reset de pictogramgrootte</translation>
+      <translation type="unfinished">Reset the icon size</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2487"/>
       <source>Reset the item height</source>
-      <translation>Reset de pictogramm-hoogte</translation>
+      <translation type="unfinished">Reset the item height</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4038"/>
       <source>View text right to left (RTL)</source>
-      <translation>Weergavetekst rechts naar links (RTL)</translation>
+      <translation type="unfinished">View text right to left (RTL)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2566"/>
       <source>Search for shortcut</source>
-      <translation>Zoek voor snelkoppeling</translation>
+      <translation type="unfinished">Search for shortcut</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1848"/>
       <source>Ignore calendars that don't support todo items</source>
-      <translation>Agenda's die geen ondersteuning todopunten bieden negeren</translation>
+      <translation type="unfinished">Ignore calendars that don't support todo items</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2271"/>
       <source>Arabic</source>
-      <translation>Arabisch</translation>
+      <translation type="unfinished">Arabic</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2409"/>
       <source>Icons</source>
-      <translation>Pictogrammen</translation>
+      <translation type="unfinished">Icons</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2418"/>
       <source>Use internal icon theme instead of system icon theme</source>
-      <translation>Gebruik interne pictogramthema in plaats van het pictogram systeemthema</translation>
+      <translation type="unfinished">Use internal icon theme instead of system icon theme</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2954"/>
       <source>Script path:</source>
-      <translation>Pad naar script:</translation>
+      <translation type="unfinished">Script path:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="706"/>
       <source>Note folder name</source>
-      <translation>Naam van notitiemap</translation>
+      <translation type="unfinished">Note folder name</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3301"/>
       <source>Allow the note file name to be different from the headline.&lt;br&gt;Be aware of that ownCloud notes needs them to be the same!</source>
-      <translation>Laat de naam van het notitie bestand anders zijn dan de kop. &lt;br&gt;Wees bewust dat ownCloud notities wil dat ze gelijk zijn!</translation>
+      <translation type="unfinished">Allow the note file name to be different from the headline.&lt;br&gt;Be aware of that ownCloud notes needs them to be the same!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3304"/>
       <source>Allow note file name to be different from headline</source>
-      <translation>Sta toe dat de notitie bestandsnaam anders is dan de kop</translation>
+      <translation type="unfinished">Allow note file name to be different from headline</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3252"/>
       <source>Check this if you want to ignore all external modifications while you are editing the current note.</source>
-      <translation>Schakel dit selectievakje in als u wilt negeren van alle externe wijzigingen wilt tijdens het bewerken van de huidige notitie.</translation>
+      <translation type="unfinished">Check this if you want to ignore all external modifications while you are editing the current note.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3255"/>
       <source>Ignore all external modifications of the current note</source>
-      <translation>Negeren van alle externe wijzigingen van de huidige notitie</translation>
+      <translation type="unfinished">Ignore all external modifications of the current note</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3281"/>
       <source>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</source>
-      <translation>Dit kan je in Windows gebruiken wanneer je problemen hebt met nieuwe regels in de notitie-applicatie van ownCloud of Nextcloud</translation>
+      <translation type="unfinished">You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3335"/>
       <source>App instance</source>
-      <translation>App exemplaar</translation>
+      <translation type="unfinished">App instance</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3341"/>
       <source>Only allow one app instance at the same time</source>
-      <translation>Alleen één exemplaar van de app op hetzelfde moment toelaten</translation>
+      <translation type="unfinished">Only allow one app instance at the same time</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3437"/>
       <source>Add a custom file extension</source>
-      <translation>Voeg een aangepaste bestandsextensie toe</translation>
+      <translation type="unfinished">Add a custom file extension</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3451"/>
       <source>Remove a custom file extension</source>
-      <translation>Verwijder een aangepaste bestandsextensie</translation>
+      <translation type="unfinished">Remove a custom file extension</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3490"/>
       <source>If you add custom extensions just type in the extension, like "taskpaper".</source>
-      <translation>Als u aangepaste extensies toevoegt, typ dan de extensie in, zoals "notitieblok"</translation>
+      <translation type="unfinished">If you add custom extensions just type in the extension, like "taskpaper".</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3494"/>
       <source>Text file (txt)</source>
-      <translation>Tekstbestand (txt)</translation>
+      <translation type="unfinished">Text file (txt)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3522"/>
       <source>Path to external editor:</source>
-      <translation>Pad naar externe editor:</translation>
+      <translation type="unfinished">Path to external editor:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3357"/>
       <source>Don't show the update dialog automatically</source>
-      <translation>Toon het update dialoogvenster niet automatisch</translation>
+      <translation type="unfinished">Don't show the update dialog automatically</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3787"/>
       <location filename="../dialogs/settingsdialog.ui" line="3942"/>
       <source>Fonts</source>
-      <translation>Lettertypen</translation>
+      <translation type="unfinished">Fonts</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3810"/>
@@ -5053,7 +5058,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
       <location filename="../dialogs/settingsdialog.ui" line="4010"/>
       <location filename="../dialogs/settingsdialog.ui" line="4024"/>
       <source>Set a new font</source>
-      <translation>Lettertype instellen</translation>
+      <translation type="unfinished">Set a new font</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3821"/>
@@ -5061,84 +5066,86 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
       <location filename="../dialogs/settingsdialog.ui" line="3948"/>
       <location filename="../dialogs/settingsdialog.ui" line="3972"/>
       <source>Reset font</source>
-      <translation>Herinstellen lettertype</translation>
+      <translation type="unfinished">Reset font</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="312"/>
       <source>Debug</source>
-      <translation>Debug</translation>
+      <translation type="unfinished">Debug</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3674"/>
       <source>Debug information</source>
-      <translation>Debug informatie</translation>
+      <translation type="unfinished">Debug information</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3717"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Je kunt deze tekst &lt;span style="font-weight:600;"&gt; kopiëren en plakken&lt;/span&gt; (of delen van deze tekst) in een &lt;span style="font-weight:600;"&gt; probleem&lt;/span&gt; op de &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes problemen pagina&lt;/a&gt; Als je &lt;span style="font-weight:600;"&gt;vragen of problemen hebt&lt;/span&gt; met QOwnNotes. Gegevens die te gevoelig zijn, zijn verborgen in deze informatie.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3693"/>
       <source>&amp;Save debug information</source>
-      <translation>&amp; Sla debug informatie op</translation>
+      <translation type="unfinished">&amp;Save debug information</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="401"/>
       <source>hostname of proxy server</source>
-      <translation>hostname van de proxy server</translation>
+      <translation type="unfinished">hostname of proxy server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="402"/>
       <source>username for proxy server</source>
-      <translation>gebruikersnaam voor de proxy server</translation>
+      <translation type="unfinished">username for proxy server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="403"/>
       <source>password for proxy server</source>
-      <translation>wachtwoord voor de proxyserver</translation>
+      <translation type="unfinished">password for proxy server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="405"/>
       <source>HTTP(S) proxy</source>
-      <translation>HTTP(S) proxy</translation>
+      <translation type="unfinished">HTTP(S) proxy</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="406"/>
       <source>SOCKS5 proxy</source>
-      <translation>SOCKS5 proxy</translation>
+      <translation type="unfinished">SOCKS5 proxy</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1163"/>
       <source>Automatic (needs restart)</source>
-      <translation>Automatisch (moet opnieuw opstarten)</translation>
+      <translation type="unfinished">Automatic (needs restart)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1313"/>
       <source>Undefined key</source>
-      <translation>Niet-gedefinieerde sleutel</translation>
+      <translation type="unfinished">Undefined key</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1318"/>
       <source>Assign a new key</source>
-      <translation>Toewijzen van een nieuwe sleutel</translation>
+      <translation type="unfinished">Assign a new key</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1319"/>
       <source>Reset to default key</source>
-      <translation>Reset naar standaardsleutel</translation>
+      <translation type="unfinished">Reset to default key</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1398"/>
       <source>Shortcut already assigned</source>
-      <translation>Snelkoppeling al toegewezen</translation>
+      <translation type="unfinished">Shortcut already assigned</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1577"/>
       <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
-      <translation>De verbinding is geslaagd! Serverversie: %1 QOwnNotesAPI versie: %2</translation>
+      <translation type="unfinished">The connection was made successfully!
+Server version: %1
+QOwnNotesAPI version: %2</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1588"/>
@@ -5146,329 +5153,330 @@ QOwnNotesAPI version: %2</source>
 You also need to have the QOwnNotesAPI app installed and enabled!
 
 Connection error message: </source>
-      <translation>Er is een fout opgetreden bij het verbinden met de ownCloud Server! Je moet ook de QOwnNotesAPI app geïnstalleerd en ingeschakeld hebben! 
+      <translation type="unfinished">There was an error connecting to the ownCloud Server!
+You also need to have the QOwnNotesAPI app installed and enabled!
 
-Verbinding foutbericht: </translation>
+Connection error message: </translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1867"/>
       <source>Markdown files</source>
-      <translation>Markdown bestanden</translation>
+      <translation type="unfinished">Markdown files</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1894"/>
       <source>Disable usage tracking</source>
-      <translation>Gebruik bijhouden uitschakelen</translation>
+      <translation type="unfinished">Disable usage tracking</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1895"/>
       <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
-      <translation>Anonieme gebruiksgegevens helpen te beslissen welke delen van QOwnNotes worden verbeterd en welke bugs opgelost. &lt;br/&gt; Schakel het alleen uit als U daar echt niet ermee kan leven. &lt;br/&gt; &lt;br/&gt; Tracking echt uitschakelen?</translation>
+      <translation type="unfinished">Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2116"/>
       <source>new folder</source>
-      <translation>nieuwe map</translation>
+      <translation type="unfinished">new folder</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2154"/>
       <source>Remove note folder</source>
-      <translation>Verwijder de notitie map</translation>
+      <translation type="unfinished">Remove note folder</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2155"/>
       <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation>Verwijder de huidige notitie map &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+      <translation type="unfinished">Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2230"/>
       <source>Please select the folder where your notes will get stored to</source>
-      <translation>Selecteer de map waar je notities in zullen worden opgeslagen</translation>
+      <translation type="unfinished">Please select the folder where your notes will get stored to</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2267"/>
       <source>Loading folders from server</source>
-      <translation>Laden van mappen vanaf de server</translation>
+      <translation type="unfinished">Loading folders from server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2281"/>
       <source>No more folders were found in the current folder</source>
-      <translation>Geen mappen gevonden in de huidige map</translation>
+      <translation type="unfinished">No more folders were found in the current folder</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2354"/>
       <source>Loading folders in '%1' from server</source>
-      <translation>Laden van mappen in '%1' van server</translation>
+      <translation type="unfinished">Loading folders in '%1' from server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2414"/>
       <source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
-      <translation>Neem een kijkje op de &lt;a href="%1"&gt; Scripting documentatie&lt;/a&gt; om snel aan de slag te gaan.</translation>
+      <translation type="unfinished">Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2416"/>
       <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
-      <translation>Als u toegang wilt tot een bepaalde functie in QOwnNotes maak daar AUB een onderwerp uit op de &lt;a href="%1"&gt; pagina voor vragen in QOwnNotes&lt;/a&gt;.</translation>
+      <translation type="unfinished">If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2437"/>
       <source>Check for script updates</source>
-      <translation>Controleren op updates van script</translation>
+      <translation type="unfinished">Check for script updates</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2444"/>
       <source>Add local script</source>
-      <translation>Voeg lokaal script toe</translation>
+      <translation type="unfinished">Add local script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2448"/>
       <source>Add an existing, local script</source>
-      <translation>Voeg een bestaand, lokaal script toe</translation>
+      <translation type="unfinished">Add an existing, local script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3502"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3559"/>
       <source>INI files</source>
-      <translation>INI-bestanden</translation>
+      <translation type="unfinished">INI files</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3538"/>
       <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
-      <translation>Wilt U echt de instellingen importeren? Uw huidige instellingen zullen worden verwijderd en niet elke instelling kan worden hersteld, zoals de notaomslag instellingen en die scripts die U heeft gebruikt. Ook moet U enkele instellingen aanpassen, met name tussen de platformen, maar uw notities blijfen intact!</translation>
+      <translation type="unfinished">Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3548"/>
       <source>The application will be quit after the import.</source>
-      <translation>De toepassing zal worden afgesloten na de import.</translation>
+      <translation type="unfinished">The application will be quit after the import.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3549"/>
       <source>The application will be restarted after the import.</source>
-      <translation>De toepassing zal worden opnieuw opgestart na de import.</translation>
+      <translation type="unfinished">The application will be restarted after the import.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2431"/>
       <source>Find a script in the script repository</source>
-      <translation>Vind een script in het script archief</translation>
+      <translation type="unfinished">Find a script in the script repository</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="238"/>
       <source>Menu bar</source>
-      <translation>Menubalk</translation>
+      <translation type="unfinished">Menu bar</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="239"/>
       <source>Show menu bar item</source>
-      <translation>Toon menubalk</translation>
+      <translation type="unfinished">Show menu bar item</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1399"/>
       <source>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</source>
-      <translation>De snelkoppeling &lt;strong&gt;%1&lt;/strong&gt; is al toegewezen aan &lt;strong&gt;%2&lt;/strong&gt;! Wilt u naar de snelkoppeling?</translation>
+      <translation type="unfinished">The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2529"/>
       <source>Remove script</source>
-      <translation>Verwijder script</translation>
+      <translation type="unfinished">Remove script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2530"/>
       <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation>Verwijder het huidige script &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+      <translation type="unfinished">Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2581"/>
       <source>QML files</source>
-      <translation>QML bestanden</translation>
+      <translation type="unfinished">QML files</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2582"/>
       <source>Please select your QML file</source>
-      <translation>Selecteer uw QML bestand</translation>
+      <translation type="unfinished">Please select your QML file</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2671"/>
       <source>Open repository</source>
-      <translation>Open archief</translation>
+      <translation type="unfinished">Open repository</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2731"/>
       <source>Your script seems to be valid</source>
-      <translation>Uw script lijkt correct te zijn</translation>
+      <translation type="unfinished">Your script seems to be valid</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2732"/>
       <source>There were script errors:
 %1</source>
-      <translation>Er waren scriptfouten:
+      <translation type="unfinished">There were script errors:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2801"/>
       <source>File extension</source>
-      <translation>Bestandsextensie</translation>
+      <translation type="unfinished">File extension</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2802"/>
       <source>Enter your custom file extension:</source>
-      <translation>Voer uw aangepaste bestandsextensie in:</translation>
+      <translation type="unfinished">Enter your custom file extension:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3088"/>
       <source>Calendar cache emptied</source>
-      <translation>Kalender cache geleegd</translation>
+      <translation type="unfinished">Calendar cache emptied</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3089"/>
       <source>Your calendar cache was emptied.</source>
-      <translation>Uw agenda-cache is leeggemaakt.</translation>
+      <translation type="unfinished">Your calendar cache was emptied.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3167"/>
       <source>Reset toolbars and exit</source>
-      <translation>Herstellen van de werkbalken en afsluiten</translation>
+      <translation type="unfinished">Reset toolbars and exit</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3168"/>
       <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
-      <translation>Wilt u echt alle werkbalken herstellen? De toepassing zal worden gesloten in het proces, de standaardwerkbalken zullen worden hersteld als u het opnieuw start.</translation>
+      <translation type="unfinished">Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3172"/>
       <source>Reset and &amp;exit</source>
-      <translation>Reset en &amp;afsluiten</translation>
+      <translation type="unfinished">Reset and &amp;exit</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3334"/>
       <source>Log file cleared</source>
-      <translation>Logboekbestand gewist</translation>
+      <translation type="unfinished">Log file cleared</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3335"/>
       <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
-      <translation>Het log bestand &lt;strong&gt;%1&lt;/strong&gt; werd gewist.</translation>
+      <translation type="unfinished">The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3371"/>
       <source>Executable files</source>
-      <translation>Uitvoerbare bestanden</translation>
+      <translation type="unfinished">Executable files</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3372"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3374"/>
       <source>All files</source>
-      <translation>Alle bestanden</translation>
+      <translation type="unfinished">All files</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3382"/>
       <source>Please select the path of your git executable</source>
-      <translation>Selecteer het pad van uw uitvoerbare git</translation>
+      <translation type="unfinished">Please select the path of your git executable</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3472"/>
       <source>Do you really want to reset the overrides of all message boxes?</source>
-      <translation>Wilt u de overrides van alle berichtvakken werkelijk resetten?</translation>
+      <translation type="unfinished">Do you really want to reset the overrides of all message boxes?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1855"/>
       <source>The Database was reinitialized.</source>
-      <translation>De database is opnieuw geïnitialiseerd.</translation>
+      <translation type="unfinished">The Database was reinitialized.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="87"/>
       <source>New script</source>
-      <translation>Nieuw script</translation>
+      <translation type="unfinished">New script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="90"/>
       <source>You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</source>
-      <translation>U kunt het git klant hier downloaden: &lt;a href="%url"&gt; Git voor Windows&lt;/a&gt;</translation>
+      <translation type="unfinished">You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="360"/>
       <source>enabled</source>
-      <translation>ingeschakeld</translation>
+      <translation type="unfinished">enabled</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="360"/>
       <source>disabled</source>
-      <translation>uitgeschakeld</translation>
+      <translation type="unfinished">disabled</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="363"/>
       <source>Portable mode is currently:</source>
-      <translation>Draagbare modus is momenteel:</translation>
+      <translation type="unfinished">Portable mode is currently:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="366"/>
       <source>In portable mode</source>
-      <translation>In draagbare modus</translation>
+      <translation type="unfinished">In portable mode</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="367"/>
       <source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary's location</source>
-      <translation>de interne sqlite database en de instellingen worden opgeslagen in een map van de &lt;code&gt;gegevens&lt;/code&gt; op de binaire bestand locatie</translation>
+      <translation type="unfinished">the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary's location</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="370"/>
       <source>the settings will be stored in an ini file</source>
-      <translation>de instellingen worden opgeslagen in een ini-bestand</translation>
+      <translation type="unfinished">the settings will be stored in an ini file</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="371"/>
       <source>the note folders, script paths and path to an external editor will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders, scripts and external editor will be loaded regardless where your QOwnNotes installation is currently located</source>
-      <translation>de notitie folders, de paden en het pad worden automatisch naar een externe editor opgeslagen ten opzichte van de map &lt;code&gt;data&lt;/code&gt; zodat de juiste notitiemappen, scripts en externe editor zullen worden geladen ongeacht waar uw QOwnNotes installatie zich bevindt</translation>
+      <translation type="unfinished">the note folders, script paths and path to an external editor will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders, scripts and external editor will be loaded regardless where your QOwnNotes installation is currently located</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="379"/>
       <source>It will be activated if you run QOwnNotes with the parameter &lt;code&gt;--portable&lt;/code&gt;.</source>
-      <translation>Deze zal worden geactiveerd als u QOwnNotes met de &lt;code&gt;--draagbare&lt;/code&gt; parameter uitvoert.</translation>
+      <translation type="unfinished">It will be activated if you run QOwnNotes with the parameter &lt;code&gt;--portable&lt;/code&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1868"/>
       <source>Save debug information</source>
-      <translation>Sla debug informatie op</translation>
+      <translation type="unfinished">Save debug information</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1915"/>
       <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
-      <translation>Wil je echt alle instellingen wissen, de database verwijderen en QOwnNotes afsluiten? 
+      <translation type="unfinished">Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
-Je notities zullen intact blijven!</translation>
+Your notes will stay intact!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1918"/>
       <source>Clear and &amp;exit</source>
-      <translation>Verwijder gegevens en &amp;afsluiten</translation>
+      <translation type="unfinished">Clear and &amp;exit</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1849"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1918"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3172"/>
       <source>&amp;Cancel</source>
-      <translation>&amp;Annuleer</translation>
+      <translation type="unfinished">&amp;Cancel</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="384"/>
       <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
-      <translation>Je vindt een &lt;code&gt;QOwnNotesPortable.exe&lt;/code&gt; in jouw release pad als je QOwnNotes in portable modus start.</translation>
+      <translation type="unfinished">You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1846"/>
       <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
-      <translation>Wilt u echt de lokale database wissen? Dit zal ook uw geconfigureerde notitie mappen en je gecachde taken items verwijderen!</translation>
+      <translation type="unfinished">Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1849"/>
       <source>Clear &amp;database</source>
-      <translation>&amp;database wissen</translation>
+      <translation type="unfinished">Clear &amp;database</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2029"/>
       <source>Select editor application</source>
-      <translation>Selecteer editor applicatie</translation>
+      <translation type="unfinished">Select editor application</translation>
     </message>
   </context>
   <context>
@@ -5476,17 +5484,17 @@ Je notities zullen intact blijven!</translation>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="20"/>
       <source>Share note</source>
-      <translation>Deel notitie</translation>
+      <translation type="unfinished">Share note</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="30"/>
       <source>Share note on ownCloud</source>
-      <translation>Deel notitie via ownCloud</translation>
+      <translation type="unfinished">Share note on ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="37"/>
       <source>The public url of your note</source>
-      <translation>De publieke url van je notitie</translation>
+      <translation type="unfinished">The public url of your note</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.cpp" line="57"/>
@@ -5499,102 +5507,102 @@ Je notities zullen intact blijven!</translation>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="14"/>
       <source>Insert table</source>
-      <translation>Invoegen tabel</translation>
+      <translation type="unfinished">Insert table</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="24"/>
       <source>Create table</source>
-      <translation>Tabel maken</translation>
+      <translation type="unfinished">Create table</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="30"/>
       <source>Column width:</source>
-      <translation>De breedte van de kolom:</translation>
+      <translation type="unfinished">Column width:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="37"/>
       <source>Insert a table heading separator</source>
-      <translation>Plaats een tafelopscheider</translation>
+      <translation type="unfinished">Insert a table heading separator</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="47"/>
       <source>Columns:</source>
-      <translation>Kolommen:</translation>
+      <translation type="unfinished">Columns:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="67"/>
       <source>Rows:</source>
-      <translation>Rijen:</translation>
+      <translation type="unfinished">Rows:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="87"/>
       <source>The amount of spaces in a column</source>
-      <translation>De hoeveelheid spaties in een kolom</translation>
+      <translation type="unfinished">The amount of spaces in a column</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="119"/>
       <source>Select table layout:</source>
-      <translation>Selecteer tabel layout:</translation>
+      <translation type="unfinished">Select table layout:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="126"/>
       <source>Separator column width:</source>
-      <translation>De breedte van de kolom scheidingsteken:</translation>
+      <translation type="unfinished">Separator column width:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="133"/>
       <source>The amount of dash characters in the separator</source>
-      <translation>Het aantal dash karakters in de separator</translation>
+      <translation type="unfinished">The amount of dash characters in the separator</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="150"/>
       <source>Import CSV file</source>
-      <translation>CSV-importbestand</translation>
+      <translation type="unfinished">Import CSV file</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="173"/>
       <source>Separator:</source>
-      <translation>Scheidingsteken:</translation>
+      <translation type="unfinished">Separator:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="180"/>
       <source>Select file</source>
-      <translation>Selecteer bestand</translation>
+      <translation type="unfinished">Select file</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="191"/>
       <source>Please select the CSV file you want to import:</source>
-      <translation>Selecteer het CSV-bestand dat u wilt importeren:</translation>
+      <translation type="unfinished">Please select the CSV file you want to import:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="231"/>
       <source>CSV file</source>
-      <translation>CSV-bestand</translation>
+      <translation type="unfinished">CSV file</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="238"/>
       <source>First line is the table heading</source>
-      <translation>Eerste lijn is de tabelkop</translation>
+      <translation type="unfinished">First line is the table heading</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="261"/>
       <source>Text-delimiter:</source>
-      <translation>Tekst-scheidingsteken:</translation>
+      <translation type="unfinished">Text-delimiter:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.cpp" line="148"/>
       <source>CSV files</source>
-      <translation>CSV-bestanden</translation>
+      <translation type="unfinished">CSV files</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.cpp" line="149"/>
       <source>All files</source>
-      <translation>Alle bestanden</translation>
+      <translation type="unfinished">All files</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.cpp" line="154"/>
       <source>Select CSV file to import</source>
-      <translation>Selecteer te importeren CSV-bestand</translation>
+      <translation type="unfinished">Select CSV file to import</translation>
     </message>
   </context>
   <context>
@@ -5602,17 +5610,17 @@ Je notities zullen intact blijven!</translation>
     <message>
       <location filename="../dialogs/tagadddialog.ui" line="20"/>
       <source>Add a new tag</source>
-      <translation>Een nieuw label toevoegen</translation>
+      <translation type="unfinished">Add a new tag</translation>
     </message>
     <message>
       <location filename="../dialogs/tagadddialog.ui" line="30"/>
       <source>Add new tag</source>
-      <translation>Voeg nieuw label toe</translation>
+      <translation type="unfinished">Add new tag</translation>
     </message>
     <message>
       <location filename="../dialogs/tagadddialog.ui" line="47"/>
       <source>New tag</source>
-      <translation>Nieuw label</translation>
+      <translation type="unfinished">New tag</translation>
     </message>
   </context>
   <context>
@@ -5620,130 +5628,130 @@ Je notities zullen intact blijven!</translation>
     <message>
       <location filename="../dialogs/tododialog.ui" line="14"/>
       <source>Todo</source>
-      <translation>Taken</translation>
+      <translation type="unfinished">Todo</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="78"/>
       <location filename="../dialogs/tododialog.ui" line="85"/>
       <source>Priority</source>
-      <translation>Prioriteit</translation>
+      <translation type="unfinished">Priority</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="113"/>
       <source>Reminder</source>
-      <translation>Herinnering</translation>
+      <translation type="unfinished">Reminder</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="157"/>
       <source>Summary</source>
-      <translation>Samenvatting</translation>
+      <translation type="unfinished">Summary</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="191"/>
       <source>Save</source>
-      <translation>Opslaan</translation>
+      <translation type="unfinished">Save</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="222"/>
       <source>Note…</source>
-      <translation>Notitie…</translation>
+      <translation type="unfinished">Note…</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="100"/>
       <source>Save and insert into note</source>
-      <translation>Opslaan en invoegen in notitie</translation>
+      <translation type="unfinished">Save and insert into note</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="208"/>
       <source>Remove</source>
-      <translation>Verwijderen</translation>
+      <translation type="unfinished">Remove</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="278"/>
       <source>Show completed items</source>
-      <translation>Toon voltooide items</translation>
+      <translation type="unfinished">Show completed items</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="285"/>
       <source>Reload the todo list from server</source>
-      <translation>De takenlijst van de server herladen</translation>
+      <translation type="unfinished">Reload the todo list from server</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="288"/>
       <source>Reload…</source>
-      <translation>Herladen…</translation>
+      <translation type="unfinished">Reload…</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="319"/>
       <source>Search or create todo item</source>
-      <translation>Zoek of maak takenlijst item</translation>
+      <translation type="unfinished">Search or create todo item</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="302"/>
       <source>select your todo list</source>
-      <translation>selecteer je takenlijst</translation>
+      <translation type="unfinished">select your todo list</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="188"/>
       <source>Save the current todo item</source>
-      <translation>De huidige todo item opslaan</translation>
+      <translation type="unfinished">Save the current todo item</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="104"/>
       <source>Save the current todo item and insert a link to it into the current note</source>
-      <translation>Het huidige todo item slaat en een link op en voegt het in de huidige notitie</translation>
+      <translation type="unfinished">Save the current todo item and insert a link to it into the current note</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="113"/>
       <source>Import the current todo item as new note</source>
-      <translation>Het huidige todo-item importeren als nieuwe notitie</translation>
+      <translation type="unfinished">Import the current todo item as new note</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="109"/>
       <source>Import as note</source>
-      <translation>Importeren als notitie</translation>
+      <translation type="unfinished">Import as note</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="205"/>
       <source>Remove the current todo item</source>
-      <translation>Het huidige todo-item verwijderen</translation>
+      <translation type="unfinished">Remove the current todo item</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="309"/>
       <source>Todo list items are being loaded from the server</source>
-      <translation>Takenlijst items worden van de server geladen</translation>
+      <translation type="unfinished">Todo list items are being loaded from the server</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="124"/>
       <source>Reload from server</source>
-      <translation>Herladen van de server</translation>
+      <translation type="unfinished">Reload from server</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="128"/>
       <source>Reload tasks from server</source>
-      <translation>Taken van de server herladen</translation>
+      <translation type="unfinished">Reload tasks from server</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="133"/>
       <source>Clear cache and reload</source>
-      <translation>Clear cache en opnieuw laden</translation>
+      <translation type="unfinished">Clear cache and reload</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="137"/>
       <source>Clear calendar cache and reload tasks from server</source>
-      <translation>Cache van de agenda wissen en taken van de server herladen</translation>
+      <translation type="unfinished">Clear calendar cache and reload tasks from server</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="578"/>
       <source>Remove todo item</source>
-      <translation>Verwijder takenlijst item</translation>
+      <translation type="unfinished">Remove todo item</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="579"/>
       <source>Remove the selected todo item?
 This cannot be undone!</source>
-      <translation>Het geselecteerde takenlijst item verwijderen? 
-Dit kan niet ongedaan worden gemaakt!</translation>
+      <translation type="unfinished">Remove the selected todo item?
+This cannot be undone!</translation>
     </message>
   </context>
   <context>
@@ -5751,134 +5759,134 @@ Dit kan niet ongedaan worden gemaakt!</translation>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="23"/>
       <source>Select a menu</source>
-      <translation>Selecteer een menu</translation>
+      <translation type="unfinished">Select a menu</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="26"/>
       <source>Lists the avaliable menus to get the corresponding actions</source>
-      <translation>Lijsten van de beschikbare menu's om de overeenkomstige acties te krijgen</translation>
+      <translation type="unfinished">Lists the avaliable menus to get the corresponding actions</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="33"/>
       <source>Select toolbar</source>
-      <translation>Werkbalk selecteren</translation>
+      <translation type="unfinished">Select toolbar</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="36"/>
       <source>List the available toolbars. The selected one will be edited</source>
-      <translation>Maak lijst van de beschikbare werkbalken. De geselecteerde wordt bewerkt</translation>
+      <translation type="unfinished">List the available toolbars. The selected one will be edited</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="43"/>
       <source>Lists the actions in the selected toolbar</source>
-      <translation>Maak een lijst van de acties in de geselecteerde werkbalk</translation>
+      <translation type="unfinished">Lists the actions in the selected toolbar</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="52"/>
       <source>Add new Toolbar</source>
-      <translation>Nieuwe werkbalk toevoegen</translation>
+      <translation type="unfinished">Add new Toolbar</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="55"/>
       <source>New</source>
-      <translation>Nieuw</translation>
+      <translation type="unfinished">New</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="66"/>
       <source>Delete selected toolbar</source>
-      <translation>Geselecteerde werkbalk verwijderen</translation>
+      <translation type="unfinished">Delete selected toolbar</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="69"/>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="168"/>
       <source>Remove</source>
-      <translation>Verwijderen</translation>
+      <translation type="unfinished">Remove</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="82"/>
       <source>Lists the available actions for the selected menu</source>
-      <translation>Lijsten van de beschikbare acties voor het geselecteerde menu</translation>
+      <translation type="unfinished">Lists the available actions for the selected menu</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="104"/>
       <source>Move Up</source>
-      <translation>Omhoog</translation>
+      <translation type="unfinished">Move Up</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="107"/>
       <source>Moves the selected toolbar item up</source>
-      <translation>Hiermee verplaatst u het geselecteerde item op menubalk omhoog</translation>
+      <translation type="unfinished">Moves the selected toolbar item up</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="110"/>
       <source>Move &amp;Up</source>
-      <translation>Verplaatsen &amp;Omhoog</translation>
+      <translation type="unfinished">Move &amp;Up</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="121"/>
       <source>Move Down</source>
-      <translation>Omlaag</translation>
+      <translation type="unfinished">Move Down</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="124"/>
       <source>moves the selected toolbar item down</source>
-      <translation>hiermee verplaats je het geselecteerde werkbalkitem omlaag</translation>
+      <translation type="unfinished">moves the selected toolbar item down</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="127"/>
       <source>Move &amp;Down</source>
-      <translation>Verplaatsen &amp;Omlaag</translation>
+      <translation type="unfinished">Move &amp;Down</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="151"/>
       <source>Insert</source>
-      <translation>Invoegen</translation>
+      <translation type="unfinished">Insert</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="154"/>
       <source>Adds the selected menu action to the toolbar</source>
-      <translation>Het geselecteerde menu actie toevoegen aan de werkbalk</translation>
+      <translation type="unfinished">Adds the selected menu action to the toolbar</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="157"/>
       <source>&amp;Insert</source>
-      <translation>&amp;Invoegen</translation>
+      <translation type="unfinished">&amp;Insert</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="171"/>
       <source>Removes the selected item from the active toolbar</source>
-      <translation>Hiermee verwijder je het geselecteerde item uit de actieve werkbalk</translation>
+      <translation type="unfinished">Removes the selected item from the active toolbar</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="174"/>
       <source>&amp;Remove</source>
-      <translation>&amp;Verwijderen</translation>
+      <translation type="unfinished">&amp;Remove</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="198"/>
       <source>Separator</source>
-      <translation>Scheidingsteken</translation>
+      <translation type="unfinished">Separator</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="201"/>
       <source>&amp;Separator</source>
-      <translation>Scheidingsteken</translation>
+      <translation type="unfinished">&amp;Separator</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="192"/>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="216"/>
       <source>--(separator)--</source>
-      <translation>--(scheidingsteken)--</translation>
+      <translation type="unfinished">--(separator)--</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="309"/>
       <source>Remove current toolbar</source>
-      <translation>Huidige werkbalk verwijderen</translation>
+      <translation type="unfinished">Remove current toolbar</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="310"/>
       <source>Remove the current toolbar?</source>
-      <translation>De huidige werkbalk verwijderen?</translation>
+      <translation type="unfinished">Remove the current toolbar?</translation>
     </message>
   </context>
   <context>
@@ -5886,32 +5894,32 @@ Dit kan niet ongedaan worden gemaakt!</translation>
     <message>
       <location filename="../dialogs/trashdialog.ui" line="14"/>
       <source>Trashed notes</source>
-      <translation>Verwijderde notities</translation>
+      <translation type="unfinished">Trashed notes</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="24"/>
       <source>&amp;Restore selected note on server</source>
-      <translation>Herstel geselecteerde notitie op de server</translation>
+      <translation type="unfinished">&amp;Restore selected note on server</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="25"/>
       <source>&lt;h3&gt;Slower, but with note versions&lt;/h3&gt;&lt;p&gt;The note will be restored on your ownCloud server with all versions.&lt;/p&gt;&lt;p&gt;You will have to wait until it is synced to QOwnNotes by ownCloud sync.&lt;/p&gt;</source>
-      <translation>&lt;h3&gt; Langzamer, maar met notitie versies &lt;/h3&gt;&lt;p&gt; De notitie wordt hersteld op je ownCloud server met alle versies.&lt;/p&gt;&lt;p&gt; Je zult moeten wachten totdat het wordt gesynchroniseerd met QOwnNotes door ownCloud sync.&lt;/p&gt;</translation>
+      <translation type="unfinished">&lt;h3&gt;Slower, but with note versions&lt;/h3&gt;&lt;p&gt;The note will be restored on your ownCloud server with all versions.&lt;/p&gt;&lt;p&gt;You will have to wait until it is synced to QOwnNotes by ownCloud sync.&lt;/p&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="38"/>
       <source>&amp;Download selected note</source>
-      <translation>&amp;Geselecteerde notitie downloaden</translation>
+      <translation type="unfinished">&amp;Download selected note</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="39"/>
       <source>&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</source>
-      <translation>&lt;h3&gt;Sneller, maar zonder de versies&lt;/h3&gt; &lt;p&gt;De notitie zal worden gemaakt met de tekst van de voorvertoning.&lt;/p&gt; &lt;p&gt;De notitie versies op uw ownCloud server niet worden teruggezet en de notitie blijft in de Prullenbak.&lt;/p&gt; &lt;p&gt;je kunt altijd de notitie en de versies later herstellen.&lt;/p&gt;</translation>
+      <translation type="unfinished">&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="52"/>
       <source>&amp;Cancel</source>
-      <translation>Annuleer</translation>
+      <translation type="unfinished">&amp;Cancel</translation>
     </message>
   </context>
   <context>
@@ -5919,115 +5927,116 @@ Dit kan niet ongedaan worden gemaakt!</translation>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="14"/>
       <source>Update available</source>
-      <translation>Update beschikbaar</translation>
+      <translation type="unfinished">Update available</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="26"/>
       <source>A new update of QOwnNotes is available!</source>
-      <translation>Een nieuwe update van QOwnNotes is beschikbaar!
-	</translation>
+      <translation type="unfinished">A new update of QOwnNotes is available!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="69"/>
       <source>Do you want to download the new version?</source>
-      <translation>Wil je de nieuwe versie downloaden?</translation>
+      <translation type="unfinished">Do you want to download the new version?</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="76"/>
       <source>QOwnNotes will be downloaded in your default browser.</source>
-      <translation>QOwnNotes wordt gedownload in je standaard browser.</translation>
+      <translation type="unfinished">QOwnNotes will be downloaded in your default browser.</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="83"/>
       <source>Keep in mind that QOwnNotes needs to run from a location where you have write access to for the automatic update to work!</source>
-      <translation>Houd in gedachten dat U QOwnNotes moet uitvoeren vanaf een locatie waar U schrijftoegang hebt zodat de automatische update werkt!</translation>
+      <translation type="unfinished">Keep in mind that QOwnNotes needs to run from a location where you have write access to for the automatic update to work!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="93"/>
       <source>&lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes"&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
-      <translation>&lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes"&gt;Werk mee met QOwnNotes&lt;/a&gt;</translation>
+      <translation type="unfinished">&lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes"&gt;Get involved with QOwnNotes&lt;/a&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="106"/>
       <source>%p% downloaded</source>
-      <translation>%p% gedownload</translation>
+      <translation type="unfinished">%p% downloaded</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="45"/>
       <source>&amp;Update</source>
-      <translation>&amp;Update</translation>
+      <translation type="unfinished">&amp;Update</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="58"/>
       <source>&amp;Download latest</source>
-      <translation>Download hier de laatste</translation>
+      <translation type="unfinished">&amp;Download latest</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="56"/>
       <source>Just download</source>
-      <translation>Alleen downloaden</translation>
+      <translation type="unfinished">Just download</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="72"/>
       <source>&amp;Skip version</source>
-      <translation>Sla versie over</translation>
+      <translation type="unfinished">&amp;Skip version</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="82"/>
       <source>&amp;Disable dialog</source>
-      <translation>Dialoogvenster &amp;uitschakelen</translation>
+      <translation type="unfinished">&amp;Disable dialog</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="83"/>
       <source>Don't show this dialog automatically</source>
-      <translation>Dit dialoogvenster niet automatisch weergeven</translation>
+      <translation type="unfinished">Don't show this dialog automatically</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="93"/>
       <source>&amp;Cancel</source>
-      <translation>Annuleer</translation>
+      <translation type="unfinished">&amp;Cancel</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="248"/>
       <source>Download error</source>
-      <translation>Download fout</translation>
+      <translation type="unfinished">Download error</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="249"/>
       <source>Error while downloading:
 %1</source>
-      <translation>Fout tijdens het downloaden van:
+      <translation type="unfinished">Error while downloading:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="251"/>
       <source>network error: %1</source>
-      <translation>fout van het netwerk: %1</translation>
+      <translation type="unfinished">network error: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="274"/>
       <location filename="../dialogs/updatedialog.cpp" line="295"/>
       <location filename="../dialogs/updatedialog.cpp" line="392"/>
       <source>File error</source>
-      <translation>Bestandsfouten</translation>
+      <translation type="unfinished">File error</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="275"/>
       <location filename="../dialogs/updatedialog.cpp" line="393"/>
       <source>Could not open temporary file:
 %1</source>
-      <translation>Kan het tijdelijke bestand niet openen: %1</translation>
+      <translation type="unfinished">Could not open temporary file:
+%1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="296"/>
       <source>Could not store downloaded file:
 %1</source>
-      <translation>Kan gedownloade bestand niet opslaan: %1</translation>
+      <translation type="unfinished">Could not store downloaded file:
+%1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="350"/>
       <source>Do you want to update and restart QOwnNotes?</source>
-      <translation>Wilt U QOwnNotes updaten en opnieuw opstarten?</translation>
+      <translation type="unfinished">Do you want to update and restart QOwnNotes?</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="365"/>
@@ -6038,51 +6047,51 @@ Dit kan niet ongedaan worden gemaakt!</translation>
       <location filename="../dialogs/updatedialog.cpp" line="489"/>
       <location filename="../dialogs/updatedialog.cpp" line="498"/>
       <source>Error</source>
-      <translation>Fout</translation>
+      <translation type="unfinished">Error</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="366"/>
       <source>Could not find updater file:
 %1</source>
-      <translation>Kan updater bestand niet vinden: 
+      <translation type="unfinished">Could not find updater file:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="453"/>
       <source>Updater script '%1' doesn't exist!</source>
-      <translation>Update script '%1' bestaat niet!</translation>
+      <translation type="unfinished">Updater script '%1' doesn't exist!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="462"/>
       <source>Updater unzip executable '%1' doesn't exist!</source>
-      <translation>Updater unzip executable '%1' bestaat niet!</translation>
+      <translation type="unfinished">Updater unzip executable '%1' doesn't exist!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="471"/>
       <location filename="../dialogs/updatedialog.cpp" line="480"/>
       <source>Could not copy updater script '%1' to '%2'!</source>
-      <translation>Kon de updater script '%1' naar '%2' niet kopiëren!</translation>
+      <translation type="unfinished">Could not copy updater script '%1' to '%2'!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="490"/>
       <source>Couldn't find updater script: %1</source>
-      <translation>Updater script kon het niet vinden: %1</translation>
+      <translation type="unfinished">Couldn't find updater script: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="499"/>
       <source>Couldn't find unzip executable: %1</source>
-      <translation>Kon uitvoerbare unzip bestand: %1 niet vinden</translation>
+      <translation type="unfinished">Couldn't find unzip executable: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="349"/>
       <location filename="../dialogs/updatedialog.cpp" line="505"/>
       <source>Proceed with update</source>
-      <translation>Doorgaan met bijwerken</translation>
+      <translation type="unfinished">Proceed with update</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="506"/>
       <source>The download is now finished. Do you want to update and restart QOwnNotes?</source>
-      <translation>De download is nu voltooid. Wilt U QOwnNotes updaten en opnieuw opstarten?</translation>
+      <translation type="unfinished">The download is now finished. Do you want to update and restart QOwnNotes?</translation>
     </message>
   </context>
   <context>
@@ -6092,32 +6101,32 @@ Dit kan niet ongedaan worden gemaakt!</translation>
       <location filename="../services/updateservice.cpp" line="116"/>
       <location filename="../services/updateservice.cpp" line="135"/>
       <source>Update-checker error</source>
-      <translation>Updatecontroleur fout</translation>
+      <translation type="unfinished">Update-checker error</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="103"/>
       <source>Network reply error: %1</source>
-      <translation>Antwoord fout van het netwerk: %1</translation>
+      <translation type="unfinished">Network reply error: %1</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="117"/>
       <source>No data was received by the network request!</source>
-      <translation>Geen gegevens werden ontvangen door de netwerkaanvraag!</translation>
+      <translation type="unfinished">No data was received by the network request!</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="136"/>
       <source>The data from the network request could not be interpreted!</source>
-      <translation>De gegevens uit de netwerkaanvraag konden niet worden geïnterpreteerd!</translation>
+      <translation type="unfinished">The data from the network request could not be interpreted!</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="228"/>
       <source>No updates</source>
-      <translation>Geen updates</translation>
+      <translation type="unfinished">No updates</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="229"/>
       <source>There are no updates available.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; is the latest version.</source>
-      <translation>Er zijn geen updates beschikbaar. &lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; is de nieuwste versie.</translation>
+      <translation type="unfinished">There are no updates available.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; is the latest version.</translation>
     </message>
   </context>
   <context>
@@ -6125,27 +6134,27 @@ Dit kan niet ongedaan worden gemaakt!</translation>
     <message>
       <location filename="../dialogs/versiondialog.ui" line="14"/>
       <source>Note versions on your ownCloud server</source>
-      <translation>Notitie versies op je ownCloud server</translation>
+      <translation type="unfinished">Note versions on your ownCloud server</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.ui" line="65"/>
       <source>Diff</source>
-      <translation>Diff</translation>
+      <translation type="unfinished">Diff</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.ui" line="98"/>
       <source>Note text</source>
-      <translation>Notitietekst</translation>
+      <translation type="unfinished">Note text</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.cpp" line="25"/>
       <source>&amp;Restore selected version</source>
-      <translation>&amp;Herstel geselecteerde versie</translation>
+      <translation type="unfinished">&amp;Restore selected version</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.cpp" line="34"/>
       <source>&amp;Cancel</source>
-      <translation>&amp;Annuleer</translation>
+      <translation type="unfinished">&amp;Cancel</translation>
     </message>
   </context>
   <context>
@@ -6154,108 +6163,108 @@ Dit kan niet ongedaan worden gemaakt!</translation>
       <location filename="../dialogs/welcomedialog.ui" line="14"/>
       <location filename="../dialogs/welcomedialog.ui" line="56"/>
       <source>Welcome to QOwnNotes</source>
-      <translation>Welkom bij QOwnNotes</translation>
+      <translation type="unfinished">Welcome to QOwnNotes</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="24"/>
       <source>the plain-text file notepad with markdown support and ownCloud integration</source>
-      <translation>de tekst onder opmaak notepad met markdown ondersteuning en ownCloud integratie</translation>
+      <translation type="unfinished">the plain-text file notepad with markdown support and ownCloud integration</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="88"/>
       <source>&amp;Back</source>
-      <translation>&amp;Terug</translation>
+      <translation type="unfinished">&amp;Back</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="99"/>
       <source>&amp;Next</source>
-      <translation>&amp;Volgende</translation>
+      <translation type="unfinished">&amp;Next</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="116"/>
       <source>&amp;Finished</source>
-      <translation>&amp;Klaar</translation>
+      <translation type="unfinished">&amp;Finished</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="139"/>
       <source>&amp;Cancel</source>
-      <translation>&amp;Annuleren</translation>
+      <translation type="unfinished">&amp;Cancel</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="168"/>
       <location filename="../dialogs/welcomedialog.cpp" line="194"/>
       <source>Note folder</source>
-      <translation>Notities map</translation>
+      <translation type="unfinished">Note folder</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="184"/>
       <source>Create note folder if not existing</source>
-      <translation>Maak de notitiemap als deze nog niet bestaat</translation>
+      <translation type="unfinished">Create note folder if not existing</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="225"/>
       <source>Note folder path</source>
-      <translation>Pad naar notitiemap</translation>
+      <translation type="unfinished">Note folder path</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="232"/>
       <source>Select folder</source>
-      <translation>Selecteer map</translation>
+      <translation type="unfinished">Select folder</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="307"/>
       <source>Open ownCloud settings</source>
-      <translation>Open ownCloud &amp;instellingen</translation>
+      <translation type="unfinished">Open ownCloud settings</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="349"/>
       <source>Open network settings</source>
-      <translation>Open netwerkinstellingen</translation>
+      <translation type="unfinished">Open network settings</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="194"/>
       <source>Please select where you want to store your notes:</source>
-      <translation>Selecteer waar je je notities wilt opslaan:</translation>
+      <translation type="unfinished">Please select where you want to store your notes:</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="284"/>
       <source>If you want to be able to access your note versions and your trashed notes on your ownCloud server you can configure QOwnNotes for it now. You can also do so at later.</source>
-      <translation>Als je toegang wilt krijgen tot je notitie versies en verwijderde notities op je ownCloud server kun je nu QOwnNotes configureren. Je kunt dit ook later doen.</translation>
+      <translation type="unfinished">If you want to be able to access your note versions and your trashed notes on your ownCloud server you can configure QOwnNotes for it now. You can also do so at later.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="314"/>
       <source>In any case you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</source>
-      <translation>In ieder geval moet de ownCloud sync client (of een andere synchronisatie client) je notities met je ownCloud server synchroniseren.</translation>
+      <translation type="unfinished">In any case you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="356"/>
       <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
-      <translation>QOwnNotes zal anonieme gebruiksgegevens volgen, dat helpt om te bepalen welke delen van QOwnNotes als volgende zullen worden verbeterd en om bugs te vinden en deze op te lossen. U kunt dit in de instellingen uitschakelen.</translation>
+      <translation type="unfinished">QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="105"/>
       <source>Cannot create note path! You have to create the note folder manually!</source>
-      <translation>Notitie pad kan niet worden gemaakt! U moet de notitiefolder handmatig maken!</translation>
+      <translation type="unfinished">Cannot create note path! You have to create the note folder manually!</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="112"/>
       <source>Cannot create note path!</source>
-      <translation>Kan notitie pad niet maken!</translation>
+      <translation type="unfinished">Cannot create note path!</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="117"/>
       <source>This note path doesn't exist!</source>
-      <translation>Dit notitie pad bestaat niet!</translation>
+      <translation type="unfinished">This note path doesn't exist!</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="180"/>
       <source>Please select the folder where your notes will get stored to</source>
-      <translation>Selecteer de map waarin je notities zullen worden opgeslagen</translation>
+      <translation type="unfinished">Please select the folder where your notes will get stored to</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="195"/>
       <source>Keep in mind that the note folder will be stored relative to the directory where QOwnNotes resides in portable mode! So you need to stay on the same drive.</source>
-      <translation>Houd in gedachten dat de notaomslag zal worden opgeslagen ten opzichte van de map waar QOwnNotes zich bevindt in portable modus! Zo moet u op hetzelfde station blijven.</translation>
+      <translation type="unfinished">Keep in mind that the note folder will be stored relative to the directory where QOwnNotes resides in portable mode! So you need to stay on the same drive.</translation>
     </message>
   </context>
   <context>
@@ -6263,22 +6272,22 @@ Dit kan niet ongedaan worden gemaakt!</translation>
     <message>
       <location filename="../main.cpp" line="72"/>
       <source>Runs the application in portable mode.</source>
-      <translation>De toepassing wordt uitgevoerd in de draagbare modus.</translation>
+      <translation type="unfinished">Runs the application in portable mode.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="76"/>
       <source>Prints out a dump of the settings and other information about the application and environment in GitHub Markdown and exits the application.</source>
-      <translation>Drukt een dump van de instellingen en andere informatie over de applicatie en omgeving af in GitHub Markdown en sluit de applicatie af.</translation>
+      <translation type="unfinished">Prints out a dump of the settings and other information about the application and environment in GitHub Markdown and exits the application.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="82"/>
       <source>Clears the settings and runs the application.</source>
-      <translation>Hiermee wist u de instellingen en de toepassing wordt uitgevoerd.</translation>
+      <translation type="unfinished">Clears the settings and runs the application.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="86"/>
       <source>Runs the application in a different context for settings and internal files.</source>
-      <translation>De toepassing wordt uitgevoerd in een andere context voor interne bestanden en instellingen.</translation>
+      <translation type="unfinished">Runs the application in a different context for settings and internal files.</translation>
     </message>
   </context>
 </TS>

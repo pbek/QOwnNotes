@@ -6,6 +6,8 @@
 - did more `ownCloud` to `ownCloud / Nextcloud` text replacing
 - the **Evernote importer** is now able to import **code blocks**
   (for [#1047](https://github.com/pbek/QOwnNotes/issues/1047))
+- added more Italian, Chinese Traditional, Catalan, Hungarian and Dutch
+  translation (thank you mlocati, abev66, MGuerra and Fabijenna)
 
 ## 18.10.4
 - the file open dialogs that can select multiple files now also remember the 
