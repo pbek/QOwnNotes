@@ -3173,8 +3173,9 @@ QString MainWindow::selectOwnCloudNotesFolder() {
         if (this->notesPath == "") {
             switch (QMessageBox::information(
                    this, tr("No folder was selected"),
-                    tr("You have to select your ownCloud notes "
-                            "folder to make this software work!"),
+                   Utils::Misc::replaceOwnCloudText(
+                           tr("You have to select your ownCloud notes "
+                            "folder to make this software work!")),
                     tr("&Retry"), tr("&Exit"), QString::null,
                     0, 1)) {
                 case 0:
@@ -5564,8 +5565,9 @@ void MainWindow::on_actionShow_versions_triggered() {
 
     ui->actionShow_versions->setDisabled(true);
     showStatusBarMessage(
-            tr("Note versions are currently loaded from your ownCloud server"),
-            20000);
+            Utils::Misc::replaceOwnCloudText(
+                    tr("Note versions are currently loaded from your ownCloud "
+                       "server")), 20000);
 
     OwnCloudService *ownCloud = OwnCloudService::instance();
     ownCloud->loadVersions(this->currentNote.relativeNoteFilePath("/"), this);
@@ -5578,8 +5580,9 @@ void MainWindow::enableShowVersionsButton() {
 void MainWindow::on_actionShow_trash_triggered() {
     ui->actionShow_trash->setDisabled(true);
     showStatusBarMessage(
-            tr("Trashed notes are currently loaded from your ownCloud server"),
-            20000);
+            Utils::Misc::replaceOwnCloudText(
+                    tr("Trashed notes are currently loaded from your ownCloud"
+                       " server")), 20000);
 
     OwnCloudService *ownCloud = OwnCloudService::instance();
     ownCloud->loadTrash(this);
