@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 18.10.5
+- added a notification that you have to sync your notes yourself when sharing
+  notes (for [#1049](https://github.com/pbek/QOwnNotes/issues/1049))
+
 ## 18.10.4
 - the file open dialogs that can select multiple files now also remember the 
   previous directory correctly

@@ -1070,7 +1070,7 @@
         <translation type="unfinished">Extra</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1022"/>
+        <location filename="../mainwindow.ui" line="1023"/>
         <source>Edit</source>
         <translation type="unfinished">Edit</translation>
     </message>
@@ -5524,6 +5524,11 @@ Your notes will stay intact!</source>
         <location filename="../dialogs/sharedialog.ui" line="37"/>
         <source>The public url of your note</source>
         <translation>Загальнодоступна url-адреса нотатки</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/sharedialog.cpp" line="57"/>
+        <source>Keep in mind that you still have sync your notes with the ownCloud sync tool to be able to access shared notes!</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

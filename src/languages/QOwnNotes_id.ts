@@ -1052,7 +1052,7 @@
         <translation>Ekstra</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1022"/>
+        <location filename="../mainwindow.ui" line="1023"/>
         <source>Edit</source>
         <translation>Sunting</translation>
     </message>
@@ -5459,6 +5459,11 @@ Catatan Anda akan tetap utuh!</translation>
         <location filename="../dialogs/sharedialog.ui" line="37"/>
         <source>The public url of your note</source>
         <translation>URL publik catatan Anda</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/sharedialog.cpp" line="57"/>
+        <source>Keep in mind that you still have sync your notes with the ownCloud sync tool to be able to access shared notes!</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

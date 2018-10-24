@@ -1,4 +1,6 @@
 #include <services/owncloudservice.h>
+#include <utils/gui.h>
+#include <utils/misc.h>
 #include "sharedialog.h"
 #include "ui_sharedialog.h"
 
@@ -48,6 +50,13 @@ void ShareDialog::on_linkCheckBox_toggled(bool checked) {
     if (checked) {
         // share the note file
         ownCloud->shareNote(note, this);
+
+        Utils::Gui::information(
+                this, "",
+                Utils::Misc::replaceOwnCloudText(
+                        tr("Keep in mind that you still have sync your notes "
+                           "with the ownCloud sync tool to be able to access "
+                           "shared notes!")), "share-sync-information");
     } else {
         // remove the share
         ownCloud->removeNoteShare(note, this);
