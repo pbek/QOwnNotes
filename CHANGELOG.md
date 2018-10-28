@@ -4,6 +4,8 @@
 - improved code block import of the **Evernote importer**
   (for [#1047](https://github.com/pbek/QOwnNotes/issues/1047))
     - some other issues were also fixes
+- added more information to the note sharing dialog and the sharing notification
+  (for [#1049](https://github.com/pbek/QOwnNotes/issues/1049))
 
 ## 18.10.5
 - added a notification that you have to sync your notes yourself when sharing

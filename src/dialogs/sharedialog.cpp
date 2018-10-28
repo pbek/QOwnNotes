@@ -33,6 +33,8 @@ void ShareDialog::updateDialog() {
     ui->linkCheckBox->setChecked(note.isShared());
     ui->linkUrlLineEdit->setVisible(note.isShared());
     ui->linkUrlLineEdit->setText(note.getShareUrl());
+    ui->infoLabel1->setText(Utils::Misc::replaceOwnCloudText(
+            ui->infoLabel1->text()));
 }
 
 /**
@@ -54,9 +56,10 @@ void ShareDialog::on_linkCheckBox_toggled(bool checked) {
         Utils::Gui::information(
                 this, "",
                 Utils::Misc::replaceOwnCloudText(
-                        tr("Keep in mind that you still have sync your notes "
-                           "with the ownCloud sync tool to be able to access "
-                           "shared notes!")), "share-sync-information");
+                        tr("Keep in mind that you still have to sync your "
+                           "notes with your server by using the ownCloud "
+                           "desktop sync tool to be able to share notes with "
+                           "others!")), "share-sync-information");
     } else {
         // remove the share
         ownCloud->removeNoteShare(note, this);
