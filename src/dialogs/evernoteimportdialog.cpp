@@ -497,10 +497,14 @@ void EvernoteImportDialog::importNotes(QString data) {
 //            content.replace(QRegularExpression("<ul.*?>"), "\n<ul>");
 //            content.replace(QRegularExpression("<ol.*?>"), "\n<ol>");
 
+            // remove web-clip code
+//            content.remove("<div style=\"-evernote-webclip:true;\">");
+
             // replace code blocks
             content.replace(QRegularExpression(
-                    R"(<div.+-en-codeblock:true;"><div>(.+?)<\/div><\/div>)"),
-                            "```\n\\1\n```");
+                    R"(<div style="box-sizing.+?-en-codeblock:true;"><div>(.+?)<\/div><\/div>)",
+                    QRegularExpression::MultilineOption),
+                            "\n```\n\\1\n```\n");
 
             // add a linebreak instead of div-containers
             content.replace(QRegularExpression("<\\/div>"), "\n");
