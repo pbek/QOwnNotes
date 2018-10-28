@@ -6,6 +6,8 @@
     - some other issues were also fixes
 - added more information to the note sharing dialog and the sharing notification
   (for [#1049](https://github.com/pbek/QOwnNotes/issues/1049))
+- added more Spanish, Italian, German, Catalan, Brazilian Portuguese translation
+ (thank you richarson, mlocati, rakekniven, MGuerra and mlimacarlos)
 
 ## 18.10.5
 - added a notification that you have to sync your notes yourself when sharing
