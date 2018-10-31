@@ -502,7 +502,11 @@ void EvernoteImportDialog::importNotes(QString data) {
 
             // replace code blocks
             content.replace(QRegularExpression(
-                    R"(<div style="box-sizing.+?-en-codeblock:true;"><div>(.+?)<\/div><\/div>)",
+                    R"(<div style="box-sizing.+?-en-codeblock:\s*true;"><div>(.+?)<\/div><\/div>)",
+                    QRegularExpression::MultilineOption),
+                            "\n```\n\\1\n```\n");
+            content.replace(QRegularExpression(
+                    R"(<div style="-en-codeblock:\s*true;.+?"><div>(.+?)<\/div><\/div>)",
                     QRegularExpression::MultilineOption),
                             "\n```\n\\1\n```\n");
 

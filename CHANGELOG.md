@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 18.11.0
+- improved code block import of the **Evernote importer**
+  (for [#1047](https://github.com/pbek/QOwnNotes/issues/1047))
+
 ## 18.10.6
 - improved code block import of the **Evernote importer**
   (for [#1047](https://github.com/pbek/QOwnNotes/issues/1047))
