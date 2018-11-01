@@ -1027,6 +1027,7 @@ p, li { white-space: pre-wrap; }
        <normaloff>:/icons/breeze-qownnotes/16x16/document-edit.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-edit.svg</iconset>
      </property>
      <addaction name="action_DuplicateText"/>
+     <addaction name="action_FormatTable"/>
      <addaction name="actionDelete_line"/>
      <addaction name="actionDelete_word"/>
     </widget>
@@ -1393,6 +1394,14 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="toolTip">
     <string>Find text in current note</string>
+   </property>
+  </action>
+  <action name="action_FormatTable">
+   <property name="text">
+    <string>Auto format table</string>
+   </property>
+   <property name="toolTip">
+    <string>Auto format table</string>
    </property>
   </action>
   <action name="action_DuplicateText">
@@ -2421,8 +2430,8 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="breeze-dark-qownnotes.qrc"/>
   <include location="images.qrc"/>
+  <include location="breeze-dark-qownnotes.qrc"/>
   <include location="breeze-qownnotes.qrc"/>
  </resources>
  <connections/>

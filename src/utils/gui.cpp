@@ -20,6 +20,8 @@
 #include <QSettings>
 #include <QApplication>
 #include <QMessageBox>
+#include <QTextBlock>
+#include <QTextCursor>
 
 
 /**
@@ -289,4 +291,140 @@ QFont Utils::Gui::fontDialogGetFont(bool *ok, const QFont &initial,
 #endif
 
     return QFontDialog::getFont(ok, initial, parent, title, options);
+}
+
+/**
+ * Automatically formats a markdown table in a text edit
+ *
+ * @param textEdit
+ */
+bool Utils::Gui::autoFormatTableAtCursor(QPlainTextEdit *textEdit) {
+    QTextCursor initialCursor = textEdit->textCursor();
+    QTextCursor cursor = initialCursor;
+    cursor.movePosition(QTextCursor::EndOfLine);
+    int endPosition = cursor.position();
+    QTextBlock initialBlock = cursor.block();
+    QTextBlock block = initialBlock;
+
+    // return if text doesn't seem to be part of a table
+    if (block.text().front() != "|") {
+        return false;
+    }
+
+    QString tableText = block.text();
+    QList <QStringList> tableTextList;
+    tableTextList << tableText.split("|");
+    int startPosition = block.position();
+    int maxColumns = 0;
+    bool tableWasModified = false;
+
+    // check the previous blocks
+    while(true) {
+        block = block.previous();
+
+        if (!block.isValid()) {
+            break;
+        }
+
+        QString prevBlockText = block.text();
+        if (prevBlockText.front() != "|") {
+            break;
+        }
+
+        const QStringList &stringList = prevBlockText.split("|");
+        tableTextList.prepend(stringList);
+        startPosition = block.position();
+        maxColumns = std::max(maxColumns, stringList.count());
+    }
+
+    // check the next blocks
+    block = initialBlock;
+    while(true) {
+        block = block.next();
+
+        if (!block.isValid()) {
+            break;
+        }
+
+        QString nextBlockText = block.text();
+        if (nextBlockText.front() != "|") {
+            break;
+        }
+
+        const QStringList &stringList = nextBlockText.split("|");
+        tableTextList.append(stringList);
+        endPosition = block.position() + nextBlockText.count();
+        maxColumns = std::max(maxColumns, stringList.count());
+    }
+
+    // justify text in tableTextList
+    // we can skip the first column in the list since it is bound to have no text
+    const int lineCount = tableTextList.count();
+    for (int col = 1; col < maxColumns; col++) {
+        // find the maximum text length
+        int maxTextLength = 0;
+        for (int line = 0; line < lineCount; line++) {
+            const QStringList &lineTextList = tableTextList.at(line);
+
+            if (col >= lineTextList.count()) {
+                break;
+            }
+
+            const QString &text = lineTextList.at(col);
+            maxTextLength = std::max(text.count(), maxTextLength);
+        }
+
+        // do the text justification
+        for (int line = 0; line < lineCount; line++) {
+            QStringList lineTextList = tableTextList.at(line);
+
+            const int lineTextListCount = lineTextList.count();
+
+            if (col >= lineTextListCount) {
+                break;
+            }
+
+            const QString &text = lineTextList.at(col);
+
+            // stop if the text in the last column is empty
+            if (col == (lineTextListCount - 1) && text.isEmpty()) {
+                break;
+            }
+
+            // justify the text
+            const QString &justifiedText = text.leftJustified(maxTextLength);
+
+            // update the tableTextList
+            if (text != justifiedText) {
+                lineTextList.replace(col, justifiedText);
+                tableTextList.replace(line, lineTextList);
+                tableWasModified = true;
+            }
+        }
+    }
+
+    // return if table doesn't need to be modified
+    if (!tableWasModified) {
+        return false;
+    }
+
+    // generate the new table text
+    QString newTableText;
+    for (int line = 0; line < lineCount; line++) {
+        newTableText += tableTextList.at(line).join("|");
+
+        if (line < (lineCount - 1)) {
+            newTableText += "\n";
+        }
+    }
+
+    // select whole table to overwrite text
+    cursor.setPosition(startPosition);
+    cursor.setPosition(endPosition, QTextCursor::KeepAnchor);
+    textEdit->setTextCursor(cursor);
+
+    // overwrite the table
+    cursor.insertText(newTableText);
+
+    return true;
 }

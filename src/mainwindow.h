@@ -546,6 +546,8 @@ private slots:
 
     void on_actionCopy_headline_triggered();
 
+    void on_action_FormatTable_triggered();
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;

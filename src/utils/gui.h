@@ -17,6 +17,7 @@
 #include <QTreeWidgetItem>
 #include <QMessageBox>
 #include <QFontDialog>
+#include <QPlainTextEdit>
 
 /*  Gui functions that can be useful */
 
@@ -81,5 +82,7 @@ namespace Utils {
                 const QString &title = QString(),
                 QFontDialog::FontDialogOptions options =
                         QFontDialog::FontDialogOptions());
+
+        bool autoFormatTableAtCursor(QPlainTextEdit *textEdit);
     }
 }

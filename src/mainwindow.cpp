@@ -8347,6 +8347,11 @@ void MainWindow::on_actionAutocomplete_triggered() {
         return;
     }
 
+    // attempt a markdown table auto-format
+    if (Utils::Gui::autoFormatTableAtCursor(textEdit)) {
+        return;
+    }
+
     QMenu menu;
 
     double resultValue;
@@ -10575,4 +10580,9 @@ void MainWindow::on_actionCopy_headline_triggered() {
                 tr("Note headline '%1' was copied to the clipboard").arg(
                         headline), 3000);
     }
+}
+
+void MainWindow::on_action_FormatTable_triggered() {
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    Utils::Gui::autoFormatTableAtCursor(textEdit);
 }
