@@ -307,7 +307,7 @@ bool Utils::Gui::autoFormatTableAtCursor(QPlainTextEdit *textEdit) {
     QTextBlock block = initialBlock;
 
     // return if text doesn't seem to be part of a table
-    if (block.text().front() != "|") {
+    if (!block.text().startsWith("|")) {
         return false;
     }
 
@@ -327,7 +327,7 @@ bool Utils::Gui::autoFormatTableAtCursor(QPlainTextEdit *textEdit) {
         }
 
         QString prevBlockText = block.text();
-        if (prevBlockText.front() != "|") {
+        if (!prevBlockText.startsWith("|")) {
             break;
         }
 
@@ -347,7 +347,7 @@ bool Utils::Gui::autoFormatTableAtCursor(QPlainTextEdit *textEdit) {
         }
 
         QString nextBlockText = block.text();
-        if (nextBlockText.front() != "|") {
+        if (!nextBlockText.startsWith("|")) {
             break;
         }
 
