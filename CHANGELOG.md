@@ -3,10 +3,13 @@
 ## 18.11.0
 - improved code block import of the **Evernote importer**
   (for [#1047](https://github.com/pbek/QOwnNotes/issues/1047))
-- you can now **auto-format** spaces in a **markdown table** at the current cursor
+- you can now **auto format** spaces in a **markdown table** at the current cursor
   position with *Edit / Edit / Auto format table* (for [#1052](https://github.com/pbek/QOwnNotes/issues/1052))
-    - the auto-complete shortcut <kbd>Ctrl</kbd> + <kbd>Space</kbd> also will
-      attempt to auto-format the table
+    - the auto complete shortcut <kbd>Ctrl</kbd> + <kbd>Space</kbd> also will
+      attempt to auto format the table
+- added more Italian, German, Catalan, Brazilian Portuguese, Chinese Traditional
+  and Turkish translation (thank you mlocati, rakekniven, MGuerra, mlimacarlos,
+  abev66 and ardakilicdagi)
 
 ## 18.10.6
 - improved code block import of the **Evernote importer**
@@ -14,7 +17,7 @@
     - some other issues were also fixes
 - added more information to the note sharing dialog and the sharing notification
   (for [#1049](https://github.com/pbek/QOwnNotes/issues/1049))
-- added more Spanish, Italian, German, Catalan, Brazilian Portuguese translation
+- added more Spanish, Italian, German, Catalan and Brazilian Portuguese translation
  (thank you richarson, mlocati, rakekniven, MGuerra and mlimacarlos)
 
 ## 18.10.5
