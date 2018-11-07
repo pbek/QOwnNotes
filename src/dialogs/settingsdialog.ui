@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1174</width>
+    <height>892</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -373,7 +373,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>8</number>
+            <number>16</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -2779,7 +2779,7 @@
                            <x>0</x>
                            <y>0</y>
                            <width>607</width>
-                           <height>665</height>
+                           <height>703</height>
                           </rect>
                          </property>
                          <layout class="QGridLayout" name="gridLayout_55">
@@ -4680,6 +4680,42 @@ git config --global user.name &quot;Your name&quot;</string>
                   </property>
                  </widget>
                 </item>
+                <item row="5" column="0" colspan="2">
+                 <widget class="QGroupBox" name="groupBox_30">
+                  <property name="toolTip">
+                   <string>Regular expressions of note sub-folders to ignore, separated by &quot;;&quot;</string>
+                  </property>
+                  <property name="title">
+                   <string>Ignored sub-folders</string>
+                  </property>
+                  <layout class="QHBoxLayout" name="horizontalLayout_10">
+                   <item>
+                    <widget class="QLineEdit" name="ignoreNoteSubFoldersLineEdit">
+                     <property name="placeholderText">
+                      <string>Regular expressions of note sub-folders to ignore, separated by &quot;;&quot;</string>
+                     </property>
+                     <property name="clearButtonEnabled">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QToolButton" name="ignoreNoteSubFoldersResetButton">
+                     <property name="toolTip">
+                      <string>Reset ignored sub-folders</string>
+                     </property>
+                     <property name="text">
+                      <string notr="true">…</string>
+                     </property>
+                     <property name="icon">
+                      <iconset theme="edit-clear" resource="../breeze-qownnotes.qrc">
+                       <normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</iconset>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
                </layout>
               </widget>
              </item>
@@ -5020,8 +5056,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../breeze-dark-qownnotes.qrc"/>
   <include location="../breeze-qownnotes.qrc"/>
+  <include location="../breeze-dark-qownnotes.qrc"/>
  </resources>
  <connections>
   <connection>

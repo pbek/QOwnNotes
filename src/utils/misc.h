@@ -90,6 +90,7 @@ namespace Utils {
             bool withGitHubLineBreaks = true,
             QString typeText = "");
         QString generateDebugInformation(bool withGitHubLineBreaks = true);
+        bool regExpInListMatches(QString text, QStringList regExpList);
     }  // namespace Misc
 }  // namespace Utils
 

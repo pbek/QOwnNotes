@@ -244,6 +244,8 @@ private slots:
 
     void on_issueAssistantPushButton_clicked();
 
+    void on_ignoreNoteSubFoldersResetButton_clicked();
+
 private:
 
     Ui::SettingsDialog *ui;

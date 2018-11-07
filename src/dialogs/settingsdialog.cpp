@@ -219,6 +219,8 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
             this, SLOT(needRestart()));
     connect(ui->vimModeCheckBox, SIGNAL(toggled(bool)),
             this, SLOT(needRestart()));
+    connect(ui->ignoreNoteSubFoldersLineEdit, SIGNAL(textChanged(QString)),
+            this, SLOT(needRestart()));
 
     // connect the panel sort radio buttons
     connect(ui->notesPanelSortAlphabeticalRadioButton, SIGNAL(toggled(bool)),
@@ -803,6 +805,10 @@ void SettingsDialog::storePanelSettings() {
                 settings.setValue("noteSubfoldersPanelOrder", ORDER_DESCENDING) :
                 settings.setValue("noteSubfoldersPanelOrder", ORDER_ASCENDING);
 
+    const QSignalBlocker blocker(ui->ignoreNoteSubFoldersLineEdit);
+    settings.setValue("ignoreNoteSubFolders",
+            ui->ignoreNoteSubFoldersLineEdit->text());
+
     // Tags Panel Options
     settings.setValue("tagsPanelHideSearch", ui->tagsPanelHideSearchCheckBox
             ->isChecked());
@@ -1250,6 +1256,9 @@ void SettingsDialog::readPanelSettings() {
     settings.value("tagsPanelOrder").toInt() == ORDER_DESCENDING ?
                 ui->tagsPanelOrderDescendingRadioButton->setChecked(true) :
                 ui->tagsPanelOrderAscendingRadioButton->setChecked(true);
+
+    ui->ignoreNoteSubFoldersLineEdit->setText(settings.value(
+            "ignoreNoteSubFolders", IGNORED_NOTE_SUBFOLDERS_DEFAULT).toString());
 }
 
 /**
@@ -3600,4 +3609,8 @@ void SettingsDialog::on_issueAssistantPushButton_clicked() {
     // we need to close the modal settings dialog so the issue assistant
     // dialog can be shown on the front
     close();
+}
+
+void SettingsDialog::on_ignoreNoteSubFoldersResetButton_clicked() {
+    ui->ignoreNoteSubFoldersLineEdit->setText(IGNORED_NOTE_SUBFOLDERS_DEFAULT);
 }

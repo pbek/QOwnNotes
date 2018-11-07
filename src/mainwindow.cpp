@@ -2925,8 +2925,20 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
         QStringList ignoreFolderList;
         ignoreFolderList << "." << ".." << "media" << "attachments" << "trash";
 
+        QSettings settings;
+        // ignore folders by regular expression
+        QStringList ignoredFolderRegExpList = settings.value(
+                "ignoreNoteSubFolders", IGNORED_NOTE_SUBFOLDERS_DEFAULT)
+                        .toString().split(";");
+
         Q_FOREACH(QString folder, folders) {
                 if (ignoreFolderList.contains(folder)) {
+                    continue;
+                }
+
+                // ignore folders by regular expression
+                if (Utils::Misc::regExpInListMatches(
+                        folder, ignoredFolderRegExpList)) {
                     continue;
                 }
 

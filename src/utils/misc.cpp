@@ -1398,3 +1398,28 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
 
     return output;
 }
+
+/**
+ * Checks if text matches a regular exporession in regExpList
+ *
+ * @param text
+ * @param regExpList
+ * @return
+ */
+bool Utils::Misc::regExpInListMatches(QString text, QStringList regExpList) {
+    Q_FOREACH(QString regExp, regExpList) {
+            regExp = regExp.trimmed();
+
+            if (regExp.isEmpty()) {
+                continue;
+            }
+
+            if (QRegularExpression(regExp).match(text).hasMatch()) {
+                return true;
+            }
+        }
+
+    return false;
+}
+
+
