@@ -6,8 +6,10 @@
 - you can now **ignore certain note sub-folders** by defining them as list of 
   regular expressions (separated by `;`) in the *Panel settings*
   (for [#1054](https://github.com/pbek/QOwnNotes/issues/1054))
-    - by default folders starting wih a `.` now will be ignored (that was
+    - by default folders starting with a `.` now will be ignored (this was
       already the case on Linux and macOS)
+- added more Italian, German, Catalan, Spanish, Chinese Traditional and French
+  translation (thank you mlocati, rakekniven, MGuerra, richarson, abev66 and Botigli)
 
 ## 18.11.0
 - improved code block import of the **Evernote importer**
