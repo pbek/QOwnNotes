@@ -4,7 +4,7 @@
 - the **auto formatter** of **markdown tables** will now also automatically increase
   the size of the headline separator (for [#1052](https://github.com/pbek/QOwnNotes/issues/1052))
 - you can now **ignore certain note sub-folders** by defining them as list of 
-  regular expressions (separated by `;`) in the *Panel settings*
+  regular expressions (separated by `;`) in the *Panels settings*
   (for [#1054](https://github.com/pbek/QOwnNotes/issues/1054))
     - by default folders starting with a `.` now will be ignored (this was
       already the case on Linux and macOS)
