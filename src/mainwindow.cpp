@@ -6967,7 +6967,7 @@ void MainWindow::buildNoteSubFolderTreeForParentItem(QTreeWidgetItem *parent) {
             bool isExpanded = noteSubFolder.treeWidgetExpandState();
             item->setExpanded(isExpanded);
 
-            // sort alphabetically, if necassary
+            // sort alphabetically, if necessary
             QSettings settings;
             int sort = settings.value("noteSubfoldersPanelSort").toInt();
             if (sort == SORT_ALPHABETICAL) {
