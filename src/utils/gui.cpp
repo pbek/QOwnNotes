@@ -357,6 +357,9 @@ bool Utils::Gui::autoFormatTableAtCursor(QPlainTextEdit *textEdit) {
         maxColumns = std::max(maxColumns, stringList.count());
     }
 
+    QRegularExpression headlineSeparatorRegExp(R"(^-+$)");
+    QString justifiedText;
+
     // justify text in tableTextList
     // we can skip the first column in the list since it is bound to have no text
     const int lineCount = tableTextList.count();
@@ -391,8 +394,17 @@ bool Utils::Gui::autoFormatTableAtCursor(QPlainTextEdit *textEdit) {
                 break;
             }
 
-            // justify the text
-            const QString &justifiedText = text.leftJustified(maxTextLength);
+            // check if text is a headline separator
+            if (maxTextLength > 2 &&
+                headlineSeparatorRegExp.match(text.trimmed()).hasMatch()) {
+                // justify the headline separator text
+                justifiedText = " " + text.trimmed().leftJustified(
+                        maxTextLength - 2, '-') + " ";
+            } else {
+                // justify the text
+                justifiedText = text.leftJustified(maxTextLength);
+
+            }
 
             // update the tableTextList
             if (text != justifiedText) {

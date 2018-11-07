@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 18.11.1
+- the **auto formatter** of **markdown tables** is will now also to automatically
+  increase the size of the headline separator (for [#1052](https://github.com/pbek/QOwnNotes/issues/1052))
+
 ## 18.11.0
 - improved code block import of the **Evernote importer**
   (for [#1047](https://github.com/pbek/QOwnNotes/issues/1047))
