@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 18.11.2
+- the **preview** will now view **table borders** (for [#1018](https://github.com/pbek/QOwnNotes/issues/1018))
+    - the script `Markdown-it markdown parser` now also supports table borders
+    - to disable this feature you can use `table {border-width: 0;}` in the
+      `Custom note preview styling` script
+
 ## 18.11.1
 - the **auto formatter** of **markdown tables** will now also automatically increase
   the size of the headline separator (for [#1052](https://github.com/pbek/QOwnNotes/issues/1052))
