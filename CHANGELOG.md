@@ -1,10 +1,11 @@
 # QOwnNotes Changelog
 
 ## 18.11.2
-- the **preview** will now view **table borders** (for [#1018](https://github.com/pbek/QOwnNotes/issues/1018))
+- the **note preview** will now view **table borders** (for [#1018](https://github.com/pbek/QOwnNotes/issues/1018))
     - the script `Markdown-it markdown parser` now also supports table borders
     - to disable this feature you can use `table {border-width: 0;}` in the
       `Custom note preview styling` script
+- the SSL certificate for <https://docs.qownnotes.org> now works properly 
 
 ## 18.11.1
 - the **auto formatter** of **markdown tables** will now also automatically increase
