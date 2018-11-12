@@ -194,6 +194,7 @@ bool mainStartupMisc(const QStringList &arguments) {
         WelcomeDialog welcomeDialog;
         // exit QOwnNotes if the welcome dialog was canceled
         if (welcomeDialog.exec() != QDialog::Accepted) {
+            settings.clear();
             return false;
         }
     }

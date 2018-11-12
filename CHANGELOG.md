@@ -6,6 +6,8 @@
     - to disable this feature you can use `table {border-width: 0;}` in the
       `Custom note preview styling` script
 - the SSL certificate for <https://docs.qownnotes.org> now works properly 
+- if the `Cancel` button is clicked in the *Welcome dialog* now all settings 
+  will be cleared before the application quits
 
 ## 18.11.1
 - the **auto formatter** of **markdown tables** will now also automatically increase
