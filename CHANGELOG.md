@@ -1,6 +1,9 @@
 # QOwnNotes Changelog
 
 ## 18.11.2
+- you can now select the **initial panel layout** in the *Welcome dialog*
+    - `Minimal`, `Full`, `Full vertical` and `Single column` are currently available
+    - a screenshot of the layout will be viewed when selecting one 
 - the **note preview** will now view **table borders** (for [#1018](https://github.com/pbek/QOwnNotes/issues/1018))
     - the script `Markdown-it markdown parser` now also supports table borders
     - to disable this feature you can use `table {border-width: 0;}` in the
@@ -8,6 +11,9 @@
 - the SSL certificate for <https://docs.qownnotes.org> now works properly 
 - if the `Cancel` button is clicked in the *Welcome dialog* now all settings 
   will be cleared before the application quits
+- added more German, Spanish, Italian, French, Catalan, Brazilian Portuguese, 
+  Hungarian and Dutch translation (thank you rakekniven, richarson, mlocati, 
+  Botigli, MGuerra, mlimacarlos and Fabijenna)
 
 ## 18.11.1
 - the **auto formatter** of **markdown tables** will now also automatically increase

@@ -587,39 +587,39 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="229"/>
       <source>This item will be used to preset colors for the other items</source>
-      <translation type="unfinished">This item will be used to preset colors for the other items</translation>
+      <translation>Este elemento usarase para estabelecer as cores no resto de elementos</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="460"/>
       <source>Copy color schema</source>
-      <translation type="unfinished">Copy color schema</translation>
+      <translation>Copiar esquema de cor</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="461"/>
       <source>Color schema name</source>
-      <translation type="unfinished">Color schema name</translation>
+      <translation>Nome do esquema de cor</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="463"/>
       <source>Copy</source>
       <comment>as noun</comment>
-      <translation type="unfinished">Copy</translation>
+      <translation>Copiar</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="582"/>
       <source>Remove schema</source>
-      <translation type="unfinished">Remove schema</translation>
+      <translation>Eliminar esquema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="583"/>
       <source>Remove current schema? This cannot be undone!</source>
-      <translation type="unfinished">Remove current schema? This cannot be undone!</translation>
+      <translation>Seguro de eliminar este esquema? Non hai volta atrás!</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="630"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="670"/>
       <source>INI files</source>
-      <translation type="unfinished">INI files</translation>
+      <translation>ficheiros INI</translation>
     </message>
   </context>
   <context>
@@ -627,37 +627,37 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="14"/>
       <source>Link an url or note</source>
-      <translation type="unfinished">Link an url or note</translation>
+      <translation>Ligar unha URL ou nota</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="44"/>
       <source>Enter URL</source>
-      <translation type="unfinished">Enter URL</translation>
+      <translation>Introducir URL</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="53"/>
       <source>Enter an URL to link to</source>
-      <translation type="unfinished">Enter an URL to link to</translation>
+      <translation>Introducir unha URL á que ligar</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="76"/>
       <source>Search for notes or create new notes by entering text and pressing return</source>
-      <translation type="unfinished">Search for notes or create new notes by entering text and pressing return</translation>
+      <translation>Buscar ou crear notas novas escribindo texto e premendo «Intro»</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="91"/>
       <source>Search for a note to link to</source>
-      <translation type="unfinished">Search for a note to link to</translation>
+      <translation>Buscar unha nota á que ligar</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="63"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;select local file to link to&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;select local file to link to&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;selecciona un ficheiro local para ligar&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.cpp" line="197"/>
       <source>Select file to link to</source>
-      <translation type="unfinished">Select file to link to</translation>
+      <translation>Selecciona un ficheiro para ligar</translation>
     </message>
   </context>
   <context>
@@ -665,44 +665,44 @@
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="14"/>
       <source>Locally trashed notes</source>
-      <translation type="unfinished">Locally trashed notes</translation>
+      <translation>Notas no lixo local</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="42"/>
       <source>Name</source>
-      <translation type="unfinished">Name</translation>
+      <translation>Nome</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="47"/>
       <source>Trashed</source>
-      <translation type="unfinished">Trashed</translation>
+      <translation>No lixo</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="41"/>
       <source>Restore</source>
-      <translation type="unfinished">Restore</translation>
+      <translation>Restaurar</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="42"/>
       <location filename="../dialogs/localtrashdialog.cpp" line="194"/>
       <source>Restore selected notes</source>
-      <translation type="unfinished">Restore selected notes</translation>
+      <translation>Restaurar notas seleccionadas</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="51"/>
       <source>Remove</source>
-      <translation type="unfinished">Remove</translation>
+      <translation>Eliminar</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="52"/>
       <location filename="../dialogs/localtrashdialog.cpp" line="240"/>
       <source>Remove selected notes</source>
-      <translation type="unfinished">Remove selected notes</translation>
+      <translation>Eliminar notas seleccionadas</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="97"/>
       <source>File will be restored to: %1</source>
-      <translation type="unfinished">File will be restored to: %1</translation>
+      <translation>O ficheiro será restaurado a: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="106"/>
@@ -1372,7 +1372,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2153"/>
-      <location filename="../mainwindow.cpp" line="9898"/>
+      <location filename="../mainwindow.cpp" line="9900"/>
       <source>Remove current workspace</source>
       <translation type="unfinished">Remove current workspace</translation>
     </message>
@@ -2098,7 +2098,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9690"/>
-      <location filename="../mainwindow.cpp" line="9936"/>
+      <location filename="../mainwindow.cpp" line="9938"/>
       <source>Workspace name:</source>
       <translation type="unfinished">Workspace name:</translation>
     </message>
@@ -2115,17 +2115,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation type="unfinished">minimal</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9899"/>
+      <location filename="../mainwindow.cpp" line="9901"/>
       <source>Remove the current workspace?</source>
       <translation type="unfinished">Remove the current workspace?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9936"/>
+      <location filename="../mainwindow.cpp" line="9938"/>
       <source>Rename workspace</source>
       <translation type="unfinished">Rename workspace</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="10071"/>
+      <location filename="../mainwindow.cpp" line="10073"/>
       <source>%n chars</source>
       <comment>characters</comment>
       <translation type="unfinished">
@@ -2134,32 +2134,32 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10194"/>
+      <location filename="../mainwindow.cpp" line="10196"/>
       <source>Copy image file path</source>
       <translation type="unfinished">Copy image file path</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10333"/>
+      <location filename="../mainwindow.cpp" line="10335"/>
       <source>Select file to insert</source>
       <translation type="unfinished">Select file to insert</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10366"/>
+      <location filename="../mainwindow.cpp" line="10368"/>
       <source>Disallow all note editing</source>
       <translation type="unfinished">Disallow all note editing</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10500"/>
+      <location filename="../mainwindow.cpp" line="10502"/>
       <source>Select text files to import</source>
       <translation type="unfinished">Select text files to import</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10529"/>
+      <location filename="../mainwindow.cpp" line="10531"/>
       <source>Importing: %1</source>
       <translation type="unfinished">Importing: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10592"/>
+      <location filename="../mainwindow.cpp" line="10594"/>
       <source>Note headline '%1' was copied to the clipboard</source>
       <translation type="unfinished">Note headline '%1' was copied to the clipboard</translation>
     </message>
@@ -2173,7 +2173,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2359"/>
-      <location filename="../mainwindow.cpp" line="10367"/>
+      <location filename="../mainwindow.cpp" line="10369"/>
       <source>Allow all note editing</source>
       <translation type="unfinished">Allow all note editing</translation>
     </message>
@@ -2333,7 +2333,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4461"/>
-      <location filename="../mainwindow.cpp" line="10514"/>
+      <location filename="../mainwindow.cpp" line="10516"/>
       <source>Cancel</source>
       <translation type="unfinished">Cancel</translation>
     </message>
@@ -3094,17 +3094,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation type="unfinished">Could not remove renamed note-file: %1 - Error message: %2</translation>
     </message>
     <message>
-      <location filename="../entities/note.cpp" line="1930"/>
+      <location filename="../entities/note.cpp" line="1934"/>
       <source>Could not read image file: %1</source>
       <translation type="unfinished">Could not read image file: %1</translation>
     </message>
     <message>
-      <location filename="../entities/note.cpp" line="2458"/>
+      <location filename="../entities/note.cpp" line="2462"/>
       <source>Note filename changed</source>
       <translation type="unfinished">Note filename changed</translation>
     </message>
     <message numerus="yes">
-      <location filename="../entities/note.cpp" line="2459"/>
+      <location filename="../entities/note.cpp" line="2463"/>
       <source>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
       <translation type="unfinished">
         <numerusform>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
@@ -3112,7 +3112,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../entities/note.cpp" line="2847"/>
+      <location filename="../entities/note.cpp" line="2851"/>
       <source>…and %n more note(s)</source>
       <translation type="unfinished">
         <numerusform>…and %n more note(s)</numerusform>
@@ -6219,7 +6219,7 @@ This cannot be undone!</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="168"/>
-      <location filename="../dialogs/welcomedialog.cpp" line="194"/>
+      <location filename="../dialogs/welcomedialog.cpp" line="202"/>
       <source>Note folder</source>
       <translation type="unfinished">Note folder</translation>
     </message>
@@ -6239,12 +6239,17 @@ This cannot be undone!</translation>
       <translation type="unfinished">Select folder</translation>
     </message>
     <message>
-      <location filename="../dialogs/welcomedialog.ui" line="307"/>
+      <location filename="../dialogs/welcomedialog.ui" line="278"/>
+      <source>Panel layout</source>
+      <translation type="unfinished">Panel layout</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/welcomedialog.ui" line="338"/>
       <source>Open ownCloud settings</source>
       <translation type="unfinished">Open ownCloud settings</translation>
     </message>
     <message>
-      <location filename="../dialogs/welcomedialog.ui" line="349"/>
+      <location filename="../dialogs/welcomedialog.ui" line="380"/>
       <source>Open network settings</source>
       <translation type="unfinished">Open network settings</translation>
     </message>
@@ -6254,42 +6259,42 @@ This cannot be undone!</translation>
       <translation type="unfinished">Please select where you want to store your notes:</translation>
     </message>
     <message>
-      <location filename="../dialogs/welcomedialog.ui" line="284"/>
+      <location filename="../dialogs/welcomedialog.ui" line="315"/>
       <source>If you want to be able to access your note versions and your trashed notes on your ownCloud server you can configure QOwnNotes for it now. You can also do so at later.</source>
       <translation type="unfinished">If you want to be able to access your note versions and your trashed notes on your ownCloud server you can configure QOwnNotes for it now. You can also do so at later.</translation>
     </message>
     <message>
-      <location filename="../dialogs/welcomedialog.ui" line="314"/>
+      <location filename="../dialogs/welcomedialog.ui" line="345"/>
       <source>In any case you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</source>
       <translation type="unfinished">In any case you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</translation>
     </message>
     <message>
-      <location filename="../dialogs/welcomedialog.ui" line="356"/>
+      <location filename="../dialogs/welcomedialog.ui" line="387"/>
       <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
       <translation type="unfinished">QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</translation>
     </message>
     <message>
-      <location filename="../dialogs/welcomedialog.cpp" line="105"/>
+      <location filename="../dialogs/welcomedialog.cpp" line="113"/>
       <source>Cannot create note path! You have to create the note folder manually!</source>
       <translation type="unfinished">Cannot create note path! You have to create the note folder manually!</translation>
     </message>
     <message>
-      <location filename="../dialogs/welcomedialog.cpp" line="112"/>
+      <location filename="../dialogs/welcomedialog.cpp" line="120"/>
       <source>Cannot create note path!</source>
       <translation type="unfinished">Cannot create note path!</translation>
     </message>
     <message>
-      <location filename="../dialogs/welcomedialog.cpp" line="117"/>
+      <location filename="../dialogs/welcomedialog.cpp" line="125"/>
       <source>This note path doesn't exist!</source>
       <translation type="unfinished">This note path doesn't exist!</translation>
     </message>
     <message>
-      <location filename="../dialogs/welcomedialog.cpp" line="180"/>
+      <location filename="../dialogs/welcomedialog.cpp" line="188"/>
       <source>Please select the folder where your notes will get stored to</source>
       <translation type="unfinished">Please select the folder where your notes will get stored to</translation>
     </message>
     <message>
-      <location filename="../dialogs/welcomedialog.cpp" line="195"/>
+      <location filename="../dialogs/welcomedialog.cpp" line="203"/>
       <source>Keep in mind that the note folder will be stored relative to the directory where QOwnNotes resides in portable mode! So you need to stay on the same drive.</source>
       <translation type="unfinished">Keep in mind that the note folder will be stored relative to the directory where QOwnNotes resides in portable mode! So you need to stay on the same drive.</translation>
     </message>
