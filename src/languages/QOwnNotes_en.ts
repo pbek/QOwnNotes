@@ -1372,7 +1372,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2153"/>
-        <location filename="../mainwindow.cpp" line="9898"/>
+        <location filename="../mainwindow.cpp" line="9900"/>
         <source>Remove current workspace</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2097,7 +2097,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="9690"/>
-        <location filename="../mainwindow.cpp" line="9936"/>
+        <location filename="../mainwindow.cpp" line="9938"/>
         <source>Workspace name:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2114,17 +2114,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9899"/>
+        <location filename="../mainwindow.cpp" line="9901"/>
         <source>Remove the current workspace?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9936"/>
+        <location filename="../mainwindow.cpp" line="9938"/>
         <source>Rename workspace</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="10071"/>
+        <location filename="../mainwindow.cpp" line="10073"/>
         <source>%n chars</source>
         <comment>characters</comment>
         <translation type="unfinished">
@@ -2133,32 +2133,32 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10194"/>
+        <location filename="../mainwindow.cpp" line="10196"/>
         <source>Copy image file path</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10333"/>
+        <location filename="../mainwindow.cpp" line="10335"/>
         <source>Select file to insert</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10366"/>
+        <location filename="../mainwindow.cpp" line="10368"/>
         <source>Disallow all note editing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10500"/>
+        <location filename="../mainwindow.cpp" line="10502"/>
         <source>Select text files to import</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10529"/>
+        <location filename="../mainwindow.cpp" line="10531"/>
         <source>Importing: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10592"/>
+        <location filename="../mainwindow.cpp" line="10594"/>
         <source>Note headline &apos;%1&apos; was copied to the clipboard</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2172,7 +2172,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2359"/>
-        <location filename="../mainwindow.cpp" line="10367"/>
+        <location filename="../mainwindow.cpp" line="10369"/>
         <source>Allow all note editing</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2332,7 +2332,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4461"/>
-        <location filename="../mainwindow.cpp" line="10514"/>
+        <location filename="../mainwindow.cpp" line="10516"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3093,17 +3093,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="1930"/>
+        <location filename="../entities/note.cpp" line="1934"/>
         <source>Could not read image file: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="2458"/>
+        <location filename="../entities/note.cpp" line="2462"/>
         <source>Note filename changed</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="2459"/>
+        <location filename="../entities/note.cpp" line="2463"/>
         <source>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -3111,7 +3111,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="2847"/>
+        <location filename="../entities/note.cpp" line="2851"/>
         <source>…and %n more note(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -6201,7 +6201,7 @@ This cannot be undone!</source>
     </message>
     <message>
         <location filename="../dialogs/welcomedialog.ui" line="168"/>
-        <location filename="../dialogs/welcomedialog.cpp" line="194"/>
+        <location filename="../dialogs/welcomedialog.cpp" line="202"/>
         <source>Note folder</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6221,12 +6221,17 @@ This cannot be undone!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="307"/>
+        <location filename="../dialogs/welcomedialog.ui" line="278"/>
+        <source>Panel layout</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/welcomedialog.ui" line="338"/>
         <source>Open ownCloud settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="349"/>
+        <location filename="../dialogs/welcomedialog.ui" line="380"/>
         <source>Open network settings</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6236,42 +6241,42 @@ This cannot be undone!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="284"/>
+        <location filename="../dialogs/welcomedialog.ui" line="315"/>
         <source>If you want to be able to access your note versions and your trashed notes on your ownCloud server you can configure QOwnNotes for it now. You can also do so at later.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="314"/>
+        <location filename="../dialogs/welcomedialog.ui" line="345"/>
         <source>In any case you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="356"/>
+        <location filename="../dialogs/welcomedialog.ui" line="387"/>
         <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.cpp" line="105"/>
+        <location filename="../dialogs/welcomedialog.cpp" line="113"/>
         <source>Cannot create note path! You have to create the note folder manually!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.cpp" line="112"/>
+        <location filename="../dialogs/welcomedialog.cpp" line="120"/>
         <source>Cannot create note path!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.cpp" line="117"/>
+        <location filename="../dialogs/welcomedialog.cpp" line="125"/>
         <source>This note path doesn&apos;t exist!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.cpp" line="180"/>
+        <location filename="../dialogs/welcomedialog.cpp" line="188"/>
         <source>Please select the folder where your notes will get stored to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.cpp" line="195"/>
+        <location filename="../dialogs/welcomedialog.cpp" line="203"/>
         <source>Keep in mind that the note folder will be stored relative to the directory where QOwnNotes resides in portable mode! So you need to stay on the same drive.</source>
         <translation type="unfinished"></translation>
     </message>

@@ -258,6 +258,37 @@
        </item>
       </layout>
      </widget>
+     <widget class="QWidget" name="layoutPage">
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QGroupBox" name="groupBox_4">
+         <property name="title">
+          <string>Panel layout</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QComboBox" name="layoutComboBox"/>
+          </item>
+          <item>
+           <widget class="QGraphicsView" name="layoutGraphicsView"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
      <widget class="QWidget" name="ownCloudPage">
       <layout class="QGridLayout" name="gridLayout_4">
        <property name="leftMargin">
@@ -383,8 +414,8 @@
   </layout>
  </widget>
  <resources>
-  <include location="../images.qrc"/>
   <include location="../breeze-qownnotes.qrc"/>
+  <include location="../images.qrc"/>
  </resources>
  <connections/>
 </ui>

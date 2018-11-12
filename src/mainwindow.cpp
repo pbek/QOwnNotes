@@ -9817,6 +9817,8 @@ void MainWindow::restoreCurrentWorkspace() {
         _noteTagDockWidget->setVisible(false);
         _notePreviewDockWidget->setVisible(false);
         createNewWorkspace(tr("minimal", "minimal workspace"));
+
+        // TODO: maybe still create those workspaces initially?
     }
 
     QString uuid = currentWorkspaceUuid();

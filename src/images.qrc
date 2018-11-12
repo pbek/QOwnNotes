@@ -5,5 +5,9 @@
         <file>images/icon-dark.png</file>
         <file>images/search-notes.svg</file>
         <file>images/search-notes-dark.svg</file>
+        <file>images/layouts/full.png</file>
+        <file>images/layouts/minimal.png</file>
+        <file>images/layouts/1col.png</file>
+        <file>images/layouts/full-vertical.png</file>
     </qresource>
 </RCC>

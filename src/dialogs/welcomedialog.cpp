@@ -1,6 +1,7 @@
 #include "QDebug"
 #include <QSettings>
 #include <QFileDialog>
+#include <QGraphicsScene>
 #include <utils/misc.h>
 #include "welcomedialog.h"
 #include "ui_welcomedialog.h"
@@ -30,6 +31,8 @@ WelcomeDialog::WelcomeDialog(QWidget *parent) :
     ui->noteFolderLineEdit->setText(_notesPath);
 
     ui->stackedWidget->setCurrentIndex(WelcomePages::NoteFolderPage);
+
+    loadLayouts();
 }
 
 WelcomeDialog::~WelcomeDialog() {
@@ -64,6 +67,11 @@ void WelcomeDialog::on_nextButton_clicked() {
         QSettings settings;
         settings.setValue("appMetrics/notificationShown", true);
     }
+
+    if (index == WelcomePages::LayoutPage) {
+        resizeLayoutImage();
+    }
+
     ui->finishButton->setEnabled(_allowFinishButton);
     ui->backButton->setEnabled(true);
     ui->nextButton->setEnabled(index < maxIndex);
@@ -227,4 +235,72 @@ void WelcomeDialog::on_networkSettingsButton_clicked() {
 void WelcomeDialog::closeEvent(QCloseEvent *event) {
     MetricsService::instance()->sendVisitIfEnabled("welcome-dialog/close");
     MasterDialog::closeEvent(event);
+}
+
+void WelcomeDialog::loadLayouts() {
+    _layoutSettings = new QSettings(":/configurations/layouts.ini",
+            QSettings::IniFormat);
+    auto layoutIdentifiers = _layoutSettings->value("LayoutIdentifiers").toStringList();
+
+    {
+        const QSignalBlocker blocker(ui->layoutComboBox);
+        Q_UNUSED(blocker);
+        ui->layoutComboBox->clear();
+
+        for (int i = 0; i < layoutIdentifiers.count(); i++) {
+            const QString &layoutIdentifier = layoutIdentifiers.at(i);
+            const QString &layoutName = _layoutSettings->value(
+                                "Layout-" + layoutIdentifier + "/name").toString();
+            ui->layoutComboBox->addItem(layoutName, layoutIdentifier);
+        }
+    }
+
+    ui->layoutComboBox->setCurrentIndex(0);
+    on_layoutComboBox_currentIndexChanged(0);
+}
+
+void WelcomeDialog::on_layoutComboBox_currentIndexChanged(int index) {
+    Q_UNUSED(index);
+    updateCurrentLayout();
+}
+
+void WelcomeDialog::updateCurrentLayout() const {
+    QString layoutIdentifier = ui->layoutComboBox->currentData().toString();
+    QString layoutSettingsPrefix = "Layout-" + layoutIdentifier + "/";
+    QString screenshot = _layoutSettings->value(layoutSettingsPrefix +
+            "screenshot").toString();
+
+    auto scene = new QGraphicsScene();
+    QString filePath(":/images/layouts/" + screenshot);
+
+    scene->addPixmap(QPixmap(filePath));
+    ui->layoutGraphicsView->setScene(scene);
+    ui->layoutGraphicsView->fitInView(scene->sceneRect(), Qt::KeepAspectRatio);
+
+    QSettings settings;
+    auto workspaces = QStringList() << "initial";
+    settings.setValue("workspaces", workspaces);
+    settings.setValue("currentWorkspace", "initial");
+    settings.setValue("noteEditIsCentralWidget", _layoutSettings->value(
+            layoutSettingsPrefix + "noteEditIsCentralWidget"));
+    settings.setValue("workspace-initial/windowState", _layoutSettings->value(
+            layoutSettingsPrefix + "windowState"));
+    settings.setValue("workspace-initial/name", _layoutSettings->value(
+            layoutSettingsPrefix + "name"));
+    settings.setValue("workspace-initial/noteSubFolderDockWidgetVisible",
+            _layoutSettings->value(layoutSettingsPrefix +
+            "noteSubFolderDockWidgetVisible"));
+}
+
+void WelcomeDialog::resizeEvent(QResizeEvent* event) {
+    resizeLayoutImage();
+    MasterDialog::resizeEvent(event);
+}
+
+void WelcomeDialog::resizeLayoutImage() const {
+    if (ui->layoutGraphicsView->scene() != nullptr) {
+        ui->layoutGraphicsView->fitInView(
+                ui->layoutGraphicsView->scene()->sceneRect(),
+                Qt::KeepAspectRatio);
+    }
 }

@@ -2,6 +2,8 @@
 
 #include "masterdialog.h"
 #include <QDialog>
+#include <QSettings>
+#include <QResizeEvent>
 
 namespace Ui {
 class WelcomeDialog;
@@ -14,6 +16,7 @@ class WelcomeDialog : public MasterDialog
 public:
     enum WelcomePages {
         NoteFolderPage,
+        LayoutPage,
         OwnCloudPage,
         MetricsPage
     };
@@ -36,10 +39,15 @@ private slots:
 
     void on_networkSettingsButton_clicked();
 
+    void on_layoutComboBox_currentIndexChanged(int index);
+
+    void resizeEvent(QResizeEvent* event);
+
 private:
     Ui::WelcomeDialog *ui;
     bool _allowFinishButton;
     QString _notesPath;
+    QSettings *_layoutSettings;
 
     bool handleNoteFolderSetup();
 
@@ -48,4 +56,10 @@ private:
     void storeNoteFolderSettings();
 
     void closeEvent(QCloseEvent *event);
+
+    void loadLayouts();
+
+    void updateCurrentLayout() const;
+
+    void resizeLayoutImage() const;
 };
