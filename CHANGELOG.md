@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 18.11.3
+- interface languages now work in the snap version of QOwnNotes
+
 ## 18.11.2
 - you can now select the **initial panel layout** in the *Welcome dialog*
     - `Minimal`, `Full`, `Full vertical` and `Single column` are currently available
@@ -4838,7 +4841,7 @@
 - I adopted the **AUR package** **`qownnotes`**, the repository 
   `qownnotes-pbek` will be discontinued (a big thank you to Midov for 
   managing `qownnotes` until now)
-- QOwnNote now uses default **freedesktop theme icons**
+- QOwnNotes now uses default **freedesktop theme icons**
   (for [#39](https://github.com/pbek/QOwnNotes/issues/39))
   - if the operating system hasn't a theme set (like for Windows and OS X)
     there is a bundled fallback theme with Breeze icons that will be used 
