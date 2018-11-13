@@ -273,7 +273,7 @@ unix {
 
   INSTALLS += target desktop i18n icons
 
-  target.path = $$BINDIR
+  target.path = $$INSTROOT$$BINDIR
   target.files += QOwnNotes
 
   desktop.path = $$DATADIR/applications
