@@ -39,6 +39,8 @@
     app.installTranslator(&translator5); \
     translator6.load("../share/QOwnNotes/languages/QOwnNotes_" + locale); \
     app.installTranslator(&translator6); \
+    translator7.load(appPath + "/../share/QOwnNotes/languages/QOwnNotes_" + locale); \
+    app.installTranslator(&translator7); \
     translatorLocal.load("QOwnNotes_" + locale); \
     app.installTranslator(&translatorLocal);
 
@@ -402,6 +404,7 @@ int main(int argc, char *argv[]) {
     QTranslator translator4;
     QTranslator translator5;
     QTranslator translator6;
+    QTranslator translator7;
     QTranslator translatorLocal;
 
 #ifdef Q_OS_MAC
