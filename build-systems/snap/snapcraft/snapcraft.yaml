@@ -11,7 +11,7 @@ description: |
 
 apps:
   qownnotes:
-    command: desktop-launch ${SNAP}/usr/bin/QOwnNotes -style=Fusion --snap "$@"
+    command: desktop-launch ${SNAP}/usr/bin/QOwnNotes -style=Fusion --snap
     environment:
         DISABLE_WAYLAND: 1
     # see https://docs.snapcraft.io/reference/interfaces
