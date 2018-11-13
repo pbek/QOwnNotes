@@ -4,7 +4,7 @@ version-script: cat src/version.h | sed "s/[^0-9,.]//g"
 summary: Plain-text file notepad with markdown support and ownCloud integration
 grade: stable
 confinement: strict
-base: core18
+#base: core18
 description: |
   QOwnNotes is the open source (GPL) plain-text file notepad with markdown support
   and todo list manager for GNU/Linux, Mac OS X and Windows, that (optionally) works
@@ -38,7 +38,7 @@ parts:
     qt-version: qt5
     options:
       - ./src
-      - CONFIG+=release
+#      - CONFIG+=release
     build-packages:
       - qttools5-dev
       - build-essential
