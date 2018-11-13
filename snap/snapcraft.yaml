@@ -31,7 +31,8 @@ apps:
 
 parts:
   qownnotes:
-    source: https://github.com/pbek/qownnotes.git
+    source: .
+#    source: https://github.com/pbek/qownnotes.git
     # see https://docs.snapcraft.io/reference/plugins/qmake
     plugin: qmake
     qt-version: qt5
