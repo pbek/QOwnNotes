@@ -2,6 +2,8 @@
 
 ## 18.11.3
 - interface languages now work in the snap version of QOwnNotes
+- the `Cancel` button of the note encryption password dialog is now always enabled
+  (for [#1065](https://github.com/pbek/QOwnNotes/issues/1065))
 
 ## 18.11.2
 - you can now select the **initial panel layout** in the *Welcome dialog*
