@@ -6,6 +6,8 @@
   (for [#1065](https://github.com/pbek/QOwnNotes/issues/1065))
 - increased top and bottom padding of table cells in the note preview
   (for [#1018](https://github.com/pbek/QOwnNotes/issues/1018))
+- after a panel layout was chosen in the welcome dialog the application 
+  window will now be centered and resized initially
 
 ## 18.11.2
 - you can now select the **initial panel layout** in the *Welcome dialog*

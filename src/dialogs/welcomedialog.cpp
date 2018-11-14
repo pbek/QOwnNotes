@@ -290,6 +290,9 @@ void WelcomeDialog::updateCurrentLayout() const {
     settings.setValue("workspace-initial/noteSubFolderDockWidgetVisible",
             _layoutSettings->value(layoutSettingsPrefix +
             "noteSubFolderDockWidgetVisible"));
+
+    // since app is newly installed we want to center and resize the window later
+    settings.setValue("initialWorkspace", true);
 }
 
 void WelcomeDialog::resizeEvent(QResizeEvent* event) {

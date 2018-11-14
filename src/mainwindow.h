@@ -937,4 +937,6 @@ private:
             bool multiNoteMenuEntriesOnly = false);
 
     void updateCurrentNoteTextHash();
+
+    void centerAndResize();
 };

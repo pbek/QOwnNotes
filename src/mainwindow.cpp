@@ -17,6 +17,7 @@
 #include <QDir>
 #include <QFile>
 #include <QMessageBox>
+#include <QDesktopWidget>
 #include <QListWidgetItem>
 #include <QSettings>
 #include <QTimer>
@@ -9854,6 +9855,12 @@ void MainWindow::restoreCurrentWorkspace() {
 
     // set the visibility of the note subfolder dock widget
     handleNoteSubFolderVisibility();
+
+    // if app was newly installed we want to center and resize the window
+    if (settings.value("initialWorkspace").toBool()) {
+        settings.remove("initialWorkspace");
+        centerAndResize();
+    }
 }
 
 /**
@@ -10599,4 +10606,28 @@ void MainWindow::on_actionCopy_headline_triggered() {
 void MainWindow::on_action_FormatTable_triggered() {
     QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
     Utils::Gui::autoFormatTableAtCursor(textEdit);
+}
+
+/**
+ * Centers and resized the main window
+ */
+void MainWindow::centerAndResize() {
+    // get the dimension available on this screen
+    QSize availableSize = qApp->desktop()->availableGeometry().size();
+    int width = availableSize.width();
+    int height = availableSize.height();
+    qDebug() << "Available dimensions " << width << "x" << height;
+    width *= 0.9; // 90% of the screen size
+    height *= 0.9; // 90% of the screen size
+    qDebug() << "Computed dimensions " << width << "x" << height;
+    QSize newSize( width, height );
+
+    setGeometry(
+            QStyle::alignedRect(
+                    Qt::LeftToRight,
+                    Qt::AlignCenter,
+                    newSize,
+                    qApp->desktop()->availableGeometry()
+            )
+    );
 }
