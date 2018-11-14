@@ -1,7 +1,6 @@
 # QOwnNotes Changelog
 
 ## 18.11.3
-- interface languages now work in the snap version of QOwnNotes
 - the `Cancel` button of the note encryption password dialog is now always enabled
   (for [#1065](https://github.com/pbek/QOwnNotes/issues/1065))
 - increased top and bottom padding of table cells in the note preview
@@ -11,6 +10,9 @@
 - the size of the welcome dialog is now adapted to more fit the layout 
   selector and the background color of the layout preview is adapted to the 
   dialog background color
+- interface languages now work in the snap version of QOwnNotes
+- added more Chinese Traditional, Spanish, Italian and Catalan translation
+  (thank you abev66, richarson, tiwi90 and MGuerra)
 
 ## 18.11.2
 - you can now select the **initial panel layout** in the *Welcome dialog*

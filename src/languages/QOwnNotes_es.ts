@@ -6231,7 +6231,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="278"/>
       <source>Panel layout</source>
-      <translation type="unfinished">Panel layout</translation>
+      <translation>Diseño del panel</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="338"/>

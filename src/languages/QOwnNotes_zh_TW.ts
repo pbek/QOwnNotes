@@ -4397,12 +4397,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4689"/>
       <source>Ignored sub-folders</source>
-      <translation type="unfinished">Ignored sub-folders</translation>
+      <translation>忽略子資料夾</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4705"/>
       <source>Reset ignored sub-folders</source>
-      <translation type="unfinished">Reset ignored sub-folders</translation>
+      <translation>重設忽略子資料夾</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4725"/>
@@ -4486,7 +4486,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
       <location filename="../dialogs/settingsdialog.ui" line="4686"/>
       <location filename="../dialogs/settingsdialog.ui" line="4695"/>
       <source>Regular expressions of note sub-folders to ignore, separated by ";"</source>
-      <translation type="unfinished">Regular expressions of note sub-folders to ignore, separated by ";"</translation>
+      <translation>要忽略的筆記子資料夾名稱之正規表示，使用「;」分隔。</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4790"/>
@@ -6205,7 +6205,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="278"/>
       <source>Panel layout</source>
-      <translation type="unfinished">Panel layout</translation>
+      <translation>版面配置</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="338"/>

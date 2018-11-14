@@ -6238,7 +6238,7 @@ Això no es pot desfer!</translation>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="278"/>
       <source>Panel layout</source>
-      <translation type="unfinished">Panel layout</translation>
+      <translation>Disseny dels panells</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="338"/>
