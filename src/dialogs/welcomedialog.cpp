@@ -32,6 +32,9 @@ WelcomeDialog::WelcomeDialog(QWidget *parent) :
 
     ui->stackedWidget->setCurrentIndex(WelcomePages::NoteFolderPage);
 
+    // too much text already
+    ui->layoutDescriptionLabel->setVisible(false);
+
     loadLayouts();
 }
 
@@ -218,8 +221,7 @@ void WelcomeDialog::on_ownCloudSettingsButton_clicked() {
     MetricsService::instance()
             ->sendVisitIfEnabled("welcome-dialog/owncloud-settings");
 
-    SettingsDialog *dialog = new SettingsDialog(
-            SettingsDialog::OwnCloudPage, this);
+    auto *dialog = new SettingsDialog(SettingsDialog::OwnCloudPage, this);
     dialog->exec();
 }
 
@@ -227,8 +229,7 @@ void WelcomeDialog::on_networkSettingsButton_clicked() {
     MetricsService::instance()
             ->sendVisitIfEnabled("welcome-dialog/network-settings");
 
-    SettingsDialog *dialog = new SettingsDialog(
-            SettingsDialog::NetworkPage, this);
+    auto *dialog = new SettingsDialog(SettingsDialog::NetworkPage, this);
     dialog->exec();
 }
 
@@ -269,8 +270,16 @@ void WelcomeDialog::updateCurrentLayout() const {
     QString layoutSettingsPrefix = "Layout-" + layoutIdentifier + "/";
     QString screenshot = _layoutSettings->value(layoutSettingsPrefix +
             "screenshot").toString();
+    ui->layoutDescriptionLabel->setText(_layoutSettings->value(
+            layoutSettingsPrefix + "description").toString());
 
     auto scene = new QGraphicsScene();
+
+    // adapt layoutGraphicsView background color
+    QColor bg = ui->layoutGraphicsView->palette().background().color();
+    ui->layoutGraphicsView->setStyleSheet(QString("background-color:") +
+        bg.name(QColor::HexArgb));
+
     QString filePath(":/images/layouts/" + screenshot);
 
     scene->addPixmap(QPixmap(filePath));

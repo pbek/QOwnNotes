@@ -8,6 +8,9 @@
   (for [#1018](https://github.com/pbek/QOwnNotes/issues/1018))
 - after a panel layout was chosen in the welcome dialog the application 
   window will now be centered and resized initially
+- the size of the welcome dialog is now adapted to more fit the layout 
+  selector and the background color of the layout preview is adapted to the 
+  dialog background color
 
 ## 18.11.2
 - you can now select the **initial panel layout** in the *Welcome dialog*
