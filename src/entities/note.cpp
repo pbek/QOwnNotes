@@ -1874,7 +1874,7 @@ QString Note::textToMarkdownHtml(QString str, QString notesPath,
                                  "h2, h3 { margin: 10px 0 15px 0; }"
                                  "img { max-width: 100%; }"
                                  "table {border-spacing: 0; border-style: solid; border-width: 1px; border-collapse: collapse; margin-top: 0.5em;}"
-                                 "th, td {padding: 0 5px;}"
+                                 "th, td {padding: 2px 5px;}"
                                  "a { color: #FF9137; text-decoration: none; } %1 %2 %4"
                                  "</style></head><body>%3</body></html>")
                 .arg(codeStyleSheet, exportStyleSheet, result, rtlStyle);
@@ -1884,7 +1884,7 @@ QString Note::textToMarkdownHtml(QString str, QString notesPath,
                                  "h1 { margin: 5px 0 20px 0; }"
                                  "h2, h3 { margin: 10px 0 15px 0; }"
                                  "table {border-spacing: 0; border-style: solid; border-width: 1px; border-collapse: collapse; margin-top: 0.5em;}"
-                                 "th, td {padding: 0 5px;}"
+                                 "th, td {padding: 2px 5px;}"
                                  "a { color: #FF9137; text-decoration: none; } %1 %3"
                                  "</style></head><body>%2</body></html>")
                 .arg(codeStyleSheet, result, rtlStyle);
