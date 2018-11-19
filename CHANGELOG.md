@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 18.11.4
+- the **selection colors** in **dark mode** are now adapted to not get removed
+  by blue filters like *f.lux* (for [#1067](https://github.com/pbek/QOwnNotes/issues/1067))
+
 ## 18.11.3
 - the `Cancel` button of the note encryption password dialog is now always enabled
   (for [#1065](https://github.com/pbek/QOwnNotes/issues/1065))

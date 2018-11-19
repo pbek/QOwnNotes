@@ -45,7 +45,7 @@ QWidget
 {
     color: silver;
     background-color: #302F2F;
-    selection-background-color:#3d8ec9;
+    selection-background-color:#c64a13;
     selection-color: black;
     background-clip: border;
     border-image: none;
@@ -60,7 +60,7 @@ QWidget:item:hover
 
 QWidget:item:selected
 {
-    background-color: #3d8ec9;
+    background-color: #c64a13;
 }
 
 QCheckBox
@@ -235,7 +235,7 @@ QMenuBar::item:selected
 QMenuBar::item:pressed
 {
     border: 1px solid #3A3939;
-    background-color: #3d8ec9;
+    background-color: #c64a13;
     color: black;
     margin-bottom:-1px;
     padding-bottom:1px;
@@ -634,13 +634,13 @@ QPushButton:disabled
 }
 
 QPushButton:focus {
-    background-color: #3d8ec9;
+    background-color: #c64a13;
     color: white;
 }
 
 QComboBox
 {
-    selection-background-color: #3d8ec9;
+    selection-background-color: #c64a13;
     background-color: #201F1F;
     border-style: solid;
     border: 1px solid #3A3939;
@@ -673,7 +673,7 @@ QComboBox QAbstractItemView
     background-color: #201F1F;
     border-radius: 2px;
     border: 1px solid #444;
-    selection-background-color: #3d8ec9;
+    selection-background-color: #c64a13;
 }
 
 QComboBox::drop-down
@@ -983,7 +983,7 @@ QListView::item:!selected:hover, QListView::item:!selected:hover, QTreeView::ite
 }
 
 QListView::item:selected:hover, QListView::item:selected:hover, QTreeView::item:selected:hover  {
-    background: #3d8ec9;
+    background: #c64a13;
     color: #FFFFFF;
 }
 
@@ -1104,7 +1104,7 @@ QTableView::item:pressed, QListView::item:pressed, QTreeView::item:pressed  {
 }
 
 QTableView::item:selected:active, QTreeView::item:selected:active, QListView::item:selected:active  {
-    background: #3d8ec9;
+    background: #c64a13;
     color: #FFFFFF;
 }
 
@@ -1186,7 +1186,7 @@ QToolBox::tab {
  QToolBox::tab:selected { /* italicize selected tabs */
     font: italic;
     background-color: #302F2F;
-    border-color: #3d8ec9;
+    border-color: #c64a13;
  }
 
 QStatusBar::item {
