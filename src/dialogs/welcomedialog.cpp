@@ -316,27 +316,30 @@ QString WelcomeDialog::getLayoutName(QString layoutIdentifier) {
 QString WelcomeDialog::getLayoutDescription(QString layoutIdentifier) {
     const QString &centralWidgetAddText = " " +
                    tr("The note edit panel is the central widget that will be "
-                      "resized automatically", "Layout description");
+                      "resized automatically.", "Layout description");
 
     const QString &noCentralWidgetAddText = " " +
                    tr("Because of this there is no central widget that will be "
                       "resized automatically.", "Layout description");
 
     if (layoutIdentifier == "minimal") {
-        return tr("Just the note list and the note edit panel are enabled.",
+        return tr("Just the note list on the left and the note edit panel "
+                  "on the right are enabled by default.",
                 "Layout description") + centralWidgetAddText;
     } else if (layoutIdentifier == "full") {
-        return tr("Most of the panels, like the note list, the tagging panels, "
-                  "the note edit panel and the preview panel are enabled.",
+        return tr("Most of the panels, like the note list on the left, the "
+                  "tagging panels, the note edit panel in the center and the "
+                  "preview panel on the right are enabled by default.",
                   "Layout description") + centralWidgetAddText;
     } else if (layoutIdentifier == "full-vertical") {
-        return tr("Most of the panels, like the note list, the tagging panels, "
-                  "the note edit panel and the preview panel are enabled, but "
-                  "the preview is above the note edit panel.",
-                  "Layout description") + noCentralWidgetAddText;
+        return tr("Most of the panels, like the note list on the left, the "
+                  "tagging panels, the note edit panel on the right and the "
+                  "preview panel on top of the note edit panel are enabled by "
+                  "default.", "Layout description") + noCentralWidgetAddText;
     } else if (layoutIdentifier == "1col") {
         return tr("Tiny one column layout with note search, note list and note "
-                  "edit.", "Layout description") + centralWidgetAddText;
+                  "edit on top of each other.", "Layout description") +
+                  centralWidgetAddText;
     }
 
     return "";

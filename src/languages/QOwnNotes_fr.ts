@@ -6316,7 +6316,7 @@ Cela ne peut être annuler !</translation>
     </message>
     <message>
         <location filename="../dialogs/welcomedialog.cpp" line="318"/>
-        <source>The note edit panel is the central widget that will be resized automatically</source>
+        <source>The note edit panel is the central widget that will be resized automatically.</source>
         <comment>Layout description</comment>
         <translation type="unfinished"></translation>
     </message>
@@ -6328,25 +6328,25 @@ Cela ne peut être annuler !</translation>
     </message>
     <message>
         <location filename="../dialogs/welcomedialog.cpp" line="326"/>
-        <source>Just the note list and the note edit panel are enabled.</source>
+        <source>Just the note list on the left and the note edit panel on the right are enabled by default.</source>
         <comment>Layout description</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.cpp" line="329"/>
-        <source>Most of the panels, like the note list, the tagging panels, the note edit panel and the preview panel are enabled.</source>
+        <location filename="../dialogs/welcomedialog.cpp" line="330"/>
+        <source>Most of the panels, like the note list on the left, the tagging panels, the note edit panel in the center and the preview panel on the right are enabled by default.</source>
         <comment>Layout description</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.cpp" line="333"/>
-        <source>Most of the panels, like the note list, the tagging panels, the note edit panel and the preview panel are enabled, but the preview is above the note edit panel.</source>
+        <location filename="../dialogs/welcomedialog.cpp" line="335"/>
+        <source>Most of the panels, like the note list on the left, the tagging panels, the note edit panel on the right and the preview panel on top of the note edit panel are enabled by default.</source>
         <comment>Layout description</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.cpp" line="338"/>
-        <source>Tiny one column layout with note search, note list and note edit.</source>
+        <location filename="../dialogs/welcomedialog.cpp" line="340"/>
+        <source>Tiny one column layout with note search, note list and note edit on top of each other.</source>
         <comment>Layout description</comment>
         <translation type="unfinished"></translation>
     </message>
