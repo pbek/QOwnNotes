@@ -9858,6 +9858,10 @@ void MainWindow::restoreCurrentWorkspace() {
 
     // if app was newly installed we want to center and resize the window
     if (settings.value("initialWorkspace").toBool()) {
+        MetricsService::instance()->sendEventIfEnabled(
+                "app/initial-layout", "app", "initial-layout",
+                settings.value("initialLayoutIdentifier").toString());
+
         settings.remove("initialWorkspace");
         centerAndResize();
     }

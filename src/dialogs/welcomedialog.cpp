@@ -288,6 +288,7 @@ void WelcomeDialog::updateCurrentLayout() const {
 
     QSettings settings;
     auto workspaces = QStringList() << "initial";
+    settings.setValue("initialLayoutIdentifier", layoutIdentifier);
     settings.setValue("workspaces", workspaces);
     settings.setValue("currentWorkspace", "initial");
     settings.setValue("noteEditIsCentralWidget", _layoutSettings->value(
