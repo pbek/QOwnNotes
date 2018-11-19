@@ -32,9 +32,6 @@ WelcomeDialog::WelcomeDialog(QWidget *parent) :
 
     ui->stackedWidget->setCurrentIndex(WelcomePages::NoteFolderPage);
 
-    // too much text already
-    ui->layoutDescriptionLabel->setVisible(false);
-
     loadLayouts();
 }
 
@@ -250,8 +247,7 @@ void WelcomeDialog::loadLayouts() {
 
         for (int i = 0; i < layoutIdentifiers.count(); i++) {
             const QString &layoutIdentifier = layoutIdentifiers.at(i);
-            const QString &layoutName = _layoutSettings->value(
-                                "Layout-" + layoutIdentifier + "/name").toString();
+            const QString &layoutName = getLayoutName(layoutIdentifier);
             ui->layoutComboBox->addItem(layoutName, layoutIdentifier);
         }
     }
@@ -270,8 +266,7 @@ void WelcomeDialog::updateCurrentLayout() const {
     QString layoutSettingsPrefix = "Layout-" + layoutIdentifier + "/";
     QString screenshot = _layoutSettings->value(layoutSettingsPrefix +
             "screenshot").toString();
-    ui->layoutDescriptionLabel->setText(_layoutSettings->value(
-            layoutSettingsPrefix + "description").toString());
+    ui->layoutDescriptionLabel->setText(getLayoutDescription(layoutIdentifier));
 
     auto scene = new QGraphicsScene();
 
@@ -295,14 +290,56 @@ void WelcomeDialog::updateCurrentLayout() const {
             layoutSettingsPrefix + "noteEditIsCentralWidget"));
     settings.setValue("workspace-initial/windowState", _layoutSettings->value(
             layoutSettingsPrefix + "windowState"));
-    settings.setValue("workspace-initial/name", _layoutSettings->value(
-            layoutSettingsPrefix + "name"));
+    settings.setValue("workspace-initial/name", getLayoutName(layoutIdentifier));
     settings.setValue("workspace-initial/noteSubFolderDockWidgetVisible",
             _layoutSettings->value(layoutSettingsPrefix +
             "noteSubFolderDockWidgetVisible"));
 
     // since app is newly installed we want to center and resize the window later
     settings.setValue("initialWorkspace", true);
+}
+
+QString WelcomeDialog::getLayoutName(QString layoutIdentifier) {
+    if (layoutIdentifier == "minimal") {
+        return tr("Minimal", "Layout name");
+    } else if (layoutIdentifier == "full") {
+        return tr("Full", "Layout name");
+    } else if (layoutIdentifier == "full-vertical") {
+        return tr("Full vertical", "Layout name");
+    } else if (layoutIdentifier == "1col") {
+        return tr("Single column", "Layout name");
+    }
+
+    return "";
+}
+
+QString WelcomeDialog::getLayoutDescription(QString layoutIdentifier) {
+    const QString &centralWidgetAddText = " " +
+                   tr("The note edit panel is the central widget that will be "
+                      "resized automatically", "Layout description");
+
+    const QString &noCentralWidgetAddText = " " +
+                   tr("Because of this there is no central widget that will be "
+                      "resized automatically.", "Layout description");
+
+    if (layoutIdentifier == "minimal") {
+        return tr("Just the note list and the note edit panel are enabled.",
+                "Layout description") + centralWidgetAddText;
+    } else if (layoutIdentifier == "full") {
+        return tr("Most of the panels, like the note list, the tagging panels, "
+                  "the note edit panel and the preview panel are enabled.",
+                  "Layout description") + centralWidgetAddText;
+    } else if (layoutIdentifier == "full-vertical") {
+        return tr("Most of the panels, like the note list, the tagging panels, "
+                  "the note edit panel and the preview panel are enabled, but "
+                  "the preview is above the note edit panel.",
+                  "Layout description") + noCentralWidgetAddText;
+    } else if (layoutIdentifier == "1col") {
+        return tr("Tiny one column layout with note search, note list and note "
+                  "edit.", "Layout description") + centralWidgetAddText;
+    }
+
+    return "";
 }
 
 void WelcomeDialog::resizeEvent(QResizeEvent* event) {

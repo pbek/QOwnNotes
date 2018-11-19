@@ -278,9 +278,6 @@
           <string>Panel layout</string>
          </property>
          <layout class="QGridLayout" name="gridLayout_8">
-          <property name="horizontalSpacing">
-           <number>0</number>
-          </property>
           <item row="1" column="1">
            <widget class="QGraphicsView" name="layoutGraphicsView">
             <property name="styleSheet">

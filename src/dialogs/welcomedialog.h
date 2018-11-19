@@ -61,5 +61,9 @@ private:
 
     void updateCurrentLayout() const;
 
+    static QString getLayoutName(QString layoutIdentifier);
+
+    static QString getLayoutDescription(QString layoutIdentifier);
+
     void resizeLayoutImage() const;
 };

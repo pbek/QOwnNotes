@@ -3,6 +3,9 @@
 ## 18.11.4
 - the **selection colors** in **dark mode** are now adapted to not get removed
   by blue filters like *f.lux* (for [#1067](https://github.com/pbek/QOwnNotes/issues/1067))
+- there now is a description text for each layout in the *Welcome dialog*
+  (for [#1069](https://github.com/pbek/QOwnNotes/issues/1069))
+    - the name of the layouts and the description texts will now be translated
 
 ## 18.11.3
 - the `Cancel` button of the note encryption password dialog is now always enabled
@@ -10,16 +13,17 @@
 - increased top and bottom padding of table cells in the note preview
   (for [#1018](https://github.com/pbek/QOwnNotes/issues/1018))
 - after a panel layout was chosen in the welcome dialog the application 
-  window will now be centered and resized initially
+  window will now be centered and resized initially (for [#1069](https://github.com/pbek/QOwnNotes/issues/1069))
 - the size of the welcome dialog is now adapted to more fit the layout 
   selector and the background color of the layout preview is adapted to the 
-  dialog background color
+  dialog background color (for [#1069](https://github.com/pbek/QOwnNotes/issues/1069))
 - interface languages now work in the snap version of QOwnNotes
 - added more Chinese Traditional, Spanish, Italian and Catalan translation
   (thank you abev66, richarson, tiwi90 and MGuerra)
 
 ## 18.11.2
 - you can now select the **initial panel layout** in the *Welcome dialog*
+  (for [#1069](https://github.com/pbek/QOwnNotes/issues/1069))
     - `Minimal`, `Full`, `Full vertical` and `Single column` are currently available
     - a screenshot of the layout will be viewed when selecting one 
 - the **note preview** will now view **table borders** (for [#1018](https://github.com/pbek/QOwnNotes/issues/1018))
