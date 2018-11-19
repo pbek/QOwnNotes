@@ -6,6 +6,8 @@
 - there now is a description text for each layout in the *Welcome dialog*
   (for [#1069](https://github.com/pbek/QOwnNotes/issues/1069))
     - the name of the layouts and the description texts will now be translated
+- added more German, French, Hungarian and Dutch translation (thank you jan_sh,
+  Botigli and PurplePlums)
 
 ## 18.11.3
 - the `Cancel` button of the note encryption password dialog is now always enabled
