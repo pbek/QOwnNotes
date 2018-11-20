@@ -21,6 +21,9 @@
 
 /*  Gui functions that can be useful */
 
+#define INTERFACE_OVERRIDE_STYLESHEET_PRE_STRING "/* BEGIN INTERFACE OVERRIDE STYLESHEET */"
+#define INTERFACE_OVERRIDE_STYLESHEET_POST_STRING "/* END INTERFACE OVERRIDE STYLESHEET */"
+
 namespace Utils {
     namespace Gui {
         enum TreeWidgetSearchFlag {
@@ -84,5 +87,7 @@ namespace Utils {
                         QFontDialog::FontDialogOptions());
 
         bool autoFormatTableAtCursor(QPlainTextEdit *textEdit);
+
+        void updateInterfaceFontSize(int fontSize = -1);
     }
 }

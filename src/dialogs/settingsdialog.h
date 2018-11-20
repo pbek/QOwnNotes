@@ -246,6 +246,10 @@ private slots:
 
     void on_ignoreNoteSubFoldersResetButton_clicked();
 
+    void on_interfaceFontSizeSpinBox_valueChanged(int arg1);
+
+    void on_overrideInterfaceFontSizeGroupBox_toggled(bool arg1);
+
 private:
 
     Ui::SettingsDialog *ui;

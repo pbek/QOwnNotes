@@ -440,3 +440,28 @@ bool Utils::Gui::autoFormatTableAtCursor(QPlainTextEdit *textEdit) {
 
     return true;
 }
+
+/**
+ * Updates the interface font size from the interface font size override settings
+ */
+void Utils::Gui::updateInterfaceFontSize(int fontSize) {
+    QSettings settings;
+    bool overrideInterfaceFontSize = settings.value(
+            "overrideInterfaceFontSize", false).toBool();
+
+    // remove old style
+    QString stylesheet = qApp->styleSheet().remove(QRegularExpression(
+            QRegularExpression::escape(INTERFACE_OVERRIDE_STYLESHEET_PRE_STRING) +
+            ".*" + QRegularExpression::escape(INTERFACE_OVERRIDE_STYLESHEET_POST_STRING)));
+
+    if (overrideInterfaceFontSize) {
+        int interfaceFontSize = fontSize != -1 ?
+                fontSize : settings.value("interfaceFontSize", 11).toInt();
+
+        stylesheet += "\n" + QString(INTERFACE_OVERRIDE_STYLESHEET_PRE_STRING) +
+                "QWidget {font-size: " + QString::number(interfaceFontSize) +
+                "px;}" + QString(INTERFACE_OVERRIDE_STYLESHEET_POST_STRING);
+    }
+
+    qApp->setStyleSheet(stylesheet);
+}

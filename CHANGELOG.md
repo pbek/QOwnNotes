@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 18.11.5
+- you now can **override the interface font size** in the *Interface settings*
+  (for [#1071](https://github.com/pbek/QOwnNotes/issues/1071))
 - high DPI scaling is now enabled (if built with Qt 5.6 or above)
   (for [#1071](https://github.com/pbek/QOwnNotes/issues/1071))
 

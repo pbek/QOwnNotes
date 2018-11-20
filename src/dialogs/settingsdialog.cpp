@@ -585,6 +585,9 @@ void SettingsDialog::storeSettings() {
                       Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(
                               ui->externalEditorPathLineEdit->text()));
 
+    settings.setValue("overrideInterfaceFontSize",
+                      ui->overrideInterfaceFontSizeGroupBox->isChecked());
+    settings.setValue("interfaceFontSize", ui->interfaceFontSizeSpinBox->value());
     settings.setValue("itemHeight", ui->itemHeightSpinBox->value());
     settings.setValue("MainWindow/mainToolBar.iconSize",
                       ui->toolbarIconSizeSpinBox->value());
@@ -922,8 +925,19 @@ void SettingsDialog::readSettings() {
     ui->toolbarIconSizeSpinBox->setValue(
                  settings.value("MainWindow/mainToolBar.iconSize").toInt());
 
+    const QSignalBlocker overrideInterfaceFontSizeGroupBoxBlocker(
+            ui->overrideInterfaceFontSizeGroupBox);
+    Q_UNUSED(overrideInterfaceFontSizeGroupBoxBlocker);
+    const QSignalBlocker interfaceFontSizeSpinBoxBlocker(
+            ui->interfaceFontSizeSpinBox);
+    Q_UNUSED(interfaceFontSizeSpinBoxBlocker);
+    ui->overrideInterfaceFontSizeGroupBox->setChecked(
+            settings.value("overrideInterfaceFontSize", false).toBool());
+    ui->interfaceFontSizeSpinBox->setValue(
+            settings.value("interfaceFontSize", 11).toInt());
+
     QTreeWidget treeWidget(this);
-    QTreeWidgetItem *treeWidgetItem = new QTreeWidgetItem();
+    auto *treeWidgetItem = new QTreeWidgetItem();
     treeWidget.addTopLevelItem(treeWidgetItem);
     int height = treeWidget.visualItemRect(treeWidgetItem).height();
 
@@ -3613,4 +3627,16 @@ void SettingsDialog::on_issueAssistantPushButton_clicked() {
 
 void SettingsDialog::on_ignoreNoteSubFoldersResetButton_clicked() {
     ui->ignoreNoteSubFoldersLineEdit->setText(IGNORED_NOTE_SUBFOLDERS_DEFAULT);
+}
+
+void SettingsDialog::on_interfaceFontSizeSpinBox_valueChanged(int arg1) {
+    QSettings settings;
+    settings.setValue("interfaceFontSize", arg1);
+    Utils::Gui::updateInterfaceFontSize(arg1);
+}
+
+void SettingsDialog::on_overrideInterfaceFontSizeGroupBox_toggled(bool arg1) {
+    QSettings settings;
+    settings.setValue("overrideInterfaceFontSize", arg1);
+    Utils::Gui::updateInterfaceFontSize();
 }

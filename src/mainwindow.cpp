@@ -1353,6 +1353,7 @@ void MainWindow::initStyling() {
             noteTagFrameColorName);
 
     qApp->setStyleSheet(appStyleSheet);
+    Utils::Gui::updateInterfaceFontSize();
 
     if (!isInDistractionFreeMode()) {
         ui->noteTextEdit->setPaperMargins(0);
