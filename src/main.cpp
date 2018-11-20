@@ -276,6 +276,10 @@ int main(int argc, char *argv[]) {
     // temporary log output until LogWidget::logMessageOutput takes over
     qInstallMessageHandler(tempLogMessageOutput);
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
+    QGuiApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+#endif
+
     QString release = RELEASE;
     bool portable = false;
     bool clearSettings = false;
