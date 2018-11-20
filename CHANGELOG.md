@@ -5,6 +5,8 @@
   (for [#1071](https://github.com/pbek/QOwnNotes/issues/1071))
 - high DPI scaling is now enabled (if built with Qt 5.6 or above)
   (for [#1071](https://github.com/pbek/QOwnNotes/issues/1071))
+- added more German, Italian and Dutch translation (thank you jan_sh, mlocati
+  and Fabijenna)
 
 ## 18.11.4
 - the **selection colors** in **dark mode** are now adapted to not get removed
