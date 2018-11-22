@@ -11,6 +11,7 @@
 
 QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
         : QMarkdownTextEdit(parent, false) {
+    mainWindow = Q_NULLPTR;
     _highlighter = new QOwnNotesMarkdownHighlighter(document());
     setStyles();
     updateSettings();
@@ -308,7 +309,7 @@ void QOwnNotesMarkdownTextEdit::insertFromMimeData(const QMimeData * source) {
     // if there is text in the clipboard do the normal pasting process
     if (source->hasText()) {
         QMarkdownTextEdit::insertFromMimeData(source);
-    } else if (mainWindow != NULL) {
+    } else if (mainWindow != Q_NULLPTR) {
         // to more complex pasting if there was no text (and a main window
         // was set)
         mainWindow->handleInsertingFromMimeData(source);
