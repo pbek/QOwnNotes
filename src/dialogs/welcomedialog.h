@@ -39,10 +39,6 @@ private slots:
 
     void on_networkSettingsButton_clicked();
 
-    void on_layoutComboBox_currentIndexChanged(int index);
-
-    void resizeEvent(QResizeEvent* event);
-
 private:
     Ui::WelcomeDialog *ui;
     bool _allowFinishButton;
@@ -56,14 +52,4 @@ private:
     void storeNoteFolderSettings();
 
     void closeEvent(QCloseEvent *event);
-
-    void loadLayouts();
-
-    void updateCurrentLayout() const;
-
-    static QString getLayoutName(QString layoutIdentifier);
-
-    static QString getLayoutDescription(QString layoutIdentifier);
-
-    void resizeLayoutImage() const;
 };

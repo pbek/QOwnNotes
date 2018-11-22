@@ -176,6 +176,18 @@
             </property>
             <item>
              <property name="text">
+              <string>Layout</string>
+             </property>
+             <property name="whatsThis">
+              <string notr="true">18</string>
+             </property>
+             <property name="icon">
+              <iconset theme="window-duplicate" resource="../breeze-qownnotes.qrc">
+               <normaloff>:/icons/breeze-qownnotes/16x16/window-duplicate.svg</normaloff>:/icons/breeze-qownnotes/16x16/window-duplicate.svg</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
               <string>Editor</string>
              </property>
              <property name="whatsThis">
@@ -373,7 +385,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>4</number>
+            <number>18</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -5051,6 +5063,13 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
              </item>
             </layout>
            </widget>
+           <widget class="QWidget" name="layoutPage">
+            <layout class="QVBoxLayout" name="verticalLayout_23">
+             <item>
+              <widget class="LayoutWidget" name="layoutWidget" native="true"/>
+             </item>
+            </layout>
+           </widget>
           </widget>
          </item>
         </layout>
@@ -5098,6 +5117,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
    <class>ScriptListWidget</class>
    <extends>QListWidget</extends>
    <header>widgets/scriptlistwidget.h</header>
+  </customwidget>
+  <customwidget>
+   <class>LayoutWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">widgets/layoutwidget.h</header>
+   <container>1</container>
   </customwidget>
  </customwidgets>
  <resources>

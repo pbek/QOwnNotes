@@ -278,34 +278,8 @@
           <string>Panel layout</string>
          </property>
          <layout class="QGridLayout" name="gridLayout_8">
-          <item row="1" column="1">
-           <widget class="QGraphicsView" name="layoutGraphicsView">
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
-            <property name="frameShape">
-             <enum>QFrame::NoFrame</enum>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="layoutDescriptionLabel">
-            <property name="text">
-             <string notr="true">Layout description</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-            </property>
-            <property name="wordWrap">
-             <bool>true</bool>
-            </property>
-            <property name="textInteractionFlags">
-             <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="0" colspan="2">
-           <widget class="QComboBox" name="layoutComboBox"/>
+          <item row="0" column="0">
+           <widget class="LayoutWidget" name="layoutWidget" native="true"/>
           </item>
          </layout>
         </widget>
@@ -436,6 +410,14 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>LayoutWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">widgets/layoutwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="../breeze-qownnotes.qrc"/>
   <include location="../images.qrc"/>

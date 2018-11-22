@@ -52,7 +52,8 @@ public:
         EditorPage,
         GitPage,
         PanelsPage,
-        LocalTrashPage
+        LocalTrashPage,
+        LayoutPage
     };
 
     explicit SettingsDialog(int page = 0,

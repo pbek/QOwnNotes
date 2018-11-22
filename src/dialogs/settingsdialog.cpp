@@ -221,6 +221,8 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
             this, SLOT(needRestart()));
     connect(ui->ignoreNoteSubFoldersLineEdit, SIGNAL(textChanged(QString)),
             this, SLOT(needRestart()));
+//    connect(ui->layoutWidget, SIGNAL(settingsStored()),
+//            this, SLOT(needRestart()));
 
     // connect the panel sort radio buttons
     connect(ui->notesPanelSortAlphabeticalRadioButton, SIGNAL(toggled(bool)),
@@ -2976,7 +2978,13 @@ void SettingsDialog::on_shortcutSearchLineEdit_textChanged(
 void SettingsDialog::on_settingsTreeWidget_currentItemChanged(
         QTreeWidgetItem *current, QTreeWidgetItem *previous) {
     Q_UNUSED(previous);
-    ui->settingsStackedWidget->setCurrentIndex(current->whatsThis(0).toInt());
+    const int currentIndex = current->whatsThis(0).toInt();
+
+    ui->settingsStackedWidget->setCurrentIndex(currentIndex);
+
+    if (currentIndex == SettingsPages::LayoutPage) {
+        ui->layoutWidget->resizeLayoutImage();
+    }
 }
 
 void SettingsDialog::on_settingsStackedWidget_currentChanged(int index) {
@@ -3600,7 +3608,7 @@ void SettingsDialog::on_importSettingsButton_clicked() {
             settings.setValue(key, value);
         }
 
-    // make sure no settings get written after after are quitting
+    // make sure no settings get written after quitting
     qApp->setProperty("clearAppDataAndExit", true);
 
     if (singleApplication) {

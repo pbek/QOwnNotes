@@ -34,6 +34,7 @@ qt5_wrap_ui(dialogs/ui_issueassistantdialog.h issueassistantdialog.ui)
 qt5_wrap_ui(dialogs/ui_tagadddialog.h tagadddialog.ui)
 qt5_wrap_ui(widgets/ui_fontcolorwidget.h fontcolorwidget.ui)
 qt5_wrap_ui(widgets/ui_evernoteimportdialog.h ui_evernoteimportdialog.ui)
+qt5_wrap_ui(widgets/ui_layoutwidget.ui ui_layoutwidget.ui)
 qt5_wrap_ui(dialogs/ui_orphanedimagesdialog.h orphanedimagesdialog.ui)
 qt5_wrap_ui(dialogs/ui_orphanedattachmentsdialog.h orphanedattachmentsdialog.ui)
 qt5_wrap_ui(dialogs/ui_actiondialog.h actiondialog.ui)
@@ -255,6 +256,9 @@ set(SOURCE_FILES
     widgets/notetreewidgetitem.cpp
     widgets/notetreewidgetitem.h
     widgets/notetreewidgetitem.ui
+    widgets/layoutwidget.cpp
+    widgets/layoutwidget.h
+    widgets/layoutwidget.ui
     utils/misc.cpp
     utils/misc.h
     utils/git.cpp
