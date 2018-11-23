@@ -5,6 +5,9 @@
   (for [#1069](https://github.com/pbek/QOwnNotes/issues/1069))
 - fixed a possible crash when pasting images into the issue assistant
   (for [#1072](https://github.com/pbek/QOwnNotes/issues/1072))
+- added more German, Spanish, Brazilian Portuguese, Italian, Hungarian and 
+  Dutch translation (thank you jan_sh, rakekniven, richarson, tiwi90, mlocati,
+  mlimacarlos and Fabijenna)
 
 ## 18.11.5
 - you now can **override the interface font size** in the *Interface settings*
