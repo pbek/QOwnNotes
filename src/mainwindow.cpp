@@ -573,7 +573,9 @@ bool MainWindow::restoreActiveNoteHistoryItem() {
 }
 
 MainWindow::~MainWindow() {
-    if (!isInDistractionFreeMode()) {
+    bool forceQuit = qApp->property("clearAppDataAndExit").toBool();
+
+    if (!isInDistractionFreeMode() && !forceQuit) {
         storeCurrentWorkspace();
     }
 

@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 18.11.6
+- you can now use pre-made QOwnNotes layouts in the new **Layout settings**
+  (for [#1069](https://github.com/pbek/QOwnNotes/issues/1069))
 - fixed a possible crash when pasting images into the issue assistant
   (for [#1072](https://github.com/pbek/QOwnNotes/issues/1072))
 
