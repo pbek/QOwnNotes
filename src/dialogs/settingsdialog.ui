@@ -5074,7 +5074,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                 <item>
                  <widget class="QLabel" name="label_17">
                   <property name="text">
-                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can set a new layout here. Keep in mind that you always can modify the position of the panels with the &lt;span style=&quot; font-style:italic;&quot;&gt;Unlock panels&lt;/span&gt; button.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   <string>You can set a new layout here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</string>
                   </property>
                  </widget>
                 </item>
