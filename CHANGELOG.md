@@ -9,6 +9,8 @@
   started a second time in single application mode
 - **QOwnNotesAPI** is now ready for **Nextcloud 15**
     - see [QOwnNotesAPI for Nextcloud](https://apps.nextcloud.com/apps/qownnotesapi)
+- added more Catalan, Spanish, Italian, Hungarian and Dutch translation (thank
+  you MGuerra, richarson, mlocati and Fabijenna)
 
 ## 18.11.6
 - you can now use pre-made QOwnNotes layouts in the new **Layout settings**
