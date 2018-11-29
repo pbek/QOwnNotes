@@ -14,6 +14,9 @@
 #include <utils/misc.h>
 #include <utils/schema.h>
 
+// define the base class for SingleApplication
+#define QAPPLICATION_CLASS QApplication
+
 /**
  * Macro for loading the translations
  */
@@ -284,6 +287,7 @@ int main(int argc, char *argv[]) {
     bool portable = false;
     bool clearSettings = false;
     bool snap = false;
+    bool allowOnlyOneAppInstance = true;
     QStringList arguments;
     QString appNameAdd = "";
 
@@ -303,6 +307,8 @@ int main(int argc, char *argv[]) {
             portable = true;
         } else if (arg == "--clear-settings") {
             clearSettings = true;
+        } else if (arg == "--help" || arg == "--dump-settings") {
+            allowOnlyOneAppInstance = false;
         } else if (arg == "--after-update") {
             qWarning() << __func__ << " - 'arg': " << arg;
 #if not defined(Q_OS_WIN)
@@ -413,10 +419,14 @@ int main(int argc, char *argv[]) {
 
 #ifdef Q_OS_MAC
     // we don't need this on macOS
-    bool allowOnlyOneAppInstance = false;
+    allowOnlyOneAppInstance = false;
 #else
-    bool allowOnlyOneAppInstance = settings.value(
-            "allowOnlyOneAppInstance", true).toBool();
+    // if allowOnlyOneAppInstance still has the default true let's ask the
+    // settings
+    if (allowOnlyOneAppInstance) {
+        allowOnlyOneAppInstance = settings.value(
+                "allowOnlyOneAppInstance", true).toBool();
+    }
 #endif
 
     // if only one app instance is allowed use SingleApplication
@@ -449,6 +459,10 @@ int main(int argc, char *argv[]) {
         // raise the main window if app was started a 2nd time in single
         // application mode
         QObject::connect(&app, &SingleApplication::instanceStarted, [&] {
+            qWarning() << QCoreApplication::translate("main",
+                        "A second instance of QOwnNotes was attempted to be "
+                        "started!");
+
             w.show();
             w.raise();
             w.activateWindow();

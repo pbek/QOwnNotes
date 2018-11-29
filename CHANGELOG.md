@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 18.11.7
+- the command line parameters `--help` and `--dump-settings` now also work in
+  single application mode if a second instance of QOwnNotes is started
+- a warning now will be printed out in the first application if QOwnNotes is 
+  started a second time in single application mode
+- QOwnNotesAPI is now ready for Nextcloud 15
+    - see [QOwnNotesAPI for Nextcloud](https://apps.nextcloud.com/apps/qownnotesapi)
+
 ## 18.11.6
 - you can now use pre-made QOwnNotes layouts in the new **Layout settings**
   (for [#1069](https://github.com/pbek/QOwnNotes/issues/1069))
