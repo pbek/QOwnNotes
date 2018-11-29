@@ -1,6 +1,6 @@
 # QOwnNotes Changelog
 
-## 18.11.7
+## 18.12.0
 - you now can **copy the text from code blocks** to the clipboard by right
   clicking on it and selecting `Copy code block` (for [#1077](https://github.com/pbek/QOwnNotes/issues/1077))
 - the command line parameters `--help` and `--dump-settings` now also work in
