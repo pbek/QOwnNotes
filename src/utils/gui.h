@@ -18,6 +18,7 @@
 #include <QMessageBox>
 #include <QFontDialog>
 #include <QPlainTextEdit>
+#include <QTextBlock>
 
 /*  Gui functions that can be useful */
 
@@ -85,6 +86,8 @@ namespace Utils {
                 const QString &title = QString(),
                 QFontDialog::FontDialogOptions options =
                         QFontDialog::FontDialogOptions());
+
+        void copyCodeBlockText(QTextBlock initialBlock);
 
         bool autoFormatTableAtCursor(QPlainTextEdit *textEdit);
 

@@ -1,11 +1,13 @@
 # QOwnNotes Changelog
 
 ## 18.11.7
+- you now can **copy the text from code blocks** to the clipboard by right
+  clicking on it and selecting `Copy code block` (for [#1077](https://github.com/pbek/QOwnNotes/issues/1077))
 - the command line parameters `--help` and `--dump-settings` now also work in
   single application mode if a second instance of QOwnNotes is started
 - a warning now will be printed out in the first application if QOwnNotes is 
   started a second time in single application mode
-- QOwnNotesAPI is now ready for Nextcloud 15
+- **QOwnNotesAPI** is now ready for **Nextcloud 15**
     - see [QOwnNotesAPI for Nextcloud](https://apps.nextcloud.com/apps/qownnotesapi)
 
 ## 18.11.6

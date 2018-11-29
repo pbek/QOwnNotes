@@ -5645,6 +5645,15 @@ void MainWindow::noteTextEditCustomContextMenuRequested(
     bool isAllowNoteEditing = Utils::Misc::isNoteEditingAllowed();
     bool isTextSelected = isNoteTextSelected();
 
+    QAction *copyCodeBlockAction = menu->addAction(tr("Copy code block"));
+    copyCodeBlockAction->setIcon(QIcon::fromTheme(
+            "edit-copy", QIcon(":icons/breeze-qownnotes/16x16/edit-copy.svg")));
+    const QTextBlock &currentTextBlock = noteTextEdit->cursorForPosition(pos).block();
+    const int userState = currentTextBlock.userState();
+    copyCodeBlockAction->setEnabled(
+            userState == MarkdownHighlighter::HighlighterState::CodeBlock ||
+            userState == MarkdownHighlighter::HighlighterState::CodeBlockEnd);
+
     menu->addSeparator();
 
     // add the print menu
@@ -5750,6 +5759,10 @@ void MainWindow::noteTextEditCustomContextMenuRequested(
             QTextEdit *textEdit = new QTextEdit(this);
             textEdit->setHtml(html);
             exportNoteAsPDF(textEdit);
+        } else if (selectedItem == copyCodeBlockAction) {
+            // copy the text from a copy block around currentTextBlock to the
+            // clipboard
+            Utils::Gui::copyCodeBlockText(currentTextBlock);
         }
     }
 }

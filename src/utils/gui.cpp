@@ -22,6 +22,8 @@
 #include <QMessageBox>
 #include <QTextBlock>
 #include <QTextCursor>
+#include <QClipboard>
+#include <libraries/qmarkdowntextedit/markdownhighlighter.h>
 
 
 /**
@@ -291,6 +293,63 @@ QFont Utils::Gui::fontDialogGetFont(bool *ok, const QFont &initial,
 #endif
 
     return QFontDialog::getFont(ok, initial, parent, title, options);
+}
+
+/**
+ * Copies the text from a copy block around initialBlock to the clipboard
+ *
+ * @param initialBlock
+ */
+void Utils::Gui::copyCodeBlockText(QTextBlock initialBlock) {
+    QTextBlock block = initialBlock;
+    QString codeBlockText = block.text();
+    QStringList codeBlockTextList;
+    codeBlockTextList << codeBlockText;
+
+    // check the previous blocks
+    while(true) {
+        block = block.previous();
+
+        if (!block.isValid()) {
+            break;
+        }
+
+        if (block.userState() != 
+            MarkdownHighlighter::HighlighterState::CodeBlock) {
+            break;
+        }
+
+        codeBlockTextList.prepend(block.text());
+    }
+
+    // check the next blocks if we are not at the CodeBlockEnd
+    if (initialBlock.userState() !=
+        MarkdownHighlighter::HighlighterState::CodeBlockEnd) {
+        block = initialBlock;
+
+        while(true) {
+            block = block.next();
+
+            if (!block.isValid()) {
+                break;
+            }
+
+            if (block.userState() !=
+                MarkdownHighlighter::HighlighterState::CodeBlock &&
+                    block.userState() !=
+                    MarkdownHighlighter::HighlighterState::CodeBlockEnd) {
+                break;
+            }
+
+            codeBlockTextList.append(block.text());
+        }
+    }
+
+    codeBlockTextList.removeFirst();
+    codeBlockTextList.removeLast();
+
+    QClipboard *clipboard = QApplication::clipboard();
+    clipboard->setText(codeBlockTextList.join("\n") + "\n");
 }
 
 /**
