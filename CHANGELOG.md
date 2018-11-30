@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 18.12.1
+- there now is a new command line parameter `--allow-multiple-instances` that allows
+  multiple instances of QOwnNotes to be started even if disallowed in the settings
+- the command line parameter `-h` now also works in single application mode
+  if a second instance of QOwnNotes is started
+
 ## 18.12.0
 - you now can **copy the text from code blocks** to the clipboard by right
   clicking on it and selecting `Copy code block` (for [#1077](https://github.com/pbek/QOwnNotes/issues/1077))

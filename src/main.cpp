@@ -83,6 +83,11 @@ bool mainStartupMisc(const QStringList &arguments) {
                     "application and environment in GitHub Markdown and exits "
                     "the application."));
     parser.addOption(dumpSettingsOption);
+    const QCommandLineOption allowMultipleInstancesOption(
+            "allow-multiple-instances", QCoreApplication::translate("main",
+                    "Allows multiple instances of QOwnNotes to be started "
+                    "even if disallowed in the settings."));
+    parser.addOption(allowMultipleInstancesOption);
     const QCommandLineOption clearSettingsOption(
             "clear-settings", QCoreApplication::translate("main", "Clears the "
                     "settings and runs the application."));
@@ -307,7 +312,8 @@ int main(int argc, char *argv[]) {
             portable = true;
         } else if (arg == "--clear-settings") {
             clearSettings = true;
-        } else if (arg == "--help" || arg == "--dump-settings") {
+        } else if (arg == "--help" || arg == "--dump-settings" ||
+            arg == "-h" || arg == "--allow-multiple-instances") {
             allowOnlyOneAppInstance = false;
         } else if (arg == "--after-update") {
             qWarning() << __func__ << " - 'arg': " << arg;
