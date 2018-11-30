@@ -1,10 +1,13 @@
 # QOwnNotes Changelog
 
 ## 18.12.1
-- there now is a new command line parameter `--allow-multiple-instances` that allows
-  multiple instances of QOwnNotes to be started even if disallowed in the settings
+- there now is a new **command line parameter** `--allow-multiple-instances`
+  that allows **multiple instances** of QOwnNotes to be started even if
+  disallowed in the settings
 - the command line parameter `-h` now also works in single application mode
   if a second instance of QOwnNotes is started
+- the **Log panel** now has a **minimum height** of 20 to prevent that it can't
+  be seen when enabled
 
 ## 18.12.0
 - you now can **copy the text from code blocks** to the clipboard by right

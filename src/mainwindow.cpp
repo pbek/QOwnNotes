@@ -718,6 +718,8 @@ void MainWindow::initDockWidgets() {
     _logDockTitleBarWidget = _logDockWidget->titleBarWidget();
     addDockWidget(Qt::RightDockWidgetArea, _logDockWidget, Qt::Vertical);
     _logDockWidget->hide();
+    // prevent that log widgets can't be seen when enabled
+    _logDockWidget->setMinimumHeight(20);
 
     _scriptingDockWidget = new QDockWidget(tr("Scripting"), this);
     _scriptingDockWidget->setObjectName("scriptingDockWidget");
