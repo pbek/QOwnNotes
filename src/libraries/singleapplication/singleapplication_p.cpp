@@ -207,11 +207,7 @@ void SingleApplicationPrivate::connectToPrimary( int msecs, ConnectionType conne
         // Notify the parent that a new instance had been started;
         QByteArray initMsg;
         QDataStream writeStream(&initMsg, QIODevice::WriteOnly);
-
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
         writeStream.setVersion(QDataStream::Qt_5_6);
-#endif
-
         writeStream << blockServerName.toLatin1();
         writeStream << static_cast<quint8>(connectionType);
         writeStream << instanceNumber;
@@ -221,10 +217,7 @@ void SingleApplicationPrivate::connectToPrimary( int msecs, ConnectionType conne
         // The header indicates the message length that follows
         QByteArray header;
         QDataStream headerStream(&header, QIODevice::WriteOnly);
-
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
-        writeStream.setVersion(QDataStream::Qt_5_6);
-#endif
+        headerStream.setVersion(QDataStream::Qt_5_6);
         headerStream << static_cast <quint64>( initMsg.length() );
 
         socket->write( header );
@@ -307,10 +300,7 @@ void SingleApplicationPrivate::readInitMessageHeader( QLocalSocket *sock )
     }
 
     QDataStream headerStream( sock );
-
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
-    headerStream.setVersion(QDataStream::Qt_5_6);
-#endif
+    headerStream.setVersion( QDataStream::Qt_5_6 );
 
     // Read the header to know the message length
     quint64 msgLen = 0;
@@ -340,10 +330,7 @@ void SingleApplicationPrivate::readInitMessageBody( QLocalSocket *sock )
     // Read the message body
     QByteArray msgBytes = sock->read(info.msgLen);
     QDataStream readStream(msgBytes);
-
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
-    readStream.setVersion(QDataStream::Qt_5_6);
-#endif
+    readStream.setVersion( QDataStream::Qt_5_6 );
 
     // server name
     QByteArray latin1Name;

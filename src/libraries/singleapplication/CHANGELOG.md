@@ -1,6 +1,14 @@
 Changelog
 =========
 
+__3.0.13a__
+----------
+
+* Process socket events asynchronously
+* Fix undefined variable error on Windows
+
+   _Francis Giraldeau_
+
 __3.0.12a__
 ----------
 
