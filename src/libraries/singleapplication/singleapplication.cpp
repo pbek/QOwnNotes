@@ -36,7 +36,7 @@
  * @param argv
  * @param {bool} allowSecondaryInstances
  */
-SingleApplication::SingleApplication( int &argc, char *argv[], bool allowSecondary, Options options, int timeout )
+SingleApplication::SingleApplication( int &argc, char *argv[], bool allowSecondary, Options options, int timeout, std::function<void()> instanceAbortedFunction )
     : app_t( argc, argv ), d_ptr( new SingleApplicationPrivate( this ) )
 {
     Q_D(SingleApplication);
@@ -120,6 +120,11 @@ SingleApplication::SingleApplication( int &argc, char *argv[], bool allowSeconda
     d->connectToPrimary( timeout, SingleApplicationPrivate::NewInstance );
 
     delete d;
+
+    // Call user function if application will be aborted
+    if( instanceAbortedFunction != Q_NULLPTR ) {
+        instanceAbortedFunction();
+    }
 
     ::exit( EXIT_SUCCESS );
 }

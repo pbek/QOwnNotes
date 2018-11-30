@@ -23,6 +23,7 @@
 #ifndef SINGLE_APPLICATION_H
 #define SINGLE_APPLICATION_H
 
+#include <functional>
 #include <QtCore/QtGlobal>
 #include <QtNetwork/QLocalSocket>
 
@@ -85,7 +86,7 @@ public:
      * Usually 4*timeout would be the worst case (fail) scenario.
      * @see See the corresponding QAPPLICATION_CLASS constructor for reference
      */
-    explicit SingleApplication( int &argc, char *argv[], bool allowSecondary = false, Options options = Mode::User, int timeout = 1000 );
+    explicit SingleApplication( int &argc, char *argv[], bool allowSecondary = false, Options options = Mode::User, int timeout = 1000, std::function<void()> instanceAbortedFunction = Q_NULLPTR );
     ~SingleApplication();
 
     /**

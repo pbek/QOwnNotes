@@ -437,7 +437,13 @@ int main(int argc, char *argv[]) {
 
     // if only one app instance is allowed use SingleApplication
     if (allowOnlyOneAppInstance) {
-        SingleApplication app(argc, argv);
+        SingleApplication app(argc, argv, false, SingleApplication::Mode::User,
+                1000, []() {
+            qWarning() << QCoreApplication::translate("main",
+                       "An other instance of QOwnNotes was already started! "
+                       "You can turn off the single instance mode in the settings"
+                       " or use the parameter --allow-multiple-instances.");
+        });
         app.setProperty("release", release);
         app.setProperty("portable", portable);
         app.setProperty("singleApplication", true);

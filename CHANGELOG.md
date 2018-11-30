@@ -8,6 +8,8 @@
   if a second instance of QOwnNotes is started
 - the **Log panel** now has a **minimum height** of 20 to prevent that it can't
   be seen when enabled
+- a warning now will be printed out if QOwnNotes is started a second time in
+  single application mode
 
 ## 18.12.0
 - you now can **copy the text from code blocks** to the clipboard by right
