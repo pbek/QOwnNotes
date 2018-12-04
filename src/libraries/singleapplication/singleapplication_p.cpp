@@ -342,7 +342,7 @@ void SingleApplicationPrivate::readInitMessageBody( QLocalSocket *sock )
     QDataStream readStream(msgBytes);
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
-    readStream.setVersion(QDataStream::Qt_5_6);
+    readStream.setVersion( QDataStream::Qt_5_6 );
 #endif
 
     // server name
