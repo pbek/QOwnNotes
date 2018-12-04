@@ -69,6 +69,9 @@ Patrizio Bekerle <patrizio@bekerle.com>
 # Fedora 27 and above wasn't able to create debug packages
 %if 0%{?fedora} >= 27
 %global debug_package %{nil}
+
+# prevent RPM build error: Installed (but unpackaged) file(s) found
+%define _unpackaged_files_terminate_build 0
 %endif
 
 %prep

@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 18.12.2
+- there now is a software repository for **Fedora 29**
+    - please visit the [Fedora installation page](https://www.qownnotes.org/installation#Fedora)
+      for instructions
+
 ## 18.12.1
 - there now is a new **command line parameter** `--allow-multiple-instances`
   that allows **multiple instances** of QOwnNotes to be started even if
