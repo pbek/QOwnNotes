@@ -223,7 +223,7 @@ void SingleApplicationPrivate::connectToPrimary( int msecs, ConnectionType conne
         QDataStream headerStream(&header, QIODevice::WriteOnly);
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
-        writeStream.setVersion(QDataStream::Qt_5_6);
+        headerStream.setVersion(QDataStream::Qt_5_6);
 #endif
         headerStream << static_cast <quint64>( initMsg.length() );
 
@@ -309,7 +309,7 @@ void SingleApplicationPrivate::readInitMessageHeader( QLocalSocket *sock )
     QDataStream headerStream( sock );
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
-    headerStream.setVersion(QDataStream::Qt_5_6);
+    headerStream.setVersion( QDataStream::Qt_5_6 );
 #endif
 
     // Read the header to know the message length
