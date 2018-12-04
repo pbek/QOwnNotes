@@ -6438,7 +6438,7 @@ Dit kan niet ongedaan worden gemaakt!</translation>
     <message>
       <location filename="../main.cpp" line="442"/>
       <source>An other instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</source>
-      <translation type="unfinished">An other instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</translation>
+      <translation>Een ander exemplaar van QOwnNotes was al gestart! U kunt de single-instantiemodus uitschakelen in de instellingen of de parameter -- multiple-instances-gebruiken -- toestaan.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="474"/>

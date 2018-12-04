@@ -123,12 +123,12 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="672"/>
       <source>Author</source>
-      <translation type="unfinished">Author</translation>
+      <translation>Автор</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="674"/>
       <source>Source</source>
-      <translation type="unfinished">Source</translation>
+      <translation>Джерело</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="676"/>
@@ -381,7 +381,7 @@
     <message>
       <location filename="../helpers/fakevimproxy.cpp" line="26"/>
       <source>Information</source>
-      <translation type="unfinished">Information</translation>
+      <translation>Інформація</translation>
     </message>
   </context>
   <context>
@@ -789,13 +789,13 @@
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="51"/>
       <source>Remove</source>
-      <translation type="unfinished">Remove</translation>
+      <translation>Видалити</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="52"/>
       <location filename="../dialogs/localtrashdialog.cpp" line="240"/>
       <source>Remove selected notes</source>
-      <translation type="unfinished">Remove selected notes</translation>
+      <translation>Видалити вибрані нотатки</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="97"/>
@@ -1139,12 +1139,12 @@
     <message>
       <location filename="../mainwindow.ui" line="896"/>
       <source>View note</source>
-      <translation type="unfinished">View note</translation>
+      <translation>Перегляд нотатки</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="908"/>
       <source>Trash</source>
-      <translation type="unfinished">Trash</translation>
+      <translation>Кошик</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="974"/>
@@ -1154,7 +1154,7 @@
     <message>
       <location filename="../mainwindow.ui" line="978"/>
       <source>Insert</source>
-      <translation type="unfinished">Insert</translation>
+      <translation>Вставити</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="995"/>
@@ -2273,7 +2273,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="10364"/>
       <source>Select file to insert</source>
-      <translation type="unfinished">Select file to insert</translation>
+      <translation>Вибрати файл для вставки</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10397"/>
@@ -2987,7 +2987,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="57"/>
       <source>Delete</source>
-      <translation type="unfinished">Delete</translation>
+      <translation>Видалити</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="86"/>
@@ -3012,7 +3012,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="162"/>
       <source>File size:</source>
-      <translation type="unfinished">File size:</translation>
+      <translation>Розмір файлу:</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="182"/>
@@ -3037,7 +3037,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="140"/>
       <source>Delete selected files</source>
-      <translation type="unfinished">Delete selected files</translation>
+      <translation>Видалити вибрані файли</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="141"/>
@@ -3327,12 +3327,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="32"/>
       <source>replace text</source>
-      <translation type="unfinished">replace text</translation>
+      <translation>замінити текст</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="79"/>
       <source>find in text</source>
-      <translation type="unfinished">find in text</translation>
+      <translation>знайти у тексті</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="86"/>
@@ -3536,12 +3536,12 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="228"/>
       <source>Version:</source>
-      <translation type="unfinished">Version:</translation>
+      <translation>Версія:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="202"/>
       <source>Repository:</source>
-      <translation type="unfinished">Repository:</translation>
+      <translation>Сховище:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="137"/>
@@ -3551,7 +3551,7 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="433"/>
       <source>Name</source>
-      <translation type="unfinished">Name</translation>
+      <translation>Ім'я</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="413"/>
@@ -3576,17 +3576,17 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="367"/>
       <source>Authors</source>
-      <translation type="unfinished">Authors</translation>
+      <translation>Автори</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="367"/>
       <source>Author</source>
-      <translation type="unfinished">Author</translation>
+      <translation>Автор</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="370"/>
       <source>Supported platforms</source>
-      <translation type="unfinished">Supported platforms</translation>
+      <translation>Платформи, що підтримуються</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="371"/>
@@ -4945,12 +4945,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2096"/>
       <source>Croatian</source>
-      <translation type="unfinished">Croatian</translation>
+      <translation>Хорватська</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3062"/>
       <source>Path to your QML file</source>
-      <translation type="unfinished">Path to your QML file</translation>
+      <translation>Шлях до файлу QML</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2853"/>
@@ -4965,12 +4965,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2957"/>
       <source>Version:</source>
-      <translation type="unfinished">Version:</translation>
+      <translation>Версія:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2918"/>
       <source>Repository:</source>
-      <translation type="unfinished">Repository:</translation>
+      <translation>Сховище:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2895"/>
@@ -5568,7 +5568,7 @@ Connection error message: </source>
       <location filename="../dialogs/settingsdialog.cpp" line="3403"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3405"/>
       <source>All files</source>
-      <translation type="unfinished">All files</translation>
+      <translation>Всі файли</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3413"/>

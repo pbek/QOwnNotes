@@ -6445,7 +6445,7 @@ Nem lehet visszavonni!</translation>
     <message>
       <location filename="../main.cpp" line="442"/>
       <source>An other instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</source>
-      <translation type="unfinished">An other instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</translation>
+      <translation>QOwnNotes egy másik példánya már elindult! Kapcsolja ki az egy példányos üzemmódot a beállításokban, vagy paraméterrel engedélyezze a -- több példány megnyitását.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="474"/>

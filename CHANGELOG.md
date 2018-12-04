@@ -4,6 +4,10 @@
 - there now is a software repository for **Fedora 29**
     - please visit the [Fedora installation page](https://www.qownnotes.org/installation#Fedora)
       for instructions
+- fixed build process for Qt below 5.6
+- added more German, Brazilian Portuguese, Ukrainian, French, Catalan, Italian,
+  Hungarian and Dutch translation (thank you rakekniven, tiwi90, prolinuxua,
+  MGuerra, Botigli, mlimacarlos and Fabijenna)
 
 ## 18.12.1
 - there now is a new **command line parameter** `--allow-multiple-instances`

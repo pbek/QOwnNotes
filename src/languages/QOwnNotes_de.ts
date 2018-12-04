@@ -6443,7 +6443,7 @@ Kann nicht rückgängig gemacht werden!</translation>
     <message>
       <location filename="../main.cpp" line="442"/>
       <source>An other instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</source>
-      <translation type="unfinished">An other instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</translation>
+      <translation>Eine weitere Instanz von QOwnNotes wurde bereits gestartet! Sie können den Einzelinstanz-Modus in den Einstellungen ausschalten oder den Parameter --allow-multiple-instances verwenden.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="474"/>

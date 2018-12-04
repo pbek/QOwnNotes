@@ -1074,7 +1074,7 @@
     <message>
       <location filename="../mainwindow.ui" line="119"/>
       <source>Find or create note sub folder</source>
-      <translation>Cerca o crea una nota a la subcarpeta</translation>
+      <translation>Cerca o crea una subcarpeta de notes</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="196"/>
@@ -1951,7 +1951,7 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
     <message>
       <location filename="../mainwindow.cpp" line="5650"/>
       <source>Copy code block</source>
-      <translation type="unfinished">Copy code block</translation>
+      <translation>Copia el bloc de codi</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5669"/>
@@ -4205,7 +4205,7 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="227"/>
       <source>Preview fonts</source>
-      <translation>Previsualitza el tipus de lletra</translation>
+      <translation>Fonts per a la vista prèvia</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="239"/>
@@ -6429,7 +6429,7 @@ Això no es pot desfer!</translation>
     <message>
       <location filename="../main.cpp" line="87"/>
       <source>Allows multiple instances of QOwnNotes to be started even if disallowed in the settings.</source>
-      <translation type="unfinished">Allows multiple instances of QOwnNotes to be started even if disallowed in the settings.</translation>
+      <translation>Permet arrencar múltiples instàncies de QOwnNotes encara que estigui deshabilitat en la configuració.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="92"/>
@@ -6444,12 +6444,12 @@ Això no es pot desfer!</translation>
     <message>
       <location filename="../main.cpp" line="442"/>
       <source>An other instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</source>
-      <translation type="unfinished">An other instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</translation>
+      <translation>Una altra instància de QOwnNotes s'ha engegat! Podeu deshabilitar el mode d'una sola instància en la configuració o usar el paràmetre --allow-multiple-instances.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="474"/>
       <source>A second instance of QOwnNotes was attempted to be started!</source>
-      <translation type="unfinished">A second instance of QOwnNotes was attempted to be started!</translation>
+      <translation>Una segona instància de QOwnNotes s'ha intentat arrencar!</translation>
     </message>
   </context>
 </TS>

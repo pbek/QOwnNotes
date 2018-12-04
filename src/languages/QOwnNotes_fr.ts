@@ -6371,12 +6371,12 @@ Cela ne peut être annuler !</translation>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="312"/>
       <source>If you want to be able to access your note versions and your trashed notes on your ownCloud server, you can configure QOwnNotes for it now. You can also do it at a later time.</source>
-      <translation type="unfinished">If you want to be able to access your note versions and your trashed notes on your ownCloud server, you can configure QOwnNotes for it now. You can also do it at a later time.</translation>
+      <translation>Si vous souhaitez être en mesure d'accéder aux versions de vos notes ou à vos notes à la corbeille sur votre serveur Owncloud, vous pouvez configurer QOwnNotes maintenant. Vous pourrez aussi le faire plus tard.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="342"/>
       <source>In any case, you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</source>
-      <translation type="unfinished">In any case, you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</translation>
+      <translation>Dans tous les cas, vous avez besoin du client de synchronisation de Owncloud (ou de tout autre client de synchronisation) pour synchroniser vos notes avec votre serveur Owncloud.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="384"/>
@@ -6424,7 +6424,7 @@ Cela ne peut être annuler !</translation>
     <message>
       <location filename="../main.cpp" line="87"/>
       <source>Allows multiple instances of QOwnNotes to be started even if disallowed in the settings.</source>
-      <translation type="unfinished">Allows multiple instances of QOwnNotes to be started even if disallowed in the settings.</translation>
+      <translation>Autorise le démarrage de plusieurs instances de QOwnNotes même si l'option est désactivée dans les réglages.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="92"/>
@@ -6439,12 +6439,12 @@ Cela ne peut être annuler !</translation>
     <message>
       <location filename="../main.cpp" line="442"/>
       <source>An other instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</source>
-      <translation type="unfinished">An other instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</translation>
+      <translation>Une autre instance de QOwnNotes a déjà été démarrée ! Vous pouvez désactiver le mode mono-instance dans les réglages ou alors utiliser le paramètre --allow-multiple-instances.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="474"/>
       <source>A second instance of QOwnNotes was attempted to be started!</source>
-      <translation type="unfinished">A second instance of QOwnNotes was attempted to be started!</translation>
+      <translation>Il y a eu une tentative de démarrage d'une seconde instance de QOOwnNotes !</translation>
     </message>
   </context>
 </TS>

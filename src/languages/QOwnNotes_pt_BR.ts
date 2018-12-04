@@ -6423,7 +6423,7 @@ Isso não poderá ser desfeito!</translation>
     <message>
       <location filename="../main.cpp" line="87"/>
       <source>Allows multiple instances of QOwnNotes to be started even if disallowed in the settings.</source>
-      <translation type="unfinished">Allows multiple instances of QOwnNotes to be started even if disallowed in the settings.</translation>
+      <translation>Permitir que multiplas instâncias do QOwnNotes sejam iniciadas mesmo se estiver desabilitado nas configurações.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="92"/>
@@ -6438,7 +6438,7 @@ Isso não poderá ser desfeito!</translation>
     <message>
       <location filename="../main.cpp" line="442"/>
       <source>An other instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</source>
-      <translation type="unfinished">An other instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</translation>
+      <translation>Uma outra instância do QOwnNotes foi iniciada! Você pode desativar o modo de única instância nas configurações ou utilizando o parâmetro --allow-multiple-instances.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="474"/>
