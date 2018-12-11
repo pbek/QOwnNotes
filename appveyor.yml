@@ -8,18 +8,18 @@ skip_tags: true
 
 environment:
   global:
-    qtdir57: C:\Qt\5.7\msvc2015
+    qtdir57: C:\Qt\5.7\mingw53_32
     qtdir59: C:\Qt\latest\mingw53_32
 
   matrix:
     # Qt 5.10
     - qtdir: "C:\\Qt\\latest\\mingw53_32"
     # Qt 5.7 (for Windows XP)
-    - qtdir: "C:\\Qt\\5.7\\msvc2015"
+    - qtdir: "C:\\Qt\\5.7\\mingw53_32"
 
 matrix:
   allow_failures:
-    - qtdir: "C:\\Qt\\5.7\\msvc2015"
+    - qtdir: "C:\\Qt\\5.7\\mingw53_32"
 
 install:
   # Qt-versions: https://www.appveyor.com/docs/build-environment/#qt
