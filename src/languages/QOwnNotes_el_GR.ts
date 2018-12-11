@@ -6445,12 +6445,12 @@ This cannot be undone!</translation>
       <translation type="unfinished">Runs the application in a different context for settings and internal files.</translation>
     </message>
     <message>
-      <location filename="../main.cpp" line="442"/>
-      <source>An other instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</source>
-      <translation type="unfinished">An other instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</translation>
+      <location filename="../main.cpp" line="443"/>
+      <source>Another instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</source>
+      <translation type="unfinished">Another instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</translation>
     </message>
     <message>
-      <location filename="../main.cpp" line="474"/>
+      <location filename="../main.cpp" line="475"/>
       <source>A second instance of QOwnNotes was attempted to be started!</source>
       <translation type="unfinished">A second instance of QOwnNotes was attempted to be started!</translation>
     </message>

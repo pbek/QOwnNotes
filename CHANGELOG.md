@@ -5,8 +5,9 @@
 - the Qt 5.7 build for Windows XP is now working again (for [#828](https://github.com/pbek/QOwnNotes/issues/828))
     - seek out the latest master build from [AppVeyor](https://ci.appveyor.com/project/pbek/qownnotes/history),
       choose the *Qt 5.7 environment* and download the *artifact*
-- an attempt was made to fix icon scaling problems on high dpi *Windows* and *macOS* systems
+- an attempt was made to fix icon scaling problems especially on high dpi *Windows* and *macOS* systems
   (for [#1005](https://github.com/pbek/QOwnNotes/issues/1005) and [#1085](https://github.com/pbek/QOwnNotes/issues/1085))
+- added more Ukrainian, Spanish and German translation (thank you prolinuxua and richarson)
 
 ## 18.12.2
 - there now is a software repository for **Fedora 29**
