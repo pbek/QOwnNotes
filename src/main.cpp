@@ -285,8 +285,9 @@ int main(int argc, char *argv[]) {
     qInstallMessageHandler(tempLogMessageOutput);
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
-    QGuiApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+    QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 #endif
+    QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
 
     QString release = RELEASE;
     bool portable = false;
