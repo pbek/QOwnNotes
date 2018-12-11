@@ -92,7 +92,7 @@ deploy:
       secure: spcyN/Dz3B2GXBPii8IywDLq6vfxC1SrN+xR2wMerFM7g2nTy0Lrh5agQONFoInR
     on:
       branch: master
-      qtdir: "C:\\Qt\\5.10.1\\mingw53_32"
+      qtdir: "C:\\Qt\\latest\\mingw53_32"
 #      branch: develop
 
 notifications:
