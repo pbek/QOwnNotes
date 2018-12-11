@@ -9,10 +9,10 @@ skip_tags: true
 environment:
   global:
     qtdir57: C:\Qt\5.7\mingw53_32
-    qtdir59: C:\Qt\latest\mingw53_32
+    qtdirlatest: C:\Qt\latest\mingw53_32
 
   matrix:
-    # Qt 5.10
+    # Qt 5.11.2
     - qtdir: "C:\\Qt\\latest\\mingw53_32"
     # Qt 5.7 (for Windows XP)
     - qtdir: "C:\\Qt\\5.7\\mingw53_32"
@@ -37,7 +37,7 @@ before_build:
 
 build_script:
   # enable this to take a look if there are new qt versions
-  #- dir C:\Qt\
+  - dir C:\Qt\latest
   - cd src
   # we need to modify that to make it running on AppVeyor
   - sed -i "s/CONFIG += c++11/QMAKE_CXXFLAGS += -std=gnu++0x/g" QOwnNotes.pro
