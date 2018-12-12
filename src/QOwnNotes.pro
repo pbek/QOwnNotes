@@ -108,7 +108,7 @@ SOURCES += main.cpp\
     widgets/notepreviewwidget.cpp \
     api/noteapi.cpp \
     api/tagapi.cpp \
-    widgets/combobox.cpp
+    widgets/combobox.cpp \
     widgets/logwidget.cpp \
     widgets/combobox.cpp \
     dialogs/sharedialog.cpp \
