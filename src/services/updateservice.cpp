@@ -20,7 +20,8 @@ UpdateService::UpdateService(QObject *parent) :
         QObject(parent) {
 }
 
-void UpdateService::checkForUpdates(MainWindow *mainWindow, UpdateMode updateMode) {
+void UpdateService::checkForUpdates(MainWindow *mainWindow,
+                                    UpdateMode updateMode) {
     this->mainWindow = mainWindow;
     this->updateMode = updateMode;
 
@@ -41,14 +42,22 @@ void UpdateService::checkForUpdates(MainWindow *mainWindow, UpdateMode updateMod
     isDebug = true;
 #endif
 
-    // there are troubles with https by default on different platforms,
-    // so we are using http everywhere for now
-    QUrl url("http://www.qownnotes.org/api/v1/last_release/QOwnNotes/" +
+    // there were troubles with https by default on different platforms,
+    // so we were using http until now
+    QUrl url("https://www.qownnotes.org/api/v1/last_release/QOwnNotes/" +
              QString(PLATFORM) + ".json");
 
     QUrlQuery q;
+    QString version(VERSION);
+
+    // check if we want to fake the version number to trigger an update
+    if (settings.value("Debug/fakeOldVersionNumber").toBool()) {
+        version = "17.5.0";
+        isDebug = true;
+    }
+
     q.addQueryItem("b", QString::number(BUILD));
-    q.addQueryItem("v", QString(VERSION));
+    q.addQueryItem("v", version);
     q.addQueryItem("d", QString(__DATE__) + " " + QString(__TIME__));
     q.addQueryItem("um", QString::number(updateMode));
     q.addQueryItem("debug", QString::number(isDebug));
@@ -59,7 +68,7 @@ void UpdateService::checkForUpdates(MainWindow *mainWindow, UpdateMode updateMod
     }
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-    q.addQueryItem("r", QString(RELEASE) + " (" +
+    q.addQueryItem("r", qApp->property("release").toString() + " (" +
                         QSysInfo::buildCpuArchitecture() + ")");
 
     QString operatingSystem = QSysInfo::prettyProductName();
@@ -69,7 +78,7 @@ void UpdateService::checkForUpdates(MainWindow *mainWindow, UpdateMode updateMod
 
     q.addQueryItem("o", operatingSystem);
 #else
-    q.addQueryItem("r", QString(RELEASE) );
+    q.addQueryItem("r", qApp->property("release").toString() );
 #endif
 
     url.setQuery(q);
@@ -79,18 +88,35 @@ void UpdateService::checkForUpdates(MainWindow *mainWindow, UpdateMode updateMod
 
 void UpdateService::onResult(QNetworkReply *reply) {
     // abort if reply was null
-    if (reply == NULL) {
+    if (reply == Q_NULLPTR) {
         return;
     }
 
     // abort if there was an error
     if (reply->error() != QNetworkReply::NoError) {
-        qWarning() << __func__ << " - 'reply error': " << reply->error();
+        qWarning() << __func__ << " - 'network reply error': "
+                   << reply->error();
+
+        if (this->updateMode == UpdateService::Manual) {
+            QMessageBox::warning(
+                    Q_NULLPTR, tr("Update-checker error"),
+                    tr("Network reply error: %1").arg(reply->error()));
+        }
+
         return;
     }
 
     QString allData = reply->readAll();
     if (allData.isEmpty()) {
+        qWarning() << __func__ << " - 'no data was received by the network "
+                "request'";
+
+        if (this->updateMode == UpdateService::Manual) {
+            QMessageBox::warning(
+                    Q_NULLPTR, tr("Update-checker error"),
+                    tr("No data was received by the network request!"));
+        }
+
         return;
     }
 
@@ -100,10 +126,22 @@ void UpdateService::onResult(QNetworkReply *reply) {
     QJSEngine engine;
     QJSValue result = engine.evaluate(data);
 
+    if (result.property("0").isNull()) {
+        qWarning() << __func__ << " - 'the data from the network request "
+                "could not be interpreted': " << allData;
+
+        if (this->updateMode == UpdateService::Manual) {
+            QMessageBox::warning(
+                    Q_NULLPTR, tr("Update-checker error"),
+                    tr("The data from the network request could not be "
+                               "interpreted!"));
+        }
+
+        return;
+    }
+
     // get the information if we should update our app
-    bool shouldUpdate =
-            (!result.property("0").isNull()) ?
-            result.property("0").property("should_update").toBool() : false;
+    bool shouldUpdate = result.property("0").property("should_update").toBool();
 
     // check if we should update our app
     if (shouldUpdate) {
@@ -140,6 +178,13 @@ void UpdateService::onResult(QNetworkReply *reply) {
             } else if (updateMode == UpdateService::Periodic) {
                 // check if the update dialog is already open
                 showUpdateDialog = !UpdateDialog::isUpdateDialogOpen();
+
+                // if the dialog is not open but there is a new release version
+                // string open it anyway
+                if (!showUpdateDialog &&
+                        releaseVersionString != _currentReleaseVersionString) {
+                    showUpdateDialog = true;
+                }
             }
 
             // check if the update dialog was disabled
@@ -150,19 +195,37 @@ void UpdateService::onResult(QNetworkReply *reply) {
         }
 
         if (showUpdateDialog) {
+            // if there already is an update dialog and if it is open
+            // then close and remove the old one
+            if (_updateDialog != Q_NULLPTR &&
+                    UpdateDialog::isUpdateDialogOpen()) {
+                _updateDialog->close();
+                _updateDialog->deleteLater();
+                delete _updateDialog;
+            }
+
+            // set the current release version string
+            _currentReleaseVersionString = releaseVersionString;
+
             // open the update dialog
-            UpdateDialog *dialog = new UpdateDialog(
-                    0, changesHtml, releaseUrl,
+            _updateDialog = new UpdateDialog(
+                    Q_NULLPTR, changesHtml, releaseUrl,
                     releaseVersionString,
                     releaseBuildNumber);
-            dialog->exec();
+
+            // try to prevent stealing of focus on periodic checks
+            if (this->updateMode == UpdateService::Periodic) {
+                _updateDialog->setAttribute(Qt::WA_ShowWithoutActivating);
+            }
+
+            _updateDialog->show();
         }
     } else {
         mainWindow->hideUpdateAvailableButton();
 
         if (this->updateMode == UpdateService::Manual) {
             QMessageBox::information(
-                    0, tr("No updates"),
+                    Q_NULLPTR, tr("No updates"),
                     tr("There are no updates available.<br /><strong>%1"
                                "</strong> is the latest version.")
                             .arg(QString(VERSION)));

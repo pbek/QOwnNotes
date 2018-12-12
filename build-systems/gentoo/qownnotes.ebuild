@@ -1,4 +1,4 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 2014-2018 Patrizio Bekerle
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -10,9 +10,9 @@ EAPI=5
 
 inherit qmake-utils eutils
 
-DESCRIPTION="A plain-text file notepad with markdown support and (optional) ownCloud integration"
+DESCRIPTION="A plain-text file notepad with markdown support and ownCloud/NC integration"
 HOMEPAGE="http://www.qownnotes.org/"
-SRC_URI="http://downloads.sourceforge.net/project/${PN}/src/${P}.tar.xz"
+SRC_URI="https://download.tuxfamily.org/${PN}/src/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -28,6 +28,7 @@ DEPEND="
 	dev-qt/qtnetwork:5
 	dev-qt/qtdeclarative:5
 	dev-qt/qtxml:5
+	dev-qt/qtxmlpatterns:5
 	dev-qt/qtprintsupport:5
 "
 RDEPEND="${DEPEND}"
@@ -52,5 +53,5 @@ src_install() {
 	insinto /usr/share/applications
 	doicon -s 128 images/icons/128x128/apps/QOwnNotes.png
 	doicon -s scalable images/icons/scalable/apps/QOwnNotes.svg
-	doins QOwnNotes.desktop
+	doins PBE.QOwnNotes.desktop
 }

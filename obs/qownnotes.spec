@@ -19,22 +19,31 @@ BuildRequires:  qt5-qtbase-gui
 BuildRequires:  qt5-qttools qt5-qttools-devel
 BuildRequires:  qt5-qtsvg-devel
 BuildRequires:  qt5-qtdeclarative-devel
+BuildRequires:  qt5-qtxmlpatterns-devel
 BuildRequires:  desktop-file-utils
-Requires:       qt5-qtsvg
+Requires:       qt5-qtsvg qt5-qtxmlpatterns
 
 %else
 # This is for all SUSE
 
-BuildRequires:  libqt5-qtbase-devel libqt5-qtdeclarative-devel libQt5Svg-devel
+BuildRequires:  libqt5-qtbase-devel libqt5-qtdeclarative-devel libQt5Svg-devel libQt5XmlPatterns-devel
 BuildRequires:  update-desktop-files
-Requires:       libQt5Svg5 libQt5Declarative5 libQt5Sql5 libQt5Sql5-sqlite libQt5Gui5 libQt5Network5 libQt5Widgets5 libQt5Xml5 libQt5PrintSupport5
+Requires:       libQt5Svg5 libQt5Sql5 libQt5Sql5-sqlite libQt5Gui5 libQt5Network5 libQt5Widgets5 libQt5Xml5 libQt5XmlPatterns5 libQt5PrintSupport5
+
+# try to detect openSUSE Tumbleweed
+# the way described in https://en.opensuse.org/Archive:How_to_detect_Tumbleweed didn't seem to work
+#%if 0%{suse_version} > 1320
+Requires:   libQtQuick5
+#%else
+#Requires:   libQt5Declarative5
+#%endif
 
 %endif
 
 License:        GPL-2.0
 Group:          System/GUI/Productivity
-Summary:        Note-taking app and todo list manager with ownCloud integration
-Url:            http://www.qownnotes.org/
+Summary:        Note-taking app and todo list manager with ownCloud/Nextcloud integration
+Url:            https://www.qownnotes.org/
 Version:        VERSION-STRING
 Release:        1%{?dist}
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
@@ -44,9 +53,9 @@ Source0:        %{name}-%{version}.tar.xz
 %description
 QOwnNotes is the open source notepad and todo list manager, that works together with the default notes application of ownCloud.
 
-So you are able to write down your thoughts with QOwnNotes and edit or search for them later from your mobile device (like with CloudNotes or the ownCloud web-service.
+So you are able to write down your thoughts with QOwnNotes and edit or search for them later from your mobile device (like with CloudNotes or the ownCloud/Nextcloud web-service.
 
-The notes are stored as plain text files and are synced with ownCloud's file sync functionality. Of course other software, like Dropbox can be used too.
+The notes are stored as plain text files and are synced with ownCloud's/Nextcloud's file sync functionality. Of course other software, like Dropbox can be used too.
 
 I like the concept of having notes accessible in plain text files, like it is done in the ownCloud notes app, to gain a maximum of freedom, but I was not able to find a decent desktop note taking tool or a text editor, that handles them well. Out of this need QOwnNotes was born.
 
@@ -56,6 +65,14 @@ Author
 ======
 Patrizio Bekerle <patrizio@bekerle.com>
 
+
+# Fedora 27 and above wasn't able to create debug packages
+%if 0%{?fedora} >= 27
+%global debug_package %{nil}
+
+# prevent RPM build error: Installed (but unpackaged) file(s) found
+%define _unpackaged_files_terminate_build 0
+%endif
 
 %prep
 %setup -q
@@ -92,7 +109,7 @@ popd
 
 # manually install desktop file for Fedora and CentOS 7
 %if 0%{?fedora} || 0%{?rhel} >= 7 || 0%{?centos} >= 7
-install -D -m 0644 QOwnNotes.desktop $RPM_BUILD_ROOT/%{_datadir}/applications/QOwnNotes.desktop
+install -D -m 0644 PBE.QOwnNotes.desktop $RPM_BUILD_ROOT/%{_datadir}/applications/PBE.QOwnNotes.desktop
 %endif
 
 install -D -m 0644 images/icons/128x128/apps/QOwnNotes.png $RPM_BUILD_ROOT/%{_datadir}/pixmaps/QOwnNotes.png
@@ -109,17 +126,35 @@ install -D -m 0644 languages/QOwnNotes_en.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNot
 install -D -m 0644 languages/QOwnNotes_de.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_de.qm
 install -D -m 0644 languages/QOwnNotes_fr.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_fr.qm
 install -D -m 0644 languages/QOwnNotes_pl.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_pl.qm
-install -D -m 0644 languages/QOwnNotes_zh.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_zh.qm
+install -D -m 0644 languages/QOwnNotes_zh_CN.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_zh_CN.qm
+install -D -m 0644 languages/QOwnNotes_zh_TW.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_zh_TW.qm
 install -D -m 0644 languages/QOwnNotes_ru.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_ru.qm
-install -D -m 0644 languages/QOwnNotes_pt.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_pt.qm
+install -D -m 0644 languages/QOwnNotes_pt_BR.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_pt_BR.qm
+install -D -m 0644 languages/QOwnNotes_pt_PT.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_pt_PT.qm
 install -D -m 0644 languages/QOwnNotes_es.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_es.qm
 install -D -m 0644 languages/QOwnNotes_nl.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_nl.qm
 install -D -m 0644 languages/QOwnNotes_hu.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_hu.qm
 install -D -m 0644 languages/QOwnNotes_ja.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_ja.qm
 install -D -m 0644 languages/QOwnNotes_it.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_it.qm
+install -D -m 0644 languages/QOwnNotes_ar.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_ar.qm
+install -D -m 0644 languages/QOwnNotes_uk.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_uk.qm
+install -D -m 0644 languages/QOwnNotes_cs.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_cs.qm
+install -D -m 0644 languages/QOwnNotes_hr.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_hr.qm
+install -D -m 0644 languages/QOwnNotes_ca.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_ca.qm
+install -D -m 0644 languages/QOwnNotes_sv.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_sv.qm
+install -D -m 0644 languages/QOwnNotes_id.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_id.qm
+install -D -m 0644 languages/QOwnNotes_bn.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_bn.qm
+install -D -m 0644 languages/QOwnNotes_tr.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_tr.qm
+install -D -m 0644 languages/QOwnNotes_tl.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_tl.qm
+install -D -m 0644 languages/QOwnNotes_fil.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_fil.qm
+install -D -m 0644 languages/QOwnNotes_ceb.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_ceb.qm
+install -D -m 0644 languages/QOwnNotes_hi.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_hi.qm
+install -D -m 0644 languages/QOwnNotes_hil.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_hil.qm
+install -D -m 0644 languages/QOwnNotes_ur.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_ur.qm
 
 %if 0%{?suse_version}
-%suse_update_desktop_file -c  QOwnNotes QOwnNotes QOwnNotes QOwnNotes QOwnNotes "Utility;SyncUtility;"
+# see: https://de.opensuse.org/openSUSE:Paketbauvereinbarungen_zu_RPM-Makros
+%suse_update_desktop_file -c  PBE.QOwnNotes QOwnNotes QOwnNotes QOwnNotes QOwnNotes "Utility;SyncUtility;"
 %endif
 
 %fdupes $RPM_BUILD_ROOT/%{_prefix}
@@ -146,15 +181,32 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/QOwnNotes/languages/QOwnNotes_de.qm
 %{_datadir}/QOwnNotes/languages/QOwnNotes_fr.qm
 %{_datadir}/QOwnNotes/languages/QOwnNotes_pl.qm
-%{_datadir}/QOwnNotes/languages/QOwnNotes_zh.qm
+%{_datadir}/QOwnNotes/languages/QOwnNotes_zh_CN.qm
+%{_datadir}/QOwnNotes/languages/QOwnNotes_zh_TW.qm
 %{_datadir}/QOwnNotes/languages/QOwnNotes_ru.qm
-%{_datadir}/QOwnNotes/languages/QOwnNotes_pt.qm
+%{_datadir}/QOwnNotes/languages/QOwnNotes_pt_BR.qm
+%{_datadir}/QOwnNotes/languages/QOwnNotes_pt_PT.qm
 %{_datadir}/QOwnNotes/languages/QOwnNotes_es.qm
 %{_datadir}/QOwnNotes/languages/QOwnNotes_nl.qm
 %{_datadir}/QOwnNotes/languages/QOwnNotes_hu.qm
 %{_datadir}/QOwnNotes/languages/QOwnNotes_ja.qm
 %{_datadir}/QOwnNotes/languages/QOwnNotes_it.qm
-%{_datadir}/applications/QOwnNotes.desktop
+%{_datadir}/QOwnNotes/languages/QOwnNotes_ar.qm
+%{_datadir}/QOwnNotes/languages/QOwnNotes_uk.qm
+%{_datadir}/QOwnNotes/languages/QOwnNotes_cs.qm
+%{_datadir}/QOwnNotes/languages/QOwnNotes_hr.qm
+%{_datadir}/QOwnNotes/languages/QOwnNotes_ca.qm
+%{_datadir}/QOwnNotes/languages/QOwnNotes_sv.qm
+%{_datadir}/QOwnNotes/languages/QOwnNotes_id.qm
+%{_datadir}/QOwnNotes/languages/QOwnNotes_bn.qm
+%{_datadir}/QOwnNotes/languages/QOwnNotes_tr.qm
+%{_datadir}/QOwnNotes/languages/QOwnNotes_tl.qm
+%{_datadir}/QOwnNotes/languages/QOwnNotes_fil.qm
+%{_datadir}/QOwnNotes/languages/QOwnNotes_ceb.qm
+%{_datadir}/QOwnNotes/languages/QOwnNotes_hi.qm
+%{_datadir}/QOwnNotes/languages/QOwnNotes_hil.qm
+%{_datadir}/QOwnNotes/languages/QOwnNotes_ur.qm
+%{_datadir}/applications/PBE.QOwnNotes.desktop
 
 %dir %{_datadir}/icons/hicolor/512x512/apps
 %dir %{_datadir}/icons/hicolor/256x256/apps

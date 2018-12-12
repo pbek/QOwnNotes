@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LogWidget</class>
+ <widget class="QFrame" name="LogWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>821</width>
+    <height>623</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Ignored">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>10</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Logs</string>
+  </property>
+  <property name="windowIcon">
+   <iconset theme="text-x-generic" resource="../breeze-qownnotes.qrc">
+    <normaloff>:/icons/breeze-qownnotes/16x16/text-x-generic.svg</normaloff>:/icons/breeze-qownnotes/16x16/text-x-generic.svg</iconset>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item row="0" column="0" colspan="3">
+    <widget class="QOwnNotesMarkdownTextEdit" name="logTextEdit">
+     <property name="contextMenuPolicy">
+      <enum>Qt::CustomContextMenu</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">/*QPlainTextEdit { background-color: rgb(255, 255, 255) }*/</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="3">
+    <widget class="QFrame" name="logTextEditSearchFrame">
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="lineWidth">
+      <number>0</number>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0" colspan="3">
+    <widget class="QFrame" name="buttonFrame">
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QCheckBox" name="debugCheckBox">
+        <property name="text">
+         <string>Debug</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QCheckBox" name="infoCheckBox">
+        <property name="text">
+         <string>Info</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QCheckBox" name="warningCheckBox">
+        <property name="text">
+         <string>Warning</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QCheckBox" name="criticalCheckBox">
+        <property name="text">
+         <string>Critical</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="4">
+       <widget class="QCheckBox" name="fatalCheckBox">
+        <property name="text">
+         <string>Fatal</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QCheckBox" name="statusCheckBox">
+        <property name="text">
+         <string>Status</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QCheckBox" name="scriptingCheckBox">
+        <property name="text">
+         <string>Scripting</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3" colspan="2">
+       <widget class="QPushButton" name="clearButton">
+        <property name="text">
+         <string>Clear log</string>
+        </property>
+        <property name="icon">
+         <iconset theme="edit-clear" resource="../breeze-qownnotes.qrc">
+          <normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</iconset>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QOwnNotesMarkdownTextEdit</class>
+   <extends>QPlainTextEdit</extends>
+   <header location="global">widgets/qownnotesmarkdowntextedit.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../breeze-qownnotes.qrc"/>
+ </resources>
+ <connections/>
+</ui>

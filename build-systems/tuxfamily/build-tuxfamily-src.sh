@@ -1,0 +1,108 @@
+#!/usr/bin/env bash
+#
+# This is the deploy script of the source archives for TuxFamily
+#
+# We need to setup a ssh key to copy files to TuxFamily
+# https://faq.tuxfamily.org/User/En#SSH_access
+# <~/.ssh/id_rsa.pub ssh pbek@ssh.tuxfamily.org "umask 077; cat >~/ssh_keys"
+#
+# Files will be uploaded to:
+# https://download.tuxfamily.org/qownnotes/src
+#
+# Files will be accessible like that:
+# https://download.tuxfamily.org/qownnotes/src/qownnotes-18.03.2.tar.xz
+#
+# Be aware that it usually can take a minute until the files are accessible
+# at that url
+#
+
+# uncomment this if you want to force a version
+#QOWNNOTES_VERSION=1.1.3.2
+
+BRANCH=develop
+#BRANCH=master
+
+PROJECT_PATH="/tmp/QOwnNotes-tuxfamily-$$"
+CUR_DIR=$(pwd)
+
+
+echo "Started the TuxFamily packaging process, using latest '$BRANCH' git tree"
+
+if [ -d $PROJECT_PATH ]; then
+    rm -rf $PROJECT_PATH
+fi
+
+mkdir $PROJECT_PATH
+cd $PROJECT_PATH
+
+echo "Project path: $PROJECT_PATH"
+
+# checkout the source code
+git clone --depth=50 git@github.com:pbek/QOwnNotes.git QOwnNotes -b $BRANCH
+cd QOwnNotes
+
+# checkout submodules
+git submodule update --init
+
+# remove huge .git folder
+rm -Rf .git
+
+if [ -z $QOWNNOTES_VERSION ]; then
+    # get version from version.h
+    QOWNNOTES_VERSION=`cat src/version.h | sed "s/[^0-9,.]//g"`
+else
+    # set new version if we want to override it
+    echo "#define VERSION \"$QOWNNOTES_VERSION\"" > src/version.h
+fi
+
+# set the release string
+echo "#define RELEASE \"TuxFamily\"" > src/release.h
+
+echo "Using version $QOWNNOTES_VERSION..."
+
+qownnotesSrcDir="qownnotes-${QOWNNOTES_VERSION}"
+
+# copy some needed files file
+cp LICENSE src
+cp README.md src
+cp CHANGELOG.md src
+cp SHORTCUTS.md src
+
+# rename the src directory
+mv src $qownnotesSrcDir
+
+archiveFile="$qownnotesSrcDir.tar.xz"
+
+# archive the source code
+echo "Creating archive $archiveFile..."
+tar -cJf $archiveFile $qownnotesSrcDir
+
+md5sum $archiveFile > $archiveFile.md5
+sha256sum $archiveFile | awk '{ print $1 }' > $archiveFile.sha256
+sha512sum $archiveFile | awk '{ print $1 }' > $archiveFile.sha512
+
+remotePath="pbek@ssh.tuxfamily.org:/home/qownnotes/qownnotes-repository/src"
+tuxFamilyReadme="tuxfamily-readme.md"
+
+# generate the readme for tuxfamily with a screenshot from GitHub
+cat README.md | sed "s/screenshots\\/screenshot.png/https:\\/\\/raw.githubusercontent.com\\/pbek\\/QOwnNotes\\/develop\\/screenshots\\/screenshot.png/g" >> ${tuxFamilyReadme}
+echo >> ${tuxFamilyReadme}
+echo >> ${tuxFamilyReadme}
+cat CHANGELOG.md >> ${tuxFamilyReadme}
+
+echo "Uploading files to TuxFamily..."
+
+# upload the changelog file as README.md
+# it will be viewed on the tuxfamily webpage
+rsync -ahv --progress ${tuxFamilyReadme} ${remotePath}/README.md
+
+## upload the screenshots
+#rsync -ahv --progress screenshots/* ${remotePath}/screenshots
+
+# upload archive and checksum files
+rsync -ahv --progress ${archiveFile}* ${remotePath}
+
+# remove everything after we are done
+if [ -d $PROJECT_PATH ]; then
+    rm -rf $PROJECT_PATH
+fi

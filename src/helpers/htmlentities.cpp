@@ -73,6 +73,8 @@ void HTMLEntities::setupEntityMap()
     entityMap.insert( "alefsym;", "ℵ" );
     entityMap.insert( "alpha;", "α" );
     entityMap.insert( "amp;", "&" );
+    entityMap.insert( "lt;", "<" );
+    entityMap.insert( "gt;", ">" );
     entityMap.insert( "and;", "∧" );
     entityMap.insert( "ang;", "∠" );
     entityMap.insert( "apos;", "'" );

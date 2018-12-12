@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>IssueAssistantDialog</class>
+ <widget class="QDialog" name="IssueAssistantDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>916</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string notr="true">Issue assistant</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../images.qrc">
+    <normaloff>:/images/icon.png</normaloff>:/images/icon.png</iconset>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_1">
+   <item row="0" column="0">
+    <widget class="QLabel" name="subHeadlineLabel">
+     <property name="text">
+      <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This assistant will help you to ask &lt;span style=&quot; font-weight:600;&quot;&gt;questions&lt;/span&gt;, post &lt;span style=&quot; font-weight:600;&quot;&gt;ideas&lt;/span&gt; or report &lt;span style=&quot; font-weight:600;&quot;&gt;problems&lt;/span&gt; on &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#2980b9;&quot;&gt;GitHub&lt;/span&gt;&lt;/a&gt;. Please write plain and &lt;span style=&quot; font-weight:600;&quot;&gt;simple English&lt;/span&gt; sentences so that everyone can understand what you are talking about. And please keep the text as &lt;span style=&quot; font-weight:600;&quot;&gt;short as possible&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+     <property name="openExternalLinks">
+      <bool>true</bool>
+     </property>
+     <property name="textInteractionFlags">
+      <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0">
+    <widget class="QFrame" name="buttonFrame">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="backButton">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string notr="true">&amp;Back</string>
+        </property>
+        <property name="icon">
+         <iconset theme="go-previous" resource="../breeze-qownnotes.qrc">
+          <normaloff>:/icons/breeze-qownnotes/16x16/go-previous.svg</normaloff>:/icons/breeze-qownnotes/16x16/go-previous.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="nextButton">
+        <property name="text">
+         <string notr="true">&amp;Next</string>
+        </property>
+        <property name="icon">
+         <iconset theme="go-next" resource="../breeze-qownnotes.qrc">
+          <normaloff>:/icons/breeze-qownnotes/16x16/go-next.svg</normaloff>:/icons/breeze-qownnotes/16x16/go-next.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>10</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="newIssueButton">
+        <property name="toolTip">
+         <string notr="true">Reset this dialog and create a new issue</string>
+        </property>
+        <property name="text">
+         <string notr="true">New issue</string>
+        </property>
+        <property name="icon">
+         <iconset theme="document-new" resource="../breeze-qownnotes.qrc">
+          <normaloff>:/icons/breeze-qownnotes/16x16/document-new.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-new.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="cancelButton">
+        <property name="toolTip">
+         <string notr="true">Close this dialog, you can open it again from the help menu</string>
+        </property>
+        <property name="text">
+         <string notr="true">&amp;Cancel</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <spacer name="verticalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Fixed</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>10</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="3" column="0">
+    <widget class="QStackedWidget" name="stackedWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="issuePage">
+      <layout class="QGridLayout" name="gridLayout_2">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item row="7" column="1">
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="1" column="1">
+        <widget class="QGroupBox" name="titleGroupBox">
+         <property name="title">
+          <string notr="true">Title</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_8">
+          <item row="1" column="0">
+           <widget class="QLineEdit" name="titleLineEdit"/>
+          </item>
+          <item row="1" column="1">
+           <widget class="QPushButton" name="searchIssueButton">
+            <property name="text">
+             <string notr="true">Find issues</string>
+            </property>
+            <property name="icon">
+             <iconset theme="edit-find" resource="../breeze-qownnotes.qrc">
+              <normaloff>:/icons/breeze-qownnotes/16x16/edit-find.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-find.svg</iconset>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0" colspan="2">
+           <widget class="QLabel" name="subHeadlineLabel_2">
+            <property name="text">
+             <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please state clearly and concisely what the issue is about and check if something similar was already posted by pressing the &lt;span style=&quot; font-weight:600;&quot;&gt;Find issues&lt;/span&gt; button.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+            <property name="openExternalLinks">
+             <bool>true</bool>
+            </property>
+            <property name="textInteractionFlags">
+             <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QGroupBox" name="issueTypeGroupBox">
+         <property name="title">
+          <string notr="true">Type of inquiry</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_3">
+          <item row="0" column="0">
+           <widget class="QComboBox" name="issueTypeComboBox">
+            <item>
+             <property name="text">
+              <string notr="true">Issue</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string notr="true">Feature request</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string notr="true">General question</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QGroupBox" name="expectedBehaviourGroupBox">
+         <property name="title">
+          <string notr="true">Expected behaviour</string>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QOwnNotesMarkdownTextEdit" name="expectedBehaviourPlainTextEdit"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QGroupBox" name="questionGroupBox">
+         <property name="title">
+          <string notr="true">State your general question</string>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QOwnNotesMarkdownTextEdit" name="questionPlainTextEdit"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QGroupBox" name="stepsGroupBox">
+         <property name="title">
+          <string notr="true">Steps to reproduce</string>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <item>
+           <widget class="QOwnNotesMarkdownTextEdit" name="stepsPlainTextEdit"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QGroupBox" name="actualBehaviourGroupBox">
+         <property name="title">
+          <string notr="true">Actual behaviour</string>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <item>
+           <widget class="QOwnNotesMarkdownTextEdit" name="actualBehaviourPlainTextEdit"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="logOutputPagePage">
+      <layout class="QGridLayout" name="gridLayout_4">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="groupBox_2">
+         <property name="title">
+          <string notr="true">Log output</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_5">
+          <item row="2" column="0">
+           <widget class="QPushButton" name="refreshLogButton">
+            <property name="text">
+             <string notr="true">Refresh</string>
+            </property>
+            <property name="icon">
+             <iconset theme="view-refresh" resource="../breeze-qownnotes.qrc">
+              <normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</iconset>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="1" column="0" colspan="2">
+           <widget class="QOwnNotesMarkdownTextEdit" name="logOutputPlainTextEdit"/>
+          </item>
+          <item row="0" column="0" colspan="2">
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Debug-logging was automatically enable. Please make sure that the log output provides useful information by pressing the &lt;span style=&quot; font-weight:600;&quot;&gt;Refresh&lt;/span&gt; button after you were reproducing your issue.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="debugSettingsPagePage">
+      <layout class="QGridLayout" name="gridLayout_7">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="groupBox_3">
+         <property name="title">
+          <string notr="true">Information about the application, settings and environment</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string notr="true">Data that is too sensitive is hidden in this information.</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QOwnNotesMarkdownTextEdit" name="debugOutputPlainTextEdit"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="submitPage">
+      <layout class="QGridLayout" name="gridLayout_9">
+       <item row="1" column="0" colspan="3">
+        <widget class="QGroupBox" name="groupBox_4">
+         <property name="title">
+          <string notr="true">Text to submit</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QOwnNotesMarkdownTextEdit" name="bodyPlainTextEdit"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="3" column="2">
+        <spacer name="horizontalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="3" column="1">
+        <widget class="QPushButton" name="postButton">
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string notr="true">Prepare issue submission</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <spacer name="horizontalSpacer_5">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="0" column="0" colspan="3">
+        <widget class="QGroupBox" name="groupBox_6">
+         <property name="title">
+          <string notr="true">Title</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QLineEdit" name="submitTitleLineEdit"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="2" column="0" colspan="3">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The issue text will be copied to your clipboard. Then the webpage to create a &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues/new&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#2980b9;&quot;&gt;new issue&lt;/span&gt;&lt;/a&gt; will open and you will need to &lt;span style=&quot; font-weight:600;&quot;&gt;paste the issue text&lt;/span&gt; manually and submit the issue.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+         <property name="openExternalLinks">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QOwnNotesMarkdownTextEdit</class>
+   <extends>QPlainTextEdit</extends>
+   <header location="global">widgets/qownnotesmarkdowntextedit.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>issueTypeComboBox</tabstop>
+  <tabstop>titleLineEdit</tabstop>
+  <tabstop>searchIssueButton</tabstop>
+  <tabstop>questionPlainTextEdit</tabstop>
+  <tabstop>expectedBehaviourPlainTextEdit</tabstop>
+  <tabstop>actualBehaviourPlainTextEdit</tabstop>
+  <tabstop>stepsPlainTextEdit</tabstop>
+  <tabstop>refreshLogButton</tabstop>
+  <tabstop>submitTitleLineEdit</tabstop>
+  <tabstop>logOutputPlainTextEdit</tabstop>
+  <tabstop>debugOutputPlainTextEdit</tabstop>
+  <tabstop>bodyPlainTextEdit</tabstop>
+  <tabstop>postButton</tabstop>
+  <tabstop>nextButton</tabstop>
+  <tabstop>backButton</tabstop>
+  <tabstop>cancelButton</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../breeze-qownnotes.qrc"/>
+  <include location="../images.qrc"/>
+ </resources>
+ <connections/>
+</ui>

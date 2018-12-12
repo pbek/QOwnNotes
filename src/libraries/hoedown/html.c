@@ -411,7 +411,7 @@ static void
 rndr_table(hoedown_buffer *ob, const hoedown_buffer *content, const hoedown_renderer_data *data)
 {
     if (ob->size) hoedown_buffer_putc(ob, '\n');
-    HOEDOWN_BUFPUTSL(ob, "<table>\n");
+    HOEDOWN_BUFPUTSL(ob, "<table cellspacing=\"0\">\n");
     hoedown_buffer_put(ob, content->data, content->size);
     HOEDOWN_BUFPUTSL(ob, "</table>\n");
 }

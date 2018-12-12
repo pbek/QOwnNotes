@@ -33,7 +33,7 @@ cd $PROJECT_PATH
 echo "Project path: $PROJECT_PATH"
 
 # checkout AUR repository
-git clone --depth=5 ssh://aur@aur.archlinux.org/qownnotes.git aur
+git clone --depth=5 ssh://aur@aur.archlinux.org/qownnotes.git aur -b master
 
 # checkout the source code
 git clone --depth=5 git@github.com:pbek/QOwnNotes.git QOwnNotes -b $BRANCH
@@ -58,8 +58,15 @@ sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" PKGBUILD
 sed -i "s/COMMIT-HASH/$gitCommitHash/g" PKGBUILD
 
 # replace the archive sha256 hash in the PKGBUILD file
-ARCHIVE_SHA256=`wget -qO- http://downloads.sourceforge.net/project/qownnotes/src/qownnotes-${QOWNNOTES_VERSION}.tar.xz.sha256`
+ARCHIVE_SHA256=`wget -qO- https://download.tuxfamily.org/qownnotes/src/qownnotes-${QOWNNOTES_VERSION}.tar.xz.sha256`
 sed -i "s/ARCHIVE-SHA256/$ARCHIVE_SHA256/g" PKGBUILD
+echo "Archive sha256: ${ARCHIVE_SHA256}"
+
+if [ -z ${ARCHIVE_SHA256} ]; then
+    echo
+    echo "Archive sha256 is empty!"
+    exit 1
+fi
 
 # replace the version in the .SRCINFO file
 sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" .SRCINFO

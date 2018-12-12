@@ -7,8 +7,11 @@
 #include <QNetworkRequest>
 #include <QNetworkReply>
 #include <QFileDialog>
+#include <QSettings>
 #include "entities/note.h"
 #include "helpers/htmlentities.h"
+#include <QRegularExpression>
+#include <QRegularExpressionMatch>
 
 LinkDialog::LinkDialog(QString dialogTitle, QWidget *parent) :
         MasterDialog(parent),
@@ -17,7 +20,7 @@ LinkDialog::LinkDialog(QString dialogTitle, QWidget *parent) :
 
     this->firstVisibleNoteListRow = 0;
 
-    if (dialogTitle != "") {
+    if (!dialogTitle.isEmpty()) {
         this->setWindowTitle(dialogTitle);
     }
 
@@ -64,7 +67,13 @@ QString LinkDialog::getSelectedNoteName() {
 }
 
 QString LinkDialog::getURL() {
-    return ui->urlEdit->text();
+    QString url = ui->urlEdit->text().trimmed();
+
+    if (!url.isEmpty() && !url.contains("://")) {
+        url = "http://" + url;
+    }
+
+    return url;
 }
 
 //
@@ -109,7 +118,7 @@ bool LinkDialog::eventFilter(QObject *obj, QEvent *event) {
         return false;
     }
 
-    return LinkDialog::eventFilter(obj, event);
+    return MasterDialog::eventFilter(obj, event);
 }
 
 void LinkDialog::on_notesListWidget_doubleClicked(const QModelIndex &index) {
@@ -117,8 +126,6 @@ void LinkDialog::on_notesListWidget_doubleClicked(const QModelIndex &index) {
     this->close();
     this->setResult(QDialog::Accepted);
 }
-
-extern "C" size_t decode_html_entities_utf8(char *dest, const char *src);
 
 /**
  * @brief Fetches the title of a webpage
@@ -165,7 +172,11 @@ QString LinkDialog::getTitleForUrl(QUrl url) {
         title.replace("[", "(")
                 .replace("]", ")")
                 .replace("<", "(")
-                .replace(">", ")");
+                .replace(">", ")")
+                .replace("&#8211;", "-")
+                .replace("&#124;", "-")
+                .replace("&#038;", "&")
+                .replace("&#39;", "'");
 
         // trim whitespaces and return title
         return title.simplified();
@@ -176,14 +187,22 @@ QString LinkDialog::getTitleForUrl(QUrl url) {
 }
 
 /**
- * @brief Selects a local file to link to
+ * Selects a local file to link to
  */
 void LinkDialog::on_fileUrlButton_clicked() {
-    QUrl fileUrl = QFileDialog::getOpenFileUrl(this,
-                                               tr("Select file to link to"));
-    QString fileUrlString = fileUrl.toString();
+    QSettings settings;
+    // load last url
+    QUrl fileUrl = settings.value("LinkDialog/lastSelectedFileUrl").toUrl();
 
-    if (fileUrlString != "") {
+    fileUrl = QFileDialog::getOpenFileUrl(this, tr("Select file to link to"),
+                                          fileUrl);
+    QString fileUrlString = fileUrl.toString(QUrl::FullyEncoded);
+
+    if (!fileUrlString.isEmpty()) {
+        // store url for the next time
+        settings.setValue("LinkDialog/lastSelectedFileUrl", fileUrlString);
+
+        // write the file-url to the url text-edit
         ui->urlEdit->setText(fileUrlString);
     }
 }

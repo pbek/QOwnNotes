@@ -6,6 +6,8 @@
 #include <QSqlRecord>
 #include <QSqlError>
 #include <QSettings>
+#include <utils/misc.h>
+#include <services/databaseservice.h>
 
 
 Tag::Tag() {
@@ -13,6 +15,7 @@ Tag::Tag() {
     name = "";
     priority = 0;
     parentId = 0;
+    _color = QColor();
 }
 
 int Tag::getId() {
@@ -35,6 +38,14 @@ void Tag::setName(QString text) {
     this->name = text;
 }
 
+QColor Tag::getColor() {
+    return this->_color;
+}
+
+void Tag::setColor(QColor color) {
+    this->_color = color;
+}
+
 int Tag::getPriority() {
     return this->priority;
 }
@@ -44,7 +55,7 @@ void Tag::setPriority(int value) {
 }
 
 Tag Tag::fetch(int id) {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
     Tag tag;
@@ -58,17 +69,31 @@ Tag Tag::fetch(int id) {
         tag.fillFromQuery(query);
     }
 
+    DatabaseService::closeDatabaseConnection(db, query);
+
     return tag;
 }
 
-Tag Tag::fetchByName(QString name) {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+/**
+ * Fetches a tag by name
+ *
+ * @param name
+ * @param startsWith if true the tag only has to start with name
+ * @return
+ */
+Tag Tag::fetchByName(QString name, bool startsWith) {
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
-
     Tag tag;
+    QString sql = "SELECT * FROM tag WHERE name " +
+            QString(startsWith ? "LIKE" : "=") + " :name ORDER BY name";
+    query.prepare(sql);
 
-    query.prepare("SELECT * FROM tag WHERE LOWER(name) = :name");
-    query.bindValue(":name", name.toLower());
+    if (startsWith) {
+        name += "%";
+    }
+
+    query.bindValue(":name", name);
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
@@ -76,11 +101,34 @@ Tag Tag::fetchByName(QString name) {
         tag.fillFromQuery(query);
     }
 
+    DatabaseService::closeDatabaseConnection(db, query);
+
+    return tag;
+}
+
+Tag Tag::fetchByName(QString name, int parentId) {
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlQuery query(db);
+    Tag tag;
+
+    query.prepare("SELECT * FROM tag WHERE name = :name AND "
+                          "parent_id = :parent_id");
+    query.bindValue(":name", name.toLower());
+    query.bindValue(":parent_id", parentId);
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else if (query.first()) {
+        tag.fillFromQuery(query);
+    }
+
+    DatabaseService::closeDatabaseConnection(db, query);
+
     return tag;
 }
 
 int Tag::countAll() {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
     query.prepare("SELECT COUNT(*) AS cnt FROM tag");
@@ -88,8 +136,13 @@ int Tag::countAll() {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else if (query.first()) {
-        return query.value("cnt").toInt();
+        int result = query.value("cnt").toInt();
+        DatabaseService::closeDatabaseConnection(db, query);
+
+        return result;
     }
+
+    DatabaseService::closeDatabaseConnection(db, query);
 
     return 0;
 }
@@ -98,7 +151,7 @@ int Tag::countAll() {
  * Removes the tag, their children and its note link items
  */
 bool Tag::remove() {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
     // remove the tag
@@ -107,6 +160,7 @@ bool Tag::remove() {
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
+        DatabaseService::closeDatabaseConnection(db, query);
         return false;
     } else {
         // remove all children tags
@@ -114,14 +168,20 @@ bool Tag::remove() {
                 tag.remove();
             }
 
+        QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+        QSqlQuery query(db);
+
         // remove the note tag links
         query.prepare("DELETE FROM noteTagLink WHERE tag_id = :id");
         query.bindValue(":id", id);
 
         if (!query.exec()) {
             qWarning() << __func__ << ": " << query.lastError();
+            DatabaseService::closeDatabaseConnection(db, query);
+
             return false;
         } else {
+            DatabaseService::closeDatabaseConnection(db, query);
             return true;
         }
     }
@@ -139,16 +199,43 @@ bool Tag::fillFromQuery(QSqlQuery query) {
     this->priority = query.value("priority").toInt();
     this->parentId = query.value("parent_id").toInt();
 
+    QString colorName = query.value(colorFieldName()).toString();
+    this->_color = colorName.isEmpty() ? QColor() : QColor(colorName);
+
     return true;
 }
 
 QList<Tag> Tag::fetchAll() {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
     QList<Tag> tagList;
 
-    query.prepare("SELECT * FROM tag ORDER BY priority ASC, name ASC");
+    //query.prepare("SELECT * FROM tag ORDER BY priority ASC, name ASC");
+    /*
+     * We want to select all relevant fields from the tag table. (AS renames the
+     * columns in the output table -- to be sure they have the same names as in the
+     * original query, e.g. t.id = id). Since we want them ordered by time of use,
+     * also consider the noteTagLink table and join it on the tag id. (Now we get rows
+     * | tag.id | tag.updated | link.created | ... | for each tag (with
+     * link.created = NULL, if it is not yet linked to a note) and additional rows
+     * for each link of a tag after the first as an intermediate result.) Now the
+     * CASE ... END selects only the highest created / updated date. At this
+     * point there can still be multiple lines with the same tag.id, hence we GROUP BY
+     * that to get rid of them and are only interested in the latest / max() created
+     * time of every group, which can now be used to sort the result by.
+     *
+    */
+    query.prepare("SELECT t.id as id, t.name as name, t.priority as priority, max( "
+                      "CASE "
+                          "WHEN l.created > t.updated THEN l.created "
+                          "ELSE t.updated "
+                      "END "
+                  ") AS created, t.parent_id as parent_id, "
+                  "t.color as color, t.dark_color as dark_color "
+                  "FROM tag t LEFT JOIN noteTagLink l ON t.id = l.tag_id "
+                  "GROUP BY t.name "
+                  "ORDER BY created DESC");
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
@@ -158,16 +245,32 @@ QList<Tag> Tag::fetchAll() {
         }
     }
 
+    DatabaseService::closeDatabaseConnection(db, query);
+
     return tagList;
 }
 
-QList<Tag> Tag::fetchAllByParentId(int parentId) {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+QList<Tag> Tag::fetchAllByParentId(int parentId, QString sortBy) {
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     QList<Tag> tagList;
 
-    query.prepare("SELECT * FROM tag WHERE parent_id = :parentId ORDER BY "
-                          "priority ASC, name ASC");
+    //query.prepare("SELECT * FROM tag WHERE parent_id = :parentId ORDER BY "
+    //                      "priority ASC, name ASC");
+    /*
+     * See fetchAll(), except we are only interested in tags with a specific parent_id.
+    */
+    query.prepare("SELECT t.id as id, t.name as name, t.priority as priority, max( "
+                      "CASE "
+                          "WHEN l.created > t.updated THEN l.created "
+                          "ELSE t.updated "
+                      "END "
+                  ") AS created, t.parent_id as parent_id, "
+                  "t.color as color, t.dark_color as dark_color "
+                  "FROM tag t LEFT JOIN noteTagLink l ON t.id = l.tag_id "
+                  "WHERE parent_id = :parentId "
+                  "GROUP BY t.name "
+                  "ORDER BY " + sortBy);
     query.bindValue(":parentId", parentId);
 
     if (!query.exec()) {
@@ -179,11 +282,38 @@ QList<Tag> Tag::fetchAllByParentId(int parentId) {
         }
     }
 
+    DatabaseService::closeDatabaseConnection(db, query);
+
     return tagList;
 }
 
+/**
+ * Fetches a list of all tags recursively by a parent id
+ * The tag of the parent id is also included in the list
+ *
+ * @param parentId
+ * @return
+ */
+QList<Tag> Tag::fetchRecursivelyByParentId(int parentId) {
+    QList<Tag> tagList = QList<Tag>() << fetch(parentId);
+
+    Q_FOREACH(Tag tag, fetchAllByParentId(parentId)) {
+            tagList << fetchRecursivelyByParentId(tag.getId());
+        }
+
+    return tagList;
+}
+
+/**
+ * Checks if taggingShowNotesRecursively is set
+ */
+bool Tag::isTaggingShowNotesRecursively() {
+    QSettings settings;
+    return settings.value("taggingShowNotesRecursively").toBool();
+}
+
 int Tag::countAllParentId(int parentId) {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
     query.prepare("SELECT COUNT(*) AS cnt FROM tag "
@@ -193,8 +323,12 @@ int Tag::countAllParentId(int parentId) {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else if (query.first()) {
-        return query.value("cnt").toInt();
+        int result = query.value("cnt").toInt();
+        DatabaseService::closeDatabaseConnection(db, query);
+        return result;
     }
+
+    DatabaseService::closeDatabaseConnection(db, query);
 
     return 0;
 }
@@ -218,16 +352,19 @@ bool Tag::hasChild(int tagId) {
  * Fetches all linked tags of a note
  */
 QList<Tag> Tag::fetchAllOfNote(Note note) {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
     QList<Tag> tagList;
 
     query.prepare("SELECT t.* FROM tag t "
                           "JOIN noteTagLink l ON t.id = l.tag_id "
-                          "WHERE l.note_file_name = :fileName "
+                          "WHERE l.note_file_name = :fileName AND "
+                          "l.note_sub_folder_path = :noteSubFolderPath "
                           "ORDER BY t.priority ASC, t.name ASC");
     query.bindValue(":fileName", note.getName());
+    query.bindValue(":noteSubFolderPath",
+                    note.getNoteSubFolder().relativePath());
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
@@ -238,25 +375,125 @@ QList<Tag> Tag::fetchAllOfNote(Note note) {
         }
     }
 
+    DatabaseService::closeDatabaseConnection(db, query);
+
     return tagList;
+}
+
+/**
+ * Fetches all linked tags of a list of notes
+ */
+QList<Tag> Tag::fetchAllOfNotes(QList<Note> notes) {
+    QList<Tag> resultTagList;
+
+    Q_FOREACH (Note note, notes) {
+            QList<Tag> tagList = Tag::fetchAllOfNote(note);
+
+            Q_FOREACH (Tag tag, tagList) {
+                    if (!resultTagList.contains(tag)) {
+                        resultTagList.append(tag);
+                    }
+            }
+    }
+
+    qSort(resultTagList);
+
+    return resultTagList;
+}
+
+/**
+ * Fetches the names of all linked tags of a note
+ */
+QStringList Tag::fetchAllNamesOfNote(Note note) {
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlQuery query(db);
+    QStringList tagNameList;
+
+    query.prepare("SELECT t.name FROM tag t "
+                          "JOIN noteTagLink l ON t.id = l.tag_id "
+                          "WHERE l.note_file_name = :fileName AND "
+                          "l.note_sub_folder_path = :noteSubFolderPath "
+                          "ORDER BY t.priority ASC, t.name ASC");
+    query.bindValue(":fileName", note.getName());
+    query.bindValue(":noteSubFolderPath",
+                    note.getNoteSubFolder().relativePath());
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        for (int r = 0; query.next(); r++) {
+            tagNameList << query.value("name").toString();
+        }
+    }
+
+    DatabaseService::closeDatabaseConnection(db, query);
+
+    return tagNameList;
+}
+
+/**
+ * Fetches the names by substring searching for the name
+ */
+QStringList Tag::searchAllNamesByName(QString name) {
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlQuery query(db);
+    QStringList tagNameList;
+
+    query.prepare("SELECT name FROM tag "
+                          "WHERE name LIKE :name "
+                          "ORDER BY priority ASC, name ASC");
+    query.bindValue(":name", "%" + name + "%");
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        for (int r = 0; query.next(); r++) {
+            tagNameList << query.value("name").toString();
+        }
+    }
+
+    DatabaseService::closeDatabaseConnection(db, query);
+
+    return tagNameList;
+}
+
+/**
+ * Fetches one Tag of a note that has a color
+ */
+Tag Tag::fetchOneOfNoteWithColor(Note note) {
+    Q_FOREACH(Tag tag, fetchAllOfNote(note)) {
+            if (tag.getColor().isValid()) {
+                return tag;
+            }
+        }
+
+    return Tag();
 }
 
 /**
  * Count all linked tags of a note
  */
 int Tag::countAllOfNote(Note note) {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
     query.prepare("SELECT COUNT(*) AS cnt FROM noteTagLink "
-                          "WHERE note_file_name = :fileName");
+                          "WHERE note_file_name = :fileName AND "
+                          "note_sub_folder_path = :noteSubFolderPath");
     query.bindValue(":fileName", note.getName());
+    query.bindValue(":noteSubFolderPath",
+                    note.getNoteSubFolder().relativePath());
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else if (query.first()) {
-        return query.value("cnt").toInt();
+        int result = query.value("cnt").toInt();
+        DatabaseService::closeDatabaseConnection(db, query);
+
+        return result;
     }
+
+    DatabaseService::closeDatabaseConnection(db, query);
 
     return 0;
 }
@@ -265,20 +502,28 @@ int Tag::countAllOfNote(Note note) {
  * Checks if tag is linked to a note
  */
 bool Tag::isLinkedToNote(Note note) {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
     query.prepare("SELECT COUNT(*) AS cnt FROM noteTagLink "
-                          "WHERE note_file_name = :fileName "
+                          "WHERE note_file_name = :fileName AND "
+                          "note_sub_folder_path = :noteSubFolderPath "
                           "AND tag_id = :tagId");
     query.bindValue(":fileName", note.getName());
+    query.bindValue(":noteSubFolderPath",
+                    note.getNoteSubFolder().relativePath());
     query.bindValue(":tagId", id);
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else if (query.first()) {
-        return query.value("cnt").toInt() > 0;
+        bool result = query.value("cnt").toInt() > 0;
+        DatabaseService::closeDatabaseConnection(db, query);
+
+        return result;
     }
+
+    DatabaseService::closeDatabaseConnection(db, query);
 
     return false;
 }
@@ -287,7 +532,7 @@ bool Tag::isLinkedToNote(Note note) {
  * Returns all tags that are linked to certain note names
  */
 QList<Tag> Tag::fetchAllWithLinkToNoteNames(QStringList noteNameList) {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     QList<Tag> tagList;
     QString noteIdListString = noteNameList.join("','");
@@ -295,12 +540,16 @@ QList<Tag> Tag::fetchAllWithLinkToNoteNames(QStringList noteNameList) {
     QString sql = QString(
             "SELECT t.* FROM tag t "
                 "JOIN noteTagLink l ON t.id = l.tag_id "
-                "WHERE l.note_file_name IN ('%1') "
+                "WHERE l.note_file_name IN ('%1') AND "
+                    "l.note_sub_folder_path = :noteSubFolderPath "
                 "GROUP BY t.id "
                 "ORDER BY t.priority ASC, t.name ASC")
             .arg(noteIdListString);
+    query.prepare(sql);
+    query.bindValue(":noteSubFolderPath",
+                    NoteSubFolder::activeNoteSubFolder().relativePath());
 
-    if (!query.exec(sql)) {
+    if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
         for (int r = 0; query.next(); r++) {
@@ -309,19 +558,29 @@ QList<Tag> Tag::fetchAllWithLinkToNoteNames(QStringList noteNameList) {
         }
     }
 
+    DatabaseService::closeDatabaseConnection(db, query);
+
     return tagList;
 }
 
 /**
  * Fetches all linked note file names
  */
-QStringList Tag::fetchAllLinkedNoteFileNames() {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+QStringList Tag::fetchAllLinkedNoteFileNames(bool fromAllSubfolders) {
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
-
     QStringList fileNameList;
 
-    query.prepare("SELECT note_file_name FROM noteTagLink WHERE tag_id = :id");
+    if (fromAllSubfolders) {
+         // 'All notes' selected in note subfolder panel
+        query.prepare("SELECT note_file_name FROM noteTagLink WHERE tag_id = :id");
+    } else {
+        query.prepare("SELECT note_file_name FROM noteTagLink WHERE tag_id = :id "
+                              "AND note_sub_folder_path LIKE :noteSubFolderPath");
+        query.bindValue(":noteSubFolderPath",
+                    NoteSubFolder::activeNoteSubFolder().relativePath() + "%");
+    }
+
     query.bindValue(":id", this->id);
 
     if (!query.exec()) {
@@ -332,14 +591,34 @@ QStringList Tag::fetchAllLinkedNoteFileNames() {
         }
     }
 
+    DatabaseService::closeDatabaseConnection(db, query);
+
     return fileNameList;
+}
+
+/**
+ * Converts backslashes to slashes in the noteTagLink table to fix
+ * problems with Windows
+ */
+void Tag::convertDirSeparator() {
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlQuery query(db);
+
+    query.prepare("UPDATE noteTagLink SET note_sub_folder_path = replace("
+                          "note_sub_folder_path, '\\', '/')");
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    }
+
+    DatabaseService::closeDatabaseConnection(db, query);
 }
 
 /**
  * Fetches all tag names
  */
 QStringList Tag::fetchAllNames() {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
     QStringList nameList;
@@ -354,25 +633,46 @@ QStringList Tag::fetchAllNames() {
         }
     }
 
+    DatabaseService::closeDatabaseConnection(db, query);
+
     return nameList;
 }
 
 /**
  * Count the linked note file names
  */
-int Tag::countLinkedNoteFileNames() {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+int Tag::countLinkedNoteFileNames(bool fromAllSubfolders, bool recursive) {
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
+    if (fromAllSubfolders) {
     query.prepare("SELECT COUNT(note_file_name) AS cnt FROM noteTagLink "
                           "WHERE tag_id = :id");
+    } else if (recursive) {
+        query.prepare("SELECT COUNT(note_file_name) AS cnt FROM noteTagLink "
+                              "WHERE tag_id = :id AND "
+                              "note_sub_folder_path LIKE :noteSubFolderPath");
+        query.bindValue(":noteSubFolderPath",
+                        NoteSubFolder::activeNoteSubFolder().relativePath() + "%");
+    } else {
+        query.prepare("SELECT COUNT(note_file_name) AS cnt FROM noteTagLink "
+                      "WHERE tag_id = :id AND "
+                      "note_sub_folder_path = :noteSubFolderPath");
+        query.bindValue(":noteSubFolderPath",
+                        NoteSubFolder::activeNoteSubFolder().relativePath());
+    }
     query.bindValue(":id", this->id);
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else if (query.first()) {
-        return query.value("cnt").toInt();
+        int result = query.value("cnt").toInt();
+        DatabaseService::closeDatabaseConnection(db, query);
+
+        return result;
     }
+
+    DatabaseService::closeDatabaseConnection(db, query);
 
     return 0;
 }
@@ -381,35 +681,69 @@ int Tag::countLinkedNoteFileNames() {
  * Inserts or updates a Tag object in the database
  */
 bool Tag::store() {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
+    QString colorField = colorFieldName();
 
     if (this->id > 0) {
         query.prepare(
                 "UPDATE tag SET name = :name, priority = :priority, "
-                        "parent_id = :parentId "
+                        "parent_id = :parentId, " + colorField + " = :color, "
+                        "updated = datetime('now') "
                         "WHERE id = :id");
         query.bindValue(":id", this->id);
     } else {
         query.prepare(
-                "INSERT INTO tag (name, priority, parent_id) "
-                        "VALUES (:name, :priority, :parentId)");
+                "INSERT INTO tag (name, priority, parent_id, " + colorField +
+                        ") VALUES (:name, :priority, :parentId, :color)");
     }
 
     query.bindValue(":name", this->name);
     query.bindValue(":priority", this->priority);
     query.bindValue(":parentId", this->parentId);
+    query.bindValue(":color", _color.isValid() ? _color.name() : "");
 
     if (!query.exec()) {
         // on error
         qWarning() << __func__ << ": " << query.lastError();
+
+        DatabaseService::closeDatabaseConnection(db, query);
         return false;
     } else if (this->id == 0) {
         // on insert
         this->id = query.lastInsertId().toInt();
     }
 
+    // update the parent tag for correct sorting by last use
+    if (this->parentId > 0) {
+        QSqlQuery parentQuery(db);
+        parentQuery.prepare("SELECT * FROM tag WHERE id = :parentId");
+        parentQuery.bindValue(":parentId", this->parentId);
+
+        if (!parentQuery.exec()) {
+            qWarning() << __func__ << ": " << query.lastError();
+        } else {
+            if(parentQuery.next()) {
+                Tag parent = tagFromQuery(parentQuery);
+                parent.store();
+            }
+        }
+    }
+
+    DatabaseService::closeDatabaseConnection(db, query);
+
     return true;
+}
+
+/**
+ * Returns the name of the color database field that should be used to load
+ * and store tag colors
+ *
+ * @return
+ */
+QString Tag::colorFieldName() {
+    QSettings settings;
+    return settings.value("darkMode").toBool() ? "dark_color" : "color";
 }
 
 /**
@@ -420,19 +754,45 @@ bool Tag::linkToNote(Note note) {
         return false;
     }
 
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
-    query.prepare("INSERT INTO noteTagLink (tag_id, note_file_name) "
-                           "VALUES (:tagId, :noteFileName)");
+    query.prepare("INSERT INTO noteTagLink (tag_id, note_file_name, "
+                          "note_sub_folder_path) "
+                          "VALUES (:tagId, :noteFileName, "
+                          ":noteSubFolderPath)");
 
     query.bindValue(":tagId", this->id);
     query.bindValue(":noteFileName", note.getName());
+    query.bindValue(":noteSubFolderPath",
+                    note.getNoteSubFolder().relativePath());
 
     if (!query.exec()) {
-        // on error
-        qWarning() << __func__ << ": " << query.lastError();
+        // we should not show this warning, because we don't check if a
+        // link to a note already exists before we try to create an other link
+//        qWarning() << __func__ << ": " << query.lastError();
+
+        DatabaseService::closeDatabaseConnection(db, query);
+
         return false;
     }
+
+    // update the parent tag for correct sorting by last use
+    if (this->parentId > 0) {
+        QSqlQuery parentQuery(db);
+        parentQuery.prepare("SELECT * FROM tag WHERE id = :parentId");
+        parentQuery.bindValue(":parentId", this->parentId);
+
+        if (!parentQuery.exec()) {
+            qWarning() << __func__ << ": " << query.lastError();
+        } else {
+            if(parentQuery.next()) {
+                Tag parent = tagFromQuery(parentQuery);
+                parent.store();
+            }
+        }
+    }
+
+    DatabaseService::closeDatabaseConnection(db, query);
 
     return true;
 }
@@ -445,19 +805,27 @@ bool Tag::removeLinkToNote(Note note) {
         return false;
     }
 
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     query.prepare("DELETE FROM noteTagLink WHERE tag_id = :tagId AND "
-                          "note_file_name = :noteFileName");
+                          "note_file_name = :noteFileName AND "
+                          "note_sub_folder_path = :noteSubFolderPath");
 
     query.bindValue(":tagId", this->id);
     query.bindValue(":noteFileName", note.getName());
+    query.bindValue(":noteSubFolderPath",
+                    note.getNoteSubFolder().relativePath());
 
     if (!query.exec()) {
         // on error
         qWarning() << __func__ << ": " << query.lastError();
+
+        DatabaseService::closeDatabaseConnection(db, query);
+
         return false;
     }
+
+    DatabaseService::closeDatabaseConnection(db, query);
 
     return true;
 }
@@ -466,39 +834,110 @@ bool Tag::removeLinkToNote(Note note) {
  * Removes all links to a note
  */
 bool Tag::removeAllLinksToNote(Note note) {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     query.prepare("DELETE FROM noteTagLink WHERE "
-                          "note_file_name = :noteFileName");
+                          "note_file_name = :noteFileName AND "
+                          "note_sub_folder_path = :noteSubFolderPath");
 
     query.bindValue(":noteFileName", note.getName());
+    query.bindValue(":noteSubFolderPath",
+                    note.getNoteSubFolder().relativePath());
 
     if (!query.exec()) {
         // on error
         qWarning() << __func__ << ": " << query.lastError();
+
+        DatabaseService::closeDatabaseConnection(db, query);
+
         return false;
     }
+
+    DatabaseService::closeDatabaseConnection(db, query);
 
     return true;
 }
 
 /**
- * Renames the note file name of note links
+ * Removes all broken note tag links
  */
-bool Tag::renameNoteFileNamesOfLinks(QString oldFileName, QString newFileName) {
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
+void Tag::removeBrokenLinks() {
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
-    query.prepare("UPDATE noteTagLink SET note_file_name = :newFileName WHERE "
-                          "note_file_name = :oldFileName");
 
-    query.bindValue(":oldFileName", oldFileName);
-    query.bindValue(":newFileName", newFileName);
+    query.prepare("SELECT * FROM notetaglink");
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        for (int r = 0; query.next(); r++) {
+            QString noteFileName = query.value("note_file_name").toString();
+            QString noteSubFolderPath = query.value(
+                    "note_sub_folder_path").toString();
+
+            NoteSubFolder noteSubFolder = NoteSubFolder::fetchByPathData(
+                    noteSubFolderPath, "/");
+            Note note = Note::fetchByName(noteFileName, noteSubFolder.getId());
+
+            // remove note tag link if note doesn't exist
+            if (!note.exists()) {
+                int id = query.value("id").toInt();
+                removeNoteLinkById(id);
+            }
+        }
+    }
+
+    DatabaseService::closeDatabaseConnection(db, query);
+}
+
+/**
+ * Removes a note tag link by its id
+ *
+ * @param id
+ * @return
+ */
+bool Tag::removeNoteLinkById(int id) {
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlQuery query(db);
+    query.prepare("DELETE FROM noteTagLink WHERE id = :id");
+    query.bindValue(":id", id);
 
     if (!query.exec()) {
         // on error
         qWarning() << __func__ << ": " << query.lastError();
+
+        DatabaseService::closeDatabaseConnection(db, query);
         return false;
     }
+
+    DatabaseService::closeDatabaseConnection(db, query);
+    return true;
+}
+
+
+/**
+ * Renames the note file name of note links
+ */
+bool Tag::renameNoteFileNamesOfLinks(QString oldFileName, QString newFileName) {
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlQuery query(db);
+    query.prepare("UPDATE noteTagLink SET note_file_name = :newFileName WHERE "
+                          "note_file_name = :oldFileName AND "
+                          "note_sub_folder_path = :noteSubFolderPath");
+
+    query.bindValue(":oldFileName", oldFileName);
+    query.bindValue(":newFileName", newFileName);
+    query.bindValue(":noteSubFolderPath",
+                    NoteSubFolder::activeNoteSubFolder().relativePath());
+
+    if (!query.exec()) {
+        // on error
+        qWarning() << __func__ << ": " << query.lastError();
+
+        DatabaseService::closeDatabaseConnection(db, query);
+        return false;
+    }
+
+    DatabaseService::closeDatabaseConnection(db, query);
 
     return true;
 }
@@ -545,6 +984,45 @@ int Tag::activeTagId() {
  */
 Tag Tag::activeTag() {
     return Tag::fetch(activeTagId());
+}
+
+/**
+ * Sets the non-darkMode colors as darkMode colors for all tags
+ */
+void Tag::migrateDarkColors() {
+    QSettings settings;
+    bool darkMode = settings.value("darkMode").toBool();
+
+    // disable dark mode to get the light color
+    settings.setValue("darkMode", false);
+
+    // fetch all tags with non-dark mode colors
+    QList <Tag> tags = fetchAll();
+
+    // enable dark mode to later set the dark color
+    settings.setValue("darkMode", true);
+
+    Q_FOREACH(Tag tag, tags) {
+            // get the non-dark mode color (because the fetch was made while
+            // "darkMode" was off)
+            QColor color = tag.getColor();
+
+            // set the non-dark mode color as dark mode color (because now
+            // "darkMode" is enabled)
+            tag.setColor(color);
+            tag.store();
+        }
+
+    // set the dark mode to the old value
+    settings.setValue("darkMode", darkMode);
+}
+
+bool Tag::operator==(const Tag &tag) const {
+    return id == tag.id;
+}
+
+bool Tag::operator<(const Tag &tag) const {
+    return name < tag.name;
 }
 
 QDebug operator<<(QDebug dbg, const Tag &tag) {

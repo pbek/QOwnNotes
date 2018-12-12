@@ -4,144 +4,96 @@
 #include <QRegularExpression>
 #include <QMimeData>
 #include <QFontDatabase>
+#include <utils/schema.h>
+#include <utils/gui.h>
+#include <utils/misc.h>
 #include "qownnotesmarkdowntextedit.h"
 
 QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
-        : QMarkdownTextEdit(parent) {
+        : QMarkdownTextEdit(parent, false) {
+    mainWindow = Q_NULLPTR;
+    _highlighter = new QOwnNotesMarkdownHighlighter(document());
     setStyles();
+    updateSettings();
+
+    connect(this, SIGNAL(cursorPositionChanged()),
+            this, SLOT(highlightCurrentLine()));
+    highlightCurrentLine();
+
+    QSettings settings;
+    MarkdownHighlighter::HighlightingOptions options;
+
+    if (settings.value("fullyHighlightedBlockquotes").toBool()) {
+        options |= MarkdownHighlighter::HighlightingOption
+        ::FullyHighlightedBlockQuote;
+    }
+
+    // set the highlighting options
+    _highlighter->setHighlightingOptions(options);
+
+    // re-initialize the highlighting rules if we are using some options
+    if (options != MarkdownHighlighter::HighlightingOption::None) {
+        _highlighter->initHighlightingRules();
+    }
 }
 
-#define STY(type, format) styles->append((HighlightingStyle){type, format})
+/**
+ * Sets the format style
+ *
+ * @param index
+ * @param styles
+ */
+void QOwnNotesMarkdownTextEdit::setFormatStyle(
+        MarkdownHighlighter::HighlighterState index) {
+    QTextCharFormat format;
+    Utils::Schema::schemaSettings->setFormatStyle(index, format);
+    _highlighter->setTextFormat(index, format);
+}
 
 /**
  * Sets the highlighting styles for the text edit
  */
 void QOwnNotesMarkdownTextEdit::setStyles() {
-    QSettings settings;
-    QFont font = this->font();
-    QString fontString = settings.value(
-            "MainWindow/noteTextEdit.font").toString();
-
-    if (fontString != "") {
-        // set the note text edit font
-        font.fromString(fontString);
-        setFont(font);
-    } else {
-        // store the default settings
-        fontString = this->font().toString();
-        settings.setValue("MainWindow/noteTextEdit.font", fontString);
-    }
-
-    int defaultFontSize = font.pointSize();
-    bool darkModeColors = settings.value("darkModeColors").toBool();
+    QFont font = Utils::Schema::schemaSettings->getEditorTextFont();
+    setFont(font);
 
     // set the tab stop to the width of 4 spaces in the editor
     const int tabStop = 4;
     QFontMetrics metrics(font);
     setTabStopWidth(tabStop * metrics.width(' '));
 
-    QVector<HighlightingStyle> *styles = new QVector<HighlightingStyle>();
+    setFormatStyle(MarkdownHighlighter::HighlighterState::H1);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::H2);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::H3);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::H4);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::H5);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::H6);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::HorizontalRuler);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::List);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::Bold);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::Italic);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::BlockQuote);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::CodeBlock);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::Comment);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::MaskedSyntax);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::Image);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::InlineCodeBlock);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::Link);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::Table);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::BrokenLink);
 
-    QTextCharFormat headers;
-    headers.setForeground(QBrush(darkModeColors ?
-                                 QColor(158, 182, 255) : QColor(0, 49, 110)));
+#ifdef Q_OS_WIN32
+    QSettings settings;
 
-    if (!darkModeColors) {
-        headers.setBackground(QBrush(QColor(235, 235, 240)));
+    // set the selection background color to a light blue if not in dark mode
+    if (!settings.value("darkMode").toBool()) {
+        // light green (#9be29b) could be an other choice, but be aware that
+        // this color will be used for mouse and keyboard selections too
+        setStyleSheet(styleSheet() +
+                      "QWidget {selection-color: #ffffff;"
+                              "selection-background-color: #3399ff}");
     }
-    headers.setFontWeight(QFont::Bold);
-    headers.setFontPointSize(defaultFontSize * 1.2);
-    STY(pmh_H1, headers);
-
-    headers.setFontPointSize(defaultFontSize * 1.1);
-    STY(pmh_H2, headers);
-
-    headers.setFontPointSize(defaultFontSize);
-    STY(pmh_H3, headers);
-    STY(pmh_H4, headers);
-    STY(pmh_H5, headers);
-    STY(pmh_H6, headers);
-
-    QTextCharFormat hrule;
-    hrule.setForeground(QBrush(Qt::darkGray));
-    hrule.setBackground(QBrush(Qt::lightGray));
-    STY(pmh_HRULE, hrule);
-
-    /* <ul> */
-    QTextCharFormat list;
-    list.setForeground(QBrush(darkModeColors ? Qt::yellow : QColor(163, 0, 123)));
-    STY(pmh_LIST_BULLET, list);
-    STY(pmh_LIST_ENUMERATOR, list);
-
-    /* <a href> */
-    QTextCharFormat link;
-    link.setForeground(QBrush(QColor(252, 126, 0)));
-    link.setBackground(QBrush(darkModeColors ?
-                              QColor(51, 51, 51) : QColor(255, 242, 228)));
-    STY(pmh_LINK, link);
-    STY(pmh_AUTO_LINK_URL, link);
-    STY(pmh_AUTO_LINK_EMAIL, link);
-
-    /* <img> */
-    QTextCharFormat image;
-    image.setForeground(QBrush(QColor(0, 191, 0)));
-    image.setBackground(QBrush(QColor(228, 255, 228)));
-    STY(pmh_IMAGE, image);
-
-    QTextCharFormat ref;
-    ref.setForeground(QBrush(QColor(213, 178, 178)));
-    STY(pmh_REFERENCE, ref);
-
-    /* <pre> */
-    QTextCharFormat code;
-    code.setForeground(QBrush(darkModeColors ? Qt::green : Qt::darkGreen));
-    code.setBackground(QBrush(darkModeColors ?
-                              QColor(51, 51, 51) : QColor(226, 231, 226)));
-
-    QFont codeFont = this->font();
-
-    fontString = settings.value(
-            "MainWindow/noteTextEdit.code.font").toString();
-
-    if (fontString != "") {
-        // set the code font
-        codeFont.fromString(fontString);
-    } else {
-        codeFont = QFontDatabase::systemFont(QFontDatabase::FixedFont);
-
-        // store the default settings
-        settings.setValue(
-                "MainWindow/noteTextEdit.code.font", codeFont.toString());
-    }
-
-    code.setFont(codeFont);
-
-    STY(pmh_CODE, code);
-    STY(pmh_VERBATIM, code);
-
-    /* <em> */
-    QTextCharFormat emph;
-    emph.setForeground(QBrush(darkModeColors ?
-                              QColor(158, 182, 255) : QColor(0, 87, 174)));
-    emph.setFontItalic(true);
-    STY(pmh_EMPH, emph);
-
-    /* <strong> */
-    QTextCharFormat strong;
-    strong.setForeground(QBrush(darkModeColors ?
-                              QColor(158, 182, 255) : QColor(0, 66, 138)));
-    strong.setFontWeight(QFont::Bold);
-    STY(pmh_STRONG, strong);
-
-    QTextCharFormat comment;
-    comment.setForeground(QBrush(Qt::gray));
-    STY(pmh_COMMENT, comment);
-
-    QTextCharFormat blockquote;
-    blockquote.setForeground(QBrush(Qt::darkRed));
-    STY(pmh_BLOCKQUOTE, blockquote);
-
-    _highlighter->setStyles(*styles);
+#endif
 }
 
 /**
@@ -176,7 +128,7 @@ int QOwnNotesMarkdownTextEdit::modifyFontSize(FontModificationMode mode) {
                 }
                 break;
             default:
-                QTextEdit textEdit;
+                QPlainTextEdit textEdit;
                 int newFontSize = textEdit.font().pointSize();
                 if ( fontSize != newFontSize ) {
                     fontSize = newFontSize;
@@ -184,7 +136,9 @@ int QOwnNotesMarkdownTextEdit::modifyFontSize(FontModificationMode mode) {
                 }
         }
 
-        font.setPointSize(fontSize);
+        if (fontSize > 0) {
+            font.setPointSize(fontSize);
+        }
 
         // store the font settings
         settings.setValue("MainWindow/noteTextEdit.font", font.toString());
@@ -199,28 +153,30 @@ int QOwnNotesMarkdownTextEdit::modifyFontSize(FontModificationMode mode) {
 
         switch (mode) {
             case FontModificationMode::Increase:
-                fontSize++;
+                codeFontSize++;
                 doSetStyles = true;
                 break;
             case FontModificationMode::Decrease:
-                fontSize--;
+                codeFontSize--;
 
-                if (fontSize < 5) {
-                    fontSize = 5;
+                if (codeFontSize < 5) {
+                    codeFontSize = 5;
                 } else {
                     doSetStyles = true;
                 }
                 break;
             default:
-                QTextEdit textEdit;
-                int newFontSize = textEdit.font().pointSize();
-                if ( fontSize != newFontSize ) {
-                    fontSize = newFontSize;
+                QPlainTextEdit textEdit;
+                int newCodeFontSize = textEdit.font().pointSize();
+                if ( codeFontSize != newCodeFontSize ) {
+                    codeFontSize = newCodeFontSize;
                     doSetStyles = true;
                 }
         }
 
-        font.setPointSize(codeFontSize);
+        if (codeFontSize > 0) {
+            font.setPointSize(codeFontSize);
+        }
 
         // store the font settings
         settings.setValue("MainWindow/noteTextEdit.code.font", font.toString());
@@ -228,7 +184,7 @@ int QOwnNotesMarkdownTextEdit::modifyFontSize(FontModificationMode mode) {
 
     if (doSetStyles) {
         this->setStyles();
-        highlighter()->parse();
+        _highlighter->rehighlight();
     }
 
     return fontSize;
@@ -238,7 +194,7 @@ int QOwnNotesMarkdownTextEdit::modifyFontSize(FontModificationMode mode) {
  * Handles clicked urls (including relative urls)
  *
  * examples:
- * - <http://www.qownnotes.org> opens the webpage
+ * - <https://www.qownnotes.org> opens the webpage
  * - <file:///path/to/my/file/QOwnNotes.pdf> opens the file
  * "/path/to/my/file/QOwnNotes.pdf" if the operating system
  * supports that handler
@@ -274,16 +230,21 @@ void QOwnNotesMarkdownTextEdit::setPaperMargins(int width) {
     QSettings settings;
     bool isInDistractionFreeMode =
             settings.value("DistractionFreeMode/isEnabled").toBool();
+    bool editorWidthInDFMOnly =
+            settings.value("Editor/editorWidthInDFMOnly", true).toBool();
 
-    if (isInDistractionFreeMode) {
+    if (isInDistractionFreeMode || !editorWidthInDFMOnly) {
         int margin = 0;
+
+        if (width == -1) {
+            width = this->width();
+        }
+
         int editorWidthMode =
                 settings.value("DistractionFreeMode/editorWidthMode").toInt();
 
         if (editorWidthMode != Full) {
             QFontMetrics metrics(font());
-            // take the size of an "O" character
-            metrics.width('O');
 
             int characterAmount = 0;
             switch (editorWidthMode) {
@@ -299,10 +260,17 @@ void QOwnNotesMarkdownTextEdit::setPaperMargins(int width) {
                     break;
             }
 
-            // set the size of characterAmount times the "O" characters
-            int proposedEditorWidth = characterAmount * metrics.width('O');
+            // set the size of characterAmount times the size of "O" characters
+            int proposedEditorWidth = metrics.width(
+                            QString("O").repeated(characterAmount));
 
+            // apply a factor to correct the faulty calculated margin
+            // TODO(pbek): I don't know better way to get around this yet
+            proposedEditorWidth /= 1.332;
+
+            // calculate the margin to be applied
             margin = (width - proposedEditorWidth) / 2;
+
             if (margin < 0) {
                 margin = 0;
             }
@@ -312,6 +280,19 @@ void QOwnNotesMarkdownTextEdit::setPaperMargins(int width) {
     } else {
         setViewportMargins(10, 10, 10, 0);
     }
+}
+
+QMargins QOwnNotesMarkdownTextEdit::viewportMargins() {
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
+    return QMarkdownTextEdit::viewportMargins();
+#else
+    return QMargins();
+#endif
+}
+
+void QOwnNotesMarkdownTextEdit::resizeEvent(QResizeEvent* event) {
+    emit resize(event);
+    QMarkdownTextEdit::resizeEvent(event);
 }
 
 /**
@@ -328,9 +309,98 @@ void QOwnNotesMarkdownTextEdit::insertFromMimeData(const QMimeData * source) {
     // if there is text in the clipboard do the normal pasting process
     if (source->hasText()) {
         QMarkdownTextEdit::insertFromMimeData(source);
-    } else if (mainWindow != NULL) {
+    } else if (mainWindow != Q_NULLPTR) {
         // to more complex pasting if there was no text (and a main window
         // was set)
         mainWindow->handleInsertingFromMimeData(source);
     }
+}
+
+/**
+ * Handles the settings of the markdown textedit
+ */
+void QOwnNotesMarkdownTextEdit::updateSettings() {
+    QSettings settings;
+    QMarkdownTextEdit::AutoTextOptions options;
+
+    if (settings.value("Editor/autoBracketClosing", true).toBool()) {
+        options |= QMarkdownTextEdit::AutoTextOption::BracketClosing;
+    }
+
+    if (settings.value("Editor/autoBracketRemoval", true).toBool()) {
+        options |= QMarkdownTextEdit::AutoTextOption::BracketRemoval;
+    }
+
+    setAutoTextOptions(options);
+
+    // highlighting is always disabled for logTextEdit
+    if (objectName() != "logTextEdit") {
+        // enable or disable markdown highlighting
+        bool highlightingEnabled = settings.value("markdownHighlightingEnabled",
+                                                  true).toBool();
+
+        setHighlightingEnabled(highlightingEnabled);
+
+        if (highlightingEnabled) {
+            // set the new highlighting styles
+            setStyles();
+            _highlighter->rehighlight();
+        }
+    }
+}
+
+/**
+ * Highlights the current line if enabled in the settings
+ */
+void QOwnNotesMarkdownTextEdit::highlightCurrentLine()
+{
+    QSettings settings;
+    if (!settings.value("Editor/highlightCurrentLine", true).toBool()) {
+        return;
+    }
+
+    QList<QTextEdit::ExtraSelection> extraSelections;
+
+    // check if current line is really visible!
+    if (!isReadOnly()) {
+        ensureCursorVisible();
+        QTextEdit::ExtraSelection selection;
+
+        QColor lineColor = Utils::Schema::schemaSettings->getBackgroundColor(
+                MarkdownHighlighter::HighlighterState::
+                CurrentLineBackgroundColor);
+
+        selection.format.setBackground(lineColor);
+        selection.format.setProperty(QTextFormat::FullWidthSelection, true);
+        selection.cursor = textCursor();
+//        selection.cursor.clearSelection();
+//        selection.cursor.select(QTextCursor::BlockUnderCursor);
+        extraSelections.append(selection);
+    }
+
+    // be aware that extra selections, like for global searching, gets
+    // removed when the current line gets highlighted
+    setExtraSelections(extraSelections);
+}
+
+bool QOwnNotesMarkdownTextEdit::eventFilter(QObject *obj, QEvent *event) {
+    if (event->type() == QEvent::KeyPress) {
+        QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
+
+        // show notification if user tries to edit a note while note editing
+        // is turned off
+        if ((objectName() == "encryptedNoteTextEdit" ||
+             objectName() == "noteTextEdit") && isReadOnly() &&
+             (keyEvent->key() < 128) &&
+            keyEvent->modifiers().testFlag(Qt::NoModifier) &&
+                !Utils::Misc::isNoteEditingAllowed()) {
+            Utils::Gui::information(this, tr("Note editing disabled"),
+                                    tr("Note editing is currently disabled, "
+                                       "please allow it again in the "
+                                       "<i>Note-menu</i>."),
+                                    "readonly-mode");
+        }
+    }
+
+    return QMarkdownTextEdit::eventFilter(obj, event);
 }

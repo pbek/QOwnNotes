@@ -7,3 +7,15 @@
 [submodule "src/libraries/sonnet"]
 	path = src/libraries/sonnet
 	url = https://github.com/KDE/sonnet.git
+[submodule "src/libraries/qkeysequencewidget"]
+	path = src/libraries/qkeysequencewidget
+	url = https://github.com/pbek/qkeysequencewidget
+[submodule "src/libraries/qttoolbareditor"]
+	path = src/libraries/qttoolbareditor
+	url = https://github.com/pbek/Qt-Toolbar-Editor.git
+[submodule "src/libraries/qtcsv"]
+	path = src/libraries/qtcsv
+	url = https://github.com/pbek/qtcsv.git
+[submodule "src/libraries/fakevim"]
+	path = src/libraries/fakevim
+	url = https://github.com/pbek/FakeVim.git

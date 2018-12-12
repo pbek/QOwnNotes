@@ -1,0 +1,25 @@
+From 54e014175869819a234763ffdc1a79b6e37368d6 Mon Sep 17 00:00:00 2001
+From: Patrizio Bekerle <patrizio@bekerle.com>
+Date: Mon, 12 Nov 2018 17:14:00 +0100
+Subject: [PATCH] #1018, modified hoedown library to disable table cellspacing
+
+---
+ src/libraries/hoedown/html.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/libraries/hoedown/html.c b/src/libraries/hoedown/html.c
+index b5101c1a..1c96122f 100644
+--- a/src/libraries/hoedown/html.c
++++ b/src/libraries/hoedown/html.c
+@@ -411,7 +411,7 @@ static void
+ rndr_table(hoedown_buffer *ob, const hoedown_buffer *content, const hoedown_renderer_data *data)
+ {
+     if (ob->size) hoedown_buffer_putc(ob, '\n');
+-    HOEDOWN_BUFPUTSL(ob, "<table>\n");
++    HOEDOWN_BUFPUTSL(ob, "<table cellspacing=\"0\">\n");
+     hoedown_buffer_put(ob, content->data, content->size);
+     HOEDOWN_BUFPUTSL(ob, "</table>\n");
+ }
+-- 
+2.19.1
+

@@ -30,7 +30,7 @@ cd $PROJECT_PATH
 
 echo "Project path: $PROJECT_PATH"
 
-# checkout AUR repository
+# checkout slackbuilds repository
 git clone --depth=5 git@github.com:pbek/qownnotes-slackbuilds.git slackbuilds
 
 # checkout the source code
@@ -45,7 +45,7 @@ fi
 cd ..
 
 ARCHIVE_FILE=qownnotes-${QOWNNOTES_VERSION}.tar.xz
-wget http://downloads.sourceforge.net/project/qownnotes/src/${ARCHIVE_FILE}
+wget https://download.tuxfamily.org/qownnotes/src/${ARCHIVE_FILE}
 
 ARCHIVE_SHA512=`sha512sum ${ARCHIVE_FILE} | awk '{ print $1 }'`
 ARCHIVE_MD5=`md5sum ${ARCHIVE_FILE} | awk '{ print $1 }'`
@@ -55,6 +55,12 @@ cd QOwnNotes
 
 echo "Archive md5: ${ARCHIVE_MD5}"
 echo "Archive size: ${ARCHIVE_SIZE}"
+
+if [ -z ${ARCHIVE_MD5} ]; then
+    echo
+    echo "Archive md5 is empty!"
+    exit 1
+fi
 
 buildSystemPath="../../../QOwnNotes/build-systems/slackware"
 

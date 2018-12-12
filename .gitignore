@@ -5,3 +5,6 @@ build-tools
 bin/*
 build-tests-*
 .idea
+cmake-build-*
+doc/build
+*.qmlc

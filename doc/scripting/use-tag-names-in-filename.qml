@@ -1,5 +1,5 @@
 import QtQml 2.0
-import com.qownnotes.noteapi 1.0
+import QOwnNotesTypes 1.0
 
 /**
  * This script is an example how to add the tag names to the file names of notes 
@@ -15,7 +15,7 @@ QtObject {
      * Return an empty string if the file name of the note should 
      * not be modified
      * 
-     * @param {NoteApi} note - the note object of the stored note
+     * @param {Note} note - the note object of the stored note
      * @return {string} the file name of the note without file extension
      */
     function handleNoteTextFileNameHook(note) {
@@ -38,8 +38,12 @@ QtObject {
         if (tagNameList.length > 0) {
             fileName += " [" + tagNameList.join("] [") + "]";
         }
-        
+
         script.log("note file name: " + fileName);
+
+        var noteExists = script.noteExistsByFileName(fileName + ".md", note.id);
+        script.log("note " + (noteExists ? "exists" : "doesn't exist"));
+
         return fileName;
     }
 }

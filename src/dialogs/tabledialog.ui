@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TableDialog</class>
+ <widget class="QDialog" name="TableDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>749</width>
+    <height>647</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Insert table</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="createTab">
+      <attribute name="title">
+       <string>Create table</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="6" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Column width:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="0" colspan="2">
+        <widget class="QCheckBox" name="headlineCheckBox">
+         <property name="text">
+          <string>Insert a table heading separator</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Columns:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QSpinBox" name="rowSpinBox">
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>100000000</number>
+         </property>
+         <property name="value">
+          <number>4</number>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Rows:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QSpinBox" name="columnSpinBox">
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>100000000</number>
+         </property>
+         <property name="value">
+          <number>3</number>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="QSpinBox" name="columnWidthSpinBox">
+         <property name="toolTip">
+          <string>The amount of spaces in a column</string>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>100000000</number>
+         </property>
+         <property name="value">
+          <number>2</number>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0" colspan="2">
+        <widget class="QTableWidget" name="createTableWidget">
+         <attribute name="horizontalHeaderVisible">
+          <bool>false</bool>
+         </attribute>
+         <attribute name="horizontalHeaderDefaultSectionSize">
+          <number>40</number>
+         </attribute>
+         <attribute name="verticalHeaderVisible">
+          <bool>false</bool>
+         </attribute>
+         <attribute name="verticalHeaderDefaultSectionSize">
+          <number>40</number>
+         </attribute>
+        </widget>
+       </item>
+       <item row="2" column="0" colspan="2">
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>Select table layout:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="0">
+        <widget class="QLabel" name="separatorColumnWidthLabel">
+         <property name="text">
+          <string>Separator column width:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="1">
+        <widget class="QSpinBox" name="separatorColumnWidthSpinBox">
+         <property name="toolTip">
+          <string>The amount of dash characters in the separator</string>
+         </property>
+         <property name="minimum">
+          <number>3</number>
+         </property>
+         <property name="maximum">
+          <number>100000000</number>
+         </property>
+         <property name="value">
+          <number>3</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="importTab">
+      <attribute name="title">
+       <string>Import CSV file</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="5" column="2">
+        <widget class="QComboBox" name="textDelimiterComboBox">
+         <property name="editable">
+          <bool>true</bool>
+         </property>
+         <item>
+          <property name="text">
+           <string notr="true">&quot;</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">'</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="4" column="0" colspan="2">
+        <widget class="QLabel" name="label_6">
+         <property name="text">
+          <string>Separator:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QPushButton" name="fileButton">
+         <property name="text">
+          <string>Select file</string>
+         </property>
+         <property name="icon">
+          <iconset theme="document-open" resource="../breeze-qownnotes.qrc">
+           <normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</iconset>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0" colspan="3">
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string>Please select the CSV file you want to import:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0" colspan="3">
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>686</width>
+           <height>47</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="4" column="2">
+        <widget class="QComboBox" name="separatorComboBox">
+         <property name="editable">
+          <bool>true</bool>
+         </property>
+         <item>
+          <property name="text">
+           <string notr="true">,</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">;</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="1" column="0" colspan="2">
+        <widget class="QLineEdit" name="fileLineEdit">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+         <property name="placeholderText">
+          <string>CSV file</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0" colspan="3">
+        <widget class="QCheckBox" name="firstLineHeadlineCheckBox">
+         <property name="text">
+          <string>First line is the table heading</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0" colspan="3">
+        <widget class="QPlainTextEdit" name="csvFileTextEdit">
+         <property name="undoRedoEnabled">
+          <bool>false</bool>
+         </property>
+         <property name="lineWrapMode">
+          <enum>QPlainTextEdit::NoWrap</enum>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0" colspan="2">
+        <widget class="QLabel" name="label_7">
+         <property name="text">
+          <string>Text-delimiter:</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../breeze-qownnotes.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>TableDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>TableDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -106,7 +106,7 @@ TrashDialog::TrashDialog(QJSValue notes, MainWindow *mainWindow,
 
     ui->trashListWidget->setCurrentRow(0);
     if (dataList->count() > 0) {
-        ui->noteBrowser->setText(dataList->at(0));
+        ui->noteBrowser->setPlainText(dataList->at(0));
     }
 }
 
@@ -136,7 +136,7 @@ TrashDialog::~TrashDialog() {
 }
 
 void TrashDialog::on_trashListWidget_currentRowChanged(int currentRow) {
-    ui->noteBrowser->setText(dataList->value(currentRow));
+    ui->noteBrowser->setPlainText(dataList->value(currentRow));
 }
 
 void TrashDialog::dialogButtonClicked(QAbstractButton *button) {
@@ -149,7 +149,8 @@ void TrashDialog::dialogButtonClicked(QAbstractButton *button) {
 
         switch (actionRole) {
             case Download: {
-                QString text = dataList->value(ui->trashListWidget->currentRow());
+                QString text = dataList->value(
+                        ui->trashListWidget->currentRow());
                 mainWindow->createNewNote(name, text);
                 break;
             }

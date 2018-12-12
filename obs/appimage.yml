@@ -1,0 +1,30 @@
+app: QOwnNotes
+
+build:
+  packages:
+    - linuxdeployqt
+    - sqlite3
+    - sqlite3-devel
+    - pkgconfig(sqlite3)
+    - pkgconfig(Qt5Svg)
+    - pkgconfig(Qt5Sql)
+    - pkgconfig(Qt5Gui)
+    - pkgconfig(Qt5Network)
+    - pkgconfig(Qt5Widgets)
+    - pkgconfig(Qt5Xml)
+    - pkgconfig(Qt5XmlPatterns)
+    - pkgconfig(Qt5PrintSupport)
+    - pkgconfig(Qt5Qml)
+    - libQt5Sql5-sqlite
+  git:
+    - https://github.com/pbek/QOwnNotes.git
+
+script:
+  - cd $BUILD_SOURCE_DIR/QOwnNotes/src
+  - echo "#define RELEASE \"AppImage\"" > release.h
+  - qmake-qt5 QOwnNotes.pro PREFIX=/usr
+  - make INSTALL_ROOT=$BUILD_APPDIR install
+  - unset QTDIR; unset QT_PLUGIN_PATH; unset LD_LIBRARY_PATH
+  - linuxdeployqt $BUILD_APPDIR/usr/share/applications/*.desktop -bundle-non-qt-libs -verbose=2 -no-strip
+  - mkdir -p $BUILD_APPDIR/usr/share/metainfo
+  - cp $BUILD_SOURCE_DIR/QOwnNotes/obs/qownnotes.appdata.xml $BUILD_APPDIR/usr/share/metainfo/qownnotes.appdata.xml

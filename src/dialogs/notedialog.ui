@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NoteDialog</class>
+ <widget class="QDialog" name="NoteDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>686</width>
+    <height>424</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Note</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QOwnNotesMarkdownTextEdit" name="textEdit"/>
+   </item>
+   <item row="1" column="0">
+    <widget class="QFrame" name="searchFrame">
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QOwnNotesMarkdownTextEdit</class>
+   <extends>QPlainTextEdit</extends>
+   <header location="global">widgets/qownnotesmarkdowntextedit.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

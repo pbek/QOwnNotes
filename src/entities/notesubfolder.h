@@ -3,7 +3,11 @@
 #include <QDateTime>
 #include <QSqlQuery>
 #include <QDebug>
+#include <QDir>
 
+// note sub-folders that should be ignored by default
+// regular expression, separated by ";"
+#define IGNORED_NOTE_SUBFOLDERS_DEFAULT "^\\."
 
 class NoteSubFolder {
 public:
@@ -45,27 +49,51 @@ public:
 
     void setParentId(int parentId);
 
-    QString relativePath();
+    QString relativePath(QString separator = "");
+
+    QString fullPath();
 
     NoteSubFolder getParent();
 
-    static QList<NoteSubFolder> fetchAllByParentId(int parentId);
+    static QList<NoteSubFolder> fetchAllByParentId(int parentId,
+            QString sortBy = "file_last_modified DESC");
+
+    static QList<int> fetchIdsRecursivelyByParentId(int parentId);
 
     bool isActive();
 
-    static int activeSubNoteFolderId();
+    static int activeNoteSubFolderId();
 
     static NoteSubFolder activeNoteSubFolder();
 
-    static bool setAsActive(int tagId);
+    static bool setAsActive(int noteSubFolderId);
 
     void setAsActive();
 
     QString pathData();
 
-    static NoteSubFolder fetchByPathData(QString pathData);
+    static NoteSubFolder fetchByPathData(QString pathData,
+                                         QString separator = "\n");
 
     static NoteSubFolder fetchByNameAndParentId(QString name, int parentId);
+
+    void saveTreeWidgetExpandState(bool expanded);
+
+    bool treeWidgetExpandState();
+
+    static QString treeWidgetExpandStateSettingsKey(int noteFolderId = 0);
+
+    bool removeFromFileSystem();
+
+    QDir dir();
+
+    bool rename(QString newName);
+
+    static int countAllParentId(int parentId);
+
+    static QList<int> fetchAllIds();
+
+    static bool isNoteSubfoldersPanelShowNotesRecursively();
 
 protected:
     int id;

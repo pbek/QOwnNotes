@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>configurations/schemes.conf</file>
+        <file>configurations/layouts.ini</file>
+        <file>scripts/macos/update.command</file>
+    </qresource>
+</RCC>

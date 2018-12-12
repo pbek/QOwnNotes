@@ -12,3 +12,16 @@ TagApi* TagApi::fetch(int id) {
 
     return this;
 }
+
+TagApi* TagApi::fetchByName(QString name, int parentId) {
+    Tag tag = Tag::fetchByName(name, parentId);
+
+    if (tag.isFetched()) {
+        this->id = tag.getId();
+        this->name = tag.getName();
+        this->parentId = tag.getParentId();
+        this->priority = tag.getPriority();
+    }
+
+    return this;
+}

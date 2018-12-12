@@ -81,6 +81,7 @@ VersionDialog::VersionDialog(QJSValue versions, MainWindow *mainWindow,
         diffHtml.replace("<del>",
                          "<span style='background-color: rgb(255, 215, 215)'>");
         diffHtml.replace("</del>", "</span>");
+        diffHtml.replace("\\n", "&para;<br />");
         diffHtml.replace("\n", "<br />");
 
         ui->versionListWidget->addItem(itemName);
@@ -119,7 +120,7 @@ VersionDialog::~VersionDialog() {
 
 void VersionDialog::on_versionListWidget_currentRowChanged(int currentRow) {
     ui->diffBrowser->setHtml(diffList->value(currentRow));
-    ui->noteTextEdit->setText(dataList->value(currentRow));
+    ui->noteTextEdit->setPlainText(dataList->value(currentRow));
 }
 
 void VersionDialog::dialogButtonClicked(QAbstractButton *button) {

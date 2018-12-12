@@ -1,0 +1,23 @@
+# ~/.tmuxinator/deploy-qownnotes.yml
+
+name: deploy-qownnotes
+
+# this doesn't seem to do anything
+#pre: tmux kill-session -t deploy-qownnotes
+
+windows:
+  - deploy:
+      layout: tiled
+      panes:
+        - launchpad:
+            - ../ubuntu-launchpad/build-for-launchpad.sh
+        - obs:
+            - ../obs/build-for-obs.sh
+        - aur:
+            - aur/build-for-aur.sh
+        - gentoo:
+            - gentoo/build-for-gentoo.sh
+        - slackware:
+            - slackware/build-for-slackware.sh
+        - snap:
+            - snap/build-for-launchpad-snap.sh

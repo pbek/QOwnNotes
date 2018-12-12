@@ -77,6 +77,7 @@ static size_t char_autolink_url(hoedown_buffer *ob, hoedown_document *doc, uint8
 static size_t char_autolink_email(hoedown_buffer *ob, hoedown_document *doc, uint8_t *data, size_t offset, size_t size);
 static size_t char_autolink_www(hoedown_buffer *ob, hoedown_document *doc, uint8_t *data, size_t offset, size_t size);
 static size_t char_link(hoedown_buffer *ob, hoedown_document *doc, uint8_t *data, size_t offset, size_t size);
+static size_t char_image(hoedown_buffer *ob, hoedown_document *doc, uint8_t *data, size_t offset, size_t size);
 static size_t char_superscript(hoedown_buffer *ob, hoedown_document *doc, uint8_t *data, size_t offset, size_t size);
 static size_t char_math(hoedown_buffer *ob, hoedown_document *doc, uint8_t *data, size_t offset, size_t size);
 
@@ -86,6 +87,7 @@ enum markdown_char_t {
 	MD_CHAR_CODESPAN,
 	MD_CHAR_LINEBREAK,
 	MD_CHAR_LINK,
+	MD_CHAR_IMAGE,
 	MD_CHAR_LANGLE,
 	MD_CHAR_ESCAPE,
 	MD_CHAR_ENTITY,
@@ -103,6 +105,7 @@ static char_trigger markdown_char_ptrs[] = {
 	&char_codespan,
 	&char_linebreak,
 	&char_link,
+	&char_image,
 	&char_langle_tag,
 	&char_escape,
 	&char_entity,
@@ -942,7 +945,12 @@ char_escape(hoedown_buffer *ob, hoedown_document *doc, uint8_t *data, size_t off
 		}
 		else hoedown_buffer_putc(ob, data[1]);
 	} else if (size == 1) {
-		hoedown_buffer_putc(ob, data[0]);
+		if (doc->md.normal_text) {
+			work.data = data;
+			work.size = 1;
+			doc->md.normal_text(ob, &work, &doc->data);
+		}
+		else hoedown_buffer_putc(ob, data[0]);
 	}
 
 	return 2;
@@ -1088,6 +1096,17 @@ char_autolink_url(hoedown_buffer *ob, hoedown_document *doc, uint8_t *data, size
 
 	popbuf(doc, BUFFER_SPAN);
 	return link_len;
+}
+
+static size_t
+char_image(hoedown_buffer *ob, hoedown_document *doc, uint8_t *data, size_t offset, size_t size) {
+	size_t ret;
+
+	if (size < 2 || data[1] != '[') return 0;
+
+	ret = char_link(ob, doc, data + 1, offset + 1, size - 1);
+	if (!ret) return 0;
+	return ret + 1;
 }
 
 /* char_link • '[': parsing a link, a footnote or an image */
@@ -1302,9 +1321,6 @@ char_link(hoedown_buffer *ob, hoedown_document *doc, uint8_t *data, size_t offse
 
 	/* calling the relevant rendering function */
 	if (is_img) {
-		if (ob->size && ob->data[ob->size - 1] == '!')
-			ob->size -= 1;
-
 		ret = doc->md.image(ob, u_link, title, content, &doc->data);
 	} else {
 		ret = doc->md.link(ob, content, u_link, title, &doc->data);
@@ -2807,8 +2823,10 @@ hoedown_document_new(
 	if (doc->md.linebreak)
 		doc->active_char['\n'] = MD_CHAR_LINEBREAK;
 
-	if (doc->md.image || doc->md.link || doc->md.footnotes || doc->md.footnote_ref)
+	if (doc->md.image || doc->md.link || doc->md.footnotes || doc->md.footnote_ref) {
 		doc->active_char['['] = MD_CHAR_LINK;
+		doc->active_char['!'] = MD_CHAR_IMAGE;
+	}
 
 	doc->active_char['<'] = MD_CHAR_LANGLE;
 	doc->active_char['\\'] = MD_CHAR_ESCAPE;

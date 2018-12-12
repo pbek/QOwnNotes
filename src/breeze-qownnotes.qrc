@@ -75,5 +75,26 @@
         <file alias="16x16/list-add.svg">icons/breeze-qownnotes/16x16/list-add.svg</file>
         <file alias="16x16/list-remove.svg">icons/breeze-qownnotes/16x16/list-remove.svg</file>
         <file alias="16x16/im-user-online.svg">icons/breeze-qownnotes/16x16/im-user-online.svg</file>
+        <file alias="16x16/document-share.svg">icons/breeze-qownnotes/16x16/document-share.svg</file>
+        <file alias="16x16/format-text-capitalize.svg">icons/breeze-qownnotes/16x16/format-text-capitalize.svg</file>
+        <file alias="16x16/format-text-strikethrough.svg">icons/breeze-qownnotes/16x16/format-text-strikethrough.svg</file>
+        <file alias="16x16/application-menu.svg">icons/breeze-qownnotes/16x16/application-menu.svg</file>
+        <file alias="16x16/split.svg">icons/breeze-qownnotes/16x16/split.svg</file>
+        <file alias="16x16/taxes-finances.svg">icons/breeze-qownnotes/16x16/taxes-finances.svg</file>
+        <file alias="16x16/configure-shortcuts.svg">icons/breeze-qownnotes/16x16/configure-shortcuts.svg</file>
+        <file alias="16x16/folder-cloud.svg">icons/breeze-qownnotes/16x16/folder-cloud.svg</file>
+        <file alias="16x16/edit-guides.svg">icons/breeze-qownnotes/16x16/edit-guides.svg</file>
+        <file alias="16x16/document-import.svg">icons/breeze-qownnotes/16x16/document-import.svg</file>
+        <file alias="16x16/document-export.svg">icons/breeze-qownnotes/16x16/document-export.svg</file>
+        <file alias="16x16/drive-removable-media.svg">icons/breeze-qownnotes/16x16/drive-removable-media.svg</file>
+        <file alias="16x16/archive-remove.svg">icons/breeze-qownnotes/16x16/archive-remove.svg</file>
+        <file alias="16x16/system-lock-screen.svg">icons/breeze-qownnotes/16x16/system-lock-screen.svg</file>
+        <file alias="16x16/window-duplicate.svg">icons/breeze-qownnotes/16x16/window-duplicate.svg</file>
+        <file alias="16x16/step_object_LinearMotor.svg">icons/breeze-qownnotes/16x16/step_object_LinearMotor.svg</file>
+        <file alias="16x16/insert-table.svg">icons/breeze-qownnotes/16x16/insert-table.svg</file>
+        <file alias="16x16/table.svg">icons/breeze-qownnotes/16x16/table.svg</file>
+        <file alias="16x16/format-text-blockquote.svg">icons/breeze-qownnotes/16x16/format-text-blockquote.svg</file>
+        <file alias="16x16/window.svg">icons/breeze-qownnotes/16x16/window.svg</file>
+        <file alias="16x16/mail-attachment.svg">icons/breeze-qownnotes/16x16/mail-attachment.svg</file>
     </qresource>
 </RCC>

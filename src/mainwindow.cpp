@@ -1,9 +1,23 @@
+/*
+ * Copyright (c) 2014-2018 Patrizio Bekerle -- http://www.bekerle.com
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; version 2 of the License.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+ * or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License
+ * for more details.
+ *
+ */
+
 #include "mainwindow.h"
-#include <QSplitter>
 #include <QDebug>
 #include <QDir>
 #include <QFile>
 #include <QMessageBox>
+#include <QDesktopWidget>
 #include <QListWidgetItem>
 #include <QSettings>
 #include <QTimer>
@@ -26,7 +40,8 @@
 #include <QInputDialog>
 #include <QCompleter>
 #include <QTreeWidgetItem>
-#include <QShortcut>
+#include <QCoreApplication>
+#include <QUuid>
 #include "ui_mainwindow.h"
 #include "dialogs/linkdialog.h"
 #include "services/owncloudservice.h"
@@ -46,6 +61,7 @@
 #include <services/cryptoservice.h>
 #include <helpers/clientproxy.h>
 #include <utils/misc.h>
+#include <utils/gui.h>
 #include <entities/notefolder.h>
 #include <entities/notesubfolder.h>
 #include <entities/tag.h>
@@ -54,24 +70,94 @@
 #include <QQmlContext>
 #include <QQmlComponent>
 #include <QQmlApplicationEngine>
+#include <QWidgetAction>
+#include <QColorDialog>
 #include <services/scriptingservice.h>
-#include <dialogs/logdialog.h>
-
+#include <dialogs/evernoteimportdialog.h>
+#include <widgets/logwidget.h>
+#include <dialogs/sharedialog.h>
+#include <helpers/toolbarcontainer.h>
+#include <libraries/qttoolbareditor/src/toolbar_editor.hpp>
+#include <dialogs/actiondialog.h>
+#include <dialogs/tabledialog.h>
+#include <dialogs/notedialog.h>
+#include <utils/schema.h>
+#include <utils/git.h>
+#include <dialogs/filedialog.h>
+#include <dialogs/scriptrepositorydialog.h>
+#include <entities/trashitem.h>
+#include <dialogs/localtrashdialog.h>
+#include <QRegularExpression>
+#include <QRegularExpressionMatch>
+#include <QRegularExpressionMatchIterator>
+#include <widgets/notetreewidgetitem.h>
+#include <helpers/fakevimproxy.h>
+#include <QProgressDialog>
 
 MainWindow::MainWindow(QWidget *parent) :
         QMainWindow(parent),
         ui(new Ui::MainWindow) {
+    // handle logging as signal/slot to even more prevent crashes when
+    // writing to the log-widget while the app is shutting down
+    connect(this, SIGNAL(log(LogWidget::LogType, QString)),
+            LogWidget::instance(), SLOT(log(LogWidget::LogType, QString)));
+
+    // use our custom log handler
+    qInstallMessageHandler(LogWidget::logMessageOutput);
+    qApp->setProperty("loggingEnabled", true);
+
 #ifdef Q_OS_MAC
     // disable icons in the menu
     QApplication::instance()->setAttribute(Qt::AA_DontShowIconsInMenus, true);
 #endif
 
+    QSettings settings;
+    _noteEditIsCentralWidget = settings.value(
+            "noteEditIsCentralWidget", true).toBool();
+
     ui->setupUi(this);
+
+    // setup vim mode
+    if (settings.value("Editor/vimMode").toBool()) {
+        initFakeVim(ui->noteTextEdit);
+        initFakeVim(ui->encryptedNoteTextEdit);
+    }
+
+    setWindowIcon(getSystemTrayIcon());
+
+    // initialize the workspace combo box
+    initWorkspaceComboBox();
+
+#ifdef Q_OS_MAC
+    // disable icons in the menu that weren't handled by
+    // Qt::AA_DontShowIconsInMenus
+    ui->actionShare_note->setIconVisibleInMenu(false);
+
+    // set an other shortcut for delete line under macOS
+    ui->actionDelete_line->setShortcut(QKeySequence("Ctrl+Backspace"));
+    ui->actionDelete_word->setShortcut(QKeySequence("Alt+Backspace"));
+#endif
+
     _noteViewIsRegenerated = false;
     _searchLineEditFromCompleter = false;
+    _isNotesDirectoryWasModifiedDisabled = false;
+    _isNotesWereModifiedDisabled = false;
+    _isDefaultShortcutInitialized = false;
+    _showNotesFromAllNoteSubFolders = showNotesFromAllNoteSubFolders();
+    _noteFolderDockWidgetWasVisible = true;
+    _noteSubFolderDockWidgetVisible = true;
+    _noteExternallyRemovedCheckEnabled = true;
+    _readOnlyButton = new QPushButton(this);
+    _settingsDialog = Q_NULLPTR;
+    _lastNoteSelectionWasMultiple = false;
+
     this->setWindowTitle(
             "QOwnNotes - version " + QString(VERSION) +
                     " - build " + QString::number(BUILD));
+
+    qApp->setProperty(
+            "mainWindow",
+            QVariant::fromValue<MainWindow *>(this));
 
     ClientProxy proxy;
     // refresh the Qt proxy settings
@@ -80,18 +166,29 @@ MainWindow::MainWindow(QWidget *parent) :
     QActionGroup *sorting = new QActionGroup(this);
     sorting->addAction(ui->actionAlphabetical);
     sorting->addAction(ui->actionBy_date);
-    sorting->setExclusive(true);
+
+    QActionGroup *sortingOrder = new QActionGroup(this);
+    sortingOrder->addAction(ui->actionAscending);
+    sortingOrder->addAction(ui->actionDescending);
+    sortingOrder->setExclusive(true);
 
     // hide the encrypted note text edit by default
     ui->encryptedNoteTextEdit->hide();
+    ui->multiSelectActionFrame->hide();
 
     // set the search frames for the note text edits
-    ui->noteTextEdit->initSearchFrame(ui->noteTextEditSearchFrame);
-    ui->encryptedNoteTextEdit->initSearchFrame(ui->noteTextEditSearchFrame);
+    bool darkMode = settings.value("darkMode").toBool();
+    ui->noteTextEdit->initSearchFrame(ui->noteTextEditSearchFrame, darkMode);
+    ui->encryptedNoteTextEdit->initSearchFrame(ui->noteTextEditSearchFrame,
+                                               darkMode);
+    ui->noteTextView->initSearchFrame(ui->noteTextViewSearchFrame, darkMode);
 
     // set the main window for accessing it's public methods
     ui->noteTextEdit->setMainWindow(this);
     ui->encryptedNoteTextEdit->setMainWindow(this);
+
+    // initialize the tag button scroll area
+    initTagButtonScrollArea();
 
     noteHistory = NoteHistory();
 
@@ -101,26 +198,59 @@ MainWindow::MainWindow(QWidget *parent) :
     // initialize the toolbars
     initToolbars();
 
+#ifdef Q_OS_MAC
+    // add some different shortcuts for the note history on the mac
+    ui->action_Back_in_note_history->
+            setShortcut(Qt::CTRL + Qt::ALT + Qt::Key_Left);
+    ui->action_Forward_in_note_history->
+            setShortcut(Qt::CTRL + Qt::ALT + Qt::Key_Right);
+
+    // add an other shortcut for the auto-completer
+    ui->actionAutocomplete->setShortcut(Qt::META + Qt::Key_Space);
+
+    // add an other shortcut for inserting media
+    ui->actionPaste_image->setShortcut(Qt::CTRL + Qt::ALT + Qt::Key_V);
+#endif
+
+    // adding some alternate shortcuts for changing the current note
+    QShortcut *shortcut = new QShortcut(QKeySequence("Ctrl+PgDown"), this);
+    QObject::connect(shortcut, SIGNAL(activated()),
+                     this, SLOT(on_actionNext_note_triggered()));
+    shortcut = new QShortcut(QKeySequence("Ctrl+PgUp"), this);
+    QObject::connect(shortcut, SIGNAL(activated()),
+                     this, SLOT(on_actionPrevious_Note_triggered()));
+
+    // read the settings (shortcuts have to be defined before that)
     readSettings();
 
+    // do a bit more styling
+    initStyling();
+
+    // initialize the dock widgets
+    initDockWidgets();
+
+    // initialize the scripting engine
+    // initDockWidgets() has to be called before that so the scripting dock
+    // widget is already in place
     initScriptingEngine();
 
-    // set sorting
-    ui->actionBy_date->setChecked(!sortAlphabetically);
-    ui->actionAlphabetical->setChecked(sortAlphabetically);
+    // restore toolbars
+    // initDockWidgets() has to be called first so panel checkboxes can be
+    // used in toolbars
+    restoreToolbars();
 
-    // set the show in system tray checkbox
-    ui->actionShow_system_tray->setChecked(showSystemTray);
+    // update the workspace menu and combobox entries again after
+    // restoreToolbars() to fill the workspace combo box again
+    updateWorkspaceLists();
+
+    // check if we want to start the application hidden
+    initShowHidden();
 
     createSystemTrayIcon();
-    initMainSplitter();
-    initNoteListSplitter();
-    initTagFrameSplitter();
-    buildNotesIndex();
-    loadNoteDirectoryList();
+    buildNotesIndexAndLoadNoteDirectoryList();
 
     // setup the update available button
-    setupUpdateAvailableButton();
+    setupStatusBarWidgets();
 
     this->noteDiffDialog = new NoteDiffDialog();
 
@@ -142,7 +272,17 @@ MainWindow::MainWindow(QWidget *parent) :
             SLOT(noteViewUpdateTimerSlot()));
     _noteViewUpdateTimer->start(2000);
 
-    // check if we have a todo reminder every minute
+    // commit changes from the current note folder to git every 30 sec
+    gitCommitCurrentNoteFolder();
+    _gitCommitTimer = new QTimer(this);
+    QObject::connect(
+            _gitCommitTimer,
+            SIGNAL(timeout()),
+            this,
+            SLOT(gitCommitCurrentNoteFolder()));
+    _gitCommitTimer->start(_gitCommitInterval * 1000);
+
+    // check if we have a tasks reminder every minute
     this->todoReminderTimer = new QTimer(this);
     QObject::connect(
             this->todoReminderTimer,
@@ -168,8 +308,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->encryptedNoteTextEdit->installEventFilter(this);
     ui->encryptedNoteTextEdit->viewport()->installEventFilter(this);
     ui->tagTreeWidget->installEventFilter(this);
-    // jump to the first note
-    resetCurrentNote();
+    ui->newNoteTagLineEdit->installEventFilter(this);
+    ui->selectedTagsToolButton->installEventFilter(this);
 
     // init the saved searches completer
     initSavedSearchesCompleter();
@@ -181,18 +321,18 @@ MainWindow::MainWindow(QWidget *parent) :
             QStringList() << "note" << "task");
 
     // handle note url externally in the note text edit
-    QObject::connect(
-            ui->noteTextEdit,
-            SIGNAL(urlClicked(QString)),
-            this,
-            SLOT(openLocalUrl(QString)));
+    QObject::connect(ui->noteTextEdit, SIGNAL(urlClicked(QString)),
+                     this, SLOT(openLocalUrl(QString)));
 
     // also handle note url externally in the encrypted note text edit
-    QObject::connect(
-            ui->encryptedNoteTextEdit,
-            SIGNAL(urlClicked(QString)),
-            this,
-            SLOT(openLocalUrl(QString)));
+    QObject::connect(ui->encryptedNoteTextEdit, SIGNAL(urlClicked(QString)),
+                     this, SLOT(openLocalUrl(QString)));
+
+    // handle note text edit resize events
+    QObject::connect(ui->noteTextEdit, SIGNAL(resize(QResizeEvent *)),
+                     this, SLOT(noteTextEditResize(QResizeEvent *)));
+    QObject::connect(ui->encryptedNoteTextEdit, SIGNAL(resize(QResizeEvent *)),
+                     this, SLOT(encryptedNoteTextEditResize(QResizeEvent *)));
 
     // set the tab stop to the width of 4 spaces in the editor
     const int tabStop = 4;
@@ -209,30 +349,23 @@ MainWindow::MainWindow(QWidget *parent) :
     // load the note folder list in the menu
     this->loadNoteFolderListMenu();
 
+    // update panels sort and order
+    updatePanelsSortOrder();
+
     this->updateService = new UpdateService(this);
     this->updateService->checkForUpdates(this, UpdateService::AppStart);
 
+    // expire trashed items
+    TrashItem::expireItems();
+
+    // we need to restore the current workspace a little later when
+    // application window is maximized or in full-screen mode
+    if (isMaximized() || isFullScreen()) {
+        QTimer::singleShot(500, this, SLOT(restoreCurrentWorkspace()));
+    }
+
     // update the current folder tooltip
     updateCurrentFolderTooltip();
-
-#ifdef Q_OS_MAC
-    // add some different shortcuts for the note history on the mac
-    ui->action_Back_in_note_history->
-            setShortcut(Qt::CTRL + Qt::ALT + Qt::Key_Left);
-    ui->action_Forward_in_note_history->
-            setShortcut(Qt::CTRL + Qt::ALT + Qt::Key_Right);
-
-    // add an other shortcut for the autocompleter
-    ui->actionAutocomplete->setShortcut(Qt::META + Qt::Key_Space);
-#endif
-
-    // adding some alternate shortcuts for changing the current note
-    QShortcut *shortcut = new QShortcut(QKeySequence("Ctrl+PgDown"), this);
-    QObject::connect(shortcut, SIGNAL(activated()),
-                     this, SLOT(on_actionNext_note_triggered()));
-    shortcut = new QShortcut(QKeySequence("Ctrl+PgUp"), this);
-    QObject::connect(shortcut, SIGNAL(activated()),
-                     this, SLOT(on_actionPrevious_Note_triggered()));
 
     // show the app metrics notification if not already shown
     showAppMetricsNotificationIfNeeded();
@@ -242,26 +375,8 @@ MainWindow::MainWindow(QWidget *parent) :
     // setup the shortcuts for the note bookmarks
     setupNoteBookmarkShortcuts();
 
-    // setup the markdown view
-    setupMarkdownView();
-
-    if (isNoteEditPaneEnabled()) {
-        // setup the note edit pane
-        setupNoteEditPane();
-
-        // restore the distraction free mode
-        restoreDistractionFreeMode();
-    } else {
-        // setup the note edit pane
-        // if the pane is disabled we have to setup the pane with a timer, so
-        // the automatic scrolling when clicked on the navigation bar works in
-        // the preview
-        QTimer::singleShot(100, this, SLOT(setupNoteEditPane()));
-
-        // if the note edit pane is disabled we have to wait with restoring
-        // the distraction free mode
-        QTimer::singleShot(200, this, SLOT(restoreDistractionFreeMode()));
-    }
+    // restore the distraction free mode
+    restoreDistractionFreeMode();
 
     // add action tracking
     connect(ui->menuBar, SIGNAL(triggered(QAction *)),
@@ -274,18 +389,10 @@ MainWindow::MainWindow(QWidget *parent) :
         ui->actionShow_toolbar->setChecked(isToolbarVisible());
     }
 
-    connect(ui->mainToolBar, SIGNAL(visibilityChanged(bool)),
-            this, SLOT(toolbarVisibilityChanged(bool)));
-    connect(_formattingToolbar, SIGNAL(visibilityChanged(bool)),
-            this, SLOT(toolbarVisibilityChanged(bool)));
-    connect(_insertingToolbar, SIGNAL(visibilityChanged(bool)),
-            this, SLOT(toolbarVisibilityChanged(bool)));
-    connect(_encryptionToolbar, SIGNAL(visibilityChanged(bool)),
-            this, SLOT(toolbarVisibilityChanged(bool)));
-    connect(_windowToolbar, SIGNAL(visibilityChanged(bool)),
-            this, SLOT(toolbarVisibilityChanged(bool)));
-    connect(_quitToolbar, SIGNAL(visibilityChanged(bool)),
-            this, SLOT(toolbarVisibilityChanged(bool)));
+    Q_FOREACH(QToolBar *toolbar, findChildren<QToolBar*>()) {
+            connect(toolbar, SIGNAL(visibilityChanged(bool)),
+                    this, SLOT(toolbarVisibilityChanged(bool)));
+        }
 
     // set the action group for the width selector of the distraction free mode
     QActionGroup *dfmEditorWidthActionGroup = new QActionGroup(this);
@@ -303,20 +410,17 @@ MainWindow::MainWindow(QWidget *parent) :
     // so that the MainWindow gets the event
     ui->noteTextEdit->setAcceptDrops(false);
 
-    // do a bit more styling
-    initStyling();
-
     // act on position clicks in the navigation widget
     QObject::connect(ui->navigationWidget, SIGNAL(positionClicked(int)),
                      this, SLOT(onNavigationWidgetPositionClicked(int)));
 
     // do the navigation parsing after the highlighter was finished
     QObject::connect(ui->noteTextEdit->highlighter(),
-                     SIGNAL(parsingFinished()),
+                     SIGNAL(highlightingFinished()),
                      this,
                      SLOT(startNavigationParser()));
     QObject::connect(ui->encryptedNoteTextEdit->highlighter(),
-                     SIGNAL(parsingFinished()),
+                     SIGNAL(highlightingFinished()),
                      this,
                      SLOT(startNavigationParser()));
 
@@ -325,9 +429,6 @@ MainWindow::MainWindow(QWidget *parent) :
                      SIGNAL(resize(QSize, QSize)),
                      this,
                      SLOT(onNoteTextViewResize(QSize, QSize)));
-
-    // initializes the log dialog
-    initLogDialog();
 
     // reloads all tasks from the ownCloud server
     reloadTodoLists();
@@ -339,10 +440,9 @@ MainWindow::MainWindow(QWidget *parent) :
             this, SLOT(reloadTodoLists()));
     _todoListTimer->start(600000);
 
-    // setup the softwrap checkbox
+    // setup the soft-wrap checkbox
     const QSignalBlocker blocker2(ui->actionUse_softwrap_in_note_editor);
     Q_UNUSED(blocker2);
-    QSettings settings;
     ui->actionUse_softwrap_in_note_editor->setChecked(
             settings.value("useSoftWrapInNoteEditor", true).toBool());
 
@@ -353,34 +453,452 @@ MainWindow::MainWindow(QWidget *parent) :
     MetricsService::instance()->sendEventIfEnabled(
             "app/has-owncloud-settings", "app", "has owncloud settings",
             OwnCloudService::hasOwnCloudSettings() ? "yes" : "no");
+
+    // send an event for counting the editor color schemes
+    int schemaCount = settings.value("Editor/ColorSchemes").toStringList()
+            .count();
+    MetricsService::instance()->sendEventIfEnabled(
+            "app/editor-color-schema-count",
+            "editor",
+            "editor color schema count",
+            QString::number(schemaCount) + " schemas",
+            schemaCount);
+
+    _actionDialog = Q_NULLPTR;
+    _todoDialog = Q_NULLPTR;
+    _orphanedImagesDialog = Q_NULLPTR;
+    _orphanedAttachmentsDialog = Q_NULLPTR;
+    _issueAssistantDialog = Q_NULLPTR;
+
+    // track cursor position changes for the line number label
+    QObject::connect(ui->noteTextEdit,
+                     SIGNAL(cursorPositionChanged()),
+                     this,
+                     SLOT(noteEditCursorPositionChanged()));
+
+    // track cursor position changes for the line number label
+    QObject::connect(ui->encryptedNoteTextEdit,
+                     SIGNAL(cursorPositionChanged()),
+                     this,
+                     SLOT(noteEditCursorPositionChanged()));
+
+    // restore the note history of the current note folder
+    noteHistory.restoreForCurrentNoteFolder();
+
+    // try to restore the last note before the app was quit
+    // if that fails jump to the first note
+    // we do that with a timer, because otherwise the scrollbar will not be
+    // restored correctly, because the maximum position of the scrollbar is 0
+    QTimer::singleShot(250, this, SLOT(restoreActiveNoteHistoryItem()));
+
+    // wait some time for the tagTree to get visible, if selected, and apply last
+    // selected tag search
+    QTimer::singleShot(250, this, SLOT(filterNotesByTag()));
+
+    // attempt to check the api app version
+    startAppVersionTest();
+}
+
+void MainWindow::initFakeVim(QOwnNotesMarkdownTextEdit *noteTextEdit) {
+    auto handler = new FakeVim::Internal::FakeVimHandler(noteTextEdit, this);
+    handler->installEventFilter();
+    handler->setupWidget();
+
+    auto proxy = new FakeVimProxy(noteTextEdit, this, handler);
+
+    QObject::connect(handler, &FakeVim::Internal::FakeVimHandler::commandBufferChanged,
+                     proxy, &FakeVimProxy::changeStatusMessage);
+    QObject::connect(handler, &FakeVim::Internal::FakeVimHandler::extraInformationChanged,
+                     proxy, &FakeVimProxy::changeExtraInformation);
+    QObject::connect(handler, &FakeVim::Internal::FakeVimHandler::statusDataChanged,
+                     proxy, &FakeVimProxy::changeStatusData);
+    QObject::connect(handler, &FakeVim::Internal::FakeVimHandler::highlightMatches,
+                     proxy, &FakeVimProxy::highlightMatches);
+    QObject::connect(handler, &FakeVim::Internal::FakeVimHandler::handleExCommandRequested,
+                     proxy, &FakeVimProxy::handleExCommand);
+    QObject::connect(handler, &FakeVim::Internal::FakeVimHandler::requestSetBlockSelection,
+                     proxy, &FakeVimProxy::requestSetBlockSelection);
+    QObject::connect(handler, &FakeVim::Internal::FakeVimHandler::requestDisableBlockSelection,
+                     proxy, &FakeVimProxy::requestDisableBlockSelection);
+    QObject::connect(handler, &FakeVim::Internal::FakeVimHandler::requestHasBlockSelection,
+                     proxy, &FakeVimProxy::requestHasBlockSelection);
+
+    QObject::connect(handler, &FakeVim::Internal::FakeVimHandler::indentRegion,
+                     proxy, &FakeVimProxy::indentRegion);
+    QObject::connect(handler, &FakeVim::Internal::FakeVimHandler::checkForElectricCharacter,
+                     proxy, &FakeVimProxy::checkForElectricCharacter);
+
+    QObject::connect(proxy, &FakeVimProxy::handleInput,
+                     handler, [handler] (const QString &text) { handler->handleInput(text); });
+}
+
+/**
+ * Attempts to check the api app version
+ */
+void MainWindow::startAppVersionTest() const {
+    if (!OwnCloudService::hasOwnCloudSettings()) {
+        return;
+    }
+
+    OwnCloudService *ownCloud = OwnCloudService::instance();
+    ownCloud->startAppVersionTest();
+}
+
+/**
+ * Restores the active note history item
+ */
+bool MainWindow::restoreActiveNoteHistoryItem() {
+    QSettings settings;
+    QVariant var = settings.value("ActiveNoteHistoryItem");
+//    qDebug() << __func__ << " - 'var': " << var;
+
+    // check if the NoteHistoryItem could be de-serialized
+    if (var.isValid()) {
+        NoteHistoryItem noteHistoryItem = var.value<NoteHistoryItem>();
+//        qDebug() << __func__ << " - 'noteHistoryItem': " << noteHistoryItem;
+
+        if (jumpToNoteName(noteHistoryItem.getNoteName())) {
+            noteHistoryItem.restoreTextEditPosition(ui->noteTextEdit);
+            reloadCurrentNoteTags();
+            return true;
+        }
+    }
+
+    // if restoring the last note failed jump to the first note
+    resetCurrentNote();
+
+    reloadCurrentNoteTags();
+
+    return false;
 }
 
 MainWindow::~MainWindow() {
+    bool forceQuit = qApp->property("clearAppDataAndExit").toBool();
+
+    if (!isInDistractionFreeMode() && !forceQuit) {
+        storeCurrentWorkspace();
+    }
+
     storeUpdatedNotesToDisk();
+
+    // commit the changes in the current note folder to git
+    gitCommitCurrentNoteFolder();
+
+    qApp->setProperty("loggingEnabled", false);
+
     if (showSystemTray) {
         // if we are using the system tray lets delete the log window so the
         // app can quit
-        delete(LogDialog::instance());
+        delete(LogWidget::instance());
     }
+
     delete ui;
 }
-
 
 /*!
  * Methods
  */
+
+
+/**
+ * Initializes the workspace combo box
+ */
+void MainWindow::initWorkspaceComboBox() {
+    _workspaceComboBox = new QComboBox(this);
+    connect(_workspaceComboBox, SIGNAL(currentIndexChanged(int)),
+            this, SLOT(onWorkspaceComboBoxCurrentIndexChanged(int)));
+    _workspaceComboBox->setToolTip(tr("Workspaces"));
+    _workspaceComboBox->setObjectName("workspaceComboBox");
+    _workspaceSignalMapper = new QSignalMapper(this);
+}
+
+/**
+ * Initializes the dock widgets
+ */
+void MainWindow::initDockWidgets() {
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
+    setDockOptions(dockOptions() | GroupedDragging);
+#endif
+    QSizePolicy sizePolicy;
+
+    _noteSubFolderDockWidget = new QDockWidget(tr("Subfolders"), this);
+    _noteSubFolderDockWidget->setObjectName("noteSubFolderDockWidget");
+    _noteSubFolderDockWidget->setWidget(ui->noteSubFolderFrame);
+    _noteSubFolderDockTitleBarWidget =
+            _noteSubFolderDockWidget->titleBarWidget();
+    sizePolicy = _noteSubFolderDockWidget->sizePolicy();
+    sizePolicy.setHorizontalStretch(2);
+    _noteSubFolderDockWidget->setSizePolicy(sizePolicy);
+    addDockWidget(Qt::LeftDockWidgetArea, _noteSubFolderDockWidget,
+                  Qt::Horizontal);
+
+    _taggingDockWidget = new QDockWidget(tr("Tags"), this);
+    _taggingDockWidget->setObjectName("taggingDockWidget");
+    _taggingDockWidget->setWidget(ui->tagFrame);
+    _taggingDockTitleBarWidget = _taggingDockWidget->titleBarWidget();
+    sizePolicy = _taggingDockWidget->sizePolicy();
+    sizePolicy.setHorizontalStretch(2);
+    _taggingDockWidget->setSizePolicy(sizePolicy);
+    addDockWidget(Qt::LeftDockWidgetArea, _taggingDockWidget, Qt::Vertical);
+
+    _noteSearchDockWidget = new QDockWidget(tr("Note search"), this);
+    _noteSearchDockWidget->setObjectName("noteSearchDockWidget");
+    _noteSearchDockWidget->setWidget(ui->searchLineEdit);
+    _noteSearchDockTitleBarWidget = _noteSearchDockWidget->titleBarWidget();
+    sizePolicy = _noteSearchDockWidget->sizePolicy();
+    sizePolicy.setHorizontalStretch(2);
+    _noteSearchDockWidget->setSizePolicy(sizePolicy);
+    addDockWidget(Qt::LeftDockWidgetArea, _noteSearchDockWidget, Qt::Vertical);
+
+    _noteFolderDockWidget = new QDockWidget(tr("Note folder"), this);
+    _noteFolderDockWidget->setObjectName("noteFolderDockWidget");
+    _noteFolderDockWidget->setWidget(ui->noteFolderComboBox);
+    _noteFolderDockTitleBarWidget = _noteFolderDockWidget->titleBarWidget();
+    sizePolicy = _noteFolderDockWidget->sizePolicy();
+    sizePolicy.setHorizontalStretch(2);
+    _noteFolderDockWidget->setSizePolicy(sizePolicy);
+    addDockWidget(Qt::LeftDockWidgetArea, _noteFolderDockWidget, Qt::Vertical);
+
+    _noteListDockWidget = new QDockWidget(tr("Note list"), this);
+    _noteListDockWidget->setObjectName("noteListDockWidget");
+    _noteListDockWidget->setWidget(ui->notesListFrame);
+    _noteListDockTitleBarWidget = _noteListDockWidget->titleBarWidget();
+    sizePolicy = _noteListDockWidget->sizePolicy();
+    sizePolicy.setHorizontalStretch(2);
+    _noteListDockWidget->setSizePolicy(sizePolicy);
+    addDockWidget(Qt::LeftDockWidgetArea, _noteListDockWidget, Qt::Vertical);
+
+    _noteNavigationDockWidget = new QDockWidget(tr("Navigation"), this);
+    _noteNavigationDockWidget->setObjectName("noteNavigationDockWidget");
+    _noteNavigationDockWidget->setWidget(ui->navigationFrame);
+    _noteNavigationDockTitleBarWidget =
+            _noteNavigationDockWidget->titleBarWidget();
+    sizePolicy = _noteNavigationDockWidget->sizePolicy();
+    sizePolicy.setHorizontalStretch(2);
+    _noteNavigationDockWidget->setSizePolicy(sizePolicy);
+    addDockWidget(Qt::LeftDockWidgetArea, _noteNavigationDockWidget,
+                  Qt::Vertical);
+    // we want the navigation under the note list
+    splitDockWidget(_noteListDockWidget, _noteNavigationDockWidget,
+                    Qt::Vertical);
+
+    if (!_noteEditIsCentralWidget) {
+        _noteEditDockWidget = new QDockWidget(tr("Note edit"), this);
+        _noteEditDockWidget->setObjectName("noteEditDockWidget");
+        _noteEditDockWidget->setWidget(ui->noteEditFrame);
+        _noteEditDockTitleBarWidget = _noteEditDockWidget->titleBarWidget();
+        sizePolicy = _noteEditDockWidget->sizePolicy();
+        sizePolicy.setHorizontalStretch(5);
+        _noteEditDockWidget->setSizePolicy(sizePolicy);
+        addDockWidget(Qt::RightDockWidgetArea, _noteEditDockWidget,
+                      Qt::Horizontal);
+    }
+
+    _noteTagDockWidget = new QDockWidget(tr("Note tags"), this);
+    _noteTagDockWidget->setObjectName("noteTagDockWidget");
+    _noteTagDockWidget->setWidget(ui->noteTagFrame);
+    _noteTagDockTitleBarWidget = _noteTagDockWidget->titleBarWidget();
+    sizePolicy = _noteTagDockWidget->sizePolicy();
+    sizePolicy.setHorizontalStretch(5);
+    _noteTagDockWidget->setSizePolicy(sizePolicy);
+    addDockWidget(_noteEditIsCentralWidget ?
+                  Qt::LeftDockWidgetArea : Qt::RightDockWidgetArea,
+                  _noteTagDockWidget, Qt::Vertical);
+
+    _notePreviewDockWidget = new QDockWidget(tr("Note preview"), this);
+    _notePreviewDockWidget->setObjectName("notePreviewDockWidget");
+    _notePreviewDockWidget->setWidget(ui->noteViewFrame);
+    _notePreviewDockTitleBarWidget = _notePreviewDockWidget->titleBarWidget();
+    addDockWidget(Qt::RightDockWidgetArea, _notePreviewDockWidget,
+                  Qt::Horizontal);
+
+    _logDockWidget = new QDockWidget(tr("Log"), this);
+    _logDockWidget->setObjectName("logDockWidget");
+    _logDockWidget->setWidget(LogWidget::instance());
+    _logDockTitleBarWidget = _logDockWidget->titleBarWidget();
+    addDockWidget(Qt::RightDockWidgetArea, _logDockWidget, Qt::Vertical);
+    _logDockWidget->hide();
+    // prevent that log widgets can't be seen when enabled
+    _logDockWidget->setMinimumHeight(20);
+
+    _scriptingDockWidget = new QDockWidget(tr("Scripting"), this);
+    _scriptingDockWidget->setObjectName("scriptingDockWidget");
+    _scriptingDockWidget->setWidget(ui->scriptingScrollArea);
+    _scriptingDockTitleBarWidget = _scriptingDockWidget->titleBarWidget();
+    addDockWidget(Qt::RightDockWidgetArea, _scriptingDockWidget, Qt::Vertical);
+    _scriptingDockWidget->hide();
+    // we only needed that label to set a layout in QtCreator
+    delete ui->scriptingDemoLabel;
+
+    QSettings settings;
+
+    // forcing some dock widget sizes on the first application start
+    if (!settings.value("dockWasInitializedOnce").toBool()) {
+        // setting a small height for the note tag panel
+        _noteTagDockWidget->setMaximumHeight(40);
+
+        // giving the left panels with the note list a fifth of the screen
+        _noteListDockWidget->setMaximumWidth(width() / 5);
+
+        // giving the preview pane a third of the screen, the rest goes to the
+        // note edit pane
+        _notePreviewDockWidget->setMaximumWidth(width() / 3);
+
+        settings.setValue("dockWasInitializedOnce", true);
+
+        // releasing the forced maximum sizes
+        QTimer::singleShot(250, this, SLOT(releaseDockWidgetSizes()));
+    }
+
+//    ui->noteEditFrame->setStyleSheet("* { border: none; }");
+//    ui->noteTextEdit->setStyleSheet("* { border: none; }");
+//    ui->noteEditFrame->layout()->setContentsMargins(0, 0, 0, 0);
+
+    setDockNestingEnabled(true);
+    setCentralWidget(_noteEditIsCentralWidget ? ui->noteEditFrame : Q_NULLPTR);
+
+    // macOS and Windows will look better without this
+#ifdef Q_OS_LINUX
+    if (_noteEditIsCentralWidget) {
+        ui->noteTextEdit->setFrameShape(QFrame::StyledPanel);
+        ui->encryptedNoteTextEdit->setFrameShape(QFrame::StyledPanel);
+    }
+#endif
+
+    // restore the current workspace
+    restoreCurrentWorkspace();
+
+    // lock the dock widgets
+    on_actionUnlock_panels_toggled(false);
+
+    // update the workspace menu and combobox entries
+    updateWorkspaceLists();
+
+    // initialize the panel menu
+    initPanelMenu();
+}
+
+/**
+ * Releaseing the forced maximum sizes on some dock widgets
+ */
+void MainWindow::releaseDockWidgetSizes() {
+    _noteListDockWidget->setMaximumWidth(10000);
+    _notePreviewDockWidget->setMaximumWidth(10000);
+    _noteTagDockWidget->setMaximumHeight(10000);
+}
+
+/**
+ * Initializes if we want to start the application hidden
+ */
+void MainWindow::initShowHidden() {
+    QSettings settings;
+    bool startHidden = settings.value("StartHidden", false).toBool();
+    if (startHidden) {
+        QTimer::singleShot(250, this, SLOT(hide()));
+    }
+}
+
+/**
+ * Initializes the tag button scroll area
+ *
+ * If there are more tags assigned to a note than the width of the edit
+ * pane allows there now will be used a scrollbar to scroll through the
+ * tags, so that the width of the edit pane can still be small
+ */
+void MainWindow::initTagButtonScrollArea() {
+    _noteTagButtonScrollArea = new QScrollArea(this);
+    _noteTagButtonScrollArea->setWidgetResizable(true);
+    _noteTagButtonScrollArea->setSizePolicy(QSizePolicy::MinimumExpanding,
+                                      QSizePolicy::Ignored);
+    _noteTagButtonScrollArea->setAlignment(Qt::AlignLeft);
+    _noteTagButtonScrollArea->setWidget(ui->noteTagButtonFrame);
+
+    ui->noteTagButtonFrame->layout()->setContentsMargins(0, 0, 0, 0);
+    _noteTagButtonScrollArea->setContentsMargins(0, 0, 0, 0);
+
+#ifdef Q_OS_MAC
+    // we need to set a minimum height under OS X or else the scroll area
+    // will be far to high
+    _noteTagButtonScrollArea->setMinimumHeight(36);
+#endif
+#ifdef Q_OS_WIN32
+    // we need to set a minimum height under Windows or else the scroll area
+    // will be far to high
+    _noteTagButtonScrollArea->setMinimumHeight(40);
+#endif
+
+    ui->noteTagFrame->layout()->addWidget(_noteTagButtonScrollArea);
+    ui->noteTagFrame->layout()->addWidget(ui->newNoteTagButton);
+    ui->noteTagFrame->layout()->addWidget(ui->newNoteTagLineEdit);
+    ui->selectedTagsToolButton->setVisible(false);
+}
+
+/**
+ * Returns all menus from the menu bar
+ */
+QList<QMenu *> MainWindow::menuList() {
+    return ui->menuBar->findChildren<QMenu *>();
+}
+
+/**
+ * Finds an action in all menus of the menu bar
+ */
+QAction *MainWindow::findAction(QString objectName) {
+    QList<QMenu*> menus = menuList();
+
+    // loop through all menus because we were not able to find the action with
+    // ui->menuBar->findChild<QAction *>(objectName);
+    foreach(QMenu* menu, menus) {
+            // loop through all actions of the menu
+            foreach(QAction* action, menu->actions()) {
+                    if (action->objectName() == objectName) {
+                        return action;
+                    }
+            }
+    }
+
+    return Q_NULLPTR;
+}
+
+/**
+ * Builds the note index and loads the note directory list
+ *
+ * @param forceBuild
+ * @param forceLoad
+ */
+void MainWindow::buildNotesIndexAndLoadNoteDirectoryList(bool forceBuild,
+                                                         bool forceLoad) {
+    bool wasBuilt = buildNotesIndex(0, forceBuild);
+
+    if (wasBuilt || forceLoad) {
+        loadNoteDirectoryList();
+    }
+}
+
+/**
+ * Returns the global main window instance
+ */
+MainWindow *MainWindow::instance() {
+    return qApp->property("mainWindow").value<MainWindow *>();
+}
 
 /**
  * Initializes the editor soft wrapping
  */
 void MainWindow::initEditorSoftWrap() {
     QSettings settings;
-    QTextEdit::LineWrapMode mode =
-            settings.value("useSoftWrapInNoteEditor", true).toBool() ?
-            QTextEdit::WidgetWidth : QTextEdit::NoWrap;
+    bool useSoftWrapInNoteEditor =
+            settings.value("useSoftWrapInNoteEditor", true).toBool();
 
-    ui->noteTextEdit->setLineWrapMode(mode);
-    ui->encryptedNoteTextEdit->setLineWrapMode(mode);
+    QTextEdit::LineWrapMode mode =
+            useSoftWrapInNoteEditor ?
+            QTextEdit::WidgetWidth : QTextEdit::NoWrap;
+    QPlainTextEdit::LineWrapMode pMode =
+            useSoftWrapInNoteEditor ?
+            QPlainTextEdit::WidgetWidth : QPlainTextEdit::NoWrap;
+
+    ui->noteTextEdit->setLineWrapMode(pMode);
+    ui->encryptedNoteTextEdit->setLineWrapMode(pMode);
     ui->noteTextView->setLineWrapMode(mode);
 }
 
@@ -389,13 +907,13 @@ void MainWindow::initEditorSoftWrap() {
  */
 void MainWindow::reloadTodoLists() {
     QSettings settings;
-    QStringList calendars
-            = settings.value("ownCloud/todoCalendarEnabledList").toStringList();
+    QStringList calendars =
+            settings.value("ownCloud/todoCalendarEnabledList").toStringList();
     QString serverUrl =
             settings.value("ownCloud/serverUrl").toString().trimmed();
 
     if (calendars.count() > 0 && !serverUrl.isEmpty()) {
-        OwnCloudService *ownCloud = new OwnCloudService(this);
+        OwnCloudService *ownCloud = OwnCloudService::instance();
 
         QListIterator<QString> itr(calendars);
         while (itr.hasNext()) {
@@ -404,13 +922,12 @@ void MainWindow::reloadTodoLists() {
         }
 
         showStatusBarMessage(
-                tr("your tasks are being loaded from your ownCloud server"),
+                tr("Your tasks are being loaded from your server"),
                 4000);
 
         // generate the system tray context menu to show modified tasks
         // in 15 sec (because we don't know when all new tasks will be loaded)
         QTimer::singleShot(15000, this, SLOT(generateSystemTrayContextMenu()));
-
     }
 }
 
@@ -418,6 +935,16 @@ void MainWindow::reloadTodoLists() {
  * Initializes the scripting engine
  */
 void MainWindow::initScriptingEngine() {
+    _customActionSignalMapper = new QSignalMapper(this);
+    ui->menuCustom_actions->hide();
+    _customActionToolbar->hide();
+
+    // connect the custom action signal mapper
+    QObject::connect(_customActionSignalMapper,
+                     SIGNAL(mapped(QString)),
+                     this,
+                     SLOT(onCustomActionInvoked(QString)));
+
     ScriptingService* scriptingService = ScriptingService::createInstance(this);
     QQmlEngine* engine = scriptingService->engine();
 //    engine->setObjectOwnership(ui->noteTextEdit, QQmlEngine::CppOwnership);
@@ -426,12 +953,14 @@ void MainWindow::initScriptingEngine() {
 }
 
 /**
- * Initializes the log dialog
+ * Invokes the custom action in the scripting service
+ *
+ * @param identifier
  */
-void MainWindow::initLogDialog() const {
-    QSettings settings;
-    if (settings.value("LogDialog/showAtStartup", false).toBool()) {
-        LogDialog::instance()->show();
+void MainWindow::onCustomActionInvoked(QString identifier) {
+    ScriptingService *scriptingService = ScriptingService::instance();
+    if (scriptingService != Q_NULLPTR) {
+        scriptingService->onCustomActionInvoked(identifier);
     }
 }
 
@@ -442,7 +971,9 @@ void MainWindow::initToolbars() {
     _formattingToolbar = new QToolBar(tr("formatting toolbar"), this);
     _formattingToolbar->addAction(ui->actionFormat_text_bold);
     _formattingToolbar->addAction(ui->actionFormat_text_italic);
-    _formattingToolbar->addAction(ui->actionInset_code_block);
+    _formattingToolbar->addAction(ui->actionStrike_out_text);
+    _formattingToolbar->addAction(ui->actionInsert_code_block);
+    _formattingToolbar->addAction(ui->actionInsert_block_quote);
     _formattingToolbar->setObjectName("formattingToolbar");
     addToolBar(_formattingToolbar);
 
@@ -460,25 +991,279 @@ void MainWindow::initToolbars() {
     _encryptionToolbar->setObjectName("encryptionToolbar");
     addToolBar(_encryptionToolbar);
 
-    _windowToolbar =
-            new QToolBar(tr("window toolbar"), this);
-    _windowToolbar->addAction(ui->actionToggle_tag_pane);
-    _windowToolbar->addAction(ui->actionToggle_note_edit_pane);
-    _windowToolbar->addAction(ui->actionToggle_markdown_preview);
+    _windowToolbar = new QToolBar(tr("window toolbar"), this);
+    updateWindowToolbar();
+    _windowToolbar->setObjectName("windowToolbar");
+    addToolBar(_windowToolbar);
+
+    _customActionToolbar = new QToolBar(tr("custom action toolbar"), this);
+    _customActionToolbar->setObjectName("customActionsToolbar");
+    _customActionToolbar->hide();
+    addToolBar(_customActionToolbar);
+
+    _quitToolbar = new QToolBar(tr("quit toolbar"), this);
+    _quitToolbar->addAction(ui->action_Quit);
+    _quitToolbar->setObjectName("quitToolbar");
+    addToolBar(_quitToolbar);
+}
+
+/**
+ * Populates the window toolbar
+ */
+void MainWindow::updateWindowToolbar() {
+    _windowToolbar->clear();
+
+    QWidgetAction *widgetAction = new QWidgetAction(this);
+    widgetAction->setDefaultWidget(_workspaceComboBox);
+    widgetAction->setObjectName("actionWorkspaceComboBox");
+    widgetAction->setText(tr("Workspace selector"));
+    _windowToolbar->addAction(widgetAction);
+    _windowToolbar->addAction(ui->actionStore_as_new_workspace);
+    _windowToolbar->addAction(ui->actionRemove_current_workspace);
+    _windowToolbar->addAction(ui->actionRename_current_workspace);
+    _windowToolbar->addAction(ui->actionSwitch_to_previous_workspace);
+    _windowToolbar->addAction(ui->actionUnlock_panels);
+
     _windowToolbar->addSeparator();
     _windowToolbar->addAction(
             ui->actionToggle_distraction_free_mode);
     _windowToolbar->addAction(ui->action_Increase_note_text_size);
     _windowToolbar->addAction(ui->action_Decrease_note_text_size);
     _windowToolbar->addAction(ui->action_Reset_note_text_size);
-    _windowToolbar->setObjectName("windowToolbar");
-    addToolBar(_windowToolbar);
+}
 
-    _quitToolbar =
-            new QToolBar(tr("quit toolbar"), this);
-    _quitToolbar->addAction(ui->action_Quit);
-    _quitToolbar->setObjectName("quitToolbar");
-    addToolBar(_quitToolbar);
+/**
+ * Updates the workspace menu and combobox entries
+ */
+void MainWindow::updateWorkspaceLists(bool rebuild) {
+    QSettings settings;
+    QStringList workspaces = getWorkspaceUuidList();
+    QString currentUuid = currentWorkspaceUuid();
+
+    if (rebuild) {
+        // we need to create a new combo box so the width gets updated in the
+        // window toolbar
+        initWorkspaceComboBox();
+
+        ui->menuWorkspaces->clear();
+    }
+
+    const QSignalBlocker blocker(_workspaceComboBox);
+    Q_UNUSED(blocker);
+
+    int currentIndex = 0;
+
+    for (int i = 0; i < workspaces.count(); i++) {
+        QString uuid = workspaces.at(i);
+
+        if (uuid == currentUuid) {
+            currentIndex = i;
+        }
+
+        // check if we want to skip the rebuilding part
+        if (!rebuild) {
+            continue;
+        }
+
+        QString name = settings.value("workspace-" + uuid + "/name").toString();
+        QString objectName = "restoreWorkspace-" + uuid;
+
+        _workspaceComboBox->addItem(name, uuid);
+
+        QAction *action = new QAction(name, ui->menuWorkspaces);
+        QObject::connect(action, SIGNAL(triggered()),
+                         _workspaceSignalMapper, SLOT(map()));
+
+        // add a parameter to the signal mapper
+        _workspaceSignalMapper->setMapping(action, uuid);
+
+        // set an object name for creating shortcuts
+        action->setObjectName(objectName);
+
+        // try to load a key sequence from the settings
+        QKeySequence shortcut = QKeySequence(settings.value(
+                "Shortcuts/MainWindow-" + objectName).toString());
+        action->setShortcut(shortcut);
+
+//        if (uuid == currentUuid) {
+//            QFont font = action->font();
+//            font.setBold(true);
+//            action->setFont(font);
+//        }
+
+        ui->menuWorkspaces->addAction(action);
+    }
+
+    _workspaceComboBox->setCurrentIndex(currentIndex);
+
+    if (rebuild) {
+        // set the new current workspace if a menu entry was triggered
+        QObject::connect(_workspaceSignalMapper,
+                         SIGNAL(mapped(QString)),
+                         this,
+                         SLOT(setCurrentWorkspace(QString)));
+
+        // we need to adapt the width of the workspaces combo box
+        updateWindowToolbar();
+    }
+
+    // enable the remove button if there are at least two workspaces
+    ui->actionRemove_current_workspace->setEnabled(workspaces.count() > 1);
+}
+
+/**
+ * Initializes the panel menu
+ */
+void MainWindow::initPanelMenu() {
+    // update the panel menu if the visibility of a panel was changed
+    Q_FOREACH(QDockWidget *dockWidget, findChildren<QDockWidget *>()) {
+            QObject::connect(dockWidget, SIGNAL(visibilityChanged(bool)),
+                             this, SLOT(updatePanelMenu()));
+    }
+}
+
+/**
+ * Initializes the toolbar menu
+ */
+void MainWindow::initToolbarMenu() {
+    // update the toolbar menu if the visibility of a toolbar was changed
+    Q_FOREACH(QToolBar *toolbar, findChildren<QToolBar *>()) {
+            // in case the connection was already established
+            QObject::disconnect(toolbar, SIGNAL(visibilityChanged(bool)),
+                             this, SLOT(updateToolbarMenu()));
+            QObject::connect(toolbar, SIGNAL(visibilityChanged(bool)),
+                             this, SLOT(updateToolbarMenu()));
+    }
+}
+
+/**
+ * Updates the panel menu entries
+ */
+void MainWindow::updatePanelMenu() {
+    _panelSignalMapper = new QSignalMapper(this);
+    ui->menuPanels->clear();
+    QSettings settings;
+
+    Q_FOREACH(QDockWidget *dockWidget, findChildren<QDockWidget *>()) {
+            QAction *action = new QAction(this);
+            QString objectName = "togglePanel-" + dockWidget->objectName();
+
+            action->setText(tr("Show %1 panel").arg(dockWidget->windowTitle()));
+            action->setObjectName(objectName);
+            action->setCheckable(true);
+            action->setChecked(!dockWidget->isHidden());
+
+            // hide the noteSubFolderDockWidget menu entry if sub-folders are
+            // not enabled
+            if (dockWidget->objectName() == "noteSubFolderDockWidget" &&
+                    !NoteFolder::isCurrentShowSubfolders()) {
+                action->setVisible(false);
+            }
+
+            // try to load a key sequence from the settings
+            QKeySequence shortcut = QKeySequence(settings.value(
+                    "Shortcuts/MainWindow-" + objectName).toString());
+            action->setShortcut(shortcut);
+
+            QObject::connect(action, SIGNAL(triggered()),
+                             _panelSignalMapper, SLOT(map()));
+
+            // add a parameter to the signal mapper
+            _panelSignalMapper->setMapping(action, dockWidget->objectName());
+
+            ui->menuPanels->addAction(action);
+        }
+
+    // toggle the panel if the checkbox was triggered
+    QObject::connect(_panelSignalMapper, SIGNAL(mapped(QString)),
+                     this, SLOT(togglePanelVisibility(QString)));
+
+    // update the preview in case it was disable previously
+    setNoteTextFromNote(&currentNote, true);
+}
+
+/**
+ * Updates the toolbar menu entries
+ */
+void MainWindow::updateToolbarMenu() {
+    _toolbarSignalMapper = new QSignalMapper(this);
+    ui->menuToolbars->clear();
+
+    Q_FOREACH(QToolBar *toolbar, findChildren<QToolBar *>()) {
+            QAction *action = new QAction(this);
+            action->setText(tr("Show %1").arg(toolbar->windowTitle()));
+            action->setObjectName("toggleToolBar-" + toolbar->objectName());
+            action->setCheckable(true);
+            action->setChecked(!toolbar->isHidden());
+
+            QObject::connect(action, SIGNAL(triggered()),
+                             _toolbarSignalMapper, SLOT(map()));
+
+            // add a parameter to the signal mapper
+            _toolbarSignalMapper->setMapping(action, toolbar->objectName());
+
+            ui->menuToolbars->addAction(action);
+        }
+
+    // toggle the panel if the checkbox was triggered
+    QObject::connect(_toolbarSignalMapper, SIGNAL(mapped(QString)),
+                     this, SLOT(toggleToolbarVisibility(QString)));
+}
+
+/**
+ * Toggles the visibility of a panel by object name
+ *
+ * @param objectName
+ */
+void MainWindow::togglePanelVisibility(QString objectName) {
+    QDockWidget *dockWidget = findChild<QDockWidget *>(objectName);
+
+    if (dockWidget == Q_NULLPTR) {
+        return;
+    }
+
+    // to prevent crashes if updatePanelMenu removes all actions
+    const QSignalBlocker blocker(dockWidget);
+    Q_UNUSED(blocker);
+
+    bool newVisibility = dockWidget->isHidden();
+
+    // remember that the user wanted the note subfolder dock widget to be set
+    // to visible or invisible
+    if (objectName == "noteSubFolderDockWidget") {
+        _noteSubFolderDockWidgetVisible = newVisibility;
+
+        // don't allow the note subfolder dock widget to be visible if the
+        // note folder has no subfolders activated
+        if (newVisibility) {
+            newVisibility = NoteFolder::isCurrentShowSubfolders();
+        }
+    }
+
+    dockWidget->setVisible(newVisibility);
+
+    // filter notes again according to new widget state
+    filterNotes();
+}
+
+/**
+ * Toggles the visibility of a toolbar by object name
+ *
+ * @param objectName
+ */
+void MainWindow::toggleToolbarVisibility(QString objectName) {
+    QToolBar *toolbar = findChild<QToolBar *>(objectName);
+
+    if (toolbar == Q_NULLPTR) {
+        return;
+    }
+
+    // to prevent crashes if updateToolbarMenu removes all actions
+    const QSignalBlocker blocker(toolbar);
+    Q_UNUSED(blocker);
+
+    bool newVisibility = toolbar->isHidden();
+    toolbar->setVisible(newVisibility);
 }
 
 /**
@@ -502,6 +1287,11 @@ bool MainWindow::isInDistractionFreeMode() {
  * Toggles the distraction free mode
  */
 void MainWindow::toggleDistractionFreeMode() {
+    // leave the one column mode if active
+    if (ui->actionUse_one_column_mode->isChecked()) {
+        ui->actionUse_one_column_mode->toggle();
+    }
+
     QSettings settings;
     bool isInDistractionFreeMode = this->isInDistractionFreeMode();
 
@@ -528,7 +1318,8 @@ void MainWindow::toggleDistractionFreeMode() {
 void MainWindow::initStyling() {
     QSettings settings;
     bool darkMode = settings.value("darkMode").toBool();
-    QString colorName;
+    QString appStyleSheet;
+    QString noteTagFrameColorName;
 
     // turn on the dark mode if enabled
     if (darkMode) {
@@ -538,32 +1329,35 @@ void MainWindow::initStyling() {
         } else {
             f.open(QFile::ReadOnly | QFile::Text);
             QTextStream ts(&f);
-            qApp->setStyleSheet(ts.readAll());
+            appStyleSheet = ts.readAll();
         }
 
         // QTextEdit background color of qdarkstyle
-        colorName = "#201F1F";
+        noteTagFrameColorName = "#201F1F";
     } else {
         QPalette palette;
         QColor color = palette.color(QPalette::Base);
-        colorName = color.name();
+        noteTagFrameColorName = color.name();
     }
 
+    // get the color name of the background color of the default text
+    // highlighting item
+    QString fgColorName = Utils::Schema::schemaSettings->getForegroundColor(
+            MarkdownHighlighter::HighlighterState::NoState).name();
+    QString bgColorName = Utils::Schema::schemaSettings->getBackgroundColor(
+            MarkdownHighlighter::HighlighterState::NoState).name();
 
-    QString textEditStyling = QString("QTextEdit {background-color: %1;}")
-            .arg(colorName);
+    // set the foreground and background color for the note text edits
+    appStyleSheet += QString("QMarkdownTextEdit{color:%1;background-color:%2;}")
+            .arg(fgColorName, bgColorName);
 
-    ui->noteTextEdit->setStyleSheet(
-            ui->noteTextEdit->styleSheet() + textEditStyling);
+    // set the background color for the note tag frame and its children QFrames
+    appStyleSheet += QString("QFrame#noteTagFrame, QFrame#noteTagFrame QFrame "
+                                     "{background-color: %1;}").arg(
+            noteTagFrameColorName);
 
-    ui->encryptedNoteTextEdit->setStyleSheet(
-            ui->encryptedNoteTextEdit->styleSheet() + textEditStyling);
-
-    QString frameStyling = QString("QFrame {background-color: %1;}")
-            .arg(colorName);
-
-    ui->noteTagFrame->setStyleSheet(
-            ui->noteTagFrame->styleSheet() + frameStyling);
+    qApp->setStyleSheet(appStyleSheet);
+    Utils::Gui::updateInterfaceFontSize();
 
     if (!isInDistractionFreeMode()) {
         ui->noteTextEdit->setPaperMargins(0);
@@ -582,8 +1376,10 @@ void MainWindow::initStyling() {
     // add some margins in OS X to match the styling of the note list
     ui->navigationFrame->setContentsMargins(3, 0, 3, 0);
 
-    // there is no system tray in OS X
-    ui->actionShow_system_tray->setText(tr("Show menu bar item"));
+    // add a padding for the note tag frame so the `add tag` button doesn't
+    // stick to the right corner
+    ui->noteTagFrame->setStyleSheet(
+            "QFrame {border: none; padding-right: 5px;}");
 #endif
 
     // move the note view scrollbar when the note edit scrollbar was moved
@@ -606,9 +1402,9 @@ void MainWindow::initStyling() {
 /**
  * Moves the note view scrollbar when the note edit scrollbar was moved
  */
-void MainWindow::noteTextSliderValueChanged(int value) {
+void MainWindow::noteTextSliderValueChanged(int value, bool force) {
     // don't react if note text edit doesn't have the focus
-    if (!activeNoteTextEdit()->hasFocus()) {
+    if (!activeNoteTextEdit()->hasFocus() && !force) {
         return;
     }
 
@@ -627,22 +1423,25 @@ void MainWindow::noteTextSliderValueChanged(int value) {
 /**
  * Moves the note edit scrollbar when the note view scrollbar was moved
  */
-void MainWindow::noteViewSliderValueChanged(int value) {
+void MainWindow::noteViewSliderValueChanged(int value, bool force) {
     // don't react if note text view doesn't have the focus
-    if (!ui->noteTextView->hasFocus()) {
+    if (!ui->noteTextView->hasFocus() && !force) {
         return;
     }
 
     QScrollBar *editScrollBar = activeNoteTextEdit()->verticalScrollBar();
     QScrollBar *viewScrollBar = ui->noteTextView->verticalScrollBar();
 
-    editScrollBar->maximum();
-
     float editScrollFactor =
             static_cast<float>(value) / viewScrollBar->maximum();
 
     int editPosition =
             static_cast<int>(editScrollBar->maximum() * editScrollFactor);
+
+    // for some reason we get some int-min value here sometimes
+    if (editPosition < 0) {
+        return;
+    }
 
     // set the scroll position in the note text edit
     editScrollBar->setSliderPosition(editPosition);
@@ -659,56 +1458,52 @@ void MainWindow::setDistractionFreeMode(bool enabled) {
         // enter the distraction free mode
         //
 
+        // store the current workspace in case we changed something
+        storeCurrentWorkspace();
+
+        bool menuBarWasVisible = ui->menuBar->isVisible();
+
+        // set the menu bar visible so we get the correct height
+        if (!menuBarWasVisible) {
+            ui->menuBar->setVisible(true);
+        }
+
         // remember states, geometry and sizes
         settings.setValue("DistractionFreeMode/windowState", saveState());
         settings.setValue("DistractionFreeMode/menuBarGeometry",
                           ui->menuBar->saveGeometry());
-        settings.setValue("DistractionFreeMode/mainSplitterSizes",
-                          mainSplitter->saveState());
         settings.setValue("DistractionFreeMode/menuBarHeight",
                           ui->menuBar->height());
+        settings.setValue("DistractionFreeMode/menuBarVisible",
+                          menuBarWasVisible);
 
         // we must not hide the menu bar or else the shortcuts
         // will not work any more
         ui->menuBar->setFixedHeight(0);
 
         // hide the toolbars
-        ui->mainToolBar->hide();
-        _formattingToolbar->hide();
-        _insertingToolbar->hide();
-        _encryptionToolbar->hide();
-        _windowToolbar->hide();
-        _quitToolbar->hide();
+        QList<QToolBar*> toolbars = findChildren<QToolBar*>();
+        Q_FOREACH(QToolBar *toolbar, toolbars) {
+                toolbar->hide();
+            }
 
-        // hide the search line edit
-        ui->searchLineEdit->hide();
-
-        // hide tag frames if tagging is enabled
-        if (isTagsEnabled()) {
-            ui->tagFrame->hide();
-            ui->noteTagFrame->hide();
+        if (!_noteEditIsCentralWidget) {
+            // show the note edit dock widget
+            _noteEditDockWidget->show();
         }
 
-        // show the note edit frame if was disabled
-        if (!isNoteEditPaneEnabled()) {
-            ui->noteEditFrame->show();
-        }
+        // hide all dock widgets but the note edit dock widget
+        QList<QDockWidget*> dockWidgets = findChildren<QDockWidget*>();
+        Q_FOREACH(QDockWidget *dockWidget, dockWidgets) {
+                if (dockWidget->objectName() == "noteEditDockWidget") {
+                    continue;
+                }
 
-        // hide note view if markdown view is enabled
-        if (isMarkdownViewEnabled()) {
-            ui->noteViewFrame->hide();
-        }
+                dockWidget->hide();
+            }
 
         // hide the status bar
 //        ui->statusBar->hide();
-
-        // hide the notes list widget
-        ui->notesListFrame->hide();
-
-//        QList<int> sizes = mainSplitter->sizes();
-//        int size = sizes.takeFirst() + sizes.takeFirst();
-//        sizes << 0 << size;
-//        mainSplitter->setSizes(sizes);
 
         _leaveDistractionFreeModeButton = new QPushButton(tr("leave"));
         _leaveDistractionFreeModeButton->setFlat(true);
@@ -734,42 +1529,20 @@ void MainWindow::setDistractionFreeMode(bool enabled) {
         disconnect(_leaveDistractionFreeModeButton, 0, 0, 0);
 
         // restore states and sizes
-        QByteArray state = settings.value
-                ("DistractionFreeMode/mainSplitterSizes").toByteArray();
-        mainSplitter->restoreState(state);
         restoreState(
                 settings.value(
                         "DistractionFreeMode/windowState").toByteArray());
+        ui->menuBar->setVisible(
+                settings.value("DistractionFreeMode/menuBarVisible").toBool());
         ui->menuBar->restoreGeometry(
                 settings.value(
                         "DistractionFreeMode/menuBarGeometry").toByteArray());
         ui->menuBar->setFixedHeight(
                 settings.value("DistractionFreeMode/menuBarHeight").toInt());
-
-        // show the search line edit
-        ui->searchLineEdit->show();
-
-        ui->notesListFrame->show();
-
-        // show tag frames if tagging is enabled
-        if (isTagsEnabled()) {
-            ui->tagFrame->show();
-            ui->noteTagFrame->show();
-        }
-
-        // hide the note edit frame if was disabled
-        if (!isNoteEditPaneEnabled()) {
-            ui->noteEditFrame->hide();
-        }
-
-        // show note view if markdown view is enabled
-        if (isMarkdownViewEnabled()) {
-            ui->noteViewFrame->show();
-        }
     }
 
-    ui->noteTextEdit->setPaperMargins(this->width());
-    ui->encryptedNoteTextEdit->setPaperMargins(this->width());
+    ui->noteTextEdit->setPaperMargins();
+    ui->encryptedNoteTextEdit->setPaperMargins();
 }
 
 /**
@@ -789,8 +1562,8 @@ void MainWindow::showStatusBarMessage(const QString & message, int timeout) {
         ui->statusBar->showMessage(message, timeout);
     }
 
-    // write to the log dialog
-    LogDialog::instance()->log(LogDialog::StatusLogType, message);
+    // write to the log widget
+    emit(log(LogWidget::StatusLogType, message));
 }
 
 /**
@@ -870,16 +1643,24 @@ void MainWindow::loadNoteFolderListMenu() {
                     continue;
                 }
 
+                int folderId = noteFolder.getId();
+                const QString &name = noteFolder.getName();
+
                 // add an entry to the combo box
-                ui->noteFolderComboBox->addItem(noteFolder.getName(),
-                                                      noteFolder.getId());
+                ui->noteFolderComboBox->addItem(name,
+                                                folderId);
 
                 // add a menu entry
                 QAction *action =
-                        ui->noteFoldersMenu->addAction(noteFolder.getName());
-                action->setData(noteFolder.getId());
+                        ui->noteFoldersMenu->addAction(name);
+                action->setData(folderId);
                 action->setToolTip(noteFolder.getLocalPath());
                 action->setStatusTip(noteFolder.getLocalPath());
+                action->setObjectName(
+                        "noteFolder-" + QString::number(folderId));
+                action->setIcon(QIcon::fromTheme(
+                        "folder",
+                        QIcon(":icons/breeze-qownnotes/16x16/folder.svg")));
 
                 if (noteFolder.isCurrent()) {
                     QFont font = action->font();
@@ -895,7 +1676,7 @@ void MainWindow::loadNoteFolderListMenu() {
 
                 // add a parameter to changeNoteFolder with the signal mapper
                 recentNoteFolderSignalMapper->setMapping(
-                        action, noteFolder.getId());
+                        action, folderId);
 
                 index++;
             }
@@ -917,12 +1698,12 @@ void MainWindow::loadNoteFolderListMenu() {
 void MainWindow::changeNoteFolder(int noteFolderId, bool forceChange) {
     int currentNoteFolderId = NoteFolder::currentNoteFolderId();
 
-    // store the current note name of the current note folder
-    _activeNoteFolderNoteNames[currentNoteFolderId] = currentNote.getName();
-
     // store the current position in the note of the current note folder
-    QTextCursor c = activeNoteTextEdit()->textCursor();
-    _activeNoteFolderNotePositions[currentNoteFolderId] = c.position();
+    _activeNoteFolderNotePositions[currentNoteFolderId] = NoteHistoryItem(
+            &currentNote, ui->noteTextEdit);
+
+    // store the note history of the old note folder
+    noteHistory.storeForCurrentNoteFolder();
 
     NoteFolder noteFolder = NoteFolder::fetch(noteFolderId);
     if (!noteFolder.isFetched()) {
@@ -938,8 +1719,17 @@ void MainWindow::changeNoteFolder(int noteFolderId, bool forceChange) {
 
     // reload notes if notes folder was changed
     if (oldPath != folderName) {
+        const QSignalBlocker blocker2(this->ui->searchLineEdit);
+        {
+            Q_UNUSED(blocker2);
+            ui->searchLineEdit->clear();
+        }
+
         // store everything before changing folder
         storeUpdatedNotesToDisk();
+
+        // commit the changes in the current note folder to git
+        gitCommitCurrentNoteFolder();
 
         noteFolder.setAsCurrent();
 
@@ -951,48 +1741,38 @@ void MainWindow::changeNoteFolder(int noteFolderId, bool forceChange) {
 
         // store notesPath setting
         QSettings settings;
-        settings.setValue("notesPath", folderName);
+        // make the path relative to the portable data path if we are in
+        // portable mode
+        settings.setValue(
+                "notesPath",
+                Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(
+                                  folderName));
 
         // we have to unset the current note otherwise it might show up after
         // switching to an other note folder
-        currentNote = Note();
+        unsetCurrentNote();
 
-        buildNotesIndex();
-        loadNoteDirectoryList();
-
-        const QSignalBlocker blocker(this->ui->noteTextEdit);
-        {
-            Q_UNUSED(blocker);
-            ui->noteTextEdit->clear();
-            ui->noteTextEdit->show();
-            ui->encryptedNoteTextEdit->hide();
-        }
-
-        const QSignalBlocker blocker2(this->ui->searchLineEdit);
-        {
-            Q_UNUSED(blocker2);
-            ui->searchLineEdit->clear();
-        }
-
-        this->ui->noteTextView->clear();
+        buildNotesIndexAndLoadNoteDirectoryList();
 
         // update the current folder tooltip
         updateCurrentFolderTooltip();
 
-        // clear the note history
-        this->noteHistory.clear();
+        // restore the note history of the new note folder
+        noteHistory.restoreForCurrentNoteFolder();
 
         // check if there is a note name set and jump to it
-        QString noteName = _activeNoteFolderNoteNames[noteFolderId];
+        QString noteName = _activeNoteFolderNotePositions[noteFolderId]
+                .getNoteName();
         if (!noteName.isEmpty()) {
             jumpToNoteName(noteName);
 
             // restore the current position in the note
-            QMarkdownTextEdit *textEdit = activeNoteTextEdit();
-            QTextCursor c = textEdit->textCursor();
-            c.setPosition(_activeNoteFolderNotePositions[noteFolderId]);
-            textEdit->setTextCursor(c);
+            _activeNoteFolderNotePositions[noteFolderId]
+                    .restoreTextEditPosition(ui->noteTextEdit);
         }
+
+        // commit the changes in the selected note folder to git
+        gitCommitCurrentNoteFolder();
     }
 }
 
@@ -1026,10 +1806,19 @@ int MainWindow::openNoteDiffDialog(Note changedNote) {
         this->noteDiffDialog->close();
     }
 
-    // if we should ignore all changes return here
+    qDebug() << __func__ << " - 'changedNote': " << changedNote;
+
+
     QSettings settings;
+
+    // check if we should ignore all changes
     if (settings.value("ignoreAllExternalModifications").toBool()) {
         return NoteDiffDialog::Ignore;
+    }
+
+    // check if we should accept all changes
+    if (settings.value("acceptAllExternalModifications").toBool()) {
+        return NoteDiffDialog::Reload;
     }
 
     QString text1 = this->ui->noteTextEdit->toPlainText();
@@ -1053,137 +1842,9 @@ int MainWindow::openNoteDiffDialog(Note changedNote) {
     return result;
 }
 
-/**
- * Does the initialization for the main splitter
- */
-void MainWindow::initMainSplitter() {
-    mainSplitter = new QSplitter();
-    mainSplitter->setHandleWidth(0);
-
-    ui->tagFrame->setStyleSheet("#tagFrame {margin-right: 3px;}");
-    ui->notesListFrame->setStyleSheet("#notesListFrame {margin: 0;}");
-
-    _verticalNoteFrame = new QFrame();
-    _verticalNoteFrame->setObjectName("verticalNoteFrame");
-    _verticalNoteFrame->setStyleSheet(
-            "#verticalNoteFrame {margin: 0 0 0 3px;}");
-    _verticalNoteFrame->setFrameShape(QFrame::NoFrame);
-    _verticalNoteFrame->setVisible(false);
-
-    _verticalNoteFrameSplitter = new QSplitter(Qt::Vertical);
-    _verticalNoteFrameSplitter->setHandleWidth(0);
-
-    QVBoxLayout *layout = new QVBoxLayout();
-    layout->setContentsMargins(0, 0, 0, 0);
-    layout->addWidget(_verticalNoteFrameSplitter);
-    _verticalNoteFrame->setLayout(layout);
-
-    mainSplitter->addWidget(ui->tagFrame);
-    mainSplitter->addWidget(ui->notesListFrame);
-    mainSplitter->addWidget(_verticalNoteFrame);
-
-    // do the further setup for the main splitter and all the panes
-    setupMainSplitter();
-
-    // restore main splitter state
-    QSettings settings;
-    QByteArray state = settings.value("mainSplitterSizes").toByteArray();
-    mainSplitter->restoreState(state);
-
-    ui->centralWidget->layout()->addWidget(this->mainSplitter);
-
-    // setup the checkbox
-    const QSignalBlocker blocker(ui->actionUse_vertical_preview_layout);
-    Q_UNUSED(blocker);
-    ui->actionUse_vertical_preview_layout
-            ->setChecked(isVerticalPreviewModeEnabled());
-}
-
-/**
- * Does the initialization for the note list splitter
- */
-void MainWindow::initNoteListSplitter() {
-    _noteListSplitter = new QSplitter();
-    _noteListSplitter->setOrientation(Qt::Vertical);
-
-    ui->noteListSubFrame->setStyleSheet("#noteListSubFrame {margin: 0;}");
-    ui->navigationFrame->setStyleSheet("#navigationFrame {margin: 0;}");
-
-    _noteListSplitter->addWidget(ui->noteListSubFrame);
-    _noteListSplitter->addWidget(ui->navigationFrame);
-
-    ui->notesListFrame->layout()->addWidget(_noteListSplitter);
-
-    // restore note list splitter state
-    QSettings settings;
-    QByteArray state = settings.value("noteListSplitterState").toByteArray();
-    _noteListSplitter->restoreState(state);
-}
-
-/**
- * Does the initialization for the tag frame splitter
- */
-void MainWindow::initTagFrameSplitter() {
-    _tagFrameSplitter = new QSplitter();
-    _tagFrameSplitter->setOrientation(Qt::Vertical);
-
-    ui->noteSubFolderFrame->setStyleSheet("#noteSubFolderFrame {margin: 0;}");
-    ui->tagSubFrame->setStyleSheet("#tagSubFrame {margin: 0;}");
-
-    _tagFrameSplitter->addWidget(ui->noteSubFolderFrame);
-    _tagFrameSplitter->addWidget(ui->tagSubFrame);
-
-    ui->tagFrame->layout()->addWidget(_tagFrameSplitter);
-
-    // restore tag frame splitter state
-    QSettings settings;
-    QByteArray state = settings.value("tagFrameSplitterState").toByteArray();
-    _tagFrameSplitter->restoreState(state);
-}
-
-/**
- * Does the further setup for the main splitter and all the panes
- */
-void MainWindow::setupMainSplitter() {
-    if ( isVerticalPreviewModeEnabled() ) {
-        ui->noteEditFrame->setStyleSheet("#noteEditFrame {margin: 0 0 3px 0;}");
-        ui->noteViewFrame->setStyleSheet("#noteViewFrame {margin: 0;}");
-
-        _verticalNoteFrameSplitter->addWidget(ui->noteEditFrame);
-        _verticalNoteFrameSplitter->addWidget(ui->noteViewFrame);
-
-        // disable collapsing for all widgets in the splitter, users had
-        // problems with collapsed panels
-        for (int i = 0; i < _verticalNoteFrameSplitter->count(); i++) {
-            _verticalNoteFrameSplitter->setCollapsible(i, false);
-        }
-
-        // restore the vertical note frame splitter state
-        QSettings settings;
-        _verticalNoteFrameSplitter->restoreState(settings.value(
-                "verticalNoteFrameSplitterState").toByteArray());
-    } else {
-        ui->noteEditFrame->setStyleSheet("#noteEditFrame {margin: 0 0 0 3px;}");
-        ui->noteViewFrame->setStyleSheet("#noteViewFrame {margin: 0 0 0 3px;}");
-
-        mainSplitter->addWidget(ui->noteEditFrame);
-        mainSplitter->addWidget(ui->noteViewFrame);
-    }
-
-    // disable collapsing for all widgets in the splitter, users had problems
-    // with collapsed panels
-    for (int i = 0; i < mainSplitter->count(); i++) {
-        mainSplitter->setCollapsible(i, false);
-    }
-
-    // set the visibility of the vertical note frame
-    _verticalNoteFrame->setVisible(isVerticalPreviewModeEnabled() &&
-                (isNoteEditPaneEnabled() || isMarkdownViewEnabled()));
-}
-
 void MainWindow::createSystemTrayIcon() {
     trayIcon = new QSystemTrayIcon(this);
-    trayIcon->setIcon(QIcon(":/images/icon.png"));
+    trayIcon->setIcon(getSystemTrayIcon());
 
     connect(trayIcon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)),
             this, SLOT(
@@ -1195,10 +1856,29 @@ void MainWindow::createSystemTrayIcon() {
 }
 
 /**
+ * Returns a proper system tray icon
+ *
+ * @return
+ */
+QIcon MainWindow::getSystemTrayIcon() {
+    QSettings settings;
+    QString fileName = ":/images/icon";
+
+    if (settings.value("darkModeTrayIcon").toBool()) {
+        fileName += "-dark";
+    }
+
+    fileName += ".png";
+    return QIcon(fileName);
+}
+
+/**
  * Creates the items in the note tree widget from the note and note sub
  * folder tables
  */
 void MainWindow::loadNoteDirectoryList() {
+    qDebug() << __func__;
+
     const QSignalBlocker blocker(ui->noteTextEdit);
     Q_UNUSED(blocker);
 
@@ -1213,12 +1893,6 @@ void MainWindow::loadNoteDirectoryList() {
             addNoteToNoteTreeWidget(note);
         }
 
-    // clear the text edits if there are no notes
-    if (noteList.isEmpty()) {
-        ui->noteTextEdit->clear();
-        ui->noteTextView->clear();
-    }
-
     int itemCount = noteList.count();
     MetricsService::instance()->sendEventIfEnabled(
             "note/list/loaded",
@@ -1228,8 +1902,9 @@ void MainWindow::loadNoteDirectoryList() {
             itemCount);
 
     // sort alphabetically again if necessary
-    if (sortAlphabetically) {
-        ui->noteTreeWidget->sortItems(0, Qt::AscendingOrder);
+    QSettings settings;
+    if (settings.value("notesPanelSort", SORT_BY_LAST_CHANGE).toInt() == SORT_ALPHABETICAL) {
+        ui->noteTreeWidget->sortItems(0, toQtOrder(settings.value("notesPanelOrder").toInt()));
     }
 
     // setup tagging
@@ -1240,6 +1915,11 @@ void MainWindow::loadNoteDirectoryList() {
 
     // generate the tray context menu
     generateSystemTrayContextMenu();
+
+    // clear the text edits if there is no visible note
+    if (firstVisibleNoteTreeWidgetItem() == Q_NULLPTR) {
+        unsetCurrentNote();
+    }
 }
 
 /**
@@ -1253,6 +1933,8 @@ bool MainWindow::addNoteToNoteTreeWidget(Note note) {
         return false;
     }
 
+    bool isNoteListPreview = Utils::Misc::isNoteListPreview();
+
     // add a note item to the tree
     QTreeWidgetItem *noteItem = new QTreeWidgetItem();
     setTreeWidgetItemToolTipForNote(noteItem, &note);
@@ -1262,6 +1944,12 @@ bool MainWindow::addNoteToNoteTreeWidget(Note note) {
                     "text-x-generic",
                     QIcon(":icons/breeze-qownnotes/16x16/"
                                   "text-x-generic.svg")));
+
+    Tag tag = Tag::fetchOneOfNoteWithColor(note);
+    if (tag.isFetched()) {
+        // set the color of the note tree widget item
+        handleTreeWidgetItemTagColor(noteItem, tag);
+    }
 
     bool isEditable = Note::allowDifferentFileName();
     if (isEditable) {
@@ -1274,13 +1962,45 @@ bool MainWindow::addNoteToNoteTreeWidget(Note note) {
     // strange things happen if we insert with insertTopLevelItem
     ui->noteTreeWidget->addTopLevelItem(noteItem);
 
-//    if (sortAlphabetically) {
+    if (isNoteListPreview) {
+        updateNoteTreeWidgetItem(note, noteItem);
+    }
+
+//    QSettings settings;
+//    if (settings.value("notesPanelSort", SORT_BY_LAST_CHANGE).toInt() == SORT_ALPHABETICAL) {
 //        ui->noteTreeWidget->addTopLevelItem(noteItem);
 //    } else {
 //        ui->noteTreeWidget->insertTopLevelItem(0, noteItem);
 //    }
 
     return true;
+}
+
+void MainWindow::updateNoteTreeWidgetItem(
+        Note &note, QTreeWidgetItem *noteItem) {
+    if (noteItem == nullptr) {
+        noteItem = findNoteInNoteTreeWidget(note);
+    }
+
+    QWidget *widget = ui->noteTreeWidget->itemWidget(noteItem, 0);
+    NoteTreeWidgetItem *noteTreeWidgetItem =
+            dynamic_cast<NoteTreeWidgetItem*>(widget);
+
+    // check if we already set a NoteTreeWidgetItem in the past
+    if (noteTreeWidgetItem != nullptr) {
+        noteTreeWidgetItem->updateUserInterface(note);
+    } else {
+        noteTreeWidgetItem = new NoteTreeWidgetItem(note, ui->noteTreeWidget);
+    }
+
+    // TODO: set background color
+//    noteTreeWidgetItem->setBackground(noteItem->background(0).color());
+    // TODO: handle note renaming
+    // TODO: handle updating when note gets changed
+    // TODO: handle updating in handleTreeWidgetItemTagColor
+
+    // this takes too long, it takes ages to do this on 1000 notes
+    ui->noteTreeWidget->setItemWidget(noteItem, 0, noteTreeWidgetItem);
 }
 
 /**
@@ -1305,6 +2025,7 @@ QTreeWidgetItem *MainWindow::addNoteSubFolderToTreeWidget(
     item->setTextColor(1, QColor(Qt::gray));
     item->setText(1, QString::number(linkCount));
     item->setToolTip(1, toolTip);
+    item->setFlags(item->flags() | Qt::ItemIsEditable);
 
     if (parentItem == NULL) {
         ui->noteSubFolderTreeWidget->addTopLevelItem(item);
@@ -1330,45 +2051,93 @@ void MainWindow::setTreeWidgetItemToolTipForNote(
     QDateTime *fileLastModified = (overrideFileLastModified != NULL) ?
                                  overrideFileLastModified : &modified;
 
-    item->setToolTip(0, tr("<strong>%1</strong><br />last modified: %2")
-            .arg(note->getName(), fileLastModified->toString()));
+    QString toolTipText = tr("<strong>%1</strong><br />last modified: %2")
+            .arg(note->getName(), fileLastModified->toString());
+
+    NoteSubFolder noteSubFolder = note->getNoteSubFolder();
+    if (noteSubFolder.isFetched()) {
+        toolTipText += tr("<br />path: %1").arg(noteSubFolder.relativePath());
+    }
+
+    item->setToolTip(0, toolTipText);
+
+    // TODO: handle item widget too
 }
 
 /**
  * @brief makes the current note the first item in the note list without reloading the whole list
  */
 void MainWindow::makeCurrentNoteFirstInNoteList() {
-    QString name = this->currentNote.getName();
-    QList<QTreeWidgetItem *> items =
-            this->ui->noteTreeWidget->findItems(name, Qt::MatchExactly);
-    if (items.count() > 0) {
-        const QSignalBlocker blocker(this->ui->noteTreeWidget);
+    QTreeWidgetItem *item = findNoteInNoteTreeWidget(currentNote);
+
+    if (item != Q_NULLPTR) {
+        const QSignalBlocker blocker(ui->noteTreeWidget);
         Q_UNUSED(blocker);
 
         ui->noteTreeWidget->takeTopLevelItem(
-                ui->noteTreeWidget->indexOfTopLevelItem(items[0]));
-        ui->noteTreeWidget->insertTopLevelItem(0, items[0]);
-        this->ui->noteTreeWidget->setCurrentItem(items[0]);
+                ui->noteTreeWidget->indexOfTopLevelItem(item));
+        ui->noteTreeWidget->insertTopLevelItem(0, item);
+
+        // set the item as current item if it is visible
+        if (!item->isHidden()) {
+            ui->noteTreeWidget->setCurrentItem(item);
+
+            if (Utils::Misc::isNoteListPreview()) {
+                // ui->noteTreeWidget->setCurrentItem seems to destroy the
+                // NoteTreeWidgetItem
+                // TODO: the list symbol is still gone
+                updateNoteTreeWidgetItem(currentNote, item);
+            }
+        }
+
+//        bool isInActiveNoteSubFolder =
+//                NoteSubFolder::activeNoteSubFolderId() ==
+//                currentNote.getNoteSubFolderId();
+
+        // has problems with NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively()
+//        if (!(isInActiveNoteSubFolder || _showNotesFromAllNoteSubFolders)) {
+//            item->setHidden(true);
+//        } else {
+//            ui->noteTreeWidget->setCurrentItem(item);
+//        }
     }
+}
+
+/**
+ * Finds a note in the note tree widget and returns its item
+ *
+ * @param note
+ * @return
+ */
+QTreeWidgetItem *MainWindow::findNoteInNoteTreeWidget(Note note) {
+    int noteId = note.getId();
+
+    for (int i = 0; i < ui->noteTreeWidget->topLevelItemCount(); i++) {
+        QTreeWidgetItem *item = ui->noteTreeWidget->topLevelItem(i);
+        if (item->data(0, Qt::UserRole).toInt() == noteId) {
+            return item;
+        }
+    }
+
+    return Q_NULLPTR;
 }
 
 void MainWindow::readSettings() {
     NoteFolder::migrateToNoteFolders();
 
     QSettings settings;
-    sortAlphabetically = settings.value(
-            "SortingModeAlphabetically", false).toBool();
     showSystemTray = settings.value("ShowSystemTray", false).toBool();
     restoreGeometry(settings.value("MainWindow/geometry").toByteArray());
-    restoreState(settings.value("MainWindow/windowState").toByteArray());
     ui->menuBar->restoreGeometry(
             settings.value("MainWindow/menuBarGeometry").toByteArray());
 
     // read all relevant settings, that can be set in the settings dialog
     readSettingsFromSettingsDialog();
 
-    // get notes path
-    this->notesPath = settings.value("notesPath").toString();
+    // get the notes path
+    // prepend the portable data path if we are in portable mode
+    this->notesPath = Utils::Misc::prependPortableDataPathIfNeeded(
+            settings.value("notesPath").toString());
 
     // migration: remove GAnalytics-cid
     if (!settings.value("GAnalytics-cid").toString().isEmpty()) {
@@ -1413,6 +2182,78 @@ void MainWindow::readSettings() {
     // toggle the show status bar checkbox
     bool showStatusBar = settings.value("showStatusBar", true).toBool();
     on_actionShow_status_bar_triggered(showStatusBar);
+
+    // toggle the show menu bar checkbox
+    // use the current menu bar visibility as default (so it will not be
+    // shown by default on Unity desktop)
+    bool showMenuBar =
+            settings.value("showMenuBar", !ui->menuBar->isHidden()).toBool();
+    on_actionShow_menu_bar_triggered(showMenuBar);
+
+    {
+        const QSignalBlocker blocker(ui->actionAllow_note_editing);
+        Q_UNUSED(blocker);
+
+        bool isAllowNoteEditing = Utils::Misc::isNoteEditingAllowed();
+        ui->actionAllow_note_editing->setChecked(isAllowNoteEditing);
+        // we want to trigger the method regardless if the button was toggled
+        // or not
+        on_actionAllow_note_editing_triggered(isAllowNoteEditing);
+    }
+}
+
+/**
+ * Restores the toolbars
+ */
+void MainWindow::restoreToolbars() {
+    QSettings settings;
+    QList<ToolbarContainer> toolbarContainers;
+    int toolbarCount = settings.beginReadArray("toolbar");
+
+    for (int i = 0; i < toolbarCount; i++) {
+        settings.setArrayIndex(i);
+
+        ToolbarContainer toolbarContainer;
+
+        toolbarContainer.name = settings.value("name").toString();
+        if (toolbarContainer.name.isEmpty()) {
+            qWarning() << tr("Toolbar could not be loaded without name");
+            continue;
+        }
+
+        toolbarContainer.title = settings.value("title").toString();
+        toolbarContainer.actions = settings.value("items").toStringList();
+
+        toolbarContainers.push_back(toolbarContainer);
+    }
+
+    settings.endArray();
+
+    if (!toolbarContainers.empty()) {
+        // delete the custom toolbars
+        foreach(QToolBar* toolbar, findChildren<QToolBar*>() ) {
+                if (!toolbar->objectName().startsWith(
+                        Toolbar_Editor::customToolbarNamePrefix)) {
+                    continue;
+                }
+
+                delete toolbar;
+            }
+
+        foreach(ToolbarContainer toolbarContainer, toolbarContainers) {
+                if (toolbarContainer.toolbarFound()) {
+                    toolbarContainer.updateToolbar();
+                } else {
+                    toolbarContainer.create(this);
+                }
+            }
+    }
+
+    // initialize the toolbar menu
+    initToolbarMenu();
+
+    // update the toolbar menu
+    updateToolbarMenu();
 }
 
 /**
@@ -1420,15 +2261,6 @@ void MainWindow::readSettings() {
  */
 void MainWindow::readSettingsFromSettingsDialog() {
     QSettings settings;
-
-    // disable the automatic update dialog per default for repositories and
-    // self-builds
-    if (settings.value("disableAutomaticUpdateDialog").toString().isEmpty()) {
-        QString release = QString(RELEASE);
-        bool enabled =
-                release.contains("Travis") || release.contains("AppVeyor");
-        settings.setValue("disableAutomaticUpdateDialog", !enabled);
-    }
 
     this->notifyAllExternalModifications =
             settings.value("notifyAllExternalModifications").toBool();
@@ -1440,6 +2272,9 @@ void MainWindow::readSettingsFromSettingsDialog() {
         this->noteSaveIntervalTime = 10;
         settings.setValue("noteSaveIntervalTime", this->noteSaveIntervalTime);
     }
+
+    // set the git commit interval time
+    _gitCommitInterval = settings.value("gitCommitInterval", 30).toInt();
 
     // set the note text edit font
     ui->noteTextEdit->setStyles();
@@ -1465,23 +2300,17 @@ void MainWindow::readSettingsFromSettingsDialog() {
             "MainWindow/mainToolBar.iconSize").toInt();
     if (toolBarIconSize == 0) {
         toolBarIconSize = ui->mainToolBar->iconSize().height();
-        settings.setValue(
-                "MainWindow/mainToolBar.iconSize",
-                QString::number(toolBarIconSize));
+        settings.setValue("MainWindow/mainToolBar.iconSize", toolBarIconSize);
     } else {
         QSize size(toolBarIconSize, toolBarIconSize);
         ui->mainToolBar->setIconSize(size);
         _formattingToolbar->setIconSize(size);
+        _customActionToolbar->setIconSize(size);
         _insertingToolbar->setIconSize(size);
         _encryptionToolbar->setIconSize(size);
         _windowToolbar->setIconSize(size);
         _quitToolbar->setIconSize(size);
     }
-
-    // check if we want to view the note folder combo box
-    ui->noteFolderComboBox->setVisible(
-            settings.value(
-                    "MainWindow/showRecentNoteFolderInMainArea").toBool());
 
     // change the search notes symbol between dark and light mode
     QString fileName = settings.value("darkModeColors").toBool() ?
@@ -1491,6 +2320,86 @@ void MainWindow::readSettingsFromSettingsDialog() {
             QRegularExpression("background-image: url\\(:.+\\);"),
             QString("background-image: url(:/images/%1);").arg(fileName));
     ui->searchLineEdit->setStyleSheet(styleSheet);
+
+    // initialize the shortcuts for the actions
+    initShortcuts();
+
+    // initialize the item height of the tree widgets
+    initTreeWidgetItemHeight();
+
+    // we need to initialize the toolbar menu again in case there are new
+    // toolbars
+    initToolbarMenu();
+
+    // update the toolbar menu
+    updateToolbarMenu();
+
+    // update the settings of all markdown edits
+    Q_FOREACH(QOwnNotesMarkdownTextEdit *textEdit,
+              findChildren<QOwnNotesMarkdownTextEdit*>()) {
+            textEdit->updateSettings();
+        }
+
+    // show or hide the note git version menu entry
+    ui->actionShow_note_git_versions->setVisible(Utils::Git::hasLogCommand());
+
+    // show or hide 'Find or create ...' search in Note Subfolders & Tags Panels
+    ui->noteSubFolderLineEdit->setHidden(
+                settings.value("noteSubfoldersPanelHideSearch").toBool());
+    ui->tagLineEdit->setHidden(
+                settings.value("tagsPanelHideSearch").toBool());
+
+    // set the cursor width of the note text-edits
+    int cursorWidth = settings.value("cursorWidth", 1).toInt();
+    ui->noteTextEdit->setCursorWidth(cursorWidth);
+    ui->encryptedNoteTextEdit->setCursorWidth(cursorWidth);
+
+    ui->noteTextEdit->setPaperMargins();
+    ui->encryptedNoteTextEdit->setPaperMargins();
+}
+
+/**
+ * Initializes the item height of the tree widgets
+ */
+void MainWindow::initTreeWidgetItemHeight() {
+    QSettings settings;
+    int height = settings.value("itemHeight").toInt();
+
+    // if the height was 0 set it the the current height of a tree widget item
+    if (height == 0) {
+        QTreeWidget treeWidget(this);
+        QTreeWidgetItem *treeWidgetItem = new QTreeWidgetItem();
+        treeWidget.addTopLevelItem(treeWidgetItem);
+        height = treeWidget.visualItemRect(treeWidgetItem).height();
+        settings.setValue("itemHeight", height);
+    }
+
+    updateTreeWidgetItemHeight(ui->tagTreeWidget, height);
+    updateTreeWidgetItemHeight(ui->noteTreeWidget, height);
+    updateTreeWidgetItemHeight(ui->noteSubFolderTreeWidget, height);
+    updateTreeWidgetItemHeight(ui->navigationWidget, height);
+}
+
+/**
+ * Sets height of the items of a tree widget
+ *
+ * @param treeWidget
+ * @param height
+ */
+void MainWindow::updateTreeWidgetItemHeight(QTreeWidget *treeWidget,
+                                            int height) {
+    QString styleText = treeWidget->styleSheet();
+
+    // remove the old height stylesheet
+    styleText.remove(QRegularExpression(
+            "\nQTreeWidget::item \\{height: \\d+px\\}",
+            QRegularExpression::CaseInsensitiveOption));
+
+    // add the new height stylesheet
+    styleText += QString("\nQTreeWidget::item {height: %1px}")
+            .arg(QString::number(height));
+
+    treeWidget->setStyleSheet(styleText);
 }
 
 void MainWindow::updateNoteTextFromDisk(Note note) {
@@ -1509,6 +2418,11 @@ void MainWindow::updateNoteTextFromDisk(Note note) {
 }
 
 void MainWindow::notesWereModified(const QString &str) {
+    // workaround when signal block doesn't work correctly
+    if (_isNotesWereModifiedDisabled) {
+        return;
+    }
+
     qDebug() << "notesWereModified: " << str;
 
     QFileInfo fi(str);
@@ -1517,22 +2431,32 @@ void MainWindow::notesWereModified(const QString &str) {
     // load note from disk if current note was changed
     if (note.getFileName() == this->currentNote.getFileName()) {
         if (note.fileExists()) {
-            // fetch current text
-            QString text1 = this->ui->noteTextEdit->toPlainText();
-
             // fetch text of note from disk
             note.updateNoteTextFromDisk();
-            QString text2 = note.getNoteText();
+            QString noteTextOnDisk = Utils::Misc::transformLineFeeds(
+                    note.getNoteText());
 
-            // skip dialog if texts are equal
-            if (text1 == text2) {
+            QString noteTextOnDiskHash = QString(QCryptographicHash::hash(
+                    noteTextOnDisk.toLocal8Bit(), QCryptographicHash::Sha1).toHex());
+
+            // skip dialog if text of note file on disk and current note are equal
+            if (noteTextOnDiskHash == _currentNoteTextHash) {
+                return;
+            }
+
+            // fetch current text
+            QString noteTextEditText = this->ui->noteTextEdit->toPlainText();
+
+            // skip dialog if text of note file on disk text from note text
+            // edit are equal
+            if (noteTextEditText == noteTextOnDisk) {
                 return;
             }
 
             qDebug() << "Current note was modified externally!";
 
             showStatusBarMessage(
-                    tr("current note was modified externally"), 5000);
+                    tr("Current note was modified externally"), 5000);
 
             // if we don't want to get notifications at all
             // external modifications check if we really need one
@@ -1556,90 +2480,108 @@ void MainWindow::notesWereModified(const QString &str) {
                 case NoteDiffDialog::Overwrite: {
                     const QSignalBlocker blocker(this->noteDirectoryWatcher);
                     Q_UNUSED(blocker);
-                    this->currentNote.store();
-                    this->currentNote.storeNoteTextFileToDisk();
-                    showStatusBarMessage(
-                            tr("stored current note to disk"), 3000);
 
-                    // just to make sure everything is uptodate
+                    showStatusBarMessage(
+                            tr("Overwriting external changes of: %1").arg(
+                                    currentNote.getFileName()), 3000);
+
+                    // the note text has to be stored newly because the
+                    // external change is already in the note table entry
+                    currentNote.storeNewText(
+                            ui->noteTextEdit->toPlainText());
+                    currentNote.storeNoteTextFileToDisk();
+
+                    // just to make sure everything is up-to-date
 //                        this->currentNote = note;
 //                        this->setNoteTextFromNote( &note, true );
 
                     // wait 100ms before the block on this->noteDirectoryWatcher
                     // is opened, otherwise we get the event
-                    waitMsecs(100);
+                    Utils::Misc::waitMsecs(100);
                 }
                     break;
 
                 // reload note file from disk
                 case NoteDiffDialog::Reload:
+                    showStatusBarMessage(
+                            tr("Loading external changes from: %1").arg(
+                                    currentNote.getFileName()), 3000);
                     updateNoteTextFromDisk(note);
                     break;
 
-                case NoteDiffDialog::Cancel:
-                case NoteDiffDialog::Ignore:
+//                case NoteDiffDialog::Cancel:
+//                case NoteDiffDialog::Ignore:
                 default:
                     // do nothing
                     break;
             }
-        } else {
+        } else if (_noteExternallyRemovedCheckEnabled &&
+                   (currentNote.getNoteSubFolderId() == 0)) {
+            // only allow the check if current note was removed externally in
+            // the root note folder, because it gets triggered every time
+            // a note gets renamed in subfolders
+
             qDebug() << "Current note was removed externally!";
 
-            switch (QMessageBox::information(
+            if (Utils::Gui::question(
                     this, tr("Note was removed externally!"),
                     tr("Current note was removed outside of this application!\n"
                             "Restore current note?"),
-                     tr("&Restore"), tr("&Cancel"), QString::null,
-                                             0, 1)) {
-                case 0: {
-                    const QSignalBlocker blocker(this->noteDirectoryWatcher);
-                    Q_UNUSED(blocker);
+                    "restore-note") == QMessageBox::Yes) {
+                const QSignalBlocker blocker(this->noteDirectoryWatcher);
+                Q_UNUSED(blocker);
 
-                    QString text = this->ui->noteTextEdit->toPlainText();
-                    note.storeNewText(text);
+                QString text = this->ui->noteTextEdit->toPlainText();
+                note.storeNewText(text);
 
-                    // store note to disk again
-                    note.storeNoteTextFileToDisk();
-                    showStatusBarMessage(
-                            tr("stored current note to disk"), 3000);
+                // store note to disk again
+                bool noteWasStored = note.storeNoteTextFileToDisk();
+                showStatusBarMessage(
+                        noteWasStored ?
+                        tr("Stored current note to disk") :
+                        tr("Current note could not be stored to disk"),
+                        3000);
 
-                    // rebuild and reload the notes directory list
-                    buildNotesIndex();
-                    loadNoteDirectoryList();
+                // rebuild and reload the notes directory list
+                buildNotesIndexAndLoadNoteDirectoryList();
 
-                    // fetch note new (because all the IDs have changed
-                    // after the buildNotesIndex()
-                    note.refetch();
+                // fetch note new (because all the IDs have changed
+                // after the buildNotesIndex()
+                note.refetch();
 
-                    // restore old selected row (but don't update the note text)
-                    setCurrentNote(note, false);
-                }
-                    break;
-                case 1:
-                default:
-                    break;
+                // restore old selected row (but don't update the note text)
+                setCurrentNote(note, false);
             }
         }
     } else {
         qDebug() << "other note was changed: " << str;
 
         showStatusBarMessage(
-                tr("note was modified externally: %1").arg(str), 5000);
+                tr("Note was modified externally: %1").arg(str), 5000);
 
         // rebuild and reload the notes directory list
-        buildNotesIndex();
-        loadNoteDirectoryList();
+        buildNotesIndexAndLoadNoteDirectoryList();
         setCurrentNote(this->currentNote, false);
     }
 }
 
 void MainWindow::notesDirectoryWasModified(const QString &str) {
+    // workaround when signal block doesn't work correctly
+    if (_isNotesDirectoryWasModifiedDisabled) {
+        return;
+    }
+
+    // if we should ignore all changes return here
+    QSettings settings;
+    if (settings.value("ignoreAllExternalNoteFolderChanges").toBool()) {
+        return;
+    }
+
     qDebug() << "notesDirectoryWasModified: " << str;
-    showStatusBarMessage(tr("notes directory was modified externally"), 5000);
+    showStatusBarMessage(tr("Notes directory was modified externally"), 5000);
 
     // rebuild and reload the notes directory list
-    buildNotesIndex();
-    loadNoteDirectoryList();
+    buildNotesIndexAndLoadNoteDirectoryList();
 
 #ifdef Q_OS_LINUX
     // check if the current note was modified
@@ -1672,59 +2614,60 @@ void MainWindow::noteViewUpdateTimerSlot() {
 }
 
 void MainWindow::storeUpdatedNotesToDisk() {
-    {
-        const QSignalBlocker blocker(this->noteDirectoryWatcher);
-        Q_UNUSED(blocker);
+    const QSignalBlocker blocker(noteDirectoryWatcher);
+    Q_UNUSED(blocker);
 
-        QString oldNoteName = this->currentNote.getName();
+    QString oldNoteName = currentNote.getName();
 
-        // For some reason this->noteDirectoryWatcher gets an event from this.
-        // I didn't find an other solution than to wait yet.
-        // All flushing and syncing didn't help.
-        int count = Note::storeDirtyNotesToDisk(this->currentNote);
+    // For some reason this->noteDirectoryWatcher gets an event from this.
+    // I didn't find an other solution than to wait yet.
+    // All flushing and syncing didn't help.
+    bool currentNoteChanged = false;
+    bool noteWasRenamed = false;
 
-        if (count > 0) {
-            _noteViewNeedsUpdate = true;
+    // currentNote will be set by this method if the filename has changed
+    int count = Note::storeDirtyNotesToDisk(currentNote,
+                                            &currentNoteChanged,
+                                            &noteWasRenamed);
 
-            MetricsService::instance()
-                    ->sendEventIfEnabled(
-                            "note/notes/stored",
-                            "note",
-                            "notes stored",
-                            QString::number(count) + " notes",
-                            count);
+    if (count > 0) {
+        _noteViewNeedsUpdate = true;
 
-            qDebug() << __func__ << " - 'count': " << count;
+        MetricsService::instance()
+                ->sendEventIfEnabled(
+                        "note/notes/stored",
+                        "note",
+                        "notes stored",
+                        QString::number(count) + " notes",
+                        count);
 
-            showStatusBarMessage(
-                    tr("stored %n note(s) to disk", "", count),
-                    3000);
+        qDebug() << __func__ << " - 'count': " << count;
 
-            // wait 100ms before the block on this->noteDirectoryWatcher
-            // is opened, otherwise we get the event
-            waitMsecs(100);
+        showStatusBarMessage(
+                tr("Stored %n note(s) to disk", "", count),
+                3000);
 
+        // wait 100ms before the block on this->noteDirectoryWatcher
+        // is opened, otherwise we get the event
+        Utils::Misc::waitMsecs(100);
+
+        if (currentNoteChanged) {
             // just to make sure everything is up-to-date
-            this->currentNote.refetch();
+            currentNote.refetch();
 
-            QString newNoteName = this->currentNote.getName();
-            if (oldNoteName == newNoteName) {
-                if ( !sortAlphabetically ) {
-                    // if note name has not changed makes the current note
-                    // the first item in the note list without
-                    // reloading the whole list
-                    makeCurrentNoteFirstInNoteList();
-                }
-            } else {
-                // rename the note file names of note tag links
-                Tag::renameNoteFileNamesOfLinks(oldNoteName, newNoteName);
+            // create a hash of the text of the current note to be able if it
+            // was modified outside of QOwnNotes
+            updateCurrentNoteTextHash();
 
+            if (oldNoteName != currentNote.getName()) {
                 // just to make sure the window title is set correctly
                 updateWindowTitle();
-
-                // reload the directory list if note name has changed
-                loadNoteDirectoryList();
             }
+        }
+
+        if (noteWasRenamed) {
+            // reload the directory list if note name has changed
+            loadNoteDirectoryList();
         }
     }
 }
@@ -1746,18 +2689,51 @@ void MainWindow::frequentPeriodicChecker() {
     } else if (lastUpdateCheck.addSecs(3600) <= QDateTime::currentDateTime()) {
         // check for updates every 1h
         updateService->checkForUpdates(this, UpdateService::Periodic);
+
+        // expire trashed items
+        TrashItem::expireItems();
     }
 }
 
 /**
- * Does the setup for the update available button
+ * Does the setup the status bar widgets
  */
-void MainWindow::setupUpdateAvailableButton() {
+void MainWindow::setupStatusBarWidgets() {
+    /*
+     * setup of readonly button
+     */
+    _readOnlyButton->setText(tr("Read-only"));
+    _readOnlyButton->setToolTip(tr("Note editing is disabled, click to "
+                                   "enable"));
+    _readOnlyButton->setStyleSheet("QPushButton {padding: 0 5px}");
+    _readOnlyButton->setFlat(true);
+    _readOnlyButton->setHidden(Utils::Misc::isNoteEditingAllowed());
+
+    QObject::connect(
+            _readOnlyButton,
+            SIGNAL(pressed()),
+            this,
+            SLOT(allowNoteEditing()));
+
+    ui->statusBar->addPermanentWidget(_readOnlyButton);
+
+    /*
+     * setup of line number label
+     */
+    _noteEditLineNumberLabel = new QLabel(this);
+    _noteEditLineNumberLabel->setText("0:0");
+    _noteEditLineNumberLabel->setToolTip(tr("Line numbers"));
+
+    ui->statusBar->addPermanentWidget(_noteEditLineNumberLabel);
+
+    /*
+     * setup of update available button
+     */
     _updateAvailableButton = new QPushButton(this);
     _updateAvailableButton->setFlat(true);
     _updateAvailableButton->setToolTip(
-            tr("click here to see what has changed and to be able to "
-                       "download the latest version"));
+            tr("Click here to see what has changed and to be able to "
+                       "update to the latest version"));
     _updateAvailableButton->hide();
     _updateAvailableButton->setStyleSheet("QPushButton {padding: 0 5px}");
 
@@ -1780,38 +2756,40 @@ void MainWindow::hideUpdateAvailableButton() {
     _updateAvailableButton->hide();
 }
 
-void MainWindow::waitMsecs(int msecs) {
-    QTime dieTime = QTime::currentTime().addMSecs(msecs);
-    while (QTime::currentTime() < dieTime)
-        QCoreApplication::processEvents(QEventLoop::AllEvents, 50);
-}
-
 /**
  * Builds the index of notes and note sub folders
  */
-void MainWindow::buildNotesIndex(int noteSubFolderId) {
+bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
     QString notePath = Utils::Misc::removeIfEndsWith(
             this->notesPath, QDir::separator());
     NoteSubFolder noteSubFolder;
     bool hasNoteSubFolder = false;
+    bool wasModified = false;
 
     qDebug() << __func__ << " - 'noteSubFolderId': " << noteSubFolderId;
 
     if (noteSubFolderId == 0) {
         // make sure we destroy nothing
         storeUpdatedNotesToDisk();
+
+        // init the lists to check for removed items
+        _buildNotesIndexBeforeNoteIdList = Note::fetchAllIds();
+        _buildNotesIndexBeforeNoteSubFolderIdList =
+                NoteSubFolder::fetchAllIds();
+        _buildNotesIndexAfterNoteIdList.clear();
+        _buildNotesIndexAfterNoteSubFolderIdList.clear();
     } else {
         noteSubFolder = NoteSubFolder::fetch(noteSubFolderId);
         hasNoteSubFolder = noteSubFolder.isFetched();
 
         if (!hasNoteSubFolder) {
-            return;
+            return false;
         }
 
         notePath += QDir::separator() + noteSubFolder.relativePath();
     }
 
-    qDebug() << __func__ << " - 'notePath': " << notePath;
+//    qDebug() << __func__ << " - 'notePath': " << notePath;
 
     QDir notesDir(notePath);
 
@@ -1824,7 +2802,7 @@ void MainWindow::buildNotesIndex(int noteSubFolderId) {
 
     // show newest entry first
     QStringList files = notesDir.entryList(filters, QDir::Files, QDir::Time);
-    qDebug() << __func__ << " - 'files': " << files;
+//    qDebug() << __func__ << " - 'files': " << files;
 
     bool createDemoNotes = (files.count() == 0) && !hasNoteSubFolder;
 
@@ -1845,7 +2823,7 @@ void MainWindow::buildNotesIndex(int noteSubFolderId) {
         qDebug() << "No notes! We will add some...";
         QStringList filenames = QStringList() <<
                 "Markdown Showcase.md" <<
-                "GitHub Flavored Markdown.md" <<
+                "Markdown Cheatsheet.md" <<
                 "Welcome to QOwnNotes.md";
         QString filename;
         QString destinationFile;
@@ -1881,11 +2859,14 @@ void MainWindow::buildNotesIndex(int noteSubFolderId) {
     qint64 cryptoKey = currentNote.getCryptoKey();
     QString cryptoPassword = currentNote.getCryptoPassword();
 
-    if (!hasNoteSubFolder) {
-        // first delete all notes and note sub folders in the database
+    if (!hasNoteSubFolder && forceRebuild) {
+        // first delete all notes and note sub folders in the database if a
+        // rebuild was forced
         Note::deleteAll();
         NoteSubFolder::deleteAll();
     }
+
+    bool withNoteNameHook = ScriptingService::instance()->handleNoteNameHookExists();
 
     // create all notes from the files
     Q_FOREACH(QString fileName, files) {
@@ -1896,14 +2877,38 @@ void MainWindow::buildNotesIndex(int noteSubFolderId) {
 
             // fetching the content of the file
             QFile file(Note::getFullNoteFilePathForFile(fileName));
-            Note note;
-            note.createFromFile(file);
 
-            if (note.isFetched() && hasNoteSubFolder) {
-                note.setNoteSubFolder(noteSubFolder);
-                note.store();
+            // update or create a note from the file
+            Note note = Note::updateOrCreateFromFile(file, noteSubFolder,
+                    withNoteNameHook);
+
+            // add the note id to in the end check if notes need to be removed
+            _buildNotesIndexAfterNoteIdList << note.getId();
+
+            if (!_buildNotesIndexBeforeNoteIdList.contains(note.getId())) {
+                wasModified = true;
             }
+
+            // update the UI
+            // this causes to show notes twice in the ui->noteTreeWidget if a
+            // not selected note is modified externally
+            // https://github.com/pbek/QOwnNotes/issues/242
+            // using a blocker on noteTreeWidget or just processing every 10th
+            // time doesn't work neither
+//            QCoreApplication::processEvents();
+
+            // we try these two instead to update the UI
+            QCoreApplication::flush();
+
+            // this still causes double entries on OS X and maybe Windows
+#ifdef Q_OS_LINUX
+            QCoreApplication::sendPostedEvents();
+#endif
         }
+
+    // update the UI and get user input after all the notes were loaded
+    // this still can cause duplicate note subfolders to be viewed
+//    QCoreApplication::processEvents();
 
     // re-fetch current note (because all the IDs have changed after the
     // buildNotesIndex()
@@ -1924,33 +2929,110 @@ void MainWindow::buildNotesIndex(int noteSubFolderId) {
 
         // ignore some folders
         QStringList ignoreFolderList;
-        ignoreFolderList << "." << ".." << "media";
+        ignoreFolderList << "." << ".." << "media" << "attachments" << "trash";
+
+        QSettings settings;
+        // ignore folders by regular expression
+        QStringList ignoredFolderRegExpList = settings.value(
+                "ignoreNoteSubFolders", IGNORED_NOTE_SUBFOLDERS_DEFAULT)
+                        .toString().split(";");
 
         Q_FOREACH(QString folder, folders) {
                 if (ignoreFolderList.contains(folder)) {
                     continue;
                 }
 
-                // create the parent note sub folder
-                NoteSubFolder parentNoteSubFolder;
-                parentNoteSubFolder.setName(folder);
-                parentNoteSubFolder.setParentId(noteSubFolderId);
-                parentNoteSubFolder.store();
+                // ignore folders by regular expression
+                if (Utils::Misc::regExpInListMatches(
+                        folder, ignoredFolderRegExpList)) {
+                    continue;
+                }
+
+                // fetch or create the parent note sub folder
+                NoteSubFolder parentNoteSubFolder =
+                        NoteSubFolder::fetchByNameAndParentId(folder,
+                                                              noteSubFolderId);
+                if (!parentNoteSubFolder.isFetched()) {
+                    parentNoteSubFolder.setName(folder);
+                    parentNoteSubFolder.setParentId(noteSubFolderId);
+                    parentNoteSubFolder.store();
+
+                    wasModified = true;
+                }
 
                 if (parentNoteSubFolder.isFetched()) {
-                    buildNotesIndex(parentNoteSubFolder.getId());
+                    // add the note id to in the end check if notes need to
+                    // be removed
+                    _buildNotesIndexAfterNoteSubFolderIdList
+                            << parentNoteSubFolder.getId();
+
+                    // build the notes index for the note subfolder
+                    bool result = buildNotesIndex(parentNoteSubFolder.getId());
+                    if (result) {
+                        wasModified = true;
+                    }
+
+                    // update the UI
+                    // this causes to show sub note folders twice in the
+                    // ui->noteSubFolderTreeWidget if a
+                    // not selected note is modified externally
+//                    QCoreApplication::processEvents();
+
+                    // we try these two instead to update the UI
+                    QCoreApplication::flush();
+
+                    // this still causes double entries on OS X and maybe
+                    // Windows
+#ifdef Q_OS_LINUX
+                    QCoreApplication::sendPostedEvents();
+#endif
                 }
             }
     }
 
     if (!hasNoteSubFolder) {
+        // check for removed notes
+        QList<int> removedNoteIdList = _buildNotesIndexBeforeNoteIdList.toSet()
+                .subtract(_buildNotesIndexAfterNoteIdList.toSet()).toList();
+
+        // remove all missing notes
+        Q_FOREACH(int noteId, removedNoteIdList) {
+                Note note = Note::fetch(noteId);
+                if (note.isFetched()) {
+                    note.remove();
+                    wasModified = true;
+                }
+            }
+
+        // check for removed note subfolders
+        QList<int> removedNoteSubFolderIdList =
+                _buildNotesIndexBeforeNoteSubFolderIdList.toSet()
+                .subtract(_buildNotesIndexAfterNoteSubFolderIdList.toSet())
+                        .toList();
+
+        // remove all missing note subfolders
+        Q_FOREACH(int noteSubFolderId, removedNoteSubFolderIdList) {
+                NoteSubFolder noteSubFolder = NoteSubFolder::fetch(
+                        noteSubFolderId);
+                if (noteSubFolder.isFetched()) {
+                    noteSubFolder.remove();
+                    wasModified = true;
+                }
+            }
+
         // setup the note folder database
         DatabaseService::createNoteFolderConnection();
         DatabaseService::setupNoteFolderTables();
 
         // update the note directory watcher
         updateNoteDirectoryWatcher();
+
+        // update the information about shared notes
+        OwnCloudService *ownCloud = OwnCloudService::instance();
+        ownCloud->fetchShares();
     }
+
+    return wasModified;
 }
 
 /**
@@ -1964,6 +3046,11 @@ void MainWindow::updateNoteDirectoryWatcher() {
         noteDirectoryWatcher.removePaths(fileList);
     }
 
+    bool showSubfolders = NoteFolder::isCurrentShowSubfolders();
+//    if (showSubfolders) {
+//        return;
+//    }
+
     QString notePath = Utils::Misc::removeIfEndsWith(
             this->notesPath, QDir::separator());
 
@@ -1974,7 +3061,6 @@ void MainWindow::updateNoteDirectoryWatcher() {
         noteDirectoryWatcher.addPath(notePath);
     }
 
-    bool showSubfolders = NoteFolder::isCurrentShowSubfolders();
     if (showSubfolders) {
         QList<NoteSubFolder> noteSubFolderList = NoteSubFolder::fetchAll();
         Q_FOREACH(NoteSubFolder noteSubFolder, noteSubFolderList) {
@@ -2029,29 +3115,55 @@ void MainWindow::jumpToWelcomeNote() {
 /**
  * Jumps to a note in the note selector
  */
-void MainWindow::jumpToNoteName(QString name) {
+bool MainWindow::jumpToNoteName(QString name) {
     // search for the note
     QList<QTreeWidgetItem *> items = ui->noteTreeWidget->findItems(
             name, Qt::MatchExactly, 0);
+
     if (items.count() > 0) {
-        // set the welcome note as current note
         ui->noteTreeWidget->setCurrentItem(items.at(0));
+        return true;
     }
+
+    return false;
+}
+
+/**
+ * Jumps to a note subfolder in the note subfolder selector
+ *
+ * @param noteSubFolderId
+ * @return
+ */
+bool MainWindow::jumpToNoteSubFolder(int noteSubFolderId) {
+    QList<QTreeWidgetItem *> items = ui->noteSubFolderTreeWidget->findItems(
+            QString("*"), Qt::MatchWrap | Qt::MatchWildcard |
+                    Qt::MatchRecursive);
+
+    Q_FOREACH(QTreeWidgetItem *item, items) {
+            int id = item->data(0, Qt::UserRole).toInt();
+            qDebug() << __func__ << " - 'id': " << id;
+
+            if (id == noteSubFolderId) {
+                ui->noteSubFolderTreeWidget->setCurrentItem(item);
+                return true;
+            }
+        }
+
+    return false;
 }
 
 QString MainWindow::selectOwnCloudNotesFolder() {
     QString path = this->notesPath;
 
     if (path == "") {
-        path = QDir::homePath() + QDir::separator() +
-                "ownCloud" + QDir::separator() + "Notes";
+        path = Utils::Misc::defaultNotesPath();
     }
 
     // TODO(pbek): We sometimes seem to get a "QCoreApplication::postEvent:
     // Unexpected null receiver" here.
     QString dir = QFileDialog::getExistingDirectory(
             this,
-            tr("Please select the folder where your notes will get stored to"),
+            tr("Please select the folder where your notes will get stored"),
             path,
             QFileDialog::ShowDirsOnly);
 
@@ -2066,7 +3178,12 @@ QString MainWindow::selectOwnCloudNotesFolder() {
 
         this->notesPath = dir;
         QSettings settings;
-        settings.setValue("notesPath", dir);
+        // make the path relative to the portable data path if we are in
+        // portable mode
+        settings.setValue(
+                "notesPath",
+                Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(
+                                  dir));
 
         // update the current folder tooltip
         updateCurrentFolderTooltip();
@@ -2074,8 +3191,9 @@ QString MainWindow::selectOwnCloudNotesFolder() {
         if (this->notesPath == "") {
             switch (QMessageBox::information(
                    this, tr("No folder was selected"),
-                    tr("You have to select your ownCloud notes "
-                            "folder to make this software work!"),
+                   Utils::Misc::replaceOwnCloudText(
+                           tr("You have to select your ownCloud notes "
+                            "folder to make this software work!")),
                     tr("&Retry"), tr("&Exit"), QString::null,
                     0, 1)) {
                 case 0:
@@ -2112,31 +3230,24 @@ void MainWindow::setCurrentNote(Note note,
                                 bool updateNoteText,
                                 bool updateSelectedNote,
                                 bool addNoteToHistory) {
+    qDebug() << __func__ << " - 'note': " << note
+             << " - 'updateNoteText': " << updateNoteText
+             << " - 'updateSelectedNote': " << updateSelectedNote;
+
     MetricsService::instance()->sendVisitIfEnabled("note/current-note/changed");
 
     enableShowVersionsButton();
     enableShowTrashButton();
 
     // update cursor position of previous note
-    if (this->currentNote.exists()) {
-        QTextCursor c = ui->noteTextEdit->textCursor();
+    if (currentNote.exists() && (currentNote.getId() != note.getId())) {
         this->noteHistory.updateCursorPositionOfNote(
-                this->currentNote, c.position());
-    }
-
-    // add new note to history
-    if (addNoteToHistory && note.exists()) {
-        this->noteHistory.add(note);
+                this->currentNote, ui->noteTextEdit);
     }
 
     this->currentNote = note;
     QString name = note.getName();
     updateWindowTitle();
-
-    // set the note text edit to readonly if note file is not writable
-    QFileInfo *f = new QFileInfo(note.fullNoteFilePath());
-    ui->noteTextEdit->setReadOnly(!f->isWritable());
-    ui->encryptedNoteTextEdit->setReadOnly(!f->isWritable());
 
     // find and set the current item
     if (updateSelectedNote) {
@@ -2146,13 +3257,16 @@ void MainWindow::setCurrentNote(Note note,
             const QSignalBlocker blocker(ui->noteTreeWidget);
             Q_UNUSED(blocker);
 
+            // to avoid that multiple notes will be selected
+            ui->noteTreeWidget->clearSelection();
+
             ui->noteTreeWidget->setCurrentItem(items[0]);
         }
     }
 
     // update the text of the text edit
     if (updateNoteText) {
-        const QSignalBlocker blocker(this->ui->noteTextEdit);
+        const QSignalBlocker blocker(ui->noteTextEdit);
         Q_UNUSED(blocker);
 
         this->setNoteTextFromNote(&note);
@@ -2163,15 +3277,95 @@ void MainWindow::setCurrentNote(Note note,
     }
 
     updateEncryptNoteButtons();
+    // we also need to do this in on_noteTreeWidget_itemSelectionChanged
+    // because of different timings
     reloadCurrentNoteTags();
+    updateNoteTextEditReadOnly();
 
     ScriptingService::instance()->onCurrentNoteChanged(&currentNote);
+
+    // update the share button
+    updateShareButton();
+
+    // call a script hook that a new note was opened
+    ScriptingService::instance()->callHandleNoteOpenedHook(&currentNote);
 
 //    putenv(QString("QOWNNOTES_CURRENT_NOTE_PATH=" + currentNote
 //            .fullNoteFilePath()).toLatin1().data());
 //    setenv("QOWNNOTES_CURRENT_NOTE_PATH",
 //           currentNote.fullNoteFilePath().toLatin1().data(),
 //           1);
+
+    QSettings settings;
+
+#ifdef Q_OS_MAC
+    bool restoreCursorPositionDefault = false;
+#else
+    bool restoreCursorPositionDefault = true;
+#endif
+
+    bool restoreCursorPosition = settings.value(
+            "restoreCursorPosition", restoreCursorPositionDefault).toBool();
+
+    // restore the last position in the note text edit
+    if (restoreCursorPosition) {
+        noteHistory.getLastItemOfNote(note).restoreTextEditPosition(
+                ui->noteTextEdit);
+    }
+
+    // add new note to history
+    if (addNoteToHistory && note.exists()) {
+        this->noteHistory.add(note, ui->noteTextEdit);
+    }
+
+    noteEditCursorPositionChanged();
+
+    // create a hash of the text of the current note to be able if it was
+    // modified outside of QOwnNotes
+    updateCurrentNoteTextHash();
+}
+
+/**
+ * Creates a hash of the text of the current note to be able if it was
+ * modified outside of QOwnNotes
+ */
+void MainWindow::updateCurrentNoteTextHash() {
+    _currentNoteTextHash = QString(QCryptographicHash::hash(
+            currentNote.getNoteText().toLocal8Bit(),
+            QCryptographicHash::Sha1).toHex());
+}
+
+/**
+ * Sets the note text edit to readonly if the note does not exist or the
+ * note file is not writable or the note is encrypted
+ */
+void MainWindow::updateNoteTextEditReadOnly() {
+    setNoteTextEditReadOnly(
+            !(currentNote.exists() && currentNote.fileWriteable() &&
+              Utils::Misc::isNoteEditingAllowed()));
+
+    if (ui->noteTextEdit->isVisible() && currentNote.hasEncryptedNoteText()) {
+        ui->noteTextEdit->setReadOnly(true);
+    }
+}
+
+/**
+ * Sets the readonly state of the note text edits
+ *
+ * @param readonly
+ */
+void MainWindow::setNoteTextEditReadOnly(bool readonly) const {
+    ui->noteTextEdit->setReadOnly(readonly);
+    ui->encryptedNoteTextEdit->setReadOnly(readonly);
+}
+
+/**
+ * Updates the share button
+ */
+void MainWindow::updateShareButton() {
+    const QSignalBlocker blocker(ui->actionShare_note);
+    Q_UNUSED(blocker);
+    ui->actionShare_note->setChecked(currentNote.isShared());
 }
 
 /**
@@ -2181,69 +3375,70 @@ void MainWindow::updateWindowTitle() {
     setWindowTitle(currentNote.getName() + " - QOwnNotes " + QString(VERSION));
 }
 
+/**
+ * Focuses the note text edit and sets the cursor
+ */
 void MainWindow::focusNoteTextEdit() {
-    // move the cursor to the 4nd line
     QTextCursor tmpCursor = ui->noteTextEdit->textCursor();
-    tmpCursor.movePosition(QTextCursor::Start, QTextCursor::MoveAnchor);
-    tmpCursor.movePosition(QTextCursor::Down, QTextCursor::MoveAnchor);
-    tmpCursor.movePosition(QTextCursor::Down, QTextCursor::MoveAnchor);
-    tmpCursor.movePosition(QTextCursor::Down, QTextCursor::MoveAnchor);
-    ui->noteTextEdit->setTextCursor(tmpCursor);
+
+    // move the cursor to the 4th line if the cursor was at the beginning
+    if (tmpCursor.position() == 0) {
+        tmpCursor.movePosition(QTextCursor::Start, QTextCursor::MoveAnchor);
+        tmpCursor.movePosition(QTextCursor::Down, QTextCursor::MoveAnchor);
+        tmpCursor.movePosition(QTextCursor::Down, QTextCursor::MoveAnchor);
+        tmpCursor.movePosition(QTextCursor::Down, QTextCursor::MoveAnchor);
+        ui->noteTextEdit->setTextCursor(tmpCursor);
+    }
 
     // focus note text edit
     ui->noteTextEdit->setFocus();
 }
 
+/**
+ * Removes the current note
+ */
 void MainWindow::removeCurrentNote() {
     // store updated notes to disk
     storeUpdatedNotesToDisk();
 
-    switch (QMessageBox::information(this, tr("Remove current note"),
+    if (Utils::Gui::question(this, tr("Remove current note"),
                      tr("Remove current note: <strong>%1</strong>?")
                              .arg(this->currentNote.getName()),
-                     tr("&Remove"), tr("&Cancel"), QString::null,
-                     0, 1)) {
-        case 0: {
-            // TODO: better fetch by note id, not by name
-            QList<QTreeWidgetItem*> noteList =
-                    ui->noteTreeWidget->findItems(currentNote.getName(),
-                                           Qt::MatchExactly);
+                                 "remove-note") == QMessageBox::Yes) {
+        const QSignalBlocker blocker2(ui->noteTextEdit);
+        Q_UNUSED(blocker2);
 
-            if (noteList.count() > 0) {
-                const QSignalBlocker blocker1(ui->noteTreeWidget);
-                Q_UNUSED(blocker1);
+        const QSignalBlocker blocker3(ui->noteTextView);
+        Q_UNUSED(blocker3);
 
-                const QSignalBlocker blocker2(ui->noteTextEdit);
-                Q_UNUSED(blocker2);
+        const QSignalBlocker blocker4(ui->encryptedNoteTextEdit);
+        Q_UNUSED(blocker4);
 
-                const QSignalBlocker blocker3(ui->noteTextView);
-                Q_UNUSED(blocker3);
+        const QSignalBlocker blocker5(noteDirectoryWatcher);
+        Q_UNUSED(blocker5);
 
-                const QSignalBlocker blocker4(ui->encryptedNoteTextEdit);
-                Q_UNUSED(blocker4);
+        // we try to fix problems with note subfolders
+        directoryWatcherWorkaround(true);
 
-                const QSignalBlocker blocker5(noteDirectoryWatcher);
-                Q_UNUSED(blocker5);
+        {
+            const QSignalBlocker blocker1(ui->noteTreeWidget);
+            Q_UNUSED(blocker1);
 
-                // delete note in database and on file system
-                currentNote.remove(true);
+            // delete note in database and on file system
+            currentNote.remove(true);
 
-                ui->noteTextEdit->clear();
-                ui->noteTextView->clear();
-                ui->encryptedNoteTextEdit->clear();
-
-                // delete item in note list widget
-                delete noteList[0];
-
-                // set a new first note
-                resetCurrentNote();
-            }
-
-            break;
+            unsetCurrentNote();
+            loadNoteDirectoryList();
         }
-        case 1:
-        default:
-            break;
+
+        // set a new first note
+        resetCurrentNote();
+
+        // we try to fix problems with note subfolders
+        // we need to wait some time to turn the watcher on again because
+        // something is happening after this method that reloads the
+        // note folder
+        directoryWatcherWorkaround(false);
     }
 }
 
@@ -2256,30 +3451,27 @@ void MainWindow::resetCurrentNote() {
     QApplication::postEvent(ui->noteTreeWidget, event);
 }
 
+/**
+ * Stores the settings
+ */
 void MainWindow::storeSettings() {
     QSettings settings;
 
     // don't store the window settings in distraction free mode
     if (!isInDistractionFreeMode()) {
         settings.setValue("MainWindow/geometry", saveGeometry());
-        settings.setValue("MainWindow/windowState", saveState());
-        settings.setValue("mainSplitterSizes", mainSplitter->saveState());
-        settings.setValue("noteListSplitterState",
-                          _noteListSplitter->saveState());
-        settings.setValue("tagFrameSplitterState",
-                          _tagFrameSplitter->saveState());
-        settings.setValue("verticalNoteFrameSplitterState",
-                          _verticalNoteFrameSplitter->saveState());
         settings.setValue("MainWindow/menuBarGeometry",
                           ui->menuBar->saveGeometry());
-
-        saveMainSplitterState();
     }
 
-    settings.setValue("SortingModeAlphabetically", sortAlphabetically);
-    settings.setValue("ShowSystemTray", showSystemTray);
-    settings.setValue("LogDialog/showAtStartup",
-                      LogDialog::instance()->isVisible());
+    // store a NoteHistoryItem to open the note again after the app started
+    NoteHistoryItem noteHistoryItem(&currentNote, ui->noteTextEdit);
+    qDebug() << __func__ << " - 'noteHistoryItem': " << noteHistoryItem;
+    settings.setValue("ActiveNoteHistoryItem",
+                      QVariant::fromValue(noteHistoryItem));
+
+    // store the note history of the current note folder
+    noteHistory.storeForCurrentNoteFolder();
 }
 
 
@@ -2288,20 +3480,26 @@ void MainWindow::storeSettings() {
  */
 
 void MainWindow::closeEvent(QCloseEvent *event) {
-    storeSettings();
+    bool forceQuit = qApp->property("clearAppDataAndExit").toBool();
 
-    if (showSystemTray) {
-        // if we use the system tray lets hide the log dialog when the
-        // main window is closed
-        LogDialog::instance()->hide();
+    // make sure no settings get written after after we got the
+    // clearAppDataAndExit call
+    if (!forceQuit) {
+        storeSettings();
+    }
+
+    if (showSystemTray && !forceQuit) {
         hide();
         event->ignore();
     } else {
+        storeUpdatedNotesToDisk();
+
         MetricsService::instance()->sendVisitIfEnabled("app/end", "app end");
+        qApp->setProperty("loggingEnabled", false);
 
         // if we don't use the system tray we delete the log widow so the app
         // can quit
-        delete(LogDialog::instance());
+        delete(LogWidget::instance());
         QMainWindow::closeEvent(event);
     }
 }
@@ -2318,6 +3516,21 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
                 // set a variable to ignore that first "Return" in the
                 // return-handler
                 _searchLineEditFromCompleter = true;
+                return false;
+            }
+        } else if ((obj == ui->newNoteTagLineEdit) ||
+                ((ui->newNoteTagLineEdit->completer() != Q_NULLPTR) &&
+                    (obj == ui->newNoteTagLineEdit->completer()->popup()))) {
+            // if tab is pressed while adding a tag the tag that starts with
+            // the current text will be added
+            if (keyEvent->key() == Qt::Key_Tab) {
+                // fetch the tag that is starting with the current text
+                Tag tag = Tag::fetchByName(ui->newNoteTagLineEdit->text(),
+                                           true);
+                if (tag.isFetched()) {
+                    linkTagNameToCurrentNote(tag.getName(), true);
+                }
+
                 return false;
             }
         } else if (obj == ui->searchLineEdit) {
@@ -2385,7 +3598,14 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
             // pressed in the notes list
             if ((keyEvent->key() == Qt::Key_Return) ||
                     (keyEvent->key() == Qt::Key_Tab)) {
-                focusNoteTextEdit();
+
+                // focusNoteTextEdit() might cause a crash in
+                // on_noteTreeWidget_itemChanged when
+                // Note::handleNoteRenaming is called, so we don't allow to
+                // call focusNoteTextEdit()
+                if (!Note::allowDifferentFileName()) {
+                    focusNoteTextEdit();
+                }
                 return true;
             } else if ((keyEvent->key() == Qt::Key_Delete) ||
                        (keyEvent->key() == Qt::Key_Backspace)) {
@@ -2401,8 +3621,7 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
             }
             return false;
         }
-    }
-    if (event->type() == QEvent::MouseButtonRelease) {
+    } else if (event->type() == QEvent::MouseButtonRelease) {
         QMouseEvent *mouseEvent = static_cast<QMouseEvent *>(event);
 
         if ((mouseEvent->button() == Qt::BackButton)) {
@@ -2412,29 +3631,29 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
             // move forward in the note history
             on_action_Forward_in_note_history_triggered();
         }
+    } else if (event->type() == QEvent::MouseButtonPress &&
+               obj == ui->selectedTagsToolButton) {
+        // we don't want to make the button clickable
+        return true;
     }
 
     return QMainWindow::eventFilter(obj, event);
 }
 
 /**
- * Finds the first visible tree widget row
+ * Finds the first visible tree widget item
  */
 QTreeWidgetItem * MainWindow::firstVisibleNoteTreeWidgetItem() {
     QTreeWidgetItemIterator it(ui->noteTreeWidget,
                                QTreeWidgetItemIterator::NotHidden);
 
     return *it;
-//
-//    while (it) {
-//        return *it;
-//    }
 }
 
 /**
  * highlights all occurrences of str in the note text edit
  */
-void MainWindow::searchInNoteTextEdit(QString &str) {
+void MainWindow::searchInNoteTextEdit(QString str) {
     QList<QTextEdit::ExtraSelection> extraSelections;
     QList<QTextEdit::ExtraSelection> extraSelections2;
     QList<QTextEdit::ExtraSelection> extraSelections3;
@@ -2447,32 +3666,35 @@ void MainWindow::searchInNoteTextEdit(QString &str) {
 
         // build the string list of the search string
         QString queryStr = str.replace("|", "\\|");
-        QStringList queryStrings = Note::buildQueryStringList(queryStr);
+        QStringList queryStrings = Note::buildQueryStringList(queryStr, true);
 
-        QRegExp regExp("(" + queryStrings.join("|") + ")", Qt::CaseInsensitive);
+        if (queryStrings.count() > 0) {
+            QRegExp regExp("(" + queryStrings.join("|") + ")",
+                           Qt::CaseInsensitive);
 
-        while (ui->noteTextEdit->find(regExp)) {
-            QTextEdit::ExtraSelection extra;
-            extra.format.setBackground(color);
+            while (ui->noteTextEdit->find(regExp)) {
+                QTextEdit::ExtraSelection extra;
+                extra.format.setBackground(color);
 
-            extra.cursor = ui->noteTextEdit->textCursor();
-            extraSelections.append(extra);
-        }
+                extra.cursor = ui->noteTextEdit->textCursor();
+                extraSelections.append(extra);
+            }
 
-        while (ui->noteTextView->find(regExp)) {
-            QTextEdit::ExtraSelection extra;
-            extra.format.setBackground(color);
+            while (ui->noteTextView->find(regExp)) {
+                QTextEdit::ExtraSelection extra;
+                extra.format.setBackground(color);
 
-            extra.cursor = ui->noteTextView->textCursor();
-            extraSelections2.append(extra);
-        }
+                extra.cursor = ui->noteTextView->textCursor();
+                extraSelections2.append(extra);
+            }
 
-        while (ui->encryptedNoteTextEdit->find(regExp)) {
-            QTextEdit::ExtraSelection extra;
-            extra.format.setBackground(color);
+            while (ui->encryptedNoteTextEdit->find(regExp)) {
+                QTextEdit::ExtraSelection extra;
+                extra.format.setBackground(color);
 
-            extra.cursor = ui->encryptedNoteTextEdit->textCursor();
-            extraSelections3.append(extra);
+                extra.cursor = ui->encryptedNoteTextEdit->textCursor();
+                extraSelections3.append(extra);
+            }
         }
     }
 
@@ -2482,7 +3704,7 @@ void MainWindow::searchInNoteTextEdit(QString &str) {
 }
 
 /**
- * highlights all occurrences of tje search line text in the note text edit
+ * highlights all occurrences of the search line text in the note text edit
  */
 void MainWindow::searchForSearchLineTextInNoteTextEdit() {
     QString searchString = ui->searchLineEdit->text();
@@ -2527,6 +3749,8 @@ void MainWindow::askForEncryptedNotePasswordIfNeeded(QString additionalText) {
                         tr("It seems that your password is not valid!"));
             }
         }
+
+        delete(dialog);
     }
 }
 
@@ -2549,18 +3773,35 @@ int MainWindow::getMaxImageWidth()
 /**
  * Sets the note text according to a note
  */
-void MainWindow::setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly) {
+void MainWindow::setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly,
+                                     bool ignorePreviewVisibility) {
     if (!updateNoteTextViewOnly) {
         ui->noteTextEdit->setText(note->getNoteText());
     }
 
-    ui->noteTextView->setHtml(
-            note->toMarkdownHtml(NoteFolder::currentLocalPath(),
-                                 getMaxImageWidth()));
+    // update the preview text edit if the dock widget is visible
+    if (_notePreviewDockWidget->isVisible() || ignorePreviewVisibility) {
+        bool decrypt = ui->noteTextEdit->isHidden();
+
+        QString html = note->toMarkdownHtml(NoteFolder::currentLocalPath(),
+                                            getMaxImageWidth(), false, decrypt);
+
+        // create a hash of the html (because
+        QString hash = QString(QCryptographicHash::hash(
+                html.toLocal8Bit(), QCryptographicHash::Sha1).toHex());
+
+        // update the note preview if the text has changed
+        // we use our hash because ui->noteTextView->toHtml() may return
+        // a different text than before
+        if (_notePreviewHash != hash) {
+            ui->noteTextView->setHtml(html);
+            _notePreviewHash = hash;
+        }
+    }
 
     // update the slider when editing notes
     noteTextSliderValueChanged(
-            activeNoteTextEdit()->verticalScrollBar()->value());
+            activeNoteTextEdit()->verticalScrollBar()->value(), true);
 }
 
 /**
@@ -2589,8 +3830,10 @@ void MainWindow::setCurrentNoteText(QString text) {
  * @brief MainWindow::createNewNote
  * @param name
  * @param text
+ * @param cursorAtEnd
  */
-void MainWindow::createNewNote(QString name, QString text) {
+void MainWindow::createNewNote(QString name, QString text,
+                               CreateNewNoteOptions options) {
     QString extension = Note::defaultNoteFileExtension();
     QFile *f = new QFile(this->notesPath + QDir::separator() + name + "."
                          + extension);
@@ -2600,19 +3843,33 @@ void MainWindow::createNewNote(QString name, QString text) {
         QDateTime currentDate = QDateTime::currentDateTime();
         name.append(" " + currentDate.toString(Qt::ISODate).replace(":", "."));
 
-        QString preText = name + "\n";
-
-        for (int i = 0; i < name.length(); i++) {
-            preText.append("=");
-        }
-
-        preText.append("\n\n");
+        QString preText = Note::createNoteHeader(name);
         text.prepend(preText);
     }
 
+    // create a new note
     ui->searchLineEdit->setText(name);
-    on_searchLineEdit_returnPressed();
-    ui->noteTextEdit->setText(text);
+
+    bool disableLoadNoteDirectoryList = options &
+            CreateNewNoteOption::DisableLoadNoteDirectoryList;
+
+    jumpToNoteOrCreateNew(disableLoadNoteDirectoryList);
+
+    // check if to append the text or replace the text of the note
+    if (options & CreateNewNoteOption::UseNameAsHeadline) {
+        QTextCursor c = ui->noteTextEdit->textCursor();
+        c.insertText("\n\n" + text);
+        ui->noteTextEdit->setTextCursor(c);
+    } else {
+        ui->noteTextEdit->setText(text);
+    }
+
+    // move the cursor to the end of the note
+    if (options & CreateNewNoteOption::CursorAtEnd) {
+        QTextCursor c = ui->noteTextEdit->textCursor();
+        c.movePosition(QTextCursor::End, QTextCursor::MoveAnchor);
+        ui->noteTextEdit->setTextCursor(c);
+    }
 }
 
 /**
@@ -2623,9 +3880,8 @@ void MainWindow::createNewNote(QString name, QString text) {
  * This is a public callback function for the trash dialog.
  */
 void MainWindow::restoreTrashedNoteOnServer(QString fileName, int timestamp) {
-    OwnCloudService *ownCloud = new OwnCloudService(this);
-    ownCloud->restoreTrashedNoteOnServer(
-            this->notesPath, fileName, timestamp, this);
+    OwnCloudService *ownCloud = OwnCloudService::instance();
+    ownCloud->restoreTrashedNoteOnServer(fileName, timestamp, this);
 }
 
 /**
@@ -2635,29 +3891,25 @@ void MainWindow::removeSelectedNotes() {
     // store updated notes to disk
     storeUpdatedNotesToDisk();
 
-    int selectedItemsCount = ui->noteTreeWidget->selectedItems().size();
+    int selectedItemsCount = getSelectedNotesCount();
 
     if (selectedItemsCount == 0) {
         return;
     }
 
-    if (QMessageBox::information(
+    if (Utils::Gui::question(
             this,
             tr("Remove selected notes"),
-            tr("Remove <strong>%n</strong> selected note(s)?\n\n"
-               "If the trash is enabled on your "
+            Utils::Misc::replaceOwnCloudText(
+                    tr("Remove <strong>%n</strong> selected note(s)?\n\n"
+                    "If the trash is enabled on your "
                     "ownCloud server you should be able to restore "
                     "them from there.",
-               "", selectedItemsCount),
-             tr("&Remove"), tr("&Cancel"), QString::null,
-             0, 1) == 0) {
+               "", selectedItemsCount)), "remove-notes") == QMessageBox::Yes) {
         const QSignalBlocker blocker(this->noteDirectoryWatcher);
         Q_UNUSED(blocker);
 
-        const QSignalBlocker blocker1(ui->noteTreeWidget);
-        Q_UNUSED(blocker1);
-
-        const QSignalBlocker blocker2(ui->noteTextEdit);
+        const QSignalBlocker blocker2(activeNoteTextEdit());
         Q_UNUSED(blocker2);
 
         const QSignalBlocker blocker3(ui->noteTextView);
@@ -2666,17 +3918,84 @@ void MainWindow::removeSelectedNotes() {
         const QSignalBlocker blocker4(ui->encryptedNoteTextEdit);
         Q_UNUSED(blocker4);
 
-        Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
-            QString name = item->text(0);
-            Note note = Note::fetchByName(name);
-            note.remove(true);
-            qDebug() << "Removed note " << name;
-        }
+        // we try to fix problems with note subfolders
+        directoryWatcherWorkaround(true);
 
-        loadNoteDirectoryList();
+        {
+            const QSignalBlocker blocker1(ui->noteTreeWidget);
+            Q_UNUSED(blocker1);
+
+            Q_FOREACH(QTreeWidgetItem *item,
+                      ui->noteTreeWidget->selectedItems()) {
+                    int id = item->data(0, Qt::UserRole).toInt();
+                    Note note = Note::fetch(id);
+                    note.remove(true);
+                    qDebug() << "Removed note " << note.getName();
+                }
+
+            // clear the text edit so it stays clear after removing the
+            // last note
+            activeNoteTextEdit()->clear();
+
+            loadNoteDirectoryList();
+        }
 
         // set a new first note
         resetCurrentNote();
+
+        // we try to fix problems with note subfolders
+        // we need to wait some time to turn the watcher on again because
+        // something is happening after this method that reloads the note folder
+        directoryWatcherWorkaround(false);
+    }
+}
+
+/**
+ * Removes selected note subfolders after a confirmation
+ */
+void MainWindow::removeSelectedNoteSubFolders() {
+    int selectedItemsCount =
+            ui->noteSubFolderTreeWidget->selectedItems().size();
+
+    if (selectedItemsCount == 0) {
+        return;
+    }
+
+    // gather the folders that are about to be deleted
+    QStringList noteSubFolderPathList;
+    QList<NoteSubFolder> noteSubFolderList;
+    Q_FOREACH(QTreeWidgetItem *item,
+              ui->noteSubFolderTreeWidget->selectedItems()) {
+            int id = item->data(0, Qt::UserRole).toInt();
+            NoteSubFolder noteSubFolder = NoteSubFolder::fetch(id);
+            if (noteSubFolder.isFetched()) {
+                noteSubFolderList << noteSubFolder;
+                noteSubFolderPathList << noteSubFolder.fullPath();
+            }
+    }
+
+    if (noteSubFolderList.count() == 0) {
+        return;
+    }
+
+    if (Utils::Gui::question(
+            this,
+            tr("Remove selected folders"),
+            tr("Remove <strong>%n</strong> selected folder(s)?"
+                   "<ul><li>%1</li></ul>"
+                   "All files and folders in these folders will be removed as"
+                       " well!",
+               "", selectedItemsCount).arg(noteSubFolderPathList.join(
+                    "</li><li>")),
+            "remove-folders") == QMessageBox::Yes) {
+        // delete the note subfolders
+        Q_FOREACH(NoteSubFolder noteSubFolder, noteSubFolderList) {
+                // remove the directory recursively from the file system
+                if (noteSubFolder.removeFromFileSystem()) {
+                    showStatusBarMessage(tr("Removed note subfolder: %1").arg(
+                            noteSubFolder.fullPath()));
+                }
+        }
     }
 }
 
@@ -2690,27 +4009,40 @@ void MainWindow::removeSelectedTags() {
         return;
     }
 
-    if (QMessageBox::information(
+    if (Utils::Gui::question(
             this,
             tr("Remove selected tags"),
             tr("Remove <strong>%n</strong> selected tag(s)? No notes will "
                        "be removed in this process.",
                "", selectedItemsCount),
-             tr("&Remove"), tr("&Cancel"), QString::null,
-             0, 1) == 0) {
+            "remove-tags") == QMessageBox::Yes) {
         const QSignalBlocker blocker(this->noteDirectoryWatcher);
         Q_UNUSED(blocker);
 
         const QSignalBlocker blocker1(ui->tagTreeWidget);
         Q_UNUSED(blocker1);
 
+        // workaround when signal blocking doesn't work correctly
+        directoryWatcherWorkaround(true, true);
+
         Q_FOREACH(QTreeWidgetItem *item, ui->tagTreeWidget->selectedItems()) {
             int tagId = item->data(0, Qt::UserRole).toInt();
             Tag tag = Tag::fetch(tagId);
             tag.remove();
             qDebug() << "Removed tag " << tag.getName();
+
+            // take care that the tag is removed from all notes
+            handleScriptingNotesTagRemoving(tag.getName(), true);
         }
 
+        if (ScriptingService::instance()->noteTaggingHookExists()) {
+            storeUpdatedNotesToDisk();
+        }
+
+        // disable workaround
+        directoryWatcherWorkaround(false, true);
+
+        reloadCurrentNoteTags();
         reloadTagTree();
     }
 }
@@ -2732,40 +4064,33 @@ void MainWindow::moveSelectedNotesToFolder(QString destinationFolder) {
 
     int selectedItemsCount = ui->noteTreeWidget->selectedItems().size();
 
-    if (QMessageBox::information(
+    if (Utils::Gui::question(
             this,
             tr("Move selected notes"),
             tr("Move %n selected note(s) to <strong>%2</strong>?", "",
                selectedItemsCount).arg(destinationFolder),
-            tr("&Move"), tr("&Cancel"), QString::null,
-            0, 1) == 0) {
+            "move-notes") == QMessageBox::Yes) {
         const QSignalBlocker blocker(this->noteDirectoryWatcher);
         Q_UNUSED(blocker);
 
         Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
-                QString name = item->text(0);
-                Note note = Note::fetchByName(name);
+                int noteId = item->data(0, Qt::UserRole).toInt();
+                Note note = Note::fetch(noteId);
+
+                if (!note.isFetched()) {
+                    continue;
+                }
 
                 // remove note path form directory watcher
                 this->noteDirectoryWatcher.removePath(note.fullNoteFilePath());
 
                 if (note.getId() == currentNote.getId()) {
-                    // reset the current note
-                    this->currentNote = Note();
-
-                    // clear the note text edit
-                    const QSignalBlocker blocker2(ui->noteTextEdit);
-                    Q_UNUSED(blocker2);
-                    ui->noteTextEdit->clear();
-
-                    // clear the encrypted note text edit
-                    const QSignalBlocker blocker3(ui->encryptedNoteTextEdit);
-                    Q_UNUSED(blocker3);
-                    ui->encryptedNoteTextEdit->clear();
+                    // unset the current note
+                    unsetCurrentNote();
                 }
 
                 // move note
-                bool result = note.move(destinationFolder);
+                bool result = note.moveToPath(destinationFolder);
                 if (result) {
                     qDebug() << "Note was moved:" << note.getName();
                 } else {
@@ -2778,25 +4103,77 @@ void MainWindow::moveSelectedNotesToFolder(QString destinationFolder) {
 }
 
 /**
+ * Returns a list of all selected notes
+ *
+ * @return
+ */
+QList<Note> MainWindow::selectedNotes() {
+    QList<Note> selectedNotes;
+
+    Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
+            int noteId = item->data(0, Qt::UserRole).toInt();
+            Note note = Note::fetch(noteId);
+
+            if (note.isFetched()) {
+                selectedNotes << note;
+            }
+        }
+
+    return selectedNotes;
+}
+
+/**
+ * Un-sets the current note
+ */
+void MainWindow::unsetCurrentNote() {
+    // reset the current note
+    currentNote = Note();
+
+    // clear the note preview
+    const QSignalBlocker blocker(ui->noteTextView);
+    Q_UNUSED(blocker);
+    ui->noteTextView->clear();
+
+    // clear the note text edit
+    const QSignalBlocker blocker2(ui->noteTextEdit);
+    Q_UNUSED(blocker2);
+    ui->noteTextEdit->clear();
+    ui->noteTextEdit->show();
+
+    // clear the encrypted note text edit
+    const QSignalBlocker blocker3(ui->encryptedNoteTextEdit);
+    Q_UNUSED(blocker3);
+    ui->encryptedNoteTextEdit->hide();
+    ui->encryptedNoteTextEdit->clear();
+
+    // set the note text edits to readonly
+    setNoteTextEditReadOnly(true);
+}
+
+/**
  * @brief Copies selected notes after a confirmation
  * @param destinationFolder
  */
 void MainWindow::copySelectedNotesToFolder(QString destinationFolder) {
     int selectedItemsCount = ui->noteTreeWidget->selectedItems().size();
 
-    if (QMessageBox::information(
+    if (Utils::Gui::question(
             this,
             tr("Copy selected notes"),
             tr("Copy %n selected note(s) to <strong>%2</strong>?", "",
                selectedItemsCount).arg(destinationFolder),
-            tr("&Copy"), tr("&Cancel"), QString::null, 0, 1) == 0) {
+            "copy-notes") == QMessageBox::Yes) {
         int copyCount = 0;
         Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
-                QString name = item->text(0);
-                Note note = Note::fetchByName(name);
+                int noteId = item->data(0, Qt::UserRole).toInt();
+                Note note = Note::fetch(noteId);
+
+                if (!note.isFetched()) {
+                    continue;
+                }
 
                 // copy note
-                bool result = note.copy(destinationFolder);
+                bool result = note.copyToPath(destinationFolder);
                 if (result) {
                     copyCount++;
                     qDebug() << "Note was copied:" << note.getName();
@@ -2805,10 +4182,10 @@ void MainWindow::copySelectedNotesToFolder(QString destinationFolder) {
                 }
             }
 
-        QMessageBox::information(
+        Utils::Gui::information(
                 this, tr("Done"),
                 tr("%n note(s) were copied to <strong>%2</strong>.", "",
-                   copyCount).arg(destinationFolder));
+                   copyCount).arg(destinationFolder), "notes-copied");
     }
 }
 
@@ -2818,30 +4195,66 @@ void MainWindow::copySelectedNotesToFolder(QString destinationFolder) {
 void MainWindow::tagSelectedNotes(Tag tag) {
     int selectedItemsCount = ui->noteTreeWidget->selectedItems().size();
 
-    if (QMessageBox::information(
+    if (Utils::Gui::question(
             this,
             tr("Tag selected notes"),
             tr("Tag %n selected note(s) with <strong>%2</strong>?", "",
                selectedItemsCount).arg(tag.getName()),
-            tr("&Tag"), tr("&Cancel"), QString::null, 0, 1) == 0) {
+            "tag-notes") == QMessageBox::Yes) {
         int tagCount = 0;
+        bool useScriptingEngine = ScriptingService::instance()
+                ->noteTaggingHookExists();
+
+        // workaround when signal block doesn't work correctly
+        directoryWatcherWorkaround(true, true);
+
         Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
-                QString name = item->text(0);
-                Note note = Note::fetchByName(name);
+                int noteId = item->data(0, Qt::UserRole).toInt();
+                Note note = Note::fetch(noteId);
+
+                if (!note.isFetched()) {
+                    continue;
+                }
+
+                const QSignalBlocker blocker(noteDirectoryWatcher);
+                Q_UNUSED(blocker);
+
+                if (useScriptingEngine) {
+                    // add the tag to the note text if defined via
+                    // scripting engine
+                    handleScriptingNoteTagging(note, tag.getName(),
+                                               false, false);
+                }
 
                 // tag note
                 bool result = tag.linkToNote(note);
                 if (result) {
                     tagCount++;
                     qDebug() << "Note was tagged:" << note.getName();
+
+                    // handle the coloring of the note in the note tree widget
+                    handleNoteTreeTagColoringForNote(note);
                 } else {
                     qWarning() << "Could not tag note:" << note.getName();
                 }
             }
 
+        if (useScriptingEngine) {
+            const QSignalBlocker blocker(this->noteDirectoryWatcher);
+            Q_UNUSED(blocker);
+
+            storeUpdatedNotesToDisk();
+        }
+
+        reloadCurrentNoteTags();
+        reloadTagTree();
+
         showStatusBarMessage(
-                tr("%n note(s) were tagged with <strong>%2</strong>.", "",
+                tr("%n note(s) were tagged with \"%2\"", "",
                    tagCount).arg(tag.getName()), 5000);
+
+        // turn off the workaround again
+        directoryWatcherWorkaround(false, true);
     }
 }
 
@@ -2851,33 +4264,101 @@ void MainWindow::tagSelectedNotes(Tag tag) {
 void MainWindow::removeTagFromSelectedNotes(Tag tag) {
     int selectedItemsCount = ui->noteTreeWidget->selectedItems().size();
 
-    if (QMessageBox::information(
+    if (Utils::Gui::question(
             this,
             tr("Remove tag from selected notes"),
             tr("Remove tag <strong>%1</strong> from %n selected note(s)?", "",
                selectedItemsCount).arg(tag.getName()),
-            tr("&Remove"), tr("&Cancel"), QString::null, 0, 1) == 0) {
+            "remove-tag-from-notes") == QMessageBox::Yes) {
         int tagCount = 0;
+        bool useScriptingEngine = ScriptingService::instance()
+                ->noteTaggingHookExists();
+
+        // workaround when signal blocking doesn't work correctly
+        directoryWatcherWorkaround(true, true);
+
         Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
-                QString name = item->text(0);
-                Note note = Note::fetchByName(name);
+                int noteId = item->data(0, Qt::UserRole).toInt();
+                Note note = Note::fetch(noteId);
+
+                if (!note.isFetched()) {
+                    continue;
+                }
+
+                const QSignalBlocker blocker(noteDirectoryWatcher);
+                Q_UNUSED(blocker);
+
+                if (useScriptingEngine) {
+                    // take care that the tag is removed from the note
+                    handleScriptingNoteTagging(note, tag.getName(),
+                                               true, false);
+                }
 
                 // tag note
                 bool result = tag.removeLinkToNote(note);
+
                 if (result) {
                     tagCount++;
                     qDebug() << "Tag was removed from note:" << note.getName();
+
+                    // handle the coloring of the note in the note tree widget
+                    handleNoteTreeTagColoringForNote(note);
                 } else {
                     qWarning() << "Could not remove tag from note:"
                     << note.getName();
                 }
             }
 
-        QMessageBox::information(
+        if (useScriptingEngine) {
+            const QSignalBlocker blocker(noteDirectoryWatcher);
+            Q_UNUSED(blocker);
+
+            storeUpdatedNotesToDisk();
+        }
+
+        reloadCurrentNoteTags();
+        reloadTagTree();
+        filterNotesByTag();
+
+        Utils::Gui::information(
                 this, tr("Done"),
                 tr("Tag <strong>%1</strong> was removed from %n note(s)", "",
-                   tagCount).arg(tag.getName()));
+                   tagCount).arg(tag.getName()), "tag-removed-from-notes");
+
+        // turn off the workaround again
+        directoryWatcherWorkaround(false, true);
     }
+}
+
+/**
+ * Activates or deactivates a workaround for the ill behaving directory watcher
+ *
+ * @param isNotesDirectoryWasModifiedDisabled
+ * @param alsoHandleNotesWereModified
+ */
+void MainWindow::directoryWatcherWorkaround(
+        bool isNotesDirectoryWasModifiedDisabled,
+        bool alsoHandleNotesWereModified) {
+    if (!isNotesDirectoryWasModifiedDisabled) {
+        Utils::Misc::waitMsecs(200);
+    }
+
+    _isNotesDirectoryWasModifiedDisabled = isNotesDirectoryWasModifiedDisabled;
+
+    if (alsoHandleNotesWereModified) {
+        _isNotesWereModifiedDisabled = isNotesDirectoryWasModifiedDisabled;
+    }
+}
+
+/**
+ * Handle the coloring of the note in the note tree widget
+ *
+ * @param note
+ */
+void MainWindow::handleNoteTreeTagColoringForNote(const Note &note) {
+    Tag colorTag = Tag::fetchOneOfNoteWithColor(note);
+    QTreeWidgetItem *noteItem = findNoteInNoteTreeWidget(note);
+    handleTreeWidgetItemTagColor(noteItem, colorTag);
 }
 
 /**
@@ -2892,31 +4373,61 @@ void MainWindow::updateCurrentFolderTooltip() {
 }
 
 /**
- * @brief Opens the settings dialog
+ * Opens the settings dialog
  */
-void MainWindow::openSettingsDialog(int tab) {
-    int currentNoteFolderId = NoteFolder::currentNoteFolderId();
-
-    // open the settings dialog
-    SettingsDialog *dialog = new SettingsDialog(tab, this);
-    int dialogResult = dialog->exec();
-
-    if (dialogResult == QDialog::Accepted) {
-        // read all relevant settings, that can be set in the settings dialog
-        readSettingsFromSettingsDialog();
-
-        // reset the note save timer
-        this->noteSaveTimer->stop();
-        this->noteSaveTimer->start(this->noteSaveIntervalTime * 1000);
+void MainWindow::openSettingsDialog(int page, bool openScriptRepository) {
+    if (_settingsDialog == Q_NULLPTR) {
+        _settingsDialog = new SettingsDialog(page, this);
+    } else {
+        _settingsDialog->readSettings();
+        _settingsDialog->setCurrentPage(page);
     }
 
-    // if the current note folder was changed we will change the note path
-    if (currentNoteFolderId != NoteFolder::currentNoteFolderId()) {
-        NoteFolder noteFolder = NoteFolder::currentNoteFolder();
+    if (openScriptRepository) {
+        QTimer::singleShot(150, _settingsDialog,
+                           SLOT(searchScriptInRepository()));
+    }
 
-        if (noteFolder.isFetched()) {
-            changeNoteFolder(noteFolder.getId(), true);
-        }
+    // open the settings dialog
+    _settingsDialog->exec();
+
+    // seems to safe a little leaking memory
+    // we must not null the dialog, this will crash if the ownCloud check
+    // tries to write to the labels and the dialog went away
+//    delete(_settingsDialog);
+//    _settingsDialog = Q_NULLPTR;
+
+    // shows a restart application notification if needed
+    if (showRestartNotificationIfNeeded()) {
+        return;
+    }
+
+    // make sure no settings get written after after we got the
+    // clearAppDataAndExit call
+    if (qApp->property("clearAppDataAndExit").toBool()) {
+        return;
+    }
+
+    // read all relevant settings, that can be set in the settings dialog,
+    // even if the dialog was canceled
+    readSettingsFromSettingsDialog();
+
+    // update the panels sort and order
+    updatePanelsSortOrder();
+
+    // reset the note save timer
+    this->noteSaveTimer->stop();
+    this->noteSaveTimer->start(this->noteSaveIntervalTime * 1000);
+
+    // reset the git commit timer
+    _gitCommitTimer->stop();
+    _gitCommitTimer->start(_gitCommitInterval * 1000);
+
+    // set the current note folder again in case its path was changed
+    NoteFolder noteFolder = NoteFolder::currentNoteFolder();
+
+    if (noteFolder.isFetched()) {
+        changeNoteFolder(noteFolder.getId(), true);
     }
 
     // reload note folders in case we changed them in the settings
@@ -2927,16 +4438,47 @@ void MainWindow::openSettingsDialog(int tab) {
 }
 
 /**
- * Shows the log dialog
+ * Shows a restart application notification if needed
+ *
+ * @return true if the applications is restarting
  */
-void MainWindow::showLogDialog() {
-    LogDialog::instance()->show();
+bool MainWindow::showRestartNotificationIfNeeded() {
+    bool needsRestart = qApp->property("needsRestart").toBool();
+
+    if (!needsRestart) {
+        return false;
+    }
+
+    qApp->setProperty("needsRestart", false);
+    QString title = tr("Restart application");
+    bool singleApplication = qApp->property("singleApplication").toBool();
+
+    if (singleApplication) {
+        QMessageBox::information(
+                this, title,
+                tr("You may need to restart the application manually to let "
+                           "the changes take effect."));
+    } else {
+        if (QMessageBox::information(
+                this, title,
+                tr("You may need to restart the application to let the changes "
+                           "take effect."),
+                tr("Restart"),
+                tr("Cancel"),
+                QString::null, 0, 1) == 0) {
+            storeSettings();
+            Utils::Misc::restartApplication();
+            return true;
+        }
+    }
+
+    return false;
 }
 
 /**
  * @brief Returns the active note text edit
  */
-QMarkdownTextEdit* MainWindow::activeNoteTextEdit() {
+QOwnNotesMarkdownTextEdit* MainWindow::activeNoteTextEdit() {
     return ui->noteTextEdit->isHidden() ?
                                   ui->encryptedNoteTextEdit : ui->noteTextEdit;
 }
@@ -2945,9 +4487,10 @@ QMarkdownTextEdit* MainWindow::activeNoteTextEdit() {
  * @brief Handles the linking of text
  */
 void MainWindow::handleTextNoteLinking() {
-    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
-    LinkDialog *dialog = new LinkDialog(tr("Link to an url or note"), this);
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    LinkDialog *dialog = new LinkDialog("", this);
     dialog->exec();
+
     if (dialog->result() == QDialog::Accepted) {
         QString url = dialog->getURL();
         QString noteName = dialog->getSelectedNoteName();
@@ -2976,64 +4519,20 @@ void MainWindow::handleTextNoteLinking() {
             } else {
                 // if user has selected a note
                 if (selectedText != "") {
-                    newText = "[" + selectedText + "]"
-                           "(note://" + noteNameForLink + ")";
-                } else {
-                    newText = "<note://" + noteNameForLink + ">";
+                    noteName = selectedText;
                 }
+
+                QString noteUrl = "note://" + noteNameForLink;
+
+                newText = "[" + noteName + "](" + noteUrl + ")";
             }
+
             textEdit->textCursor().insertText(newText);
         }
     }
+
+    delete(dialog);
 }
-
-/**
- * Downloads an url and stores it to a file
- */
-bool MainWindow::downloadUrlToFile(QUrl url, QFile *file) {
-    if (!file->open(QIODevice::WriteOnly)) {
-        return false;
-    }
-
-    if (!file->isWritable()) {
-        return false;
-    }
-
-    QNetworkAccessManager *manager = new QNetworkAccessManager(this);
-    QEventLoop loop;
-    QTimer timer;
-
-    timer.setSingleShot(true);
-    connect(&timer, SIGNAL(timeout()), &loop, SLOT(quit()));
-    connect(manager, SIGNAL(finished(QNetworkReply *)), &loop, SLOT(quit()));
-
-    // 10 sec timeout for the request
-    timer.start(10000);
-
-    QNetworkRequest networkRequest = QNetworkRequest(url);
-
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
-    networkRequest.setAttribute(QNetworkRequest::FollowRedirectsAttribute,
-                                true);
-#endif
-
-    QNetworkReply *reply = manager->get(networkRequest);
-    loop.exec();
-
-    // if we didn't get a timeout let's write the file
-    if (timer.isActive()) {
-        // get the text from the network reply
-        QByteArray data = reply->readAll();
-        if (data.size() > 0) {
-            file->write(data);
-            return true;
-        }
-    }
-
-    // timer elapsed, no reply from network request or empty data
-    return false;
-}
-
 
 /**
  * @brief Sets the current note from a CurrentNoteHistoryItem
@@ -3044,9 +4543,38 @@ void MainWindow::setCurrentNoteFromHistoryItem(NoteHistoryItem item) {
     qDebug() << item.getNote();
 
     setCurrentNote(item.getNote(), true, true, false);
-    QTextCursor c = ui->noteTextEdit->textCursor();
-    c.setPosition(item.getCursorPosition());
-    ui->noteTextEdit->setTextCursor(c);
+    item.restoreTextEditPosition(ui->noteTextEdit);
+}
+
+/**
+ * @brief Prepares the printer to print the content of a text edit widget
+ * @param textEdit
+ */
+bool MainWindow::preparePrintNotePrinter(QPrinter *printer) {
+    Utils::Misc::loadPrinterSettings(printer, "Printer/NotePrinting");
+
+    QPrintDialog dialog(printer, this);
+    dialog.setWindowTitle(tr("Print note"));
+    int ret = dialog.exec();
+
+    if (ret != QDialog::Accepted) {
+        return false;
+    }
+
+    Utils::Misc::storePrinterSettings(printer, "Printer/NotePrinting");
+    return true;
+}
+
+/**
+ * @brief Prints the content of a plain text edit widget
+ * @param textEdit
+ */
+void MainWindow::printNote(QPlainTextEdit *textEdit) {
+    QPrinter *printer = new QPrinter();
+
+    if (preparePrintNotePrinter(printer)) {
+        textEdit->document()->print(printer);
+    }
 }
 
 /**
@@ -3054,36 +4582,36 @@ void MainWindow::setCurrentNoteFromHistoryItem(NoteHistoryItem item) {
  * @param textEdit
  */
 void MainWindow::printNote(QTextEdit *textEdit) {
-    QPrinter printer;
+    QPrinter *printer = new QPrinter();
 
-    QPrintDialog dialog(&printer, this);
-    dialog.setWindowTitle(tr("Print note"));
-
-    if (dialog.exec() != QDialog::Accepted) {
-        return;
+    if (preparePrintNotePrinter(printer)) {
+        textEdit->document()->print(printer);
     }
-
-    textEdit->document()->print(&printer);
 }
 
 /**
- * @brief Exports the content of a text edit widget as PDF
- * @param textEdit
+ * @brief Prepares the printer dialog to exports the content of a text edit
+ *        widget as PDF
+ * @param printer
  */
-void MainWindow::exportNoteAsPDF(QTextEdit *textEdit) {
-    QPrinter printer(QPrinter::HighResolution);
-
+bool MainWindow::prepareExportNoteAsPDFPrinter(QPrinter *printer) {
 #ifdef Q_OS_LINUX
+    Utils::Misc::loadPrinterSettings(printer, "Printer/NotePDFExport");
+
     // under Linux we use the the QPageSetupDialog to change layout
     // settings of the PDF export
-    QPageSetupDialog pageSetupDialog(&printer, this);
+    QPageSetupDialog pageSetupDialog(printer, this);
 
     if (pageSetupDialog.exec() != QDialog::Accepted) {
-        return;
+        return false;
     }
+
+    Utils::Misc::storePrinterSettings(printer, "Printer/NotePDFExport");
 #else
     // under OS X and Windows the QPageSetupDialog dialog doesn't work,
     // we will use a workaround to select page sizes and the orientation
+
+    QSettings settings;
 
     // select the page size
     QStringList pageSizeStrings;
@@ -3098,19 +4626,22 @@ void MainWindow::exportNoteAsPDF(QTextEdit *textEdit) {
     bool ok;
     QString pageSizeString = QInputDialog::getItem(
             this, tr("Page size"), tr("Page size:"),
-            pageSizeStrings, 4, false, &ok);
+            pageSizeStrings,
+            settings.value("Printer/NotePDFExportPageSize", 4).toInt(),
+            false, &ok);
 
     if (!ok || pageSizeString.isEmpty()) {
-        return;
+        return false;
     }
 
     int pageSizeIndex = pageSizeStrings.indexOf(pageSizeString);
     if (pageSizeIndex == -1) {
-        return;
+        return false;
     }
 
     QPageSize pageSize(pageSizes.at(pageSizeIndex));
-    printer.setPageSize(pageSize);
+    settings.setValue("Printer/NotePDFExportPageSize", pageSizeIndex);
+    printer->setPageSize(pageSize);
 
     // select the orientation
     QStringList orientationStrings;
@@ -3120,49 +4651,75 @@ void MainWindow::exportNoteAsPDF(QTextEdit *textEdit) {
 
     QString orientationString = QInputDialog::getItem(
             this, tr("Orientation"), tr("Orientation:"),
-            orientationStrings, 0, false, &ok);
+            orientationStrings,
+            settings.value("Printer/NotePDFExportOrientation", 0).toInt(),
+            false, &ok);
 
     if (!ok || orientationString.isEmpty()) {
-        return;
+        return false;
     }
 
     int orientationIndex =
             orientationStrings.indexOf(orientationString);
     if (orientationIndex == -1) {
-        return;
+        return false;
     }
 
-    printer.setOrientation(orientations.at(orientationIndex));
+    printer->setOrientation(orientations.at(orientationIndex));
+    settings.setValue("Printer/NotePDFExportOrientation", orientationIndex);
 #endif
 
-    QFileDialog dialog;
+    FileDialog dialog("NotePDFExport");
     dialog.setFileMode(QFileDialog::AnyFile);
     dialog.setAcceptMode(QFileDialog::AcceptSave);
-    dialog.setDirectory(QDir::homePath());
-    dialog.setNameFilter(tr("PDF files (*.pdf)"));
+    dialog.setNameFilter(tr("PDF files") + " (*.pdf)");
     dialog.setWindowTitle(tr("Export current note as PDF"));
     dialog.selectFile(currentNote.getName() + ".pdf");
     int ret = dialog.exec();
 
     if (ret != QDialog::Accepted) {
-        return;
+        return false;
     }
 
-    QStringList fileNames = dialog.selectedFiles();
+    QString fileName = dialog.selectedFile();
 
-    if (fileNames.count() == 0) {
-        return;
+    if (fileName.isEmpty()) {
+        return false;
     }
-
-    QString fileName = fileNames.at(0);
 
     if (QFileInfo(fileName).suffix().isEmpty()) {
         fileName.append(".pdf");
     }
 
-    printer.setOutputFormat(QPrinter::PdfFormat);
-    printer.setOutputFileName(fileName);
-    textEdit->document()->print(&printer);
+    printer->setOutputFormat(QPrinter::PdfFormat);
+    printer->setOutputFileName(fileName);
+    return true;
+}
+
+/**
+ * @brief Exports the content of a plain text edit widget as PDF
+ * @param textEdit
+ */
+void MainWindow::exportNoteAsPDF(QPlainTextEdit *textEdit) {
+    QPrinter *printer = new QPrinter(QPrinter::HighResolution);
+
+    if (prepareExportNoteAsPDFPrinter(printer)) {
+        textEdit->document()->print(printer);
+        Utils::Misc::openFolderSelect(printer->outputFileName());
+    }
+}
+
+/**
+ * @brief Exports the content of a text edit widget as PDF
+ * @param textEdit
+ */
+void MainWindow::exportNoteAsPDF(QTextEdit *textEdit) {
+    QPrinter *printer = new QPrinter(QPrinter::HighResolution);
+
+    if (prepareExportNoteAsPDFPrinter(printer)) {
+        textEdit->document()->print(printer);
+        Utils::Misc::openFolderSelect(printer->outputFileName());
+    }
 }
 
 /**
@@ -3185,38 +4742,47 @@ void MainWindow::showAppMetricsNotificationIfNeeded() {
                 tr("&Ok"),
                 tr("Open &settings"),
                 QString::null, 0, 1) == 1) {
-            openSettingsDialog(SettingsDialog::NetworkTab);
+            openSettingsDialog(SettingsDialog::NetworkPage);
         }
     }
 }
 
 /**
- * Opens the todo list dialog
+ * Opens the task list dialog
  */
 void MainWindow::openTodoDialog(QString taskUid) {
+    // show main window to prevent crashes on Windows
+    show();
+
     QSettings settings;
     QStringList todoCalendarEnabledUrlList =
             settings.value("ownCloud/todoCalendarEnabledUrlList")
                     .toStringList();
 
-    // check if we have got any todo list enabled
+    // check if we have got any task list enabled
     if (todoCalendarEnabledUrlList.count() == 0) {
         if (QMessageBox::warning(
                 0, tr("No selected todo lists!"),
                 tr("You have not selected any todo lists.<br />"
-                           "Please check your <strong>Todo</strong>"
+                           "Please check your <strong>Todo</strong> "
                            "configuration in the settings!"),
                 tr("Open &settings"),
                 tr("&Cancel"),
                 QString::null, 0, 1) == 0) {
-            openSettingsDialog(SettingsDialog::TodoTab);
+            openSettingsDialog(SettingsDialog::TodoPage);
         }
 
         return;
     }
 
-    TodoDialog *dialog = new TodoDialog(this, taskUid, this);
-    dialog->exec();
+    if (_todoDialog == Q_NULLPTR) {
+        _todoDialog = new TodoDialog(this, taskUid, this);
+    } else {
+        _todoDialog->refreshUi();
+        _todoDialog->jumpToTask(taskUid);
+    }
+
+    _todoDialog->show();
 
     // generate the system tray context menu to show modified tasks
     generateSystemTrayContextMenu();
@@ -3233,20 +4799,38 @@ void MainWindow::openTodoDialog(QString taskUid) {
 // *
 // *****************************************************************************
 
+/**
+ * Triggers if the text in the note text edit was modified
+ */
 void MainWindow::on_noteTextEdit_textChanged() {
     Note note = this->currentNote;
     note.updateNoteTextFromDisk();
-    QString noteTextFromDisk = note.getNoteText();
 
-    QString text = this->ui->noteTextEdit->toPlainText();
+    // we are transforming line feeds, because in some instances Windows
+    // managed to sneak some "special" line feeds in
+    QString noteTextFromDisk = Utils::Misc::transformLineFeeds(
+            note.getNoteText());
+    QString text = Utils::Misc::transformLineFeeds(
+            ui->noteTextEdit->toPlainText());
 
-    if (text != noteTextFromDisk) {
+    // store the note to the database if the note text differs from the one
+    // on the disk or the note was already modified but not stored to disk
+    if ((text != noteTextFromDisk || currentNote.getHasDirtyData())) {
         this->currentNote.storeNewText(text);
         this->currentNote.refetch();
         this->currentNoteLastEdited = QDateTime::currentDateTime();
         _noteViewNeedsUpdate = true;
 
+        ScriptingService::instance()->onCurrentNoteChanged(&currentNote);
+
         updateEncryptNoteButtons();
+
+        QSettings settings;
+        if (settings.value("notesPanelSort", SORT_BY_LAST_CHANGE).toInt() == SORT_BY_LAST_CHANGE) {
+            makeCurrentNoteFirstInNoteList();
+        } else if (Utils::Misc::isNoteListPreview()) {
+            updateNoteTreeWidgetItem(currentNote);
+        }
 
         const QSignalBlocker blocker(ui->noteTreeWidget);
         Q_UNUSED(blocker);
@@ -3259,11 +4843,19 @@ void MainWindow::on_noteTextEdit_textChanged() {
 }
 
 void MainWindow::on_action_Quit_triggered() {
+    // this will be done again in the destructor, but we want to make sure
+    // nothing is logged to the log widget that might already be destroyed
+    qApp->setProperty("loggingEnabled", false);
+
     storeSettings();
     QApplication::quit();
 }
 
 void MainWindow::quitApp() {
+    // this will be done again in the destructor, but we want to make sure
+    // nothing is logged to the log widget that might already be destroyed
+    qApp->setProperty("loggingEnabled", false);
+
     QApplication::quit();
 }
 
@@ -3271,7 +4863,7 @@ void MainWindow::on_actionSet_ownCloud_Folder_triggered() {
     // store updated notes to disk
     storeUpdatedNotesToDisk();
 
-    openSettingsDialog(SettingsDialog::NoteFolderTab);
+    openSettingsDialog(SettingsDialog::NoteFolderPage);
 }
 
 void MainWindow::on_searchLineEdit_textChanged(const QString &arg1) {
@@ -3286,15 +4878,15 @@ void MainWindow::filterNotes(bool searchForText) {
     // filter the notes by text in the search line edit
     filterNotesBySearchLineEditText();
 
-    if (NoteFolder::isCurrentShowSubfolders()) {
+    if (NoteFolder::isCurrentShowSubfolders() &&
+            !_showNotesFromAllNoteSubFolders) {
         // filter the notes by note sub folder
         filterNotesByNoteSubFolders();
     }
 
-    if (isTagsEnabled()) {
-        // filter the notes by tag
-        filterNotesByTag();
-    }
+    // moved condition whether to filter notes by tag at all into
+    // filterNotesByTag() -- it can now be used as a slot at startup
+    filterNotesByTag();
 
     if (searchForText) {
         // let's highlight the text from the search line edit
@@ -3303,19 +4895,10 @@ void MainWindow::filterNotes(bool searchForText) {
 }
 
 /**
- * Checks if the vertical preview mode is enabled
- */
-bool MainWindow::isVerticalPreviewModeEnabled() {
-    QSettings settings;
-    return settings.value("verticalPreviewModeEnabled", false).toBool();
-}
-
-/**
  * Checks if tagging is enabled
  */
 bool MainWindow::isTagsEnabled() {
-    QSettings settings;
-    return settings.value("tagsEnabled", false).toBool();
+    return _taggingDockWidget->isVisible();
 }
 
 /**
@@ -3330,8 +4913,7 @@ bool MainWindow::isMarkdownViewEnabled() {
  * Checks if the note edit pane is enabled
  */
 bool MainWindow::isNoteEditPaneEnabled() {
-    QSettings settings;
-    return settings.value("noteEditPaneEnabled", true).toBool();
+    return _noteEditIsCentralWidget ? true : _noteEditDockWidget->isVisible();
 }
 
 /**
@@ -3344,7 +4926,9 @@ void MainWindow::filterNotesBySearchLineEditText() {
 
     // search notes when at least 2 characters were entered
     if (arg1.count() >= 2) {
-        QList<int> noteIdList = Note::searchInNotes(arg1);
+        QList<int> noteIdList = Note::searchInNotes(
+                arg1, _showNotesFromAllNoteSubFolders ||
+                    NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively());
 
         while (*it) {
             // hide all filtered notes
@@ -3365,6 +4949,10 @@ void MainWindow::filterNotesBySearchLineEditText() {
  * Does the note filtering by tags
  */
 void MainWindow::filterNotesByTag() {
+    if (!isTagsEnabled()) {
+        return; // do nothing
+    }
+
     int tagId = Tag::activeTagId();
     QStringList fileNameList;
 
@@ -3379,14 +4967,29 @@ void MainWindow::filterNotesByTag() {
             break;
         default:
             // check if there is an active tag
-            Tag tag = Tag::activeTag();
+            Tag activeTag = Tag::activeTag();
 
-            if (!tag.isFetched()) {
+            if (!activeTag.isFetched()) {
                 return;
             }
 
-            // fetch all linked note names
-            fileNameList = tag.fetchAllLinkedNoteFileNames();
+            QList<Tag> tags;
+
+            // check if the notes should be viewed recursively
+            if (Tag::isTaggingShowNotesRecursively()) {
+                tags = Tag::fetchRecursivelyByParentId(activeTag.getId());
+            } else {
+                tags << activeTag;
+            }
+
+            qDebug() << __func__ << " - 'tags': " << tags;
+
+            Q_FOREACH(Tag tag, tags) {
+                    // fetch all linked note names
+                    fileNameList << tag.fetchAllLinkedNoteFileNames(
+                            _showNotesFromAllNoteSubFolders);
+                }
+
             break;
     }
 
@@ -3399,6 +5002,9 @@ void MainWindow::filterNotesByTag() {
     // loop through all visible notes
     while (*it) {
         // hide all notes that are not linked to the active tag
+        // note subfolder are not taken into account here (note names are now
+        // not unique), but it should be ok because they are filtered by
+        // filterNotesByNoteSubFolders
         if (!fileNameList.contains((*it)->text(0))) {
             (*it)->setHidden(true);
         }
@@ -3411,11 +5017,27 @@ void MainWindow::filterNotesByTag() {
  * Does the note filtering by note sub folders
  */
 void MainWindow::filterNotesByNoteSubFolders() {
-    int subNoteFolderId = NoteSubFolder::activeSubNoteFolderId();
+    int activeNoteSubFolderId = NoteSubFolder::activeNoteSubFolderId();
+    QList<int> noteSubFolderIds;
+    QList<int> noteIdList;
 
-    // get all notes of a note sub folder
-    QList<Note> noteList = Note::fetchAllByNoteSubFolderId(subNoteFolderId);
-    QList<int> noteIdList = Note::noteIdListFromNoteList(noteList);
+    // check if the notes should be viewed recursively
+    if (NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively()) {
+        noteSubFolderIds = NoteSubFolder::fetchIdsRecursivelyByParentId(
+                activeNoteSubFolderId);
+    } else {
+        noteSubFolderIds << activeNoteSubFolderId;
+    }
+
+    qDebug() << __func__ << " - 'noteSubFolderIds': " << noteSubFolderIds;
+
+    // get the notes from the subfolders
+    Q_FOREACH(int noteSubFolderId, noteSubFolderIds) {
+            // get all notes of a note sub folder
+            QList<Note> noteList = Note::fetchAllByNoteSubFolderId(
+                    noteSubFolderId);
+            noteIdList << Note::noteIdListFromNoteList(noteList);
+        }
 
     // omit the already hidden notes
     QTreeWidgetItemIterator it(ui->noteTreeWidget,
@@ -3445,11 +5067,22 @@ void MainWindow::on_action_Find_note_triggered() {
 // jump to found note or create a new one if not found
 //
 void MainWindow::on_searchLineEdit_returnPressed() {
+    jumpToNoteOrCreateNew();
+}
+
+/**
+ * Jumps to found note or create a new one if not found
+ */
+void MainWindow::jumpToNoteOrCreateNew(bool disableLoadNoteDirectoryList) {
     // ignore if `return` was pressed in the completer
     if (_searchLineEditFromCompleter) {
         _searchLineEditFromCompleter = false;
         return;
     }
+
+    // this doesn't seem to work with note sub folders
+    const QSignalBlocker blocker(noteDirectoryWatcher);
+    Q_UNUSED(blocker);
 
     // add the current search text to the saved searches
     storeSavedSearch();
@@ -3462,55 +5095,60 @@ void MainWindow::on_searchLineEdit_returnPressed() {
 
     // if we can't find a note we create a new one
     if (note.getId() == 0) {
-        // create a headline in new notes by adding "=====" as second line
-        QString noteText = text + "\n";
-        for (int i = 0; i < text.length(); i++) {
-            noteText.append("=");
+        // check if a hook wants to set the text
+        QString noteText = ScriptingService::instance()->
+            callHandleNewNoteHeadlineHook(text);
+
+        // check if a hook changed the text
+        if (noteText.isEmpty()) {
+            // fallback to the old text if no hook changed the text
+            noteText = Note::createNoteHeader(text);
+        } else {
+            noteText.append("\n\n");
         }
-        noteText.append("\n\n");
+
+        NoteSubFolder noteSubFolder = NoteSubFolder::activeNoteSubFolder();
+        QString noteSubFolderPath = noteSubFolder.fullPath();
 
         note = Note();
         note.setName(text);
         note.setNoteText(noteText);
-        note.setNoteSubFolderId(NoteSubFolder::activeSubNoteFolderId());
+        note.setNoteSubFolderId(noteSubFolder.getId());
         note.store();
 
+        // workaround when signal block doesn't work correctly
+        directoryWatcherWorkaround(true);
+
+        // we even need a 2nd workaround because something triggers that the
+        // note folder was modified
+        noteDirectoryWatcher.removePath(notesPath);
+        noteDirectoryWatcher.removePath(noteSubFolderPath);
+
+        // store the note to disk
         // if a tag is selected add the tag to the just created note
         Tag tag = Tag::activeTag();
         if (tag.isFetched()) {
             tag.linkToNote(note);
         }
 
-        // store the note to disk
-        {
-            const QSignalBlocker blocker(noteDirectoryWatcher);
-            Q_UNUSED(blocker);
-
-            note.storeNoteTextFileToDisk();
-            showStatusBarMessage(
-                    tr("stored current note to disk"), 3000);
-
-            // add the file to the note directory watcher
-            noteDirectoryWatcher.addPath(note.fullNoteFilePath());
-        }
+        bool noteWasStored = note.storeNoteTextFileToDisk();
+        showStatusBarMessage(
+                noteWasStored ?
+                tr("Stored current note to disk") :
+                tr("Current note could not be stored to disk"), 3000);
 
         {
-            const QSignalBlocker blocker(ui->noteTreeWidget);
-            Q_UNUSED(blocker);
+            const QSignalBlocker blocker2(ui->noteTreeWidget);
+            Q_UNUSED(blocker2);
 
             // adds the note to the note tree widget
-            MainWindow::addNoteToNoteTreeWidget(note);
+            addNoteToNoteTreeWidget(note);
         }
 
-        qDebug() << __func__ <<
-        " - 'ui->noteTreeWidget->isSortingEnabled()': " <<
-            ui->noteTreeWidget->isSortingEnabled();
-
-        qDebug() << __func__ << " - 'ui->noteTreeWidget->sortColumn()': " <<
-        ui->noteTreeWidget->sortColumn();
-
 //        buildNotesIndex();
-        loadNoteDirectoryList();
+        if (!disableLoadNoteDirectoryList) {
+            loadNoteDirectoryList();
+        }
 
         // fetch note new (because all the IDs have changed after
         // the buildNotesIndex()
@@ -3518,6 +5156,16 @@ void MainWindow::on_searchLineEdit_returnPressed() {
 
         // clear search line edit so all notes will be viewed again
         ui->searchLineEdit->clear();
+
+        // add the file to the note directory watcher
+        noteDirectoryWatcher.addPath(note.fullNoteFilePath());
+
+        // add the paths from the workaround
+        noteDirectoryWatcher.addPath(notesPath);
+        noteDirectoryWatcher.addPath(noteSubFolderPath);
+
+        // turn on the method again
+        directoryWatcherWorkaround(false);
     }
 
     // jump to the found or created note
@@ -3534,28 +5182,66 @@ void MainWindow::on_action_Remove_note_triggered() {
 void MainWindow::on_actionAbout_QOwnNotes_triggered() {
     AboutDialog *dialog = new AboutDialog(this);
     dialog->exec();
+    delete(dialog);
 }
 
-//
-// Triggered by the shortcut to create new note with date in the headline
-//
-void MainWindow::on_action_Note_note_triggered() {
+/**
+ * Triggered by the shortcut to create a new note with date in the headline
+ */
+void MainWindow::on_action_New_note_triggered() {
+    QSettings settings;
+    bool newNoteAskHeadline = settings.value("newNoteAskHeadline").toBool();
+
+    // check if we want to ask for a headline
+    if (newNoteAskHeadline) {
+        bool ok;
+        QString headline = QInputDialog::getText(
+                this, tr("New note"), tr("Note headline"), QLineEdit::Normal,
+                "", &ok);
+
+        if (!ok) {
+            return;
+        }
+
+        if (!headline.isEmpty()) {
+            return createNewNote(headline, false);
+        }
+    }
+
+    // create a new note
+    createNewNote();
+}
+
+/**
+ * Creates a new note
+ *
+ * @param noteName
+ */
+void MainWindow::createNewNote(QString noteName, bool withNameAppend) {
+    // turn on note editing if it was disabled
+    if (!Utils::Misc::isNoteEditingAllowed()) {
+        ui->actionAllow_note_editing->trigger();
+    }
+
     // show the window in case we are using the system tray
     show();
 
-    QString text = ScriptingService::instance()->
-            callHandleNewNoteHeadlineHook();
+    if (noteName.isEmpty()) {
+        noteName = "Note";
+    }
 
-    // fallback if there was no QML hook to set the headline
-    if (text.isEmpty()) {
+    if (withNameAppend) {
         QDateTime currentDate = QDateTime::currentDateTime();
 
         // replacing ":" with "_" for Windows systems
-        text = "Note " + currentDate.toString(Qt::ISODate).replace(":", ".");
+        noteName = noteName + " " + currentDate.toString(Qt::ISODate)
+                .replace(":", ".");
     }
 
-    this->ui->searchLineEdit->setText(text);
-    on_searchLineEdit_returnPressed();
+    this->ui->searchLineEdit->setText(noteName);
+
+    // create a new note or jump to the existing
+    jumpToNoteOrCreateNew();
 }
 
 /*
@@ -3564,14 +5250,14 @@ void MainWindow::on_action_Note_note_triggered() {
  * examples:
  * - <note://MyNote> opens the note "MyNote"
  * - <note://my-note-with-spaces-in-the-name> opens the note "My Note with spaces in the name"
- * - <http://www.qownnotes.org> opens the web page
+ * - <https://www.qownnotes.org> opens the web page
  * - <file:///path/to/my/file/QOwnNotes.pdf> opens the file "/path/to/my/file/QOwnNotes.pdf" if the operating system supports that handler
  */
 void MainWindow::on_noteTextView_anchorClicked(const QUrl &url) {
     qDebug() << __func__ << " - 'url': " << url;
     QString scheme = url.scheme();
 
-    if ((scheme == "note" || scheme == "task")) {
+    if ((scheme == "note" || scheme == "noteid" || scheme == "task")) {
         openLocalUrl(url.toString());
     } else {
         ui->noteTextEdit->openUrl(url.toString());
@@ -3586,6 +5272,15 @@ void MainWindow::on_noteTextView_anchorClicked(const QUrl &url) {
  * - <note://my-note-with-spaces-in-the-name> opens the note "My Note with spaces in the name"
  */
 void MainWindow::openLocalUrl(QString urlString) {
+    if (urlString.isEmpty()) {
+        return;
+    }
+
+    // if urlString is no valid url we will try to convert it into a note url
+    if (!QOwnNotesMarkdownTextEdit::isValidUrl(urlString)) {
+        urlString = Note::getNoteURLFromFileName(urlString);
+    }
+
     // convert relative file urls to absolute urls and open them
     if (urlString.startsWith("file://..")) {
         QString windowsSlash = "";
@@ -3607,68 +5302,76 @@ void MainWindow::openLocalUrl(QString urlString) {
     QUrl url = QUrl(urlString);
     QString scheme = url.scheme();
 
-    if (scheme == "note") {
-        // add a ".com" to the filename to simulate a valid domain
-        QString fileName = url.host() + ".com";;
+    if (scheme == "noteid") { // jump to a note by note id
+        QRegularExpressionMatch match =
+                QRegularExpression(R"(^noteid:\/\/note-(\d+)$)").match(
+                        urlString);
 
-        // convert the ACE to IDN (internationalized domain names) to support
-        // links to notes with unicode characters in their names
-        // then remove the ".com" again
-        fileName = Utils::Misc::removeIfEndsWith(
-                QUrl::fromAce(fileName.toLatin1()), ".com");
-
-        // if it seem we have unicode characters in our filename let us use
-        // wildcards for each number, because full width numbers get somehow
-        // translated to normal numbers by the QTextEdit
-        if (fileName != url.host()) {
-            fileName.replace("1", "[1１]")
-                    .replace("2", "[2２]")
-                    .replace("3", "[3３]")
-                    .replace("4", "[4４]")
-                    .replace("5", "[5５]")
-                    .replace("6", "[6６]")
-                    .replace("7", "[7７]")
-                    .replace("8", "[8８]")
-                    .replace("9", "[9９]")
-                    .replace("0", "[0０]");
-        }
-
-        // this makes it possible to search for file names containing spaces
-        // instead of spaces a "-" has to be used in the note link
-        // example: note://my-note-with-spaces-in-the-name
-        fileName.replace("-", "?").replace("_", "?");
-
-        // we need to search for the case sensitive filename,
-        // we only get it lowercase by QUrl
-        QDir currentDir = QDir(this->notesPath);
-        QStringList files;
-        QStringList fileSearchList =
-                QStringList() << fileName + ".txt" << fileName + ".md";
-
-        // append the files with custom extension
-        fileSearchList.append(
-                Note::customNoteFileExtensionList(fileName + "."));
-
-        // search for files with that name
-        files = currentDir.entryList(fileSearchList,
-                                     QDir::Files | QDir::NoSymLinks);
-
-        // did we find files?
-        if (files.length() > 0) {
-            // take the first found file
-            fileName = files.first();
-
-            // try to fetch note
-            Note note = Note::fetchByFileName(fileName);
-
-            // does this note really exist?
+        if (match.hasMatch()) {
+            int noteId = match.captured(1).toInt();
+            Note note = Note::fetch(noteId);
             if (note.isFetched()) {
                 // set current note
                 setCurrentNote(note);
             }
+        } else {
+            qDebug() << "malformed url: " << urlString;
+        }
+    } else if (scheme == "note") { // jump to a note url string
+        // try to fetch a note from the url string
+        Note note = Note::fetchByUrlString(urlString);
+
+        // does this note really exist?
+        if (note.isFetched()) {
+            // set current note
+            setCurrentNote(note);
+
+            // if note sub-folder was different than the current we will
+            // switch to that note sub-folder
+            if (!note.isInCurrentNoteSubFolder()) {
+                qDebug() << "Switching note subfolder";
+
+                QTreeWidgetItem* item =
+                        Utils::Gui::getTreeWidgetItemWithUserData(
+                            ui->noteSubFolderTreeWidget,
+                            note.getNoteSubFolderId());
+
+                if (item != Q_NULLPTR) {
+                    const QSignalBlocker blocker(ui->noteSubFolderTreeWidget);
+                    Q_UNUSED(blocker);
+
+                    ui->noteSubFolderTreeWidget->clearSelection();
+                    item->setSelected(true);
+
+                    on_noteSubFolderTreeWidget_currentItemChanged(item, Q_NULLPTR);
+                }
+            }
+
+        } else {
+            // if the name of the linked note only consists of numbers we cannot
+            // use host() to get the filename, it would get converted to an
+            // ip-address
+            QRegularExpressionMatch match =
+                    QRegularExpression(R"(^\w+:\/\/(\d+)$)").match(urlString);
+            QString fileName = match.hasMatch() ?
+                               match.captured(1) : url.host();
+
+            // try to generate a useful title for the note
+            fileName = Utils::Misc::toStartCase(fileName.replace("_", " "));
+
+            // ask if we want to create a new note if note wasn't found
+            if (Utils::Gui::question(
+                    this,
+                    tr("Note was not found"),
+                    tr("Note was not found, create new note "
+                               "<strong>%1</strong>?")
+                            .arg(fileName), "open-url-create-note") ==
+                    QMessageBox::Yes) {
+                return createNewNote(fileName, false);
+            }
         }
     } else if (scheme == "task") {
-        openTodoDialog(url.host());
+        return openTodoDialog(url.host());
     }
 }
 
@@ -3683,21 +5386,40 @@ void MainWindow::on_actionCheck_for_updates_triggered() {
  * Open the issue page
  */
 void MainWindow::on_actionReport_problems_or_ideas_triggered() {
-    QDesktopServices::openUrl(QUrl("https://github.com/pbek/QOwnNotes/issues"));
+//    QDesktopServices::openUrl(QUrl("https://github.com/pbek/QOwnNotes/issues"));
+
+    openIssueAssistantDialog();
+}
+
+void MainWindow::openIssueAssistantDialog() {
+    if (_issueAssistantDialog == Q_NULLPTR) {
+        _issueAssistantDialog = new IssueAssistantDialog(this);
+    } else {
+    }
+
+    _issueAssistantDialog->show();
 }
 
 void MainWindow::on_actionAlphabetical_triggered(bool checked) {
     if (checked) {
-        sortAlphabetically = true;
-        ui->noteTreeWidget->sortItems(0, Qt::AscendingOrder);
+        QSettings settings;
+        settings.setValue("notesPanelSort", SORT_ALPHABETICAL);
+        loadNoteDirectoryList();
     }
+
+    // update the visibility of the note sort order selector
+    updateNoteSortOrderSelectorVisibility(checked);
 }
 
 void MainWindow::on_actionBy_date_triggered(bool checked) {
     if (checked) {
-        sortAlphabetically = false;
+        QSettings settings;
+        settings.setValue("notesPanelSort", SORT_BY_LAST_CHANGE);
         loadNoteDirectoryList();
     }
+
+    // update the visibility of the note sort order selector
+    updateNoteSortOrderSelectorVisibility(!checked);
 }
 
 void MainWindow::systemTrayIconClicked(
@@ -3712,6 +5434,8 @@ void MainWindow::systemTrayIconClicked(
             showWindow();
         }
     }
+#else
+    Q_UNUSED(reason);
 #endif
 }
 
@@ -3739,7 +5463,7 @@ void MainWindow::generateSystemTrayContextMenu() {
 
     // add menu entry to open the app
     QAction *openAction = menu->addAction(tr("Open QOwnNotes"));
-    openAction->setIcon(QIcon(":/images/icon.png"));
+    openAction->setIcon(getSystemTrayIcon());
 
     connect(openAction, SIGNAL(triggered()),
             this, SLOT(showWindow()));
@@ -3753,7 +5477,7 @@ void MainWindow::generateSystemTrayContextMenu() {
             QIcon(":icons/breeze-qownnotes/16x16/document-new.svg")));
 
     connect(createNoteAction, SIGNAL(triggered()),
-            this, SLOT(on_action_Note_note_triggered()));
+            this, SLOT(on_action_New_note_triggered()));
 
     int maxNotes = Note::countAll();
 
@@ -3846,15 +5570,6 @@ void MainWindow::generateSystemTrayContextMenu() {
     trayIcon->setContextMenu(menu);
 }
 
-void MainWindow::on_actionShow_system_tray_triggered(bool checked) {
-    showSystemTray = checked;
-    if (checked) {
-        trayIcon->show();
-    } else {
-        trayIcon->hide();
-    }
-}
-
 void MainWindow::on_action_Settings_triggered() {
     // open the settings dialog
     openSettingsDialog();
@@ -3868,11 +5583,12 @@ void MainWindow::on_actionShow_versions_triggered() {
 
     ui->actionShow_versions->setDisabled(true);
     showStatusBarMessage(
-            tr("note versions are currently loaded from your ownCloud server"),
-            20000);
+            Utils::Misc::replaceOwnCloudText(
+                    tr("Note versions are currently loaded from your ownCloud "
+                       "server")), 20000);
 
-    OwnCloudService *ownCloud = new OwnCloudService(this);
-    ownCloud->loadVersions(this->currentNote.getFileName(), this);
+    OwnCloudService *ownCloud = OwnCloudService::instance();
+    ownCloud->loadVersions(this->currentNote.relativeNoteFilePath("/"), this);
 }
 
 void MainWindow::enableShowVersionsButton() {
@@ -3882,10 +5598,11 @@ void MainWindow::enableShowVersionsButton() {
 void MainWindow::on_actionShow_trash_triggered() {
     ui->actionShow_trash->setDisabled(true);
     showStatusBarMessage(
-            tr("trashed notes are currently loaded from your ownCloud server"),
-            20000);
+            Utils::Misc::replaceOwnCloudText(
+                    tr("Trashed notes are currently loaded from your ownCloud"
+                       " server")), 20000);
 
-    OwnCloudService *ownCloud = new OwnCloudService(this);
+    OwnCloudService *ownCloud = OwnCloudService::instance();
     ownCloud->loadTrash(this);
 }
 
@@ -3897,35 +5614,170 @@ void MainWindow::on_actionSelect_all_notes_triggered() {
     selectAllNotes();
 }
 
+
 /**
- * @brief create the additional menu entries for the note text edit field
+ * Creates the additional menu entries for the note text edit field
+ *
  * @param pos
  */
 void MainWindow::on_noteTextEdit_customContextMenuRequested(const QPoint &pos) {
-    QPoint globalPos = ui->noteTextEdit->mapToGlobal(pos);
-    QMenu *menu = ui->noteTextEdit->createStandardContextMenu();
+    noteTextEditCustomContextMenuRequested(ui->noteTextEdit, pos);
+}
+
+/**
+ * Creates the additional menu entries for the encrypted note text edit field
+ *
+ * @param pos
+ */
+void MainWindow::on_encryptedNoteTextEdit_customContextMenuRequested(
+        const QPoint &pos) {
+    noteTextEditCustomContextMenuRequested(ui->encryptedNoteTextEdit, pos);
+}
+
+/**
+ * Creates the additional menu entries for a note text edit field
+ *
+ * @param noteTextEdit
+ * @param pos
+ */
+void MainWindow::noteTextEditCustomContextMenuRequested(
+        QOwnNotesMarkdownTextEdit *noteTextEdit, const QPoint &pos) {
+    QPoint globalPos = noteTextEdit->mapToGlobal(pos);
+    QMenu *menu = noteTextEdit->createStandardContextMenu();
+    bool isAllowNoteEditing = Utils::Misc::isNoteEditingAllowed();
+    bool isTextSelected = isNoteTextSelected();
+
+    QAction *copyCodeBlockAction = menu->addAction(tr("Copy code block"));
+    copyCodeBlockAction->setIcon(QIcon::fromTheme(
+            "edit-copy", QIcon(":icons/breeze-qownnotes/16x16/edit-copy.svg")));
+    const QTextBlock &currentTextBlock = noteTextEdit->cursorForPosition(pos).block();
+    const int userState = currentTextBlock.userState();
+    copyCodeBlockAction->setEnabled(
+            userState == MarkdownHighlighter::HighlighterState::CodeBlock ||
+            userState == MarkdownHighlighter::HighlighterState::CodeBlockEnd);
 
     menu->addSeparator();
 
-    QString linkTextActionName =
-            ui->noteTextEdit->textCursor().selectedText() != "" ?
+    // add the print menu
+    QMenu *printMenu = menu->addMenu(tr("Print"));
+    QIcon printIcon = QIcon::fromTheme(
+            "document-print",
+            QIcon(":icons/breeze-qownnotes/16x16/document-print.svg"));
+    printMenu->setIcon(printIcon);
+
+    // add the print selected text action
+    QAction *printTextAction = printMenu->addAction(tr("Print selected text"));
+    printTextAction->setEnabled(isTextSelected);
+    printTextAction->setIcon(printIcon);
+
+    // add the print selected text (preview) action
+    QAction *printHTMLAction = printMenu->addAction(
+            tr("Print selected text (preview)"));
+    printHTMLAction->setEnabled(isTextSelected);
+    printHTMLAction->setIcon(printIcon);
+
+    // add the export menu
+    QMenu *exportMenu = menu->addMenu(tr("Export"));
+    exportMenu->setIcon(QIcon::fromTheme(
+            "document-export",
+            QIcon(":icons/breeze-qownnotes/16x16/document-export.svg")));
+
+    QIcon pdfIcon = QIcon::fromTheme(
+            "application-pdf",
+            QIcon(":icons/breeze-qownnotes/16x16/application-pdf.svg"));
+
+    // add the export selected text action
+    QAction *exportTextAction = exportMenu->addAction(
+            tr("Export selected text as PDF"));
+    exportTextAction->setEnabled(isTextSelected);
+    exportTextAction->setIcon(pdfIcon);
+
+    // add the export selected text (preview) action
+    QAction *exportHTMLAction = exportMenu->addAction(
+            tr("Export selected text as PDF (preview)"));
+    exportHTMLAction->setEnabled(isTextSelected);
+    exportHTMLAction->setIcon(pdfIcon);
+
+    menu->addSeparator();
+
+    QString linkTextActionName = isTextSelected ?
                 tr("&Link selected text") : tr("Insert &link");
     QAction *linkTextAction = menu->addAction(linkTextActionName);
-    linkTextAction->setShortcut(QKeySequence("Ctrl+L"));
+    linkTextAction->setShortcut(ui->actionInsert_Link_to_note->shortcut());
+    linkTextAction->setEnabled(isAllowNoteEditing);
 
-    QAction *pasteMediaAction = menu->addAction(tr("Paste HTML or media"));
-    pasteMediaAction->setShortcut(QKeySequence("Ctrl+Shift+V"));
+    QAction *searchAction = menu->addAction(
+            ui->actionSearch_text_on_the_web->text());
+    searchAction->setShortcut(ui->actionSearch_text_on_the_web->shortcut());
+    searchAction->setEnabled(isTextSelected);
+
+    // add some other existing menu entries
+    menu->addAction(ui->actionPaste_image);
+    menu->addAction(ui->actionAutocomplete);
+    menu->addAction(ui->actionSplit_note_at_cursor_position);
+
+    // add the custom actions to the context menu
+    if (!_noteTextEditContextMenuActions.isEmpty()) {
+        menu->addSeparator();
+
+        Q_FOREACH(QAction *action, _noteTextEditContextMenuActions) {
+                menu->addAction(action);
+            }
+    }
 
     QAction *selectedItem = menu->exec(globalPos);
     if (selectedItem) {
         if (selectedItem == linkTextAction) {
             // handle the linking of text with a note
             handleTextNoteLinking();
-        } else if (selectedItem == pasteMediaAction) {
-            // paste HTML or media into the note
-            pasteMediaIntoNote();
+        } else if (selectedItem == searchAction) {
+            // search for the selected text on the web
+            on_actionSearch_text_on_the_web_triggered();
+        } else if (selectedItem == printTextAction) {
+            // print the selected text
+            QOwnNotesMarkdownTextEdit *textEdit =
+                    new QOwnNotesMarkdownTextEdit(this);
+            textEdit->setPlainText(selectedNoteTextEditText());
+            printNote(textEdit);
+        } else if (selectedItem == printHTMLAction) {
+            // print the selected text (preview)
+            QString html = currentNote.textToMarkdownHtml(
+                    selectedNoteTextEditText(), NoteFolder::currentLocalPath(),
+                    getMaxImageWidth());
+            QTextEdit *textEdit = new QTextEdit(this);
+            textEdit->setHtml(html);
+            printNote(textEdit);
+        } else if (selectedItem == exportTextAction) {
+            // export the selected text as PDF
+            QOwnNotesMarkdownTextEdit *textEdit =
+                    new QOwnNotesMarkdownTextEdit(this);
+            textEdit->setPlainText(selectedNoteTextEditText());
+            exportNoteAsPDF(textEdit);
+        } else if (selectedItem == exportHTMLAction) {
+            // export the selected text (preview) as PDF
+            QString html = currentNote.textToMarkdownHtml(
+                    selectedNoteTextEditText(), NoteFolder::currentLocalPath(),
+                    getMaxImageWidth());
+            QTextEdit *textEdit = new QTextEdit(this);
+            textEdit->setHtml(html);
+            exportNoteAsPDF(textEdit);
+        } else if (selectedItem == copyCodeBlockAction) {
+            // copy the text from a copy block around currentTextBlock to the
+            // clipboard
+            Utils::Gui::copyCodeBlockText(currentTextBlock);
         }
     }
+}
+
+/**
+ * Checks if text in a note is selected
+ *
+ * @return
+ */
+bool MainWindow::isNoteTextSelected() {
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QString selectedText = textEdit->textCursor().selectedText().trimmed();
+    return !selectedText.isEmpty();
 }
 
 void MainWindow::on_actionInsert_Link_to_note_triggered() {
@@ -3934,7 +5786,7 @@ void MainWindow::on_actionInsert_Link_to_note_triggered() {
 }
 
 void MainWindow::on_action_DuplicateText_triggered() {
-    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
     textEdit->duplicateText();
 }
 
@@ -3956,23 +5808,28 @@ void MainWindow::on_action_Forward_in_note_history_triggered() {
 
 void MainWindow::on_action_Shortcuts_triggered() {
     QDesktopServices::openUrl(
-            QUrl("http://www.qownnotes.org/shortcuts/QOwnNotes"));
+            QUrl("https://www.qownnotes.org/shortcuts/QOwnNotes"));
 }
 
 void MainWindow::on_action_Knowledge_base_triggered() {
-    QDesktopServices::openUrl(QUrl("http://www.qownnotes.org/Knowledge-base"));
+    QDesktopServices::openUrl(QUrl("https://www.qownnotes.org/Knowledge-base"));
 }
 
 /**
- * @brief Inserts the current date in ISO 8601 format
+ * Inserts the current date
  */
 void MainWindow::on_actionInsert_current_time_triggered() {
-    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
     QTextCursor c = textEdit->textCursor();
     QDateTime dateTime = QDateTime::currentDateTime();
+    QSettings settings;
+    QString format = settings.value("insertTimeFormat").toString();
+    QString text = format.isEmpty() ?
+                   dateTime.toString(Qt::SystemLocaleShortDate) :
+                   dateTime.toString(format);
 
-    // insert the current date in ISO 8601 format
-    c.insertText(dateTime.toString(Qt::SystemLocaleShortDate));
+    // insert the current date
+    c.insertText(text);
 }
 
 void MainWindow::on_actionOpen_List_triggered() {
@@ -3983,6 +5840,9 @@ void MainWindow::on_actionOpen_List_triggered() {
  * @brief Exports the current note as PDF (markdown)
  */
 void MainWindow::on_action_Export_note_as_PDF_markdown_triggered() {
+    // reload the preview in case it is turned off
+    setNoteTextFromNote(&currentNote, true, true);
+
     exportNoteAsPDF(ui->noteTextView);
 }
 
@@ -3990,7 +5850,7 @@ void MainWindow::on_action_Export_note_as_PDF_markdown_triggered() {
  * @brief Exports the current note as PDF (text)
  */
 void MainWindow::on_action_Export_note_as_PDF_text_triggered() {
-    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
     exportNoteAsPDF(textEdit);
 }
 
@@ -3998,6 +5858,9 @@ void MainWindow::on_action_Export_note_as_PDF_text_triggered() {
  * @brief Prints the current note (markdown)
  */
 void MainWindow::on_action_Print_note_markdown_triggered() {
+    // reload the preview in case it is turned off
+    setNoteTextFromNote(&currentNote, true, true);
+
     printNote(ui->noteTextView);
 }
 
@@ -4005,7 +5868,7 @@ void MainWindow::on_action_Print_note_markdown_triggered() {
  * @brief Prints the current note (text)
  */
 void MainWindow::on_action_Print_note_text_triggered() {
-    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
     printNote(textEdit);
 }
 
@@ -4013,19 +5876,17 @@ void MainWindow::on_action_Print_note_text_triggered() {
  * @brief Inserts a chosen image at the current cursor position in the note text edit
  */
 void MainWindow::on_actionInsert_image_triggered() {
-    QFileDialog dialog;
-    dialog.setFileMode(QFileDialog::AnyFile);
+    FileDialog dialog("InsertImage");
+    dialog.setFileMode(QFileDialog::ExistingFile);
     dialog.setAcceptMode(QFileDialog::AcceptOpen);
-    dialog.setDirectory(QDir::homePath());
-    dialog.setNameFilter(tr("Image files (*.jpg *.png *.gif)"));
+    dialog.setNameFilter(tr("Image files") + " (*.jpg *.png *.gif)");
     dialog.setWindowTitle(tr("Select image to insert"));
     int ret = dialog.exec();
 
     if (ret == QDialog::Accepted) {
-        QStringList fileNames = dialog.selectedFiles();
-        if (fileNames.count() > 0) {
-            QString fileName = fileNames.at(0);
+        QString fileName = dialog.selectedFile();
 
+        if (!fileName.isEmpty()) {
             QFile file(fileName);
 
             // insert the image
@@ -4038,14 +5899,15 @@ void MainWindow::on_actionInsert_image_triggered() {
  * Inserts a media file into a note
  */
 bool MainWindow::insertMedia(QFile *file) {
-    QString text = getInsertMediaMarkdown(file);
+    QString text = Note::getInsertMediaMarkdown(file);
+
     if (!text.isEmpty()) {
         ScriptingService* scriptingService = ScriptingService::instance();
         // attempts to ask a script for an other markdown text
         text = scriptingService->callInsertMediaHook(file, text);
         qDebug() << __func__ << " - 'text': " << text;
 
-        QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+        QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
         QTextCursor c = textEdit->textCursor();
 
         // if we try to insert media in the first line of the note (aka.
@@ -4065,33 +5927,39 @@ bool MainWindow::insertMedia(QFile *file) {
 }
 
 /**
- * Returns the markdown of the inserted media file into a note
+ * Inserts a file attachment into a note
  */
-QString MainWindow::getInsertMediaMarkdown(QFile *file) {
-    if (file->exists() && (file->size() > 0)) {
-        QDir mediaDir(notesPath + QDir::separator() + "media");
+bool MainWindow::insertAttachment(QFile *file) {
+    QString text = Note::getInsertAttachmentMarkdown(file);
 
-        // created the media folder if it doesn't exist
-        if (!mediaDir.exists()) {
-            mediaDir.mkpath(mediaDir.path());
+    if (!text.isEmpty()) {
+        qDebug() << __func__ << " - 'text': " << text;
+
+        QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
+        QTextCursor c = textEdit->textCursor();
+
+        // if we try to insert the attachment in the first line of the note
+        // (aka. note name) move the cursor to the last line
+        if (currentNoteLineNumber() == 1) {
+            c.movePosition(QTextCursor::End, QTextCursor::MoveAnchor);
+            textEdit->setTextCursor(c);
         }
 
-        QFileInfo fileInfo(file->fileName());
+        // add a space if we are not at the start of a line or if there is no
+        // space in front of the current cursor position
+        c.movePosition(QTextCursor::Left, QTextCursor::KeepAnchor);
+        if (!c.atBlockStart() && c.selectedText() != " ") {
+            text = " " + text;
+        }
 
-        // find a random name for the new file
-        QString newFileName =
-                QString::number(qrand()) + "." + fileInfo.suffix();
+        // insert the attachment link
+        c = textEdit->textCursor();
+        c.insertText(text);
 
-        // copy the file the the media folder
-        file->copy(mediaDir.path() + QDir::separator() + newFileName);
-
-        // return the image link
-        // we add a "\n" in the end so that hoedown recognizes multiple images
-        return "![" + fileInfo.baseName() + "](file://media/" +
-                newFileName + ")\n";
+        return true;
     }
 
-    return "";
+    return false;
 }
 
 /**
@@ -4099,7 +5967,7 @@ QString MainWindow::getInsertMediaMarkdown(QFile *file) {
  */
 int MainWindow::currentNoteLineNumber()
 {
-    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
     QTextCursor cursor = textEdit->textCursor();
 
     QTextDocument *doc = textEdit->document();
@@ -4120,11 +5988,11 @@ int MainWindow::currentNoteLineNumber()
  */
 void MainWindow::on_actionShow_changelog_triggered() {
     QDesktopServices::openUrl(
-            QUrl("http://www.qownnotes.org/changelog/QOwnNotes"));
+            QUrl("https://www.qownnotes.org/changelog/QOwnNotes"));
 }
 
 void MainWindow::on_action_Find_text_in_note_triggered() {
-    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
     textEdit->searchWidget()->activate();
 }
 
@@ -4140,33 +6008,48 @@ void MainWindow::on_action_Encrypt_note_triggered()
         return;
     }
 
-    QString labelText =
-            tr("Please enter your <strong>password</strong> to encrypt the note."
+    // the password dialog can be disabled by scripts
+    bool dialogDisabled = qApp->property("encryptionPasswordDisabled").toBool();
+
+    if (!dialogDisabled) {
+        QString labelText = tr(
+            "Please enter your <strong>password</strong> to encrypt the note."
             "<br />Keep in mind that you have to <strong>remember</strong> "
             "your password to read the content of the note<br /> and that you "
-           "can <strong>only</strong> do that <strong>in QOwnNotes</strong>!");
-    PasswordDialog* dialog = new PasswordDialog(this, labelText, true);
-    int dialogResult = dialog->exec();
+            "can <strong>only</strong> do that <strong>in QOwnNotes</strong>!");
+        PasswordDialog* dialog = new PasswordDialog(this, labelText, true);
+        int dialogResult = dialog->exec();
 
-    // if user pressed ok take the password
-    if (dialogResult == QDialog::Accepted) {
+        // if the user didn't pressed ok return
+        if (dialogResult != QDialog::Accepted) {
+            return;
+        }
+
+        // take the password
         QString password = dialog->password();
 
-        // if password wasn't empty encrypt the note
-        if (!password.isEmpty()) {
-            currentNote.setCryptoPassword(password);
-            currentNote.store();
-            QString noteText = currentNote.encryptNoteText();
-            ui->noteTextEdit->setPlainText(noteText);
+        // if password was empty return
+        if (password.isEmpty()) {
+            return;
         }
+
+        // set the password
+        currentNote.setCryptoPassword(password);
+        currentNote.store();
+
+        delete(dialog);
     }
+
+    // encrypt the note
+    QString noteText = currentNote.encryptNoteText();
+    ui->noteTextEdit->setPlainText(noteText);
+    updateNoteTextEditReadOnly();
 }
 
 /**
  * Enables or disables the encrypt note buttons
  */
-void MainWindow::updateEncryptNoteButtons()
-{
+void MainWindow::updateEncryptNoteButtons() {
     currentNote.refetch();
     bool hasEncryptedNoteText = currentNote.hasEncryptedNoteText();
 
@@ -4178,8 +6061,7 @@ void MainWindow::updateEncryptNoteButtons()
 /**
  * Attempt to decrypt note text
  */
-void MainWindow::on_actionDecrypt_note_triggered()
-{
+void MainWindow::on_actionDecrypt_note_triggered() {
     currentNote.refetch();
     if (!currentNote.hasEncryptedNoteText()) {
         return;
@@ -4187,10 +6069,10 @@ void MainWindow::on_actionDecrypt_note_triggered()
 
     if (QMessageBox::warning(
             this, tr("Decrypt note and store it as plain text"),
-            tr("Your note will be decrypted and stored as plain text gain. Keep "
-                    "in mind that the unencrypted note will possibly be synced "
-                    "to your server and sensitive text may be exposed!<br />"
-                    "Do you want to decrypt your note?"),
+            tr("Your note will be decrypted and stored as plain text again. "
+                    "Keep in mind that the unencrypted note will possibly be "
+                    "synced to your server and sensitive text may be exposed!"
+                    "<br />Do you want to decrypt your note?"),
             tr("&Decrypt"), tr("&Cancel"), QString::null,
             0, 1) == 1) {
         return;
@@ -4203,14 +6085,14 @@ void MainWindow::on_actionDecrypt_note_triggered()
         ui->noteTextEdit->setText(currentNote.getDecryptedNoteText());
         ui->noteTextEdit->show();
         ui->noteTextEdit->setFocus();
+        updateNoteTextEditReadOnly();
     }
 }
 
 /**
  * Lets the user edit an encrypted note text in a 2nd text edit
  */
-void MainWindow::on_actionEdit_encrypted_note_triggered()
-{
+void MainWindow::on_actionEdit_encrypted_note_triggered() {
     currentNote.refetch();
     if (!currentNote.hasEncryptedNoteText()) {
         return;
@@ -4228,22 +6110,21 @@ void MainWindow::on_actionEdit_encrypted_note_triggered()
         ui->encryptedNoteTextEdit->show();
         ui->encryptedNoteTextEdit->setFocus();
         _noteViewNeedsUpdate = true;
+        updateNoteTextEditReadOnly();
     }
 }
 
 /**
  * Puts the encrypted text back to the note text edit
  */
-void MainWindow::on_encryptedNoteTextEdit_textChanged()
-{
+void MainWindow::on_encryptedNoteTextEdit_textChanged() {
     currentNote.storeNewDecryptedText(ui->encryptedNoteTextEdit->toPlainText());
 }
 
 /**
  * Opens the current note in an external editor
  */
-void MainWindow::on_action_Open_note_in_external_editor_triggered()
-{
+void MainWindow::on_action_Open_note_in_external_editor_triggered() {
     QSettings settings;
     QString externalEditorPath =
             settings.value("externalEditorPath").toString();
@@ -4271,22 +6152,19 @@ void MainWindow::on_action_Open_note_in_external_editor_triggered()
 /**
  * Exports the current note as markdown file
  */
-void MainWindow::on_action_Export_note_as_markdown_triggered()
-{
-    QFileDialog dialog;
+void MainWindow::on_action_Export_note_as_markdown_triggered() {
+    FileDialog dialog("NoteMarkdownExport");
     dialog.setFileMode(QFileDialog::AnyFile);
     dialog.setAcceptMode(QFileDialog::AcceptSave);
-    dialog.setDirectory(QDir::homePath());
-    dialog.setNameFilter(tr("Markdown files (*.md)"));
+    dialog.setNameFilter(tr("Markdown files") + " (*.md)");
     dialog.setWindowTitle(tr("Export current note as Markdown file"));
     dialog.selectFile(currentNote.getName() + ".md");
     int ret = dialog.exec();
 
     if (ret == QDialog::Accepted) {
-        QStringList fileNames = dialog.selectedFiles();
-        if (fileNames.count() > 0) {
-            QString fileName = fileNames.at(0);
+        QString fileName = dialog.selectedFile();
 
+        if (!fileName.isEmpty()) {
             if (QFileInfo(fileName).suffix().isEmpty()) {
                 fileName.append(".md");
             }
@@ -4304,6 +6182,7 @@ void MainWindow::on_action_Export_note_as_markdown_triggered()
             out << ui->noteTextEdit->toPlainText();
             file.flush();
             file.close();
+            Utils::Misc::openFolderSelect(fileName);
         }
     }
 }
@@ -4315,7 +6194,7 @@ void MainWindow::showEvent(QShowEvent* event) {
 
 void MainWindow::on_actionGet_invloved_triggered() {
     QDesktopServices::openUrl(
-            QUrl("http://www.qownnotes.org/Knowledge-base/"
+            QUrl("https://www.qownnotes.org/Knowledge-base/"
                          "How-can-I-get-involved-with-QOwnNotes"));
 }
 
@@ -4328,12 +6207,11 @@ void MainWindow::storeNoteBookmark(int slot) {
         return;
     }
 
-    QTextCursor c = ui->noteTextEdit->textCursor();
-    NoteHistoryItem item = NoteHistoryItem(&currentNote, c.position());
+    NoteHistoryItem item = NoteHistoryItem(&currentNote, ui->noteTextEdit);
     noteBookmarks[slot] = item;
 
     showStatusBarMessage(
-            tr("bookmarked note position at slot %1").arg(
+            tr("Bookmarked note position at slot %1").arg(
                     QString::number(slot)), 3000);
 }
 
@@ -4349,7 +6227,7 @@ void MainWindow::gotoNoteBookmark(int slot) {
         setCurrentNoteFromHistoryItem(item);
 
         showStatusBarMessage(
-                tr("jumped to bookmark position at slot %1").arg(
+                tr("Jumped to bookmark position at slot %1").arg(
                         QString::number(slot)), 3000);
     }
 }
@@ -4357,13 +6235,20 @@ void MainWindow::gotoNoteBookmark(int slot) {
 /**
  * Inserts a code block at the current cursor position
  */
-void MainWindow::on_actionInset_code_block_triggered() {
-    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+void MainWindow::on_actionInsert_code_block_triggered() {
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
     QTextCursor c = textEdit->textCursor();
     QString selectedText = c.selection().toPlainText();
 
     if (selectedText.isEmpty()) {
-        c.insertText("``");
+        // insert multi-line code block if cursor is in an empty line
+        if (c.atBlockStart() && c.atBlockEnd()) {
+            c.insertText("```\n\n```");
+            c.movePosition(QTextCursor::Left, QTextCursor::MoveAnchor, 3);
+        } else {
+            c.insertText("``");
+        }
+
         c.movePosition(QTextCursor::Left, QTextCursor::MoveAnchor);
         textEdit->setTextCursor(c);
     } else {
@@ -4423,29 +6308,29 @@ void MainWindow::on_actionToggle_distraction_free_mode_triggered()
  * Tracks an action
  */
 void MainWindow::trackAction(QAction *action) {
+    if (action == Q_NULLPTR) {
+        return;
+    }
+
     MetricsService::instance()->sendVisitIfEnabled(
             "action/" + action->objectName());
 }
 
 void MainWindow::resizeEvent(QResizeEvent* event) {
-    ui->noteTextEdit->setPaperMargins(event->size().width());
-    ui->encryptedNoteTextEdit->setPaperMargins(event->size().width());
     ui->tagTreeWidget->resizeColumnToContents(0);
     ui->tagTreeWidget->resizeColumnToContents(1);
     ui->noteSubFolderTreeWidget->resizeColumnToContents(0);
     ui->noteSubFolderTreeWidget->resizeColumnToContents(1);
+    QMainWindow::resizeEvent(event);
 }
 
 /**
  * Toggles the visibility of the toolbars
  */
 void MainWindow::on_actionShow_toolbar_triggered(bool checked) {
-    ui->mainToolBar->setVisible(checked);
-    _formattingToolbar->setVisible(checked);
-    _insertingToolbar->setVisible(checked);
-    _encryptionToolbar->setVisible(checked);
-    _windowToolbar->setVisible(checked);
-    _quitToolbar->setVisible(checked);
+    Q_FOREACH(QToolBar *toolbar, findChildren<QToolBar*>()) {
+            toolbar->setVisible(checked);
+        }
 }
 
 /**
@@ -4465,12 +6350,13 @@ void MainWindow::toolbarVisibilityChanged(bool visible) {
  * Checks if at least one toolbar is visible
  */
 bool MainWindow::isToolbarVisible() {
-    return ui->mainToolBar->isVisible() ||
-            _formattingToolbar->isVisible() ||
-            _insertingToolbar->isVisible() ||
-            _encryptionToolbar->isVisible() ||
-            _windowToolbar->isVisible() ||
-            _quitToolbar->isVisible();
+    Q_FOREACH(QToolBar *toolbar, findChildren<QToolBar*>()) {
+            if (toolbar->isVisible()) {
+                return true;
+            }
+        }
+
+    return false;
 }
 
 void MainWindow::dfmEditorWidthActionTriggered(QAction *action) {
@@ -4478,8 +6364,8 @@ void MainWindow::dfmEditorWidthActionTriggered(QAction *action) {
     settings.setValue("DistractionFreeMode/editorWidthMode",
                       action->whatsThis().toInt());
 
-    ui->noteTextEdit->setPaperMargins(this->width());
-    ui->encryptedNoteTextEdit->setPaperMargins(this->width());
+    ui->noteTextEdit->setPaperMargins();
+    ui->encryptedNoteTextEdit->setPaperMargins();
 }
 
 /**
@@ -4510,7 +6396,7 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
                 mimeData);
 
         if (!text.isEmpty()) {
-            QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+            QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
             QTextCursor c = textEdit->textCursor();
 
             // insert text from QML
@@ -4537,9 +6423,13 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
 
                     // only allow markdown and text files to be copied as note
                     if (isValidNoteFile(file)) {
+                        NoteSubFolder noteSubFolder =
+                                NoteSubFolder::activeNoteSubFolder();
+                        QString noteSubFolderPath = noteSubFolder.fullPath();
+
                         // copy file to notes path
                         bool success = file->copy(
-                                notesPath + QDir::separator() +
+                                noteSubFolderPath + QDir::separator() +
                                 fileInfo.fileName());
 
                         if (success) {
@@ -4549,14 +6439,20 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
                         }
                     // only allow image files to be inserted as image
                     } else if (isValidMediaFile(file)) {
-                        showStatusBarMessage(tr("inserting image"));
+                        showStatusBarMessage(tr("Inserting image"));
 
                         // insert the image
                         insertMedia(file);
 
-                        showStatusBarMessage(tr("done inserting image"), 3000);
+                        showStatusBarMessage(tr("Done inserting image"), 3000);
                     } else {
-                        skipCount++;
+                        showStatusBarMessage(tr("Inserting attachment"));
+
+                        // inserting the attachment
+                        insertAttachment(file);
+
+                        showStatusBarMessage(tr("Done inserting attachment"),
+                                             3000);
                     }
                 } else {
                     skipCount++;
@@ -4565,7 +6461,7 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
 
         QString message;
         if (successCount > 0) {
-            message += tr("copied %n note(s) to %1", "", successCount)
+            message += tr("Copied %n note(s) to %1", "", successCount)
                     .arg(notesPath);
         }
 
@@ -4575,7 +6471,7 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
             }
 
             message += tr(
-                    "failed to copy %n note(s) (most likely already existing)",
+                    "Failed to copy %n note(s) (most likely already existing)",
                     "", failureCount);
         }
 
@@ -4585,7 +6481,7 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
             }
 
             message += tr(
-                    "skipped copying of %n note(s) "
+                    "Skipped copying of %n note(s) "
                             "(no markdown or text file or not readable)",
                     "", skipCount);
         }
@@ -4598,7 +6494,7 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
         QImage image = mimeData->imageData().value<QImage>();
 
         if (!image.isNull()) {
-            showStatusBarMessage(tr("saving temporary image"));
+            showStatusBarMessage(tr("Saving temporary image"));
 
             QTemporaryFile tempFile(
                     QDir::tempPath() + QDir::separator() +
@@ -4611,13 +6507,13 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
                 // insert media into note
                 QFile *file = new QFile(tempFile.fileName());
 
-                showStatusBarMessage(tr("inserting image"));
+                showStatusBarMessage(tr("Inserting image"));
                 insertMedia(file);
 
-                showStatusBarMessage(tr("done inserting image"), 3000);
+                showStatusBarMessage(tr("Done inserting image"), 3000);
             } else {
                 showStatusBarMessage(
-                        tr("temporary file can't be opened"), 3000);
+                        tr("Temporary file can't be opened"), 3000);
             }
         }
     }
@@ -4628,57 +6524,11 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
  * Images are also downloaded
  */
 void MainWindow::insertHtml(QString html) {
-    qDebug() << __func__ << " - 'html': " << html;
-
-    // remove some blocks
-    html.remove(QRegularExpression(
-            "<head[^>]*>([^<]+)<\\/head>",
-            QRegularExpression::CaseInsensitiveOption));
-
-    html.remove(QRegularExpression(
-            "<script[^>]*>([^<]+)<\\/script>",
-            QRegularExpression::CaseInsensitiveOption));
-
-    html.remove(QRegularExpression(
-            "<style[^>]*>([^<]+)<\\/style>",
-            QRegularExpression::CaseInsensitiveOption));
-
-    // replace some html tags with markdown
-    html.replace(QRegularExpression(
-            "<strong[^>]*>([^<]+)<\\/strong>",
-            QRegularExpression::CaseInsensitiveOption), "**\\1**");
-    html.replace(QRegularExpression(
-            "<b[^>]*>([^<]+)<\\/b>",
-            QRegularExpression::CaseInsensitiveOption), "**\\1**");
-    html.replace(QRegularExpression(
-            "<em[^>]*>([^<]+)<\\/em>",
-            QRegularExpression::CaseInsensitiveOption), "*\\1*");
-    html.replace(QRegularExpression(
-            "<i[^>]*>([^<]+)<\\/i>",
-            QRegularExpression::CaseInsensitiveOption), "*\\1*");
-    html.replace(QRegularExpression(
-            "<h1[^>]*>([^<]+)<\\/h1>",
-            QRegularExpression::CaseInsensitiveOption), "\n# \\1\n");
-    html.replace(QRegularExpression(
-            "<h2[^>]*>([^<]+)<\\/h2>",
-            QRegularExpression::CaseInsensitiveOption), "\n## \\1\n");
-    html.replace(QRegularExpression(
-            "<h3[^>]*>([^<]+)<\\/h3>",
-            QRegularExpression::CaseInsensitiveOption), "\n### \\1\n");
-    html.replace(QRegularExpression("<h4[^>]*>([^<]+)<\\/h4>",
-            QRegularExpression::CaseInsensitiveOption), "\n#### \\1\n");
-    html.replace(QRegularExpression(
-            "<h5[^>]*>([^<]+)<\\/h5>",
-            QRegularExpression::CaseInsensitiveOption), "\n##### \\1\n");
-    html.replace(QRegularExpression(
-            "<br[^>]*>",
-            QRegularExpression::CaseInsensitiveOption), "\n");
-    html.replace(QRegularExpression(
-            "<a[^>]+href=\"([^\"]+)\"[^>]*>([^<]+)<\\/a>",
-            QRegularExpression::CaseInsensitiveOption), "[\\2](\\1)");
+    // convert html tags to markdown
+    html = Utils::Misc::htmlToMarkdown(html);
 
     // match image tags
-    QRegularExpression re("<img[^>]+src=\"([^\"]+)\"[^>]*>",
+    QRegularExpression re("<img.+?src=\"(.+?)\".*?>",
                           QRegularExpression::CaseInsensitiveOption);
     QRegularExpressionMatchIterator i = re.globalMatch(html);
 
@@ -4686,7 +6536,7 @@ void MainWindow::insertHtml(QString html) {
     while (i.hasNext()) {
         QRegularExpressionMatch match = i.next();
         QString imageTag = match.captured(0);
-        QUrl imageUrl = QUrl(match.captured(1) );
+        QUrl imageUrl = QUrl(match.captured(1));
 
         qDebug() << __func__ << " - 'imageUrl': " << imageUrl;
 
@@ -4694,54 +6544,33 @@ void MainWindow::insertHtml(QString html) {
             continue;
         }
 
-        showStatusBarMessage(tr("downloading %1").arg(imageUrl.toString()));
+        showStatusBarMessage(tr("Downloading %1").arg(imageUrl.toString()));
 
-        // try to get the suffix from the url
-        QString suffix =
-                imageUrl.toString().split(".", QString::SkipEmptyParts).last();
-        if (suffix.isEmpty()) {
-            suffix = "image";
-        }
+        // download the image and get the media markdown code for it
+        QString markdownCode = Note::downloadUrlToMedia(imageUrl);
 
-        // remove strings like "?b=16068071000" from the suffix
-        suffix.remove(QRegularExpression("\\?.+$"));
-
-        QTemporaryFile *tempFile = new QTemporaryFile(
-                QDir::tempPath() + QDir::separator() + "media-XXXXXX." +
-                        suffix);
-
-        if (tempFile->open()) {
-            // download the image to the temporary file
-            if (downloadUrlToFile(imageUrl, tempFile)) {
-                // copy image to media folder and generate markdown code for
-                // the image
-                QString markdownCode = getInsertMediaMarkdown(tempFile);
-                if (!markdownCode.isEmpty()) {
-                    // replace image tag with markdown code
-                    html.replace(imageTag, markdownCode);
-                }
-            }
+        if (!markdownCode.isEmpty()) {
+            // replace the image tag with markdown code
+            html.replace(imageTag, markdownCode);
         }
     }
 
-    showStatusBarMessage(tr("done downloading images"));
+    showStatusBarMessage(tr("Downloading images finished"));
 
     // remove all html tags
-    html.remove(QRegularExpression("<[^>]*>"));
+    html.remove(QRegularExpression("<.+?>"));
 
-    // remove the last character, that is broken
-    html = html.left(html.size() - 1);
+    // unescape some html special characters
+    html = Utils::Misc::unescapeHtml(html);
 
-    qDebug() << __func__ << " - 'html': " << html;
-
-    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
     QTextCursor c = textEdit->textCursor();
 
     c.insertText(html);
 }
 
 /**
- * Evaluates if file is a note file
+ * Evaluates if file is a media file
  */
 bool MainWindow::isValidMediaFile(QFile *file) {
     QStringList mediaExtensions = QStringList() << "jpg" << "png" << "gif";
@@ -4751,7 +6580,7 @@ bool MainWindow::isValidMediaFile(QFile *file) {
 }
 
 /**
- * Evaluates if file is a media file
+ * Evaluates if file is a note file
  */
 bool MainWindow::isValidNoteFile(QFile *file) {
     QStringList mediaExtensions = QStringList() << "txt" << "md";
@@ -4778,56 +6607,95 @@ void MainWindow::pasteMediaIntoNote() {
     handleInsertingFromMimeData(mimeData);
 }
 
-void MainWindow::on_actionShow_note_in_file_manager_triggered()
-{
+void MainWindow::on_actionShow_note_in_file_manager_triggered() {
     Utils::Misc::openFolderSelect(currentNote.fullNoteFilePath());
+}
+
+/**
+ * Attempts to undo the formatting on a selected string
+ *
+ * @param formatter
+ * @return
+ */
+bool MainWindow::undoFormatting(QString formatter) {
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QTextCursor c = textEdit->textCursor();
+    QString selectedText = c.selectedText();
+    int formatterLength = formatter.length();
+    int selectionStart = c.selectionStart();
+    int selectionEnd = c.selectionEnd();
+
+    c.setPosition(selectionStart - formatterLength);
+    c.setPosition(selectionEnd + formatterLength, QTextCursor::KeepAnchor);
+    QString selectedTextWithFormatter = c.selectedText();
+
+    // if the formatter characters were found we remove them
+    if (selectedTextWithFormatter.startsWith(formatter) &&
+            selectedTextWithFormatter.endsWith(formatter)) {
+        c.insertText(selectedText);
+        return true;
+    }
+
+    return false;
+}
+
+/**
+ * Applies a formatter to a selected string
+ *
+ * @param formatter
+ */
+void MainWindow::applyFormatter(QString formatter) {
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QTextCursor c = textEdit->textCursor();
+    QString selectedText = c.selectedText();
+
+    // first try to undo an existing formatting
+    if (undoFormatting(formatter)) {
+        return;
+    }
+
+    if (selectedText.isEmpty()) {
+        c.insertText(formatter.repeated(2));
+        c.movePosition(QTextCursor::Left, QTextCursor::MoveAnchor,
+                       formatter.length());
+        textEdit->setTextCursor(c);
+    } else {
+       QRegularExpressionMatch match =
+               QRegularExpression(R"(^(\s*)(.+?)(\s*)$)").match(selectedText);
+        if (match.hasMatch()) {
+            c.insertText(match.captured(1) + formatter + match.captured(2) +
+                                 formatter + match.captured(3));
+        }
+    }
 }
 
 /**
  * Inserts a bold block at the current cursor position
  */
-void MainWindow::on_actionFormat_text_bold_triggered()
-{
-    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
-    QTextCursor c = textEdit->textCursor();
-    QString selectedText = textEdit->textCursor().selectedText();
-
-    if (selectedText.isEmpty()) {
-        c.insertText("****");
-        c.movePosition(QTextCursor::Left, QTextCursor::MoveAnchor, 2);
-        textEdit->setTextCursor(c);
-    } else {
-        c.insertText("**" + selectedText + "**");
-    }
+void MainWindow::on_actionFormat_text_bold_triggered() {
+    applyFormatter("**");
 }
 
 /**
  * Inserts an italic block at the current cursor position
  */
-void MainWindow::on_actionFormat_text_italic_triggered()
-{
-    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
-    QTextCursor c = textEdit->textCursor();
-    QString selectedText = textEdit->textCursor().selectedText();
-
-    if (selectedText.isEmpty()) {
-        c.insertText("**");
-        c.movePosition(QTextCursor::Left, QTextCursor::MoveAnchor);
-        textEdit->setTextCursor(c);
-    } else {
-        c.insertText("*" + selectedText + "*");
-    }
+void MainWindow::on_actionFormat_text_italic_triggered() {
+    applyFormatter("*");
 }
 
 /**
  * Increases the note text font size by one
  */
-void MainWindow::on_action_Increase_note_text_size_triggered()
-{
+void MainWindow::on_action_Increase_note_text_size_triggered() {
     int fontSize = ui->noteTextEdit
             ->modifyFontSize(QOwnNotesMarkdownTextEdit::Increase);
     ui->encryptedNoteTextEdit->setStyles();
-    ui->encryptedNoteTextEdit->highlighter()->parse();
+
+    if (isInDistractionFreeMode()) {
+        ui->noteTextEdit->setPaperMargins();
+        ui->encryptedNoteTextEdit->setPaperMargins();
+    }
+
     showStatusBarMessage(
             tr("Increased font size to %1 pt").arg(fontSize), 3000);
 }
@@ -4835,12 +6703,16 @@ void MainWindow::on_action_Increase_note_text_size_triggered()
 /**
  * Decreases the note text font size by one
  */
-void MainWindow::on_action_Decrease_note_text_size_triggered()
-{
+void MainWindow::on_action_Decrease_note_text_size_triggered() {
     int fontSize = ui->noteTextEdit
             ->modifyFontSize(QOwnNotesMarkdownTextEdit::Decrease);
     ui->encryptedNoteTextEdit->setStyles();
-    ui->encryptedNoteTextEdit->highlighter()->parse();
+
+    if (isInDistractionFreeMode()) {
+        ui->noteTextEdit->setPaperMargins();
+        ui->encryptedNoteTextEdit->setPaperMargins();
+    }
+
     showStatusBarMessage(
             tr("Decreased font size to %1 pt").arg(fontSize), 3000);
 }
@@ -4848,13 +6720,13 @@ void MainWindow::on_action_Decrease_note_text_size_triggered()
 /**
  * Resets the note text font size
  */
-void MainWindow::on_action_Reset_note_text_size_triggered()
-{
+void MainWindow::on_action_Reset_note_text_size_triggered() {
     int fontSize = ui->noteTextEdit
             ->modifyFontSize(QOwnNotesMarkdownTextEdit::Reset);
     ui->encryptedNoteTextEdit->setStyles();
-    ui->encryptedNoteTextEdit->highlighter()->parse();
-    showStatusBarMessage(tr("Reset font size to %1 pt").arg(fontSize), 3000);
+    showStatusBarMessage(tr("Reset font size to %1 pt", "Will be shown after "
+            "the font size is reset by 'Reset note text size'").arg(
+            fontSize), 3000);
 
     QTextCursor cursor(ui->noteTextEdit->document()->findBlockByNumber(3));
 
@@ -4866,12 +6738,20 @@ void MainWindow::on_action_Reset_note_text_size_triggered()
 /**
  * Sets the note folder from the recent note folder combobox
  */
-void MainWindow::on_noteFolderComboBox_currentIndexChanged(int index)
-{
+void MainWindow::on_noteFolderComboBox_currentIndexChanged(int index) {
     int noteFolderId = ui->noteFolderComboBox->itemData(index).toInt();
     NoteFolder noteFolder = NoteFolder::fetch(noteFolderId);
+
     if (noteFolder.isFetched()) {
         changeNoteFolder(noteFolderId);
+    }
+
+    // hide the noteSubFolderDockWidget menu entry if sub-folders are
+    // not enabled
+    QAction *action = findAction("togglePanel-noteSubFolderDockWidget");
+
+    if (action != Q_NULLPTR) {
+        action->setVisible(NoteFolder::isCurrentShowSubfolders());
     }
 
     // hide the note folder combobox if it should not be visible
@@ -4881,24 +6761,53 @@ void MainWindow::on_noteFolderComboBox_currentIndexChanged(int index)
 /**
  * Hides the note folder combobox if it should not be visible
  */
-void MainWindow::hideNoteFolderComboBoxIfNeeded() const {
-    QSettings settings;
-    if (!settings.value("MainWindow/showRecentNoteFolderInMainArea").toBool()) {
-        ui->noteFolderComboBox->hide();
+void MainWindow::hideNoteFolderComboBoxIfNeeded() {
+    if (!_noteFolderDockWidgetWasVisible) {
+        _noteFolderDockWidget->hide();
+        _noteFolderDockWidgetWasVisible = true;
     }
 }
 
 /**
  * Reloads the tag tree
  */
-void MainWindow::reloadTagTree()
-{
+void MainWindow::reloadTagTree() {
     qDebug() << __func__;
+
+    // take care that the tags are synced from the notes to the internal db
+    handleScriptingNotesTagUpdating();
+
+    QSettings settings;
+
+    // remove all broken note tag links
+    Tag::removeBrokenLinks();
 
     ui->tagTreeWidget->clear();
 
-    // add an item to view all notes
-    int linkCount = Note::countAll();
+    int activeNoteSubFolderId = _showNotesFromAllNoteSubFolders ? -1 : NoteSubFolder::activeNoteSubFolderId();
+    QList<int> noteSubFolderIds;
+    QList<int> noteIdList;
+    int untaggedNoteCount = 0;
+    
+    // check if the notes should be viewed recursively
+    if (NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively()) {
+        noteSubFolderIds = NoteSubFolder::fetchIdsRecursivelyByParentId(activeNoteSubFolderId);
+    } else {
+        noteSubFolderIds << activeNoteSubFolderId;
+    }
+    
+    qDebug() << __func__ << " - 'noteSubFolderIds': " << noteSubFolderIds;
+    
+    // get the notes from the subfolders
+    Q_FOREACH(int noteSubFolderId, noteSubFolderIds) {
+        // get all notes of a note sub folder
+        QList<Note> noteList = Note::fetchAllByNoteSubFolderId(noteSubFolderId);
+        untaggedNoteCount += Note::countAllNotTagged(noteSubFolderId);
+        noteIdList << Note::noteIdListFromNoteList(noteList);
+    }
+
+    // create an item to view all notes
+    int linkCount = _showNotesFromAllNoteSubFolders ? Note::countAll() : noteIdList.count();
     QString toolTip = tr("show all notes (%1)").arg(QString::number(linkCount));
 
     QTreeWidgetItem *allItem = new QTreeWidgetItem();
@@ -4912,19 +6821,19 @@ void MainWindow::reloadTagTree()
     allItem->setIcon(0, QIcon::fromTheme(
             "edit-copy",
             QIcon(":icons/breeze-qownnotes/16x16/edit-copy.svg")));
-    ui->tagTreeWidget->addTopLevelItem(allItem);
 
-    // add an empty item
-//    QTreeWidgetItem *emptyItem = new QTreeWidgetItem();
-//    emptyItem->setData(0, Qt::UserRole, 0);
-//    emptyItem->setFlags(allItem->flags() & ~Qt::ItemIsSelectable);
-//    ui->tagTreeWidget->addTopLevelItem(emptyItem);
-
-    // add all tags recursively as items
+    // this time, the tags come first
     buildTagTreeForParentItem();
+    // and get sorted
+    if (settings.value("tagsPanelSort").toInt() == SORT_ALPHABETICAL) {
+        ui->tagTreeWidget->sortItems(0, toQtOrder(settings.value("tagsPanelOrder").toInt()));
+    }
+    // now add 'All notes' to the top
+    ui->tagTreeWidget->insertTopLevelItem(0, allItem);
+
 
     // add an item to view untagged notes if there are any
-    linkCount = Note::countAllNotTagged();
+    linkCount = _showNotesFromAllNoteSubFolders ? Note::countAllNotTagged() : untaggedNoteCount;
 
     if (linkCount > 0) {
         toolTip = tr("show all untagged notes (%1)")
@@ -4936,14 +6845,16 @@ void MainWindow::reloadTagTree()
         untaggedItem->setToolTip(0, toolTip);
         untaggedItem->setToolTip(1, toolTip);
         untaggedItem->setData(0, Qt::UserRole, Tag::AllUntaggedNotesId);
-        untaggedItem->setFlags(allItem->flags() & ~Qt::ItemIsSelectable);
+        untaggedItem->setFlags(untaggedItem->flags() & ~Qt::ItemIsSelectable);
         untaggedItem->setIcon(0, QIcon::fromTheme(
                 "edit-copy",
                 QIcon(":icons/breeze-qownnotes/16x16/edit-copy.svg")));
         ui->tagTreeWidget->addTopLevelItem(untaggedItem);
     }
 
-    // decorate root of there are multiple levels to be able to expand them
+    // decorate root if there are multiple levels to be able to collapse them,
+    // because double clicking will not collapse the first level, but edit
+    // the clicked tag
     ui->tagTreeWidget->setRootIsDecorated(
             Tag::countAllParentId(0) != Tag::countAll());
 
@@ -4954,17 +6865,45 @@ void MainWindow::reloadTagTree()
 /**
  * Reloads the note sub folder tree
  */
-void MainWindow::reloadNoteSubFolderTree()
-{
+void MainWindow::reloadNoteSubFolderTree() {
+    qDebug() << __func__;
     ui->noteSubFolderTreeWidget->clear();
-    int activeNoteSubFolderId = NoteSubFolder::activeSubNoteFolderId();
+    int activeNoteSubFolderId = NoteSubFolder::activeNoteSubFolderId();
+    bool showAllNotesItem =
+            !NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively();
+    QTreeWidgetItem *allItem = new QTreeWidgetItem();
 
+    // add the "all notes" item
+    if (showAllNotesItem) {
+        int linkCount = Note::countAll();
+        QString toolTip = tr("show notes from all note subfolders (%1)")
+                .arg(QString::number(linkCount));
+
+        allItem->setText(0, tr("All notes"));
+        allItem->setData(0, Qt::UserRole, -1);
+        allItem->setToolTip(0, toolTip);
+        allItem->setIcon(0, QIcon::fromTheme(
+                "edit-copy",
+                QIcon(":icons/breeze-qownnotes/16x16/edit-copy.svg")));
+        allItem->setTextColor(1, QColor(Qt::gray));
+        allItem->setText(1, QString::number(linkCount));
+        allItem->setToolTip(1, toolTip);
+        allItem->setFlags(allItem->flags() & ~Qt::ItemIsSelectable);
+    }
+
+    // add the "note folder" item
     int linkCount = Note::countByNoteSubFolderId(0);
     QString toolTip = tr("show notes in note root folder (%1)")
             .arg(QString::number(linkCount));
 
     QTreeWidgetItem *item = new QTreeWidgetItem();
-    item->setText(0, tr("Note folder"));
+    QSettings settings;
+    if (settings.value("noteSubfoldersPanelShowRootFolderName").toBool()) {
+        item->setText(0, NoteFolder::currentRootFolderName(
+                            settings.value("noteSubfoldersPanelShowFullPath").toBool()));
+    } else {
+        item->setText(0, tr("Note folder"));
+    }
     item->setData(0, Qt::UserRole, 0);
     item->setToolTip(0, toolTip);
     item->setIcon(0, QIcon::fromTheme(
@@ -4974,7 +6913,44 @@ void MainWindow::reloadNoteSubFolderTree()
     item->setText(1, QString::number(linkCount));
     item->setToolTip(1, toolTip);
 
-    ui->noteSubFolderTreeWidget->addTopLevelItem(item);
+    if (settings.value("noteSubfoldersPanelDisplayAsFullTree").toBool()) {
+        if (showAllNotesItem) {
+            // add 'All Notes'
+            ui->noteSubFolderTreeWidget->addTopLevelItem(allItem);
+        }
+
+        // add note root folder
+        ui->noteSubFolderTreeWidget->addTopLevelItem(item);
+
+        // add all note sub folders recursively as items
+        buildNoteSubFolderTreeForParentItem(item);
+
+        if (item->childCount() > 0) {
+            item->setExpanded(true);
+
+            if (settings.value("noteSubfoldersPanelSort").toInt() ==
+                SORT_ALPHABETICAL) {
+                item->sortChildren(0, toQtOrder(settings.value(
+                        "noteSubfoldersPanelOrder").toInt()));
+            }
+        }
+    } else { // the less hierarchical view
+        // add root note folder first
+        ui->noteSubFolderTreeWidget->addTopLevelItem(item);
+        // add subfolders recursively
+        buildNoteSubFolderTreeForParentItem();
+
+        // sort the widget
+        if (settings.value("noteSubfoldersPanelSort").toInt() == SORT_ALPHABETICAL) {
+            ui->noteSubFolderTreeWidget->sortItems(0, toQtOrder(settings.value("noteSubfoldersPanelOrder").toInt()));
+        }
+
+        if (showAllNotesItem) {
+            // finally add 'All Notes' to the top
+            ui->noteSubFolderTreeWidget->insertTopLevelItem(0, allItem);
+        }
+    }
+
     // set the active item
     if (activeNoteSubFolderId == 0) {
         const QSignalBlocker blocker(ui->noteSubFolderTreeWidget);
@@ -4983,11 +6959,14 @@ void MainWindow::reloadNoteSubFolderTree()
         ui->noteSubFolderTreeWidget->setCurrentItem(item);
     }
 
-    // add all note sub folders recursively as items
-    buildNoteSubFolderTreeForParentItem();
-
     ui->noteSubFolderTreeWidget->resizeColumnToContents(0);
     ui->noteSubFolderTreeWidget->resizeColumnToContents(1);
+
+    // send an event to jump to "All notes" in the note subfolder tree widget
+    // if that item was last selected
+    if ((activeNoteSubFolderId == 0) && _showNotesFromAllNoteSubFolders) {
+        selectAllNotesInNoteSubFolderTreeWidget();
+    }
 }
 
 /**
@@ -4995,7 +6974,7 @@ void MainWindow::reloadNoteSubFolderTree()
  */
 void MainWindow::buildNoteSubFolderTreeForParentItem(QTreeWidgetItem *parent) {
     int parentId = parent == NULL ? 0 : parent->data(0, Qt::UserRole).toInt();
-    int activeNoteSubFolderId = NoteSubFolder::activeSubNoteFolderId();
+    int activeNoteSubFolderId = NoteSubFolder::activeNoteSubFolderId();
 
     QList<NoteSubFolder> noteSubFolderList =
             NoteSubFolder::fetchAllByParentId(parentId);
@@ -5014,22 +6993,38 @@ void MainWindow::buildNoteSubFolderTreeForParentItem(QTreeWidgetItem *parent) {
             }
 
             buildNoteSubFolderTreeForParentItem(item);
+
+            // set the expanded state
+            bool isExpanded = noteSubFolder.treeWidgetExpandState();
+            item->setExpanded(isExpanded);
+
+            // sort alphabetically, if necessary
+            QSettings settings;
+            int sort = settings.value("noteSubfoldersPanelSort").toInt();
+            if (sort == SORT_ALPHABETICAL) {
+                item->sortChildren(0, toQtOrder(settings.value("noteSubfoldersPanelOrder").toInt()));
+            }
         }
 }
 
 /**
  * Populates the tag tree recursively with its tags
  */
-void MainWindow::buildTagTreeForParentItem(QTreeWidgetItem *parent) {
-    int parentId = parent == NULL ? 0 : parent->data(0, Qt::UserRole).toInt();
+void MainWindow::buildTagTreeForParentItem(QTreeWidgetItem *parent, bool topLevel) {
+    int parentId = (parent == NULL || topLevel) ? 0 : parent->data(0, Qt::UserRole).toInt();
     int activeTagId = Tag::activeTagId();
+    QSettings settings;
+    QStringList expandedList = settings.value(
+            "MainWindow/tagTreeWidgetExpandState-" +
+            QString::number(NoteFolder::currentNoteFolderId())).toStringList();
 
     QList<Tag> tagList = Tag::fetchAllByParentId(parentId);
     Q_FOREACH(Tag tag, tagList) {
+            int tagId = tag.getId();
             QTreeWidgetItem *item = addTagToTagTreeWidget(parent, tag);
 
             // set the active item
-            if (activeTagId == tag.getId()) {
+            if (activeTagId == tagId) {
                 const QSignalBlocker blocker(ui->tagTreeWidget);
                 Q_UNUSED(blocker);
 
@@ -5038,7 +7033,19 @@ void MainWindow::buildTagTreeForParentItem(QTreeWidgetItem *parent) {
 
             // recursively populate the next level
             buildTagTreeForParentItem(item);
+
+            // set expanded state
+            item->setExpanded(expandedList.contains(QString::number(tagId)));
+
+            QSettings settings;
+            if (settings.value("tagsPanelSort").toInt() == SORT_ALPHABETICAL) {
+                item->sortChildren(0, toQtOrder(settings.value("tagsPanelOrder").toInt()));
+            }
         }
+
+    // update the UI
+    // this will crash the app sporadically
+    //QCoreApplication::processEvents();
 }
 
 /**
@@ -5047,14 +7054,17 @@ void MainWindow::buildTagTreeForParentItem(QTreeWidgetItem *parent) {
 QTreeWidgetItem *MainWindow::addTagToTagTreeWidget(
         QTreeWidgetItem *parent, Tag tag) {
     int parentId = parent == NULL ? 0 : parent->data(0, Qt::UserRole).toInt();
-    if (parentId < 0) {
+
+    /*if (parentId < 0) {
         parentId = 0;
-    }
+    }*/
+
     int tagId = tag.getId();
 
     QTreeWidgetItem *item = new QTreeWidgetItem();
     QString name = tag.getName();
-    int linkCount = tag.countLinkedNoteFileNames();
+    int linkCount = tag.countLinkedNoteFileNames(_showNotesFromAllNoteSubFolders,
+                            NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively());
     QString toolTip = tr("show all notes tagged with '%1' (%2)")
                     .arg(name, QString::number(linkCount));
     item->setData(0, Qt::UserRole, tagId);
@@ -5067,6 +7077,9 @@ QTreeWidgetItem *MainWindow::addTagToTagTreeWidget(
     item->setToolTip(1, toolTip);
     item->setFlags(item->flags() | Qt::ItemIsEditable);
 
+    // set the color of the tag tree widget item
+    handleTreeWidgetItemTagColor(item, tag);
+
     if (parentId == 0) {
         // add the item at top level if there was no parent item
         ui->tagTreeWidget->addTopLevelItem(item);
@@ -5076,6 +7089,47 @@ QTreeWidgetItem *MainWindow::addTagToTagTreeWidget(
     }
 
     return item;
+}
+
+/**
+ * Reads the color from a tag and sets the background color of a tree widget
+ * item
+ *
+ * @param item
+ * @param tag
+ */
+void MainWindow::handleTreeWidgetItemTagColor(QTreeWidgetItem *item,
+                                              Tag &tag) const {
+    if (item == Q_NULLPTR) {
+        return;
+    }
+
+    int columnCount = item->columnCount();
+
+    if (columnCount == 0) {
+        return;
+    }
+
+    // get the color from the tag
+    QColor color = tag.getColor();
+
+    // if no color was set reset it by using a transparent white
+    if (!color.isValid()) {
+        color = QColor(255, 255, 255, 0);
+    }
+
+    QBrush brush = QBrush(color);
+
+    // the tree widget events have to be blocked because when called in
+    // assignColorToTagItem() the 2nd setBackground() crashes the app,
+    // because it seems the tag tree will be reloaded
+    const QSignalBlocker blocker(item->treeWidget());
+    Q_UNUSED(blocker);
+
+    // set the color for all columns
+    for (int column = 0; column < columnCount; column++) {
+        item->setBackground(column, brush);
+    }
 }
 
 /**
@@ -5092,7 +7146,15 @@ void MainWindow::on_tagLineEdit_returnPressed() {
 
     Tag tag;
     tag.setName(name);
-    tag.store();
+
+    if (tag.store()) {
+        const QSignalBlocker blocker2(ui->tagLineEdit);
+        Q_UNUSED(blocker2);
+
+        // clear the line edit if the tag was stored
+        ui->tagLineEdit->clear();
+    }
+
     reloadTagTree();
 }
 
@@ -5101,32 +7163,15 @@ void MainWindow::on_tagLineEdit_returnPressed() {
  */
 void MainWindow::on_tagLineEdit_textChanged(const QString &arg1)
 {
-    searchForTextInTreeWidget(ui->tagTreeWidget, arg1);
-}
-
-/**
- * Checks if there is at least one child that is visible
- */
-bool MainWindow::isOneTreeWidgetItemChildVisible(QTreeWidgetItem *item) {
-    for (int i = 0; i < item->childCount(); i++) {
-        QTreeWidgetItem *child = item->child(i);
-        if (!child->isHidden() || isOneTreeWidgetItemChildVisible(child)) {
-            return true;
-        }
-    }
-
-    return false;
+    Utils::Gui::searchForTextInTreeWidget(
+            ui->tagTreeWidget, arg1,
+            Utils::Gui::TreeWidgetSearchFlag::IntCheck);
 }
 
 /**
  * Shows or hides everything for the note tags
  */
 void MainWindow::setupTags() {
-    bool tagsEnabled = isTagsEnabled();
-
-    ui->tagFrame->setVisible(tagsEnabled);
-    ui->tagSubFrame->setVisible(tagsEnabled);
-    ui->noteTagFrame->setVisible(tagsEnabled);
     ui->newNoteTagLineEdit->setVisible(false);
     ui->newNoteTagButton->setVisible(true);
 
@@ -5134,18 +7179,13 @@ void MainWindow::setupTags() {
     // try to compensate for the different button top margins in OS X
     ui->noteTagFrame->layout()->setContentsMargins(0, 0, 0, 0);
     ui->noteTagButtonFrame->layout()->setContentsMargins(0, 8, 0, 0);
+#else
+    // we want the tag frame as small as possible
+    ui->noteTagFrame->layout()->setContentsMargins(8, 0, 8, 0);
 #endif
 
-    const QSignalBlocker blocker(ui->actionToggle_tag_pane);
-    Q_UNUSED(blocker);
-    ui->actionToggle_tag_pane->setChecked(tagsEnabled);
-
-    if (tagsEnabled) {
-        reloadTagTree();
-        ui->tagTreeWidget->expandAll();
-        reloadCurrentNoteTags();
-    }
-
+    reloadTagTree();
+    reloadCurrentNoteTags();
     // filter the notes again
     filterNotes(false);
 }
@@ -5156,12 +7196,11 @@ void MainWindow::setupTags() {
 void MainWindow::setupNoteSubFolders() {
     bool showSubfolders = NoteFolder::isCurrentShowSubfolders();
 
-//    ui->tagFrame->setVisible(showSubfolders);
-    ui->noteSubFolderFrame->setVisible(showSubfolders);
+    // handle the visibility of the note subfolder panel
+    handleNoteSubFolderVisibility();
 
     if (showSubfolders) {
         reloadNoteSubFolderTree();
-        ui->noteSubFolderTreeWidget->expandAll();
     }
 
     // filter the notes again
@@ -5169,125 +7208,28 @@ void MainWindow::setupNoteSubFolders() {
 }
 
 /**
- * Shows or hides everything for the markdown view
- */
-void MainWindow::setupMarkdownView() {
-    bool markdownViewEnabled = isMarkdownViewEnabled();
-
-    ui->noteViewFrame->setVisible(markdownViewEnabled);
-
-    const QSignalBlocker blocker(ui->actionToggle_markdown_preview);
-    Q_UNUSED(blocker);
-    ui->actionToggle_markdown_preview->setChecked(markdownViewEnabled);
-}
-
-/**
- * Shows or hides everything for the note edit pane
- */
-void MainWindow::setupNoteEditPane() {
-    bool paneEnabled = isNoteEditPaneEnabled();
-
-    ui->noteEditFrame->setVisible(paneEnabled);
-
-    const QSignalBlocker blocker(ui->actionToggle_note_edit_pane);
-    Q_UNUSED(blocker);
-    ui->actionToggle_note_edit_pane->setChecked(paneEnabled);
-}
-
-/**
- * Returns the key for storing and restoring the main splitter state
- */
-QString MainWindow::getMainSplitterStateKey(
-        bool invertTagState, bool invertMarkdownState,
-        bool invertEditState, bool invertVerticalModeState) {
-    bool state1 = ui->actionToggle_tag_pane->isChecked();
-    bool state2 = ui->actionToggle_markdown_preview->isChecked();
-    bool state3 = ui->actionToggle_note_edit_pane->isChecked();
-    bool state4 = isVerticalPreviewModeEnabled();
-
-    if (invertTagState) {
-        state1 = !state1;
-    }
-
-    if (invertMarkdownState) {
-        state2 = !state2;
-    }
-
-    if (invertEditState) {
-        state3 = !state3;
-    }
-
-    if (invertVerticalModeState) {
-        state4 = !state4;
-    }
-
-    QString state1Str = state1 ? "1" : "0";
-    QString state2Str = state2 ? "1" : "0";
-    QString state3Str = state3 ? "1" : "0";
-    QString state4Str = state4 ? "1" : "0";
-    return QString("mainSplitterState-%1-%2-%3-%4").arg(
-            state1Str, state2Str, state3Str, state4Str);
-}
-
-/**
- * Stores the main splitter state
- */
-void MainWindow::saveMainSplitterState(
-        bool invertTagState, bool invertMarkdownState,
-        bool invertEditState, bool invertVerticalModeState) {
-    QString key = getMainSplitterStateKey(
-            invertTagState, invertMarkdownState,
-            invertEditState, invertVerticalModeState);
-
-    // store the main splitter state
-    QSettings settings;
-    settings.setValue(key, mainSplitter->saveState());
-}
-
-/**
- * Restores the main splitter state
- */
-void MainWindow::restoreMainSplitterState(
-        bool invertTagState, bool invertMarkdownState,
-        bool invertEditState, bool invertVerticalModeState) {
-    QString key = getMainSplitterStateKey(
-            invertTagState, invertMarkdownState,
-            invertEditState, invertVerticalModeState);
-
-    // restore main splitter state
-    QSettings settings;
-    QByteArray state = settings.value(key).toByteArray();
-
-    mainSplitter->restoreState(state);
-}
-
-/**
- * Toggles the note panes
- */
-void MainWindow::on_actionToggle_tag_pane_toggled(bool arg1) {
-    saveMainSplitterState(true);
-
-    QSettings settings;
-    settings.setValue("tagsEnabled", arg1);
-    setupTags();
-
-    restoreMainSplitterState();
-}
-
-/**
  * Hides the note tag add button and shows the text edit
  */
 void MainWindow::on_newNoteTagButton_clicked() {
+    _noteTagDockWidget->setVisible(true);
     ui->newNoteTagLineEdit->setVisible(true);
     ui->newNoteTagLineEdit->setFocus();
     ui->newNoteTagLineEdit->selectAll();
     ui->newNoteTagButton->setVisible(false);
+
+    QSettings settings;
+    // enable the tagging dock widget the first time tagging was used
+    if (!settings.value("tagWasAddedToNote").toBool()) {
+        _taggingDockWidget->setVisible(true);
+        settings.setValue("tagWasAddedToNote", true);
+    }
 
     // add tag name auto-completion
     QStringList wordList = Tag::fetchAllNames();
     QCompleter *completer = new QCompleter(wordList, this);
     completer->setCaseSensitivity(Qt::CaseInsensitive);
     ui->newNoteTagLineEdit->setCompleter(completer);
+    completer->popup()->installEventFilter(this);
 }
 
 /**
@@ -5296,29 +7238,236 @@ void MainWindow::on_newNoteTagButton_clicked() {
  */
 void MainWindow::on_newNoteTagLineEdit_returnPressed() {
     QString text = ui->newNoteTagLineEdit->text();
+    linkTagNameToCurrentNote(text, true);
+}
 
-    if (text.isEmpty()) {
+/**
+ * Links a tag to the current note (or all selected notes)
+ *
+ * @param tagName
+ */
+void MainWindow::linkTagNameToCurrentNote(QString tagName,
+                                          bool linkToSelectedNotes) {
+    if (tagName.isEmpty()) {
         return;
     }
 
     // create a new tag if it doesn't exist
-    Tag tag = Tag::fetchByName(text);
+    Tag tag = Tag::fetchByName(tagName);
     if (!tag.isFetched()) {
-        const QSignalBlocker blocker(this->noteDirectoryWatcher);
+        const QSignalBlocker blocker(noteDirectoryWatcher);
         Q_UNUSED(blocker);
 
-        tag.setName(text);
+        tag.setName(tagName);
         tag.store();
-        reloadTagTree();
     }
 
     // link the current note to the tag
     if (tag.isFetched()) {
+        const QSignalBlocker blocker(noteDirectoryWatcher);
+        Q_UNUSED(blocker);
+
+        int selectedNotesCount = getSelectedNotesCount();
+
+        if (linkToSelectedNotes && selectedNotesCount > 1) {
+            Q_FOREACH (Note note, selectedNotes()) {
+                    if (tag.isLinkedToNote(note)) {
+                        continue;
+                    }
+
+                    tag.linkToNote(note);
+
+                    // add the tag to the note text if defined via scripting
+                    // engine
+                    handleScriptingNoteTagging(note, tagName, false, false);
+                }
+        } else {
+            tag.linkToNote(currentNote);
+
+            // add the tag to the note text if defined via scripting engine
+            handleScriptingNoteTagging(currentNote, tagName, false, false);
+        }
+
+        reloadCurrentNoteTags();
+        reloadTagTree();
+        filterNotes();
+
+        // handle the coloring of the note in the note tree widget
+        handleNoteTreeTagColoringForNote(currentNote);
+    }
+}
+
+/**
+ * Adds or removes a tag from the note text if defined via scripting engine
+ *
+ * @param note
+ * @param tagName
+ * @param doRemove
+ * @param triggerPostMethods
+ */
+void MainWindow::handleScriptingNoteTagging(Note note, QString tagName,
+                                            bool doRemove,
+                                            bool triggerPostMethods) {
+    QString oldNoteText = note.getNoteText();
+    QString noteText = ScriptingService::instance()->callNoteTaggingHook(
+            note, doRemove ? "remove" : "add", tagName).toString();
+
+    if (noteText.isEmpty() || (oldNoteText == noteText)) {
+        return;
+    }
+
+    // return if note could not be stored
+    if (!note.storeNewText(noteText)) {
+        return;
+    }
+
+    // do some stuff to get the UI updated
+    if (triggerPostMethods) {
         const QSignalBlocker blocker(this->noteDirectoryWatcher);
         Q_UNUSED(blocker);
 
-        tag.linkToNote(currentNote);
-        reloadCurrentNoteTags();
+        storeUpdatedNotesToDisk();
+        reloadTagTree();
+//        reloadCurrentNoteTags();
+    }
+
+    if (note.isSameFile(currentNote)) {
+//            updateNoteTextFromDisk(note);
+
+        currentNote.refetch();
+        setNoteTextFromNote(&currentNote);
+    }
+}
+
+/**
+ * Takes care that the tags are synced from the notes to the internal db
+ */
+void MainWindow::handleScriptingNotesTagUpdating() {
+    if (!ScriptingService::instance()->noteTaggingHookExists()) {
+        return;
+    }
+
+    qDebug() << __func__;
+
+    // workaround when signal blocking doesn't work correctly
+    directoryWatcherWorkaround(true, true);
+
+    QList<Note> notes = Note::fetchAll();
+    Q_FOREACH(Note note, notes) {
+            QStringList tagNameList = ScriptingService::instance()
+                    ->callNoteTaggingHook(note, "list").toStringList();
+            QStringList tagNameList2 = Tag::fetchAllNamesOfNote(note);
+
+            QSet<QString> subtraction = tagNameList.toSet().subtract(
+                    tagNameList2.toSet());
+            QSet<QString> subtraction1 = tagNameList2.toSet().subtract(
+                    tagNameList.toSet());
+
+            // add missing tags to the tag database
+            Q_FOREACH(const QString &tagName, subtraction) {
+                    // create a new tag if it doesn't exist
+                    Tag tag = Tag::fetchByName(tagName);
+                    if (!tag.isFetched()) {
+                        tag.setName(tagName);
+                        tag.store();
+                    }
+
+                    tag.linkToNote(note);
+                    qDebug() << " difference1: "<<  tagName;
+                }
+
+            // remove tags that are not in the note text from the tag database
+            Q_FOREACH(const QString &tagName, subtraction1) {
+                    Tag tag = Tag::fetchByName(tagName);
+                    if (!tag.exists()) {
+                        continue;
+                    }
+
+                    tag.removeLinkToNote(note);
+                    qDebug() << " difference2: "<<  tagName;
+                }
+        }
+
+    // disable workaround
+    directoryWatcherWorkaround(false, true);
+}
+
+/**
+ * Takes care that a tag is renamed in all notes
+ *
+ * @param oldTagName
+ * @param newTagName
+ */
+void MainWindow::handleScriptingNotesTagRenaming(QString oldTagName,
+                                                 QString newTagName) {
+    if (!ScriptingService::instance()->noteTaggingHookExists()) {
+        return;
+    }
+
+    qDebug() << __func__;
+
+    // workaround when signal blocking doesn't work correctly
+    directoryWatcherWorkaround(true, true);
+
+    const QSignalBlocker blocker(this->noteDirectoryWatcher);
+    Q_UNUSED(blocker);
+
+    QList<Note> notes = Note::fetchAll();
+    Q_FOREACH(Note note, notes) {
+            QString oldNoteText = note.getNoteText();
+            QString noteText = ScriptingService::instance()
+                    ->callNoteTaggingHook(note, "rename", oldTagName,
+                                          newTagName).toString();
+
+            if (noteText.isEmpty() || (oldNoteText == noteText)) {
+                continue;
+            }
+
+            note.storeNewText(noteText);
+        }
+
+    storeUpdatedNotesToDisk();
+
+    // disable workaround
+    directoryWatcherWorkaround(false, true);
+
+    reloadTagTree();
+
+    // refetch current note to make sure the note text with the tag was updated
+    currentNote.refetch();
+    setNoteTextFromNote(&currentNote);
+}
+
+/**
+ * Takes care that a tag is removed from all notes
+ *
+ * @param tagName
+ */
+void MainWindow::handleScriptingNotesTagRemoving(QString tagName,
+                                                 bool forBulkOperation) {
+    if (!ScriptingService::instance()->noteTaggingHookExists()) {
+        return;
+    }
+
+    qDebug() << __func__;
+
+    if (!forBulkOperation) {
+        // workaround when signal blocking doesn't work correctly
+        directoryWatcherWorkaround(true, true);
+    }
+
+    QList<Note> notes = Note::fetchAll();
+    Q_FOREACH(Note note, notes) {
+            handleScriptingNoteTagging(note, tagName, true, false);
+        }
+
+    if (!forBulkOperation) {
+        storeUpdatedNotesToDisk();
+
+        // disable workaround
+        directoryWatcherWorkaround(false, true);
+
+        reloadTagTree();
     }
 }
 
@@ -5331,7 +7480,7 @@ void MainWindow::on_newNoteTagLineEdit_editingFinished() {
 }
 
 /**
- * Reloads the note tag buttons for the current note
+ * Reloads the note tag buttons for the current note (or the selected notes)
  */
 void MainWindow::reloadCurrentNoteTags() {
     // remove all remove-tag buttons
@@ -5341,8 +7490,46 @@ void MainWindow::reloadCurrentNoteTags() {
         delete child;
     }
 
+    int selectedNotesCount = getSelectedNotesCount();
+    bool currentNoteOnly = selectedNotesCount <= 1;
+    ui->selectedTagsToolButton->setVisible(!currentNoteOnly);
+    ui->newNoteTagButton->setToolTip(
+            currentNoteOnly ? tr( "Add a tag to the current note") :
+            tr("Add a tag to the selected notes"));
+    QList<Tag> tagList;
+
+    ui->multiSelectActionFrame->setVisible(!currentNoteOnly);
+    ui->noteEditorFrame->setVisible(currentNoteOnly);
+
+    if (currentNoteOnly) {
+        tagList = Tag::fetchAllOfNote(currentNote);
+
+        // only refresh the preview if we previously selected multiple notes
+        // because we used it for showing note information
+        if (_lastNoteSelectionWasMultiple) {
+            _notePreviewHash = "";
+            regenerateNotePreview();
+        }
+    } else {
+        const QList<Note> &notes = selectedNotes();
+        tagList = Tag::fetchAllOfNotes(notes);
+        const QString &notesSelectedText = tr("%n notes selected", "",
+                                              selectedNotesCount);
+
+        ui->selectedTagsToolButton->setText(QString::number(
+                selectedNotesCount));
+        ui->selectedTagsToolButton->setToolTip(notesSelectedText);
+
+        ui->notesSelectedLabel->setText(notesSelectedText);
+
+        // overwrite the note preview with a preview of the selected notes
+        QString previewHtml = Note::generateMultipleNotesPreviewText(notes);
+        ui->noteTextView->setText(previewHtml);
+    }
+
+    _lastNoteSelectionWasMultiple = !currentNoteOnly;
+
     // add all new remove-tag buttons
-    QList<Tag> tagList = Tag::fetchAllOfNote(currentNote);
     Q_FOREACH(Tag tag, tagList) {
             QPushButton* button = new QPushButton(
                     Utils::Misc::shorten(tag.getName(), 25),
@@ -5352,7 +7539,11 @@ void MainWindow::reloadCurrentNoteTags() {
                     QIcon(":icons/breeze-qownnotes/16x16/"
                                   "xml-attribute-delete.svg")));
             button->setToolTip(
-                    tr("remove tag '%1' from note").arg(tag.getName()));
+                    currentNoteOnly ?
+                    tr("Remove tag '%1' from the current note").arg(
+                            tag.getName()) :
+                    tr("Remove tag '%1' from the selected notes").arg(
+                            tag.getName()));
             button->setObjectName(
                     "removeNoteTag" + QString::number(tag.getId()));
 
@@ -5361,6 +7552,18 @@ void MainWindow::reloadCurrentNoteTags() {
 
             ui->noteTagButtonFrame->layout()->addWidget(button);
         }
+
+//    // find tags not in common of selected notes
+//    if (selectedNotesCount > 1) {
+//        QLabel *noteTagButtonFrame = new QLabel("+3 tags");
+//        ui->noteTagButtonFrame->layout()->addWidget(noteTagButtonFrame);
+//    }
+
+    // add a spacer to prevent the button items to take the full width
+    QSpacerItem *spacer = new QSpacerItem(0, 20,
+                                          QSizePolicy::MinimumExpanding,
+                                          QSizePolicy::Ignored);
+    ui->noteTagButtonFrame->layout()->addItem(spacer);
 }
 
 /**
@@ -5375,22 +7578,50 @@ void MainWindow::removeNoteTagClicked() {
             return;
         }
 
-        const QSignalBlocker blocker(noteDirectoryWatcher);
-        Q_UNUSED(blocker);
+        // workaround when signal blocking doesn't work correctly
+        directoryWatcherWorkaround(true, true);
 
-        tag.removeLinkToNote(currentNote);
+        int selectedNotesCount = getSelectedNotesCount();
+
+        if (selectedNotesCount <= 1) {
+            tag.removeLinkToNote(currentNote);
+
+            // remove the tag from the note text if defined via scripting engine
+            handleScriptingNoteTagging(currentNote, tag.getName(), true);
+        } else {
+            Q_FOREACH (Note note, selectedNotes()) {
+                    if (!tag.isLinkedToNote(note)) {
+                        continue;
+                    }
+
+                    tag.removeLinkToNote(note);
+
+                    // remove the tag from the note text if defined via
+                    // scripting engine
+                    handleScriptingNoteTagging(note, tag.getName(), true);
+                }
+        }
+
         reloadCurrentNoteTags();
+        reloadTagTree();
+        filterNotesByTag();
+
+        // handle the coloring of the note in the note tree widget
+        handleNoteTreeTagColoringForNote(currentNote);
+
+        // disable workaround
+        directoryWatcherWorkaround(false, true);
     }
+}
+
+int MainWindow::getSelectedNotesCount() const {
+    return ui->noteTreeWidget->selectedItems().count();
 }
 
 /**
  * Allows the user to add a tag to the current note
  */
 void MainWindow::on_action_new_tag_triggered() {
-    if (!ui->actionToggle_tag_pane->isChecked()) {
-        ui->actionToggle_tag_pane->setChecked(true);
-    }
-
     on_newNoteTagButton_clicked();
 }
 
@@ -5398,52 +7629,10 @@ void MainWindow::on_action_new_tag_triggered() {
  * Reloads the current note folder
  */
 void MainWindow::on_action_Reload_note_folder_triggered() {
-    buildNotesIndex();
-    loadNoteDirectoryList();
+    // force build and load
+    buildNotesIndexAndLoadNoteDirectoryList(true, true);
     currentNote.refetch();
     setNoteTextFromNote(&currentNote);
-}
-
-void MainWindow::on_actionToggle_markdown_preview_toggled(bool arg1) {
-    saveMainSplitterState(false, true);
-
-    QSettings settings;
-    settings.setValue("markdownViewEnabled", arg1);
-
-    // setup the markdown view
-    setupMarkdownView();
-
-    // setup the main splitter again for the vertical note pane visibility
-    setupMainSplitter();
-
-    restoreMainSplitterState();
-}
-
-void MainWindow::on_actionToggle_note_edit_pane_toggled(bool arg1) {
-    saveMainSplitterState(false, false, true);
-
-    QSettings settings;
-    settings.setValue("noteEditPaneEnabled", arg1);
-
-    // setup the note edit pane
-    setupNoteEditPane();
-
-    // setup the main splitter again for the vertical note pane visibility
-    setupMainSplitter();
-
-    restoreMainSplitterState();
-}
-
-void MainWindow::on_actionUse_vertical_preview_layout_toggled(bool arg1) {
-    saveMainSplitterState(false, false, false, true);
-
-    QSettings settings;
-    settings.setValue("verticalPreviewModeEnabled", arg1);
-
-    // setup the main splitter again
-    setupMainSplitter();
-
-    restoreMainSplitterState();
 }
 
 /**
@@ -5455,6 +7644,7 @@ void MainWindow::on_tagTreeWidget_itemChanged(
 
     Tag tag = Tag::fetch(item->data(0, Qt::UserRole).toInt());
     if (tag.isFetched()) {
+        QString oldName = tag.getName();
         QString name = item->text(0);
 
         if (!name.isEmpty()) {
@@ -5463,6 +7653,9 @@ void MainWindow::on_tagTreeWidget_itemChanged(
 
             tag.setName(name);
             tag.store();
+
+            // take care that a tag is renamed in all notes
+            handleScriptingNotesTagRenaming(oldName, name);
         }
 
         // we also have to reload the tag tree if we don't change the tag
@@ -5499,24 +7692,29 @@ void MainWindow::on_tagTreeWidget_currentItemChanged(
  */
 void MainWindow::on_tagTreeWidget_customContextMenuRequested(
         const QPoint &pos) {
-    // don't open the context menu if no tags are selected
-    if (ui->tagTreeWidget->selectedItems().count() == 0) {
-        return;
-    }
+    // don't open the most of the context menu if no tags are selected
+    bool hasSelected = ui->tagTreeWidget->selectedItems().count() > 0;
 
     QPoint globalPos = ui->tagTreeWidget->mapToGlobal(pos);
     QMenu menu;
 
-    QAction *addAction = menu.addAction(
-            tr("&Add tag"));
-    QAction *editAction = menu.addAction(
-            tr("&Edit tag"));
-    QAction *removeAction = menu.addAction(
-            tr("&Remove tags"));
+    QAction *addAction = menu.addAction(tr("&Add tag"));
+    QAction *renameAction = new QAction(this);
+    QAction *assignColorAction = new QAction(this);
+    QAction *disableColorAction = new QAction(this);
+    QAction *removeAction = new QAction(this);
 
-    // build the tag moving menu
-    QMenu *moveMenu = menu.addMenu(tr("&Move tags to..."));
-    buildTagMoveMenuTree(moveMenu);
+    // allow these actions only if tags are selected
+    if (hasSelected) {
+        renameAction = menu.addAction(tr("Rename tag"));
+        assignColorAction = menu.addAction(tr("Assign color"));
+        disableColorAction = menu.addAction(tr("Disable color"));
+        removeAction = menu.addAction(tr("&Remove tags"));
+
+        // build the tag moving menu
+        QMenu *moveMenu = menu.addMenu(tr("&Move tags to…"));
+        buildTagMoveMenuTree(moveMenu);
+    }
 
     QAction *selectedItem = menu.exec(globalPos);
 
@@ -5546,16 +7744,37 @@ void MainWindow::on_tagTreeWidget_customContextMenuRequested(
                 tag.setName(name);
                 tag.store();
 
-                if (!tag.isFetched()) {
+                if (tag.isFetched()) {
+                    reloadTagTree();
+                } else {
                     showStatusBarMessage(tr("Tag could not be created!"), 3000);
                 }
             }
         }
 
+        delete(dialog);
         return;
     }
 
-    // don't allow clicking on non-tag items vor removing nnd editing
+    if (selectedItem == assignColorAction) {
+        // assign and store a color to all selected tags in the tag tree widget
+        assignColorToSelectedTagItems();
+        return;
+    } else if (selectedItem ==
+            disableColorAction) {
+        // disable the color of all selected tags
+        Q_FOREACH(QTreeWidgetItem *tagItem,
+                  ui->tagTreeWidget->selectedItems()) {
+                // disable the color of the tag
+                disableColorOfTagItem(tagItem);
+            }
+
+        // reload the notes in the note tree widget to update the colors
+        loadNoteDirectoryList();
+        return;
+    }
+
+    // don't allow clicking on non-tag items for removing, editing and colors
     if (item->data(0, Qt::UserRole) <= 0) {
         return;
     }
@@ -5563,9 +7782,119 @@ void MainWindow::on_tagTreeWidget_customContextMenuRequested(
     if (selectedItem == removeAction) {
         // remove selected tag
         removeSelectedTags();
-    } else if (selectedItem == editAction) {
+    } else if (selectedItem == renameAction) {
         ui->tagTreeWidget->editItem(item);
     }
+}
+
+/**
+ * Assigns and stores a color to a tag from the tag tree widget
+ *
+ * @param item
+ */
+void MainWindow::assignColorToTagItem(QTreeWidgetItem *item) {
+    int tagId = item->data(0, Qt::UserRole).toInt();
+
+    if (tagId <= 0) {
+        return;
+    }
+
+    Tag tag = Tag::fetch(tagId);
+
+    if (!tag.isFetched()) {
+        return;
+    }
+
+    QColor color = tag.getColor();
+    color = QColorDialog::getColor(color.isValid() ? color : QColor(Qt::white));
+
+    if (color.isValid()) {
+        tag.setColor(color);
+        tag.store();
+
+        // set the color of the tag tree widget item
+        handleTreeWidgetItemTagColor(item, tag);
+
+        // reload the notes in the note tree widget to update the colors
+        loadNoteDirectoryList();
+    }
+}
+
+/**
+ * Assigns and stores a color to all selected tags from the tag tree widget
+ */
+void MainWindow::assignColorToSelectedTagItems() {
+    QColor color;
+    bool hasTags = false;
+
+    // get the color of a selected tag
+    Q_FOREACH(QTreeWidgetItem *item,
+              ui->tagTreeWidget->selectedItems()) {
+            int tagId = item->data(0, Qt::UserRole).toInt();
+            if (tagId > 0) {
+                Tag tag = Tag::fetch(tagId);
+
+                if (!tag.isFetched()) {
+                    continue;
+                }
+
+                color = tag.getColor();
+                hasTags = true;
+                break;
+            }
+        }
+
+    if (!hasTags) {
+        return;
+    }
+
+    color = QColorDialog::getColor(color.isValid() ? color : QColor(Qt::white));
+
+    // store the color to all selected tags
+    if (color.isValid()) {
+        Q_FOREACH(QTreeWidgetItem *item,
+                  ui->tagTreeWidget->selectedItems()) {
+                int tagId = item->data(0, Qt::UserRole).toInt();
+                if (tagId <= 0) {
+                    continue;
+                }
+
+                Tag tag = Tag::fetch(tagId);
+
+                if (!tag.isFetched()) {
+                    continue;
+                }
+
+                tag.setColor(color);
+                tag.store();
+
+                // set the color of the tag tree widget item
+                handleTreeWidgetItemTagColor(item, tag);
+            }
+    }
+
+    // reload the notes in the note tree widget to update the colors
+    loadNoteDirectoryList();
+}
+
+/**
+ * Disables a color of a tag from the tag tree widget
+ *
+ * @param item
+ */
+void MainWindow::disableColorOfTagItem(QTreeWidgetItem *item) {
+    int tagId = item->data(0, Qt::UserRole).toInt();
+    Tag tag = Tag::fetch(tagId);
+
+    if (!tag.isFetched()) {
+        return;
+    }
+
+    tag.setColor(QColor());
+    tag.store();
+
+    // set the color of the tag tree widget item
+    handleTreeWidgetItemTagColor(item, tag);
 }
 
 /**
@@ -5573,7 +7902,7 @@ void MainWindow::on_tagTreeWidget_customContextMenuRequested(
  */
 void MainWindow::buildTagMoveMenuTree(QMenu *parentMenu,
                                       int parentTagId) {
-    QList<Tag> tagList = Tag::fetchAllByParentId(parentTagId);
+    QList<Tag> tagList = Tag::fetchAllByParentId(parentTagId, "t.name ASC");
     QSignalMapper *tagMovingSignalMapper = new QSignalMapper(this);
 
     Q_FOREACH(Tag tag, tagList) {
@@ -5601,7 +7930,9 @@ void MainWindow::buildTagMoveMenuTree(QMenu *parentMenu,
     // add an action to move to this tag
     parentMenu->addSeparator();
     QAction *action = parentMenu->addAction(
-            parentTagId == 0 ? tr("Move to the root") : tr("Move to this tag"));
+            parentTagId == 0 ?
+                    tr("Move to the root", "to move a tag to the current tag in the tag context menu") :
+                    tr("Move to this tag"));
     action->setData(parentTagId);
 
     QObject::connect(
@@ -5623,7 +7954,7 @@ void MainWindow::buildTagMoveMenuTree(QMenu *parentMenu,
  */
 void MainWindow::buildBulkNoteTagMenuTree(QMenu *parentMenu,
                                           int parentTagId) {
-    QList<Tag> tagList = Tag::fetchAllByParentId(parentTagId);
+    QList<Tag> tagList = Tag::fetchAllByParentId(parentTagId, "t.name ASC");
     QSignalMapper *signalMapper = new QSignalMapper(this);
 
     Q_FOREACH(Tag tag, tagList) {
@@ -5674,7 +8005,10 @@ void MainWindow::buildBulkNoteTagMenuTree(QMenu *parentMenu,
  */
 void MainWindow::moveSelectedTagsToTagId(int tagId) {
     qDebug() << __func__ << " - 'tagId': " << tagId;
+    QList<Tag> tagList;
 
+    // gather tags to move (since we can't be sure the tag tree will not get
+    // reloaded when we are actually moving the first tag)
     Q_FOREACH(QTreeWidgetItem *item, ui->tagTreeWidget->selectedItems()) {
             int id = item->data(0, Qt::UserRole).toInt();
             Tag tag = Tag::fetch(id);
@@ -5685,16 +8019,25 @@ void MainWindow::moveSelectedTagsToTagId(int tagId) {
                                     .arg(tag.getName()),
                             3000);
                 } else {
-                    tag.setParentId(tagId);
-                    tag.store();
-
-                    showStatusBarMessage(
-                            tr("Moved tag '%1' to new tag").arg(tag.getName()),
-                            3000);
+                    tagList << tag;
                 }
             }
         }
 
+    if (tagList.count() > 0) {
+        // move tags
+        Q_FOREACH(Tag tag, tagList) {
+                tag.setParentId(tagId);
+                tag.store();
+
+                showStatusBarMessage(
+                        tr("Moved tag '%1' to new tag").arg(tag.getName()),
+                        3000);
+            }
+
+        reloadCurrentNoteTags();
+        reloadTagTree();
+    }
 }
 
 /**
@@ -5711,10 +8054,261 @@ void MainWindow::tagSelectedNotesToTagId(int tagId) {
 }
 
 /**
+ * Populates a subfolder menu tree for bulk note moving or copying
+ */
+void MainWindow::buildBulkNoteSubFolderMenuTree(QMenu *parentMenu, bool doCopy,
+                                                int parentNoteSubFolderId) {
+    QList<NoteSubFolder> noteSubFolderList = NoteSubFolder::fetchAllByParentId(
+            parentNoteSubFolderId, "name ASC");
+    QSignalMapper *signalMapper = new QSignalMapper(this);
+
+    Q_FOREACH(NoteSubFolder noteSubFolder, noteSubFolderList) {
+            int noteSubFolderId = noteSubFolder.getId();
+            QString name = noteSubFolder.getName();
+
+            int count = NoteSubFolder::countAllParentId(noteSubFolderId);
+            if (count > 0) {
+                // if there are sub-noteSubFolder build a new menu level
+                QMenu *noteSubFolderMenu = parentMenu->addMenu(name);
+                buildBulkNoteSubFolderMenuTree(noteSubFolderMenu, doCopy,
+                                               noteSubFolderId);
+            } else {
+                // if there are no sub-noteSubFolders just create a named action
+                QAction *action = parentMenu->addAction(name);
+
+                QObject::connect(
+                        action, SIGNAL(triggered()),
+                        signalMapper, SLOT(map()));
+
+                signalMapper->setMapping(
+                        action, noteSubFolderId);
+            }
+        }
+
+    // add an action to copy or move to this subfolder
+    parentMenu->addSeparator();
+    QString text = (parentNoteSubFolderId == 0) ?
+                   (doCopy ? tr("Copy to note folder") :
+                             tr("Move to note folder")) :
+                   (doCopy ? tr("Copy to this subfolder") :
+                             tr("Move to this subfolder"));
+    QAction *action = parentMenu->addAction(text);
+    action->setData(parentNoteSubFolderId);
+
+    QObject::connect(
+            action, SIGNAL(triggered()),
+            signalMapper, SLOT(map()));
+
+    signalMapper->setMapping(
+            action, parentNoteSubFolderId);
+
+    // connect the signal mapper
+    QObject::connect(signalMapper,
+                     SIGNAL(mapped(int)),
+                     this,
+                     doCopy ?
+                     SLOT(copySelectedNotesToNoteSubFolderId(int)) :
+                     SLOT(moveSelectedNotesToNoteSubFolderId(int)));
+}
+
+/**
+ * Moves selected notes to a note subfolder id
+ */
+void MainWindow::moveSelectedNotesToNoteSubFolderId(int noteSubFolderId) {
+    qDebug() << __func__ << " - 'noteSubFolderId': " << noteSubFolderId;
+    NoteSubFolder noteSubFolder = NoteSubFolder::fetch(noteSubFolderId);
+
+    // move selected notes to note subfolder
+    if (noteSubFolder.isFetched() || (noteSubFolderId == 0)) {
+        moveSelectedNotesToNoteSubFolder(noteSubFolder);
+    }
+}
+
+/**
+ * Copies selected notes to a note subfolder id
+ */
+void MainWindow::copySelectedNotesToNoteSubFolderId(int noteSubFolderId) {
+    qDebug() << __func__ << " - 'noteSubFolderId': " << noteSubFolderId;
+    NoteSubFolder noteSubFolder = NoteSubFolder::fetch(noteSubFolderId);
+
+    // copy selected notes to note subfolder
+    if (noteSubFolder.isFetched() || (noteSubFolderId == 0)) {
+        copySelectedNotesToNoteSubFolder(noteSubFolder);
+    }
+}
+
+/**
+ * Moves selected notes to a note subfolder
+ */
+void MainWindow::moveSelectedNotesToNoteSubFolder(NoteSubFolder noteSubFolder) {
+    int selectedItemsCount = ui->noteTreeWidget->selectedItems().size();
+    QString text = tr("Move %n selected note(s) to note subfolder "
+                              "<strong>%2</strong>?", "",
+                      selectedItemsCount).arg(noteSubFolder.getName());
+
+    if (Utils::Gui::question(
+            this,
+            tr("Move selected notes"),
+            text,
+            "move-notes") == QMessageBox::Yes) {
+        const QSignalBlocker blocker(this->noteDirectoryWatcher);
+        Q_UNUSED(blocker);
+
+        // unset the current note
+  //      unsetCurrentNote();
+
+        int noteSubFolderCount = 0;
+
+        // disable the externally removed check, because it might trigger
+        _noteExternallyRemovedCheckEnabled = false;
+
+        Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
+                int noteId = item->data(0, Qt::UserRole).toInt();
+                Note note = Note::fetch(noteId);
+
+                if (!note.isFetched()) {
+                    continue;
+                }
+
+                // fetch the tags to tag the note after moving it
+                QList<Tag> tags = Tag::fetchAllOfNote(note);
+
+                if (note.getId() == currentNote.getId()) {
+                    // unset the current note
+                    unsetCurrentNote();
+                }
+
+                // move note
+                bool result = note.moveToPath(noteSubFolder.fullPath());
+                if (result) {
+                    noteSubFolderCount++;
+                    qDebug() << "Note was moved:" << note.getName();
+
+                    // set the new sub-folder so the tags are stored correctly
+                    note.setNoteSubFolder(noteSubFolder);
+
+                    // tag the note again
+                    Q_FOREACH(Tag tag, tags) {
+                            tag.linkToNote(note);
+                        }
+                } else {
+                    qWarning() << "Could not move note:" << note.getName();
+                }
+            }
+
+        // rebuild the index after the move
+        if (noteSubFolderCount > 0) {
+            // for some reason this only works with a small delay, otherwise
+            // not all changes will be recognized
+            QTimer::singleShot(150, this,
+                               SLOT(buildNotesIndexAndLoadNoteDirectoryList()));
+        }
+
+        showStatusBarMessage(
+                tr("%n note(s) were moved to note subfolder \"%2\"", "",
+                   noteSubFolderCount).arg(noteSubFolder.getName()), 5000);
+
+        // wait some time to enable the check again to prevent troubles on macOS
+        QTimer::singleShot(4000, this, SLOT(
+                enableNoteExternallyRemovedCheck()));
+    }
+}
+
+/**
+ * Enables the note externally removed check
+ */
+void MainWindow::enableNoteExternallyRemovedCheck() {
+    _noteExternallyRemovedCheckEnabled = true;
+}
+
+/**
+ * Copies selected notes to a note subfolder
+ */
+void MainWindow::copySelectedNotesToNoteSubFolder(NoteSubFolder noteSubFolder) {
+    int selectedItemsCount = ui->noteTreeWidget->selectedItems().size();
+    QString text = tr("Copy %n selected note(s) to note subfolder "
+                       "<strong>%2</strong>?", "",
+                      selectedItemsCount).arg(noteSubFolder.getName());
+
+    if (Utils::Gui::question(
+            this,
+            tr("Copy selected notes"),
+            text,
+            "copy-notes") == QMessageBox::Yes) {
+        const QSignalBlocker blocker(this->noteDirectoryWatcher);
+        Q_UNUSED(blocker);
+
+        int noteSubFolderCount = 0;
+        Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
+                int noteId = item->data(0, Qt::UserRole).toInt();
+                Note note = Note::fetch(noteId);
+
+                if (!note.isFetched()) {
+                    continue;
+                }
+
+                // fetch the tags to tag the note after copying it
+                QList<Tag> tags = Tag::fetchAllOfNote(note);
+
+                // copy note
+                bool result = note.copyToPath(noteSubFolder.fullPath());
+                if (result) {
+                    noteSubFolderCount++;
+                    qDebug() << "Note was copied:" << note.getName();
+
+                    // set the new sub-folder so the tags are stored correctly
+                    note.setNoteSubFolder(noteSubFolder);
+
+                    // tag the note again
+                    Q_FOREACH(Tag tag, tags) {
+                            tag.linkToNote(note);
+                        }
+                } else {
+                    qWarning() << "Could not copy note:" << note.getName();
+                }
+            }
+
+        // rebuild the index after the copy
+        if (noteSubFolderCount > 0) {
+            // for some reason this only works with a small delay, otherwise
+            // not all changes will be recognized
+            QTimer::singleShot(150, this,
+                               SLOT(buildNotesIndexAndLoadNoteDirectoryList()));
+        }
+
+        showStatusBarMessage(
+                tr("%n note(s) were copied to note subfolder \"%2\"", "",
+                   noteSubFolderCount).arg(noteSubFolder.getName()), 5000);
+    }
+}
+
+/**
+ * Returns true if one of the selected notes has a linked tag
+ *
+ * @return
+ */
+bool MainWindow::selectedNotesHaveTags() {
+    Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
+            int noteId = item->data(0, Qt::UserRole).toInt();
+            Note note = Note::fetch(noteId);
+
+            if (!note.isFetched()) {
+                continue;
+            }
+
+            if (Tag::countAllOfNote(note) > 0) {
+                return true;
+            }
+        }
+
+    return false;
+}
+
+/**
  * Opens the widget to replace text in the current note
  */
 void MainWindow::on_actionReplace_in_current_note_triggered() {
-    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
     textEdit->searchWidget()->activateReplace();
 }
 
@@ -5722,7 +8316,7 @@ void MainWindow::on_actionReplace_in_current_note_triggered() {
  * Jumps to the position that was clicked in the navigation widget
  */
 void MainWindow::onNavigationWidgetPositionClicked(int position) {
-    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
 
     // set the focus first so the preview also scrolls to the headline
     textEdit->setFocus();
@@ -5744,10 +8338,13 @@ void MainWindow::onNavigationWidgetPositionClicked(int position) {
     c.movePosition(QTextCursor::EndOfLine, QTextCursor::KeepAnchor);
 
     textEdit->setTextCursor(c);
+
+    // update the preview-slider
+    noteTextSliderValueChanged(textEdit->verticalScrollBar()->value(), true);
 }
 
 /**
- * Start a note preview regeneration to resize too large images
+ * Starts a note preview regeneration to resize too large images
  */
 void MainWindow::onNoteTextViewResize(QSize size, QSize oldSize) {
     Q_UNUSED(size);
@@ -5761,7 +8358,7 @@ void MainWindow::onNoteTextViewResize(QSize size, QSize oldSize) {
 }
 
 /**
- * Regenerate the note preview by converting the markdown to html again
+ * Regenerates the note preview by converting the markdown to html again
  */
 void MainWindow::regenerateNotePreview() {
     setNoteTextFromNote(&currentNote, true);
@@ -5772,15 +8369,91 @@ void MainWindow::regenerateNotePreview() {
  * Tries to open a link at the current cursor position or solve an equation
  */
 void MainWindow::on_actionAutocomplete_triggered() {
-    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
 
     // try to open a link at the cursor position
     if (textEdit->openLinkAtCursorPosition()) {
         showStatusBarMessage(
-                tr("an url was opened at the current cursor position"), 5000);
+                tr("An url was opened at the current cursor position"), 5000);
         return;
     }
 
+    // attempt a markdown table auto-format
+    if (Utils::Gui::autoFormatTableAtCursor(textEdit)) {
+        return;
+    }
+
+    QMenu menu;
+
+    double resultValue;
+    if (solveEquationInNoteTextEdit(resultValue)) {
+        QString text = QString::number(resultValue);
+        QAction *action = menu.addAction("= " + text);
+        action->setData(text);
+        action->setWhatsThis("equation");
+    }
+
+    QStringList resultList;
+    if (noteTextEditAutoComplete(resultList)) {
+        Q_FOREACH(QString text, resultList) {
+                QAction *action = menu.addAction(text);
+                action->setData(text);
+                action->setWhatsThis("autocomplete");
+            }
+    }
+
+    // load texts from scripts to show in the autocompletion list
+    QStringList autocompletionList = ScriptingService::instance()
+            ->callAutocompletionHook();
+    if (!autocompletionList.isEmpty()) {
+        QAction *action = menu.addAction("");
+        action->setSeparator(true);
+
+        Q_FOREACH(QString text, autocompletionList) {
+                QAction *action = menu.addAction(text);
+                action->setData(text);
+                action->setWhatsThis("autocomplete");
+            }
+    }
+
+    QPoint globalPos = textEdit->mapToGlobal(
+            textEdit->cursorRect().bottomRight());
+
+    // compensate viewport margins
+    globalPos.setY(globalPos.y() + textEdit->viewportMargins().top());
+    globalPos.setX(globalPos.x() + textEdit->viewportMargins().left());
+
+    if (menu.actions().count() > 0) {
+        QAction *selectedItem = menu.exec(globalPos);
+        if (selectedItem) {
+            QString text = selectedItem->data().toString();
+            QString type = selectedItem->whatsThis();
+
+            if (text.isEmpty()) {
+                return;
+            }
+
+            if (type == "autocomplete") {
+                // overwrite the currently written word
+                QTextCursor c = textEdit->textCursor();
+                c.movePosition(QTextCursor::StartOfWord,
+                               QTextCursor::KeepAnchor);
+                c.insertText(text + " ");
+            } else {
+                textEdit->insertPlainText(text);
+            }
+        }
+    }
+}
+
+/**
+ * Tries to find an equation in the current line and solves it
+ *
+ * @param returnValue
+ * @return
+ */
+bool MainWindow::solveEquationInNoteTextEdit(double &returnValue) {
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
     QTextCursor c = textEdit->textCursor();
 
     // get the text from the current cursor to the start of the line
@@ -5799,10 +8472,11 @@ void MainWindow::on_actionAutocomplete_triggered() {
                     .match(equation);
 
     if (!match.hasMatch()) {
-        showStatusBarMessage(tr("no equation was found in front of the cursor"),
-                             5000);
-        return;
+        return false;
     }
+
+    showStatusBarMessage(tr("No equation was found in front of the cursor"),
+                         5000);
 
     equation = match.captured(1);
     qDebug() << __func__ << " - 'equation': " << equation;
@@ -5818,23 +8492,99 @@ void MainWindow::on_actionAutocomplete_triggered() {
         resultValue = 0;
     }
 
-    showStatusBarMessage(tr("result for equation: %1 = %2")
-                                 .arg(equation, QString::number(resultValue)),
+    showStatusBarMessage(tr("Result for equation: %1 = %2")
+                                 .arg(equation,
+                                      QString::number(resultValue)),
                          10000);
 
     // check if cursor is after the "="
     match = QRegularExpression("=\\s*$").match(text);
-    if (match.hasMatch()) {
-        // put the result into the note
-        textEdit->insertPlainText(QString::number(resultValue));
+    if (!match.hasMatch()) {
+        return false;
     }
+
+    returnValue = resultValue;
+    return true;
+}
+
+/**
+ * Returns the text from the current cursor to the start of the word in the
+ * note text edit
+ *
+ * @param withPreviousCharacters also get more characters at the beginning
+ *                               to get characters like "@" that are not
+ *                               word-characters
+ * @return
+ */
+QString MainWindow::noteTextEditCurrentWord(bool withPreviousCharacters) {
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QTextCursor c = textEdit->textCursor();
+
+    // get the text from the current word
+    c.movePosition(QTextCursor::EndOfWord);
+    c.movePosition(QTextCursor::StartOfWord, QTextCursor::KeepAnchor);
+
+    QString text = c.selectedText();
+
+    if (withPreviousCharacters) {
+        QRegularExpression re("^[\\s\\n][^\\s]*");
+        do {
+            c.movePosition(QTextCursor::Left, QTextCursor::KeepAnchor);
+            text = c.selectedText();
+        } while (!(re.match(text).hasMatch() || c.atBlockStart()));
+    }
+
+    return  text.trimmed();
+}
+
+/**
+ * Tries to find words that start with the current word in the note text edit
+ *
+ * @param resultList
+ * @return
+ */
+bool MainWindow::noteTextEditAutoComplete(QStringList &resultList) {
+    // get the text from the current cursor to the start of the word
+    QString text = noteTextEditCurrentWord();
+    qDebug() << __func__ << " - 'text': " << text;
+
+    if (text.isEmpty()) {
+        return false;
+    }
+
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QString noteText = textEdit->toPlainText();
+
+    // find all items that match our current word
+    resultList = noteText.split(
+            QRegularExpression("[^\\w\\d]",
+                               QRegularExpression::UseUnicodePropertiesOption),
+            QString::SkipEmptyParts)
+            .filter(QRegularExpression(
+                    "^" + QRegularExpression::escape(text),
+                    QRegularExpression::CaseInsensitiveOption));
+
+    // we only want each word once
+    resultList.removeDuplicates();
+
+    // remove the text we already entered
+    resultList.removeOne(text);
+
+    if (resultList.count() == 0) {
+        return false;
+    }
+
+    qDebug() << __func__ << " - 'resultList': " << resultList;
+
+    return true;
 }
 
 /**
  * Shows the note folder selection popup
  */
 void MainWindow::on_actionSelect_note_folder_triggered() {
-    ui->noteFolderComboBox->show();
+    _noteFolderDockWidgetWasVisible = _noteFolderDockWidget->isVisible();
+    _noteFolderDockWidget->show();
     ui->noteFolderComboBox->showPopup();
 }
 
@@ -5843,31 +8593,50 @@ void MainWindow::on_actionSelect_note_folder_triggered() {
  */
 void MainWindow::on_actionReload_scripting_engine_triggered() {
     ScriptingService::instance()->reloadEngine();
-    showStatusBarMessage(tr("the scripting engine was reloaded"), 3000);
+    showStatusBarMessage(tr("The scripting engine was reloaded"), 3000);
 }
 
-void MainWindow::on_actionShow_log_dialog_triggered() {
-    showLogDialog();
+/**
+ * Things to do before the scripting engine will be reloaded
+ * Will be invoked by the ScriptingService
+ */
+void MainWindow::preReloadScriptingEngine() {
+    // clear and hide the custom actions
+    ui->menuCustom_actions->clear();
+    ui->menuCustom_actions->hide();
+    _customActionToolbar->clear();
+    _customActionToolbar->hide();
+    _noteTextEditContextMenuActions.clear();
+    _noteListContextMenuActions.clear();
+
+    // hide the scripting dock widget and remove all registered labels
+    _scriptingDockWidget->hide();
+    Q_FOREACH(QLabel *label,
+              ui->scriptingScrollArea->findChildren<QLabel *>()) {
+            delete label;
+        }
+}
+
+void MainWindow::on_actionShow_log_triggered() {
+    _logDockWidget->show();
 }
 
 /**
  * Exports the note preview as HTML
  */
 void MainWindow::on_actionExport_preview_HTML_triggered() {
-    QFileDialog dialog;
+    FileDialog dialog("NoteHTMLExport");
     dialog.setFileMode(QFileDialog::AnyFile);
     dialog.setAcceptMode(QFileDialog::AcceptSave);
-    dialog.setDirectory(QDir::homePath());
-    dialog.setNameFilter(tr("HTML files (*.html)"));
+    dialog.setNameFilter(tr("HTML files") + " (*.html)");
     dialog.setWindowTitle(tr("Export current note as HTML file"));
     dialog.selectFile(currentNote.getName() + ".html");
     int ret = dialog.exec();
 
     if (ret == QDialog::Accepted) {
-        QStringList fileNames = dialog.selectedFiles();
-        if (fileNames.count() > 0) {
-            QString fileName = fileNames.at(0);
+        QString fileName = dialog.selectedFile();
 
+        if (!fileName.isEmpty()) {
             if (QFileInfo(fileName).suffix().isEmpty()) {
                 fileName.append(".html");
             }
@@ -5883,9 +8652,11 @@ void MainWindow::on_actionExport_preview_HTML_triggered() {
             QTextStream out(&file);
             out.setCodec("UTF-8");
             out << currentNote.toMarkdownHtml(
-                    NoteFolder::currentLocalPath(), getMaxImageWidth(), true);
+                    NoteFolder::currentLocalPath(), getMaxImageWidth(), true,
+                    true, true);
             file.flush();
             file.close();
+            Utils::Misc::openFolderSelect(fileName);
         }
     }
 }
@@ -5895,7 +8666,14 @@ void MainWindow::on_actionExport_preview_HTML_triggered() {
  */
 void MainWindow::on_actionOpen_IRC_Channel_triggered() {
     QDesktopServices::openUrl(
-            QUrl("https://webchat.freenode.net/?channels=qownnotes"));
+            QUrl("https://kiwiirc.com/client/irc.freenode.net/#qownnotes"));
+}
+
+/**
+ * Opens the Gitter room in a webpage
+ */
+void MainWindow::on_actionGitter_triggered() {
+    QDesktopServices::openUrl(QUrl("https://gitter.im/qownnotes/qownnotes"));
 }
 
 /**
@@ -5953,18 +8731,12 @@ void MainWindow::initSavedSearchesCompleter() {
  */
 void MainWindow::on_actionInsert_headline_from_note_filename_triggered()
 {
-    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
     QTextCursor c = textEdit->textCursor();
     c.movePosition(QTextCursor::Start, QTextCursor::MoveAnchor);
 
     QString fileName = currentNote.fileBaseName(true);
-    QString text = fileName + "\n";
-
-    for (int i = 0; i < fileName.count(); i++) {
-        text.append("=");
-    }
-
-    text.append("\n\n");
+    QString text = Note::createNoteHeader(fileName);
     c.insertText(text);
 }
 
@@ -6003,13 +8775,11 @@ void MainWindow::on_noteTreeWidget_currentItemChanged(
         return;
     }
 
-    qDebug() << "currentItemChanged " << current->text(0);
+    int noteId = current->data(0, Qt::UserRole).toInt();
+    Note note = Note::fetch(noteId);
+    qDebug() << __func__;
 
-    Note note = Note::fetchByName(current->text(0));
     setCurrentNote(note, true, false);
-
-    // parse the current note for markdown highlighting
-    ui->noteTextEdit->highlighter()->parse();
 
     // let's highlight the text from the search line edit
     searchForSearchLineTextInNoteTextEdit();
@@ -6023,18 +8793,40 @@ void MainWindow::on_noteTreeWidget_currentItemChanged(
 void MainWindow::on_noteTreeWidget_customContextMenuRequested(
         const QPoint &pos) {
     QPoint globalPos = ui->noteTreeWidget->mapToGlobal(pos);
+    openNotesContextMenu(globalPos);
+}
+
+void MainWindow::openNotesContextMenu(
+        const QPoint &globalPos, bool multiNoteMenuEntriesOnly) {
     QMenu noteMenu;
     QMenu *moveDestinationMenu = new QMenu();
     QMenu *copyDestinationMenu = new QMenu();
     QMenu *tagRemoveMenu = new QMenu();
+
+    QAction *createNoteAction = new QAction(this);
+    QAction *renameAction = new QAction(this);
+
+    if (!multiNoteMenuEntriesOnly) {
+        createNoteAction = noteMenu.addAction(tr("New note"));
+        connect(createNoteAction, SIGNAL(triggered()),
+                this, SLOT(on_action_New_note_triggered()));
+
+        renameAction = new QAction(this);
+        renameAction = noteMenu.addAction(tr("Rename note"));
+        renameAction->setToolTip(tr("Allows you to rename the filename of "
+                                    "the note"));
+    }
+
+    QAction *removeAction = noteMenu.addAction(tr("&Remove notes"));
+    noteMenu.addSeparator();
 
     QList<NoteFolder> noteFolders = NoteFolder::fetchAll();
 
     // show copy and move menu entries only if there
     // is at least one other note folder
     if (noteFolders.count() > 1) {
-        moveDestinationMenu = noteMenu.addMenu(tr("&Move notes to..."));
-        copyDestinationMenu = noteMenu.addMenu(tr("&Copy notes to..."));
+        moveDestinationMenu = noteMenu.addMenu(tr("&Move notes to…"));
+        copyDestinationMenu = noteMenu.addMenu(tr("&Copy notes to…"));
 
         Q_FOREACH(NoteFolder noteFolder, noteFolders) {
                 // don't show not existing folders or if path is empty
@@ -6060,16 +8852,30 @@ void MainWindow::on_noteTreeWidget_customContextMenuRequested(
             }
     }
 
+    bool showSubFolders = NoteFolder::isCurrentShowSubfolders();
+    if (showSubFolders) {
+        QMenu *subFolderMoveMenu = noteMenu.addMenu(
+                tr("Move notes to subfolder…"));
+        buildBulkNoteSubFolderMenuTree(subFolderMoveMenu, false);
+
+        QMenu *subFolderCopyMenu = noteMenu.addMenu(
+                tr("Copy notes to subfolder…"));
+        buildBulkNoteSubFolderMenuTree(subFolderCopyMenu, true);
+    }
+
     QList<Tag> tagList = Tag::fetchAll();
 
     // show the tagging menu if at least one tag is present
     if (tagList.count() > 0) {
-        QMenu *tagMenu = noteMenu.addMenu(tr("&Tag selected notes with..."));
+        QMenu *tagMenu = noteMenu.addMenu(tr("&Tag selected notes with…"));
         buildBulkNoteTagMenuTree(tagMenu);
     }
 
     QStringList noteNameList;
     Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
+            // the note names are not unique any more but the note subfolder
+            // path will be taken into account in
+            // Tag::fetchAllWithLinkToNoteNames
             QString name = item->text(0);
             Note note = Note::fetchByName(name);
             if (note.isFetched()) {
@@ -6083,7 +8889,7 @@ void MainWindow::on_noteTreeWidget_customContextMenuRequested(
     // show the remove tags menu if at least one tag is present
     if (tagRemoveList.count() > 0) {
         tagRemoveMenu = noteMenu.addMenu(
-                tr("&Remove tag from selected notes..."));
+                tr("&Remove tag from selected notes…"));
 
         Q_FOREACH(Tag tag, tagRemoveList) {
                 QAction *action = tagRemoveMenu->addAction(
@@ -6094,14 +8900,43 @@ void MainWindow::on_noteTreeWidget_customContextMenuRequested(
             }
     }
 
-    QAction *removeAction = noteMenu.addAction(tr("&Remove notes"));
-    noteMenu.addSeparator();
-    QAction *openInExternalEditorAction = noteMenu.addAction(
-            tr("Open note in external editor"));
-    QAction *showInFileManagerAction = noteMenu.addAction(
-            tr("Show note in file manager"));
-    noteMenu.addSeparator();
-    QAction *selectAllAction = noteMenu.addAction(tr("Select &all notes"));
+    QAction *openInExternalEditorAction = new QAction(this);
+    QAction *openNoteWindowAction = new QAction(this);
+    QAction *showInFileManagerAction = new QAction(this);
+    QAction *showNoteGitLogAction = new QAction(this);
+
+    if (!multiNoteMenuEntriesOnly) {
+        noteMenu.addSeparator();
+        openInExternalEditorAction = noteMenu.addAction(
+                tr("Open note in external editor"));
+        openNoteWindowAction = noteMenu.addAction(
+                tr("Open note in different window"));
+        showInFileManagerAction = noteMenu.addAction(
+                tr("Show note in file manager"));
+
+        showNoteGitLogAction = new QAction(this);
+        if (Utils::Git::isCurrentNoteFolderUseGit() &&
+            Utils::Git::hasLogCommand()) {
+            showNoteGitLogAction = noteMenu.addAction(
+                    tr("Show note git versions"));
+        }
+    }
+
+    // add the custom actions to the context menu
+    if (!_noteListContextMenuActions.isEmpty()) {
+        noteMenu.addSeparator();
+
+        Q_FOREACH(QAction *action, _noteListContextMenuActions) {
+                noteMenu.addAction(action);
+            }
+    }
+
+    QAction *selectAllAction = new QAction(this);
+
+    if (!multiNoteMenuEntriesOnly) {
+        noteMenu.addSeparator();
+        selectAllAction = noteMenu.addAction(tr("Select &all notes"));
+    }
 
     QAction *selectedItem = noteMenu.exec(globalPos);
     if (selectedItem) {
@@ -6127,17 +8962,52 @@ void MainWindow::on_noteTreeWidget_customContextMenuRequested(
             // select all notes
             selectAllNotes();
         } else if (selectedItem == openInExternalEditorAction) {
-            // opens the current note in an external editor
+            // open the current note in an external editor
             on_action_Open_note_in_external_editor_triggered();
+        } else if (selectedItem == openNoteWindowAction) {
+            // open the current note in a dialog
+            on_actionView_note_in_new_window_triggered();
         } else if (selectedItem == showInFileManagerAction) {
             // show the current note in the file manager
             on_actionShow_note_in_file_manager_triggered();
+        } else if (selectedItem == showNoteGitLogAction) {
+            // show the git log of the current note
+            on_actionShow_note_git_versions_triggered();
+        } else if (selectedItem == renameAction) {
+            QTreeWidgetItem *item = ui->noteTreeWidget->currentItem();
+
+            if (Note::allowDifferentFileName()) {
+                if (Utils::Misc::isNoteListPreview()) {
+                    bool ok;
+                    QString name = QInputDialog::getText(
+                            this, tr("Rename note"), tr("Name:"),
+                            QLineEdit::Normal, currentNote.getName(), &ok);
+
+                    if (ok && !name.isEmpty()) {
+                        item->setText(0, name);
+                        on_noteTreeWidget_itemChanged(item, 0);
+                    }
+                } else {
+                    ui->noteTreeWidget->editItem(item);
+                }
+            } else {
+                if (QMessageBox::warning(
+                        this, tr("Note renaming not enabled!"),
+                        tr("If you want to rename your note you have to enable "
+                                   "the option to allow the note filename to be "
+                                   "different from the headline."),
+                        tr("Open &settings"),
+                        tr("&Cancel"),
+                        QString::null, 0, 1) == 0) {
+                    openSettingsDialog(SettingsDialog::GeneralPage);
+                }
+            }
         }
     }
 }
 
 /**
- * Renames a note file if the note was renamed in the note list widget
+ * Renames a note file if the note was renamed in the note tree widget
  */
 void MainWindow::on_noteTreeWidget_itemChanged(QTreeWidgetItem *item,
                                                int column) {
@@ -6160,15 +9030,24 @@ void MainWindow::on_noteTreeWidget_itemChanged(QTreeWidgetItem *item,
             QString newNoteName = note.getName();
 
             if (oldNoteName != newNoteName) {
-
                 note.refetch();
                 setCurrentNote(note);
 
                 // rename the note file names of note tag links
                 Tag::renameNoteFileNamesOfLinks(oldNoteName, newNoteName);
 
+                // handle the replacing of all note urls if a note was renamed
+                Note::handleNoteRenaming(oldNoteName, newNoteName);
+
                 // reload the directory list if note name has changed
 //                loadNoteDirectoryList();
+
+                // sort notes if note name has changed
+                QSettings settings;
+                if (settings.value("notesPanelSort", SORT_BY_LAST_CHANGE).toInt() == SORT_ALPHABETICAL) {
+                    ui->noteTreeWidget->sortItems(0, toQtOrder(settings.value("notesPanelOrder").toInt()));
+                    ui->noteTreeWidget->scrollToItem(item);
+                }
             }
         }
 
@@ -6178,6 +9057,10 @@ void MainWindow::on_noteTreeWidget_itemChanged(QTreeWidgetItem *item,
         // set old name back in case the renaming failed or the file name got
         // altered in the renaming process
         item->setText(0, note.getName());
+
+        if (Utils::Misc::isNoteListPreview()) {
+            updateNoteTreeWidgetItem(note, item);
+        }
     }
 }
 
@@ -6191,7 +9074,14 @@ void MainWindow::on_noteSubFolderTreeWidget_currentItemChanged(
 
     // set the note sub folder id as active
     int noteSubFolderId = current->data(0, Qt::UserRole).toInt();
-    NoteSubFolder::setAsActive(noteSubFolderId);
+    _showNotesFromAllNoteSubFolders = noteSubFolderId == -1;
+
+    NoteSubFolder::setAsActive(_showNotesFromAllNoteSubFolders ?
+                               0 : noteSubFolderId);
+
+    QSettings settings;
+    settings.setValue("MainWindow/showNotesFromAllNoteSubFolders",
+                      _showNotesFromAllNoteSubFolders);
 
     const QSignalBlocker blocker(ui->searchLineEdit);
     Q_UNUSED(blocker);
@@ -6199,48 +9089,1567 @@ void MainWindow::on_noteSubFolderTreeWidget_currentItemChanged(
     ui->searchLineEdit->clear();
 
     filterNotes();
+    reloadTagTree();
+}
+
+/**
+ * Returns true if notes from all note sub folders should be shown
+ * @return
+ */
+bool MainWindow::showNotesFromAllNoteSubFolders() {
+    QSettings settings;
+    return settings.value("MainWindow/showNotesFromAllNoteSubFolders",
+                          _showNotesFromAllNoteSubFolders).toBool();
 }
 
 /**
  * Searches for note sub folders in the note sub folder tree widget
  */
 void MainWindow::on_noteSubFolderLineEdit_textChanged(const QString &arg1) {
-    searchForTextInTreeWidget(ui->noteSubFolderTreeWidget, arg1);
+    if (arg1.isEmpty()) {
+        // reload the note subfolder tree, so that the expand/collapse state
+        // of the items gets restored
+        reloadNoteSubFolderTree();
+    } else {
+        // block the events because we don't want the expand/collapse state
+        // of the items get stored while searching
+        const QSignalBlocker blocker(ui->noteSubFolderTreeWidget);
+        Q_UNUSED(blocker);
+
+        // search for the text
+        Utils::Gui::searchForTextInTreeWidget(
+                ui->noteSubFolderTreeWidget, arg1,
+                Utils::Gui::TreeWidgetSearchFlag::IntCheck);
+    }
 }
 
 /**
- * Searches for text in items of a tree widget
+ * Saves the expand status of the an item
  */
-void MainWindow::searchForTextInTreeWidget(QTreeWidget *treeWidget,
-                                           QString text) {
-    // get all items
-    QList<QTreeWidgetItem*> allItems = treeWidget->
-            findItems("", Qt::MatchContains | Qt::MatchRecursive);
+void MainWindow::on_noteSubFolderTreeWidget_itemExpanded(
+        QTreeWidgetItem *item) {
+    int noteSubFolderId = item->data(0, Qt::UserRole).toInt();
+    NoteSubFolder noteSubFolder = NoteSubFolder::fetch(noteSubFolderId);
+    if (noteSubFolder.isFetched()) {
+        noteSubFolder.saveTreeWidgetExpandState(
+                item->isExpanded());
+    }
 
-    // search text if at least one character was entered
-    if (text.count() >= 1) {
-        // search for items
-        QList<QTreeWidgetItem*> foundItems = treeWidget->
-                findItems(text, Qt::MatchContains | Qt::MatchRecursive);
+    // resize columns so long folder names get displayed
+    ui->noteSubFolderTreeWidget->resizeColumnToContents(0);
+    ui->noteSubFolderTreeWidget->resizeColumnToContents(1);
+}
 
-        // hide all not found items
-        Q_FOREACH(QTreeWidgetItem *item, allItems) {
-                int id = item->data(0, Qt::UserRole).toInt();
-                item->setHidden(!foundItems.contains(item) && (id > 0));
-            }
+void MainWindow::on_noteSubFolderTreeWidget_itemCollapsed(
+        QTreeWidgetItem *item) {
+    on_noteSubFolderTreeWidget_itemExpanded(item);
+}
 
-        // show items again that have visible children so that they are
-        // really shown
-        Q_FOREACH(QTreeWidgetItem *item, allItems) {
-                if (isOneTreeWidgetItemChildVisible(item)) {
-                    item->setHidden(false);
-                    item->setExpanded(true);
-                }
-            }
+/**
+ * Shows the context menu for the note subfolder tree
+ */
+void MainWindow::on_noteSubFolderTreeWidget_customContextMenuRequested(
+        const QPoint &pos) {
+    // don't open the context menu if no subfolders are selected
+    if (ui->noteSubFolderTreeWidget->selectedItems().count() == 0) {
+        return;
+    }
+
+    QPoint globalPos = ui->noteSubFolderTreeWidget->mapToGlobal(pos);
+    QMenu menu;
+
+    QAction *newNoteAction = menu.addAction(tr("New note"));
+    QAction *newAction = menu.addAction(tr("New subfolder"));
+    QAction *renameAction = menu.addAction(tr("Rename subfolder"));
+    QAction *removeAction = menu.addAction(tr("Remove selected folders"));
+    QAction *showInFileManagerAction = menu.addAction(
+            tr("Show folder in file manager"));
+
+    QAction *selectedItem = menu.exec(globalPos);
+    if (selectedItem) {
+        if (selectedItem == newNoteAction) {
+            // create a new note
+            on_action_New_note_triggered();
+        } else if (selectedItem == newAction) {
+            // create a new folder
+            createNewNoteSubFolder();
+        } else if (selectedItem == removeAction) {
+            // remove folders
+            removeSelectedNoteSubFolders();
+        } else if (selectedItem == renameAction) {
+            QTreeWidgetItem *item = ui->noteSubFolderTreeWidget->currentItem();
+
+            // rename folder
+            ui->noteSubFolderTreeWidget->editItem(item);
+        } else if (selectedItem == showInFileManagerAction) {
+            NoteSubFolder noteSubFolder =
+                    NoteFolder::currentNoteFolder().getActiveNoteSubFolder();
+
+            // show the current folder in the file manager
+            Utils::Misc::openPath(noteSubFolder.fullPath());
+        }
+    }
+}
+
+/**
+ * Creates a new note subfolder in the current subfolder
+ */
+bool MainWindow::createNewNoteSubFolder(QString folderName) {
+    bool ok = true;
+
+    if (folderName.isEmpty()) {
+        folderName = QInputDialog::getText(
+                this, tr("Create a new folder"), tr("Folder name:"),
+                QLineEdit::Normal, "", &ok);
+    }
+
+    if (!ok || folderName.isEmpty()) {
+        return false;
+    }
+
+    NoteSubFolder noteSubFolder =
+            NoteFolder::currentNoteFolder().getActiveNoteSubFolder();
+    QString path = noteSubFolder.fullPath() + QDir::separator() + folderName;
+    QDir directory;
+    bool success = directory.mkpath(path);
+
+    // rebuild the index of the note subfolders
+    buildNotesIndex();
+
+    // reload note subfolders
+    setupNoteSubFolders();
+
+    return success;
+}
+
+/**
+ * Creates a new subfolder with a name already entered
+ */
+void MainWindow::on_noteSubFolderLineEdit_returnPressed() {
+    if (createNewNoteSubFolder(ui->noteSubFolderLineEdit->text())) {
+        // clear the line edit on success
+        ui->noteSubFolderLineEdit->clear();
+    }
+}
+
+/**
+ * Renames a note subfolder
+ */
+void MainWindow::on_noteSubFolderTreeWidget_itemChanged(
+        QTreeWidgetItem *item, int column) {
+    Q_UNUSED(column);
+
+    NoteSubFolder noteSubFolder = NoteSubFolder::fetch(
+            item->data(0, Qt::UserRole).toInt());
+    if (noteSubFolder.isFetched()) {
+        QString name = item->text(0);
+
+        // rename the note subfolder in the file system
+        noteSubFolder.rename(name);
+
+        // reload tags, note subfolder and notes
+        on_action_Reload_note_folder_triggered();
+    }
+}
+
+void MainWindow::on_actionShare_note_triggered() {
+    const QSignalBlocker blocker(ui->actionShare_note);
+    Q_UNUSED(blocker);
+    ui->actionShare_note->setChecked(currentNote.isShared());
+
+    ShareDialog *dialog = new ShareDialog(currentNote, this);
+    dialog->exec();
+    delete(dialog);
+
+    currentNote.refetch();
+
+    // update the share button
+    updateShareButton();
+}
+
+/**
+ * Toggles the case of the word under the Cursor or the selected text
+ */
+void MainWindow::on_actionToggle_text_case_triggered() {
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QTextCursor c = textEdit->textCursor();
+    // Save positions to restore everything at the end
+    int selectionStart = c.selectionStart();
+    int selectionEnd = c.selectionEnd();
+    int cPos = c.position();
+
+    QString selectedText = c.selectedText();
+    bool textWasSelected = ! selectedText.isEmpty();
+
+    // if no text is selected: automatically select the Word under the Cursor
+    if (selectedText.isEmpty()) {
+        c.select(QTextCursor::WordUnderCursor);
+        selectedText = c.selectedText();
+    }
+
+    // cycle text through lowercase, uppercase, start case, and sentence case
+    c.insertText(Utils::Misc::cycleTextCase(selectedText));
+
+    if (textWasSelected) {
+        // select the text again to maybe do an other operation on it
+        // keep the original cursor position
+        if (cPos == selectionStart) {
+            c.setPosition(selectionEnd, QTextCursor::MoveAnchor);
+            c.setPosition(selectionStart, QTextCursor::KeepAnchor);
+        } else {
+            c.setPosition(selectionStart, QTextCursor::MoveAnchor);
+            c.setPosition(selectionEnd, QTextCursor::KeepAnchor);
+        }
     } else {
-        // show all items otherwise
-        Q_FOREACH(QTreeWidgetItem *item, allItems) {
-                item->setHidden(false);
+        // Just restore the Cursor Position if no text was selected
+        c.setPosition(cPos , QTextCursor::MoveAnchor);
+    }
+    // Restore the visible cursor
+    textEdit->setTextCursor(c);
+}
+
+/**
+ * Opens the Markdown Cheatsheet webpage
+ */
+void MainWindow::on_actionMarkdown_cheatsheet_triggered() {
+    QDesktopServices::openUrl(
+            QUrl("https://github.com/pbek/QOwnNotes/blob/develop/src/demonotes"
+                         "/Markdown%20Cheatsheet.md"));
+}
+
+/**
+ * Strikes out the selected text
+ */
+void MainWindow::on_actionStrike_out_text_triggered() {
+    applyFormatter("~~");
+}
+
+/**
+ * Initializes the shortcuts for the actions
+ *
+ * @param setDefaultShortcut
+ */
+void MainWindow::initShortcuts() {
+    QList<QMenu*> menus = menuList();
+    QSettings settings;
+
+    // we also have to clear the shortcuts directly, just removing the
+    // objects didn't remove the shortcut
+    foreach(QShortcut* menuShortcut, _menuShortcuts) {
+            menuShortcut->setKey(QKeySequence());
+        }
+
+    // remove all menu shortcuts to create new ones
+    _menuShortcuts.clear();
+
+#ifndef Q_OS_MAC
+    bool menuBarIsVisible = !ui->menuBar->isHidden();
+    qDebug() << __func__ << " - 'menuBarIsVisible': " << menuBarIsVisible;
+#endif
+
+    // loop through all menus
+    foreach(QMenu* menu, menus) {
+            // loop through all actions of the menu
+            foreach(QAction* action, menu->actions()) {
+                    // we don't need empty objects
+                    if (action->objectName().isEmpty()) {
+                        continue;
+                    }
+
+                    QString oldShortcut = action->shortcut().toString();
+
+                    // try to load a key sequence from the settings
+                    QKeySequence shortcut = QKeySequence(settings.value(
+                                    "Shortcuts/MainWindow-" +
+                                            action->objectName()).toString());
+
+                    // do we can this method the first time?
+                    if (!_isDefaultShortcutInitialized) {
+                        // set the default shortcut
+                        action->setData(oldShortcut);
+
+                        // if there was a shortcut set use the new shortcut
+                        if (!shortcut.isEmpty()) {
+                            action->setShortcut(shortcut);
+                        }
+                    } else {
+                        // set to the default shortcut if no shortcut was found,
+                        // otherwise store the new shortcut
+                        action->setShortcut(shortcut.isEmpty()
+                                            ? action->data().toString()
+                                            : shortcut);
+                    }
+
+#ifndef Q_OS_MAC
+                    // if the menu bar is not visible (like for the Unity
+                    // desktop) create a workaround with a QShortcut so the
+                    // shortcuts are still working
+                    // we don't do that under OS X, it causes all shortcuts
+                    // to not be viewed
+                    if (!menuBarIsVisible) {
+                        shortcut = action->shortcut();
+                        action->setShortcut(QKeySequence());
+
+                        QShortcut *shortcutItem = new QShortcut(shortcut, this);
+                        connect(shortcutItem, SIGNAL(activated()),
+                                action, SLOT(trigger()));
+                        _menuShortcuts.append(shortcutItem);
+                    }
+#endif
             }
     }
+
+    if (!_isDefaultShortcutInitialized) {
+        _isDefaultShortcutInitialized = true;
+    }
+}
+
+/**
+ * Shows or hides the main menu bar
+ *
+ * @param checked
+ */
+void MainWindow::on_actionShow_menu_bar_triggered(bool checked) {
+    ui->menuBar->setVisible(checked);
+
+    const QSignalBlocker blocker(ui->actionShow_menu_bar);
+    {
+        Q_UNUSED(blocker);
+        ui->actionShow_menu_bar->setChecked(checked);
+    }
+
+    QSettings settings;
+    settings.setValue("showMenuBar", checked);
+
+    // show the action in the toolbar if the main menu isn't shown
+    if (checked) {
+        _windowToolbar->removeAction(ui->actionShow_menu_bar);
+    } else {
+        _windowToolbar->addAction(ui->actionShow_menu_bar);
+    }
+
+    // init the shortcuts again to create or remove the menu bar shortcut
+    // workaround
+    initShortcuts();
+}
+
+/**
+ * Splits the current note into two notes at the current cursor position
+ */
+void MainWindow::on_actionSplit_note_at_cursor_position_triggered() {
+    QString name = currentNote.getName();
+    QList<Tag> tags = Tag::fetchAllOfNote(currentNote);
+
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QTextCursor c = textEdit->textCursor();
+
+    // select the text to get into a new note
+    c.movePosition(QTextCursor::End, QTextCursor::KeepAnchor);
+    QString selectedText = c.selectedText();
+
+    // remove the selected text
+    c.removeSelectedText();
+    textEdit->setTextCursor(c);
+
+    Note previousNote = currentNote;
+
+    // create a new note
+    createNewNote(name);
+
+    // adding a link to new note into the old note
+    previousNote.refetch();
+    QString noteNameForLink = Note::generateTextForLink(currentNote.getName());
+    QString previousNoteText = previousNote.getNoteText();
+    previousNoteText += "\n\n<note://" + noteNameForLink + ">";
+    previousNote.storeNewText(previousNoteText);
+
+    // add the previously removed text
+    textEdit = activeNoteTextEdit();
+    textEdit->insertPlainText(selectedText);
+
+    // link the tags of the old note to the new note
+    Q_FOREACH(Tag tag, tags) {
+            tag.linkToNote(currentNote);
+        }
+}
+
+/**
+ * Adds a custom action as menu item and button
+ */
+void MainWindow::addCustomAction(QString identifier, QString menuText,
+                                 QString buttonText, QString icon,
+                                 bool useInNoteEditContextMenu,
+                                 bool hideButtonInToolbar,
+                                 bool useInNoteListContextMenu) {
+//    ui->menuCustom_actions->show();
+    QAction *action = ui->menuCustom_actions->addAction(menuText);
+    action->setObjectName("customAction_" + identifier);
+    action->setData(identifier);
+
+    // restore the shortcut of the custom action
+    QSettings settings;
+    QKeySequence shortcut = QKeySequence(settings.value(
+            "Shortcuts/MainWindow-customAction_" + identifier).toString());
+    if (!shortcut.isEmpty()) {
+        action->setShortcut(shortcut);
+    }
+
+    // try to add an icon
+    if (!icon.isEmpty()) {
+        QFile file(icon);
+        // if no icon file was found set it as freedesktop theme icon
+        QIcon i = file.exists() ? QIcon(icon) : QIcon::fromTheme(icon);
+        action->setIcon(i);
+    }
+
+    // set a button text if not empty
+    if (!buttonText.isEmpty()) {
+        action->setIconText(buttonText);
+    }
+
+    // add a button to the custom action toolbar
+    if (!hideButtonInToolbar && (!buttonText.isEmpty() || !icon.isEmpty())) {
+        _customActionToolbar->show();
+        _customActionToolbar->addAction(action);
+    }
+
+    // connect to the custom action signal mapper
+    QObject::connect(action, SIGNAL(triggered()),
+                     _customActionSignalMapper, SLOT(map()));
+    _customActionSignalMapper->setMapping(action, identifier);
+
+    // add the custom action to the note text edit context menu later
+    if (useInNoteEditContextMenu) {
+        _noteTextEditContextMenuActions.append(action);
+    }
+
+    // add the custom action to the note list context menu later
+    if (useInNoteListContextMenu) {
+        _noteListContextMenuActions.append(action);
+    }
+}
+
+/**
+ * Adds a label to the scripting dock widget
+ */
+void MainWindow::addScriptingLabel(QString identifier, QString text) {
+    _scriptingDockWidget->show();
+    QLabel *label = new QLabel(text);
+    label->setOpenExternalLinks(true);
+    label->setTextInteractionFlags(Qt::TextSelectableByMouse |
+                                           Qt::LinksAccessibleByMouse);
+    label->setWordWrap(true);
+    label->setObjectName("scriptingLabel-" + identifier);
+    ui->scriptingScrollAreaLayout->addWidget(label);
+}
+
+/**
+ * Sets the text of a label in the scripting dock widget
+ */
+void MainWindow::setScriptingLabelText(QString identifier, QString text) {
+    QLabel* label = ui->scriptingScrollArea->findChild<QLabel*>(
+            "scriptingLabel-" + identifier);
+    if (label != Q_NULLPTR) {
+        label->setText(text);
+    }
+}
+
+/**
+ * Opens the donation page
+ */
+void MainWindow::on_actionDonate_triggered() {
+    QDesktopServices::openUrl(
+            QUrl("https://www.qownnotes.org/donate"));
+}
+
+/**
+ * Jumps to "All notes" in the note subfolder and tag tree widget and triggers
+ * a "Find note"
+ */
+void MainWindow::on_actionFind_notes_in_all_subfolders_triggered() {
+    // send an event to jump to "All notes" in the note subfolder tree widget
+    selectAllNotesInNoteSubFolderTreeWidget();
+
+    // send an event to jump to "All notes" in the tag tree widget
+    selectAllNotesInTagTreeWidget();
+
+    // trigger a "Find note"
+    on_action_Find_note_triggered();
+}
+
+/**
+ * Sends an event to jump to "All notes" in the note subfolder tree widget
+ */
+void MainWindow::selectAllNotesInNoteSubFolderTreeWidget() const {
+    QKeyEvent *event = new QKeyEvent(QEvent::KeyPress, Qt::Key_Home,
+                                     Qt::NoModifier);
+    QCoreApplication::postEvent(ui->noteSubFolderTreeWidget, event);
+}
+
+/**
+ * Sends an event to jump to "All notes" in the tag tree widget
+ */
+void MainWindow::selectAllNotesInTagTreeWidget() const {
+    QKeyEvent *event = new QKeyEvent(QEvent::KeyPress, Qt::Key_Home,
+                                     Qt::NoModifier);
+    QCoreApplication::postEvent(ui->tagTreeWidget, event);
+}
+
+void MainWindow::on_actionImport_notes_from_Evernote_triggered() {
+    EvernoteImportDialog* dialog = new EvernoteImportDialog(this);
+    dialog->exec();
+
+    if (dialog->getImportCount() > 0) {
+        // reload the note folder after importing new notes
+        buildNotesIndexAndLoadNoteDirectoryList(true, true);
+    }
+
+    delete(dialog);
+}
+
+/**
+ * Shows a dialog to delete orphaned images
+ */
+void MainWindow::on_actionDelete_orphaned_images_triggered() {
+    delete(_orphanedImagesDialog);
+    _orphanedImagesDialog = new OrphanedImagesDialog(this);
+    _orphanedImagesDialog->show();
+}
+
+/**
+ * Writes text to the note text edit (for ScriptingService)
+ *
+ * @param text
+ */
+void MainWindow::writeToNoteTextEdit(QString text) {
+    QOwnNotesMarkdownTextEdit *textEdit = activeNoteTextEdit();
+    textEdit->insertPlainText(text);
+}
+
+/**
+ * Returns the text that is selected in the note text edit
+ *
+ * @return
+ */
+QString MainWindow::selectedNoteTextEditText() {
+    QOwnNotesMarkdownTextEdit *textEdit = activeNoteTextEdit();
+    QString selectedText = textEdit->textCursor().selectedText();
+
+    // transform Unicode line endings
+    // this newline character seems to be used in multi-line selections
+    QString newLine = QString::fromUtf8(QByteArray::fromHex("e280a9"));
+    selectedText.replace(newLine, "\n");
+
+    return selectedText;
+}
+
+/**
+ * Locks and unlocks the dock widgets
+ *
+ * @param arg1
+ */
+void MainWindow::on_actionUnlock_panels_toggled(bool arg1) {
+    const QSignalBlocker blocker(ui->actionUnlock_panels);
+    {
+        Q_UNUSED(blocker);
+        ui->actionUnlock_panels->setChecked(arg1);
+    }
+
+    QList<QDockWidget*> dockWidgets = findChildren<QDockWidget*>();
+
+    if (!arg1) {
+        // remove the title bar widgets of all dock widgets
+        Q_FOREACH(QDockWidget *dockWidget, dockWidgets) {
+                // we don't want to lock floating dock widgets
+                if (dockWidget->isFloating()) {
+                    continue;
+                }
+
+                // remove the title bar widget
+                dockWidget->setTitleBarWidget(new QWidget());
+
+#ifndef Q_OS_MAC
+                // set 3px top margin for the enclosed widget
+                dockWidget->widget()->setContentsMargins(0, 3, 0, 0);
+#endif
+            }
+    } else {
+        // add the old title bar widgets to all dock widgets
+        _noteSubFolderDockWidget->setTitleBarWidget(
+                _noteSubFolderDockTitleBarWidget);
+        _taggingDockWidget->setTitleBarWidget(_taggingDockTitleBarWidget);
+        _noteSearchDockWidget->setTitleBarWidget(_noteSearchDockTitleBarWidget);
+        _noteFolderDockWidget->setTitleBarWidget(_noteFolderDockTitleBarWidget);
+        _noteListDockWidget->setTitleBarWidget(_noteListDockTitleBarWidget);
+        _noteNavigationDockWidget->setTitleBarWidget(
+                _noteNavigationDockTitleBarWidget);
+
+        if (!_noteEditIsCentralWidget) {
+            _noteEditDockWidget->setTitleBarWidget(_noteEditDockTitleBarWidget);
+        }
+
+        _noteTagDockWidget->setTitleBarWidget(_noteTagDockTitleBarWidget);
+        _notePreviewDockWidget->setTitleBarWidget(
+                _notePreviewDockTitleBarWidget);
+        _logDockWidget->setTitleBarWidget(_logDockTitleBarWidget);
+        _scriptingDockWidget->setTitleBarWidget(_scriptingDockTitleBarWidget);
+
+        Q_FOREACH(QDockWidget *dockWidget, dockWidgets) {
+                // reset the top margin of the enclosed widget
+                dockWidget->widget()->setContentsMargins(0, 0, 0, 0);
+            }
+    }
+}
+
+/**
+ * Creates a new workspace with asking for its name
+ */
+void MainWindow::on_actionStore_as_new_workspace_triggered() {
+    QString name = QInputDialog::getText(
+            this, tr("Create new workspace"), tr("Workspace name:")).trimmed();
+
+    if (name.isEmpty()) {
+        return;
+    }
+
+    // store the current workspace
+    storeCurrentWorkspace();
+
+    // create the new workspace
+    createNewWorkspace(name);
+}
+
+/**
+ * Creates a new workspace with name
+ *
+ * @param name
+ * @return
+ */
+bool MainWindow::createNewWorkspace(QString name) {
+    name = name.trimmed();
+
+    if (name.isEmpty()) {
+        return false;
+    }
+
+    QSettings settings;
+    QString currentUuid = currentWorkspaceUuid();
+    settings.setValue("previousWorkspace", currentUuid);
+
+    QString uuid = QUuid::createUuid().toString();
+    uuid.replace("{", "").replace("}", "");
+
+    QStringList workspaces = getWorkspaceUuidList();
+    workspaces.append(uuid);
+
+    settings.setValue("workspaces", workspaces);
+    settings.setValue("currentWorkspace", uuid);
+    settings.setValue("workspace-" + uuid + "/name", name);
+
+    // store the new current workspace
+    storeCurrentWorkspace();
+
+    // update the menu and combo box
+    updateWorkspaceLists();
+
+    return true;
+}
+
+/**
+ * Returns the uuid of the current workspace
+ *
+ * @return
+ */
+QString MainWindow::currentWorkspaceUuid() {
+    QSettings settings;
+    return settings.value("currentWorkspace").toString();
+}
+
+/**
+ * Sets the new current workspace when the workspace combo box index has changed
+ */
+void MainWindow::onWorkspaceComboBoxCurrentIndexChanged(int index) {
+    Q_UNUSED(index);
+
+    QString uuid = _workspaceComboBox->currentData().toString();
+
+    // set the new workspace
+    setCurrentWorkspace(uuid);
+}
+
+/**
+ * Sets a new current workspace
+ */
+void MainWindow::setCurrentWorkspace(QString uuid) {
+    QWidget *focusWidget = qApp->focusWidget();
+
+    // store the current workspace
+    storeCurrentWorkspace();
+
+    QSettings settings;
+    QString currentUuid = currentWorkspaceUuid();
+    settings.setValue("previousWorkspace", currentUuid);
+    settings.setValue("currentWorkspace", uuid);
+
+    // restore the new workspace
+    restoreCurrentWorkspace();
+
+    // update the menu and combo box (but don't rebuild it)
+    updateWorkspaceLists(false);
+
+    if (focusWidget != Q_NULLPTR) {
+        // set the focus to the widget that had the focus before
+        // the workspace was restored
+        focusWidget->setFocus();
+    }
+
+    // update the preview in case it was disable previously
+    setNoteTextFromNote(&currentNote, true);
+}
+
+/**
+ * Stores the current workspace
+ */
+void MainWindow::storeCurrentWorkspace() {
+    QSettings settings;
+    QString uuid = currentWorkspaceUuid();
+
+    settings.setValue("workspace-" + uuid + "/windowState", saveState());
+    settings.setValue("workspace-" + uuid + "/noteSubFolderDockWidgetVisible",
+                      _noteSubFolderDockWidgetVisible);
+}
+
+/**
+ * Restores the current workspace
+ */
+void MainWindow::restoreCurrentWorkspace() {
+    QSettings settings;
+    QStringList workspaces = getWorkspaceUuidList();
+
+    // create a default workspace if there is none yet
+    if (workspaces.count() == 0) {
+        createNewWorkspace(tr("full", "full workspace"));
+
+        _taggingDockWidget->setVisible(false);
+        _noteFolderDockWidget->setVisible(false);
+        _noteNavigationDockWidget->setVisible(false);
+        _noteTagDockWidget->setVisible(false);
+        _notePreviewDockWidget->setVisible(false);
+        createNewWorkspace(tr("minimal", "minimal workspace"));
+
+        // TODO: maybe still create those workspaces initially?
+    }
+
+    QString uuid = currentWorkspaceUuid();
+
+    // set the first workspace as current workspace if there is none set
+    if (uuid.isEmpty()) {
+        workspaces = getWorkspaceUuidList();
+
+        if (workspaces.count() == 0) {
+            return;
+        }
+
+        uuid = workspaces.at(0);
+        settings.setValue("currentWorkspace", uuid);
+
+        // update the menu and combo box
+        updateWorkspaceLists();
+    }
+
+    restoreState(settings.value(
+            "workspace-" + uuid + "/windowState").toByteArray());
+
+    // handle the visibility of the note subfolder panel
+    handleNoteSubFolderVisibility();
+
+    // update the panel lists
+    updatePanelMenu();
+
+    // check if the user wanted the note subfolder dock widget visible
+    _noteSubFolderDockWidgetVisible = settings.value(
+            "workspace-" + uuid + "/noteSubFolderDockWidgetVisible", true)
+            .toBool();
+
+    // set the visibility of the note subfolder dock widget
+    handleNoteSubFolderVisibility();
+
+    // if app was newly installed we want to center and resize the window
+    if (settings.value("initialWorkspace").toBool()) {
+        MetricsService::instance()->sendEventIfEnabled(
+                "app/initial-layout", "app", "initial-layout",
+                settings.value("initialLayoutIdentifier").toString());
+
+        settings.remove("initialWorkspace");
+        centerAndResize();
+    }
+}
+
+/**
+ * Handles the visibility of the note subfolder panel
+ */
+void MainWindow::handleNoteSubFolderVisibility() const {
+    // turn the subfolder dock widget on or off according to whether the
+    // subfolders are enabled or not
+    bool showSubfolders = NoteFolder::isCurrentShowSubfolders();
+    _noteSubFolderDockWidget->setVisible(
+            showSubfolders && _noteSubFolderDockWidgetVisible);
+}
+
+/**
+ * Returns the list of workspace uuids
+ * @return
+ */
+QStringList MainWindow::getWorkspaceUuidList() {
+    QSettings settings;
+    return settings.value("workspaces").toStringList();
+}
+
+/**
+ * Removes the current workspace
+ */
+void MainWindow::on_actionRemove_current_workspace_triggered() {
+    QStringList workspaces = getWorkspaceUuidList();
+
+    // there have to be at least one workspace
+    if (workspaces.count() < 2) {
+        return;
+    }
+
+    QString uuid = currentWorkspaceUuid();
+
+    // if no workspace is set we can't remove it
+    if (uuid.isEmpty()) {
+        return;
+    }
+
+    // ask for permission
+    if (Utils::Gui::question(
+            this,
+            tr("Remove current workspace"),
+            tr("Remove the current workspace?"),
+            "remove-workspace") != QMessageBox::Yes) {
+        return;
+    }
+
+    // reset current workspace
+    workspaces.removeAll(uuid);
+    QString newUuid = workspaces.at(0);
+
+    // set the new workspace
+    setCurrentWorkspace(newUuid);
+
+    QSettings settings;
+    settings.setValue("workspaces", workspaces);
+
+    // remove all settings in the group
+    settings.beginGroup("workspace-" + uuid);
+    settings.remove("");
+    settings.endGroup();
+
+    // update the menu and combo box
+    updateWorkspaceLists();
+}
+
+void MainWindow::on_actionRename_current_workspace_triggered() {
+    QString uuid = currentWorkspaceUuid();
+
+    // if no workspace is set we can't rename it
+    if (uuid.isEmpty()) {
+        return;
+    }
+
+    QSettings settings;
+    QString name = settings.value("workspace-" + uuid + "/name").toString();
+
+    // ask for the new name
+    name = QInputDialog::getText(
+            this, tr("Rename workspace"), tr("Workspace name:"),
+            QLineEdit::Normal, name).trimmed();
+
+    if (name.isEmpty()) {
+        return;
+    }
+
+    // rename the workspace
+    settings.setValue("workspace-" + uuid + "/name", name);
+
+    // update the menu and combo box
+    updateWorkspaceLists();
+}
+
+/**
+ * Switch to the previous workspace
+ */
+void MainWindow::on_actionSwitch_to_previous_workspace_triggered() {
+    QSettings settings;
+    QString uuid = settings.value("previousWorkspace").toString();
+
+    if (!uuid.isEmpty()) {
+        setCurrentWorkspace(uuid);
+    }
+}
+
+/**
+ * Shows all dock widgets
+ */
+void MainWindow::on_actionShow_all_panels_triggered() {
+    QList<QDockWidget*> dockWidgets = findChildren<QDockWidget*>();
+
+    Q_FOREACH(QDockWidget *dockWidget, dockWidgets) {
+            dockWidget->setVisible(true);
+        }
+
+    _noteSubFolderDockWidgetVisible = true;
+
+    // handle the visibility of the note subfolder panel
+    handleNoteSubFolderVisibility();
+
+    // update the preview in case it was disable previously
+    setNoteTextFromNote(&currentNote, true);
+
+    // filter notes according to selections
+    filterNotes();
+}
+
+/**
+ * Opens the find action dialog
+ */
+void MainWindow::on_actionFind_action_triggered() {
+    if (_actionDialog == Q_NULLPTR) {
+        _actionDialog = new ActionDialog(ui->menuBar, this);
+    } else {
+        _actionDialog->refreshUi();
+    }
+
+    _actionDialog->show();
+}
+
+/**
+ * Opens the table dialog
+ */
+void MainWindow::on_actionInsert_table_triggered() {
+    TableDialog* dialog = new TableDialog(this);
+    dialog->exec();
+    delete(dialog);
+}
+
+/**
+ * Inserts a block quote character or formats the selected text as block quote
+ */
+void MainWindow::on_actionInsert_block_quote_triggered() {
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QTextCursor c = textEdit->textCursor();
+    QString selectedText = c.selectedText();
+
+    if (selectedText.isEmpty()) {
+        c.insertText("> ");
+        textEdit->setTextCursor(c);
+    } else {
+        // this only applies to the start of the selected block
+        selectedText.replace(QRegularExpression("^"), "> ");
+
+        // transform Unicode line endings
+        // this newline character seems to be used in multi-line selections
+        QString newLine = QString::fromUtf8(QByteArray::fromHex("e280a9"));
+        selectedText.replace(newLine, "\n> ");
+
+        // remove the block quote if it was placed at the end of the text
+        selectedText.remove(QRegularExpression("> $"));
+
+        c.insertText(selectedText);
+    }
+}
+
+/**
+ * Searches for the selected text on the web
+ */
+void MainWindow::on_actionSearch_text_on_the_web_triggered() {
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QString selectedText = textEdit->textCursor().selectedText().trimmed();
+
+    if (selectedText.isEmpty()) {
+        return;
+    }
+
+    // handling the case in which the saved engine id
+    // has been removed
+
+    QSettings settings;
+    typedef Utils::Misc::SearchEngine SearchEngine;
+    int selectedSearchEngineId = settings.value(
+            "SearchEngineId", Utils::Misc::getDefaultSearchEngineId()).toInt();
+    QHash<int, SearchEngine> SearchEngines =
+            Utils::Misc::getSearchEnginesHashMap();
+    SearchEngine selectedEngine = SearchEngines.value(selectedSearchEngineId);
+    QString searchEngineUrl = selectedEngine.searchUrl;
+    QUrl url(searchEngineUrl + QUrl::toPercentEncoding(selectedText));
+    QDesktopServices::openUrl(url);
+}
+
+/**
+ * Updates the line number label
+ */
+void MainWindow::noteEditCursorPositionChanged() {
+    QOwnNotesMarkdownTextEdit *textEdit = activeNoteTextEdit();
+    QTextCursor cursor = textEdit->textCursor();
+    QString selectedText = cursor.selectedText();
+    QString text;
+
+    this->noteHistory.updateCursorPositionOfNote(currentNote, textEdit);
+
+    if (!selectedText.isEmpty()) {
+        text = tr("%n chars", "characters", selectedText.count()) + "  ";
+    }
+
+    text += QString::number(cursor.block().blockNumber() + 1) + ":" +
+            QString::number(cursor.positionInBlock() + 1);
+
+    _noteEditLineNumberLabel->setText(text);
+}
+
+/**
+ * Deletes the current line in the active note text edit
+ */
+void MainWindow::on_actionDelete_line_triggered() {
+    QOwnNotesMarkdownTextEdit *textEdit = activeNoteTextEdit();
+
+    // if the note text edit doesn't have the focus delegate the default
+    // shortcut to the widget with the focus
+    if (!textEdit->hasFocus()) {
+        QKeyEvent *event = new QKeyEvent(QEvent::KeyPress, Qt::Key_Backspace,
+                                         Qt::AltModifier);
+        QApplication::postEvent(QApplication::focusWidget(), event);
+        return;
+    }
+
+    QTextCursor cursor = textEdit->textCursor();
+    cursor.select(QTextCursor::BlockUnderCursor);
+    QString selectedText = cursor.selectedText();
+
+    if (selectedText.isEmpty()) {
+        cursor.deletePreviousChar();
+    } else {
+        // remove the text in the current line
+        cursor.removeSelectedText();
+    }
+
+    cursor.movePosition(QTextCursor::NextBlock);
+    textEdit->setTextCursor(cursor);
+}
+
+/**
+ * Deletes the current word in the active note text edit
+ */
+void MainWindow::on_actionDelete_word_triggered() {
+    QOwnNotesMarkdownTextEdit *textEdit = activeNoteTextEdit();
+
+    // if the note text edit doesn't have the focus delegate the default
+    // shortcut to the widget with the focus
+    if (!textEdit->hasFocus()) {
+        QKeyEvent *event = new QKeyEvent(QEvent::KeyPress, Qt::Key_Backspace,
+                                         Qt::ControlModifier);
+        QApplication::postEvent(QApplication::focusWidget(), event);
+        return;
+    }
+
+    QTextCursor cursor = textEdit->textCursor();
+
+    if (cursor.selectedText().isEmpty()) {
+        cursor.movePosition(QTextCursor::PreviousWord, QTextCursor::KeepAnchor);
+    }
+
+    cursor.removeSelectedText();
+}
+
+/**
+ * Opens the current note in a dialog
+ */
+void MainWindow::on_actionView_note_in_new_window_triggered() {
+    NoteDialog* dialog = new NoteDialog(this);
+    dialog->setNote(currentNote);
+    dialog->show();
+}
+
+/**
+ * Manually stores updated notes to disk
+ */
+void MainWindow::on_actionSave_modified_notes_triggered() {
+    // store updated notes to disk
+    storeUpdatedNotesToDisk();
+}
+
+/**
+ * Sets ascending note sort order
+ */
+void MainWindow::on_actionAscending_triggered() {
+    QSettings settings;
+    settings.setValue("notesPanelOrder", ORDER_ASCENDING);
+    ui->noteTreeWidget->sortItems(0, toQtOrder(ORDER_ASCENDING));
+}
+
+/**
+ * Sets descending note sort order
+ */
+void MainWindow::on_actionDescending_triggered() {
+    QSettings settings;
+    settings.setValue("notesPanelOrder", ORDER_DESCENDING);
+    ui->noteTreeWidget->sortItems(0, toQtOrder(ORDER_DESCENDING));
+}
+
+/**
+ * Updates the visibility of the note sort order selector
+ */
+void MainWindow::updateNoteSortOrderSelectorVisibility(bool visible) {
+    ui->actionAscending->setVisible(visible);
+    ui->actionDescending->setVisible(visible);
+//    ui->sortOrderSeparator->setVisible(visible);
+}
+
+/**
+ * Shows a context menu for the note preview
+ *
+ * @param pos
+ */
+void MainWindow::on_noteTextView_customContextMenuRequested(const QPoint &pos) {
+    QPoint globalPos = ui->noteTextView->mapToGlobal(pos);
+    QMenu *menu = ui->noteTextView->createStandardContextMenu();
+
+    QTextCursor c = ui->noteTextView->cursorForPosition(pos);
+    QTextFormat format = c.charFormat();
+    QAction *copyImageAction = new QAction(this);
+
+    // check if clicked object was an image
+    if (format.isImageFormat()) {
+        menu->addSeparator();
+        copyImageAction = menu->addAction(tr("Copy image file path"));
+    }
+
+    QAction *selectedItem = menu->exec(globalPos);
+
+    if (selectedItem) {
+        // copy the image file path to the clipboard
+        if (selectedItem == copyImageAction) {
+            QString imagePath = format.toImageFormat().name();
+            QUrl imageUrl = QUrl(imagePath);
+
+            if (imageUrl.isLocalFile()) {
+                imagePath = imageUrl.toLocalFile();
+            }
+
+            QClipboard *clipboard = QApplication::clipboard();
+            clipboard->setText(imagePath);
+        }
+    }
+}
+
+/**
+ * Commits changes from the current note folder to git
+ */
+void MainWindow::gitCommitCurrentNoteFolder() {
+    Utils::Git::commitCurrentNoteFolder();
+}
+
+/**
+ * Shows a git log of the current note
+ */
+void MainWindow::on_actionShow_note_git_versions_triggered() {
+    QString relativeFilePath = currentNote.relativeNoteFilePath();
+//    QString dirPath = NoteFolder::currentLocalPath();
+
+//    qDebug() << __func__ << " - 'relativeFilePath': " << relativeFilePath;
+//    qDebug() << __func__ << " - 'dirPath': " << dirPath;
+//
+//
+//    QString result = Utils::Misc::startSynchronousProcess(
+//            "/bin/bash",
+//            QStringList() << "-c" << "cd \"" + dirPath + "\" && " +
+//                                  "git log -p \"" + relativeFilePath + "\"");
+//
+//    qDebug() << __func__ << " - 'result': " << result;
+
+    Utils::Git::showLog(relativeFilePath);
+}
+
+/**
+ * Stores the note tag tree expand state when an tree widget item was collapsed
+ */
+void MainWindow::on_tagTreeWidget_itemCollapsed(QTreeWidgetItem *item) {
+    Q_UNUSED(item);
+    storeTagTreeWidgetExpandState();
+}
+
+/**
+ * Stores the note tag tree expand state when an tree widget item was expanded
+ */
+void MainWindow::on_tagTreeWidget_itemExpanded(QTreeWidgetItem *item) {
+    Q_UNUSED(item);
+    storeTagTreeWidgetExpandState();
+}
+
+/**
+ * Stores the note tag tree expand state
+ */
+void MainWindow::storeTagTreeWidgetExpandState() const {
+    // get all items
+    QList<QTreeWidgetItem*> allItems = ui->tagTreeWidget->
+            findItems("", Qt::MatchContains | Qt::MatchRecursive);
+
+    QStringList expandedList;
+    Q_FOREACH(QTreeWidgetItem *item, allItems) {
+            if (Utils::Gui::isOneTreeWidgetItemChildVisible(item)) {
+                if (item->isExpanded()) {
+                    expandedList << item->data(0, Qt::UserRole).toString();
+                }
+            }
+        }
+
+    QSettings settings;
+    settings.setValue(
+            "MainWindow/tagTreeWidgetExpandState-" +
+                    QString::number(NoteFolder::currentNoteFolderId()),
+            expandedList);
+}
+
+/**
+ * Opens the script repository
+ */
+void MainWindow::on_actionScript_repository_triggered() {
+    openSettingsDialog(SettingsDialog::ScriptingPage, true);
+}
+
+/**
+ * Opens the script settings
+ */
+void MainWindow::on_actionScript_settings_triggered() {
+    openSettingsDialog(SettingsDialog::ScriptingPage);
+}
+
+Qt::SortOrder MainWindow::toQtOrder(int order) {
+    if (order == ORDER_ASCENDING) {
+        return Qt::AscendingOrder;
+    } else {
+        return Qt::DescendingOrder;
+    }
+}
+
+void MainWindow::updatePanelsSortOrder() {
+    updateNotesPanelSortOrder();
+    reloadNoteSubFolderTree();
+    reloadTagTree();
+}
+
+void MainWindow::updateNotesPanelSortOrder() {
+    QSettings settings;
+    int sort = settings.value("notesPanelSort", SORT_BY_LAST_CHANGE).toInt();
+    ui->actionAlphabetical->setChecked(sort == SORT_ALPHABETICAL);
+    ui->actionBy_date->setChecked(sort == SORT_BY_LAST_CHANGE);
+
+    updateNoteSortOrderSelectorVisibility(sort == SORT_ALPHABETICAL);
+
+    int order = settings.value("notesPanelOrder").toInt();
+    ui->actionAscending->setChecked(order == ORDER_ASCENDING);
+    ui->actionDescending->setChecked(order == ORDER_DESCENDING);
+
+    loadNoteDirectoryList();
+}
+
+/**
+ * Inserts a file as attachment
+ */
+void MainWindow::on_actionInsert_attachment_triggered() {
+    FileDialog dialog("InsertAttachment");
+    dialog.setFileMode(QFileDialog::ExistingFile);
+    dialog.setAcceptMode(QFileDialog::AcceptOpen);
+    dialog.setWindowTitle(tr("Select file to insert"));
+    int ret = dialog.exec();
+
+    if (ret == QDialog::Accepted) {
+        QString fileName = dialog.selectedFile();
+
+        if (!fileName.isEmpty()) {
+            QFile file(fileName);
+
+            // insert the attachment
+            insertAttachment(&file);
+        }
+    }
+}
+
+/**
+ * Turns note editing on or off
+ *
+ * @param checked
+ */
+void MainWindow::on_actionAllow_note_editing_triggered(bool checked) {
+    QSettings settings;
+    settings.setValue("allowNoteEditing", checked);
+
+    updateNoteTextEditReadOnly();
+    setMenuEnabled(ui->menuEditNote, checked);
+    setMenuEnabled(ui->menuInsert, checked);
+    setMenuEnabled(ui->menuFormat, checked);
+    ui->actionPaste_image->setEnabled(checked);
+    ui->actionReplace_in_current_note->setEnabled(checked);
+    _readOnlyButton->setHidden(checked);
+
+    ui->actionAllow_note_editing->setText(checked ?
+                                          tr("Disallow all note editing") :
+                                          tr("Allow all note editing"));
+}
+
+void MainWindow::allowNoteEditing() {
+    if (!ui->actionAllow_note_editing->isChecked()) {
+        ui->actionAllow_note_editing->trigger();
+    }
+}
+
+/**
+ * Enables or disables a menu and all its actions
+ *
+ * @param menu
+ * @param enabled
+ */
+void MainWindow::setMenuEnabled(QMenu* menu, bool enabled) {
+    menu->setEnabled(enabled);
+
+    // loop through all actions of the menu
+    foreach(QAction* action, menu->actions()) {
+            action->setEnabled(enabled);
+        }
+}
+
+void MainWindow::on_actionCheck_for_script_updates_triggered() {
+    ScriptRepositoryDialog *dialog = new ScriptRepositoryDialog(this, true);
+    dialog->exec();
+    delete(dialog);
+
+    // reload the scripting engine
+    ScriptingService::instance()->reloadEngine();
+}
+
+void MainWindow::noteTextEditResize(QResizeEvent* event) {
+    Q_UNUSED(event);
+    ui->noteTextEdit->setPaperMargins();
+}
+
+void MainWindow::encryptedNoteTextEditResize(QResizeEvent* event) {
+    Q_UNUSED(event);
+    ui->encryptedNoteTextEdit->setPaperMargins();
+}
+
+void MainWindow::on_actionShow_local_trash_triggered() {
+    LocalTrashDialog *dialog = new LocalTrashDialog(this);
+    dialog->exec();
+}
+
+void MainWindow::on_actionJump_to_note_text_edit_triggered() {
+    if (!_noteEditIsCentralWidget) {
+        _noteEditDockWidget->show();
+    }
+
+    activeNoteTextEdit()->setFocus();
+}
+
+/**
+ * Double-clicking a tag assigns the tag to the current note
+ */
+void MainWindow::on_tagTreeWidget_itemDoubleClicked(
+        QTreeWidgetItem *item, int column) {
+    Q_UNUSED(column);
+    Tag tag = Tag::fetch(item->data(0, Qt::UserRole).toInt());
+
+    if (tag.isFetched()) {
+        tag.linkToNote(currentNote);
+    }
+}
+
+/**
+ * Double-clicking a note calls a hook
+ */
+void MainWindow::on_noteTreeWidget_itemDoubleClicked(QTreeWidgetItem *item,
+                                                     int column) {
+    Q_UNUSED(item);
+    Q_UNUSED(column);
+
+    // call a script hook that a new note was double clicked
+    ScriptingService::instance()->callHandleNoteDoubleClickedHook(&currentNote);
+}
+
+/**
+ * Reloads the current note (and selected notes) tags if there were selected
+ * multiple notes
+ */
+void MainWindow::on_noteTreeWidget_itemSelectionChanged() {
+    // we also need to do this in setCurrentNote because of different timings
+    reloadCurrentNoteTags();
+}
+
+/**
+ * Shows a dialog to delete orphaned attachments
+ */
+void MainWindow::on_actionManage_orphaned_attachments_triggered() {
+    delete(_orphanedAttachmentsDialog);
+    _orphanedAttachmentsDialog = new OrphanedAttachmentsDialog(this);
+    _orphanedAttachmentsDialog->show();
+}
+
+void MainWindow::on_noteOperationsButton_clicked() {
+    QPoint globalPos = ui->noteOperationsButton->mapToGlobal(
+            QPoint(0, ui->noteOperationsButton->height()));
+    openNotesContextMenu(globalPos, true);
+}
+
+/**
+ * Returns the text of the log widget
+ */
+QString MainWindow::getLogText() {
+    auto *widget = dynamic_cast<LogWidget*>(_logDockWidget->widget());
+    return widget->getLogText();
+}
+
+/**
+ * Enables all logging and shows the log panel
+ */
+void MainWindow::turnOnDebugLogging() {
+    QSettings settings;
+    settings.setValue("LogWidget/debugLog", true);
+    settings.setValue("LogWidget/infoLog", true);
+    settings.setValue("LogWidget/warningLog", true);
+    settings.setValue("LogWidget/criticalLog", true);
+    settings.setValue("LogWidget/fatalLog", true);
+    settings.setValue("LogWidget/statusLog", true);
+    settings.setValue("LogWidget/scriptingLog", true);
+
+    _logDockWidget->show();
+}
+
+void MainWindow::on_actionImport_notes_from_text_files_triggered() {
+    FileDialog dialog("ImportTextFiles");
+    dialog.setFileMode(QFileDialog::ExistingFiles);
+    dialog.setAcceptMode(QFileDialog::AcceptOpen);
+    dialog.setWindowTitle(tr("Select text files to import"));
+    int ret = dialog.exec();
+
+    if (ret != QDialog::Accepted) {
+        return;
+    }
+
+    QStringList fileNames = dialog.selectedFiles();
+    const int fileCount = fileNames.size();
+
+    if (fileCount == 0) {
+        return;
+    }
+
+    QProgressDialog progressDialog("", tr("Cancel"), 0, fileCount, this);
+    progressDialog.setWindowModality(Qt::WindowModal);
+
+    const QSignalBlocker blocker(noteDirectoryWatcher);
+    Q_UNUSED(blocker);
+
+    for (int i = 0; i < fileCount; i++) {
+        if (progressDialog.wasCanceled()) {
+            break;
+        }
+
+        const QString &fileName = fileNames.at(i);
+
+        QFile file(fileName);
+        QFileInfo fileInfo(file);
+        progressDialog.setLabelText(tr("Importing: %1").arg(
+                fileInfo.fileName()));
+
+        file.open(QFile::ReadOnly | QFile::Text);
+        QTextStream ts(&file);
+        QString text = ts.readAll().trimmed();
+
+        QRegularExpressionMatch match =
+                QRegularExpression(R"(^.+\n=+)",
+                        QRegularExpression::MultilineOption).match(text);
+
+        CreateNewNoteOptions options = CreateNewNoteOption::None;
+
+        // add a headline if none was found
+        if (!match.hasMatch()) {
+            options = CreateNewNoteOption::UseNameAsHeadline;
+        }
+
+        options |= CreateNewNoteOption::DisableLoadNoteDirectoryList;
+
+        createNewNote(fileInfo.baseName(), text, options);
+        progressDialog.setValue(i);
+    }
+
+    progressDialog.setValue(fileCount);
+    loadNoteDirectoryList();
+}
+
+/**
+ * Opens the Telegram group
+ */
+void MainWindow::on_actionTelegram_triggered() {
+    QDesktopServices::openUrl(QUrl("https://t.me/QOwnNotes"));
+}
+
+/**
+ * Copies the headline of the current note
+ */
+void MainWindow::on_actionCopy_headline_triggered() {
+    QString noteText = currentNote.getNoteText();
+
+    // try regular headlines
+    QRegularExpressionMatch match =
+            QRegularExpression(R"(^(.+)\n=+)",
+                    QRegularExpression::MultilineOption).match(noteText);
+
+    QString headline;
+    if (match.hasMatch()) {
+        headline = match.captured(1);
+    } else {
+        // try alternative headlines
+        match = QRegularExpression(R"(^#+ (.+)$)",
+                QRegularExpression::MultilineOption).match(noteText);
+
+        if (match.hasMatch()) {
+            headline = match.captured(1);
+        }
+    }
+
+    if (!headline.isEmpty()) {
+        QClipboard *clipboard = QApplication::clipboard();
+        clipboard->setText(headline);
+        showStatusBarMessage(
+                tr("Note headline '%1' was copied to the clipboard").arg(
+                        headline), 3000);
+    }
+}
+
+void MainWindow::on_action_FormatTable_triggered() {
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    Utils::Gui::autoFormatTableAtCursor(textEdit);
+}
+
+/**
+ * Centers and resized the main window
+ */
+void MainWindow::centerAndResize() {
+    // get the dimension available on this screen
+    QSize availableSize = qApp->desktop()->availableGeometry().size();
+    int width = availableSize.width();
+    int height = availableSize.height();
+    qDebug() << "Available dimensions " << width << "x" << height;
+    width *= 0.9; // 90% of the screen size
+    height *= 0.9; // 90% of the screen size
+    qDebug() << "Computed dimensions " << width << "x" << height;
+    QSize newSize( width, height );
+
+    setGeometry(
+            QStyle::alignedRect(
+                    Qt::LeftToRight,
+                    Qt::AlignCenter,
+                    newSize,
+                    qApp->desktop()->availableGeometry()
+            )
+    );
 }

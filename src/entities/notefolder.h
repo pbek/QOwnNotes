@@ -40,8 +40,9 @@ public:
     bool localPathExists();
     QString suggestRemotePath();
     QString fixRemotePath();
-    static QString currentRemotePath();
+    static QString currentRemotePath(bool addTrailingSlash = true);
     static QString currentLocalPath();
+    static QString currentRootFolderName(bool fullPath = false);
     void setActiveTagId(int value);
     int getActiveTagId();
     bool isShowSubfolders();
@@ -49,6 +50,12 @@ public:
     static bool isCurrentShowSubfolders();
     void setActiveNoteSubFolder(NoteSubFolder noteSubFolder);
     NoteSubFolder getActiveNoteSubFolder();
+    void resetActiveNoteSubFolder();
+    static QString currentTrashPath();
+    static QString currentMediaPath();
+    static QString currentAttachmentsPath();
+    bool isUseGit();
+    void setUseGit(bool value);
 
 private:
     int id;
@@ -60,4 +67,5 @@ private:
     int activeTagId;
     QString activeNoteSubFolderData;
     bool showSubfolders;
+    bool useGit;
 };

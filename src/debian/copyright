@@ -1,9 +1,9 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: qownnotes
-Source: http://www.qownnotes.org
+Source: https://www.qownnotes.org
 
 Files: *
-Copyright: 2014-2016 Patrizio Bekerle <patrizio@bekerle.com>
+Copyright: 2014-2018 Patrizio Bekerle <patrizio@bekerle.com>
 License: GPL-2+
  This package is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by

@@ -6,7 +6,7 @@
 #include <QStringList>
 #include <QUrl>
 
-#define ICS_DATETIME_FORMAT "yyyyMMddThhmmssZ"
+#define ICS_DATETIME_FORMAT "yyyyMMddThhmmss"
 
 class CalendarItem
 {
@@ -70,6 +70,7 @@ public:
     static void alertTodoReminders();
     static QList<QString> searchAsUidList(QString text, QString calendar);
     static QList<CalendarItem> fetchAllForSystemTray(int limit = 10);
+    static bool removeAll();
 
 private:
     int id;

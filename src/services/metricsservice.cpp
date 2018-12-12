@@ -19,7 +19,7 @@ MetricsService::MetricsService(QObject *parent) : QObject(parent)
     _piwikTracker->setCustomDimension(1, QString(VERSION));
     _piwikTracker->setCustomDimension(2, QLocale::system().name());
     _piwikTracker->setCustomDimension(3, debug);
-    _piwikTracker->setCustomDimension(9, QString(RELEASE));
+    _piwikTracker->setCustomDimension(9, qApp->property("release").toString());
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     _piwikTracker->setCustomDimension(

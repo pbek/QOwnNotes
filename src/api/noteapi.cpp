@@ -1,16 +1,20 @@
 #include <entities/tag.h>
+#include <entities/notefolder.h>
 #include "noteapi.h"
 
 NoteApi* NoteApi::fetch(int id) {
-    Note note = Note::fetch(id);
+    _note = Note::fetch(id);
 
-    if (note.isFetched()) {
-        this->id = note.getId();
-        name = note.getName();
-        fileName = note.getFileName();
-        noteText = note.getNoteText();
-        hasDirtyData = note.getHasDirtyData();
-        decryptedNoteText = note.getDecryptedNoteText();
+    if (_note.isFetched()) {
+        this->id = _note.getId();
+        name = _note.getName();
+        fileName = _note.getFileName();
+        noteText = _note.getNoteText();
+        hasDirtyData = _note.getHasDirtyData();
+        noteSubFolderId = _note.getNoteSubFolderId();
+        decryptedNoteText = _note.getDecryptedNoteText();
+        fileCreated = _note.getFileCreated();
+        fileLastModified = _note.getFileLastModified();
     }
 
     return this;
@@ -62,4 +66,81 @@ QStringList NoteApi::tagNames() const {
     }
 
     return tagNameList;
+}
+
+/**
+ * Adds a tag to the note
+ *
+ * @param tagName
+ * @return true if the note was tagged
+ */
+bool NoteApi::addTag(QString tagName) {
+    if (tagName.isEmpty()) {
+        return false;
+    }
+
+    Note note = Note::fetch(id);
+    if (!note.exists()) {
+        return false;
+    }
+
+    // create a new tag if it doesn't exist
+    Tag tag = Tag::fetchByName(tagName);
+    if (!tag.isFetched()) {
+        tag.setName(tagName);
+        tag.store();
+    }
+
+    return tag.linkToNote(note);
+}
+
+/**
+ * Removes a tag from the note
+ *
+ * @param tagName
+ * @return true if the tag was removed from the note
+ */
+bool NoteApi::removeTag(QString tagName) {
+    Tag tag = Tag::fetchByName(tagName);
+    if (!tag.exists()) {
+        return false;
+    }
+
+    Note note = Note::fetch(id);
+    if (!note.exists()) {
+        return false;
+    }
+
+    return tag.removeLinkToNote(note);
+}
+
+/**
+ * Fetches all notes
+ * Disclaimer: not tested, might not work yet
+ *
+ * @param limit
+ * @param offset
+ * @return
+ */
+QQmlListProperty<NoteApi> NoteApi::fetchAll(int limit, int offset) {
+    QList<int> noteIds = Note::fetchAllIds(limit, offset);
+    QList<NoteApi *> notes;
+
+    Q_FOREACH(int noteId, noteIds) {
+            NoteApi *note = NoteApi::fetch(noteId);
+            notes.append(note);
+        }
+
+    return QQmlListProperty<NoteApi>(this, notes);
+}
+
+/**
+ * Returns the generated html for a note
+ *
+ * @param forExport if true (default) the export-html will be generated
+ * @return
+ */
+QString NoteApi::toMarkdownHtml(bool forExport) {
+    return _note.toMarkdownHtml(NoteFolder::currentLocalPath(), 980, forExport,
+                                true, true);
 }

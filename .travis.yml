@@ -1,4 +1,5 @@
 language: cpp
+dist: trusty
 
 os:
   - linux
@@ -9,7 +10,7 @@ branches:
     - develop
     - master
     - testing
-    - feature/note-tree
+    - /^feature.+$/
 
 env:
   global:
@@ -17,7 +18,8 @@ env:
     # generate a token at https://github.com/settings/tokens and encrypt it
     # with `travis encrypt TAGPERM=<yoursecrettoken> --add env.global`
     # also see: https://docs.travis-ci.com/user/encryption-keys/#Usage
-    - secure: Wt43koA55PGba7TsJ85f9vHyW4b/QfPh2Ywhw5+40sba5Us4Y3h+l23VyVjQbXuHfCGgC+t5+AABm1ubhL4MjCvxzS9BepjhNN92LPXoLfBRM2AHhNLWMKLLxt4T7OofjnLPw21l6cjjVrlZZojVbN4MnuG2IPUeUzoEBuA5TPE=
+    # and: https://docs.travis-ci.com/user/best-practices-security/
+    - secure: AERYyBcRb6amrkLUzmbUWMOv80evhJDQd9tFNyRIUztooDCLv1/ncllhoXYglBVQUqqk7seKHFS5LZ3mvi62NnEtLkc7140HRWXYKmVb65r1zyoleA6sBZYKwunQzT3sPL/HbUphrDVIsvn/xzBWNlMS6DHSefg0LnEW8J6ArKE=
     # KEY_PASSWORD
     - secure: "Mte2zY0rgIa4M4bIeSKijFAFOtFy+DahRYCUgOB60cuS4b/+HMHnfmVGMqnBKitC9KVzb5fctMt2pGPK2hdlirvfkOd9ctEaEd1qSzADJjfQUKqLReOfi1N6Ln2dYqlZoDjnYpGWwTUl/uX+KtWomYW2TCZZG/uJEeh3QYkxlJQ="
     # DEVELOPER_NAME
@@ -27,36 +29,41 @@ env:
     #- CONFIG=debug
 
 install:
-  - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
-         lsb_release -a
-      && sudo apt-add-repository -y ppa:ubuntu-toolchain-r/test
-      && sudo apt-add-repository -y ppa:beineri/opt-qt542
-      && sudo apt-get -qq update
-      && sudo apt-get -qq install g++-4.8 libc6-i386 qt54tools qt54svg qt54webkit qt54script
-      && export CXX="g++-4.8"
-      && export CC="gcc-4.8"
-      ;
-    else
-         brew update > /dev/null
-      && brew tap homebrew/versions
-      && echo "We are using QT 5.5, because we had troubles with the current QT 5.6 brew. The deployed frameworks were loading libraries from /usr/local/Cellar/qt5 instead of the app bundle."
-      && brew install qt55
-      && chmod -R 755 /usr/local/opt/qt55/*
-      ;
+  - |
+    if [[ "$TRAVIS_OS_NAME" == "linux" ]]
+    then
+      lsb_release -a
+      sudo apt-add-repository -y ppa:ubuntu-toolchain-r/test
+      sudo apt-add-repository -y ppa:beineri/opt-qt562-trusty
+      sudo apt-get -qq update
+      sudo apt-get -qq install g++-4.8 libc6-i386 qt56tools qt56svg qt56script
+      export CXX="g++-4.8"
+      export CC="gcc-4.8"
+    fi
+  # OS X Qt http://braumeister.org/search/qt5
+  # we need to use macdeployqtfix after using macdeployqt to fix the library paths!
+  - |
+    if [[ "$TRAVIS_OS_NAME" == "osx" ]]
+    then
+      brew update > /dev/null
+      brew install qt5
+      export QTDIR="/usr/local/opt/qt5"
     fi
 
 script:
-  - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
-         QTDIR="/opt/qt54"
-      && PATH="$QTDIR/bin:$PATH"
-      && qt54-env.sh 
-      ;
-    else
-         QTDIR="/usr/local/opt/qt55"
-      && PATH="$QTDIR/bin:$PATH"
-      && LDFLAGS=-L$QTDIR/lib
-      && CPPFLAGS=-I$QTDIR/include
-      ;
+  - |
+    if [[ "$TRAVIS_OS_NAME" == "linux" ]]
+    then
+      QTDIR="/opt/qt56"
+      PATH="$QTDIR/bin:$PATH"
+      qt56-env.sh
+    fi
+  - |
+    if [[ "$TRAVIS_OS_NAME" == "osx" ]]
+    then
+      PATH="$QTDIR/bin:$PATH"
+      LDFLAGS=-L$QTDIR/lib
+      CPPFLAGS=-I$QTDIR/include
     fi
   - cd ./tests
   - qmake DEFINES+=INTEGRATION_TESTS && make -s -j 2
@@ -80,18 +87,23 @@ script:
 before_deploy:
   - export VERSION_NUMBER=`cat version.h | sed "s/[^0-9,.]//g"`
   # create debian package for linux and a disk image for OSX
-  - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
-         cd ../travis
-      && dpkg-deb -x QOwnNotes.deb build
-      && mv ../src/QOwnNotes build/opt/QOwnNotes/
-      && mv ../src/languages/*.qm build/opt/QOwnNotes/
-      && mv ../icons/* build/opt/QOwnNotes/
-      && sed -i 's/VERSION_NUMBER/'"$VERSION_NUMBER"'/g' build/DEBIAN/control
-      && dpkg -b build QOwnNotes-$VERSION_NUMBER.deb
-      ;
-    else
-         ../travis/create-dmg.sh
-      ;
+  - |
+    if [[ "$TRAVIS_OS_NAME" == "linux" ]]
+    then
+      cd ../travis
+      dpkg-deb -x QOwnNotes.deb build
+      mv ../src/QOwnNotes build/opt/QOwnNotes/
+      mv ../src/languages/*.qm build/opt/QOwnNotes/
+      mv ../icons/* build/opt/QOwnNotes/
+      sed -i 's/VERSION_NUMBER/'"$VERSION_NUMBER"'/g' build/DEBIAN/control
+      dpkg -b build QOwnNotes-$VERSION_NUMBER.deb
+      cp QOwnNotes-$VERSION_NUMBER.deb QOwnNotesDev-$TRAVIS_COMMIT.deb
+    fi
+  - |
+    if [[ "$TRAVIS_OS_NAME" == "osx" ]]
+    then
+      ../travis/create-dmg.sh
+      cp QOwnNotes-$VERSION_NUMBER.dmg QOwnNotesDev-$TRAVIS_COMMIT.dmg
     fi
   #
   # add a tag
@@ -99,20 +111,33 @@ before_deploy:
   - TIME_STRING=`date +%H%M%S`
   - git config --global user.email "builds@travis-ci.com"
   - git config --global user.name "Travis CI"
-  - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
-         export GIT_TAG=linux-b$TRAVIS_BUILD_NUMBER-$TIME_STRING
-      ;
+  - if [ "${TRAVIS_OS_NAME}" == "linux" ]; then
+        if [ "${TRAVIS_BRANCH}" == "master" ]; then
+            export GIT_TAG=linux-b$TRAVIS_BUILD_NUMBER-$TIME_STRING
+            ;
+        else
+            export GIT_TAG=dev-linux-b$TRAVIS_BUILD_NUMBER-$TIME_STRING
+            ;
+        fi
+        ;
     else
-         export GIT_TAG=macosx-b$TRAVIS_BUILD_NUMBER-$TIME_STRING
-      ;
+        if [ "${TRAVIS_BRANCH}" == "master" ]; then
+            export GIT_TAG=macosx-b$TRAVIS_BUILD_NUMBER-$TIME_STRING
+            ;
+        else
+            export GIT_TAG=dev-macosx-b$TRAVIS_BUILD_NUMBER-$TIME_STRING
+            ;
+        fi
+        ;
     fi
   - git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER"
-  - git push -q https://$TAGPERM@github.com/pbek/QOwnNotes --tags
+  - git push -q https://$TAGPERM@github.com/pbek/QOwnNotes --tags >/dev/null 2>&1
 
 deploy:
+    # Linux master release
   - provider: releases
     api_key:
-        secure: EyOMTm+fzo7rWhRMfROH8/jeJnSFmLFz4pfD/HuFJI2ohayHJOIfASMdg0d7N2cGFS9G7iuPUmQ1S56YC8BSnEefc3lASB1i5hiSOMWJV+lO3N1JBFCWxCBzHc9Hs+XKwHwyhZ5iIYncx+JHPYRNWtUD+A6SZHiZ+sVI48gYMyA=
+        secure: DaUepv9X3aPy91r8FBCyA0yUEQ0CNYQyA5EzlXsvLWsTi7XjscWZXCkv2BoFxk+MXvsCweaS6/qRbIn8/cW1TFLo6ZAbHjucnmjtSZn9wr9j3SEV7fM6jpAc6XBMMHtgjCaKZMpvH1R2Ed6O3DNr7L0//zB/PDhQx+rDeDre1kA=
     file: QOwnNotes-$VERSION_NUMBER.deb
     skip_cleanup: true
     on:
@@ -120,9 +145,10 @@ deploy:
         branch: master
         tags: false
         condition: $CONFIG = release && ${TRAVIS_OS_NAME} = linux
+    # macOS master release
   - provider: releases
     api_key:
-        secure: EyOMTm+fzo7rWhRMfROH8/jeJnSFmLFz4pfD/HuFJI2ohayHJOIfASMdg0d7N2cGFS9G7iuPUmQ1S56YC8BSnEefc3lASB1i5hiSOMWJV+lO3N1JBFCWxCBzHc9Hs+XKwHwyhZ5iIYncx+JHPYRNWtUD+A6SZHiZ+sVI48gYMyA=
+        secure: DaUepv9X3aPy91r8FBCyA0yUEQ0CNYQyA5EzlXsvLWsTi7XjscWZXCkv2BoFxk+MXvsCweaS6/qRbIn8/cW1TFLo6ZAbHjucnmjtSZn9wr9j3SEV7fM6jpAc6XBMMHtgjCaKZMpvH1R2Ed6O3DNr7L0//zB/PDhQx+rDeDre1kA=
     file: QOwnNotes-$VERSION_NUMBER.dmg
     skip_cleanup: true
     on:
@@ -130,11 +156,33 @@ deploy:
         branch: master
         tags: false
         condition: $CONFIG = release && ${TRAVIS_OS_NAME} = osx
+    # Linux development release
+#  - provider: releases
+#    api_key:
+#        secure: DaUepv9X3aPy91r8FBCyA0yUEQ0CNYQyA5EzlXsvLWsTi7XjscWZXCkv2BoFxk+MXvsCweaS6/qRbIn8/cW1TFLo6ZAbHjucnmjtSZn9wr9j3SEV7fM6jpAc6XBMMHtgjCaKZMpvH1R2Ed6O3DNr7L0//zB/PDhQx+rDeDre1kA=
+#    file: QOwnNotesDev-$TRAVIS_COMMIT.deb
+#    skip_cleanup: true
+#    on:
+#        repo: pbek/QOwnNotes
+#        branch: develop
+#        tags: false
+#        condition: ${TRAVIS_OS_NAME} = linux
+    # macOS development release
+  - provider: releases
+    api_key:
+        secure: DaUepv9X3aPy91r8FBCyA0yUEQ0CNYQyA5EzlXsvLWsTi7XjscWZXCkv2BoFxk+MXvsCweaS6/qRbIn8/cW1TFLo6ZAbHjucnmjtSZn9wr9j3SEV7fM6jpAc6XBMMHtgjCaKZMpvH1R2Ed6O3DNr7L0//zB/PDhQx+rDeDre1kA=
+    file: QOwnNotesDev-$TRAVIS_COMMIT.dmg
+    skip_cleanup: true
+    on:
+        repo: pbek/QOwnNotes
+        branch: develop
+        tags: false
+        condition: ${TRAVIS_OS_NAME} = osx
 
 notifications:
-  recipients:
-    - developer@bekerle.com
   email:
+    recipients:
+      - developer@bekerle.com
     on_success: change
     on_failure: change
   irc:
@@ -142,11 +190,15 @@ notifications:
     channels:
       - "chat.freenode.net#qownnotes"
     template:
-      - "[%{commit}] %{repository} (%{branch}): %{message}"
-      - "[%{commit}] Commit message : %{commit_message}"
-      - "[%{commit}] Change view : %{compare_url}"
-      - "[%{commit}] Build details : %{build_url}"
+      - "[%{commit}] %{repository} (%{branch}): %{message} | Commit message: %{commit_message} | Changes: %{compare_url} | Build details: %{build_url}"
     on_success: always
     on_failure: always
     use_notice: true
     skip_join: true
+  webhooks:
+    urls:
+      - https://webhooks.gitter.im/e/7c80d5baa6681f02dca5
+      #- https://fathomless-fjord-24024.herokuapp.com/notify
+    on_success: always  # options: [always|never|change] default: always
+    on_failure: always  # options: [always|never|change] default: always
+    on_start: never     # options: [always|never|change] default: always

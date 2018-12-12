@@ -13,6 +13,8 @@ namespace Ui {
 class TodoDialog;
 }
 
+class MainWindow;
+
 class TodoDialog : public MasterDialog
 {
     Q_OBJECT
@@ -23,12 +25,16 @@ public:
     ~TodoDialog();
 
     void reloadTodoListItems();
-    void reloadTodoList();
     void clearTodoList();
     void todoItemLoadingProgressBarIncrement();
     void todoItemLoadingProgressBarSetMaximum(int value);
     void todoItemLoadingProgressBarHide();
     void todoItemLoadingProgressBarHideIfOnMaximum();
+    void jumpToTask(QString taskUid);
+    void refreshUi();
+
+public slots:
+    void reloadTodoList();
 
 private slots:
     void on_TodoDialog_finished(int result);
@@ -42,10 +48,11 @@ private slots:
     void on_removeButton_clicked();
     void on_todoList_itemChanged(QListWidgetItem *item);
     void on_reminderCheckBox_clicked();
-    void on_reloadTodoListButton_clicked();
     void on_summaryEdit_returnPressed();
     void on_newItemEdit_textChanged(const QString &arg1);
-    void on_saveAndInsertButton_clicked();
+    void onSaveAndInsertButtonClicked();
+    void onImportAsNoteButtonClicked();
+    void clearCacheAndReloadTodoList();
 
 private:
     Ui::TodoDialog *ui;

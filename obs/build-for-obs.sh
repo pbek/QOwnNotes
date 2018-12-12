@@ -120,6 +120,8 @@ cd ../..
 mv $archiveFile $obsRepoPath
 cp obs/qownnotes.bin $obsRepoPath
 cp obs/qownnotes.spec $obsRepoPath
+cp obs/appimage.yml $obsRepoPath
+cp obs/_service $obsRepoPath
 cp $debChangelogPath $obsRepoPath
 cp obs/PKGBUILD $obsRepoPath
 cp $qownnotesSrcDir/debian/control $obsRepoPath/debian.control
@@ -143,6 +145,8 @@ osc add $archiveFile
 #osc add debian.compat
 #osc add debian.qownnotes.install
 #osc add qownnotes.dsc
+#osc add appimage.yml
+#osc add _service
 
 echo "Committing changes..."
 

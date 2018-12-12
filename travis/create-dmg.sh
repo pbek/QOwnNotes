@@ -4,12 +4,14 @@
 # creating the QOwnNotes.dmg with Applications link
 #
 
-QTDIR="/usr/local/opt/qt55"
+# we will get the $QTDIR from Travis CI
+#QTDIR="/usr/local/opt/qt5"
 APP=QOwnNotes
 # this directory name will also be shown in the title when the DMG is mounted
 TEMPDIR=$APP
 SIGNATURE="Patrizio Bekerle"
 NAME=`uname`
+PLIST=$APP.app/Contents/Info.plist
 
 if [ "$NAME" != "Darwin" ]; then
     echo "This is not a Mac"
@@ -17,12 +19,24 @@ if [ "$NAME" != "Darwin" ]; then
 fi
 
 echo "Changing bundle identifier"
-sed -i -e 's/com.yourcompany.QOwnNotes/com.PBE.QOwnNotes/g' $APP.app/Contents/Info.plist
+sed -i -e 's/com.yourcompany.QOwnNotes/com.PBE.QOwnNotes/g' $PLIST
+
+# adding version number
+/usr/libexec/PlistBuddy -c "Add :CFBundleVersion string $VERSION_NUMBER" $PLIST
+/usr/libexec/PlistBuddy -c "Add :CFBundleShortVersionString string $VERSION_NUMBER" $PLIST
+
+# removing CFBundleGetInfoString
+/usr/libexec/PlistBuddy -c "Delete :CFBundleGetInfoString" $PLIST
+
 # removing backup plist
-rm -f $APP.app/Contents/Info.plist-e
+rm -f ${PLIST}-e
 
 # copy translation files to app
 cp languages/*.qm $APP.app/Contents/Resources
+
+# copy updater script to app
+#chmod a+x ../travis/osx/update.command
+#cp ../travis/osx/update.command $APP.app/Contents/MacOS
 
 echo "Adding keys"
 # add the keys for OSX code signing
@@ -44,6 +58,15 @@ if [ "$?" -ne "0" ]; then
     security delete-keychain osx-build.keychain 
     exit 1
 fi
+
+# trying to fix the macdeployqt problem with making the binary use the Qt
+# library files from /usr/local instead of the bundle
+# see: https://github.com/Homebrew/homebrew-core/issues/6161
+# example: https://github.com/iltommi/neutrino/blob/master/.travis.yml
+echo "Cloning macdeployqtfix"
+git clone https://github.com/aurelien-rainone/macdeployqtfix.git
+echo "Calling macdeployqtfix"
+python macdeployqtfix/macdeployqtfix.py $APP.app/Contents/MacOS/$APP /usr/local
 
 echo "Verifying code signed app"
 codesign --verify --verbose=4 ./$APP.app

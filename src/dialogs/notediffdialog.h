@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include <QAbstractButton>
+#include <QCheckBox>
 #include "masterdialog.h"
 
 namespace Ui {
@@ -29,9 +30,15 @@ public:
 private slots:
     void dialogButtonClicked( QAbstractButton *button );
 
+    void notificationButtonGroupPressed(QAbstractButton *button);
+
+    void notificationNoneCheckBoxCheck();
+
 private:
     Ui::NoteDiffDialog *ui;
     int actionRole;
+    QButtonGroup *_notificationButtonGroup;
+    QCheckBox *_notificationNoneCheckBox;
 };
 
 #endif // NOTEDIFFDIALOG_H

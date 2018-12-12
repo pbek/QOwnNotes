@@ -18,7 +18,7 @@
 BRANCH=develop
 #BRANCH=master
 
-PROJECT_PATH="/tmp/QOwnNotes-launchpad-snap-$$"
+PROJECT_PATH="/tmp/QOwnNotes-local-snap-$$"
 CUR_DIR=$(pwd)
 
 
@@ -34,7 +34,7 @@ cd $PROJECT_PATH
 echo "Project path: $PROJECT_PATH"
 
 # checkout the source code
-git clone --depth=5 git@github.com:pbek/QOwnNotes.git QOwnNotes -b $BRANCH
+git clone --depth=5 https://github.com/pbek/QOwnNotes.git QOwnNotes -b $BRANCH
 cd QOwnNotes
 
 if [ -z $QOWNNOTES_VERSION ]; then
@@ -53,7 +53,14 @@ echo "Building snap..."
 snapcraft
 
 echo "Uploading snap..."
-snapcraft upload qownnotes_${QOWNNOTES_VERSION}_amd64.snap
+snapcraft push qownnotes_${QOWNNOTES_VERSION}_amd64.snap --release stable
+
+#echo "Releasing snap..."
+# snapcraft release qownnotes --release ${REVISION} stable
+
+# this may work in the future (we need to set a channel when releasing)
+#snapcraft push qownnotes_${QOWNNOTES_VERSION}_amd64.snap --release=Stable
+#snapcraft release <snap-name> <revision> <channel-name>
 
 # remove everything after we are done
 if [ -d $PROJECT_PATH ]; then

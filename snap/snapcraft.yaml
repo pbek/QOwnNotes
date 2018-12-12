@@ -1,0 +1,64 @@
+name: qownnotes
+version: git
+version-script: cat src/version.h | sed "s/[^0-9,.]//g"
+summary: Plain-text file notepad with markdown support and ownCloud integration
+grade: stable
+confinement: strict
+base: core18
+description: |
+  QOwnNotes is the open source (GPL) plain-text file notepad with markdown support
+  and todo list manager for GNU/Linux, Mac OS X and Windows, that (optionally) works
+  together with the notes application of ownCloud.
+  https://www.qownnotes.org/
+
+apps:
+  qownnotes:
+    command: desktop-launch ${SNAP}/usr/bin/QOwnNotes -style=Fusion --snap
+    environment:
+        DISABLE_WAYLAND: 1
+    # see https://docs.snapcraft.io/reference/interfaces
+    plugs:
+      - x11
+      - unity7
+      - network
+      - network-bind
+      - home
+      - desktop
+      - desktop-legacy
+      - removable-media
+      - opengl
+      - cups-control
+
+parts:
+  qownnotes:
+    source: .
+#    source: https://github.com/pbek/qownnotes.git
+    # see https://docs.snapcraft.io/reference/plugins/qmake
+    plugin: qmake
+    qt-version: qt5
+    options:
+      - ./src
+      - CONFIG+=release
+    build-packages:
+      - qttools5-dev
+      - build-essential
+      - qtdeclarative5-dev
+      - libqt5svg5-dev
+      - qttools5-dev-tools
+      - libqt5xmlpatterns5-dev
+    stage-packages:
+      - libqt5gui5
+      - libqt5sql5
+      - libqt5sql5-sqlite
+      - libqt5widgets5
+      - libqt5qml5
+      - libqt5svg5
+      - libqt5network5
+      - libqt5xml5
+      - libqt5xmlpatterns5
+      - libqt5printsupport5
+      - libqt5declarative5
+      - qtwayland5
+    stage:
+      - -usr/share/pkgconfig
+    after: [desktop-qt5]

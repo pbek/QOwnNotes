@@ -6,6 +6,7 @@
 #include <QFile>
 #include <QDate>
 #include <QTextStream>
+#include <utils/misc.h>
 
 AboutDialog::AboutDialog(QWidget *parent) :
         MasterDialog(parent),
@@ -19,7 +20,7 @@ AboutDialog::AboutDialog(QWidget *parent) :
         QString html = istream.readAll();
         QDate date = QDate::currentDate();
 
-        QString release = QString(RELEASE);
+        QString release = qApp->property("release").toString();
         if (release.isEmpty()) {
             release = "generic";
         }
@@ -31,6 +32,9 @@ AboutDialog::AboutDialog(QWidget *parent) :
         html.replace("VERSION", QString(VERSION));
         html.replace("RELEASE", release);
         html.replace("CURRENT_YEAR", QString::number(date.year()));
+
+        ui->textBrowser->document()->setDefaultStyleSheet(
+                Utils::Misc::genericCSS());
 
         // put the html to the text browser in the about dialog
         ui->textBrowser->setHtml(html);

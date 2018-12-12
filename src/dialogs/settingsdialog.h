@@ -7,13 +7,21 @@
 #include <QListWidget>
 #include <QTreeWidgetItem>
 #include <QStatusBar>
+#include <QSignalMapper>
+#include <QSplitter>
 #include <entities/notefolder.h>
 #include <entities/script.h>
+#include <services/owncloudservice.h>
+#include <QCheckBox>
+#include <QtCore/QSettings>
+#include <libraries/qkeysequencewidget/qkeysequencewidget/src/qkeysequencewidget.h>
 #include "masterdialog.h"
 
 namespace Ui {
     class SettingsDialog;
 }
+
+struct CalDAVCalendarData;
 
 class SettingsDialog : public MasterDialog {
 Q_OBJECT
@@ -26,32 +34,51 @@ public:
         Failure,
     };
 
-    enum SettingsTabs {
-        NoteFolderTab,
-        OwnCloudTab,
-        NetworkTab,
-        TodoTab,
-        InterfaceTab,
-        ScriptingTab,
-        GeneralTab,
-        DebugTab
+    enum SettingsPages {
+        NoteFolderPage,
+        OwnCloudPage,
+        NetworkPage,
+        TodoPage,
+        InterfacePage,
+        ShortcutPage,
+        ScriptingPage,
+        GeneralPage,
+        DebugPage,
+        EditorFontColorPage,
+        PortableModePage,
+        PreviewFontPage,
+        ToolbarPage,
+        DebugOptionPage,
+        EditorPage,
+        GitPage,
+        PanelsPage,
+        LocalTrashPage,
+        LayoutPage
     };
 
-    explicit SettingsDialog(int tab = 0, QWidget *parent = 0);
+    explicit SettingsDialog(int page = 0,
+                            QWidget *parent = 0);
 
     ~SettingsDialog();
 
-    void connectTestCallback(bool appIsValid,
-                             QString appVersion,
+    void connectTestCallback(bool appIsValid, QString appVersion,
                              QString serverVersion,
+                             QString notesPathExistsText,
                              QString connectionErrorMessage);
 
     void setOKLabelData(int number, QString text, OKLabelStatus status);
 
-    void refreshTodoCalendarList(QStringList items,
+    void refreshTodoCalendarList(QList<CalDAVCalendarData> items,
                                  bool forceReadCheckedState = false);
 
     void setNoteFolderRemotePathList(QStringList pathList);
+
+    void setCurrentPage(int page);
+
+    void readSettings();
+
+protected:
+    void closeEvent(QCloseEvent *event);
 
 private slots:
 
@@ -70,8 +97,6 @@ private slots:
     void on_defaultOwnCloudCalendarRadioButton_toggled(bool checked);
 
     void on_reinitializeDatabaseButton_clicked();
-
-    void on_tabWidget_currentChanged(int index);
 
     void on_saveDebugInfoButton_clicked();
 
@@ -118,7 +143,7 @@ private slots:
 
     void on_useOwnCloudPathButton_clicked();
 
-    void on_scriptAddButton_clicked();
+    void addLocalScript();
 
     void on_scriptRemoveButton_clicked();
 
@@ -133,10 +158,6 @@ private slots:
 
     void on_scriptReloadEngineButton_clicked();
 
-    void on_notifyAllExternalModificationsCheckBox_toggled(bool checked);
-
-    void on_ignoreAllExternalModificationsCheckBox_toggled(bool checked);
-
     void on_addCustomNoteFileExtensionButton_clicked();
 
     void on_removeCustomNoteFileExtensionButton_clicked();
@@ -149,6 +170,87 @@ private slots:
 
     void on_noteFolderShowSubfoldersCheckBox_toggled(bool checked);
 
+    void on_gitHubLineBreaksCheckBox_toggled(bool checked);
+
+    void on_shortcutSearchLineEdit_textChanged(const QString &arg1);
+
+    void on_settingsTreeWidget_currentItemChanged(QTreeWidgetItem *current,
+                                                  QTreeWidgetItem *previous);
+
+    void on_settingsStackedWidget_currentChanged(int index);
+
+    void on_calDavCalendarRadioButton_toggled(bool checked);
+
+    void on_calendarPlusRadioButton_toggled(bool checked);
+
+    void on_emptyCalendarCachePushButton_clicked();
+
+    void on_itemHeightResetButton_clicked();
+
+    void on_toolbarIconSizeResetButton_clicked();
+
+    void on_ignoreNonTodoCalendarsCheckBox_toggled(bool checked);
+
+    void on_applyToolbarButton_clicked();
+
+    void on_resetToolbarPushButton_clicked();
+
+    void on_imageScaleDownCheckBox_toggled(bool checked);
+
+    void on_searchLineEdit_textChanged(const QString &arg1);
+
+    void on_fileLoggingCheckBox_toggled(bool checked);
+
+    void on_clearLogFileButton_clicked();
+
+    void noteNotificationButtonGroupPressed(QAbstractButton *button);
+
+    void noteNotificationNoneCheckBoxCheck();
+
+    void needRestart();
+
+    void on_legacyOwnCloudCalendarRadioButton_toggled(bool checked);
+
+    void on_ownCloudSupportCheckBox_toggled();
+
+    void on_noteFolderGitCommitCheckBox_toggled(bool checked);
+
+    void on_setGitPathToolButton_clicked();
+
+    void searchScriptInRepository(bool checkForUpdates = false);
+
+    void checkForScriptUpdates();
+
+    void on_scriptListWidget_itemChanged(QListWidgetItem *item);
+
+    void on_interfaceStyleComboBox_currentTextChanged(const QString &arg1);
+
+    void on_cursorWidthResetButton_clicked();
+
+    void on_showSystemTrayCheckBox_toggled(bool checked);
+
+    void on_resetMessageBoxesButton_clicked();
+
+    void on_markdownHighlightingCheckBox_toggled(bool checked);
+
+    void on_localTrashEnabledCheckBox_toggled(bool checked);
+
+    void on_localTrashClearCheckBox_toggled(bool checked);
+
+    void keySequenceEvent(QString objectName);
+
+    void on_exportSettingsButton_clicked();
+
+    void on_importSettingsButton_clicked();
+
+    void on_issueAssistantPushButton_clicked();
+
+    void on_ignoreNoteSubFoldersResetButton_clicked();
+
+    void on_interfaceFontSizeSpinBox_valueChanged(int arg1);
+
+    void on_overrideInterfaceFontSizeGroupBox_toggled(bool arg1);
+
 private:
 
     Ui::SettingsDialog *ui;
@@ -160,11 +262,16 @@ private:
     bool appIsValid;
     QString appVersion;
     QString serverVersion;
+    QString notesPathExistsText;
     QString connectionErrorMessage;
     NoteFolder _selectedNoteFolder;
     Script _selectedScript;
-
-    void readSettings();
+    QSignalMapper *_keyWidgetSignalMapper;
+    static const int _defaultMarkdownHighlightingInterval = 200;
+    QSplitter *_mainSplitter;
+    QButtonGroup *_noteNotificationButtonGroup;
+    QCheckBox *_noteNotificationNoneCheckBox;
+    QString _newScriptName;
 
     void storeSettings();
 
@@ -174,17 +281,17 @@ private:
 
     void outputSettings();
 
-    QString prepareDebugInformationLine(QString headline, QString data);
-
     static void selectListWidgetValue(QListWidget *listWidget, QString value);
+
+    static bool listWidgetValueExists(QListWidget* listWidget, QString value);
 
     static QString getSelectedListWidgetValue(QListWidget *listWidget);
 
-    void setupProxyTab();
+    void setupProxyPage();
 
     void loadProxySettings();
 
-    void setupNoteFolderTab();
+    void setupNoteFolderPage();
 
     QTreeWidgetItem *findNoteFolderRemotePathTreeWidgetItem(
             QTreeWidgetItem *parent, QString text);
@@ -197,14 +304,56 @@ private:
 
     void setNoteFolderRemotePathTreeWidgetFrameVisibility(bool visi);
 
-    void setupScriptingTab();
+    void setupScriptingPage();
 
     void storeScriptListEnabledState();
 
     void validateCurrentScript();
 
-    QListWidgetItem *addCustomeNoteFileExtension(
+    QListWidgetItem *addCustomNoteFileExtension(
             const QString &fileExtension);
+
+    void loadShortcutSettings();
+
+    void storeShortcutSettings();
+
+    QTreeWidgetItem *findSettingsTreeWidgetItemByPage(int page);
+
+    void initMainSplitter();
+
+    void storeSplitterSettings();
+
+    void storeFontSettings();
+
+    void reloadCalendarList();
+
+    void initPortableModePage();
+
+    int findSettingsPageIndexOfWidget(QWidget *widget);
+
+    void addToSearchIndexList(QWidget *widget, QList<int> &pageIndexList);
+
+    void removeLogFile() const;
+
+    void replaceOwnCloudText() const;
+
+    bool connectionTestCanBeStarted() const;
+
+    void reloadScriptList() const;
+
+    void reloadCurrentScriptPage();
+
+    void readPanelSettings();
+
+    void storePanelSettings();
+
+    void loadInterfaceStyleComboBox() const;
+
+    void initSearchEngineComboBox() const;
+
+    QKeySequenceWidget *findKeySequenceWidget(QString objectName);
+
+    void storeOwncloudDebugData() const;
 };
 
 #endif // SETTINGSDIALOG_H

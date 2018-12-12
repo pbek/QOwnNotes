@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2018 Patrizio Bekerle <patrizio@bekerle.com> -->
+<component type="desktop-application">
+  <id>org.qownnotes.QOwnNotes</id>
+  <metadata_license>FSFAP</metadata_license>
+  <project_license>GPL-2.0+</project_license>
+  <name>QOwnNotes</name>
+  <summary>Plain-text file notepad with markdown support and ownCloud integration</summary>
+
+  <description>
+    <p>
+      QOwnNotes is the open source (GPL) plain-text file notepad with markdown support and todo list manager for GNU/Linux, Mac OS X and Windows by Patrizio Bekerle, that (optionally) works together with the notes application of ownCloud or Nextcloud.
+    </p>
+  </description>
+
+  <screenshots>
+    <screenshot type="default">
+      <caption>QOwnNotes main screen</caption>
+      <image>https://raw.githubusercontent.com/pbek/QOwnNotes/develop/screenshots/screenshot.png</image>
+    </screenshot>
+  </screenshots>
+
+  <url type="homepage">https://www.qownnotes.org/</url>
+  <content_rating type="oars-1.0">
+    <content_attribute id="violence-cartoon">none</content_attribute>
+    <content_attribute id="violence-fantasy">none</content_attribute>
+    <content_attribute id="violence-realistic">none</content_attribute>
+    <content_attribute id="violence-bloodshed">none</content_attribute>
+    <content_attribute id="violence-sexual">none</content_attribute>
+    <content_attribute id="drugs-alcohol">none</content_attribute>
+    <content_attribute id="drugs-narcotics">none</content_attribute>
+    <content_attribute id="drugs-tobacco">none</content_attribute>
+    <content_attribute id="sex-nudity">none</content_attribute>
+    <content_attribute id="sex-themes">none</content_attribute>
+    <content_attribute id="language-profanity">none</content_attribute>
+    <content_attribute id="language-humor">none</content_attribute>
+    <content_attribute id="language-discrimination">none</content_attribute>
+    <content_attribute id="social-chat">none</content_attribute>
+    <content_attribute id="social-info">none</content_attribute>
+    <content_attribute id="social-audio">none</content_attribute>
+    <content_attribute id="social-location">none</content_attribute>
+    <content_attribute id="social-contacts">none</content_attribute>
+    <content_attribute id="money-purchasing">none</content_attribute>
+    <content_attribute id="money-gambling">none</content_attribute>
+  </content_rating>
+
+  <releases>
+	  <release version="18.06.2" data="2018-06-12" type="stable" timestamp="1528761600" />
+	  <release version="18.06.0" date="2018-06-02" type="stable" />
+  </releases>
+
+</component>

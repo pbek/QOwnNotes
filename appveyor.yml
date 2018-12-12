@@ -1,22 +1,43 @@
 # AppVeyor build configuration
-# http://www.appveyor.com/docs/build-configuration
-os: unstable
+#
+# doc: http://www.appveyor.com/docs/build-configuration
+# Qt-versions: https://www.appveyor.com/docs/build-environment/#qt
+# validator: https://ci.appveyor.com/tools/validate-yaml
+
 skip_tags: true
 
+environment:
+  global:
+    qtdir57: C:\Qt\5.7\mingw53_32
+    qtdirlatest: C:\Qt\latest\mingw53_32
+
+  matrix:
+    # Qt 5.11.2
+    - qtdir: "C:\\Qt\\latest\\mingw53_32"
+    # Qt 5.7 (for Windows XP)
+    - qtdir: "C:\\Qt\\5.7\\mingw53_32"
+
+#matrix:
+#  allow_failures:
+#    - qtdir: "C:\\Qt\\5.7\\mingw53_32"
+
 install:
-  - set QTDIR=C:\Qt\5.5\mingw492_32
+  # Qt-versions: https://www.appveyor.com/docs/build-environment/#qt
+#  - set QTDIR=C:\Qt\5.7\mingw53_32
+#  - set QTDIR=C:\Qt\5.10.1\mingw53_32
+  - set QTDIR=%qtdir%
   - set PATH=%PATH%;%QTDIR%\bin;C:\MinGW\bin
   - set RELEASE_PATH=appveyor\release
+  # enable this to use RDP connection, see https://www.appveyor.com/docs/how-to/rdp-to-build-worker/
+#  - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 
 before_build:
   # getting submodules
   - git submodule update --init
 
 build_script:
-  # using a header file without MemoryBarrier, that causes the build to fail
-  - copy appveyor\qopenglversionfunctions.h %QTDIR%\include\QtGui
-  # workaround for MinGW bug
-  - sed -i s/_hypot/hypot/g c:\mingw\include\math.h
+  # enable this to take a look if there are new qt versions
+  - dir C:\Qt\latest
   - cd src
   # we need to modify that to make it running on AppVeyor
   - sed -i "s/CONFIG += c++11/QMAKE_CXXFLAGS += -std=gnu++0x/g" QOwnNotes.pro
@@ -34,6 +55,12 @@ build_script:
   - copy ..\appveyor\OpenSSL\libeay32.dll ..\%RELEASE_PATH%
   - copy ..\appveyor\OpenSSL\libssl32.dll ..\%RELEASE_PATH%
   - copy ..\appveyor\OpenSSL\ssleay32.dll ..\%RELEASE_PATH%
+  # copy unzip application for updater
+  - copy ..\appveyor\unzip.exe ..\%RELEASE_PATH%
+  # copy updater script
+  - copy ..\appveyor\update.bat ..\%RELEASE_PATH%
+  # copy portable mode launcher to the release path
+  - copy ..\appveyor\QOwnNotesPortable.bat ..\%RELEASE_PATH%
   # copy translation files
   - copy languages\*.qm ..\%RELEASE_PATH%
   - cd ..\%RELEASE_PATH%
@@ -43,6 +70,8 @@ build_script:
   # this dll was missed by windeployqt
   - copy ..\libwinpthread-1.dll . /y
   # this dll didn't work when released by windeployqt
+  # important: this dll needs to be updated when a new version of Qt is used!
+  # search for it in the mingw* folder of your local installation of Qt
   - copy "..\libstdc++-6.dll" . /y
   # for some reason AppVeyor or windeployqt uses a copy of the German
   # translation file as English one, which screws up the English user interface
@@ -63,3 +92,13 @@ deploy:
       secure: spcyN/Dz3B2GXBPii8IywDLq6vfxC1SrN+xR2wMerFM7g2nTy0Lrh5agQONFoInR
     on:
       branch: master
+      qtdir: "C:\\Qt\\5.10.1\\mingw53_32"
+#      branch: develop
+
+notifications:
+  # Gitter webhook
+  - provider: Webhook
+    url: https://webhooks.gitter.im/e/b6ef22402eb4af50f73a
+    on_build_success: true
+    on_build_failure: true
+    on_build_status_changed: false

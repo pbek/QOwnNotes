@@ -1,4 +1,5 @@
 #include "passworddialog.h"
+#include <QPushButton>
 #include "ui_passworddialog.h"
 
 PasswordDialog::PasswordDialog(
@@ -12,7 +13,7 @@ PasswordDialog::PasswordDialog(
     ui->setupUi(this);
 
     ui->passwordLineEdit2->setVisible(doubleEnterPassword);
-    ui->buttonBox->setEnabled(!doubleEnterPassword);
+    ui->buttonBox->button( QDialogButtonBox::Ok )->setEnabled(!doubleEnterPassword);
     ui->errorLabel->setVisible(false);
 
     if (!labelText.isEmpty()) {
@@ -49,7 +50,7 @@ bool PasswordDialog::checkIfPasswordsAreEqual() {
 
     ui->errorLabel->setVisible(!equal && !ui->passwordLineEdit2->text()
             .isEmpty());
-    ui->buttonBox->setEnabled(equal);
+    ui->buttonBox->button( QDialogButtonBox::Ok )->setEnabled(equal);
 
     return equal;
 }

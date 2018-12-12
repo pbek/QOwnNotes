@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>838</width>
-    <height>441</height>
+    <width>608</width>
+    <height>458</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -146,7 +146,7 @@
    <item row="4" column="0">
     <widget class="QStackedWidget" name="stackedWidget">
      <property name="currentIndex">
-      <number>2</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="noteFolderPage">
       <layout class="QGridLayout" name="gridLayout_2">
@@ -181,7 +181,7 @@
           <item row="2" column="0">
            <widget class="QCheckBox" name="createNoteFolderCheckBox">
             <property name="text">
-             <string>create note folder if not existing</string>
+             <string>Create note folder if not existing</string>
             </property>
             <property name="checked">
              <bool>true</bool>
@@ -221,12 +221,15 @@
                <property name="readOnly">
                 <bool>true</bool>
                </property>
+               <property name="placeholderText">
+                <string>Note folder path</string>
+               </property>
               </widget>
              </item>
              <item>
               <widget class="QPushButton" name="noteFolderButton">
                <property name="text">
-                <string>select &amp;folder</string>
+                <string>Select folder</string>
                </property>
                <property name="icon">
                 <iconset theme="document-open" resource="../breeze-qownnotes.qrc">
@@ -255,6 +258,34 @@
        </item>
       </layout>
      </widget>
+     <widget class="QWidget" name="layoutPage">
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QGroupBox" name="groupBox_4">
+         <property name="title">
+          <string>Panel layout</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_8">
+          <item row="0" column="0">
+           <widget class="LayoutWidget" name="layoutWidget" native="true"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
      <widget class="QWidget" name="ownCloudPage">
       <layout class="QGridLayout" name="gridLayout_4">
        <property name="leftMargin">
@@ -278,7 +309,7 @@
           <item row="0" column="0">
            <widget class="QLabel" name="label">
             <property name="text">
-             <string>If you want to be able to access your note versions and your trashed notes on your ownCloud server you can configure QOwnNotes for it now. You can also do so at later.</string>
+             <string>If you want to be able to access your note versions and your trashed notes on your ownCloud server, you can configure QOwnNotes for it now. You can also do it at a later time.</string>
             </property>
             <property name="wordWrap">
              <bool>true</bool>
@@ -301,14 +332,14 @@
           <item row="1" column="0">
            <widget class="QPushButton" name="ownCloudSettingsButton">
             <property name="text">
-             <string>open ownCloud &amp;settings</string>
+             <string>Open ownCloud settings</string>
             </property>
            </widget>
           </item>
           <item row="2" column="0">
            <widget class="QLabel" name="label_4">
             <property name="text">
-             <string>In any case you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</string>
+             <string>In any case, you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</string>
             </property>
             <property name="wordWrap">
              <bool>true</bool>
@@ -343,7 +374,7 @@
           <item row="1" column="0">
            <widget class="QPushButton" name="networkSettingsButton">
             <property name="text">
-             <string>open network &amp;settings</string>
+             <string>Open network settings</string>
             </property>
            </widget>
           </item>
@@ -379,6 +410,14 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>LayoutWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">widgets/layoutwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="../breeze-qownnotes.qrc"/>
   <include location="../images.qrc"/>

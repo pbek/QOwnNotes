@@ -1,7 +1,7 @@
 <RCC>
     <qresource prefix="/">
         <file>demonotes/Welcome to QOwnNotes.md</file>
-        <file>demonotes/GitHub Flavored Markdown.md</file>
         <file>demonotes/Markdown Showcase.md</file>
+        <file>demonotes/Markdown Cheatsheet.md</file>
     </qresource>
 </RCC>

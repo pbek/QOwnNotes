@@ -41,7 +41,7 @@ QNetworkProxy ClientProxy::proxyFromSettings()
 bool ClientProxy::isUsingSystemDefault() {
     QSettings settings;
     int proxyType = settings.value("networking/proxyType",
-                                   QNetworkProxy::DefaultProxy).toInt();
+                                   QNetworkProxy::NoProxy).toInt();
     return proxyType == QNetworkProxy::DefaultProxy;
 }
 
@@ -55,7 +55,7 @@ void ClientProxy::setupQtProxyFromSettings()
 {
     QSettings settings;
     int proxyType = settings.value("networking/proxyType",
-                                   QNetworkProxy::DefaultProxy).toInt();
+                                   QNetworkProxy::NoProxy).toInt();
     QNetworkProxy proxy = proxyFromSettings();
 
     switch (proxyType) {
@@ -83,6 +83,7 @@ void ClientProxy::setupQtProxyFromSettings()
         QNetworkProxy::setApplicationProxy(proxy);
         break;
     default:
+        qDebug() << "ProxyType was not found!";
         break;
     }
 }

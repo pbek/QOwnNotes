@@ -11,11 +11,11 @@
 #
 
 # uncomment this if you want to force a version
-#QOWNNOTES_VERSION=0.78.1
+#QOWNNOTES_VERSION=16.08.1.2
 
 BRANCH=develop
 #BRANCH=master
-UBUNTU_RELEASES=( "vivid" "wily" "xenial" "yakkety" )
+UBUNTU_RELEASES=( "xenial" "bionic" "cosmic" )
 
 
 DATE=$(LC_ALL=C date +'%a, %d %b %Y %T %z')
@@ -23,7 +23,7 @@ PROJECT_PATH="/tmp/QOwnNotes-$$"
 CUR_DIR=$(pwd)
 UPLOAD="true"
 DEBUILD_ARGS=""
-GPG_PUBLIC_KEY=D55B7124
+GPG_PUBLIC_KEY=F5161BD3
 export DEBFULLNAME="Patrizio Bekerle"
 export DEBEMAIL="patrizio@bekerle.com"
 

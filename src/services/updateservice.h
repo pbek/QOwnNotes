@@ -2,6 +2,8 @@
 #define UPDATESERVICE_H
 
 #include <qnetworkreply.h>
+#include <dialogs/updatedialog.h>
+
 class MainWindow;
 
 #ifdef Q_OS_LINUX
@@ -39,6 +41,8 @@ public:
 private:
     MainWindow *mainWindow;
     UpdateMode updateMode;
+    UpdateDialog *_updateDialog;
+    QString _currentReleaseVersionString;
 
 private slots:
 

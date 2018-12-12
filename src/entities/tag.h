@@ -2,6 +2,7 @@
 
 #include <QSqlQuery>
 #include <QList>
+#include <QColor>
 #include "note.h"
 
 class Tag {
@@ -51,7 +52,9 @@ public:
 
     static Tag activeTag();
 
-    static Tag fetchByName(QString name);
+    static Tag fetchByName(QString name, bool startsWith = false);
+
+    static Tag fetchByName(QString name, int parentId);
 
     bool linkToNote(Note note);
 
@@ -59,7 +62,7 @@ public:
 
     bool removeLinkToNote(Note note);
 
-    QStringList fetchAllLinkedNoteFileNames();
+    QStringList fetchAllLinkedNoteFileNames(bool fromAllSubfolders);
 
     static QStringList fetchAllNames();
 
@@ -70,7 +73,7 @@ public:
     static bool renameNoteFileNamesOfLinks(
             QString oldFileName, QString newFileName);
 
-    int countLinkedNoteFileNames();
+    int countLinkedNoteFileNames(bool fromAllSubfolder, bool recursive);
 
     static QList<Tag> fetchAllWithLinkToNoteNames(QStringList noteNameList);
 
@@ -78,7 +81,7 @@ public:
 
     void setParentId(int id);
 
-    static QList<Tag> fetchAllByParentId(int parentId);
+    static QList<Tag> fetchAllByParentId(int parentId, QString sortBy = "created DESC");
 
     static int countAllParentId(int parentId);
 
@@ -88,9 +91,40 @@ public:
 
     static void setAsActive(int tagId);
 
+    static void convertDirSeparator();
+
+    QColor getColor();
+
+    void setColor(QColor color);
+
+    static Tag fetchOneOfNoteWithColor(Note note);
+
+    static void migrateDarkColors();
+
+    static void removeBrokenLinks();
+
+    static QStringList fetchAllNamesOfNote(Note note);
+
+    static QStringList searchAllNamesByName(QString name);
+
+    static QList<Tag> fetchRecursivelyByParentId(int parentId);
+
+    static bool isTaggingShowNotesRecursively();
+
+    static QList<Tag> fetchAllOfNotes(QList<Note> notes);
+
+    bool operator ==(const Tag &tag) const;
+
+    bool operator <(const Tag &tag) const;
+
 protected:
     int id;
     QString name;
     int priority;
     int parentId;
+    QColor _color;
+
+    QString colorFieldName();
+
+    static bool removeNoteLinkById(int id);
 };

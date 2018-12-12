@@ -1,6 +1,5 @@
 import QtQml 2.0
-import com.qownnotes.noteapi 1.0
-import com.qownnotes.tagapi 1.0
+import QOwnNotesTypes 1.0
 
 /**
  * This script is a generic example of some functions that will be called by QOwnNotes
@@ -18,7 +17,7 @@ QtObject {
      * You cannot modify stored notes, that would be a mess since 
      * you are most likely editing them by hand at the same time
      * 
-     * @param {NoteApi} note - the note object of the stored note
+     * @param {Note} note - the note object of the stored note
      */
     function onNoteStored(note) {
         script.log("fileName was stored!");
@@ -40,7 +39,7 @@ QtObject {
      * Return an empty string if the file name of the note should 
      * not be modified
      * 
-     * @param {NoteApi} note - the note object of the stored note
+     * @param {Note} note - the note object of the stored note
      * @return {string} the file name of the note
      */
     function handleNoteTextFileNameHook(note) {
@@ -55,16 +54,30 @@ QtObject {
         // don't actually change anything
         return "";
     }
-    
+
+    /**
+     * This function is called when the note name is determined for a note
+     *
+     * It allows you to modify the name of the note that is viewed
+     *
+     * Return an empty string if the name of the note should not be modified
+     *
+     * @param {NoteApi} note - the note object of the stored note
+     * @return {string} the name of the note
+     */
+    function handleNoteNameHook(note) {
+        return note.name + " some text";
+    }
+
     /**
      * This function is called when the markdown html of a note is generated
      * 
      * It allows you to modify this html
      * This is for example called before by the note preview
      * 
-     * @param {NoteApi} note - the note object
+     * @param {Note} note - the note object
      * @param {string} html - the html that is about to being rendered
-     * @return {string} the modfied html or an empty string if nothing should be modified
+     * @return {string} the modified html or an empty string if nothing should be modified
      */
     function noteToMarkdownHtmlHook(note, html) {
         script.log("noteToMarkdownHtmlHook was called");
@@ -99,10 +112,10 @@ QtObject {
     }
     
     /**
-     * This starts a timer that triggers two seconds
+     * This starts a timer that triggers every 30 seconds
      */
     property QtObject timer: Timer {
-        interval: 2000
+        interval: 30000
         repeat: true
         running: true
         
