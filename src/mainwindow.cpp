@@ -2334,6 +2334,9 @@ void MainWindow::readSettingsFromSettingsDialog() {
     // update the toolbar menu
     updateToolbarMenu();
 
+    // init the saved searches completer
+    initSavedSearchesCompleter();
+
     // update the settings of all markdown edits
     Q_FOREACH(QOwnNotesMarkdownTextEdit *textEdit,
               findChildren<QOwnNotesMarkdownTextEdit*>()) {
@@ -8680,10 +8683,15 @@ void MainWindow::on_actionGitter_triggered() {
  * Adds the current search text to the saved searches
  */
 void MainWindow::storeSavedSearch() {
+    QSettings settings;
+
+    if (settings.value("disableSavedSearchesAutoCompletion").toBool()) {
+        return;
+    }
+
     QString text = ui->searchLineEdit->text();
     if (!text.isEmpty()) {
         int noteFolderId = NoteFolder::currentNoteFolderId();
-        QSettings settings;
         QString settingsKey = "savedSearches/noteFolder-"
                               + QString::number(noteFolderId);
         QStringList savedSearches = settings.value(settingsKey)
@@ -8712,13 +8720,21 @@ void MainWindow::storeSavedSearch() {
  */
 void MainWindow::initSavedSearchesCompleter() {
     int noteFolderId = NoteFolder::currentNoteFolderId();
+    QStringList savedSearches;
     QSettings settings;
-    QString settingsKey = "savedSearches/noteFolder-"
-                          + QString::number(noteFolderId);
-    QStringList savedSearches = settings.value(settingsKey).toStringList();
+
+    if (!settings.value("disableSavedSearchesAutoCompletion").toBool()) {
+        QString settingsKey = "savedSearches/noteFolder-"
+                              + QString::number(noteFolderId);
+        savedSearches = settings.value(settingsKey).toStringList();
+    }
+
+    // release the old completer
+    auto *completer = ui->searchLineEdit->completer();
+    delete completer;
 
     // add the completer
-    QCompleter *completer = new QCompleter(savedSearches, ui->searchLineEdit);
+    completer = new QCompleter(savedSearches, ui->searchLineEdit);
     completer->setCaseSensitivity(Qt::CaseInsensitive);
     ui->searchLineEdit->setCompleter(completer);
 

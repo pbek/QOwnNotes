@@ -385,7 +385,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>18</number>
+            <number>16</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -4946,6 +4946,22 @@ git config --global user.name &quot;Your name&quot;</string>
                   </property>
                   <property name="text">
                    <string>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QGroupBox" name="notesPanelGroupBox_2">
+               <property name="title">
+                <string>Note search panel</string>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_69">
+                <item row="0" column="1" colspan="2">
+                 <widget class="QCheckBox" name="disableSavedSearchesAutoCompletionCheckBox">
+                  <property name="text">
+                   <string>Disable auto-completion of previous searches</string>
                   </property>
                  </widget>
                 </item>

@@ -799,6 +799,10 @@ void SettingsDialog::storePanelSettings() {
                       ui->noteSubfoldersPanelShowNotesRecursivelyCheckBox
                               ->isChecked());
 
+    settings.setValue("disableSavedSearchesAutoCompletion",
+                      ui->disableSavedSearchesAutoCompletionCheckBox
+                      ->isChecked());
+
     settings.setValue("noteSubfoldersPanelShowFullPath",
                       ui->noteSubfoldersPanelShowFullPathCheckBox->isChecked());
 
@@ -1227,6 +1231,9 @@ void SettingsDialog::readPanelSettings() {
     ui->noteSubfoldersPanelShowNotesRecursivelyCheckBox->setChecked(
             settings.value("noteSubfoldersPanelShowNotesRecursively"
             ).toBool());
+
+    ui->disableSavedSearchesAutoCompletionCheckBox->setChecked(
+            settings.value("disableSavedSearchesAutoCompletion").toBool());
 
     if (settings.value(
             "noteSubfoldersPanelShowRootFolderName", true).toBool()) {

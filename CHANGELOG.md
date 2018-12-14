@@ -4,7 +4,10 @@
 - if single application mode is enabled the app will now attempt to check if 
   the mode is supported on your system and turn it off if it isn't supported
   (for [#1089](https://github.com/pbek/QOwnNotes/issues/1089))
- 
+- you can now disable the auto-completion of previous searches in the search 
+  panel by turning it off in the *Panel settings* (for [#1087](https://github.com/pbek/QOwnNotes/issues/1087))
+    - also some memory optimization when adding new searches was done
+
 ## 18.12.3
 - the Windows version of QOwnNotes is now built with Qt 5.11.2
 - the Qt 5.7 build for Windows XP is now working again (for [#828](https://github.com/pbek/QOwnNotes/issues/828))

@@ -906,7 +906,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="659"/>
-        <location filename="../mainwindow.cpp" line="7497"/>
+        <location filename="../mainwindow.cpp" line="7500"/>
         <source>Add a tag to the current note</source>
         <translation type="unfinished">Add a tag to the current note</translation>
     </message>
@@ -1022,13 +1022,13 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1369"/>
-        <location filename="../mainwindow.cpp" line="8938"/>
+        <location filename="../mainwindow.cpp" line="8953"/>
         <source>Select &amp;all notes</source>
         <translation>Seç &amp;tüm notlar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1378"/>
-        <location filename="../mainwindow.cpp" line="5704"/>
+        <location filename="../mainwindow.cpp" line="5707"/>
         <source>Insert &amp;link</source>
         <translation>Ekle &amp;link</translation>
     </message>
@@ -1083,7 +1083,7 @@
         <translation>Not ara veya oluştur</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7498"/>
+        <location filename="../mainwindow.cpp" line="7501"/>
         <source>Add a tag to the selected notes</source>
         <translation type="unfinished">Add a tag to the selected notes</translation>
     </message>
@@ -1094,7 +1094,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="848"/>
-        <location filename="../mainwindow.cpp" line="5680"/>
+        <location filename="../mainwindow.cpp" line="5683"/>
         <source>Export</source>
         <translation>Dışa aktar</translation>
     </message>
@@ -1105,7 +1105,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="885"/>
-        <location filename="../mainwindow.cpp" line="5662"/>
+        <location filename="../mainwindow.cpp" line="5665"/>
         <source>Print</source>
         <translation>Yazdır</translation>
     </message>
@@ -1451,7 +1451,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2153"/>
-        <location filename="../mainwindow.cpp" line="9929"/>
+        <location filename="../mainwindow.cpp" line="9944"/>
         <source>Remove current workspace</source>
         <translation>Geçerli çalışma alanını kaldır</translation>
     </message>
@@ -1519,7 +1519,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2274"/>
-        <location filename="../mainwindow.cpp" line="8913"/>
+        <location filename="../mainwindow.cpp" line="8928"/>
         <source>Open note in different window</source>
         <translation>Notu farklı pencerede aç</translation>
     </message>
@@ -1540,7 +1540,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2314"/>
-        <location filename="../mainwindow.cpp" line="8921"/>
+        <location filename="../mainwindow.cpp" line="8936"/>
         <source>Show note git versions</source>
         <translation>Not git sürümlerini göster</translation>
     </message>
@@ -1710,21 +1710,21 @@
         <translation>Evernote&apos;dan notları içe aktar</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2527"/>
+        <location filename="../mainwindow.cpp" line="2530"/>
         <source>Note was removed externally!</source>
         <translation>Not harici olarak kaldırılmıştır!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2528"/>
+        <location filename="../mainwindow.cpp" line="2531"/>
         <source>Current note was removed outside of this application!
 Restore current note?</source>
         <translation>Geçerli not bu uygulama dışına kaldırıldı!
 Geçerli not geri yüklensin mi?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4770"/>
-        <location filename="../mainwindow.cpp" line="6076"/>
-        <location filename="../mainwindow.cpp" line="9000"/>
+        <location filename="../mainwindow.cpp" line="4773"/>
+        <location filename="../mainwindow.cpp" line="6079"/>
+        <location filename="../mainwindow.cpp" line="9015"/>
         <source>&amp;Cancel</source>
         <translation>&amp;İptal</translation>
     </message>
@@ -1735,67 +1735,67 @@ Geçerli not geri yüklensin mi?</translation>
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2751"/>
+        <location filename="../mainwindow.cpp" line="2754"/>
         <source>new version %1 available</source>
         <translation>yeni sürüm %1 mevcut</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3166"/>
+        <location filename="../mainwindow.cpp" line="3169"/>
         <source>Please select the folder where your notes will get stored</source>
         <translation>Lütfen notlarınızın saklandığı klasörü seçin</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3193"/>
+        <location filename="../mainwindow.cpp" line="3196"/>
         <source>No folder was selected</source>
         <translation>Hiçbir klasör seçilmedi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3195"/>
+        <location filename="../mainwindow.cpp" line="3198"/>
         <source>You have to select your ownCloud notes folder to make this software work!</source>
         <translation>Bu yazılımı çalıştırmak için ownCloud notlar klasörünü seçmelisin!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3197"/>
+        <location filename="../mainwindow.cpp" line="3200"/>
         <source>&amp;Retry</source>
         <translation>&amp;Tekrar dene</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3197"/>
+        <location filename="../mainwindow.cpp" line="3200"/>
         <source>&amp;Exit</source>
         <translation>&amp;Çıkış</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3404"/>
+        <location filename="../mainwindow.cpp" line="3407"/>
         <source>Remove current note</source>
         <translation>Geçerli notu sil</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3405"/>
+        <location filename="../mainwindow.cpp" line="3408"/>
         <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
         <translation>Geçerli notu sil:&lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3724"/>
+        <location filename="../mainwindow.cpp" line="3727"/>
         <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
         <translation>Lütfen şifrelenmiş notun &lt;strong&gt;şifresini&lt;/strong&gt; girin.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3748"/>
+        <location filename="../mainwindow.cpp" line="3751"/>
         <source>Note can&apos;t be decrypted!</source>
         <translation>Notun şifresi çözülemez!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3749"/>
+        <location filename="../mainwindow.cpp" line="3752"/>
         <source>It seems that your password is not valid!</source>
         <translation>Anlaşılan şifreniz geçerli değil!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3902"/>
+        <location filename="../mainwindow.cpp" line="3905"/>
         <source>Remove selected notes</source>
         <translation>Seçili notları kaldır</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3904"/>
+        <location filename="../mainwindow.cpp" line="3907"/>
         <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
@@ -1806,397 +1806,397 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3983"/>
-        <location filename="../mainwindow.cpp" line="9164"/>
+        <location filename="../mainwindow.cpp" line="3986"/>
+        <location filename="../mainwindow.cpp" line="9179"/>
         <source>Remove selected folders</source>
         <translation>Seçili klasörleri sil</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3984"/>
+        <location filename="../mainwindow.cpp" line="3987"/>
         <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
         <translation>
             <numerusform>Seçilen klasör(ler) &lt;strong&gt;%n&lt;/strong&gt; kaldırılsın mı? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Bu klasörlerdeki tüm dosyalar ve klasörler de kaldırılmış olacak!</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3995"/>
+        <location filename="../mainwindow.cpp" line="3998"/>
         <source>Removed note subfolder: %1</source>
         <translation>Not alt klasörü kaldırıldı: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4014"/>
+        <location filename="../mainwindow.cpp" line="4017"/>
         <source>Remove selected tags</source>
         <translation>Seçilen etiketleri kaldır</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="4015"/>
+        <location filename="../mainwindow.cpp" line="4018"/>
         <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
         <translation>
             <numerusform>Seçilen etiket(ler) &lt;strong&gt;%n&lt;/strong&gt; kaldırılsın mı? Bu süreçte hiçbir not kaldırılmayacaktır.</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4069"/>
-        <location filename="../mainwindow.cpp" line="8151"/>
+        <location filename="../mainwindow.cpp" line="4072"/>
+        <location filename="../mainwindow.cpp" line="8154"/>
         <source>Move selected notes</source>
         <translation>Seçilen notları kaldır</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="4070"/>
+        <location filename="../mainwindow.cpp" line="4073"/>
         <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>Seçilen %n not(lar) &lt;strong&gt;%2&lt;/strong&gt;a taşınsın mı?</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4162"/>
-        <location filename="../mainwindow.cpp" line="8235"/>
+        <location filename="../mainwindow.cpp" line="4165"/>
+        <location filename="../mainwindow.cpp" line="8238"/>
         <source>Copy selected notes</source>
         <translation>Seçilen notları kopyala</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="4163"/>
+        <location filename="../mainwindow.cpp" line="4166"/>
         <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>Seçilen %n not(lar) &lt;strong&gt;%2&lt;/strong&gt;a kopyalansın mı?</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4186"/>
-        <location filename="../mainwindow.cpp" line="4324"/>
+        <location filename="../mainwindow.cpp" line="4189"/>
+        <location filename="../mainwindow.cpp" line="4327"/>
         <source>Done</source>
         <translation>Tamam</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="4187"/>
+        <location filename="../mainwindow.cpp" line="4190"/>
         <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
         <translation>
             <numerusform>%n not(lar) &lt;strong&gt;%2&lt;/strong&gt;a kopyalandı.</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4200"/>
+        <location filename="../mainwindow.cpp" line="4203"/>
         <source>Tag selected notes</source>
         <translation>Seçilen notları etiketle</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="4201"/>
+        <location filename="../mainwindow.cpp" line="4204"/>
         <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>Seşilen %n not(lar) &lt;strong&gt;%2&lt;/strong&gt; ile etiketlensin mi?</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4453"/>
+        <location filename="../mainwindow.cpp" line="4456"/>
         <source>Restart application</source>
         <translation>Uygulamayı yeniden başlat</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4459"/>
+        <location filename="../mainwindow.cpp" line="4462"/>
         <source>You may need to restart the application manually to let the changes take effect.</source>
         <translation>Değişikliklerin etkili olabilmesi için uygulamayı manuel olarak yeniden başlatmanız gerekebilir.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4464"/>
+        <location filename="../mainwindow.cpp" line="4467"/>
         <source>You may need to restart the application to let the changes take effect.</source>
         <translation>Değişikliklerin etkili olabilmesi için uygulamayı yeniden başlatmanız gerekebilir.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4466"/>
+        <location filename="../mainwindow.cpp" line="4469"/>
         <source>Restart</source>
         <translation>Yeniden başlat</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4675"/>
+        <location filename="../mainwindow.cpp" line="4678"/>
         <source>PDF files</source>
         <translation>PDF dosyaları</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5365"/>
+        <location filename="../mainwindow.cpp" line="5368"/>
         <source>Note was not found</source>
         <translation type="unfinished">Note was not found</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5366"/>
+        <location filename="../mainwindow.cpp" line="5369"/>
         <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
         <translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5587"/>
+        <location filename="../mainwindow.cpp" line="5590"/>
         <source>Note versions are currently loaded from your ownCloud server</source>
         <translation>Not sürümleri şu anda ownCloud sunucunuzdan yüklenmiştir</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5602"/>
+        <location filename="../mainwindow.cpp" line="5605"/>
         <source>Trashed notes are currently loaded from your ownCloud server</source>
         <translation>Çöp kutusundaki notlar şu anda ownCloud sunucunuzdan yüklendi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5650"/>
+        <location filename="../mainwindow.cpp" line="5653"/>
         <source>Copy code block</source>
         <translation type="unfinished">Copy code block</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5669"/>
+        <location filename="../mainwindow.cpp" line="5672"/>
         <source>Print selected text</source>
         <translation type="unfinished">Print selected text</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5675"/>
+        <location filename="../mainwindow.cpp" line="5678"/>
         <source>Print selected text (preview)</source>
         <translation type="unfinished">Print selected text (preview)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5691"/>
+        <location filename="../mainwindow.cpp" line="5694"/>
         <source>Export selected text as PDF</source>
         <translation type="unfinished">Export selected text as PDF</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5697"/>
+        <location filename="../mainwindow.cpp" line="5700"/>
         <source>Export selected text as PDF (preview)</source>
         <translation type="unfinished">Export selected text as PDF (preview)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5882"/>
+        <location filename="../mainwindow.cpp" line="5885"/>
         <source>Image files</source>
         <translation>Görüntü dosyaları</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6072"/>
+        <location filename="../mainwindow.cpp" line="6075"/>
         <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
         <translation>Notunuzun şifresi çözülecek ve tekrar düz metin olarak saklanacaktır. Şifrelenmemiş notun muhtemelen sunucunuza senkronize edileceğini ve hassas metinlerin görülebileceğini unutmayın!&lt;br /&gt;Notunuzu şifresini çözmek istiyor musun?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6159"/>
+        <location filename="../mainwindow.cpp" line="6162"/>
         <source>Markdown files</source>
         <translation>Markdown dosyaları</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6214"/>
+        <location filename="../mainwindow.cpp" line="6217"/>
         <source>Bookmarked note position at slot %1</source>
         <translation>%1 slotundaki yer işaretli not konumu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6230"/>
+        <location filename="../mainwindow.cpp" line="6233"/>
         <source>Jumped to bookmark position at slot %1</source>
         <translation>%1 slotundaki yer işaretine atlandı</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6442"/>
-        <location filename="../mainwindow.cpp" line="6510"/>
+        <location filename="../mainwindow.cpp" line="6445"/>
+        <location filename="../mainwindow.cpp" line="6513"/>
         <source>Inserting image</source>
         <translation>Görüntü ekleniyor</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6447"/>
-        <location filename="../mainwindow.cpp" line="6513"/>
+        <location filename="../mainwindow.cpp" line="6450"/>
+        <location filename="../mainwindow.cpp" line="6516"/>
         <source>Done inserting image</source>
         <translation>Görüntü eklemeyi tamamla</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6449"/>
+        <location filename="../mainwindow.cpp" line="6452"/>
         <source>Inserting attachment</source>
         <translation>Ek ekleniyor</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6454"/>
+        <location filename="../mainwindow.cpp" line="6457"/>
         <source>Done inserting attachment</source>
         <translation>Ek eklemeyi tamamla</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6464"/>
+        <location filename="../mainwindow.cpp" line="6467"/>
         <source>Copied %n note(s) to %1</source>
         <translation>
             <numerusform>%n not(lar) %1&apos;a kopyalandı</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6473"/>
+        <location filename="../mainwindow.cpp" line="6476"/>
         <source>Failed to copy %n note(s) (most likely already existing)</source>
         <translation>
             <numerusform>Not(lar) %n kopyalanamadı. (büyük olasılıkla zaten mevcut)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6483"/>
+        <location filename="../mainwindow.cpp" line="6486"/>
         <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
         <translation>
             <numerusform>Not(lar) ın %n kopyalanması geçildi (işaretleme veya metin dosyası yok veya okunabilir değil)</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6497"/>
+        <location filename="../mainwindow.cpp" line="6500"/>
         <source>Saving temporary image</source>
         <translation>Geçici görüntü kaydediliyor</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6516"/>
+        <location filename="../mainwindow.cpp" line="6519"/>
         <source>Temporary file can&apos;t be opened</source>
         <translation>Geçici dosya açılamıyor</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6547"/>
+        <location filename="../mainwindow.cpp" line="6550"/>
         <source>Downloading %1</source>
         <translation>İndiriliyor %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6727"/>
+        <location filename="../mainwindow.cpp" line="6730"/>
         <source>Reset font size to %1 pt</source>
         <comment>Will be shown after the font size is reset by &apos;Reset note text size&apos;</comment>
         <translation>Yazı tipi boyutunu %1 puntoya ayarla</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7543"/>
+        <location filename="../mainwindow.cpp" line="7546"/>
         <source>Remove tag &apos;%1&apos; from the current note</source>
         <translation type="unfinished">Remove tag &apos;%1&apos; from the current note</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7545"/>
+        <location filename="../mainwindow.cpp" line="7548"/>
         <source>Remove tag &apos;%1&apos; from the selected notes</source>
         <translation type="unfinished">Remove tag &apos;%1&apos; from the selected notes</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7709"/>
+        <location filename="../mainwindow.cpp" line="7712"/>
         <source>Rename tag</source>
         <translation>Etiketi yeniden adlandır</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7710"/>
+        <location filename="../mainwindow.cpp" line="7713"/>
         <source>Assign color</source>
         <translation>Renk ata</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7711"/>
+        <location filename="../mainwindow.cpp" line="7714"/>
         <source>Disable color</source>
         <translation>Rengi devre dışı bırak</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7715"/>
+        <location filename="../mainwindow.cpp" line="7718"/>
         <source>&amp;Move tags to…</source>
         <translation type="unfinished">&amp;Move tags to…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7934"/>
+        <location filename="../mainwindow.cpp" line="7937"/>
         <source>Move to the root</source>
         <comment>to move a tag to the current tag in the tag context menu</comment>
         <translation>Kök dizine taşı</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8377"/>
+        <location filename="../mainwindow.cpp" line="8380"/>
         <source>An url was opened at the current cursor position</source>
         <translation>Mevcut imleç konumunda bir URL açıldı</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8478"/>
+        <location filename="../mainwindow.cpp" line="8481"/>
         <source>No equation was found in front of the cursor</source>
         <translation>İmlecin önünde denklem bulunamadı</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8495"/>
+        <location filename="../mainwindow.cpp" line="8498"/>
         <source>Result for equation: %1 = %2</source>
         <translation>Denklem için sonuç: %1=%2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8596"/>
+        <location filename="../mainwindow.cpp" line="8599"/>
         <source>The scripting engine was reloaded</source>
         <translation>Komut dosyası motoru yeniden yüklendi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8631"/>
+        <location filename="../mainwindow.cpp" line="8634"/>
         <source>HTML files</source>
         <translation>HTML dosyaları</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8815"/>
-        <location filename="../mainwindow.cpp" line="8983"/>
+        <location filename="../mainwindow.cpp" line="8830"/>
+        <location filename="../mainwindow.cpp" line="8998"/>
         <source>Rename note</source>
         <translation>Notu yeniden adlandır</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8816"/>
+        <location filename="../mainwindow.cpp" line="8831"/>
         <source>Allows you to rename the filename of the note</source>
         <translation>Notun dosya adını değiştirmenize izin verir</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8828"/>
+        <location filename="../mainwindow.cpp" line="8843"/>
         <source>&amp;Move notes to…</source>
         <translation type="unfinished">&amp;Move notes to…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8829"/>
+        <location filename="../mainwindow.cpp" line="8844"/>
         <source>&amp;Copy notes to…</source>
         <translation type="unfinished">&amp;Copy notes to…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8858"/>
+        <location filename="../mainwindow.cpp" line="8873"/>
         <source>Move notes to subfolder…</source>
         <translation type="unfinished">Move notes to subfolder…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8862"/>
+        <location filename="../mainwindow.cpp" line="8877"/>
         <source>Copy notes to subfolder…</source>
         <translation type="unfinished">Copy notes to subfolder…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8870"/>
+        <location filename="../mainwindow.cpp" line="8885"/>
         <source>&amp;Tag selected notes with…</source>
         <translation type="unfinished">&amp;Tag selected notes with…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8892"/>
+        <location filename="../mainwindow.cpp" line="8907"/>
         <source>&amp;Remove tag from selected notes…</source>
         <translation type="unfinished">&amp;Remove tag from selected notes…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8983"/>
+        <location filename="../mainwindow.cpp" line="8998"/>
         <source>Name:</source>
         <translation type="unfinished">Name:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8995"/>
+        <location filename="../mainwindow.cpp" line="9010"/>
         <source>Note renaming not enabled!</source>
         <translation>Not yeniden adlandırma etkin değil!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9163"/>
+        <location filename="../mainwindow.cpp" line="9178"/>
         <source>Rename subfolder</source>
         <translation>Alt klasörü yeniden adlandır</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9709"/>
+        <location filename="../mainwindow.cpp" line="9724"/>
         <source>Create new workspace</source>
         <translation>Yeni çalışma alanı oluştur</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9709"/>
-        <location filename="../mainwindow.cpp" line="9967"/>
+        <location filename="../mainwindow.cpp" line="9724"/>
+        <location filename="../mainwindow.cpp" line="9982"/>
         <source>Workspace name:</source>
         <translation>Çalışma alanı adı:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9831"/>
+        <location filename="../mainwindow.cpp" line="9846"/>
         <source>full</source>
         <comment>full workspace</comment>
         <translation>dolu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9838"/>
+        <location filename="../mainwindow.cpp" line="9853"/>
         <source>minimal</source>
         <comment>minimal workspace</comment>
         <translation>en az</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9930"/>
+        <location filename="../mainwindow.cpp" line="9945"/>
         <source>Remove the current workspace?</source>
         <translation>Mevcut çalışma alanını kaldırılsın mı?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9967"/>
+        <location filename="../mainwindow.cpp" line="9982"/>
         <source>Rename workspace</source>
         <translation>Çalışma alanını yeniden adlandır</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="10102"/>
+        <location filename="../mainwindow.cpp" line="10117"/>
         <source>%n chars</source>
         <comment>characters</comment>
         <translation>
@@ -2204,37 +2204,37 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10225"/>
+        <location filename="../mainwindow.cpp" line="10240"/>
         <source>Copy image file path</source>
         <translation>Görüntü dosyası yolunu kopyala</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10364"/>
+        <location filename="../mainwindow.cpp" line="10379"/>
         <source>Select file to insert</source>
         <translation>Eklenecek dosyayı seçin</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10397"/>
+        <location filename="../mainwindow.cpp" line="10412"/>
         <source>Disallow all note editing</source>
         <translation type="unfinished">Disallow all note editing</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10531"/>
+        <location filename="../mainwindow.cpp" line="10546"/>
         <source>Select text files to import</source>
         <translation type="unfinished">Select text files to import</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10560"/>
+        <location filename="../mainwindow.cpp" line="10575"/>
         <source>Importing: %1</source>
         <translation type="unfinished">Importing: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10623"/>
+        <location filename="../mainwindow.cpp" line="10638"/>
         <source>Note headline &apos;%1&apos; was copied to the clipboard</source>
         <translation type="unfinished">Note headline &apos;%1&apos; was copied to the clipboard</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="7516"/>
+        <location filename="../mainwindow.cpp" line="7519"/>
         <source>%n notes selected</source>
         <translation type="unfinished">
             <numerusform>%n notes selected</numerusform>
@@ -2242,7 +2242,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2359"/>
-        <location filename="../mainwindow.cpp" line="10398"/>
+        <location filename="../mainwindow.cpp" line="10413"/>
         <source>Allow all note editing</source>
         <translation type="unfinished">Allow all note editing</translation>
     </message>
@@ -2252,230 +2252,230 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>&amp;Etiket</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4269"/>
+        <location filename="../mainwindow.cpp" line="4272"/>
         <source>Remove tag from selected notes</source>
         <translation>Seçilmiş notlardan etiketi kaldır</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="4270"/>
+        <location filename="../mainwindow.cpp" line="4273"/>
         <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
         <translation>
             <numerusform>Seçilmiş notlardan %n &lt;strong&gt;%1&lt;/strong&gt; etiketi kaldır?</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="4325"/>
+        <location filename="../mainwindow.cpp" line="4328"/>
         <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
         <translation>
             <numerusform>Etiket &lt;strong&gt;%1&lt;/strong&gt; %n not(lar) dan kaldırılmış</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4369"/>
+        <location filename="../mainwindow.cpp" line="4372"/>
         <source>Current notes folder: </source>
         <translation>Geçerli notlar dosyası: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4371"/>
+        <location filename="../mainwindow.cpp" line="4374"/>
         <source>Set the notes folder. Current notes folder: </source>
         <translation>Notlar dosyasını ayarlayın. Varsayılan notların dosyası: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4557"/>
+        <location filename="../mainwindow.cpp" line="4560"/>
         <source>Print note</source>
         <translation>Notu yazdır</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4619"/>
+        <location filename="../mainwindow.cpp" line="4622"/>
         <source>Letter</source>
         <translation>Mektup</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4648"/>
+        <location filename="../mainwindow.cpp" line="4651"/>
         <source>Portrait</source>
         <translation>Portre</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4648"/>
+        <location filename="../mainwindow.cpp" line="4651"/>
         <source>Landscape</source>
         <translation>Manzara</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4653"/>
+        <location filename="../mainwindow.cpp" line="4656"/>
         <source>Orientation</source>
         <translation>Oryentasyon</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4653"/>
+        <location filename="../mainwindow.cpp" line="4656"/>
         <source>Orientation:</source>
         <translation>Oryentasyon:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4676"/>
+        <location filename="../mainwindow.cpp" line="4679"/>
         <source>Export current note as PDF</source>
         <translation>Varsayılan notu PDF olarak ihraç et</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4766"/>
+        <location filename="../mainwindow.cpp" line="4769"/>
         <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
         <translation>Herhangi bir yapılacak işler listesi seçmediniz. Lütfen &lt;br /&gt; &lt;strong&gt; yapılacak işler &lt;/strong&gt; yapılandırma ayarlarını gözden geçirin!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5465"/>
+        <location filename="../mainwindow.cpp" line="5468"/>
         <source>Open QOwnNotes</source>
         <translation>QOwnNotes&apos;ı açın</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5199"/>
-        <location filename="../mainwindow.cpp" line="5474"/>
-        <location filename="../mainwindow.cpp" line="8810"/>
-        <location filename="../mainwindow.cpp" line="9161"/>
+        <location filename="../mainwindow.cpp" line="5202"/>
+        <location filename="../mainwindow.cpp" line="5477"/>
+        <location filename="../mainwindow.cpp" line="8825"/>
+        <location filename="../mainwindow.cpp" line="9176"/>
         <source>New note</source>
         <translation>Yeni not</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5490"/>
+        <location filename="../mainwindow.cpp" line="5493"/>
         <source>Recent notes</source>
         <translation>Son notlar</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5520"/>
+        <location filename="../mainwindow.cpp" line="5523"/>
         <source>Show todo lists</source>
         <translation>Yapılacak işler listesini göster</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5531"/>
+        <location filename="../mainwindow.cpp" line="5534"/>
         <source>Recent tasks</source>
         <translation>Son görevler</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5563"/>
+        <location filename="../mainwindow.cpp" line="5566"/>
         <source>Quit</source>
         <translation>Çıkış</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6879"/>
+        <location filename="../mainwindow.cpp" line="6882"/>
         <source>show notes from all note subfolders (%1)</source>
         <translation>tüm not altdosyalarındaki (%1) notları göster</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6896"/>
+        <location filename="../mainwindow.cpp" line="6899"/>
         <source>show notes in note root folder (%1)</source>
         <translation>kaynak dosyadaki (%1) notları göster</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="316"/>
         <location filename="../mainwindow.cpp" line="653"/>
-        <location filename="../mainwindow.cpp" line="6905"/>
+        <location filename="../mainwindow.cpp" line="6908"/>
         <source>Note folder</source>
         <translation>Not dosyası</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8091"/>
+        <location filename="../mainwindow.cpp" line="8094"/>
         <source>Copy to note folder</source>
         <translation>Not dosyasına kopyala</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8092"/>
+        <location filename="../mainwindow.cpp" line="8095"/>
         <source>Move to note folder</source>
         <translation>Not dosyasına taşı</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8093"/>
+        <location filename="../mainwindow.cpp" line="8096"/>
         <source>Copy to this subfolder</source>
         <translation>Şu altdosyaya kopyala</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8094"/>
+        <location filename="../mainwindow.cpp" line="8097"/>
         <source>Move to this subfolder</source>
         <translation>Şu altdosyaya taşı</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="8145"/>
+        <location filename="../mainwindow.cpp" line="8148"/>
         <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>Seçilmiş %n not(lar) not altdosyasına taşınsın mı &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4467"/>
-        <location filename="../mainwindow.cpp" line="10545"/>
+        <location filename="../mainwindow.cpp" line="4470"/>
+        <location filename="../mainwindow.cpp" line="10560"/>
         <source>Cancel</source>
         <translation>İptal et</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="8208"/>
+        <location filename="../mainwindow.cpp" line="8211"/>
         <source>%n note(s) were moved to note subfolder &quot;%2&quot;</source>
         <translation>
             <numerusform>%n not(lar) not altdosyasına taşındı %2</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="8229"/>
+        <location filename="../mainwindow.cpp" line="8232"/>
         <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>Seçilmiş %n not(lar) not altdosyasına kopyalansın mı &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="8280"/>
+        <location filename="../mainwindow.cpp" line="8283"/>
         <source>%n note(s) were copied to note subfolder &quot;%2&quot;</source>
         <translation>
             <numerusform>%n not(lar) not altdosyasına kopyalandı %2</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8911"/>
+        <location filename="../mainwindow.cpp" line="8926"/>
         <source>Open note in external editor</source>
         <translation>Notu harici düzenleyicide aç</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8915"/>
+        <location filename="../mainwindow.cpp" line="8930"/>
         <source>Show note in file manager</source>
         <translation>Notu dosya yöneticisinde göster</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8996"/>
+        <location filename="../mainwindow.cpp" line="9011"/>
         <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
         <translation>Notunuzu yeniden adlandırmak için dosya adını başlıktan farklı olacak şekilde ayarlamanız gerekir.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9162"/>
+        <location filename="../mainwindow.cpp" line="9177"/>
         <source>New subfolder</source>
         <translation>Yeni altdosya</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9166"/>
+        <location filename="../mainwindow.cpp" line="9181"/>
         <source>Show folder in file manager</source>
         <translation>Dosyayı dosya yöneticisinde göster</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9202"/>
+        <location filename="../mainwindow.cpp" line="9217"/>
         <source>Create a new folder</source>
         <translation>Yeni bir dosya oluştur</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9202"/>
+        <location filename="../mainwindow.cpp" line="9217"/>
         <source>Folder name:</source>
         <translation>Dosya adı:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6839"/>
+        <location filename="../mainwindow.cpp" line="6842"/>
         <source>show all untagged notes (%1)</source>
         <translation>tüm etiketsiz notları göster (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6842"/>
+        <location filename="../mainwindow.cpp" line="6845"/>
         <source>Untagged notes</source>
         <translation>Etiketsiz notlar</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8632"/>
+        <location filename="../mainwindow.cpp" line="8635"/>
         <source>Export current note as HTML file</source>
         <translation>Geçerli notu HTML dosyası olarak dışa aktar</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4628"/>
+        <location filename="../mainwindow.cpp" line="4631"/>
         <source>Page size</source>
         <translation>Sayfa boyutu</translation>
     </message>
@@ -2485,27 +2485,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>araç çubuğundan çık</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4628"/>
+        <location filename="../mainwindow.cpp" line="4631"/>
         <source>Page size:</source>
         <translation>Sayfa boyutu:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4738"/>
+        <location filename="../mainwindow.cpp" line="4741"/>
         <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
         <translation>QOwnNotes anonim kullanım verilerini izleyecek, bu QOwnNotes&apos;un daha sonra hangi bölümlerinin geliştirileceğine karar vermeye ve bulmaya yardımcı oluyor ve bugları düzeltiyor. Bu hareketi ayarlardan devre dışı bırakabilirsiniz.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4742"/>
+        <location filename="../mainwindow.cpp" line="4745"/>
         <source>&amp;Ok</source>
         <translation>&amp;Tamam</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8820"/>
+        <location filename="../mainwindow.cpp" line="8835"/>
         <source>&amp;Remove notes</source>
         <translation>&amp;Notları kaldır</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5704"/>
+        <location filename="../mainwindow.cpp" line="5707"/>
         <source>&amp;Link selected text</source>
         <translation>&amp;Seçili metni linkle</translation>
     </message>
@@ -2515,86 +2515,86 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>Görevleriniz sunucunuzdan yükleniyor</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2459"/>
+        <location filename="../mainwindow.cpp" line="2462"/>
         <source>Current note was modified externally</source>
         <translation>Geçerli not harici olarak değiştirildi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2541"/>
-        <location filename="../mainwindow.cpp" line="5137"/>
+        <location filename="../mainwindow.cpp" line="2544"/>
+        <location filename="../mainwindow.cpp" line="5140"/>
         <source>Stored current note to disk</source>
         <translation>Diske saklanan geçerli not</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2560"/>
+        <location filename="../mainwindow.cpp" line="2563"/>
         <source>Note was modified externally: %1</source>
         <translation>Not harici olarak değiştirildi: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2581"/>
+        <location filename="../mainwindow.cpp" line="2584"/>
         <source>Notes directory was modified externally</source>
         <translation>Notlar dizini harici olarak değiştirildi</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="2647"/>
+        <location filename="../mainwindow.cpp" line="2650"/>
         <source>Stored %n note(s) to disk</source>
         <translation>
             <numerusform>Diskte depolanan %n not(lar)</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6811"/>
+        <location filename="../mainwindow.cpp" line="6814"/>
         <source>show all notes (%1)</source>
         <translation>tüm notları göster (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6814"/>
-        <location filename="../mainwindow.cpp" line="6882"/>
+        <location filename="../mainwindow.cpp" line="6817"/>
+        <location filename="../mainwindow.cpp" line="6885"/>
         <source>All notes</source>
         <translation>Tüm notlar</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7701"/>
+        <location filename="../mainwindow.cpp" line="7704"/>
         <source>&amp;Add tag</source>
         <translation>&amp;Etiket ekle</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7750"/>
+        <location filename="../mainwindow.cpp" line="7753"/>
         <source>Tag could not be created!</source>
         <translation>Etiket oluşturulamadı!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7935"/>
+        <location filename="../mainwindow.cpp" line="7938"/>
         <source>Move to this tag</source>
         <translation>Bu etikete taşı</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7985"/>
+        <location filename="../mainwindow.cpp" line="7988"/>
         <source>Tag this</source>
         <translation>Bunu etiketle</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8018"/>
+        <location filename="../mainwindow.cpp" line="8021"/>
         <source>Cannot move tag &apos;%1&apos; to this tag</source>
         <translation>Etiket &apos;%1&apos; bu etikete taşınamıyor</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8034"/>
+        <location filename="../mainwindow.cpp" line="8037"/>
         <source>Moved tag &apos;%1&apos; to new tag</source>
         <translation>Yeni etikete taşınan etiket &apos;%1&apos;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7068"/>
+        <location filename="../mainwindow.cpp" line="7071"/>
         <source>show all notes tagged with &apos;%1&apos; (%2)</source>
         <translation>&apos;%1&apos; ile etiketlenen tüm notları göster (%2)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7712"/>
+        <location filename="../mainwindow.cpp" line="7715"/>
         <source>&amp;Remove tags</source>
         <translation>&amp;Etiketleri kaldır</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4765"/>
+        <location filename="../mainwindow.cpp" line="4768"/>
         <source>No selected todo lists!</source>
         <translation>Seçilen yapılacaklar listesi yok!</translation>
     </message>
@@ -2704,72 +2704,72 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>Araç çubuğu isimsiz olarak yüklenemedi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2485"/>
+        <location filename="../mainwindow.cpp" line="2488"/>
         <source>Overwriting external changes of: %1</source>
         <translation>Dış değişikliklerinin üzerine yazılıyor: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2507"/>
+        <location filename="../mainwindow.cpp" line="2510"/>
         <source>Loading external changes from: %1</source>
         <translation>Dış değişikliklerinden yükleniyor: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2542"/>
-        <location filename="../mainwindow.cpp" line="5138"/>
+        <location filename="../mainwindow.cpp" line="2545"/>
+        <location filename="../mainwindow.cpp" line="5141"/>
         <source>Current note could not be stored to disk</source>
         <translation>Geçerli not diske depolanamadı</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2705"/>
+        <location filename="../mainwindow.cpp" line="2708"/>
         <source>Read-only</source>
         <translation type="unfinished">Read-only</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2706"/>
+        <location filename="../mainwindow.cpp" line="2709"/>
         <source>Note editing is disabled, click to enable</source>
         <translation type="unfinished">Note editing is disabled, click to enable</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2725"/>
+        <location filename="../mainwindow.cpp" line="2728"/>
         <source>Line numbers</source>
         <translation>Satır numaraları</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2735"/>
+        <location filename="../mainwindow.cpp" line="2738"/>
         <source>Click here to see what has changed and to be able to update to the latest version</source>
         <translation>Nelerin değiştiğini görmek ve en yeni sürümü güncelleyebilmek için buraya tıkla</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="4253"/>
+        <location filename="../mainwindow.cpp" line="4256"/>
         <source>%n note(s) were tagged with &quot;%2&quot;</source>
         <translation>
             <numerusform>%n not(lar) &quot;%2&quot; ile etiketlendi</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5199"/>
+        <location filename="../mainwindow.cpp" line="5202"/>
         <source>Note headline</source>
         <translation>Not başlığı</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6558"/>
+        <location filename="../mainwindow.cpp" line="6561"/>
         <source>Downloading images finished</source>
         <translation>Görüntü indirme bitti</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6700"/>
+        <location filename="../mainwindow.cpp" line="6703"/>
         <source>Increased font size to %1 pt</source>
         <translation>%1 puntoya arttırılan yazı tipi boyutu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6717"/>
+        <location filename="../mainwindow.cpp" line="6720"/>
         <source>Decreased font size to %1 pt</source>
         <translation>%1 puntoya azaltılan yazı tipi boyutu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4743"/>
-        <location filename="../mainwindow.cpp" line="4769"/>
-        <location filename="../mainwindow.cpp" line="8999"/>
+        <location filename="../mainwindow.cpp" line="4746"/>
+        <location filename="../mainwindow.cpp" line="4772"/>
+        <location filename="../mainwindow.cpp" line="9014"/>
         <source>Open &amp;settings</source>
         <translation>&amp;Ayarları aç</translation>
     </message>
@@ -2784,32 +2784,32 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>oyalamayan moddan ayrıl</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5883"/>
+        <location filename="../mainwindow.cpp" line="5886"/>
         <source>Select image to insert</source>
         <translation>Eklemek için görüntü seçin</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6015"/>
+        <location filename="../mainwindow.cpp" line="6018"/>
         <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
         <translation>Lütfen notu şifrelemek için &lt;strong&gt;şifrenizi&lt;/strong&gt; girin. &lt;br /&gt;Not içeriğini okumak için şifrenizi &lt;strong&gt;hatırlamanız&lt;/strong&gt; gerektiği aklınızda bulunsun&lt;br /&gt; ve bunu &lt;strong&gt;sadece&lt;/strong&gt; &lt;strong&gt;QOwnNotes&lt;/strong&gt; içinde yapabileceğiniz!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6071"/>
+        <location filename="../mainwindow.cpp" line="6074"/>
         <source>Decrypt note and store it as plain text</source>
         <translation>Not şifresini çöz ve sade metin olarak depola</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6076"/>
+        <location filename="../mainwindow.cpp" line="6079"/>
         <source>&amp;Decrypt</source>
         <translation>&amp;Şifre çöz</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6102"/>
+        <location filename="../mainwindow.cpp" line="6105"/>
         <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
         <translation>&lt;br /&gt;Şifrelenmiş notunuzu düzenleyebileceksiniz.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6160"/>
+        <location filename="../mainwindow.cpp" line="6163"/>
         <source>Export current note as Markdown file</source>
         <translation>Geçerli notu Markdown dosyası olarak dışa aktar</translation>
     </message>
@@ -4018,7 +4018,7 @@ Yine de yüklemek istiyor musunuz?</translation>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="3368"/>
         <location filename="../dialogs/settingsdialog.ui" line="4523"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4992"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5008"/>
         <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
         <translation>Eşleştirme işlemi 10 sn altında hareket ederse ownCloud eşleştirmenin eski sürümleri ile ilgili sıkıntı çıkabilir.
@@ -4041,8 +4041,8 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="3674"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1870"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1879"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1877"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1886"/>
         <source>Database</source>
         <translation>Veritabanı</translation>
     </message>
@@ -4063,7 +4063,7 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="3629"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1939"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1946"/>
         <source>Clear app data and exit</source>
         <translation>Uygulama verisini temizle ve çıkış yap</translation>
     </message>
@@ -4459,20 +4459,20 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="3458"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3502"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3509"/>
         <source>Reset message boxes</source>
         <translation>Mesaj kutusunu sıfırla</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="3651"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3568"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3591"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3575"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3598"/>
         <source>Import settings</source>
         <translation type="unfinished">Import settings</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="3658"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3534"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3541"/>
         <source>Export settings</source>
         <translation type="unfinished">Export settings</translation>
     </message>
@@ -4537,43 +4537,53 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
         <translation type="unfinished">Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4962"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4958"/>
+        <source>Note search panel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="4964"/>
+        <source>Disable auto-completion of previous searches</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="4978"/>
         <source>Local trash settings</source>
         <translation type="unfinished">Local trash settings</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4996"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5012"/>
         <source>Remove trashed notes after:</source>
         <translation type="unfinished">Remove trashed notes after:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5003"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5019"/>
         <source> days</source>
         <extracomment>seconds</extracomment>
         <translation type="unfinished"> days</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5022"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5038"/>
         <source>Automatically remove trashed notes after a certain time</source>
         <translation type="unfinished">Automatically remove trashed notes after a certain time</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5048"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5064"/>
         <source>Local trash support</source>
         <translation type="unfinished">Local trash support</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5054"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5070"/>
         <source>Enable local trash</source>
         <translation type="unfinished">Enable local trash</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5071"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5087"/>
         <source>Layout selector</source>
         <translation type="unfinished">Layout selector</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5077"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5093"/>
         <source>You can set a new layout here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</source>
         <translation type="unfinished">You can set a new layout here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</translation>
     </message>
@@ -4717,7 +4727,7 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
         <translation>Not altkasörlerini full ağaç olarak göster</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2452"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2459"/>
         <source>Search script repository</source>
         <translation>Script deposu ara</translation>
     </message>
@@ -5218,32 +5228,32 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
         <translation>SOCKS5 proxy</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1185"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1189"/>
         <source>Automatic (needs restart)</source>
         <translation>Otomatik (yeniden başlatma gerektirir)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1338"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1345"/>
         <source>Undefined key</source>
         <translation>Tanımsız anahtar</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1343"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1350"/>
         <source>Assign a new key</source>
         <translation>Yeni bir anahtar ata</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1344"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1351"/>
         <source>Reset to default key</source>
         <translation>Varsayılan anahtara sıfırla</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1423"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1430"/>
         <source>Shortcut already assigned</source>
         <translation type="unfinished">Shortcut already assigned</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1602"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1609"/>
         <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
@@ -5252,7 +5262,7 @@ Sunucu sürümü: %1
 QOwnNotesAPI sürümü:%2</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1613"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1620"/>
         <source>There was an error connecting to the ownCloud Server!
 You also need to have the QOwnNotesAPI app installed and enabled!
 
@@ -5262,103 +5272,103 @@ QownnotesAPI&apos;nin kurulmuş ve aktif olması gerekiyor!
 Bağlantı hata mesajı: </translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1892"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1899"/>
         <source>Markdown files</source>
         <translation>Markdown dosyaları</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1919"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1926"/>
         <source>Disable usage tracking</source>
         <translation>Kullanım izlemeyi devre dışı bırak</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1920"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1927"/>
         <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can&apos;t live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
         <translation>Anonim veri kullanımı, hataları bulmak ve düzeltmek için QOwnNotes&apos;u geliştirmeye yardımcı olur.&lt;br /&gt; Eğer bununla yaşamayacağınızı düşünüyorsanız lütfen devre dışı bırakın.&lt;br /&gt;&lt;br /&gt; Gerçekten izlemeyi devre dışı bırakmak istiyor musunuz?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2141"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2148"/>
         <source>new folder</source>
         <translation>yeni klasör</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2179"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2186"/>
         <source>Remove note folder</source>
         <translation>Not klasörünü kaldır</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2180"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2187"/>
         <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
         <translation>Geçerli not klasörü &lt;strong&gt;%1&lt;/strong&gt; kaldırılsın mı?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2255"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2262"/>
         <source>Please select the folder where your notes will get stored to</source>
         <translation>Lütfen notlarınızın depolanacağını klasör seçin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2292"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2299"/>
         <source>Loading folders from server</source>
         <translation>Klasörler sunucudan yükleniyor</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2306"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2313"/>
         <source>No more folders were found in the current folder</source>
         <translation>Geçerli klasörde daha fazla klasör bulunamadı</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2379"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2386"/>
         <source>Loading folders in &apos;%1&apos; from server</source>
         <translation>Sunucudan &apos;%1&apos; içinde klasörler yükleniyor</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2439"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2446"/>
         <source>Take a look at the &lt;a href=&quot;%1&quot;&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
         <translation>Şuna bir göz atın. Hızlı başlangıç için &lt;a href=&quot;%1&quot;&gt; scripting belgeleme &lt;/a&gt;.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2441"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2448"/>
         <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href=&quot;%1&quot;&gt; QOwnNotes issue page&lt;/a&gt;.</source>
         <translation>QOwnNotes&apos;da belirli bir işlevselliğe erişmeniz gerekiyorsa lütfen &lt;a href=&quot;%1&quot;&gt; QOwnNotes konu sayfası üzerinde bir konu açın &lt;/a&gt;.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2462"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2469"/>
         <source>Check for script updates</source>
         <translation>Script güncellemelerine göz at</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2469"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2476"/>
         <source>Add local script</source>
         <translation>Yerel script ekle</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2473"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2480"/>
         <source>Add an existing, local script</source>
         <translation>Mevcut, yerel bir script ekle</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3533"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3590"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3540"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3597"/>
         <source>INI files</source>
         <translation type="unfinished">INI files</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3569"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3576"/>
         <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
         <translation type="unfinished">Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3579"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3586"/>
         <source>The application will be quit after the import.</source>
         <translation type="unfinished">The application will be quit after the import.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3580"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3587"/>
         <source>The application will be restarted after the import.</source>
         <translation type="unfinished">The application will be restarted after the import.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2456"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2463"/>
         <source>Find a script in the script repository</source>
         <translation>Script deposunda bir script bul</translation>
     </message>
@@ -5373,115 +5383,115 @@ Bağlantı hata mesajı: </translation>
         <translation>Menü çubuğu öğesini göster</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1424"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1431"/>
         <source>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</source>
         <translation type="unfinished">The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2554"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2561"/>
         <source>Remove script</source>
         <translation>Script kaldır</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2555"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2562"/>
         <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
         <translation>Geçerli script &lt;strong&gt;%1&lt;/strong&gt; kaldırılsın mı?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2606"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2613"/>
         <source>QML files</source>
         <translation>QML dosyaları</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2607"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2614"/>
         <source>Please select your QML file</source>
         <translation>Lütfen QML dosyanızı seçin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2696"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2703"/>
         <source>Open repository</source>
         <translation>Depoyu aç</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2756"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2763"/>
         <source>Your script seems to be valid</source>
         <translation>Scriptiniz geçerli görünüyor</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2757"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2764"/>
         <source>There were script errors:
 %1</source>
         <translation>Script hataları vardı:
 %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2826"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2833"/>
         <source>File extension</source>
         <translation>Dosya uzantısı</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2827"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2834"/>
         <source>Enter your custom file extension:</source>
         <translation>Özel dosya uzantınızı girin:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3119"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3126"/>
         <source>Calendar cache emptied</source>
         <translation>Takvim önbelleği boşaltıldı</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3120"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3127"/>
         <source>Your calendar cache was emptied.</source>
         <translation>Takvim önbelleğiniz boşaltılmış.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3198"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3205"/>
         <source>Reset toolbars and exit</source>
         <translation>Araç çubuğunu sıfırla ve çık</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3199"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3206"/>
         <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
         <translation>Tüm araç menülerini sıfırlamak istiyor musunuz? İşlem esnasında uygulama kaptılacak, varsayılan araç menüleri uygulama tekrar başladığında geri yüklenecektir.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3203"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3210"/>
         <source>Reset and &amp;exit</source>
         <translation>Yeniden başlat ve &amp;çık</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3365"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3372"/>
         <source>Log file cleared</source>
         <translation>Kayıt dosyası temizlendi</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3366"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3373"/>
         <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
         <translation>Günlük dosyası &lt;strong&gt;%1&lt;/strong&gt; temizlendi.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3402"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3409"/>
         <source>Executable files</source>
         <translation>Çalıştırılabilir dosyalar</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3403"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3405"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3410"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3412"/>
         <source>All files</source>
         <translation>Tüm dosyalar</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3413"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3420"/>
         <source>Please select the path of your git executable</source>
         <translation>Lütfen git yürütülebilirinizin yolunu seçin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3503"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3510"/>
         <source>Do you really want to reset the overrides of all message boxes?</source>
         <translation>Gerçekten tüm mesaj kutularının geçersiz kılınmasını sıfırlamak istiyor musunuz?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1880"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1887"/>
         <source>The Database was reinitialized.</source>
         <translation>Veritabanı yeniden başlatıldı.</translation>
     </message>
@@ -5536,12 +5546,12 @@ Bağlantı hata mesajı: </translation>
         <translation>QOwnNotes&apos;u &lt;code&gt; taşınabilir &lt;/code&gt; parametreleri ile çalıştırırsanız aktive olacaktır.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1893"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1900"/>
         <source>Save debug information</source>
         <translation>Hatası ayıklanmış bilgiyi kaydet</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1940"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1947"/>
         <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
@@ -5549,14 +5559,14 @@ Your notes will stay intact!</source>
 Notelarınız bozulmamış olarak kalacak!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1943"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1950"/>
         <source>Clear and &amp;exit</source>
         <translation>Temizle ve &amp;çıkış</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1874"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1943"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3203"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1881"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1950"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3210"/>
         <source>&amp;Cancel</source>
         <translation>&amp;İptal</translation>
     </message>
@@ -5566,17 +5576,17 @@ Notelarınız bozulmamış olarak kalacak!</translation>
         <translation>Mevcut yayın yolunuzda QOwnNotes&apos;ı taşınabilir modda çalıştırırsanız &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; ile karşılaşacaksınız.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1871"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1878"/>
         <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
         <translation>Yerel veritabanınızı temizlemek istediğinizden emin misiniz? Bu aynı zamanda yapılandırılmış not dosyalarınızı ve önbelleğe alınmış yapılacak işler ögenizi de siler!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1874"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1881"/>
         <source>Clear &amp;database</source>
         <translation>Temizle &amp;veritabanı</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2054"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2061"/>
         <source>Select editor application</source>
         <translation>Düzenleyici uygulaması seçin</translation>
     </message>
