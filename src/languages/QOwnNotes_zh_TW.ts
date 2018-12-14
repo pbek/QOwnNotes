@@ -1022,7 +1022,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1369"/>
-        <location filename="../mainwindow.cpp" line="8953"/>
+        <location filename="../mainwindow.cpp" line="8954"/>
         <source>Select &amp;all notes</source>
         <translation>選擇所有筆記(&amp;A)</translation>
     </message>
@@ -1451,7 +1451,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2153"/>
-        <location filename="../mainwindow.cpp" line="9944"/>
+        <location filename="../mainwindow.cpp" line="9945"/>
         <source>Remove current workspace</source>
         <translation>移除目前工作空間</translation>
     </message>
@@ -1519,7 +1519,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2274"/>
-        <location filename="../mainwindow.cpp" line="8928"/>
+        <location filename="../mainwindow.cpp" line="8929"/>
         <source>Open note in different window</source>
         <translation>在新視窗開啟筆記</translation>
     </message>
@@ -1540,7 +1540,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2314"/>
-        <location filename="../mainwindow.cpp" line="8936"/>
+        <location filename="../mainwindow.cpp" line="8937"/>
         <source>Show note git versions</source>
         <translation>顯示筆記的Git版本</translation>
     </message>
@@ -1725,7 +1725,7 @@ Restore current note?</source>
     <message>
         <location filename="../mainwindow.cpp" line="4773"/>
         <location filename="../mainwindow.cpp" line="6079"/>
-        <location filename="../mainwindow.cpp" line="9015"/>
+        <location filename="../mainwindow.cpp" line="9016"/>
         <source>&amp;Cancel</source>
         <translation>取消(&amp;C)</translation>
     </message>
@@ -1808,7 +1808,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3986"/>
-        <location filename="../mainwindow.cpp" line="9179"/>
+        <location filename="../mainwindow.cpp" line="9180"/>
         <source>Remove selected folders</source>
         <translation>移除選取的資料夾</translation>
     </message>
@@ -2108,96 +2108,96 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>HTML檔</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8830"/>
-        <location filename="../mainwindow.cpp" line="8998"/>
+        <location filename="../mainwindow.cpp" line="8831"/>
+        <location filename="../mainwindow.cpp" line="8999"/>
         <source>Rename note</source>
         <translation>重新命名筆記</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8831"/>
+        <location filename="../mainwindow.cpp" line="8832"/>
         <source>Allows you to rename the filename of the note</source>
         <translation>允許您修改筆記的檔名</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8843"/>
+        <location filename="../mainwindow.cpp" line="8844"/>
         <source>&amp;Move notes to…</source>
         <translation>移動筆記至… (&amp;M)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8844"/>
+        <location filename="../mainwindow.cpp" line="8845"/>
         <source>&amp;Copy notes to…</source>
         <translation>複製筆記至…(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8873"/>
+        <location filename="../mainwindow.cpp" line="8874"/>
         <source>Move notes to subfolder…</source>
         <translation>移動筆記至子資料夾…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8877"/>
+        <location filename="../mainwindow.cpp" line="8878"/>
         <source>Copy notes to subfolder…</source>
         <translation>複製筆記至子資料夾…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8885"/>
+        <location filename="../mainwindow.cpp" line="8886"/>
         <source>&amp;Tag selected notes with…</source>
         <translation>標記選取的筆記為… (&amp;T)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8907"/>
+        <location filename="../mainwindow.cpp" line="8908"/>
         <source>&amp;Remove tag from selected notes…</source>
         <translation>從選取筆記移除標籤…(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8998"/>
+        <location filename="../mainwindow.cpp" line="8999"/>
         <source>Name:</source>
         <translation>名稱：</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9010"/>
+        <location filename="../mainwindow.cpp" line="9011"/>
         <source>Note renaming not enabled!</source>
         <translation>筆記改名未啟用！</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9178"/>
+        <location filename="../mainwindow.cpp" line="9179"/>
         <source>Rename subfolder</source>
         <translation>重新命名子資料夾</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9724"/>
+        <location filename="../mainwindow.cpp" line="9725"/>
         <source>Create new workspace</source>
         <translation>新增工作空間</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9724"/>
-        <location filename="../mainwindow.cpp" line="9982"/>
+        <location filename="../mainwindow.cpp" line="9725"/>
+        <location filename="../mainwindow.cpp" line="9983"/>
         <source>Workspace name:</source>
         <translation>工作空間名稱：</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9846"/>
+        <location filename="../mainwindow.cpp" line="9847"/>
         <source>full</source>
         <comment>full workspace</comment>
         <translation>滿版</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9853"/>
+        <location filename="../mainwindow.cpp" line="9854"/>
         <source>minimal</source>
         <comment>minimal workspace</comment>
         <translation>最小化</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9945"/>
+        <location filename="../mainwindow.cpp" line="9946"/>
         <source>Remove the current workspace?</source>
         <translation>移除目前工作空間？</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9982"/>
+        <location filename="../mainwindow.cpp" line="9983"/>
         <source>Rename workspace</source>
         <translation>重新命名工作空間</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="10117"/>
+        <location filename="../mainwindow.cpp" line="10118"/>
         <source>%n chars</source>
         <comment>characters</comment>
         <translation>
@@ -2205,32 +2205,32 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10240"/>
+        <location filename="../mainwindow.cpp" line="10241"/>
         <source>Copy image file path</source>
         <translation>複製圖檔路徑</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10379"/>
+        <location filename="../mainwindow.cpp" line="10380"/>
         <source>Select file to insert</source>
         <translation>選擇欲插入的檔案</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10412"/>
+        <location filename="../mainwindow.cpp" line="10413"/>
         <source>Disallow all note editing</source>
         <translation>禁止所有筆記編輯</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10546"/>
+        <location filename="../mainwindow.cpp" line="10547"/>
         <source>Select text files to import</source>
         <translation>選取要匯入的文字檔</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10575"/>
+        <location filename="../mainwindow.cpp" line="10576"/>
         <source>Importing: %1</source>
         <translation>匯入：%1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10638"/>
+        <location filename="../mainwindow.cpp" line="10639"/>
         <source>Note headline &apos;%1&apos; was copied to the clipboard</source>
         <translation>筆記標題「%1」已複製至剪貼簿</translation>
     </message>
@@ -2243,7 +2243,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2359"/>
-        <location filename="../mainwindow.cpp" line="10413"/>
+        <location filename="../mainwindow.cpp" line="10414"/>
         <source>Allow all note editing</source>
         <translation>允許所有筆記編輯</translation>
     </message>
@@ -2329,8 +2329,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
         <location filename="../mainwindow.cpp" line="5202"/>
         <location filename="../mainwindow.cpp" line="5477"/>
-        <location filename="../mainwindow.cpp" line="8825"/>
-        <location filename="../mainwindow.cpp" line="9176"/>
+        <location filename="../mainwindow.cpp" line="8826"/>
+        <location filename="../mainwindow.cpp" line="9177"/>
         <source>New note</source>
         <translation>新增筆記</translation>
     </message>
@@ -2400,7 +2400,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4470"/>
-        <location filename="../mainwindow.cpp" line="10560"/>
+        <location filename="../mainwindow.cpp" line="10561"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
@@ -2426,37 +2426,37 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8926"/>
+        <location filename="../mainwindow.cpp" line="8927"/>
         <source>Open note in external editor</source>
         <translation>在外部編輯器開啟筆記</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8930"/>
+        <location filename="../mainwindow.cpp" line="8931"/>
         <source>Show note in file manager</source>
         <translation>在檔案管理員中顯示筆記</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9011"/>
+        <location filename="../mainwindow.cpp" line="9012"/>
         <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
         <translation>若您想改筆記名稱您必須啟用該選項允許檔名與標題不同。</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9177"/>
+        <location filename="../mainwindow.cpp" line="9178"/>
         <source>New subfolder</source>
         <translation>新增子資料夾</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9181"/>
+        <location filename="../mainwindow.cpp" line="9182"/>
         <source>Show folder in file manager</source>
         <translation>於檔案管理員中顯示資料夾</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9217"/>
+        <location filename="../mainwindow.cpp" line="9218"/>
         <source>Create a new folder</source>
         <translation>新增資料夾</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9217"/>
+        <location filename="../mainwindow.cpp" line="9218"/>
         <source>Folder name:</source>
         <translation>資料夾名稱：</translation>
     </message>
@@ -2501,7 +2501,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>確定(&amp;O)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8835"/>
+        <location filename="../mainwindow.cpp" line="8836"/>
         <source>&amp;Remove notes</source>
         <translation>移除筆記(&amp;R)</translation>
     </message>
@@ -2770,7 +2770,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
         <location filename="../mainwindow.cpp" line="4746"/>
         <location filename="../mainwindow.cpp" line="4772"/>
-        <location filename="../mainwindow.cpp" line="9014"/>
+        <location filename="../mainwindow.cpp" line="9015"/>
         <source>Open &amp;settings</source>
         <translation>開啟設定(&amp;S)</translation>
     </message>
@@ -2877,11 +2877,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <context>
     <name>NoteTreeWidgetItem</name>
     <message>
-        <location filename="../widgets/notetreewidgetitem.ui" line="18"/>
-        <location filename="../widgets/notetreewidgetitem.ui" line="25"/>
-        <location filename="../widgets/notetreewidgetitem.ui" line="32"/>
         <source>TextLabel</source>
-        <translation>文字標籤</translation>
+        <translation type="vanished">文字標籤</translation>
     </message>
 </context>
 <context>

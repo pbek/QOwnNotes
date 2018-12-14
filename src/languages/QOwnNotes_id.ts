@@ -1022,7 +1022,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1369"/>
-        <location filename="../mainwindow.cpp" line="8953"/>
+        <location filename="../mainwindow.cpp" line="8954"/>
         <source>Select &amp;all notes</source>
         <translation>Pilih &amp;semua catatan</translation>
     </message>
@@ -1451,7 +1451,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2153"/>
-        <location filename="../mainwindow.cpp" line="9944"/>
+        <location filename="../mainwindow.cpp" line="9945"/>
         <source>Remove current workspace</source>
         <translation>Buang ruang kerja saat ini</translation>
     </message>
@@ -1519,7 +1519,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2274"/>
-        <location filename="../mainwindow.cpp" line="8928"/>
+        <location filename="../mainwindow.cpp" line="8929"/>
         <source>Open note in different window</source>
         <translation>Buka catatan di jendela yang berbeda</translation>
     </message>
@@ -1540,7 +1540,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2314"/>
-        <location filename="../mainwindow.cpp" line="8936"/>
+        <location filename="../mainwindow.cpp" line="8937"/>
         <source>Show note git versions</source>
         <translation>Tampilkan versi git catatan</translation>
     </message>
@@ -1724,7 +1724,7 @@ Pulihkan catatan saat ini?</translation>
     <message>
         <location filename="../mainwindow.cpp" line="4773"/>
         <location filename="../mainwindow.cpp" line="6079"/>
-        <location filename="../mainwindow.cpp" line="9015"/>
+        <location filename="../mainwindow.cpp" line="9016"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Batal</translation>
     </message>
@@ -1807,7 +1807,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud Anda, Anda bisa memulihkan
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3986"/>
-        <location filename="../mainwindow.cpp" line="9179"/>
+        <location filename="../mainwindow.cpp" line="9180"/>
         <source>Remove selected folders</source>
         <translation>Buang folder yang dipilih</translation>
     </message>
@@ -2107,96 +2107,96 @@ Jika keranjang sampah diaktifkan pada server ownCloud Anda, Anda bisa memulihkan
         <translation>Berkas HTML</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8830"/>
-        <location filename="../mainwindow.cpp" line="8998"/>
+        <location filename="../mainwindow.cpp" line="8831"/>
+        <location filename="../mainwindow.cpp" line="8999"/>
         <source>Rename note</source>
         <translation>Ubah nama catatan</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8831"/>
+        <location filename="../mainwindow.cpp" line="8832"/>
         <source>Allows you to rename the filename of the note</source>
         <translation>Memungkinkan Anda mengubah nama berkas catatan</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8843"/>
+        <location filename="../mainwindow.cpp" line="8844"/>
         <source>&amp;Move notes to…</source>
         <translation>&amp;Pindah catatan ke…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8844"/>
+        <location filename="../mainwindow.cpp" line="8845"/>
         <source>&amp;Copy notes to…</source>
         <translation>&amp;Salin catatan ke…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8873"/>
+        <location filename="../mainwindow.cpp" line="8874"/>
         <source>Move notes to subfolder…</source>
         <translation>Pindah catatan ke subfolder…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8877"/>
+        <location filename="../mainwindow.cpp" line="8878"/>
         <source>Copy notes to subfolder…</source>
         <translation>Salin catatan ke subfolder…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8885"/>
+        <location filename="../mainwindow.cpp" line="8886"/>
         <source>&amp;Tag selected notes with…</source>
         <translation>&amp;Tag catatan yang dipilih dengan…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8907"/>
+        <location filename="../mainwindow.cpp" line="8908"/>
         <source>&amp;Remove tag from selected notes…</source>
         <translation>&amp;Buang tag dari catatan yang dipilih…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8998"/>
+        <location filename="../mainwindow.cpp" line="8999"/>
         <source>Name:</source>
         <translation>Nama:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9010"/>
+        <location filename="../mainwindow.cpp" line="9011"/>
         <source>Note renaming not enabled!</source>
         <translation>Pengubahan nama catatan tidak diaktifkan!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9178"/>
+        <location filename="../mainwindow.cpp" line="9179"/>
         <source>Rename subfolder</source>
         <translation>Ubah nama subfolder</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9724"/>
+        <location filename="../mainwindow.cpp" line="9725"/>
         <source>Create new workspace</source>
         <translation>Buat ruang kerja baru</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9724"/>
-        <location filename="../mainwindow.cpp" line="9982"/>
+        <location filename="../mainwindow.cpp" line="9725"/>
+        <location filename="../mainwindow.cpp" line="9983"/>
         <source>Workspace name:</source>
         <translation>Nama ruang kerja:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9846"/>
+        <location filename="../mainwindow.cpp" line="9847"/>
         <source>full</source>
         <comment>full workspace</comment>
         <translation>penuh</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9853"/>
+        <location filename="../mainwindow.cpp" line="9854"/>
         <source>minimal</source>
         <comment>minimal workspace</comment>
         <translation>minimal</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9945"/>
+        <location filename="../mainwindow.cpp" line="9946"/>
         <source>Remove the current workspace?</source>
         <translation>Buang ruang kerja saat ini?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9982"/>
+        <location filename="../mainwindow.cpp" line="9983"/>
         <source>Rename workspace</source>
         <translation>Ubah nama ruang kerja</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="10117"/>
+        <location filename="../mainwindow.cpp" line="10118"/>
         <source>%n chars</source>
         <comment>characters</comment>
         <translation>
@@ -2204,32 +2204,32 @@ Jika keranjang sampah diaktifkan pada server ownCloud Anda, Anda bisa memulihkan
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10240"/>
+        <location filename="../mainwindow.cpp" line="10241"/>
         <source>Copy image file path</source>
         <translation>Salin jalur berkas gambar</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10379"/>
+        <location filename="../mainwindow.cpp" line="10380"/>
         <source>Select file to insert</source>
         <translation>Pilih berkas untuk disisipkan</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10412"/>
+        <location filename="../mainwindow.cpp" line="10413"/>
         <source>Disallow all note editing</source>
         <translation>Larang semua penyuntingan catatan</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10546"/>
+        <location filename="../mainwindow.cpp" line="10547"/>
         <source>Select text files to import</source>
         <translation type="unfinished">Select text files to import</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10575"/>
+        <location filename="../mainwindow.cpp" line="10576"/>
         <source>Importing: %1</source>
         <translation type="unfinished">Importing: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10638"/>
+        <location filename="../mainwindow.cpp" line="10639"/>
         <source>Note headline &apos;%1&apos; was copied to the clipboard</source>
         <translation type="unfinished">Note headline &apos;%1&apos; was copied to the clipboard</translation>
     </message>
@@ -2242,7 +2242,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud Anda, Anda bisa memulihkan
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2359"/>
-        <location filename="../mainwindow.cpp" line="10413"/>
+        <location filename="../mainwindow.cpp" line="10414"/>
         <source>Allow all note editing</source>
         <translation>Izinkan semua penyuntingan catatan</translation>
     </message>
@@ -2328,8 +2328,8 @@ Jika keranjang sampah diaktifkan pada server ownCloud Anda, Anda bisa memulihkan
     <message>
         <location filename="../mainwindow.cpp" line="5202"/>
         <location filename="../mainwindow.cpp" line="5477"/>
-        <location filename="../mainwindow.cpp" line="8825"/>
-        <location filename="../mainwindow.cpp" line="9176"/>
+        <location filename="../mainwindow.cpp" line="8826"/>
+        <location filename="../mainwindow.cpp" line="9177"/>
         <source>New note</source>
         <translation>Catatan baru</translation>
     </message>
@@ -2399,7 +2399,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud Anda, Anda bisa memulihkan
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4470"/>
-        <location filename="../mainwindow.cpp" line="10560"/>
+        <location filename="../mainwindow.cpp" line="10561"/>
         <source>Cancel</source>
         <translation>Batal</translation>
     </message>
@@ -2425,37 +2425,37 @@ Jika keranjang sampah diaktifkan pada server ownCloud Anda, Anda bisa memulihkan
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8926"/>
+        <location filename="../mainwindow.cpp" line="8927"/>
         <source>Open note in external editor</source>
         <translation>Buka catatan di penyunting eksternal</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8930"/>
+        <location filename="../mainwindow.cpp" line="8931"/>
         <source>Show note in file manager</source>
         <translation>Tampilkan catatan di pengelola berkas</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9011"/>
+        <location filename="../mainwindow.cpp" line="9012"/>
         <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
         <translation>Jika Anda ingin mengubah nama catatan Anda, Anda harus mengaktifkan opsi yang mengizinkan nama berkas catatan berbeda dari judul.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9177"/>
+        <location filename="../mainwindow.cpp" line="9178"/>
         <source>New subfolder</source>
         <translation>Subfolder baru</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9181"/>
+        <location filename="../mainwindow.cpp" line="9182"/>
         <source>Show folder in file manager</source>
         <translation>Tampilkan folder di pengelola berkas</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9217"/>
+        <location filename="../mainwindow.cpp" line="9218"/>
         <source>Create a new folder</source>
         <translation>Buat folder baru</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9217"/>
+        <location filename="../mainwindow.cpp" line="9218"/>
         <source>Folder name:</source>
         <translation>Nama folder:</translation>
     </message>
@@ -2500,7 +2500,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud Anda, Anda bisa memulihkan
         <translation>&amp;Ok</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8835"/>
+        <location filename="../mainwindow.cpp" line="8836"/>
         <source>&amp;Remove notes</source>
         <translation>&amp;Buang catatan</translation>
     </message>
@@ -2769,7 +2769,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud Anda, Anda bisa memulihkan
     <message>
         <location filename="../mainwindow.cpp" line="4746"/>
         <location filename="../mainwindow.cpp" line="4772"/>
-        <location filename="../mainwindow.cpp" line="9014"/>
+        <location filename="../mainwindow.cpp" line="9015"/>
         <source>Open &amp;settings</source>
         <translation>Buka &amp;pengaturan</translation>
     </message>
@@ -2876,11 +2876,8 @@ Jika keranjang sampah diaktifkan pada server ownCloud Anda, Anda bisa memulihkan
 <context>
     <name>NoteTreeWidgetItem</name>
     <message>
-        <location filename="../widgets/notetreewidgetitem.ui" line="18"/>
-        <location filename="../widgets/notetreewidgetitem.ui" line="25"/>
-        <location filename="../widgets/notetreewidgetitem.ui" line="32"/>
         <source>TextLabel</source>
-        <translation type="unfinished">TextLabel</translation>
+        <translation type="obsolete">TextLabel</translation>
     </message>
 </context>
 <context>

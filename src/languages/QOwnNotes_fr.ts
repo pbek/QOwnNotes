@@ -1031,7 +1031,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1369"/>
-        <location filename="../mainwindow.cpp" line="8953"/>
+        <location filename="../mainwindow.cpp" line="8954"/>
         <source>Select &amp;all notes</source>
         <translation>Selectionner &amp;toutes les notes</translation>
     </message>
@@ -1460,7 +1460,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2153"/>
-        <location filename="../mainwindow.cpp" line="9944"/>
+        <location filename="../mainwindow.cpp" line="9945"/>
         <source>Remove current workspace</source>
         <translation>Supprimer l&apos;espace de travail actuel</translation>
     </message>
@@ -1528,7 +1528,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2274"/>
-        <location filename="../mainwindow.cpp" line="8928"/>
+        <location filename="../mainwindow.cpp" line="8929"/>
         <source>Open note in different window</source>
         <translation>Ouvrir une note dans une autre fenêtre</translation>
     </message>
@@ -1549,7 +1549,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2314"/>
-        <location filename="../mainwindow.cpp" line="8936"/>
+        <location filename="../mainwindow.cpp" line="8937"/>
         <source>Show note git versions</source>
         <translation>Afficher les versions git de cette note</translation>
     </message>
@@ -1733,7 +1733,7 @@ Voulez vous restaurer la note courante ?</translation>
     <message>
         <location filename="../mainwindow.cpp" line="4773"/>
         <location filename="../mainwindow.cpp" line="6079"/>
-        <location filename="../mainwindow.cpp" line="9015"/>
+        <location filename="../mainwindow.cpp" line="9016"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Annuler</translation>
     </message>
@@ -1820,7 +1820,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3986"/>
-        <location filename="../mainwindow.cpp" line="9179"/>
+        <location filename="../mainwindow.cpp" line="9180"/>
         <source>Remove selected folders</source>
         <translation>Supprimer les dossiers sélectionnés</translation>
     </message>
@@ -2129,96 +2129,96 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
         <translation>Fichiers HTML</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8830"/>
-        <location filename="../mainwindow.cpp" line="8998"/>
+        <location filename="../mainwindow.cpp" line="8831"/>
+        <location filename="../mainwindow.cpp" line="8999"/>
         <source>Rename note</source>
         <translation>Renommer la note</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8831"/>
+        <location filename="../mainwindow.cpp" line="8832"/>
         <source>Allows you to rename the filename of the note</source>
         <translation>Permet de renommer le nom de fichier de la note</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8843"/>
+        <location filename="../mainwindow.cpp" line="8844"/>
         <source>&amp;Move notes to…</source>
         <translation>&amp;Déplacer les notes dans…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8844"/>
+        <location filename="../mainwindow.cpp" line="8845"/>
         <source>&amp;Copy notes to…</source>
         <translation>&amp;Copier les notes dans…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8873"/>
+        <location filename="../mainwindow.cpp" line="8874"/>
         <source>Move notes to subfolder…</source>
         <translation>Déplacer des notes dans un sous-dossier…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8877"/>
+        <location filename="../mainwindow.cpp" line="8878"/>
         <source>Copy notes to subfolder…</source>
         <translation>Copier des notes dans un sous-dossier…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8885"/>
+        <location filename="../mainwindow.cpp" line="8886"/>
         <source>&amp;Tag selected notes with…</source>
         <translation>&amp;Ajouter le tag aux notes sélectionnées…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8907"/>
+        <location filename="../mainwindow.cpp" line="8908"/>
         <source>&amp;Remove tag from selected notes…</source>
         <translation>&amp;Enlever le tag des notes sélectionnées…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8998"/>
+        <location filename="../mainwindow.cpp" line="8999"/>
         <source>Name:</source>
         <translation>Nom&#xa0;:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9010"/>
+        <location filename="../mainwindow.cpp" line="9011"/>
         <source>Note renaming not enabled!</source>
         <translation>Le renommage des notes n&apos;est pas activé !</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9178"/>
+        <location filename="../mainwindow.cpp" line="9179"/>
         <source>Rename subfolder</source>
         <translation>Renommer le sous-dossier</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9724"/>
+        <location filename="../mainwindow.cpp" line="9725"/>
         <source>Create new workspace</source>
         <translation>Créer un nouvel espace de travail</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9724"/>
-        <location filename="../mainwindow.cpp" line="9982"/>
+        <location filename="../mainwindow.cpp" line="9725"/>
+        <location filename="../mainwindow.cpp" line="9983"/>
         <source>Workspace name:</source>
         <translation>Nom de l’espace de travail&#xa0;:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9846"/>
+        <location filename="../mainwindow.cpp" line="9847"/>
         <source>full</source>
         <comment>full workspace</comment>
         <translation>complet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9853"/>
+        <location filename="../mainwindow.cpp" line="9854"/>
         <source>minimal</source>
         <comment>minimal workspace</comment>
         <translation>minimal</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9945"/>
+        <location filename="../mainwindow.cpp" line="9946"/>
         <source>Remove the current workspace?</source>
         <translation>Supprimer l&apos;espace de travail actuel ?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9982"/>
+        <location filename="../mainwindow.cpp" line="9983"/>
         <source>Rename workspace</source>
         <translation>Renommer l’espace de travail</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="10117"/>
+        <location filename="../mainwindow.cpp" line="10118"/>
         <source>%n chars</source>
         <comment>characters</comment>
         <translation>
@@ -2227,32 +2227,32 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10240"/>
+        <location filename="../mainwindow.cpp" line="10241"/>
         <source>Copy image file path</source>
         <translation>Copier le chemin d&apos;accès des fichiers image</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10379"/>
+        <location filename="../mainwindow.cpp" line="10380"/>
         <source>Select file to insert</source>
         <translation>Choisir un fichier à joindre</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10412"/>
+        <location filename="../mainwindow.cpp" line="10413"/>
         <source>Disallow all note editing</source>
         <translation>Interdire toute modification de note</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10546"/>
+        <location filename="../mainwindow.cpp" line="10547"/>
         <source>Select text files to import</source>
         <translation>Sélectionner les fichiers texte à importer</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10575"/>
+        <location filename="../mainwindow.cpp" line="10576"/>
         <source>Importing: %1</source>
         <translation>Importation en cours : %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10638"/>
+        <location filename="../mainwindow.cpp" line="10639"/>
         <source>Note headline &apos;%1&apos; was copied to the clipboard</source>
         <translation>Le titre de la note &apos;%1&apos; a été copié dans le presse-papier</translation>
     </message>
@@ -2266,7 +2266,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2359"/>
-        <location filename="../mainwindow.cpp" line="10413"/>
+        <location filename="../mainwindow.cpp" line="10414"/>
         <source>Allow all note editing</source>
         <translation>Autoriser la modification de la note</translation>
     </message>
@@ -2354,8 +2354,8 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     <message>
         <location filename="../mainwindow.cpp" line="5202"/>
         <location filename="../mainwindow.cpp" line="5477"/>
-        <location filename="../mainwindow.cpp" line="8825"/>
-        <location filename="../mainwindow.cpp" line="9176"/>
+        <location filename="../mainwindow.cpp" line="8826"/>
+        <location filename="../mainwindow.cpp" line="9177"/>
         <source>New note</source>
         <translation>Nouvelle note</translation>
     </message>
@@ -2426,7 +2426,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4470"/>
-        <location filename="../mainwindow.cpp" line="10560"/>
+        <location filename="../mainwindow.cpp" line="10561"/>
         <source>Cancel</source>
         <translation>Annuler</translation>
     </message>
@@ -2455,37 +2455,37 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8926"/>
+        <location filename="../mainwindow.cpp" line="8927"/>
         <source>Open note in external editor</source>
         <translation>Ouvrir la note dans l’éditeur externe</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8930"/>
+        <location filename="../mainwindow.cpp" line="8931"/>
         <source>Show note in file manager</source>
         <translation>Voir la note dans le gestionnaire de fichier</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9011"/>
+        <location filename="../mainwindow.cpp" line="9012"/>
         <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
         <translation>Si vous souhaitez renommer votre note vous devez cocher l&apos;option &quot;Permettre que le nom diffère de son titre&quot;.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9177"/>
+        <location filename="../mainwindow.cpp" line="9178"/>
         <source>New subfolder</source>
         <translation>Nouveau sous-dossier</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9181"/>
+        <location filename="../mainwindow.cpp" line="9182"/>
         <source>Show folder in file manager</source>
         <translation>Voir le dossier dans le gestionnaire de fichier</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9217"/>
+        <location filename="../mainwindow.cpp" line="9218"/>
         <source>Create a new folder</source>
         <translation>Créez un nouveau dossier</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9217"/>
+        <location filename="../mainwindow.cpp" line="9218"/>
         <source>Folder name:</source>
         <translation>Nom du dossier&#xa0;:</translation>
     </message>
@@ -2530,7 +2530,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
         <translation>&amp;Ok</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8835"/>
+        <location filename="../mainwindow.cpp" line="8836"/>
         <source>&amp;Remove notes</source>
         <translation>&amp;Supprimer les notes</translation>
     </message>
@@ -2801,7 +2801,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     <message>
         <location filename="../mainwindow.cpp" line="4746"/>
         <location filename="../mainwindow.cpp" line="4772"/>
-        <location filename="../mainwindow.cpp" line="9014"/>
+        <location filename="../mainwindow.cpp" line="9015"/>
         <source>Open &amp;settings</source>
         <translation>Ouvrir les &amp;paramètres</translation>
     </message>
@@ -2908,11 +2908,8 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <context>
     <name>NoteTreeWidgetItem</name>
     <message>
-        <location filename="../widgets/notetreewidgetitem.ui" line="18"/>
-        <location filename="../widgets/notetreewidgetitem.ui" line="25"/>
-        <location filename="../widgets/notetreewidgetitem.ui" line="32"/>
         <source>TextLabel</source>
-        <translation type="unfinished">TextLabel</translation>
+        <translation type="obsolete">TextLabel</translation>
     </message>
 </context>
 <context>
