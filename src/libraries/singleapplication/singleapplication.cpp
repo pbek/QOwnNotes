@@ -25,6 +25,7 @@
 #include <QtCore/QDateTime>
 #include <QtCore/QByteArray>
 #include <QtCore/QSharedMemory>
+#include <QtCore/QUuid>
 
 #include "singleapplication.h"
 #include "singleapplication_p.h"
@@ -127,6 +128,49 @@ SingleApplication::SingleApplication( int &argc, char *argv[], bool allowSeconda
     }
 
     ::exit( EXIT_SUCCESS );
+}
+
+/**
+ * @brief Checks if SingleInstance is supported on this system
+ * @returns {bool}
+ */
+bool SingleApplication::isSupported()
+{
+    QString uuid = QUuid::createUuid().toString();
+    auto *memory = new QSharedMemory( uuid );
+
+    if ( !memory->create( 1 ) ) {
+        qWarning() << "Unable to create shared memory segment!";
+        qWarning() << memory->errorString();
+        delete memory;
+
+        return false;
+    }
+
+    memory->lock();
+    char *to = (char*)memory->data();
+    const char from = 'x';
+    memcpy( to, &from, 1 );
+    memory->unlock();
+
+    auto *memory2 = new QSharedMemory( uuid );
+    if ( !memory2->attach() ) {
+        qWarning() << "Unable to attach to shared memory segment!";
+        qWarning() << memory2->errorString();
+
+        delete memory;
+        delete memory2;
+
+        return false;
+    }
+
+    memory->detach();
+    delete memory;
+
+    memory2->detach();
+    delete memory2;
+
+    return true;
 }
 
 /**

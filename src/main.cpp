@@ -436,6 +436,15 @@ int main(int argc, char *argv[]) {
     }
 #endif
 
+    if ( allowOnlyOneAppInstance && !SingleApplication::isSupported() ) {
+        allowOnlyOneAppInstance = false;
+        settings.setValue("allowOnlyOneAppInstance", false);
+
+        qWarning() << QCoreApplication::translate(
+                "main", "Single application mode is not supported on your "
+                        "system!");
+    }
+
     // if only one app instance is allowed use SingleApplication
     if (allowOnlyOneAppInstance) {
         SingleApplication app(argc, argv, false, SingleApplication::Mode::User,

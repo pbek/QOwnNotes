@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 18.12.4
+- if single application mode is enabled the app will now attempt to check if 
+  the mode is supported on your system and turn it off if it isn't supported
+  (for [#1089](https://github.com/pbek/QOwnNotes/issues/1089))
+ 
 ## 18.12.3
 - the Windows version of QOwnNotes is now built with Qt 5.11.2
 - the Qt 5.7 build for Windows XP is now working again (for [#828](https://github.com/pbek/QOwnNotes/issues/828))

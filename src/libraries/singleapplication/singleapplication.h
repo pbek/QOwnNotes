@@ -90,6 +90,12 @@ public:
     ~SingleApplication();
 
     /**
+     * @brief Checks if SingleInstance is supported on this system
+     * @returns {bool}
+     */
+    static bool isSupported();
+
+    /**
      * @brief Returns if the instance is the primary instance
      * @returns {bool}
      */
