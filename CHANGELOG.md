@@ -7,6 +7,8 @@
 - you can now disable the auto-completion of previous searches in the search 
   panel by turning it off in the *Panel settings* (for [#1087](https://github.com/pbek/QOwnNotes/issues/1087))
     - also some memory optimization when adding new searches was done
+- added more Chinese Traditional, Ukrainian, Italian, Hungarian and Dutch
+  translation (thank you abev66, prolinuxua, mlocati and Fabijenna)
 
 ## 18.12.3
 - the Windows version of QOwnNotes is now built with Qt 5.11.2
