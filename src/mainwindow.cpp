@@ -1133,6 +1133,9 @@ void MainWindow::initToolbarMenu() {
                              this, SLOT(updateToolbarMenu()));
             QObject::connect(toolbar, SIGNAL(visibilityChanged(bool)),
                              this, SLOT(updateToolbarMenu()));
+
+            // we are disabling the toolbar context menu to prevent enabling of the note sub-folder toolbar if sub-folders are disabled
+            toolbar->setContextMenuPolicy(Qt::PreventContextMenu);
     }
 }
 
