@@ -1,5 +1,15 @@
 # QOwnNotes Changelog
 
+## 18.12.5
+- the script `Markdown-it markdown parser` from the *Script repository* now 
+  optionally supports *definition lists* (for script issue [#48](https://github.com/qownnotes/scripts/issues/48))
+- added `qt5-xmlpatterns` to the Arch Linux build depend list
+- the automatically generated toolbar context menus are now disabled to prevent 
+  enabling of the note sub-folder toolbar if sub-folders are disabled for the
+  current note folder (for [#1093](https://github.com/pbek/QOwnNotes/issues/1093))
+    - the *note sub-folder* menu entry is now disabled in the *Panels menu*
+      instead of hidden if sub-folders are not enabled for current note folder
+
 ## 18.12.4
 - if single application mode is enabled the app will now attempt to check if 
   the mode is supported on your system and turn it off if it isn't supported
