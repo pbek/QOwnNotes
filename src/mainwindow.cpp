@@ -2354,6 +2354,8 @@ void MainWindow::readSettingsFromSettingsDialog() {
                 settings.value("noteSubfoldersPanelHideSearch").toBool());
     ui->tagLineEdit->setHidden(
                 settings.value("tagsPanelHideSearch").toBool());
+    ui->navigationLineEdit->setHidden(
+                settings.value("navigationPanelHideSearch").toBool());
 
     // set the cursor width of the note text-edits
     int cursorWidth = settings.value("cursorWidth", 1).toInt();

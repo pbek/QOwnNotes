@@ -834,6 +834,10 @@ void SettingsDialog::storePanelSettings() {
     ui->tagsPanelOrderDescendingRadioButton->isChecked() ?
                 settings.setValue("tagsPanelOrder", ORDER_DESCENDING) :
                 settings.setValue("tagsPanelOrder", ORDER_ASCENDING);
+
+    // Navigation Panel Options
+    settings.setValue("navigationPanelHideSearch",
+            ui->navigationPanelHideSearchCheckBox->isChecked());
 }
 
 /**
@@ -1282,6 +1286,10 @@ void SettingsDialog::readPanelSettings() {
 
     ui->ignoreNoteSubFoldersLineEdit->setText(settings.value(
             "ignoreNoteSubFolders", IGNORED_NOTE_SUBFOLDERS_DEFAULT).toString());
+
+    // Navigation Panel Options
+    ui->navigationPanelHideSearchCheckBox->setChecked(settings.value(
+            "navigationPanelHideSearch").toBool());
 }
 
 /**

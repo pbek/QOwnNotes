@@ -3,6 +3,10 @@
 ## 18.12.5
 - you can now **search** for items in the **navigation panel**
   (for [#1090](https://github.com/pbek/QOwnNotes/issues/1090))
+    - the search bar acts as new panel headline, the previous headline of the
+      navigation tree widget is now disabled
+	- there is an option to hide the search bar of the navigation panel in 
+	  the *Panel settings*
 - the script `Markdown-it markdown parser` from the *Script repository* now 
   optionally supports *definition lists* (for script issue [#48](https://github.com/qownnotes/scripts/issues/48))
 - added `qt5-xmlpatterns` to the Arch Linux build depend list

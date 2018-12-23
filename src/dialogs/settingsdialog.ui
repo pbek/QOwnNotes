@@ -4657,6 +4657,103 @@ git config --global user.name &quot;Your name&quot;</string>
              <bool>true</bool>
             </property>
             <layout class="QGridLayout" name="gridLayout_63">
+             <item row="2" column="0">
+              <widget class="QGroupBox" name="noteEditPanelGroupBox">
+               <property name="title">
+                <string>Note edit panel</string>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_67">
+                <item row="0" column="1" colspan="2">
+                 <widget class="QCheckBox" name="noteEditCentralWidgetCheckBox">
+                  <property name="toolTip">
+                   <string>If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</string>
+                  </property>
+                  <property name="text">
+                   <string>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QGroupBox" name="notesPanelGroupBox_2">
+               <property name="title">
+                <string>Note search panel</string>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_69">
+                <item row="0" column="1" colspan="2">
+                 <widget class="QCheckBox" name="disableSavedSearchesAutoCompletionCheckBox">
+                  <property name="text">
+                   <string>Disable auto-completion of previous searches</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="4" column="0">
+              <widget class="QGroupBox" name="tagsPanelGroupBox">
+               <property name="title">
+                <string>Tags panel</string>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_57">
+                <item row="2" column="0">
+                 <widget class="QGroupBox" name="tagsPanelSortGroupBox">
+                  <property name="title">
+                   <string>Sort</string>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_19">
+                   <item>
+                    <widget class="QRadioButton" name="tagsPanelSortAlphabeticalRadioButton">
+                     <property name="text">
+                      <string>Alphabetical</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QRadioButton" name="tagsPanelSortByLastChangeRadioButton">
+                     <property name="text">
+                      <string>By last change / use</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QGroupBox" name="tagsPanelOrderGroupBox">
+                  <property name="title">
+                   <string>Order</string>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_20">
+                   <item>
+                    <widget class="QRadioButton" name="tagsPanelOrderAscendingRadioButton">
+                     <property name="text">
+                      <string>Ascending</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QRadioButton" name="tagsPanelOrderDescendingRadioButton">
+                     <property name="text">
+                      <string>Descending</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item row="0" column="0" colspan="2">
+                 <widget class="QCheckBox" name="tagsPanelHideSearchCheckBox">
+                  <property name="text">
+                   <string>Hide 'Find or create tag' search</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
              <item row="3" column="0">
               <widget class="QGroupBox" name="noteSubfoldersPanelGroupBox">
                <property name="title">
@@ -4858,7 +4955,7 @@ git config --global user.name &quot;Your name&quot;</string>
                </layout>
               </widget>
              </item>
-             <item row="5" column="0">
+             <item row="6" column="0">
               <spacer name="verticalSpacer_14">
                <property name="orientation">
                 <enum>Qt::Vertical</enum>
@@ -4871,97 +4968,16 @@ git config --global user.name &quot;Your name&quot;</string>
                </property>
               </spacer>
              </item>
-             <item row="4" column="0">
-              <widget class="QGroupBox" name="tagsPanelGroupBox">
+             <item row="5" column="0">
+              <widget class="QGroupBox" name="navigationPanelGroupBox">
                <property name="title">
-                <string>Tags panel</string>
+                <string>Navigation panel</string>
                </property>
-               <layout class="QGridLayout" name="gridLayout_57">
-                <item row="2" column="0">
-                 <widget class="QGroupBox" name="tagsPanelSortGroupBox">
-                  <property name="title">
-                   <string>Sort</string>
-                  </property>
-                  <layout class="QVBoxLayout" name="verticalLayout_19">
-                   <item>
-                    <widget class="QRadioButton" name="tagsPanelSortAlphabeticalRadioButton">
-                     <property name="text">
-                      <string>Alphabetical</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QRadioButton" name="tagsPanelSortByLastChangeRadioButton">
-                     <property name="text">
-                      <string>By last change / use</string>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
-                <item row="2" column="1">
-                 <widget class="QGroupBox" name="tagsPanelOrderGroupBox">
-                  <property name="title">
-                   <string>Order</string>
-                  </property>
-                  <layout class="QVBoxLayout" name="verticalLayout_20">
-                   <item>
-                    <widget class="QRadioButton" name="tagsPanelOrderAscendingRadioButton">
-                     <property name="text">
-                      <string>Ascending</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QRadioButton" name="tagsPanelOrderDescendingRadioButton">
-                     <property name="text">
-                      <string>Descending</string>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
-                <item row="0" column="0" colspan="2">
-                 <widget class="QCheckBox" name="tagsPanelHideSearchCheckBox">
+               <layout class="QVBoxLayout" name="verticalLayout_25">
+                <item>
+                 <widget class="QCheckBox" name="navigationPanelHideSearchCheckBox">
                   <property name="text">
-                   <string>Hide 'Find or create tag' search</string>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </widget>
-             </item>
-             <item row="2" column="0">
-              <widget class="QGroupBox" name="noteEditPanelGroupBox">
-               <property name="title">
-                <string>Note edit panel</string>
-               </property>
-               <layout class="QGridLayout" name="gridLayout_67">
-                <item row="0" column="1" colspan="2">
-                 <widget class="QCheckBox" name="noteEditCentralWidgetCheckBox">
-                  <property name="toolTip">
-                   <string>If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</string>
-                  </property>
-                  <property name="text">
-                   <string>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</string>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </widget>
-             </item>
-             <item row="0" column="0">
-              <widget class="QGroupBox" name="notesPanelGroupBox_2">
-               <property name="title">
-                <string>Note search panel</string>
-               </property>
-               <layout class="QGridLayout" name="gridLayout_69">
-                <item row="0" column="1" colspan="2">
-                 <widget class="QCheckBox" name="disableSavedSearchesAutoCompletionCheckBox">
-                  <property name="text">
-                   <string>Disable auto-completion of previous searches</string>
+                   <string>Hide navigation item search bar</string>
                   </property>
                  </widget>
                 </item>
