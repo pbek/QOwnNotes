@@ -375,12 +375,33 @@
              <number>0</number>
             </property>
             <item>
+             <widget class="LineEdit" name="navigationLineEdit">
+              <property name="styleSheet">
+               <string notr="true">QLineEdit {
+	border: none;
+	padding: 2px 5px 2px 27px;
+	background-image: url(:/images/search-notes.svg);
+	background-repeat: no-repeat;
+	background-position: center left;
+	margin-right: 0px;
+}
+</string>
+              </property>
+              <property name="placeholderText">
+               <string>Find navigation item</string>
+              </property>
+              <property name="clearButtonEnabled">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
              <widget class="NavigationWidget" name="navigationWidget">
               <property name="frameShape">
                <enum>QFrame::NoFrame</enum>
               </property>
               <attribute name="headerVisible">
-               <bool>true</bool>
+               <bool>false</bool>
               </attribute>
               <column>
                <property name="text">
@@ -733,7 +754,7 @@
               <x>0</x>
               <y>0</y>
               <width>300</width>
-              <height>26</height>
+              <height>28</height>
              </rect>
             </property>
             <layout class="QVBoxLayout" name="scriptingScrollAreaLayout">
@@ -821,7 +842,7 @@ p, li { white-space: pre-wrap; }
      <x>0</x>
      <y>0</y>
      <width>1383</width>
-     <height>25</height>
+     <height>27</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuQOwnNotes">
@@ -2430,9 +2451,9 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="images.qrc"/>
-  <include location="breeze-dark-qownnotes.qrc"/>
   <include location="breeze-qownnotes.qrc"/>
+  <include location="breeze-dark-qownnotes.qrc"/>
+  <include location="images.qrc"/>
  </resources>
  <connections/>
 </ui>

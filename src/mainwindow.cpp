@@ -10672,3 +10672,12 @@ void MainWindow::centerAndResize() {
             )
     );
 }
+
+/**
+ * Filters navigation entries in the navigation tree widget
+ */
+void MainWindow::on_navigationLineEdit_textChanged(const QString &arg1) {
+    Utils::Gui::searchForTextInTreeWidget(
+            ui->navigationWidget, arg1,
+            Utils::Gui::TreeWidgetSearchFlag::IntCheck);
+}

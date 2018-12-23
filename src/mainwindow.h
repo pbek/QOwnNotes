@@ -548,6 +548,8 @@ private slots:
 
     void on_action_FormatTable_triggered();
 
+    void on_navigationLineEdit_textChanged(const QString &arg1);
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;

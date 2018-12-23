@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 18.12.5
+- you can now **search** for items in the **navigation panel**
+  (for [#1090](https://github.com/pbek/QOwnNotes/issues/1090))
 - the script `Markdown-it markdown parser` from the *Script repository* now 
   optionally supports *definition lists* (for script issue [#48](https://github.com/qownnotes/scripts/issues/48))
 - added `qt5-xmlpatterns` to the Arch Linux build depend list
