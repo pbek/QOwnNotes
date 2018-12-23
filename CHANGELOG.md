@@ -7,7 +7,7 @@
       navigation tree widget is now disabled
 	- there is an option to hide the search bar of the navigation panel in 
 	  the *Panel settings*
-- the script `Markdown-it markdown parser` from the *Script repository* now 
+- the script `Markdown-it markdown parser` in the *Script repository* now 
   optionally supports *definition lists* (for script issue [#48](https://github.com/qownnotes/scripts/issues/48))
 - added `qt5-xmlpatterns` to the Arch Linux build depend list
 - the automatically generated toolbar context menus are now disabled to prevent 
@@ -15,6 +15,10 @@
   current note folder (for [#1093](https://github.com/pbek/QOwnNotes/issues/1093))
     - the *note sub-folder* menu entry is now disabled in the *Panels menu*
       instead of hidden if sub-folders are not enabled for current note folder
+- added more German, Catalan, Spanish, Portuguese, Chinese Traditional,
+  Ukrainian, Italian, Hungarian and Dutch translation (thank you jan_sh,
+  MGuerra, richarson, manuelarodsilva, abev66, prolinuxua, mlocati, tiwi90 
+  and Fabijenna)
 
 ## 18.12.4
 - if single application mode is enabled the app will now attempt to check if 
