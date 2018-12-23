@@ -1156,11 +1156,11 @@ void MainWindow::updatePanelMenu() {
             action->setCheckable(true);
             action->setChecked(!dockWidget->isHidden());
 
-            // hide the noteSubFolderDockWidget menu entry if sub-folders are
+            // disable the noteSubFolderDockWidget menu entry if sub-folders are
             // not enabled
             if (dockWidget->objectName() == "noteSubFolderDockWidget" &&
                     !NoteFolder::isCurrentShowSubfolders()) {
-                action->setVisible(false);
+                action->setEnabled(false);
             }
 
             // try to load a key sequence from the settings
