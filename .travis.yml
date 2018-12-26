@@ -36,7 +36,7 @@ install:
       sudo apt-add-repository -y ppa:ubuntu-toolchain-r/test
       sudo apt-add-repository -y ppa:beineri/opt-qt562-trusty
       sudo apt-get -qq update
-      sudo apt-get -qq install g++-4.8 libc6-i386 qt56tools qt56svg qt56script
+      sudo apt-get -qq install g++-4.8 libc6-i386 qt56tools qt56svg qt56script qt56websockets
       export CXX="g++-4.8"
       export CC="gcc-4.8"
     fi
