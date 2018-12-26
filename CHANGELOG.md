@@ -10,6 +10,9 @@
   for the current note folder (for [#1093](https://github.com/pbek/QOwnNotes/issues/1093))
 - the binary **Arch Linux** repository on the *openSUSE Build Service* is working
   again (for OBS issue [#6692](https://github.com/openSUSE/open-build-service/issues/6692))
+- added more German, Spanish, Chinese Traditional, Ukrainian, Italian, Polish
+  and French translation (thank you lucjan, rakekniven, richarson, tiwi90,
+  abev66, prolinuxua and dev2a)
 
 ## 18.12.5
 - you can now **search** for items in the **navigation panel**
