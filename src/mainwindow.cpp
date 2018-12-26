@@ -1119,6 +1119,10 @@ void MainWindow::initPanelMenu() {
     Q_FOREACH(QDockWidget *dockWidget, findChildren<QDockWidget *>()) {
             QObject::connect(dockWidget, SIGNAL(visibilityChanged(bool)),
                              this, SLOT(updatePanelMenu()));
+
+            // we are disabling the dock widget context menu to prevent enabling
+            // of the note sub-folder toolbar if sub-folders are disabled
+            dockWidget->setContextMenuPolicy(Qt::PreventContextMenu);
     }
 }
 

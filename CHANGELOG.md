@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 18.12.6
+- the automatically generated context menus for floating panels are now disabled
+  to prevent enabling of the note sub-folder toolbar if sub-folders are disabled
+  for the current note folder (for [#1093](https://github.com/pbek/QOwnNotes/issues/1093))
+- the binary **Arch Linux** repository on the *openSUSE Build Service* is working
+  again (for OBS issue [#6692](https://github.com/openSUSE/open-build-service/issues/6692))
+
 ## 18.12.5
 - you can now **search** for items in the **navigation panel**
   (for [#1090](https://github.com/pbek/QOwnNotes/issues/1090))
