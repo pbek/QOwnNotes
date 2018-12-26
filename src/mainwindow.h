@@ -47,6 +47,7 @@
 #include "services/updateservice.h"
 #include "widgets/qownnotesmarkdowntextedit.h"
 #include <libraries/fakevim/fakevim/fakevimhandler.h>
+#include "services/websocketserverservice.h"
 
 #define SORT_ALPHABETICAL 0
 #define SORT_BY_LAST_CHANGE 1
@@ -550,6 +551,8 @@ private slots:
 
     void on_navigationLineEdit_textChanged(const QString &arg1);
 
+    void initWebSocketServerService();
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;
@@ -639,6 +642,7 @@ private:
     int _gitCommitInterval;
     bool _noteEditIsCentralWidget;
     bool _lastNoteSelectionWasMultiple;
+    WebSocketServerService *_webSocketServerService;
 
     void createSystemTrayIcon();
 

@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui widgets sql svg network xml xmlpatterns printsupport qml
+QT       += core gui widgets sql svg network xml xmlpatterns printsupport qml websockets
 
 # quick is enabled for more scripting options
 # Windows and macOS seem to ignore that
@@ -96,6 +96,7 @@ SOURCES += main.cpp\
     services/metricsservice.cpp \
     services/cryptoservice.cpp \
     services/scriptingservice.cpp \
+    services/websocketserverservice.cpp \
     dialogs/masterdialog.cpp \
     utils/misc.cpp \
     utils/git.cpp \
@@ -164,6 +165,7 @@ HEADERS  += mainwindow.h \
     services/owncloudservice.h \
     services/updateservice.h \
     services/scriptingservice.h \
+    services/websocketserverservice.h \
     helpers/htmlentities.h \
     helpers/clientproxy.h \
     helpers/toolbarcontainer.h \

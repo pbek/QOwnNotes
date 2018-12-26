@@ -1,6 +1,10 @@
 # QOwnNotes Changelog
 
 ## 18.12.6
+- start of QOwnNotes websocket server integration for implementing a
+  **Web Scraper** browser extension (for [#330](https://github.com/pbek/QOwnNotes/issues/330))
+    - you should already be able to "talk" to your QOwnNotes application by
+      connecting to `ws://127.0.0.1:22222`, for example with [Echo Test](https://www.websocket.org/echo.html?location=ws://127.0.0.1:22222)
 - the automatically generated context menus for floating panels are now disabled
   to prevent enabling of the note sub-folder toolbar if sub-folders are disabled
   for the current note folder (for [#1093](https://github.com/pbek/QOwnNotes/issues/1093))

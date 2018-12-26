@@ -497,6 +497,12 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // attempt to check the api app version
     startAppVersionTest();
+
+    QTimer::singleShot(250, this, SLOT(initWebSocketServerService()));
+}
+
+void MainWindow::initWebSocketServerService() {
+    _webSocketServerService = new WebSocketServerService();
 }
 
 void MainWindow::initFakeVim(QOwnNotesMarkdownTextEdit *noteTextEdit) {
