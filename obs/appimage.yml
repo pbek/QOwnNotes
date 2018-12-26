@@ -15,6 +15,7 @@ build:
     - pkgconfig(Qt5XmlPatterns)
     - pkgconfig(Qt5PrintSupport)
     - pkgconfig(Qt5Qml)
+    - pkgconfig(Qt5Websockets)
     - libQt5Sql5-sqlite
   git:
     - https://github.com/pbek/QOwnNotes.git

@@ -20,15 +20,16 @@ BuildRequires:  qt5-qttools qt5-qttools-devel
 BuildRequires:  qt5-qtsvg-devel
 BuildRequires:  qt5-qtdeclarative-devel
 BuildRequires:  qt5-qtxmlpatterns-devel
+BuildRequires:  qt5-qtwebsockets-devel
 BuildRequires:  desktop-file-utils
-Requires:       qt5-qtsvg qt5-qtxmlpatterns
+Requires:       qt5-qtsvg qt5-qtxmlpatterns qt5-qt5websockets
 
 %else
 # This is for all SUSE
 
-BuildRequires:  libqt5-qtbase-devel libqt5-qtdeclarative-devel libQt5Svg-devel libQt5XmlPatterns-devel
+BuildRequires:  libqt5-qtbase-devel libqt5-qtdeclarative-devel libQt5Svg-devel libQt5XmlPatterns-devel libqt5-qtwebsockets-devel
 BuildRequires:  update-desktop-files
-Requires:       libQt5Svg5 libQt5Sql5 libQt5Sql5-sqlite libQt5Gui5 libQt5Network5 libQt5Widgets5 libQt5Xml5 libQt5XmlPatterns5 libQt5PrintSupport5
+Requires:       libQt5Svg5 libQt5Sql5 libQt5Sql5-sqlite libQt5Gui5 libQt5Network5 libQt5Widgets5 libQt5Xml5 libQt5XmlPatterns5 libQt5PrintSupport5 libQt5WebSockets5
 
 # try to detect openSUSE Tumbleweed
 # the way described in https://en.opensuse.org/Archive:How_to_detect_Tumbleweed didn't seem to work
