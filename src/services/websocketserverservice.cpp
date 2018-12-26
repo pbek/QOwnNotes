@@ -68,11 +68,7 @@ void WebSocketServerService::onNewConnection() {
 
 void WebSocketServerService::processMessage(const QString &message) {
     auto *pSender = qobject_cast<QWebSocket *>(sender());
-    for (QWebSocket *pClient : qAsConst(m_clients)) {
-//        if (pClient != pSender) //don't echo message back to sender
-            pClient->sendTextMessage(message);
-    }
-
+    pSender->sendTextMessage("Back: " + message);
     pSender->sendTextMessage("Message sent!");
 }
 
