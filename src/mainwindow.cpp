@@ -785,7 +785,7 @@ void MainWindow::initDockWidgets() {
 }
 
 /**
- * Releaseing the forced maximum sizes on some dock widgets
+ * Releasing the forced maximum sizes on some dock widgets
  */
 void MainWindow::releaseDockWidgetSizes() {
     _noteListDockWidget->setMaximumWidth(10000);
