@@ -4,12 +4,16 @@
 - improved note name filtering to prevent troubles on Windows for the
   [QOwnNotes Web Companion Chrome extension](https://github.com/qownnotes/chrome-web-companion/)
   (for [#330](https://github.com/pbek/QOwnNotes/issues/330))
+    - the name and note text will be trimmed to prevent wrong newlines
     - the QOwnNotes Web Companion Chrome extension was updated to version 18.12.1
         - fixed the default port
         - the url of the page will now also be written to the note
         - restructured the context menu
         - added an context menu entry to reset the settings
         - download the latest version on [QOwnNotes Chrome Web Companion releases](https://github.com/qownnotes/chrome-web-companion/releases)
+- the amount of `=` characters added for the headlines of new notes are now
+  limited to 40 to prevent too long headline lines
+    - the name will be trimmed to prevent wrong newlines in the headline
 - added more Spanish translation (thank you richarson)
 
 ## 18.12.7

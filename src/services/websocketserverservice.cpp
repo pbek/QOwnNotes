@@ -95,11 +95,11 @@ void WebSocketServerService::processMessage(const QString &message) {
         }
 
         QString name = Note::cleanupFileName(Note::extendedCleanupFileName(
-                jsonObject.value("headline").toString()));
+                jsonObject.value("headline").toString())).trimmed();
 
         mainWindow->createNewNote(
                 name,
-                jsonObject.value("text").toString(),
+                jsonObject.value("text").toString().trimmed(),
                 MainWindow::CreateNewNoteOptions(
                         MainWindow::CreateNewNoteOption::UseNameAsHeadline));
 #endif
