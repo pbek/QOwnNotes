@@ -3855,26 +3855,28 @@ void MainWindow::createNewNote(QString name, QString text,
     QString extension = Note::defaultNoteFileExtension();
     QFile *f = new QFile(this->notesPath + QDir::separator() + name + "."
                          + extension);
+    const bool useNameAsHeadline = options.testFlag(
+            CreateNewNoteOption::UseNameAsHeadline);
 
     // change the name and headline if note exists
     if (f->exists()) {
         QDateTime currentDate = QDateTime::currentDateTime();
         name.append(" " + currentDate.toString(Qt::ISODate).replace(":", "."));
 
-        QString preText = Note::createNoteHeader(name);
-        text.prepend(preText);
+        if (!useNameAsHeadline) {
+            QString preText = Note::createNoteHeader(name);
+            text.prepend(preText);
+        }
     }
 
     // create a new note
     ui->searchLineEdit->setText(name);
 
-    bool disableLoadNoteDirectoryList = options &
-            CreateNewNoteOption::DisableLoadNoteDirectoryList;
-
-    jumpToNoteOrCreateNew(disableLoadNoteDirectoryList);
+    jumpToNoteOrCreateNew(options.testFlag(
+            CreateNewNoteOption::DisableLoadNoteDirectoryList));
 
     // check if to append the text or replace the text of the note
-    if (options & CreateNewNoteOption::UseNameAsHeadline) {
+    if (useNameAsHeadline) {
         QTextCursor c = ui->noteTextEdit->textCursor();
         c.insertText("\n\n" + text);
         ui->noteTextEdit->setTextCursor(c);
@@ -3883,7 +3885,7 @@ void MainWindow::createNewNote(QString name, QString text,
     }
 
     // move the cursor to the end of the note
-    if (options & CreateNewNoteOption::CursorAtEnd) {
+    if (options.testFlag(CreateNewNoteOption::CursorAtEnd)) {
         QTextCursor c = ui->noteTextEdit->textCursor();
         c.movePosition(QTextCursor::End, QTextCursor::MoveAnchor);
         ui->noteTextEdit->setTextCursor(c);

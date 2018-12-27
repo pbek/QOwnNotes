@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 18.12.7
+- added support for the new [QOwnNotes Chrome Web Companion extension](https://github.com/qownnotes/chrome-web-companion/)
+  to add selected text as new note (for [#330](https://github.com/pbek/QOwnNotes/issues/330))
+
 ## 18.12.6
 - start of QOwnNotes websocket server integration for implementing a
   **Web Scraper** browser extension (for [#330](https://github.com/pbek/QOwnNotes/issues/330))

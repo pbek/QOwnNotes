@@ -15,6 +15,9 @@
 #include "websocketserverservice.h"
 #include <QtWebSockets>
 #include <utils/misc.h>
+#ifndef INTEGRATION_TESTS
+#include <mainwindow.h>
+#endif
 
 using namespace std;
 
@@ -32,10 +35,9 @@ WebSocketServerService::WebSocketServerService(quint16 port, QObject *parent) :
                 QWebSocketServer::NonSecureMode, this)) {
 
     if (port == 0) {
-        QSettings settings;
-        port = static_cast<quint16>(settings.value("webSocketServerService/port",
-                22222).toULongLong());
+        port = getPort();
     }
+
     if (m_pWebSocketServer->listen(QHostAddress::Any, port)) {
         Utils::Misc::printInfo(tr("QOwnNotes server listening on port %1").arg(
                 QString::number(port)));
@@ -46,6 +48,20 @@ WebSocketServerService::WebSocketServerService(quint16 port, QObject *parent) :
         qWarning() << tr("Could not start QOwnNotes server on port %1!").arg(
                 QString::number(port));
     }
+}
+
+quint16 WebSocketServerService::getPort() const {
+    QSettings settings;
+    quint16 port;
+    quint16 defaultPort = 22222;
+
+#ifndef QT_NO_DEBUG
+    defaultPort = 22223;
+#endif
+
+    port = static_cast<quint16>(settings.value("webSocketServerService/port",
+            defaultPort).toULongLong());
+    return port;
 }
 
 WebSocketServerService::~WebSocketServerService() {
@@ -67,13 +83,34 @@ void WebSocketServerService::onNewConnection() {
 }
 
 void WebSocketServerService::processMessage(const QString &message) {
-    auto *pSender = qobject_cast<QWebSocket *>(sender());
-    pSender->sendTextMessage("Back: " + message);
-    pSender->sendTextMessage("Message sent!");
+    QJsonDocument jsonResponse = QJsonDocument::fromJson(message.toUtf8());
+    QJsonObject jsonObject = jsonResponse.object();
+    QString type = jsonObject.value("type").toString();
+
+    if (type == "newNote") {
+#ifndef INTEGRATION_TESTS
+        MainWindow *mainWindow = MainWindow::instance();
+        if (mainWindow == Q_NULLPTR) {
+            return;
+        }
+
+        mainWindow->createNewNote(
+                jsonObject.value("headline").toString(),
+                jsonObject.value("text").toString(),
+                MainWindow::CreateNewNoteOptions(
+                        MainWindow::CreateNewNoteOption::UseNameAsHeadline));
+#endif
+    } else {
+        auto *pSender = qobject_cast<QWebSocket *>(sender());
+        pSender->sendTextMessage("Received: " + message);
+    }
 }
 
 void WebSocketServerService::socketDisconnected() {
     auto *pClient = qobject_cast<QWebSocket *>(sender());
+
+    // this seems to be prone to crashing if a new note is created and a socket
+    // gets disconnected
     Utils::Misc::printInfo(tr("%1 was disconnected from QOwnNotes server").arg(
             getIdentifier(pClient)));
 

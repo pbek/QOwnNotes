@@ -37,4 +37,6 @@ private slots:
 private:
     QWebSocketServer *m_pWebSocketServer;
     QList<QWebSocket *> m_clients;
+
+    quint16 getPort() const;
 };
