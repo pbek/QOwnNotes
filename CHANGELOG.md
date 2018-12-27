@@ -4,8 +4,8 @@
 - added support for the new [QOwnNotes Web Companion Chrome extension](https://github.com/qownnotes/chrome-web-companion/)
   to add selected text as new note (for [#330](https://github.com/pbek/QOwnNotes/issues/330))
     - you can download the current release of the extension at
-      [QOwnNotes Chrome Web Companion 18.12.0](https://github.com/qownnotes/chrome-web-companion/releases/tag/18.12.0),
-      just drop the file into Chrome to install the extension
+      [QOwnNotes Chrome Web Companion 18.12.0](https://github.com/qownnotes/chrome-web-companion/releases/tag/18.12.0)
+    - then visit <chrome://extensions/> and drop the extension file into Chrome to install the extension
 - added more Polish, German, Chinese Traditional and Italian (thank you lucjan,
   rakekniven, abev66 and mlocati)
 
