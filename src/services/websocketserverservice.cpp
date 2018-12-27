@@ -94,8 +94,11 @@ void WebSocketServerService::processMessage(const QString &message) {
             return;
         }
 
+        QString name = Note::cleanupFileName(Note::extendedCleanupFileName(
+                jsonObject.value("headline").toString()));
+
         mainWindow->createNewNote(
-                jsonObject.value("headline").toString(),
+                name,
                 jsonObject.value("text").toString(),
                 MainWindow::CreateNewNoteOptions(
                         MainWindow::CreateNewNoteOption::UseNameAsHeadline));

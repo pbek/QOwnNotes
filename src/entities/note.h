@@ -261,6 +261,10 @@ public:
 
     QString getNoteIdURL();
 
+    static QString cleanupFileName(QString name);
+
+    static QString extendedCleanupFileName(QString name);
+
 protected:
     int id;
     QString name;
@@ -280,8 +284,6 @@ protected:
     int shareId;
     QRegularExpression getEncryptedNoteTextRegularExpression();
     QString getEncryptedNoteText();
-    static QString cleanupFileName(QString name);
-    static QString extendedCleanupFileName(QString name);
     QString _noteTextHtml;
     QString _noteTextHtmlConversionHash;
 

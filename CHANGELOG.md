@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 18.12.8
+- improved note name filtering to prevent troubles on Windows for the
+  [QOwnNotes Web Companion Chrome extension](https://github.com/qownnotes/chrome-web-companion/)
+  (for [#330](https://github.com/pbek/QOwnNotes/issues/330))
+
 ## 18.12.7
 - added support for the new [QOwnNotes Web Companion Chrome extension](https://github.com/qownnotes/chrome-web-companion/)
   to add selected text as new note (for [#330](https://github.com/pbek/QOwnNotes/issues/330))
