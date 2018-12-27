@@ -1,7 +1,7 @@
 # QOwnNotes Changelog
 
 ## 18.12.7
-- added support for the new [QOwnNotes Chrome Web Companion extension](https://github.com/qownnotes/chrome-web-companion/)
+- added support for the new [QOwnNotes Web Companion Chrome extension](https://github.com/qownnotes/chrome-web-companion/)
   to add selected text as new note (for [#330](https://github.com/pbek/QOwnNotes/issues/330))
     - you can download the current release of the extension at
       [QOwnNotes Chrome Web Companion 18.12.0](https://github.com/qownnotes/chrome-web-companion/releases/tag/18.12.0),
