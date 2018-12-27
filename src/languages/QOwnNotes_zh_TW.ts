@@ -6286,22 +6286,22 @@ This cannot be undone!</source>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="40"/>
       <source>QOwnNotes server listening on port %1</source>
-      <translation type="unfinished">QOwnNotes server listening on port %1</translation>
+      <translation>QOwnNotes 伺服器使用 %1 連接埠</translation>
     </message>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="46"/>
       <source>Could not start QOwnNotes server on port %1!</source>
-      <translation type="unfinished">Could not start QOwnNotes server on port %1!</translation>
+      <translation>QOwnNotes 伺服器無法使用 %1 連接埠！</translation>
     </message>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="57"/>
       <source>%1 connected to QOwnNotes server!</source>
-      <translation type="unfinished">%1 connected to QOwnNotes server!</translation>
+      <translation>%1 連線至 QOwnNotes 伺服器！</translation>
     </message>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="81"/>
       <source>%1 was disconnected from QOwnNotes server</source>
-      <translation type="unfinished">%1 was disconnected from QOwnNotes server</translation>
+      <translation>%1 已從 QOwnNotes 伺服器中斷連線</translation>
     </message>
   </context>
   <context>

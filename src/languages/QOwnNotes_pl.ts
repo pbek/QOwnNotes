@@ -277,7 +277,7 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5975"/>
       <source>Cannot open file "%1" for reading</source>
-      <translation type="unfinished">Cannot open file "%1" for reading</translation>
+      <translation>Nie można otworzyć pliku „%1” w trybie do odczytu</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6003"/>
@@ -637,12 +637,12 @@
     <message>
       <location filename="../widgets/layoutwidget.ui" line="97"/>
       <source>Use layout</source>
-      <translation type="unfinished">Use layout</translation>
+      <translation>Użyj układu</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="76"/>
       <source>Use new layout</source>
-      <translation type="unfinished">Use new layout</translation>
+      <translation>Użyj nowego układu</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="77"/>
@@ -681,13 +681,13 @@
       <location filename="../widgets/layoutwidget.cpp" line="146"/>
       <source>Single column</source>
       <comment>Layout name</comment>
-      <translation type="unfinished">Single column</translation>
+      <translation>Pojedyncza kolumna</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="154"/>
       <source>The note edit panel is the central widget that will be resized automatically.</source>
       <comment>Layout description</comment>
-      <translation type="unfinished">The note edit panel is the central widget that will be resized automatically.</translation>
+      <translation>Panel edycji notatki będzie centralnym elementem a jego rozmiar będzie zmieniany automatycznie.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="158"/>
@@ -4516,7 +4516,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2526"/>
       <source>Override interface font size</source>
-      <translation type="unfinished">Override interface font size</translation>
+      <translation>Nadpisz wielkość czcionki określoną przez interfejs</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2535"/>
@@ -4541,12 +4541,12 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3379"/>
       <source>Automatically close the note folder database to prevent problems with sync tools</source>
-      <translation type="unfinished">Automatically close the note folder database to prevent problems with sync tools</translation>
+      <translation>Automatycznie zamykaj bazę notatek aby zapobiec problemom z narzędziami do synchronizacji</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3382"/>
       <source>Automatically close the note folder database</source>
-      <translation type="unfinished">Automatically close the note folder database</translation>
+      <translation>Automatycznie zamykaj bazę notatek</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3430"/>
@@ -6344,7 +6344,7 @@ Nie można tego cofnąć!</translation>
     <message>
       <location filename="../services/updateservice.cpp" line="136"/>
       <source>The data from the network request could not be interpreted!</source>
-      <translation type="unfinished">The data from the network request could not be interpreted!</translation>
+      <translation>Uzyskane dane nie mogą być zinterpretowane!</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="228"/>
@@ -6390,22 +6390,22 @@ Nie można tego cofnąć!</translation>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="40"/>
       <source>QOwnNotes server listening on port %1</source>
-      <translation type="unfinished">QOwnNotes server listening on port %1</translation>
+      <translation>Serwer QOwnNotes oczekuje na połączenia na porcie %1</translation>
     </message>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="46"/>
       <source>Could not start QOwnNotes server on port %1!</source>
-      <translation type="unfinished">Could not start QOwnNotes server on port %1!</translation>
+      <translation>Nie można uruchomić serwera QOwnNotes na porcie %1!</translation>
     </message>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="57"/>
       <source>%1 connected to QOwnNotes server!</source>
-      <translation type="unfinished">%1 connected to QOwnNotes server!</translation>
+      <translation>%1 połączony z serwerem QOwnNotes!</translation>
     </message>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="81"/>
       <source>%1 was disconnected from QOwnNotes server</source>
-      <translation type="unfinished">%1 was disconnected from QOwnNotes server</translation>
+      <translation>%1 został rozłączony z serwerem QOwnNotes</translation>
     </message>
   </context>
   <context>
@@ -6533,7 +6533,7 @@ Nie można tego cofnąć!</translation>
     <message>
       <location filename="../main.cpp" line="81"/>
       <source>Prints out a dump of the settings and other information about the application and environment in GitHub Markdown and exits the application.</source>
-      <translation type="unfinished">Prints out a dump of the settings and other information about the application and environment in GitHub Markdown and exits the application.</translation>
+      <translation>Wyświetla zrzut ustawień i innych informacji o programie i środowisku uruchomienia w formacie GitHub Markdown a następnie zamyka program.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="87"/>

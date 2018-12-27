@@ -6319,22 +6319,22 @@ Non sarà possibile annullare l'operazione!</translation>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="40"/>
       <source>QOwnNotes server listening on port %1</source>
-      <translation type="unfinished">QOwnNotes server listening on port %1</translation>
+      <translation>Server QOwnNotes in ascolto sulla porta %1</translation>
     </message>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="46"/>
       <source>Could not start QOwnNotes server on port %1!</source>
-      <translation type="unfinished">Could not start QOwnNotes server on port %1!</translation>
+      <translation>Non è stato possibile avviare il server QOwnNotes con la porta %1!</translation>
     </message>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="57"/>
       <source>%1 connected to QOwnNotes server!</source>
-      <translation type="unfinished">%1 connected to QOwnNotes server!</translation>
+      <translation>%1 connesso al server QOwnNotes!</translation>
     </message>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="81"/>
       <source>%1 was disconnected from QOwnNotes server</source>
-      <translation type="unfinished">%1 was disconnected from QOwnNotes server</translation>
+      <translation>%1 è stato disconnesso dal server QOwnNotes</translation>
     </message>
   </context>
   <context>

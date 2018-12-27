@@ -6318,22 +6318,22 @@ Kann nicht rückgängig gemacht werden!</translation>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="40"/>
       <source>QOwnNotes server listening on port %1</source>
-      <translation type="unfinished">QOwnNotes server listening on port %1</translation>
+      <translation>Der QOwnNotes-Server arbeitet auf Port %1</translation>
     </message>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="46"/>
       <source>Could not start QOwnNotes server on port %1!</source>
-      <translation type="unfinished">Could not start QOwnNotes server on port %1!</translation>
+      <translation>Der QOwnNotes-Server konnte nicht auf Port %1 gestartet werden!</translation>
     </message>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="57"/>
       <source>%1 connected to QOwnNotes server!</source>
-      <translation type="unfinished">%1 connected to QOwnNotes server!</translation>
+      <translation>%1 mit QOwnNotes-Server verbunden!</translation>
     </message>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="81"/>
       <source>%1 was disconnected from QOwnNotes server</source>
-      <translation type="unfinished">%1 was disconnected from QOwnNotes server</translation>
+      <translation>%1 wurde vom QOwnNotes-Server getrennt</translation>
     </message>
   </context>
   <context>
