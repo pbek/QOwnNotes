@@ -4,6 +4,13 @@
 - improved note name filtering to prevent troubles on Windows for the
   [QOwnNotes Web Companion Chrome extension](https://github.com/qownnotes/chrome-web-companion/)
   (for [#330](https://github.com/pbek/QOwnNotes/issues/330))
+    - the QOwnNotes Web Companion Chrome extension was updated to version 18.12.1
+        - fixed the default port
+        - the url of the page will now also be written to the note
+        - restructured the context menu
+        - added an context menu entry to reset the settings
+        - download the latest version on [QOwnNotes Chrome Web Companion releases](https://github.com/qownnotes/chrome-web-companion/releases)
+- added more Spanish translation (thank you richarson)
 
 ## 18.12.7
 - added support for the new [QOwnNotes Web Companion Chrome extension](https://github.com/qownnotes/chrome-web-companion/)
