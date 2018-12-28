@@ -21,6 +21,7 @@
     - added support to add a screenshot of the visible area as new note
     - selected text will now be created as new note with newlines if possible
     - download the latest version on [QOwnNotes Chrome Web Companion releases](https://github.com/qownnotes/chrome-web-companion/releases)
+- added more Hungarian and Dutch translation (thank you Fabijenna)
 
 ## 18.12.8
 - improved note name filtering to prevent troubles on Windows for the

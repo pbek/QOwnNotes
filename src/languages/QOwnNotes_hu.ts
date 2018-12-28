@@ -916,7 +916,7 @@
     <message>
       <location filename="../mainwindow.ui" line="391"/>
       <source>Find navigation item</source>
-      <translation type="unfinished">Find navigation item</translation>
+      <translation>Navigációs elem keresése</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="680"/>
@@ -4579,12 +4579,12 @@ Tesztelje, ha szinkronizációs konfliktus lép fel és állítson be ilyen eset
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4974"/>
       <source>Navigation panel</source>
-      <translation type="unfinished">Navigation panel</translation>
+      <translation>Navigációs panel</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4980"/>
       <source>Hide navigation item search bar</source>
-      <translation type="unfinished">Hide navigation item search bar</translation>
+      <translation>Navigációs elem keresősáv elrejtése</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4994"/>
@@ -6320,22 +6320,22 @@ Nem lehet visszavonni!</translation>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="40"/>
       <source>QOwnNotes server listening on port %1</source>
-      <translation type="unfinished">QOwnNotes server listening on port %1</translation>
+      <translation>QOwnNotes kiszolgáló a(z) %1 porton</translation>
     </message>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="46"/>
       <source>Could not start QOwnNotes server on port %1!</source>
-      <translation type="unfinished">Could not start QOwnNotes server on port %1!</translation>
+      <translation>Nem indítható a QOwnNotes kiszolgáló a(z) %1 porton!</translation>
     </message>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="57"/>
       <source>%1 connected to QOwnNotes server!</source>
-      <translation type="unfinished">%1 connected to QOwnNotes server!</translation>
+      <translation>%1 csatlakozik a QOwnnotes szerverhez!</translation>
     </message>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="81"/>
       <source>%1 was disconnected from QOwnNotes server</source>
-      <translation type="unfinished">%1 was disconnected from QOwnNotes server</translation>
+      <translation>%1 szétkapcsolt a QOwnNotes szerverrel</translation>
     </message>
   </context>
   <context>
