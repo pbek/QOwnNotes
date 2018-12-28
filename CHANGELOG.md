@@ -11,6 +11,16 @@
 - added support for converting html to markdown when a page is created as new
   note for the [QOwnNotes Web Companion Chrome extension](https://github.com/qownnotes/chrome-web-companion/)
   (for [#330](https://github.com/pbek/QOwnNotes/issues/330))
+- inline images will now be automatically transformed to real images if html is
+  converted to markdown (for [#330](https://github.com/pbek/QOwnNotes/issues/330))
+- the [QOwnNotes Web Companion Chrome extension](https://github.com/qownnotes/chrome-web-companion/)
+  was updated to version 18.12.2
+    - added support to import pages as new note
+        - the html will be converted to markdown and images of the page will be
+          downloaded (might take a while)
+    - added support to add a screenshot of the visible area as new note
+    - selected text will now be created as new note with newlines if possible
+    - download the latest version on [QOwnNotes Chrome Web Companion releases](https://github.com/qownnotes/chrome-web-companion/releases)
 
 ## 18.12.8
 - improved note name filtering to prevent troubles on Windows for the

@@ -27,6 +27,7 @@
 #include <QNetworkReply>
 #include <QTimer>
 #include <QSettings>
+#include <QTemporaryFile>
 #include <services/databaseservice.h>
 #include <entities/note.h>
 #include <entities/notefolder.h>
@@ -1422,4 +1423,33 @@ bool Utils::Misc::regExpInListMatches(QString text, QStringList regExpList) {
     return false;
 }
 
+/**
+ * Imports an image from a base64 string and returns the markdown code
+ *
+ * @param data
+ * @param imageSuffix
+ * @return
+ */
+QString Utils::Misc::importMediaFromBase64(QString &data, QString imageSuffix) {
+    // if data still starts with base64 prefix remove it
+    if (data.startsWith("base64,", Qt::CaseInsensitive)) {
+        data = data.mid(6);
+    }
 
+    // create a temporary file for the image
+    QTemporaryFile *tempFile = new QTemporaryFile(
+            QDir::tempPath() + QDir::separator() + "media-XXXXXX." +
+            imageSuffix);
+
+    if (!tempFile->open()) {
+        return "";
+    }
+
+    // write image to the temporary file
+    tempFile->write(QByteArray::fromBase64(data.toLatin1()));
+
+    // store the temporary image in the media folder and return the markdown code
+    QString markdownCode = Note::getInsertMediaMarkdown(tempFile);
+
+    return markdownCode;
+}

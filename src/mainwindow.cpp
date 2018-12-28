@@ -6557,7 +6557,7 @@ void MainWindow::insertHtml(QString html) {
     html = Utils::Misc::htmlToMarkdown(html);
 
     // match image tags
-    QRegularExpression re("<img.+?src=\"(.+?)\".*?>",
+    QRegularExpression re("<img.+?src=[\"'](.+?)[\"'].*?>",
                           QRegularExpression::CaseInsensitiveOption);
     QRegularExpressionMatchIterator i = re.globalMatch(html);
 
@@ -6565,18 +6565,29 @@ void MainWindow::insertHtml(QString html) {
     while (i.hasNext()) {
         QRegularExpressionMatch match = i.next();
         QString imageTag = match.captured(0);
-        QUrl imageUrl = QUrl(match.captured(1));
+        QString imageUrlText = match.captured(1).trimmed();
+        QString markdownCode;
 
-        qDebug() << __func__ << " - 'imageUrl': " << imageUrl;
+        // check if image is an inline image
+        if (imageUrlText.startsWith("data:image/", Qt::CaseInsensitive)) {
+            QStringList parts = imageUrlText.split(";base64,");
+            if (parts.count() == 2) {
+                markdownCode = Utils::Misc::importMediaFromBase64(parts[1]);
+            }
+        } else {
+            QUrl imageUrl = QUrl(imageUrlText);
 
-        if (!imageUrl.isValid()) {
-            continue;
+            qDebug() << __func__ << " - 'imageUrl': " << imageUrl;
+
+            if (!imageUrl.isValid()) {
+                continue;
+            }
+
+            showStatusBarMessage(tr("Downloading %1").arg(imageUrl.toString()));
+
+            // download the image and get the media markdown code for it
+            markdownCode = Note::downloadUrlToMedia(imageUrl);
         }
-
-        showStatusBarMessage(tr("Downloading %1").arg(imageUrl.toString()));
-
-        // download the image and get the media markdown code for it
-        QString markdownCode = Note::downloadUrlToMedia(imageUrl);
 
         if (!markdownCode.isEmpty()) {
             // replace the image tag with markdown code

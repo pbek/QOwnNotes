@@ -91,6 +91,7 @@ namespace Utils {
             QString typeText = "");
         QString generateDebugInformation(bool withGitHubLineBreaks = true);
         bool regExpInListMatches(QString text, QStringList regExpList);
+        QString importMediaFromBase64(QString &data, QString imageSuffix = "dat");
     }  // namespace Misc
 }  // namespace Utils
 

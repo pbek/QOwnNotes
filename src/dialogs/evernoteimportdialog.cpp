@@ -408,22 +408,7 @@ QString EvernoteImportDialog::getMarkdownForMediaFileData(
     QString data = mediaFileData.data;
     QString imageSuffix = mediaFileData.suffix;
 
-    // create a temporary file for the image
-    QTemporaryFile *tempFile = new QTemporaryFile(
-            QDir::tempPath() + QDir::separator() + "media-XXXXXX." +
-            imageSuffix);
-
-    if (!tempFile->open()) {
-        return "";
-    }
-
-    // write image to the temporary file
-    tempFile->write(QByteArray::fromBase64(data.toLatin1()));
-
-    // store the temporary image in the media folder and return the
-    // markdown code
-    QString markdownCode = Note::getInsertMediaMarkdown(tempFile);
-    return markdownCode;
+    return Utils::Misc::importMediaFromBase64(data, imageSuffix);
 }
 
 /**
