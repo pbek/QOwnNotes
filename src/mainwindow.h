@@ -163,6 +163,8 @@ public:
 
     void openIssueAssistantDialog();
 
+    void insertHtml(QString html);
+
 protected:
     void closeEvent(QCloseEvent *event);
 
@@ -736,8 +738,6 @@ private:
     bool isValidMediaFile(QFile *file);
 
     bool isValidNoteFile(QFile *file);
-
-    void insertHtml(QString html);
 
     bool isInDistractionFreeMode();
 

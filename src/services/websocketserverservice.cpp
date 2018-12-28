@@ -94,14 +94,21 @@ void WebSocketServerService::processMessage(const QString &message) {
             return;
         }
 
-        QString name = Note::cleanupFileName(Note::extendedCleanupFileName(
+        const QString contentType = jsonObject.value("contentType").toString();
+        const QString name = Note::cleanupFileName(Note::extendedCleanupFileName(
                 jsonObject.value("headline").toString())).trimmed();
+        const QString text = jsonObject.value("text").toString().trimmed();
+        const bool contentTypeIsHTML = contentType == "html";
 
         mainWindow->createNewNote(
                 name,
-                jsonObject.value("text").toString().trimmed(),
+                contentTypeIsHTML ? "" : text,
                 MainWindow::CreateNewNoteOptions(
                         MainWindow::CreateNewNoteOption::UseNameAsHeadline));
+
+        if (contentTypeIsHTML) {
+            mainWindow->insertHtml(text);
+        }
 #endif
     } else {
         auto *pSender = qobject_cast<QWebSocket *>(sender());

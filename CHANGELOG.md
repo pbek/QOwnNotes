@@ -3,10 +3,14 @@
 ## 18.12.9
 - on macOS the application will now be minimized when closed instead of quit to
   more mimic the default behavior of applications on macOS (for [#1098](https://github.com/pbek/QOwnNotes/issues/1098))
-- added missing `libqt5websockets5` dependency to TravisCI Debian package (for [#1099](https://github.com/pbek/QOwnNotes/issues/1099))
+- added missing `libqt5websockets5` dependency to Travis CI Debian package
+  (for [#1099](https://github.com/pbek/QOwnNotes/issues/1099))
 - "dangerous" characters will now be converted to whitespaces instead of `_` in
   filenames and headlines to prevent underline formatting in headlines if two `_`
   characters are present (for [#330](https://github.com/pbek/QOwnNotes/issues/330))
+- added support for converting html to markdown when a page is created as new
+  note for the [QOwnNotes Web Companion Chrome extension](https://github.com/qownnotes/chrome-web-companion/)
+  (for [#330](https://github.com/pbek/QOwnNotes/issues/330))
 
 ## 18.12.8
 - improved note name filtering to prevent troubles on Windows for the
