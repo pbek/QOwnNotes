@@ -1160,7 +1160,7 @@ QString Note::cleanupFileName(QString name) {
 QString Note::extendedCleanupFileName(QString name) {
     // replace characters that cause problems on certain filesystems when
     // present in filenames with underscores
-    name.replace(QRegularExpression("[\\/\\\\:<>\\\"\\|\\?\\*]"), "_");
+    name.replace(QRegularExpression("[\\/\\\\:<>\\\"\\|\\?\\*]"), " ");
 
     return name;
 }
