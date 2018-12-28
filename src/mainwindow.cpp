@@ -3499,6 +3499,11 @@ void MainWindow::storeSettings() {
 
 void MainWindow::closeEvent(QCloseEvent *event) {
     bool forceQuit = qApp->property("clearAppDataAndExit").toBool();
+    bool isJustHide = showSystemTray;
+
+#ifdef Q_OS_MAC
+    isJustHide = true;
+#endif
 
     // make sure no settings get written after after we got the
     // clearAppDataAndExit call
@@ -3506,8 +3511,12 @@ void MainWindow::closeEvent(QCloseEvent *event) {
         storeSettings();
     }
 
-    if (showSystemTray && !forceQuit) {
+    if (isJustHide && !forceQuit) {
+#ifdef Q_OS_MAC
+        showMinimized();
+#else
         hide();
+#endif
         event->ignore();
     } else {
         storeUpdatedNotesToDisk();
