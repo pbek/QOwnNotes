@@ -22,7 +22,7 @@ BuildRequires:  qt5-qtdeclarative-devel
 BuildRequires:  qt5-qtxmlpatterns-devel
 BuildRequires:  qt5-qtwebsockets-devel
 BuildRequires:  desktop-file-utils
-Requires:       qt5-qtsvg qt5-qtxmlpatterns qt5-qt5websockets
+Requires:       qt5-qtsvg qt5-qtxmlpatterns qt5-qtwebsockets
 
 %else
 # This is for all SUSE
