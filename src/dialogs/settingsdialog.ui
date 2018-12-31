@@ -273,6 +273,18 @@
            </item>
            <item>
             <property name="text">
+             <string>Chrome extension</string>
+            </property>
+            <property name="whatsThis">
+             <string notr="true">19</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../breeze-qownnotes.qrc">
+              <normaloff>:/icons/breeze-qownnotes/16x16/text-html.svg</normaloff>:/icons/breeze-qownnotes/16x16/text-html.svg</iconset>
+            </property>
+           </item>
+           <item>
+            <property name="text">
              <string>General</string>
             </property>
             <property name="whatsThis">
@@ -385,7 +397,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>16</number>
+            <number>17</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -4986,7 +4998,7 @@ git config --global user.name &quot;Your name&quot;</string>
              </item>
             </layout>
            </widget>
-           <widget class="QWidget" name="page">
+           <widget class="QWidget" name="localTrashPage">
             <layout class="QGridLayout" name="gridLayout_64">
              <item row="1" column="0">
               <widget class="QGroupBox" name="localTrashGroupBox">
@@ -5147,6 +5159,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
              </item>
             </layout>
            </widget>
+           <widget class="QWidget" name="webCompanionPage"/>
           </widget>
          </item>
         </layout>

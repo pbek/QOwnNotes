@@ -53,7 +53,8 @@ public:
         GitPage,
         PanelsPage,
         LocalTrashPage,
-        LayoutPage
+        LayoutPage,
+        WebCompanionPage
     };
 
     explicit SettingsDialog(int page = 0,
