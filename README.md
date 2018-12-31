@@ -12,7 +12,8 @@
 [Nextcloud API](https://apps.nextcloud.com/apps/qownnotesapi) |
 [Telegram Group](https://t.me/QOwnNotes) |
 [IRC Chat](https://kiwiirc.com/client/irc.freenode.net/#qownnotes) |
-[Gitter Chat](https://gitter.im/qownnotes/qownnotes)
+[Gitter Chat](https://gitter.im/qownnotes/qownnotes) |
+[QOwnNotes Web Companion Chrome extension](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
 
 [![Build Status Linux / OS X](https://travis-ci.org/pbek/QOwnNotes.svg?branch=develop)](https://travis-ci.org/pbek/QOwnNotes)
 [![Build Status Windows](https://ci.appveyor.com/api/projects/status/github/pbek/QOwnNotes)](https://ci.appveyor.com/project/pbek/qownnotes)
@@ -60,6 +61,12 @@ You can visit the [QOwnNotes project page](https://www.qownnotes.org) for more *
 - external changes of note files are watched (notes or note list are reloaded)
 - differences between current note and externally changed note are showed in a dialog
 - markdown highlighting of notes and a markdown preview mode
+- scripting support and an online [script repository](https://github.com/qownnotes/scripts)
+  where you can install scripts inside the application
+- [QOwnNotes Web Companion Chrome extension](https://github.com/qownnotes/chrome-web-companion)
+  to a add notes from the selected text and other features
+	- visit the [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
+	  page to install the app
 - notes are getting their name from the first line of the note text (just like in the ownCloud notes web-application) and the note text files are automatically renamed, if the the first line changes
     - this feature can also be turned off and you can use any filename you like
 - manage your ownCloud todo lists (ownCloud tasks or Tasks Plus / Calendar Plus)

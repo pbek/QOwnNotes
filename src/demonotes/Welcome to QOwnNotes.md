@@ -17,3 +17,5 @@ Welcome to your installation of **QOwnNotes**!
 - Open the [Script repository](https://github.com/qownnotes/scripts) with `Alt + Shift + I` to add some additional functionality to QOwnNotes
 - Add the [QOwnNotes Web Companion Chrome extension](https://github.com/qownnotes/chrome-web-companion)
   to a add notes from the selected text and other features
+    - Visit the [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
+      to install the extension.
