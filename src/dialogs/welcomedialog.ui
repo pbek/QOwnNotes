@@ -146,7 +146,7 @@
    <item row="4" column="0">
     <widget class="QStackedWidget" name="stackedWidget">
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="noteFolderPage">
       <layout class="QGridLayout" name="gridLayout_2">
@@ -168,13 +168,20 @@
           <string>Note folder</string>
          </property>
          <layout class="QGridLayout" name="gridLayout_3">
-          <item row="3" column="0">
+          <item row="4" column="0">
            <widget class="QLabel" name="errorMessageLabel">
             <property name="styleSheet">
              <string notr="true">* { color: red }</string>
             </property>
             <property name="text">
              <string notr="true">error message</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>Please select where you want to store your notes:</string>
             </property>
            </widget>
           </item>
@@ -185,13 +192,6 @@
             </property>
             <property name="checked">
              <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="0">
-           <widget class="QLabel" name="label_2">
-            <property name="text">
-             <string>Please select where you want to store your notes:</string>
             </property>
            </widget>
           </item>
@@ -238,6 +238,13 @@
               </widget>
              </item>
             </layout>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QCheckBox" name="showNoteSubFoldersCheckBox">
+            <property name="text">
+             <string>Show sub-folders</string>
+            </property>
            </widget>
           </item>
          </layout>

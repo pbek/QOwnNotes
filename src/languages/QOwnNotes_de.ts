@@ -6392,12 +6392,12 @@ Kann nicht rückgängig gemacht werden!</translation>
     </message>
     <message>
         <location filename="../dialogs/welcomedialog.ui" line="168"/>
-        <location filename="../dialogs/welcomedialog.cpp" line="201"/>
+        <location filename="../dialogs/welcomedialog.cpp" line="203"/>
         <source>Note folder</source>
         <translation>Notizen-Ordner</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="184"/>
+        <location filename="../dialogs/welcomedialog.ui" line="191"/>
         <source>Create note folder if not existing</source>
         <translation>Notizen-Ordner erzeugen, falls noch nicht vorhanden</translation>
     </message>
@@ -6412,37 +6412,42 @@ Kann nicht rückgängig gemacht werden!</translation>
         <translation>Ordner auswählen</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="278"/>
+        <location filename="../dialogs/welcomedialog.ui" line="246"/>
+        <source>Show sub-folders</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/welcomedialog.ui" line="285"/>
         <source>Panel layout</source>
         <translation>Bereichslayout</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="335"/>
+        <location filename="../dialogs/welcomedialog.ui" line="342"/>
         <source>Open ownCloud settings</source>
         <translation>Nextcloud/ownCloud-Einstellungen öffnen</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="377"/>
+        <location filename="../dialogs/welcomedialog.ui" line="384"/>
         <source>Open network settings</source>
         <translation>Netzwerk-Einstellungen öffnen</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="194"/>
+        <location filename="../dialogs/welcomedialog.ui" line="184"/>
         <source>Please select where you want to store your notes:</source>
         <translation>Bitte wählen Sie den Ort aus, an dem Ihre Notizen gespeichert werden sollen:</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="312"/>
+        <location filename="../dialogs/welcomedialog.ui" line="319"/>
         <source>If you want to be able to access your note versions and your trashed notes on your ownCloud server, you can configure QOwnNotes for it now. You can also do it at a later time.</source>
         <translation>Wenn Sie Zugriff auf Ihre versionierten oder gelöschten Notizen auf Ihrem Nextcloud/ownCloud-Server haben möchten, können Sie jetzt QOwnNotes entsprechend einrichten. Die Einrichtung kann auch zu einem späteren Zeitpunkt durchgeführt werden.</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="342"/>
+        <location filename="../dialogs/welcomedialog.ui" line="349"/>
         <source>In any case, you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</source>
         <translation>In jedem Fall benötigen Sie den Nextcloud/ownCloud-Sync-Client (oder einen anderen Sync-Client), um Ihre Notizen mit Ihrem Nextcloud/ownCloud-Server zu synchronisieren.</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="384"/>
+        <location filename="../dialogs/welcomedialog.ui" line="391"/>
         <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
         <translation>QOwnNotes sammelt anonyme Nutzungsdaten die dabei helfen Bugs zu finden und um zu entscheiden, welche Bereiche von QOwnNotes als nächstes verbessert werden. Sie können dieses Verhalten in den Einstellungen deaktivieren.</translation>
     </message>
@@ -6462,12 +6467,12 @@ Kann nicht rückgängig gemacht werden!</translation>
         <translation>Dieser Notizen-Pfad existiert nicht!</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.cpp" line="187"/>
+        <location filename="../dialogs/welcomedialog.cpp" line="189"/>
         <source>Please select the folder where your notes will get stored to</source>
         <translation>Bitte den Ordner auswählen, in dem Ihre Notizen gespeichert werden sollen</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.cpp" line="202"/>
+        <location filename="../dialogs/welcomedialog.cpp" line="204"/>
         <source>Keep in mind that the note folder will be stored relative to the directory where QOwnNotes resides in portable mode! So you need to stay on the same drive.</source>
         <translation>Bitte daran denken, dass der Notizordner relativ zum Ordner mit den Dateien von QOwnNotes Portable gespeichert wird. Daher muss der Speicherort auf dem gleichen Laufwerk sein.</translation>
     </message>

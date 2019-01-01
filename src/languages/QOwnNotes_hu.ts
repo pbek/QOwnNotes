@@ -6358,12 +6358,12 @@ Nem lehet visszavonni!</translation>
     </message>
     <message>
         <location filename="../dialogs/welcomedialog.ui" line="168"/>
-        <location filename="../dialogs/welcomedialog.cpp" line="201"/>
+        <location filename="../dialogs/welcomedialog.cpp" line="203"/>
         <source>Note folder</source>
         <translation>Jegyzet mappa</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="184"/>
+        <location filename="../dialogs/welcomedialog.ui" line="191"/>
         <source>Create note folder if not existing</source>
         <translation>Hozzon létre egy jegyzetmappát, ha nincs még</translation>
     </message>
@@ -6378,37 +6378,42 @@ Nem lehet visszavonni!</translation>
         <translation>Mappa kijelölése</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="278"/>
+        <location filename="../dialogs/welcomedialog.ui" line="246"/>
+        <source>Show sub-folders</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/welcomedialog.ui" line="285"/>
         <source>Panel layout</source>
         <translation>Panel elrendezése</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="335"/>
+        <location filename="../dialogs/welcomedialog.ui" line="342"/>
         <source>Open ownCloud settings</source>
         <translation>OwnCloud &amp;beállítások megnyitása</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="377"/>
+        <location filename="../dialogs/welcomedialog.ui" line="384"/>
         <source>Open network settings</source>
         <translation>Nyissa meg a hálózati &amp;beállításokat</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="194"/>
+        <location filename="../dialogs/welcomedialog.ui" line="184"/>
         <source>Please select where you want to store your notes:</source>
         <translation>Kérjük, válassza ki, hol szeretné tárolni a jegyzeteit:</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="312"/>
+        <location filename="../dialogs/welcomedialog.ui" line="319"/>
         <source>If you want to be able to access your note versions and your trashed notes on your ownCloud server, you can configure QOwnNotes for it now. You can also do it at a later time.</source>
         <translation>Ha szeretné elérni a jegyzetváltozatokat és a zárolt jegyzeteket a sajátCloud-kiszolgálón, akkor most beállíthatja a QOwnNotes-ot. Ezt később is megteheti.</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="342"/>
+        <location filename="../dialogs/welcomedialog.ui" line="349"/>
         <source>In any case, you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</source>
         <translation>Minden esetben szükséges szinkrozinálni az ownCloud sync klienst (vagy bármely más szinkronizálási klienst), hogy szinkronizálhassa jegyzeteit ownCloud kiszolgálójával.</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="384"/>
+        <location filename="../dialogs/welcomedialog.ui" line="391"/>
         <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
         <translation>Névtelen használatkövetési adatok segítenek eldönteni, hogy a QOwnNotes melyik részeit fejlesztjük és mely hibákat szerelünk meg. Letilthatja ezt a funkciót a beállításoknál.</translation>
     </message>
@@ -6428,12 +6433,12 @@ Nem lehet visszavonni!</translation>
         <translation>A jegyzet elérési út hiányzik!</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.cpp" line="187"/>
+        <location filename="../dialogs/welcomedialog.cpp" line="189"/>
         <source>Please select the folder where your notes will get stored to</source>
         <translation>Kérjük, válassza ki a mappát, ahol a jegyzeteket tárolni kívánja</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.cpp" line="202"/>
+        <location filename="../dialogs/welcomedialog.cpp" line="204"/>
         <source>Keep in mind that the note folder will be stored relative to the directory where QOwnNotes resides in portable mode! So you need to stay on the same drive.</source>
         <translation>Ne feledje, hogy a jegyzet mappa a könyvtárhoz viszonyítva tárolódik, ahol a QOwnNotes hordozható üzemmódban fut! Ezért maradjon a megfelelő lemezen.</translation>
     </message>

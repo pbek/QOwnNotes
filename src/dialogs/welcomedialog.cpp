@@ -156,6 +156,8 @@ void WelcomeDialog::storeNoteFolderSettings() {
     settings.setValue("notesPath",
                       Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(
                               _notesPath));
+    settings.setValue("showNoteSubFolders",
+            ui->showNoteSubFoldersCheckBox->isChecked());
 }
 
 void WelcomeDialog::on_backButton_clicked() {

@@ -6360,12 +6360,12 @@ This cannot be undone!</source>
     </message>
     <message>
         <location filename="../dialogs/welcomedialog.ui" line="168"/>
-        <location filename="../dialogs/welcomedialog.cpp" line="201"/>
+        <location filename="../dialogs/welcomedialog.cpp" line="203"/>
         <source>Note folder</source>
         <translation>筆記資料夾</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="184"/>
+        <location filename="../dialogs/welcomedialog.ui" line="191"/>
         <source>Create note folder if not existing</source>
         <translation>若筆記資料夾不存在則建立之</translation>
     </message>
@@ -6380,37 +6380,42 @@ This cannot be undone!</source>
         <translation>選取資料夾</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="278"/>
+        <location filename="../dialogs/welcomedialog.ui" line="246"/>
+        <source>Show sub-folders</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/welcomedialog.ui" line="285"/>
         <source>Panel layout</source>
         <translation>版面配置</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="335"/>
+        <location filename="../dialogs/welcomedialog.ui" line="342"/>
         <source>Open ownCloud settings</source>
         <translation>開啟ownCloud設定</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="377"/>
+        <location filename="../dialogs/welcomedialog.ui" line="384"/>
         <source>Open network settings</source>
         <translation>開啟網路設定</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="194"/>
+        <location filename="../dialogs/welcomedialog.ui" line="184"/>
         <source>Please select where you want to store your notes:</source>
         <translation>請選擇您筆記的棲身之處：</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="312"/>
+        <location filename="../dialogs/welcomedialog.ui" line="319"/>
         <source>If you want to be able to access your note versions and your trashed notes on your ownCloud server, you can configure QOwnNotes for it now. You can also do it at a later time.</source>
         <translation>若您想在 ownCloud 伺服氣上存取您的筆記版本記錄與垃圾桶中的筆記，您可以現在進行設定，或者您也可以稍後再設定。</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="342"/>
+        <location filename="../dialogs/welcomedialog.ui" line="349"/>
         <source>In any case, you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</source>
         <translation>您需要ownCloud同步客戶端（或任何其他同步軟體）以同步您的筆記到ownCloud伺服器上。</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="384"/>
+        <location filename="../dialogs/welcomedialog.ui" line="391"/>
         <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
         <translation>QOwnNotes將追蹤匿名使用資料，這將幫助改善QOwnNotes並找出與修復問題。您可以在偏好設定中停用它。</translation>
     </message>
@@ -6430,12 +6435,12 @@ This cannot be undone!</source>
         <translation>該筆記路徑不存在！</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.cpp" line="187"/>
+        <location filename="../dialogs/welcomedialog.cpp" line="189"/>
         <source>Please select the folder where your notes will get stored to</source>
         <translation>請選個資料夾作為您筆記的棲身之地</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.cpp" line="202"/>
+        <location filename="../dialogs/welcomedialog.cpp" line="204"/>
         <source>Keep in mind that the note folder will be stored relative to the directory where QOwnNotes resides in portable mode! So you need to stay on the same drive.</source>
         <translation>請留意若您使用可攜模式您的筆記資料夾將存放在相對於 QOwnNotes 所在處的位置！故請放在相同的磁碟中。</translation>
     </message>

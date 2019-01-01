@@ -440,7 +440,7 @@ QString NoteFolder::fixRemotePath() {
 }
 
 /**
- * Create the notesPath and the recentNoteFolders to NoteFolder objects
+ * Migrate the notesPath and the recentNoteFolders to NoteFolder objects
  */
 bool NoteFolder::migrateToNoteFolders() {
     if (countAll() > 0) {
@@ -462,7 +462,11 @@ bool NoteFolder::migrateToNoteFolders() {
         noteFolder.setOwnCloudServerId(1);
         noteFolder.suggestRemotePath();
         noteFolder.setPriority(priority++);
+        noteFolder.setShowSubfolders(settings.value(
+                "showNoteSubFolders").toBool());
         noteFolder.store();
+
+        settings.remove("showNoteSubFolders");
 
         if (noteFolder.isFetched()) {
             noteFolder.setAsCurrent();
@@ -473,7 +477,7 @@ bool NoteFolder::migrateToNoteFolders() {
             settings.value("recentNoteFolders").toStringList();
 
     // create recent note folders as NoteFolder
-    if (recentNoteFolders.size() > 0) {
+    if (!recentNoteFolders.empty()) {
         Q_FOREACH(QString recentNoteFolderPath, recentNoteFolders) {
                 if (notesPath != recentNoteFolderPath) {
                     NoteFolder noteFolder;

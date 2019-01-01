@@ -4,8 +4,11 @@
 - you can now change the socket server port for connecting with the
   [QOwnNotes Web Companion Chrome extension](https://github.com/qownnotes/chrome-web-companion)
   in the new *Chrome extension settings* (for [#330](https://github.com/pbek/QOwnNotes/issues/330))
+    - the Chrome extension is now also in the [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
 - fixed some possible crashes if a socket client disconnects from the socket server
   (for [#330](https://github.com/pbek/QOwnNotes/issues/330))
+- you can now enable note sub-folders in the welcome dialog if you are running
+  QOwnNotes for the first time
 
 ## 18.12.9
 - on macOS the application will now be minimized when closed instead of quit to

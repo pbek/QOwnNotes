@@ -6386,12 +6386,12 @@ This cannot be undone!</source>
     </message>
     <message>
         <location filename="../dialogs/welcomedialog.ui" line="168"/>
-        <location filename="../dialogs/welcomedialog.cpp" line="201"/>
+        <location filename="../dialogs/welcomedialog.cpp" line="203"/>
         <source>Note folder</source>
         <translation>Carpeta de notas</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="184"/>
+        <location filename="../dialogs/welcomedialog.ui" line="191"/>
         <source>Create note folder if not existing</source>
         <translation>Crear carpeta de notas si no existe</translation>
     </message>
@@ -6406,37 +6406,42 @@ This cannot be undone!</source>
         <translation>Selecciona la carpeta</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="278"/>
+        <location filename="../dialogs/welcomedialog.ui" line="246"/>
+        <source>Show sub-folders</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/welcomedialog.ui" line="285"/>
         <source>Panel layout</source>
         <translation>Diseño del panel</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="335"/>
+        <location filename="../dialogs/welcomedialog.ui" line="342"/>
         <source>Open ownCloud settings</source>
         <translation>Abrir ajustes de ownCloud</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="377"/>
+        <location filename="../dialogs/welcomedialog.ui" line="384"/>
         <source>Open network settings</source>
         <translation>Abrir ajustes de red</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="194"/>
+        <location filename="../dialogs/welcomedialog.ui" line="184"/>
         <source>Please select where you want to store your notes:</source>
         <translation>Por favor seleccione dónde almacenar sus notas:</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="312"/>
+        <location filename="../dialogs/welcomedialog.ui" line="319"/>
         <source>If you want to be able to access your note versions and your trashed notes on your ownCloud server, you can configure QOwnNotes for it now. You can also do it at a later time.</source>
         <translation>Si deseas poder acceder a las versiones de tus notas y a notas eliminadas en tu servidor de ownCloud, puedes configurar QOwnNotes para ello ahora. También puedes hacerlo después.</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="342"/>
+        <location filename="../dialogs/welcomedialog.ui" line="349"/>
         <source>In any case, you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</source>
         <translation>En todo caso, necesitas el cliente de sincronización de ownCloud (u otro cliente de sincronización) para sincronizar tus notas con el servidor de ownCloud.</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="384"/>
+        <location filename="../dialogs/welcomedialog.ui" line="391"/>
         <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
         <translation>QOwnNotes registrará datos anónimos de uso para ayudar a decidir qué partes de QOwnNotes mejorar primero y encontrar y arreglar errores. Puede deshabilitar esta función en la configuración.</translation>
     </message>
@@ -6456,12 +6461,12 @@ This cannot be undone!</source>
         <translation>Esta ruta de notas no existe!</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.cpp" line="187"/>
+        <location filename="../dialogs/welcomedialog.cpp" line="189"/>
         <source>Please select the folder where your notes will get stored to</source>
         <translation>Por favor seleccione la carpeta donde se almacenarán las notas</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.cpp" line="202"/>
+        <location filename="../dialogs/welcomedialog.cpp" line="204"/>
         <source>Keep in mind that the note folder will be stored relative to the directory where QOwnNotes resides in portable mode! So you need to stay on the same drive.</source>
         <translation>¡Ten en cuenta que la carpeta de notas se almacenará relativa al directorio donde reside QOwnNotes en modo portable! Así que debe alojarse en el mismo disco.</translation>
     </message>
