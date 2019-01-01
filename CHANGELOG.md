@@ -9,7 +9,9 @@
   (for [#330](https://github.com/pbek/QOwnNotes/issues/330))
 - you can now enable note sub-folders in the welcome dialog if you are running
   QOwnNotes for the first time
-- fixed several typos in dialogs
+- fixed some typos in dialogs
+- added more German, Italian, Czech, Swedish, Croatian, French, Hungarian and
+  Dutch translation (thank you druus, rakekniven, tiwi90 and Fabijenna)
 
 ## 18.12.9
 - on macOS the application will now be minimized when closed instead of quit to
