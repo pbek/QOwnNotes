@@ -24,6 +24,10 @@ using namespace std;
 QT_USE_NAMESPACE
 
 static QString getIdentifier(QWebSocket *peer) {
+    if (peer == Q_NULLPTR) {
+        return "";
+    }
+
     return QStringLiteral("%1:%2").arg(peer->peerAddress().toString(),
                                        QString::number(peer->peerPort()));
 }
@@ -33,35 +37,52 @@ WebSocketServerService::WebSocketServerService(quint16 port, QObject *parent) :
         m_pWebSocketServer(new QWebSocketServer(
                 QStringLiteral("QOwnNotes Server"),
                 QWebSocketServer::NonSecureMode, this)) {
+    listen(port);
+}
+
+void WebSocketServerService::listen(quint16 port) {
+    m_port = 0;
 
     if (port == 0) {
-        port = getPort();
+        port = getSettingsPort();
+    }
+
+    if (m_pWebSocketServer->isListening()) {
+        m_pWebSocketServer->close();
     }
 
     if (m_pWebSocketServer->listen(QHostAddress::Any, port)) {
         Utils::Misc::printInfo(tr("QOwnNotes server listening on port %1").arg(
                 QString::number(port)));
 
-        connect(m_pWebSocketServer, &QWebSocketServer::newConnection,
-                this, &WebSocketServerService::onNewConnection);
+        connect(m_pWebSocketServer, SIGNAL(newConnection()),
+                this, SLOT(onNewConnection()));
+        m_port = port;
     } else {
         qWarning() << tr("Could not start QOwnNotes server on port %1!").arg(
                 QString::number(port));
     }
 }
 
-quint16 WebSocketServerService::getPort() const {
+quint16 WebSocketServerService::getPort() {
+    return m_port;
+}
+
+quint16 WebSocketServerService::getSettingsPort() {
     QSettings settings;
-    quint16 port;
+    quint16 port = static_cast<quint16>(settings.value(
+            "webSocketServerService/port", getDefaultPort()).toULongLong());
+    return port;
+}
+
+quint16 WebSocketServerService::getDefaultPort() {
     quint16 defaultPort = 22222;
 
 #ifndef QT_NO_DEBUG
     defaultPort = 22223;
 #endif
 
-    port = static_cast<quint16>(settings.value("webSocketServerService/port",
-            defaultPort).toULongLong());
-    return port;
+    return defaultPort;
 }
 
 WebSocketServerService::~WebSocketServerService() {
@@ -70,6 +91,11 @@ WebSocketServerService::~WebSocketServerService() {
 
 void WebSocketServerService::onNewConnection() {
     auto pSocket = m_pWebSocketServer->nextPendingConnection();
+
+    if (pSocket == Q_NULLPTR) {
+        return;
+    }
+
     Utils::Misc::printInfo(tr("%1 connected to QOwnNotes server!").arg(
             getIdentifier(pSocket)));
     pSocket->setParent(this);
@@ -119,12 +145,11 @@ void WebSocketServerService::processMessage(const QString &message) {
 void WebSocketServerService::socketDisconnected() {
     auto *pClient = qobject_cast<QWebSocket *>(sender());
 
-    // this seems to be prone to crashing if a new note is created and a socket
-    // gets disconnected
-    Utils::Misc::printInfo(tr("%1 was disconnected from QOwnNotes server").arg(
-            getIdentifier(pClient)));
+    if (pClient != Q_NULLPTR) {
+        Utils::Misc::printInfo(
+                tr("%1 was disconnected from QOwnNotes server").arg(
+                        getIdentifier(pClient)));
 
-    if (pClient) {
         m_clients.removeAll(pClient);
         pClient->deleteLater();
     }

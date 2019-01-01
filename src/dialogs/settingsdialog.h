@@ -252,6 +252,8 @@ private slots:
 
     void on_overrideInterfaceFontSizeGroupBox_toggled(bool arg1);
 
+    void on_webSocketServerServicePortResetButton_clicked();
+
 private:
 
     Ui::SettingsDialog *ui;

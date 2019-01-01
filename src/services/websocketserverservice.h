@@ -29,6 +29,14 @@ public:
             QObject *parent = nullptr);
     ~WebSocketServerService() override;
 
+    quint16 getPort();
+
+    static quint16 getSettingsPort();
+
+    static quint16 getDefaultPort();
+
+    void listen(quint16 port = 0);
+
 private slots:
     void onNewConnection();
     void processMessage(const QString &message);
@@ -37,6 +45,5 @@ private slots:
 private:
     QWebSocketServer *m_pWebSocketServer;
     QList<QWebSocket *> m_clients;
-
-    quint16 getPort() const;
+    quint16 m_port;
 };

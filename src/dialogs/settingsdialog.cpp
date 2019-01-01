@@ -252,6 +252,11 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
         ui->noteListPreviewCheckBox->setText(
                 ui->noteListPreviewCheckBox->text() + " (experimental)");
     }
+
+    ui->webCompannionLabel->setText(ui->webCompannionLabel->text().arg(
+            "https://github.com/qownnotes/chrome-web-companion",
+            "https://chrome.google.com/webstore/detail/qownnotes-web-companion/"
+            "pkgkfnampapjbopomdpnkckbjdnpkbkp"));
 }
 
 /**
@@ -768,6 +773,9 @@ void SettingsDialog::storeSettings() {
     settings.setValue("automaticNoteFolderDatabaseClosing",
                       ui->automaticNoteFolderDatabaseClosingCheckBox->
                               isChecked());
+
+    settings.setValue("webSocketServerService/port",
+                      ui->webSocketServerServicePortSpinBox->value());
 }
 
 /**
@@ -1149,6 +1157,9 @@ void SettingsDialog::readSettings() {
 
     ui->automaticNoteFolderDatabaseClosingCheckBox->setChecked(
             Utils::Misc::doAutomaticNoteFolderDatabaseClosing());
+
+    ui->webSocketServerServicePortSpinBox->setValue(
+            WebSocketServerService::getSettingsPort());
 }
 
 /**
@@ -3662,4 +3673,8 @@ void SettingsDialog::on_overrideInterfaceFontSizeGroupBox_toggled(bool arg1) {
     QSettings settings;
     settings.setValue("overrideInterfaceFontSize", arg1);
     Utils::Gui::updateInterfaceFontSize();
+}
+
+void SettingsDialog::on_webSocketServerServicePortResetButton_clicked() {
+    ui->webSocketServerServicePortSpinBox->setValue(WebSocketServerService::getDefaultPort());
 }

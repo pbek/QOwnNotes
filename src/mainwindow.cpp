@@ -150,6 +150,7 @@ MainWindow::MainWindow(QWidget *parent) :
     _readOnlyButton = new QPushButton(this);
     _settingsDialog = Q_NULLPTR;
     _lastNoteSelectionWasMultiple = false;
+    _webSocketServerService = Q_NULLPTR;
 
     this->setWindowTitle(
             "QOwnNotes - version " + QString(VERSION) +
@@ -497,8 +498,6 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // attempt to check the api app version
     startAppVersionTest();
-
-    QTimer::singleShot(250, this, SLOT(initWebSocketServerService()));
 }
 
 void MainWindow::initWebSocketServerService() {
@@ -2374,6 +2373,13 @@ void MainWindow::readSettingsFromSettingsDialog() {
 
     ui->noteTextEdit->setPaperMargins();
     ui->encryptedNoteTextEdit->setPaperMargins();
+
+    if (_webSocketServerService == Q_NULLPTR) {
+        QTimer::singleShot(250, this, SLOT(initWebSocketServerService()));
+    } else if (_webSocketServerService->getPort() !=
+        WebSocketServerService::getSettingsPort()) {
+        _webSocketServerService->listen();
+    }
 }
 
 /**

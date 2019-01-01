@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 19.1.0
+- you can now change the socket server port for connecting with the
+  [QOwnNotes Web Companion Chrome extension](https://github.com/qownnotes/chrome-web-companion)
+  in the new *Chrome extension settings* (for [#330](https://github.com/pbek/QOwnNotes/issues/330))
+- fixed some possible crashes if a socket client disconnects from the socket server
+  (for [#330](https://github.com/pbek/QOwnNotes/issues/330))
+
 ## 18.12.9
 - on macOS the application will now be minimized when closed instead of quit to
   more mimic the default behavior of applications on macOS (for [#1098](https://github.com/pbek/QOwnNotes/issues/1098))
@@ -9,11 +16,11 @@
   filenames and headlines to prevent underline formatting in headlines if two `_`
   characters are present (for [#330](https://github.com/pbek/QOwnNotes/issues/330))
 - added support for converting html to markdown when a page is created as new
-  note for the [QOwnNotes Web Companion Chrome extension](https://github.com/qownnotes/chrome-web-companion/)
+  note for the [QOwnNotes Web Companion Chrome extension](https://github.com/qownnotes/chrome-web-companion)
   (for [#330](https://github.com/pbek/QOwnNotes/issues/330))
 - inline images will now be automatically transformed to real images if html is
   converted to markdown (for [#330](https://github.com/pbek/QOwnNotes/issues/330))
-- the [QOwnNotes Web Companion Chrome extension](https://github.com/qownnotes/chrome-web-companion/)
+- the [QOwnNotes Web Companion Chrome extension](https://github.com/qownnotes/chrome-web-companion)
   was updated to version 18.12.2
     - added support to import pages as new note
         - the html will be converted to markdown and images of the page will be
@@ -25,7 +32,7 @@
 
 ## 18.12.8
 - improved note name filtering to prevent troubles on Windows for the
-  [QOwnNotes Web Companion Chrome extension](https://github.com/qownnotes/chrome-web-companion/)
+  [QOwnNotes Web Companion Chrome extension](https://github.com/qownnotes/chrome-web-companion)
   (for [#330](https://github.com/pbek/QOwnNotes/issues/330))
     - the name and note text will be trimmed to prevent wrong newlines
     - the QOwnNotes Web Companion Chrome extension was updated to version 18.12.1
@@ -40,7 +47,7 @@
 - added more Spanish translation (thank you richarson)
 
 ## 18.12.7
-- added support for the new [QOwnNotes Web Companion Chrome extension](https://github.com/qownnotes/chrome-web-companion/)
+- added support for the new [QOwnNotes Web Companion Chrome extension](https://github.com/qownnotes/chrome-web-companion)
   to add selected text as new note (for [#330](https://github.com/pbek/QOwnNotes/issues/330))
     - you can download the current release of the extension at
       [QOwnNotes Chrome Web Companion 18.12.0](https://github.com/qownnotes/chrome-web-companion/releases/tag/18.12.0)
