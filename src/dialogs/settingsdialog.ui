@@ -3270,8 +3270,7 @@
                   <item row="9" column="0" colspan="2">
                    <widget class="QCheckBox" name="restoreCursorPositionCheckBox">
                     <property name="toolTip">
-                     <string>When opening notes the cursor position inside the note will now be restored
-  to the position when the note was last visited in the current session</string>
+                     <string>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</string>
                     </property>
                     <property name="text">
                      <string>Restore cursor position when opening a note</string>
