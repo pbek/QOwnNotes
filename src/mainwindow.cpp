@@ -117,6 +117,10 @@ MainWindow::MainWindow(QWidget *parent) :
 
     ui->setupUi(this);
 
+    // TODO: hidden for ui->previewWebEngineView
+    ui->noteTextView->hide();
+    ui->noteTextViewSearchFrame->hide();
+
     // setup vim mode
     if (settings.value("Editor/vimMode").toBool()) {
         initFakeVim(ui->noteTextEdit);
@@ -3828,6 +3832,7 @@ void MainWindow::setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly,
         // a different text than before
         if (_notePreviewHash != hash) {
             ui->noteTextView->setHtml(html);
+            ui->previewWebEngineView->setHtml(html);
             _notePreviewHash = hash;
         }
     }
