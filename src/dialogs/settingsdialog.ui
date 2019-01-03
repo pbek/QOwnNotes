@@ -273,7 +273,7 @@
            </item>
            <item>
             <property name="text">
-             <string>Chrome extension</string>
+             <string>Browser extension</string>
             </property>
             <property name="whatsThis">
              <string notr="true">19</string>

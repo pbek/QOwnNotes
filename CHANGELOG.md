@@ -2,7 +2,7 @@
 
 ## 19.1.0
 - you can now change the socket server port for connecting with the
-  [QOwnNotes Web Companion Chrome extension](https://github.com/qownnotes/chrome-web-companion)
+  [QOwnNotes Web Companion Chrome extension](https://github.com/qownnotes/web-companion)
   in the new *Chrome extension settings* (for [#330](https://github.com/pbek/QOwnNotes/issues/330))
     - the Chrome extension is now also available in the
       [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
@@ -23,23 +23,23 @@
   filenames and headlines to prevent underline formatting in headlines if two `_`
   characters are present (for [#330](https://github.com/pbek/QOwnNotes/issues/330))
 - added support for converting html to markdown when a page is created as new
-  note for the [QOwnNotes Web Companion Chrome extension](https://github.com/qownnotes/chrome-web-companion)
+  note for the [QOwnNotes Web Companion Chrome extension](https://github.com/qownnotes/web-companion)
   (for [#330](https://github.com/pbek/QOwnNotes/issues/330))
 - inline images will now be automatically transformed to real images if html is
   converted to markdown (for [#330](https://github.com/pbek/QOwnNotes/issues/330))
-- the [QOwnNotes Web Companion Chrome extension](https://github.com/qownnotes/chrome-web-companion)
+- the [QOwnNotes Web Companion Chrome extension](https://github.com/qownnotes/web-companion)
   was updated to version 18.12.2
     - added support to import pages as new note
         - the html will be converted to markdown and images of the page will be
           downloaded (might take a while)
     - added support to add a screenshot of the visible area as new note
     - selected text will now be created as new note with newlines if possible
-    - download the latest version on [QOwnNotes Chrome Web Companion releases](https://github.com/qownnotes/chrome-web-companion/releases)
+    - download the latest version on [QOwnNotes Chrome Web Companion releases](https://github.com/qownnotes/web-companion/releases)
 - added more Hungarian and Dutch translation (thank you Fabijenna)
 
 ## 18.12.8
 - improved note name filtering to prevent troubles on Windows for the
-  [QOwnNotes Web Companion Chrome extension](https://github.com/qownnotes/chrome-web-companion)
+  [QOwnNotes Web Companion Chrome extension](https://github.com/qownnotes/web-companion)
   (for [#330](https://github.com/pbek/QOwnNotes/issues/330))
     - the name and note text will be trimmed to prevent wrong newlines
     - the QOwnNotes Web Companion Chrome extension was updated to version 18.12.1
@@ -47,17 +47,17 @@
         - the url of the page will now also be written to the note
         - restructured the context menu
         - added an context menu entry to reset the settings
-        - download the latest version on [QOwnNotes Chrome Web Companion releases](https://github.com/qownnotes/chrome-web-companion/releases)
+        - download the latest version on [QOwnNotes Chrome Web Companion releases](https://github.com/qownnotes/web-companion/releases)
 - the amount of `=` characters added for the headlines of new notes are now
   limited to 40 to prevent too long headline lines
     - the name will be trimmed to prevent wrong newlines in the headline
 - added more Spanish translation (thank you richarson)
 
 ## 18.12.7
-- added support for the new [QOwnNotes Web Companion Chrome extension](https://github.com/qownnotes/chrome-web-companion)
+- added support for the new [QOwnNotes Web Companion Chrome extension](https://github.com/qownnotes/web-companion)
   to add selected text as new note (for [#330](https://github.com/pbek/QOwnNotes/issues/330))
     - you can download the current release of the extension at
-      [QOwnNotes Chrome Web Companion 18.12.0](https://github.com/qownnotes/chrome-web-companion/releases/tag/18.12.0)
+      [QOwnNotes Chrome Web Companion 18.12.0](https://github.com/qownnotes/web-companion/releases/tag/18.12.0)
     - then visit `chrome://extensions` and drop the extension file into Chrome to install the extension
 - added more Polish, German, Chinese Traditional and Italian (thank you lucjan,
   rakekniven, abev66 and mlocati)
