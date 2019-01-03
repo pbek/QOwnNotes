@@ -254,7 +254,7 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
     }
 
     ui->webCompannionLabel->setText(ui->webCompannionLabel->text().arg(
-            "https://github.com/qownnotes/chrome-web-companion",
+            "https://github.com/qownnotes/web-companion",
             "https://chrome.google.com/webstore/detail/qownnotes-web-companion/"
             "pkgkfnampapjbopomdpnkckbjdnpkbkp"));
 }
