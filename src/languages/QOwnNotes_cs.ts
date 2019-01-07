@@ -818,7 +818,7 @@
     </message>
     <message numerus="yes">
         <location filename="../dialogs/localtrashdialog.cpp" line="219"/>
-        <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) where restored</source>
+        <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</source>
         <translation type="unfinished">
             <numerusform>&lt;strong&gt;%n&lt;/strong&gt; poznámka byla obnovena</numerusform>
             <numerusform>&lt;strong&gt;%n&lt;/strong&gt; poznámky byly obnoveny</numerusform>
@@ -841,11 +841,11 @@
     </message>
     <message numerus="yes">
         <location filename="../dialogs/localtrashdialog.cpp" line="265"/>
-        <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) where removed</source>
+        <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</source>
         <translation type="unfinished">
             <numerusform>&lt;strong&gt;%n&lt;/strong&gt; poznámka(ky) byla odstraněna</numerusform>
             <numerusform>&lt;strong&gt;%n&lt;/strong&gt; poznámka(ky) byla odstraněna</numerusform>
-            <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) where removed</numerusform>
+            <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</numerusform>
         </translation>
     </message>
 </context>

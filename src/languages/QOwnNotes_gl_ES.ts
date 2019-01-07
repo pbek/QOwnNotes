@@ -812,7 +812,7 @@
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="219"/>
-      <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) where restored</source>
+      <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</source>
       <translation>
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; nota restaurada</numerusform>
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; notas restauradas</numerusform>
@@ -833,7 +833,7 @@
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="265"/>
-      <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) where removed</source>
+      <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</source>
       <translation>
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; nota eliminada</numerusform>
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; notas eliminadas</numerusform>

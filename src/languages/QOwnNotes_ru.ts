@@ -818,11 +818,11 @@
     </message>
     <message numerus="yes">
         <location filename="../dialogs/localtrashdialog.cpp" line="219"/>
-        <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) where restored</source>
+        <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</source>
         <translation type="unfinished">
             <numerusform>заметка восстановлена</numerusform>
             <numerusform>&lt;strong&gt;%n&lt;/strong&gt; заметки восстановлены</numerusform>
-            <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) where restored</numerusform>
+            <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -841,11 +841,11 @@
     </message>
     <message numerus="yes">
         <location filename="../dialogs/localtrashdialog.cpp" line="265"/>
-        <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) where removed</source>
+        <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</source>
         <translation type="unfinished">
             <numerusform>заметка удалена</numerusform>
             <numerusform>&lt;strong&gt;%n&lt;/strong&gt; заметки удалены</numerusform>
-            <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) where removed</numerusform>
+            <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</numerusform>
         </translation>
     </message>
 </context>

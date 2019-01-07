@@ -216,7 +216,7 @@ void LocalTrashDialog::restoreSelectedTrashItems() {
         Utils::Gui::information(
                 this,
                 tr("Notes restored"),
-                tr("<strong>%n</strong> note(s) where restored", "",
+                tr("<strong>%n</strong> note(s) were restored", "",
                    restoreCount), "local-trash-notes-restored");
 
         if (restoreCount > 0) {
@@ -262,7 +262,7 @@ void LocalTrashDialog::removeSelectedTrashItems() {
         Utils::Gui::information(
                 this,
                 tr("Notes removed"),
-                tr("<strong>%n</strong> note(s) where removed", "",
+                tr("<strong>%n</strong> note(s) were removed", "",
                    removeCount), "local-trash-notes-removed");
 
         if (removeCount > 0) {
