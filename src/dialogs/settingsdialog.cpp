@@ -317,6 +317,11 @@ void SettingsDialog::replaceOwnCloudText() const {
             Utils::Misc::replaceOwnCloudText(
                     ui->noteFolderRemotePathLineEdit->toolTip()));
 
+    // general settings
+    ui->allowDifferentNoteFileNameCheckBox->setToolTip(
+            Utils::Misc::replaceOwnCloudText(
+                    ui->allowDifferentNoteFileNameCheckBox->toolTip()));
+
     // task settings
     ui->defaultOwnCloudCalendarRadioButton->setText(
             Utils::Misc::replaceOwnCloudText(

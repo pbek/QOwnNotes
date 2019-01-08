@@ -397,7 +397,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>19</number>
+            <number>7</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -3366,7 +3366,7 @@
                   <item row="6" column="0" colspan="2">
                    <widget class="QCheckBox" name="allowDifferentNoteFileNameCheckBox">
                     <property name="toolTip">
-                     <string>Allow the note file name to be different from the headline.&lt;br&gt;Be aware of that ownCloud notes needs them to be the same!</string>
+                     <string>Allow the note file name to be different from the headline.&lt;br&gt;Beaware that ownCloud Notes needs the file name to be the same as the headline!</string>
                     </property>
                     <property name="text">
                      <string>Allow note file name to be different from headline</string>
