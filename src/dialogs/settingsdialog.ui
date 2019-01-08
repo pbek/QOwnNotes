@@ -397,7 +397,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>7</number>
+            <number>19</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -5161,7 +5161,36 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
            <widget class="QWidget" name="webCompanionPage">
             <layout class="QGridLayout" name="gridLayout_70">
              <item row="1" column="0">
-              <widget class="QGroupBox" name="groupBox_32">
+              <widget class="QLabel" name="webCompannionLabel">
+               <property name="text">
+                <string>Install the &lt;a href=&quot;%1&quot;&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href=&quot;%2&quot;&gt;Chrome Web Store&lt;/a&gt; or &lt;a href=&quot;%3&quot;&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</string>
+               </property>
+               <property name="wordWrap">
+                <bool>true</bool>
+               </property>
+               <property name="openExternalLinks">
+                <bool>true</bool>
+               </property>
+               <property name="textInteractionFlags">
+                <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="0">
+              <spacer name="verticalSpacer_17">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>959</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="2" column="0">
+              <widget class="QGroupBox" name="webSocketGroupBox">
                <property name="title">
                 <string>Web socket server</string>
                </property>
@@ -5203,33 +5232,20 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                </layout>
               </widget>
              </item>
-             <item row="2" column="0">
-              <spacer name="verticalSpacer_17">
-               <property name="orientation">
-                <enum>Qt::Vertical</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>20</width>
-                 <height>959</height>
-                </size>
-               </property>
-              </spacer>
-             </item>
              <item row="0" column="0">
-              <widget class="QLabel" name="webCompannionLabel">
-               <property name="text">
-                <string>Install the &lt;a href=&quot;%1&quot;&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href=&quot;%2&quot;&gt;Chrome Web Store&lt;/a&gt; or &lt;a href=&quot;%3&quot;&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</string>
+              <widget class="QGroupBox" name="groupBox_33">
+               <property name="title">
+                <string>Web socket server support</string>
                </property>
-               <property name="wordWrap">
-                <bool>true</bool>
-               </property>
-               <property name="openExternalLinks">
-                <bool>true</bool>
-               </property>
-               <property name="textInteractionFlags">
-                <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
-               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_26">
+                <item>
+                 <widget class="QCheckBox" name="enableSocketServerCheckBox">
+                  <property name="text">
+                   <string>Enable socket server</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
               </widget>
              </item>
             </layout>

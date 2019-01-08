@@ -37,19 +37,17 @@ WebSocketServerService::WebSocketServerService(quint16 port, QObject *parent) :
         m_pWebSocketServer(new QWebSocketServer(
                 QStringLiteral("QOwnNotes Server"),
                 QWebSocketServer::NonSecureMode, this)) {
-    listen(port);
+    if (Utils::Misc::isSocketServerEnabled()) {
+        listen(port);
+    }
 }
 
 void WebSocketServerService::listen(quint16 port) {
-    m_port = 0;
-
     if (port == 0) {
         port = getSettingsPort();
     }
 
-    if (m_pWebSocketServer->isListening()) {
-        m_pWebSocketServer->close();
-    }
+    close();
 
     if (m_pWebSocketServer->listen(QHostAddress::Any, port)) {
         Utils::Misc::printInfo(tr("QOwnNotes server listening on port %1").arg(
@@ -61,6 +59,13 @@ void WebSocketServerService::listen(quint16 port) {
     } else {
         qWarning() << tr("Could not start QOwnNotes server on port %1!").arg(
                 QString::number(port));
+    }
+}
+
+void WebSocketServerService::close() {
+    if (m_pWebSocketServer->isListening()) {
+        m_pWebSocketServer->close();
+        m_port = 0;
     }
 }
 

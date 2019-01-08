@@ -221,6 +221,8 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
             this, SLOT(needRestart()));
     connect(ui->ignoreNoteSubFoldersLineEdit, SIGNAL(textChanged(QString)),
             this, SLOT(needRestart()));
+    connect(ui->enableSocketServerCheckBox, SIGNAL(toggled(bool)),
+            this, SLOT(needRestart()));
 //    connect(ui->layoutWidget, SIGNAL(settingsStored()),
 //            this, SLOT(needRestart()));
 
@@ -591,6 +593,8 @@ void SettingsDialog::storeSettings() {
                       ui->localTrashClearCheckBox->isChecked());
     settings.setValue("localTrash/autoCleanupDays",
                       ui->localTrashClearTimeSpinBox->value());
+    settings.setValue("enableSocketServer",
+                      ui->enableSocketServerCheckBox->isChecked());
 
     // make the path relative to the portable data path if we are in
     // portable mode
@@ -908,6 +912,9 @@ void SettingsDialog::readSettings() {
             settings.value("localTrash/autoCleanupEnabled", true).toBool());
     ui->localTrashClearTimeSpinBox->setValue(
             settings.value("localTrash/autoCleanupDays", 30).toInt());
+    ui->enableSocketServerCheckBox->setChecked(
+            Utils::Misc::isSocketServerEnabled());
+    on_enableSocketServerCheckBox_toggled();
 
 #ifdef Q_OS_MAC
     bool restoreCursorPositionDefault = false;
@@ -3683,4 +3690,9 @@ void SettingsDialog::on_overrideInterfaceFontSizeGroupBox_toggled(bool arg1) {
 
 void SettingsDialog::on_webSocketServerServicePortResetButton_clicked() {
     ui->webSocketServerServicePortSpinBox->setValue(WebSocketServerService::getDefaultPort());
+}
+
+void SettingsDialog::on_enableSocketServerCheckBox_toggled() {
+    bool checked = ui->enableSocketServerCheckBox->isChecked();
+    ui->webSocketGroupBox->setEnabled(checked);
 }

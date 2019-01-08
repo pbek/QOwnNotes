@@ -37,6 +37,8 @@ public:
 
     void listen(quint16 port = 0);
 
+    void close();
+
 private slots:
     void onNewConnection();
     void processMessage(const QString &message);

@@ -79,6 +79,7 @@ namespace Utils {
         void storePrinterSettings(QPrinter *printer, QString settingsKey);
         void loadPrinterSettings(QPrinter *printer, QString settingsKey);
         bool isNoteEditingAllowed();
+        bool isSocketServerEnabled();
         QString unescapeHtml(QString html);
         QString htmlspecialchars(QString text);
         void printInfo(QString text);

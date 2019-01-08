@@ -2376,9 +2376,13 @@ void MainWindow::readSettingsFromSettingsDialog() {
 
     if (_webSocketServerService == Q_NULLPTR) {
         QTimer::singleShot(250, this, SLOT(initWebSocketServerService()));
-    } else if (_webSocketServerService->getPort() !=
-        WebSocketServerService::getSettingsPort()) {
-        _webSocketServerService->listen();
+    } else if (Utils::Misc::isSocketServerEnabled()) {
+        if (_webSocketServerService->getPort() !=
+            WebSocketServerService::getSettingsPort()) {
+            _webSocketServerService->listen();
+        }
+    } else {
+        _webSocketServerService->close();
     }
 }
 

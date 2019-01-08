@@ -1,7 +1,7 @@
 # QOwnNotes Changelog
 
 ## 19.1.1
-- the *Chrome extension* settings page got renamed to *Browser extension*
+- the *Chrome extension settings* got renamed to *Browser extension*
 - added [Firefox Add-ons page](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion)
   to the *Browser extension* settings page (for [#330](https://github.com/pbek/QOwnNotes/issues/330))
 - the [QOwnNotes Web Companion browser extension](https://github.com/qownnotes/web-companion)
@@ -20,6 +20,8 @@
 - changed the tooltip text for the `Allow note file name to be different from headline`
   setting to be more clear (for [#1110](https://github.com/pbek/QOwnNotes/issues/1110))
 - fixed some typos in the *Trash dialog* (for [#1107](https://github.com/pbek/QOwnNotes/issues/1107), thank you @smokris)
+- you can now disable the socket server in the *Browser extension settings*
+  (for [#1105](https://github.com/pbek/QOwnNotes/issues/1105))
 
 ## 19.1.0
 - you can now change the socket server port for connecting with the

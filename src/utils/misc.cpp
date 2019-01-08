@@ -1037,6 +1037,16 @@ bool Utils::Misc::isNoteEditingAllowed() {
 }
 
 /**
+ * Returns if "allowNoteEditing" is turned on
+ *
+ * @return
+ */
+bool Utils::Misc::isSocketServerEnabled() {
+    QSettings settings;
+    return settings.value("enableSocketServer", true).toBool();
+}
+
+/**
  * Returns if "automaticNoteFolderDatabaseClosing" is turned on
  *
  * @return

@@ -254,6 +254,8 @@ private slots:
 
     void on_webSocketServerServicePortResetButton_clicked();
 
+    void on_enableSocketServerCheckBox_toggled();
+
 private:
 
     Ui::SettingsDialog *ui;
