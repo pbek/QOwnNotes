@@ -66,7 +66,9 @@ You can visit the [QOwnNotes project page](https://www.qownnotes.org) for more *
 - [QOwnNotes Web Companion browser extension](https://github.com/qownnotes/web-companion)
   to a add notes from the selected text and other features
 	- visit the [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
-	  page to install the app
+	  page to install the app on Google Chrome
+	- visit the [Firefox Add-ons page](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion)
+	  page to install the app on Google Chrome
 - notes are getting their name from the first line of the note text (just like in the ownCloud notes web-application) and the note text files are automatically renamed, if the the first line changes
     - this feature can also be turned off and you can use any filename you like
 - manage your ownCloud todo lists (ownCloud tasks or Tasks Plus / Calendar Plus)
