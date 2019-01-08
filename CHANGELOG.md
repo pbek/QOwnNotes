@@ -22,6 +22,10 @@
 - fixed some typos in the *Trash dialog* (for [#1107](https://github.com/pbek/QOwnNotes/issues/1107), thank you @smokris)
 - you can now disable the socket server in the *Browser extension settings*
   (for [#1105](https://github.com/pbek/QOwnNotes/issues/1105))
+- added more German, Catalan, Spanish, Portuguese, Chinese Traditional,
+  Ukrainian, Italian, Swedish, Croatian, Czech, French, Hungarian and Dutch
+  translation (thank you rakekniven, fitoschido, zmni, druus, richarson, abev66,
+  prolinuxua, tiwi90 and Fabijenna)
 
 ## 19.1.0
 - you can now change the socket server port for connecting with the
