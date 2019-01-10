@@ -4470,11 +4470,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3369"/>
-        <source>Allow the note file name to be different from the headline.&lt;br&gt;Beaware that ownCloud Notes needs the file name to be the same as the headline!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../dialogs/settingsdialog.ui" line="3390"/>
         <source>Automatically close the note folder database to prevent problems with sync tools</source>
         <translation type="unfinished"></translation>
@@ -4581,6 +4576,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="5166"/>
         <source>Install the &lt;a href=&quot;%1&quot;&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href=&quot;%2&quot;&gt;Chrome Web Store&lt;/a&gt; or &lt;a href=&quot;%3&quot;&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="3369"/>
+        <source>Allow the note file name to be different from the headline.&lt;br&gt;Beware that ownCloud Notes needs the file name to be the same as the headline!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
