@@ -141,6 +141,11 @@ void WebSocketServerService::processMessage(const QString &message) {
             mainWindow->insertHtml(text);
         }
 #endif
+    } else if (type == "getBookmarks") {
+//        auto *bookmarkDocument = new QJsonDocument();
+        auto *pSender = qobject_cast<QWebSocket *>(sender());
+        pSender->sendTextMessage(
+                R"({ "type": "bookmarks", "data": [ { "name": "Test1", "url": "http://www.qownnotes.org" } ] })");
     } else {
         auto *pSender = qobject_cast<QWebSocket *>(sender());
         pSender->sendTextMessage("Received: " + message);
