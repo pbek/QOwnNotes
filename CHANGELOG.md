@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 19.1.2
+- added support for the new **bookmark feature** of the [QOwnNotes Web Companion browser extension](https://github.com/qownnotes/web-companion)
+
 ## 19.1.1
 - the *Chrome extension settings* got renamed to *Browser extension*
 - added [Firefox Add-ons page](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion)

@@ -95,6 +95,8 @@ public:
 
     void setCurrentNoteText(QString text);
 
+    Note getCurrentNote();
+
     void createNewNote(
             QString name, QString text,
             CreateNewNoteOptions options = CreateNewNoteOption::None);

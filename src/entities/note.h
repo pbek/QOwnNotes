@@ -6,11 +6,36 @@
 #include <QFile>
 #include <QUrl>
 #include <QRegularExpression>
+#include <QtCore/QJsonValue>
+#include <QtCore/QJsonObject>
 #include "notesubfolder.h"
 
 #define NOTE_TEXT_ENCRYPTION_PRE_STRING "<!-- BEGIN ENCRYPTED TEXT --"
 #define NOTE_TEXT_ENCRYPTION_POST_STRING "-- END ENCRYPTED TEXT -->"
 #define BOTAN_SALT "Gj3%36/SmPoe12$snNAs-A-_.),?faQ1@!f32"
+
+struct Bookmark
+{
+    Bookmark() = default;
+    Bookmark(QString url) : url(url) {}
+    Bookmark(QString url, QString name) : url(url), name(name) {}
+
+//    QDebug operator<<(QDebug dbg, const Bookmark &bookmark) {
+//        dbg.nospace() << "Bookmark: <name>" << bookmark.name <<
+//                      " <url>" << bookmark.url;
+//        return dbg.space();
+//    }
+
+    QJsonObject jsonObject() {
+        QJsonObject bookmarkObject;
+        bookmarkObject.insert("name", QJsonValue::fromVariant(name));
+        bookmarkObject.insert("url", QJsonValue::fromVariant(url));
+        return bookmarkObject;
+    };
+
+    QString name;
+    QString url;
+};
 
 class Note {
 public:
@@ -264,6 +289,10 @@ public:
     static QString cleanupFileName(QString name);
 
     static QString extendedCleanupFileName(QString name);
+
+    QList<Bookmark> getParsedBookmarks();
+
+    QString getParsedBookmarksWebServiceJsonText();
 
 protected:
     int id;

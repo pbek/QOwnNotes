@@ -22,6 +22,8 @@
 #include <services/scriptingservice.h>
 #include <QMimeDatabase>
 #include <QTemporaryFile>
+#include <QJsonArray>
+#include <QJsonDocument>
 #include <utils/gui.h>
 
 
@@ -2859,6 +2861,65 @@ QString Note::generateMultipleNotesPreviewText(QList<Note> notes) {
         "</html>";
 
     return previewHtml;
+}
+
+/**
+ * Returns the parsed bookmarks of the note for the WebSocketServerService
+ *
+ * @return
+ */
+QString Note::getParsedBookmarksWebServiceJsonText() {
+    QJsonArray bookmarkObjectList;
+
+    Q_FOREACH(Bookmark bookmark, getParsedBookmarks()) {
+            bookmarkObjectList.push_back(bookmark.jsonObject());
+    }
+
+    QJsonObject bookmarkResultObject;
+    bookmarkResultObject.insert("type", QJsonValue::fromVariant("bookmarks"));
+    bookmarkResultObject.insert("data", bookmarkObjectList);
+
+    QJsonDocument doc(bookmarkResultObject);
+
+    qDebug() << __func__ << " - 'doc.toJson()': " << doc.toJson(QJsonDocument::Compact);
+
+    return doc.toJson(QJsonDocument::Compact);
+}
+
+/**
+ * Returns the parsed bookmarks of the note
+ *
+ * @return
+ */
+QList<Bookmark> Note::getParsedBookmarks() {
+    QRegularExpressionMatchIterator i;
+    QStringList urlList;
+    QList<Bookmark> bookmarks;
+    QString text = decryptedNoteText.isEmpty() ? noteText : decryptedNoteText;
+
+    i = QRegularExpression(R"(\[(.+)\]\((http[s]?://.+)\))").globalMatch(text);
+
+    while (i.hasNext()) {
+        QRegularExpressionMatch match = i.next();
+        QString name = match.captured(1);
+        QString url = match.captured(2);
+
+        // check if we already have added the url
+        if (!urlList.contains(url)) {
+            urlList << url;
+            bookmarks << Bookmark(url, name);
+        }
+    }
+
+    i = QRegularExpression(R"(<(http[s]?://.+)>)").globalMatch(noteText);
+
+    while (i.hasNext()) {
+        QRegularExpressionMatch match = i.next();
+        QString url = match.captured(1);
+        bookmarks << Bookmark(url);
+    }
+
+    return bookmarks;
 }
 
 /**

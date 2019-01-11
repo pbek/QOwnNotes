@@ -10725,3 +10725,7 @@ void MainWindow::on_navigationLineEdit_textChanged(const QString &arg1) {
             ui->navigationWidget, arg1,
             Utils::Gui::TreeWidgetSearchFlag::IntCheck);
 }
+
+Note MainWindow::getCurrentNote() {
+    return currentNote;
+}
