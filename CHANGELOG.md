@@ -2,6 +2,18 @@
 
 ## 19.1.2
 - added support for the new **bookmark feature** of the [QOwnNotes Web Companion browser extension](https://github.com/qownnotes/web-companion)
+- the [QOwnNotes Web Companion browser extension](https://github.com/qownnotes/web-companion)
+  was updated to version 19.1.2
+    - you can now see a **list of all links of the current note** if you click
+      on the QOwnNotes icon in the browser toolbar
+        - you can **search for links** on the popup
+        - clicking a line opens the url in a new browser tab
+        - clicking on the headline items of the table sorts the items in the table
+    - added more German translation (thank you rakekniven)
+- added more Indonesian, German, Catalan, Spanish, Portuguese, Ukrainian,
+  Chinese Traditional, Italian, Swedish, Croatian, Czech, French, Hungarian and
+  Dutch translation (thank you zmni, fitoschido, rakekniven, fitoschido, zmni,
+  druus, richarson, abev66, prolinuxua, tiwi90 and Fabijenna)
 
 ## 19.1.1
 - the *Chrome extension settings* got renamed to *Browser extension*

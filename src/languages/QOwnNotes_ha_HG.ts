@@ -4474,11 +4474,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
       <translation type="unfinished">The shortcut to create a new note asks for a headline</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3369"/>
-      <source>Allow the note file name to be different from the headline.&lt;br&gt;Beaware that ownCloud Notes needs the file name to be the same as the headline!</source>
-      <translation type="unfinished">Allow the note file name to be different from the headline.&lt;br&gt;Beaware that ownCloud Notes needs the file name to be the same as the headline!</translation>
-    </message>
-    <message>
       <location filename="../dialogs/settingsdialog.ui" line="3390"/>
       <source>Automatically close the note folder database to prevent problems with sync tools</source>
       <translation type="unfinished">Automatically close the note folder database to prevent problems with sync tools</translation>
@@ -4586,6 +4581,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
       <location filename="../dialogs/settingsdialog.ui" line="5166"/>
       <source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
       <translation type="unfinished">Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="3369"/>
+      <source>Allow the note file name to be different from the headline.&lt;br&gt;Beware that ownCloud Notes needs the file name to be the same as the headline!</source>
+      <translation type="unfinished">Allow the note file name to be different from the headline.&lt;br&gt;Beware that ownCloud Notes needs the file name to be the same as the headline!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4674"/>
