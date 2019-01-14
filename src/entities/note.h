@@ -7,7 +7,7 @@
 #include <QUrl>
 #include <QRegularExpression>
 #include "notesubfolder.h"
-#include "entities/bookmark.h"
+#include "bookmark.h"
 
 #define NOTE_TEXT_ENCRYPTION_PRE_STRING "<!-- BEGIN ENCRYPTED TEXT --"
 #define NOTE_TEXT_ENCRYPTION_POST_STRING "-- END ENCRYPTED TEXT -->"
