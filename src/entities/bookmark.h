@@ -1,5 +1,5 @@
 /**
- * Bookmark struct
+ * Bookmark header
  */
 
 
@@ -9,24 +9,18 @@
 #include <QtCore/QString>
 #include <QtCore/QJsonObject>
 #include <QtCore/QVariant>
+#include <QtCore/QDebug>
 
-struct Bookmark {
+class Bookmark {
+public:
+    explicit Bookmark();
+    explicit Bookmark(QString url, QString name = "");
+    friend QDebug operator<<(QDebug dbg, const Bookmark &bookmark);
+    QJsonObject jsonObject();
+    static QList<Bookmark> parseBookmarks(const QString &text);
+    static QString getParsedBookmarksWebServiceJsonText(QList<Bookmark> bookmarks);
+
+protected:
     QString name;
     QString url;
-    Bookmark() = default;
-    Bookmark(QString url) : url(url) {}
-    Bookmark(QString url, QString name) : name(name), url(url) {}
-
-//    QDebug operator<<(QDebug dbg, const Bookmark &bookmark) {
-//        dbg.nospace() << "Bookmark: <name>" << bookmark.name <<
-//                      " <url>" << bookmark.url;
-//        return dbg.space();
-//    }
-
-    QJsonObject jsonObject() {
-        QJsonObject bookmarkObject;
-        bookmarkObject.insert("name", QJsonValue::fromVariant(name));
-        bookmarkObject.insert("url", QJsonValue::fromVariant(url));
-        return bookmarkObject;
-    };
 };

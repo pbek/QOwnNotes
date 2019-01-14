@@ -83,6 +83,7 @@ SOURCES += main.cpp\
     entities/notefolder.cpp \
     entities/tag.cpp \
     entities/script.cpp \
+    entities/bookmark.cpp \
     services/owncloudservice.cpp \
     services/updateservice.cpp \
     helpers/htmlentities.cpp \

@@ -22,8 +22,6 @@
 #include <services/scriptingservice.h>
 #include <QMimeDatabase>
 #include <QTemporaryFile>
-#include <QJsonArray>
-#include <QJsonDocument>
 #include <utils/gui.h>
 
 
@@ -2869,21 +2867,7 @@ QString Note::generateMultipleNotesPreviewText(QList<Note> notes) {
  * @return
  */
 QString Note::getParsedBookmarksWebServiceJsonText() {
-    QJsonArray bookmarkObjectList;
-
-    Q_FOREACH(Bookmark bookmark, getParsedBookmarks()) {
-            bookmarkObjectList.push_back(bookmark.jsonObject());
-    }
-
-    QJsonObject bookmarkResultObject;
-    bookmarkResultObject.insert("type", QJsonValue::fromVariant("bookmarks"));
-    bookmarkResultObject.insert("data", bookmarkObjectList);
-
-    QJsonDocument doc(bookmarkResultObject);
-
-    qDebug() << __func__ << " - 'doc.toJson()': " << doc.toJson(QJsonDocument::Compact);
-
-    return doc.toJson(QJsonDocument::Compact);
+    return Bookmark::getParsedBookmarksWebServiceJsonText(getParsedBookmarks());
 }
 
 /**
@@ -2893,7 +2877,7 @@ QString Note::getParsedBookmarksWebServiceJsonText() {
  */
 QList<Bookmark> Note::getParsedBookmarks() {
     QString text = decryptedNoteText.isEmpty() ? noteText : decryptedNoteText;
-    return Utils::Misc::parseBookmarks(text);
+    return Bookmark::parseBookmarks(text);
 }
 
 /**
