@@ -151,10 +151,10 @@ void WebSocketServerService::processMessage(const QString &message) {
         auto *pSender = qobject_cast<QWebSocket *>(sender());
 //        pSender->sendTextMessage(
 //                R"({ "type": "bookmarks", "data": [ { "name": "Test1", "url": "http://www.qownnotes.org" } ] })");
-        pSender->sendTextMessage(
-                mainWindow->getCurrentNote().getParsedBookmarksWebServiceJsonText());
-//        pSender->sendTextMessage(Utils::Misc::parseBookmarks(
-//                mainWindow->activeNoteTextEdit()->toPlainText()));
+//        pSender->sendTextMessage(
+//                mainWindow->getCurrentNote().getParsedBookmarksWebServiceJsonText());
+        pSender->sendTextMessage(Bookmark::parsedBookmarksWebServiceJsonText(
+                mainWindow->activeNoteTextEdit()->toPlainText()));
 #endif
     } else {
         auto *pSender = qobject_cast<QWebSocket *>(sender());

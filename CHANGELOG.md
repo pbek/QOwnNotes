@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 19.1.3
+- improved detection of links in encrypted notes for the **bookmark feature**
+  of the [QOwnNotes Web Companion browser extension](https://github.com/qownnotes/web-companion)
+
 ## 19.1.2
 - added support for the new **bookmark feature** of the [QOwnNotes Web Companion browser extension](https://github.com/qownnotes/web-companion)
 - the [QOwnNotes Web Companion browser extension](https://github.com/qownnotes/web-companion)
