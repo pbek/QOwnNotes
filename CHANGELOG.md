@@ -3,6 +3,13 @@
 ## 19.1.3
 - improved detection of links in encrypted notes for the **bookmark feature**
   of the [QOwnNotes Web Companion browser extension](https://github.com/qownnotes/web-companion)
+- the [QOwnNotes Web Companion browser extension](https://github.com/qownnotes/web-companion)
+  was updated to version 19.1.3
+    - preventing opening of two new tabs when clicking a bookmark
+    - added support for the new **tag** and **description** attributes in **bookmarks**
+        - the syntax for using this bookmark links in notes is
+          `- [name](http://link) #tag1 #tag2 some description`
+        - tags will be shown in the list and the description will be shown in a new tooltip
 
 ## 19.1.2
 - added support for the new **bookmark feature** of the [QOwnNotes Web Companion browser extension](https://github.com/qownnotes/web-companion)

@@ -56,7 +56,7 @@ QList<Bookmark> Bookmark::parseBookmarks(QString text, bool withBasicUrls) {
 
     // parse bookmark links like `- [name](http://link) #tag1 #tag2 the description text`
     // with optional tags and description
-    i = QRegularExpression(R"(- \[(.+)\]\((http[s]?://.+)\)(.+)$)", QRegularExpression::MultilineOption).globalMatch(text);
+    i = QRegularExpression(R"([-*] \[(.+)\]\((http[s]?://.+)\)(.+)$)", QRegularExpression::MultilineOption).globalMatch(text);
 
     while (i.hasNext()) {
         QRegularExpressionMatch match = i.next();
