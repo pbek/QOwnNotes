@@ -26,6 +26,7 @@ HEADERS  += \
     $$APP_SRC_DIR/entities/trashitem.h \
     $$APP_SRC_DIR/entities/tag.h \
     $$APP_SRC_DIR/entities/calendaritem.h \
+    $$APP_SRC_DIR/entities/bookmark.h \
     $$APP_SRC_DIR/entities/script.h \
     $$APP_SRC_DIR/helpers/htmlentities.h \
     $$APP_SRC_DIR/helpers/clientproxy.h \
@@ -57,6 +58,7 @@ SOURCES += \
     $$APP_SRC_DIR/entities/trashitem.cpp \
     $$APP_SRC_DIR/entities/tag.cpp \
     $$APP_SRC_DIR/entities/calendaritem.cpp \
+    $$APP_SRC_DIR/entities/bookmark.cpp \
     $$APP_SRC_DIR/entities/script.cpp \
     $$APP_SRC_DIR/helpers/htmlentities.cpp \
     $$APP_SRC_DIR/helpers/clientproxy.cpp \
