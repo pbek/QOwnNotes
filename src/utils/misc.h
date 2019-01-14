@@ -23,6 +23,7 @@
 #include <QStringList>
 #include <QMap>
 #include <QSqlDatabase>
+#include "entities/bookmark.h"
 
 /*  Miscellaneous functions that can be useful */
 
@@ -93,6 +94,7 @@ namespace Utils {
         QString generateDebugInformation(bool withGitHubLineBreaks = true);
         bool regExpInListMatches(QString text, QStringList regExpList);
         QString importMediaFromBase64(QString &data, QString imageSuffix = "dat");
+        QList<Bookmark> parseBookmarks(const QString &text);
     }  // namespace Misc
 }  // namespace Utils
 

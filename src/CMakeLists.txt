@@ -278,7 +278,8 @@ set(SOURCE_FILES
     helpers/fakevimproxy.h
     helpers/fakevimproxy.cpp
     services/websocketserverservice.cpp
-    services/websocketserverservice.h)
+    services/websocketserverservice.h
+    entities/bookmark.h)
 
 # Translation files
 SET(QON_TS_FILES

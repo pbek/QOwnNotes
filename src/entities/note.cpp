@@ -2892,34 +2892,8 @@ QString Note::getParsedBookmarksWebServiceJsonText() {
  * @return
  */
 QList<Bookmark> Note::getParsedBookmarks() {
-    QRegularExpressionMatchIterator i;
-    QStringList urlList;
-    QList<Bookmark> bookmarks;
     QString text = decryptedNoteText.isEmpty() ? noteText : decryptedNoteText;
-
-    i = QRegularExpression(R"(\[(.+)\]\((http[s]?://.+)\))").globalMatch(text);
-
-    while (i.hasNext()) {
-        QRegularExpressionMatch match = i.next();
-        QString name = match.captured(1);
-        QString url = match.captured(2);
-
-        // check if we already have added the url
-        if (!urlList.contains(url)) {
-            urlList << url;
-            bookmarks << Bookmark(url, name);
-        }
-    }
-
-    i = QRegularExpression(R"(<(http[s]?://.+)>)").globalMatch(noteText);
-
-    while (i.hasNext()) {
-        QRegularExpressionMatch match = i.next();
-        QString url = match.captured(1);
-        bookmarks << Bookmark(url);
-    }
-
-    return bookmarks;
+    return Utils::Misc::parseBookmarks(text);
 }
 
 /**

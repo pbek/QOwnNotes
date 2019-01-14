@@ -1463,3 +1463,39 @@ QString Utils::Misc::importMediaFromBase64(QString &data, QString imageSuffix) {
 
     return markdownCode;
 }
+
+/**
+ * Parses bookmarks from a text
+ *
+ * @param text
+ * @return
+ */
+QList<Bookmark> Utils::Misc::parseBookmarks(const QString &text) {
+    QRegularExpressionMatchIterator i;
+    QStringList urlList;
+    QList<Bookmark> bookmarks;
+
+    i = QRegularExpression(R"(\[(.+)\]\((http[s]?://.+)\))").globalMatch(text);
+
+    while (i.hasNext()) {
+        QRegularExpressionMatch match = i.next();
+        QString name = match.captured(1);
+        QString url = match.captured(2);
+
+        // check if we already have added the url
+        if (!urlList.contains(url)) {
+            urlList << url;
+            bookmarks << Bookmark(url, name);
+        }
+    }
+
+    i = QRegularExpression(R"(<(http[s]?://.+)>)").globalMatch(text);
+
+    while (i.hasNext()) {
+        QRegularExpressionMatch match = i.next();
+        QString url = match.captured(1);
+        bookmarks << Bookmark(url);
+    }
+
+    return bookmarks;
+}

@@ -153,6 +153,7 @@ HEADERS  += mainwindow.h \
     entities/notefolder.h \
     entities/tag.h \
     entities/script.h \
+    entities/bookmark.h \
     dialogs/aboutdialog.h \
     dialogs/linkdialog.h \
     dialogs/notediffdialog.h \
