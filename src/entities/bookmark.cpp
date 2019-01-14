@@ -31,6 +31,8 @@ QJsonObject Bookmark::jsonObject() {
     QJsonObject bookmarkObject;
     bookmarkObject.insert("name", QJsonValue::fromVariant(name));
     bookmarkObject.insert("url", QJsonValue::fromVariant(url));
+    bookmarkObject.insert("tags", QJsonValue::fromVariant(tags));
+    bookmarkObject.insert("description", QJsonValue::fromVariant(description));
     return bookmarkObject;
 };
 
@@ -90,28 +92,30 @@ QList<Bookmark> Bookmark::parseBookmarks(QString text, bool withBasicUrls) {
         }
     }
 
-    // parse named links like [name](http://my.site.com)
-    i = QRegularExpression(R"(\[(.+)\]\((http[s]?://.+)\))").globalMatch(text);
+    if (withBasicUrls) {
+        // parse named links like [name](http://my.site.com)
+        i = QRegularExpression(R"(\[(.+)\]\((http[s]?://.+)\))").globalMatch(text);
 
-    while (i.hasNext()) {
-        QRegularExpressionMatch match = i.next();
-        QString name = match.captured(1);
-        QString url = match.captured(2);
+        while (i.hasNext()) {
+            QRegularExpressionMatch match = i.next();
+            QString name = match.captured(1);
+            QString url = match.captured(2);
 
-        // check if we already have added the url
-        if (!urlList.contains(url)) {
-            urlList << url;
-            bookmarks << Bookmark(url, name);
+            // check if we already have added the url
+            if (!urlList.contains(url)) {
+                urlList << url;
+                bookmarks << Bookmark(url, name);
+            }
         }
-    }
 
-    // parse links like <http://my.site.com>
-    i = QRegularExpression(R"(<(http[s]?://.+)>)").globalMatch(text);
+        // parse links like <http://my.site.com>
+        i = QRegularExpression(R"(<(http[s]?://.+)>)").globalMatch(text);
 
-    while (i.hasNext()) {
-        QRegularExpressionMatch match = i.next();
-        QString url = match.captured(1);
-        bookmarks << Bookmark(url);
+        while (i.hasNext()) {
+            QRegularExpressionMatch match = i.next();
+            QString url = match.captured(1);
+            bookmarks << Bookmark(url);
+        }
     }
 
     return bookmarks;
@@ -143,6 +147,8 @@ QString Bookmark::bookmarksWebServiceJsonText(QList<Bookmark> bookmarks) {
  *
  * @return
  */
-QString Bookmark::parsedBookmarksWebServiceJsonText(QString text) {
-    return bookmarksWebServiceJsonText(parseBookmarks(text, false));
+QString Bookmark::parsedBookmarksWebServiceJsonText(
+        QString text, bool withBasicUrls) {
+    return bookmarksWebServiceJsonText(parseBookmarks(
+            std::move(text), withBasicUrls));
 }

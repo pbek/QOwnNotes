@@ -2877,7 +2877,7 @@ QString Note::getParsedBookmarksWebServiceJsonText() {
  */
 QList<Bookmark> Note::getParsedBookmarks() {
     QString text = decryptedNoteText.isEmpty() ? noteText : decryptedNoteText;
-    return Bookmark::parseBookmarks(text, false);
+    return Bookmark::parseBookmarks(text);
 }
 
 /**

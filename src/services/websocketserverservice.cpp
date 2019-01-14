@@ -154,7 +154,7 @@ void WebSocketServerService::processMessage(const QString &message) {
 //        pSender->sendTextMessage(
 //                mainWindow->getCurrentNote().getParsedBookmarksWebServiceJsonText());
         pSender->sendTextMessage(Bookmark::parsedBookmarksWebServiceJsonText(
-                mainWindow->activeNoteTextEdit()->toPlainText()));
+                mainWindow->activeNoteTextEdit()->toPlainText(), true));
 #endif
     } else {
         auto *pSender = qobject_cast<QWebSocket *>(sender());

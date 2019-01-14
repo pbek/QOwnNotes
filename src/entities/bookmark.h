@@ -20,7 +20,7 @@ public:
     QJsonObject jsonObject();
     static QList<Bookmark> parseBookmarks(QString text, bool withBasicUrls = false);
     static QString bookmarksWebServiceJsonText(QList<Bookmark> bookmarks);
-    static QString parsedBookmarksWebServiceJsonText(QString text);
+    static QString parsedBookmarksWebServiceJsonText(QString text, bool withBasicUrls = false);
 
 protected:
     QString name;
