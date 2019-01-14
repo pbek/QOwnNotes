@@ -2867,7 +2867,7 @@ QString Note::generateMultipleNotesPreviewText(QList<Note> notes) {
  * @return
  */
 QString Note::getParsedBookmarksWebServiceJsonText() {
-    return Bookmark::getParsedBookmarksWebServiceJsonText(getParsedBookmarks());
+    return Bookmark::bookmarksWebServiceJsonText(getParsedBookmarks());
 }
 
 /**

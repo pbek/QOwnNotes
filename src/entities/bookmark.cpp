@@ -72,12 +72,11 @@ QList<Bookmark> Bookmark::parseBookmarks(const QString &text) {
 }
 
 /**
- * Returns the parsed bookmarks of the note for the WebSocketServerService
+ * Returns json text of a bookmark list for the WebSocketServerService
  *
  * @return
  */
-QString Bookmark::getParsedBookmarksWebServiceJsonText(
-        QList<Bookmark> bookmarks) {
+QString Bookmark::bookmarksWebServiceJsonText(QList<Bookmark> bookmarks) {
     QJsonArray bookmarkObjectList;
 
     Q_FOREACH(Bookmark bookmark, bookmarks) {
@@ -91,4 +90,13 @@ QString Bookmark::getParsedBookmarksWebServiceJsonText(
     QJsonDocument doc(bookmarkResultObject);
 
     return doc.toJson(QJsonDocument::Compact);
+}
+
+/**
+ * Returns json text parsed from links of a text for the WebSocketServerService
+ *
+ * @return
+ */
+QString Bookmark::parsedBookmarksWebServiceJsonText(QString text) {
+    return bookmarksWebServiceJsonText(parseBookmarks(text));
 }

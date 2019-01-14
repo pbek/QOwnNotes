@@ -18,7 +18,8 @@ public:
     friend QDebug operator<<(QDebug dbg, const Bookmark &bookmark);
     QJsonObject jsonObject();
     static QList<Bookmark> parseBookmarks(const QString &text);
-    static QString getParsedBookmarksWebServiceJsonText(QList<Bookmark> bookmarks);
+    static QString bookmarksWebServiceJsonText(QList<Bookmark> bookmarks);
+    static QString parsedBookmarksWebServiceJsonText(QString text);
 
 protected:
     QString name;
