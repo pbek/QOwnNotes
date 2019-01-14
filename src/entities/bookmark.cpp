@@ -14,11 +14,16 @@
 Bookmark::Bookmark() {
     url = "";
     name = "";
+    tags = QStringList();
+    description = "";
 }
 
-Bookmark::Bookmark(QString url, QString name) {
+Bookmark::Bookmark(QString url, QString name, QStringList tagList,
+        QString description) {
     this->url = std::move(url);
     this->name = std::move(name);
+    this->tags = std::move(tagList);
+    this->description = std::move(description);
 };
 
 
@@ -31,7 +36,8 @@ QJsonObject Bookmark::jsonObject() {
 
 QDebug operator<<(QDebug dbg, const Bookmark &bookmark) {
     dbg.nospace() << "Bookmark: <name>" << bookmark.name <<
-                  " <url>" << bookmark.url;
+                  " <url>" << bookmark.url << " <tags>" << bookmark.tags <<
+                  " <description>" << bookmark.description;
     return dbg.space();
 }
 
@@ -41,11 +47,50 @@ QDebug operator<<(QDebug dbg, const Bookmark &bookmark) {
  * @param text
  * @return
  */
-QList<Bookmark> Bookmark::parseBookmarks(const QString &text) {
+QList<Bookmark> Bookmark::parseBookmarks(QString text, bool withBasicUrls) {
     QRegularExpressionMatchIterator i;
     QStringList urlList;
     QList<Bookmark> bookmarks;
 
+    // parse bookmark links like `- [name](http://link) #tag1 #tag2 the description text`
+    // with optional tags and description
+    i = QRegularExpression(R"(- \[(.+)\]\((http[s]?://.+)\)(.+)$)", QRegularExpression::MultilineOption).globalMatch(text);
+
+    while (i.hasNext()) {
+        QRegularExpressionMatch match = i.next();
+        QString name = match.captured(1);
+        QString url = match.captured(2);
+        QString additionalText = match.captured(3);
+
+        // check if we already have added the url
+        if (!urlList.contains(url)) {
+            QStringList tags;
+            QString description;
+
+            if (!additionalText.isEmpty()) {
+
+                QRegularExpressionMatchIterator addIterator =
+                        QRegularExpression(R"(#([^\s#]+))").globalMatch(
+                                additionalText);
+                while (addIterator.hasNext()) {
+                    QRegularExpressionMatch addMatch = addIterator.next();
+                    QString tag = addMatch.captured(1).trimmed();
+
+                    if (!tags.contains(tag)) {
+                        tags << tag;
+                        additionalText.remove("#" + tag);
+                    }
+                }
+
+                description = additionalText.trimmed();
+            }
+
+            urlList << url;
+            bookmarks << Bookmark(url, name, tags, description);
+        }
+    }
+
+    // parse named links like [name](http://my.site.com)
     i = QRegularExpression(R"(\[(.+)\]\((http[s]?://.+)\))").globalMatch(text);
 
     while (i.hasNext()) {
@@ -60,6 +105,7 @@ QList<Bookmark> Bookmark::parseBookmarks(const QString &text) {
         }
     }
 
+    // parse links like <http://my.site.com>
     i = QRegularExpression(R"(<(http[s]?://.+)>)").globalMatch(text);
 
     while (i.hasNext()) {
@@ -98,5 +144,5 @@ QString Bookmark::bookmarksWebServiceJsonText(QList<Bookmark> bookmarks) {
  * @return
  */
 QString Bookmark::parsedBookmarksWebServiceJsonText(QString text) {
-    return bookmarksWebServiceJsonText(parseBookmarks(text));
+    return bookmarksWebServiceJsonText(parseBookmarks(text, false));
 }
