@@ -16,9 +16,11 @@
 
 struct Bookmark
 {
+    QString name;
+    QString url;
     Bookmark() = default;
     Bookmark(QString url) : url(url) {}
-    Bookmark(QString url, QString name) : url(url), name(name) {}
+    Bookmark(QString url, QString name) : name(name), url(url) {}
 
 //    QDebug operator<<(QDebug dbg, const Bookmark &bookmark) {
 //        dbg.nospace() << "Bookmark: <name>" << bookmark.name <<
@@ -32,9 +34,6 @@ struct Bookmark
         bookmarkObject.insert("url", QJsonValue::fromVariant(url));
         return bookmarkObject;
     };
-
-    QString name;
-    QString url;
 };
 
 class Note {
