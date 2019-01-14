@@ -4584,7 +4584,7 @@ Tesztelje, ha szinkronizációs konfliktus lép fel és állítson be ilyen eset
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3369"/>
       <source>Allow the note file name to be different from the headline.&lt;br&gt;Beware that ownCloud Notes needs the file name to be the same as the headline!</source>
-      <translation type="unfinished">Allow the note file name to be different from the headline.&lt;br&gt;Beware that ownCloud Notes needs the file name to be the same as the headline!</translation>
+      <translation>Lehetővé teszi, hogy a fájl neve eltérjen a jegyzetfájl címétől. &lt;br&gt;Ügyeljen arra, hogy ownCloud jegyzetekben meg kell egyezniük!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4674"/>

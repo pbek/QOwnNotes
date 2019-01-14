@@ -813,9 +813,9 @@
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="219"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</source>
-      <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; nota(es) s'han restaurat</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; nota(es) s'han restaurat</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -834,9 +834,9 @@
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="265"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</source>
-      <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; nota(es) s'han eliminat</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; nota(es) s'han eliminat</numerusform>
       </translation>
     </message>
   </context>
@@ -916,7 +916,7 @@
     <message>
       <location filename="../mainwindow.ui" line="391"/>
       <source>Find navigation item</source>
-      <translation type="unfinished">Find navigation item</translation>
+      <translation>Troba l'element de navegació</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="680"/>
@@ -4459,7 +4459,7 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3273"/>
       <source>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</source>
-      <translation type="unfinished">When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</translation>
+      <translation>En obrir notes, la posició del cursor tornarà a ser la posició on estava la última vegada en la sessió en curs</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3283"/>
@@ -4558,32 +4558,32 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5195"/>
       <source>Web socket server</source>
-      <translation type="unfinished">Web socket server</translation>
+      <translation>Socket del servidor web</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5201"/>
       <source>Socket server port:</source>
-      <translation type="unfinished">Socket server port:</translation>
+      <translation>Port del socket del servidor:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5238"/>
       <source>Web socket server support</source>
-      <translation type="unfinished">Web socket server support</translation>
+      <translation>Suport per socket del servidor web</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5244"/>
       <source>Enable socket server</source>
-      <translation type="unfinished">Enable socket server</translation>
+      <translation>Habilitar el socket del servidor</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5166"/>
       <source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
-      <translation type="unfinished">Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</translation>
+      <translation>Instal·la l'&lt;a href="%1"&gt;extensió de navegador Web Companion&lt;/a&gt; de la &lt;a href="%2"&gt;Chrome Web Stores&lt;/a&gt; o de la &lt;a href="%3"&gt;pàgina d'Extensions de Firefox&lt;/a&gt; per usar QOwnNotes com un capturador del navegador.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3369"/>
       <source>Allow the note file name to be different from the headline.&lt;br&gt;Beware that ownCloud Notes needs the file name to be the same as the headline!</source>
-      <translation type="unfinished">Allow the note file name to be different from the headline.&lt;br&gt;Beware that ownCloud Notes needs the file name to be the same as the headline!</translation>
+      <translation>Permet que el nom de la nota sigui diferent del títol.&lt;br&gt;Tingueu en compte que a ownCloud si que es necessita que siguin iguals!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4674"/>
@@ -4613,12 +4613,12 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4985"/>
       <source>Navigation panel</source>
-      <translation type="unfinished">Navigation panel</translation>
+      <translation>Plafó de navegació</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4991"/>
       <source>Hide navigation item search bar</source>
-      <translation type="unfinished">Hide navigation item search bar</translation>
+      <translation>Amagar la barra de cerca dels elements de navegació</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5005"/>
@@ -4851,7 +4851,7 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="276"/>
       <source>Browser extension</source>
-      <translation type="unfinished">Browser extension</translation>
+      <translation>Extensió del navegador</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1638"/>
@@ -5951,7 +5951,7 @@ Això no es pot desfer!</translation>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="26"/>
       <source>Lists the available menus to get the corresponding actions</source>
-      <translation type="unfinished">Lists the available menus to get the corresponding actions</translation>
+      <translation>Llista els menús disponibles per veure les accions corresponents</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="33"/>
@@ -6349,22 +6349,22 @@ Això no es pot desfer!</translation>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="53"/>
       <source>QOwnNotes server listening on port %1</source>
-      <translation type="unfinished">QOwnNotes server listening on port %1</translation>
+      <translation>QOwnNotes servidor escolta pel port %1</translation>
     </message>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="60"/>
       <source>Could not start QOwnNotes server on port %1!</source>
-      <translation type="unfinished">Could not start QOwnNotes server on port %1!</translation>
+      <translation>No es pot iniciar el servidor de QOwnNotes pel port %1!</translation>
     </message>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="104"/>
       <source>%1 connected to QOwnNotes server!</source>
-      <translation type="unfinished">%1 connected to QOwnNotes server!</translation>
+      <translation>%1 connectat al servidor de QOwnNotes!</translation>
     </message>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="155"/>
       <source>%1 was disconnected from QOwnNotes server</source>
-      <translation type="unfinished">%1 was disconnected from QOwnNotes server</translation>
+      <translation>%1 s'ha desconnectat del servidor de QOwnNotes</translation>
     </message>
   </context>
   <context>
@@ -6424,7 +6424,7 @@ Això no es pot desfer!</translation>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="246"/>
       <source>Show sub-folders</source>
-      <translation type="unfinished">Show sub-folders</translation>
+      <translation>Mostra les subcarpetes</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="285"/>

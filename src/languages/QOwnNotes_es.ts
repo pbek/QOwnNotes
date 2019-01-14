@@ -4582,7 +4582,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3369"/>
       <source>Allow the note file name to be different from the headline.&lt;br&gt;Beware that ownCloud Notes needs the file name to be the same as the headline!</source>
-      <translation type="unfinished">Allow the note file name to be different from the headline.&lt;br&gt;Beware that ownCloud Notes needs the file name to be the same as the headline!</translation>
+      <translation>Permitir que el nombre de archivo de la nota sea diferente del título. &lt;br&gt;Ten en cuenta que la app Notas de ownCloud necesita que el nombre de archivo sea igual al título!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4674"/>

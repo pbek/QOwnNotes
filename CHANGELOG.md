@@ -10,6 +10,9 @@
         - the syntax for using this bookmark links in notes is
           `- [name](http://link) #tag1 #tag2 some description`
         - tags will be shown in the list and the description will be shown in a new tooltip
+- added more Indonesian, Catalan, Spanish, Ukrainian, Greek, Chinese Traditional,
+  Italian, French, Hungarian and Dutch translation (thank you zmni, MGuerra,
+  richarson, abev66, prolinuxua, mlocati and Fabijenna)
 
 ## 19.1.2
 - added support for the new **bookmark feature** of the [QOwnNotes Web Companion browser extension](https://github.com/qownnotes/web-companion)
@@ -23,8 +26,8 @@
     - added more German translation (thank you rakekniven)
 - added more Indonesian, German, Catalan, Spanish, Portuguese, Ukrainian,
   Chinese Traditional, Italian, Swedish, Croatian, Czech, French, Hungarian and
-  Dutch translation (thank you zmni, fitoschido, rakekniven, fitoschido, zmni,
-  druus, richarson, abev66, prolinuxua, tiwi90 and Fabijenna)
+  Dutch translation (thank you zmni, fitoschido, rakekniven, druus, richarson,
+  abev66, prolinuxua, tiwi90 and Fabijenna)
 
 ## 19.1.1
 - the *Chrome extension settings* got renamed to *Browser extension*

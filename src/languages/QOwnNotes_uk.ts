@@ -4913,7 +4913,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="276"/>
       <source>Browser extension</source>
-      <translation type="unfinished">Browser extension</translation>
+      <translation>Додаток для браузера</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1638"/>

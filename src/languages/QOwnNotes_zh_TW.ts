@@ -4535,22 +4535,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5238"/>
       <source>Web socket server support</source>
-      <translation type="unfinished">Web socket server support</translation>
+      <translation>Web Socket 伺服器支援</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5244"/>
       <source>Enable socket server</source>
-      <translation type="unfinished">Enable socket server</translation>
+      <translation>啟用 Socket 伺服器</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5166"/>
       <source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
-      <translation type="unfinished">Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</translation>
+      <translation>從&lt;a href="%2"&gt;Chrome線上應用程式商店&lt;/a&gt;或&lt;a href="%3"&gt;Firefox附加元件站&lt;/a&gt;安裝&lt;a href="%1"&gt;瀏覽器擴充功能&lt;/a&gt;以使用 QOwnNotes 來擷取網頁。</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3369"/>
       <source>Allow the note file name to be different from the headline.&lt;br&gt;Beware that ownCloud Notes needs the file name to be the same as the headline!</source>
-      <translation type="unfinished">Allow the note file name to be different from the headline.&lt;br&gt;Beware that ownCloud Notes needs the file name to be the same as the headline!</translation>
+      <translation>允許筆記檔名與標題不同。&lt;br&gt;請留意ownCloud筆記檔名與標題須一致！</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4674"/>
