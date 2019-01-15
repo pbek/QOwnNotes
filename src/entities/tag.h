@@ -64,6 +64,8 @@ public:
 
     QStringList fetchAllLinkedNoteFileNames(bool fromAllSubfolders);
 
+    QList<Note> fetchAllLinkedNotes();
+
     static QStringList fetchAllNames();
 
     bool isLinkedToNote(Note note);

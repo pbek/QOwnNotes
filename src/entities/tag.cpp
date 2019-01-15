@@ -597,6 +597,36 @@ QStringList Tag::fetchAllLinkedNoteFileNames(bool fromAllSubfolders) {
 }
 
 /**
+ * Fetches all linked notes
+ */
+QList<Note> Tag::fetchAllLinkedNotes() {
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlQuery query(db);
+    QList<Note> noteList;
+
+    query.prepare("SELECT note_file_name, note_sub_folder_path FROM "
+                  "noteTagLink WHERE tag_id = :id");
+    query.bindValue(":id", this->id);
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        for (int r = 0; query.next(); r++) {
+            QString fileName = query.value("note_file_name").toString();
+            QString noteSubFolderPath = query.value("note_sub_folder_path").toString();
+            auto noteSubFolder = NoteSubFolder::fetchByPathData(noteSubFolderPath, "/");
+            auto note = Note::fetchByName(fileName, noteSubFolder.getId());
+
+            noteList << note;
+        }
+    }
+
+    DatabaseService::closeDatabaseConnection(db, query);
+
+    return noteList;
+}
+
+/**
  * Converts backslashes to slashes in the noteTagLink table to fix
  * problems with Windows
  */
