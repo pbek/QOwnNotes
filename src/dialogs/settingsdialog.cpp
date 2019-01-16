@@ -260,6 +260,8 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
             "https://chrome.google.com/webstore/detail/qownnotes-web-companion/"
             "pkgkfnampapjbopomdpnkckbjdnpkbkp",
             "https://addons.mozilla.org/firefox/addon/qownnotes-web-companion"));
+    ui->bookmarkTagLabel->setText(ui->bookmarkTagLabel->text().arg(
+            "https://www.qownnotes.org/Knowledge-base/QOwnNotes-Web-Companion-browser-extension"));
 }
 
 /**
@@ -786,6 +788,8 @@ void SettingsDialog::storeSettings() {
 
     settings.setValue("webSocketServerService/port",
                       ui->webSocketServerServicePortSpinBox->value());
+    settings.setValue("webSocketServerService/bookmarksTag",
+                      ui->bookmarksTagLineEdit->text());
 }
 
 /**
@@ -1173,6 +1177,7 @@ void SettingsDialog::readSettings() {
 
     ui->webSocketServerServicePortSpinBox->setValue(
             WebSocketServerService::getSettingsPort());
+    ui->bookmarksTagLineEdit->setText(WebSocketServerService::getBookmarksTag());
 }
 
 /**
@@ -3694,5 +3699,5 @@ void SettingsDialog::on_webSocketServerServicePortResetButton_clicked() {
 
 void SettingsDialog::on_enableSocketServerCheckBox_toggled() {
     bool checked = ui->enableSocketServerCheckBox->isChecked();
-    ui->webSocketGroupBox->setEnabled(checked);
+    ui->browserExtensionFrame->setEnabled(checked);
 }

@@ -39,6 +39,8 @@ public:
 
     void close();
 
+    static QString getBookmarksTag();
+
 private slots:
     void onNewConnection();
     void processMessage(const QString &message);

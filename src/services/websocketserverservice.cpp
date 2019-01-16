@@ -168,7 +168,7 @@ QString WebSocketServerService::getBookmarksJsonText() const {
             return "";
         }
 
-    Tag tag = Tag::fetchByName("bookmarks");
+    Tag tag = Tag::fetchByName(getBookmarksTag());
     QList<Note> noteList = tag.fetchAllLinkedNotes();
 
     QList<Bookmark> bookmarks;
@@ -208,4 +208,11 @@ void WebSocketServerService::socketDisconnected() {
         m_clients.removeAll(pClient);
         pClient->deleteLater();
     }
+}
+
+QString WebSocketServerService::getBookmarksTag() {
+    QSettings settings;
+    QString bookmarksTag = settings.value(
+            "webSocketServerService/bookmarksTag", "bookmarks").toString();
+    return bookmarksTag;
 }

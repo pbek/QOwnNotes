@@ -5160,23 +5160,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
            </widget>
            <widget class="QWidget" name="webCompanionPage">
             <layout class="QGridLayout" name="gridLayout_70">
-             <item row="1" column="0">
-              <widget class="QLabel" name="webCompannionLabel">
-               <property name="text">
-                <string>Install the &lt;a href=&quot;%1&quot;&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href=&quot;%2&quot;&gt;Chrome Web Store&lt;/a&gt; or &lt;a href=&quot;%3&quot;&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</string>
-               </property>
-               <property name="wordWrap">
-                <bool>true</bool>
-               </property>
-               <property name="openExternalLinks">
-                <bool>true</bool>
-               </property>
-               <property name="textInteractionFlags">
-                <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
-               </property>
-              </widget>
-             </item>
-             <item row="3" column="0">
+             <item row="5" column="0">
               <spacer name="verticalSpacer_17">
                <property name="orientation">
                 <enum>Qt::Vertical</enum>
@@ -5190,42 +5174,115 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
               </spacer>
              </item>
              <item row="2" column="0">
-              <widget class="QGroupBox" name="webSocketGroupBox">
-               <property name="title">
-                <string>Web socket server</string>
+              <widget class="QFrame" name="browserExtensionFrame">
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
                </property>
-               <layout class="QHBoxLayout" name="horizontalLayout_12">
-                <item>
-                 <widget class="QLabel" name="label_28">
-                  <property name="text">
-                   <string>Socket server port:</string>
+               <layout class="QGridLayout" name="gridLayout_71">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item row="2" column="0">
+                 <widget class="QGroupBox" name="groupBox_32">
+                  <property name="title">
+                   <string>Bookmarks</string>
                   </property>
+                  <layout class="QGridLayout" name="gridLayout_72">
+                   <item row="1" column="1">
+                    <widget class="QLineEdit" name="bookmarksTagLineEdit">
+                     <property name="placeholderText">
+                      <string>Tag name for bookmarks notes</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="QLabel" name="label_29">
+                     <property name="text">
+                      <string>Bookmarks tag:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="0" colspan="2">
+                    <widget class="QLabel" name="bookmarkTagLabel">
+                     <property name="text">
+                      <string>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href=&quot;%1&quot;&gt;here&lt;/a&gt;.</string>
+                     </property>
+                     <property name="wordWrap">
+                      <bool>true</bool>
+                     </property>
+                     <property name="openExternalLinks">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
                  </widget>
                 </item>
-                <item>
-                 <widget class="QSpinBox" name="webSocketServerServicePortSpinBox">
-                  <property name="minimum">
-                   <number>1</number>
+                <item row="1" column="0">
+                 <widget class="QGroupBox" name="webSocketGroupBox">
+                  <property name="title">
+                   <string>Web socket server</string>
                   </property>
-                  <property name="maximum">
-                   <number>65535</number>
-                  </property>
-                  <property name="value">
-                   <number>22222</number>
-                  </property>
+                  <layout class="QHBoxLayout" name="horizontalLayout_12">
+                   <item>
+                    <widget class="QLabel" name="label_28">
+                     <property name="text">
+                      <string>Socket server port:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QSpinBox" name="webSocketServerServicePortSpinBox">
+                     <property name="minimum">
+                      <number>1</number>
+                     </property>
+                     <property name="maximum">
+                      <number>65535</number>
+                     </property>
+                     <property name="value">
+                      <number>22222</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QToolButton" name="webSocketServerServicePortResetButton">
+                     <property name="toolTip">
+                      <string>Reset the cursor width</string>
+                     </property>
+                     <property name="text">
+                      <string notr="true">…</string>
+                     </property>
+                     <property name="icon">
+                      <iconset theme="edit-clear" resource="../breeze-qownnotes.qrc">
+                       <normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</iconset>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
                  </widget>
                 </item>
-                <item>
-                 <widget class="QToolButton" name="webSocketServerServicePortResetButton">
-                  <property name="toolTip">
-                   <string>Reset the cursor width</string>
-                  </property>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="webCompannionLabel">
                   <property name="text">
-                   <string notr="true">…</string>
+                   <string>Install the &lt;a href=&quot;%1&quot;&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href=&quot;%2&quot;&gt;Chrome Web Store&lt;/a&gt; or &lt;a href=&quot;%3&quot;&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</string>
                   </property>
-                  <property name="icon">
-                   <iconset theme="edit-clear" resource="../breeze-qownnotes.qrc">
-                    <normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</iconset>
+                  <property name="wordWrap">
+                   <bool>true</bool>
+                  </property>
+                  <property name="openExternalLinks">
+                   <bool>true</bool>
+                  </property>
+                  <property name="textInteractionFlags">
+                   <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
                   </property>
                  </widget>
                 </item>
