@@ -829,7 +829,7 @@
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="264"/>
       <source>Notes removed</source>
-      <translation type="unfinished">Notes removed</translation>
+      <translation>Huomautuksia poistetaan</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="265"/>
@@ -1304,37 +1304,37 @@
     <message>
       <location filename="../mainwindow.ui" line="1598"/>
       <source>Decrypt note</source>
-      <translation type="unfinished">Decrypt note</translation>
+      <translation>Salaa huomautus</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1607"/>
       <source>&amp;Open note in external editor</source>
-      <translation type="unfinished">&amp;Open note in external editor</translation>
+      <translation>&amp;Avaa muistiinpano ulkoisessa editorissa</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1619"/>
       <source>&amp;Export note as markdown file</source>
-      <translation type="unfinished">&amp;Export note as markdown file</translation>
+      <translation>&amp;Vie huomautus markdown-tiedostona</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1628"/>
       <source>&amp;Get involved</source>
-      <translation type="unfinished">&amp;Get involved</translation>
+      <translation>&amp;Osallistu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1637"/>
       <source>Insert &amp;code block</source>
-      <translation type="unfinished">Insert &amp;code block</translation>
+      <translation>Lisää &amp;koodilohko</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1649"/>
       <source>Next note</source>
-      <translation type="unfinished">Next note</translation>
+      <translation>Seuraava huomautus</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1661"/>
       <source>Previous note</source>
-      <translation type="unfinished">Previous note</translation>
+      <translation>Edellinen huomautus</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1673"/>
@@ -1349,53 +1349,53 @@
     <message>
       <location filename="../mainwindow.ui" line="1687"/>
       <source>Show &amp;toolbar</source>
-      <translation type="unfinished">Show &amp;toolbar</translation>
+      <translation>Näytä &amp;työkalurivin</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1695"/>
       <source>Narrow</source>
-      <translation type="unfinished">Narrow</translation>
+      <translation>Kapea</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1706"/>
       <source>Medium</source>
-      <translation type="unfinished">Medium</translation>
+      <translation>Normaali</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1717"/>
       <source>Wide</source>
-      <translation type="unfinished">Wide</translation>
+      <translation>Laaja</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1728"/>
       <source>Full</source>
-      <translation type="unfinished">Full</translation>
+      <translation>Koko</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1740"/>
       <source>Paste html or media</source>
-      <translation type="unfinished">Paste html or media</translation>
+      <translation>Liitä html- tai media</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1743"/>
       <location filename="../mainwindow.ui" line="1746"/>
       <source>Paste images, notes and html from the clipboard</source>
-      <translation type="unfinished">Paste images, notes and html from the clipboard</translation>
+      <translation>Liitä kuvat, muistiinpanot ja html leikepöydältä</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1758"/>
       <source>Show note in &amp;file manager</source>
-      <translation type="unfinished">Show note in &amp;file manager</translation>
+      <translation>Näytä huomautus &amp;tiedostonhallinnassa</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1770"/>
       <source>Format text &amp;bold</source>
-      <translation type="unfinished">Format text &amp;bold</translation>
+      <translation>Alusta teksti &amp;lihavoitu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1782"/>
       <source>Format text &amp;italic</source>
-      <translation type="unfinished">Format text &amp;italic</translation>
+      <translation>Alusta teksti &amp;kursivoitu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1794"/>
@@ -1415,7 +1415,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1830"/>
       <source>&amp;Add tag to note</source>
-      <translation type="unfinished">&amp;Add tag to note</translation>
+      <translation>&amp;Lisää tunniste huomata</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1842"/>
@@ -1873,7 +1873,7 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
       <location filename="../mainwindow.cpp" line="4201"/>
       <location filename="../mainwindow.cpp" line="8285"/>
       <source>Copy selected notes</source>
-      <translation type="unfinished">Copy selected notes</translation>
+      <translation>Kopioi valitut muistiinpanot</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4202"/>
@@ -1973,37 +1973,37 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
     <message>
       <location filename="../mainwindow.cpp" line="5730"/>
       <source>Export selected text as PDF</source>
-      <translation type="unfinished">Export selected text as PDF</translation>
+      <translation>Vie valittu teksti PDF-muodossa</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5736"/>
       <source>Export selected text as PDF (preview)</source>
-      <translation type="unfinished">Export selected text as PDF (preview)</translation>
+      <translation>Vie valittu teksti PDF-muodossa (esikatselu)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5921"/>
       <source>Image files</source>
-      <translation type="unfinished">Image files</translation>
+      <translation>Kuvastaa arkistoida</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6111"/>
       <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
-      <translation type="unfinished">Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</translation>
+      <translation>Huomautuksesi puretaan ja tallennetaan uudelleen tekstinä. Muista, että salaamaton huomautus synkronoidaan mahdollisesti palvelimellesi ja arkaluonteinen teksti saattaa olla näkyvissä! &lt;br /&gt; Haluatko purkaa muistiinpanosi?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6198"/>
       <source>Markdown files</source>
-      <translation type="unfinished">Markdown files</translation>
+      <translation>Markdown tiedostot</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6253"/>
       <source>Bookmarked note position at slot %1</source>
-      <translation type="unfinished">Bookmarked note position at slot %1</translation>
+      <translation>Merkinnän muistiinpano on sijoitettu paikkaan %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6269"/>
       <source>Jumped to bookmark position at slot %1</source>
-      <translation type="unfinished">Jumped to bookmark position at slot %1</translation>
+      <translation>Hyppäsi kirjanmerkkiasentoon paikkaan %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6481"/>
@@ -2339,12 +2339,12 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
     <message>
       <location filename="../mainwindow.cpp" line="4692"/>
       <source>Orientation:</source>
-      <translation type="unfinished">Orientation:</translation>
+      <translation>Suunta:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4715"/>
       <source>Export current note as PDF</source>
-      <translation type="unfinished">Export current note as PDF</translation>
+      <translation>Vie nykyinen huomautus PDF-tiedostoksi</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4805"/>
@@ -2354,7 +2354,7 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
     <message>
       <location filename="../mainwindow.cpp" line="5504"/>
       <source>Open QOwnNotes</source>
-      <translation type="unfinished">Open QOwnNotes</translation>
+      <translation>Avaa QOwnNotes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5238"/>
@@ -2362,12 +2362,12 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
       <location filename="../mainwindow.cpp" line="8873"/>
       <location filename="../mainwindow.cpp" line="9224"/>
       <source>New note</source>
-      <translation type="unfinished">New note</translation>
+      <translation>Uusi muistiinpano</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5529"/>
       <source>Recent notes</source>
-      <translation type="unfinished">Recent notes</translation>
+      <translation>Viimeaikaiset muistiinpanot</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5559"/>
@@ -4072,8 +4072,8 @@ Kokeile itseäsi, jos saat synkronointiristiriitoja ja asetat korkeamman arvon, 
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3685"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="1909"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="1918"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1914"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1923"/>
       <source>Database</source>
       <translation>Tietokanta</translation>
     </message>
@@ -4094,7 +4094,7 @@ Kokeile itseäsi, jos saat synkronointiristiriitoja ja asetat korkeamman arvon, 
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3640"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="1978"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1983"/>
       <source>Clear app data and exit</source>
       <translation>Poista sovelluksen tiedot ja poistu</translation>
     </message>
@@ -4495,20 +4495,20 @@ Kokeile itseäsi, jos saat synkronointiristiriitoja ja asetat korkeamman arvon, 
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3469"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3541"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3546"/>
       <source>Reset message boxes</source>
       <translation>Nollaa viestiruudut</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3662"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3607"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3630"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3612"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3635"/>
       <source>Import settings</source>
       <translation>Tuo asetukset</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3669"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3573"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3578"/>
       <source>Export settings</source>
       <translation>Vie asetukset</translation>
     </message>
@@ -4558,27 +4558,47 @@ Kokeile itseäsi, jos saat synkronointiristiriitoja ja asetat korkeamman arvon, 
       <translation>Näytä muistiinpanot muistilistalla esikatselulla</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5195"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5197"/>
+      <source>Bookmarks</source>
+      <translation type="unfinished">Bookmarks</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5203"/>
+      <source>Tag name for bookmarks notes</source>
+      <translation type="unfinished">Tag name for bookmarks notes</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5210"/>
+      <source>Bookmarks tag:</source>
+      <translation type="unfinished">Bookmarks tag:</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5217"/>
+      <source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
+      <translation type="unfinished">By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5233"/>
       <source>Web socket server</source>
       <translation>Web socket-palvelimen</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5201"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5239"/>
       <source>Socket server port:</source>
       <translation>Socket-palvelimen portti:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5238"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5295"/>
       <source>Web socket server support</source>
       <translation>Web socket palvelin-tuki</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5244"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5301"/>
       <source>Enable socket server</source>
       <translation>Ota socket-palvelin käyttöön</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5166"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5276"/>
       <source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
       <translation type="unfinished">Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</translation>
     </message>
@@ -4665,7 +4685,7 @@ Kokeile itseäsi, jos saat synkronointiristiriitoja ja asetat korkeamman arvon, 
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4394"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5221"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5259"/>
       <source>Reset the cursor width</source>
       <translation>Nollaa kohdistimen leveys</translation>
     </message>
@@ -4804,7 +4824,7 @@ Kokeile itseäsi, jos saat synkronointiristiriitoja ja asetat korkeamman arvon, 
       <translation type="unfinished">Display note subfolders as full tree</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2491"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2496"/>
       <source>Search script repository</source>
       <translation type="unfinished">Search script repository</translation>
     </message>
@@ -5273,57 +5293,57 @@ Kokeile itseäsi, jos saat synkronointiristiriitoja ja asetat korkeamman arvon, 
       <translation type="unfinished">&amp;Save debug information</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="418"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="420"/>
       <source>hostname of proxy server</source>
       <translation type="unfinished">hostname of proxy server</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="419"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="421"/>
       <source>username for proxy server</source>
       <translation type="unfinished">username for proxy server</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="420"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="422"/>
       <source>password for proxy server</source>
       <translation type="unfinished">password for proxy server</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="422"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="424"/>
       <source>HTTP(S) proxy</source>
       <translation type="unfinished">HTTP(S) proxy</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="423"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="425"/>
       <source>SOCKS5 proxy</source>
       <translation type="unfinished">SOCKS5 proxy</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1217"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1222"/>
       <source>Automatic (needs restart)</source>
       <translation type="unfinished">Automatic (needs restart)</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1377"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1382"/>
       <source>Undefined key</source>
       <translation type="unfinished">Undefined key</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1382"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1387"/>
       <source>Assign a new key</source>
       <translation type="unfinished">Assign a new key</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1383"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1388"/>
       <source>Reset to default key</source>
       <translation type="unfinished">Reset to default key</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1462"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1467"/>
       <source>Shortcut already assigned</source>
       <translation type="unfinished">Shortcut already assigned</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1641"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1646"/>
       <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
@@ -5332,7 +5352,7 @@ Server version: %1
 QOwnNotesAPI version: %2</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1652"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1657"/>
       <source>There was an error connecting to the ownCloud Server!
 You also need to have the QOwnNotesAPI app installed and enabled!
 
@@ -5343,103 +5363,103 @@ You also need to have the QOwnNotesAPI app installed and enabled!
 Connection error message: </translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1931"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1936"/>
       <source>Markdown files</source>
       <translation type="unfinished">Markdown files</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1958"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1963"/>
       <source>Disable usage tracking</source>
       <translation type="unfinished">Disable usage tracking</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1959"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1964"/>
       <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
       <translation type="unfinished">Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2180"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2185"/>
       <source>new folder</source>
       <translation type="unfinished">new folder</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2218"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2223"/>
       <source>Remove note folder</source>
       <translation type="unfinished">Remove note folder</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2219"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2224"/>
       <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
       <translation type="unfinished">Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2294"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2299"/>
       <source>Please select the folder where your notes will get stored to</source>
       <translation type="unfinished">Please select the folder where your notes will get stored to</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2331"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2336"/>
       <source>Loading folders from server</source>
       <translation type="unfinished">Loading folders from server</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2345"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2350"/>
       <source>No more folders were found in the current folder</source>
       <translation type="unfinished">No more folders were found in the current folder</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2418"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2423"/>
       <source>Loading folders in '%1' from server</source>
       <translation type="unfinished">Loading folders in '%1' from server</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2478"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2483"/>
       <source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
       <translation type="unfinished">Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2480"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2485"/>
       <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
       <translation type="unfinished">If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2501"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2506"/>
       <source>Check for script updates</source>
       <translation type="unfinished">Check for script updates</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2508"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2513"/>
       <source>Add local script</source>
       <translation type="unfinished">Add local script</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2512"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2517"/>
       <source>Add an existing, local script</source>
       <translation type="unfinished">Add an existing, local script</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3572"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3629"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3577"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3634"/>
       <source>INI files</source>
       <translation type="unfinished">INI files</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3608"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3613"/>
       <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
       <translation type="unfinished">Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3618"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3623"/>
       <source>The application will be quit after the import.</source>
       <translation type="unfinished">The application will be quit after the import.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3619"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3624"/>
       <source>The application will be restarted after the import.</source>
       <translation type="unfinished">The application will be restarted after the import.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2495"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2500"/>
       <source>Find a script in the script repository</source>
       <translation type="unfinished">Find a script in the script repository</translation>
     </message>
@@ -5454,115 +5474,115 @@ Connection error message: </translation>
       <translation type="unfinished">Show menu bar item</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1463"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1468"/>
       <source>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</source>
       <translation type="unfinished">The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2593"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2598"/>
       <source>Remove script</source>
       <translation type="unfinished">Remove script</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2594"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2599"/>
       <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
       <translation>Poista nykyinen komentosarja &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2645"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2650"/>
       <source>QML files</source>
       <translation>QML tiedostot</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2646"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2651"/>
       <source>Please select your QML file</source>
       <translation>Valitse QML-tiedosto</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2735"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2740"/>
       <source>Open repository</source>
       <translation>Avaa arkisto</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2795"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2800"/>
       <source>Your script seems to be valid</source>
       <translation>Skripti näyttää olevan pätevä</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2796"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2801"/>
       <source>There were script errors:
 %1</source>
       <translation>Skriptivirheitä oli:
 %1</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2865"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2870"/>
       <source>File extension</source>
       <translation>Tiedostopääte</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2866"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2871"/>
       <source>Enter your custom file extension:</source>
       <translation>Anna mukautettu tiedostopääte:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3158"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3163"/>
       <source>Calendar cache emptied</source>
       <translation>Kalenterin välimuisti tyhjennetään</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3159"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3164"/>
       <source>Your calendar cache was emptied.</source>
       <translation>Kalenterisi välimuisti tyhjennettiin.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3237"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3242"/>
       <source>Reset toolbars and exit</source>
       <translation>Nollaa työkalurivit ja poistu</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3238"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3243"/>
       <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
       <translation>Haluatko todella palauttaa kaikki työkalurivit? Sovellus suljetaan prosessissa, oletustyökalurivit palautetaan, kun käynnistät sen uudelleen.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3242"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3247"/>
       <source>Reset and &amp;exit</source>
       <translation>Palauttaa ja &amp;sulje</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3404"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3409"/>
       <source>Log file cleared</source>
       <translation>Lokitiedosto tyhjennetään</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3405"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3410"/>
       <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
       <translation>Lokitiedosto &lt;strong&gt;%1&lt;/strong&gt; poistettiin.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3441"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3446"/>
       <source>Executable files</source>
       <translation>Suorittavat tiedostot</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3442"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3444"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3447"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3449"/>
       <source>All files</source>
       <translation>Kaikki tiedostot</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3452"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3457"/>
       <source>Please select the path of your git executable</source>
       <translation>Valitse git-suoritettavan tiedoston polku</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3542"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3547"/>
       <source>Do you really want to reset the overrides of all message boxes?</source>
       <translation>Haluatko todella palauttaa kaikkien viestilaatikoiden ohitukset?</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1919"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1924"/>
       <source>The Database was reinitialized.</source>
       <translation>Tietokanta käynnistettiin uudelleen.</translation>
     </message>
@@ -5577,52 +5597,52 @@ Connection error message: </translation>
       <translation>Voit ladata git-asiakkaan täältä: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="377"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="379"/>
       <source>enabled</source>
       <translation>käytössä</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="377"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="379"/>
       <source>disabled</source>
       <translation>liikuntarajoitteinen</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="380"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="382"/>
       <source>Portable mode is currently:</source>
       <translation>Kannettava tila on tällä hetkellä:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="383"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="385"/>
       <source>In portable mode</source>
       <translation>Kannettavassa tilassa</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="384"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="386"/>
       <source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary's location</source>
       <translation>sisäinen sqlite-tietokanta ja asetukset tallennetaan binäärin sijainnin &lt;code&gt;Data&lt;/code&gt; -kansioon</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="387"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="389"/>
       <source>the settings will be stored in an ini file</source>
       <translation>asetukset tallennetaan ini-tiedostoon</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="388"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="390"/>
       <source>the note folders, script paths and path to an external editor will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders, scripts and external editor will be loaded regardless where your QOwnNotes installation is currently located</source>
       <translation>huomautus-kansiot, komentosarjan polut ja ulkoisen editorin polku tallennetaan automaattisesti &lt;code&gt; Data &lt;/code&gt; -kansioon nähden, jotta oikeat muistikansion, skriptit ja ulkoinen editori ladataan riippumatta siitä, missä QOwnNotes-asennuksesi on tällä hetkellä</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="396"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="398"/>
       <source>It will be activated if you run QOwnNotes with the parameter &lt;code&gt;--portable&lt;/code&gt;.</source>
       <translation>Se aktivoituu, jos suoritat QOwnNotes-parametrin parametrilla &lt;code&gt; --portable &lt;/code&gt;.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1932"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1937"/>
       <source>Save debug information</source>
       <translation>Tallenna vianmääritystiedot</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1979"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1984"/>
       <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
@@ -5631,34 +5651,34 @@ Your notes will stay intact!</source>
 Muistiinpanosi pysyvät ennallaan!</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1982"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1987"/>
       <source>Clear and &amp;exit</source>
       <translation>Selkeä ja &amp;sulje</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1913"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="1982"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3242"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1918"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1987"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3247"/>
       <source>&amp;Cancel</source>
       <translation>&amp;Peruuta</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="401"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="403"/>
       <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
       <translation>&lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt; löytyy julkaisupolkuasi, jos haluat käynnistää QOwnNotes-sovelluksen kannettavassa tilassa.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1910"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1915"/>
       <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
       <translation>Haluatko todella poistaa paikallisen tietokannan? Tämä poistaa myös määritetyt huomautuskansiot ja välimuistiin tallennetut todisteet!</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1913"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1918"/>
       <source>Clear &amp;database</source>
       <translation>Tyhjennä &amp;tietokanta</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2093"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2098"/>
       <source>Select editor application</source>
       <translation>Valitse editori-sovellus</translation>
     </message>
@@ -6364,7 +6384,7 @@ This cannot be undone!</translation>
       <translation type="unfinished">%1 connected to QOwnNotes server!</translation>
     </message>
     <message>
-      <location filename="../services/websocketserverservice.cpp" line="155"/>
+      <location filename="../services/websocketserverservice.cpp" line="205"/>
       <source>%1 was disconnected from QOwnNotes server</source>
       <translation type="unfinished">%1 was disconnected from QOwnNotes server</translation>
     </message>

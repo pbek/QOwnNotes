@@ -3,14 +3,20 @@
 ## 19.1.4
 - added support for showing **bookmark links of all notes tagged** with `bookmarks`
   for the [QOwnNotes Web Companion browser extension](https://github.com/qownnotes/web-companion)
+    - you can change that tag name in the *Browser extension* settings
     - detection of tags and description of such links is also improved
-    - bookmarks of the current note will now have the tag `bookmarks`
-        - you can change that tag name in the *Browser extension* settings
+    - links in the current note will now have the tag `current`
     - for more information about the **bookmarks feature** please visit
       [QOwnNotes Web Companion browser extension](https://www.qownnotes.org/Knowledge-base/QOwnNotes-Web-Companion-browser-extension)
 - the [QOwnNotes Web Companion browser extension](https://github.com/qownnotes/web-companion)
   was updated to version 19.1.4
-    - bookmarks styling changes
+    - bookmarks styling changes and the **search field** can now be **reset**
+    - the content of the bookmarks **search field** will now be **persisted**
+- added **Finnish translation** (a big thank you to Fabijenna)
+    - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes)
+      to make QOwnNotes available in more languages or help with the current 
+      translation
+- added more Brazilian Portuguese translation (thank you mlimacarlos)
 
 ## 19.1.3
 - improved detection of links in encrypted notes for the **bookmark feature**

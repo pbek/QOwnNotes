@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1174</width>
+    <height>1395</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -397,7 +397,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>19</number>
+            <number>4</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -2076,6 +2076,17 @@
                         </property>
                         <property name="whatsThis">
                          <string notr="true">fil</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string notr="true">Finnish</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Finnish</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">fi</string>
                         </property>
                        </item>
                        <item>

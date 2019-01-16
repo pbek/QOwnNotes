@@ -35,3 +35,4 @@ mv QOwnNotes_ceb_PH.ts QOwnNotes_ceb.ts
 mv QOwnNotes_hil_PH.ts QOwnNotes_hil.ts
 mv QOwnNotes_hi_IN.ts QOwnNotes_hi.ts
 mv QOwnNotes_ur_PK.ts QOwnNotes_ur.ts
+mv QOwnNotes_fi_FI.ts QOwnNotes_fi.ts
