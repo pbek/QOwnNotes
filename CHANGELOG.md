@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 19.1.4
+- added support for showing **bookmark links of all notes tagged** with `bookmarks`
+  for the [QOwnNotes Web Companion browser extension](https://github.com/qownnotes/web-companion)
+    - detection of tags and description of such links is also improved
+
 ## 19.1.3
 - improved detection of links in encrypted notes for the **bookmark feature**
   of the [QOwnNotes Web Companion browser extension](https://github.com/qownnotes/web-companion)

@@ -143,23 +143,58 @@ void WebSocketServerService::processMessage(const QString &message) {
 #endif
     } else if (type == "getBookmarks") {
 #ifndef INTEGRATION_TESTS
-        MainWindow *mainWindow = MainWindow::instance();
-        if (mainWindow == Q_NULLPTR) {
-            return;
-        }
-
-        auto *pSender = qobject_cast<QWebSocket *>(sender());
 //        pSender->sendTextMessage(
 //                R"({ "type": "bookmarks", "data": [ { "name": "Test1", "url": "http://www.qownnotes.org" } ] })");
 //        pSender->sendTextMessage(
 //                mainWindow->getCurrentNote().getParsedBookmarksWebServiceJsonText());
-        pSender->sendTextMessage(Bookmark::parsedBookmarksWebServiceJsonText(
-                mainWindow->activeNoteTextEdit()->toPlainText(), true));
+        QString jsonText = getBookmarksJsonText();
+
+        if (jsonText.isEmpty()) {
+            return;
+        }
+
+        auto *pSender = qobject_cast<QWebSocket *>(sender());
+        pSender->sendTextMessage(jsonText);
 #endif
     } else {
         auto *pSender = qobject_cast<QWebSocket *>(sender());
         pSender->sendTextMessage("Received: " + message);
     }
+}
+
+QString WebSocketServerService::getBookmarksJsonText() const {
+    MainWindow *mainWindow = MainWindow::instance();
+    if (mainWindow == Q_NULLPTR) {
+            return "";
+        }
+
+    Tag tag = Tag::fetchByName("bookmarks");
+    QList<Note> noteList = tag.fetchAllLinkedNotes();
+
+    QList<Bookmark> bookmarks;
+
+    Q_FOREACH(Note note, noteList) {
+            QList<Bookmark> noteBookmarks = note.getParsedBookmarks();
+
+            Q_FOREACH(Bookmark bookmark, noteBookmarks) {
+                        if (!bookmarks.contains(bookmark)) {
+                            bookmarks.append(bookmark);
+                        }
+                }
+        }
+
+    QList<Bookmark> currentNoteBookmarks = Bookmark::parseBookmarks(
+                mainWindow->activeNoteTextEdit()->toPlainText(), true);
+
+    Q_FOREACH(Bookmark bookmark, currentNoteBookmarks) {
+                if (!bookmarks.contains(bookmark)) {
+                    bookmarks.append(bookmark);
+                }
+            }
+
+    QString jsonText = Bookmark::bookmarksWebServiceJsonText(bookmarks);
+
+    return jsonText;
 }
 
 void WebSocketServerService::socketDisconnected() {

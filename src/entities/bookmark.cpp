@@ -43,6 +43,10 @@ QDebug operator<<(QDebug dbg, const Bookmark &bookmark) {
     return dbg.space();
 }
 
+bool Bookmark::operator==(const Bookmark &bookmark) const {
+    return url == bookmark.url;
+}
+
 /**
  * Parses bookmarks from a text
  *
@@ -56,7 +60,7 @@ QList<Bookmark> Bookmark::parseBookmarks(QString text, bool withBasicUrls) {
 
     // parse bookmark links like `- [name](http://link) #tag1 #tag2 the description text`
     // with optional tags and description
-    i = QRegularExpression(R"([-*] \[(.+)\]\((http[s]?://.+)\)(.+)$)", QRegularExpression::MultilineOption).globalMatch(text);
+    i = QRegularExpression(R"([-*] \[(.+)\]\((http[s]?://.+)\)(.*)$)", QRegularExpression::MultilineOption).globalMatch(text);
 
     while (i.hasNext()) {
         QRegularExpressionMatch match = i.next();
@@ -80,11 +84,16 @@ QList<Bookmark> Bookmark::parseBookmarks(QString text, bool withBasicUrls) {
 
                     if (!tags.contains(tag)) {
                         tags << tag;
-                        additionalText.remove("#" + tag);
+                        additionalText.remove(QRegularExpression(
+                                "#" + QRegularExpression::escape(tag) + "\\b"));
                     }
                 }
 
                 description = additionalText.trimmed();
+            }
+
+            if (withBasicUrls && !tags.contains("current")) {
+                tags << "current";
             }
 
             urlList << url;
@@ -104,7 +113,7 @@ QList<Bookmark> Bookmark::parseBookmarks(QString text, bool withBasicUrls) {
             // check if we already have added the url
             if (!urlList.contains(url)) {
                 urlList << url;
-                bookmarks << Bookmark(url, name);
+                bookmarks << Bookmark(url, name, QStringList() << "current");
             }
         }
 
@@ -114,7 +123,7 @@ QList<Bookmark> Bookmark::parseBookmarks(QString text, bool withBasicUrls) {
         while (i.hasNext()) {
             QRegularExpressionMatch match = i.next();
             QString url = match.captured(1);
-            bookmarks << Bookmark(url);
+            bookmarks << Bookmark(url, "", QStringList() << "current");
         }
     }
 

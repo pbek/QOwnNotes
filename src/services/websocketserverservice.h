@@ -48,4 +48,6 @@ private:
     QWebSocketServer *m_pWebSocketServer;
     QList<QWebSocket *> m_clients;
     quint16 m_port;
+
+    QString getBookmarksJsonText() const;
 };

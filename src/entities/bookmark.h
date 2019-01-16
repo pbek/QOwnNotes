@@ -21,6 +21,7 @@ public:
     static QList<Bookmark> parseBookmarks(QString text, bool withBasicUrls = false);
     static QString bookmarksWebServiceJsonText(QList<Bookmark> bookmarks);
     static QString parsedBookmarksWebServiceJsonText(QString text, bool withBasicUrls = false);
+    bool operator==(const Bookmark &bookmark) const;
 
 protected:
     QString name;
