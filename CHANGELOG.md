@@ -4,6 +4,9 @@
 - improved detection of multiple links in a text-block in the current note for
   the **bookmark feature** of the [QOwnNotes Web Companion browser extension](https://github.com/qownnotes/web-companion)
     - added support for showing the current note folder name
+- added more German, Catalan, Spanish, Chinese Traditional, Italian, Czech,
+  Finnish and Greek translation (thank you rakekniven, richarson, abev66,
+  MGuerra, mlocati and Fabijenna)
 
 ## 19.1.4
 - added support for showing **bookmark links of all notes tagged** with `bookmarks`
