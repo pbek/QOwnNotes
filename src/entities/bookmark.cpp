@@ -4,6 +4,7 @@
 
 #include <utility>
 #include "bookmark.h"
+#include "notefolder.h"
 #include <QDebug>
 #include <QRegularExpression>
 #include <QRegularExpressionMatchIterator>
@@ -145,6 +146,8 @@ QString Bookmark::bookmarksWebServiceJsonText(QList<Bookmark> bookmarks) {
     QJsonObject bookmarkResultObject;
     bookmarkResultObject.insert("type", QJsonValue::fromVariant("bookmarks"));
     bookmarkResultObject.insert("data", bookmarkObjectList);
+    bookmarkResultObject.insert("noteFolderName",
+            NoteFolder::currentNoteFolder().getName());
 
     QJsonDocument doc(bookmarkResultObject);
 
