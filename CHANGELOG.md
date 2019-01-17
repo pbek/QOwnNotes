@@ -4,6 +4,14 @@
 - improved detection of multiple links in a text-block in the current note for
   the **bookmark feature** of the [QOwnNotes Web Companion browser extension](https://github.com/qownnotes/web-companion)
     - added support for showing the current note folder name
+- the [QOwnNotes Web Companion browser extension](https://github.com/qownnotes/web-companion)
+  was updated to version 19.1.5
+    - the previously entered **search text** in the **bookmark popup** is now
+      **automatically selected and focused**, so that you can overwrite it and
+      start to search immediately
+    - the tab-order was now adapted, so that you can **navigate the links** with <kbd>Tab</kbd> easily
+    - there now is a **default shortcut** <kbd>Ctrl + B</kbd> for**opening the bookmarks popup**
+    - the name of the **current note folder** will now be displayed in the top toolbar of the **bookmark popup**
 - added more German, Catalan, Spanish, Chinese Traditional, Italian, Czech,
   Finnish and Greek translation (thank you rakekniven, richarson, abev66,
   MGuerra, mlocati and Fabijenna)
