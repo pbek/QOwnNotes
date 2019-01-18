@@ -4118,8 +4118,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="3696"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1914"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1923"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1918"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1927"/>
         <source>Database</source>
         <translation>База даних</translation>
     </message>
@@ -4140,7 +4140,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="3651"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1983"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1987"/>
         <source>Clear app data and exit</source>
         <translation>Очистити програмні дані і вийти</translation>
     </message>
@@ -4546,20 +4546,20 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="3480"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3546"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3550"/>
         <source>Reset message boxes</source>
         <translation>Скинути вікна сповіщень</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="3673"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3612"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3635"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3616"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3639"/>
         <source>Import settings</source>
         <translation>Імпортувати налаштування</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="3680"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3578"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3582"/>
         <source>Export settings</source>
         <translation>Експортувати налаштування</translation>
     </message>
@@ -4615,41 +4615,61 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="5214"/>
+        <source>Notes with this tag will be used for fetching bookmarks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="5217"/>
         <source>Tag name for bookmarks notes</source>
         <translation type="unfinished">Tag name for bookmarks notes</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5221"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5224"/>
         <source>Bookmarks tag:</source>
         <translation type="unfinished">Bookmarks tag:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5228"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5231"/>
         <source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href=&quot;%1&quot;&gt;here&lt;/a&gt;.</source>
         <translation type="unfinished">By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href=&quot;%1&quot;&gt;here&lt;/a&gt;.</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="5244"/>
+        <source>Bookmarks note name:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="5251"/>
+        <source>This note will be used for adding new bookmarks from the browser extension</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="5254"/>
+        <source>Note name for adding new bookmarks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="5264"/>
         <source>Web socket server</source>
         <translation type="unfinished">Web socket server</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5250"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5270"/>
         <source>Socket server port:</source>
         <translation type="unfinished">Socket server port:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5306"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5326"/>
         <source>Web socket server support</source>
         <translation type="unfinished">Web socket server support</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5312"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5332"/>
         <source>Enable socket server</source>
         <translation type="unfinished">Enable socket server</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5287"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5307"/>
         <source>Install the &lt;a href=&quot;%1&quot;&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href=&quot;%2&quot;&gt;Chrome Web Store&lt;/a&gt; or &lt;a href=&quot;%3&quot;&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
         <translation type="unfinished">Install the &lt;a href=&quot;%1&quot;&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href=&quot;%2&quot;&gt;Chrome Web Store&lt;/a&gt; or &lt;a href=&quot;%3&quot;&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</translation>
     </message>
@@ -4736,7 +4756,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="4405"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5270"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5290"/>
         <source>Reset the cursor width</source>
         <translation>Скинути ширину курсора</translation>
     </message>
@@ -4875,7 +4895,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>Показувати вкладені теки у вигляді повного дерева</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2496"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2500"/>
         <source>Search script repository</source>
         <translation>Шукати у сховищі скриптів</translation>
     </message>
@@ -5369,32 +5389,32 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>SOCKS5 проксі</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1222"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1226"/>
         <source>Automatic (needs restart)</source>
         <translation>Автоматично (потребує перезапуску)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1382"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1386"/>
         <source>Undefined key</source>
         <translation>Невизначена клавіша</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1387"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1391"/>
         <source>Assign a new key</source>
         <translation>Призначити нову клавішу</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1388"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1392"/>
         <source>Reset to default key</source>
         <translation>Відновити параметри клавіш до типових</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1467"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1471"/>
         <source>Shortcut already assigned</source>
         <translation>Сполучення клавіш вже використовується</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1646"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1650"/>
         <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
@@ -5403,7 +5423,7 @@ QOwnNotesAPI version: %2</source>
 Версія QOwnNotesAPI: %2</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1657"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1661"/>
         <source>There was an error connecting to the ownCloud Server!
 You also need to have the QOwnNotesAPI app installed and enabled!
 
@@ -5414,103 +5434,103 @@ Connection error message: </source>
 Повідомлення про помилку підключення: </translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1936"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1940"/>
         <source>Markdown files</source>
         <translation>Файли Markdown</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1963"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1967"/>
         <source>Disable usage tracking</source>
         <translation>Вимкнути відстеження використання</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1964"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1968"/>
         <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can&apos;t live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
         <translation>Анонімне використання даних допомагає вирішити, які частини QOwnNotes потрібно поліпшити наступними, для пошуку ти виправлення помилок.&lt;br /&gt;Будь ласка, вимкніть його, тільки якщо ви дійсно не зможете жити з цим.&lt;br /&gt;&lt;br /&gt;Вимкнути відстеження використання?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2185"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2189"/>
         <source>new folder</source>
         <translation>нова тека</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2223"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2227"/>
         <source>Remove note folder</source>
         <translation>Видалити теку нотаток</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2224"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2228"/>
         <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
         <translation>Видалити поточну теку нотаток &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2299"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2303"/>
         <source>Please select the folder where your notes will get stored to</source>
         <translation>Будь ласка, виберіть теку, де ваші нотатки будуть зберігатись</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2336"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2340"/>
         <source>Loading folders from server</source>
         <translation>Завантаження тек з сервера</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2350"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2354"/>
         <source>No more folders were found in the current folder</source>
         <translation>Більше не знайдено тек в поточній теці</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2423"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2427"/>
         <source>Loading folders in &apos;%1&apos; from server</source>
         <translation>Завантаження тек з сервера до &apos;%1&apos;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2483"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2487"/>
         <source>Take a look at the &lt;a href=&quot;%1&quot;&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
         <translation>Погляньте на &lt;a href=&quot;%1&quot;&gt;Документацію по скриптам&lt;/a&gt;, щоб почати швидко.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2485"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2489"/>
         <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href=&quot;%1&quot;&gt; QOwnNotes issue page&lt;/a&gt;.</source>
         <translation>Якщо вам потрібен доступ до певних функцій в QOwnNotes, будь ласка, відкрийте питання на &lt;a href=&quot;%1&quot;&gt; сторінці питань QOwnNotes&lt;/a&gt;.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2506"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2510"/>
         <source>Check for script updates</source>
         <translation>Перевірити оновлення скриптів</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2513"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2517"/>
         <source>Add local script</source>
         <translation>Додати локальний скрипт</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2517"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2521"/>
         <source>Add an existing, local script</source>
         <translation>Додати локально збережений скрипт</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3577"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3634"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3581"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3638"/>
         <source>INI files</source>
         <translation>INI файли</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3613"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3617"/>
         <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
         <translation>Ви точно хочете імпортувати налаштування? Ваші поточні налаштування будуть вилучені і не всі з них можна буде відновити, наприклад, налаштування теки нотаток та використані скрипти. Вам також буде потрібно налаштувати деякі параметри відповідно до платформи, але ваші нотатки залишаться недоторканими!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3623"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3627"/>
         <source>The application will be quit after the import.</source>
         <translation>Програма буде завершена після імпортування.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3624"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3628"/>
         <source>The application will be restarted after the import.</source>
         <translation>Після імпорту програму буде перезапущено.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2500"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2504"/>
         <source>Find a script in the script repository</source>
         <translation>Знайти скрипти у сховищі скриптів</translation>
     </message>
@@ -5525,115 +5545,115 @@ Connection error message: </source>
         <translation>Показати елемент меню</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1468"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1472"/>
         <source>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</source>
         <translation>Комбінація клавіш &lt;strong&gt;%1&lt;/strong&gt; вже зайнята &lt;strong&gt;%2&lt;/strong&gt;! Перемкнутися на комбінацію клавіш?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2598"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2602"/>
         <source>Remove script</source>
         <translation>Видалити скрипт</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2599"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2603"/>
         <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
         <translation>Видалити поточний скрипт &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2650"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2654"/>
         <source>QML files</source>
         <translation>QML файли</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2651"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2655"/>
         <source>Please select your QML file</source>
         <translation>Будь ласка, виберіть ваш файл QML</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2740"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2744"/>
         <source>Open repository</source>
         <translation>Відкрити сховище</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2800"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2804"/>
         <source>Your script seems to be valid</source>
         <translation>Ваш скрипт представляється правильним</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2801"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2805"/>
         <source>There were script errors:
 %1</source>
         <translation>Помилки скрипту:
 %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2870"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2874"/>
         <source>File extension</source>
         <translation>Розширення файлу</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2871"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2875"/>
         <source>Enter your custom file extension:</source>
         <translation>Введіть ваше користувацьке розширення файлу:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3163"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3167"/>
         <source>Calendar cache emptied</source>
         <translation>Кеш календаря спорожнено</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3164"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3168"/>
         <source>Your calendar cache was emptied.</source>
         <translation>Кеш вашого календаря було спорожнено.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3242"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3246"/>
         <source>Reset toolbars and exit</source>
         <translation>Скидання панелей інструментів і вихід</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3243"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3247"/>
         <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
         <translation>Ви дійсно хочете скинути всі панелі інструментів? В цьому процесі програму буде закрито, панелі інструментів будуть відновлені за замовчуванням, коли ви запустите її знову.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3247"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3251"/>
         <source>Reset and &amp;exit</source>
         <translation>Скинути і &amp;вийти</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3409"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3413"/>
         <source>Log file cleared</source>
         <translation>Файл журналу очищений</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3410"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3414"/>
         <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
         <translation>Файл журналу &lt;strong&gt;%1&lt;/strong&gt; був очищений.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3446"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3450"/>
         <source>Executable files</source>
         <translation>Виконувані файли</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3447"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3449"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3451"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3453"/>
         <source>All files</source>
         <translation>Всі файли</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3457"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3461"/>
         <source>Please select the path of your git executable</source>
         <translation>Будь ласка, вкажіть шлях файлу програми git</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3547"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3551"/>
         <source>Do you really want to reset the overrides of all message boxes?</source>
         <translation>Ви дійсно бажаєте скинути перевизначення всі вікон для повідомлень?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1924"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1928"/>
         <source>The Database was reinitialized.</source>
         <translation>Базу даних було реініціалізовано.</translation>
     </message>
@@ -5688,12 +5708,12 @@ Connection error message: </source>
         <translation>Буде активовано, якщо ви запустите QOwnNotes з параметром &lt;code&gt;--portable&lt;/code&gt;.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1937"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1941"/>
         <source>Save debug information</source>
         <translation>Зберегти налагоджувальну інформацію</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1984"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1988"/>
         <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
@@ -5702,14 +5722,14 @@ Your notes will stay intact!</source>
 Ваші нотатки залишаться недоторканими!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1987"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1991"/>
         <source>Clear and &amp;exit</source>
         <translation>Очистити і &amp;вийти</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1918"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1987"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3247"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1922"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1991"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3251"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Скасувати</translation>
     </message>
@@ -5719,17 +5739,17 @@ Your notes will stay intact!</source>
         <translation>Ви знайдете &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; у вашому релізі, для запуску QOwnNotes в портативному режимі.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1915"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1919"/>
         <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
         <translation>Ви дійсно хочете очистити локальну базу даних? Це призведе до видалення конфігурацій тек нотаток і кешу елементів списку завдань!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1918"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1922"/>
         <source>Clear &amp;database</source>
         <translation>Очистити &amp;базу даних</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2098"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2102"/>
         <source>Select editor application</source>
         <translation>Виберіть програму редактор</translation>
     </message>
@@ -6435,7 +6455,7 @@ This cannot be undone!</source>
         <translation type="unfinished">%1 connected to QOwnNotes server!</translation>
     </message>
     <message>
-        <location filename="../services/websocketserverservice.cpp" line="205"/>
+        <location filename="../services/websocketserverservice.cpp" line="230"/>
         <source>%1 was disconnected from QOwnNotes server</source>
         <translation type="unfinished">%1 was disconnected from QOwnNotes server</translation>
     </message>

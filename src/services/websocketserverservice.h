@@ -41,6 +41,8 @@ public:
 
     static QString getBookmarksTag();
 
+    static QString getBookmarksNoteName();
+
 private slots:
     void onNewConnection();
     void processMessage(const QString &message);

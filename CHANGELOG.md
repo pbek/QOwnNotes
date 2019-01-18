@@ -6,6 +6,10 @@
     - also more general link detection improvements were made
 - added fields to add a link name and description for inserting links to the
   link dialog
+- added support for **adding bookmarks** to a note `Bookmarks` from the
+  [QOwnNotes Web Companion browser extension](https://github.com/qownnotes/web-companion)
+    - you can change the note name in the *Browser extension* settings
+    - if the note doesn't exist it will be created the first time a bookmark is added
 
 ## 19.1.5
 - improved detection of multiple links in a text-block in the current note for

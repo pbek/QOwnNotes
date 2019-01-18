@@ -4056,8 +4056,8 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="3696"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1914"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1923"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1918"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1927"/>
         <source>Database</source>
         <translation>Veritabanı</translation>
     </message>
@@ -4078,7 +4078,7 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="3651"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1983"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1987"/>
         <source>Clear app data and exit</source>
         <translation>Uygulama verisini temizle ve çıkış yap</translation>
     </message>
@@ -4484,20 +4484,20 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="3480"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3546"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3550"/>
         <source>Reset message boxes</source>
         <translation>Mesaj kutusunu sıfırla</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="3673"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3612"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3635"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3616"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3639"/>
         <source>Import settings</source>
         <translation type="unfinished">Import settings</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="3680"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3578"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3582"/>
         <source>Export settings</source>
         <translation type="unfinished">Export settings</translation>
     </message>
@@ -4553,41 +4553,61 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="5214"/>
+        <source>Notes with this tag will be used for fetching bookmarks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="5217"/>
         <source>Tag name for bookmarks notes</source>
         <translation type="unfinished">Tag name for bookmarks notes</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5221"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5224"/>
         <source>Bookmarks tag:</source>
         <translation type="unfinished">Bookmarks tag:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5228"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5231"/>
         <source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href=&quot;%1&quot;&gt;here&lt;/a&gt;.</source>
         <translation type="unfinished">By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href=&quot;%1&quot;&gt;here&lt;/a&gt;.</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="5244"/>
+        <source>Bookmarks note name:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="5251"/>
+        <source>This note will be used for adding new bookmarks from the browser extension</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="5254"/>
+        <source>Note name for adding new bookmarks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="5264"/>
         <source>Web socket server</source>
         <translation type="unfinished">Web socket server</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5250"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5270"/>
         <source>Socket server port:</source>
         <translation type="unfinished">Socket server port:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5306"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5326"/>
         <source>Web socket server support</source>
         <translation type="unfinished">Web socket server support</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5312"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5332"/>
         <source>Enable socket server</source>
         <translation type="unfinished">Enable socket server</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5287"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5307"/>
         <source>Install the &lt;a href=&quot;%1&quot;&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href=&quot;%2&quot;&gt;Chrome Web Store&lt;/a&gt; or &lt;a href=&quot;%3&quot;&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
         <translation type="unfinished">Install the &lt;a href=&quot;%1&quot;&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href=&quot;%2&quot;&gt;Chrome Web Store&lt;/a&gt; or &lt;a href=&quot;%3&quot;&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</translation>
     </message>
@@ -4674,7 +4694,7 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="4405"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5270"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5290"/>
         <source>Reset the cursor width</source>
         <translation>İmleç genişliğini sıfırla</translation>
     </message>
@@ -4813,7 +4833,7 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
         <translation>Not altkasörlerini full ağaç olarak göster</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2496"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2500"/>
         <source>Search script repository</source>
         <translation>Script deposu ara</translation>
     </message>
@@ -5307,32 +5327,32 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
         <translation>SOCKS5 proxy</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1222"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1226"/>
         <source>Automatic (needs restart)</source>
         <translation>Otomatik (yeniden başlatma gerektirir)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1382"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1386"/>
         <source>Undefined key</source>
         <translation>Tanımsız anahtar</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1387"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1391"/>
         <source>Assign a new key</source>
         <translation>Yeni bir anahtar ata</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1388"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1392"/>
         <source>Reset to default key</source>
         <translation>Varsayılan anahtara sıfırla</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1467"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1471"/>
         <source>Shortcut already assigned</source>
         <translation type="unfinished">Shortcut already assigned</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1646"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1650"/>
         <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
@@ -5341,7 +5361,7 @@ Sunucu sürümü: %1
 QOwnNotesAPI sürümü:%2</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1657"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1661"/>
         <source>There was an error connecting to the ownCloud Server!
 You also need to have the QOwnNotesAPI app installed and enabled!
 
@@ -5351,103 +5371,103 @@ QownnotesAPI&apos;nin kurulmuş ve aktif olması gerekiyor!
 Bağlantı hata mesajı: </translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1936"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1940"/>
         <source>Markdown files</source>
         <translation>Markdown dosyaları</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1963"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1967"/>
         <source>Disable usage tracking</source>
         <translation>Kullanım izlemeyi devre dışı bırak</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1964"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1968"/>
         <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can&apos;t live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
         <translation>Anonim veri kullanımı, hataları bulmak ve düzeltmek için QOwnNotes&apos;u geliştirmeye yardımcı olur.&lt;br /&gt; Eğer bununla yaşamayacağınızı düşünüyorsanız lütfen devre dışı bırakın.&lt;br /&gt;&lt;br /&gt; Gerçekten izlemeyi devre dışı bırakmak istiyor musunuz?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2185"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2189"/>
         <source>new folder</source>
         <translation>yeni klasör</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2223"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2227"/>
         <source>Remove note folder</source>
         <translation>Not klasörünü kaldır</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2224"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2228"/>
         <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
         <translation>Geçerli not klasörü &lt;strong&gt;%1&lt;/strong&gt; kaldırılsın mı?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2299"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2303"/>
         <source>Please select the folder where your notes will get stored to</source>
         <translation>Lütfen notlarınızın depolanacağını klasör seçin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2336"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2340"/>
         <source>Loading folders from server</source>
         <translation>Klasörler sunucudan yükleniyor</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2350"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2354"/>
         <source>No more folders were found in the current folder</source>
         <translation>Geçerli klasörde daha fazla klasör bulunamadı</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2423"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2427"/>
         <source>Loading folders in &apos;%1&apos; from server</source>
         <translation>Sunucudan &apos;%1&apos; içinde klasörler yükleniyor</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2483"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2487"/>
         <source>Take a look at the &lt;a href=&quot;%1&quot;&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
         <translation>Şuna bir göz atın. Hızlı başlangıç için &lt;a href=&quot;%1&quot;&gt; scripting belgeleme &lt;/a&gt;.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2485"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2489"/>
         <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href=&quot;%1&quot;&gt; QOwnNotes issue page&lt;/a&gt;.</source>
         <translation>QOwnNotes&apos;da belirli bir işlevselliğe erişmeniz gerekiyorsa lütfen &lt;a href=&quot;%1&quot;&gt; QOwnNotes konu sayfası üzerinde bir konu açın &lt;/a&gt;.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2506"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2510"/>
         <source>Check for script updates</source>
         <translation>Script güncellemelerine göz at</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2513"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2517"/>
         <source>Add local script</source>
         <translation>Yerel script ekle</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2517"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2521"/>
         <source>Add an existing, local script</source>
         <translation>Mevcut, yerel bir script ekle</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3577"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3634"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3581"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3638"/>
         <source>INI files</source>
         <translation type="unfinished">INI files</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3613"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3617"/>
         <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
         <translation type="unfinished">Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3623"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3627"/>
         <source>The application will be quit after the import.</source>
         <translation type="unfinished">The application will be quit after the import.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3624"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3628"/>
         <source>The application will be restarted after the import.</source>
         <translation type="unfinished">The application will be restarted after the import.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2500"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2504"/>
         <source>Find a script in the script repository</source>
         <translation>Script deposunda bir script bul</translation>
     </message>
@@ -5462,115 +5482,115 @@ Bağlantı hata mesajı: </translation>
         <translation>Menü çubuğu öğesini göster</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1468"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1472"/>
         <source>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</source>
         <translation type="unfinished">The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2598"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2602"/>
         <source>Remove script</source>
         <translation>Script kaldır</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2599"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2603"/>
         <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
         <translation>Geçerli script &lt;strong&gt;%1&lt;/strong&gt; kaldırılsın mı?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2650"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2654"/>
         <source>QML files</source>
         <translation>QML dosyaları</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2651"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2655"/>
         <source>Please select your QML file</source>
         <translation>Lütfen QML dosyanızı seçin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2740"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2744"/>
         <source>Open repository</source>
         <translation>Depoyu aç</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2800"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2804"/>
         <source>Your script seems to be valid</source>
         <translation>Scriptiniz geçerli görünüyor</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2801"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2805"/>
         <source>There were script errors:
 %1</source>
         <translation>Script hataları vardı:
 %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2870"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2874"/>
         <source>File extension</source>
         <translation>Dosya uzantısı</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2871"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2875"/>
         <source>Enter your custom file extension:</source>
         <translation>Özel dosya uzantınızı girin:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3163"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3167"/>
         <source>Calendar cache emptied</source>
         <translation>Takvim önbelleği boşaltıldı</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3164"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3168"/>
         <source>Your calendar cache was emptied.</source>
         <translation>Takvim önbelleğiniz boşaltılmış.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3242"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3246"/>
         <source>Reset toolbars and exit</source>
         <translation>Araç çubuğunu sıfırla ve çık</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3243"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3247"/>
         <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
         <translation>Tüm araç menülerini sıfırlamak istiyor musunuz? İşlem esnasında uygulama kaptılacak, varsayılan araç menüleri uygulama tekrar başladığında geri yüklenecektir.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3247"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3251"/>
         <source>Reset and &amp;exit</source>
         <translation>Yeniden başlat ve &amp;çık</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3409"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3413"/>
         <source>Log file cleared</source>
         <translation>Kayıt dosyası temizlendi</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3410"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3414"/>
         <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
         <translation>Günlük dosyası &lt;strong&gt;%1&lt;/strong&gt; temizlendi.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3446"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3450"/>
         <source>Executable files</source>
         <translation>Çalıştırılabilir dosyalar</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3447"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3449"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3451"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3453"/>
         <source>All files</source>
         <translation>Tüm dosyalar</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3457"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3461"/>
         <source>Please select the path of your git executable</source>
         <translation>Lütfen git yürütülebilirinizin yolunu seçin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3547"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3551"/>
         <source>Do you really want to reset the overrides of all message boxes?</source>
         <translation>Gerçekten tüm mesaj kutularının geçersiz kılınmasını sıfırlamak istiyor musunuz?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1924"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1928"/>
         <source>The Database was reinitialized.</source>
         <translation>Veritabanı yeniden başlatıldı.</translation>
     </message>
@@ -5625,12 +5645,12 @@ Bağlantı hata mesajı: </translation>
         <translation>QOwnNotes&apos;u &lt;code&gt; taşınabilir &lt;/code&gt; parametreleri ile çalıştırırsanız aktive olacaktır.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1937"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1941"/>
         <source>Save debug information</source>
         <translation>Hatası ayıklanmış bilgiyi kaydet</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1984"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1988"/>
         <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
@@ -5638,14 +5658,14 @@ Your notes will stay intact!</source>
 Notelarınız bozulmamış olarak kalacak!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1987"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1991"/>
         <source>Clear and &amp;exit</source>
         <translation>Temizle ve &amp;çıkış</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1918"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1987"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3247"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1922"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1991"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3251"/>
         <source>&amp;Cancel</source>
         <translation>&amp;İptal</translation>
     </message>
@@ -5655,17 +5675,17 @@ Notelarınız bozulmamış olarak kalacak!</translation>
         <translation>Mevcut yayın yolunuzda QOwnNotes&apos;ı taşınabilir modda çalıştırırsanız &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; ile karşılaşacaksınız.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1915"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1919"/>
         <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
         <translation>Yerel veritabanınızı temizlemek istediğinizden emin misiniz? Bu aynı zamanda yapılandırılmış not dosyalarınızı ve önbelleğe alınmış yapılacak işler ögenizi de siler!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1918"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1922"/>
         <source>Clear &amp;database</source>
         <translation>Temizle &amp;veritabanı</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2098"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2102"/>
         <source>Select editor application</source>
         <translation>Düzenleyici uygulaması seçin</translation>
     </message>
@@ -6371,7 +6391,7 @@ Bu geri alınamaz!</translation>
         <translation type="unfinished">%1 connected to QOwnNotes server!</translation>
     </message>
     <message>
-        <location filename="../services/websocketserverservice.cpp" line="205"/>
+        <location filename="../services/websocketserverservice.cpp" line="230"/>
         <source>%1 was disconnected from QOwnNotes server</source>
         <translation type="unfinished">%1 was disconnected from QOwnNotes server</translation>
     </message>

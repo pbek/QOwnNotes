@@ -397,7 +397,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>4</number>
+            <number>19</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -2858,8 +2858,8 @@
                           <rect>
                            <x>0</x>
                            <y>0</y>
-                           <width>347</width>
-                           <height>474</height>
+                           <width>607</width>
+                           <height>1206</height>
                           </rect>
                          </property>
                          <layout class="QGridLayout" name="gridLayout_55">
@@ -5210,6 +5210,9 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                   <layout class="QGridLayout" name="gridLayout_72">
                    <item row="1" column="1">
                     <widget class="QLineEdit" name="bookmarksTagLineEdit">
+                     <property name="toolTip">
+                      <string>Notes with this tag will be used for fetching bookmarks</string>
+                     </property>
                      <property name="placeholderText">
                       <string>Tag name for bookmarks notes</string>
                      </property>
@@ -5232,6 +5235,23 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                      </property>
                      <property name="openExternalLinks">
                       <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="0">
+                    <widget class="QLabel" name="label_30">
+                     <property name="text">
+                      <string>Bookmarks note name:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="1">
+                    <widget class="QLineEdit" name="bookmarksNoteNameLineEdit">
+                     <property name="toolTip">
+                      <string>This note will be used for adding new bookmarks from the browser extension</string>
+                     </property>
+                     <property name="placeholderText">
+                      <string>Note name for adding new bookmarks</string>
                      </property>
                     </widget>
                    </item>

@@ -155,6 +155,31 @@ void WebSocketServerService::processMessage(const QString &message) {
         auto *pSender = qobject_cast<QWebSocket *>(sender());
         pSender->sendTextMessage(jsonText);
 #endif
+    } else if (type == "newBookmark") {
+        const QJsonObject data = jsonObject.value("data").toObject();
+        const QString name = data.value("name").toString().trimmed().remove("[").remove("]");
+        const QString url = data.value("url").toString().trimmed();
+        const QString description = data.value("description").toString().trimmed();
+        const QString bookmarksNoteName = getBookmarksNoteName();
+        Note bookmarksNote = Note::fetchByName(bookmarksNoteName);
+
+        // create new bookmarks note if it doesn't exist
+        if (!bookmarksNote.isFetched()) {
+            bookmarksNote.setName(bookmarksNoteName);
+            bookmarksNote.setNoteText(Note::createNoteHeader(bookmarksNoteName));
+        }
+
+        QString noteText = bookmarksNote.getNoteText().trimmed() +
+                "\n- [" + name +"](" + url + ")";
+
+        if (!description.isEmpty()) {
+            noteText += " " + description;
+        }
+
+        noteText += "\n";
+        bookmarksNote.setNoteText(noteText);
+        bookmarksNote.store();
+        bookmarksNote.storeNoteTextFileToDisk();
     } else {
         auto *pSender = qobject_cast<QWebSocket *>(sender());
         pSender->sendTextMessage("Received: " + message);
@@ -215,4 +240,11 @@ QString WebSocketServerService::getBookmarksTag() {
     QString bookmarksTag = settings.value(
             "webSocketServerService/bookmarksTag", "bookmarks").toString();
     return bookmarksTag;
+}
+
+QString WebSocketServerService::getBookmarksNoteName() {
+    QSettings settings;
+    QString bookmarksNoteName = settings.value(
+            "webSocketServerService/bookmarksNoteName", "Bookmarks").toString();
+    return bookmarksNoteName;
 }

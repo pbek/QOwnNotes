@@ -790,6 +790,8 @@ void SettingsDialog::storeSettings() {
                       ui->webSocketServerServicePortSpinBox->value());
     settings.setValue("webSocketServerService/bookmarksTag",
                       ui->bookmarksTagLineEdit->text());
+    settings.setValue("webSocketServerService/bookmarksNoteName",
+                      ui->bookmarksNoteNameLineEdit->text());
 }
 
 /**
@@ -1178,6 +1180,8 @@ void SettingsDialog::readSettings() {
     ui->webSocketServerServicePortSpinBox->setValue(
             WebSocketServerService::getSettingsPort());
     ui->bookmarksTagLineEdit->setText(WebSocketServerService::getBookmarksTag());
+    ui->bookmarksNoteNameLineEdit->setText(
+            WebSocketServerService::getBookmarksNoteName());
 }
 
 /**
