@@ -15,6 +15,8 @@
     - you can now **add new bookmarks** with a button in the **bookmark popup**
     - you can now **open all visible bookmarks** in new tabs with a button in
       the **bookmark popup**
+- added more Indonesian, Catalan, Greek, Brazilian Portuguese, Hungarian and
+  Dutch translation (thank you zmni, MGuerra, mlimacarlos and Fabijenna)
 
 ## 19.1.5
 - improved detection of multiple links in a text-block in the current note for
