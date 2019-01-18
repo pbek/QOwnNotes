@@ -2,20 +2,25 @@
 
 ## 19.1.6
 - bookmark links with `chrome-extension://` or `chrome://` are now also detected
-  as bookmarks for the [QOwnNotes Web Companion browser extension](https://github.com/qownnotes/web-companion)
+  as bookmarks for the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
     - also more general link detection improvements were made
 - added fields to add a link name and description for inserting links to the
-  link dialog
+  *Link dialog*
 - added support for **adding bookmarks** to a note `Bookmarks` from the
-  [QOwnNotes Web Companion browser extension](https://github.com/qownnotes/web-companion)
+  [Web Companion browser extension](https://github.com/qownnotes/web-companion)
     - you can change the note name in the *Browser extension* settings
     - if the note doesn't exist it will be created the first time a bookmark is added
+- the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
+  was updated to version 19.1.6
+    - you can now **add new bookmarks** with a button in the **bookmark popup**
+    - you can now **open all visible bookmarks** in new tabs with a button in
+      the **bookmark popup**
 
 ## 19.1.5
 - improved detection of multiple links in a text-block in the current note for
-  the **bookmark feature** of the [QOwnNotes Web Companion browser extension](https://github.com/qownnotes/web-companion)
+  the **bookmark feature** of the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
     - added support for showing the current note folder name
-- the [QOwnNotes Web Companion browser extension](https://github.com/qownnotes/web-companion)
+- the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
   was updated to version 19.1.5
     - the previously entered **search text** in the **bookmark popup** is now
       **automatically selected and focused**, so that you can overwrite it and
@@ -29,13 +34,13 @@
 
 ## 19.1.4
 - added support for showing **bookmark links of all notes tagged** with `bookmarks`
-  for the [QOwnNotes Web Companion browser extension](https://github.com/qownnotes/web-companion)
+  for the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
     - you can change that tag name in the *Browser extension* settings
     - detection of tags and description of such links is also improved
     - links in the current note will now have the tag `current`
     - for more information about the **bookmarks feature** please visit
-      [QOwnNotes Web Companion browser extension](https://www.qownnotes.org/Knowledge-base/QOwnNotes-Web-Companion-browser-extension)
-- the [QOwnNotes Web Companion browser extension](https://github.com/qownnotes/web-companion)
+      [Web Companion browser extension](https://www.qownnotes.org/Knowledge-base/QOwnNotes-Web-Companion-browser-extension)
+- the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
   was updated to version 19.1.4
     - bookmarks styling changes and the **search field** can now be **reset**
     - the content of the bookmarks **search field** will now be **persisted**
@@ -47,8 +52,8 @@
 
 ## 19.1.3
 - improved detection of links in encrypted notes for the **bookmark feature**
-  of the [QOwnNotes Web Companion browser extension](https://github.com/qownnotes/web-companion)
-- the [QOwnNotes Web Companion browser extension](https://github.com/qownnotes/web-companion)
+  of the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
+- the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
   was updated to version 19.1.3
     - preventing opening of two new tabs when clicking a bookmark
     - added support for the new **tag** and **description** attributes in **bookmarks**
@@ -60,8 +65,8 @@
   richarson, abev66, prolinuxua, mlocati and Fabijenna)
 
 ## 19.1.2
-- added support for the new **bookmark feature** of the [QOwnNotes Web Companion browser extension](https://github.com/qownnotes/web-companion)
-- the [QOwnNotes Web Companion browser extension](https://github.com/qownnotes/web-companion)
+- added support for the new **bookmark feature** of the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
+- the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
   was updated to version 19.1.2
     - you can now browse a **list of all links in the current note** if you click
       on the QOwnNotes icon in the browser toolbar
@@ -78,7 +83,7 @@
 - the *Chrome extension settings* got renamed to *Browser extension*
 - added [Firefox Add-ons page](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion)
   to the *Browser extension* settings page (for [#330](https://github.com/pbek/QOwnNotes/issues/330))
-- the [QOwnNotes Web Companion browser extension](https://github.com/qownnotes/web-companion)
+- the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
   was updated to version 19.1.1
     - the extension now also works with Firefox (for [#1](https://github.com/qownnotes/web-companion/issues/1),
       thank you @Offerel for your Firefox changes)
@@ -90,7 +95,7 @@
     - the text of the extension can now be translated
         - visit [QOwnNotes translations](https://crowdin.com/project/qownnotes)
           if you want to help to translate the interface to your language
-    - download the latest version on [QOwnNotes Web Companion releases](https://github.com/qownnotes/web-companion/releases)
+    - download the latest version on [Web Companion releases](https://github.com/qownnotes/web-companion/releases)
 - changed the tooltip text for the `Allow note file name to be different from headline`
   setting to be more clear (for [#1110](https://github.com/pbek/QOwnNotes/issues/1110))
 - fixed some typos in the *Trash dialog* (for [#1107](https://github.com/pbek/QOwnNotes/issues/1107), thank you @smokris)
@@ -103,7 +108,7 @@
 
 ## 19.1.0
 - you can now change the socket server port for connecting with the
-  [QOwnNotes Web Companion browser extension](https://github.com/qownnotes/web-companion)
+  [Web Companion browser extension](https://github.com/qownnotes/web-companion)
   in the new *Chrome extension settings* (for [#330](https://github.com/pbek/QOwnNotes/issues/330))
     - the Chrome extension is now also available in the
       [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
@@ -124,41 +129,41 @@
   filenames and headlines to prevent underline formatting in headlines if two `_`
   characters are present (for [#330](https://github.com/pbek/QOwnNotes/issues/330))
 - added support for converting html to markdown when a page is created as new
-  note for the [QOwnNotes Web Companion browser extension](https://github.com/qownnotes/web-companion)
+  note for the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
   (for [#330](https://github.com/pbek/QOwnNotes/issues/330))
 - inline images will now be automatically transformed to real images if html is
   converted to markdown (for [#330](https://github.com/pbek/QOwnNotes/issues/330))
-- the [QOwnNotes Web Companion browser extension](https://github.com/qownnotes/web-companion)
+- the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
   was updated to version 18.12.2
     - added support to import pages as new note
         - the html will be converted to markdown and images of the page will be
           downloaded (might take a while)
     - added support to add a screenshot of the visible area as new note
     - selected text will now be created as new note with newlines if possible
-    - download the latest version on [QOwnNotes Web Companion releases](https://github.com/qownnotes/web-companion/releases)
+    - download the latest version on [Web Companion releases](https://github.com/qownnotes/web-companion/releases)
 - added more Hungarian and Dutch translation (thank you Fabijenna)
 
 ## 18.12.8
 - improved note name filtering to prevent troubles on Windows for the
-  [QOwnNotes Web Companion browser extension](https://github.com/qownnotes/web-companion)
+  [Web Companion browser extension](https://github.com/qownnotes/web-companion)
   (for [#330](https://github.com/pbek/QOwnNotes/issues/330))
     - the name and note text will be trimmed to prevent wrong newlines
-    - the QOwnNotes Web Companion browser extension was updated to version 18.12.1
+    - the Web Companion browser extension was updated to version 18.12.1
         - fixed the default port
         - the url of the page will now also be written to the note
         - restructured the context menu
         - added an context menu entry to reset the settings
-        - download the latest version on [QOwnNotes Web Companion releases](https://github.com/qownnotes/web-companion/releases)
+        - download the latest version on [Web Companion releases](https://github.com/qownnotes/web-companion/releases)
 - the amount of `=` characters added for the headlines of new notes are now
   limited to 40 to prevent too long headline lines
     - the name will be trimmed to prevent wrong newlines in the headline
 - added more Spanish translation (thank you richarson)
 
 ## 18.12.7
-- added support for the new [QOwnNotes Web Companion browser extension](https://github.com/qownnotes/web-companion)
+- added support for the new [Web Companion browser extension](https://github.com/qownnotes/web-companion)
   to add selected text as new note (for [#330](https://github.com/pbek/QOwnNotes/issues/330))
     - you can download the current release of the extension at
-      [QOwnNotes Web Companion 18.12.0](https://github.com/qownnotes/web-companion/releases/tag/18.12.0)
+      [Web Companion 18.12.0](https://github.com/qownnotes/web-companion/releases/tag/18.12.0)
     - then visit `chrome://extensions` and drop the extension file into Chrome to install the extension
 - added more Polish, German, Chinese Traditional and Italian (thank you lucjan,
   rakekniven, abev66 and mlocati)
