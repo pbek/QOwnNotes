@@ -61,7 +61,7 @@ QList<Bookmark> Bookmark::parseBookmarks(QString text, bool withBasicUrls) {
 
     // parse bookmark links like `- [name](http://link) #tag1 #tag2 the description text`
     // with optional tags and description
-    i = QRegularExpression(R"([-*] \[(.+)\]\(([\w-]+://.+?)\)(.*)$)", QRegularExpression::MultilineOption).globalMatch(text);
+    i = QRegularExpression(R"([-*] \[(.+?)\]\(([\w-]+://.+?)\)(.*)$)", QRegularExpression::MultilineOption).globalMatch(text);
 
     while (i.hasNext()) {
         QRegularExpressionMatch match = i.next();
@@ -104,7 +104,7 @@ QList<Bookmark> Bookmark::parseBookmarks(QString text, bool withBasicUrls) {
 
     if (withBasicUrls) {
         // parse named links like [name](http://my.site.com)
-        i = QRegularExpression(R"(\[(.+)\]\((http[s]?://.+?)\))").globalMatch(text);
+        i = QRegularExpression(R"(\[(.+?)\]\(([\w-]+://.+?)\))").globalMatch(text);
 
         while (i.hasNext()) {
             QRegularExpressionMatch match = i.next();
@@ -119,7 +119,7 @@ QList<Bookmark> Bookmark::parseBookmarks(QString text, bool withBasicUrls) {
         }
 
         // parse links like <http://my.site.com>
-        i = QRegularExpression(R"(<(http[s]?://.+?)>)").globalMatch(text);
+        i = QRegularExpression(R"(<([\w-]+://.+?)>)").globalMatch(text);
 
         while (i.hasNext()) {
             QRegularExpressionMatch match = i.next();
