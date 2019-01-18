@@ -3,6 +3,8 @@
 ## 19.1.6
 - bookmark links with `chrome-extension://` or `chrome://` are now also detected
   as bookmarks for the [QOwnNotes Web Companion browser extension](https://github.com/qownnotes/web-companion)
+- added fields to add a link name and description for inserting links to the
+  link dialog
 
 ## 19.1.5
 - improved detection of multiple links in a text-block in the current note for

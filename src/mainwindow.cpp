@@ -4532,18 +4532,20 @@ void MainWindow::handleTextNoteLinking() {
 
     if (dialog->result() == QDialog::Accepted) {
         QString url = dialog->getURL();
+        QString linkName = dialog->getLinkName();
+        QString linkDescription = dialog->getLinkDescription();
         QString noteName = dialog->getSelectedNoteName();
         QString noteNameForLink = Note::generateTextForLink(noteName);
 
         if ((noteName != "") || (url != "")) {
-            QString selectedText =
-                    textEdit->textCursor().selectedText();
+            QString chosenLinkName = linkName.isEmpty() ?
+                    textEdit->textCursor().selectedText() : linkName;
             QString newText;
 
             // if user has entered an url
             if (url != "") {
-                if (selectedText != "") {
-                    newText = "[" + selectedText + "](" + url + ")";
+                if (chosenLinkName != "") {
+                    newText = "[" + chosenLinkName + "](" + url + ")";
                 } else {
                     // if possible fetch the title of the webpage
                     QString title = dialog->getTitleForUrl(QUrl(url));
@@ -4557,13 +4559,17 @@ void MainWindow::handleTextNoteLinking() {
                 }
             } else {
                 // if user has selected a note
-                if (selectedText != "") {
-                    noteName = selectedText;
+                if (chosenLinkName != "") {
+                    noteName = chosenLinkName;
                 }
 
                 QString noteUrl = "note://" + noteNameForLink;
 
                 newText = "[" + noteName + "](" + noteUrl + ")";
+            }
+
+            if (!linkDescription.isEmpty()) {
+                newText += " " + linkDescription;
             }
 
             textEdit->textCursor().insertText(newText);

@@ -71,6 +71,32 @@
       </widget>
      </item>
      <item>
+      <widget class="QLineEdit" name="nameLineEdit">
+       <property name="statusTip">
+        <string>Enter the name of the link (optional)</string>
+       </property>
+       <property name="placeholderText">
+        <string>Name of link (optional)</string>
+       </property>
+       <property name="clearButtonEnabled">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="descriptionLineEdit">
+       <property name="statusTip">
+        <string>Enter a description for the link (optional)</string>
+       </property>
+       <property name="placeholderText">
+        <string>Description of link (optional)</string>
+       </property>
+       <property name="clearButtonEnabled">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QLineEdit" name="searchLineEdit">
        <property name="toolTip">
         <string>Search for notes or create new notes by entering text and pressing return</string>
@@ -112,6 +138,14 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>urlEdit</tabstop>
+  <tabstop>nameLineEdit</tabstop>
+  <tabstop>descriptionLineEdit</tabstop>
+  <tabstop>searchLineEdit</tabstop>
+  <tabstop>notesListWidget</tabstop>
+  <tabstop>fileUrlButton</tabstop>
+ </tabstops>
  <resources>
   <include location="../breeze-qownnotes.qrc"/>
  </resources>

@@ -76,6 +76,14 @@ QString LinkDialog::getURL() {
     return url;
 }
 
+QString LinkDialog::getLinkName() {
+    return ui->nameLineEdit->text().trimmed();
+}
+
+QString LinkDialog::getLinkDescription() {
+    return ui->descriptionLineEdit->text().trimmed();
+}
+
 //
 // Event filters on the NoteSearchDialog
 //

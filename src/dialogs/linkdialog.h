@@ -18,6 +18,8 @@ public:
 
     QString getSelectedNoteName();
     QString getURL();
+    QString getLinkName();
+    QString getLinkDescription();
     QString getTitleForUrl(QUrl url);
 
 private slots:
