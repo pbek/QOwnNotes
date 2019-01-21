@@ -4,6 +4,12 @@
 - when **adding bookmarks** from the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
   the bookmarks tag will be applied to the bookmarks note automatically if that
   note wasn't created yet
+- the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
+  was updated to version 19.1.7
+    - added **access keys** to some **bookmark popup** actions
+        - access key <kbd>A</kbd> to add a new bookmarks (for example press <kbd>Alt + A</kbd> in Chrome)
+        - access key <kbd>S</kbd> to search for bookmarks
+        - access key <kbd>O</kbd> to open all visible bookmarks
 - added more German, Catalan, Spanish, Brazilian Portuguese, Italian, Galician,
   Finnish, Dutch, Greek, Hungarian, Swedish, Czech, Swedish and Hausa translation
   (thank you rakekniven, richarson, tiwi90, MGuerra, mlocati and Fabijenna)
