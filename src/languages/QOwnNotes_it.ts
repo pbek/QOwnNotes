@@ -730,22 +730,22 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="76"/>
       <source>Enter the name of the link (optional)</source>
-      <translation type="unfinished">Enter the name of the link (optional)</translation>
+      <translation>Inserisci il nome del collegamento (opzionale)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="79"/>
       <source>Name of link (optional)</source>
-      <translation type="unfinished">Name of link (optional)</translation>
+      <translation>Nome del collegamento (opzionale)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="89"/>
       <source>Enter a description for the link (optional)</source>
-      <translation type="unfinished">Enter a description for the link (optional)</translation>
+      <translation>Inserisci una descrizione per il collegamento (opzionale)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="92"/>
       <source>Description of link (optional)</source>
-      <translation type="unfinished">Description of link (optional)</translation>
+      <translation>Descrizione del collegamento (opzionale)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="102"/>
@@ -4587,7 +4587,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5214"/>
       <source>Notes with this tag will be used for fetching bookmarks</source>
-      <translation type="unfinished">Notes with this tag will be used for fetching bookmarks</translation>
+      <translation>Le note con questo tag verranno utilizzate per il recupero dei segnalibri</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5217"/>
@@ -4607,17 +4607,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5244"/>
       <source>Bookmarks note name:</source>
-      <translation type="unfinished">Bookmarks note name:</translation>
+      <translation>Nome della nota dei segnalibri:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5251"/>
       <source>This note will be used for adding new bookmarks from the browser extension</source>
-      <translation type="unfinished">This note will be used for adding new bookmarks from the browser extension</translation>
+      <translation>Questa nota verrà utilizzata per aggiungere nuovi segnalibri dall'estensione del browser</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5254"/>
       <source>Note name for adding new bookmarks</source>
-      <translation type="unfinished">Note name for adding new bookmarks</translation>
+      <translation>Nome della nota per l'aggiunta di nuovi segnalibri</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5264"/>

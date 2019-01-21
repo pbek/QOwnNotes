@@ -4588,7 +4588,7 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5214"/>
       <source>Notes with this tag will be used for fetching bookmarks</source>
-      <translation type="unfinished">Notes with this tag will be used for fetching bookmarks</translation>
+      <translation>Les notes amb aquesta etiqueta s'usaràn per cercar adreces d'interès</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5217"/>
@@ -4608,17 +4608,17 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5244"/>
       <source>Bookmarks note name:</source>
-      <translation type="unfinished">Bookmarks note name:</translation>
+      <translation>Nom de la nota d'adreces d'interès:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5251"/>
       <source>This note will be used for adding new bookmarks from the browser extension</source>
-      <translation type="unfinished">This note will be used for adding new bookmarks from the browser extension</translation>
+      <translation>Aquesta nota s'usarà per afegir noves adreces d'interès des de l'extensió de navegador</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5254"/>
       <source>Note name for adding new bookmarks</source>
-      <translation type="unfinished">Note name for adding new bookmarks</translation>
+      <translation>Nom de la nota des d'on afegir noves adreces d'interès</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5264"/>

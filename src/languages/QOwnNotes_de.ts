@@ -730,22 +730,22 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="76"/>
       <source>Enter the name of the link (optional)</source>
-      <translation type="unfinished">Enter the name of the link (optional)</translation>
+      <translation>Geben Sie den Namen des Links an (optional)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="79"/>
       <source>Name of link (optional)</source>
-      <translation type="unfinished">Name of link (optional)</translation>
+      <translation>Name des Links (optional)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="89"/>
       <source>Enter a description for the link (optional)</source>
-      <translation type="unfinished">Enter a description for the link (optional)</translation>
+      <translation>Geben Sie eine Beschreibung für den Link an (optional)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="92"/>
       <source>Description of link (optional)</source>
-      <translation type="unfinished">Description of link (optional)</translation>
+      <translation>Beschreibung des Links (optional)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="102"/>
@@ -4589,7 +4589,7 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5214"/>
       <source>Notes with this tag will be used for fetching bookmarks</source>
-      <translation type="unfinished">Notes with this tag will be used for fetching bookmarks</translation>
+      <translation>Notizen mit diesem Tag werden für das Abrufen von Lesezeichen verwendet</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5217"/>
@@ -4609,17 +4609,17 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5244"/>
       <source>Bookmarks note name:</source>
-      <translation type="unfinished">Bookmarks note name:</translation>
+      <translation>Name der Lesezeichen-Notiz:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5251"/>
       <source>This note will be used for adding new bookmarks from the browser extension</source>
-      <translation type="unfinished">This note will be used for adding new bookmarks from the browser extension</translation>
+      <translation>Diese Notiz wird für das Hinzufügen von neuen Lesezeichen durch die Browser-Erweiterung verwendet</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5254"/>
       <source>Note name for adding new bookmarks</source>
-      <translation type="unfinished">Note name for adding new bookmarks</translation>
+      <translation>Name der Notiz für das Hinzufügen von neuen Lesezeichen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5264"/>

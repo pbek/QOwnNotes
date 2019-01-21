@@ -730,22 +730,22 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="76"/>
       <source>Enter the name of the link (optional)</source>
-      <translation type="unfinished">Enter the name of the link (optional)</translation>
+      <translation>Escribe el nombre del enlace (opcional)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="79"/>
       <source>Name of link (optional)</source>
-      <translation type="unfinished">Name of link (optional)</translation>
+      <translation>Nombre del enlace (opcional)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="89"/>
       <source>Enter a description for the link (optional)</source>
-      <translation type="unfinished">Enter a description for the link (optional)</translation>
+      <translation>Escribe una descripción para el enlace (opcional)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="92"/>
       <source>Description of link (optional)</source>
-      <translation type="unfinished">Description of link (optional)</translation>
+      <translation>Descripción del enlace (opcional)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="102"/>
@@ -4587,7 +4587,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5214"/>
       <source>Notes with this tag will be used for fetching bookmarks</source>
-      <translation type="unfinished">Notes with this tag will be used for fetching bookmarks</translation>
+      <translation>Las notas con esta etiqueta se usarán para traer los marcadores</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5217"/>
@@ -4607,17 +4607,17 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5244"/>
       <source>Bookmarks note name:</source>
-      <translation type="unfinished">Bookmarks note name:</translation>
+      <translation>Nombre de la nota de marcadores:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5251"/>
       <source>This note will be used for adding new bookmarks from the browser extension</source>
-      <translation type="unfinished">This note will be used for adding new bookmarks from the browser extension</translation>
+      <translation>Esta nota se utilizará para agregar nuevos marcadores desde la extensión de navegador</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5254"/>
       <source>Note name for adding new bookmarks</source>
-      <translation type="unfinished">Note name for adding new bookmarks</translation>
+      <translation>Nombre de la nota para añadir nuevos marcadores</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5264"/>

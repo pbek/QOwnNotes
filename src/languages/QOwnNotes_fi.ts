@@ -735,17 +735,17 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="79"/>
       <source>Name of link (optional)</source>
-      <translation type="unfinished">Name of link (optional)</translation>
+      <translation>Linkin nimi (valinnainen)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="89"/>
       <source>Enter a description for the link (optional)</source>
-      <translation type="unfinished">Enter a description for the link (optional)</translation>
+      <translation>Anna linkin kuvaus (valinnainen)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="92"/>
       <source>Description of link (optional)</source>
-      <translation type="unfinished">Description of link (optional)</translation>
+      <translation>Linkin kuvaus (valinnainen)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="102"/>
@@ -820,9 +820,9 @@
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="195"/>
       <source>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
-        <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
+      <translation>
+        <numerusform>Palauta &lt;strong&gt;%n&lt;/strong&gt; valittu huomatus?</numerusform>
+        <numerusform>Palauta &lt;strong&gt;%n&lt;/strong&gt; valittu huomatus?</numerusform>
       </translation>
     </message>
     <message>
@@ -2029,23 +2029,23 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
       <location filename="../mainwindow.cpp" line="6487"/>
       <location filename="../mainwindow.cpp" line="6555"/>
       <source>Inserting image</source>
-      <translation type="unfinished">Inserting image</translation>
+      <translation>Kuvan lisääminen</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6492"/>
       <location filename="../mainwindow.cpp" line="6558"/>
       <source>Done inserting image</source>
-      <translation type="unfinished">Done inserting image</translation>
+      <translation>Valmis lisäämällä kuva</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6494"/>
       <source>Inserting attachment</source>
-      <translation type="unfinished">Inserting attachment</translation>
+      <translation>Liitteen lisääminen</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6499"/>
       <source>Done inserting attachment</source>
-      <translation type="unfinished">Done inserting attachment</translation>
+      <translation>Tehty liitteen lisääminen</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="6509"/>
@@ -2935,12 +2935,12 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="14"/>
       <source>Orphaned attachments</source>
-      <translation type="unfinished">Orphaned attachments</translation>
+      <translation>Orvoksi jääneet liitetiedostot</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="54"/>
       <source>Delete selected attachments</source>
-      <translation type="unfinished">Delete selected attachments</translation>
+      <translation>Poista valitut liitteet</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="57"/>

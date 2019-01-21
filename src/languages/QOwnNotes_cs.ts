@@ -740,22 +740,22 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="76"/>
       <source>Enter the name of the link (optional)</source>
-      <translation type="unfinished">Enter the name of the link (optional)</translation>
+      <translation>Zadejte název odkazu (volitelné)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="79"/>
       <source>Name of link (optional)</source>
-      <translation type="unfinished">Name of link (optional)</translation>
+      <translation>Název odkazu (volitelné)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="89"/>
       <source>Enter a description for the link (optional)</source>
-      <translation type="unfinished">Enter a description for the link (optional)</translation>
+      <translation>Zadejte popis odkazu (volitelné)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="92"/>
       <source>Description of link (optional)</source>
-      <translation type="unfinished">Description of link (optional)</translation>
+      <translation>Popis odkazu (volitelné)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="102"/>
@@ -4467,7 +4467,7 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2086"/>
       <source>Finnish</source>
-      <translation type="unfinished">Finnish</translation>
+      <translation>Finština</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2108"/>
@@ -4656,12 +4656,12 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5214"/>
       <source>Notes with this tag will be used for fetching bookmarks</source>
-      <translation type="unfinished">Notes with this tag will be used for fetching bookmarks</translation>
+      <translation>Poznámky s touto značkou budou použity pro načítání záložek</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5217"/>
       <source>Tag name for bookmarks notes</source>
-      <translation type="unfinished">Tag name for bookmarks notes</translation>
+      <translation>Název značky pro poznámky k záložkám</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5224"/>
@@ -4676,17 +4676,17 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5244"/>
       <source>Bookmarks note name:</source>
-      <translation type="unfinished">Bookmarks note name:</translation>
+      <translation>Název poznámky záložky:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5251"/>
       <source>This note will be used for adding new bookmarks from the browser extension</source>
-      <translation type="unfinished">This note will be used for adding new bookmarks from the browser extension</translation>
+      <translation>Tato poznámka bude použita pro přidání nových záložek z rozšíření prohlížeče</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5254"/>
       <source>Note name for adding new bookmarks</source>
-      <translation type="unfinished">Note name for adding new bookmarks</translation>
+      <translation>Poznámka: název pro přidání nových záložek</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5264"/>
@@ -4716,7 +4716,7 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3380"/>
       <source>Allow the note file name to be different from the headline.&lt;br&gt;Beware that ownCloud Notes needs the file name to be the same as the headline!</source>
-      <translation type="unfinished">Allow the note file name to be different from the headline.&lt;br&gt;Beware that ownCloud Notes needs the file name to be the same as the headline!</translation>
+      <translation>Povolit název souboru poznámky, aby se lišil od nadpisu. &lt;br&gt; Dejte si pozor, aby vlastní název Notes potřeboval název souboru být stejný jako nadpis!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4685"/>

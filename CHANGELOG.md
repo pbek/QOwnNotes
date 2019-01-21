@@ -4,6 +4,9 @@
 - when **adding bookmarks** from the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
   the bookmarks tag will be applied to the bookmarks note automatically if that
   note wasn't created yet
+- added more German, Catalan, Spanish, Brazilian Portuguese, Italian, Galician,
+  Finnish, Dutch, Greek, Hungarian, Swedish, Czech, Swedish and Hausa translation
+  (thank you rakekniven, richarson, tiwi90, MGuerra, mlocati and Fabijenna)
 
 ## 19.1.6
 - bookmark links with `chrome-extension://` or `chrome://` are now also detected

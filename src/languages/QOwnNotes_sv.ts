@@ -4401,7 +4401,7 @@ Testa själv om du får synkroniseringskonflikter och ställ ett högre värde o
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2086"/>
       <source>Finnish</source>
-      <translation type="unfinished">Finnish</translation>
+      <translation>Finska</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2108"/>
@@ -4585,7 +4585,7 @@ Testa själv om du får synkroniseringskonflikter och ställ ett högre värde o
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5208"/>
       <source>Bookmarks</source>
-      <translation type="unfinished">Bookmarks</translation>
+      <translation>Bokmärken</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5214"/>

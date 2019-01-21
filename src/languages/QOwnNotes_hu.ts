@@ -4609,7 +4609,7 @@ Tesztelje, ha szinkronizációs konfliktus lép fel és állítson be ilyen eset
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5244"/>
       <source>Bookmarks note name:</source>
-      <translation>Könyvjelzők jegyzet neve:</translation>
+      <translation>A könyvjelző-jegyzet neve:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5251"/>
@@ -6373,7 +6373,7 @@ Nem lehet visszavonni!</translation>
     <message>
       <location filename="../services/updateservice.cpp" line="228"/>
       <source>No updates</source>
-      <translation>Nincsen frissítés</translation>
+      <translation>Nincs frissítés</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="229"/>
