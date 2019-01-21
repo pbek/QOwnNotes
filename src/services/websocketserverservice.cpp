@@ -162,11 +162,13 @@ void WebSocketServerService::processMessage(const QString &message) {
         const QString description = data.value("description").toString().trimmed();
         const QString bookmarksNoteName = getBookmarksNoteName();
         Note bookmarksNote = Note::fetchByName(bookmarksNoteName);
+        bool applyTag = false;
 
         // create new bookmarks note if it doesn't exist
         if (!bookmarksNote.isFetched()) {
             bookmarksNote.setName(bookmarksNoteName);
             bookmarksNote.setNoteText(Note::createNoteHeader(bookmarksNoteName));
+            applyTag = true;
         }
 
         QString noteText = bookmarksNote.getNoteText().trimmed() +
@@ -180,6 +182,13 @@ void WebSocketServerService::processMessage(const QString &message) {
         bookmarksNote.setNoteText(noteText);
         bookmarksNote.store();
         bookmarksNote.storeNoteTextFileToDisk();
+
+        if (applyTag) {
+            auto tag = Tag::fetchByName(getBookmarksTag());
+            if (tag.isFetched()) {
+                tag.linkToNote(bookmarksNote);
+            }
+        }
     } else {
         auto *pSender = qobject_cast<QWebSocket *>(sender());
         pSender->sendTextMessage("Received: " + message);
