@@ -153,6 +153,7 @@ install -D -m 0644 languages/QOwnNotes_hi.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNot
 install -D -m 0644 languages/QOwnNotes_hil.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_hil.qm
 install -D -m 0644 languages/QOwnNotes_ur.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_ur.qm
 install -D -m 0644 languages/QOwnNotes_fi.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_fi.qm
+install -D -m 0644 languages/QOwnNotes_el.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_el.qm
 
 %if 0%{?suse_version}
 # see: https://de.opensuse.org/openSUSE:Paketbauvereinbarungen_zu_RPM-Makros
@@ -209,6 +210,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/QOwnNotes/languages/QOwnNotes_hil.qm
 %{_datadir}/QOwnNotes/languages/QOwnNotes_ur.qm
 %{_datadir}/QOwnNotes/languages/QOwnNotes_fi.qm
+%{_datadir}/QOwnNotes/languages/QOwnNotes_el.qm
 %{_datadir}/applications/PBE.QOwnNotes.desktop
 
 %dir %{_datadir}/icons/hicolor/512x512/apps

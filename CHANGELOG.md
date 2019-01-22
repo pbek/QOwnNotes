@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 19.1.8
+- added **Greek translation** (a big thank you to Fabijenna)
+    - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes)
+      to make QOwnNotes available in more languages or help with the current 
+      translation
+
 ## 19.1.7
 - when **adding bookmarks** from the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
   the bookmarks tag will be applied to the bookmarks note automatically if that

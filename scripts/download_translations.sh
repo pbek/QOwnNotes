@@ -36,3 +36,4 @@ mv QOwnNotes_hil_PH.ts QOwnNotes_hil.ts
 mv QOwnNotes_hi_IN.ts QOwnNotes_hi.ts
 mv QOwnNotes_ur_PK.ts QOwnNotes_ur.ts
 mv QOwnNotes_fi_FI.ts QOwnNotes_fi.ts
+mv QOwnNotes_el_GR.ts QOwnNotes_el.ts
