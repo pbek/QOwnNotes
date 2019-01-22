@@ -15,7 +15,6 @@
           bookmarks popup is opened
     - you can now **bookmark all tabs** with a button in the **bookmark popup**
         - use access key <kbd>B</kbd> to press the button
-        - you need QOwnNotes 19.1.8 or higher for this feature
     - changed the **default shortcut** for the **bookmarks popup** in **Firefox**
       to <kbd>Alt + Shift + B</kbd>, because <kbd>Ctrl + B</kbd> is blocked
         - these shortcuts will only work in Firefox 66 and newer 
