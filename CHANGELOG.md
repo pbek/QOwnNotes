@@ -7,6 +7,19 @@
       translation
 - the websocket api for **adding bookmarks** can now add multiple bookmarks at
   the same time for the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
+- the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
+  was updated to version 19.1.8
+    - you can now **filter bookmarks by tags**
+        - use access key <kbd>T</kbd> to jump to the tag selector
+        - the selected tags will be persisted and restored the next time the
+          bookmarks popup is opened
+    - you can now **bookmark all tabs** with a button in the **bookmark popup**
+        - use access key <kbd>B</kbd> to press the button
+        - you need QOwnNotes 19.1.8 or higher for this feature
+    - changed the **default shortcut** for the **bookmarks popup** in **Firefox**
+      to <kbd>Alt + Shift + B</kbd>, because <kbd>Ctrl + B</kbd> is blocked
+        - these shortcuts will only work in Firefox 66 and newer 
+- added more Russian translation (thank you mikhail-khokhlov)
 
 ## 19.1.7
 - when **adding bookmarks** from the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
