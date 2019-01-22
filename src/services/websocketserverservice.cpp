@@ -155,11 +155,7 @@ void WebSocketServerService::processMessage(const QString &message) {
         auto *pSender = qobject_cast<QWebSocket *>(sender());
         pSender->sendTextMessage(jsonText);
 #endif
-    } else if (type == "newBookmark") {
-        const QJsonObject data = jsonObject.value("data").toObject();
-        const QString name = data.value("name").toString().trimmed().remove("[").remove("]");
-        const QString url = data.value("url").toString().trimmed();
-        const QString description = data.value("description").toString().trimmed();
+    } else if (type == "newBookmarks") {
         const QString bookmarksNoteName = getBookmarksNoteName();
         Note bookmarksNote = Note::fetchByName(bookmarksNoteName);
         bool applyTag = false;
@@ -171,12 +167,21 @@ void WebSocketServerService::processMessage(const QString &message) {
             applyTag = true;
         }
 
-        QString noteText = bookmarksNote.getNoteText().trimmed() +
-                "\n- [" + name +"](" + url + ")";
+        QString noteText = bookmarksNote.getNoteText().trimmed();
+        const QJsonArray bookmarkList = jsonObject.value("data").toArray();
 
-        if (!description.isEmpty()) {
-            noteText += " " + description;
-        }
+        Q_FOREACH(QJsonValue bookmarkObject, bookmarkList) {
+                const QJsonObject data = bookmarkObject.toObject();
+                const QString name = data.value("name").toString().trimmed().remove("[").remove("]");
+                const QString url = data.value("url").toString().trimmed();
+                const QString description = data.value("description").toString().trimmed();
+
+                noteText += "\n- [" + name +"](" + url + ")";
+
+                if (!description.isEmpty()) {
+                    noteText += " " + description;
+                }
+            }
 
         noteText += "\n";
         bookmarksNote.setNoteText(noteText);

@@ -5,6 +5,8 @@
     - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes)
       to make QOwnNotes available in more languages or help with the current 
       translation
+- the websocket api for **adding bookmarks** can now add multiple bookmarks at
+  the same time for the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
 
 ## 19.1.7
 - when **adding bookmarks** from the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
