@@ -13,6 +13,7 @@
  */
 
 #include "websocketserverservice.h"
+#include "metricsservice.h"
 #include <QtWebSockets>
 #include <utils/misc.h>
 #ifndef INTEGRATION_TESTS
@@ -117,6 +118,7 @@ void WebSocketServerService::processMessage(const QString &message) {
     QJsonDocument jsonResponse = QJsonDocument::fromJson(message.toUtf8());
     QJsonObject jsonObject = jsonResponse.object();
     QString type = jsonObject.value("type").toString();
+    MetricsService::instance()->sendVisitIfEnabled("websocket/message/" + type);
 
     if (type == "newNote") {
 #ifndef INTEGRATION_TESTS
