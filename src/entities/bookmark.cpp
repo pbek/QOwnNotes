@@ -56,7 +56,6 @@ bool Bookmark::operator==(const Bookmark &bookmark) const {
  */
 QList<Bookmark> Bookmark::parseBookmarks(QString text, bool withBasicUrls) {
     QRegularExpressionMatchIterator i;
-    QStringList urlList;
     QList<Bookmark> bookmarks;
 
     // parse bookmark links like `- [name](http://link) #tag1 #tag2 the description text`
@@ -68,38 +67,34 @@ QList<Bookmark> Bookmark::parseBookmarks(QString text, bool withBasicUrls) {
         QString name = match.captured(1);
         QString url = match.captured(2);
         QString additionalText = match.captured(3);
+        QStringList tags;
+        QString description;
 
-        // check if we already have added the url
-        if (!urlList.contains(url)) {
-            QStringList tags;
-            QString description;
+        if (!additionalText.isEmpty()) {
 
-            if (!additionalText.isEmpty()) {
+            QRegularExpressionMatchIterator addIterator =
+                    QRegularExpression(R"(#([^\s#]+))").globalMatch(
+                            additionalText);
+            while (addIterator.hasNext()) {
+                QRegularExpressionMatch addMatch = addIterator.next();
+                QString tag = addMatch.captured(1).trimmed();
 
-                QRegularExpressionMatchIterator addIterator =
-                        QRegularExpression(R"(#([^\s#]+))").globalMatch(
-                                additionalText);
-                while (addIterator.hasNext()) {
-                    QRegularExpressionMatch addMatch = addIterator.next();
-                    QString tag = addMatch.captured(1).trimmed();
-
-                    if (!tags.contains(tag)) {
-                        tags << tag;
-                        additionalText.remove(QRegularExpression(
-                                "#" + QRegularExpression::escape(tag) + "\\b"));
-                    }
+                if (!tags.contains(tag)) {
+                    tags << tag;
+                    additionalText.remove(QRegularExpression(
+                            "#" + QRegularExpression::escape(tag) + "\\b"));
                 }
-
-                description = additionalText.trimmed();
             }
 
-            if (withBasicUrls && !tags.contains("current")) {
-                tags << "current";
-            }
-
-            urlList << url;
-            bookmarks << Bookmark(url, name, tags, description);
+            description = additionalText.trimmed();
         }
+
+        if (withBasicUrls && !tags.contains("current")) {
+            tags << "current";
+        }
+
+        auto bookmark = Bookmark(url, name, tags, description);
+        bookmark.mergeInList(bookmarks);
     }
 
     if (withBasicUrls) {
@@ -111,11 +106,8 @@ QList<Bookmark> Bookmark::parseBookmarks(QString text, bool withBasicUrls) {
             QString name = match.captured(1);
             QString url = match.captured(2);
 
-            // check if we already have added the url
-            if (!urlList.contains(url)) {
-                urlList << url;
-                bookmarks << Bookmark(url, name, QStringList() << "current");
-            }
+            auto bookmark = Bookmark(url, name, QStringList() << "current");
+            bookmark.mergeInList(bookmarks);
         }
 
         // parse links like <http://my.site.com>
@@ -124,7 +116,9 @@ QList<Bookmark> Bookmark::parseBookmarks(QString text, bool withBasicUrls) {
         while (i.hasNext()) {
             QRegularExpressionMatch match = i.next();
             QString url = match.captured(1);
-            bookmarks << Bookmark(url, "", QStringList() << "current");
+
+            auto bookmark = Bookmark(url, "", QStringList() << "current");
+            bookmark.mergeInList(bookmarks);
         }
     }
 
@@ -197,8 +191,12 @@ void Bookmark::merge(Bookmark &bookmark) {
     tags.removeDuplicates();
     tags.sort();
 
-    if (description.isEmpty()) {
-        description = bookmark.description;
+    if (name.isEmpty()) {
+        name = bookmark.name;
+    }
+
+    if (!description.contains(bookmark.description)) {
+        description += ", " + bookmark.description;
     }
 }
 
