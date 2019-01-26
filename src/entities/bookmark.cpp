@@ -196,7 +196,11 @@ void Bookmark::merge(Bookmark &bookmark) {
     }
 
     if (!description.contains(bookmark.description)) {
-        description += ", " + bookmark.description;
+        if (!description.isEmpty()) {
+            description += ", ";
+        }
+
+        description += bookmark.description;
     }
 }
 
