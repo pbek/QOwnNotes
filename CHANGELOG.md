@@ -9,6 +9,7 @@
 - the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
   was updated to version 19.1.11
     - added support to show a success message from QOwnNotes if bookmarks were created
+    - fixed restoring of previously selected tags
     - added a lot of translation
     - fixed `tabs` permissions
 - the note text edit context menu can now also create block quotes
@@ -16,6 +17,10 @@
   be tagged with the clicked tag, but the tag will also be removed if the note
   was already tagged with it (for [#1116](https://github.com/pbek/QOwnNotes/issues/1116))
     - the tag tree will now also be correctly reloaded
+- added more German, Spanish, Ukrainian, Chinese Traditional, Italian, Russian,
+  Indonesian, Galician, Finnish, Dutch, Greek, Hungarian and German translation
+  (thank you prolinuxua, rakekniven, richarson, tiwi90, abev66, mlocati, zmni,
+  mikhail-khokhlov and Fabijenna)
 
 ## 19.1.8
 - added **Greek translation** (a big thank you to Fabijenna)
