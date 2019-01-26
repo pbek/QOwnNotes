@@ -10543,6 +10543,8 @@ void MainWindow::on_tagTreeWidget_itemDoubleClicked(
         } else {
             tag.linkToNote(currentNote);
         }
+
+        reloadTagTree();
     }
 }
 

@@ -15,6 +15,7 @@
 - if a tag in the *Tags panel* is double-clicked the current tag will not only
   be tagged with the clicked tag, but the tag will also be removed if the note
   was already tagged with it (for [#1116](https://github.com/pbek/QOwnNotes/issues/1116))
+    - the tag tree will now also be correctly reloaded
 
 ## 19.1.8
 - added **Greek translation** (a big thank you to Fabijenna)
