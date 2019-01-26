@@ -5692,6 +5692,23 @@ void MainWindow::noteTextEditCustomContextMenuRequested(
     bool isAllowNoteEditing = Utils::Misc::isNoteEditingAllowed();
     bool isTextSelected = isNoteTextSelected();
 
+    QString linkTextActionName = isTextSelected ?
+                                 tr("&Link selected text") : tr("Insert &link");
+    QAction *linkTextAction = menu->addAction(linkTextActionName);
+    linkTextAction->setShortcut(ui->actionInsert_Link_to_note->shortcut());
+    linkTextAction->setEnabled(isAllowNoteEditing);
+
+    QString blockQuoteTextActionName = isTextSelected ?
+                                       tr("Bock &quote selected text") : tr("Insert block &quote");
+    QAction *blockQuoteTextAction = menu->addAction(blockQuoteTextActionName);
+    blockQuoteTextAction->setShortcut(ui->actionInsert_block_quote->shortcut());
+    blockQuoteTextAction->setEnabled(isAllowNoteEditing);
+
+    QAction *searchAction = menu->addAction(
+            ui->actionSearch_text_on_the_web->text());
+    searchAction->setShortcut(ui->actionSearch_text_on_the_web->shortcut());
+    searchAction->setEnabled(isTextSelected);
+
     QAction *copyCodeBlockAction = menu->addAction(tr("Copy code block"));
     copyCodeBlockAction->setIcon(QIcon::fromTheme(
             "edit-copy", QIcon(":icons/breeze-qownnotes/16x16/edit-copy.svg")));
@@ -5745,17 +5762,6 @@ void MainWindow::noteTextEditCustomContextMenuRequested(
 
     menu->addSeparator();
 
-    QString linkTextActionName = isTextSelected ?
-                tr("&Link selected text") : tr("Insert &link");
-    QAction *linkTextAction = menu->addAction(linkTextActionName);
-    linkTextAction->setShortcut(ui->actionInsert_Link_to_note->shortcut());
-    linkTextAction->setEnabled(isAllowNoteEditing);
-
-    QAction *searchAction = menu->addAction(
-            ui->actionSearch_text_on_the_web->text());
-    searchAction->setShortcut(ui->actionSearch_text_on_the_web->shortcut());
-    searchAction->setEnabled(isTextSelected);
-
     // add some other existing menu entries
     menu->addAction(ui->actionPaste_image);
     menu->addAction(ui->actionAutocomplete);
@@ -5775,6 +5781,9 @@ void MainWindow::noteTextEditCustomContextMenuRequested(
         if (selectedItem == linkTextAction) {
             // handle the linking of text with a note
             handleTextNoteLinking();
+        } else if (selectedItem == blockQuoteTextAction) {
+            // handle the block quoting of text
+            on_actionInsert_block_quote_triggered();
         } else if (selectedItem == searchAction) {
             // search for the selected text on the web
             on_actionSearch_text_on_the_web_triggered();

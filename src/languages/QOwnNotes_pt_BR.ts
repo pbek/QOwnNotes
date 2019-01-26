@@ -940,7 +940,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="680"/>
-        <location filename="../mainwindow.cpp" line="7553"/>
+        <location filename="../mainwindow.cpp" line="7562"/>
         <source>Add a tag to the current note</source>
         <translation>Adicionar tag a nota atual</translation>
     </message>
@@ -1056,13 +1056,13 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1390"/>
-        <location filename="../mainwindow.cpp" line="9007"/>
+        <location filename="../mainwindow.cpp" line="9016"/>
         <source>Select &amp;all notes</source>
         <translation>Selecionar &amp;todas as notas</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1399"/>
-        <location filename="../mainwindow.cpp" line="5749"/>
+        <location filename="../mainwindow.cpp" line="5696"/>
         <source>Insert &amp;link</source>
         <translation>Inserir um &amp;link</translation>
     </message>
@@ -1117,7 +1117,7 @@
         <translation>Pesquise ou Crie uma nota</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7554"/>
+        <location filename="../mainwindow.cpp" line="7563"/>
         <source>Add a tag to the selected notes</source>
         <translation>Adicionar uma tag as notas selecionadas</translation>
     </message>
@@ -1128,7 +1128,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="869"/>
-        <location filename="../mainwindow.cpp" line="5725"/>
+        <location filename="../mainwindow.cpp" line="5742"/>
         <source>Export</source>
         <translation>Exportar</translation>
     </message>
@@ -1139,7 +1139,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="906"/>
-        <location filename="../mainwindow.cpp" line="5707"/>
+        <location filename="../mainwindow.cpp" line="5724"/>
         <source>Print</source>
         <translation>Imprimir</translation>
     </message>
@@ -1485,7 +1485,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2174"/>
-        <location filename="../mainwindow.cpp" line="9998"/>
+        <location filename="../mainwindow.cpp" line="10007"/>
         <source>Remove current workspace</source>
         <translation>Remover o espaço de trabalho atual</translation>
     </message>
@@ -1527,6 +1527,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2248"/>
+        <location filename="../mainwindow.cpp" line="5702"/>
         <source>Insert block &amp;quote</source>
         <translation>Inserir bloco &amp;quote</translation>
     </message>
@@ -1553,7 +1554,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2295"/>
-        <location filename="../mainwindow.cpp" line="8982"/>
+        <location filename="../mainwindow.cpp" line="8991"/>
         <source>Open note in different window</source>
         <translation>Nota aberta em outra janela</translation>
     </message>
@@ -1574,7 +1575,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2335"/>
-        <location filename="../mainwindow.cpp" line="8990"/>
+        <location filename="../mainwindow.cpp" line="8999"/>
         <source>Show note git versions</source>
         <translation>Mostrar versões git desta nota</translation>
     </message>
@@ -1757,8 +1758,8 @@ Restaurar a nota atual? </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4815"/>
-        <location filename="../mainwindow.cpp" line="6121"/>
-        <location filename="../mainwindow.cpp" line="9069"/>
+        <location filename="../mainwindow.cpp" line="6130"/>
+        <location filename="../mainwindow.cpp" line="9078"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Cancelar</translation>
     </message>
@@ -1843,7 +1844,7 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4022"/>
-        <location filename="../mainwindow.cpp" line="9233"/>
+        <location filename="../mainwindow.cpp" line="9242"/>
         <source>Remove selected folders</source>
         <translation>Excluir os diretórios selecionados</translation>
     </message>
@@ -1875,7 +1876,7 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4108"/>
-        <location filename="../mainwindow.cpp" line="8207"/>
+        <location filename="../mainwindow.cpp" line="8216"/>
         <source>Move selected notes</source>
         <translation>Mover as notas selecionadas</translation>
     </message>
@@ -1889,7 +1890,7 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4201"/>
-        <location filename="../mainwindow.cpp" line="8291"/>
+        <location filename="../mainwindow.cpp" line="8300"/>
         <source>Copy selected notes</source>
         <translation>Copiar notas selecionadas</translation>
     </message>
@@ -1974,79 +1975,84 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
         <translation>As notas excluidas são carregadas do seu servidor OwnCloud</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5695"/>
+        <location filename="../mainwindow.cpp" line="5702"/>
+        <source>Bock &amp;quote selected text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5712"/>
         <source>Copy code block</source>
         <translation>Copiar bloco de código</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5714"/>
+        <location filename="../mainwindow.cpp" line="5731"/>
         <source>Print selected text</source>
         <translation>Imprimir o texto selecionado</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5720"/>
+        <location filename="../mainwindow.cpp" line="5737"/>
         <source>Print selected text (preview)</source>
         <translation>Imprimir o texto selecionado (visualização)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5736"/>
+        <location filename="../mainwindow.cpp" line="5753"/>
         <source>Export selected text as PDF</source>
         <translation>Exportar o texto selecionado como PDF</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5742"/>
+        <location filename="../mainwindow.cpp" line="5759"/>
         <source>Export selected text as PDF (preview)</source>
         <translation>Exportar o texto selecionado como PDF(visualização)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5927"/>
+        <location filename="../mainwindow.cpp" line="5936"/>
         <source>Image files</source>
         <translation>Arquivos de imagem</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6117"/>
+        <location filename="../mainwindow.cpp" line="6126"/>
         <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
         <translation>Sua nota será decriptada e armazenada em texto puro novamente. Tenha em mente que a nota decriptada poderá ser sincronizada com o servidor e o texto pode ficar exposto! &lt;br /&gt; Você deseja decriptar a nota?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6204"/>
+        <location filename="../mainwindow.cpp" line="6213"/>
         <source>Markdown files</source>
         <translation>Arquivos markdown</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6259"/>
+        <location filename="../mainwindow.cpp" line="6268"/>
         <source>Bookmarked note position at slot %1</source>
         <translation>A nota foi para o bookmark no slot %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6275"/>
+        <location filename="../mainwindow.cpp" line="6284"/>
         <source>Jumped to bookmark position at slot %1</source>
         <translation>Pulando para a posição do bookmark no slot %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6487"/>
-        <location filename="../mainwindow.cpp" line="6555"/>
+        <location filename="../mainwindow.cpp" line="6496"/>
+        <location filename="../mainwindow.cpp" line="6564"/>
         <source>Inserting image</source>
         <translation>Inserir imagem</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6492"/>
-        <location filename="../mainwindow.cpp" line="6558"/>
+        <location filename="../mainwindow.cpp" line="6501"/>
+        <location filename="../mainwindow.cpp" line="6567"/>
         <source>Done inserting image</source>
         <translation>Inserção de imagem completa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6494"/>
+        <location filename="../mainwindow.cpp" line="6503"/>
         <source>Inserting attachment</source>
         <translation>Inserir anexos</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6499"/>
+        <location filename="../mainwindow.cpp" line="6508"/>
         <source>Done inserting attachment</source>
         <translation>Anexo inserido com sucesso</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6509"/>
+        <location filename="../mainwindow.cpp" line="6518"/>
         <source>Copied %n note(s) to %1</source>
         <translation>
             <numerusform>Copiado %n nota(s) para %1</numerusform>
@@ -2054,7 +2060,7 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6518"/>
+        <location filename="../mainwindow.cpp" line="6527"/>
         <source>Failed to copy %n note(s) (most likely already existing)</source>
         <translation>
             <numerusform>Falha ao copiar %n nota(s) (mais provável que a nota exista)</numerusform>
@@ -2062,7 +2068,7 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6528"/>
+        <location filename="../mainwindow.cpp" line="6537"/>
         <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
         <translation>
             <numerusform>Ignorando a copia da(s) %n nota(s) (nenhum arquivo markdown ou text ou ilegível)</numerusform>
@@ -2070,178 +2076,178 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6542"/>
+        <location filename="../mainwindow.cpp" line="6551"/>
         <source>Saving temporary image</source>
         <translation>Salvando imagem temporária</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6561"/>
+        <location filename="../mainwindow.cpp" line="6570"/>
         <source>Temporary file can&apos;t be opened</source>
         <translation>Arquivo temporário não pode ser aberto</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6602"/>
+        <location filename="../mainwindow.cpp" line="6611"/>
         <source>Downloading %1</source>
         <translation>Downloading %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6783"/>
+        <location filename="../mainwindow.cpp" line="6792"/>
         <source>Reset font size to %1 pt</source>
         <comment>Will be shown after the font size is reset by &apos;Reset note text size&apos;</comment>
         <translation>Restaurar o tamanho da fonte para %1 pt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7599"/>
+        <location filename="../mainwindow.cpp" line="7608"/>
         <source>Remove tag &apos;%1&apos; from the current note</source>
         <translation>Remover a tag &apos;%1&apos; da nota atual</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7601"/>
+        <location filename="../mainwindow.cpp" line="7610"/>
         <source>Remove tag &apos;%1&apos; from the selected notes</source>
         <translation>Remover a tag &apos;%1&apos; das notas selecionadas</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7765"/>
+        <location filename="../mainwindow.cpp" line="7774"/>
         <source>Rename tag</source>
         <translation>Renomear Tag</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7766"/>
+        <location filename="../mainwindow.cpp" line="7775"/>
         <source>Assign color</source>
         <translation>Atribuir uma cor</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7767"/>
+        <location filename="../mainwindow.cpp" line="7776"/>
         <source>Disable color</source>
         <translation>Desativar a cor</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7771"/>
+        <location filename="../mainwindow.cpp" line="7780"/>
         <source>&amp;Move tags to…</source>
         <translation>&amp;Mover as tags para…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7990"/>
+        <location filename="../mainwindow.cpp" line="7999"/>
         <source>Move to the root</source>
         <comment>to move a tag to the current tag in the tag context menu</comment>
         <translation>Mover para a raiz</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8433"/>
+        <location filename="../mainwindow.cpp" line="8442"/>
         <source>An url was opened at the current cursor position</source>
         <translation>Uma url foi aberta na posição atual do cursor</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8534"/>
+        <location filename="../mainwindow.cpp" line="8543"/>
         <source>No equation was found in front of the cursor</source>
         <translation>A equação não foi encontrada na frente do cursor</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8551"/>
+        <location filename="../mainwindow.cpp" line="8560"/>
         <source>Result for equation: %1 = %2</source>
         <translation>Resultado para a equação: %1 = %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8652"/>
+        <location filename="../mainwindow.cpp" line="8661"/>
         <source>The scripting engine was reloaded</source>
         <translation>A engine de script foi recarregada</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8687"/>
+        <location filename="../mainwindow.cpp" line="8696"/>
         <source>HTML files</source>
         <translation>Arquivos HTML</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8884"/>
-        <location filename="../mainwindow.cpp" line="9052"/>
+        <location filename="../mainwindow.cpp" line="8893"/>
+        <location filename="../mainwindow.cpp" line="9061"/>
         <source>Rename note</source>
         <translation>Renomear a nota</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8885"/>
+        <location filename="../mainwindow.cpp" line="8894"/>
         <source>Allows you to rename the filename of the note</source>
         <translation>Permitir renomear o arquivo da nota</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8897"/>
+        <location filename="../mainwindow.cpp" line="8906"/>
         <source>&amp;Move notes to…</source>
         <translation>&amp;Mover as notas para…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8898"/>
+        <location filename="../mainwindow.cpp" line="8907"/>
         <source>&amp;Copy notes to…</source>
         <translation>&amp;Copiar as notas para…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8927"/>
+        <location filename="../mainwindow.cpp" line="8936"/>
         <source>Move notes to subfolder…</source>
         <translation>Mover as notas para a subpasta…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8931"/>
+        <location filename="../mainwindow.cpp" line="8940"/>
         <source>Copy notes to subfolder…</source>
         <translation>Copiar as notas para a subpasta…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8939"/>
+        <location filename="../mainwindow.cpp" line="8948"/>
         <source>&amp;Tag selected notes with…</source>
         <translation>&amp;Colocar tag nas notas selecionadas com…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8961"/>
+        <location filename="../mainwindow.cpp" line="8970"/>
         <source>&amp;Remove tag from selected notes…</source>
         <translation>Remover a tag das notas selecionadas…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9052"/>
+        <location filename="../mainwindow.cpp" line="9061"/>
         <source>Name:</source>
         <translation>Nome:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9064"/>
+        <location filename="../mainwindow.cpp" line="9073"/>
         <source>Note renaming not enabled!</source>
         <translation>Renomear Nota não está habilitado!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9232"/>
+        <location filename="../mainwindow.cpp" line="9241"/>
         <source>Rename subfolder</source>
         <translation>Renomear subpasta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9778"/>
+        <location filename="../mainwindow.cpp" line="9787"/>
         <source>Create new workspace</source>
         <translation>Criar novo espaço de trabalho</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9778"/>
-        <location filename="../mainwindow.cpp" line="10036"/>
+        <location filename="../mainwindow.cpp" line="9787"/>
+        <location filename="../mainwindow.cpp" line="10045"/>
         <source>Workspace name:</source>
         <translation>Nome do espaço de trabalho:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9900"/>
+        <location filename="../mainwindow.cpp" line="9909"/>
         <source>full</source>
         <comment>full workspace</comment>
         <translation>total</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9907"/>
+        <location filename="../mainwindow.cpp" line="9916"/>
         <source>minimal</source>
         <comment>minimal workspace</comment>
         <translation>minimo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9999"/>
+        <location filename="../mainwindow.cpp" line="10008"/>
         <source>Remove the current workspace?</source>
         <translation>Remover o espaço de trabalho atual?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10036"/>
+        <location filename="../mainwindow.cpp" line="10045"/>
         <source>Rename workspace</source>
         <translation>Renomear o espaço de trabalho</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="10171"/>
+        <location filename="../mainwindow.cpp" line="10180"/>
         <source>%n chars</source>
         <comment>characters</comment>
         <translation>
@@ -2250,37 +2256,37 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10294"/>
+        <location filename="../mainwindow.cpp" line="10303"/>
         <source>Copy image file path</source>
         <translation>Caminho do arquivo de imagem para cópia</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10433"/>
+        <location filename="../mainwindow.cpp" line="10442"/>
         <source>Select file to insert</source>
         <translation>Selecione um arquivo para inserir</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10466"/>
+        <location filename="../mainwindow.cpp" line="10475"/>
         <source>Disallow all note editing</source>
         <translation>Desabilitar edição de nota</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10600"/>
+        <location filename="../mainwindow.cpp" line="10609"/>
         <source>Select text files to import</source>
         <translation>Selecione arquivos de texto para importar</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10629"/>
+        <location filename="../mainwindow.cpp" line="10638"/>
         <source>Importing: %1</source>
         <translation>Importando: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10692"/>
+        <location filename="../mainwindow.cpp" line="10701"/>
         <source>Note headline &apos;%1&apos; was copied to the clipboard</source>
         <translation>O titulo da nota &apos;%1&apos; foi copiado para a área de transferencia</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="7572"/>
+        <location filename="../mainwindow.cpp" line="7581"/>
         <source>%n notes selected</source>
         <translation>
             <numerusform>%n notas selecionadas</numerusform>
@@ -2289,7 +2295,7 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2380"/>
-        <location filename="../mainwindow.cpp" line="10467"/>
+        <location filename="../mainwindow.cpp" line="10476"/>
         <source>Allow all note editing</source>
         <translation>Habilitar edição de nota</translation>
     </message>
@@ -2377,8 +2383,8 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
     <message>
         <location filename="../mainwindow.cpp" line="5244"/>
         <location filename="../mainwindow.cpp" line="5519"/>
-        <location filename="../mainwindow.cpp" line="8879"/>
-        <location filename="../mainwindow.cpp" line="9230"/>
+        <location filename="../mainwindow.cpp" line="8888"/>
+        <location filename="../mainwindow.cpp" line="9239"/>
         <source>New note</source>
         <translation>Nova Nota</translation>
     </message>
@@ -2403,44 +2409,44 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
         <translation>Sair</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6935"/>
+        <location filename="../mainwindow.cpp" line="6944"/>
         <source>show notes from all note subfolders (%1)</source>
         <translation>mostrar notas de todos os subdiretórios (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6952"/>
+        <location filename="../mainwindow.cpp" line="6961"/>
         <source>show notes in note root folder (%1)</source>
         <translation>mostrar notas na pasta raiz (%1)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="316"/>
         <location filename="../mainwindow.cpp" line="658"/>
-        <location filename="../mainwindow.cpp" line="6961"/>
+        <location filename="../mainwindow.cpp" line="6970"/>
         <source>Note folder</source>
         <translation>Diretório de Notas</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8147"/>
+        <location filename="../mainwindow.cpp" line="8156"/>
         <source>Copy to note folder</source>
         <translation>Copiar para o diretório</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8148"/>
+        <location filename="../mainwindow.cpp" line="8157"/>
         <source>Move to note folder</source>
         <translation>Mover para o diretório</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8149"/>
+        <location filename="../mainwindow.cpp" line="8158"/>
         <source>Copy to this subfolder</source>
         <translation>Copiar para a subpasta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8150"/>
+        <location filename="../mainwindow.cpp" line="8159"/>
         <source>Move to this subfolder</source>
         <translation>Mover para a subpasta</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="8201"/>
+        <location filename="../mainwindow.cpp" line="8210"/>
         <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>Mover %n nota(s) selecionadas para o diretório &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -2449,12 +2455,12 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4506"/>
-        <location filename="../mainwindow.cpp" line="10614"/>
+        <location filename="../mainwindow.cpp" line="10623"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="8264"/>
+        <location filename="../mainwindow.cpp" line="8273"/>
         <source>%n note(s) were moved to note subfolder &quot;%2&quot;</source>
         <translation>
             <numerusform>%n nota(s) foram movidas para a subpasta &quot;%2&quot;</numerusform>
@@ -2462,7 +2468,7 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="8285"/>
+        <location filename="../mainwindow.cpp" line="8294"/>
         <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>Copiar %n nota(s) selecionadas para o subdiretório &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -2470,7 +2476,7 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="8336"/>
+        <location filename="../mainwindow.cpp" line="8345"/>
         <source>%n note(s) were copied to note subfolder &quot;%2&quot;</source>
         <translation>
             <numerusform>%n nota(s) foram copiadas para o subdiretório &quot;%2&quot;</numerusform>
@@ -2478,52 +2484,52 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8980"/>
+        <location filename="../mainwindow.cpp" line="8989"/>
         <source>Open note in external editor</source>
         <translation>Abrir a nota num editor externo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8984"/>
+        <location filename="../mainwindow.cpp" line="8993"/>
         <source>Show note in file manager</source>
         <translation>Mostre a nota no Gerenciador de Arquivos</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9065"/>
+        <location filename="../mainwindow.cpp" line="9074"/>
         <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
         <translation>Se você deseja renomear sua nota, você tem que habilitar a opção que permite que o nome do arquivo da nota seja diferente da tag headline.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9231"/>
+        <location filename="../mainwindow.cpp" line="9240"/>
         <source>New subfolder</source>
         <translation>Nova subpasta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9235"/>
+        <location filename="../mainwindow.cpp" line="9244"/>
         <source>Show folder in file manager</source>
         <translation>Mostre o diretório no Gerenciador de Arquivos</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9271"/>
+        <location filename="../mainwindow.cpp" line="9280"/>
         <source>Create a new folder</source>
         <translation>Criar um novo diretório</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9271"/>
+        <location filename="../mainwindow.cpp" line="9280"/>
         <source>Folder name:</source>
         <translation>Nome da pasta:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6895"/>
+        <location filename="../mainwindow.cpp" line="6904"/>
         <source>show all untagged notes (%1)</source>
         <translation>mostrar todas as notas sem tags(%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6898"/>
+        <location filename="../mainwindow.cpp" line="6907"/>
         <source>Untagged notes</source>
         <translation>Notas sem tags</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8688"/>
+        <location filename="../mainwindow.cpp" line="8697"/>
         <source>Export current note as HTML file</source>
         <translation>Exportar a nota atual como arquivo HTML</translation>
     </message>
@@ -2553,12 +2559,12 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
         <translation>&amp;Ok</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8889"/>
+        <location filename="../mainwindow.cpp" line="8898"/>
         <source>&amp;Remove notes</source>
         <translation>&amp;Excluir as notas</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5749"/>
+        <location filename="../mainwindow.cpp" line="5696"/>
         <source>&amp;Link selected text</source>
         <translation>&amp;Linkar o texto selecionado</translation>
     </message>
@@ -2597,53 +2603,53 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6867"/>
+        <location filename="../mainwindow.cpp" line="6876"/>
         <source>show all notes (%1)</source>
         <translation>mostrar todas as notas (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6870"/>
-        <location filename="../mainwindow.cpp" line="6938"/>
+        <location filename="../mainwindow.cpp" line="6879"/>
+        <location filename="../mainwindow.cpp" line="6947"/>
         <source>All notes</source>
         <translation>Todas as notas</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7757"/>
+        <location filename="../mainwindow.cpp" line="7766"/>
         <source>&amp;Add tag</source>
         <translation>&amp;Adicionar tag</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7806"/>
+        <location filename="../mainwindow.cpp" line="7815"/>
         <source>Tag could not be created!</source>
         <translation>A tag não pode ser criada!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7991"/>
+        <location filename="../mainwindow.cpp" line="8000"/>
         <source>Move to this tag</source>
         <translation>Mover para esta tag</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8041"/>
+        <location filename="../mainwindow.cpp" line="8050"/>
         <source>Tag this</source>
         <translation>Taggear isto</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8074"/>
+        <location filename="../mainwindow.cpp" line="8083"/>
         <source>Cannot move tag &apos;%1&apos; to this tag</source>
         <translation>Não é possível mover a tag &apos;%1&apos; para esta tag</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8090"/>
+        <location filename="../mainwindow.cpp" line="8099"/>
         <source>Moved tag &apos;%1&apos; to new tag</source>
         <translation>Movido a tag &apos;%1&apos; para a nova tag</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7124"/>
+        <location filename="../mainwindow.cpp" line="7133"/>
         <source>show all notes tagged with &apos;%1&apos; (%2)</source>
         <translation>mostrar todas as notas com a tag &apos;%1&apos; (%2)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7768"/>
+        <location filename="../mainwindow.cpp" line="7777"/>
         <source>&amp;Remove tags</source>
         <translation>&amp;Remover as Tags</translation>
     </message>
@@ -2807,24 +2813,24 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
         <translation>Título da nota</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6614"/>
+        <location filename="../mainwindow.cpp" line="6623"/>
         <source>Downloading images finished</source>
         <translation>Download de imagens finalizado</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6756"/>
+        <location filename="../mainwindow.cpp" line="6765"/>
         <source>Increased font size to %1 pt</source>
         <translation>Incrementar o tamanho da fonte para %1 pt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6773"/>
+        <location filename="../mainwindow.cpp" line="6782"/>
         <source>Decreased font size to %1 pt</source>
         <translation>Diminuir o tamanho da fonte para %1 pt</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4788"/>
         <location filename="../mainwindow.cpp" line="4814"/>
-        <location filename="../mainwindow.cpp" line="9068"/>
+        <location filename="../mainwindow.cpp" line="9077"/>
         <source>Open &amp;settings</source>
         <translation>Abrir &amp;configurações</translation>
     </message>
@@ -2839,32 +2845,32 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
         <translation>sair do modo de distração</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5928"/>
+        <location filename="../mainwindow.cpp" line="5937"/>
         <source>Select image to insert</source>
         <translation>Selecione uma imagem para inserir</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6060"/>
+        <location filename="../mainwindow.cpp" line="6069"/>
         <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
         <translation>Por favor entre com a sua &lt;strong&gt;Senha&lt;/strong&gt; para encriptar a nota. &lt;br /&gt; Lembre-se que a sua senha só é valida dentro do QOwnNotes e você só poderá decriptá-la aqui!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6116"/>
+        <location filename="../mainwindow.cpp" line="6125"/>
         <source>Decrypt note and store it as plain text</source>
         <translation>Decriptar a nota e armazenar em texto puro</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6121"/>
+        <location filename="../mainwindow.cpp" line="6130"/>
         <source>&amp;Decrypt</source>
         <translation>&amp;Decriptar</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6147"/>
+        <location filename="../mainwindow.cpp" line="6156"/>
         <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
         <translation>&lt;br /&gt; Você será capaz de editar uma nota encriptada.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6205"/>
+        <location filename="../mainwindow.cpp" line="6214"/>
         <source>Export current note as Markdown file</source>
         <translation>Exportar a nota atual para arquivo MarkDown</translation>
     </message>

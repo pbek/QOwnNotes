@@ -11,6 +11,7 @@
     - added support to show a success message from QOwnNotes if bookmarks were created
     - added a lot of translation
     - fixed `tabs` permissions
+- the note text edit context menu can now also create block quotes
 
 ## 19.1.8
 - added **Greek translation** (a big thank you to Fabijenna)
