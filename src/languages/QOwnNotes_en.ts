@@ -6402,22 +6402,30 @@ This cannot be undone!</source>
 <context>
     <name>WebSocketServerService</name>
     <message>
-        <location filename="../services/websocketserverservice.cpp" line="53"/>
+        <location filename="../services/websocketserverservice.cpp" line="54"/>
         <source>QOwnNotes server listening on port %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/websocketserverservice.cpp" line="60"/>
+        <location filename="../services/websocketserverservice.cpp" line="61"/>
         <source>Could not start QOwnNotes server on port %1!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/websocketserverservice.cpp" line="104"/>
+        <location filename="../services/websocketserverservice.cpp" line="105"/>
         <source>%1 connected to QOwnNotes server!</source>
         <translation type="unfinished"></translation>
     </message>
+    <message numerus="yes">
+        <location filename="../services/websocketserverservice.cpp" line="201"/>
+        <source>%n bookmark(s) created</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
     <message>
-        <location filename="../services/websocketserverservice.cpp" line="239"/>
+        <location filename="../services/websocketserverservice.cpp" line="242"/>
         <source>%1 was disconnected from QOwnNotes server</source>
         <translation type="unfinished"></translation>
     </message>

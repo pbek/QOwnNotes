@@ -43,6 +43,8 @@ public:
 
     static QString getBookmarksNoteName();
 
+    QString flashMessageJsonText(QString message);
+
 private slots:
     void onNewConnection();
     void processMessage(const QString &message);

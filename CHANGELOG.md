@@ -1,5 +1,17 @@
 # QOwnNotes Changelog
 
+## 19.1.9
+- the websocket api for **listing bookmarks** will now try to **merge bookmarks**
+  if they were found multiple times in your bookmark notes for the
+  [Web Companion browser extension](https://github.com/qownnotes/web-companion)
+  - creating new bookmarks will trigger a reply to the browser extension with a
+    success message 
+- the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
+  was updated to version 19.1.11
+    - added support to show a success message from QOwnNotes if bookmarks were created
+    - added a lot of translation
+    - fixed `tabs` permissions
+
 ## 19.1.8
 - added **Greek translation** (a big thank you to Fabijenna)
     - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes)

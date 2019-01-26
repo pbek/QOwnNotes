@@ -118,6 +118,7 @@ void WebSocketServerService::processMessage(const QString &message) {
     QJsonDocument jsonResponse = QJsonDocument::fromJson(message.toUtf8());
     QJsonObject jsonObject = jsonResponse.object();
     QString type = jsonObject.value("type").toString();
+    auto *pSender = qobject_cast<QWebSocket *>(sender());
     MetricsService::instance()->sendVisitIfEnabled("websocket/message/" + type);
 
     if (type == "newNote") {
@@ -154,7 +155,6 @@ void WebSocketServerService::processMessage(const QString &message) {
             return;
         }
 
-        auto *pSender = qobject_cast<QWebSocket *>(sender());
         pSender->sendTextMessage(jsonText);
 #endif
     } else if (type == "newBookmarks") {
@@ -196,8 +196,10 @@ void WebSocketServerService::processMessage(const QString &message) {
                 tag.linkToNote(bookmarksNote);
             }
         }
+
+        pSender->sendTextMessage(flashMessageJsonText(
+                tr("%n bookmark(s) created", "", bookmarkList.count())));
     } else {
-        auto *pSender = qobject_cast<QWebSocket *>(sender());
         pSender->sendTextMessage("Received: " + message);
     }
 }
@@ -216,22 +218,16 @@ QString WebSocketServerService::getBookmarksJsonText() const {
     Q_FOREACH(Note note, noteList) {
             QList<Bookmark> noteBookmarks = note.getParsedBookmarks();
 
-            Q_FOREACH(Bookmark bookmark, noteBookmarks) {
-                        if (!bookmarks.contains(bookmark)) {
-                            bookmarks.append(bookmark);
-                        }
-                }
+            // merge bookmark lists
+            Bookmark::mergeListInList(noteBookmarks, bookmarks);
         }
 
     // extract links from the current note
     QList<Bookmark> currentNoteBookmarks = Bookmark::parseBookmarks(
                 mainWindow->activeNoteTextEdit()->toPlainText(), true);
 
-    Q_FOREACH(Bookmark bookmark, currentNoteBookmarks) {
-                if (!bookmarks.contains(bookmark)) {
-                    bookmarks.append(bookmark);
-                }
-            }
+    // merge bookmark lists
+    Bookmark::mergeListInList(currentNoteBookmarks, bookmarks);
 
     QString jsonText = Bookmark::bookmarksWebServiceJsonText(bookmarks);
 
@@ -263,4 +259,15 @@ QString WebSocketServerService::getBookmarksNoteName() {
     QString bookmarksNoteName = settings.value(
             "webSocketServerService/bookmarksNoteName", "Bookmarks").toString();
     return bookmarksNoteName;
+}
+
+QString WebSocketServerService::flashMessageJsonText(QString message) {
+    QJsonObject resultObject;
+    resultObject.insert("type", QJsonValue::fromVariant("flashMessage"));
+    resultObject.insert("message", message);
+    resultObject.insert("noteFolderName", NoteFolder::currentNoteFolder().getName());
+
+    QJsonDocument doc(resultObject);
+
+    return doc.toJson(QJsonDocument::Compact);
 }

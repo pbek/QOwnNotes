@@ -164,3 +164,50 @@ QString Bookmark::parsedBookmarksWebServiceJsonText(
     return bookmarksWebServiceJsonText(parseBookmarks(
             std::move(text), withBasicUrls));
 }
+
+/**
+ * Merges the current bookmark into a list of bookmarks
+ */
+void Bookmark::mergeInList(QList<Bookmark> &bookmarks) {
+    int i = bookmarks.indexOf(*this);
+
+    if (i == -1) {
+        bookmarks.append(*this);
+    } else {
+        auto existingBookmark = bookmarks.at(i);
+
+        // merge bookmarks
+        existingBookmark.merge(*this);
+        bookmarks[i] = existingBookmark;
+    }
+}
+
+/**
+ * Merges a bookmark into a list of bookmarks
+ */
+void Bookmark::mergeInList(QList<Bookmark> &bookmarks, Bookmark &bookmark) {
+    bookmark.mergeInList(bookmarks);
+}
+
+/**
+ * Merges the current bookmark with an other
+ */
+void Bookmark::merge(Bookmark &bookmark) {
+    tags.append(bookmark.tags);
+    tags.removeDuplicates();
+    tags.sort();
+
+    if (description.isEmpty()) {
+        description = bookmark.description;
+    }
+}
+
+/**
+ * Merges a list of bookmarks into another
+ */
+void Bookmark::mergeListInList(QList<Bookmark> &sourceBookmarks,
+                               QList<Bookmark> &destinationBookmarks) {
+    Q_FOREACH(Bookmark bookmark, sourceBookmarks) {
+            bookmark.mergeInList(destinationBookmarks);
+        }
+}
