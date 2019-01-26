@@ -12,6 +12,9 @@
     - added a lot of translation
     - fixed `tabs` permissions
 - the note text edit context menu can now also create block quotes
+- if a tag in the *Tags panel* is double-clicked the current tag will not only
+  be tagged with the clicked tag, but the tag will also be removed if the note
+  was already tagged with it (for [#1116](https://github.com/pbek/QOwnNotes/issues/1116))
 
 ## 19.1.8
 - added **Greek translation** (a big thank you to Fabijenna)

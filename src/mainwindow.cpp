@@ -10538,7 +10538,11 @@ void MainWindow::on_tagTreeWidget_itemDoubleClicked(
     Tag tag = Tag::fetch(item->data(0, Qt::UserRole).toInt());
 
     if (tag.isFetched()) {
-        tag.linkToNote(currentNote);
+        if (tag.isLinkedToNote(currentNote)) {
+            tag.removeLinkToNote(currentNote);
+        } else {
+            tag.linkToNote(currentNote);
+        }
     }
 }
 
