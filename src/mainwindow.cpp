@@ -3512,7 +3512,9 @@ void MainWindow::closeEvent(QCloseEvent *event) {
     bool isJustHide = showSystemTray;
 
 #ifdef Q_OS_MAC
-    isJustHide = true;
+    // #1113, unfortunately the closeEvent is also fired when the application
+    // will be quit in the dock menu
+//    isJustHide = true;
 #endif
 
     // make sure no settings get written after after we got the

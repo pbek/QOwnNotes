@@ -5,6 +5,9 @@
   look less cluttered
 - animations of embedded gif images should now animate in the preview
   (for [#1104](https://github.com/pbek/QOwnNotes/issues/1104), a big thank you to @liulex)
+- disabled the application hiding of [#1098](https://github.com/pbek/QOwnNotes/issues/1098),
+  because the close event is also fired when the application will be quit in
+  the dock menu on macOS (for [#1113](https://github.com/pbek/QOwnNotes/issues/1113))
 
 ## 19.1.9
 - the websocket api for **listing bookmarks** will now try to **merge bookmarks**
