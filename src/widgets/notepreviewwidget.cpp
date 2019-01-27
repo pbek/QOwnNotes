@@ -131,8 +131,10 @@ void NotePreviewWidget::animateGif(const QString &text) {
 
         connect(movie, &QMovie::frameChanged,
                 this, [this, url, movie](int) {
-            document()->addResource(QTextDocument::ImageResource, url, movie->currentPixmap());
-            repaint();
+            if (auto doc = document()) {
+                doc->addResource(QTextDocument::ImageResource, url, movie->currentPixmap());
+                doc->markContentsDirty(0, doc->characterCount());
+            }
         });
 
         movie->start();
