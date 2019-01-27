@@ -26,12 +26,17 @@ public:
     void initSearchFrame(QWidget *searchFrame, bool darkMode = false);
     QTextEditSearchWidget *searchWidget();
 
+    void setHtml(const QString &text);
+
 protected:
     QTextEditSearchWidget *_searchWidget;
     QWidget *_searchFrame;
 
     void resizeEvent(QResizeEvent* event);
     bool eventFilter(QObject *obj, QEvent *event);
+
+    QStringList extractGifUrls(const QString &text) const;
+    void animateGif(const QString &text);
 
 public slots:
     void hide();
@@ -40,4 +45,5 @@ signals:
     void resize(QSize size, QSize oldSize);
 
 private:
+    QList<QMovie*> _movies;
 };
