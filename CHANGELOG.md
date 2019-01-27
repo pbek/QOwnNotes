@@ -8,6 +8,8 @@
 - disabled the application hiding of [#1098](https://github.com/pbek/QOwnNotes/issues/1098),
   because the close event is also fired when the application will be quit in
   the dock menu on macOS (for [#1113](https://github.com/pbek/QOwnNotes/issues/1113))
+- added more German, Spanish, Italian, Galician, Polish, Dutch and Hungarian
+  translation (thank you rakekniven, richarson, mlocati and Fabijenna)
 
 ## 19.1.9
 - the websocket api for **listing bookmarks** will now try to **merge bookmarks**
@@ -27,7 +29,7 @@
   was already tagged with it (for [#1116](https://github.com/pbek/QOwnNotes/issues/1116))
     - the tag tree will now also be correctly reloaded
 - added more German, Spanish, Ukrainian, Chinese Traditional, Italian, Russian,
-  Indonesian, Galician, Finnish, Dutch, Greek, Hungarian and German translation
+  Indonesian, Galician, Finnish, Dutch, Greek and Hungarian translation
   (thank you prolinuxua, rakekniven, richarson, tiwi90, abev66, mlocati, zmni,
   mikhail-khokhlov and Fabijenna)
 
