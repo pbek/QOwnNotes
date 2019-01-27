@@ -77,7 +77,7 @@ bool NotePreviewWidget::eventFilter(QObject *obj, QEvent *event) {
  * @return Urls to gif files
  */
 QStringList NotePreviewWidget::extractGifUrls(const QString &text) const {
-    static QRegExp regex(R"(<img src=\"(file:\/\/\/[^\"]+\.gif)\")", Qt::CaseInsensitive);
+    static QRegExp regex(R"(<img[^>]+src=\"(file:\/\/\/[^\"]+\.gif)\")", Qt::CaseInsensitive);
 
     QStringList urls;
     int pos = 0;
@@ -90,6 +90,7 @@ QStringList NotePreviewWidget::extractGifUrls(const QString &text) const {
             urls.append(url);
         pos += regex.matchedLength();
     }
+
     return urls;
 }
 
@@ -116,7 +117,7 @@ void NotePreviewWidget::animateGif(const QString &text) {
     _movies.removeAll(nullptr);
 
     for (const QString &url : urls) {
-        QMovie* movie = new QMovie(this);
+        auto* movie = new QMovie(this);
         movie->setFileName(QUrl(url).toLocalFile());
         movie->setCacheMode(QMovie::CacheNone);
 
