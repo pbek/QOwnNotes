@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 19.1.10
+- the issue assistant will now use `<details>` tags to make the GitHub issues
+  look less cluttered
+- animations of embedded gif images should now animate in the preview
+  (for [#1104](https://github.com/pbek/QOwnNotes/issues/1104), a big thank you to @liulex)
+
 ## 19.1.9
 - the websocket api for **listing bookmarks** will now try to **merge bookmarks**
   if they were found multiple times in your bookmark notes for the

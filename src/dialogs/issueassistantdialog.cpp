@@ -179,14 +179,15 @@ void IssueAssistantDialog::generateSubmitPageContent() const {
             break;
     }
 
-    body += "#### Relevant log output in the Log panel\n\n```\n" +
+    body += "#### Relevant log output in the Log panel\n\n"
+            "<details><summary>Expand</summary>\n\n```\n" +
             ui->logOutputPlainTextEdit->toPlainText().trimmed() +
-            "\n```\n\n";
+            "\n```\n</details>\n\n";
 
     body += "#### Information about the application, settings and "
-            "environment\n\n" +
+            "environment\n\n<details><summary>Expand</summary>\n\n" +
             ui->debugOutputPlainTextEdit->toPlainText().trimmed() +
-            "\n\n";
+            "\n</details>\n\n";
 
     ui->bodyPlainTextEdit->setPlainText(body);
 }
