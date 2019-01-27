@@ -5701,7 +5701,8 @@ void MainWindow::noteTextEditCustomContextMenuRequested(
     linkTextAction->setEnabled(isAllowNoteEditing);
 
     QString blockQuoteTextActionName = isTextSelected ?
-                                       tr("Bock &quote selected text") : tr("Insert block &quote");
+                                       tr("Block &quote selected text") :
+                                       tr("Insert block &quote");
     QAction *blockQuoteTextAction = menu->addAction(blockQuoteTextActionName);
     blockQuoteTextAction->setShortcut(ui->actionInsert_block_quote->shortcut());
     blockQuoteTextAction->setEnabled(isAllowNoteEditing);

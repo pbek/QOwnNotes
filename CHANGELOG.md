@@ -3,7 +3,7 @@
 ## 19.1.10
 - the issue assistant will now use `<details>` tags to make the GitHub issues
   look less cluttered
-- animations of embedded gif images should now animate in the preview
+- animations of embedded gif images should now animate in the preview (at least on Windows)
   (for [#1104](https://github.com/pbek/QOwnNotes/issues/1104), a big thank you to @liulex)
 - disabled the application hiding of [#1098](https://github.com/pbek/QOwnNotes/issues/1098),
   because the close event is also fired when the application will be quit in
