@@ -14,6 +14,8 @@
 #include "notepreviewwidget.h"
 #include <QLayout>
 #include <QDebug>
+#include <QRegExp>
+#include <QMovie>
 
 
 NotePreviewWidget::NotePreviewWidget(QWidget *parent) : QTextBrowser(parent) {
@@ -67,6 +69,79 @@ bool NotePreviewWidget::eventFilter(QObject *obj, QEvent *event) {
     }
 
     return QTextBrowser::eventFilter(obj, event);
+}
+
+/**
+ * @brief Extract local gif urls from html
+ * @param text
+ * @return Urls to gif files
+ */
+QStringList NotePreviewWidget::extractGifUrls(const QString &text) const {
+    static QRegExp regex(R"(<img src=\"(file:\/\/\/[^\"]+\.gif)\")", Qt::CaseInsensitive);
+
+    QStringList urls;
+    int pos = 0;
+    while (true) {
+        pos = regex.indexIn(text, pos);
+        if (pos == -1)
+            break;
+        QString url = regex.cap(1);
+        if (!urls.contains(url))
+            urls.append(url);
+        pos += regex.matchedLength();
+    }
+    return urls;
+}
+
+/**
+ * @brief Setup animations for gif
+ * @return
+ */
+void NotePreviewWidget::animateGif(const QString &text) {
+    // clear resources
+    if (QTextDocument* doc = document())
+        doc->clear();
+
+    QStringList urls = extractGifUrls(text);
+
+    for (QMovie* &movie : _movies) {
+        QString url = movie->property("URL").toString();
+        if (urls.contains(url))
+            urls.removeAll(url);
+        else {
+            movie->deleteLater();
+            movie = nullptr;
+        }
+    }
+    _movies.removeAll(nullptr);
+
+    for (const QString &url : urls) {
+        QMovie* movie = new QMovie(this);
+        movie->setFileName(QUrl(url).toLocalFile());
+        movie->setCacheMode(QMovie::CacheNone);
+
+        if (!movie->isValid() || movie->frameCount() < 2) {
+            movie->deleteLater();
+            continue;
+        }
+
+        movie->setProperty("URL", url);
+        _movies.append(movie);
+
+        connect(movie, &QMovie::frameChanged,
+                this, [this, url, movie](int) {
+            document()->addResource(QTextDocument::ImageResource, url, movie->currentPixmap());
+            repaint();
+        });
+
+        movie->start();
+    }
+}
+
+void NotePreviewWidget::setHtml(const QString &text) {
+    animateGif(text);
+
+    QTextBrowser::setHtml(text);
 }
 
 /**
