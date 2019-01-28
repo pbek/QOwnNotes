@@ -947,4 +947,6 @@ private:
     void updateCurrentNoteTextHash();
 
     void centerAndResize();
+
+    void forceRegenerateNotePreview();
 };

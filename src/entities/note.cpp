@@ -1837,16 +1837,17 @@ QString Note::textToMarkdownHtml(QString str, QString notesPath,
                 "pre, code { %1; }").arg(encodeCssFont(font));
     }
 
-    bool darkModeColors = settings.value("darkModeColors").toBool();
+    bool darkModeColors = !forExport ?
+            settings.value("darkModeColors").toBool() : false;
 
     QString codeForegroundColor = darkModeColors ? "#ffffff" : "#000000";
     QString codeBackgroundColor = darkModeColors ? "#444444" : "#f1f1f1";
 
     // do some more code formatting
     codeStyleSheet += QString(
-            "code { padding: 16px; overflow: auto;"
+            "code { padding: 3px; overflow: auto;"
                     " line-height: 1.45em; background-color: %1;"
-                    " border-radius: 3px; color: %2; }").arg(
+                    " border-radius: 5px; color: %2; }").arg(
             codeBackgroundColor, codeForegroundColor);
 
     // correct the strikeout tag
@@ -1873,11 +1874,13 @@ QString Note::textToMarkdownHtml(QString str, QString notesPath,
                                  "h1 { margin: 5px 0 20px 0; }"
                                  "h2, h3 { margin: 10px 0 15px 0; }"
                                  "img { max-width: 100%; }"
+                                 "pre { background-color: %5; border-radius: 5px; padding: 10px; }"
+                                 "pre > code { padding: 0; }"
                                  "table {border-spacing: 0; border-style: solid; border-width: 1px; border-collapse: collapse; margin-top: 0.5em;}"
                                  "th, td {padding: 2px 5px;}"
                                  "a { color: #FF9137; text-decoration: none; } %1 %2 %4"
-                                 "</style></head><body>%3</body></html>")
-                .arg(codeStyleSheet, exportStyleSheet, result, rtlStyle);
+                                 "</style></head><body class=\"export\">%3</body></html>")
+                .arg(codeStyleSheet, exportStyleSheet, result, rtlStyle, codeBackgroundColor);
     } else {
         // for preview
         result = QString("<html><head><style>"
@@ -1886,7 +1889,7 @@ QString Note::textToMarkdownHtml(QString str, QString notesPath,
                                  "table {border-spacing: 0; border-style: solid; border-width: 1px; border-collapse: collapse; margin-top: 0.5em;}"
                                  "th, td {padding: 2px 5px;}"
                                  "a { color: #FF9137; text-decoration: none; } %1 %3"
-                                 "</style></head><body>%2</body></html>")
+                                 "</style></head><body class=\"preview\">%2</body></html>")
                 .arg(codeStyleSheet, result, rtlStyle);
     }
 
@@ -2878,6 +2881,10 @@ QString Note::getParsedBookmarksWebServiceJsonText() {
 QList<Bookmark> Note::getParsedBookmarks() {
     QString text = decryptedNoteText.isEmpty() ? noteText : decryptedNoteText;
     return Bookmark::parseBookmarks(text);
+}
+
+void Note::resetNoteTextHtmlConversionHash() {
+    _noteTextHtmlConversionHash = "";
 }
 
 /**

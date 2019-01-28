@@ -1,5 +1,18 @@
 # QOwnNotes Changelog
 
+## 19.1.11
+- fixed gif animations in the preview (for [#1104](https://github.com/pbek/QOwnNotes/issues/1104), thank you @liulex)
+- fixed checked state detection for scripting function `triggerMenuAction`
+  (for [#1127](https://github.com/pbek/QOwnNotes/issues/1127), thank you @smokris)
+- improved styling for note html export (for [#1130](https://github.com/pbek/QOwnNotes/issues/1130))
+    - adapted background colors for dark mode
+- the note preview is now regenerated after the settings dialog is closed or the
+  scripting engine is manually reloaded in the main menu, so that you immediately
+  will see effects by scripts
+- the `<body>` tag of the generated html of a note will now have a css class
+  `preview` for the preview and and `export` for the export, so that you can more
+  easily append different styles for the preview and export
+
 ## 19.1.10
 - the issue assistant will now use `<details>` tags to make the GitHub issues
   look less cluttered

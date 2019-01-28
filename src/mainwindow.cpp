@@ -4476,6 +4476,15 @@ void MainWindow::openSettingsDialog(int page, bool openScriptRepository) {
 
     // load the note list again in case the setting on the note name has changed
     loadNoteDirectoryList();
+
+    // force that the preview is regenerated
+    forceRegenerateNotePreview();
+}
+
+void MainWindow::forceRegenerateNotePreview() {
+    _notePreviewHash = "";
+    currentNote.resetNoteTextHtmlConversionHash();
+    regenerateNotePreview();
 }
 
 /**
@@ -8662,6 +8671,7 @@ void MainWindow::on_actionSelect_note_folder_triggered() {
 void MainWindow::on_actionReload_scripting_engine_triggered() {
     ScriptingService::instance()->reloadEngine();
     showStatusBarMessage(tr("The scripting engine was reloaded"), 3000);
+    forceRegenerateNotePreview();
 }
 
 /**

@@ -270,6 +270,8 @@ public:
 
     QString getParsedBookmarksWebServiceJsonText();
 
+    void resetNoteTextHtmlConversionHash();
+
 protected:
     int id;
     QString name;
