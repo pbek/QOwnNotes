@@ -142,6 +142,8 @@ QString Bookmark::bookmarksWebServiceJsonText(QList<Bookmark> bookmarks) {
     bookmarkResultObject.insert("data", bookmarkObjectList);
     bookmarkResultObject.insert("noteFolderName",
             NoteFolder::currentNoteFolder().getName());
+    bookmarkResultObject.insert("noteFolders",
+            NoteFolder::noteFoldersWebServiceJsonText());
 
     QJsonDocument doc(bookmarkResultObject);
 

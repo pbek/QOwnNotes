@@ -56,6 +56,8 @@ public:
     static QString currentAttachmentsPath();
     bool isUseGit();
     void setUseGit(bool value);
+    QJsonObject jsonObject();
+    static QString noteFoldersWebServiceJsonText();
 
 private:
     int id;

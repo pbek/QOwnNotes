@@ -8,6 +8,8 @@
 #include <QSettings>
 #include <QDir>
 #include <utils/misc.h>
+#include <QtCore/QJsonArray>
+#include <QtCore/QJsonDocument>
 
 
 NoteFolder::NoteFolder() {
@@ -492,6 +494,40 @@ bool NoteFolder::migrateToNoteFolders() {
     }
 
     return priority > 0;
+}
+
+QJsonObject NoteFolder::jsonObject() {
+    QJsonObject object;
+    object.insert("name", QJsonValue::fromVariant(name));
+    object.insert("id", QJsonValue::fromVariant(id));
+    object.insert("isCurrent", QJsonValue::fromVariant(isCurrent()));
+    return object;
+};
+
+/**
+ * Returns json text of the note folder list for the WebSocketServerService
+ *
+ * @return
+ */
+QString NoteFolder::noteFoldersWebServiceJsonText() {
+    QJsonArray objectList;
+    QList<NoteFolder> noteFolders = NoteFolder::fetchAll();
+
+    Q_FOREACH(NoteFolder noteFolder, noteFolders) {
+            objectList.push_back(noteFolder.jsonObject());
+        }
+
+
+
+    QJsonObject resultObject;
+    resultObject.insert("type", QJsonValue::fromVariant("noteFolders"));
+    resultObject.insert("data", objectList);
+    resultObject.insert("noteFolderName",
+                                NoteFolder::currentNoteFolder().getName());
+
+    QJsonDocument doc(resultObject);
+
+    return doc.toJson(QJsonDocument::Compact);
 }
 
 QDebug operator<<(QDebug dbg, const NoteFolder &noteFolder) {
