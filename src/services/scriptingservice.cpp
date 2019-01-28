@@ -1771,7 +1771,7 @@ void ScriptingService::triggerMenuAction(QString objectName, QString checked) {
         bool isChecked = checked == "1";
 
         // return if action already had the desired checked state
-        if (isChecked && action->isChecked()) {
+        if (isChecked == action->isChecked()) {
             return;
         }
     }
