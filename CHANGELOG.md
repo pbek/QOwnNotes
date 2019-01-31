@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 19.2.0
+- enabled scrolling to top and bottom in the note text edit on macOS
+  (for [#1131](https://github.com/pbek/QOwnNotes/issues/1131))
+- attempted to fix the brace character if automatic bracket closing is enabled
+  on macOS with an US keyboard (for [#1132](https://github.com/pbek/QOwnNotes/issues/1132))
+ 
 ## 19.1.11
 - fixed gif animations in the preview (for [#1104](https://github.com/pbek/QOwnNotes/issues/1104), thank you @liulex)
 - fixed checked state detection for scripting function `triggerMenuAction`
