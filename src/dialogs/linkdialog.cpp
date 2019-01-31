@@ -12,6 +12,7 @@
 #include "helpers/htmlentities.h"
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
+#include <utils/misc.h>
 
 LinkDialog::LinkDialog(QString dialogTitle, QWidget *parent) :
         MasterDialog(parent),
@@ -202,9 +203,20 @@ void LinkDialog::on_fileUrlButton_clicked() {
     // load last url
     QUrl fileUrl = settings.value("LinkDialog/lastSelectedFileUrl").toUrl();
 
+    if (Utils::Misc::isInPortableMode()) {
+        fileUrl = QUrl("file://" + Utils::Misc::prependPortableDataPathIfNeeded(
+                Utils::Misc::removeIfStartsWith(fileUrl.toLocalFile(), "/")));
+    }
+
     fileUrl = QFileDialog::getOpenFileUrl(this, tr("Select file to link to"),
                                           fileUrl);
     QString fileUrlString = fileUrl.toString(QUrl::FullyEncoded);
+
+    if (Utils::Misc::isInPortableMode()) {
+        fileUrlString = "file://" + QUrl("../" +
+                Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(
+                        fileUrl.toLocalFile())).toString(QUrl::FullyEncoded);
+    }
 
     if (!fileUrlString.isEmpty()) {
         // store url for the next time
