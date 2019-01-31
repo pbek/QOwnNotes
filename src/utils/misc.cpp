@@ -517,7 +517,7 @@ QString Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(QString path) {
 //                "^" + QRegularExpression::escape(portableDataPath()) +
 //                        "[\\//]"));
 
-        // make the path relative to the portable nata path
+        // make the path relative to the portable data path
         QDir dir(portableDataPath());
         path = dir.relativeFilePath(path);
     }
