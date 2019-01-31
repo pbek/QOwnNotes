@@ -5,7 +5,13 @@
   (for [#1131](https://github.com/pbek/QOwnNotes/issues/1131))
 - attempted to fix the brace character if automatic bracket closing is enabled
   on macOS with an US keyboard (for [#1132](https://github.com/pbek/QOwnNotes/issues/1132))
- 
+- in **portable mode** now **relative links** will be inserted by the *Link dialog*
+  (for [#1136](https://github.com/pbek/QOwnNotes/issues/1136))
+    - also an attempt will be made to select the selected relative file again
+      when the dialog is opened next time 
+- the *Custom action toolbar* can now be hidden even if scripts with custom
+  actions are enabled (for [#1135](https://github.com/pbek/QOwnNotes/issues/1135))
+
 ## 19.1.11
 - fixed gif animations in the preview (for [#1104](https://github.com/pbek/QOwnNotes/issues/1104), thank you @liulex)
 - fixed checked state detection for scripting function `triggerMenuAction`

@@ -349,6 +349,10 @@ bool DatabaseService::setupTables() {
     int oldVersion = version;
     qDebug() << __func__ << " - 'database_version': " << version;
 
+    if (version > 0) {
+        settings.setValue("guiFirstRunInit", true);
+    }
+
     QSqlDatabase dbMemory = QSqlDatabase::database("memory");
     QSqlQuery queryMemory(dbMemory);
     queryMemory.exec("CREATE TABLE IF NOT EXISTS note ("

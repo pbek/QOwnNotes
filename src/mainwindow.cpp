@@ -117,6 +117,12 @@ MainWindow::MainWindow(QWidget *parent) :
 
     ui->setupUi(this);
 
+    if (!settings.value("guiFirstRunInit").toBool()) {
+        // hide the custom action toolbar initially
+        _customActionToolbar->hide();
+        settings.setValue("guiFirstRunInit", true);
+    }
+
     // setup vim mode
     if (settings.value("Editor/vimMode").toBool()) {
         initFakeVim(ui->noteTextEdit);
@@ -942,7 +948,7 @@ void MainWindow::reloadTodoLists() {
 void MainWindow::initScriptingEngine() {
     _customActionSignalMapper = new QSignalMapper(this);
     ui->menuCustom_actions->hide();
-    _customActionToolbar->hide();
+//    _customActionToolbar->hide();
 
     // connect the custom action signal mapper
     QObject::connect(_customActionSignalMapper,
@@ -1003,7 +1009,7 @@ void MainWindow::initToolbars() {
 
     _customActionToolbar = new QToolBar(tr("custom action toolbar"), this);
     _customActionToolbar->setObjectName("customActionsToolbar");
-    _customActionToolbar->hide();
+//    _customActionToolbar->hide();
     addToolBar(_customActionToolbar);
 
     _quitToolbar = new QToolBar(tr("quit toolbar"), this);
@@ -8683,7 +8689,7 @@ void MainWindow::preReloadScriptingEngine() {
     ui->menuCustom_actions->clear();
     ui->menuCustom_actions->hide();
     _customActionToolbar->clear();
-    _customActionToolbar->hide();
+//    _customActionToolbar->hide();
     _noteTextEditContextMenuActions.clear();
     _noteListContextMenuActions.clear();
 
@@ -9600,7 +9606,7 @@ void MainWindow::addCustomAction(QString identifier, QString menuText,
 
     // add a button to the custom action toolbar
     if (!hideButtonInToolbar && (!buttonText.isEmpty() || !icon.isEmpty())) {
-        _customActionToolbar->show();
+//        _customActionToolbar->show();
         _customActionToolbar->addAction(action);
     }
 
