@@ -2813,7 +2813,7 @@ Falls Sie die Papierkorb-App auf Ihrem Nextcloud/ownCloud-Server aktiviert haben
       <location filename="../mainwindow.cpp" line="5713"/>
       <source>Block &amp;quote selected text</source>
       <comment>Action to apply a block quote formatting to the selected text</comment>
-      <translation type="unfinished">Block &amp;quote selected text</translation>
+      <translation>Ausgewählten Text als Blockzitat formatieren</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6635"/>
