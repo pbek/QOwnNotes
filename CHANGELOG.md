@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 19.2.1
+- you can now use <kbd>Ctrl + Enter</kbd> in the note text edit to create a new
+  line and jump to it even if the caret is in the middle of the line
+  (for [qmarkdowntextedit #14](https://github.com/pbek/qmarkdowntextedit/pull/14), thank you @liulex)
+
 ## 19.2.0
 - in **portable mode** now **relative links** will be inserted by the *Link dialog*
   (for [#1136](https://github.com/pbek/QOwnNotes/issues/1136))
