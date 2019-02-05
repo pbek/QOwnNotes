@@ -10,6 +10,7 @@
   (for [qmarkdowntextedit #15](https://github.com/pbek/qmarkdowntextedit/pull/15), thank you @liulex)
 - you can now copy/cut the whole paragraph if no text is selected
   (for [qmarkdowntextedit #16](https://github.com/pbek/qmarkdowntextedit/pull/16), thank you @liulex)
+- added more Ukrainian translation (thank you prolinuxua)
 
 ## 19.2.0
 - in **portable mode** now **relative links** will be inserted by the *Link dialog*

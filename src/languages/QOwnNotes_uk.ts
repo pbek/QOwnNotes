@@ -6498,16 +6498,16 @@ This cannot be undone!</source>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="105"/>
       <source>%1 connected to QOwnNotes server!</source>
-      <translation type="unfinished">%1 connected to QOwnNotes server!</translation>
+      <translation>%1 під’єднано до сервера QOwnNotes!</translation>
     </message>
     <message numerus="yes">
       <location filename="../services/websocketserverservice.cpp" line="201"/>
       <source>%n bookmark(s) created</source>
-      <translation type="unfinished">
-        <numerusform>%n bookmark(s) created</numerusform>
-        <numerusform>%n bookmark(s) created</numerusform>
-        <numerusform>%n bookmark(s) created</numerusform>
-        <numerusform>%n bookmark(s) created</numerusform>
+      <translation>
+        <numerusform>%n закладку створено</numerusform>
+        <numerusform>%n закладки створено</numerusform>
+        <numerusform>%n закладки створено</numerusform>
+        <numerusform>%n закладки створено</numerusform>
       </translation>
     </message>
     <message>
