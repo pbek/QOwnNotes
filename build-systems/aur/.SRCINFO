@@ -12,6 +12,8 @@ pkgbase = qownnotes
 	depends = qt5-svg
 	depends = qt5-declarative
 	depends = qt5-websockets
+	depends = qt5-tools
+	depends = qt5-xmlpatterns
 	source = https://github.com/pbek/QOwnNotes.git
 
 pkgname = qownnotes
