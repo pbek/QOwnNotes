@@ -5,6 +5,7 @@
 #include <QPushButton>
 #include <QJSValue>
 #include <QJSValueIterator>
+#include <utils/misc.h>
 
 VersionDialog::VersionDialog(QJSValue versions, MainWindow *mainWindow,
                              QWidget *parent) :
@@ -74,13 +75,8 @@ VersionDialog::VersionDialog(QJSValue versions, MainWindow *mainWindow,
             continue;
         }
 
-        diffHtml = versionsIterator.value().property("diffHtml").toString();
-        diffHtml.replace("<ins>",
-                         "<span style='background-color: rgb(214, 255, 199)'>");
-        diffHtml.replace("</ins>", "</span>");
-        diffHtml.replace("<del>",
-                         "<span style='background-color: rgb(255, 215, 215)'>");
-        diffHtml.replace("</del>", "</span>");
+        diffHtml = "<style>" + Utils::Misc::genericCSS() + "</style>" +
+            versionsIterator.value().property("diffHtml").toString();
         diffHtml.replace("\\n", "&para;<br />");
         diffHtml.replace("\n", "<br />");
 

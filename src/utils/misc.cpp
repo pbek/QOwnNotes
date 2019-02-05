@@ -810,6 +810,12 @@ QString Utils::Misc::genericCSS() {
 
     color = darkModeColors ? "#5b5b5b" : "#e8e8e8";
     cssStyles += "kbd {background-color: " + color +  "}";
+
+    color = darkModeColors ? "#336924" : "#d6ffc7";
+    cssStyles += "ins {background-color: " + color +  "}";
+
+    color = darkModeColors ? "#802c2c" : "#ffd7d7";
+    cssStyles += "del {background-color: " + color +  "}";
     return cssStyles;
 }
 

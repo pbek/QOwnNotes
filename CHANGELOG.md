@@ -1,9 +1,15 @@
 # QOwnNotes Changelog
 
 ## 19.2.1
+- the diff colors for added and removed text in the note versioning dialog is
+  now adapted for the dark mode (for [#1139](https://github.com/pbek/QOwnNotes/issues/1139))
 - you can now use <kbd>Ctrl + Enter</kbd> in the note text edit to create a new
   line and jump to it even if the caret is in the middle of the line
   (for [qmarkdowntextedit #14](https://github.com/pbek/qmarkdowntextedit/pull/14), thank you @liulex)
+- added auto completion for tick characters for code blocks
+  (for [qmarkdowntextedit #15](https://github.com/pbek/qmarkdowntextedit/pull/15), thank you @liulex)
+- you can now copy/cut the whole paragraph if no text is selected
+  (for [qmarkdowntextedit #16](https://github.com/pbek/qmarkdowntextedit/pull/16), thank you @liulex)
 
 ## 19.2.0
 - in **portable mode** now **relative links** will be inserted by the *Link dialog*
