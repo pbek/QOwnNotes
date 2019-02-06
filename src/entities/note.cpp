@@ -1445,7 +1445,9 @@ int Note::storeDirtyNotesToDisk(Note &currentNote, bool *currentNoteChanged,
                 *noteWasRenamed = true;
 
                 // override the current note because the file name has changed
-                currentNote = note;
+                if (note.isSameFile(currentNote)) {
+                    currentNote = note;
+                }
 
                 // handle the replacing of all note urls if a note was renamed
                 // we don't need to do that here, it would be called two
