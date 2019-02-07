@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 19.2.2
+- fixed lost note after changing its title and switching to another note
+  (for [#522](https://github.com/pbek/QOwnNotes/issues/522) and
+  [#1142](https://github.com/pbek/QOwnNotes/issues/1142), a big thank you to @liulex)
+- added more Portuguese, Brazilian translation (thank you mlimacarlos)
+
 ## 19.2.1
 - the diff colors for added and removed text in the note versioning dialog is
   now adapted for the dark mode (for [#1139](https://github.com/pbek/QOwnNotes/issues/1139))

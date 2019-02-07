@@ -2811,7 +2811,7 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
       <location filename="../mainwindow.cpp" line="5713"/>
       <source>Block &amp;quote selected text</source>
       <comment>Action to apply a block quote formatting to the selected text</comment>
-      <translation type="unfinished">Block &amp;quote selected text</translation>
+      <translation>Bloquear &amp;citar o texto selecionado</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6635"/>
@@ -4409,7 +4409,7 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2108"/>
       <source>Greek</source>
-      <translation type="unfinished">Greek</translation>
+      <translation>Grego</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2119"/>
@@ -6437,7 +6437,7 @@ Isso não poderá ser desfeito!</translation>
       <source>%n bookmark(s) created</source>
       <translation type="unfinished">
         <numerusform>%n bookmark(s) created</numerusform>
-        <numerusform>%n bookmark(s) created</numerusform>
+        <numerusform>%n marcadores criados</numerusform>
       </translation>
     </message>
     <message>
