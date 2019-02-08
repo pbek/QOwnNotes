@@ -445,16 +445,18 @@ QString NoteFolder::fixRemotePath() {
  * Migrate the notesPath and the recentNoteFolders to NoteFolder objects
  */
 bool NoteFolder::migrateToNoteFolders() {
-    if (countAll() > 0) {
-        return false;
-    }
-
     QSettings settings;
-    int priority = 0;
 
     // prepend the portable data path if we are in portable mode
     QString notesPath = Utils::Misc::prependPortableDataPathIfNeeded(
-            settings.value("notesPath").toString());
+        settings.value("notesPath").toString());
+
+    if (countAll() > 0) {
+        if (currentNoteFolder().getLocalPath() == notesPath)
+            return false;
+    }
+
+    int priority = 0;
 
     // create notes path as NoteFolder
     if (!notesPath.isEmpty()) {
