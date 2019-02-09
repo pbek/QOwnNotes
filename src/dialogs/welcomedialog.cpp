@@ -24,7 +24,11 @@ WelcomeDialog::WelcomeDialog(QWidget *parent) :
     ui->ownCloudSettingsButton->setText(Utils::Misc::replaceOwnCloudText(
             ui->ownCloudSettingsButton->text()));
 
-    ui->finishButton->setEnabled(false);
+    // if note layout has already been set, we can finish settings in the first step
+    QSettings settings;
+    _allowFinishButton = settings.contains("workspace-initial/windowState");
+    ui->finishButton->setEnabled(_allowFinishButton);
+
     ui->backButton->setEnabled(false);
     ui->errorMessageLabel->setVisible(false);
 
@@ -176,6 +180,13 @@ void WelcomeDialog::on_backButton_clicked() {
 
 void WelcomeDialog::on_finishButton_clicked() {
     MetricsService::instance()->sendVisitIfEnabled("welcome-dialog/finished");
+    if (ui->stackedWidget->currentIndex() == WelcomePages::NoteFolderPage) {
+        if (!handleNoteFolderSetup())
+            return;
+    }
+    else {
+        ui->layoutWidget->storeSettings();
+    }
     storeNoteFolderSettings();
     done(QDialog::Accepted);
 }

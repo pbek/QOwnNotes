@@ -64,9 +64,9 @@ void LayoutWidget::updateCurrentLayout() {
     ui->layoutGraphicsView->setScene(scene);
     ui->layoutGraphicsView->fitInView(scene->sceneRect(), Qt::KeepAspectRatio);
 
-    if (!_manualSettingsStoring) {
-        storeSettings();
-    }
+    //if (!_manualSettingsStoring) {
+    //    storeSettings();
+    //}
 }
 
 void LayoutWidget::storeSettings() {
