@@ -22,6 +22,8 @@ public:
 
     void setManualSettingsStoring(bool enabled);
 
+    void storeSettings();
+
 private slots:
     void on_layoutComboBox_currentIndexChanged(int index);
 
@@ -39,8 +41,6 @@ private:
     void loadLayouts();
 
     void updateCurrentLayout();
-
-    void storeSettings();
 
     static QString getLayoutName(QString layoutIdentifier);
 
