@@ -10,6 +10,7 @@
   (for [#1140](https://github.com/pbek/QOwnNotes/issues/1140), thank you @liulex)
 - fixed some possible problems with finding existing note folders 
   (for [#1144](https://github.com/pbek/QOwnNotes/issues/1144), thank you @liulex)
+    - this also fixes some problems upon first start in portable mode
 
 ## 19.2.2
 - fixed lost note after changing its title and switching to another note
