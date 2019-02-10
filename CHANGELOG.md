@@ -3,6 +3,13 @@
 ## 19.2.3
 - fixed a crash on first start introduced with feature [#1135](https://github.com/pbek/QOwnNotes/issues/1135)
   (for [#1146](https://github.com/pbek/QOwnNotes/issues/1146))
+- fixed a problem with pasting text with newline characters at the end introduced
+  with [qmarkdowntextedit #15](https://github.com/pbek/qmarkdowntextedit/pull/15)
+  (for [qmarkdowntextedit #18](https://github.com/pbek/qmarkdowntextedit/pull/18), thank you @liulex)
+- fixed a problem with resetting layout settings if the note folder was not found
+  (for [#1140](https://github.com/pbek/QOwnNotes/issues/1140), thank you @liulex)
+- fixed some possible problems with finding existing note folders 
+  (for [#1144](https://github.com/pbek/QOwnNotes/issues/1144), thank you @liulex)
 
 ## 19.2.2
 - fixed lost note after changing its title and switching to another note
