@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 19.2.3
+- fixed a crash on first start introduced with feature [#1135](https://github.com/pbek/QOwnNotes/issues/1135)
+  (for [#1146](https://github.com/pbek/QOwnNotes/issues/1146))
+
 ## 19.2.2
 - fixed lost note after changing its title and switching to another note
   (for [#522](https://github.com/pbek/QOwnNotes/issues/522) and

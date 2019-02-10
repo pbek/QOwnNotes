@@ -117,12 +117,6 @@ MainWindow::MainWindow(QWidget *parent) :
 
     ui->setupUi(this);
 
-    if (!settings.value("guiFirstRunInit").toBool()) {
-        // hide the custom action toolbar initially
-        _customActionToolbar->hide();
-        settings.setValue("guiFirstRunInit", true);
-    }
-
     // setup vim mode
     if (settings.value("Editor/vimMode").toBool()) {
         initFakeVim(ui->noteTextEdit);
@@ -204,6 +198,12 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // initialize the toolbars
     initToolbars();
+
+    if (!settings.value("guiFirstRunInit").toBool()) {
+        // hide the custom action toolbar initially
+        _customActionToolbar->hide();
+        settings.setValue("guiFirstRunInit", true);
+    }
 
 #ifdef Q_OS_MAC
     // add some different shortcuts for the note history on the mac
