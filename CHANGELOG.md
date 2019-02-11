@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 19.2.4
+- you can now click checkboxes like `- []` in the preview
+  (for [#1147](https://github.com/pbek/QOwnNotes/issues/1147), thank you @liulex)
+
 ## 19.2.3
 - fixed a crash on first start introduced with feature [#1135](https://github.com/pbek/QOwnNotes/issues/1135)
   (for [#1146](https://github.com/pbek/QOwnNotes/issues/1146))
