@@ -47,10 +47,9 @@ build_script:
   # setting the build number in the header file
   - "echo #define BUILD %APPVEYOR_BUILD_NUMBER% > build_number.h"
 #  - qmake QOwnNotes.pro -r -spec win32-g++
-  - qmake QOwnNotes.pro -r  
+  - qmake QOwnNotes.pro -r -spec %gpp%
 #  - qmake QOwnNotes.pro -r -spec win32-g++ "CONFIG+=debug"
-  - mingw64-make
-#  - mingw32-make
+  - mingw32-make
   # creating the release path
   - md ..\%RELEASE_PATH%
   # copy the binary to our release path
