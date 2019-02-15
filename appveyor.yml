@@ -14,7 +14,7 @@ environment:
   matrix:
     # Qt 5.11.2
     - qtdir: "C:\\Qt\\latest\\mingw73_64"
-      gpp: g++
+      gpp: win32-g++
     # Qt 5.7 (for Windows XP)
     - qtdir: "C:\\Qt\\5.7\\mingw53_32"
       gpp: win32-g++
@@ -39,6 +39,7 @@ before_build:
 
 build_script:
   # enable this to take a look if there are new qt versions
+  - dir C:\Qt
   - dir C:\Qt\latest
   - cd src
   # we need to modify that to make it running on AppVeyor
