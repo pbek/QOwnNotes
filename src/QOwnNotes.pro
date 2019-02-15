@@ -307,3 +307,7 @@ CONFIG(debug, debug|release) {
 }
 
 DEFINES += QAPPLICATION_CLASS=QApplication
+
+DISTFILES += \
+    ../README.md \
+    ../CHANGELOG.md
