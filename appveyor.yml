@@ -14,10 +14,10 @@ environment:
   matrix:
     # Qt 5.11.2
     - qtdir: "C:\\Qt\\latest\\mingw73_64"
-      gpp=win64-g++
+      gpp: win64-g++
     # Qt 5.7 (for Windows XP)
     - qtdir: "C:\\Qt\\5.7\\mingw53_32"
-      gpp=win32-g++
+      gpp: win32-g++
 
 #matrix:
 #  allow_failures:
