@@ -44,7 +44,8 @@ build_script:
   - "echo #define RELEASE \"AppVeyor\" > release.h"
   # setting the build number in the header file
   - "echo #define BUILD %APPVEYOR_BUILD_NUMBER% > build_number.h"
-  - qmake QOwnNotes.pro -r -spec win32-g++
+#  - qmake QOwnNotes.pro -r -spec win32-g++
+  - qmake QOwnNotes.pro -r  
 #  - qmake QOwnNotes.pro -r -spec win32-g++ "CONFIG+=debug"
   - mingw32-make
   # creating the release path
