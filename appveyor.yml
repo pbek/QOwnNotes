@@ -9,11 +9,11 @@ skip_tags: true
 environment:
   global:
     qtdir57: C:\Qt\5.7\mingw53_32
-    qtdirlatest: C:\Qt\latest\mingw53_32
+    qtdirlatest: C:\Qt\latest\mingw73_64
 
   matrix:
     # Qt 5.11.2
-    - qtdir: "C:\\Qt\\latest\\mingw53_32"
+    - qtdir: "C:\\Qt\\latest\\mingw73_64"
     # Qt 5.7 (for Windows XP)
     - qtdir: "C:\\Qt\\5.7\\mingw53_32"
 
@@ -92,7 +92,7 @@ deploy:
       secure: spcyN/Dz3B2GXBPii8IywDLq6vfxC1SrN+xR2wMerFM7g2nTy0Lrh5agQONFoInR
     on:
       branch: master
-      qtdir: "C:\\Qt\\latest\\mingw53_32"
+      qtdir: "C:\\Qt\\latest\\mingw73_64"
 #      branch: develop
 
 notifications:
