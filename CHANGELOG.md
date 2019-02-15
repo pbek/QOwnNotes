@@ -3,6 +3,10 @@
 ## 19.2.4
 - you can now click checkboxes like `- []` in the preview
   (for [#235](https://github.com/pbek/QOwnNotes/issues/235), thank you @liulex)
+- fixed single-line paste behavior when there is already text selection
+  (for [qmarkdowntextedit #18](https://github.com/pbek/qmarkdowntextedit/pull/19), thank you @liulex)
+- fixed settings lost after canceling the welcome dialog
+  (for [#1040](https://github.com/pbek/QOwnNotes/issues/1040), thank you @liulex)
 
 ## 19.2.3
 - fixed a crash on first start introduced with feature [#1135](https://github.com/pbek/QOwnNotes/issues/1135)
