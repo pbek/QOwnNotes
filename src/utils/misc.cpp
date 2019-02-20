@@ -625,6 +625,46 @@ QString Utils::Misc::htmlToMarkdown(QString text) {
 }
 
 /**
+ * Returns new html with task lists by checkboxes
+ *
+ * @param html
+ * @param clickable
+ * @return
+ */
+QString Utils::Misc::parseTaskList(const QString &html, bool clickable)
+{
+    auto text = html;
+
+    if (!clickable) {
+        text.replace(QRegExp(R"((<li>\s*(<p>)*\s*)\[ ?\])", Qt::CaseInsensitive), "\\1&#9744;");
+        text.replace(QRegExp(R"((<li>\s*(<p>)*\s*)\[[xX]\])", Qt::CaseInsensitive), "\\1&#9745;");
+        return text;
+    }
+
+    // TODO
+    // to ensure the clicking behavior of checkboxes,
+    // line numbers of checkboxes in the original markdown text
+    // should be provided by the markdown parser
+
+    const QString checkboxStart = R"(<a class="task-list-item-checkbox" href="checkbox://_)";
+    text.replace(QRegExp(R"((<li>\s*(<p>)*\s*)\[ ?\])", Qt::CaseInsensitive), "\\1" + checkboxStart + "\">&#9744;</a>");
+    text.replace(QRegExp(R"((<li>\s*(<p>)*\s*)\[[xX]\])", Qt::CaseInsensitive), "\\1" + checkboxStart + "\">&#9745;</a>");
+
+    int count = 0;
+    int pos = 0;
+    while (true) {
+        pos = text.indexOf(checkboxStart + "\"", pos);
+        if (pos == -1)
+            break;
+
+        pos += checkboxStart.length();
+        text.insert(pos, QString::number(count++));
+    }
+
+    return text;
+}
+
+/**
  * Returns a list of all parents until the top
  *
  * @param object

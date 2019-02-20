@@ -711,6 +711,8 @@ private:
 
     void exportNoteAsPDF(QTextEdit *textEdit);
 
+    void exportNoteAsPDF(QTextDocument *doc);
+
     void printNote(QTextEdit *textEdit);
 
     void updateEncryptNoteButtons();
