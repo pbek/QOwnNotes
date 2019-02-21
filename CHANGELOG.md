@@ -2,7 +2,10 @@
 
 ## 19.2.5
 - fixed numpad 0 being recognized as tick character in the note text edit
-  (for [qmarkdowntextedit #20](https://github.com/pbek/qmarkdowntextedit/pull/20), thank you @liulex)
+  (for [#1152](https://github.com/pbek/QOwnNotes/issues/1152), thank you @liulex)
+- added checkboxes support to the preview pdf export
+  (for [#235](https://github.com/pbek/QOwnNotes/issues/235), thank you @liulex)
+- added more Chinese Traditional translation (thank you abev66)
 
 ## 19.2.4
 - you can now click checkboxes like `- []` in the preview

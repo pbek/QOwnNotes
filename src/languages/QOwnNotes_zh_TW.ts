@@ -6408,8 +6408,8 @@ This cannot be undone!</source>
     <message numerus="yes">
       <location filename="../services/websocketserverservice.cpp" line="201"/>
       <source>%n bookmark(s) created</source>
-      <translation type="unfinished">
-        <numerusform>%n bookmark(s) created</numerusform>
+      <translation>
+        <numerusform>%n 個書籤已建立</numerusform>
       </translation>
     </message>
     <message>
