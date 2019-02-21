@@ -37,7 +37,6 @@ protected:
 
     QStringList extractGifUrls(const QString &text) const;
     void animateGif(const QString &text);
-    QString handleTaskLists(const QString &text);
 
 public slots:
     void hide();
