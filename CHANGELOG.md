@@ -8,6 +8,8 @@
       translation
 - added an option to disable underline rendering in the preview to the *Preview settings*
   (for [#1160](https://github.com/pbek/QOwnNotes/issues/1160))
+- added more Chinese Simplified, Indonesian, Danish, Cebuano, Hungarian translation
+  (thank you cptbl00dra1n, Fabijenna, zmni)
 
 ## 19.2.5
 - fixed numpad 0 being recognized as tick character in the note text edit
