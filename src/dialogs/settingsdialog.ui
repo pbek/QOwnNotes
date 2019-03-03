@@ -2179,7 +2179,7 @@
                        </item>
                        <item>
                         <property name="text">
-                         <string>Norsk</string>
+                         <string notr="true">Norsk</string>
                         </property>
                         <property name="toolTip">
                          <string>Norwegian</string>
