@@ -1,6 +1,11 @@
 # QOwnNotes Changelog
 
 ## 19.3.0
+- added **Galician translation** and **Norwegian translation** (a big thank you
+  to Fabijenna)
+    - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes/)
+      to make QOwnNotes available in more languages or help with the current 
+      translation
 - added an option to disable underline rendering in the preview to the *Preview settings*
   (for [#1160](https://github.com/pbek/QOwnNotes/issues/1160))
 

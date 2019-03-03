@@ -46,6 +46,8 @@ files:
         "tl_PH" : "tl",
         "fil_PH" : "fil",
         "ceb_PH" : "ceb",
-        "hi_IN" : "hi"
+        "hi_IN" : "hi",
+        "gl_ES" : "gl",
+        "no_NO" : "no"
       }
     }
