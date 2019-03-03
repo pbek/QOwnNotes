@@ -624,6 +624,8 @@ void SettingsDialog::storeSettings() {
                       ui->noteEditCentralWidgetCheckBox->isChecked());
     settings.setValue("MainWindow/noteTextView.rtl",
                       ui->noteTextViewRTLCheckBox->isChecked());
+    settings.setValue("MainWindow/noteTextView.underline",
+                      ui->noteTextViewUnderlineCheckBox->isChecked());
     settings.setValue("Debug/fakeOldVersionNumber",
                       ui->oldVersionNumberCheckBox->isChecked());
     settings.setValue("Debug/fileLogging",
@@ -935,6 +937,8 @@ void SettingsDialog::readSettings() {
             settings.value("noteSaveIntervalTime", 10).toInt());
     ui->noteTextViewRTLCheckBox->setChecked(
             settings.value("MainWindow/noteTextView.rtl").toBool());
+    ui->noteTextViewUnderlineCheckBox->setChecked(
+            settings.value("MainWindow/noteTextView.underline", true).toBool());
     ui->oldVersionNumberCheckBox->setChecked(
             settings.value("Debug/fakeOldVersionNumber").toBool());
     ui->fileLoggingCheckBox->setChecked(

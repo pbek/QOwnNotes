@@ -1735,6 +1735,12 @@ QString Note::textToMarkdownHtml(QString str, QString notesPath,
     hoedown_extensions extensions =
             (hoedown_extensions) ((HOEDOWN_EXT_BLOCK | HOEDOWN_EXT_SPAN |
                                    HOEDOWN_EXT_MATH_EXPLICIT) & ~HOEDOWN_EXT_QUOTE);
+
+    QSettings settings;
+    if (!settings.value("MainWindow/noteTextView.underline", true).toBool()) {
+        extensions = (hoedown_extensions) (extensions & ~HOEDOWN_EXT_UNDERLINE);
+    }
+
     hoedown_document *document = hoedown_document_new(renderer, extensions, 32);
 
     QString windowsSlash = "";
@@ -1823,7 +1829,6 @@ QString Note::textToMarkdownHtml(QString str, QString notesPath,
     hoedown_document_free(document);
     hoedown_html_renderer_free(renderer);
 
-    QSettings settings;
     QString fontString = settings.value("MainWindow/noteTextView.code.font")
             .toString();
 

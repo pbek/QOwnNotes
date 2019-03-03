@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 19.3.0
+- added an option to disable underline rendering in the preview to the *Preview settings*
+  (for [#1160](https://github.com/pbek/QOwnNotes/issues/1160))
+
 ## 19.2.5
 - fixed numpad 0 being recognized as tick character in the note text edit
   (for [#1152](https://github.com/pbek/QOwnNotes/issues/1152), thank you @liulex)
