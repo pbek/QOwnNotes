@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 19.3.1
+- added some markdown text edit fixes and changes
+  (for [QMarkdownTextEdit #21](https://github.com/pbek/qmarkdowntextedit/pull/21), thank you @sandsmark)
+
 ## 19.3.0
 - added **Galician translation** and **Norwegian translation** (a big thank you
   to Fabijenna)
