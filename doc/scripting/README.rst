@@ -973,8 +973,8 @@ Usage in QML
     var fileName = script.getOpenFileName("Please select an image", "/home/user/images", "Images (*.png *.xpm *.jpg)");
 
 
-Showing an save file dialog
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Showing a save file dialog
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Properties
 ^^^^^^^^^^
@@ -982,7 +982,7 @@ Properties
 .. code:: cpp
 
     /**
-     * Shows an save file dialog
+     * Shows a save file dialog
      *
      * @param caption (optional)
      * @param dir (optional)
