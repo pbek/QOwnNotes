@@ -9,6 +9,10 @@
   (for [#1166](https://github.com/pbek/QOwnNotes/issues/1166))
 - added some markdown text edit fixes and changes
   (for [QMarkdownTextEdit #21](https://github.com/pbek/qmarkdowntextedit/pull/21), thank you @sandsmark)
+- added more Czech, Polish, Swedish, Greek, Danish, Catalan, Galician, Indonesian,
+  Norwegian, Dutch, Hungarian, German, Italian, Portuguese, Brazilian, Spanish
+  translation (thank you Fabijenna, zmni, rakekniven, mlocati, jan_sh,
+  mlimacarlos, richarson)
 
 ## 19.3.0
 - added **Galician translation** and **Norwegian translation** (a big thank you
