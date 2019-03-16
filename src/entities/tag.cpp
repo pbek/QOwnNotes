@@ -973,6 +973,33 @@ bool Tag::renameNoteFileNamesOfLinks(QString oldFileName, QString newFileName) {
 }
 
 /**
+ * Renames the note sub folder paths of note links
+ */
+bool Tag::renameNoteSubFolderPathsOfLinks(QString &oldPath, QString &newPath) {
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlQuery query(db);
+    query.prepare("UPDATE noteTagLink SET note_sub_folder_path = "
+                  "replace(note_sub_folder_path, :oldPath, :newPath) WHERE "
+                          "note_sub_folder_path LIKE :oldPathLike");
+
+    query.bindValue(":oldPath", oldPath);
+    query.bindValue(":oldPathLike", oldPath + "%");
+    query.bindValue(":newPath", newPath);
+
+    if (!query.exec()) {
+        // on error
+        qWarning() << __func__ << ": " << query.lastError();
+
+        DatabaseService::closeDatabaseConnection(db, query);
+        return false;
+    }
+
+    DatabaseService::closeDatabaseConnection(db, query);
+
+    return true;
+}
+
+/**
  * Checks if the active tag still exists in the database
  */
 bool Tag::exists() {

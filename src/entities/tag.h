@@ -75,6 +75,9 @@ public:
     static bool renameNoteFileNamesOfLinks(
             QString oldFileName, QString newFileName);
 
+    static bool renameNoteSubFolderPathsOfLinks(
+            QString &oldPath, QString &newPath);
+
     int countLinkedNoteFileNames(bool fromAllSubfolder, bool recursive);
 
     static QList<Tag> fetchAllWithLinkToNoteNames(QStringList noteNameList);
