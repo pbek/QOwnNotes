@@ -1,10 +1,14 @@
 # QOwnNotes Changelog
 
 ## 19.3.1
-- added some markdown text edit fixes and changes
-  (for [QMarkdownTextEdit #21](https://github.com/pbek/qmarkdowntextedit/pull/21), thank you @sandsmark)
+- added **Danish translation** (a big thank you to Fabijenna)
+    - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes)
+      to make QOwnNotes available in more languages or help with the current 
+      translation
 - implemented preserving of note tag links when renaming note sub-folders
   (for [#1166](https://github.com/pbek/QOwnNotes/issues/1166))
+- added some markdown text edit fixes and changes
+  (for [QMarkdownTextEdit #21](https://github.com/pbek/qmarkdowntextedit/pull/21), thank you @sandsmark)
 
 ## 19.3.0
 - added **Galician translation** and **Norwegian translation** (a big thank you

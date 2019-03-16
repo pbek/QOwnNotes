@@ -2036,6 +2036,17 @@
                        </item>
                        <item>
                         <property name="text">
+                         <string notr="true">Dansk</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Danish</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">da</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
                          <string notr="true">Deutsch</string>
                         </property>
                         <property name="toolTip">
@@ -5449,8 +5460,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../breeze-qownnotes.qrc"/>
   <include location="../breeze-dark-qownnotes.qrc"/>
+  <include location="../breeze-qownnotes.qrc"/>
  </resources>
  <connections>
   <connection>

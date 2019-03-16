@@ -48,6 +48,7 @@ files:
         "ceb_PH" : "ceb",
         "hi_IN" : "hi",
         "gl_ES" : "gl",
-        "no_NO" : "no"
+        "no_NO" : "no",
+        "no_DK" : "da"
       }
     }
