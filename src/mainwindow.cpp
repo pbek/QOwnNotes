@@ -10811,3 +10811,15 @@ void MainWindow::on_navigationLineEdit_textChanged(const QString &arg1) {
 Note MainWindow::getCurrentNote() {
     return currentNote;
 }
+
+void MainWindow::on_actionJump_to_note_list_panel_triggered() {
+    ui->noteTreeWidget->setFocus();
+}
+
+void MainWindow::on_actionJump_to_tags_panel_triggered() {
+    ui->tagTreeWidget->setFocus();
+}
+
+void MainWindow::on_actionJump_to_note_subfolder_panel_triggered() {
+    ui->noteSubFolderTreeWidget->setFocus();
+}

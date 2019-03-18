@@ -4,7 +4,13 @@
 - there now is a new *script settings variable* for select-boxes (for [#1167](https://github.com/pbek/QOwnNotes/issues/1167))
     - you can define items with an index and a text
     - you will receive the selected index
-    - for more information please take a look at the [scripting documentation](https://docs.qownnotes.org/en/develop/scripting/README.html#registering-script-settings-variables)
+    - for more information please take a look at the
+      [scripting documentation](https://docs.qownnotes.org/en/develop/scripting/README.html#registering-script-settings-variables)
+- there are now shortcuts to jump to the *note list* (<kbd>F5</kbd>), the
+  *note subfolder panel* (<kbd>F6</kbd>) and the *tags panel* (<kbd>F7</kbd>)
+  (for [#1153](https://github.com/pbek/QOwnNotes/issues/1153))
+    - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/shortcuts/QOwnNotes)
+      for a list of all shortcuts
 
 ## 19.3.1
 - added **Danish translation** (a big thank you to Fabijenna)

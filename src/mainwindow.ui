@@ -2434,15 +2434,24 @@ p, li { white-space: pre-wrap; }
    <property name="text">
     <string>Jump to note subfolder panel</string>
    </property>
+   <property name="shortcut">
+    <string notr="true">F6</string>
+   </property>
   </action>
   <action name="actionJump_to_tags_panel">
    <property name="text">
     <string>Jump to tags panel</string>
    </property>
+   <property name="shortcut">
+    <string notr="true">F7</string>
+   </property>
   </action>
   <action name="actionJump_to_note_list_panel">
    <property name="text">
     <string>Jump to note list panel</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">F5</string>
    </property>
   </action>
  </widget>
@@ -2475,9 +2484,9 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="breeze-dark-qownnotes.qrc"/>
   <include location="breeze-qownnotes.qrc"/>
   <include location="images.qrc"/>
+  <include location="breeze-dark-qownnotes.qrc"/>
  </resources>
  <connections/>
 </ui>

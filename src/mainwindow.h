@@ -557,6 +557,12 @@ private slots:
 
     void initWebSocketServerService();
 
+    void on_actionJump_to_note_list_panel_triggered();
+
+    void on_actionJump_to_tags_panel_triggered();
+
+    void on_actionJump_to_note_subfolder_panel_triggered();
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;
