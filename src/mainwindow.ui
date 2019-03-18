@@ -1150,8 +1150,17 @@ p, li { white-space: pre-wrap; }
      <addaction name="actionRename_current_workspace"/>
      <addaction name="actionSwitch_to_previous_workspace"/>
     </widget>
+    <widget class="QMenu" name="menuJumpTo">
+     <property name="title">
+      <string>Jump to</string>
+     </property>
+     <addaction name="actionJump_to_note_text_edit"/>
+     <addaction name="actionJump_to_note_list_panel"/>
+     <addaction name="actionJump_to_note_subfolder_panel"/>
+     <addaction name="actionJump_to_tags_panel"/>
+    </widget>
     <addaction name="menuShow"/>
-    <addaction name="actionJump_to_note_text_edit"/>
+    <addaction name="menuJumpTo"/>
     <addaction name="menuToolbars"/>
     <addaction name="menuPanels"/>
     <addaction name="menuWorkspaces"/>
@@ -2421,6 +2430,21 @@ p, li { white-space: pre-wrap; }
     <string>Manage orphaned attachments</string>
    </property>
   </action>
+  <action name="actionJump_to_note_subfolder_panel">
+   <property name="text">
+    <string>Jump to note subfolder panel</string>
+   </property>
+  </action>
+  <action name="actionJump_to_tags_panel">
+   <property name="text">
+    <string>Jump to tags panel</string>
+   </property>
+  </action>
+  <action name="actionJump_to_note_list_panel">
+   <property name="text">
+    <string>Jump to note list panel</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
@@ -2451,8 +2475,8 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="breeze-qownnotes.qrc"/>
   <include location="breeze-dark-qownnotes.qrc"/>
+  <include location="breeze-qownnotes.qrc"/>
   <include location="images.qrc"/>
  </resources>
  <connections/>
