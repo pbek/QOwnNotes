@@ -64,6 +64,7 @@ public:
     Q_INVOKABLE void noteTextEditWrite(QString text);
     Q_INVOKABLE QString noteTextEditSelectedText();
     Q_INVOKABLE void noteTextEditSelectAll();
+    Q_INVOKABLE void noteTextEditSelectCurrentLine();
     Q_INVOKABLE QString noteTextEditCurrentWord(
             bool withPreviousCharacters = false);
     Q_INVOKABLE void encryptionDisablePassword();

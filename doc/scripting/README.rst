@@ -508,6 +508,26 @@ Usage in QML
 You can use this together with ``noteTextEditWrite`` to overwrite the whole
 text of the current note.
 
+Select the current line in the note text edit
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Parameters
+^^^^^^^^^^
+
+.. code:: cpp
+
+    /**
+     * Selects the current line in the note text edit
+     */
+    void ScriptingService::noteTextEditSelectCurrentLine() {
+
+Usage in QML
+^^^^^^^^^^^^
+
+.. code:: javascript
+
+    script.noteTextEditSelectCurrentLine();
+
 Read the current word from the note text edit
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

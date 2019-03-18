@@ -922,6 +922,25 @@ void ScriptingService::noteTextEditSelectAll() {
 }
 
 /**
+ * Selects the current line in the note text edit
+ */
+void ScriptingService::noteTextEditSelectCurrentLine() {
+    MetricsService::instance()->sendVisitIfEnabled(
+            "scripting/" + QString(__func__));
+
+#ifndef INTEGRATION_TESTS
+    MainWindow *mainWindow = MainWindow::instance();
+    if (mainWindow != Q_NULLPTR) {
+        QOwnNotesMarkdownTextEdit* textEdit = mainWindow->activeNoteTextEdit();
+        QTextCursor c = textEdit->textCursor();
+        c.movePosition(QTextCursor::StartOfLine);
+        c.movePosition(QTextCursor::EndOfLine, QTextCursor::KeepAnchor);
+        textEdit->setTextCursor(c);
+    }
+#endif
+}
+
+/**
  * Reads the current word in the note text edit
  *
  * @param withPreviousCharacters also get more characters at the beginning
