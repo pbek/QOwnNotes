@@ -14,6 +14,9 @@
 - there now is a new scripting command `script.noteTextEditSelectCurrentLine()`
   to select the current line in the note text edit (for [#1167](https://github.com/pbek/QOwnNotes/issues/1167))
     - for more information please take a look at the [scripting documentation](https://docs.qownnotes.org/en/develop/scripting/README.html#select-the-current-line-in-the-note-text-edit)
+- added more Spanish, Italian, Russian, Cebuano, Hiligaynon, Dutch, Hungarian,
+  Swedish, Greek translation (thank you richarson, mlocati, mikhail-khokhlov,
+  Fabijenna, druus, tiwi90)
 
 ## 19.3.1
 - added **Danish translation** (a big thank you to Fabijenna)
