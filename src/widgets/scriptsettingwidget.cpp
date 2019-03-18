@@ -34,6 +34,7 @@ ScriptSettingWidget::ScriptSettingWidget(QWidget *parent, Script script,
     ui->filePathButton->hide();
     ui->filePathLineEdit->hide();
     ui->booleanCheckBox->hide();
+    ui->selectionComboBox->hide();
 
     QJsonObject jsonObject = script.getSettingsVariablesJsonObject();
 
@@ -92,6 +93,33 @@ ScriptSettingWidget::ScriptSettingWidget(QWidget *parent, Script script,
         ui->filePathLineEdit->setText(value);
         ui->filePathButton->show();
         ui->filePathLineEdit->show();
+    } else if (type == "selection") {
+        QMap<QString, QVariant> items = variableMap["items"].toMap();
+        QString value = jsonObject.value(identifier).toString();
+
+        if (jsonObject.value(identifier).isUndefined()) {
+            value = variableMap["default"].toString();
+        }
+
+        ui->selectionComboBox->clear();
+
+        QMapIterator<QString, QVariant> i(items);
+        int index = 0;
+        int currentIndex = 0;
+
+        while (i.hasNext()) {
+            i.next();
+            ui->selectionComboBox->addItem(i.value().toString(), i.key());
+
+            if (i.key() == value) {
+                currentIndex = index;
+            }
+
+            index++;
+        }
+
+        ui->selectionComboBox->setCurrentIndex(currentIndex);
+        ui->selectionComboBox->show();
     }
 }
 
@@ -181,4 +209,10 @@ void ScriptSettingWidget::on_filePathButton_clicked() {
  */
 void ScriptSettingWidget::on_booleanCheckBox_toggled(bool checked) {
     storeSettingsVariable(checked);
+}
+
+void ScriptSettingWidget::on_selectionComboBox_currentIndexChanged(int index)
+{
+    Q_UNUSED(index);
+    storeSettingsVariable(ui->selectionComboBox->currentData().toString());
 }

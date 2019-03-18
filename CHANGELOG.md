@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 19.3.2
+- there now is a new *script settings variable* for select-boxes (for [#1167](https://github.com/pbek/QOwnNotes/issues/1167))
+    - you can define items with an index and a text
+    - you will receive the selected index
+    - for more information please take a look at the [scripting documentation](https://docs.qownnotes.org/en/develop/scripting/README.html#registering-script-settings-variables)
+
 ## 19.3.1
 - added **Danish translation** (a big thank you to Fabijenna)
     - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes)

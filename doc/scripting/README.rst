@@ -1020,6 +1020,7 @@ The user can then set these properties in the script settings.
     property string myText;
     property int myInt;
     property string myFile;
+    property string mySelection;
 
     // register your settings variables so the user can set them in the script settings
     // use this property if you don't need
@@ -1063,6 +1064,14 @@ The user can then set these properties in the script settings.
             "description": "Please select the file:",
             "type": "file",
             "default": "pandoc",
+        },
+        {
+            "identifier": "mySelection",
+            "name": "I am an item selector",
+            "description": "Please select an item:",
+            "type": "selection",
+            "default": "option2",
+            "items": {"option1": "Text for option 1", "option2": "Text for option 2", "option3": "Text for option 3"},
         }
     ];
 
