@@ -496,7 +496,7 @@ Parameters
     /**
      * Selects all text in the note text edit
      */
-    void ScriptingService::noteTextEditSelectAll() {
+    void ScriptingService::noteTextEditSelectAll();
 
 Usage in QML
 ^^^^^^^^^^^^
@@ -519,7 +519,7 @@ Parameters
     /**
      * Selects the current line in the note text edit
      */
-    void ScriptingService::noteTextEditSelectCurrentLine() {
+    void ScriptingService::noteTextEditSelectCurrentLine();
 
 Usage in QML
 ^^^^^^^^^^^^
@@ -527,6 +527,72 @@ Usage in QML
 .. code:: javascript
 
     script.noteTextEditSelectCurrentLine();
+
+Set the currently selected text in the note text edit
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Parameters
+^^^^^^^^^^
+
+.. code:: cpp
+
+    /**
+     * Sets the currently selected text in the note text edit
+     *
+     * @param start
+     * @param end
+     */
+    void ScriptingService::noteTextEditSetSelection(int start, int end);
+
+Usage in QML
+^^^^^^^^^^^^
+
+.. code:: javascript
+
+    // expands the current selection by one character
+    script.noteTextEditSetSelection(
+        script.noteTextEditSelectionStart() - 1,
+        script.noteTextEditSelectionEnd() + 1);
+
+Get the start position of the current selection in the note text edit
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Parameters
+^^^^^^^^^^
+
+.. code:: cpp
+
+    /**
+     * Returns the start position of the current selection in the note text edit
+     */
+    int ScriptingService::noteTextEditSelectionStart();
+
+Usage in QML
+^^^^^^^^^^^^
+
+.. code:: javascript
+
+    script.log(script.noteTextEditSelectionStart());
+
+Get the end position of the current selection in the note text edit
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Parameters
+^^^^^^^^^^
+
+.. code:: cpp
+
+    /**
+     * Returns the end position of the current selection in the note text edit
+     */
+    int ScriptingService::noteTextEditSelectionEnd();
+
+Usage in QML
+^^^^^^^^^^^^
+
+.. code:: javascript
+
+    script.log(script.noteTextEditSelectionEnd());
 
 Read the current word from the note text edit
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -766,7 +832,7 @@ Parameters
      * @param id int the id of the note
      * @return NoteApi*
      */
-    NoteApi* ScriptingService::fetchNoteById(int id) {
+    NoteApi* ScriptingService::fetchNoteById(int id);
 
 Usage in QML
 ^^^^^^^^^^^^

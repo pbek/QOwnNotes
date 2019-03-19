@@ -941,6 +941,68 @@ void ScriptingService::noteTextEditSelectCurrentLine() {
 }
 
 /**
+ * Sets the currently selected text in the note text edit
+ *
+ * @param start
+ * @param end
+ */
+void ScriptingService::noteTextEditSetSelection(int start, int end) {
+    MetricsService::instance()->sendVisitIfEnabled(
+            "scripting/" + QString(__func__));
+
+#ifndef INTEGRATION_TESTS
+    MainWindow *mainWindow = MainWindow::instance();
+    if (mainWindow != Q_NULLPTR) {
+        QOwnNotesMarkdownTextEdit* textEdit = mainWindow->activeNoteTextEdit();
+        QTextCursor c = textEdit->textCursor();
+
+        start = std::max(start, 0);
+        end = std::min(end, textEdit->toPlainText().count());
+
+        c.setPosition(start);
+        c.setPosition(end, QTextCursor::KeepAnchor);
+        textEdit->setTextCursor(c);
+    }
+#endif
+}
+
+/**
+ * Returns the start position of the current selection in the note text edit
+ */
+int ScriptingService::noteTextEditSelectionStart() {
+    MetricsService::instance()->sendVisitIfEnabled(
+            "scripting/" + QString(__func__));
+
+#ifndef INTEGRATION_TESTS
+    MainWindow *mainWindow = MainWindow::instance();
+    if (mainWindow != Q_NULLPTR) {
+        QOwnNotesMarkdownTextEdit* textEdit = mainWindow->activeNoteTextEdit();
+        return textEdit->textCursor().selectionStart();
+    }
+#endif
+
+    return 0;
+}
+
+/**
+ * Returns the end position of the current selection in the note text edit
+ */
+int ScriptingService::noteTextEditSelectionEnd() {
+    MetricsService::instance()->sendVisitIfEnabled(
+            "scripting/" + QString(__func__));
+
+#ifndef INTEGRATION_TESTS
+    MainWindow *mainWindow = MainWindow::instance();
+    if (mainWindow != Q_NULLPTR) {
+        QOwnNotesMarkdownTextEdit* textEdit = mainWindow->activeNoteTextEdit();
+        return textEdit->textCursor().selectionEnd();
+    }
+#endif
+
+    return 0;
+}
+
+/**
  * Reads the current word in the note text edit
  *
  * @param withPreviousCharacters also get more characters at the beginning

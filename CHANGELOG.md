@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 19.3.3
+- there now are new scripting commands `script.noteTextEditSetSelection()`,
+  `script.noteTextEditSelectionStart()` and `script.noteTextEditSelectionEnd()`
+  to set and get the currently selected text in the note text edit
+  (for [#1167](https://github.com/pbek/QOwnNotes/issues/1167))
+    - for more information please take a look at the
+      [scripting documentation](https://docs.qownnotes.org/en/develop/scripting/README.html#set-the-currently-selected-text-in-the-note-text-edit)
+
 ## 19.3.2
 - there now is a new *script settings variable* for select-boxes (for [#1167](https://github.com/pbek/QOwnNotes/issues/1167))
     - you can define items with an index and a text
