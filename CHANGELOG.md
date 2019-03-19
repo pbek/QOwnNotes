@@ -11,6 +11,7 @@
   (for [#1154](https://github.com/pbek/QOwnNotes/issues/1154))
     - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/shortcuts/QOwnNotes)
       for a list of all shortcuts
+- added more Chinese Traditional, German translation (thank you abev66, rakekniven)
 
 ## 19.3.2
 - there now is a new *script settings variable* for select-boxes (for [#1167](https://github.com/pbek/QOwnNotes/issues/1167))
