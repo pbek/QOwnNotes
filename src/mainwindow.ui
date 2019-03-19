@@ -2082,7 +2082,7 @@ p, li { white-space: pre-wrap; }
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>Show note list under tag pane</string>
+    <string>Show note list under tag panel</string>
    </property>
   </action>
   <action name="actionDonate">

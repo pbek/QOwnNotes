@@ -3433,7 +3433,7 @@
 - added some fixes to the demo script
   [insert-headline-with-link-from-github-url.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/insert-headline-with-link-from-github-url.qml)
 - the menu entry `Show tag pane under navigation pane` was replaced by
-  `Show note list under tag pane` where note list and tag pane are swapped
+  `Show note list under tag panel` where note list and tag pane are swapped
   (for [#340](https://github.com/pbek/QOwnNotes/issues/340))
 - added more Portuguese, Russian, Japanese, Spanish, Italian, French and
   German translation (thank you mlimacarlos, Maboroshy, piyo,
