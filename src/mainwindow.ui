@@ -1038,6 +1038,7 @@ p, li { white-space: pre-wrap; }
      <addaction name="actionDelete_orphaned_images"/>
      <addaction name="actionManage_orphaned_attachments"/>
      <addaction name="actionSplit_note_at_cursor_position"/>
+     <addaction name="actionActivate_context_menu"/>
     </widget>
     <widget class="QMenu" name="menuEditNote">
      <property name="title">
@@ -2452,6 +2453,14 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="shortcut">
     <string notr="true">F5</string>
+   </property>
+  </action>
+  <action name="actionActivate_context_menu">
+   <property name="text">
+    <string>Activate context menu</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">F10</string>
    </property>
   </action>
  </widget>

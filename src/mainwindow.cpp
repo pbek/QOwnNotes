@@ -6399,6 +6399,14 @@ void MainWindow::gotoNextNote() {
     QApplication::postEvent(ui->noteTreeWidget, event);
 }
 
+/**
+ * Activate the context menu in the currently focused widget
+ */
+void MainWindow::activateContextMenu() {
+    auto *event = new QContextMenuEvent(QContextMenuEvent::Keyboard, QPoint());
+    QApplication::postEvent(focusWidget(), event);
+}
+
 void MainWindow::on_actionPrevious_Note_triggered() {
     gotoPreviousNote();
 }
@@ -10822,4 +10830,8 @@ void MainWindow::on_actionJump_to_tags_panel_triggered() {
 
 void MainWindow::on_actionJump_to_note_subfolder_panel_triggered() {
     ui->noteSubFolderTreeWidget->setFocus();
+}
+
+void MainWindow::on_actionActivate_context_menu_triggered() {
+    activateContextMenu();
 }

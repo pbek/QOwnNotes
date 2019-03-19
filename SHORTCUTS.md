@@ -39,6 +39,7 @@ Important Shortcuts
 - <kbd>F5</kbd> jumps to the note list
 - <kbd>F6</kbd> jumps to the tags panel
 - <kbd>F6</kbd> jumps to the note subfolder panel
+- <kbd>F10</kbd> activates the context menu of the current widget
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> copies the headline of the current note
 
 ### In the note search bar
@@ -147,6 +148,7 @@ Important Shortcuts
 - <kbd>F5</kbd> jumps to the note list
 - <kbd>F6</kbd> jumps to the tags panel
 - <kbd>F6</kbd> jumps to the note subfolder panel
+- <kbd>F10</kbd> activates the context menu of the current widget
 - <kbd>Opt</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> copies the headline of the current note
 
 ### In the note search bar

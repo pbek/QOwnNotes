@@ -7,6 +7,10 @@
   (for [#1167](https://github.com/pbek/QOwnNotes/issues/1167))
     - for more information please take a look at the
       [scripting documentation](https://docs.qownnotes.org/en/develop/scripting/README.html#set-the-currently-selected-text-in-the-note-text-edit)
+- you now can activate the context menu of the current widget with the shortcut <kbd>F10</kbd>
+  (for [#1154](https://github.com/pbek/QOwnNotes/issues/1154))
+    - please visit [QOwnNotes shortcuts](https://www.qownnotes.org/shortcuts/QOwnNotes)
+      for a list of all shortcuts
 
 ## 19.3.2
 - there now is a new *script settings variable* for select-boxes (for [#1167](https://github.com/pbek/QOwnNotes/issues/1167))

@@ -563,6 +563,8 @@ private slots:
 
     void on_actionJump_to_note_subfolder_panel_triggered();
 
+    void on_actionActivate_context_menu_triggered();
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;
@@ -734,6 +736,8 @@ private:
     void setupStatusBarWidgets();
 
     void gotoNextNote();
+
+    void activateContextMenu();
 
     void gotoPreviousNote();
 
