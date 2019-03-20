@@ -3525,7 +3525,7 @@ void MainWindow::closeEvent(QCloseEvent *event) {
 //    isJustHide = true;
 #endif
 
-    // make sure no settings get written after after we got the
+    // make sure no settings get written after we got the
     // clearAppDataAndExit call
     if (!forceQuit) {
         storeSettings();
