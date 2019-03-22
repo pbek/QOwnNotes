@@ -1,7 +1,7 @@
 # AppVeyor build configuration
 #
 # doc: http://www.appveyor.com/docs/build-configuration
-# Qt-versions: https://www.appveyor.com/docs/build-environment/#qt
+# Qt-versions: https://www.appveyor.com/docs/windows-images-software/#qt
 # validator: https://ci.appveyor.com/tools/validate-yaml
 
 skip_tags: true
