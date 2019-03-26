@@ -151,6 +151,7 @@ MainWindow::MainWindow(QWidget *parent) :
     _settingsDialog = Q_NULLPTR;
     _lastNoteSelectionWasMultiple = false;
     _webSocketServerService = Q_NULLPTR;
+    _closeEventWasFired = false;
 
     this->setWindowTitle(
             "QOwnNotes - version " + QString(VERSION) +
@@ -587,9 +588,17 @@ bool MainWindow::restoreActiveNoteHistoryItem() {
 MainWindow::~MainWindow() {
     bool forceQuit = qApp->property("clearAppDataAndExit").toBool();
 
-    if (!isInDistractionFreeMode() && !forceQuit) {
+    // make sure no settings get written after we got the
+    // clearAppDataAndExit call
+    if (!forceQuit) {
+        storeSettings();
+    }
+
+    if (!isInDistractionFreeMode() && !forceQuit && !_closeEventWasFired) {
         storeCurrentWorkspace();
     }
+
+    MetricsService::instance()->sendVisitIfEnabled("app/end", "app end");
 
     storeUpdatedNotesToDisk();
 
@@ -3495,9 +3504,9 @@ void MainWindow::storeSettings() {
 
     // don't store the window settings in distraction free mode
     if (!isInDistractionFreeMode()) {
-        settings.setValue("MainWindow/geometry", saveGeometry());
-        settings.setValue("MainWindow/menuBarGeometry",
-                          ui->menuBar->saveGeometry());
+//        settings.setValue("MainWindow/geometry", saveGeometry());
+//        settings.setValue("MainWindow/menuBarGeometry",
+//                          ui->menuBar->saveGeometry());
     }
 
     // store a NoteHistoryItem to open the note again after the app started
@@ -3516,6 +3525,7 @@ void MainWindow::storeSettings() {
  */
 
 void MainWindow::closeEvent(QCloseEvent *event) {
+    _closeEventWasFired = true;
     bool forceQuit = qApp->property("clearAppDataAndExit").toBool();
     bool isJustHide = showSystemTray;
 
@@ -3525,12 +3535,6 @@ void MainWindow::closeEvent(QCloseEvent *event) {
 //    isJustHide = true;
 #endif
 
-    // make sure no settings get written after we got the
-    // clearAppDataAndExit call
-    if (!forceQuit) {
-        storeSettings();
-    }
-
     if (isJustHide && !forceQuit) {
 #ifdef Q_OS_MAC
         showMinimized();
@@ -3539,14 +3543,12 @@ void MainWindow::closeEvent(QCloseEvent *event) {
 #endif
         event->ignore();
     } else {
-        storeUpdatedNotesToDisk();
+        // we need to do this in the close event (and _not_ in the destructor),
+        // because in the destructor thelayout will be destroyed in dark mode
+        // when the window was closed
+        // https://github.com/pbek/QOwnNotes/issues/1015
+        storeCurrentWorkspace();
 
-        MetricsService::instance()->sendVisitIfEnabled("app/end", "app end");
-        qApp->setProperty("loggingEnabled", false);
-
-        // if we don't use the system tray we delete the log widow so the app
-        // can quit
-        delete(LogWidget::instance());
         QMainWindow::closeEvent(event);
     }
 }

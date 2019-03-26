@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 19.3.4
+- fixed layout damaging when in dark mode closing the app with the `x` button or
+  if getting a HUP signal (for [#1015](https://github.com/pbek/QOwnNotes/issues/1015))
+
 ## 19.3.3
 - there now are new scripting commands `script.noteTextEditSetSelection()`,
   `script.noteTextEditSelectionStart()` and `script.noteTextEditSelectionEnd()`

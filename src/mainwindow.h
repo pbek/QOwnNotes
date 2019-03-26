@@ -641,6 +641,7 @@ private:
     QComboBox *_workspaceComboBox;
     bool _noteFolderDockWidgetWasVisible;
     bool _noteSubFolderDockWidgetVisible;
+    bool _closeEventWasFired;
     ActionDialog *_actionDialog;
     TodoDialog *_todoDialog;
     IssueAssistantDialog *_issueAssistantDialog;
