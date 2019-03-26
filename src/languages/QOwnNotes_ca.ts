@@ -1228,7 +1228,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1156"/>
       <source>Jump to</source>
-      <translation type="unfinished">Jump to</translation>
+      <translation>Anar a</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1189"/>
@@ -1465,7 +1465,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2085"/>
       <source>Show note list under tag panel</source>
-      <translation type="unfinished">Show note list under tag panel</translation>
+      <translation>Mostrar la nota sota el panell d'etiquetes</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2103"/>
@@ -1628,22 +1628,22 @@
     <message>
       <location filename="../mainwindow.ui" line="2436"/>
       <source>Jump to note subfolder panel</source>
-      <translation type="unfinished">Jump to note subfolder panel</translation>
+      <translation>Anar al panell de subcarpetes de les notes</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2444"/>
       <source>Jump to tags panel</source>
-      <translation type="unfinished">Jump to tags panel</translation>
+      <translation>Anar al panell d'Etiquetes</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2452"/>
       <source>Jump to note list panel</source>
-      <translation type="unfinished">Jump to note list panel</translation>
+      <translation>Anar al panell de la Llista de notes</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2460"/>
       <source>Activate context menu</source>
-      <translation type="unfinished">Activate context menu</translation>
+      <translation>Activar el menú de context</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1863"/>
@@ -4421,7 +4421,7 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2042"/>
       <source>Danish</source>
-      <translation type="unfinished">Danish</translation>
+      <translation>Danès</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2086"/>
@@ -4436,7 +4436,7 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2119"/>
       <source>Galician</source>
-      <translation type="unfinished">Galician</translation>
+      <translation>Gallec</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2130"/>
@@ -4456,7 +4456,7 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2196"/>
       <source>Norwegian</source>
-      <translation type="unfinished">Norwegian</translation>
+      <translation>Noruec</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2273"/>
@@ -4595,12 +4595,12 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4190"/>
       <source>Rendering</source>
-      <translation type="unfinished">Rendering</translation>
+      <translation>Renderització</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4196"/>
       <source>Enable underline rendering</source>
-      <translation type="unfinished">Enable underline rendering</translation>
+      <translation>Habilitar renderitzat del subratllat</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4452"/>
@@ -4973,7 +4973,7 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="227"/>
       <source>Preview</source>
-      <translation type="unfinished">Preview</translation>
+      <translation>Visualització prèvia</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="276"/>

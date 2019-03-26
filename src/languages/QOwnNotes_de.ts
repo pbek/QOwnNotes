@@ -1465,7 +1465,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2085"/>
       <source>Show note list under tag panel</source>
-      <translation>Notizliste unter Tag-Bereich anzeigen</translation>
+      <translation>Notizliste unter Schlagwort-Bereich anzeigen</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2103"/>

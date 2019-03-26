@@ -5,6 +5,9 @@
   if getting a HUP signal (for [#1015](https://github.com/pbek/QOwnNotes/issues/1015))
 - made an attempt to remedy `notes.sqlite` sync issues with Nextcloud
   (for [#1111](https://github.com/pbek/QOwnNotes/issues/1111))
+- added more Slovak, Slovenian, Hungarian, German, Catalan, Spanish, Brazilian
+  Portuguese, Romanian, Italian, Dutch, Russian translation (thank you Fabijenna,
+  rakekniven, MGuerra, richarson, mlimacarlos, mlocati, mikhail-khokhlov)
 
 ## 19.3.3
 - there now are new scripting commands `script.noteTextEditSetSelection()`,

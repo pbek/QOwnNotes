@@ -1228,7 +1228,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1156"/>
       <source>Jump to</source>
-      <translation type="unfinished">Jump to</translation>
+      <translation>Pular para</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1189"/>
@@ -1465,7 +1465,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2085"/>
       <source>Show note list under tag panel</source>
-      <translation type="unfinished">Show note list under tag panel</translation>
+      <translation>Mostrar lista de notas abaixo do painel de tags</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2103"/>
@@ -1628,22 +1628,22 @@
     <message>
       <location filename="../mainwindow.ui" line="2436"/>
       <source>Jump to note subfolder panel</source>
-      <translation type="unfinished">Jump to note subfolder panel</translation>
+      <translation>Pular para o subdiretório de nota</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2444"/>
       <source>Jump to tags panel</source>
-      <translation type="unfinished">Jump to tags panel</translation>
+      <translation>Pular para o painel de tags</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2452"/>
       <source>Jump to note list panel</source>
-      <translation type="unfinished">Jump to note list panel</translation>
+      <translation>Pular para o painel de lista de notas</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2460"/>
       <source>Activate context menu</source>
-      <translation type="unfinished">Activate context menu</translation>
+      <translation>Ativar o menu de contexto</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1863"/>
@@ -4419,7 +4419,7 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2042"/>
       <source>Danish</source>
-      <translation type="unfinished">Danish</translation>
+      <translation>Dinamarquês</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2086"/>

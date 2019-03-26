@@ -1465,7 +1465,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2085"/>
       <source>Show note list under tag panel</source>
-      <translation type="unfinished">Show note list under tag panel</translation>
+      <translation>Mostrar la lista de notas bajo el panel de etiquetas</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2103"/>
@@ -1643,7 +1643,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2460"/>
       <source>Activate context menu</source>
-      <translation type="unfinished">Activate context menu</translation>
+      <translation>Activar menú contextual</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1863"/>
