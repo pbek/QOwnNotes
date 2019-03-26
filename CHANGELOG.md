@@ -3,6 +3,8 @@
 ## 19.3.4
 - fixed layout damaging when in dark mode closing the app with the `x` button or
   if getting a HUP signal (for [#1015](https://github.com/pbek/QOwnNotes/issues/1015))
+- made an attempt to remedy `notes.sqlite` sync issues with Nextcloud
+  (for [#1111](https://github.com/pbek/QOwnNotes/issues/1111))
 
 ## 19.3.3
 - there now are new scripting commands `script.noteTextEditSetSelection()`,

@@ -322,18 +322,18 @@ QSqlDatabase DatabaseService::getNoteFolderDatabase() {
  */
 void DatabaseService::closeDatabaseConnection(QSqlDatabase &db,
                                               QSqlQuery &query) {
+    query.finish();
+    query.clear();
+
 //    db.commit();
 #ifdef Q_OS_WIN32
     if (Utils::Misc::doAutomaticNoteFolderDatabaseClosing()) {
-        query.clear();
-
         if (db.isOpen()) {
             db.close();
         }
     }
 #else
     Q_UNUSED(db);
-    Q_UNUSED(query);
 #endif
 }
 
