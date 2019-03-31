@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 19.4.0
+- added a package for Ubuntu 19.04 (Disco Dingo) to the Launchpad build process
+  (for [#1169](https://github.com/pbek/QOwnNotes/issues/1169))
+
 ## 19.3.4
 - fixed layout damaging when in dark mode closing the app with the `x` button or
   if getting a HUP signal (for [#1015](https://github.com/pbek/QOwnNotes/issues/1015))

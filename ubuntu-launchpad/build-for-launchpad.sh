@@ -11,11 +11,11 @@
 #
 
 # uncomment this if you want to force a version
-#QOWNNOTES_VERSION=16.08.1.2
+#QOWNNOTES_VERSION=19.3.4.1
 
 BRANCH=develop
 #BRANCH=master
-UBUNTU_RELEASES=( "xenial" "bionic" "cosmic" )
+UBUNTU_RELEASES=( "xenial" "bionic" "cosmic" "disco" )
 
 
 DATE=$(LC_ALL=C date +'%a, %d %b %Y %T %z')
