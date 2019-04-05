@@ -199,6 +199,25 @@ void WebSocketServerService::processMessage(const QString &message) {
 
         pSender->sendTextMessage(flashMessageJsonText(
                 tr("%n bookmark(s) created", "", bookmarkList.count())));
+    } else if (type == "switchNoteFolder") {
+#ifndef INTEGRATION_TESTS
+        MainWindow *mainWindow = MainWindow::instance();
+
+        if (mainWindow == Q_NULLPTR) {
+            return;
+        }
+
+        const int noteFolderId = jsonObject.value("data").toInt();
+
+        if (noteFolderId == NoteFolder::currentNoteFolderId()) {
+            return;
+        }
+
+        mainWindow->changeNoteFolder(noteFolderId);
+        QString jsonText = getBookmarksJsonText();
+
+        pSender->sendTextMessage(jsonText);
+#endif
     } else {
         pSender->sendTextMessage("Received: " + message);
     }

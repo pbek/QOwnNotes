@@ -181,6 +181,8 @@ public slots:
 
     void storeUpdatedNotesToDisk();
 
+    void changeNoteFolder(int noteFolderId, bool forceChange = false);
+
 private slots:
 
     void on_noteTextEdit_textChanged();
@@ -206,8 +208,6 @@ private slots:
     void on_actionAbout_QOwnNotes_triggered();
 
     void on_action_New_note_triggered();
-
-    void changeNoteFolder(int noteFolderId, bool forceChange = false);
 
     void on_noteTextView_anchorClicked(const QUrl &arg1);
 

@@ -500,9 +500,8 @@ bool NoteFolder::migrateToNoteFolders() {
 
 QJsonObject NoteFolder::jsonObject() {
     QJsonObject object;
-    object.insert("name", QJsonValue::fromVariant(name));
-    object.insert("id", QJsonValue::fromVariant(id));
-    object.insert("isCurrent", QJsonValue::fromVariant(isCurrent()));
+    object.insert("text", QJsonValue::fromVariant(name));
+    object.insert("value", QJsonValue::fromVariant(id));
     return object;
 };
 
@@ -518,8 +517,6 @@ QString NoteFolder::noteFoldersWebServiceJsonText() {
     Q_FOREACH(NoteFolder noteFolder, noteFolders) {
             objectList.push_back(noteFolder.jsonObject());
         }
-
-
 
     QJsonObject resultObject;
     resultObject.insert("type", QJsonValue::fromVariant("noteFolders"));

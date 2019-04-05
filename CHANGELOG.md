@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 19.4.1
+- added support for **listing** the **note folders** and **changing** the
+  **current note folder** to the websocket api
+- the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
+  was updated to version 19.4.0
+    - you can now **change** the **current note folder** in a select box in the
+      toolbar of the **bookmarks popup**
+
 ## 19.4.0
 - added **Romanian**, **Slovak** and **Slovenian translation** (a big thank you to Fabijenna)
     - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes)

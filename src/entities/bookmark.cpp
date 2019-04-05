@@ -132,9 +132,14 @@ QList<Bookmark> Bookmark::parseBookmarks(QString text, bool withBasicUrls) {
  */
 QString Bookmark::bookmarksWebServiceJsonText(QList<Bookmark> bookmarks) {
     QJsonArray bookmarkObjectList;
+    QJsonArray noteFolderObjectList;
 
     Q_FOREACH(Bookmark bookmark, bookmarks) {
             bookmarkObjectList.push_back(bookmark.jsonObject());
+        }
+
+    Q_FOREACH(NoteFolder noteFolder, NoteFolder::fetchAll()) {
+            noteFolderObjectList.push_back(noteFolder.jsonObject());
         }
 
     QJsonObject bookmarkResultObject;
@@ -142,8 +147,9 @@ QString Bookmark::bookmarksWebServiceJsonText(QList<Bookmark> bookmarks) {
     bookmarkResultObject.insert("data", bookmarkObjectList);
     bookmarkResultObject.insert("noteFolderName",
             NoteFolder::currentNoteFolder().getName());
-    bookmarkResultObject.insert("noteFolders",
-            NoteFolder::noteFoldersWebServiceJsonText());
+    bookmarkResultObject.insert("noteFolders", noteFolderObjectList);
+    bookmarkResultObject.insert("noteFolderId",
+            NoteFolder::currentNoteFolderId());
 
     QJsonDocument doc(bookmarkResultObject);
 
