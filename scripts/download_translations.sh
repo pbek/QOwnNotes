@@ -40,3 +40,6 @@ mv QOwnNotes_el_GR.ts QOwnNotes_el.ts
 mv QOwnNotes_gl_ES.ts QOwnNotes_gl.ts
 mv QOwnNotes_no_NO.ts QOwnNotes_no.ts
 mv QOwnNotes_da_DK.ts QOwnNotes_da.ts
+mv QOwnNotes_ro_RO.ts QOwnNotes_ro.ts
+mv QOwnNotes_sk_SK.ts QOwnNotes_sk.ts
+mv QOwnNotes_sl_SI.ts QOwnNotes_sl.ts
