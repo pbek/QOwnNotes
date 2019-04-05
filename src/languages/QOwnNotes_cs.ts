@@ -1246,7 +1246,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1156"/>
       <source>Jump to</source>
-      <translation type="unfinished">Jump to</translation>
+      <translation>Skočit do</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1189"/>
@@ -1483,7 +1483,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2085"/>
       <source>Show note list under tag panel</source>
-      <translation type="unfinished">Show note list under tag panel</translation>
+      <translation>Zobrazit seznam poznámek pod panelem tagů</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2103"/>
@@ -1646,22 +1646,22 @@
     <message>
       <location filename="../mainwindow.ui" line="2436"/>
       <source>Jump to note subfolder panel</source>
-      <translation type="unfinished">Jump to note subfolder panel</translation>
+      <translation>Přejít na panel podsložek poznámek</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2444"/>
       <source>Jump to tags panel</source>
-      <translation type="unfinished">Jump to tags panel</translation>
+      <translation>Přejít na panel značek</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2452"/>
       <source>Jump to note list panel</source>
-      <translation type="unfinished">Jump to note list panel</translation>
+      <translation>Přejít na vědomí seznam panelu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2460"/>
       <source>Activate context menu</source>
-      <translation type="unfinished">Activate context menu</translation>
+      <translation>Aktivujte kontextové menu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1863"/>
@@ -4489,7 +4489,7 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2042"/>
       <source>Danish</source>
-      <translation type="unfinished">Danish</translation>
+      <translation>Dánština</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2086"/>
@@ -4529,17 +4529,17 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2262"/>
       <source>Romanian</source>
-      <translation type="unfinished">Romanian</translation>
+      <translation>Rumunština</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2284"/>
       <source>Slovak</source>
-      <translation type="unfinished">Slovak</translation>
+      <translation>Slovák</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2295"/>
       <source>Slovenian</source>
-      <translation type="unfinished">Slovenian</translation>
+      <translation>Slovinský</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2306"/>

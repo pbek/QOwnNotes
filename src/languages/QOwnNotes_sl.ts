@@ -302,17 +302,17 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6191"/>
       <source>Not an editor command: %1</source>
-      <translation type="unfinished">Not an editor command: %1</translation>
+      <translation>Ne urednik ukaz: %1</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6285"/>
       <source>Invalid regular expression: %1</source>
-      <translation type="unfinished">Invalid regular expression: %1</translation>
+      <translation>Neveljaven regularni izraz: %1</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6321"/>
       <source>Pattern not found: %1</source>
-      <translation type="unfinished">Pattern not found: %1</translation>
+      <translation>Vzorec, ni mogoče najti: %1</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6325"/>
@@ -1729,7 +1729,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1957"/>
       <source>Insert headline from note filename</source>
-      <translation type="unfinished">Insert headline from note filename</translation>
+      <translation>Vstavi naslov iz opomba ime datoteke</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1971"/>
@@ -1853,12 +1853,12 @@ Obnovitev trenutne beležke?</translation>
     <message>
       <location filename="../mainwindow.cpp" line="3450"/>
       <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation type="unfinished">Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+      <translation>Odstranite trenutno opomba: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3773"/>
       <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
-      <translation type="unfinished">Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</translation>
+      <translation>Vnesite geslo &lt;strong&gt;&lt;/strong&gt; te šifrirane opombe.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3797"/>
@@ -2232,17 +2232,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="8965"/>
       <source>Allows you to rename the filename of the note</source>
-      <translation type="unfinished">Allows you to rename the filename of the note</translation>
+      <translation>Omogoča preimenovanje imena datoteke opomba</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8977"/>
       <source>&amp;Move notes to…</source>
-      <translation type="unfinished">&amp;Move notes to…</translation>
+      <translation>&amp;Premakni beležke v…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8978"/>
       <source>&amp;Copy notes to…</source>
-      <translation type="unfinished">&amp;Copy notes to…</translation>
+      <translation>&amp;Kopiraj beležke v…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9007"/>
@@ -2820,17 +2820,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="1179"/>
       <source>Show %1 panel</source>
-      <translation type="unfinished">Show %1 panel</translation>
+      <translation>Pokaži ploščo %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1222"/>
       <source>Show %1</source>
-      <translation type="unfinished">Show %1</translation>
+      <translation>Pokaži %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2042"/>
       <source>show notes in folder '%1' (%2)</source>
-      <translation type="unfinished">show notes in folder '%1' (%2)</translation>
+      <translation>prikaži opombe v mapi '%1' (%2)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2082"/>
@@ -4362,7 +4362,7 @@ Preizkusite se, če se pojavijo konflikti sinhronizacije in nastavite višjo vre
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="675"/>
       <source>&amp;Use as ownCloud path</source>
-      <translation type="unfinished">&amp;Use as ownCloud path</translation>
+      <translation>&amp;Uporabi kot ownCloud pot</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="714"/>
@@ -4408,7 +4408,7 @@ Preizkusite se, če se pojavijo konflikti sinhronizacije in nastavite višjo vre
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="791"/>
       <source>Use git to keep a local history of your notes</source>
-      <translation type="unfinished">Use git to keep a local history of your notes</translation>
+      <translation>Uporabite git, da ohranite lokalno zgodovino svojih zapisov</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="820"/>
@@ -4535,17 +4535,17 @@ Preizkusite se, če se pojavijo konflikti sinhronizacije in nastavite višjo vre
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2262"/>
       <source>Romanian</source>
-      <translation type="unfinished">Romanian</translation>
+      <translation>Romunščina</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2284"/>
       <source>Slovak</source>
-      <translation type="unfinished">Slovak</translation>
+      <translation>Slovaščina</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2295"/>
       <source>Slovenian</source>
-      <translation type="unfinished">Slovenian</translation>
+      <translation>Slovenščina</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2306"/>
@@ -4724,7 +4724,7 @@ Preizkusite se, če se pojavijo konflikti sinhronizacije in nastavite višjo vre
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5072"/>
       <source>Show notes in the note list with preview</source>
-      <translation type="unfinished">Show notes in the note list with preview</translation>
+      <translation>Prikaže beležke na seznamu beležk s predogledom</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5307"/>
@@ -5569,7 +5569,7 @@ Sporočilo o napaki povezave: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1972"/>
       <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
-      <translation type="unfinished">Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</translation>
+      <translation>Anonimni podatki o uporabi pomagajo pri odločanju, kateri deli QOwnNotes se bodo izboljšali, in pri iskanju in odpravljanju napak. &lt;br /&gt; Prosimo, onemogočite ga samo, če res ne morete živeti z njim. &lt;br /&gt; &lt;br /&gt; Resnično onemogočite sledenje uporabe?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2193"/>
@@ -5614,7 +5614,7 @@ Sporočilo o napaki povezave: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2493"/>
       <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
-      <translation type="unfinished">If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</translation>
+      <translation>Če potrebujete dostop do določene funkcije v orodju QOwnNotes, odprite težavo na &lt;a href="%1"&gt; strani izdaje QOwnNotes &lt;/a&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2514"/>
@@ -5670,7 +5670,7 @@ Sporočilo o napaki povezave: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1476"/>
       <source>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</source>
-      <translation type="unfinished">The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</translation>
+      <translation>Bližnjica &lt;strong&gt;%1&lt;/strong&gt; je že dodeljena &lt;strong&gt;%2&lt;/strong&gt;! Ali želite skočiti na bližnjico?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2606"/>
@@ -5788,7 +5788,7 @@ Sporočilo o napaki povezave: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="90"/>
       <source>You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</source>
-      <translation type="unfinished">You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</translation>
+      <translation>Svoj git odjemalec lahko prenesete tukaj: &lt;a href="%url"&gt; Git za Windows &lt;/a&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="379"/>
@@ -5823,7 +5823,7 @@ Sporočilo o napaki povezave: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="390"/>
       <source>the note folders, script paths and path to an external editor will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders, scripts and external editor will be loaded regardless where your QOwnNotes installation is currently located</source>
-      <translation type="unfinished">the note folders, script paths and path to an external editor will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders, scripts and external editor will be loaded regardless where your QOwnNotes installation is currently located</translation>
+      <translation>mape beležk, poti skriptov in pot do zunanjega urejevalnika bodo samodejno shranjene glede na mapo &lt;code&gt; Data &lt;/code&gt;, tako da bodo naložene pravilne mape, skripte in zunanji urejevalnik beležk, ne glede na to, kje se trenutno nahaja namestitev QOwnNotes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="398"/>
@@ -5887,22 +5887,22 @@ Vaše beležke bodo ostale nedotaknjene!</translation>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="30"/>
       <source>Share note on ownCloud</source>
-      <translation type="unfinished">Share note on ownCloud</translation>
+      <translation>Delež opomba na ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="37"/>
       <source>The public url of your note</source>
-      <translation type="unfinished">The public url of your note</translation>
+      <translation>Javni URL vaše opombe</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="60"/>
       <source>Publicly share the current note file on your ownCloud server. You can send the generated link to others so they can view or download the file.</source>
-      <translation type="unfinished">Publicly share the current note file on your ownCloud server. You can send the generated link to others so they can view or download the file.</translation>
+      <translation>Javno posredujte trenutno datoteko beležke na strežniku ownCloud. Ustvarjeno povezavo lahko pošljete drugim, da si lahko ogledajo ali prenesejo datoteko.</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.cpp" line="59"/>
       <source>Keep in mind that you still have to sync your notes with your server by using the ownCloud desktop sync tool to be able to share notes with others!</source>
-      <translation type="unfinished">Keep in mind that you still have to sync your notes with your server by using the ownCloud desktop sync tool to be able to share notes with others!</translation>
+      <translation>Ne pozabite, da morate svoje zapiske še vedno sinhronizirati s strežnikom z orodjem za sinhronizacijo na namizju ownCloud, da lahko beležke delite z drugimi!</translation>
     </message>
   </context>
   <context>
@@ -5910,42 +5910,42 @@ Vaše beležke bodo ostale nedotaknjene!</translation>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="14"/>
       <source>Insert table</source>
-      <translation type="unfinished">Insert table</translation>
+      <translation>Vstavljanje tabele</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="24"/>
       <source>Create table</source>
-      <translation type="unfinished">Create table</translation>
+      <translation>Ustvari tabelo</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="30"/>
       <source>Column width:</source>
-      <translation type="unfinished">Column width:</translation>
+      <translation>Širina stolpca:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="37"/>
       <source>Insert a table heading separator</source>
-      <translation type="unfinished">Insert a table heading separator</translation>
+      <translation>Vstavite ločilo za naslov tabele</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="47"/>
       <source>Columns:</source>
-      <translation type="unfinished">Columns:</translation>
+      <translation>Stolpci:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="67"/>
       <source>Rows:</source>
-      <translation type="unfinished">Rows:</translation>
+      <translation>Vrstice:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="87"/>
       <source>The amount of spaces in a column</source>
-      <translation type="unfinished">The amount of spaces in a column</translation>
+      <translation>Količina presledkov v stolpcu</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="119"/>
       <source>Select table layout:</source>
-      <translation type="unfinished">Select table layout:</translation>
+      <translation>Izberite postavitev tabele:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="126"/>
@@ -6355,12 +6355,12 @@ To ni mogoče razveljaviti!</translation>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="93"/>
       <source>&lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes"&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
-      <translation type="unfinished">&lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes"&gt;Get involved with QOwnNotes&lt;/a&gt;</translation>
+      <translation>&lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes"&gt; Vključite se s QOwnNotes &lt;/a&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="106"/>
       <source>%p% downloaded</source>
-      <translation type="unfinished">%p% downloaded</translation>
+      <translation>%p% preneseno</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="45"/>
@@ -6370,7 +6370,7 @@ To ni mogoče razveljaviti!</translation>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="58"/>
       <source>&amp;Download latest</source>
-      <translation type="unfinished">&amp;Download latest</translation>
+      <translation>&amp;Prenesite najnovejše</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="56"/>
@@ -6748,7 +6748,7 @@ To ni mogoče razveljaviti!</translation>
     <message>
       <location filename="../main.cpp" line="451"/>
       <source>Another instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</source>
-      <translation type="unfinished">Another instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</translation>
+      <translation>Še en primer QOwnNotes se je že začel! V nastavitvah lahko izklopite način posameznega primerka ali uporabite parameter - zdravilo-več-primerkov.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="483"/>

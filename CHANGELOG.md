@@ -7,6 +7,8 @@
   was updated to version 19.4.0
     - you can now **change** the **current note folder** in a select box in the
       toolbar of the **bookmarks popup**
+- added more Slovak, Slovenian, Danish, Hungarian, Dutch, Norwegian, Czech, Greek,
+  Russian, German translation (thank you Fabijenna, mikhail-khokhlov, rakekniven)
 
 ## 19.4.0
 - added **Romanian**, **Slovak** and **Slovenian translation** (a big thank you to Fabijenna)

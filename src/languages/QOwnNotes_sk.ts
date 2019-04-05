@@ -4367,17 +4367,17 @@ Stačí si otestovať, či máte konflikty synchronizácie a ak áno, nastavte v
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="714"/>
       <source>Please select your note folder on your ownCloud server:</source>
-      <translation type="unfinished">Please select your note folder on your ownCloud server:</translation>
+      <translation>Vyberte svoj priečinok s poznámkami na serveri ownCloud:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="747"/>
       <source>ownCloud server:</source>
-      <translation type="unfinished">ownCloud server:</translation>
+      <translation>ownCloud server:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="757"/>
       <source>Path on your ownCloud server:</source>
-      <translation type="unfinished">Path on your ownCloud server:</translation>
+      <translation>Cesta na serveri ownCloud:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="764"/>
@@ -4388,22 +4388,22 @@ Stačí si otestovať, či máte konflikty synchronizácie a ak áno, nastavte v
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="771"/>
       <source>Note folder path:</source>
-      <translation type="unfinished">Note folder path:</translation>
+      <translation>Cesta priečinka poznámka:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="778"/>
       <source>Be aware that the ownCloud notes app doesn't support sub-folders!</source>
-      <translation type="unfinished">Be aware that the ownCloud notes app doesn't support sub-folders!</translation>
+      <translation>Uvedomte si, že aplikácia ownCloud notes nepodporuje podpriečinky!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="781"/>
       <source>Use note sub-folders</source>
-      <translation type="unfinished">Use note sub-folders</translation>
+      <translation>Použite podpriečinky s poznámkami</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="788"/>
       <source>You need to have git installed to make this work!</source>
-      <translation type="unfinished">You need to have git installed to make this work!</translation>
+      <translation>Musíte mať nainštalovaný git, aby táto práca!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="791"/>
@@ -4535,17 +4535,17 @@ Stačí si otestovať, či máte konflikty synchronizácie a ak áno, nastavte v
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2262"/>
       <source>Romanian</source>
-      <translation type="unfinished">Romanian</translation>
+      <translation>Rumunský</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2284"/>
       <source>Slovak</source>
-      <translation type="unfinished">Slovak</translation>
+      <translation>Slovenský</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2295"/>
       <source>Slovenian</source>
-      <translation type="unfinished">Slovenian</translation>
+      <translation>Slovinčina</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2306"/>
@@ -4749,12 +4749,12 @@ Stačí si otestovať, či máte konflikty synchronizácie a ak áno, nastavte v
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5330"/>
       <source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
-      <translation type="unfinished">By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</translation>
+      <translation>Predvolené rozšírenie prehliadača zobrazí všetky prepojenia aktuálnej poznámky. Môžete tiež zobraziť špeciálne odkazy odkazov poznámok s určitým tagom. Viac informácií o syntaxe odkazu na záložku nájdete &lt;a href="%1"&gt;here&lt;/a&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5343"/>
       <source>Bookmarks note name:</source>
-      <translation type="unfinished">Bookmarks note name:</translation>
+      <translation>Názov poznámok záložiek:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5350"/>
@@ -4850,7 +4850,7 @@ Stačí si otestovať, či máte konflikty synchronizácie a ak áno, nastavte v
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5175"/>
       <source>Automatically remove trashed notes after a certain time</source>
-      <translation type="unfinished">Automatically remove trashed notes after a certain time</translation>
+      <translation>Po určitom čase automaticky odstráňte poznámky s košom</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5201"/>
@@ -5057,7 +5057,7 @@ Stačí si otestovať, či máte konflikty synchronizácie a ak áno, nastavte v
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="905"/>
       <source>Open your ownCloud server &amp;Apps page</source>
-      <translation type="unfinished">Open your ownCloud server &amp;Apps page</translation>
+      <translation>Otvorte stránku ownCloud server &amp; Apps</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="227"/>
@@ -5162,7 +5162,7 @@ Stačí si otestovať, či máte konflikty synchronizácie a ak áno, nastavte v
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2953"/>
       <source>Script name</source>
-      <translation type="unfinished">Script name</translation>
+      <translation>Názov skriptu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2975"/>
@@ -5272,22 +5272,22 @@ Stačí si otestovať, či máte konflikty synchronizácie a ak áno, nastavte v
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4558"/>
       <source>You have to use the backspace key to remove the opening character</source>
-      <translation type="unfinished">You have to use the backspace key to remove the opening character</translation>
+      <translation>Na odstránenie znaku otvorenia musíte použiť tlačidlo backspace</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4561"/>
       <source>Enable automatic removal of matching closing characters</source>
-      <translation type="unfinished">Enable automatic removal of matching closing characters</translation>
+      <translation>Povoliť automatické odstránenie zodpovedajúcich uzatváracích znakov</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1721"/>
       <source>Your CalDAV calendar base url</source>
-      <translation type="unfinished">Your CalDAV calendar base url</translation>
+      <translation>Vaša základná adresa kalendára CalDAV</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1753"/>
       <source>Please enter the username of your CalDAV server.</source>
-      <translation type="unfinished">Please enter the username of your CalDAV server.</translation>
+      <translation>Zadajte používateľské meno vášho CalDAV servera.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1756"/>
@@ -5665,7 +5665,7 @@ Chybové hlásenie o pripojení: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="245"/>
       <source>Show menu bar item</source>
-      <translation type="unfinished">Show menu bar item</translation>
+      <translation>Zobraziť položku menu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1476"/>
@@ -5680,7 +5680,7 @@ Chybové hlásenie o pripojení: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2607"/>
       <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation type="unfinished">Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+      <translation>Odstrániť aktuálny skript &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2658"/>
@@ -5742,68 +5742,68 @@ Chybové hlásenie o pripojení: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3255"/>
       <source>Reset and &amp;exit</source>
-      <translation type="unfinished">Reset and &amp;exit</translation>
+      <translation>Reset a &amp;exit</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3417"/>
       <source>Log file cleared</source>
-      <translation type="unfinished">Log file cleared</translation>
+      <translation>Súbor denníka bol vymazaný</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3418"/>
       <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
-      <translation type="unfinished">The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</translation>
+      <translation>Súbor denníka &lt;strong&gt;%1&lt;/strong&gt; bol vymazaný.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3454"/>
       <source>Executable files</source>
-      <translation type="unfinished">Executable files</translation>
+      <translation>Spustiteľné súbory</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3455"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3457"/>
       <source>All files</source>
-      <translation type="unfinished">All files</translation>
+      <translation>Všetky súbory</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3465"/>
       <source>Please select the path of your git executable</source>
-      <translation type="unfinished">Please select the path of your git executable</translation>
+      <translation>Vyberte cestu spustiteľného súboru git</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3555"/>
       <source>Do you really want to reset the overrides of all message boxes?</source>
-      <translation type="unfinished">Do you really want to reset the overrides of all message boxes?</translation>
+      <translation>Naozaj chcete obnoviť prepísanie všetkých správ?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1932"/>
       <source>The Database was reinitialized.</source>
-      <translation type="unfinished">The Database was reinitialized.</translation>
+      <translation>Databáza bola znovu inicializovaná.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="87"/>
       <source>New script</source>
-      <translation type="unfinished">New script</translation>
+      <translation>Nový skript</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="90"/>
       <source>You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</source>
-      <translation type="unfinished">You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</translation>
+      <translation>Klienta git si môžete prevziať tu: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="379"/>
       <source>enabled</source>
-      <translation type="unfinished">enabled</translation>
+      <translation>povolené</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="379"/>
       <source>disabled</source>
-      <translation type="unfinished">disabled</translation>
+      <translation>invalidný</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="382"/>
       <source>Portable mode is currently:</source>
-      <translation type="unfinished">Portable mode is currently:</translation>
+      <translation>Prenosný režim je momentálne:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="385"/>

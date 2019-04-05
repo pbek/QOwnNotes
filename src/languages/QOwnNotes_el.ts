@@ -1228,7 +1228,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1156"/>
       <source>Jump to</source>
-      <translation type="unfinished">Jump to</translation>
+      <translation>Πηδάω σε</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1189"/>
@@ -1465,7 +1465,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2085"/>
       <source>Show note list under tag panel</source>
-      <translation type="unfinished">Show note list under tag panel</translation>
+      <translation>Εμφάνιση της λίστας σημειώσεων κάτω από τον πίνακα ετικετών</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2103"/>
@@ -1628,22 +1628,22 @@
     <message>
       <location filename="../mainwindow.ui" line="2436"/>
       <source>Jump to note subfolder panel</source>
-      <translation type="unfinished">Jump to note subfolder panel</translation>
+      <translation>Μεταβείτε στον πίνακα υποφακέλων σημείωσης</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2444"/>
       <source>Jump to tags panel</source>
-      <translation type="unfinished">Jump to tags panel</translation>
+      <translation>Μετάβαση στον πίνακα ετικετών</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2452"/>
       <source>Jump to note list panel</source>
-      <translation type="unfinished">Jump to note list panel</translation>
+      <translation>Μεταβείτε στην οθόνη λίστας σημειώσεων</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2460"/>
       <source>Activate context menu</source>
-      <translation type="unfinished">Activate context menu</translation>
+      <translation>Ενεργοποιήστε το μενού περιβάλλοντος</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1863"/>
@@ -4465,17 +4465,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2262"/>
       <source>Romanian</source>
-      <translation type="unfinished">Romanian</translation>
+      <translation>Ρουμανικός</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2284"/>
       <source>Slovak</source>
-      <translation type="unfinished">Slovak</translation>
+      <translation>Σλοβάκος</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2295"/>
       <source>Slovenian</source>
-      <translation type="unfinished">Slovenian</translation>
+      <translation>Σλοβενικά</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2306"/>
