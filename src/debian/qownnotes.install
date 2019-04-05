@@ -44,4 +44,7 @@ languages/QOwnNotes_el.qm usr/share/QOwnNotes/languages
 languages/QOwnNotes_gl.qm usr/share/QOwnNotes/languages
 languages/QOwnNotes_no.qm usr/share/QOwnNotes/languages
 languages/QOwnNotes_da.qm usr/share/QOwnNotes/languages
+languages/QOwnNotes_ro.qm usr/share/QOwnNotes/languages
+languages/QOwnNotes_sl.qm usr/share/QOwnNotes/languages
+languages/QOwnNotes_sk.qm usr/share/QOwnNotes/languages
 QOwnNotes usr/bin

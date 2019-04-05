@@ -49,6 +49,9 @@ files:
         "hi_IN" : "hi",
         "gl_ES" : "gl",
         "no_NO" : "no",
-        "no_DK" : "da"
+        "no_DK" : "da",
+        "ro_RO" : "ro",
+        "sk_SK" : "sk",
+        "sl_SI" : "sl"
       }
     }

@@ -3,6 +3,10 @@
 ## 19.4.0
 - added a package for Ubuntu 19.04 (Disco Dingo) to the Launchpad build process
   (for [#1169](https://github.com/pbek/QOwnNotes/issues/1169))
+- added **Romanian**, **Slovak** and **Slovenian translation** (a big thank you to Fabijenna)
+    - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes)
+      to make QOwnNotes available in more languages or help with the current 
+      translation
 
 ## 19.3.4
 - fixed layout damaging when in dark mode closing the app with the `x` button or

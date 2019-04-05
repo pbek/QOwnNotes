@@ -2256,6 +2256,17 @@
                        </item>
                        <item>
                         <property name="text">
+                         <string notr="true">Limba română</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Romanian</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">ro</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
                          <string notr="true">русский</string>
                         </property>
                         <property name="toolTip">
@@ -2263,6 +2274,28 @@
                         </property>
                         <property name="whatsThis">
                          <string notr="true">ru</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string notr="true">Slovenčina</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Slovak</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">sk</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string notr="true">Slovenščina</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Slovenian</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">sl</string>
                         </property>
                        </item>
                        <item>
