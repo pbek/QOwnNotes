@@ -64,7 +64,7 @@ fi
 # see: https://github.com/Homebrew/homebrew-core/issues/6161
 # example: https://github.com/iltommi/neutrino/blob/master/.travis.yml
 echo "Cloning macdeployqtfix"
-git clone https://github.com/aurelien-rainone/macdeployqtfix.git
+git clone --depth=1 https://github.com/aurelien-rainone/macdeployqtfix.git
 echo "Calling macdeployqtfix"
 python macdeployqtfix/macdeployqtfix.py $APP.app/Contents/MacOS/$APP /usr/local
 

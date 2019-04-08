@@ -34,7 +34,7 @@ cd $PROJECT_PATH
 echo "Project path: $PROJECT_PATH"
 
 # checkout the source code
-git clone --depth=5 https://github.com/pbek/QOwnNotes.git QOwnNotes -b $BRANCH
+git clone --depth=1 https://github.com/pbek/QOwnNotes.git QOwnNotes -b $BRANCH
 cd QOwnNotes
 
 if [ -z $QOWNNOTES_VERSION ]; then

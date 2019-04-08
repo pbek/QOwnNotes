@@ -33,10 +33,10 @@ cd $PROJECT_PATH
 echo "Project path: $PROJECT_PATH"
 
 # checkout Launchpad Snap repository
-git clone --depth=5 git+ssh://pbek@git.launchpad.net/~pbek/qownnotes-snap snap
+git clone --depth=1 git+ssh://pbek@git.launchpad.net/~pbek/qownnotes-snap snap
 
 # checkout the source code
-git clone --depth=5 git@github.com:pbek/QOwnNotes.git QOwnNotes -b $BRANCH
+git clone --depth=1 git@github.com:pbek/QOwnNotes.git QOwnNotes -b $BRANCH
 cd QOwnNotes
 
 if [ -z $QOWNNOTES_VERSION ]; then
