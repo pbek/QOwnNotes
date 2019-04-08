@@ -30,10 +30,10 @@ cd $PROJECT_PATH
 echo "Project path: $PROJECT_PATH"
 
 # checkout AUR repository
-git clone --depth=5 git@github.com:pbek/qownnotes-overlay.git overlay
+git clone --depth=1 git@github.com:pbek/qownnotes-overlay.git overlay
 
 # checkout the source code
-git clone --depth=5 git@github.com:pbek/QOwnNotes.git QOwnNotes -b $BRANCH
+git clone --depth=1 git@github.com:pbek/QOwnNotes.git QOwnNotes -b $BRANCH
 cd QOwnNotes
 
 if [ -z $QOWNNOTES_VERSION ]; then

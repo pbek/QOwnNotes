@@ -46,7 +46,7 @@ if [ -d $PROJECT_PATH ]; then
 fi
 
 # checkout the source code
-git clone --depth=50 git@github.com:pbek/QOwnNotes.git $PROJECT_PATH -b $BRANCH
+git clone --depth=1 git@github.com:pbek/QOwnNotes.git $PROJECT_PATH -b $BRANCH
 cd $PROJECT_PATH
 
 # checkout submodules

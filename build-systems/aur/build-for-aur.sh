@@ -33,10 +33,10 @@ cd $PROJECT_PATH
 echo "Project path: $PROJECT_PATH"
 
 # checkout AUR repository
-git clone --depth=5 ssh://aur@aur.archlinux.org/qownnotes.git aur -b master
+git clone --depth=1 ssh://aur@aur.archlinux.org/qownnotes.git aur -b master
 
 # checkout the source code
-git clone --depth=5 git@github.com:pbek/QOwnNotes.git QOwnNotes -b $BRANCH
+git clone --depth=1 git@github.com:pbek/QOwnNotes.git QOwnNotes -b $BRANCH
 cd QOwnNotes
 
 gitCommitHash=`git rev-parse HEAD`
