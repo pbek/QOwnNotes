@@ -199,6 +199,8 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
             this, SLOT(needRestart()));
     connect(ui->internalIconThemeCheckBox, SIGNAL(toggled(bool)),
             this, SLOT(needRestart()));
+    connect(ui->systemIconThemeCheckBox, SIGNAL(toggled(bool)),
+            this, SLOT(needRestart()));
     connect(ui->darkModeTrayIconCheckBox, SIGNAL(toggled(bool)),
             this, SLOT(needRestart()));
     connect(ui->darkModeColorsCheckBox, SIGNAL(toggled(bool)),
@@ -262,6 +264,11 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
             "https://addons.mozilla.org/firefox/addon/qownnotes-web-companion"));
     ui->bookmarkTagLabel->setText(ui->bookmarkTagLabel->text().arg(
             "https://www.qownnotes.org/Knowledge-base/QOwnNotes-Web-Companion-browser-extension"));
+
+#ifndef Q_OS_LINUX
+    ui->systemIconThemeCheckBox->setHidden(true);
+    ui->systemIconThemeCheckBox->setChecked(false);
+#endif
 }
 
 /**
@@ -671,6 +678,9 @@ void SettingsDialog::storeSettings() {
     settings.setValue("internalIconTheme",
                       ui->internalIconThemeCheckBox->isChecked());
 
+    settings.setValue("systemIconTheme",
+                      ui->systemIconThemeCheckBox->isChecked());
+
     QStringList todoCalendarUrlList;
     QStringList todoCalendarDisplayNameList;
     QStringList todoCalendarEnabledList;
@@ -1007,6 +1017,9 @@ void SettingsDialog::readSettings() {
 
     ui->internalIconThemeCheckBox->setChecked(settings.value(
             "internalIconTheme").toBool());
+
+    ui->systemIconThemeCheckBox->setChecked(settings.value(
+            "systemIconTheme").toBool());
 
     // toggle the dark mode colors check box with the dark mode checkbox
     on_darkModeCheckBox_toggled();
@@ -3708,4 +3721,22 @@ void SettingsDialog::on_webSocketServerServicePortResetButton_clicked() {
 void SettingsDialog::on_enableSocketServerCheckBox_toggled() {
     bool checked = ui->enableSocketServerCheckBox->isChecked();
     ui->browserExtensionFrame->setEnabled(checked);
+}
+
+void SettingsDialog::on_internalIconThemeCheckBox_toggled(bool checked) {
+    if (checked) {
+        const QSignalBlocker blocker(ui->systemIconThemeCheckBox);
+        ui->systemIconThemeCheckBox->setChecked(false);
+    }
+
+    ui->systemIconThemeCheckBox->setDisabled(checked);
+}
+
+void SettingsDialog::on_systemIconThemeCheckBox_toggled(bool checked) {
+    if (checked) {
+        const QSignalBlocker blocker(ui->internalIconThemeCheckBox);
+        ui->internalIconThemeCheckBox->setChecked(false);
+    }
+
+    ui->internalIconThemeCheckBox->setDisabled(checked);
 }

@@ -256,6 +256,10 @@ private slots:
 
     void on_enableSocketServerCheckBox_toggled();
 
+    void on_internalIconThemeCheckBox_toggled(bool checked);
+
+    void on_systemIconThemeCheckBox_toggled(bool checked);
+
 private:
 
     Ui::SettingsDialog *ui;

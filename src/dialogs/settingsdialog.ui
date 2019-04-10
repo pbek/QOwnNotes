@@ -2531,6 +2531,16 @@
                        </property>
                       </widget>
                      </item>
+                     <item row="1" column="0">
+                      <widget class="QCheckBox" name="systemIconThemeCheckBox">
+                       <property name="toolTip">
+                        <string>You need to restart the application to let this setting take effect</string>
+                       </property>
+                       <property name="text">
+                        <string>Enforce system icon theme</string>
+                       </property>
+                      </widget>
+                     </item>
                     </layout>
                    </widget>
                   </item>
@@ -2935,8 +2945,8 @@
                           <rect>
                            <x>0</x>
                            <y>0</y>
-                           <width>347</width>
-                           <height>474</height>
+                           <width>360</width>
+                           <height>476</height>
                           </rect>
                          </property>
                          <layout class="QGridLayout" name="gridLayout_55">
@@ -5493,8 +5503,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../breeze-dark-qownnotes.qrc"/>
   <include location="../breeze-qownnotes.qrc"/>
+  <include location="../breeze-dark-qownnotes.qrc"/>
  </resources>
  <connections>
   <connection>

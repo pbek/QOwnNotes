@@ -115,14 +115,23 @@ bool mainStartupMisc(const QStringList &arguments) {
     }
 
     bool internalIconTheme = settings.value("internalIconTheme").toBool();
+    bool systemIconTheme = settings.value("systemIconTheme").toBool();
 
-    if (QIcon::themeName() == "" || internalIconTheme) {
-        QIcon::setThemeName("breeze-qownnotes");
-    }
+    if (!systemIconTheme) {
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))
+        if (!internalIconTheme && QIcon::themeName() == "") {
+            QIcon::setThemeName(QIcon::fallbackThemeName());
+        }
+#endif
 
-    bool darkMode = settings.value("darkMode").toBool();
-    if (darkMode) {
-        QIcon::setThemeName("breeze-dark-qownnotes");
+        if (QIcon::themeName() == "" || internalIconTheme) {
+            QIcon::setThemeName("breeze-qownnotes");
+        }
+
+        bool darkMode = settings.value("darkMode").toBool();
+        if (darkMode) {
+            QIcon::setThemeName("breeze-dark-qownnotes");
+        }
     }
 
     MetricsService *metricsService = MetricsService::createInstance();

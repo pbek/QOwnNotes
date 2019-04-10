@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 19.4.2
+- for Linux there there now is a setting in the *Interface settings* to enforce
+  the system icon theme in case your desktop environment doesn't report the icon
+  theme correctly (for [#1177](https://github.com/pbek/QOwnNotes/issues/1177))
+    - KDE currently seems to have this problem on Qt 5.12
+    - in addition if built on Qt 5.12 or newer there now also will be tried to
+      check if there is a fallback icon theme in case there is no icon theme reported  
+
 ## 19.4.1
 - added support for **listing** the **note folders** and **changing** the
   **current note folder** to the websocket api
