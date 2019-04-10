@@ -77,9 +77,9 @@ archiveFile="$qownnotesSrcDir.tar.xz"
 echo "Creating archive $archiveFile..."
 tar -cJf $archiveFile $qownnotesSrcDir
 
-md5sum $archiveFile > $archiveFile.md5
-sha256sum $archiveFile | awk '{ print $1 }' > $archiveFile.sha256
-sha512sum $archiveFile | awk '{ print $1 }' > $archiveFile.sha512
+QOWNNOTES_ARCHIVE_MD5=`md5sum ${archiveFile} | tee ${archiveFile}.md5`
+QOWNNOTES_ARCHIVE_SHA256=`sha256sum ${archiveFile} | awk '{ print $1 }' > ${archiveFile}.sha256`
+QOWNNOTES_ARCHIVE_SHA512=`sha512sum ${archiveFile} | awk '{ print $1 }' > ${archiveFile}.sha512`
 
 remotePath="pbek@ssh.tuxfamily.org:/home/qownnotes/qownnotes-repository/src"
 tuxFamilyReadme="tuxfamily-readme.md"
