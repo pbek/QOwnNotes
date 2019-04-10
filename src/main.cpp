@@ -114,10 +114,11 @@ bool mainStartupMisc(const QStringList &arguments) {
         QApplication::setStyle(interfaceStyle);
     }
 
-    bool internalIconTheme = settings.value("internalIconTheme").toBool();
     bool systemIconTheme = settings.value("systemIconTheme").toBool();
 
     if (!systemIconTheme) {
+        bool internalIconTheme = settings.value("internalIconTheme").toBool();
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))
         if (!internalIconTheme && QIcon::themeName() == "") {
             QIcon::setThemeName(QIcon::fallbackThemeName());
