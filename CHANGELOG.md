@@ -7,6 +7,10 @@
     - KDE currently seems to have this problem on Qt 5.12
     - in addition if built on Qt 5.12 or newer there now also will be tried to
       check if there is a fallback icon theme in case there is no icon theme reported  
+- added more German, Russian, Catalan, Brazilian Portuguese, Dutch, Italian,
+  Slovak, Slovenian, Danish, Hungarian, Norwegian, Czech, Greek, Spanish translation
+  (thank you MGuerra, mlimacarlos, vistausss, tiwi90, Fabijenna, richarson, pu.sash)
+
 
 ## 19.4.1
 - added support for **listing** the **note folders** and **changing** the
