@@ -3,6 +3,8 @@
 ## 19.4.3
 - you can now reorder your note folders in the *Note folders settings* via drag and drop
   (for [#1181](https://github.com/pbek/QOwnNotes/issues/1181))
+- the Windows version of QOwnNotes is now built with Qt 5.12.2
+  (for AppVeyor [#2871](https://github.com/appveyor/ci/issues/2871))
 
 ## 19.4.2
 - for Linux there there now is a setting in the *Interface settings* to enforce
