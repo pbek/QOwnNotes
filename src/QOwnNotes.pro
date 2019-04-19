@@ -137,6 +137,7 @@ SOURCES += main.cpp\
     widgets/lineedit.cpp \
     widgets/qtexteditsearchwidget.cpp \
     widgets/scriptlistwidget.cpp \
+    widgets/notefolderlistwidget.cpp \
     widgets/notetreewidgetitem.cpp \
     widgets/layoutwidget.cpp
 
@@ -222,6 +223,7 @@ HEADERS  += mainwindow.h \
     widgets/lineedit.h \
     widgets/qtexteditsearchwidget.h \
     widgets/scriptlistwidget.h \
+    widgets/notefolderlistwidget.h \
     widgets/notetreewidgetitem.h \
     widgets/layoutwidget.h
 

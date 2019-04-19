@@ -450,12 +450,21 @@
                     <number>9</number>
                    </property>
                    <item row="0" column="0">
-                    <widget class="QListWidget" name="noteFolderListWidget">
+                    <widget class="NoteFolderListWidget" name="noteFolderListWidget">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                        <horstretch>2</horstretch>
                        <verstretch>0</verstretch>
                       </sizepolicy>
+                     </property>
+                     <property name="dragEnabled">
+                      <bool>true</bool>
+                     </property>
+                     <property name="dragDropMode">
+                      <enum>QAbstractItemView::InternalMove</enum>
+                     </property>
+                     <property name="defaultDropAction">
+                      <enum>Qt::TargetMoveAction</enum>
                      </property>
                     </widget>
                    </item>
@@ -5500,6 +5509,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
    <extends>QWidget</extends>
    <header location="global">widgets/layoutwidget.h</header>
    <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>NoteFolderListWidget</class>
+   <extends>QListWidget</extends>
+   <header>widgets/notefolderlistwidget.h</header>
   </customwidget>
  </customwidgets>
  <resources>

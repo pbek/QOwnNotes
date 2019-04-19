@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 19.4.3
+- you can now reorder your note folders in the *Note folders settings* via drag and drop
+  (for [#1181](https://github.com/pbek/QOwnNotes/issues/1181))
+
 ## 19.4.2
 - for Linux there there now is a setting in the *Interface settings* to enforce
   the system icon theme in case your desktop environment doesn't report the icon
