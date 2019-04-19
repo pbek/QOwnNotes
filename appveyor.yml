@@ -12,6 +12,9 @@ environment:
     qtdirlatest: C:\Qt\latest\mingw73_32
 
   matrix:
+    # Qt 5.11, because mingw73_32 doesn't work yet
+    - qtdir: "C:\\Qt\\5.11\\mingw53_32"
+      gpp: win32-g++
     # latest Qt
     - qtdir: "C:\\Qt\\latest\\mingw73_32"
       gpp: win32-g++
@@ -96,7 +99,7 @@ deploy:
       secure: spcyN/Dz3B2GXBPii8IywDLq6vfxC1SrN+xR2wMerFM7g2nTy0Lrh5agQONFoInR
     on:
       branch: master
-      qtdir: "C:\\Qt\\latest\\mingw73_32"
+      qtdir: "C:\\Qt\\5.11\\mingw53_32"
 #      branch: develop
 
 notifications:
