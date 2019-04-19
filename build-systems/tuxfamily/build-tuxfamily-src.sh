@@ -77,9 +77,15 @@ archiveFile="$qownnotesSrcDir.tar.xz"
 echo "Creating archive $archiveFile..."
 tar -cJf $archiveFile $qownnotesSrcDir
 
-export QOWNNOTES_ARCHIVE_MD5=`md5sum ${archiveFile} | tee ${archiveFile}.md5`
-export QOWNNOTES_ARCHIVE_SHA256=`sha256sum ${archiveFile} | awk '{ print $1 }' > ${archiveFile}.sha256`
-export QOWNNOTES_ARCHIVE_SHA512=`sha512sum ${archiveFile} | awk '{ print $1 }' > ${archiveFile}.sha512`
+QOWNNOTES_ARCHIVE_MD5=`md5sum ${archiveFile} | tee ${archiveFile}.md5`
+QOWNNOTES_ARCHIVE_SHA256=`sha256sum ${archiveFile} | awk '{ print $1 }' > ${archiveFile}.sha256`
+QOWNNOTES_ARCHIVE_SHA512=`sha512sum ${archiveFile} | awk '{ print $1 }' > ${archiveFile}.sha512`
+
+# write temporary signature variable file for the deployment scripts
+_QQwnNotesSigVarFile="/tmp/QOwnNotes.sig.vars"
+echo "QOWNNOTES_ARCHIVE_MD5={$QOWNNOTES_ARCHIVE_MD5}" > ${_QQwnNotesSigVarFile}
+echo "QOWNNOTES_ARCHIVE_SHA256={$QOWNNOTES_ARCHIVE_SHA256}" >> ${_QQwnNotesSigVarFile}
+echo "QOWNNOTES_ARCHIVE_SHA512={$QOWNNOTES_ARCHIVE_SHA512}" > ${_QQwnNotesSigVarFile}
 
 remotePath="pbek@ssh.tuxfamily.org:/home/qownnotes/qownnotes-repository/src"
 tuxFamilyReadme="tuxfamily-readme.md"

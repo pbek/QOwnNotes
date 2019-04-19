@@ -20,6 +20,15 @@ BRANCH=develop
 PROJECT_PATH="/tmp/QOwnNotes-aur-$$"
 CUR_DIR=$(pwd)
 
+# use temporary signature variable file
+_QQwnNotesSigVarFile="/tmp/QOwnNotes.sig.vars"
+
+if [[ ! -f ${_QQwnNotesSigVarFile} ]]; then
+	echo "${_QQwnNotesSigVarFile} doesn't exist. build-tuxfamily-src.sh must be run ahead of build script!"
+	exit 1
+fi
+
+source ${_QQwnNotesSigVarFile}
 
 echo "Started the AUR packaging process, using latest '$BRANCH' git tree"
 
