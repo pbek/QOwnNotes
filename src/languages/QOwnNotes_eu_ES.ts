@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sk" sourcelanguage="en">
+<TS version="2.1" language="eu" sourcelanguage="en">
   <context>
     <name>AboutDialog</name>
     <message>
       <location filename="../dialogs/aboutdialog.ui" line="14"/>
       <source>About QOwnNotes</source>
-      <translation>O službe QOwnNotes</translation>
+      <translation type="unfinished">About QOwnNotes</translation>
     </message>
   </context>
   <context>
@@ -15,7 +15,7 @@
       <location filename="../dialogs/actiondialog.ui" line="14"/>
       <location filename="../dialogs/actiondialog.ui" line="46"/>
       <source>Find action</source>
-      <translation>Nájsť akcia</translation>
+      <translation type="unfinished">Find action</translation>
     </message>
   </context>
   <context>
@@ -23,162 +23,162 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="14"/>
       <source>Evernote Import</source>
-      <translation>Evernote Import</translation>
+      <translation type="unfinished">Evernote Import</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="121"/>
       <source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</source>
-      <translation>Ak chcete získať enex súbor, musíte vybrať jednu alebo viac poznámok v klientovi pracovnej plochy Evernotes av ponuke Súbor kliknite na položku Exportovať poznámky.</translation>
+      <translation type="unfinished">To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="74"/>
       <source>Please select the Evernote enex file you want to import:</source>
-      <translation>Vyberte súbor Evernote enex, ktorý chcete importovať:</translation>
+      <translation type="unfinished">Please select the Evernote enex file you want to import:</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="30"/>
       <source>Select file</source>
-      <translation>Vyberte súbor</translation>
+      <translation type="unfinished">Select file</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="54"/>
       <source>Import images</source>
-      <translation>Import snímok</translation>
+      <translation type="unfinished">Import images</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="91"/>
       <source>Metadata to import</source>
-      <translation>Metadáta importovať</translation>
+      <translation type="unfinished">Metadata to import</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="165"/>
       <source>Import notes</source>
-      <translation>Import poznámok</translation>
+      <translation type="unfinished">Import notes</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="23"/>
       <source>Evernote enex file</source>
-      <translation>Enex súboru Evernote</translation>
+      <translation type="unfinished">Evernote enex file</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="67"/>
       <source>%v of %m note(s) imported</source>
-      <translation>%v %m poznámok importovaných</translation>
+      <translation type="unfinished">%v of %m note(s) imported</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="81"/>
       <source>Import attachments</source>
-      <translation>Import príloh</translation>
+      <translation type="unfinished">Import attachments</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="58"/>
       <source>Enex files</source>
-      <translation>Enex súbory</translation>
+      <translation type="unfinished">Enex files</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="59"/>
       <source>Select Evernote enex file to import</source>
-      <translation>Vyberte súbor Evernote enex, ktorý chcete importovať</translation>
+      <translation type="unfinished">Select Evernote enex file to import</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="642"/>
       <source>Basic attributes</source>
-      <translation>Základné atribúty</translation>
+      <translation type="unfinished">Basic attributes</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="643"/>
       <source>Created date</source>
-      <translation>Dátum vytvorenia</translation>
+      <translation type="unfinished">Created date</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="645"/>
       <source>Updated date</source>
-      <translation>Dátum aktualizácie</translation>
+      <translation type="unfinished">Updated date</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="648"/>
       <source>Note attributes</source>
-      <translation>Poznámka: atribúty</translation>
+      <translation type="unfinished">Note attributes</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="649"/>
       <source>Subject date</source>
-      <translation>Predmet dátum</translation>
+      <translation type="unfinished">Subject date</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="651"/>
       <source>Latitude</source>
-      <translation>Zemepisná šírka</translation>
+      <translation type="unfinished">Latitude</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="653"/>
       <source>Longitude</source>
-      <translation>Zemepisná dĺžka</translation>
+      <translation type="unfinished">Longitude</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="655"/>
       <source>Altitude</source>
-      <translation>Nadmorská výška</translation>
+      <translation type="unfinished">Altitude</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="657"/>
       <source>Author</source>
-      <translation>Autor</translation>
+      <translation type="unfinished">Author</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="659"/>
       <source>Source</source>
-      <translation>Zdroj</translation>
+      <translation type="unfinished">Source</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="661"/>
       <source>Source URL</source>
-      <translation>Adresa URL zdroja</translation>
+      <translation type="unfinished">Source URL</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="663"/>
       <source>Source application</source>
-      <translation>Zdrojová aplikácia</translation>
+      <translation type="unfinished">Source application</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="665"/>
       <source>Reminder order</source>
-      <translation>Pripomenutie objednávky</translation>
+      <translation type="unfinished">Reminder order</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="667"/>
       <source>Reminder time</source>
-      <translation>Čas pripomenutia</translation>
+      <translation type="unfinished">Reminder time</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="669"/>
       <source>Reminder done time</source>
-      <translation>Pripomenutie urobil čas</translation>
+      <translation type="unfinished">Reminder done time</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="671"/>
       <source>Place name</source>
-      <translation>Názov miesta</translation>
+      <translation type="unfinished">Place name</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="673"/>
       <source>Content class</source>
-      <translation>Trieda obsahu</translation>
+      <translation type="unfinished">Content class</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="675"/>
       <source>Application data</source>
-      <translation>Údaje aplikácií</translation>
+      <translation type="unfinished">Application data</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="749"/>
       <source>Attribute</source>
-      <translation>Atribút</translation>
+      <translation type="unfinished">Attribute</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="749"/>
       <source>Value</source>
-      <translation>Hodnota</translation>
+      <translation type="unfinished">Value</translation>
     </message>
   </context>
   <context>
@@ -187,102 +187,100 @@
       <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="166"/>
       <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="174"/>
       <source>Unknown option: %1</source>
-      <translation>Neznáma možnosť: %1</translation>
+      <translation type="unfinished">Unknown option: %1</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="169"/>
       <source>Argument must be positive: %1=%2</source>
-      <translation>Argument musí byť kladná: %1=%2</translation>
+      <translation type="unfinished">Argument must be positive: %1=%2</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="958"/>
       <source>Mark "%1" not set.</source>
-      <translation>Značka "%1" nebola nastavená.</translation>
+      <translation type="unfinished">Mark "%1" not set.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="2836"/>
       <source>Recursive mapping</source>
-      <translation>Rekurzívne mapovanie</translation>
+      <translation type="unfinished">Recursive mapping</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3705"/>
       <source>%1%2%</source>
-      <translation>%1%2%</translation>
+      <translation type="unfinished">%1%2%</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3707"/>
       <source>%1All</source>
-      <translation>%1All</translation>
+      <translation type="unfinished">%1All</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3721"/>
       <source>Not implemented in FakeVim.</source>
-      <translation>Nie je implementovaný v FakeVim.</translation>
+      <translation type="unfinished">Not implemented in FakeVim.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4301"/>
       <source>Type Alt-V, Alt-V to quit FakeVim mode.</source>
-      <translation>Zadajte Alt-V Alt-V prestať FakeVim režim.</translation>
+      <translation type="unfinished">Type Alt-V, Alt-V to quit FakeVim mode.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5749"/>
       <source>Unknown option:</source>
-      <translation>Neznáma možnosť:</translation>
+      <translation type="unfinished">Unknown option:</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5759"/>
       <source>Invalid argument:</source>
-      <translation>Neplatný argument:</translation>
+      <translation type="unfinished">Invalid argument:</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5761"/>
       <source>Trailing characters:</source>
-      <translation>Koncové znaky:</translation>
+      <translation type="unfinished">Trailing characters:</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5843"/>
       <source>Move lines into themselves.</source>
-      <translation>Presun riadkov do seba.</translation>
+      <translation type="unfinished">Move lines into themselves.</translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5885"/>
       <source>%n lines moved.</source>
-      <translation>
-        <numerusform>%n riadkov presunie.</numerusform>
-        <numerusform>%n riadkov presunie.</numerusform>
-        <numerusform>%n riadkov presunie.</numerusform>
-        <numerusform>%n riadkov presunie.</numerusform>
+      <translation type="unfinished">
+        <numerusform>%n lines moved.</numerusform>
+        <numerusform>%n lines moved.</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5946"/>
       <source>File "%1" exists (add ! to override)</source>
-      <translation>Existuje súbor "%1" (pridať ! prepísať)</translation>
+      <translation type="unfinished">File "%1" exists (add ! to override)</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5960"/>
       <source>Cannot open file "%1" for writing</source>
-      <translation>Cannot open file "%1" for writing</translation>
+      <translation type="unfinished">Cannot open file "%1" for writing</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5966"/>
       <source>"%1" %2 %3L, %4C written.</source>
-      <translation>"%1" %2 %3L, %4C napísal.</translation>
+      <translation type="unfinished">"%1" %2 %3L, %4C written.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5967"/>
       <source> [New] </source>
-      <translation> [Nový] </translation>
+      <translation type="unfinished"> [New] </translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5975"/>
       <source>Cannot open file "%1" for reading</source>
-      <translation>Súbor "%1" sa nedá otvoriť na čítanie</translation>
+      <translation type="unfinished">Cannot open file "%1" for reading</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6003"/>
       <source>"%1" %2L, %3C</source>
-      <translation>"%1" %2L, %3C</translation>
+      <translation type="unfinished">"%1" %2L, %3C</translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6030"/>
@@ -290,29 +288,27 @@
       <translation type="unfinished">
         <numerusform>%n lines filtered.</numerusform>
         <numerusform>%n lines filtered.</numerusform>
-        <numerusform>%n lines filtered.</numerusform>
-        <numerusform>%n lines filtered.</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6118"/>
       <source>Cannot open file %1</source>
-      <translation>Nie je možné otvoriť súbor %1</translation>
+      <translation type="unfinished">Cannot open file %1</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6191"/>
       <source>Not an editor command: %1</source>
-      <translation>Nie je to príkaz editora: %1</translation>
+      <translation type="unfinished">Not an editor command: %1</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6285"/>
       <source>Invalid regular expression: %1</source>
-      <translation>Neplatný regulárny výraz: %1</translation>
+      <translation type="unfinished">Invalid regular expression: %1</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6321"/>
       <source>Pattern not found: %1</source>
-      <translation>Vzor nebol nájdený: %1</translation>
+      <translation type="unfinished">Pattern not found: %1</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6325"/>
@@ -340,8 +336,6 @@
       <translation type="unfinished">
         <numerusform>%n lines indented.</numerusform>
         <numerusform>%n lines indented.</numerusform>
-        <numerusform>%n lines indented.</numerusform>
-        <numerusform>%n lines indented.</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -349,8 +343,6 @@
       <source>%n lines %1ed %2 time.</source>
       <comment>%1 can be '&gt;' or '&lt;'</comment>
       <translation type="unfinished">
-        <numerusform>%n lines %1ed %2 time.</numerusform>
-        <numerusform>%n lines %1ed %2 time.</numerusform>
         <numerusform>%n lines %1ed %2 time.</numerusform>
         <numerusform>%n lines %1ed %2 time.</numerusform>
       </translation>
@@ -361,19 +353,17 @@
       <translation type="unfinished">
         <numerusform>%n lines yanked.</numerusform>
         <numerusform>%n lines yanked.</numerusform>
-        <numerusform>%n lines yanked.</numerusform>
-        <numerusform>%n lines yanked.</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7766"/>
       <source>Already at oldest change.</source>
-      <translation>Už pri najstaršej zmene.</translation>
+      <translation type="unfinished">Already at oldest change.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7767"/>
       <source>Already at newest change.</source>
-      <translation>Už pri najnovšej zmene.</translation>
+      <translation type="unfinished">Already at newest change.</translation>
     </message>
   </context>
   <context>
@@ -381,7 +371,7 @@
     <message>
       <location filename="../helpers/fakevimproxy.cpp" line="26"/>
       <source>Information</source>
-      <translation>Informácie</translation>
+      <translation type="unfinished">Information</translation>
     </message>
   </context>
   <context>
@@ -389,247 +379,247 @@
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="38"/>
       <source>Text font</source>
-      <translation>Písmo textu</translation>
+      <translation type="unfinished">Text font</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="73"/>
       <source>Size:</source>
-      <translation>Rozmery:</translation>
+      <translation type="unfinished">Size:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="80"/>
       <source>Family:</source>
-      <translation>Rodina:</translation>
+      <translation type="unfinished">Family:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="103"/>
       <source>Color schema</source>
-      <translation>Farebné schémy</translation>
+      <translation type="unfinished">Color schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="124"/>
       <source>Delete schema</source>
-      <translation>Odstrániť schému</translation>
+      <translation type="unfinished">Delete schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="127"/>
       <source>Delete</source>
-      <translation>Vymazať</translation>
+      <translation type="unfinished">Delete</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="169"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="631"/>
       <source>Export schema</source>
-      <translation>Exportovať schému</translation>
+      <translation type="unfinished">Export schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="172"/>
       <source>Export</source>
-      <translation>Export</translation>
+      <translation type="unfinished">Export</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="271"/>
       <source>If you have created a nice color schema please export it and share it with everyone!</source>
-      <translation>Ak ste vytvorili peknú farebnú schému, exportujte ju a zdieľajte ju s každým!</translation>
+      <translation type="unfinished">If you have created a nice color schema please export it and share it with everyone!</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="155"/>
       <source>Copy schema</source>
-      <translation>Kópia schémy</translation>
+      <translation type="unfinished">Copy schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="158"/>
       <source>Copy</source>
-      <translation>Kópia</translation>
+      <translation type="unfinished">Copy</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="141"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="671"/>
       <source>Import schema</source>
-      <translation>Importovať schému</translation>
+      <translation type="unfinished">Import schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="144"/>
       <source>Import</source>
-      <translation>Import</translation>
+      <translation type="unfinished">Import</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="315"/>
       <source>Share schema</source>
-      <translation>Podiel schémy</translation>
+      <translation type="unfinished">Share schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="288"/>
       <source>Background:</source>
-      <translation>Pozadie:</translation>
+      <translation type="unfinished">Background:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="281"/>
       <source>Foreground:</source>
-      <translation>Popredia:</translation>
+      <translation type="unfinished">Foreground:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="264"/>
       <source>Bold</source>
-      <translation>Tučné</translation>
+      <translation type="unfinished">Bold</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="244"/>
       <source>Italic</source>
-      <translation>Kurzíva</translation>
+      <translation type="unfinished">Italic</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="237"/>
       <source>Adapt font size:</source>
-      <translation>Prispôsobiť veľkosť písma:</translation>
+      <translation type="unfinished">Adapt font size:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="208"/>
       <source>Underline</source>
-      <translation>Podčiarknutie</translation>
+      <translation type="unfinished">Underline</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="195"/>
       <source>Text preset</source>
-      <translation>Text preset</translation>
+      <translation type="unfinished">Text preset</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="196"/>
       <source>Emphasized text</source>
-      <translation>Zvýraznený text</translation>
+      <translation type="unfinished">Emphasized text</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="197"/>
       <source>Strong text</source>
-      <translation>Silný text</translation>
+      <translation type="unfinished">Strong text</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="214"/>
       <source>(HTML) Comment</source>
-      <translation>(HTML) Komentár</translation>
+      <translation type="unfinished">(HTML) Comment</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="204"/>
       <source>Header, level 1</source>
-      <translation>Hlavička, úroveň 1</translation>
+      <translation type="unfinished">Header, level 1</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="198"/>
       <source>Link</source>
-      <translation>Odkaz</translation>
+      <translation type="unfinished">Link</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="199"/>
       <source>Image</source>
-      <translation>Obrázok</translation>
+      <translation type="unfinished">Image</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="200"/>
       <source>Code (block)</source>
-      <translation>Kód (blok)</translation>
+      <translation type="unfinished">Code (block)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="201"/>
       <source>Code (inline)</source>
-      <translation>Kód (inline)</translation>
+      <translation type="unfinished">Code (inline)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="203"/>
       <source>List item</source>
-      <translation>Položka zoznamu</translation>
+      <translation type="unfinished">List item</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="205"/>
       <source>Header, level 2</source>
-      <translation>Hlavička, úroveň 2</translation>
+      <translation type="unfinished">Header, level 2</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="206"/>
       <source>Header, level 3</source>
-      <translation>Hlavička, úroveň 3</translation>
+      <translation type="unfinished">Header, level 3</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="207"/>
       <source>Header, level 4</source>
-      <translation>Hlavička, úroveň 4</translation>
+      <translation type="unfinished">Header, level 4</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="208"/>
       <source>Header, level 5</source>
-      <translation>Hlavička, úroveň 5</translation>
+      <translation type="unfinished">Header, level 5</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="209"/>
       <source>Header, level 6</source>
-      <translation>Hlavička, úroveň 6</translation>
+      <translation type="unfinished">Header, level 6</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="212"/>
       <source>Block quote</source>
-      <translation>Blok citácie</translation>
+      <translation type="unfinished">Block quote</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="213"/>
       <source>Table</source>
-      <translation>Tabuľka</translation>
+      <translation type="unfinished">Table</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="215"/>
       <source>Masked syntax</source>
       <comment>text that will highlighted in a way that it's barely visible</comment>
-      <translation>Maskovaný syntax</translation>
+      <translation type="unfinished">Masked syntax</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="220"/>
       <source>Broken link</source>
-      <translation>Nefunkčný odkaz</translation>
+      <translation type="unfinished">Broken link</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="210"/>
       <source>Horizontal rule</source>
-      <translation>Vodorovná čiara</translation>
+      <translation type="unfinished">Horizontal rule</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="218"/>
       <source>Current line background color</source>
-      <translation>Aktuálna farba pozadia riadka</translation>
+      <translation type="unfinished">Current line background color</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="229"/>
       <source>This item will be used to preset colors for the other items</source>
-      <translation>Táto položka bude použitá pre prednastavené farby pre iné položky</translation>
+      <translation type="unfinished">This item will be used to preset colors for the other items</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="460"/>
       <source>Copy color schema</source>
-      <translation>Kopírovať farebnú schému</translation>
+      <translation type="unfinished">Copy color schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="461"/>
       <source>Color schema name</source>
-      <translation>Názov farebnej schémy</translation>
+      <translation type="unfinished">Color schema name</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="463"/>
       <source>Copy</source>
       <comment>as noun</comment>
-      <translation>Kópia</translation>
+      <translation type="unfinished">Copy</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="582"/>
       <source>Remove schema</source>
-      <translation>Odstrániť schému</translation>
+      <translation type="unfinished">Remove schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="583"/>
       <source>Remove current schema? This cannot be undone!</source>
-      <translation>Odstrániť aktuálnu schému? To nie je možné vrátiť späť!</translation>
+      <translation type="unfinished">Remove current schema? This cannot be undone!</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="630"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="670"/>
       <source>INI files</source>
-      <translation>INI súborov</translation>
+      <translation type="unfinished">INI files</translation>
     </message>
   </context>
   <context>
@@ -637,87 +627,87 @@
     <message>
       <location filename="../widgets/layoutwidget.ui" line="97"/>
       <source>Use layout</source>
-      <translation>Použitie rozloženia</translation>
+      <translation type="unfinished">Use layout</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="76"/>
       <source>Use new layout</source>
-      <translation>Použitie nového rozloženia</translation>
+      <translation type="unfinished">Use new layout</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="77"/>
       <source>Do you want to use the selected layout?</source>
-      <translation>Chcete použiť vybraté rozloženie?</translation>
+      <translation type="unfinished">Do you want to use the selected layout?</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="81"/>
       <source>The application will be quit afterwards.</source>
-      <translation>Aplikácia sa potom ukončí.</translation>
+      <translation type="unfinished">The application will be quit afterwards.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="82"/>
       <source>The application will be restarted afterwards.</source>
-      <translation>Aplikácia bude znova neskôr.</translation>
+      <translation type="unfinished">The application will be restarted afterwards.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="140"/>
       <source>Minimal</source>
       <comment>Layout name</comment>
-      <translation>Minimálne</translation>
+      <translation type="unfinished">Minimal</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="142"/>
       <source>Full</source>
       <comment>Layout name</comment>
-      <translation>Plné</translation>
+      <translation type="unfinished">Full</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="144"/>
       <source>Full vertical</source>
       <comment>Layout name</comment>
-      <translation>Plné vertikálne</translation>
+      <translation type="unfinished">Full vertical</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="146"/>
       <source>Single column</source>
       <comment>Layout name</comment>
-      <translation>Jeden stĺpec</translation>
+      <translation type="unfinished">Single column</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="154"/>
       <source>The note edit panel is the central widget that will be resized automatically.</source>
       <comment>Layout description</comment>
-      <translation>Panel úprav poznámok je centrálny widget, ktorý sa bude meniť automaticky.</translation>
+      <translation type="unfinished">The note edit panel is the central widget that will be resized automatically.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="158"/>
       <source>Because of this there is no central widget that will be resized automatically.</source>
       <comment>Layout description</comment>
-      <translation>Z tohto dôvodu neexistuje centrálny widget, ktorý bude automaticky zmenený.</translation>
+      <translation type="unfinished">Because of this there is no central widget that will be resized automatically.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="162"/>
       <source>Just the note list on the left and the note edit panel on the right are enabled by default.</source>
       <comment>Layout description</comment>
-      <translation>Štandardne je povolený zoznam poznámok na ľavej strane a panel úprav poznámok na pravej strane.</translation>
+      <translation type="unfinished">Just the note list on the left and the note edit panel on the right are enabled by default.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="166"/>
       <source>Most of the panels, like the note list on the left, the tagging panels, the note edit panel in the center and the preview panel on the right are enabled by default.</source>
       <comment>Layout description</comment>
-      <translation>Väčšina panelov, ako je zoznam poznámok vľavo, panely označovania, panel úprav poznámok v strede a panel náhľadu vpravo sú v predvolenom nastavení povolené.</translation>
+      <translation type="unfinished">Most of the panels, like the note list on the left, the tagging panels, the note edit panel in the center and the preview panel on the right are enabled by default.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="171"/>
       <source>Most of the panels, like the note list on the left, the tagging panels, the note edit panel on the right and the preview panel on top of the note edit panel are enabled by default.</source>
       <comment>Layout description</comment>
-      <translation>Väčšina panelov, ako je zoznam poznámok vľavo, panely označovania, panel úprav poznámok na pravej strane a panel náhľadu v hornej časti panela úprav poznámok, sú v predvolenom nastavení povolené.</translation>
+      <translation type="unfinished">Most of the panels, like the note list on the left, the tagging panels, the note edit panel on the right and the preview panel on top of the note edit panel are enabled by default.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="176"/>
       <source>Tiny one column layout with note search, note list and note edit on top of each other.</source>
       <comment>Layout description</comment>
-      <translation>Malé rozloženie stĺpcov s vyhľadávaním poznámok, zoznamom poznámok a úpravou poznámok nad sebou.</translation>
+      <translation type="unfinished">Tiny one column layout with note search, note list and note edit on top of each other.</translation>
     </message>
   </context>
   <context>
@@ -725,57 +715,57 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="14"/>
       <source>Link an url or note</source>
-      <translation>Prepojte adresu Url alebo poznámku</translation>
+      <translation type="unfinished">Link an url or note</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="44"/>
       <source>Enter URL</source>
-      <translation>Zadajte adresu URL</translation>
+      <translation type="unfinished">Enter URL</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="53"/>
       <source>Enter an URL to link to</source>
-      <translation>Zadajte adresu URL odkaz na</translation>
+      <translation type="unfinished">Enter an URL to link to</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="76"/>
       <source>Enter the name of the link (optional)</source>
-      <translation>Zadajte názov odkazu (voliteľné)</translation>
+      <translation type="unfinished">Enter the name of the link (optional)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="79"/>
       <source>Name of link (optional)</source>
-      <translation>Názov odkazu (voliteľné)</translation>
+      <translation type="unfinished">Name of link (optional)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="89"/>
       <source>Enter a description for the link (optional)</source>
-      <translation>Zadajte popis (voliteľné) link</translation>
+      <translation type="unfinished">Enter a description for the link (optional)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="92"/>
       <source>Description of link (optional)</source>
-      <translation>Popis prepojenia (voliteľné)</translation>
+      <translation type="unfinished">Description of link (optional)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="102"/>
       <source>Search for notes or create new notes by entering text and pressing return</source>
-      <translation>Vyhľadávaním poznámok alebo vytváraním nových poznámok zadávaním textu a stlačením klávesu return</translation>
+      <translation type="unfinished">Search for notes or create new notes by entering text and pressing return</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="117"/>
       <source>Search for a note to link to</source>
-      <translation>Vyhľadajte poznámku, na ktorú chcete odkazovať</translation>
+      <translation type="unfinished">Search for a note to link to</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="63"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;select local file to link to&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;vyberte miestny súbor na prepojenie&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;select local file to link to&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.cpp" line="211"/>
       <source>Select file to link to</source>
-      <translation>Vyberte súbor na prepojenie</translation>
+      <translation type="unfinished">Select file to link to</translation>
     </message>
   </context>
   <context>
@@ -783,49 +773,49 @@
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="14"/>
       <source>Locally trashed notes</source>
-      <translation>Lokálne ožralý poznámky</translation>
+      <translation type="unfinished">Locally trashed notes</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="42"/>
       <source>Name</source>
-      <translation>Meno</translation>
+      <translation type="unfinished">Name</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="47"/>
       <source>Trashed</source>
-      <translation>Ožralý</translation>
+      <translation type="unfinished">Trashed</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="41"/>
       <source>Restore</source>
-      <translation>Obnoviť</translation>
+      <translation type="unfinished">Restore</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="42"/>
       <location filename="../dialogs/localtrashdialog.cpp" line="194"/>
       <source>Restore selected notes</source>
-      <translation>Obnoviť vybraté poznámky</translation>
+      <translation type="unfinished">Restore selected notes</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="51"/>
       <source>Remove</source>
-      <translation>Odstrániť</translation>
+      <translation type="unfinished">Remove</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="52"/>
       <location filename="../dialogs/localtrashdialog.cpp" line="240"/>
       <source>Remove selected notes</source>
-      <translation>Odstránenie vybratej poznámky</translation>
+      <translation type="unfinished">Remove selected notes</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="97"/>
       <source>File will be restored to: %1</source>
-      <translation>Súbor sa obnoví: %1</translation>
+      <translation type="unfinished">File will be restored to: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="106"/>
       <source>File &lt;strong&gt;%1&lt;/strong&gt; isn't readable and can't be restored!</source>
-      <translation>Súbor &lt;strong&gt;%1&lt;/strong&gt; nečitateľný a nemôžu byť obnovené!</translation>
+      <translation type="unfinished">File &lt;strong&gt;%1&lt;/strong&gt; isn't readable and can't be restored!</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="195"/>
@@ -833,21 +823,17 @@
       <translation type="unfinished">
         <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
         <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
-        <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
-        <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="218"/>
       <source>Notes restored</source>
-      <translation>Konštatuje obnovený</translation>
+      <translation type="unfinished">Notes restored</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="219"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</source>
       <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</numerusform>
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</numerusform>
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</numerusform>
       </translation>
@@ -858,21 +844,17 @@
       <translation type="unfinished">
         <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
         <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="264"/>
       <source>Notes removed</source>
-      <translation>Poznámky boli odstránené</translation>
+      <translation type="unfinished">Notes removed</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="265"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</source>
       <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</numerusform>
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</numerusform>
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</numerusform>
       </translation>
@@ -883,58 +865,58 @@
     <message>
       <location filename="../widgets/logwidget.ui" line="26"/>
       <source>Logs</source>
-      <translation>Denníky</translation>
+      <translation type="unfinished">Logs</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="114"/>
       <source>Fatal</source>
-      <translation>Smrteľné</translation>
+      <translation type="unfinished">Fatal</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="100"/>
       <source>Warning</source>
-      <translation>Upozornenie</translation>
+      <translation type="unfinished">Warning</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="107"/>
       <source>Critical</source>
-      <translation>Kritické</translation>
+      <translation type="unfinished">Critical</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="86"/>
       <source>Debug</source>
-      <translation>Debug</translation>
+      <translation type="unfinished">Debug</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="93"/>
       <source>Info</source>
-      <translation>Info</translation>
+      <translation type="unfinished">Info</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="121"/>
       <source>Status</source>
-      <translation>Postavenie</translation>
+      <translation type="unfinished">Status</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="128"/>
       <source>Scripting</source>
-      <translation>Skriptovanie</translation>
+      <translation type="unfinished">Scripting</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="135"/>
       <location filename="../widgets/logwidget.cpp" line="418"/>
       <source>Clear log</source>
-      <translation>Vymazať denník</translation>
+      <translation type="unfinished">Clear log</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.cpp" line="416"/>
       <source>Show options</source>
-      <translation>Zobraziť možnosti</translation>
+      <translation type="unfinished">Show options</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.cpp" line="416"/>
       <source>Hide options</source>
-      <translation>Skryť možnosti</translation>
+      <translation type="unfinished">Hide options</translation>
     </message>
   </context>
   <context>
@@ -942,809 +924,809 @@
     <message>
       <location filename="../mainwindow.ui" line="683"/>
       <source>Add tag</source>
-      <translation>Pridať značku</translation>
+      <translation type="unfinished">Add tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="408"/>
       <location filename="../mainwindow.ui" line="893"/>
       <location filename="../mainwindow.cpp" line="692"/>
       <source>Navigation</source>
-      <translation>Navigácia</translation>
+      <translation type="unfinished">Navigation</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="391"/>
       <source>Find navigation item</source>
-      <translation>Vyhľadajte navigačnú položku</translation>
+      <translation type="unfinished">Find navigation item</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="680"/>
       <location filename="../mainwindow.cpp" line="7632"/>
       <source>Add a tag to the current note</source>
-      <translation>Pridajte značku do aktuálnej poznámky</translation>
+      <translation type="unfinished">Add a tag to the current note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="850"/>
       <source>&amp;Note</source>
-      <translation>&amp;Poznámka</translation>
+      <translation type="unfinished">&amp;Note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="854"/>
       <source>Note &amp;folders</source>
-      <translation>&amp;Zložky s poznámkami</translation>
+      <translation type="unfinished">Note &amp;folders</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="859"/>
       <source>Sort by</source>
-      <translation>Triediť podľa</translation>
+      <translation type="unfinished">Sort by</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="965"/>
       <source>&amp;Help</source>
-      <translation>&amp;Pomoc</translation>
+      <translation type="unfinished">&amp;Help</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1106"/>
       <source>Editor width in distraction free mode</source>
-      <translation>Šírka editora v režime bez rušenia</translation>
+      <translation type="unfinished">Editor width in distraction free mode</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1109"/>
       <source>Editor width</source>
-      <translation>Šírka editora</translation>
+      <translation type="unfinished">Editor width</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1193"/>
       <source>Custom actions</source>
-      <translation>Vlastné akcie</translation>
+      <translation type="unfinished">Custom actions</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1213"/>
       <source>main toolbar</source>
-      <translation>hlavného panela nástrojov</translation>
+      <translation type="unfinished">main toolbar</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1247"/>
       <source>&amp;Quit</source>
-      <translation>&amp;Ukončite</translation>
+      <translation type="unfinished">&amp;Quit</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1262"/>
       <source>&amp;Setup note folders</source>
-      <translation>&amp;Nastavenie priečinkov s poznámkami</translation>
+      <translation type="unfinished">&amp;Setup note folders</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1271"/>
       <source>&amp;Find note</source>
-      <translation>&amp;Nájsť poznámku</translation>
+      <translation type="unfinished">&amp;Find note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1283"/>
       <source>&amp;Remove current note</source>
-      <translation>&amp;Odstrániť aktuálnu poznámku</translation>
+      <translation type="unfinished">&amp;Remove current note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1307"/>
       <source>&amp;New note</source>
-      <translation>&amp;Nová poznámka</translation>
+      <translation type="unfinished">&amp;New note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1319"/>
       <source>Check for &amp;updates</source>
-      <translation>Skontroluj &amp;aktualizácie</translation>
+      <translation type="unfinished">Check for &amp;updates</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1331"/>
       <source>Post questions, feature requests or issues</source>
-      <translation>Otázky, požiadavky na funkcie alebo otázky</translation>
+      <translation type="unfinished">Post questions, feature requests or issues</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1342"/>
       <source>Alphabetical</source>
-      <translation>Abecedne</translation>
+      <translation type="unfinished">Alphabetical</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1345"/>
       <source>Sort alphabetical</source>
-      <translation>Zoradiť abecedne</translation>
+      <translation type="unfinished">Sort alphabetical</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1353"/>
       <source>By date</source>
-      <translation>Podľa dátumu</translation>
+      <translation type="unfinished">By date</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1356"/>
       <source>Sort by date</source>
-      <translation>Zoradiť podľa dátumu</translation>
+      <translation type="unfinished">Sort by date</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1380"/>
       <source>Show note &amp;versions</source>
-      <translation>Zobraziť verzie &amp;poznámok</translation>
+      <translation type="unfinished">Show note &amp;versions</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1383"/>
       <source>Show note versions on server</source>
-      <translation>Zobrazenie verzií poznámok na serveri</translation>
+      <translation type="unfinished">Show note versions on server</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1395"/>
       <source>Show trashed notes on server</source>
-      <translation>Zobraziť poznámky na serveri</translation>
+      <translation type="unfinished">Show trashed notes on server</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1400"/>
       <location filename="../mainwindow.cpp" line="9087"/>
       <source>Select &amp;all notes</source>
-      <translation>Vyberte &amp;všetky poznámky</translation>
+      <translation type="unfinished">Select &amp;all notes</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1409"/>
       <location filename="../mainwindow.cpp" line="5751"/>
       <source>Insert &amp;link</source>
-      <translation>Vložiť &amp;odkaz</translation>
+      <translation type="unfinished">Insert &amp;link</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1412"/>
       <source>Insert link to an url or a note</source>
-      <translation>Vložte odkaz na adresu Url alebo poznámku</translation>
+      <translation type="unfinished">Insert link to an url or a note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1424"/>
       <source>&amp;Find in current note</source>
-      <translation>&amp;Nájsť v aktuálnej poznámke</translation>
+      <translation type="unfinished">&amp;Find in current note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1427"/>
       <source>Find text in current note</source>
-      <translation>Vyhľadanie textu v aktuálnej poznámke</translation>
+      <translation type="unfinished">Find text in current note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1440"/>
       <source>&amp;Duplicate text</source>
-      <translation>&amp;Duplicitný text</translation>
+      <translation type="unfinished">&amp;Duplicate text</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1452"/>
       <source>&amp;Back in note history</source>
-      <translation>&amp;Späť v histórii poznámok</translation>
+      <translation type="unfinished">&amp;Back in note history</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1365"/>
       <source>&amp;Settings</source>
-      <translation>&amp;Nastavenia</translation>
+      <translation type="unfinished">&amp;Settings</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="119"/>
       <source>Find or create note sub folder</source>
-      <translation>Nájdite alebo vytvorte podpriečinok s poznámkami</translation>
+      <translation type="unfinished">Find or create note sub folder</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="196"/>
       <source>Find or create tag</source>
-      <translation>Nájsť alebo vytvoriť značku</translation>
+      <translation type="unfinished">Find or create tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="292"/>
       <source>Search for notes or create new notes by entering text and pressing return</source>
-      <translation>Vyhľadávaním poznámok alebo vytváraním nových poznámok zadávaním textu a stlačením klávesu return</translation>
+      <translation type="unfinished">Search for notes or create new notes by entering text and pressing return</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="306"/>
       <source>Search or create note</source>
-      <translation>Vyhľadajte alebo vytvorte poznámku</translation>
+      <translation type="unfinished">Search or create note</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7633"/>
       <source>Add a tag to the selected notes</source>
-      <translation>Pridajte značku do vybratých poznámok</translation>
+      <translation type="unfinished">Add a tag to the selected notes</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="694"/>
       <source>New tag</source>
-      <translation>Nová značka</translation>
+      <translation type="unfinished">New tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="869"/>
       <location filename="../mainwindow.cpp" line="5798"/>
       <source>Export</source>
-      <translation>Export</translation>
+      <translation type="unfinished">Export</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="882"/>
       <source>Import</source>
-      <translation>Import</translation>
+      <translation type="unfinished">Import</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="906"/>
       <location filename="../mainwindow.cpp" line="5780"/>
       <source>Print</source>
-      <translation>Vytlačiť</translation>
+      <translation type="unfinished">Print</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="917"/>
       <source>View note</source>
-      <translation>Zobraziť poznámku</translation>
+      <translation type="unfinished">View note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="929"/>
       <source>Trash</source>
-      <translation>Smeti</translation>
+      <translation type="unfinished">Trash</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="995"/>
       <source>&amp;Edit</source>
-      <translation>&amp;Editovať</translation>
+      <translation type="unfinished">&amp;Edit</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="999"/>
       <source>Insert</source>
-      <translation>Insert</translation>
+      <translation type="unfinished">Insert</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1016"/>
       <source>Format</source>
-      <translation>Formát</translation>
+      <translation type="unfinished">Format</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1029"/>
       <source>Extra</source>
-      <translation>Extra</translation>
+      <translation type="unfinished">Extra</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1045"/>
       <source>Edit</source>
-      <translation>Editovať</translation>
+      <translation type="unfinished">Edit</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1058"/>
       <source>Versioning</source>
-      <translation>Verzovania</translation>
+      <translation type="unfinished">Versioning</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1069"/>
       <source>Encryption</source>
-      <translation>Šifrovanie</translation>
+      <translation type="unfinished">Encryption</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1096"/>
       <source>To&amp;do</source>
-      <translation>Ro&amp;biť</translation>
+      <translation type="unfinished">To&amp;do</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1102"/>
       <source>&amp;Window</source>
-      <translation>&amp;okno</translation>
+      <translation type="unfinished">&amp;Window</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1118"/>
       <location filename="../mainwindow.cpp" line="631"/>
       <source>Workspaces</source>
-      <translation>Pracovnej plochy</translation>
+      <translation type="unfinished">Workspaces</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1123"/>
       <source>Panels</source>
-      <translation>Panely</translation>
+      <translation type="unfinished">Panels</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1128"/>
       <source>Toolbars</source>
-      <translation>Panely nástrojov</translation>
+      <translation type="unfinished">Toolbars</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1133"/>
       <source>Show</source>
       <extracomment>To show or hide stuff</extracomment>
-      <translation>Šou</translation>
+      <translation type="unfinished">Show</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1147"/>
       <source>Workspace</source>
-      <translation>Pracovná plocha</translation>
+      <translation type="unfinished">Workspace</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1156"/>
       <source>Jump to</source>
-      <translation>Skoč do</translation>
+      <translation type="unfinished">Jump to</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1189"/>
       <source>&amp;Scripting</source>
-      <translation>&amp; Skriptovanie</translation>
+      <translation type="unfinished">&amp;Scripting</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1295"/>
       <source>About &amp;QOwnNotes…</source>
-      <translation>O službe &amp;QOwnNotes…</translation>
+      <translation type="unfinished">About &amp;QOwnNotes…</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1334"/>
       <source>Post questions, feature requests or problems with the help of the issue assistant</source>
-      <translation>Otázky, požiadavky na funkcie alebo problémy odosielajte s pomocou asistenta</translation>
+      <translation type="unfinished">Post questions, feature requests or problems with the help of the issue assistant</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1392"/>
       <source>Show remote trash</source>
-      <translation>Zobraziť vzdialený odpad</translation>
+      <translation type="unfinished">Show remote trash</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1432"/>
       <location filename="../mainwindow.ui" line="1435"/>
       <source>Auto format table</source>
-      <translation>Tabuľka automatického formátu</translation>
+      <translation type="unfinished">Auto format table</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1464"/>
       <source>Forward in note history</source>
-      <translation>Vpred v histórii poznámok</translation>
+      <translation type="unfinished">Forward in note history</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1476"/>
       <source>Show shortcuts</source>
-      <translation>Zobraziť skratky</translation>
+      <translation type="unfinished">Show shortcuts</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1485"/>
       <source>&amp;Knowledge base</source>
-      <translation>&amp;Vedomostná základňa</translation>
+      <translation type="unfinished">&amp;Knowledge base</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1494"/>
       <source>Insert current &amp;time</source>
-      <translation>Vložte aktuálny &amp;čas</translation>
+      <translation type="unfinished">Insert current &amp;time</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1506"/>
       <source>Show &amp;Todo List</source>
-      <translation>Show zoznam &amp;Todo</translation>
+      <translation type="unfinished">Show &amp;Todo List</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1518"/>
       <source>&amp;Export note as PDF (preview)</source>
-      <translation>&amp;Exportovať poznámku vo formáte PDF (náhľad)</translation>
+      <translation type="unfinished">&amp;Export note as PDF (preview)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1521"/>
       <source>Export note as PDF (preview)</source>
-      <translation>Exportovať poznámku vo formáte PDF (náhľad)</translation>
+      <translation type="unfinished">Export note as PDF (preview)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1530"/>
       <source>&amp;Export note as PDF (text)</source>
-      <translation>&amp;Exportovať poznámku vo formáte PDF (text)</translation>
+      <translation type="unfinished">&amp;Export note as PDF (text)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1539"/>
       <source>&amp;Print note (text)</source>
-      <translation>&amp;Vytlačiť poznámku (text)</translation>
+      <translation type="unfinished">&amp;Print note (text)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1563"/>
       <source>Insert &amp;image</source>
-      <translation>Vložiť a obrázok</translation>
+      <translation type="unfinished">Insert &amp;image</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1566"/>
       <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
-      <translation>Vložiť obrázok (obrázok sa skopíruje do priečinka `media` v aktuálnom priečinku s poznámkami)</translation>
+      <translation type="unfinished">Insert image (the image will be copied to the `media` folder in the current notes folder)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1578"/>
       <source>Show &amp;changelog</source>
-      <translation>Zobraziť &amp;changelog</translation>
+      <translation type="unfinished">Show &amp;changelog</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1587"/>
       <source>&amp;Encrypt note</source>
-      <translation>&amp;Zašifrovať poznámku</translation>
+      <translation type="unfinished">&amp;Encrypt note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1596"/>
       <source>Edit encrypted note</source>
-      <translation>Upravte šifrovanú poznámku</translation>
+      <translation type="unfinished">Edit encrypted note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1608"/>
       <source>Decrypt note</source>
-      <translation>Dešifrovať poznámku</translation>
+      <translation type="unfinished">Decrypt note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1617"/>
       <source>&amp;Open note in external editor</source>
-      <translation>&amp;Otvoriť poznámku v externý editor</translation>
+      <translation type="unfinished">&amp;Open note in external editor</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1629"/>
       <source>&amp;Export note as markdown file</source>
-      <translation>&amp;Export poznámky ako súbor markdown</translation>
+      <translation type="unfinished">&amp;Export note as markdown file</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1638"/>
       <source>&amp;Get involved</source>
-      <translation>&amp;Zapojiť</translation>
+      <translation type="unfinished">&amp;Get involved</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1647"/>
       <source>Insert &amp;code block</source>
-      <translation>Vložte &amp;kódový blok</translation>
+      <translation type="unfinished">Insert &amp;code block</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1659"/>
       <source>Next note</source>
-      <translation>Ďalšia poznámka</translation>
+      <translation type="unfinished">Next note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1671"/>
       <source>Previous note</source>
-      <translation>Predchádzajúca poznámka</translation>
+      <translation type="unfinished">Previous note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1683"/>
       <source>&amp;Distraction free mode</source>
-      <translation>&amp;Rozptýlenie voľný režim</translation>
+      <translation type="unfinished">&amp;Distraction free mode</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1686"/>
       <source>Distraction free mode, you can leave it with a button on the bottom right</source>
-      <translation>Režim bez rozptýlenia, môžete ho nechať pomocou tlačidla v pravom dolnom rohu</translation>
+      <translation type="unfinished">Distraction free mode, you can leave it with a button on the bottom right</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1697"/>
       <source>Show &amp;toolbar</source>
-      <translation>Zobraziť &amp;panel s nástrojmi</translation>
+      <translation type="unfinished">Show &amp;toolbar</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1705"/>
       <source>Narrow</source>
-      <translation>Úzky</translation>
+      <translation type="unfinished">Narrow</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1716"/>
       <source>Medium</source>
-      <translation>Stredná</translation>
+      <translation type="unfinished">Medium</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1727"/>
       <source>Wide</source>
-      <translation>Široký</translation>
+      <translation type="unfinished">Wide</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1738"/>
       <source>Full</source>
-      <translation>Plné</translation>
+      <translation type="unfinished">Full</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1750"/>
       <source>Paste html or media</source>
-      <translation>Vložte html alebo médium</translation>
+      <translation type="unfinished">Paste html or media</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1753"/>
       <location filename="../mainwindow.ui" line="1756"/>
       <source>Paste images, notes and html from the clipboard</source>
-      <translation>Prilepte obrázky, poznámky a html zo schránky</translation>
+      <translation type="unfinished">Paste images, notes and html from the clipboard</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1768"/>
       <source>Show note in &amp;file manager</source>
-      <translation>Zobraziť poznámku v &amp;správcovi súborov</translation>
+      <translation type="unfinished">Show note in &amp;file manager</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1780"/>
       <source>Format text &amp;bold</source>
-      <translation>Formátovanie textu &amp;tučné</translation>
+      <translation type="unfinished">Format text &amp;bold</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1792"/>
       <source>Format text &amp;italic</source>
-      <translation>Formátovanie textu &amp;kurzíva</translation>
+      <translation type="unfinished">Format text &amp;italic</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1804"/>
       <source>&amp;Increase note text size</source>
-      <translation>&amp;Zvýšte veľkosť textu poznámky</translation>
+      <translation type="unfinished">&amp;Increase note text size</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1816"/>
       <source>&amp;Decrease note text size</source>
-      <translation>&amp;Zmenšiť veľkosť textu poznámky</translation>
+      <translation type="unfinished">&amp;Decrease note text size</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1828"/>
       <source>&amp;Reset note text size</source>
-      <translation>&amp;Vynulovať veľkosť textu poznámky</translation>
+      <translation type="unfinished">&amp;Reset note text size</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1840"/>
       <source>&amp;Add tag to note</source>
-      <translation>&amp;Pridať značku do poznámky</translation>
+      <translation type="unfinished">&amp;Add tag to note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1852"/>
       <source>&amp;Reload note folder</source>
-      <translation>&amp;Reload poznámka priečinka</translation>
+      <translation type="unfinished">&amp;Reload note folder</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1924"/>
       <source>Show log</source>
-      <translation>Zobraz denník</translation>
+      <translation type="unfinished">Show log</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1933"/>
       <source>Export note as HTML</source>
-      <translation>Exportovať poznámku ako HTML</translation>
+      <translation type="unfinished">Export note as HTML</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2012"/>
       <source>Cycle text case</source>
-      <translation>Cyklus text prípad</translation>
+      <translation type="unfinished">Cycle text case</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2085"/>
       <source>Show note list under tag panel</source>
-      <translation>Zobraziť zoznam poznámok pod panelom s menovkami</translation>
+      <translation type="unfinished">Show note list under tag panel</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2103"/>
       <source>Find notes in all tags / subfolders</source>
-      <translation>Nájsť poznámky vo všetkých tagoch / podpriečinkoch</translation>
+      <translation type="unfinished">Find notes in all tags / subfolders</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2124"/>
       <source>Import notes from text files</source>
-      <translation>Importujte poznámky z textových súborov</translation>
+      <translation type="unfinished">Import notes from text files</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2133"/>
       <source>Manage orphaned image files</source>
-      <translation>Spravovať osirelé obrazové súbory</translation>
+      <translation type="unfinished">Manage orphaned image files</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2145"/>
       <location filename="../mainwindow.ui" line="2148"/>
       <source>Open the Telegram group</source>
-      <translation>Otvorte skupinu Telegram</translation>
+      <translation type="unfinished">Open the Telegram group</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2175"/>
       <source>Unlock panels</source>
-      <translation>Uvoľnenie panelov</translation>
+      <translation type="unfinished">Unlock panels</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2184"/>
       <location filename="../mainwindow.cpp" line="10078"/>
       <source>Remove current workspace</source>
-      <translation>Odstrániť aktuálny pracovný priestor</translation>
+      <translation type="unfinished">Remove current workspace</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2193"/>
       <source>Add new workspace</source>
-      <translation>Pridať nový pracovný priestor</translation>
+      <translation type="unfinished">Add new workspace</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2202"/>
       <source>Rename current workspace</source>
-      <translation>Premenujte aktuálny pracovný priestor</translation>
+      <translation type="unfinished">Rename current workspace</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2211"/>
       <source>Switch to previous workspace</source>
-      <translation>Prepnúť do predchádzajúceho pracovného priestoru</translation>
+      <translation type="unfinished">Switch to previous workspace</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2219"/>
       <source>Show all panels</source>
-      <translation>Zobraziť všetky panely</translation>
+      <translation type="unfinished">Show all panels</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2228"/>
       <source>Find action</source>
-      <translation>Nájsť akcia</translation>
+      <translation type="unfinished">Find action</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2231"/>
       <location filename="../mainwindow.ui" line="2234"/>
       <source>Find an action from the menu</source>
-      <translation>Nájdite akciu z ponuky</translation>
+      <translation type="unfinished">Find an action from the menu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2246"/>
       <source>Insert table</source>
-      <translation>Vloženie tabuľky</translation>
+      <translation type="unfinished">Insert table</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2258"/>
       <location filename="../mainwindow.cpp" line="5758"/>
       <source>Insert block &amp;quote</source>
-      <translation>Vložiť blok &amp;citácie</translation>
+      <translation type="unfinished">Insert block &amp;quote</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2266"/>
       <location filename="../mainwindow.ui" line="2269"/>
       <source>Search selected text on the web</source>
-      <translation>Hľadať vybraný text na webe</translation>
+      <translation type="unfinished">Search selected text on the web</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2277"/>
       <source>Delete line</source>
-      <translation>Odstrániť riadok</translation>
+      <translation type="unfinished">Delete line</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2285"/>
       <source>Delete word</source>
-      <translation>Odstráňte slovo</translation>
+      <translation type="unfinished">Delete word</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2293"/>
       <source>Copy note headline</source>
-      <translation>Kopírovať titulok poznámky</translation>
+      <translation type="unfinished">Copy note headline</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2305"/>
       <location filename="../mainwindow.cpp" line="9062"/>
       <source>Open note in different window</source>
-      <translation>Otvorte poznámku v inom okne</translation>
+      <translation type="unfinished">Open note in different window</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2317"/>
       <source>Save modified notes</source>
-      <translation>Uložte zmenené poznámky</translation>
+      <translation type="unfinished">Save modified notes</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2328"/>
       <source>Ascending</source>
-      <translation>Stúpajúca</translation>
+      <translation type="unfinished">Ascending</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2336"/>
       <source>Descending</source>
-      <translation>Zostupne</translation>
+      <translation type="unfinished">Descending</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2345"/>
       <location filename="../mainwindow.cpp" line="9070"/>
       <source>Show note git versions</source>
-      <translation>Zobraziť Poznámka: git verzie</translation>
+      <translation type="unfinished">Show note git versions</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2354"/>
       <source>Find scripts in script repository</source>
-      <translation>Nájdite skripty v skripte</translation>
+      <translation type="unfinished">Find scripts in script repository</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2366"/>
       <source>Script settings</source>
-      <translation>Skript nastavenia</translation>
+      <translation type="unfinished">Script settings</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2375"/>
       <source>Insert attachment</source>
-      <translation>Vložiť prílohu</translation>
+      <translation type="unfinished">Insert attachment</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2402"/>
       <source>Check for script updates</source>
-      <translation>Vyhľadanie aktualizácií skriptu</translation>
+      <translation type="unfinished">Check for script updates</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2411"/>
       <source>Show local trash</source>
-      <translation>Zobraziť lokálne koša</translation>
+      <translation type="unfinished">Show local trash</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2416"/>
       <location filename="../mainwindow.ui" line="2419"/>
       <source>Jump to note edit panel</source>
-      <translation>Prejsť na panel úprav poznámok</translation>
+      <translation type="unfinished">Jump to note edit panel</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2431"/>
       <source>Manage orphaned attachments</source>
-      <translation>Správa osirotených príloh</translation>
+      <translation type="unfinished">Manage orphaned attachments</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2436"/>
       <source>Jump to note subfolder panel</source>
-      <translation>Skočiť na panel podpriečinkov s poznámkami</translation>
+      <translation type="unfinished">Jump to note subfolder panel</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2444"/>
       <source>Jump to tags panel</source>
-      <translation>Prejsť na panel s menovkami</translation>
+      <translation type="unfinished">Jump to tags panel</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2452"/>
       <source>Jump to note list panel</source>
-      <translation>Prejsť na panel zoznamu poznámok</translation>
+      <translation type="unfinished">Jump to note list panel</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2460"/>
       <source>Activate context menu</source>
-      <translation>Aktivujte kontextové menu</translation>
+      <translation type="unfinished">Activate context menu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1863"/>
       <source>Use &amp;vertical preview layout</source>
-      <translation>Použite &amp;vertikálne rozloženie náhľadu</translation>
+      <translation type="unfinished">Use &amp;vertical preview layout</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1866"/>
       <location filename="../mainwindow.ui" line="1869"/>
       <source>The note edit panel will be above the preview panel</source>
-      <translation>Panel úprav poznámok bude nad panelom náhľadu</translation>
+      <translation type="unfinished">The note edit panel will be above the preview panel</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1878"/>
       <source>Replace in current note</source>
-      <translation>Nahradiť aktuálne poznámky</translation>
+      <translation type="unfinished">Replace in current note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1886"/>
       <source>Autocomplete, solve equation or open URL</source>
-      <translation>Automatické dopĺňanie, riešenie rovnice alebo otvorenej adresy URL</translation>
+      <translation type="unfinished">Autocomplete, solve equation or open URL</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1889"/>
       <source>Solve a simple equation like '(2+3)*6=' in the current line</source>
-      <translation>Vyriešte jednoduchú rovnicu ako '(2 + 3) * 6 =' v aktuálnom riadku</translation>
+      <translation type="unfinished">Solve a simple equation like '(2+3)*6=' in the current line</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1897"/>
       <source>Select note folder</source>
-      <translation>Vyberte priečinok s poznámkami</translation>
+      <translation type="unfinished">Select note folder</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1912"/>
       <source>Reload scripting engine</source>
-      <translation>Znova načítajte skriptovací stroj</translation>
+      <translation type="unfinished">Reload scripting engine</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1945"/>
       <location filename="../mainwindow.ui" line="1948"/>
       <source>Open the #qownnotes IRC channel, you have to stay online to get a response</source>
-      <translation>Otvorte #qownnotes IRC kanál, musíte byť online, aby ste dostali odpoveď</translation>
+      <translation type="unfinished">Open the #qownnotes IRC channel, you have to stay online to get a response</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2160"/>
       <location filename="../mainwindow.ui" line="2163"/>
       <source>Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</source>
-      <translation>Otvorte miestnosť qownnotes Gitter, na prihlásenie potrebujete účet GitHub alebo Twitter, ale môžete získať správy offline</translation>
+      <translation type="unfinished">Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="969"/>
       <source>Open chat</source>
-      <translation>Otvoriť chat</translation>
+      <translation type="unfinished">Open chat</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="510"/>
       <source>Note operations…</source>
-      <translation>Poznámka: operácie…</translation>
+      <translation type="unfinished">Note operations…</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1551"/>
       <source>&amp;Print note (preview)</source>
-      <translation>&amp; Vytlačenie poznámky (Ukážka)</translation>
+      <translation type="unfinished">&amp;Print note (preview)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1957"/>
       <source>Insert headline from note filename</source>
-      <translation>Vložte nadpis z názvu súboru s poznámkou</translation>
+      <translation type="unfinished">Insert headline from note filename</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1971"/>
       <source>Use softwrap in note editor and preview</source>
-      <translation>Použite softwrap v editore poznámok a náhľad</translation>
+      <translation type="unfinished">Use softwrap in note editor and preview</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1979"/>
       <source>Show status bar</source>
-      <translation>Zobraziť stavový riadok</translation>
+      <translation type="unfinished">Show status bar</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1994"/>
       <source>Share note</source>
-      <translation>Poznámka k zdieľaniu</translation>
+      <translation type="unfinished">Share note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2024"/>
@@ -1754,63 +1736,61 @@
     <message>
       <location filename="../mainwindow.ui" line="2033"/>
       <source>Strike out text</source>
-      <translation>Vyčiarknutie textu</translation>
+      <translation type="unfinished">Strike out text</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2044"/>
       <source>Use one column mode</source>
-      <translation>Použite jeden režim stĺpca</translation>
+      <translation type="unfinished">Use one column mode</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2047"/>
       <location filename="../mainwindow.ui" line="2050"/>
       <source>Use a one column minimal mode (like NVAlt)</source>
-      <translation>Použiť minimálny režim v jednom stĺpci (ako napríklad NVAlt)</translation>
+      <translation type="unfinished">Use a one column minimal mode (like NVAlt)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2062"/>
       <source>Show menu bar</source>
-      <translation>Zobraziť panel s ponukami</translation>
+      <translation type="unfinished">Show menu bar</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2074"/>
       <source>Split note at cursor position</source>
-      <translation>Rozdeliť poznámku na pozícii kurzora</translation>
+      <translation type="unfinished">Split note at cursor position</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2094"/>
       <source>Donate</source>
-      <translation>Darovať</translation>
+      <translation type="unfinished">Donate</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2115"/>
       <source>Import notes from Evernote</source>
-      <translation>Dovozné poznámok z Evernote</translation>
+      <translation type="unfinished">Import notes from Evernote</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2571"/>
       <source>Note was removed externally!</source>
-      <translation>Poznámka bol odstránený externe!</translation>
+      <translation type="unfinished">Note was removed externally!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2572"/>
       <source>Current note was removed outside of this application!
 Restore current note?</source>
-      <translation>Aktuálna poznámka bola odstránená mimo tejto aplikácie!
-Obnoviť aktuálnu poznámku?</translation>
+      <translation type="unfinished">Current note was removed outside of this application!
+Restore current note?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4840"/>
       <location filename="../mainwindow.cpp" line="6192"/>
       <location filename="../mainwindow.cpp" line="9149"/>
       <source>&amp;Cancel</source>
-      <translation>&amp;Zrušiť</translation>
+      <translation type="unfinished">&amp;Cancel</translation>
     </message>
     <message numerus="yes">
       <source>stored %n note(s) to disk</source>
       <translation type="unfinished">
-        <numerusform>stored %n note(s) to disk</numerusform>
-        <numerusform>stored %n note(s) to disk</numerusform>
         <numerusform>stored %n note(s) to disk</numerusform>
         <numerusform>stored %n note(s) to disk</numerusform>
       </translation>
@@ -1818,62 +1798,62 @@ Obnoviť aktuálnu poznámku?</translation>
     <message>
       <location filename="../mainwindow.cpp" line="2796"/>
       <source>new version %1 available</source>
-      <translation>nová verzia %1 k dispozícii</translation>
+      <translation type="unfinished">new version %1 available</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3211"/>
       <source>Please select the folder where your notes will get stored</source>
-      <translation>Vyberte priečinok, do ktorého sa uložia poznámky</translation>
+      <translation type="unfinished">Please select the folder where your notes will get stored</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3238"/>
       <source>No folder was selected</source>
-      <translation>Žiadna zložka bola vybraná</translation>
+      <translation type="unfinished">No folder was selected</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3240"/>
       <source>You have to select your ownCloud notes folder to make this software work!</source>
-      <translation>Ak chcete, aby tento softvér fungoval, musíte vybrať priečinok s vlastnými poznámkami!</translation>
+      <translation type="unfinished">You have to select your ownCloud notes folder to make this software work!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3242"/>
       <source>&amp;Retry</source>
-      <translation>&amp;Znova</translation>
+      <translation type="unfinished">&amp;Retry</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3242"/>
       <source>&amp;Exit</source>
-      <translation>&amp;Výstupu</translation>
+      <translation type="unfinished">&amp;Exit</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3449"/>
       <source>Remove current note</source>
-      <translation>Odstrániť aktuálnu poznámku</translation>
+      <translation type="unfinished">Remove current note</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3450"/>
       <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation>Odstrániť aktuálnu poznámku: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+      <translation type="unfinished">Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3773"/>
       <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
-      <translation>Zadajte prosím heslo &lt;strong&gt;&lt;/strong&gt; tejto zašifrovanej poznámky.</translation>
+      <translation type="unfinished">Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3797"/>
       <source>Note can't be decrypted!</source>
-      <translation>Poznámka sa nedá dešifrovať!</translation>
+      <translation type="unfinished">Note can't be decrypted!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3798"/>
       <source>It seems that your password is not valid!</source>
-      <translation>Zdá sa, že vaše heslo nie je platné!</translation>
+      <translation type="unfinished">It seems that your password is not valid!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3953"/>
       <source>Remove selected notes</source>
-      <translation>Odstráňte vybraté poznámky</translation>
+      <translation type="unfinished">Remove selected notes</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3955"/>
@@ -1887,19 +1867,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
-
-If the trash is enabled on your ownCloud server you should be able to restore them from there.</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
-
-If the trash is enabled on your ownCloud server you should be able to restore them from there.</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4034"/>
       <location filename="../mainwindow.cpp" line="9313"/>
       <source>Remove selected folders</source>
-      <translation>Remove selected folders</translation>
+      <translation type="unfinished">Remove selected folders</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4035"/>
@@ -1907,26 +1881,22 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation type="unfinished">
         <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
         <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4046"/>
       <source>Removed note subfolder: %1</source>
-      <translation>Odstránené podpriečinok poznámku: %1</translation>
+      <translation type="unfinished">Removed note subfolder: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4065"/>
       <source>Remove selected tags</source>
-      <translation>Odstrániť vybraté značky</translation>
+      <translation type="unfinished">Remove selected tags</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4066"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
       <translation type="unfinished">
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
         <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
         <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
       </translation>
@@ -1935,14 +1905,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="4120"/>
       <location filename="../mainwindow.cpp" line="8286"/>
       <source>Move selected notes</source>
-      <translation>Presunúť vybrané poznámky</translation>
+      <translation type="unfinished">Move selected notes</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4121"/>
       <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation type="unfinished">
-        <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
         <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
         <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
@@ -1951,14 +1919,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="4213"/>
       <location filename="../mainwindow.cpp" line="8370"/>
       <source>Copy selected notes</source>
-      <translation>Kopírovať vybrané poznámky</translation>
+      <translation type="unfinished">Copy selected notes</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4214"/>
       <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation type="unfinished">
-        <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
         <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
         <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
@@ -1967,7 +1933,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="4237"/>
       <location filename="../mainwindow.cpp" line="4375"/>
       <source>Done</source>
-      <translation>Hotovo</translation>
+      <translation type="unfinished">Done</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4238"/>
@@ -1975,14 +1941,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation type="unfinished">
         <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
         <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
-        <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
-        <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4251"/>
       <source>Tag selected notes</source>
-      <translation>Označiť vybrané poznámky</translation>
+      <translation type="unfinished">Tag selected notes</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4252"/>
@@ -1990,133 +1954,129 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation type="unfinished">
         <numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
         <numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4513"/>
       <source>Restart application</source>
-      <translation>Reštartujte aplikáciu</translation>
+      <translation type="unfinished">Restart application</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4519"/>
       <source>You may need to restart the application manually to let the changes take effect.</source>
-      <translation>Možno budete musieť manuálne reštartovať aplikáciu, aby sa zmeny prejavili.</translation>
+      <translation type="unfinished">You may need to restart the application manually to let the changes take effect.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4524"/>
       <source>You may need to restart the application to let the changes take effect.</source>
-      <translation>Možno budete musieť reštartovať aplikáciu, aby sa zmeny prejavili.</translation>
+      <translation type="unfinished">You may need to restart the application to let the changes take effect.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4526"/>
       <source>Restart</source>
-      <translation>Reštart</translation>
+      <translation type="unfinished">Restart</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4741"/>
       <source>PDF files</source>
-      <translation>PDF súbory</translation>
+      <translation type="unfinished">PDF files</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5435"/>
       <source>Note was not found</source>
-      <translation>Poznámka sa nenašla</translation>
+      <translation type="unfinished">Note was not found</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5436"/>
       <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation>Poznámka sa nenašla, vytvorte novú poznámku &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+      <translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5687"/>
       <source>Note versions are currently loaded from your ownCloud server</source>
-      <translation>Poznámka verzie sú aktuálne načítané zo servera ownCloud</translation>
+      <translation type="unfinished">Note versions are currently loaded from your ownCloud server</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5702"/>
       <source>Trashed notes are currently loaded from your ownCloud server</source>
-      <translation>Trashed poznámky sú v súčasnosti načítané z vášho servera ownCloud</translation>
+      <translation type="unfinished">Trashed notes are currently loaded from your ownCloud server</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5768"/>
       <source>Copy code block</source>
-      <translation>Kopírovať kódový blok</translation>
+      <translation type="unfinished">Copy code block</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5787"/>
       <source>Print selected text</source>
-      <translation>Vytlačiť vybraný text</translation>
+      <translation type="unfinished">Print selected text</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5793"/>
       <source>Print selected text (preview)</source>
-      <translation>Vytlačiť vybratý text (náhľad)</translation>
+      <translation type="unfinished">Print selected text (preview)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5809"/>
       <source>Export selected text as PDF</source>
-      <translation>Exportovať vybraný text vo formáte PDF</translation>
+      <translation type="unfinished">Export selected text as PDF</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5815"/>
       <source>Export selected text as PDF (preview)</source>
-      <translation>Exportovať vybraný text vo formáte PDF (náhľad)</translation>
+      <translation type="unfinished">Export selected text as PDF (preview)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5998"/>
       <source>Image files</source>
-      <translation>Obrazové súbory</translation>
+      <translation type="unfinished">Image files</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6188"/>
       <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
-      <translation>Vaša poznámka bude znova dešifrovaná a uložená ako obyčajný text. Majte na pamäti, že nezašifrovaná poznámka bude pravdepodobne synchronizovaná so serverom a citlivý text môže byť vystavený! &lt;br /&gt; Chcete dešifrovať poznámku?</translation>
+      <translation type="unfinished">Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6275"/>
       <source>Markdown files</source>
-      <translation>Markdown súbory</translation>
+      <translation type="unfinished">Markdown files</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6330"/>
       <source>Bookmarked note position at slot %1</source>
-      <translation>Záložkou nôt v slot %1</translation>
+      <translation type="unfinished">Bookmarked note position at slot %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6346"/>
       <source>Jumped to bookmark position at slot %1</source>
-      <translation>Skočil na záložku pozíciu v slot %1</translation>
+      <translation type="unfinished">Jumped to bookmark position at slot %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6566"/>
       <location filename="../mainwindow.cpp" line="6634"/>
       <source>Inserting image</source>
-      <translation>Vloženie obrázku</translation>
+      <translation type="unfinished">Inserting image</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6571"/>
       <location filename="../mainwindow.cpp" line="6637"/>
       <source>Done inserting image</source>
-      <translation>Dokončenie vloženia obrázka</translation>
+      <translation type="unfinished">Done inserting image</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6573"/>
       <source>Inserting attachment</source>
-      <translation>Vloženie prílohy</translation>
+      <translation type="unfinished">Inserting attachment</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6578"/>
       <source>Done inserting attachment</source>
-      <translation>Hotové vloženie prílohy</translation>
+      <translation type="unfinished">Done inserting attachment</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="6588"/>
       <source>Copied %n note(s) to %1</source>
       <translation type="unfinished">
-        <numerusform>Copied %n note(s) to %1</numerusform>
-        <numerusform>Copied %n note(s) to %1</numerusform>
         <numerusform>Copied %n note(s) to %1</numerusform>
         <numerusform>Copied %n note(s) to %1</numerusform>
       </translation>
@@ -2127,8 +2087,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation type="unfinished">
         <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
         <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
-        <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
-        <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -2137,228 +2095,222 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation type="unfinished">
         <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
         <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
-        <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
-        <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6621"/>
       <source>Saving temporary image</source>
-      <translation>Ukladanie dočasných obrázok</translation>
+      <translation type="unfinished">Saving temporary image</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6640"/>
       <source>Temporary file can't be opened</source>
-      <translation>Dočasný súbor sa nedá otvoriť</translation>
+      <translation type="unfinished">Temporary file can't be opened</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6681"/>
       <source>Downloading %1</source>
-      <translation>Sťahovanie %1</translation>
+      <translation type="unfinished">Downloading %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6862"/>
       <source>Reset font size to %1 pt</source>
       <comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
-      <translation>Obnoviť veľkosť písma na %1 pt</translation>
+      <translation type="unfinished">Reset font size to %1 pt</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7678"/>
       <source>Remove tag '%1' from the current note</source>
-      <translation>Z aktuálnej poznámky odstráňte značku „%1“</translation>
+      <translation type="unfinished">Remove tag '%1' from the current note</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7680"/>
       <source>Remove tag '%1' from the selected notes</source>
-      <translation>Odstráňte značku „%1“ z vybratých poznámok</translation>
+      <translation type="unfinished">Remove tag '%1' from the selected notes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7844"/>
       <source>Rename tag</source>
-      <translation>Premenovanie značky</translation>
+      <translation type="unfinished">Rename tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7845"/>
       <source>Assign color</source>
-      <translation>Priradenie farieb</translation>
+      <translation type="unfinished">Assign color</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7846"/>
       <source>Disable color</source>
-      <translation>Zakázať farbu</translation>
+      <translation type="unfinished">Disable color</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7850"/>
       <source>&amp;Move tags to…</source>
-      <translation>&amp;Presunúť značky do…</translation>
+      <translation type="unfinished">&amp;Move tags to…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8069"/>
       <source>Move to the root</source>
       <comment>to move a tag to the current tag in the tag context menu</comment>
-      <translation>Presuňte sa na koreň</translation>
+      <translation type="unfinished">Move to the root</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8512"/>
       <source>An url was opened at the current cursor position</source>
-      <translation>Na aktuálnej pozícii kurzora bola otvorená adresa Url</translation>
+      <translation type="unfinished">An url was opened at the current cursor position</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8613"/>
       <source>No equation was found in front of the cursor</source>
-      <translation>Pred kurzorom sa nenašla žiadna rovnica</translation>
+      <translation type="unfinished">No equation was found in front of the cursor</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8630"/>
       <source>Result for equation: %1 = %2</source>
-      <translation>Výsledok rovnice: %1 = %2</translation>
+      <translation type="unfinished">Result for equation: %1 = %2</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8731"/>
       <source>The scripting engine was reloaded</source>
-      <translation>Skriptovací nástroj bol reloaded</translation>
+      <translation type="unfinished">The scripting engine was reloaded</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8767"/>
       <source>HTML files</source>
-      <translation>Súbory HTML</translation>
+      <translation type="unfinished">HTML files</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8964"/>
       <location filename="../mainwindow.cpp" line="9132"/>
       <source>Rename note</source>
-      <translation>Premenovať poznámku</translation>
+      <translation type="unfinished">Rename note</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8965"/>
       <source>Allows you to rename the filename of the note</source>
-      <translation>Umožňuje premenovať názov súboru poznámky</translation>
+      <translation type="unfinished">Allows you to rename the filename of the note</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8977"/>
       <source>&amp;Move notes to…</source>
-      <translation>&amp;Presunúť poznámky…</translation>
+      <translation type="unfinished">&amp;Move notes to…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8978"/>
       <source>&amp;Copy notes to…</source>
-      <translation>&amp;Kopírovať poznámky…</translation>
+      <translation type="unfinished">&amp;Copy notes to…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9007"/>
       <source>Move notes to subfolder…</source>
-      <translation>Presunúť poznámky do podpriečinka…</translation>
+      <translation type="unfinished">Move notes to subfolder…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9011"/>
       <source>Copy notes to subfolder…</source>
-      <translation>Kopírovať poznámky do podpriečinka…</translation>
+      <translation type="unfinished">Copy notes to subfolder…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9019"/>
       <source>&amp;Tag selected notes with…</source>
-      <translation>&amp;Vybraný tag poznámky s…</translation>
+      <translation type="unfinished">&amp;Tag selected notes with…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9041"/>
       <source>&amp;Remove tag from selected notes…</source>
-      <translation>&amp;Odstránenie značky z vybratej poznámky…</translation>
+      <translation type="unfinished">&amp;Remove tag from selected notes…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9132"/>
       <source>Name:</source>
-      <translation>Meno:</translation>
+      <translation type="unfinished">Name:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9144"/>
       <source>Note renaming not enabled!</source>
-      <translation>Poznámka: premenovanie nie je povolené!</translation>
+      <translation type="unfinished">Note renaming not enabled!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9312"/>
       <source>Rename subfolder</source>
-      <translation>Premenovanie podpriečinok</translation>
+      <translation type="unfinished">Rename subfolder</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9858"/>
       <source>Create new workspace</source>
-      <translation>Vytvorenie nového pracovného priestoru</translation>
+      <translation type="unfinished">Create new workspace</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9858"/>
       <location filename="../mainwindow.cpp" line="10116"/>
       <source>Workspace name:</source>
-      <translation>Názov pracovného priestoru:</translation>
+      <translation type="unfinished">Workspace name:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9980"/>
       <source>full</source>
       <comment>full workspace</comment>
-      <translation>plné</translation>
+      <translation type="unfinished">full</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9987"/>
       <source>minimal</source>
       <comment>minimal workspace</comment>
-      <translation>minimálne</translation>
+      <translation type="unfinished">minimal</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10079"/>
       <source>Remove the current workspace?</source>
-      <translation>Odstrániť aktuálny pracovný priestor?</translation>
+      <translation type="unfinished">Remove the current workspace?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10116"/>
       <source>Rename workspace</source>
-      <translation>Premenovať pracovný priestor</translation>
+      <translation type="unfinished">Rename workspace</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="10251"/>
       <source>%n chars</source>
       <comment>characters</comment>
-      <translation>
-        <numerusform>%n znakov</numerusform>
-        <numerusform>%n znakov</numerusform>
-        <numerusform>%n znakov</numerusform>
-        <numerusform>%n znakov</numerusform>
+      <translation type="unfinished">
+        <numerusform>%n chars</numerusform>
+        <numerusform>%n chars</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10374"/>
       <source>Copy image file path</source>
-      <translation>Kopírovať obrázok súboru cestu</translation>
+      <translation type="unfinished">Copy image file path</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10513"/>
       <source>Select file to insert</source>
-      <translation>Vyberte súbor, ktorý chcete vložiť</translation>
+      <translation type="unfinished">Select file to insert</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10546"/>
       <source>Disallow all note editing</source>
-      <translation>Zakáže všetky úpravy poznámok</translation>
+      <translation type="unfinished">Disallow all note editing</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10686"/>
       <source>Select text files to import</source>
-      <translation>Vyberte položku textové súbory na import</translation>
+      <translation type="unfinished">Select text files to import</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10715"/>
       <source>Importing: %1</source>
-      <translation>Import: %1</translation>
+      <translation type="unfinished">Importing: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10778"/>
       <source>Note headline '%1' was copied to the clipboard</source>
-      <translation>Poznámka: titulok "%1" bola skopírovaná do schránky</translation>
+      <translation type="unfinished">Note headline '%1' was copied to the clipboard</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7651"/>
       <source>%n notes selected</source>
       <translation type="unfinished">
-        <numerusform>%n notes selected</numerusform>
-        <numerusform>%n notes selected</numerusform>
         <numerusform>%n notes selected</numerusform>
         <numerusform>%n notes selected</numerusform>
       </translation>
@@ -2367,24 +2319,22 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.ui" line="2390"/>
       <location filename="../mainwindow.cpp" line="10547"/>
       <source>Allow all note editing</source>
-      <translation>Povoliť všetky úpravy poznámok</translation>
+      <translation type="unfinished">Allow all note editing</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1183"/>
       <source>&amp;Tag</source>
-      <translation>&amp;Tag</translation>
+      <translation type="unfinished">&amp;Tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4320"/>
       <source>Remove tag from selected notes</source>
-      <translation>Odstránenie značky z vybratých poznámok</translation>
+      <translation type="unfinished">Remove tag from selected notes</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4321"/>
       <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
       <translation type="unfinished">
-        <numerusform>Odstrániť tag &lt;strong&gt;%1&lt;/strong&gt; %n vybraných poznámok?</numerusform>
-        <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
         <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
         <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
       </translation>
@@ -2395,54 +2345,52 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation type="unfinished">
         <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
         <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
-        <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
-        <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4420"/>
       <source>Current notes folder: </source>
-      <translation>Aktuálny priečinok poznámky: </translation>
+      <translation type="unfinished">Current notes folder: </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4422"/>
       <source>Set the notes folder. Current notes folder: </source>
-      <translation>Nastaviť priečinok poznámky. Aktuálny priečinok poznámky: </translation>
+      <translation type="unfinished">Set the notes folder. Current notes folder: </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4623"/>
       <source>Print note</source>
-      <translation>Tlačiť poznámku</translation>
+      <translation type="unfinished">Print note</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4685"/>
       <source>Letter</source>
-      <translation>List</translation>
+      <translation type="unfinished">Letter</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4714"/>
       <source>Portrait</source>
-      <translation>Portrét</translation>
+      <translation type="unfinished">Portrait</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4714"/>
       <source>Landscape</source>
-      <translation>Príroda</translation>
+      <translation type="unfinished">Landscape</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4719"/>
       <source>Orientation</source>
-      <translation>Orientácia</translation>
+      <translation type="unfinished">Orientation</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4719"/>
       <source>Orientation:</source>
-      <translation>Orientácia:</translation>
+      <translation type="unfinished">Orientation:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4742"/>
       <source>Export current note as PDF</source>
-      <translation>Export aktuálnej poznámky vo formáte PDF</translation>
+      <translation type="unfinished">Export current note as PDF</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4836"/>
@@ -2452,7 +2400,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="5565"/>
       <source>Open QOwnNotes</source>
-      <translation>Otvorte QOwnNotes</translation>
+      <translation type="unfinished">Open QOwnNotes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5269"/>
@@ -2460,32 +2408,32 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="8959"/>
       <location filename="../mainwindow.cpp" line="9310"/>
       <source>New note</source>
-      <translation>Nová poznámka</translation>
+      <translation type="unfinished">New note</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5590"/>
       <source>Recent notes</source>
-      <translation>Naposledy použité poznámky</translation>
+      <translation type="unfinished">Recent notes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5620"/>
       <source>Show todo lists</source>
-      <translation>Zobrazenie zoznamov todo</translation>
+      <translation type="unfinished">Show todo lists</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5631"/>
       <source>Recent tasks</source>
-      <translation>Naposledy použité úlohy</translation>
+      <translation type="unfinished">Recent tasks</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5663"/>
       <source>Quit</source>
-      <translation>Ukončite</translation>
+      <translation type="unfinished">Quit</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7014"/>
       <source>show notes from all note subfolders (%1)</source>
-      <translation>zobraziť poznámky zo všetkých podpriečinkov poznámok (%1)</translation>
+      <translation type="unfinished">show notes from all note subfolders (%1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7031"/>
@@ -2497,34 +2445,32 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="674"/>
       <location filename="../mainwindow.cpp" line="7040"/>
       <source>Note folder</source>
-      <translation>Poznámka priečinok</translation>
+      <translation type="unfinished">Note folder</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8226"/>
       <source>Copy to note folder</source>
-      <translation>Skopírujte do priečinka s poznámkami</translation>
+      <translation type="unfinished">Copy to note folder</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8227"/>
       <source>Move to note folder</source>
-      <translation>Presunúť do priečinka s poznámkami</translation>
+      <translation type="unfinished">Move to note folder</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8228"/>
       <source>Copy to this subfolder</source>
-      <translation>Skopírujte do tohto podpriečinka</translation>
+      <translation type="unfinished">Copy to this subfolder</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8229"/>
       <source>Move to this subfolder</source>
-      <translation>Presunúť do tohto podpriečinka</translation>
+      <translation type="unfinished">Move to this subfolder</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="8280"/>
       <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation type="unfinished">
-        <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
         <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
         <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
@@ -2533,14 +2479,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="4527"/>
       <location filename="../mainwindow.cpp" line="10700"/>
       <source>Cancel</source>
-      <translation>Zrušiť</translation>
+      <translation type="unfinished">Cancel</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="8343"/>
       <source>%n note(s) were moved to note subfolder "%2"</source>
       <translation type="unfinished">
-        <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
-        <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
         <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
         <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
       </translation>
@@ -2551,8 +2495,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation type="unfinished">
         <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
         <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -2561,120 +2503,118 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation type="unfinished">
         <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
         <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
-        <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
-        <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9060"/>
       <source>Open note in external editor</source>
-      <translation>Otvoriť poznámku v externý editor</translation>
+      <translation type="unfinished">Open note in external editor</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9064"/>
       <source>Show note in file manager</source>
-      <translation>Zobraziť poznámku v správcovi súborov</translation>
+      <translation type="unfinished">Show note in file manager</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9145"/>
       <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
-      <translation>Ak chcete poznámku premenovať, musíte povoliť možnosť, aby sa názov súboru poznámky líšil od nadpisu.</translation>
+      <translation type="unfinished">If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9311"/>
       <source>New subfolder</source>
-      <translation>Nový podpriečinok</translation>
+      <translation type="unfinished">New subfolder</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9315"/>
       <source>Show folder in file manager</source>
-      <translation>Zobraziť priečinok v správcovi súborov</translation>
+      <translation type="unfinished">Show folder in file manager</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9351"/>
       <source>Create a new folder</source>
-      <translation>Vytvorte nový priečinok</translation>
+      <translation type="unfinished">Create a new folder</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9351"/>
       <source>Folder name:</source>
-      <translation>Názov priečinka:</translation>
+      <translation type="unfinished">Folder name:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6974"/>
       <source>show all untagged notes (%1)</source>
-      <translation>zobraziť všetky neoznačené poznámky (%1)</translation>
+      <translation type="unfinished">show all untagged notes (%1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6977"/>
       <source>Untagged notes</source>
-      <translation>Neoznačené poznámky</translation>
+      <translation type="unfinished">Untagged notes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8768"/>
       <source>Export current note as HTML file</source>
-      <translation>Exportovať aktuálnu poznámku ako súbor HTML</translation>
+      <translation type="unfinished">Export current note as HTML file</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4694"/>
       <source>Page size</source>
-      <translation>Veľkosť stránky</translation>
+      <translation type="unfinished">Page size</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1025"/>
       <source>quit toolbar</source>
-      <translation>ukončite panel s nástrojmi</translation>
+      <translation type="unfinished">quit toolbar</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4694"/>
       <source>Page size:</source>
-      <translation>Veľkosť stránky:</translation>
+      <translation type="unfinished">Page size:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4808"/>
       <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
-      <translation>QOwnNotes bude sledovať anonymné údaje o používaní, ktoré pomôžu určiť, ktoré časti QOwnNotes sa majú ďalej vylepšovať a nájsť a opraviť chyby. Toto správanie môžete v nastaveniach zakázať.</translation>
+      <translation type="unfinished">QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4812"/>
       <source>&amp;Ok</source>
-      <translation>&amp;Ok</translation>
+      <translation type="unfinished">&amp;Ok</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8969"/>
       <source>&amp;Remove notes</source>
-      <translation>&amp;Odstrániť poznámky</translation>
+      <translation type="unfinished">&amp;Remove notes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5751"/>
       <source>&amp;Link selected text</source>
-      <translation>&amp;Prepojiť vybraný text</translation>
+      <translation type="unfinished">&amp;Link selected text</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="946"/>
       <source>Your tasks are being loaded from your server</source>
-      <translation>Vaše úlohy sa načítavajú zo servera</translation>
+      <translation type="unfinished">Your tasks are being loaded from your server</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2503"/>
       <source>Current note was modified externally</source>
-      <translation>Aktuálna poznámka bola upravená externe</translation>
+      <translation type="unfinished">Current note was modified externally</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2585"/>
       <location filename="../mainwindow.cpp" line="5207"/>
       <source>Stored current note to disk</source>
-      <translation>Uložená aktuálna poznámka na disk</translation>
+      <translation type="unfinished">Stored current note to disk</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2604"/>
       <source>Note was modified externally: %1</source>
-      <translation>Poznámka bola externe upravená: %1</translation>
+      <translation type="unfinished">Note was modified externally: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2625"/>
       <source>Notes directory was modified externally</source>
-      <translation>Adresár poznámok bol externe upravený</translation>
+      <translation type="unfinished">Notes directory was modified externally</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="2692"/>
@@ -2682,206 +2622,204 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation type="unfinished">
         <numerusform>Stored %n note(s) to disk</numerusform>
         <numerusform>Stored %n note(s) to disk</numerusform>
-        <numerusform>Stored %n note(s) to disk</numerusform>
-        <numerusform>Stored %n note(s) to disk</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6946"/>
       <source>show all notes (%1)</source>
-      <translation>zobraziť všetky poznámky (%1)</translation>
+      <translation type="unfinished">show all notes (%1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6949"/>
       <location filename="../mainwindow.cpp" line="7017"/>
       <source>All notes</source>
-      <translation>Všetky poznámky</translation>
+      <translation type="unfinished">All notes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7836"/>
       <source>&amp;Add tag</source>
-      <translation>&amp;Pridať značku</translation>
+      <translation type="unfinished">&amp;Add tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7885"/>
       <source>Tag could not be created!</source>
-      <translation>Štítok sa nepodarilo vytvoriť!</translation>
+      <translation type="unfinished">Tag could not be created!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8070"/>
       <source>Move to this tag</source>
-      <translation>Presunúť na túto značku</translation>
+      <translation type="unfinished">Move to this tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8120"/>
       <source>Tag this</source>
-      <translation>Značky tejto</translation>
+      <translation type="unfinished">Tag this</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8153"/>
       <source>Cannot move tag '%1' to this tag</source>
-      <translation>Značku '%1' nie je možné presunúť do tejto značky</translation>
+      <translation type="unfinished">Cannot move tag '%1' to this tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8169"/>
       <source>Moved tag '%1' to new tag</source>
-      <translation>Značka „%1“ bola presunutá do novej značky</translation>
+      <translation type="unfinished">Moved tag '%1' to new tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7203"/>
       <source>show all notes tagged with '%1' (%2)</source>
-      <translation>zobraziť všetky poznámky označené značkou „%1“ (%2)</translation>
+      <translation type="unfinished">show all notes tagged with '%1' (%2)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7847"/>
       <source>&amp;Remove tags</source>
-      <translation>&amp;Odstrániť značky</translation>
+      <translation type="unfinished">&amp;Remove tags</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4835"/>
       <source>No selected todo lists!</source>
-      <translation>Žiadne vybraté zoznamy todo!</translation>
+      <translation type="unfinished">No selected todo lists!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="645"/>
       <source>Subfolders</source>
-      <translation>Podpriečinky</translation>
+      <translation type="unfinished">Subfolders</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="656"/>
       <source>Tags</source>
-      <translation>Tagy</translation>
+      <translation type="unfinished">Tags</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="665"/>
       <source>Note search</source>
-      <translation>Poznámka: vyhľadávanie</translation>
+      <translation type="unfinished">Note search</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="683"/>
       <source>Note list</source>
-      <translation>Poznámka: zoznam</translation>
+      <translation type="unfinished">Note list</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="707"/>
       <source>Note edit</source>
-      <translation>Poznámka: upraviť</translation>
+      <translation type="unfinished">Note edit</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="718"/>
       <source>Note tags</source>
-      <translation>Poznámka: Tagy</translation>
+      <translation type="unfinished">Note tags</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="729"/>
       <source>Note preview</source>
-      <translation>Poznámka: náhľad</translation>
+      <translation type="unfinished">Note preview</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="736"/>
       <source>Log</source>
-      <translation>Denník</translation>
+      <translation type="unfinished">Log</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="745"/>
       <source>Scripting</source>
-      <translation>Skriptovanie</translation>
+      <translation type="unfinished">Scripting</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="992"/>
       <source>formatting toolbar</source>
-      <translation>panel s nástrojmi na formátovanie</translation>
+      <translation type="unfinished">formatting toolbar</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1001"/>
       <source>inserting toolbar</source>
-      <translation>vkladanie toolbar</translation>
+      <translation type="unfinished">inserting toolbar</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1008"/>
       <source>encryption toolbar</source>
-      <translation>šifrovanie toolbar</translation>
+      <translation type="unfinished">encryption toolbar</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1015"/>
       <source>window toolbar</source>
-      <translation>okno panel s nástrojmi</translation>
+      <translation type="unfinished">window toolbar</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1020"/>
       <source>custom action toolbar</source>
-      <translation>vlastná akcia toolbar</translation>
+      <translation type="unfinished">custom action toolbar</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1040"/>
       <source>Workspace selector</source>
-      <translation>Výber pracovného priestoru</translation>
+      <translation type="unfinished">Workspace selector</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1179"/>
       <source>Show %1 panel</source>
-      <translation>Zobraziť %1 panel</translation>
+      <translation type="unfinished">Show %1 panel</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1222"/>
       <source>Show %1</source>
-      <translation>Zobraziť %1</translation>
+      <translation type="unfinished">Show %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2042"/>
       <source>show notes in folder '%1' (%2)</source>
-      <translation>zobraziť poznámky v priečinku "%1" (%2)</translation>
+      <translation type="unfinished">show notes in folder '%1' (%2)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2082"/>
       <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
-      <translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;poslednej: %2</translation>
+      <translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2087"/>
       <source>&lt;br /&gt;path: %1</source>
-      <translation>cesta &lt;br /&gt;: %1</translation>
+      <translation type="unfinished">&lt;br /&gt;path: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2248"/>
       <source>Toolbar could not be loaded without name</source>
-      <translation>Panel s nástrojmi sa nedal načítať bez názvu</translation>
+      <translation type="unfinished">Toolbar could not be loaded without name</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2529"/>
       <source>Overwriting external changes of: %1</source>
-      <translation>Prepísanie externé zmeny: %1</translation>
+      <translation type="unfinished">Overwriting external changes of: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2551"/>
       <source>Loading external changes from: %1</source>
-      <translation>Načítanie externých zmení z: %1</translation>
+      <translation type="unfinished">Loading external changes from: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2586"/>
       <location filename="../mainwindow.cpp" line="5208"/>
       <source>Current note could not be stored to disk</source>
-      <translation>Aktuálna poznámka nedá sa uložiť na disk</translation>
+      <translation type="unfinished">Current note could not be stored to disk</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2750"/>
       <source>Read-only</source>
-      <translation>Iba na čítanie</translation>
+      <translation type="unfinished">Read-only</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2751"/>
       <source>Note editing is disabled, click to enable</source>
-      <translation>Poznámka: editácia vypnutá, kliknite na</translation>
+      <translation type="unfinished">Note editing is disabled, click to enable</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2770"/>
       <source>Line numbers</source>
-      <translation>Čísla riadkov</translation>
+      <translation type="unfinished">Line numbers</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2780"/>
       <source>Click here to see what has changed and to be able to update to the latest version</source>
-      <translation>Kliknite sem, aby ste videli, čo sa zmenilo a aby ste mohli aktualizovať na najnovšiu verziu</translation>
+      <translation type="unfinished">Click here to see what has changed and to be able to update to the latest version</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4304"/>
@@ -2889,57 +2827,55 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation type="unfinished">
         <numerusform>%n note(s) were tagged with "%2"</numerusform>
         <numerusform>%n note(s) were tagged with "%2"</numerusform>
-        <numerusform>%n note(s) were tagged with "%2"</numerusform>
-        <numerusform>%n note(s) were tagged with "%2"</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5269"/>
       <source>Note headline</source>
-      <translation>Poznámka: titulok</translation>
+      <translation type="unfinished">Note headline</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5757"/>
       <source>Block &amp;quote selected text</source>
       <comment>Action to apply a block quote formatting to the selected text</comment>
-      <translation>Blokovať &amp;citovaný text</translation>
+      <translation type="unfinished">Block &amp;quote selected text</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6693"/>
       <source>Downloading images finished</source>
-      <translation>Sťahovanie obrázkov dokončil</translation>
+      <translation type="unfinished">Downloading images finished</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6835"/>
       <source>Increased font size to %1 pt</source>
-      <translation>Zvýšená písmo veľkosti %1pt</translation>
+      <translation type="unfinished">Increased font size to %1 pt</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6852"/>
       <source>Decreased font size to %1 pt</source>
-      <translation>Znížená veľkosť písma na %1 pt</translation>
+      <translation type="unfinished">Decreased font size to %1 pt</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4813"/>
       <location filename="../mainwindow.cpp" line="4839"/>
       <location filename="../mainwindow.cpp" line="9148"/>
       <source>Open &amp;settings</source>
-      <translation>Otvoriť &amp;nastavenia</translation>
+      <translation type="unfinished">Open &amp;settings</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1536"/>
       <source>leave</source>
-      <translation>opustiť</translation>
+      <translation type="unfinished">leave</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1539"/>
       <source>leave distraction free mode</source>
-      <translation>nechajte voľný režim rozptýlenie</translation>
+      <translation type="unfinished">leave distraction free mode</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5999"/>
       <source>Select image to insert</source>
-      <translation>Vyberte obrázok vložiť</translation>
+      <translation type="unfinished">Select image to insert</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6131"/>
@@ -2949,12 +2885,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="6187"/>
       <source>Decrypt note and store it as plain text</source>
-      <translation>Poznámka: dešifrovať a uložiť ako obyčajný text</translation>
+      <translation type="unfinished">Decrypt note and store it as plain text</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6192"/>
       <source>&amp;Decrypt</source>
-      <translation>&amp;Dešifrovať</translation>
+      <translation type="unfinished">&amp;Decrypt</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6218"/>
@@ -2964,7 +2900,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="6276"/>
       <source>Export current note as Markdown file</source>
-      <translation>Exportovať aktuálnu poznámku ako súbor Markdown</translation>
+      <translation type="unfinished">Export current note as Markdown file</translation>
     </message>
   </context>
   <context>
@@ -2972,7 +2908,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../widgets/navigationwidget.cpp" line="100"/>
       <source>headline %1</source>
-      <translation>titulok %1</translation>
+      <translation type="unfinished">headline %1</translation>
     </message>
   </context>
   <context>
@@ -2980,7 +2916,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/notedialog.ui" line="14"/>
       <source>Note</source>
-      <translation>Poznámka</translation>
+      <translation type="unfinished">Note</translation>
     </message>
   </context>
   <context>
@@ -2988,42 +2924,42 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="17"/>
       <source>Note was modified externally!</source>
-      <translation>Poznámka bola externe upravená!</translation>
+      <translation type="unfinished">Note was modified externally!</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="41"/>
       <source>The current note was modified outside of this application!</source>
-      <translation>Aktuálnu poznámku bol upravený mimo tejto aplikácie!</translation>
+      <translation type="unfinished">The current note was modified outside of this application!</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="48"/>
       <source>Differences:</source>
-      <translation>Rozdiely:</translation>
+      <translation type="unfinished">Differences:</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="76"/>
       <source>Always accept external changes in the future</source>
-      <translation>V budúcnosti vždy prijímajte vonkajšie zmeny</translation>
+      <translation type="unfinished">Always accept external changes in the future</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="83"/>
       <source>Accept external changes?</source>
-      <translation>Prijať externé zmeny?</translation>
+      <translation type="unfinished">Accept external changes?</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="69"/>
       <source>Ignore all external modifications in the future</source>
-      <translation>V budúcnosti ignorujte všetky externé úpravy</translation>
+      <translation type="unfinished">Ignore all external modifications in the future</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.cpp" line="33"/>
       <source>Yes</source>
-      <translation>Áno</translation>
+      <translation type="unfinished">Yes</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.cpp" line="38"/>
       <source>No</source>
-      <translation>Nie</translation>
+      <translation type="unfinished">No</translation>
     </message>
   </context>
   <context>
@@ -3031,74 +2967,72 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="14"/>
       <source>Orphaned attachments</source>
-      <translation>Osirotené prílohy</translation>
+      <translation type="unfinished">Orphaned attachments</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="54"/>
       <source>Delete selected attachments</source>
-      <translation>Vymazať vybraté prílohy</translation>
+      <translation type="unfinished">Delete selected attachments</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="57"/>
       <source>Delete</source>
-      <translation>Vymazať</translation>
+      <translation type="unfinished">Delete</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="86"/>
       <source>Add selected attachments to note</source>
-      <translation>Pridanie vybraných príloh do poznámky</translation>
+      <translation type="unfinished">Add selected attachments to note</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="89"/>
       <source>Add to note</source>
-      <translation>Pridať na vedomie</translation>
+      <translation type="unfinished">Add to note</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="100"/>
       <source>Open &amp;attachment</source>
-      <translation>Otvorte &amp;prílohu</translation>
+      <translation type="unfinished">Open &amp;attachment</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="111"/>
       <source>Open &amp;folder</source>
-      <translation>Otvorte &amp;zložku</translation>
+      <translation type="unfinished">Open &amp;folder</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="162"/>
       <source>File size:</source>
-      <translation>Veľkosť súboru:</translation>
+      <translation type="unfinished">File size:</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="182"/>
       <source>File type:</source>
-      <translation>Typ súboru:</translation>
+      <translation type="unfinished">File type:</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="199"/>
       <source>File path:</source>
-      <translation>Cesta k súboru:</translation>
+      <translation type="unfinished">File path:</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="229"/>
       <source>Attachments that are not used in notes:</source>
-      <translation>Prílohy, ktoré sa nepoužívajú v poznámkach:</translation>
+      <translation type="unfinished">Attachments that are not used in notes:</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="60"/>
       <source>Last modified at %1</source>
-      <translation>Poslednej úpravy %1 je</translation>
+      <translation type="unfinished">Last modified at %1</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="140"/>
       <source>Delete selected files</source>
-      <translation>Odstrániť vybraté súbory</translation>
+      <translation type="unfinished">Delete selected files</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="141"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
       <translation type="unfinished">
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
         <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
         <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
       </translation>
@@ -3109,49 +3043,47 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="14"/>
       <source>Orphaned images</source>
-      <translation>Osirelé obrázky</translation>
+      <translation type="unfinished">Orphaned images</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="80"/>
       <source>Delete selected images</source>
-      <translation>Vymazať vybraté obrázky</translation>
+      <translation type="unfinished">Delete selected images</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="83"/>
       <source>Delete</source>
-      <translation>Vymazať</translation>
+      <translation type="unfinished">Delete</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="94"/>
       <source>Add selected images to note</source>
-      <translation>Pridať vybraté obrázky na vedomie</translation>
+      <translation type="unfinished">Add selected images to note</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="97"/>
       <source>Add to note</source>
-      <translation>Pridať na vedomie</translation>
+      <translation type="unfinished">Add to note</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="146"/>
       <source>Images that are not used in notes:</source>
-      <translation>Obrázky, ktoré sa nepoužívajú v poznámkach:</translation>
+      <translation type="unfinished">Images that are not used in notes:</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.cpp" line="56"/>
       <source>Last modified at %1</source>
-      <translation>Poslednej úpravy %1 je</translation>
+      <translation type="unfinished">Last modified at %1</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.cpp" line="122"/>
       <source>Delete selected files</source>
-      <translation>Odstrániť vybraté súbory</translation>
+      <translation type="unfinished">Delete selected files</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
       <translation type="unfinished">
-        <numerusform>Odstrániť &lt;strong&gt;%n&lt;/strong&gt; vybrané súbory?</numerusform>
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
         <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
         <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
       </translation>
@@ -3162,93 +3094,93 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="187"/>
       <source>Username / password error</source>
-      <translation>Užívateľské meno / heslo chybové</translation>
+      <translation type="unfinished">Username / password error</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="188"/>
       <source>Your calendar username or password is incorrect!</source>
-      <translation>Kalendár užívateľské meno alebo heslo je nesprávne!</translation>
+      <translation type="unfinished">Your calendar username or password is incorrect!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="509"/>
       <source>API app version too low</source>
-      <translation>Verzia rozhrania API aplikácie príliš nízka</translation>
+      <translation type="unfinished">API app version too low</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="510"/>
       <source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
-      <translation>Zvážte aktualizáciu aplikácie QOwnNotesAPI na vašom serveri, verzia aplikácie %1 je príliš nízka a môže spôsobiť problémy v službe QOwnNotes.</translation>
+      <translation type="unfinished">Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="972"/>
       <source>ownCloud server connection error</source>
-      <translation>ownCloud server chyba pripojenia</translation>
+      <translation type="unfinished">ownCloud server connection error</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="976"/>
       <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
-      <translation>errorCustomCloud server: &lt;strong&gt;%1&lt;/strong&gt; &lt;br /&gt; Skontrolujte konfiguráciu vlastnéhoCloud.</translation>
+      <translation type="unfinished">ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="994"/>
       <source>You need to setup your ownCloud server!</source>
-      <translation>Musíte nastaviť svoj vlastný server!</translation>
+      <translation type="unfinished">You need to setup your ownCloud server!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1007"/>
       <source>Open &amp;settings</source>
-      <translation>Otvoriť &amp;nastavenia</translation>
+      <translation type="unfinished">Open &amp;settings</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1007"/>
       <source>&amp;Cancel</source>
-      <translation>&amp;Zrušiť</translation>
+      <translation type="unfinished">&amp;Cancel</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1052"/>
       <source>Done with loading note versions</source>
-      <translation>Urobiť s načítaním poznámka verzie</translation>
+      <translation type="unfinished">Done with loading note versions</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1091"/>
       <source>No versions found</source>
-      <translation>Žiadne verzie našiel</translation>
+      <translation type="unfinished">No versions found</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1092"/>
       <source>There are no versions for this note or the note wasn't found on the server.</source>
-      <translation>Pre túto poznámku nie sú k dispozícii žiadne verzie alebo sa poznámka nenašla na serveri.</translation>
+      <translation type="unfinished">There are no versions for this note or the note wasn't found on the server.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1113"/>
       <source>Done with loading trashed notes</source>
-      <translation>Urobiť s načítaním ožralý poznámky</translation>
+      <translation type="unfinished">Done with loading trashed notes</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1154"/>
       <source>No trashed notes</source>
-      <translation>Žiadne ožralý poznámky</translation>
+      <translation type="unfinished">No trashed notes</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1155"/>
       <source>No trashed notes were found on the server.</source>
-      <translation>Na serveri sa nenašli žiadne ožralý poznámky.</translation>
+      <translation type="unfinished">No trashed notes were found on the server.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1178"/>
       <location filename="../services/owncloudservice.cpp" line="1204"/>
       <source>Error while loading todo lists!</source>
-      <translation>Chyba pri načítaní zoznamov todo!</translation>
+      <translation type="unfinished">Error while loading todo lists!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1179"/>
       <source>Your CalDAV server didn't reply anything!</source>
-      <translation>CalDAV server neodpovedal nič!</translation>
+      <translation type="unfinished">Your CalDAV server didn't reply anything!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1205"/>
       <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation>Chybové hlásenie zo servera CalDAV: &lt;strong&gt;%1&lt;/strong&gt;</translation>
+      <translation type="unfinished">Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</translation>
     </message>
   </context>
   <context>
@@ -3256,27 +3188,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/passworddialog.ui" line="14"/>
       <source>Please enter your password</source>
-      <translation>Zadajte prosím vaše heslo</translation>
+      <translation type="unfinished">Please enter your password</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="24"/>
       <source>Enter your password:</source>
-      <translation>Zadajte heslo:</translation>
+      <translation type="unfinished">Enter your password:</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="34"/>
       <source>Password</source>
-      <translation>Heslo</translation>
+      <translation type="unfinished">Password</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="44"/>
       <source>Re-enter password</source>
-      <translation>Znova zadajte heslo</translation>
+      <translation type="unfinished">Re-enter password</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="54"/>
       <source>Passwords don't match!</source>
-      <translation>Heslá sa nezhodujú!</translation>
+      <translation type="unfinished">Passwords don't match!</translation>
     </message>
   </context>
   <context>
@@ -3284,39 +3216,37 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../entities/notefolder.cpp" line="464"/>
       <source>default</source>
-      <translation>predvolené</translation>
+      <translation type="unfinished">default</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="1054"/>
       <source>Could not store note file: %1 - Error message: %2</source>
-      <translation>Nepodarilo sa uložiť súbor s poznámkami: %1 - Chybové hlásenie: %2</translation>
+      <translation type="unfinished">Could not store note file: %1 - Error message: %2</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="1123"/>
       <source>Renamed note-file was removed: %1</source>
-      <translation>Premenovaný súbor poznámok bol odstránený: %1</translation>
+      <translation type="unfinished">Renamed note-file was removed: %1</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="1131"/>
       <source>Could not remove renamed note-file: %1 - Error message: %2</source>
-      <translation>Nepodarilo sa odstrániť premenovaný súbor poznámok: %1 - Chybové hlásenie: %2</translation>
+      <translation type="unfinished">Could not remove renamed note-file: %1 - Error message: %2</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="1952"/>
       <source>Could not read image file: %1</source>
-      <translation>Súbor obrázka sa nepodarilo prečítať: %1</translation>
+      <translation type="unfinished">Could not read image file: %1</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="2472"/>
       <source>Note filename changed</source>
-      <translation>Názov súboru zmenený</translation>
+      <translation type="unfinished">Note filename changed</translation>
     </message>
     <message numerus="yes">
       <location filename="../entities/note.cpp" line="2473"/>
       <source>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
       <translation type="unfinished">
-        <numerusform>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
-        <numerusform>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
         <numerusform>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
         <numerusform>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
       </translation>
@@ -3327,30 +3257,28 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation type="unfinished">
         <numerusform>…and %n more note(s)</numerusform>
         <numerusform>…and %n more note(s)</numerusform>
-        <numerusform>…and %n more note(s)</numerusform>
-        <numerusform>…and %n more note(s)</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../helpers/toolbarcontainer.cpp" line="37"/>
       <location filename="../helpers/toolbarcontainer.cpp" line="112"/>
       <source>Unknown action %1</source>
-      <translation>Neznáma akcia %1</translation>
+      <translation type="unfinished">Unknown action %1</translation>
     </message>
     <message>
       <location filename="../helpers/toolbarcontainer.cpp" line="94"/>
       <source>Workspace selector</source>
-      <translation>Výber pracovného priestoru</translation>
+      <translation type="unfinished">Workspace selector</translation>
     </message>
     <message>
       <location filename="../utils/gui.cpp" line="225"/>
       <source>Don't ask again!</source>
-      <translation>Nepýtať sa znova!</translation>
+      <translation type="unfinished">Don't ask again!</translation>
     </message>
     <message>
       <location filename="../utils/gui.cpp" line="225"/>
       <source>Don't show again!</source>
-      <translation>Nezobrazovať!</translation>
+      <translation type="unfinished">Don't show again!</translation>
     </message>
   </context>
   <context>
@@ -3358,12 +3286,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="397"/>
       <source>Note editing disabled</source>
-      <translation>Poznámka je zakázaná</translation>
+      <translation type="unfinished">Note editing disabled</translation>
     </message>
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="398"/>
       <source>Note editing is currently disabled, please allow it again in the &lt;i&gt;Note-menu&lt;/i&gt;.</source>
-      <translation>Úprava úprav je momentálne zakázaná, povoľte ju znova v ponuke &lt;i&gt;Poznámka&gt;&lt;/i&gt;.</translation>
+      <translation type="unfinished">Note editing is currently disabled, please allow it again in the &lt;i&gt;Note-menu&lt;/i&gt;.</translation>
     </message>
   </context>
   <context>
@@ -3371,77 +3299,77 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="62"/>
       <source>close search</source>
-      <translation>zavrieť vyhľadávanie</translation>
+      <translation type="unfinished">close search</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="52"/>
       <source>Find:</source>
-      <translation>Nájsť:</translation>
+      <translation type="unfinished">Find:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="32"/>
       <source>replace text</source>
-      <translation>nahradenie textu</translation>
+      <translation type="unfinished">replace text</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="79"/>
       <source>find in text</source>
-      <translation>nájsť v texte</translation>
+      <translation type="unfinished">find in text</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="86"/>
       <source>search forward</source>
-      <translation>vyhľadávanie dopredu</translation>
+      <translation type="unfinished">search forward</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="103"/>
       <source>search backward</source>
-      <translation>vyhľadávanie dozadu</translation>
+      <translation type="unfinished">search backward</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="120"/>
       <source>replace with</source>
-      <translation>nahradiť</translation>
+      <translation type="unfinished">replace with</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="127"/>
       <source>Replace:</source>
-      <translation>Nahradiť:</translation>
+      <translation type="unfinished">Replace:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="156"/>
       <source>Plain text</source>
-      <translation>Obyčajný text</translation>
+      <translation type="unfinished">Plain text</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="161"/>
       <source>Whole words</source>
-      <translation>Celé slová</translation>
+      <translation type="unfinished">Whole words</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="166"/>
       <source>Regular expression</source>
-      <translation>Regulárny výraz</translation>
+      <translation type="unfinished">Regular expression</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="187"/>
       <source>Replace</source>
-      <translation>Nahradiť</translation>
+      <translation type="unfinished">Replace</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="197"/>
       <source>Replace All</source>
-      <translation>Nahradiť všetky</translation>
+      <translation type="unfinished">Replace All</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="210"/>
       <source>Mode:</source>
-      <translation>Režim:</translation>
+      <translation type="unfinished">Mode:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="220"/>
       <source>Match case sensitive</source>
-      <translation>Zápasu písmená</translation>
+      <translation type="unfinished">Match case sensitive</translation>
     </message>
   </context>
   <context>
@@ -3449,77 +3377,77 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="32"/>
       <source>replace text</source>
-      <translation>nahradenie textu</translation>
+      <translation type="unfinished">replace text</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="52"/>
       <source>Find:</source>
-      <translation>Nájsť:</translation>
+      <translation type="unfinished">Find:</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="62"/>
       <source>close search</source>
-      <translation>zavrieť vyhľadávanie</translation>
+      <translation type="unfinished">close search</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="79"/>
       <source>find in text</source>
-      <translation>nájsť v texte</translation>
+      <translation type="unfinished">find in text</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="86"/>
       <source>search forward</source>
-      <translation>vyhľadávanie dopredu</translation>
+      <translation type="unfinished">search forward</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="103"/>
       <source>search backward</source>
-      <translation>vyhľadávanie dozadu</translation>
+      <translation type="unfinished">search backward</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="120"/>
       <source>replace with</source>
-      <translation>nahradiť</translation>
+      <translation type="unfinished">replace with</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="127"/>
       <source>Replace:</source>
-      <translation>Nahradiť:</translation>
+      <translation type="unfinished">Replace:</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="156"/>
       <source>Plain text</source>
-      <translation>Obyčajný text</translation>
+      <translation type="unfinished">Plain text</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="161"/>
       <source>Whole words</source>
-      <translation>Celé slová</translation>
+      <translation type="unfinished">Whole words</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="166"/>
       <source>Regular expression</source>
-      <translation>Regulárny výraz</translation>
+      <translation type="unfinished">Regular expression</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="187"/>
       <source>Replace</source>
-      <translation>Nahradiť</translation>
+      <translation type="unfinished">Replace</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="197"/>
       <source>Replace All</source>
-      <translation>Nahradiť všetky</translation>
+      <translation type="unfinished">Replace All</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="210"/>
       <source>Mode:</source>
-      <translation>Režim:</translation>
+      <translation type="unfinished">Mode:</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="220"/>
       <source>Match case sensitive</source>
-      <translation>Zápasu písmená</translation>
+      <translation type="unfinished">Match case sensitive</translation>
     </message>
   </context>
   <context>
@@ -3527,30 +3455,30 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/databaseservice.cpp" line="77"/>
       <source>Cannot open memory database</source>
-      <translation>Nie je možné otvoriť databázu pamäte</translation>
+      <translation type="unfinished">Cannot open memory database</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="78"/>
       <source>Unable to establish a memory database connection.</source>
-      <translation>Nepodarilo sa vytvoriť pripojenie k databáze pamäte.</translation>
+      <translation type="unfinished">Unable to establish a memory database connection.</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="94"/>
       <source>Cannot open disk database</source>
-      <translation>Nie je možné otvoriť databázu disku</translation>
+      <translation type="unfinished">Cannot open disk database</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="95"/>
       <location filename="../services/databaseservice.cpp" line="117"/>
       <source>Unable to establish a database connection with file '%1'.
 Are the folder and the file writeable?</source>
-      <translation>Nepodarilo sa vytvoriť databázové spojenie so súborom '%1'.
-Sú priečinok a súbor zapisovateľný?</translation>
+      <translation type="unfinished">Unable to establish a database connection with file '%1'.
+Are the folder and the file writeable?</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="116"/>
       <source>Cannot open note folder database</source>
-      <translation>Nie je možné otvoriť databázu poznámok</translation>
+      <translation type="unfinished">Cannot open note folder database</translation>
     </message>
   </context>
   <context>
@@ -3558,167 +3486,167 @@ Sú priečinok a súbor zapisovateľný?</translation>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="14"/>
       <source>Script repository</source>
-      <translation>Úložisko skriptov</translation>
+      <translation type="unfinished">Script repository</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="55"/>
       <source>To search for a script please enter your query text and press &lt;i&gt;Return&lt;/i&gt;.</source>
-      <translation>Ak chcete vyhľadať skript, zadajte text dopytu a stlačte tlačidlo &lt;i&gt; Return &lt;/i&gt;.</translation>
+      <translation type="unfinished">To search for a script please enter your query text and press &lt;i&gt;Return&lt;/i&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="127"/>
       <source>Currently installed version:</source>
-      <translation>Aktuálne nainštalovaná verzia:</translation>
+      <translation type="unfinished">Currently installed version:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="278"/>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="397"/>
       <source>Installs the script</source>
-      <translation>Nainštaluje skript</translation>
+      <translation type="unfinished">Installs the script</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="281"/>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="396"/>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="457"/>
       <source>Install</source>
-      <translation>Inštalácia</translation>
+      <translation type="unfinished">Install</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="444"/>
       <source>Load more scripts</source>
-      <translation>Načítať ďalšie skripty</translation>
+      <translation type="unfinished">Load more scripts</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="228"/>
       <source>Version:</source>
-      <translation>Verzia:</translation>
+      <translation type="unfinished">Version:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="202"/>
       <source>Repository:</source>
-      <translation>Úložisko:</translation>
+      <translation type="unfinished">Repository:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="137"/>
       <source>Minimum app version:</source>
-      <translation>Verzia minimálne aplikácie:</translation>
+      <translation type="unfinished">Minimum app version:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="433"/>
       <source>Name</source>
-      <translation>Meno</translation>
+      <translation type="unfinished">Name</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="413"/>
       <source>Enter your query text</source>
-      <translation>Zadajte text vášho dotazu</translation>
+      <translation type="unfinished">Enter your query text</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="416"/>
       <source>Find script</source>
-      <translation>Nájsť skript</translation>
+      <translation type="unfinished">Find script</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="47"/>
       <source>Script updates</source>
-      <translation>Skript aktualizácie</translation>
+      <translation type="unfinished">Script updates</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="48"/>
       <source>All scripts are up-to-date.</source>
-      <translation>Všetky skripty sú aktualizované.</translation>
+      <translation type="unfinished">All scripts are up-to-date.</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="367"/>
       <source>Authors</source>
-      <translation>Autori</translation>
+      <translation type="unfinished">Authors</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="367"/>
       <source>Author</source>
-      <translation>Autor</translation>
+      <translation type="unfinished">Author</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="370"/>
       <source>Supported platforms</source>
-      <translation>Podporované platformy</translation>
+      <translation type="unfinished">Supported platforms</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="371"/>
       <source>Supported platform</source>
-      <translation>Podporovaná platforma</translation>
+      <translation type="unfinished">Supported platform</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="374"/>
       <source>Open repository</source>
-      <translation>Otvoriť úložisko</translation>
+      <translation type="unfinished">Open repository</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="385"/>
       <source>Update</source>
-      <translation>Aktualizácia</translation>
+      <translation type="unfinished">Update</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="386"/>
       <source>Updates the script</source>
-      <translation>Aktualizuje skript</translation>
+      <translation type="unfinished">Updates the script</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="388"/>
       <source>Reinstall</source>
-      <translation>Preinštalovať</translation>
+      <translation type="unfinished">Reinstall</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="389"/>
       <source>Reinstalls the script</source>
-      <translation>Preinštaluje skript</translation>
+      <translation type="unfinished">Reinstalls the script</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="454"/>
       <source>Platform not supported!</source>
-      <translation>Platforma nie je podporovaný!</translation>
+      <translation type="unfinished">Platform not supported!</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="455"/>
       <source>Your platform is not supported by this script!
 Do you want to install it anyway?</source>
-      <translation>Tento skript nepodporuje vašu platformu!
-Chcete ho aj tak nainštalovať?</translation>
+      <translation type="unfinished">Your platform is not supported by this script!
+Do you want to install it anyway?</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="457"/>
       <source>Cancel</source>
-      <translation>Zrušiť</translation>
+      <translation type="unfinished">Cancel</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="465"/>
       <source>Update app</source>
-      <translation>Aktualizovať aplikáciu</translation>
+      <translation type="unfinished">Update app</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="466"/>
       <source>Please don't forget to update your installation of QOwnNotes to make this script work!</source>
-      <translation>Nezabudnite aktualizovať inštaláciu programu QOwnNotes, aby tento skript fungoval!</translation>
+      <translation type="unfinished">Please don't forget to update your installation of QOwnNotes to make this script work!</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="533"/>
       <source>Install successful</source>
-      <translation>Inštalácia úspešná</translation>
+      <translation type="unfinished">Install successful</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="534"/>
       <source>The script was successfully installed!</source>
-      <translation>Skript bol úspešne nainštalovaný!</translation>
+      <translation type="unfinished">The script was successfully installed!</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="541"/>
       <source>Download failed</source>
-      <translation>Sťahovanie zlyhalo</translation>
+      <translation type="unfinished">Download failed</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="542"/>
       <source>The script could not be downloaded!</source>
-      <translation>Skript sa nepodarilo prevziať!</translation>
+      <translation type="unfinished">The script could not be downloaded!</translation>
     </message>
   </context>
   <context>
@@ -3726,12 +3654,12 @@ Chcete ho aj tak nainštalovať?</translation>
     <message>
       <location filename="../widgets/scriptsettingwidget.ui" line="92"/>
       <source>The setting name</source>
-      <translation>Názov nastavenia</translation>
+      <translation type="unfinished">The setting name</translation>
     </message>
     <message>
       <location filename="../widgets/scriptsettingwidget.cpp" line="193"/>
       <source>Please select a file</source>
-      <translation>Vyberte súbor</translation>
+      <translation type="unfinished">Please select a file</translation>
     </message>
   </context>
   <context>
@@ -3739,7 +3667,7 @@ Chcete ho aj tak nainštalovať?</translation>
     <message>
       <location filename="../services/scriptingservice.cpp" line="243"/>
       <source>file doesn't exist</source>
-      <translation>súbor neexistuje</translation>
+      <translation type="unfinished">file doesn't exist</translation>
     </message>
   </context>
   <context>
@@ -3748,57 +3676,57 @@ Chcete ho aj tak nainštalovať?</translation>
       <location filename="../dialogs/settingsdialog.ui" line="26"/>
       <location filename="../dialogs/settingsdialog.ui" line="3754"/>
       <source>Settings</source>
-      <translation>Nastavenia</translation>
+      <translation type="unfinished">Settings</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="120"/>
       <source>Note folders</source>
-      <translation>Zložky s poznámkami</translation>
+      <translation type="unfinished">Note folders</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="419"/>
       <source>Your note folders</source>
-      <translation>Priečinky poznámok</translation>
+      <translation type="unfinished">Your note folders</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="486"/>
       <source>&amp;Add folder</source>
-      <translation>&amp;Pridať priečinok</translation>
+      <translation type="unfinished">&amp;Add folder</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="510"/>
       <source>&amp;Remove folder</source>
-      <translation>&amp;Odstrániť priečinok</translation>
+      <translation type="unfinished">&amp;Remove folder</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="724"/>
       <source>This name will be viewed in all the menus.</source>
-      <translation>Tento názov sa zobrazí vo všetkých ponukách.</translation>
+      <translation type="unfinished">This name will be viewed in all the menus.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="566"/>
       <source>Set the ownCloud path where the note folder path will be synced to on your ownCloud server.</source>
-      <translation>Nastavte cestu ownCloud, kde bude cesta k priečinku s poznámkami synchronizovaná na server ownCloud.</translation>
+      <translation type="unfinished">Set the ownCloud path where the note folder path will be synced to on your ownCloud server.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="740"/>
       <source>Use as active note folder</source>
-      <translation>Použite ako aktívny priečinok s poznámkami</translation>
+      <translation type="unfinished">Use as active note folder</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="843"/>
       <source>Your ownCloud server</source>
-      <translation>Váš server ownCloud</translation>
+      <translation type="unfinished">Your ownCloud server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="967"/>
       <source>ownCloud server url:</source>
-      <translation>adresa URL servera ownCloud:</translation>
+      <translation type="unfinished">ownCloud server url:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="989"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Zadajte adresu URL servera ownCloud, napríklad: &lt;span style = "font-style: kurzíva;"&gt; https://cloud.yourserver.com &lt;/ span &gt; &lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1027"/>
@@ -3813,22 +3741,22 @@ Chcete ho aj tak nainštalovať?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1140"/>
       <source>connection to web server</source>
-      <translation>pripojenie na webový server</translation>
+      <translation type="unfinished">connection to web server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1157"/>
       <source>ownCloud server detected</source>
-      <translation>bol zistený server ownCloud</translation>
+      <translation type="unfinished">ownCloud server detected</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1191"/>
       <source>connection to QOwnNotesAPI</source>
-      <translation>spojenie s QOwnNotesAPI</translation>
+      <translation type="unfinished">connection to QOwnNotesAPI</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1174"/>
       <source>username and password correct</source>
-      <translation>používateľské meno a heslo správne</translation>
+      <translation type="unfinished">username and password correct</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1130"/>
@@ -3839,7 +3767,7 @@ Chcete ho aj tak nainštalovať?</translation>
       <location filename="../dialogs/settingsdialog.ui" line="1215"/>
       <location filename="../dialogs/settingsdialog.ui" line="1232"/>
       <source>unknown</source>
-      <translation>nevedno</translation>
+      <translation type="unfinished">unknown</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1090"/>
@@ -3849,42 +3777,42 @@ Chcete ho aj tak nainštalovať?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1208"/>
       <source>versions app enabled on server</source>
-      <translation>verzia App povolené na serveri</translation>
+      <translation type="unfinished">versions app enabled on server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1225"/>
       <source>trash app enabled on server</source>
-      <translation>aplikácia na koši povolená na serveri</translation>
+      <translation type="unfinished">trash app enabled on server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1242"/>
       <source>notes path found on server</source>
-      <translation>cesty na serveri</translation>
+      <translation type="unfinished">notes path found on server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="902"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>Nainštalujte &lt;a href="%1"&gt; rozšírenie prehliadača Web Companion &lt;/a&gt; z &lt;a href="%2"&gt; Internetového obchodu Chrome &lt;/a&gt; alebo &lt;a href="%3"&gt; Firefox Add- na stránke &lt;/a&gt; na používanie služby QOwnNotes ako webového clippera</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="706"/>
       <source>path</source>
-      <translation>cesta</translation>
+      <translation type="unfinished">path</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="542"/>
       <source>Click here to select your local note path</source>
-      <translation>Kliknite sem a vyberte si cestu k miestnej poznámke</translation>
+      <translation type="unfinished">Click here to select your local note path</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="619"/>
       <source>Click here to select your remote note path on your ownCloud server</source>
-      <translation>Kliknite sem a vyberte si cestu vzdialenej poznámky na vašom serveri ownCloud</translation>
+      <translation type="unfinished">Click here to select your remote note path on your ownCloud server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="672"/>
       <source>Click here to use the selected folder from your server as note folder</source>
-      <translation>Kliknite sem, ak chcete použiť vybraný priečinok zo servera ako priečinok s poznámkami</translation>
+      <translation type="unfinished">Click here to use the selected folder from your server as note folder</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="870"/>
@@ -3899,92 +3827,92 @@ Chcete ho aj tak nainštalovať?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="949"/>
       <source>Error Message</source>
-      <translation>Chybná správa</translation>
+      <translation type="unfinished">Error Message</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="144"/>
       <source>Network</source>
-      <translation>Sieť</translation>
+      <translation type="unfinished">Network</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1273"/>
       <source>Proxy Settings</source>
-      <translation>Nastavenie servera proxy</translation>
+      <translation type="unfinished">Proxy Settings</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1279"/>
       <source>No Proxy</source>
-      <translation>Žiadny server Proxy</translation>
+      <translation type="unfinished">No Proxy</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1289"/>
       <source>Use system proxy</source>
-      <translation>Použiť systém proxy</translation>
+      <translation type="unfinished">Use system proxy</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1296"/>
       <source>Specify proxy manually as</source>
-      <translation>Zadajte server proxy manuálne ako</translation>
+      <translation type="unfinished">Specify proxy manually as</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1321"/>
       <source>Host</source>
-      <translation>Host</translation>
+      <translation type="unfinished">Host</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1372"/>
       <source>Proxy server requires authentication</source>
-      <translation>Proxy server vyžaduje overenie</translation>
+      <translation type="unfinished">Proxy server requires authentication</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1429"/>
       <source>SSL Settings</source>
-      <translation>Nastavenie protokolu SSL</translation>
+      <translation type="unfinished">SSL Settings</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1435"/>
       <source>Ignore SSL errors</source>
-      <translation>SSL chyby ignorovať</translation>
+      <translation type="unfinished">Ignore SSL errors</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="156"/>
       <source>Todo</source>
-      <translation>Todo</translation>
+      <translation type="unfinished">Todo</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1654"/>
       <source>Default ownCloud calendar</source>
-      <translation>Predvolený ownCloud kalendár</translation>
+      <translation type="unfinished">Default ownCloud calendar</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="168"/>
       <source>Interface</source>
-      <translation>Rozhranie</translation>
+      <translation type="unfinished">Interface</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1644"/>
       <source>Other CalDAV server</source>
-      <translation>Ostatné CalDAV server</translation>
+      <translation type="unfinished">Other CalDAV server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2447"/>
       <source>Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</source>
-      <translation>Prispôsobia sa len niektoré farby, motív pracovnej plochy bude kontrolovať zvyšok. Ak chcete, aby sa tieto zmeny vykonali, musíte aplikáciu reštartovať.</translation>
+      <translation type="unfinished">Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2450"/>
       <source>Optimize preview colors for dark mode desktop themes</source>
-      <translation>Optimalizujte farby ukážky pre motívy pracovnej plochy v tmavom režime</translation>
+      <translation type="unfinished">Optimize preview colors for dark mode desktop themes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2457"/>
       <source>This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</source>
-      <translation>To umožňuje režim tmavé, rozhranie a ikony budú zmenené. Ak chcete, aby sa tieto zmeny vykonali, musíte aplikáciu reštartovať.</translation>
+      <translation type="unfinished">This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2460"/>
       <source>Enable dark mode</source>
-      <translation>Povoliť režim tmavý</translation>
+      <translation type="unfinished">Enable dark mode</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2486"/>
@@ -3992,114 +3920,114 @@ Chcete ho aj tak nainštalovať?</translation>
       <location filename="../dialogs/settingsdialog.ui" line="2527"/>
       <location filename="../dialogs/settingsdialog.ui" line="2537"/>
       <source>You need to restart the application to let this setting take effect</source>
-      <translation>Ak chcete toto nastavenie aktivovať, musíte aplikáciu reštartovať</translation>
+      <translation type="unfinished">You need to restart the application to let this setting take effect</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2556"/>
       <source>Item sizes in the main window</source>
-      <translation>Veľkosti položiek v hlavnom okne</translation>
+      <translation type="unfinished">Item sizes in the main window</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4461"/>
       <source>Markdown highlighting</source>
-      <translation>Zvýraznenie markdown</translation>
+      <translation type="unfinished">Markdown highlighting</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4467"/>
       <source>Enable markdown highlighting</source>
-      <translation>Zapnúť zvýraznenie markdown</translation>
+      <translation type="unfinished">Enable markdown highlighting</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1956"/>
       <source>Interface language</source>
-      <translation>Jazyk rozhrania</translation>
+      <translation type="unfinished">Interface language</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1976"/>
       <source>Automatic</source>
-      <translation>Automatické</translation>
+      <translation type="unfinished">Automatic</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2064"/>
       <source>English</source>
-      <translation>Angličtina</translation>
+      <translation type="unfinished">English</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="252"/>
       <source>Shortcuts</source>
-      <translation>Klávesové skratky</translation>
+      <translation type="unfinished">Shortcuts</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3959"/>
       <location filename="../dialogs/settingsdialog.ui" line="4128"/>
       <source>Default font:</source>
-      <translation>Predvolené písmo:</translation>
+      <translation type="unfinished">Default font:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4001"/>
       <location filename="../dialogs/settingsdialog.ui" line="4152"/>
       <source>Code font:</source>
-      <translation>Kód písma:</translation>
+      <translation type="unfinished">Code font:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2715"/>
       <source>Main window shortcuts</source>
-      <translation>Skratky v hlavnom okne</translation>
+      <translation type="unfinished">Main window shortcuts</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3457"/>
       <source>Do this at your own risk!</source>
-      <translation>Urobte to na vlastné riziko!</translation>
+      <translation type="unfinished">Do this at your own risk!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3460"/>
       <source>Ignore all external note folder changes</source>
-      <translation>Ignorovať všetky externé zmeny priečinka poznámok</translation>
+      <translation type="unfinished">Ignore all external note folder changes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3870"/>
       <source>No two spaces to do a line break are added here if checked</source>
-      <translation>Ak je začiarknuté, nepridajú sa k nemu žiadne dve medzery</translation>
+      <translation type="unfinished">No two spaces to do a line break are added here if checked</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3873"/>
       <source>Use GitHub line breaks</source>
-      <translation>Použite GitHub zlomy</translation>
+      <translation type="unfinished">Use GitHub line breaks</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2053"/>
       <source>German</source>
-      <translation>Nemčina</translation>
+      <translation type="unfinished">German</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2108"/>
       <source>French</source>
-      <translation>Francúzština</translation>
+      <translation type="unfinished">French</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2229"/>
       <source>Polish</source>
-      <translation>Poľština</translation>
+      <translation type="unfinished">Polish</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2251"/>
       <source>Portuguese</source>
-      <translation>Portugalčina</translation>
+      <translation type="unfinished">Portuguese</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2218"/>
       <source>Dutch</source>
-      <translation>Holandčina</translation>
+      <translation type="unfinished">Dutch</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2185"/>
       <source>Hungarian</source>
-      <translation>Maďarčina</translation>
+      <translation type="unfinished">Hungarian</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2075"/>
       <source>Spanish</source>
-      <translation>Španielčina</translation>
+      <translation type="unfinished">Spanish</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1962"/>
@@ -4109,27 +4037,27 @@ Chcete ho aj tak nainštalovať?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2431"/>
       <source>Dark mode</source>
-      <translation>Tmavý režim</translation>
+      <translation type="unfinished">Dark mode</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1489"/>
       <source>Disable tracking of usage data</source>
-      <translation>Zakázať sledovanie údajov o používaní</translation>
+      <translation type="unfinished">Disable tracking of usage data</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1533"/>
       <source>Usage tracking is done on a private Piwik server.</source>
-      <translation>Sledovanie používania sa vykonáva na súkromnom serveri Piwik.</translation>
+      <translation type="unfinished">Usage tracking is done on a private Piwik server.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1593"/>
       <source>Disable heartbeat</source>
-      <translation>Vypnúť srdcový tep</translation>
+      <translation type="unfinished">Disable heartbeat</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2273"/>
       <source>Russian</source>
-      <translation>Ruština</translation>
+      <translation type="unfinished">Russian</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1442"/>
@@ -4139,32 +4067,32 @@ Chcete ho aj tak nainštalovať?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2394"/>
       <source>If you change the language you have to restart the application for the changes to take action.</source>
-      <translation>Ak zmeníte jazyk, musíte znova spustiť aplikáciu, aby sa zmeny vykonali.</translation>
+      <translation type="unfinished">If you change the language you have to restart the application for the changes to take action.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3135"/>
       <source>You need to reload the scripting engine if you modify a script file</source>
-      <translation>Ak upravujete súbor skriptu, musíte ho znova načítať</translation>
+      <translation type="unfinished">You need to reload the scripting engine if you modify a script file</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3138"/>
       <source>Reload scripting engine</source>
-      <translation>Znova načítajte skriptovací stroj</translation>
+      <translation type="unfinished">Reload scripting engine</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3128"/>
       <source>Validate script</source>
-      <translation>Overenie skriptu</translation>
+      <translation type="unfinished">Validate script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="288"/>
       <source>General</source>
-      <translation>Všeobecný</translation>
+      <translation type="unfinished">General</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3300"/>
       <source>Notes</source>
-      <translation>Poznámky</translation>
+      <translation type="unfinished">Notes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3408"/>
@@ -4177,249 +4105,249 @@ Chcete ho aj tak nainštalovať?</translation>
       <location filename="../dialogs/settingsdialog.ui" line="5155"/>
       <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
-      <translation>Pri staršej verzii synchrónneho systému ownCloud môžete spustiť synchronizáciu s problémami so synchronizáciou, ak idete ďaleko pod 10 sekúnd.
-Stačí si otestovať, či máte konflikty synchronizácie a ak áno, nastavte vyššiu hodnotu.</translation>
+      <translation type="unfinished">You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
+Just test yourself if you get sync conflicts and set a higher value if so.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2207"/>
       <source>Japanese</source>
-      <translation>Japonský</translation>
+      <translation type="unfinished">Japanese</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3481"/>
       <source>note save interval time [sec]</source>
-      <translation>čas intervalu uloženia poznámky [sec]</translation>
+      <translation type="unfinished">note save interval time [sec]</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3411"/>
       <source>Notify about all external modifications of the current note</source>
-      <translation>Upozornite na všetky externé úpravy aktuálnej poznámky</translation>
+      <translation type="unfinished">Notify about all external modifications of the current note</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3783"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1935"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1944"/>
       <source>Database</source>
-      <translation>Databázy</translation>
+      <translation type="unfinished">Database</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3799"/>
       <source>Reinitialize Database</source>
-      <translation>Obnoviť databázu</translation>
+      <translation type="unfinished">Reinitialize Database</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3722"/>
       <source>Clear application data and exit</source>
-      <translation>Vymažte údaje aplikácie a ukončite</translation>
+      <translation type="unfinished">Clear application data and exit</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3728"/>
       <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
-      <translation>Toto tlačidlo umožňuje vymazať všetky nastavenia, odstrániť lokálnu databázu todo a ukončiť funkciu QOwnNotes.</translation>
+      <translation type="unfinished">This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3738"/>
       <location filename="../dialogs/settingsdialog.cpp" line="2004"/>
       <source>Clear app data and exit</source>
-      <translation>Vymazať údaje aplikácie a výstupu</translation>
+      <translation type="unfinished">Clear app data and exit</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3517"/>
       <source>Update dialog</source>
-      <translation>Dialóg aktualizácie</translation>
+      <translation type="unfinished">Update dialog</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3597"/>
       <source>Default note file extension</source>
-      <translation>Predvolená prípona súboru poznámky</translation>
+      <translation type="unfinished">Default note file extension</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3682"/>
       <source>External editor</source>
-      <translation>Externý editor</translation>
+      <translation type="unfinished">External editor</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3695"/>
       <source>path to external editor, leave empty for default</source>
-      <translation>cestu k externému editoru, ponechajte prázdne pre predvolené nastavenia</translation>
+      <translation type="unfinished">path to external editor, leave empty for default</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3705"/>
       <location filename="../dialogs/settingsdialog.ui" line="4733"/>
       <source>set external editor</source>
-      <translation>nastaviť externý editor</translation>
+      <translation type="unfinished">set external editor</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1458"/>
       <source>App metrics</source>
-      <translation>Aplikácia metriky</translation>
+      <translation type="unfinished">App metrics</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1476"/>
       <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</source>
-      <translation>Anonymné údaje o používaní pomáhajú rozhodovať o tom, ktoré časti QOwnNotes sa majú ďalej vylepšovať a nájsť a opraviť chyby. Vypnite ho, len ak s ním naozaj nemôžete žiť.</translation>
+      <translation type="unfinished">Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1508"/>
       <source>This data includes anonymous information about what features of the app are used.</source>
-      <translation>Tieto údaje obsahujú anonymné informácie o tom, aké funkcie aplikácie sa používajú.</translation>
+      <translation type="unfinished">This data includes anonymous information about what features of the app are used.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1562"/>
       <source>App heartbeat</source>
-      <translation>Tep srdca aplikácie</translation>
+      <translation type="unfinished">App heartbeat</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1580"/>
       <source>A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</source>
-      <translation>Pravidelne sa posiela malá požiadavka na prezenčný signál, keď je spustený QOwnNotes. Urobte vývojára šťastným tým, že mu dáte vedieť, že niekto používa QOwnNotes.</translation>
+      <translation type="unfinished">A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2174"/>
       <source>Italian</source>
-      <translation>Taliančina</translation>
+      <translation type="unfinished">Italian</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="264"/>
       <source>Scripting</source>
-      <translation>Skriptovanie</translation>
+      <translation type="unfinished">Scripting</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2782"/>
       <source>Your scripts</source>
-      <translation>Vaše skripty</translation>
+      <translation type="unfinished">Your scripts</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2866"/>
       <source>&amp;Remove script</source>
-      <translation>&amp;Odstrániť skript</translation>
+      <translation type="unfinished">&amp;Remove script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3145"/>
       <source>Click here to select your QML script</source>
-      <translation>Kliknutím sem vyberte váš skript QML</translation>
+      <translation type="unfinished">Click here to select your QML script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="92"/>
       <source>Find setting</source>
-      <translation>Nájdite nastavenie</translation>
+      <translation type="unfinished">Find setting</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="179"/>
       <source>Layout</source>
-      <translation>Rozloženie</translation>
+      <translation type="unfinished">Layout</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="191"/>
       <source>Editor</source>
-      <translation>Editor</translation>
+      <translation type="unfinished">Editor</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="202"/>
       <source>Editor fonts &amp; colors</source>
-      <translation>Editor písiem &amp; farby</translation>
+      <translation type="unfinished">Editor fonts &amp; colors</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="215"/>
       <source>Panels</source>
-      <translation>Panely</translation>
+      <translation type="unfinished">Panels</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="239"/>
       <source>Toolbars</source>
-      <translation>Panely nástrojov</translation>
+      <translation type="unfinished">Toolbars</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="299"/>
       <source>Portable mode</source>
-      <translation>Prenosný režim</translation>
+      <translation type="unfinished">Portable mode</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="311"/>
       <source>Git versioning</source>
-      <translation>Git verzií</translation>
+      <translation type="unfinished">Git versioning</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="323"/>
       <source>Local trash</source>
-      <translation>Miestne odpadky</translation>
+      <translation type="unfinished">Local trash</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="347"/>
       <source>Debug options</source>
-      <translation>Možnosti ladenia</translation>
+      <translation type="unfinished">Debug options</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="559"/>
       <source>Path where your notes are stored locally</source>
-      <translation>Cesta, kde sú vaše poznámky uložené lokálne</translation>
+      <translation type="unfinished">Path where your notes are stored locally</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="569"/>
       <source>"Notes" path on your server</source>
       <extracomment>"Notes" should not be translated</extracomment>
-      <translation>Cesta "Notes" na vašom serveri</translation>
+      <translation type="unfinished">"Notes" path on your server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="675"/>
       <source>&amp;Use as ownCloud path</source>
-      <translation>&amp;Použiť ako ownCloud ceste</translation>
+      <translation type="unfinished">&amp;Use as ownCloud path</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="714"/>
       <source>Please select your note folder on your ownCloud server:</source>
-      <translation>Vyberte svoj priečinok s poznámkami na serveri ownCloud:</translation>
+      <translation type="unfinished">Please select your note folder on your ownCloud server:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="747"/>
       <source>ownCloud server:</source>
-      <translation>ownCloud server:</translation>
+      <translation type="unfinished">ownCloud server:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="757"/>
       <source>Path on your ownCloud server:</source>
-      <translation>Cesta na serveri ownCloud:</translation>
+      <translation type="unfinished">Path on your ownCloud server:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="764"/>
       <location filename="../dialogs/settingsdialog.ui" line="2956"/>
       <source>Name:</source>
-      <translation>Meno:</translation>
+      <translation type="unfinished">Name:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="771"/>
       <source>Note folder path:</source>
-      <translation>Cesta priečinka poznámka:</translation>
+      <translation type="unfinished">Note folder path:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="778"/>
       <source>Be aware that the ownCloud notes app doesn't support sub-folders!</source>
-      <translation>Uvedomte si, že aplikácia ownCloud notes nepodporuje podpriečinky!</translation>
+      <translation type="unfinished">Be aware that the ownCloud notes app doesn't support sub-folders!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="781"/>
       <source>Use note sub-folders</source>
-      <translation>Použite podpriečinky s poznámkami</translation>
+      <translation type="unfinished">Use note sub-folders</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="788"/>
       <source>You need to have git installed to make this work!</source>
-      <translation>Musíte mať nainštalovaný git, aby táto práca!</translation>
+      <translation type="unfinished">You need to have git installed to make this work!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="791"/>
       <source>Use git to keep a local history of your notes</source>
-      <translation>Použite git na udržanie miestnej histórie vašich poznámok</translation>
+      <translation type="unfinished">Use git to keep a local history of your notes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="820"/>
       <source>ownCloud support</source>
-      <translation>ownCloud podpora</translation>
+      <translation type="unfinished">ownCloud support</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="826"/>
       <source>Enable ownCloud support</source>
-      <translation>Zapnutie podpory ownCloud</translation>
+      <translation type="unfinished">Enable ownCloud support</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="857"/>
@@ -4430,257 +4358,257 @@ Stačí si otestovať, či máte konflikty synchronizácie a ak áno, nastavte v
       <location filename="../dialogs/settingsdialog.ui" line="1005"/>
       <location filename="../dialogs/settingsdialog.ui" line="1731"/>
       <source>Username:</source>
-      <translation>Užívateľské meno:</translation>
+      <translation type="unfinished">Username:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1030"/>
       <source>Your ownCloud username</source>
-      <translation>Vaše ownCloud používateľské meno</translation>
+      <translation type="unfinished">Your ownCloud username</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1040"/>
       <location filename="../dialogs/settingsdialog.ui" line="1766"/>
       <source>Password:</source>
-      <translation>Heslo:</translation>
+      <translation type="unfinished">Password:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1068"/>
       <source>Your ownCloud password</source>
-      <translation>Vaše vlastné heslo</translation>
+      <translation type="unfinished">Your ownCloud password</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1096"/>
       <source>&amp;Connect to ownCloud server</source>
-      <translation>&amp;Pripojte sa k serveru privateCloud</translation>
+      <translation type="unfinished">&amp;Connect to ownCloud server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1123"/>
       <source>Connection status</source>
-      <translation>Stav pripojenia</translation>
+      <translation type="unfinished">Connection status</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1807"/>
       <source>Select the calendars you want to use for the Todo list</source>
-      <translation>Vyberte kalendáre, ktoré chcete použiť pre zoznam Todo</translation>
+      <translation type="unfinished">Select the calendars you want to use for the Todo list</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1882"/>
       <source>Todo list settings</source>
-      <translation>Nastavenie zoznamu todo</translation>
+      <translation type="unfinished">Todo list settings</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1888"/>
       <source>Saving an item also closes the Todo list</source>
-      <translation>Uloženie položky zavrie tiež Todo list</translation>
+      <translation type="unfinished">Saving an item also closes the Todo list</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1987"/>
       <source>Indonesian</source>
-      <translation>Indonézština</translation>
+      <translation type="unfinished">Indonesian</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1998"/>
       <source>Bengali</source>
-      <translation>Bengálčina</translation>
+      <translation type="unfinished">Bengali</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2009"/>
       <source>Catalan</source>
-      <translation>Katalánčina</translation>
+      <translation type="unfinished">Catalan</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2020"/>
       <source>Cebuano</source>
-      <translation>Cebuano</translation>
+      <translation type="unfinished">Cebuano</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2042"/>
       <source>Danish</source>
-      <translation>Dánčina</translation>
+      <translation type="unfinished">Danish</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2086"/>
       <source>Filipino</source>
-      <translation>Filipínčina</translation>
+      <translation type="unfinished">Filipino</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2097"/>
       <source>Finnish</source>
-      <translation>Fínčina</translation>
+      <translation type="unfinished">Finnish</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2119"/>
       <source>Galician</source>
-      <translation>Galícijčina</translation>
+      <translation type="unfinished">Galician</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2130"/>
       <source>Greek</source>
-      <translation>Gréčtina</translation>
+      <translation type="unfinished">Greek</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2141"/>
       <source>Hindi</source>
-      <translation>Hindčina</translation>
+      <translation type="unfinished">Hindi</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2163"/>
       <source>Hiligaynon</source>
-      <translation>Hiligaynon</translation>
+      <translation type="unfinished">Hiligaynon</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2196"/>
       <source>Norwegian</source>
-      <translation>Nórčina</translation>
+      <translation type="unfinished">Norwegian</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2262"/>
       <source>Romanian</source>
-      <translation>Rumunský</translation>
+      <translation type="unfinished">Romanian</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2284"/>
       <source>Slovak</source>
-      <translation>Slovenský</translation>
+      <translation type="unfinished">Slovak</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2295"/>
       <source>Slovenian</source>
-      <translation>Slovinčina</translation>
+      <translation type="unfinished">Slovenian</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2306"/>
       <source>Swedish</source>
-      <translation>Švédčina</translation>
+      <translation type="unfinished">Swedish</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2317"/>
       <source>Tagalog</source>
-      <translation>Tagalog</translation>
+      <translation type="unfinished">Tagalog</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2328"/>
       <source>Turkish</source>
-      <translation>Turečtina</translation>
+      <translation type="unfinished">Turkish</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2350"/>
       <source>Urdu</source>
-      <translation>Urdčina</translation>
+      <translation type="unfinished">Urdu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2361"/>
       <source>Chinese Simplified</source>
-      <translation>Čínština (zjednodušená)</translation>
+      <translation type="unfinished">Chinese Simplified</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2372"/>
       <source>Chinese Traditional</source>
-      <translation>Čínština (tradičná)</translation>
+      <translation type="unfinished">Chinese Traditional</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2440"/>
       <source>Enable dark mode application icon and tray icon</source>
-      <translation>Povoliť ikonu aplikácie tmavého režimu a ikonu zásobníka</translation>
+      <translation type="unfinished">Enable dark mode application icon and tray icon</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2480"/>
       <source>System tray</source>
-      <translation>Systémovej lište</translation>
+      <translation type="unfinished">System tray</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2489"/>
       <source>Show system tray icon</source>
-      <translation>Zobraziť ikona na systémovej lište</translation>
+      <translation type="unfinished">Show system tray icon</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2499"/>
       <source>Start application hidden</source>
-      <translation>Spustenie aplikácie skryté</translation>
+      <translation type="unfinished">Start application hidden</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2509"/>
       <source>Interface style</source>
-      <translation>Rozhrania v štýle</translation>
+      <translation type="unfinished">Interface style</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2540"/>
       <source>Enforce system icon theme</source>
-      <translation>Vynútiť si systémovú tému</translation>
+      <translation type="unfinished">Enforce system icon theme</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2636"/>
       <source>Override interface font size</source>
-      <translation>Prepísať rozhranie veľkosť písma</translation>
+      <translation type="unfinished">Override interface font size</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2645"/>
       <source>Interface font size:</source>
-      <translation>Rozhranie veľkosť písma:</translation>
+      <translation type="unfinished">Interface font size:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2855"/>
       <source>&amp;Add script…</source>
-      <translation>&amp;Pridať skript…</translation>
+      <translation type="unfinished">&amp;Add script…</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3371"/>
       <source>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</source>
-      <translation>Pri otváraní poznámok sa teraz pozícia kurzora vo vnútri poznámky obnoví na pozíciu, keď bola poznámka naposledy navštívená v aktuálnej relácii</translation>
+      <translation type="unfinished">When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3381"/>
       <source>By default the headline will generated automatically</source>
-      <translation>V predvolenom nastavení sa titulok vygeneruje automaticky</translation>
+      <translation type="unfinished">By default the headline will generated automatically</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3384"/>
       <source>The shortcut to create a new note asks for a headline</source>
-      <translation>Odkaz na vytvorenie novej poznámky si vy¾iada nadpis</translation>
+      <translation type="unfinished">The shortcut to create a new note asks for a headline</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3488"/>
       <source>Automatically close the note folder database to prevent problems with sync tools</source>
-      <translation>Automaticky zatvorte databázu priečinkov s poznámkami, aby ste predišli problémom so synchronizačnými nástrojmi</translation>
+      <translation type="unfinished">Automatically close the note folder database to prevent problems with sync tools</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3491"/>
       <source>Automatically close the note folder database</source>
-      <translation>Automaticky zatvorte databázu priečinkov s poznámkami</translation>
+      <translation type="unfinished">Automatically close the note folder database</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3539"/>
       <source>Search engine</source>
-      <translation>Vyhľadávač</translation>
+      <translation type="unfinished">Search engine</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3561"/>
       <source>Message boxes</source>
-      <translation>Okná s hlásením</translation>
+      <translation type="unfinished">Message boxes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3567"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3567"/>
       <source>Reset message boxes</source>
-      <translation>Reset hláseniami</translation>
+      <translation type="unfinished">Reset message boxes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3760"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3633"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3656"/>
       <source>Import settings</source>
-      <translation>Nastavenie importu</translation>
+      <translation type="unfinished">Import settings</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3767"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3599"/>
       <source>Export settings</source>
-      <translation>Exportovanie nastavenia</translation>
+      <translation type="unfinished">Export settings</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3906"/>
       <source>Open issue assistant</source>
-      <translation>Otvorenou otázkou asistent</translation>
+      <translation type="unfinished">Open issue assistant</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3917"/>
@@ -4690,107 +4618,107 @@ Stačí si otestovať, či máte konflikty synchronizácie a ak áno, nastavte v
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4233"/>
       <source>Rendering</source>
-      <translation>Prikazovanje</translation>
+      <translation type="unfinished">Rendering</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4239"/>
       <source>Enable underline rendering</source>
-      <translation>Omogoči podčrtano upodabljanje</translation>
+      <translation type="unfinished">Enable underline rendering</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4495"/>
       <source>Fully highlight blockquotes</source>
-      <translation>V celoti poudarite blokovske citate</translation>
+      <translation type="unfinished">Fully highlight blockquotes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4528"/>
       <source>Note-edit cursor width:</source>
-      <translation>Širina kazalca za urejanje beležk:</translation>
+      <translation type="unfinished">Note-edit cursor width:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4592"/>
       <source>Enable Vim mode (some QOwnNotes shortcuts will not work)</source>
-      <translation>Omogoči način Vim (nekatere bližnjice QOwnNotes ne bodo delovale)</translation>
+      <translation type="unfinished">Enable Vim mode (some QOwnNotes shortcuts will not work)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4974"/>
       <source>Ignored sub-folders</source>
-      <translation>Prezrte podmape</translation>
+      <translation type="unfinished">Ignored sub-folders</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4990"/>
       <source>Reset ignored sub-folders</source>
-      <translation>Ponastavitev ignoriranih podmap</translation>
+      <translation type="unfinished">Reset ignored sub-folders</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5010"/>
       <source>Note list panel</source>
-      <translation>Plošča seznama opomb</translation>
+      <translation type="unfinished">Note list panel</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5082"/>
       <source>Show notes in the note list with preview</source>
-      <translation>Prikaže beležke na seznamu beležk s predogledom</translation>
+      <translation type="unfinished">Show notes in the note list with preview</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5317"/>
       <source>Bookmarks</source>
-      <translation>Záložky</translation>
+      <translation type="unfinished">Bookmarks</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5323"/>
       <source>Notes with this tag will be used for fetching bookmarks</source>
-      <translation>Opombe s to oznako bodo uporabljene za pridobivanje zaznamkov</translation>
+      <translation type="unfinished">Notes with this tag will be used for fetching bookmarks</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5326"/>
       <source>Tag name for bookmarks notes</source>
-      <translation>Ime oznake za beležke</translation>
+      <translation type="unfinished">Tag name for bookmarks notes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5333"/>
       <source>Bookmarks tag:</source>
-      <translation>Oznaka za zaznamke:</translation>
+      <translation type="unfinished">Bookmarks tag:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5340"/>
       <source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
-      <translation>Predvolené rozšírenie prehliadača zobrazí všetky prepojenia aktuálnej poznámky. Môžete tiež zobraziť špeciálne odkazy odkazov poznámok s určitým tagom. Viac informácií o syntaxe odkazu na záložku nájdete &lt;a href="%1"&gt;here&lt;/a&gt;.</translation>
+      <translation type="unfinished">By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5353"/>
       <source>Bookmarks note name:</source>
-      <translation>Názov poznámok záložiek:</translation>
+      <translation type="unfinished">Bookmarks note name:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5360"/>
       <source>This note will be used for adding new bookmarks from the browser extension</source>
-      <translation>Ta opomba se bo uporabila za dodajanje novih zaznamkov iz razširitve brskalnika</translation>
+      <translation type="unfinished">This note will be used for adding new bookmarks from the browser extension</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5363"/>
       <source>Note name for adding new bookmarks</source>
-      <translation>Ime beležke za dodajanje novih zaznamkov</translation>
+      <translation type="unfinished">Note name for adding new bookmarks</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5373"/>
       <source>Web socket server</source>
-      <translation>Strežnik za spletne vtičnice</translation>
+      <translation type="unfinished">Web socket server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5379"/>
       <source>Socket server port:</source>
-      <translation>Vrata strežnika vtičnice:</translation>
+      <translation type="unfinished">Socket server port:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5435"/>
       <source>Web socket server support</source>
-      <translation>Spletna podpora vtičnica strežnika</translation>
+      <translation type="unfinished">Web socket server support</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5441"/>
       <source>Enable socket server</source>
-      <translation>Omogoči strežnik vtičnice</translation>
+      <translation type="unfinished">Enable socket server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5416"/>
@@ -4800,122 +4728,122 @@ Stačí si otestovať, či máte konflikty synchronizácie a ak áno, nastavte v
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3467"/>
       <source>Allow the note file name to be different from the headline.&lt;br&gt;Beware that ownCloud Notes needs the file name to be the same as the headline!</source>
-      <translation>Povoliť, aby sa názov súboru s poznámkou líšil od nadpisu. &lt;br&gt; Dajte si pozor na to, aby aplikácia ownCloud Notes potrebovala, aby bol názov súboru rovnaký ako titulok!</translation>
+      <translation type="unfinished">Allow the note file name to be different from the headline.&lt;br&gt;Beware that ownCloud Notes needs the file name to be the same as the headline!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4794"/>
       <source>Note edit panel</source>
-      <translation>Plošča za urejanje beležke</translation>
+      <translation type="unfinished">Note edit panel</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4800"/>
       <source>If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</source>
-      <translation>Če je to onemogočeno, lahko ustvarite bolj zapletene postavitve plošč, vendar se bodo vse velikosti plošč spreminjale, če se spremeni velikost okna</translation>
+      <translation type="unfinished">If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4803"/>
       <source>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</source>
-      <translation>Če želite spremeniti velikost okna ali drugih plošč, uporabite ploščo za urejanje beležk kot fiksni osrednji pripomoček</translation>
+      <translation type="unfinished">Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4813"/>
       <source>Note search panel</source>
-      <translation>Plošča za iskanje opomb</translation>
+      <translation type="unfinished">Note search panel</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4819"/>
       <source>Disable auto-completion of previous searches</source>
-      <translation>Onemogoči samodejno dokončanje prejšnjih iskanj</translation>
+      <translation type="unfinished">Disable auto-completion of previous searches</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5105"/>
       <source>Navigation panel</source>
-      <translation>Navigacijska plošča</translation>
+      <translation type="unfinished">Navigation panel</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5111"/>
       <source>Hide navigation item search bar</source>
-      <translation>Skrij navigacija iskanje postavka vrstica</translation>
+      <translation type="unfinished">Hide navigation item search bar</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5125"/>
       <source>Local trash settings</source>
-      <translation>Nastavenia miestneho koša</translation>
+      <translation type="unfinished">Local trash settings</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5159"/>
       <source>Remove trashed notes after:</source>
-      <translation>Odstrániť poznámky s košom po:</translation>
+      <translation type="unfinished">Remove trashed notes after:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5166"/>
       <source> days</source>
       <extracomment>seconds</extracomment>
-      <translation>dni</translation>
+      <translation type="unfinished"> days</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5185"/>
       <source>Automatically remove trashed notes after a certain time</source>
-      <translation>Po určitom čase automaticky odstráňte poznámky s košom</translation>
+      <translation type="unfinished">Automatically remove trashed notes after a certain time</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5211"/>
       <source>Local trash support</source>
-      <translation>Podpora lokálneho koša</translation>
+      <translation type="unfinished">Local trash support</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5217"/>
       <source>Enable local trash</source>
-      <translation>Povoliť lokálny odpad</translation>
+      <translation type="unfinished">Enable local trash</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5234"/>
       <source>Layout selector</source>
-      <translation>Výber rozvrhnutia</translation>
+      <translation type="unfinished">Layout selector</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5240"/>
       <source>You can set a new layout here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</source>
-      <translation>Tu môžete nastaviť nové rozloženie. Majte na pamäti, že polohu panelov môžete vždy zmeniť pomocou tlačidla &lt;i&gt; Odomknúť panely &lt;/i&gt;.</translation>
+      <translation type="unfinished">You can set a new layout here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4514"/>
       <location filename="../dialogs/settingsdialog.ui" line="5399"/>
       <source>Reset the cursor width</source>
-      <translation>Obnovte šírku kurzora</translation>
+      <translation type="unfinished">Reset the cursor width</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4668"/>
       <source>External git log command to show the git versions of a note</source>
-      <translation>Externý príkaz git log na zobrazenie verzií poznámky git</translation>
+      <translation type="unfinished">External git log command to show the git versions of a note</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4674"/>
       <source>Enter a command to be used to show a git log (like for example "gitk")</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
-      <translation>Zadajte príkaz, ktorý sa má použiť na zobrazenie protokolu git (ako napríklad „gitk“)</translation>
+      <translation type="unfinished">Enter a command to be used to show a git log (like for example "gitk")</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4694"/>
       <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
-      <translation>Ak použijete toto nastavenie, dostanete novú položku menu, ktorá zobrazí verzie git, ak kliknete pravým tlačidlom myši na poznámku.</translation>
+      <translation type="unfinished">If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4971"/>
       <location filename="../dialogs/settingsdialog.ui" line="4980"/>
       <source>Regular expressions of note sub-folders to ignore, separated by ";"</source>
-      <translation>Regulárne výrazy podpriečinkov poznámky, ktoré sa majú ignorovať, oddelené znakom „;“</translation>
+      <translation type="unfinished">Regular expressions of note sub-folders to ignore, separated by ";"</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5075"/>
       <source>Show all notes of a tag including the notes of their children-tags</source>
-      <translation>Show all poznámky značky vrátane poznámok ich deti-Tagy</translation>
+      <translation type="unfinished">Show all notes of a tag including the notes of their children-tags</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5045"/>
       <source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
-      <translation>Zobraziť všetky poznámky v priečinku vrátane ich podpriečinkov (funguje iba ak sú zapnuté podpriečinky)</translation>
+      <translation type="unfinished">Show all notes in a folder including their subfolders (only works if subfolders are turned on)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4442"/>
@@ -4925,536 +4853,536 @@ Stačí si otestovať, či máte konflikty synchronizácie a ak áno, nastavte v
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4578"/>
       <source>Highlight the current line</source>
-      <translation>Zvýraznite aktuálny riadok</translation>
+      <translation type="unfinished">Highlight the current line</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4761"/>
       <source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
-      <translation>Nezabudnite povoliť podporu git pre vaše priečinky poznámok a nakonfigurovať svoje meno a e-mailovú adresu pre klienta git, napríklad pomocou týchto príkazov terminálu:</translation>
+      <translation type="unfinished">Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4829"/>
       <source>Tags panel</source>
-      <translation>Na paneli tagy</translation>
+      <translation type="unfinished">Tags panel</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4858"/>
       <location filename="../dialogs/settingsdialog.ui" line="4934"/>
       <location filename="../dialogs/settingsdialog.ui" line="5019"/>
       <source>Order</source>
-      <translation>Poradie</translation>
+      <translation type="unfinished">Order</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4864"/>
       <location filename="../dialogs/settingsdialog.ui" line="4940"/>
       <location filename="../dialogs/settingsdialog.ui" line="5028"/>
       <source>Ascending</source>
-      <translation>Stúpajúca</translation>
+      <translation type="unfinished">Ascending</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4871"/>
       <location filename="../dialogs/settingsdialog.ui" line="4947"/>
       <location filename="../dialogs/settingsdialog.ui" line="5035"/>
       <source>Descending</source>
-      <translation>Zostupne</translation>
+      <translation type="unfinished">Descending</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4835"/>
       <location filename="../dialogs/settingsdialog.ui" line="4904"/>
       <location filename="../dialogs/settingsdialog.ui" line="5052"/>
       <source>Sort</source>
-      <translation>Zoradiť</translation>
+      <translation type="unfinished">Sort</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4585"/>
       <source>Only use editor width setting in distraction free mode</source>
-      <translation>Použite iba nastavenie šírky editora v režime bez rušenia</translation>
+      <translation type="unfinished">Only use editor width setting in distraction free mode</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4841"/>
       <location filename="../dialogs/settingsdialog.ui" line="4910"/>
       <location filename="../dialogs/settingsdialog.ui" line="5058"/>
       <source>Alphabetical</source>
-      <translation>Abecedne</translation>
+      <translation type="unfinished">Alphabetical</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4848"/>
       <source>By last change / use</source>
-      <translation>Poslednou zmenou / použitím</translation>
+      <translation type="unfinished">By last change / use</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4881"/>
       <source>Hide 'Find or create tag' search</source>
-      <translation>Skryť vyhľadávanie „Hľadať alebo vytvoriť značku“</translation>
+      <translation type="unfinished">Hide 'Find or create tag' search</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4891"/>
       <source>Note subfolders panel</source>
-      <translation>Poznámka podpriečinky panel</translation>
+      <translation type="unfinished">Note subfolders panel</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4897"/>
       <source>Show with full path</source>
-      <translation>Zobraziť s plnou cestou</translation>
+      <translation type="unfinished">Show with full path</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4917"/>
       <location filename="../dialogs/settingsdialog.ui" line="5065"/>
       <source>By last change</source>
-      <translation>Poslednou zmenou</translation>
+      <translation type="unfinished">By last change</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4927"/>
       <source>Show root folder name</source>
-      <translation>Zobraziť názov koreňového priečinka</translation>
+      <translation type="unfinished">Show root folder name</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4957"/>
       <source>Hide 'Find or create note subfolder' search</source>
-      <translation>Skryť 'Hľadať alebo vytvoriť podpriečinok poznámok'</translation>
+      <translation type="unfinished">Hide 'Find or create note subfolder' search</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4964"/>
       <source>Display note subfolders as full tree</source>
-      <translation>Zobraziť podpriečinky poznámok ako úplný strom</translation>
+      <translation type="unfinished">Display note subfolders as full tree</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2517"/>
       <source>Search script repository</source>
-      <translation>Vyhľadávanie skriptového archívu</translation>
+      <translation type="unfinished">Search script repository</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4684"/>
       <source>You optionally can use "%notePath%" for the path of the note.</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
-      <translation>Voliteľne môžete pre cestu poznámky použiť "%notePath%".</translation>
+      <translation type="unfinished">You optionally can use "%notePath%" for the path of the note.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4707"/>
       <source>Git client</source>
-      <translation>Git client</translation>
+      <translation type="unfinished">Git client</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4723"/>
       <source>Path to git executable:</source>
-      <translation>Cesta k spustiteľnému súboru git:</translation>
+      <translation type="unfinished">Path to git executable:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4713"/>
       <source>Path to git client, leave empty for default</source>
-      <translation>Cesta ku klientovi git, ponechať prázdne pre predvolené nastavenia</translation>
+      <translation type="unfinished">Path to git client, leave empty for default</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4632"/>
       <source>Commit interval</source>
-      <translation>Interval ukončenia</translation>
+      <translation type="unfinished">Commit interval</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4638"/>
       <source>sec</source>
       <extracomment>seconds</extracomment>
-      <translation>sekunda</translation>
+      <translation type="unfinished">sec</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4658"/>
       <source>git commit interval time [sec]</source>
-      <translation>čas intervalu git commit [sec]</translation>
+      <translation type="unfinished">git commit interval time [sec]</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="905"/>
       <source>Open your ownCloud server &amp;Apps page</source>
-      <translation>Otvorte stránku ownCloud server &amp; Apps</translation>
+      <translation type="unfinished">Open your ownCloud server &amp;Apps page</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="227"/>
       <source>Preview</source>
-      <translation>Náhľad</translation>
+      <translation type="unfinished">Preview</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="276"/>
       <source>Browser extension</source>
-      <translation>Rozšírenie prehliadača</translation>
+      <translation type="unfinished">Browser extension</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1638"/>
       <source>Which calendar backend do you want to use?</source>
-      <translation>Ktorý backend kalendára chcete použiť?</translation>
+      <translation type="unfinished">Which calendar backend do you want to use?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1651"/>
       <source>For most current ownCloud and Nextcloud installations</source>
-      <translation>Pre väčšinu aktuálnych inštalácií ownCloud a Nextcloud</translation>
+      <translation type="unfinished">For most current ownCloud and Nextcloud installations</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1671"/>
       <source>For older versions of ownCloud where the default setting doesn't work</source>
-      <translation>Pre staršie verzie ownCloud, kde predvolené nastavenie nefunguje</translation>
+      <translation type="unfinished">For older versions of ownCloud where the default setting doesn't work</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1674"/>
       <source>Legacy ownCloud calendar</source>
-      <translation>Legacy ownCloud kalendár</translation>
+      <translation type="unfinished">Legacy ownCloud calendar</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1687"/>
       <source>CalDAV server settings</source>
-      <translation>Nastavenia servera CalDAV</translation>
+      <translation type="unfinished">CalDAV server settings</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1696"/>
       <source>Calendar base url:</source>
-      <translation>Adresa Url základnej kalendára:</translation>
+      <translation type="unfinished">Calendar base url:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1718"/>
       <source>Please enter the CalDAV base url to your calendar.</source>
-      <translation>Zadajte základnú adresu CalDAV do svojho kalendára.</translation>
+      <translation type="unfinished">Please enter the CalDAV base url to your calendar.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1788"/>
       <source>Please enter the password for your CalDAV username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.</source>
-      <translation>Zadajte heslo pre vaše používateľské meno CalDAV. &lt;br/&gt; V súčasnosti bude heslo uložené zašifrované s inými nastaveniami, ale nie je veľmi bezpečné.</translation>
+      <translation type="unfinished">Please enter the password for your CalDAV username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2031"/>
       <source>Czech</source>
-      <translation>Český</translation>
+      <translation type="unfinished">Czech</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2240"/>
       <source>Brazilian Portuguese</source>
-      <translation>Brazílska portugalčina</translation>
+      <translation type="unfinished">Brazilian Portuguese</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2339"/>
       <source>Ukrainian</source>
-      <translation>Ukrajinský</translation>
+      <translation type="unfinished">Ukrainian</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2467"/>
       <source>You might also want to choose an other editor color schema in the editor settings in dark mode.</source>
-      <translation>Môžete tiež zvoliť inú farebnú schému editora v nastaveniach editora v tmavom režime.</translation>
+      <translation type="unfinished">You might also want to choose an other editor color schema in the editor settings in dark mode.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3257"/>
       <source>The name</source>
-      <translation>Názov</translation>
+      <translation type="unfinished">The name</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3334"/>
       <source>Maximum height:</source>
-      <translation>Maximálna výška:</translation>
+      <translation type="unfinished">Maximum height:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3341"/>
       <source>Maximum width:</source>
-      <translation>Maximálna šírka:</translation>
+      <translation type="unfinished">Maximum width:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3401"/>
       <source>Scale images down when inserted into notes</source>
-      <translation>Zmenšiť obrázky nadol pri vložení do poznámok</translation>
+      <translation type="unfinished">Scale images down when inserted into notes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2152"/>
       <source>Croatian</source>
-      <translation>Chorvátsky</translation>
+      <translation type="unfinished">Croatian</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3172"/>
       <source>Path to your QML file</source>
-      <translation>Cesta k vášmu súboru QML</translation>
+      <translation type="unfinished">Path to your QML file</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2963"/>
       <source>Script name</source>
-      <translation>Názov skriptu</translation>
+      <translation type="unfinished">Script name</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2985"/>
       <source>Description:</source>
-      <translation>Popis:</translation>
+      <translation type="unfinished">Description:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3067"/>
       <source>Version:</source>
-      <translation>Verzia:</translation>
+      <translation type="unfinished">Version:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3028"/>
       <source>Repository:</source>
-      <translation>Úložisko:</translation>
+      <translation type="unfinished">Repository:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3005"/>
       <source>Author(s):</source>
-      <translation>Autor(i):</translation>
+      <translation type="unfinished">Author(s):</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3391"/>
       <source>Check this if you want to accept all external modifications while you are editing the current note.</source>
-      <translation>Označte túto možnosť, ak chcete počas úpravy aktuálnej poznámky prijať všetky externé úpravy.</translation>
+      <translation type="unfinished">Check this if you want to accept all external modifications while you are editing the current note.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3394"/>
       <source>Accept all external modifications of the current note</source>
-      <translation>Prijať všetky externé úpravy aktuálnej poznámky</translation>
+      <translation type="unfinished">Accept all external modifications of the current note</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3450"/>
       <source>Use UNIX newline instead of native newline characters</source>
-      <translation>Namiesto natívnych znakov nového riadku použite nový riadok UNIX</translation>
+      <translation type="unfinished">Use UNIX newline instead of native newline characters</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3374"/>
       <source>Restore cursor position when opening a note</source>
-      <translation>Pri otváraní poznámky obnovte polohu kurzora</translation>
+      <translation type="unfinished">Restore cursor position when opening a note</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3789"/>
       <source>Be warned that this will also remove your cached todo items and configured note folders and scripts!</source>
-      <translation>Upozorňujeme, že sa tým odstránia aj vaše položky uložené v pamäti cache a nakonfigurované priečinky s poznámkami a skripty!</translation>
+      <translation type="unfinished">Be warned that this will also remove your cached todo items and configured note folders and scripts!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4266"/>
       <source>Apply toolbar configuration</source>
-      <translation>Použiť konfiguráciu panela s nástrojmi</translation>
+      <translation type="unfinished">Apply toolbar configuration</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4280"/>
       <source>Reset toolbars</source>
-      <translation>Obnoviť panely s nástrojmi</translation>
+      <translation type="unfinished">Reset toolbars</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4308"/>
       <source>Enable logging to file</source>
-      <translation>Povoliť prihlásenie do súboru</translation>
+      <translation type="unfinished">Enable logging to file</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4315"/>
       <source>Clear log file</source>
-      <translation>Vymazať súbor denníka</translation>
+      <translation type="unfinished">Clear log file</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4326"/>
       <source>Fake old version number to trigger update</source>
-      <translation>Falošné staré číslo verzie na spustenie aktualizácie</translation>
+      <translation type="unfinished">Fake old version number to trigger update</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4354"/>
       <source>Log file path:</source>
-      <translation>Cesta k protokolovému súboru:</translation>
+      <translation type="unfinished">Log file path:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4416"/>
       <source>Here you can set your own time format for inserting the current time into a note.</source>
-      <translation>Tu si môžete nastaviť vlastný formát času pre vloženie aktuálneho času do poznámky.</translation>
+      <translation type="unfinished">Here you can set your own time format for inserting the current time into a note.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4419"/>
       <source>Insert current time</source>
-      <translation>Vložte aktuálny čas</translation>
+      <translation type="unfinished">Insert current time</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4425"/>
       <source>Time format:</source>
-      <translation>Formát času:</translation>
+      <translation type="unfinished">Time format:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4432"/>
       <source>Enter your custom time format, like "dd.MM.yyyy hh:mm"</source>
-      <translation>Zadajte vlastný formát času, napríklad „dd.MM.yyyy hh:mm“</translation>
+      <translation type="unfinished">Enter your custom time format, like "dd.MM.yyyy hh:mm"</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4508"/>
       <source>Editor options</source>
-      <translation>Možnosti editora</translation>
+      <translation type="unfinished">Editor options</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4548"/>
       <source>Enable automatic closing of brackets and markdown formatting characters</source>
-      <translation>Povoliť automatické zatváranie zátvoriek a formátovanie znakov</translation>
+      <translation type="unfinished">Enable automatic closing of brackets and markdown formatting characters</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4568"/>
       <source>You have to use the backspace key to remove the opening character</source>
-      <translation>Na odstránenie znaku otvorenia musíte použiť tlačidlo backspace</translation>
+      <translation type="unfinished">You have to use the backspace key to remove the opening character</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4571"/>
       <source>Enable automatic removal of matching closing characters</source>
-      <translation>Povoliť automatické odstránenie zodpovedajúcich uzatváracích znakov</translation>
+      <translation type="unfinished">Enable automatic removal of matching closing characters</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1721"/>
       <source>Your CalDAV calendar base url</source>
-      <translation>Vaša základná adresa kalendára CalDAV</translation>
+      <translation type="unfinished">Your CalDAV calendar base url</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1753"/>
       <source>Please enter the username of your CalDAV server.</source>
-      <translation>Zadajte používateľské meno vášho CalDAV servera.</translation>
+      <translation type="unfinished">Please enter the username of your CalDAV server.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1756"/>
       <source>Your CalDAV username</source>
-      <translation>Meno CalDAV</translation>
+      <translation type="unfinished">Your CalDAV username</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1794"/>
       <source>Your CalDAV password</source>
-      <translation>CalDAV heslo</translation>
+      <translation type="unfinished">Your CalDAV password</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1829"/>
       <source>This causes all todo list items to be reloaded from your server the next time you open your todo dialog.</source>
-      <translation>To spôsobí, že všetky položky zoznamu todo sa znova načítajú z vášho servera pri najbližšom otvorení dialógu todo.</translation>
+      <translation type="unfinished">This causes all todo list items to be reloaded from your server the next time you open your todo dialog.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1832"/>
       <source>Empty calendar item cache</source>
-      <translation>Prázdny kalendár položka cache</translation>
+      <translation type="unfinished">Empty calendar item cache</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1855"/>
       <source>Click here to reload the list of calendars from your calendar server.</source>
-      <translation>Kliknutím sem obnovíte zoznam kalendárov zo svojho kalendárového servera.</translation>
+      <translation type="unfinished">Click here to reload the list of calendars from your calendar server.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1861"/>
       <source>&amp;Reload calendar list</source>
-      <translation>&amp;Aktualizuj zoznam kalendárov</translation>
+      <translation type="unfinished">&amp;Reload calendar list</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2437"/>
       <source>You may need to restart the application to let these changes take effect</source>
-      <translation>Možno budete musieť reštartovať aplikáciu, aby sa tieto zmeny prejavili</translation>
+      <translation type="unfinished">You may need to restart the application to let these changes take effect</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2572"/>
       <source>Toolbar icon size:</source>
-      <translation>Veľkosť ikony panela s nástrojmi:</translation>
+      <translation type="unfinished">Toolbar icon size:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2562"/>
       <source>List and tree item height:</source>
-      <translation>Výška zoznamu a stromovej položky:</translation>
+      <translation type="unfinished">List and tree item height:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2595"/>
       <source>Reset the icon size</source>
-      <translation>Obnovte veľkosť ikony</translation>
+      <translation type="unfinished">Reset the icon size</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2609"/>
       <source>Reset the item height</source>
-      <translation>Vynulujte výšku položky</translation>
+      <translation type="unfinished">Reset the item height</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4204"/>
       <source>View text right to left (RTL)</source>
-      <translation>Zobraziť text sprava doľava (RTL)</translation>
+      <translation type="unfinished">View text right to left (RTL)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2733"/>
       <source>Search for shortcut</source>
-      <translation>Vyhľadajte skratku</translation>
+      <translation type="unfinished">Search for shortcut</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1872"/>
       <source>Ignore calendars that don't support todo items</source>
-      <translation>Ignore calendars that don't support todo items</translation>
+      <translation type="unfinished">Ignore calendars that don't support todo items</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2383"/>
       <source>Arabic</source>
-      <translation>Arabčina</translation>
+      <translation type="unfinished">Arabic</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2521"/>
       <source>Icons</source>
-      <translation>Ikony</translation>
+      <translation type="unfinished">Icons</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2530"/>
       <source>Use internal icon theme instead of system icon theme</source>
-      <translation>Použite internú ikonu témy namiesto systémovej ikony tému</translation>
+      <translation type="unfinished">Use internal icon theme instead of system icon theme</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3121"/>
       <source>Script path:</source>
-      <translation>Cesta skriptu:</translation>
+      <translation type="unfinished">Script path:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="730"/>
       <source>Note folder name</source>
-      <translation>Poznámka názov priečinka</translation>
+      <translation type="unfinished">Note folder name</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3470"/>
       <source>Allow note file name to be different from headline</source>
-      <translation>Povoliť, aby sa názov súboru poznámky líšil od nadpisu</translation>
+      <translation type="unfinished">Allow note file name to be different from headline</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3418"/>
       <source>Check this if you want to ignore all external modifications while you are editing the current note.</source>
-      <translation>Označte túto možnosť, ak chcete počas úprav aktuálnej poznámky ignorovať všetky externé úpravy.</translation>
+      <translation type="unfinished">Check this if you want to ignore all external modifications while you are editing the current note.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3421"/>
       <source>Ignore all external modifications of the current note</source>
-      <translation>Ignorujte všetky externé úpravy aktuálnej poznámky</translation>
+      <translation type="unfinished">Ignore all external modifications of the current note</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3447"/>
       <source>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</source>
-      <translation>Môžete to použiť napríklad v systéme Windows, ak máte problémy s novými riadkami v aplikácii ownCloud / Nextcloud</translation>
+      <translation type="unfinished">You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3501"/>
       <source>App instance</source>
-      <translation>Inštancii aplikácie</translation>
+      <translation type="unfinished">App instance</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3507"/>
       <source>Only allow one app instance at the same time</source>
-      <translation>Povoliť naraz iba jednu inštanciu aplikácie</translation>
+      <translation type="unfinished">Only allow one app instance at the same time</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3603"/>
       <source>Add a custom file extension</source>
-      <translation>Pridajte vlastnú príponu súboru</translation>
+      <translation type="unfinished">Add a custom file extension</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3617"/>
       <source>Remove a custom file extension</source>
-      <translation>Odstráňte vlastnú príponu súboru</translation>
+      <translation type="unfinished">Remove a custom file extension</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3656"/>
       <source>If you add custom extensions just type in the extension, like "taskpaper".</source>
-      <translation>Ak pridáte vlastné rozšírenia, stačí zadať príponu, napríklad „taskpaper“.</translation>
+      <translation type="unfinished">If you add custom extensions just type in the extension, like "taskpaper".</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3660"/>
       <source>Text file (txt)</source>
-      <translation>Textový súbor (txt)</translation>
+      <translation type="unfinished">Text file (txt)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3688"/>
       <source>Path to external editor:</source>
-      <translation>Cesta k externému editoru:</translation>
+      <translation type="unfinished">Path to external editor:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3523"/>
       <source>Don't show the update dialog automatically</source>
-      <translation>Dialóg aktualizácie sa nezobrazí automaticky</translation>
+      <translation type="unfinished">Don't show the update dialog automatically</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3953"/>
       <location filename="../dialogs/settingsdialog.ui" line="4108"/>
       <source>Fonts</source>
-      <translation>Písma</translation>
+      <translation type="unfinished">Fonts</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3976"/>
@@ -5462,7 +5390,7 @@ Stačí si otestovať, či máte konflikty synchronizácie a ak áno, nastavte v
       <location filename="../dialogs/settingsdialog.ui" line="4176"/>
       <location filename="../dialogs/settingsdialog.ui" line="4190"/>
       <source>Set a new font</source>
-      <translation>Nastaviť nové písmo</translation>
+      <translation type="unfinished">Set a new font</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3987"/>
@@ -5470,17 +5398,17 @@ Stačí si otestovať, či máte konflikty synchronizácie a ak áno, nastavte v
       <location filename="../dialogs/settingsdialog.ui" line="4114"/>
       <location filename="../dialogs/settingsdialog.ui" line="4138"/>
       <source>Reset font</source>
-      <translation>Obnoviť písmo</translation>
+      <translation type="unfinished">Reset font</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="336"/>
       <source>Debug</source>
-      <translation>Debug</translation>
+      <translation type="unfinished">Debug</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3840"/>
       <source>Debug information</source>
-      <translation>Informácie o ladení</translation>
+      <translation type="unfinished">Debug information</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3883"/>
@@ -5490,66 +5418,66 @@ Stačí si otestovať, či máte konflikty synchronizácie a ak áno, nastavte v
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3859"/>
       <source>&amp;Save debug information</source>
-      <translation>&amp;Ukladanie ladenia informácií</translation>
+      <translation type="unfinished">&amp;Save debug information</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="427"/>
       <source>hostname of proxy server</source>
-      <translation>názov hostiteľa servera proxy</translation>
+      <translation type="unfinished">hostname of proxy server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="428"/>
       <source>username for proxy server</source>
-      <translation>meno používateľa pre proxy server</translation>
+      <translation type="unfinished">username for proxy server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="429"/>
       <source>password for proxy server</source>
-      <translation>heslo pre proxy server</translation>
+      <translation type="unfinished">password for proxy server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="431"/>
       <source>HTTP(S) proxy</source>
-      <translation>Proxy HTTP(S)</translation>
+      <translation type="unfinished">HTTP(S) proxy</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="432"/>
       <source>SOCKS5 proxy</source>
-      <translation>SOCKS5 proxy</translation>
+      <translation type="unfinished">SOCKS5 proxy</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1243"/>
       <source>Automatic (needs restart)</source>
-      <translation>Automatické (vyžaduje reštart)</translation>
+      <translation type="unfinished">Automatic (needs restart)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1403"/>
       <source>Undefined key</source>
-      <translation>Nedefinovaný kľúč</translation>
+      <translation type="unfinished">Undefined key</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1408"/>
       <source>Assign a new key</source>
-      <translation>Priradiť nový kľúč</translation>
+      <translation type="unfinished">Assign a new key</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1409"/>
       <source>Reset to default key</source>
-      <translation>Obnoviť predvolený kľúč</translation>
+      <translation type="unfinished">Reset to default key</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1488"/>
       <source>Shortcut already assigned</source>
-      <translation>Už je priradené</translation>
+      <translation type="unfinished">Shortcut already assigned</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1667"/>
       <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
-      <translation>Spojenie bolo úspešne vykonané!
-Verzia servera: %1
-Verzia QOwnNotesAPI: %2</translation>
+      <translation type="unfinished">The connection was made successfully!
+Server version: %1
+QOwnNotesAPI version: %2</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1678"/>
@@ -5557,121 +5485,121 @@ Verzia QOwnNotesAPI: %2</translation>
 You also need to have the QOwnNotesAPI app installed and enabled!
 
 Connection error message: </source>
-      <translation>Vyskytla sa chyba pri pripájaní sa k serveru OwnCloud!
-Musíte mať tiež nainštalovanú a povolenú aplikáciu QOwnNotesAPI!
+      <translation type="unfinished">There was an error connecting to the ownCloud Server!
+You also need to have the QOwnNotesAPI app installed and enabled!
 
-Chybové hlásenie o pripojení: </translation>
+Connection error message: </translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1957"/>
       <source>Markdown files</source>
-      <translation>Markdown súbory</translation>
+      <translation type="unfinished">Markdown files</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1984"/>
       <source>Disable usage tracking</source>
-      <translation>Zakázať sledovanie používania</translation>
+      <translation type="unfinished">Disable usage tracking</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1985"/>
       <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
-      <translation>Anonymné údaje o používaní pomáhajú rozhodovať o tom, ktoré časti QOwnNotes sa majú ďalej vylepšovať a nájsť a opraviť chyby. &lt;br /&gt; Vypnite ho iba v prípade, ak s ním naozaj nemôžete žiť. &lt;br /&gt; &lt;br /&gt; Skutočne zakázať sledovanie používania?</translation>
+      <translation type="unfinished">Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2206"/>
       <source>new folder</source>
-      <translation>nový priečinok</translation>
+      <translation type="unfinished">new folder</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2244"/>
       <source>Remove note folder</source>
-      <translation>Odstrániť poznámku priečinka</translation>
+      <translation type="unfinished">Remove note folder</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2245"/>
       <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation>Odstrániť aktuálny priečinok s poznámkami &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+      <translation type="unfinished">Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2320"/>
       <source>Please select the folder where your notes will get stored to</source>
-      <translation>Vyberte priečinok, do ktorého sa budú ukladať poznámky</translation>
+      <translation type="unfinished">Please select the folder where your notes will get stored to</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2357"/>
       <source>Loading folders from server</source>
-      <translation>Načítanie priečinkov zo servera</translation>
+      <translation type="unfinished">Loading folders from server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2371"/>
       <source>No more folders were found in the current folder</source>
-      <translation>V aktuálnom priečinku sa nenašli žiadne ďalšie priečinky</translation>
+      <translation type="unfinished">No more folders were found in the current folder</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2444"/>
       <source>Loading folders in '%1' from server</source>
-      <translation>Načítavajú sa priečinky v priečinku '%1' zo servera</translation>
+      <translation type="unfinished">Loading folders in '%1' from server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2504"/>
       <source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
-      <translation>Ak chcete začať rýchlo, pozrite sa na &lt;a href="%1"&gt; dokumentáciu skriptovania &lt;/a&gt;.</translation>
+      <translation type="unfinished">Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2506"/>
       <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
-      <translation>Ak potrebujete prístup k určitej funkcii v službe QOwnNotes, otvorte problém na stránke &lt;a href="%1"&gt; Otázka vydania QOwnNotes &lt;/a&gt;.</translation>
+      <translation type="unfinished">If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2527"/>
       <source>Check for script updates</source>
-      <translation>Vyhľadanie aktualizácií skriptu</translation>
+      <translation type="unfinished">Check for script updates</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2534"/>
       <source>Add local script</source>
-      <translation>Pridať lokálny skript</translation>
+      <translation type="unfinished">Add local script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2538"/>
       <source>Add an existing, local script</source>
-      <translation>Pridanie existujúcich, miestne skriptu</translation>
+      <translation type="unfinished">Add an existing, local script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3598"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3655"/>
       <source>INI files</source>
-      <translation>INI súborov</translation>
+      <translation type="unfinished">INI files</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3634"/>
       <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
-      <translation>Naozaj chcete importovať nastavenia? Vaše aktuálne nastavenia sa odstránia a nie každé nastavenie sa môže obnoviť, napríklad nastavenia priečinka s poznámkami a skripty, ktoré ste používali. Budete tiež musieť upraviť niektoré nastavenia, najmä medzi platformami, ale vaše poznámky zostanú nedotknuté!</translation>
+      <translation type="unfinished">Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3644"/>
       <source>The application will be quit after the import.</source>
-      <translation>Aplikácia bude po importe ukončená.</translation>
+      <translation type="unfinished">The application will be quit after the import.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3645"/>
       <source>The application will be restarted after the import.</source>
-      <translation>Aplikácia sa po importovaní reštartuje.</translation>
+      <translation type="unfinished">The application will be restarted after the import.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2521"/>
       <source>Find a script in the script repository</source>
-      <translation>Nájdite skript v úložisku skriptov</translation>
+      <translation type="unfinished">Find a script in the script repository</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="246"/>
       <source>Menu bar</source>
-      <translation>Ponuka bar</translation>
+      <translation type="unfinished">Menu bar</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="247"/>
       <source>Show menu bar item</source>
-      <translation>Zobraziť položku menu</translation>
+      <translation type="unfinished">Show menu bar item</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1489"/>
@@ -5681,206 +5609,206 @@ Chybové hlásenie o pripojení: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2619"/>
       <source>Remove script</source>
-      <translation>Odstrániť skript</translation>
+      <translation type="unfinished">Remove script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2620"/>
       <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation>Odstrániť aktuálny skript &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+      <translation type="unfinished">Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2671"/>
       <source>QML files</source>
-      <translation>Súbory QML</translation>
+      <translation type="unfinished">QML files</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2672"/>
       <source>Please select your QML file</source>
-      <translation>Vyberte súbor QML</translation>
+      <translation type="unfinished">Please select your QML file</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2761"/>
       <source>Open repository</source>
-      <translation>Otvoriť úložisko</translation>
+      <translation type="unfinished">Open repository</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2821"/>
       <source>Your script seems to be valid</source>
-      <translation>Váš skript sa zdá byť platný</translation>
+      <translation type="unfinished">Your script seems to be valid</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2822"/>
       <source>There were script errors:
 %1</source>
-      <translation>Vyskytli sa chyby skriptu:
+      <translation type="unfinished">There were script errors:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2891"/>
       <source>File extension</source>
-      <translation>Rozšírenie súboru</translation>
+      <translation type="unfinished">File extension</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2892"/>
       <source>Enter your custom file extension:</source>
-      <translation>Zadajte vlastnú príponu súboru:</translation>
+      <translation type="unfinished">Enter your custom file extension:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3184"/>
       <source>Calendar cache emptied</source>
-      <translation>Vymazanie vyrovnávacej pamäte kalendára</translation>
+      <translation type="unfinished">Calendar cache emptied</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3185"/>
       <source>Your calendar cache was emptied.</source>
-      <translation>Vyrovnávacia pamäť kalendára bola vyprázdnená.</translation>
+      <translation type="unfinished">Your calendar cache was emptied.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3263"/>
       <source>Reset toolbars and exit</source>
-      <translation>Obnovte panely s nástrojmi a ukončite</translation>
+      <translation type="unfinished">Reset toolbars and exit</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3264"/>
       <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
-      <translation>Naozaj chcete obnoviť všetky panely s nástrojmi? Aplikácia bude v procese ukončená, predvolené panely s nástrojmi budú obnovené, keď ju znova spustíte.</translation>
+      <translation type="unfinished">Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3268"/>
       <source>Reset and &amp;exit</source>
-      <translation>Reset a &amp;exit</translation>
+      <translation type="unfinished">Reset and &amp;exit</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3430"/>
       <source>Log file cleared</source>
-      <translation>Súbor denníka bol vymazaný</translation>
+      <translation type="unfinished">Log file cleared</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3431"/>
       <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
-      <translation>Súbor denníka &lt;strong&gt;%1&lt;/strong&gt; bol vymazaný.</translation>
+      <translation type="unfinished">The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3467"/>
       <source>Executable files</source>
-      <translation>Spustiteľné súbory</translation>
+      <translation type="unfinished">Executable files</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3468"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3470"/>
       <source>All files</source>
-      <translation>Všetky súbory</translation>
+      <translation type="unfinished">All files</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3478"/>
       <source>Please select the path of your git executable</source>
-      <translation>Vyberte cestu spustiteľného súboru git</translation>
+      <translation type="unfinished">Please select the path of your git executable</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3568"/>
       <source>Do you really want to reset the overrides of all message boxes?</source>
-      <translation>Naozaj chcete obnoviť prepísanie všetkých správ?</translation>
+      <translation type="unfinished">Do you really want to reset the overrides of all message boxes?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1945"/>
       <source>The Database was reinitialized.</source>
-      <translation>Databáza bola znovu inicializovaná.</translation>
+      <translation type="unfinished">The Database was reinitialized.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="87"/>
       <source>New script</source>
-      <translation>Nový skript</translation>
+      <translation type="unfinished">New script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="90"/>
       <source>You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</source>
-      <translation>Klienta git si môžete prevziať tu: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</translation>
+      <translation type="unfinished">You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="386"/>
       <source>enabled</source>
-      <translation>povolené</translation>
+      <translation type="unfinished">enabled</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="386"/>
       <source>disabled</source>
-      <translation>invalidný</translation>
+      <translation type="unfinished">disabled</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="389"/>
       <source>Portable mode is currently:</source>
-      <translation>Prenosný režim je momentálne:</translation>
+      <translation type="unfinished">Portable mode is currently:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="392"/>
       <source>In portable mode</source>
-      <translation>V prenosnom režime</translation>
+      <translation type="unfinished">In portable mode</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="393"/>
       <source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary's location</source>
-      <translation>interná databáza sqlite a nastavenia sa uložia do priečinka &lt;code&gt; Data &lt;/code&gt; v umiestnení binárneho systému</translation>
+      <translation type="unfinished">the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary's location</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="396"/>
       <source>the settings will be stored in an ini file</source>
-      <translation>nastavenia budú uložené v ini súbore</translation>
+      <translation type="unfinished">the settings will be stored in an ini file</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="397"/>
       <source>the note folders, script paths and path to an external editor will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders, scripts and external editor will be loaded regardless where your QOwnNotes installation is currently located</source>
-      <translation>priečinky s poznámkami, cesty skriptov a cesta k externému editoru sa automaticky uložia vo vzťahu k priečinku &lt;code&gt; Data &lt;/code&gt; tak, aby sa načítali správne priečinky s poznámkami, skripty a externý editor bez ohľadu na to, kde sa momentálne nachádza inštalácia QOwnNotes</translation>
+      <translation type="unfinished">the note folders, script paths and path to an external editor will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders, scripts and external editor will be loaded regardless where your QOwnNotes installation is currently located</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="405"/>
       <source>It will be activated if you run QOwnNotes with the parameter &lt;code&gt;--portable&lt;/code&gt;.</source>
-      <translation>Aktivuje sa, ak spustíte QOwnNotes s parametrom &lt;code&gt; --portable &lt;/code&gt;.</translation>
+      <translation type="unfinished">It will be activated if you run QOwnNotes with the parameter &lt;code&gt;--portable&lt;/code&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1958"/>
       <source>Save debug information</source>
-      <translation>Uložiť informácie o ladení</translation>
+      <translation type="unfinished">Save debug information</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2005"/>
       <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
-      <translation>Naozaj chcete vymazať všetky nastavenia, odstrániť databázu a ukončiť QOwnNotes?
+      <translation type="unfinished">Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
-Vaše poznámky zostanú nedotknuté!</translation>
+Your notes will stay intact!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2008"/>
       <source>Clear and &amp;exit</source>
-      <translation>Jasné a &amp;exit</translation>
+      <translation type="unfinished">Clear and &amp;exit</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1939"/>
       <location filename="../dialogs/settingsdialog.cpp" line="2008"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3268"/>
       <source>&amp;Cancel</source>
-      <translation>&amp;Zrušiť</translation>
+      <translation type="unfinished">&amp;Cancel</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="410"/>
       <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
-      <translation>Ak chcete spustiť QOwnNotes v prenosnom režime, vo vašej ceste k vydaniu nájdete &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt;.</translation>
+      <translation type="unfinished">You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1936"/>
       <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
-      <translation>Naozaj chcete vymazať lokálnu databázu? Tým sa odstránia aj vaše nakonfigurované priečinky s poznámkami a vaše položky uložené v pamäti cache!</translation>
+      <translation type="unfinished">Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1939"/>
       <source>Clear &amp;database</source>
-      <translation>Zrušte &amp;databázy</translation>
+      <translation type="unfinished">Clear &amp;database</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2119"/>
       <source>Select editor application</source>
-      <translation>Vyberte editor aplikácie</translation>
+      <translation type="unfinished">Select editor application</translation>
     </message>
   </context>
   <context>
@@ -5888,27 +5816,27 @@ Vaše poznámky zostanú nedotknuté!</translation>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="20"/>
       <source>Share note</source>
-      <translation>Poznámka k zdieľaniu</translation>
+      <translation type="unfinished">Share note</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="30"/>
       <source>Share note on ownCloud</source>
-      <translation>Zdieľať poznámku na ownCloud</translation>
+      <translation type="unfinished">Share note on ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="37"/>
       <source>The public url of your note</source>
-      <translation>Verejná adresa Url poznámky</translation>
+      <translation type="unfinished">The public url of your note</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="60"/>
       <source>Publicly share the current note file on your ownCloud server. You can send the generated link to others so they can view or download the file.</source>
-      <translation>Verejne zdieľajte aktuálny súbor s poznámkami na servere ownCloud. Generovaný odkaz môžete odoslať ostatným používateľom, aby si ho mohli prezrieť alebo stiahnuť.</translation>
+      <translation type="unfinished">Publicly share the current note file on your ownCloud server. You can send the generated link to others so they can view or download the file.</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.cpp" line="59"/>
       <source>Keep in mind that you still have to sync your notes with your server by using the ownCloud desktop sync tool to be able to share notes with others!</source>
-      <translation>Majte na pamäti, že stále musíte synchronizovať svoje poznámky so serverom pomocou nástroja na synchronizáciu pracovnej plochy ownCloud, aby ste mohli zdieľať poznámky s ostatnými!</translation>
+      <translation type="unfinished">Keep in mind that you still have to sync your notes with your server by using the ownCloud desktop sync tool to be able to share notes with others!</translation>
     </message>
   </context>
   <context>
@@ -5916,102 +5844,102 @@ Vaše poznámky zostanú nedotknuté!</translation>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="14"/>
       <source>Insert table</source>
-      <translation>Vloženie tabuľky</translation>
+      <translation type="unfinished">Insert table</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="24"/>
       <source>Create table</source>
-      <translation>Vytvorenie tabuľky</translation>
+      <translation type="unfinished">Create table</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="30"/>
       <source>Column width:</source>
-      <translation>Šírka stĺpca:</translation>
+      <translation type="unfinished">Column width:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="37"/>
       <source>Insert a table heading separator</source>
-      <translation>Vložte oddeľovač záhlavia tabuľky</translation>
+      <translation type="unfinished">Insert a table heading separator</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="47"/>
       <source>Columns:</source>
-      <translation>Stĺpce:</translation>
+      <translation type="unfinished">Columns:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="67"/>
       <source>Rows:</source>
-      <translation>Riadky:</translation>
+      <translation type="unfinished">Rows:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="87"/>
       <source>The amount of spaces in a column</source>
-      <translation>Počet miest v stĺpci</translation>
+      <translation type="unfinished">The amount of spaces in a column</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="119"/>
       <source>Select table layout:</source>
-      <translation>Vyberte rozloženie tabuľky:</translation>
+      <translation type="unfinished">Select table layout:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="126"/>
       <source>Separator column width:</source>
-      <translation>Šírka stĺpca oddeľovača:</translation>
+      <translation type="unfinished">Separator column width:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="133"/>
       <source>The amount of dash characters in the separator</source>
-      <translation>Množstvo pomlčkových znakov v oddeľovači</translation>
+      <translation type="unfinished">The amount of dash characters in the separator</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="150"/>
       <source>Import CSV file</source>
-      <translation>Importujte súbor CSV</translation>
+      <translation type="unfinished">Import CSV file</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="173"/>
       <source>Separator:</source>
-      <translation>Oddeľovač:</translation>
+      <translation type="unfinished">Separator:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="180"/>
       <source>Select file</source>
-      <translation>Vyberte súbor</translation>
+      <translation type="unfinished">Select file</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="191"/>
       <source>Please select the CSV file you want to import:</source>
-      <translation>Vyberte súbor CSV, ktorý chcete importovať:</translation>
+      <translation type="unfinished">Please select the CSV file you want to import:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="231"/>
       <source>CSV file</source>
-      <translation>CSV súbor</translation>
+      <translation type="unfinished">CSV file</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="238"/>
       <source>First line is the table heading</source>
-      <translation>Prvý riadok je záhlavie tabuľky</translation>
+      <translation type="unfinished">First line is the table heading</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="261"/>
       <source>Text-delimiter:</source>
-      <translation>Text oddeľovač:</translation>
+      <translation type="unfinished">Text-delimiter:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.cpp" line="148"/>
       <source>CSV files</source>
-      <translation>CSV súbory</translation>
+      <translation type="unfinished">CSV files</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.cpp" line="149"/>
       <source>All files</source>
-      <translation>Všetky súbory</translation>
+      <translation type="unfinished">All files</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.cpp" line="154"/>
       <source>Select CSV file to import</source>
-      <translation>Vyberte súbor CSV, ktorý chcete importovať</translation>
+      <translation type="unfinished">Select CSV file to import</translation>
     </message>
   </context>
   <context>
@@ -6019,17 +5947,17 @@ Vaše poznámky zostanú nedotknuté!</translation>
     <message>
       <location filename="../dialogs/tagadddialog.ui" line="20"/>
       <source>Add a new tag</source>
-      <translation>Pridať novú značku</translation>
+      <translation type="unfinished">Add a new tag</translation>
     </message>
     <message>
       <location filename="../dialogs/tagadddialog.ui" line="30"/>
       <source>Add new tag</source>
-      <translation>Pridať novú značku</translation>
+      <translation type="unfinished">Add new tag</translation>
     </message>
     <message>
       <location filename="../dialogs/tagadddialog.ui" line="47"/>
       <source>New tag</source>
-      <translation>Nová značka</translation>
+      <translation type="unfinished">New tag</translation>
     </message>
   </context>
   <context>
@@ -6037,130 +5965,130 @@ Vaše poznámky zostanú nedotknuté!</translation>
     <message>
       <location filename="../dialogs/tododialog.ui" line="14"/>
       <source>Todo</source>
-      <translation>Todo</translation>
+      <translation type="unfinished">Todo</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="78"/>
       <location filename="../dialogs/tododialog.ui" line="85"/>
       <source>Priority</source>
-      <translation>Prioritou</translation>
+      <translation type="unfinished">Priority</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="113"/>
       <source>Reminder</source>
-      <translation>Pripomenutie</translation>
+      <translation type="unfinished">Reminder</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="157"/>
       <source>Summary</source>
-      <translation>Zhrnutie</translation>
+      <translation type="unfinished">Summary</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="191"/>
       <source>Save</source>
-      <translation>Uložiť</translation>
+      <translation type="unfinished">Save</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="222"/>
       <source>Note…</source>
-      <translation>Poznámka…</translation>
+      <translation type="unfinished">Note…</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="100"/>
       <source>Save and insert into note</source>
-      <translation>Uložiť a vložiť do poznámky</translation>
+      <translation type="unfinished">Save and insert into note</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="208"/>
       <source>Remove</source>
-      <translation>Odstrániť</translation>
+      <translation type="unfinished">Remove</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="278"/>
       <source>Show completed items</source>
-      <translation>Zobrazenie dokončených položiek</translation>
+      <translation type="unfinished">Show completed items</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="285"/>
       <source>Reload the todo list from server</source>
-      <translation>Znova načítajte zoznam úloh zo servera</translation>
+      <translation type="unfinished">Reload the todo list from server</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="288"/>
       <source>Reload…</source>
-      <translation>Obnoviť…</translation>
+      <translation type="unfinished">Reload…</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="319"/>
       <source>Search or create todo item</source>
-      <translation>Vyhľadajte alebo vytvorte položku todo</translation>
+      <translation type="unfinished">Search or create todo item</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="302"/>
       <source>select your todo list</source>
-      <translation>vyberte svoj zoznam úloh</translation>
+      <translation type="unfinished">select your todo list</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="188"/>
       <source>Save the current todo item</source>
-      <translation>Uložte aktuálnu položku todo</translation>
+      <translation type="unfinished">Save the current todo item</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="104"/>
       <source>Save the current todo item and insert a link to it into the current note</source>
-      <translation>Uložte aktuálnu položku todo a vložte do nej odkaz do aktuálnej poznámky</translation>
+      <translation type="unfinished">Save the current todo item and insert a link to it into the current note</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="113"/>
       <source>Import the current todo item as new note</source>
-      <translation>Import the current todo item as new note</translation>
+      <translation type="unfinished">Import the current todo item as new note</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="109"/>
       <source>Import as note</source>
-      <translation>Importovať ako poznámku</translation>
+      <translation type="unfinished">Import as note</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="205"/>
       <source>Remove the current todo item</source>
-      <translation>Odstráňte aktuálnu položku todo</translation>
+      <translation type="unfinished">Remove the current todo item</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="309"/>
       <source>Todo list items are being loaded from the server</source>
-      <translation>Položky zoznamu úloh sa načítavajú zo servera</translation>
+      <translation type="unfinished">Todo list items are being loaded from the server</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="124"/>
       <source>Reload from server</source>
-      <translation>Znovu načítať zo servera</translation>
+      <translation type="unfinished">Reload from server</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="128"/>
       <source>Reload tasks from server</source>
-      <translation>Znova načíta úlohy zo servera</translation>
+      <translation type="unfinished">Reload tasks from server</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="133"/>
       <source>Clear cache and reload</source>
-      <translation>Vymažte vyrovnávaciu pamäť a znova načítajte</translation>
+      <translation type="unfinished">Clear cache and reload</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="137"/>
       <source>Clear calendar cache and reload tasks from server</source>
-      <translation>Vymažte vyrovnávaciu pamäť kalendára a obnovte úlohy zo servera</translation>
+      <translation type="unfinished">Clear calendar cache and reload tasks from server</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="578"/>
       <source>Remove todo item</source>
-      <translation>Odstrániť položku todo</translation>
+      <translation type="unfinished">Remove todo item</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="579"/>
       <source>Remove the selected todo item?
 This cannot be undone!</source>
-      <translation>Odstrániť vybratú položku todo?
-To nie je možné vrátiť späť!</translation>
+      <translation type="unfinished">Remove the selected todo item?
+This cannot be undone!</translation>
     </message>
   </context>
   <context>
@@ -6168,134 +6096,134 @@ To nie je možné vrátiť späť!</translation>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="23"/>
       <source>Select a menu</source>
-      <translation>Vyberte ponuku</translation>
+      <translation type="unfinished">Select a menu</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="26"/>
       <source>Lists the available menus to get the corresponding actions</source>
-      <translation>Zobrazí zoznam dostupných ponúk, aby ste získali zodpovedajúce akcie</translation>
+      <translation type="unfinished">Lists the available menus to get the corresponding actions</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="33"/>
       <source>Select toolbar</source>
-      <translation>Vyberte panel s nástrojmi</translation>
+      <translation type="unfinished">Select toolbar</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="36"/>
       <source>List the available toolbars. The selected one will be edited</source>
-      <translation>Zoznam dostupných panelov s nástrojmi. Vybraný sa upraví</translation>
+      <translation type="unfinished">List the available toolbars. The selected one will be edited</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="43"/>
       <source>Lists the actions in the selected toolbar</source>
-      <translation>Uvádza akcie na vybratom paneli s nástrojmi</translation>
+      <translation type="unfinished">Lists the actions in the selected toolbar</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="52"/>
       <source>Add new Toolbar</source>
-      <translation>Pridať nový panel s nástrojmi</translation>
+      <translation type="unfinished">Add new Toolbar</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="55"/>
       <source>New</source>
-      <translation>Nový</translation>
+      <translation type="unfinished">New</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="66"/>
       <source>Delete selected toolbar</source>
-      <translation>Odstrániť vybratý panel s nástrojmi</translation>
+      <translation type="unfinished">Delete selected toolbar</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="69"/>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="168"/>
       <source>Remove</source>
-      <translation>Odstrániť</translation>
+      <translation type="unfinished">Remove</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="82"/>
       <source>Lists the available actions for the selected menu</source>
-      <translation>Uvádza dostupné akcie pre vybratú ponuku</translation>
+      <translation type="unfinished">Lists the available actions for the selected menu</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="104"/>
       <source>Move Up</source>
-      <translation>Posunúť nahor</translation>
+      <translation type="unfinished">Move Up</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="107"/>
       <source>Moves the selected toolbar item up</source>
-      <translation>Presunie vybratú položku panela s nástrojmi nahor</translation>
+      <translation type="unfinished">Moves the selected toolbar item up</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="110"/>
       <source>Move &amp;Up</source>
-      <translation>Posunúť &amp;nahor</translation>
+      <translation type="unfinished">Move &amp;Up</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="121"/>
       <source>Move Down</source>
-      <translation>Posunúť nadol</translation>
+      <translation type="unfinished">Move Down</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="124"/>
       <source>moves the selected toolbar item down</source>
-      <translation>presunie vybratú položku panela s nástrojmi nadol</translation>
+      <translation type="unfinished">moves the selected toolbar item down</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="127"/>
       <source>Move &amp;Down</source>
-      <translation>Posunúť &amp;nadol</translation>
+      <translation type="unfinished">Move &amp;Down</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="151"/>
       <source>Insert</source>
-      <translation>Insert</translation>
+      <translation type="unfinished">Insert</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="154"/>
       <source>Adds the selected menu action to the toolbar</source>
-      <translation>Pridá vybratú akciu ponuky do panela s nástrojmi</translation>
+      <translation type="unfinished">Adds the selected menu action to the toolbar</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="157"/>
       <source>&amp;Insert</source>
-      <translation>&amp;Insert</translation>
+      <translation type="unfinished">&amp;Insert</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="171"/>
       <source>Removes the selected item from the active toolbar</source>
-      <translation>Odstráni vybratú položku z aktívneho panela s nástrojmi</translation>
+      <translation type="unfinished">Removes the selected item from the active toolbar</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="174"/>
       <source>&amp;Remove</source>
-      <translation>&amp;Odstrániť</translation>
+      <translation type="unfinished">&amp;Remove</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="198"/>
       <source>Separator</source>
-      <translation>Oddeľovač</translation>
+      <translation type="unfinished">Separator</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="201"/>
       <source>&amp;Separator</source>
-      <translation>&amp;Oddeľovač</translation>
+      <translation type="unfinished">&amp;Separator</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="192"/>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="216"/>
       <source>--(separator)--</source>
-      <translation>--(oddeľovač)--</translation>
+      <translation type="unfinished">--(separator)--</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="309"/>
       <source>Remove current toolbar</source>
-      <translation>Odstrániť aktuálny panel s nástrojmi</translation>
+      <translation type="unfinished">Remove current toolbar</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="310"/>
       <source>Remove the current toolbar?</source>
-      <translation>Odstrániť aktuálny panel s nástrojmi?</translation>
+      <translation type="unfinished">Remove the current toolbar?</translation>
     </message>
   </context>
   <context>
@@ -6303,32 +6231,32 @@ To nie je možné vrátiť späť!</translation>
     <message>
       <location filename="../dialogs/trashdialog.ui" line="14"/>
       <source>Trashed notes</source>
-      <translation>Trashed poznámky</translation>
+      <translation type="unfinished">Trashed notes</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="24"/>
       <source>&amp;Restore selected note on server</source>
-      <translation>&amp;Obnoviť vybranú poznámku na serveri</translation>
+      <translation type="unfinished">&amp;Restore selected note on server</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="25"/>
       <source>&lt;h3&gt;Slower, but with note versions&lt;/h3&gt;&lt;p&gt;The note will be restored on your ownCloud server with all versions.&lt;/p&gt;&lt;p&gt;You will have to wait until it is synced to QOwnNotes by ownCloud sync.&lt;/p&gt;</source>
-      <translation>&lt;h3&gt; Pomalšie, ale s verziami poznámok &lt;/h3&gt; &lt;p&gt; Poznámka bude obnovená na vašom serveri ownCloud so všetkými verziami. &lt;/p&gt; &lt;p&gt; Budete musieť počkať, kým sa synchronizuje so službou QOwnNotes by ownCloud sync. &lt;/ p&gt;</translation>
+      <translation type="unfinished">&lt;h3&gt;Slower, but with note versions&lt;/h3&gt;&lt;p&gt;The note will be restored on your ownCloud server with all versions.&lt;/p&gt;&lt;p&gt;You will have to wait until it is synced to QOwnNotes by ownCloud sync.&lt;/p&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="38"/>
       <source>&amp;Download selected note</source>
-      <translation>&amp;Prevziať vybratú poznámku</translation>
+      <translation type="unfinished">&amp;Download selected note</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="39"/>
       <source>&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</source>
-      <translation>&lt;h3&gt; Rýchlejšie, ale bez verzií &lt;/h3&gt; &lt;p&gt; Poznámka bude vytvorená s textom z ukážky. &lt;/p&gt; &lt;p&gt;Verzie poznámok na vašom serveri ownCloud nebudú obnovené a poznámka zostane v koši. &lt;/p&gt; &lt;p&gt;Poznámku a jej verzie môžete kedykoľvek obnoviť. &lt;/p&gt;</translation>
+      <translation type="unfinished">&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="52"/>
       <source>&amp;Cancel</source>
-      <translation>&amp;Zrušiť</translation>
+      <translation type="unfinished">&amp;Cancel</translation>
     </message>
   </context>
   <context>
@@ -6336,27 +6264,27 @@ To nie je možné vrátiť späť!</translation>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="14"/>
       <source>Update available</source>
-      <translation>Aktualizácia k dispozícii</translation>
+      <translation type="unfinished">Update available</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="26"/>
       <source>A new update of QOwnNotes is available!</source>
-      <translation>K dispozícii je nová aktualizácia QOwnNotes!</translation>
+      <translation type="unfinished">A new update of QOwnNotes is available!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="69"/>
       <source>Do you want to download the new version?</source>
-      <translation>Chcete stiahnuť novú verziu?</translation>
+      <translation type="unfinished">Do you want to download the new version?</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="76"/>
       <source>QOwnNotes will be downloaded in your default browser.</source>
-      <translation>QOwnNotes sa prevezmú do vášho predvoleného prehliadača.</translation>
+      <translation type="unfinished">QOwnNotes will be downloaded in your default browser.</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="83"/>
       <source>Keep in mind that QOwnNotes needs to run from a location where you have write access to for the automatic update to work!</source>
-      <translation>Majte na pamäti, že QOwnNotes musí bežať z miesta, kde máte prístup na zápis, aby automatická aktualizácia fungovala!</translation>
+      <translation type="unfinished">Keep in mind that QOwnNotes needs to run from a location where you have write access to for the automatic update to work!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="93"/>
@@ -6366,86 +6294,86 @@ To nie je možné vrátiť späť!</translation>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="106"/>
       <source>%p% downloaded</source>
-      <translation>Prevzaté %p%</translation>
+      <translation type="unfinished">%p% downloaded</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="45"/>
       <source>&amp;Update</source>
-      <translation>&amp;Aktualizácia</translation>
+      <translation type="unfinished">&amp;Update</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="58"/>
       <source>&amp;Download latest</source>
-      <translation>&amp;Stiahnite si najnovšie</translation>
+      <translation type="unfinished">&amp;Download latest</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="56"/>
       <source>Just download</source>
-      <translation>Stačí stiahnuť</translation>
+      <translation type="unfinished">Just download</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="72"/>
       <source>&amp;Skip version</source>
-      <translation>&amp;Preskočiť verziu</translation>
+      <translation type="unfinished">&amp;Skip version</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="82"/>
       <source>&amp;Disable dialog</source>
-      <translation>&amp;Vypnúť dialógové okno</translation>
+      <translation type="unfinished">&amp;Disable dialog</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="83"/>
       <source>Don't show this dialog automatically</source>
-      <translation>Nezobrazovať toto dialógové okno automaticky</translation>
+      <translation type="unfinished">Don't show this dialog automatically</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="93"/>
       <source>&amp;Cancel</source>
-      <translation>&amp;Zrušiť</translation>
+      <translation type="unfinished">&amp;Cancel</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="248"/>
       <source>Download error</source>
-      <translation>Chyba pri sťahovaní</translation>
+      <translation type="unfinished">Download error</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="249"/>
       <source>Error while downloading:
 %1</source>
-      <translation>Chyba pri sťahovaní:
+      <translation type="unfinished">Error while downloading:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="251"/>
       <source>network error: %1</source>
-      <translation>chyba siete: %1</translation>
+      <translation type="unfinished">network error: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="274"/>
       <location filename="../dialogs/updatedialog.cpp" line="295"/>
       <location filename="../dialogs/updatedialog.cpp" line="392"/>
       <source>File error</source>
-      <translation>Chyba súboru</translation>
+      <translation type="unfinished">File error</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="275"/>
       <location filename="../dialogs/updatedialog.cpp" line="393"/>
       <source>Could not open temporary file:
 %1</source>
-      <translation>Nepodarilo sa otvoriť dočasný súbor:
+      <translation type="unfinished">Could not open temporary file:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="296"/>
       <source>Could not store downloaded file:
 %1</source>
-      <translation>Nepodarilo sa uložiť prevzatý súbor:
+      <translation type="unfinished">Could not store downloaded file:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="350"/>
       <source>Do you want to update and restart QOwnNotes?</source>
-      <translation>Chcete aktualizovať a reštartovať QOwnNotes?</translation>
+      <translation type="unfinished">Do you want to update and restart QOwnNotes?</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="365"/>
@@ -6456,51 +6384,51 @@ To nie je možné vrátiť späť!</translation>
       <location filename="../dialogs/updatedialog.cpp" line="489"/>
       <location filename="../dialogs/updatedialog.cpp" line="498"/>
       <source>Error</source>
-      <translation>Chyba</translation>
+      <translation type="unfinished">Error</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="366"/>
       <source>Could not find updater file:
 %1</source>
-      <translation>Nepodarilo sa nájsť súbor s aktualizáciou:
+      <translation type="unfinished">Could not find updater file:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="453"/>
       <source>Updater script '%1' doesn't exist!</source>
-      <translation>Skript Updater '%1' neexistuje!</translation>
+      <translation type="unfinished">Updater script '%1' doesn't exist!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="462"/>
       <source>Updater unzip executable '%1' doesn't exist!</source>
-      <translation>Aktualizátor unzip spustiteľný súbor '%1' neexistuje!</translation>
+      <translation type="unfinished">Updater unzip executable '%1' doesn't exist!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="471"/>
       <location filename="../dialogs/updatedialog.cpp" line="480"/>
       <source>Could not copy updater script '%1' to '%2'!</source>
-      <translation>Nepodarilo sa skopírovať skript pre aktualizáciu „%1“ do „%2“!</translation>
+      <translation type="unfinished">Could not copy updater script '%1' to '%2'!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="490"/>
       <source>Couldn't find updater script: %1</source>
-      <translation>Nepodarilo sa nájsť skript aktualizátora: %1</translation>
+      <translation type="unfinished">Couldn't find updater script: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="499"/>
       <source>Couldn't find unzip executable: %1</source>
-      <translation>Nepodarilo sa nájsť unzip spustiteľný súbor: %1</translation>
+      <translation type="unfinished">Couldn't find unzip executable: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="349"/>
       <location filename="../dialogs/updatedialog.cpp" line="505"/>
       <source>Proceed with update</source>
-      <translation>Pokračujte v aktualizácii</translation>
+      <translation type="unfinished">Proceed with update</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="506"/>
       <source>The download is now finished. Do you want to update and restart QOwnNotes?</source>
-      <translation>Preberanie je dokončené. Chcete aktualizovať a reštartovať QOwnNotes?</translation>
+      <translation type="unfinished">The download is now finished. Do you want to update and restart QOwnNotes?</translation>
     </message>
   </context>
   <context>
@@ -6510,32 +6438,32 @@ To nie je možné vrátiť späť!</translation>
       <location filename="../services/updateservice.cpp" line="116"/>
       <location filename="../services/updateservice.cpp" line="135"/>
       <source>Update-checker error</source>
-      <translation>Chyba kontroly aktualizácie</translation>
+      <translation type="unfinished">Update-checker error</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="103"/>
       <source>Network reply error: %1</source>
-      <translation>Chyba odpovede siete: %1</translation>
+      <translation type="unfinished">Network reply error: %1</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="117"/>
       <source>No data was received by the network request!</source>
-      <translation>Žiadosť o sieť nebola prijatá!</translation>
+      <translation type="unfinished">No data was received by the network request!</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="136"/>
       <source>The data from the network request could not be interpreted!</source>
-      <translation>Údaje zo sieťovej požiadavky nebolo možné interpretovať!</translation>
+      <translation type="unfinished">The data from the network request could not be interpreted!</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="228"/>
       <source>No updates</source>
-      <translation>Žiadne aktualizácie</translation>
+      <translation type="unfinished">No updates</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="229"/>
       <source>There are no updates available.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; is the latest version.</source>
-      <translation>Nie sú k dispozícii žiadne aktualizácie. &lt;br /&gt; &lt;strong&gt;%1 &lt;/strong&gt; je najnovšia verzia.</translation>
+      <translation type="unfinished">There are no updates available.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; is the latest version.</translation>
     </message>
   </context>
   <context>
@@ -6543,27 +6471,27 @@ To nie je možné vrátiť späť!</translation>
     <message>
       <location filename="../dialogs/versiondialog.ui" line="14"/>
       <source>Note versions on your ownCloud server</source>
-      <translation>Všimnite si verzie na vašom vlastnom serveri</translation>
+      <translation type="unfinished">Note versions on your ownCloud server</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.ui" line="65"/>
       <source>Diff</source>
-      <translation>Diff</translation>
+      <translation type="unfinished">Diff</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.ui" line="98"/>
       <source>Note text</source>
-      <translation>Poznámka text</translation>
+      <translation type="unfinished">Note text</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.cpp" line="26"/>
       <source>&amp;Restore selected version</source>
-      <translation>&amp;Obnoviť vybratú verziu</translation>
+      <translation type="unfinished">&amp;Restore selected version</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.cpp" line="35"/>
       <source>&amp;Cancel</source>
-      <translation>&amp;Zrušiť</translation>
+      <translation type="unfinished">&amp;Cancel</translation>
     </message>
   </context>
   <context>
@@ -6571,17 +6499,17 @@ To nie je možné vrátiť späť!</translation>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="54"/>
       <source>QOwnNotes server listening on port %1</source>
-      <translation>QOwnNotes server počúvajúci na porte %1</translation>
+      <translation type="unfinished">QOwnNotes server listening on port %1</translation>
     </message>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="61"/>
       <source>Could not start QOwnNotes server on port %1!</source>
-      <translation>Nebolo možné spustiť server QOwnNotes na porte %1!</translation>
+      <translation type="unfinished">Could not start QOwnNotes server on port %1!</translation>
     </message>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="105"/>
       <source>%1 connected to QOwnNotes server!</source>
-      <translation>%1 pripojený k serveru QOwnNotes!</translation>
+      <translation type="unfinished">%1 connected to QOwnNotes server!</translation>
     </message>
     <message numerus="yes">
       <location filename="../services/websocketserverservice.cpp" line="201"/>
@@ -6589,14 +6517,12 @@ To nie je možné vrátiť späť!</translation>
       <translation type="unfinished">
         <numerusform>%n bookmark(s) created</numerusform>
         <numerusform>%n bookmark(s) created</numerusform>
-        <numerusform>%n bookmark(s) created</numerusform>
-        <numerusform>%n bookmark(s) created</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="261"/>
       <source>%1 was disconnected from QOwnNotes server</source>
-      <translation>%1 bol odpojený od servera QOwnNotes</translation>
+      <translation type="unfinished">%1 was disconnected from QOwnNotes server</translation>
     </message>
   </context>
   <context>
@@ -6605,118 +6531,118 @@ To nie je možné vrátiť späť!</translation>
       <location filename="../dialogs/welcomedialog.ui" line="14"/>
       <location filename="../dialogs/welcomedialog.ui" line="56"/>
       <source>Welcome to QOwnNotes</source>
-      <translation>Vitajte v službe QOwnNotes</translation>
+      <translation type="unfinished">Welcome to QOwnNotes</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="24"/>
       <source>the plain-text file notepad with markdown support and ownCloud integration</source>
-      <translation>obyčajný textový súbor s podporou markdown a vlastnou integráciou</translation>
+      <translation type="unfinished">the plain-text file notepad with markdown support and ownCloud integration</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="88"/>
       <source>&amp;Back</source>
-      <translation>&amp;Späť</translation>
+      <translation type="unfinished">&amp;Back</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="99"/>
       <source>&amp;Next</source>
-      <translation>&amp;Ďalšie</translation>
+      <translation type="unfinished">&amp;Next</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="116"/>
       <source>&amp;Finished</source>
-      <translation>&amp;Hotové</translation>
+      <translation type="unfinished">&amp;Finished</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="139"/>
       <source>&amp;Cancel</source>
-      <translation>&amp;Zrušiť</translation>
+      <translation type="unfinished">&amp;Cancel</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="168"/>
       <location filename="../dialogs/welcomedialog.cpp" line="214"/>
       <source>Note folder</source>
-      <translation>Poznámka priečinok</translation>
+      <translation type="unfinished">Note folder</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="191"/>
       <source>Create note folder if not existing</source>
-      <translation>Vytvorte priečinok s poznámkami, ak neexistuje</translation>
+      <translation type="unfinished">Create note folder if not existing</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="225"/>
       <source>Note folder path</source>
-      <translation>Poznámka cesta k priečinku</translation>
+      <translation type="unfinished">Note folder path</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="232"/>
       <source>Select folder</source>
-      <translation>Vyberte priečinok</translation>
+      <translation type="unfinished">Select folder</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="246"/>
       <source>Show sub-folders</source>
-      <translation>Zobraziť podpriečinky</translation>
+      <translation type="unfinished">Show sub-folders</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="285"/>
       <source>Panel layout</source>
-      <translation>Usporiadanie panelov</translation>
+      <translation type="unfinished">Panel layout</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="342"/>
       <source>Open ownCloud settings</source>
-      <translation>Otvorte vlastné nastavenia</translation>
+      <translation type="unfinished">Open ownCloud settings</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="384"/>
       <source>Open network settings</source>
-      <translation>Otvorte nastavenia siete</translation>
+      <translation type="unfinished">Open network settings</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="184"/>
       <source>Please select where you want to store your notes:</source>
-      <translation>Vyberte, kam chcete svoje poznámky uložiť:</translation>
+      <translation type="unfinished">Please select where you want to store your notes:</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="319"/>
       <source>If you want to be able to access your note versions and your trashed notes on your ownCloud server, you can configure QOwnNotes for it now. You can also do it at a later time.</source>
-      <translation>Ak chcete mať možnosť pristupovať k svojim poznámkovým verziám a vašim poznámkam s košom na vašom serveri ownCloud, môžete ho teraz nakonfigurovať. Môžete to urobiť aj neskôr.</translation>
+      <translation type="unfinished">If you want to be able to access your note versions and your trashed notes on your ownCloud server, you can configure QOwnNotes for it now. You can also do it at a later time.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="349"/>
       <source>In any case, you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</source>
-      <translation>V každom prípade musíte na synchronizáciu poznámok so serverom ownCloud synchronizačný klient (alebo iný klient synchronizácie).</translation>
+      <translation type="unfinished">In any case, you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="391"/>
       <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
-      <translation>QOwnNotes bude sledovať anonymné údaje o používaní, ktoré pomôžu určiť, ktoré časti QOwnNotes sa majú ďalej vylepšovať a nájsť a opraviť chyby. Toto správanie môžete v nastaveniach zakázať.</translation>
+      <translation type="unfinished">QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="116"/>
       <source>Cannot create note path! You have to create the note folder manually!</source>
-      <translation>Nie je možné vytvoriť cestu k poznámke! Musíte vytvoriť priečinok s poznámkami manuálne!</translation>
+      <translation type="unfinished">Cannot create note path! You have to create the note folder manually!</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="123"/>
       <source>Cannot create note path!</source>
-      <translation>Nemožno vytvoriť poznámky cestu!</translation>
+      <translation type="unfinished">Cannot create note path!</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="128"/>
       <source>This note path doesn't exist!</source>
-      <translation>Táto poznámka neexistuje!</translation>
+      <translation type="unfinished">This note path doesn't exist!</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="200"/>
       <source>Please select the folder where your notes will get stored to</source>
-      <translation>Vyberte priečinok, do ktorého sa budú ukladať poznámky</translation>
+      <translation type="unfinished">Please select the folder where your notes will get stored to</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="215"/>
       <source>Keep in mind that the note folder will be stored relative to the directory where QOwnNotes resides in portable mode! So you need to stay on the same drive.</source>
-      <translation>Pamätajte, že priečinok s poznámkami bude uložený vo vzťahu k adresáru, v ktorom sa QOwnNotes nachádza v prenosnom režime! Takže musíte zostať na tej istej jednotke.</translation>
+      <translation type="unfinished">Keep in mind that the note folder will be stored relative to the directory where QOwnNotes resides in portable mode! So you need to stay on the same drive.</translation>
     </message>
   </context>
   <context>
@@ -6724,42 +6650,42 @@ To nie je možné vrátiť späť!</translation>
     <message>
       <location filename="../main.cpp" line="77"/>
       <source>Runs the application in portable mode.</source>
-      <translation>Spustí aplikáciu v prenosnom režime.</translation>
+      <translation type="unfinished">Runs the application in portable mode.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="81"/>
       <source>Prints out a dump of the settings and other information about the application and environment in GitHub Markdown and exits the application.</source>
-      <translation>Vytlačí výpis nastavení a ďalšie informácie o aplikácii a prostredí v GitHub Markdown a ukončí aplikáciu.</translation>
+      <translation type="unfinished">Prints out a dump of the settings and other information about the application and environment in GitHub Markdown and exits the application.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="87"/>
       <source>Allows multiple instances of QOwnNotes to be started even if disallowed in the settings.</source>
-      <translation>Umožňuje spustenie viacerých inštancií programu QOwnNotes, aj keď sú v nastaveniach zakázané.</translation>
+      <translation type="unfinished">Allows multiple instances of QOwnNotes to be started even if disallowed in the settings.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="92"/>
       <source>Clears the settings and runs the application.</source>
-      <translation>Vymaže nastavenia a spustí aplikáciu.</translation>
+      <translation type="unfinished">Clears the settings and runs the application.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="96"/>
       <source>Runs the application in a different context for settings and internal files.</source>
-      <translation>Spustí aplikáciu v inom kontexte pre nastavenia a interné súbory.</translation>
+      <translation type="unfinished">Runs the application in a different context for settings and internal files.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="451"/>
       <source>Single application mode is not supported on your system!</source>
-      <translation>Váš systém nepodporuje režim jednej aplikácie!</translation>
+      <translation type="unfinished">Single application mode is not supported on your system!</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="460"/>
       <source>Another instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</source>
-      <translation>Iná inštancia QOwnNotes už bola spustená! Režim jednorazovej inštancie môžete vypnúť v nastaveniach alebo použiť parameter --allow-multiple-instance.</translation>
+      <translation type="unfinished">Another instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="492"/>
       <source>A second instance of QOwnNotes was attempted to be started!</source>
-      <translation>Pokúsili sme sa spustiť druhú inštanciu programu QOwnNotes!</translation>
+      <translation type="unfinished">A second instance of QOwnNotes was attempted to be started!</translation>
     </message>
   </context>
 </TS>

@@ -4428,17 +4428,17 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2262"/>
       <source>Romanian</source>
-      <translation type="unfinished">Romanian</translation>
+      <translation>Rumania</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2284"/>
       <source>Slovak</source>
-      <translation type="unfinished">Slovak</translation>
+      <translation>Slovakia</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2295"/>
       <source>Slovenian</source>
-      <translation type="unfinished">Slovenian</translation>
+      <translation>Slovenia</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2306"/>
@@ -4498,7 +4498,7 @@ Silakan uji coba, dan tambah durasi jika anda mendapati konflik sinkronisasi.</t
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2540"/>
       <source>Enforce system icon theme</source>
-      <translation type="unfinished">Enforce system icon theme</translation>
+      <translation>Paksa gunakan tema ikon sistem</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2636"/>

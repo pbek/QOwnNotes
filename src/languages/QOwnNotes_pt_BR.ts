@@ -4530,7 +4530,7 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2540"/>
       <source>Enforce system icon theme</source>
-      <translation type="unfinished">Enforce system icon theme</translation>
+      <translation>Impor o tema de ícones do sistema</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2636"/>

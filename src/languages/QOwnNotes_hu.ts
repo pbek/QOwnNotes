@@ -4533,7 +4533,7 @@ Tesztelje, ha szinkronizációs konfliktus lép fel és állítson be ilyen eset
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2540"/>
       <source>Enforce system icon theme</source>
-      <translation type="unfinished">Enforce system icon theme</translation>
+      <translation>A rendszer ikonjának érvényesítése</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2636"/>

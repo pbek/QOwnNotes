@@ -7,6 +7,9 @@
   (for AppVeyor [#2871](https://github.com/appveyor/ci/issues/2871))
 - more checksum generation improvements for the AUR
   (for [#1175](https://github.com/pbek/QOwnNotes/issues/1175))
+- added more Romanian, Slovenian, Slovak, Dutch, Hungarian, Indonesian,
+  Brazilian Portuguese, Italian, German, Russian translation (thank you
+  Fabijenna, zmni, mlimacarlos, mlocati, rakekniven, mikhail-khokhlov)
 
 ## 19.4.2
 - for Linux there there now is a setting in the *Interface settings* to enforce

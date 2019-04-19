@@ -384,17 +384,17 @@
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="38"/>
       <source>Text font</source>
-      <translation type="unfinished">Text font</translation>
+      <translation>Fontul textului</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="73"/>
       <source>Size:</source>
-      <translation type="unfinished">Size:</translation>
+      <translation>Dimensiune:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="80"/>
       <source>Family:</source>
-      <translation type="unfinished">Family:</translation>
+      <translation>Familia:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="103"/>
@@ -415,12 +415,12 @@
       <location filename="../widgets/fontcolorwidget.ui" line="169"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="631"/>
       <source>Export schema</source>
-      <translation type="unfinished">Export schema</translation>
+      <translation>Schemă de export</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="172"/>
       <source>Export</source>
-      <translation type="unfinished">Export</translation>
+      <translation>Export</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="271"/>
@@ -481,67 +481,67 @@
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="208"/>
       <source>Underline</source>
-      <translation type="unfinished">Underline</translation>
+      <translation>Subliniere</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="195"/>
       <source>Text preset</source>
-      <translation type="unfinished">Text preset</translation>
+      <translation>Text presetare</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="196"/>
       <source>Emphasized text</source>
-      <translation type="unfinished">Emphasized text</translation>
+      <translation>Text subliniat</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="197"/>
       <source>Strong text</source>
-      <translation type="unfinished">Strong text</translation>
+      <translation>Text puternic</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="214"/>
       <source>(HTML) Comment</source>
-      <translation type="unfinished">(HTML) Comment</translation>
+      <translation>(HTML) Comentariu</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="204"/>
       <source>Header, level 1</source>
-      <translation type="unfinished">Header, level 1</translation>
+      <translation>Antet, nivel 1</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="198"/>
       <source>Link</source>
-      <translation type="unfinished">Link</translation>
+      <translation>Link-ul</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="199"/>
       <source>Image</source>
-      <translation type="unfinished">Image</translation>
+      <translation>Imagine</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="200"/>
       <source>Code (block)</source>
-      <translation type="unfinished">Code (block)</translation>
+      <translation>Cod (bloc)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="201"/>
       <source>Code (inline)</source>
-      <translation type="unfinished">Code (inline)</translation>
+      <translation>Cod (inline)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="203"/>
       <source>List item</source>
-      <translation type="unfinished">List item</translation>
+      <translation>Element listă</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="205"/>
       <source>Header, level 2</source>
-      <translation type="unfinished">Header, level 2</translation>
+      <translation>Antet, nivel 2</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="206"/>
       <source>Header, level 3</source>
-      <translation type="unfinished">Header, level 3</translation>
+      <translation>Antet, nivel 3</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="207"/>

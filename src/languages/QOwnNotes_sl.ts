@@ -1209,7 +1209,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1096"/>
       <source>To&amp;do</source>
-      <translation type="unfinished">To&amp;do</translation>
+      <translation>Da&amp;ali</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1102"/>
@@ -1458,7 +1458,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1840"/>
       <source>&amp;Add tag to note</source>
-      <translation type="unfinished">&amp;Add tag to note</translation>
+      <translation>&amp;Dodaj oznako omeniti</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1852"/>
@@ -3139,7 +3139,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/orphanedimagesdialog.cpp" line="56"/>
       <source>Last modified at %1</source>
-      <translation type="unfinished">Last modified at %1</translation>
+      <translation>Zadnje spremembe na %1</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.cpp" line="122"/>
@@ -3162,7 +3162,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="187"/>
       <source>Username / password error</source>
-      <translation type="unfinished">Username / password error</translation>
+      <translation>Uporabniško ime / geslo napake</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="188"/>
@@ -3248,7 +3248,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="1205"/>
       <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation type="unfinished">Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</translation>
+      <translation>Sporočilo o napaki strežnika CalDAV: &lt;strong&gt;%1&lt;/strong&gt;</translation>
     </message>
   </context>
   <context>
@@ -4606,7 +4606,7 @@ Preizkusite se, če se pojavijo konflikti sinhronizacije in nastavite višjo vre
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2540"/>
       <source>Enforce system icon theme</source>
-      <translation type="unfinished">Enforce system icon theme</translation>
+      <translation>Uveljavi temo ikone sistema</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2636"/>
@@ -5398,7 +5398,7 @@ Preizkusite se, če se pojavijo konflikti sinhronizacije in nastavite višjo vre
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3418"/>
       <source>Check this if you want to ignore all external modifications while you are editing the current note.</source>
-      <translation type="unfinished">Check this if you want to ignore all external modifications while you are editing the current note.</translation>
+      <translation>To označite, če želite med urejanjem trenutne beležke prezreti vse zunanje spremembe.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3421"/>

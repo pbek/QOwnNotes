@@ -4533,7 +4533,7 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2540"/>
       <source>Enforce system icon theme</source>
-      <translation>Betriebssystemicons erzwingen</translation>
+      <translation>Symboldesign des Betriebssystems erzwingen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2636"/>
