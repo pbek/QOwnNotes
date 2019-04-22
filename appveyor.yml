@@ -51,7 +51,7 @@ build_script:
   # enable this to take a look if there are new qt versions
   - dir C:\Qt
   - dir C:\Qt\latest
-  - dir C:\Qt\Tools
+  - dir C:\Qt\Tools\mingw%TOOLCHAIN_VERSION%\bin
   - dir C:\MinGW\bin
   - cd src
   # we need to modify that to make it running on AppVeyor
