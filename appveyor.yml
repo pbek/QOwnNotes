@@ -13,7 +13,7 @@ environment:
 
   matrix:
     # Qt 5.11, because mingw73_32 doesn't work yet
-    - QTDIR: C:\Qt\5.11\mingw53_32"
+    - QTDIR: C:\Qt\5.11\mingw53_32
       TOOLCHAIN_VERSION: 530_32
       gpp: win32-g++
     # latest Qt 32 bit
