@@ -51,6 +51,8 @@ build_script:
   # enable this to take a look if there are new qt versions
   - dir C:\Qt
   - dir C:\Qt\latest
+  - dir C:\Qt\Tools
+  - dir C:\MinGW\bin
   - cd src
   # we need to modify that to make it running on AppVeyor
   - sed -i "s/CONFIG += c++11/QMAKE_CXXFLAGS += -std=gnu++0x/g" QOwnNotes.pro
