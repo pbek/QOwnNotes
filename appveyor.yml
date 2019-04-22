@@ -32,6 +32,8 @@ environment:
 matrix:
   allow_failures:
     - QTDIR: C:\Qt\latest\mingw73_64
+      TOOLCHAIN_VERSION: 730_64
+      gpp: g++
 
 install:
   # Qt-versions: https://www.appveyor.com/docs/build-environment/#qt
