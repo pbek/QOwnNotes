@@ -1109,15 +1109,17 @@ bool Note::storeNoteTextFileToDisk() {
     }
 
     bool noteStored = this->store();
+    QFile oldFile(oldNoteFilePath);
+    QFileInfo oldFileInfo(oldFile);
+    QFile newFile(fullNoteFilePath());
+    QFileInfo newFileInfo(newFile);
 
     // in the end we want to remove the old note file if note was stored and
     // filename has changed
-    if (noteStored && (fullNoteFilePath() != oldNoteFilePath)) {
-        QFile oldFile(oldNoteFilePath);
-        QFileInfo fileInfo(oldFile);
-
+    // #1190: we also need to check if the files are the same even if the name is not the same for NTFS
+    if (noteStored && (fullNoteFilePath() != oldNoteFilePath) && (oldFileInfo != newFileInfo)) {
         // remove the old note file
-        if (oldFile.exists() && fileInfo.isFile() && fileInfo.isReadable() &&
+        if (oldFile.exists() && oldFileInfo.isFile() && oldFileInfo.isReadable() &&
                 oldFile.remove()) {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
             qInfo() << QObject::tr("Renamed note-file was removed: %1").arg(
