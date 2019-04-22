@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 19.4.4
+- fixed renaming issue on case-insensitive file-systems (for [#1190](https://github.com/pbek/QOwnNotes/issues/1190))
+
 ## 19.4.3
 - you can now reorder your note folders in the *Note folders settings* via drag and drop
   (for [#1181](https://github.com/pbek/QOwnNotes/issues/1181))
