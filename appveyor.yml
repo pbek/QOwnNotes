@@ -37,7 +37,7 @@ install:
   # Qt-versions: https://www.appveyor.com/docs/build-environment/#qt
 #  - set QTDIR=C:\Qt\5.7\mingw53_32
 #  - set QTDIR=C:\Qt\5.10.1\mingw53_32
-  - set PATH=%QTDIR%\bin;C:\Qt\Tools\QtCreator\bin;C:\Qt\Tools\mingw%TOOLCHAIN_VERSION%\bin;C:\Program Files\Git\usr\bin;%PATH%
+  - set PATH=%QTDIR%\bin;C:\Qt\Tools\QtCreator\bin;C:\Qt\Tools\mingw%TOOLCHAIN_VERSION%\bin;%PATH%
   - echo PATH=%PATH%
   - set RELEASE_PATH=appveyor\release
   # enable this to use RDP connection, see https://www.appveyor.com/docs/how-to/rdp-to-build-worker/
