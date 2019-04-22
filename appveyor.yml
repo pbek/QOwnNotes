@@ -111,8 +111,8 @@ deploy:
       secure: spcyN/Dz3B2GXBPii8IywDLq6vfxC1SrN+xR2wMerFM7g2nTy0Lrh5agQONFoInR
     on:
       branch: master
-      QTDIR: C:\Qt\5.11\mingw53_32
-#      branch: develop
+      QTDIR: C:\Qt\latest\mingw73_32
+#      QTDIR: C:\Qt\5.11\mingw53_32
 
 notifications:
   # Gitter webhook
