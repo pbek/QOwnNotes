@@ -80,18 +80,23 @@ tar -cJf $archiveFile $qownnotesSrcDir
 QOWNNOTES_ARCHIVE_MD5=`md5sum ${archiveFile} | awk '{ print $1 }' | tee ${archiveFile}.md5`
 QOWNNOTES_ARCHIVE_SHA256=`sha256sum ${archiveFile} | awk '{ print $1 }' | tee ${archiveFile}.sha256`
 QOWNNOTES_ARCHIVE_SHA512=`sha512sum ${archiveFile} | awk '{ print $1 }' | tee ${archiveFile}.sha512`
+QOWNNOTES_ARCHIVE_SIZE=`stat -c "%s" ${archiveFile}`
 
 echo ""
 echo "Sums:"
 echo $QOWNNOTES_ARCHIVE_MD5
 echo $QOWNNOTES_ARCHIVE_SHA256
 echo $QOWNNOTES_ARCHIVE_SHA512
+echo ""
+echo "Size:"
+echo $QOWNNOTES_ARCHIVE_SIZE
 
 # write temporary checksum variable file for the deployment scripts
 _QQwnNotesCheckSumVarFile="/tmp/QOwnNotes.checksum.vars"
 echo "QOWNNOTES_ARCHIVE_MD5=$QOWNNOTES_ARCHIVE_MD5" > ${_QQwnNotesCheckSumVarFile}
 echo "QOWNNOTES_ARCHIVE_SHA256=$QOWNNOTES_ARCHIVE_SHA256" >> ${_QQwnNotesCheckSumVarFile}
 echo "QOWNNOTES_ARCHIVE_SHA512=$QOWNNOTES_ARCHIVE_SHA512" >> ${_QQwnNotesCheckSumVarFile}
+echo "QOWNNOTES_ARCHIVE_SIZE=$QOWNNOTES_ARCHIVE_SIZE" >> ${_QQwnNotesCheckSumVarFile}
 
 remotePath="pbek@ssh.tuxfamily.org:/home/qownnotes/qownnotes-repository/src"
 tuxFamilyReadme="tuxfamily-readme.md"

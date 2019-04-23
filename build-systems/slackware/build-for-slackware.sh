@@ -18,6 +18,21 @@ BRANCH=develop
 PROJECT_PATH="/tmp/QOwnNotes-slackware-$$"
 CUR_DIR=$(pwd)
 
+# use temporary checksum variable file
+_QQwnNotesCheckSumVarFile="/tmp/QOwnNotes.checksum.vars"
+
+if [[ ! -f ${_QQwnNotesCheckSumVarFile} ]]; then
+	echo "${_QQwnNotesCheckSumVarFile} doesn't exist. build-tuxfamily-src.sh must be run ahead of build script!"
+	exit 1
+fi
+
+source ${_QQwnNotesCheckSumVarFile}
+
+# check checksum variable from build-systems/tuxfamily/build-tuxfamily-src.sh
+if [ -z ${QOWNNOTES_ARCHIVE_MD5} ]; then
+    echo "QOWNNOTES_ARCHIVE_MD5 was not set!"
+	exit 1
+fi
 
 echo "Started the slackware packaging process, using latest '$BRANCH' git tree"
 
@@ -42,26 +57,6 @@ if [ -z $QOWNNOTES_VERSION ]; then
     QOWNNOTES_VERSION=`cat src/version.h | sed "s/[^0-9,.]//g"`
 fi
 
-cd ..
-
-ARCHIVE_FILE=qownnotes-${QOWNNOTES_VERSION}.tar.xz
-wget https://download.tuxfamily.org/qownnotes/src/${ARCHIVE_FILE}
-
-ARCHIVE_SHA512=`sha512sum ${ARCHIVE_FILE} | awk '{ print $1 }'`
-ARCHIVE_MD5=`md5sum ${ARCHIVE_FILE} | awk '{ print $1 }'`
-ARCHIVE_SIZE=`stat -c "%s" ${ARCHIVE_FILE}`
-
-cd QOwnNotes
-
-echo "Archive md5: ${ARCHIVE_MD5}"
-echo "Archive size: ${ARCHIVE_SIZE}"
-
-if [ -z ${ARCHIVE_MD5} ]; then
-    echo
-    echo "Archive md5 is empty!"
-    exit 1
-fi
-
 buildSystemPath="../../../QOwnNotes/build-systems/slackware"
 
 cd ../slackbuilds/14.1/qownnotes/
@@ -75,7 +70,7 @@ sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" qownnotes.info
 sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" dobuild.sh
 
 # replace the md5sum
-sed -i "s/ARCHIVE-MD5/$ARCHIVE_MD5/g" qownnotes.info
+sed -i "s/ARCHIVE-MD5/$QOWNNOTES_ARCHIVE_MD5/g" qownnotes.info
 
 path14_2="../../14.2/qownnotes"
 cp qownnotes.SlackBuild ${path14_2}

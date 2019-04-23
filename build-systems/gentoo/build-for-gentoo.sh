@@ -17,6 +17,26 @@ BRANCH=develop
 PROJECT_PATH="/tmp/QOwnNotes-gentoo-$$"
 CUR_DIR=$(pwd)
 
+# use temporary checksum variable file
+_QQwnNotesCheckSumVarFile="/tmp/QOwnNotes.checksum.vars"
+
+if [[ ! -f ${_QQwnNotesCheckSumVarFile} ]]; then
+	echo "${_QQwnNotesCheckSumVarFile} doesn't exist. build-tuxfamily-src.sh must be run ahead of build script!"
+	exit 1
+fi
+
+source ${_QQwnNotesCheckSumVarFile}
+
+# check checksum variable from build-systems/tuxfamily/build-tuxfamily-src.sh
+if [ -z ${QOWNNOTES_ARCHIVE_SHA512} ]; then
+    echo "QOWNNOTES_ARCHIVE_SHA512 was not set!"
+	exit 1
+fi
+
+if [ -z ${QOWNNOTES_ARCHIVE_SIZE} ]; then
+    echo "QOWNNOTES_ARCHIVE_SIZE was not set!"
+	exit 1
+fi
 
 echo "Started the ebuild packaging process, using latest '$BRANCH' git tree"
 
@@ -41,24 +61,7 @@ if [ -z $QOWNNOTES_VERSION ]; then
     QOWNNOTES_VERSION=`cat src/version.h | sed "s/[^0-9,.]//g"`
 fi
 
-cd ..
-
 ARCHIVE_FILE=qownnotes-${QOWNNOTES_VERSION}.tar.xz
-wget https://download.tuxfamily.org/qownnotes/src/${ARCHIVE_FILE}
-
-ARCHIVE_SHA512=`sha512sum ${ARCHIVE_FILE} | awk '{ print $1 }'`
-ARCHIVE_SIZE=`stat -c "%s" ${ARCHIVE_FILE}`
-
-cd QOwnNotes
-
-echo "Archive sha512: ${ARCHIVE_SHA512}"
-echo "Archive size: ${ARCHIVE_SIZE}"
-
-if [ -z ${ARCHIVE_SHA512} ]; then
-    echo
-    echo "Archive sha512 is empty!"
-    exit 1
-fi
 
 cd ../overlay/app-office/qownnotes/
 cp ../../../QOwnNotes/build-systems/gentoo/qownnotes.ebuild .
@@ -67,7 +70,7 @@ cp ../../../QOwnNotes/build-systems/gentoo/qownnotes.ebuild .
 sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" qownnotes.ebuild
 
 # update the Manifest file
-echo "DIST ${ARCHIVE_FILE} ${ARCHIVE_SIZE} SHA512 ${ARCHIVE_SHA512}" >> Manifest
+echo "DIST ${ARCHIVE_FILE} ${QOWNNOTES_ARCHIVE_SIZE} SHA512 ${QOWNNOTES_ARCHIVE_SHA512}" >> Manifest
 
 eBuildFile="qownnotes-$QOWNNOTES_VERSION.ebuild"
 mv qownnotes.ebuild ${eBuildFile}
