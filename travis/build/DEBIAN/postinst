@@ -1,4 +1,0 @@
-#! /bin/bash -e
-
-chmod a+x /opt/QOwnNotes/QOwnNotes
-ln -fs "/opt/QOwnNotes/QOwnNotes" "/usr/bin/QOwnNotes"
