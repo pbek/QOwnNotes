@@ -30,6 +30,7 @@ apps:
 parts:
   qownnotes:
     source: https://download.tuxfamily.org/qownnotes/src/qownnotes-VERSION-STRING.tar.xz
+    source-checksum: sha256/ARCHIVE-SHA256
     # see https://docs.snapcraft.io/reference/plugins/qmake
     plugin: qmake
     qt-version: qt5

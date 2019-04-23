@@ -20,6 +20,21 @@ BRANCH=develop
 PROJECT_PATH="/tmp/QOwnNotes-launchpad-snap-$$"
 CUR_DIR=$(pwd)
 
+# use temporary checksum variable file
+_QQwnNotesCheckSumVarFile="/tmp/QOwnNotes.checksum.vars"
+
+if [[ ! -f ${_QQwnNotesCheckSumVarFile} ]]; then
+	echo "${_QQwnNotesCheckSumVarFile} doesn't exist. build-tuxfamily-src.sh must be run ahead of build script!"
+	exit 1
+fi
+
+source ${_QQwnNotesCheckSumVarFile}
+
+# check checksum variable from build-systems/tuxfamily/build-tuxfamily-src.sh
+if [ -z ${QOWNNOTES_ARCHIVE_SHA256} ]; then
+    echo "QOWNNOTES_ARCHIVE_SHA256 was not set!"
+	exit 1
+fi
 
 echo "Started the Launchpad Snap packaging process, using latest '$BRANCH' git tree"
 
@@ -49,6 +64,9 @@ cp ../QOwnNotes/build-systems/snap/snapcraft/* . -R
 
 # replace the version in the snapcraft.yaml file
 sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" snapcraft.yaml
+
+# replace the archive sha256 hash in the snapcraft.yaml file
+sed -i "s/ARCHIVE-SHA256/$QOWNNOTES_ARCHIVE_SHA256/g" snapcraft.yaml
 
 
 echo "Committing changes..."
