@@ -190,6 +190,27 @@ QMessageBox::StandardButton Utils::Gui::question(
 }
 
 /**
+ * Shows a warning message box with a checkbox to override the message box in
+ * the future
+ *
+ * @param parent
+ * @param title
+ * @param text
+ * @param identifier
+ * @param buttons
+ * @param defaultButton
+ * @return
+ */
+QMessageBox::StandardButton Utils::Gui::warning(
+        QWidget *parent, const QString &title, const QString &text,
+        const QString &identifier,
+        QMessageBox::StandardButtons buttons,
+        QMessageBox::StandardButton defaultButton) {
+    return showMessageBox(parent, QMessageBox::Icon::Warning, title, text,
+                          identifier, buttons, defaultButton);
+}
+
+/**
  * Shows a message box with a checkbox to override the message box in the future
  *
  * @param parent

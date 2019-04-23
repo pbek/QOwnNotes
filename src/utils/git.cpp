@@ -18,6 +18,7 @@
 #include <QtCore/QSettings>
 #include "git.h"
 #include "misc.h"
+#include "gui.h"
 
 
 /**
@@ -56,7 +57,8 @@ void Utils::Git::commitCurrentNoteFolder() {
  * @param process
  * @return
  */
-bool Utils::Git::executeCommand(QString command, QProcess *process) {
+bool Utils::Git::executeCommand(QString command, QProcess *process,
+                                bool withErrorDialog) {
     if (process == Q_NULLPTR) {
         process = new QProcess();
     }
@@ -65,6 +67,14 @@ bool Utils::Git::executeCommand(QString command, QProcess *process) {
 
     if (!process->waitForFinished()) {
         qWarning() << "Command '" + command + "' failed";
+
+        if (withErrorDialog) {
+            Utils::Gui::warning(
+                    Q_NULLPTR, QObject::tr("Command failed!"),
+                    QObject::tr("The command <code>%1</code> failed!").arg(
+                            command), "command-failed");
+        }
+
         return false;
     }
 
@@ -90,8 +100,10 @@ bool Utils::Git::executeCommand(QString command, QProcess *process) {
  * @param process
  * @return
  */
-bool Utils::Git::executeGitCommand(QString arguments, QProcess *process) {
-    return executeCommand("\""+ gitCommand() + "\" " + arguments, process);
+bool Utils::Git::executeGitCommand(QString arguments, QProcess *process,
+        bool withErrorDialog) {
+    return executeCommand("\"" + gitCommand() + "\" " + arguments, process,
+                          withErrorDialog);
 }
 
 /**

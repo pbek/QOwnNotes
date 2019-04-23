@@ -1,6 +1,9 @@
 # QOwnNotes Changelog
 
 ## 19.4.5
+- you now will get a warning dialog if your git client couldn't be executed when
+  a git command is issued (for [#1192](https://github.com/pbek/QOwnNotes/issues/1192))
+    - you will be able to turn off that dialog
 - more checksum generation improvements for the AUR and added checksum support
   to the build processes of Launchpad Snap, Slackware and Gentoo
   (for [#1175](https://github.com/pbek/QOwnNotes/issues/1175))

@@ -19,9 +19,11 @@
 namespace Utils {
     namespace Git {
         void commitCurrentNoteFolder();
-        bool executeCommand(QString command, QProcess *process = Q_NULLPTR);
+        bool executeCommand(QString command, QProcess *process = Q_NULLPTR,
+                            bool withErrorDialog = false);
         bool executeGitCommand(QString arguments,
-                               QProcess *process = Q_NULLPTR);
+                               QProcess *process = Q_NULLPTR,
+                               bool withErrorDialog = true);
         QString gitCommand();
         void showLog(QString filePath);
         bool hasLogCommand();

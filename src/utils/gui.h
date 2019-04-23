@@ -62,7 +62,7 @@ namespace Utils {
                 QWidget *parent, const QString &title, const QString &text,
                 const QString &identifier = "default",
                 QMessageBox::StandardButtons buttons = QMessageBox::Ok,
-                QMessageBox::StandardButton defaultButton = QMessageBox::NoButton);
+                QMessageBox::StandardButton defaultButton = QMessageBox::Ok);
 
         QMessageBox::StandardButton question(
                 QWidget *parent, const QString &title, const QString &text,
@@ -70,6 +70,13 @@ namespace Utils {
                 QMessageBox::StandardButtons buttons =
                 QMessageBox::StandardButtons(QMessageBox::Yes | QMessageBox::No),
                 QMessageBox::StandardButton defaultButton = QMessageBox::NoButton);
+
+        QMessageBox::StandardButton warning(
+                QWidget *parent, const QString &title, const QString &text,
+                const QString &identifier = "default",
+                QMessageBox::StandardButtons buttons =
+                QMessageBox::StandardButtons(QMessageBox::Ok),
+                QMessageBox::StandardButton defaultButton = QMessageBox::Ok);
 
         bool userDataInTreeWidgetExists(QTreeWidget *treeWidget,
                                         QVariant userData,
