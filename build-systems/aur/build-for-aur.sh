@@ -30,6 +30,12 @@ fi
 
 source ${_QQwnNotesCheckSumVarFile}
 
+# check checksum variable from build-systems/tuxfamily/build-tuxfamily-src.sh
+if [ -z ${QOWNNOTES_ARCHIVE_SHA256} ]; then
+    echo "QOWNNOTES_ARCHIVE_SHA256 was not set!"
+	exit 1
+fi
+
 echo "Started the AUR packaging process, using latest '$BRANCH' git tree"
 
 if [ -d $PROJECT_PATH ]; then
@@ -66,23 +72,9 @@ sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" PKGBUILD
 # replace the commit hash in the PKGBUILD file
 sed -i "s/COMMIT-HASH/$gitCommitHash/g" PKGBUILD
 
-# check variable from build-systems/tuxfamily/build-tuxfamily-src.sh
-if [ -z ${QOWNNOTES_ARCHIVE_SHA256} ]; then
-    echo "QOWNNOTES_ARCHIVE_SHA256 was not set! downloading checksum..."
-    ARCHIVE_SHA256=`wget -qO- https://download.tuxfamily.org/qownnotes/src/qownnotes-${QOWNNOTES_VERSION}.tar.xz.sha256`
-else
-    ARCHIVE_SHA256=${QOWNNOTES_ARCHIVE_SHA256}
-fi
-
 # replace the archive sha256 hash in the PKGBUILD file
-sed -i "s/ARCHIVE-SHA256/$ARCHIVE_SHA256/g" PKGBUILD
-echo "Archive sha256: ${ARCHIVE_SHA256}"
-
-if [ -z ${ARCHIVE_SHA256} ]; then
-    echo
-    echo "Archive sha256 is empty!"
-    exit 1
-fi
+sed -i "s/ARCHIVE-SHA256/$QOWNNOTES_ARCHIVE_SHA256/g" PKGBUILD
+echo "Archive sha256: ${QOWNNOTES_ARCHIVE_SHA256}"
 
 # replace the version in the .SRCINFO file
 sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" .SRCINFO
