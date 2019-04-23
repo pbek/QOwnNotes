@@ -92,7 +92,9 @@ before_deploy:
     then
       cd ../travis
       dpkg-deb -x QOwnNotes.deb build
-      mv ../src/QOwnNotes build/opt/QOwnNotes/
+      install ../src/QOwnNotes build/opt/QOwnNotes
+      mkdir -p build/usr/bin
+      ln -s /opt/QOwnNotes/QOwnNotes build/usr/bin
       mv ../src/languages/*.qm build/opt/QOwnNotes/
       mv ../icons/* build/opt/QOwnNotes/
       sed -i 's/VERSION_NUMBER/'"$VERSION_NUMBER"'/g' build/DEBIAN/control
