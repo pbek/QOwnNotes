@@ -7,6 +7,7 @@
 - more checksum generation improvements for the AUR and added checksum support
   to the build processes of Launchpad Snap, Slackware and Gentoo
   (for [#1175](https://github.com/pbek/QOwnNotes/issues/1175))
+- added more German translation
 
 ## 19.4.4
 - fixed renaming issue on case-insensitive file-systems
