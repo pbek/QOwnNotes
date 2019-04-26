@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 19.5.0
+- **QOwnNotesAPI** is now ready for **Nextcloud 16**
+    - see [QOwnNotesAPI for Nextcloud](https://apps.nextcloud.com/apps/qownnotesapi)
+
 ## 19.4.5
 - you now will get a warning dialog if your git client couldn't be executed when
   a git command is issued (for [#1192](https://github.com/pbek/QOwnNotes/issues/1192))
