@@ -10,10 +10,10 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 $DIR/tuxfamily/build-tuxfamily-src.sh
 
 # Upload source archive to SourceForge
-$DIR/sourceforge/build-sourceforge-src.sh
+#$DIR/sourceforge/build-sourceforge-src.sh
 
 # lets wait a bit to make sure SourceForce has their files in place
-sleep 3
+#sleep 3
 
 cd $DIR
 
