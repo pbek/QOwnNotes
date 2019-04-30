@@ -10837,3 +10837,8 @@ void MainWindow::on_actionJump_to_note_subfolder_panel_triggered() {
 void MainWindow::on_actionActivate_context_menu_triggered() {
     activateContextMenu();
 }
+
+void MainWindow::on_actionImport_bookmarks_from_server_triggered() {
+    OwnCloudService *ownCloud = OwnCloudService::instance();
+    ownCloud->fetchBookmarks();
+}

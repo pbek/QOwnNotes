@@ -41,7 +41,6 @@
   Slovak, Slovenian, Danish, Hungarian, Norwegian, Czech, Greek, Spanish translation
   (thank you MGuerra, mlimacarlos, vistausss, tiwi90, Fabijenna, richarson, pu.sash)
 
-
 ## 19.4.1
 - added support for **listing** the **note folders** and **changing** the
   **current note folder** to the websocket api

@@ -565,6 +565,8 @@ private slots:
 
     void on_actionActivate_context_menu_triggered();
 
+    void on_actionImport_bookmarks_from_server_triggered();
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;

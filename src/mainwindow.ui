@@ -753,7 +753,7 @@
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>300</width>
+              <width>294</width>
               <height>28</height>
              </rect>
             </property>
@@ -842,7 +842,7 @@ p, li { white-space: pre-wrap; }
      <x>0</x>
      <y>0</y>
      <width>1383</width>
-     <height>27</height>
+     <height>34</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuQOwnNotes">
@@ -887,6 +887,7 @@ p, li { white-space: pre-wrap; }
      </property>
      <addaction name="actionImport_notes_from_Evernote"/>
      <addaction name="actionImport_notes_from_text_files"/>
+     <addaction name="actionImport_bookmarks_from_server"/>
     </widget>
     <widget class="QMenu" name="menuNavigation">
      <property name="title">
@@ -2461,6 +2462,11 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="shortcut">
     <string notr="true">F10</string>
+   </property>
+  </action>
+  <action name="actionImport_bookmarks_from_server">
+   <property name="text">
+    <string>Import bookmarks from server</string>
    </property>
   </action>
  </widget>

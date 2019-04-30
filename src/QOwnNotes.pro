@@ -139,7 +139,8 @@ SOURCES += main.cpp\
     widgets/scriptlistwidget.cpp \
     widgets/notefolderlistwidget.cpp \
     widgets/notetreewidgetitem.cpp \
-    widgets/layoutwidget.cpp
+    widgets/layoutwidget.cpp \
+    dialogs/serverbookmarksimportdialog.cpp
 
 HEADERS  += mainwindow.h \
     build_number.h \
@@ -225,7 +226,8 @@ HEADERS  += mainwindow.h \
     widgets/scriptlistwidget.h \
     widgets/notefolderlistwidget.h \
     widgets/notetreewidgetitem.h \
-    widgets/layoutwidget.h
+    widgets/layoutwidget.h \
+    dialogs/serverbookmarksimportdialog.h
 
 FORMS    += mainwindow.ui \
     dialogs/notediffdialog.ui \
@@ -254,7 +256,8 @@ FORMS    += mainwindow.ui \
     widgets/qtexteditsearchwidget.ui \
     widgets/scriptsettingwidget.ui \
     widgets/notetreewidgetitem.ui \
-    widgets/layoutwidget.ui
+    widgets/layoutwidget.ui \
+    dialogs/serverbookmarksimportdialog.ui
 
 RESOURCES += \
     images.qrc \

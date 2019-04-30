@@ -2,6 +2,7 @@
 #include "services/owncloudservice.h"
 #include "dialogs/settingsdialog.h"
 #include "dialogs/trashdialog.h"
+#include "dialogs/serverbookmarksimportdialog.h"
 #include "dialogs/versiondialog.h"
 #include <QSettings>
 #include <QDebug>
@@ -112,6 +113,8 @@ void OwnCloudService::readSettings() {
     restoreTrashedNotePath = rootPath + "note/restore_trashed";
     webdavPath = "/remote.php/webdav";
     sharePath = "/ocs/v1.php/apps/files_sharing/api/v1/shares";
+//    bookmarkPath = "/apps/bookmarks/bookmark?page=0&limit=34&sortby=lastmodified";
+    bookmarkPath = "/apps/bookmarks/public/rest/v2/bookmark";
 
     int calendarBackend = settings.value(
             "ownCloud/todoCalendarBackend", DefaultOwnCloudCalendar).toInt();
@@ -368,6 +371,11 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
 
             // update the share status of the notes
             handleDeleteNoteShareReply(urlPath, data);
+            return;
+        } else if (urlPath.startsWith(bookmarkPath)) {
+            qDebug() << "Reply from bookmark api";
+
+            handleImportBookmarksReply(data);
             return;
         } else if (url.toString() == serverUrl) {
             qDebug() << "Reply from main server url";
@@ -780,6 +788,29 @@ void OwnCloudService::fetchShares(QString path) {
         q.addQueryItem("path", path);
         url.setQuery(q);
     }
+
+    qDebug() << __func__ << " - 'url': " << url;
+
+    QNetworkRequest r(url);
+    addAuthHeader(&r);
+
+    // try to ensure the network is accessible
+    networkManager->setNetworkAccessible(QNetworkAccessManager::Accessible);
+
+    QNetworkReply *reply = networkManager->get(r);
+    ignoreSslErrorsIfAllowed(reply);
+}
+
+/**
+ * Fetches the bookmarks from Nextcloud Bookmarks
+ */
+void OwnCloudService::fetchBookmarks() {
+    // return if no settings are set
+    if (!hasOwnCloudSettings()) {
+        return;
+    }
+
+    QUrl url(serverUrl + bookmarkPath);
 
     qDebug() << __func__ << " - 'url': " << url;
 
@@ -1832,4 +1863,29 @@ void OwnCloudService::settingsGetFileList(
     QNetworkReply *reply = networkManager->sendCustomRequest(
             r, "PROPFIND", buffer);
     ignoreSslErrorsIfAllowed(reply);
+}
+
+void OwnCloudService::handleImportBookmarksReply(QString &data) {
+    qDebug() << __func__ << " - 'data': " << data;
+
+    // we have to add [], so the string can be parsed as JSON
+    data = QString("[") + data + QString("]");
+
+    QJSEngine engine;
+    QJSValue result = engine.evaluate(data);
+
+    QJSValue bookmarks = result.property(0).property("data");
+
+
+    // check if we got no useful data
+    if (bookmarks.toString() == "") {
+        QMessageBox::information(0, tr("No bookmarks"),
+                                 tr("No bookmarks were found on the server."));
+        return;
+    }
+
+#ifndef INTEGRATION_TESTS
+    auto *dialog = new ServerBookmarksImportDialog(bookmarks, mainWindow);
+    dialog->exec();
+#endif
 }

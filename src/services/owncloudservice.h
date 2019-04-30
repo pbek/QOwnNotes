@@ -69,6 +69,8 @@ public:
 
     void fetchShares(QString path = "");
 
+    void fetchBookmarks();
+
     void removeNoteShare(Note note, ShareDialog *shareDialog);
 
     static OwnCloudService *instance();
@@ -104,6 +106,7 @@ private:
     QString restoreTrashedNotePath;
     QString webdavPath;
     QString sharePath;
+    QString bookmarkPath;
     SettingsDialog *settingsDialog;
     TodoDialog *todoDialog;
     QString calendarName;
@@ -147,6 +150,8 @@ private:
     void handleDeleteNoteShareReply(QString urlPart, QString &data);
 
     void checkAppVersion(QNetworkReply *reply);
+
+    void handleImportBookmarksReply(QString &data);
 
 signals:
 
