@@ -3,8 +3,14 @@
 ## 19.5.0
 - you are now able to **import bookmarks** from [Nextcloud bookmarks](https://github.com/nextcloud/bookmarks)
   in the *Notes / Import* menu (for [#1198](https://github.com/pbek/QOwnNotes/issues/1198))
+    - the bookmarks will be imported to your bookmarks note 
+    - for more information about the **bookmarks feature** please visit
+      [Web Companion browser extension](https://www.qownnotes.org/Knowledge-base/QOwnNotes-Web-Companion-browser-extension)
 - **QOwnNotesAPI** is now ready for **Nextcloud 16**
     - see [QOwnNotesAPI for Nextcloud](https://apps.nextcloud.com/apps/qownnotesapi)
+- added more Italian, German, Russian, Dutch, Norwegian, Danish, Hungarian,
+  Spanish, Catalan, Romanian, Brazilian Portuguese translation (thank you
+  mlocati, rakekniven, mikhail-khokhlov, Fabijenna, richarson, MGuerra, mlimacarlos)
 
 ## 19.4.5
 - you now will get a warning dialog if your git client couldn't be executed when
