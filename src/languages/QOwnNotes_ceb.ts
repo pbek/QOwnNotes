@@ -3060,103 +3060,103 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <context>
     <name>OwnCloudService</name>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="190"/>
+        <location filename="../services/owncloudservice.cpp" line="189"/>
         <source>Username / password error</source>
         <translation>Username / password error</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="191"/>
+        <location filename="../services/owncloudservice.cpp" line="190"/>
         <source>Your calendar username or password is incorrect!</source>
         <translation>Imong kalendaryo sa username o password kay sayop!</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="517"/>
+        <location filename="../services/owncloudservice.cpp" line="516"/>
         <source>API app version too low</source>
         <translation>API app na bersyon kay grabe kaubos</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="518"/>
+        <location filename="../services/owncloudservice.cpp" line="517"/>
         <source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
         <translation>Palihug ug konsidenar nga pag-update sa imong QOwnNotesAPI app sa imong serber, imong bersyon sa app %1 kay grabe kaubos ug mahimo nga hinungdan kini ug kasamon sa QOwnNotes.</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1003"/>
+        <location filename="../services/owncloudservice.cpp" line="1002"/>
         <source>ownCloud server connection error</source>
         <translation>ownCloud serber koneksyon kay sayup</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1007"/>
+        <location filename="../services/owncloudservice.cpp" line="1006"/>
         <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
         <translation>ownCloud serber kay sayup: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Palihug ug susi sa imong ownCloud na masumpo.</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1025"/>
+        <location filename="../services/owncloudservice.cpp" line="1024"/>
         <source>You need to setup your ownCloud server!</source>
         <translation>Kinahanglan nimo andamon ang imong ownCloud na serber!</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1038"/>
+        <location filename="../services/owncloudservice.cpp" line="1037"/>
         <source>Open &amp;settings</source>
         <translation>Abli &amp;kahimtangan</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1038"/>
+        <location filename="../services/owncloudservice.cpp" line="1037"/>
         <source>&amp;Cancel</source>
         <translation>%kanselahon</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1083"/>
+        <location filename="../services/owncloudservice.cpp" line="1082"/>
         <source>Done with loading note versions</source>
         <translation>Nahuman sa pag-load ug mga bersyon sa mga nota</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1122"/>
+        <location filename="../services/owncloudservice.cpp" line="1121"/>
         <source>No versions found</source>
         <translation>Walang bersyon ang nakita</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1123"/>
+        <location filename="../services/owncloudservice.cpp" line="1122"/>
         <source>There are no versions for this note or the note wasn&apos;t found on the server.</source>
         <translation>Walay laing bersyon para sa kini nga nota o ang nota kay wala makita sa serber.</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1144"/>
+        <location filename="../services/owncloudservice.cpp" line="1143"/>
         <source>Done with loading trashed notes</source>
         <translation>Nahuman sa pag-load ug mga nota nga ilalabay</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1185"/>
+        <location filename="../services/owncloudservice.cpp" line="1184"/>
         <source>No trashed notes</source>
         <translation>Walay nahalin nga nota</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1186"/>
+        <location filename="../services/owncloudservice.cpp" line="1185"/>
         <source>No trashed notes were found on the server.</source>
         <translation>Walay nota nga nahalin ang nakita sa serber.</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1209"/>
-        <location filename="../services/owncloudservice.cpp" line="1235"/>
+        <location filename="../services/owncloudservice.cpp" line="1208"/>
+        <location filename="../services/owncloudservice.cpp" line="1234"/>
         <source>Error while loading todo lists!</source>
         <translation>Nasayup samtang nagpaload sa todo nga mga listahan!</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1210"/>
+        <location filename="../services/owncloudservice.cpp" line="1209"/>
         <source>Your CalDAV server didn&apos;t reply anything!</source>
         <translation>Imong CalDAV serber kay wala mo tubag ug bisan unsa!</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1236"/>
+        <location filename="../services/owncloudservice.cpp" line="1235"/>
         <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
         <translation>Adunay sayup nga mensahe gekan sa imong CalDAV serber: &lt;strong&gt;%1&lt;/strong&gt;</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1882"/>
+        <location filename="../services/owncloudservice.cpp" line="1881"/>
         <source>No bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1883"/>
+        <location filename="../services/owncloudservice.cpp" line="1882"/>
         <source>No bookmarks were found on the server.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3660,7 +3660,13 @@ Gusto paba nimong padayunon ang pag-install?</translation>
     <name>ServerBookmarksImportDialog</name>
     <message>
         <location filename="../dialogs/serverbookmarksimportdialog.ui" line="14"/>
+        <location filename="../dialogs/serverbookmarksimportdialog.ui" line="46"/>
         <source>Import bookmarks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/serverbookmarksimportdialog.ui" line="60"/>
+        <source>%v of %m bookmark(s) imported</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6506,14 +6512,14 @@ Kini dili mahimong dili mahuman!</translation>
         <translation>%1 konektado sa QOwnNotes server!</translation>
     </message>
     <message numerus="yes">
-        <location filename="../services/websocketserverservice.cpp" line="201"/>
+        <location filename="../services/websocketserverservice.cpp" line="164"/>
         <source>%n bookmark(s) created</source>
         <translation type="unfinished">
             <numerusform>%n bookmark(s) created</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../services/websocketserverservice.cpp" line="261"/>
+        <location filename="../services/websocketserverservice.cpp" line="269"/>
         <source>%1 was disconnected from QOwnNotes server</source>
         <translation>Ang %1 wala&apos;y kontak sa QOwnNotes server</translation>
     </message>

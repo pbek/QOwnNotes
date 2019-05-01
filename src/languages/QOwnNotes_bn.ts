@@ -3097,103 +3097,103 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <context>
     <name>OwnCloudService</name>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="190"/>
+        <location filename="../services/owncloudservice.cpp" line="189"/>
         <source>Username / password error</source>
         <translation>ব্যবহারকারীর নাম / পাসওয়ার্ড ত্রুটি</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="191"/>
+        <location filename="../services/owncloudservice.cpp" line="190"/>
         <source>Your calendar username or password is incorrect!</source>
         <translation>আপনার ক্যালেন্ডার ব্যবহারকারী নাম বা পাসওয়ার্ড ভুল!</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="517"/>
+        <location filename="../services/owncloudservice.cpp" line="516"/>
         <source>API app version too low</source>
         <translation>API অ্যাপ্লিকেশন সংস্করণ খুব কম</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="518"/>
+        <location filename="../services/owncloudservice.cpp" line="517"/>
         <source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
         <translation>আপনার সার্ভারে আপনার QOwnNotesAPI অ্যাপ্লিকেশন আপডেট করার বিবেচনা করুন, আপনার অ্যাপ্লিকেশন সংস্করণ %1 অত্যন্ত কম এবং QOwnNotes এ সমস্যা সৃষ্টি করতে পারে।</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1003"/>
+        <location filename="../services/owncloudservice.cpp" line="1002"/>
         <source>ownCloud server connection error</source>
         <translation>নিজস্ব ক্লাউড সার্ভার সংযোগ ত্রুটি</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1007"/>
+        <location filename="../services/owncloudservice.cpp" line="1006"/>
         <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
         <translation>নিজস্ব সার্ভার ত্রুটি: &lt;strong&gt;%1&lt;/ strong&gt;&lt;br /&gt; আপনার নিজস্ব ক্লাউড কনফিগারেশনটি পরীক্ষা করুন।</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1025"/>
+        <location filename="../services/owncloudservice.cpp" line="1024"/>
         <source>You need to setup your ownCloud server!</source>
         <translation>আপনার নিজের ক্লাউড সার্ভার আপনার সেটআপ করা প্রয়োজন!</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1038"/>
+        <location filename="../services/owncloudservice.cpp" line="1037"/>
         <source>Open &amp;settings</source>
         <translation>ওপেন সেটিংস</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1038"/>
+        <location filename="../services/owncloudservice.cpp" line="1037"/>
         <source>&amp;Cancel</source>
         <translation>&amp; বাতিল</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1083"/>
+        <location filename="../services/owncloudservice.cpp" line="1082"/>
         <source>Done with loading note versions</source>
         <translation>নোট সংস্করণ লোড সঙ্গে সম্পন্ন</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1122"/>
+        <location filename="../services/owncloudservice.cpp" line="1121"/>
         <source>No versions found</source>
         <translation>কোন সংস্করণ পাওয়া যায় নি</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1123"/>
+        <location filename="../services/owncloudservice.cpp" line="1122"/>
         <source>There are no versions for this note or the note wasn&apos;t found on the server.</source>
         <translation>এই নোটের কোন সংস্করণ নেই বা সার্ভারে নোট পাওয়া যায়নি.</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1144"/>
+        <location filename="../services/owncloudservice.cpp" line="1143"/>
         <source>Done with loading trashed notes</source>
         <translation>ট্র্যাশ করা নোটগুলি লোড করা সম্পন্ন</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1185"/>
+        <location filename="../services/owncloudservice.cpp" line="1184"/>
         <source>No trashed notes</source>
         <translation>কোনও ট্র্যাশ করা নোট নেই</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1186"/>
+        <location filename="../services/owncloudservice.cpp" line="1185"/>
         <source>No trashed notes were found on the server.</source>
         <translation>সার্ভারে কোনও ট্র্যাশ নোট পাওয়া যায়নি.</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1209"/>
-        <location filename="../services/owncloudservice.cpp" line="1235"/>
+        <location filename="../services/owncloudservice.cpp" line="1208"/>
+        <location filename="../services/owncloudservice.cpp" line="1234"/>
         <source>Error while loading todo lists!</source>
         <translation>টোড তালিকা লোড করার সময় ত্রুটি!</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1210"/>
+        <location filename="../services/owncloudservice.cpp" line="1209"/>
         <source>Your CalDAV server didn&apos;t reply anything!</source>
         <translation>আপনার CalDAV সার্ভার কিছু উত্তর করেনি!</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1236"/>
+        <location filename="../services/owncloudservice.cpp" line="1235"/>
         <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
         <translation>আপনার CalDAV সার্ভার থেকে ত্রুটি বার্তা: &lt;strong&gt;% 1 &lt;/ strong&gt;</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1882"/>
+        <location filename="../services/owncloudservice.cpp" line="1881"/>
         <source>No bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1883"/>
+        <location filename="../services/owncloudservice.cpp" line="1882"/>
         <source>No bookmarks were found on the server.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3699,7 +3699,13 @@ Do you want to install it anyway?</source>
     <name>ServerBookmarksImportDialog</name>
     <message>
         <location filename="../dialogs/serverbookmarksimportdialog.ui" line="14"/>
+        <location filename="../dialogs/serverbookmarksimportdialog.ui" line="46"/>
         <source>Import bookmarks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/serverbookmarksimportdialog.ui" line="60"/>
+        <source>%v of %m bookmark(s) imported</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6545,7 +6551,7 @@ This cannot be undone!</translation>
         <translation type="unfinished">%1 connected to QOwnNotes server!</translation>
     </message>
     <message numerus="yes">
-        <location filename="../services/websocketserverservice.cpp" line="201"/>
+        <location filename="../services/websocketserverservice.cpp" line="164"/>
         <source>%n bookmark(s) created</source>
         <translation type="unfinished">
             <numerusform>%n bookmark(s) created</numerusform>
@@ -6553,7 +6559,7 @@ This cannot be undone!</translation>
         </translation>
     </message>
     <message>
-        <location filename="../services/websocketserverservice.cpp" line="261"/>
+        <location filename="../services/websocketserverservice.cpp" line="269"/>
         <source>%1 was disconnected from QOwnNotes server</source>
         <translation type="unfinished">%1 was disconnected from QOwnNotes server</translation>
     </message>

@@ -1,4 +1,5 @@
 #include <QtQml/QJSValueIterator>
+#include <QtCore/QJsonArray>
 #include "serverbookmarksimportdialog.h"
 #include "ui_serverbookmarksimportdialog.h"
 
@@ -11,10 +12,13 @@ ServerBookmarksImportDialog::ServerBookmarksImportDialog(
     // init the iterator for the versions
     QJSValueIterator bookmarksIterator(bookmarks);
 
+    QJsonArray bookmarkList;
     QString url;
     QString title;
     QString description;
     QStringList tags;
+    int bookmarksCount = 0;
+    qDebug() << __func__ << " - 'jsonObject': " << jsonObject;
 
     // iterate over the bookmarks
     while (bookmarksIterator.hasNext()) {
@@ -28,20 +32,43 @@ ServerBookmarksImportDialog::ServerBookmarksImportDialog(
 
         url = property.toString();
 
-        qDebug() << __func__ << " - 'url': " << url;
-
         if (url == "") {
             continue;
         }
 
         title = bookmarksIterator.value().property("title").toString();
-        description = bookmarksIterator.value().property("description").toString();
-        tags = bookmarksIterator.value().property("tags").toVariant().toStringList();
+        description = bookmarksIterator.value().property("description")
+                .toString().remove("#");
+        tags = bookmarksIterator.value().property("tags").toVariant()
+                .toStringList();
 
-        qDebug() << __func__ << " - 'tags': " << tags;
+        Q_FOREACH(QString tag, tags) {
+                description.prepend("#" + tag.replace(" ", "-") + " ");
+        }
+
+        QJsonObject data {
+                {"name", title},
+                {"url", url},
+                {"description", description.trimmed()}
+        };
+        
+        bookmarkList.append(data);
+        bookmarksCount++;
     }
+
+    jsonObject = QJsonObject{
+            {"type", "newBookmarks"},
+            {"data", bookmarkList}
+    };
+
+    ui->progressBar->setMaximum(bookmarksCount);
 }
 
 ServerBookmarksImportDialog::~ServerBookmarksImportDialog() {
     delete ui;
+}
+
+void ServerBookmarksImportDialog::on_importButton_clicked() {
+    QJsonArray bookmarkList = WebSocketServerService::createBookmarks(jsonObject);
+    ui->progressBar->setValue(bookmarkList.count());
 }

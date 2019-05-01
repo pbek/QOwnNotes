@@ -3096,103 +3096,103 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <context>
     <name>OwnCloudService</name>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="190"/>
+        <location filename="../services/owncloudservice.cpp" line="189"/>
         <source>Username / password error</source>
         <translation>Errore nome utente / password</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="191"/>
+        <location filename="../services/owncloudservice.cpp" line="190"/>
         <source>Your calendar username or password is incorrect!</source>
         <translation>Il nome utente e/o la password del proprio calendario non sono corretti!</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="517"/>
+        <location filename="../services/owncloudservice.cpp" line="516"/>
         <source>API app version too low</source>
         <translation>Versione dell&apos;app delle API troppo datata</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="518"/>
+        <location filename="../services/owncloudservice.cpp" line="517"/>
         <source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
         <translation>Considerare di aggiornare l&apos;app QOwnNotesAPI sul proprio server: la versione %1 dell&apos;app è troppo datata e potrebbe causare problemi in QOwnNotes.</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1003"/>
+        <location filename="../services/owncloudservice.cpp" line="1002"/>
         <source>ownCloud server connection error</source>
         <translation>errore di connessione al server ownCloud</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1007"/>
+        <location filename="../services/owncloudservice.cpp" line="1006"/>
         <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
         <translation>Errore del server ownCloud: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Verificare la propria configurazione di ownCloud.</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1025"/>
+        <location filename="../services/owncloudservice.cpp" line="1024"/>
         <source>You need to setup your ownCloud server!</source>
         <translation>È necessario configurare il proprio server ownCloud!</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1038"/>
+        <location filename="../services/owncloudservice.cpp" line="1037"/>
         <source>Open &amp;settings</source>
         <translation>Apri le &amp;impostazioni</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1038"/>
+        <location filename="../services/owncloudservice.cpp" line="1037"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Annulla</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1083"/>
+        <location filename="../services/owncloudservice.cpp" line="1082"/>
         <source>Done with loading note versions</source>
         <translation>Caricamento delle versioni delle note completato</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1122"/>
+        <location filename="../services/owncloudservice.cpp" line="1121"/>
         <source>No versions found</source>
         <translation>Nessuna versione trovata</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1123"/>
+        <location filename="../services/owncloudservice.cpp" line="1122"/>
         <source>There are no versions for this note or the note wasn&apos;t found on the server.</source>
         <translation>Non ci sono versioni per questa nota oppure la nota non è stata trovata sul server.</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1144"/>
+        <location filename="../services/owncloudservice.cpp" line="1143"/>
         <source>Done with loading trashed notes</source>
         <translation>Caricamento delle note cestinate completato</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1185"/>
+        <location filename="../services/owncloudservice.cpp" line="1184"/>
         <source>No trashed notes</source>
         <translation>Nessuna nota cestinata</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1186"/>
+        <location filename="../services/owncloudservice.cpp" line="1185"/>
         <source>No trashed notes were found on the server.</source>
         <translation>Non è stata trovata alcuna nota cestinata sul server.</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1209"/>
-        <location filename="../services/owncloudservice.cpp" line="1235"/>
+        <location filename="../services/owncloudservice.cpp" line="1208"/>
+        <location filename="../services/owncloudservice.cpp" line="1234"/>
         <source>Error while loading todo lists!</source>
         <translation>Errore durante il caricamento delle todo lists!</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1210"/>
+        <location filename="../services/owncloudservice.cpp" line="1209"/>
         <source>Your CalDAV server didn&apos;t reply anything!</source>
         <translation>Il proprio server CalDAV non ha fornito alcuna risposta!</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1236"/>
+        <location filename="../services/owncloudservice.cpp" line="1235"/>
         <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
         <translation>Messaggio d&apos;errore dal proprio server CalDAV: &lt;strong&gt;%1&lt;/strong&gt;</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1882"/>
+        <location filename="../services/owncloudservice.cpp" line="1881"/>
         <source>No bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1883"/>
+        <location filename="../services/owncloudservice.cpp" line="1882"/>
         <source>No bookmarks were found on the server.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3697,7 +3697,13 @@ Si desidera procedere con l&apos;installazione comunque?</translation>
     <name>ServerBookmarksImportDialog</name>
     <message>
         <location filename="../dialogs/serverbookmarksimportdialog.ui" line="14"/>
+        <location filename="../dialogs/serverbookmarksimportdialog.ui" line="46"/>
         <source>Import bookmarks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/serverbookmarksimportdialog.ui" line="60"/>
+        <source>%v of %m bookmark(s) imported</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6542,7 +6548,7 @@ Non sarà possibile annullare l&apos;operazione!</translation>
         <translation>%1 connesso al server QOwnNotes!</translation>
     </message>
     <message numerus="yes">
-        <location filename="../services/websocketserverservice.cpp" line="201"/>
+        <location filename="../services/websocketserverservice.cpp" line="164"/>
         <source>%n bookmark(s) created</source>
         <translation>
             <numerusform>%n segnalibro creato</numerusform>
@@ -6550,7 +6556,7 @@ Non sarà possibile annullare l&apos;operazione!</translation>
         </translation>
     </message>
     <message>
-        <location filename="../services/websocketserverservice.cpp" line="261"/>
+        <location filename="../services/websocketserverservice.cpp" line="269"/>
         <source>%1 was disconnected from QOwnNotes server</source>
         <translation>%1 è stato disconnesso dal server QOwnNotes</translation>
     </message>

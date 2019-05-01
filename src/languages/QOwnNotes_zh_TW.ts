@@ -3064,103 +3064,103 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <context>
     <name>OwnCloudService</name>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="190"/>
+        <location filename="../services/owncloudservice.cpp" line="189"/>
         <source>Username / password error</source>
         <translation>使用者名稱、密碼錯誤</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="191"/>
+        <location filename="../services/owncloudservice.cpp" line="190"/>
         <source>Your calendar username or password is incorrect!</source>
         <translation>您的行事曆使用者名稱或密碼錯誤！</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="517"/>
+        <location filename="../services/owncloudservice.cpp" line="516"/>
         <source>API app version too low</source>
         <translation>API 版本過舊</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="518"/>
+        <location filename="../services/owncloudservice.cpp" line="517"/>
         <source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
         <translation>請留意更新您伺服器的 QOwnNotesAPI 程式，您的版本 %1 太舊了可能會遇到問題。</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1003"/>
+        <location filename="../services/owncloudservice.cpp" line="1002"/>
         <source>ownCloud server connection error</source>
         <translation>ownCloud 伺服器連線錯誤</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1007"/>
+        <location filename="../services/owncloudservice.cpp" line="1006"/>
         <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
         <translation>ownCloud 伺服器錯誤： &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;請檢查您的ownCloud設定。</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1025"/>
+        <location filename="../services/owncloudservice.cpp" line="1024"/>
         <source>You need to setup your ownCloud server!</source>
         <translation>您必須設定您的ownCloud伺服器！</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1038"/>
+        <location filename="../services/owncloudservice.cpp" line="1037"/>
         <source>Open &amp;settings</source>
         <translation>開啟設定(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1038"/>
+        <location filename="../services/owncloudservice.cpp" line="1037"/>
         <source>&amp;Cancel</source>
         <translation>取消(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1083"/>
+        <location filename="../services/owncloudservice.cpp" line="1082"/>
         <source>Done with loading note versions</source>
         <translation>載入筆記版本完成</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1122"/>
+        <location filename="../services/owncloudservice.cpp" line="1121"/>
         <source>No versions found</source>
         <translation>未找到版本</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1123"/>
+        <location filename="../services/owncloudservice.cpp" line="1122"/>
         <source>There are no versions for this note or the note wasn&apos;t found on the server.</source>
         <translation>未找到此筆記的版本或未在伺服器上找到此筆記。</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1144"/>
+        <location filename="../services/owncloudservice.cpp" line="1143"/>
         <source>Done with loading trashed notes</source>
         <translation>載入已刪除筆記完成</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1185"/>
+        <location filename="../services/owncloudservice.cpp" line="1184"/>
         <source>No trashed notes</source>
         <translation>無已刪除筆記</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1186"/>
+        <location filename="../services/owncloudservice.cpp" line="1185"/>
         <source>No trashed notes were found on the server.</source>
         <translation>未在伺服器上找到已刪除筆記。</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1209"/>
-        <location filename="../services/owncloudservice.cpp" line="1235"/>
+        <location filename="../services/owncloudservice.cpp" line="1208"/>
+        <location filename="../services/owncloudservice.cpp" line="1234"/>
         <source>Error while loading todo lists!</source>
         <translation>載入待辦清單錯誤！</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1210"/>
+        <location filename="../services/owncloudservice.cpp" line="1209"/>
         <source>Your CalDAV server didn&apos;t reply anything!</source>
         <translation>您的CalDAV伺服器未回覆任何訊息！</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1236"/>
+        <location filename="../services/owncloudservice.cpp" line="1235"/>
         <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
         <translation>您的CalDAV伺服器回覆錯誤訊息為： &lt;strong&gt;</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1882"/>
+        <location filename="../services/owncloudservice.cpp" line="1881"/>
         <source>No bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1883"/>
+        <location filename="../services/owncloudservice.cpp" line="1882"/>
         <source>No bookmarks were found on the server.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3664,7 +3664,13 @@ Do you want to install it anyway?</source>
     <name>ServerBookmarksImportDialog</name>
     <message>
         <location filename="../dialogs/serverbookmarksimportdialog.ui" line="14"/>
+        <location filename="../dialogs/serverbookmarksimportdialog.ui" line="46"/>
         <source>Import bookmarks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/serverbookmarksimportdialog.ui" line="60"/>
+        <source>%v of %m bookmark(s) imported</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6510,14 +6516,14 @@ This cannot be undone!</source>
         <translation>%1 連線至 QOwnNotes 伺服器！</translation>
     </message>
     <message numerus="yes">
-        <location filename="../services/websocketserverservice.cpp" line="201"/>
+        <location filename="../services/websocketserverservice.cpp" line="164"/>
         <source>%n bookmark(s) created</source>
         <translation>
             <numerusform>%n 個書籤已建立</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../services/websocketserverservice.cpp" line="261"/>
+        <location filename="../services/websocketserverservice.cpp" line="269"/>
         <source>%1 was disconnected from QOwnNotes server</source>
         <translation>%1 已從 QOwnNotes 伺服器中斷連線</translation>
     </message>

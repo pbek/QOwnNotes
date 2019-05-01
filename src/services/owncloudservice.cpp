@@ -113,7 +113,6 @@ void OwnCloudService::readSettings() {
     restoreTrashedNotePath = rootPath + "note/restore_trashed";
     webdavPath = "/remote.php/webdav";
     sharePath = "/ocs/v1.php/apps/files_sharing/api/v1/shares";
-//    bookmarkPath = "/apps/bookmarks/bookmark?page=0&limit=34&sortby=lastmodified";
     bookmarkPath = "/apps/bookmarks/public/rest/v2/bookmark";
 
     int calendarBackend = settings.value(

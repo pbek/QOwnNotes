@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 19.5.0
+- you are now able to **import bookmarks** from [Nextcloud bookmarks](https://github.com/nextcloud/bookmarks)
+  in the *Notes / Import* menu (for [#1198](https://github.com/pbek/QOwnNotes/issues/1198))
 - **QOwnNotesAPI** is now ready for **Nextcloud 16**
     - see [QOwnNotesAPI for Nextcloud](https://apps.nextcloud.com/apps/qownnotesapi)
 

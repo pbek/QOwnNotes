@@ -1,5 +1,4 @@
-#ifndef SERVERBOOKMARKSIMPORTDIALOG_H
-#define SERVERBOOKMARKSIMPORTDIALOG_H
+#pragma once
 
 #include <QDialog>
 #include <QJSValue>
@@ -19,8 +18,10 @@ public:
             MainWindow *mainWindow, QWidget *parent = 0);
     ~ServerBookmarksImportDialog();
 
+private slots:
+    void on_importButton_clicked();
+
 private:
     Ui::ServerBookmarksImportDialog *ui;
+    QJsonObject jsonObject;
 };
-
-#endif // SERVERBOOKMARKSIMPORTDIALOG_H

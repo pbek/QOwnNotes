@@ -158,44 +158,7 @@ void WebSocketServerService::processMessage(const QString &message) {
         pSender->sendTextMessage(jsonText);
 #endif
     } else if (type == "newBookmarks") {
-        const QString bookmarksNoteName = getBookmarksNoteName();
-        Note bookmarksNote = Note::fetchByName(bookmarksNoteName);
-        bool applyTag = false;
-
-        // create new bookmarks note if it doesn't exist
-        if (!bookmarksNote.isFetched()) {
-            bookmarksNote.setName(bookmarksNoteName);
-            bookmarksNote.setNoteText(Note::createNoteHeader(bookmarksNoteName));
-            applyTag = true;
-        }
-
-        QString noteText = bookmarksNote.getNoteText().trimmed();
-        const QJsonArray bookmarkList = jsonObject.value("data").toArray();
-
-        Q_FOREACH(QJsonValue bookmarkObject, bookmarkList) {
-                const QJsonObject data = bookmarkObject.toObject();
-                const QString name = data.value("name").toString().trimmed().remove("[").remove("]");
-                const QString url = data.value("url").toString().trimmed();
-                const QString description = data.value("description").toString().trimmed();
-
-                noteText += "\n- [" + name +"](" + url + ")";
-
-                if (!description.isEmpty()) {
-                    noteText += " " + description;
-                }
-            }
-
-        noteText += "\n";
-        bookmarksNote.setNoteText(noteText);
-        bookmarksNote.store();
-        bookmarksNote.storeNoteTextFileToDisk();
-
-        if (applyTag) {
-            auto tag = Tag::fetchByName(getBookmarksTag());
-            if (tag.isFetched()) {
-                tag.linkToNote(bookmarksNote);
-            }
-        }
+        QJsonArray bookmarkList = createBookmarks(jsonObject);
 
         pSender->sendTextMessage(flashMessageJsonText(
                 tr("%n bookmark(s) created", "", bookmarkList.count())));
@@ -221,6 +184,51 @@ void WebSocketServerService::processMessage(const QString &message) {
     } else {
         pSender->sendTextMessage("Received: " + message);
     }
+}
+
+QJsonArray WebSocketServerService::createBookmarks(const QJsonObject &jsonObject) {
+    const QString bookmarksNoteName = getBookmarksNoteName();
+    Note bookmarksNote = Note::fetchByName(bookmarksNoteName);
+    bool applyTag = false;
+
+    // create new bookmarks note if it doesn't exist
+    if (!bookmarksNote.isFetched()) {
+        bookmarksNote.setName(bookmarksNoteName);
+        bookmarksNote.setNoteText(Note::createNoteHeader(bookmarksNoteName));
+        applyTag = true;
+    }
+
+    QString noteText = bookmarksNote.getNoteText().trimmed();
+    const QJsonArray bookmarkList = jsonObject.value("data").toArray();
+
+    Q_FOREACH(QJsonValue bookmarkObject, bookmarkList) {
+            const QJsonObject data = bookmarkObject.toObject();
+            const QString name = data.value("name").toString().trimmed().remove(
+                    "[").remove("]");
+            const QString url = data.value("url").toString().trimmed();
+            const QString description = data.value(
+                    "description").toString().trimmed();
+
+            noteText += "\n- [" + name + "](" + url + ")";
+
+            if (!description.isEmpty()) {
+                noteText += " " + description;
+            }
+        }
+
+    noteText += "\n";
+    bookmarksNote.setNoteText(noteText);
+    bookmarksNote.store();
+    bookmarksNote.storeNoteTextFileToDisk();
+
+    if (applyTag) {
+        auto tag = Tag::fetchByName(getBookmarksTag());
+        if (tag.isFetched()) {
+            tag.linkToNote(bookmarksNote);
+        }
+    }
+
+    return bookmarkList;
 }
 
 QString WebSocketServerService::getBookmarksJsonText() const {

@@ -45,6 +45,8 @@ public:
 
     QString flashMessageJsonText(QString message);
 
+    static QJsonArray createBookmarks(const QJsonObject &jsonObject);
+
 private slots:
     void onNewConnection();
     void processMessage(const QString &message);

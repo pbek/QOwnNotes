@@ -7,13 +7,64 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>300</height>
+    <height>113</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Import bookmarks</string>
   </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="1" column="2">
+    <spacer name="horizontalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>101</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="0">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>101</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="1">
+    <widget class="QPushButton" name="importButton">
+     <property name="text">
+      <string>Import bookmarks</string>
+     </property>
+     <property name="icon">
+      <iconset theme="document-import" resource="../breeze-qownnotes.qrc">
+       <normaloff>:/icons/breeze-qownnotes/16x16/document-import.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-import.svg</iconset>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="3">
+    <widget class="QProgressBar" name="progressBar">
+     <property name="value">
+      <number>0</number>
+     </property>
+     <property name="format">
+      <string>%v of %m bookmark(s) imported</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="../breeze-qownnotes.qrc"/>
+ </resources>
  <connections/>
 </ui>
