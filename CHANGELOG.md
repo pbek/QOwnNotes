@@ -7,6 +7,9 @@
     - you can now also **search** for the **description of bookmarks**
     - a **loading progressbar** will now be shown while bookmarks are loaded
       when the **note folder is switched** by the user 
+- there now is a software repository for **Fedora 30** (for [#1199](https://github.com/pbek/QOwnNotes/issues/1199))
+    - please visit the [Fedora installation page](https://www.qownnotes.org/installation#Fedora)
+      for instructions
 
 ## 19.5.0
 - you are now able to **import bookmarks** from [Nextcloud bookmarks](https://github.com/nextcloud/bookmarks)
