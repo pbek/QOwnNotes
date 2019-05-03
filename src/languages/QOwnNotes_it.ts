@@ -3704,7 +3704,7 @@ Si desidera procedere con l'installazione comunque?</translation>
     <message>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="60"/>
       <source>%v of %m bookmark(s) imported</source>
-      <translation type="unfinished">%v of %m bookmark(s) imported</translation>
+      <translation>%v di %m segnalibri importati</translation>
     </message>
   </context>
   <context>

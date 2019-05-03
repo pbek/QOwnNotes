@@ -1469,180 +1469,180 @@
     <message>
       <location filename="../mainwindow.ui" line="2013"/>
       <source>Cycle text case</source>
-      <translation type="unfinished">Cycle text case</translation>
+      <translation>Caz de text ciclu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2086"/>
       <source>Show note list under tag panel</source>
-      <translation type="unfinished">Show note list under tag panel</translation>
+      <translation>Arată lista de notă în panoul de tag-ul</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2104"/>
       <source>Find notes in all tags / subfolders</source>
-      <translation type="unfinished">Find notes in all tags / subfolders</translation>
+      <translation>Găsi notele în toate Tag-urile / subfoldere</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2125"/>
       <source>Import notes from text files</source>
-      <translation type="unfinished">Import notes from text files</translation>
+      <translation>Note de import din fisiere text</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2134"/>
       <source>Manage orphaned image files</source>
-      <translation type="unfinished">Manage orphaned image files</translation>
+      <translation>Gestionaţi fişiere imagine orfani</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2146"/>
       <location filename="../mainwindow.ui" line="2149"/>
       <source>Open the Telegram group</source>
-      <translation type="unfinished">Open the Telegram group</translation>
+      <translation>Deschideþi grupul telegrama</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2176"/>
       <source>Unlock panels</source>
-      <translation type="unfinished">Unlock panels</translation>
+      <translation>Debloca panouri</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2185"/>
       <location filename="../mainwindow.cpp" line="10078"/>
       <source>Remove current workspace</source>
-      <translation type="unfinished">Remove current workspace</translation>
+      <translation>Elimina spațiu de lucru curent</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2194"/>
       <source>Add new workspace</source>
-      <translation type="unfinished">Add new workspace</translation>
+      <translation>Adauga spațiu de lucru nou</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2203"/>
       <source>Rename current workspace</source>
-      <translation type="unfinished">Rename current workspace</translation>
+      <translation>Redenumiţi spațiu de lucru curent</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2212"/>
       <source>Switch to previous workspace</source>
-      <translation type="unfinished">Switch to previous workspace</translation>
+      <translation>Comutați la spațiul de lucru anterioare</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2220"/>
       <source>Show all panels</source>
-      <translation type="unfinished">Show all panels</translation>
+      <translation>Arată toate panourile</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2229"/>
       <source>Find action</source>
-      <translation type="unfinished">Find action</translation>
+      <translation>Găsi acţiune</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2232"/>
       <location filename="../mainwindow.ui" line="2235"/>
       <source>Find an action from the menu</source>
-      <translation type="unfinished">Find an action from the menu</translation>
+      <translation>Găsi o acţiune din meniul</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2247"/>
       <source>Insert table</source>
-      <translation type="unfinished">Insert table</translation>
+      <translation>Inserare tabel</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2259"/>
       <location filename="../mainwindow.cpp" line="5758"/>
       <source>Insert block &amp;quote</source>
-      <translation type="unfinished">Insert block &amp;quote</translation>
+      <translation>Inserare bloc &amp; citat</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2267"/>
       <location filename="../mainwindow.ui" line="2270"/>
       <source>Search selected text on the web</source>
-      <translation type="unfinished">Search selected text on the web</translation>
+      <translation>Căutare text selectat pe web</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2278"/>
       <source>Delete line</source>
-      <translation type="unfinished">Delete line</translation>
+      <translation>Şterge linia</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2286"/>
       <source>Delete word</source>
-      <translation type="unfinished">Delete word</translation>
+      <translation>Şterge cuvântul</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2294"/>
       <source>Copy note headline</source>
-      <translation type="unfinished">Copy note headline</translation>
+      <translation>Titlul de notă copie</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2306"/>
       <location filename="../mainwindow.cpp" line="9062"/>
       <source>Open note in different window</source>
-      <translation type="unfinished">Open note in different window</translation>
+      <translation>Notă deschisă în fereastra diferite</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2318"/>
       <source>Save modified notes</source>
-      <translation type="unfinished">Save modified notes</translation>
+      <translation>Memora note modificate</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2329"/>
       <source>Ascending</source>
-      <translation type="unfinished">Ascending</translation>
+      <translation>Ascendent</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2337"/>
       <source>Descending</source>
-      <translation type="unfinished">Descending</translation>
+      <translation>Descendentă</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2346"/>
       <location filename="../mainwindow.cpp" line="9070"/>
       <source>Show note git versions</source>
-      <translation type="unfinished">Show note git versions</translation>
+      <translation>Arată versiunile de git notă</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2355"/>
       <source>Find scripts in script repository</source>
-      <translation type="unfinished">Find scripts in script repository</translation>
+      <translation>Găsi script-uri în script-ul repozitoriu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2367"/>
       <source>Script settings</source>
-      <translation type="unfinished">Script settings</translation>
+      <translation>Setãri script</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2376"/>
       <source>Insert attachment</source>
-      <translation type="unfinished">Insert attachment</translation>
+      <translation>Inserare ataşament</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2403"/>
       <source>Check for script updates</source>
-      <translation type="unfinished">Check for script updates</translation>
+      <translation>Verificaţi pentru actualizări script</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2412"/>
       <source>Show local trash</source>
-      <translation type="unfinished">Show local trash</translation>
+      <translation>Arată coşul de gunoi locale</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2417"/>
       <location filename="../mainwindow.ui" line="2420"/>
       <source>Jump to note edit panel</source>
-      <translation type="unfinished">Jump to note edit panel</translation>
+      <translation>Salt la nota panoul de editare</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2432"/>
       <source>Manage orphaned attachments</source>
-      <translation type="unfinished">Manage orphaned attachments</translation>
+      <translation>Gestiona atasamente orfani</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2437"/>
       <source>Jump to note subfolder panel</source>
-      <translation type="unfinished">Jump to note subfolder panel</translation>
+      <translation>Sari pentru a nota subfolder panou</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2445"/>
       <source>Jump to tags panel</source>
-      <translation type="unfinished">Jump to tags panel</translation>
+      <translation>Salt la panoul de Tag-uri</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2453"/>
@@ -1905,27 +1905,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="4046"/>
       <source>Removed note subfolder: %1</source>
-      <translation type="unfinished">Removed note subfolder: %1</translation>
+      <translation>Eliminat subfolder notă: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4065"/>
       <source>Remove selected tags</source>
-      <translation type="unfinished">Remove selected tags</translation>
+      <translation>Eliminaţi tag-uri selectate</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4066"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
-      <translation type="unfinished">
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
+      <translation>
+        <numerusform>Elimina &lt;strong&gt;%n&lt;/strong&gt; selectat tag? Notele nu vor fi eliminate în acest proces.</numerusform>
+        <numerusform>Elimina &lt;strong&gt;%n&lt;/strong&gt; selectat tags? Notele nu vor fi eliminate în acest proces.</numerusform>
+        <numerusform>Elimina &lt;strong&gt;%n&lt;/strong&gt; selectat tags? Notele nu vor fi eliminate în acest proces.</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4120"/>
       <location filename="../mainwindow.cpp" line="8286"/>
       <source>Move selected notes</source>
-      <translation type="unfinished">Move selected notes</translation>
+      <translation>Mutaţi notele selectate</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4121"/>
@@ -1940,7 +1940,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="4213"/>
       <location filename="../mainwindow.cpp" line="8370"/>
       <source>Copy selected notes</source>
-      <translation type="unfinished">Copy selected notes</translation>
+      <translation>Copie selectat note</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4214"/>
@@ -2158,7 +2158,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="7844"/>
       <source>Rename tag</source>
-      <translation type="unfinished">Rename tag</translation>
+      <translation>Redenumiţi tag-ul</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7845"/>
@@ -2358,7 +2358,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="4320"/>
       <source>Remove tag from selected notes</source>
-      <translation type="unfinished">Remove tag from selected notes</translation>
+      <translation>Elimina tag-ul de la note selectate</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4321"/>
@@ -2381,12 +2381,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="4420"/>
       <source>Current notes folder: </source>
-      <translation type="unfinished">Current notes folder: </translation>
+      <translation>Folderul curent note: </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4422"/>
       <source>Set the notes folder. Current notes folder: </source>
-      <translation type="unfinished">Set the notes folder. Current notes folder: </translation>
+      <translation>Amplasat în folderul note. Folderul curent note: </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4623"/>
@@ -2674,202 +2674,202 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="7836"/>
       <source>&amp;Add tag</source>
-      <translation type="unfinished">&amp;Add tag</translation>
+      <translation>&amp;Adăugaţi tag-ul</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7885"/>
       <source>Tag could not be created!</source>
-      <translation type="unfinished">Tag could not be created!</translation>
+      <translation>Eticheta nu a putut fi creată!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8070"/>
       <source>Move to this tag</source>
-      <translation type="unfinished">Move to this tag</translation>
+      <translation>Mutați în această zi</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8120"/>
       <source>Tag this</source>
-      <translation type="unfinished">Tag this</translation>
+      <translation>Zi asta</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8153"/>
       <source>Cannot move tag '%1' to this tag</source>
-      <translation type="unfinished">Cannot move tag '%1' to this tag</translation>
+      <translation>Nu se poate muta eticheta "%1" la această etichetă</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8169"/>
       <source>Moved tag '%1' to new tag</source>
-      <translation type="unfinished">Moved tag '%1' to new tag</translation>
+      <translation>Eticheta mutată '%1' la eticheta nouă</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7203"/>
       <source>show all notes tagged with '%1' (%2)</source>
-      <translation type="unfinished">show all notes tagged with '%1' (%2)</translation>
+      <translation>arată toate notele etichetate cu '%1' (%2)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7847"/>
       <source>&amp;Remove tags</source>
-      <translation type="unfinished">&amp;Remove tags</translation>
+      <translation>&amp;Elimina etichetele</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4835"/>
       <source>No selected todo lists!</source>
-      <translation type="unfinished">No selected todo lists!</translation>
+      <translation>Nicio listă todo selectate!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="645"/>
       <source>Subfolders</source>
-      <translation type="unfinished">Subfolders</translation>
+      <translation>Subfolderele</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="656"/>
       <source>Tags</source>
-      <translation type="unfinished">Tags</translation>
+      <translation>Tag-uri</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="665"/>
       <source>Note search</source>
-      <translation type="unfinished">Note search</translation>
+      <translation>Notă Căutare</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="683"/>
       <source>Note list</source>
-      <translation type="unfinished">Note list</translation>
+      <translation>Nota lista</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="707"/>
       <source>Note edit</source>
-      <translation type="unfinished">Note edit</translation>
+      <translation>Notă editare</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="718"/>
       <source>Note tags</source>
-      <translation type="unfinished">Note tags</translation>
+      <translation>Tag-uri Notă</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="729"/>
       <source>Note preview</source>
-      <translation type="unfinished">Note preview</translation>
+      <translation>Notă previzualizare</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="736"/>
       <source>Log</source>
-      <translation type="unfinished">Log</translation>
+      <translation>Jurnal</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="745"/>
       <source>Scripting</source>
-      <translation type="unfinished">Scripting</translation>
+      <translation>Scripting</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="992"/>
       <source>formatting toolbar</source>
-      <translation type="unfinished">formatting toolbar</translation>
+      <translation>bara de instrumente formatare</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1001"/>
       <source>inserting toolbar</source>
-      <translation type="unfinished">inserting toolbar</translation>
+      <translation>introducerea barei de instrumente</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1008"/>
       <source>encryption toolbar</source>
-      <translation type="unfinished">encryption toolbar</translation>
+      <translation>instrumente de criptare</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1015"/>
       <source>window toolbar</source>
-      <translation type="unfinished">window toolbar</translation>
+      <translation>fereastra instrumente</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1020"/>
       <source>custom action toolbar</source>
-      <translation type="unfinished">custom action toolbar</translation>
+      <translation>acțiune particularizată de instrumente</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1040"/>
       <source>Workspace selector</source>
-      <translation type="unfinished">Workspace selector</translation>
+      <translation>Selectorul de spațiu de lucru</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1179"/>
       <source>Show %1 panel</source>
-      <translation type="unfinished">Show %1 panel</translation>
+      <translation>Panoul de %1 arată</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1222"/>
       <source>Show %1</source>
-      <translation type="unfinished">Show %1</translation>
+      <translation>Arată %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2042"/>
       <source>show notes in folder '%1' (%2)</source>
-      <translation type="unfinished">show notes in folder '%1' (%2)</translation>
+      <translation>arată note în folderul '%1' (%2)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2082"/>
       <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
-      <translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</translation>
+      <translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Ultima modificare: %2</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2087"/>
       <source>&lt;br /&gt;path: %1</source>
-      <translation type="unfinished">&lt;br /&gt;path: %1</translation>
+      <translation>calea de &lt;br /&gt;: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2248"/>
       <source>Toolbar could not be loaded without name</source>
-      <translation type="unfinished">Toolbar could not be loaded without name</translation>
+      <translation>Bara de instrumente nu a putut fi încărcat fără nume</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2529"/>
       <source>Overwriting external changes of: %1</source>
-      <translation type="unfinished">Overwriting external changes of: %1</translation>
+      <translation>Suprascrierea modificărilor externe de: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2551"/>
       <source>Loading external changes from: %1</source>
-      <translation type="unfinished">Loading external changes from: %1</translation>
+      <translation>Încărcare externe modificări de la: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2586"/>
       <location filename="../mainwindow.cpp" line="5208"/>
       <source>Current note could not be stored to disk</source>
-      <translation type="unfinished">Current note could not be stored to disk</translation>
+      <translation>Curent Notă Nu ar putea fi stocate disc</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2750"/>
       <source>Read-only</source>
-      <translation type="unfinished">Read-only</translation>
+      <translation>Doar-în-citire</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2751"/>
       <source>Note editing is disabled, click to enable</source>
-      <translation type="unfinished">Note editing is disabled, click to enable</translation>
+      <translation>Notă de editare este dezactivat, click pentru a activa</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2770"/>
       <source>Line numbers</source>
-      <translation type="unfinished">Line numbers</translation>
+      <translation>Numerele de linie</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2780"/>
       <source>Click here to see what has changed and to be able to update to the latest version</source>
-      <translation type="unfinished">Click here to see what has changed and to be able to update to the latest version</translation>
+      <translation>Click aici pentru a vedea ce s-a schimbat şi să fie în măsură să actualizeze la cea mai recentă versiune</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4304"/>
       <source>%n note(s) were tagged with "%2"</source>
-      <translation type="unfinished">
-        <numerusform>%n note(s) were tagged with "%2"</numerusform>
-        <numerusform>%n note(s) were tagged with "%2"</numerusform>
-        <numerusform>%n note(s) were tagged with "%2"</numerusform>
+      <translation>
+        <numerusform>%n note(s) au fost etichetate cu "%2"</numerusform>
+        <numerusform>%n note(s) au fost etichetate cu "%2"</numerusform>
+        <numerusform>%n note(s) au fost etichetate cu "%2"</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5269"/>
       <source>Note headline</source>
-      <translation type="unfinished">Note headline</translation>
+      <translation>Atingeți titlul</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5757"/>
@@ -2880,39 +2880,39 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="6693"/>
       <source>Downloading images finished</source>
-      <translation type="unfinished">Downloading images finished</translation>
+      <translation>Descărcare imagini terminat</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6835"/>
       <source>Increased font size to %1 pt</source>
-      <translation type="unfinished">Increased font size to %1 pt</translation>
+      <translation>Mãrime crescut la %1 pt</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6852"/>
       <source>Decreased font size to %1 pt</source>
-      <translation type="unfinished">Decreased font size to %1 pt</translation>
+      <translation>Mãrime a scăzut la %1 pt</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4813"/>
       <location filename="../mainwindow.cpp" line="4839"/>
       <location filename="../mainwindow.cpp" line="9148"/>
       <source>Open &amp;settings</source>
-      <translation type="unfinished">Open &amp;settings</translation>
+      <translation>Deschidere &amp;setările</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1536"/>
       <source>leave</source>
-      <translation type="unfinished">leave</translation>
+      <translation>concediu</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1539"/>
       <source>leave distraction free mode</source>
-      <translation type="unfinished">leave distraction free mode</translation>
+      <translation>lasă modul liber de distragere a atenţiei</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5999"/>
       <source>Select image to insert</source>
-      <translation type="unfinished">Select image to insert</translation>
+      <translation>Selectaþi imagine a insera</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6131"/>
@@ -3173,63 +3173,63 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="1037"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>&amp;Revocare</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1082"/>
       <source>Done with loading note versions</source>
-      <translation type="unfinished">Done with loading note versions</translation>
+      <translation>Făcut cu nota versiuni de încărcare</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1121"/>
       <source>No versions found</source>
-      <translation type="unfinished">No versions found</translation>
+      <translation>Nici versiunile găsite</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1122"/>
       <source>There are no versions for this note or the note wasn't found on the server.</source>
-      <translation type="unfinished">There are no versions for this note or the note wasn't found on the server.</translation>
+      <translation>Există versiuni pentru această notă sau nota nu a fost gasit pe server.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1143"/>
       <source>Done with loading trashed notes</source>
-      <translation type="unfinished">Done with loading trashed notes</translation>
+      <translation>Cu trashed note de încărcare</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1184"/>
       <source>No trashed notes</source>
-      <translation type="unfinished">No trashed notes</translation>
+      <translation>Nu note trashed</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1185"/>
       <source>No trashed notes were found on the server.</source>
-      <translation type="unfinished">No trashed notes were found on the server.</translation>
+      <translation>Nu note trashed s-au găsit pe server.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1208"/>
       <location filename="../services/owncloudservice.cpp" line="1234"/>
       <source>Error while loading todo lists!</source>
-      <translation type="unfinished">Error while loading todo lists!</translation>
+      <translation>Eroare în timpul încărcării liste de todo!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1209"/>
       <source>Your CalDAV server didn't reply anything!</source>
-      <translation type="unfinished">Your CalDAV server didn't reply anything!</translation>
+      <translation>Server-ul CalDAV nu raspunde nimic!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1235"/>
       <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation type="unfinished">Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</translation>
+      <translation>Mesaj de eroare de la server-ul CalDAV: &lt;strong&gt;%1&lt;/strong&gt;</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1881"/>
       <source>No bookmarks</source>
-      <translation type="unfinished">No bookmarks</translation>
+      <translation>Nu există marcaje</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1882"/>
       <source>No bookmarks were found on the server.</source>
-      <translation type="unfinished">No bookmarks were found on the server.</translation>
+      <translation>Nu au fost găsite semne de carte pe server.</translation>
     </message>
   </context>
   <context>
@@ -3237,27 +3237,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/passworddialog.ui" line="14"/>
       <source>Please enter your password</source>
-      <translation type="unfinished">Please enter your password</translation>
+      <translation>Introduceți parola</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="24"/>
       <source>Enter your password:</source>
-      <translation type="unfinished">Enter your password:</translation>
+      <translation>Introduceți parola:</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="34"/>
       <source>Password</source>
-      <translation type="unfinished">Password</translation>
+      <translation>Parolă</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="44"/>
       <source>Re-enter password</source>
-      <translation type="unfinished">Re-enter password</translation>
+      <translation>Reintroduceți parola</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="54"/>
       <source>Passwords don't match!</source>
-      <translation type="unfinished">Passwords don't match!</translation>
+      <translation>Parolele nu se potrivesc!</translation>
     </message>
   </context>
   <context>
@@ -3265,32 +3265,32 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../entities/notefolder.cpp" line="464"/>
       <source>default</source>
-      <translation type="unfinished">default</translation>
+      <translation>lipsă</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="1054"/>
       <source>Could not store note file: %1 - Error message: %2</source>
-      <translation type="unfinished">Could not store note file: %1 - Error message: %2</translation>
+      <translation>Fișierul notei nu a putut fi stocat: %1 - Mesaj de eroare: %2</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="1125"/>
       <source>Renamed note-file was removed: %1</source>
-      <translation type="unfinished">Renamed note-file was removed: %1</translation>
+      <translation>Fișierul redenumit a fost eliminat: %1</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="1133"/>
       <source>Could not remove renamed note-file: %1 - Error message: %2</source>
-      <translation type="unfinished">Could not remove renamed note-file: %1 - Error message: %2</translation>
+      <translation>Nu s-a putut elimina fișierul de note redenumit: %1 - Mesaj de eroare: %2</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="1954"/>
       <source>Could not read image file: %1</source>
-      <translation type="unfinished">Could not read image file: %1</translation>
+      <translation>Fișierul imagine nu a putut fi citit: %1</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="2474"/>
       <source>Note filename changed</source>
-      <translation type="unfinished">Note filename changed</translation>
+      <translation>Nota nume fișier modificată</translation>
     </message>
     <message numerus="yes">
       <location filename="../entities/note.cpp" line="2475"/>
@@ -3314,32 +3314,32 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../helpers/toolbarcontainer.cpp" line="37"/>
       <location filename="../helpers/toolbarcontainer.cpp" line="112"/>
       <source>Unknown action %1</source>
-      <translation type="unfinished">Unknown action %1</translation>
+      <translation>Acţiune necunoscută %1</translation>
     </message>
     <message>
       <location filename="../helpers/toolbarcontainer.cpp" line="94"/>
       <source>Workspace selector</source>
-      <translation type="unfinished">Workspace selector</translation>
+      <translation>Selectorul de spațiu de lucru</translation>
     </message>
     <message>
       <location filename="../utils/gui.cpp" line="246"/>
       <source>Don't ask again!</source>
-      <translation type="unfinished">Don't ask again!</translation>
+      <translation>Nu se întreabă din nou!</translation>
     </message>
     <message>
       <location filename="../utils/gui.cpp" line="246"/>
       <source>Don't show again!</source>
-      <translation type="unfinished">Don't show again!</translation>
+      <translation>Nu arată din nou!</translation>
     </message>
     <message>
       <location filename="../utils/git.cpp" line="73"/>
       <source>Command failed!</source>
-      <translation type="unfinished">Command failed!</translation>
+      <translation>Comanda nu a reuşit!</translation>
     </message>
     <message>
       <location filename="../utils/git.cpp" line="74"/>
       <source>The command &lt;code&gt;%1&lt;/code&gt; failed!</source>
-      <translation type="unfinished">The command &lt;code&gt;%1&lt;/code&gt; failed!</translation>
+      <translation>Comandă &lt;code&gt;%1&lt;/code&gt; nu a reușit!</translation>
     </message>
   </context>
   <context>
@@ -3352,7 +3352,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="398"/>
       <source>Note editing is currently disabled, please allow it again in the &lt;i&gt;Note-menu&lt;/i&gt;.</source>
-      <translation type="unfinished">Note editing is currently disabled, please allow it again in the &lt;i&gt;Note-menu&lt;/i&gt;.</translation>
+      <translation>Notă în prezent este dezactivată editarea, vă rugăm să lăsaţi-l, din nou, în &lt;i&gt;nota-meniu&lt;/i&gt;.</translation>
     </message>
   </context>
   <context>
@@ -3365,62 +3365,62 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="52"/>
       <source>Find:</source>
-      <translation type="unfinished">Find:</translation>
+      <translation>Caută:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="32"/>
       <source>replace text</source>
-      <translation type="unfinished">replace text</translation>
+      <translation>înlocuiți textul</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="79"/>
       <source>find in text</source>
-      <translation type="unfinished">find in text</translation>
+      <translation>găsi în text</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="86"/>
       <source>search forward</source>
-      <translation type="unfinished">search forward</translation>
+      <translation>căutați înainte</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="103"/>
       <source>search backward</source>
-      <translation type="unfinished">search backward</translation>
+      <translation>căutați înapoi</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="120"/>
       <source>replace with</source>
-      <translation type="unfinished">replace with</translation>
+      <translation>înlocuiți cu</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="127"/>
       <source>Replace:</source>
-      <translation type="unfinished">Replace:</translation>
+      <translation>Înlocuiți:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="156"/>
       <source>Plain text</source>
-      <translation type="unfinished">Plain text</translation>
+      <translation>Text simplu</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="161"/>
       <source>Whole words</source>
-      <translation type="unfinished">Whole words</translation>
+      <translation>Cuvinte întregi</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="166"/>
       <source>Regular expression</source>
-      <translation type="unfinished">Regular expression</translation>
+      <translation>Expresie regulată</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="187"/>
       <source>Replace</source>
-      <translation type="unfinished">Replace</translation>
+      <translation>Înlocuiți</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="197"/>
       <source>Replace All</source>
-      <translation type="unfinished">Replace All</translation>
+      <translation>Înlocuiește-le pe toate</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="210"/>
@@ -3430,7 +3430,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="220"/>
       <source>Match case sensitive</source>
-      <translation type="unfinished">Match case sensitive</translation>
+      <translation>Se potrivesc cu litere mari</translation>
     </message>
   </context>
   <context>
@@ -3438,12 +3438,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="32"/>
       <source>replace text</source>
-      <translation type="unfinished">replace text</translation>
+      <translation>înlocuiți textul</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="52"/>
       <source>Find:</source>
-      <translation type="unfinished">Find:</translation>
+      <translation>Caută:</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="62"/>
@@ -3687,27 +3687,27 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="466"/>
       <source>Please don't forget to update your installation of QOwnNotes to make this script work!</source>
-      <translation type="unfinished">Please don't forget to update your installation of QOwnNotes to make this script work!</translation>
+      <translation>Vă rugăm să nu uitați să vă actualizați instalarea QOwnNotes pentru a face acest script să funcționeze!</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="533"/>
       <source>Install successful</source>
-      <translation type="unfinished">Install successful</translation>
+      <translation>Instalați cu succes</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="534"/>
       <source>The script was successfully installed!</source>
-      <translation type="unfinished">The script was successfully installed!</translation>
+      <translation>Scriptul a fost instalat cu succes!</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="541"/>
       <source>Download failed</source>
-      <translation type="unfinished">Download failed</translation>
+      <translation>Descărcarea a eșuat</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="542"/>
       <source>The script could not be downloaded!</source>
-      <translation type="unfinished">The script could not be downloaded!</translation>
+      <translation>Scriptul nu a putut fi descărcat!</translation>
     </message>
   </context>
   <context>
@@ -3715,12 +3715,12 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../widgets/scriptsettingwidget.ui" line="92"/>
       <source>The setting name</source>
-      <translation type="unfinished">The setting name</translation>
+      <translation>Numele setării</translation>
     </message>
     <message>
       <location filename="../widgets/scriptsettingwidget.cpp" line="193"/>
       <source>Please select a file</source>
-      <translation type="unfinished">Please select a file</translation>
+      <translation>Selectați un fișier</translation>
     </message>
   </context>
   <context>
@@ -3728,7 +3728,7 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../services/scriptingservice.cpp" line="243"/>
       <source>file doesn't exist</source>
-      <translation type="unfinished">file doesn't exist</translation>
+      <translation>fișierul nu există</translation>
     </message>
   </context>
   <context>
@@ -3737,7 +3737,7 @@ Do you want to install it anyway?</translation>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="14"/>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="46"/>
       <source>Import bookmarks</source>
-      <translation type="unfinished">Import bookmarks</translation>
+      <translation>Importă marcaje</translation>
     </message>
     <message>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="60"/>
@@ -3751,87 +3751,87 @@ Do you want to install it anyway?</translation>
       <location filename="../dialogs/settingsdialog.ui" line="26"/>
       <location filename="../dialogs/settingsdialog.ui" line="3763"/>
       <source>Settings</source>
-      <translation type="unfinished">Settings</translation>
+      <translation>Setările</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="120"/>
       <source>Note folders</source>
-      <translation type="unfinished">Note folders</translation>
+      <translation>Notă dosare</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="419"/>
       <source>Your note folders</source>
-      <translation type="unfinished">Your note folders</translation>
+      <translation>Dosarele pentru note</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="495"/>
       <source>&amp;Add folder</source>
-      <translation type="unfinished">&amp;Add folder</translation>
+      <translation>&amp;Adaugă dosar</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="519"/>
       <source>&amp;Remove folder</source>
-      <translation type="unfinished">&amp;Remove folder</translation>
+      <translation>&amp;Eliminați dosarul</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="733"/>
       <source>This name will be viewed in all the menus.</source>
-      <translation type="unfinished">This name will be viewed in all the menus.</translation>
+      <translation>Acest nume va fi vizualizat în toate meniurile.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="575"/>
       <source>Set the ownCloud path where the note folder path will be synced to on your ownCloud server.</source>
-      <translation type="unfinished">Set the ownCloud path where the note folder path will be synced to on your ownCloud server.</translation>
+      <translation>Setați calea proprieCloud unde calea directorului de note va fi sincronizată pe serverul ownCloud.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="749"/>
       <source>Use as active note folder</source>
-      <translation type="unfinished">Use as active note folder</translation>
+      <translation>Utiliza ca active nota dosar</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="852"/>
       <source>Your ownCloud server</source>
-      <translation type="unfinished">Your ownCloud server</translation>
+      <translation>Serverul de ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="976"/>
       <source>ownCloud server url:</source>
-      <translation type="unfinished">ownCloud server url:</translation>
+      <translation>ownCloud Url-ul serverului:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="998"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;vă rugăm să introduceţi adresa URL a serverului de ownCloud, de exemplu: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1036"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;vă rugăm să introduceţi numele de utilizator pe ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1071"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;vă rugăm să introduceţi parola pentru numele de utilizator.&lt;br/&gt;în prezent parola vor fi stocate criptat cu alte setări, dar nu este foarte sigur.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1149"/>
       <source>connection to web server</source>
-      <translation type="unfinished">connection to web server</translation>
+      <translation>conexiunea la web server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1166"/>
       <source>ownCloud server detected</source>
-      <translation type="unfinished">ownCloud server detected</translation>
+      <translation>ownCloud server detectate</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1200"/>
       <source>connection to QOwnNotesAPI</source>
-      <translation type="unfinished">connection to QOwnNotesAPI</translation>
+      <translation>conexiune QOwnNotesAPI</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1183"/>
       <source>username and password correct</source>
-      <translation type="unfinished">username and password correct</translation>
+      <translation>numele de utilizator şi parola corecta</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1139"/>
@@ -3842,57 +3842,57 @@ Do you want to install it anyway?</translation>
       <location filename="../dialogs/settingsdialog.ui" line="1224"/>
       <location filename="../dialogs/settingsdialog.ui" line="1241"/>
       <source>unknown</source>
-      <translation type="unfinished">unknown</translation>
+      <translation>necunoscut</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1099"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;click aici pentru a testa conexiunea la serverul de ownCloud.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1217"/>
       <source>versions app enabled on server</source>
-      <translation type="unfinished">versions app enabled on server</translation>
+      <translation>versiunile app activată pe server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1234"/>
       <source>trash app enabled on server</source>
-      <translation type="unfinished">trash app enabled on server</translation>
+      <translation>app de gunoi activată pe server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1251"/>
       <source>notes path found on server</source>
-      <translation type="unfinished">notes path found on server</translation>
+      <translation>calea de note găsite pe server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="911"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;deschide configurare a App ownCloud serverului &lt;span style=" font-weight:600;"&gt;&lt;/span&gt; a şterge dosar de filme în webbrowser dumneavoastră să instalaţi sau actualizaţi QOwnNotesAPI şi pentru a permite core apps &lt;span style=" font-weight:600;"&gt;versiuni&lt;/span&gt; şi &lt;span style=" font-weight:600;"&gt;&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="715"/>
       <source>path</source>
-      <translation type="unfinished">path</translation>
+      <translation>calea</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="551"/>
       <source>Click here to select your local note path</source>
-      <translation type="unfinished">Click here to select your local note path</translation>
+      <translation>Click aici pentru a selecta calea ta nota locale</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="628"/>
       <source>Click here to select your remote note path on your ownCloud server</source>
-      <translation type="unfinished">Click here to select your remote note path on your ownCloud server</translation>
+      <translation>Click aici pentru a selecta calea ta de la distanţă notă pe serverul ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="681"/>
       <source>Click here to use the selected folder from your server as note folder</source>
-      <translation type="unfinished">Click here to use the selected folder from your server as note folder</translation>
+      <translation>Click aici pentru a utiliza folderul selectat la server-ul dvs ca nota dosar</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="879"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;trebuie, de asemenea, să aibă două ownCloud core apps &lt;span style=" font-weight:600;"&gt;versiuni&lt;/span&gt; şi &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; activat pe serverul de ownCloud (care ar trebui să fie implicit).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="892"/>
@@ -3902,57 +3902,57 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="958"/>
       <source>Error Message</source>
-      <translation type="unfinished">Error Message</translation>
+      <translation>Mesaj de eroare</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="144"/>
       <source>Network</source>
-      <translation type="unfinished">Network</translation>
+      <translation>Reţea</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1282"/>
       <source>Proxy Settings</source>
-      <translation type="unfinished">Proxy Settings</translation>
+      <translation>Setări proxy</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1288"/>
       <source>No Proxy</source>
-      <translation type="unfinished">No Proxy</translation>
+      <translation>Nu există proxy</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1298"/>
       <source>Use system proxy</source>
-      <translation type="unfinished">Use system proxy</translation>
+      <translation>Utilizați proxy-ul de sistem</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1305"/>
       <source>Specify proxy manually as</source>
-      <translation type="unfinished">Specify proxy manually as</translation>
+      <translation>Specificați proxy manual ca</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1330"/>
       <source>Host</source>
-      <translation type="unfinished">Host</translation>
+      <translation>Gazdă</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1381"/>
       <source>Proxy server requires authentication</source>
-      <translation type="unfinished">Proxy server requires authentication</translation>
+      <translation>Serverul proxy necesită autentificare</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1438"/>
       <source>SSL Settings</source>
-      <translation type="unfinished">SSL Settings</translation>
+      <translation>Setări SSL</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1444"/>
       <source>Ignore SSL errors</source>
-      <translation type="unfinished">Ignore SSL errors</translation>
+      <translation>Ignorați erorile SSL</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="156"/>
       <source>Todo</source>
-      <translation type="unfinished">Todo</translation>
+      <translation>A face</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1663"/>
@@ -4208,139 +4208,139 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3808"/>
       <source>Reinitialize Database</source>
-      <translation type="unfinished">Reinitialize Database</translation>
+      <translation>Reinițializați baza de date</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3731"/>
       <source>Clear application data and exit</source>
-      <translation type="unfinished">Clear application data and exit</translation>
+      <translation>Curățați de cerere şi de ieşire</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3737"/>
       <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
-      <translation type="unfinished">This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</translation>
+      <translation>Acest buton vă permite să ștergeți toate setările, să eliminați baza de date locale todo și să părăsiți QOwnNotes.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3747"/>
       <location filename="../dialogs/settingsdialog.cpp" line="2004"/>
       <source>Clear app data and exit</source>
-      <translation type="unfinished">Clear app data and exit</translation>
+      <translation>Ștergeți datele din aplicație și ieșiți</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3526"/>
       <source>Update dialog</source>
-      <translation type="unfinished">Update dialog</translation>
+      <translation>Actualizați dialogul</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3606"/>
       <source>Default note file extension</source>
-      <translation type="unfinished">Default note file extension</translation>
+      <translation>Extensie extensie fișier prestabilit</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3691"/>
       <source>External editor</source>
-      <translation type="unfinished">External editor</translation>
+      <translation>Editor extern</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3704"/>
       <source>path to external editor, leave empty for default</source>
-      <translation type="unfinished">path to external editor, leave empty for default</translation>
+      <translation>calea către editorul extern, lăsați goale pentru implicit</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3714"/>
       <location filename="../dialogs/settingsdialog.ui" line="4742"/>
       <source>set external editor</source>
-      <translation type="unfinished">set external editor</translation>
+      <translation>setați editorul extern</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1467"/>
       <source>App metrics</source>
-      <translation type="unfinished">App metrics</translation>
+      <translation>App metrics</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1485"/>
       <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</source>
-      <translation type="unfinished">Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</translation>
+      <translation>Datele de utilizare anonime ajută la a decide ce părți din QOwnNotes să se îmbunătățească în continuare și să găsească și să remedieze erorile. Dezactivați-o numai dacă nu puteți trăi cu adevărat.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1517"/>
       <source>This data includes anonymous information about what features of the app are used.</source>
-      <translation type="unfinished">This data includes anonymous information about what features of the app are used.</translation>
+      <translation>Aceste date includ informații anonime despre ce caracteristici ale aplicației sunt utilizate.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1571"/>
       <source>App heartbeat</source>
-      <translation type="unfinished">App heartbeat</translation>
+      <translation>Aplicația bătăilor inimii</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1589"/>
       <source>A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</source>
-      <translation type="unfinished">A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</translation>
+      <translation>O solicitare de batai inima este trimisa periodic in timp ce QOwnNotes ruleaza. Faceți un dezvoltator fericit lăsându-l să știe că cineva utilizează QOwnNotes.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2183"/>
       <source>Italian</source>
-      <translation type="unfinished">Italian</translation>
+      <translation>Italiană</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="264"/>
       <source>Scripting</source>
-      <translation type="unfinished">Scripting</translation>
+      <translation>Scripting</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2791"/>
       <source>Your scripts</source>
-      <translation type="unfinished">Your scripts</translation>
+      <translation>Scripturile tale</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2875"/>
       <source>&amp;Remove script</source>
-      <translation type="unfinished">&amp;Remove script</translation>
+      <translation>&amp;Eliminați scenariul</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3154"/>
       <source>Click here to select your QML script</source>
-      <translation type="unfinished">Click here to select your QML script</translation>
+      <translation>Click here to select your QML script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="92"/>
       <source>Find setting</source>
-      <translation type="unfinished">Find setting</translation>
+      <translation>Găsiți setarea</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="179"/>
       <source>Layout</source>
-      <translation type="unfinished">Layout</translation>
+      <translation>Schemă</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="191"/>
       <source>Editor</source>
-      <translation type="unfinished">Editor</translation>
+      <translation>Editor</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="202"/>
       <source>Editor fonts &amp; colors</source>
-      <translation type="unfinished">Editor fonts &amp; colors</translation>
+      <translation>Fonturi editor &amp; culori</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="215"/>
       <source>Panels</source>
-      <translation type="unfinished">Panels</translation>
+      <translation>Panouri</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="239"/>
       <source>Toolbars</source>
-      <translation type="unfinished">Toolbars</translation>
+      <translation>Bare de instrumente</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="299"/>
       <source>Portable mode</source>
-      <translation type="unfinished">Portable mode</translation>
+      <translation>Modul portabil</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="311"/>
       <source>Git versioning</source>
-      <translation type="unfinished">Git versioning</translation>
+      <translation>Git versioning</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="323"/>
@@ -4649,41 +4649,41 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3500"/>
       <source>Automatically close the note folder database</source>
-      <translation type="unfinished">Automatically close the note folder database</translation>
+      <translation>Închideți automat baza de date a dosarelor note</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3548"/>
       <source>Search engine</source>
-      <translation type="unfinished">Search engine</translation>
+      <translation>Motor de căutare</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3570"/>
       <source>Message boxes</source>
-      <translation type="unfinished">Message boxes</translation>
+      <translation>Cutii de mesaje</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3576"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3567"/>
       <source>Reset message boxes</source>
-      <translation type="unfinished">Reset message boxes</translation>
+      <translation>Resetați casetele de mesaje</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3769"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3633"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3656"/>
       <source>Import settings</source>
-      <translation type="unfinished">Import settings</translation>
+      <translation>Setări de import</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3776"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3599"/>
       <source>Export settings</source>
-      <translation type="unfinished">Export settings</translation>
+      <translation>Exportați setările</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3915"/>
       <source>Open issue assistant</source>
-      <translation type="unfinished">Open issue assistant</translation>
+      <translation>Deschide asistentul de emisiune</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3926"/>

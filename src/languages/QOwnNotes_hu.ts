@@ -3705,7 +3705,7 @@ Mégis telepíti?</translation>
     <message>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="60"/>
       <source>%v of %m bookmark(s) imported</source>
-      <translation type="unfinished">%v of %m bookmark(s) imported</translation>
+      <translation>%v könyvjelző importálása %m-ből</translation>
     </message>
   </context>
   <context>

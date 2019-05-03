@@ -10,6 +10,8 @@
 - there now is a software repository for **Fedora 30** (for [#1199](https://github.com/pbek/QOwnNotes/issues/1199))
     - please visit the [Fedora installation page](https://www.qownnotes.org/installation#Fedora)
       for instructions
+- added more Spanish, Catalan, Romanian, Dutch, Hungarian, Norwegian, Danish,
+  Czech, Italian translation (thank you richarson, MGuerra, Fabijenna, mlocati)
 
 ## 19.5.0
 - you are now able to **import bookmarks** from [Nextcloud bookmarks](https://github.com/nextcloud/bookmarks)
