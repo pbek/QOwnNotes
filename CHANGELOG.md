@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 19.5.1
+- added feedback if the note folder was switched via the websocket to the websocket api
+- the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
+  was updated to version 19.5.0
+    - you can now also **search** for the **description of bookmarks**
+    - a **loading progressbar** will now be shown while bookmarks are loaded
+      when the **note folder is switched** by the user 
+
 ## 19.5.0
 - you are now able to **import bookmarks** from [Nextcloud bookmarks](https://github.com/nextcloud/bookmarks)
   in the *Notes / Import* menu (for [#1198](https://github.com/pbek/QOwnNotes/issues/1198))

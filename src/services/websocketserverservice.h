@@ -58,4 +58,6 @@ private:
     quint16 m_port;
 
     QString getBookmarksJsonText() const;
+
+    QString getNoteFolderSwitchedJsonText(bool switched) const;
 };

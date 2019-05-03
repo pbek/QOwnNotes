@@ -167,18 +167,24 @@ void WebSocketServerService::processMessage(const QString &message) {
         MainWindow *mainWindow = MainWindow::instance();
 
         if (mainWindow == Q_NULLPTR) {
+            pSender->sendTextMessage(getNoteFolderSwitchedJsonText(false));
+
             return;
         }
 
         const int noteFolderId = jsonObject.value("data").toInt();
 
         if (noteFolderId == NoteFolder::currentNoteFolderId()) {
+            pSender->sendTextMessage(getNoteFolderSwitchedJsonText(false));
+
             return;
         }
 
         mainWindow->changeNoteFolder(noteFolderId);
-        QString jsonText = getBookmarksJsonText();
 
+        pSender->sendTextMessage(getNoteFolderSwitchedJsonText(true));
+
+        QString jsonText = getBookmarksJsonText();
         pSender->sendTextMessage(jsonText);
 #endif
     } else {
@@ -259,6 +265,21 @@ QString WebSocketServerService::getBookmarksJsonText() const {
     QString jsonText = Bookmark::bookmarksWebServiceJsonText(bookmarks);
 
     return jsonText;
+}
+
+/**
+ * Returns the json text after switching note folders
+ *
+ * @param switched
+ * @return
+ */
+QString WebSocketServerService::getNoteFolderSwitchedJsonText(bool switched) const {
+    QJsonObject bookmarkResultObject;
+    bookmarkResultObject.insert("type", QJsonValue::fromVariant("switchedNoteFolder"));
+    bookmarkResultObject.insert("data", QJsonValue::fromVariant(switched));
+    QJsonDocument doc(bookmarkResultObject);
+
+    return doc.toJson(QJsonDocument::Compact);
 }
 
 void WebSocketServerService::socketDisconnected() {
