@@ -3696,14 +3696,22 @@ Do you want to install it anyway?</source>
     <name>ServerBookmarksImportDialog</name>
     <message>
         <location filename="../dialogs/serverbookmarksimportdialog.ui" line="14"/>
-        <location filename="../dialogs/serverbookmarksimportdialog.ui" line="46"/>
+        <location filename="../dialogs/serverbookmarksimportdialog.ui" line="20"/>
         <source>Import bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/serverbookmarksimportdialog.ui" line="60"/>
+        <location filename="../dialogs/serverbookmarksimportdialog.ui" line="47"/>
         <source>%v of %m bookmark(s) imported</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="66"/>
+        <source>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
 </context>
 <context>
@@ -6542,7 +6550,7 @@ This cannot be undone!</source>
         </translation>
     </message>
     <message>
-        <location filename="../services/websocketserverservice.cpp" line="269"/>
+        <location filename="../services/websocketserverservice.cpp" line="290"/>
         <source>%1 was disconnected from QOwnNotes server</source>
         <translation type="unfinished"></translation>
     </message>

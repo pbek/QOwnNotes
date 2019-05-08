@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 19.5.2
+- now more than 10 bookmarks can be imported from [Nextcloud bookmarks](https://github.com/nextcloud/bookmarks)
+  in the *Notes / Import* menu (for [#1198](https://github.com/pbek/QOwnNotes/issues/1198))
+
 ## 19.5.1
 - added feedback if the note folder was switched via the websocket to the websocket api
 - the [Web Companion browser extension](https://github.com/qownnotes/web-companion)

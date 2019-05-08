@@ -8,6 +8,7 @@ ServerBookmarksImportDialog::ServerBookmarksImportDialog(
         MasterDialog(parent),
         ui(new Ui::ServerBookmarksImportDialog) {
     ui->setupUi(this);
+    ui->infoLabel->clear();
 
     // init the iterator for the versions
     QJSValueIterator bookmarksIterator(bookmarks);
@@ -62,6 +63,10 @@ ServerBookmarksImportDialog::ServerBookmarksImportDialog(
     };
 
     ui->progressBar->setMaximum(bookmarksCount);
+    ui->infoLabel->setText(tr("<strong>%n bookmarks</strong> found on server", "",
+                              bookmarksCount));
+    ui->importButton->setEnabled(bookmarksCount > 0);
+    ui->progressBar->setEnabled(bookmarksCount > 0);
 }
 
 ServerBookmarksImportDialog::~ServerBookmarksImportDialog() {

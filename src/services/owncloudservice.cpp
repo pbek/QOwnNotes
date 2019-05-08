@@ -809,7 +809,7 @@ void OwnCloudService::fetchBookmarks() {
         return;
     }
 
-    QUrl url(serverUrl + bookmarkPath);
+    QUrl url(serverUrl + bookmarkPath + "?page=-1");
 
     qDebug() << __func__ << " - 'url': " << url;
 
