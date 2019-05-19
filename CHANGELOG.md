@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 19.5.3
+- if the setting `Show all notes in a folder including their subfolders` is
+  activated now the note-subfolder list will show the note count recursively for
+  all children note-subfolders (for [#1206](https://github.com/pbek/QOwnNotes/issues/1206))
+
 ## 19.5.2
 - now more than 10 bookmarks can be imported from [Nextcloud bookmarks](https://github.com/nextcloud/bookmarks)
   in the *Notes / Import* menu (for [#1198](https://github.com/pbek/QOwnNotes/issues/1198))

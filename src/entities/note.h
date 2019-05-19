@@ -186,7 +186,7 @@ public:
 
     static QList<int> noteIdListFromNoteList(QList<Note> noteList);
 
-    static int countByNoteSubFolderId(int noteSubFolderId = 0);
+    static int countByNoteSubFolderId(int noteSubFolderId = 0, bool recursive = false);
 
     int getNoteSubFolderId();
 

@@ -2038,7 +2038,9 @@ QTreeWidgetItem *MainWindow::addNoteSubFolderToTreeWidget(
         QTreeWidgetItem *parentItem, NoteSubFolder noteSubFolder) {
     int id = noteSubFolder.getId();
     QString name = noteSubFolder.getName();
-    int linkCount = Note::countByNoteSubFolderId(id);
+    QSettings settings;
+    int linkCount = Note::countByNoteSubFolderId(id,
+            settings.value("noteSubfoldersPanelShowNotesRecursively").toBool());
     QString toolTip = tr("show notes in folder '%1' (%2)")
             .arg(name, QString::number(linkCount));
 
@@ -7027,12 +7029,13 @@ void MainWindow::reloadNoteSubFolderTree() {
     }
 
     // add the "note folder" item
-    int linkCount = Note::countByNoteSubFolderId(0);
+    QSettings settings;
+    int linkCount = Note::countByNoteSubFolderId(0,
+            settings.value("noteSubfoldersPanelShowNotesRecursively").toBool());
     QString toolTip = tr("show notes in note root folder (%1)")
             .arg(QString::number(linkCount));
 
-    QTreeWidgetItem *item = new QTreeWidgetItem();
-    QSettings settings;
+    auto *item = new QTreeWidgetItem();
     if (settings.value("noteSubfoldersPanelShowRootFolderName").toBool()) {
         item->setText(0, NoteFolder::currentRootFolderName(
                             settings.value("noteSubfoldersPanelShowFullPath").toBool()));

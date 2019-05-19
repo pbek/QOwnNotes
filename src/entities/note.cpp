@@ -2370,13 +2370,25 @@ int Note::countAll() {
 /**
  * Counts all notes by note sub folder id
  */
-int Note::countByNoteSubFolderId(int noteSubFolderId) {
+int Note::countByNoteSubFolderId(int noteSubFolderId, bool recursive) {
     QSqlDatabase db = QSqlDatabase::database("memory");
     QSqlQuery query(db);
+    QList<int> noteSubFolderIdList;
+
+    if (recursive) {
+        noteSubFolderIdList = NoteSubFolder::fetchIdsRecursivelyByParentId(
+                noteSubFolderId);
+    } else {
+        noteSubFolderIdList << noteSubFolderId;
+    }
+
+    QStringList idStringList;
+    Q_FOREACH(int id, noteSubFolderIdList) {
+            idStringList << QString::number(id);
+    }
 
     query.prepare("SELECT COUNT(*) AS cnt FROM note WHERE note_sub_folder_id "
-                          "= :note_sub_folder_id");
-    query.bindValue(":note_sub_folder_id", noteSubFolderId);
+                  "IN (" + idStringList.join(",") + ")");
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
