@@ -3710,9 +3710,9 @@ Mégis telepíti?</translation>
     <message numerus="yes">
       <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="66"/>
       <source>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</source>
-      <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
-        <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n könyvjelző &lt;/strong&gt; található a kiszolgálón</numerusform>
+        <numerusform>&lt;strong&gt;%n könyvjelző &lt;/strong&gt; található a kiszolgálón</numerusform>
       </translation>
     </message>
   </context>

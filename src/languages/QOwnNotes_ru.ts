@@ -3776,16 +3776,16 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="47"/>
       <source>%v of %m bookmark(s) imported</source>
-      <translation type="unfinished">%v of %m bookmark(s) imported</translation>
+      <translation>%v из %m закладок импортировано</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="66"/>
       <source>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</source>
-      <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
-        <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
-        <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
-        <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n закладка&lt;/strong&gt; найдено на сервере</numerusform>
+        <numerusform>&lt;strong&gt;%n закладки&lt;/strong&gt; найдено на сервере</numerusform>
+        <numerusform>&lt;strong&gt;%n закладок&lt;/strong&gt; найдено на сервере</numerusform>
+        <numerusform>&lt;strong&gt;%n закладок&lt;/strong&gt; найдено на сервере</numerusform>
       </translation>
     </message>
   </context>

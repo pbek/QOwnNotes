@@ -1666,7 +1666,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2469"/>
       <source>Import bookmarks from server</source>
-      <translation type="unfinished">Import bookmarks from server</translation>
+      <translation>Importovať záložky zo servera</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1864"/>
@@ -1754,7 +1754,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2025"/>
       <source>Markdown cheatsheet</source>
-      <translation type="unfinished">Markdown cheatsheet</translation>
+      <translation>Markdown cheatsheet</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2034"/>
@@ -3258,12 +3258,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="1881"/>
       <source>No bookmarks</source>
-      <translation type="unfinished">No bookmarks</translation>
+      <translation>Žiadne záložky</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1882"/>
       <source>No bookmarks were found on the server.</source>
-      <translation type="unfinished">No bookmarks were found on the server.</translation>
+      <translation>Na serveri sa nenašli žiadne záložky.</translation>
     </message>
   </context>
   <context>
@@ -3370,12 +3370,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../utils/git.cpp" line="73"/>
       <source>Command failed!</source>
-      <translation type="unfinished">Command failed!</translation>
+      <translation>Príkaz zlyhal!</translation>
     </message>
     <message>
       <location filename="../utils/git.cpp" line="74"/>
       <source>The command &lt;code&gt;%1&lt;/code&gt; failed!</source>
-      <translation type="unfinished">The command &lt;code&gt;%1&lt;/code&gt; failed!</translation>
+      <translation>Príkaz &lt;code&gt;%1&lt;/code&gt; zlyhal!</translation>
     </message>
   </context>
   <context>
@@ -3773,12 +3773,12 @@ Chcete ho aj tak nainštalovať?</translation>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="14"/>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="20"/>
       <source>Import bookmarks</source>
-      <translation type="unfinished">Import bookmarks</translation>
+      <translation>Importovať záložky</translation>
     </message>
     <message>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="47"/>
       <source>%v of %m bookmark(s) imported</source>
-      <translation type="unfinished">%v of %m bookmark(s) imported</translation>
+      <translation>%v %m importované záložky</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="66"/>

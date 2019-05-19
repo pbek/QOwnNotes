@@ -1648,7 +1648,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2469"/>
       <source>Import bookmarks from server</source>
-      <translation type="unfinished">Import bookmarks from server</translation>
+      <translation>Importar bookmarks do servidor</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1864"/>
@@ -3188,12 +3188,12 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
     <message>
       <location filename="../services/owncloudservice.cpp" line="1881"/>
       <source>No bookmarks</source>
-      <translation type="unfinished">No bookmarks</translation>
+      <translation>Sem Bookmarks</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1882"/>
       <source>No bookmarks were found on the server.</source>
-      <translation type="unfinished">No bookmarks were found on the server.</translation>
+      <translation>Nenhum bookmark foi encontrado no servidor.</translation>
     </message>
   </context>
   <context>
@@ -3697,19 +3697,19 @@ Do you want to install it anyway?</source>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="14"/>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="20"/>
       <source>Import bookmarks</source>
-      <translation type="unfinished">Import bookmarks</translation>
+      <translation>Importar bookmarks</translation>
     </message>
     <message>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="47"/>
       <source>%v of %m bookmark(s) imported</source>
-      <translation type="unfinished">%v of %m bookmark(s) imported</translation>
+      <translation>%v de %m bookmarks importados</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="66"/>
       <source>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</source>
-      <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
-        <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n bookmark&lt;/strong&gt; encontrado no servidor</numerusform>
+        <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; encontrados no servidor</numerusform>
       </translation>
     </message>
   </context>

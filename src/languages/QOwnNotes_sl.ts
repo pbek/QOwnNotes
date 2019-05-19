@@ -1666,7 +1666,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2469"/>
       <source>Import bookmarks from server</source>
-      <translation type="unfinished">Import bookmarks from server</translation>
+      <translation>Uvozite zaznamke iz strežnika</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1864"/>

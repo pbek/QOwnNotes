@@ -350,7 +350,7 @@
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7033"/>
       <source>%n lines yanked.</source>
-      <translation>
+      <translation type="unfinished">
         <numerusform>%n Zeile herausgezogen.</numerusform>
         <numerusform>%n Zeilen herausgezogen.</numerusform>
       </translation>

@@ -3708,9 +3708,9 @@ Do you want to install it anyway?</source>
     <message numerus="yes">
       <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="66"/>
       <source>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</source>
-      <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
-        <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n bladwijzer &lt;/strong&gt; gevonden op server</numerusform>
+        <numerusform>&lt;strong&gt;%n bladwijzers &lt;/strong&gt; gevonden op server</numerusform>
       </translation>
     </message>
   </context>

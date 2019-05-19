@@ -4,6 +4,10 @@
 - if the setting `Show all notes in a folder including their subfolders` is
   activated now the note-subfolder list will show the note count recursively for
   all children note-subfolders (for [#1206](https://github.com/pbek/QOwnNotes/issues/1206))
+- added more Czech, Finnish, Croatian, Romanian, Slovak, Slovenian, Brazilian
+  Portuguese, Russian, German, Spanish, Hungarian, Dutch, Italian translation
+  (thank you Fabijenna, mlimacarlos, mikhail-khokhlov, rakekniven, richarson,
+  tiwi90, mlocati)
 
 ## 19.5.2
 - now more than 10 bookmarks can be imported from [Nextcloud bookmarks](https://github.com/nextcloud/bookmarks)
