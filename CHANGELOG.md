@@ -4,6 +4,7 @@
 - if the setting `Show all notes in a folder including their subfolders` is
   activated now the note-subfolder list will show the note count recursively for
   all children note-subfolders (for [#1206](https://github.com/pbek/QOwnNotes/issues/1206))
+- added `aarch64` architecture to AUR build process
 - added more Czech, Finnish, Croatian, Romanian, Slovak, Slovenian, Brazilian
   Portuguese, Russian, German, Spanish, Hungarian, Dutch, Italian translation
   (thank you Fabijenna, mlimacarlos, mikhail-khokhlov, rakekniven, richarson,
