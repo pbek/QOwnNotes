@@ -60,4 +60,6 @@ private:
     QString getBookmarksJsonText() const;
 
     QString getNoteFolderSwitchedJsonText(bool switched) const;
+
+    QString getTokenQueryJsonText() const;
 };

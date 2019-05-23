@@ -120,6 +120,14 @@ void WebSocketServerService::processMessage(const QString &message) {
     QString type = jsonObject.value("type").toString();
     auto *pSender = qobject_cast<QWebSocket *>(sender());
     MetricsService::instance()->sendVisitIfEnabled("websocket/message/" + type);
+    const QString token = jsonObject.value("token").toString();
+
+    // request the token if not set
+    if (token.isEmpty()) {
+        pSender->sendTextMessage(getTokenQueryJsonText());
+
+        return;
+    }
 
     if (type == "newNote") {
 #ifndef INTEGRATION_TESTS
@@ -274,10 +282,23 @@ QString WebSocketServerService::getBookmarksJsonText() const {
  * @return
  */
 QString WebSocketServerService::getNoteFolderSwitchedJsonText(bool switched) const {
-    QJsonObject bookmarkResultObject;
-    bookmarkResultObject.insert("type", QJsonValue::fromVariant("switchedNoteFolder"));
-    bookmarkResultObject.insert("data", QJsonValue::fromVariant(switched));
-    QJsonDocument doc(bookmarkResultObject);
+    QJsonObject object;
+    object.insert("type", QJsonValue::fromVariant("switchedNoteFolder"));
+    object.insert("data", QJsonValue::fromVariant(switched));
+    QJsonDocument doc(object);
+
+    return doc.toJson(QJsonDocument::Compact);
+}
+
+/**
+ * Returns the json text for the token request
+ *
+ * @return
+ */
+QString WebSocketServerService::getTokenQueryJsonText() const {
+    QJsonObject object;
+    object.insert("type", QJsonValue::fromVariant("tokenQuery"));
+    QJsonDocument doc(object);
 
     return doc.toJson(QJsonDocument::Compact);
 }
