@@ -3740,3 +3740,9 @@ void SettingsDialog::on_systemIconThemeCheckBox_toggled(bool checked) {
 
     ui->internalIconThemeCheckBox->setDisabled(checked);
 }
+
+void SettingsDialog::on_webSocketTokenButton_clicked() {
+    auto webSocketTokenDialog = new WebSocketTokenDialog();
+    webSocketTokenDialog->exec();
+    delete(webSocketTokenDialog);
+}

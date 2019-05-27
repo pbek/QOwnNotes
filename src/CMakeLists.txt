@@ -42,6 +42,7 @@ qt5_wrap_ui(dialogs/ui_orphanedattachmentsdialog.h orphanedattachmentsdialog.ui)
 qt5_wrap_ui(dialogs/ui_actiondialog.h actiondialog.ui)
 qt5_wrap_ui(dialogs/ui_tabledialog.h tabledialog.ui)
 qt5_wrap_ui(dialogs/ui_notedialog.h notedialog.ui)
+qt5_wrap_ui(dialogs/ui_websockettokendialog.h websockettokendialog.ui)
 qt5_wrap_ui(libraries/qmarkdowntextedit/ui_qplaintexteditsearchwidget.h
         libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui)
 qt5_wrap_ui(libraries/qttoolbareditor/src/toolbar_editor.hpp
@@ -131,6 +132,9 @@ set(SOURCE_FILES
     dialogs/notedialog.cpp
     dialogs/notedialog.h
     dialogs/notedialog.ui
+    dialogs/websockettokendialog.cpp
+    dialogs/websockettokendialog.h
+    dialogs/websockettokendialog.ui
     dialogs/filedialog.cpp
     dialogs/filedialog.h
     entities/calendaritem.cpp

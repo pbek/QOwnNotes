@@ -38,6 +38,10 @@ WebSocketServerService::WebSocketServerService(quint16 port, QObject *parent) :
         m_pWebSocketServer(new QWebSocketServer(
                 QStringLiteral("QOwnNotes Server"),
                 QWebSocketServer::NonSecureMode, this)) {
+#ifndef INTEGRATION_TESTS
+    _webSocketTokenDialog = nullptr;
+#endif
+
     if (Utils::Misc::isSocketServerEnabled()) {
         listen(port);
     }
@@ -121,10 +125,22 @@ void WebSocketServerService::processMessage(const QString &message) {
     auto *pSender = qobject_cast<QWebSocket *>(sender());
     MetricsService::instance()->sendVisitIfEnabled("websocket/message/" + type);
     const QString token = jsonObject.value("token").toString();
+    QSettings settings;
+    QString storedToken = settings.value("webSocketServerService/token").toString();
 
     // request the token if not set
-    if (token.isEmpty()) {
+    if (token.isEmpty() || storedToken.isEmpty() || token != storedToken) {
         pSender->sendTextMessage(getTokenQueryJsonText());
+
+#ifndef INTEGRATION_TESTS
+        if (_webSocketTokenDialog == nullptr) {
+            _webSocketTokenDialog = new WebSocketTokenDialog();
+        }
+
+        if (!_webSocketTokenDialog->isVisible()) {
+            _webSocketTokenDialog->open();
+        }
+#endif
 
         return;
     }

@@ -397,7 +397,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>4</number>
+            <number>19</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -2954,8 +2954,8 @@
                           <rect>
                            <x>0</x>
                            <y>0</y>
-                           <width>360</width>
-                           <height>476</height>
+                           <width>611</width>
+                           <height>1247</height>
                           </rect>
                          </property>
                          <layout class="QGridLayout" name="gridLayout_55">
@@ -5413,6 +5413,20 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                      <property name="icon">
                       <iconset theme="edit-clear" resource="../breeze-qownnotes.qrc">
                        <normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</iconset>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QToolButton" name="webSocketTokenButton">
+                     <property name="toolTip">
+                      <string>Show security token</string>
+                     </property>
+                     <property name="text">
+                      <string notr="true">…</string>
+                     </property>
+                     <property name="icon">
+                      <iconset theme="view-refresh" resource="../breeze-qownnotes.qrc">
+                       <normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</iconset>
                      </property>
                     </widget>
                    </item>

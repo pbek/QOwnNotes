@@ -260,6 +260,8 @@ private slots:
 
     void on_systemIconThemeCheckBox_toggled(bool checked);
 
+    void on_webSocketTokenButton_clicked();
+
 private:
 
     Ui::SettingsDialog *ui;
