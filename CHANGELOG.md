@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 19.5.4
+- added a new editor color schema *Solarized Light* by @fairplay
+  (for [#1208](https://github.com/pbek/QOwnNotes/issues/1208))
+
 ## 19.5.3
 - if the setting `Show all notes in a folder including their subfolders` is
   activated now the note-subfolder list will show the note count recursively for
