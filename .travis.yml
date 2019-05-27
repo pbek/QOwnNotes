@@ -1,5 +1,6 @@
 language: cpp
 dist: trusty
+osx_image: xcode10.2
 
 os:
   - linux
