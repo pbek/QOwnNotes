@@ -1,8 +1,24 @@
 # QOwnNotes Changelog
 
 ## 19.5.4
+- when using the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
+  you now need to enter a **security token** to communicate with QOwnNotes to
+  ensure no other website or application can access your bookmarks
+    - you will get a new dialog that shows the token as soon as the browser
+      extension accesses QOwnNotes
+    - you can also change the security token later in the *Browser extension* settings
+- the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
+  was updated to version 19.5.3
+  - you are now able to enter a **security token** to communicate with QOwnNotes 
+  - added a lot of translation
+  - you now can **import all browser bookmarks** (for [#8](https://github.com/qownnotes/web-companion/issues/8))
+  - fixed a bookmark filtering problem
 - added a new editor color schema *Solarized Light* by @fairplay
   (for [#1208](https://github.com/pbek/QOwnNotes/issues/1208))
+- added more Indonesian, Slovenian, Swedish, Romanian, Slovak, Russian, Italian,
+  Spanish, Brazilian Portuguese, Finnish, Norwegian, Danish, Greek, Polish,
+  Cebuano, Hungarian, Dutch, Czech, Croatian translation (thank you zmni,
+  Fabijenna, mikhail-khokhlov, mlocati, richarson, mlimacarlos, tiwi90)
 
 ## 19.5.3
 - if the setting `Show all notes in a folder including their subfolders` is
