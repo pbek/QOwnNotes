@@ -49,3 +49,8 @@ void WebSocketTokenDialog::on_generateButton_clicked() {
     ui->tokenLineEdit->setText(token);
     on_copyButton_clicked();
 }
+
+void WebSocketTokenDialog::on_buttonBox_accepted() {
+    QSettings settings;
+    settings.setValue("webSocketServerService/token", ui->tokenLineEdit->text());
+}

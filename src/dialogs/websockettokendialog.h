@@ -20,6 +20,8 @@ private slots:
 
     void on_generateButton_clicked();
 
+    void on_buttonBox_accepted();
+
 private:
     Ui::WebSocketTokenDialog *ui;
 

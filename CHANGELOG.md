@@ -1,5 +1,15 @@
 # QOwnNotes Changelog
 
+## 19.5.5
+- you are now able to **manually edit the security token** for your
+  [Web Companion browser extension](https://github.com/qownnotes/web-companion)
+  to be able to use the same token across different devices in case you are
+  syncing your browser settings
+- the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
+  was updated to version 19.5.4
+    - you are now also able to enter the **security token** in the browser extension options
+    - added more translation
+
 ## 19.5.4
 - when using the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
   you now need to enter a **security token** to communicate with QOwnNotes to
