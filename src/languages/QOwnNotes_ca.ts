@@ -3711,7 +3711,7 @@ Tot i així, el voleu instal·lar?</translation>
       <source>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</source>
       <translation type="unfinished">
         <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
-        <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
+        <numerusform>&lt;strong&gt;%n etiquetes&lt;/strong&gt; trobades al servidor</numerusform>
       </translation>
     </message>
   </context>
@@ -4758,7 +4758,7 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5422"/>
       <source>Show security token</source>
-      <translation type="unfinished">Show security token</translation>
+      <translation>Mostrar el testimoni de seguretat</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5458"/>
@@ -6580,22 +6580,22 @@ Això no es pot desfer!</translation>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="20"/>
       <source>Security token</source>
-      <translation type="unfinished">Security token</translation>
+      <translation>Testimoni de seguretat</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="26"/>
       <source>To let your QOwnNotes browser extension access your notes please paste this security token in your browser extension:</source>
-      <translation type="unfinished">To let your QOwnNotes browser extension access your notes please paste this security token in your browser extension:</translation>
+      <translation>Per permetre que l'extensió del navegador de QOwnNotes accedeixi a les vostres notes enganxeu si us plau aquest testimoni de seguretat a l'extensió:</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="69"/>
       <source>Generate new token</source>
-      <translation type="unfinished">Generate new token</translation>
+      <translation>Genera un nou testimoni</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="83"/>
       <source>Copy token</source>
-      <translation type="unfinished">Copy token</translation>
+      <translation>Copia el testimoni</translation>
     </message>
   </context>
   <context>

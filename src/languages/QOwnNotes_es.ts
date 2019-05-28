@@ -4757,7 +4757,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5422"/>
       <source>Show security token</source>
-      <translation type="unfinished">Show security token</translation>
+      <translation>Mostrar el token de seguridad</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5458"/>
@@ -6573,22 +6573,22 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="20"/>
       <source>Security token</source>
-      <translation type="unfinished">Security token</translation>
+      <translation>Token de seguridad</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="26"/>
       <source>To let your QOwnNotes browser extension access your notes please paste this security token in your browser extension:</source>
-      <translation type="unfinished">To let your QOwnNotes browser extension access your notes please paste this security token in your browser extension:</translation>
+      <translation>Para permitir a la extensión de navegador de QOwnNotes acceder a tus notas, por favor copia y pega este token de seguridad en la extensión de tu navegador:</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="69"/>
       <source>Generate new token</source>
-      <translation type="unfinished">Generate new token</translation>
+      <translation>Generar un nuevo token</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="83"/>
       <source>Copy token</source>
-      <translation type="unfinished">Copy token</translation>
+      <translation>Copiar el token</translation>
     </message>
   </context>
   <context>

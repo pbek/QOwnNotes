@@ -9,6 +9,7 @@
   was updated to version 19.5.4
     - you are now also able to enter the **security token** in the browser extension options
     - added more translation
+- added more Catalan, Spanish, Italian translation (thank you MGuerra, richarson, mlocati)
 
 ## 19.5.4
 - when using the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
