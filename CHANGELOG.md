@@ -15,6 +15,8 @@
   - fixed a bookmark filtering problem
 - added a new editor color schema *Solarized Light* by @fairplay
   (for [#1208](https://github.com/pbek/QOwnNotes/issues/1208))
+- improved Mojave dark mode support for macOS 
+  (for [#1209](https://github.com/pbek/QOwnNotes/issues/1209))
 - added more Indonesian, Slovenian, Swedish, Romanian, Slovak, Russian, Italian,
   Spanish, Brazilian Portuguese, Finnish, Norwegian, Danish, Greek, Polish,
   Cebuano, Hungarian, Dutch, Czech, Croatian translation (thank you zmni,
