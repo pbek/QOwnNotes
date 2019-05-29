@@ -1,11 +1,14 @@
 # QOwnNotes Changelog
 
 ## 19.5.6
+- fixed creation of empty notes at the note root folder when importing Evernote enex
+  files into a note sub-folder (for [#1212](https://github.com/pbek/QOwnNotes/issues/1212))
 - added a more descriptive text in the browser extension security token dialog
 - the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
   was updated to version 19.5.5
     - the **security token** will now be sent correctly to QOwnNotes for context menu operations
       (for [#10](https://github.com/qownnotes/web-companion/issues/10))
+- added more Russian, Italian, Indonesian translation (thank you mikhail-khokhlov, mlocati, zmni)
 
 ## 19.5.5
 - you are now able to **manually edit the security token** for your
