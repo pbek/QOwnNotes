@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 19.5.6
+- added a more descriptive text in the browser extension security token dialog
+- the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
+  was updated to version 19.5.5
+    - the **security token** will now be sent correctly to QOwnNotes for context menu operations
+      (for [#10](https://github.com/qownnotes/web-companion/issues/10))
+
 ## 19.5.5
 - you are now able to **manually edit the security token** for your
   [Web Companion browser extension](https://github.com/qownnotes/web-companion)

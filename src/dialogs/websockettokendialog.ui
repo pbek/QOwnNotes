@@ -23,7 +23,7 @@
    <item row="1" column="0" colspan="3">
     <widget class="QLabel" name="label">
      <property name="text">
-      <string>To let your QOwnNotes browser extension access your notes please paste this security token in your browser extension:</string>
+      <string>To let your QOwnNotes browser extension access your notes please paste this security token in the settings of your browser extension:</string>
      </property>
      <property name="wordWrap">
       <bool>true</bool>

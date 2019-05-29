@@ -6532,22 +6532,22 @@ This cannot be undone!</source>
 <context>
     <name>WebSocketServerService</name>
     <message>
-        <location filename="../services/websocketserverservice.cpp" line="57"/>
+        <location filename="../services/websocketserverservice.cpp" line="58"/>
         <source>QOwnNotes server listening on port %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/websocketserverservice.cpp" line="64"/>
+        <location filename="../services/websocketserverservice.cpp" line="65"/>
         <source>Could not start QOwnNotes server on port %1!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/websocketserverservice.cpp" line="108"/>
+        <location filename="../services/websocketserverservice.cpp" line="109"/>
         <source>%1 connected to QOwnNotes server!</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../services/websocketserverservice.cpp" line="185"/>
+        <location filename="../services/websocketserverservice.cpp" line="188"/>
         <source>%n bookmark(s) created</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -6555,7 +6555,7 @@ This cannot be undone!</source>
         </translation>
     </message>
     <message>
-        <location filename="../services/websocketserverservice.cpp" line="324"/>
+        <location filename="../services/websocketserverservice.cpp" line="327"/>
         <source>%1 was disconnected from QOwnNotes server</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6569,16 +6569,16 @@ This cannot be undone!</source>
     </message>
     <message>
         <location filename="../dialogs/websockettokendialog.ui" line="26"/>
-        <source>To let your QOwnNotes browser extension access your notes please paste this security token in your browser extension:</source>
+        <source>To let your QOwnNotes browser extension access your notes please paste this security token in the settings of your browser extension:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/websockettokendialog.ui" line="69"/>
+        <location filename="../dialogs/websockettokendialog.ui" line="65"/>
         <source>Generate new token</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/websockettokendialog.ui" line="83"/>
+        <location filename="../dialogs/websockettokendialog.ui" line="79"/>
         <source>Copy token</source>
         <translation type="unfinished"></translation>
     </message>
