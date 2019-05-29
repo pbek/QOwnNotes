@@ -542,12 +542,13 @@ void EvernoteImportDialog::importNotes(QString data) {
             Note note = Note();
 //            note.setName(title);
             note.setNoteText(noteText);
+            note.setNoteSubFolderId(noteSubFolder.getId());
 
             // in case the user enabled that the filename can be different
             // from the note name
+            // Attention: may already store the note
             note.handleNoteTextFileName();
 
-            note.setNoteSubFolderId(noteSubFolder.getId());
             note.store();
             note.storeNoteTextFileToDisk();
 

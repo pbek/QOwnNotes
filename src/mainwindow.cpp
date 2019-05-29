@@ -9748,7 +9748,10 @@ void MainWindow::selectAllNotesInTagTreeWidget() const {
 }
 
 void MainWindow::on_actionImport_notes_from_Evernote_triggered() {
-    EvernoteImportDialog* dialog = new EvernoteImportDialog(this);
+    const QSignalBlocker blocker(noteDirectoryWatcher);
+    Q_UNUSED(blocker);
+
+    auto dialog = new EvernoteImportDialog(this);
     dialog->exec();
 
     if (dialog->getImportCount() > 0) {
