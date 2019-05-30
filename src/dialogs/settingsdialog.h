@@ -67,9 +67,9 @@ public:
                              QString notesPathExistsText,
                              QString connectionErrorMessage);
 
-    void setOKLabelData(int number, QString text, OKLabelStatus status);
+    void setOKLabelData(int number, const QString& text, OKLabelStatus status);
 
-    void refreshTodoCalendarList(QList<CalDAVCalendarData> items,
+    void refreshTodoCalendarList(const QList<CalDAVCalendarData>& items,
                                  bool forceReadCheckedState = false);
 
     void setNoteFolderRemotePathList(QStringList pathList);
@@ -238,7 +238,7 @@ private slots:
 
     void on_localTrashClearCheckBox_toggled(bool checked);
 
-    void keySequenceEvent(QString objectName);
+    void keySequenceEvent(const QString& objectName);
 
     void on_exportSettingsButton_clicked();
 
@@ -288,13 +288,13 @@ private:
 
     void startConnectionTest();
 
-    void setFontLabel(QLineEdit *label, QFont font);
+    void setFontLabel(QLineEdit *label, const QFont& font);
 
     void outputSettings();
 
-    static void selectListWidgetValue(QListWidget *listWidget, QString value);
+    static void selectListWidgetValue(QListWidget *listWidget, const QString& value);
 
-    static bool listWidgetValueExists(QListWidget* listWidget, QString value);
+    static bool listWidgetValueExists(QListWidget* listWidget, const QString& value);
 
     static QString getSelectedListWidgetValue(QListWidget *listWidget);
 
@@ -362,7 +362,7 @@ private:
 
     void initSearchEngineComboBox() const;
 
-    QKeySequenceWidget *findKeySequenceWidget(QString objectName);
+    QKeySequenceWidget *findKeySequenceWidget(const QString& objectName);
 
     void storeOwncloudDebugData() const;
 };

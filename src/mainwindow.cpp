@@ -7852,10 +7852,10 @@ void MainWindow::on_tagTreeWidget_customContextMenuRequested(
     QMenu menu;
 
     QAction *addAction = menu.addAction(tr("&Add tag"));
-    QAction *renameAction = new QAction(this);
-    QAction *assignColorAction = new QAction(this);
-    QAction *disableColorAction = new QAction(this);
-    QAction *removeAction = new QAction(this);
+    auto *renameAction = new QAction(this);
+    auto *assignColorAction = new QAction(this);
+    auto *disableColorAction = new QAction(this);
+    auto *removeAction = new QAction(this);
 
     // allow these actions only if tags are selected
     if (hasSelected) {
@@ -8056,7 +8056,7 @@ void MainWindow::disableColorOfTagItem(QTreeWidgetItem *item) {
 void MainWindow::buildTagMoveMenuTree(QMenu *parentMenu,
                                       int parentTagId) {
     QList<Tag> tagList = Tag::fetchAllByParentId(parentTagId, "t.name ASC");
-    QSignalMapper *tagMovingSignalMapper = new QSignalMapper(this);
+    auto *tagMovingSignalMapper = new QSignalMapper(this);
 
     Q_FOREACH(Tag tag, tagList) {
             int tagId = tag.getId();
@@ -8108,7 +8108,7 @@ void MainWindow::buildTagMoveMenuTree(QMenu *parentMenu,
 void MainWindow::buildBulkNoteTagMenuTree(QMenu *parentMenu,
                                           int parentTagId) {
     QList<Tag> tagList = Tag::fetchAllByParentId(parentTagId, "t.name ASC");
-    QSignalMapper *signalMapper = new QSignalMapper(this);
+    auto *signalMapper = new QSignalMapper(this);
 
     Q_FOREACH(Tag tag, tagList) {
             int tagId = tag.getId();
@@ -8213,7 +8213,7 @@ void MainWindow::buildBulkNoteSubFolderMenuTree(QMenu *parentMenu, bool doCopy,
                                                 int parentNoteSubFolderId) {
     QList<NoteSubFolder> noteSubFolderList = NoteSubFolder::fetchAllByParentId(
             parentNoteSubFolderId, "name ASC");
-    QSignalMapper *signalMapper = new QSignalMapper(this);
+    auto *signalMapper = new QSignalMapper(this);
 
     Q_FOREACH(NoteSubFolder noteSubFolder, noteSubFolderList) {
             int noteSubFolderId = noteSubFolder.getId();
@@ -8621,7 +8621,7 @@ bool MainWindow::solveEquationInNoteTextEdit(double &returnValue) {
 
     // match all characters and basic operations like +, -, * and /
     QRegularExpressionMatch match =
-            QRegularExpression("([\\d\\.,+\\-*\\/\\(\\)\\s]+)\\s*=")
+            QRegularExpression(R"(([\d\.,+\-*\/\(\)\s]+)\s*=)")
                     .match(equation);
 
     if (!match.hasMatch()) {
@@ -9699,7 +9699,7 @@ void MainWindow::addCustomAction(const QString& identifier, const QString& menuT
 /**
  * Adds a label to the scripting dock widget
  */
-void MainWindow::addScriptingLabel(QString identifier, QString text) {
+void MainWindow::addScriptingLabel(const QString& identifier, const QString& text) {
     _scriptingDockWidget->show();
     QLabel *label = new QLabel(text);
     label->setOpenExternalLinks(true);
@@ -9713,7 +9713,7 @@ void MainWindow::addScriptingLabel(QString identifier, QString text) {
 /**
  * Sets the text of a label in the scripting dock widget
  */
-void MainWindow::setScriptingLabelText(const QString& identifier, QString text) {
+void MainWindow::setScriptingLabelText(const QString& identifier, const QString& text) {
     auto *label = ui->scriptingScrollArea->findChild<QLabel*>(
             "scriptingLabel-" + identifier);
     if (label != Q_NULLPTR) {

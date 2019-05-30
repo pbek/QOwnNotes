@@ -1,3 +1,5 @@
+#include <utility>
+
 #include "services/owncloudservice.h"
 #include "services/databaseservice.h"
 #include "dialogs/settingsdialog.h"
@@ -69,7 +71,7 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
             layout->setMargin(0);
 
             // inject a scroll area to make each page scrollable
-            QScrollArea *scrollArea = new QScrollArea(
+            auto *scrollArea = new QScrollArea(
                     ui->settingsStackedWidget);
             scrollArea->setWidget(pageWidget);
             scrollArea->setWidgetResizable(true);
@@ -1038,7 +1040,7 @@ void SettingsDialog::readSettings() {
 
     // store the current font if there isn't any set yet
     if (fontString == "") {
-        QTextEdit *textEdit = new QTextEdit();
+        auto *textEdit = new QTextEdit();
         fontString = textEdit->font().toString();
         settings.setValue("MainWindow/noteTextView.font", fontString);
     }
@@ -1376,7 +1378,7 @@ void SettingsDialog::loadShortcutSettings() {
                 continue;
             }
 
-            QTreeWidgetItem *menuItem = new QTreeWidgetItem();
+            auto *menuItem = new QTreeWidgetItem();
             int actionCount = 0;
 
             // loop through all actions of the menu
@@ -1387,14 +1389,14 @@ void SettingsDialog::loadShortcutSettings() {
                     }
 
                     // create the tree widget item
-                    QTreeWidgetItem *actionItem = new QTreeWidgetItem();
+                    auto *actionItem = new QTreeWidgetItem();
                     actionItem->setText(0, action->text().remove("&"));
                     actionItem->setToolTip(0, action->objectName());
                     actionItem->setData(1, Qt::UserRole, action->objectName());
                     menuItem->addChild(actionItem);
 
                     // create the key widget
-                    QKeySequenceWidget *keyWidget = new QKeySequenceWidget();
+                    auto *keyWidget = new QKeySequenceWidget();
                     keyWidget->setFixedWidth(300);
                     keyWidget->setClearButtonIcon(QIcon::fromTheme(
                             "edit-clear",
@@ -1445,7 +1447,7 @@ void SettingsDialog::loadShortcutSettings() {
  *
  * @param objectName
  */
-void SettingsDialog::keySequenceEvent(QString objectName) {
+void SettingsDialog::keySequenceEvent(const QString& objectName) {
     QKeySequenceWidget *keySequenceWidget = findKeySequenceWidget(objectName);
 
     if (keySequenceWidget == Q_NULLPTR) {
@@ -1510,7 +1512,7 @@ void SettingsDialog::keySequenceEvent(QString objectName) {
  * Finds a QKeySequenceWidget in the shortcutTreeWidget by the objectName
  * of the assigned menu action
  */
-QKeySequenceWidget *SettingsDialog::findKeySequenceWidget(QString objectName) {
+QKeySequenceWidget *SettingsDialog::findKeySequenceWidget(const QString& objectName) {
     // loop all top level tree widget items (menus)
     for (int i = 0; i < ui->shortcutTreeWidget->topLevelItemCount(); i++) {
         QTreeWidgetItem *menuItem = ui->shortcutTreeWidget->topLevelItem(i);
@@ -1544,10 +1546,8 @@ void SettingsDialog::storeShortcutSettings() {
         // loop all tree widget items of the menu (action shortcuts)
         for (int j = 0; j < menuItem->childCount(); j++) {
             QTreeWidgetItem *shortcutItem = menuItem->child(j);
-            QKeySequenceWidget *keyWidget =
-                    static_cast<QKeySequenceWidget *>(
-                            ui->shortcutTreeWidget->itemWidget(
-                                    shortcutItem, 1));
+            auto *keyWidget = static_cast<QKeySequenceWidget *>(
+                    ui->shortcutTreeWidget->itemWidget(shortcutItem, 1));
 
             if (keyWidget == Q_NULLPTR) {
                 continue;
@@ -1574,7 +1574,7 @@ void SettingsDialog::storeShortcutSettings() {
  * Selects a value in a list widget, that is hidden in the whatsThis parameter
  */
 void SettingsDialog::selectListWidgetValue(QListWidget* listWidget,
-                                           QString value) {
+                                           const QString& value) {
     // get all items from the list widget
     QList<QListWidgetItem *> items = listWidget->findItems(
                     QString("*"), Qt::MatchWrap | Qt::MatchWildcard);
@@ -1595,7 +1595,7 @@ void SettingsDialog::selectListWidgetValue(QListWidget* listWidget,
  * list widget
  */
 bool SettingsDialog::listWidgetValueExists(QListWidget* listWidget,
-                                           QString value) {
+                                           const QString& value) {
     // get all items from the list widget
     QList<QListWidgetItem *> items = listWidget->findItems(
                     QString("*"), Qt::MatchWrap | Qt::MatchWildcard);
@@ -1623,7 +1623,7 @@ QString SettingsDialog::getSelectedListWidgetValue(QListWidget* listWidget) {
     return "";
 }
 
-void SettingsDialog::setFontLabel(QLineEdit *label, QFont font) {
+void SettingsDialog::setFontLabel(QLineEdit *label, const QFont& font) {
     label->setText(
             font.family() + " (" + QString::number(font.pointSize()) + ")");
     label->setFont(font);
@@ -1655,7 +1655,7 @@ void SettingsDialog::connectTestCallback(bool appIsValid,
     this->appIsValid = appIsValid;
     this->appVersion = appVersion;
     this->serverVersion = serverVersion;
-    this->notesPathExistsText = notesPathExistsText;
+    this->notesPathExistsText = std::move(notesPathExistsText);
     this->connectionErrorMessage = connectionErrorMessage;
 
     // store some data for Utils::Misc::generateDebugInformation
@@ -1691,7 +1691,7 @@ void SettingsDialog::connectTestCallback(bool appIsValid,
  * @param text
  * @param color
  */
-void SettingsDialog::setOKLabelData(int number, QString text,
+void SettingsDialog::setOKLabelData(int number, const QString& text,
                                     OKLabelStatus status) {
     QLabel *label;
 
@@ -1743,7 +1743,7 @@ void SettingsDialog::setOKLabelData(int number, QString text,
     label->setStyleSheet("color: " + color);
 }
 
-void SettingsDialog::refreshTodoCalendarList(QList<CalDAVCalendarData> items,
+void SettingsDialog::refreshTodoCalendarList(const QList<CalDAVCalendarData>& items,
                                              bool forceReadCheckedState) {
     // we want to read the checked state from the settings if the
     // tasks calendar list was not empty
@@ -1786,7 +1786,7 @@ void SettingsDialog::refreshTodoCalendarList(QList<CalDAVCalendarData> items,
         }
 
         // get the hash out of the url part
-        QRegularExpression regex("\\/([^\\/]*)\\/$");
+        QRegularExpression regex(R"(\/([^\/]*)\/$)");
         QRegularExpressionMatch match = regex.match(url);
         QString hash = match.captured(1);
 
@@ -1809,7 +1809,7 @@ void SettingsDialog::refreshTodoCalendarList(QList<CalDAVCalendarData> items,
 
         // create the list widget item and add it to the
         // tasks calendar list widget
-        QListWidgetItem *item = new QListWidgetItem(name);
+        auto *item = new QListWidgetItem(name);
 
         // eventually check if item was checked
         Qt::CheckState checkedState = readCheckedState
@@ -2121,11 +2121,11 @@ void SettingsDialog::on_setExternalEditorPathToolButton_clicked() {
 
     if (ret == QDialog::Accepted) {
         QStringList fileNames = dialog.selectedFiles();
-        if (fileNames.size() == 0) {
+        if (fileNames.empty()) {
             return;
         }
 
-        QString filePath(fileNames.at(0));
+        const QString& filePath(fileNames.at(0));
         ui->externalEditorPathLineEdit->setText(filePath);
     }
 }
@@ -2375,7 +2375,7 @@ void SettingsDialog::setNoteFolderRemotePathList(QStringList pathList) {
 
     Q_FOREACH(QString path, pathList) {
             if (!path.isEmpty()) {
-                addPathToNoteFolderRemotePathTreeWidget(NULL, path);
+                addPathToNoteFolderRemotePathTreeWidget(nullptr, path);
             }
         }
 }
@@ -2394,10 +2394,10 @@ void SettingsDialog::addPathToNoteFolderRemotePathTreeWidget(
     const QSignalBlocker blocker(ui->noteFolderRemotePathTreeWidget);
     Q_UNUSED(blocker);
 
-    if (item == NULL) {
+    if (item == nullptr) {
         item = new QTreeWidgetItem();
         item->setText(0, pathPart);
-        if (parent == NULL) {
+        if (parent == nullptr) {
             ui->noteFolderRemotePathTreeWidget->addTopLevelItem(item);
         } else {
             parent->addChild(item);
@@ -2412,7 +2412,7 @@ void SettingsDialog::addPathToNoteFolderRemotePathTreeWidget(
 
 QTreeWidgetItem *SettingsDialog::findNoteFolderRemotePathTreeWidgetItem(
         QTreeWidgetItem *parent, QString text) {
-    if (parent == NULL) {
+    if (parent == nullptr) {
         for (int i = 0;
             i < ui->noteFolderRemotePathTreeWidget->topLevelItemCount();
             i++) {
@@ -2431,7 +2431,7 @@ QTreeWidgetItem *SettingsDialog::findNoteFolderRemotePathTreeWidgetItem(
         }
     }
 
-    return NULL;
+    return nullptr;
 }
 
 void SettingsDialog::on_noteFolderRemotePathTreeWidget_currentItemChanged(
@@ -2449,7 +2449,7 @@ void SettingsDialog::on_noteFolderRemotePathTreeWidget_currentItemChanged(
 
 void SettingsDialog::on_useOwnCloudPathButton_clicked() {
     QTreeWidgetItem *item = ui->noteFolderRemotePathTreeWidget->currentItem();
-    if (item == NULL) {
+    if (item == nullptr) {
         return;
     }
 
@@ -2465,12 +2465,12 @@ void SettingsDialog::on_useOwnCloudPathButton_clicked() {
  */
 QString SettingsDialog::generatePathFromCurrentNoteFolderRemotePathItem(
         QTreeWidgetItem *item) {
-    if (item == NULL) {
+    if (item == nullptr) {
         return "";
     }
 
     QTreeWidgetItem *parent = item->parent();
-    if (parent != NULL) {
+    if (parent != nullptr) {
         return generatePathFromCurrentNoteFolderRemotePathItem(parent)
                + "/" + item->text(0);
     }
@@ -2511,7 +2511,7 @@ void SettingsDialog::setupScriptingPage() {
     /*
      * Setup the "add script" button menu
      */
-    QMenu *addScriptMenu = new QMenu();
+    auto *addScriptMenu = new QMenu();
 
     QAction *searchScriptAction = addScriptMenu->addAction(
             tr("Search script repository"));
@@ -2916,7 +2916,7 @@ QListWidgetItem *SettingsDialog::addCustomNoteFileExtension(
         return Q_NULLPTR;
     }
 
-    QListWidgetItem *item = new QListWidgetItem(fileExtension);
+    auto *item = new QListWidgetItem(fileExtension);
     item->setFlags(item->flags() | Qt::ItemIsEditable);
     item->setWhatsThis(fileExtension);
     ui->defaultNoteFileExtensionListWidget->addItem(item);
@@ -3008,10 +3008,8 @@ void SettingsDialog::on_shortcutSearchLineEdit_textChanged(
         Q_FOREACH(QTreeWidgetItem *item, allItems) {
                 bool foundKeySequence = false;
 
-                QKeySequenceWidget *keyWidget =
-                        static_cast<QKeySequenceWidget *>(
-                                ui->shortcutTreeWidget->itemWidget(
-                                        item, 1));
+                auto *keyWidget = static_cast<QKeySequenceWidget *>(
+                        ui->shortcutTreeWidget->itemWidget(item, 1));
 
                 // search in the shortcut text
                 if (keyWidget != Q_NULLPTR) {
@@ -3191,7 +3189,7 @@ void SettingsDialog::on_emptyCalendarCachePushButton_clicked() {
  */
 void SettingsDialog::on_itemHeightResetButton_clicked() {
     QTreeWidget treeWidget(this);
-    QTreeWidgetItem *treeWidgetItem = new QTreeWidgetItem();
+    auto *treeWidgetItem = new QTreeWidgetItem();
     treeWidget.addTopLevelItem(treeWidgetItem);
     int height = treeWidget.visualItemRect(treeWidgetItem).height();
     ui->itemHeightSpinBox->setValue(height);
@@ -3491,8 +3489,7 @@ void SettingsDialog::on_setGitPathToolButton_clicked() {
  * Opens a dialog to search for scripts in the script repository
  */
 void SettingsDialog::searchScriptInRepository(bool checkForUpdates) {
-    ScriptRepositoryDialog *dialog = new ScriptRepositoryDialog(
-            this, checkForUpdates);
+    auto *dialog = new ScriptRepositoryDialog(this, checkForUpdates);
     dialog->exec();
     delete(dialog);
 

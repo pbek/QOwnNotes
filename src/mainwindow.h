@@ -131,9 +131,9 @@ public:
                          bool hideButtonInToolbar = false,
                          bool useInNoteListContextMenu = false);
 
-    void addScriptingLabel(QString identifier, QString text = "");
+    void addScriptingLabel(const QString& identifier, const QString& text = "");
 
-    void setScriptingLabelText(const QString& identifier, QString text);
+    void setScriptingLabelText(const QString& identifier, const QString& text);
 
     void preReloadScriptingEngine();
 
