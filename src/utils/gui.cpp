@@ -44,7 +44,7 @@ bool Utils::Gui::isOneTreeWidgetItemChildVisible(QTreeWidgetItem *item) {
  * Searches for text in items of a tree widget
  */
 void Utils::Gui::searchForTextInTreeWidget(QTreeWidget *treeWidget,
-                                           QString text,
+                                           const QString& text,
                                            TreeWidgetSearchFlags searchFlags) {
     QStringList searchList;
 
@@ -119,7 +119,7 @@ void Utils::Gui::searchForTextInTreeWidget(QTreeWidget *treeWidget,
  * Checks if a variant exists as user data in a tree widget
  */
 bool Utils::Gui::userDataInTreeWidgetExists(QTreeWidget *treeWidget,
-                                            QVariant userData, int column) {
+                                            const QVariant& userData, int column) {
     return getTreeWidgetItemWithUserData(treeWidget, userData, column) != Q_NULLPTR;
 }
 
@@ -305,7 +305,7 @@ Utils::Gui::showMessageBox(QWidget *parent, QMessageBox::Icon icon,
 bool Utils::Gui::isMessageBoxPresent() {
     QWidgetList topWidgets = QApplication::topLevelWidgets();
     foreach (QWidget *w, topWidgets) {
-            if (QMessageBox *mb = dynamic_cast<QMessageBox *>(w)) {
+            if (auto *mb = dynamic_cast<QMessageBox *>(w)) {
                 Q_UNUSED(mb);
                 return true;
             }
@@ -342,7 +342,7 @@ QFont Utils::Gui::fontDialogGetFont(bool *ok, const QFont &initial,
  *
  * @param initialBlock
  */
-void Utils::Gui::copyCodeBlockText(QTextBlock initialBlock) {
+void Utils::Gui::copyCodeBlockText(const QTextBlock& initialBlock) {
     QTextBlock block = initialBlock;
     QString codeBlockText = block.text();
     QStringList codeBlockTextList;

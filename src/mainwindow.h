@@ -105,7 +105,7 @@ public:
 
     void restoreTrashedNoteOnServer(QString fileName, int timestamp);
 
-    void showUpdateAvailableButton(QString version);
+    void showUpdateAvailableButton(const QString& version);
 
     void hideUpdateAvailableButton();
 
@@ -123,25 +123,25 @@ public:
 
     QList<QMenu *> menuList();
 
-    QAction *findAction(QString objectName);
+    QAction *findAction(const QString& objectName);
 
-    void addCustomAction(QString identifier, QString menuText,
-                         QString buttonText, QString icon,
+    void addCustomAction(const QString& identifier, const QString& menuText,
+                         const QString& buttonText, const QString& icon,
                          bool useInNoteEditContextMenu = false,
                          bool hideButtonInToolbar = false,
                          bool useInNoteListContextMenu = false);
 
     void addScriptingLabel(QString identifier, QString text = "");
 
-    void setScriptingLabelText(QString identifier, QString text);
+    void setScriptingLabelText(const QString& identifier, QString text);
 
     void preReloadScriptingEngine();
 
-    void writeToNoteTextEdit(QString text);
+    void writeToNoteTextEdit(const QString& text);
 
     QString selectedNoteTextEditText();
 
-    void linkTagNameToCurrentNote(QString tagName,
+    void linkTagNameToCurrentNote(const QString& tagName,
                                   bool linkToSelectedNotes = false);
 
     Q_INVOKABLE void reloadTagTree();
@@ -387,7 +387,7 @@ private slots:
 
     void reloadTodoLists();
 
-    void openTodoDialog(QString taskUid = "");
+    void openTodoDialog(const QString& taskUid = "");
 
     void showWindow();
 
@@ -459,7 +459,7 @@ private slots:
 
     void on_actionRename_current_workspace_triggered();
 
-    void setCurrentWorkspace(QString uuid);
+    void setCurrentWorkspace(const QString& uuid);
 
     void on_actionSwitch_to_previous_workspace_triggered();
 
@@ -471,7 +471,7 @@ private slots:
 
     void updatePanelMenu();
 
-    void toggleToolbarVisibility(QString objectName);
+    void toggleToolbarVisibility(const QString& objectName);
 
     void updateToolbarMenu();
 
@@ -688,15 +688,15 @@ private:
 
     void loadNoteFolderListMenu();
 
-    void storeRecentNoteFolder(QString addFolderName, QString removeFolderName);
+    void storeRecentNoteFolder(const QString& addFolderName, const QString& removeFolderName);
 
     void storeSettings();
 
     void removeSelectedNotes();
 
-    void moveSelectedNotesToFolder(QString destinationFolder);
+    void moveSelectedNotesToFolder(const QString& destinationFolder);
 
-    void copySelectedNotesToFolder(QString destinationFolder);
+    void copySelectedNotesToFolder(const QString& destinationFolder);
 
     void selectAllNotes();
 
@@ -728,7 +728,7 @@ private:
 
     void updateEncryptNoteButtons();
 
-    void askForEncryptedNotePasswordIfNeeded(QString additionalText = "");
+    void askForEncryptedNotePasswordIfNeeded(const QString& additionalText = "");
 
     void showAppMetricsNotificationIfNeeded();
 
@@ -791,7 +791,7 @@ private:
 
     QTreeWidgetItem *addTagToTagTreeWidget(QTreeWidgetItem *parent, Tag tag);
 
-    bool jumpToNoteName(QString name);
+    bool jumpToNoteName(const QString& name);
 
     void initScriptingEngine();
 
@@ -928,9 +928,9 @@ private:
 
     void handleScriptingNotesTagUpdating();
 
-    void handleScriptingNotesTagRenaming(QString oldTagName, QString newTagName);
+    void handleScriptingNotesTagRenaming(const QString& oldTagName, const QString& newTagName);
 
-    void handleScriptingNotesTagRemoving(QString tagName,
+    void handleScriptingNotesTagRemoving(const QString& tagName,
                                          bool forBulkOperation = false);
 
     void directoryWatcherWorkaround(bool isNotesDirectoryWasModifiedDisabled,
@@ -938,9 +938,9 @@ private:
 
     void setMenuEnabled(QMenu* menu, bool enabled);
 
-    bool undoFormatting(QString formatter);
+    bool undoFormatting(const QString& formatter);
 
-    void applyFormatter(QString formatter);
+    void applyFormatter(const QString& formatter);
 
     bool isNoteTextSelected();
 

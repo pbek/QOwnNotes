@@ -25,7 +25,7 @@ namespace Utils {
                                QProcess *process = Q_NULLPTR,
                                bool withErrorDialog = true);
         QString gitCommand();
-        void showLog(QString filePath);
+        void showLog(const QString& filePath);
         bool hasLogCommand();
         bool isCurrentNoteFolderUseGit();
     }

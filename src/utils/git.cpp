@@ -141,7 +141,7 @@ bool Utils::Git::hasLogCommand() {
  *
  * @param filePath
  */
-void Utils::Git::showLog(QString filePath) {
+void Utils::Git::showLog(const QString& filePath) {
     QSettings settings;
     QString gitLogCommand = settings.value("gitLogCommand").toString();
 

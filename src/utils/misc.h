@@ -38,17 +38,17 @@ namespace Utils {
 
         void openPath(const QString& absolutePath);
         void openFolderSelect(const QString& absolutePath);
-        QString removeIfStartsWith(QString text, QString removeString);
-        QString removeIfEndsWith(QString text, QString removeString);
-        QString prependIfDoesNotStartWith(QString text, QString startString);
-        QString appendIfDoesNotEndWith(QString text, QString endString);
-        bool startDetachedProcess(QString executablePath,
-                                  QStringList parameters = QStringList(),
+        QString removeIfStartsWith(QString text, const QString& removeString);
+        QString removeIfEndsWith(QString text, const QString& removeString);
+        QString prependIfDoesNotStartWith(QString text, const QString& startString);
+        QString appendIfDoesNotEndWith(QString text, const QString& endString);
+        bool startDetachedProcess(const QString& executablePath,
+                                  const QStringList& parameters = QStringList(),
                                   QString workingDirectory = "");
-        QString shorten(QString text, int length, QString sequence = "...");
-        QString cycleTextCase(QString text);
-        QString toSentenceCase(QString text);
-        QString toStartCase(QString text);
+        QString shorten(QString text, int length, const QString& sequence = "...");
+        QString cycleTextCase(const QString& text);
+        QString toSentenceCase(const QString& text);
+        QString toStartCase(const QString& text);
         QString defaultNotesPath();
         QString dirSeparator();
         void waitMsecs(int msecs);
@@ -60,7 +60,7 @@ namespace Utils {
         QString htmlToMarkdown(QString text);
         QString parseTaskList(const QString &html, bool clickable);
         QByteArray startSynchronousProcess(
-                QString executablePath, QStringList parameters,
+                const QString& executablePath, QStringList parameters,
                 QByteArray data = QByteArray());
         QList<QObject *> getParents(QObject *object);
         QString appDataPath();
@@ -70,7 +70,7 @@ namespace Utils {
         void restartApplication();
         void needRestart();
         bool downloadUrlToFile(QUrl url, QFile *file);
-        QByteArray downloadUrl(QUrl url);
+        QByteArray downloadUrl(const QUrl& url);
         QString genericCSS();
         QHash<int, SearchEngine> getSearchEnginesHashMap();
         int getDefaultSearchEngineId();
@@ -78,23 +78,23 @@ namespace Utils {
         QList<int> getSearchEnginesIds();
         QDataStream &dataStreamWrite(QDataStream &os, const QPrinter &printer);
         QDataStream &dataStreamRead(QDataStream &is, QPrinter &printer);
-        void storePrinterSettings(QPrinter *printer, QString settingsKey);
-        void loadPrinterSettings(QPrinter *printer, QString settingsKey);
+        void storePrinterSettings(QPrinter *printer, const QString& settingsKey);
+        void loadPrinterSettings(QPrinter *printer, const QString& settingsKey);
         bool isNoteEditingAllowed();
         bool isSocketServerEnabled();
         QString unescapeHtml(QString html);
         QString htmlspecialchars(QString text);
-        void printInfo(QString text);
+        void printInfo(const QString& text);
         bool doAutomaticNoteFolderDatabaseClosing();
         bool isNoteListPreview();
         QString toHumanReadableByteSize(qint64 size);
         QString prepareDebugInformationLine(
             const QString &headline, QString data,
             bool withGitHubLineBreaks = true,
-            QString typeText = "");
+            const QString& typeText = "");
         QString generateDebugInformation(bool withGitHubLineBreaks = true);
-        bool regExpInListMatches(QString text, QStringList regExpList);
-        QString importMediaFromBase64(QString &data, QString imageSuffix = "dat");
+        bool regExpInListMatches(const QString& text, QStringList regExpList);
+        QString importMediaFromBase64(QString &data, const QString& imageSuffix = "dat");
     }  // namespace Misc
 }  // namespace Utils
 

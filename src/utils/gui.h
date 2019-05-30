@@ -48,7 +48,7 @@ namespace Utils {
         bool isOneTreeWidgetItemChildVisible(QTreeWidgetItem *item);
 
         void searchForTextInTreeWidget(
-                QTreeWidget *treeWidget, QString text,
+                QTreeWidget *treeWidget, const QString& text,
                 TreeWidgetSearchFlags searchFlags = None);
 
         QMessageBox::StandardButton showMessageBox(
@@ -79,7 +79,7 @@ namespace Utils {
                 QMessageBox::StandardButton defaultButton = QMessageBox::Ok);
 
         bool userDataInTreeWidgetExists(QTreeWidget *treeWidget,
-                                        QVariant userData,
+                                        const QVariant& userData,
                                         int column = 0);
 
         QTreeWidgetItem *getTreeWidgetItemWithUserData(
@@ -97,7 +97,7 @@ namespace Utils {
                 QFontDialog::FontDialogOptions options =
                         QFontDialog::FontDialogOptions());
 
-        void copyCodeBlockText(QTextBlock initialBlock);
+        void copyCodeBlockText(const QTextBlock& initialBlock);
 
         bool autoFormatTableAtCursor(QPlainTextEdit *textEdit);
 
