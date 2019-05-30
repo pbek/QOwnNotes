@@ -1245,7 +1245,7 @@ void MainWindow::updateToolbarMenu() {
  * @param objectName
  */
 void MainWindow::togglePanelVisibility(const QString& objectName) {
-    QDockWidget *dockWidget = findChild<QDockWidget *>(objectName);
+    auto *dockWidget = findChild<QDockWidget *>(objectName);
 
     if (dockWidget == Q_NULLPTR) {
         return;
