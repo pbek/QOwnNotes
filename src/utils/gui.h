@@ -86,6 +86,9 @@ namespace Utils {
                 QTreeWidget *treeWidget, const QVariant &userData,
                 int column = 0);
 
+        void resetBoldStateOfAllTreeWidgetItems(
+                QTreeWidget *treeWidget, int column = 0);
+
         bool isMessageBoxPresent();
 
         QFont fontDialogGetFont(

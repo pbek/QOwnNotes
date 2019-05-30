@@ -147,6 +147,27 @@ QTreeWidgetItem *Utils::Gui::getTreeWidgetItemWithUserData(
 }
 
 /**
+ * Resets the bold state of all tree widget items of a tree widget
+ *
+ * @param treeWidget
+ * @param column
+ */
+void Utils::Gui::resetBoldStateOfAllTreeWidgetItems(
+        QTreeWidget *treeWidget, int column) {
+    // get all items
+    QList<QTreeWidgetItem*> allItems = treeWidget->
+            findItems("", Qt::MatchContains | Qt::MatchRecursive);
+
+    Q_FOREACH(QTreeWidgetItem *item, allItems) {
+            auto font = item->font(column);
+            if (font.bold()) {
+                font.setBold(false);
+                item->setFont(column, font);
+            }
+        }
+}
+
+/**
  * Shows an information message box with a checkbox to override the message box
  * in the future
  *

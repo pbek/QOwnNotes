@@ -7667,6 +7667,11 @@ void MainWindow::reloadCurrentNoteTags() {
 
     _lastNoteSelectionWasMultiple = !currentNoteOnly;
 
+    const QSignalBlocker blocker1(ui->tagTreeWidget);
+    Q_UNUSED(blocker1);
+
+    Utils::Gui::resetBoldStateOfAllTreeWidgetItems(ui->tagTreeWidget);
+
     // add all new remove-tag buttons
     Q_FOREACH(Tag tag, tagList) {
             QPushButton* button = new QPushButton(
@@ -7689,6 +7694,18 @@ void MainWindow::reloadCurrentNoteTags() {
                              this, SLOT(removeNoteTagClicked()));
 
             ui->noteTagButtonFrame->layout()->addWidget(button);
+
+            QTreeWidgetItem* item =
+                    Utils::Gui::getTreeWidgetItemWithUserData(
+                            ui->tagTreeWidget,
+                            tag.getId());
+
+            // set tag item in tag tree widget to bold if note has tag
+            auto font = item->font(0);
+            if (!font.bold()) {
+                font.setBold(true);
+                item->setFont(0, font);
+            }
         }
 
 //    // find tags not in common of selected notes

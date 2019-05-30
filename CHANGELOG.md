@@ -3,6 +3,8 @@
 ## 19.5.7
 - fixed unnecessary scrolling and dark mode link colors in the *Browser extension*
   settings (for [#1213](https://github.com/pbek/QOwnNotes/issues/1213))
+- if the current note has a certain tag it will be now highlighted as bold in
+  the tags panel (for [#1210](https://github.com/pbek/QOwnNotes/issues/1210))
 
 ## 19.5.6
 - fixed creation of empty notes at the note root folder when importing Evernote enex
