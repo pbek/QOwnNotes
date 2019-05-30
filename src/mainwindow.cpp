@@ -6994,6 +6994,8 @@ void MainWindow::reloadTagTree() {
 
     ui->tagTreeWidget->resizeColumnToContents(0);
     ui->tagTreeWidget->resizeColumnToContents(1);
+
+    highlightCurrentNoteTagsInTagTree();
 }
 
 /**
@@ -7663,11 +7665,6 @@ void MainWindow::reloadCurrentNoteTags() {
 
     _lastNoteSelectionWasMultiple = !currentNoteOnly;
 
-    const QSignalBlocker blocker1(ui->tagTreeWidget);
-    Q_UNUSED(blocker1);
-
-    Utils::Gui::resetBoldStateOfAllTreeWidgetItems(ui->tagTreeWidget);
-
     // add all new remove-tag buttons
     Q_FOREACH(Tag tag, tagList) {
             QPushButton* button = new QPushButton(
@@ -7690,7 +7687,44 @@ void MainWindow::reloadCurrentNoteTags() {
                              this, SLOT(removeNoteTagClicked()));
 
             ui->noteTagButtonFrame->layout()->addWidget(button);
+        }
 
+//    // find tags not in common of selected notes
+//    if (selectedNotesCount > 1) {
+//        QLabel *noteTagButtonFrame = new QLabel("+3 tags");
+//        ui->noteTagButtonFrame->layout()->addWidget(noteTagButtonFrame);
+//    }
+
+    // add a spacer to prevent the button items to take the full width
+    auto *spacer = new QSpacerItem(0, 20,
+                                          QSizePolicy::MinimumExpanding,
+                                          QSizePolicy::Ignored);
+    ui->noteTagButtonFrame->layout()->addItem(spacer);
+
+    highlightCurrentNoteTagsInTagTree();
+}
+
+/**
+ * Highlights the tags of the current note in the tag tree
+ */
+void MainWindow::highlightCurrentNoteTagsInTagTree() {
+    int selectedNotesCount = getSelectedNotesCount();
+    bool currentNoteOnly = selectedNotesCount <= 1;
+    QList<Tag> tagList;
+
+    if (currentNoteOnly) {
+        tagList = Tag::fetchAllOfNote(currentNote);
+    } else {
+        const QList<Note> &notes = selectedNotes();
+        tagList = Tag::fetchAllOfNotes(notes);
+    }
+
+    const QSignalBlocker blocker1(ui->tagTreeWidget);
+    Q_UNUSED(blocker1);
+
+    Utils::Gui::resetBoldStateOfAllTreeWidgetItems(ui->tagTreeWidget);
+
+    Q_FOREACH(Tag tag, tagList) {
             QTreeWidgetItem* item =
                     Utils::Gui::getTreeWidgetItemWithUserData(
                             ui->tagTreeWidget,
@@ -7705,18 +7739,6 @@ void MainWindow::reloadCurrentNoteTags() {
                 }
             }
         }
-
-//    // find tags not in common of selected notes
-//    if (selectedNotesCount > 1) {
-//        QLabel *noteTagButtonFrame = new QLabel("+3 tags");
-//        ui->noteTagButtonFrame->layout()->addWidget(noteTagButtonFrame);
-//    }
-
-    // add a spacer to prevent the button items to take the full width
-    auto *spacer = new QSpacerItem(0, 20,
-                                          QSizePolicy::MinimumExpanding,
-                                          QSizePolicy::Ignored);
-    ui->noteTagButtonFrame->layout()->addItem(spacer);
 }
 
 /**

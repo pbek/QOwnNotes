@@ -764,6 +764,8 @@ private:
 
     void reloadCurrentNoteTags();
 
+    void highlightCurrentNoteTagsInTagTree();
+
     void filterNotesBySearchLineEditText();
 
     void filterNotes(bool searchForText = true);
