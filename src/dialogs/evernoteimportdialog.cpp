@@ -1,5 +1,4 @@
 #include <utility>
-
 #include <QFileDialog>
 #include <QDebug>
 #include <QXmlQuery>

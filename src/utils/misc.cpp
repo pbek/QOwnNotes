@@ -1,5 +1,3 @@
-#include <utility>
-
 /*
  * Copyright (c) 2014-2019 Patrizio Bekerle -- http://www.bekerle.com
  *
@@ -40,6 +38,7 @@
 #include "version.h"
 #include "release.h"
 #include "misc.h"
+#include <utility>
 
 #ifdef Q_OS_WIN
 #include <windows.h>

@@ -1,5 +1,3 @@
-#include <utility>
-
 /*
  * Copyright (c) 2014-2019 Patrizio Bekerle -- http://www.bekerle.com
  *
@@ -95,6 +93,7 @@
 #include <widgets/notetreewidgetitem.h>
 #include <helpers/fakevimproxy.h>
 #include <QProgressDialog>
+#include <utility>
 
 MainWindow::MainWindow(QWidget *parent) :
         QMainWindow(parent),

@@ -1,5 +1,4 @@
 #include <utility>
-
 #include <entities/tag.h>
 #include <entities/notefolder.h>
 #include "noteapi.h"

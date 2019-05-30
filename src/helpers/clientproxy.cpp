@@ -1,5 +1,4 @@
 #include <utility>
-
 #include "clientproxy.h"
 #include "services/cryptoservice.h"
 #include <QUrl>

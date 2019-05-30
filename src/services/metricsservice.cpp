@@ -1,5 +1,4 @@
 #include <utility>
-
 #include "metricsservice.h"
 #include "version.h"
 #include "release.h"

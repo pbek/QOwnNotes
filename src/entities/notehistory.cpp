@@ -1,5 +1,4 @@
 #include <utility>
-
 #include "notehistory.h"
 #include <QScrollBar>
 #include <QSettings>

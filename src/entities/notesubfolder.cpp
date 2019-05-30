@@ -1,5 +1,4 @@
 #include <utility>
-
 #include "entities/notesubfolder.h"
 #include "notefolder.h"
 #include "note.h"

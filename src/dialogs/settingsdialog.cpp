@@ -1,5 +1,4 @@
 #include <utility>
-
 #include "services/owncloudservice.h"
 #include "services/databaseservice.h"
 #include "dialogs/settingsdialog.h"

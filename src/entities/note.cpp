@@ -1,7 +1,4 @@
 #include <utility>
-
-#include <utility>
-
 #include "entities/note.h"
 #include <QDebug>
 #include <QSqlRecord>

@@ -1,15 +1,4 @@
 #include <utility>
-
-#include <utility>
-
-#include <utility>
-
-#include <utility>
-
-#include <utility>
-
-#include <utility>
-
 #include "scriptingservice.h"
 #include <QCoreApplication>
 #include <QDebug>
