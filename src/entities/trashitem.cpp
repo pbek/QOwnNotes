@@ -246,13 +246,13 @@ void TrashItem::setNote(Note *note) {
     _fullNoteFilePath = note->fullNoteFilePath();
 }
 
-TrashItem TrashItem::trashItemFromQuery(QSqlQuery query) {
+TrashItem TrashItem::trashItemFromQuery(const QSqlQuery& query) {
     TrashItem trashItem;
     trashItem.fillFromQuery(query);
     return trashItem;
 }
 
-bool TrashItem::fillFromQuery(QSqlQuery query) {
+bool TrashItem::fillFromQuery(const QSqlQuery& query) {
     id = query.value("id").toInt();
     fileName = query.value("file_name").toString();
     noteSubFolderPathData = query.value("note_sub_folder_path_data").toString();

@@ -44,7 +44,7 @@ public:
 
     static QString getBookmarksNoteName();
 
-    QString flashMessageJsonText(QString message);
+    QString flashMessageJsonText(const QString& message);
 
     static QJsonArray createBookmarks(const QJsonObject &jsonObject);
 

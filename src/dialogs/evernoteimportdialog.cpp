@@ -1,3 +1,5 @@
+#include <utility>
+
 #include <QFileDialog>
 #include <QDebug>
 #include <QXmlQuery>
@@ -73,7 +75,7 @@ void EvernoteImportDialog::on_fileButton_clicked() {
  *
  * @param data
  */
-int EvernoteImportDialog::countNotes(QString data) {
+int EvernoteImportDialog::countNotes(const QString& data) {
     QXmlQuery query;
     query.setFocus(data);
     query.setQuery("en-export/note");
@@ -97,7 +99,7 @@ int EvernoteImportDialog::countNotes(QString data) {
  * @param data
  */
 void EvernoteImportDialog::initNoteCount(QString data) {
-    int count = countNotes(data);
+    int count = countNotes(std::move(data));
 
     ui->progressBar->setMaximum(count);
     ui->progressBar->show();
@@ -446,7 +448,7 @@ QString EvernoteImportDialog::getMarkdownForAttachmentFileData(
  *
  * @param data
  */
-void EvernoteImportDialog::importNotes(QString data) {
+void EvernoteImportDialog::importNotes(const QString& data) {
     QXmlQuery query;
     query.setFocus(data);
     query.setQuery("en-export/note");
@@ -608,8 +610,8 @@ void EvernoteImportDialog::tagNote(QXmlQuery &query, Note &note) {
  * @return
  */
 QTreeWidgetItem *EvernoteImportDialog::addMetaDataTreeWidgetItem(
-        QString name,
-        QString attributeName,
+        const QString& name,
+        const QString& attributeName,
         QTreeWidgetItem *parentItem) {
     auto *item = new QTreeWidgetItem();
     item->setText(0, name);

@@ -49,7 +49,7 @@ void QOwnNotesMarkdownHighlighter::highlightBlock(const QString &text) {
     _highlightingFinished = true;
 }
 
-void QOwnNotesMarkdownHighlighter::highlightMarkdown(QString text) {
+void QOwnNotesMarkdownHighlighter::highlightMarkdown(const QString& text) {
     if (!text.isEmpty()) {
         highlightAdditionalRules(_highlightingRulesPre, text);
 
@@ -71,7 +71,7 @@ void QOwnNotesMarkdownHighlighter::highlightMarkdown(QString text) {
  *
  * @param text
  */
-void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(QString text) {
+void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(const QString& text) {
     QRegularExpression regex(R"(note:\/\/[^\s\)>]+)");
     QRegularExpressionMatch match = regex.match(text);
 

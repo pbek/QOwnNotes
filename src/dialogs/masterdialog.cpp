@@ -17,7 +17,7 @@ void MasterDialog::resizeEvent(QResizeEvent *event) {
     // save the geometry of the dialog
     storeGeometrySettings();
 
-    QWidget::resizeEvent(event);
+    QDialog::resizeEvent(event);
 }
 
 /**

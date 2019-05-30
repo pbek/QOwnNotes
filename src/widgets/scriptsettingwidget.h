@@ -40,7 +40,7 @@ private:
     QMap<QString, QVariant> _variableMap;
     Script _script;
 
-    void storeSettingsVariable(QJsonValue value);
+    void storeSettingsVariable(const QJsonValue& value);
 };
 
 #endif // SCRIPTSETTINGWIDGET_H

@@ -99,11 +99,11 @@ void FakeVimProxy::handleExCommand(bool *handled, const FakeVim::Internal::ExCom
 }
 
 void FakeVimProxy::requestSetBlockSelection(const QTextCursor &tc) {
-    QPlainTextEdit *ed = qobject_cast<QPlainTextEdit *>(m_widget);
+    auto *ed = qobject_cast<QPlainTextEdit *>(m_widget);
     if (!ed)
         return;
 
-    QPalette pal = ed->parentWidget() != NULL ? ed->parentWidget()->palette()
+    QPalette pal = ed->parentWidget() != nullptr ? ed->parentWidget()->palette()
                                               : QApplication::palette();
 
     m_blockSelection.clear();
@@ -111,7 +111,7 @@ void FakeVimProxy::requestSetBlockSelection(const QTextCursor &tc) {
 
     QTextCursor cur = tc;
 
-    QTextEdit::ExtraSelection selection;
+    QTextEdit::ExtraSelection selection = QTextEdit::ExtraSelection();
     selection.format.setBackground( pal.color(QPalette::Base) );
     selection.format.setForeground( pal.color(QPalette::Text) );
     selection.cursor = cur;
@@ -147,11 +147,11 @@ void FakeVimProxy::requestSetBlockSelection(const QTextCursor &tc) {
 }
 
 void FakeVimProxy::requestDisableBlockSelection() {
-    QPlainTextEdit *ed = qobject_cast<QPlainTextEdit *>(m_widget);
+    auto *ed = qobject_cast<QPlainTextEdit *>(m_widget);
     if (!ed)
         return;
 
-    QPalette pal = ed->parentWidget() != NULL ? ed->parentWidget()->palette()
+    QPalette pal = ed->parentWidget() != nullptr ? ed->parentWidget()->palette()
                                               : QApplication::palette();
 
     m_blockSelection.clear();
@@ -166,7 +166,7 @@ void FakeVimProxy::requestDisableBlockSelection() {
 }
 
 void FakeVimProxy::updateBlockSelection() {
-    QPlainTextEdit *ed = qobject_cast<QPlainTextEdit *>(m_widget);
+    auto *ed = qobject_cast<QPlainTextEdit *>(m_widget);
     if (!ed)
         return;
 
@@ -178,7 +178,7 @@ void FakeVimProxy::requestHasBlockSelection(bool *on) {
 }
 
 void FakeVimProxy::indentRegion(int beginBlock, int endBlock, QChar typedChar) {
-    QPlainTextEdit *ed = qobject_cast<QPlainTextEdit *>(m_widget);
+    auto *ed = qobject_cast<QPlainTextEdit *>(m_widget);
     if (!ed)
         return;
 
@@ -235,7 +235,7 @@ int FakeVimProxy::firstNonSpace(const QString &text) {
 }
 
 void FakeVimProxy::updateExtraSelections() {
-    QPlainTextEdit *ed = qobject_cast<QPlainTextEdit *>(m_widget);
+    auto *ed = qobject_cast<QPlainTextEdit *>(m_widget);
     if (ed)
         ed->setExtraSelections(m_clearSelection + m_searchSelection + m_blockSelection);
 }
@@ -270,10 +270,10 @@ bool FakeVimProxy::hasChanges() {
 }
 
 QTextDocument *FakeVimProxy::document() const {
-    QTextDocument *doc = NULL;
-    if (QPlainTextEdit *ed = qobject_cast<QPlainTextEdit *>(m_widget))
+    QTextDocument *doc = nullptr;
+    if (auto *ed = qobject_cast<QPlainTextEdit *>(m_widget))
         doc = ed->document();
-    else if (QPlainTextEdit *ed = qobject_cast<QPlainTextEdit *>(m_widget))
+    else if (auto *ed = qobject_cast<QPlainTextEdit *>(m_widget))
         doc = ed->document();
     return doc;
 }

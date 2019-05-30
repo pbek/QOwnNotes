@@ -89,15 +89,15 @@ void Script::setName(QString text) {
 }
 
 void Script::setIdentifier(QString identifier) {
-    this->identifier = identifier;
+    this->identifier = std::move(identifier);
 }
 
 void Script::setInfoJson(QString infoJson) {
-    this->infoJson = infoJson;
+    this->infoJson = std::move(infoJson);
 }
 
 void Script::setSettingsVariablesJson(QString json) {
-    this->settingsVariablesJson = json;
+    this->settingsVariablesJson = std::move(json);
 }
 
 void Script::setSettingsVariablesJson(QJsonObject jsonObject) {
@@ -106,7 +106,7 @@ void Script::setSettingsVariablesJson(QJsonObject jsonObject) {
 }
 
 void Script::setScriptPath(QString text) {
-    this->scriptPath = text;
+    this->scriptPath = std::move(text);
 }
 
 void Script::setPriority(int value) {
@@ -117,7 +117,7 @@ void Script::setEnabled(bool value) {
     this->enabled = value;
 }
 
-bool Script::create(QString name, QString scriptPath) {
+bool Script::create(const QString& name, QString scriptPath) {
     QSqlDatabase db = QSqlDatabase::database("disk");
     QSqlQuery query(db);
 
@@ -129,7 +129,7 @@ bool Script::create(QString name, QString scriptPath) {
     // portable mode
     query.bindValue(":scriptPath",
                     Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(
-                            scriptPath));
+                            std::move(scriptPath)));
 
     return query.exec();
 }
@@ -196,7 +196,7 @@ int Script::countEnabled() {
  * @return
  */
 bool Script::scriptFromRepositoryExists(QString identifier) {
-    Script script = fetchByIdentifier(identifier);
+    Script script = fetchByIdentifier(std::move(identifier));
     return script.isFetched();
 }
 
@@ -206,7 +206,7 @@ bool Script::scriptFromRepositoryExists(QString identifier) {
  * @param identifier
  * @return
  */
-Script Script::fetchByIdentifier(QString identifier) {
+Script Script::fetchByIdentifier(const QString& identifier) {
     QSqlDatabase db = QSqlDatabase::database("disk");
     QSqlQuery query(db);
 
@@ -276,13 +276,13 @@ bool Script::remove() {
     }
 }
 
-Script Script::scriptFromQuery(QSqlQuery query) {
+Script Script::scriptFromQuery(const QSqlQuery& query) {
     Script script;
     script.fillFromQuery(query);
     return script;
 }
 
-bool Script::fillFromQuery(QSqlQuery query) {
+bool Script::fillFromQuery(const QSqlQuery& query) {
     this->id = query.value("id").toInt();
     this->name = query.value("name").toString();
     this->identifier = query.value("identifier").toString();
@@ -488,7 +488,7 @@ QUrl Script::remoteScriptUrl() {
  *
  * @return
  */
-QUrl Script::remoteFileUrl(QString fileName) {
+QUrl Script::remoteFileUrl(const QString& fileName) {
     if (fileName.isEmpty()) {
         return QUrl();
     }
@@ -536,7 +536,7 @@ QDebug operator<<(QDebug dbg, const Script &script) {
  *
  * @param jsonObject
  */
-ScriptInfoJson::ScriptInfoJson(QJsonObject jsonObject) {
+ScriptInfoJson::ScriptInfoJson(const QJsonObject& jsonObject) {
     if (jsonObject.isEmpty()) {
         return;
     }

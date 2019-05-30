@@ -42,9 +42,9 @@ private:
 
     void updateCurrentLayout();
 
-    static QString getLayoutName(QString layoutIdentifier);
+    static QString getLayoutName(const QString& layoutIdentifier);
 
-    static QString getLayoutDescription(QString layoutIdentifier);
+    static QString getLayoutDescription(const QString& layoutIdentifier);
 };
 
 #endif // LAYOUTWIDGET_H

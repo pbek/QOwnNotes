@@ -56,7 +56,7 @@ public:
     void clear();
     NoteHistoryItem getLastItemOfNote(Note note);
     QList<NoteHistoryItem> getNoteHistoryItems() const;
-    void addNoteHistoryItem(NoteHistoryItem item);
+    void addNoteHistoryItem(const NoteHistoryItem& item);
     void storeForCurrentNoteFolder();
     void restoreForCurrentNoteFolder();
 };

@@ -13,11 +13,11 @@ public:
     static bool create(QString name, QString localPath,
                        int ownCloudServerId, QString remotePath);
     static NoteFolder fetch(int id);
-    static NoteFolder noteFolderFromQuery(QSqlQuery query);
+    static NoteFolder noteFolderFromQuery(const QSqlQuery& query);
     bool store();
     friend QDebug operator<<(QDebug dbg, const NoteFolder &noteFolder);
     bool exists();
-    bool fillFromQuery(QSqlQuery query);
+    bool fillFromQuery(const QSqlQuery& query);
     bool remove();
     bool isFetched();
     static QList<NoteFolder> fetchAll();

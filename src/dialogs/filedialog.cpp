@@ -61,7 +61,7 @@ void FileDialog::storeDirectory(QString path) {
     settings.setValue(_generalSettingsKey, path);
 }
 
-void FileDialog::storeDirectory(QStringList files) {
+void FileDialog::storeDirectory(const QStringList& files) {
     if (files.count() > 0) {
         storeDirectory(files.at(0));
     }

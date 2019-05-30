@@ -286,7 +286,7 @@ LogWidget * LogWidget::instance() {
 #endif
 
     if (logWidget == Q_NULLPTR) {
-        logWidget = createInstance(NULL);
+        logWidget = createInstance(nullptr);
     }
 
     return logWidget;
@@ -296,7 +296,7 @@ LogWidget * LogWidget::instance() {
  * Creates a global instance of the class
  */
 LogWidget * LogWidget::createInstance(QWidget *parent) {
-    LogWidget *logWidget = new LogWidget(parent);
+    auto *logWidget = new LogWidget(parent);
 
 #ifndef INTEGRATION_TESTS
     qApp->setProperty(
@@ -372,7 +372,7 @@ void LogWidget::logMessageOutput(
  * @param logType
  * @param msg
  */
-void LogWidget::logToFileIfAllowed(LogType logType, QString msg) {
+void LogWidget::logToFileIfAllowed(LogType logType, const QString& msg) {
     QSettings settings;
     if (settings.value("Debug/fileLogging").toBool()) {
         QFile logFile(Utils::Misc::logFilePath());
@@ -452,7 +452,7 @@ void LogWidget::onDestroyed(QObject *obj) {
  */
 bool LogWidget::eventFilter(QObject *obj, QEvent *event) {
     if (event->type() == QEvent::KeyPress) {
-        QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
+        auto *keyEvent = static_cast<QKeyEvent *>(event);
 
         // hide the option frame on Escape key
         if (keyEvent->key() == Qt::Key_Escape) {

@@ -39,7 +39,7 @@ void Utils::Git::commitCurrentNoteFolder() {
         return;
     }
 
-    QProcess *process = new QProcess();
+    auto *process = new QProcess();
     process->setWorkingDirectory(NoteFolder::currentLocalPath());
 
     if (!executeGitCommand("init", process) ||
@@ -57,7 +57,7 @@ void Utils::Git::commitCurrentNoteFolder() {
  * @param process
  * @return
  */
-bool Utils::Git::executeCommand(QString command, QProcess *process,
+bool Utils::Git::executeCommand(const QString& command, QProcess *process,
                                 bool withErrorDialog) {
     if (process == Q_NULLPTR) {
         process = new QProcess();
@@ -100,7 +100,7 @@ bool Utils::Git::executeCommand(QString command, QProcess *process,
  * @param process
  * @return
  */
-bool Utils::Git::executeGitCommand(QString arguments, QProcess *process,
+bool Utils::Git::executeGitCommand(const QString& arguments, QProcess *process,
         bool withErrorDialog) {
     return executeCommand("\"" + gitCommand() + "\" " + arguments, process,
                           withErrorDialog);

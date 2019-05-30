@@ -686,8 +686,8 @@ bool DatabaseService::setupTables() {
     return true;
 }
 
-bool DatabaseService::setAppData(QString name, QString value,
-                                 QString connectionName) {
+bool DatabaseService::setAppData(const QString& name, const QString& value,
+                                 const QString& connectionName) {
     QSqlDatabase db = QSqlDatabase::database(connectionName);
     QSqlQuery query(db);
 
@@ -698,7 +698,7 @@ bool DatabaseService::setAppData(QString name, QString value,
     return query.exec();
 }
 
-QString DatabaseService::getAppData(QString name, QString connectionName) {
+QString DatabaseService::getAppData(const QString& name, const QString& connectionName) {
     QSqlDatabase db = QSqlDatabase::database(connectionName);
     QSqlQuery query(db);
 

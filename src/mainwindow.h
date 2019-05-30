@@ -467,7 +467,7 @@ private slots:
 
     void restoreCurrentWorkspace();
 
-    void togglePanelVisibility(QString objectName);
+    void togglePanelVisibility(const QString& objectName);
 
     void updatePanelMenu();
 

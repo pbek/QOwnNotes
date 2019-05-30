@@ -364,7 +364,7 @@ void QOwnNotesMarkdownTextEdit::highlightCurrentLine()
     // check if current line is really visible!
     if (!isReadOnly()) {
         ensureCursorVisible();
-        QTextEdit::ExtraSelection selection;
+        QTextEdit::ExtraSelection selection = QTextEdit::ExtraSelection();
 
         QColor lineColor = Utils::Schema::schemaSettings->getBackgroundColor(
                 MarkdownHighlighter::HighlighterState::
@@ -385,7 +385,7 @@ void QOwnNotesMarkdownTextEdit::highlightCurrentLine()
 
 bool QOwnNotesMarkdownTextEdit::eventFilter(QObject *obj, QEvent *event) {
     if (event->type() == QEvent::KeyPress) {
-        QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
+        auto *keyEvent = static_cast<QKeyEvent *>(event);
 
         // show notification if user tries to edit a note while note editing
         // is turned off

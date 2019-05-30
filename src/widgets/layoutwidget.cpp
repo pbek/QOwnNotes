@@ -135,7 +135,7 @@ void LayoutWidget::setManualSettingsStoring(bool enabled) {
     }
 }
 
-QString LayoutWidget::getLayoutName(QString layoutIdentifier) {
+QString LayoutWidget::getLayoutName(const QString& layoutIdentifier) {
     if (layoutIdentifier == "minimal") {
         return tr("Minimal", "Layout name");
     } else if (layoutIdentifier == "full") {
@@ -149,7 +149,7 @@ QString LayoutWidget::getLayoutName(QString layoutIdentifier) {
     return "";
 }
 
-QString LayoutWidget::getLayoutDescription(QString layoutIdentifier) {
+QString LayoutWidget::getLayoutDescription(const QString& layoutIdentifier) {
     const QString &centralWidgetAddText = " " +
                                           tr("The note edit panel is the central widget that will be "
                                              "resized automatically.", "Layout description");

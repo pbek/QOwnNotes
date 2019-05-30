@@ -35,9 +35,9 @@ private:
     Ui::EvernoteImportDialog *ui;
     int _importCount;
 
-    void importNotes(QString data);
+    void importNotes(const QString& data);
 
-    int countNotes(QString data);
+    int countNotes(const QString& data);
 
     void initNoteCount(QString data);
 
@@ -52,8 +52,8 @@ private:
     QString importAttachments(QString content, QXmlQuery query);
 
     QTreeWidgetItem *addMetaDataTreeWidgetItem(
-            QString name,
-            QString attributeName = "",
+            const QString& name,
+            const QString& attributeName = "",
             QTreeWidgetItem *parentItem = nullptr);
 
     void setupMetaDataTreeWidgetItems();

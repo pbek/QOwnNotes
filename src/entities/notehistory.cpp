@@ -1,3 +1,5 @@
+#include <utility>
+
 #include "notehistory.h"
 #include <QScrollBar>
 #include <QSettings>
@@ -14,12 +16,12 @@ NoteHistoryItem::NoteHistoryItem(Note *note, QPlainTextEdit *textEdit) {
     _cursorPosition = 0;
     _relativeScrollBarPosition = 0;
 
-    if (note != NULL) {
+    if (note != nullptr) {
         _noteName = note->getName();
         _noteSubFolderPathData = note->noteSubFolderPathData();
     }
 
-    if (textEdit != NULL) {
+    if (textEdit != nullptr) {
         _cursorPosition = textEdit->textCursor().position();
         _relativeScrollBarPosition = getTextEditScrollBarRelativePosition(
                 textEdit);
@@ -30,8 +32,8 @@ NoteHistoryItem::NoteHistoryItem(QString noteName,
                                  QString noteSubFolderPathData,
                                  int cursorPosition,
                                  float relativeScrollBarPosition) {
-    _noteName = noteName;
-    _noteSubFolderPathData = noteSubFolderPathData;
+    _noteName = std::move(noteName);
+    _noteSubFolderPathData = std::move(noteSubFolderPathData);
     _cursorPosition = cursorPosition;
     _relativeScrollBarPosition = relativeScrollBarPosition;
 }
@@ -269,7 +271,7 @@ NoteHistoryItem NoteHistory::getCurrentHistoryItem() {
 }
 
 bool NoteHistory::isEmpty() {
-    return noteHistory->size() == 0;
+    return noteHistory->empty();
 }
 
 /**
@@ -382,7 +384,7 @@ QList<NoteHistoryItem> NoteHistory::getNoteHistoryItems() const {
  *
  * @param item
  */
-void NoteHistory::addNoteHistoryItem(NoteHistoryItem item) {
+void NoteHistory::addNoteHistoryItem(const NoteHistoryItem& item) {
     noteHistory->append(item);
 }
 

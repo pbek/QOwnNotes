@@ -1,3 +1,5 @@
+#include <utility>
+
 #include "entities/notesubfolder.h"
 #include "notefolder.h"
 #include "note.h"
@@ -41,7 +43,7 @@ QDateTime NoteSubFolder::getModified() {
 }
 
 void NoteSubFolder::setName(QString text) {
-    this->name = text;
+    this->name = std::move(text);
 }
 
 void NoteSubFolder::setParentId(int parentId) {
@@ -73,7 +75,7 @@ NoteSubFolder NoteSubFolder::fetch(int id) {
 }
 
 NoteSubFolder NoteSubFolder::fetchByNameAndParentId(
-        QString name, int parentId) {
+        const QString& name, int parentId) {
     QSqlDatabase db = QSqlDatabase::database("memory");
     QSqlQuery query(db);
 
@@ -138,7 +140,7 @@ QString NoteSubFolder::pathData() {
  * Fetches a note sub folder by its path data
  */
 NoteSubFolder NoteSubFolder::fetchByPathData(QString pathData,
-                                             QString separator) {
+                                             const QString& separator) {
     pathData = Utils::Misc::removeIfStartsWith(pathData, separator);
     QStringList pathList = pathData.split(separator);
     NoteSubFolder noteSubFolder;
@@ -188,7 +190,7 @@ bool NoteSubFolder::removeFromFileSystem() {
 /**
  * Renames the note subfolder in the file system
  */
-bool NoteSubFolder::rename(QString newName) {
+bool NoteSubFolder::rename(const QString& newName) {
     QDir dir = this->dir();
 
     if (dir.exists() && !newName.isEmpty()) {
@@ -210,13 +212,13 @@ bool NoteSubFolder::rename(QString newName) {
     return false;
 }
 
-NoteSubFolder NoteSubFolder::noteSubFolderFromQuery(QSqlQuery query) {
+NoteSubFolder NoteSubFolder::noteSubFolderFromQuery(const QSqlQuery& query) {
     NoteSubFolder noteSubFolder;
     noteSubFolder.fillFromQuery(query);
     return noteSubFolder;
 }
 
-bool NoteSubFolder::fillFromQuery(QSqlQuery query) {
+bool NoteSubFolder::fillFromQuery(const QSqlQuery& query) {
     id = query.value("id").toInt();
     parentId = query.value("parent_id").toInt();
     name = query.value("name").toString();
@@ -279,7 +281,7 @@ QList<int> NoteSubFolder::fetchAllIds() {
 }
 
 QList<NoteSubFolder> NoteSubFolder::fetchAllByParentId(
-        int parentId, QString sortBy) {
+        int parentId, const QString& sortBy) {
     QSqlDatabase db = QSqlDatabase::database("memory");
     QSqlQuery query(db);
 

@@ -95,7 +95,7 @@ TrashDialog::TrashDialog(QJSValue notes, MainWindow *mainWindow,
         QString fileName =
                 notesIterator.value().property("fileName").toString();
 
-        QListWidgetItem *item = new QListWidgetItem();
+        auto *item = new QListWidgetItem();
         item->setText(itemName);
         item->setData(Qt::UserRole, fileName);
         item->setToolTip(dateString);

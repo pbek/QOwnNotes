@@ -132,7 +132,7 @@ ScriptSettingWidget::~ScriptSettingWidget() {
  *
  * @param value
  */
-void ScriptSettingWidget::storeSettingsVariable(QJsonValue value) {
+void ScriptSettingWidget::storeSettingsVariable(const QJsonValue& value) {
     // we need to fetch the data again so we are not overwriting data of other
     // ScriptSettingWidget instances
     _script.refetch();

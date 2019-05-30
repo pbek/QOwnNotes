@@ -1,3 +1,5 @@
+#include <utility>
+
 #include "clientproxy.h"
 #include "services/cryptoservice.h"
 #include <QUrl>
@@ -111,7 +113,7 @@ const char* ClientProxy::proxyTypeToCStr(QNetworkProxy::ProxyType type)
 void ClientProxy::lookupSystemProxyAsync(
         const QUrl &url, QObject *dst, const char *slot)
 {
-    SystemProxyRunnable *runnable = new SystemProxyRunnable(url);
+    auto *runnable = new SystemProxyRunnable(url);
     QObject::connect(
             runnable,
             SIGNAL(systemProxyLookedUp(QNetworkProxy)),
@@ -122,10 +124,7 @@ void ClientProxy::lookupSystemProxyAsync(
     QThreadPool::globalInstance()->start(runnable);
 }
 
-SystemProxyRunnable::SystemProxyRunnable(
-        const QUrl &url) : QObject(), QRunnable(), _url(url)
-{
-
+SystemProxyRunnable::SystemProxyRunnable(QUrl url) : QObject(), QRunnable(), _url(std::move(url)) {
 }
 
 void SystemProxyRunnable::run()

@@ -30,7 +30,7 @@ public:
 
     bool refetch();
 
-    bool fillFromQuery(QSqlQuery query);
+    bool fillFromQuery(const QSqlQuery& query);
 
     bool removeFile();
 
@@ -54,7 +54,7 @@ public:
 
     qint64 getFileSize();
 
-    static TrashItem trashItemFromQuery(QSqlQuery query);
+    static TrashItem trashItemFromQuery(const QSqlQuery& query);
 
     static bool deleteAll();
 

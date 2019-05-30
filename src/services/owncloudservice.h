@@ -43,11 +43,11 @@ public:
 
     void settingsConnectionTest(SettingsDialog *dialog);
 
-    void loadVersions(QString fileName, MainWindow *mainWindow);
+    void loadVersions(const QString& fileName, MainWindow *mainWindow);
 
     void loadTrash(MainWindow *mainWindow);
 
-    void restoreTrashedNoteOnServer(QString fileName,
+    void restoreTrashedNoteOnServer(const QString& fileName,
                                     int timestamp, MainWindow *mainWindow);
 
     void settingsGetCalendarList(SettingsDialog *dialog);
@@ -67,7 +67,7 @@ public:
 
     void shareNote(Note note, ShareDialog *shareDialog);
 
-    void fetchShares(QString path = "");
+    void fetchShares(const QString& path = "");
 
     void fetchBookmarks();
 
@@ -132,7 +132,7 @@ private:
     void loadDirectory(QString &data);
 
     void showOwnCloudServerErrorMessage(
-            QString message = QString(""), bool withSettingsButton = true);
+            const QString& message = QString(""), bool withSettingsButton = true);
 
     void showOwnCloudMessage(
             QString headline = QString(""), QString message = QString(""),

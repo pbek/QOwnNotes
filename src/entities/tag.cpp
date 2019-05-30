@@ -187,13 +187,13 @@ bool Tag::remove() {
     }
 }
 
-Tag Tag::tagFromQuery(QSqlQuery query) {
+Tag Tag::tagFromQuery(const QSqlQuery& query) {
     Tag tag;
     tag.fillFromQuery(query);
     return tag;
 }
 
-bool Tag::fillFromQuery(QSqlQuery query) {
+bool Tag::fillFromQuery(const QSqlQuery& query) {
     this->id = query.value("id").toInt();
     this->name = query.value("name").toString();
     this->priority = query.value("priority").toInt();
@@ -250,7 +250,7 @@ QList<Tag> Tag::fetchAll() {
     return tagList;
 }
 
-QList<Tag> Tag::fetchAllByParentId(int parentId, QString sortBy) {
+QList<Tag> Tag::fetchAllByParentId(int parentId, const QString& sortBy) {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     QList<Tag> tagList;
@@ -434,7 +434,7 @@ QStringList Tag::fetchAllNamesOfNote(Note note) {
 /**
  * Fetches the names by substring searching for the name
  */
-QStringList Tag::searchAllNamesByName(QString name) {
+QStringList Tag::searchAllNamesByName(const QString& name) {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     QStringList tagNameList;
@@ -460,7 +460,7 @@ QStringList Tag::searchAllNamesByName(QString name) {
 /**
  * Fetches one Tag of a note that has a color
  */
-Tag Tag::fetchOneOfNoteWithColor(Note note) {
+Tag Tag::fetchOneOfNoteWithColor(const Note& note) {
     Q_FOREACH(Tag tag, fetchAllOfNote(note)) {
             if (tag.getColor().isValid()) {
                 return tag;
@@ -531,7 +531,7 @@ bool Tag::isLinkedToNote(Note note) {
 /**
  * Returns all tags that are linked to certain note names
  */
-QList<Tag> Tag::fetchAllWithLinkToNoteNames(QStringList noteNameList) {
+QList<Tag> Tag::fetchAllWithLinkToNoteNames(const QStringList& noteNameList) {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     QList<Tag> tagList;
@@ -947,7 +947,7 @@ bool Tag::removeNoteLinkById(int id) {
 /**
  * Renames the note file name of note links
  */
-bool Tag::renameNoteFileNamesOfLinks(QString oldFileName, QString newFileName) {
+bool Tag::renameNoteFileNamesOfLinks(const QString& oldFileName, const QString& newFileName) {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     query.prepare("UPDATE noteTagLink SET note_file_name = :newFileName WHERE "

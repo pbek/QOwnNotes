@@ -30,7 +30,7 @@ private:
 class SystemProxyRunnable : public QObject, public QRunnable {
     Q_OBJECT
 public:
-    SystemProxyRunnable(const QUrl &url);
+    SystemProxyRunnable(QUrl url);
     void run();
 signals:
     void systemProxyLookedUp(const QNetworkProxy &url);

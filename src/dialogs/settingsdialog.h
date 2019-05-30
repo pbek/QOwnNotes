@@ -305,10 +305,10 @@ private:
     void setupNoteFolderPage();
 
     QTreeWidgetItem *findNoteFolderRemotePathTreeWidgetItem(
-            QTreeWidgetItem *parent, QString text);
+            QTreeWidgetItem *parent, const QString& text);
 
     void addPathToNoteFolderRemotePathTreeWidget(QTreeWidgetItem *parent,
-                                                 QString path);
+                                                 const QString& path);
 
     QString generatePathFromCurrentNoteFolderRemotePathItem(
             QTreeWidgetItem *item);

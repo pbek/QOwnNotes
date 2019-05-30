@@ -22,11 +22,10 @@ CryptoService::CryptoService(QObject *parent) : QObject(parent)
  * The instance will be created if it doesn't exist.
  */
 CryptoService * CryptoService::instance() {
-    CryptoService *cryptoService =
-            qApp->property("cryptoService").value<CryptoService *>();
+    auto *cryptoService = qApp->property("cryptoService").value<CryptoService *>();
 
-    if (cryptoService == NULL) {
-        cryptoService = createInstance(NULL);
+    if (cryptoService == nullptr) {
+        cryptoService = createInstance(nullptr);
     }
 
     return cryptoService;
@@ -36,7 +35,7 @@ CryptoService * CryptoService::instance() {
  * Creates a global instance of the class
  */
 CryptoService * CryptoService::createInstance(QObject *parent) {
-    CryptoService *cryptoService = new CryptoService(parent);
+    auto *cryptoService = new CryptoService(parent);
 
     qApp->setProperty(
             "cryptoService",
@@ -48,13 +47,13 @@ CryptoService * CryptoService::createInstance(QObject *parent) {
 /**
  * Encrypts a string as string
  */
-QString CryptoService::encryptToString(QString text) {
+QString CryptoService::encryptToString(const QString& text) {
     return _simpleCrypt->encryptToString(text);
 }
 
 /**
  * Decrypts a string as string
  */
-QString CryptoService::decryptToString(QString text) {
+QString CryptoService::decryptToString(const QString& text) {
     return _simpleCrypt->decryptToString(text);
 }

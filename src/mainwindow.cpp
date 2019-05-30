@@ -1,3 +1,5 @@
+#include <utility>
+
 /*
  * Copyright (c) 2014-2019 Patrizio Bekerle -- http://www.bekerle.com
  *
@@ -981,7 +983,7 @@ void MainWindow::initScriptingEngine() {
 void MainWindow::onCustomActionInvoked(QString identifier) {
     ScriptingService *scriptingService = ScriptingService::instance();
     if (scriptingService != Q_NULLPTR) {
-        scriptingService->onCustomActionInvoked(identifier);
+        scriptingService->onCustomActionInvoked(std::move(identifier));
     }
 }
 
@@ -1243,7 +1245,7 @@ void MainWindow::updateToolbarMenu() {
  *
  * @param objectName
  */
-void MainWindow::togglePanelVisibility(QString objectName) {
+void MainWindow::togglePanelVisibility(const QString& objectName) {
     QDockWidget *dockWidget = findChild<QDockWidget *>(objectName);
 
     if (dockWidget == Q_NULLPTR) {

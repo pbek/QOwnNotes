@@ -18,9 +18,9 @@ public:
                    const QString &actionName = QString());
     void sendEventIfEnabled(
             const QString path,
-            const QString eventCategory,
-            const QString eventAction,
-            const QString eventName = "",
+            const QString& eventCategory,
+            const QString& eventAction,
+            const QString& eventName = "",
             int eventValue = 0);
     void sendHeartbeat();
     static MetricsService *instance();

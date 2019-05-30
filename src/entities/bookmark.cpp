@@ -54,7 +54,7 @@ bool Bookmark::operator==(const Bookmark &bookmark) const {
  * @param text
  * @return
  */
-QList<Bookmark> Bookmark::parseBookmarks(QString text, bool withBasicUrls) {
+QList<Bookmark> Bookmark::parseBookmarks(const QString& text, bool withBasicUrls) {
     QRegularExpressionMatchIterator i;
     QList<Bookmark> bookmarks;
 
@@ -162,9 +162,9 @@ QString Bookmark::bookmarksWebServiceJsonText(QList<Bookmark> bookmarks) {
  * @return
  */
 QString Bookmark::parsedBookmarksWebServiceJsonText(
-        QString text, bool withBasicUrls) {
+        const QString& text, bool withBasicUrls) {
     return bookmarksWebServiceJsonText(parseBookmarks(
-            std::move(text), withBasicUrls));
+            text, withBasicUrls));
 }
 
 /**

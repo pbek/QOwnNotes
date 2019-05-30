@@ -356,7 +356,7 @@ void TodoDialog::resetEditFrameControls() {
  * @param uid
  * @return Returns the row of the task item in the task list, returns -1 if not found
  */
-int TodoDialog::findTodoItemRowByUID(QString uid) {
+int TodoDialog::findTodoItemRowByUID(const QString& uid) {
     int count = ui->todoList->count();
     if (count == 0) {
         return -1;
@@ -425,7 +425,7 @@ void TodoDialog::on_todoList_currentItemChanged(
     Q_UNUSED(previous);
 
     // in case all items were removed
-    if (current == NULL) {
+    if (current == nullptr) {
         resetEditFrameControls();
         return;
     }
@@ -693,7 +693,7 @@ void TodoDialog::searchInDescriptionTextEdit(QString &str) {
         QColor color = QColor(0, 180, 0, 100);
 
         while (ui->descriptionEdit->find(str)) {
-            QTextEdit::ExtraSelection extra;
+            QTextEdit::ExtraSelection extra = QTextEdit::ExtraSelection();
             extra.format.setBackground(color);
             extra.cursor = ui->descriptionEdit->textCursor();
             extraSelections.append(extra);
@@ -708,7 +708,7 @@ void TodoDialog::searchInDescriptionTextEdit(QString &str) {
  */
 bool TodoDialog::eventFilter(QObject *obj, QEvent *event) {
     if (event->type() == QEvent::KeyPress) {
-        QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
+        auto *keyEvent = static_cast<QKeyEvent *>(event);
 
         if (obj == ui->newItemEdit) {
             // set focus to the task list if Key_Down or Key_Tab
@@ -717,7 +717,7 @@ bool TodoDialog::eventFilter(QObject *obj, QEvent *event) {
                     (keyEvent->key() == Qt::Key_Tab)) {
                 // choose an other selected item if current item is invisible
                 QListWidgetItem *item = ui->todoList->currentItem();
-                if ((item != NULL) && ui->todoList->currentItem()->isHidden() &&
+                if ((item != nullptr) && ui->todoList->currentItem()->isHidden() &&
                     (firstVisibleTodoListRow >= 0)) {
                     ui->todoList->setCurrentRow(firstVisibleTodoListRow);
                 }
@@ -753,7 +753,7 @@ bool TodoDialog::eventFilter(QObject *obj, QEvent *event) {
         }
     }
 
-    return QDialog::eventFilter(obj, event);
+    return MasterDialog::eventFilter(obj, event);
 }
 
 /**

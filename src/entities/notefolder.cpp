@@ -178,13 +178,13 @@ bool NoteFolder::remove() {
     }
 }
 
-NoteFolder NoteFolder::noteFolderFromQuery(QSqlQuery query) {
+NoteFolder NoteFolder::noteFolderFromQuery(const QSqlQuery& query) {
     NoteFolder noteFolder;
     noteFolder.fillFromQuery(query);
     return noteFolder;
 }
 
-bool NoteFolder::fillFromQuery(QSqlQuery query) {
+bool NoteFolder::fillFromQuery(const QSqlQuery& query) {
     this->id = query.value("id").toInt();
     this->name = query.value("name").toString();
     this->ownCloudServerId = query.value("owncloud_server_id").toInt();

@@ -2381,7 +2381,7 @@ void SettingsDialog::setNoteFolderRemotePathList(QStringList pathList) {
 }
 
 void SettingsDialog::addPathToNoteFolderRemotePathTreeWidget(
-        QTreeWidgetItem *parent, QString path) {
+        QTreeWidgetItem *parent, const QString& path) {
     if (path.isEmpty()) {
         return;
     }
@@ -2411,7 +2411,7 @@ void SettingsDialog::addPathToNoteFolderRemotePathTreeWidget(
 }
 
 QTreeWidgetItem *SettingsDialog::findNoteFolderRemotePathTreeWidgetItem(
-        QTreeWidgetItem *parent, QString text) {
+        QTreeWidgetItem *parent, const QString& text) {
     if (parent == nullptr) {
         for (int i = 0;
             i < ui->noteFolderRemotePathTreeWidget->topLevelItemCount();

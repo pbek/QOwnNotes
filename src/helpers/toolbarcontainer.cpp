@@ -50,7 +50,7 @@ bool ToolbarContainer::toolbarFound() {
         return false;
     }
 
-    QToolBar* toolbar = mainWindow->findChild<QToolBar*>(name);
+    auto* toolbar = mainWindow->findChild<QToolBar*>(name);
     return toolbar != Q_NULLPTR;
 }
 
@@ -60,7 +60,7 @@ void ToolbarContainer::updateToolbar() {
         return;
     }
 
-    QToolBar* toolbar = mainWindow->findChild<QToolBar*>(name);
+    auto* toolbar = mainWindow->findChild<QToolBar*>(name);
     if (toolbar == Q_NULLPTR) {
         return;
     }
@@ -77,13 +77,13 @@ void ToolbarContainer::updateToolbar() {
                 qDebug() << __func__ << " - 'actionWorkspaceComboBox': " << item;
 
                 // TODO(pbek): for some reason we can't find the combobox
-                QComboBox *workspaceComboBox =
+                auto *workspaceComboBox =
                         mainWindow->findChild<QComboBox*>("workspaceComboBox");
 
                 qDebug() << __func__ << " - 'workspaceComboBox': "
                          << workspaceComboBox;
 
-                QWidgetAction* widgetAction = mainWindow->findChild<QWidgetAction*>(item);
+                auto* widgetAction = mainWindow->findChild<QWidgetAction*>(item);
 
                 qDebug() << __func__ << " - 'widgetAction': " << widgetAction;
 
@@ -97,10 +97,10 @@ void ToolbarContainer::updateToolbar() {
                 widgetAction->setDefaultWidget(workspaceComboBox);
                 toolbar->addAction(widgetAction);
             } else {
-                QAction* action = mainWindow->findChild<QAction*>(item);
+                auto* action = mainWindow->findChild<QAction*>(item);
 
                 if (!action) {
-                    QMenu *menu = mainWindow->findChild<QMenu*>(item);
+                    auto *menu = mainWindow->findChild<QMenu*>(item);
                     if ( menu ) {
                         action = menu->menuAction();
                     }

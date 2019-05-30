@@ -220,8 +220,8 @@ void FontColorWidget::initTextTreeWidgetItems() {
     addTextTreeWidgetItem(tr("Broken link"), MarkdownHighlighter::BrokenLink);
 }
 
-void FontColorWidget::addTextTreeWidgetItem(QString text, int index) {
-    QTreeWidgetItem *item = new QTreeWidgetItem();
+void FontColorWidget::addTextTreeWidgetItem(const QString& text, int index) {
+    auto *item = new QTreeWidgetItem();
     item->setText(0, text);
     item->setData(0, Qt::UserRole, index);
 
@@ -323,7 +323,7 @@ void FontColorWidget::updateSchemeEditFrame() {
  * @param item
  * @return
  */
-QString FontColorWidget::textSettingsKey(QString key, QTreeWidgetItem *item) {
+QString FontColorWidget::textSettingsKey(const QString& key, QTreeWidgetItem *item) {
     return Utils::Schema::textSettingsKey(key, textSettingsIndex(item));
 }
 
@@ -348,7 +348,7 @@ int FontColorWidget::textSettingsIndex(QTreeWidgetItem *item) {
  * @param key
  * @param value
  */
-void FontColorWidget::setSchemaValue(QString key, QVariant value,
+void FontColorWidget::setSchemaValue(const QString& key, const QVariant& value,
                                      QString schemaKey) {
     if (schemaKey.isEmpty()) {
         schemaKey = _currentSchemaKey;
@@ -599,7 +599,7 @@ void FontColorWidget::on_deleteSchemeButton_clicked() {
     initSchemaSelector();
 }
 
-void FontColorWidget::storeCheckBoxState(QString name, bool checked) {
+void FontColorWidget::storeCheckBoxState(const QString& name, bool checked) {
     if (!_currentSchemaIsDefault) {
         setSchemaValue(textSettingsKey(name), checked);
     }
@@ -675,9 +675,8 @@ void FontColorWidget::on_importSchemeButton_clicked() {
         QStringList fileNames = dialog.selectedFiles();
         if (fileNames.count() > 0) {
             Q_FOREACH(QString fileName, fileNames) {
-                    QSettings *settings = new QSettings();
-                    QSettings *importSettings =
-                            new QSettings(fileName, QSettings::IniFormat);
+                    auto *settings = new QSettings();
+                    auto *importSettings = new QSettings(fileName, QSettings::IniFormat);
                     QString schemaKey = importSettings->value(
                             "Export/SchemaKey").toString();
 

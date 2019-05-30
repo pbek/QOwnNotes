@@ -1,3 +1,5 @@
+#include <utility>
+
 #include "tagapi.h"
 
 TagApi* TagApi::fetch(int id) {
@@ -14,7 +16,7 @@ TagApi* TagApi::fetch(int id) {
 }
 
 TagApi* TagApi::fetchByName(QString name, int parentId) {
-    Tag tag = Tag::fetchByName(name, parentId);
+    Tag tag = Tag::fetchByName(std::move(name), parentId);
 
     if (tag.isFetched()) {
         this->id = tag.getId();

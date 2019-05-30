@@ -14,8 +14,8 @@ public:
     explicit CryptoService(QObject *parent = 0);
     static CryptoService *instance();
     static CryptoService *createInstance(QObject *parent);
-    QString encryptToString(QString text);
-    QString decryptToString(QString text);
+    QString encryptToString(const QString& text);
+    QString decryptToString(const QString& text);
 
 private:
     SimpleCrypt * _simpleCrypt;

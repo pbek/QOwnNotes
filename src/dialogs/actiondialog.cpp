@@ -158,7 +158,7 @@ void ActionDialog::on_actionLineEdit_textChanged(const QString &arg1) {
  */
 bool ActionDialog::eventFilter(QObject *obj, QEvent *event) {
     if (event->type() == QEvent::KeyPress) {
-        QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
+        auto *keyEvent = static_cast<QKeyEvent *>(event);
 
         if (obj == ui->actionLineEdit) {
             // give the action tree widget the focus if the down button was

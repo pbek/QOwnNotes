@@ -634,7 +634,7 @@ void OwnCloudService::settingsGetCalendarList(SettingsDialog *dialog) {
     r.setHeader(QNetworkRequest::ContentLengthHeader, dataToSend->size());
     r.setHeader(QNetworkRequest::ContentTypeHeader,
                 "application/x-www-form-urlencoded");
-    QBuffer *buffer = new QBuffer(dataToSend);
+    auto *buffer = new QBuffer(dataToSend);
 
     QNetworkReply *reply = calendarNetworkManager->sendCustomRequest(
             r, "PROPFIND", buffer);
@@ -695,7 +695,7 @@ void OwnCloudService::todoGetTodoList(QString calendarName,
     r.setHeader(QNetworkRequest::ContentLengthHeader, dataToSend->size());
     r.setHeader(QNetworkRequest::ContentTypeHeader,
                 "application/x-www-form-urlencoded");
-    QBuffer *buffer = new QBuffer(dataToSend);
+    auto *buffer = new QBuffer(dataToSend);
 
     QNetworkReply *reply = calendarNetworkManager->sendCustomRequest(
             r, "REPORT", buffer);
@@ -774,7 +774,7 @@ void OwnCloudService::removeNoteShare(Note note, ShareDialog *shareDialog) {
  * To fetch the shares of all notes we have to fetch all shares from the
  * account and search for our note folder
  */
-void OwnCloudService::fetchShares(QString path) {
+void OwnCloudService::fetchShares(const QString& path) {
     // return if no settings are set
     if (!hasOwnCloudSettings()) {
         return;
@@ -842,7 +842,7 @@ void OwnCloudService::removeCalendarItem(CalendarItem calItem,
 /**
  * @brief Restores a note on the server
  */
-void OwnCloudService::restoreTrashedNoteOnServer(QString fileName,
+void OwnCloudService::restoreTrashedNoteOnServer(const QString& fileName,
                                                  int timestamp,
                                                  MainWindow *mainWindow) {
     this->mainWindow = mainWindow;
@@ -876,7 +876,7 @@ void OwnCloudService::restoreTrashedNoteOnServer(QString fileName,
 /**
  * @brief OwnCloudService::loadVersions
  */
-void OwnCloudService::loadVersions(QString fileName, MainWindow *mainWindow) {
+void OwnCloudService::loadVersions(const QString& fileName, MainWindow *mainWindow) {
     this->mainWindow = mainWindow;
 
     QUrl url(serverUrl + versionListPath);
@@ -997,7 +997,7 @@ bool OwnCloudService::hasOwnCloudSettings(bool withEnabledCheck) {
  * Shows a message dialog with a ownCloud server error
  */
 void OwnCloudService::showOwnCloudServerErrorMessage(
-        QString message, bool withSettingsButton) {
+        const QString& message, bool withSettingsButton) {
     QString headline = Utils::Misc::replaceOwnCloudText(
             tr("ownCloud server connection error"));
     QString text = message.isEmpty() ?
@@ -1033,7 +1033,7 @@ void OwnCloudService::showOwnCloudMessage(
 
     if (withSettingsButton) {
         if (QMessageBox::warning(
-                0, headline, message,
+                nullptr, headline, message,
                 tr("Open &settings"), tr("&Cancel"),
                 QString::null, 0, 1) == 0) {
 #ifndef INTEGRATION_TESTS
@@ -1302,7 +1302,7 @@ QList<CalDAVCalendarData> OwnCloudService::parseCalendarData(QString &data) {
                         }
                     }
 
-                    CalDAVCalendarData calendarData;
+                    CalDAVCalendarData calendarData = CalDAVCalendarData();
                     // add the href to our result list
                     QDomNodeList hrefNodes = elem.elementsByTagNameNS(
                             NS_DAV, "href");

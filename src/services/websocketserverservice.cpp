@@ -346,7 +346,7 @@ QString WebSocketServerService::getBookmarksNoteName() {
     return bookmarksNoteName;
 }
 
-QString WebSocketServerService::flashMessageJsonText(QString message) {
+QString WebSocketServerService::flashMessageJsonText(const QString& message) {
     QJsonObject resultObject;
     resultObject.insert("type", QJsonValue::fromVariant("flashMessage"));
     resultObject.insert("message", message);

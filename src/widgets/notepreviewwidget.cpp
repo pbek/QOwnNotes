@@ -62,7 +62,7 @@ void NotePreviewWidget::resizeEvent(QResizeEvent* event) {
 bool NotePreviewWidget::eventFilter(QObject *obj, QEvent *event) {
 //    qDebug() << event->type();
     if (event->type() == QEvent::KeyPress) {
-        QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
+        auto *keyEvent = static_cast<QKeyEvent *>(event);
 
         // disallow keys if widget hasn't focus
         if (!this->hasFocus()) {
@@ -184,7 +184,7 @@ void NotePreviewWidget::initSearchFrame(QWidget *searchFrame, bool darkMode) {
     QLayout *layout = _searchFrame->layout();
 
     // create a grid layout for the frame and add the search widget to it
-    if (layout == NULL) {
+    if (layout == nullptr) {
         layout = new QVBoxLayout();
         layout->setSpacing(0);
         layout->setContentsMargins(0, 0, 0, 0);

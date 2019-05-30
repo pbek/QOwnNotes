@@ -1,3 +1,5 @@
+#include <utility>
+
 #include "metricsservice.h"
 #include "version.h"
 #include "release.h"
@@ -39,7 +41,7 @@ MetricsService * MetricsService::instance() {
  * Creates a global instance of the class
  */
 MetricsService * MetricsService::createInstance(QObject *parent) {
-    MetricsService *metricsService = new MetricsService(parent);
+    auto *metricsService = new MetricsService(parent);
 
     qApp->setProperty(
             "metricsService",
@@ -65,14 +67,14 @@ void MetricsService::sendVisitIfEnabled(
 
 void MetricsService::sendEventIfEnabled(
         QString path,
-        QString eventCategory,
-        QString eventAction,
-        QString eventName,
+        const QString& eventCategory,
+        const QString& eventAction,
+        const QString& eventName,
         int eventValue) {
     QSettings settings;
     if (!settings.value("appMetrics/disableTracking").toBool()) {
         _piwikTracker->sendEvent(
-                path,
+                std::move(path),
                 eventCategory,
                 eventAction,
                 eventName,

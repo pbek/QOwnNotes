@@ -141,7 +141,7 @@ bool WelcomeDialog::handleNoteFolderSetup() {
 /**
  * Shows an error message on the note path page
  */
-void WelcomeDialog::showNoteFolderErrorMessage(QString message) {
+void WelcomeDialog::showNoteFolderErrorMessage(const QString& message) {
     ui->errorMessageLabel->setText(message);
     ui->errorMessageLabel->setVisible(true);
 }

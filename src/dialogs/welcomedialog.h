@@ -47,7 +47,7 @@ private:
 
     bool handleNoteFolderSetup();
 
-    void showNoteFolderErrorMessage(QString message);
+    void showNoteFolderErrorMessage(const QString& message);
 
     void storeNoteFolderSettings();
 

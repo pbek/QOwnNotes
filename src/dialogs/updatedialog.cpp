@@ -231,7 +231,7 @@ void UpdateDialog::releaseDownloadProgress(
  * @param reply
  */
 void UpdateDialog::slotReplyFinished(QNetworkReply *reply) {
-    if (reply == NULL) {
+    if (reply == nullptr) {
         return;
     }
 
@@ -316,7 +316,7 @@ void UpdateDialog::slotReplyFinished(QNetworkReply *reply) {
 /**
  * Initializes the update process
  */
-bool UpdateDialog::initializeUpdateProcess(QString filePath) {
+bool UpdateDialog::initializeUpdateProcess(const QString& filePath) {
 #if defined(Q_OS_MAC)
     // the OS X updater initializeMacOSUpdateProcess will be started
     // from dialogButtonClicked
@@ -434,7 +434,7 @@ bool UpdateDialog::initializeMacOSUpdateProcess(QString releaseUrl) {
 /**
  * Initializes the Windows update process
  */
-bool UpdateDialog::initializeWindowsUpdateProcess(QString filePath) {
+bool UpdateDialog::initializeWindowsUpdateProcess(const QString& filePath) {
     // get the folder path from the file path
     int lastPoint = filePath.lastIndexOf(".");
     QString pathPrefix = filePath.left(lastPoint);

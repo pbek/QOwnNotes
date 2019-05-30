@@ -23,7 +23,7 @@
 
 class ScriptInfoJson {
 public:
-    explicit ScriptInfoJson(QJsonObject jsonObject);
+    explicit ScriptInfoJson(const QJsonObject& jsonObject);
 
     QString name;
     QString identifier;
@@ -49,13 +49,13 @@ public:
     explicit Script();
 
     int getId();
-    static bool create(QString name, QString scriptPath);
+    static bool create(const QString& name, QString scriptPath);
     static Script fetch(int id);
-    static Script scriptFromQuery(QSqlQuery query);
+    static Script scriptFromQuery(const QSqlQuery& query);
     bool store();
     friend QDebug operator<<(QDebug dbg, const Script &script);
     bool exists();
-    bool fillFromQuery(QSqlQuery query);
+    bool fillFromQuery(const QSqlQuery& query);
     bool remove();
     bool isFetched();
     static QList<Script> fetchAll(bool enabledOnly = false);
@@ -79,7 +79,7 @@ public:
     QString scriptRepositoryPath(bool removeRecursively = false);
     bool isScriptFromRepository();
     QUrl remoteScriptUrl();
-    QUrl remoteFileUrl(QString fileName);
+    QUrl remoteFileUrl(const QString& fileName);
     static bool scriptFromRepositoryExists(QString identifier);
     void setSettingsVariablesJson(QString json);
     QString getSettingsVariablesJson();
@@ -88,7 +88,7 @@ public:
     QString getScriptDirPath();
     QList<QUrl> remoteFileUrls();
     ScriptInfoJson getScriptInfoJson();
-    static Script fetchByIdentifier(QString identifier);
+    static Script fetchByIdentifier(const QString& identifier);
     bool refetch();
     bool fillFromId(int id);
     QUrl repositoryInfoJsonUrl();

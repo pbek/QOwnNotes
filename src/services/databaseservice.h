@@ -13,10 +13,10 @@ public:
     DatabaseService();
     static bool createConnection();
     static bool setupTables();
-    static QString getAppData(QString name,
-                              QString connectionName = QString("disk"));
-    static bool setAppData(QString name, QString value,
-                           QString connectionName = QString("disk"));
+    static QString getAppData(const QString& name,
+                              const QString& connectionName = QString("disk"));
+    static bool setAppData(const QString& name, const QString& value,
+                           const QString& connectionName = QString("disk"));
     static bool reinitializeDiskDatabase();
     static bool removeDiskDatabase();
     static bool createNoteFolderConnection();

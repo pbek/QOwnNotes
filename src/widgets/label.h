@@ -30,5 +30,5 @@ public Q_SLOTS:
     void setText(const QString &text);
 
 protected:
-    static QString injectCSS(QString text);
+    static QString injectCSS(const QString& text);
 };

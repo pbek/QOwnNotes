@@ -23,7 +23,7 @@ public:
 
     static QList<NoteSubFolder> fetchAll(int limit = -1);
 
-    static NoteSubFolder noteSubFolderFromQuery(QSqlQuery query);
+    static NoteSubFolder noteSubFolderFromQuery(const QSqlQuery& query);
 
     bool store();
 
@@ -33,7 +33,7 @@ public:
 
     bool exists();
 
-    bool fillFromQuery(QSqlQuery query);
+    bool fillFromQuery(const QSqlQuery& query);
 
     bool remove();
 
@@ -56,7 +56,7 @@ public:
     NoteSubFolder getParent();
 
     static QList<NoteSubFolder> fetchAllByParentId(int parentId,
-            QString sortBy = "file_last_modified DESC");
+            const QString& sortBy = "file_last_modified DESC");
 
     static QList<int> fetchIdsRecursivelyByParentId(int parentId);
 
@@ -73,9 +73,9 @@ public:
     QString pathData();
 
     static NoteSubFolder fetchByPathData(QString pathData,
-                                         QString separator = "\n");
+                                         const QString& separator = "\n");
 
-    static NoteSubFolder fetchByNameAndParentId(QString name, int parentId);
+    static NoteSubFolder fetchByNameAndParentId(const QString& name, int parentId);
 
     void saveTreeWidgetExpandState(bool expanded);
 
@@ -87,7 +87,7 @@ public:
 
     QDir dir();
 
-    bool rename(QString newName);
+    bool rename(const QString& newName);
 
     static int countAllParentId(int parentId);
 

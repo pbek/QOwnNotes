@@ -281,7 +281,7 @@ void ScriptRepositoryDialog::parseInfoQMLReply(const QByteArray &arr) const {
 
     QString name = infoJson.name;
 
-    QTreeWidgetItem *item = new QTreeWidgetItem();
+    auto *item = new QTreeWidgetItem();
     item->setText(0, name);
     item->setData(0, Qt::UserRole, jsonData);
 
@@ -494,7 +494,7 @@ void ScriptRepositoryDialog::on_installButton_clicked() {
 
     // download the script
     if (!url.isEmpty()) {
-        QFile *file = new QFile(scriptPath);
+        auto *file = new QFile(scriptPath);
         qDebug() << "Downloading: " << url;
         filesWereDownloaded = Utils::Misc::downloadUrlToFile(url, file);
         file->close();

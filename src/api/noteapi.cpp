@@ -1,3 +1,5 @@
+#include <utility>
+
 #include <entities/tag.h>
 #include <entities/notefolder.h>
 #include "noteapi.h"
@@ -74,7 +76,7 @@ QStringList NoteApi::tagNames() const {
  * @param tagName
  * @return true if the note was tagged
  */
-bool NoteApi::addTag(QString tagName) {
+bool NoteApi::addTag(const QString& tagName) {
     if (tagName.isEmpty()) {
         return false;
     }
@@ -101,7 +103,7 @@ bool NoteApi::addTag(QString tagName) {
  * @return true if the tag was removed from the note
  */
 bool NoteApi::removeTag(QString tagName) {
-    Tag tag = Tag::fetchByName(tagName);
+    Tag tag = Tag::fetchByName(std::move(tagName));
     if (!tag.exists()) {
         return false;
     }

@@ -66,7 +66,7 @@ private:
     void setupMainSplitter();
     void storeSettings();
     void loadTodoListData();
-    int findTodoItemRowByUID(QString uid);
+    int findTodoItemRowByUID(const QString& uid);
     void resetEditFrameControls();
     void setupUi();
     void updateCurrentCalendarItemWithFormData();

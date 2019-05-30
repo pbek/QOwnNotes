@@ -4,7 +4,7 @@
 #include "ui_serverbookmarksimportdialog.h"
 
 ServerBookmarksImportDialog::ServerBookmarksImportDialog(
-        QJSValue bookmarks, MainWindow *mainWindow, QWidget *parent) :
+        const QJSValue& bookmarks, MainWindow *mainWindow, QWidget *parent) :
         MasterDialog(parent),
         ui(new Ui::ServerBookmarksImportDialog) {
     ui->setupUi(this);

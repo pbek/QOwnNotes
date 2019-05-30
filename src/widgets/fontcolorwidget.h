@@ -71,7 +71,7 @@ private:
     QString _currentSchemaKey;
     bool _currentSchemaIsDefault;
 
-    void addTextTreeWidgetItem(QString text, int index);
+    void addTextTreeWidgetItem(const QString& text, int index);
 
     void initTextTreeWidgetItems();
 
@@ -79,9 +79,9 @@ private:
 
     void updateSchemeEditFrame();
 
-    void setSchemaValue(QString key, QVariant value, QString schemaKey = "");
+    void setSchemaValue(const QString& key, const QVariant& value, QString schemaKey = "");
 
-    QString textSettingsKey(QString key, QTreeWidgetItem *item = Q_NULLPTR);
+    QString textSettingsKey(const QString& key, QTreeWidgetItem *item = Q_NULLPTR);
 
     void updateTextItem(QTreeWidgetItem *item = Q_NULLPTR);
 
@@ -93,7 +93,7 @@ private:
 
     void updateTextItems(int index);
 
-    void storeCheckBoxState(QString name, bool checked);
+    void storeCheckBoxState(const QString& name, bool checked);
 
     void selectLastSchema();
 

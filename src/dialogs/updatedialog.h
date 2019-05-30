@@ -51,9 +51,9 @@ private:
 
     void closeEvent(QCloseEvent *event);
 
-    bool initializeUpdateProcess(QString filePath);
+    bool initializeUpdateProcess(const QString& filePath);
 
-    bool initializeWindowsUpdateProcess(QString filePath);
+    bool initializeWindowsUpdateProcess(const QString& filePath);
 
     bool initializeMacOSUpdateProcess(QString releaseUrl);
 };

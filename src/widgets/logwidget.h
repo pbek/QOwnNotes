@@ -64,5 +64,5 @@ private:
 
     static QString logTypeText(LogType logType);
 
-    static void logToFileIfAllowed(LogType logType, QString msg);
+    static void logToFileIfAllowed(LogType logType, const QString& msg);
 };

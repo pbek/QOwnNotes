@@ -1454,7 +1454,7 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
 }
 
 /**
- * Checks if text matches a regular exporession in regExpList
+ * Checks if text matches a regular expression in regExpList
  *
  * @param text
  * @param regExpList
