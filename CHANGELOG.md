@@ -2,7 +2,8 @@
 
 ## 19.5.6
 - fixed creation of empty notes at the note root folder when importing Evernote enex
-  files into a note sub-folder (for [#1212](https://github.com/pbek/QOwnNotes/issues/1212))
+  files into a note sub-folder and improved overall import speed
+  (for [#1212](https://github.com/pbek/QOwnNotes/issues/1212))
 - added a more descriptive text in the browser extension security token dialog
 - the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
   was updated to version 19.5.5
