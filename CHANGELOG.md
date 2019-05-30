@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 19.5.7
+- fixed unnecessary scrolling and dark mode link colors in the *Browser extension*
+  settings (for [#1213](https://github.com/pbek/QOwnNotes/issues/1213))
+
 ## 19.5.6
 - fixed creation of empty notes at the note root folder when importing Evernote enex
   files into a note sub-folder and improved overall import speed

@@ -5296,8 +5296,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                </property>
                <property name="sizeHint" stdset="0">
                 <size>
-                 <width>20</width>
-                 <height>959</height>
+                 <width>0</width>
+                 <height>0</height>
                 </size>
                </property>
               </spacer>
@@ -5344,7 +5344,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                     </widget>
                    </item>
                    <item row="0" column="0" colspan="2">
-                    <widget class="QLabel" name="bookmarkTagLabel">
+                    <widget class="Label" name="bookmarkTagLabel">
                      <property name="text">
                       <string>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href=&quot;%1&quot;&gt;here&lt;/a&gt;.</string>
                      </property>
@@ -5434,7 +5434,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                  </widget>
                 </item>
                 <item row="0" column="0">
-                 <widget class="QLabel" name="webCompannionLabel">
+                 <widget class="Label" name="webCompannionLabel">
                   <property name="text">
                    <string>Install the &lt;a href=&quot;%1&quot;&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href=&quot;%2&quot;&gt;Chrome Web Store&lt;/a&gt; or &lt;a href=&quot;%3&quot;&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</string>
                   </property>
