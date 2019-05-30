@@ -7700,11 +7700,13 @@ void MainWindow::reloadCurrentNoteTags() {
                             ui->tagTreeWidget,
                             tag.getId());
 
-            // set tag item in tag tree widget to bold if note has tag
-            auto font = item->font(0);
-            if (!font.bold()) {
-                font.setBold(true);
-                item->setFont(0, font);
+            if (item != NULL) {
+                // set tag item in tag tree widget to bold if note has tag
+                auto font = item->font(0);
+                if (!font.bold()) {
+                    font.setBold(true);
+                    item->setFont(0, font);
+                }
             }
         }
 
