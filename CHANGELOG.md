@@ -6,6 +6,7 @@
 - if the current note has a certain tag it will be now highlighted as bold in
   the tags panel (for [#1210](https://github.com/pbek/QOwnNotes/issues/1210))
 - did general performance and memory consumption improvements
+- added more Russian translation (thank you mikhail-khokhlov)
 
 ## 19.5.6
 - fixed creation of empty notes at the note root folder when importing Evernote enex

@@ -6660,7 +6660,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="26"/>
       <source>To let your QOwnNotes browser extension access your notes please paste this security token in the settings of your browser extension:</source>
-      <translation type="unfinished">To let your QOwnNotes browser extension access your notes please paste this security token in the settings of your browser extension:</translation>
+      <translation>Чтобы разрешить браузерному расширению QOwnNotes доступ к вашим заметкам, вставьте этот токен безопасности в настройки браузерного расширения:</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="65"/>
