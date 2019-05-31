@@ -58,7 +58,6 @@ parts:
       - libqt5xml5
       - libqt5xmlpatterns5
       - libqt5printsupport5
-      - libqt5declarative5
       - libqt5websockets5
       - qtwayland5
     stage:
