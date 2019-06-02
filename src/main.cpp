@@ -129,8 +129,7 @@ bool mainStartupMisc(const QStringList &arguments) {
             QIcon::setThemeName("breeze-qownnotes");
         }
 
-        bool darkMode = settings.value("darkMode").toBool();
-        if (darkMode) {
+        if (Utils::Misc::isDarkModeIconTheme()) {
             QIcon::setThemeName("breeze-dark-qownnotes");
         }
     }

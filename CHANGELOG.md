@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 19.6.0
+- You are now able to distinctively tell QOwnNotes to use the **dark mode icon theme**
+  without using the *dark mode* in the *Interface settings*
+  (for [#1209](https://github.com/pbek/QOwnNotes/issues/1209) and
+  [#1177](https://github.com/pbek/QOwnNotes/issues/1177))
+
 ## 19.5.7
 - fixed unnecessary scrolling and dark mode link colors in the *Browser extension*
   settings (for [#1213](https://github.com/pbek/QOwnNotes/issues/1213))

@@ -204,6 +204,8 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
             this, SLOT(needRestart()));
     connect(ui->darkModeTrayIconCheckBox, SIGNAL(toggled(bool)),
             this, SLOT(needRestart()));
+    connect(ui->darkModeIconThemeCheckBox, SIGNAL(toggled(bool)),
+            this, SLOT(needRestart()));
     connect(ui->darkModeColorsCheckBox, SIGNAL(toggled(bool)),
             this, SLOT(needRestart()));
     connect(ui->darkModeCheckBox, SIGNAL(toggled(bool)),
@@ -676,6 +678,9 @@ void SettingsDialog::storeSettings() {
     settings.setValue("darkModeTrayIcon",
                       ui->darkModeTrayIconCheckBox->isChecked());
 
+    settings.setValue("darkModeIconTheme",
+                      ui->darkModeIconThemeCheckBox->isChecked());
+
     settings.setValue("internalIconTheme",
                       ui->internalIconThemeCheckBox->isChecked());
 
@@ -1015,6 +1020,8 @@ void SettingsDialog::readSettings() {
 
     ui->darkModeTrayIconCheckBox->setChecked(settings.value(
             "darkModeTrayIcon").toBool());
+
+    ui->darkModeIconThemeCheckBox->setChecked(Utils::Misc::isDarkModeIconTheme());
 
     ui->internalIconThemeCheckBox->setChecked(settings.value(
             "internalIconTheme").toBool());
@@ -2964,6 +2971,7 @@ void SettingsDialog::on_darkModeCheckBox_toggled() {
 
     if (checked) {
         ui->darkModeColorsCheckBox->setChecked(true);
+        ui->darkModeIconThemeCheckBox->setChecked(true);
     }
 }
 
@@ -3735,6 +3743,7 @@ void SettingsDialog::on_systemIconThemeCheckBox_toggled(bool checked) {
     }
 
     ui->internalIconThemeCheckBox->setDisabled(checked);
+    ui->darkModeIconThemeCheckBox->setDisabled(checked);
 }
 
 void SettingsDialog::on_webSocketTokenButton_clicked() {

@@ -1089,6 +1089,17 @@ bool Utils::Misc::isSocketServerEnabled() {
 }
 
 /**
+ * Returns if "darkModeIconTheme" is turned on
+ *
+ * @return
+ */
+bool Utils::Misc::isDarkModeIconTheme() {
+    QSettings settings;
+    bool darkMode = settings.value("darkMode").toBool();
+    return settings.value("darkModeIconTheme", darkMode).toBool();
+}
+
+/**
  * Returns if "automaticNoteFolderDatabaseClosing" is turned on
  *
  * @return
