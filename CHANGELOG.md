@@ -5,6 +5,8 @@
   without using the *dark mode* in the *Interface settings*
   (for [#1209](https://github.com/pbek/QOwnNotes/issues/1209) and
   [#1177](https://github.com/pbek/QOwnNotes/issues/1177))
+- added more Danish, Czech, Finnish, Greek, Spanish, Hungarian, Dutch translation
+  (thank you Fabijenna, richarson)
 
 ## 19.5.7
 - fixed unnecessary scrolling and dark mode link colors in the *Browser extension*
