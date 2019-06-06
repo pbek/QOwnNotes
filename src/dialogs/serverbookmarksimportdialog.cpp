@@ -1,5 +1,6 @@
 #include <QtQml/QJSValueIterator>
 #include <QtCore/QJsonArray>
+#include <QtCore/QJsonObject>
 #include "serverbookmarksimportdialog.h"
 #include "ui_serverbookmarksimportdialog.h"
 
