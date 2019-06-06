@@ -4560,7 +4560,7 @@ Tesztelje, ha szinkronizációs konfliktus lép fel és állítson be ilyen eset
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2489"/>
       <source>Enable dark mode icon theme</source>
-      <translation type="unfinished">Enable dark mode icon theme</translation>
+      <translation>Az ikon téma engedélyezése sötét módban</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2499"/>

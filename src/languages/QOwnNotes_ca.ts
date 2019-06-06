@@ -3709,8 +3709,8 @@ Tot i així, el voleu instal·lar?</translation>
     <message numerus="yes">
       <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="66"/>
       <source>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</source>
-      <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n etiquetes&lt;/strong&gt; trobades al servidor</numerusform>
         <numerusform>&lt;strong&gt;%n etiquetes&lt;/strong&gt; trobades al servidor</numerusform>
       </translation>
     </message>
@@ -4559,7 +4559,7 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2489"/>
       <source>Enable dark mode icon theme</source>
-      <translation type="unfinished">Enable dark mode icon theme</translation>
+      <translation>Habilita el tema del mode d'icones fosques</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2499"/>
@@ -6591,7 +6591,7 @@ Això no es pot desfer!</translation>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="26"/>
       <source>To let your QOwnNotes browser extension access your notes please paste this security token in the settings of your browser extension:</source>
-      <translation type="unfinished">To let your QOwnNotes browser extension access your notes please paste this security token in the settings of your browser extension:</translation>
+      <translation>Per tal que l'extensió de navegador del QOwnNotes accedeixi a les vostres notes, copieu si us plau aquest número de seguretat a la configuració de la vostra extensió:</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="65"/>

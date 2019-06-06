@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 19.6.1
+- fixed openSUSE, Fedora and Debian build problem
+- added more Catalan, Dutch, Hungarian, Russian, Italian, German, Spanish translation
+  (thank you MGuerra, Fabijenna, mikhail-khokhlov, mlocati, rakekniven, soysexy03)
+
 ## 19.6.0
 - You are now able to distinctively tell QOwnNotes to use the **dark mode icon theme**
   without using the *dark mode* in the *Interface settings*
