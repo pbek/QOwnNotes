@@ -1319,17 +1319,17 @@
     <message>
       <location filename="../mainwindow.ui" line="1588"/>
       <source>&amp;Encrypt note</source>
-      <translation>&amp;codeer notitie</translation>
+      <translation>&amp;Notitie versleutelen</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1597"/>
       <source>Edit encrypted note</source>
-      <translation>Bewerk gecodeerde notitie</translation>
+      <translation>Bewerk versleutelde notitie</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1609"/>
       <source>Decrypt note</source>
-      <translation>Decodeer notitie</translation>
+      <translation>Notitie ontsleutelen</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1618"/>
