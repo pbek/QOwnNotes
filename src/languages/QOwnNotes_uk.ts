@@ -3736,7 +3736,7 @@ Do you want to install it anyway?</source>
         <translation type="unfinished">%v of %m bookmark(s) imported</translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="66"/>
+        <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="79"/>
         <source>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</source>
         <translation type="unfinished">
             <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
@@ -6647,6 +6647,11 @@ This cannot be undone!</source>
         <translation type="vanished">це блокнот з підтримкою markdown та інтеграцією з ownCloud</translation>
     </message>
     <message>
+        <location filename="../dialogs/welcomedialog.ui" line="24"/>
+        <source>plain-text file markdown note taking with ownCloud integration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/welcomedialog.ui" line="88"/>
         <source>&amp;Back</source>
         <translation>&amp;Назад</translation>
@@ -6711,11 +6716,6 @@ This cannot be undone!</source>
         <location filename="../dialogs/welcomedialog.ui" line="184"/>
         <source>Please select where you want to store your notes:</source>
         <translation>Будь ласка, оберіть, де ви хочете зберігати ваші нотатки:</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/welcomedialog.ui" line="24"/>
-        <source>the plain-text file markdown note taking with ownCloud integration</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/welcomedialog.ui" line="319"/>

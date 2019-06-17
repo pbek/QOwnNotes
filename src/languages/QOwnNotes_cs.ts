@@ -3740,7 +3740,7 @@ Chcete přesto nainstalovat?</translation>
         <translation>%v %m záložku importován</translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="66"/>
+        <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="79"/>
         <source>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</source>
         <translation>
             <numerusform>&lt;strong&gt;%n záložka &lt;/strong&gt; nalezená na serveru</numerusform>
@@ -6651,6 +6651,11 @@ To nelze vrátit zpět!</translation>
         <translation type="vanished">poznámkový blok s prostým textem s podporou značkování a integrací ownCloud</translation>
     </message>
     <message>
+        <location filename="../dialogs/welcomedialog.ui" line="24"/>
+        <source>plain-text file markdown note taking with ownCloud integration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/welcomedialog.ui" line="88"/>
         <source>&amp;Back</source>
         <translation>&amp;Předchozí</translation>
@@ -6715,11 +6720,6 @@ To nelze vrátit zpět!</translation>
         <location filename="../dialogs/welcomedialog.ui" line="184"/>
         <source>Please select where you want to store your notes:</source>
         <translation>Prosím vyberte kam chcete ukládat vaše poznámky:</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/welcomedialog.ui" line="24"/>
-        <source>the plain-text file markdown note taking with ownCloud integration</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/welcomedialog.ui" line="319"/>

@@ -3673,7 +3673,7 @@ Yine de yüklemek istiyor musunuz?</translation>
         <translation type="unfinished">%v of %m bookmark(s) imported</translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="66"/>
+        <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="79"/>
         <source>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</source>
         <translation type="unfinished">
             <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
@@ -6579,6 +6579,11 @@ Bu geri alınamaz!</translation>
         <translation type="vanished">markdown desteği ve ownCloud entegrasyonu ile düz metin dosyası not defteri</translation>
     </message>
     <message>
+        <location filename="../dialogs/welcomedialog.ui" line="24"/>
+        <source>plain-text file markdown note taking with ownCloud integration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/welcomedialog.ui" line="88"/>
         <source>&amp;Back</source>
         <translation>&amp;Geri</translation>
@@ -6643,11 +6648,6 @@ Bu geri alınamaz!</translation>
         <location filename="../dialogs/welcomedialog.ui" line="184"/>
         <source>Please select where you want to store your notes:</source>
         <translation>Lütfen notlarınızı depolamak istediğiniz yeri seçin:</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/welcomedialog.ui" line="24"/>
-        <source>the plain-text file markdown note taking with ownCloud integration</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/welcomedialog.ui" line="319"/>

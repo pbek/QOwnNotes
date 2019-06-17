@@ -3707,7 +3707,7 @@ Tot i així, el voleu instal·lar?</translation>
         <translation>%v de %m marcador(s) importat</translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="66"/>
+        <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="79"/>
         <source>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</source>
         <translation>
             <numerusform>&lt;strong&gt;%n etiquetes&lt;/strong&gt; trobades al servidor</numerusform>
@@ -6617,6 +6617,11 @@ Això no es pot desfer!</translation>
         <translation type="vanished">l&apos;editor de text simple amb suport de markdown i integració amb ownCloud</translation>
     </message>
     <message>
+        <location filename="../dialogs/welcomedialog.ui" line="24"/>
+        <source>plain-text file markdown note taking with ownCloud integration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/welcomedialog.ui" line="88"/>
         <source>&amp;Back</source>
         <translation>Enrere</translation>
@@ -6681,11 +6686,6 @@ Això no es pot desfer!</translation>
         <location filename="../dialogs/welcomedialog.ui" line="184"/>
         <source>Please select where you want to store your notes:</source>
         <translation>Seleccioneu on voleu desar les vostres notes:</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/welcomedialog.ui" line="24"/>
-        <source>the plain-text file markdown note taking with ownCloud integration</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/welcomedialog.ui" line="319"/>

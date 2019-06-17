@@ -3707,7 +3707,7 @@ Si desidera procedere con l&apos;installazione comunque?</translation>
         <translation>%v di %m segnalibri importati</translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="66"/>
+        <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="79"/>
         <source>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</source>
         <translation>
             <numerusform>&lt;strong&gt;%n segnalibri&lt;/strong&gt; trovati sul server</numerusform>
@@ -6616,6 +6616,11 @@ Non sarà possibile annullare l&apos;operazione!</translation>
         <translation type="vanished">il blocco note per file di testo con supporto per markdown e integrazione con ownCloud</translation>
     </message>
     <message>
+        <location filename="../dialogs/welcomedialog.ui" line="24"/>
+        <source>plain-text file markdown note taking with ownCloud integration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/welcomedialog.ui" line="88"/>
         <source>&amp;Back</source>
         <translation>&amp;Indietro</translation>
@@ -6680,11 +6685,6 @@ Non sarà possibile annullare l&apos;operazione!</translation>
         <location filename="../dialogs/welcomedialog.ui" line="184"/>
         <source>Please select where you want to store your notes:</source>
         <translation>Selezionare dove si desidera memorizzare le proprie note:</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/welcomedialog.ui" line="24"/>
-        <source>the plain-text file markdown note taking with ownCloud integration</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/welcomedialog.ui" line="319"/>

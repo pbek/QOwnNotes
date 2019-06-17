@@ -3706,7 +3706,7 @@ Do you want to install it anyway?</source>
         <translation>%v van %m bladwijzer(s) geïmporteerd</translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="66"/>
+        <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="79"/>
         <source>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</source>
         <translation>
             <numerusform>&lt;strong&gt;%n bladwijzer &lt;/strong&gt; gevonden op server</numerusform>
@@ -6611,6 +6611,11 @@ Dit kan niet ongedaan worden gemaakt!</translation>
         <translation type="vanished">de tekst onder opmaak notepad met markdown ondersteuning en ownCloud integratie</translation>
     </message>
     <message>
+        <location filename="../dialogs/welcomedialog.ui" line="24"/>
+        <source>plain-text file markdown note taking with ownCloud integration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/welcomedialog.ui" line="88"/>
         <source>&amp;Back</source>
         <translation>&amp;Terug</translation>
@@ -6675,11 +6680,6 @@ Dit kan niet ongedaan worden gemaakt!</translation>
         <location filename="../dialogs/welcomedialog.ui" line="184"/>
         <source>Please select where you want to store your notes:</source>
         <translation>Selecteer waar je je notities wilt opslaan:</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/welcomedialog.ui" line="24"/>
-        <source>the plain-text file markdown note taking with ownCloud integration</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/welcomedialog.ui" line="319"/>

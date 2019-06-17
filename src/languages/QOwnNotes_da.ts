@@ -3709,7 +3709,7 @@ Vil du installere det alligevel?</translation>
         <translation>%v af %m bogmærke(r) importeret</translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="66"/>
+        <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="79"/>
         <source>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</source>
         <translation>
             <numerusform>&lt;strong&gt;%n bogmærke &lt;/strong&gt; findes på serveren</numerusform>
@@ -6619,6 +6619,11 @@ Dette kan ikke fortrydes!</translation>
         <translation type="vanished">plain-text fil notesblok med markdown support og ownCloud integration</translation>
     </message>
     <message>
+        <location filename="../dialogs/welcomedialog.ui" line="24"/>
+        <source>plain-text file markdown note taking with ownCloud integration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/welcomedialog.ui" line="88"/>
         <source>&amp;Back</source>
         <translation>&amp;Tilbage</translation>
@@ -6683,11 +6688,6 @@ Dette kan ikke fortrydes!</translation>
         <location filename="../dialogs/welcomedialog.ui" line="184"/>
         <source>Please select where you want to store your notes:</source>
         <translation>Vælg venligst, hvor du vil gemme dine noter:</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/welcomedialog.ui" line="24"/>
-        <source>the plain-text file markdown note taking with ownCloud integration</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/welcomedialog.ui" line="319"/>

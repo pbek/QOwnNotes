@@ -3709,7 +3709,7 @@ Vill du installera det i alla fall?</translation>
         <translation type="unfinished">%v of %m bookmark(s) imported</translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="66"/>
+        <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="79"/>
         <source>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</source>
         <translation type="unfinished">
             <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
@@ -6615,6 +6615,11 @@ Detta kan inte göras ogjort!</translation>
         <translation type="vanished">klartextfilens anteckningsblock med markdown support och ownCloud integration</translation>
     </message>
     <message>
+        <location filename="../dialogs/welcomedialog.ui" line="24"/>
+        <source>plain-text file markdown note taking with ownCloud integration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/welcomedialog.ui" line="88"/>
         <source>&amp;Back</source>
         <translation>&amp;Tillbaka</translation>
@@ -6679,11 +6684,6 @@ Detta kan inte göras ogjort!</translation>
         <location filename="../dialogs/welcomedialog.ui" line="184"/>
         <source>Please select where you want to store your notes:</source>
         <translation>Var god välj vart du vill lagra dina anteckningar:</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/welcomedialog.ui" line="24"/>
-        <source>the plain-text file markdown note taking with ownCloud integration</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/welcomedialog.ui" line="319"/>

@@ -3709,7 +3709,7 @@ Haluatko asentaa sen joka tapauksessa?</translation>
         <translation>%v %m kirjanmerkistä tuotu</translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="66"/>
+        <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="79"/>
         <source>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</source>
         <translation>
             <numerusform>&lt;strong&gt; %n kirjanmerkkejä &lt;/strong&gt; löytyy palvelimesta</numerusform>
@@ -6619,6 +6619,11 @@ Tätä ei voi peruuttaa!</translation>
         <translation type="vanished">tavallinen tekstitiedosto, jossa on merkintätuki ja oma integraatio</translation>
     </message>
     <message>
+        <location filename="../dialogs/welcomedialog.ui" line="24"/>
+        <source>plain-text file markdown note taking with ownCloud integration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/welcomedialog.ui" line="88"/>
         <source>&amp;Back</source>
         <translation>&amp;Takaisin</translation>
@@ -6683,11 +6688,6 @@ Tätä ei voi peruuttaa!</translation>
         <location filename="../dialogs/welcomedialog.ui" line="184"/>
         <source>Please select where you want to store your notes:</source>
         <translation>Valitse, mihin haluat tallentaa muistiinpanosi:</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/welcomedialog.ui" line="24"/>
-        <source>the plain-text file markdown note taking with ownCloud integration</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/welcomedialog.ui" line="319"/>

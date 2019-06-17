@@ -3743,7 +3743,7 @@ Do you want to install it anyway?</source>
         <translation>%v из %m закладок импортировано</translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="66"/>
+        <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="79"/>
         <source>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</source>
         <translation>
             <numerusform>&lt;strong&gt;%n закладка&lt;/strong&gt; найдено на сервере</numerusform>
@@ -6654,6 +6654,11 @@ This cannot be undone!</source>
         <translation type="vanished">Блокнот с простыми текстовыми заметками, поддержкой Markdown и интеграцией с ownCloud</translation>
     </message>
     <message>
+        <location filename="../dialogs/welcomedialog.ui" line="24"/>
+        <source>plain-text file markdown note taking with ownCloud integration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/welcomedialog.ui" line="88"/>
         <source>&amp;Back</source>
         <translation>&amp;Назад</translation>
@@ -6718,11 +6723,6 @@ This cannot be undone!</source>
         <location filename="../dialogs/welcomedialog.ui" line="184"/>
         <source>Please select where you want to store your notes:</source>
         <translation>Пожалуйста выберите, где вы хотите хранить ваши заметки:</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/welcomedialog.ui" line="24"/>
-        <source>the plain-text file markdown note taking with ownCloud integration</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/welcomedialog.ui" line="319"/>

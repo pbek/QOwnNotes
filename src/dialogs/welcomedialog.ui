@@ -21,7 +21,7 @@
    <item row="1" column="0">
     <widget class="QLabel" name="subHeadlineLabel">
      <property name="text">
-      <string>the plain-text file markdown note taking with ownCloud integration</string>
+      <string>plain-text file markdown note taking with ownCloud integration</string>
      </property>
      <property name="wordWrap">
       <bool>true</bool>

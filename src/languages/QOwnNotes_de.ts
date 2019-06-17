@@ -3708,7 +3708,7 @@ Möchten Sie es trotzdem installieren?</translation>
         <translation>%v von %m Lesezeichen importiert</translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="66"/>
+        <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="79"/>
         <source>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</source>
         <translation type="unfinished">
             <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
@@ -6616,6 +6616,11 @@ Kann nicht rückgängig gemacht werden!</translation>
         <translation type="vanished">das Klartext-Notizen-Programm mit Markdown-Unterstützung und Nextcloud/ownCloud-Integration</translation>
     </message>
     <message>
+        <location filename="../dialogs/welcomedialog.ui" line="24"/>
+        <source>plain-text file markdown note taking with ownCloud integration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/welcomedialog.ui" line="88"/>
         <source>&amp;Back</source>
         <translation>&amp;Zurück</translation>
@@ -6680,11 +6685,6 @@ Kann nicht rückgängig gemacht werden!</translation>
         <location filename="../dialogs/welcomedialog.ui" line="184"/>
         <source>Please select where you want to store your notes:</source>
         <translation>Bitte wählen Sie den Ort aus, an dem Ihre Notizen gespeichert werden sollen:</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/welcomedialog.ui" line="24"/>
-        <source>the plain-text file markdown note taking with ownCloud integration</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/welcomedialog.ui" line="319"/>

@@ -3673,7 +3673,7 @@ Apakah anda tetap ingin memasangnya?</translation>
         <translation>%v dari %m markah diimpor</translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="66"/>
+        <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="79"/>
         <source>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</source>
         <translation type="unfinished">
             <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
@@ -6581,6 +6581,11 @@ Ini tidak dapat dibatalkan!</translation>
         <translation type="vanished">berkas teks biasa notepad dengan dukungan markdown dan integrasi ownCloud</translation>
     </message>
     <message>
+        <location filename="../dialogs/welcomedialog.ui" line="24"/>
+        <source>plain-text file markdown note taking with ownCloud integration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/welcomedialog.ui" line="88"/>
         <source>&amp;Back</source>
         <translation>&amp;Kembali</translation>
@@ -6645,11 +6650,6 @@ Ini tidak dapat dibatalkan!</translation>
         <location filename="../dialogs/welcomedialog.ui" line="184"/>
         <source>Please select where you want to store your notes:</source>
         <translation>Silakan pilih dimana anda ingin menyimpan catatan anda:</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/welcomedialog.ui" line="24"/>
-        <source>the plain-text file markdown note taking with ownCloud integration</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/welcomedialog.ui" line="319"/>

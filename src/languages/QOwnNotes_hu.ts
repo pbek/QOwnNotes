@@ -3672,7 +3672,7 @@ Mégis telepíti?</translation>
         <translation>%v könyvjelző importálása %m-ből</translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="66"/>
+        <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="79"/>
         <source>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</source>
         <translation>
             <numerusform>&lt;strong&gt;%n könyvjelző &lt;/strong&gt; található a kiszolgálón</numerusform>
@@ -6579,6 +6579,11 @@ Nem lehet visszavonni!</translation>
         <translation type="vanished">a sima szöveges fájl jegyzettömb markdown támogatás és ownCloud integráció</translation>
     </message>
     <message>
+        <location filename="../dialogs/welcomedialog.ui" line="24"/>
+        <source>plain-text file markdown note taking with ownCloud integration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/welcomedialog.ui" line="88"/>
         <source>&amp;Back</source>
         <translation>&amp;Vissza</translation>
@@ -6643,11 +6648,6 @@ Nem lehet visszavonni!</translation>
         <location filename="../dialogs/welcomedialog.ui" line="184"/>
         <source>Please select where you want to store your notes:</source>
         <translation>Kérjük, válassza ki, hol szeretné tárolni a jegyzeteit:</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/welcomedialog.ui" line="24"/>
-        <source>the plain-text file markdown note taking with ownCloud integration</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/welcomedialog.ui" line="319"/>
