@@ -3709,7 +3709,7 @@ Do you want to install it anyway?</translation>
       <translation type="unfinished">%v of %m bookmark(s) imported</translation>
     </message>
     <message numerus="yes">
-      <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="66"/>
+      <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="79"/>
       <source>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</source>
       <translation type="unfinished">
         <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
@@ -3962,10 +3962,10 @@ Do you want to install it anyway?</translation>
       <translation type="unfinished">Enable dark mode</translation>
     </message>
     <message>
+      <location filename="../dialogs/settingsdialog.ui" line="2495"/>
       <location filename="../dialogs/settingsdialog.ui" line="2505"/>
-      <location filename="../dialogs/settingsdialog.ui" line="2515"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2536"/>
       <location filename="../dialogs/settingsdialog.ui" line="2546"/>
-      <location filename="../dialogs/settingsdialog.ui" line="2556"/>
       <source>You need to restart the application to let this setting take effect</source>
       <translation type="unfinished">You need to restart the application to let this setting take effect</translation>
     </message>
@@ -4559,32 +4559,32 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
       <translation type="unfinished">Enable dark mode application icon and tray icon</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2489"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2559"/>
       <source>Enable dark mode icon theme</source>
       <translation type="unfinished">Enable dark mode icon theme</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2499"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2489"/>
       <source>System tray</source>
       <translation type="unfinished">System tray</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2508"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2498"/>
       <source>Show system tray icon</source>
       <translation type="unfinished">Show system tray icon</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2518"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2508"/>
       <source>Start application hidden</source>
       <translation type="unfinished">Start application hidden</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2528"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2518"/>
       <source>Interface style</source>
       <translation type="unfinished">Interface style</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2559"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2549"/>
       <source>Enforce system icon theme</source>
       <translation type="unfinished">Enforce system icon theme</translation>
     </message>
@@ -4640,20 +4640,20 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3586"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3570"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3571"/>
       <source>Reset message boxes</source>
       <translation type="unfinished">Reset message boxes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3779"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3636"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3659"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3637"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3660"/>
       <source>Import settings</source>
       <translation type="unfinished">Import settings</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3786"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3602"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3603"/>
       <source>Export settings</source>
       <translation type="unfinished">Export settings</translation>
     </message>
@@ -5312,7 +5312,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2446"/>
-      <location filename="../dialogs/settingsdialog.ui" line="2486"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2556"/>
       <source>You may need to restart the application to let these changes take effect</source>
       <translation type="unfinished">You may need to restart the application to let these changes take effect</translation>
     </message>
@@ -5357,12 +5357,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
       <translation type="unfinished">Arabic</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2540"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2530"/>
       <source>Icons</source>
       <translation type="unfinished">Icons</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2549"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2539"/>
       <source>Use internal icon theme instead of system icon theme</source>
       <translation type="unfinished">Use internal icon theme instead of system icon theme</translation>
     </message>
@@ -5624,23 +5624,23 @@ Connection error message: </translation>
       <translation type="unfinished">Add an existing, local script</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3601"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3658"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3602"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3659"/>
       <source>INI files</source>
       <translation type="unfinished">INI files</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3637"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3638"/>
       <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
       <translation type="unfinished">Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3647"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3648"/>
       <source>The application will be quit after the import.</source>
       <translation type="unfinished">The application will be quit after the import.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3648"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3649"/>
       <source>The application will be restarted after the import.</source>
       <translation type="unfinished">The application will be restarted after the import.</translation>
     </message>
@@ -5712,58 +5712,58 @@ Connection error message: </translation>
       <translation type="unfinished">Enter your custom file extension:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3188"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3189"/>
       <source>Calendar cache emptied</source>
       <translation type="unfinished">Calendar cache emptied</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3189"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3190"/>
       <source>Your calendar cache was emptied.</source>
       <translation type="unfinished">Your calendar cache was emptied.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3267"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3268"/>
       <source>Reset toolbars and exit</source>
       <translation type="unfinished">Reset toolbars and exit</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3268"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3269"/>
       <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
       <translation type="unfinished">Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3272"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3273"/>
       <source>Reset and &amp;exit</source>
       <translation type="unfinished">Reset and &amp;exit</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3434"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3435"/>
       <source>Log file cleared</source>
       <translation type="unfinished">Log file cleared</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3435"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3436"/>
       <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
       <translation type="unfinished">The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3471"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3472"/>
       <source>Executable files</source>
       <translation type="unfinished">Executable files</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3472"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3474"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3473"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3475"/>
       <source>All files</source>
       <translation type="unfinished">All files</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3482"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3483"/>
       <source>Please select the path of your git executable</source>
       <translation type="unfinished">Please select the path of your git executable</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3571"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3572"/>
       <source>Do you really want to reset the overrides of all message boxes?</source>
       <translation type="unfinished">Do you really want to reset the overrides of all message boxes?</translation>
     </message>
@@ -5844,7 +5844,7 @@ Your notes will stay intact!</translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1945"/>
       <location filename="../dialogs/settingsdialog.cpp" line="2014"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3272"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3273"/>
       <source>&amp;Cancel</source>
       <translation type="unfinished">&amp;Cancel</translation>
     </message>
@@ -6616,8 +6616,8 @@ This cannot be undone!</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="24"/>
-      <source>the plain-text file notepad with markdown support and ownCloud integration</source>
-      <translation type="unfinished">the plain-text file notepad with markdown support and ownCloud integration</translation>
+      <source>plain-text file markdown note taking with ownCloud integration</source>
+      <translation type="unfinished">plain-text file markdown note taking with ownCloud integration</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="88"/>
