@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 19.6.2
+- fixed Debian 8.0 build problem on Qt 5.3
+- updated application description
+- added more Italian and German translation (thank you mlocati)
+
 ## 19.6.1
 - fixed openSUSE, Fedora and Debian build problem
 - added more Catalan, Dutch, Hungarian, Russian, Italian, German, Spanish translation
