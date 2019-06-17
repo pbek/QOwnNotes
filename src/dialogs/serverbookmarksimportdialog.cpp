@@ -64,10 +64,16 @@ ServerBookmarksImportDialog::ServerBookmarksImportDialog(
         bookmarksCount++;
     }
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     jsonObject = QJsonObject{
             {"type", "newBookmarks"},
             {"data", bookmarkList}
     };
+#else
+    jsonObject = QJsonObject();
+    jsonObject.insert("type", "newBookmarks");
+    jsonObject.insert("data", bookmarkList);
+#endif
 
     ui->progressBar->setMaximum(bookmarksCount);
     ui->infoLabel->setText(tr("<strong>%n bookmarks</strong> found on server", "",
