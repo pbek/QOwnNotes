@@ -1884,7 +1884,7 @@ void OwnCloudService::handleImportBookmarksReply(QString &data) {
     }
 
 #ifndef INTEGRATION_TESTS
-    auto *dialog = new ServerBookmarksImportDialog(bookmarks, mainWindow);
+    auto *dialog = new ServerBookmarksImportDialog(bookmarks);
     dialog->exec();
 #endif
 }
