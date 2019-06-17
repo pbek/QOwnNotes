@@ -2,6 +2,7 @@
 
 #include <QDialog>
 #include <QJSValue>
+#include <QJsonObject>
 #include <mainwindow.h>
 #include "masterdialog.h"
 
