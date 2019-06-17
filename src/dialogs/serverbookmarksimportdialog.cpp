@@ -47,12 +47,19 @@ ServerBookmarksImportDialog::ServerBookmarksImportDialog(
                 description.prepend("#" + tag.replace(" ", "-") + " ");
         }
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
         QJsonObject data {
                 {"name", title},
                 {"url", url},
                 {"description", description.trimmed()}
         };
-        
+#else
+        QJsonObject data;
+        data.insert("name", title);
+        data.insert("url", url);
+        data.insert("description", description.trimmed());
+#endif
+
         bookmarkList.append(data);
         bookmarksCount++;
     }
