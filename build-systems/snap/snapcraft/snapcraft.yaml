@@ -1,12 +1,12 @@
 name: qownnotes
 version: "VERSION-STRING"
-summary: Plain-text file notepad with markdown support and ownCloud integration
+summary: Plain-text file markdown note taking with Nextcloud/ownCloud integration
 grade: stable
 confinement: strict
 description: |
-  QOwnNotes is the open source (GPL) plain-text file notepad with markdown support
-  and todo list manager for GNU/Linux, Mac OS X and Windows, that (optionally) works
-  together with the notes application of ownCloud.
+  QOwnNotes is the open source (GPL) plain-text file markdown note taking app
+  for GNU/Linux, Mac OS X and Windows, that (optionally) works together with the
+  notes application of Nextcloud/ownCloud.
   https://www.qownnotes.org/
 
 apps:

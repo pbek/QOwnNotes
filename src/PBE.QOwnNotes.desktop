@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=QOwnNotes
-Comment=Plain text notepad and todo list manager with markdown support that works together with ownCloud/Nextcloud
+Comment=Plain-text file markdown note taking with Nextcloud/ownCloud integration
 Exec=QOwnNotes
 Keywords=markdown;owncloud;nextcloud;notes;
 Icon=QOwnNotes

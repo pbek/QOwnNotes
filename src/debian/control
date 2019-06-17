@@ -11,8 +11,8 @@ Vcs-Browser: https://github.com/pbek/QOwnNotes/
 Package: qownnotes
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, libqt5core5a, libqt5gui5, libqt5sql5, libqt5sql5-sqlite, libqt5widgets5, libqt5qml5, libqt5svg5, libqt5network5, libqt5xml5, libqt5xmlpatterns5, libqt5websockets5, openssl
-Description: Plain text notepad and todo list manager with markdown support that works together with ownCloud
- QOwnNotes is the text notepad and todo list manager with markdown support that works together with ownCloud.
+Description: Plain-text file markdown note taking with Nextcloud/ownCloud integration
+ Plain-text file markdown note taking with Nextcloud/ownCloud integration.
  You own your own notes! All notes are stored as plain-text files on your desktop computer.
  Sync them over devices (desktop & mobile) with ownCloud.
  Use ownCloud Notes to edit your notes in the web.

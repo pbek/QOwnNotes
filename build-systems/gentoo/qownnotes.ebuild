@@ -10,7 +10,7 @@ EAPI=5
 
 inherit qmake-utils eutils
 
-DESCRIPTION="A plain-text file notepad with markdown support and ownCloud/NC integration"
+DESCRIPTION="A plain-text file markdown note taking with Nextcloud/ownCloud integration"
 HOMEPAGE="http://www.qownnotes.org/"
 SRC_URI="https://download.tuxfamily.org/${PN}/src/${P}.tar.xz"
 

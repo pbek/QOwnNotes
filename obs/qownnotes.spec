@@ -52,9 +52,9 @@ Source0:        %{name}-%{version}.tar.xz
 
 
 %description
-QOwnNotes is the open source notepad and todo list manager, that works together with the default notes application of ownCloud.
+Plain-text file markdown note taking with Nextcloud/ownCloud integration.
 
-So you are able to write down your thoughts with QOwnNotes and edit or search for them later from your mobile device (like with CloudNotes or the ownCloud/Nextcloud web-service.
+You are able to write down your thoughts with QOwnNotes and edit or search for them later from your mobile device (like with CloudNotes or the ownCloud/Nextcloud web-service.
 
 The notes are stored as plain text files and are synced with ownCloud's/Nextcloud's file sync functionality. Of course other software, like Dropbox can be used too.
 
