@@ -2,6 +2,7 @@
 
 ## 19.6.3
 - fixed syntax highlighting of non-formatted urls
+- added more Spanish, German translation (thank you richarson, rakekniven)
 
 ## 19.6.2
 - fixed Debian 8.0 build problem on Qt 5.3

@@ -3710,9 +3710,9 @@ Möchten Sie es trotzdem installieren?</translation>
     <message numerus="yes">
       <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="79"/>
       <source>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</source>
-      <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
-        <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n Lesezeichen&lt;/strong&gt; auf dem Server gefunden</numerusform>
+        <numerusform>&lt;strong&gt;%n Lesezeichen&lt;/strong&gt; auf dem Server gefunden</numerusform>
       </translation>
     </message>
   </context>
@@ -4560,7 +4560,7 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2559"/>
       <source>Enable dark mode icon theme</source>
-      <translation type="unfinished">Enable dark mode icon theme</translation>
+      <translation>Dunkelmodus-Symbole aktivieren</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2489"/>
@@ -4764,7 +4764,7 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5432"/>
       <source>Show security token</source>
-      <translation type="unfinished">Show security token</translation>
+      <translation>Sicherheits-Token anzeigen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5468"/>
@@ -6585,22 +6585,22 @@ Kann nicht rückgängig gemacht werden!</translation>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="20"/>
       <source>Security token</source>
-      <translation type="unfinished">Security token</translation>
+      <translation>Sicherheits-Token</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="26"/>
       <source>To let your QOwnNotes browser extension access your notes please paste this security token in the settings of your browser extension:</source>
-      <translation type="unfinished">To let your QOwnNotes browser extension access your notes please paste this security token in the settings of your browser extension:</translation>
+      <translation>Damit die QOwnNotes-Browsererweiterung Zugriff auf Ihre Notizen erhält, fügen Sie bitte das Sicherheits-Token in den Einstellungen der Browsererweiterung ein:</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="65"/>
       <source>Generate new token</source>
-      <translation type="unfinished">Generate new token</translation>
+      <translation>Neues Token erzeugen</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="79"/>
       <source>Copy token</source>
-      <translation type="unfinished">Copy token</translation>
+      <translation>Token kopieren</translation>
     </message>
   </context>
   <context>
