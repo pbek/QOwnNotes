@@ -45,7 +45,6 @@ install:
   - set PATH=%PATH%;%QTDIR%\bin;C:\Qt\Tools\QtCreator\bin;C:\Qt\Tools\mingw%TOOLCHAIN_VERSION%\bin
   - echo PATH=%PATH%
   - set RELEASE_PATH=appveyor\release
-  - set QMAKE_CXX=ccache g++
   # enable this to use RDP connection, see https://www.appveyor.com/docs/how-to/rdp-to-build-worker/
 #  - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 
@@ -67,7 +66,7 @@ build_script:
   # setting the build number in the header file
   - "echo #define BUILD %APPVEYOR_BUILD_NUMBER% > build_number.h"
 #  - qmake QOwnNotes.pro -r -spec win32-g++
-  - qmake QOwnNotes.pro -r -spec %gpp% CONFIG+=ccache
+  - qmake QOwnNotes.pro -r -spec %gpp% CONFIG+=ccache QMAKE_CXX="ccache g++"
 #  - qmake QOwnNotes.pro -r -spec win32-g++ "CONFIG+=debug"
   - mingw32-make
   # creating the release path
