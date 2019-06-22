@@ -7,10 +7,10 @@
 skip_tags: true
 
 environment:
-  CCACHE_DIR: "%APPVEYOR_BUILD_FOLDER%\\.ccache"
   global:
     qtdir57: C:\Qt\5.7\mingw53_32
     qtdirlatest: C:\Qt\latest\mingw73_32
+    CCACHE_DIR: "%APPVEYOR_BUILD_FOLDER%\\.ccache"
 
   matrix:
 #    - QTDIR: C:\Qt\5.11\mingw53_32
