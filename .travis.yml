@@ -1,4 +1,4 @@
-language: cpp
+language: c
 dist: trusty
 osx_image: xcode10.2
 cache: ccache
