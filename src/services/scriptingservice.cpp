@@ -964,6 +964,9 @@ void ScriptingService::noteTextEditSetSelection(int start, int end) {
         c.setPosition(end, QTextCursor::KeepAnchor);
         textEdit->setTextCursor(c);
     }
+#else
+    Q_UNUSED(start)
+    Q_UNUSED(end)
 #endif
 }
 
