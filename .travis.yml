@@ -74,7 +74,7 @@ script:
       CPPFLAGS=-I$QTDIR/include
     fi
   - cd ./tests
-  - qmake DEFINES+=INTEGRATION_TESTS && make -s -j 2
+  - qmake DEFINES+=INTEGRATION_TESTS CONFIG+=ccache && make -s -j 2
   - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
       if [ "${TRAVIS_BRANCH}" != "master" ]; then
            ./../bin/tests/tests -platform minimal -txt
@@ -89,7 +89,7 @@ script:
   - cd ./../src
   - echo "#define BUILD ""$TRAVIS_BUILD_NUMBER" > build_number.h
   - echo "#define RELEASE \"Travis CI\"" > release.h
-  - qmake QOwnNotes.pro CONFIG+=$CONFIG
+  - qmake QOwnNotes.pro CONFIG+=$CONFIG CONFIG+=ccache
   - make
 
 before_deploy:
