@@ -20,6 +20,14 @@ find_package( Qt5PrintSupport REQUIRED )
 find_package( Qt5WebSockets REQUIRED )
 find_package( Qt5Qml REQUIRED )
 
+find_program(CCACHE_FOUND ccache)
+
+if(CCACHE_FOUND)
+    message(STATUS "ccache found")
+    set_property(GLOBAL PROPERTY RULE_LAUNCH_COMPILE ccache)
+    set_property(GLOBAL PROPERTY RULE_LAUNCH_LINK ccache)
+endif(CCACHE_FOUND)
+
 qt5_wrap_ui(dialogs/ui_settingsdialog.h settingsdialog.ui)
 qt5_wrap_ui(dialogs/ui_tododialog.h tododialog.ui)
 qt5_wrap_ui(dialogs/ui_aboutdialog.h aboutdialog.ui)
