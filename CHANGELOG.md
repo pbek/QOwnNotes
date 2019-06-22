@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 19.6.4
+- if you right-click on a link in the preview you now can select `Copy link location`
+  to copy the location of the link (for [#800](https://github.com/pbek/QOwnNotes/issues/800)
+
 ## 19.6.3
 - fixed syntax highlighting of non-formatted urls
 - added more Spanish, German translation (thank you richarson, rakekniven)

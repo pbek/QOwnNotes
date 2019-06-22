@@ -42,6 +42,7 @@
 #include <QTreeWidgetItem>
 #include <QCoreApplication>
 #include <QUuid>
+#include <QTextLength>
 #include "ui_mainwindow.h"
 #include "dialogs/linkdialog.h"
 #include "services/owncloudservice.h"
@@ -10410,12 +10411,24 @@ void MainWindow::on_noteTextView_customContextMenuRequested(const QPoint &pos) {
 
     QTextCursor c = ui->noteTextView->cursorForPosition(pos);
     QTextFormat format = c.charFormat();
+    const QString &anchorHref = format.toCharFormat().anchorHref();
+    bool isImageFormat = format.isImageFormat();
+    bool isAnchor = !anchorHref.isEmpty();
+
+    if (isImageFormat || isAnchor) {
+        menu->addSeparator();
+    }
+
     auto *copyImageAction = new QAction(this);
+    auto *copyLinkLocationAction = new QAction(this);
 
     // check if clicked object was an image
-    if (format.isImageFormat()) {
-        menu->addSeparator();
+    if (isImageFormat) {
         copyImageAction = menu->addAction(tr("Copy image file path"));
+    }
+
+    if (isAnchor) {
+        copyLinkLocationAction = menu->addAction(tr("Copy link location"));
     }
 
     QAction *selectedItem = menu->exec(globalPos);
@@ -10432,6 +10445,11 @@ void MainWindow::on_noteTextView_customContextMenuRequested(const QPoint &pos) {
 
             QClipboard *clipboard = QApplication::clipboard();
             clipboard->setText(imagePath);
+        }
+        // copy link location to the clipboard
+        else if (selectedItem == copyLinkLocationAction) {
+            QClipboard *clipboard = QApplication::clipboard();
+            clipboard->setText(anchorHref);
         }
     }
 }
