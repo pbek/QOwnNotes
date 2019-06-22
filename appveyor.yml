@@ -7,6 +7,7 @@
 skip_tags: true
 
 environment:
+  CCACHE_DIR: "%APPVEYOR_BUILD_FOLDER%\\.ccache"
   global:
     qtdir57: C:\Qt\5.7\mingw53_32
     qtdirlatest: C:\Qt\latest\mingw73_32
@@ -33,6 +34,9 @@ matrix:
     - QTDIR: C:\Qt\latest\mingw73_64
       TOOLCHAIN_VERSION: 730_64
       gpp: g++
+
+cache:
+  - .ccache
 
 install:
   # Qt-versions: https://www.appveyor.com/docs/build-environment/#qt
