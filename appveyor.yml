@@ -47,6 +47,9 @@ install:
   - set RELEASE_PATH=appveyor\release
   # enable this to use RDP connection, see https://www.appveyor.com/docs/how-to/rdp-to-build-worker/
 #  - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
+  - pacman --verbose --noconfirm --sync ccache
+  - ccache.exe -V
+  - du -sh %BUILD_DIR% %CCACHE_DIR%
 
 before_build:
   # getting submodules
