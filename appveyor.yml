@@ -47,9 +47,10 @@ install:
   - set RELEASE_PATH=appveyor\release
   # enable this to use RDP connection, see https://www.appveyor.com/docs/how-to/rdp-to-build-worker/
 #  - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
-  - C:\msys64\usr\bin\pacman --verbose --noconfirm --sync ccache
-  - ccache.exe -V
-  - dir %CCACHE_DIR%
+
+#  - C:\msys64\usr\bin\pacman --verbose --noconfirm --sync ccache
+#  - ccache.exe -V
+#  - dir %CCACHE_DIR%
 
 before_build:
   # getting submodules
@@ -70,7 +71,8 @@ build_script:
   # setting the build number in the header file
   - "echo #define BUILD %APPVEYOR_BUILD_NUMBER% > build_number.h"
 #  - qmake QOwnNotes.pro -r -spec win32-g++
-  - qmake QOwnNotes.pro -r -spec %gpp% CONFIG+=ccache QMAKE_CXX="ccache $$QMAKE_CXX"
+#  - qmake QOwnNotes.pro -r -spec %gpp% CONFIG+=ccache QMAKE_CXX="ccache $$QMAKE_CXX"
+  - qmake QOwnNotes.pro -r -spec %gpp% CONFIG+=ccache
 #  - qmake QOwnNotes.pro -r -spec win32-g++ "CONFIG+=debug"
   - mingw32-make
   # creating the release path
