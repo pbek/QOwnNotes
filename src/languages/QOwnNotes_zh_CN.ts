@@ -919,7 +919,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="408"/>
-        <location filename="../mainwindow.ui" line="894"/>
+        <location filename="../mainwindow.ui" line="891"/>
         <location filename="../mainwindow.cpp" line="694"/>
         <source>Navigation</source>
         <translation>导航</translation>
@@ -936,154 +936,154 @@
         <translation type="unfinished">Add a tag to the current note</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="850"/>
+        <location filename="../mainwindow.ui" line="847"/>
         <source>&amp;Note</source>
         <translation>笔记(&amp;N)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="854"/>
+        <location filename="../mainwindow.ui" line="851"/>
         <source>Note &amp;folders</source>
         <translation>笔记文件夹(&amp;F)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="859"/>
+        <location filename="../mainwindow.ui" line="856"/>
         <source>Sort by</source>
         <translation>排列方式</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="966"/>
+        <location filename="../mainwindow.ui" line="963"/>
         <source>&amp;Help</source>
         <translation>帮助(&amp;H)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1107"/>
+        <location filename="../mainwindow.ui" line="1104"/>
         <source>Editor width in distraction free mode</source>
         <translation>免打扰模式编辑器宽度</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1110"/>
+        <location filename="../mainwindow.ui" line="1107"/>
         <source>Editor width</source>
         <translation>编辑器宽度</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1194"/>
+        <location filename="../mainwindow.ui" line="1191"/>
         <source>Custom actions</source>
         <translation>自定义操作</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1214"/>
+        <location filename="../mainwindow.ui" line="1211"/>
         <source>main toolbar</source>
         <translation>主工具栏</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1248"/>
+        <location filename="../mainwindow.ui" line="1245"/>
         <source>&amp;Quit</source>
         <translation>退出(&amp;Q)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1263"/>
+        <location filename="../mainwindow.ui" line="1260"/>
         <source>&amp;Setup note folders</source>
         <translation>设置笔记目录(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1272"/>
+        <location filename="../mainwindow.ui" line="1269"/>
         <source>&amp;Find note</source>
         <translation>查找笔记(&amp;F)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1284"/>
+        <location filename="../mainwindow.ui" line="1281"/>
         <source>&amp;Remove current note</source>
         <translation>移除当前笔记(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1308"/>
+        <location filename="../mainwindow.ui" line="1305"/>
         <source>&amp;New note</source>
         <translation>新笔记(&amp;N)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1320"/>
+        <location filename="../mainwindow.ui" line="1317"/>
         <source>Check for &amp;updates</source>
         <translation>检查更新(&amp;U)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1332"/>
+        <location filename="../mainwindow.ui" line="1329"/>
         <source>Post questions, feature requests or issues</source>
         <translation type="unfinished">Post questions, feature requests or issues</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1343"/>
+        <location filename="../mainwindow.ui" line="1340"/>
         <source>Alphabetical</source>
         <translation>字母顺序</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1346"/>
+        <location filename="../mainwindow.ui" line="1343"/>
         <source>Sort alphabetical</source>
         <translation>按字母顺序排列</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1354"/>
+        <location filename="../mainwindow.ui" line="1351"/>
         <source>By date</source>
         <translation>日期顺序</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1357"/>
+        <location filename="../mainwindow.ui" line="1354"/>
         <source>Sort by date</source>
         <translation>按日期排序</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1381"/>
+        <location filename="../mainwindow.ui" line="1378"/>
         <source>Show note &amp;versions</source>
         <translation>显示笔记版本(&amp;V)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1384"/>
+        <location filename="../mainwindow.ui" line="1381"/>
         <source>Show note versions on server</source>
         <translation>显示服务器上的笔记版本</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1396"/>
+        <location filename="../mainwindow.ui" line="1393"/>
         <source>Show trashed notes on server</source>
         <translation>显示服务器上的回收站</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1401"/>
+        <location filename="../mainwindow.ui" line="1398"/>
         <location filename="../mainwindow.cpp" line="9129"/>
         <source>Select &amp;all notes</source>
         <translation>选择所有笔记(&amp;A)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1410"/>
+        <location filename="../mainwindow.ui" line="1407"/>
         <location filename="../mainwindow.cpp" line="5753"/>
         <source>Insert &amp;link</source>
         <translation>插入链接(&amp;L)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1413"/>
+        <location filename="../mainwindow.ui" line="1410"/>
         <source>Insert link to an url or a note</source>
         <translation>向笔记插入链接</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1425"/>
+        <location filename="../mainwindow.ui" line="1422"/>
         <source>&amp;Find in current note</source>
         <translation>在当前笔记中查找(&amp;F)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1428"/>
+        <location filename="../mainwindow.ui" line="1425"/>
         <source>Find text in current note</source>
         <translation>在当前笔记搜索文本</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1441"/>
+        <location filename="../mainwindow.ui" line="1438"/>
         <source>&amp;Duplicate text</source>
         <translation>重复文本(&amp;D)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1453"/>
+        <location filename="../mainwindow.ui" line="1450"/>
         <source>&amp;Back in note history</source>
         <translation>后退较旧的笔记历史记录(&amp;B)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1366"/>
+        <location filename="../mainwindow.ui" line="1363"/>
         <source>&amp;Settings</source>
         <translation>设置((&amp;S)</translation>
     </message>
@@ -1118,579 +1118,579 @@
         <translation>新建标签</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="869"/>
+        <location filename="../mainwindow.ui" line="866"/>
         <location filename="../mainwindow.cpp" line="5800"/>
         <source>Export</source>
         <translation>导出</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="882"/>
+        <location filename="../mainwindow.ui" line="879"/>
         <source>Import</source>
         <translation>导入</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="907"/>
+        <location filename="../mainwindow.ui" line="904"/>
         <location filename="../mainwindow.cpp" line="5782"/>
         <source>Print</source>
         <translation>打印</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="918"/>
+        <location filename="../mainwindow.ui" line="915"/>
         <source>View note</source>
         <translation>查看笔记</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="930"/>
+        <location filename="../mainwindow.ui" line="927"/>
         <source>Trash</source>
         <translation type="unfinished">Trash</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="996"/>
+        <location filename="../mainwindow.ui" line="993"/>
         <source>&amp;Edit</source>
         <translation>编辑(&amp;E)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1000"/>
+        <location filename="../mainwindow.ui" line="997"/>
         <source>Insert</source>
         <translation>插入</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1017"/>
+        <location filename="../mainwindow.ui" line="1014"/>
         <source>Format</source>
         <translation>格式</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1030"/>
+        <location filename="../mainwindow.ui" line="1027"/>
         <source>Extra</source>
         <translation>额外</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1046"/>
+        <location filename="../mainwindow.ui" line="1043"/>
         <source>Edit</source>
         <translation>编辑</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1059"/>
+        <location filename="../mainwindow.ui" line="1056"/>
         <source>Versioning</source>
         <translation>版本</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1070"/>
+        <location filename="../mainwindow.ui" line="1067"/>
         <source>Encryption</source>
         <translation>加密</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1097"/>
+        <location filename="../mainwindow.ui" line="1094"/>
         <source>To&amp;do</source>
         <translation>待办事项</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1103"/>
+        <location filename="../mainwindow.ui" line="1100"/>
         <source>&amp;Window</source>
         <translation>窗口(&amp;W)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1119"/>
+        <location filename="../mainwindow.ui" line="1116"/>
         <location filename="../mainwindow.cpp" line="633"/>
         <source>Workspaces</source>
         <translation>工作区</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1124"/>
+        <location filename="../mainwindow.ui" line="1121"/>
         <source>Panels</source>
         <translation>面板</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1129"/>
+        <location filename="../mainwindow.ui" line="1126"/>
         <source>Toolbars</source>
         <translation>工具栏</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1134"/>
+        <location filename="../mainwindow.ui" line="1131"/>
         <source>Show</source>
         <extracomment>To show or hide stuff</extracomment>
         <translation>显示</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1148"/>
+        <location filename="../mainwindow.ui" line="1145"/>
         <source>Workspace</source>
         <translation>工作区</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1157"/>
+        <location filename="../mainwindow.ui" line="1154"/>
         <source>Jump to</source>
         <translation type="unfinished">Jump to</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1190"/>
+        <location filename="../mainwindow.ui" line="1187"/>
         <source>&amp;Scripting</source>
         <translation>脚本(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1296"/>
+        <location filename="../mainwindow.ui" line="1293"/>
         <source>About &amp;QOwnNotes…</source>
         <translation type="unfinished">About &amp;QOwnNotes…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1335"/>
+        <location filename="../mainwindow.ui" line="1332"/>
         <source>Post questions, feature requests or problems with the help of the issue assistant</source>
         <translation type="unfinished">Post questions, feature requests or problems with the help of the issue assistant</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1393"/>
+        <location filename="../mainwindow.ui" line="1390"/>
         <source>Show remote trash</source>
         <translation type="unfinished">Show remote trash</translation>
     </message>
     <message>
+        <location filename="../mainwindow.ui" line="1430"/>
         <location filename="../mainwindow.ui" line="1433"/>
-        <location filename="../mainwindow.ui" line="1436"/>
         <source>Auto format table</source>
         <translation type="unfinished">Auto format table</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1465"/>
+        <location filename="../mainwindow.ui" line="1462"/>
         <source>Forward in note history</source>
         <translation>前进较新的笔记历史</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1477"/>
+        <location filename="../mainwindow.ui" line="1474"/>
         <source>Show shortcuts</source>
         <translation>显示快捷键</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1486"/>
+        <location filename="../mainwindow.ui" line="1483"/>
         <source>&amp;Knowledge base</source>
         <translation>基础知识(&amp;K)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1495"/>
+        <location filename="../mainwindow.ui" line="1492"/>
         <source>Insert current &amp;time</source>
         <translation>插入当前时间(&amp;T)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1507"/>
+        <location filename="../mainwindow.ui" line="1504"/>
         <source>Show &amp;Todo List</source>
         <translation>显示 Todo 列表(&amp;T)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1519"/>
+        <location filename="../mainwindow.ui" line="1516"/>
         <source>&amp;Export note as PDF (preview)</source>
         <translation type="unfinished">&amp;Export note as PDF (preview)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1522"/>
+        <location filename="../mainwindow.ui" line="1519"/>
         <source>Export note as PDF (preview)</source>
         <translation type="unfinished">Export note as PDF (preview)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1531"/>
+        <location filename="../mainwindow.ui" line="1528"/>
         <source>&amp;Export note as PDF (text)</source>
         <translation>导出PDF（文本格式笔记）(&amp;E)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1540"/>
+        <location filename="../mainwindow.ui" line="1537"/>
         <source>&amp;Print note (text)</source>
         <translation>打印笔记（文本格式笔记）(&amp;P)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1564"/>
+        <location filename="../mainwindow.ui" line="1561"/>
         <source>Insert &amp;image</source>
         <translation>插入图片(&amp;I)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1567"/>
+        <location filename="../mainwindow.ui" line="1564"/>
         <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
         <translation>插入图片(图片会被复制到当前笔记目录下的 media 目录）</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1579"/>
+        <location filename="../mainwindow.ui" line="1576"/>
         <source>Show &amp;changelog</source>
         <translation>显示软件改进 Changelog(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1588"/>
+        <location filename="../mainwindow.ui" line="1585"/>
         <source>&amp;Encrypt note</source>
         <translation>加密笔记(&amp;E)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1597"/>
+        <location filename="../mainwindow.ui" line="1594"/>
         <source>Edit encrypted note</source>
         <translation>编辑加密笔记</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1609"/>
+        <location filename="../mainwindow.ui" line="1606"/>
         <source>Decrypt note</source>
         <translation>解密笔记</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1618"/>
+        <location filename="../mainwindow.ui" line="1615"/>
         <source>&amp;Open note in external editor</source>
         <translation>用外部编辑器打开笔记(&amp;O)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1630"/>
+        <location filename="../mainwindow.ui" line="1627"/>
         <source>&amp;Export note as markdown file</source>
         <translation>导出markdown格式笔记(&amp;E)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1639"/>
+        <location filename="../mainwindow.ui" line="1636"/>
         <source>&amp;Get involved</source>
         <translation>参与(G)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1648"/>
+        <location filename="../mainwindow.ui" line="1645"/>
         <source>Insert &amp;code block</source>
         <translation>插入与代码块(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1660"/>
+        <location filename="../mainwindow.ui" line="1657"/>
         <source>Next note</source>
         <translation>下一个笔记</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1672"/>
+        <location filename="../mainwindow.ui" line="1669"/>
         <source>Previous note</source>
         <translation>上一个笔记</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1684"/>
+        <location filename="../mainwindow.ui" line="1681"/>
         <source>&amp;Distraction free mode</source>
         <translation>免打扰模式(&amp;D)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1687"/>
+        <location filename="../mainwindow.ui" line="1684"/>
         <source>Distraction free mode, you can leave it with a button on the bottom right</source>
         <translation>免打扰模式，可以通过右下角的按钮退出</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1698"/>
+        <location filename="../mainwindow.ui" line="1695"/>
         <source>Show &amp;toolbar</source>
         <translation>显示工具栏(&amp;T)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1706"/>
+        <location filename="../mainwindow.ui" line="1703"/>
         <source>Narrow</source>
         <translation>窄</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1717"/>
+        <location filename="../mainwindow.ui" line="1714"/>
         <source>Medium</source>
         <translation>中等</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1728"/>
+        <location filename="../mainwindow.ui" line="1725"/>
         <source>Wide</source>
         <translation>宽</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1739"/>
+        <location filename="../mainwindow.ui" line="1736"/>
         <source>Full</source>
         <translation>填满</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1751"/>
+        <location filename="../mainwindow.ui" line="1748"/>
         <source>Paste html or media</source>
         <translation>粘贴 html 或媒体</translation>
     </message>
     <message>
+        <location filename="../mainwindow.ui" line="1751"/>
         <location filename="../mainwindow.ui" line="1754"/>
-        <location filename="../mainwindow.ui" line="1757"/>
         <source>Paste images, notes and html from the clipboard</source>
         <translation>从剪贴板中粘贴图像、 注释和 html</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1769"/>
+        <location filename="../mainwindow.ui" line="1766"/>
         <source>Show note in &amp;file manager</source>
         <translation>在文件管理器中显示笔记(&amp;F)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1781"/>
+        <location filename="../mainwindow.ui" line="1778"/>
         <source>Format text &amp;bold</source>
         <translation>设置粗体文本(&amp;B)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1793"/>
+        <location filename="../mainwindow.ui" line="1790"/>
         <source>Format text &amp;italic</source>
         <translation>设置斜体文本(&amp;I)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1805"/>
+        <location filename="../mainwindow.ui" line="1802"/>
         <source>&amp;Increase note text size</source>
         <translation>增大字体大小(&amp;I)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1817"/>
+        <location filename="../mainwindow.ui" line="1814"/>
         <source>&amp;Decrease note text size</source>
         <translation>减小字体大小(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1829"/>
+        <location filename="../mainwindow.ui" line="1826"/>
         <source>&amp;Reset note text size</source>
         <translation>重置字体大小(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1841"/>
+        <location filename="../mainwindow.ui" line="1838"/>
         <source>&amp;Add tag to note</source>
         <translation>添加标签到笔记(&amp;A)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1853"/>
+        <location filename="../mainwindow.ui" line="1850"/>
         <source>&amp;Reload note folder</source>
         <translation>重新载入笔记文件夹(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1925"/>
+        <location filename="../mainwindow.ui" line="1922"/>
         <source>Show log</source>
         <translation>显示日志</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1934"/>
+        <location filename="../mainwindow.ui" line="1931"/>
         <source>Export note as HTML</source>
         <translation>笔记导出为 HTML</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2013"/>
+        <location filename="../mainwindow.ui" line="2010"/>
         <source>Cycle text case</source>
         <translation>切换大小写</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2086"/>
+        <location filename="../mainwindow.ui" line="2083"/>
         <source>Show note list under tag panel</source>
         <translation type="unfinished">Show note list under tag panel</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2104"/>
+        <location filename="../mainwindow.ui" line="2101"/>
         <source>Find notes in all tags / subfolders</source>
         <translation>在所有标签/子文件夹中查找</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2125"/>
+        <location filename="../mainwindow.ui" line="2122"/>
         <source>Import notes from text files</source>
         <translation type="unfinished">Import notes from text files</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2134"/>
+        <location filename="../mainwindow.ui" line="2131"/>
         <source>Manage orphaned image files</source>
         <translation type="unfinished">Manage orphaned image files</translation>
     </message>
     <message>
+        <location filename="../mainwindow.ui" line="2143"/>
         <location filename="../mainwindow.ui" line="2146"/>
-        <location filename="../mainwindow.ui" line="2149"/>
         <source>Open the Telegram group</source>
         <translation type="unfinished">Open the Telegram group</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2176"/>
+        <location filename="../mainwindow.ui" line="2173"/>
         <source>Unlock panels</source>
         <translation>解锁面板</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2185"/>
+        <location filename="../mainwindow.ui" line="2182"/>
         <location filename="../mainwindow.cpp" line="10123"/>
         <source>Remove current workspace</source>
         <translation>删除当前工作区</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2194"/>
+        <location filename="../mainwindow.ui" line="2191"/>
         <source>Add new workspace</source>
         <translation>添加新的工作区</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2203"/>
+        <location filename="../mainwindow.ui" line="2200"/>
         <source>Rename current workspace</source>
         <translation>重命名当前工作区</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2212"/>
+        <location filename="../mainwindow.ui" line="2209"/>
         <source>Switch to previous workspace</source>
         <translation>切换到以前的工作区</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2220"/>
+        <location filename="../mainwindow.ui" line="2217"/>
         <source>Show all panels</source>
         <translation>显示所有面板</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2229"/>
+        <location filename="../mainwindow.ui" line="2226"/>
         <source>Find action</source>
         <translation>查找操作</translation>
     </message>
     <message>
+        <location filename="../mainwindow.ui" line="2229"/>
         <location filename="../mainwindow.ui" line="2232"/>
-        <location filename="../mainwindow.ui" line="2235"/>
         <source>Find an action from the menu</source>
         <translation>从菜单中查找操作</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2247"/>
+        <location filename="../mainwindow.ui" line="2244"/>
         <source>Insert table</source>
         <translation>插入表格</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2259"/>
+        <location filename="../mainwindow.ui" line="2256"/>
         <location filename="../mainwindow.cpp" line="5760"/>
         <source>Insert block &amp;quote</source>
         <translation>插入块引用(&amp;Q)</translation>
     </message>
     <message>
+        <location filename="../mainwindow.ui" line="2264"/>
         <location filename="../mainwindow.ui" line="2267"/>
-        <location filename="../mainwindow.ui" line="2270"/>
         <source>Search selected text on the web</source>
         <translation type="unfinished">Search selected text on the web</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2278"/>
+        <location filename="../mainwindow.ui" line="2275"/>
         <source>Delete line</source>
         <translation>删除线</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2286"/>
+        <location filename="../mainwindow.ui" line="2283"/>
         <source>Delete word</source>
         <translation>删除单词</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2294"/>
+        <location filename="../mainwindow.ui" line="2291"/>
         <source>Copy note headline</source>
         <translation type="unfinished">Copy note headline</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2306"/>
+        <location filename="../mainwindow.ui" line="2303"/>
         <location filename="../mainwindow.cpp" line="9104"/>
         <source>Open note in different window</source>
         <translation>在新窗口中打开笔记</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2318"/>
+        <location filename="../mainwindow.ui" line="2315"/>
         <source>Save modified notes</source>
         <translation>保存修改的笔记</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2329"/>
+        <location filename="../mainwindow.ui" line="2326"/>
         <source>Ascending</source>
         <translation>升序</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2337"/>
+        <location filename="../mainwindow.ui" line="2334"/>
         <source>Descending</source>
         <translation>降序</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2346"/>
+        <location filename="../mainwindow.ui" line="2343"/>
         <location filename="../mainwindow.cpp" line="9112"/>
         <source>Show note git versions</source>
         <translation>显示笔记 git 版本</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2355"/>
+        <location filename="../mainwindow.ui" line="2352"/>
         <source>Find scripts in script repository</source>
         <translation>在脚本库中查找脚本</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2367"/>
+        <location filename="../mainwindow.ui" line="2364"/>
         <source>Script settings</source>
         <translation>脚本设置</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2376"/>
+        <location filename="../mainwindow.ui" line="2373"/>
         <source>Insert attachment</source>
         <translation>插入附件</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2403"/>
+        <location filename="../mainwindow.ui" line="2400"/>
         <source>Check for script updates</source>
         <translation>检查脚本更新</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2412"/>
+        <location filename="../mainwindow.ui" line="2409"/>
         <source>Show local trash</source>
         <translation type="unfinished">Show local trash</translation>
     </message>
     <message>
+        <location filename="../mainwindow.ui" line="2414"/>
         <location filename="../mainwindow.ui" line="2417"/>
-        <location filename="../mainwindow.ui" line="2420"/>
         <source>Jump to note edit panel</source>
         <translation type="unfinished">Jump to note edit panel</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2432"/>
+        <location filename="../mainwindow.ui" line="2429"/>
         <source>Manage orphaned attachments</source>
         <translation type="unfinished">Manage orphaned attachments</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2437"/>
+        <location filename="../mainwindow.ui" line="2434"/>
         <source>Jump to note subfolder panel</source>
         <translation type="unfinished">Jump to note subfolder panel</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2445"/>
+        <location filename="../mainwindow.ui" line="2442"/>
         <source>Jump to tags panel</source>
         <translation type="unfinished">Jump to tags panel</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2453"/>
+        <location filename="../mainwindow.ui" line="2450"/>
         <source>Jump to note list panel</source>
         <translation type="unfinished">Jump to note list panel</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2461"/>
+        <location filename="../mainwindow.ui" line="2458"/>
         <source>Activate context menu</source>
         <translation type="unfinished">Activate context menu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2469"/>
+        <location filename="../mainwindow.ui" line="2466"/>
         <source>Import bookmarks from server</source>
         <translation type="unfinished">Import bookmarks from server</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1864"/>
+        <location filename="../mainwindow.ui" line="1861"/>
         <source>Use &amp;vertical preview layout</source>
         <translation>使用与垂直预览布局(&amp;V)</translation>
     </message>
     <message>
+        <location filename="../mainwindow.ui" line="1864"/>
         <location filename="../mainwindow.ui" line="1867"/>
-        <location filename="../mainwindow.ui" line="1870"/>
         <source>The note edit panel will be above the preview panel</source>
         <translation>笔记编辑面板将处于预览面板上方</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1879"/>
+        <location filename="../mainwindow.ui" line="1876"/>
         <source>Replace in current note</source>
         <translation>在当前笔记中替换</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1887"/>
+        <location filename="../mainwindow.ui" line="1884"/>
         <source>Autocomplete, solve equation or open URL</source>
         <translation>自动完成，求解方程或打开网址</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1890"/>
+        <location filename="../mainwindow.ui" line="1887"/>
         <source>Solve a simple equation like &apos;(2+3)*6=&apos; in the current line</source>
         <translation>在当前行计算类似 (2 + 3)*6= 的简单公式</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1898"/>
+        <location filename="../mainwindow.ui" line="1895"/>
         <source>Select note folder</source>
         <translation>选择笔记文件夹</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1913"/>
+        <location filename="../mainwindow.ui" line="1910"/>
         <source>Reload scripting engine</source>
         <translation>重新加载脚本引擎</translation>
     </message>
     <message>
+        <location filename="../mainwindow.ui" line="1943"/>
         <location filename="../mainwindow.ui" line="1946"/>
-        <location filename="../mainwindow.ui" line="1949"/>
         <source>Open the #qownnotes IRC channel, you have to stay online to get a response</source>
         <translation>打开 #qownnotes IRC 频道，你必须保持在线以获得回复</translation>
     </message>
     <message>
+        <location filename="../mainwindow.ui" line="2158"/>
         <location filename="../mainwindow.ui" line="2161"/>
-        <location filename="../mainwindow.ui" line="2164"/>
         <source>Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</source>
         <translation>打开 qownnotes Gitter 房间，您需要一个 GitHub 或 Twitter 账户登录，但是您可以获取离线消息</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="970"/>
+        <location filename="../mainwindow.ui" line="967"/>
         <source>Open chat</source>
         <translation>打开聊天</translation>
     </message>
@@ -1700,68 +1700,68 @@
         <translation type="unfinished">Note operations…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1552"/>
+        <location filename="../mainwindow.ui" line="1549"/>
         <source>&amp;Print note (preview)</source>
         <translation type="unfinished">&amp;Print note (preview)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1958"/>
+        <location filename="../mainwindow.ui" line="1955"/>
         <source>Insert headline from note filename</source>
         <translation>插入笔记名称为标题</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1972"/>
+        <location filename="../mainwindow.ui" line="1969"/>
         <source>Use softwrap in note editor and preview</source>
         <translation>在笔记编辑器和预览使用软换行</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1980"/>
+        <location filename="../mainwindow.ui" line="1977"/>
         <source>Show status bar</source>
         <translation>显示状态栏</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1995"/>
+        <location filename="../mainwindow.ui" line="1992"/>
         <source>Share note</source>
         <translation>分享笔记</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2025"/>
+        <location filename="../mainwindow.ui" line="2022"/>
         <source>Markdown cheatsheet</source>
         <translation>Markdown 说明</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2034"/>
+        <location filename="../mainwindow.ui" line="2031"/>
         <source>Strike out text</source>
         <translation>设置删除线文本</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2045"/>
+        <location filename="../mainwindow.ui" line="2042"/>
         <source>Use one column mode</source>
         <translation>使用单列模式</translation>
     </message>
     <message>
+        <location filename="../mainwindow.ui" line="2045"/>
         <location filename="../mainwindow.ui" line="2048"/>
-        <location filename="../mainwindow.ui" line="2051"/>
         <source>Use a one column minimal mode (like NVAlt)</source>
         <translation>使用单列的最小模式(例如 NVAlt)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2063"/>
+        <location filename="../mainwindow.ui" line="2060"/>
         <source>Show menu bar</source>
         <translation>显示菜单栏</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2075"/>
+        <location filename="../mainwindow.ui" line="2072"/>
         <source>Split note at cursor position</source>
         <translation>在光标位置拆分笔记</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2095"/>
+        <location filename="../mainwindow.ui" line="2092"/>
         <source>Donate</source>
         <translation>捐赠</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2116"/>
+        <location filename="../mainwindow.ui" line="2113"/>
         <source>Import notes from Evernote</source>
         <translation>从 Evernote 导入笔记</translation>
     </message>
@@ -2257,37 +2257,31 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10427"/>
         <source>Copy image file path</source>
-        <translation>复制图像文件路径</translation>
+        <translation type="vanished">复制图像文件路径</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10431"/>
-        <source>Copy link location</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="10575"/>
+        <location filename="../mainwindow.cpp" line="10521"/>
         <source>Select file to insert</source>
         <translation>选择要插入的文件</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10608"/>
+        <location filename="../mainwindow.cpp" line="10554"/>
         <source>Disallow all note editing</source>
         <translation type="unfinished">Disallow all note editing</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10748"/>
+        <location filename="../mainwindow.cpp" line="10694"/>
         <source>Select text files to import</source>
         <translation type="unfinished">Select text files to import</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10777"/>
+        <location filename="../mainwindow.cpp" line="10723"/>
         <source>Importing: %1</source>
         <translation type="unfinished">Importing: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10840"/>
+        <location filename="../mainwindow.cpp" line="10786"/>
         <source>Note headline &apos;%1&apos; was copied to the clipboard</source>
         <translation type="unfinished">Note headline &apos;%1&apos; was copied to the clipboard</translation>
     </message>
@@ -2299,13 +2293,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2391"/>
-        <location filename="../mainwindow.cpp" line="10609"/>
+        <location filename="../mainwindow.ui" line="2388"/>
+        <location filename="../mainwindow.cpp" line="10555"/>
         <source>Allow all note editing</source>
         <translation type="unfinished">Allow all note editing</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1184"/>
+        <location filename="../mainwindow.ui" line="1181"/>
         <source>&amp;Tag</source>
         <translation>标签(&amp;T)</translation>
     </message>
@@ -2457,7 +2451,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4529"/>
-        <location filename="../mainwindow.cpp" line="10762"/>
+        <location filename="../mainwindow.cpp" line="10708"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
@@ -2935,6 +2929,19 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <location filename="../dialogs/notediffdialog.cpp" line="38"/>
         <source>No</source>
         <translation>否</translation>
+    </message>
+</context>
+<context>
+    <name>NotePreviewWidget</name>
+    <message>
+        <location filename="../widgets/notepreviewwidget.cpp" line="236"/>
+        <source>Copy image file path</source>
+        <translation type="unfinished">复制图像文件路径</translation>
+    </message>
+    <message>
+        <location filename="../widgets/notepreviewwidget.cpp" line="240"/>
+        <source>Copy link location</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

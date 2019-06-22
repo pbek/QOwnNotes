@@ -503,8 +503,6 @@ private slots:
 
     bool restoreActiveNoteHistoryItem();
 
-    void on_noteTextView_customContextMenuRequested(const QPoint &pos);
-
     void on_actionShow_note_git_versions_triggered();
 
     void on_tagTreeWidget_itemCollapsed(QTreeWidgetItem *item);

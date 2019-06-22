@@ -17,6 +17,10 @@
 #include <QDebug>
 #include <QRegExp>
 #include <QMovie>
+#include <QAction>
+#include <QApplication>
+#include <QMenu>
+#include <QClipboard>
 #include <QProxyStyle>
 
 class NoDottedOutlineForLinksStyle: public QProxyStyle {
@@ -37,7 +41,7 @@ NotePreviewWidget::NotePreviewWidget(QWidget *parent) : QTextBrowser(parent) {
     _searchWidget->setReplaceEnabled(false);
 
     // add a layout to the widget
-    QVBoxLayout *layout = new QVBoxLayout;
+    auto *layout = new QVBoxLayout;
     layout->setContentsMargins(0, 0, 0, 0);
     layout->setMargin(0);
     layout->addStretch();
@@ -202,4 +206,59 @@ void NotePreviewWidget::initSearchFrame(QWidget *searchFrame, bool darkMode) {
 void NotePreviewWidget::hide() {
     _searchWidget->hide();
     QWidget::hide();
+}
+
+/**
+ * Shows a context menu for the note preview
+ *
+ * @param event
+ */
+void NotePreviewWidget::contextMenuEvent(QContextMenuEvent *event) {
+    QPoint pos = event->pos();
+    QPoint globalPos = event->globalPos();
+    QMenu *menu = this->createStandardContextMenu();
+
+    QTextCursor c = this->cursorForPosition(pos);
+    QTextFormat format = c.charFormat();
+    const QString &anchorHref = format.toCharFormat().anchorHref();
+    bool isImageFormat = format.isImageFormat();
+    bool isAnchor = !anchorHref.isEmpty();
+
+    if (isImageFormat || isAnchor) {
+        menu->addSeparator();
+    }
+
+    auto *copyImageAction = new QAction(this);
+    auto *copyLinkLocationAction = new QAction(this);
+
+    // check if clicked object was an image
+    if (isImageFormat) {
+        copyImageAction = menu->addAction(tr("Copy image file path"));
+    }
+
+    if (isAnchor) {
+        copyLinkLocationAction = menu->addAction(tr("Copy link location"));
+    }
+
+    QAction *selectedItem = menu->exec(globalPos);
+
+    if (selectedItem) {
+        // copy the image file path to the clipboard
+        if (selectedItem == copyImageAction) {
+            QString imagePath = format.toImageFormat().name();
+            QUrl imageUrl = QUrl(imagePath);
+
+            if (imageUrl.isLocalFile()) {
+                imagePath = imageUrl.toLocalFile();
+            }
+
+            QClipboard *clipboard = QApplication::clipboard();
+            clipboard->setText(imagePath);
+        }
+            // copy link location to the clipboard
+        else if (selectedItem == copyLinkLocationAction) {
+            QClipboard *clipboard = QApplication::clipboard();
+            clipboard->setText(anchorHref);
+        }
+    }
 }

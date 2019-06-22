@@ -10401,60 +10401,6 @@ void MainWindow::updateNoteSortOrderSelectorVisibility(bool visible) {
 }
 
 /**
- * Shows a context menu for the note preview
- *
- * @param pos
- */
-void MainWindow::on_noteTextView_customContextMenuRequested(const QPoint &pos) {
-    QPoint globalPos = ui->noteTextView->mapToGlobal(pos);
-    QMenu *menu = ui->noteTextView->createStandardContextMenu();
-
-    QTextCursor c = ui->noteTextView->cursorForPosition(pos);
-    QTextFormat format = c.charFormat();
-    const QString &anchorHref = format.toCharFormat().anchorHref();
-    bool isImageFormat = format.isImageFormat();
-    bool isAnchor = !anchorHref.isEmpty();
-
-    if (isImageFormat || isAnchor) {
-        menu->addSeparator();
-    }
-
-    auto *copyImageAction = new QAction(this);
-    auto *copyLinkLocationAction = new QAction(this);
-
-    // check if clicked object was an image
-    if (isImageFormat) {
-        copyImageAction = menu->addAction(tr("Copy image file path"));
-    }
-
-    if (isAnchor) {
-        copyLinkLocationAction = menu->addAction(tr("Copy link location"));
-    }
-
-    QAction *selectedItem = menu->exec(globalPos);
-
-    if (selectedItem) {
-        // copy the image file path to the clipboard
-        if (selectedItem == copyImageAction) {
-            QString imagePath = format.toImageFormat().name();
-            QUrl imageUrl = QUrl(imagePath);
-
-            if (imageUrl.isLocalFile()) {
-                imagePath = imageUrl.toLocalFile();
-            }
-
-            QClipboard *clipboard = QApplication::clipboard();
-            clipboard->setText(imagePath);
-        }
-        // copy link location to the clipboard
-        else if (selectedItem == copyLinkLocationAction) {
-            QClipboard *clipboard = QApplication::clipboard();
-            clipboard->setText(anchorHref);
-        }
-    }
-}
-
-/**
  * Commits changes from the current note folder to git
  */
 void MainWindow::gitCommitCurrentNoteFolder() {
