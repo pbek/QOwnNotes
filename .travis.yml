@@ -54,7 +54,7 @@ install:
     then
       brew update > /dev/null
       brew install qt5 ccache
-      export PATH="/usr/local/opt/ccache/libexec:$PATH"
+      export PATH="/usr/local/opt/ccache/bin:$PATH"
       export QTDIR="/usr/local/opt/qt5"
     fi
 
