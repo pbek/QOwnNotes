@@ -20,6 +20,8 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
+ *
+ * See: https://doc.qt.io/qt-5/stylesheet-reference.html
  */
 
 QProgressBar:horizontal {
@@ -258,6 +260,14 @@ QMenu::item
     padding: 5px 30px 5px 30px;
     margin-left: 5px;
     border: 1px solid transparent; /* reserve space for selection border */
+}
+
+/* #1221 icon-text-overlap fix for checkboxes and radio groups */
+/* also see: https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qmenu */
+QMenu::item::non-exclusive, QMenu::item::exclusive
+{
+    padding-left: 48px;
+    margin-left: 10px;
 }
 
 QMenu::item:selected

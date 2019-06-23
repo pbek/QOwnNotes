@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 19.6.5
+- fixed icon-text-overlap for checkboxes and radio groups in the main menu in dark mode
+  (for [#1221](https://github.com/pbek/QOwnNotes/issues/1221)
+
 ## 19.6.4
 - if you right-click on a link in the preview you now can select `Copy link location`
   to copy the location of the link (for [#800](https://github.com/pbek/QOwnNotes/issues/800)
