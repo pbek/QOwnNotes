@@ -28,15 +28,16 @@ LogWidget::LogWidget(QWidget *parent) :
             this, SLOT(onDestroyed(QObject*)));
 
     ui->buttonFrame->hide();
+    QSettings settings;
 
     // init the log text edit search frame
-    ui->logTextEdit->initSearchFrame(ui->logTextEditSearchFrame);
+    bool darkMode = settings.value("darkMode").toBool();
+    ui->logTextEdit->initSearchFrame(ui->logTextEditSearchFrame, darkMode);
 
     // turn off markdown highlighting
     ui->logTextEdit->setHighlightingEnabled(false);
 
     // load the dialog settings
-    QSettings settings;
     ui->debugCheckBox->setChecked(
             settings.value("LogWidget/debugLog", false).toBool());
     ui->infoCheckBox->setChecked(
