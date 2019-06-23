@@ -1845,6 +1845,11 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
         // add the font for the code block
         codeStyleSheet = QString(
                 "pre, code { %1; }").arg(encodeCssFont(font));
+
+        // ignore code font size to allow zooming (#1202)
+        if (settings.value("MainWindow/noteTextView.ignoreCodeFontSize", true).toBool()) {
+            codeStyleSheet.remove(QRegularExpression(R"(font-size: \d+\w+;)"));
+        }
     }
 
     bool darkModeColors = !forExport ?

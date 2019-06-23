@@ -397,7 +397,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>4</number>
+            <number>11</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -4127,32 +4127,22 @@ p, li { white-space: pre-wrap; }
                 <string>Fonts</string>
                </property>
                <layout class="QGridLayout" name="gridLayout_6">
-                <item row="0" column="3">
-                 <widget class="QToolButton" name="noteTextViewResetButton">
+                <item row="1" column="2">
+                 <widget class="QToolButton" name="noteTextViewCodeButton">
                   <property name="toolTip">
-                   <string>Reset font</string>
+                   <string>Set a new font</string>
                   </property>
                   <property name="text">
-                   <string notr="true">…</string>
+                   <string/>
                   </property>
                   <property name="icon">
-                   <iconset theme="edit-clear" resource="../breeze-qownnotes.qrc">
-                    <normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</iconset>
+                   <iconset theme="gtk-select-font" resource="../breeze-qownnotes.qrc">
+                    <normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</iconset>
                   </property>
                  </widget>
                 </item>
-                <item row="0" column="0">
-                 <widget class="QLabel" name="noteTextViewFontHeadlineLabel">
-                  <property name="text">
-                   <string>Default font:</string>
-                  </property>
-                  <property name="alignment">
-                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                  </property>
-                 </widget>
-                </item>
-                <item row="1" column="3">
-                 <widget class="QToolButton" name="noteTextViewCodeResetButton">
+                <item row="0" column="3">
+                 <widget class="QToolButton" name="noteTextViewResetButton">
                   <property name="toolTip">
                    <string>Reset font</string>
                   </property>
@@ -4175,17 +4165,17 @@ p, li { white-space: pre-wrap; }
                   </property>
                  </widget>
                 </item>
-                <item row="1" column="1">
-                 <widget class="QLineEdit" name="noteTextViewCodeFontLabel">
-                  <property name="readOnly">
-                   <bool>true</bool>
+                <item row="1" column="3">
+                 <widget class="QToolButton" name="noteTextViewCodeResetButton">
+                  <property name="toolTip">
+                   <string>Reset font</string>
                   </property>
-                 </widget>
-                </item>
-                <item row="0" column="1">
-                 <widget class="QLineEdit" name="noteTextViewFontLabel">
-                  <property name="readOnly">
-                   <bool>true</bool>
+                  <property name="text">
+                   <string notr="true">…</string>
+                  </property>
+                  <property name="icon">
+                   <iconset theme="edit-clear" resource="../breeze-qownnotes.qrc">
+                    <normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</iconset>
                   </property>
                  </widget>
                 </item>
@@ -4203,24 +4193,41 @@ p, li { white-space: pre-wrap; }
                   </property>
                  </widget>
                 </item>
-                <item row="1" column="2">
-                 <widget class="QToolButton" name="noteTextViewCodeButton">
-                  <property name="toolTip">
-                   <string>Set a new font</string>
-                  </property>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="noteTextViewFontHeadlineLabel">
                   <property name="text">
-                   <string/>
+                   <string>Default font:</string>
                   </property>
-                  <property name="icon">
-                   <iconset theme="gtk-select-font" resource="../breeze-qownnotes.qrc">
-                    <normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</iconset>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QLineEdit" name="noteTextViewCodeFontLabel">
+                  <property name="readOnly">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QLineEdit" name="noteTextViewFontLabel">
+                  <property name="readOnly">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1" colspan="3">
+                 <widget class="QCheckBox" name="noteTextViewRTLCheckBox">
+                  <property name="text">
+                   <string>View text right to left (RTL)</string>
                   </property>
                  </widget>
                 </item>
                 <item row="2" column="1" colspan="3">
-                 <widget class="QCheckBox" name="noteTextViewRTLCheckBox">
+                 <widget class="QCheckBox" name="noteTextViewIgnoreCodeFontSizeCheckBox">
                   <property name="text">
-                   <string>View text right to left (RTL)</string>
+                   <string>Ignore code font size to allow zooming</string>
                   </property>
                  </widget>
                 </item>
@@ -5541,8 +5548,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../breeze-qownnotes.qrc"/>
   <include location="../breeze-dark-qownnotes.qrc"/>
+  <include location="../breeze-qownnotes.qrc"/>
  </resources>
  <connections>
   <connection>

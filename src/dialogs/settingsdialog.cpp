@@ -634,6 +634,8 @@ void SettingsDialog::storeSettings() {
                       ui->noteEditCentralWidgetCheckBox->isChecked());
     settings.setValue("MainWindow/noteTextView.rtl",
                       ui->noteTextViewRTLCheckBox->isChecked());
+    settings.setValue("MainWindow/noteTextView.ignoreCodeFontSize",
+                      ui->noteTextViewIgnoreCodeFontSizeCheckBox->isChecked());
     settings.setValue("MainWindow/noteTextView.underline",
                       ui->noteTextViewUnderlineCheckBox->isChecked());
     settings.setValue("Debug/fakeOldVersionNumber",
@@ -953,6 +955,8 @@ void SettingsDialog::readSettings() {
             settings.value("noteSaveIntervalTime", 10).toInt());
     ui->noteTextViewRTLCheckBox->setChecked(
             settings.value("MainWindow/noteTextView.rtl").toBool());
+    ui->noteTextViewIgnoreCodeFontSizeCheckBox->setChecked(
+            settings.value("MainWindow/noteTextView.ignoreCodeFontSize", true).toBool());
     ui->noteTextViewUnderlineCheckBox->setChecked(
             settings.value("MainWindow/noteTextView.underline", true).toBool());
     ui->oldVersionNumberCheckBox->setChecked(

@@ -3,6 +3,8 @@
 ## 19.6.5
 - fixed icon-text-overlap for checkboxes and radio groups in the main menu in dark mode
   (for [#1221](https://github.com/pbek/QOwnNotes/issues/1221)
+- there now is a new checkbox `Ignore code font size to allow zooming` in the
+  *Preview settings* to allow zooming of code fonts (for [#1202](https://github.com/pbek/QOwnNotes/issues/1202)
 
 ## 19.6.4
 - if you right-click on a link in the preview you now can select `Copy link location`
