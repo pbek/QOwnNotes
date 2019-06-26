@@ -9549,6 +9549,12 @@ void MainWindow::initShortcuts() {
 
                     QString oldShortcut = action->shortcut().toString();
 
+#ifdef Q_OS_MAC
+                    // #1222, replace Option key by Ctrl key on macOS to prevent blocking
+                    // of accent characters when writing text
+                    oldShortcut.replace("Alt+", "Meta+");
+#endif
+
                     // try to load a key sequence from the settings
                     QKeySequence shortcut = QKeySequence(settings.value(
                                     "Shortcuts/MainWindow-" +

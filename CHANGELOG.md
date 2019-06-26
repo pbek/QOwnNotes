@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 19.6.6
+- the default shortcuts are changed from the Opt-key to the Ctrl-key on macOS to prevent
+  blocking of accent characters when writing text (for [#1222](https://github.com/pbek/QOwnNotes/issues/1222)
+
 ## 19.6.5
 - fixed icon-text-overlap for checkboxes and radio groups in the main menu in dark mode
   (for [#1221](https://github.com/pbek/QOwnNotes/issues/1221)
