@@ -4677,7 +4677,7 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4230"/>
       <source>Ignore code font size to allow zooming</source>
-      <translation type="unfinished">Ignore code font size to allow zooming</translation>
+      <translation>Schriftgröße ignorieren um Zoom zu erlauben</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4259"/>

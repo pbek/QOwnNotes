@@ -2967,12 +2967,12 @@ Hvis papirkurven er aktivert på din ownCloud-server, bør du kunne gjenopprette
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="236"/>
       <source>Copy image file path</source>
-      <translation type="unfinished">Copy image file path</translation>
+      <translation>Kopier bildet bane</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="240"/>
       <source>Copy link location</source>
-      <translation type="unfinished">Copy link location</translation>
+      <translation>Kopier lenkeplassering</translation>
     </message>
   </context>
   <context>
@@ -3719,9 +3719,9 @@ Vil du installere det uansett?</translation>
     <message numerus="yes">
       <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="79"/>
       <source>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</source>
-      <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
-        <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n bokmerke &lt;/strong&gt; funnet på serveren</numerusform>
+        <numerusform>&lt;strong&gt;%n bokmerker&lt;/strong&gt; funnet på serveren</numerusform>
       </translation>
     </message>
   </context>
@@ -4569,7 +4569,7 @@ Bare test deg selv hvis du får synkroniseringskonflikter og sett en høyere ver
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2559"/>
       <source>Enable dark mode icon theme</source>
-      <translation type="unfinished">Enable dark mode icon theme</translation>
+      <translation>Aktiver tema for mørkt modusikon</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2489"/>
@@ -4678,7 +4678,7 @@ Bare test deg selv hvis du får synkroniseringskonflikter og sett en høyere ver
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4230"/>
       <source>Ignore code font size to allow zooming</source>
-      <translation type="unfinished">Ignore code font size to allow zooming</translation>
+      <translation>Ignorer kodesnittstørrelse for å tillate zooming</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4259"/>
@@ -4778,7 +4778,7 @@ Bare test deg selv hvis du får synkroniseringskonflikter og sett en høyere ver
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5439"/>
       <source>Show security token</source>
-      <translation type="unfinished">Show security token</translation>
+      <translation>Vis sikkerhetstoken</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5475"/>
@@ -6601,22 +6601,22 @@ Dette kan ikke angres!</translation>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="20"/>
       <source>Security token</source>
-      <translation type="unfinished">Security token</translation>
+      <translation>Sikkerhetstoken</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="26"/>
       <source>To let your QOwnNotes browser extension access your notes please paste this security token in the settings of your browser extension:</source>
-      <translation type="unfinished">To let your QOwnNotes browser extension access your notes please paste this security token in the settings of your browser extension:</translation>
+      <translation>For å la din QOwnNotes-nettleserutvidelse få tilgang til notatene dine, lim inn dette sikkerhetstokenet i innstillingene for nettleserutvidelsen din:</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="65"/>
       <source>Generate new token</source>
-      <translation type="unfinished">Generate new token</translation>
+      <translation>Generer nytt token</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="79"/>
       <source>Copy token</source>
-      <translation type="unfinished">Copy token</translation>
+      <translation>Kopier token</translation>
     </message>
   </context>
   <context>
@@ -6630,7 +6630,7 @@ Dette kan ikke angres!</translation>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="24"/>
       <source>plain-text file markdown note taking with ownCloud integration</source>
-      <translation type="unfinished">plain-text file markdown note taking with ownCloud integration</translation>
+      <translation>plain-text fil markdown notat å ta med ownCloud integrasjon</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="88"/>

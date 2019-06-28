@@ -317,22 +317,22 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6325"/>
       <source>Search hit BOTTOM, continuing at TOP.</source>
-      <translation type="unfinished">Search hit BOTTOM, continuing at TOP.</translation>
+      <translation>Szukaj hit BOTTOM, kontynuując w TOP.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6326"/>
       <source>Search hit TOP, continuing at BOTTOM.</source>
-      <translation type="unfinished">Search hit TOP, continuing at BOTTOM.</translation>
+      <translation>Wyszukiwanie trafiło TOP, kontynuując w BOTTOM.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6331"/>
       <source>Search hit BOTTOM without match for: %1</source>
-      <translation type="unfinished">Search hit BOTTOM without match for: %1</translation>
+      <translation>Wyszukiwanie trafiło BOTTOM bez dopasowania dla: %1</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6332"/>
       <source>Search hit TOP without match for: %1</source>
-      <translation type="unfinished">Search hit TOP without match for: %1</translation>
+      <translation>Szukaj w TOP bez dopasowania dla: %1</translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6439"/>
@@ -1246,7 +1246,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1154"/>
       <source>Jump to</source>
-      <translation type="unfinished">Jump to</translation>
+      <translation>Skocz do</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1187"/>
@@ -1483,7 +1483,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2083"/>
       <source>Show note list under tag panel</source>
-      <translation type="unfinished">Show note list under tag panel</translation>
+      <translation>Pokaż listę notatek pod panelem tagów</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2101"/>
@@ -1646,12 +1646,12 @@
     <message>
       <location filename="../mainwindow.ui" line="2434"/>
       <source>Jump to note subfolder panel</source>
-      <translation type="unfinished">Jump to note subfolder panel</translation>
+      <translation>Przejdź do notatki podfolderu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2442"/>
       <source>Jump to tags panel</source>
-      <translation type="unfinished">Jump to tags panel</translation>
+      <translation>Przejdź do panelu znaczników</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2450"/>
@@ -1661,12 +1661,12 @@
     <message>
       <location filename="../mainwindow.ui" line="2458"/>
       <source>Activate context menu</source>
-      <translation type="unfinished">Activate context menu</translation>
+      <translation>Aktywuj menu kontekstowe</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2466"/>
       <source>Import bookmarks from server</source>
-      <translation type="unfinished">Import bookmarks from server</translation>
+      <translation>Importuj zakładki z serwera</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1861"/>
@@ -2902,7 +2902,7 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
       <location filename="../mainwindow.cpp" line="5759"/>
       <source>Block &amp;quote selected text</source>
       <comment>Action to apply a block quote formatting to the selected text</comment>
-      <translation type="unfinished">Block &amp;quote selected text</translation>
+      <translation>&amp;Zablokuj cytowany tekst</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6694"/>
@@ -3031,12 +3031,12 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="236"/>
       <source>Copy image file path</source>
-      <translation type="unfinished">Copy image file path</translation>
+      <translation>Skopiuj ścieżkę obrazu</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="240"/>
       <source>Copy link location</source>
-      <translation type="unfinished">Copy link location</translation>
+      <translation>Kopiuj adres odnośnika</translation>
     </message>
   </context>
   <context>
@@ -3266,12 +3266,12 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message>
       <location filename="../services/owncloudservice.cpp" line="1881"/>
       <source>No bookmarks</source>
-      <translation type="unfinished">No bookmarks</translation>
+      <translation>Brak zakładek</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1882"/>
       <source>No bookmarks were found on the server.</source>
-      <translation type="unfinished">No bookmarks were found on the server.</translation>
+      <translation>Na serwerze nie znaleziono zakładek.</translation>
     </message>
   </context>
   <context>
@@ -3378,12 +3378,12 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message>
       <location filename="../utils/git.cpp" line="73"/>
       <source>Command failed!</source>
-      <translation type="unfinished">Command failed!</translation>
+      <translation>Polecenie nie powiodło się!</translation>
     </message>
     <message>
       <location filename="../utils/git.cpp" line="74"/>
       <source>The command &lt;code&gt;%1&lt;/code&gt; failed!</source>
-      <translation type="unfinished">The command &lt;code&gt;%1&lt;/code&gt; failed!</translation>
+      <translation>Komenda &lt;code&gt; %1 &lt;/code&gt; nie powiodła się!</translation>
     </message>
   </context>
   <context>
@@ -3779,7 +3779,7 @@ Do you want to install it anyway?</source>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="14"/>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="20"/>
       <source>Import bookmarks</source>
-      <translation type="unfinished">Import bookmarks</translation>
+      <translation>Importuj zakładki</translation>
     </message>
     <message>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="47"/>
@@ -4551,7 +4551,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2051"/>
       <source>Danish</source>
-      <translation type="unfinished">Danish</translation>
+      <translation>Duński</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2095"/>
@@ -4591,17 +4591,17 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2271"/>
       <source>Romanian</source>
-      <translation type="unfinished">Romanian</translation>
+      <translation>Rumuński</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2293"/>
       <source>Slovak</source>
-      <translation type="unfinished">Slovak</translation>
+      <translation>Słowacki</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2304"/>
       <source>Slovenian</source>
-      <translation type="unfinished">Slovenian</translation>
+      <translation>Słoweński</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2315"/>
@@ -4641,7 +4641,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2559"/>
       <source>Enable dark mode icon theme</source>
-      <translation type="unfinished">Enable dark mode icon theme</translation>
+      <translation>Włącz motyw ikony trybu ciemnego</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2489"/>
@@ -4666,7 +4666,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2549"/>
       <source>Enforce system icon theme</source>
-      <translation type="unfinished">Enforce system icon theme</translation>
+      <translation>Wymuszaj motyw ikony systemu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2655"/>
@@ -4750,7 +4750,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4230"/>
       <source>Ignore code font size to allow zooming</source>
-      <translation type="unfinished">Ignore code font size to allow zooming</translation>
+      <translation>Ignoruj rozmiar czcionki kodu, aby umożliwić powiększanie</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4259"/>
@@ -4850,7 +4850,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5439"/>
       <source>Show security token</source>
-      <translation type="unfinished">Show security token</translation>
+      <translation>Pokaż token bezpieczeństwa</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5475"/>
@@ -4865,7 +4865,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5456"/>
       <source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
-      <translation type="unfinished">Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</translation>
+      <translation>Zainstaluj &lt;a href="%1"&gt; rozszerzenie przeglądarki Web Companion &lt;/a&gt; z &lt;a href="%2"&gt; Chrome Web Store &lt;/a&gt; lub &lt;a href="%3"&gt; Firefox Add- na stronie &lt;/a&gt;, aby używać QOwnNotes jako maszynki do strzyżenia.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3486"/>
@@ -6674,22 +6674,22 @@ Nie można tego cofnąć!</translation>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="20"/>
       <source>Security token</source>
-      <translation type="unfinished">Security token</translation>
+      <translation>Token bezpieczeństwa</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="26"/>
       <source>To let your QOwnNotes browser extension access your notes please paste this security token in the settings of your browser extension:</source>
-      <translation type="unfinished">To let your QOwnNotes browser extension access your notes please paste this security token in the settings of your browser extension:</translation>
+      <translation>Aby umożliwić rozszerzenie przeglądarki QOwnNotes dostęp do twoich notatek, wklej ten token zabezpieczeń w ustawieniach rozszerzenia przeglądarki:</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="65"/>
       <source>Generate new token</source>
-      <translation type="unfinished">Generate new token</translation>
+      <translation>Wygeneruj nowy token</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="79"/>
       <source>Copy token</source>
-      <translation type="unfinished">Copy token</translation>
+      <translation>Kopiuj token</translation>
     </message>
   </context>
   <context>
@@ -6703,7 +6703,7 @@ Nie można tego cofnąć!</translation>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="24"/>
       <source>plain-text file markdown note taking with ownCloud integration</source>
-      <translation type="unfinished">plain-text file markdown note taking with ownCloud integration</translation>
+      <translation>notatka w formacie zwykłego tekstu z integracją ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="88"/>

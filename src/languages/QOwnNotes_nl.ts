@@ -2966,12 +2966,12 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="236"/>
       <source>Copy image file path</source>
-      <translation type="unfinished">Copy image file path</translation>
+      <translation>Kopie afbeeldingen bestandspad</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="240"/>
       <source>Copy link location</source>
-      <translation type="unfinished">Copy link location</translation>
+      <translation>Linklocatie kopiëren</translation>
     </message>
   </context>
   <context>
@@ -4674,7 +4674,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4230"/>
       <source>Ignore code font size to allow zooming</source>
-      <translation type="unfinished">Ignore code font size to allow zooming</translation>
+      <translation>Negeer de codelettergrootte om inzoomen toe te staan</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4259"/>

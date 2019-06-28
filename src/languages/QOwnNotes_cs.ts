@@ -3025,12 +3025,12 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="236"/>
       <source>Copy image file path</source>
-      <translation type="unfinished">Copy image file path</translation>
+      <translation>Kopíruj cestu k souboru obrázku</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="240"/>
       <source>Copy link location</source>
-      <translation type="unfinished">Copy link location</translation>
+      <translation>Kopírovat umístění odkazu</translation>
     </message>
   </context>
   <context>
@@ -4637,7 +4637,7 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2559"/>
       <source>Enable dark mode icon theme</source>
-      <translation type="unfinished">Enable dark mode icon theme</translation>
+      <translation>Povolit motiv ikonu temného režimu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2489"/>
@@ -4746,7 +4746,7 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4230"/>
       <source>Ignore code font size to allow zooming</source>
-      <translation type="unfinished">Ignore code font size to allow zooming</translation>
+      <translation>Ignorovat velikost písma pro zvětšení</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4259"/>
@@ -6699,7 +6699,7 @@ To nelze vrátit zpět!</translation>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="24"/>
       <source>plain-text file markdown note taking with ownCloud integration</source>
-      <translation type="unfinished">plain-text file markdown note taking with ownCloud integration</translation>
+      <translation>prostý textový soubor s poznámkou s vlastní integrací</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="88"/>

@@ -123,7 +123,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="659"/>
       <source>Author</source>
-      <translation type="unfinished">Author</translation>
+      <translation>作者</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="661"/>
@@ -366,7 +366,7 @@
     <message>
       <location filename="../helpers/fakevimproxy.cpp" line="26"/>
       <source>Information</source>
-      <translation type="unfinished">Information</translation>
+      <translation>信息</translation>
     </message>
   </context>
   <context>
@@ -648,19 +648,19 @@
       <location filename="../widgets/layoutwidget.cpp" line="140"/>
       <source>Minimal</source>
       <comment>Layout name</comment>
-      <translation type="unfinished">Minimal</translation>
+      <translation>最小</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="142"/>
       <source>Full</source>
       <comment>Layout name</comment>
-      <translation type="unfinished">Full</translation>
+      <translation>完整</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="144"/>
       <source>Full vertical</source>
       <comment>Layout name</comment>
-      <translation type="unfinished">Full vertical</translation>
+      <translation>纵向完整</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="146"/>
