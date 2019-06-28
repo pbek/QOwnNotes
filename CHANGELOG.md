@@ -2,20 +2,22 @@
 
 ## 19.6.6
 - the default shortcuts are changed from the Opt-key to the Ctrl-key on macOS to prevent
-  blocking of accent characters when writing text (for [#1222](https://github.com/pbek/QOwnNotes/issues/1222)
+  blocking of accent characters when writing text (for [#1222](https://github.com/pbek/QOwnNotes/issues/1222))
+- the storing of the main window position was re-enabled after being disabled in
+  [#1015](https://github.com/pbek/QOwnNotes/issues/1015) (for [#1225](https://github.com/pbek/QOwnNotes/issues/1225))
 
 ## 19.6.5
 - fixed icon-text-overlap for checkboxes and radio groups in the main menu in dark mode
-  (for [#1221](https://github.com/pbek/QOwnNotes/issues/1221)
+  (for [#1221](https://github.com/pbek/QOwnNotes/issues/1221))
 - there now is a new checkbox `Ignore code font size to allow zooming` in the
-  *Preview settings* to allow zooming of code fonts (for [#1202](https://github.com/pbek/QOwnNotes/issues/1202)
+  *Preview settings* to allow zooming of code fonts (for [#1202](https://github.com/pbek/QOwnNotes/issues/1202))
     - this checkbox is checked by default
 - fixed search widget colors in the log widget in dark mode
 - added more German, Indonesian translation (thank you rakekniven, zmni)
 
 ## 19.6.4
 - if you right-click on a link in the preview you now can select `Copy link location`
-  to copy the location of the link (for [#800](https://github.com/pbek/QOwnNotes/issues/800)
+  to copy the location of the link (for [#800](https://github.com/pbek/QOwnNotes/issues/800))
 - added more Italian, Dutch, Hungarian, Indonesian, Brazilian Portuguese translation
   (thank you tiwi90, Fabijenna, zmni, mlimacarlos)
 
@@ -36,7 +38,7 @@
 ## 19.6.0
 - You are now able to distinctively tell QOwnNotes to use the **dark mode icon theme**
   without using the *dark mode* in the *Interface settings*
-  (for [#1209](https://github.com/pbek/QOwnNotes/issues/1209) and
+  (for [#1209](https://github.com/pbek/QOwnNotes/issues/1209)) and
   [#1177](https://github.com/pbek/QOwnNotes/issues/1177))
 - added more Danish, Czech, Finnish, Greek, Spanish, Hungarian, Dutch translation
   (thank you Fabijenna, richarson)

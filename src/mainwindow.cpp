@@ -3506,9 +3506,9 @@ void MainWindow::storeSettings() {
 
     // don't store the window settings in distraction free mode
     if (!isInDistractionFreeMode()) {
-//        settings.setValue("MainWindow/geometry", saveGeometry());
-//        settings.setValue("MainWindow/menuBarGeometry",
-//                          ui->menuBar->saveGeometry());
+        settings.setValue("MainWindow/geometry", saveGeometry());
+        settings.setValue("MainWindow/menuBarGeometry",
+                          ui->menuBar->saveGeometry());
     }
 
     // store a NoteHistoryItem to open the note again after the app started
