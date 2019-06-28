@@ -5,9 +5,9 @@ Welcome to your installation of **QOwnNotes**!
 
 ## TODO
 
-- Be sure to setup your *ownCloud/Nextcloud server* in the **settings dialog**.
-    - Keep in mind that you still need to install the *ownCloud/Nextcloud* sync client to synchronize your notes! 
-- Install [QOwnNotesAPI](https://apps.owncloud.com/content/show.php?content=173817) to access **note versions** and **trashed notes**.
+- Be sure to setup your *Nextcloud/ownCloud server* in the **settings dialog**.
+    - Keep in mind that you still need to install the *Nextcloud/ownCloud* sync client to synchronize your notes! 
+- Install [QOwnNotesAPI](https://apps.nextcloud.com/apps/qownnotesapi) to access **note versions** and **trashed notes**.
 
 ## Later
 
@@ -18,4 +18,4 @@ Welcome to your installation of **QOwnNotes**!
 - Add the [QOwnNotes Web Companion browser extension](https://github.com/qownnotes/web-companion)
   to a add notes from the selected text and other features
     - Visit the [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
-      to install the extension.
+      or [Firefox Add-ons page](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion) to install the extension.
