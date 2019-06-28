@@ -11,7 +11,7 @@ Welcome to your installation of **QOwnNotes**!
 
 ## Later
 
-- Check out the [Important-Shortcuts](https://www.qownnotes.org/shortcuts/QOwnNotes) with a `Ctrl + Click` (or `Cmd + Click` on OSX) for more productivity.
+- Check out the [Important-Shortcuts](https://www.qownnotes.org/shortcuts/QOwnNotes) with a `Ctrl + Click` (or `Cmd + Click` on macOS) for more productivity.
 - Visit <https://www.qownnotes.org> for new releases of **QOwnNotes**.
 - Use the <note://Markdown-Cheatsheet> to explore the **Markdown syntax**.
 - Open the [Script repository](https://github.com/qownnotes/scripts) with `Alt + Shift + I` to add some additional functionality to QOwnNotes
