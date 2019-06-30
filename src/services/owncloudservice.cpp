@@ -25,7 +25,6 @@
 #include "cryptoservice.h"
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
-#include <QTemporaryFile>
 #include <utils/gui.h>
 
 const QString OwnCloudService::rootPath =
@@ -1897,8 +1896,6 @@ void OwnCloudService::handleImportBookmarksReply(QString &data) {
  * @return {QByteArray} the content of the downloaded url
  */
 QByteArray OwnCloudService::downloadNextcloudPreviewImage(const QString& path) {
-    qDebug() << __func__ << " - 'path': " << path;
-
     auto *manager = new QNetworkAccessManager();
     QEventLoop loop;
     QTimer timer;
@@ -1931,9 +1928,6 @@ QByteArray OwnCloudService::downloadNextcloudPreviewImage(const QString& path) {
     if (timer.isActive()) {
         int statusCode = reply->attribute(
                 QNetworkRequest::HttpStatusCodeAttribute).toInt();
-
-        qDebug() << __func__ << " - 'statusCode': " << statusCode;
-
 
         // only get the data if the status code was "success"
         // see: https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
