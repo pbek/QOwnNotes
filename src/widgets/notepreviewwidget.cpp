@@ -22,6 +22,7 @@
 #include <QMenu>
 #include <QClipboard>
 #include <QProxyStyle>
+#include <services/owncloudservice.h>
 
 class NoDottedOutlineForLinksStyle: public QProxyStyle {
 public:

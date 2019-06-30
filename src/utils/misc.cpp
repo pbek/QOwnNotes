@@ -39,6 +39,7 @@
 #include "release.h"
 #include "misc.h"
 #include <utility>
+#include <services/owncloudservice.h>
 
 #ifdef Q_OS_WIN
 #include <windows.h>
@@ -1515,4 +1516,28 @@ QString Utils::Misc::importMediaFromBase64(QString &data, const QString& imageSu
     QString markdownCode = Note::getInsertMediaMarkdown(tempFile);
 
     return markdownCode;
+}
+
+/**
+ * Transforms Nextcloud preview image tags
+ *
+ * @param html
+ */
+void Utils::Misc::transformNextcloudPreviewImages(QString &html) {
+    OwnCloudService *ownCloud = OwnCloudService::instance();
+
+    QRegularExpression re(R"(<img src=\"(\/core\/preview\?fileId=.+#mimetype=[\w\d%]+&.+)\" alt=\".+\"\/?>)",
+                          QRegularExpression::CaseInsensitiveOption | QRegularExpression::MultilineOption);
+    QRegularExpressionMatchIterator i = re.globalMatch(html);
+
+    while (i.hasNext()) {
+        QRegularExpressionMatch match = i.next();
+        QString imageTag = match.captured(0);
+
+        QString inlineImageTag = ownCloud->nextcloudPreviewImageTagToInlineImageTag(
+                imageTag);
+        qDebug() << __func__ << " - 'inlineImageTag': " << inlineImageTag;
+
+        html.replace(imageTag, inlineImageTag);
+    }
 }

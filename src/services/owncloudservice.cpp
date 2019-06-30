@@ -25,6 +25,7 @@
 #include "cryptoservice.h"
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
+#include <QTemporaryFile>
 #include <utils/gui.h>
 
 const QString OwnCloudService::rootPath =
@@ -1887,4 +1888,92 @@ void OwnCloudService::handleImportBookmarksReply(QString &data) {
     auto *dialog = new ServerBookmarksImportDialog(bookmarks);
     dialog->exec();
 #endif
+}
+
+/**
+ * Downloads an image from a Nextcloud preview path and returns the data
+ *
+ * @param url
+ * @return {QByteArray} the content of the downloaded url
+ */
+QByteArray OwnCloudService::downloadNextcloudPreviewImage(const QString& path) {
+    qDebug() << __func__ << " - 'path': " << path;
+
+    auto *manager = new QNetworkAccessManager();
+    QEventLoop loop;
+    QTimer timer;
+
+    timer.setSingleShot(true);
+    QObject::connect(&timer, SIGNAL(timeout()), &loop, SLOT(quit()));
+    QObject::connect(manager, SIGNAL(finished(QNetworkReply *)),
+                     &loop, SLOT(quit()));
+
+    // 10 sec timeout for the request
+    timer.start(10000);
+
+    QUrl url(serverUrl + path);
+    qDebug() << __func__ << " - 'url': " << url;
+
+    QNetworkRequest networkRequest = QNetworkRequest(url);
+    addAuthHeader(&networkRequest);
+
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
+    networkRequest.setAttribute(QNetworkRequest::FollowRedirectsAttribute,
+                                true);
+#endif
+
+    QByteArray data;
+    QNetworkReply *reply = manager->get(networkRequest);
+    ignoreSslErrorsIfAllowed(reply);
+    loop.exec();
+
+    // if we didn't get a timeout let us return the content
+    if (timer.isActive()) {
+        int statusCode = reply->attribute(
+                QNetworkRequest::HttpStatusCodeAttribute).toInt();
+
+        qDebug() << __func__ << " - 'statusCode': " << statusCode;
+
+
+        // only get the data if the status code was "success"
+        // see: https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+        if (statusCode >= 200 && statusCode < 300) {
+            // get the data from the network reply
+            data = reply->readAll();
+        }
+    }
+
+    return data;
+}
+
+/**
+ * Transforms an Nextcloud preview image tag to an inline image tag
+ *
+ * @param data
+ * @param imageSuffix
+ * @return
+ */
+QString OwnCloudService::nextcloudPreviewImageTagToInlineImageTag(QString imageTag) {
+    imageTag.replace("&amp;", "&");
+//    qDebug() << __func__ << " - 'imageTag': " << imageTag;
+
+    QRegularExpression re(R"(<img src=\"(\/core\/preview\?fileId=(\d+)&x=(\d+)&y=(\d+)&a=(\w+)#mimetype=([\w\d%]+)&.+)\" alt=\"(.+)\"\/?>)",
+            QRegularExpression::CaseInsensitiveOption);
+
+    QRegularExpressionMatch match = re.match(imageTag);
+    if (!match.hasMatch()) {
+        return imageTag;
+    }
+
+    QString path = match.captured(1);
+    QString mimeType = QUrl::fromPercentEncoding(match.captured(6).toLatin1());
+    QString alt = match.captured(7);
+
+    QByteArray data = downloadNextcloudPreviewImage(path);
+
+    // for now we do no caching, because we don't know when to invalidate the cache
+    QString inlineImageTag = QString("<img src=\"data:" + mimeType + ";base64,") +
+            data.toBase64() + "\" alt=\"" + alt + "\"/>";
+
+    return inlineImageTag;
 }

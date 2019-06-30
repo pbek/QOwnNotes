@@ -96,6 +96,7 @@ namespace Utils {
         bool regExpInListMatches(const QString& text, QStringList regExpList);
         QString importMediaFromBase64(QString &data, const QString& imageSuffix = "dat");
         bool isDarkModeIconTheme();
+        void transformNextcloudPreviewImages(QString &html);
     }  // namespace Misc
 }  // namespace Utils
 

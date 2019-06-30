@@ -1832,6 +1832,9 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
     hoedown_document_free(document);
     hoedown_html_renderer_free(renderer);
 
+    // transform Nextcloud preview image tags
+    Utils::Misc::transformNextcloudPreviewImages(result);
+
     QString fontString = settings.value("MainWindow/noteTextView.code.font")
             .toString();
 

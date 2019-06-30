@@ -81,6 +81,8 @@ public:
 
     void startAppVersionTest();
 
+    QString nextcloudPreviewImageTagToInlineImageTag(QString imageTag);
+
 private:
     QString serverUrl;
     QString todoCalendarServerUrl;
@@ -152,6 +154,8 @@ private:
     void checkAppVersion(QNetworkReply *reply);
 
     void handleImportBookmarksReply(QString &data);
+
+    QByteArray downloadNextcloudPreviewImage(const QString &path);
 
 signals:
 
