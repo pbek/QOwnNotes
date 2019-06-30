@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 19.7.0
+- added support for a real time preview of [Nextcloud Text](https://github.com/nextcloud/text)
+  images (for [#1226](https://github.com/pbek/QOwnNotes/issues/1226))
+    - the preview image tags from Nextcloud Text will be transformed to inline images
+    - no caching can currently be done because images could be modified on the Nextcloud server
+ 
 ## 19.6.6
 - the default shortcuts were changed from the Opt-key to the Ctrl-key on macOS to prevent
   blocking of accent characters when writing text (for [#1222](https://github.com/pbek/QOwnNotes/issues/1222))
