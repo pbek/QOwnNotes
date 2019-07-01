@@ -2,6 +2,7 @@
 
 ## 19.7.1
 - added a lot fixes for possible memory leaks
+- added more Romanian, Slovak, Slovenian translation (thank you Fabijenna)
 
 ## 19.7.0
 - added support for a real time preview of [Nextcloud Text](https://github.com/nextcloud/text)
