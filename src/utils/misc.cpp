@@ -1539,7 +1539,6 @@ void Utils::Misc::transformNextcloudPreviewImages(QString &html) {
 
         QString inlineImageTag = ownCloud->nextcloudPreviewImageTagToInlineImageTag(
                 imageTag);
-        qDebug() << __func__ << " - 'inlineImageTag': " << inlineImageTag;
 
         html.replace(imageTag, inlineImageTag);
     }
