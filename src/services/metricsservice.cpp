@@ -65,7 +65,7 @@ void MetricsService::sendVisitIfEnabled(
 }
 
 void MetricsService::sendEventIfEnabled(
-        QString path,
+        const QString& path,
         const QString& eventCategory,
         const QString& eventAction,
         const QString& eventName,
@@ -73,7 +73,7 @@ void MetricsService::sendEventIfEnabled(
     QSettings settings;
     if (!settings.value("appMetrics/disableTracking").toBool()) {
         _piwikTracker->sendEvent(
-                std::move(path),
+                path,
                 eventCategory,
                 eventAction,
                 eventName,

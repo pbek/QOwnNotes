@@ -262,6 +262,7 @@ bool ScriptingService::validateScript(Script script,
 
     delete(object);
     delete(component);
+    delete(engine);
     return result;
 }
 

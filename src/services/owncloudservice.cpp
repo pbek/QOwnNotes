@@ -34,8 +34,8 @@ const QString NS_DAV("DAV:");
 
 OwnCloudService::OwnCloudService(QObject *parent)
         : QObject(parent) {
-    networkManager = new QNetworkAccessManager();
-    calendarNetworkManager = new QNetworkAccessManager();
+    networkManager = new QNetworkAccessManager(this);
+    calendarNetworkManager = new QNetworkAccessManager(this);
 
     QObject::connect(networkManager,
                      SIGNAL(authenticationRequired(QNetworkReply *,
@@ -1771,11 +1771,11 @@ void OwnCloudService::postCalendarItemToServer(CalendarItem calendarItem,
 
     qDebug() << __func__ << " - 'body': " << body;
 
-    QByteArray *dataToSend = new QByteArray(body.toUtf8());
+    auto dataToSend = new QByteArray(body.toUtf8());
     r.setHeader(QNetworkRequest::ContentLengthHeader, dataToSend->size());
     r.setHeader(QNetworkRequest::ContentTypeHeader,
                 "application/x-www-form-urlencoded");
-    QBuffer *buffer = new QBuffer(dataToSend);
+    auto *buffer = new QBuffer(dataToSend);
 
     QNetworkReply *reply =
             calendarNetworkManager->sendCustomRequest(r, "PUT", buffer);
@@ -1789,7 +1789,7 @@ void OwnCloudService::postCalendarItemToServer(CalendarItem calendarItem,
  * @return
  */
 bool OwnCloudService::updateICSDataOfCalendarItem(CalendarItem *calItem) {
-    QNetworkAccessManager *manager = new QNetworkAccessManager(this);
+    auto *manager = new QNetworkAccessManager(this);
 
     QUrl url(calItem->getUrl());
     QNetworkRequest r;
@@ -1854,11 +1854,11 @@ void OwnCloudService::settingsGetFileList(
                 "</a:prop>"
             "</a:propfind>";
 
-    QByteArray *dataToSend = new QByteArray(body.toUtf8());
+    auto dataToSend = new QByteArray(body.toUtf8());
     r.setHeader(QNetworkRequest::ContentLengthHeader, dataToSend->size());
     r.setHeader(QNetworkRequest::ContentTypeHeader,
                 "application/x-www-form-urlencoded");
-    QBuffer *buffer = new QBuffer(dataToSend);
+    auto *buffer = new QBuffer(dataToSend);
 
     // try to ensure the network is accessible
     networkManager->setNetworkAccessible(QNetworkAccessManager::Accessible);
@@ -1900,7 +1900,7 @@ void OwnCloudService::handleImportBookmarksReply(QString &data) {
  * @return {QByteArray} the content of the downloaded url
  */
 QByteArray OwnCloudService::downloadNextcloudPreviewImage(const QString& path) {
-    auto *manager = new QNetworkAccessManager();
+    auto *manager = new QNetworkAccessManager(this);
     QEventLoop loop;
     QTimer timer;
 

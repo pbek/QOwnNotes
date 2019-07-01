@@ -25,7 +25,7 @@ ScriptRepositoryDialog::ScriptRepositoryDialog(QWidget *parent,
     ui->setupUi(this);
     setupMainSplitter();
 
-    _networkManager = new QNetworkAccessManager();
+    _networkManager = new QNetworkAccessManager(this);
     QObject::connect(_networkManager, SIGNAL(finished(QNetworkReply *)),
                      this, SLOT(slotReplyFinished(QNetworkReply *)));
 
@@ -302,7 +302,7 @@ void ScriptRepositoryDialog::parseInfoQMLReply(const QByteArray &arr) const {
  * Sets up the main splitter
  */
 void ScriptRepositoryDialog::setupMainSplitter() {
-    _mainSplitter = new QSplitter;
+    _mainSplitter = new QSplitter(this);
 
     _mainSplitter->addWidget(ui->selectFrame);
     _mainSplitter->addWidget(ui->infoFrame);

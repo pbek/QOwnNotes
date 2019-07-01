@@ -4643,6 +4643,8 @@ void MainWindow::printNote(QPlainTextEdit *textEdit) {
     if (preparePrintNotePrinter(printer)) {
         textEdit->document()->print(printer);
     }
+
+    delete printer;
 }
 
 /**
@@ -4655,6 +4657,8 @@ void MainWindow::printNote(QTextEdit *textEdit) {
     if (preparePrintNotePrinter(printer)) {
         textEdit->document()->print(printer);
     }
+
+    delete printer;
 }
 
 /**
@@ -4792,6 +4796,8 @@ void MainWindow::exportNoteAsPDF(QTextDocument *doc)
         doc->print(printer);
         Utils::Misc::openFolderSelect(printer->outputFileName());
     }
+
+    delete printer;
 }
 
 /**
@@ -5560,7 +5566,7 @@ void MainWindow::generateSystemTrayContextMenu() {
 //    QMenu *menu = trayIcon->contextMenu();
 //    delete(menu);
 
-    auto *menu = new QMenu();
+    auto *menu = new QMenu(this);
     menu->setTitle("QOwnNotes");
 
     // add menu entry to open the app
@@ -6400,6 +6406,7 @@ void MainWindow::gotoNextNote() {
     QKeyEvent *event = new QKeyEvent(QEvent::KeyPress, Qt::Key_Down,
                                     Qt::NoModifier);
     QApplication::postEvent(ui->noteTreeWidget, event);
+    delete event;
 }
 
 /**
@@ -6408,6 +6415,7 @@ void MainWindow::gotoNextNote() {
 void MainWindow::activateContextMenu() {
     auto *event = new QContextMenuEvent(QContextMenuEvent::Keyboard, QPoint());
     QApplication::postEvent(focusWidget(), event);
+    delete event;
 }
 
 void MainWindow::on_actionPrevious_Note_triggered() {
@@ -6422,6 +6430,7 @@ void MainWindow::gotoPreviousNote()
     QKeyEvent *event = new QKeyEvent(QEvent::KeyPress, Qt::Key_Up,
                                      Qt::NoModifier);
     QApplication::postEvent(ui->noteTreeWidget, event);
+    delete event;
 }
 
 void MainWindow::on_actionToggle_distraction_free_mode_triggered()
@@ -6579,6 +6588,8 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
                         showStatusBarMessage(tr("Done inserting attachment"),
                                              3000);
                     }
+
+                    delete file;
                 } else {
                     skipCount++;
                 }
@@ -6634,6 +6645,7 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
 
                 showStatusBarMessage(tr("Inserting image"));
                 insertMedia(file);
+                delete file;
 
                 showStatusBarMessage(tr("Done inserting image"), 3000);
             } else {
@@ -8990,9 +9002,9 @@ void MainWindow::on_noteTreeWidget_customContextMenuRequested(
 void MainWindow::openNotesContextMenu(
         const QPoint &globalPos, bool multiNoteMenuEntriesOnly) {
     QMenu noteMenu;
-    auto *moveDestinationMenu = new QMenu();
-    auto *copyDestinationMenu = new QMenu();
-    auto *tagRemoveMenu = new QMenu();
+    auto *moveDestinationMenu = new QMenu(this);
+    auto *copyDestinationMenu = new QMenu(this);
+    auto *tagRemoveMenu = new QMenu(this);
 
     auto *createNoteAction = new QAction(this);
     auto *renameAction = new QAction(this);
@@ -9731,7 +9743,7 @@ void MainWindow::addCustomAction(const QString& identifier, const QString& menuT
  */
 void MainWindow::addScriptingLabel(const QString& identifier, const QString& text) {
     _scriptingDockWidget->show();
-    QLabel *label = new QLabel(text);
+    QLabel *label = new QLabel(text, _scriptingDockWidget);
     label->setOpenExternalLinks(true);
     label->setTextInteractionFlags(Qt::TextSelectableByMouse |
                                            Qt::LinksAccessibleByMouse);

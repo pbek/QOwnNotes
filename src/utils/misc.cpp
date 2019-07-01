@@ -1509,6 +1509,7 @@ QString Utils::Misc::importMediaFromBase64(QString &data, const QString& imageSu
             imageSuffix);
 
     if (!tempFile->open()) {
+        delete tempFile;
         return "";
     }
 
@@ -1517,6 +1518,8 @@ QString Utils::Misc::importMediaFromBase64(QString &data, const QString& imageSu
 
     // store the temporary image in the media folder and return the markdown code
     QString markdownCode = Note::getInsertMediaMarkdown(tempFile);
+
+    delete tempFile;
 
     return markdownCode;
 }

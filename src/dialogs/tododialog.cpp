@@ -94,7 +94,7 @@ void TodoDialog::setupUi() {
     /*
      * setup the note button menu
      */
-    QMenu *noteMenu = new QMenu();
+    auto *noteMenu = new QMenu(this);
 
     QAction *insertAction = noteMenu->addAction(
             tr("Save and insert into note"));
@@ -119,7 +119,7 @@ void TodoDialog::setupUi() {
     /*
      * setup the reload button menu
      */
-    QMenu *reloadMenu = new QMenu();
+    auto *reloadMenu = new QMenu(this);
 
     QAction *reloadAction = reloadMenu->addAction(tr("Reload from server"));
     reloadAction->setIcon(QIcon::fromTheme(
@@ -183,7 +183,7 @@ void TodoDialog::refreshUi() {
 }
 
 void TodoDialog::setupMainSplitter() {
-    this->mainSplitter = new QSplitter;
+    this->mainSplitter = new QSplitter(this);
 
     this->mainSplitter->addWidget(ui->selectFrame);
     this->mainSplitter->addWidget(ui->editFrame);

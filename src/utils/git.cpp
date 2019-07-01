@@ -46,8 +46,9 @@ void Utils::Git::commitCurrentNoteFolder() {
         !executeGitCommand("config commit.gpgsign false", process) ||
         !executeGitCommand("add -A", process) ||
         !executeGitCommand("commit -m \"QOwnNotes commit\"", process)) {
-        return;
     }
+
+    delete(process);
 }
 
 /**

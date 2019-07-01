@@ -38,7 +38,7 @@ LocalTrashDialog::LocalTrashDialog(MainWindow *mainWindow, QWidget *parent) :
     QPushButton *button;
     ui->buttonBox->clear();
 
-    button = new QPushButton(tr("Restore"));
+    button = new QPushButton(tr("Restore"), this);
     button->setToolTip(tr("Restore selected notes"));
     button->setProperty("ActionRole", Restore);
     button->setDefault(false);
@@ -48,7 +48,7 @@ LocalTrashDialog::LocalTrashDialog(MainWindow *mainWindow, QWidget *parent) :
                     QIcon(":/icons/breeze-qownnotes/16x16/view-restore.svg")));
     ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);
 
-    button = new QPushButton(tr("Remove"));
+    button = new QPushButton(tr("Remove"), this);
     button->setToolTip(tr("Remove selected notes"));
     button->setProperty("ActionRole", Remove);
     button->setDefault(false);
@@ -119,7 +119,7 @@ void LocalTrashDialog::loadTrashedNotes() {
 }
 
 void LocalTrashDialog::setupMainSplitter() {
-    trashSplitter = new QSplitter;
+    trashSplitter = new QSplitter(this);
 
     trashSplitter->addWidget(ui->trashTreeWidget);
     trashSplitter->addWidget(ui->noteBrowserFrame);

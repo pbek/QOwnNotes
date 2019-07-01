@@ -1053,6 +1053,7 @@ void SettingsDialog::readSettings() {
         auto *textEdit = new QTextEdit();
         fontString = textEdit->font().toString();
         settings.setValue("MainWindow/noteTextView.font", fontString);
+        delete textEdit;
     }
 
     noteTextViewFont.fromString(fontString);
@@ -2178,7 +2179,7 @@ void SettingsDialog::setupNoteFolderPage() {
     ui->noteFolderLocalPathLineEdit->setPlaceholderText(
             Utils::Misc::defaultNotesPath());
 
-    noteFolderRemotePathTreeStatusBar = new QStatusBar();
+    noteFolderRemotePathTreeStatusBar = new QStatusBar(this);
     ui->noteFolderRemotePathTreeWidgetFrame->layout()->addWidget(
             noteFolderRemotePathTreeStatusBar);
 }
@@ -2521,7 +2522,7 @@ void SettingsDialog::setupScriptingPage() {
     /*
      * Setup the "add script" button menu
      */
-    auto *addScriptMenu = new QMenu();
+    auto *addScriptMenu = new QMenu(this);
 
     QAction *searchScriptAction = addScriptMenu->addAction(
             tr("Search script repository"));
@@ -3120,7 +3121,7 @@ QTreeWidgetItem *SettingsDialog::findSettingsTreeWidgetItemByPage(int page) {
  * Does the initialization for the main splitter
  */
 void SettingsDialog::initMainSplitter() {
-    _mainSplitter = new QSplitter();
+    _mainSplitter = new QSplitter(this);
     _mainSplitter->setOrientation(Qt::Horizontal);
     ui->leftSideFrame->setStyleSheet("#leftSideFrame {margin-right: 5px;}");
 

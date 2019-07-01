@@ -2268,6 +2268,7 @@ bool Note::canDecryptNoteText() {
         if (decryptedNoteText == "") {
             auto *crypto = new SimpleCrypt(static_cast<quint64>(cryptoKey));
             decryptedNoteText = crypto->decryptToString(encryptedNoteText);
+            delete crypto;
         }
     }
 
@@ -2315,6 +2316,7 @@ QString Note::getDecryptedNoteText() {
         if (decryptedNoteText == "") {
             auto *crypto = new SimpleCrypt(static_cast<quint64>(cryptoKey));
             decryptedNoteText = crypto->decryptToString(encryptedNoteText);
+            delete crypto;
         }
     }
 
@@ -2666,6 +2668,8 @@ QString Note::downloadUrlToMedia(const QUrl& url, bool returnUrlOnly) {
             text = Note::getInsertMediaMarkdown(tempFile, true, returnUrlOnly);
         }
     }
+
+    delete tempFile;
 
     return text;
 }

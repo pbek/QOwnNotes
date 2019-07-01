@@ -30,12 +30,12 @@ NoteDiffDialog::NoteDiffDialog(QWidget *parent, const QString& html) :
     QPushButton *button;
     ui->buttonBox->clear();
 
-    button = new QPushButton(tr("Yes"));
+    button = new QPushButton(tr("Yes"), ui->buttonBox);
     button->setProperty("ActionRole", Reload);
     button->setDefault(false);
     ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);
 
-    button = new QPushButton(tr("No"));
+    button = new QPushButton(tr("No"), ui->buttonBox);
     button->setProperty("ActionRole", Overwrite);
     button->setDefault(false);
     ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);

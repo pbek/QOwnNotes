@@ -81,7 +81,7 @@ void OrphanedImagesDialog::on_fileTreeWidget_currentItemChanged(
         QTreeWidgetItem *current, QTreeWidgetItem *previous) {
     Q_UNUSED(previous);
 
-    QGraphicsScene *scene = new QGraphicsScene();
+    auto *scene = new QGraphicsScene(this);
     QString filePath = getFilePath(current);
 
     if (!filePath.isEmpty()) {

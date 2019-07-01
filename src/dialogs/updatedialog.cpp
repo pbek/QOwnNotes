@@ -90,7 +90,7 @@ UpdateDialog::UpdateDialog(QWidget *parent, QString changesHtml,
                                   "window-close.svg")));
     ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);
 
-    button = new QPushButton(tr("&Cancel"));
+    button = new QPushButton(tr("&Cancel"), this);
     button->setProperty("ActionRole", Cancel);
     button->setIcon(
             QIcon::fromTheme(
@@ -102,7 +102,7 @@ UpdateDialog::UpdateDialog(QWidget *parent, QString changesHtml,
     connect(this->ui->buttonBox, SIGNAL(clicked(QAbstractButton *)),
             SLOT(dialogButtonClicked(QAbstractButton *)));
 
-    _networkManager = new QNetworkAccessManager();
+    _networkManager = new QNetworkAccessManager(this);
     QObject::connect(_networkManager, SIGNAL(finished(QNetworkReply *)),
                      this, SLOT(slotReplyFinished(QNetworkReply *)));
 }

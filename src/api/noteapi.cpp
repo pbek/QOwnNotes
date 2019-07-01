@@ -22,7 +22,7 @@ NoteApi* NoteApi::fetch(int id) {
 }
 
 NoteApi* NoteApi::fromNote(Note note) {
-    NoteApi *noteApi = new NoteApi();
+    auto *noteApi = new NoteApi();
     noteApi->fetch(note.getId());
     return noteApi;
 }
@@ -45,7 +45,7 @@ QQmlListProperty<TagApi> NoteApi::tags() {
     while (itr.hasNext()) {
         Tag tag = itr.next();
 
-        TagApi* tagApi = new TagApi();
+        auto* tagApi = new TagApi();
         tagApi->fetch(tag.getId());
         _tags.append(tagApi);
     }
