@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 19.7.1
+- fixed some possible memory leaks when downloading files (for [#1226](https://github.com/pbek/QOwnNotes/issues/1226))
+
 ## 19.7.0
 - added support for a real time preview of [Nextcloud Text](https://github.com/nextcloud/text)
   images (for [#1226](https://github.com/pbek/QOwnNotes/issues/1226))

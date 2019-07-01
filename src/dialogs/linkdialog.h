@@ -20,7 +20,7 @@ public:
     QString getURL();
     QString getLinkName();
     QString getLinkDescription();
-    QString getTitleForUrl(QUrl url);
+    QString getTitleForUrl(const QUrl& url);
 
 private slots:
     void on_searchLineEdit_textChanged(const QString &arg1);

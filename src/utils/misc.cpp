@@ -809,6 +809,9 @@ QByteArray Utils::Misc::downloadUrl(const QUrl& url) {
         }
     }
 
+    reply->deleteLater();
+    delete(manager);
+
     return data;
 }
 

@@ -1816,6 +1816,7 @@ bool OwnCloudService::updateICSDataOfCalendarItem(CalendarItem *calItem) {
     ignoreSslErrorsIfAllowed(reply);
 
     loop.exec();
+    bool result = false;
 
     if (timer.isActive()) {
         // get the text from the network reply
@@ -1824,8 +1825,11 @@ bool OwnCloudService::updateICSDataOfCalendarItem(CalendarItem *calItem) {
         // set the new ics data
         calItem->setICSData(icsData);
 
-        return true;
+        result = true;
     }
+
+    reply->deleteLater();
+    delete(manager);
 
     // timer elapsed, no reply from network request
     return false;
@@ -1936,6 +1940,9 @@ QByteArray OwnCloudService::downloadNextcloudPreviewImage(const QString& path) {
             data = reply->readAll();
         }
     }
+
+    reply->deleteLater();
+    delete(manager);
 
     return data;
 }

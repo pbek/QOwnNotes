@@ -141,8 +141,8 @@ void LinkDialog::on_notesListWidget_doubleClicked(const QModelIndex &index) {
  * @param url
  * @return
  */
-QString LinkDialog::getTitleForUrl(QUrl url) {
-    QNetworkAccessManager *manager = new QNetworkAccessManager(this);
+QString LinkDialog::getTitleForUrl(const QUrl& url) {
+    auto *manager = new QNetworkAccessManager(this);
     QEventLoop loop;
     QTimer timer;
 
@@ -162,6 +162,7 @@ QString LinkDialog::getTitleForUrl(QUrl url) {
 
     QNetworkReply *reply = manager->get(networkRequest);
     loop.exec();
+    QString result;
 
     // if we didn't get a timeout let's fetch the title of the webpage
     if (timer.isActive()) {
@@ -188,11 +189,15 @@ QString LinkDialog::getTitleForUrl(QUrl url) {
                 .replace("&#39;", "'");
 
         // trim whitespaces and return title
-        return title.simplified();
+        result = title.simplified();
     }
 
+
+    reply->deleteLater();
+    delete(manager);
+
     // timer elapsed, no reply from network request
-    return "";
+    return result;
 }
 
 /**
