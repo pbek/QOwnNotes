@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 19.7.2
+- added a new editor color schema *MountainDebo* by @Deboart
+  (for [#1232](https://github.com/pbek/QOwnNotes/issues/1232))
+
 ## 19.7.1
 - added a lot fixes for possible memory leaks
 - added more Romanian, Slovak, Slovenian translation (thank you Fabijenna)
