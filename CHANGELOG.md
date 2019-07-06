@@ -3,6 +3,7 @@
 ## 19.7.2
 - added a new editor color schema *MountainDebo* by @Deboart
   (for [#1232](https://github.com/pbek/QOwnNotes/issues/1232))
+- added Flatpak installation notes to the [Flatpak installation page](https://www.qownnotes.org/installation#flatpak)
 
 ## 19.7.1
 - added a lot fixes for possible memory leaks
