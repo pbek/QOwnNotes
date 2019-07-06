@@ -1,8 +1,13 @@
 # QOwnNotes Changelog
 
 ## 19.7.2
-- added a new editor color schema *MountainDebo* by @Deboart
+- added a **new editor color schema** *MountainDebo* by @Deboart
   (for [#1232](https://github.com/pbek/QOwnNotes/issues/1232))
+- the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
+  was updated to version 19.7.0
+    - you can now **substring search** for **all parts of your search text**,
+      for example `qo sto` will find `Firefox Store Page QOwnNotes`
+    - added more German, Indonesian and Czech translation
 - added Flatpak installation notes to the [Flatpak installation page](https://www.qownnotes.org/installation#flatpak)
 
 ## 19.7.1
