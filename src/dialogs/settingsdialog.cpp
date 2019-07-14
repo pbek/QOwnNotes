@@ -1382,10 +1382,12 @@ void SettingsDialog::loadShortcutSettings() {
     ui->shortcutTreeWidget->clear();
     ui->shortcutTreeWidget->setColumnCount(2);
 
+    // shortcuts on toolbars and note folders don't work yet
+    auto disabledMenuNames = QStringList() << "menuToolbars" << "noteFoldersMenu";
+
     // loop through all menus
     foreach(QMenu* menu, menus) {
-            // shortcuts on toolbars don't work yet
-            if (menu->objectName() == "menuToolbars") {
+            if (disabledMenuNames.contains(menu->objectName())) {
                 continue;
             }
 
