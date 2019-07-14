@@ -196,20 +196,21 @@ notifications:
       - developer@bekerle.com
     on_success: change
     on_failure: change
-  irc:
-    # https://docs.travis-ci.com/user/notifications/#IRC-notification
-    channels:
-      - "chat.freenode.net#qownnotes"
-    template:
-      - "[%{commit}] %{repository} (%{branch}): %{message} | Commit message: %{commit_message} | Changes: %{compare_url} | Build details: %{build_url}"
-    on_success: never
-    on_failure: change
-    use_notice: true
-    skip_join: true
+#  irc:
+#    # https://docs.travis-ci.com/user/notifications/#IRC-notification
+#    channels:
+#      - "chat.freenode.net#qownnotes"
+#    template:
+#      - "[%{commit}] %{repository} (%{branch}): %{message} | Commit message: %{commit_message} | Changes: %{compare_url} | Build details: %{build_url}"
+#    on_success: never
+#    on_failure: change
+#    use_notice: true
+#    skip_join: true
   webhooks:
     urls:
       - https://webhooks.gitter.im/e/7c80d5baa6681f02dca5
       #- https://fathomless-fjord-24024.herokuapp.com/notify
+      - "https://scalar.vector.im/api/neb/services/hooks/dHJhdmlzLWNpLyU0MHBiZWslM0FtYXRyaXgub3JnLyUyMXJVenJSdnJuck9zTGFzRGRicCUzQW1hdHJpeC5vcmc"
     on_success: always  # options: [always|never|change] default: always
     on_failure: always  # options: [always|never|change] default: always
     on_start: never     # options: [always|never|change] default: always
