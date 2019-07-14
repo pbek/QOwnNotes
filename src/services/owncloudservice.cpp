@@ -1831,8 +1831,8 @@ bool OwnCloudService::updateICSDataOfCalendarItem(CalendarItem *calItem) {
     reply->deleteLater();
     delete(manager);
 
-    // timer elapsed, no reply from network request
-    return false;
+    // if false: timer elapsed, no reply from network request
+    return result;
 }
 
 /**
