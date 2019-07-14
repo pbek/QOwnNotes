@@ -3,6 +3,9 @@
 ## 19.7.3
 - fixed a crash when navigating between notes with the <kbd>Alt + Up</kbd> and
   <kbd>Alt + Down</kbd> shortcut keys (for [#1238](https://github.com/pbek/QOwnNotes/issues/1238))
+- there now is a software repository for **Debian Linux 10.0**
+    - please visit the [Debian installation page](https://www.qownnotes.org/installation#Debian)
+      for instructions
 
 ## 19.7.2
 - added a **new editor color schema** *MountainDebo* by @Deboart
