@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 19.7.3
+- support for **strike out highlighting** was added (for [#1240](https://github.com/pbek/QOwnNotes/issues/1240))
+    `~~this is striked out~~` will now be shown as masked text
 - fixed a crash when navigating between notes with the <kbd>Alt + Up</kbd> and
   <kbd>Alt + Down</kbd> shortcut keys (for [#1238](https://github.com/pbek/QOwnNotes/issues/1238))
 - disabled shortcuts for the *Note folders* menu in the *Shortcuts settings*
