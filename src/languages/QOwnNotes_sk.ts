@@ -358,11 +358,11 @@
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7033"/>
       <source>%n lines yanked.</source>
-      <translation type="unfinished">
-        <numerusform>%n lines yanked.</numerusform>
-        <numerusform>%n lines yanked.</numerusform>
-        <numerusform>%n lines yanked.</numerusform>
-        <numerusform>%n lines yanked.</numerusform>
+      <translation>
+        <numerusform>%n riadok strhol.</numerusform>
+        <numerusform>%n riadkov strhol.</numerusform>
+        <numerusform>%n riadkov strhol.</numerusform>
+        <numerusform>%n riadkov strhol.</numerusform>
       </translation>
     </message>
     <message>
@@ -830,11 +830,11 @@
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="195"/>
       <source>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
-        <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
-        <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
-        <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
+      <translation>
+        <numerusform>Obnoviť vybratú poznámku &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
+        <numerusform>Obnoviť &lt;strong&gt;%n&lt;/strong&gt; vybratých poznámok?</numerusform>
+        <numerusform>Obnoviť &lt;strong&gt;%n&lt;/strong&gt; vybratých poznámok?</numerusform>
+        <numerusform>Obnoviť &lt;strong&gt;%n&lt;/strong&gt; vybratých poznámok?</numerusform>
       </translation>
     </message>
     <message>
@@ -845,21 +845,21 @@
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="219"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</source>
-      <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n &lt;/strong&gt; poznámka bola obnovená</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; poznámky boli obnovené</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; poznámky boli obnovené</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; poznámky boli obnovené</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="241"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
+      <translation>
+        <numerusform>Odstrániť vybratú poznámku &lt;strong&gt;%n &lt;/strong&gt;?</numerusform>
+        <numerusform>Odstrániť vybraté poznámky &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
+        <numerusform>Odstrániť vybraté poznámky &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
+        <numerusform>Odstrániť vybraté poznámky &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
@@ -870,11 +870,11 @@
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="265"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</source>
-      <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; poznámka bola odstránená</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; poznámky boli odstránené</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; poznámky boli odstránené</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; poznámky boli odstránené</numerusform>
       </translation>
     </message>
   </context>
@@ -1885,19 +1885,19 @@ Obnoviť aktuálnu poznámku?</translation>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
-      <translation type="unfinished">
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
+      <translation>
+        <numerusform>Odstrániť vybratú poznámku &lt;strong&gt;%n &lt;/strong&gt;?
 
-If the trash is enabled on your ownCloud server you should be able to restore them from there.</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
+Ak je kôš povolený na vašom serveri ownCloud, mali by ste byť schopní ho odtiaľ obnoviť.</numerusform>
+        <numerusform>Odstrániť vybraté poznámky &lt;strong&gt;%n&lt;/strong&gt;?
 
-If the trash is enabled on your ownCloud server you should be able to restore them from there.</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
+Ak je kôš povolený na vašom serveri ownCloud, mali by ste byť schopní ho odtiaľ obnoviť.</numerusform>
+        <numerusform>Odstrániť vybraté poznámky &lt;strong&gt;%n&lt;/strong&gt;?
 
-If the trash is enabled on your ownCloud server you should be able to restore them from there.</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
+Ak je kôš povolený na vašom serveri ownCloud, mali by ste byť schopní ho odtiaľ obnoviť.</numerusform>
+        <numerusform>Odstrániť vybraté poznámky &lt;strong&gt;%n&lt;/strong&gt;?
 
-If the trash is enabled on your ownCloud server you should be able to restore them from there.</numerusform>
+Ak je kôš povolený na vašom serveri ownCloud, mali by ste byť schopní ho odtiaľ obnoviť.</numerusform>
       </translation>
     </message>
     <message>
@@ -1909,11 +1909,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4037"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
-      <translation type="unfinished">
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
+      <translation>
+        <numerusform>Odstrániť vybratý priečinok &lt;strong&gt;%n&lt;/strong&gt;? &lt;ul&gt; &lt;li&gt;%1&lt;/li&gt; &lt;/ul&gt; Odstránia sa aj všetky súbory a priečinky v týchto priečinkoch!</numerusform>
+        <numerusform>Odstrániť &lt;strong&gt; %n &lt;/strong&gt; vybraté priečinky? &lt;ul&gt; &lt;li&gt;%1 &lt;/li&gt; &lt;/ul&gt; Odstránia sa aj všetky súbory a priečinky v týchto priečinkoch!</numerusform>
+        <numerusform>Odstrániť &lt;strong&gt; %n &lt;/strong&gt; vybraté priečinky? &lt;ul&gt; &lt;li&gt;%1 &lt;/li&gt; &lt;/ul&gt; Odstránia sa aj všetky súbory a priečinky v týchto priečinkoch!</numerusform>
+        <numerusform>Odstrániť &lt;strong&gt; %n &lt;/strong&gt; vybraté priečinky? &lt;ul&gt; &lt;li&gt;%1 &lt;/li&gt; &lt;/ul&gt; Odstránia sa aj všetky súbory a priečinky v týchto priečinkoch!</numerusform>
       </translation>
     </message>
     <message>
@@ -1929,11 +1929,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4068"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
-      <translation type="unfinished">
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
+      <translation>
+        <numerusform>Odstrániť vybratú značku &lt;strong&gt;%n &lt;/strong&gt;? V tomto procese nebudú odstránené žiadne poznámky.</numerusform>
+        <numerusform>Odstrániť vybraté značky &lt;strong&gt;%n &lt;/strong&gt;? V tomto procese nebudú odstránené žiadne poznámky.</numerusform>
+        <numerusform>Odstrániť vybraté značky &lt;strong&gt;%n &lt;/strong&gt;? V tomto procese nebudú odstránené žiadne poznámky.</numerusform>
+        <numerusform>Odstrániť vybraté značky &lt;strong&gt;%n &lt;/strong&gt;? V tomto procese nebudú odstránené žiadne poznámky.</numerusform>
       </translation>
     </message>
     <message>
@@ -1945,11 +1945,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4123"/>
       <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
-        <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>Presunúť %n vybratú poznámku do &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
+        <numerusform>Presunúť %n vybraných poznámok do &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
+        <numerusform>Presunúť %n vybraných poznámok do &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
+        <numerusform>Presunúť %n vybraných poznámok do &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
@@ -1961,11 +1961,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4216"/>
       <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
-        <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>Skopírujte %n vybraných poznámok do &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
+        <numerusform>Skopírujte %n vybraných poznámok do &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
+        <numerusform>Skopírujte %n vybraných poznámok do &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
+        <numerusform>Skopírujte %n vybraných poznámok do &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
@@ -1977,11 +1977,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4240"/>
       <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
-      <translation type="unfinished">
-        <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
-        <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
-        <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
-        <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
+      <translation>
+        <numerusform>Poznámka %n bola skopírovaná do položky &lt;strong&gt;%2 &lt;/strong&gt;.</numerusform>
+        <numerusform>Počet poznámok %n sa skopírovalo do položky &lt;strong&gt;%2 &lt;/strong&gt;.</numerusform>
+        <numerusform>Počet poznámok %n sa skopírovalo do položky &lt;strong&gt;%2 &lt;/strong&gt;.</numerusform>
+        <numerusform>Počet poznámok %n sa skopírovalo do položky &lt;strong&gt;%2 &lt;/strong&gt;.</numerusform>
       </translation>
     </message>
     <message>
@@ -1992,11 +1992,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4254"/>
       <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
-        <numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>Označiť %n vybratú poznámku pomocou &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
+        <numerusform>Označiť %n vybratých poznámok pomocou &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
+        <numerusform>Označiť %n vybratých poznámok pomocou &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
+        <numerusform>Označiť %n vybratých poznámok pomocou &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
@@ -2119,31 +2119,31 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="6589"/>
       <source>Copied %n note(s) to %1</source>
-      <translation type="unfinished">
-        <numerusform>Copied %n note(s) to %1</numerusform>
-        <numerusform>Copied %n note(s) to %1</numerusform>
-        <numerusform>Copied %n note(s) to %1</numerusform>
-        <numerusform>Copied %n note(s) to %1</numerusform>
+      <translation>
+        <numerusform>Skopírovaná poznámka %n do %1</numerusform>
+        <numerusform>Kopírované %n poznámok k %1</numerusform>
+        <numerusform>Kopírované %n poznámok k %1</numerusform>
+        <numerusform>Kopírované %n poznámok k %1</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="6598"/>
       <source>Failed to copy %n note(s) (most likely already existing)</source>
-      <translation type="unfinished">
-        <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
-        <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
-        <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
-        <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
+      <translation>
+        <numerusform>Nepodarilo sa skopírovať poznámku %n (pravdepodobne už existovala)</numerusform>
+        <numerusform>Nepodarilo sa skopírovať poznámky %n (pravdepodobne už existujúce)</numerusform>
+        <numerusform>Nepodarilo sa skopírovať poznámky %n (pravdepodobne už existujúce)</numerusform>
+        <numerusform>Nepodarilo sa skopírovať poznámky %n (pravdepodobne už existujúce)</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="6608"/>
       <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-      <translation type="unfinished">
-        <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
-        <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
-        <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
-        <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
+      <translation>
+        <numerusform>Preskočené kopírovanie %n poznámok (bez značky alebo textového súboru alebo nečitateľné)</numerusform>
+        <numerusform>Preskočené kopírovanie poznámok %n (bez označenia alebo textového súboru alebo nečitateľné)</numerusform>
+        <numerusform>Preskočené kopírovanie poznámok %n (bez označenia alebo textového súboru alebo nečitateľné)</numerusform>
+        <numerusform>Preskočené kopírovanie poznámok %n (bez označenia alebo textového súboru alebo nečitateľné)</numerusform>
       </translation>
     </message>
     <message>
@@ -2356,11 +2356,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7654"/>
       <source>%n notes selected</source>
-      <translation type="unfinished">
-        <numerusform>%n notes selected</numerusform>
-        <numerusform>%n notes selected</numerusform>
-        <numerusform>%n notes selected</numerusform>
-        <numerusform>%n notes selected</numerusform>
+      <translation>
+        <numerusform>Počet vybratých poznámok: %n</numerusform>
+        <numerusform>%n vybraných poznámok</numerusform>
+        <numerusform>%n vybraných poznámok</numerusform>
+        <numerusform>%n vybraných poznámok</numerusform>
       </translation>
     </message>
     <message>
@@ -2382,21 +2382,21 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4323"/>
       <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Odstrániť tag &lt;strong&gt;%1&lt;/strong&gt; %n vybraných poznámok?</numerusform>
-        <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
-        <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
-        <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
+      <translation>
+        <numerusform>Odstrániť značku &lt;strong&gt;%1 &lt;/strong&gt; z vybratej poznámky %n?</numerusform>
+        <numerusform>Odstrániť značku &lt;strong&gt;%1 &lt;/strong&gt; z %n vybratých poznámok?</numerusform>
+        <numerusform>Odstrániť značku &lt;strong&gt;%1 &lt;/strong&gt; z %n vybratých poznámok?</numerusform>
+        <numerusform>Odstrániť značku &lt;strong&gt;%1 &lt;/strong&gt; z %n vybratých poznámok?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4378"/>
       <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
-      <translation type="unfinished">
-        <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
-        <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
-        <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
-        <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
+      <translation>
+        <numerusform>Značka &lt;strong&gt;%1&lt;/strong&gt; bola odstránená z poznámky %n</numerusform>
+        <numerusform>Značka &lt;strong&gt; %1 &lt;/strong&gt; bola odstránená z poznámok %n</numerusform>
+        <numerusform>Značka &lt;strong&gt; %1 &lt;/strong&gt; bola odstránená z poznámok %n</numerusform>
+        <numerusform>Značka &lt;strong&gt; %1 &lt;/strong&gt; bola odstránená z poznámok %n</numerusform>
       </translation>
     </message>
     <message>
@@ -2447,7 +2447,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="4838"/>
       <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
-      <translation type="unfinished">You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</translation>
+      <translation>Nevybrali ste žiadne zoznamy todo. &lt;br/&gt; Skontrolujte nastavenia &lt;strong&gt; Todo &lt;/strong&gt; v nastaveniach!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5567"/>
@@ -2490,7 +2490,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="7036"/>
       <source>show notes in note root folder (%1)</source>
-      <translation type="unfinished">show notes in note root folder (%1)</translation>
+      <translation>zobraziť poznámky v koreňovom priečinku poznámok (%1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="316"/>
@@ -2522,11 +2522,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="8322"/>
       <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
-        <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>Presunúť %n vybratú poznámku do podpriečinka &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
+        <numerusform>Presunúť %n vybraných poznámok do podpriečinka &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Presunúť %n vybraných poznámok do podpriečinka &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Presunúť %n vybraných poznámok do podpriečinka &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
@@ -2538,31 +2538,31 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="8385"/>
       <source>%n note(s) were moved to note subfolder "%2"</source>
-      <translation type="unfinished">
-        <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
-        <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
-        <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
-        <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
+      <translation>
+        <numerusform>Poznámka %n bola presunutá do podpriečinka poznámky "%2"</numerusform>
+        <numerusform>%n poznámok bolo presunutých do podpriečinka poznámky "%2"</numerusform>
+        <numerusform>%n poznámok bolo presunutých do podpriečinka poznámky "%2"</numerusform>
+        <numerusform>%n poznámok bolo presunutých do podpriečinka poznámky "%2"</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="8406"/>
       <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
-        <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>Kopírovať vybratú poznámku %n do podpriečinka &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Kopírovať %n vybratých poznámok do podpriečinka &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
+        <numerusform>Kopírovať %n vybratých poznámok do podpriečinka &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
+        <numerusform>Kopírovať %n vybratých poznámok do podpriečinka &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="8457"/>
       <source>%n note(s) were copied to note subfolder "%2"</source>
-      <translation type="unfinished">
-        <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
-        <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
-        <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
-        <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
+      <translation>
+        <numerusform>Poznámka %n bola skopírovaná do podpriečinka „%2“</numerusform>
+        <numerusform>%n poznámok bolo skopírovaných do podpriečinka poznámky "%2"</numerusform>
+        <numerusform>%n poznámok bolo skopírovaných do podpriečinka poznámky "%2"</numerusform>
+        <numerusform>%n poznámok bolo skopírovaných do podpriečinka poznámky "%2"</numerusform>
       </translation>
     </message>
     <message>
@@ -2679,11 +2679,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="2694"/>
       <source>Stored %n note(s) to disk</source>
-      <translation type="unfinished">
-        <numerusform>Stored %n note(s) to disk</numerusform>
-        <numerusform>Stored %n note(s) to disk</numerusform>
-        <numerusform>Stored %n note(s) to disk</numerusform>
-        <numerusform>Stored %n note(s) to disk</numerusform>
+      <translation>
+        <numerusform>Uložená poznámka %n na disk</numerusform>
+        <numerusform>Uložené %n poznámok na disk</numerusform>
+        <numerusform>Uložené %n poznámok na disk</numerusform>
+        <numerusform>Uložené %n poznámok na disk</numerusform>
       </translation>
     </message>
     <message>
@@ -2886,11 +2886,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4306"/>
       <source>%n note(s) were tagged with "%2"</source>
-      <translation type="unfinished">
-        <numerusform>%n note(s) were tagged with "%2"</numerusform>
-        <numerusform>%n note(s) were tagged with "%2"</numerusform>
-        <numerusform>%n note(s) were tagged with "%2"</numerusform>
-        <numerusform>%n note(s) were tagged with "%2"</numerusform>
+      <translation>
+        <numerusform>Poznámka %n bola označená značkou „%2“</numerusform>
+        <numerusform>Počet poznámok %n bolo označených značkou „%2“</numerusform>
+        <numerusform>Počet poznámok %n bolo označených značkou „%2“</numerusform>
+        <numerusform>Počet poznámok %n bolo označených značkou „%2“</numerusform>
       </translation>
     </message>
     <message>
@@ -3162,11 +3162,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Odstrániť &lt;strong&gt;%n&lt;/strong&gt; vybrané súbory?</numerusform>
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
+      <translation>
+        <numerusform>Odstrániť vybratý súbor &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
+        <numerusform>Odstrániť vybraté súbory &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
+        <numerusform>Odstrániť vybraté súbory &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
+        <numerusform>Odstrániť vybraté súbory &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
   </context>
@@ -3337,21 +3337,21 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../entities/note.cpp" line="2491"/>
       <source>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
-      <translation type="unfinished">
-        <numerusform>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
-        <numerusform>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
-        <numerusform>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
-        <numerusform>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
+      <translation>
+        <numerusform>Bola zistená zmena názvu poznámky. Chcete nahradiť všetky výskyty &lt;strong&gt;%1 &lt;/strong&gt; odkazov pomocou &lt;strong&gt;%2&lt;/strong&gt; v súbore s poznámkou &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
+        <numerusform>Bola zistená zmena názvu poznámky. Chcete nahradiť všetky výskyty odkazov &lt;strong&gt;%1&lt;/strong&gt; pomocou &lt;strong&gt;%2&lt;/strong&gt; v súboroch poznámok &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
+        <numerusform>Bola zistená zmena názvu poznámky. Chcete nahradiť všetky výskyty odkazov &lt;strong&gt;%1&lt;/strong&gt; pomocou &lt;strong&gt;%2&lt;/strong&gt; v súboroch poznámok &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
+        <numerusform>Bola zistená zmena názvu poznámky. Chcete nahradiť všetky výskyty odkazov &lt;strong&gt;%1&lt;/strong&gt; pomocou &lt;strong&gt;%2&lt;/strong&gt; v súboroch poznámok &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../entities/note.cpp" line="2879"/>
       <source>…and %n more note(s)</source>
-      <translation type="unfinished">
-        <numerusform>…and %n more note(s)</numerusform>
-        <numerusform>…and %n more note(s)</numerusform>
-        <numerusform>…and %n more note(s)</numerusform>
-        <numerusform>…and %n more note(s)</numerusform>
+      <translation>
+        <numerusform>… a %n viac poznámok</numerusform>
+        <numerusform>… a %n ďalších poznámok</numerusform>
+        <numerusform>… a %n ďalších poznámok</numerusform>
+        <numerusform>… a %n ďalších poznámok</numerusform>
       </translation>
     </message>
     <message>
@@ -3791,11 +3791,11 @@ Chcete ho aj tak nainštalovať?</translation>
     <message numerus="yes">
       <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="79"/>
       <source>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</source>
-      <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
-        <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
-        <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
-        <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n záložka &lt;/strong&gt; na serveri</numerusform>
+        <numerusform>&lt;strong&gt;%n záložiek &lt;/strong&gt; nájdených na serveri</numerusform>
+        <numerusform>&lt;strong&gt;%n záložiek &lt;/strong&gt; nájdených na serveri</numerusform>
+        <numerusform>&lt;strong&gt;%n záložiek &lt;/strong&gt; nájdených na serveri</numerusform>
       </translation>
     </message>
   </context>
@@ -6659,11 +6659,11 @@ To nie je možné vrátiť späť!</translation>
     <message numerus="yes">
       <location filename="../services/websocketserverservice.cpp" line="188"/>
       <source>%n bookmark(s) created</source>
-      <translation type="unfinished">
-        <numerusform>%n bookmark(s) created</numerusform>
-        <numerusform>%n bookmark(s) created</numerusform>
-        <numerusform>%n bookmark(s) created</numerusform>
-        <numerusform>%n bookmark(s) created</numerusform>
+      <translation>
+        <numerusform>bola vytvorená záložka %n</numerusform>
+        <numerusform>Počet vytvorených záložiek: %n</numerusform>
+        <numerusform>Počet vytvorených záložiek: %n</numerusform>
+        <numerusform>Počet vytvorených záložiek: %n</numerusform>
       </translation>
     </message>
     <message>

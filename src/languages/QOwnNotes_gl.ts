@@ -1228,7 +1228,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1154"/>
       <source>Jump to</source>
-      <translation type="unfinished">Jump to</translation>
+      <translation>Ir a</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1187"/>
@@ -1465,7 +1465,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2083"/>
       <source>Show note list under tag panel</source>
-      <translation type="unfinished">Show note list under tag panel</translation>
+      <translation>Mostrar a lista de notas baixo o panel de etiquetas</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2101"/>
@@ -1628,27 +1628,27 @@
     <message>
       <location filename="../mainwindow.ui" line="2434"/>
       <source>Jump to note subfolder panel</source>
-      <translation type="unfinished">Jump to note subfolder panel</translation>
+      <translation>Ir ao panel do subcartafol de notas</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2442"/>
       <source>Jump to tags panel</source>
-      <translation type="unfinished">Jump to tags panel</translation>
+      <translation>Ir ao panel de etiquetas</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2450"/>
       <source>Jump to note list panel</source>
-      <translation type="unfinished">Jump to note list panel</translation>
+      <translation>Ir ao panel de lista de notas</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2458"/>
       <source>Activate context menu</source>
-      <translation type="unfinished">Activate context menu</translation>
+      <translation>Activa o menú contextual</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2466"/>
       <source>Import bookmarks from server</source>
-      <translation type="unfinished">Import bookmarks from server</translation>
+      <translation>Importar marcadores do servidor</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1861"/>
@@ -1736,7 +1736,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2022"/>
       <source>Markdown cheatsheet</source>
-      <translation type="unfinished">Markdown cheatsheet</translation>
+      <translation>Cheatsheet markdown</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2031"/>
@@ -1929,8 +1929,8 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4216"/>
       <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
-        <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>¿Copia %n nota seleccionada en &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
         <numerusform>¿Copiar %n notas seleccionadas a &lt;strong&gt; %2 &lt;/strong&gt;?</numerusform>
       </translation>
     </message>
@@ -1943,9 +1943,9 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4240"/>
       <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
-      <translation type="unfinished">
-        <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
-        <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
+      <translation>
+        <numerusform>%n nota copiouse en &lt;strong&gt;%2 &lt;/strong&gt;.</numerusform>
+        <numerusform>%n notas copiáronse a &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
       </translation>
     </message>
     <message>
@@ -1956,9 +1956,9 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4254"/>
       <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
-        <numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>Etiqueta %n nota seleccionada con &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Marcar %n notas seleccionadas con &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
@@ -2054,7 +2054,7 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
     <message>
       <location filename="../mainwindow.cpp" line="6347"/>
       <source>Jumped to bookmark position at slot %1</source>
-      <translation type="unfinished">Jumped to bookmark position at slot %1</translation>
+      <translation>Saltouse á posición do marcador no slot %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6567"/>
@@ -2081,25 +2081,25 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="6589"/>
       <source>Copied %n note(s) to %1</source>
-      <translation type="unfinished">
-        <numerusform>Copied %n note(s) to %1</numerusform>
-        <numerusform>Copied %n note(s) to %1</numerusform>
+      <translation>
+        <numerusform>Copiouse %n nota en %1</numerusform>
+        <numerusform>Copiouse %n notas en %1</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="6598"/>
       <source>Failed to copy %n note(s) (most likely already existing)</source>
-      <translation type="unfinished">
-        <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
-        <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
+      <translation>
+        <numerusform>Non se puido copiar %n nota (o máis probable é que xa exista)</numerusform>
+        <numerusform>Produciuse un fallo ao copiar %n notas (o máis probable é que xa exista)</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="6608"/>
       <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-      <translation type="unfinished">
-        <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
-        <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
+      <translation>
+        <numerusform>Copiado omitido de %n nota (non hai ningunha marca ou ficheiro de texto ou non é lexible)</numerusform>
+        <numerusform>Copiado por omisión de %n notas (non hai ningunha descrición nin ficheiro de texto)</numerusform>
       </translation>
     </message>
     <message>
@@ -2310,9 +2310,9 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7654"/>
       <source>%n notes selected</source>
-      <translation type="unfinished">
-        <numerusform>%n notes selected</numerusform>
-        <numerusform>%n notes selected</numerusform>
+      <translation>
+        <numerusform>%n nota seleccionada</numerusform>
+        <numerusform>%n notas seleccionadas</numerusform>
       </translation>
     </message>
     <message>
@@ -2334,17 +2334,17 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4323"/>
       <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
-        <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
+      <translation>
+        <numerusform>Eliminar a etiqueta &lt;strong&gt;%1&lt;/strong&gt; de %n nota seleccionada?</numerusform>
+        <numerusform>Eliminar a etiqueta &lt;strong&gt;%1&lt;/strong&gt; de %n notas seleccionadas?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4378"/>
       <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
-      <translation type="unfinished">
-        <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
-        <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
+      <translation>
+        <numerusform>A etiqueta &lt;strong&gt;%1 &lt;/strong&gt; eliminouse de %n nota</numerusform>
+        <numerusform>A etiqueta &lt;strong&gt;%1 &lt;/strong&gt; eliminouse de %n notas</numerusform>
       </translation>
     </message>
     <message>
@@ -2395,7 +2395,7 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
     <message>
       <location filename="../mainwindow.cpp" line="4838"/>
       <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
-      <translation type="unfinished">You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</translation>
+      <translation>Non seleccionaches ningunha lista de tarefas. ¡Comprobe a configuración &lt;strong&gt; Todo &lt;/strong&gt; na configuración!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5567"/>
@@ -2484,25 +2484,25 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="8385"/>
       <source>%n note(s) were moved to note subfolder "%2"</source>
-      <translation type="unfinished">
-        <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
-        <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
+      <translation>
+        <numerusform>%n nota foi movida ao subcartafol de notas "%2"</numerusform>
+        <numerusform>Movéronse %n notas ao subcartafol de notas "%2"</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="8406"/>
       <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
-        <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>Copia %n nota seleccionada para anotar o subcartafol &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Copia %n notas seleccionadas para notar o subcartafol &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="8457"/>
       <source>%n note(s) were copied to note subfolder "%2"</source>
-      <translation type="unfinished">
-        <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
-        <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
+      <translation>
+        <numerusform>Copiouse %n nota ao subcartafol de notas "%2"</numerusform>
+        <numerusform>Copiáronse %n notas no subcartafol de notas "%2"</numerusform>
       </translation>
     </message>
     <message>
@@ -2619,15 +2619,15 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="2694"/>
       <source>Stored %n note(s) to disk</source>
-      <translation type="unfinished">
-        <numerusform>Stored %n note(s) to disk</numerusform>
-        <numerusform>Stored %n note(s) to disk</numerusform>
+      <translation>
+        <numerusform>Almacenado %n nota no disco</numerusform>
+        <numerusform>Almacenado %n notas no disco</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6947"/>
       <source>show all notes (%1)</source>
-      <translation type="unfinished">show all notes (%1)</translation>
+      <translation>amosar todas as notas (%1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6950"/>
@@ -2838,7 +2838,7 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
       <location filename="../mainwindow.cpp" line="5759"/>
       <source>Block &amp;quote selected text</source>
       <comment>Action to apply a block quote formatting to the selected text</comment>
-      <translation type="unfinished">Block &amp;quote selected text</translation>
+      <translation>Block &amp;cita texto seleccionado</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6694"/>
@@ -2967,12 +2967,12 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="236"/>
       <source>Copy image file path</source>
-      <translation type="unfinished">Copy image file path</translation>
+      <translation>Copiar o camiño do ficheiro de imaxe</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="240"/>
       <source>Copy link location</source>
-      <translation type="unfinished">Copy link location</translation>
+      <translation>Copiar a localización da ligazón</translation>
     </message>
   </context>
   <context>
@@ -3198,12 +3198,12 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
     <message>
       <location filename="../services/owncloudservice.cpp" line="1881"/>
       <source>No bookmarks</source>
-      <translation type="unfinished">No bookmarks</translation>
+      <translation>Sen marcadores</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1882"/>
       <source>No bookmarks were found on the server.</source>
-      <translation type="unfinished">No bookmarks were found on the server.</translation>
+      <translation>Non se atoparon marcadores no servidor.</translation>
     </message>
   </context>
   <context>
@@ -3269,9 +3269,9 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
     <message numerus="yes">
       <location filename="../entities/note.cpp" line="2491"/>
       <source>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
-      <translation type="unfinished">
-        <numerusform>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
-        <numerusform>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
+      <translation>
+        <numerusform>Detectouse un cambio no nome da nota. ¿Quere substituír todas as ligazóns de &lt;strong&gt;%1 &lt;/strong&gt; con &lt;strong&gt;% 2 &lt;/strong&gt; no &lt;strong&gt;% n &lt;/strong&gt; ficheiro de notas?</numerusform>
+        <numerusform>Detectouse un cambio no nome da nota. ¿Quere substituír todas as coincidencias de &lt;strong&gt;%1&lt;/strong&gt; con &lt;strong&gt;%2&lt;/strong&gt; nos ficheiros de notas de &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -3306,12 +3306,12 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
     <message>
       <location filename="../utils/git.cpp" line="73"/>
       <source>Command failed!</source>
-      <translation type="unfinished">Command failed!</translation>
+      <translation>Fallou o comando!</translation>
     </message>
     <message>
       <location filename="../utils/git.cpp" line="74"/>
       <source>The command &lt;code&gt;%1&lt;/code&gt; failed!</source>
-      <translation type="unfinished">The command &lt;code&gt;%1&lt;/code&gt; failed!</translation>
+      <translation>Fallou o comando &lt;code&gt;%1&lt;/code&gt;!</translation>
     </message>
   </context>
   <context>
@@ -3709,19 +3709,19 @@ Queres instalalo de todos os xeitos?</translation>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="14"/>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="20"/>
       <source>Import bookmarks</source>
-      <translation type="unfinished">Import bookmarks</translation>
+      <translation>Importar marcadores</translation>
     </message>
     <message>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="47"/>
       <source>%v of %m bookmark(s) imported</source>
-      <translation type="unfinished">%v of %m bookmark(s) imported</translation>
+      <translation>%v de %m marcadores/s importada/s</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="79"/>
       <source>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</source>
-      <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
-        <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n marcador &lt;/strong&gt; atopados no servidor</numerusform>
+        <numerusform>&lt;strong&gt;%n marcadores &lt;/strong&gt; atopados no servidor</numerusform>
       </translation>
     </message>
   </context>
@@ -4479,7 +4479,7 @@ Simplemente comproba se obtén conflitos de sincronización e establece un valor
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2051"/>
       <source>Danish</source>
-      <translation type="unfinished">Danish</translation>
+      <translation>Danés</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2095"/>
@@ -4519,17 +4519,17 @@ Simplemente comproba se obtén conflitos de sincronización e establece un valor
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2271"/>
       <source>Romanian</source>
-      <translation type="unfinished">Romanian</translation>
+      <translation>Rumano</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2293"/>
       <source>Slovak</source>
-      <translation type="unfinished">Slovak</translation>
+      <translation>Eslovaco</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2304"/>
       <source>Slovenian</source>
-      <translation type="unfinished">Slovenian</translation>
+      <translation>Esloveno</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2315"/>
@@ -4569,7 +4569,7 @@ Simplemente comproba se obtén conflitos de sincronización e establece un valor
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2559"/>
       <source>Enable dark mode icon theme</source>
-      <translation type="unfinished">Enable dark mode icon theme</translation>
+      <translation>Activar icona tema modo escuro</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2489"/>
@@ -4594,7 +4594,7 @@ Simplemente comproba se obtén conflitos de sincronización e establece un valor
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2549"/>
       <source>Enforce system icon theme</source>
-      <translation type="unfinished">Enforce system icon theme</translation>
+      <translation>Aplicar tema do icono do sistema</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2655"/>
@@ -4679,7 +4679,7 @@ Abre o asistente de emisión de temas &lt;/ span&gt; na parte inferior. &lt;/ P&
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4230"/>
       <source>Ignore code font size to allow zooming</source>
-      <translation type="unfinished">Ignore code font size to allow zooming</translation>
+      <translation>Ignorar o tamaño da fonte para permitir o zoom</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4259"/>
@@ -4779,7 +4779,7 @@ Abre o asistente de emisión de temas &lt;/ span&gt; na parte inferior. &lt;/ P&
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5439"/>
       <source>Show security token</source>
-      <translation type="unfinished">Show security token</translation>
+      <translation>Mostrar o token de seguridade</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5475"/>
@@ -6603,22 +6603,22 @@ Isto non se pode desfacer!</translation>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="20"/>
       <source>Security token</source>
-      <translation type="unfinished">Security token</translation>
+      <translation>Token de seguridade</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="26"/>
       <source>To let your QOwnNotes browser extension access your notes please paste this security token in the settings of your browser extension:</source>
-      <translation type="unfinished">To let your QOwnNotes browser extension access your notes please paste this security token in the settings of your browser extension:</translation>
+      <translation>Para permitir que a extensión de navegador de QOwnNotes acceda ás súas notas, pegue este token de seguridade nas opcións da extensión do seu navegador:</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="65"/>
       <source>Generate new token</source>
-      <translation type="unfinished">Generate new token</translation>
+      <translation>Xera un novo token</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="79"/>
       <source>Copy token</source>
-      <translation type="unfinished">Copy token</translation>
+      <translation>Copiar o token</translation>
     </message>
   </context>
   <context>
@@ -6632,7 +6632,7 @@ Isto non se pode desfacer!</translation>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="24"/>
       <source>plain-text file markdown note taking with ownCloud integration</source>
-      <translation type="unfinished">plain-text file markdown note taking with ownCloud integration</translation>
+      <translation>nota de descarte de ficheiro de texto simple coa integración de ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="88"/>

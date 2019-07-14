@@ -12,6 +12,8 @@
 - there now is a software repository for **Debian Linux 10.0**
     - please visit the [Debian installation page](https://www.qownnotes.org/installation#Debian)
       for instructions
+- added more Slovenian, Greek, Slovak, Galician, Finnish, Romanian translation
+  (thank you Fabijenna)
 
 ## 19.7.2
 - added a **new editor color schema** *MountainDebo* by @Deboart

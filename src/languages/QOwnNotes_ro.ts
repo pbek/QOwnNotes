@@ -286,10 +286,10 @@
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6030"/>
       <source>%n lines filtered.</source>
-      <translation type="unfinished">
-        <numerusform>%n lines filtered.</numerusform>
-        <numerusform>%n lines filtered.</numerusform>
-        <numerusform>%n lines filtered.</numerusform>
+      <translation>
+        <numerusform>%n linie filtrată.</numerusform>
+        <numerusform>%n linii filtrate.</numerusform>
+        <numerusform>%n linii filtrate.</numerusform>
       </translation>
     </message>
     <message>
@@ -345,19 +345,19 @@
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6495"/>
       <source>%n lines %1ed %2 time.</source>
       <comment>%1 can be '&gt;' or '&lt;'</comment>
-      <translation type="unfinished">
-        <numerusform>%n lines %1ed %2 time.</numerusform>
-        <numerusform>%n lines %1ed %2 time.</numerusform>
-        <numerusform>%n lines %1ed %2 time.</numerusform>
+      <translation>
+        <numerusform>%n line %1ed %2 timp.</numerusform>
+        <numerusform>%n linii %1ed %2 timp.</numerusform>
+        <numerusform>%n linii %1ed %2 timp.</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7033"/>
       <source>%n lines yanked.</source>
-      <translation type="unfinished">
-        <numerusform>%n lines yanked.</numerusform>
-        <numerusform>%n lines yanked.</numerusform>
-        <numerusform>%n lines yanked.</numerusform>
+      <translation>
+        <numerusform>%n linia a tras.</numerusform>
+        <numerusform>%n linii tras.</numerusform>
+        <numerusform>%n linii tras.</numerusform>
       </translation>
     </message>
     <message>
@@ -825,10 +825,10 @@
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="195"/>
       <source>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
-        <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
-        <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
+      <translation>
+        <numerusform>Restabiliți &lt;strong&gt;%n&lt;/strong&gt; nota selectată?</numerusform>
+        <numerusform>Restabiliți &lt;strong&gt;%n &lt;/strong&gt; notele selectate?</numerusform>
+        <numerusform>Restabiliți &lt;strong&gt;%n &lt;/strong&gt; notele selectate?</numerusform>
       </translation>
     </message>
     <message>
@@ -839,19 +839,19 @@
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="219"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</source>
-      <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</numerusform>
+      <translation>
+        <numerusform>Notă &lt;strong&gt;%n &lt;/strong&gt; a fost restaurată</numerusform>
+        <numerusform>&lt;strong&gt;%n &lt;/strong&gt; notele au fost restabilite</numerusform>
+        <numerusform>&lt;strong&gt;%n &lt;/strong&gt; notele au fost restabilite</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="241"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
+      <translation>
+        <numerusform>Eliminați &lt;strong&gt;%n &lt;/strong&gt; nota selectată?</numerusform>
+        <numerusform>Eliminați &lt;strong&gt;%n &lt;/strong&gt; notele selectate?</numerusform>
+        <numerusform>Eliminați &lt;strong&gt;%n &lt;/strong&gt; notele selectate?</numerusform>
       </translation>
     </message>
     <message>
@@ -862,10 +862,10 @@
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="265"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</source>
-      <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</numerusform>
+      <translation>
+        <numerusform>Notă &lt;strong&gt;%n &lt;/strong&gt; a fost eliminată</numerusform>
+        <numerusform>Notele &lt;strong&gt;%n &lt;/strong&gt; au fost eliminate</numerusform>
+        <numerusform>Notele &lt;strong&gt;%n &lt;/strong&gt; au fost eliminate</numerusform>
       </translation>
     </message>
   </context>
@@ -1875,16 +1875,16 @@ Restabiliți nota curentă?</translation>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
-      <translation type="unfinished">
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
+      <translation>
+        <numerusform>Eliminați &lt;strong&gt;% n &lt;/ strong&gt; nota selectată?
 
-If the trash is enabled on your ownCloud server you should be able to restore them from there.</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
+Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl puteți restabili de acolo.</numerusform>
+        <numerusform>Eliminați &lt;strong&gt;%n &lt;/strong&gt; notele selectate?
 
-If the trash is enabled on your ownCloud server you should be able to restore them from there.</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
+Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl puteți restabili de acolo.</numerusform>
+        <numerusform>Eliminați &lt;strong&gt;%n &lt;/strong&gt; notele selectate?
 
-If the trash is enabled on your ownCloud server you should be able to restore them from there.</numerusform>
+Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl puteți restabili de acolo.</numerusform>
       </translation>
     </message>
     <message>
@@ -1896,10 +1896,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4037"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
-      <translation type="unfinished">
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
+      <translation>
+        <numerusform>Eliminați &lt;strong&gt;%n &lt;/strong&gt; folderul selectat? &lt;Ul&gt; &lt;li&gt;% 1 &lt;/li&gt; &lt;/ul&gt; Toate fișierele și folderele din aceste dosare vor fi eliminate, de asemenea!</numerusform>
+        <numerusform>Eliminați &lt;strong&gt;%n &lt;/ strong&gt; folderele selectate? &lt;Ul&gt; &lt;li&gt;%1 &lt;/ li&gt; &lt;/ ul&gt; Toate fișierele și folderele din aceste dosare vor fi eliminate, de asemenea!</numerusform>
+        <numerusform>Eliminați &lt;strong&gt;%n &lt;/ strong&gt; folderele selectate? &lt;Ul&gt; &lt;li&gt;%1 &lt;/ li&gt; &lt;/ ul&gt; Toate fișierele și folderele din aceste dosare vor fi eliminate, de asemenea!</numerusform>
       </translation>
     </message>
     <message>
@@ -1930,10 +1930,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4123"/>
       <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
-        <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>Mutați %n nota selectată la &lt;strong&gt;%2 &lt;/ strong&gt;?</numerusform>
+        <numerusform>Mutați %n notele selectate la &lt;strong&gt;%2 &lt;/ strong&gt;?</numerusform>
+        <numerusform>Mutați %n notele selectate la &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
@@ -1945,10 +1945,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4216"/>
       <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
-        <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>Copiați nota selectată %n la &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
+        <numerusform>Copiați %n notele selectate la &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
+        <numerusform>Copiați %n notele selectate la &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
@@ -1960,10 +1960,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4240"/>
       <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
-      <translation type="unfinished">
-        <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
-        <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
-        <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
+      <translation>
+        <numerusform>Notă %n a fost copiată în &lt;strong&gt;%2 &lt;/strong&gt;.</numerusform>
+        <numerusform>%n note au fost copiate pe &lt;strong&gt;%2 &lt;/strong&gt;.</numerusform>
+        <numerusform>%n note au fost copiate pe &lt;strong&gt;%2 &lt;/strong&gt;.</numerusform>
       </translation>
     </message>
     <message>
@@ -1974,10 +1974,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4254"/>
       <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
-        <numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>Eticheta %n selectată cu &lt;strong&gt; %2 &lt;/ strong&gt;?</numerusform>
+        <numerusform>Etichetați %n notele selectate cu &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
+        <numerusform>Etichetați %n notele selectate cu &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
@@ -2109,19 +2109,19 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="6598"/>
       <source>Failed to copy %n note(s) (most likely already existing)</source>
-      <translation type="unfinished">
-        <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
-        <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
-        <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
+      <translation>
+        <numerusform>Nu a reușit să copiați nota %n (cel mai probabil există deja)</numerusform>
+        <numerusform>Nu a reușit să copiați notele %n (cel mai probabil există deja)</numerusform>
+        <numerusform>Nu a reușit să copiați notele %n (cel mai probabil există deja)</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="6608"/>
       <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-      <translation type="unfinished">
-        <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
-        <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
-        <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
+      <translation>
+        <numerusform>S-a copiat o copie de %n notă (nu există marcaj sau fișier text sau nu poate fi citit)</numerusform>
+        <numerusform>S-a copiat o copie a notelor %n (nu există marcaj sau fișier text sau nu poate fi citit)</numerusform>
+        <numerusform>S-a copiat o copie a notelor %n (nu există marcaj sau fișier text sau nu poate fi citit)</numerusform>
       </translation>
     </message>
     <message>
@@ -2299,10 +2299,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="10296"/>
       <source>%n chars</source>
       <comment>characters</comment>
-      <translation type="unfinished">
+      <translation>
         <numerusform>%n chars</numerusform>
-        <numerusform>%n chars</numerusform>
-        <numerusform>%n chars</numerusform>
+        <numerusform>%n caractere</numerusform>
+        <numerusform>%n caractere</numerusform>
       </translation>
     </message>
     <message>
@@ -2333,10 +2333,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7654"/>
       <source>%n notes selected</source>
-      <translation type="unfinished">
-        <numerusform>%n notes selected</numerusform>
-        <numerusform>%n notes selected</numerusform>
-        <numerusform>%n notes selected</numerusform>
+      <translation>
+        <numerusform>%n notă selectată</numerusform>
+        <numerusform>%n note selectate</numerusform>
+        <numerusform>%n note selectate</numerusform>
       </translation>
     </message>
     <message>
@@ -2358,19 +2358,19 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4323"/>
       <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
-        <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
-        <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
+      <translation>
+        <numerusform>Eliminați eticheta &lt;strong&gt;%1 &lt;/ strong&gt; din nota selectată %n?</numerusform>
+        <numerusform>Eliminați eticheta &lt;strong&gt; %1 &lt;/ strong&gt; din %n note selectate?</numerusform>
+        <numerusform>Eliminați eticheta &lt;strong&gt; %1 &lt;/ strong&gt; din %n note selectate?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4378"/>
       <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
-      <translation type="unfinished">
-        <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
-        <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
-        <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
+      <translation>
+        <numerusform>Eticheta &lt;strong&gt; %1 &lt;/ strong&gt; a fost eliminată din nota %n</numerusform>
+        <numerusform>Eticheta &lt;strong&gt; %1 &lt;/ strong&gt; a fost eliminată din notele %n</numerusform>
+        <numerusform>Eticheta &lt;strong&gt; %1 &lt;/ strong&gt; a fost eliminată din notele %n</numerusform>
       </translation>
     </message>
     <message>
@@ -2496,10 +2496,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="8322"/>
       <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
-        <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>Mutați %n nota selectată pentru a nota subalternul &lt;strong&gt; %2 &lt;/ strong&gt;?</numerusform>
+        <numerusform>Mutați %n notele selectate pentru a nota subfolderul &lt;strong&gt; %2 &lt;/ strong&gt;?</numerusform>
+        <numerusform>Mutați %n notele selectate pentru a nota subfolderul &lt;strong&gt; %2 &lt;/ strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
@@ -2511,28 +2511,28 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="8385"/>
       <source>%n note(s) were moved to note subfolder "%2"</source>
-      <translation type="unfinished">
-        <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
-        <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
-        <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
+      <translation>
+        <numerusform>Notă %n a fost mutată în subfolderul "%2"</numerusform>
+        <numerusform>%n notele au fost mutate în subfolderul "%2"</numerusform>
+        <numerusform>%n notele au fost mutate în subfolderul "%2"</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="8406"/>
       <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
-        <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>Copiați %n nota selectată în subfolderul &lt;strong&gt;%2 &lt;/ strong&gt;?</numerusform>
+        <numerusform>Copiați %n notele selectate pentru a nota subfolderul &lt;strong&gt;%2 &lt;/ strong&gt;?</numerusform>
+        <numerusform>Copiați %n notele selectate pentru a nota subfolderul &lt;strong&gt;%2 &lt;/ strong&gt;?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="8457"/>
       <source>%n note(s) were copied to note subfolder "%2"</source>
-      <translation type="unfinished">
-        <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
-        <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
-        <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
+      <translation>
+        <numerusform>Notă %n a fost copiată în subfolderul "%2"</numerusform>
+        <numerusform>Au fost copiate notele %n în subfolderul "%2"</numerusform>
+        <numerusform>Au fost copiate notele %n în subfolderul "%2"</numerusform>
       </translation>
     </message>
     <message>
@@ -2649,16 +2649,16 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="2694"/>
       <source>Stored %n note(s) to disk</source>
-      <translation type="unfinished">
-        <numerusform>Stored %n note(s) to disk</numerusform>
-        <numerusform>Stored %n note(s) to disk</numerusform>
-        <numerusform>Stored %n note(s) to disk</numerusform>
+      <translation>
+        <numerusform>Stocate %n nota pe disc</numerusform>
+        <numerusform>Stocate %n note pe disc</numerusform>
+        <numerusform>Stocate %n note pe disc</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6947"/>
       <source>show all notes (%1)</source>
-      <translation type="unfinished">show all notes (%1)</translation>
+      <translation>afișați toate notele (%1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6950"/>
@@ -3077,10 +3077,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="141"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
+      <translation>
+        <numerusform>Ștergeți fișierul selectat &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
+        <numerusform>Ștergeți fișierele selectate &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
+        <numerusform>Ștergeți fișierele selectate &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
   </context>
@@ -3129,10 +3129,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
+      <translation>
+        <numerusform>Ștergeți fișierul selectat &lt;strong&gt;%n &lt;/ strong&gt;?</numerusform>
+        <numerusform>Ștergeți fișierele selectate &lt;strong&gt;%n&lt;/ strong&gt;?</numerusform>
+        <numerusform>Ștergeți fișierele selectate &lt;strong&gt;%n&lt;/ strong&gt;?</numerusform>
       </translation>
     </message>
   </context>
@@ -3303,19 +3303,19 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../entities/note.cpp" line="2491"/>
       <source>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
-      <translation type="unfinished">
-        <numerusform>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
-        <numerusform>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
-        <numerusform>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
+      <translation>
+        <numerusform>A fost detectată o modificare a numelui notei. Doriți să înlocuiți toate reacțiile &lt;strong&gt;%1&lt;/ strong&gt; cu &lt;strong&gt;%2&lt;/ strong&gt; în fișierul de note &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
+        <numerusform>A fost detectată o modificare a numelui notei. Doriți să înlocuiți toate aparițiile de &lt;strong&gt;%1&lt;/ strong&gt; linkuri cu &lt;strong&gt;%2 &lt;/strong&gt; în &lt;strong&gt;%n&lt;/ strong&gt; fișierele note?</numerusform>
+        <numerusform>A fost detectată o modificare a numelui notei. Doriți să înlocuiți toate aparițiile de &lt;strong&gt;%1&lt;/ strong&gt; linkuri cu &lt;strong&gt;%2&lt;/strong&gt; în &lt;strong&gt;%n&lt;/strong&gt; fișierele note?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../entities/note.cpp" line="2879"/>
       <source>…and %n more note(s)</source>
-      <translation type="unfinished">
-        <numerusform>…and %n more note(s)</numerusform>
-        <numerusform>…and %n more note(s)</numerusform>
-        <numerusform>…and %n more note(s)</numerusform>
+      <translation>
+        <numerusform>... și mai multă notă %n</numerusform>
+        <numerusform>... și %n mai multe note</numerusform>
+        <numerusform>... și %n mai multe note</numerusform>
       </translation>
     </message>
     <message>
@@ -3755,10 +3755,10 @@ Doriți să o instalați oricum?</translation>
     <message numerus="yes">
       <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="79"/>
       <source>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</source>
-      <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
-        <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
-        <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n marcaj &lt;/strong&gt; găsit pe server</numerusform>
+        <numerusform>&lt;strong&gt;%n marcaje &lt;/strong&gt; găsite pe server</numerusform>
+        <numerusform>&lt;strong&gt;%n marcaje &lt;/strong&gt; găsite pe server</numerusform>
       </translation>
     </message>
   </context>
@@ -3914,7 +3914,7 @@ Doriți să o instalați oricum?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="892"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or an other desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or an other desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Veți avea nevoie de &lt;a href="https://owncloud.org/"&gt; &lt;span style = "font-weight: 600"&gt; client de sincronizare ownCloud &lt;span&gt; &lt;/a&gt; (sau un alt client de sincronizare pe desktop) pentru a vă sincroniza notele! &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="958"/>
@@ -6622,10 +6622,10 @@ Acest lucru nu poate fi anulat!</translation>
     <message numerus="yes">
       <location filename="../services/websocketserverservice.cpp" line="188"/>
       <source>%n bookmark(s) created</source>
-      <translation type="unfinished">
-        <numerusform>%n bookmark(s) created</numerusform>
-        <numerusform>%n bookmark(s) created</numerusform>
-        <numerusform>%n bookmark(s) created</numerusform>
+      <translation>
+        <numerusform>%n marcaj creat</numerusform>
+        <numerusform>%n marcaje create</numerusform>
+        <numerusform>%n marcaje create</numerusform>
       </translation>
     </message>
     <message>
