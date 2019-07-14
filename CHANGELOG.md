@@ -3,11 +3,13 @@
 ## 19.7.3
 - fixed a crash when navigating between notes with the <kbd>Alt + Up</kbd> and
   <kbd>Alt + Down</kbd> shortcut keys (for [#1238](https://github.com/pbek/QOwnNotes/issues/1238))
+- disabled shortcuts for the *Note folders* menu in the *Shortcuts settings*
+  because shortcuts for them are not supported (for [#1235](https://github.com/pbek/QOwnNotes/issues/1235))
+- fixed wrongly detected tray icon context menu items in toolbar settings
+  (for [#1239](https://github.com/pbek/QOwnNotes/issues/1239))
 - there now is a software repository for **Debian Linux 10.0**
     - please visit the [Debian installation page](https://www.qownnotes.org/installation#Debian)
       for instructions
-- disabled shortcuts for the *Note folders* menu in the *Shortcuts settings*
-  because shortcuts for them are not supported (for [#1235](https://github.com/pbek/QOwnNotes/issues/1235))
 
 ## 19.7.2
 - added a **new editor color schema** *MountainDebo* by @Deboart

@@ -5566,7 +5566,9 @@ void MainWindow::generateSystemTrayContextMenu() {
 //    QMenu *menu = trayIcon->contextMenu();
 //    delete(menu);
 
-    auto *menu = new QMenu(this);
+    // QMenu(this) is not allowed here or it will not be recognized as child of
+    // the tray icon later (see: https://github.com/pbek/QOwnNotes/issues/1239)
+    auto *menu = new QMenu();
     menu->setTitle("QOwnNotes");
 
     // add menu entry to open the app
