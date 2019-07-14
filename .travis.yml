@@ -202,8 +202,8 @@ notifications:
       - "chat.freenode.net#qownnotes"
     template:
       - "[%{commit}] %{repository} (%{branch}): %{message} | Commit message: %{commit_message} | Changes: %{compare_url} | Build details: %{build_url}"
-    on_success: always
-    on_failure: always
+    on_success: never
+    on_failure: change
     use_notice: true
     skip_join: true
   webhooks:
