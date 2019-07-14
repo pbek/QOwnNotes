@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 19.7.3
+- fixed a crash when navigating between notes with the <kbd>Alt + Up</kbd> and
+  <kbd>Alt + Down</kbd> shortcut keys (for [#1238](https://github.com/pbek/QOwnNotes/issues/1238))
+
 ## 19.7.2
 - added a **new editor color schema** *MountainDebo* by @Deboart
   (for [#1232](https://github.com/pbek/QOwnNotes/issues/1232))

@@ -6406,7 +6406,6 @@ void MainWindow::gotoNextNote() {
     QKeyEvent *event = new QKeyEvent(QEvent::KeyPress, Qt::Key_Down,
                                     Qt::NoModifier);
     QApplication::postEvent(ui->noteTreeWidget, event);
-    delete event;
 }
 
 /**
@@ -6415,7 +6414,6 @@ void MainWindow::gotoNextNote() {
 void MainWindow::activateContextMenu() {
     auto *event = new QContextMenuEvent(QContextMenuEvent::Keyboard, QPoint());
     QApplication::postEvent(focusWidget(), event);
-    delete event;
 }
 
 void MainWindow::on_actionPrevious_Note_triggered() {
@@ -6430,7 +6428,6 @@ void MainWindow::gotoPreviousNote()
     QKeyEvent *event = new QKeyEvent(QEvent::KeyPress, Qt::Key_Up,
                                      Qt::NoModifier);
     QApplication::postEvent(ui->noteTreeWidget, event);
-    delete event;
 }
 
 void MainWindow::on_actionToggle_distraction_free_mode_triggered()
