@@ -183,6 +183,8 @@ public slots:
 
     void changeNoteFolder(int noteFolderId, bool forceChange = false);
 
+    void allowNoteEditing();
+
 private slots:
 
     void on_noteTextEdit_textChanged();
@@ -530,8 +532,6 @@ private slots:
     void on_encryptedNoteTextEdit_customContextMenuRequested(const QPoint &pos);
 
     void on_actionJump_to_note_text_edit_triggered();
-
-    void allowNoteEditing();
 
     void on_tagTreeWidget_itemDoubleClicked(QTreeWidgetItem *item, int column);
 

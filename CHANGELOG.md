@@ -4,7 +4,9 @@
 - the text in the **note text edit** is now also **selectable by keyboard** in
   **read-only mode**
 - the text in the **note preview** is now also **selectable by keyboard**
-  
+- if you now edit text in read-only mode you will get a **dialog** that allows
+  you to **disable** the **read-only mode** again
+
 ## 19.7.3
 - support for **strike out highlighting** was added (for [#1240](https://github.com/pbek/QOwnNotes/issues/1240))
     `~~this is striked out~~` will now be shown as masked text

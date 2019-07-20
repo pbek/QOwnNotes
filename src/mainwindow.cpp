@@ -3393,10 +3393,10 @@ void MainWindow::updateNoteTextEditReadOnly() {
 
     if (ui->noteTextEdit->isVisible() && currentNote.hasEncryptedNoteText()) {
         ui->noteTextEdit->setReadOnly(true);
+        ui->noteTextEdit->setTextInteractionFlags(
+                ui->noteTextEdit->textInteractionFlags() |
+                Qt::TextSelectableByKeyboard);
     }
-
-    ui->noteTextEdit->setTextInteractionFlags(ui->noteTextEdit->textInteractionFlags() | Qt::TextSelectableByKeyboard);
-    ui->encryptedNoteTextEdit->setTextInteractionFlags(ui->noteTextEdit->textInteractionFlags() | Qt::TextSelectableByKeyboard);
 }
 
 /**
@@ -3407,6 +3407,15 @@ void MainWindow::updateNoteTextEditReadOnly() {
 void MainWindow::setNoteTextEditReadOnly(bool readonly) const {
     ui->noteTextEdit->setReadOnly(readonly);
     ui->encryptedNoteTextEdit->setReadOnly(readonly);
+
+    if (readonly) {
+        ui->noteTextEdit->setTextInteractionFlags(
+                ui->noteTextEdit->textInteractionFlags() |
+                Qt::TextSelectableByKeyboard);
+        ui->encryptedNoteTextEdit->setTextInteractionFlags(
+                ui->encryptedNoteTextEdit->textInteractionFlags() |
+                Qt::TextSelectableByKeyboard);
+    }
 }
 
 /**

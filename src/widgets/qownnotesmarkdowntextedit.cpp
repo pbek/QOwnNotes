@@ -394,11 +394,17 @@ bool QOwnNotesMarkdownTextEdit::eventFilter(QObject *obj, QEvent *event) {
              (keyEvent->key() < 128) &&
             keyEvent->modifiers().testFlag(Qt::NoModifier) &&
                 !Utils::Misc::isNoteEditingAllowed()) {
-            Utils::Gui::information(this, tr("Note editing disabled"),
-                                    tr("Note editing is currently disabled, "
-                                       "please allow it again in the "
-                                       "<i>Note-menu</i>."),
-                                    "readonly-mode");
+            if (Utils::Gui::question(
+                    this,
+                    tr("Note editing disabled"),
+                    tr("Note editing is currently disabled, do you want to "
+                       "allow again?"), "readonly-mode-allow") ==
+                QMessageBox::Yes) {
+
+                if (mainWindow != Q_NULLPTR) {
+                    mainWindow->allowNoteEditing();
+                }
+            }
         }
     }
 
