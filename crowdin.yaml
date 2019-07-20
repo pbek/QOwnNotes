@@ -52,6 +52,7 @@ files:
         "no_DK" : "da",
         "ro_RO" : "ro",
         "sk_SK" : "sk",
-        "sl_SI" : "sl"
+        "sl_SI" : "sl",
+        "eu_ES" : "eu",
       }
     }

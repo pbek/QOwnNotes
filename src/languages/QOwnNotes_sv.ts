@@ -3733,7 +3733,7 @@ Vill du installera det i alla fall?</translation>
     <name>SettingsDialog</name>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="26"/>
-        <location filename="../dialogs/settingsdialog.ui" line="3773"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3784"/>
         <source>Settings</source>
         <translation>Inställningar</translation>
     </message>
@@ -3954,45 +3954,45 @@ Vill du installera det i alla fall?</translation>
         <translation>Annan CalDAV-server</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2476"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2487"/>
         <source>Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</source>
         <translation>Bara några färger kommer att anpassas, ditt skrivbordstema kommer att styra resten. Du måste starta om programmet för att låta ändringarna vidta åtgärder.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2479"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2490"/>
         <source>Optimize preview colors for dark mode desktop themes</source>
         <translation>Optimera förhandsgransknings färger för skrivbordstema i mörkt läge</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2466"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2477"/>
         <source>This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</source>
         <translation>Detta aktiverar det mörka läget, gränssnittet och ikonerna kommer att ändras. Du måste starta om applikationen för att dessa ändring ska gälla.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2469"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2480"/>
         <source>Enable dark mode</source>
         <translation>Aktivera mörkt läge</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2495"/>
-        <location filename="../dialogs/settingsdialog.ui" line="2505"/>
-        <location filename="../dialogs/settingsdialog.ui" line="2536"/>
-        <location filename="../dialogs/settingsdialog.ui" line="2546"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2506"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2516"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2547"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2557"/>
         <source>You need to restart the application to let this setting take effect</source>
         <translation>Du måste starta om programmet för att låta den här inställningen träda i kraft</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2575"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2586"/>
         <source>Item sizes in the main window</source>
         <translation>Artikelstorlekar i huvudfönstret</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4487"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4498"/>
         <source>Markdown highlighting</source>
         <translation>Markdown highlighting</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4493"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4504"/>
         <source>Enable markdown highlighting</source>
         <translation>Aktivera markdown highlighting</translation>
     </message>
@@ -4007,7 +4007,7 @@ Vill du installera det i alla fall?</translation>
         <translation>Automatisk</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2073"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2084"/>
         <source>English</source>
         <translation>Engelsk</translation>
     </message>
@@ -4017,39 +4017,39 @@ Vill du installera det i alla fall?</translation>
         <translation>Genvägar</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3978"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4199"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3989"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4210"/>
         <source>Default font:</source>
         <translation>Standard typsnitt:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4020"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4161"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4031"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4172"/>
         <source>Code font:</source>
         <translation>Kod font:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2734"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2745"/>
         <source>Main window shortcuts</source>
         <translation>Huvudfönstret genvägar</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3476"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3487"/>
         <source>Do this at your own risk!</source>
         <translation>Gör detta på egen risk!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3479"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3490"/>
         <source>Ignore all external note folder changes</source>
         <translation>Ignorera alla ändringar i extern anteckningskatalog</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3889"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3900"/>
         <source>No two spaces to do a line break are added here if checked</source>
         <translation>Inga två utrymmen behövs för att göra radbrytning läggs till här om de är markerade</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3892"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3903"/>
         <source>Use GitHub line breaks</source>
         <translation>Använd GitHub-radbrytningar</translation>
     </message>
@@ -4059,32 +4059,32 @@ Vill du installera det i alla fall?</translation>
         <translation>Tysk</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2117"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2128"/>
         <source>French</source>
         <translation>Franska</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2238"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2249"/>
         <source>Polish</source>
         <translation>Putsa</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2260"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2271"/>
         <source>Portuguese</source>
         <translation>Portugisiska</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2227"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2238"/>
         <source>Dutch</source>
         <translation>Holländska</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2194"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2205"/>
         <source>Hungarian</source>
         <translation>Ungerska</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2084"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2095"/>
         <source>Spanish</source>
         <translation>Spansk</translation>
     </message>
@@ -4094,7 +4094,7 @@ Vill du installera det i alla fall?</translation>
         <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes&quot;&gt;How can I help to translate QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2440"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2451"/>
         <source>Dark mode</source>
         <translation>Mörkt läge</translation>
     </message>
@@ -4114,7 +4114,7 @@ Vill du installera det i alla fall?</translation>
         <translation>Inaktivera hjärtslag</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2282"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2293"/>
         <source>Russian</source>
         <translation>Ryska</translation>
     </message>
@@ -4124,22 +4124,22 @@ Vill du installera det i alla fall?</translation>
         <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Du kanske vill överväga att skaffa ett gratis SSL-certifikat från &lt;a href=&quot;https://letsencrypt.org/&quot;&gt; Let&apos;s encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2403"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2414"/>
         <source>If you change the language you have to restart the application for the changes to take action.</source>
         <translation>Om du ändrar språket måste du starta om programmet för ändringarna att vidta åtgärder.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3154"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3165"/>
         <source>You need to reload the scripting engine if you modify a script file</source>
         <translation>Du behöver ladda om skriptmotorn om du ändrar en skriptfil</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3157"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3168"/>
         <source>Reload scripting engine</source>
         <translation>Ladda om skriptmotorn</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3147"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3158"/>
         <source>Validate script</source>
         <translation>Validera skript</translation>
     </message>
@@ -4149,90 +4149,90 @@ Vill du installera det i alla fall?</translation>
         <translation>Allmänt</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3319"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3330"/>
         <source>Notes</source>
         <translation>Anteckningar</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3427"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3438"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn&apos;t edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn&apos;t edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3496"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4680"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5181"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3507"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4691"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5192"/>
         <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
         <translation>Du kan eventuellt synkronisera problem med äldre versioner av ownCloud-synkronisering när du går långt under 10 sekunder.
 Testa själv om du får synkroniseringskonflikter och ställ ett högre värde om så är fallet.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2216"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2227"/>
         <source>Japanese</source>
         <translation>Japansk</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3500"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3511"/>
         <source>note save interval time [sec]</source>
         <translation>notera spara intervalltid [sek]</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3430"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3441"/>
         <source>Notify about all external modifications of the current note</source>
         <translation>Meddela mig om alla externa ändringar av nuvarande anteckning</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3802"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3813"/>
         <location filename="../dialogs/settingsdialog.cpp" line="1948"/>
         <location filename="../dialogs/settingsdialog.cpp" line="1957"/>
         <source>Database</source>
         <translation>Databas</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3818"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3829"/>
         <source>Reinitialize Database</source>
         <translation>Reinitialisera databasen</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3741"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3752"/>
         <source>Clear application data and exit</source>
         <translation>Rensa ansökningsdata och avsluta</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3747"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3758"/>
         <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
         <translation>Med den här knappen kan du rensa alla inställningar, ta bort den lokala todo-databasen och avsluta QOwnNotes.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3757"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3768"/>
         <location filename="../dialogs/settingsdialog.cpp" line="2017"/>
         <source>Clear app data and exit</source>
         <translation>Rensa appdata och avsluta</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3536"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3547"/>
         <source>Update dialog</source>
         <translation>Uppdateringsdialog</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3616"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3627"/>
         <source>Default note file extension</source>
         <translation>Standard anteckning-filtillägg</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3701"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3712"/>
         <source>External editor</source>
         <translation>Extern redigerare</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3714"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3725"/>
         <source>path to external editor, leave empty for default</source>
         <translation>sökväg till extern redigerare, lämna tom för standard</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3724"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4759"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3735"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4770"/>
         <source>set external editor</source>
         <translation>ange extern redigerare</translation>
     </message>
@@ -4262,7 +4262,7 @@ Testa själv om du får synkroniseringskonflikter och ställ ett högre värde o
         <translation>En liten hjärtslagsförfrågan skickas periodiskt medan QOwnNotes körs. Gör en utvecklare glad genom att låta honom veta att någon använder QOwnNotes.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2183"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2194"/>
         <source>Italian</source>
         <translation>Italienska</translation>
     </message>
@@ -4272,17 +4272,17 @@ Testa själv om du får synkroniseringskonflikter och ställ ett högre värde o
         <translation>Skriptning</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2801"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2812"/>
         <source>Your scripts</source>
         <translation>Dina skript</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2885"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2896"/>
         <source>&amp;Remove script</source>
         <translation>&amp;Radera skript</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3164"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3175"/>
         <source>Click here to select your QML script</source>
         <translation>Klicka här för att markera din QML-skript</translation>
     </message>
@@ -4369,7 +4369,7 @@ Testa själv om du får synkroniseringskonflikter och ställ ett högre värde o
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="773"/>
-        <location filename="../dialogs/settingsdialog.ui" line="2975"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2986"/>
         <source>Name:</source>
         <translation>Namn:</translation>
     </message>
@@ -4486,537 +4486,542 @@ Testa själv om du får synkroniseringskonflikter och ställ ett högre värde o
         <translation>Danska</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2095"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2073"/>
+        <source>Basque</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="2106"/>
         <source>Filipino</source>
         <translation>Filippinare</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2106"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2117"/>
         <source>Finnish</source>
         <translation>Finska</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2128"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2139"/>
         <source>Galician</source>
         <translation>Galiciska</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2139"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2150"/>
         <source>Greek</source>
         <translation>Grekisk</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2150"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2161"/>
         <source>Hindi</source>
         <translation>Hindi</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2172"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2183"/>
         <source>Hiligaynon</source>
         <translation>Hiligaynon</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2205"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2216"/>
         <source>Norwegian</source>
         <translation>Norska</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2271"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2282"/>
         <source>Romanian</source>
         <translation>Rumänska</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2293"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2304"/>
         <source>Slovak</source>
         <translation>Slovakiska</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2304"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2315"/>
         <source>Slovenian</source>
         <translation>Slovenska</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2315"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2326"/>
         <source>Swedish</source>
         <translation>Svenska</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2326"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2337"/>
         <source>Tagalog</source>
         <translation>Tagalog</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2337"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2348"/>
         <source>Turkish</source>
         <translation>Turkiska</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2359"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2370"/>
         <source>Urdu</source>
         <translation>Urdu</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2370"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2381"/>
         <source>Chinese Simplified</source>
         <translation>Förenklad kinesiska</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2381"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2392"/>
         <source>Chinese Traditional</source>
         <translation>Traditionell Kinesisk</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2449"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2460"/>
         <source>Enable dark mode application icon and tray icon</source>
         <translation>Aktivera ikon för ikon för mörkläge och fackikon</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2559"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2570"/>
         <source>Enable dark mode icon theme</source>
         <translation type="unfinished">Enable dark mode icon theme</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2489"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2500"/>
         <source>System tray</source>
         <translation>Systemfältet</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2498"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2509"/>
         <source>Show system tray icon</source>
         <translation>Visa ikonen för systemfältet</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2508"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2519"/>
         <source>Start application hidden</source>
         <translation>Starta ansökan dold</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2518"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2529"/>
         <source>Interface style</source>
         <translation>Gränssnittsstil</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2549"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2560"/>
         <source>Enforce system icon theme</source>
         <translation>Fördjupa systemikons tema</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2655"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2666"/>
         <source>Override interface font size</source>
         <translation>Åsidosätt gränssnittstypstorlek</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2664"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2675"/>
         <source>Interface font size:</source>
         <translation>Gränssnittstypstorlek:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2874"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2885"/>
         <source>&amp;Add script…</source>
         <translation>&amp;Lägg till skript…</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3390"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3401"/>
         <source>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</source>
         <translation>När du öppnar anteckningar återställs markörpositionen inne i noten nu till läget när noten senast besöktes i den aktuella sessionen</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3400"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3411"/>
         <source>By default the headline will generated automatically</source>
         <translation>Som standard genereras rubriken automatiskt</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3403"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3414"/>
         <source>The shortcut to create a new note asks for a headline</source>
         <translation>Genväg för att skapa en ny anteckning ber om en rubrik</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3507"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3518"/>
         <source>Automatically close the note folder database to prevent problems with sync tools</source>
         <translation>Stäng automatiskt databladet för notkatalog för att förhindra problem med synkroniseringsverktyg</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3510"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3521"/>
         <source>Automatically close the note folder database</source>
         <translation>Stäng automatiskt notkatalogdatabasen</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3558"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3569"/>
         <source>Search engine</source>
         <translation>Sökmotor</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3580"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3591"/>
         <source>Message boxes</source>
         <translation>Meddelande lådor</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3586"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3597"/>
         <location filename="../dialogs/settingsdialog.cpp" line="3578"/>
         <source>Reset message boxes</source>
         <translation>Återställ meddelandefält</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3779"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3790"/>
         <location filename="../dialogs/settingsdialog.cpp" line="3644"/>
         <location filename="../dialogs/settingsdialog.cpp" line="3667"/>
         <source>Import settings</source>
         <translation>Importera inställningar</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3786"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3797"/>
         <location filename="../dialogs/settingsdialog.cpp" line="3610"/>
         <source>Export settings</source>
         <translation>Exportera inställningar</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3925"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3936"/>
         <source>Open issue assistant</source>
         <translation>Öppna problemassistent</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3936"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3947"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=&quot; font-weight:600;&quot;&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;head/&gt; &lt;body&gt; &lt;p&gt; Det bästa sättet att posta problem är att använda problemassistenten genom att trycka på knappen &lt;span style = &quot;font-weight: 600;&quot;&gt; Öppna problemassistent &lt;/span&gt; på botten. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4230"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4241"/>
         <source>Ignore code font size to allow zooming</source>
         <translation type="unfinished">Ignore code font size to allow zooming</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4259"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4270"/>
         <source>Rendering</source>
         <translation>Tolkning</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4265"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4276"/>
         <source>Enable underline rendering</source>
         <translation>Aktivera underteckning</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4521"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4532"/>
         <source>Fully highlight blockquotes</source>
         <translation>Fullständigt markera blockquotes</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4554"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4565"/>
         <source>Note-edit cursor width:</source>
         <translation>Notera-redigera markörbredd:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4618"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4629"/>
         <source>Enable Vim mode (some QOwnNotes shortcuts will not work)</source>
         <translation>Aktivera Vim-läge (vissa genvägar för QOwnNotes fungerar inte)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5000"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5011"/>
         <source>Ignored sub-folders</source>
         <translation>Ignorerade undermappar</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5016"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5027"/>
         <source>Reset ignored sub-folders</source>
         <translation>Återställ ignorerade undermappar</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5036"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5047"/>
         <source>Note list panel</source>
         <translation>Noteringslistan</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5108"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5119"/>
         <source>Show notes in the note list with preview</source>
         <translation>Visa anteckningar i noteringslistan med förhandsvisning</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5343"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5354"/>
         <source>Bookmarks</source>
         <translation>Bokmärken</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5349"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5360"/>
         <source>Notes with this tag will be used for fetching bookmarks</source>
         <translation>Notes med denna tagg kommer att användas för hämtning bokmärken</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5352"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5363"/>
         <source>Tag name for bookmarks notes</source>
         <translation>Taggenamn för bokmärken</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5359"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5370"/>
         <source>Bookmarks tag:</source>
         <translation>Bokmärke tagg:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5366"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5377"/>
         <source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href=&quot;%1&quot;&gt;here&lt;/a&gt;.</source>
         <translation>Som standard visar webbläsarens tillägg alla länkar i den aktuella noten. Du kan också göra det visa speciella bokmärken. För mer information om synkronisera länken för bokmärke, klicka &lt;a href=&quot;%1&quot;&gt; här &lt;/a&gt;.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5379"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5390"/>
         <source>Bookmarks note name:</source>
         <translation>Bokmärken noteringsnamn:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5386"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5397"/>
         <source>This note will be used for adding new bookmarks from the browser extension</source>
         <translation>Denna anteckning kommer att användas för att lägga till nya bokmärken från webbläsarens tillägg</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5389"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5400"/>
         <source>Note name for adding new bookmarks</source>
         <translation>Notnamn för att lägga till nya bokmärken</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5399"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5410"/>
         <source>Web socket server</source>
         <translation>Socket webbserver</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5405"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5416"/>
         <source>Socket server port:</source>
         <translation>Socket serverport:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5439"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5450"/>
         <source>Show security token</source>
         <translation type="unfinished">Show security token</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5475"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5486"/>
         <source>Web socket server support</source>
         <translation>Stöd för webbuttagsserver</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5481"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5492"/>
         <source>Enable socket server</source>
         <translation>Aktivera socket-servern</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5456"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5467"/>
         <source>Install the &lt;a href=&quot;%1&quot;&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href=&quot;%2&quot;&gt;Chrome Web Store&lt;/a&gt; or &lt;a href=&quot;%3&quot;&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
         <translation>Installera &lt;a href=&quot;%1&quot;&gt; webbansökningen för webbkompani &lt;/a&gt; från &lt;a href=&quot;%2&quot;&gt; Chrome Web Store &lt;/a&gt;eller &lt;a href=&quot;%3&quot;&gt; Firefox-tilläggssidan &lt;/a&gt; för att använda QOwnNotes som webbklippare.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3486"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3497"/>
         <source>Allow the note file name to be different from the headline.&lt;br&gt;Beware that ownCloud Notes needs the file name to be the same as the headline!</source>
         <translation>Låt anteckningsfilnamnet vara annorlunda än rubriken. &lt;br&gt; Akta dig för att ownCloud Notes behöver filnamnet vara detsamma som rubriken!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4820"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4831"/>
         <source>Note edit panel</source>
         <translation>Notera redigeringspanelen</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4826"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4837"/>
         <source>If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</source>
         <translation>Om det här är inaktiverat kan du skapa mer komplexa paneldelningar, men alla paneler kommer att ändras om fönstret ändras</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4829"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4840"/>
         <source>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</source>
         <translation>Använd noteringsredigeringspanelen som en fast central widget som ska ändras om fönstret eller andra paneler ändras</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4839"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4850"/>
         <source>Note search panel</source>
         <translation>Notera sökpanelen</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4845"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4856"/>
         <source>Disable auto-completion of previous searches</source>
         <translation>Inaktivera automatisk slutförandet av tidigare sökningar</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5131"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5142"/>
         <source>Navigation panel</source>
         <translation>Navigationspanel</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5137"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5148"/>
         <source>Hide navigation item search bar</source>
         <translation>Dölj navigeringsobjektets sökfält</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5151"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5162"/>
         <source>Local trash settings</source>
         <translation>Lokala papperskorgsinställningar</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5185"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5196"/>
         <source>Remove trashed notes after:</source>
         <translation>Ta bort soptunnor efter:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5192"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5203"/>
         <source> days</source>
         <extracomment>seconds</extracomment>
         <translation> dagar</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5211"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5222"/>
         <source>Automatically remove trashed notes after a certain time</source>
         <translation>Ta bort borttagna anteckningar automatiskt efter en viss tid</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5237"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5248"/>
         <source>Local trash support</source>
         <translation>Lokalt skräpstöd</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5243"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5254"/>
         <source>Enable local trash</source>
         <translation>Aktivera lokala papperskorgen</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5260"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5271"/>
         <source>Layout selector</source>
         <translation>Layoutväljare</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5266"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5277"/>
         <source>You can set a new layout here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</source>
         <translation>Du kan ställa in en ny layout här. Tänk på att du alltid kan ändra panelernas position med knappen &lt;i&gt;Lås upp paneler&lt;/i&gt;.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4540"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5425"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4551"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5436"/>
         <source>Reset the cursor width</source>
         <translation>Återställ markören bredd</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4694"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4705"/>
         <source>External git log command to show the git versions of a note</source>
         <translation>Externt git-loggkommando för att visa git-versionerna av en note</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4700"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4711"/>
         <source>Enter a command to be used to show a git log (like for example &quot;gitk&quot;)</source>
         <extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
         <translation>Ange ett kommando som används för att visa en git logg (som till exempel ”gitk”)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4720"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4731"/>
         <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
         <extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
         <translation>Om du använder den här inställningen får du en ny menypost som visar git-versioner om du högerklickar på en anteckning.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4997"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5006"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5008"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5017"/>
         <source>Regular expressions of note sub-folders to ignore, separated by &quot;;&quot;</source>
         <translation>Regelbundna uttryck av noteringsundermappar för att ignorera, åtskilda av &quot;;&quot;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5101"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5112"/>
         <source>Show all notes of a tag including the notes of their children-tags</source>
         <translation>Visa alla anteckningar på en tagg inklusive anteckningarna i deras barn-taggar</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5071"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5082"/>
         <source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
         <translation>Visa alla noteringar i en mapp inklusive deras undermappar (fungerar bara om undermappar är på)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4468"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4479"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href=&quot;http://docs.qownnotes.org/en/develop/time-formats.html&quot;&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Kanske du vill titta på alla tillgängliga &lt;a href=&quot;http://docs.qownnotes.org/en/develop/time-formats.html&quot;&gt; tidsformat&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4604"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4615"/>
         <source>Highlight the current line</source>
         <translation>Markera den aktuella raden</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4787"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4798"/>
         <source>Don&apos;t forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
         <translation>Glöm inte att aktivera git-support för dina noteringsmappar och för att konfigurera ditt namn och din e-postadress för din git-klient, till exempel med dessa terminalkommandon:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4855"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4866"/>
         <source>Tags panel</source>
         <translation>Märkordspanelen</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4884"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4960"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5045"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4895"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4971"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5056"/>
         <source>Order</source>
         <translation>Ordning</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4890"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4966"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5054"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4901"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4977"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5065"/>
         <source>Ascending</source>
         <translation>Stigande</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4897"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4973"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5061"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4908"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4984"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5072"/>
         <source>Descending</source>
         <translation>Fallande</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4861"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4930"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5078"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4872"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4941"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5089"/>
         <source>Sort</source>
         <translation>Sortera</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4611"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4622"/>
         <source>Only use editor width setting in distraction free mode</source>
         <translation>Använd bara editorbreddsinställning i distraktionsfritt läge</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4867"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4936"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5084"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4878"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4947"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5095"/>
         <source>Alphabetical</source>
         <translation>Alfabetisk</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4874"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4885"/>
         <source>By last change / use</source>
         <translation>Genom senaste ändring / använda</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4907"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4918"/>
         <source>Hide &apos;Find or create tag&apos; search</source>
         <translation>Dölj sök efter &quot;Sök eller skapa tagg&quot;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4917"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4928"/>
         <source>Note subfolders panel</source>
         <translation>Anteckning undermappar panel</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4923"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4934"/>
         <source>Show with full path</source>
         <translation>Visa med hela banan</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4943"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5091"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4954"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5102"/>
         <source>By last change</source>
         <translation>Senast ändrad</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4953"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4964"/>
         <source>Show root folder name</source>
         <translation>Visa rotmappsnamn</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4983"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4994"/>
         <source>Hide &apos;Find or create note subfolder&apos; search</source>
         <translation>Dölj &quot;Sök eller skapa noteringsundermapp&quot; -sökning</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4990"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5001"/>
         <source>Display note subfolders as full tree</source>
         <translation>Visa anteckningsundermappar som fullt träd</translation>
     </message>
@@ -5026,39 +5031,39 @@ Testa själv om du får synkroniseringskonflikter och ställ ett högre värde o
         <translation>Sök skriptförrådet</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4710"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4721"/>
         <source>You optionally can use &quot;%notePath%&quot; for the path of the note.</source>
         <extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
         <translation>Du kan eventuellt använda &quot;%notePath%&quot; för vägen till noten.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4733"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4744"/>
         <source>Git client</source>
         <translation>Gitklient</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4749"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4760"/>
         <source>Path to git executable:</source>
         <translation>Sökväg till git-binären:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4739"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4750"/>
         <source>Path to git client, leave empty for default</source>
         <translation>Sökväg till git-klient, lämna tom för standard</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4658"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4669"/>
         <source>Commit interval</source>
         <translation>Commit interval</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4664"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4675"/>
         <source>sec</source>
         <extracomment>seconds</extracomment>
         <translation>sek</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4684"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4695"/>
         <source>git commit interval time [sec]</source>
         <translation>git commit intervalltid [sek]</translation>
     </message>
@@ -5123,167 +5128,167 @@ Testa själv om du får synkroniseringskonflikter och ställ ett högre värde o
         <translation>Tjeckiska</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2249"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2260"/>
         <source>Brazilian Portuguese</source>
         <translation>Brasiliansk portugisiska</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2348"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2359"/>
         <source>Ukrainian</source>
         <translation>Ukrainska</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2456"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2467"/>
         <source>You might also want to choose an other editor color schema in the editor settings in dark mode.</source>
         <translation>Du kanske också vill välja ett annat redigeringsfärgschema i redigeringsinställningarna i mörkt läge.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3276"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3287"/>
         <source>The name</source>
         <translation>Skriptnamn</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3353"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3364"/>
         <source>Maximum height:</source>
         <translation>Maximal höjd:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3360"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3371"/>
         <source>Maximum width:</source>
         <translation>Maximal bredd:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3420"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3431"/>
         <source>Scale images down when inserted into notes</source>
         <translation>Förminska bilder när de infogas i anteckningar</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2161"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2172"/>
         <source>Croatian</source>
         <translation>Kroatiska</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3191"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3202"/>
         <source>Path to your QML file</source>
         <translation>Sökvägen till din QML-fil</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2982"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2993"/>
         <source>Script name</source>
         <translation>Skriptnamn</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3004"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3015"/>
         <source>Description:</source>
         <translation>Beskrivning:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3086"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3097"/>
         <source>Version:</source>
         <translation>Version:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3047"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3058"/>
         <source>Repository:</source>
         <translation>Förråd:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3024"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3035"/>
         <source>Author(s):</source>
         <translation>Författare:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3410"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3421"/>
         <source>Check this if you want to accept all external modifications while you are editing the current note.</source>
         <translation>Markera det här om du vill acceptera alla externa ändringar medan du redigerar den aktuella noten.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3413"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3424"/>
         <source>Accept all external modifications of the current note</source>
         <translation>Godkänn alla externa ändringar av nuvarande anteckning</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3469"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3480"/>
         <source>Use UNIX newline instead of native newline characters</source>
         <translation>Använd UNIX newline istället för inbyggda newline-tecken</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3393"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3404"/>
         <source>Restore cursor position when opening a note</source>
         <translation>Återställ markörens position när en anteckning öppnas</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3808"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3819"/>
         <source>Be warned that this will also remove your cached todo items and configured note folders and scripts!</source>
         <translation>Varna att detta också tar bort dina cachade todo-objekt och konfigurerade noteringsmappar och skript!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4292"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4303"/>
         <source>Apply toolbar configuration</source>
         <translation>Använda verktygsfältet konfiguration</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4306"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4317"/>
         <source>Reset toolbars</source>
         <translation>Återställa verktygsfält</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4334"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4345"/>
         <source>Enable logging to file</source>
         <translation>Aktivera loggning till fil</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4341"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4352"/>
         <source>Clear log file</source>
         <translation>Rensa loggfil</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4352"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4363"/>
         <source>Fake old version number to trigger update</source>
         <translation>Fake gammalt versionsnummer för att utlösa uppdatering</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4380"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4391"/>
         <source>Log file path:</source>
         <translation>Loggfilens sökväg:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4442"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4453"/>
         <source>Here you can set your own time format for inserting the current time into a note.</source>
         <translation>Här kan du ställa dina egna tidsformat för att infoga aktuell tid i en anteckning.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4445"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4456"/>
         <source>Insert current time</source>
         <translation>Infoga aktuell tid</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4451"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4462"/>
         <source>Time format:</source>
         <translation>Tidsformat:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4458"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4469"/>
         <source>Enter your custom time format, like &quot;dd.MM.yyyy hh:mm&quot;</source>
         <translation>Ange ditt anpassade tidsformat, såsom ”yyyy- MM-dd hh:mm ”</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4534"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4545"/>
         <source>Editor options</source>
         <translation>Alternativ för textredigerare</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4574"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4585"/>
         <source>Enable automatic closing of brackets and markdown formatting characters</source>
         <translation>Aktivera automatisk stängning av paranteser och markdown formateringstecken</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4594"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4605"/>
         <source>You have to use the backspace key to remove the opening character</source>
         <translation>Du måste använda backspace-knappen för att ta bort öppningstecknet</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4597"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4608"/>
         <source>Enable automatic removal of matching closing characters</source>
         <translation>Aktivera automatisk borttagning av matchande avslutande tecken</translation>
     </message>
@@ -5328,38 +5333,38 @@ Testa själv om du får synkroniseringskonflikter och ställ ett högre värde o
         <translation>&amp;Uppdatera kalenderlistan</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2446"/>
-        <location filename="../dialogs/settingsdialog.ui" line="2556"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2457"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2567"/>
         <source>You may need to restart the application to let these changes take effect</source>
         <translation>Du kan behöva starta om programmet för att låta ändringarna träda i kraft</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2591"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2602"/>
         <source>Toolbar icon size:</source>
         <translation>Verktygsfältets ikonstorlek:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2581"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2592"/>
         <source>List and tree item height:</source>
         <translation>Höjd och listhöjd:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2614"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2625"/>
         <source>Reset the icon size</source>
         <translation>Återställ ikonstorleken</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2628"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2639"/>
         <source>Reset the item height</source>
         <translation>Återställ objektets höjd</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4223"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4234"/>
         <source>View text right to left (RTL)</source>
         <translation>Visa text höger till vänster (RTL)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2752"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2763"/>
         <source>Search for shortcut</source>
         <translation>Sök efter genväg</translation>
     </message>
@@ -5369,22 +5374,22 @@ Testa själv om du får synkroniseringskonflikter och ställ ett högre värde o
         <translation>Ignorera kalendrar som inte stöder todo-objekt</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2392"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2403"/>
         <source>Arabic</source>
         <translation>Arabiska</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2530"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2541"/>
         <source>Icons</source>
         <translation>Ikoner</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2539"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2550"/>
         <source>Use internal icon theme instead of system icon theme</source>
         <translation>Använd intern ikontema i stället för systemikontema</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3140"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3151"/>
         <source>Script path:</source>
         <translation>Sökväg till skript:</translation>
     </message>
@@ -5394,84 +5399,84 @@ Testa själv om du får synkroniseringskonflikter och ställ ett högre värde o
         <translation>Notmappsnamn</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3489"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3500"/>
         <source>Allow note file name to be different from headline</source>
         <translation>Tillåt noteringsfilnamnet vara annorlunda än rubrik</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3437"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3448"/>
         <source>Check this if you want to ignore all external modifications while you are editing the current note.</source>
         <translation>Markera det här om du vill ignorera alla externa ändringar medan du redigerar den aktuella noten.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3440"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3451"/>
         <source>Ignore all external modifications of the current note</source>
         <translation>Ignorera alla externa ändringar av nuvarande notering</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3466"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3477"/>
         <source>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</source>
         <translation>Du kan använda det här till exempel under Windows om du har problem med newlines i appen ownCloud / Nextcloud Notes</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3520"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3531"/>
         <source>App instance</source>
         <translation>App-instansen</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3526"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3537"/>
         <source>Only allow one app instance at the same time</source>
         <translation>Endast tillåta en app-instansen på samma gång</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3622"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3633"/>
         <source>Add a custom file extension</source>
         <translation>Lägga till en anpassad filändelsen</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3636"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3647"/>
         <source>Remove a custom file extension</source>
         <translation>Ta bort en anpassad filtillägg</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3675"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3686"/>
         <source>If you add custom extensions just type in the extension, like &quot;taskpaper&quot;.</source>
         <translation>Om du lägger till anpassade tillägg skriver du bara in tillägget, som &quot;taskpaper&quot;.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3679"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3690"/>
         <source>Text file (txt)</source>
         <translation>Textfil (txt)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3707"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3718"/>
         <source>Path to external editor:</source>
         <translation>Sökväg till extern redigerare:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3542"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3553"/>
         <source>Don&apos;t show the update dialog automatically</source>
         <translation>Visa inte dialogrutan uppdatering automatiskt</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3972"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4127"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3983"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4138"/>
         <source>Fonts</source>
         <translation>Teckensnitt</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3995"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4037"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4133"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4185"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4006"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4048"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4144"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4196"/>
         <source>Set a new font</source>
         <translation>Ange ett nytt teckensnitt</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4006"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4051"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4147"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4171"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4017"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4062"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4158"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4182"/>
         <source>Reset font</source>
         <translation>Återställ typsnitt</translation>
     </message>
@@ -5481,17 +5486,17 @@ Testa själv om du får synkroniseringskonflikter och ställ ett högre värde o
         <translation>Felsökning</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3859"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3870"/>
         <source>Debug information</source>
         <translation>Felsökningsinformation</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3902"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3913"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=&quot; font-weight:600;&quot;&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=&quot; font-weight:600;&quot;&gt;issue&lt;/span&gt; on the &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=&quot; font-weight:600;&quot;&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=&quot; font-weight:600;&quot;&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=&quot; font-weight:600;&quot;&gt;issue&lt;/span&gt; on the &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=&quot; font-weight:600;&quot;&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3878"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3889"/>
         <source>&amp;Save debug information</source>
         <translation>&amp;Spara felsökningsinformationen</translation>
     </message>

@@ -43,3 +43,4 @@ mv QOwnNotes_da_DK.ts QOwnNotes_da.ts
 mv QOwnNotes_ro_RO.ts QOwnNotes_ro.ts
 mv QOwnNotes_sk_SK.ts QOwnNotes_sk.ts
 mv QOwnNotes_sl_SI.ts QOwnNotes_sl.ts
+mv QOwnNotes_eu_ES.ts QOwnNotes_eu.ts

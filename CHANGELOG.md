@@ -6,6 +6,10 @@
 - the text in the **note preview** is now also **selectable by keyboard**
 - if you now edit text in read-only mode you will get a **dialog** that allows
   you to **disable** the **read-only mode** again
+- added **Basque translation** (a big thank you to Fabijenna)
+    - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes)
+      to make QOwnNotes available in more languages or help with the current 
+      translation
 
 ## 19.7.3
 - support for **strike out highlighting** was added (for [#1240](https://github.com/pbek/QOwnNotes/issues/1240))
