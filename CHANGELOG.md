@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 19.7.6
+- the **immediate focus** on the `Don't ask again!` **checkbox** for
+  **message dialogs** was now **disabled**, because this would lead to
+  accidentally checking the checkbox (for [#1234](https://github.com/pbek/QOwnNotes/issues/1234))
+
 ## 19.7.5
 - if you are now pressing **<kbd>Escape</kbd>** in the note text edit the
   **read-only mode** will be **activated**

@@ -266,7 +266,6 @@ Utils::Gui::showMessageBox(QWidget *parent, QMessageBox::Icon icon,
             icon == QMessageBox::Icon::Question ?
             QObject::tr("Don't ask again!") : QObject::tr("Don't show again!"),
             parent);
-    msgBox.setCheckBox(checkBox);
 
     uint mask = QMessageBox::FirstButton;
     while (mask <= QMessageBox::LastButton) {
@@ -285,6 +284,10 @@ Utils::Gui::showMessageBox(QWidget *parent, QMessageBox::Icon icon,
                 sb == uint(defaultButton)))
             msgBox.setDefaultButton(button);
     }
+
+    // set the checkbox in the end so it doesn't get the focus on the dialog.
+    // this would lead to accidentally checking the checkbox
+    msgBox.setCheckBox(checkBox);
 
     if (msgBox.exec() == -1)
         return QMessageBox::Cancel;
