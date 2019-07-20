@@ -811,6 +811,9 @@ p, li { white-space: pre-wrap; }
            <property name="acceptRichText">
             <bool>false</bool>
            </property>
+           <property name="textInteractionFlags">
+            <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+           </property>
            <property name="openExternalLinks">
             <bool>true</bool>
            </property>
@@ -2496,8 +2499,8 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="images.qrc"/>
   <include location="breeze-dark-qownnotes.qrc"/>
+  <include location="images.qrc"/>
   <include location="breeze-qownnotes.qrc"/>
  </resources>
  <connections/>

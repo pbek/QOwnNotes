@@ -3394,6 +3394,9 @@ void MainWindow::updateNoteTextEditReadOnly() {
     if (ui->noteTextEdit->isVisible() && currentNote.hasEncryptedNoteText()) {
         ui->noteTextEdit->setReadOnly(true);
     }
+
+    ui->noteTextEdit->setTextInteractionFlags(ui->noteTextEdit->textInteractionFlags() | Qt::TextSelectableByKeyboard);
+    ui->encryptedNoteTextEdit->setTextInteractionFlags(ui->noteTextEdit->textInteractionFlags() | Qt::TextSelectableByKeyboard);
 }
 
 /**
