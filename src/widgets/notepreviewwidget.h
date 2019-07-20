@@ -29,6 +29,8 @@ public:
 
     void setHtml(const QString &text);
 
+    void exportAsHTMLFile();
+
 protected:
     QTextEditSearchWidget *_searchWidget;
     QWidget *_searchFrame;

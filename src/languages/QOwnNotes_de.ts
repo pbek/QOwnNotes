@@ -2965,14 +2965,29 @@ Falls Sie die Papierkorb-App auf Ihrem Nextcloud/ownCloud-Server aktiviert haben
 <context>
     <name>NotePreviewWidget</name>
     <message>
-        <location filename="../widgets/notepreviewwidget.cpp" line="236"/>
+        <location filename="../widgets/notepreviewwidget.cpp" line="237"/>
         <source>Copy image file path</source>
         <translation>Dateipfad des Bildes kopieren</translation>
     </message>
     <message>
-        <location filename="../widgets/notepreviewwidget.cpp" line="240"/>
+        <location filename="../widgets/notepreviewwidget.cpp" line="241"/>
         <source>Copy link location</source>
         <translation>Verknüpfungsort kopieren</translation>
+    </message>
+    <message>
+        <location filename="../widgets/notepreviewwidget.cpp" line="244"/>
+        <source>Export generated raw HTML</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/notepreviewwidget.cpp" line="277"/>
+        <source>HTML files</source>
+        <translation type="unfinished">HTML-Dateien</translation>
+    </message>
+    <message>
+        <location filename="../widgets/notepreviewwidget.cpp" line="278"/>
+        <source>Export preview as raw HTML file</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

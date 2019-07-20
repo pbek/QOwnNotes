@@ -22,6 +22,7 @@
 #include <QMenu>
 #include <QClipboard>
 #include <QProxyStyle>
+#include <dialogs/filedialog.h>
 
 class NoDottedOutlineForLinksStyle: public QProxyStyle {
 public:
@@ -240,6 +241,8 @@ void NotePreviewWidget::contextMenuEvent(QContextMenuEvent *event) {
         copyLinkLocationAction = menu->addAction(tr("Copy link location"));
     }
 
+    auto *htmlFileExportAction = menu->addAction(tr("Export generated raw HTML"));
+
     QAction *selectedItem = menu->exec(globalPos);
 
     if (selectedItem) {
@@ -255,10 +258,49 @@ void NotePreviewWidget::contextMenuEvent(QContextMenuEvent *event) {
             QClipboard *clipboard = QApplication::clipboard();
             clipboard->setText(imagePath);
         }
-            // copy link location to the clipboard
+        // copy link location to the clipboard
         else if (selectedItem == copyLinkLocationAction) {
             QClipboard *clipboard = QApplication::clipboard();
             clipboard->setText(anchorHref);
+        }
+        // export the generated html as html file
+        else if (selectedItem == htmlFileExportAction) {
+            exportAsHTMLFile();
+        }
+    }
+}
+
+void NotePreviewWidget::exportAsHTMLFile() {
+    FileDialog dialog("PreviewHTMLFileExport");
+    dialog.setFileMode(QFileDialog::AnyFile);
+    dialog.setAcceptMode(QFileDialog::AcceptSave);
+    dialog.setNameFilter(tr("HTML files") + " (*.html)");
+    dialog.setWindowTitle(tr("Export preview as raw HTML file"));
+    dialog.selectFile("preview.html");
+    int ret = dialog.exec();
+
+    if (ret == QDialog::Accepted) {
+        QString fileName = dialog.selectedFile();
+
+        if (!fileName.isEmpty()) {
+            if (QFileInfo(fileName).suffix().isEmpty()) {
+                fileName.append(".html");
+            }
+
+            QFile file(fileName);
+
+            qDebug() << "exporting raw preview html file: " << fileName;
+
+            if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+                qCritical() << file.errorString();
+                return;
+            }
+            QTextStream out(&file);
+            out.setCodec("UTF-8");
+            out << toHtml();
+            file.flush();
+            file.close();
+            Utils::Misc::openFolderSelect(fileName);
         }
     }
 }

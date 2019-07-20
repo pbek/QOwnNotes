@@ -2997,14 +2997,29 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
 <context>
     <name>NotePreviewWidget</name>
     <message>
-        <location filename="../widgets/notepreviewwidget.cpp" line="236"/>
+        <location filename="../widgets/notepreviewwidget.cpp" line="237"/>
         <source>Copy image file path</source>
         <translation>Copiați calea fișierului imagine</translation>
     </message>
     <message>
-        <location filename="../widgets/notepreviewwidget.cpp" line="240"/>
+        <location filename="../widgets/notepreviewwidget.cpp" line="241"/>
         <source>Copy link location</source>
         <translation>Copiați locația legăturii</translation>
+    </message>
+    <message>
+        <location filename="../widgets/notepreviewwidget.cpp" line="244"/>
+        <source>Export generated raw HTML</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/notepreviewwidget.cpp" line="277"/>
+        <source>HTML files</source>
+        <translation type="unfinished">HTML files</translation>
+    </message>
+    <message>
+        <location filename="../widgets/notepreviewwidget.cpp" line="278"/>
+        <source>Export preview as raw HTML file</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -6,6 +6,8 @@
 - the text in the **note preview** is now also **selectable by keyboard**
 - if you now edit text in read-only mode you will get a **dialog** that allows
   you to **disable** the **read-only mode** again
+- you can now (beside exporting a note as HTML file) **export** the content of
+  the **note preview as raw html file** in the context menu of the note preview
 - added **Basque translation** (a big thank you to Fabijenna)
     - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes)
       to make QOwnNotes available in more languages or help with the current 

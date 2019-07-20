@@ -2977,7 +2977,7 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
     </message>
     <message>
         <location filename="../widgets/notepreviewwidget.cpp" line="244"/>
-        <source>&amp;Export generated raw HTML</source>
+        <source>Export generated raw HTML</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2987,7 +2987,7 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
     </message>
     <message>
         <location filename="../widgets/notepreviewwidget.cpp" line="278"/>
-        <source>Export preview as HTML file</source>
+        <source>Export preview as raw HTML file</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
