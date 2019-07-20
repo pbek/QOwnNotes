@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 19.7.5
+- if you are now pressing **<kbd>Escape</kbd>** in the note text edit the
+  **read-only mode** will be **activated**
+
 ## 19.7.4
 - the text in the **note text edit** is now also **selectable by keyboard** in
   **read-only mode**

@@ -185,6 +185,8 @@ public slots:
 
     void allowNoteEditing();
 
+    void disallowNoteEditing();
+
 private slots:
 
     void on_noteTextEdit_textChanged();

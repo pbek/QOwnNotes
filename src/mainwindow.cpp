@@ -10590,6 +10590,12 @@ void MainWindow::allowNoteEditing() {
     }
 }
 
+void MainWindow::disallowNoteEditing() {
+    if (ui->actionAllow_note_editing->isChecked()) {
+        ui->actionAllow_note_editing->trigger();
+    }
+}
+
 /**
  * Enables or disables a menu and all its actions
  *
