@@ -3,6 +3,8 @@
 ## 19.7.5
 - if you are now pressing **<kbd>Escape</kbd>** in the note text edit the
   **read-only mode** will be **activated**
+- added more Italian, Indonesian, Brazilian Portuguese translation (thank you
+  tiwi90, zmni, mlimacarlos)
 
 ## 19.7.4
 - the text in the **note text edit** is now also **selectable by keyboard** in

@@ -1219,7 +1219,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1157"/>
       <source>Jump to</source>
-      <translation type="unfinished">Jump to</translation>
+      <translation>Fokus ke</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1190"/>
@@ -1609,7 +1609,7 @@
       <location filename="../mainwindow.ui" line="2417"/>
       <location filename="../mainwindow.ui" line="2420"/>
       <source>Jump to note edit panel</source>
-      <translation>Lompat ke panel sunting catatan</translation>
+      <translation>Fokus ke panel sunting catatan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2432"/>
@@ -1619,17 +1619,17 @@
     <message>
       <location filename="../mainwindow.ui" line="2437"/>
       <source>Jump to note subfolder panel</source>
-      <translation type="unfinished">Jump to note subfolder panel</translation>
+      <translation>Fokus ke panel subfolder catatan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2445"/>
       <source>Jump to tags panel</source>
-      <translation type="unfinished">Jump to tags panel</translation>
+      <translation>Fokus ke panel tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2453"/>
       <source>Jump to note list panel</source>
-      <translation type="unfinished">Jump to note list panel</translation>
+      <translation>Fokus ke panel daftar catatan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2461"/>
@@ -2035,7 +2035,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, anda bisa memulihkan
     <message>
       <location filename="../mainwindow.cpp" line="6367"/>
       <source>Jumped to bookmark position at slot %1</source>
-      <translation>Lompat ke posisi markah pada slot %1</translation>
+      <translation>Fokus ke posisi markah pada slot %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6587"/>
@@ -2945,17 +2945,17 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, anda bisa memulihkan
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="244"/>
       <source>Export generated raw HTML</source>
-      <translation type="unfinished">Export generated raw HTML</translation>
+      <translation>Ekspor kode HTML</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="277"/>
       <source>HTML files</source>
-      <translation type="unfinished">HTML files</translation>
+      <translation>Berkas HTML</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="278"/>
       <source>Export preview as raw HTML file</source>
-      <translation type="unfinished">Export preview as raw HTML file</translation>
+      <translation>Ekspor pratinjau ke berkas kode HTML</translation>
     </message>
   </context>
   <context>
@@ -3303,7 +3303,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud anda, anda bisa memulihkan
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="400"/>
       <source>Note editing is currently disabled, do you want to allow again?</source>
-      <translation type="unfinished">Note editing is currently disabled, do you want to allow again?</translation>
+      <translation>Penyuntingan catatan saat ini dinonaktifkan, apakah anda ingin mengaktifkannya lagi?</translation>
     </message>
   </context>
   <context>

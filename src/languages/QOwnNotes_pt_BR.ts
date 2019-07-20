@@ -2975,17 +2975,17 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="244"/>
       <source>Export generated raw HTML</source>
-      <translation type="unfinished">Export generated raw HTML</translation>
+      <translation>Exportar arquivo HTML</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="277"/>
       <source>HTML files</source>
-      <translation type="unfinished">HTML files</translation>
+      <translation>Arquivos HTML</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="278"/>
       <source>Export preview as raw HTML file</source>
-      <translation type="unfinished">Export preview as raw HTML file</translation>
+      <translation>Visualização de nota de exportação como arquivo HTML</translation>
     </message>
   </context>
   <context>
@@ -3337,7 +3337,7 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="400"/>
       <source>Note editing is currently disabled, do you want to allow again?</source>
-      <translation type="unfinished">Note editing is currently disabled, do you want to allow again?</translation>
+      <translation>Edição de nota desabilitada, você deseja habilitá-la?</translation>
     </message>
   </context>
   <context>
@@ -4495,7 +4495,7 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2073"/>
       <source>Basque</source>
-      <translation type="unfinished">Basque</translation>
+      <translation>Basco</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2106"/>

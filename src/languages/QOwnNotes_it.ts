@@ -2976,17 +2976,17 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="244"/>
       <source>Export generated raw HTML</source>
-      <translation type="unfinished">Export generated raw HTML</translation>
+      <translation>Esporta file HTML non elaborato</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="277"/>
       <source>HTML files</source>
-      <translation type="unfinished">HTML files</translation>
+      <translation>File html</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="278"/>
       <source>Export preview as raw HTML file</source>
-      <translation type="unfinished">Export preview as raw HTML file</translation>
+      <translation>Esporta anteprima come file HTML non elaborato</translation>
     </message>
   </context>
   <context>
@@ -3338,7 +3338,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="400"/>
       <source>Note editing is currently disabled, do you want to allow again?</source>
-      <translation type="unfinished">Note editing is currently disabled, do you want to allow again?</translation>
+      <translation>La modifica delle note è attualmente disabilitata, vuoi consentire di nuovo?</translation>
     </message>
   </context>
   <context>
@@ -4496,7 +4496,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2073"/>
       <source>Basque</source>
-      <translation type="unfinished">Basque</translation>
+      <translation>Basco</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2106"/>
