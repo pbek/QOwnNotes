@@ -12,6 +12,7 @@
     - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes)
       to make QOwnNotes available in more languages or help with the current 
       translation
+- added more Cebuano and Swedish translation (thank you Fabijenna)
 
 ## 19.7.3
 - support for **strike out highlighting** was added (for [#1240](https://github.com/pbek/QOwnNotes/issues/1240))
