@@ -388,11 +388,11 @@ bool QOwnNotesMarkdownTextEdit::eventFilter(QObject *obj, QEvent *event) {
         auto *keyEvent = static_cast<QKeyEvent *>(event);
 
         if (objectName() == "encryptedNoteTextEdit" || objectName() == "noteTextEdit") {
-            if (isReadOnly()) {
+            if (!Utils::Misc::isNoteEditingAllowed()) {
                 // show notification if user tries to edit a note while
                 // note editing is turned off
                 if ((keyEvent->key() < 128) && keyEvent->modifiers().testFlag(Qt::NoModifier) &&
-                    !Utils::Misc::isNoteEditingAllowed()) {
+                        isReadOnly()) {
                     if (Utils::Gui::question(
                             this,
                             tr("Note editing disabled"),
