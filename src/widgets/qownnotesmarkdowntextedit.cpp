@@ -403,11 +403,15 @@ bool QOwnNotesMarkdownTextEdit::eventFilter(QObject *obj, QEvent *event) {
                             mainWindow->allowNoteEditing();
                         }
                     }
+
+                    return true;
                 }
             } else {
                 // disable note editing if escape key was pressed
                 if (keyEvent->key() == Qt::Key_Escape && mainWindow != Q_NULLPTR) {
                     mainWindow->disallowNoteEditing();
+
+                    return true;
                 }
             }
         }
