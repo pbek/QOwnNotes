@@ -3,6 +3,8 @@
 ## 19.7.7
 - some strange cursor behavior on macOS when leaving or entering read-only mode	was fixed
     - also fixed some ui inconsistency with read-only note files
+- the ready-only state of the text edits are now better checked on automatic
+  bracket-closing and similar operations
 
 ## 19.7.6
 - the **immediate focus** on the `Don't ask again!` **checkbox** for
