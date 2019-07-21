@@ -5,6 +5,7 @@
     - also fixed some ui inconsistency with read-only note files
 - the ready-only state of the text edits are now better checked on automatic
   bracket-closing and similar operations
+- more keys were added to trigger read-only mode notification
 
 ## 19.7.6
 - the **immediate focus** on the `Don't ask again!` **checkbox** for
