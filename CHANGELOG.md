@@ -3,6 +3,7 @@
 ## 19.7.8
 - you can now **turn off cursor blinking** in the *Editor settings*
   (for [#1246](https://github.com/pbek/QOwnNotes/issues/1246))
+- added a package for Ubuntu 19.10 (Eoan Ermine) to the Launchpad build process
 - added more Spanish, Greek, German translation (thank you richarson, athrouss, rakekniven)
 
 ## 19.7.7
