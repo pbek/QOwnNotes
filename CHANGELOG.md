@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 19.7.8
+- you can now **turn off cursor blinking** in the *Editor settings*
+  (for [#1246](https://github.com/pbek/QOwnNotes/issues/1246))
+
 ## 19.7.7
 - some strange cursor behavior on macOS when leaving or entering read-only mode	was fixed
     - also fixed some ui inconsistency with read-only note files

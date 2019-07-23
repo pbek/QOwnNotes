@@ -397,7 +397,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>4</number>
+            <number>14</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -2975,8 +2975,8 @@
                           <rect>
                            <x>0</x>
                            <y>0</y>
-                           <width>360</width>
-                           <height>476</height>
+                           <width>611</width>
+                           <height>898</height>
                           </rect>
                          </property>
                          <layout class="QGridLayout" name="gridLayout_55">
@@ -4545,7 +4545,34 @@ p, li { white-space: pre-wrap; }
                 <string>Editor options</string>
                </property>
                <layout class="QGridLayout" name="gridLayout_59">
-                <item row="6" column="2">
+                <item row="5" column="0" colspan="4">
+                 <widget class="QCheckBox" name="vimModeCheckBox">
+                  <property name="text">
+                   <string>Enable Vim mode (some QOwnNotes shortcuts will not work)</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="0" colspan="4">
+                 <widget class="QCheckBox" name="autoBracketClosingCheckBox">
+                  <property name="text">
+                   <string>Enable automatic closing of brackets and markdown formatting characters</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="7" column="3">
+                 <spacer name="horizontalSpacer_13">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="7" column="2">
                  <widget class="QToolButton" name="cursorWidthResetButton">
                   <property name="toolTip">
                    <string>Reset the cursor width</string>
@@ -4559,17 +4586,7 @@ p, li { white-space: pre-wrap; }
                   </property>
                  </widget>
                 </item>
-                <item row="6" column="0">
-                 <widget class="QLabel" name="cursorWidthLabel">
-                  <property name="text">
-                   <string>Note-edit cursor width:</string>
-                  </property>
-                  <property name="alignment">
-                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                  </property>
-                 </widget>
-                </item>
-                <item row="6" column="1">
+                <item row="7" column="1">
                  <widget class="QSpinBox" name="cursorWidthSpinBox">
                   <property name="suffix">
                    <string notr="true">px</string>
@@ -4579,25 +4596,15 @@ p, li { white-space: pre-wrap; }
                   </property>
                  </widget>
                 </item>
-                <item row="0" column="0" colspan="4">
-                 <widget class="QCheckBox" name="autoBracketClosingCheckBox">
+                <item row="7" column="0">
+                 <widget class="QLabel" name="cursorWidthLabel">
                   <property name="text">
-                   <string>Enable automatic closing of brackets and markdown formatting characters</string>
+                   <string>Note-edit cursor width:</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                   </property>
                  </widget>
-                </item>
-                <item row="6" column="3">
-                 <spacer name="horizontalSpacer_13">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
                 </item>
                 <item row="1" column="0" colspan="4">
                  <widget class="QCheckBox" name="autoBracketRemovalCheckBox">
@@ -4609,13 +4616,6 @@ p, li { white-space: pre-wrap; }
                   </property>
                  </widget>
                 </item>
-                <item row="2" column="0" rowspan="2" colspan="4">
-                 <widget class="QCheckBox" name="highlightCurrentLineCheckBox">
-                  <property name="text">
-                   <string>Highlight the current line</string>
-                  </property>
-                 </widget>
-                </item>
                 <item row="4" column="0" colspan="4">
                  <widget class="QCheckBox" name="editorWidthInDFMOnlyCheckBox">
                   <property name="text">
@@ -4623,10 +4623,17 @@ p, li { white-space: pre-wrap; }
                   </property>
                  </widget>
                 </item>
-                <item row="5" column="0" colspan="4">
-                 <widget class="QCheckBox" name="vimModeCheckBox">
+                <item row="2" column="0" rowspan="2" colspan="4">
+                 <widget class="QCheckBox" name="highlightCurrentLineCheckBox">
                   <property name="text">
-                   <string>Enable Vim mode (some QOwnNotes shortcuts will not work)</string>
+                   <string>Highlight the current line</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="6" column="0" colspan="4">
+                 <widget class="QCheckBox" name="disableCursorBlinkingCheckBox">
+                  <property name="text">
+                   <string>Disable cursor blinking</string>
                   </property>
                  </widget>
                 </item>

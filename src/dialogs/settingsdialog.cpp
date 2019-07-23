@@ -224,6 +224,8 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
             this, SLOT(needRestart()));
     connect(ui->vimModeCheckBox, SIGNAL(toggled(bool)),
             this, SLOT(needRestart()));
+    connect(ui->disableCursorBlinkingCheckBox, SIGNAL(toggled(bool)),
+            this, SLOT(needRestart()));
     connect(ui->ignoreNoteSubFoldersLineEdit, SIGNAL(textChanged(QString)),
             this, SLOT(needRestart()));
     connect(ui->enableSocketServerCheckBox, SIGNAL(toggled(bool)),
@@ -652,6 +654,8 @@ void SettingsDialog::storeSettings() {
                       ui->editorWidthInDFMOnlyCheckBox->isChecked());
     settings.setValue("Editor/vimMode",
                       ui->vimModeCheckBox->isChecked());
+    settings.setValue("Editor/disableCursorBlinking",
+                      ui->disableCursorBlinkingCheckBox->isChecked());
 
     if (!settings.value("appMetrics/disableTracking").toBool() &&
             ui->appMetricsCheckBox->isChecked()) {
@@ -973,6 +977,8 @@ void SettingsDialog::readSettings() {
     ui->editorWidthInDFMOnlyCheckBox->setChecked(
             settings.value("Editor/editorWidthInDFMOnly", true).toBool());
     ui->vimModeCheckBox->setChecked(settings.value("Editor/vimMode").toBool());
+    ui->disableCursorBlinkingCheckBox->setChecked(settings.value(
+            "Editor/disableCursorBlinking").toBool());
     ui->markdownHighlightingCheckBox->setChecked(
             settings.value("markdownHighlightingEnabled", true).toBool());
     ui->fullyHighlightedBlockquotesCheckBox->setChecked(

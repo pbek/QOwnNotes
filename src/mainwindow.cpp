@@ -2402,6 +2402,10 @@ void MainWindow::readSettingsFromSettingsDialog() {
     } else {
         _webSocketServerService->close();
     }
+
+    if (settings.value("Editor/disableCursorBlinking").toBool()) {
+        qApp->setCursorFlashTime(0);
+    }
 }
 
 /**
