@@ -14,8 +14,7 @@
 #include <utils/misc.h>
 #include <entities/tag.h>
 
-DatabaseService::DatabaseService() {
-}
+DatabaseService::DatabaseService() = default;
 
 /**
  * Returns the path to the database (on disk)
