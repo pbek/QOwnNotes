@@ -3,11 +3,15 @@
 ## 19.7.9
 - there now is a menu entry *Riot* in the *Help / Open chat* menu to open
   a browser window with the **[QOwnNotes Riot room](https://riot.im/app/#/room/!rUzrRvrnrOsLasDdbp:matrix.org?via=matrix.org)**
-- if you **search for text in all notes** you will now **see how many times**
+- if you are **searching for text in all notes** you will now **see how many times**
   the first word of your **search term occurred** in each note in the note list
   in a new column (for [#1248](https://github.com/pbek/QOwnNotes/issues/1248))
     - the new column will be automatically resized to be visible next to the
       note name without scrolling
+- if you are browsing notes while there are **words in the note search panel**
+  the **search dialog in the note** will now be **opened automatically** and
+  **search for the words** entered in the note search panel for
+  [#1247](https://github.com/pbek/QOwnNotes/issues/1247))
 - every time the note folder is reloaded it will now be **checked** for
   **conflicting copies** of the **`notes.sqlite` database** that will block your
   Nextcloud/ownCloud sync process (for [#1111](https://github.com/pbek/QOwnNotes/issues/1111))

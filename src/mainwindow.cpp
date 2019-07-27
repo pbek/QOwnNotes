@@ -3774,6 +3774,9 @@ void MainWindow::searchInNoteTextEdit(QString str) {
     QList<QTextEdit::ExtraSelection> extraSelections3;
 
     if (str.count() >= 2) {
+        // do a in-note search
+        doSearchInNote(str);
+
         ui->noteTextEdit->moveCursor(QTextCursor::Start);
         ui->noteTextView->moveCursor(QTextCursor::Start);
         ui->encryptedNoteTextEdit->moveCursor(QTextCursor::Start);
@@ -5069,6 +5072,9 @@ void MainWindow::filterNotesBySearchLineEditText() {
 
     // search notes when at least 2 characters were entered
     if (searchText.count() >= 2) {
+        // open search dialog
+        doSearchInNote(searchText);
+
         QList<int> noteIdList = Note::searchInNotes(
                 searchText, _showNotesFromAllNoteSubFolders ||
                             NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively());
@@ -5113,6 +5119,22 @@ void MainWindow::filterNotesBySearchLineEditText() {
             (*it)->setHidden(false);
             ++it;
         }
+    }
+}
+
+/**
+ * Opens the search widget in the the current note and searches for all
+ * occurrences of the words in the search text
+ *
+ * @param searchText
+ */
+void MainWindow::doSearchInNote(QString searchText) {
+    if (searchText.contains(" ")) {
+        QString localSearchTerm = "(" + QRegularExpression::escape(searchText).split("\\ ").join("|") + ")";
+        activeNoteTextEdit()->doSearch(localSearchTerm,
+                                       QPlainTextEditSearchWidget::RegularExpressionMode);
+    } else {
+        activeNoteTextEdit()->doSearch(searchText);
     }
 }
 

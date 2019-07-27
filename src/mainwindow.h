@@ -970,4 +970,6 @@ private:
     void forceRegenerateNotePreview();
 
     void removeConflictedNotesDatabaseCopies();
+
+    void doSearchInNote(QString searchText);
 };
