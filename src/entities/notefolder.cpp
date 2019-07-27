@@ -350,7 +350,7 @@ QString NoteFolder::currentRemotePath(bool addTrailingSlash) {
  * Fetches the current local path
  */
 QString NoteFolder::currentLocalPath() {
-    QString path;
+    QString path = "";
     NoteFolder noteFolder = currentNoteFolder();
 
     if (noteFolder.isFetched()) {
