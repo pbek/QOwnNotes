@@ -54,6 +54,7 @@ You can visit the [QOwnNotes project page](https://www.qownnotes.org) for more *
 ## Features
 
 - multiple note folders can be used
+- you can use your existing text or markdown files, no need for an import most of the times
 - older versions of your notes can be restored from your ownCloud / Nextcloud server (install [QOwnNotesAPI](https://github.com/pbek/qownnotesapi) on your server)
 - trashed notes can be restored from your ownCloud / Nextcloud server (install [QOwnNotesAPI](https://github.com/pbek/qownnotesapi) on your server)
 - sub-string searching of notes is possible and search results are highlighted in the notes
