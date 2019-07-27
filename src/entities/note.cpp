@@ -753,8 +753,7 @@ QList<int> Note::searchInNotes(QString search, bool ignoreNoteSubFolder,
 }
 
 int Note::countSearchTextInNote(QString &search) {
-    int count = noteText.count(search);
-    return count;
+    return noteText.count(search, Qt::CaseInsensitive);
 }
 
 /**
