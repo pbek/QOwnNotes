@@ -8,6 +8,7 @@
   in a new column (for [#1248](https://github.com/pbek/QOwnNotes/issues/1248))
     - the new column will be automatically resized to be visible next to the
       note name without scrolling
+- fixed some ownCloud/Nextcloud wordings and reversed the words
 
 ## 19.7.8
 - you can now **turn off cursor blinking** in the *Editor settings*

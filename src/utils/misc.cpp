@@ -741,7 +741,7 @@ QString Utils::Misc::replaceOwnCloudText(QString text, bool useShortText) {
         return text;
     }
 
-    QString replaceText = useShortText ? "oC / NC" : "ownCloud / Nextcloud";
+    QString replaceText = useShortText ? "NC / oC" : "Nextcloud / ownCloud";
     return text.replace("ownCloud", replaceText, Qt::CaseInsensitive);
 }
 
