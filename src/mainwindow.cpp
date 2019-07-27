@@ -4614,7 +4614,7 @@ QOwnNotesMarkdownTextEdit* MainWindow::activeNoteTextEdit() {
  */
 void MainWindow::handleTextNoteLinking() {
     QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
-    LinkDialog *dialog = new LinkDialog("", this);
+    auto *dialog = new LinkDialog("", this);
     dialog->exec();
 
     if (dialog->result() == QDialog::Accepted) {
