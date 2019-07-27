@@ -702,7 +702,7 @@ QList<int> Note::searchInNotes(QString search, bool ignoreNoteSubFolder,
                                int noteSubFolderId) {
     QSqlDatabase db = QSqlDatabase::database("memory");
     QSqlQuery query(db);
-    QList<int> noteIdList;
+    auto noteIdList = QList<int>();
     QStringList sqlList;
 
     // get the active note subfolder id if none was set
@@ -750,6 +750,11 @@ QList<int> Note::searchInNotes(QString search, bool ignoreNoteSubFolder,
     }
 
     return noteIdList;
+}
+
+int Note::countSearchTextInNote(QString &search) {
+    int count = noteText.count(search);
+    return count;
 }
 
 /**

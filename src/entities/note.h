@@ -171,6 +171,8 @@ public:
                                     bool ignoreNoteSubFolder = false,
                                     int noteSubFolderId = -1);
 
+    int countSearchTextInNote(QString &search);
+
     static QStringList buildQueryStringList(
             QString searchString, bool escapeForRegularExpression = false);
 

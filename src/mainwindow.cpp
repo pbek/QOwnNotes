@@ -5013,22 +5013,51 @@ bool MainWindow::isNoteEditPaneEnabled() {
  * Does the note filtering by text in the search line edit
  */
 void MainWindow::filterNotesBySearchLineEditText() {
-    QString arg1 = ui->searchLineEdit->text();
+    QString searchText = ui->searchLineEdit->text();
 
     QTreeWidgetItemIterator it(ui->noteTreeWidget);
+    ui->noteTreeWidget->setColumnCount(1);
 
     // search notes when at least 2 characters were entered
-    if (arg1.count() >= 2) {
+    if (searchText.count() >= 2) {
         QList<int> noteIdList = Note::searchInNotes(
-                arg1, _showNotesFromAllNoteSubFolders ||
-                    NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively());
+                searchText, _showNotesFromAllNoteSubFolders ||
+                            NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively());
+
+        int columnWidth = ui->noteTreeWidget->columnWidth(0);
+        ui->noteTreeWidget->setColumnCount(2);
+        int maxWidth = 0;
+        QString searchTextFirstWord = searchText.split(" ")[0];
 
         while (*it) {
+            QTreeWidgetItem *item = *it;
+            const int noteId = item->data(0, Qt::UserRole).toInt();
+            bool isHidden = noteIdList.indexOf(noteId) < 0;
+
             // hide all filtered notes
-            (*it)->setHidden(noteIdList.indexOf(
-                    (*it)->data(0, Qt::UserRole).toInt()) < 0);
+            item->setHidden(isHidden);
+
+            // count occurrences of first search term in notes
+            if (!isHidden) {
+                Note note = Note::fetch(noteId);
+                item->setTextColor(1, QColor(Qt::gray));
+                const int count = note.countSearchTextInNote(searchTextFirstWord);
+                const QString text = QString::number(count);
+                item->setText(1, text);
+                item->setToolTip(1, tr("Found <strong>%n</strong> occurrence(s) of word <strong>%1</strong>", "",
+                                       count).arg(searchTextFirstWord));
+
+                // calculate the size of the search count column
+                QFontMetrics fm(item->font(1));
+                maxWidth = std::max(maxWidth, fm.width(text));
+            }
+
             ++it;
         }
+
+        // resize the column 0 so we can see the search counts
+        columnWidth = std::max(10, columnWidth - maxWidth - 5);
+        ui->noteTreeWidget->setColumnWidth(0, columnWidth);
     } else {
         // otherwise show all items
         while (*it) {

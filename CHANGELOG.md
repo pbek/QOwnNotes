@@ -3,6 +3,11 @@
 ## 19.7.9
 - there now is a menu entry *Riot* in the *Help / Open chat* menu to open
   a browser window with the **[QOwnNotes Riot room](https://riot.im/app/#/room/!rUzrRvrnrOsLasDdbp:matrix.org?via=matrix.org)**
+- if you **search for text in all notes** you will now **see how many times**
+  the first word of your **search term occurred** in each note in the note list
+  in a new column (for [#1248](https://github.com/pbek/QOwnNotes/issues/1248))
+    - the new column will be automatically resized to be visible next to the
+      note name without scrolling
 
 ## 19.7.8
 - you can now **turn off cursor blinking** in the *Editor settings*
