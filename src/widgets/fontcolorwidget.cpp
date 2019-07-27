@@ -295,21 +295,21 @@ void FontColorWidget::updateSchemeEditFrame() {
                         textSettingsKey("Bold")).toBool());
 
         const QSignalBlocker blocker2(ui->italicCheckBox);
-        Q_UNUSED(blocker2);
+        Q_UNUSED(blocker2)
 
         ui->italicCheckBox->setChecked(
                 Utils::Schema::schemaSettings->getSchemaValue(
                         textSettingsKey("Italic")).toBool());
 
         const QSignalBlocker blocker3(ui->underlineCheckBox);
-        Q_UNUSED(blocker3);
+        Q_UNUSED(blocker3)
 
         ui->underlineCheckBox->setChecked(
                 Utils::Schema::schemaSettings->getSchemaValue(
                         textSettingsKey("Underline")).toBool());
 
         const QSignalBlocker blocker4(ui->fontSizeAdaptionSpinBox);
-        Q_UNUSED(blocker4);
+        Q_UNUSED(blocker4)
 
         ui->fontSizeAdaptionSpinBox->setValue(Utils::Schema::schemaSettings->getSchemaValue(
                         textSettingsKey("FontSizeAdaption"), 100).toInt());

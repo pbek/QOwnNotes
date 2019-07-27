@@ -1084,16 +1084,16 @@ void SettingsDialog::readSettings() {
     setFontLabel(ui->noteTextViewCodeFontLabel, noteTextViewCodeFont);
 
     const QSignalBlocker blocker2(ui->defaultOwnCloudCalendarRadioButton);
-    Q_UNUSED(blocker2);
+    Q_UNUSED(blocker2)
 
     const QSignalBlocker blocker7(ui->legacyOwnCloudCalendarRadioButton);
-    Q_UNUSED(blocker7);
+    Q_UNUSED(blocker7)
 
     const QSignalBlocker blocker4(ui->calendarPlusRadioButton);
-    Q_UNUSED(blocker4);
+    Q_UNUSED(blocker4)
 
     const QSignalBlocker blocker5(ui->calDavCalendarRadioButton);
-    Q_UNUSED(blocker5);
+    Q_UNUSED(blocker5)
 
     switch (settings.value("ownCloud/todoCalendarBackend",
                            OwnCloudService::DefaultOwnCloudCalendar).toInt()) {
@@ -1113,7 +1113,7 @@ void SettingsDialog::readSettings() {
     }
 
     const QSignalBlocker blocker6(this->ui->ignoreNonTodoCalendarsCheckBox);
-    Q_UNUSED(blocker6);
+    Q_UNUSED(blocker6)
 
     ui->ignoreNonTodoCalendarsCheckBox->setChecked(settings.value(
             "ownCloud/ignoreNonTodoCalendars", true).toBool());
@@ -1201,7 +1201,7 @@ void SettingsDialog::readSettings() {
             settings.value("cursorWidth", 1).toInt());
 
     const QSignalBlocker blocker8(this->ui->showSystemTrayCheckBox);
-    Q_UNUSED(blocker8);
+    Q_UNUSED(blocker8)
     bool showSystemTray = settings.value("ShowSystemTray").toBool();
     ui->showSystemTrayCheckBox->setChecked(showSystemTray);
     ui->startHiddenCheckBox->setEnabled(showSystemTray);

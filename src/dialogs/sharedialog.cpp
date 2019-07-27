@@ -28,7 +28,7 @@ void ShareDialog::updateDialog() {
     const QSignalBlocker blocker(ui->linkCheckBox);
     Q_UNUSED(blocker)
     const QSignalBlocker blocker2(ui->linkUrlLineEdit);
-    Q_UNUSED(blocker2);
+    Q_UNUSED(blocker2)
 
     ui->linkCheckBox->setChecked(note.isShared());
     ui->linkUrlLineEdit->setVisible(note.isShared());

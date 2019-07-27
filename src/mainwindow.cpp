@@ -453,7 +453,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // setup the soft-wrap checkbox
     const QSignalBlocker blocker2(ui->actionUse_softwrap_in_note_editor);
-    Q_UNUSED(blocker2);
+    Q_UNUSED(blocker2)
     ui->actionUse_softwrap_in_note_editor->setChecked(
             settings.value("useSoftWrapInNoteEditor", true).toBool());
 
@@ -1751,7 +1751,7 @@ void MainWindow::changeNoteFolder(int noteFolderId, bool forceChange) {
     if (oldPath != folderName) {
         const QSignalBlocker blocker2(this->ui->searchLineEdit);
         {
-            Q_UNUSED(blocker2);
+            Q_UNUSED(blocker2)
             ui->searchLineEdit->clear();
         }
 
@@ -1912,7 +1912,7 @@ void MainWindow::loadNoteDirectoryList() {
     Q_UNUSED(blocker)
 
     const QSignalBlocker blocker2(ui->noteTreeWidget);
-    Q_UNUSED(blocker2);
+    Q_UNUSED(blocker2)
 
     ui->noteTreeWidget->clear();
 
@@ -3468,16 +3468,16 @@ void MainWindow::removeCurrentNote() {
                              .arg(this->currentNote.getName()),
                                  "remove-note") == QMessageBox::Yes) {
         const QSignalBlocker blocker2(ui->noteTextEdit);
-        Q_UNUSED(blocker2);
+        Q_UNUSED(blocker2)
 
         const QSignalBlocker blocker3(ui->noteTextView);
-        Q_UNUSED(blocker3);
+        Q_UNUSED(blocker3)
 
         const QSignalBlocker blocker4(ui->encryptedNoteTextEdit);
-        Q_UNUSED(blocker4);
+        Q_UNUSED(blocker4)
 
         const QSignalBlocker blocker5(noteDirectoryWatcher);
-        Q_UNUSED(blocker5);
+        Q_UNUSED(blocker5)
 
         // we try to fix problems with note subfolders
         directoryWatcherWorkaround(true);
@@ -3978,13 +3978,13 @@ void MainWindow::removeSelectedNotes() {
         Q_UNUSED(blocker)
 
         const QSignalBlocker blocker2(activeNoteTextEdit());
-        Q_UNUSED(blocker2);
+        Q_UNUSED(blocker2)
 
         const QSignalBlocker blocker3(ui->noteTextView);
-        Q_UNUSED(blocker3);
+        Q_UNUSED(blocker3)
 
         const QSignalBlocker blocker4(ui->encryptedNoteTextEdit);
-        Q_UNUSED(blocker4);
+        Q_UNUSED(blocker4)
 
         // we try to fix problems with note subfolders
         directoryWatcherWorkaround(true);
@@ -4204,13 +4204,13 @@ void MainWindow::unsetCurrentNote() {
 
     // clear the note text edit
     const QSignalBlocker blocker2(ui->noteTextEdit);
-    Q_UNUSED(blocker2);
+    Q_UNUSED(blocker2)
     ui->noteTextEdit->clear();
     ui->noteTextEdit->show();
 
     // clear the encrypted note text edit
     const QSignalBlocker blocker3(ui->encryptedNoteTextEdit);
-    Q_UNUSED(blocker3);
+    Q_UNUSED(blocker3)
     ui->encryptedNoteTextEdit->hide();
     ui->encryptedNoteTextEdit->clear();
 
@@ -5232,7 +5232,7 @@ void MainWindow::jumpToNoteOrCreateNew(bool disableLoadNoteDirectoryList) {
 
         {
             const QSignalBlocker blocker2(ui->noteTreeWidget);
-            Q_UNUSED(blocker2);
+            Q_UNUSED(blocker2)
 
             // adds the note to the note tree widget
             addNoteToNoteTreeWidget(note);
@@ -7313,7 +7313,7 @@ void MainWindow::on_tagLineEdit_returnPressed() {
 
     if (tag.store()) {
         const QSignalBlocker blocker2(ui->tagLineEdit);
-        Q_UNUSED(blocker2);
+        Q_UNUSED(blocker2)
 
         // clear the line edit if the tag was stored
         ui->tagLineEdit->clear();
@@ -9269,7 +9269,7 @@ void MainWindow::on_noteTreeWidget_itemChanged(QTreeWidgetItem *item,
         }
 
         const QSignalBlocker blocker2(ui->noteTreeWidget);
-        Q_UNUSED(blocker2);
+        Q_UNUSED(blocker2)
 
         // set old name back in case the renaming failed or the file name got
         // altered in the renaming process
