@@ -757,7 +757,7 @@ QList<int> Note::searchInNotes(QString search, bool ignoreNoteSubFolder,
  */
 QStringList Note::buildQueryStringList(QString searchString,
                                        bool escapeForRegularExpression) {
-    QStringList queryStrings;
+    auto queryStrings = QStringList();
 
     // check for strings in ""
     QRegularExpression re("\"([^\"]+)\"");
