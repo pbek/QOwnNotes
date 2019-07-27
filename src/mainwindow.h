@@ -567,6 +567,8 @@ private slots:
 
     void on_actionImport_bookmarks_from_server_triggered();
 
+    void on_actionRiot_triggered();
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;

@@ -974,6 +974,7 @@ p, li { white-space: pre-wrap; }
        <normaloff>:/icons/breeze-qownnotes/16x16/im-user-online.svg</normaloff>:/icons/breeze-qownnotes/16x16/im-user-online.svg</iconset>
      </property>
      <addaction name="actionTelegram"/>
+     <addaction name="actionRiot"/>
      <addaction name="actionGitter"/>
      <addaction name="actionOpen_IRC_Channel"/>
     </widget>
@@ -2147,6 +2148,21 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="statusTip">
     <string>Open the Telegram group</string>
+   </property>
+  </action>
+  <action name="actionRiot">
+   <property name="icon">
+    <iconset theme="im-user-online" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/im-user-online.svg</normaloff>:/icons/breeze-qownnotes/16x16/im-user-online.svg</iconset>
+   </property>
+   <property name="text">
+    <string notr="true">Riot</string>
+   </property>
+   <property name="toolTip">
+    <string>Open the Riot room</string>
+   </property>
+   <property name="statusTip">
+    <string>Open the Riot room</string>
    </property>
   </action>
   <action name="actionGitter">

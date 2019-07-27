@@ -10888,3 +10888,7 @@ void MainWindow::on_actionImport_bookmarks_from_server_triggered() {
     OwnCloudService *ownCloud = OwnCloudService::instance();
     ownCloud->fetchBookmarks();
 }
+
+void MainWindow::on_actionRiot_triggered() {
+    QDesktopServices::openUrl(QUrl("https://riot.im/app/#/room/!rUzrRvrnrOsLasDdbp:matrix.org?via=matrix.org"));
+}

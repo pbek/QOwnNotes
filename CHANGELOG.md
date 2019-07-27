@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 19.7.9
+- there now is a menu entry *Riot* in the *Help / Open chat* menu to open
+  a browser window with the **[QOwnNotes Riot room](https://riot.im/app/#/room/!rUzrRvrnrOsLasDdbp:matrix.org?via=matrix.org)**
+
 ## 19.7.8
 - you can now **turn off cursor blinking** in the *Editor settings*
   (for [#1246](https://github.com/pbek/QOwnNotes/issues/1246))
