@@ -8,6 +8,10 @@
   in a new column (for [#1248](https://github.com/pbek/QOwnNotes/issues/1248))
     - the new column will be automatically resized to be visible next to the
       note name without scrolling
+- every time the note folder is reloaded it will now be **checked** for
+  **conflicting copies** of the **`notes.sqlite` database** that will block your
+  Nextcloud/ownCloud sync process (for [#1111](https://github.com/pbek/QOwnNotes/issues/1111))
+    - you will be asked if you want to remove the conflicting copies
 - fixed some ownCloud/Nextcloud wordings and reversed the words
 
 ## 19.7.8

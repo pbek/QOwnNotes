@@ -968,4 +968,6 @@ private:
     void centerAndResize();
 
     void forceRegenerateNotePreview();
+
+    void removeConflictedNotesDatabaseCopies();
 };

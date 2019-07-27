@@ -15,6 +15,7 @@
 #include "mainwindow.h"
 #include <QDebug>
 #include <QDir>
+#include <QDirIterator>
 #include <QFile>
 #include <QMessageBox>
 #include <QDesktopWidget>
@@ -3083,7 +3084,55 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
         ownCloud->fetchShares();
     }
 
+    if (noteSubFolderId == 0) {
+        removeConflictedNotesDatabaseCopies();
+    }
+
     return wasModified;
+}
+
+/**
+ * Asks to remove conflicted copies of the notes.sqlite database
+ */
+void MainWindow::removeConflictedNotesDatabaseCopies() {
+    QStringList filter = QStringList() << "notes (conflicted copy *).sqlite";
+    QDirIterator it(NoteFolder::currentLocalPath(), filter, QDir::AllEntries |
+        QDir::NoSymLinks | QDir::NoDotAndDotDot);
+    auto files = QStringList();
+
+    while (it.hasNext()) {
+        files << it.next();
+    }
+
+    const int count = files.count();
+
+    if (count == 0) {
+        return;
+    }
+
+    if (Utils::Gui::question(
+            this,
+            tr("Delete conflicted database copies"),
+            Utils::Misc::replaceOwnCloudText(
+                    tr("Delete <strong>%n</strong> conflicted database copies"
+                       " that may block your ownCloud sync process?",
+               "", count)) + "<br /><br />" + files.join("<br />"),
+            "delete-conflicted-database-files") != QMessageBox::Yes) {
+        return;
+    }
+
+    const QSignalBlocker blocker(this->noteDirectoryWatcher);
+    Q_UNUSED(blocker)
+
+    // we try to fix problems with the blocker
+    directoryWatcherWorkaround(true);
+
+    // remove the database files
+    Q_FOREACH(QString file, files) {
+            QFile::remove(file);
+    }
+
+    directoryWatcherWorkaround(false);
 }
 
 /**
