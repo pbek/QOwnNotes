@@ -17,6 +17,9 @@
   Nextcloud/ownCloud sync process (for [#1111](https://github.com/pbek/QOwnNotes/issues/1111))
     - you will be asked if you want to remove the conflicting copies
 - fixed some ownCloud/Nextcloud wordings and reversed the words
+- added more Indonesian, Dutch, Hungarian, Czech, Danish, Finnish, Galician,
+  Chinese Simplified, Spanish, Catalan, German translation (thank you zmni,
+  Fabijenna, Libnux, richarson, MGuerra, rakekniven)
 
 ## 19.7.8
 - you can now **turn off cursor blinking** in the *Editor settings*
