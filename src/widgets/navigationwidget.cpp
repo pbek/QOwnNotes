@@ -55,7 +55,7 @@ void NavigationWidget::onCurrentItemChanged(
  */
 void NavigationWidget::parse(QTextDocument *document) {
     const QSignalBlocker blocker(this);
-    Q_UNUSED(blocker);
+    Q_UNUSED(blocker)
 
     setDocument(document);
     clear();

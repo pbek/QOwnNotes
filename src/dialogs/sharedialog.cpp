@@ -26,7 +26,7 @@ void ShareDialog::updateDialog() {
     qDebug() << __func__ << " - 'note': " << note;
 
     const QSignalBlocker blocker(ui->linkCheckBox);
-    Q_UNUSED(blocker);
+    Q_UNUSED(blocker)
     const QSignalBlocker blocker2(ui->linkUrlLineEdit);
     Q_UNUSED(blocker2);
 
@@ -44,7 +44,7 @@ void ShareDialog::on_linkCheckBox_toggled(bool checked) {
     auto *ownCloud = OwnCloudService::instance();
 
     const QSignalBlocker blocker(ui->linkCheckBox);
-    Q_UNUSED(blocker);
+    Q_UNUSED(blocker)
 
     // the checked status will be set by the callback function updateDialog()
     ui->linkCheckBox->setChecked(!checked);

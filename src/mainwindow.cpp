@@ -396,7 +396,7 @@ MainWindow::MainWindow(QWidget *parent) :
     // set "show toolbar" menu item checked/unchecked
     const QSignalBlocker blocker(ui->actionShow_toolbar);
     {
-        Q_UNUSED(blocker);
+        Q_UNUSED(blocker)
         ui->actionShow_toolbar->setChecked(isToolbarVisible());
     }
 
@@ -1072,7 +1072,7 @@ void MainWindow::updateWorkspaceLists(bool rebuild) {
     }
 
     const QSignalBlocker blocker(_workspaceComboBox);
-    Q_UNUSED(blocker);
+    Q_UNUSED(blocker)
 
     int currentIndex = 0;
 
@@ -1254,7 +1254,7 @@ void MainWindow::togglePanelVisibility(const QString& objectName) {
 
     // to prevent crashes if updatePanelMenu removes all actions
     const QSignalBlocker blocker(dockWidget);
-    Q_UNUSED(blocker);
+    Q_UNUSED(blocker)
 
     bool newVisibility = dockWidget->isHidden();
 
@@ -1290,7 +1290,7 @@ void MainWindow::toggleToolbarVisibility(const QString& objectName) {
 
     // to prevent crashes if updateToolbarMenu removes all actions
     const QSignalBlocker blocker(toolbar);
-    Q_UNUSED(blocker);
+    Q_UNUSED(blocker)
 
     bool newVisibility = toolbar->isHidden();
     toolbar->setVisible(newVisibility);
@@ -1659,7 +1659,7 @@ void MainWindow::loadNoteFolderListMenu() {
     int noteFoldersCount = noteFolders.count();
 
     const QSignalBlocker blocker(ui->noteFolderComboBox);
-    Q_UNUSED(blocker);
+    Q_UNUSED(blocker)
 
     ui->noteFolderComboBox->clear();
     int index = 0;
@@ -1909,7 +1909,7 @@ void MainWindow::loadNoteDirectoryList() {
     qDebug() << __func__;
 
     const QSignalBlocker blocker(ui->noteTextEdit);
-    Q_UNUSED(blocker);
+    Q_UNUSED(blocker)
 
     const QSignalBlocker blocker2(ui->noteTreeWidget);
     Q_UNUSED(blocker2);
@@ -1986,7 +1986,7 @@ bool MainWindow::addNoteToNoteTreeWidget(Note note) {
     }
 
     const QSignalBlocker blocker(ui->noteTreeWidget);
-    Q_UNUSED(blocker);
+    Q_UNUSED(blocker)
 
     // strange things happen if we insert with insertTopLevelItem
     ui->noteTreeWidget->addTopLevelItem(noteItem);
@@ -2102,7 +2102,7 @@ void MainWindow::makeCurrentNoteFirstInNoteList() {
 
     if (item != Q_NULLPTR) {
         const QSignalBlocker blocker(ui->noteTreeWidget);
-        Q_UNUSED(blocker);
+        Q_UNUSED(blocker)
 
         ui->noteTreeWidget->takeTopLevelItem(
                 ui->noteTreeWidget->indexOfTopLevelItem(item));
@@ -2222,7 +2222,7 @@ void MainWindow::readSettings() {
 
     {
         const QSignalBlocker blocker(ui->actionAllow_note_editing);
-        Q_UNUSED(blocker);
+        Q_UNUSED(blocker)
 
         bool isAllowNoteEditing = Utils::Misc::isNoteEditingAllowed();
         ui->actionAllow_note_editing->setChecked(isAllowNoteEditing);
@@ -2460,7 +2460,7 @@ void MainWindow::updateNoteTextFromDisk(Note note) {
 
     {
         const QSignalBlocker blocker(this->ui->noteTextEdit);
-        Q_UNUSED(blocker);
+        Q_UNUSED(blocker)
         this->setNoteTextFromNote(&note);
     }
 
@@ -2529,7 +2529,7 @@ void MainWindow::notesWereModified(const QString &str) {
                 // overwrite file with local changes
                 case NoteDiffDialog::Overwrite: {
                     const QSignalBlocker blocker(this->noteDirectoryWatcher);
-                    Q_UNUSED(blocker);
+                    Q_UNUSED(blocker)
 
                     showStatusBarMessage(
                             tr("Overwriting external changes of: %1").arg(
@@ -2579,7 +2579,7 @@ void MainWindow::notesWereModified(const QString &str) {
                             "Restore current note?"),
                     "restore-note") == QMessageBox::Yes) {
                 const QSignalBlocker blocker(this->noteDirectoryWatcher);
-                Q_UNUSED(blocker);
+                Q_UNUSED(blocker)
 
                 QString text = this->ui->noteTextEdit->toPlainText();
                 note.storeNewText(text);
@@ -2666,7 +2666,7 @@ void MainWindow::noteViewUpdateTimerSlot() {
 
 void MainWindow::storeUpdatedNotesToDisk() {
     const QSignalBlocker blocker(noteDirectoryWatcher);
-    Q_UNUSED(blocker);
+    Q_UNUSED(blocker)
 
     QString oldNoteName = currentNote.getName();
 
@@ -3306,7 +3306,7 @@ void MainWindow::setCurrentNote(Note note,
                 name, Qt::MatchExactly);
         if (items.count() > 0) {
             const QSignalBlocker blocker(ui->noteTreeWidget);
-            Q_UNUSED(blocker);
+            Q_UNUSED(blocker)
 
             // to avoid that multiple notes will be selected
             ui->noteTreeWidget->clearSelection();
@@ -3318,7 +3318,7 @@ void MainWindow::setCurrentNote(Note note,
     // update the text of the text edit
     if (updateNoteText) {
         const QSignalBlocker blocker(ui->noteTextEdit);
-        Q_UNUSED(blocker);
+        Q_UNUSED(blocker)
 
         this->setNoteTextFromNote(&note);
 
@@ -3426,7 +3426,7 @@ void MainWindow::setNoteTextEditReadOnly(bool readonly) const {
  */
 void MainWindow::updateShareButton() {
     const QSignalBlocker blocker(ui->actionShare_note);
-    Q_UNUSED(blocker);
+    Q_UNUSED(blocker)
     ui->actionShare_note->setChecked(currentNote.isShared());
 }
 
@@ -3975,7 +3975,7 @@ void MainWindow::removeSelectedNotes() {
                     "them from there.",
                "", selectedItemsCount)), "remove-notes") == QMessageBox::Yes) {
         const QSignalBlocker blocker(this->noteDirectoryWatcher);
-        Q_UNUSED(blocker);
+        Q_UNUSED(blocker)
 
         const QSignalBlocker blocker2(activeNoteTextEdit());
         Q_UNUSED(blocker2);
@@ -4085,7 +4085,7 @@ void MainWindow::removeSelectedTags() {
                "", selectedItemsCount),
             "remove-tags") == QMessageBox::Yes) {
         const QSignalBlocker blocker(this->noteDirectoryWatcher);
-        Q_UNUSED(blocker);
+        Q_UNUSED(blocker)
 
         const QSignalBlocker blocker1(ui->tagTreeWidget);
         Q_UNUSED(blocker1);
@@ -4139,7 +4139,7 @@ void MainWindow::moveSelectedNotesToFolder(const QString& destinationFolder) {
                selectedItemsCount).arg(destinationFolder),
             "move-notes") == QMessageBox::Yes) {
         const QSignalBlocker blocker(this->noteDirectoryWatcher);
-        Q_UNUSED(blocker);
+        Q_UNUSED(blocker)
 
         Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
                 int noteId = item->data(0, Qt::UserRole).toInt();
@@ -4199,7 +4199,7 @@ void MainWindow::unsetCurrentNote() {
 
     // clear the note preview
     const QSignalBlocker blocker(ui->noteTextView);
-    Q_UNUSED(blocker);
+    Q_UNUSED(blocker)
     ui->noteTextView->clear();
 
     // clear the note text edit
@@ -4285,7 +4285,7 @@ void MainWindow::tagSelectedNotes(Tag tag) {
                 }
 
                 const QSignalBlocker blocker(noteDirectoryWatcher);
-                Q_UNUSED(blocker);
+                Q_UNUSED(blocker)
 
                 if (useScriptingEngine) {
                     // add the tag to the note text if defined via
@@ -4309,7 +4309,7 @@ void MainWindow::tagSelectedNotes(Tag tag) {
 
         if (useScriptingEngine) {
             const QSignalBlocker blocker(this->noteDirectoryWatcher);
-            Q_UNUSED(blocker);
+            Q_UNUSED(blocker)
 
             storeUpdatedNotesToDisk();
         }
@@ -4354,7 +4354,7 @@ void MainWindow::removeTagFromSelectedNotes(Tag tag) {
                 }
 
                 const QSignalBlocker blocker(noteDirectoryWatcher);
-                Q_UNUSED(blocker);
+                Q_UNUSED(blocker)
 
                 if (useScriptingEngine) {
                     // take care that the tag is removed from the note
@@ -4379,7 +4379,7 @@ void MainWindow::removeTagFromSelectedNotes(Tag tag) {
 
         if (useScriptingEngine) {
             const QSignalBlocker blocker(noteDirectoryWatcher);
-            Q_UNUSED(blocker);
+            Q_UNUSED(blocker)
 
             storeUpdatedNotesToDisk();
         }
@@ -4926,7 +4926,7 @@ void MainWindow::on_noteTextEdit_textChanged() {
         }
 
         const QSignalBlocker blocker(ui->noteTreeWidget);
-        Q_UNUSED(blocker);
+        Q_UNUSED(blocker)
 
         // update the note list tooltip of the note
         setTreeWidgetItemToolTipForNote(ui->noteTreeWidget->currentItem(),
@@ -5175,7 +5175,7 @@ void MainWindow::jumpToNoteOrCreateNew(bool disableLoadNoteDirectoryList) {
 
     // this doesn't seem to work with note sub folders
     const QSignalBlocker blocker(noteDirectoryWatcher);
-    Q_UNUSED(blocker);
+    Q_UNUSED(blocker)
 
     // add the current search text to the saved searches
     storeSavedSearch();
@@ -5431,7 +5431,7 @@ void MainWindow::openLocalUrl(QString urlString) {
 
                 if (item != Q_NULLPTR) {
                     const QSignalBlocker blocker(ui->noteSubFolderTreeWidget);
-                    Q_UNUSED(blocker);
+                    Q_UNUSED(blocker)
 
                     ui->noteSubFolderTreeWidget->clearSelection();
                     item->setSelected(true);
@@ -6243,7 +6243,7 @@ void MainWindow::on_actionEdit_encrypted_note_triggered() {
 
     if (currentNote.canDecryptNoteText()) {
         const QSignalBlocker blocker(ui->encryptedNoteTextEdit);
-        Q_UNUSED(blocker);
+        Q_UNUSED(blocker)
 
         ui->noteTextEdit->hide();
         ui->encryptedNoteTextEdit->setText(currentNote.getDecryptedNoteText());
@@ -6489,7 +6489,7 @@ void MainWindow::toolbarVisibilityChanged(bool visible) {
 
     const QSignalBlocker blocker(ui->actionShow_toolbar);
     {
-        Q_UNUSED(blocker);
+        Q_UNUSED(blocker)
         ui->actionShow_toolbar->setChecked(isToolbarVisible());
     }
 }
@@ -7119,7 +7119,7 @@ void MainWindow::reloadNoteSubFolderTree() {
     // set the active item
     if (activeNoteSubFolderId == 0) {
         const QSignalBlocker blocker(ui->noteSubFolderTreeWidget);
-        Q_UNUSED(blocker);
+        Q_UNUSED(blocker)
 
         ui->noteSubFolderTreeWidget->setCurrentItem(item);
     }
@@ -7152,7 +7152,7 @@ void MainWindow::buildNoteSubFolderTreeForParentItem(QTreeWidgetItem *parent) {
             // set the active item
             if (activeNoteSubFolderId == noteSubFolder.getId()) {
                 const QSignalBlocker blocker(ui->noteSubFolderTreeWidget);
-                Q_UNUSED(blocker);
+                Q_UNUSED(blocker)
 
                 ui->noteSubFolderTreeWidget->setCurrentItem(item);
             }
@@ -7191,7 +7191,7 @@ void MainWindow::buildTagTreeForParentItem(QTreeWidgetItem *parent, bool topLeve
             // set the active item
             if (activeTagId == tagId) {
                 const QSignalBlocker blocker(ui->tagTreeWidget);
-                Q_UNUSED(blocker);
+                Q_UNUSED(blocker)
 
                 ui->tagTreeWidget->setCurrentItem(item);
             }
@@ -7288,7 +7288,7 @@ void MainWindow::handleTreeWidgetItemTagColor(QTreeWidgetItem *item,
     // assignColorToTagItem() the 2nd setBackground() crashes the app,
     // because it seems the tag tree will be reloaded
     const QSignalBlocker blocker(item->treeWidget());
-    Q_UNUSED(blocker);
+    Q_UNUSED(blocker)
 
     // set the color for all columns
     for (int column = 0; column < columnCount; column++) {
@@ -7306,7 +7306,7 @@ void MainWindow::on_tagLineEdit_returnPressed() {
     }
 
     const QSignalBlocker blocker(this->noteDirectoryWatcher);
-    Q_UNUSED(blocker);
+    Q_UNUSED(blocker)
 
     Tag tag;
     tag.setName(name);
@@ -7420,7 +7420,7 @@ void MainWindow::linkTagNameToCurrentNote(const QString& tagName,
     Tag tag = Tag::fetchByName(tagName);
     if (!tag.isFetched()) {
         const QSignalBlocker blocker(noteDirectoryWatcher);
-        Q_UNUSED(blocker);
+        Q_UNUSED(blocker)
 
         tag.setName(tagName);
         tag.store();
@@ -7429,7 +7429,7 @@ void MainWindow::linkTagNameToCurrentNote(const QString& tagName,
     // link the current note to the tag
     if (tag.isFetched()) {
         const QSignalBlocker blocker(noteDirectoryWatcher);
-        Q_UNUSED(blocker);
+        Q_UNUSED(blocker)
 
         int selectedNotesCount = getSelectedNotesCount();
 
@@ -7488,7 +7488,7 @@ void MainWindow::handleScriptingNoteTagging(Note note, QString tagName,
     // do some stuff to get the UI updated
     if (triggerPostMethods) {
         const QSignalBlocker blocker(this->noteDirectoryWatcher);
-        Q_UNUSED(blocker);
+        Q_UNUSED(blocker)
 
         storeUpdatedNotesToDisk();
         reloadTagTree();
@@ -7574,7 +7574,7 @@ void MainWindow::handleScriptingNotesTagRenaming(const QString& oldTagName,
     directoryWatcherWorkaround(true, true);
 
     const QSignalBlocker blocker(this->noteDirectoryWatcher);
-    Q_UNUSED(blocker);
+    Q_UNUSED(blocker)
 
     QList<Note> notes = Note::fetchAll();
     Q_FOREACH(Note note, notes) {
@@ -7852,7 +7852,7 @@ void MainWindow::on_tagTreeWidget_itemChanged(
 
         if (!name.isEmpty()) {
             const QSignalBlocker blocker(this->noteDirectoryWatcher);
-            Q_UNUSED(blocker);
+            Q_UNUSED(blocker)
 
             tag.setName(name);
             tag.store();
@@ -7883,7 +7883,7 @@ void MainWindow::on_tagTreeWidget_currentItemChanged(
     Tag::setAsActive(tagId);
 
     const QSignalBlocker blocker(ui->searchLineEdit);
-    Q_UNUSED(blocker);
+    Q_UNUSED(blocker)
 
     ui->searchLineEdit->clear();
 
@@ -8355,7 +8355,7 @@ void MainWindow::moveSelectedNotesToNoteSubFolder(NoteSubFolder noteSubFolder) {
             text,
             "move-notes") == QMessageBox::Yes) {
         const QSignalBlocker blocker(this->noteDirectoryWatcher);
-        Q_UNUSED(blocker);
+        Q_UNUSED(blocker)
 
         // unset the current note
   //      unsetCurrentNote();
@@ -8439,7 +8439,7 @@ void MainWindow::copySelectedNotesToNoteSubFolder(NoteSubFolder noteSubFolder) {
             text,
             "copy-notes") == QMessageBox::Yes) {
         const QSignalBlocker blocker(this->noteDirectoryWatcher);
-        Q_UNUSED(blocker);
+        Q_UNUSED(blocker)
 
         int noteSubFolderCount = 0;
         Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
@@ -8974,7 +8974,7 @@ void MainWindow::on_actionShow_status_bar_triggered(bool checked) {
 
     const QSignalBlocker blocker(ui->actionShow_status_bar);
     {
-        Q_UNUSED(blocker);
+        Q_UNUSED(blocker)
         ui->actionShow_status_bar->setChecked(checked);
     }
 
@@ -9239,7 +9239,7 @@ void MainWindow::on_noteTreeWidget_itemChanged(QTreeWidgetItem *item,
         qDebug() << __func__ << " - 'note': " << note;
 
         const QSignalBlocker blocker(this->noteDirectoryWatcher);
-        Q_UNUSED(blocker);
+        Q_UNUSED(blocker)
 
         QString oldNoteName = note.getName();
 
@@ -9301,7 +9301,7 @@ void MainWindow::on_noteSubFolderTreeWidget_currentItemChanged(
                       _showNotesFromAllNoteSubFolders);
 
     const QSignalBlocker blocker(ui->searchLineEdit);
-    Q_UNUSED(blocker);
+    Q_UNUSED(blocker)
 
     ui->searchLineEdit->clear();
 
@@ -9331,7 +9331,7 @@ void MainWindow::on_noteSubFolderLineEdit_textChanged(const QString &arg1) {
         // block the events because we don't want the expand/collapse state
         // of the items get stored while searching
         const QSignalBlocker blocker(ui->noteSubFolderTreeWidget);
-        Q_UNUSED(blocker);
+        Q_UNUSED(blocker)
 
         // search for the text
         Utils::Gui::searchForTextInTreeWidget(
@@ -9471,7 +9471,7 @@ void MainWindow::on_noteSubFolderTreeWidget_itemChanged(
 
 void MainWindow::on_actionShare_note_triggered() {
     const QSignalBlocker blocker(ui->actionShare_note);
-    Q_UNUSED(blocker);
+    Q_UNUSED(blocker)
     ui->actionShare_note->setChecked(currentNote.isShared());
 
     ShareDialog *dialog = new ShareDialog(currentNote, this);
@@ -9637,7 +9637,7 @@ void MainWindow::on_actionShow_menu_bar_triggered(bool checked) {
 
     const QSignalBlocker blocker(ui->actionShow_menu_bar);
     {
-        Q_UNUSED(blocker);
+        Q_UNUSED(blocker)
         ui->actionShow_menu_bar->setChecked(checked);
     }
 
@@ -9820,7 +9820,7 @@ void MainWindow::selectAllNotesInTagTreeWidget() const {
 
 void MainWindow::on_actionImport_notes_from_Evernote_triggered() {
     const QSignalBlocker blocker(noteDirectoryWatcher);
-    Q_UNUSED(blocker);
+    Q_UNUSED(blocker)
 
     auto dialog = new EvernoteImportDialog(this);
     dialog->exec();
@@ -9877,7 +9877,7 @@ QString MainWindow::selectedNoteTextEditText() {
 void MainWindow::on_actionUnlock_panels_toggled(bool arg1) {
     const QSignalBlocker blocker(ui->actionUnlock_panels);
     {
-        Q_UNUSED(blocker);
+        Q_UNUSED(blocker)
         ui->actionUnlock_panels->setChecked(arg1);
     }
 
@@ -10747,7 +10747,7 @@ void MainWindow::on_actionImport_notes_from_text_files_triggered() {
     progressDialog.setWindowModality(Qt::WindowModal);
 
     const QSignalBlocker blocker(noteDirectoryWatcher);
-    Q_UNUSED(blocker);
+    Q_UNUSED(blocker)
 
     for (int i = 0; i < fileCount; i++) {
         if (progressDialog.wasCanceled()) {

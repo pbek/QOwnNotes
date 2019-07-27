@@ -288,7 +288,7 @@ void FontColorWidget::updateSchemeEditFrame() {
 
     if (index >= 0) {
         const QSignalBlocker blocker(ui->boldCheckBox);
-        Q_UNUSED(blocker);
+        Q_UNUSED(blocker)
 
         ui->boldCheckBox->setChecked(
                 Utils::Schema::schemaSettings->getSchemaValue(
@@ -526,7 +526,7 @@ void FontColorWidget::on_foregroundColorCheckBox_toggled(bool checked) {
 
 void FontColorWidget::updateForegroundColorCheckBox(bool checked, bool store) {
     const QSignalBlocker blocker(ui->foregroundColorCheckBox);
-    Q_UNUSED(blocker);
+    Q_UNUSED(blocker)
 
     ui->foregroundColorCheckBox->setChecked(checked);
     ui->foregroundColorButton->setEnabled(checked);
@@ -556,7 +556,7 @@ void FontColorWidget::on_backgroundColorCheckBox_toggled(bool checked) {
 
 void FontColorWidget::updateBackgroundColorCheckBox(bool checked, bool store) {
     const QSignalBlocker blocker(ui->backgroundColorCheckBox);
-    Q_UNUSED(blocker);
+    Q_UNUSED(blocker)
 
     ui->backgroundColorCheckBox->setChecked(checked);
     ui->backgroundColorButton->setEnabled(checked);

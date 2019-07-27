@@ -154,7 +154,7 @@ void TodoDialog::refreshUi() {
 
     {
         const QSignalBlocker blocker(ui->showCompletedItemsCheckBox);
-        Q_UNUSED(blocker);
+        Q_UNUSED(blocker)
 
         bool showCompletedItems =
                 settings.value("TodoDialog/showCompletedItems").toBool();
@@ -165,7 +165,7 @@ void TodoDialog::refreshUi() {
 
     if (index >= 0) {
         const QSignalBlocker blocker(ui->todoListSelector);
-        Q_UNUSED(blocker);
+        Q_UNUSED(blocker)
 
         // set the index of the task list selector if we found it
         ui->todoListSelector->setCurrentIndex(index);
@@ -202,7 +202,7 @@ void TodoDialog::setupMainSplitter() {
  */
 void TodoDialog::loadTodoListData() {
     const QSignalBlocker blocker(ui->todoListSelector);
-    Q_UNUSED(blocker);
+    Q_UNUSED(blocker)
 
     QSettings settings;
     ui->todoListSelector->clear();
@@ -245,7 +245,7 @@ void TodoDialog::reloadTodoListItems() {
 
     {
         const QSignalBlocker blocker(ui->todoList);
-        Q_UNUSED(blocker);
+        Q_UNUSED(blocker)
 
         ui->todoList->clear();
 
@@ -334,7 +334,7 @@ void TodoDialog::jumpToTodoListItem() {
 
 void TodoDialog::clearTodoList() {
     const QSignalBlocker blocker(ui->todoList);
-    Q_UNUSED(blocker);
+    Q_UNUSED(blocker)
     ui->todoList->clear();
     resetEditFrameControls();
 }

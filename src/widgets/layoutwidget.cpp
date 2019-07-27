@@ -25,7 +25,7 @@ void LayoutWidget::loadLayouts() {
 
     {
         const QSignalBlocker blocker(ui->layoutComboBox);
-        Q_UNUSED(blocker);
+        Q_UNUSED(blocker)
         ui->layoutComboBox->clear();
 
         for (int i = 0; i < layoutIdentifiers.count(); i++) {

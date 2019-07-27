@@ -221,7 +221,7 @@ void LogWidget::log(LogWidget::LogType logType, QString text) {
     }
 
     const QSignalBlocker blocker(ui->logTextEdit);
-    Q_UNUSED(blocker);
+    Q_UNUSED(blocker)
 
     // insert the text at the end
     ui->logTextEdit->appendHtml(html.trimmed());

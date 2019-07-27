@@ -1015,7 +1015,7 @@ void SettingsDialog::readSettings() {
                           settings.value("interfaceLanguage").toString());
 
     const QSignalBlocker blocker(ui->appMetricsCheckBox);
-    Q_UNUSED(blocker);
+    Q_UNUSED(blocker)
     ui->appMetricsCheckBox->setChecked(settings.value(
             "appMetrics/disableTracking").toBool());
 
@@ -1256,7 +1256,7 @@ void SettingsDialog::initSearchEngineComboBox() const {
  */
 void SettingsDialog::loadInterfaceStyleComboBox() const {
     const QSignalBlocker blocker(ui->interfaceStyleComboBox);
-    Q_UNUSED(blocker);
+    Q_UNUSED(blocker)
 
     ui->interfaceStyleComboBox->clear();
     ui->interfaceStyleComboBox->addItem(tr("Automatic (needs restart)"));
@@ -1601,7 +1601,7 @@ void SettingsDialog::selectListWidgetValue(QListWidget* listWidget,
     Q_FOREACH(QListWidgetItem *item, items) {
             if (item->whatsThis() == value) {
                 const QSignalBlocker blocker(listWidget);
-                Q_UNUSED(blocker);
+                Q_UNUSED(blocker)
 
                 listWidget->setItemSelected(item, true);
                 break;
@@ -2009,7 +2009,7 @@ void SettingsDialog::on_appMetricsCheckBox_toggled(bool checked) {
                 QMessageBox::No);
         if (reply == QMessageBox::No) {
             const QSignalBlocker blocker(ui->appMetricsCheckBox);
-            Q_UNUSED(blocker);
+            Q_UNUSED(blocker)
             ui->appMetricsCheckBox->setChecked(0);
         }
     }
@@ -2213,7 +2213,7 @@ void SettingsDialog::on_noteFolderListWidget_currentItemChanged(
                 _selectedNoteFolder.isUseGit());
 
         const QSignalBlocker blocker(ui->noteFolderActiveCheckBox);
-        Q_UNUSED(blocker);
+        Q_UNUSED(blocker)
         ui->noteFolderActiveCheckBox->setChecked(
                 _selectedNoteFolder.isCurrent());
     }
@@ -2326,7 +2326,7 @@ void SettingsDialog::on_noteFolderRemotePathLineEdit_editingFinished()
     // set new path if fixed path differs
     if (text != remotePath) {
         const QSignalBlocker blocker(ui->noteFolderRemotePathLineEdit);
-        Q_UNUSED(blocker);
+        Q_UNUSED(blocker)
 
         ui->noteFolderRemotePathLineEdit->setText(remotePath);
     }
@@ -2358,7 +2358,7 @@ void SettingsDialog::on_noteFolderActiveCheckBox_stateChanged(int arg1)
 
     if (!ui->noteFolderActiveCheckBox->isChecked()) {
         const QSignalBlocker blocker(ui->noteFolderActiveCheckBox);
-        Q_UNUSED(blocker);
+        Q_UNUSED(blocker)
         ui->noteFolderActiveCheckBox->setChecked(true);
     } else {
         _selectedNoteFolder.setAsCurrent();
@@ -2411,7 +2411,7 @@ void SettingsDialog::addPathToNoteFolderRemotePathTreeWidget(
             parent, pathPart);
 
     const QSignalBlocker blocker(ui->noteFolderRemotePathTreeWidget);
-    Q_UNUSED(blocker);
+    Q_UNUSED(blocker)
 
     if (item == nullptr) {
         item = new QTreeWidgetItem();
@@ -2503,7 +2503,7 @@ void SettingsDialog::setNoteFolderRemotePathTreeWidgetFrameVisibility(
     ui->noteFolderVerticalSpacerFrame->setVisible(!visible);
     if (!visible) {
         const QSignalBlocker blocker(ui->noteFolderRemotePathTreeWidget);
-        Q_UNUSED(blocker);
+        Q_UNUSED(blocker)
 
         ui->noteFolderRemotePathTreeWidget->clear();
     }
@@ -2707,7 +2707,7 @@ void SettingsDialog::on_scriptPathButton_clicked() {
                 _selectedScript.setName(scriptName);
 
                 const QSignalBlocker blocker(ui->scriptListWidget);
-                Q_UNUSED(blocker);
+                Q_UNUSED(blocker)
                 ui->scriptListWidget->currentItem()->setText(scriptName);
             }
 
@@ -3074,7 +3074,7 @@ void SettingsDialog::on_settingsStackedWidget_currentChanged(int index) {
     QTreeWidgetItem *item = findSettingsTreeWidgetItemByPage(index);
     if (item != Q_NULLPTR) {
         const QSignalBlocker blocker(ui->settingsTreeWidget);
-        Q_UNUSED(blocker);
+        Q_UNUSED(blocker)
 
         ui->settingsTreeWidget->setCurrentItem(item);
         ui->headlineLabel->setText("<h3>" + item->text(0) + "</h3>");

@@ -196,7 +196,7 @@ void LocalTrashDialog::restoreSelectedTrashItems() {
                selectedItemsCount), "local-trash-restore-notes") ==
             QMessageBox::Yes) {
         const QSignalBlocker blocker(ui->trashTreeWidget);
-        Q_UNUSED(blocker);
+        Q_UNUSED(blocker)
 
         int restoreCount = 0;
         Q_FOREACH(QTreeWidgetItem *item,
@@ -242,7 +242,7 @@ void LocalTrashDialog::removeSelectedTrashItems() {
                selectedItemsCount), "local-trash-remove-notes") ==
             QMessageBox::Yes) {
         const QSignalBlocker blocker(ui->trashTreeWidget);
-        Q_UNUSED(blocker);
+        Q_UNUSED(blocker)
 
         int removeCount = 0;
         Q_FOREACH(QTreeWidgetItem *item,
