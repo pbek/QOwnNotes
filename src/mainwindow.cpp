@@ -5082,7 +5082,7 @@ void MainWindow::filterNotesBySearchLineEditText() {
         int columnWidth = ui->noteTreeWidget->columnWidth(0);
         ui->noteTreeWidget->setColumnCount(2);
         int maxWidth = 0;
-        QString searchTextFirstWord = searchText.split(" ")[0];
+        QStringList searchTextWords = searchText.split(" ");
 
         while (*it) {
             QTreeWidgetItem *item = *it;
@@ -5096,11 +5096,19 @@ void MainWindow::filterNotesBySearchLineEditText() {
             if (!isHidden) {
                 Note note = Note::fetch(noteId);
                 item->setTextColor(1, QColor(Qt::gray));
-                const int count = note.countSearchTextInNote(searchTextFirstWord);
+                int count = 0;
+
+                Q_FOREACH(QString word, searchTextWords) {
+                        count += note.countSearchTextInNote(word);
+                }
+
                 const QString text = QString::number(count);
                 item->setText(1, text);
-                item->setToolTip(1, tr("Found <strong>%n</strong> occurrence(s) of word <strong>%1</strong>", "",
-                                       count).arg(searchTextFirstWord));
+
+                const QString &toolTipText = searchTextWords.count() == 1 ?
+                        tr("Found <strong>%n</strong> occurrence(s) of <strong>%1</strong>", "", count).arg(searchText) :
+                        tr("Found <strong>%n</strong> occurrence(s) of any word of <strong>%1</strong>", "", count).arg(searchText);
+                item->setToolTip(1, toolTipText);
 
                 // calculate the size of the search count column
                 QFontMetrics fm(item->font(1));
