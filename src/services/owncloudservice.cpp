@@ -1017,11 +1017,12 @@ void OwnCloudService::showOwnCloudServerErrorMessage(
 void OwnCloudService::showOwnCloudMessage(
         QString headline, QString message, bool withSettingsButton) {
     if (headline.isEmpty()) {
-        headline = "ownCloud";
+        headline = Utils::Misc::replaceOwnCloudText("ownCloud");
     }
 
     if (message.isEmpty()) {
-        message = tr("You need to setup your ownCloud server!");
+        message = Utils::Misc::replaceOwnCloudText(
+                tr("You need to setup your ownCloud server!"));
     }
 
     // don't show an actual message box if there already is one present on

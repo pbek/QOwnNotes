@@ -5,6 +5,7 @@
 #include <QPushButton>
 #include <QJSValue>
 #include <QJSValueIterator>
+#include <utils/misc.h>
 
 TrashDialog::TrashDialog(QJSValue notes, MainWindow *mainWindow,
                          QWidget *parent) :
@@ -22,11 +23,12 @@ TrashDialog::TrashDialog(QJSValue notes, MainWindow *mainWindow,
     ui->buttonBox->clear();
 
     button = new QPushButton(tr("&Restore selected note on server"));
-    button->setToolTip(tr("<h3>Slower, but with note versions</h3>"
+    button->setToolTip(Utils::Misc::replaceOwnCloudText(
+            tr("<h3>Slower, but with note versions</h3>"
           "<p>The note will be restored on your ownCloud "
                                   "server with all versions.</p>"
           "<p>You will have to wait until it is synced to "
-                                  "QOwnNotes by ownCloud sync.</p>"));
+                                  "QOwnNotes by ownCloud sync.</p>")));
     button->setProperty("ActionRole", RestoreOnServer);
     button->setDefault(false);
     button->setIcon(
@@ -36,11 +38,12 @@ TrashDialog::TrashDialog(QJSValue notes, MainWindow *mainWindow,
     ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);
 
     button = new QPushButton(tr("&Download selected note"));
-    button->setToolTip(tr("<h3>Faster, but without versions</h3>"
+    button->setToolTip(Utils::Misc::replaceOwnCloudText(
+            tr("<h3>Faster, but without versions</h3>"
           "<p>The note will be created with the text from the preview.</p>"
           "<p>The note versions on your ownCloud server will not be restored "
                                   "and the note will remain in the trash.</p>"
-          "<p>You can always restore the note and its versions later.</p>"));
+          "<p>You can always restore the note and its versions later.</p>")));
     button->setProperty("ActionRole", Download);
     button->setDefault(false);
     button->setIcon(
