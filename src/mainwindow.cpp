@@ -5120,7 +5120,9 @@ void MainWindow::filterNotesBySearchLineEditText() {
 
         // resize the column 0 so we can see the search counts
         columnWidth = std::max(10, columnWidth - maxWidth - 5);
+//        ui->noteTreeWidget->resizeColumnToContents(1);
         ui->noteTreeWidget->setColumnWidth(0, columnWidth);
+        ui->noteTreeWidget->setColumnWidth(1, maxWidth);
     } else {
         // otherwise show all items
         while (*it) {
