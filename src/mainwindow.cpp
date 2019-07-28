@@ -5137,7 +5137,7 @@ void MainWindow::filterNotesBySearchLineEditText() {
  * @param searchText
  */
 void MainWindow::doSearchInNote(QString searchText) {
-    QStringList searchTextTerms = Note::buildQueryStringList(searchText);
+    QStringList searchTextTerms = Note::buildQueryStringList(searchText, true);
 
     if (searchTextTerms.count() > 1) {
         QString localSearchTerm = "(" + searchTextTerms.join("|") + ")";
