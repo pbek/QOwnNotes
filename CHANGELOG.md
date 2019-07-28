@@ -2,7 +2,7 @@
 
 ## 19.7.10
 - the search result count ([#1248](https://github.com/pbek/QOwnNotes/issues/1248))
-  and the automatic search inside the current note ([#1248](https://github.com/pbek/QOwnNotes/issues/1247))
+  and the automatic search inside the current note ([#1247](https://github.com/pbek/QOwnNotes/issues/1247))
   will now also support exact searches like `"exact phrase"`
 
 ## 19.7.9
