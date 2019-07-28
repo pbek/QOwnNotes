@@ -940,7 +940,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="680"/>
-        <location filename="../mainwindow.cpp" line="7769"/>
+        <location filename="../mainwindow.cpp" line="7771"/>
         <source>Add a tag to the current note</source>
         <translation>Tilføj et tag til den nuværende note</translation>
     </message>
@@ -1056,13 +1056,13 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1402"/>
-        <location filename="../mainwindow.cpp" line="9263"/>
+        <location filename="../mainwindow.cpp" line="9265"/>
         <source>Select &amp;all notes</source>
         <translation>Vælg &amp;alle noter</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1411"/>
-        <location filename="../mainwindow.cpp" line="5884"/>
+        <location filename="../mainwindow.cpp" line="5886"/>
         <source>Insert &amp;link</source>
         <translation>Indsæt &amp; link</translation>
     </message>
@@ -1117,7 +1117,7 @@
         <translation>Søg eller lav notat</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7770"/>
+        <location filename="../mainwindow.cpp" line="7772"/>
         <source>Add a tag to the selected notes</source>
         <translation>Tilføj et tag til de valgte noter</translation>
     </message>
@@ -1128,7 +1128,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="869"/>
-        <location filename="../mainwindow.cpp" line="5931"/>
+        <location filename="../mainwindow.cpp" line="5933"/>
         <source>Export</source>
         <translation>Eksportere</translation>
     </message>
@@ -1139,7 +1139,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="907"/>
-        <location filename="../mainwindow.cpp" line="5913"/>
+        <location filename="../mainwindow.cpp" line="5915"/>
         <source>Print</source>
         <translation>Udskriv</translation>
     </message>
@@ -1492,6 +1492,7 @@
         <location filename="../mainwindow.ui" line="2162"/>
         <location filename="../mainwindow.ui" line="2165"/>
         <source>Open the Riot room</source>
+        <extracomment>&quot;Riot&quot; as in the chat service</extracomment>
         <translation type="unfinished">Open the Riot room</translation>
     </message>
     <message>
@@ -1501,7 +1502,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2201"/>
-        <location filename="../mainwindow.cpp" line="10263"/>
+        <location filename="../mainwindow.cpp" line="10265"/>
         <source>Remove current workspace</source>
         <translation>Fjern det nuværende arbejdsområde</translation>
     </message>
@@ -1543,7 +1544,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2275"/>
-        <location filename="../mainwindow.cpp" line="5891"/>
+        <location filename="../mainwindow.cpp" line="5893"/>
         <source>Insert block &amp;quote</source>
         <translation>Indsæt blok &amp;citat</translation>
     </message>
@@ -1570,7 +1571,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2322"/>
-        <location filename="../mainwindow.cpp" line="9238"/>
+        <location filename="../mainwindow.cpp" line="9240"/>
         <source>Open note in different window</source>
         <translation>Åbn note i forskellige vinduer</translation>
     </message>
@@ -1591,7 +1592,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2362"/>
-        <location filename="../mainwindow.cpp" line="9246"/>
+        <location filename="../mainwindow.cpp" line="9248"/>
         <source>Show note git versions</source>
         <translation>Vis notat git versioner</translation>
     </message>
@@ -1794,8 +1795,8 @@ Gendan nuværende notat?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4915"/>
-        <location filename="../mainwindow.cpp" line="6324"/>
-        <location filename="../mainwindow.cpp" line="9325"/>
+        <location filename="../mainwindow.cpp" line="6326"/>
+        <location filename="../mainwindow.cpp" line="9327"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Annuller</translation>
     </message>
@@ -1895,7 +1896,7 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4103"/>
-        <location filename="../mainwindow.cpp" line="9489"/>
+        <location filename="../mainwindow.cpp" line="9491"/>
         <source>Remove selected folders</source>
         <translation>Fjern markerede mapper</translation>
     </message>
@@ -1927,7 +1928,7 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4189"/>
-        <location filename="../mainwindow.cpp" line="8462"/>
+        <location filename="../mainwindow.cpp" line="8464"/>
         <source>Move selected notes</source>
         <translation>Flyt markerede noter</translation>
     </message>
@@ -1941,7 +1942,7 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4282"/>
-        <location filename="../mainwindow.cpp" line="8546"/>
+        <location filename="../mainwindow.cpp" line="8548"/>
         <source>Copy selected notes</source>
         <translation>Kopier valgte noter</translation>
     </message>
@@ -2013,99 +2014,99 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5566"/>
+        <location filename="../mainwindow.cpp" line="5568"/>
         <source>Note was not found</source>
         <translation>Bemærk blev ikke fundet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5567"/>
+        <location filename="../mainwindow.cpp" line="5569"/>
         <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
         <translation>Bemærk blev ikke fundet, lav ny note &lt;strong&gt;%1&lt;/ strong&gt;?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5820"/>
+        <location filename="../mainwindow.cpp" line="5822"/>
         <source>Note versions are currently loaded from your ownCloud server</source>
         <translation>Bemærk versioner er i øjeblikket indlæst fra din ownCloud server</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5835"/>
+        <location filename="../mainwindow.cpp" line="5837"/>
         <source>Trashed notes are currently loaded from your ownCloud server</source>
         <translation>Trashed noter er i øjeblikket indlæst fra din ownCloud server</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5901"/>
+        <location filename="../mainwindow.cpp" line="5903"/>
         <source>Copy code block</source>
         <translation>Kopier kode blok</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5920"/>
+        <location filename="../mainwindow.cpp" line="5922"/>
         <source>Print selected text</source>
         <translation>Udskriv markeret tekst</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5926"/>
+        <location filename="../mainwindow.cpp" line="5928"/>
         <source>Print selected text (preview)</source>
         <translation>Udskriv markeret tekst (forhåndsvisning)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5942"/>
+        <location filename="../mainwindow.cpp" line="5944"/>
         <source>Export selected text as PDF</source>
         <translation>Udfør valgt tekst som PDF</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5948"/>
+        <location filename="../mainwindow.cpp" line="5950"/>
         <source>Export selected text as PDF (preview)</source>
         <translation>Eksporter valgt tekst som PDF (forhåndsvisning)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6130"/>
+        <location filename="../mainwindow.cpp" line="6132"/>
         <source>Image files</source>
         <translation>Billedfiler</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6320"/>
+        <location filename="../mainwindow.cpp" line="6322"/>
         <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
         <translation>Din note bliver dekrypteret og gemt som almindelig tekst igen. Husk, at den ukrypterede note muligvis bliver synkroniseret til din server, og følsom tekst kan blive udsat! &lt;br /&gt; Vil du dekryptere din note?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6407"/>
+        <location filename="../mainwindow.cpp" line="6409"/>
         <source>Markdown files</source>
         <translation>Markdown filer</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6462"/>
+        <location filename="../mainwindow.cpp" line="6464"/>
         <source>Bookmarked note position at slot %1</source>
         <translation>Bogmærket notatposition i slot %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6478"/>
+        <location filename="../mainwindow.cpp" line="6480"/>
         <source>Jumped to bookmark position at slot %1</source>
         <translation>Hoppet til bogmærkeposition i slot %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6698"/>
-        <location filename="../mainwindow.cpp" line="6768"/>
+        <location filename="../mainwindow.cpp" line="6700"/>
+        <location filename="../mainwindow.cpp" line="6770"/>
         <source>Inserting image</source>
         <translation>Indsætte billede</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6703"/>
-        <location filename="../mainwindow.cpp" line="6772"/>
+        <location filename="../mainwindow.cpp" line="6705"/>
+        <location filename="../mainwindow.cpp" line="6774"/>
         <source>Done inserting image</source>
         <translation>Færdig indsat billede</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6705"/>
+        <location filename="../mainwindow.cpp" line="6707"/>
         <source>Inserting attachment</source>
         <translation>Indsætte vedhæftet fil</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6710"/>
+        <location filename="../mainwindow.cpp" line="6712"/>
         <source>Done inserting attachment</source>
         <translation>Færdig indsat vedhæftning</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6722"/>
+        <location filename="../mainwindow.cpp" line="6724"/>
         <source>Copied %n note(s) to %1</source>
         <translation>
             <numerusform>Kopierede %n note til %1</numerusform>
@@ -2113,7 +2114,7 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6731"/>
+        <location filename="../mainwindow.cpp" line="6733"/>
         <source>Failed to copy %n note(s) (most likely already existing)</source>
         <translation>
             <numerusform>Kunne ikke kopiere %n note (sandsynligvis allerede eksisterende)</numerusform>
@@ -2121,7 +2122,7 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6741"/>
+        <location filename="../mainwindow.cpp" line="6743"/>
         <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
         <translation>
             <numerusform>Skipet kopiering af %n note (ingen markering eller tekstfil eller ikke læsbar)</numerusform>
@@ -2129,178 +2130,178 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6755"/>
+        <location filename="../mainwindow.cpp" line="6757"/>
         <source>Saving temporary image</source>
         <translation>Gem midlertidigt billede</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6775"/>
+        <location filename="../mainwindow.cpp" line="6777"/>
         <source>Temporary file can&apos;t be opened</source>
         <translation>Midlertidig fil kan ikke åbnes</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6816"/>
+        <location filename="../mainwindow.cpp" line="6818"/>
         <source>Downloading %1</source>
         <translation>Downloadning af %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6997"/>
+        <location filename="../mainwindow.cpp" line="6999"/>
         <source>Reset font size to %1 pt</source>
         <comment>Will be shown after the font size is reset by &apos;Reset note text size&apos;</comment>
         <translation>Nulstil skriftstørrelse til %1 pt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7815"/>
+        <location filename="../mainwindow.cpp" line="7817"/>
         <source>Remove tag &apos;%1&apos; from the current note</source>
         <translation>Fjern tag &apos;%1&apos; fra den nuværende note</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7817"/>
+        <location filename="../mainwindow.cpp" line="7819"/>
         <source>Remove tag &apos;%1&apos; from the selected notes</source>
         <translation>Fjern tag &apos;%1&apos; fra de valgte noter</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8020"/>
+        <location filename="../mainwindow.cpp" line="8022"/>
         <source>Rename tag</source>
         <translation>Omdøb tag</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8021"/>
+        <location filename="../mainwindow.cpp" line="8023"/>
         <source>Assign color</source>
         <translation>Tildele farve</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8022"/>
+        <location filename="../mainwindow.cpp" line="8024"/>
         <source>Disable color</source>
         <translation>Deaktivere farve</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8026"/>
+        <location filename="../mainwindow.cpp" line="8028"/>
         <source>&amp;Move tags to…</source>
         <translation>&amp;Flytte tags til…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8245"/>
+        <location filename="../mainwindow.cpp" line="8247"/>
         <source>Move to the root</source>
         <comment>to move a tag to the current tag in the tag context menu</comment>
         <translation>Flytte til roden</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8688"/>
+        <location filename="../mainwindow.cpp" line="8690"/>
         <source>An url was opened at the current cursor position</source>
         <translation>En url blev åbnet ved den aktuelle markørposition</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8789"/>
+        <location filename="../mainwindow.cpp" line="8791"/>
         <source>No equation was found in front of the cursor</source>
         <translation>Der blev ikke fundet nogen ligning foran markøren</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8806"/>
+        <location filename="../mainwindow.cpp" line="8808"/>
         <source>Result for equation: %1 = %2</source>
         <translation>Resultat for ligning: %1 = %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8907"/>
+        <location filename="../mainwindow.cpp" line="8909"/>
         <source>The scripting engine was reloaded</source>
         <translation>Skriptmaskinen blev genindlæst</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8943"/>
+        <location filename="../mainwindow.cpp" line="8945"/>
         <source>HTML files</source>
         <translation>HTML-filer</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9140"/>
-        <location filename="../mainwindow.cpp" line="9308"/>
+        <location filename="../mainwindow.cpp" line="9142"/>
+        <location filename="../mainwindow.cpp" line="9310"/>
         <source>Rename note</source>
         <translation>Omdøb notat</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9141"/>
+        <location filename="../mainwindow.cpp" line="9143"/>
         <source>Allows you to rename the filename of the note</source>
         <translation>Giver dig mulighed for at omdøbe filnavnet på noten</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9153"/>
+        <location filename="../mainwindow.cpp" line="9155"/>
         <source>&amp;Move notes to…</source>
         <translation>&amp;Flyt noter til…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9154"/>
+        <location filename="../mainwindow.cpp" line="9156"/>
         <source>&amp;Copy notes to…</source>
         <translation>&amp;Kopier noter til…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9183"/>
+        <location filename="../mainwindow.cpp" line="9185"/>
         <source>Move notes to subfolder…</source>
         <translation>Flyt noter til undermappe…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9187"/>
+        <location filename="../mainwindow.cpp" line="9189"/>
         <source>Copy notes to subfolder…</source>
         <translation>Kopier noter til undermappe…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9195"/>
+        <location filename="../mainwindow.cpp" line="9197"/>
         <source>&amp;Tag selected notes with…</source>
         <translation>&amp;Tag markerede noter med…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9217"/>
+        <location filename="../mainwindow.cpp" line="9219"/>
         <source>&amp;Remove tag from selected notes…</source>
         <translation>&amp;Fjern tag fra udvalgte noter…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9308"/>
+        <location filename="../mainwindow.cpp" line="9310"/>
         <source>Name:</source>
         <translation>Navn:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9320"/>
+        <location filename="../mainwindow.cpp" line="9322"/>
         <source>Note renaming not enabled!</source>
         <translation>Bemærk omdøbning ikke aktiveret!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9488"/>
+        <location filename="../mainwindow.cpp" line="9490"/>
         <source>Rename subfolder</source>
         <translation>Omdøb undermappe</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10043"/>
+        <location filename="../mainwindow.cpp" line="10045"/>
         <source>Create new workspace</source>
         <translation>Opret nyt arbejdsområde</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10043"/>
-        <location filename="../mainwindow.cpp" line="10301"/>
+        <location filename="../mainwindow.cpp" line="10045"/>
+        <location filename="../mainwindow.cpp" line="10303"/>
         <source>Workspace name:</source>
         <translation>Arbejdspladsnavn:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10165"/>
+        <location filename="../mainwindow.cpp" line="10167"/>
         <source>full</source>
         <comment>full workspace</comment>
         <translation>fuld</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10172"/>
+        <location filename="../mainwindow.cpp" line="10174"/>
         <source>minimal</source>
         <comment>minimal workspace</comment>
         <translation>minimal</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10264"/>
+        <location filename="../mainwindow.cpp" line="10266"/>
         <source>Remove the current workspace?</source>
         <translation>Fjern det nuværende arbejdsområde?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10301"/>
+        <location filename="../mainwindow.cpp" line="10303"/>
         <source>Rename workspace</source>
         <translation>Omdøb arbejdsområde</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="10436"/>
+        <location filename="../mainwindow.cpp" line="10438"/>
         <source>%n chars</source>
         <comment>characters</comment>
         <translation>
@@ -2309,32 +2310,32 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10661"/>
+        <location filename="../mainwindow.cpp" line="10663"/>
         <source>Select file to insert</source>
         <translation>Vælg fil, der skal indsættes</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10694"/>
+        <location filename="../mainwindow.cpp" line="10696"/>
         <source>Disallow all note editing</source>
         <translation>Tillad al note redigering</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10840"/>
+        <location filename="../mainwindow.cpp" line="10842"/>
         <source>Select text files to import</source>
         <translation>Vælg tekstfiler, der skal importeres</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10869"/>
+        <location filename="../mainwindow.cpp" line="10871"/>
         <source>Importing: %1</source>
         <translation>Importerer: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10932"/>
+        <location filename="../mainwindow.cpp" line="10934"/>
         <source>Note headline &apos;%1&apos; was copied to the clipboard</source>
         <translation>Note overskrift &apos;%1&apos; blev kopieret til udklipsholderen</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="7788"/>
+        <location filename="../mainwindow.cpp" line="7790"/>
         <source>%n notes selected</source>
         <translation>
             <numerusform>%n note valgt</numerusform>
@@ -2343,7 +2344,7 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2407"/>
-        <location filename="../mainwindow.cpp" line="10695"/>
+        <location filename="../mainwindow.cpp" line="10697"/>
         <source>Allow all note editing</source>
         <translation>Tillad al note redigering</translation>
     </message>
@@ -2424,77 +2425,77 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
         <translation>Du har ikke valgt nogen todo lister. &lt;br /&gt; Kontroller din &lt;strong&gt; Todo &lt;/ strong&gt; konfiguration i indstillingerne!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5698"/>
+        <location filename="../mainwindow.cpp" line="5700"/>
         <source>Open QOwnNotes</source>
         <translation>Åben QOwnNotes</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5400"/>
-        <location filename="../mainwindow.cpp" line="5707"/>
-        <location filename="../mainwindow.cpp" line="9135"/>
-        <location filename="../mainwindow.cpp" line="9486"/>
+        <location filename="../mainwindow.cpp" line="5402"/>
+        <location filename="../mainwindow.cpp" line="5709"/>
+        <location filename="../mainwindow.cpp" line="9137"/>
+        <location filename="../mainwindow.cpp" line="9488"/>
         <source>New note</source>
         <translation>Ny note</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5723"/>
+        <location filename="../mainwindow.cpp" line="5725"/>
         <source>Recent notes</source>
         <translation>Seneste noter</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5753"/>
+        <location filename="../mainwindow.cpp" line="5755"/>
         <source>Show todo lists</source>
         <translation>Vis todo lister</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5764"/>
+        <location filename="../mainwindow.cpp" line="5766"/>
         <source>Recent tasks</source>
         <translation>Seneste opgaver</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5796"/>
+        <location filename="../mainwindow.cpp" line="5798"/>
         <source>Quit</source>
         <translation>Afslut</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7151"/>
+        <location filename="../mainwindow.cpp" line="7153"/>
         <source>show notes from all note subfolders (%1)</source>
         <translation>vis noter fra alle notesundermapper (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7170"/>
+        <location filename="../mainwindow.cpp" line="7172"/>
         <source>show notes in note root folder (%1)</source>
         <translation>vis noter i note rodmappe (%1)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="316"/>
         <location filename="../mainwindow.cpp" line="677"/>
-        <location filename="../mainwindow.cpp" line="7178"/>
+        <location filename="../mainwindow.cpp" line="7180"/>
         <source>Note folder</source>
         <translation>Note mappe</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8402"/>
+        <location filename="../mainwindow.cpp" line="8404"/>
         <source>Copy to note folder</source>
         <translation>Kopier til notatmappe</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8403"/>
+        <location filename="../mainwindow.cpp" line="8405"/>
         <source>Move to note folder</source>
         <translation>Flyt til notatmappe</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8404"/>
+        <location filename="../mainwindow.cpp" line="8406"/>
         <source>Copy to this subfolder</source>
         <translation>Kopier til denne undermappe</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8405"/>
+        <location filename="../mainwindow.cpp" line="8407"/>
         <source>Move to this subfolder</source>
         <translation>Flyt til denne undermappe</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="8456"/>
+        <location filename="../mainwindow.cpp" line="8458"/>
         <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>Flyt %n valgt note til notat undermappe &lt;strong&gt; %2&lt;/ strong&gt;?</numerusform>
@@ -2503,12 +2504,12 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4596"/>
-        <location filename="../mainwindow.cpp" line="10854"/>
+        <location filename="../mainwindow.cpp" line="10856"/>
         <source>Cancel</source>
         <translation>Annuller</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="8519"/>
+        <location filename="../mainwindow.cpp" line="8521"/>
         <source>%n note(s) were moved to note subfolder &quot;%2&quot;</source>
         <translation>
             <numerusform>%n note blev flyttet for at notere undermappe &quot;%2&quot;</numerusform>
@@ -2516,7 +2517,7 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="8540"/>
+        <location filename="../mainwindow.cpp" line="8542"/>
         <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>Kopier %n valgt note til notat undermappe &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -2524,7 +2525,7 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="8591"/>
+        <location filename="../mainwindow.cpp" line="8593"/>
         <source>%n note(s) were copied to note subfolder &quot;%2&quot;</source>
         <translation>
             <numerusform>%n note blev kopieret for at notere undermappe &quot;%2&quot;</numerusform>
@@ -2532,52 +2533,52 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9236"/>
+        <location filename="../mainwindow.cpp" line="9238"/>
         <source>Open note in external editor</source>
         <translation>Åbn note i ekstern editor</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9240"/>
+        <location filename="../mainwindow.cpp" line="9242"/>
         <source>Show note in file manager</source>
         <translation>Åbn note i ekstern editor</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9321"/>
+        <location filename="../mainwindow.cpp" line="9323"/>
         <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
         <translation>Hvis du vil omdøbe din note, skal du aktivere muligheden for at lade notatfilen være forskellig fra overskriften.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9487"/>
+        <location filename="../mainwindow.cpp" line="9489"/>
         <source>New subfolder</source>
         <translation>Ny undermappe</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9491"/>
+        <location filename="../mainwindow.cpp" line="9493"/>
         <source>Show folder in file manager</source>
         <translation>Vis mappe i filhåndtering</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9527"/>
+        <location filename="../mainwindow.cpp" line="9529"/>
         <source>Create a new folder</source>
         <translation>Opret en ny mappe</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9527"/>
+        <location filename="../mainwindow.cpp" line="9529"/>
         <source>Folder name:</source>
         <translation>Mappenavn:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7109"/>
+        <location filename="../mainwindow.cpp" line="7111"/>
         <source>show all untagged notes (%1)</source>
         <translation>vis alle untagged noter (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7112"/>
+        <location filename="../mainwindow.cpp" line="7114"/>
         <source>Untagged notes</source>
         <translation>Ukodede noter</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8944"/>
+        <location filename="../mainwindow.cpp" line="8946"/>
         <source>Export current note as HTML file</source>
         <translation>Eksporter nuværende note som HTML-fil</translation>
     </message>
@@ -2607,12 +2608,12 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
         <translation>&amp;Ok</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9145"/>
+        <location filename="../mainwindow.cpp" line="9147"/>
         <source>&amp;Remove notes</source>
         <translation>&amp;Fjerne noter</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5884"/>
+        <location filename="../mainwindow.cpp" line="5886"/>
         <source>&amp;Link selected text</source>
         <translation>&amp;Link valgt tekst</translation>
     </message>
@@ -2628,7 +2629,7 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2592"/>
-        <location filename="../mainwindow.cpp" line="5338"/>
+        <location filename="../mainwindow.cpp" line="5340"/>
         <source>Stored current note to disk</source>
         <translation>Gemt aktuel note til disk</translation>
     </message>
@@ -2650,54 +2651,62 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
             <numerusform>Gemt %n noter til disk</numerusform>
         </translation>
     </message>
+    <message numerus="yes">
+        <location filename="../mainwindow.cpp" line="5110"/>
+        <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7081"/>
+        <location filename="../mainwindow.cpp" line="7083"/>
         <source>show all notes (%1)</source>
         <translation>vis alle noter (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7084"/>
-        <location filename="../mainwindow.cpp" line="7154"/>
+        <location filename="../mainwindow.cpp" line="7086"/>
+        <location filename="../mainwindow.cpp" line="7156"/>
         <source>All notes</source>
         <translation>Alle noter</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8012"/>
+        <location filename="../mainwindow.cpp" line="8014"/>
         <source>&amp;Add tag</source>
         <translation>&amp;Tilføj tag</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8061"/>
+        <location filename="../mainwindow.cpp" line="8063"/>
         <source>Tag could not be created!</source>
         <translation>Tag kunne ikke oprettes!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8246"/>
+        <location filename="../mainwindow.cpp" line="8248"/>
         <source>Move to this tag</source>
         <translation>Flyt til dette mærke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8296"/>
+        <location filename="../mainwindow.cpp" line="8298"/>
         <source>Tag this</source>
         <translation>Tag dette</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8329"/>
+        <location filename="../mainwindow.cpp" line="8331"/>
         <source>Cannot move tag &apos;%1&apos; to this tag</source>
         <translation>Kan ikke flytte tag &apos;%1&apos; til dette tag</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8345"/>
+        <location filename="../mainwindow.cpp" line="8347"/>
         <source>Moved tag &apos;%1&apos; to new tag</source>
         <translation>Flyttet tag &apos;%1&apos; til nyt tag</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7340"/>
+        <location filename="../mainwindow.cpp" line="7342"/>
         <source>show all notes tagged with &apos;%1&apos; (%2)</source>
         <translation>vis alle noter mærket med &apos;%1&apos; (%2)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8023"/>
+        <location filename="../mainwindow.cpp" line="8025"/>
         <source>&amp;Remove tags</source>
         <translation>&amp;Fjern tags</translation>
     </message>
@@ -2823,7 +2832,7 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2593"/>
-        <location filename="../mainwindow.cpp" line="5339"/>
+        <location filename="../mainwindow.cpp" line="5341"/>
         <source>Current note could not be stored to disk</source>
         <translation>Aktuel note kunne ikke gemmes på disk</translation>
     </message>
@@ -2863,44 +2872,36 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
             <numerusform></numerusform>
         </translation>
     </message>
-    <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="5110"/>
-        <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any word of &lt;strong&gt;%1&lt;/strong&gt;</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5400"/>
+        <location filename="../mainwindow.cpp" line="5402"/>
         <source>Note headline</source>
         <translation>Note overskrift</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5890"/>
+        <location filename="../mainwindow.cpp" line="5892"/>
         <source>Block &amp;quote selected text</source>
         <comment>Action to apply a block quote formatting to the selected text</comment>
         <translation>Bloker &amp;citat valgt tekst</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6828"/>
+        <location filename="../mainwindow.cpp" line="6830"/>
         <source>Downloading images finished</source>
         <translation>Downloadning af billeder er færdig</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6970"/>
+        <location filename="../mainwindow.cpp" line="6972"/>
         <source>Increased font size to %1 pt</source>
         <translation>Øget skriftstørrelse til %1 pt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6987"/>
+        <location filename="../mainwindow.cpp" line="6989"/>
         <source>Decreased font size to %1 pt</source>
         <translation>Faldet skrifttype til %1 pt</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4888"/>
         <location filename="../mainwindow.cpp" line="4914"/>
-        <location filename="../mainwindow.cpp" line="9324"/>
+        <location filename="../mainwindow.cpp" line="9326"/>
         <source>Open &amp;settings</source>
         <translation>Åbn &amp;indstillinger</translation>
     </message>
@@ -2915,32 +2916,32 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
         <translation>forlade distraktionsfri tilstand</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6131"/>
+        <location filename="../mainwindow.cpp" line="6133"/>
         <source>Select image to insert</source>
         <translation>Vælg billede, der skal indsættes</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6263"/>
+        <location filename="../mainwindow.cpp" line="6265"/>
         <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
         <translation>Indtast venligst din &lt;strong&gt; adgangskode &lt;/ strong&gt; for at kryptere noten. &lt;br /&gt; Husk, at du skal &lt;strong&gt; huske &lt;/ strong&gt; dit kodeord for at læse indholdet af noten &lt;br /&gt; og at du kun &lt;strong&gt; kan &lt;/ strong&gt; gøre det &lt;strong&gt; i QOwnNotes &lt;/ strong &gt;!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6319"/>
+        <location filename="../mainwindow.cpp" line="6321"/>
         <source>Decrypt note and store it as plain text</source>
         <translation>Dekryptere notat og gem det som almindelig tekst</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6324"/>
+        <location filename="../mainwindow.cpp" line="6326"/>
         <source>&amp;Decrypt</source>
         <translation>&amp;Dekryptér</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6350"/>
+        <location filename="../mainwindow.cpp" line="6352"/>
         <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
         <translation>&lt;br/&gt;Du vil kunne redigere din krypterede note.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6408"/>
+        <location filename="../mainwindow.cpp" line="6410"/>
         <source>Export current note as Markdown file</source>
         <translation>Eksporter nuværende note som Markdown-fil</translation>
     </message>

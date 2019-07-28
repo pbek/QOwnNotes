@@ -940,7 +940,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="680"/>
-        <location filename="../mainwindow.cpp" line="7769"/>
+        <location filename="../mainwindow.cpp" line="7771"/>
         <source>Add a tag to the current note</source>
         <translation>Προσθήκη ετικέτας στην τρέχουσα σημείωση</translation>
     </message>
@@ -1056,13 +1056,13 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1402"/>
-        <location filename="../mainwindow.cpp" line="9263"/>
+        <location filename="../mainwindow.cpp" line="9265"/>
         <source>Select &amp;all notes</source>
         <translation>Επιλογή &amp;όλων των σημειώσεων</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1411"/>
-        <location filename="../mainwindow.cpp" line="5884"/>
+        <location filename="../mainwindow.cpp" line="5886"/>
         <source>Insert &amp;link</source>
         <translation>Εισαγωγή &amp;συνδέσμου</translation>
     </message>
@@ -1117,7 +1117,7 @@
         <translation>Αναζητήστε ή δημιουργήστε σημείωση</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7770"/>
+        <location filename="../mainwindow.cpp" line="7772"/>
         <source>Add a tag to the selected notes</source>
         <translation>Προσθέστε ετικέτα στις επιλεγμένες σημειώσεις</translation>
     </message>
@@ -1128,7 +1128,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="869"/>
-        <location filename="../mainwindow.cpp" line="5931"/>
+        <location filename="../mainwindow.cpp" line="5933"/>
         <source>Export</source>
         <translation>Εξαγωγή</translation>
     </message>
@@ -1139,7 +1139,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="907"/>
-        <location filename="../mainwindow.cpp" line="5913"/>
+        <location filename="../mainwindow.cpp" line="5915"/>
         <source>Print</source>
         <translation>Εκτύπωση</translation>
     </message>
@@ -1492,6 +1492,7 @@
         <location filename="../mainwindow.ui" line="2162"/>
         <location filename="../mainwindow.ui" line="2165"/>
         <source>Open the Riot room</source>
+        <extracomment>&quot;Riot&quot; as in the chat service</extracomment>
         <translation type="unfinished">Open the Riot room</translation>
     </message>
     <message>
@@ -1501,7 +1502,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2201"/>
-        <location filename="../mainwindow.cpp" line="10263"/>
+        <location filename="../mainwindow.cpp" line="10265"/>
         <source>Remove current workspace</source>
         <translation>Αφαίρεση τρέχοντος χώρου εργασίας</translation>
     </message>
@@ -1543,7 +1544,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2275"/>
-        <location filename="../mainwindow.cpp" line="5891"/>
+        <location filename="../mainwindow.cpp" line="5893"/>
         <source>Insert block &amp;quote</source>
         <translation>Εισαγάγετε &amp;προσφορά μπλοκ</translation>
     </message>
@@ -1570,7 +1571,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2322"/>
-        <location filename="../mainwindow.cpp" line="9238"/>
+        <location filename="../mainwindow.cpp" line="9240"/>
         <source>Open note in different window</source>
         <translation>Ανοίξτε τη σημείωση σε διαφορετικό παράθυρο</translation>
     </message>
@@ -1591,7 +1592,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2362"/>
-        <location filename="../mainwindow.cpp" line="9246"/>
+        <location filename="../mainwindow.cpp" line="9248"/>
         <source>Show note git versions</source>
         <translation>Εμφάνισε σημείωση εκδόσεων git</translation>
     </message>
@@ -1794,8 +1795,8 @@ Restore current note?</source>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4915"/>
-        <location filename="../mainwindow.cpp" line="6324"/>
-        <location filename="../mainwindow.cpp" line="9325"/>
+        <location filename="../mainwindow.cpp" line="6326"/>
+        <location filename="../mainwindow.cpp" line="9327"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Άκυρο</translation>
     </message>
@@ -1895,7 +1896,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4103"/>
-        <location filename="../mainwindow.cpp" line="9489"/>
+        <location filename="../mainwindow.cpp" line="9491"/>
         <source>Remove selected folders</source>
         <translation>Διαγραφή επιλεγμένων φακέλων</translation>
     </message>
@@ -1927,7 +1928,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4189"/>
-        <location filename="../mainwindow.cpp" line="8462"/>
+        <location filename="../mainwindow.cpp" line="8464"/>
         <source>Move selected notes</source>
         <translation>Μετακίνηση επιλεγμένων σημειώσεων</translation>
     </message>
@@ -1941,7 +1942,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4282"/>
-        <location filename="../mainwindow.cpp" line="8546"/>
+        <location filename="../mainwindow.cpp" line="8548"/>
         <source>Copy selected notes</source>
         <translation>Αντιγραφή επιλεγμένων σημειώσεων</translation>
     </message>
@@ -2013,99 +2014,99 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5566"/>
+        <location filename="../mainwindow.cpp" line="5568"/>
         <source>Note was not found</source>
         <translation>Η σημείωση δεν βρέθηκε</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5567"/>
+        <location filename="../mainwindow.cpp" line="5569"/>
         <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
         <translation>Δεν βρέθηκε η σημείωση, δημιουργήστε νέα σημείωση &lt;strong&gt;%1&lt;/strong&gt;;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5820"/>
+        <location filename="../mainwindow.cpp" line="5822"/>
         <source>Note versions are currently loaded from your ownCloud server</source>
         <translation>Οι εκδόσεις σημειώσεων φορτώνονται αυτήν τη στιγμή από το διακομιστή σας ownCloud</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5835"/>
+        <location filename="../mainwindow.cpp" line="5837"/>
         <source>Trashed notes are currently loaded from your ownCloud server</source>
         <translation>Οι διεγραμμένες σημειώσεις φορτώνονται αυτήν τη στιγμή από το διακομιστή σας ownCloud</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5901"/>
+        <location filename="../mainwindow.cpp" line="5903"/>
         <source>Copy code block</source>
         <translation>Αντιγράψτε το μπλοκ κώδικα</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5920"/>
+        <location filename="../mainwindow.cpp" line="5922"/>
         <source>Print selected text</source>
         <translation>Εκτύπωση επιλεγμένου κειμένου</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5926"/>
+        <location filename="../mainwindow.cpp" line="5928"/>
         <source>Print selected text (preview)</source>
         <translation>Εκτύπωση επιλεγμένου κειμένου (προεπισκόπηση)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5942"/>
+        <location filename="../mainwindow.cpp" line="5944"/>
         <source>Export selected text as PDF</source>
         <translation>Εξαγωγή του επιλεγμένου κειμένου ως PDF</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5948"/>
+        <location filename="../mainwindow.cpp" line="5950"/>
         <source>Export selected text as PDF (preview)</source>
         <translation>Εξαγωγή επιλεγμένου κειμένου ως PDF (προεπισκόπηση)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6130"/>
+        <location filename="../mainwindow.cpp" line="6132"/>
         <source>Image files</source>
         <translation>Αρχεία εικόνας</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6320"/>
+        <location filename="../mainwindow.cpp" line="6322"/>
         <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
         <translation>Η σημείωση θα αποκρυπτογραφηθεί και θα αποθηκευτεί ξανά ως απλό κείμενο. Έχετε υπόψη ότι η μη κρυπτογραφημένη σημείωση θα συγχρονιστεί με τον διακομιστή σας και ενδέχεται να εκτεθεί ευαίσθητο κείμενο! &lt;br/&gt; Θέλετε να αποκρυπτογραφήσετε τη σημείωσή σας;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6407"/>
+        <location filename="../mainwindow.cpp" line="6409"/>
         <source>Markdown files</source>
         <translation>Markdown αρχεία</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6462"/>
+        <location filename="../mainwindow.cpp" line="6464"/>
         <source>Bookmarked note position at slot %1</source>
         <translation>Ορίστικε σελιδοδείκτης σημείωσης στην υποδοχή %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6478"/>
+        <location filename="../mainwindow.cpp" line="6480"/>
         <source>Jumped to bookmark position at slot %1</source>
         <translation>Μεταπήδησε στη θέση σελιδοδείκτη στην υποδοχή %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6698"/>
-        <location filename="../mainwindow.cpp" line="6768"/>
+        <location filename="../mainwindow.cpp" line="6700"/>
+        <location filename="../mainwindow.cpp" line="6770"/>
         <source>Inserting image</source>
         <translation>Εισαγωγή εικόνας</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6703"/>
-        <location filename="../mainwindow.cpp" line="6772"/>
+        <location filename="../mainwindow.cpp" line="6705"/>
+        <location filename="../mainwindow.cpp" line="6774"/>
         <source>Done inserting image</source>
         <translation>Έγινε εισαγωγή εικόνας</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6705"/>
+        <location filename="../mainwindow.cpp" line="6707"/>
         <source>Inserting attachment</source>
         <translation>Εισαγωγή συνημμένου</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6710"/>
+        <location filename="../mainwindow.cpp" line="6712"/>
         <source>Done inserting attachment</source>
         <translation>Έγινε εισαγωγή συνημμένου</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6722"/>
+        <location filename="../mainwindow.cpp" line="6724"/>
         <source>Copied %n note(s) to %1</source>
         <translation>
             <numerusform>Αντιγραφή %n σημείωσης(ων) στο %1</numerusform>
@@ -2113,7 +2114,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6731"/>
+        <location filename="../mainwindow.cpp" line="6733"/>
         <source>Failed to copy %n note(s) (most likely already existing)</source>
         <translation>
             <numerusform>Αποτυχία αντιγραφής %n σημείωσης (πιθανότατα υπάρχει ήδη)</numerusform>
@@ -2121,7 +2122,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6741"/>
+        <location filename="../mainwindow.cpp" line="6743"/>
         <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
         <translation>
             <numerusform>Παράλειψη αντιγραφής %n σημείωσης (δεν υπάρχει βαθμολόγηση ή αρχείο κειμένου ή δεν είναι αναγνώσιμη)</numerusform>
@@ -2129,178 +2130,178 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6755"/>
+        <location filename="../mainwindow.cpp" line="6757"/>
         <source>Saving temporary image</source>
         <translation>Αποθήκευση προσωρινής εικόνας</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6775"/>
+        <location filename="../mainwindow.cpp" line="6777"/>
         <source>Temporary file can&apos;t be opened</source>
         <translation>Το προσωρινό αρχείο δεν μπορεί να ανοιχτεί</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6816"/>
+        <location filename="../mainwindow.cpp" line="6818"/>
         <source>Downloading %1</source>
         <translation>Λήψη %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6997"/>
+        <location filename="../mainwindow.cpp" line="6999"/>
         <source>Reset font size to %1 pt</source>
         <comment>Will be shown after the font size is reset by &apos;Reset note text size&apos;</comment>
         <translation>Επαναφορά του μεγέθους γραμματοσειράς σε %1 pt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7815"/>
+        <location filename="../mainwindow.cpp" line="7817"/>
         <source>Remove tag &apos;%1&apos; from the current note</source>
         <translation>Αφαιρέστε την ετικέτα &apos;%1&apos; από την τρέχουσα σημείωση</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7817"/>
+        <location filename="../mainwindow.cpp" line="7819"/>
         <source>Remove tag &apos;%1&apos; from the selected notes</source>
         <translation>Αφαιρέστε την ετικέτα &apos;%1&apos; από τις επιλεγμένες σημειώσεις</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8020"/>
+        <location filename="../mainwindow.cpp" line="8022"/>
         <source>Rename tag</source>
         <translation>Μετονομάστε την ετικέτα</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8021"/>
+        <location filename="../mainwindow.cpp" line="8023"/>
         <source>Assign color</source>
         <translation>Αντιστοίχιση χρώματος</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8022"/>
+        <location filename="../mainwindow.cpp" line="8024"/>
         <source>Disable color</source>
         <translation>Απενεργοποίηση χρώματος</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8026"/>
+        <location filename="../mainwindow.cpp" line="8028"/>
         <source>&amp;Move tags to…</source>
         <translation>&amp;Μετακίνηση ετικετών σε…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8245"/>
+        <location filename="../mainwindow.cpp" line="8247"/>
         <source>Move to the root</source>
         <comment>to move a tag to the current tag in the tag context menu</comment>
         <translation>Μετακίνηση στη ρίζα</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8688"/>
+        <location filename="../mainwindow.cpp" line="8690"/>
         <source>An url was opened at the current cursor position</source>
         <translation>Ένα url άνοιξε στην τρέχουσα θέση δρομέα</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8789"/>
+        <location filename="../mainwindow.cpp" line="8791"/>
         <source>No equation was found in front of the cursor</source>
         <translation>Δεν βρέθηκε εξίσωση μπροστά από τον κέρσορα</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8806"/>
+        <location filename="../mainwindow.cpp" line="8808"/>
         <source>Result for equation: %1 = %2</source>
         <translation>Αποτέλεσμα για την εξίσωση: %1 = %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8907"/>
+        <location filename="../mainwindow.cpp" line="8909"/>
         <source>The scripting engine was reloaded</source>
         <translation>Η μηχανή δέσμης ενεργειών επαναφορτώθηκε</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8943"/>
+        <location filename="../mainwindow.cpp" line="8945"/>
         <source>HTML files</source>
         <translation>Αρχεία HTML</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9140"/>
-        <location filename="../mainwindow.cpp" line="9308"/>
+        <location filename="../mainwindow.cpp" line="9142"/>
+        <location filename="../mainwindow.cpp" line="9310"/>
         <source>Rename note</source>
         <translation>Μετονομάστε σημείωση</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9141"/>
+        <location filename="../mainwindow.cpp" line="9143"/>
         <source>Allows you to rename the filename of the note</source>
         <translation>Σας επιτρέπει να μετονομάσετε το όνομα αρχείου της σημείωσης</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9153"/>
+        <location filename="../mainwindow.cpp" line="9155"/>
         <source>&amp;Move notes to…</source>
         <translation>&amp;Μετακίνηση σημειώσεων σε…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9154"/>
+        <location filename="../mainwindow.cpp" line="9156"/>
         <source>&amp;Copy notes to…</source>
         <translation>&amp;Αντιγραφή σημειώσεων σε…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9183"/>
+        <location filename="../mainwindow.cpp" line="9185"/>
         <source>Move notes to subfolder…</source>
         <translation>Μετακίνηση σημειώσεων στον υποφάκελο…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9187"/>
+        <location filename="../mainwindow.cpp" line="9189"/>
         <source>Copy notes to subfolder…</source>
         <translation>Αντιγραφή σημειώσεων στον υποφάκελο…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9195"/>
+        <location filename="../mainwindow.cpp" line="9197"/>
         <source>&amp;Tag selected notes with…</source>
         <translation>&amp;Επισημάνετε τις επιλεγμένες σημειώσεις με…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9217"/>
+        <location filename="../mainwindow.cpp" line="9219"/>
         <source>&amp;Remove tag from selected notes…</source>
         <translation>&amp;Κατάργηση ετικέτας από επιλεγμένες σημειώσεις…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9308"/>
+        <location filename="../mainwindow.cpp" line="9310"/>
         <source>Name:</source>
         <translation>Όνομα:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9320"/>
+        <location filename="../mainwindow.cpp" line="9322"/>
         <source>Note renaming not enabled!</source>
         <translation>Σημειώστε ότι η μετονομασία δεν είναι ενεργοποιημένη!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9488"/>
+        <location filename="../mainwindow.cpp" line="9490"/>
         <source>Rename subfolder</source>
         <translation>Μετονομάσετε υποφάκελο</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10043"/>
+        <location filename="../mainwindow.cpp" line="10045"/>
         <source>Create new workspace</source>
         <translation>Δημιουργήστε νέο χώρο εργασίας</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10043"/>
-        <location filename="../mainwindow.cpp" line="10301"/>
+        <location filename="../mainwindow.cpp" line="10045"/>
+        <location filename="../mainwindow.cpp" line="10303"/>
         <source>Workspace name:</source>
         <translation>Όνομα χώρου εργασίας:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10165"/>
+        <location filename="../mainwindow.cpp" line="10167"/>
         <source>full</source>
         <comment>full workspace</comment>
         <translation>πλήρης</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10172"/>
+        <location filename="../mainwindow.cpp" line="10174"/>
         <source>minimal</source>
         <comment>minimal workspace</comment>
         <translation>ελάχιστη</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10264"/>
+        <location filename="../mainwindow.cpp" line="10266"/>
         <source>Remove the current workspace?</source>
         <translation>Κατάργηση του τρέχοντος χώρου εργασίας;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10301"/>
+        <location filename="../mainwindow.cpp" line="10303"/>
         <source>Rename workspace</source>
         <translation>Μετονομάστε το χώρο εργασίας</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="10436"/>
+        <location filename="../mainwindow.cpp" line="10438"/>
         <source>%n chars</source>
         <comment>characters</comment>
         <translation>
@@ -2309,32 +2310,32 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10661"/>
+        <location filename="../mainwindow.cpp" line="10663"/>
         <source>Select file to insert</source>
         <translation>Επιλέξτε το αρχείο για να εισαγάγετε</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10694"/>
+        <location filename="../mainwindow.cpp" line="10696"/>
         <source>Disallow all note editing</source>
         <translation>Απενεργοποιήστε όλες τις επεξεργασίες σημείων</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10840"/>
+        <location filename="../mainwindow.cpp" line="10842"/>
         <source>Select text files to import</source>
         <translation>Επιλέξτε αρχεία κειμένου για εισαγωγή</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10869"/>
+        <location filename="../mainwindow.cpp" line="10871"/>
         <source>Importing: %1</source>
         <translation>Εισαγωγή: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10932"/>
+        <location filename="../mainwindow.cpp" line="10934"/>
         <source>Note headline &apos;%1&apos; was copied to the clipboard</source>
         <translation>Η επικεφαλίδα σημείωσης &apos;%1&apos; αντιγράφηκε στο πρόχειρο</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="7788"/>
+        <location filename="../mainwindow.cpp" line="7790"/>
         <source>%n notes selected</source>
         <translation>
             <numerusform>%n επιλεγμένη σημείωση</numerusform>
@@ -2343,7 +2344,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2407"/>
-        <location filename="../mainwindow.cpp" line="10695"/>
+        <location filename="../mainwindow.cpp" line="10697"/>
         <source>Allow all note editing</source>
         <translation>Να επιτρέπεται η επεξεργασία όλων των σημείων</translation>
     </message>
@@ -2424,77 +2425,77 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>Δεν έχετε επιλέξει λίστες too. &lt;br/&gt; Ελέγξτε τις ρυθμίσεις &lt;strong&gt;Todo&lt;/strong&gt; στις ρυθμίσεις!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5698"/>
+        <location filename="../mainwindow.cpp" line="5700"/>
         <source>Open QOwnNotes</source>
         <translation>Άνοιγμα QOwnNotes</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5400"/>
-        <location filename="../mainwindow.cpp" line="5707"/>
-        <location filename="../mainwindow.cpp" line="9135"/>
-        <location filename="../mainwindow.cpp" line="9486"/>
+        <location filename="../mainwindow.cpp" line="5402"/>
+        <location filename="../mainwindow.cpp" line="5709"/>
+        <location filename="../mainwindow.cpp" line="9137"/>
+        <location filename="../mainwindow.cpp" line="9488"/>
         <source>New note</source>
         <translation>Νέα σημείωση</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5723"/>
+        <location filename="../mainwindow.cpp" line="5725"/>
         <source>Recent notes</source>
         <translation>Πρόσφατες σημειώσεις</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5753"/>
+        <location filename="../mainwindow.cpp" line="5755"/>
         <source>Show todo lists</source>
         <translation>Εμφάνιση λιστών todo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5764"/>
+        <location filename="../mainwindow.cpp" line="5766"/>
         <source>Recent tasks</source>
         <translation>Πρόσφατες εργασίες</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5796"/>
+        <location filename="../mainwindow.cpp" line="5798"/>
         <source>Quit</source>
         <translation>Κλείσιμο</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7151"/>
+        <location filename="../mainwindow.cpp" line="7153"/>
         <source>show notes from all note subfolders (%1)</source>
         <translation>εμφάνιση σημειώσεων από όλους τους υποφακέλους σημείωσης (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7170"/>
+        <location filename="../mainwindow.cpp" line="7172"/>
         <source>show notes in note root folder (%1)</source>
         <translation>εμφάνιση σημειώσεων στο ριζικό φάκελο σημείωσης (%1)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="316"/>
         <location filename="../mainwindow.cpp" line="677"/>
-        <location filename="../mainwindow.cpp" line="7178"/>
+        <location filename="../mainwindow.cpp" line="7180"/>
         <source>Note folder</source>
         <translation>Φάκελος σημειώσεων</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8402"/>
+        <location filename="../mainwindow.cpp" line="8404"/>
         <source>Copy to note folder</source>
         <translation>Φάκελος αντιγραφής στο σημείωμα</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8403"/>
+        <location filename="../mainwindow.cpp" line="8405"/>
         <source>Move to note folder</source>
         <translation>Μετακίνηση σε φάκελο σημείωσης</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8404"/>
+        <location filename="../mainwindow.cpp" line="8406"/>
         <source>Copy to this subfolder</source>
         <translation>Αντιγραφή σε αυτόν τον υποφάκελο</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8405"/>
+        <location filename="../mainwindow.cpp" line="8407"/>
         <source>Move to this subfolder</source>
         <translation>Μετακίνηση σε αυτόν τον υποφάκελο</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="8456"/>
+        <location filename="../mainwindow.cpp" line="8458"/>
         <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>Μετακινήστε %n την επιλεγμένη σημείωση για να σημειώσετε τον υποφάκελο &lt;strong&gt;%2&lt;/strong&gt;;</numerusform>
@@ -2503,12 +2504,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4596"/>
-        <location filename="../mainwindow.cpp" line="10854"/>
+        <location filename="../mainwindow.cpp" line="10856"/>
         <source>Cancel</source>
         <translation>Άκυρο</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="8519"/>
+        <location filename="../mainwindow.cpp" line="8521"/>
         <source>%n note(s) were moved to note subfolder &quot;%2&quot;</source>
         <translation>
             <numerusform>Η %n σημείωση μεταφέρθηκε στον υποφάκελο &quot;%2&quot;</numerusform>
@@ -2516,7 +2517,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="8540"/>
+        <location filename="../mainwindow.cpp" line="8542"/>
         <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>Αντιγραφή %n επιλεγμένης σημείωσης για να σημειώσετε τον υποφάκελο &lt;strong&gt;%2&lt;/strong&gt;;</numerusform>
@@ -2524,7 +2525,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="8591"/>
+        <location filename="../mainwindow.cpp" line="8593"/>
         <source>%n note(s) were copied to note subfolder &quot;%2&quot;</source>
         <translation>
             <numerusform>Η %n σημείωση αντιγράφηκε στον υποφάκελο &quot;%2&quot;</numerusform>
@@ -2532,52 +2533,52 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9236"/>
+        <location filename="../mainwindow.cpp" line="9238"/>
         <source>Open note in external editor</source>
         <translation>Ανοίξτε τη σημείωση σε εξωτερικό πρόγραμμα επεξεργασίας</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9240"/>
+        <location filename="../mainwindow.cpp" line="9242"/>
         <source>Show note in file manager</source>
         <translation>Εμφάνιση σημείωσης στο διαχειριστή αρχείων</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9321"/>
+        <location filename="../mainwindow.cpp" line="9323"/>
         <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
         <translation>Αν θέλετε να μετονομάσετε τη σημείωσή σας, πρέπει να ενεργοποιήσετε την επιλογή να επιτρέψετε το όνομα αρχείου σημείωσης να είναι διαφορετικό από την επικεφαλίδα.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9487"/>
+        <location filename="../mainwindow.cpp" line="9489"/>
         <source>New subfolder</source>
         <translation>Νέος υποφάκελος</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9491"/>
+        <location filename="../mainwindow.cpp" line="9493"/>
         <source>Show folder in file manager</source>
         <translation>Εμφάνιση φακέλου στο διαχειριστή αρχείων</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9527"/>
+        <location filename="../mainwindow.cpp" line="9529"/>
         <source>Create a new folder</source>
         <translation>Δημιουργήστε ένα νέο φάκελο</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9527"/>
+        <location filename="../mainwindow.cpp" line="9529"/>
         <source>Folder name:</source>
         <translation>Ονομα φακέλου:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7109"/>
+        <location filename="../mainwindow.cpp" line="7111"/>
         <source>show all untagged notes (%1)</source>
         <translation>εμφάνιση όλων των σημειώσεων χωρίς επισήμανση (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7112"/>
+        <location filename="../mainwindow.cpp" line="7114"/>
         <source>Untagged notes</source>
         <translation>Μη σημειωμένες σημειώσεις</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8944"/>
+        <location filename="../mainwindow.cpp" line="8946"/>
         <source>Export current note as HTML file</source>
         <translation>Εξαγωγή τρέχουσας σημείωσης ως αρχείου HTML</translation>
     </message>
@@ -2607,12 +2608,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>&amp;Εντάξει</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9145"/>
+        <location filename="../mainwindow.cpp" line="9147"/>
         <source>&amp;Remove notes</source>
         <translation>&amp;Κατάργηση σημειώσεων</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5884"/>
+        <location filename="../mainwindow.cpp" line="5886"/>
         <source>&amp;Link selected text</source>
         <translation>&amp;Συνδέστε το επιλεγμένο κείμενο</translation>
     </message>
@@ -2628,7 +2629,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2592"/>
-        <location filename="../mainwindow.cpp" line="5338"/>
+        <location filename="../mainwindow.cpp" line="5340"/>
         <source>Stored current note to disk</source>
         <translation>Η τρέχουσα σημείωση τροποποιήθηκε εξωτερικά</translation>
     </message>
@@ -2650,54 +2651,62 @@ If the trash is enabled on your ownCloud server you should be able to restore th
             <numerusform>Αποθηκευμένες σημειώσεις %n στο δίσκο</numerusform>
         </translation>
     </message>
+    <message numerus="yes">
+        <location filename="../mainwindow.cpp" line="5110"/>
+        <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7081"/>
+        <location filename="../mainwindow.cpp" line="7083"/>
         <source>show all notes (%1)</source>
         <translation>εμφάνιση όλων των σημειώσεων (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7084"/>
-        <location filename="../mainwindow.cpp" line="7154"/>
+        <location filename="../mainwindow.cpp" line="7086"/>
+        <location filename="../mainwindow.cpp" line="7156"/>
         <source>All notes</source>
         <translation>Όλες οι σημειώσεις</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8012"/>
+        <location filename="../mainwindow.cpp" line="8014"/>
         <source>&amp;Add tag</source>
         <translation>&amp;Προσθήκη ετικέτας</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8061"/>
+        <location filename="../mainwindow.cpp" line="8063"/>
         <source>Tag could not be created!</source>
         <translation>Δεν ήταν δυνατή η δημιουργία ετικέτας!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8246"/>
+        <location filename="../mainwindow.cpp" line="8248"/>
         <source>Move to this tag</source>
         <translation>Μετακίνηση σε αυτήν την ετικέτα</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8296"/>
+        <location filename="../mainwindow.cpp" line="8298"/>
         <source>Tag this</source>
         <translation>Ετικέτα αυτό</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8329"/>
+        <location filename="../mainwindow.cpp" line="8331"/>
         <source>Cannot move tag &apos;%1&apos; to this tag</source>
         <translation>Δεν είναι δυνατή η μετακίνηση της ετικέτας &apos;%1&apos; σε αυτήν την ετικέτα</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8345"/>
+        <location filename="../mainwindow.cpp" line="8347"/>
         <source>Moved tag &apos;%1&apos; to new tag</source>
         <translation>Moved tag &apos;%1&apos; to new tag</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7340"/>
+        <location filename="../mainwindow.cpp" line="7342"/>
         <source>show all notes tagged with &apos;%1&apos; (%2)</source>
         <translation>εμφάνιση όλων των σημειώσεων με ετικέτα με &apos;%1&apos; (%2)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8023"/>
+        <location filename="../mainwindow.cpp" line="8025"/>
         <source>&amp;Remove tags</source>
         <translation>&amp;Αφαίρεση ετικετών</translation>
     </message>
@@ -2823,7 +2832,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2593"/>
-        <location filename="../mainwindow.cpp" line="5339"/>
+        <location filename="../mainwindow.cpp" line="5341"/>
         <source>Current note could not be stored to disk</source>
         <translation>Δεν ήταν δυνατή η αποθήκευση της τρέχουσας σημείωσης στο δίσκο</translation>
     </message>
@@ -2863,44 +2872,36 @@ If the trash is enabled on your ownCloud server you should be able to restore th
             <numerusform></numerusform>
         </translation>
     </message>
-    <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="5110"/>
-        <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any word of &lt;strong&gt;%1&lt;/strong&gt;</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5400"/>
+        <location filename="../mainwindow.cpp" line="5402"/>
         <source>Note headline</source>
         <translation>Σημείωση τίτλου</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5890"/>
+        <location filename="../mainwindow.cpp" line="5892"/>
         <source>Block &amp;quote selected text</source>
         <comment>Action to apply a block quote formatting to the selected text</comment>
         <translation>Αποκλεισμός &amp;προσφοράς επιλεγμένου κειμένου</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6828"/>
+        <location filename="../mainwindow.cpp" line="6830"/>
         <source>Downloading images finished</source>
         <translation>Η λήψη των εικόνων ολοκληρώθηκε</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6970"/>
+        <location filename="../mainwindow.cpp" line="6972"/>
         <source>Increased font size to %1 pt</source>
         <translation>Αυξημένο μέγεθος γραμματοσειράς σε %1 pt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6987"/>
+        <location filename="../mainwindow.cpp" line="6989"/>
         <source>Decreased font size to %1 pt</source>
         <translation>Μειωμένο μέγεθος γραμματοσειράς σε %1 pt</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4888"/>
         <location filename="../mainwindow.cpp" line="4914"/>
-        <location filename="../mainwindow.cpp" line="9324"/>
+        <location filename="../mainwindow.cpp" line="9326"/>
         <source>Open &amp;settings</source>
         <translation>Ανοίξτε τις &amp;ρυθμίσεις</translation>
     </message>
@@ -2915,32 +2916,32 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>αφήστε τη λειτουργία ελεύθερης διάσωσης</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6131"/>
+        <location filename="../mainwindow.cpp" line="6133"/>
         <source>Select image to insert</source>
         <translation>Επιλέξτε εικόνα για εισαγωγή</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6263"/>
+        <location filename="../mainwindow.cpp" line="6265"/>
         <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
         <translation>Πληκτρολογήστε τον κωδικό σας &lt;strong&gt; &lt;/strong&gt; για να κρυπτογραφήσετε τη σημείωση. &lt;br/&gt; Λάβετε υπόψη ότι έχετε &lt;strong&gt; θυμηθείτε &lt;/ strong&gt; τον κωδικό πρόσβασής σας για να διαβάσετε το περιεχόμενο της σημείωσης και ότι μπορείτε &lt;strong&gt; να &lt;/strong&gt; να το κάνετε &lt;strong&gt; σε QOwnNotes &lt;/strong &gt;!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6319"/>
+        <location filename="../mainwindow.cpp" line="6321"/>
         <source>Decrypt note and store it as plain text</source>
         <translation>Αποκρυπτογραφήστε τη σημείωση και αποθηκεύστε την ως απλό κείμενο</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6324"/>
+        <location filename="../mainwindow.cpp" line="6326"/>
         <source>&amp;Decrypt</source>
         <translation>&amp;Αποκρυπτογράφηση</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6350"/>
+        <location filename="../mainwindow.cpp" line="6352"/>
         <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
         <translation>&lt;br/&gt;Θα μπορείτε να επεξεργαστείτε την κρυπτογραφημένη σημείωσή σας.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6408"/>
+        <location filename="../mainwindow.cpp" line="6410"/>
         <source>Export current note as Markdown file</source>
         <translation>Εξαγωγή τρέχουσας σημείωσης ως αρχείο αξιολόγησης</translation>
     </message>
