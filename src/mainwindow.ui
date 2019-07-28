@@ -2159,10 +2159,10 @@ p, li { white-space: pre-wrap; }
     <string notr="true">Riot</string>
    </property>
    <property name="toolTip">
-    <string>Open the Riot room</string>
+    <string extracomment="&quot;Riot&quot; as in the chat service">Open the Riot room</string>
    </property>
    <property name="statusTip">
-    <string>Open the Riot room</string>
+    <string extracomment="&quot;Riot&quot; as in the chat service">Open the Riot room</string>
    </property>
   </action>
   <action name="actionGitter">
@@ -2515,9 +2515,9 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
+  <include location="breeze-qownnotes.qrc"/>
   <include location="breeze-dark-qownnotes.qrc"/>
   <include location="images.qrc"/>
-  <include location="breeze-qownnotes.qrc"/>
  </resources>
  <connections/>
 </ui>
