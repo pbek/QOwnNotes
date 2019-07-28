@@ -4,6 +4,8 @@
 - the search result count ([#1248](https://github.com/pbek/QOwnNotes/issues/1248))
   and the automatic search inside the current note ([#1247](https://github.com/pbek/QOwnNotes/issues/1247))
   will now also support exact searches like `"exact phrase"`
+- added more German, Spanish, Brazilian Portuguese, Italian translation (thank
+  you rakekniven, richarson, mlimacarlos, mlocati)
 
 ## 19.7.9
 - there now is a menu entry *Riot* in the *Help / Open chat* menu to open
