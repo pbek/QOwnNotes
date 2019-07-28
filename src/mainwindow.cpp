@@ -5082,7 +5082,7 @@ void MainWindow::filterNotesBySearchLineEditText() {
         int columnWidth = ui->noteTreeWidget->columnWidth(0);
         ui->noteTreeWidget->setColumnCount(2);
         int maxWidth = 0;
-        QStringList searchTextWords = searchText.split(" ");
+        QStringList searchTextTerms = Note::buildQueryStringList(searchText);
 
         while (*it) {
             QTreeWidgetItem *item = *it;
@@ -5092,22 +5092,22 @@ void MainWindow::filterNotesBySearchLineEditText() {
             // hide all filtered notes
             item->setHidden(isHidden);
 
-            // count occurrences of first search term in notes
+            // count occurrences of search terms in notes
             if (!isHidden) {
                 Note note = Note::fetch(noteId);
                 item->setTextColor(1, QColor(Qt::gray));
                 int count = 0;
 
-                Q_FOREACH(QString word, searchTextWords) {
+                Q_FOREACH(QString word, searchTextTerms) {
                         count += note.countSearchTextInNote(word);
                 }
 
                 const QString text = QString::number(count);
                 item->setText(1, text);
 
-                const QString &toolTipText = searchTextWords.count() == 1 ?
+                const QString &toolTipText = searchTextTerms.count() == 1 ?
                         tr("Found <strong>%n</strong> occurrence(s) of <strong>%1</strong>", "", count).arg(searchText) :
-                        tr("Found <strong>%n</strong> occurrence(s) of any word of <strong>%1</strong>", "", count).arg(searchText);
+                        tr("Found <strong>%n</strong> occurrence(s) of any term of <strong>%1</strong>", "", count).arg(searchText);
                 item->setToolTip(1, toolTipText);
 
                 // calculate the size of the search count column
@@ -5137,8 +5137,10 @@ void MainWindow::filterNotesBySearchLineEditText() {
  * @param searchText
  */
 void MainWindow::doSearchInNote(QString searchText) {
-    if (searchText.contains(" ")) {
-        QString localSearchTerm = "(" + QRegularExpression::escape(searchText).split("\\ ").join("|") + ")";
+    QStringList searchTextTerms = Note::buildQueryStringList(searchText);
+
+    if (searchTextTerms.count() > 1) {
+        QString localSearchTerm = "(" + searchTextTerms.join("|") + ")";
         activeNoteTextEdit()->doSearch(localSearchTerm,
                                        QPlainTextEditSearchWidget::RegularExpressionMode);
     } else {
