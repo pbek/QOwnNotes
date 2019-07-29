@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 19.7.11
+- the column size of the search count in the note list was reduced
+  (for [#1248](https://github.com/pbek/QOwnNotes/issues/1248))
+- `"` characters will be now cut out of the search text in the local search text
+  when searching for text globally (for [#1247](https://github.com/pbek/QOwnNotes/issues/1247))
+
 ## 19.7.10
 - the search result count ([#1248](https://github.com/pbek/QOwnNotes/issues/1248))
   and the automatic search inside the current note ([#1247](https://github.com/pbek/QOwnNotes/issues/1247))

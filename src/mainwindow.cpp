@@ -5146,7 +5146,7 @@ void MainWindow::doSearchInNote(QString searchText) {
         activeNoteTextEdit()->doSearch(localSearchTerm,
                                        QPlainTextEditSearchWidget::RegularExpressionMode);
     } else {
-        activeNoteTextEdit()->doSearch(searchText);
+        activeNoteTextEdit()->doSearch(searchText.remove("\""));
     }
 }
 
