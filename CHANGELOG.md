@@ -10,6 +10,10 @@
   (for [#1248](https://github.com/pbek/QOwnNotes/issues/1248))
 - `"` characters will be now cut out of the search text in the local search text
   when searching for text globally (for [#1247](https://github.com/pbek/QOwnNotes/issues/1247))
+- added more Spanish, Russian, Basque, Czech, Danish, Finnish, Brazilian
+  Portuguese, German, Romanian, Slovak, Slovenian, Dutch, Norwegian, Hungarian,
+  Italian translation (thank you richarson, mikhail-khokhlov, Fabijenna,
+  mlimacarlos, rakekniven, tiwi90)
 
 ## 19.7.10
 - the search result count ([#1248](https://github.com/pbek/QOwnNotes/issues/1248))
