@@ -1,9 +1,11 @@
 # QOwnNotes Changelog
 
 ## 19.7.11
-- whitespaces at the beginning of the current line are now reproduced in the
-  next line too when pressing <kbd>Return</kbd> in the note editor
+- **whitespaces** at the **beginning of the current line** are now **reproduced**
+  in the next line too when pressing <kbd>Return</kbd> in the note editor
   (for [#1249](https://github.com/pbek/QOwnNotes/issues/1249))
+- there now is a **progress dialog** to see the progress of **loading notes** on
+  slow systems with a lot of notes
 - the column size of the search count in the note list was reduced
   (for [#1248](https://github.com/pbek/QOwnNotes/issues/1248))
 - `"` characters will be now cut out of the search text in the local search text

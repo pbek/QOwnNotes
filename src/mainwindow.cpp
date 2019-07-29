@@ -2919,9 +2919,17 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
     }
 
     bool withNoteNameHook = ScriptingService::instance()->handleNoteNameHookExists();
+    const int numFiles = files.count();
+    QProgressDialog progress(tr("Loading notes..."), tr("Abort"), 0, numFiles, this);
+    progress.setWindowModality(Qt::WindowModal);
+    int currentCount = 0;
 
     // create all notes from the files
     Q_FOREACH(QString fileName, files) {
+            if (progress.wasCanceled()) {
+                break;
+            }
+
             if (hasNoteSubFolder) {
                 fileName.prepend(noteSubFolder.relativePath() +
                                          QDir::separator());
@@ -2956,7 +2964,10 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
 #ifdef Q_OS_LINUX
             QCoreApplication::sendPostedEvents();
 #endif
+            progress.setValue(++currentCount);
         }
+
+    progress.setValue(numFiles);
 
     // update the UI and get user input after all the notes were loaded
     // this still can cause duplicate note subfolders to be viewed
