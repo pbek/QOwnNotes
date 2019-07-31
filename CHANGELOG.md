@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 19.8.0
+- added **Serbian translation** (a big thank you to Fabijenna)
+    - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes)
+      to make QOwnNotes available in more languages or help with the current 
+      translation
+
 ## 19.7.11
 - **whitespaces** at the **beginning of the current line** are now **reproduced**
   in the next line too when pressing <kbd>Return</kbd> in the note editor

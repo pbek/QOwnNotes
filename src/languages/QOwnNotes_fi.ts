@@ -3794,7 +3794,7 @@ Haluatko asentaa sen joka tapauksessa?</translation>
     <name>SettingsDialog</name>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="26"/>
-        <location filename="../dialogs/settingsdialog.ui" line="3784"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3795"/>
         <source>Settings</source>
         <translation>Asetukset</translation>
     </message>
@@ -4015,45 +4015,45 @@ Haluatko asentaa sen joka tapauksessa?</translation>
         <translation>Muu CalDAV-palvelin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2487"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2498"/>
         <source>Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</source>
         <translation>Vain joitakin värejä mukautetaan, työpöydän teema ohjaa loput. Sinun on käynnistettävä sovellus uudelleen, jotta muutokset voivat toimia.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2490"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2501"/>
         <source>Optimize preview colors for dark mode desktop themes</source>
         <translation>Optimoi esikatselun värit tummien tilojen työpöydän teemoihin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2477"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2488"/>
         <source>This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</source>
         <translation>Tämä mahdollistaa tumman tilan, käyttöliittymän ja kuvakkeet muuttuvat. Sinun on käynnistettävä sovellus uudelleen, jotta muutokset voivat toimia.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2480"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2491"/>
         <source>Enable dark mode</source>
         <translation>Ota tummatila käyttöön</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2506"/>
-        <location filename="../dialogs/settingsdialog.ui" line="2516"/>
-        <location filename="../dialogs/settingsdialog.ui" line="2547"/>
-        <location filename="../dialogs/settingsdialog.ui" line="2557"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2517"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2527"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2558"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2568"/>
         <source>You need to restart the application to let this setting take effect</source>
         <translation>Sinun on käynnistettävä sovellus uudelleen, jotta tämä asetus tulee voimaan</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2586"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2597"/>
         <source>Item sizes in the main window</source>
         <translation>Kohteen koot pääikkunassa</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4498"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4509"/>
         <source>Markdown highlighting</source>
         <translation>Markdown-korostus</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4504"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4515"/>
         <source>Enable markdown highlighting</source>
         <translation>Ota markdown-korostus käyttöön</translation>
     </message>
@@ -4078,39 +4078,39 @@ Haluatko asentaa sen joka tapauksessa?</translation>
         <translation>Pikakuvakkeet</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3989"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4210"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4000"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4221"/>
         <source>Default font:</source>
         <translation>Oletusfontti:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4031"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4172"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4042"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4183"/>
         <source>Code font:</source>
         <translation>Koodifontti:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2745"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2756"/>
         <source>Main window shortcuts</source>
         <translation>Pääikkunan pikavalinnat</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3487"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3498"/>
         <source>Do this at your own risk!</source>
         <translation>Tee tämä omalla vastuullasi!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3490"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3501"/>
         <source>Ignore all external note folder changes</source>
         <translation>Ohita kaikki ulkoisten muistikorttien muutokset</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3900"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3911"/>
         <source>No two spaces to do a line break are added here if checked</source>
         <translation>Tällöin ei lisätä kahta rivinvaihtoa, jos se on valittuna</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3903"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3914"/>
         <source>Use GitHub line breaks</source>
         <translation>Käytä GitHub-rivinvaihtoja</translation>
     </message>
@@ -4155,7 +4155,7 @@ Haluatko asentaa sen joka tapauksessa?</translation>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Jos haluat auttaa kääntämään QOwnNotesia tai päivittämään olemassa olevan käännöksen, lue: &lt;a href = &quot;http://www.qownnotes.org/Knowledge-base/How- can-I-help-to-translation-QOwnNotes &quot;&gt; Miten voin auttaa kääntämään QOwnNotesia? &lt;/a&gt; &lt;/p&gt;&lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2451"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2462"/>
         <source>Dark mode</source>
         <translation>Tumma tila</translation>
     </message>
@@ -4185,22 +4185,22 @@ Haluatko asentaa sen joka tapauksessa?</translation>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Haluat ehkä harkita ilmaisen SSL-varmenteen hankkimista &lt;a href=&quot;https://letsencrypt.org/&quot;&gt; Let&apos;s encrypt &lt;/a&gt;. &lt;/p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2414"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2425"/>
         <source>If you change the language you have to restart the application for the changes to take action.</source>
         <translation>Jos muutat kieltä, sinun on käynnistettävä sovellus uudelleen, jotta muutokset voivat toimia.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3165"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3176"/>
         <source>You need to reload the scripting engine if you modify a script file</source>
         <translation>Jos haluat muokata komentosarjatiedostoa, sinun on ladattava komentosarja</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3168"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3179"/>
         <source>Reload scripting engine</source>
         <translation>Lataa komentosarja uudelleen</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3158"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3169"/>
         <source>Validate script</source>
         <translation>Tarkista script</translation>
     </message>
@@ -4210,19 +4210,19 @@ Haluatko asentaa sen joka tapauksessa?</translation>
         <translation>Ehdot</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3330"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3341"/>
         <source>Notes</source>
         <translation>Huomautuksia</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3438"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3449"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn&apos;t edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Jos olet valinnut, sinulle ilmoitetaan aina ulkoisista muutoksista, vaikka nykyistä muistiinpanoa ei olisi muokattu viime hetkellä. Suositeltava on &lt;span style = &quot;font-style: kursivoitu;&quot;&gt; valittu &lt;/span&gt;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3507"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4698"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5199"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3518"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4709"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5210"/>
         <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
         <translation>Saatat joutua synkronointiongelmiin vanhempien omien synkronoinnin versioiden kanssa, kun olet menossa paljon alle 10 sekuntia.
@@ -4234,66 +4234,66 @@ Kokeile itseäsi, jos saat synkronointiristiriitoja ja asetat korkeamman arvon, 
         <translation>Japanilainen</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3511"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3522"/>
         <source>note save interval time [sec]</source>
         <translation>huomaa tallennusvälin aika [sek]</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3441"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3452"/>
         <source>Notify about all external modifications of the current note</source>
         <translation>Ilmoita kaikista nykyisen muistiinpanon ulkoisista muutoksista</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3813"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3824"/>
         <location filename="../dialogs/settingsdialog.cpp" line="1954"/>
         <location filename="../dialogs/settingsdialog.cpp" line="1963"/>
         <source>Database</source>
         <translation>Tietokanta</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3829"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3840"/>
         <source>Reinitialize Database</source>
         <translation>Palauta tietokanta uudelleen</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3752"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3763"/>
         <source>Clear application data and exit</source>
         <translation>Poista sovelluksen tiedot ja poistu</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3758"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3769"/>
         <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
         <translation>Tämän painikkeen avulla voit tyhjentää kaikki asetukset, poistaa paikallisen todo-tietokannan ja poistua QOwnNotesista.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3768"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3779"/>
         <location filename="../dialogs/settingsdialog.cpp" line="2023"/>
         <source>Clear app data and exit</source>
         <translation>Poista sovelluksen tiedot ja poistu</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3547"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3558"/>
         <source>Update dialog</source>
         <translation>Päivitä-valintaikkuna</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3627"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3638"/>
         <source>Default note file extension</source>
         <translation>Huomautuksen oletustiedoston laajennus</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3712"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3723"/>
         <source>External editor</source>
         <translation>Ulkoinen editori</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3725"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3736"/>
         <source>path to external editor, leave empty for default</source>
         <translation>polku ulkoiseen editoriin, jätä tyhjä oletusasetukseksi</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3735"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4777"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3746"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4788"/>
         <source>set external editor</source>
         <translation>aseta ulkoinen editori</translation>
     </message>
@@ -4333,17 +4333,17 @@ Kokeile itseäsi, jos saat synkronointiristiriitoja ja asetat korkeamman arvon, 
         <translation>Komentosarjat</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2812"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2823"/>
         <source>Your scripts</source>
         <translation>Skriptit</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2896"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2907"/>
         <source>&amp;Remove script</source>
         <translation>&amp;Poista komentosarja</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3175"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3186"/>
         <source>Click here to select your QML script</source>
         <translation>Valitse QML-komentosarja napsauttamalla tätä</translation>
     </message>
@@ -4430,7 +4430,7 @@ Kokeile itseäsi, jos saat synkronointiristiriitoja ja asetat korkeamman arvon, 
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="773"/>
-        <location filename="../dialogs/settingsdialog.ui" line="2986"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2997"/>
         <source>Name:</source>
         <translation>Nimi:</translation>
     </message>
@@ -4593,501 +4593,506 @@ Kokeile itseäsi, jos saat synkronointiristiriitoja ja asetat korkeamman arvon, 
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="2304"/>
+        <source>Serbian</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="2315"/>
         <source>Slovak</source>
         <translation>Slovakian</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2315"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2326"/>
         <source>Slovenian</source>
         <translation>Slovenian</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2326"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2337"/>
         <source>Swedish</source>
         <translation>Ruotsin kieli</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2337"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2348"/>
         <source>Tagalog</source>
         <translation>Tagalog</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2348"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2359"/>
         <source>Turkish</source>
         <translation>Turkki</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2370"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2381"/>
         <source>Urdu</source>
         <translation>Urdu</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2381"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2392"/>
         <source>Chinese Simplified</source>
         <translation>Yksinkertaistettu kiina</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2392"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2403"/>
         <source>Chinese Traditional</source>
         <translation>Kiinalainen perinteinen</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2460"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2471"/>
         <source>Enable dark mode application icon and tray icon</source>
         <translation>Ota käyttöön tumman tilan sovelluskuvake ja lokeron kuvake</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2570"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2581"/>
         <source>Enable dark mode icon theme</source>
         <translation>Ota käyttöön tumman tilan kuvake</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2500"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2511"/>
         <source>System tray</source>
         <translation>Järjestelmälokero</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2509"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2520"/>
         <source>Show system tray icon</source>
         <translation>Näytä järjestelmäpalkin kuvake</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2519"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2530"/>
         <source>Start application hidden</source>
         <translation>Käynnistä sovellus piilotettuna</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2529"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2540"/>
         <source>Interface style</source>
         <translation>Liitäntätyyli</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2560"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2571"/>
         <source>Enforce system icon theme</source>
         <translation>Käytä järjestelmän kuvaketta</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2666"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2677"/>
         <source>Override interface font size</source>
         <translation>Ohita käyttöliittymän fontin koko</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2675"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2686"/>
         <source>Interface font size:</source>
         <translation>Käyttöliittymän kirjasinkoko:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2885"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2896"/>
         <source>&amp;Add script…</source>
         <translation>&amp;Lisää komentosarja…</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3401"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3412"/>
         <source>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</source>
         <translation>Kun avaat huomautuksia, kohdistimen sijainti muistiinpanon sisällä palautuu nyt asentoon, jolloin muistiinpano viimeksi vieraili nykyisessä istunnossa</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3411"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3422"/>
         <source>By default the headline will generated automatically</source>
         <translation>Oletuksena otsikko luodaan automaattisesti</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3414"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3425"/>
         <source>The shortcut to create a new note asks for a headline</source>
         <translation>Uuden merkinnän luomiseen tarkoitettu pikakuvake pyytää otsikkoa</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3518"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3529"/>
         <source>Automatically close the note folder database to prevent problems with sync tools</source>
         <translation>Sulje muistikansion tietokanta automaattisesti, jotta synkronointityökalujen ongelmat estetään</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3521"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3532"/>
         <source>Automatically close the note folder database</source>
         <translation>Sulje muistikansion kansion tietokanta automaattisesti</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3569"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3580"/>
         <source>Search engine</source>
         <translation>Hakukone</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3591"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3602"/>
         <source>Message boxes</source>
         <translation>Viestiruudut</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3597"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3608"/>
         <location filename="../dialogs/settingsdialog.cpp" line="3584"/>
         <source>Reset message boxes</source>
         <translation>Nollaa viestiruudut</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3790"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3801"/>
         <location filename="../dialogs/settingsdialog.cpp" line="3650"/>
         <location filename="../dialogs/settingsdialog.cpp" line="3673"/>
         <source>Import settings</source>
         <translation>Tuo asetukset</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3797"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3808"/>
         <location filename="../dialogs/settingsdialog.cpp" line="3616"/>
         <source>Export settings</source>
         <translation>Vie asetukset</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3936"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3947"/>
         <source>Open issue assistant</source>
         <translation>Avoin kysymys-avustaja</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3947"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3958"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=&quot; font-weight:600;&quot;&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Paras tapa lähettää kysymyksiä on käyttää ongelman avustajaa painamalla &lt;span style = &quot;font-weight: 600;&quot;&gt; Open issue assistent &lt;/span&gt; -painiketta alareunassa. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4241"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4252"/>
         <source>Ignore code font size to allow zooming</source>
         <translation>Estä zoomausta varten koodin kirjasinkoko</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4270"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4281"/>
         <source>Rendering</source>
         <translation>Renderointi</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4276"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4287"/>
         <source>Enable underline rendering</source>
         <translation>Ota alleviivaus käyttöön</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4532"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4543"/>
         <source>Fully highlight blockquotes</source>
         <translation>Korosta lohkareita täysin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4602"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4613"/>
         <source>Note-edit cursor width:</source>
         <translation>Huomautus-kohdistimen leveys:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4551"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4562"/>
         <source>Enable Vim mode (some QOwnNotes shortcuts will not work)</source>
         <translation>Ota Vim-tila käyttöön (jotkin QOwnNotes-pikanäppäimet eivät toimi)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4636"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4647"/>
         <source>Disable cursor blinking</source>
         <translation>Poista kohdistimen vilkkuminen käytöstä</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5018"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5029"/>
         <source>Ignored sub-folders</source>
         <translation>Ohitetut alikansiot</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5034"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5045"/>
         <source>Reset ignored sub-folders</source>
         <translation>Palauta huomiotta jätetyt alikansiot</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5054"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5065"/>
         <source>Note list panel</source>
         <translation>Huomautus-luettelopaneeli</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5126"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5137"/>
         <source>Show notes in the note list with preview</source>
         <translation>Näytä muistiinpanot muistilistalla esikatselulla</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5361"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5372"/>
         <source>Bookmarks</source>
         <translation>Kirjanmerkit</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5367"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5378"/>
         <source>Notes with this tag will be used for fetching bookmarks</source>
         <translation>Huomautuksia tämän tunnisteen avulla haetaan kirjanmerkkejä</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5370"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5381"/>
         <source>Tag name for bookmarks notes</source>
         <translation>Kirjanmerkkien merkintöjen nimi</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5377"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5388"/>
         <source>Bookmarks tag:</source>
         <translation>Kirjanmerkkien tunniste:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5384"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5395"/>
         <source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href=&quot;%1&quot;&gt;here&lt;/a&gt;.</source>
         <translation>Oletuksena selainlaajennus näyttää kaikki nykyisen muistiinpanon linkit. Voit myös tehdä sen osoittamaan erityisiä kirjanmerkkilinkkejä muistiinpanoihin tietyllä tunnisteella. Lisätietoja kirjanmerkin linkin syntaksista napsauta &lt;a href=&quot;%1&quot;&gt; täällä &lt;/a&gt;.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5397"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5408"/>
         <source>Bookmarks note name:</source>
         <translation>Kirjanmerkkien muistiinpanon nimi:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5404"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5415"/>
         <source>This note will be used for adding new bookmarks from the browser extension</source>
         <translation>Tätä merkintää käytetään uusien kirjanmerkkien lisäämiseen selaimen laajennuksesta</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5407"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5418"/>
         <source>Note name for adding new bookmarks</source>
         <translation>Huomautus, jos haluat lisätä uusia kirjanmerkkejä</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5417"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5428"/>
         <source>Web socket server</source>
         <translation>Web socket-palvelimen</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5423"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5434"/>
         <source>Socket server port:</source>
         <translation>Socket-palvelimen portti:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5457"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5468"/>
         <source>Show security token</source>
         <translation>Näytä suojausmerkki</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5493"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5504"/>
         <source>Web socket server support</source>
         <translation>Web socket palvelin-tuki</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5499"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5510"/>
         <source>Enable socket server</source>
         <translation>Ota socket-palvelin käyttöön</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5474"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5485"/>
         <source>Install the &lt;a href=&quot;%1&quot;&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href=&quot;%2&quot;&gt;Chrome Web Store&lt;/a&gt; or &lt;a href=&quot;%3&quot;&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
         <translation>Asenna &lt;a href=&quot;%1&quot;&gt; Web-kumppanin selaimen laajennus &lt;/a&gt; &lt;a href=&quot;%2&quot;&gt; Chrome-verkkokaupasta &lt;/a&gt; tai &lt;a href=&quot;%3&quot;&gt; Firefoxin lisäosasta sivun &lt;/a&gt; avulla voit käyttää QOwnNotesia web clipperinä.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3497"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3508"/>
         <source>Allow the note file name to be different from the headline.&lt;br&gt;Beware that ownCloud Notes needs the file name to be the same as the headline!</source>
         <translation>Anna muistiinpanotiedoston nimen poiketa otsikosta. &lt;br&gt; Varo, että ownCloud Notes tarvitsee tiedostonimen olevan sama kuin otsikko!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4838"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4849"/>
         <source>Note edit panel</source>
         <translation>Huomaa muokkauspaneeli</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4844"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4855"/>
         <source>If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</source>
         <translation>Jos tämä on poistettu käytöstä, voit luoda monimutkaisempia paneelin asetteluja, mutta kaikki paneelit muutetaan, jos ikkunaa muutetaan</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4847"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4858"/>
         <source>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</source>
         <translation>Käytä ikkunan muokkauspaneelia kiinteänä keskinäisenä widgetinä, jonka kokoa muutetaan, jos ikkunaa tai muita paneeleja muutetaan</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4857"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4868"/>
         <source>Note search panel</source>
         <translation>Huomaa hakupaneeli</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4863"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4874"/>
         <source>Disable auto-completion of previous searches</source>
         <translation>Poista aiempien hakujen automaattinen viimeistely käytöstä</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5149"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5160"/>
         <source>Navigation panel</source>
         <translation>Navigointipaneeli</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5155"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5166"/>
         <source>Hide navigation item search bar</source>
         <translation>Piilota navigointikohdan hakupalkki</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5169"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5180"/>
         <source>Local trash settings</source>
         <translation>Paikalliset roskakorit</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5203"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5214"/>
         <source>Remove trashed notes after:</source>
         <translation>Poista roskakorit seuraavasti:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5210"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5221"/>
         <source> days</source>
         <extracomment>seconds</extracomment>
         <translation> päivää</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5229"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5240"/>
         <source>Automatically remove trashed notes after a certain time</source>
         <translation>Poista roskakorit automaattisesti tietyn ajan kuluttua</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5255"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5266"/>
         <source>Local trash support</source>
         <translation>Paikallinen roskakorituki</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5261"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5272"/>
         <source>Enable local trash</source>
         <translation>Ota paikalliset roskakorit käyttöön</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5278"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5289"/>
         <source>Layout selector</source>
         <translation>Asettelu-valitsin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5284"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5295"/>
         <source>You can set a new layout here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</source>
         <translation>Voit asettaa uuden asettelun täällä. Muista, että voit aina muokata paneelien sijaintia &lt;i&gt; Avaa paneelit &lt;/i&gt; -painikkeella.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4578"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5443"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4589"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5454"/>
         <source>Reset the cursor width</source>
         <translation>Nollaa kohdistimen leveys</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4712"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4723"/>
         <source>External git log command to show the git versions of a note</source>
         <translation>Ulkoinen git log -komento näyttää muistiinpanon git-versiot</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4718"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4729"/>
         <source>Enter a command to be used to show a git log (like for example &quot;gitk&quot;)</source>
         <extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
         <translation>Anna komento, jota käytetään git-lokin näyttämiseen (kuten esimerkiksi &quot;gitk&quot;)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4738"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4749"/>
         <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
         <extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
         <translation>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5015"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5024"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5026"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5035"/>
         <source>Regular expressions of note sub-folders to ignore, separated by &quot;;&quot;</source>
         <translation>Huomautusten alikansioiden säännölliset lausekkeet, jotka jätetään huomiotta ja joita erottaa &quot;;&quot;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5119"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5130"/>
         <source>Show all notes of a tag including the notes of their children-tags</source>
         <translation>Näytä kaikki merkin muistiinpanot, mukaan lukien lasten merkkien muistiinpanot</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5089"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5100"/>
         <source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
         <translation>Näytä kaikki kansion muistiinpanot, mukaan lukien niiden alikansiot (toimii vain, jos alikansiot ovat käytössä)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4479"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4490"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href=&quot;http://docs.qownnotes.org/en/develop/time-formats.html&quot;&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Voit tarkastella kaikkia saatavilla olevia &lt;a href=&quot;http://docs.qownnotes.org/en/develop/time-formats.html&quot;&gt; aikaa muodoissa &lt;/a&gt;. &lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4629"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4640"/>
         <source>Highlight the current line</source>
         <translation>Korosta nykyinen rivi</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4805"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4816"/>
         <source>Don&apos;t forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
         <translation>Älä unohda ottaa käyttöön git-tukea muistiinpanokansioillesi ja määrittää git-asiakkaan nimi ja sähköpostiosoite, esimerkiksi näillä pääte-komennoilla:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4873"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4884"/>
         <source>Tags panel</source>
         <translation>Tunnisteet-paneeli</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4902"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4978"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5063"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4913"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4989"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5074"/>
         <source>Order</source>
         <translation>Tilata</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4908"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4984"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5072"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4919"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4995"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5083"/>
         <source>Ascending</source>
         <translation>Nouseva</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4915"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4991"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5079"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4926"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5002"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5090"/>
         <source>Descending</source>
         <translation>Laskeva</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4879"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4948"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5096"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4890"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4959"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5107"/>
         <source>Sort</source>
         <translation>Järjestellä</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4622"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4633"/>
         <source>Only use editor width setting in distraction free mode</source>
         <translation>Käytä vain editorin leveysasetusta häiriöttömässä tilassa</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4885"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4954"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5102"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4896"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4965"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5113"/>
         <source>Alphabetical</source>
         <translation>Aakkosjärjestyksessä</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4892"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4903"/>
         <source>By last change / use</source>
         <translation>Viimeisin muutos / käyttö</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4925"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4936"/>
         <source>Hide &apos;Find or create tag&apos; search</source>
         <translation>Piilota &apos;Etsi tai luo tunniste&apos; -haku</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4935"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4946"/>
         <source>Note subfolders panel</source>
         <translation>Huomaa alikansioiden paneeli</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4941"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4952"/>
         <source>Show with full path</source>
         <translation>Näytä koko polulla</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4961"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5109"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4972"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5120"/>
         <source>By last change</source>
         <translation>Viimeisen muutoksen jälkeen</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4971"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4982"/>
         <source>Show root folder name</source>
         <translation>Näytä juurikansion nimi</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5001"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5012"/>
         <source>Hide &apos;Find or create note subfolder&apos; search</source>
         <translation>Piilota &apos;Etsi tai luo muistiinpanon alikansiota&apos; -haku</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5008"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5019"/>
         <source>Display note subfolders as full tree</source>
         <translation>Näytä huomautusalikansiot täyteen puuhun</translation>
     </message>
@@ -5097,39 +5102,39 @@ Kokeile itseäsi, jos saat synkronointiristiriitoja ja asetat korkeamman arvon, 
         <translation>Etsi skriptien arkisto</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4728"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4739"/>
         <source>You optionally can use &quot;%notePath%&quot; for the path of the note.</source>
         <extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
         <translation>Voit halutessasi käyttää muistiinpanon polkua &quot;%notePath%&quot;.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4751"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4762"/>
         <source>Git client</source>
         <translation>Git-asiakas</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4767"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4778"/>
         <source>Path to git executable:</source>
         <translation>Polku, jolla voit hakea suoritettavaa tiedostoa:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4757"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4768"/>
         <source>Path to git client, leave empty for default</source>
         <translation>Polku asiakkaalle, jätä tyhjäksi oletusarvo</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4676"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4687"/>
         <source>Commit interval</source>
         <translation>Toteuta aikaväli</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4682"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4693"/>
         <source>sec</source>
         <extracomment>seconds</extracomment>
         <translation>sec</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4702"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4713"/>
         <source>git commit interval time [sec]</source>
         <translation>git sitoa aikaväli [sek]</translation>
     </message>
@@ -5199,32 +5204,32 @@ Kokeile itseäsi, jos saat synkronointiristiriitoja ja asetat korkeamman arvon, 
         <translation>Brasilian portugali</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2359"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2370"/>
         <source>Ukrainian</source>
         <translation>Ukrainalainen</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2467"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2478"/>
         <source>You might also want to choose an other editor color schema in the editor settings in dark mode.</source>
         <translation>Saatat haluta myös valita toisen editorin värimallin editorin asetuksissa pimeässä tilassa.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3287"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3298"/>
         <source>The name</source>
         <translation>Nimi</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3364"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3375"/>
         <source>Maximum height:</source>
         <translation>Suurin korkeus:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3371"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3382"/>
         <source>Maximum width:</source>
         <translation>Suurin leveys:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3431"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3442"/>
         <source>Scale images down when inserted into notes</source>
         <translation>Skaalaa kuvat alaspäin, kun ne lisätään muistiinpanoihin</translation>
     </message>
@@ -5234,127 +5239,127 @@ Kokeile itseäsi, jos saat synkronointiristiriitoja ja asetat korkeamman arvon, 
         <translation>Kroaatti</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3202"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3213"/>
         <source>Path to your QML file</source>
         <translation>Polku QML-tiedostoon</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2993"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3004"/>
         <source>Script name</source>
         <translation>Komentosarjan nimi</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3015"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3026"/>
         <source>Description:</source>
         <translation>Kuvaus:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3097"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3108"/>
         <source>Version:</source>
         <translation>Versio:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3058"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3069"/>
         <source>Repository:</source>
         <translation>Arkiston:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3035"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3046"/>
         <source>Author(s):</source>
         <translation>Laatija(t):</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3421"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3432"/>
         <source>Check this if you want to accept all external modifications while you are editing the current note.</source>
         <translation>Tarkista tämä, jos haluat hyväksyä kaikki ulkoiset muutokset nykyisen muistiinpanon muokkaamisen aikana.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3424"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3435"/>
         <source>Accept all external modifications of the current note</source>
         <translation>Hyväksy kaikki nykyisen muistiinpanon ulkoiset muutokset</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3480"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3491"/>
         <source>Use UNIX newline instead of native newline characters</source>
         <translation>Käytä UNIX-uusiriviä natiivien newline-merkkien sijaan</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3404"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3415"/>
         <source>Restore cursor position when opening a note</source>
         <translation>Palauta kohdistimen sijainti, kun avaat muistiinpanon</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3819"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3830"/>
         <source>Be warned that this will also remove your cached todo items and configured note folders and scripts!</source>
         <translation>Varoitetaan, että tämä poistaa myös välimuistissa olevat todo-kohteet ja määritetyt muistikortit ja komentosarjat!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4303"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4314"/>
         <source>Apply toolbar configuration</source>
         <translation>Käytä työkalupalkin asetuksia</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4317"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4328"/>
         <source>Reset toolbars</source>
         <translation>Nollaa työkalurivit</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4345"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4356"/>
         <source>Enable logging to file</source>
         <translation>Ota lokitiedosto käyttöön</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4352"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4363"/>
         <source>Clear log file</source>
         <translation>Tyhjennä lokitiedosto</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4363"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4374"/>
         <source>Fake old version number to trigger update</source>
         <translation>Teeskennellä vanhan versionumeron päivityksen käynnistämiseksi</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4391"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4402"/>
         <source>Log file path:</source>
         <translation>Lokitiedoston polku:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4453"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4464"/>
         <source>Here you can set your own time format for inserting the current time into a note.</source>
         <translation>Täällä voit asettaa oman aikamuodon nykyisen ajan asettamiseksi muistiin.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4456"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4467"/>
         <source>Insert current time</source>
         <translation>Lisää nykyinen aika</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4462"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4473"/>
         <source>Time format:</source>
         <translation>Aikamuoto:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4469"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4480"/>
         <source>Enter your custom time format, like &quot;dd.MM.yyyy hh:mm&quot;</source>
         <translation>Anna mukautettu aikaformaatti, kuten &quot;dd.MM.yyyy hh:mm&quot;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4545"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4556"/>
         <source>Editor options</source>
         <translation>Editorin asetukset</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4558"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4569"/>
         <source>Enable automatic closing of brackets and markdown formatting characters</source>
         <translation>Ota sulkujen ja merkintöjen muotoilumerkkien automaattinen sulkeminen käyttöön</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4612"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4623"/>
         <source>You have to use the backspace key to remove the opening character</source>
         <translation>Sinun täytyy käyttää paluu-näppäintä poistaaksesi avausmerkin</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4615"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4626"/>
         <source>Enable automatic removal of matching closing characters</source>
         <translation>Ota yhteensopivien sulkumerkkien automaattinen poisto käyttöön</translation>
     </message>
@@ -5399,38 +5404,38 @@ Kokeile itseäsi, jos saat synkronointiristiriitoja ja asetat korkeamman arvon, 
         <translation>&amp;Lataa kalenteriluettelo uudelleen</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2457"/>
-        <location filename="../dialogs/settingsdialog.ui" line="2567"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2468"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2578"/>
         <source>You may need to restart the application to let these changes take effect</source>
         <translation>Saatat joutua käynnistämään sovelluksen uudelleen, jotta muutokset tulevat voimaan</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2602"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2613"/>
         <source>Toolbar icon size:</source>
         <translation>Työkalupalkin kuvakkeen koko:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2592"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2603"/>
         <source>List and tree item height:</source>
         <translation>Lista- ja puiden kohteen korkeus:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2625"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2636"/>
         <source>Reset the icon size</source>
         <translation>Nollaa kuvakkeen koko</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2639"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2650"/>
         <source>Reset the item height</source>
         <translation>Nollaa tuotteen korkeus</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4234"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4245"/>
         <source>View text right to left (RTL)</source>
         <translation>Näytä teksti oikealle vasemmalle (RTL)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2763"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2774"/>
         <source>Search for shortcut</source>
         <translation>Hae pikakuvaketta</translation>
     </message>
@@ -5440,22 +5445,22 @@ Kokeile itseäsi, jos saat synkronointiristiriitoja ja asetat korkeamman arvon, 
         <translation>Ohita kalentereita, jotka eivät tue todo-kohteita</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2403"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2414"/>
         <source>Arabic</source>
         <translation>Arabia</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2541"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2552"/>
         <source>Icons</source>
         <translation>Kuvakkeet</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2550"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2561"/>
         <source>Use internal icon theme instead of system icon theme</source>
         <translation>Käytä sisäisen kuvakkeen teemaa järjestelmän kuvakkeen teeman sijaan</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3151"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3162"/>
         <source>Script path:</source>
         <translation>Komentosarjan polku:</translation>
     </message>
@@ -5465,84 +5470,84 @@ Kokeile itseäsi, jos saat synkronointiristiriitoja ja asetat korkeamman arvon, 
         <translation>Huomautus kansion nimi</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3500"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3511"/>
         <source>Allow note file name to be different from headline</source>
         <translation>Salli muistiinpanotiedoston nimi poiketa otsikosta</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3448"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3459"/>
         <source>Check this if you want to ignore all external modifications while you are editing the current note.</source>
         <translation>Tarkista tämä, jos haluat jättää huomiotta kaikki ulkoiset muutokset nykyisen muistiinpanon muokkaamisen aikana.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3451"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3462"/>
         <source>Ignore all external modifications of the current note</source>
         <translation>Ohita kaikki nykyisen muistiinpanon ulkoiset muutokset</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3477"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3488"/>
         <source>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</source>
         <translation>Voit käyttää tätä esimerkiksi Windowsissa, jos sinulla on ongelmia omiin linjoihin omassa Cloud / Nextcloud-muistiinpanoissa</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3531"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3542"/>
         <source>App instance</source>
         <translation>App-esiintymää</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3537"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3548"/>
         <source>Only allow one app instance at the same time</source>
         <translation>Sallitaan vain yksi sovelluskohde samanaikaisesti</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3633"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3644"/>
         <source>Add a custom file extension</source>
         <translation>Lisää mukautettu tiedostotunniste</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3647"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3658"/>
         <source>Remove a custom file extension</source>
         <translation>Poista mukautettu tiedostotunniste</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3686"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3697"/>
         <source>If you add custom extensions just type in the extension, like &quot;taskpaper&quot;.</source>
         <translation>Jos lisäät mukautettuja laajennuksia, kirjoita vain laajennus, kuten &quot;tehtäväpaperi&quot;.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3690"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3701"/>
         <source>Text file (txt)</source>
         <translation>Tekstitiedosto (txt)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3718"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3729"/>
         <source>Path to external editor:</source>
         <translation>Polku ulkoiseen editoriin:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3553"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3564"/>
         <source>Don&apos;t show the update dialog automatically</source>
         <translation>Älä näytä päivitysikkunaa automaattisesti</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3983"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4138"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3994"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4149"/>
         <source>Fonts</source>
         <translation>Kirjasimet</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4006"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4048"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4144"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4196"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4017"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4059"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4155"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4207"/>
         <source>Set a new font</source>
         <translation>Aseta uusi fontti</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4017"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4062"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4158"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4182"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4028"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4073"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4169"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4193"/>
         <source>Reset font</source>
         <translation>Nollaa fontti</translation>
     </message>
@@ -5552,17 +5557,17 @@ Kokeile itseäsi, jos saat synkronointiristiriitoja ja asetat korkeamman arvon, 
         <translation>Debug</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3870"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3881"/>
         <source>Debug information</source>
         <translation>Debug-tiedot</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3913"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3924"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=&quot; font-weight:600;&quot;&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=&quot; font-weight:600;&quot;&gt;issue&lt;/span&gt; on the &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=&quot; font-weight:600;&quot;&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Voit &lt;span style = &quot;font-weight: 600;&quot;&gt;&gt; kopioida ja liittää &lt;/span&gt; tämän tekstin (tai tämän osan osat) &lt;span style = &quot;font-weight: 600;&quot;&gt; issue &lt;/span&gt; &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt; QOwnNotes-ongelmien sivulla &lt;/a&gt;, jos sinulla on &lt;span style = &quot;font-weight: 600;&quot;&gt; kysymykset tai ongelmat &lt;/span&gt; QOwnNotesin avulla. Liian herkät tiedot on piilotettu tähän tietoon. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3889"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3900"/>
         <source>&amp;Save debug information</source>
         <translation>&amp;Tallenna vianmääritystiedot</translation>
     </message>

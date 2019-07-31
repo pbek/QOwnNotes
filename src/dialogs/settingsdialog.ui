@@ -397,7 +397,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>14</number>
+            <number>4</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -2298,6 +2298,17 @@
                        </item>
                        <item>
                         <property name="text">
+                         <string notr="true">Cрпски</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Serbian</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">sr</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
                          <string notr="true">Slovenčina</string>
                         </property>
                         <property name="toolTip">
@@ -2975,8 +2986,8 @@
                           <rect>
                            <x>0</x>
                            <y>0</y>
-                           <width>611</width>
-                           <height>898</height>
+                           <width>360</width>
+                           <height>476</height>
                           </rect>
                          </property>
                          <layout class="QGridLayout" name="gridLayout_55">
@@ -5566,8 +5577,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../breeze-dark-qownnotes.qrc"/>
   <include location="../breeze-qownnotes.qrc"/>
+  <include location="../breeze-dark-qownnotes.qrc"/>
  </resources>
  <connections>
   <connection>
