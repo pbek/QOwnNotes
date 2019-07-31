@@ -1813,12 +1813,12 @@ Restore current note?</source>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2923"/>
-        <source>Loading notes...</source>
+        <source>Abort</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2923"/>
-        <source>Abort</source>
+        <source>Loading notes…</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

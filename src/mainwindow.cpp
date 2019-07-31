@@ -2920,7 +2920,7 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
 
     bool withNoteNameHook = ScriptingService::instance()->handleNoteNameHookExists();
     const int numFiles = files.count();
-    QProgressDialog progress(tr("Loading notes..."), tr("Abort"), 0, numFiles, this);
+    QProgressDialog progress(tr("Loading notes…"), tr("Abort"), 0, numFiles, this);
     progress.setWindowModality(Qt::WindowModal);
     int currentCount = 0;
 
