@@ -5,6 +5,8 @@
     - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes)
       to make QOwnNotes available in more languages or help with the current 
       translation
+- added more Italian, Basque, Czech, Danish, Finnish, Brazilian Portuguese,
+  German translation (thank you Fabijenna, tiwi90, mlimacarlos, rakekniven)
 
 ## 19.7.11
 - **whitespaces** at the **beginning of the current line** are now **reproduced**
