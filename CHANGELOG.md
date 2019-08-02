@@ -1,11 +1,15 @@
 # QOwnNotes Changelog
 
 ## 19.8.1
+- you will now see how many **search results** there are when **searching in a note**
+  and at **what search result** you **currently** are
+    - the search will now start from top when search parameters are changed 
+    - regular expression search restart at top was fixed
+    - the text cases in the note text edit search bar are now fixed and more
+      tooltips are added
 - when a note was created via shortcut or via the note search the search bar in
   the note edit will now be reset to default properties and hidden
   (for [#1255](https://github.com/pbek/QOwnNotes/issues/1255))
-- the text cases in the note text edit search bar are now fixed and more
-  tooltips are added
 
 ## 19.8.0
 - added **Serbian translation** (a big thank you to Fabijenna)
