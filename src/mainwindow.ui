@@ -2514,6 +2514,24 @@ p, li { white-space: pre-wrap; }
    <header location="global">widgets/lineedit.h</header>
   </customwidget>
  </customwidgets>
+ <tabstops>
+  <tabstop>noteSubFolderLineEdit</tabstop>
+  <tabstop>noteSubFolderTreeWidget</tabstop>
+  <tabstop>tagLineEdit</tabstop>
+  <tabstop>tagTreeWidget</tabstop>
+  <tabstop>noteFolderComboBox</tabstop>
+  <tabstop>searchLineEdit</tabstop>
+  <tabstop>noteTreeWidget</tabstop>
+  <tabstop>navigationLineEdit</tabstop>
+  <tabstop>navigationWidget</tabstop>
+  <tabstop>noteOperationsButton</tabstop>
+  <tabstop>noteTextEdit</tabstop>
+  <tabstop>encryptedNoteTextEdit</tabstop>
+  <tabstop>newNoteTagButton</tabstop>
+  <tabstop>newNoteTagLineEdit</tabstop>
+  <tabstop>scriptingScrollArea</tabstop>
+  <tabstop>noteTextView</tabstop>
+ </tabstops>
  <resources>
   <include location="breeze-qownnotes.qrc"/>
   <include location="breeze-dark-qownnotes.qrc"/>

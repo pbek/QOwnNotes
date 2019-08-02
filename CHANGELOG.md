@@ -18,6 +18,7 @@
   (for [#1255](https://github.com/pbek/QOwnNotes/issues/1255))
 - when conflicted database copies were removed a status bar message is now shown
   (for [#1111](https://github.com/pbek/QOwnNotes/issues/1111))
+- improved tab order in main window for panels
 
 ## 19.8.0
 - added **Serbian translation** (a big thank you to Fabijenna)
