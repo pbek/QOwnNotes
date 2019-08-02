@@ -3783,7 +3783,7 @@ QTreeWidgetItem * MainWindow::firstVisibleNoteTreeWidgetItem() {
 }
 
 /**
- * highlights all occurrences of str in the note text edit
+ * Highlights all occurrences of str in the note text edit and does a "in note search"
  */
 void MainWindow::searchInNoteTextEdit(QString str) {
     QList<QTextEdit::ExtraSelection> extraSelections;
@@ -9135,13 +9135,8 @@ void MainWindow::on_noteTreeWidget_currentItemChanged(
 
     setCurrentNote(note, true, false);
 
-    // let's highlight the text from the search line edit
+    // let's highlight the text from the search line edit and do a "in note search"
     searchForSearchLineTextInNoteTextEdit();
-
-    // also do a "in note search" if the widget is visible
-    if (ui->noteTextEdit->searchWidget()->isVisible()) {
-        ui->noteTextEdit->searchWidget()->doSearchDown();
-    }
 }
 
 void MainWindow::on_noteTreeWidget_customContextMenuRequested(
