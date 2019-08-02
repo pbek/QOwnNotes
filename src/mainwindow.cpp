@@ -3115,7 +3115,7 @@ void MainWindow::removeConflictedNotesDatabaseCopies() {
         files << it.next();
     }
 
-    const int count = files.count();
+    int count = files.count();
 
     if (count == 0) {
         return;
@@ -3138,10 +3138,16 @@ void MainWindow::removeConflictedNotesDatabaseCopies() {
     // we try to fix problems with the blocker
     directoryWatcherWorkaround(true);
 
+    count = 0;
+
     // remove the database files
     Q_FOREACH(QString file, files) {
-            QFile::remove(file);
+            if (QFile::remove(file)) {
+                count++;
+            }
     }
+
+    showStatusBarMessage(tr("Removed %n conflicted database copies", "", count));
 
     directoryWatcherWorkaround(false);
 }
