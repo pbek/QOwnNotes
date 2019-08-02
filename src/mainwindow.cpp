@@ -5306,6 +5306,11 @@ void MainWindow::jumpToNoteOrCreateNew(bool disableLoadNoteDirectoryList) {
     QString text = ui->searchLineEdit->text();
     text = text.trimmed();
 
+    // clear search line edit so all notes will be viewed again and to prevent
+    // a brief appearing of the note search widget when creating a new note
+    // with action_New_note
+    ui->searchLineEdit->clear();
+
     // first let us search for the entered text
     Note note = Note::fetchByName(text);
 
@@ -5370,9 +5375,6 @@ void MainWindow::jumpToNoteOrCreateNew(bool disableLoadNoteDirectoryList) {
         // the buildNotesIndex()
 //        note.refetch();
 
-        // clear search line edit so all notes will be viewed again
-        ui->searchLineEdit->clear();
-
         // add the file to the note directory watcher
         noteDirectoryWatcher.addPath(note.fullNoteFilePath());
 
@@ -5389,6 +5391,9 @@ void MainWindow::jumpToNoteOrCreateNew(bool disableLoadNoteDirectoryList) {
 
     // focus the note text edit and set the cursor correctly
     focusNoteTextEdit();
+
+    // hide the search widget after creating a new note
+    activeNoteTextEdit()->hideSearchWidget(true);
 }
 
 void MainWindow::on_action_Remove_note_triggered() {
@@ -5454,7 +5459,10 @@ void MainWindow::createNewNote(QString noteName, bool withNameAppend) {
                 .replace(":", ".");
     }
 
-    this->ui->searchLineEdit->setText(noteName);
+    const QSignalBlocker blocker(ui->searchLineEdit);
+    Q_UNUSED(blocker)
+
+    ui->searchLineEdit->setText(noteName);
 
     // create a new note or jump to the existing
     jumpToNoteOrCreateNew();
