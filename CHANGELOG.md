@@ -19,6 +19,9 @@
 - when conflicted database copies were removed a status bar message is now shown
   (for [#1111](https://github.com/pbek/QOwnNotes/issues/1111))
 - improved tab order in main window for panels
+- added more Italian, Brazilian Portuguese, German, Serbian (Cyrillic), Dutch,
+  Hungarian, Catalan, Greek, Persian, Polish translation (thank you tiwi90,
+  mlimacarlos, mlocati, 2fake1987, Fabijenna, MGuerra, rakekniven, athrouss, lucjan)
 
 ## 19.8.0
 - added **Serbian translation** (a big thank you to Fabijenna)
