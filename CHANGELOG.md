@@ -4,6 +4,8 @@
 - when a note was created via shortcut or via the note search the search bar in
   the note edit will now be reset to default properties and hidden
   (for [#1255](https://github.com/pbek/QOwnNotes/issues/1255))
+- the text cases in the note text edit search bar are now fixed and more
+  tooltips are added
 
 ## 19.8.0
 - added **Serbian translation** (a big thank you to Fabijenna)
