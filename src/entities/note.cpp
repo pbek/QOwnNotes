@@ -1228,13 +1228,19 @@ bool Note::handleNoteTextFileName() {
         qDebug() << __func__ << " - 'name' was changed: " << name;
         QString fileName = generateNoteFileNameFromName(name);
 
+        int nameCount = 0;
+        QString nameBase = name;
+
         // check if note with this filename already exists
-        Note note = Note::fetchByFileName(fileName);
-        if (note.id > 0) {
-            // find new filename for the note (not very safe yet)
-            QDateTime currentDateTime = QDateTime::currentDateTime();
-            name += " " + currentDateTime
-                    .toString(Qt::ISODate).replace(":", "_");
+        while(Note::fetchByFileName(fileName).exists()) {
+            // find new filename for the note
+            name = nameBase + " (" + QString::number(++nameCount) + ")";
+            fileName = generateNoteFileNameFromName(name);
+            qDebug() << __func__ << " - 'override fileName': " << fileName;
+
+            if (nameCount > 1000) {
+                break;
+            }
         }
 
         // update the first line of the note text
