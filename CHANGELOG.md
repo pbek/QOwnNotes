@@ -11,6 +11,8 @@
   a **number** is **added** instead of the current date and time to prevent name
   clashes when multiple notes are created in the same second
   (for [#1252](https://github.com/pbek/QOwnNotes/issues/1252))
+- in the **note list** now the **note filename with extension** is displayed in the
+  **tooltips** instead of just the note name (for [#1157](https://github.com/pbek/QOwnNotes/issues/1157))
 - when a note was created via shortcut or via the note search the search bar in
   the note edit will now be reset to default properties and hidden
   (for [#1255](https://github.com/pbek/QOwnNotes/issues/1255))

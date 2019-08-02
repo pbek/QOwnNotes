@@ -2083,7 +2083,7 @@ void MainWindow::setTreeWidgetItemToolTipForNote(
                                  overrideFileLastModified : &modified;
 
     QString toolTipText = tr("<strong>%1</strong><br />last modified: %2")
-            .arg(note->getName(), fileLastModified->toString());
+            .arg(note->getFileName(), fileLastModified->toString());
 
     NoteSubFolder noteSubFolder = note->getNoteSubFolder();
     if (noteSubFolder.isFetched()) {

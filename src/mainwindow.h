@@ -809,9 +809,9 @@ private:
 
     bool isToolbarVisible();
 
-    void setTreeWidgetItemToolTipForNote(QTreeWidgetItem *item, Note *note,
-                                         QDateTime *overrideFileLastModified
-                                         = 0);
+    static void setTreeWidgetItemToolTipForNote(
+            QTreeWidgetItem *item, Note *note,
+            QDateTime *overrideFileLastModified = nullptr);
 
     QTreeWidgetItem *firstVisibleNoteTreeWidgetItem();
 
