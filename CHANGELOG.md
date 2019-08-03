@@ -6,6 +6,9 @@
 - made confirmation message for conflicted database copies more affirmative
   (for [#1111](https://github.com/pbek/QOwnNotes/issues/1111))
 - now it shows `-` instead of 0 in the in-note search count (for [#1247](https://github.com/pbek/QOwnNotes/issues/1247))
+- added more German, Spanish, Serbian (Cyrillic), Hungarian, Romanian, Dutch,
+  Basque, Cebuano, Czech, Danish, Finnish, Greek, Norwegian, Slovak,
+  Slovenian translation (thank you rakekniven, richarson, Fabijenna)
 
 ## 19.8.1
 - you will now see how many **search results** there are when **searching in a note**
