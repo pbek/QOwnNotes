@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 19.8.2
+- made confirmation message for conflicted database copies more affirmative
+  (for [#1111](https://github.com/pbek/QOwnNotes/issues/1111))
+
 ## 19.8.1
 - you will now see how many **search results** there are when **searching in a note**
   and at **what search result** you **currently** are

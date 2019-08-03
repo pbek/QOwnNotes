@@ -3125,8 +3125,9 @@ void MainWindow::removeConflictedNotesDatabaseCopies() {
             this,
             tr("Delete conflicted database copies"),
             Utils::Misc::replaceOwnCloudText(
-                    tr("Delete <strong>%n</strong> conflicted database copies"
-                       " that may block your ownCloud sync process?",
+                    tr("Proceed with automatic deletion of <strong>%n</strong>"
+                       " conflicted database copies that may block your ownCloud"
+                       " sync process?",
                "", count)) + "<br /><br />" + files.join("<br />"),
             "delete-conflicted-database-files") != QMessageBox::Yes) {
         return;
