@@ -5396,11 +5396,11 @@ void MainWindow::jumpToNoteOrCreateNew(bool disableLoadNoteDirectoryList) {
     // jump to the found or created note
     setCurrentNote(note);
 
-    // focus the note text edit and set the cursor correctly
-    focusNoteTextEdit();
-
     // hide the search widget after creating a new note
     activeNoteTextEdit()->hideSearchWidget(true);
+
+    // focus the note text edit and set the cursor correctly
+    focusNoteTextEdit();
 }
 
 void MainWindow::on_action_Remove_note_triggered() {

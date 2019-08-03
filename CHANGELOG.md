@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 19.8.2
+- the cursor will now be positioned in the 4th line again after creating a new
+  note with the note search panel (for [#1255](https://github.com/pbek/QOwnNotes/issues/1255))
 - made confirmation message for conflicted database copies more affirmative
   (for [#1111](https://github.com/pbek/QOwnNotes/issues/1111))
 
