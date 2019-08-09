@@ -97,6 +97,8 @@ namespace Utils {
         QString importMediaFromBase64(QString &data, const QString& imageSuffix = "dat");
         bool isDarkModeIconTheme();
         void transformNextcloudPreviewImages(QString &html);
+        void transformRemotePreviewImages(QString &html);
+        QString remotePreviewImageTagToInlineImageTag(QString imageTag);
     }  // namespace Misc
 }  // namespace Utils
 

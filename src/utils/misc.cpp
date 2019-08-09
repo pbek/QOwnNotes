@@ -40,6 +40,7 @@
 #include "misc.h"
 #include <utility>
 #include <services/owncloudservice.h>
+#include <QtCore/QMimeDatabase>
 
 #ifdef Q_OS_WIN
 #include <windows.h>
@@ -1545,4 +1546,56 @@ void Utils::Misc::transformNextcloudPreviewImages(QString &html) {
 
         html.replace(imageTag, inlineImageTag);
     }
+}
+
+/**
+ * Transforms remote preview image tags
+ *
+ * @param html
+ */
+void Utils::Misc::transformRemotePreviewImages(QString &html) {
+    OwnCloudService *ownCloud = OwnCloudService::instance();
+
+    QRegularExpression re(R"(<img src=\"(https?:\/\/.+)\".*\/?>)",
+                          QRegularExpression::CaseInsensitiveOption | QRegularExpression::MultilineOption | QRegularExpression::InvertedGreedinessOption);
+    QRegularExpressionMatchIterator i = re.globalMatch(html);
+
+    while (i.hasNext()) {
+        QRegularExpressionMatch match = i.next();
+        QString imageTag = match.captured(0);
+
+        QString inlineImageTag = remotePreviewImageTagToInlineImageTag(imageTag);
+        html.replace(imageTag, inlineImageTag);
+    }
+}
+
+/**
+ * Transforms a remote preview image tag to an inline image tag
+ *
+ * @param data
+ * @param imageSuffix
+ * @return
+ */
+QString Utils::Misc::remotePreviewImageTagToInlineImageTag(QString imageTag) {
+    imageTag.replace("&amp;", "&");
+
+    QRegularExpression re(R"(<img src=\"(https?:\/\/.+)\")",
+                          QRegularExpression::CaseInsensitiveOption |
+                          QRegularExpression::InvertedGreedinessOption);
+
+    QRegularExpressionMatch match = re.match(imageTag);
+    if (!match.hasMatch()) {
+        return imageTag;
+    }
+
+    QString url = match.captured(1);
+    QByteArray data = downloadUrl(url);
+    QMimeDatabase db;
+    auto type = db.mimeTypeForData(data);
+
+    // for now we do no caching, because we don't know when to invalidate the cache
+    const QString replace = "data:" + type.name() + ";base64," + data.toBase64();
+    const QString inlineImageTag = imageTag.replace(url, replace);
+
+    return inlineImageTag;
 }

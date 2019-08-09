@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 19.8.3
+- added support for a real time preview of remote images (for [#1244](https://github.com/pbek/QOwnNotes/issues/1244))
+    - the image links in the image tags will be transformed to inline images
+    - no caching can currently be done
+
 ## 19.8.2
 - the cursor will now be positioned in the 4th line again after creating a new
   note with the note search panel (for [#1255](https://github.com/pbek/QOwnNotes/issues/1255))
