@@ -1949,7 +1949,7 @@ QByteArray OwnCloudService::downloadNextcloudPreviewImage(const QString& path) {
 }
 
 /**
- * Transforms an Nextcloud preview image tag to an inline image tag
+ * Transforms a Nextcloud preview image tag to an inline image tag
  *
  * @param data
  * @param imageSuffix
