@@ -1835,12 +1835,12 @@ Restore current note?</source>
     <message>
       <location filename="../mainwindow.cpp" line="2923"/>
       <source>Abort</source>
-      <translation type="unfinished">Abort</translation>
+      <translation>Прервать</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2923"/>
       <source>Loading notes…</source>
-      <translation type="unfinished">Loading notes…</translation>
+      <translation>Загрузка заметок…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3126"/>
@@ -1850,11 +1850,11 @@ Restore current note?</source>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3151"/>
       <source>Removed %n conflicted database copies</source>
-      <translation type="unfinished">
-        <numerusform>Removed %n conflicted database copies</numerusform>
-        <numerusform>Removed %n conflicted database copies</numerusform>
-        <numerusform>Removed %n conflicted database copies</numerusform>
-        <numerusform>Removed %n conflicted database copies</numerusform>
+      <translation>
+        <numerusform>Удалена одна конфликтная копия базы данных</numerusform>
+        <numerusform>Удалены %n конфликтные копии базы данных</numerusform>
+        <numerusform>Удалено %n конфликтных копий базы данных</numerusform>
+        <numerusform>Удалено %n конфликтных копий базы данных</numerusform>
       </translation>
     </message>
     <message>
@@ -4688,7 +4688,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2304"/>
       <source>Serbian</source>
-      <translation type="unfinished">Serbian</translation>
+      <translation>Сербский</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2315"/>

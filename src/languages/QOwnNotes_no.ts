@@ -2862,9 +2862,9 @@ Hvis papirkurven er aktivert på din ownCloud-server, bør du kunne gjenopprette
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3128"/>
       <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
-      <translation type="unfinished">
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
+      <translation>
+        <numerusform>Fortsett med automatisk sletting av &lt;strong&gt;%n &lt;/ strong&gt; konfliktfylt databasekopi som kan blokkere din ownCloud-synkroniseringsprosess?</numerusform>
+        <numerusform>Fortsett med automatisk sletting av &lt;strong&gt;%n &lt;/strong&gt; konfliktfylte databasekopier som kan blokkere din ownCloud-synkroniseringsprosess?</numerusform>
       </translation>
     </message>
     <message numerus="yes">

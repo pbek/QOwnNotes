@@ -1830,9 +1830,9 @@ Restore current note?</source>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3151"/>
       <source>Removed %n conflicted database copies</source>
-      <translation type="unfinished">
-        <numerusform>Removed %n conflicted database copies</numerusform>
-        <numerusform>Removed %n conflicted database copies</numerusform>
+      <translation>
+        <numerusform>Έγινε κατάργηση %n αντιφατικής αντιγραφής βάσης δεδομένων</numerusform>
+        <numerusform>Αφαιρέθηκαν %n αντιφατικά αντίγραφα βάσης δεδομένων</numerusform>
       </translation>
     </message>
     <message>
@@ -2019,9 +2019,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5128"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation type="unfinished">
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+      <translation>
+        <numerusform>Βρέθηκε &lt;strong&gt;%n &lt;/strong&gt; εμφάνιση οποιουδήποτε όρου &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+        <numerusform>Εντοπίστηκαν &lt;strong&gt;%n &lt;/ strong&gt; περιστατικά οποιουδήποτε όρου &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
       </translation>
     </message>
     <message>
@@ -2862,9 +2862,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3128"/>
       <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
-      <translation type="unfinished">
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
+      <translation>
+        <numerusform>Προχωρήστε με την αυτόματη διαγραφή του αντιγράφου αλληλεπίδρασης &lt;strong&gt;%n &lt;/ strong&gt; που μπορεί να εμποδίσει τη διαδικασία συγχρονισμού ownCloud;</numerusform>
+        <numerusform>Προχωρήστε με την αυτόματη διαγραφή των αντιγράφων αλληλεπίδρασης αλληλογραφίας &lt;strong&gt;%n &lt;/strong&gt; που μπορεί να εμποδίσουν τη δική σας διαδικασία συγχρονισμού του κλουβιού;</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -2878,9 +2878,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5127"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation type="unfinished">
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+      <translation>
+        <numerusform>Βρέθηκε &lt;strong&gt;%n &lt;/ strong&gt; εμφάνιση &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+        <numerusform>Εντοπίστηκαν &lt;strong&gt;%n &lt;/ strong&gt; περιστατικά &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
       </translation>
     </message>
     <message>

@@ -2861,9 +2861,9 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3128"/>
       <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
-      <translation type="unfinished">
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
+      <translation>
+        <numerusform>Procedere con la cancellazione automatica della &lt;strong&gt;%n&lt;/strong&gt; copia di database in conflitto che potrebbero bloccare il processo di sincronizzazione di OwnCloud?</numerusform>
+        <numerusform>Procedere con la cancellazione automatica delle &lt;strong&gt;%n&lt;/strong&gt; copie di database in conflitto che potrebbero bloccare il processo di sincronizzazione di OwnCloud?</numerusform>
       </translation>
     </message>
     <message numerus="yes">

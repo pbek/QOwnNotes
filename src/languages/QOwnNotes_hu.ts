@@ -1829,7 +1829,7 @@ Restore current note?</source>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3151"/>
       <source>Removed %n conflicted database copies</source>
-      <translation type="unfinished">
+      <translation>
         <numerusform>Eltávolított %n ütköző adatbázis-példányt</numerusform>
         <numerusform>Eltávolított %n ütköző adatbázis-példányt</numerusform>
       </translation>
@@ -2861,9 +2861,9 @@ Ha a kuka a ownCloud kiszolgálón engedélyezett, onnan visszaállítható.</nu
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3128"/>
       <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
-      <translation type="unfinished">
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
+      <translation>
+        <numerusform>Folytatja a &lt;strong&gt;%n &lt;/strong&gt; ellentmondásos adatbázis-másolat automatikus törlésével, amely blokkolja a sajátCloud-szinkronizálási folyamatot?</numerusform>
+        <numerusform>Folytatja a &lt;strong&gt;%n &lt;/strong&gt; ellentmondásos adatbázis-másolat automatikus törlésével, amely blokkolja a sajátCloud-szinkronizálási folyamatot?</numerusform>
       </translation>
     </message>
     <message numerus="yes">

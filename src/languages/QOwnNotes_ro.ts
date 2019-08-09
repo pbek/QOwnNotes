@@ -2895,10 +2895,10 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3128"/>
       <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
-      <translation type="unfinished">
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
+      <translation>
+        <numerusform>Continuați cu ștergerea automată a &lt;strong&gt;%n &lt;/strong&gt; copie a bazei de date în conflict care vă poate bloca procesul de sincronizare ownCloud?</numerusform>
+        <numerusform>Continuați cu ștergerea automată a &lt;strong&gt;%n &lt;/strong&gt; copii de bază de date conflictuale care vă pot bloca procesul de sincronizare ownCloud?</numerusform>
+        <numerusform>Continuați cu ștergerea automată a &lt;strong&gt;%n &lt;/strong&gt; copii de bază de date conflictuale care vă pot bloca procesul de sincronizare ownCloud?</numerusform>
       </translation>
     </message>
     <message numerus="yes">

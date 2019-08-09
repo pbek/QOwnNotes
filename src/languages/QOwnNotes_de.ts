@@ -2862,9 +2862,9 @@ Falls Sie die Papierkorb-App auf Ihrem Nextcloud/ownCloud-Server aktiviert haben
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3128"/>
       <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
-      <translation type="unfinished">
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
+      <translation>
+        <numerusform>Mit dem Löschen von &lt;strong&gt;%n&lt;/strong&gt; Datenbank-Kopie mit Konflikten fortfahren, welche den Nextcloud-Synchronisationsprozess blockieren könnte?</numerusform>
+        <numerusform>Mit dem Löschen von &lt;strong&gt;%n&lt;/strong&gt; Datenbank-Kopien mit Konflikten fortfahren, welche den Nextcloud-Synchronisationsprozess blockieren könnte?</numerusform>
       </translation>
     </message>
     <message numerus="yes">

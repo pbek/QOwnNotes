@@ -2862,9 +2862,9 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3128"/>
       <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
-      <translation type="unfinished">
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
+      <translation>
+        <numerusform>Jatka &lt;strong&gt;%n &lt;/strong&gt; -ristiriidassa olevan tietokantakopion automaattista poistamista, joka saattaa estää ownCloud-synkronointiprosessin?</numerusform>
+        <numerusform>Jatka &lt;strong&gt;%n &lt;/strong&gt; -ristiriidassa olevien tietokantakopioiden automaattista poistamista, jotka voivat estää ownCloud-synkronointiprosessin?</numerusform>
       </translation>
     </message>
     <message numerus="yes">

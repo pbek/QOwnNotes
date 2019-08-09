@@ -2928,11 +2928,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3128"/>
       <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
-      <translation type="unfinished">
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
+      <translation>
+        <numerusform>Pokračujte s automatickým vymazaním kópie konfliktu &lt;strong&gt;%n &lt;/strong&gt;, ktorá môže blokovať váš vlastný proces synchronizácie nahlas?</numerusform>
+        <numerusform>Pokračujte s automatickým vymazaním kópií s konfliktom &lt;strong&gt;%n &lt;/strong&gt;, ktoré môžu blokovať váš vlastný proces synchronizácie nahlas?</numerusform>
+        <numerusform>Pokračujte s automatickým vymazaním kópií s konfliktom &lt;strong&gt;%n &lt;/strong&gt;, ktoré môžu blokovať váš vlastný proces synchronizácie nahlas?</numerusform>
+        <numerusform>Pokračujte s automatickým vymazaním kópií s konfliktom &lt;strong&gt;%n &lt;/strong&gt;, ktoré môžu blokovať váš vlastný proces synchronizácie nahlas?</numerusform>
       </translation>
     </message>
     <message numerus="yes">

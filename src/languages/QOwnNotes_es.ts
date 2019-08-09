@@ -2861,9 +2861,9 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3128"/>
       <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
-      <translation type="unfinished">
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
+      <translation>
+        <numerusform>¿Proceder con el borrado automático de &lt;strong&gt;%n&lt;/strong&gt; base de datos en conflicto que puede bloquear el proceso de sincronización con ownCloud?</numerusform>
+        <numerusform>¿Proceder con el borrado automático de &lt;strong&gt;%n&lt;/strong&gt; bases de datos en conflicto que pueden bloquear el proceso de sincronización con ownCloud?</numerusform>
       </translation>
     </message>
     <message numerus="yes">

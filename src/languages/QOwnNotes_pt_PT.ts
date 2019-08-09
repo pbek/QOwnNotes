@@ -778,7 +778,7 @@
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="42"/>
       <source>Name</source>
-      <translation type="unfinished">Name</translation>
+      <translation>Nome</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="47"/>
@@ -1151,7 +1151,7 @@
     <message>
       <location filename="../mainwindow.ui" line="930"/>
       <source>Trash</source>
-      <translation type="unfinished">Trash</translation>
+      <translation>Lixo</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="997"/>
@@ -1228,7 +1228,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1158"/>
       <source>Jump to</source>
-      <translation type="unfinished">Jump to</translation>
+      <translation>Ir para</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1191"/>
@@ -1248,7 +1248,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1394"/>
       <source>Show remote trash</source>
-      <translation type="unfinished">Show remote trash</translation>
+      <translation>Mostrar lixo remoto</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1434"/>
@@ -1284,12 +1284,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1520"/>
       <source>&amp;Export note as PDF (preview)</source>
-      <translation type="unfinished">&amp;Export note as PDF (preview)</translation>
+      <translation>&amp;Exportar nota como PDF (pré-visualizar)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1523"/>
       <source>Export note as PDF (preview)</source>
-      <translation type="unfinished">Export note as PDF (preview)</translation>
+      <translation>Exportar nota como PDF (pré-visualizar)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1532"/>
@@ -1718,7 +1718,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1553"/>
       <source>&amp;Print note (preview)</source>
-      <translation type="unfinished">&amp;Print note (preview)</translation>
+      <translation>&amp;Imprimir nota (pré-visualizar)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1959"/>
@@ -1815,12 +1815,12 @@ Restaurar a nota atual? </translation>
     <message>
       <location filename="../mainwindow.cpp" line="2923"/>
       <source>Abort</source>
-      <translation type="unfinished">Abort</translation>
+      <translation>Abortar</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2923"/>
       <source>Loading notes…</source>
-      <translation type="unfinished">Loading notes…</translation>
+      <translation>A carregar as notas…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3126"/>
@@ -2226,7 +2226,7 @@ Se a reciclagem não estiver ativada no servidor de ownCloud não será possíve
       <location filename="../mainwindow.cpp" line="9165"/>
       <location filename="../mainwindow.cpp" line="9333"/>
       <source>Rename note</source>
-      <translation type="unfinished">Rename note</translation>
+      <translation>Renomear nota</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9166"/>
@@ -3036,7 +3036,7 @@ Se a reciclagem não estiver ativada no servidor de ownCloud não será possíve
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="277"/>
       <source>HTML files</source>
-      <translation type="unfinished">HTML files</translation>
+      <translation>Ficheiros HTML</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="278"/>
@@ -3104,7 +3104,7 @@ Se a reciclagem não estiver ativada no servidor de ownCloud não será possíve
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="60"/>
       <source>Last modified at %1</source>
-      <translation type="unfinished">Last modified at %1</translation>
+      <translation>Última modificação às %1</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="140"/>
@@ -3150,7 +3150,7 @@ Se a reciclagem não estiver ativada no servidor de ownCloud não será possíve
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="146"/>
       <source>Images that are not used in notes:</source>
-      <translation type="unfinished">Images that are not used in notes:</translation>
+      <translation>Imagens que não são utilizadas nas notas:</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.cpp" line="56"/>
@@ -3267,7 +3267,7 @@ Se a reciclagem não estiver ativada no servidor de ownCloud não será possíve
     <message>
       <location filename="../services/owncloudservice.cpp" line="1886"/>
       <source>No bookmarks</source>
-      <translation type="unfinished">No bookmarks</translation>
+      <translation>Sem marcadores</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1887"/>
@@ -3346,16 +3346,16 @@ Se a reciclagem não estiver ativada no servidor de ownCloud não será possíve
     <message numerus="yes">
       <location filename="../entities/note.cpp" line="2896"/>
       <source>…and %n more note(s)</source>
-      <translation type="unfinished">
-        <numerusform>…and %n more note(s)</numerusform>
-        <numerusform>…and %n more note(s)</numerusform>
+      <translation>
+        <numerusform>…e mais %n nota(s)</numerusform>
+        <numerusform>…e mais %n nota(s)</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../helpers/toolbarcontainer.cpp" line="37"/>
       <location filename="../helpers/toolbarcontainer.cpp" line="112"/>
       <source>Unknown action %1</source>
-      <translation type="unfinished">Unknown action %1</translation>
+      <translation>Ação desconhecida %1</translation>
     </message>
     <message>
       <location filename="../helpers/toolbarcontainer.cpp" line="94"/>
@@ -3365,22 +3365,22 @@ Se a reciclagem não estiver ativada no servidor de ownCloud não será possíve
     <message>
       <location filename="../utils/gui.cpp" line="267"/>
       <source>Don't ask again!</source>
-      <translation type="unfinished">Don't ask again!</translation>
+      <translation>Não voltar a perguntar!</translation>
     </message>
     <message>
       <location filename="../utils/gui.cpp" line="267"/>
       <source>Don't show again!</source>
-      <translation type="unfinished">Don't show again!</translation>
+      <translation>Não voltar a mostrar!</translation>
     </message>
     <message>
       <location filename="../utils/git.cpp" line="74"/>
       <source>Command failed!</source>
-      <translation type="unfinished">Command failed!</translation>
+      <translation>O comando falhou!</translation>
     </message>
     <message>
       <location filename="../utils/git.cpp" line="75"/>
       <source>The command &lt;code&gt;%1&lt;/code&gt; failed!</source>
-      <translation type="unfinished">The command &lt;code&gt;%1&lt;/code&gt; failed!</translation>
+      <translation>O comando &lt;code&gt;%1&lt;/code&gt; falhou!</translation>
     </message>
   </context>
   <context>
@@ -3388,7 +3388,7 @@ Se a reciclagem não estiver ativada no servidor de ownCloud não será possíve
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="406"/>
       <source>Note editing disabled</source>
-      <translation type="unfinished">Note editing disabled</translation>
+      <translation>Edição da nota desativada</translation>
     </message>
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="407"/>
@@ -3401,7 +3401,7 @@ Se a reciclagem não estiver ativada no servidor de ownCloud não será possíve
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="53"/>
       <source>Find:</source>
-      <translation type="unfinished">Find:</translation>
+      <translation>Encontrar:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="107"/>
@@ -3416,7 +3416,7 @@ Se a reciclagem não estiver ativada no servidor de ownCloud não será possíve
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="32"/>
       <source>Find in text</source>
-      <translation type="unfinished">Find in text</translation>
+      <translation>Encontrar no texto</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="127"/>
@@ -3431,27 +3431,27 @@ Se a reciclagem não estiver ativada no servidor de ownCloud não será possíve
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="39"/>
       <source>Replace with</source>
-      <translation type="unfinished">Replace with</translation>
+      <translation>Substituir com</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="80"/>
       <source>Replace:</source>
-      <translation type="unfinished">Replace:</translation>
+      <translation>Substituir:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="193"/>
       <source>Plain text</source>
-      <translation type="unfinished">Plain text</translation>
+      <translation>Texto simples</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="198"/>
       <source>Whole words</source>
-      <translation type="unfinished">Whole words</translation>
+      <translation>Palavras completas</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="203"/>
       <source>Regular expression</source>
-      <translation type="unfinished">Regular expression</translation>
+      <translation>Expressão regular</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="224"/>
@@ -3461,17 +3461,17 @@ Se a reciclagem não estiver ativada no servidor de ownCloud não será possíve
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="227"/>
       <source>Replace</source>
-      <translation type="unfinished">Replace</translation>
+      <translation>Substituir</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="237"/>
       <source>Replace all text occurrences</source>
-      <translation type="unfinished">Replace all text occurrences</translation>
+      <translation>Substituir todas as ocorrências de texto</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="240"/>
       <source>Replace all</source>
-      <translation type="unfinished">Replace all</translation>
+      <translation>Substituir tudo</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="164"/>
@@ -4558,12 +4558,12 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2051"/>
       <source>Danish</source>
-      <translation type="unfinished">Danish</translation>
+      <translation>Dinamarquês</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2073"/>
       <source>Basque</source>
-      <translation type="unfinished">Basque</translation>
+      <translation>Basco</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2106"/>
@@ -4583,7 +4583,7 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2150"/>
       <source>Greek</source>
-      <translation type="unfinished">Greek</translation>
+      <translation>Grego</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2161"/>
@@ -4603,22 +4603,22 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2282"/>
       <source>Romanian</source>
-      <translation type="unfinished">Romanian</translation>
+      <translation>Romeno</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2304"/>
       <source>Serbian</source>
-      <translation type="unfinished">Serbian</translation>
+      <translation>Sérvio</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2315"/>
       <source>Slovak</source>
-      <translation type="unfinished">Slovak</translation>
+      <translation>Eslovaco</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2326"/>
       <source>Slovenian</source>
-      <translation type="unfinished">Slovenian</translation>
+      <translation>Esloveno</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2337"/>
@@ -4633,7 +4633,7 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2359"/>
       <source>Turkish</source>
-      <translation type="unfinished">Turkish</translation>
+      <translation>Turco</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2381"/>
@@ -4643,12 +4643,12 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2392"/>
       <source>Chinese Simplified</source>
-      <translation type="unfinished">Chinese Simplified</translation>
+      <translation>Chinês Simplificado</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2403"/>
       <source>Chinese Traditional</source>
-      <translation type="unfinished">Chinese Traditional</translation>
+      <translation>Chinês Tradicional</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2471"/>
@@ -4663,7 +4663,7 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2511"/>
       <source>System tray</source>
-      <translation type="unfinished">System tray</translation>
+      <translation>Bandeja do sistema</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2520"/>
@@ -4822,7 +4822,7 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5372"/>
       <source>Bookmarks</source>
-      <translation type="unfinished">Bookmarks</translation>
+      <translation>Marcadores</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5378"/>
@@ -4922,7 +4922,7 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5160"/>
       <source>Navigation panel</source>
-      <translation type="unfinished">Navigation panel</translation>
+      <translation>Painel de navegação</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5166"/>
@@ -4953,17 +4953,17 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5266"/>
       <source>Local trash support</source>
-      <translation type="unfinished">Local trash support</translation>
+      <translation>Suporte para lixo local</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5272"/>
       <source>Enable local trash</source>
-      <translation type="unfinished">Enable local trash</translation>
+      <translation>Ativar lixo local</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5289"/>
       <source>Layout selector</source>
-      <translation type="unfinished">Layout selector</translation>
+      <translation>Seletor de layout</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5295"/>
@@ -5093,12 +5093,12 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
       <location filename="../dialogs/settingsdialog.ui" line="4972"/>
       <location filename="../dialogs/settingsdialog.ui" line="5120"/>
       <source>By last change</source>
-      <translation type="unfinished">By last change</translation>
+      <translation>Pela última alteração</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4982"/>
       <source>Show root folder name</source>
-      <translation type="unfinished">Show root folder name</translation>
+      <translation>Mostrar nome da pasta raiz</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5012"/>
@@ -5160,12 +5160,12 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="227"/>
       <source>Preview</source>
-      <translation type="unfinished">Preview</translation>
+      <translation>Pré-visualizar</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="276"/>
       <source>Browser extension</source>
-      <translation type="unfinished">Browser extension</translation>
+      <translation>Extensão de navegador</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1647"/>
@@ -5481,7 +5481,7 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="739"/>
       <source>Note folder name</source>
-      <translation type="unfinished">Note folder name</translation>
+      <translation>Nome da pasta de notas</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3511"/>
@@ -6156,7 +6156,7 @@ Suas Notas estarão intactas!</translation>
     <message>
       <location filename="../dialogs/tododialog.ui" line="222"/>
       <source>Note…</source>
-      <translation type="unfinished">Note…</translation>
+      <translation>Nota…</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="100"/>
@@ -6211,7 +6211,7 @@ Suas Notas estarão intactas!</translation>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="109"/>
       <source>Import as note</source>
-      <translation type="unfinished">Import as note</translation>
+      <translation>Importar como nota</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="205"/>
@@ -6775,17 +6775,17 @@ Isso não poderá ser desfeito!</translation>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="285"/>
       <source>Panel layout</source>
-      <translation type="unfinished">Panel layout</translation>
+      <translation>Layout do painel</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="342"/>
       <source>Open ownCloud settings</source>
-      <translation type="unfinished">Open ownCloud settings</translation>
+      <translation>Abrir definições do ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="384"/>
       <source>Open network settings</source>
-      <translation type="unfinished">Open network settings</translation>
+      <translation>Abrir definições de rede</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="184"/>
