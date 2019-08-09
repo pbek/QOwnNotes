@@ -17,7 +17,8 @@ environment:
 #      TOOLCHAIN_VERSION: 530_32
 #      gpp: win32-g++
     # latest Qt 32 bit
-    - QTDIR: C:\Qt\latest\mingw73_32
+    - QTDIR: C:\Qt\5.12\mingw73_32
+    #  QTDIR: C:\Qt\latest\mingw73_32
       TOOLCHAIN_VERSION: 730_32
       gpp: win32-g++
     # latest Qt 64 bit
@@ -120,7 +121,8 @@ deploy:
       secure: spcyN/Dz3B2GXBPii8IywDLq6vfxC1SrN+xR2wMerFM7g2nTy0Lrh5agQONFoInR
     on:
       branch: master
-      QTDIR: C:\Qt\latest\mingw73_32
+#      QTDIR: C:\Qt\latest\mingw73_32
+      QTDIR: C:\Qt\5.12\mingw73_32
 #      QTDIR: C:\Qt\5.11\mingw53_32
 
 notifications:
