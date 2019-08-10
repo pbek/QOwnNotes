@@ -11,6 +11,7 @@
       download the latest release manually once or download the files from
       [OpenSSL](https://github.com/pbek/QOwnNotes/tree/develop/appveyor/OpenSSL)
       and put them into your QOwnNotes folder 
+- added more German translation
 
 ## 19.8.3
 - added support for a real time preview of remote images (for [#1244](https://github.com/pbek/QOwnNotes/issues/1244))
