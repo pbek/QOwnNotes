@@ -55,5 +55,6 @@ files:
         "sl_SI" : "sl",
         "eu_ES" : "eu",
         "sr_SP" : "sr",
+        "fa_IR" : "fa",
       }
     }

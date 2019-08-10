@@ -2243,6 +2243,17 @@
                        </item>
                        <item>
                         <property name="text">
+                         <string notr="true">فارسی</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Persian</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">fa</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
                          <string notr="true">Polski</string>
                         </property>
                         <property name="toolTip">

@@ -1,6 +1,10 @@
 # QOwnNotes Changelog
 
 ## 19.8.4
+- added **Persian translation** (a big thank you to Fabijenna)
+    - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes)
+      to make QOwnNotes available in more languages or help with the current 
+      translation
 - updated OpenSSL to 1.1.1c for the Qt 5.13 release of QOwnNotes for Windows to
   prevent network problems with https on some computer (for [#1260](https://github.com/pbek/QOwnNotes/issues/1260))
     - if you had troubles with the latest few releases for Windows you need to
