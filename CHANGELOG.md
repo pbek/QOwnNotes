@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 19.8.4
+- updated OpenSSL to 1.1.1c for the Qt 5.13 release of QOwnNotes for Windows to
+  prevent network problems with https on some computer (for [#1260](https://github.com/pbek/QOwnNotes/issues/1260))
+    - if you had troubles with the latest few releases for Windows you need to
+      download the latest release manually once or download the files from
+      [OpenSSL](https://github.com/pbek/QOwnNotes/tree/develop/appveyor/OpenSSL)
+      and put them into your QOwnNotes folder 
+
 ## 19.8.3
 - added support for a real time preview of remote images (for [#1244](https://github.com/pbek/QOwnNotes/issues/1244))
     - the image links in the image tags will be transformed to inline images

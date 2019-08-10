@@ -17,7 +17,7 @@ environment:
 #      TOOLCHAIN_VERSION: 530_32
 #      gpp: win32-g++
     # latest Qt 32 bit
-    - QTDIR: C:\Qt\5.12\mingw73_32
+    - QTDIR: C:\Qt\5.13\mingw73_32
     #  QTDIR: C:\Qt\latest\mingw73_32
       TOOLCHAIN_VERSION: 730_32
       gpp: win32-g++
@@ -81,9 +81,8 @@ build_script:
   # copy the binary to our release path
   - copy release\QOwnNotes.exe ..\%RELEASE_PATH%
   # copy OpenSSL DLLs to the release path
-  - copy ..\appveyor\OpenSSL\libeay32.dll ..\%RELEASE_PATH%
-  - copy ..\appveyor\OpenSSL\libssl32.dll ..\%RELEASE_PATH%
-  - copy ..\appveyor\OpenSSL\ssleay32.dll ..\%RELEASE_PATH%
+  - copy ..\appveyor\OpenSSL\libcrypto-1_1.dll ..\%RELEASE_PATH%
+  - copy ..\appveyor\OpenSSL\libssl-1_1.dll ..\%RELEASE_PATH%
   # copy unzip application for updater
   - copy ..\appveyor\unzip.exe ..\%RELEASE_PATH%
   # copy updater script
@@ -122,7 +121,7 @@ deploy:
     on:
       branch: master
 #      QTDIR: C:\Qt\latest\mingw73_32
-      QTDIR: C:\Qt\5.12\mingw73_32
+      QTDIR: C:\Qt\5.13\mingw73_32
 #      QTDIR: C:\Qt\5.11\mingw53_32
 
 notifications:
