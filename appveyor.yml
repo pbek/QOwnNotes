@@ -104,7 +104,6 @@ build_script:
   # for some reason AppVeyor or windeployqt uses a copy of the German
   # translation file as English one, which screws up the English user interface
   - del "translations\qt_en.qm"
-  - QOwnNotes.exe --dump-settings
 
 artifacts:
   # pushing entire folder as a zip archive
