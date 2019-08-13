@@ -85,6 +85,7 @@ before_build:
   # search for it in the mingw* folder of your local installation of Qt
   - copy "..\libstdc++-6.dll" . /y
   - tests.exe -txt
+  - cd ..\..
 
 build_script:
   # enable this to take a look if there are new qt versions
