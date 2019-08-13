@@ -46,6 +46,7 @@ install:
   - set PATH=%PATH%;%QTDIR%\bin;C:\Qt\Tools\QtCreator\bin;C:\Qt\Tools\mingw%TOOLCHAIN_VERSION%\bin
   - echo PATH=%PATH%
   - set RELEASE_PATH=appveyor\release
+  - set TEST_PATH=appveyor\test
   # enable this to use RDP connection, see https://www.appveyor.com/docs/how-to/rdp-to-build-worker/
 #  - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 
@@ -56,6 +57,34 @@ install:
 before_build:
   # getting submodules
   - git submodule update --init
+
+test_script:
+  - cd tests
+  # we need to modify that to make it running on AppVeyor
+  #- sed -i "s/CONFIG += c++11/QMAKE_CXXFLAGS += -std=gnu++0x\nQMAKE_CXX=ccache %gpp%/g" QOwnNotesTests.pro
+  - sed -i "s/CONFIG += c++11/QMAKE_CXXFLAGS += -std=gnu++0x/g" QOwnNotesTests.pro
+  - "echo #define RELEASE \"AppVeyor\" > release.h"
+  - qmake QOwnNotesTests.pro DEFINES+=INTEGRATION_TESTS CONFIG+=ccache
+  - mingw32-make
+  # creating the test path
+  - md ..\%TEST_PATH%
+  # copy the binary to our release path
+  - dir
+  - copy bin\tests.exe ..\%TEST_PATH%
+  # copy OpenSSL DLLs to the release path
+  - copy ..\appveyor\OpenSSL\libcrypto-1_1.dll ..\%TEST_PATH%
+  - copy ..\appveyor\OpenSSL\libssl-1_1.dll ..\%TEST_PATH%
+  - cd ..\%TEST_PATH%
+  # fetching dependencies of QT app
+  # http://doc.qt.io/qt-5/windows-deployment.html
+  - windeployqt tests.exe
+  # this dll was missed by windeployqt
+  - copy ..\libwinpthread-1.dll . /y
+  # this dll didn't work when released by windeployqt
+  # important: this dll needs to be updated when a new version of Qt is used!
+  # search for it in the mingw* folder of your local installation of Qt
+  - copy "..\libstdc++-6.dll" . /y
+  - tests.exe -platform minimal -txt
 
 build_script:
   # enable this to take a look if there are new qt versions
