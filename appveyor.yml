@@ -70,8 +70,8 @@ before_build:
   # creating the test path
   - md ..\%TEST_PATH%
   # copy the binary to our release path
-  - dir unit_tests\testcases\app /s
-  - copy unit_tests\testcases\app\bin\tests.exe ..\%TEST_PATH%
+  - dir ..\ /s
+  - copy bin\tests.exe ..\%TEST_PATH%
   # copy OpenSSL DLLs to the release path
   - copy ..\appveyor\OpenSSL\libcrypto-1_1.dll ..\%TEST_PATH%
   - copy ..\appveyor\OpenSSL\libssl-1_1.dll ..\%TEST_PATH%
