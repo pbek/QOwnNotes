@@ -57,8 +57,9 @@ install:
 before_build:
   # getting submodules
   - git submodule update --init
-
-test_script:
+  #
+  # do tests
+  #
   - cd tests
   # we need to modify that to make it running on AppVeyor
   #- sed -i "s/CONFIG += c++11/QMAKE_CXXFLAGS += -std=gnu++0x\nQMAKE_CXX=ccache %gpp%/g" QOwnNotesTests.pro
