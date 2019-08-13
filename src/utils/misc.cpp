@@ -40,7 +40,7 @@
 #include "misc.h"
 #include <utility>
 #include <services/owncloudservice.h>
-#include <QtCore/QMimeDatabase>
+#include <QMimeDatabase>
 
 #ifdef Q_OS_WIN
 #include <windows.h>
@@ -1178,7 +1178,7 @@ void Utils::Misc::printInfo(const QString& text) {
  */
 QString Utils::Misc::toHumanReadableByteSize(qint64 size)
 {
-    float num = size;
+    double num = size;
     QStringList list;
     list << "KB" << "MB" << "GB" << "TB";
 
@@ -1554,8 +1554,6 @@ void Utils::Misc::transformNextcloudPreviewImages(QString &html) {
  * @param html
  */
 void Utils::Misc::transformRemotePreviewImages(QString &html) {
-    OwnCloudService *ownCloud = OwnCloudService::instance();
-
     QRegularExpression re(R"(<img src=\"(https?:\/\/.+)\".*\/?>)",
                           QRegularExpression::CaseInsensitiveOption | QRegularExpression::MultilineOption | QRegularExpression::InvertedGreedinessOption);
     QRegularExpressionMatchIterator i = re.globalMatch(html);
