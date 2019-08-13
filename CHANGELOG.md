@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 19.8.5
+- added integration test to test https download (for [#1260](https://github.com/pbek/QOwnNotes/issues/1260))
+- the amount of calendar items will now be showed in the output of the *Debug settings*
+  (for [#1264](https://github.com/pbek/QOwnNotes/issues/1264))
+
 ## 19.8.4
 - added **Persian translation** (a big thank you to Fabijenna)
     - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes)

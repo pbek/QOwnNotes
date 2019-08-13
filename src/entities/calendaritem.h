@@ -71,6 +71,7 @@ public:
     static QList<QString> searchAsUidList(QString text, QString calendar);
     static QList<CalendarItem> fetchAllForSystemTray(int limit = 10);
     static bool removeAll();
+    static int countAll();
 
 private:
     int id;

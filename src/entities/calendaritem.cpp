@@ -1129,6 +1129,24 @@ void CalendarItem::alertTodoReminders() {
     }
 }
 
+/**
+ * Counts all calendar items
+ */
+int CalendarItem::countAll() {
+    QSqlDatabase db = QSqlDatabase::database("disk");
+    QSqlQuery query(db);
+
+    query.prepare("SELECT COUNT(*) AS cnt FROM calendarItem");
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else if (query.first()) {
+        return query.value("cnt").toInt();
+    }
+
+    return 0;
+}
+
 QDebug operator<<(QDebug dbg, const CalendarItem &calendarItem) {
     dbg.nospace() << "CalendarItem: <id>" << calendarItem.id << " <summary>"
                   << calendarItem.summary << " <url>" <<

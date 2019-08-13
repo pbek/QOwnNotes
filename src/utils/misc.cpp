@@ -1278,6 +1278,8 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
                                           QIcon::themeName(), withGitHubLineBreaks);
     output += prepareDebugInformationLine("Notes in current note folder",
                                           QString::number(Note::countAll()), withGitHubLineBreaks);
+    output += prepareDebugInformationLine("Calendar items",
+                                          QString::number(CalendarItem::countAll()), withGitHubLineBreaks);
     output += prepareDebugInformationLine("Enabled scripts",
                                           QString::number(
                                                   Script::countEnabled()), withGitHubLineBreaks);
