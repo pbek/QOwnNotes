@@ -225,8 +225,6 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
             // check if everything is all right and call the callback method
             checkAppInfo(reply);
         }
-
-        return;
     } else {
         QByteArray arr = reply->readAll();
         QString data = QString(arr);
@@ -238,14 +236,12 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
 
             // handle the versions loading
             handleVersionsLoading(data);
-            return;
         } else if (urlPath.endsWith(trashListPath)) {
             qDebug() << "Reply from trash list";
             // qDebug() << data;
 
             // handle the loading of trashed notes
             handleTrashedLoading(data);
-            return;
         } else if (urlPath.endsWith(capabilitiesPath)) {
             qDebug() << "Reply from capabilities page";
 
@@ -256,8 +252,6 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
                 settingsDialog->setOKLabelData(3, "not correct",
                                                SettingsDialog::Failure);
             }
-
-            return;
         } else if (urlPath.endsWith(ownCloudTestPath)) {
             qDebug() << "Reply from ownCloud test page";
 
@@ -268,13 +262,9 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
                 settingsDialog->setOKLabelData(2, "not detected",
                                                SettingsDialog::Failure);
             }
-
-            return;
         } else if (urlPath.endsWith(restoreTrashedNotePath)) {
             qDebug() << "Reply from ownCloud restore trashed note page";
             // qDebug() << data;
-
-            return;
         } else if (!todoCalendarServerUrlPath.isEmpty() &&
                 urlPath.endsWith(todoCalendarServerUrlPath)) {
             qDebug() << "Reply from ownCloud calendar page" << data;
@@ -291,8 +281,6 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
             if (settingsDialog != Q_NULLPTR) {
                 settingsDialog->refreshTodoCalendarList(calendarDataList);
             }
-
-            return;
         } else if (!todoCalendarServerUrlPath.isEmpty() &&
                 urlPath.startsWith(todoCalendarServerUrlPath)) {
             // check if we have a reply from a calendar item request
@@ -333,10 +321,7 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
                     // VTODO item) we will remove it
                     if (!wasUpdated) {
                         calItem.remove();
-                        return;
-                    }
-
-                    if (todoDialog != Q_NULLPTR) {
+                    } else if (todoDialog != Q_NULLPTR) {
                         // reload the task list items
                         todoDialog->reloadTodoListItems();
                     }
@@ -357,25 +342,20 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
 
             // load the directories
             loadDirectory(data);
-
-            return;
         } else if (urlPath.endsWith(sharePath)) {
             qDebug() << "Reply from share api";
 
             // update the share status of the notes
             handleNoteShareReply(data);
-            return;
         } else if (urlPath.startsWith(sharePath)) {
             qDebug() << "Reply from delete share api";
 
             // update the share status of the notes
             handleDeleteNoteShareReply(urlPath, data);
-            return;
         } else if (urlPath.startsWith(bookmarkPath)) {
             qDebug() << "Reply from bookmark api";
 
             handleImportBookmarksReply(data);
-            return;
         } else if (url.toString() == serverUrl) {
             qDebug() << "Reply from main server url";
 
@@ -385,13 +365,11 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
                 settingsDialog->setOKLabelData(1, "not found",
                                                SettingsDialog::Failure);
             }
-
-            return;
         }
     }
-#else
-    Q_UNUSED(reply);
 #endif
+
+    reply->deleteLater();
 }
 
 void OwnCloudService::checkAppInfo(QNetworkReply *reply) {
@@ -700,6 +678,7 @@ void OwnCloudService::todoGetTodoList(QString calendarName,
     QNetworkReply *reply = calendarNetworkManager->sendCustomRequest(
             r, "REPORT", buffer);
     ignoreSslErrorsIfAllowed(reply);
+    buffer->deleteLater();
 }
 
 /**
