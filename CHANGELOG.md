@@ -3,9 +3,10 @@
 ## 19.8.5
 - fixed many **memory leaks** when **receiving network data**
   (for [#1264](https://github.com/pbek/QOwnNotes/issues/1264))
-- added integration test to test https download (for [#1260](https://github.com/pbek/QOwnNotes/issues/1260))
 - the amount of calendar items will now be showed in the output of the *Debug settings*
   (for [#1264](https://github.com/pbek/QOwnNotes/issues/1264))
+- added integration test to test https download (for [#1260](https://github.com/pbek/QOwnNotes/issues/1260))
+- added more Italian, Spanish translation (thank you tiwi90, richarson)
 
 ## 19.8.4
 - added **Persian translation** (a big thank you to Fabijenna)
