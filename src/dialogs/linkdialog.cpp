@@ -192,7 +192,6 @@ QString LinkDialog::getTitleForUrl(const QUrl& url) {
         result = title.simplified();
     }
 
-
     reply->deleteLater();
     delete(manager);
 

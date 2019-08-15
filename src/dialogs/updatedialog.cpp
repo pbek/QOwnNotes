@@ -235,6 +235,7 @@ void UpdateDialog::slotReplyFinished(QNetworkReply *reply) {
         return;
     }
 
+    reply->deleteLater();
     ui->downloadProgressBar->hide();
 
     qDebug() << "Reply from " << reply->url().path();

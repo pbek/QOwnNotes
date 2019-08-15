@@ -183,6 +183,8 @@ void ScriptRepositoryDialog::slotReplyFinished(QNetworkReply *reply) {
 
         parseInfoQMLReply(arr);
     }
+
+    reply->deleteLater();
 }
 
 /**

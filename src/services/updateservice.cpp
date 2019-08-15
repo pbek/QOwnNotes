@@ -92,6 +92,8 @@ void UpdateService::onResult(QNetworkReply *reply) {
         return;
     }
 
+    reply->deleteLater();
+
     // abort if there was an error
     if (reply->error() != QNetworkReply::NoError) {
         qWarning() << __func__ << " - 'network reply error': "

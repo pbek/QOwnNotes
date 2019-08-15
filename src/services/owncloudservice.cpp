@@ -454,6 +454,8 @@ void OwnCloudService::checkAppInfo(QNetworkReply *reply) {
             appIsValid, appVersion, serverVersion, notesPathExistsText,
             reply->errorString());
 #endif
+
+    reply->deleteLater();
 }
 
 /**
@@ -497,6 +499,8 @@ void OwnCloudService::checkAppVersion(QNetworkReply *reply) {
                            "cause troubles in QOwnNotes.").arg(appVersion));
     }
 #endif
+
+    reply->deleteLater();
 }
 
 /**
