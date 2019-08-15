@@ -65,13 +65,13 @@ public:
 
     static bool hasOwnCloudSettings(bool withEnabledCheck = true);
 
-    void shareNote(Note note, ShareDialog *shareDialog);
+    void shareNote(Note note, ShareDialog *dialog);
 
     void fetchShares(const QString& path = "");
 
     void fetchBookmarks();
 
-    void removeNoteShare(Note note, ShareDialog *shareDialog);
+    void removeNoteShare(Note note, ShareDialog *dialog);
 
     static OwnCloudService *instance();
 
@@ -129,7 +129,7 @@ private:
 
     void loadTodoItems(QString &data);
 
-    void ignoreSslErrorsIfAllowed(QNetworkReply *reply);
+    static void ignoreSslErrorsIfAllowed(QNetworkReply *reply);
 
     void loadDirectory(QString &data);
 
@@ -151,7 +151,7 @@ private:
 
     void handleDeleteNoteShareReply(QString urlPart, QString &data);
 
-    void checkAppVersion(QNetworkReply *reply);
+    static void checkAppVersion(QNetworkReply *reply);
 
     void handleImportBookmarksReply(QString &data);
 

@@ -630,7 +630,7 @@ void OwnCloudService::settingsGetCalendarList(SettingsDialog *dialog) {
             </d:prop> \
           </d:propfind>";
 
-    QByteArray *dataToSend = new QByteArray(body.toUtf8());
+    auto *dataToSend = new QByteArray(body.toUtf8());
     r.setHeader(QNetworkRequest::ContentLengthHeader, dataToSend->size());
     r.setHeader(QNetworkRequest::ContentTypeHeader,
                 "application/x-www-form-urlencoded");
@@ -691,7 +691,7 @@ void OwnCloudService::todoGetTodoList(QString calendarName,
             </c:filter> \
         </c:calendar-query>";
 
-    QByteArray *dataToSend = new QByteArray(body.toUtf8());
+    auto *dataToSend = new QByteArray(body.toUtf8());
     r.setHeader(QNetworkRequest::ContentLengthHeader, dataToSend->size());
     r.setHeader(QNetworkRequest::ContentTypeHeader,
                 "application/x-www-form-urlencoded");
@@ -705,8 +705,8 @@ void OwnCloudService::todoGetTodoList(QString calendarName,
 /**
  * Shares a note on ownCloud
  */
-void OwnCloudService::shareNote(Note note, ShareDialog *shareDialog) {
-    this->shareDialog = shareDialog;
+void OwnCloudService::shareNote(Note note, ShareDialog *dialog) {
+    this->shareDialog = dialog;
     qDebug() << __func__ << " - 'note': " << note;
 
     // return if no settings are set
@@ -743,8 +743,8 @@ void OwnCloudService::shareNote(Note note, ShareDialog *shareDialog) {
 /**
  * Removes a note shares on ownCloud
  */
-void OwnCloudService::removeNoteShare(Note note, ShareDialog *shareDialog) {
-    this->shareDialog = shareDialog;
+void OwnCloudService::removeNoteShare(Note note, ShareDialog *dialog) {
+    this->shareDialog = dialog;
     qDebug() << __func__ << " - 'note': " << note;
 
     // return if no settings are set
