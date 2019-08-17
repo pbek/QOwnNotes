@@ -4602,7 +4602,7 @@ Tesztelje, ha szinkronizációs konfliktus lép fel és állítson be ilyen eset
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2249"/>
       <source>Persian</source>
-      <translation type="unfinished">Persian</translation>
+      <translation>Perzsa</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2293"/>

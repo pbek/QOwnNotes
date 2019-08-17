@@ -358,12 +358,12 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7766"/>
       <source>Already at oldest change.</source>
-      <translation type="unfinished">Already at oldest change.</translation>
+      <translation>در حال حاضر در قدیمی ترین تغییر.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7767"/>
       <source>Already at newest change.</source>
-      <translation type="unfinished">Already at newest change.</translation>
+      <translation>در حال حاضر در جدیدترین تغییر.</translation>
     </message>
   </context>
   <context>
@@ -501,83 +501,83 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="204"/>
       <source>Header, level 1</source>
-      <translation type="unfinished">Header, level 1</translation>
+      <translation>هدر ، سطح 1</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="198"/>
       <source>Link</source>
-      <translation type="unfinished">Link</translation>
+      <translation>ارتباط دادن</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="199"/>
       <source>Image</source>
-      <translation type="unfinished">Image</translation>
+      <translation>تصویر</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="200"/>
       <source>Code (block)</source>
-      <translation type="unfinished">Code (block)</translation>
+      <translation>کد (بلوک)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="201"/>
       <source>Code (inline)</source>
-      <translation type="unfinished">Code (inline)</translation>
+      <translation>کد (درون خطی)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="203"/>
       <source>List item</source>
-      <translation type="unfinished">List item</translation>
+      <translation>لیست مورد</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="205"/>
       <source>Header, level 2</source>
-      <translation type="unfinished">Header, level 2</translation>
+      <translation>هدر ، سطح 2</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="206"/>
       <source>Header, level 3</source>
-      <translation type="unfinished">Header, level 3</translation>
+      <translation>هدر ، سطح 3</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="207"/>
       <source>Header, level 4</source>
-      <translation type="unfinished">Header, level 4</translation>
+      <translation>هدر ، سطح 4</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="208"/>
       <source>Header, level 5</source>
-      <translation type="unfinished">Header, level 5</translation>
+      <translation>هدر ، سطح 5</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="209"/>
       <source>Header, level 6</source>
-      <translation type="unfinished">Header, level 6</translation>
+      <translation>هدر ، سطح 6</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="212"/>
       <source>Block quote</source>
-      <translation type="unfinished">Block quote</translation>
+      <translation>مسابقه</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="213"/>
       <source>Table</source>
-      <translation type="unfinished">Table</translation>
+      <translation>جدول</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="215"/>
       <source>Masked syntax</source>
       <comment>text that will highlighted in a way that it's barely visible</comment>
-      <translation type="unfinished">Masked syntax</translation>
+      <translation>نحو نقاب دار</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="220"/>
       <source>Broken link</source>
-      <translation type="unfinished">Broken link</translation>
+      <translation>لینک خراب</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="210"/>
       <source>Horizontal rule</source>
-      <translation type="unfinished">Horizontal rule</translation>
+      <translation>قانون افقی</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="218"/>
@@ -745,7 +745,7 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="92"/>
       <source>Description of link (optional)</source>
-      <translation type="unfinished">Description of link (optional)</translation>
+      <translation>توضیحات لینک (اختیاری)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="102"/>
@@ -828,7 +828,7 @@
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="218"/>
       <source>Notes restored</source>
-      <translation type="unfinished">Notes restored</translation>
+      <translation>یادداشت ها بازیابی شدند</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="219"/>
@@ -849,7 +849,7 @@
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="264"/>
       <source>Notes removed</source>
-      <translation type="unfinished">Notes removed</translation>
+      <translation>یادداشت ها برداشته شدند</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="265"/>
@@ -865,17 +865,17 @@
     <message>
       <location filename="../widgets/logwidget.ui" line="26"/>
       <source>Logs</source>
-      <translation type="unfinished">Logs</translation>
+      <translation>سیاههها</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="114"/>
       <source>Fatal</source>
-      <translation type="unfinished">Fatal</translation>
+      <translation>کشنده</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="100"/>
       <source>Warning</source>
-      <translation type="unfinished">Warning</translation>
+      <translation>هشدار</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="107"/>
@@ -4267,84 +4267,84 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3851"/>
       <source>Reinitialize Database</source>
-      <translation type="unfinished">Reinitialize Database</translation>
+      <translation>بارگیری مجدد پایگاه داده</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3774"/>
       <source>Clear application data and exit</source>
-      <translation type="unfinished">Clear application data and exit</translation>
+      <translation>پاک کردن داده های برنامه و خروج</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3780"/>
       <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
-      <translation type="unfinished">This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</translation>
+      <translation>این دکمه به شما امکان می دهد همه تنظیمات را پاک کنید ، پایگاه داده محلی todo محلی را حذف کرده و از QOwnNotes خارج شوید.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3790"/>
       <location filename="../dialogs/settingsdialog.cpp" line="2023"/>
       <source>Clear app data and exit</source>
-      <translation type="unfinished">Clear app data and exit</translation>
+      <translation>پاک کردن داده ها و خروج برنامه</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3569"/>
       <source>Update dialog</source>
-      <translation type="unfinished">Update dialog</translation>
+      <translation>گفتگوی به روزرسانی</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3649"/>
       <source>Default note file extension</source>
-      <translation type="unfinished">Default note file extension</translation>
+      <translation>فرمت پرونده پیش فرض توجه داشته باشید</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3734"/>
       <source>External editor</source>
-      <translation type="unfinished">External editor</translation>
+      <translation>ویرایشگر خارجی</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3747"/>
       <source>path to external editor, leave empty for default</source>
-      <translation type="unfinished">path to external editor, leave empty for default</translation>
+      <translation>مسیر به ویرایشگر خارجی ، به طور پیش فرض خالی بگذارید</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3757"/>
       <location filename="../dialogs/settingsdialog.ui" line="4799"/>
       <source>set external editor</source>
-      <translation type="unfinished">set external editor</translation>
+      <translation>ویرایشگر خارجی را تنظیم کنید</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1467"/>
       <source>App metrics</source>
-      <translation type="unfinished">App metrics</translation>
+      <translation>معیارهای برنامه</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1485"/>
       <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</source>
-      <translation type="unfinished">Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</translation>
+      <translation>داده های استفاده ناشناس به تصمیم گیری در مورد قسمت های QOwnNotes برای بهبود بعدی و یافتن و رفع اشکالات کمک می کند. لطفاً آن را غیرفعال کنید اگر واقعاً نتوانید با آن زندگی کنید.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1517"/>
       <source>This data includes anonymous information about what features of the app are used.</source>
-      <translation type="unfinished">This data includes anonymous information about what features of the app are used.</translation>
+      <translation>این داده شامل اطلاعات ناشناس در مورد ویژگی های برنامه استفاده می شود.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1571"/>
       <source>App heartbeat</source>
-      <translation type="unfinished">App heartbeat</translation>
+      <translation>ضربان قلب برنامه</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1589"/>
       <source>A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</source>
-      <translation type="unfinished">A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</translation>
+      <translation>QOwnNotes در حال اجرا است یک درخواست ضربان قلب کوچک به طور دوره ای ارسال می شود. با اعلام اینکه شخصی در حال استفاده از QOwnNotes است ، یک توسعه دهنده را خوشحال کنید.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2194"/>
       <source>Italian</source>
-      <translation type="unfinished">Italian</translation>
+      <translation>ایتالیایی</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="264"/>
       <source>Scripting</source>
-      <translation type="unfinished">Scripting</translation>
+      <translation>Scripting</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2834"/>
@@ -5129,22 +5129,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4773"/>
       <source>Git client</source>
-      <translation type="unfinished">Git client</translation>
+      <translation>مشتری گیت</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4789"/>
       <source>Path to git executable:</source>
-      <translation type="unfinished">Path to git executable:</translation>
+      <translation>مسیر اجرا برای اجرا:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4779"/>
       <source>Path to git client, leave empty for default</source>
-      <translation type="unfinished">Path to git client, leave empty for default</translation>
+      <translation>مسیر برای راه اندازی مشتری ، به طور پیش فرض خالی بگذارید</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4698"/>
       <source>Commit interval</source>
-      <translation type="unfinished">Commit interval</translation>
+      <translation>فاصله زمانی متعهد</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4704"/>
@@ -5165,27 +5165,27 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="227"/>
       <source>Preview</source>
-      <translation type="unfinished">Preview</translation>
+      <translation>پیش نمایش</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="276"/>
       <source>Browser extension</source>
-      <translation type="unfinished">Browser extension</translation>
+      <translation>برنامه افزودنی مرورگر</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1647"/>
       <source>Which calendar backend do you want to use?</source>
-      <translation type="unfinished">Which calendar backend do you want to use?</translation>
+      <translation>از کدام بخش تقویم تقویم می خواهید استفاده کنید?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1660"/>
       <source>For most current ownCloud and Nextcloud installations</source>
-      <translation type="unfinished">For most current ownCloud and Nextcloud installations</translation>
+      <translation>برای اکثر نصب های فعلی ownCloud و Nextcloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1680"/>
       <source>For older versions of ownCloud where the default setting doesn't work</source>
-      <translation type="unfinished">For older versions of ownCloud where the default setting doesn't work</translation>
+      <translation>برای نسخه های قدیمی تر ownCloud که تنظیم پیش فرض کار نمی کند</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1683"/>
@@ -5560,7 +5560,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
       <location filename="../dialogs/settingsdialog.ui" line="4166"/>
       <location filename="../dialogs/settingsdialog.ui" line="4218"/>
       <source>Set a new font</source>
-      <translation type="unfinished">Set a new font</translation>
+      <translation>یک قلم جدید تنظیم کنید</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4039"/>
@@ -5568,17 +5568,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
       <location filename="../dialogs/settingsdialog.ui" line="4180"/>
       <location filename="../dialogs/settingsdialog.ui" line="4204"/>
       <source>Reset font</source>
-      <translation type="unfinished">Reset font</translation>
+      <translation>بازنشانی فونت</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="336"/>
       <source>Debug</source>
-      <translation type="unfinished">Debug</translation>
+      <translation>اشکال زدایی</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3892"/>
       <source>Debug information</source>
-      <translation type="unfinished">Debug information</translation>
+      <translation>اطلاعات اشکال زدایی</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3935"/>
@@ -5618,36 +5618,36 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1262"/>
       <source>Automatic (needs restart)</source>
-      <translation type="unfinished">Automatic (needs restart)</translation>
+      <translation>خودکار (نیاز به راه اندازی مجدد)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1424"/>
       <source>Undefined key</source>
-      <translation type="unfinished">Undefined key</translation>
+      <translation>کلید تعریف نشده</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1429"/>
       <source>Assign a new key</source>
-      <translation type="unfinished">Assign a new key</translation>
+      <translation>یک کلید جدید اختصاص دهید</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1430"/>
       <source>Reset to default key</source>
-      <translation type="unfinished">Reset to default key</translation>
+      <translation>تنظیم مجدد به کلید پیش فرض</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1509"/>
       <source>Shortcut already assigned</source>
-      <translation type="unfinished">Shortcut already assigned</translation>
+      <translation>میانبر قبلاً اختصاص داده شده است</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1686"/>
       <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
-      <translation type="unfinished">The connection was made successfully!
-Server version: %1
-QOwnNotesAPI version: %2</translation>
+      <translation>ارتباط با موفقیت برقرار شد!
+نسخه سرور: %1
+نسخه QOwnNotesAPI: %2</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1697"/>
@@ -5655,20 +5655,20 @@ QOwnNotesAPI version: %2</translation>
 You also need to have the QOwnNotesAPI app installed and enabled!
 
 Connection error message: </source>
-      <translation type="unfinished">There was an error connecting to the ownCloud Server!
-You also need to have the QOwnNotesAPI app installed and enabled!
+      <translation>هنگام اتصال به سرور ownCloud خطایی رخ داد!
+همچنین باید برنامه QOwnNotesAPI را نصب و فعال کنید!
 
-Connection error message: </translation>
+پیام خطای اتصال: </translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1976"/>
       <source>Markdown files</source>
-      <translation type="unfinished">Markdown files</translation>
+      <translation>پرونده های Markdown</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2003"/>
       <source>Disable usage tracking</source>
-      <translation type="unfinished">Disable usage tracking</translation>
+      <translation>ردیابی استفاده را غیرفعال کنید</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2004"/>
@@ -5678,12 +5678,12 @@ Connection error message: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2225"/>
       <source>new folder</source>
-      <translation type="unfinished">new folder</translation>
+      <translation>پوشه جدید</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2263"/>
       <source>Remove note folder</source>
-      <translation type="unfinished">Remove note folder</translation>
+      <translation>پوشه یادداشت را حذف کنید</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2264"/>
@@ -5693,22 +5693,22 @@ Connection error message: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2339"/>
       <source>Please select the folder where your notes will get stored to</source>
-      <translation type="unfinished">Please select the folder where your notes will get stored to</translation>
+      <translation>لطفا پوشه ای را انتخاب کنید که یادداشت های شما در آن ذخیره می شوند</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2376"/>
       <source>Loading folders from server</source>
-      <translation type="unfinished">Loading folders from server</translation>
+      <translation>بارگیری پوشه ها از سرور</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2390"/>
       <source>No more folders were found in the current folder</source>
-      <translation type="unfinished">No more folders were found in the current folder</translation>
+      <translation>هیچ پوشه دیگری در پوشه فعلی یافت نشد</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2463"/>
       <source>Loading folders in '%1' from server</source>
-      <translation type="unfinished">Loading folders in '%1' from server</translation>
+      <translation>بارگیری پوشه ها در "٪1" از سرور</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2523"/>
@@ -5723,53 +5723,53 @@ Connection error message: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2546"/>
       <source>Check for script updates</source>
-      <translation type="unfinished">Check for script updates</translation>
+      <translation>به روزرسانی های اسکریپت را بررسی کنید</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2553"/>
       <source>Add local script</source>
-      <translation type="unfinished">Add local script</translation>
+      <translation>اسکریپت محلی اضافه کنید</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2557"/>
       <source>Add an existing, local script</source>
-      <translation type="unfinished">Add an existing, local script</translation>
+      <translation>یک اسکریپت محلی و محلی اضافه کنید</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3615"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3672"/>
       <source>INI files</source>
-      <translation type="unfinished">INI files</translation>
+      <translation>پرونده های INI</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3651"/>
       <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
-      <translation type="unfinished">Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</translation>
+      <translation>آیا واقعاً می خواهید تنظیمات را وارد کنید؟ تنظیمات فعلی شما حذف خواهد شد و همه تنظیمات مانند تنظیمات پوشه توجه و همان اسکریپت هایی که از آنها استفاده می کنید ، بازیابی نخواهند شد. همچنین باید برخی تنظیمات را به خصوص در سیستم عامل ها تنظیم کنید ، اما یادداشت های شما دست نخورده باقی می مانند!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3661"/>
       <source>The application will be quit after the import.</source>
-      <translation type="unfinished">The application will be quit after the import.</translation>
+      <translation>این برنامه پس از وارد کردن کنار گذاشته می شود.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3662"/>
       <source>The application will be restarted after the import.</source>
-      <translation type="unfinished">The application will be restarted after the import.</translation>
+      <translation>برنامه بعد از وارد شدن مجدداً راه اندازی می شود.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2540"/>
       <source>Find a script in the script repository</source>
-      <translation type="unfinished">Find a script in the script repository</translation>
+      <translation>یک اسکریپت را در مخزن اسکریپت پیدا کنید</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="251"/>
       <source>Menu bar</source>
-      <translation type="unfinished">Menu bar</translation>
+      <translation>نوار منو</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="252"/>
       <source>Show menu bar item</source>
-      <translation type="unfinished">Show menu bar item</translation>
+      <translation>نمایش مورد نوار منو</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1510"/>
@@ -6135,68 +6135,68 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tododialog.ui" line="14"/>
       <source>Todo</source>
-      <translation type="unfinished">Todo</translation>
+      <translation>انجام دادن</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="78"/>
       <location filename="../dialogs/tododialog.ui" line="85"/>
       <source>Priority</source>
-      <translation type="unfinished">Priority</translation>
+      <translation>اولویت</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="113"/>
       <source>Reminder</source>
-      <translation type="unfinished">Reminder</translation>
+      <translation>یادآور</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="157"/>
       <source>Summary</source>
-      <translation type="unfinished">Summary</translation>
+      <translation>خلاصه</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="191"/>
       <source>Save</source>
-      <translation type="unfinished">Save</translation>
+      <translation>صرفه جویی</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="222"/>
       <source>Note…</source>
-      <translation type="unfinished">Note…</translation>
+      <translation>توجه داشته باشید…</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="100"/>
       <source>Save and insert into note</source>
-      <translation type="unfinished">Save and insert into note</translation>
+      <translation>ذخیره و درج کنید</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="208"/>
       <source>Remove</source>
-      <translation type="unfinished">Remove</translation>
+      <translation>برداشتن</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="278"/>
       <source>Show completed items</source>
-      <translation type="unfinished">Show completed items</translation>
+      <translation>موارد کامل شده را نمایش دهید</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="285"/>
       <source>Reload the todo list from server</source>
-      <translation type="unfinished">Reload the todo list from server</translation>
+      <translation>بارگیری لیست todo از سرور</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="288"/>
       <source>Reload…</source>
-      <translation type="unfinished">Reload…</translation>
+      <translation>بارگیری مجدد…</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="319"/>
       <source>Search or create todo item</source>
-      <translation type="unfinished">Search or create todo item</translation>
+      <translation>مورد را جستجو یا ایجاد کنید</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="302"/>
       <source>select your todo list</source>
-      <translation type="unfinished">select your todo list</translation>
+      <translation>لیست کارهای خود را انتخاب کنید</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="188"/>
@@ -6327,12 +6327,12 @@ This cannot be undone!</source>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="110"/>
       <source>Move &amp;Up</source>
-      <translation type="unfinished">Move &amp;Up</translation>
+      <translation>حرکت به&amp; بالا</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="121"/>
       <source>Move Down</source>
-      <translation type="unfinished">Move Down</translation>
+      <translation>حرکت به پایین</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="124"/>
@@ -6388,12 +6388,12 @@ This cannot be undone!</source>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="309"/>
       <source>Remove current toolbar</source>
-      <translation type="unfinished">Remove current toolbar</translation>
+      <translation>نوار ابزار فعلی را حذف کنید</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="310"/>
       <source>Remove the current toolbar?</source>
-      <translation type="unfinished">Remove the current toolbar?</translation>
+      <translation>نوار ابزار فعلی را حذف کنید?</translation>
     </message>
   </context>
   <context>
@@ -6401,12 +6401,12 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/trashdialog.ui" line="14"/>
       <source>Trashed notes</source>
-      <translation type="unfinished">Trashed notes</translation>
+      <translation>یادداشتهای حذف شده</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="25"/>
       <source>&amp;Restore selected note on server</source>
-      <translation type="unfinished">&amp;Restore selected note on server</translation>
+      <translation>&amp;برگه انتخاب شده را بر روی سرور بازیابی کنید</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="27"/>
@@ -6494,7 +6494,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="83"/>
       <source>Don't show this dialog automatically</source>
-      <translation type="unfinished">Don't show this dialog automatically</translation>
+      <translation>این گفتگو را به صورت خودکار نشان ندهید</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="93"/>
@@ -6543,7 +6543,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="350"/>
       <source>Do you want to update and restart QOwnNotes?</source>
-      <translation type="unfinished">Do you want to update and restart QOwnNotes?</translation>
+      <translation>آیا می خواهید QOwnNotes را بروزرسانی و راه اندازی مجدد کنید?</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="365"/>
@@ -6554,14 +6554,14 @@ This cannot be undone!</source>
       <location filename="../dialogs/updatedialog.cpp" line="489"/>
       <location filename="../dialogs/updatedialog.cpp" line="498"/>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>خطا</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="366"/>
       <source>Could not find updater file:
 %1</source>
-      <translation type="unfinished">Could not find updater file:
-%1</translation>
+      <translation>پرونده بروزرسانی یافت نشد:
+1%</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="453"/>

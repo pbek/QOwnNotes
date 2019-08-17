@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 19.8.6
+- fixed a possible segmentation fault on macOS (Qt 5.12.2) with todo lists
+  (for [#1266](https://github.com/pbek/QOwnNotes/issues/1266))
+    - this was a regression from 19.8.5
+- added more Persian, Dutch, Hungarian translation (thank you Fabijenna)
+
 ## 19.8.5
 - fixed many **memory leaks** when **receiving network data**
   (for [#1264](https://github.com/pbek/QOwnNotes/issues/1264))

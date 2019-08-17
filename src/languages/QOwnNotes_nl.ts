@@ -4599,7 +4599,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2249"/>
       <source>Persian</source>
-      <translation type="unfinished">Persian</translation>
+      <translation>Perzisch</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2293"/>
