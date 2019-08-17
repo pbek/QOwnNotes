@@ -682,7 +682,6 @@ void OwnCloudService::todoGetTodoList(QString calendarName,
     QNetworkReply *reply = calendarNetworkManager->sendCustomRequest(
             r, "REPORT", buffer);
     ignoreSslErrorsIfAllowed(reply);
-    buffer->deleteLater();
 }
 
 /**
