@@ -1557,7 +1557,7 @@ void MainWindow::setDistractionFreeMode(bool enabled) {
         //
 
         statusBar()->removeWidget(_leaveDistractionFreeModeButton);
-        disconnect(_leaveDistractionFreeModeButton, 0, 0, 0);
+        disconnect(_leaveDistractionFreeModeButton, Q_NULLPTR, Q_NULLPTR, Q_NULLPTR);
 
         // restore states and sizes
         restoreState(
