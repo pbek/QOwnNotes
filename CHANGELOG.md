@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 19.8.7
+- fixed a menu bar problem when exiting the application in distraction free mode
+  (for [#1267](https://github.com/pbek/QOwnNotes/issues/1267))
+
 ## 19.8.6
 - fixed a possible segmentation fault on macOS (Qt 5.12.2) with todo lists
   (for [#1266](https://github.com/pbek/QOwnNotes/issues/1266))

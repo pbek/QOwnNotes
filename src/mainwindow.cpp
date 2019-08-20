@@ -1492,7 +1492,7 @@ void MainWindow::setDistractionFreeMode(bool enabled) {
         // store the current workspace in case we changed something
         storeCurrentWorkspace();
 
-        bool menuBarWasVisible = ui->menuBar->isVisible();
+        bool menuBarWasVisible = settings.value("showMenuBar", !ui->menuBar->isHidden()).toBool();
 
         // set the menu bar visible so we get the correct height
         if (!menuBarWasVisible) {
@@ -3628,10 +3628,12 @@ void MainWindow::closeEvent(QCloseEvent *event) {
         event->ignore();
     } else {
         // we need to do this in the close event (and _not_ in the destructor),
-        // because in the destructor thelayout will be destroyed in dark mode
+        // because in the destructor the layout will be destroyed in dark mode
         // when the window was closed
         // https://github.com/pbek/QOwnNotes/issues/1015
-        storeCurrentWorkspace();
+        if (!isInDistractionFreeMode()) {
+            storeCurrentWorkspace();
+        }
 
         QMainWindow::closeEvent(event);
     }
