@@ -5,6 +5,7 @@
   (for [#1267](https://github.com/pbek/QOwnNotes/issues/1267))
 - attempted to fix an occasional operating system shutdown process interruption
   (for [#1269](https://github.com/pbek/QOwnNotes/issues/1269))
+- added more Persian, Serbian (Cyrillic) translation (thank you Fabijenna)
 
 ## 19.8.6
 - fixed a possible segmentation fault on macOS (Qt 5.12.2) with todo lists
