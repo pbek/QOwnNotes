@@ -606,7 +606,8 @@ MainWindow::~MainWindow() {
     storeUpdatedNotesToDisk();
 
     // commit the changes in the current note folder to git
-    gitCommitCurrentNoteFolder();
+    // (#1269, may cause an interruption of the shutdown process)
+//    gitCommitCurrentNoteFolder();
 
     qApp->setProperty("loggingEnabled", false);
 
