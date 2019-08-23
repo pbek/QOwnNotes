@@ -1,9 +1,15 @@
 # QOwnNotes Changelog
 
 ## 19.8.8
-- there now is a fullscreen mode that can be toggled with <kbd>F11</kbd>
+- there now is a **full-screen mode** that can be toggled with <kbd>F11</kbd>
   (for [#1271](https://github.com/pbek/QOwnNotes/issues/1271))
   - the shortcut is <kbd>⌘</kbd> + <kbd>F11</kbd> on macOS
+- added support for **automatic numbering and indentation of ordered lists**
+  (for [#1148](https://github.com/pbek/QOwnNotes/issues/1148))
+    - if you press <kbd>Enter</kbd> after `1. a list item` you will get a `2. ` in the next line 
+    - if you press <kbd>Enter</kbd> after `1. ` it will remove the current line 
+    - if you press <kbd>Tab</kbd> after `1. ` it will indent the current line 
+    - if you press <kbd>Shift</kbd> + <kbd>Tab</kbd> after `1. ` it will un-indent the current line 
 
 ## 19.8.7
 - fixed a menu bar problem when exiting the application in distraction free mode
