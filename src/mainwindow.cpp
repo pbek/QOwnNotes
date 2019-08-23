@@ -140,7 +140,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->actionDelete_line->setShortcut(QKeySequence("Ctrl+Backspace"));
     ui->actionDelete_word->setShortcut(QKeySequence("Alt+Backspace"));
 
-    // set an other shortcut for the full-screen mode
+    // set another shortcut for the full-screen mode
     ui->actionToggle_fullscreen->setShortcut("Ctrl+F11")
 #endif
 
