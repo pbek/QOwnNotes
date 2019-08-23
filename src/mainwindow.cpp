@@ -141,7 +141,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->actionDelete_word->setShortcut(QKeySequence("Alt+Backspace"));
 
     // set another shortcut for the full-screen mode
-    ui->actionToggle_fullscreen->setShortcut(QKeySequence("Ctrl+F11"))
+    ui->actionToggle_fullscreen->setShortcut(QKeySequence("Ctrl+F11"));
 #endif
 
     _noteViewIsRegenerated = false;
