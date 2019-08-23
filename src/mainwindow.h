@@ -569,6 +569,8 @@ private slots:
 
     void on_actionRiot_triggered();
 
+    void on_actionToggle_fullscreen_triggered();
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;

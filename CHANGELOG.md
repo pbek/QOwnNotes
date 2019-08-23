@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 19.8.8
+- there now is a fullscreen mode
+  (for [#1271](https://github.com/pbek/QOwnNotes/issues/1271))
+
 ## 19.8.7
 - fixed a menu bar problem when exiting the application in distraction free mode
   (for [#1267](https://github.com/pbek/QOwnNotes/issues/1267))

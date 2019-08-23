@@ -1176,6 +1176,8 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionToggle_distraction_free_mode"/>
     <addaction name="menuEditor_width"/>
     <addaction name="separator"/>
+    <addaction name="actionToggle_fullscreen"/>
+    <addaction name="separator"/>
     <addaction name="action_Increase_note_text_size"/>
     <addaction name="action_Decrease_note_text_size"/>
     <addaction name="action_Reset_note_text_size"/>
@@ -2483,6 +2485,14 @@ p, li { white-space: pre-wrap; }
   <action name="actionImport_bookmarks_from_server">
    <property name="text">
     <string>Import bookmarks from server</string>
+   </property>
+  </action>
+  <action name="actionToggle_fullscreen">
+   <property name="text">
+    <string>Toggle full-screen mode</string>
+   </property>
+   <property name="toolTip">
+    <string>Toggle full-screen mode</string>
    </property>
   </action>
  </widget>

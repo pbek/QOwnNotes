@@ -11028,3 +11028,8 @@ void MainWindow::on_actionImport_bookmarks_from_server_triggered() {
 void MainWindow::on_actionRiot_triggered() {
     QDesktopServices::openUrl(QUrl("https://riot.im/app/#/room/!rUzrRvrnrOsLasDdbp:matrix.org?via=matrix.org"));
 }
+
+void MainWindow::on_actionToggle_fullscreen_triggered()
+{
+    isFullScreen() ? showNormal() : showFullScreen();
+}
