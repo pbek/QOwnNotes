@@ -89,7 +89,7 @@ public:
 
     Q_DECLARE_FLAGS(CreateNewNoteOptions, CreateNewNoteOption)
 
-    explicit MainWindow(QWidget *parent = 0);
+    explicit MainWindow(QWidget *parent = nullptr);
 
     ~MainWindow();
 
@@ -571,6 +571,8 @@ private slots:
 
     void on_actionToggle_fullscreen_triggered();
 
+    void disableFullScreenMode();
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;
@@ -603,6 +605,7 @@ private:
     QLabel *_noteEditLineNumberLabel;
     QPushButton *_readOnlyButton;
     QPushButton *_leaveDistractionFreeModeButton;
+    QPushButton *_leaveFullScreenModeButton;
     QToolBar *_formattingToolbar;
     QToolBar *_customActionToolbar;
     QToolBar *_insertingToolbar;

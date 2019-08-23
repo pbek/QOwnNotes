@@ -2494,6 +2494,9 @@ p, li { white-space: pre-wrap; }
    <property name="toolTip">
     <string>Toggle full-screen mode</string>
    </property>
+   <property name="shortcut">
+    <string notr="true">F11</string>
+   </property>
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>

@@ -139,6 +139,9 @@ MainWindow::MainWindow(QWidget *parent) :
     // set an other shortcut for delete line under macOS
     ui->actionDelete_line->setShortcut(QKeySequence("Ctrl+Backspace"));
     ui->actionDelete_word->setShortcut(QKeySequence("Alt+Backspace"));
+
+    // set an other shortcut for the full-screen mode
+    ui->actionToggle_fullscreen->setShortcut("Ctrl+F11")
 #endif
 
     _noteViewIsRegenerated = false;
@@ -589,6 +592,8 @@ bool MainWindow::restoreActiveNoteHistoryItem() {
 }
 
 MainWindow::~MainWindow() {
+    disableFullScreenMode();
+
     bool forceQuit = qApp->property("clearAppDataAndExit").toBool();
 
     // make sure no settings get written after we got the
@@ -1540,7 +1545,7 @@ void MainWindow::setDistractionFreeMode(bool enabled) {
         _leaveDistractionFreeModeButton = new QPushButton(tr("leave"));
         _leaveDistractionFreeModeButton->setFlat(true);
         _leaveDistractionFreeModeButton->setToolTip(
-                tr("leave distraction free mode"));
+                tr("Leave distraction free mode"));
         _leaveDistractionFreeModeButton
                 ->setStyleSheet("QPushButton {padding: 0 5px}");
 
@@ -11029,7 +11034,35 @@ void MainWindow::on_actionRiot_triggered() {
     QDesktopServices::openUrl(QUrl("https://riot.im/app/#/room/!rUzrRvrnrOsLasDdbp:matrix.org?via=matrix.org"));
 }
 
-void MainWindow::on_actionToggle_fullscreen_triggered()
-{
-    isFullScreen() ? showNormal() : showFullScreen();
+void MainWindow::on_actionToggle_fullscreen_triggered() {
+    if (isFullScreen()) {
+        showNormal();
+
+        statusBar()->removeWidget(_leaveFullScreenModeButton);
+        disconnect(_leaveFullScreenModeButton, Q_NULLPTR, Q_NULLPTR, Q_NULLPTR);
+    } else {
+        showFullScreen();
+
+        _leaveFullScreenModeButton = new QPushButton(tr("leave"));
+        _leaveFullScreenModeButton->setFlat(true);
+        _leaveFullScreenModeButton->setToolTip(
+                tr("Leave full-screen mode"));
+        _leaveFullScreenModeButton
+                ->setStyleSheet("QPushButton {padding: 0 5px}");
+
+        _leaveFullScreenModeButton->setIcon(QIcon::fromTheme(
+                "zoom-original",
+                QIcon(":icons/breeze-qownnotes/16x16/zoom-original.svg")));
+
+        connect(_leaveFullScreenModeButton, SIGNAL(clicked()),
+                this, SLOT(on_actionToggle_fullscreen_triggered()));
+
+        statusBar()->addPermanentWidget(_leaveFullScreenModeButton);
+    }
+}
+
+void MainWindow::disableFullScreenMode() {
+    if (isFullScreen()) {
+        on_actionToggle_fullscreen_triggered();
+    }
 }
