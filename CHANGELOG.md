@@ -10,6 +10,8 @@
     - if you press <kbd>Enter</kbd> after `1. ` it will remove the current line 
     - if you press <kbd>Tab</kbd> after `1. ` it will indent the current line 
     - if you press <kbd>Shift</kbd> + <kbd>Tab</kbd> after `1. ` it will un-indent the current line 
+- added more Spanish, Catalan, German, Serbian (Cyrillic), Persian translation
+  (thank you richarson, MGuerra, rakekniven, Fabijenna)
 
 ## 19.8.7
 - fixed a menu bar problem when exiting the application in distraction free mode
