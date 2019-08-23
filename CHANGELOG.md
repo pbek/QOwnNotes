@@ -1,8 +1,9 @@
 # QOwnNotes Changelog
 
 ## 19.8.8
-- there now is a fullscreen mode
+- there now is a fullscreen mode that can be toggled with <kbd>F11</kbd>
   (for [#1271](https://github.com/pbek/QOwnNotes/issues/1271))
+  - the shortcut is <kbd>⌘</kbd> + <kbd>F11</kbd> on macOS
 
 ## 19.8.7
 - fixed a menu bar problem when exiting the application in distraction free mode
