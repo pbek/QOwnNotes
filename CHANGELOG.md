@@ -5,6 +5,8 @@
   in the preview and the PDF export (for [#266](https://github.com/pbek/QOwnNotes/issues/266))
     - if the note is in a sub-folder the path counts as relative path in relation
       to the sub-folder
+- pressing <kbd>Escape</kbd> twice in the note text edit will now first disable the
+  search widget and then enable the read-only mode instead of the other way around
 
 ## 19.8.8
 - there now is a **full-screen mode** that can be toggled with <kbd>F11</kbd>

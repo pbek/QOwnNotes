@@ -388,7 +388,11 @@ bool QOwnNotesMarkdownTextEdit::eventFilter(QObject *obj, QEvent *event) {
         auto *keyEvent = static_cast<QKeyEvent *>(event);
 
         if (objectName() == "encryptedNoteTextEdit" || objectName() == "noteTextEdit") {
-            if (!Utils::Misc::isNoteEditingAllowed()) {
+            // deactivating the search widget has priority
+            if ((keyEvent->key() == Qt::Key_Escape) && _searchWidget->isVisible()) {
+                _searchWidget->deactivate();
+                return true;
+            } else if (!Utils::Misc::isNoteEditingAllowed()) {
                 auto keys = QList<int>() << Qt::Key_Return << Qt::Key_Enter <<
                         Qt::Key_Space << Qt::Key_Backspace << Qt::Key_Delete <<
                         Qt::Key_Tab << Qt::Key_Backtab << Qt::Key_Minus <<
