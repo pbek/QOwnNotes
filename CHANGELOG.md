@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 19.9.0
+- added support for **relative image tags** like `![photo](path/to/my/photo.jpg)`
+  in the preview and the PDF export (for [#266](https://github.com/pbek/QOwnNotes/issues/266))
+    - if the note is in a sub-folder the path counts as relative path in relation
+      to the sub-folder
+
 ## 19.8.8
 - there now is a **full-screen mode** that can be toggled with <kbd>F11</kbd>
   (for [#1271](https://github.com/pbek/QOwnNotes/issues/1271))

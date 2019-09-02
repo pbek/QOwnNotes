@@ -1770,6 +1770,12 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
             "\\1file://" + windowsSlash + QRegularExpression::escape(notesPath)
             + "/\\2\\3");
 
+    // transform images without "file://" urls to file-urls (but we better do that in the html, not the markdown!)
+//    str.replace(
+//            QRegularExpression(R"((\!\[.*\]\()((?!file:\/\/).+)(\)))"),
+//            "\\1file://" + windowsSlash + QRegularExpression::escape(notesPath)
+//            + "/\\2\\3");
+
     QRegularExpressionMatchIterator i;
 
     // try to replace file links like <my-note.md> to note links
@@ -1847,6 +1853,13 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
 
     // transform Nextcloud preview image tags
     Utils::Misc::transformNextcloudPreviewImages(result);
+
+    // transform images without "file://" urls to file-urls
+    const QString subFolderPath = getNoteSubFolder().relativePath("/");
+    const QString notePath = notesPath + (subFolderPath.isEmpty() ? "" : "/" + subFolderPath);
+    result.replace(
+            QRegularExpression(R"((<img src=\")((?!file:\/\/).+)\")"),
+            "\\1file://" + windowsSlash + notePath + "/\\2\"");
 
     QString fontString = settings.value("MainWindow/noteTextView.code.font")
             .toString();
