@@ -1661,7 +1661,7 @@
       <location filename="../mainwindow.ui" line="2492"/>
       <location filename="../mainwindow.ui" line="2495"/>
       <source>Toggle full-screen mode</source>
-      <translation type="unfinished">Toggle full-screen mode</translation>
+      <translation>Εναλλαγή λειτουργίας πλήρους οθόνης</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1867"/>
@@ -2354,7 +2354,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="11049"/>
       <source>Leave full-screen mode</source>
-      <translation type="unfinished">Leave full-screen mode</translation>
+      <translation>Αφήστε τη λειτουργία πλήρους οθόνης</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7826"/>
@@ -2817,7 +2817,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="1548"/>
       <source>Leave distraction free mode</source>
-      <translation type="unfinished">Leave distraction free mode</translation>
+      <translation>Αφήστε τη λειτουργία ελεύθερης διάσωσης</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2051"/>
@@ -4617,7 +4617,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2249"/>
       <source>Persian</source>
-      <translation type="unfinished">Persian</translation>
+      <translation>Περσικός</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2293"/>

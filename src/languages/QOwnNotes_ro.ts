@@ -1670,7 +1670,7 @@
       <location filename="../mainwindow.ui" line="2492"/>
       <location filename="../mainwindow.ui" line="2495"/>
       <source>Toggle full-screen mode</source>
-      <translation type="unfinished">Toggle full-screen mode</translation>
+      <translation>Comutați modul ecran complet</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1867"/>
@@ -2379,7 +2379,7 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
     <message>
       <location filename="../mainwindow.cpp" line="11049"/>
       <source>Leave full-screen mode</source>
-      <translation type="unfinished">Leave full-screen mode</translation>
+      <translation>Părăsește modul ecran complet</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7826"/>
@@ -2850,7 +2850,7 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
     <message>
       <location filename="../mainwindow.cpp" line="1548"/>
       <source>Leave distraction free mode</source>
-      <translation type="unfinished">Leave distraction free mode</translation>
+      <translation>Lăsați modul liber de distragere</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2051"/>
@@ -4656,7 +4656,7 @@ Testați-vă dacă primiți conflicte de sincronizare și setați o valoare mai 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2249"/>
       <source>Persian</source>
-      <translation type="unfinished">Persian</translation>
+      <translation>Persană</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2293"/>

@@ -1661,7 +1661,7 @@
       <location filename="../mainwindow.ui" line="2492"/>
       <location filename="../mainwindow.ui" line="2495"/>
       <source>Toggle full-screen mode</source>
-      <translation type="unfinished">Toggle full-screen mode</translation>
+      <translation>Pantaila osoko modua aldatu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1867"/>
@@ -2355,7 +2355,7 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
     <message>
       <location filename="../mainwindow.cpp" line="11049"/>
       <source>Leave full-screen mode</source>
-      <translation type="unfinished">Leave full-screen mode</translation>
+      <translation>Utzi pantaila osoko modua</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7826"/>
@@ -2818,7 +2818,7 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
     <message>
       <location filename="../mainwindow.cpp" line="1548"/>
       <source>Leave distraction free mode</source>
-      <translation type="unfinished">Leave distraction free mode</translation>
+      <translation>Leave full-screen mode</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2051"/>
@@ -2879,9 +2879,9 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3134"/>
       <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
-      <translation type="unfinished">
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
+      <translation>
+        <numerusform>OwnCloud sinkronizazio prozesua blokeatu dezakeen &lt;strong&gt;%n&lt;/strong&gt; datu baseko kopia automatikoki ezabatu nahi duzu?</numerusform>
+        <numerusform>OwnCloud sinkronizazio prozesua blokeatu dezaketen &lt;strong&gt;%n&lt;/strong&gt; datu baseko gatazka kopiak automatikoki ezabatu nahi duzu?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -4616,7 +4616,7 @@ Just probatu zeure burua sinkronizazio gatazkak lortzen badituzu eta balio handi
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2249"/>
       <source>Persian</source>
-      <translation type="unfinished">Persian</translation>
+      <translation>Persian</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2293"/>

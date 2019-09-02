@@ -1661,7 +1661,7 @@
       <location filename="../mainwindow.ui" line="2492"/>
       <location filename="../mainwindow.ui" line="2495"/>
       <source>Toggle full-screen mode</source>
-      <translation type="unfinished">Toggle full-screen mode</translation>
+      <translation>Váltás a teljes képernyős módra</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1867"/>
@@ -2353,7 +2353,7 @@ Ha a kuka a ownCloud kiszolgálón engedélyezett, onnan visszaállítható.</nu
     <message>
       <location filename="../mainwindow.cpp" line="11049"/>
       <source>Leave full-screen mode</source>
-      <translation type="unfinished">Leave full-screen mode</translation>
+      <translation>Elhagyja a teljes képernyős módot</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7826"/>
@@ -2816,7 +2816,7 @@ Ha a kuka a ownCloud kiszolgálón engedélyezett, onnan visszaállítható.</nu
     <message>
       <location filename="../mainwindow.cpp" line="1548"/>
       <source>Leave distraction free mode</source>
-      <translation type="unfinished">Leave distraction free mode</translation>
+      <translation>Elhagyja a figyelemelterelés-mentes módot</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2051"/>

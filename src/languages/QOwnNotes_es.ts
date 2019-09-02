@@ -248,7 +248,7 @@
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5885"/>
       <source>%n lines moved.</source>
       <translation>
-        <numerusform>%n línea movida.</numerusform>
+        <numerusform>%n líneas movidas.</numerusform>
         <numerusform>%n líneas movidas.</numerusform>
       </translation>
     </message>
@@ -265,7 +265,7 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5966"/>
       <source>"%1" %2 %3L, %4C written.</source>
-      <translation>"%1" %2 %3L, %4C escrito.</translation>
+      <translation>"%1" %2 %3L, %4C escritos.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5967"/>
@@ -286,7 +286,7 @@
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6030"/>
       <source>%n lines filtered.</source>
       <translation>
-        <numerusform>%n línea filtrada.</numerusform>
+        <numerusform>%n líneas filtradas.</numerusform>
         <numerusform>%n líneas filtradas.</numerusform>
       </translation>
     </message>

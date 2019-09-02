@@ -247,9 +247,9 @@
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5885"/>
       <source>%n lines moved.</source>
-      <translation type="unfinished">
-        <numerusform>%n lines moved.</numerusform>
-        <numerusform>%n lines moved.</numerusform>
+      <translation>
+        <numerusform>خط n٪ نقل مکان کرد.</numerusform>
+        <numerusform>خط n٪ حرکت کرد.</numerusform>
       </translation>
     </message>
     <message>
@@ -265,7 +265,7 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5966"/>
       <source>"%1" %2 %3L, %4C written.</source>
-      <translation type="unfinished">"%1" %2 %3L, %4C written.</translation>
+      <translation>"%1" %2 %3L, %4C نوشته شده است.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5967"/>
@@ -285,9 +285,9 @@
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6030"/>
       <source>%n lines filtered.</source>
-      <translation type="unfinished">
-        <numerusform>%n lines filtered.</numerusform>
-        <numerusform>%n lines filtered.</numerusform>
+      <translation>
+        <numerusform>خط n٪ فیلتر شد.</numerusform>
+        <numerusform>خطوط ٪n فیلتر شدند.</numerusform>
       </translation>
     </message>
     <message>
@@ -333,9 +333,9 @@
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6439"/>
       <source>%n lines indented.</source>
-      <translation type="unfinished">
-        <numerusform>%n lines indented.</numerusform>
-        <numerusform>%n lines indented.</numerusform>
+      <translation>
+        <numerusform>%n خط به صورت خمیده.</numerusform>
+        <numerusform>%n خط به صورت خمیده است.</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -2354,7 +2354,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="11049"/>
       <source>Leave full-screen mode</source>
-      <translation type="unfinished">Leave full-screen mode</translation>
+      <translation>حالت تمام صفحه را رها کنید</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7826"/>
@@ -2373,7 +2373,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.ui" line="1187"/>
       <source>&amp;Tag</source>
-      <translation type="unfinished">&amp;Tag</translation>
+      <translation>&amp;برچسب زدن</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4415"/>
@@ -2383,17 +2383,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4416"/>
       <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
-        <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
+      <translation>
+        <numerusform>برچسب &lt;strong&gt;%1&lt;/strong&gt; را از ٪n یادداشت انتخاب شده حذف کنید?</numerusform>
+        <numerusform>برچسب &lt;strong&gt;%1&lt;/strong&gt; را از ٪n یادداشت انتخاب شده حذف کنید؟</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4471"/>
       <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
-      <translation type="unfinished">
-        <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
-        <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
+      <translation>
+        <numerusform>برچسب &lt;strong&gt; %1 &lt;/strong&gt; ا ز٪n نت حذف شد</numerusform>
+        <numerusform>برچسب &lt;strong&gt;٪1 &lt;/strong&gt; از ٪n یادداشت حذف شد</numerusform>
       </translation>
     </message>
     <message>
@@ -2886,17 +2886,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4399"/>
       <source>%n note(s) were tagged with "%2"</source>
-      <translation type="unfinished">
-        <numerusform>%n note(s) were tagged with "%2"</numerusform>
-        <numerusform>%n note(s) were tagged with "%2"</numerusform>
+      <translation>
+        <numerusform>٪n آنچه با "٪2" برچسب گذاری شده است</numerusform>
+        <numerusform>٪n نت با "٪2" برچسب گذاری شد</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5135"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation type="unfinished">
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; مورد از &lt;strong&gt;%1&lt;/strong&gt; یافت</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; مورد از &lt;strong&gt;%1&lt;/strong&gt; یافت شده است</numerusform>
       </translation>
     </message>
     <message>
@@ -2908,7 +2908,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="5928"/>
       <source>Block &amp;quote selected text</source>
       <comment>Action to apply a block quote formatting to the selected text</comment>
-      <translation type="unfinished">Block &amp;quote selected text</translation>
+      <translation>مسدود کردن &amp;نقل قول متن انتخاب شده</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6866"/>
@@ -2956,7 +2956,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="6362"/>
       <source>&amp;Decrypt</source>
-      <translation type="unfinished">&amp;Decrypt</translation>
+      <translation>&amp;رمزگشایی</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6388"/>
@@ -3223,12 +3223,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="1020"/>
       <source>Open &amp;settings</source>
-      <translation type="unfinished">Open &amp;settings</translation>
+      <translation>تنظیمات را باز &amp;کنید</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1020"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>&amp;لغو</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1065"/>
@@ -3274,7 +3274,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="1218"/>
       <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation type="unfinished">Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</translation>
+      <translation>پیام خطایی از سرور CalDAV شما: &lt;strong&gt; %1 &lt;/strong&gt;</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1868"/>
@@ -6594,12 +6594,12 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="491"/>
       <source>Couldn't find updater script: %1</source>
-      <translation type="unfinished">Couldn't find updater script: %1</translation>
+      <translation>پرونده بروزرسانی یافت نشد: 1%</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="500"/>
       <source>Couldn't find unzip executable: %1</source>
-      <translation type="unfinished">Couldn't find unzip executable: %1</translation>
+      <translation>یافتن از حالت فشرده قابل اجرا یافت نشد: ٪1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="350"/>
@@ -6625,7 +6625,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../services/updateservice.cpp" line="105"/>
       <source>Network reply error: %1</source>
-      <translation type="unfinished">Network reply error: %1</translation>
+      <translation>خطای پاسخ شبکه: ٪1</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="119"/>
@@ -6645,7 +6645,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../services/updateservice.cpp" line="231"/>
       <source>There are no updates available.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; is the latest version.</source>
-      <translation type="unfinished">There are no updates available.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; is the latest version.</translation>
+      <translation>هیچ به روزرسانی موجود نیست. &lt;br/&gt;&lt;strong&gt;%1&lt;/strong&gt; جدیدترین نسخه است.</translation>
     </message>
   </context>
   <context>
@@ -6696,9 +6696,9 @@ This cannot be undone!</source>
     <message numerus="yes">
       <location filename="../services/websocketserverservice.cpp" line="188"/>
       <source>%n bookmark(s) created</source>
-      <translation type="unfinished">
-        <numerusform>%n bookmark(s) created</numerusform>
-        <numerusform>%n bookmark(s) created</numerusform>
+      <translation>
+        <numerusform>%n نشانک ایجاد شد</numerusform>
+        <numerusform>%n نشانک ایجاد شد</numerusform>
       </translation>
     </message>
     <message>

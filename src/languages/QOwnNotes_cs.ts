@@ -1679,7 +1679,7 @@
       <location filename="../mainwindow.ui" line="2492"/>
       <location filename="../mainwindow.ui" line="2495"/>
       <source>Toggle full-screen mode</source>
-      <translation type="unfinished">Toggle full-screen mode</translation>
+      <translation>Pantaila osoko modua aldatu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1867"/>
@@ -1980,8 +1980,8 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
       <translation type="unfinished">
         <numerusform>Přesunout %n vybranou poznámku do &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
         <numerusform>Přesunout %n vybrané poznámky do &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Přesunout %n vybraných poznámek do &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Přesunout %n vybrané poznámky do &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Přesunout %n vybrané poznámky do &lt;strong&gt; %2 &lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
@@ -2366,7 +2366,7 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
       <translation type="unfinished">
         <numerusform>%n znak</numerusform>
         <numerusform>%n znaky</numerusform>
-        <numerusform>%n chars</numerusform>
+        <numerusform>%n znaky</numerusform>
         <numerusform>%n znaků</numerusform>
       </translation>
     </message>
@@ -2398,16 +2398,16 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
     <message>
       <location filename="../mainwindow.cpp" line="11049"/>
       <source>Leave full-screen mode</source>
-      <translation type="unfinished">Leave full-screen mode</translation>
+      <translation>Utzi pantaila osoko modua</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7826"/>
       <source>%n notes selected</source>
-      <translation type="unfinished">
+      <translation>
+        <numerusform>%n poznámka vybrána</numerusform>
         <numerusform>%n poznámek vybráno</numerusform>
         <numerusform>%n poznámek vybráno</numerusform>
-        <numerusform>%n notes selected</numerusform>
-        <numerusform>%n notes selected</numerusform>
+        <numerusform>%n poznámek vybráno</numerusform>
       </translation>
     </message>
     <message>
@@ -2429,11 +2429,11 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4416"/>
       <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Odstranit &lt;strong&gt;%n&lt;/strong&gt; štítků z %n vybraných poznámek?</numerusform>
-        <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
-        <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
-        <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
+      <translation>
+        <numerusform>Odstranit &lt;strong&gt;%1&lt;/strong&gt; štítky z %n vybrané poznámky?</numerusform>
+        <numerusform>Odstranit &lt;strong&gt;%1&lt;/strong&gt; štítků z %n vybraných poznámek?</numerusform>
+        <numerusform>Odstranit &lt;strong&gt;%1&lt;/strong&gt; štítků z %n vybraných poznámek?</numerusform>
+        <numerusform>Odstranit &lt;strong&gt;%1&lt;/strong&gt; štítků z %n vybraných poznámek?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -2569,11 +2569,11 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="8494"/>
       <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
-        <numerusform>Přesunout %n vybranou poznámku(y) do podsložky poznámek &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Přesunout %n vybranou poznámku(y) do podsložky poznámek &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>Přesnost %n vybranou poznámku do podsložky poznámek &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
+        <numerusform>Přesnost %n vybraných poznámek do podsložky poznámek &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
+        <numerusform>Přesnost %n vybraných poznámek do podsložky poznámek &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
+        <numerusform>Přesnost %n vybraných poznámek do podsložky poznámek &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
@@ -2595,21 +2595,21 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="8578"/>
       <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
-        <numerusform>Kopírovat %n vybraných poznámek do podsložky poznámek &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>Kopírovat %n vybranou poznámku do podsložky poznámek &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
+        <numerusform>Kopírovat %n vybraných poznámek do podsložky poznámek &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
+        <numerusform>Kopírovat %n vybraných poznámek do podsložky poznámek &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
+        <numerusform>Kopírovat %n vybraných poznámek do podsložky poznámek &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="8629"/>
       <source>%n note(s) were copied to note subfolder "%2"</source>
-      <translation type="unfinished">
-        <numerusform>%n poznámka(y) byly zkopírovány do podsložky poznámek "%2"</numerusform>
-        <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
-        <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
-        <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
+      <translation>
+        <numerusform>%n poznámka byla zkopírována do podsložky poznámky „% 2“</numerusform>
+        <numerusform>%n poznámky byly zkopírovány do podsložky poznámek „% 2“</numerusform>
+        <numerusform>%n poznámky byly zkopírovány do podsložky poznámek „% 2“</numerusform>
+        <numerusform>%n poznámky byly zkopírovány do podsložky poznámek „% 2“</numerusform>
       </translation>
     </message>
     <message>
@@ -2729,7 +2729,7 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
       <translation type="unfinished">
         <numerusform>Uložena %n poznámka na disk</numerusform>
         <numerusform>Uloženy %n poznámky na disk</numerusform>
-        <numerusform>Stored %n note(s) to disk</numerusform>
+        <numerusform>Uloženy %n poznámky na disk</numerusform>
         <numerusform>Uloženo %n poznámek na disk</numerusform>
       </translation>
     </message>
@@ -2877,7 +2877,7 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
     <message>
       <location filename="../mainwindow.cpp" line="1548"/>
       <source>Leave distraction free mode</source>
-      <translation type="unfinished">Leave distraction free mode</translation>
+      <translation>Ez utzi distrakzio modu askea</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2051"/>
@@ -3192,11 +3192,11 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
     <message numerus="yes">
       <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="141"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Odstranit &lt;strong&gt;%n&lt;/strong&gt; vybraných souborů?</numerusform>
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
+      <translation>
+        <numerusform>Odstranit &lt;strong&gt;%n &lt;/strong&gt; vybraný soubor?</numerusform>
+        <numerusform>Odstranit &lt;strong&gt;%n &lt;/strong&gt; vybrané soubory?</numerusform>
+        <numerusform>Odstranit &lt;strong&gt;%n &lt;/strong&gt; vybrané soubory?</numerusform>
+        <numerusform>Odstranit &lt;strong&gt;%n &lt;/strong&gt; vybrané soubory?</numerusform>
       </translation>
     </message>
   </context>
@@ -3245,11 +3245,11 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
     <message numerus="yes">
       <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Odstranit &lt;strong&gt;%n&lt;/strong&gt; vybraných souborů?</numerusform>
-        <numerusform>Odstranit &lt;strong&gt;%n&lt;/strong&gt; vybraných souborů?</numerusform>
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
+      <translation>
+        <numerusform>Odstranit &lt;strong&gt;%n &lt;/strong&gt; vybrané soubory?</numerusform>
+        <numerusform>Odstranit &lt;strong&gt;%n &lt;/strong&gt; vybrané soubory?</numerusform>
+        <numerusform>Odstranit &lt;strong&gt;%n &lt;/strong&gt; vybrané soubory?</numerusform>
+        <numerusform>Odstranit &lt;strong&gt;%n &lt;/strong&gt; vybrané soubory?</numerusform>
       </translation>
     </message>
   </context>
@@ -3420,11 +3420,11 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
     <message numerus="yes">
       <location filename="../entities/note.cpp" line="2509"/>
       <source>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Byla zjištěna změna názvu poznámky. Chcete nahradit všechny výskyty odkazů &lt;strong&gt;&lt;/strong&gt; %1 &lt;strong&gt;%2&lt;/strong&gt; &lt;strong&gt;%n&lt;/strong&gt; Poznámka soubory?</numerusform>
-        <numerusform>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
-        <numerusform>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
-        <numerusform>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
+      <translation>
+        <numerusform>Byla zjištěna změna názvu poznámky. Chcete nahradit všechny výskyty odkazů &lt;strong&gt;%1 &lt;/strong&gt; za &lt;strong&gt;%2 &lt;/strong&gt; v souboru poznámek &lt;strong&gt;%n &lt;/strong&gt;?</numerusform>
+        <numerusform>Byla zjištěna změna názvu poznámky. Chcete nahradit všechny výskyty odkazů &lt;strong&gt;%1 &lt;/strong&gt; za &lt;strong&gt;%2 &lt;/strong&gt; v souborech poznámek &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
+        <numerusform>Byla zjištěna změna názvu poznámky. Chcete nahradit všechny výskyty odkazů &lt;strong&gt;%1 &lt;/strong&gt; za &lt;strong&gt;%2 &lt;/strong&gt; v souborech poznámek &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
+        <numerusform>Byla zjištěna změna názvu poznámky. Chcete nahradit všechny výskyty odkazů &lt;strong&gt;%1 &lt;/strong&gt; za &lt;strong&gt;%2 &lt;/strong&gt; v souborech poznámek &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -4691,7 +4691,7 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2249"/>
       <source>Persian</source>
-      <translation type="unfinished">Persian</translation>
+      <translation>Persian</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2293"/>

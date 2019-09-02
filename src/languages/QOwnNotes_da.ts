@@ -1661,7 +1661,7 @@
       <location filename="../mainwindow.ui" line="2492"/>
       <location filename="../mainwindow.ui" line="2495"/>
       <source>Toggle full-screen mode</source>
-      <translation type="unfinished">Toggle full-screen mode</translation>
+      <translation>Skift tilstand på fuld skærm</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1867"/>
@@ -2354,7 +2354,7 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
     <message>
       <location filename="../mainwindow.cpp" line="11049"/>
       <source>Leave full-screen mode</source>
-      <translation type="unfinished">Leave full-screen mode</translation>
+      <translation>Forlad fuld skærmtilstand</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7826"/>
@@ -2817,7 +2817,7 @@ hvis papirkurven er aktiveret på din ownCloud server du skal kunne gendanne dem
     <message>
       <location filename="../mainwindow.cpp" line="1548"/>
       <source>Leave distraction free mode</source>
-      <translation type="unfinished">Leave distraction free mode</translation>
+      <translation>Forlad distraktionsfri tilstand</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2051"/>
@@ -4615,7 +4615,7 @@ Bare test dig selv, hvis du får synkroniseringskonflikter og angiv en højere v
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2249"/>
       <source>Persian</source>
-      <translation type="unfinished">Persian</translation>
+      <translation>Persisk</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2293"/>

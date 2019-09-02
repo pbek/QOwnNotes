@@ -1679,7 +1679,7 @@
       <location filename="../mainwindow.ui" line="2492"/>
       <location filename="../mainwindow.ui" line="2495"/>
       <source>Toggle full-screen mode</source>
-      <translation type="unfinished">Toggle full-screen mode</translation>
+      <translation>Prepnúť režim celej obrazovky</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1867"/>
@@ -2404,7 +2404,7 @@ Ak je kôš povolený na vašom serveri ownCloud, mali by ste byť schopní ho o
     <message>
       <location filename="../mainwindow.cpp" line="11049"/>
       <source>Leave full-screen mode</source>
-      <translation type="unfinished">Leave full-screen mode</translation>
+      <translation>Opustenie režimu celej obrazovky</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7826"/>
@@ -2883,7 +2883,7 @@ Ak je kôš povolený na vašom serveri ownCloud, mali by ste byť schopní ho o
     <message>
       <location filename="../mainwindow.cpp" line="1548"/>
       <source>Leave distraction free mode</source>
-      <translation type="unfinished">Leave distraction free mode</translation>
+      <translation>Nechajte režim bez rozptyľovania</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2051"/>
@@ -4697,7 +4697,7 @@ Stačí si otestovať, či máte konflikty synchronizácie a ak áno, nastavte v
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2249"/>
       <source>Persian</source>
-      <translation type="unfinished">Persian</translation>
+      <translation>Perzský</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2293"/>

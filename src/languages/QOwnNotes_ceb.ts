@@ -1661,7 +1661,7 @@
       <location filename="../mainwindow.ui" line="2492"/>
       <location filename="../mainwindow.ui" line="2495"/>
       <source>Toggle full-screen mode</source>
-      <translation type="unfinished">Toggle full-screen mode</translation>
+      <translation>Toggle mode sa full-screen</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1867"/>
@@ -2349,7 +2349,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="11049"/>
       <source>Leave full-screen mode</source>
-      <translation type="unfinished">Leave full-screen mode</translation>
+      <translation>Biyai ang full-screen mode</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7826"/>
@@ -2812,7 +2812,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="1548"/>
       <source>Leave distraction free mode</source>
-      <translation type="unfinished">Leave distraction free mode</translation>
+      <translation>Ayaw ibalhin ang libre nga pagkagubot</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2051"/>
@@ -2873,9 +2873,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3134"/>
       <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
-      <translation type="unfinished">
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
+      <translation>
+        <numerusform>Pagpadayon uban ang awtomatikong pagtangtang sa &lt;strong&gt;%n&lt;/strong&gt; nagkasumpaki nga kopya sa database nga mahimo nga pag-block sa imong ownCloud nga proseso sa pag-sync?</numerusform>
+        <numerusform>Pagpadayon uban ang awtomatikong pagtangtang sa &lt;strong&gt;%n&lt;/strong&gt; nga nagkasumpaki nga mga kopya sa database nga mahimo nga pag-block sa imong ownCloud nga proseso sa pag-sync?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -2889,9 +2889,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5135"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation type="unfinished">
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+      <translation>
+        <numerusform>Nakaplag &lt;strong&gt;%n&lt;/strong&gt; nga panghitabo sa &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
+        <numerusform>Nakapangita &lt;strong&gt;%n&lt;/strong&gt; mga panghitabo sa &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
       </translation>
     </message>
     <message>
@@ -4610,7 +4610,7 @@ Sulayi lang ang imong kaugalingon kon makasinati ka og panagbangi ug maghimo og 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2249"/>
       <source>Persian</source>
-      <translation type="unfinished">Persian</translation>
+      <translation>Persianhon</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2293"/>
@@ -6101,12 +6101,12 @@ Ang imong mga nota magpabilin nga wala'y labot!</translation>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="261"/>
       <source>Text-delimiter:</source>
-      <translation type="unfinished">Text-delimiter:</translation>
+      <translation>Teksto-tiglaraw:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.cpp" line="148"/>
       <source>CSV files</source>
-      <translation type="unfinished">CSV files</translation>
+      <translation>Mga file nga CSV</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.cpp" line="149"/>
@@ -6496,7 +6496,7 @@ Kini dili mahimong dili mahuman!</translation>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="82"/>
       <source>&amp;Disable dialog</source>
-      <translation type="unfinished">&amp;Disable dialog</translation>
+      <translation>&amp;I-disable ang diyalogo</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="83"/>
@@ -6741,28 +6741,28 @@ Kini dili mahimong dili mahuman!</translation>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="88"/>
       <source>&amp;Back</source>
-      <translation type="unfinished">&amp;Back</translation>
+      <translation>&amp;Balik</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="99"/>
       <source>&amp;Next</source>
-      <translation type="unfinished">&amp;Next</translation>
+      <translation>&amp;Sunod</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="116"/>
       <source>&amp;Finished</source>
-      <translation type="unfinished">&amp;Finished</translation>
+      <translation>&amp;Nahuman</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="139"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>%Kanselahon</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="168"/>
       <location filename="../dialogs/welcomedialog.cpp" line="214"/>
       <source>Note folder</source>
-      <translation type="unfinished">Note folder</translation>
+      <translation>Polder sa nota</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="191"/>
@@ -6777,7 +6777,7 @@ Kini dili mahimong dili mahuman!</translation>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="232"/>
       <source>Select folder</source>
-      <translation type="unfinished">Select folder</translation>
+      <translation>Pilia ang folder</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="246"/>

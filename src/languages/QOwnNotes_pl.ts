@@ -287,11 +287,11 @@
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6030"/>
       <source>%n lines filtered.</source>
-      <translation type="unfinished">
-        <numerusform>%n lines filtered.</numerusform>
-        <numerusform>%n lines filtered.</numerusform>
-        <numerusform>%n lines filtered.</numerusform>
-        <numerusform>%n lines filtered.</numerusform>
+      <translation>
+        <numerusform>%n linia przefiltrowana.</numerusform>
+        <numerusform>%n linie przesączono.</numerusform>
+        <numerusform>%n linie przesączono.</numerusform>
+        <numerusform>%n linie przesączono.</numerusform>
       </translation>
     </message>
     <message>
@@ -348,21 +348,21 @@
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6495"/>
       <source>%n lines %1ed %2 time.</source>
       <comment>%1 can be '&gt;' or '&lt;'</comment>
-      <translation type="unfinished">
-        <numerusform>%n lines %1ed %2 time.</numerusform>
-        <numerusform>%n lines %1ed %2 time.</numerusform>
-        <numerusform>%n lines %1ed %2 time.</numerusform>
-        <numerusform>%n lines %1ed %2 time.</numerusform>
+      <translation>
+        <numerusform>%n linia %1ed %2 raz.</numerusform>
+        <numerusform>%n wierszy %1ed %2 razy.</numerusform>
+        <numerusform>%n wierszy %1ed %2 razy.</numerusform>
+        <numerusform>%n wierszy %1ed %2 razy.</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7033"/>
       <source>%n lines yanked.</source>
-      <translation type="unfinished">
-        <numerusform>%n lines yanked.</numerusform>
-        <numerusform>%n lines yanked.</numerusform>
-        <numerusform>%n lines yanked.</numerusform>
-        <numerusform>%n lines yanked.</numerusform>
+      <translation>
+        <numerusform>%n linia szarpnięta.</numerusform>
+        <numerusform>%n linie szarpane.</numerusform>
+        <numerusform>%n linie szarpane.</numerusform>
+        <numerusform>%n linie szarpane.</numerusform>
       </translation>
     </message>
     <message>
@@ -1511,7 +1511,7 @@
       <location filename="../mainwindow.ui" line="2167"/>
       <source>Open the Riot room</source>
       <extracomment>"Riot" as in the chat service</extracomment>
-      <translation type="unfinished">Open the Riot room</translation>
+      <translation>Otwórz pokój Riot</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2194"/>
@@ -1679,7 +1679,7 @@
       <location filename="../mainwindow.ui" line="2492"/>
       <location filename="../mainwindow.ui" line="2495"/>
       <source>Toggle full-screen mode</source>
-      <translation type="unfinished">Toggle full-screen mode</translation>
+      <translation>Przełącz tryb pełnoekranowy</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1867"/>
@@ -2065,11 +2065,11 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5136"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation type="unfinished">
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+      <translation>
+        <numerusform>Znaleziono &lt;strong&gt;%n &lt;/strong&gt; wystąpienie dowolnego terminu &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
+        <numerusform>Znaleziono &lt;strong&gt;%n &lt;/strong&gt; wystąpień dowolnego terminu &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
+        <numerusform>Znaleziono &lt;strong&gt;%n &lt;/strong&gt; wystąpień dowolnego terminu &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
+        <numerusform>Znaleziono &lt;strong&gt;%n &lt;/strong&gt; wystąpień dowolnego terminu &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
       </translation>
     </message>
     <message>
@@ -2404,7 +2404,7 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message>
       <location filename="../mainwindow.cpp" line="11049"/>
       <source>Leave full-screen mode</source>
-      <translation type="unfinished">Leave full-screen mode</translation>
+      <translation>Wyjdź z trybu pełnoekranowego</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7826"/>
@@ -2883,7 +2883,7 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message>
       <location filename="../mainwindow.cpp" line="1548"/>
       <source>Leave distraction free mode</source>
-      <translation type="unfinished">Leave distraction free mode</translation>
+      <translation>Pozostaw tryb wolny od rozproszenia</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2051"/>
@@ -2944,11 +2944,11 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3134"/>
       <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
-      <translation type="unfinished">
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
+      <translation>
+        <numerusform>Czy kontynuować automatyczne usuwanie &lt;strong&gt;%n &lt;/strong&gt; kopii konfliktu bazy danych, która może zablokować proces synchronizacji ownCloud?</numerusform>
+        <numerusform>Czy kontynuować automatyczne usuwanie &lt;strong&gt;%n &lt;/strong&gt; sprzecznych kopii bazy danych, które mogą blokować proces synchronizacji ownCloud?</numerusform>
+        <numerusform>Czy kontynuować automatyczne usuwanie &lt;strong&gt;%n &lt;/strong&gt; sprzecznych kopii bazy danych, które mogą blokować proces synchronizacji ownCloud?</numerusform>
+        <numerusform>Czy kontynuować automatyczne usuwanie &lt;strong&gt;%n &lt;/strong&gt; sprzecznych kopii bazy danych, które mogą blokować proces synchronizacji ownCloud?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -2964,11 +2964,11 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5135"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation type="unfinished">
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+      <translation>
+        <numerusform>Znaleziono &lt;strong&gt;%n&lt;/strong&gt; wystąpienie &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
+        <numerusform>Znaleziono &lt;strong&gt;%n&lt;/strong&gt; wystąpienia &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
+        <numerusform>Znaleziono &lt;strong&gt;%n&lt;/strong&gt; wystąpienia &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
+        <numerusform>Znaleziono &lt;strong&gt;%n&lt;/strong&gt; wystąpienia &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
       </translation>
     </message>
     <message>
@@ -3115,7 +3115,7 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="244"/>
       <source>Export generated raw HTML</source>
-      <translation type="unfinished">Export generated raw HTML</translation>
+      <translation>Eksportuj wygenerowany surowy HTML</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="277"/>
@@ -4695,7 +4695,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2249"/>
       <source>Persian</source>
-      <translation type="unfinished">Persian</translation>
+      <translation>Perski</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2293"/>

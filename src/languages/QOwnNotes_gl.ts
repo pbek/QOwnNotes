@@ -1493,7 +1493,7 @@
       <location filename="../mainwindow.ui" line="2167"/>
       <source>Open the Riot room</source>
       <extracomment>"Riot" as in the chat service</extracomment>
-      <translation type="unfinished">Open the Riot room</translation>
+      <translation>Abre a sala antidisturbios</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2194"/>
@@ -1661,7 +1661,7 @@
       <location filename="../mainwindow.ui" line="2492"/>
       <location filename="../mainwindow.ui" line="2495"/>
       <source>Toggle full-screen mode</source>
-      <translation type="unfinished">Toggle full-screen mode</translation>
+      <translation>Alternar o modo de pantalla completa</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1867"/>
@@ -1821,24 +1821,24 @@ Restore current note?</source>
     <message>
       <location filename="../mainwindow.cpp" line="2929"/>
       <source>Abort</source>
-      <translation type="unfinished">Abort</translation>
+      <translation>Abortar</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2929"/>
       <source>Loading notes…</source>
-      <translation type="unfinished">Loading notes…</translation>
+      <translation>Cargando notas…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3132"/>
       <source>Delete conflicted database copies</source>
-      <translation type="unfinished">Delete conflicted database copies</translation>
+      <translation>Eliminar copias de bases de datos en conflito</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3157"/>
       <source>Removed %n conflicted database copies</source>
-      <translation type="unfinished">
-        <numerusform>Removed %n conflicted database copies</numerusform>
-        <numerusform>Removed %n conflicted database copies</numerusform>
+      <translation>
+        <numerusform>Eliminouse %n copia de base de datos conflictiva</numerusform>
+        <numerusform>Elimináronse %n copias de base de datos en conflito</numerusform>
       </translation>
     </message>
     <message>
@@ -2025,9 +2025,9 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5136"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation type="unfinished">
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+      <translation>
+        <numerusform>Atopouse &lt;strong&gt;%n &lt;/strong&gt; aparición de calquera termo de &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
+        <numerusform>Atopáronse &lt;strong&gt;%n &lt;/strong&gt; ocorrencias de calquera termo de &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
       </translation>
     </message>
     <message>
@@ -2354,7 +2354,7 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
     <message>
       <location filename="../mainwindow.cpp" line="11049"/>
       <source>Leave full-screen mode</source>
-      <translation type="unfinished">Leave full-screen mode</translation>
+      <translation>Saia do modo de pantalla completa</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7826"/>
@@ -2817,7 +2817,7 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
     <message>
       <location filename="../mainwindow.cpp" line="1548"/>
       <source>Leave distraction free mode</source>
-      <translation type="unfinished">Leave distraction free mode</translation>
+      <translation>Deixar o modo libre de distracción</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2051"/>
@@ -2878,9 +2878,9 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3134"/>
       <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
-      <translation type="unfinished">
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
+      <translation>
+        <numerusform>¿Continúa coa eliminación automática de &lt;strong&gt;%n&lt;/strong&gt; copia de base de datos en conflito que pode bloquear o seu propio proceso de sincronización ownCloud?</numerusform>
+        <numerusform>¿Continúa coa eliminación automática de &lt;strong&gt;%n&lt;/strong&gt; copias de bases de datos en conflito que poden bloquear o seu propio proceso de sincronización ownCloud?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -2894,9 +2894,9 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5135"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation type="unfinished">
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+      <translation>
+        <numerusform>Atopouse &lt;strong&gt;%n&lt;/strong&gt; aparición de &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+        <numerusform>Atopáronse &lt;strong&gt;%n&lt;/strong&gt; ocorrencias de &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
       </translation>
     </message>
     <message>
@@ -3043,17 +3043,17 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="244"/>
       <source>Export generated raw HTML</source>
-      <translation type="unfinished">Export generated raw HTML</translation>
+      <translation>Exportou HTML bruto xerado</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="277"/>
       <source>HTML files</source>
-      <translation type="unfinished">HTML files</translation>
+      <translation>Arquivos HTML</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="278"/>
       <source>Export preview as raw HTML file</source>
-      <translation type="unfinished">Export preview as raw HTML file</translation>
+      <translation>Exporta a previsualización como ficheiro HTML en bruto</translation>
     </message>
   </context>
   <context>
@@ -3405,7 +3405,7 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="407"/>
       <source>Note editing is currently disabled, do you want to allow again?</source>
-      <translation type="unfinished">Note editing is currently disabled, do you want to allow again?</translation>
+      <translation>A edición de notas está desactivada actualmente. ¿Queres volver permitila?</translation>
     </message>
   </context>
   <context>
@@ -3418,32 +3418,32 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="107"/>
       <source>Advanced search / replace text</source>
-      <translation type="unfinished">Advanced search / replace text</translation>
+      <translation>Busca avanzada / substitución de texto</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="90"/>
       <source>Close search</source>
-      <translation type="unfinished">Close search</translation>
+      <translation>Pechar busca</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="32"/>
       <source>Find in text</source>
-      <translation type="unfinished">Find in text</translation>
+      <translation>Busca en texto</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="127"/>
       <source>Search forward</source>
-      <translation type="unfinished">Search forward</translation>
+      <translation>Busca adiante</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="63"/>
       <source>Search backward</source>
-      <translation type="unfinished">Search backward</translation>
+      <translation>Busca cara atrás</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="39"/>
       <source>Replace with</source>
-      <translation type="unfinished">Replace with</translation>
+      <translation>Substituír por</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="80"/>
@@ -3468,7 +3468,7 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="224"/>
       <source>Replace one text occurrence</source>
-      <translation type="unfinished">Replace one text occurrence</translation>
+      <translation>Substitúa unha ocorrencia de texto</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="227"/>
@@ -3478,12 +3478,12 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="237"/>
       <source>Replace all text occurrences</source>
-      <translation type="unfinished">Replace all text occurrences</translation>
+      <translation>Substitúe todas as ocorrencias de texto</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="240"/>
       <source>Replace all</source>
-      <translation type="unfinished">Replace all</translation>
+      <translation>Substitúe todo</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="164"/>
@@ -4575,7 +4575,7 @@ Simplemente comproba se obtén conflitos de sincronización e establece un valor
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2073"/>
       <source>Basque</source>
-      <translation type="unfinished">Basque</translation>
+      <translation>Vasco</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2106"/>
@@ -4615,7 +4615,7 @@ Simplemente comproba se obtén conflitos de sincronización e establece un valor
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2249"/>
       <source>Persian</source>
-      <translation type="unfinished">Persian</translation>
+      <translation>Persa</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2293"/>
@@ -4625,7 +4625,7 @@ Simplemente comproba se obtén conflitos de sincronización e establece un valor
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2315"/>
       <source>Serbian</source>
-      <translation type="unfinished">Serbian</translation>
+      <translation>Serbio</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2326"/>
@@ -4815,7 +4815,7 @@ Abre o asistente de emisión de temas &lt;/ span&gt; na parte inferior. &lt;/ P&
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4658"/>
       <source>Disable cursor blinking</source>
-      <translation type="unfinished">Disable cursor blinking</translation>
+      <translation>Desactivar o parpadeo do cursor</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5040"/>

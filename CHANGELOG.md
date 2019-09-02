@@ -7,6 +7,9 @@
       to the sub-folder
 - pressing <kbd>Escape</kbd> twice in the note text edit will now first disable the
   search widget and then enable the read-only mode instead of the other way around
+- added more Croatian, Cebuano, Polish, Persian, Spanish, Serbian (Cyrillic),
+  Swedish, Czech, Hungarian, Dutch, Danish, Finnish, Galician, Greek, Norwegian,
+  Basque, Romanian, Slovak, Slovenian translation (thank you Fabijenna, ericjeppesen)
 
 ## 19.8.8
 - there now is a **full-screen mode** that can be toggled with <kbd>F11</kbd>

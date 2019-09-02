@@ -247,10 +247,10 @@
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5885"/>
       <source>%n lines moved.</source>
-      <translation type="unfinished">
-        <numerusform>%n lines moved.</numerusform>
-        <numerusform>%n lines moved.</numerusform>
-        <numerusform>%n lines moved.</numerusform>
+      <translation>
+        <numerusform>Premješten je %n redak.</numerusform>
+        <numerusform>Premješteno je %n linija.</numerusform>
+        <numerusform>Premješteno je %n linija.</numerusform>
       </translation>
     </message>
     <message>
@@ -286,10 +286,10 @@
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6030"/>
       <source>%n lines filtered.</source>
-      <translation type="unfinished">
-        <numerusform>%n lines filtered.</numerusform>
-        <numerusform>%n linije filtriran.</numerusform>
-        <numerusform>%n linije filtriran.</numerusform>
+      <translation>
+        <numerusform>%n linija filtrirana.</numerusform>
+        <numerusform>%n linije filtrirane.</numerusform>
+        <numerusform>%n linije filtrirane.</numerusform>
       </translation>
     </message>
     <message>
@@ -335,20 +335,20 @@
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6439"/>
       <source>%n lines indented.</source>
-      <translation type="unfinished">
-        <numerusform>%n lines indented.</numerusform>
-        <numerusform>%n lines indented.</numerusform>
-        <numerusform>%n lines indented.</numerusform>
+      <translation>
+        <numerusform>%n reda razvedena.</numerusform>
+        <numerusform>%n redaka sa urezima.</numerusform>
+        <numerusform>%n redaka sa urezima.</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6495"/>
       <source>%n lines %1ed %2 time.</source>
       <comment>%1 can be '&gt;' or '&lt;'</comment>
-      <translation type="unfinished">
-        <numerusform>%n lines %1ed %2 time.</numerusform>
-        <numerusform>%n lines %1ed %2 time.</numerusform>
-        <numerusform>%n lines %1ed %2 time.</numerusform>
+      <translation>
+        <numerusform>%n linija %1ed %2 puta.</numerusform>
+        <numerusform>%n redaka %1ed %2 puta.</numerusform>
+        <numerusform>%n redaka %1ed %2 puta.</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -825,10 +825,10 @@
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="195"/>
       <source>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Vraćanje &lt;strong&gt; %n &lt;/strong&gt; odabranih bilješki?</numerusform>
-        <numerusform>Vraćanje &lt;strong&gt; %n &lt;/strong&gt; odabranih bilješki?</numerusform>
-        <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
+      <translation>
+        <numerusform>Želite li vratiti &lt;strong&gt;%n&lt;/strong&gt; odabranu bilješku?</numerusform>
+        <numerusform>Želite li vratiti &lt;strong&gt;%n &lt;/strong&gt; odabrane bilješke?</numerusform>
+        <numerusform>Želite li vratiti &lt;strong&gt;%n &lt;/strong&gt; odabrane bilješke?</numerusform>
       </translation>
     </message>
     <message>
@@ -1502,7 +1502,7 @@
       <location filename="../mainwindow.ui" line="2167"/>
       <source>Open the Riot room</source>
       <extracomment>"Riot" as in the chat service</extracomment>
-      <translation type="unfinished">Open the Riot room</translation>
+      <translation>Otvori sobu Riot</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2194"/>
@@ -1670,7 +1670,7 @@
       <location filename="../mainwindow.ui" line="2492"/>
       <location filename="../mainwindow.ui" line="2495"/>
       <source>Toggle full-screen mode</source>
-      <translation type="unfinished">Toggle full-screen mode</translation>
+      <translation>Uključite način rada preko cijelog zaslona</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1867"/>
@@ -1830,25 +1830,25 @@ Restore current note?</source>
     <message>
       <location filename="../mainwindow.cpp" line="2929"/>
       <source>Abort</source>
-      <translation type="unfinished">Abort</translation>
+      <translation>Prekid</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2929"/>
       <source>Loading notes…</source>
-      <translation type="unfinished">Loading notes…</translation>
+      <translation>Učitavanje bilješki…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3132"/>
       <source>Delete conflicted database copies</source>
-      <translation type="unfinished">Delete conflicted database copies</translation>
+      <translation>Izbrišite sukobljene kopije baze podataka</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3157"/>
       <source>Removed %n conflicted database copies</source>
-      <translation type="unfinished">
-        <numerusform>Removed %n conflicted database copies</numerusform>
-        <numerusform>Removed %n conflicted database copies</numerusform>
-        <numerusform>Removed %n conflicted database copies</numerusform>
+      <translation>
+        <numerusform>Uklonjena je %n sukobljena kopija baze podataka</numerusform>
+        <numerusform>Uklonjene su %n sukobljene kopije baze podataka</numerusform>
+        <numerusform>Uklonjene su %n sukobljene kopije baze podataka</numerusform>
       </translation>
     </message>
     <message>
@@ -2038,10 +2038,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5136"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation type="unfinished">
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+      <translation>
+        <numerusform>Pronađeno je &lt;strong&gt;%n&lt;/strong&gt; pojava bilo kojeg pojma &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
+        <numerusform>Pronađeno je &lt;strong&gt;%n&lt;/strong&gt; pojave bilo kojeg pojma &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
+        <numerusform>Pronađeno je &lt;strong&gt;%n&lt;/strong&gt; pojave bilo kojeg pojma &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
       </translation>
     </message>
     <message>
@@ -2372,15 +2372,15 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="11049"/>
       <source>Leave full-screen mode</source>
-      <translation type="unfinished">Leave full-screen mode</translation>
+      <translation>Napustite način rada preko cijelog zaslona</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7826"/>
       <source>%n notes selected</source>
-      <translation type="unfinished">
-        <numerusform>%n notes selected</numerusform>
-        <numerusform>%n notes selected</numerusform>
-        <numerusform>%n notes selected</numerusform>
+      <translation>
+        <numerusform>Odabrana je %n nota</numerusform>
+        <numerusform>Odabrane su %n bilješke</numerusform>
+        <numerusform>Odabrane su %n bilješke</numerusform>
       </translation>
     </message>
     <message>
@@ -2843,7 +2843,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="1548"/>
       <source>Leave distraction free mode</source>
-      <translation type="unfinished">Leave distraction free mode</translation>
+      <translation>Ostavite ometanje slobodnog načina</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2051"/>
@@ -2904,10 +2904,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3134"/>
       <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
-      <translation type="unfinished">
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
+      <translation>
+        <numerusform>Nastavite s automatskim brisanjem &lt;strong&gt;%n&lt;/strong&gt; konfliktne kopije baze podataka koja može blokirati vaš ownCloud postupak sinkronizacije?</numerusform>
+        <numerusform>Nastavite s automatskim brisanjem &lt;strong&gt;%n&lt;/strong&gt; sukobljene kopije baze podataka koje mogu blokirati vaš ownCloud postupak sinkronizacije?</numerusform>
+        <numerusform>Nastavite s automatskim brisanjem &lt;strong&gt;%n&lt;/strong&gt; sukobljene kopije baze podataka koje mogu blokirati vaš ownCloud postupak sinkronizacije?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -2922,10 +2922,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5135"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation type="unfinished">
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+      <translation>
+        <numerusform>Pronađeno je &lt;strong&gt;%n&lt;/strong&gt; pojava &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+        <numerusform>Pronađeno je &lt;strong&gt;%n&lt;/strong&gt; pojave &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+        <numerusform>Pronađeno je &lt;strong&gt;%n&lt;/strong&gt; pojave &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
       </translation>
     </message>
     <message>
@@ -2937,7 +2937,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="5928"/>
       <source>Block &amp;quote selected text</source>
       <comment>Action to apply a block quote formatting to the selected text</comment>
-      <translation type="unfinished">Block &amp;quote selected text</translation>
+      <translation>Blokiraj &amp;citiranje odabranog teksta</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6866"/>
@@ -3072,17 +3072,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="244"/>
       <source>Export generated raw HTML</source>
-      <translation type="unfinished">Export generated raw HTML</translation>
+      <translation>Izvezi generirani HTML</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="277"/>
       <source>HTML files</source>
-      <translation type="unfinished">HTML files</translation>
+      <translation>HTML datoteke</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="278"/>
       <source>Export preview as raw HTML file</source>
-      <translation type="unfinished">Export preview as raw HTML file</translation>
+      <translation>Izvezi pregled u obliku sirove HTML datoteke</translation>
     </message>
   </context>
   <context>
@@ -3155,10 +3155,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="141"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
+      <translation>
+        <numerusform>Želite li izbrisati &lt;strong&gt;%n &lt;/strong&gt; odabranu datoteku?</numerusform>
+        <numerusform>Želite li izbrisati &lt;strong&gt;%n &lt;/strong&gt; odabrane datoteke?</numerusform>
+        <numerusform>Želite li izbrisati &lt;strong&gt;%n &lt;/strong&gt; odabrane datoteke?</numerusform>
       </translation>
     </message>
   </context>
@@ -3383,17 +3383,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <source>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
       <translation type="unfinished">
         <numerusform>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
-        <numerusform>Otkrivena je promjena naziva bilješke. Želite li zamijeniti sve pojave veza &lt;strong&gt; %1 &lt;/strong&gt; s &lt;strong&gt; %2 &lt;/strong&gt; u datoteci s obavijestima &lt;strong&gt; %n &lt;/strong&gt;?</numerusform>
+        <numerusform>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
         <numerusform>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../entities/note.cpp" line="2899"/>
       <source>…and %n more note(s)</source>
-      <translation type="unfinished">
-        <numerusform>…and %n more note(s)</numerusform>
-        <numerusform>…and %n more note(s)</numerusform>
-        <numerusform>…and %n more note(s)</numerusform>
+      <translation>
+        <numerusform>... i još %n bilješka</numerusform>
+        <numerusform>… i još %n bilješki</numerusform>
+        <numerusform>… i još %n bilješki</numerusform>
       </translation>
     </message>
     <message>
@@ -3438,7 +3438,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="407"/>
       <source>Note editing is currently disabled, do you want to allow again?</source>
-      <translation type="unfinished">Note editing is currently disabled, do you want to allow again?</translation>
+      <translation>Uređivanje bilježaka trenutno je onemogućeno, želite li je ponovo omogućiti?</translation>
     </message>
   </context>
   <context>
@@ -3451,32 +3451,32 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="107"/>
       <source>Advanced search / replace text</source>
-      <translation type="unfinished">Advanced search / replace text</translation>
+      <translation>Napredno pretraživanje / zamjena teksta</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="90"/>
       <source>Close search</source>
-      <translation type="unfinished">Close search</translation>
+      <translation>Zatvori pretragu</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="32"/>
       <source>Find in text</source>
-      <translation type="unfinished">Find in text</translation>
+      <translation>Pronađi u tekstu</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="127"/>
       <source>Search forward</source>
-      <translation type="unfinished">Search forward</translation>
+      <translation>Traži naprijed</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="63"/>
       <source>Search backward</source>
-      <translation type="unfinished">Search backward</translation>
+      <translation>Traži unatrag</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="39"/>
       <source>Replace with</source>
-      <translation type="unfinished">Replace with</translation>
+      <translation>Zamijeniti s</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="80"/>
@@ -3501,7 +3501,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="224"/>
       <source>Replace one text occurrence</source>
-      <translation type="unfinished">Replace one text occurrence</translation>
+      <translation>Zamijenite jednu pojavu teksta</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="227"/>
@@ -3511,12 +3511,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="237"/>
       <source>Replace all text occurrences</source>
-      <translation type="unfinished">Replace all text occurrences</translation>
+      <translation>Zamijenite sve pojave teksta</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="240"/>
       <source>Replace all</source>
-      <translation type="unfinished">Replace all</translation>
+      <translation>Zamjeni sve</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="164"/>
@@ -3837,15 +3837,15 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="47"/>
       <source>%v of %m bookmark(s) imported</source>
-      <translation type="unfinished">%v of %m bookmark(s) imported</translation>
+      <translation>Uvezeno je %v od %m oznake / oznaka</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="79"/>
       <source>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</source>
-      <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
-        <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
-        <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n oznaka &lt;/strong&gt; pronađena na poslužitelju</numerusform>
+        <numerusform>&lt;strong&gt;%n oznake &lt;/strong&gt; pronađene na poslužitelju</numerusform>
+        <numerusform>&lt;strong&gt;%n oznake &lt;/strong&gt; pronađene na poslužitelju</numerusform>
       </translation>
     </message>
   </context>
@@ -4608,7 +4608,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2073"/>
       <source>Basque</source>
-      <translation type="unfinished">Basque</translation>
+      <translation>Baskijski</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2106"/>
@@ -4648,7 +4648,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2249"/>
       <source>Persian</source>
-      <translation type="unfinished">Persian</translation>
+      <translation>Persijski</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2293"/>
@@ -4658,7 +4658,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2315"/>
       <source>Serbian</source>
-      <translation type="unfinished">Serbian</translation>
+      <translation>Srpski</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2326"/>
@@ -4847,7 +4847,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4658"/>
       <source>Disable cursor blinking</source>
-      <translation type="unfinished">Disable cursor blinking</translation>
+      <translation>Onemogući treptanje kursora</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5040"/>
@@ -6728,10 +6728,10 @@ This cannot be undone!</source>
     <message numerus="yes">
       <location filename="../services/websocketserverservice.cpp" line="188"/>
       <source>%n bookmark(s) created</source>
-      <translation type="unfinished">
-        <numerusform>%n bookmark(s) created</numerusform>
-        <numerusform>%n bookmark(s) created</numerusform>
-        <numerusform>%n bookmark(s) created</numerusform>
+      <translation>
+        <numerusform>Izrađeno je %n oznaka</numerusform>
+        <numerusform>Izrađeno je %n oznaka</numerusform>
+        <numerusform>Izrađeno je %n oznaka</numerusform>
       </translation>
     </message>
     <message>

@@ -1493,7 +1493,7 @@
       <location filename="../mainwindow.ui" line="2167"/>
       <source>Open the Riot room</source>
       <extracomment>"Riot" as in the chat service</extracomment>
-      <translation type="unfinished">Open the Riot room</translation>
+      <translation>Öppna Riot-rummet</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2194"/>
@@ -1661,7 +1661,7 @@
       <location filename="../mainwindow.ui" line="2492"/>
       <location filename="../mainwindow.ui" line="2495"/>
       <source>Toggle full-screen mode</source>
-      <translation type="unfinished">Toggle full-screen mode</translation>
+      <translation>Växla helskärmsläge</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1867"/>
@@ -1821,24 +1821,24 @@ Restore current note?</source>
     <message>
       <location filename="../mainwindow.cpp" line="2929"/>
       <source>Abort</source>
-      <translation type="unfinished">Abort</translation>
+      <translation>Avbryta</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2929"/>
       <source>Loading notes…</source>
-      <translation type="unfinished">Loading notes…</translation>
+      <translation>Läser in anteckningar…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3132"/>
       <source>Delete conflicted database copies</source>
-      <translation type="unfinished">Delete conflicted database copies</translation>
+      <translation>Ta bort konflikter i databaser</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3157"/>
       <source>Removed %n conflicted database copies</source>
-      <translation type="unfinished">
-        <numerusform>Removed %n conflicted database copies</numerusform>
-        <numerusform>Removed %n conflicted database copies</numerusform>
+      <translation>
+        <numerusform>Borttagen %n konflikt med databaskopia</numerusform>
+        <numerusform>Borttagit %n konflikt med databaskopior</numerusform>
       </translation>
     </message>
     <message>
@@ -2025,9 +2025,9 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5136"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation type="unfinished">
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+      <translation>
+        <numerusform>Hittade &lt;strong&gt;%n&lt;/strong&gt; förekomst av någon term på &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+        <numerusform>Hittade &lt;strong&gt;%n&lt;/strong&gt; förekomster av valfri term på &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
       </translation>
     </message>
     <message>
@@ -2354,7 +2354,7 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
     <message>
       <location filename="../mainwindow.cpp" line="11049"/>
       <source>Leave full-screen mode</source>
-      <translation type="unfinished">Leave full-screen mode</translation>
+      <translation>Lämna hela skärmläget</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7826"/>
@@ -2817,7 +2817,7 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
     <message>
       <location filename="../mainwindow.cpp" line="1548"/>
       <source>Leave distraction free mode</source>
-      <translation type="unfinished">Leave distraction free mode</translation>
+      <translation>Lämna distributionsfria läge</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2051"/>
@@ -2878,9 +2878,9 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3134"/>
       <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
-      <translation type="unfinished">
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
+      <translation>
+        <numerusform>Fortsätt med automatisk radering av en konflikt med databaskopia som kan blockera din ownCloud-synkroniseringsprocess?</numerusform>
+        <numerusform>Fortsätt med automatisk radering av tre konflikter med databaser som kan blockera din ownCloud-synkroniseringsprocess?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -2894,9 +2894,9 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5135"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation type="unfinished">
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+      <translation>
+        <numerusform>Hittade &lt;strong&gt;%n &lt;/strong&gt; förekomst av &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+        <numerusform>Hittade &lt;strong&gt;%n &lt;/strong&gt; händelser av &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
       </translation>
     </message>
     <message>
@@ -3043,17 +3043,17 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="244"/>
       <source>Export generated raw HTML</source>
-      <translation type="unfinished">Export generated raw HTML</translation>
+      <translation>Exportera genererad rå HTML</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="277"/>
       <source>HTML files</source>
-      <translation type="unfinished">HTML files</translation>
+      <translation>HTML-filer</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="278"/>
       <source>Export preview as raw HTML file</source>
-      <translation type="unfinished">Export preview as raw HTML file</translation>
+      <translation>Exportera förhandsvisning som rå HTML-fil</translation>
     </message>
   </context>
   <context>
@@ -3405,7 +3405,7 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="407"/>
       <source>Note editing is currently disabled, do you want to allow again?</source>
-      <translation type="unfinished">Note editing is currently disabled, do you want to allow again?</translation>
+      <translation>Obs redigering är för närvarande inaktiverad, vill du tillåta igen?</translation>
     </message>
   </context>
   <context>
@@ -3418,32 +3418,32 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="107"/>
       <source>Advanced search / replace text</source>
-      <translation type="unfinished">Advanced search / replace text</translation>
+      <translation>Avancerad sökning / ersätt text</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="90"/>
       <source>Close search</source>
-      <translation type="unfinished">Close search</translation>
+      <translation>Stäng sökningen</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="32"/>
       <source>Find in text</source>
-      <translation type="unfinished">Find in text</translation>
+      <translation>Hitta i text</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="127"/>
       <source>Search forward</source>
-      <translation type="unfinished">Search forward</translation>
+      <translation>Sök framåt</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="63"/>
       <source>Search backward</source>
-      <translation type="unfinished">Search backward</translation>
+      <translation>Sök bakåt</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="39"/>
       <source>Replace with</source>
-      <translation type="unfinished">Replace with</translation>
+      <translation>Ersätta med</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="80"/>
@@ -3468,7 +3468,7 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="224"/>
       <source>Replace one text occurrence</source>
-      <translation type="unfinished">Replace one text occurrence</translation>
+      <translation>Ersätt en texthändelse</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="227"/>
@@ -3478,12 +3478,12 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="237"/>
       <source>Replace all text occurrences</source>
-      <translation type="unfinished">Replace all text occurrences</translation>
+      <translation>Byt ut alla texthändelser</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="240"/>
       <source>Replace all</source>
-      <translation type="unfinished">Replace all</translation>
+      <translation>Ersätt alla</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="164"/>
@@ -4575,7 +4575,7 @@ Testa själv om du får synkroniseringskonflikter och ställ ett högre värde o
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2073"/>
       <source>Basque</source>
-      <translation type="unfinished">Basque</translation>
+      <translation>Baskiska</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2106"/>
@@ -4615,7 +4615,7 @@ Testa själv om du får synkroniseringskonflikter och ställ ett högre värde o
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2249"/>
       <source>Persian</source>
-      <translation type="unfinished">Persian</translation>
+      <translation>Perser</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2293"/>
@@ -4625,7 +4625,7 @@ Testa själv om du får synkroniseringskonflikter och ställ ett högre värde o
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2315"/>
       <source>Serbian</source>
-      <translation type="unfinished">Serbian</translation>
+      <translation>Serb</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2326"/>
@@ -4814,7 +4814,7 @@ Testa själv om du får synkroniseringskonflikter och ställ ett högre värde o
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4658"/>
       <source>Disable cursor blinking</source>
-      <translation type="unfinished">Disable cursor blinking</translation>
+      <translation>Inaktivera markören som blinkar</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5040"/>
