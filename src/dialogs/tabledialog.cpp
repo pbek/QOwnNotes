@@ -65,7 +65,8 @@ void TableDialog::importCSV() {
         return;
     }
 
-    QString text;
+    // start with two newlines to make sure that a proper table is inserted
+    QString text = "\n\n";
 
     // read data from file
     QList<QStringList> readData = QtCSV::Reader::readToList(
@@ -102,7 +103,8 @@ void TableDialog::createMarkdownTable() {
         return;
     }
 
-    QString text;
+    // start with two newlines to make sure that a proper table is inserted
+    QString text = "\n\n";
     QString space = QString(" ").repeated(
             ui->columnWidthSpinBox->value());
     QString headline = QString("-").repeated(

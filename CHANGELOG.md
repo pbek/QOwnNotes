@@ -8,6 +8,9 @@
 - fixed a problem with **un-selecting the current note in the note list** after the
   note list was reloaded (for [#1275](https://github.com/pbek/QOwnNotes/issues/1275))
   - this happened for example after the settings dialog was closed
+- when inserting a markdown table with the table dialog now two newline characters
+  will be added in front of the table to make sure that a proper table is inserted
+  (for [#78](https://github.com/pbek/QOwnNotes/issues/78))
 
 ## 19.9.0
 - added support for **relative image tags** like `![photo](path/to/my/photo.jpg)`
