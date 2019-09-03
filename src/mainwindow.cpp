@@ -1955,6 +1955,13 @@ void MainWindow::loadNoteDirectoryList() {
     // clear the text edits if there is no visible note
     if (firstVisibleNoteTreeWidgetItem() == Q_NULLPTR) {
         unsetCurrentNote();
+    } else {
+        auto item = findNoteInNoteTreeWidget(currentNote);
+
+        // in the end we need to set the current item again if we can find it
+        if (item != Q_NULLPTR) {
+            ui->noteTreeWidget->setCurrentItem(item);
+        }
     }
 }
 

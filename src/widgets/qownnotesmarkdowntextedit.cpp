@@ -320,6 +320,10 @@ void QOwnNotesMarkdownTextEdit::insertFromMimeData(const QMimeData * source) {
  * Handles the settings of the markdown textedit
  */
 void QOwnNotesMarkdownTextEdit::updateSettings() {
+    // we need a blocker, otherwise the "change" events will fire
+    const QSignalBlocker blocker(this);
+    Q_UNUSED(blocker)
+
     QSettings settings;
     QMarkdownTextEdit::AutoTextOptions options;
 

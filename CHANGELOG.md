@@ -1,5 +1,14 @@
 # QOwnNotes Changelog
 
+## 19.9.1
+- fixed a problem with **updating the current note even if it didn't change** after the
+  settings of the note text edit were updated (for [#1275](https://github.com/pbek/QOwnNotes/issues/1275))
+  - this happened for example after the settings dialog was closed and could have
+    led to overwriting of notes
+- fixed a problem with **un-selecting the current note in the note list** after the
+  note list was reloaded (for [#1275](https://github.com/pbek/QOwnNotes/issues/1275))
+  - this happened for example after the settings dialog was closed
+
 ## 19.9.0
 - added support for **relative image tags** like `![photo](path/to/my/photo.jpg)`
   in the preview and the PDF export (for [#266](https://github.com/pbek/QOwnNotes/issues/266))
