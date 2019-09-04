@@ -1,8 +1,6 @@
 # QOwnNotes Changelog
 
 ## 19.9.2
-- the note sub-folder will now be correctly set when switching to notes that are
-  not in the current note sub-folder
 - you can now use **relative links to markdown files** to switch to notes
   (for [#266](https://github.com/pbek/QOwnNotes/issues/266))
     - clicking `<My note.md>` or `[Text](My note.md)` jumps to the note `My note`
@@ -13,9 +11,12 @@
         when sub-folders are involved
     - this should not only work in the preview but also when you <kbd>Ctrl</kbd> + Click
       on the link in the note text edit
+- the **note sub-folder** will now be **correctly set when switching to notes**
+  that are not in the current note sub-folder
 - when you **search for notes** in the note search line edit the **note list**
   will be now **scrolled to the top** so you can see the first search results
   (for [#1279](https://github.com/pbek/QOwnNotes/issues/1279))
+- added more Bengali, Arabic, Portuguese, Turkish, Persian, Hindi translation (thank you Fabijenna)
 
 ## 19.9.1
 - fixed a problem with **updating the current note even if it didn't change** after the

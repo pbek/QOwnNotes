@@ -28,7 +28,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="121"/>
       <source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</source>
-      <translation type="unfinished">To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</translation>
+      <translation>Bir enex dosyasını almak için, Evernotes masaüstü istemcinizde bir veya daha fazla not seçmeniz ve Dosya menüsünde "Notları dışa aktar..." seçeneğini tıklamanız gerekir.</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="74"/>
@@ -358,12 +358,12 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7766"/>
       <source>Already at oldest change.</source>
-      <translation type="unfinished">Already at oldest change.</translation>
+      <translation>Zaten en eski değişiklik.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7767"/>
       <source>Already at newest change.</source>
-      <translation type="unfinished">Already at newest change.</translation>
+      <translation>Zaten en yeni değişiklik.</translation>
     </message>
   </context>
   <context>
@@ -371,7 +371,7 @@
     <message>
       <location filename="../helpers/fakevimproxy.cpp" line="26"/>
       <source>Information</source>
-      <translation type="unfinished">Information</translation>
+      <translation>Bilgi</translation>
     </message>
   </context>
   <context>
@@ -572,7 +572,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="220"/>
       <source>Broken link</source>
-      <translation type="unfinished">Broken link</translation>
+      <translation>Kırık link</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="210"/>
@@ -603,7 +603,7 @@
       <location filename="../widgets/fontcolorwidget.cpp" line="463"/>
       <source>Copy</source>
       <comment>as noun</comment>
-      <translation type="unfinished">Copy</translation>
+      <translation>Kopyala</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="582"/>
@@ -627,87 +627,87 @@
     <message>
       <location filename="../widgets/layoutwidget.ui" line="97"/>
       <source>Use layout</source>
-      <translation type="unfinished">Use layout</translation>
+      <translation>Düzen kullan</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="76"/>
       <source>Use new layout</source>
-      <translation type="unfinished">Use new layout</translation>
+      <translation>Yeni düzen kullan</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="77"/>
       <source>Do you want to use the selected layout?</source>
-      <translation type="unfinished">Do you want to use the selected layout?</translation>
+      <translation>Seçilen düzeni kullanmak ister misiniz?</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="81"/>
       <source>The application will be quit afterwards.</source>
-      <translation type="unfinished">The application will be quit afterwards.</translation>
+      <translation>Uygulama daha sonra kesilecektir.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="82"/>
       <source>The application will be restarted afterwards.</source>
-      <translation type="unfinished">The application will be restarted afterwards.</translation>
+      <translation>Uygulama daha sonra yeniden başlatılacaktır.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="140"/>
       <source>Minimal</source>
       <comment>Layout name</comment>
-      <translation type="unfinished">Minimal</translation>
+      <translation>En az</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="142"/>
       <source>Full</source>
       <comment>Layout name</comment>
-      <translation type="unfinished">Full</translation>
+      <translation>Tam</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="144"/>
       <source>Full vertical</source>
       <comment>Layout name</comment>
-      <translation type="unfinished">Full vertical</translation>
+      <translation>Tam dikey</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="146"/>
       <source>Single column</source>
       <comment>Layout name</comment>
-      <translation type="unfinished">Single column</translation>
+      <translation>Tek kolon</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="154"/>
       <source>The note edit panel is the central widget that will be resized automatically.</source>
       <comment>Layout description</comment>
-      <translation type="unfinished">The note edit panel is the central widget that will be resized automatically.</translation>
+      <translation>Not düzenleme paneli, otomatik olarak yeniden boyutlandırılacak olan merkezi widget.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="158"/>
       <source>Because of this there is no central widget that will be resized automatically.</source>
       <comment>Layout description</comment>
-      <translation type="unfinished">Because of this there is no central widget that will be resized automatically.</translation>
+      <translation>Bu nedenle otomatik olarak yeniden boyutlandırılacak merkezi bir widget yoktur.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="162"/>
       <source>Just the note list on the left and the note edit panel on the right are enabled by default.</source>
       <comment>Layout description</comment>
-      <translation type="unfinished">Just the note list on the left and the note edit panel on the right are enabled by default.</translation>
+      <translation>Yalnızca soldaki not listesi ve sağdaki not düzenleme paneli varsayılan olarak etkindir.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="166"/>
       <source>Most of the panels, like the note list on the left, the tagging panels, the note edit panel in the center and the preview panel on the right are enabled by default.</source>
       <comment>Layout description</comment>
-      <translation type="unfinished">Most of the panels, like the note list on the left, the tagging panels, the note edit panel in the center and the preview panel on the right are enabled by default.</translation>
+      <translation>Panellerin çoğu, soldaki not listesi, etiketleme panelleri, ortadaki not düzenleme paneli ve sağdaki önizleme paneli gibi varsayılan olarak etkindir.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="171"/>
       <source>Most of the panels, like the note list on the left, the tagging panels, the note edit panel on the right and the preview panel on top of the note edit panel are enabled by default.</source>
       <comment>Layout description</comment>
-      <translation type="unfinished">Most of the panels, like the note list on the left, the tagging panels, the note edit panel on the right and the preview panel on top of the note edit panel are enabled by default.</translation>
+      <translation>Panellerin çoğu, soldaki not listesi, etiketleme panelleri, sağdaki not düzenleme paneli ve not düzenleme panelinin üstündeki önizleme paneli gibi varsayılan olarak etkindir.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="176"/>
       <source>Tiny one column layout with note search, note list and note edit on top of each other.</source>
       <comment>Layout description</comment>
-      <translation type="unfinished">Tiny one column layout with note search, note list and note edit on top of each other.</translation>
+      <translation>Not arama, not listesi ve üst üste not düzenleme ile minik bir sütun düzeni.</translation>
     </message>
   </context>
   <context>
@@ -730,22 +730,22 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="76"/>
       <source>Enter the name of the link (optional)</source>
-      <translation type="unfinished">Enter the name of the link (optional)</translation>
+      <translation>Bağlantının adını girin (isteğe bağlı)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="79"/>
       <source>Name of link (optional)</source>
-      <translation type="unfinished">Name of link (optional)</translation>
+      <translation>Bağlantının adı (isteğe bağlı)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="89"/>
       <source>Enter a description for the link (optional)</source>
-      <translation type="unfinished">Enter a description for the link (optional)</translation>
+      <translation>Bağlantı için bir açıklama girin (isteğe bağlı)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="92"/>
       <source>Description of link (optional)</source>
-      <translation type="unfinished">Description of link (optional)</translation>
+      <translation>Bağlantının açıklaması (isteğe bağlı)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="102"/>
@@ -773,90 +773,90 @@
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="14"/>
       <source>Locally trashed notes</source>
-      <translation type="unfinished">Locally trashed notes</translation>
+      <translation>Yerel olarak silinmiş notlar</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="42"/>
       <source>Name</source>
-      <translation type="unfinished">Name</translation>
+      <translation>İsim</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="47"/>
       <source>Trashed</source>
-      <translation type="unfinished">Trashed</translation>
+      <translation>Çöpe atılmış</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="41"/>
       <source>Restore</source>
-      <translation type="unfinished">Restore</translation>
+      <translation>Geri yükle</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="42"/>
       <location filename="../dialogs/localtrashdialog.cpp" line="194"/>
       <source>Restore selected notes</source>
-      <translation type="unfinished">Restore selected notes</translation>
+      <translation>Seçilen notları geri yükle</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="51"/>
       <source>Remove</source>
-      <translation type="unfinished">Remove</translation>
+      <translation>Kaldır</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="52"/>
       <location filename="../dialogs/localtrashdialog.cpp" line="240"/>
       <source>Remove selected notes</source>
-      <translation type="unfinished">Remove selected notes</translation>
+      <translation>Seçili notları kaldır</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="97"/>
       <source>File will be restored to: %1</source>
-      <translation type="unfinished">File will be restored to: %1</translation>
+      <translation>Dosya geri yüklenecek: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="106"/>
       <source>File &lt;strong&gt;%1&lt;/strong&gt; isn't readable and can't be restored!</source>
-      <translation type="unfinished">File &lt;strong&gt;%1&lt;/strong&gt; isn't readable and can't be restored!</translation>
+      <translation>&lt;strong&gt;%1&lt;/strong&gt; dosyası okunamıyor ve geri yüklenemiyor!</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="195"/>
       <source>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
-        <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; seçili notu geri yükle?</numerusform>
+        <numerusform>&lt;strong&gt;%n &lt;/strong&gt; seçilen notu geri yükle?</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="218"/>
       <source>Notes restored</source>
-      <translation type="unfinished">Notes restored</translation>
+      <translation>Notlar geri yüklendi</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="219"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</source>
-      <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n &lt;/strong&gt; not geri yüklendi</numerusform>
+        <numerusform>&lt;strong&gt;%n &lt;/strong&gt; not geri yüklendi</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="241"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; seçili not kaldırılsın mı?</numerusform>
+        <numerusform>&lt;strong&gt;%n &lt;/strong&gt; seçili notları kaldırılsın mı?</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="264"/>
       <source>Notes removed</source>
-      <translation type="unfinished">Notes removed</translation>
+      <translation>Notlar kaldırıldı</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="265"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</source>
-      <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n &lt;/string&gt; düğümü kaldırıldı</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; düğüm kaldırıldı</numerusform>
       </translation>
     </message>
   </context>
@@ -936,13 +936,13 @@
     <message>
       <location filename="../mainwindow.ui" line="391"/>
       <source>Find navigation item</source>
-      <translation type="unfinished">Find navigation item</translation>
+      <translation>Gezinme öğesini bulun</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="680"/>
       <location filename="../mainwindow.cpp" line="7807"/>
       <source>Add a tag to the current note</source>
-      <translation type="unfinished">Add a tag to the current note</translation>
+      <translation>Geçerli nota bir etiket ekle</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="850"/>
@@ -1017,7 +1017,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1335"/>
       <source>Post questions, feature requests or issues</source>
-      <translation type="unfinished">Post questions, feature requests or issues</translation>
+      <translation>Soru gönderme, özellik istekleri veya sorunlar</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1346"/>
@@ -1119,7 +1119,7 @@
     <message>
       <location filename="../mainwindow.cpp" line="7808"/>
       <source>Add a tag to the selected notes</source>
-      <translation type="unfinished">Add a tag to the selected notes</translation>
+      <translation>Seçilen notlara etiket ekle</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="694"/>
@@ -1151,7 +1151,7 @@
     <message>
       <location filename="../mainwindow.ui" line="930"/>
       <source>Trash</source>
-      <translation type="unfinished">Trash</translation>
+      <translation>Çöp</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="997"/>
@@ -1228,7 +1228,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1158"/>
       <source>Jump to</source>
-      <translation type="unfinished">Jump to</translation>
+      <translation>Atlamak</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1193"/>
@@ -1238,23 +1238,23 @@
     <message>
       <location filename="../mainwindow.ui" line="1299"/>
       <source>About &amp;QOwnNotes…</source>
-      <translation type="unfinished">About &amp;QOwnNotes…</translation>
+      <translation>Hakkında &amp;QOwnNotes…</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1338"/>
       <source>Post questions, feature requests or problems with the help of the issue assistant</source>
-      <translation type="unfinished">Post questions, feature requests or problems with the help of the issue assistant</translation>
+      <translation>Soru asistanının yardımı ile soru, özellik istekleri veya sorunları gönderin</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1396"/>
       <source>Show remote trash</source>
-      <translation type="unfinished">Show remote trash</translation>
+      <translation>Uzak çöp kutusunu göster</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1436"/>
       <location filename="../mainwindow.ui" line="1439"/>
       <source>Auto format table</source>
-      <translation type="unfinished">Auto format table</translation>
+      <translation>Otomatik biçim tablosu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1468"/>
@@ -1284,12 +1284,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1522"/>
       <source>&amp;Export note as PDF (preview)</source>
-      <translation type="unfinished">&amp;Export note as PDF (preview)</translation>
+      <translation>&amp;Notu PDF olarak dışa aktar (önizleme)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1525"/>
       <source>Export note as PDF (preview)</source>
-      <translation type="unfinished">Export note as PDF (preview)</translation>
+      <translation>Notu PDF olarak dışa aktar (önizleme)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1534"/>
@@ -1465,7 +1465,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2089"/>
       <source>Show note list under tag panel</source>
-      <translation type="unfinished">Show note list under tag panel</translation>
+      <translation>Etiket panelinin altında not listesini göster</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2107"/>
@@ -1475,25 +1475,25 @@
     <message>
       <location filename="../mainwindow.ui" line="2128"/>
       <source>Import notes from text files</source>
-      <translation type="unfinished">Import notes from text files</translation>
+      <translation>Metin dosyalarından not alma</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2137"/>
       <source>Manage orphaned image files</source>
-      <translation type="unfinished">Manage orphaned image files</translation>
+      <translation>Artık görüntü dosyalarını yönet</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2149"/>
       <location filename="../mainwindow.ui" line="2152"/>
       <source>Open the Telegram group</source>
-      <translation type="unfinished">Open the Telegram group</translation>
+      <translation>Telegram grubunu aç</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2164"/>
       <location filename="../mainwindow.ui" line="2167"/>
       <source>Open the Riot room</source>
       <extracomment>"Riot" as in the chat service</extracomment>
-      <translation type="unfinished">Open the Riot room</translation>
+      <translation>Riot odası açın</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2194"/>
@@ -1552,7 +1552,7 @@
       <location filename="../mainwindow.ui" line="2285"/>
       <location filename="../mainwindow.ui" line="2288"/>
       <source>Search selected text on the web</source>
-      <translation type="unfinished">Search selected text on the web</translation>
+      <translation>Seçilen metni web'de ara</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2296"/>
@@ -1567,7 +1567,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2312"/>
       <source>Copy note headline</source>
-      <translation type="unfinished">Copy note headline</translation>
+      <translation>Not başlığını kopyala</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2324"/>
@@ -1619,49 +1619,49 @@
     <message>
       <location filename="../mainwindow.ui" line="2430"/>
       <source>Show local trash</source>
-      <translation type="unfinished">Show local trash</translation>
+      <translation>Yerel çöp kutusunu göster</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2435"/>
       <location filename="../mainwindow.ui" line="2438"/>
       <source>Jump to note edit panel</source>
-      <translation type="unfinished">Jump to note edit panel</translation>
+      <translation>Not düzenleme paneline atla</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2450"/>
       <source>Manage orphaned attachments</source>
-      <translation type="unfinished">Manage orphaned attachments</translation>
+      <translation>Artık ekleri yönet</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2455"/>
       <source>Jump to note subfolder panel</source>
-      <translation type="unfinished">Jump to note subfolder panel</translation>
+      <translation>Not alt klasör paneline atla</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2463"/>
       <source>Jump to tags panel</source>
-      <translation type="unfinished">Jump to tags panel</translation>
+      <translation>Etiketler paneline atla</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2471"/>
       <source>Jump to note list panel</source>
-      <translation type="unfinished">Jump to note list panel</translation>
+      <translation>Not listesi paneline atla</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2479"/>
       <source>Activate context menu</source>
-      <translation type="unfinished">Activate context menu</translation>
+      <translation>İçerik menüsünü etkinleştir</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2487"/>
       <source>Import bookmarks from server</source>
-      <translation type="unfinished">Import bookmarks from server</translation>
+      <translation>Yer işaretlerini sunucudan içe aktar</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2492"/>
       <location filename="../mainwindow.ui" line="2495"/>
       <source>Toggle full-screen mode</source>
-      <translation type="unfinished">Toggle full-screen mode</translation>
+      <translation>Tam ekran modunu değiştir</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1867"/>
@@ -1719,12 +1719,12 @@
     <message>
       <location filename="../mainwindow.ui" line="510"/>
       <source>Note operations…</source>
-      <translation type="unfinished">Note operations…</translation>
+      <translation>Not işlemleri…</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1555"/>
       <source>&amp;Print note (preview)</source>
-      <translation type="unfinished">&amp;Print note (preview)</translation>
+      <translation>&amp;Notu yazdır (önizleme)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1961"/>
@@ -1821,24 +1821,24 @@ Geçerli not geri yüklensin mi?</translation>
     <message>
       <location filename="../mainwindow.cpp" line="2929"/>
       <source>Abort</source>
-      <translation type="unfinished">Abort</translation>
+      <translation>Iptal etmek</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2929"/>
       <source>Loading notes…</source>
-      <translation type="unfinished">Loading notes…</translation>
+      <translation>Notlar yükleniyor…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3132"/>
       <source>Delete conflicted database copies</source>
-      <translation type="unfinished">Delete conflicted database copies</translation>
+      <translation>Çakışan veritabanı kopyalarını sil</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3157"/>
       <source>Removed %n conflicted database copies</source>
-      <translation type="unfinished">
-        <numerusform>Removed %n conflicted database copies</numerusform>
-        <numerusform>Removed %n conflicted database copies</numerusform>
+      <translation>
+        <numerusform>Kaldırılan %n çakışan veritabanı kopyası</numerusform>
+        <numerusform>Kaldırılan %n çakışan veritabanı kopyası</numerusform>
       </translation>
     </message>
     <message>
@@ -2025,20 +2025,20 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5136"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation type="unfinished">
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%1&lt;/strong&gt; herhangi bir terimin &lt;strong&gt;%n&lt;/strong&gt; oluşumunu bulundu</numerusform>
+        <numerusform>&lt;strong&gt;%1&lt;/strong&gt; 'in herhangi bir teriminde &lt;strong&gt;%n&lt;/strong&gt; oluşum bulundu</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5604"/>
       <source>Note was not found</source>
-      <translation type="unfinished">Note was not found</translation>
+      <translation>Not bulunamadı</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5605"/>
       <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+      <translation>Not bulunamadı, &lt;strong&gt;%1&lt;/strong&gt; 'de yeni not oluştur?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5858"/>
@@ -2053,27 +2053,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="5939"/>
       <source>Copy code block</source>
-      <translation type="unfinished">Copy code block</translation>
+      <translation>Kod bloğunu kopyala</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5958"/>
       <source>Print selected text</source>
-      <translation type="unfinished">Print selected text</translation>
+      <translation>Seçili metni yazdır</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5964"/>
       <source>Print selected text (preview)</source>
-      <translation type="unfinished">Print selected text (preview)</translation>
+      <translation>Seçilen metni yazdır (önizleme)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5980"/>
       <source>Export selected text as PDF</source>
-      <translation type="unfinished">Export selected text as PDF</translation>
+      <translation>Seçili metni PDF olarak dışa aktar</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5986"/>
       <source>Export selected text as PDF (preview)</source>
-      <translation type="unfinished">Export selected text as PDF (preview)</translation>
+      <translation>Seçili metni PDF olarak dışa aktar (önizleme)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6168"/>
@@ -2170,12 +2170,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="7853"/>
       <source>Remove tag '%1' from the current note</source>
-      <translation type="unfinished">Remove tag '%1' from the current note</translation>
+      <translation>'%1' etiketini mevcut nottan kaldır</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7855"/>
       <source>Remove tag '%1' from the selected notes</source>
-      <translation type="unfinished">Remove tag '%1' from the selected notes</translation>
+      <translation>'%1' etiketini seçili notlardan kaldır</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8058"/>
@@ -2195,7 +2195,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="8064"/>
       <source>&amp;Move tags to…</source>
-      <translation type="unfinished">&amp;Move tags to…</translation>
+      <translation>&amp;Etiketleri şuraya taşı…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8283"/>
@@ -2242,37 +2242,37 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="9186"/>
       <source>&amp;Move notes to…</source>
-      <translation type="unfinished">&amp;Move notes to…</translation>
+      <translation>&amp;Notları şuraya taşı…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9187"/>
       <source>&amp;Copy notes to…</source>
-      <translation type="unfinished">&amp;Copy notes to…</translation>
+      <translation>&amp;Notları şuraya kopyala…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9216"/>
       <source>Move notes to subfolder…</source>
-      <translation type="unfinished">Move notes to subfolder…</translation>
+      <translation>Notları alt klasöre taşı…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9220"/>
       <source>Copy notes to subfolder…</source>
-      <translation type="unfinished">Copy notes to subfolder…</translation>
+      <translation>Notları alt klasöre kopyala…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9228"/>
       <source>&amp;Tag selected notes with…</source>
-      <translation type="unfinished">&amp;Tag selected notes with…</translation>
+      <translation>&amp;Seçili notları ile etiketleyin…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9250"/>
       <source>&amp;Remove tag from selected notes…</source>
-      <translation type="unfinished">&amp;Remove tag from selected notes…</translation>
+      <translation>&amp;Seçili notlardaki etiketi kaldır…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9341"/>
       <source>Name:</source>
-      <translation type="unfinished">Name:</translation>
+      <translation>İsim:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9353"/>
@@ -2334,41 +2334,41 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="10727"/>
       <source>Disallow all note editing</source>
-      <translation type="unfinished">Disallow all note editing</translation>
+      <translation>Tüm not düzenlemelerine izin verme</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10873"/>
       <source>Select text files to import</source>
-      <translation type="unfinished">Select text files to import</translation>
+      <translation>Alınacak metin dosyalarını seçin</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10902"/>
       <source>Importing: %1</source>
-      <translation type="unfinished">Importing: %1</translation>
+      <translation>İçe aktarma: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10965"/>
       <source>Note headline '%1' was copied to the clipboard</source>
-      <translation type="unfinished">Note headline '%1' was copied to the clipboard</translation>
+      <translation>'%1' başlığının panoya kopyalandığını unutmayın</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="11049"/>
       <source>Leave full-screen mode</source>
-      <translation type="unfinished">Leave full-screen mode</translation>
+      <translation>Tam ekran modundan çık</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7826"/>
       <source>%n notes selected</source>
-      <translation type="unfinished">
-        <numerusform>%n notes selected</numerusform>
-        <numerusform>%n notes selected</numerusform>
+      <translation>
+        <numerusform>%n not seçildi</numerusform>
+        <numerusform>%n not seçildi</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2409"/>
       <location filename="../mainwindow.cpp" line="10728"/>
       <source>Allow all note editing</source>
-      <translation type="unfinished">Allow all note editing</translation>
+      <translation>Tüm not düzenlemelerine izin ver</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1187"/>
@@ -2817,7 +2817,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="1548"/>
       <source>Leave distraction free mode</source>
-      <translation type="unfinished">Leave distraction free mode</translation>
+      <translation>Distraksiyon serbest modunu bırakın</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2051"/>
@@ -2858,12 +2858,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="2763"/>
       <source>Read-only</source>
-      <translation type="unfinished">Read-only</translation>
+      <translation>Sadece oku</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2764"/>
       <source>Note editing is disabled, click to enable</source>
-      <translation type="unfinished">Note editing is disabled, click to enable</translation>
+      <translation>Not düzenleme devre dışı, etkinleştirmek için tıklayın</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2783"/>
@@ -2878,9 +2878,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3134"/>
       <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
-      <translation type="unfinished">
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
+      <translation>
+        <numerusform>OwnCloud senkronizasyon işleminizi engelleyebilecek &lt;strong&gt;%n&lt;/strong&gt; çakışan veritabanı kopyasının otomatik olarak silinmesiyle devam edin?</numerusform>
+        <numerusform>OwnCloud senkronizasyon işleminizi engelleyebilecek &lt;strong&gt;%n&lt;/strong&gt; çakışan veritabanı kopyasının otomatik olarak silinmesiyle devam edin?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -2894,9 +2894,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5135"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation type="unfinished">
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%1 &lt;/strong&gt; 'in &lt;strong&gt;%n&lt;/strong&gt; oluşumu bulundu</numerusform>
+        <numerusform>&lt;strong&gt;%1 &lt;/strong&gt; 'in &lt;strong&gt;%n&lt;/strong&gt; oluşumu bulundu</numerusform>
       </translation>
     </message>
     <message>
@@ -2908,7 +2908,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="5928"/>
       <source>Block &amp;quote selected text</source>
       <comment>Action to apply a block quote formatting to the selected text</comment>
-      <translation type="unfinished">Block &amp;quote selected text</translation>
+      <translation>Blok &amp;alıntı seçili metni</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6866"/>
@@ -3033,27 +3033,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="237"/>
       <source>Copy image file path</source>
-      <translation type="unfinished">Copy image file path</translation>
+      <translation>Görüntü dosyası yolunu kopyala</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="241"/>
       <source>Copy link location</source>
-      <translation type="unfinished">Copy link location</translation>
+      <translation>Bağlantı konumunu kopyala</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="244"/>
       <source>Export generated raw HTML</source>
-      <translation type="unfinished">Export generated raw HTML</translation>
+      <translation>Dışa aktarılan ham HTML'yi dışa aktar</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="277"/>
       <source>HTML files</source>
-      <translation type="unfinished">HTML files</translation>
+      <translation>HTML dosyaları</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="278"/>
       <source>Export preview as raw HTML file</source>
-      <translation type="unfinished">Export preview as raw HTML file</translation>
+      <translation>Önizlemeyi ham HTML dosyası olarak dışa aktar</translation>
     </message>
   </context>
   <context>
@@ -3061,67 +3061,67 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="14"/>
       <source>Orphaned attachments</source>
-      <translation type="unfinished">Orphaned attachments</translation>
+      <translation>Orphaned ekleri</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="54"/>
       <source>Delete selected attachments</source>
-      <translation type="unfinished">Delete selected attachments</translation>
+      <translation>Seçilen ekleri sil</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="57"/>
       <source>Delete</source>
-      <translation type="unfinished">Delete</translation>
+      <translation>Sil</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="86"/>
       <source>Add selected attachments to note</source>
-      <translation type="unfinished">Add selected attachments to note</translation>
+      <translation>Nota seçilen ekleri ekle</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="89"/>
       <source>Add to note</source>
-      <translation type="unfinished">Add to note</translation>
+      <translation>Nota ekle</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="100"/>
       <source>Open &amp;attachment</source>
-      <translation type="unfinished">Open &amp;attachment</translation>
+      <translation>Eki &amp;aç</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="111"/>
       <source>Open &amp;folder</source>
-      <translation type="unfinished">Open &amp;folder</translation>
+      <translation>Açık &amp;dosya</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="162"/>
       <source>File size:</source>
-      <translation type="unfinished">File size:</translation>
+      <translation>Dosya boyutu:</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="182"/>
       <source>File type:</source>
-      <translation type="unfinished">File type:</translation>
+      <translation>Dosya tipi:</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="199"/>
       <source>File path:</source>
-      <translation type="unfinished">File path:</translation>
+      <translation>Dosya yolu:</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="229"/>
       <source>Attachments that are not used in notes:</source>
-      <translation type="unfinished">Attachments that are not used in notes:</translation>
+      <translation>Notlarda kullanılmayan ekler:</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="60"/>
       <source>Last modified at %1</source>
-      <translation type="unfinished">Last modified at %1</translation>
+      <translation>%1'de son düzenleme</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="140"/>
       <source>Delete selected files</source>
-      <translation type="unfinished">Delete selected files</translation>
+      <translation>Seçilen dosyaları sil</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="141"/>
@@ -3152,12 +3152,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="94"/>
       <source>Add selected images to note</source>
-      <translation type="unfinished">Add selected images to note</translation>
+      <translation>Nota seçili görüntüleri ekle</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="97"/>
       <source>Add to note</source>
-      <translation type="unfinished">Add to note</translation>
+      <translation>Nota ekle</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="146"/>
@@ -3279,12 +3279,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="1868"/>
       <source>No bookmarks</source>
-      <translation type="unfinished">No bookmarks</translation>
+      <translation>Yer imi yok</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1869"/>
       <source>No bookmarks were found on the server.</source>
-      <translation type="unfinished">No bookmarks were found on the server.</translation>
+      <translation>Sunucuda yer imi bulunamadı.</translation>
     </message>
   </context>
   <context>
@@ -3387,7 +3387,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../utils/git.cpp" line="74"/>
       <source>Command failed!</source>
-      <translation type="unfinished">Command failed!</translation>
+      <translation>Komut başarısız oldu!</translation>
     </message>
     <message>
       <location filename="../utils/git.cpp" line="75"/>
@@ -3400,12 +3400,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="406"/>
       <source>Note editing disabled</source>
-      <translation type="unfinished">Note editing disabled</translation>
+      <translation>Not düzenleme devre dışı</translation>
     </message>
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="407"/>
       <source>Note editing is currently disabled, do you want to allow again?</source>
-      <translation type="unfinished">Note editing is currently disabled, do you want to allow again?</translation>
+      <translation>Not düzenleme şu anda devre dışı, tekrar izin vermek istiyor musunuz?</translation>
     </message>
   </context>
   <context>
@@ -3418,32 +3418,32 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="107"/>
       <source>Advanced search / replace text</source>
-      <translation type="unfinished">Advanced search / replace text</translation>
+      <translation>Gelişmiş arama / metin değiştirme</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="90"/>
       <source>Close search</source>
-      <translation type="unfinished">Close search</translation>
+      <translation>Aramayı kapat</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="32"/>
       <source>Find in text</source>
-      <translation type="unfinished">Find in text</translation>
+      <translation>Metinde bul</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="127"/>
       <source>Search forward</source>
-      <translation type="unfinished">Search forward</translation>
+      <translation>İleri arama</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="63"/>
       <source>Search backward</source>
-      <translation type="unfinished">Search backward</translation>
+      <translation>Geriye doğru ara</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="39"/>
       <source>Replace with</source>
-      <translation type="unfinished">Replace with</translation>
+      <translation>İle değiştirin</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="80"/>
@@ -3468,7 +3468,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="224"/>
       <source>Replace one text occurrence</source>
-      <translation type="unfinished">Replace one text occurrence</translation>
+      <translation>Bir metin oluşumunu değiştir</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="227"/>
@@ -3478,12 +3478,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="237"/>
       <source>Replace all text occurrences</source>
-      <translation type="unfinished">Replace all text occurrences</translation>
+      <translation>Tüm metin oluşumlarını değiştir</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="240"/>
       <source>Replace all</source>
-      <translation type="unfinished">Replace all</translation>
+      <translation>Hepsini değiştir</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="164"/>
@@ -3638,7 +3638,7 @@ Klasör ve dosya yazılabilir mi?</translation>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="444"/>
       <source>Load more scripts</source>
-      <translation type="unfinished">Load more scripts</translation>
+      <translation>Daha fazla komut dosyası yükle</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="228"/>
@@ -3800,7 +3800,7 @@ Yine de yüklemek istiyor musunuz?</translation>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="14"/>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="20"/>
       <source>Import bookmarks</source>
-      <translation type="unfinished">Import bookmarks</translation>
+      <translation>Yer işaretlerini içe aktar</translation>
     </message>
     <message>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="47"/>
@@ -4381,7 +4381,7 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="179"/>
       <source>Layout</source>
-      <translation type="unfinished">Layout</translation>
+      <translation>Düzen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="191"/>
@@ -4416,7 +4416,7 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="323"/>
       <source>Local trash</source>
-      <translation type="unfinished">Local trash</translation>
+      <translation>Yerel çöp</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="347"/>
@@ -4565,77 +4565,77 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2029"/>
       <source>Cebuano</source>
-      <translation type="unfinished">Cebuano</translation>
+      <translation>Cebuano</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2051"/>
       <source>Danish</source>
-      <translation type="unfinished">Danish</translation>
+      <translation>Danimarkalı</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2073"/>
       <source>Basque</source>
-      <translation type="unfinished">Basque</translation>
+      <translation>Bask</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2106"/>
       <source>Filipino</source>
-      <translation type="unfinished">Filipino</translation>
+      <translation>Filipinli</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2117"/>
       <source>Finnish</source>
-      <translation type="unfinished">Finnish</translation>
+      <translation>Filipinli</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2139"/>
       <source>Galician</source>
-      <translation type="unfinished">Galician</translation>
+      <translation>Galicia'ya ait</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2150"/>
       <source>Greek</source>
-      <translation type="unfinished">Greek</translation>
+      <translation>Yunan</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2161"/>
       <source>Hindi</source>
-      <translation type="unfinished">Hindi</translation>
+      <translation>Hintçe</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2183"/>
       <source>Hiligaynon</source>
-      <translation type="unfinished">Hiligaynon</translation>
+      <translation>Hiligaynon</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2216"/>
       <source>Norwegian</source>
-      <translation type="unfinished">Norwegian</translation>
+      <translation>Norveççe</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2249"/>
       <source>Persian</source>
-      <translation type="unfinished">Persian</translation>
+      <translation>Farsça</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2293"/>
       <source>Romanian</source>
-      <translation type="unfinished">Romanian</translation>
+      <translation>Romen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2315"/>
       <source>Serbian</source>
-      <translation type="unfinished">Serbian</translation>
+      <translation>Sırpça</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2326"/>
       <source>Slovak</source>
-      <translation type="unfinished">Slovak</translation>
+      <translation>Slovak</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2337"/>
       <source>Slovenian</source>
-      <translation type="unfinished">Slovenian</translation>
+      <translation>Sloven</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2348"/>
@@ -4645,27 +4645,27 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2359"/>
       <source>Tagalog</source>
-      <translation type="unfinished">Tagalog</translation>
+      <translation>Tagalog</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2370"/>
       <source>Turkish</source>
-      <translation type="unfinished">Turkish</translation>
+      <translation>Türk</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2392"/>
       <source>Urdu</source>
-      <translation type="unfinished">Urdu</translation>
+      <translation>Urduca</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2403"/>
       <source>Chinese Simplified</source>
-      <translation type="unfinished">Chinese Simplified</translation>
+      <translation>Basitleştirilmiş Çince</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2414"/>
       <source>Chinese Traditional</source>
-      <translation type="unfinished">Chinese Traditional</translation>
+      <translation>Çin geleneği</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2482"/>
@@ -4675,7 +4675,7 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2592"/>
       <source>Enable dark mode icon theme</source>
-      <translation type="unfinished">Enable dark mode icon theme</translation>
+      <translation>Karanlık mod simgesi temasını etkinleştir</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2522"/>
@@ -4700,17 +4700,17 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2582"/>
       <source>Enforce system icon theme</source>
-      <translation type="unfinished">Enforce system icon theme</translation>
+      <translation>Sistem simgesi temasını zorla</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2688"/>
       <source>Override interface font size</source>
-      <translation type="unfinished">Override interface font size</translation>
+      <translation>Arayüz yazı tipi boyutunu geçersiz kıl</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2697"/>
       <source>Interface font size:</source>
-      <translation type="unfinished">Interface font size:</translation>
+      <translation>Arayüz yazı tipi boyutu:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2907"/>
@@ -4735,12 +4735,12 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3540"/>
       <source>Automatically close the note folder database to prevent problems with sync tools</source>
-      <translation type="unfinished">Automatically close the note folder database to prevent problems with sync tools</translation>
+      <translation>Senkronizasyon araçlarıyla ilgili sorunları önlemek için not klasörü veritabanını otomatik olarak kapatın</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3543"/>
       <source>Automatically close the note folder database</source>
-      <translation type="unfinished">Automatically close the note folder database</translation>
+      <translation>Not klasörü veritabanını otomatik olarak kapat</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3591"/>
@@ -4763,18 +4763,18 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
       <location filename="../dialogs/settingsdialog.cpp" line="3650"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3673"/>
       <source>Import settings</source>
-      <translation type="unfinished">Import settings</translation>
+      <translation>Ayarları içe aktar</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3819"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3616"/>
       <source>Export settings</source>
-      <translation type="unfinished">Export settings</translation>
+      <translation>Dışa Aktarma Ayarları</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3958"/>
       <source>Open issue assistant</source>
-      <translation type="unfinished">Open issue assistant</translation>
+      <translation>Açık sayı yardımcısı</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3969"/>
@@ -4784,7 +4784,7 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4263"/>
       <source>Ignore code font size to allow zooming</source>
-      <translation type="unfinished">Ignore code font size to allow zooming</translation>
+      <translation>Yakınlaştırmaya izin vermek için kod yazı tipi boyutunu yoksay</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4292"/>
@@ -4794,12 +4794,12 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4298"/>
       <source>Enable underline rendering</source>
-      <translation type="unfinished">Enable underline rendering</translation>
+      <translation>Alt çizgi oluşturmayı etkinleştir</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4554"/>
       <source>Fully highlight blockquotes</source>
-      <translation type="unfinished">Fully highlight blockquotes</translation>
+      <translation>Blokları tamamen vurgulayın</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4624"/>
@@ -4809,52 +4809,52 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4573"/>
       <source>Enable Vim mode (some QOwnNotes shortcuts will not work)</source>
-      <translation type="unfinished">Enable Vim mode (some QOwnNotes shortcuts will not work)</translation>
+      <translation>Vim modunu etkinleştir (bazı QOwnNotes kısayolları çalışmayacak)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4658"/>
       <source>Disable cursor blinking</source>
-      <translation type="unfinished">Disable cursor blinking</translation>
+      <translation>İmleç yanıp sönmesini devre dışı bırak</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5040"/>
       <source>Ignored sub-folders</source>
-      <translation type="unfinished">Ignored sub-folders</translation>
+      <translation>Yok sayılan alt klasörler</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5056"/>
       <source>Reset ignored sub-folders</source>
-      <translation type="unfinished">Reset ignored sub-folders</translation>
+      <translation>Yok sayılan alt klasörleri sıfırla</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5076"/>
       <source>Note list panel</source>
-      <translation type="unfinished">Note list panel</translation>
+      <translation>Not listesi paneli</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5148"/>
       <source>Show notes in the note list with preview</source>
-      <translation type="unfinished">Show notes in the note list with preview</translation>
+      <translation>Önizleme ile not listesinde notları göster</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5383"/>
       <source>Bookmarks</source>
-      <translation type="unfinished">Bookmarks</translation>
+      <translation>Yer imleri</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5389"/>
       <source>Notes with this tag will be used for fetching bookmarks</source>
-      <translation type="unfinished">Notes with this tag will be used for fetching bookmarks</translation>
+      <translation>Bu etiketi içeren notlar yer imlerini almak için kullanılacak</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5392"/>
       <source>Tag name for bookmarks notes</source>
-      <translation type="unfinished">Tag name for bookmarks notes</translation>
+      <translation>Yer imleri notları için etiket adı</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5399"/>
       <source>Bookmarks tag:</source>
-      <translation type="unfinished">Bookmarks tag:</translation>
+      <translation>Yer imleri etiketi:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5406"/>
@@ -4864,42 +4864,42 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5419"/>
       <source>Bookmarks note name:</source>
-      <translation type="unfinished">Bookmarks note name:</translation>
+      <translation>Yer imleri not adı:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5426"/>
       <source>This note will be used for adding new bookmarks from the browser extension</source>
-      <translation type="unfinished">This note will be used for adding new bookmarks from the browser extension</translation>
+      <translation>Bu not, tarayıcı uzantısından yeni yer imleri eklemek için kullanılacaktır</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5429"/>
       <source>Note name for adding new bookmarks</source>
-      <translation type="unfinished">Note name for adding new bookmarks</translation>
+      <translation>Yeni yer imleri eklemek için not adı</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5439"/>
       <source>Web socket server</source>
-      <translation type="unfinished">Web socket server</translation>
+      <translation>Web soketi sunucusu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5445"/>
       <source>Socket server port:</source>
-      <translation type="unfinished">Socket server port:</translation>
+      <translation>Soket sunucusu bağlantı noktası:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5479"/>
       <source>Show security token</source>
-      <translation type="unfinished">Show security token</translation>
+      <translation>Güvenlik belirtecini göster</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5515"/>
       <source>Web socket server support</source>
-      <translation type="unfinished">Web socket server support</translation>
+      <translation>Web soketi sunucusu desteği</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5521"/>
       <source>Enable socket server</source>
-      <translation type="unfinished">Enable socket server</translation>
+      <translation>Soket sunucusunu etkinleştir</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5496"/>
@@ -4909,83 +4909,83 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3519"/>
       <source>Allow the note file name to be different from the headline.&lt;br&gt;Beware that ownCloud Notes needs the file name to be the same as the headline!</source>
-      <translation type="unfinished">Allow the note file name to be different from the headline.&lt;br&gt;Beware that ownCloud Notes needs the file name to be the same as the headline!</translation>
+      <translation>Not dosya adının başlıktan farklı olmasına izin verin. &lt;br&gt; ownCloud Notes'un dosya adının başlık ile aynı olmasına dikkat edin!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4860"/>
       <source>Note edit panel</source>
-      <translation type="unfinished">Note edit panel</translation>
+      <translation>Not düzenleme paneli</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4866"/>
       <source>If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</source>
-      <translation type="unfinished">If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</translation>
+      <translation>Bu devre dışı bırakılırsa daha karmaşık panel düzenleri oluşturabilirsiniz, ancak pencere yeniden boyutlandırıldığında tüm paneller yeniden boyutlandırılır</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4869"/>
       <source>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</source>
-      <translation type="unfinished">Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</translation>
+      <translation>Pencere veya diğer panellerin yeniden boyutlandırılması durumunda yeniden boyutlandırılmak üzere not düzenleme panelini sabit merkezi widget olarak kullanın</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4879"/>
       <source>Note search panel</source>
-      <translation type="unfinished">Note search panel</translation>
+      <translation>Not arama paneli</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4885"/>
       <source>Disable auto-completion of previous searches</source>
-      <translation type="unfinished">Disable auto-completion of previous searches</translation>
+      <translation>Önceki aramaların otomatik olarak tamamlanmasını devre dışı bırak</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5171"/>
       <source>Navigation panel</source>
-      <translation type="unfinished">Navigation panel</translation>
+      <translation>Gezinme paneli</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5177"/>
       <source>Hide navigation item search bar</source>
-      <translation type="unfinished">Hide navigation item search bar</translation>
+      <translation>Gezinme öğesi arama çubuğunu gizle</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5191"/>
       <source>Local trash settings</source>
-      <translation type="unfinished">Local trash settings</translation>
+      <translation>Yerel çöp ayarları</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5225"/>
       <source>Remove trashed notes after:</source>
-      <translation type="unfinished">Remove trashed notes after:</translation>
+      <translation>Sonra çöpe atılan notları kaldırın:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5232"/>
       <source> days</source>
       <extracomment>seconds</extracomment>
-      <translation type="unfinished"> days</translation>
+      <translation>günler</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5251"/>
       <source>Automatically remove trashed notes after a certain time</source>
-      <translation type="unfinished">Automatically remove trashed notes after a certain time</translation>
+      <translation>Belli bir süre sonra çöpe alınmış notları otomatik olarak kaldır</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5277"/>
       <source>Local trash support</source>
-      <translation type="unfinished">Local trash support</translation>
+      <translation>Yerel çöp desteği</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5283"/>
       <source>Enable local trash</source>
-      <translation type="unfinished">Enable local trash</translation>
+      <translation>Yerel çöp kutusunu etkinleştir</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5300"/>
       <source>Layout selector</source>
-      <translation type="unfinished">Layout selector</translation>
+      <translation>Mizanpaj seçici</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5306"/>
       <source>You can set a new layout here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</source>
-      <translation type="unfinished">You can set a new layout here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</translation>
+      <translation>Burada yeni bir düzen ayarlayabilirsiniz. Panellerin konumunu her zaman &lt;i&gt; Panellerin kilidini aç &lt;/i&gt; düğmesiyle değiştirebileceğinizi unutmayın.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4600"/>
@@ -5014,7 +5014,7 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
       <location filename="../dialogs/settingsdialog.ui" line="5037"/>
       <location filename="../dialogs/settingsdialog.ui" line="5046"/>
       <source>Regular expressions of note sub-folders to ignore, separated by ";"</source>
-      <translation type="unfinished">Regular expressions of note sub-folders to ignore, separated by ";"</translation>
+      <translation>Not alt klasörlerinin düzenli ifadeleri, ";" ile ayrılmış olarak yoksayılacak</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5141"/>
@@ -5077,7 +5077,7 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4644"/>
       <source>Only use editor width setting in distraction free mode</source>
-      <translation type="unfinished">Only use editor width setting in distraction free mode</translation>
+      <translation>Distraksiyon serbest modunda sadece editör genişliği ayarını kullanın</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4907"/>
@@ -5177,12 +5177,12 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="227"/>
       <source>Preview</source>
-      <translation type="unfinished">Preview</translation>
+      <translation>Ön izleme</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="276"/>
       <source>Browser extension</source>
-      <translation type="unfinished">Browser extension</translation>
+      <translation>Tarayıcı uzantısı</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1647"/>
@@ -5650,7 +5650,7 @@ Herhangi bir karmaşaya karşın test ediniz, olduğu takdirde değerini yüksel
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1509"/>
       <source>Shortcut already assigned</source>
-      <translation type="unfinished">Shortcut already assigned</translation>
+      <translation>Kısayol zaten atanmış</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1686"/>
@@ -5750,12 +5750,12 @@ Bağlantı hata mesajı: </translation>
       <location filename="../dialogs/settingsdialog.cpp" line="3615"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3672"/>
       <source>INI files</source>
-      <translation type="unfinished">INI files</translation>
+      <translation>INI dosyaları</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3651"/>
       <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
-      <translation type="unfinished">Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</translation>
+      <translation>Ayarları gerçekten içe aktarmak istiyor musunuz? Geçerli ayarlarınız kaldırılacak ve not klasörü ayarları ve hangi komut dosyalarını kullandığınız gibi her ayar geri yüklenmeyecektir. Ayrıca, özellikle platformlar arasında bazı ayarları yapmanız gerekecek, ancak notlarınız değişmeden kalacaktır!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3661"/>
