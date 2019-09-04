@@ -13,6 +13,9 @@
         when sub-folders are involved
     - this should not only work in the preview but also when you <kbd>Ctrl</kbd> + Click
       on the link in the note text edit
+- when you **search for notes** in the note search line edit the **note list**
+  will be now **scrolled to the top** so you can see the first search results
+  (for [#1279](https://github.com/pbek/QOwnNotes/issues/1279))
 
 ## 19.9.1
 - fixed a problem with **updating the current note even if it didn't change** after the

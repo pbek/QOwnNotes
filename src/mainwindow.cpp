@@ -5063,6 +5063,8 @@ void MainWindow::on_searchLineEdit_textChanged(const QString &arg1) {
  * Does the note filtering
  */
 void MainWindow::filterNotes(bool searchForText) {
+    ui->noteTreeWidget->scrollToTop();
+
     // filter the notes by text in the search line edit
     filterNotesBySearchLineEditText();
 
