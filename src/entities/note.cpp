@@ -93,7 +93,8 @@ int Note::getNoteSubFolderId() {
 bool Note::isInCurrentNoteSubFolder() {
     const int currentNoteSubFolderId = NoteSubFolder::activeNoteSubFolderId();
 
-    if (currentNoteSubFolderId <= 0) {
+    // beware: the special "All notes" note sub-folder also uses the id 0
+    if (currentNoteSubFolderId < 0) {
         return true;
     }
 
@@ -1789,7 +1790,7 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
     while (i.hasNext()) {
         QRegularExpressionMatch match = i.next();
         QString fileLink = match.captured(1);
-        QString noteUrl = Note::getNoteURLFromFileName(fileLink);
+        QString noteUrl = Note::getNoteFileURLFromFileName(fileLink);
 
         // try to load the note to check if it really exists
         Note note = Note::fetchByFileName(fileLink);
@@ -2497,6 +2498,47 @@ const QString Note::getNoteURLFromFileName(const QString &fileName) {
     QFileInfo info(fileName);
     // TODO: baseName() will cut names like "Note 2018-07-26T18.24.22.md" down to "Note 2018-07-26T18"!
     return Note::getNoteURL(info.baseName());
+}
+
+/**
+ * Returns the file url to a note from a file name
+ *
+ * @param fileName
+ * @return
+ */
+const QString Note::getNoteFileURLFromFileName(QString fileName) {
+    if (noteSubFolderId > 0) {
+        NoteSubFolder noteSubFolder = getNoteSubFolder();
+        if (noteSubFolder.isFetched()) {
+            fileName.prepend(noteSubFolder.relativePath() + "/");
+        }
+    }
+
+    QString path = this->getFullNoteFilePathForFile(fileName);
+
+    return QString(QUrl::fromLocalFile(path).toEncoded());
+}
+
+bool Note::fileUrlIsNoteInCurrentNoteFolder(const QUrl url) {
+    if (url.scheme() != "file") {
+        return false;
+    }
+
+    QString path = url.toLocalFile();
+
+    if (!QFile(path).exists()) {
+        return false;
+    }
+
+    return path.startsWith(NoteFolder::currentLocalPath()) && path.toLower().endsWith(".md");
+}
+
+QString Note::fileUrlInCurrentNoteFolderToRelativePath(const QUrl url) {
+    QString path = url.toLocalFile();
+    auto file = new QFile(path);
+    qDebug() << "file: " << file->fileName();
+
+    return path.remove(Utils::Misc::appendIfDoesNotEndWith(NoteFolder::currentLocalPath(), "/"));
 }
 
 /**

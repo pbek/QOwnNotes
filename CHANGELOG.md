@@ -1,5 +1,19 @@
 # QOwnNotes Changelog
 
+## 19.9.2
+- the note sub-folder will now be correctly set when switching to notes that are
+  not in the current note sub-folder
+- you can now use **relative links to markdown files** to switch to notes
+  (for [#266](https://github.com/pbek/QOwnNotes/issues/266))
+    - clicking `<My note.md>` or `[Text](My note.md)` jumps to the note `My note`
+    - clicking `<My subfolder/My note.md>` or `[Text](My subfolder/My note.md)` jumps
+      to the note `My note` in the note sub-folder `My-subfolder` relative to the
+      note sub-folder of your current note
+      - there still are a cases where links would not work in the preview (or even be shown)
+        when sub-folders are involved
+    - this should not only work in the preview but also when you <kbd>Ctrl</kbd> + Click
+      on the link in the note text edit
+
 ## 19.9.1
 - fixed a problem with **updating the current note even if it didn't change** after the
   settings of the note text edit were updated (for [#1275](https://github.com/pbek/QOwnNotes/issues/1275))

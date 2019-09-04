@@ -3266,19 +3266,21 @@ bool MainWindow::jumpToNoteName(const QString& name) {
  * @return
  */
 bool MainWindow::jumpToNoteSubFolder(int noteSubFolderId) {
-    QList<QTreeWidgetItem *> items = ui->noteSubFolderTreeWidget->findItems(
-            QString("*"), Qt::MatchWrap | Qt::MatchWildcard |
-                    Qt::MatchRecursive);
+    QTreeWidgetItem* item =
+            Utils::Gui::getTreeWidgetItemWithUserData(
+                ui->noteSubFolderTreeWidget, noteSubFolderId);
 
-    Q_FOREACH(QTreeWidgetItem *item, items) {
-            int id = item->data(0, Qt::UserRole).toInt();
-            qDebug() << __func__ << " - 'id': " << id;
+    if (item != Q_NULLPTR) {
+        const QSignalBlocker blocker(ui->noteSubFolderTreeWidget);
+        Q_UNUSED(blocker)
 
-            if (id == noteSubFolderId) {
-                ui->noteSubFolderTreeWidget->setCurrentItem(item);
-                return true;
-            }
-        }
+        ui->noteSubFolderTreeWidget->clearSelection();
+        item->setSelected(true);
+
+        on_noteSubFolderTreeWidget_currentItemChanged(item, Q_NULLPTR);
+
+        return true;
+    }
 
     return false;
 }
@@ -3366,6 +3368,14 @@ void MainWindow::setCurrentNote(Note note,
              << " - 'updateSelectedNote': " << updateSelectedNote;
 
     MetricsService::instance()->sendVisitIfEnabled("note/current-note/changed");
+
+    // if note sub-folder was different than the current we will
+    // switch to that note sub-folder
+    // TODO: don't switch if "All notes" was selected!
+    if (!_showNotesFromAllNoteSubFolders && !note.isInCurrentNoteSubFolder()) {
+        qDebug() << "Switching note subfolder";
+        jumpToNoteSubFolder(note.getNoteSubFolderId());
+    }
 
     enableShowVersionsButton();
     enableShowTrashButton();
@@ -5497,13 +5507,15 @@ void MainWindow::createNewNote(QString noteName, bool withNameAppend) {
  * - <note://MyNote> opens the note "MyNote"
  * - <note://my-note-with-spaces-in-the-name> opens the note "My Note with spaces in the name"
  * - <https://www.qownnotes.org> opens the web page
+ * - <file:///path/to/my/note/folder/sub-folder/My%20note.pdf> opens the note "My note" in the sub-folder "sub-folder"
  * - <file:///path/to/my/file/QOwnNotes.pdf> opens the file "/path/to/my/file/QOwnNotes.pdf" if the operating system supports that handler
  */
 void MainWindow::on_noteTextView_anchorClicked(const QUrl &url) {
     qDebug() << __func__ << " - 'url': " << url;
     QString scheme = url.scheme();
 
-    if ((scheme == "note" || scheme == "noteid" || scheme == "task" || scheme == "checkbox")) {
+    if ((scheme == "note" || scheme == "noteid" || scheme == "task" || scheme == "checkbox") ||
+            (scheme == "file" && Note::fileUrlIsNoteInCurrentNoteFolder(url))) {
         openLocalUrl(url.toString());
     } else {
         ui->noteTextEdit->openUrl(url.toString());
@@ -5522,13 +5534,16 @@ void MainWindow::openLocalUrl(QString urlString) {
         return;
     }
 
-    // if urlString is no valid url we will try to convert it into a note url
+    // if urlString is no valid url we will try to convert it into a note file url
     if (!QOwnNotesMarkdownTextEdit::isValidUrl(urlString)) {
-        urlString = Note::getNoteURLFromFileName(urlString);
+         urlString = currentNote.getNoteFileURLFromFileName(urlString);
     }
 
+    QUrl url = QUrl(urlString);
+    bool isNoteFileUrl = Note::fileUrlIsNoteInCurrentNoteFolder(url);
+
     // convert relative file urls to absolute urls and open them
-    if (urlString.startsWith("file://..")) {
+    if (urlString.startsWith("file://..") && !isNoteFileUrl) {
         QString windowsSlash = "";
 
 #ifdef Q_OS_WIN32
@@ -5545,7 +5560,6 @@ void MainWindow::openLocalUrl(QString urlString) {
         return;
     }
 
-    QUrl url = QUrl(urlString);
     QString scheme = url.scheme();
 
     if (scheme == "noteid") { // jump to a note by note id
@@ -5563,36 +5577,25 @@ void MainWindow::openLocalUrl(QString urlString) {
         } else {
             qDebug() << "malformed url: " << urlString;
         }
-    } else if (scheme == "note") { // jump to a note url string
-        // try to fetch a note from the url string
-        Note note = Note::fetchByUrlString(urlString);
+    } else if (scheme == "note" || isNoteFileUrl) { // jump to a note url string
+        Note note;
+
+        if (isNoteFileUrl) {
+            QString relativePath = Note::fileUrlInCurrentNoteFolderToRelativePath(url);
+            QFileInfo fileInfo(relativePath);
+
+            // load note sub-folder and note from the relative path
+            auto noteSubFolder = NoteSubFolder::fetchByPathData(fileInfo.path(), "/");
+            note = Note::fetchByFileName(fileInfo.fileName(), noteSubFolder.getId());
+        } else {
+            // try to fetch a note from the url string
+            note = Note::fetchByUrlString(urlString);
+        }
 
         // does this note really exist?
         if (note.isFetched()) {
             // set current note
             setCurrentNote(note);
-
-            // if note sub-folder was different than the current we will
-            // switch to that note sub-folder
-            if (!note.isInCurrentNoteSubFolder()) {
-                qDebug() << "Switching note subfolder";
-
-                QTreeWidgetItem* item =
-                        Utils::Gui::getTreeWidgetItemWithUserData(
-                            ui->noteSubFolderTreeWidget,
-                            note.getNoteSubFolderId());
-
-                if (item != Q_NULLPTR) {
-                    const QSignalBlocker blocker(ui->noteSubFolderTreeWidget);
-                    Q_UNUSED(blocker)
-
-                    ui->noteSubFolderTreeWidget->clearSelection();
-                    item->setSelected(true);
-
-                    on_noteSubFolderTreeWidget_currentItemChanged(item, Q_NULLPTR);
-                }
-            }
-
         } else {
             // if the name of the linked note only consists of numbers we cannot
             // use host() to get the filename, it would get converted to an

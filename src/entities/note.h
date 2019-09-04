@@ -274,6 +274,12 @@ public:
 
     void resetNoteTextHtmlConversionHash();
 
+    const QString getNoteFileURLFromFileName(QString fileName);
+
+    static bool fileUrlIsNoteInCurrentNoteFolder(const QUrl url);
+
+    static QString fileUrlInCurrentNoteFolderToRelativePath(const QUrl url);
+
 protected:
     int id;
     QString name;
