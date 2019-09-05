@@ -318,6 +318,8 @@ MainWindow::MainWindow(QWidget *parent) :
             SLOT(notesWereModified(QString)));
     ui->searchLineEdit->installEventFilter(this);
     ui->noteTreeWidget->installEventFilter(this);
+    ui->noteTextView->installEventFilter(this);
+    ui->noteTextView->viewport()->installEventFilter(this);
     ui->noteTextEdit->installEventFilter(this);
     ui->noteTextEdit->viewport()->installEventFilter(this);
     ui->encryptedNoteTextEdit->installEventFilter(this);

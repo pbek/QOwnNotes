@@ -4,6 +4,8 @@
 - you now can press <kbd>Ctrl</kbd> + <kbd>Backspace</kbd> to **remove the current word**
   and <kbd>Alt</kbd> + <kbd>Backspace</kbd> to **remove the whole text** in **line edits**
   like the note text search (for [#1278](https://github.com/pbek/QOwnNotes/issues/1278))
+- you can now also move **back and forward** in the **note history** with the
+  **back button and forward button** on your mouse in the **note preview**
 
 ## 19.9.2
 - you can now use **relative links to markdown files** to switch to notes
