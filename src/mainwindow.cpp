@@ -10498,7 +10498,15 @@ void MainWindow::on_actionDelete_line_triggered() {
     if (!textEdit->hasFocus()) {
         QKeyEvent *event = new QKeyEvent(QEvent::KeyPress, Qt::Key_Backspace,
                                          Qt::AltModifier);
-        QApplication::postEvent(QApplication::focusWidget(), event);
+
+        // we need a special fallback for QLineEdit because it seems to ignore our event
+        if (dynamic_cast<QLineEdit*>(QApplication::focusWidget()) != nullptr) {
+            auto *lineEdit = dynamic_cast<QLineEdit*>(QApplication::focusWidget());
+            lineEdit->clear();
+        } else {
+            QApplication::postEvent(QApplication::focusWidget(), event);
+        }
+
         return;
     }
 
@@ -10528,7 +10536,16 @@ void MainWindow::on_actionDelete_word_triggered() {
     if (!textEdit->hasFocus()) {
         QKeyEvent *event = new QKeyEvent(QEvent::KeyPress, Qt::Key_Backspace,
                                          Qt::ControlModifier);
-        QApplication::postEvent(QApplication::focusWidget(), event);
+
+        // we need a special fallback for QLineEdit because it seems to ignore our event
+        if (dynamic_cast<QLineEdit*>(QApplication::focusWidget()) != nullptr) {
+            auto *lineEdit = dynamic_cast<QLineEdit*>(QApplication::focusWidget());
+            lineEdit->cursorWordBackward(true);
+            lineEdit->del();
+        } else {
+            QApplication::postEvent(QApplication::focusWidget(), event);
+        }
+
         return;
     }
 
