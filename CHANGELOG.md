@@ -17,6 +17,7 @@
   like the note text search (for [#1278](https://github.com/pbek/QOwnNotes/issues/1278))
 - you can now also move **back and forward** in the **note history** with the
   **back button and forward button** on your mouse in the **note preview**
+- added more Urdu (Pakistan) translation (thank you Fabijenna)
 
 ## 19.9.2
 - you can now use **relative links to markdown files** to switch to notes
@@ -675,7 +676,7 @@
         - access key <kbd>S</kbd> to search for bookmarks
         - access key <kbd>O</kbd> to open all visible bookmarks
 - added more German, Catalan, Spanish, Brazilian Portuguese, Italian, Galician,
-  Finnish, Dutch, Greek, Hungarian, Swedish, Czech, Swedish and Hausa translation
+  Finnish, Dutch, Greek, Hungarian, Swedish, Czech and Swedish translation
   (thank you rakekniven, richarson, tiwi90, MGuerra, mlocati and Fabijenna)
 
 ## 19.1.6

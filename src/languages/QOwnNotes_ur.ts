@@ -143,42 +143,42 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="667"/>
       <source>Reminder order</source>
-      <translation type="unfinished">Reminder order</translation>
+      <translation>یاد دہانی کا آرڈر۔</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="669"/>
       <source>Reminder time</source>
-      <translation type="unfinished">Reminder time</translation>
+      <translation>یاد دہانی کا وقت۔</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="671"/>
       <source>Reminder done time</source>
-      <translation type="unfinished">Reminder done time</translation>
+      <translation>یاد دہانی کرانے کا وقت۔</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="673"/>
       <source>Place name</source>
-      <translation type="unfinished">Place name</translation>
+      <translation>جگہ کا نام</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="675"/>
       <source>Content class</source>
-      <translation type="unfinished">Content class</translation>
+      <translation>مشمولات کی کلاس۔</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="677"/>
       <source>Application data</source>
-      <translation type="unfinished">Application data</translation>
+      <translation>درخواست کے کوائف</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="751"/>
       <source>Attribute</source>
-      <translation type="unfinished">Attribute</translation>
+      <translation>وصف</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="751"/>
       <source>Value</source>
-      <translation type="unfinished">Value</translation>
+      <translation>قدر</translation>
     </message>
   </context>
   <context>
@@ -187,7 +187,7 @@
       <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="166"/>
       <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="174"/>
       <source>Unknown option: %1</source>
-      <translation type="unfinished">Unknown option: %1</translation>
+      <translation>نامعلوم آپشن: ٪1</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="169"/>
@@ -202,7 +202,7 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="2836"/>
       <source>Recursive mapping</source>
-      <translation type="unfinished">Recursive mapping</translation>
+      <translation>پنراورتی تعریفیں۔</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3705"/>
@@ -227,22 +227,22 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5749"/>
       <source>Unknown option:</source>
-      <translation type="unfinished">Unknown option:</translation>
+      <translation>نامعلوم آپشن:</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5759"/>
       <source>Invalid argument:</source>
-      <translation type="unfinished">Invalid argument:</translation>
+      <translation>غیرموزوں دلیل:</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5761"/>
       <source>Trailing characters:</source>
-      <translation type="unfinished">Trailing characters:</translation>
+      <translation>پچھلے حروف:</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5843"/>
       <source>Move lines into themselves.</source>
-      <translation type="unfinished">Move lines into themselves.</translation>
+      <translation>لائنوں کو اپنے اندر منتقل کریں۔.</translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5885"/>
@@ -358,12 +358,12 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7766"/>
       <source>Already at oldest change.</source>
-      <translation type="unfinished">Already at oldest change.</translation>
+      <translation>پہلے ہی قدیم ترین تبدیلی پر۔.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7767"/>
       <source>Already at newest change.</source>
-      <translation type="unfinished">Already at newest change.</translation>
+      <translation>پہلے ہی تازہ ترین تبدیلی پر۔.</translation>
     </message>
   </context>
   <context>
@@ -371,7 +371,7 @@
     <message>
       <location filename="../helpers/fakevimproxy.cpp" line="26"/>
       <source>Information</source>
-      <translation type="unfinished">Information</translation>
+      <translation>معلومات</translation>
     </message>
   </context>
   <context>
@@ -572,7 +572,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="220"/>
       <source>Broken link</source>
-      <translation type="unfinished">Broken link</translation>
+      <translation>ٹوٹا ہوا لنک</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="210"/>
@@ -603,7 +603,7 @@
       <location filename="../widgets/fontcolorwidget.cpp" line="463"/>
       <source>Copy</source>
       <comment>as noun</comment>
-      <translation type="unfinished">Copy</translation>
+      <translation>کاپی</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="582"/>
@@ -627,87 +627,87 @@
     <message>
       <location filename="../widgets/layoutwidget.ui" line="97"/>
       <source>Use layout</source>
-      <translation type="unfinished">Use layout</translation>
+      <translation>لے آؤٹ کا استعمال کریں۔</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="76"/>
       <source>Use new layout</source>
-      <translation type="unfinished">Use new layout</translation>
+      <translation>نئی ترتیب استعمال کریں۔</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="77"/>
       <source>Do you want to use the selected layout?</source>
-      <translation type="unfinished">Do you want to use the selected layout?</translation>
+      <translation>کیا آپ منتخب شدہ ترتیب کو استعمال کرنا چاہتے ہیں؟</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="81"/>
       <source>The application will be quit afterwards.</source>
-      <translation type="unfinished">The application will be quit afterwards.</translation>
+      <translation>درخواست بعد میں چھوڑ دی جائے گی۔.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="82"/>
       <source>The application will be restarted afterwards.</source>
-      <translation type="unfinished">The application will be restarted afterwards.</translation>
+      <translation>اس کے بعد درخواست دوبارہ شروع کی جائے گی۔.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="140"/>
       <source>Minimal</source>
       <comment>Layout name</comment>
-      <translation type="unfinished">Minimal</translation>
+      <translation>کم سے کم۔</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="142"/>
       <source>Full</source>
       <comment>Layout name</comment>
-      <translation type="unfinished">Full</translation>
+      <translation>مکمل</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="144"/>
       <source>Full vertical</source>
       <comment>Layout name</comment>
-      <translation type="unfinished">Full vertical</translation>
+      <translation>مکمل عمودی</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="146"/>
       <source>Single column</source>
       <comment>Layout name</comment>
-      <translation type="unfinished">Single column</translation>
+      <translation>ایک کالم۔</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="154"/>
       <source>The note edit panel is the central widget that will be resized automatically.</source>
       <comment>Layout description</comment>
-      <translation type="unfinished">The note edit panel is the central widget that will be resized automatically.</translation>
+      <translation>نوٹ میں ترمیم کرنے والا پینل مرکزی ویجیٹ ہے جو خود بخود تبدیل ہوجائے گا۔.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="158"/>
       <source>Because of this there is no central widget that will be resized automatically.</source>
       <comment>Layout description</comment>
-      <translation type="unfinished">Because of this there is no central widget that will be resized automatically.</translation>
+      <translation>اس کی وجہ سے یہاں کوئی مرکزی ویجیٹ نہیں ہے جو خودبخود تبدیل ہوجائے گا۔.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="162"/>
       <source>Just the note list on the left and the note edit panel on the right are enabled by default.</source>
       <comment>Layout description</comment>
-      <translation type="unfinished">Just the note list on the left and the note edit panel on the right are enabled by default.</translation>
+      <translation>صرف بائیں طرف کی نوٹ کی فہرست اور دائیں طرف نوٹ میں ترمیم کرنے والا پینل بطور ڈیفالٹ چالو ہے۔.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="166"/>
       <source>Most of the panels, like the note list on the left, the tagging panels, the note edit panel in the center and the preview panel on the right are enabled by default.</source>
       <comment>Layout description</comment>
-      <translation type="unfinished">Most of the panels, like the note list on the left, the tagging panels, the note edit panel in the center and the preview panel on the right are enabled by default.</translation>
+      <translation>بائیں طرف کی نوٹ لسٹ کی طرح زیادہ تر پینل ، ٹیگنگ پینل ، وسط میں نوٹ میں ترمیم پینل اور دائیں طرف پیش نظارہ پینل پہلے سے طے شدہ طور پر اہل ہوجاتا ہے۔.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="171"/>
       <source>Most of the panels, like the note list on the left, the tagging panels, the note edit panel on the right and the preview panel on top of the note edit panel are enabled by default.</source>
       <comment>Layout description</comment>
-      <translation type="unfinished">Most of the panels, like the note list on the left, the tagging panels, the note edit panel on the right and the preview panel on top of the note edit panel are enabled by default.</translation>
+      <translation>بائیں طرف کی نوٹ لسٹ کی طرح بیشتر پینل ، ٹیگنگ پینل ، دائیں طرف نوٹ میں ترمیم پینل اور نوٹ میں ترمیم پینل کے اوپر والا پیش نظارہ پینل پہلے سے طے شدہ طور پر اہل ہوتا ہے۔.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="176"/>
       <source>Tiny one column layout with note search, note list and note edit on top of each other.</source>
       <comment>Layout description</comment>
-      <translation type="unfinished">Tiny one column layout with note search, note list and note edit on top of each other.</translation>
+      <translation>ایک دوسرے کے اوپر نوٹ تلاش ، نوٹ کی فہرست اور نوٹ میں ترمیم کے ساتھ ایک کالم کا ایک چھوٹا سا نمونہ۔.</translation>
     </message>
   </context>
   <context>
@@ -730,22 +730,22 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="76"/>
       <source>Enter the name of the link (optional)</source>
-      <translation type="unfinished">Enter the name of the link (optional)</translation>
+      <translation>لنک کا نام درج کریں (اختیاری)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="79"/>
       <source>Name of link (optional)</source>
-      <translation type="unfinished">Name of link (optional)</translation>
+      <translation>لنک کا نام (اختیاری)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="89"/>
       <source>Enter a description for the link (optional)</source>
-      <translation type="unfinished">Enter a description for the link (optional)</translation>
+      <translation>لنک کے لئے ایک تفصیل درج کریں (اختیاری)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="92"/>
       <source>Description of link (optional)</source>
-      <translation type="unfinished">Description of link (optional)</translation>
+      <translation>لنک کی تفصیل (اختیاری)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="102"/>
@@ -936,13 +936,13 @@
     <message>
       <location filename="../mainwindow.ui" line="391"/>
       <source>Find navigation item</source>
-      <translation type="unfinished">Find navigation item</translation>
+      <translation>نیویگیشن آئٹم تلاش کریں۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="680"/>
       <location filename="../mainwindow.cpp" line="7807"/>
       <source>Add a tag to the current note</source>
-      <translation type="unfinished">Add a tag to the current note</translation>
+      <translation>موجودہ نوٹ میں ایک ٹیگ شامل کریں۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="850"/>
@@ -1017,7 +1017,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1335"/>
       <source>Post questions, feature requests or issues</source>
-      <translation type="unfinished">Post questions, feature requests or issues</translation>
+      <translation>سوالات ، خصوصیت کی درخواستوں یا مسائل کو پوسٹ کریں۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1346"/>
@@ -1119,7 +1119,7 @@
     <message>
       <location filename="../mainwindow.cpp" line="7808"/>
       <source>Add a tag to the selected notes</source>
-      <translation type="unfinished">Add a tag to the selected notes</translation>
+      <translation>منتخب کردہ نوٹ میں ٹیگ شامل کریں۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="694"/>
@@ -1228,7 +1228,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1158"/>
       <source>Jump to</source>
-      <translation type="unfinished">Jump to</translation>
+      <translation>کودنا</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1193"/>
@@ -1238,12 +1238,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1299"/>
       <source>About &amp;QOwnNotes…</source>
-      <translation type="unfinished">About &amp;QOwnNotes…</translation>
+      <translation>&amp;QOwnNotes کے بارے میں…</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1338"/>
       <source>Post questions, feature requests or problems with the help of the issue assistant</source>
-      <translation type="unfinished">Post questions, feature requests or problems with the help of the issue assistant</translation>
+      <translation>ایشو اسسٹنٹ کی مدد سے سوالات ، خصوصیت کی درخواستیں یا پریشانی پوسٹ کریں۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1396"/>
@@ -1254,7 +1254,7 @@
       <location filename="../mainwindow.ui" line="1436"/>
       <location filename="../mainwindow.ui" line="1439"/>
       <source>Auto format table</source>
-      <translation type="unfinished">Auto format table</translation>
+      <translation>آٹو فارمیٹ ٹیبل۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1468"/>
@@ -1465,7 +1465,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2089"/>
       <source>Show note list under tag panel</source>
-      <translation type="unfinished">Show note list under tag panel</translation>
+      <translation>ٹیگ پینل کے تحت نوٹ کی فہرست دکھائیں۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2107"/>
@@ -1475,12 +1475,12 @@
     <message>
       <location filename="../mainwindow.ui" line="2128"/>
       <source>Import notes from text files</source>
-      <translation type="unfinished">Import notes from text files</translation>
+      <translation>ٹیکسٹ فائلوں سے نوٹ درآمد کریں۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2137"/>
       <source>Manage orphaned image files</source>
-      <translation type="unfinished">Manage orphaned image files</translation>
+      <translation>یتیم تصویری فائلوں کا نظم کریں۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2149"/>
@@ -1552,7 +1552,7 @@
       <location filename="../mainwindow.ui" line="2285"/>
       <location filename="../mainwindow.ui" line="2288"/>
       <source>Search selected text on the web</source>
-      <translation type="unfinished">Search selected text on the web</translation>
+      <translation>ویب پر منتخب متن کو تلاش کریں۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2296"/>
@@ -1567,7 +1567,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2312"/>
       <source>Copy note headline</source>
-      <translation type="unfinished">Copy note headline</translation>
+      <translation>نوٹ کی سرخی کاپی کریں۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2324"/>
@@ -1625,43 +1625,43 @@
       <location filename="../mainwindow.ui" line="2435"/>
       <location filename="../mainwindow.ui" line="2438"/>
       <source>Jump to note edit panel</source>
-      <translation type="unfinished">Jump to note edit panel</translation>
+      <translation>ترمیم پینل نوٹ پر جائیں۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2450"/>
       <source>Manage orphaned attachments</source>
-      <translation type="unfinished">Manage orphaned attachments</translation>
+      <translation>یتیم منسلکات کا نظم کریں۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2455"/>
       <source>Jump to note subfolder panel</source>
-      <translation type="unfinished">Jump to note subfolder panel</translation>
+      <translation>ذیلی فولڈر پینل پر نوٹ کریں۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2463"/>
       <source>Jump to tags panel</source>
-      <translation type="unfinished">Jump to tags panel</translation>
+      <translation>ٹیگز پینل پر جائیں۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2471"/>
       <source>Jump to note list panel</source>
-      <translation type="unfinished">Jump to note list panel</translation>
+      <translation>نوٹ پینل پینل پر جائیں۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2479"/>
       <source>Activate context menu</source>
-      <translation type="unfinished">Activate context menu</translation>
+      <translation>سیاق و سباق کے مینو کو چالو کریں۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2487"/>
       <source>Import bookmarks from server</source>
-      <translation type="unfinished">Import bookmarks from server</translation>
+      <translation>سرور سے بُک مارکس درآمد کریں۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2492"/>
       <location filename="../mainwindow.ui" line="2495"/>
       <source>Toggle full-screen mode</source>
-      <translation type="unfinished">Toggle full-screen mode</translation>
+      <translation>مکمل اسکرین وضع کو ٹوگل کریں۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1867"/>
@@ -1719,7 +1719,7 @@
     <message>
       <location filename="../mainwindow.ui" line="510"/>
       <source>Note operations…</source>
-      <translation type="unfinished">Note operations…</translation>
+      <translation>نوٹ آپریشن…</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1555"/>
@@ -1821,17 +1821,17 @@ Restore current note?</source>
     <message>
       <location filename="../mainwindow.cpp" line="2929"/>
       <source>Abort</source>
-      <translation type="unfinished">Abort</translation>
+      <translation>منسوخ کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2929"/>
       <source>Loading notes…</source>
-      <translation type="unfinished">Loading notes…</translation>
+      <translation>نوٹ لوڈ ہو رہا ہے…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3132"/>
       <source>Delete conflicted database copies</source>
-      <translation type="unfinished">Delete conflicted database copies</translation>
+      <translation>متضاد ڈیٹا بیس کاپیاں حذف کریں۔</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3157"/>
@@ -1930,7 +1930,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="4160"/>
       <source>Remove selected tags</source>
-      <translation type="unfinished">Remove selected tags</translation>
+      <translation>منتخب ٹیگز کو ہٹا دیں۔</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4161"/>
@@ -1944,7 +1944,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="4215"/>
       <location filename="../mainwindow.cpp" line="8500"/>
       <source>Move selected notes</source>
-      <translation type="unfinished">Move selected notes</translation>
+      <translation>منتخب کردہ نوٹ منتقل کریں۔</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4216"/>
@@ -1958,7 +1958,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="4308"/>
       <location filename="../mainwindow.cpp" line="8584"/>
       <source>Copy selected notes</source>
-      <translation type="unfinished">Copy selected notes</translation>
+      <translation>منتخب کردہ نوٹ کاپی کریں۔</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4309"/>
@@ -1985,7 +1985,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="4346"/>
       <source>Tag selected notes</source>
-      <translation type="unfinished">Tag selected notes</translation>
+      <translation>منتخب کردہ نوٹوں کو ٹیگ کریں۔</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4347"/>
@@ -1998,27 +1998,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="4608"/>
       <source>Restart application</source>
-      <translation type="unfinished">Restart application</translation>
+      <translation>درخواست دوبارہ شروع کریں۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4614"/>
       <source>You may need to restart the application manually to let the changes take effect.</source>
-      <translation type="unfinished">You may need to restart the application manually to let the changes take effect.</translation>
+      <translation>آپ کو تبدیلیاں لاگو ہونے کے لئے درخواست دستی طور پر دوبارہ شروع کرنے کی ضرورت پڑسکتی ہے۔.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4619"/>
       <source>You may need to restart the application to let the changes take effect.</source>
-      <translation type="unfinished">You may need to restart the application to let the changes take effect.</translation>
+      <translation>تبدیلیوں کو اثر انداز ہونے دینے کے لئے آپ کو ایپلی کیشن کو دوبارہ شروع کرنے کی ضرورت پڑسکتی ہے۔.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4621"/>
       <source>Restart</source>
-      <translation type="unfinished">Restart</translation>
+      <translation>دوبارہ شروع کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4840"/>
       <source>PDF files</source>
-      <translation type="unfinished">PDF files</translation>
+      <translation>پی ڈی ایف فائلیں۔</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5136"/>
@@ -2031,7 +2031,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="5604"/>
       <source>Note was not found</source>
-      <translation type="unfinished">Note was not found</translation>
+      <translation>نوٹ نہیں ملا۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5605"/>
@@ -2041,12 +2041,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="5858"/>
       <source>Note versions are currently loaded from your ownCloud server</source>
-      <translation type="unfinished">Note versions are currently loaded from your ownCloud server</translation>
+      <translation>نوٹ ورژن فی الحال آپ کے اپنے کلاؤڈ سرور سے بھری ہوئی ہیں۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5873"/>
       <source>Trashed notes are currently loaded from your ownCloud server</source>
-      <translation type="unfinished">Trashed notes are currently loaded from your ownCloud server</translation>
+      <translation>کوڑے دان کے نوٹ فی الحال آپ کے اپنے کلاؤڈ سرور سے بھری ہوئی ہیں۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5939"/>
@@ -2108,17 +2108,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="6741"/>
       <location filename="../mainwindow.cpp" line="6810"/>
       <source>Done inserting image</source>
-      <translation type="unfinished">Done inserting image</translation>
+      <translation>تصویر ڈالنے کا کام مکمل ہوگیا۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6743"/>
       <source>Inserting attachment</source>
-      <translation type="unfinished">Inserting attachment</translation>
+      <translation>لگاؤ ڈالنا۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6748"/>
       <source>Done inserting attachment</source>
-      <translation type="unfinished">Done inserting attachment</translation>
+      <translation>لگاؤ ڈالنے کا کام ہوگیا۔</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="6760"/>
@@ -2147,48 +2147,48 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="6793"/>
       <source>Saving temporary image</source>
-      <translation type="unfinished">Saving temporary image</translation>
+      <translation>عارضی تصویر کی بچت۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6813"/>
       <source>Temporary file can't be opened</source>
-      <translation type="unfinished">Temporary file can't be opened</translation>
+      <translation>عارضی فائل نہیں کھولی جاسکتی ہے۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6854"/>
       <source>Downloading %1</source>
-      <translation type="unfinished">Downloading %1</translation>
+      <translation>ڈاؤن لوڈ ہو رہا ہے ٪1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7035"/>
       <source>Reset font size to %1 pt</source>
       <comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
-      <translation type="unfinished">Reset font size to %1 pt</translation>
+      <translation>فونٹ کا سائز ٪1 pt پر دوبارہ ترتیب دیں۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7853"/>
       <source>Remove tag '%1' from the current note</source>
-      <translation type="unfinished">Remove tag '%1' from the current note</translation>
+      <translation>موجودہ نوٹ سے '٪1' ٹیگ کو ہٹا دیں۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7855"/>
       <source>Remove tag '%1' from the selected notes</source>
-      <translation type="unfinished">Remove tag '%1' from the selected notes</translation>
+      <translation>منتخب کردہ نوٹوں سے '٪1' ٹیگ کو ہٹا دیں۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8058"/>
       <source>Rename tag</source>
-      <translation type="unfinished">Rename tag</translation>
+      <translation>ٹیگ کا نام تبدیل کریں۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8059"/>
       <source>Assign color</source>
-      <translation type="unfinished">Assign color</translation>
+      <translation>رنگ تفویض کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8060"/>
       <source>Disable color</source>
-      <translation type="unfinished">Disable color</translation>
+      <translation>رنگ غیر فعال کریں۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8064"/>
@@ -2199,43 +2199,43 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="8283"/>
       <source>Move to the root</source>
       <comment>to move a tag to the current tag in the tag context menu</comment>
-      <translation type="unfinished">Move to the root</translation>
+      <translation>جڑ میں منتقل کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8726"/>
       <source>An url was opened at the current cursor position</source>
-      <translation type="unfinished">An url was opened at the current cursor position</translation>
+      <translation>یوزر کو موجودہ کرسر پوزیشن پر کھولا گیا تھا۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8827"/>
       <source>No equation was found in front of the cursor</source>
-      <translation type="unfinished">No equation was found in front of the cursor</translation>
+      <translation>کرسر کے سامنے کوئی مساوات نہیں ملی۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8844"/>
       <source>Result for equation: %1 = %2</source>
-      <translation type="unfinished">Result for equation: %1 = %2</translation>
+      <translation>مساوات کا نتیجہ: ٪1 =٪2</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8945"/>
       <source>The scripting engine was reloaded</source>
-      <translation type="unfinished">The scripting engine was reloaded</translation>
+      <translation>اسکرپٹنگ انجن دوبارہ لوڈ ہوا</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8981"/>
       <source>HTML files</source>
-      <translation type="unfinished">HTML files</translation>
+      <translation>HTML فائلیں</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9173"/>
       <location filename="../mainwindow.cpp" line="9341"/>
       <source>Rename note</source>
-      <translation type="unfinished">Rename note</translation>
+      <translation>نوٹ کا نام تبدیل کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9174"/>
       <source>Allows you to rename the filename of the note</source>
-      <translation type="unfinished">Allows you to rename the filename of the note</translation>
+      <translation>آپ کو نوٹ کا فائل نام تبدیل کرنے کی اجازت دیتا ہے</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9186"/>
@@ -2250,32 +2250,32 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="9216"/>
       <source>Move notes to subfolder…</source>
-      <translation type="unfinished">Move notes to subfolder…</translation>
+      <translation>نوٹوں کو سب فولڈر میں منتقل کریں…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9220"/>
       <source>Copy notes to subfolder…</source>
-      <translation type="unfinished">Copy notes to subfolder…</translation>
+      <translation>نوٹوں کو سب فولڈر میں کاپی کریں…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9228"/>
       <source>&amp;Tag selected notes with…</source>
-      <translation type="unfinished">&amp;Tag selected notes with…</translation>
+      <translation>&amp;منتخب کردہ نوٹوں کے ساتھ ٹیگ کریں…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9250"/>
       <source>&amp;Remove tag from selected notes…</source>
-      <translation type="unfinished">&amp;Remove tag from selected notes…</translation>
+      <translation>&amp;منتخب کردہ نوٹوں سے ٹیگ کو ہٹا دیں…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9341"/>
       <source>Name:</source>
-      <translation type="unfinished">Name:</translation>
+      <translation>نام:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9353"/>
       <source>Note renaming not enabled!</source>
-      <translation type="unfinished">Note renaming not enabled!</translation>
+      <translation>نوٹ کا نام تبدیل کرنا اہل نہیں ہے!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9521"/>
@@ -2332,12 +2332,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="10727"/>
       <source>Disallow all note editing</source>
-      <translation type="unfinished">Disallow all note editing</translation>
+      <translation>تمام نوٹ ترمیم کی اجازت نہ دیں۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10873"/>
       <source>Select text files to import</source>
-      <translation type="unfinished">Select text files to import</translation>
+      <translation>درآمد کرنے کے لئے ٹیکسٹ فائلوں کو منتخب کریں۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10902"/>
@@ -2347,12 +2347,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="10965"/>
       <source>Note headline '%1' was copied to the clipboard</source>
-      <translation type="unfinished">Note headline '%1' was copied to the clipboard</translation>
+      <translation>نوٹ کی سرخی '٪1' کلپ بورڈ میں کاپی کی گئی تھی</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="11049"/>
       <source>Leave full-screen mode</source>
-      <translation type="unfinished">Leave full-screen mode</translation>
+      <translation>فل سکرین وضع چھوڑیں۔</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7826"/>
@@ -2366,7 +2366,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.ui" line="2409"/>
       <location filename="../mainwindow.cpp" line="10728"/>
       <source>Allow all note editing</source>
-      <translation type="unfinished">Allow all note editing</translation>
+      <translation>تمام نوٹ میں ترمیم کی اجازت دیں۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1187"/>
@@ -2407,37 +2407,37 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="4718"/>
       <source>Print note</source>
-      <translation type="unfinished">Print note</translation>
+      <translation>نوٹ پرنٹ کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4784"/>
       <source>Letter</source>
-      <translation type="unfinished">Letter</translation>
+      <translation>خط۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4813"/>
       <source>Portrait</source>
-      <translation type="unfinished">Portrait</translation>
+      <translation>پورٹریٹ۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4813"/>
       <source>Landscape</source>
-      <translation type="unfinished">Landscape</translation>
+      <translation>زمین کی تزئین</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4818"/>
       <source>Orientation</source>
-      <translation type="unfinished">Orientation</translation>
+      <translation>واقفیت</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4818"/>
       <source>Orientation:</source>
-      <translation type="unfinished">Orientation:</translation>
+      <translation>واقفیت:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4841"/>
       <source>Export current note as PDF</source>
-      <translation type="unfinished">Export current note as PDF</translation>
+      <translation>موجودہ نوٹ کو بطور پی ڈی ایف ایکسپورٹ کریں۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4937"/>
@@ -2447,7 +2447,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="5736"/>
       <source>Open QOwnNotes</source>
-      <translation type="unfinished">Open QOwnNotes</translation>
+      <translation>QOwnNotes کھولیں۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5435"/>
@@ -2455,27 +2455,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="9168"/>
       <location filename="../mainwindow.cpp" line="9519"/>
       <source>New note</source>
-      <translation type="unfinished">New note</translation>
+      <translation>نیا نوٹ۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5761"/>
       <source>Recent notes</source>
-      <translation type="unfinished">Recent notes</translation>
+      <translation>حالیہ نوٹ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5791"/>
       <source>Show todo lists</source>
-      <translation type="unfinished">Show todo lists</translation>
+      <translation>ٹوڈو فہرستیں دکھائیں۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5802"/>
       <source>Recent tasks</source>
-      <translation type="unfinished">Recent tasks</translation>
+      <translation>حالیہ کام</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5834"/>
       <source>Quit</source>
-      <translation type="unfinished">Quit</translation>
+      <translation>چھوڑو</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7189"/>
@@ -2492,27 +2492,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="683"/>
       <location filename="../mainwindow.cpp" line="7216"/>
       <source>Note folder</source>
-      <translation type="unfinished">Note folder</translation>
+      <translation>نوٹ فولڈر۔</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8440"/>
       <source>Copy to note folder</source>
-      <translation type="unfinished">Copy to note folder</translation>
+      <translation>نوٹ فولڈر میں کاپی کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8441"/>
       <source>Move to note folder</source>
-      <translation type="unfinished">Move to note folder</translation>
+      <translation>نوٹ فولڈر میں منتقل کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8442"/>
       <source>Copy to this subfolder</source>
-      <translation type="unfinished">Copy to this subfolder</translation>
+      <translation>اس سب فولڈر میں کاپی کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8443"/>
       <source>Move to this subfolder</source>
-      <translation type="unfinished">Move to this subfolder</translation>
+      <translation>اس ذیلی فولڈر میں منتقل کریں</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="8494"/>
@@ -2555,72 +2555,72 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="9269"/>
       <source>Open note in external editor</source>
-      <translation type="unfinished">Open note in external editor</translation>
+      <translation>بیرونی ایڈیٹر میں نوٹ کھولیں</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9273"/>
       <source>Show note in file manager</source>
-      <translation type="unfinished">Show note in file manager</translation>
+      <translation>فائل مینیجر میں نوٹ دکھائیں</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9354"/>
       <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
-      <translation type="unfinished">If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</translation>
+      <translation>اگر آپ اپنے نوٹ کا نام تبدیل کرنا چاہتے ہیں تو آپ کو نوٹ کے فائل کا نام ہیڈلائن سے مختلف ہونے کی اجازت دینے کا آپشن اہل بنانا ہوگا۔.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9520"/>
       <source>New subfolder</source>
-      <translation type="unfinished">New subfolder</translation>
+      <translation>نیا ذیلی فولڈر</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9524"/>
       <source>Show folder in file manager</source>
-      <translation type="unfinished">Show folder in file manager</translation>
+      <translation>فائل مینیجر میں فولڈر دکھائیں</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9560"/>
       <source>Create a new folder</source>
-      <translation type="unfinished">Create a new folder</translation>
+      <translation>ایک نیا فولڈر بنائیں</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9560"/>
       <source>Folder name:</source>
-      <translation type="unfinished">Folder name:</translation>
+      <translation>فولڈر کا نام:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7147"/>
       <source>show all untagged notes (%1)</source>
-      <translation type="unfinished">show all untagged notes (%1)</translation>
+      <translation>تمام غیر تبدیل شدہ نوٹ دکھائیں (٪1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7150"/>
       <source>Untagged notes</source>
-      <translation type="unfinished">Untagged notes</translation>
+      <translation>غیر نوٹ شدہ نوٹ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8982"/>
       <source>Export current note as HTML file</source>
-      <translation type="unfinished">Export current note as HTML file</translation>
+      <translation>موجودہ نوٹ کو HTML فائل کے طور پر ایکسپورٹ کریں</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4793"/>
       <source>Page size</source>
-      <translation type="unfinished">Page size</translation>
+      <translation>صفحے کا سائز</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1034"/>
       <source>quit toolbar</source>
-      <translation type="unfinished">quit toolbar</translation>
+      <translation>ٹول بار چھوڑ دیں</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4793"/>
       <source>Page size:</source>
-      <translation type="unfinished">Page size:</translation>
+      <translation>صفحے کا سائز:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4909"/>
       <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
-      <translation type="unfinished">QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</translation>
+      <translation>QOwnNotes گمنام استعمال کے اعداد و شمار کو ٹریک کرے گا ، جو QOwnNotes کے اگلے حصے کو بہتر بنانے اور کیڑے ڈھونڈنے اور ٹھیک کرنے میں مدد کرنے میں مدد کرتا ہے۔ آپ ترتیبات میں اس طرز عمل کو غیر فعال کرسکتے ہیں.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4913"/>
@@ -2800,12 +2800,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="1049"/>
       <source>Workspace selector</source>
-      <translation type="unfinished">Workspace selector</translation>
+      <translation>ورک اسپیس سلیکٹر</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1188"/>
       <source>Show %1 panel</source>
-      <translation type="unfinished">Show %1 panel</translation>
+      <translation>٪1 پینل دکھائیں</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1231"/>
@@ -2815,7 +2815,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="1548"/>
       <source>Leave distraction free mode</source>
-      <translation type="unfinished">Leave distraction free mode</translation>
+      <translation>خلفشار فری وضع چھوڑیں</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2051"/>
@@ -2988,42 +2988,42 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="17"/>
       <source>Note was modified externally!</source>
-      <translation type="unfinished">Note was modified externally!</translation>
+      <translation>نوٹ بیرونی طور پر تبدیل کیا گیا تھا!</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="41"/>
       <source>The current note was modified outside of this application!</source>
-      <translation type="unfinished">The current note was modified outside of this application!</translation>
+      <translation>موجودہ نوٹ میں اس درخواست سے باہر ترمیم کی گئی تھی!</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="48"/>
       <source>Differences:</source>
-      <translation type="unfinished">Differences:</translation>
+      <translation>اختلافات:</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="76"/>
       <source>Always accept external changes in the future</source>
-      <translation type="unfinished">Always accept external changes in the future</translation>
+      <translation>مستقبل میں ہمیشہ خارجی تبدیلیوں کو قبول کریں</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="83"/>
       <source>Accept external changes?</source>
-      <translation type="unfinished">Accept external changes?</translation>
+      <translation>بیرونی تبدیلیاں قبول کریں?</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="69"/>
       <source>Ignore all external modifications in the future</source>
-      <translation type="unfinished">Ignore all external modifications in the future</translation>
+      <translation>مستقبل میں تمام بیرونی ترمیم کو نظرانداز کریں</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.cpp" line="33"/>
       <source>Yes</source>
-      <translation type="unfinished">Yes</translation>
+      <translation>جی ہاں</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.cpp" line="38"/>
       <source>No</source>
-      <translation type="unfinished">No</translation>
+      <translation>نہیں</translation>
     </message>
   </context>
   <context>
@@ -3031,27 +3031,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="237"/>
       <source>Copy image file path</source>
-      <translation type="unfinished">Copy image file path</translation>
+      <translation>تصویر فائل کا راستہ کاپی کریں</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="241"/>
       <source>Copy link location</source>
-      <translation type="unfinished">Copy link location</translation>
+      <translation>کاپی لنک کا مقام</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="244"/>
       <source>Export generated raw HTML</source>
-      <translation type="unfinished">Export generated raw HTML</translation>
+      <translation>برآمد شدہ خام HTML</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="277"/>
       <source>HTML files</source>
-      <translation type="unfinished">HTML files</translation>
+      <translation>HTML فائلیں</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="278"/>
       <source>Export preview as raw HTML file</source>
-      <translation type="unfinished">Export preview as raw HTML file</translation>
+      <translation>خام HTML فائل کے طور پر پیش نظارہ برآمد کریں</translation>
     </message>
   </context>
   <context>
@@ -3059,22 +3059,22 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="14"/>
       <source>Orphaned attachments</source>
-      <translation type="unfinished">Orphaned attachments</translation>
+      <translation>یتیم ملحق۔</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="54"/>
       <source>Delete selected attachments</source>
-      <translation type="unfinished">Delete selected attachments</translation>
+      <translation>منتخب اٹیچمنٹ کو حذف کریں۔</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="57"/>
       <source>Delete</source>
-      <translation type="unfinished">Delete</translation>
+      <translation>حذف کریں</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="86"/>
       <source>Add selected attachments to note</source>
-      <translation type="unfinished">Add selected attachments to note</translation>
+      <translation>نوٹ کرنے کے لئے منتخب منسلکات شامل کریں۔</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="89"/>
@@ -3191,17 +3191,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="190"/>
       <source>Your calendar username or password is incorrect!</source>
-      <translation type="unfinished">Your calendar username or password is incorrect!</translation>
+      <translation>آپ کے کیلنڈر کا صارف نام یا پاس ورڈ غلط ہے!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="496"/>
       <source>API app version too low</source>
-      <translation type="unfinished">API app version too low</translation>
+      <translation>API ایپ ورژن بہت کم ہے</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="497"/>
       <source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
-      <translation type="unfinished">Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</translation>
+      <translation>براہ کرم اپنے QOwnNotesAPI ایپ کو اپنے سرور پر اپ ڈیٹ کرنے پر غور کریں ، آپ کے ایپ کا ورژن٪ 1 بہت کم ہے اور QOwnNotes میں پریشانی کا سبب بن سکتا ہے.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="984"/>
@@ -3231,17 +3231,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="1065"/>
       <source>Done with loading note versions</source>
-      <translation type="unfinished">Done with loading note versions</translation>
+      <translation>نوٹ ورژن لوڈ ہو رہا ہے</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1104"/>
       <source>No versions found</source>
-      <translation type="unfinished">No versions found</translation>
+      <translation>کوئی ورژن نہیں ملا</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1105"/>
       <source>There are no versions for this note or the note wasn't found on the server.</source>
-      <translation type="unfinished">There are no versions for this note or the note wasn't found on the server.</translation>
+      <translation>اس نوٹ کے لئے کوئی ورژن نہیں ہیں یا سرور پر نوٹ نہیں ملا تھا.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1126"/>

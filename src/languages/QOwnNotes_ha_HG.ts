@@ -23,17 +23,17 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="14"/>
       <source>Evernote Import</source>
-      <translation type="unfinished">Evernote Import</translation>
+      <translation>Har abada shigo</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="121"/>
       <source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</source>
-      <translation type="unfinished">To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</translation>
+      <translation>Don samun fayil ɗin enex kana buƙatar zaɓar ɗaya ko mahara bayanin kula a cikin abokin cinikin tebur ɗin ka kasance danna danna "Export note…" a cikin menu Fayil.</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="74"/>
       <source>Please select the Evernote enex file you want to import:</source>
-      <translation type="unfinished">Please select the Evernote enex file you want to import:</translation>
+      <translation>Da fatan za selecti fayil ɗin Evernote enex da kake son shigo da shi:</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="30"/>
@@ -48,7 +48,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="91"/>
       <source>Metadata to import</source>
-      <translation type="unfinished">Metadata to import</translation>
+      <translation>Metadata shigo</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="165"/>
@@ -58,7 +58,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="23"/>
       <source>Evernote enex file</source>
-      <translation type="unfinished">Evernote enex file</translation>
+      <translation>Fayil enex da aka saba dashi</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="67"/>
@@ -68,47 +68,47 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="81"/>
       <source>Import attachments</source>
-      <translation type="unfinished">Import attachments</translation>
+      <translation>Shigo da abubuwan da aka makala</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="59"/>
       <source>Enex files</source>
-      <translation type="unfinished">Enex files</translation>
+      <translation>Fayilolin Enex</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="60"/>
       <source>Select Evernote enex file to import</source>
-      <translation type="unfinished">Select Evernote enex file to import</translation>
+      <translation>Zaɓi fayil na Evernote enex don shigowa</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="644"/>
       <source>Basic attributes</source>
-      <translation type="unfinished">Basic attributes</translation>
+      <translation>Abubuwan halaye na asali</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="645"/>
       <source>Created date</source>
-      <translation type="unfinished">Created date</translation>
+      <translation>Kwanan wata</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="647"/>
       <source>Updated date</source>
-      <translation type="unfinished">Updated date</translation>
+      <translation>Kwanan da aka sabunta</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="650"/>
       <source>Note attributes</source>
-      <translation type="unfinished">Note attributes</translation>
+      <translation>Abun lura</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="651"/>
       <source>Subject date</source>
-      <translation type="unfinished">Subject date</translation>
+      <translation>Ranar taken</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="653"/>
       <source>Latitude</source>
-      <translation type="unfinished">Latitude</translation>
+      <translation>Latitude</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="655"/>
@@ -123,62 +123,62 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="659"/>
       <source>Author</source>
-      <translation type="unfinished">Author</translation>
+      <translation>Mawallafi</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="661"/>
       <source>Source</source>
-      <translation type="unfinished">Source</translation>
+      <translation>Mai tushe</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="663"/>
       <source>Source URL</source>
-      <translation type="unfinished">Source URL</translation>
+      <translation>URL mai tushe</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="665"/>
       <source>Source application</source>
-      <translation type="unfinished">Source application</translation>
+      <translation>Aikace-aikacen Source</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="667"/>
       <source>Reminder order</source>
-      <translation type="unfinished">Reminder order</translation>
+      <translation>Domin tunatarwa</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="669"/>
       <source>Reminder time</source>
-      <translation type="unfinished">Reminder time</translation>
+      <translation>Lokacin tunatarwa</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="671"/>
       <source>Reminder done time</source>
-      <translation type="unfinished">Reminder done time</translation>
+      <translation>Tunatarwa an yi lokacin</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="673"/>
       <source>Place name</source>
-      <translation type="unfinished">Place name</translation>
+      <translation>Sanya suna</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="675"/>
       <source>Content class</source>
-      <translation type="unfinished">Content class</translation>
+      <translation>Class abun ciki</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="677"/>
       <source>Application data</source>
-      <translation type="unfinished">Application data</translation>
+      <translation>Bayanan aikace-aikace</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="751"/>
       <source>Attribute</source>
-      <translation type="unfinished">Attribute</translation>
+      <translation>Kasancewa</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="751"/>
       <source>Value</source>
-      <translation type="unfinished">Value</translation>
+      <translation>Daraja</translation>
     </message>
   </context>
   <context>
@@ -187,62 +187,62 @@
       <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="166"/>
       <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="174"/>
       <source>Unknown option: %1</source>
-      <translation type="unfinished">Unknown option: %1</translation>
+      <translation>Wani zaɓi da ba a sani ba: %1</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="169"/>
       <source>Argument must be positive: %1=%2</source>
-      <translation type="unfinished">Argument must be positive: %1=%2</translation>
+      <translation>Nasihu dole ne tabbatacce: %1 =%2</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="958"/>
       <source>Mark "%1" not set.</source>
-      <translation type="unfinished">Mark "%1" not set.</translation>
+      <translation>Yi alamar "%1" ba a saita ba.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="2836"/>
       <source>Recursive mapping</source>
-      <translation type="unfinished">Recursive mapping</translation>
+      <translation>Urswaƙwalwar recursive</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3705"/>
       <source>%1%2%</source>
-      <translation type="unfinished">%1%2%</translation>
+      <translation>%1%2%</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3707"/>
       <source>%1All</source>
-      <translation type="unfinished">%1All</translation>
+      <translation>%1A duk</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3721"/>
       <source>Not implemented in FakeVim.</source>
-      <translation type="unfinished">Not implemented in FakeVim.</translation>
+      <translation>Ba a aiwatar da shi a cikin FakeVim ba.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4301"/>
       <source>Type Alt-V, Alt-V to quit FakeVim mode.</source>
-      <translation type="unfinished">Type Alt-V, Alt-V to quit FakeVim mode.</translation>
+      <translation>Rubuta Alt-V, Alt-V don barin yanayin FakeVim.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5749"/>
       <source>Unknown option:</source>
-      <translation type="unfinished">Unknown option:</translation>
+      <translation>Wani zaɓi da ba a sani ba:</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5759"/>
       <source>Invalid argument:</source>
-      <translation type="unfinished">Invalid argument:</translation>
+      <translation>Ba daidai ba ne gardama:</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5761"/>
       <source>Trailing characters:</source>
-      <translation type="unfinished">Trailing characters:</translation>
+      <translation>Haruffa masu ma'ana:</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5843"/>
       <source>Move lines into themselves.</source>
-      <translation type="unfinished">Move lines into themselves.</translation>
+      <translation>Haruffa masu ma'ana.</translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5885"/>
@@ -260,27 +260,27 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5960"/>
       <source>Cannot open file "%1" for writing</source>
-      <translation type="unfinished">Cannot open file "%1" for writing</translation>
+      <translation>Ba za a iya buɗe fayil ba "%1" don rubutu</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5966"/>
       <source>"%1" %2 %3L, %4C written.</source>
-      <translation type="unfinished">"%1" %2 %3L, %4C written.</translation>
+      <translation>"%1" %2 %3L, %4C rubuta.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5967"/>
       <source> [New] </source>
-      <translation type="unfinished"> [New] </translation>
+      <translation>[Sabuwar] </translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5975"/>
       <source>Cannot open file "%1" for reading</source>
-      <translation type="unfinished">Cannot open file "%1" for reading</translation>
+      <translation>Ba za a iya buɗe fayil ba "%1" don karatu</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6003"/>
       <source>"%1" %2L, %3C</source>
-      <translation type="unfinished">"%1" %2L, %3C</translation>
+      <translation>"%1" %2L, %3C</translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6030"/>
@@ -358,12 +358,12 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7766"/>
       <source>Already at oldest change.</source>
-      <translation type="unfinished">Already at oldest change.</translation>
+      <translation>Tuni a canji mafi tsufa.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7767"/>
       <source>Already at newest change.</source>
-      <translation type="unfinished">Already at newest change.</translation>
+      <translation>Tuni a sabon canji.</translation>
     </message>
   </context>
   <context>
@@ -371,7 +371,7 @@
     <message>
       <location filename="../helpers/fakevimproxy.cpp" line="26"/>
       <source>Information</source>
-      <translation type="unfinished">Information</translation>
+      <translation>Bayanai</translation>
     </message>
   </context>
   <context>
@@ -379,84 +379,84 @@
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="38"/>
       <source>Text font</source>
-      <translation type="unfinished">Text font</translation>
+      <translation>Rubutun rubutu</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="73"/>
       <source>Size:</source>
-      <translation type="unfinished">Size:</translation>
+      <translation>Girma:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="80"/>
       <source>Family:</source>
-      <translation type="unfinished">Family:</translation>
+      <translation>Iyali:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="103"/>
       <source>Color schema</source>
-      <translation type="unfinished">Color schema</translation>
+      <translation>Tsarin launi</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="124"/>
       <source>Delete schema</source>
-      <translation type="unfinished">Delete schema</translation>
+      <translation>Share tsari</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="127"/>
       <source>Delete</source>
-      <translation type="unfinished">Delete</translation>
+      <translation>Share</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="169"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="631"/>
       <source>Export schema</source>
-      <translation type="unfinished">Export schema</translation>
+      <translation>Tsarin fitarwa</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="172"/>
       <source>Export</source>
-      <translation type="unfinished">Export</translation>
+      <translation>Fitar da kaya</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="271"/>
       <source>If you have created a nice color schema please export it and share it with everyone!</source>
-      <translation type="unfinished">If you have created a nice color schema please export it and share it with everyone!</translation>
+      <translation>Idan kun kirkiri tsari mai kyau na launi, da fatan za a fitar da shi kuma a raba shi tare da kowa!</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="155"/>
       <source>Copy schema</source>
-      <translation type="unfinished">Copy schema</translation>
+      <translation>Kwafi tsari</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="158"/>
       <source>Copy</source>
-      <translation type="unfinished">Copy</translation>
+      <translation>Kwafa</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="141"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="671"/>
       <source>Import schema</source>
-      <translation type="unfinished">Import schema</translation>
+      <translation>Shigo da tsari</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="144"/>
       <source>Import</source>
-      <translation type="unfinished">Import</translation>
+      <translation>Shigo</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="315"/>
       <source>Share schema</source>
-      <translation type="unfinished">Share schema</translation>
+      <translation>Raba tsari</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="288"/>
       <source>Background:</source>
-      <translation type="unfinished">Background:</translation>
+      <translation>Bayan Fage:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="281"/>
       <source>Foreground:</source>
-      <translation type="unfinished">Foreground:</translation>
+      <translation>Fitowa:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="264"/>
@@ -471,87 +471,87 @@
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="237"/>
       <source>Adapt font size:</source>
-      <translation type="unfinished">Adapt font size:</translation>
+      <translation>Canza girman font:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="208"/>
       <source>Underline</source>
-      <translation type="unfinished">Underline</translation>
+      <translation>Ja layi a layi</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="195"/>
       <source>Text preset</source>
-      <translation type="unfinished">Text preset</translation>
+      <translation>Saitaccen rubutu</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="196"/>
       <source>Emphasized text</source>
-      <translation type="unfinished">Emphasized text</translation>
+      <translation>Kara jaddada rubutu</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="197"/>
       <source>Strong text</source>
-      <translation type="unfinished">Strong text</translation>
+      <translation>Rubutu mai ƙarfi</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="214"/>
       <source>(HTML) Comment</source>
-      <translation type="unfinished">(HTML) Comment</translation>
+      <translation>(HTML) Sharhi</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="204"/>
       <source>Header, level 1</source>
-      <translation type="unfinished">Header, level 1</translation>
+      <translation>Shugaban, mataki na 1</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="198"/>
       <source>Link</source>
-      <translation type="unfinished">Link</translation>
+      <translation>Haɗi</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="199"/>
       <source>Image</source>
-      <translation type="unfinished">Image</translation>
+      <translation>Hoto</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="200"/>
       <source>Code (block)</source>
-      <translation type="unfinished">Code (block)</translation>
+      <translation>Lambar (toshewa)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="201"/>
       <source>Code (inline)</source>
-      <translation type="unfinished">Code (inline)</translation>
+      <translation>Lambar (layin layi)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="203"/>
       <source>List item</source>
-      <translation type="unfinished">List item</translation>
+      <translation>Jerin abu</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="205"/>
       <source>Header, level 2</source>
-      <translation type="unfinished">Header, level 2</translation>
+      <translation>Shugaban, mataki na 2</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="206"/>
       <source>Header, level 3</source>
-      <translation type="unfinished">Header, level 3</translation>
+      <translation>Shugaban, mataki na 3</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="207"/>
       <source>Header, level 4</source>
-      <translation type="unfinished">Header, level 4</translation>
+      <translation>Shugaban, mataki na 4</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="208"/>
       <source>Header, level 5</source>
-      <translation type="unfinished">Header, level 5</translation>
+      <translation>Shugaban, mataki na 5</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="209"/>
       <source>Header, level 6</source>
-      <translation type="unfinished">Header, level 6</translation>
+      <translation>Shugaban, mataki na 6</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="212"/>
@@ -561,65 +561,65 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="213"/>
       <source>Table</source>
-      <translation type="unfinished">Table</translation>
+      <translation>Tebur</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="215"/>
       <source>Masked syntax</source>
       <comment>text that will highlighted in a way that it's barely visible</comment>
-      <translation type="unfinished">Masked syntax</translation>
+      <translation>Syntax masked</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="220"/>
       <source>Broken link</source>
-      <translation type="unfinished">Broken link</translation>
+      <translation>Tsarin hanyar haɗi</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="210"/>
       <source>Horizontal rule</source>
-      <translation type="unfinished">Horizontal rule</translation>
+      <translation>Sararin kwance</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="218"/>
       <source>Current line background color</source>
-      <translation type="unfinished">Current line background color</translation>
+      <translation>Launin bango na yanzu</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="229"/>
       <source>This item will be used to preset colors for the other items</source>
-      <translation type="unfinished">This item will be used to preset colors for the other items</translation>
+      <translation>Za'a yi amfani da wannan abun don saiti launuka don sauran abubuwan</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="460"/>
       <source>Copy color schema</source>
-      <translation type="unfinished">Copy color schema</translation>
+      <translation>Kwafi makircin launi</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="461"/>
       <source>Color schema name</source>
-      <translation type="unfinished">Color schema name</translation>
+      <translation>Sunan makircin launi</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="463"/>
       <source>Copy</source>
       <comment>as noun</comment>
-      <translation type="unfinished">Copy</translation>
+      <translation>Kwafa</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="582"/>
       <source>Remove schema</source>
-      <translation type="unfinished">Remove schema</translation>
+      <translation>Cire tsari</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="583"/>
       <source>Remove current schema? This cannot be undone!</source>
-      <translation type="unfinished">Remove current schema? This cannot be undone!</translation>
+      <translation>Cire tsari na yanzu? Ba za a sake yin wannan ba!</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="630"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="670"/>
       <source>INI files</source>
-      <translation type="unfinished">INI files</translation>
+      <translation>Fayilolin INI</translation>
     </message>
   </context>
   <context>
@@ -627,87 +627,87 @@
     <message>
       <location filename="../widgets/layoutwidget.ui" line="97"/>
       <source>Use layout</source>
-      <translation type="unfinished">Use layout</translation>
+      <translation>Yi amfani da layout</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="76"/>
       <source>Use new layout</source>
-      <translation type="unfinished">Use new layout</translation>
+      <translation>Yi amfani da sabon saiti</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="77"/>
       <source>Do you want to use the selected layout?</source>
-      <translation type="unfinished">Do you want to use the selected layout?</translation>
+      <translation>Kuna so kuyi amfani da layin da aka zaɓa?</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="81"/>
       <source>The application will be quit afterwards.</source>
-      <translation type="unfinished">The application will be quit afterwards.</translation>
+      <translation>Aikace-aikacen za a daina aiki daga baya.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="82"/>
       <source>The application will be restarted afterwards.</source>
-      <translation type="unfinished">The application will be restarted afterwards.</translation>
+      <translation>Za'a sake kunna aikace-aikacen daga baya.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="140"/>
       <source>Minimal</source>
       <comment>Layout name</comment>
-      <translation type="unfinished">Minimal</translation>
+      <translation>Kadan</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="142"/>
       <source>Full</source>
       <comment>Layout name</comment>
-      <translation type="unfinished">Full</translation>
+      <translation>Cikakke</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="144"/>
       <source>Full vertical</source>
       <comment>Layout name</comment>
-      <translation type="unfinished">Full vertical</translation>
+      <translation>Cikakken tsaye</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="146"/>
       <source>Single column</source>
       <comment>Layout name</comment>
-      <translation type="unfinished">Single column</translation>
+      <translation>Shafi ɗaya</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="154"/>
       <source>The note edit panel is the central widget that will be resized automatically.</source>
       <comment>Layout description</comment>
-      <translation type="unfinished">The note edit panel is the central widget that will be resized automatically.</translation>
+      <translation>Faifan shirya allon rubutu shine widget din tsakiya wanda za'a zazzage shi ta atomatik.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="158"/>
       <source>Because of this there is no central widget that will be resized automatically.</source>
       <comment>Layout description</comment>
-      <translation type="unfinished">Because of this there is no central widget that will be resized automatically.</translation>
+      <translation>Saboda wannan babu wani widget din tsakiya wanda zai sake canzawa ta atomatik.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="162"/>
       <source>Just the note list on the left and the note edit panel on the right are enabled by default.</source>
       <comment>Layout description</comment>
-      <translation type="unfinished">Just the note list on the left and the note edit panel on the right are enabled by default.</translation>
+      <translation>Kawai bayanin kula na gefen hagu da bayanin kula na bayanin kula a hannun dama ana sa su ta hanyar tsohuwa.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="166"/>
       <source>Most of the panels, like the note list on the left, the tagging panels, the note edit panel in the center and the preview panel on the right are enabled by default.</source>
       <comment>Layout description</comment>
-      <translation type="unfinished">Most of the panels, like the note list on the left, the tagging panels, the note edit panel in the center and the preview panel on the right are enabled by default.</translation>
+      <translation>Yawancin bangarori, kamar jerin bayanin kula a hagu, bangarorin yin alama, panel bayanin lura a tsakiya da kuma gabanin samfoti na dama an kunna su ta hanyar tsohuwa.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="171"/>
       <source>Most of the panels, like the note list on the left, the tagging panels, the note edit panel on the right and the preview panel on top of the note edit panel are enabled by default.</source>
       <comment>Layout description</comment>
-      <translation type="unfinished">Most of the panels, like the note list on the left, the tagging panels, the note edit panel on the right and the preview panel on top of the note edit panel are enabled by default.</translation>
+      <translation>Yawancin bangarori, kamar jerin bayanin kula a hagu, bangarorin yin alama, panel bayanin kula a hannun dama da preview panel a saman kwamiti na bayanin gyara an kunna ta tsohuwa.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="176"/>
       <source>Tiny one column layout with note search, note list and note edit on top of each other.</source>
       <comment>Layout description</comment>
-      <translation type="unfinished">Tiny one column layout with note search, note list and note edit on top of each other.</translation>
+      <translation>Inyan karamin layin rubutu ɗaya tare da binciken bayanin kula, jerin bayanin kula da gyara bayanin kula akan junan ku.</translation>
     </message>
   </context>
   <context>
@@ -715,57 +715,57 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="14"/>
       <source>Link an url or note</source>
-      <translation type="unfinished">Link an url or note</translation>
+      <translation>Kula da rubutu ta wayar da kan jama'a, tare da kulawa da kulawa, kula da kulawa da kulawa sosai</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="44"/>
       <source>Enter URL</source>
-      <translation type="unfinished">Enter URL</translation>
+      <translation>Shigar da URL</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="53"/>
       <source>Enter an URL to link to</source>
-      <translation type="unfinished">Enter an URL to link to</translation>
+      <translation>Shigar da adireshin da kake so</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="76"/>
       <source>Enter the name of the link (optional)</source>
-      <translation type="unfinished">Enter the name of the link (optional)</translation>
+      <translation>Shigar da sunan mahaɗin (na zaɓi)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="79"/>
       <source>Name of link (optional)</source>
-      <translation type="unfinished">Name of link (optional)</translation>
+      <translation>Sunan mahaɗa (na zaɓi)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="89"/>
       <source>Enter a description for the link (optional)</source>
-      <translation type="unfinished">Enter a description for the link (optional)</translation>
+      <translation>Shigar da bayanin don mahaɗin (na zaɓi)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="92"/>
       <source>Description of link (optional)</source>
-      <translation type="unfinished">Description of link (optional)</translation>
+      <translation>Bayanin haɗi (na zaɓi)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="102"/>
       <source>Search for notes or create new notes by entering text and pressing return</source>
-      <translation type="unfinished">Search for notes or create new notes by entering text and pressing return</translation>
+      <translation>Nemo bayanin kula ko ƙirƙirar sabon bayanin kula ta shigar da rubutu kuma latsa dawowa</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="117"/>
       <source>Search for a note to link to</source>
-      <translation type="unfinished">Search for a note to link to</translation>
+      <translation>Nemo bayanin kula don danganta ga</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="63"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;select local file to link to&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;select local file to link to&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; zaɓi fayil na gida don haɗi zuwa &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.cpp" line="215"/>
       <source>Select file to link to</source>
-      <translation type="unfinished">Select file to link to</translation>
+      <translation>Zaɓi fayil don danganta ga</translation>
     </message>
   </context>
   <context>
@@ -773,33 +773,33 @@
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="14"/>
       <source>Locally trashed notes</source>
-      <translation type="unfinished">Locally trashed notes</translation>
+      <translation>Bayanan kula gida</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="42"/>
       <source>Name</source>
-      <translation type="unfinished">Name</translation>
+      <translation>Suna</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="47"/>
       <source>Trashed</source>
-      <translation type="unfinished">Trashed</translation>
+      <translation>Kushe</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="41"/>
       <source>Restore</source>
-      <translation type="unfinished">Restore</translation>
+      <translation>Maido</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="42"/>
       <location filename="../dialogs/localtrashdialog.cpp" line="194"/>
       <source>Restore selected notes</source>
-      <translation type="unfinished">Restore selected notes</translation>
+      <translation>Mayar da bayanan da aka zaɓa</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="51"/>
       <source>Remove</source>
-      <translation type="unfinished">Remove</translation>
+      <translation>Cire</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="52"/>
@@ -977,17 +977,17 @@
     <message>
       <location filename="../mainwindow.ui" line="1197"/>
       <source>Custom actions</source>
-      <translation type="unfinished">Custom actions</translation>
+      <translation>Ayyukan al'ada</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1217"/>
       <source>main toolbar</source>
-      <translation type="unfinished">main toolbar</translation>
+      <translation>babban kayan aiki</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1251"/>
       <source>&amp;Quit</source>
-      <translation type="unfinished">&amp;Quit</translation>
+      <translation>&amp;Ka daina</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1266"/>
@@ -1017,27 +1017,27 @@
     <message>
       <location filename="../mainwindow.ui" line="1335"/>
       <source>Post questions, feature requests or issues</source>
-      <translation type="unfinished">Post questions, feature requests or issues</translation>
+      <translation>Tambayi tambayoyi, buƙatun fasalin ko al'amurra</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1346"/>
       <source>Alphabetical</source>
-      <translation type="unfinished">Alphabetical</translation>
+      <translation>Haruffa</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1349"/>
       <source>Sort alphabetical</source>
-      <translation type="unfinished">Sort alphabetical</translation>
+      <translation>Tace haruffa</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1357"/>
       <source>By date</source>
-      <translation type="unfinished">By date</translation>
+      <translation>Da kwanan wata</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1360"/>
       <source>Sort by date</source>
-      <translation type="unfinished">Sort by date</translation>
+      <translation>A ware ta kwanan wata</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1384"/>
@@ -1047,12 +1047,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1387"/>
       <source>Show note versions on server</source>
-      <translation type="unfinished">Show note versions on server</translation>
+      <translation>Nuna fasalin bayanin kula akan sabar</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1399"/>
       <source>Show trashed notes on server</source>
-      <translation type="unfinished">Show trashed notes on server</translation>
+      <translation>Nuna bayanin kula da tarko a sabar</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1404"/>
@@ -1069,124 +1069,124 @@
     <message>
       <location filename="../mainwindow.ui" line="1416"/>
       <source>Insert link to an url or a note</source>
-      <translation type="unfinished">Insert link to an url or a note</translation>
+      <translation>Sanya hanyar haɗi zuwa url ko bayanin kula</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1428"/>
       <source>&amp;Find in current note</source>
-      <translation type="unfinished">&amp;Find in current note</translation>
+      <translation>&amp;Nemo a bayanin kula na yanzu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1431"/>
       <source>Find text in current note</source>
-      <translation type="unfinished">Find text in current note</translation>
+      <translation>Nemo rubutu a bayanin kula na yanzu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1444"/>
       <source>&amp;Duplicate text</source>
-      <translation type="unfinished">&amp;Duplicate text</translation>
+      <translation>&amp;Rubutun kwafi</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1456"/>
       <source>&amp;Back in note history</source>
-      <translation type="unfinished">&amp;Back in note history</translation>
+      <translation>&amp;Komawa cikin bayanin kula</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1369"/>
       <source>&amp;Settings</source>
-      <translation type="unfinished">&amp;Settings</translation>
+      <translation>&amp;Saiti</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="119"/>
       <source>Find or create note sub folder</source>
-      <translation type="unfinished">Find or create note sub folder</translation>
+      <translation>Nemo ko ƙirƙiri babban fayil na bayanin kula</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="196"/>
       <source>Find or create tag</source>
-      <translation type="unfinished">Find or create tag</translation>
+      <translation>Nemo ko ƙirƙirar alama</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="292"/>
       <source>Search for notes or create new notes by entering text and pressing return</source>
-      <translation type="unfinished">Search for notes or create new notes by entering text and pressing return</translation>
+      <translation>Nemo bayanin kula ko ƙirƙirar sabon bayanin kula ta shigar da rubutu kuma latsa dawowa</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="306"/>
       <source>Search or create note</source>
-      <translation type="unfinished">Search or create note</translation>
+      <translation>Bincika ko ƙirƙiri bayanin kula</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7808"/>
       <source>Add a tag to the selected notes</source>
-      <translation type="unfinished">Add a tag to the selected notes</translation>
+      <translation>Aara alama a bayanin da aka zaɓa</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="694"/>
       <source>New tag</source>
-      <translation type="unfinished">New tag</translation>
+      <translation>Sabuwar alama</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="869"/>
       <location filename="../mainwindow.cpp" line="5969"/>
       <source>Export</source>
-      <translation type="unfinished">Export</translation>
+      <translation>Fitar da kaya</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="882"/>
       <source>Import</source>
-      <translation type="unfinished">Import</translation>
+      <translation>Shigo</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="907"/>
       <location filename="../mainwindow.cpp" line="5951"/>
       <source>Print</source>
-      <translation type="unfinished">Print</translation>
+      <translation>Bugawa</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="918"/>
       <source>View note</source>
-      <translation type="unfinished">View note</translation>
+      <translation>Duba bayanin kula</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="930"/>
       <source>Trash</source>
-      <translation type="unfinished">Trash</translation>
+      <translation>Shara</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="997"/>
       <source>&amp;Edit</source>
-      <translation type="unfinished">&amp;Edit</translation>
+      <translation>&amp;Shirya</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1001"/>
       <source>Insert</source>
-      <translation type="unfinished">Insert</translation>
+      <translation>Saka bayanai</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1018"/>
       <source>Format</source>
-      <translation type="unfinished">Format</translation>
+      <translation>Tsarin</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1031"/>
       <source>Extra</source>
-      <translation type="unfinished">Extra</translation>
+      <translation>Karin</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1047"/>
       <source>Edit</source>
-      <translation type="unfinished">Edit</translation>
+      <translation>Shirya</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1060"/>
       <source>Versioning</source>
-      <translation type="unfinished">Versioning</translation>
+      <translation>Ana sanyawa</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1071"/>
       <source>Encryption</source>
-      <translation type="unfinished">Encryption</translation>
+      <translation>Enciko</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1098"/>
@@ -1202,33 +1202,33 @@
       <location filename="../mainwindow.ui" line="1120"/>
       <location filename="../mainwindow.cpp" line="640"/>
       <source>Workspaces</source>
-      <translation type="unfinished">Workspaces</translation>
+      <translation>Aiki</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1125"/>
       <source>Panels</source>
-      <translation type="unfinished">Panels</translation>
+      <translation>Bangarori</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1130"/>
       <source>Toolbars</source>
-      <translation type="unfinished">Toolbars</translation>
+      <translation>Kayan aiki</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1135"/>
       <source>Show</source>
       <extracomment>To show or hide stuff</extracomment>
-      <translation type="unfinished">Show</translation>
+      <translation>Nuna</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1149"/>
       <source>Workspace</source>
-      <translation type="unfinished">Workspace</translation>
+      <translation>Filin aiki</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1158"/>
       <source>Jump to</source>
-      <translation type="unfinished">Jump to</translation>
+      <translation>Tsallaka zuwa</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1193"/>
@@ -1243,28 +1243,28 @@
     <message>
       <location filename="../mainwindow.ui" line="1338"/>
       <source>Post questions, feature requests or problems with the help of the issue assistant</source>
-      <translation type="unfinished">Post questions, feature requests or problems with the help of the issue assistant</translation>
+      <translation>Tambaya na post, buƙatun fasalin ko matsaloli tare da taimakon mai taimakawa batun</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1396"/>
       <source>Show remote trash</source>
-      <translation type="unfinished">Show remote trash</translation>
+      <translation>Nuna shara mai nisa</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1436"/>
       <location filename="../mainwindow.ui" line="1439"/>
       <source>Auto format table</source>
-      <translation type="unfinished">Auto format table</translation>
+      <translation>Tsarin rubutu na atomatik</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1468"/>
       <source>Forward in note history</source>
-      <translation type="unfinished">Forward in note history</translation>
+      <translation>Ci gaba a cikin bayanin kula</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1480"/>
       <source>Show shortcuts</source>
-      <translation type="unfinished">Show shortcuts</translation>
+      <translation>Nuna gajerun hanyoyi</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1489"/>
@@ -1309,7 +1309,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1570"/>
       <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
-      <translation type="unfinished">Insert image (the image will be copied to the `media` folder in the current notes folder)</translation>
+      <translation>Sanya hoto (za'a kwafa hoton a babban fayil a cikin babban fayil din a yanzu)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1582"/>
@@ -1324,7 +1324,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1600"/>
       <source>Edit encrypted note</source>
-      <translation type="unfinished">Edit encrypted note</translation>
+      <translation>Gyara bayanin kula</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1612"/>
@@ -1354,12 +1354,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1663"/>
       <source>Next note</source>
-      <translation type="unfinished">Next note</translation>
+      <translation>Bayani na gaba</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1675"/>
       <source>Previous note</source>
-      <translation type="unfinished">Previous note</translation>
+      <translation>Bayanin da ya gabata</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1687"/>
@@ -1369,7 +1369,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1690"/>
       <source>Distraction free mode, you can leave it with a button on the bottom right</source>
-      <translation type="unfinished">Distraction free mode, you can leave it with a button on the bottom right</translation>
+      <translation>Yanayin kyauta mai rikicewa, zaku iya barin shi tare da maɓallin a saman dama</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1701"/>
@@ -1379,33 +1379,33 @@
     <message>
       <location filename="../mainwindow.ui" line="1709"/>
       <source>Narrow</source>
-      <translation type="unfinished">Narrow</translation>
+      <translation>Tatsuniya</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1720"/>
       <source>Medium</source>
-      <translation type="unfinished">Medium</translation>
+      <translation>Matsakaici</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1731"/>
       <source>Wide</source>
-      <translation type="unfinished">Wide</translation>
+      <translation>Yawo</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1742"/>
       <source>Full</source>
-      <translation type="unfinished">Full</translation>
+      <translation>Cikakke</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1754"/>
       <source>Paste html or media</source>
-      <translation type="unfinished">Paste html or media</translation>
+      <translation>Manna html ko kafofin watsa labarai</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1757"/>
       <location filename="../mainwindow.ui" line="1760"/>
       <source>Paste images, notes and html from the clipboard</source>
-      <translation type="unfinished">Paste images, notes and html from the clipboard</translation>
+      <translation>Manna hotuna, bayanin kula da html daga allo</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1772"/>
@@ -1514,33 +1514,33 @@
     <message>
       <location filename="../mainwindow.ui" line="2221"/>
       <source>Rename current workspace</source>
-      <translation type="unfinished">Rename current workspace</translation>
+      <translation>Sake suna da filin aiki na yanzu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2230"/>
       <source>Switch to previous workspace</source>
-      <translation type="unfinished">Switch to previous workspace</translation>
+      <translation>Canja wurin aikin da ya gabata</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2238"/>
       <source>Show all panels</source>
-      <translation type="unfinished">Show all panels</translation>
+      <translation>Nuna duk bangarori</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2247"/>
       <source>Find action</source>
-      <translation type="unfinished">Find action</translation>
+      <translation>Nemi aiki</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2250"/>
       <location filename="../mainwindow.ui" line="2253"/>
       <source>Find an action from the menu</source>
-      <translation type="unfinished">Find an action from the menu</translation>
+      <translation>Nemo aiki daga menu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2265"/>
       <source>Insert table</source>
-      <translation type="unfinished">Insert table</translation>
+      <translation>Saka tebur</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2277"/>
@@ -1552,259 +1552,259 @@
       <location filename="../mainwindow.ui" line="2285"/>
       <location filename="../mainwindow.ui" line="2288"/>
       <source>Search selected text on the web</source>
-      <translation type="unfinished">Search selected text on the web</translation>
+      <translation>Bincika rubutun da aka zaba a yanar gizo</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2296"/>
       <source>Delete line</source>
-      <translation type="unfinished">Delete line</translation>
+      <translation>Share layi</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2304"/>
       <source>Delete word</source>
-      <translation type="unfinished">Delete word</translation>
+      <translation>Share kalmar</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2312"/>
       <source>Copy note headline</source>
-      <translation type="unfinished">Copy note headline</translation>
+      <translation>Kwafa taken labari</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2324"/>
       <location filename="../mainwindow.cpp" line="9271"/>
       <source>Open note in different window</source>
-      <translation type="unfinished">Open note in different window</translation>
+      <translation>Buɗe bayanin kula a cikin taga daban</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2336"/>
       <source>Save modified notes</source>
-      <translation type="unfinished">Save modified notes</translation>
+      <translation>Ajiye bayanan kula</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2347"/>
       <source>Ascending</source>
-      <translation type="unfinished">Ascending</translation>
+      <translation>Hawan sama</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2355"/>
       <source>Descending</source>
-      <translation type="unfinished">Descending</translation>
+      <translation>Talakawa</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2364"/>
       <location filename="../mainwindow.cpp" line="9279"/>
       <source>Show note git versions</source>
-      <translation type="unfinished">Show note git versions</translation>
+      <translation>Nuna bayanin fasalin git</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2373"/>
       <source>Find scripts in script repository</source>
-      <translation type="unfinished">Find scripts in script repository</translation>
+      <translation>Nemo rubutun a cikin ma'aunin rubutun</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2385"/>
       <source>Script settings</source>
-      <translation type="unfinished">Script settings</translation>
+      <translation>Saitunan rubutu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2394"/>
       <source>Insert attachment</source>
-      <translation type="unfinished">Insert attachment</translation>
+      <translation>Saka abin da aka makala</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2421"/>
       <source>Check for script updates</source>
-      <translation type="unfinished">Check for script updates</translation>
+      <translation>Duba don sabunta rubutun</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2430"/>
       <source>Show local trash</source>
-      <translation type="unfinished">Show local trash</translation>
+      <translation>Nuna sharan gida</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2435"/>
       <location filename="../mainwindow.ui" line="2438"/>
       <source>Jump to note edit panel</source>
-      <translation type="unfinished">Jump to note edit panel</translation>
+      <translation>Tsalle don lura da shirya kwamiti</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2450"/>
       <source>Manage orphaned attachments</source>
-      <translation type="unfinished">Manage orphaned attachments</translation>
+      <translation>Gudanar da abubuwan haɗin marayu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2455"/>
       <source>Jump to note subfolder panel</source>
-      <translation type="unfinished">Jump to note subfolder panel</translation>
+      <translation>Tsalle don lura da kwamiti mataimaka</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2463"/>
       <source>Jump to tags panel</source>
-      <translation type="unfinished">Jump to tags panel</translation>
+      <translation>Tsallakewa zuwa allon sanarwa</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2471"/>
       <source>Jump to note list panel</source>
-      <translation type="unfinished">Jump to note list panel</translation>
+      <translation>Tsaba zuwa bayanin kula</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2479"/>
       <source>Activate context menu</source>
-      <translation type="unfinished">Activate context menu</translation>
+      <translation>Kunna menu na ciki</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2487"/>
       <source>Import bookmarks from server</source>
-      <translation type="unfinished">Import bookmarks from server</translation>
+      <translation>Shigo da alamun shafi daga sabar</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2492"/>
       <location filename="../mainwindow.ui" line="2495"/>
       <source>Toggle full-screen mode</source>
-      <translation type="unfinished">Toggle full-screen mode</translation>
+      <translation>Sauya yanayin cikakken allo</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1867"/>
       <source>Use &amp;vertical preview layout</source>
-      <translation type="unfinished">Use &amp;vertical preview layout</translation>
+      <translation>Yi amfani da &amp;tsinkayen samfoti a tsaye</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1870"/>
       <location filename="../mainwindow.ui" line="1873"/>
       <source>The note edit panel will be above the preview panel</source>
-      <translation type="unfinished">The note edit panel will be above the preview panel</translation>
+      <translation>Bayanin editan bayanin kula zai kasance a saman kwamitin samfoti</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1882"/>
       <source>Replace in current note</source>
-      <translation type="unfinished">Replace in current note</translation>
+      <translation>Sauya a bayanin kula na yanzu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1890"/>
       <source>Autocomplete, solve equation or open URL</source>
-      <translation type="unfinished">Autocomplete, solve equation or open URL</translation>
+      <translation>Kai tsaye, warware daidaituwa ko buɗe URL</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1893"/>
       <source>Solve a simple equation like '(2+3)*6=' in the current line</source>
-      <translation type="unfinished">Solve a simple equation like '(2+3)*6=' in the current line</translation>
+      <translation>Warware daidaitaccen mai sauƙi kamar '(2 + 3) * 6 =' a layin yanzu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1901"/>
       <source>Select note folder</source>
-      <translation type="unfinished">Select note folder</translation>
+      <translation>Zaɓi babban fayil bayanin kula</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1916"/>
       <source>Reload scripting engine</source>
-      <translation type="unfinished">Reload scripting engine</translation>
+      <translation>Sake buga rubutun injin din</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1949"/>
       <location filename="../mainwindow.ui" line="1952"/>
       <source>Open the #qownnotes IRC channel, you have to stay online to get a response</source>
-      <translation type="unfinished">Open the #qownnotes IRC channel, you have to stay online to get a response</translation>
+      <translation>Bude tashar #qownnotes IRC, dole ne ka tsaya kan layi don samun martani</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2179"/>
       <location filename="../mainwindow.ui" line="2182"/>
       <source>Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</source>
-      <translation type="unfinished">Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</translation>
+      <translation>Bude dakin Gison mai rubutu, kana bukatar asusun GitHub ko Twitter don shiga, amma zaka iya samun sakonnin layi</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="970"/>
       <source>Open chat</source>
-      <translation type="unfinished">Open chat</translation>
+      <translation>Bude hira</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="510"/>
       <source>Note operations…</source>
-      <translation type="unfinished">Note operations…</translation>
+      <translation>Bayanin lura…</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1555"/>
       <source>&amp;Print note (preview)</source>
-      <translation type="unfinished">&amp;Print note (preview)</translation>
+      <translation>&amp;Bayanin Buga (samfoti)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1961"/>
       <source>Insert headline from note filename</source>
-      <translation type="unfinished">Insert headline from note filename</translation>
+      <translation>Saka kanun labarai daga bayanin kula</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1975"/>
       <source>Use softwrap in note editor and preview</source>
-      <translation type="unfinished">Use softwrap in note editor and preview</translation>
+      <translation>Yi amfani da taushi a cikin editan bayanin kula da samfoti</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1983"/>
       <source>Show status bar</source>
-      <translation type="unfinished">Show status bar</translation>
+      <translation>Nuna mashaya halin</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1998"/>
       <source>Share note</source>
-      <translation type="unfinished">Share note</translation>
+      <translation>Raba bayanin kula</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2028"/>
       <source>Markdown cheatsheet</source>
-      <translation type="unfinished">Markdown cheatsheet</translation>
+      <translation>Markdown mai cuta</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2037"/>
       <source>Strike out text</source>
-      <translation type="unfinished">Strike out text</translation>
+      <translation>Fitar da rubutu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2048"/>
       <source>Use one column mode</source>
-      <translation type="unfinished">Use one column mode</translation>
+      <translation>Yi amfani da yanayin shafi ɗaya</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2051"/>
       <location filename="../mainwindow.ui" line="2054"/>
       <source>Use a one column minimal mode (like NVAlt)</source>
-      <translation type="unfinished">Use a one column minimal mode (like NVAlt)</translation>
+      <translation>Yi amfani da yanayin shafi ɗaya kaɗan (kamar NVAlt)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2066"/>
       <source>Show menu bar</source>
-      <translation type="unfinished">Show menu bar</translation>
+      <translation>Nuna mashaya menu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2078"/>
       <source>Split note at cursor position</source>
-      <translation type="unfinished">Split note at cursor position</translation>
+      <translation>Raba bayanin kula a siginan siginan kwamfuta</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2098"/>
       <source>Donate</source>
-      <translation type="unfinished">Donate</translation>
+      <translation>Ba da gudummawa</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2119"/>
       <source>Import notes from Evernote</source>
-      <translation type="unfinished">Import notes from Evernote</translation>
+      <translation>Shigo da bayanan kula daga Evernote</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2584"/>
       <source>Note was removed externally!</source>
-      <translation type="unfinished">Note was removed externally!</translation>
+      <translation>An cire bayanin kula a waje!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2585"/>
       <source>Current note was removed outside of this application!
 Restore current note?</source>
-      <translation type="unfinished">Current note was removed outside of this application!
-Restore current note?</translation>
+      <translation>An cire bayanin kula na yanzu a wajen wannan aikace-aikacen!
+Dawo da bayanin kula na yanzu?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4941"/>
       <location filename="../mainwindow.cpp" line="6362"/>
       <location filename="../mainwindow.cpp" line="9358"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>&amp;Soke</translation>
     </message>
     <message numerus="yes">
       <source>stored %n note(s) to disk</source>
@@ -1816,22 +1816,22 @@ Restore current note?</translation>
     <message>
       <location filename="../mainwindow.cpp" line="2809"/>
       <source>new version %1 available</source>
-      <translation type="unfinished">new version %1 available</translation>
+      <translation>sabon fasalin %1 akwai</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2929"/>
       <source>Abort</source>
-      <translation type="unfinished">Abort</translation>
+      <translation>Zubar da ciki</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2929"/>
       <source>Loading notes…</source>
-      <translation type="unfinished">Loading notes…</translation>
+      <translation>Ana loda bayanin kula…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3132"/>
       <source>Delete conflicted database copies</source>
-      <translation type="unfinished">Delete conflicted database copies</translation>
+      <translation>Share kwafin bayanan da aka samu rikicewa</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3157"/>
@@ -1844,17 +1844,17 @@ Restore current note?</translation>
     <message>
       <location filename="../mainwindow.cpp" line="3290"/>
       <source>Please select the folder where your notes will get stored</source>
-      <translation type="unfinished">Please select the folder where your notes will get stored</translation>
+      <translation>Da fatan za selecti babban fayil ɗin inda bayananku zasu adana</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3317"/>
       <source>No folder was selected</source>
-      <translation type="unfinished">No folder was selected</translation>
+      <translation>Ba a zabi fayil ba</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3319"/>
       <source>You have to select your ownCloud notes folder to make this software work!</source>
-      <translation type="unfinished">You have to select your ownCloud notes folder to make this software work!</translation>
+      <translation>Dole ne a zaɓi babban fayil ɗin bayanin kula naka don sa wannan software ta yi aiki!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3321"/>
@@ -1869,7 +1869,7 @@ Restore current note?</translation>
     <message>
       <location filename="../mainwindow.cpp" line="3539"/>
       <source>Remove current note</source>
-      <translation type="unfinished">Remove current note</translation>
+      <translation>Cire bayanin kula na yanzu</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3540"/>
@@ -1884,17 +1884,17 @@ Restore current note?</translation>
     <message>
       <location filename="../mainwindow.cpp" line="3892"/>
       <source>Note can't be decrypted!</source>
-      <translation type="unfinished">Note can't be decrypted!</translation>
+      <translation>Lura ba za a iya ɗauka ba!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3893"/>
       <source>It seems that your password is not valid!</source>
-      <translation type="unfinished">It seems that your password is not valid!</translation>
+      <translation>Da alama cewa kalmar sirri ba ta da amfani!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4048"/>
       <source>Remove selected notes</source>
-      <translation type="unfinished">Remove selected notes</translation>
+      <translation>Cire bayanan da aka zaba</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4050"/>
@@ -1914,7 +1914,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="4129"/>
       <location filename="../mainwindow.cpp" line="9522"/>
       <source>Remove selected folders</source>
-      <translation type="unfinished">Remove selected folders</translation>
+      <translation>Cire manyan fayilolin da aka zaɓa</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4130"/>
@@ -1932,7 +1932,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="4160"/>
       <source>Remove selected tags</source>
-      <translation type="unfinished">Remove selected tags</translation>
+      <translation>Cire alamun da aka zaba</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4161"/>
@@ -1946,7 +1946,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="4215"/>
       <location filename="../mainwindow.cpp" line="8500"/>
       <source>Move selected notes</source>
-      <translation type="unfinished">Move selected notes</translation>
+      <translation>Matsa bayanan da aka zaɓa</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4216"/>
@@ -1960,7 +1960,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="4308"/>
       <location filename="../mainwindow.cpp" line="8584"/>
       <source>Copy selected notes</source>
-      <translation type="unfinished">Copy selected notes</translation>
+      <translation>Kwafi bayanan da aka zaɓa</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4309"/>
@@ -2000,27 +2000,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="4608"/>
       <source>Restart application</source>
-      <translation type="unfinished">Restart application</translation>
+      <translation>Sake kunna aikace-aikace</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4614"/>
       <source>You may need to restart the application manually to let the changes take effect.</source>
-      <translation type="unfinished">You may need to restart the application manually to let the changes take effect.</translation>
+      <translation>Wataƙila kuna buƙatar sake kunna aikace-aikacen da hannu don bari canje-canje ya ci nasara.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4619"/>
       <source>You may need to restart the application to let the changes take effect.</source>
-      <translation type="unfinished">You may need to restart the application to let the changes take effect.</translation>
+      <translation>Wataƙila kuna buƙatar sake kunna aikace-aikacen don bari canje-canje ya ci nasara.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4621"/>
       <source>Restart</source>
-      <translation type="unfinished">Restart</translation>
+      <translation>Sake kunnawa</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4840"/>
       <source>PDF files</source>
-      <translation type="unfinished">PDF files</translation>
+      <translation>Fayilolin PDF</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5136"/>
@@ -2033,7 +2033,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="5604"/>
       <source>Note was not found</source>
-      <translation type="unfinished">Note was not found</translation>
+      <translation>Ba a samo bayanin kula ba</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5605"/>
@@ -2043,84 +2043,84 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="5858"/>
       <source>Note versions are currently loaded from your ownCloud server</source>
-      <translation type="unfinished">Note versions are currently loaded from your ownCloud server</translation>
+      <translation>Ana ɗaukar nau'ikan bayanin kula a halin yanzu daga uwar garken naku</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5873"/>
       <source>Trashed notes are currently loaded from your ownCloud server</source>
-      <translation type="unfinished">Trashed notes are currently loaded from your ownCloud server</translation>
+      <translation>Rubuce-rubucen da aka fallasa ana ɗaukar su yanzu daga uwar garken naku</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5939"/>
       <source>Copy code block</source>
-      <translation type="unfinished">Copy code block</translation>
+      <translation>Kwafe lambar toshewa</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5958"/>
       <source>Print selected text</source>
-      <translation type="unfinished">Print selected text</translation>
+      <translation>Buga rubutun da aka zaba</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5964"/>
       <source>Print selected text (preview)</source>
-      <translation type="unfinished">Print selected text (preview)</translation>
+      <translation>Buga rubutun da aka zaba (samfoti)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5980"/>
       <source>Export selected text as PDF</source>
-      <translation type="unfinished">Export selected text as PDF</translation>
+      <translation>Fitar da zaɓaɓɓen rubutu azaman PDF</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5986"/>
       <source>Export selected text as PDF (preview)</source>
-      <translation type="unfinished">Export selected text as PDF (preview)</translation>
+      <translation>Aika saƙon da aka zaɓa azaman PDF (samfoti)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6168"/>
       <source>Image files</source>
-      <translation type="unfinished">Image files</translation>
+      <translation>Fayilolin hoto</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6358"/>
       <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
-      <translation type="unfinished">Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</translation>
+      <translation>Bayaninku za a karba kuma a adana shi azaman rubutu a sarari. Ka tuna cewa bayanin da ba a ɓoye ba zai yiwu a daidaita saiti zuwa uwar garken ka kuma za'a iya fallasa rubutu mai ƙima! &lt;br /&gt; Shin kana son murƙushe bayanin kula?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6445"/>
       <source>Markdown files</source>
-      <translation type="unfinished">Markdown files</translation>
+      <translation>Alama fayiloli</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6500"/>
       <source>Bookmarked note position at slot %1</source>
-      <translation type="unfinished">Bookmarked note position at slot %1</translation>
+      <translation>Alamar bayanin kula a Alamar %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6516"/>
       <source>Jumped to bookmark position at slot %1</source>
-      <translation type="unfinished">Jumped to bookmark position at slot %1</translation>
+      <translation>An tsallake zuwa alamar shafi a matakin farko %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6736"/>
       <location filename="../mainwindow.cpp" line="6806"/>
       <source>Inserting image</source>
-      <translation type="unfinished">Inserting image</translation>
+      <translation>Saka hoto</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6741"/>
       <location filename="../mainwindow.cpp" line="6810"/>
       <source>Done inserting image</source>
-      <translation type="unfinished">Done inserting image</translation>
+      <translation>Anyi shigar da hoto</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6743"/>
       <source>Inserting attachment</source>
-      <translation type="unfinished">Inserting attachment</translation>
+      <translation>Saka abin da aka makala</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6748"/>
       <source>Done inserting attachment</source>
-      <translation type="unfinished">Done inserting attachment</translation>
+      <translation>An gama shigar da abin da aka makala</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="6760"/>
@@ -2149,69 +2149,69 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="6793"/>
       <source>Saving temporary image</source>
-      <translation type="unfinished">Saving temporary image</translation>
+      <translation>Ajiye hoto na ɗan lokaci</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6813"/>
       <source>Temporary file can't be opened</source>
-      <translation type="unfinished">Temporary file can't be opened</translation>
+      <translation>Ba za a iya buɗe fayil na wucin gadi ba</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6854"/>
       <source>Downloading %1</source>
-      <translation type="unfinished">Downloading %1</translation>
+      <translation>Sauke %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7035"/>
       <source>Reset font size to %1 pt</source>
       <comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
-      <translation type="unfinished">Reset font size to %1 pt</translation>
+      <translation>Sake saita sigar font zuwa %1 pt</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7853"/>
       <source>Remove tag '%1' from the current note</source>
-      <translation type="unfinished">Remove tag '%1' from the current note</translation>
+      <translation>Cire alamar '%1' daga bayanin da ke yanzu</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7855"/>
       <source>Remove tag '%1' from the selected notes</source>
-      <translation type="unfinished">Remove tag '%1' from the selected notes</translation>
+      <translation>Cire alamar '%1' daga bayanan da aka zaɓa</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8058"/>
       <source>Rename tag</source>
-      <translation type="unfinished">Rename tag</translation>
+      <translation>Sake suna</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8059"/>
       <source>Assign color</source>
-      <translation type="unfinished">Assign color</translation>
+      <translation>Sanya launi</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8060"/>
       <source>Disable color</source>
-      <translation type="unfinished">Disable color</translation>
+      <translation>Musaki launi</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8064"/>
       <source>&amp;Move tags to…</source>
-      <translation type="unfinished">&amp;Move tags to…</translation>
+      <translation>&amp;Matsa alamun zuwa…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8283"/>
       <source>Move to the root</source>
       <comment>to move a tag to the current tag in the tag context menu</comment>
-      <translation type="unfinished">Move to the root</translation>
+      <translation>Matsa zuwa tushe</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8726"/>
       <source>An url was opened at the current cursor position</source>
-      <translation type="unfinished">An url was opened at the current cursor position</translation>
+      <translation>An buɗe url a wurin siginan kwamfuta na yanzu</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8827"/>
       <source>No equation was found in front of the cursor</source>
-      <translation type="unfinished">No equation was found in front of the cursor</translation>
+      <translation>Ba a sami daidaituwa ba a gaban siginan kwamfuta</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8844"/>
@@ -2221,23 +2221,23 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="8945"/>
       <source>The scripting engine was reloaded</source>
-      <translation type="unfinished">The scripting engine was reloaded</translation>
+      <translation>An sake buga injin din rubutun</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8981"/>
       <source>HTML files</source>
-      <translation type="unfinished">HTML files</translation>
+      <translation>Fayilolin HTML</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9173"/>
       <location filename="../mainwindow.cpp" line="9341"/>
       <source>Rename note</source>
-      <translation type="unfinished">Rename note</translation>
+      <translation>Sake suna bayanin kula</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9174"/>
       <source>Allows you to rename the filename of the note</source>
-      <translation type="unfinished">Allows you to rename the filename of the note</translation>
+      <translation>Yana ba ku damar sake sunaye sunan menu na bayanin kula</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9186"/>
@@ -2252,70 +2252,70 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="9216"/>
       <source>Move notes to subfolder…</source>
-      <translation type="unfinished">Move notes to subfolder…</translation>
+      <translation>Matsar da bayanin kula zuwa manyan fayiloli…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9220"/>
       <source>Copy notes to subfolder…</source>
-      <translation type="unfinished">Copy notes to subfolder…</translation>
+      <translation>Kwafa bayanin kula zuwa manyan fayiloli…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9228"/>
       <source>&amp;Tag selected notes with…</source>
-      <translation type="unfinished">&amp;Tag selected notes with…</translation>
+      <translation>&amp;Yiwa abubuwan da aka zaɓa tare da…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9250"/>
       <source>&amp;Remove tag from selected notes…</source>
-      <translation type="unfinished">&amp;Remove tag from selected notes…</translation>
+      <translation>&amp;Cire alamar daga bayanan da aka zaba…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9341"/>
       <source>Name:</source>
-      <translation type="unfinished">Name:</translation>
+      <translation>Suna:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9353"/>
       <source>Note renaming not enabled!</source>
-      <translation type="unfinished">Note renaming not enabled!</translation>
+      <translation>Bayanin renaming ba a kunna ba!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9521"/>
       <source>Rename subfolder</source>
-      <translation type="unfinished">Rename subfolder</translation>
+      <translation>Sake suna da babban fayil</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10076"/>
       <source>Create new workspace</source>
-      <translation type="unfinished">Create new workspace</translation>
+      <translation>Newirƙiri sabon filin aiki</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10076"/>
       <location filename="../mainwindow.cpp" line="10334"/>
       <source>Workspace name:</source>
-      <translation type="unfinished">Workspace name:</translation>
+      <translation>Sunan Wurin aiki:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10198"/>
       <source>full</source>
       <comment>full workspace</comment>
-      <translation type="unfinished">full</translation>
+      <translation>cike</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10205"/>
       <source>minimal</source>
       <comment>minimal workspace</comment>
-      <translation type="unfinished">minimal</translation>
+      <translation>kadan</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10297"/>
       <source>Remove the current workspace?</source>
-      <translation type="unfinished">Remove the current workspace?</translation>
+      <translation>Cire filin aiki na yanzu?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10334"/>
       <source>Rename workspace</source>
-      <translation type="unfinished">Rename workspace</translation>
+      <translation>Suna masu aiki</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="10469"/>
@@ -2329,12 +2329,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="10694"/>
       <source>Select file to insert</source>
-      <translation type="unfinished">Select file to insert</translation>
+      <translation>Zaɓi fayil don sakawa</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10727"/>
       <source>Disallow all note editing</source>
-      <translation type="unfinished">Disallow all note editing</translation>
+      <translation>Izinin duk bayanin kula</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10873"/>
@@ -2482,39 +2482,39 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="7189"/>
       <source>show notes from all note subfolders (%1)</source>
-      <translation type="unfinished">show notes from all note subfolders (%1)</translation>
+      <translation>nuna bayanin kula daga duk manyan fayilolin rubutu (%1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7208"/>
       <source>show notes in note root folder (%1)</source>
-      <translation type="unfinished">show notes in note root folder (%1)</translation>
+      <translation>nuna bayanin kula a babban fayil na bayanin kula (%1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="316"/>
       <location filename="../mainwindow.cpp" line="683"/>
       <location filename="../mainwindow.cpp" line="7216"/>
       <source>Note folder</source>
-      <translation type="unfinished">Note folder</translation>
+      <translation>Akwatin bayanin kula</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8440"/>
       <source>Copy to note folder</source>
-      <translation type="unfinished">Copy to note folder</translation>
+      <translation>Kwafa don bayanin fayil</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8441"/>
       <source>Move to note folder</source>
-      <translation type="unfinished">Move to note folder</translation>
+      <translation>Matsa zuwa bayanin fayil</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8442"/>
       <source>Copy to this subfolder</source>
-      <translation type="unfinished">Copy to this subfolder</translation>
+      <translation>Kwafa zuwa wannan babban fayil</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8443"/>
       <source>Move to this subfolder</source>
-      <translation type="unfinished">Move to this subfolder</translation>
+      <translation>Matsa zuwa wannan babban fayil</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="8494"/>
@@ -2557,113 +2557,113 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="9269"/>
       <source>Open note in external editor</source>
-      <translation type="unfinished">Open note in external editor</translation>
+      <translation>Buɗe bayanin kula a cikin edita na waje</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9273"/>
       <source>Show note in file manager</source>
-      <translation type="unfinished">Show note in file manager</translation>
+      <translation>Nuna bayanin kula a cikin mai sarrafa fayil</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9354"/>
       <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
-      <translation type="unfinished">If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</translation>
+      <translation>Idan kana son sake sunan bayanin kula to dole ne a kunna zabin don ba da damar bayanin kula ya bambanta da kan labarin.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9520"/>
       <source>New subfolder</source>
-      <translation type="unfinished">New subfolder</translation>
+      <translation>Sabuwar folda</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9524"/>
       <source>Show folder in file manager</source>
-      <translation type="unfinished">Show folder in file manager</translation>
+      <translation>Nuna babban fayil a mai sarrafa fayil</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9560"/>
       <source>Create a new folder</source>
-      <translation type="unfinished">Create a new folder</translation>
+      <translation>Createirƙiri sabon babban fayil</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9560"/>
       <source>Folder name:</source>
-      <translation type="unfinished">Folder name:</translation>
+      <translation>Sunan babban fayil:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7147"/>
       <source>show all untagged notes (%1)</source>
-      <translation type="unfinished">show all untagged notes (%1)</translation>
+      <translation>nuna duk bayanan da ba a kwance ba (%1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7150"/>
       <source>Untagged notes</source>
-      <translation type="unfinished">Untagged notes</translation>
+      <translation>Bayanan kula mara misaltuwa</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8982"/>
       <source>Export current note as HTML file</source>
-      <translation type="unfinished">Export current note as HTML file</translation>
+      <translation>Fitarwa bayanin kula na yanzu azaman fayil na HTML</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4793"/>
       <source>Page size</source>
-      <translation type="unfinished">Page size</translation>
+      <translation>Girman shafi</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1034"/>
       <source>quit toolbar</source>
-      <translation type="unfinished">quit toolbar</translation>
+      <translation>daina kayan aiki na kayan aiki</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4793"/>
       <source>Page size:</source>
-      <translation type="unfinished">Page size:</translation>
+      <translation>Girman shafi:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4909"/>
       <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
-      <translation type="unfinished">QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</translation>
+      <translation>QOwnNotes zaiyi amfani da bayanan rashin amfani, wanda ke taimakawa yanke shawarar menene sassan QOwnNotes don inganta gaba da kuma ganowa da gyara kwari. Kuna iya kashe wannan ɗabi'ar a cikin saitunan.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4913"/>
       <source>&amp;Ok</source>
-      <translation type="unfinished">&amp;Ok</translation>
+      <translation>&amp;Ko</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9178"/>
       <source>&amp;Remove notes</source>
-      <translation type="unfinished">&amp;Remove notes</translation>
+      <translation>&amp;Cire bayanan kula</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5922"/>
       <source>&amp;Link selected text</source>
-      <translation type="unfinished">&amp;Link selected text</translation>
+      <translation>&amp;Haɗi zaɓi rubutu</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="955"/>
       <source>Your tasks are being loaded from your server</source>
-      <translation type="unfinished">Your tasks are being loaded from your server</translation>
+      <translation>Ana ɗaukar ayyukan ku daga sabar ku</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2516"/>
       <source>Current note was modified externally</source>
-      <translation type="unfinished">Current note was modified externally</translation>
+      <translation>Yanzu an gyara bayanin kula na waje</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2598"/>
       <location filename="../mainwindow.cpp" line="5373"/>
       <source>Stored current note to disk</source>
-      <translation type="unfinished">Stored current note to disk</translation>
+      <translation>Bayanin kula na yanzu zuwa faifai</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2617"/>
       <source>Note was modified externally: %1</source>
-      <translation type="unfinished">Note was modified externally: %1</translation>
+      <translation>Bayanin kula an gyara shi waje: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2638"/>
       <source>Notes directory was modified externally</source>
-      <translation type="unfinished">Notes directory was modified externally</translation>
+      <translation>Bayanan kula an lura da bayanin kula na waje</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="2705"/>
@@ -2682,7 +2682,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="7122"/>
       <location filename="../mainwindow.cpp" line="7192"/>
       <source>All notes</source>
-      <translation type="unfinished">All notes</translation>
+      <translation>Duk bayanan kula</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8050"/>
@@ -2692,137 +2692,137 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="8099"/>
       <source>Tag could not be created!</source>
-      <translation type="unfinished">Tag could not be created!</translation>
+      <translation>Ba a iya kirkirar tag ba!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8284"/>
       <source>Move to this tag</source>
-      <translation type="unfinished">Move to this tag</translation>
+      <translation>Matsa zuwa wannan alamar</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8334"/>
       <source>Tag this</source>
-      <translation type="unfinished">Tag this</translation>
+      <translation>Yiwa wannan alama</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8367"/>
       <source>Cannot move tag '%1' to this tag</source>
-      <translation type="unfinished">Cannot move tag '%1' to this tag</translation>
+      <translation>Ba za a iya motsa alamar '%1' zuwa wannan alamar ba</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8383"/>
       <source>Moved tag '%1' to new tag</source>
-      <translation type="unfinished">Moved tag '%1' to new tag</translation>
+      <translation>Alamar da aka motsa '%1' zuwa sabon alama</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7378"/>
       <source>show all notes tagged with '%1' (%2)</source>
-      <translation type="unfinished">show all notes tagged with '%1' (%2)</translation>
+      <translation>a nuna duk bayanan da aka yiwa alama da '%1' (%2)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8061"/>
       <source>&amp;Remove tags</source>
-      <translation type="unfinished">&amp;Remove tags</translation>
+      <translation>&amp;Cire alamun</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4936"/>
       <source>No selected todo lists!</source>
-      <translation type="unfinished">No selected todo lists!</translation>
+      <translation>Babu zabi jerin lambobi!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="654"/>
       <source>Subfolders</source>
-      <translation type="unfinished">Subfolders</translation>
+      <translation>Maɓaluna</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="665"/>
       <source>Tags</source>
-      <translation type="unfinished">Tags</translation>
+      <translation>Alamu</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="674"/>
       <source>Note search</source>
-      <translation type="unfinished">Note search</translation>
+      <translation>Neman bayanin kula</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="692"/>
       <source>Note list</source>
-      <translation type="unfinished">Note list</translation>
+      <translation>Jerin bayanin kula</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="716"/>
       <source>Note edit</source>
-      <translation type="unfinished">Note edit</translation>
+      <translation>Bayanin lura</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="727"/>
       <source>Note tags</source>
-      <translation type="unfinished">Note tags</translation>
+      <translation>Alamomin lura</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="738"/>
       <source>Note preview</source>
-      <translation type="unfinished">Note preview</translation>
+      <translation>Bayanin lura</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="745"/>
       <source>Log</source>
-      <translation type="unfinished">Log</translation>
+      <translation>Shiga ciki</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="754"/>
       <source>Scripting</source>
-      <translation type="unfinished">Scripting</translation>
+      <translation>Yin rubutun</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1001"/>
       <source>formatting toolbar</source>
-      <translation type="unfinished">formatting toolbar</translation>
+      <translation>tsarin kayan aiki</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1010"/>
       <source>inserting toolbar</source>
-      <translation type="unfinished">inserting toolbar</translation>
+      <translation>saka kayan aiki</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1017"/>
       <source>encryption toolbar</source>
-      <translation type="unfinished">encryption toolbar</translation>
+      <translation>kayan aikin boye-boye</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1024"/>
       <source>window toolbar</source>
-      <translation type="unfinished">window toolbar</translation>
+      <translation>toolbar taga</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1029"/>
       <source>custom action toolbar</source>
-      <translation type="unfinished">custom action toolbar</translation>
+      <translation>kayan aiki na yau da kullun</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1049"/>
       <source>Workspace selector</source>
-      <translation type="unfinished">Workspace selector</translation>
+      <translation>Zaɓin fagen aiki</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1188"/>
       <source>Show %1 panel</source>
-      <translation type="unfinished">Show %1 panel</translation>
+      <translation>Nuna %1 panel</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1231"/>
       <source>Show %1</source>
-      <translation type="unfinished">Show %1</translation>
+      <translation>Nuna %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1548"/>
       <source>Leave distraction free mode</source>
-      <translation type="unfinished">Leave distraction free mode</translation>
+      <translation>Bar yanayin damuwa</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2051"/>
       <source>show notes in folder '%1' (%2)</source>
-      <translation type="unfinished">show notes in folder '%1' (%2)</translation>
+      <translation>nuna bayanin kula a babban fayil '%1' (%2)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2091"/>
@@ -2837,43 +2837,43 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="2257"/>
       <source>Toolbar could not be loaded without name</source>
-      <translation type="unfinished">Toolbar could not be loaded without name</translation>
+      <translation>Ba za a iya shigar da kayan aiki ba tare da suna</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2542"/>
       <source>Overwriting external changes of: %1</source>
-      <translation type="unfinished">Overwriting external changes of: %1</translation>
+      <translation>Rubuta canje-canje na waje na: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2564"/>
       <source>Loading external changes from: %1</source>
-      <translation type="unfinished">Loading external changes from: %1</translation>
+      <translation>Loading canje-canje na waje daga: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2599"/>
       <location filename="../mainwindow.cpp" line="5374"/>
       <source>Current note could not be stored to disk</source>
-      <translation type="unfinished">Current note could not be stored to disk</translation>
+      <translation>Ba za a iya ajiye bayanin na yanzu ba zuwa faifai</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2763"/>
       <source>Read-only</source>
-      <translation type="unfinished">Read-only</translation>
+      <translation>Karanta kawai</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2764"/>
       <source>Note editing is disabled, click to enable</source>
-      <translation type="unfinished">Note editing is disabled, click to enable</translation>
+      <translation>Bayanin lura ya kasa aiki, latsa don kunna</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2783"/>
       <source>Line numbers</source>
-      <translation type="unfinished">Line numbers</translation>
+      <translation>Lambobin layi</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2793"/>
       <source>Click here to see what has changed and to be able to update to the latest version</source>
-      <translation type="unfinished">Click here to see what has changed and to be able to update to the latest version</translation>
+      <translation>Danna nan don ganin abin da ya canza kuma ya sami damar sabuntawa zuwa sabuwar sigar</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3134"/>
@@ -2902,7 +2902,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="5435"/>
       <source>Note headline</source>
-      <translation type="unfinished">Note headline</translation>
+      <translation>Bayanin kula</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5928"/>
@@ -2913,7 +2913,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="6866"/>
       <source>Downloading images finished</source>
-      <translation type="unfinished">Downloading images finished</translation>
+      <translation>Sauke hotunan an gama</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7008"/>
@@ -3025,7 +3025,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/notediffdialog.cpp" line="38"/>
       <source>No</source>
-      <translation type="unfinished">No</translation>
+      <translation>A'a</translation>
     </message>
   </context>
   <context>
@@ -3033,27 +3033,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="237"/>
       <source>Copy image file path</source>
-      <translation type="unfinished">Copy image file path</translation>
+      <translation>Kwafi hanyar fayil ɗin hoto</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="241"/>
       <source>Copy link location</source>
-      <translation type="unfinished">Copy link location</translation>
+      <translation>Kwafi hanyar haɗin mahaɗin</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="244"/>
       <source>Export generated raw HTML</source>
-      <translation type="unfinished">Export generated raw HTML</translation>
+      <translation>Ana fitarwa da ƙarancin HTML</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="277"/>
       <source>HTML files</source>
-      <translation type="unfinished">HTML files</translation>
+      <translation>Fayilolin HTML</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="278"/>
       <source>Export preview as raw HTML file</source>
-      <translation type="unfinished">Export preview as raw HTML file</translation>
+      <translation>Fitowar fitarwa azaman fayil na HTML mai inganci</translation>
     </message>
   </context>
   <context>
@@ -3061,27 +3061,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="14"/>
       <source>Orphaned attachments</source>
-      <translation type="unfinished">Orphaned attachments</translation>
+      <translation>Abubuwan da aka makala marayu</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="54"/>
       <source>Delete selected attachments</source>
-      <translation type="unfinished">Delete selected attachments</translation>
+      <translation>Share abubuwan da aka zaba</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="57"/>
       <source>Delete</source>
-      <translation type="unfinished">Delete</translation>
+      <translation>Share</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="86"/>
       <source>Add selected attachments to note</source>
-      <translation type="unfinished">Add selected attachments to note</translation>
+      <translation>Sanya aka makala wadanda aka zaba don lura</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="89"/>
       <source>Add to note</source>
-      <translation type="unfinished">Add to note</translation>
+      <translation>Toara bayani</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="100"/>
@@ -3096,32 +3096,32 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="162"/>
       <source>File size:</source>
-      <translation type="unfinished">File size:</translation>
+      <translation>Girman fayil:</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="182"/>
       <source>File type:</source>
-      <translation type="unfinished">File type:</translation>
+      <translation>Nau'in fayil:</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="199"/>
       <source>File path:</source>
-      <translation type="unfinished">File path:</translation>
+      <translation>Hanyar fayil:</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="229"/>
       <source>Attachments that are not used in notes:</source>
-      <translation type="unfinished">Attachments that are not used in notes:</translation>
+      <translation>Haɗe-haɗe waɗanda ba a amfani da su cikin bayanin kula ba:</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="60"/>
       <source>Last modified at %1</source>
-      <translation type="unfinished">Last modified at %1</translation>
+      <translation>Anyi gyaran ƙarshe na %1</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="140"/>
       <source>Delete selected files</source>
-      <translation type="unfinished">Delete selected files</translation>
+      <translation>Share fayilolin da aka zaɓa</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="141"/>
@@ -3137,42 +3137,42 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="14"/>
       <source>Orphaned images</source>
-      <translation type="unfinished">Orphaned images</translation>
+      <translation>Hotunan marayu</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="80"/>
       <source>Delete selected images</source>
-      <translation type="unfinished">Delete selected images</translation>
+      <translation>Share hotunan da aka zaba</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="83"/>
       <source>Delete</source>
-      <translation type="unfinished">Delete</translation>
+      <translation>Share</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="94"/>
       <source>Add selected images to note</source>
-      <translation type="unfinished">Add selected images to note</translation>
+      <translation>Sanya hotunan da aka zaba don lura</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="97"/>
       <source>Add to note</source>
-      <translation type="unfinished">Add to note</translation>
+      <translation>Toara bayani</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="146"/>
       <source>Images that are not used in notes:</source>
-      <translation type="unfinished">Images that are not used in notes:</translation>
+      <translation>Hotunan da ba a amfani da su cikin bayanin kula ba:</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.cpp" line="56"/>
       <source>Last modified at %1</source>
-      <translation type="unfinished">Last modified at %1</translation>
+      <translation>Anyi gyaran ƙarshe na %1</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.cpp" line="122"/>
       <source>Delete selected files</source>
-      <translation type="unfinished">Delete selected files</translation>
+      <translation>Share fayilolin da aka zaɓa</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
@@ -3188,22 +3188,22 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="189"/>
       <source>Username / password error</source>
-      <translation type="unfinished">Username / password error</translation>
+      <translation>Sunan mai amfani / kuskuren kalmar sirri</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="190"/>
       <source>Your calendar username or password is incorrect!</source>
-      <translation type="unfinished">Your calendar username or password is incorrect!</translation>
+      <translation>Sunan kalandar kalandar ko kalmar wucewa ba daidai bane!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="496"/>
       <source>API app version too low</source>
-      <translation type="unfinished">API app version too low</translation>
+      <translation>Appa'idar API ta ƙasa tayi ƙasa da ƙasa</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="497"/>
       <source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
-      <translation type="unfinished">Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</translation>
+      <translation>Da fatan za a yi la’akari da sabuntar kayanka na QOwnNotesAPI akan sabar ka, sigar app dinka% 1 tayi kasa sosai kuma tana iya haifarda matsala a QOwnNotes.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="984"/>
@@ -3233,58 +3233,58 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="1065"/>
       <source>Done with loading note versions</source>
-      <translation type="unfinished">Done with loading note versions</translation>
+      <translation>Anyi tare da juzu'in bayanin kula</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1104"/>
       <source>No versions found</source>
-      <translation type="unfinished">No versions found</translation>
+      <translation>Babu sigar da aka samo</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1105"/>
       <source>There are no versions for this note or the note wasn't found on the server.</source>
-      <translation type="unfinished">There are no versions for this note or the note wasn't found on the server.</translation>
+      <translation>Babu sigogin wannan bayanin ko ba'a samo bayanin a kan sabar ba.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1126"/>
       <source>Done with loading trashed notes</source>
-      <translation type="unfinished">Done with loading trashed notes</translation>
+      <translation>An gama tare da bayanan bayanan da aka fallasa</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1167"/>
       <source>No trashed notes</source>
-      <translation type="unfinished">No trashed notes</translation>
+      <translation>No trashed notes</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1168"/>
       <source>No trashed notes were found on the server.</source>
-      <translation type="unfinished">No trashed notes were found on the server.</translation>
+      <translation>Babu bayanin da aka tarar da aka gano akan sabar.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1191"/>
       <location filename="../services/owncloudservice.cpp" line="1217"/>
       <source>Error while loading todo lists!</source>
-      <translation type="unfinished">Error while loading todo lists!</translation>
+      <translation>Kuskure yayin loda jerin lambobi!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1192"/>
       <source>Your CalDAV server didn't reply anything!</source>
-      <translation type="unfinished">Your CalDAV server didn't reply anything!</translation>
+      <translation>Unguwa ta CalDAV bata amsa komai ba!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1218"/>
       <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation type="unfinished">Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</translation>
+      <translation>Saƙon kuskure daga uwar garken CalDAV ɗin: &lt;strong&gt;%1 &lt;/strong&gt;</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1868"/>
       <source>No bookmarks</source>
-      <translation type="unfinished">No bookmarks</translation>
+      <translation>Babu alamun shafi</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1869"/>
       <source>No bookmarks were found on the server.</source>
-      <translation type="unfinished">No bookmarks were found on the server.</translation>
+      <translation>Ba a sami alamun shafi ba a kan sabar.</translation>
     </message>
   </context>
   <context>
@@ -3292,7 +3292,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/passworddialog.ui" line="14"/>
       <source>Please enter your password</source>
-      <translation type="unfinished">Please enter your password</translation>
+      <translation>Da fatan za a shigar da kalmar wucewa</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="24"/>
@@ -3345,7 +3345,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../entities/note.cpp" line="2508"/>
       <source>Note filename changed</source>
-      <translation type="unfinished">Note filename changed</translation>
+      <translation>Bayanin kula filename ya canza</translation>
     </message>
     <message numerus="yes">
       <location filename="../entities/note.cpp" line="2509"/>
@@ -3367,27 +3367,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../helpers/toolbarcontainer.cpp" line="37"/>
       <location filename="../helpers/toolbarcontainer.cpp" line="112"/>
       <source>Unknown action %1</source>
-      <translation type="unfinished">Unknown action %1</translation>
+      <translation>Ba a San matakin %1</translation>
     </message>
     <message>
       <location filename="../helpers/toolbarcontainer.cpp" line="94"/>
       <source>Workspace selector</source>
-      <translation type="unfinished">Workspace selector</translation>
+      <translation>Zaɓin fagen aiki</translation>
     </message>
     <message>
       <location filename="../utils/gui.cpp" line="267"/>
       <source>Don't ask again!</source>
-      <translation type="unfinished">Don't ask again!</translation>
+      <translation>Kar a sake tambaya!</translation>
     </message>
     <message>
       <location filename="../utils/gui.cpp" line="267"/>
       <source>Don't show again!</source>
-      <translation type="unfinished">Don't show again!</translation>
+      <translation>Kar a sake nunawa!</translation>
     </message>
     <message>
       <location filename="../utils/git.cpp" line="74"/>
       <source>Command failed!</source>
-      <translation type="unfinished">Command failed!</translation>
+      <translation>Umarni ya kasa!</translation>
     </message>
     <message>
       <location filename="../utils/git.cpp" line="75"/>
@@ -3400,12 +3400,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="406"/>
       <source>Note editing disabled</source>
-      <translation type="unfinished">Note editing disabled</translation>
+      <translation>Bayanin lura</translation>
     </message>
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="407"/>
       <source>Note editing is currently disabled, do you want to allow again?</source>
-      <translation type="unfinished">Note editing is currently disabled, do you want to allow again?</translation>
+      <translation>Bayanan kula bayanin kula yana da rauni, shin kuna son sake ba da izini?</translation>
     </message>
   </context>
   <context>
@@ -3413,82 +3413,82 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="53"/>
       <source>Find:</source>
-      <translation type="unfinished">Find:</translation>
+      <translation>Nemo:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="107"/>
       <source>Advanced search / replace text</source>
-      <translation type="unfinished">Advanced search / replace text</translation>
+      <translation>Bincike mai zurfi / maye gurbin rubutu</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="90"/>
       <source>Close search</source>
-      <translation type="unfinished">Close search</translation>
+      <translation>Bincike kusa</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="32"/>
       <source>Find in text</source>
-      <translation type="unfinished">Find in text</translation>
+      <translation>Nemo a rubutu</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="127"/>
       <source>Search forward</source>
-      <translation type="unfinished">Search forward</translation>
+      <translation>Neman gaba</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="63"/>
       <source>Search backward</source>
-      <translation type="unfinished">Search backward</translation>
+      <translation>Bincika baya</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="39"/>
       <source>Replace with</source>
-      <translation type="unfinished">Replace with</translation>
+      <translation>Sauya tare da</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="80"/>
       <source>Replace:</source>
-      <translation type="unfinished">Replace:</translation>
+      <translation>Sauya:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="193"/>
       <source>Plain text</source>
-      <translation type="unfinished">Plain text</translation>
+      <translation>Rubutun rubutu</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="198"/>
       <source>Whole words</source>
-      <translation type="unfinished">Whole words</translation>
+      <translation>Gaba daya kalmomi</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="203"/>
       <source>Regular expression</source>
-      <translation type="unfinished">Regular expression</translation>
+      <translation>Magana ta yau da kullun</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="224"/>
       <source>Replace one text occurrence</source>
-      <translation type="unfinished">Replace one text occurrence</translation>
+      <translation>Sauya abin daya faru</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="227"/>
       <source>Replace</source>
-      <translation type="unfinished">Replace</translation>
+      <translation>Sauya</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="237"/>
       <source>Replace all text occurrences</source>
-      <translation type="unfinished">Replace all text occurrences</translation>
+      <translation>Sauya duk abin da ya faru na rubutu</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="240"/>
       <source>Replace all</source>
-      <translation type="unfinished">Replace all</translation>
+      <translation>Replace all</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="164"/>
       <source>Mode:</source>
-      <translation type="unfinished">Mode:</translation>
+      <translation>Yanayi:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="144"/>
@@ -3501,72 +3501,72 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="32"/>
       <source>replace text</source>
-      <translation type="unfinished">replace text</translation>
+      <translation>maye gurbin rubutu</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="52"/>
       <source>Find:</source>
-      <translation type="unfinished">Find:</translation>
+      <translation>Nemo:</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="62"/>
       <source>close search</source>
-      <translation type="unfinished">close search</translation>
+      <translation>bincike kusa</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="79"/>
       <source>find in text</source>
-      <translation type="unfinished">find in text</translation>
+      <translation>samu a rubutu</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="86"/>
       <source>search forward</source>
-      <translation type="unfinished">search forward</translation>
+      <translation>bincika gaba</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="103"/>
       <source>search backward</source>
-      <translation type="unfinished">search backward</translation>
+      <translation>bincika baya</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="120"/>
       <source>replace with</source>
-      <translation type="unfinished">replace with</translation>
+      <translation>maye gurbin tare da</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="127"/>
       <source>Replace:</source>
-      <translation type="unfinished">Replace:</translation>
+      <translation>Sauya:</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="156"/>
       <source>Plain text</source>
-      <translation type="unfinished">Plain text</translation>
+      <translation>Rubutun rubutu</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="161"/>
       <source>Whole words</source>
-      <translation type="unfinished">Whole words</translation>
+      <translation>Gaba daya kalmomi</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="166"/>
       <source>Regular expression</source>
-      <translation type="unfinished">Regular expression</translation>
+      <translation>Magana ta yau da kullun</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="187"/>
       <source>Replace</source>
-      <translation type="unfinished">Replace</translation>
+      <translation>Sauya</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="197"/>
       <source>Replace All</source>
-      <translation type="unfinished">Replace All</translation>
+      <translation>Sauya Duk</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="210"/>
       <source>Mode:</source>
-      <translation type="unfinished">Mode:</translation>
+      <translation>Yanayi:</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="220"/>
@@ -3579,30 +3579,30 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/databaseservice.cpp" line="76"/>
       <source>Cannot open memory database</source>
-      <translation type="unfinished">Cannot open memory database</translation>
+      <translation>Ba za a iya buɗe bayanan ƙwaƙwalwar ajiya ba</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="77"/>
       <source>Unable to establish a memory database connection.</source>
-      <translation type="unfinished">Unable to establish a memory database connection.</translation>
+      <translation>An kasa kafa tushen bayanan cibiyar sadarwa.</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="93"/>
       <source>Cannot open disk database</source>
-      <translation type="unfinished">Cannot open disk database</translation>
+      <translation>Ba za a iya bude bayanan diski ba</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="94"/>
       <location filename="../services/databaseservice.cpp" line="116"/>
       <source>Unable to establish a database connection with file '%1'.
 Are the folder and the file writeable?</source>
-      <translation type="unfinished">Unable to establish a database connection with file '%1'.
-Are the folder and the file writeable?</translation>
+      <translation>An kasa kafa tushen bayanai tare da fayil din '%1'.
+Shin babban fayil ɗin da fayil ɗin za a iya rubutawa?</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="115"/>
       <source>Cannot open note folder database</source>
-      <translation type="unfinished">Cannot open note folder database</translation>
+      <translation>Ba za a iya bude bayanin fayil ɗin bayanin kula ba</translation>
     </message>
   </context>
   <context>
@@ -3610,167 +3610,167 @@ Are the folder and the file writeable?</translation>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="14"/>
       <source>Script repository</source>
-      <translation type="unfinished">Script repository</translation>
+      <translation>Manunin rubutun</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="55"/>
       <source>To search for a script please enter your query text and press &lt;i&gt;Return&lt;/i&gt;.</source>
-      <translation type="unfinished">To search for a script please enter your query text and press &lt;i&gt;Return&lt;/i&gt;.</translation>
+      <translation>Idan ana neman rubutun sai a shigar da rubutun tambayar kuma a latsa &lt;i&gt; Dawo &lt;/i&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="127"/>
       <source>Currently installed version:</source>
-      <translation type="unfinished">Currently installed version:</translation>
+      <translation>Installedaƙan da aka Sayar:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="278"/>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="399"/>
       <source>Installs the script</source>
-      <translation type="unfinished">Installs the script</translation>
+      <translation>Shigar da rubutun</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="281"/>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="398"/>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="459"/>
       <source>Install</source>
-      <translation type="unfinished">Install</translation>
+      <translation>Sanya</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="444"/>
       <source>Load more scripts</source>
-      <translation type="unfinished">Load more scripts</translation>
+      <translation>Load mafi rubutun</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="228"/>
       <source>Version:</source>
-      <translation type="unfinished">Version:</translation>
+      <translation>Shafi:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="202"/>
       <source>Repository:</source>
-      <translation type="unfinished">Repository:</translation>
+      <translation>Majiya:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="137"/>
       <source>Minimum app version:</source>
-      <translation type="unfinished">Minimum app version:</translation>
+      <translation>Mafi qarancin sigar app:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="433"/>
       <source>Name</source>
-      <translation type="unfinished">Name</translation>
+      <translation>Suna</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="413"/>
       <source>Enter your query text</source>
-      <translation type="unfinished">Enter your query text</translation>
+      <translation>Shigar da rubutun tambaya</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="416"/>
       <source>Find script</source>
-      <translation type="unfinished">Find script</translation>
+      <translation>Nemo rubutun</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="47"/>
       <source>Script updates</source>
-      <translation type="unfinished">Script updates</translation>
+      <translation>Sabunta rubutun</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="48"/>
       <source>All scripts are up-to-date.</source>
-      <translation type="unfinished">All scripts are up-to-date.</translation>
+      <translation>Duk rubutun suna kan zamani.</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="369"/>
       <source>Authors</source>
-      <translation type="unfinished">Authors</translation>
+      <translation>Mawallafa</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="369"/>
       <source>Author</source>
-      <translation type="unfinished">Author</translation>
+      <translation>Mawallafi</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="372"/>
       <source>Supported platforms</source>
-      <translation type="unfinished">Supported platforms</translation>
+      <translation>Dandalin tallafi</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="373"/>
       <source>Supported platform</source>
-      <translation type="unfinished">Supported platform</translation>
+      <translation>Dandalin tallafi</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="376"/>
       <source>Open repository</source>
-      <translation type="unfinished">Open repository</translation>
+      <translation>Bude ajiya</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="387"/>
       <source>Update</source>
-      <translation type="unfinished">Update</translation>
+      <translation>Sabuntawa</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="388"/>
       <source>Updates the script</source>
-      <translation type="unfinished">Updates the script</translation>
+      <translation>Sabunta rubutun</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="390"/>
       <source>Reinstall</source>
-      <translation type="unfinished">Reinstall</translation>
+      <translation>Sake latsawa</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="391"/>
       <source>Reinstalls the script</source>
-      <translation type="unfinished">Reinstalls the script</translation>
+      <translation>Sake sake rubutun</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="456"/>
       <source>Platform not supported!</source>
-      <translation type="unfinished">Platform not supported!</translation>
+      <translation>Ba a tallafawa dandamali ba!</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="457"/>
       <source>Your platform is not supported by this script!
 Do you want to install it anyway?</source>
-      <translation type="unfinished">Your platform is not supported by this script!
-Do you want to install it anyway?</translation>
+      <translation>Ba za a iya tallafawa dandamali ba ta wannan rubutun!
+Kuna so ku saka shi ta wata hanya?</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="459"/>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Soke</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="467"/>
       <source>Update app</source>
-      <translation type="unfinished">Update app</translation>
+      <translation>Sabunta app</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="468"/>
       <source>Please don't forget to update your installation of QOwnNotes to make this script work!</source>
-      <translation type="unfinished">Please don't forget to update your installation of QOwnNotes to make this script work!</translation>
+      <translation>Da fatan kar a manta da sabunta shigarwa na QOwnNotes don yin rubutun wannan aiki!</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="535"/>
       <source>Install successful</source>
-      <translation type="unfinished">Install successful</translation>
+      <translation>Sanya nasara</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="536"/>
       <source>The script was successfully installed!</source>
-      <translation type="unfinished">The script was successfully installed!</translation>
+      <translation>An samu nasarar shigar da rubutun!</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="543"/>
       <source>Download failed</source>
-      <translation type="unfinished">Download failed</translation>
+      <translation>Sauke kasa</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="544"/>
       <source>The script could not be downloaded!</source>
-      <translation type="unfinished">The script could not be downloaded!</translation>
+      <translation>Ba za a iya sauke rubutun ba!</translation>
     </message>
   </context>
   <context>
@@ -3778,12 +3778,12 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../widgets/scriptsettingwidget.ui" line="92"/>
       <source>The setting name</source>
-      <translation type="unfinished">The setting name</translation>
+      <translation>Sunan saiti</translation>
     </message>
     <message>
       <location filename="../widgets/scriptsettingwidget.cpp" line="193"/>
       <source>Please select a file</source>
-      <translation type="unfinished">Please select a file</translation>
+      <translation>Da fatan za a zabi fayil</translation>
     </message>
   </context>
   <context>
@@ -3791,7 +3791,7 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../services/scriptingservice.cpp" line="244"/>
       <source>file doesn't exist</source>
-      <translation type="unfinished">file doesn't exist</translation>
+      <translation>fayil din babu shi</translation>
     </message>
   </context>
   <context>
@@ -3800,7 +3800,7 @@ Do you want to install it anyway?</translation>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="14"/>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="20"/>
       <source>Import bookmarks</source>
-      <translation type="unfinished">Import bookmarks</translation>
+      <translation>Shigo da alamun shafi</translation>
     </message>
     <message>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="47"/>
@@ -3822,47 +3822,47 @@ Do you want to install it anyway?</translation>
       <location filename="../dialogs/settingsdialog.ui" line="26"/>
       <location filename="../dialogs/settingsdialog.ui" line="3806"/>
       <source>Settings</source>
-      <translation type="unfinished">Settings</translation>
+      <translation>Saiti</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="120"/>
       <source>Note folders</source>
-      <translation type="unfinished">Note folders</translation>
+      <translation>Fayil manyan fayiloli</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="419"/>
       <source>Your note folders</source>
-      <translation type="unfinished">Your note folders</translation>
+      <translation>Fayil na bayanin kula</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="495"/>
       <source>&amp;Add folder</source>
-      <translation type="unfinished">&amp;Add folder</translation>
+      <translation>&amp;Sanya babban fayil</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="519"/>
       <source>&amp;Remove folder</source>
-      <translation type="unfinished">&amp;Remove folder</translation>
+      <translation>&amp;Cire babban fayil</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="733"/>
       <source>This name will be viewed in all the menus.</source>
-      <translation type="unfinished">This name will be viewed in all the menus.</translation>
+      <translation>This name will be viewed in all the menus.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="575"/>
       <source>Set the ownCloud path where the note folder path will be synced to on your ownCloud server.</source>
-      <translation type="unfinished">Set the ownCloud path where the note folder path will be synced to on your ownCloud server.</translation>
+      <translation>Sanya hanyar ownCloud inda za a yi amfani da hanyar babban fayil ɗin bayanin kula akan uwar garken naka.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="749"/>
       <source>Use as active note folder</source>
-      <translation type="unfinished">Use as active note folder</translation>
+      <translation>Yi amfani azaman babban fayil bayanin kula</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="852"/>
       <source>Your ownCloud server</source>
-      <translation type="unfinished">Your ownCloud server</translation>
+      <translation>Sabar saukunan ka</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="976"/>
@@ -4053,12 +4053,12 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2499"/>
       <source>This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</source>
-      <translation type="unfinished">This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</translation>
+      <translation>Wannan yana bawa yanayin duhu duhu, za a gyara alamu da gumaka. Kuna buƙatar sake kunna aikace-aikacen don barin waɗannan canje-canje suyi aiki.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2502"/>
       <source>Enable dark mode</source>
-      <translation type="unfinished">Enable dark mode</translation>
+      <translation>Sanya yanayin duhu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2528"/>
@@ -4066,114 +4066,114 @@ Do you want to install it anyway?</translation>
       <location filename="../dialogs/settingsdialog.ui" line="2569"/>
       <location filename="../dialogs/settingsdialog.ui" line="2579"/>
       <source>You need to restart the application to let this setting take effect</source>
-      <translation type="unfinished">You need to restart the application to let this setting take effect</translation>
+      <translation>Kuna buƙatar sake kunna aikace-aikacen don barin wannan saiti yayi tasiri</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2608"/>
       <source>Item sizes in the main window</source>
-      <translation type="unfinished">Item sizes in the main window</translation>
+      <translation>Girman abu a cikin babban taga</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4520"/>
       <source>Markdown highlighting</source>
-      <translation type="unfinished">Markdown highlighting</translation>
+      <translation>Sa alama</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4526"/>
       <source>Enable markdown highlighting</source>
-      <translation type="unfinished">Enable markdown highlighting</translation>
+      <translation>Sanya saka alama</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1965"/>
       <source>Interface language</source>
-      <translation type="unfinished">Interface language</translation>
+      <translation>Harshen Intanet</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1985"/>
       <source>Automatic</source>
-      <translation type="unfinished">Automatic</translation>
+      <translation>Kai tsaye</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2084"/>
       <source>English</source>
-      <translation type="unfinished">English</translation>
+      <translation>Turanci</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="252"/>
       <source>Shortcuts</source>
-      <translation type="unfinished">Shortcuts</translation>
+      <translation>Gajerun hanyoyi</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4011"/>
       <location filename="../dialogs/settingsdialog.ui" line="4232"/>
       <source>Default font:</source>
-      <translation type="unfinished">Default font:</translation>
+      <translation>Tsarin rubutu na asali:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4053"/>
       <location filename="../dialogs/settingsdialog.ui" line="4194"/>
       <source>Code font:</source>
-      <translation type="unfinished">Code font:</translation>
+      <translation>Font code:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2767"/>
       <source>Main window shortcuts</source>
-      <translation type="unfinished">Main window shortcuts</translation>
+      <translation>Gajerun hanyoyin taga</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3509"/>
       <source>Do this at your own risk!</source>
-      <translation type="unfinished">Do this at your own risk!</translation>
+      <translation>Yi wannan a kashin kansa!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3512"/>
       <source>Ignore all external note folder changes</source>
-      <translation type="unfinished">Ignore all external note folder changes</translation>
+      <translation>Yi watsi da duk canje-canjen bayanin kula na waje</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3922"/>
       <source>No two spaces to do a line break are added here if checked</source>
-      <translation type="unfinished">No two spaces to do a line break are added here if checked</translation>
+      <translation>Babu wurare guda biyu da zasu yi hutu ta layi da za'a ƙara anan idan an bincika</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3925"/>
       <source>Use GitHub line breaks</source>
-      <translation type="unfinished">Use GitHub line breaks</translation>
+      <translation>Yi amfani da layin GitHub</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2062"/>
       <source>German</source>
-      <translation type="unfinished">German</translation>
+      <translation>Jamusanci</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2128"/>
       <source>French</source>
-      <translation type="unfinished">French</translation>
+      <translation>Faransanci</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2260"/>
       <source>Polish</source>
-      <translation type="unfinished">Polish</translation>
+      <translation>Yaren mutanen Poland</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2282"/>
       <source>Portuguese</source>
-      <translation type="unfinished">Portuguese</translation>
+      <translation>Fotigal</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2238"/>
       <source>Dutch</source>
-      <translation type="unfinished">Dutch</translation>
+      <translation>Yaren mutanen Holland</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2205"/>
       <source>Hungarian</source>
-      <translation type="unfinished">Hungarian</translation>
+      <translation>Harshen Harshen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2095"/>
       <source>Spanish</source>
-      <translation type="unfinished">Spanish</translation>
+      <translation>Harshen Sipaniyanci</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1971"/>
