@@ -240,6 +240,37 @@ bool Note::fillByFileName(QString fileName, int noteSubFolderId) {
     return false;
 }
 
+/**
+ * Fetches a note by its file path relative to the note folder it is in
+ *
+ * @brief Note::fetchByRelativeFilePath
+ * @param relativePath
+ * @return
+ */
+Note Note::fetchByRelativeFilePath(const QString relativePath) {
+    QFileInfo fileInfo(relativePath);
+
+    // load note sub-folder and note from the relative path
+    auto noteSubFolder = NoteSubFolder::fetchByPathData(fileInfo.path(), "/");
+    Note note = Note::fetchByFileName(fileInfo.fileName(), noteSubFolder.getId());
+
+    return note;
+}
+
+/**
+ * Fetches a note by its full file url
+ *
+ * @brief Note::fetchByFileUrl
+ * @param url
+ * @return
+ */
+Note Note::fetchByFileUrl(const QUrl url) {
+    QString relativePath = Note::fileUrlInCurrentNoteFolderToRelativePath(url);
+    Note note = Note::fetchByRelativeFilePath(relativePath);
+
+    return note;
+}
+
 bool Note::remove(bool withFile) {
     QSqlDatabase db = QSqlDatabase::database("memory");
     QSqlQuery query(db);
@@ -1332,7 +1363,7 @@ bool Note::updateNoteTextFromDisk() {
     return true;
 }
 
-QString Note::getFullNoteFilePathForFile(const QString& fileName) {
+QString Note::getFullFilePathForFile(const QString& fileName) {
     QSettings settings;
 
     // prepend the portable data path if we are in portable mode
@@ -1347,7 +1378,7 @@ QString Note::getFullNoteFilePathForFile(const QString& fileName) {
  * Returns the full path of the note file
  */
 QString Note::fullNoteFilePath() {
-    return getFullNoteFilePathForFile(relativeNoteFilePath());
+    return getFullFilePathForFile(relativeNoteFilePath());
 }
 
 /**
@@ -1779,8 +1810,9 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
 
     QRegularExpressionMatchIterator i;
 
-    // try to replace file links like <my-note.md> to note links
-    // this is a "has not '\w+:\/\/' in it" regular expression
+    // Try to replace links like <my-note.md> or <file.pdf> with proper file links
+    // We need to do that in the markdown because Hoedown would not create a link tag
+    // This is a "has not '\w+:\/\/' in it" regular expression
     // see: http://stackoverflow.com/questions/406230/regular-expression-to-match-line-that-doesnt-contain-a-word
     // TODO: maybe we could do that per QTextBlock to check if it's done in comment block?
     // Important: The `\n` is needed to not crash under Windows if there is just
@@ -1790,20 +1822,16 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
     while (i.hasNext()) {
         QRegularExpressionMatch match = i.next();
         QString fileLink = match.captured(1);
-        QString noteUrl = Note::getNoteFileURLFromFileName(fileLink);
+        QString url = Note::getFileURLFromFileName(fileLink);
 
-        // try to load the note to check if it really exists
-        Note note = Note::fetchByFileName(fileLink);
-
-        if (!noteUrl.isEmpty() && note.exists()) {
-            str.replace(match.captured(0),
-                        "[" + fileLink + "](" + noteUrl + ")");
-        }
+        str.replace(match.captured(0),
+                    "[" + fileLink + "](" + url + ")");
     }
 
-    // try to replace file links like [my note](my-note.md) to note links
-    // we are using `{1,500}` instead of `+` because there were crashes with
+    // Try to replace links like [my note](my-note.md) or [file](file.md) with proper file links
+    // We are using `{1,500}` instead of `+` because there were crashes with
     // regular expressions running wild
+    // TODO: In theory we could convert relative note links in the html (and not in the markdown) to prevent troubles with code blocks
     i = QRegularExpression(
             R"(\[(.+?)\]\((((?!\w+:\/\/)[^<>]){1,500}?)\))")
             .globalMatch(str);
@@ -1812,15 +1840,10 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
         QRegularExpressionMatch match = i.next();
         QString fileText = match.captured(1);
         QString fileLink = match.captured(2);
-        QString noteUrl = Note::getNoteURLFromFileName(fileLink);
+        QString url = Note::getFileURLFromFileName(fileLink);
 
-        // try to load the note to check if it really exists
-        Note note = Note::fetchByFileName(fileLink);
-
-        if (!noteUrl.isEmpty() && note.exists()) {
-            str.replace(match.captured(0),
-                        "[" + fileText + "](" + noteUrl + ")");
-        }
+        str.replace(match.captured(0),
+                    "[" + fileText + "](" + url + ")");
     }
 
     unsigned char *sequence = (unsigned char *) qstrdup(
@@ -2501,12 +2524,12 @@ const QString Note::getNoteURLFromFileName(const QString &fileName) {
 }
 
 /**
- * Returns the file url to a note from a file name
+ * Returns the absolute file url from a relative file name
  *
  * @param fileName
  * @return
  */
-const QString Note::getNoteFileURLFromFileName(QString fileName) {
+const QString Note::getFileURLFromFileName(QString fileName) {
     if (noteSubFolderId > 0) {
         NoteSubFolder noteSubFolder = getNoteSubFolder();
         if (noteSubFolder.isFetched()) {
@@ -2514,7 +2537,7 @@ const QString Note::getNoteFileURLFromFileName(QString fileName) {
         }
     }
 
-    QString path = this->getFullNoteFilePathForFile(fileName);
+    QString path = this->getFullFilePathForFile(fileName);
 
     return QString(QUrl::fromLocalFile(path).toEncoded());
 }

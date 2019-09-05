@@ -2951,7 +2951,7 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
             }
 
             // fetching the content of the file
-            QFile file(Note::getFullNoteFilePathForFile(fileName));
+            QFile file(Note::getFullFilePathForFile(fileName));
 
             // update or create a note from the file
             Note note = Note::updateOrCreateFromFile(file, noteSubFolder,
@@ -5538,9 +5538,12 @@ void MainWindow::openLocalUrl(QString urlString) {
         return;
     }
 
+    bool urlWasNotValid = false;
+
     // if urlString is no valid url we will try to convert it into a note file url
     if (!QOwnNotesMarkdownTextEdit::isValidUrl(urlString)) {
-         urlString = currentNote.getNoteFileURLFromFileName(urlString);
+         urlString = currentNote.getFileURLFromFileName(urlString);
+         urlWasNotValid = true;
     }
 
     QUrl url = QUrl(urlString);
@@ -5585,12 +5588,7 @@ void MainWindow::openLocalUrl(QString urlString) {
         Note note;
 
         if (isNoteFileUrl) {
-            QString relativePath = Note::fileUrlInCurrentNoteFolderToRelativePath(url);
-            QFileInfo fileInfo(relativePath);
-
-            // load note sub-folder and note from the relative path
-            auto noteSubFolder = NoteSubFolder::fetchByPathData(fileInfo.path(), "/");
-            note = Note::fetchByFileName(fileInfo.fileName(), noteSubFolder.getId());
+            note = Note::fetchByFileUrl(url);
         } else {
             // try to fetch a note from the url string
             note = Note::fetchByUrlString(urlString);
@@ -5655,6 +5653,9 @@ void MainWindow::openLocalUrl(QString urlString) {
             }
             pos += re.matchedLength();
         }
+    } else if (scheme == "file" && urlWasNotValid) {
+        // open urls that previously were not valid
+        QDesktopServices::openUrl(QUrl(urlString));
     }
 }
 

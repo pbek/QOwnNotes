@@ -84,7 +84,7 @@ public:
 
     static QStringList customNoteFileExtensionList(const QString& prefix = "");
 
-    static QString getFullNoteFilePathForFile(const QString& fileName);
+    static QString getFullFilePathForFile(const QString& fileName);
 
     static int storeDirtyNotesToDisk(Note &currentNote,
                                      bool *currentNoteChanged = Q_NULLPTR,
@@ -274,11 +274,15 @@ public:
 
     void resetNoteTextHtmlConversionHash();
 
-    const QString getNoteFileURLFromFileName(QString fileName);
+    const QString getFileURLFromFileName(QString fileName);
 
     static bool fileUrlIsNoteInCurrentNoteFolder(const QUrl url);
 
     static QString fileUrlInCurrentNoteFolderToRelativePath(const QUrl url);
+
+    static Note fetchByFileUrl(const QUrl url);
+
+    static Note fetchByRelativeFilePath(const QString relativePath);
 
 protected:
     int id;

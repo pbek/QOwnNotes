@@ -1,6 +1,17 @@
 # QOwnNotes Changelog
 
 ## 19.9.3
+- **relative links to notes in sub-folders** like `<My subfolder/My note.md>` or
+  `[Text](My subfolder/My note.md)` will now be **rendered correctly** in the **preview**
+  and are also **clickable** (for [#266](https://github.com/pbek/QOwnNotes/issues/266))
+- you now can **open files** from markdown links like `<My folder/My document.pdf>` or
+  `[Document](My folder/My document.pdf)` by <kbd>Ctrl</kbd> + Click on the link in the **note text edit**
+  or clicking the link in the **preview** (for [#266](https://github.com/pbek/QOwnNotes/issues/266))
+    - the links are resolved relative to the current note
+- you can now also <kbd>Ctrl</kbd> + Click on **markdown images** like `![Image](My image.jpg)`
+  in the **note text edit** to open it in an external image application
+  (for [#266](https://github.com/pbek/QOwnNotes/issues/266))
+    - the image links are resolved relative to the current note
 - you now can press <kbd>Ctrl</kbd> + <kbd>Backspace</kbd> to **remove the current word**
   and <kbd>Alt</kbd> + <kbd>Backspace</kbd> to **remove the whole text** in **line edits**
   like the note text search (for [#1278](https://github.com/pbek/QOwnNotes/issues/1278))

@@ -116,7 +116,7 @@ QString NoteSubFolder::relativePath(QString separator) {
  */
 QString NoteSubFolder::fullPath() {
     return Utils::Misc::removeIfEndsWith(
-            Note::getFullNoteFilePathForFile(relativePath()), "/");
+            Note::getFullFilePathForFile(relativePath()), "/");
 }
 
 /**
