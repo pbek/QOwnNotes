@@ -10,6 +10,9 @@ ShareDialog::ShareDialog(Note note, QWidget *parent) :
     ui->setupUi(this);
     this->note = note;
 
+    ui->linkCheckBox->setText(Utils::Misc::replaceOwnCloudText(
+            ui->linkCheckBox->text()));
+
     // update the share link checkbox and link url line edit
     updateDialog();
 }
