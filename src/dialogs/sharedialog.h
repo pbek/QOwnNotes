@@ -22,6 +22,8 @@ public:
 private slots:
     void on_linkCheckBox_toggled(bool checked);
 
+    void on_editCheckBox_toggled(bool checked);
+
 private:
     Note note;
     Ui::ShareDialog *ui;

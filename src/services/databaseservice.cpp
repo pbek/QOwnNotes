@@ -369,6 +369,7 @@ bool DatabaseService::setupTables() {
                              "crypto_password VARCHAR(255),"
                              "share_url VARCHAR(255),"
                              "share_id int,"
+                             "share_permissions int,"
                              "created DATETIME default current_timestamp,"
                              "modified DATETIME default current_timestamp)");
     queryMemory.exec("CREATE TABLE IF NOT EXISTS noteSubFolder ("

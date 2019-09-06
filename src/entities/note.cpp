@@ -30,6 +30,7 @@ Note::Note() {
     this->id = 0;
     this->noteSubFolderId = 0;
     this->shareId = 0;
+    this->sharePermissions = 0;
     this->hasDirtyData = false;
     this->fileSize = 0;
 }
@@ -68,6 +69,19 @@ QString Note::getShareUrl() {
 
 int Note::getShareId() {
     return this->shareId;
+}
+
+unsigned int Note::getSharePermissions() {
+    return this->sharePermissions;
+}
+
+/**
+ * Check 2nd bit for edit permissions
+ *
+ * @return
+ */
+bool Note::isShareEditAllowed() {
+    return sharePermissions & 2;
 }
 
 qint64 Note::getFileSize() {
@@ -131,6 +145,10 @@ void Note::setShareUrl(QString url) {
 
 void Note::setShareId(int id) {
     this->shareId = id;
+}
+
+void Note::setSharePermissions(unsigned int permissions) {
+    this->sharePermissions = permissions;
 }
 
 void Note::setCryptoKey(qint64 cryptoKey) {
@@ -479,6 +497,7 @@ bool Note::fillFromQuery(const QSqlQuery& query) {
     fileName = query.value("file_name").toString();
     shareUrl = query.value("share_url").toString();
     shareId = query.value("share_id").toInt();
+    sharePermissions = query.value("share_permissions").toInt();
     noteSubFolderId = query.value("note_sub_folder_id").toInt();
     noteText = query.value("note_text").toString();
     decryptedNoteText = query.value("decrypted_note_text").toString();
@@ -997,6 +1016,7 @@ bool Note::store() {
                               "name = :name,"
                               "share_url = :share_url,"
                               "share_id = :share_id,"
+                              "share_permissions = :share_permissions,"
                               "file_name = :file_name,"
                               "file_size = :file_size,"
                               "note_sub_folder_id = :note_sub_folder_id,"
@@ -1012,12 +1032,12 @@ bool Note::store() {
         query.bindValue(":id", id);
     } else {
         query.prepare("INSERT INTO note"
-                              "(name, share_url, share_id, file_name, "
+                              "(name, share_url, share_id, share_permissions, file_name, "
                               "file_size, note_text, has_dirty_data, "
                               "file_last_modified, file_created, crypto_key,"
                               "modified, crypto_password, decrypted_note_text, "
                               "note_sub_folder_id) "
-                              "VALUES (:name, :share_url, :share_id, "
+                              "VALUES (:name, :share_url, :share_id, :share_permissions, "
                               ":file_name, :file_size, :note_text,"
                               ":has_dirty_data, :file_last_modified,"
                               ":file_created, :crypto_key, :modified,"
@@ -1034,6 +1054,7 @@ bool Note::store() {
     query.bindValue(":name", name);
     query.bindValue(":share_url", shareUrl);
     query.bindValue(":share_id", shareId);
+    query.bindValue(":share_permissions", sharePermissions);
     query.bindValue(":file_name", fileName);
     query.bindValue(":file_size", fileSize);
     query.bindValue(":note_sub_folder_id", noteSubFolderId);

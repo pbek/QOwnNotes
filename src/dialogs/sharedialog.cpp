@@ -29,6 +29,8 @@ void ShareDialog::updateDialog() {
     Q_UNUSED(blocker)
     const QSignalBlocker blocker2(ui->linkUrlLineEdit);
     Q_UNUSED(blocker2)
+    const QSignalBlocker blocker3(ui->editCheckBox);
+    Q_UNUSED(blocker3)
 
     ui->linkCheckBox->setChecked(note.isShared());
     ui->linkUrlLineEdit->setVisible(note.isShared());
@@ -37,6 +39,8 @@ void ShareDialog::updateDialog() {
             ui->infoLabel1->text()));
     ui->linkCheckBox->setText(Utils::Misc::replaceOwnCloudText(
             ui->linkCheckBox->text()));
+    ui->editCheckBox->setVisible(note.isShared());
+    ui->editCheckBox->setChecked(note.isShareEditAllowed());
 }
 
 /**
@@ -66,4 +70,25 @@ void ShareDialog::on_linkCheckBox_toggled(bool checked) {
         // remove the share
         ownCloud->removeNoteShare(note, this);
     }
+}
+
+void ShareDialog::on_editCheckBox_toggled(bool checked) {
+    auto *ownCloud = OwnCloudService::instance();
+    unsigned int permissions = note.getSharePermissions();
+
+    // set 2. bit
+    const uint8_t bit = 1;
+
+    if (checked) {
+        permissions |= 1UL << bit;
+    } else {
+        permissions &= ~(1UL << bit);
+    }
+
+    note.setSharePermissions(permissions);
+    note.store();
+
+    qDebug() << __func__ << " - 'permissions': " << permissions;
+
+    ownCloud->setPermissionsOnSharedNote(note, this);
 }

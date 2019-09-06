@@ -112,7 +112,8 @@ void OwnCloudService::readSettings() {
     ownCloudTestPath = "/ocs/v1.php";
     restoreTrashedNotePath = rootPath + "note/restore_trashed";
     webdavPath = "/remote.php/webdav";
-    sharePath = "/ocs/v1.php/apps/files_sharing/api/v1/shares";
+//    sharePath = "/ocs/v1.php/apps/files_sharing/api/v1/shares";
+    sharePath = "/ocs/v2.php/apps/files_sharing/api/v1/shares";
     bookmarkPath = "/apps/bookmarks/public/rest/v2/bookmark";
 
     int calendarBackend = settings.value(
@@ -348,10 +349,10 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
             // update the share status of the notes
             handleNoteShareReply(data);
         } else if (urlPath.startsWith(sharePath)) {
-            qDebug() << "Reply from delete share api";
+            qDebug() << "Reply from update share api";
 
-            // update the share status of the notes
-            handleDeleteNoteShareReply(urlPath, data);
+            // update the share status of the note
+            handleUpdateNoteShareReply(urlPath, data);
         } else if (urlPath.startsWith(bookmarkPath)) {
             qDebug() << "Reply from bookmark api";
 
@@ -719,6 +720,42 @@ void OwnCloudService::shareNote(Note note, ShareDialog *dialog) {
     networkManager->setNetworkAccessible(QNetworkAccessManager::Accessible);
 
     QNetworkReply *reply = networkManager->post(r, postData);
+    ignoreSslErrorsIfAllowed(reply);
+}
+
+/**
+ * Allow note editing on a shared note on Nextcloud
+ */
+void OwnCloudService::setPermissionsOnSharedNote(Note note, ShareDialog *dialog) {
+    this->shareDialog = dialog;
+    qDebug() << __func__ << " - 'note': " << note;
+
+    // return if no settings are set
+    if (!hasOwnCloudSettings()) {
+        showOwnCloudMessage();
+        return;
+    }
+
+    QUrl url(serverUrl + sharePath + "/" + QString::number(note.getShareId()) + "?format=xml");
+    QString path = NoteFolder::currentRemotePath() +
+            note.relativeNoteFilePath("/");
+
+    QUrlQuery params;
+    params.addQueryItem("permissions", QString::number(note.getSharePermissions()));
+    params.addQueryItem("cid", QString::number(note.getShareId()));
+
+    qDebug() << __func__ << " - 'url': " << url;
+    qDebug() << __func__ << " - 'params': " << params.query();
+
+    QNetworkRequest r(url);
+    addAuthHeader(&r);
+    r.setHeader(QNetworkRequest::ContentTypeHeader,
+                "application/x-www-form-urlencoded");
+
+    // try to ensure the network is accessible
+    networkManager->setNetworkAccessible(QNetworkAccessManager::Accessible);
+
+    QNetworkReply *reply = networkManager->put(r, params.query().toUtf8());
     ignoreSslErrorsIfAllowed(reply);
 }
 
@@ -1472,14 +1509,16 @@ void OwnCloudService::handleNoteShareReply(QString &data) {
 }
 
 /**
- * Updates the share status of the notes
+ * Updates the share status of the note
  */
-void OwnCloudService::handleDeleteNoteShareReply(QString urlPart,
+void OwnCloudService::handleUpdateNoteShareReply(QString urlPart,
                                                  QString &data) {
     // return if we didn't get any data
     if (data.isEmpty()) {
         return;
     }
+
+//    qDebug() << __func__ << " - 'data': " << data;
 
     QRegularExpression re(
             QRegularExpression::escape(sharePath) + "\\/(\\d+)$");
@@ -1516,8 +1555,19 @@ void OwnCloudService::handleDeleteNoteShareReply(QString urlPart,
         return;
     }
 
-    note.setShareUrl("");
-    note.setShareId(0);
+    query.setQuery("ocs/data/permissions/text()");
+    QString permissions;
+    query.evaluateTo(&permissions);
+
+    qDebug() << __func__ << " - 'permissions': " << permissions;
+
+    // if permissions are empty we assume there was not "ocs/data", which means the share was deleted
+    if (permissions.isEmpty()) {
+        note.setShareUrl("");
+        note.setShareId(0);
+    }
+
+    note.setSharePermissions(permissions.toInt());
     note.store();
 
 #ifndef INTEGRATION_TESTS
@@ -1655,6 +1705,12 @@ void OwnCloudService::updateNoteShareStatus(QXmlQuery &query,
             QString url;
             query.evaluateTo(&url);
             note.setShareUrl(url.trimmed());
+
+            // get the share permissions
+            query.setQuery("permissions/text()");
+            QString permissions;
+            query.evaluateTo(&permissions);
+            note.setSharePermissions(permissions.trimmed().toInt());
 
             note.store();
 

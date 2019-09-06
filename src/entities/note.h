@@ -210,6 +210,12 @@ public:
 
     void setShareId(int id);
 
+    unsigned int getSharePermissions();
+
+    bool isShareEditAllowed();
+
+    void setSharePermissions(unsigned int permissions);
+
     bool isShared();
 
     static Note fetchByShareId(int shareId);
@@ -301,6 +307,7 @@ protected:
     QString cryptoPassword;
     QString shareUrl;
     int shareId;
+    unsigned int sharePermissions;
     QRegularExpression getEncryptedNoteTextRegularExpression();
     QString getEncryptedNoteText();
     QString _noteTextHtml;

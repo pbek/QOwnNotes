@@ -67,6 +67,8 @@ public:
 
     void shareNote(Note note, ShareDialog *dialog);
 
+    void setPermissionsOnSharedNote(Note note, ShareDialog *dialog);
+
     void fetchShares(const QString& path = "");
 
     void fetchBookmarks();
@@ -149,7 +151,7 @@ private:
     void updateNoteShareStatus(QXmlQuery &query,
                                bool updateShareDialog = false);
 
-    void handleDeleteNoteShareReply(QString urlPart, QString &data);
+    void handleUpdateNoteShareReply(QString urlPart, QString &data);
 
     static void checkAppVersion(QNetworkReply *reply);
 

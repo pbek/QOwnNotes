@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 19.9.4
+- you can now **allow note editing** when **sharing notes** on your **Nextcloud**
+  server with the share dialog (for [#1280](https://github.com/pbek/QOwnNotes/issues/1280))
+    - the person who receives the share link will then be able to edit your note
+      with [Nextcloud Text](https://github.com/nextcloud/text)
+
 ## 19.9.3
 - **relative links to notes in sub-folders** like `<My subfolder/My note.md>` or
   `[Text](My subfolder/My note.md)` will now be **rendered correctly** in the **preview**
