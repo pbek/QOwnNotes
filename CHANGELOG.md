@@ -6,7 +6,7 @@
     - the person who receives the share link will then be able to edit your note
       with [Nextcloud Text](https://github.com/nextcloud/text)
 - fixed the real time preview of [Nextcloud Text](https://github.com/nextcloud/text)
-  images (for [#266](https://github.com/pbek/QOwnNotes/issues/266))
+  images (for a regression in [#266](https://github.com/pbek/QOwnNotes/issues/266))
 - added more Urdu (Pakistan) translation (thank you Fabijenna)
 
 ## 19.9.3
