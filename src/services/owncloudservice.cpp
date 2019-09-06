@@ -2012,7 +2012,7 @@ QString OwnCloudService::nextcloudPreviewImageTagToInlineImageTag(QString imageT
     QByteArray data = downloadNextcloudPreviewImage(path);
 
     // for now we do no caching, because we don't know when to invalidate the cache
-    QString inlineImageTag = QString("<img src=\"data:" + mimeType + ";base64,") +
+    QString inlineImageTag = QString(R"(<img class="remote-img" src="data:)" + mimeType + ";base64,") +
             data.toBase64() + "\" alt=\"" + alt + "\"/>";
 
     return inlineImageTag;

@@ -1861,6 +1861,12 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
         QRegularExpressionMatch match = i.next();
         QString fileText = match.captured(1);
         QString fileLink = match.captured(2);
+
+        // ignore links to remote Nextcloud images
+        if (fileLink.startsWith("/core/preview")) {
+            continue;
+        }
+
         QString url = Note::getFileURLFromFileName(fileLink);
 
         str.replace(match.captured(0),

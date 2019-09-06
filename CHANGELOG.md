@@ -5,6 +5,8 @@
   server with the share dialog (for [#1280](https://github.com/pbek/QOwnNotes/issues/1280))
     - the person who receives the share link will then be able to edit your note
       with [Nextcloud Text](https://github.com/nextcloud/text)
+- fixed the real time preview of [Nextcloud Text](https://github.com/nextcloud/text)
+  images (for [#266](https://github.com/pbek/QOwnNotes/issues/266))
 
 ## 19.9.3
 - **relative links to notes in sub-folders** like `<My subfolder/My note.md>` or
