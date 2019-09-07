@@ -1562,7 +1562,7 @@ void OwnCloudService::handleUpdateNoteShareReply(QString urlPart,
     qDebug() << __func__ << " - 'permissions': " << permissions;
 
     // if permissions are empty we assume there was not "ocs/data", which means the share was deleted
-    if (permissions.isEmpty()) {
+    if (permissions.trimmed().isEmpty()) {
         note.setShareUrl("");
         note.setShareId(0);
     }

@@ -1,8 +1,9 @@
 # QOwnNotes Changelog
 
 ## 19.9.5
-- the preview of html tags now works again (for [#1283](https://github.com/pbek/QOwnNotes/issues/1283))
-    - html tags are now also not highligted as link
+- the **preview of html tags** now works again (for [#1283](https://github.com/pbek/QOwnNotes/issues/1283))
+    - html tags are now also not highlighted as link
+- fixed incorrect note share status update (for [#1280](https://github.com/pbek/QOwnNotes/issues/1280))
 
 ## 19.9.4
 - you can now **allow note editing** when **sharing notes** on your **Nextcloud**
