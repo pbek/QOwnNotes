@@ -8,6 +8,9 @@
 - the **preview of html tags** now works again (for [#1283](https://github.com/pbek/QOwnNotes/issues/1283))
     - html tags are now also not highlighted as link
 - fixed incorrect note share status update (for [#1280](https://github.com/pbek/QOwnNotes/issues/1280))
+- added more Greek, Dutch, Urdu (Pakistan), Spanish, German, French, Italian,
+  Basque, Catalan translation (thank you athrouss, Fabijenna, richarson,
+  rakekniven, Botigli, tiwi90, izendegi, MGuerra)
 
 ## 19.9.4
 - you can now **allow note editing** when **sharing notes** on your **Nextcloud**
