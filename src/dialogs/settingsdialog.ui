@@ -1984,6 +1984,9 @@
                         <property name="text">
                          <string>Automatic</string>
                         </property>
+                        <property name="toolTip">
+                         <string notr="true">Automatic</string>
+                        </property>
                         <property name="whatsThis">
                          <string notr="true"/>
                         </property>
@@ -2151,6 +2154,17 @@
                         </property>
                         <property name="whatsThis">
                          <string notr="true">el</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string notr="true">Halshen Hausa</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Hausa</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">ha</string>
                         </property>
                        </item>
                        <item>
@@ -5588,8 +5602,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../breeze-qownnotes.qrc"/>
   <include location="../breeze-dark-qownnotes.qrc"/>
+  <include location="../breeze-qownnotes.qrc"/>
  </resources>
  <connections>
   <connection>

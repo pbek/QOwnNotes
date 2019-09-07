@@ -1,6 +1,10 @@
 # QOwnNotes Changelog
 
 ## 19.9.5
+- added **Hausa translation** (a big thank you to Fabijenna)
+    - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes/)
+      to make QOwnNotes available in more languages or help with the current 
+      translation
 - the **preview of html tags** now works again (for [#1283](https://github.com/pbek/QOwnNotes/issues/1283))
     - html tags are now also not highlighted as link
 - fixed incorrect note share status update (for [#1280](https://github.com/pbek/QOwnNotes/issues/1280))
