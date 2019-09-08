@@ -3561,7 +3561,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                   <item row="13" column="0" colspan="2">
                    <widget class="QCheckBox" name="legacyLinkingCheckBox">
                     <property name="toolTip">
-                     <string notr="true">note://, media://, file://attachments</string>
+                     <string notr="true">note://, file://media, file://attachments</string>
                     </property>
                     <property name="text">
                      <string>Use legacy way to link to notes, images and attachments</string>
