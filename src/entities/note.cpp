@@ -2696,6 +2696,18 @@ QString Note::getInsertMediaMarkdown(QFile *file, bool addNewLine,
         scaleDownImageFileIfNeeded(newFile);
 
         QString mediaUrlString = "file://media/" + newFileName;
+        QSettings settings;
+
+        // TODO: implement
+//        if (settings.value("legacyLinking").toBool()) {
+//            mediaUrlString = "file://media/" + newFileName;
+//        } else {
+//            auto noteSubFolder = NoteSubFolder::activeNoteSubFolder();
+//
+//            // Beware: showNotesFromAllNoteSubFolders resets the activeNoteSubFolder!
+//            qDebug() << __func__ << " - 'noteSubFolder.relativePath()': "
+//                     << noteSubFolder.relativePath();
+//        }
 
         // check if we only want to return the media url string
         if (returnUrlOnly) {
