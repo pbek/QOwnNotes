@@ -397,7 +397,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>4</number>
+            <number>7</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -3387,31 +3387,10 @@
                      <property name="bottomMargin">
                       <number>0</number>
                      </property>
-                     <item row="0" column="1">
-                      <widget class="QSpinBox" name="maximumImageWidthSpinBox">
-                       <property name="maximum">
-                        <number>100000</number>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="0" column="3">
-                      <widget class="QLabel" name="label_21">
-                       <property name="text">
-                        <string>Maximum height:</string>
-                       </property>
-                      </widget>
-                     </item>
                      <item row="0" column="0">
                       <widget class="QLabel" name="label_20">
                        <property name="text">
                         <string>Maximum width:</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="0" column="4">
-                      <widget class="QSpinBox" name="maximumImageHeightSpinBox">
-                       <property name="maximum">
-                        <number>100000</number>
                        </property>
                       </widget>
                      </item>
@@ -3428,36 +3407,48 @@
                        </property>
                       </spacer>
                      </item>
+                     <item row="0" column="4">
+                      <widget class="QSpinBox" name="maximumImageHeightSpinBox">
+                       <property name="maximum">
+                        <number>100000</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="3">
+                      <widget class="QLabel" name="label_21">
+                       <property name="text">
+                        <string>Maximum height:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QSpinBox" name="maximumImageWidthSpinBox">
+                       <property name="maximum">
+                        <number>100000</number>
+                       </property>
+                      </widget>
+                     </item>
                     </layout>
                    </widget>
                   </item>
-                  <item row="9" column="0" colspan="2">
-                   <widget class="QCheckBox" name="restoreCursorPositionCheckBox">
+                  <item row="4" column="1">
+                   <widget class="QLabel" name="noteSaveIntervalTimeLabel">
                     <property name="toolTip">
-                     <string>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</string>
+                     <string>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
+Just test yourself if you get sync conflicts and set a higher value if so.</string>
                     </property>
                     <property name="text">
-                     <string>Restore cursor position when opening a note</string>
+                     <string>note save interval time [sec]</string>
                     </property>
                    </widget>
                   </item>
-                  <item row="7" column="0" colspan="2">
-                   <widget class="QCheckBox" name="newNoteAskHeadlineCheckBox">
+                  <item row="3" column="0" colspan="2">
+                   <widget class="QCheckBox" name="ignoreAllExternalNoteFolderChangesCheckBox">
                     <property name="toolTip">
-                     <string>By default the headline will generated automatically</string>
+                     <string>Do this at your own risk!</string>
                     </property>
                     <property name="text">
-                     <string>The shortcut to create a new note asks for a headline</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="2" column="0" colspan="2">
-                   <widget class="QCheckBox" name="acceptAllExternalModificationsCheckBox">
-                    <property name="toolTip">
-                     <string>Check this if you want to accept all external modifications while you are editing the current note.</string>
-                    </property>
-                    <property name="text">
-                     <string>Accept all external modifications of the current note</string>
+                     <string>Ignore all external note folder changes</string>
                     </property>
                    </widget>
                   </item>
@@ -3468,16 +3459,6 @@
                     </property>
                    </widget>
                   </item>
-                  <item row="0" column="0" colspan="2">
-                   <widget class="QCheckBox" name="notifyAllExternalModificationsCheckBox">
-                    <property name="toolTip">
-                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                    </property>
-                    <property name="text">
-                     <string>Notify about all external modifications of the current note</string>
-                    </property>
-                   </widget>
-                  </item>
                   <item row="1" column="0" colspan="2">
                    <widget class="QCheckBox" name="ignoreAllExternalModificationsCheckBox">
                     <property name="toolTip">
@@ -3485,6 +3466,26 @@
                     </property>
                     <property name="text">
                      <string>Ignore all external modifications of the current note</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="6" column="0" colspan="2">
+                   <widget class="QCheckBox" name="allowDifferentNoteFileNameCheckBox">
+                    <property name="toolTip">
+                     <string>Allow the note file name to be different from the headline.&lt;br&gt;Beware that ownCloud Notes needs the file name to be the same as the headline!</string>
+                    </property>
+                    <property name="text">
+                     <string>Allow note file name to be different from headline</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="0" colspan="2">
+                   <widget class="QCheckBox" name="acceptAllExternalModificationsCheckBox">
+                    <property name="toolTip">
+                     <string>Check this if you want to accept all external modifications while you are editing the current note.</string>
+                    </property>
+                    <property name="text">
+                     <string>Accept all external modifications of the current note</string>
                     </property>
                    </widget>
                   </item>
@@ -3507,44 +3508,13 @@
                     </property>
                    </widget>
                   </item>
-                  <item row="8" column="0" colspan="2">
-                   <widget class="QCheckBox" name="useUNIXNewlineCheckBox">
+                  <item row="9" column="0" colspan="2">
+                   <widget class="QCheckBox" name="restoreCursorPositionCheckBox">
                     <property name="toolTip">
-                     <string>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</string>
+                     <string>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</string>
                     </property>
                     <property name="text">
-                     <string>Use UNIX newline instead of native newline characters</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="3" column="0" colspan="2">
-                   <widget class="QCheckBox" name="ignoreAllExternalNoteFolderChangesCheckBox">
-                    <property name="toolTip">
-                     <string>Do this at your own risk!</string>
-                    </property>
-                    <property name="text">
-                     <string>Ignore all external note folder changes</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="6" column="0" colspan="2">
-                   <widget class="QCheckBox" name="allowDifferentNoteFileNameCheckBox">
-                    <property name="toolTip">
-                     <string>Allow the note file name to be different from the headline.&lt;br&gt;Beware that ownCloud Notes needs the file name to be the same as the headline!</string>
-                    </property>
-                    <property name="text">
-                     <string>Allow note file name to be different from headline</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="4" column="1">
-                   <widget class="QLabel" name="noteSaveIntervalTimeLabel">
-                    <property name="toolTip">
-                     <string>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
-Just test yourself if you get sync conflicts and set a higher value if so.</string>
-                    </property>
-                    <property name="text">
-                     <string>note save interval time [sec]</string>
+                     <string>Restore cursor position when opening a note</string>
                     </property>
                    </widget>
                   </item>
@@ -3555,6 +3525,46 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                     </property>
                     <property name="text">
                      <string>Automatically close the note folder database</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="7" column="0" colspan="2">
+                   <widget class="QCheckBox" name="newNoteAskHeadlineCheckBox">
+                    <property name="toolTip">
+                     <string>By default the headline will generated automatically</string>
+                    </property>
+                    <property name="text">
+                     <string>The shortcut to create a new note asks for a headline</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="8" column="0" colspan="2">
+                   <widget class="QCheckBox" name="useUNIXNewlineCheckBox">
+                    <property name="toolTip">
+                     <string>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</string>
+                    </property>
+                    <property name="text">
+                     <string>Use UNIX newline instead of native newline characters</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="0" colspan="2">
+                   <widget class="QCheckBox" name="notifyAllExternalModificationsCheckBox">
+                    <property name="toolTip">
+                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    </property>
+                    <property name="text">
+                     <string>Notify about all external modifications of the current note</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="13" column="0" colspan="2">
+                   <widget class="QCheckBox" name="legacyLinkingCheckBox">
+                    <property name="toolTip">
+                     <string notr="true">note://, media://, file://attachments</string>
+                    </property>
+                    <property name="text">
+                     <string>Use legacy way to link to notes, images and attachments</string>
                     </property>
                    </widget>
                   </item>

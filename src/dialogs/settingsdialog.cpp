@@ -809,6 +809,7 @@ void SettingsDialog::storeSettings() {
     settings.setValue("automaticNoteFolderDatabaseClosing",
                       ui->automaticNoteFolderDatabaseClosingCheckBox->
                               isChecked());
+    settings.setValue("legacyLinking", ui->legacyLinkingCheckBox->isChecked());
 
     settings.setValue("webSocketServerService/port",
                       ui->webSocketServerServicePortSpinBox->value());
@@ -1212,6 +1213,7 @@ void SettingsDialog::readSettings() {
 
     ui->automaticNoteFolderDatabaseClosingCheckBox->setChecked(
             Utils::Misc::doAutomaticNoteFolderDatabaseClosing());
+    ui->legacyLinkingCheckBox->setChecked(settings.value("legacyLinking").toBool());
 
     ui->webSocketServerServicePortSpinBox->setValue(
             WebSocketServerService::getSettingsPort());
