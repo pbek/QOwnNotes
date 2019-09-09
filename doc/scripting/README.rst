@@ -183,7 +183,7 @@ Parameters
 
     /**
      * QML wrapper to download an url to the media folder and returning the media
-     * url or the markdown image text of the media
+     * url or the markdown image text of the media relative to the current note
      *
      * @param {QString} url
      * @param {bool} returnUrlOnly if true only the media url will be returned (default false)
@@ -212,7 +212,7 @@ Parameters
 
     /**
      * QML wrapper to insert a media file into the media folder and returning
-     * the media url or the markdown image text of the media
+     * the media url or the markdown image text of the media  relative to the current note
      *
      * @param {QString} mediaFilePath
      * @param {bool} returnUrlOnly if true only the media url will be returned (default false)

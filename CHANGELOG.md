@@ -1,5 +1,31 @@
 # QOwnNotes Changelog
 
+## 19.9.6
+- when **inserting images into your media folder** like with the **Insert image dialog**,
+  the **Evernote import**, via drag and drop or from the clipboard now markdown tags
+  like `![imagename](media/30933630.jpeg)` are created (for [#266](https://github.com/pbek/QOwnNotes/issues/266))
+    - this also works if you are inserting images in notes in sub-folders, then the
+      image would look for example like `![imagename](../media/30933630.jpeg)` if
+      the depth of the sub-folder is one
+    - the scripting functions `downloadUrlToMedia` and `insertMediaFile` will now
+      also generate a markdown image relative to the path of the current note
+    - you can still use the old `file://media/30933630.jpeg` links if you enable
+      legacy links in the *General settings*
+- when **inserting files into your attachments folder** like with the **Insert attachment dialog**,
+  the **Evernote import** or via drag and drop now markdown tags like `[filename](attachments/45412706.pdf)`
+  are created (for [#266](https://github.com/pbek/QOwnNotes/issues/266))
+    - this also works if you are inserting attachments in notes in sub-folders, then the
+      file would look for example like `[filename](../attachments/45412706.pdf)` if
+      the depth of the sub-folder is one
+    - you can still use the old `file://attachments/45412706.pdf` links if you enable
+      legacy links in the *General settings*
+- when **linking to notes** like with the **Insert link dialog** or when splitting notes
+  now markdown tags like `[note](other note.md)` are created (for [#266](https://github.com/pbek/QOwnNotes/issues/266))
+    - this also works if the linked note is in an other sub-folders, then the
+      link would look for example like `[note](../other note.md)` or `[note](sub folder/other note.md)`
+    - you can still use the old `note://other_note` links if you enable legacy links
+      in the *General settings*
+
 ## 19.9.5
 - added **Hausa translation** (a big thank you to Fabijenna)
     - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes/)

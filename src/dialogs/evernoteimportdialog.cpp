@@ -109,7 +109,7 @@ void EvernoteImportDialog::initNoteCount(QString data) {
  *
  * @param content
  */
-QString EvernoteImportDialog::importImages(QString content, QXmlQuery query) {
+QString EvernoteImportDialog::importImages(Note note, QString content, QXmlQuery query) {
     query.setQuery("resource");
 
     QXmlResultItems result;
@@ -218,7 +218,7 @@ QString EvernoteImportDialog::importImages(QString content, QXmlQuery query) {
         MediaFileData mediaFileData = mediaFileDataHash[objectId];
 
         // get the markdown code for the image file data entry
-        QString markdownCode = getMarkdownForMediaFileData(mediaFileData);
+        QString markdownCode = getMarkdownForMediaFileData(note, mediaFileData);
 
         if (!markdownCode.isEmpty()) {
             // replace image tag with markdown code
@@ -238,7 +238,7 @@ QString EvernoteImportDialog::importImages(QString content, QXmlQuery query) {
         MediaFileData mediaFileData = hashIterator.value();
 
         // get the markdown code for the image file data entry
-        QString markdownCode = getMarkdownForMediaFileData(mediaFileData);
+        QString markdownCode = getMarkdownForMediaFileData(note, mediaFileData);
 
         content += "\n" + markdownCode;
     }
@@ -251,7 +251,8 @@ QString EvernoteImportDialog::importImages(QString content, QXmlQuery query) {
  *
  * @param content
  */
-QString EvernoteImportDialog::importAttachments(QString content,
+QString EvernoteImportDialog::importAttachments(Note note,
+                                                QString content,
                                                 QXmlQuery query) {
     query.setQuery("resource");
 
@@ -370,7 +371,7 @@ QString EvernoteImportDialog::importAttachments(QString content,
         MediaFileData mediaFileData = mediaFileDataHash[objectId];
 
         // get the markdown code for the file data entry
-        QString markdownCode = getMarkdownForAttachmentFileData(mediaFileData);
+        QString markdownCode = getMarkdownForAttachmentFileData(note, mediaFileData);
 
         if (!markdownCode.isEmpty()) {
             // replace media tag with markdown code
@@ -390,7 +391,7 @@ QString EvernoteImportDialog::importAttachments(QString content,
         MediaFileData mediaFileData = hashIterator.value();
 
         // get the markdown code for the file data entry
-        QString markdownCode = getMarkdownForAttachmentFileData(mediaFileData);
+        QString markdownCode = getMarkdownForAttachmentFileData(note, mediaFileData);
 
         content += "\n" + markdownCode;
     }
@@ -405,11 +406,12 @@ QString EvernoteImportDialog::importAttachments(QString content,
  * @return
  */
 QString EvernoteImportDialog::getMarkdownForMediaFileData(
+        Note note,
         EvernoteImportDialog::MediaFileData &mediaFileData) {
     QString data = mediaFileData.data;
     QString imageSuffix = mediaFileData.suffix;
 
-    return Utils::Misc::importMediaFromBase64(data, imageSuffix);
+    return note.importMediaFromBase64(data, imageSuffix);
 }
 
 /**
@@ -419,6 +421,7 @@ QString EvernoteImportDialog::getMarkdownForMediaFileData(
  * @return
  */
 QString EvernoteImportDialog::getMarkdownForAttachmentFileData(
+        Note note,
         EvernoteImportDialog::MediaFileData &mediaFileData) {
     QString data = mediaFileData.data;
     QString suffix = mediaFileData.suffix;
@@ -437,8 +440,8 @@ QString EvernoteImportDialog::getMarkdownForAttachmentFileData(
 
     // store the temporary file in the media folder and return the
     // markdown code
-    QString markdownCode = Note::getInsertAttachmentMarkdown(tempFile,
-                                                             fileName);
+    QString markdownCode = note.getInsertAttachmentMarkdown(tempFile, fileName);
+
     return markdownCode;
 }
 
@@ -461,6 +464,9 @@ void EvernoteImportDialog::importNotes(const QString& data) {
         HTMLEntities htmlEntities;
 
         while (!result.next().isNull()) {
+            Note note = Note();
+            note.setNoteSubFolderId(noteSubFolder.getId());
+
             query.setFocus(result.current());
 
             QString title;
@@ -504,12 +510,12 @@ void EvernoteImportDialog::importNotes(const QString& data) {
 
             if (ui->imageImportCheckBox->isChecked()) {
                 // import images
-                content = importImages(content, query);
+                content = importImages(note, content, query);
             }
 
             if (ui->attachmentImportCheckBox->isChecked()) {
                 // import attachments
-                content = importAttachments(content, query);
+                content = importAttachments(note, content, query);
             }
 
             // remove all html tags
@@ -540,10 +546,8 @@ void EvernoteImportDialog::importNotes(const QString& data) {
 
             noteText += content;
 
-            Note note = Note();
 //            note.setName(title);
             note.setNoteText(noteText);
-            note.setNoteSubFolderId(noteSubFolder.getId());
 
             // in case the user enabled that the filename can be different
             // from the note name

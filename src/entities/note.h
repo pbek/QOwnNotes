@@ -86,6 +86,8 @@ public:
 
     static QString getFullFilePathForFile(const QString& fileName);
 
+    QString getFilePathRelativeToNote(Note note);
+
     static int storeDirtyNotesToDisk(Note &currentNote,
                                      bool *currentNoteChanged = Q_NULLPTR,
                                      bool *noteWasRenamed = Q_NULLPTR);
@@ -233,16 +235,15 @@ public:
 
     static QString createNoteHeader(const QString& name);
 
-    static QString getInsertMediaMarkdown(QFile *file, bool addNewLine = true,
-                                          bool returnUrlOnly = false);
+    QString getInsertMediaMarkdown(QFile *file, bool addNewLine = true, bool returnUrlOnly = false);
 
-    static QString getInsertAttachmentMarkdown(QFile *file,
-                                               QString fileName = "",
-                                               bool returnUrlOnly= false);
+    QString getInsertAttachmentMarkdown(QFile *file, QString fileName = "", bool returnUrlOnly= false);
 
     static bool scaleDownImageFileIfNeeded(QFile &file);
 
-    static QString downloadUrlToMedia(const QUrl& url, bool returnUrlOnly = false);
+    QString downloadUrlToMedia(const QUrl& url, bool returnUrlOnly = false);
+
+    QString importMediaFromBase64(QString &data, const QString& imageSuffix = "dat");
 
     bool canWriteToNoteFile();
 
@@ -289,6 +290,8 @@ public:
     static Note fetchByFileUrl(const QUrl url);
 
     static Note fetchByRelativeFilePath(const QString relativePath);
+
+    QString getNoteUrlForLinkingTo(Note note);
 
 protected:
     int id;

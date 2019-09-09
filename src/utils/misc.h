@@ -94,7 +94,6 @@ namespace Utils {
             const QString& typeText = "");
         QString generateDebugInformation(bool withGitHubLineBreaks = true);
         bool regExpInListMatches(const QString& text, QStringList regExpList);
-        QString importMediaFromBase64(QString &data, const QString& imageSuffix = "dat");
         bool isDarkModeIconTheme();
         void transformNextcloudPreviewImages(QString &html);
         void transformRemotePreviewImages(QString &html);

@@ -163,6 +163,7 @@ public:
 private:
     QQmlEngine *_engine;
     NoteApi *_currentNoteApi;
+    Note *_currentNote;
     QMap<int, ScriptComponent> _scriptComponents;
     QHash<int, QList<QVariant>> _settingsVariables;
     bool methodExistsForObject(QObject *object, const QString& method);

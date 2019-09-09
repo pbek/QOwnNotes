@@ -95,6 +95,8 @@ public:
 
     static bool isNoteSubfoldersPanelShowNotesRecursively();
 
+    int depth();
+
 protected:
     int id;
     int parentId;

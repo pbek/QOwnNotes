@@ -1395,6 +1395,27 @@ QString Note::getFullFilePathForFile(const QString& fileName) {
             Utils::Misc::dirSeparator() + fileName;
 }
 
+QString Note::getFilePathRelativeToNote(Note note) {
+    QDir dir(fullNoteFilePath());
+
+    // for some reason there is a leading "../" too much
+    return dir.relativeFilePath(note.fullNoteFilePath()).remove(QRegularExpression(R"(^\.\.\/)"));
+}
+
+QString Note::getNoteUrlForLinkingTo(Note note) {
+    QSettings settings;
+    QString noteUrl;
+
+    if (settings.value("legacyLinking").toBool()) {
+        QString noteNameForLink = Note::generateTextForLink(note.getName());
+        noteUrl = "note://" + noteNameForLink;
+    } else {
+        noteUrl = getFilePathRelativeToNote(note);
+    }
+
+    return noteUrl;
+}
+
 /**
  * Returns the full path of the note file
  */
@@ -1423,7 +1444,7 @@ QString Note::relativeNoteFilePath(QString separator) {
 }
 
 /**
- * Returns the relative path of the note subfolder file
+ * Returns the relative path of the note subfolder
  */
 QString Note::relativeNoteSubFolderPath() {
     QString path = "";
@@ -2695,19 +2716,20 @@ QString Note::getInsertMediaMarkdown(QFile *file, bool addNewLine,
         QFile newFile(newFilePath);
         scaleDownImageFileIfNeeded(newFile);
 
-        QString mediaUrlString = "file://media/" + newFileName;
+        QString mediaUrlString = "";
         QSettings settings;
 
-        // TODO: implement
-//        if (settings.value("legacyLinking").toBool()) {
-//            mediaUrlString = "file://media/" + newFileName;
-//        } else {
-//            auto noteSubFolder = NoteSubFolder::activeNoteSubFolder();
-//
-//            // Beware: showNotesFromAllNoteSubFolders resets the activeNoteSubFolder!
-//            qDebug() << __func__ << " - 'noteSubFolder.relativePath()': "
-//                     << noteSubFolder.relativePath();
-//        }
+        if (settings.value("legacyLinking").toBool()) {
+            mediaUrlString = "file://media/" + newFileName;
+        } else {
+            int depth = getNoteSubFolder().depth();
+
+            for (int i = 0; i < depth; ++i) {
+                mediaUrlString += "../";
+            }
+
+            mediaUrlString += "media/" + newFileName;
+        }
 
         // check if we only want to return the media url string
         if (returnUrlOnly) {
@@ -2748,7 +2770,20 @@ QString Note::getInsertAttachmentMarkdown(QFile *file, QString fileName,
         file->copy(newFilePath);
 
         QFile newFile(newFilePath);
-        QString attachmentUrlString = "file://attachments/" + newFileName;
+        QString attachmentUrlString = "";
+        QSettings settings;
+
+        if (settings.value("legacyLinking").toBool()) {
+            attachmentUrlString = "file://attachments/" + newFileName;
+        } else {
+            int depth = getNoteSubFolder().depth();
+
+            for (int i = 0; i < depth; ++i) {
+                attachmentUrlString += "../";
+            }
+
+            attachmentUrlString += "attachments/" + newFileName;
+        }
 
         // check if we only want to return the attachment url string
         if (returnUrlOnly) {
@@ -2768,7 +2803,7 @@ QString Note::getInsertAttachmentMarkdown(QFile *file, QString fileName,
 
 /**
  * Downloads an url to the media folder and returns the markdown code or the
- * url for it
+ * url for it relative to the note
  *
  * @param url
  * @param returnUrlOnly
@@ -2795,13 +2830,47 @@ QString Note::downloadUrlToMedia(const QUrl& url, bool returnUrlOnly) {
         if (Utils::Misc::downloadUrlToFile(url, tempFile)) {
             // copy image to media folder and generate markdown code for
             // the image
-            text = Note::getInsertMediaMarkdown(tempFile, true, returnUrlOnly);
+            text = getInsertMediaMarkdown(tempFile, true, returnUrlOnly);
         }
     }
 
     delete tempFile;
 
     return text;
+}
+
+/**
+ * Imports an image from a base64 string and returns the markdown code
+ *
+ * @param data
+ * @param imageSuffix
+ * @return
+ */
+QString Note::importMediaFromBase64(QString &data, const QString& imageSuffix) {
+    // if data still starts with base64 prefix remove it
+    if (data.startsWith("base64,", Qt::CaseInsensitive)) {
+        data = data.mid(6);
+    }
+
+    // create a temporary file for the image
+    QTemporaryFile *tempFile = new QTemporaryFile(
+            QDir::tempPath() + QDir::separator() + "media-XXXXXX." +
+            imageSuffix);
+
+    if (!tempFile->open()) {
+        delete tempFile;
+        return "";
+    }
+
+    // write image to the temporary file
+    tempFile->write(QByteArray::fromBase64(data.toLatin1()));
+
+    // store the temporary image in the media folder and return the markdown code
+    QString markdownCode = getInsertMediaMarkdown(tempFile);
+
+    delete tempFile;
+
+    return markdownCode;
 }
 
 /**

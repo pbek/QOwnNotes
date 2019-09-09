@@ -8,7 +8,6 @@
 #include <QNetworkReply>
 #include <QFileDialog>
 #include <QSettings>
-#include "entities/note.h"
 #include "helpers/htmlentities.h"
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
@@ -27,7 +26,13 @@ LinkDialog::LinkDialog(QString dialogTitle, QWidget *parent) :
 
     QStringList nameList = Note::fetchNoteNames();
     ui->searchLineEdit->installEventFilter(this);
-    ui->notesListWidget->addItems(nameList);
+
+    Q_FOREACH(Note note, Note::fetchAll()) {
+        QListWidgetItem *item = new QListWidgetItem(note.getName());
+        item->setData(Qt::UserRole, note.getId());
+        ui->notesListWidget->addItem(item);
+    }
+
     ui->notesListWidget->setCurrentRow(0);
 }
 
@@ -65,6 +70,16 @@ void LinkDialog::on_searchLineEdit_textChanged(const QString &arg1) {
 QString LinkDialog::getSelectedNoteName() {
     return ui->notesListWidget->currentRow() > -1
            ? ui->notesListWidget->currentItem()->text() : "";
+}
+
+Note LinkDialog::getSelectedNote() {
+    if (ui->notesListWidget->currentRow() == -1) {
+        return Note();
+    }
+
+    const int noteId = ui->notesListWidget->currentItem()->data(Qt::UserRole).toInt();
+
+    return Note::fetch(noteId);
 }
 
 QString LinkDialog::getURL() {

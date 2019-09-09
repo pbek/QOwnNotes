@@ -41,15 +41,15 @@ private:
 
     void initNoteCount(QString data);
 
-    QString importImages(QString content, QXmlQuery query);
+    QString importImages(Note note, QString content, QXmlQuery query);
 
-    QString getMarkdownForMediaFileData(MediaFileData &mediaFileData);
+    QString getMarkdownForMediaFileData(Note note, MediaFileData &mediaFileData);
 
-    QString getMarkdownForAttachmentFileData(MediaFileData &mediaFileData);
+    QString getMarkdownForAttachmentFileData(Note note, MediaFileData &mediaFileData);
 
     void tagNote(QXmlQuery &query, Note &note);
 
-    QString importAttachments(QString content, QXmlQuery query);
+    QString importAttachments(Note note, QString content, QXmlQuery query);
 
     QTreeWidgetItem *addMetaDataTreeWidgetItem(
             const QString& name,

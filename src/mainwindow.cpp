@@ -4670,7 +4670,6 @@ void MainWindow::handleTextNoteLinking() {
         QString linkName = dialog->getLinkName();
         QString linkDescription = dialog->getLinkDescription();
         QString noteName = dialog->getSelectedNoteName();
-        QString noteNameForLink = Note::generateTextForLink(noteName);
 
         if ((noteName != "") || (url != "")) {
             QString chosenLinkName = linkName.isEmpty() ?
@@ -4698,7 +4697,7 @@ void MainWindow::handleTextNoteLinking() {
                     noteName = chosenLinkName;
                 }
 
-                QString noteUrl = "note://" + noteNameForLink;
+                QString noteUrl = currentNote.getNoteUrlForLinkingTo(dialog->getSelectedNote());
 
                 newText = "[" + noteName + "](" + noteUrl + ")";
             }
@@ -6197,10 +6196,10 @@ void MainWindow::on_actionInsert_image_triggered() {
 }
 
 /**
- * Inserts a media file into a note
+ * Inserts a media file into the current note
  */
 bool MainWindow::insertMedia(QFile *file) {
-    QString text = Note::getInsertMediaMarkdown(file);
+    QString text = currentNote.getInsertMediaMarkdown(file);
 
     if (!text.isEmpty()) {
         ScriptingService* scriptingService = ScriptingService::instance();
@@ -6228,10 +6227,10 @@ bool MainWindow::insertMedia(QFile *file) {
 }
 
 /**
- * Inserts a file attachment into a note
+ * Inserts a file attachment into the current note
  */
 bool MainWindow::insertAttachment(QFile *file) {
-    QString text = Note::getInsertAttachmentMarkdown(file);
+    QString text = currentNote.getInsertAttachmentMarkdown(file);
 
     if (!text.isEmpty()) {
         qDebug() << __func__ << " - 'text': " << text;
@@ -6855,7 +6854,7 @@ void MainWindow::insertHtml(QString html) {
         if (imageUrlText.startsWith("data:image/", Qt::CaseInsensitive)) {
             QStringList parts = imageUrlText.split(";base64,");
             if (parts.count() == 2) {
-                markdownCode = Utils::Misc::importMediaFromBase64(parts[1]);
+                markdownCode = currentNote.importMediaFromBase64(parts[1]);
             }
         } else {
             QUrl imageUrl = QUrl(imageUrlText);
@@ -6869,7 +6868,7 @@ void MainWindow::insertHtml(QString html) {
             showStatusBarMessage(tr("Downloading %1").arg(imageUrl.toString()));
 
             // download the image and get the media markdown code for it
-            markdownCode = Note::downloadUrlToMedia(imageUrl);
+            markdownCode = currentNote.downloadUrlToMedia(imageUrl);
         }
 
         if (!markdownCode.isEmpty()) {
@@ -9837,9 +9836,9 @@ void MainWindow::on_actionSplit_note_at_cursor_position_triggered() {
 
     // adding a link to new note into the old note
     previousNote.refetch();
-    QString noteNameForLink = Note::generateTextForLink(currentNote.getName());
+    QString noteLink = previousNote.getNoteUrlForLinkingTo(currentNote);
     QString previousNoteText = previousNote.getNoteText();
-    previousNoteText += "\n\n<note://" + noteNameForLink + ">";
+    previousNoteText += "\n\n<" + noteLink + ">";
     previousNote.storeNewText(previousNoteText);
 
     // add the previously removed text

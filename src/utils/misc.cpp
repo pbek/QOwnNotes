@@ -1494,40 +1494,6 @@ bool Utils::Misc::regExpInListMatches(const QString& text, QStringList regExpLis
 }
 
 /**
- * Imports an image from a base64 string and returns the markdown code
- *
- * @param data
- * @param imageSuffix
- * @return
- */
-QString Utils::Misc::importMediaFromBase64(QString &data, const QString& imageSuffix) {
-    // if data still starts with base64 prefix remove it
-    if (data.startsWith("base64,", Qt::CaseInsensitive)) {
-        data = data.mid(6);
-    }
-
-    // create a temporary file for the image
-    QTemporaryFile *tempFile = new QTemporaryFile(
-            QDir::tempPath() + QDir::separator() + "media-XXXXXX." +
-            imageSuffix);
-
-    if (!tempFile->open()) {
-        delete tempFile;
-        return "";
-    }
-
-    // write image to the temporary file
-    tempFile->write(QByteArray::fromBase64(data.toLatin1()));
-
-    // store the temporary image in the media folder and return the markdown code
-    QString markdownCode = Note::getInsertMediaMarkdown(tempFile);
-
-    delete tempFile;
-
-    return markdownCode;
-}
-
-/**
  * Transforms Nextcloud preview image tags
  *
  * @param html

@@ -532,6 +532,20 @@ QString NoteSubFolder::treeWidgetExpandStateSettingsKey(int noteFolderId) {
             QString::number(noteFolderId);
 }
 
+/**
+ * @brief NoteSubFolder::depth return the depth of the folder in regard to the note folder
+ * @return
+ */
+int NoteSubFolder::depth() {
+    auto relativePath = this->relativePath("\n");
+
+    if (relativePath.isEmpty()) {
+        return 0;
+    }
+
+    return relativePath.split("\n").count();
+}
+
 QDebug operator<<(QDebug dbg, const NoteSubFolder &noteSubFolder) {
     dbg.nospace() << "NoteSubFolder: <id>" << noteSubFolder.id <<
             " <name>" << noteSubFolder.name <<

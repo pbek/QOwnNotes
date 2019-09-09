@@ -830,6 +830,7 @@ QString ScriptingService::currentNoteFolderPath() {
  * Updates the current note for the scripts
  */
 void ScriptingService::onCurrentNoteChanged(Note *note) {
+    _currentNote = note;
     _currentNoteApi = new NoteApi();
     _currentNoteApi->fetch(note->getId());
 }
@@ -1083,7 +1084,7 @@ QString ScriptingService::downloadUrlToString(const QUrl& url) {
 
 /**
  * QML wrapper to download an url to the media folder and returning the media
- * url or the markdown image text of the media
+ * url or the markdown image text of the media relative to the current note
  *
  * @param {QString} url
  * @param {bool} returnUrlOnly if true only the media url will be returned (default false)
@@ -1093,12 +1094,12 @@ QString ScriptingService::downloadUrlToMedia(QUrl url, bool returnUrlOnly) {
     MetricsService::instance()->sendVisitIfEnabled(
             "scripting/" + QString(__func__));
 
-    return Note::downloadUrlToMedia(std::move(url), returnUrlOnly);
+    return _currentNote->downloadUrlToMedia(std::move(url), returnUrlOnly);
 }
 
 /**
  * QML wrapper to insert a media file into the media folder and returning
- * the media url or the markdown image text of the media
+ * the media url or the markdown image text of the media relative to the current note
  *
  * @param {QString} mediaFilePath
  * @param {bool} returnUrlOnly if true only the media url will be returned (default false)
@@ -1115,7 +1116,7 @@ QString ScriptingService::insertMediaFile(const QString& mediaFilePath,
         return "";
     }
 
-    return Note::getInsertMediaMarkdown(mediaFile, true, returnUrlOnly);
+    return _currentNote->getInsertMediaMarkdown(mediaFile, true, returnUrlOnly);
 }
 
 /**

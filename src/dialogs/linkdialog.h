@@ -2,6 +2,7 @@
 #define NOTESEARCHDIALOG_H
 
 #include <QDialog>
+#include <entities/note.h>
 #include "masterdialog.h"
 
 namespace Ui {
@@ -17,6 +18,7 @@ public:
     ~LinkDialog();
 
     QString getSelectedNoteName();
+    Note getSelectedNote();
     QString getURL();
     QString getLinkName();
     QString getLinkDescription();
