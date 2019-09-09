@@ -73,7 +73,7 @@
       <item row="1" column="3">
        <widget class="QLabel" name="widthScaleLabel">
         <property name="text">
-         <string>1x</string>
+         <string notr="true">1x</string>
         </property>
        </widget>
       </item>

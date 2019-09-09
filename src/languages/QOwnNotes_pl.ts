@@ -635,11 +635,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/imagedialog.ui" line="76"/>
-        <source>1x</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../dialogs/imagedialog.ui" line="83"/>
         <source>Scaling width:</source>
         <translation type="unfinished"></translation>
