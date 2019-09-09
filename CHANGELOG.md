@@ -31,6 +31,9 @@
       link would look for example like `[note](../other note.md)` or `[note](sub folder/other note.md)`
     - you can still use the old `note://other_note` links if you enable legacy links
       in the *General settings*
+- added more Hungarian, Dutch, Italian, Spanish, French, Greek, German, Catalan,
+  Urdu (Pakistan) translation (thank you Fabijenna, tiwi90, richarson, Botigli,
+  athrouss, rakekniven, MGuerra)
 
 ## 19.9.5
 - added **Hausa translation** (a big thank you to Fabijenna)
