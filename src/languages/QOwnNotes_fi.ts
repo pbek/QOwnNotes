@@ -81,102 +81,102 @@
         <translation>Valitse tuoda Evernote enex-tiedosto</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="644"/>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="648"/>
         <source>Basic attributes</source>
         <translation>Perusmääritteet</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="645"/>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="649"/>
         <source>Created date</source>
         <translation>Luotu päivämäärä</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="647"/>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="651"/>
         <source>Updated date</source>
         <translation>Päivitetty päivämäärä</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="650"/>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="654"/>
         <source>Note attributes</source>
         <translation>Huomaa attribuutit</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="651"/>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="655"/>
         <source>Subject date</source>
         <translation>Aihe päivämäärä</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="653"/>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="657"/>
         <source>Latitude</source>
         <translation>Latitude</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="655"/>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="659"/>
         <source>Longitude</source>
         <translation>Leveysaste</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="657"/>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="661"/>
         <source>Altitude</source>
         <translation>Korkeus</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="659"/>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="663"/>
         <source>Author</source>
         <translation>Kirjoittaja</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="661"/>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="665"/>
         <source>Source</source>
         <translation>Lähde</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="663"/>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="667"/>
         <source>Source URL</source>
         <translation>Lähde-URL-osoite</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="665"/>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="669"/>
         <source>Source application</source>
         <translation>Lähde-sovellus</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="667"/>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="671"/>
         <source>Reminder order</source>
         <translation>Muistutusjärjestys</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="669"/>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="673"/>
         <source>Reminder time</source>
         <translation>Muistutusaika</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="671"/>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="675"/>
         <source>Reminder done time</source>
         <translation>Muistutus on tehty</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="673"/>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="677"/>
         <source>Place name</source>
         <translation>Paikan nimi</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="675"/>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="679"/>
         <source>Content class</source>
         <translation>Sisältöluokka</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="677"/>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="681"/>
         <source>Application data</source>
         <translation>Sovelluksen tiedot</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="751"/>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="755"/>
         <source>Attribute</source>
         <translation>Attribuutti</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="751"/>
+        <location filename="../dialogs/evernoteimportdialog.cpp" line="755"/>
         <source>Value</source>
         <translation>Arvo</translation>
     </message>
@@ -623,6 +623,59 @@
     </message>
 </context>
 <context>
+    <name>ImageDialog</name>
+    <message>
+        <location filename="../dialogs/imagedialog.ui" line="14"/>
+        <source>Insert image</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/imagedialog.ui" line="76"/>
+        <source>1x</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/imagedialog.ui" line="83"/>
+        <source>Scaling width:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/imagedialog.ui" line="109"/>
+        <source>Title of the image link</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/imagedialog.ui" line="112"/>
+        <source>Title</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/imagedialog.ui" line="122"/>
+        <source>Image filename</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/imagedialog.ui" line="128"/>
+        <source>File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/imagedialog.ui" line="138"/>
+        <source>Select image file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/imagedialog.cpp" line="43"/>
+        <source>Image files</source>
+        <translation type="unfinished">Kuvastaa arkistoida</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/imagedialog.cpp" line="44"/>
+        <source>Select image to insert</source>
+        <translation type="unfinished">Valitse lisättävä kuva</translation>
+    </message>
+</context>
+<context>
     <name>LayoutWidget</name>
     <message>
         <location filename="../widgets/layoutwidget.ui" line="97"/>
@@ -763,7 +816,7 @@
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;valitse linkitettävä paikallinen tiedosto&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/linkdialog.cpp" line="215"/>
+        <location filename="../dialogs/linkdialog.cpp" line="230"/>
         <source>Select file to link to</source>
         <translation>Valitse linkitettävä tiedosto</translation>
     </message>
@@ -929,7 +982,7 @@
     <message>
         <location filename="../mainwindow.ui" line="408"/>
         <location filename="../mainwindow.ui" line="894"/>
-        <location filename="../mainwindow.cpp" line="703"/>
+        <location filename="../mainwindow.cpp" line="704"/>
         <source>Navigation</source>
         <translation>Navigointi</translation>
     </message>
@@ -940,7 +993,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="680"/>
-        <location filename="../mainwindow.cpp" line="7822"/>
+        <location filename="../mainwindow.cpp" line="7818"/>
         <source>Add a tag to the current note</source>
         <translation>Lisää tunniste nykyiseen muistiinpanoon</translation>
     </message>
@@ -1056,7 +1109,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1404"/>
-        <location filename="../mainwindow.cpp" line="9311"/>
+        <location filename="../mainwindow.cpp" line="9307"/>
         <source>Select &amp;all notes</source>
         <translation>Valitse &amp;kaikki</translation>
     </message>
@@ -1117,7 +1170,7 @@
         <translation>Etsi tai luo muistiinpanoja</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7823"/>
+        <location filename="../mainwindow.cpp" line="7819"/>
         <source>Add a tag to the selected notes</source>
         <translation>Lisää tunniste valittuihin muistiinpanoihin</translation>
     </message>
@@ -1200,7 +1253,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1120"/>
-        <location filename="../mainwindow.cpp" line="642"/>
+        <location filename="../mainwindow.cpp" line="643"/>
         <source>Workspaces</source>
         <translation>Työtilat</translation>
     </message>
@@ -1502,7 +1555,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2203"/>
-        <location filename="../mainwindow.cpp" line="10311"/>
+        <location filename="../mainwindow.cpp" line="10307"/>
         <source>Remove current workspace</source>
         <translation>Poista nykyinen työtila</translation>
     </message>
@@ -1571,7 +1624,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2324"/>
-        <location filename="../mainwindow.cpp" line="9286"/>
+        <location filename="../mainwindow.cpp" line="9282"/>
         <source>Open note in different window</source>
         <translation>Avaa huomautus eri ikkunassa</translation>
     </message>
@@ -1592,7 +1645,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2364"/>
-        <location filename="../mainwindow.cpp" line="9294"/>
+        <location filename="../mainwindow.cpp" line="9290"/>
         <source>Show note git versions</source>
         <translation>Näytä huomautuksen git-versiot</translation>
     </message>
@@ -1788,12 +1841,12 @@
         <translation>Tuo muistiinpanoja Evernotesta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2593"/>
+        <location filename="../mainwindow.cpp" line="2594"/>
         <source>Note was removed externally!</source>
         <translation>Huomautus poistettiin ulkoisesti!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2594"/>
+        <location filename="../mainwindow.cpp" line="2595"/>
         <source>Current note was removed outside of this application!
 Restore current note?</source>
         <translation>Nykyinen huomautus poistettiin tämän sovelluksen ulkopuolella!
@@ -1801,8 +1854,8 @@ Palauta nykyinen muistiinpano?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4960"/>
-        <location filename="../mainwindow.cpp" line="6377"/>
-        <location filename="../mainwindow.cpp" line="9373"/>
+        <location filename="../mainwindow.cpp" line="6373"/>
+        <location filename="../mainwindow.cpp" line="9369"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Peruuta</translation>
     </message>
@@ -1814,27 +1867,27 @@ Palauta nykyinen muistiinpano?</translation>
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2818"/>
+        <location filename="../mainwindow.cpp" line="2819"/>
         <source>new version %1 available</source>
         <translation>uusi versio %1 saatavilla</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2938"/>
+        <location filename="../mainwindow.cpp" line="2939"/>
         <source>Abort</source>
         <translation>Keskeyttää</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2938"/>
+        <location filename="../mainwindow.cpp" line="2939"/>
         <source>Loading notes…</source>
         <translation>Ladataan muistiinpanoja…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3141"/>
+        <location filename="../mainwindow.cpp" line="3142"/>
         <source>Delete conflicted database copies</source>
         <translation>Slet konflikter med databaser</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3166"/>
+        <location filename="../mainwindow.cpp" line="3167"/>
         <source>Removed %n conflicted database copies</source>
         <translation>
             <numerusform>Poistettu %n ristiriidassa oleva tietokantakopio</numerusform>
@@ -1842,62 +1895,62 @@ Palauta nykyinen muistiinpano?</translation>
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3301"/>
+        <location filename="../mainwindow.cpp" line="3302"/>
         <source>Please select the folder where your notes will get stored</source>
         <translation>Valitse kansio, johon muistiinpanot tallennetaan</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3328"/>
+        <location filename="../mainwindow.cpp" line="3329"/>
         <source>No folder was selected</source>
         <translation>Mitään kansiota ei ole valittu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3330"/>
+        <location filename="../mainwindow.cpp" line="3331"/>
         <source>You have to select your ownCloud notes folder to make this software work!</source>
         <translation>Sinun on valittava ownCloud-komennot, jotta tämä ohjelmisto toimii!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3332"/>
+        <location filename="../mainwindow.cpp" line="3333"/>
         <source>&amp;Retry</source>
         <translation>&amp;Yritä uudelleen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3332"/>
+        <location filename="../mainwindow.cpp" line="3333"/>
         <source>&amp;Exit</source>
         <translation>&amp;Lopeta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3558"/>
+        <location filename="../mainwindow.cpp" line="3559"/>
         <source>Remove current note</source>
         <translation>Poista nykyinen huomautus</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3559"/>
+        <location filename="../mainwindow.cpp" line="3560"/>
         <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
         <translation>Poista nykyinen huomautus: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3887"/>
+        <location filename="../mainwindow.cpp" line="3888"/>
         <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
         <translation>Anna tämän salatun muistiinpanon &lt;strong&gt; salasana &lt;/strong&gt;.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3911"/>
+        <location filename="../mainwindow.cpp" line="3912"/>
         <source>Note can&apos;t be decrypted!</source>
         <translation>Huomautusta ei voi purkaa!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3912"/>
+        <location filename="../mainwindow.cpp" line="3913"/>
         <source>It seems that your password is not valid!</source>
         <translation>Näyttää siltä, että salasana ei ole kelvollinen!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4067"/>
+        <location filename="../mainwindow.cpp" line="4068"/>
         <source>Remove selected notes</source>
         <translation>Poista valitut muistiinpanot</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="4069"/>
+        <location filename="../mainwindow.cpp" line="4070"/>
         <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
@@ -1911,13 +1964,13 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4148"/>
-        <location filename="../mainwindow.cpp" line="9537"/>
+        <location filename="../mainwindow.cpp" line="4149"/>
+        <location filename="../mainwindow.cpp" line="9533"/>
         <source>Remove selected folders</source>
         <translation>Poista valitut kansiot</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="4149"/>
+        <location filename="../mainwindow.cpp" line="4150"/>
         <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
         <translation>
             <numerusform>Poista &lt;strong&gt;%n &lt;/strong&gt; valittu kansio? &lt;ul&gt; &lt;li&gt;% 1 &lt;/li&gt; &lt;/ul&gt; Kaikki näiden kansioiden tiedostot ja kansiot poistetaan myös!</numerusform>
@@ -1925,17 +1978,17 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4160"/>
+        <location filename="../mainwindow.cpp" line="4161"/>
         <source>Removed note subfolder: %1</source>
         <translation>Poistettu muistiinpanon alikansio: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4179"/>
+        <location filename="../mainwindow.cpp" line="4180"/>
         <source>Remove selected tags</source>
         <translation>Poista valitut tunnisteet</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="4180"/>
+        <location filename="../mainwindow.cpp" line="4181"/>
         <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
         <translation>
             <numerusform>Poista &lt;strong&gt;%n &lt;/strong&gt; valittu tunniste? Tässä prosessissa ei poisteta muistiinpanoja.</numerusform>
@@ -1943,13 +1996,13 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4234"/>
-        <location filename="../mainwindow.cpp" line="8515"/>
+        <location filename="../mainwindow.cpp" line="4235"/>
+        <location filename="../mainwindow.cpp" line="8511"/>
         <source>Move selected notes</source>
         <translation>Siirrä valitut muistiinpanot</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="4235"/>
+        <location filename="../mainwindow.cpp" line="4236"/>
         <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>Siirrä %n valittu huomautus kohtaan &lt;strong&gt; %2 &lt;/strong&gt;?</numerusform>
@@ -1957,13 +2010,13 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4327"/>
-        <location filename="../mainwindow.cpp" line="8599"/>
+        <location filename="../mainwindow.cpp" line="4328"/>
+        <location filename="../mainwindow.cpp" line="8595"/>
         <source>Copy selected notes</source>
         <translation>Kopioi valitut muistiinpanot</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="4328"/>
+        <location filename="../mainwindow.cpp" line="4329"/>
         <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>Kopioi %n valittu huomautus kohtaan &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
@@ -1971,13 +2024,13 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4351"/>
-        <location filename="../mainwindow.cpp" line="4489"/>
+        <location filename="../mainwindow.cpp" line="4352"/>
+        <location filename="../mainwindow.cpp" line="4490"/>
         <source>Done</source>
         <translation>Tehty</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="4352"/>
+        <location filename="../mainwindow.cpp" line="4353"/>
         <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
         <translation>
             <numerusform>%n huomautus kopioitiin &lt;strong&gt; %2 &lt;/strong&gt;.</numerusform>
@@ -1985,12 +2038,12 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4365"/>
+        <location filename="../mainwindow.cpp" line="4366"/>
         <source>Tag selected notes</source>
         <translation>Merkitse valitut muistiinpanot</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="4366"/>
+        <location filename="../mainwindow.cpp" line="4367"/>
         <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>Merkitse %n valittua muistiinpanoa &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
@@ -1998,22 +2051,22 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4627"/>
+        <location filename="../mainwindow.cpp" line="4628"/>
         <source>Restart application</source>
         <translation>Käynnistä sovellus uudelleen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4633"/>
+        <location filename="../mainwindow.cpp" line="4634"/>
         <source>You may need to restart the application manually to let the changes take effect.</source>
         <translation>Voit joutua käynnistämään sovelluksen manuaalisesti, jotta muutokset tulevat voimaan.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4638"/>
+        <location filename="../mainwindow.cpp" line="4639"/>
         <source>You may need to restart the application to let the changes take effect.</source>
         <translation>Saatat joutua käynnistämään sovelluksen uudelleen, jotta muutokset tulevat voimaan.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4640"/>
+        <location filename="../mainwindow.cpp" line="4641"/>
         <source>Restart</source>
         <translation>Uudelleenkäynnistää</translation>
     </message>
@@ -2076,54 +2129,53 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
         <translation>Vie valittu teksti PDF-muodossa (esikatselu)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6183"/>
         <source>Image files</source>
-        <translation>Kuvastaa arkistoida</translation>
+        <translation type="vanished">Kuvastaa arkistoida</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6373"/>
+        <location filename="../mainwindow.cpp" line="6369"/>
         <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
         <translation>Huomautuksesi puretaan ja tallennetaan uudelleen tekstinä. Muista, että salaamaton huomautus synkronoidaan mahdollisesti palvelimellesi ja arkaluonteinen teksti saattaa olla näkyvissä! &lt;br /&gt; Haluatko purkaa muistiinpanosi?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6460"/>
+        <location filename="../mainwindow.cpp" line="6456"/>
         <source>Markdown files</source>
         <translation>Markdown tiedostot</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6515"/>
+        <location filename="../mainwindow.cpp" line="6511"/>
         <source>Bookmarked note position at slot %1</source>
         <translation>Merkinnän muistiinpano on sijoitettu paikkaan %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6531"/>
+        <location filename="../mainwindow.cpp" line="6527"/>
         <source>Jumped to bookmark position at slot %1</source>
         <translation>Hyppäsi kirjanmerkkiasentoon paikkaan %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6751"/>
-        <location filename="../mainwindow.cpp" line="6821"/>
+        <location filename="../mainwindow.cpp" line="6747"/>
+        <location filename="../mainwindow.cpp" line="6817"/>
         <source>Inserting image</source>
         <translation>Kuvan lisääminen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6756"/>
-        <location filename="../mainwindow.cpp" line="6825"/>
+        <location filename="../mainwindow.cpp" line="6752"/>
+        <location filename="../mainwindow.cpp" line="6821"/>
         <source>Done inserting image</source>
         <translation>Valmis lisäämällä kuva</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6758"/>
+        <location filename="../mainwindow.cpp" line="6754"/>
         <source>Inserting attachment</source>
         <translation>Liitteen lisääminen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6763"/>
+        <location filename="../mainwindow.cpp" line="6759"/>
         <source>Done inserting attachment</source>
         <translation>Tehty liitteen lisääminen</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6775"/>
+        <location filename="../mainwindow.cpp" line="6771"/>
         <source>Copied %n note(s) to %1</source>
         <translation>
             <numerusform>Kopioitu %n huomautus %1</numerusform>
@@ -2131,7 +2183,7 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6784"/>
+        <location filename="../mainwindow.cpp" line="6780"/>
         <source>Failed to copy %n note(s) (most likely already existing)</source>
         <translation>
             <numerusform>%n huomautuksen kopioiminen epäonnistui (todennäköisimmin jo olemassa)</numerusform>
@@ -2139,7 +2191,7 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6794"/>
+        <location filename="../mainwindow.cpp" line="6790"/>
         <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
         <translation>
             <numerusform>Ohita %n huomautuksen kopiointi (ei merkintää tai tekstitiedostoa tai ei luettavissa)</numerusform>
@@ -2147,178 +2199,178 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6808"/>
+        <location filename="../mainwindow.cpp" line="6804"/>
         <source>Saving temporary image</source>
         <translation>Väliaikaisen kuvan tallentaminen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6828"/>
+        <location filename="../mainwindow.cpp" line="6824"/>
         <source>Temporary file can&apos;t be opened</source>
         <translation>Tilapäistä tiedostoa ei voi avata</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6869"/>
+        <location filename="../mainwindow.cpp" line="6865"/>
         <source>Downloading %1</source>
         <translation>Lataaminen %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7050"/>
+        <location filename="../mainwindow.cpp" line="7046"/>
         <source>Reset font size to %1 pt</source>
         <comment>Will be shown after the font size is reset by &apos;Reset note text size&apos;</comment>
         <translation>Nollaa kirjasinkoko %1 pt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7868"/>
+        <location filename="../mainwindow.cpp" line="7864"/>
         <source>Remove tag &apos;%1&apos; from the current note</source>
         <translation>Poista tunniste &apos;%1&apos; nykyisestä muistiinpanosta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7870"/>
+        <location filename="../mainwindow.cpp" line="7866"/>
         <source>Remove tag &apos;%1&apos; from the selected notes</source>
         <translation>Poista tunniste &apos;%1&apos; valituista muistiinpanoista</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8073"/>
+        <location filename="../mainwindow.cpp" line="8069"/>
         <source>Rename tag</source>
         <translation>Nimeä tunniste uudelleen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8074"/>
+        <location filename="../mainwindow.cpp" line="8070"/>
         <source>Assign color</source>
         <translation>Määritä väri</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8075"/>
+        <location filename="../mainwindow.cpp" line="8071"/>
         <source>Disable color</source>
         <translation>Poista väri käytöstä</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8079"/>
+        <location filename="../mainwindow.cpp" line="8075"/>
         <source>&amp;Move tags to…</source>
         <translation>&amp;Siirrä tunnisteet…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8298"/>
+        <location filename="../mainwindow.cpp" line="8294"/>
         <source>Move to the root</source>
         <comment>to move a tag to the current tag in the tag context menu</comment>
         <translation>Siirry juurelle</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8741"/>
+        <location filename="../mainwindow.cpp" line="8737"/>
         <source>An url was opened at the current cursor position</source>
         <translation>URL-osoite avattiin nykyisellä kohdistinpaikalla</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8842"/>
+        <location filename="../mainwindow.cpp" line="8838"/>
         <source>No equation was found in front of the cursor</source>
         <translation>Kohdistimen edessä ei löytynyt yhtälöä</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8859"/>
+        <location filename="../mainwindow.cpp" line="8855"/>
         <source>Result for equation: %1 = %2</source>
         <translation>Yhtälön tulos: %1 = %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8960"/>
+        <location filename="../mainwindow.cpp" line="8956"/>
         <source>The scripting engine was reloaded</source>
         <translation>Skriptointimoottori ladattiin uudelleen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8996"/>
+        <location filename="../mainwindow.cpp" line="8992"/>
         <source>HTML files</source>
         <translation>HTML-tiedostot</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9188"/>
-        <location filename="../mainwindow.cpp" line="9356"/>
+        <location filename="../mainwindow.cpp" line="9184"/>
+        <location filename="../mainwindow.cpp" line="9352"/>
         <source>Rename note</source>
         <translation>Nimeä muistiinpano uudelleen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9189"/>
+        <location filename="../mainwindow.cpp" line="9185"/>
         <source>Allows you to rename the filename of the note</source>
         <translation>Voit nimetä Huomautus tiedostonimi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9201"/>
+        <location filename="../mainwindow.cpp" line="9197"/>
         <source>&amp;Move notes to…</source>
         <translation>&amp;Siirrä huomautuksia…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9202"/>
+        <location filename="../mainwindow.cpp" line="9198"/>
         <source>&amp;Copy notes to…</source>
         <translation>&amp;Kopioi muistiinpanot…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9231"/>
+        <location filename="../mainwindow.cpp" line="9227"/>
         <source>Move notes to subfolder…</source>
         <translation>Siirrä muistiinpanot alikansioon…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9235"/>
+        <location filename="../mainwindow.cpp" line="9231"/>
         <source>Copy notes to subfolder…</source>
         <translation>Kopioi muistiinpanot alikansioon…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9243"/>
+        <location filename="../mainwindow.cpp" line="9239"/>
         <source>&amp;Tag selected notes with…</source>
         <translation>&amp;Merkitse valitut muistiinpanot…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9265"/>
+        <location filename="../mainwindow.cpp" line="9261"/>
         <source>&amp;Remove tag from selected notes…</source>
         <translation>&amp;Poista tunniste valituista muistiinpanoista…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9356"/>
+        <location filename="../mainwindow.cpp" line="9352"/>
         <source>Name:</source>
         <translation>Nimi:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9368"/>
+        <location filename="../mainwindow.cpp" line="9364"/>
         <source>Note renaming not enabled!</source>
         <translation>Huomautuksen uudelleen nimeäminen ei ole käytössä!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9536"/>
+        <location filename="../mainwindow.cpp" line="9532"/>
         <source>Rename subfolder</source>
         <translation>Nimeä alikansio</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10091"/>
+        <location filename="../mainwindow.cpp" line="10087"/>
         <source>Create new workspace</source>
         <translation>Uuden työtilan luominen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10091"/>
-        <location filename="../mainwindow.cpp" line="10349"/>
+        <location filename="../mainwindow.cpp" line="10087"/>
+        <location filename="../mainwindow.cpp" line="10345"/>
         <source>Workspace name:</source>
         <translation>Työtilan nimi:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10213"/>
+        <location filename="../mainwindow.cpp" line="10209"/>
         <source>full</source>
         <comment>full workspace</comment>
         <translation>koko</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10220"/>
+        <location filename="../mainwindow.cpp" line="10216"/>
         <source>minimal</source>
         <comment>minimal workspace</comment>
         <translation>minimaalinen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10312"/>
+        <location filename="../mainwindow.cpp" line="10308"/>
         <source>Remove the current workspace?</source>
         <translation>Poista nykyinen työtila?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10349"/>
+        <location filename="../mainwindow.cpp" line="10345"/>
         <source>Rename workspace</source>
         <translation>Nimeä työtila uudelleen</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="10484"/>
+        <location filename="../mainwindow.cpp" line="10480"/>
         <source>%n chars</source>
         <comment>characters</comment>
         <translation>
@@ -2327,37 +2379,37 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10726"/>
+        <location filename="../mainwindow.cpp" line="10722"/>
         <source>Select file to insert</source>
         <translation>Valitse lisättävä tiedosto</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10759"/>
+        <location filename="../mainwindow.cpp" line="10755"/>
         <source>Disallow all note editing</source>
         <translation>Estä kaikki muistiinpanojen muokkaus</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10905"/>
+        <location filename="../mainwindow.cpp" line="10901"/>
         <source>Select text files to import</source>
         <translation>Valitse tuodut tekstitiedostot</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10934"/>
+        <location filename="../mainwindow.cpp" line="10930"/>
         <source>Importing: %1</source>
         <translation>Tuo: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10997"/>
+        <location filename="../mainwindow.cpp" line="10993"/>
         <source>Note headline &apos;%1&apos; was copied to the clipboard</source>
         <translation>Huomautus otsikko &apos;%1&apos; kopioitiin leikepöydälle</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="11081"/>
+        <location filename="../mainwindow.cpp" line="11077"/>
         <source>Leave full-screen mode</source>
         <translation>Poistu koko näytön tilasta</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="7841"/>
+        <location filename="../mainwindow.cpp" line="7837"/>
         <source>%n notes selected</source>
         <translation>
             <numerusform>%n muistiinpanoja valittu</numerusform>
@@ -2366,7 +2418,7 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2409"/>
-        <location filename="../mainwindow.cpp" line="10760"/>
+        <location filename="../mainwindow.cpp" line="10756"/>
         <source>Allow all note editing</source>
         <translation>Salli kaikkien muistiinpanojen muokkaus</translation>
     </message>
@@ -2376,12 +2428,12 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
         <translation>&amp;Tag</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4434"/>
+        <location filename="../mainwindow.cpp" line="4435"/>
         <source>Remove tag from selected notes</source>
         <translation>Poista tunniste valituista muistiinpanoista</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="4435"/>
+        <location filename="../mainwindow.cpp" line="4436"/>
         <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
         <translation>
             <numerusform>Poista tunniste &lt;strong&gt; %1 &lt;/strong&gt; valitusta muistiinpanosta %n?</numerusform>
@@ -2389,7 +2441,7 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="4490"/>
+        <location filename="../mainwindow.cpp" line="4491"/>
         <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
         <translation>
             <numerusform>Tag &lt;strong&gt;%1 &lt;/strong&gt; poistettiin %n huomata</numerusform>
@@ -2397,12 +2449,12 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4534"/>
+        <location filename="../mainwindow.cpp" line="4535"/>
         <source>Current notes folder: </source>
         <translation>Nykyiset muistiinpanot: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4536"/>
+        <location filename="../mainwindow.cpp" line="4537"/>
         <source>Set the notes folder. Current notes folder: </source>
         <translation>Aseta muistikansion kansio. Nykyiset muistiinpanot: </translation>
     </message>
@@ -2454,8 +2506,8 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
     <message>
         <location filename="../mainwindow.cpp" line="5456"/>
         <location filename="../mainwindow.cpp" line="5760"/>
-        <location filename="../mainwindow.cpp" line="9183"/>
-        <location filename="../mainwindow.cpp" line="9534"/>
+        <location filename="../mainwindow.cpp" line="9179"/>
+        <location filename="../mainwindow.cpp" line="9530"/>
         <source>New note</source>
         <translation>Uusi muistiinpano</translation>
     </message>
@@ -2480,44 +2532,44 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
         <translation>Lopeta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7204"/>
+        <location filename="../mainwindow.cpp" line="7200"/>
         <source>show notes from all note subfolders (%1)</source>
         <translation>näyttää muistiinpanot kaikista muistiinpanojen alikansioista (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7223"/>
+        <location filename="../mainwindow.cpp" line="7219"/>
         <source>show notes in note root folder (%1)</source>
         <translation>näytä muistiinpanot huomautuksen juurikansiossa (%1)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="316"/>
-        <location filename="../mainwindow.cpp" line="685"/>
-        <location filename="../mainwindow.cpp" line="7231"/>
+        <location filename="../mainwindow.cpp" line="686"/>
+        <location filename="../mainwindow.cpp" line="7227"/>
         <source>Note folder</source>
         <translation>Huomautus-kansio</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8455"/>
+        <location filename="../mainwindow.cpp" line="8451"/>
         <source>Copy to note folder</source>
         <translation>Kopioi huomata kansio</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8456"/>
+        <location filename="../mainwindow.cpp" line="8452"/>
         <source>Move to note folder</source>
         <translation>Siirrä muistiin -kansioon</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8457"/>
+        <location filename="../mainwindow.cpp" line="8453"/>
         <source>Copy to this subfolder</source>
         <translation>Kopioi tämä alikansio</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8458"/>
+        <location filename="../mainwindow.cpp" line="8454"/>
         <source>Move to this subfolder</source>
         <translation>Siirrä tämä alikansio</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="8509"/>
+        <location filename="../mainwindow.cpp" line="8505"/>
         <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>Siirrä %n valittu huomautus muistiin alikansioon &lt;strong&gt; %2 &lt;/strong&gt;?</numerusform>
@@ -2525,13 +2577,13 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4641"/>
-        <location filename="../mainwindow.cpp" line="10919"/>
+        <location filename="../mainwindow.cpp" line="4642"/>
+        <location filename="../mainwindow.cpp" line="10915"/>
         <source>Cancel</source>
         <translation>Peruuta</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="8572"/>
+        <location filename="../mainwindow.cpp" line="8568"/>
         <source>%n note(s) were moved to note subfolder &quot;%2&quot;</source>
         <translation>
             <numerusform>%n jäsenillä siirrettiin huomaa alikansio ”%2”</numerusform>
@@ -2539,7 +2591,7 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="8593"/>
+        <location filename="../mainwindow.cpp" line="8589"/>
         <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>Kopioi %n valittua merkintää huomata alikansioon &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
@@ -2547,7 +2599,7 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="8644"/>
+        <location filename="../mainwindow.cpp" line="8640"/>
         <source>%n note(s) were copied to note subfolder &quot;%2&quot;</source>
         <translation>
             <numerusform>%n huomautus kopioitiin merkiksi alikansioon &quot;%2&quot;</numerusform>
@@ -2555,52 +2607,52 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9284"/>
+        <location filename="../mainwindow.cpp" line="9280"/>
         <source>Open note in external editor</source>
         <translation>Avaa muistiinpano ulkoisessa editorissa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9288"/>
+        <location filename="../mainwindow.cpp" line="9284"/>
         <source>Show note in file manager</source>
         <translation>Näytä huomautus tiedostonhallinnassa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9369"/>
+        <location filename="../mainwindow.cpp" line="9365"/>
         <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
         <translation>Jos haluat nimetä muistiinpanosi uudelleen, sinun on annettava mahdollisuus sallia, että huomautuksen tiedostonimi on erilainen kuin otsikon.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9535"/>
+        <location filename="../mainwindow.cpp" line="9531"/>
         <source>New subfolder</source>
         <translation>Uusi alikansio</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9539"/>
+        <location filename="../mainwindow.cpp" line="9535"/>
         <source>Show folder in file manager</source>
         <translation>Näytä kansio tiedostonhallinnassa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9575"/>
+        <location filename="../mainwindow.cpp" line="9571"/>
         <source>Create a new folder</source>
         <translation>Luo uusi kansio</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9575"/>
+        <location filename="../mainwindow.cpp" line="9571"/>
         <source>Folder name:</source>
         <translation>Kansion nimi:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7162"/>
+        <location filename="../mainwindow.cpp" line="7158"/>
         <source>show all untagged notes (%1)</source>
         <translation>näytä kaikki merkitsemättömät muistiinpanot (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7165"/>
+        <location filename="../mainwindow.cpp" line="7161"/>
         <source>Untagged notes</source>
         <translation>Merkittämättömät huomautukset</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8997"/>
+        <location filename="../mainwindow.cpp" line="8993"/>
         <source>Export current note as HTML file</source>
         <translation>Vie nykyinen huomautus HTML-tiedostoksi</translation>
     </message>
@@ -2610,7 +2662,7 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
         <translation>Sivun koko</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1036"/>
+        <location filename="../mainwindow.cpp" line="1037"/>
         <source>quit toolbar</source>
         <translation>lopettaa työkalurivin</translation>
     </message>
@@ -2630,7 +2682,7 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
         <translation>&amp;Ok</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9193"/>
+        <location filename="../mainwindow.cpp" line="9189"/>
         <source>&amp;Remove notes</source>
         <translation>&amp;Poista muistiinpanot</translation>
     </message>
@@ -2640,33 +2692,33 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
         <translation>&amp;Linkitä valittu teksti</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="957"/>
+        <location filename="../mainwindow.cpp" line="958"/>
         <source>Your tasks are being loaded from your server</source>
         <translation>Tehtävät ladataan palvelimeltasi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2525"/>
+        <location filename="../mainwindow.cpp" line="2526"/>
         <source>Current note was modified externally</source>
         <translation>Nykyinen huomautus muutettiin ulkoisesti</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2607"/>
+        <location filename="../mainwindow.cpp" line="2608"/>
         <location filename="../mainwindow.cpp" line="5394"/>
         <source>Stored current note to disk</source>
         <translation>Tallennetaan nykyinen huomautus levylle</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2626"/>
+        <location filename="../mainwindow.cpp" line="2627"/>
         <source>Note was modified externally: %1</source>
         <translation>Huomautus muutettiin ulkoisesti: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2647"/>
+        <location filename="../mainwindow.cpp" line="2648"/>
         <source>Notes directory was modified externally</source>
         <translation>Huomautus-hakemistoa muokattiin ulkoisesti</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="2714"/>
+        <location filename="../mainwindow.cpp" line="2715"/>
         <source>Stored %n note(s) to disk</source>
         <translation>
             <numerusform>Tallennettu %n muistiin levylle</numerusform>
@@ -2674,53 +2726,53 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7134"/>
+        <location filename="../mainwindow.cpp" line="7130"/>
         <source>show all notes (%1)</source>
         <translation>näytä kaikki muistiinpanot (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7137"/>
-        <location filename="../mainwindow.cpp" line="7207"/>
+        <location filename="../mainwindow.cpp" line="7133"/>
+        <location filename="../mainwindow.cpp" line="7203"/>
         <source>All notes</source>
         <translation>Kaikki muistiinpanot</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8065"/>
+        <location filename="../mainwindow.cpp" line="8061"/>
         <source>&amp;Add tag</source>
         <translation>&amp;Lisää tunniste</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8114"/>
+        <location filename="../mainwindow.cpp" line="8110"/>
         <source>Tag could not be created!</source>
         <translation>Tagia ei voitu luoda!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8299"/>
+        <location filename="../mainwindow.cpp" line="8295"/>
         <source>Move to this tag</source>
         <translation>Siirry tähän tunnisteeseen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8349"/>
+        <location filename="../mainwindow.cpp" line="8345"/>
         <source>Tag this</source>
         <translation>Merkitse tämä</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8382"/>
+        <location filename="../mainwindow.cpp" line="8378"/>
         <source>Cannot move tag &apos;%1&apos; to this tag</source>
         <translation>Ei voi siirtää tämän tagin tag ”%1”</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8398"/>
+        <location filename="../mainwindow.cpp" line="8394"/>
         <source>Moved tag &apos;%1&apos; to new tag</source>
         <translation>Siirretty tunniste &quot;%1&quot; uuteen tunnisteeseen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7393"/>
+        <location filename="../mainwindow.cpp" line="7389"/>
         <source>show all notes tagged with &apos;%1&apos; (%2)</source>
         <translation>näytä kaikki merkinnät, joihin on merkitty &apos;%1&apos; (%2)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8076"/>
+        <location filename="../mainwindow.cpp" line="8072"/>
         <source>&amp;Remove tags</source>
         <translation>&amp;Poista tunnisteet</translation>
     </message>
@@ -2730,153 +2782,153 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
         <translation>Ei valittuja luetteloita!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="656"/>
+        <location filename="../mainwindow.cpp" line="657"/>
         <source>Subfolders</source>
         <translation>Alikansiot</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="667"/>
+        <location filename="../mainwindow.cpp" line="668"/>
         <source>Tags</source>
         <translation>Tunnisteet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="676"/>
+        <location filename="../mainwindow.cpp" line="677"/>
         <source>Note search</source>
         <translation>Huomaa haku</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="694"/>
+        <location filename="../mainwindow.cpp" line="695"/>
         <source>Note list</source>
         <translation>Huomata haluttaa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="718"/>
+        <location filename="../mainwindow.cpp" line="719"/>
         <source>Note edit</source>
         <translation>Huomautus muokkaus</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="729"/>
+        <location filename="../mainwindow.cpp" line="730"/>
         <source>Note tags</source>
         <translation>Huomaa tunnisteet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="740"/>
+        <location filename="../mainwindow.cpp" line="741"/>
         <source>Note preview</source>
         <translation>Huomaa esikatselu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="747"/>
+        <location filename="../mainwindow.cpp" line="748"/>
         <source>Log</source>
         <translation>Loki</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="756"/>
+        <location filename="../mainwindow.cpp" line="757"/>
         <source>Scripting</source>
         <translation>Komentosarjat</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1003"/>
+        <location filename="../mainwindow.cpp" line="1004"/>
         <source>formatting toolbar</source>
         <translation>muotoilutyökalurivi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1012"/>
+        <location filename="../mainwindow.cpp" line="1013"/>
         <source>inserting toolbar</source>
         <translation>työkalurivin lisääminen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1019"/>
+        <location filename="../mainwindow.cpp" line="1020"/>
         <source>encryption toolbar</source>
         <translation>encryption koristella</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1026"/>
+        <location filename="../mainwindow.cpp" line="1027"/>
         <source>window toolbar</source>
         <translation>ikkunan työkalurivi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1031"/>
+        <location filename="../mainwindow.cpp" line="1032"/>
         <source>custom action toolbar</source>
         <translation>mukautetun toiminnan työkalurivi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1051"/>
+        <location filename="../mainwindow.cpp" line="1052"/>
         <source>Workspace selector</source>
         <translation>Työtilan valitsin</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1190"/>
+        <location filename="../mainwindow.cpp" line="1191"/>
         <source>Show %1 panel</source>
         <translation>Näytä %1 paneeli</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1233"/>
+        <location filename="../mainwindow.cpp" line="1234"/>
         <source>Show %1</source>
         <translation>Näytä %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1550"/>
+        <location filename="../mainwindow.cpp" line="1551"/>
         <source>Leave distraction free mode</source>
         <translation>Jätä häiriövapaa tila</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2060"/>
+        <location filename="../mainwindow.cpp" line="2061"/>
         <source>show notes in folder &apos;%1&apos; (%2)</source>
         <translation>näytä muistiinpanot kansiossa &apos;%1&apos; (%2)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2100"/>
+        <location filename="../mainwindow.cpp" line="2101"/>
         <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
         <translation>&lt;strong&gt;%1 &lt;/strong&gt; &lt;br/&gt; viimeksi muokattu: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2105"/>
+        <location filename="../mainwindow.cpp" line="2106"/>
         <source>&lt;br /&gt;path: %1</source>
         <translation>&lt;br/&gt; polku: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2266"/>
+        <location filename="../mainwindow.cpp" line="2267"/>
         <source>Toolbar could not be loaded without name</source>
         <translation>Työkalupalkkia ei voitu ladata ilman nimeä</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2551"/>
+        <location filename="../mainwindow.cpp" line="2552"/>
         <source>Overwriting external changes of: %1</source>
         <translation>Ulkoisten muutosten korvaaminen: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2573"/>
+        <location filename="../mainwindow.cpp" line="2574"/>
         <source>Loading external changes from: %1</source>
         <translation>Ulkoisten muutosten lataaminen kohteesta: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2608"/>
+        <location filename="../mainwindow.cpp" line="2609"/>
         <location filename="../mainwindow.cpp" line="5395"/>
         <source>Current note could not be stored to disk</source>
         <translation>Nykyistä muistilappua ei voitu tallentaa levylle</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2772"/>
+        <location filename="../mainwindow.cpp" line="2773"/>
         <source>Read-only</source>
         <translation>Lue ainoastaan</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2773"/>
+        <location filename="../mainwindow.cpp" line="2774"/>
         <source>Note editing is disabled, click to enable</source>
         <translation>Huomautus muokkaus on poistettu käytöstä, ota käyttöön napsauttamalla</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2792"/>
+        <location filename="../mainwindow.cpp" line="2793"/>
         <source>Line numbers</source>
         <translation>Rivinumerot</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2802"/>
+        <location filename="../mainwindow.cpp" line="2803"/>
         <source>Click here to see what has changed and to be able to update to the latest version</source>
         <translation>Napsauta tätä nähdäksesi, mikä on muuttunut, ja voit päivittää uusimman version</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3143"/>
+        <location filename="../mainwindow.cpp" line="3144"/>
         <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
         <translation>
             <numerusform>Jatka &lt;strong&gt;%n &lt;/strong&gt; -ristiriidassa olevan tietokantakopion automaattista poistamista, joka saattaa estää ownCloud-synkronointiprosessin?</numerusform>
@@ -2884,7 +2936,7 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="4418"/>
+        <location filename="../mainwindow.cpp" line="4419"/>
         <source>%n note(s) were tagged with &quot;%2&quot;</source>
         <translation>
             <numerusform>%n-merkintä on merkitty numerolla &quot;%2&quot;</numerusform>
@@ -2911,60 +2963,59 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
         <translation>Estä &amp;valittu teksti</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6881"/>
+        <location filename="../mainwindow.cpp" line="6877"/>
         <source>Downloading images finished</source>
         <translation>Kuvien lataaminen on valmis</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7023"/>
+        <location filename="../mainwindow.cpp" line="7019"/>
         <source>Increased font size to %1 pt</source>
         <translation>Kirjasinkoon on lisätty %1 pt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7040"/>
+        <location filename="../mainwindow.cpp" line="7036"/>
         <source>Decreased font size to %1 pt</source>
         <translation>Kirjasinkoko on pienentynyt arvoon %1 pt</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4933"/>
         <location filename="../mainwindow.cpp" line="4959"/>
-        <location filename="../mainwindow.cpp" line="9372"/>
+        <location filename="../mainwindow.cpp" line="9368"/>
         <source>Open &amp;settings</source>
         <translation>Avaa &amp;asetukset</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1547"/>
-        <location filename="../mainwindow.cpp" line="11078"/>
+        <location filename="../mainwindow.cpp" line="1548"/>
+        <location filename="../mainwindow.cpp" line="11074"/>
         <source>leave</source>
         <translation>jätä</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6184"/>
         <source>Select image to insert</source>
-        <translation>Valitse lisättävä kuva</translation>
+        <translation type="vanished">Valitse lisättävä kuva</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6316"/>
+        <location filename="../mainwindow.cpp" line="6312"/>
         <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
         <translation>Syötä &lt;strong&gt; salasana &lt;/strong&gt;, jos haluat salata muistiinpanon. &lt;br /&gt; Muista, että sinun täytyy &lt;strong&gt; muistaa &lt;/strong&gt; salasanasi, jotta voit lukea muistiinpanon sisällön &lt;br /&gt; ja että voit &lt;strong&gt; vain &lt;/strong&gt; tehdä tämän &lt;strong&gt; QOwnNotesissa &lt;/ strong &gt;!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6372"/>
+        <location filename="../mainwindow.cpp" line="6368"/>
         <source>Decrypt note and store it as plain text</source>
         <translation>Salaa merkintä ja tallenna se tavallisena tekstinä</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6377"/>
+        <location filename="../mainwindow.cpp" line="6373"/>
         <source>&amp;Decrypt</source>
         <translation>&amp;Pura</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6403"/>
+        <location filename="../mainwindow.cpp" line="6399"/>
         <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
         <translation>&lt;br/&gt; muokata salattua muistiinpanoa.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6461"/>
+        <location filename="../mainwindow.cpp" line="6457"/>
         <source>Export current note as Markdown file</source>
         <translation>Vie nykyinen muistiinpano Markdown-tiedostona</translation>
     </message>
@@ -3338,17 +3389,17 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
         <translation>Nimettyä muistitiedostoa ei voitu poistaa: %1 - Virhesanoma: %2</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="2040"/>
+        <location filename="../entities/note.cpp" line="2061"/>
         <source>Could not read image file: %1</source>
         <translation>Kuvatiedostoa ei voitu lukea: %1</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="2613"/>
+        <location filename="../entities/note.cpp" line="2634"/>
         <source>Note filename changed</source>
         <translation>Huomautus tiedostonimi muutettu</translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="2614"/>
+        <location filename="../entities/note.cpp" line="2635"/>
         <source>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
         <translation>
             <numerusform>Huomautuksen nimen muutos havaittiin. Haluatko korvata kaikki &lt;strong&gt;%1 &lt;/strong&gt; -linkkien esiintymiset &lt;strong&gt;%2 &lt;/strong&gt; -toiminnolla &lt;strong&gt;%n &lt;/strong&gt; muistitiedostossa?</numerusform>
@@ -3356,7 +3407,7 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="3004"/>
+        <location filename="../entities/note.cpp" line="3089"/>
         <source>…and %n more note(s)</source>
         <translation>
             <numerusform>… Ja %n enemmän muistiinpanoa</numerusform>
