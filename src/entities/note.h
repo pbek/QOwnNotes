@@ -235,7 +235,7 @@ public:
 
     static QString createNoteHeader(const QString& name);
 
-    QString getInsertMediaMarkdown(QFile *file, bool addNewLine = true, bool returnUrlOnly = false);
+    QString getInsertMediaMarkdown(QFile *file, bool addNewLine = true, bool returnUrlOnly = false, QString title = "");
 
     QString getInsertAttachmentMarkdown(QFile *file, QString fileName = "", bool returnUrlOnly= false);
 

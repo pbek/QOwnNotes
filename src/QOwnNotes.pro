@@ -145,7 +145,8 @@ SOURCES += main.cpp\
     widgets/notetreewidgetitem.cpp \
     widgets/layoutwidget.cpp \
     dialogs/serverbookmarksimportdialog.cpp \
-    dialogs/websockettokendialog.cpp
+    dialogs/websockettokendialog.cpp \
+    dialogs/imagedialog.cpp
 
 HEADERS  += mainwindow.h \
     build_number.h \
@@ -233,9 +234,11 @@ HEADERS  += mainwindow.h \
     widgets/notetreewidgetitem.h \
     widgets/layoutwidget.h \
     dialogs/serverbookmarksimportdialog.h \
-    dialogs/websockettokendialog.h
+    dialogs/websockettokendialog.h \
+    dialogs/imagedialog.h
 
 FORMS    += mainwindow.ui \
+    dialogs/imagedialog.ui \
     dialogs/notediffdialog.ui \
     dialogs/aboutdialog.ui \
     dialogs/updatedialog.ui \

@@ -1,6 +1,12 @@
 # QOwnNotes Changelog
 
 ## 19.9.6
+- there now is a new **Insert image dialog** with **preview, scaling and clipboard**
+  support (for [#1285](https://github.com/pbek/QOwnNotes/issues/1285))
+    - if an image was in the clipboard it will be automatically loaded and previewed
+    - you can also select an image from your file system
+    - you can scale the image by setting the width or a scale factor, the preview
+      will be updated accordingly
 - when **inserting images into your media folder** like with the **Insert image dialog**,
   the **Evernote import**, via drag and drop or from the clipboard now markdown tags
   like `![imagename](media/30933630.jpeg)` are created (for [#266](https://github.com/pbek/QOwnNotes/issues/266))

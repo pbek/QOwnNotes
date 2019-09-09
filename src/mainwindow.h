@@ -755,7 +755,7 @@ private:
 
     void changeDistractionFreeMode(bool enabled);
 
-    bool insertMedia(QFile *file);
+    bool insertMedia(QFile *file, QString title = "");
 
     int currentNoteLineNumber();
 

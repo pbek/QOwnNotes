@@ -2681,7 +2681,7 @@ QString Note::createNoteHeader(const QString& name) {
  * Returns the markdown of the inserted media file into a note
  */
 QString Note::getInsertMediaMarkdown(QFile *file, bool addNewLine,
-                                     bool returnUrlOnly) {
+                                     bool returnUrlOnly, QString title) {
     // file->exists() is false on Arch Linux for QTemporaryFile!
     if (file->size() > 0) {
         QDir mediaDir(NoteFolder::currentMediaPath());
@@ -2736,9 +2736,13 @@ QString Note::getInsertMediaMarkdown(QFile *file, bool addNewLine,
             return mediaUrlString;
         }
 
+        if (title.isEmpty()) {
+            title = fileInfo.baseName();
+        }
+
         // return the image link
         // we add a "\n" in the end so that hoedown recognizes multiple images
-        return "![" + fileInfo.baseName() + "](" + mediaUrlString + ")" +
+        return "![" + title + "](" + mediaUrlString + ")" +
                 (addNewLine ? "\n" : "");
     }
 

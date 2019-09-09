@@ -88,6 +88,7 @@
 #include <dialogs/filedialog.h>
 #include <dialogs/scriptrepositorydialog.h>
 #include <entities/trashitem.h>
+#include <dialogs/imagedialog.h>
 #include <dialogs/localtrashdialog.h>
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
@@ -6176,30 +6177,26 @@ void MainWindow::on_action_Print_note_text_triggered() {
  * @brief Inserts a chosen image at the current cursor position in the note text edit
  */
 void MainWindow::on_actionInsert_image_triggered() {
-    FileDialog dialog("InsertImage");
-    dialog.setFileMode(QFileDialog::ExistingFile);
-    dialog.setAcceptMode(QFileDialog::AcceptOpen);
-    dialog.setNameFilter(tr("Image files") + " (*.jpg *.png *.gif)");
-    dialog.setWindowTitle(tr("Select image to insert"));
-    int ret = dialog.exec();
+    auto *dialog = new ImageDialog(this);
+    int ret = dialog->exec();
 
     if (ret == QDialog::Accepted) {
-        QString fileName = dialog.selectedFile();
+        QFile *file = dialog->getImageFile();
 
-        if (!fileName.isEmpty()) {
-            QFile file(fileName);
-
-            // insert the image
-            insertMedia(&file);
+        if (file->size() > 0) {
+            QString title = dialog->getImageTitle();
+            insertMedia(file, title);
         }
     }
+
+    delete(dialog);
 }
 
 /**
  * Inserts a media file into the current note
  */
-bool MainWindow::insertMedia(QFile *file) {
-    QString text = currentNote.getInsertMediaMarkdown(file);
+bool MainWindow::insertMedia(QFile *file, QString title) {
+    QString text = currentNote.getInsertMediaMarkdown(file, true, false, std::move(title));
 
     if (!text.isEmpty()) {
         ScriptingService* scriptingService = ScriptingService::instance();
@@ -6815,7 +6812,7 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
                 image.save(tempFile.fileName(), "PNG");
 
                 // insert media into note
-                QFile *file = new QFile(tempFile.fileName());
+                auto *file = new QFile(tempFile.fileName());
 
                 showStatusBarMessage(tr("Inserting image"));
                 insertMedia(file);
@@ -8089,7 +8086,7 @@ void MainWindow::on_tagTreeWidget_customContextMenuRequested(
 
     if (selectedItem == addAction) {
         // open the "add new tag" dialog
-        TagAddDialog *dialog = new TagAddDialog(this);
+        auto *dialog = new TagAddDialog(this);
         int dialogResult = dialog->exec();
 
         // if user pressed ok take the name
