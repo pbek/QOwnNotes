@@ -21,7 +21,7 @@
       legacy links in the *General settings*
 - when **linking to notes** like with the **Insert link dialog** or when splitting notes
   now markdown tags like `[note](other note.md)` are created (for [#266](https://github.com/pbek/QOwnNotes/issues/266))
-    - this also works if the linked note is in an other sub-folders, then the
+    - this also works if the linked note is in another sub-folders, then the
       link would look for example like `[note](../other note.md)` or `[note](sub folder/other note.md)`
     - you can still use the old `note://other_note` links if you enable legacy links
       in the *General settings*
@@ -473,7 +473,7 @@
 ## 19.4.4
 - fixed renaming issue on case-insensitive file-systems
   (for [#1190](https://github.com/pbek/QOwnNotes/issues/1190))
-- an other attempt to build the Windows version of QOwnNotes with Qt 5.12.2
+- another attempt to build the Windows version of QOwnNotes with Qt 5.12.2
   (for AppVeyor [#2871](https://github.com/appveyor/ci/issues/2871))
 - added more Spanish translation (thank you richarson)
 
@@ -1544,7 +1544,7 @@
 
 ## 18.05.4
 - you are now able to jump to the conflicting keyboard shortcut if you assign a
-  shortcut that is already used by an other menu item in the *Shortcuts settings*
+  shortcut that is already used by another menu item in the *Shortcuts settings*
   (for [#912](https://github.com/pbek/QOwnNotes/issues/912))
     - the duplicate dialog if assigning a conflicting shortcut if no shortcut
       was defined before was fixed
@@ -1562,7 +1562,7 @@
 
 ## 18.05.3
 - you will now get a notification if you assign a shortcut that is already 
-  used by an other menu item in the *Shortcuts settings*
+  used by another menu item in the *Shortcuts settings*
   (for [#912](https://github.com/pbek/QOwnNotes/issues/912))
 - added more Catalan and German translation (thank you MGuerra and rakekniven)
 
@@ -2332,7 +2332,7 @@
       dialog, todo dialog, settings dialog, note dialog and note history dialog
 - you can now choose different **interface styles** in the *Interface settings* 
   to change the look of the application's interface and its controls
-    - the style will be previewed instantly if you select an other style
+    - the style will be previewed instantly if you select another style
     - if you select `Automatic` you will be prompted to restart the application
 - the snap-packaged version of QOwnNotes will now automatically use the `Fusion`
   interface style, which dramatically improves the styling of the user interface
@@ -2712,7 +2712,7 @@
   mlocati, mlimacarlos and lepascalou)
     
 ## 17.05.14
-- when moving or copying notes to an other note subfolder tagging information
+- when moving or copying notes to another note subfolder tagging information
   will now be restored (for [#595](https://github.com/pbek/QOwnNotes/issues/595))
 - you can now use the shortcut <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>E</kbd> to 
   insert a file attachment into the current note
@@ -3025,7 +3025,7 @@
 
 ## 17.03.0
 - you can now assign different tag colors in dark mode
-    - this is handy because the colors you may have defined on an other, synced
+    - this is handy because the colors you may have defined on another, synced
       computer, that did not use dark mode may not look good on this computer
       in dark mode
     - with this update the currently set non-dark mode colors will be used as
@@ -3147,7 +3147,7 @@
 
 ## 17.01.11
 - added Czech translation (a big thank you to jkalousek!)
-- fixed a warning that might trigger when notes are moved to an other note subfolder
+- fixed a warning that might trigger when notes are moved to another note subfolder
   (for [#498](https://github.com/pbek/QOwnNotes/issues/498))
 - you now can disable the restoring of the cursor position in the *General settings*
   (for [#500](https://github.com/pbek/QOwnNotes/issues/500))
@@ -3206,7 +3206,7 @@
 - you can now use the shortcut <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>O</kbd> 
   to open the current note in a readonly view
     - you can use that view to leave a note open to look at while writing on 
-      an other note
+      another note
     - markdown highlighting will be used in that view and you also can search
       for text in it
 - added more Dutch, Chinese and German translation (thank you Leime, chonghua
@@ -4184,7 +4184,7 @@
   richarson and Fabijenna)
 
 ## 16.09.3
-- the tag tree will now be reloaded if a tag is moved to an other location
+- the tag tree will now be reloaded if a tag is moved to another location
   (for [#311](https://github.com/pbek/QOwnNotes/issues/311))
 - when renaming a note in QOwnNotes and a link to that note was found in
   other notes there now a dialog will be opened to ask if you want to
@@ -4626,7 +4626,7 @@
   mlimacarlos and Maboroshy)
 
 ## 16.07.8
-- added an other fix to a duplicate note subfolder listing problem
+- added another fix to a duplicate note subfolder listing problem
   (for [#243](https://github.com/pbek/QOwnNotes/issues/243))
 - you can now also create a note subfolder by typing it into the search field 
   and pressing <kbd>Return</kbd>
@@ -5246,7 +5246,7 @@
   like `(4+5)*3=` in the current line in front of the cursor 
   (for [#152](https://github.com/pbek/QOwnNotes/issues/152))
     - the result will be put into the note if the cursor is after the `=` 
-- fixed a problem where opening the settings dialog from an other dialog 
+- fixed a problem where opening the settings dialog from another dialog 
   would remove some settings
 
 ## 16.05.1
@@ -5302,7 +5302,7 @@
   (for [#136](https://github.com/pbek/QOwnNotes/issues/136))
 - the tag tree will now be expanded automatically when the tags are loaded 
   and the columns are sized to the contained content
-- you can now add a new tag beneath an other tag by right-clicking on it and 
+- you can now add a new tag beneath another tag by right-clicking on it and 
   select *Add tag*
 - added a new QOwnNotes desktop icon (a big thank you to Alex L from the KDE 
   V Design Group)
@@ -5319,7 +5319,7 @@
 	  tag` line edit by typing in it
 		- if you press enter a new tag with the content of the line edit is 
 		  created at the root level
-	- you are able to move selected tags to an other tag by right-clicking on 
+	- you are able to move selected tags to another tag by right-clicking on 
 	  them and select *Move tags to...*
 	- you are able to remove selected tags by right-clicking on them and select
 	  *Remove tags*
@@ -5331,7 +5331,7 @@
 	  notes and select *Remove tag from selected notes...*
 	- the name of a tag has to be unique for its parent
 		- so you can create tags with the same name under different tags
-		- you cannot move a tag to an other tag if a tag with the same name 
+		- you cannot move a tag to another tag if a tag with the same name 
 		  already exists there
 - improved the code background color in the markdown view in dark mode
 - when in single application mode the app will now come up again if it was 
@@ -5476,7 +5476,7 @@
 	  individually in a SQLite database
 	- if notes are renamed by QOwnNotes the tags will be moved to the renamed
 	  notes
-	- if notes are move to an other folder their associated tags are lost 
+	- if notes are move to another folder their associated tags are lost 
 	- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> adds a new tag to a note
 
 ## 1.3.6
@@ -5558,7 +5558,7 @@
 - added more Polish translation (thank you @Olhur)
 
 ## 1.2.7
-- fixed a problem after moving notes to an other folder
+- fixed a problem after moving notes to another folder
   (for [#117](https://github.com/pbek/QOwnNotes/issues/117))
 - added more Portuguese translation (thank you mlimacarlos)
 
@@ -5931,7 +5931,7 @@
     - by default the system language will be used
     - the fallback language is English
 - added **German translation** from @calis2002, thanks a lot for the great job!
-- if you feel like translating QOwnNotes to an other language please read
+- if you feel like translating QOwnNotes to another language please read
  [How can I help to translate QOwnNotes?](https://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes)
 - fixed a character in link titles that was disorienting the markdown 
   highlighter
@@ -6080,7 +6080,7 @@
 ## 0.68
 - fixed a problem with creating new todo items after changing the enabled todo lists
 - fixed a problem with newly created todo items that are set to completed
-- fixed an other problem with storing todo items with a reminder and an empty description
+- fixed another problem with storing todo items with a reminder and an empty description
 - fixed some design glitches in the todo list
 - if a todo item has no priority it now counts as medium priority
 - added a button to reload the todo list from the server to the todo list dialog
@@ -6163,7 +6163,7 @@
 
 ## 0.54
 - fixed a problem with canceling the notes folder selection dialog
-- the note history is now cleared when switching to an other notes directory
+- the note history is now cleared when switching to another notes directory
 - when moving forward and back in the note history the search field will be cleared so that all notes are visible
 
 ## 0.53
