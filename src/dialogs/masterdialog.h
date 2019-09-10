@@ -24,7 +24,7 @@ protected:
 
     bool eventFilter(QObject *obj, QEvent *event);
 
-    void closeEvent(QCloseEvent *event);
+    void closeEvent(QCloseEvent *event) override;
 
     void handleOpenDialog();
 };
