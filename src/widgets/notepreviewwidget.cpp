@@ -178,7 +178,7 @@ QTextEditSearchWidget *NotePreviewWidget::searchWidget() {
 }
 
 /**
- * Uses an other widget as parent for the search widget
+ * Uses another widget as parent for the search widget
  */
 void NotePreviewWidget::initSearchFrame(QWidget *searchFrame, bool darkMode) {
     _searchFrame = searchFrame;

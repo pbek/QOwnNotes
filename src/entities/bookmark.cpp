@@ -192,7 +192,7 @@ void Bookmark::mergeInList(QList<Bookmark> &bookmarks, Bookmark &bookmark) {
 }
 
 /**
- * Merges the current bookmark with an other
+ * Merges the current bookmark with another
  */
 void Bookmark::merge(Bookmark &bookmark) {
     tags.append(bookmark.tags);

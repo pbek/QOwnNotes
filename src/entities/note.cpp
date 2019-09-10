@@ -312,7 +312,7 @@ bool Note::remove(bool withFile) {
 }
 
 /**
- * @brief Copies a note to an other path
+ * @brief Copies a note to another path
  *
  * @param destinationPath
  * @return bool
@@ -373,7 +373,7 @@ bool Note::copyToPath(const QString& destinationPath) {
 }
 
 /**
- * @brief Moves a note to an other path
+ * @brief Moves a note to another path
  *
  * @param destinationPath
  * @return bool
@@ -1090,7 +1090,7 @@ bool Note::storeNoteTextFileToDisk() {
     TrashItem trashItem = TrashItem::prepare(this);
 
     if (allowDifferentFileName()) {
-        // check if a QML function wants to set an other note file name and
+        // check if a QML function wants to set another note file name and
         // modify it accordingly
         modifyNoteTextFileNameFromQMLHook();
     } else {
@@ -1227,11 +1227,11 @@ QString Note::extendedCleanupFileName(QString name) {
 }
 
 /**
- * Checks if a QML function wants to set an other note file name and
+ * Checks if a QML function wants to set another note file name and
  * modifies it accordingly
  */
 bool Note::modifyNoteTextFileNameFromQMLHook() {
-    // check if a QML function wants to set an other note name
+    // check if a QML function wants to set another note name
     QString newName = ScriptingService::instance()->
             callHandleNoteTextFileNameHook(this);
 
@@ -1312,7 +1312,7 @@ bool Note::handleNoteTextFileName() {
         // let's check if we would be able to write to the file
         if (!canWriteToNoteFile()) {
             qDebug() << __func__ << " - cannot write to file " <<
-                     this->fileName << " - we will try an other filename";
+                     this->fileName << " - we will try another filename";
 
             // we try to replace some more characters (mostly for Windows
             // filesystems)
@@ -1483,7 +1483,7 @@ QUrl Note::fullNoteFileUrl() {
     QString windowsSlash = "";
 
 #ifdef Q_OS_WIN32
-    // we need an other slash for Windows
+    // we need another slash for Windows
     windowsSlash = "/";
 #endif
 
@@ -1834,7 +1834,7 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
     QString windowsSlash = "";
 
 #ifdef Q_OS_WIN32
-    // we need an other slash for Windows
+    // we need another slash for Windows
     windowsSlash = "/";
 #endif
 

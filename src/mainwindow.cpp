@@ -137,7 +137,7 @@ MainWindow::MainWindow(QWidget *parent) :
     // Qt::AA_DontShowIconsInMenus
     ui->actionShare_note->setIconVisibleInMenu(false);
 
-    // set an other shortcut for delete line under macOS
+    // set another shortcut for delete line under macOS
     ui->actionDelete_line->setShortcut(QKeySequence("Ctrl+Backspace"));
     ui->actionDelete_word->setShortcut(QKeySequence("Alt+Backspace"));
 
@@ -220,10 +220,10 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->action_Forward_in_note_history->
             setShortcut(Qt::CTRL + Qt::ALT + Qt::Key_Right);
 
-    // add an other shortcut for the auto-completer
+    // add another shortcut for the auto-completer
     ui->actionAutocomplete->setShortcut(Qt::META + Qt::Key_Space);
 
-    // add an other shortcut for inserting media
+    // add another shortcut for inserting media
     ui->actionPaste_image->setShortcut(Qt::CTRL + Qt::ALT + Qt::Key_V);
 #endif
 
@@ -1789,7 +1789,7 @@ void MainWindow::changeNoteFolder(int noteFolderId, bool forceChange) {
                                   folderName));
 
         // we have to unset the current note otherwise it might show up after
-        // switching to an other note folder
+        // switching to another note folder
         unsetCurrentNote();
 
         buildNotesIndexAndLoadNoteDirectoryList();
@@ -2688,7 +2688,7 @@ void MainWindow::storeUpdatedNotesToDisk() {
     QString oldNoteName = currentNote.getName();
 
     // For some reason this->noteDirectoryWatcher gets an event from this.
-    // I didn't find an other solution than to wait yet.
+    // I didn't find another solution than to wait yet.
     // All flushing and syncing didn't help.
     bool currentNoteChanged = false;
     bool noteWasRenamed = false;
@@ -3728,7 +3728,7 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
                 // add the current search text to the saved searches
                 storeSavedSearch();
 
-                // choose an other selected item if current item is invisible
+                // choose another selected item if current item is invisible
                 QTreeWidgetItem *item = ui->noteTreeWidget->currentItem();
                 if ((item != Q_NULLPTR) && item->isHidden()) {
                     QTreeWidgetItem *firstVisibleItem =
@@ -5554,7 +5554,7 @@ void MainWindow::openLocalUrl(QString urlString) {
         QString windowsSlash = "";
 
 #ifdef Q_OS_WIN32
-    // we need an other slash for Windows
+    // we need another slash for Windows
     windowsSlash = "/";
 #endif
 
@@ -6225,7 +6225,7 @@ bool MainWindow::insertMedia(QFile *file, QString title) {
 
     if (!text.isEmpty()) {
         ScriptingService* scriptingService = ScriptingService::instance();
-        // attempts to ask a script for an other markdown text
+        // attempts to ask a script for another markdown text
         text = scriptingService->callInsertMediaHook(file, text);
         qDebug() << __func__ << " - 'text': " << text;
 
@@ -6582,7 +6582,7 @@ void MainWindow::on_actionInsert_code_block_triggered() {
 
         // if the selected text has multiple lines add a multi-line code block
         if (selectedText.contains("\n")) {
-            // add an other newline if there is no newline at the end of the
+            // add another newline if there is no newline at the end of the
             // selected text
             QString endNewline = selectedText.endsWith("\n") ? "" : "\n";
 
@@ -9689,7 +9689,7 @@ void MainWindow::on_actionToggle_text_case_triggered() {
     c.insertText(Utils::Misc::cycleTextCase(selectedText));
 
     if (textWasSelected) {
-        // select the text again to maybe do an other operation on it
+        // select the text again to maybe do another operation on it
         // keep the original cursor position
         if (cPos == selectionStart) {
             c.setPosition(selectionEnd, QTextCursor::MoveAnchor);

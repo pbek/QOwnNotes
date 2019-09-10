@@ -87,7 +87,7 @@ void QOwnNotesMarkdownTextEdit::setStyles() {
 
     // set the selection background color to a light blue if not in dark mode
     if (!settings.value("darkMode").toBool()) {
-        // light green (#9be29b) could be an other choice, but be aware that
+        // light green (#9be29b) could be another choice, but be aware that
         // this color will be used for mouse and keyboard selections too
         setStyleSheet(styleSheet() +
                       "QWidget {selection-color: #ffffff;"
@@ -207,7 +207,7 @@ void QOwnNotesMarkdownTextEdit::openUrl(QString urlString) {
     QString windowsSlash = "";
 
 #ifdef Q_OS_WIN32
-    // we need an other slash for Windows
+    // we need another slash for Windows
     windowsSlash = "/";
 #endif
 

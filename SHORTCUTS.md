@@ -66,7 +66,7 @@ Important Shortcuts
     - <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Down</kbd> does the same
 - <kbd>Alt</kbd> + <kbd>Backspace</kbd> deletes the current line
 - <kbd>Ctrl</kbd> + <kbd>Backspace</kbd> deletes the current word
-- <kbd>Ctrl</kbd> + <kbd>L</kbd> opens a dialog to add a link to an other note or an URL (also works on selected text)
+- <kbd>Ctrl</kbd> + <kbd>L</kbd> opens a dialog to add a link to another note or an URL (also works on selected text)
 - <kbd>Ctrl</kbd> + <kbd>T</kbd> inserts the current date in ISO 8601 format
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> inserts an image (the image will be copied to the `media` folder in the current notes folder)
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>E</kbd> inserts an attachment (the file will be copied to the `attachments` folder in the current notes folder)
@@ -176,7 +176,7 @@ Important Shortcuts
     - <kbd>⌘</kbd> + <kbd>Ctrl</kbd> + <kbd>Down</kbd> does the same
 - <kbd>⌘</kbd> + <kbd>Backspace</kbd> deletes the current line
 - <kbd>Ctrl</kbd> + <kbd>Backspace</kbd> deletes the current word
-- <kbd>⌘</kbd> + <kbd>L</kbd> opens a dialog to add a link to an other note or an URL (also works on selected text)
+- <kbd>⌘</kbd> + <kbd>L</kbd> opens a dialog to add a link to another note or an URL (also works on selected text)
 - <kbd>⌘</kbd> + <kbd>T</kbd> inserts the current date in ISO 8601 format
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> inserts an image (the image will be copied to the `media` folder in the current notes folder)
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>E</kbd> inserts an attachment (the file will be copied to the `attachments` folder in the current notes folder)

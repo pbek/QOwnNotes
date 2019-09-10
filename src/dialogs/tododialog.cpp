@@ -715,7 +715,7 @@ bool TodoDialog::eventFilter(QObject *obj, QEvent *event) {
             // were pressed in the new item edit
             if ((keyEvent->key() == Qt::Key_Down) ||
                     (keyEvent->key() == Qt::Key_Tab)) {
-                // choose an other selected item if current item is invisible
+                // choose another selected item if current item is invisible
                 QListWidgetItem *item = ui->todoList->currentItem();
                 if ((item != nullptr) && ui->todoList->currentItem()->isHidden() &&
                     (firstVisibleTodoListRow >= 0)) {

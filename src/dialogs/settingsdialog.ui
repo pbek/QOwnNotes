@@ -889,7 +889,7 @@
                   <item>
                    <widget class="Label" name="installInfoTextLabel3">
                     <property name="text">
-                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href=&quot;https://owncloud.org/&quot;&gt;&lt;span style=&quot; font-weight:600&quot;&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or an other desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href=&quot;https://owncloud.org/&quot;&gt;&lt;span style=&quot; font-weight:600&quot;&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                     </property>
                     <property name="wordWrap">
                      <bool>true</bool>
@@ -2500,7 +2500,7 @@
                      <item row="4" column="0">
                       <widget class="QLabel" name="darkModeInfoLabel">
                        <property name="text">
-                        <string>You might also want to choose an other editor color schema in the editor settings in dark mode.</string>
+                        <string>You might also want to choose another editor color schema in the editor settings in dark mode.</string>
                        </property>
                        <property name="wordWrap">
                         <bool>true</bool>

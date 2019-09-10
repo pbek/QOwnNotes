@@ -112,7 +112,7 @@ bool LinkDialog::eventFilter(QObject *obj, QEvent *event) {
             // in the search line edit
             if ((keyEvent->key() == Qt::Key_Down) ||
                 (keyEvent->key() == Qt::Key_Tab)) {
-                // choose an other selected item if current item is invisible
+                // choose another selected item if current item is invisible
                 QListWidgetItem *item = ui->notesListWidget->currentItem();
                 if ((item != NULL) &&
                     ui->notesListWidget->currentItem()->isHidden() &&
