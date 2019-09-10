@@ -14,6 +14,7 @@
     - the maximal scaling in the slider was set to 2 for more usability
 - disabled QML caching (for the scripts of the scripting engine) in portable mode because
   the QML cache path cannot be configured (for [#1284](https://github.com/pbek/QOwnNotes/issues/1284))
+- fixed preview of remote images (for [#1286](https://github.com/pbek/QOwnNotes/issues/1286))
 
 ## 19.9.6
 - there now is a new **Insert image dialog** with **preview, scaling and clipboard**

@@ -1871,6 +1871,7 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
     }
 
     // Try to replace links like [my note](my-note.md) or [file](file.md) with proper file links
+    // This is currently also is handling relative image and attachment links!
     // We are using `{1,500}` instead of `+` because there were crashes with
     // regular expressions running wild
     // TODO: In theory we could convert relative note links in the html (and not in the markdown) to prevent troubles with code blocks
@@ -1927,11 +1928,16 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
     Utils::Misc::transformNextcloudPreviewImages(result);
 
     // transform images without "file://" urls to file-urls
+    // Note: this is currently handled above in markdown
+    //       if we want to activate this code again we need to take care of remote http(s) links to images!
+    //       see: https://github.com/pbek/QOwnNotes/issues/1286
+/*
     const QString subFolderPath = getNoteSubFolder().relativePath("/");
     const QString notePath = notesPath + (subFolderPath.isEmpty() ? "" : "/" + subFolderPath);
     result.replace(
             QRegularExpression(R"((<img src=\")((?!file:\/\/).+)\")"),
             "\\1file://" + windowsSlash + notePath + "/\\2\"");
+*/
 
     QString fontString = settings.value("MainWindow/noteTextView.code.font")
             .toString();
