@@ -21,6 +21,8 @@
 - disabled QML caching (for the scripts of the scripting engine) in portable mode because
   the QML cache path cannot be configured (for [#1284](https://github.com/pbek/QOwnNotes/issues/1284))
 - fixed preview of remote images (for [#1286](https://github.com/pbek/QOwnNotes/issues/1286))
+- added more Italian, Indonesian, Catalan, Brazilian Portuguese translation
+  (thank you tiwi90, zmni, fitoschido, mlimacarlos)
 
 ## 19.9.6
 - there now is a new **Insert image dialog** with **preview, scaling and clipboard**
