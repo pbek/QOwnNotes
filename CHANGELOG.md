@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 19.9.7
+- disabled QML caching (for the scripts of the scripting engine) in portable mode because
+  the QML cache path cannot be configured (for [#1284](https://github.com/pbek/QOwnNotes/issues/1284))
+
 ## 19.9.6
 - there now is a new **Insert image dialog** with **preview, scaling and clipboard**
   support (for [#1285](https://github.com/pbek/QOwnNotes/issues/1285))

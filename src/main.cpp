@@ -349,6 +349,12 @@ int main(int argc, char *argv[]) {
     // TODO(pbek): remove
 //    portable = true;
 
+    // disable QML caching in portable mode because the QML cache path cannot be configured
+    // see: https://github.com/pbek/QOwnNotes/issues/1284
+    if (portable) {
+        qputenv("QML_DISABLE_DISK_CACHE", "true");
+    }
+
     // don't log SSL warnings in releases on OS X
 #if defined(QT_NO_DEBUG) && defined(Q_OS_MAC)
     qputenv("QT_LOGGING_RULES", "qt.network.ssl.warning=false");
