@@ -389,7 +389,7 @@ bool Note::moveToPath(QString destinationPath) {
 }
 
 /**
- * Returns a list of all linked media file of the current note
+ * Returns a list of all linked image files of the media folder of the current note
  * @return
  */
 QStringList Note::getMediaFileList() {
@@ -397,8 +397,8 @@ QStringList Note::getMediaFileList() {
     QStringList fileList;
 
     // match image links like ![media-qV920](file://media/608766373.gif)
-    QRegularExpression re(
-            R"(!\[.*?\]\(file:\/\/media/(.+?)\))");
+    // or  ![media-qV920](media/608766373.gif)
+    QRegularExpression re(R"(!\[.*?\]\(.*media/(.+?)\))");
     QRegularExpressionMatchIterator i = re.globalMatch(text);
 
     // remove all found images from the orphaned files list
@@ -420,8 +420,9 @@ QStringList Note::getAttachmentsFileList() {
     QStringList fileList;
 
     // match attachment links like [956321614](file://attachments/956321614.pdf)
+    // or [956321614](attachments/956321614.pdf)
     QRegularExpression re(
-            R"(\[.*?\]\(file:\/\/attachments/(.+?)\))");
+            R"(\[.*?\]\(.*attachments/(.+?)\))");
     QRegularExpressionMatchIterator i = re.globalMatch(text);
 
     // remove all found images from the orphaned files list
@@ -2619,6 +2620,18 @@ QString Note::fileUrlInCurrentNoteFolderToRelativePath(const QUrl url) {
 }
 
 /**
+ * @brief Note::relativeFilePath returns the relative path of "path" in regard to the the path of the note
+ * @param path
+ * @return
+ */
+QString Note::relativeFilePath(const QString path) {
+    QDir dir(fullNoteFilePath());
+
+    // for some reason there is a leading "../" too much
+    return dir.relativeFilePath(path).remove(QRegularExpression(R"(^\.\.\/)"));
+}
+
+/**
  * Handles the replacing of all note urls if a note was renamed
  *
  * @param oldFileName
@@ -2722,20 +2735,7 @@ QString Note::getInsertMediaMarkdown(QFile *file, bool addNewLine,
         QFile newFile(newFilePath);
         scaleDownImageFileIfNeeded(newFile);
 
-        QString mediaUrlString = "";
-        QSettings settings;
-
-        if (settings.value("legacyLinking").toBool()) {
-            mediaUrlString = "file://media/" + newFileName;
-        } else {
-            int depth = getNoteSubFolder().depth();
-
-            for (int i = 0; i < depth; ++i) {
-                mediaUrlString += "../";
-            }
-
-            mediaUrlString += "media/" + newFileName;
-        }
+        QString mediaUrlString = mediaUrlStringForFileName(newFileName);
 
         // check if we only want to return the media url string
         if (returnUrlOnly) {
@@ -2753,6 +2753,44 @@ QString Note::getInsertMediaMarkdown(QFile *file, bool addNewLine,
     }
 
     return "";
+}
+
+QString Note::mediaUrlStringForFileName(const QString &fileName) {
+    QString urlString = "";
+    QSettings settings;
+
+    if (settings.value("legacyLinking").toBool()) {
+        urlString = "file://media/" + fileName;
+    } else {
+        int depth = getNoteSubFolder().depth();
+
+        for (int i = 0; i < depth; ++i) {
+            urlString += "../";
+        }
+
+        urlString += "media/" + fileName;
+    }
+
+    return urlString;
+}
+
+QString Note::attachmentUrlStringForFileName(const QString &fileName) {
+    QString urlString = "";
+    QSettings settings;
+
+    if (settings.value("legacyLinking").toBool()) {
+        urlString = "file://attachments/" + fileName;
+    } else {
+        int depth = getNoteSubFolder().depth();
+
+        for (int i = 0; i < depth; ++i) {
+            urlString += "../";
+        }
+
+        urlString += "attachments/" + fileName;
+    }
+
+    return urlString;
 }
 
 /**
@@ -2780,20 +2818,7 @@ QString Note::getInsertAttachmentMarkdown(QFile *file, QString fileName,
         file->copy(newFilePath);
 
         QFile newFile(newFilePath);
-        QString attachmentUrlString = "";
-        QSettings settings;
-
-        if (settings.value("legacyLinking").toBool()) {
-            attachmentUrlString = "file://attachments/" + newFileName;
-        } else {
-            int depth = getNoteSubFolder().depth();
-
-            for (int i = 0; i < depth; ++i) {
-                attachmentUrlString += "../";
-            }
-
-            attachmentUrlString += "attachments/" + newFileName;
-        }
+        QString attachmentUrlString = attachmentUrlStringForFileName(newFileName);
 
         // check if we only want to return the attachment url string
         if (returnUrlOnly) {

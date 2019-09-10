@@ -179,12 +179,13 @@ void OrphanedImagesDialog::on_insertButton_clicked() {
     }
 
     QOwnNotesMarkdownTextEdit *textEdit = mainWindow->activeNoteTextEdit();
+    Note note = mainWindow->getCurrentNote();
 
     // insert all selected images
     Q_FOREACH(QTreeWidgetItem *item, ui->fileTreeWidget->selectedItems()) {
             QString filePath = getFilePath(item);
             QFileInfo fileInfo(filePath);
-            QString mediaUrlString = "file://media/" + fileInfo.fileName();
+            QString mediaUrlString = note.mediaUrlStringForFileName(fileInfo.fileName());
             QString imageLink = "![" + fileInfo.baseName() + "](" +
                              mediaUrlString + ")\n";
             textEdit->insertPlainText(imageLink);

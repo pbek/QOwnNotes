@@ -287,11 +287,17 @@ public:
 
     static QString fileUrlInCurrentNoteFolderToRelativePath(const QUrl url);
 
+    QString relativeFilePath(const QString path);
+
     static Note fetchByFileUrl(const QUrl url);
 
     static Note fetchByRelativeFilePath(const QString relativePath);
 
     QString getNoteUrlForLinkingTo(Note note);
+
+    QString mediaUrlStringForFileName(const QString &fileName);
+
+    QString attachmentUrlStringForFileName(const QString &fileName);
 
 protected:
     int id;

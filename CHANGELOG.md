@@ -12,6 +12,12 @@
         - paths to files will be made relative to the current note
         - the state of the checkbox will be persisted for more convenience
     - the maximal scaling in the slider was set to 2 for more usability
+- the **Orphaned image files dialog** now detects relative image tags like `![imagename](media/30933630.jpeg)`
+  (for [#266](https://github.com/pbek/QOwnNotes/issues/266))
+    - the dialog is now also able to insert relative image tags
+- the **Orphaned attachments dialog** now detects relative attachment tags like `[956321614](attachments/956321614.pdf)`
+  (for [#266](https://github.com/pbek/QOwnNotes/issues/266))
+    - the dialog is now also able to insert relative attachment tags
 - disabled QML caching (for the scripts of the scripting engine) in portable mode because
   the QML cache path cannot be configured (for [#1284](https://github.com/pbek/QOwnNotes/issues/1284))
 - fixed preview of remote images (for [#1286](https://github.com/pbek/QOwnNotes/issues/1286))

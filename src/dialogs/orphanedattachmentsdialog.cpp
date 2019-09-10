@@ -197,13 +197,13 @@ void OrphanedAttachmentsDialog::on_insertButton_clicked() {
     }
 
     QOwnNotesMarkdownTextEdit *textEdit = mainWindow->activeNoteTextEdit();
+    Note note = mainWindow->getCurrentNote();
 
     // insert all selected attachments
     Q_FOREACH(QTreeWidgetItem *item, ui->fileTreeWidget->selectedItems()) {
             QString filePath = getFilePath(item);
             QFileInfo fileInfo(filePath);
-            QString attachmentsUrlString = "file://attachments/" +
-                    fileInfo.fileName();
+            QString attachmentsUrlString = note.attachmentUrlStringForFileName(fileInfo.fileName());
             QString attachmentLink = "[" + fileInfo.baseName() + "](" +
                              attachmentsUrlString + ")\n";
             textEdit->insertPlainText(attachmentLink);

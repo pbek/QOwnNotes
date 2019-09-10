@@ -6229,23 +6229,27 @@ bool MainWindow::insertMedia(QFile *file, QString title) {
         text = scriptingService->callInsertMediaHook(file, text);
         qDebug() << __func__ << " - 'text': " << text;
 
-        QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
-        QTextCursor c = textEdit->textCursor();
-
-        // if we try to insert media in the first line of the note (aka.
-        // note name) move the cursor to the last line
-        if (currentNoteLineNumber() == 1) {
-            c.movePosition(QTextCursor::End, QTextCursor::MoveAnchor);
-            textEdit->setTextCursor(c);
-        }
-
-        // insert the image link
-        c.insertText(text);
+        insertNoteText(text);
 
         return true;
     }
 
     return false;
+}
+
+void MainWindow::insertNoteText(const QString &text) {
+    QOwnNotesMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QTextCursor c = textEdit->textCursor();
+
+    // if we try to insert media in the first line of the note (aka.
+    // note name) move the cursor to the last line
+    if (currentNoteLineNumber() == 1) {
+        c.movePosition(QTextCursor::End, QTextCursor::MoveAnchor);
+        textEdit->setTextCursor(c);
+    }
+
+    // insert the image link
+    c.insertText(text);
 }
 
 /**

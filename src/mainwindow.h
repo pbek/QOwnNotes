@@ -977,4 +977,6 @@ private:
     void removeConflictedNotesDatabaseCopies();
 
     void doSearchInNote(QString searchText);
+
+    void insertNoteText(const QString &text);
 };
