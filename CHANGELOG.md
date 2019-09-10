@@ -1,6 +1,17 @@
 # QOwnNotes Changelog
 
 ## 19.9.7
+- the **Insert image dialog** was further improved (for [#1285](https://github.com/pbek/QOwnNotes/issues/1285))
+    - you can now paste **remote urls** that will be **automatically downloaded**
+      and previewed in the dialog
+        - local `file://` urls are also supported
+    - the dialog will **detect** if you have **file paths or urls** in the
+      **clipboard** when it is opened
+    - there now is a new checkbox `Don't copy image to media folder` that allows to
+      **directly insert urls or local paths**
+        - paths to files will be made relative to the current note
+        - the state of the checkbox will be persisted for more convenience
+    - the maximal scaling in the slider was set to 2 for more usability
 - disabled QML caching (for the scripts of the scripting engine) in portable mode because
   the QML cache path cannot be configured (for [#1284](https://github.com/pbek/QOwnNotes/issues/1284))
 

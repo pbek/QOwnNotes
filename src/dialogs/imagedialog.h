@@ -14,9 +14,16 @@ class ImageDialog : public MasterDialog
 
 public:
     explicit ImageDialog(QWidget *parent = nullptr);
+
     ~ImageDialog() override;
+
     QFile *getImageFile();
+
     QString getImageTitle();
+
+    bool isDisableCopying();
+
+    QString getFilePathOrUrl();
 
 private slots:
     void on_openButton_clicked();
@@ -26,6 +33,10 @@ private slots:
     void on_widthSpinBox_valueChanged(int arg1);
 
     void on_widthScaleHorizontalSlider_valueChanged(int value);
+
+    void on_fileEdit_textChanged(const QString &arg1);
+
+    void on_disableCopyingCheckBox_toggled(bool checked);
 
 private:
     Ui::ImageDialog *ui;

@@ -6181,11 +6181,36 @@ void MainWindow::on_actionInsert_image_triggered() {
     int ret = dialog->exec();
 
     if (ret == QDialog::Accepted) {
-        QFile *file = dialog->getImageFile();
+        QString title = dialog->getImageTitle();
 
-        if (file->size() > 0) {
-            QString title = dialog->getImageTitle();
-            insertMedia(file, title);
+        if (dialog->isDisableCopying()) {
+            QString pathOrUrl = dialog->getFilePathOrUrl();
+            auto url = QUrl(pathOrUrl);
+
+            if (!url.isValid()) {
+                return;
+            }
+
+            if (url.scheme() == "file") {
+                pathOrUrl = url.toLocalFile();
+            }
+
+            if (!url.scheme().startsWith("http")) {
+                pathOrUrl = currentNote.relativeFilePath(pathOrUrl);
+            }
+
+            // title must not be empty
+            if (title.isEmpty()) {
+                title = "img";
+            }
+
+            insertNoteText("![" + title + "](" + pathOrUrl + ")");
+        } else {
+            QFile *file = dialog->getImageFile();
+
+            if (file->size() > 0) {
+                insertMedia(file, title);
+            }
         }
     }
 

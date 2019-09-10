@@ -2,7 +2,9 @@
 #include "imagedialog.h"
 #include "ui_imagedialog.h"
 #include <QClipboard>
+#include <QSettings>
 #include <utility>
+#include <utils/misc.h>
 
 ImageDialog::ImageDialog(QWidget *parent) :
     MasterDialog(parent),
@@ -14,22 +16,44 @@ ImageDialog::ImageDialog(QWidget *parent) :
     ui->previewFrame->setVisible(false);
 
     QClipboard *clipboard = QApplication::clipboard();
-
     QPixmap pixmap = clipboard->pixmap();
-    if (!pixmap.isNull()) {
+
+    if (!pixmap.isNull()) { // set image from clipboard
         ui->fileEdit->setDisabled(true);
         setPixmap(pixmap, true);
+    } else {
+        QString text = clipboard->text();
+        QUrl url(text);
+
+        // set text from clipboard
+        if (url.isValid()) {
+            ui->fileEdit->setText(text);
+        }
     }
+
+    QSettings settings;
+    ui->disableCopyingCheckBox->setChecked(settings.value("ImageDialog/disableCopying").toBool());
 }
 
 ImageDialog::~ImageDialog() {
+    QSettings settings;
+    settings.setValue("ImageDialog/disableCopying", ui->disableCopyingCheckBox->isChecked());
+
     delete _imageFile;
     delete _tempFile;
     delete ui;
 }
 
+bool ImageDialog::isDisableCopying() {
+    return ui->disableCopyingCheckBox->isChecked();
+}
+
 QFile *ImageDialog::getImageFile() {
     return _imageFile;
+}
+
+QString ImageDialog::getFilePathOrUrl() {
+    return ui->fileEdit->text();
 }
 
 QString ImageDialog::getImageTitle() {
@@ -48,9 +72,9 @@ void ImageDialog::on_openButton_clicked() {
         QString filePath = dialog.selectedFile();
 
         if (!filePath.isEmpty()) {
-            ui->fileEdit->setText(filePath);
             ui->fileEdit->setEnabled(true);
-            setPixmap(QPixmap(filePath), true);
+            // the pixmap will be updated by the textChanged handler
+            ui->fileEdit->setText(filePath);
         }
     }
 }
@@ -126,4 +150,56 @@ void ImageDialog::on_widthScaleHorizontalSlider_valueChanged(int value) {
 
     QPixmap pixmap = _basePixmap.scaledToWidth(width, Qt::SmoothTransformation);
     setPixmap(pixmap);
+}
+
+void ImageDialog::on_fileEdit_textChanged(const QString &arg1) {
+    auto pathOrUrl = arg1;
+    auto url = QUrl(pathOrUrl);
+
+    if (!url.isValid()) {
+        return;
+    }
+
+    // download remote images
+    if (url.scheme().startsWith("http")) {
+        QByteArray data = Utils::Misc::downloadUrl(url);
+
+        if (data.size() == 0) {
+            return;
+        }
+
+        QPixmap pixmap;
+        pixmap.loadFromData(data);
+
+        if (pixmap.isNull()) {
+            return;
+        }
+
+        setPixmap(pixmap, true);
+
+        return;
+    }
+
+    if (url.scheme() == "file") {
+        pathOrUrl = url.toLocalFile();
+    }
+
+    auto file = new QFile(pathOrUrl);
+
+    // check if local file exists and not empty
+    if (file->size() == 0) {
+        return;
+    }
+
+    setPixmap(QPixmap(pathOrUrl), true);
+}
+
+
+void ImageDialog::on_disableCopyingCheckBox_toggled(bool checked) {
+    ui->scaleFrame->setDisabled(checked);
+
+    if (checked) {
+        // reset scaling
+        ui->widthScaleHorizontalSlider->setValue(10);
+    }
 }
