@@ -627,57 +627,57 @@
     <message>
       <location filename="../dialogs/imagedialog.ui" line="14"/>
       <source>Insert image</source>
-      <translation type="unfinished">Insert image</translation>
+      <translation>Insertar imagen</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="30"/>
       <source>Image filename or URL</source>
-      <translation type="unfinished">Image filename or URL</translation>
+      <translation>Nombre de la imagen o su URL</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="36"/>
       <source>Path to file or URL</source>
-      <translation type="unfinished">Path to file or URL</translation>
+      <translation>Ruta al archivo o su URL</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="107"/>
       <source>Scaling width:</source>
-      <translation type="unfinished">Scaling width:</translation>
+      <translation>Ancho de la escala:</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="185"/>
       <source>The path or url will be inserted directly, paths to files will be made relative to the current note</source>
-      <translation type="unfinished">The path or url will be inserted directly, paths to files will be made relative to the current note</translation>
+      <translation>La ruta o url será insertada directamente, las rutas a archivos serán relativas a la nota actual</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="188"/>
       <source>Don't copy image to media folder</source>
-      <translation type="unfinished">Don't copy image to media folder</translation>
+      <translation>No copiar la imagen a la carpeta media</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="46"/>
       <source>Title of the image link</source>
-      <translation type="unfinished">Title of the image link</translation>
+      <translation>Título del enlace a la imagen</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="49"/>
       <source>Title</source>
-      <translation type="unfinished">Title</translation>
+      <translation>Título</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="175"/>
       <source>Select image file</source>
-      <translation type="unfinished">Select image file</translation>
+      <translation>Seleccionar el archivo de imagen</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.cpp" line="67"/>
       <source>Image files</source>
-      <translation type="unfinished">Image files</translation>
+      <translation>Archivos de imagen</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.cpp" line="68"/>
       <source>Select image to insert</source>
-      <translation type="unfinished">Select image to insert</translation>
+      <translation>Selecciona la imagen a insertar</translation>
     </message>
   </context>
   <context>
@@ -4543,7 +4543,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="892"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;¡Todavía necesitarás el &lt;a href="https://owncloud.org/"&gt;&lt;span style="font-weight:600"&gt;cliente de sincronización de ownCloud&lt;/span&gt;&lt;/a&gt; (u otro cliente de sincronización de escritorio) para sincronizar sus notas!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1014"/>
@@ -4725,7 +4725,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2503"/>
       <source>You might also want to choose another editor color schema in the editor settings in dark mode.</source>
-      <translation type="unfinished">You might also want to choose another editor color schema in the editor settings in dark mode.</translation>
+      <translation>Quizás también quieras elegir otro esquema de colores en los ajustes del editor para el modo oscuro.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2606"/>

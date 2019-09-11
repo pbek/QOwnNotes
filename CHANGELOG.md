@@ -7,6 +7,7 @@
 - the button to create a new issue in the issue assistant by clearing the dialog
   was renamed to `Clear` because it could mislead user to think it creates a new
   issue on GitHub (for [#1289](https://github.com/pbek/QOwnNotes/issues/1289))
+- added more Catalan, Spanish, Italian translation (thank you MGuerra, richarson, tiwi90)
 
 ## 19.9.7
 - the **Insert image dialog** was further improved (for [#1285](https://github.com/pbek/QOwnNotes/issues/1285))

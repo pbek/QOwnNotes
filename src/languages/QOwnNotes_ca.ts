@@ -632,12 +632,12 @@
     <message>
       <location filename="../dialogs/imagedialog.ui" line="30"/>
       <source>Image filename or URL</source>
-      <translation type="unfinished">Image filename or URL</translation>
+      <translation>Nom de fitxer de la imatge o URL</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="36"/>
       <source>Path to file or URL</source>
-      <translation type="unfinished">Path to file or URL</translation>
+      <translation>Camí al fitxer o URL</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="107"/>
@@ -647,12 +647,12 @@
     <message>
       <location filename="../dialogs/imagedialog.ui" line="185"/>
       <source>The path or url will be inserted directly, paths to files will be made relative to the current note</source>
-      <translation type="unfinished">The path or url will be inserted directly, paths to files will be made relative to the current note</translation>
+      <translation>El camí o url s'inserirà directament, els camins a fitxers seran relatius a la nota en curs</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="188"/>
       <source>Don't copy image to media folder</source>
-      <translation type="unfinished">Don't copy image to media folder</translation>
+      <translation>No copiar la imatge a la carpeta de mitjans</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="46"/>
@@ -4544,7 +4544,7 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="892"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Encara necessitareu el &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;client de sincronització d'ownCloud&lt;/span&gt;&lt;/a&gt; (o un altre client) per sincronitzar les vostres notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1014"/>
@@ -4726,7 +4726,7 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2503"/>
       <source>You might also want to choose another editor color schema in the editor settings in dark mode.</source>
-      <translation type="unfinished">You might also want to choose another editor color schema in the editor settings in dark mode.</translation>
+      <translation>Potser voleu escollir un altre editor de l'esquema de color a l'editor de configuracions del mode fosc.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2606"/>
