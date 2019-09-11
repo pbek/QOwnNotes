@@ -13,6 +13,7 @@
  * QPlainTextEdit markdown highlighter
  */
 
+#include <QApplication>
 #include <QDebug>
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
@@ -36,6 +37,10 @@ QOwnNotesMarkdownHighlighter::QOwnNotesMarkdownHighlighter(
     Q_UNUSED(highlightingOptions);
 }
 
+void QOwnNotesMarkdownHighlighter::updateCurrentNote() {
+    _currentNote = Note::fetch(qApp->property("currentNoteId").toInt());
+}
+
 /**
  * Does the markdown highlighting
  * We need to override this method so our highlightMarkdown gets called
@@ -43,6 +48,7 @@ QOwnNotesMarkdownHighlighter::QOwnNotesMarkdownHighlighter(
  * @param text
  */
 void QOwnNotesMarkdownHighlighter::highlightBlock(const QString &text) {
+    updateCurrentNote();
     setCurrentBlockState(HighlighterState::NoState);
     currentBlock().setUserState(HighlighterState::NoState);
     highlightMarkdown(text);
@@ -75,18 +81,45 @@ void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(const QString& text)
     QRegularExpression regex(R"(note:\/\/[^\s\)>]+)");
     QRegularExpressionMatch match = regex.match(text);
 
-    if (!match.hasMatch()) {
-        return;
-    }
+    if (match.hasMatch()) { // check legacy note:// links
+        QString noteLink = match.captured(0);
 
-    QString noteLink = match.captured(0);
+        // try to fetch a note from the url string
+        Note note = Note::fetchByUrlString(noteLink);
 
-    // try to fetch a note from the url string
-    Note note = Note::fetchByUrlString(noteLink);
+        // if the note exists we don't need to do anything
+        if (note.isFetched()) {
+            return;
+        }
+    } else { // check <note file.md> links
+        regex = QRegularExpression("<([^\\s`][^`]*?\\.[^`]*?[^\\s`]\\.md)>");
+        match = regex.match(text);
 
-    // if the note exists we don't need to do anything
-    if (note.isFetched()) {
-        return;
+        if (match.hasMatch()) {
+            QString fileName = match.captured(1);
+            Note note = _currentNote.fetchByRelativeFileName(fileName);
+
+            // if the note exists we don't need to do anything
+            if (note.isFetched()) {
+                return;
+            }
+        } else { // check [note](note file.md) links
+            regex = QRegularExpression(R"(\[[^\[\]]+\]\((\S+\.md|.+?\.md)\)\B)");
+            match = regex.match(text);
+
+            if (match.hasMatch()) {
+                QString fileName = match.captured(1);
+                Note note = _currentNote.fetchByRelativeFileName(fileName);
+
+                // if the note exists we don't need to do anything
+                if (note.isFetched()) {
+                    return;
+                }
+            } else {
+                // no note link was found
+                return;
+            }
+        }
     }
 
     auto state = HighlighterState(HighlighterState::BrokenLink);

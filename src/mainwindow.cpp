@@ -3390,6 +3390,10 @@ void MainWindow::setCurrentNote(Note note,
     }
 
     this->currentNote = note;
+
+    // for places we can't get the current note id, like the markdown highlighter
+    qApp->setProperty("currentNoteId", note.getId());
+
     QString name = note.getName();
     updateWindowTitle();
 

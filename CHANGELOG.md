@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 19.9.8
+- **highlighting** of **broken note links** now also works with relative note links like
+  `<note file.md>` and `[note](note file.md)` (for [#266](https://github.com/pbek/QOwnNotes/issues/266))
+    - links to note files like `../note file.md` and `sub folder/note file.md` also work
+
 ## 19.9.7
 - the **Insert image dialog** was further improved (for [#1285](https://github.com/pbek/QOwnNotes/issues/1285))
     - you can now paste **remote urls** that will be **automatically downloaded**

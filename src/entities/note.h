@@ -299,6 +299,8 @@ public:
 
     QString attachmentUrlStringForFileName(const QString &fileName);
 
+    const Note fetchByRelativeFileName(const QString &fileName);
+
 protected:
     int id;
     QString name;

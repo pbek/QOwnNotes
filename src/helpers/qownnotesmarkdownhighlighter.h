@@ -17,6 +17,7 @@
 #pragma once
 
 #include <libraries/qmarkdowntextedit/markdownhighlighter.h>
+#include <entities/note.h>
 
 QT_BEGIN_NAMESPACE
 class QTextDocument;
@@ -36,4 +37,7 @@ protected:
     void highlightBlock(const QString &text) Q_DECL_OVERRIDE;
     void highlightMarkdown(const QString& text);
     void highlightBrokenNotesLink(const QString& text);
+private:
+    Note _currentNote;
+    void updateCurrentNote();
 };

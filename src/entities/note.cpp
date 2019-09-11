@@ -2597,6 +2597,16 @@ const QString Note::getFileURLFromFileName(QString fileName) {
     return QString(QUrl::fromLocalFile(path).toEncoded());
 }
 
+/**
+ * @brief Note::fetchByRelativeFileName fetches a note by a relative filename by current note
+ * @param fileName
+ * @return
+ */
+const Note Note::fetchByRelativeFileName(const QString &fileName) {
+    QString url = getFileURLFromFileName(fileName);
+    return fetchByFileUrl(QUrl(url));
+}
+
 bool Note::fileUrlIsNoteInCurrentNoteFolder(const QUrl url) {
     if (url.scheme() != "file") {
         return false;
