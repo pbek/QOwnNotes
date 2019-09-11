@@ -4,6 +4,9 @@
 - **highlighting** of **broken note links** now also works with relative note links like
   `<note file.md>` and `[note](note file.md)` (for [#266](https://github.com/pbek/QOwnNotes/issues/266))
     - links to note files like `../note file.md` and `sub folder/note file.md` also work
+- the button to create a new issue in the issue assistant by clearing the dialog
+  was renamed to `Clear` because it could mislead user to think it creates a new
+  issue on GitHub (for [#1289](https://github.com/pbek/QOwnNotes/issues/1289))
 
 ## 19.9.7
 - the **Insert image dialog** was further improved (for [#1285](https://github.com/pbek/QOwnNotes/issues/1285))
