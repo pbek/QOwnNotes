@@ -3330,7 +3330,7 @@ QString MainWindow::selectOwnCloudNotesFolder() {
                    Utils::Misc::replaceOwnCloudText(
                            tr("You have to select your ownCloud notes "
                             "folder to make this software work!")),
-                    tr("&Retry"), tr("&Exit"), QString::null,
+                    tr("&Retry"), tr("&Exit"), QString(),
                     0, 1)) {
                 case 0:
                     selectOwnCloudNotesFolder();
@@ -4644,7 +4644,7 @@ bool MainWindow::showRestartNotificationIfNeeded() {
                            "take effect."),
                 tr("Restart"),
                 tr("Cancel"),
-                QString::null, 0, 1) == 0) {
+                QString(), 0, 1) == 0) {
             storeSettings();
             Utils::Misc::restartApplication();
             return true;
@@ -4935,7 +4935,7 @@ void MainWindow::showAppMetricsNotificationIfNeeded() {
                         "behaviour in the settings."),
                 tr("&Ok"),
                 tr("Open &settings"),
-                QString::null, 0, 1) == 1) {
+                QString(), 0, 1) == 1) {
             openSettingsDialog(SettingsDialog::NetworkPage);
         }
     }
@@ -4962,7 +4962,7 @@ void MainWindow::openTodoDialog(const QString& taskUid) {
                            "configuration in the settings!"),
                 tr("Open &settings"),
                 tr("&Cancel"),
-                QString::null, 0, 1) == 0) {
+                QString(), 0, 1) == 0) {
             openSettingsDialog(SettingsDialog::TodoPage);
         }
 
@@ -6403,7 +6403,7 @@ void MainWindow::on_actionDecrypt_note_triggered() {
                     "Keep in mind that the unencrypted note will possibly be "
                     "synced to your server and sensitive text may be exposed!"
                     "<br />Do you want to decrypt your note?"),
-            tr("&Decrypt"), tr("&Cancel"), QString::null,
+            tr("&Decrypt"), tr("&Cancel"), QString(),
             0, 1) == 1) {
         return;
     }
@@ -9400,7 +9400,7 @@ void MainWindow::openNotesContextMenu(
                                    "different from the headline."),
                         tr("Open &settings"),
                         tr("&Cancel"),
-                        QString::null, 0, 1) == 0) {
+                        QString(), 0, 1) == 0) {
                     openSettingsDialog(SettingsDialog::GeneralPage);
                 }
             }

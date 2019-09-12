@@ -456,7 +456,7 @@ void ScriptRepositoryDialog::on_installButton_clicked() {
             this, tr("Platform not supported!"),
             tr("Your platform is not supported by this script!\n"
                        "Do you want to install it anyway?"),
-            tr("Install"), tr("Cancel"), QString::null,
+            tr("Install"), tr("Cancel"), QString(),
             0, 1) != 0) {
         return;
     }

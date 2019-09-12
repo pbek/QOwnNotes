@@ -1055,7 +1055,7 @@ void OwnCloudService::showOwnCloudMessage(
         if (QMessageBox::warning(
                 nullptr, headline, message,
                 tr("Open &settings"), tr("&Cancel"),
-                QString::null, 0, 1) == 0) {
+                QString(), 0, 1) == 0) {
 #ifndef INTEGRATION_TESTS
             MainWindow *mainWindow = MainWindow::instance();
 

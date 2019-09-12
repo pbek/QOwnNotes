@@ -1957,7 +1957,7 @@ void SettingsDialog::on_reinitializeDatabaseButton_clicked() {
             tr("Do you really want to clear the local database? "
                        "This will also remove your configured note "
                        "folders and your cached todo items!"),
-            tr("Clear &database"), tr("&Cancel"), QString::null,
+            tr("Clear &database"), tr("&Cancel"), QString(),
             1) == 0) {
         DatabaseService::reinitializeDiskDatabase();
         NoteFolder::migrateToNoteFolders();
@@ -2026,7 +2026,7 @@ void SettingsDialog::on_clearAppDataAndExitButton_clicked() {
             tr("Do you really want to clear all settings, remove the "
                        "database and exit QOwnNotes?\n\n"
                        "Your notes will stay intact!"),
-            tr("Clear and &exit"), tr("&Cancel"), QString::null,
+            tr("Clear and &exit"), tr("&Cancel"), QString(),
             1) == 0) {
         QSettings settings;
         settings.clear();
@@ -3285,7 +3285,7 @@ void SettingsDialog::on_resetToolbarPushButton_clicked() {
                        "The application will be closed in the process, the "
                        "default toolbars will be restored when you start it "
                        "again."),
-            tr("Reset and &exit"), tr("&Cancel"), QString::null,
+            tr("Reset and &exit"), tr("&Cancel"), QString(),
             1) == 0) {
         QSettings settings;
 
