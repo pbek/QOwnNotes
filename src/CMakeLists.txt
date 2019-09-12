@@ -256,6 +256,8 @@ set(SOURCE_FILES
     widgets/notepreviewwidget.h
     widgets/combobox.cpp
     widgets/combobox.h
+    widgets/graphicsview.cpp
+    widgets/graphicsview.h
     widgets/scriptlistwidget.cpp
     widgets/scriptlistwidget.h
     widgets/notefolderlistwidget.cpp

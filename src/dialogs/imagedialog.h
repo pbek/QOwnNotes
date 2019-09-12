@@ -1,6 +1,7 @@
 #pragma once
 
 #include <entities/note.h>
+#include <QRubberBand>
 #include <QTemporaryFile>
 #include "masterdialog.h"
 
@@ -38,15 +39,25 @@ private slots:
 
     void on_disableCopyingCheckBox_toggled(bool checked);
 
+    void on_graphicsView_rubberBandChanged(const QRect &viewportRect, const QPointF &fromScenePoint, const QPointF &toScenePoint);
+
+    void on_cropButton_clicked();
+
+    void scrolledGraphicsViewContentsBy(int dx, int dy);
+
+    void resizedGraphicsViewBy(int dw, int dh);
 private:
     Ui::ImageDialog *ui;
     QPixmap _basePixmap;
     QPixmap _pixmap;
     QFile *_imageFile;
     QTemporaryFile *_tempFile;
+    QRubberBand *_rubberBand;
+    bool _imageWasCropped = false;
+    QRect _rubberBandSceneRect;
+    QRect _lastRubberBandViewportRect;
 
     void setPixmap(const QPixmap& pixmap, bool updateBase = false);
 
     void updateWidthScaleLabelValue() const;
 };
-

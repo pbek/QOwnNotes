@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 19.9.9
+- you can now **crop images** in the **Insert image dialog**
+  (for [#1288](https://github.com/pbek/QOwnNotes/issues/1288))
+
 ## 19.9.8
 - **highlighting** of **broken note links** now also works with relative note links like
   `<note file.md>` and `[note](note file.md)` (for [#266](https://github.com/pbek/QOwnNotes/issues/266))

@@ -104,6 +104,7 @@ SOURCES += main.cpp\
     helpers/qownnotesmarkdownhighlighter.cpp \
     helpers/fakevimproxy.cpp \
     services/databaseservice.cpp \
+    widgets/graphicsview.cpp \
     widgets/qownnotesmarkdowntextedit.cpp \
     dialogs/passworddialog.cpp \
     services/metricsservice.cpp \
@@ -191,6 +192,7 @@ HEADERS  += mainwindow.h \
     helpers/fakevimproxy.h \
     services/databaseservice.h \
     release.h \
+    widgets/graphicsview.h \
     widgets/qownnotesmarkdowntextedit.h \
     dialogs/passworddialog.h \
     services/metricsservice.h \

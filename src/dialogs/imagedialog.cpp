@@ -11,9 +11,11 @@ ImageDialog::ImageDialog(QWidget *parent) :
     ui(new Ui::ImageDialog) {
     _imageFile = nullptr;
     _tempFile = nullptr;
+    _rubberBand = nullptr;
 
     ui->setupUi(this);
     ui->previewFrame->setVisible(false);
+    ui->toolFrame->hide();
 
     QClipboard *clipboard = QApplication::clipboard();
     QPixmap pixmap = clipboard->pixmap();
@@ -33,6 +35,11 @@ ImageDialog::ImageDialog(QWidget *parent) :
 
     QSettings settings;
     ui->disableCopyingCheckBox->setChecked(settings.value("ImageDialog/disableCopying").toBool());
+
+    connect(ui->graphicsView, SIGNAL(scrolledContentsBy(int, int)),
+            this, SLOT(scrolledGraphicsViewContentsBy(int, int)));
+    connect(ui->graphicsView, SIGNAL(resizedBy(int, int)),
+            this, SLOT(resizedGraphicsViewBy(int, int)));
 }
 
 ImageDialog::~ImageDialog() {
@@ -109,7 +116,7 @@ void ImageDialog::setPixmap(const QPixmap& pixmap, bool updateBase) {
 void ImageDialog::on_buttonBox_accepted() {
     // if the image was manipulated or from the clipboard we will store it into
     // a temporary file
-    if (ui->fileEdit->text().isEmpty() ||
+    if (ui->fileEdit->text().isEmpty() || _imageWasCropped ||
         ui->widthSpinBox->value() != _basePixmap.width()) {
 
         _tempFile = new QTemporaryFile(QDir::tempPath() + QDir::separator() +
@@ -197,9 +204,93 @@ void ImageDialog::on_fileEdit_textChanged(const QString &arg1) {
 
 void ImageDialog::on_disableCopyingCheckBox_toggled(bool checked) {
     ui->scaleFrame->setDisabled(checked);
+    ui->graphicsView->setDragMode(checked ? QGraphicsView::NoDrag : QGraphicsView::RubberBandDrag);
 
     if (checked) {
         // reset scaling
         ui->widthScaleHorizontalSlider->setValue(10);
     }
+}
+
+void ImageDialog::on_graphicsView_rubberBandChanged(const QRect &viewportRect, const QPointF &fromScenePoint, const QPointF &toScenePoint)
+{
+    if (viewportRect.isEmpty()) { // dragging has stopped
+        _rubberBand = new QRubberBand(QRubberBand::Rectangle, ui->graphicsView);
+
+        // for some reason the coordinates where off by 2 points
+        _lastRubberBandViewportRect.adjust(2, 2, 2, 2);
+
+        _rubberBand->setGeometry(_lastRubberBandViewportRect);
+        _rubberBand->show();
+    } else { // currently dragging
+        // close rubber band from previous dragging
+        if (_rubberBand != Q_NULLPTR && _rubberBand->isVisible()) {
+            _rubberBand->close();
+        }
+
+        QPoint fromScenePointI = fromScenePoint.toPoint();
+        QPoint toScenePointI = toScenePoint.toPoint();
+
+        if (fromScenePointI.x() < 0) {
+            fromScenePointI.setX(0);
+        }
+
+        if (fromScenePointI.y() < 0) {
+            fromScenePointI.setY(0);
+        }
+
+        if (toScenePointI.x() < 0) {
+            toScenePointI.setX(0);
+        }
+
+        if (toScenePointI.y() < 0) {
+            toScenePointI.setY(0);
+        }
+
+        // swap coordinates if the drag was "reversed"
+        if (fromScenePointI.x() > toScenePointI.x() && fromScenePointI.y() > toScenePointI.y()) {
+            _rubberBandSceneRect = QRect(toScenePointI, fromScenePointI);
+        } else {
+            _rubberBandSceneRect = QRect(fromScenePointI, toScenePointI);
+        }
+
+        _lastRubberBandViewportRect = viewportRect;
+        ui->toolFrame->show();
+    }
+}
+
+void ImageDialog::on_cropButton_clicked() {
+    if (!_rubberBandSceneRect.isEmpty()) {
+        qDebug() << "Crop " << _rubberBandSceneRect;
+
+        QPixmap cropped = _pixmap.copy(_rubberBandSceneRect);
+        setPixmap(cropped, true);
+
+        _rubberBandSceneRect = QRect(0, 0, 0, 0);
+        _rubberBand->close();
+        _imageWasCropped = true;
+        ui->toolFrame->hide();
+    }
+}
+
+void ImageDialog::scrolledGraphicsViewContentsBy(int dx, int dy) {
+    if (_rubberBand == Q_NULLPTR || _rubberBand->isHidden()) {
+        return;
+    }
+
+    // move rubberband if graphics view was scrolled
+    _rubberBand->move(_rubberBand->x() + dx, _rubberBand->y() + dy);
+}
+
+void ImageDialog::resizedGraphicsViewBy(int dw, int dh) {
+    if (_rubberBand == Q_NULLPTR || _rubberBand->isHidden()) {
+        return;
+    }
+
+    // move rubberband if graphics view was resized
+    // TODO: does not work in all cases
+//    _rubberBand->move(_rubberBand->x() + dw / 2, _rubberBand->y() + dh / 2);
+
+    // we will close the rubberband until we can do something better
+    _rubberBand->close();
 }
