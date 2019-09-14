@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 19.9.10
+- removed 2px offset when selection-rubberband is created while cropping in the
+  image dialog (for [#1288](https://github.com/pbek/QOwnNotes/issues/1288))
+
 ## 19.9.9
 - you can now **crop images** in the **Insert image dialog** by selecting the area
   to crop to and pressing the `Crop` button (for [#1288](https://github.com/pbek/QOwnNotes/issues/1288))

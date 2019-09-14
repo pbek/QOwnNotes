@@ -218,7 +218,8 @@ void ImageDialog::on_graphicsView_rubberBandChanged(const QRect &viewportRect, c
         _rubberBand = new QRubberBand(QRubberBand::Rectangle, ui->graphicsView);
 
         // for some reason the coordinates where off by 2 points
-        _lastRubberBandViewportRect.adjust(2, 2, 2, 2);
+        // Note: could not reproduce this anywhere else
+//        _lastRubberBandViewportRect.adjust(2, 2, 2, 2);
 
         _rubberBand->setGeometry(_lastRubberBandViewportRect);
         _rubberBand->show();
