@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 19.9.10
+- added support for note links from one sub-folder tree to another like
+  `../../folder1/folder2/note.md` (for [#1287](https://github.com/pbek/QOwnNotes/issues/1287))
 - removed 2px offset when selection-rubberband is created while cropping in the
   image dialog (for [#1288](https://github.com/pbek/QOwnNotes/issues/1288))
 

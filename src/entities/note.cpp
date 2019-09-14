@@ -269,6 +269,7 @@ Note Note::fetchByRelativeFilePath(const QString relativePath) {
     QFileInfo fileInfo(relativePath);
 
     // load note sub-folder and note from the relative path
+    // be aware that there must not be a ".." in the path, a canonical path must be presented!
     auto noteSubFolder = NoteSubFolder::fetchByPathData(fileInfo.path(), "/");
     Note note = Note::fetchByFileName(fileInfo.fileName(), noteSubFolder.getId());
 
@@ -2624,9 +2625,17 @@ bool Note::fileUrlIsNoteInCurrentNoteFolder(const QUrl url) {
 QString Note::fileUrlInCurrentNoteFolderToRelativePath(const QUrl url) {
     QString path = url.toLocalFile();
     auto file = new QFile(path);
-    qDebug() << "file: " << file->fileName();
+    qDebug() << __func__ << " - 'path': " << path;
 
-    return path.remove(Utils::Misc::appendIfDoesNotEndWith(NoteFolder::currentLocalPath(), "/"));
+    // translates the "a path/../an other path" to "an other path"
+    // needed for Note::fetchByRelativeFilePath!
+    QFileInfo fileInfo(path);
+    path = fileInfo.canonicalFilePath();
+
+    qDebug() << __func__ << " - 'canonicalFilePath': " << path;
+
+    return path.remove(Utils::Misc::appendIfDoesNotEndWith(
+            NoteFolder::currentLocalPath(), "/"));
 }
 
 /**
