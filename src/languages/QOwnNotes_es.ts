@@ -647,12 +647,12 @@
     <message>
       <location filename="../dialogs/imagedialog.ui" line="217"/>
       <source>Crop image</source>
-      <translation type="unfinished">Crop image</translation>
+      <translation>Recortar imagen</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="220"/>
       <source>&amp;Crop</source>
-      <translation type="unfinished">&amp;Crop</translation>
+      <translation>Re&amp;cortar</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="30"/>
