@@ -3,6 +3,8 @@
 ## 19.9.11
 - adapted the offset when the selection-rubberband is created while cropping in
   the image dialog for all user interfaces (for [#1288](https://github.com/pbek/QOwnNotes/issues/1288))
+- faulty `QFileSystemWatcher::removePaths` warnings are now ignored, they seem to have caused
+  troubles on openSUSE Tumbleweed (for [#1290](https://github.com/pbek/QOwnNotes/issues/1290))
 
 ## 19.9.10
 - added support for **note links from one sub-folder tree to another** like
