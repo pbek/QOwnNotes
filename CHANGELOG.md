@@ -5,6 +5,7 @@
   the image dialog for all user interfaces (for [#1288](https://github.com/pbek/QOwnNotes/issues/1288))
 - faulty `QFileSystemWatcher::removePaths` warnings are now ignored, they seem to have caused
   troubles on openSUSE Tumbleweed (for [#1290](https://github.com/pbek/QOwnNotes/issues/1290))
+- added more Italian, Korean, Greek translation (thank you tiwi90, pgrules7, athrouss)
 
 ## 19.9.10
 - added support for **note links from one sub-folder tree to another** like

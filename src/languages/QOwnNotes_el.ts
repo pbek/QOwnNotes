@@ -627,67 +627,67 @@
     <message>
       <location filename="../dialogs/imagedialog.ui" line="14"/>
       <source>Insert image</source>
-      <translation type="unfinished">Insert image</translation>
+      <translation>Εισαγωγή εικόνας</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="40"/>
       <source>Image filename or URL</source>
-      <translation type="unfinished">Image filename or URL</translation>
+      <translation>Ονομασία αρχείου εικόνας ή συνδέσμου (URL)</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="46"/>
       <source>Path to file or URL</source>
-      <translation type="unfinished">Path to file or URL</translation>
+      <translation>Διαδρομή προς το αρχείο ή URL</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="121"/>
       <source>Scaling width:</source>
-      <translation type="unfinished">Scaling width:</translation>
+      <translation>Πλάτος κλιμάκωσης:</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="217"/>
       <source>Crop image</source>
-      <translation type="unfinished">Crop image</translation>
+      <translation>Περικοπή εικόνας</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="220"/>
       <source>&amp;Crop</source>
-      <translation type="unfinished">&amp;Crop</translation>
+      <translation>Περικοπή</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="30"/>
       <source>The path or url will be inserted directly, paths to files will be made relative to the current note</source>
-      <translation type="unfinished">The path or url will be inserted directly, paths to files will be made relative to the current note</translation>
+      <translation>Η διαδρομή ή το url θα εισαχθεί άμεσα, οι διαδρομές προς τα αρχεία θα γίνουν σχετικές με την τρέχουσα σημείωση</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="33"/>
       <source>Don't copy image to media folder</source>
-      <translation type="unfinished">Don't copy image to media folder</translation>
+      <translation>Να μην αντιγραφεί η εικόνα στο φάκελλο πολυμέσων</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="56"/>
       <source>Title of the image link</source>
-      <translation type="unfinished">Title of the image link</translation>
+      <translation>Τίτλος του συνδέσμου εικόνας</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="59"/>
       <source>Title</source>
-      <translation type="unfinished">Title</translation>
+      <translation>Τίτλος</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="20"/>
       <source>Select image file</source>
-      <translation type="unfinished">Select image file</translation>
+      <translation>Επέλεξε αρχείο εικόνας</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.cpp" line="74"/>
       <source>Image files</source>
-      <translation type="unfinished">Image files</translation>
+      <translation>Αρχεία εικόνων</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.cpp" line="75"/>
       <source>Select image to insert</source>
-      <translation type="unfinished">Select image to insert</translation>
+      <translation>Επέλεξε εικόνα για εισαγωγή</translation>
     </message>
   </context>
   <context>
@@ -1035,7 +1035,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1108"/>
       <source>Editor width in distraction free mode</source>
-      <translation>Εύρος επεξεργαστή σε κατάσταση ελεύθερης διάσπασης</translation>
+      <translation>Πλάτος κειμενογράφου σε κατάσταση εστίασης προσοχής</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1111"/>
@@ -1110,12 +1110,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1384"/>
       <source>Show note &amp;versions</source>
-      <translation>Εμφάνιση Σημείωση &amp; εκδόσεις</translation>
+      <translation>Εμφάνισε εκδόσεις της σημείωσης</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1387"/>
       <source>Show note versions on server</source>
-      <translation>Εμφάνιση Σημείωση εκδόσεις στο διακομιστή</translation>
+      <translation>Εμφάνισε εκδόσεις της σημείωσης στο διακομιστή</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1399"/>
@@ -1234,7 +1234,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1018"/>
       <source>Format</source>
-      <translation>Format</translation>
+      <translation>Μορφοποίηση</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1031"/>
@@ -1249,7 +1249,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1060"/>
       <source>Versioning</source>
-      <translation>Versioning</translation>
+      <translation>Εκδόσεις</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1071"/>
@@ -1264,7 +1264,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1104"/>
       <source>&amp;Window</source>
-      <translation>%Παράθυρο</translation>
+      <translation>Παράθυρο</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1120"/>
@@ -1432,12 +1432,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1687"/>
       <source>&amp;Distraction free mode</source>
-      <translation>&amp;Λειτουργία ελεύθερης απόσπασης</translation>
+      <translation>Λειτουργία εστίασης προσοχής</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1690"/>
       <source>Distraction free mode, you can leave it with a button on the bottom right</source>
-      <translation>Λειτουργία ελεύθερης απόσπασης, μπορείτε να την αφήσετε με ένα κουμπί στην κάτω δεξιά πλευρά</translation>
+      <translation>Λειτουργία εστίασης προσοχής, μπορείτε να την αφήσετε με ένα κουμπί στην κάτω δεξιά πλευρά</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1701"/>
@@ -1478,7 +1478,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1772"/>
       <source>Show note in &amp;file manager</source>
-      <translation>Εμφάνιση σημείωσης στο &amp;διαχειριστή αρχείων</translation>
+      <translation>Εμφάνισε τη σημείωση στο διαχειριστή αρχείων</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1784"/>
@@ -1635,7 +1635,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2312"/>
       <source>Copy note headline</source>
-      <translation>Τίτλος Σημείωση αντίγραφο</translation>
+      <translation>Αντιγραφή Τίτλου Σημείωσης</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2324"/>
@@ -1817,7 +1817,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2028"/>
       <source>Markdown cheatsheet</source>
-      <translation type="unfinished">Markdown cheatsheet</translation>
+      <translation>Μικρή λίστα της Markdown</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2037"/>
@@ -2805,7 +2805,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="677"/>
       <source>Note search</source>
-      <translation>Σημείωση αναζήτησης</translation>
+      <translation>Αναζήτηση σημείωσης</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="695"/>
@@ -2820,17 +2820,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="730"/>
       <source>Note tags</source>
-      <translation>Σημείωση ετικετών</translation>
+      <translation>Ετικέτες σημείωσης</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="741"/>
       <source>Note preview</source>
-      <translation>Προεπισκόπηση προεπισκόπησης</translation>
+      <translation>Προεπισκόπηση σημείωσης</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="748"/>
       <source>Log</source>
-      <translation>Κούτσουρο</translation>
+      <translation>Αρχείο καταγραφής</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="757"/>
@@ -2875,12 +2875,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="1234"/>
       <source>Show %1</source>
-      <translation>Εμφάνιση %1</translation>
+      <translation>Εμφάνισε %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1551"/>
       <source>Leave distraction free mode</source>
-      <translation>Αφήστε τη λειτουργία ελεύθερης διάσωσης</translation>
+      <translation>Αφήστε τη λειτουργία εστίασης προσοχής</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2061"/>
@@ -4464,7 +4464,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="311"/>
       <source>Git versioning</source>
-      <translation>Git εκδόσεων</translation>
+      <translation>Εκδόσεις Git</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="323"/>
@@ -4558,7 +4558,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="892"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Συνεχίζεις να χρειάζεσαι τον &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;πελάτη συγχρονισμού του ownCloud&lt;/span&gt;&lt;/a&gt; (ή άλλο πελάτη συγχρονισμού γραφείου) για συγχρονισμό των σημειώσεών σου!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1014"/>
@@ -4660,7 +4660,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2164"/>
       <source>Hausa</source>
-      <translation type="unfinished">Hausa</translation>
+      <translation>Hausa</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2175"/>
@@ -4740,7 +4740,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2503"/>
       <source>You might also want to choose another editor color schema in the editor settings in dark mode.</source>
-      <translation type="unfinished">You might also want to choose another editor color schema in the editor settings in dark mode.</translation>
+      <translation>Ίσως να θέλεις να επιλέξεις μια άλλη ομάδα χρωμάτων για τον επεξεργαστή κειμένου στις ρυθμίσεις του επεξεργαστή σε σκοτεινή λειτουργία.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2606"/>
@@ -5152,7 +5152,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4668"/>
       <source>Only use editor width setting in distraction free mode</source>
-      <translation>Χρησιμοποιήστε μόνο τη ρύθμιση του πλάτους του εκδότη σε λειτουργία χωρίς περισπασμούς</translation>
+      <translation>Χρησιμοποιήστε μόνο τη ρύθμιση του πλάτους του κειμενογράφου στη λειτουργία εστίασης προσοχής</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4931"/>

@@ -642,7 +642,7 @@
     <message>
       <location filename="../dialogs/imagedialog.ui" line="121"/>
       <source>Scaling width:</source>
-      <translation type="unfinished">Scaling width:</translation>
+      <translation>Larghezza di ridimensionamento:</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="217"/>
@@ -657,12 +657,12 @@
     <message>
       <location filename="../dialogs/imagedialog.ui" line="30"/>
       <source>The path or url will be inserted directly, paths to files will be made relative to the current note</source>
-      <translation type="unfinished">The path or url will be inserted directly, paths to files will be made relative to the current note</translation>
+      <translation>Il percorso o l'Url verranno inseriti direttamente, i percorsi dei file verranno creati in relazione alla nota corrente</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="33"/>
       <source>Don't copy image to media folder</source>
-      <translation type="unfinished">Don't copy image to media folder</translation>
+      <translation>Non copiare l'immagine nella cartella media</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="56"/>
@@ -1729,7 +1729,7 @@
       <location filename="../mainwindow.ui" line="2492"/>
       <location filename="../mainwindow.ui" line="2495"/>
       <source>Toggle full-screen mode</source>
-      <translation type="unfinished">Toggle full-screen mode</translation>
+      <translation>Toggle modalità schermo intero</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1867"/>
@@ -2416,7 +2416,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
     <message>
       <location filename="../mainwindow.cpp" line="11110"/>
       <source>Leave full-screen mode</source>
-      <translation type="unfinished">Leave full-screen mode</translation>
+      <translation>Lascia modalità schermo intero</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7870"/>
@@ -2879,7 +2879,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
     <message>
       <location filename="../mainwindow.cpp" line="1551"/>
       <source>Leave distraction free mode</source>
-      <translation type="unfinished">Leave distraction free mode</translation>
+      <translation>Lascia modalità senza distrazioni</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2061"/>

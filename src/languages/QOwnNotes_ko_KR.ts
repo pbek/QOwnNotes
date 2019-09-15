@@ -88,17 +88,17 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="649"/>
       <source>Created date</source>
-      <translation type="unfinished">Created date</translation>
+      <translation>만든 날짜</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="651"/>
       <source>Updated date</source>
-      <translation type="unfinished">Updated date</translation>
+      <translation>수정한 날짜</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="654"/>
       <source>Note attributes</source>
-      <translation type="unfinished">Note attributes</translation>
+      <translation>노트 속성</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="655"/>
@@ -168,7 +168,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="681"/>
       <source>Application data</source>
-      <translation type="unfinished">Application data</translation>
+      <translation>애플리케이션 데이터</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="755"/>
@@ -642,12 +642,12 @@
     <message>
       <location filename="../dialogs/imagedialog.ui" line="217"/>
       <source>Crop image</source>
-      <translation type="unfinished">Crop image</translation>
+      <translation>이미지 자르기</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="220"/>
       <source>&amp;Crop</source>
-      <translation type="unfinished">&amp;Crop</translation>
+      <translation>자르기(&amp;C)</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="30"/>
