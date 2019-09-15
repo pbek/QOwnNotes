@@ -217,9 +217,10 @@ void ImageDialog::on_graphicsView_rubberBandChanged(const QRect &viewportRect, c
     if (viewportRect.isEmpty()) { // dragging has stopped
         _rubberBand = new QRubberBand(QRubberBand::Rectangle, ui->graphicsView);
 
-        // for some reason the coordinates where off by 2 points
-        // Note: could not reproduce this anywhere else
-//        _lastRubberBandViewportRect.adjust(2, 2, 2, 2);
+        QMargins margin = ui->graphicsView->contentsMargins();
+
+        // we need to adapt the rubberband by the content margins of the graphics view
+        _lastRubberBandViewportRect.adjust(margin.left(), margin.top(), margin.left(), margin.top());
 
         _rubberBand->setGeometry(_lastRubberBandViewportRect);
         _rubberBand->show();

@@ -1,9 +1,13 @@
 # QOwnNotes Changelog
 
+## 19.9.11
+- adapted the offset when the selection-rubberband is created while cropping in
+  the image dialog for all user interfaces (for [#1288](https://github.com/pbek/QOwnNotes/issues/1288))
+
 ## 19.9.10
 - added support for **note links from one sub-folder tree to another** like
   `../../folder1/folder2/note.md` (for [#1287](https://github.com/pbek/QOwnNotes/issues/1287))
-- removed the 2px offset when selection-rubberband is created while cropping in
+- removed the 2px offset when the selection-rubberband is created while cropping in
   the image dialog (for [#1288](https://github.com/pbek/QOwnNotes/issues/1288))
 - added more Basque, German, Italian, Spanish translation (thank you izendegi,
   rakekniven, tiwi90, richarson)
