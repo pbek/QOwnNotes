@@ -9426,6 +9426,7 @@ void MainWindow::on_noteTreeWidget_itemChanged(QTreeWidgetItem *item,
         const QSignalBlocker blocker(this->noteDirectoryWatcher);
         Q_UNUSED(blocker)
 
+        Note oldNote = note;
         QString oldNoteName = note.getName();
 
         if (note.renameNoteFile(item->text(0))) {
@@ -9439,7 +9440,7 @@ void MainWindow::on_noteTreeWidget_itemChanged(QTreeWidgetItem *item,
                 Tag::renameNoteFileNamesOfLinks(oldNoteName, newNoteName);
 
                 // handle the replacing of all note urls if a note was renamed
-                Note::handleNoteRenaming(oldNoteName, newNoteName);
+                note.handleNoteMoving(oldNote);
 
                 // reload the directory list if note name has changed
 //                loadNoteDirectoryList();

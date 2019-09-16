@@ -1,6 +1,10 @@
 # QOwnNotes Changelog
 
 ## 19.9.12
+- if you **rename a note** you now will also be able to automatically **rename** new
+  **relative note file links** like `[note](note.md)` or `<note.md>` in all other
+  notes if they are found (for [#266](https://github.com/pbek/QOwnNotes/issues/266))
+    - this also works with links from other note sub-folders
 - if you are using legacy links and are linking to notes that have utf8 characters and
   numbers in it now a `@` sign will be added (e.g. `note://zx000ūaųškj@`) to prevent
   faulty urls (for [#1292](https://github.com/pbek/QOwnNotes/issues/1292))

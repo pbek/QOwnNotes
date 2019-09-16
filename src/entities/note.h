@@ -229,9 +229,9 @@ public:
 
     static QList<int> fetchAllIds(int limit = -1, int offset = -1);
 
-    static QList<int> findLinkedNotes(const QString& fileName);
+    QList<int> findLinkedNoteIds();
 
-    static void handleNoteRenaming(const QString& oldFileName, const QString& newFileName);
+    void handleNoteMoving(Note oldNote);
 
     static QString createNoteHeader(const QString& name);
 

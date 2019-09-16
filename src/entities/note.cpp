@@ -1086,6 +1086,7 @@ bool Note::store() {
  * The file name will be changed if needed
  */
 bool Note::storeNoteTextFileToDisk() {
+    Note oldNote = *this;
     QString oldName = name;
     QString oldNoteFilePath = fullNoteFilePath();
     TrashItem trashItem = TrashItem::prepare(this);
@@ -1133,7 +1134,7 @@ bool Note::storeNoteTextFileToDisk() {
         Tag::renameNoteFileNamesOfLinks(oldName, newName);
 
         // handle the replacing of all note urls if a note was renamed
-        Note::handleNoteRenaming(oldName, newName);
+        handleNoteMoving(oldNote);
     }
 
     // if we find a decrypted text to encrypt, then we attempt encrypt it
@@ -2533,22 +2534,41 @@ bool Note::isSameFile(Note note) {
 }
 
 /**
- * Finds notes that that link to a note with fileName via note://
+ * Finds notes that link to a note with fileName via legacy note:// links or the relative file links
  *
  * @param fileName
  * @return list of note ids
  */
-QList<int> Note::findLinkedNotes(const QString& fileName) {
-    QString linkText = getNoteURL(fileName);
+QList<int> Note::findLinkedNoteIds() {
     QList<int> noteIdList;
+
+    // search for legacy links
+    QString linkText = getNoteURL(name);
     noteIdList.append(searchInNotes("<" + linkText + ">", true));
     noteIdList.append(searchInNotes("](" + linkText + ")", true));
 
-    // add support for alternative links ending with "@"
+    // search vor legacy links ending with "@"
     QString altLinkText = Utils::Misc::appendIfDoesNotEndWith(linkText, "@");
     if (altLinkText != linkText) {
         noteIdList.append(searchInNotes("<" + altLinkText + ">", true));
         noteIdList.append(searchInNotes("](" + altLinkText + ")", true));
+    }
+
+    // search for links to the relative file path in all note
+    Q_FOREACH(Note note, Note::fetchAll()) {
+        const int noteId = note.getId();
+        if (noteId == getId() || noteIdList.contains(noteId)) {
+            continue;
+        }
+
+        const QString relativeFilePath = note.getFilePathRelativeToNote(*this);
+        const QString noteText = note.getNoteText();
+
+        // search for links to the relative file path in note
+        if (noteText.contains("<" + relativeFilePath + ">") ||
+                noteText.contains("](" + relativeFilePath + ")")) {
+            noteIdList.append(note.getId());
+        }
     }
 
     // remove duplicates and return list
@@ -2556,7 +2576,7 @@ QList<int> Note::findLinkedNotes(const QString& fileName) {
 }
 
 /**
- * Returns the url to a note
+ * Returns a (legacy) url to a note
  *
  * @param baseName
  * @return
@@ -2658,31 +2678,31 @@ QString Note::relativeFilePath(const QString path) {
 }
 
 /**
- * Handles the replacing of all note urls if a note was renamed
+ * Handles the replacing of all note urls if the note was renamed or moved (sub-folder)
  *
- * @param oldFileName
- * @param newFileName
+ * @param oldNote
  */
-void Note::handleNoteRenaming(const QString& oldFileName, const QString& newFileName) {
-    QList<int> noteIdList = Note::findLinkedNotes(oldFileName);
+void Note::handleNoteMoving(Note oldNote) {
+    QList<int> noteIdList = oldNote.findLinkedNoteIds();
     int noteCount = noteIdList.count();
 
     if (noteCount == 0) {
         return;
     }
 
-    QString oldUrl = getNoteURL(oldFileName);
-    QString newUrl = getNoteURL(newFileName);
+    QString oldUrl = getNoteURL(oldNote.getName());
+    QString newUrl = getNoteURL(name);
 
     if (Utils::Gui::question(
             Q_NULLPTR,
-            QObject::tr("Note filename changed"),
-            QObject::tr("A change of the note name was detected. Would you "
+            QObject::tr("Note file path changed"),
+            QObject::tr("A change of the note path was detected. Would you "
                                 "like to replace all occurrences of "
                                 "<strong>%1</strong> links with "
-                                "<strong>%2</strong>"
+                                "<strong>%2</strong> and links with filename "
+                                "<strong>%3</strong> with <strong>%4</strong>"
                                 " in <strong>%n</strong> note file(s)?", "",
-                        noteCount).arg(oldUrl, newUrl),
+                        noteCount).arg(oldUrl, newUrl, oldNote.getFileName(), fileName),
             "note-replace-links") == QMessageBox::Yes) {
         // replace the urls in all found notes
         Q_FOREACH(int noteId, noteIdList) {
@@ -2692,13 +2712,23 @@ void Note::handleNoteRenaming(const QString& oldFileName, const QString& newFile
                 }
 
                 QString text = note.getNoteText();
+
+                // replace legacy links with note://
                 text.replace("<" + oldUrl + ">", "<" + newUrl + ">");
                 text.replace("](" + oldUrl + ")", "](" + newUrl + ")");
 
+                // replace legacy links with note:// and ending @
                 if (!oldUrl.contains("@")) {
                     text.replace("<" + oldUrl + "@>", "<" + newUrl + ">");
                     text.replace("](" + oldUrl + "@)", "](" + newUrl + ")");
                 }
+
+                const QString oldNoteRelativeFilePath = note.getFilePathRelativeToNote(oldNote);
+                const QString relativeFilePath = note.getFilePathRelativeToNote(*this);
+
+                // replace relative file links to the note
+                text.replace("<" + oldNoteRelativeFilePath + ">", "<" + relativeFilePath + ">");
+                text.replace("](" + oldNoteRelativeFilePath + ")", "](" + relativeFilePath + ")");
 
                 note.storeNewText(text);
             }
