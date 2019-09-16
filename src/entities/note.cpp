@@ -2218,14 +2218,21 @@ QString Note::generateTextForLink(QString text) {
     // otherwise the text will get interpreted as ip address
     QRegularExpressionMatch match =
             QRegularExpression(R"(^(\d+)$)").match(text);
-    bool onlyNumbers = match.hasMatch();
+    bool addAtSign = match.hasMatch();
+
+    if (!addAtSign) {
+        // add a "@" if the text contains numbers and utf8 characters
+        // because the url will be invalid then
+        addAtSign = text.contains(QRegularExpression("\\d")) &&
+                text.toLocal8Bit().size() != text.length();
+    }
 
     // if the hostname of the url will get to long QUrl will not
     // recognize it because of STD 3 rules, so we will use the
     // username for the note name instead of the hostname
     // the limit is 63 characters, but special characters use up
     // far more space
-    if (text.length() > 46 || onlyNumbers) {
+    if (addAtSign || text.length() > 46) {
         text += "@";
     }
 

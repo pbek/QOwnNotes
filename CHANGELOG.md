@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 19.9.12
+- if you are using legacy links and are linking to notes that have utf8 characters and
+  numbers in it now a `@` sign will be added (e.g. `note://zx000ūaųškj@`) to prevent
+  faulty urls (for [#1292](https://github.com/pbek/QOwnNotes/issues/1292))
+
 ## 19.9.11
 - adapted the offset when the selection-rubberband is created while cropping in
   the image dialog for all user interfaces (for [#1288](https://github.com/pbek/QOwnNotes/issues/1288))
