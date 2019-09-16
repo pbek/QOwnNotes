@@ -956,6 +956,7 @@ bool Tag::renameNoteFileNamesOfLinks(const QString& oldFileName, const QString& 
 
     query.bindValue(":oldFileName", oldFileName);
     query.bindValue(":newFileName", newFileName);
+    // TODO: relying on NoteSubFolder::activeNoteSubFolder() can make troubles if "All notes" are selected as current tag
     query.bindValue(":noteSubFolderPath",
                     NoteSubFolder::activeNoteSubFolder().relativePath());
 
