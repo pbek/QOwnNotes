@@ -1,5 +1,17 @@
 # QOwnNotes Changelog
 
+## 19.9.13
+- if you **move notes to another sub-folder** you now will also be able to automatically
+  **adapt** the new **relative note file links** to that notes like `[note](note.md)` or
+  `<note.md>` in all other notes (for [#266](https://github.com/pbek/QOwnNotes/issues/266))
+    - furthermore **relative links of images and attachments** in the moved notes will be
+      **automatically adapted** to the new sub-folder
+- if you **copy notes to another sub-folder relative links of images and attachments**
+  in the copied notes will be **automatically adapted** to the new sub-folder
+  (for [#266](https://github.com/pbek/QOwnNotes/issues/266))
+- above changes conclude the monstrous effort of the migration to more portable relative
+  file links for notes, images and attachments in [#266](https://github.com/pbek/QOwnNotes/issues/266)
+
 ## 19.9.12
 - if you **rename a note** you now will also be able to automatically **rename** new
   **relative note file links** like `[note](note.md)` or `<note.md>` in all other

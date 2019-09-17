@@ -301,6 +301,10 @@ public:
 
     const Note fetchByRelativeFileName(const QString &fileName);
 
+    bool updateRelativeMediaFileLinks();
+
+    bool updateRelativeAttachmentFileLinks();
+
 protected:
     int id;
     QString name;

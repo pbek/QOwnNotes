@@ -394,13 +394,12 @@ bool Note::moveToPath(QString destinationPath) {
  * @return
  */
 QStringList Note::getMediaFileList() {
-    QString text = getNoteText();
     QStringList fileList;
 
     // match image links like ![media-qV920](file://media/608766373.gif)
     // or  ![media-qV920](media/608766373.gif)
     QRegularExpression re(R"(!\[.*?\]\(.*media/(.+?)\))");
-    QRegularExpressionMatchIterator i = re.globalMatch(text);
+    QRegularExpressionMatchIterator i = re.globalMatch(noteText);
 
     // remove all found images from the orphaned files list
     while (i.hasNext()) {
@@ -410,6 +409,36 @@ QStringList Note::getMediaFileList() {
     }
 
     return fileList;
+}
+
+bool Note::updateRelativeMediaFileLinks() {
+    QRegularExpression re(R"((!\[.*?\])\((.*media/(.+?))\))");
+    QRegularExpressionMatchIterator i = re.globalMatch(noteText);
+    bool textWasUpdated = false;
+    QString newText = noteText;
+
+    while (i.hasNext()) {
+        QRegularExpressionMatch match = i.next();
+        QString filePath = match.captured(2);
+
+        if (filePath.startsWith("file://")) {
+            continue;
+        }
+
+        const QString wholeLinkText = match.captured(0);
+        const QString titlePart = match.captured(1);
+        const QString fileName = match.captured(3);
+
+        filePath = mediaUrlStringForFileName(fileName);
+        newText.replace(wholeLinkText, titlePart + "(" + filePath + ")");
+        textWasUpdated = true;
+    }
+
+    if (textWasUpdated) {
+        storeNewText(newText);
+    }
+
+    return textWasUpdated;
 }
 
 /**
@@ -426,7 +455,7 @@ QStringList Note::getAttachmentsFileList() {
             R"(\[.*?\]\(.*attachments/(.+?)\))");
     QRegularExpressionMatchIterator i = re.globalMatch(text);
 
-    // remove all found images from the orphaned files list
+    // remove all found attachments from the orphaned files list
     while (i.hasNext()) {
         QRegularExpressionMatch match = i.next();
         QString fileName = match.captured(1);
@@ -434,6 +463,36 @@ QStringList Note::getAttachmentsFileList() {
     }
 
     return fileList;
+}
+
+bool Note::updateRelativeAttachmentFileLinks() {
+    QRegularExpression re(R"((\[.*?\])\((.*attachments/(.+?))\))");
+    QRegularExpressionMatchIterator i = re.globalMatch(noteText);
+    bool textWasUpdated = false;
+    QString newText = noteText;
+
+    while (i.hasNext()) {
+        QRegularExpressionMatch match = i.next();
+        QString filePath = match.captured(2);
+
+        if (filePath.startsWith("file://")) {
+            continue;
+        }
+
+        const QString wholeLinkText = match.captured(0);
+        const QString titlePart = match.captured(1);
+        const QString fileName = match.captured(3);
+
+        filePath = attachmentUrlStringForFileName(fileName);
+        newText.replace(wholeLinkText, titlePart + "(" + filePath + ")");
+        textWasUpdated = true;
+    }
+
+    if (textWasUpdated) {
+        storeNewText(newText);
+    }
+
+    return textWasUpdated;
 }
 
 /**
