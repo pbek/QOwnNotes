@@ -4956,7 +4956,7 @@ void MainWindow::openTodoDialog(const QString& taskUid) {
     // check if we have got any task list enabled
     if (todoCalendarEnabledUrlList.count() == 0) {
         if (QMessageBox::warning(
-                0, tr("No selected todo lists!"),
+                nullptr, tr("No selected todo lists!"),
                 tr("You have not selected any todo lists.<br />"
                            "Please check your <strong>Todo</strong> "
                            "configuration in the settings!"),
@@ -5216,7 +5216,6 @@ void MainWindow::filterNotesByTag() {
         case Tag::AllNotesId:
             // don't do any additional filtering here
             return;
-        break;
         case Tag::AllUntaggedNotesId:
             // get all note names that are not tagged
             fileNameList = Note::fetchAllNotTaggedNames();

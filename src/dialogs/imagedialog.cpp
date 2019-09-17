@@ -292,6 +292,8 @@ void ImageDialog::resizedGraphicsViewBy(int dw, int dh) {
     // move rubberband if graphics view was resized
     // TODO: does not work in all cases
 //    _rubberBand->move(_rubberBand->x() + dw / 2, _rubberBand->y() + dh / 2);
+    Q_UNUSED(dw)
+    Q_UNUSED(dh)
 
     // we will close the rubberband until we can do something better
     _rubberBand->close();

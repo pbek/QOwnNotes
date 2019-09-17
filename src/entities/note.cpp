@@ -2651,7 +2651,6 @@ bool Note::fileUrlIsNoteInCurrentNoteFolder(const QUrl url) {
 
 QString Note::fileUrlInCurrentNoteFolderToRelativePath(const QUrl url) {
     QString path = url.toLocalFile();
-    auto file = new QFile(path);
     qDebug() << __func__ << " - 'path': " << path;
 
     // translates the "a path/../an other path" to "an other path"
