@@ -11,6 +11,9 @@
   (for [#266](https://github.com/pbek/QOwnNotes/issues/266))
 - above changes conclude the monstrous effort of the migration to more portable relative
   file links for notes, images and attachments in [#266](https://github.com/pbek/QOwnNotes/issues/266)
+- **QOwnNotesAPI** is now ready for **Nextcloud 17**
+    - see [QOwnNotesAPI for Nextcloud](https://apps.nextcloud.com/apps/qownnotesapi)
+- added more Basque, Spanish translation (thank you izendegi, richarson)
 
 ## 19.9.12
 - if you **rename a note** you now will also be able to automatically **rename** new

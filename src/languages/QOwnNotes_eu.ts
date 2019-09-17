@@ -3404,13 +3404,13 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
     <message>
       <location filename="../entities/note.cpp" line="2698"/>
       <source>Note file path changed</source>
-      <translation type="unfinished">Note file path changed</translation>
+      <translation>Ohar-fitxategiaren bidea aldatu da</translation>
     </message>
     <message numerus="yes">
       <location filename="../entities/note.cpp" line="2699"/>
       <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
       <translation type="unfinished">
-        <numerusform>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
+        <numerusform>Ohar-fitxategiaren bidean aldaketa bat antzeman da. &lt;strong&gt;%1&lt;/strong&gt; estekaren agerraldi guztiak &lt;strong&gt;%2&lt;/strong&gt; estekarekin ordezkatu nahiko zenuke eta &lt;strong&gt;%3&lt;/strong&gt; fitxategi-izenak &lt;strong&gt;%4&lt;/strong&gt; izenekin &lt;strong&gt;%n&lt;/strong&gt; ohar-fitxategi(et)an?</numerusform>
         <numerusform>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
       </translation>
     </message>
