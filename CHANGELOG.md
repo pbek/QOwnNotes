@@ -1,5 +1,18 @@
 # QOwnNotes Changelog
 
+## 19.9.14
+- the **link dialog** was **improved**
+    - there now a tabs for entering an URL and selecting a note to make the
+      dialog less cluttered
+    - if you have a **url in the clipboard** it will automatically be entered
+    - if the entered url is a webpage the **title will be fetched automatically**
+        - this will now happen inside the dialog and not like previously outside
+          of it where you had to wait for the result
+    - the automatic **title fetching** now **detects more titles** and is in many
+      cases **much faster**
+    - if you now double-click on a note while there still is text in the
+      url line edit the note will be linked and not the url in the line edit
+
 ## 19.9.13
 - if you **move notes to another sub-folder** you now will also be able to automatically
   **adapt** the new **relative note file links** to that notes like `[note](note.md)` or

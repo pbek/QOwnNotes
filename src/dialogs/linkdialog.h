@@ -1,5 +1,4 @@
-#ifndef NOTESEARCHDIALOG_H
-#define NOTESEARCHDIALOG_H
+#pragma once
 
 #include <QDialog>
 #include <entities/note.h>
@@ -14,7 +13,7 @@ class LinkDialog : public MasterDialog
     Q_OBJECT
 
 public:
-    explicit LinkDialog( QString dialogTitle = "", QWidget *parent = 0);
+    explicit LinkDialog(QString dialogTitle = "", QWidget *parent = nullptr);
     ~LinkDialog();
 
     QString getSelectedNoteName();
@@ -28,6 +27,7 @@ private slots:
     void on_searchLineEdit_textChanged(const QString &arg1);
     void on_notesListWidget_doubleClicked(const QModelIndex &index);
     void on_fileUrlButton_clicked();
+    void on_urlEdit_textChanged(const QString &arg1);
 
 private:
     Ui::LinkDialog *ui;
@@ -35,5 +35,3 @@ private:
     bool eventFilter(QObject *obj, QEvent *event);
     QString selectedNoteText;
 };
-
-#endif // NOTESEARCHDIALOG_H

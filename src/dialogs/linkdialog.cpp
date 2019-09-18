@@ -8,6 +8,7 @@
 #include <QNetworkReply>
 #include <QFileDialog>
 #include <QSettings>
+#include <QClipboard>
 #include "helpers/htmlentities.h"
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
@@ -34,6 +35,15 @@ LinkDialog::LinkDialog(QString dialogTitle, QWidget *parent) :
     }
 
     ui->notesListWidget->setCurrentRow(0);
+
+    QClipboard *clipboard = QApplication::clipboard();
+    const QString text = clipboard->text();
+    const QUrl url(text);
+
+    // set text from clipboard
+    if (url.isValid() && !url.scheme().isEmpty()) {
+        ui->urlEdit->setText(text);
+    }
 }
 
 LinkDialog::~LinkDialog() {
@@ -114,7 +124,7 @@ bool LinkDialog::eventFilter(QObject *obj, QEvent *event) {
                 (keyEvent->key() == Qt::Key_Tab)) {
                 // choose another selected item if current item is invisible
                 QListWidgetItem *item = ui->notesListWidget->currentItem();
-                if ((item != NULL) &&
+                if ((item != nullptr) &&
                     ui->notesListWidget->currentItem()->isHidden() &&
                     (this->firstVisibleNoteListRow >= 0)) {
                     ui->notesListWidget->setCurrentRow(
@@ -147,6 +157,7 @@ bool LinkDialog::eventFilter(QObject *obj, QEvent *event) {
 
 void LinkDialog::on_notesListWidget_doubleClicked(const QModelIndex &index) {
     Q_UNUSED(index);
+    ui->urlEdit->clear();
     this->close();
     this->setResult(QDialog::Accepted);
 }
@@ -157,61 +168,34 @@ void LinkDialog::on_notesListWidget_doubleClicked(const QModelIndex &index) {
  * @return
  */
 QString LinkDialog::getTitleForUrl(const QUrl& url) {
-    auto *manager = new QNetworkAccessManager(this);
-    QEventLoop loop;
-    QTimer timer;
+    const QString html = Utils::Misc::downloadUrl(url);
 
-    timer.setSingleShot(true);
-    connect(&timer, SIGNAL(timeout()), &loop, SLOT(quit()));
-    connect(manager, SIGNAL(finished(QNetworkReply *)), &loop, SLOT(quit()));
-
-    // 5 sec timeout for the request
-    timer.start(5000);
-
-    QNetworkRequest networkRequest = QNetworkRequest(url);
-
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
-    networkRequest.setAttribute(QNetworkRequest::FollowRedirectsAttribute,
-                                true);
-#endif
-
-    QNetworkReply *reply = manager->get(networkRequest);
-    loop.exec();
-    QString result;
-
-    // if we didn't get a timeout let's fetch the title of the webpage
-    if (timer.isActive()) {
-        // get the text from the network reply
-        QString html = reply->readAll();
-
-        // parse title from webpage
-        QRegularExpression regex("<title>(.*)</title>");
-        QRegularExpressionMatch match = regex.match(html);
-        QString title = match.captured(1);
-
-        // decode HTML entities
-        HTMLEntities htmlEntities;
-        title = htmlEntities.decodeHtmlEntities(title);
-
-        // replace some other characters we don't want
-        title.replace("[", "(")
-                .replace("]", ")")
-                .replace("<", "(")
-                .replace(">", ")")
-                .replace("&#8211;", "-")
-                .replace("&#124;", "-")
-                .replace("&#038;", "&")
-                .replace("&#39;", "'");
-
-        // trim whitespaces and return title
-        result = title.simplified();
+    if (html.isEmpty()) {
+        return "";
     }
 
-    reply->deleteLater();
-    delete(manager);
+    // parse title from webpage
+    QRegularExpression regex(R"(<title>(.*)<\/title>)", QRegularExpression::MultilineOption |
+                             QRegularExpression::DotMatchesEverythingOption);
+    QRegularExpressionMatch match = regex.match(html);
+    QString title = match.captured(1);
 
-    // timer elapsed, no reply from network request
-    return result;
+    // decode HTML entities
+    HTMLEntities htmlEntities;
+    title = htmlEntities.decodeHtmlEntities(title);
+
+    // replace some other characters we don't want
+    title.replace("[", "(")
+            .replace("]", ")")
+            .replace("<", "(")
+            .replace(">", ")")
+            .replace("&#8211;", "-")
+            .replace("&#124;", "-")
+            .replace("&#038;", "&")
+            .replace("&#39;", "'");
+
+    // trim whitespaces and return title
+    return title.simplified();
 }
 
 /**
@@ -243,5 +227,22 @@ void LinkDialog::on_fileUrlButton_clicked() {
 
         // write the file-url to the url text-edit
         ui->urlEdit->setText(fileUrlString);
+    }
+}
+
+void LinkDialog::on_urlEdit_textChanged(const QString &arg1) {
+    auto url = QUrl(arg1);
+
+    if (!url.isValid()) {
+        return;
+    }
+
+    // try to get the title of the webpage if no link name was set
+    if (url.scheme().startsWith("http") && ui->nameLineEdit->text().isEmpty()) {
+        const QString title = getTitleForUrl(url);
+
+        if (!title.isEmpty()) {
+            ui->nameLineEdit->setText(title);
+        }
     }
 }
