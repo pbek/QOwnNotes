@@ -221,8 +221,8 @@ void UpdateDialog::dialogButtonClicked(QAbstractButton *button) {
  */
 void UpdateDialog::releaseDownloadProgress(
         qint64 bytesReceived, qint64 bytesTotal) {
-    ui->downloadProgressBar->setMaximum(bytesTotal);
-    ui->downloadProgressBar->setValue(bytesReceived);
+    ui->downloadProgressBar->setMaximum(static_cast <int>(bytesTotal));
+    ui->downloadProgressBar->setValue(static_cast <int>(bytesReceived));
 }
 
 /**
