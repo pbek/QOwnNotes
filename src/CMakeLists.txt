@@ -147,6 +147,9 @@ set(SOURCE_FILES
     dialogs/imagedialog.cpp
     dialogs/imagedialog.h
     dialogs/imagedialog.ui
+    dialogs/attachmentdialog.cpp
+    dialogs/attachmentdialog.h
+    dialogs/attachmentdialog.ui
     dialogs/filedialog.cpp
     dialogs/filedialog.h
     entities/calendaritem.cpp

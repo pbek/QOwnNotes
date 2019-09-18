@@ -88,6 +88,7 @@
 #include <dialogs/filedialog.h>
 #include <dialogs/scriptrepositorydialog.h>
 #include <entities/trashitem.h>
+#include <dialogs/attachmentdialog.h>
 #include <dialogs/imagedialog.h>
 #include <dialogs/localtrashdialog.h>
 #include <QRegularExpression>
@@ -4683,19 +4684,9 @@ void MainWindow::handleTextNoteLinking() {
 
             // if user has entered an url
             if (url != "") {
-                if (chosenLinkName != "") {
-                    newText = "[" + chosenLinkName + "](" + url + ")";
-                } else {
-                    // if possible fetch the title of the webpage
-                    QString title = dialog->getTitleForUrl(QUrl(url));
-
-                    // if we got back a tile let's use it in the link
-                    if (title != "") {
-                        newText = "[" + title + "](" + url + ")";
-                    } else {
-                        newText = "<" + url + ">";
-                    }
-                }
+                newText = chosenLinkName != "" ?
+                            "[" + chosenLinkName + "](" + url + ")" :
+                            "<" + url + ">";
             } else {
                 // if user has selected a note
                 if (chosenLinkName != "") {
@@ -10773,22 +10764,14 @@ void MainWindow::updateNotesPanelSortOrder() {
  * Inserts a file as attachment
  */
 void MainWindow::on_actionInsert_attachment_triggered() {
-    FileDialog dialog("InsertAttachment");
-    dialog.setFileMode(QFileDialog::ExistingFile);
-    dialog.setAcceptMode(QFileDialog::AcceptOpen);
-    dialog.setWindowTitle(tr("Select file to insert"));
-    int ret = dialog.exec();
+    auto *dialog = new AttachmentDialog(this);
+    dialog->exec();
 
-    if (ret == QDialog::Accepted) {
-        QString fileName = dialog.selectedFile();
-
-        if (!fileName.isEmpty()) {
-            QFile file(fileName);
-
-            // insert the attachment
-            insertAttachment(&file);
-        }
+    if (dialog->result() == QDialog::Accepted) {
+        insertAttachment(dialog->getFile());
     }
+
+    delete(dialog);
 }
 
 /**

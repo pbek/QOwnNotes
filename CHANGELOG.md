@@ -12,6 +12,10 @@
       cases **much faster**
     - if you now double-click on a note while there still is text in the
       url line edit the note will be linked and not the url in the line edit
+- there now is a new **Insert attachment** dialog
+    - the dialog will **detect** if you have a **file path or url** in the
+      **clipboard** when it is opened and use it
+    - **file size and type** are **displayed** when selecting a file
 
 ## 19.9.13
 - if you **move notes to another sub-folder** you now will also be able to automatically

@@ -65,6 +65,7 @@ CONFIG += c++11
 INCLUDEPATH += $$PWD/libraries
 
 SOURCES += main.cpp\
+    dialogs/attachmentdialog.cpp \
         mainwindow.cpp \
     libraries/diff_match_patch/diff_match_patch.cpp \
     libraries/hoedown/html.c \
@@ -151,6 +152,7 @@ SOURCES += main.cpp\
 
 HEADERS  += mainwindow.h \
     build_number.h \
+    dialogs/attachmentdialog.h \
     version.h \
     libraries/diff_match_patch/diff_match_patch.h \
     libraries/hoedown/html.h \
@@ -240,6 +242,7 @@ HEADERS  += mainwindow.h \
     dialogs/imagedialog.h
 
 FORMS    += mainwindow.ui \
+    dialogs/attachmentdialog.ui \
     dialogs/imagedialog.ui \
     dialogs/notediffdialog.ui \
     dialogs/aboutdialog.ui \
