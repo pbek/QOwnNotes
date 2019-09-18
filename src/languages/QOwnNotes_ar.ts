@@ -77,9 +77,8 @@
         <translation type="unfinished">خطأ خلال التحميل: %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/attachmentdialog.cpp" line="142"/>
         <source>network error: %1</source>
-        <translation type="unfinished">خطأ في الشبكة: %1</translation>
+        <translation type="obsolete">خطأ في الشبكة: %1</translation>
     </message>
     <message>
         <location filename="../dialogs/attachmentdialog.cpp" line="168"/>

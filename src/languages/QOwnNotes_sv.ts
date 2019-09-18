@@ -77,9 +77,8 @@
         <translation type="unfinished">Fel vid nedladdning: %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/attachmentdialog.cpp" line="142"/>
         <source>network error: %1</source>
-        <translation type="unfinished">nätverksfel: %1</translation>
+        <translation type="obsolete">nätverksfel: %1</translation>
     </message>
     <message>
         <location filename="../dialogs/attachmentdialog.cpp" line="168"/>

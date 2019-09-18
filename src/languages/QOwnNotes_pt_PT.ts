@@ -78,9 +78,8 @@
 %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/attachmentdialog.cpp" line="142"/>
         <source>network error: %1</source>
-        <translation type="unfinished">Erro de rede: %1</translation>
+        <translation type="obsolete">Erro de rede: %1</translation>
     </message>
     <message>
         <location filename="../dialogs/attachmentdialog.cpp" line="168"/>

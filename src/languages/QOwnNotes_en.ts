@@ -77,11 +77,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/attachmentdialog.cpp" line="142"/>
-        <source>network error: %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../dialogs/attachmentdialog.cpp" line="168"/>
         <location filename="../dialogs/attachmentdialog.cpp" line="189"/>
         <source>File error</source>

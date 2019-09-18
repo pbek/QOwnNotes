@@ -78,9 +78,8 @@
 %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/attachmentdialog.cpp" line="142"/>
         <source>network error: %1</source>
-        <translation type="unfinished">নেটওয়ার্ক ত্রুটি: %1</translation>
+        <translation type="obsolete">নেটওয়ার্ক ত্রুটি: %1</translation>
     </message>
     <message>
         <location filename="../dialogs/attachmentdialog.cpp" line="168"/>

@@ -78,9 +78,8 @@
 %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/attachmentdialog.cpp" line="142"/>
         <source>network error: %1</source>
-        <translation type="unfinished">sareko errorea: %1</translation>
+        <translation type="obsolete">sareko errorea: %1</translation>
     </message>
     <message>
         <location filename="../dialogs/attachmentdialog.cpp" line="168"/>
