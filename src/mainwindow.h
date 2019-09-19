@@ -573,6 +573,10 @@ private slots:
 
     void disableFullScreenMode();
 
+    void moveSelectedNotesToFolder(const QString& destinationFolder);
+
+    void copySelectedNotesToFolder(const QString& destinationFolder);
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;
@@ -700,10 +704,6 @@ private:
     void storeSettings();
 
     void removeSelectedNotes();
-
-    void moveSelectedNotesToFolder(const QString& destinationFolder);
-
-    void copySelectedNotesToFolder(const QString& destinationFolder);
 
     void selectAllNotes();
 
@@ -849,6 +849,9 @@ private:
     void buildBulkNoteSubFolderMenuTree(QMenu *parentMenu, bool doCopy = true,
                                         int parentNoteSubFolderId = 0);
 
+    void buildBulkNoteFolderSubFolderMenuTree(QMenu *parentMenu, bool doCopy,
+                                              const QString &parentNoteSubFolderPath, bool isRoot = true);
+
     void moveSelectedNotesToNoteSubFolder(NoteSubFolder noteSubFolder);
 
     void copySelectedNotesToNoteSubFolder(NoteSubFolder noteSubFolder);
@@ -921,7 +924,7 @@ private:
 
     void selectAllNotesInNoteSubFolderTreeWidget() const;
 
-    bool insertAttachment(QFile *file);
+    bool insertAttachment(QFile *file, const QString &title = "");
 
     Qt::SortOrder toQtOrder(int order);
 

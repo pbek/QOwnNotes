@@ -8495,6 +8495,75 @@ void MainWindow::buildBulkNoteSubFolderMenuTree(QMenu *parentMenu, bool doCopy,
 }
 
 /**
+ * Populates a subfolder menu tree for bulk note moving or copying to sub-folders of other note folders
+ */
+void MainWindow::buildBulkNoteFolderSubFolderMenuTree(QMenu *parentMenu, bool doCopy,
+                                                const QString &parentNoteSubFolderPath, bool isRoot) {
+    QDir dir(parentNoteSubFolderPath);
+    QStringList nameFilters;
+    auto *signalMapper = new QSignalMapper(this);
+
+    if (isRoot) {
+        nameFilters << "media" << "trash" << "attachments";
+    }
+
+    // show newest entry first
+    QStringList directoryNames = dir.entryList(QDir::Dirs | QDir::NoDotAndDotDot, QDir::Name);
+
+    if (isRoot) {
+        Q_FOREACH(QString name, QStringList() << "media" << "trash" << "attachments") {
+            directoryNames.removeAll(name);
+        }
+    }
+
+    Q_FOREACH(QString directoryName, directoryNames) {
+        const QString fullPath = parentNoteSubFolderPath + "/" + directoryName;
+        QDir subDir(fullPath);
+        QStringList subDirectoryNames = subDir.entryList(QDir::Dirs | QDir::NoDotAndDotDot);
+
+        if (subDirectoryNames.count() > 0) {
+            // if there are sub folders build a new menu level
+            QMenu *noteSubFolderMenu = parentMenu->addMenu(directoryName);
+            buildBulkNoteFolderSubFolderMenuTree(noteSubFolderMenu, doCopy, fullPath, false);
+        } else {
+            // if there are no sub folders just create a named action
+            QAction *action = parentMenu->addAction(directoryName);
+            action->setToolTip(fullPath);
+            action->setStatusTip(fullPath);
+
+            QObject::connect(action, SIGNAL(triggered()),
+                             signalMapper, SLOT(map()));
+
+            signalMapper->setMapping(action, fullPath);
+        }
+    }
+
+    // add an action to copy or move to this subfolder
+    parentMenu->addSeparator();
+    QString text = (isRoot) ?
+                (doCopy ? tr("Copy to note folder") :
+                          tr("Move to note folder")) :
+                (doCopy ? tr("Copy to this subfolder") :
+                          tr("Move to this subfolder"));
+    QAction *action = parentMenu->addAction(text);
+    action->setToolTip(parentNoteSubFolderPath);
+    action->setStatusTip(parentNoteSubFolderPath);
+
+    QObject::connect(action, SIGNAL(triggered()),
+                     signalMapper, SLOT(map()));
+
+    signalMapper->setMapping(action, parentNoteSubFolderPath);
+
+    // connect the signal mapper
+    QObject::connect(signalMapper,
+                     SIGNAL(mapped(QString)),
+                     this,
+                     doCopy ?
+                         SLOT(copySelectedNotesToFolder(QString)) :
+                         SLOT(moveSelectedNotesToFolder(QString)));
+}
+
+/**
  * Moves selected notes to a note subfolder id
  */
 void MainWindow::moveSelectedNotesToNoteSubFolderId(int noteSubFolderId) {
@@ -9246,25 +9315,31 @@ void MainWindow::openNotesContextMenu(
 
         Q_FOREACH(NoteFolder noteFolder, noteFolders) {
                 // don't show not existing folders or if path is empty
-                if (!noteFolder.localPathExists()) {
+                if (!noteFolder.localPathExists() || noteFolder.isCurrent()) {
                     continue;
                 }
 
-                if (noteFolder.isCurrent()) {
-                    continue;
+                if (noteFolder.isShowSubfolders()) {
+                    QMenu *subFolderMoveMenu = moveDestinationMenu->addMenu(
+                            noteFolder.getName());
+                    buildBulkNoteFolderSubFolderMenuTree(subFolderMoveMenu, false, noteFolder.getLocalPath());
+
+                    QMenu *subFolderCopyMenu = copyDestinationMenu->addMenu(
+                            noteFolder.getName());
+                    buildBulkNoteFolderSubFolderMenuTree(subFolderCopyMenu, true, noteFolder.getLocalPath());
+                } else {
+                    QAction *moveAction = moveDestinationMenu->addAction(
+                            noteFolder.getName());
+                    moveAction->setData(noteFolder.getLocalPath());
+                    moveAction->setToolTip(noteFolder.getLocalPath());
+                    moveAction->setStatusTip(noteFolder.getLocalPath());
+
+                    QAction *copyAction = copyDestinationMenu->addAction(
+                            noteFolder.getName());
+                    copyAction->setData(noteFolder.getLocalPath());
+                    copyAction->setToolTip(noteFolder.getLocalPath());
+                    copyAction->setStatusTip(noteFolder.getLocalPath());
                 }
-
-                QAction *moveAction = moveDestinationMenu->addAction(
-                        noteFolder.getName());
-                moveAction->setData(noteFolder.getLocalPath());
-                moveAction->setToolTip(noteFolder.getLocalPath());
-                moveAction->setStatusTip(noteFolder.getLocalPath());
-
-                QAction *copyAction = copyDestinationMenu->addAction(
-                        noteFolder.getName());
-                copyAction->setData(noteFolder.getLocalPath());
-                copyAction->setToolTip(noteFolder.getLocalPath());
-                copyAction->setStatusTip(noteFolder.getLocalPath());
             }
     }
 

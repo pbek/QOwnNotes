@@ -11,6 +11,10 @@
     - the dialog will now **detect** if you have a **local file path** of a file
       that exists on your computer in the **clipboard** when it is opened and use it
     - **`file://` urls** will now automatically be **converted to local file paths**
+- you now can **move and copy notes** also to **subfolders of note folders** if you have
+  enabled subfolders for the note folder (for [#1294](https://github.com/pbek/QOwnNotes/issues/1294))
+    - keep in mind that only the note file will be copied/moved
+    - note tags, links to other notes, images and attachments will not be transferred/adapted
 
 ## 19.9.14
 - the **link dialog** was **improved**
