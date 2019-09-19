@@ -14,6 +14,7 @@ ImageDialog::ImageDialog(QWidget *parent) :
     _rubberBand = nullptr;
 
     ui->setupUi(this);
+    ui->fileEdit->setFocus();
     ui->previewFrame->setVisible(false);
     ui->toolFrame->hide();
 

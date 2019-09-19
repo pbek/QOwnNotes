@@ -18,8 +18,8 @@ LinkDialog::LinkDialog(QString dialogTitle, QWidget *parent) :
         MasterDialog(parent),
         ui(new Ui::LinkDialog) {
     ui->setupUi(this);
-
-    this->firstVisibleNoteListRow = 0;
+    ui->urlEdit->setFocus();
+    firstVisibleNoteListRow = 0;
 
     if (!dialogTitle.isEmpty()) {
         this->setWindowTitle(dialogTitle);
@@ -29,7 +29,7 @@ LinkDialog::LinkDialog(QString dialogTitle, QWidget *parent) :
     ui->searchLineEdit->installEventFilter(this);
 
     Q_FOREACH(Note note, Note::fetchAll()) {
-        QListWidgetItem *item = new QListWidgetItem(note.getName());
+        auto *item = new QListWidgetItem(note.getName());
         item->setData(Qt::UserRole, note.getId());
         ui->notesListWidget->addItem(item);
     }

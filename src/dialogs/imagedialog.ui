@@ -250,6 +250,16 @@
    <header location="global">widgets/graphicsview.h</header>
   </customwidget>
  </customwidgets>
+ <tabstops>
+  <tabstop>fileEdit</tabstop>
+  <tabstop>openButton</tabstop>
+  <tabstop>titleEdit</tabstop>
+  <tabstop>disableCopyingCheckBox</tabstop>
+  <tabstop>widthSpinBox</tabstop>
+  <tabstop>widthScaleHorizontalSlider</tabstop>
+  <tabstop>cropButton</tabstop>
+  <tabstop>graphicsView</tabstop>
+ </tabstops>
  <resources>
   <include location="../breeze-qownnotes.qrc"/>
  </resources>
