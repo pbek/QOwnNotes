@@ -13,10 +13,10 @@
     - **`file://` urls** will now automatically be **converted to local file paths**
 - you now can **move and copy notes** also to **subfolders of note folders** if you have
   enabled subfolders for the note folder (for [#1294](https://github.com/pbek/QOwnNotes/issues/1294))
-    - keep in mind that only the note file will be copied/moved
+    - keep in mind that only the note files will be copied/moved
     - note tags, links to other notes, images and attachments will not be transferred/adapted
 - the **tab order** in the **image, attachment and link dialog** was **improved**
-    - the first items with focus will now be the link/url edit field also on Windows
+    - the first item with focus will now be the link/url edit field also on Windows
 - added more Italian, Spanish translation (thank you tiwi90, richarson)
 
 ## 19.9.14
