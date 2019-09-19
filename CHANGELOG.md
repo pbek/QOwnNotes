@@ -15,8 +15,9 @@
   enabled subfolders for the note folder (for [#1294](https://github.com/pbek/QOwnNotes/issues/1294))
     - keep in mind that only the note file will be copied/moved
     - note tags, links to other notes, images and attachments will not be transferred/adapted
-- the tab order in the image, attachment and link dialog was improved
+- the **tab order** in the **image, attachment and link dialog** was **improved**
     - the first items with focus will now be the link/url edit field also on Windows
+- added more Italian, Spanish translation (thank you tiwi90, richarson)
 
 ## 19.9.14
 - the **link dialog** was **improved**
