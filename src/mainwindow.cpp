@@ -6249,8 +6249,8 @@ void MainWindow::insertNoteText(const QString &text) {
 /**
  * Inserts a file attachment into the current note
  */
-bool MainWindow::insertAttachment(QFile *file) {
-    QString text = currentNote.getInsertAttachmentMarkdown(file);
+bool MainWindow::insertAttachment(QFile *file, const QString &title) {
+    QString text = currentNote.getInsertAttachmentMarkdown(file, title);
 
     if (!text.isEmpty()) {
         qDebug() << __func__ << " - 'text': " << text;
@@ -10768,7 +10768,7 @@ void MainWindow::on_actionInsert_attachment_triggered() {
     dialog->exec();
 
     if (dialog->result() == QDialog::Accepted) {
-        insertAttachment(dialog->getFile());
+        insertAttachment(dialog->getFile(), dialog->getTitle());
     }
 
     delete(dialog);

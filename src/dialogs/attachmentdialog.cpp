@@ -16,19 +16,17 @@ AttachmentDialog::AttachmentDialog(QWidget *parent) :
     ui->downloadFrame->hide();
     ui->infoFrame->hide();
 
-    // TODO: remove
-    ui->titleEdit->hide();
-
     _networkManager = new QNetworkAccessManager(this);
     QObject::connect(_networkManager, SIGNAL(finished(QNetworkReply *)),
                      this, SLOT(slotReplyFinished(QNetworkReply *)));
 
     QClipboard *clipboard = QApplication::clipboard();
-    const QString text = clipboard->text();
+    QString text = clipboard->text();
     const QUrl url(text);
+    const QFile file(text);
 
     // set text from clipboard
-    if (url.isValid() && !url.scheme().isEmpty()) {
+    if (url.isValid() && (!url.scheme().isEmpty() || file.exists())) {
         ui->fileEdit->setText(text);
     }
 }
@@ -65,10 +63,9 @@ void AttachmentDialog::on_fileEdit_textChanged(const QString &arg1) {
 
     ui->downloadButton->setVisible(url.scheme().startsWith("http"));
 
-    // TODO: remove
-    ui->downloadButton->hide();
-
-    if (url.scheme().isEmpty()) {
+    if (url.scheme() == "file") {
+        ui->fileEdit->setText(url.toLocalFile());
+    } else if (url.scheme().isEmpty()) {
         ui->infoFrame->show();
         QFileInfo fileInfo(arg1);
 
@@ -81,6 +78,7 @@ void AttachmentDialog::on_fileEdit_textChanged(const QString &arg1) {
 }
 
 void AttachmentDialog::on_downloadButton_clicked() {
+    ui->downloadButton->setDisabled(true);
     ui->downloadProgressBar->setValue(0);
     ui->downloadSizeLabel->setText("");
     ui->downloadFrame->show();
@@ -128,6 +126,7 @@ void AttachmentDialog::slotReplyFinished(QNetworkReply *reply) {
 
     reply->deleteLater();
     ui->downloadFrame->hide();
+    ui->downloadButton->setDisabled(false);
 
     qDebug() << "Reply from " << reply->url().path();
     QByteArray data = reply->readAll();
@@ -135,6 +134,7 @@ void AttachmentDialog::slotReplyFinished(QNetworkReply *reply) {
 
     if (reply->error() != QNetworkReply::NoError &&
             reply->error() != QNetworkReply::OperationCanceledError) {
+        _accept = false;
         QMessageBox::critical(
                     nullptr, tr("Download error"),
                 tr("Error while downloading:\n%1").arg(reply->errorString()));
@@ -174,10 +174,13 @@ void AttachmentDialog::slotReplyFinished(QNetworkReply *reply) {
     // file->fileName() only holds a value after file->open()
     QString filePath = tempFile->fileName();
     tempFile->close();
+
     // we need to delete the object so the later written file
     // can be read again while the app is open
     tempFile->deleteLater();
-    destroy(tempFile);
+
+    // this "destroy" closes the dialog!
+    // destroy(tempFile);
 
     // unfortunately if you write to a QTemporaryFile under Windows the data
     // only gets written when the application quits,
@@ -205,8 +208,27 @@ void AttachmentDialog::slotReplyFinished(QNetworkReply *reply) {
 
     // initialize the update process
     ui->fileEdit->setText(filePath);
+
+    if (_accept) {
+        _accept = false;
+        MasterDialog::accept();
+    }
 }
 
 QFile* AttachmentDialog::getFile() {
     return new QFile(ui->fileEdit->text());
+}
+
+QString AttachmentDialog::getTitle() {
+    return ui->titleEdit->text();
+}
+
+void AttachmentDialog::accept()
+{
+    if (QUrl(ui->fileEdit->text()).scheme().startsWith("http")) {
+        _accept = true;
+        on_downloadButton_clicked();
+    } else {
+        MasterDialog::accept();
+    }
 }

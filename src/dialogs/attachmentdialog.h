@@ -19,6 +19,11 @@ public:
 
     QFile *getFile();
 
+    QString getTitle();
+
+public slots:
+    void accept();
+
 private slots:
     void on_openButton_clicked();
 
@@ -33,4 +38,5 @@ private slots:
 private:
     Ui::AttachmentDialog *ui;
     QNetworkAccessManager *_networkManager;
+    bool _accept = false;
 };

@@ -1,5 +1,17 @@
 # QOwnNotes Changelog
 
+## 19.9.15
+- the **attachment dialog** was **improved**
+    - you are now able to **download files** directly in the dialog
+        - there also is a progress bar, along with status information on how
+          much data you already have downloaded and a cancel button
+        - if you enter an url and press `Ok` the file will also automatically
+          gets downloaded
+    - you are now able to enter a **title** that will be used in the attachment link
+    - the dialog will now **detect** if you have a **local file path** of a file
+      that exists on your computer in the **clipboard** when it is opened and use it
+    - **`file://` urls** will now automatically be **converted to local file paths**
+
 ## 19.9.14
 - the **link dialog** was **improved**
     - there now a tabs for entering an URL and selecting a note to make the
@@ -12,19 +24,19 @@
       cases **much faster**
     - if you now double-click on a note while there still is text in the
       url line edit the note will be linked and not the url in the line edit
-- there now is a new **Insert attachment** dialog
+- there now is a new **Insert attachment dialog**
     - the dialog will **detect** if you have a **file path or url** in the
       **clipboard** when it is opened and use it
     - **file size and type** are **displayed** when selecting a file
 
 ## 19.9.13
-- if you **move notes to another sub-folder** you now will also be able to automatically
+- if you **move notes to another subfolder** you now will also be able to automatically
   **adapt** the new **relative note file links** to that notes like `[note](note.md)` or
   `<note.md>` in all other notes (for [#266](https://github.com/pbek/QOwnNotes/issues/266))
     - furthermore **relative links of images and attachments** in the moved notes will be
-      **automatically adapted** to the new sub-folder
-- if you **copy notes to another sub-folder relative links of images and attachments**
-  in the copied notes will be **automatically adapted** to the new sub-folder
+      **automatically adapted** to the new subfolder
+- if you **copy notes to another subfolder relative links of images and attachments**
+  in the copied notes will be **automatically adapted** to the new subfolder
   (for [#266](https://github.com/pbek/QOwnNotes/issues/266))
 - above changes conclude the monstrous effort of the migration to more portable relative
   file links for notes, images and attachments in [#266](https://github.com/pbek/QOwnNotes/issues/266)
@@ -36,7 +48,7 @@
 - if you **rename a note** you now will also be able to automatically **rename** new
   **relative note file links** like `[note](note.md)` or `<note.md>` in all other
   notes if they are found (for [#266](https://github.com/pbek/QOwnNotes/issues/266))
-    - this also works with links from other note sub-folders
+    - this also works with links from other note subfolders
 - if you are using legacy links and are linking to notes that have utf8 characters and
   numbers in it now a `@` sign will be added (e.g. `note://zx000ūaųškj@`) to prevent
   faulty urls (for [#1292](https://github.com/pbek/QOwnNotes/issues/1292))
@@ -50,7 +62,7 @@
 - added more Italian, Korean, Greek translation (thank you tiwi90, pgrules7, athrouss)
 
 ## 19.9.10
-- added support for **note links from one sub-folder tree to another** like
+- added support for **note links from one subfolder tree to another** like
   `../../folder1/folder2/note.md` (for [#1287](https://github.com/pbek/QOwnNotes/issues/1287))
 - removed the 2px offset when the selection-rubberband is created while cropping in
   the image dialog (for [#1288](https://github.com/pbek/QOwnNotes/issues/1288))
@@ -105,9 +117,9 @@
 - when **inserting images into your media folder** like with the **Insert image dialog**,
   the **Evernote import**, via drag and drop or from the clipboard now markdown tags
   like `![imagename](media/30933630.jpeg)` are created (for [#266](https://github.com/pbek/QOwnNotes/issues/266))
-    - this also works if you are inserting images in notes in sub-folders, then the
+    - this also works if you are inserting images in notes in subfolders, then the
       image would look for example like `![imagename](../media/30933630.jpeg)` if
-      the depth of the sub-folder is one
+      the depth of the subfolder is one
     - the scripting functions `downloadUrlToMedia` and `insertMediaFile` will now
       also generate a markdown image relative to the path of the current note
     - you can still use the old `file://media/30933630.jpeg` links if you enable
@@ -115,14 +127,14 @@
 - when **inserting files into your attachments folder** like with the **Insert attachment dialog**,
   the **Evernote import** or via drag and drop now markdown tags like `[filename](attachments/45412706.pdf)`
   are created (for [#266](https://github.com/pbek/QOwnNotes/issues/266))
-    - this also works if you are inserting attachments in notes in sub-folders, then the
+    - this also works if you are inserting attachments in notes in subfolders, then the
       file would look for example like `[filename](../attachments/45412706.pdf)` if
-      the depth of the sub-folder is one
+      the depth of the subfolder is one
     - you can still use the old `file://attachments/45412706.pdf` links if you enable
       legacy links in the *General settings*
 - when **linking to notes** like with the **Insert link dialog** or when splitting notes
   now markdown tags like `[note](other note.md)` are created (for [#266](https://github.com/pbek/QOwnNotes/issues/266))
-    - this also works if the linked note is in another sub-folders, then the
+    - this also works if the linked note is in another subfolders, then the
       link would look for example like `[note](../other note.md)` or `[note](sub folder/other note.md)`
     - you can still use the old `note://other_note` links if you enable legacy links
       in the *General settings*
@@ -152,7 +164,7 @@
 - added more Urdu (Pakistan) translation (thank you Fabijenna)
 
 ## 19.9.3
-- **relative links to notes in sub-folders** like `<My subfolder/My note.md>` or
+- **relative links to notes in subfolders** like `<My subfolder/My note.md>` or
   `[Text](My subfolder/My note.md)` will now be **rendered correctly** in the **preview**
   and are also **clickable** (for [#266](https://github.com/pbek/QOwnNotes/issues/266))
 - you now can **open files** from markdown links like `<My folder/My document.pdf>` or
@@ -175,14 +187,14 @@
   (for [#266](https://github.com/pbek/QOwnNotes/issues/266))
     - clicking `<My note.md>` or `[Text](My note.md)` jumps to the note `My note`
     - clicking `<My subfolder/My note.md>` or `[Text](My subfolder/My note.md)` jumps
-      to the note `My note` in the note sub-folder `My-subfolder` relative to the
-      note sub-folder of your current note
+      to the note `My note` in the note subfolder `My-subfolder` relative to the
+      note subfolder of your current note
       - there still are a cases where links would not work in the preview (or even be shown)
-        when sub-folders are involved
+        when subfolders are involved
     - this should not only work in the preview but also when you <kbd>Ctrl</kbd> + Click
       on the link in the note text edit
-- the **note sub-folder** will now be **correctly set when switching to notes**
-  that are not in the current note sub-folder
+- the **note subfolder** will now be **correctly set when switching to notes**
+  that are not in the current note subfolder
 - when you **search for notes** in the note search line edit the **note list**
   will be now **scrolled to the top** so you can see the first search results
   (for [#1279](https://github.com/pbek/QOwnNotes/issues/1279))
@@ -203,8 +215,8 @@
 ## 19.9.0
 - added support for **relative image tags** like `![photo](path/to/my/photo.jpg)`
   in the preview and the PDF export (for [#266](https://github.com/pbek/QOwnNotes/issues/266))
-    - if the note is in a sub-folder the path counts as relative path in relation
-      to the sub-folder
+    - if the note is in a subfolder the path counts as relative path in relation
+      to the subfolder
 - pressing <kbd>Escape</kbd> twice in the note text edit will now first disable the
   search widget and then enable the read-only mode instead of the other way around
 - added more Croatian, Cebuano, Polish, Persian, Spanish, Serbian (Cyrillic),
@@ -483,7 +495,7 @@
 
 ## 19.5.6
 - fixed creation of empty notes at the note root folder when importing Evernote enex
-  files into a note sub-folder and improved overall import speed
+  files into a note subfolder and improved overall import speed
   (for [#1212](https://github.com/pbek/QOwnNotes/issues/1212))
 - added a more descriptive text in the browser extension security token dialog
 - the [Web Companion browser extension](https://github.com/qownnotes/web-companion)
@@ -666,7 +678,7 @@
     - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes)
       to make QOwnNotes available in more languages or help with the current 
       translation
-- implemented preserving of note tag links when renaming note sub-folders
+- implemented preserving of note tag links when renaming note subfolders
   (for [#1166](https://github.com/pbek/QOwnNotes/issues/1166))
 - added some markdown text edit fixes and changes
   (for [QMarkdownTextEdit #21](https://github.com/pbek/qmarkdowntextedit/pull/21), thank you @sandsmark)
@@ -946,7 +958,7 @@
       [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
 - fixed some possible crashes if a socket client disconnects from the socket server
   (for [#330](https://github.com/pbek/QOwnNotes/issues/330))
-- you can now enable note sub-folders in the welcome dialog if you are running
+- you can now enable note subfolders in the welcome dialog if you are running
   QOwnNotes for the first time
 - fixed some typos in dialogs
 - added more German, Italian, Czech, Swedish, Croatian, French, Hungarian and
@@ -1006,7 +1018,7 @@
     - you should already be able to "talk" to your QOwnNotes application by
       connecting to `ws://127.0.0.1:22222`, for example with [Echo Test](https://www.websocket.org/echo.html?location=ws://127.0.0.1:22222)
 - the automatically generated context menus for floating panels are now disabled
-  to prevent enabling of the note sub-folder toolbar if sub-folders are disabled
+  to prevent enabling of the note subfolder toolbar if subfolders are disabled
   for the current note folder (for [#1093](https://github.com/pbek/QOwnNotes/issues/1093))
 - the binary **Arch Linux** repository on the *openSUSE Build Service* is working
   again (for OBS issue [#6692](https://github.com/openSUSE/open-build-service/issues/6692))
@@ -1025,10 +1037,10 @@
   optionally supports *definition lists* (for script issue [#48](https://github.com/qownnotes/scripts/issues/48))
 - added `qt5-xmlpatterns` to the Arch Linux build depend list
 - the automatically generated toolbar context menus are now disabled to prevent 
-  enabling of the note sub-folder toolbar if sub-folders are disabled for the
+  enabling of the note subfolder toolbar if subfolders are disabled for the
   current note folder (for [#1093](https://github.com/pbek/QOwnNotes/issues/1093))
-    - the *note sub-folder* menu entry is now disabled in the *Panels menu*
-      instead of hidden if sub-folders are not enabled for current note folder
+    - the *note subfolder* menu entry is now disabled in the *Panels menu*
+      instead of hidden if subfolders are not enabled for current note folder
 - added more German, Catalan, Spanish, Portuguese, Chinese Traditional,
   Ukrainian, Italian, Hungarian and Dutch translation (thank you jan_sh,
   MGuerra, richarson, manuelarodsilva, abev66, prolinuxua, mlocati, tiwi90 
@@ -1147,7 +1159,7 @@
 ## 18.11.1
 - the **auto formatter** of **markdown tables** will now also automatically increase
   the size of the headline separator (for [#1052](https://github.com/pbek/QOwnNotes/issues/1052))
-- you can now **ignore certain note sub-folders** by defining them as list of 
+- you can now **ignore certain note subfolders** by defining them as list of
   regular expressions (separated by `;`) in the *Panels settings*
   (for [#1054](https://github.com/pbek/QOwnNotes/issues/1054))
     - by default folders starting with a `.` now will be ignored (this was
@@ -1283,20 +1295,20 @@
 - you can now **import text files as notes** from the *Note / Import* menu
     - if no markdown headline was found in the file the basename of the file 
       will be used as headline
-- the list of note sub-folders in the note list when moving notes to note 
-  sub-folders is now sorted alphabetically (for [#1022](https://github.com/pbek/QOwnNotes/issues/1022))
+- the list of note subfolders in the note list when moving notes to note
+  subfolders is now sorted alphabetically (for [#1022](https://github.com/pbek/QOwnNotes/issues/1022))
 
 ## 18.09.1
 - prevented possible misbehavior when moving multiple tags to another tag
   (for [#1014](https://github.com/pbek/QOwnNotes/issues/1014))
-- **note links** will now also jump to notes in **other note sub-folders**
+- **note links** will now also jump to notes in **other note subfolders**
   (for [#478](https://github.com/pbek/QOwnNotes/issues/478))
-    - first only the current note sub-folder will be searched, if the note 
-      wasn't found there all note sub-folders will be searched
-    - if the linked note was in another note sub-folder the current note 
-      sub-folder will be changed to that note sub-folder
-    - the note link dialog now shows notes of all note sub-folders
-    - highlighting of note links if they are broken also works over all note sub-folders
+    - first only the current note subfolder will be searched, if the note
+      wasn't found there all note subfolders will be searched
+    - if the linked note was in another note subfolder the current note
+      subfolder will be changed to that note subfolder
+    - the note link dialog now shows notes of all note subfolders
+    - highlighting of note links if they are broken also works over all note subfolders
     - automatically updating links when notes are renamed should now also work
       across note-subfolders 
 - fixed possibly duplicate entries in the script list of the *Script repository*
@@ -3360,15 +3372,15 @@
   a note in the *Editor settings*
     - take a look at the [time format documentation](https://docs.qownnotes.org/en/develop/time-formats.html)
       for more information about the available time formats
-- the menu entry for showing the note sub-folder panel is now invisible if 
-  note sub-folders are not enabled for the current note folder
+- the menu entry for showing the note subfolder panel is now invisible if
+  note subfolders are not enabled for the current note folder
 
 ## 17.01.0
 - notes in the note list are now resorted if they were sorted alphabetically 
   and a note was manually renamed in the note list
   (for [#450](https://github.com/pbek/QOwnNotes/issues/450), thank you @dwu)
 - improved on setting the note text edit to be readonly if the last note from a 
-  note folder or note sub-folder was removed or moved somewhere else or when
+  note folder or note subfolder was removed or moved somewhere else or when
   there is no visible note to view
   (for [#446](https://github.com/pbek/QOwnNotes/issues/446))
 - the *Delete word* functionality now matches that of other editors more closely
@@ -3378,7 +3390,7 @@
 - added more Spanish and Polish translation (thank you richarson and lucjan)
 
 ## 16.12.16
-- when the current note is moved to a different note sub-folder the current note
+- when the current note is moved to a different note subfolder the current note
   will now be unset, like when it is moved to a different note folder
   (for [#446](https://github.com/pbek/QOwnNotes/issues/446))
 - added more French, Dutch, Hungarian and Italian translation (thank you
@@ -3438,7 +3450,7 @@
 - the problem with accessing your todo lists on **Nextcloud 11** will be 
   fixed in Nextcloud 11.0.1
   (see [Nextcloud Issue #2552](https://github.com/nextcloud/server/issues/2552))
-- added a warning that the ownCloud notes app doesn't support sub-folders in 
+- added a warning that the ownCloud notes app doesn't support subfolders in
   the note folder settings
 - there now is a repository for **Fedora 25**
     - please visit the [QOwnNotes installation page](https://www.qownnotes.org/installation#Fedora)
@@ -4867,7 +4879,7 @@
 	- please visit the 
 	  [QOwnNotes installation](https://www.qownnotes.org/installation#Ubuntu) 
 	  page for more information
-- first pre-alpha release of the **note sub-folder tree integration**
+- first pre-alpha release of the **note subfolder tree integration**
   (for [#183](https://github.com/pbek/QOwnNotes/issues/183))
 	- per default notes will be shown as a list in a new note tree widget
 	- all functionality of the old note list was integrated into the new note 
