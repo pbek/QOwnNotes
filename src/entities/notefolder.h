@@ -58,6 +58,7 @@ public:
     void setUseGit(bool value);
     QJsonObject jsonObject();
     static QString noteFoldersWebServiceJsonText();
+    static bool isPathNoteFolder(const QString &path);
 
 private:
     int id;

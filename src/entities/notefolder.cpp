@@ -529,6 +529,22 @@ QString NoteFolder::noteFoldersWebServiceJsonText() {
     return doc.toJson(QJsonDocument::Compact);
 }
 
+/**
+ * Checks if path is the localPath of a note folder
+ *
+ * @param path
+ * @return
+ */
+bool NoteFolder::isPathNoteFolder(const QString &path) {
+    Q_FOREACH(NoteFolder noteFolder, fetchAll()) {
+        if (path == noteFolder.getLocalPath()) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
 QDebug operator<<(QDebug dbg, const NoteFolder &noteFolder) {
     dbg.nospace() << "NoteFolder: <id>" << noteFolder.id << " <name>" <<
             noteFolder.name << " <localPath>" << noteFolder.localPath <<

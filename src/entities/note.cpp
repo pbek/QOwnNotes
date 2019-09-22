@@ -349,16 +349,17 @@ bool Note::copyToPath(const QString& destinationPath, QString noteFolderPath) {
                     noteFolderPath = destinationPath;
                 }
 
-                QDir mediaDir(noteFolderPath + QDir::separator() + "media");
+                if (NoteFolder::isPathNoteFolder(noteFolderPath)) {
+                    QDir mediaDir(noteFolderPath + QDir::separator() + "media");
 
-                // created the media folder if it doesn't exist
-                if (!mediaDir.exists()) {
-                    mediaDir.mkpath(mediaDir.path());
-                }
+                    // created the media folder if it doesn't exist
+                    if (!mediaDir.exists()) {
+                        mediaDir.mkpath(mediaDir.path());
+                    }
 
-                if (mediaDir.exists()) {
-                    // copy all images to the media folder inside destinationPath
-                    Q_FOREACH(QString fileName, mediaFileList) {
+                    if (mediaDir.exists()) {
+                        // copy all images to the media folder inside destinationPath
+                        Q_FOREACH(QString fileName, mediaFileList) {
                             QFile mediaFile(NoteFolder::currentMediaPath() +
                                             QDir::separator() + fileName);
 
@@ -367,6 +368,7 @@ bool Note::copyToPath(const QString& destinationPath, QString noteFolderPath) {
                                                QDir::separator() + fileName);
                             }
                         }
+                    }
                 }
             }
         }

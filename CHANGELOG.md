@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 19.9.16
+- media files are now only copied if the destination path is a note folder when
+  copying or moving notes to an other note folder (for [#1294](https://github.com/pbek/QOwnNotes/issues/1294))
+
 ## 19.9.15
 - the **attachment dialog** was **improved**
     - you are now able to **download files** directly in the dialog
