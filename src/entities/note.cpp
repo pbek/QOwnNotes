@@ -318,7 +318,7 @@ bool Note::remove(bool withFile) {
  * @param destinationPath
  * @return bool
  */
-bool Note::copyToPath(const QString& destinationPath) {
+bool Note::copyToPath(const QString& destinationPath, QString noteFolderPath) {
     QDir d;
     if (this->fileExists() && (d.exists(destinationPath))) {
         QFile file(fullNoteFilePath());
@@ -345,7 +345,11 @@ bool Note::copyToPath(const QString& destinationPath) {
             QStringList mediaFileList = getMediaFileList();
 
             if (mediaFileList.count() > 0) {
-                QDir mediaDir(destinationPath + QDir::separator() + "media");
+                if (noteFolderPath.isEmpty()) {
+                    noteFolderPath = destinationPath;
+                }
+
+                QDir mediaDir(noteFolderPath + QDir::separator() + "media");
 
                 // created the media folder if it doesn't exist
                 if (!mediaDir.exists()) {
@@ -379,8 +383,8 @@ bool Note::copyToPath(const QString& destinationPath) {
  * @param destinationPath
  * @return bool
  */
-bool Note::moveToPath(QString destinationPath) {
-    bool result = copyToPath(std::move(destinationPath));
+bool Note::moveToPath(QString destinationPath, QString noteFolderPath) {
+    bool result = copyToPath(std::move(destinationPath), noteFolderPath);
 
     if (result) {
         return remove(true);

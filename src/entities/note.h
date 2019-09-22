@@ -123,9 +123,9 @@ public:
 
     bool isFetched();
 
-    bool copyToPath(const QString& destinationPath);
+    bool copyToPath(const QString& destinationPath, QString noteFolderPath = "");
 
-    bool moveToPath(QString destinationPath);
+    bool moveToPath(QString destinationPath, QString noteFolderPath = "");
 
     static QString generateTextForLink(QString text);
 

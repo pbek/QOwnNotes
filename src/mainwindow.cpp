@@ -4229,7 +4229,7 @@ void MainWindow::selectAllNotes() {
  * @brief Moves selected notes after a confirmation
  * @param destinationFolder
  */
-void MainWindow::moveSelectedNotesToFolder(const QString& destinationFolder) {
+void MainWindow::moveSelectedNotesToFolder(const QString& destinationFolder, QString noteFolderPath) {
     // store updated notes to disk
     storeUpdatedNotesToDisk();
 
@@ -4325,7 +4325,7 @@ void MainWindow::unsetCurrentNote() {
  * @brief Copies selected notes after a confirmation
  * @param destinationFolder
  */
-void MainWindow::copySelectedNotesToFolder(const QString& destinationFolder) {
+void MainWindow::copySelectedNotesToFolder(const QString& destinationFolder, QString noteFolderPath) {
     int selectedItemsCount = ui->noteTreeWidget->selectedItems().size();
 
     if (Utils::Gui::question(
@@ -4344,7 +4344,7 @@ void MainWindow::copySelectedNotesToFolder(const QString& destinationFolder) {
                 }
 
                 // copy note
-                bool result = note.copyToPath(destinationFolder);
+                bool result = note.copyToPath(destinationFolder, noteFolderPath);
                 if (result) {
                     copyCount++;
                     qDebug() << "Note was copied:" << note.getName();

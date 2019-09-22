@@ -573,9 +573,9 @@ private slots:
 
     void disableFullScreenMode();
 
-    void moveSelectedNotesToFolder(const QString& destinationFolder);
+    void moveSelectedNotesToFolder(const QString& destinationFolder, QString noteFolderPath = "");
 
-    void copySelectedNotesToFolder(const QString& destinationFolder);
+    void copySelectedNotesToFolder(const QString& destinationFolder, QString noteFolderPath = "");
 
 private:
     Ui::MainWindow *ui;
