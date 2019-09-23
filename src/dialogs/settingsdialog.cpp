@@ -309,8 +309,12 @@ void SettingsDialog::replaceOwnCloudText() const {
             ui->check2Label->text()));
     ui->ownCloudServerAppPageButton->setText(Utils::Misc::replaceOwnCloudText(
             ui->ownCloudServerAppPageButton->text(), true));
+    ui->ownCloudServerAppPageButton->setToolTip(Utils::Misc::replaceOwnCloudText(
+            ui->ownCloudServerAppPageButton->toolTip()));
     ui->connectButton->setText(Utils::Misc::replaceOwnCloudText(
             ui->connectButton->text(), true));
+    ui->connectButton->setToolTip(Utils::Misc::replaceOwnCloudText(
+            ui->connectButton->toolTip()));
     ui->installInfoTextLabel1->setText(Utils::Misc::replaceOwnCloudText(
             ui->installInfoTextLabel1->text()));
     ui->installInfoTextLabel2->setText(Utils::Misc::replaceOwnCloudText(

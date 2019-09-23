@@ -9,6 +9,7 @@
         - also the tooltip of the note in the note list will be updated
 - media files are now only copied if the destination path is a note folder when
   copying or moving notes to an other note folder (for [#1294](https://github.com/pbek/QOwnNotes/issues/1294))
+- fixed the Nextcloud tooltip texts in the buttons on the *Cloud connection settings page*
 
 ## 19.9.15
 - the **attachment dialog** was **improved**
