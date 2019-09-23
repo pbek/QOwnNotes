@@ -1,6 +1,12 @@
 # QOwnNotes Changelog
 
 ## 19.9.16
+- some **improvements** with **encrypted notes** were made
+    - if an encrypted note will be edited now the note file will **not be stored immediately**
+      after the password is entered
+    - the note will now **jump to the top** in the **note list** (if the note list is sorted
+      that way) if the text of an encrypted note was changed
+        - also the tooltip of the note in the note list will be updated
 - media files are now only copied if the destination path is a note folder when
   copying or moving notes to an other note folder (for [#1294](https://github.com/pbek/QOwnNotes/issues/1294))
 

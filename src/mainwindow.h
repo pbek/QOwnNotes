@@ -982,4 +982,6 @@ private:
     void doSearchInNote(QString searchText);
 
     void insertNoteText(const QString &text);
+
+    void handleNoteTextChanged();
 };

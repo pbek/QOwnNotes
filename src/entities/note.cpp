@@ -1021,7 +1021,15 @@ bool Note::storeNewText(QString text) {
     return this->store();
 }
 
+bool Note::setDecryptedText(QString text) {
+    this->decryptedNoteText = std::move(text);
+}
+
 bool Note::storeNewDecryptedText(QString text) {
+    if (text == this->decryptedNoteText) {
+        return false;
+    }
+
     this->decryptedNoteText = std::move(text);
     this->hasDirtyData = true;
 

@@ -5009,22 +5009,25 @@ void MainWindow::on_noteTextEdit_textChanged() {
         ScriptingService::instance()->onCurrentNoteChanged(&currentNote);
 
         updateEncryptNoteButtons();
-
-        QSettings settings;
-        if (settings.value("notesPanelSort", SORT_BY_LAST_CHANGE).toInt() == SORT_BY_LAST_CHANGE) {
-            makeCurrentNoteFirstInNoteList();
-        } else if (Utils::Misc::isNoteListPreview()) {
-            updateNoteTreeWidgetItem(currentNote);
-        }
-
-        const QSignalBlocker blocker(ui->noteTreeWidget);
-        Q_UNUSED(blocker)
-
-        // update the note list tooltip of the note
-        setTreeWidgetItemToolTipForNote(ui->noteTreeWidget->currentItem(),
-                                        &currentNote,
-                                        &currentNoteLastEdited);
+        handleNoteTextChanged();
     }
+}
+
+void MainWindow::handleNoteTextChanged() {
+    QSettings settings;
+    if (settings.value("notesPanelSort", SORT_BY_LAST_CHANGE).toInt() == SORT_BY_LAST_CHANGE) {
+        makeCurrentNoteFirstInNoteList();
+    } else if (Utils::Misc::isNoteListPreview()) {
+        updateNoteTreeWidgetItem(currentNote);
+    }
+
+    const QSignalBlocker blocker(ui->noteTreeWidget);
+    Q_UNUSED(blocker)
+
+    // update the note list tooltip of the note
+    setTreeWidgetItemToolTipForNote(ui->noteTreeWidget->currentItem(),
+                                    &currentNote,
+                                    &currentNoteLastEdited);
 }
 
 void MainWindow::on_action_Quit_triggered() {
@@ -6426,7 +6429,11 @@ void MainWindow::on_actionEdit_encrypted_note_triggered() {
         Q_UNUSED(blocker)
 
         ui->noteTextEdit->hide();
-        ui->encryptedNoteTextEdit->setText(currentNote.getDecryptedNoteText());
+        const auto text = currentNote.getDecryptedNoteText();
+        currentNote.setDecryptedText(text);
+        // for some reason this still triggers a "textChanged", so we will do a "currentNote.setDecryptedText"
+        // and check if the text realy changed in "currentNote.storeNewDecryptedText"
+        ui->encryptedNoteTextEdit->setText(text);
         ui->encryptedNoteTextEdit->show();
         ui->encryptedNoteTextEdit->setFocus();
         _noteViewNeedsUpdate = true;
@@ -6438,7 +6445,9 @@ void MainWindow::on_actionEdit_encrypted_note_triggered() {
  * Puts the encrypted text back to the note text edit
  */
 void MainWindow::on_encryptedNoteTextEdit_textChanged() {
-    currentNote.storeNewDecryptedText(ui->encryptedNoteTextEdit->toPlainText());
+    if (currentNote.storeNewDecryptedText(ui->encryptedNoteTextEdit->toPlainText())) {
+        handleNoteTextChanged();
+    }
 }
 
 /**

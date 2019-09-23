@@ -153,6 +153,8 @@ public:
 
     bool storeNewDecryptedText(QString text);
 
+    bool setDecryptedText(QString text);
+
     QDateTime getFileLastModified();
 
     QDateTime getFileCreated();
