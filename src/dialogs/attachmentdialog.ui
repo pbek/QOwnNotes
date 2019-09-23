@@ -114,7 +114,7 @@
       </sizepolicy>
      </property>
      <property name="toolTip">
-      <string>Download url</string>
+      <string comment="The URL will be downloaded">Download URL</string>
      </property>
      <property name="icon">
       <iconset theme="edit-download" resource="../breeze-qownnotes.qrc">

@@ -57,8 +57,13 @@
     </message>
     <message>
         <location filename="../dialogs/attachmentdialog.ui" line="117"/>
+        <source>Download URL</source>
+        <comment>The URL will be downloaded</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Download url</source>
-        <translation>Descargar URL</translation>
+        <translation type="vanished">Descargar URL</translation>
     </message>
     <message>
         <location filename="../dialogs/attachmentdialog.cpp" line="43"/>
