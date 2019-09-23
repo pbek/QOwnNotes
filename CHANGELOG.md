@@ -12,6 +12,8 @@
 - media files are now only copied if the destination path is a note folder when
   copying or moving notes to an other note folder (for [#1294](https://github.com/pbek/QOwnNotes/issues/1294))
 - fixed the Nextcloud tooltip texts in the buttons on the *Nextcloud / ownCloud settings page*
+- added more Greek, Dutch, Hungarian, Catalan, Indonesian, Russian, German translation
+  (thank you athrouss, Fabijenna, MGuerra, zmni, mikhail-khokhlov, rakekniven)
 
 ## 19.9.15
 - the **attachment dialog** was **improved**
