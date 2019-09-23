@@ -66,6 +66,7 @@ INCLUDEPATH += $$PWD/libraries
 
 SOURCES += main.cpp\
     dialogs/attachmentdialog.cpp \
+    entities/cloudconnection.cpp \
         mainwindow.cpp \
     libraries/diff_match_patch/diff_match_patch.cpp \
     libraries/hoedown/html.c \
@@ -153,6 +154,7 @@ SOURCES += main.cpp\
 HEADERS  += mainwindow.h \
     build_number.h \
     dialogs/attachmentdialog.h \
+    entities/cloudconnection.h \
     version.h \
     libraries/diff_match_patch/diff_match_patch.h \
     libraries/hoedown/html.h \

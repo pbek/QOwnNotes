@@ -164,6 +164,8 @@ set(SOURCE_FILES
     entities/notehistory.h
     entities/notefolder.cpp
     entities/notefolder.h
+    entities/cloudconnection.cpp
+    entities/cloudconnection.h
     entities/tag.cpp
     entities/tag.h
     entities/script.cpp

@@ -9,6 +9,7 @@
 #include <QStatusBar>
 #include <QSignalMapper>
 #include <QSplitter>
+#include <entities/cloudconnection.h>
 #include <entities/notefolder.h>
 #include <entities/script.h>
 #include <services/owncloudservice.h>
@@ -262,6 +263,12 @@ private slots:
 
     void on_webSocketTokenButton_clicked();
 
+    void on_cloudConnectionComboBox_currentIndexChanged(int index);
+
+    void on_cloudConnectionAddButton_clicked();
+
+    void on_cloudConnectionRemoveButton_clicked();
+
 private:
 
     Ui::SettingsDialog *ui;
@@ -283,6 +290,7 @@ private:
     QButtonGroup *_noteNotificationButtonGroup;
     QCheckBox *_noteNotificationNoneCheckBox;
     QString _newScriptName;
+    CloudConnection _selectedCloudConnection;
 
     void storeSettings();
 
@@ -365,6 +373,10 @@ private:
     QKeySequenceWidget *findKeySequenceWidget(const QString& objectName);
 
     void storeOwncloudDebugData() const;
+
+    void initCloudConnectionComboBox(int selectedId = -1);
+
+    void storeSelectedCloudConnection();
 };
 
 #endif // SETTINGSDIALOG_H

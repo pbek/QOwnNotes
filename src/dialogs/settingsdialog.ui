@@ -397,7 +397,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>7</number>
+            <number>1</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -970,45 +970,60 @@
                 </item>
                 <item row="1" column="0">
                  <layout class="QFormLayout" name="formLayout">
-                  <item row="1" column="0">
-                   <widget class="QLabel" name="ownCloudServerUrlLabel">
-                    <property name="text">
-                     <string>ownCloud server url:</string>
-                    </property>
-                    <property name="alignment">
-                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                    </property>
+                  <item row="1" column="0" colspan="2">
+                   <widget class="QFrame" name="cloudConnectionSelectionFrame">
+                    <layout class="QHBoxLayout" name="horizontalLayout_13">
+                     <property name="leftMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>0</number>
+                     </property>
+                     <item>
+                      <widget class="QComboBox" name="cloudConnectionComboBox">
+                       <property name="toolTip">
+                        <string>Select a connection to edit</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QToolButton" name="cloudConnectionAddButton">
+                       <property name="toolTip">
+                        <string>Add connection</string>
+                       </property>
+                       <property name="text">
+                        <string>Add connection</string>
+                       </property>
+                       <property name="icon">
+                        <iconset theme="list-add" resource="../breeze-qownnotes.qrc">
+                         <normaloff>:/icons/breeze-qownnotes/16x16/list-add.svg</normaloff>:/icons/breeze-qownnotes/16x16/list-add.svg</iconset>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QToolButton" name="cloudConnectionRemoveButton">
+                       <property name="toolTip">
+                        <string>Remove connection</string>
+                       </property>
+                       <property name="text">
+                        <string>Remove connection</string>
+                       </property>
+                       <property name="icon">
+                        <iconset theme="list-remove" resource="../breeze-qownnotes.qrc">
+                         <normaloff>:/icons/breeze-qownnotes/16x16/list-remove.svg</normaloff>:/icons/breeze-qownnotes/16x16/list-remove.svg</iconset>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
                    </widget>
                   </item>
-                  <item row="1" column="1">
-                   <widget class="QLineEdit" name="serverUrlEdit">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="minimumSize">
-                     <size>
-                      <width>300</width>
-                      <height>0</height>
-                     </size>
-                    </property>
-                    <property name="toolTip">
-                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=&quot; font-style:italic;&quot;&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                    </property>
-                    <property name="text">
-                     <string/>
-                    </property>
-                    <property name="placeholderText">
-                     <string notr="true">https://your.owncloud.server</string>
-                    </property>
-                    <property name="clearButtonEnabled">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="2" column="0">
+                  <item row="5" column="0">
                    <widget class="QLabel" name="label_3">
                     <property name="text">
                      <string>Username:</string>
@@ -1018,7 +1033,7 @@
                     </property>
                    </widget>
                   </item>
-                  <item row="2" column="1">
+                  <item row="5" column="1">
                    <widget class="QLineEdit" name="userNameEdit">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -1043,7 +1058,7 @@
                     </property>
                    </widget>
                   </item>
-                  <item row="3" column="0">
+                  <item row="6" column="0">
                    <widget class="QLabel" name="label_5">
                     <property name="text">
                      <string>Password:</string>
@@ -1053,7 +1068,7 @@
                     </property>
                    </widget>
                   </item>
-                  <item row="3" column="1">
+                  <item row="6" column="1">
                    <widget class="QLineEdit" name="passwordEdit">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -1081,7 +1096,7 @@
                     </property>
                    </widget>
                   </item>
-                  <item row="4" column="1">
+                  <item row="7" column="1">
                    <widget class="QPushButton" name="connectButton">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -1110,7 +1125,7 @@
                     </property>
                    </widget>
                   </item>
-                  <item row="5" column="1">
+                  <item row="8" column="1">
                    <spacer name="verticalSpacer_2">
                     <property name="orientation">
                      <enum>Qt::Vertical</enum>
@@ -1123,7 +1138,7 @@
                     </property>
                    </spacer>
                   </item>
-                  <item row="6" column="1">
+                  <item row="9" column="1">
                    <widget class="QLabel" name="okLabelStatus">
                     <property name="styleSheet">
                      <string notr="true">font-weight: bold;</string>
@@ -1133,7 +1148,7 @@
                     </property>
                    </widget>
                   </item>
-                  <item row="7" column="0">
+                  <item row="10" column="0">
                    <widget class="QLabel" name="ok1Label">
                     <property name="text">
                      <string>unknown</string>
@@ -1143,14 +1158,14 @@
                     </property>
                    </widget>
                   </item>
-                  <item row="7" column="1">
+                  <item row="10" column="1">
                    <widget class="QLabel" name="check1Label">
                     <property name="text">
                      <string>connection to web server</string>
                     </property>
                    </widget>
                   </item>
-                  <item row="8" column="0">
+                  <item row="11" column="0">
                    <widget class="QLabel" name="ok2Label">
                     <property name="text">
                      <string>unknown</string>
@@ -1160,14 +1175,14 @@
                     </property>
                    </widget>
                   </item>
-                  <item row="8" column="1">
+                  <item row="11" column="1">
                    <widget class="QLabel" name="check2Label">
                     <property name="text">
                      <string>ownCloud server detected</string>
                     </property>
                    </widget>
                   </item>
-                  <item row="9" column="0">
+                  <item row="12" column="0">
                    <widget class="QLabel" name="ok3Label">
                     <property name="text">
                      <string>unknown</string>
@@ -1177,14 +1192,14 @@
                     </property>
                    </widget>
                   </item>
-                  <item row="9" column="1">
+                  <item row="12" column="1">
                    <widget class="QLabel" name="check3Label">
                     <property name="text">
                      <string>username and password correct</string>
                     </property>
                    </widget>
                   </item>
-                  <item row="10" column="0">
+                  <item row="13" column="0">
                    <widget class="QLabel" name="ok4Label">
                     <property name="text">
                      <string>unknown</string>
@@ -1194,14 +1209,14 @@
                     </property>
                    </widget>
                   </item>
-                  <item row="10" column="1">
+                  <item row="13" column="1">
                    <widget class="QLabel" name="check4Label">
                     <property name="text">
                      <string>connection to QOwnNotesAPI</string>
                     </property>
                    </widget>
                   </item>
-                  <item row="11" column="0">
+                  <item row="14" column="0">
                    <widget class="QLabel" name="ok6Label">
                     <property name="text">
                      <string>unknown</string>
@@ -1211,14 +1226,14 @@
                     </property>
                    </widget>
                   </item>
-                  <item row="11" column="1">
+                  <item row="14" column="1">
                    <widget class="QLabel" name="check6Label">
                     <property name="text">
                      <string>versions app enabled on server</string>
                     </property>
                    </widget>
                   </item>
-                  <item row="12" column="0">
+                  <item row="15" column="0">
                    <widget class="QLabel" name="ok7Label">
                     <property name="text">
                      <string>unknown</string>
@@ -1228,14 +1243,14 @@
                     </property>
                    </widget>
                   </item>
-                  <item row="12" column="1">
+                  <item row="15" column="1">
                    <widget class="QLabel" name="check7Label">
                     <property name="text">
                      <string>trash app enabled on server</string>
                     </property>
                    </widget>
                   </item>
-                  <item row="13" column="0">
+                  <item row="16" column="0">
                    <widget class="QLabel" name="ok8Label">
                     <property name="text">
                      <string>unknown</string>
@@ -1245,10 +1260,77 @@
                     </property>
                    </widget>
                   </item>
-                  <item row="13" column="1">
+                  <item row="16" column="1">
                    <widget class="QLabel" name="check8Label">
                     <property name="text">
                      <string>notes path found on server</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="0">
+                   <widget class="QLabel" name="ownCloudServerUrlLabel">
+                    <property name="text">
+                     <string>ownCloud server url:</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="1">
+                   <widget class="QLineEdit" name="serverUrlEdit">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>300</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="toolTip">
+                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=&quot; font-style:italic;&quot;&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="placeholderText">
+                     <string notr="true">https://your.owncloud.server</string>
+                    </property>
+                    <property name="clearButtonEnabled">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="0">
+                   <widget class="QLabel" name="ownCloudServerUrlLabel_2">
+                    <property name="text">
+                     <string>Connection name:</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="1">
+                   <widget class="QLineEdit" name="cloudServerConnectionNameLineEdit">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>300</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="clearButtonEnabled">
+                     <bool>true</bool>
                     </property>
                    </widget>
                   </item>
@@ -5611,9 +5693,189 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
    <header>widgets/notefolderlistwidget.h</header>
   </customwidget>
  </customwidgets>
+ <tabstops>
+  <tabstop>searchLineEdit</tabstop>
+  <tabstop>settingsTreeWidget</tabstop>
+  <tabstop>noteFolderListWidget</tabstop>
+  <tabstop>noteFolderAddButton</tabstop>
+  <tabstop>noteFolderRemoveButton</tabstop>
+  <tabstop>noteFolderLocalPathButton</tabstop>
+  <tabstop>noteFolderLocalPathLineEdit</tabstop>
+  <tabstop>noteFolderRemotePathLineEdit</tabstop>
+  <tabstop>noteFolderRemotePathButton</tabstop>
+  <tabstop>useOwnCloudPathButton</tabstop>
+  <tabstop>noteFolderRemotePathTreeWidget</tabstop>
+  <tabstop>noteFolderNameLineEdit</tabstop>
+  <tabstop>noteFolderActiveCheckBox</tabstop>
+  <tabstop>noteFolderOwnCloudServerComboBox</tabstop>
+  <tabstop>noteFolderShowSubfoldersCheckBox</tabstop>
+  <tabstop>noteFolderGitCommitCheckBox</tabstop>
+  <tabstop>ownCloudSupportCheckBox</tabstop>
+  <tabstop>cloudConnectionComboBox</tabstop>
+  <tabstop>cloudConnectionAddButton</tabstop>
+  <tabstop>cloudConnectionRemoveButton</tabstop>
+  <tabstop>cloudServerConnectionNameLineEdit</tabstop>
+  <tabstop>serverUrlEdit</tabstop>
+  <tabstop>userNameEdit</tabstop>
+  <tabstop>passwordEdit</tabstop>
+  <tabstop>connectButton</tabstop>
+  <tabstop>ownCloudServerAppPageButton</tabstop>
+  <tabstop>noProxyRadioButton</tabstop>
+  <tabstop>systemProxyRadioButton</tabstop>
+  <tabstop>manualProxyRadioButton</tabstop>
+  <tabstop>typeComboBox</tabstop>
+  <tabstop>hostLineEdit</tabstop>
+  <tabstop>portSpinBox</tabstop>
+  <tabstop>authRequiredcheckBox</tabstop>
+  <tabstop>userLineEdit</tabstop>
+  <tabstop>passwordLineEdit</tabstop>
+  <tabstop>ignoreSSLErrorsCheckBox</tabstop>
+  <tabstop>appMetricsCheckBox</tabstop>
+  <tabstop>appHeartbeatCheckBox</tabstop>
+  <tabstop>calDavCalendarRadioButton</tabstop>
+  <tabstop>defaultOwnCloudCalendarRadioButton</tabstop>
+  <tabstop>calendarPlusRadioButton</tabstop>
+  <tabstop>legacyOwnCloudCalendarRadioButton</tabstop>
+  <tabstop>calDavServerUrlEdit</tabstop>
+  <tabstop>calDavUsernameEdit</tabstop>
+  <tabstop>calDavPasswordEdit</tabstop>
+  <tabstop>todoCalendarListWidget</tabstop>
+  <tabstop>emptyCalendarCachePushButton</tabstop>
+  <tabstop>reloadCalendarListButton</tabstop>
+  <tabstop>ignoreNonTodoCalendarsCheckBox</tabstop>
+  <tabstop>closeTodoListAfterSaveCheckBox</tabstop>
+  <tabstop>languageListWidget</tabstop>
+  <tabstop>darkModeTrayIconCheckBox</tabstop>
+  <tabstop>darkModeCheckBox</tabstop>
+  <tabstop>darkModeColorsCheckBox</tabstop>
+  <tabstop>showSystemTrayCheckBox</tabstop>
+  <tabstop>startHiddenCheckBox</tabstop>
+  <tabstop>interfaceStyleComboBox</tabstop>
+  <tabstop>internalIconThemeCheckBox</tabstop>
+  <tabstop>systemIconThemeCheckBox</tabstop>
+  <tabstop>darkModeIconThemeCheckBox</tabstop>
+  <tabstop>toolbarIconSizeResetButton</tabstop>
+  <tabstop>itemHeightResetButton</tabstop>
+  <tabstop>toolbarIconSizeSpinBox</tabstop>
+  <tabstop>itemHeightSpinBox</tabstop>
+  <tabstop>overrideInterfaceFontSizeGroupBox</tabstop>
+  <tabstop>interfaceFontSizeSpinBox</tabstop>
+  <tabstop>shortcutSearchLineEdit</tabstop>
+  <tabstop>shortcutTreeWidget</tabstop>
+  <tabstop>scriptListWidget</tabstop>
+  <tabstop>scriptAddButton</tabstop>
+  <tabstop>scriptRemoveButton</tabstop>
+  <tabstop>scrollArea</tabstop>
+  <tabstop>scriptNameLineEdit</tabstop>
+  <tabstop>scriptValidationButton</tabstop>
+  <tabstop>scriptReloadEngineButton</tabstop>
+  <tabstop>scriptPathButton</tabstop>
+  <tabstop>scriptPathLineEdit</tabstop>
+  <tabstop>maximumImageHeightSpinBox</tabstop>
+  <tabstop>maximumImageWidthSpinBox</tabstop>
+  <tabstop>ignoreAllExternalNoteFolderChangesCheckBox</tabstop>
+  <tabstop>imageScaleDownCheckBox</tabstop>
+  <tabstop>ignoreAllExternalModificationsCheckBox</tabstop>
+  <tabstop>allowDifferentNoteFileNameCheckBox</tabstop>
+  <tabstop>acceptAllExternalModificationsCheckBox</tabstop>
+  <tabstop>noteSaveIntervalTime</tabstop>
+  <tabstop>restoreCursorPositionCheckBox</tabstop>
+  <tabstop>automaticNoteFolderDatabaseClosingCheckBox</tabstop>
+  <tabstop>newNoteAskHeadlineCheckBox</tabstop>
+  <tabstop>useUNIXNewlineCheckBox</tabstop>
+  <tabstop>notifyAllExternalModificationsCheckBox</tabstop>
+  <tabstop>legacyLinkingCheckBox</tabstop>
+  <tabstop>allowOnlyOneAppInstanceCheckBox</tabstop>
+  <tabstop>disableAutomaticUpdateDialogCheckBox</tabstop>
+  <tabstop>searchEngineSelectionComboBox</tabstop>
+  <tabstop>resetMessageBoxesButton</tabstop>
+  <tabstop>addCustomNoteFileExtensionButton</tabstop>
+  <tabstop>removeCustomNoteFileExtensionButton</tabstop>
+  <tabstop>defaultNoteFileExtensionListWidget</tabstop>
+  <tabstop>externalEditorPathLineEdit</tabstop>
+  <tabstop>setExternalEditorPathToolButton</tabstop>
+  <tabstop>clearAppDataAndExitButton</tabstop>
+  <tabstop>importSettingsButton</tabstop>
+  <tabstop>exportSettingsButton</tabstop>
+  <tabstop>reinitializeDatabaseButton</tabstop>
+  <tabstop>saveDebugInfoButton</tabstop>
+  <tabstop>gitHubLineBreaksCheckBox</tabstop>
+  <tabstop>debugInfoTextEdit</tabstop>
+  <tabstop>issueAssistantPushButton</tabstop>
+  <tabstop>noteTextEditFontLabel</tabstop>
+  <tabstop>noteTextEditButton</tabstop>
+  <tabstop>noteTextEditResetButton</tabstop>
+  <tabstop>noteTextEditCodeFontLabel</tabstop>
+  <tabstop>noteTextEditCodeButton</tabstop>
+  <tabstop>noteTextEditCodeResetButton</tabstop>
+  <tabstop>portableModeInfoTextBrowser</tabstop>
+  <tabstop>noteTextViewCodeButton</tabstop>
+  <tabstop>noteTextViewResetButton</tabstop>
+  <tabstop>noteTextViewCodeResetButton</tabstop>
+  <tabstop>noteTextViewButton</tabstop>
+  <tabstop>noteTextViewCodeFontLabel</tabstop>
+  <tabstop>noteTextViewFontLabel</tabstop>
+  <tabstop>noteTextViewRTLCheckBox</tabstop>
+  <tabstop>noteTextViewIgnoreCodeFontSizeCheckBox</tabstop>
+  <tabstop>noteTextViewUnderlineCheckBox</tabstop>
+  <tabstop>applyToolbarButton</tabstop>
+  <tabstop>resetToolbarPushButton</tabstop>
+  <tabstop>fileLoggingCheckBox</tabstop>
+  <tabstop>clearLogFileButton</tabstop>
+  <tabstop>oldVersionNumberCheckBox</tabstop>
+  <tabstop>timeFormatLineEdit</tabstop>
+  <tabstop>markdownHighlightingCheckBox</tabstop>
+  <tabstop>fullyHighlightedBlockquotesCheckBox</tabstop>
+  <tabstop>vimModeCheckBox</tabstop>
+  <tabstop>autoBracketClosingCheckBox</tabstop>
+  <tabstop>cursorWidthResetButton</tabstop>
+  <tabstop>cursorWidthSpinBox</tabstop>
+  <tabstop>autoBracketRemovalCheckBox</tabstop>
+  <tabstop>editorWidthInDFMOnlyCheckBox</tabstop>
+  <tabstop>highlightCurrentLineCheckBox</tabstop>
+  <tabstop>disableCursorBlinkingCheckBox</tabstop>
+  <tabstop>gitCommitIntervalTime</tabstop>
+  <tabstop>gitLogCommandLineEdit</tabstop>
+  <tabstop>gitPathLineEdit</tabstop>
+  <tabstop>setGitPathToolButton</tabstop>
+  <tabstop>noteEditCentralWidgetCheckBox</tabstop>
+  <tabstop>disableSavedSearchesAutoCompletionCheckBox</tabstop>
+  <tabstop>tagsPanelSortAlphabeticalRadioButton</tabstop>
+  <tabstop>tagsPanelSortByLastChangeRadioButton</tabstop>
+  <tabstop>tagsPanelOrderAscendingRadioButton</tabstop>
+  <tabstop>tagsPanelOrderDescendingRadioButton</tabstop>
+  <tabstop>tagsPanelHideSearchCheckBox</tabstop>
+  <tabstop>noteSubfoldersPanelShowFullPathCheckBox</tabstop>
+  <tabstop>noteSubfoldersPanelSortAlphabeticalRadioButton</tabstop>
+  <tabstop>noteSubfoldersPanelSortByLastChangeRadioButton</tabstop>
+  <tabstop>noteSubfoldersPanelShowRootFolderNameCheckBox</tabstop>
+  <tabstop>noteSubfoldersPanelOrderAscendingRadioButton</tabstop>
+  <tabstop>noteSubfoldersPanelOrderDescendingRadioButton</tabstop>
+  <tabstop>noteSubfoldersPanelHideSearchCheckBox</tabstop>
+  <tabstop>noteSubfoldersPanelDisplayAsFullTreeCheckBox</tabstop>
+  <tabstop>ignoreNoteSubFoldersLineEdit</tabstop>
+  <tabstop>ignoreNoteSubFoldersResetButton</tabstop>
+  <tabstop>notesPanelOrderAscendingRadioButton</tabstop>
+  <tabstop>notesPanelOrderDescendingRadioButton</tabstop>
+  <tabstop>noteSubfoldersPanelShowNotesRecursivelyCheckBox</tabstop>
+  <tabstop>notesPanelSortAlphabeticalRadioButton</tabstop>
+  <tabstop>notesPanelSortByLastChangeRadioButton</tabstop>
+  <tabstop>taggingShowNotesRecursivelyCheckBox</tabstop>
+  <tabstop>noteListPreviewCheckBox</tabstop>
+  <tabstop>navigationPanelHideSearchCheckBox</tabstop>
+  <tabstop>localTrashClearTimeSpinBox</tabstop>
+  <tabstop>localTrashClearCheckBox</tabstop>
+  <tabstop>localTrashEnabledCheckBox</tabstop>
+  <tabstop>bookmarksTagLineEdit</tabstop>
+  <tabstop>bookmarksNoteNameLineEdit</tabstop>
+  <tabstop>webSocketServerServicePortSpinBox</tabstop>
+  <tabstop>webSocketServerServicePortResetButton</tabstop>
+  <tabstop>webSocketTokenButton</tabstop>
+  <tabstop>enableSocketServerCheckBox</tabstop>
+ </tabstops>
  <resources>
-  <include location="../breeze-dark-qownnotes.qrc"/>
   <include location="../breeze-qownnotes.qrc"/>
+  <include location="../breeze-dark-qownnotes.qrc"/>
  </resources>
  <connections>
   <connection>

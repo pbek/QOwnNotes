@@ -16,7 +16,7 @@ NoteFolder::NoteFolder() {
     id = 0;
     name = "";
     localPath = "";
-    ownCloudServerId = 1;
+    cloudConnectionId = 1;
     remotePath = "";
     priority = 0;
     activeTagId = 0;
@@ -32,8 +32,8 @@ QString NoteFolder::getLocalPath() {
     return this->localPath;
 }
 
-int NoteFolder::getOwnCloudServerId() {
-    return this->ownCloudServerId;
+int NoteFolder::getCloudConnectionId() {
+    return this->cloudConnectionId;
 }
 
 QString NoteFolder::getName() {
@@ -68,8 +68,8 @@ void NoteFolder::setName(QString text) {
     this->name = text;
 }
 
-void NoteFolder::setOwnCloudServerId(int id) {
-    this->ownCloudServerId = id;
+void NoteFolder::setCloudConnectionId(int id) {
+    this->cloudConnectionId = id;
 }
 
 void NoteFolder::setLocalPath(QString text) {
@@ -105,17 +105,17 @@ void NoteFolder::resetActiveNoteSubFolder() {
 }
 
 bool NoteFolder::create(QString name, QString localPath,
-                        int ownCloudServerId, QString remotePath) {
+                        int cloudConnectionId, QString remotePath) {
     QSqlDatabase db = QSqlDatabase::database("disk");
     QSqlQuery query(db);
 
     query.prepare("INSERT INTO noteFolder ( name, local_path, "
-                          "owncloud_server_id, remote_path ) "
-                          "VALUES ( :name, :localPath, ownCloudServerId, "
+                          "cloud_connection_id, remote_path ) "
+                          "VALUES ( :name, :localPath, :cloudConnectionId, "
                           ":remotePath )");
     query.bindValue(":name", name);
     query.bindValue(":localPath", localPath);
-    query.bindValue(":ownCloudServerId", ownCloudServerId);
+    query.bindValue(":cloudConnectionId", cloudConnectionId);
     query.bindValue(":remotePath", remotePath);
     return query.exec();
 }
@@ -187,7 +187,7 @@ NoteFolder NoteFolder::noteFolderFromQuery(const QSqlQuery& query) {
 bool NoteFolder::fillFromQuery(const QSqlQuery& query) {
     this->id = query.value("id").toInt();
     this->name = query.value("name").toString();
-    this->ownCloudServerId = query.value("owncloud_server_id").toInt();
+    this->cloudConnectionId = query.value("cloud_connection_id").toInt();
     this->remotePath = query.value("remote_path").toString();
     this->priority = query.value("priority").toInt();
     this->showSubfolders = query.value("show_subfolders").toBool();
@@ -232,7 +232,7 @@ bool NoteFolder::store() {
     if (this->id > 0) {
         query.prepare(
                 "UPDATE noteFolder SET name = :name, local_path = :localPath, "
-                        "owncloud_server_id = :ownCloudServerId, "
+                        "cloud_connection_id = :cloudConnectionId, "
                         "remote_path = :remotePath, priority = :priority, "
                         "active_tag_id = :activeTagId, show_subfolders = "
                         ":showSubfolders, active_note_sub_folder_data = "
@@ -241,16 +241,16 @@ bool NoteFolder::store() {
         query.bindValue(":id", this->id);
     } else {
         query.prepare(
-                "INSERT INTO noteFolder (name, local_path, owncloud_server_id, "
+                "INSERT INTO noteFolder (name, local_path, cloud_connection_id, "
                         "remote_path, priority, active_tag_id, "
                         "show_subfolders, active_note_sub_folder_data, use_git)"
-                        " VALUES (:name, :localPath, :ownCloudServerId, "
+                        " VALUES (:name, :localPath, :cloudConnectionId, "
                         ":remotePath, :priority, :activeTagId, "
                         ":showSubfolders, :activeNoteSubFolderData, :useGit)");
     }
 
     query.bindValue(":name", this->name);
-    query.bindValue(":ownCloudServerId", this->ownCloudServerId);
+    query.bindValue(":cloudConnectionId", this->cloudConnectionId);
     query.bindValue(":remotePath", this->remotePath);
     query.bindValue(":priority", this->priority);
     query.bindValue(":activeTagId", this->activeTagId);
@@ -463,7 +463,7 @@ bool NoteFolder::migrateToNoteFolders() {
         NoteFolder noteFolder;
         noteFolder.setName(QObject::tr("default"));
         noteFolder.setLocalPath(notesPath);
-        noteFolder.setOwnCloudServerId(1);
+        noteFolder.setCloudConnectionId(1);
         noteFolder.suggestRemotePath();
         noteFolder.setPriority(priority++);
         noteFolder.setShowSubfolders(settings.value(
@@ -487,7 +487,7 @@ bool NoteFolder::migrateToNoteFolders() {
                     NoteFolder noteFolder;
                     noteFolder.setName(recentNoteFolderPath);
                     noteFolder.setLocalPath(recentNoteFolderPath);
-                    noteFolder.setOwnCloudServerId(1);
+                    noteFolder.setCloudConnectionId(1);
                     noteFolder.suggestRemotePath();
                     noteFolder.setPriority(priority++);
                     noteFolder.store();

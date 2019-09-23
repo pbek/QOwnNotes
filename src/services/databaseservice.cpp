@@ -12,6 +12,7 @@
 #include <QSqlError>
 #include <entities/notefolder.h>
 #include <utils/misc.h>
+#include <entities/cloudconnection.h>
 #include <entities/tag.h>
 
 DatabaseService::DatabaseService() = default;
@@ -417,7 +418,6 @@ bool DatabaseService::setupTables() {
                                "name VARCHAR(255),"
                                "local_path VARCHAR(255),"
                                "remote_path VARCHAR(255),"
-                               "owncloud_server_id INTEGER DEFAULT 0,"
                                "priority INTEGER DEFAULT 0 )");
         version = 3;
     }
@@ -678,6 +678,22 @@ bool DatabaseService::setupTables() {
 
         version = 28;
     }
+
+    if (version < 29) {
+        queryDisk.exec("CREATE TABLE IF NOT EXISTS cloudConnection ("
+                               "id INTEGER PRIMARY KEY,"
+                               "name VARCHAR(255),"
+                               "server_url VARCHAR(255),"
+                               "username VARCHAR(255),"
+                               "password VARCHAR(255),"
+                               "priority INTEGER DEFAULT 0 )");
+        queryDisk.exec("ALTER TABLE noteFolder ADD cloud_connection_id INTEGER DEFAULT 1");
+
+        version = 29;
+    }
+
+    // let's check every time if there is at least one cloud connection
+    CloudConnection::migrateToCloudConnections();
 
     if (version != oldVersion) {
         setAppData("database_version", QString::number(version));

@@ -24,6 +24,7 @@
 #include <utils/gui.h>
 #include <entities/notefolder.h>
 #include <QTextBrowser>
+#include <entities/cloudconnection.h>
 #include <entities/script.h>
 #include <services/scriptingservice.h>
 #include <QInputDialog>
@@ -563,6 +564,22 @@ void SettingsDialog::on_connectButton_clicked() {
     startConnectionTest();
 }
 
+void SettingsDialog::storeSelectedCloudConnection() {
+    QString url = ui->serverUrlEdit->text();
+
+    // remove trailing "/" of the server url
+    if (url.endsWith("/")) {
+        url.chop(1);
+        ui->serverUrlEdit->setText(url);
+    }
+
+    _selectedCloudConnection.setName(ui->cloudServerConnectionNameLineEdit->text());
+    _selectedCloudConnection.setServerUrl(url);
+    _selectedCloudConnection.setUsername(ui->userNameEdit->text());
+    _selectedCloudConnection.setPassword(ui->passwordEdit->text());
+    _selectedCloudConnection.store();
+}
+
 void SettingsDialog::storeSettings() {
     QSettings settings;
     QString url = QString(ui->serverUrlEdit->text());
@@ -580,6 +597,8 @@ void SettingsDialog::storeSettings() {
     settings.setValue("ownCloud/password",
                       CryptoService::instance()->encryptToString(
                               ui->passwordEdit->text()));
+    storeSelectedCloudConnection();
+
     settings.setValue("insertTimeFormat", ui->timeFormatLineEdit->text());
     settings.setValue("disableAutomaticUpdateDialog",
                       ui->disableAutomaticUpdateDialogCheckBox->isChecked());
@@ -1200,6 +1219,8 @@ void SettingsDialog::readSettings() {
 
     // load the settings for the interface style combo box
     loadInterfaceStyleComboBox();
+
+    initCloudConnectionComboBox();
 
     // set the cursor width spinbox value
     ui->cursorWidthSpinBox->setValue(
@@ -2232,7 +2253,7 @@ void SettingsDialog::on_noteFolderAddButton_clicked()
     _selectedNoteFolder.setLocalPath(
             Utils::Misc::defaultNotesPath());
     _selectedNoteFolder.setPriority(ui->noteFolderListWidget->count());
-    _selectedNoteFolder.setOwnCloudServerId(1);
+    _selectedNoteFolder.setCloudConnectionId(CloudConnection::currentCloudConnection().getId());
     _selectedNoteFolder.suggestRemotePath();
     _selectedNoteFolder.store();
 
@@ -3769,4 +3790,77 @@ void SettingsDialog::on_webSocketTokenButton_clicked() {
     auto webSocketTokenDialog = new WebSocketTokenDialog();
     webSocketTokenDialog->exec();
     delete(webSocketTokenDialog);
+}
+
+void SettingsDialog::initCloudConnectionComboBox(int selectedId) {
+    const QSignalBlocker blocker(ui->cloudConnectionComboBox);
+    Q_UNUSED(blocker)
+
+    ui->cloudConnectionComboBox->clear();
+    int index = 0;
+    int currentIndex = 0;
+    if (selectedId == -1) {
+        selectedId = NoteFolder::currentNoteFolder().getCloudConnectionId();
+    }
+
+    Q_FOREACH(CloudConnection cloudConnection, CloudConnection::fetchAll()) {
+        ui->cloudConnectionComboBox->addItem(cloudConnection.getName(), cloudConnection.getId());
+        if (cloudConnection.getId() == selectedId) {
+            currentIndex = index;
+        }
+
+        index++;
+    }
+
+    ui->cloudConnectionComboBox->setCurrentIndex(currentIndex);
+    on_cloudConnectionComboBox_currentIndexChanged(currentIndex);
+}
+
+void SettingsDialog::on_cloudConnectionComboBox_currentIndexChanged(int index) {
+    bool updateComboBox = false;
+
+    // store previously selected cloud connection
+    if (_selectedCloudConnection.isFetched()) {
+        // TODO: update combobox if name changed
+        if (_selectedCloudConnection.getName() !=
+            ui->cloudServerConnectionNameLineEdit->text()) {
+            updateComboBox = true;
+        }
+
+        storeSelectedCloudConnection();
+    }
+
+    const int id = ui->cloudConnectionComboBox->currentData().toInt();
+    _selectedCloudConnection = CloudConnection::fetch(id);
+
+    ui->cloudServerConnectionNameLineEdit->setText(_selectedCloudConnection.getName());
+    ui->serverUrlEdit->setText(_selectedCloudConnection.getServerUrl());
+    ui->userNameEdit->setText(_selectedCloudConnection.getUsername());
+    ui->passwordEdit->setText(_selectedCloudConnection.getPassword());
+
+    if (updateComboBox) {
+        initCloudConnectionComboBox(_selectedCloudConnection.getId());
+    }
+}
+
+void SettingsDialog::on_cloudConnectionAddButton_clicked() {
+    // create a new CloudConnection
+    CloudConnection cloudConnection;
+    cloudConnection.setName(QObject::tr("New connection"));
+    cloudConnection.setServerUrl(_selectedCloudConnection.getServerUrl());
+    cloudConnection.setUsername(_selectedCloudConnection.getUsername());
+    cloudConnection.setPassword(_selectedCloudConnection.getPassword());
+    cloudConnection.store();
+
+    initCloudConnectionComboBox(cloudConnection.getId());
+}
+
+void SettingsDialog::on_cloudConnectionRemoveButton_clicked() {
+    // TODO: check connection is in use or reroute note folder to other connection
+    if (CloudConnection::countAll() <= 1) {
+        return;
+    }
+
+    _selectedCloudConnection.remove();
+    initCloudConnectionComboBox();
 }

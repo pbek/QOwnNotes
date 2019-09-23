@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 19.9.16
+- you now can **manage multiple cloud connections** in the *Nextcloud / ownCloud settings*
+    - in a future release these cloud connections can be bound to different note folders  
 - some **improvements** with **encrypted notes** were made
     - if an encrypted note will be edited now the note file will **not be stored immediately**
       after the password is entered
@@ -9,7 +11,7 @@
         - also the tooltip of the note in the note list will be updated
 - media files are now only copied if the destination path is a note folder when
   copying or moving notes to an other note folder (for [#1294](https://github.com/pbek/QOwnNotes/issues/1294))
-- fixed the Nextcloud tooltip texts in the buttons on the *Cloud connection settings page*
+- fixed the Nextcloud tooltip texts in the buttons on the *Nextcloud / ownCloud settings page*
 
 ## 19.9.15
 - the **attachment dialog** was **improved**

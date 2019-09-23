@@ -11,7 +11,7 @@ public:
 
     int getId();
     static bool create(QString name, QString localPath,
-                       int ownCloudServerId, QString remotePath);
+                       int cloudConnectionId, QString remotePath);
     static NoteFolder fetch(int id);
     static NoteFolder noteFolderFromQuery(const QSqlQuery& query);
     bool store();
@@ -22,14 +22,14 @@ public:
     bool isFetched();
     static QList<NoteFolder> fetchAll();
     QString getName();
-    int getOwnCloudServerId();
+    int getCloudConnectionId();
     QString getLocalPath();
     QString getRemotePath();
     int getPriority();
     void setName(QString text);
     void setLocalPath(QString text);
     void setPriority(int value);
-    void setOwnCloudServerId(int id);
+    void setCloudConnectionId(int id);
     void setRemotePath(QString text);
     static int countAll();
     static bool migrateToNoteFolders();
@@ -64,7 +64,7 @@ private:
     int id;
     QString name;
     QString localPath;
-    int ownCloudServerId;
+    int cloudConnectionId;
     QString remotePath;
     int priority;
     int activeTagId;
