@@ -1,5 +1,4 @@
-#ifndef OWNCLOUDSERVICE_H
-#define OWNCLOUDSERVICE_H
+#pragma once
 
 #include <QNetworkAccessManager>
 #include <QAuthenticator>
@@ -171,5 +170,3 @@ private slots:
 
     void slotReplyFinished(QNetworkReply *);
 };
-
-#endif // OWNCLOUDSERVICE_H

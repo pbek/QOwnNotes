@@ -2423,6 +2423,9 @@ void MainWindow::readSettingsFromSettingsDialog() {
     if (settings.value("Editor/disableCursorBlinking").toBool()) {
         qApp->setCursorFlashTime(0);
     }
+
+    // reset cloud service instance
+    OwnCloudService::instance(true);
 }
 
 /**

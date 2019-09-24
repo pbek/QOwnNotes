@@ -695,11 +695,21 @@ bool DatabaseService::setupTables() {
     CloudConnection::migrateToCloudConnections();
 
     if (version < 30) {
+        // remove obsolete server settings (we now have cloud connections)
         settings.remove("ownCloud/serverUrl");
         settings.remove("ownCloud/userName");
         settings.remove("ownCloud/password");
 
         version = 30;
+    }
+
+    if (version < 31) {
+        // preset cloud connections for all note folders
+        queryDisk.prepare("UPDATE noteFolder SET cloud_connection_id = :id");
+        queryDisk.bindValue(":id", CloudConnection::firstCloudConnection().getId());
+        queryDisk.exec();
+
+        version = 31;
     }
 
     if (version != oldVersion) {

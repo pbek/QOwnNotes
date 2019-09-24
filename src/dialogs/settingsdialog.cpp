@@ -2385,16 +2385,12 @@ void SettingsDialog::on_noteFolderRemotePathButton_clicked()
     // store ownCloud settings
     storeSettings();
 
-    // we need to set the current note folder as active note folder so we can
-    // get the correct cloud connection for the remote path tree
-    ui->noteFolderActiveCheckBox->setChecked(true);
-
     setNoteFolderRemotePathTreeWidgetFrameVisibility(true);
 
     noteFolderRemotePathTreeStatusBar->showMessage(
             tr("Loading folders from server"));
 
-    OwnCloudService *ownCloud = OwnCloudService::instance(true);
+    OwnCloudService *ownCloud = OwnCloudService::instance(true, _selectedNoteFolder.getCloudConnectionId());
     ownCloud->settingsGetFileList(this, "");
 }
 
