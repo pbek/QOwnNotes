@@ -1,6 +1,7 @@
 # QOwnNotes Changelog
 
 ## 19.9.17
+- fixed the Nextcloud tooltip texts in window title of the *Version dialog*
 - fixed a build error on the Open Build System (OBS)
 
 ## 19.9.16

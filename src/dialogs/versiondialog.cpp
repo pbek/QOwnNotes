@@ -13,6 +13,7 @@ VersionDialog::VersionDialog(QJSValue versions, MainWindow *mainWindow,
         ui(new Ui::VersionDialog) {
     this->mainWindow = mainWindow;
     ui->setupUi(this);
+    setWindowTitle(Utils::Misc::replaceOwnCloudText(windowTitle()));
     ui->tabWidget->setCurrentIndex(0);
 
     // init the note text edit search frame
