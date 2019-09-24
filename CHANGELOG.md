@@ -1,6 +1,13 @@
 # QOwnNotes Changelog
 
 ## 19.9.17
+- you can now **choose different cloud connections** for your **note folders**
+    - this way you can use the correct remote note versioning and trash and
+      share your notes with the correct account if you are using multiple
+      Nextcloud / ownCLoud instances or accounts
+    - some previous connection problems when changing connection parameters were fixed
+    - the cloud connections are now also represented in the debug settings
+- you can now **select a cloud connection** for your **Todo list calendars**
 - fixed the Nextcloud tooltip texts in window title of the *Version dialog*
 - fixed a build error on the Open Build System (OBS)
 

@@ -33,6 +33,11 @@ public:
     static bool migrateToCloudConnections();
     bool isCurrent();
     static CloudConnection currentCloudConnection();
+    static CloudConnection firstCloudConnection();
+    static CloudConnection currentTodoCalendarCloudConnection();
+    QString getServerUrlPath();
+    QString getServerUrlWithoutPath();
+    static QList<int> fetchUsedCloudConnectionsIds();
 
 private:
     int id;

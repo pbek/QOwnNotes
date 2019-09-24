@@ -32,7 +32,7 @@ const QString OwnCloudService::rootPath =
 const QString OwnCloudService::format = "json";
 const QString NS_DAV("DAV:");
 
-OwnCloudService::OwnCloudService(QObject *parent)
+OwnCloudService::OwnCloudService(int cloudConnectionId, QObject *parent)
         : QObject(parent) {
     networkManager = new QNetworkAccessManager(this);
     calendarNetworkManager = new QNetworkAccessManager(this);
@@ -53,7 +53,7 @@ OwnCloudService::OwnCloudService(QObject *parent)
     QObject::connect(calendarNetworkManager, SIGNAL(finished(QNetworkReply *)),
                      this, SLOT(slotReplyFinished(QNetworkReply *)));
 
-    readSettings();
+    readSettings(cloudConnectionId);
     settingsDialog = Q_NULLPTR;
     todoDialog = Q_NULLPTR;
     mainWindow = Q_NULLPTR;
@@ -89,21 +89,19 @@ bool OwnCloudService::isTodoSupportEnabled() {
     }
 }
 
-void OwnCloudService::readSettings() {
+void OwnCloudService::readSettings(int cloudConnectionId) {
     QSettings settings;
-    serverUrl = settings.value("ownCloud/serverUrl").toString().trimmed();
-    serverUrlPath = QUrl(serverUrl).path();
+    CloudConnection cloudConnection = cloudConnectionId != -1 ?
+                CloudConnection::fetch(cloudConnectionId) :
+                CloudConnection::currentCloudConnection();
 
-    serverUrlWithoutPath = serverUrl;
-    if (serverUrlPath != "") {
-        // remove the path from the server url
-        serverUrlWithoutPath.replace(QRegularExpression(
-                QRegularExpression::escape(serverUrlPath) + "$"), "");
-    }
+    qDebug() << "cloudConnection: " << cloudConnection;
 
-    userName = settings.value("ownCloud/userName").toString();
-    password = CryptoService::instance()->decryptToString(
-            settings.value("ownCloud/password").toString());
+    serverUrl = cloudConnection.getServerUrl();
+    serverUrlPath = cloudConnection.getServerUrlPath();
+    serverUrlWithoutPath = cloudConnection.getServerUrlWithoutPath();
+    userName = cloudConnection.getUsername();
+    password = cloudConnection.getPassword();
 
     versionListPath = rootPath + "note/versions";
     trashListPath = rootPath + "note/trashed";
@@ -135,13 +133,17 @@ void OwnCloudService::readSettings() {
             break;
     }
 
+    CloudConnection todoCalendarCloudConnection =
+            CloudConnection::currentTodoCalendarCloudConnection();
+
     QString calendarPath =
-            "/remote.php/" + calendarBackendString + "/calendars/" + userName;
-    todoCalendarServerUrl = serverUrl.isEmpty() ? "" : serverUrl + calendarPath;
-    todoCalendarServerUrlWithoutPath = serverUrlWithoutPath;
-    todoCalendarServerUrlPath = serverUrlPath + calendarPath;
-    todoCalendarUsername = userName;
-    todoCalendarPassword = password;
+            "/remote.php/" + calendarBackendString + "/calendars/" + todoCalendarCloudConnection.getUsername();
+    todoCalendarServerUrl = todoCalendarCloudConnection.getServerUrl().isEmpty() ?
+                "" : todoCalendarCloudConnection.getServerUrl() + calendarPath;
+    todoCalendarServerUrlWithoutPath = todoCalendarCloudConnection.getServerUrlWithoutPath();
+    todoCalendarServerUrlPath = todoCalendarCloudConnection.getServerUrlPath() + calendarPath;
+    todoCalendarUsername = todoCalendarCloudConnection.getUsername();
+    todoCalendarPassword = todoCalendarCloudConnection.getPassword();
 
     // if we are using a custom CalDAV server set the settings for it
     if (calendarBackend == OwnCloudService::CalDAVCalendar) {
@@ -187,7 +189,7 @@ void OwnCloudService::slotCalendarAuthenticationRequired(
 
     if (!Utils::Gui::isMessageBoxPresent()) {
         QMessageBox::warning(
-                0, tr("Username / password error"),
+                nullptr, tr("Username / password error"),
                 tr("Your calendar username or password is incorrect!"));
     }
 
@@ -1002,12 +1004,11 @@ bool OwnCloudService::hasOwnCloudSettings(bool withEnabledCheck) {
     }
 
     QSettings settings;
-    QString serverUrl =
-            settings.value("ownCloud/serverUrl").toString().trimmed();
-    QString userName =
-            settings.value("ownCloud/userName").toString().trimmed();
-    QString password =
-            settings.value("ownCloud/password").toString().trimmed();
+    CloudConnection cloudConnection = CloudConnection::currentCloudConnection();
+
+    QString serverUrl = cloudConnection.getServerUrl();
+    QString userName = cloudConnection.getUsername();
+    QString password = cloudConnection.getPassword();
 
     return !(serverUrl.isEmpty() || userName.isEmpty() || password.isEmpty());
 }
@@ -1065,25 +1066,30 @@ void OwnCloudService::showOwnCloudMessage(
 #endif
         }
     } else {
-        QMessageBox::warning(0, headline, message);
+        QMessageBox::warning(nullptr, headline, message);
     }
 }
 
 /**
  * Returns the global OwnCloudService instance
  */
-OwnCloudService *OwnCloudService::instance() {
-    auto *instance =
-            qApp->property("ownCloudService").value<OwnCloudService *>();
+OwnCloudService *OwnCloudService::instance(bool reset, int cloudConnectionId) {
+    auto *instance = qApp->property("ownCloudService").value<OwnCloudService *>();
+
+    if (reset) {
+        delete instance;
+        instance = nullptr;
+        qDebug() << "OwnCloudService::instance was reset";
+    }
 
     if (instance == nullptr) {
-        instance = new OwnCloudService(nullptr);
+        instance = new OwnCloudService(cloudConnectionId);
 
         qApp->setProperty("ownCloudService",
                           QVariant::fromValue<OwnCloudService *>(instance));
     } else {
         // we need to read the settings in case something has changed
-        instance->readSettings();
+        instance->readSettings(cloudConnectionId);
     }
 
     return instance;
@@ -1138,7 +1144,7 @@ void OwnCloudService::handleVersionsLoading(QString data) {
     if (fileName.isEmpty() || !versionsIterator.hasNext() ||
             versions.toString().isEmpty()) {
         QMessageBox::information(
-                0, tr("No versions found"),
+                nullptr, tr("No versions found"),
                 tr("There are no versions for this note or the note wasn't "
                            "found on the server."));
         return;
@@ -1225,7 +1231,7 @@ QList<CalDAVCalendarData> OwnCloudService::parseCalendarData(QString &data) {
     // check if there was nothing returned at all from the CalDAV server
     if (data.isEmpty()) {
         QMessageBox::critical(
-                0, tr("Error while loading todo lists!"),
+                nullptr, tr("Error while loading todo lists!"),
                 tr("Your CalDAV server didn't reply anything!"));
 
         return resultList;

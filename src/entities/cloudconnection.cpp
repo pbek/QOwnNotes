@@ -7,6 +7,7 @@
 #include <QSqlError>
 #include <QSettings>
 #include <utility>
+#include <QRegularExpression>
 #include <utils/misc.h>
 #include <services/cryptoservice.h>
 
@@ -32,6 +33,23 @@ QString CloudConnection::getServerUrl() {
     return this->serverUrl;
 }
 
+QString CloudConnection::getServerUrlPath() {
+    return QUrl(this->serverUrl).path();
+}
+
+QString CloudConnection::getServerUrlWithoutPath() {
+    QString serverUrlWithoutPath = serverUrl;
+    const QString serverUrlPath = getServerUrlPath();
+
+    if (serverUrlPath != "") {
+        // remove the path from the server url
+        serverUrlWithoutPath.replace(QRegularExpression(
+                QRegularExpression::escape(serverUrlPath) + "$"), "");
+    }
+
+    return serverUrlWithoutPath;
+}
+
 QString CloudConnection::getUsername() {
     return this->username;
 }
@@ -44,6 +62,10 @@ int CloudConnection::getPriority() {
     return this->priority;
 }
 
+CloudConnection CloudConnection::firstCloudConnection() {
+    return CloudConnection::fetchAll()[0];
+}
+
 CloudConnection CloudConnection::currentCloudConnection() {
     NoteFolder noteFolder = NoteFolder::currentNoteFolder();
     const int id = noteFolder.getCloudConnectionId();
@@ -51,20 +73,27 @@ CloudConnection CloudConnection::currentCloudConnection() {
     return CloudConnection::fetch(id);
 }
 
+CloudConnection CloudConnection::currentTodoCalendarCloudConnection() {
+    QSettings settings;
+    const int id = settings.value("ownCloud/todoCalendarCloudConnectionId", firstCloudConnection().getId()).toInt();
+
+    return CloudConnection::fetch(id);
+}
+
 void CloudConnection::setName(QString text) {
-    this->name = std::move(text);
+    this->name = text.trimmed();
 }
 
 void CloudConnection::setServerUrl(QString text) {
-    this->serverUrl = std::move(text);
+    this->serverUrl = text.trimmed();
 }
 
 void CloudConnection::setUsername(QString text) {
-    this->username = std::move(text);
+    this->username = text.trimmed();
 }
 
 void CloudConnection::setPassword(QString text) {
-    this->password = std::move(text);
+    this->password = text.trimmed();
 }
 
 void CloudConnection::setPriority(int value) {
@@ -254,6 +283,23 @@ bool CloudConnection::migrateToCloudConnections() {
     cloudConnection.store();
 
     return true;
+}
+
+/**
+ * @brief CloudConnection::fetchUsedCloudConnectionsIds returns a list of cloud connection ids that are in use
+ * @return
+ */
+QList<int> CloudConnection::fetchUsedCloudConnectionsIds() {
+    // we want to prevent duplicates
+    QSet<int> idList;
+
+    Q_FOREACH(NoteFolder noteFolder, NoteFolder::fetchAll()) {
+        idList << noteFolder.getCloudConnectionId();
+    }
+
+    idList << CloudConnection::currentTodoCalendarCloudConnection().getId();
+
+    return idList.toList();
 }
 
 QDebug operator<<(QDebug dbg, const CloudConnection &cloudConnection) {

@@ -8,6 +8,7 @@
 #include <QSettings>
 #include <QDir>
 #include <utils/misc.h>
+#include <services/owncloudservice.h>
 #include <QtCore/QJsonArray>
 #include <QtCore/QJsonDocument>
 
@@ -297,6 +298,9 @@ void NoteFolder::setAsCurrent() {
     settings.setValue("notesPath",
                       Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(
                               localPath));
+
+    // we need to reset the instance
+    OwnCloudService::instance(true);
 }
 
 /**

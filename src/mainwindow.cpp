@@ -943,8 +943,7 @@ void MainWindow::reloadTodoLists() {
     QSettings settings;
     QStringList calendars =
             settings.value("ownCloud/todoCalendarEnabledList").toStringList();
-    QString serverUrl =
-            settings.value("ownCloud/serverUrl").toString().trimmed();
+    QString serverUrl = CloudConnection::currentCloudConnection().getServerUrl();
 
     if (calendars.count() > 0 && !serverUrl.isEmpty()) {
         OwnCloudService *ownCloud = OwnCloudService::instance();

@@ -569,3 +569,11 @@ void Utils::Gui::updateInterfaceFontSize(int fontSize) {
 
     qApp->setStyleSheet(stylesheet);
 }
+
+/**
+ * Sets the current index of a combo box by user data
+ */
+void Utils::Gui::setComboBoxIndexByUserData(QComboBox *comboBox, const QVariant &userData) {
+    const int index = comboBox->findData(userData);
+    comboBox->setCurrentIndex(index);
+}

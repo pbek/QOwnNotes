@@ -269,6 +269,10 @@ private slots:
 
     void on_cloudConnectionRemoveButton_clicked();
 
+    void on_noteFolderCloudConnectionComboBox_currentIndexChanged(int index);
+
+    void on_calendarCloudConnectionComboBox_currentIndexChanged(int index);
+
 private:
 
     Ui::SettingsDialog *ui;

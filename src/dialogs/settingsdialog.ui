@@ -751,14 +751,14 @@
                     </widget>
                    </item>
                    <item row="7" column="0" colspan="2">
-                    <widget class="QLabel" name="noteFolderOwnCloudServerLabel">
+                    <widget class="QLabel" name="noteFolderCloudConnectionLabel">
                      <property name="text">
-                      <string>ownCloud server:</string>
+                      <string>Cloud connection:</string>
                      </property>
                     </widget>
                    </item>
                    <item row="8" column="0" colspan="2">
-                    <widget class="QComboBox" name="noteFolderOwnCloudServerComboBox"/>
+                    <widget class="QComboBox" name="noteFolderCloudConnectionComboBox"/>
                    </item>
                    <item row="9" column="0" colspan="2">
                     <widget class="QLabel" name="noteFolderRemotePathLabel">
@@ -1729,14 +1729,21 @@
                 <string>Which calendar backend do you want to use?</string>
                </property>
                <layout class="QGridLayout" name="gridLayout_40">
-                <item row="3" column="0">
+                <item row="4" column="0">
                  <widget class="QRadioButton" name="calDavCalendarRadioButton">
                   <property name="text">
                    <string>Other CalDAV server</string>
                   </property>
                  </widget>
                 </item>
-                <item row="0" column="0">
+                <item row="3" column="0">
+                 <widget class="QRadioButton" name="calendarPlusRadioButton">
+                  <property name="text">
+                   <string notr="true">Calendar Plus</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
                  <widget class="QRadioButton" name="defaultOwnCloudCalendarRadioButton">
                   <property name="toolTip">
                    <string>For most current ownCloud and Nextcloud installations</string>
@@ -1750,13 +1757,6 @@
                  </widget>
                 </item>
                 <item row="2" column="0">
-                 <widget class="QRadioButton" name="calendarPlusRadioButton">
-                  <property name="text">
-                   <string notr="true">Calendar Plus</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="1" column="0">
                  <widget class="QRadioButton" name="legacyOwnCloudCalendarRadioButton">
                   <property name="toolTip">
                    <string>For older versions of ownCloud where the default setting doesn't work</string>
@@ -1768,6 +1768,9 @@
                    <bool>true</bool>
                   </property>
                  </widget>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QComboBox" name="calendarCloudConnectionComboBox"/>
                 </item>
                </layout>
               </widget>
@@ -3093,8 +3096,8 @@
                           <rect>
                            <x>0</x>
                            <y>0</y>
-                           <width>360</width>
-                           <height>476</height>
+                           <width>430</width>
+                           <height>538</height>
                           </rect>
                          </property>
                          <layout class="QGridLayout" name="gridLayout_55">
@@ -4230,7 +4233,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                 <string notr="true">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans'; font-size:14pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Sans Serif'; font-size:9pt;&quot;&gt;portable mode information will be loaded here&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                </property>
                <property name="openExternalLinks">
@@ -5707,7 +5710,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
   <tabstop>noteFolderRemotePathTreeWidget</tabstop>
   <tabstop>noteFolderNameLineEdit</tabstop>
   <tabstop>noteFolderActiveCheckBox</tabstop>
-  <tabstop>noteFolderOwnCloudServerComboBox</tabstop>
+  <tabstop>noteFolderCloudConnectionComboBox</tabstop>
   <tabstop>noteFolderShowSubfoldersCheckBox</tabstop>
   <tabstop>noteFolderGitCommitCheckBox</tabstop>
   <tabstop>ownCloudSupportCheckBox</tabstop>
@@ -5874,8 +5877,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
   <tabstop>enableSocketServerCheckBox</tabstop>
  </tabstops>
  <resources>
-  <include location="../breeze-qownnotes.qrc"/>
   <include location="../breeze-dark-qownnotes.qrc"/>
+  <include location="../breeze-qownnotes.qrc"/>
  </resources>
  <connections>
   <connection>

@@ -550,7 +550,7 @@ void SettingsDialog::storeProxySettings() {
  */
 void SettingsDialog::startConnectionTest() {
     ui->connectionTestLabel->hide();
-    OwnCloudService *ownCloud = OwnCloudService::instance();
+    OwnCloudService *ownCloud = OwnCloudService::instance(true, _selectedCloudConnection.getId());
     ownCloud->settingsConnectionTest(this);
 }
 
@@ -582,23 +582,10 @@ void SettingsDialog::storeSelectedCloudConnection() {
 
 void SettingsDialog::storeSettings() {
     QSettings settings;
-    QString url = QString(ui->serverUrlEdit->text());
-
-    // remove trailing "/" of the server url
-    if (url.endsWith("/")) {
-        url.chop(1);
-        ui->serverUrlEdit->setText(url);
-    }
+    storeSelectedCloudConnection();
 
     settings.setValue("ownCloud/supportEnabled",
                       ui->ownCloudSupportCheckBox->isChecked());
-    settings.setValue("ownCloud/serverUrl", url);
-    settings.setValue("ownCloud/userName", ui->userNameEdit->text());
-    settings.setValue("ownCloud/password",
-                      CryptoService::instance()->encryptToString(
-                              ui->passwordEdit->text()));
-    storeSelectedCloudConnection();
-
     settings.setValue("insertTimeFormat", ui->timeFormatLineEdit->text());
     settings.setValue("disableAutomaticUpdateDialog",
                       ui->disableAutomaticUpdateDialogCheckBox->isChecked());
@@ -752,7 +739,8 @@ void SettingsDialog::storeSettings() {
     }
 
     settings.setValue("ownCloud/todoCalendarBackend", todoCalendarBackend);
-
+    settings.setValue("ownCloud/todoCalendarCloudConnectionId",
+                      ui->calendarCloudConnectionComboBox->currentData().toInt());
     settings.setValue("ownCloud/todoCalendarCalDAVServerUrl",
                       ui->calDavServerUrlEdit->text());
     settings.setValue("ownCloud/todoCalendarCalDAVUsername",
@@ -932,10 +920,9 @@ void SettingsDialog::readSettings() {
     ui->ownCloudSupportCheckBox->setChecked(
             OwnCloudService::isOwnCloudSupportEnabled());
     on_ownCloudSupportCheckBox_toggled();
-    ui->serverUrlEdit->setText(settings.value("ownCloud/serverUrl").toString());
-    ui->userNameEdit->setText(settings.value("ownCloud/userName").toString());
-    ui->passwordEdit->setText(CryptoService::instance()->decryptToString(
-            settings.value("ownCloud/password").toString()));
+    ui->serverUrlEdit->setText(_selectedCloudConnection.getServerUrl());
+    ui->userNameEdit->setText(_selectedCloudConnection.getUsername());
+    ui->passwordEdit->setText(_selectedCloudConnection.getPassword());
     ui->timeFormatLineEdit->setText(
             settings.value("insertTimeFormat").toString());
 
@@ -1958,7 +1945,7 @@ void SettingsDialog::on_reloadCalendarListButton_clicked() {
  * Reloads the calendar list
  */
 void SettingsDialog::reloadCalendarList() {
-    OwnCloudService *ownCloud = OwnCloudService::instance();
+    OwnCloudService *ownCloud = OwnCloudService::instance(true);
     ownCloud->settingsGetCalendarList(this);
 }
 
@@ -2185,8 +2172,6 @@ void SettingsDialog::on_ignoreSSLErrorsCheckBox_toggled(bool checked) {
  */
 void SettingsDialog::setupNoteFolderPage() {
     // hide the owncloud server settings
-    ui->noteFolderOwnCloudServerLabel->setVisible(false);
-    ui->noteFolderOwnCloudServerComboBox->setVisible(false);
     ui->noteFolderEditFrame->setEnabled(NoteFolder::countAll() > 0);
     setNoteFolderRemotePathTreeWidgetFrameVisibility(false);
 
@@ -2220,8 +2205,7 @@ void SettingsDialog::setupNoteFolderPage() {
 }
 
 void SettingsDialog::on_noteFolderListWidget_currentItemChanged(
-        QListWidgetItem *current, QListWidgetItem *previous)
-{
+        QListWidgetItem *current, QListWidgetItem *previous) {
     Q_UNUSED(previous);
 
     setNoteFolderRemotePathTreeWidgetFrameVisibility(false);
@@ -2238,6 +2222,8 @@ void SettingsDialog::on_noteFolderListWidget_currentItemChanged(
                 _selectedNoteFolder.isShowSubfolders());
         ui->noteFolderGitCommitCheckBox->setChecked(
                 _selectedNoteFolder.isUseGit());
+        Utils::Gui::setComboBoxIndexByUserData(ui->noteFolderCloudConnectionComboBox,
+                                               _selectedNoteFolder.getCloudConnectionId());
 
         const QSignalBlocker blocker(ui->noteFolderActiveCheckBox);
         Q_UNUSED(blocker)
@@ -2246,14 +2232,15 @@ void SettingsDialog::on_noteFolderListWidget_currentItemChanged(
     }
 }
 
-void SettingsDialog::on_noteFolderAddButton_clicked()
-{
+void SettingsDialog::on_noteFolderAddButton_clicked() {
+    const int cloudConnectionId = _selectedNoteFolder.getCloudConnectionId();
+
     _selectedNoteFolder = NoteFolder();
     _selectedNoteFolder.setName(tr("new folder"));
     _selectedNoteFolder.setLocalPath(
             Utils::Misc::defaultNotesPath());
     _selectedNoteFolder.setPriority(ui->noteFolderListWidget->count());
-    _selectedNoteFolder.setCloudConnectionId(CloudConnection::currentCloudConnection().getId());
+    _selectedNoteFolder.setCloudConnectionId(cloudConnectionId);
     _selectedNoteFolder.suggestRemotePath();
     _selectedNoteFolder.store();
 
@@ -2397,12 +2384,16 @@ void SettingsDialog::on_noteFolderRemotePathButton_clicked()
     // store ownCloud settings
     storeSettings();
 
+    // we need to set the current note folder as active note folder so we can
+    // get the correct cloud connection for the remote path tree
+    ui->noteFolderActiveCheckBox->setChecked(true);
+
     setNoteFolderRemotePathTreeWidgetFrameVisibility(true);
 
     noteFolderRemotePathTreeStatusBar->showMessage(
             tr("Loading folders from server"));
 
-    OwnCloudService *ownCloud = OwnCloudService::instance();
+    OwnCloudService *ownCloud = OwnCloudService::instance(true);
     ownCloud->settingsGetFileList(this, "");
 }
 
@@ -2489,8 +2480,14 @@ void SettingsDialog::on_noteFolderRemotePathTreeWidget_currentItemChanged(
     noteFolderRemotePathTreeStatusBar->showMessage(
             tr("Loading folders in '%1' from server").arg(current->text(0)));
 
-    OwnCloudService *ownCloud = OwnCloudService::instance();
+    OwnCloudService *ownCloud = OwnCloudService::instance(true);
     ownCloud->settingsGetFileList(this, folderName);
+}
+
+void SettingsDialog::on_noteFolderCloudConnectionComboBox_currentIndexChanged(int index) {
+    Q_UNUSED(index)
+    _selectedNoteFolder.setCloudConnectionId(ui->noteFolderCloudConnectionComboBox->currentData().toInt());
+    _selectedNoteFolder.store();
 }
 
 void SettingsDialog::on_useOwnCloudPathButton_clicked() {
@@ -2528,12 +2525,10 @@ void SettingsDialog::setNoteFolderRemotePathTreeWidgetFrameVisibility(
         bool visible) {
     ui->noteFolderRemotePathTreeWidgetFrame->setVisible(visible);
     ui->noteFolderVerticalSpacerFrame->setVisible(!visible);
-    if (!visible) {
-        const QSignalBlocker blocker(ui->noteFolderRemotePathTreeWidget);
-        Q_UNUSED(blocker)
 
-        ui->noteFolderRemotePathTreeWidget->clear();
-    }
+    const QSignalBlocker blocker(ui->noteFolderRemotePathTreeWidget);
+    Q_UNUSED(blocker)
+    ui->noteFolderRemotePathTreeWidget->clear();
 }
 
 /**
@@ -3795,8 +3790,14 @@ void SettingsDialog::on_webSocketTokenButton_clicked() {
 void SettingsDialog::initCloudConnectionComboBox(int selectedId) {
     const QSignalBlocker blocker(ui->cloudConnectionComboBox);
     Q_UNUSED(blocker)
+    const QSignalBlocker blocker2(ui->noteFolderCloudConnectionComboBox);
+    Q_UNUSED(blocker2)
+    const QSignalBlocker blocker3(ui->calendarCloudConnectionComboBox);
+    Q_UNUSED(blocker3)
 
     ui->cloudConnectionComboBox->clear();
+    ui->noteFolderCloudConnectionComboBox->clear();
+    ui->calendarCloudConnectionComboBox->clear();
     int index = 0;
     int currentIndex = 0;
     if (selectedId == -1) {
@@ -3805,6 +3806,9 @@ void SettingsDialog::initCloudConnectionComboBox(int selectedId) {
 
     Q_FOREACH(CloudConnection cloudConnection, CloudConnection::fetchAll()) {
         ui->cloudConnectionComboBox->addItem(cloudConnection.getName(), cloudConnection.getId());
+        ui->noteFolderCloudConnectionComboBox->addItem(cloudConnection.getName(), cloudConnection.getId());
+        ui->calendarCloudConnectionComboBox->addItem(cloudConnection.getName(), cloudConnection.getId());
+
         if (cloudConnection.getId() == selectedId) {
             currentIndex = index;
         }
@@ -3814,9 +3818,15 @@ void SettingsDialog::initCloudConnectionComboBox(int selectedId) {
 
     ui->cloudConnectionComboBox->setCurrentIndex(currentIndex);
     on_cloudConnectionComboBox_currentIndexChanged(currentIndex);
+
+    Utils::Gui::setComboBoxIndexByUserData(ui->noteFolderCloudConnectionComboBox,
+                                           _selectedNoteFolder.getCloudConnectionId());
+    Utils::Gui::setComboBoxIndexByUserData(ui->calendarCloudConnectionComboBox,
+                                           CloudConnection::currentTodoCalendarCloudConnection().getId());
 }
 
 void SettingsDialog::on_cloudConnectionComboBox_currentIndexChanged(int index) {
+    Q_UNUSED(index)
     bool updateComboBox = false;
 
     // store previously selected cloud connection
@@ -3837,6 +3847,7 @@ void SettingsDialog::on_cloudConnectionComboBox_currentIndexChanged(int index) {
     ui->serverUrlEdit->setText(_selectedCloudConnection.getServerUrl());
     ui->userNameEdit->setText(_selectedCloudConnection.getUsername());
     ui->passwordEdit->setText(_selectedCloudConnection.getPassword());
+    ui->cloudConnectionRemoveButton->setDisabled(CloudConnection::fetchUsedCloudConnectionsIds().contains(id));
 
     if (updateComboBox) {
         initCloudConnectionComboBox(_selectedCloudConnection.getId());
@@ -3844,7 +3855,7 @@ void SettingsDialog::on_cloudConnectionComboBox_currentIndexChanged(int index) {
 }
 
 void SettingsDialog::on_cloudConnectionAddButton_clicked() {
-    // create a new CloudConnection
+    // create a new cloud connection
     CloudConnection cloudConnection;
     cloudConnection.setName(QObject::tr("New connection"));
     cloudConnection.setServerUrl(_selectedCloudConnection.getServerUrl());
@@ -3856,11 +3867,24 @@ void SettingsDialog::on_cloudConnectionAddButton_clicked() {
 }
 
 void SettingsDialog::on_cloudConnectionRemoveButton_clicked() {
-    // TODO: check connection is in use or reroute note folder to other connection
     if (CloudConnection::countAll() <= 1) {
+        return;
+    }
+
+    // check if cloud connection is in use
+    if (CloudConnection::fetchUsedCloudConnectionsIds().contains(_selectedCloudConnection.getId())) {
+        ui->cloudConnectionRemoveButton->setDisabled(true);
         return;
     }
 
     _selectedCloudConnection.remove();
     initCloudConnectionComboBox();
+}
+
+void SettingsDialog::on_calendarCloudConnectionComboBox_currentIndexChanged(int index) {
+    Q_UNUSED(index)
+    QSettings settings;
+    settings.setValue("ownCloud/todoCalendarCloudConnectionId",
+                      ui->calendarCloudConnectionComboBox->currentData().toInt());
+    on_reloadCalendarListButton_clicked();
 }

@@ -30,7 +30,6 @@ QString DatabaseService::getDiskDatabasePath() {
     return databaseFileName;
 }
 
-
 /**
  * @brief Returns the path to the note folder database
  * @return string
@@ -91,7 +90,7 @@ bool DatabaseService::createDiskConnection() {
 
     if (!dbDisk.open()) {
         QMessageBox::critical(
-                0, QWidget::tr("Cannot open disk database"),
+                nullptr, QWidget::tr("Cannot open disk database"),
                 QWidget::tr(
                       "Unable to establish a database connection with "
                               "file '%1'.\nAre the folder and the file "
@@ -113,7 +112,7 @@ bool DatabaseService::createNoteFolderConnection() {
 
     if (!dbDisk.open()) {
         QMessageBox::critical(
-                0, QWidget::tr("Cannot open note folder database"),
+                nullptr, QWidget::tr("Cannot open note folder database"),
                 QWidget::tr(
                         "Unable to establish a database connection with "
                                 "file '%1'.\nAre the folder and the file "
@@ -694,6 +693,14 @@ bool DatabaseService::setupTables() {
 
     // let's check every time if there is at least one cloud connection
     CloudConnection::migrateToCloudConnections();
+
+    if (version < 30) {
+        settings.remove("ownCloud/serverUrl");
+        settings.remove("ownCloud/userName");
+        settings.remove("ownCloud/password");
+
+        version = 30;
+    }
 
     if (version != oldVersion) {
         setAppData("database_version", QString::number(version));

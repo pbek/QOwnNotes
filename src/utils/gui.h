@@ -19,6 +19,7 @@
 #include <QFontDialog>
 #include <QPlainTextEdit>
 #include <QTextBlock>
+#include <QComboBox>
 
 /*  Gui functions that can be useful */
 
@@ -102,5 +103,7 @@ namespace Utils {
         bool autoFormatTableAtCursor(QPlainTextEdit *textEdit);
 
         void updateInterfaceFontSize(int fontSize = -1);
+
+        void setComboBoxIndexByUserData(QComboBox *comboBox, const QVariant &userData);
     }
 }

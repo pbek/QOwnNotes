@@ -1287,7 +1287,7 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
     // add information about the server
     output += "\n## Server Info\n\n";
     output += prepareDebugInformationLine(
-            "serverUrl", settings.value("ownCloud/serverUrl").toString(),
+            "serverUrl", CloudConnection::currentCloudConnection().getServerUrl(),
             withGitHubLineBreaks);
     const bool appIsValid = settings.value("ownCloudInfo/appIsValid").toBool();
     output += prepareDebugInformationLine(
@@ -1337,6 +1337,9 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
                 output += prepareDebugInformationLine(
                         "remotePath", noteFolder.getRemotePath(), withGitHubLineBreaks);
                 output += prepareDebugInformationLine(
+                        "cloudConnectionId",
+                        QString::number(noteFolder.getCloudConnectionId()), withGitHubLineBreaks);
+                output += prepareDebugInformationLine(
                         "isShowSubfolders",
                         noteFolder.isShowSubfolders() ? "yes" : "no", withGitHubLineBreaks);
                 output += prepareDebugInformationLine(
@@ -1350,6 +1353,23 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
                         QDir::toNativeSeparators(noteFolder.getLocalPath() +
                                                  "/notes.sqlite"), withGitHubLineBreaks);
             }
+    }
+
+    // add cloud connection information
+    output += "\n## Cloud connections\n";
+
+    Q_FOREACH(CloudConnection cloudConnection, CloudConnection::fetchAll()) {
+        output += "\n### Cloud connection `" + cloudConnection.getName() +
+                "`\n\n";
+        output += prepareDebugInformationLine(
+                    "id", QString::number(cloudConnection.getId()), withGitHubLineBreaks);
+        output += prepareDebugInformationLine(
+                    "isCurrent",
+                    cloudConnection.isCurrent() ? "yes" : "no", withGitHubLineBreaks);
+        output += prepareDebugInformationLine(
+                    "serverUrl", cloudConnection.getServerUrl(), withGitHubLineBreaks);
+        output += prepareDebugInformationLine(
+                    "username", cloudConnection.getUsername(), withGitHubLineBreaks);
     }
 
     // add script information
@@ -1388,7 +1408,6 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
     // hide values of these keys
     QStringList keyHiddenList = (QStringList() <<
                                                "cryptoKey" <<
-                                               "ownCloud/password" <<
                                                "ownCloud/todoCalendarCalDAVPassword" <<
                                                "PiwikClientId" <<
                                                "networking/proxyPassword");

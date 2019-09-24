@@ -39,7 +39,7 @@ public:
     };
     Q_ENUMS(CalendarBackend)
 
-    explicit OwnCloudService(QObject *parent = 0);
+    explicit OwnCloudService(int cloudConnectionId = -1, QObject *parent = nullptr);
 
     void settingsConnectionTest(SettingsDialog *dialog);
 
@@ -75,7 +75,7 @@ public:
 
     void removeNoteShare(Note note, ShareDialog *dialog);
 
-    static OwnCloudService *instance();
+    static OwnCloudService *instance(bool reset = false, int cloudConnectionId = -1);
 
     static bool isOwnCloudSupportEnabled();
 
@@ -117,7 +117,7 @@ private:
 
     void checkAppInfo(QNetworkReply *reply);
 
-    void readSettings();
+    void readSettings(int cloudConnectionId = -1);
 
     void addAuthHeader(QNetworkRequest *r);
 
