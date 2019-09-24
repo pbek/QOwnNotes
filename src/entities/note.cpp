@@ -1021,7 +1021,7 @@ bool Note::storeNewText(QString text) {
     return this->store();
 }
 
-bool Note::setDecryptedText(QString text) {
+void Note::setDecryptedText(QString text) {
     this->decryptedNoteText = std::move(text);
 }
 

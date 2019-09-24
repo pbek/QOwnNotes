@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 19.9.17
+- fixed a build error on the Open Build System (OBS)
+
 ## 19.9.16
 - you now can **manage multiple cloud connections** in the *Nextcloud / ownCloud settings*
     - in a future release these cloud connections can be bound to different note folders  
