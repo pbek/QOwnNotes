@@ -8,7 +8,8 @@
     - some previous connection problems when changing connection parameters were fixed
     - the cloud connections are now also represented in the debug settings
 - you can now **select a cloud connection** for your **Todo list calendars**
-- fixed the Nextcloud tooltip texts in window title of the *Version dialog*
+- fixed the Nextcloud tooltip texts in window title of the *Version dialog* and
+  in an error message in the *Settings dialog*
 - fixed a build error on the Open Build System (OBS)
 
 ## 19.9.16

@@ -1708,9 +1708,10 @@ void SettingsDialog::connectTestCallback(bool appIsValid,
 
         ui->connectionTestLabel->setStyleSheet("color: red;");
         ui->connectionTestLabel->setText(
-                tr("There was an error connecting to the ownCloud Server!\n"
+                Utils::Misc::replaceOwnCloudText(
+                        tr("There was an error connecting to the ownCloud Server!\n"
                         "You also need to have the QOwnNotesAPI app installed "
-                        "and enabled!\n\nConnection error message: ") +
+                        "and enabled!\n\nConnection error message: ")) +
                 connectionErrorMessage);
     }
 
