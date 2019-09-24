@@ -6384,7 +6384,7 @@
 - improvements and fixes in the settings connection troubleshooter
 - minimum QOwnNotesAPI version is now detected
 - detection for ownCloud core apps "Versions" and "Deleted files" (needs QOwnNotesAPI v0.3.1)
-- you can open your ownCLoud server Apps page from the settings dialog
+- you can open your ownCloud server Apps page from the settings dialog
 
 ## 0.41
 - added an interactive ownCloud server connection troubleshooting helper and other improvements to the settings page
