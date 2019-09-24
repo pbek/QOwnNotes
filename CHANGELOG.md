@@ -12,6 +12,7 @@
 - fixed the Nextcloud tooltip texts in window title of the *Version dialog* and
   in an error message in the *Settings dialog*
 - fixed a build error on the Open Build System (OBS)
+- added more Catalan, Italian, Spanish translation (thank you MGuerra, tiwi90, richarson)
 
 ## 19.9.16
 - you now can **manage multiple cloud connections** in the *Nextcloud / ownCloud settings*
