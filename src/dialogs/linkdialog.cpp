@@ -176,7 +176,8 @@ QString LinkDialog::getTitleForUrl(const QUrl& url) {
 
     // parse title from webpage
     QRegularExpression regex(R"(<title>(.*)<\/title>)", QRegularExpression::MultilineOption |
-                             QRegularExpression::DotMatchesEverythingOption);
+                             QRegularExpression::DotMatchesEverythingOption |
+                             QRegularExpression::InvertedGreedinessOption);
     QRegularExpressionMatch match = regex.match(html);
     QString title = match.captured(1);
 

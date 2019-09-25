@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 19.9.18
+- the **title detection** in the **Link dialog** was **improved**
+
 ## 19.9.17
 - you can now **choose different cloud connections** for your **note folders**
     - this way you can use the **correct remote note versioning and trash** and
