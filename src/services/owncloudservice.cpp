@@ -1076,11 +1076,15 @@ void OwnCloudService::showOwnCloudMessage(
 OwnCloudService *OwnCloudService::instance(bool reset, int cloudConnectionId) {
     auto *instance = qApp->property("ownCloudService").value<OwnCloudService *>();
 
+    // we should not need the reset, let's test without it
+    /*
     if (reset) {
         delete instance;
         instance = nullptr;
         qDebug() << "OwnCloudService::instance was reset";
     }
+    */
+    Q_UNUSED(reset)
 
     if (instance == nullptr) {
         instance = new OwnCloudService(cloudConnectionId);
