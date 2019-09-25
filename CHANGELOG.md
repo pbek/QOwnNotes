@@ -1,6 +1,14 @@
 # QOwnNotes Changelog
 
 ## 19.9.18
+- **cloud connection editing** was **improved** in the *Settings dialog*
+    - parameters are now instantly stored
+    - the cloud connection comboboxes are now updated instantly if the
+      connection name was changed
+- the user interface of the **cloud connection selection** in the
+  **Todo list settings** was improved
+    - the combobox now got its own groupbox that will be hidden if you are
+      using a custom CalDAV server
 - if you have an image in the clipboard while opening the *Image dialog* the
   checkbox `Don't copy image to media folder` will now be automatically disabled
 - the **title detection** in the **Link dialog** was **improved**

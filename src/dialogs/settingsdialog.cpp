@@ -244,6 +244,16 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
     connect(ui->tagsPanelSortAlphabeticalRadioButton, SIGNAL(toggled(bool)),
             ui->tagsPanelOrderGroupBox, SLOT(setEnabled(bool)));
 
+    // handle cloud connection storing
+    connect(ui->cloudServerConnectionNameLineEdit, SIGNAL(textChanged(QString)),
+            this, SLOT(storeSelectedCloudConnection()));
+    connect(ui->serverUrlEdit, SIGNAL(textChanged(QString)),
+            this, SLOT(storeSelectedCloudConnection()));
+    connect(ui->userNameEdit, SIGNAL(textChanged(QString)),
+            this, SLOT(storeSelectedCloudConnection()));
+    connect(ui->passwordEdit, SIGNAL(textChanged(QString)),
+            this, SLOT(storeSelectedCloudConnection()));
+
     // setup the search engine combo-box
     initSearchEngineComboBox();
 
@@ -320,6 +330,8 @@ void SettingsDialog::replaceOwnCloudText() const {
             ui->installInfoTextLabel1->text()));
     ui->installInfoTextLabel2->setText(Utils::Misc::replaceOwnCloudText(
             ui->installInfoTextLabel2->text()));
+    ui->installInfoTextLabel3->setText(Utils::Misc::replaceOwnCloudText(
+            ui->installInfoTextLabel3->text()));
 
     QTreeWidgetItem *item = ui->settingsTreeWidget->topLevelItem(
             OwnCloudPage);
@@ -566,6 +578,7 @@ void SettingsDialog::on_connectButton_clicked() {
 
 void SettingsDialog::storeSelectedCloudConnection() {
     QString url = ui->serverUrlEdit->text();
+    bool updateComboBox = false;
 
     // remove trailing "/" of the server url
     if (url.endsWith("/")) {
@@ -573,11 +586,24 @@ void SettingsDialog::storeSelectedCloudConnection() {
         ui->serverUrlEdit->setText(url);
     }
 
+    // store previously selected cloud connection
+    if (_selectedCloudConnection.isFetched()) {
+        // TODO: update combobox if name changed
+        if (_selectedCloudConnection.getName() !=
+            ui->cloudServerConnectionNameLineEdit->text()) {
+            updateComboBox = true;
+        }
+    }
+
     _selectedCloudConnection.setName(ui->cloudServerConnectionNameLineEdit->text());
     _selectedCloudConnection.setServerUrl(url);
     _selectedCloudConnection.setUsername(ui->userNameEdit->text());
     _selectedCloudConnection.setPassword(ui->passwordEdit->text());
     _selectedCloudConnection.store();
+
+    if (updateComboBox) {
+        initCloudConnectionComboBox(_selectedCloudConnection.getId());
+    }
 }
 
 void SettingsDialog::storeSettings() {
@@ -3204,6 +3230,7 @@ void SettingsDialog::on_calDavCalendarRadioButton_toggled(bool checked) {
     }
 
     ui->calDavCalendarGroupBox->setVisible(checked);
+    ui->calendarCloudConnectionGroupBox->setHidden(checked);
 }
 
 void SettingsDialog::on_calendarPlusRadioButton_toggled(bool checked) {
@@ -3762,6 +3789,7 @@ void SettingsDialog::on_enableSocketServerCheckBox_toggled() {
 void SettingsDialog::on_internalIconThemeCheckBox_toggled(bool checked) {
     if (checked) {
         const QSignalBlocker blocker(ui->systemIconThemeCheckBox);
+        Q_UNUSED(blocker)
         ui->systemIconThemeCheckBox->setChecked(false);
     }
 
@@ -3824,31 +3852,23 @@ void SettingsDialog::initCloudConnectionComboBox(int selectedId) {
 
 void SettingsDialog::on_cloudConnectionComboBox_currentIndexChanged(int index) {
     Q_UNUSED(index)
-    bool updateComboBox = false;
-
-    // store previously selected cloud connection
-    if (_selectedCloudConnection.isFetched()) {
-        // TODO: update combobox if name changed
-        if (_selectedCloudConnection.getName() !=
-            ui->cloudServerConnectionNameLineEdit->text()) {
-            updateComboBox = true;
-        }
-
-        storeSelectedCloudConnection();
-    }
-
     const int id = ui->cloudConnectionComboBox->currentData().toInt();
     _selectedCloudConnection = CloudConnection::fetch(id);
+
+    const QSignalBlocker blocker(ui->cloudServerConnectionNameLineEdit);
+    Q_UNUSED(blocker)
+    const QSignalBlocker blocker2(ui->serverUrlEdit);
+    Q_UNUSED(blocker2)
+    const QSignalBlocker blocker3(ui->userNameEdit);
+    Q_UNUSED(blocker3)
+    const QSignalBlocker blocker4(ui->passwordEdit);
+    Q_UNUSED(blocker4)
 
     ui->cloudServerConnectionNameLineEdit->setText(_selectedCloudConnection.getName());
     ui->serverUrlEdit->setText(_selectedCloudConnection.getServerUrl());
     ui->userNameEdit->setText(_selectedCloudConnection.getUsername());
     ui->passwordEdit->setText(_selectedCloudConnection.getPassword());
     ui->cloudConnectionRemoveButton->setDisabled(CloudConnection::fetchUsedCloudConnectionsIds().contains(id));
-
-    if (updateComboBox) {
-        initCloudConnectionComboBox(_selectedCloudConnection.getId());
-    }
 }
 
 void SettingsDialog::on_cloudConnectionAddButton_clicked() {

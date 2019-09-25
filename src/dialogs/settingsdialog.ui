@@ -397,7 +397,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>3</number>
+            <number>1</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -1729,21 +1729,14 @@
                 <string>Which calendar backend do you want to use?</string>
                </property>
                <layout class="QGridLayout" name="gridLayout_40">
-                <item row="4" column="0">
-                 <widget class="QRadioButton" name="calDavCalendarRadioButton">
-                  <property name="text">
-                   <string>Other CalDAV server</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="3" column="0">
+                <item row="2" column="0">
                  <widget class="QRadioButton" name="calendarPlusRadioButton">
                   <property name="text">
                    <string notr="true">Calendar Plus</string>
                   </property>
                  </widget>
                 </item>
-                <item row="1" column="0">
+                <item row="0" column="0">
                  <widget class="QRadioButton" name="defaultOwnCloudCalendarRadioButton">
                   <property name="toolTip">
                    <string>For most current ownCloud and Nextcloud installations</string>
@@ -1756,7 +1749,14 @@
                   </property>
                  </widget>
                 </item>
-                <item row="2" column="0">
+                <item row="3" column="0">
+                 <widget class="QRadioButton" name="calDavCalendarRadioButton">
+                  <property name="text">
+                   <string>Other CalDAV server</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
                  <widget class="QRadioButton" name="legacyOwnCloudCalendarRadioButton">
                   <property name="toolTip">
                    <string>For older versions of ownCloud where the default setting doesn't work</string>
@@ -1766,13 +1766,6 @@
                   </property>
                   <property name="checked">
                    <bool>true</bool>
-                  </property>
-                 </widget>
-                </item>
-                <item row="0" column="0">
-                 <widget class="QComboBox" name="calendarCloudConnectionComboBox">
-                  <property name="toolTip">
-                   <string>Cloud connection to use</string>
                   </property>
                  </widget>
                 </item>
@@ -1895,6 +1888,18 @@
                    <bool>true</bool>
                   </property>
                  </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QGroupBox" name="calendarCloudConnectionGroupBox">
+               <property name="title">
+                <string>Which cloud connection do you want to use?</string>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_27">
+                <item>
+                 <widget class="QComboBox" name="calendarCloudConnectionComboBox"/>
                 </item>
                </layout>
               </widget>
@@ -3100,8 +3105,8 @@
                           <rect>
                            <x>0</x>
                            <y>0</y>
-                           <width>413</width>
-                           <height>494</height>
+                           <width>430</width>
+                           <height>538</height>
                           </rect>
                          </property>
                          <layout class="QGridLayout" name="gridLayout_55">

@@ -273,6 +273,8 @@ private slots:
 
     void on_calendarCloudConnectionComboBox_currentIndexChanged(int index);
 
+    void storeSelectedCloudConnection();
+
 private:
 
     Ui::SettingsDialog *ui;
@@ -379,8 +381,6 @@ private:
     void storeOwncloudDebugData() const;
 
     void initCloudConnectionComboBox(int selectedId = -1);
-
-    void storeSelectedCloudConnection();
 };
 
 #endif // SETTINGSDIALOG_H
