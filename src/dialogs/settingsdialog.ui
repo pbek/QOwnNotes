@@ -397,7 +397,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>1</number>
+            <number>3</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -1770,7 +1770,11 @@
                  </widget>
                 </item>
                 <item row="0" column="0">
-                 <widget class="QComboBox" name="calendarCloudConnectionComboBox"/>
+                 <widget class="QComboBox" name="calendarCloudConnectionComboBox">
+                  <property name="toolTip">
+                   <string>Cloud connection to use</string>
+                  </property>
+                 </widget>
                 </item>
                </layout>
               </widget>
@@ -3096,8 +3100,8 @@
                           <rect>
                            <x>0</x>
                            <y>0</y>
-                           <width>430</width>
-                           <height>538</height>
+                           <width>413</width>
+                           <height>494</height>
                           </rect>
                          </property>
                          <layout class="QGridLayout" name="gridLayout_55">
