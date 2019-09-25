@@ -18,11 +18,16 @@ ImageDialog::ImageDialog(QWidget *parent) :
     ui->previewFrame->setVisible(false);
     ui->toolFrame->hide();
 
+    QSettings settings;
+    ui->disableCopyingCheckBox->setChecked(settings.value("ImageDialog/disableCopying").toBool());
+
     QClipboard *clipboard = QApplication::clipboard();
     QPixmap pixmap = clipboard->pixmap();
 
     if (!pixmap.isNull()) { // set image from clipboard
         ui->fileEdit->setDisabled(true);
+        ui->disableCopyingCheckBox->setChecked(false);
+        ui->disableCopyingCheckBox->setDisabled(true);
         setPixmap(pixmap, true);
     } else {
         QString text = clipboard->text();
@@ -33,9 +38,6 @@ ImageDialog::ImageDialog(QWidget *parent) :
             ui->fileEdit->setText(text);
         }
     }
-
-    QSettings settings;
-    ui->disableCopyingCheckBox->setChecked(settings.value("ImageDialog/disableCopying").toBool());
 
     connect(ui->graphicsView, SIGNAL(scrolledContentsBy(int, int)),
             this, SLOT(scrolledGraphicsViewContentsBy(int, int)));
@@ -80,6 +82,7 @@ void ImageDialog::on_openButton_clicked() {
         QString filePath = dialog.selectedFile();
 
         if (!filePath.isEmpty()) {
+            ui->disableCopyingCheckBox->setEnabled(true);
             ui->fileEdit->setEnabled(true);
             // the pixmap will be updated by the textChanged handler
             ui->fileEdit->setText(filePath);

@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 19.9.18
+- if you have an image in the clipboard while opening the *Image dialog* the
+  checkbox `Don't copy image to media folder` will now be automatically disabled
 - the **title detection** in the **Link dialog** was **improved**
 
 ## 19.9.17
