@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 19.9.19
+- there now is a **typewriter mode** that you can turn on in the *Window menu*
+  (for [#1296](https://github.com/pbek/QOwnNotes/issues/1296))
 - fixed a problem with entering a `/` in the server url in the cloud connection settings
 
 ## 19.9.18

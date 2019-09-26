@@ -2247,6 +2247,10 @@ void MainWindow::readSettings() {
         // or not
         on_actionAllow_note_editing_triggered(isAllowNoteEditing);
     }
+
+    // we want to trigger the event afterwards so the settings of the note edits are updated
+    bool centerCursor = settings.value("Editor/centerCursor").toBool();
+    ui->actionTypewriter_mode->setChecked(centerCursor);
 }
 
 /**
@@ -11219,4 +11223,11 @@ void MainWindow::disableFullScreenMode() {
     if (isFullScreen()) {
         on_actionToggle_fullscreen_triggered();
     }
+}
+
+void MainWindow::on_actionTypewriter_mode_toggled(bool arg1) {
+    QSettings settings;
+    settings.setValue("Editor/centerCursor", arg1);
+    ui->noteTextEdit->updateSettings();
+    ui->encryptedNoteTextEdit->updateSettings();
 }

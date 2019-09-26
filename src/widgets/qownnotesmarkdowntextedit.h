@@ -1,5 +1,4 @@
-#ifndef QOWNNOTESMARKDOWNTEXTEDIT_H
-#define QOWNNOTESMARKDOWNTEXTEDIT_H
+#pragma once
 
 #include <QObject>
 #include <helpers/qownnotesmarkdownhighlighter.h>
@@ -25,7 +24,7 @@ public:
     };
     Q_ENUMS(FontModificationMode)
 
-    explicit QOwnNotesMarkdownTextEdit(QWidget *parent = 0);
+    explicit QOwnNotesMarkdownTextEdit(QWidget *parent = nullptr);
 
     void setStyles();
     void openUrl(QString urlString);
@@ -54,5 +53,3 @@ private:
 Q_SIGNALS:
     void resize(QResizeEvent* event);
 };
-
-#endif // QOWNNOTESMARKDOWNTEXTEDIT_H

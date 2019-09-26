@@ -1172,6 +1172,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="menuWorkspace"/>
     <addaction name="separator"/>
     <addaction name="actionUse_softwrap_in_note_editor"/>
+    <addaction name="actionTypewriter_mode"/>
     <addaction name="separator"/>
     <addaction name="actionToggle_distraction_free_mode"/>
     <addaction name="menuEditor_width"/>
@@ -2498,6 +2499,14 @@ p, li { white-space: pre-wrap; }
     <string notr="true">F11</string>
    </property>
   </action>
+  <action name="actionTypewriter_mode">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Typewriter mode</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
@@ -2546,8 +2555,8 @@ p, li { white-space: pre-wrap; }
   <tabstop>noteTextView</tabstop>
  </tabstops>
  <resources>
-  <include location="breeze-qownnotes.qrc"/>
   <include location="breeze-dark-qownnotes.qrc"/>
+  <include location="breeze-qownnotes.qrc"/>
   <include location="images.qrc"/>
  </resources>
  <connections/>

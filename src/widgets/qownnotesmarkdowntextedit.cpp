@@ -351,6 +351,8 @@ void QOwnNotesMarkdownTextEdit::updateSettings() {
             _highlighter->rehighlight();
         }
     }
+
+    _centerCursor = settings.value("Editor/centerCursor").toBool();
 }
 
 /**

@@ -577,6 +577,8 @@ private slots:
 
     void copySelectedNotesToFolder(const QString& destinationFolder, QString noteFolderPath = "");
 
+    void on_actionTypewriter_mode_toggled(bool arg1);
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;
