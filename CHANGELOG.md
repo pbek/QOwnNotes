@@ -4,6 +4,7 @@
 - there now is a **typewriter mode** that you can turn on in the *Window menu*
   (for [#1296](https://github.com/pbek/QOwnNotes/issues/1296))
 - fixed a problem with entering a `/` in the server url in the cloud connection settings
+- added more Italian, French translation (thank you tiwi90, Botigli)
 
 ## 19.9.18
 - **cloud connection editing** was **improved** in the *Settings dialog*
