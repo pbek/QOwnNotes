@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 19.9.19
+- fixed a problem with entering a `/` in the server url in the cloud connection settings
+
 ## 19.9.18
 - **cloud connection editing** was **improved** in the *Settings dialog*
     - parameters are now instantly stored

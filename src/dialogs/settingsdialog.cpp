@@ -583,7 +583,6 @@ void SettingsDialog::storeSelectedCloudConnection() {
     // remove trailing "/" of the server url
     if (url.endsWith("/")) {
         url.chop(1);
-        ui->serverUrlEdit->setText(url);
     }
 
     // store previously selected cloud connection
