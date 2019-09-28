@@ -367,22 +367,19 @@ void QOwnNotesMarkdownTextEdit::highlightCurrentLine()
 
     QList<QTextEdit::ExtraSelection> extraSelections;
 
-    // check if current line is really visible!
-    if (!isReadOnly()) {
-        ensureCursorVisible();
-        QTextEdit::ExtraSelection selection = QTextEdit::ExtraSelection();
+    ensureCursorVisible();
+    QTextEdit::ExtraSelection selection = QTextEdit::ExtraSelection();
 
-        QColor lineColor = Utils::Schema::schemaSettings->getBackgroundColor(
-                MarkdownHighlighter::HighlighterState::
-                CurrentLineBackgroundColor);
+    QColor lineColor = Utils::Schema::schemaSettings->getBackgroundColor(
+            MarkdownHighlighter::HighlighterState::
+            CurrentLineBackgroundColor);
 
-        selection.format.setBackground(lineColor);
-        selection.format.setProperty(QTextFormat::FullWidthSelection, true);
-        selection.cursor = textCursor();
+    selection.format.setBackground(lineColor);
+    selection.format.setProperty(QTextFormat::FullWidthSelection, true);
+    selection.cursor = textCursor();
 //        selection.cursor.clearSelection();
 //        selection.cursor.select(QTextCursor::BlockUnderCursor);
-        extraSelections.append(selection);
-    }
+    extraSelections.append(selection);
 
     // be aware that extra selections, like for global searching, gets
     // removed when the current line gets highlighted

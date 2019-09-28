@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 19.9.20
+- the highlighting of the current line now also works in read-only mode
+
 ## 19.9.19
 - there now is a **typewriter mode** that you can turn on in the *Window menu*
   (for [#1296](https://github.com/pbek/QOwnNotes/issues/1296))
