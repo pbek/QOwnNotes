@@ -53,15 +53,16 @@ You can visit the [QOwnNotes project page](https://www.qownnotes.org) for more *
 
 ## Features
 
-- multiple note folders can be used
-- you can use your existing text or markdown files, no need for an import most of the times
-- older versions of your notes can be restored from your ownCloud / Nextcloud server (install [QOwnNotesAPI](https://github.com/pbek/qownnotesapi) on your server)
-- trashed notes can be restored from your ownCloud / Nextcloud server (install [QOwnNotesAPI](https://github.com/pbek/qownnotesapi) on your server)
+- **multiple note folders** can be used
+- you can **use your existing text or markdown files**, no need for an import most of the times
+- older **versions of your notes** can be restored from your Nextcloud / ownCloud server (install [QOwnNotesAPI](https://github.com/pbek/qownnotesapi) on your server)
+- **trashed notes** can be restored from your Nextcloud / ownCloud server (install [QOwnNotesAPI](https://github.com/pbek/qownnotesapi) on your server)
+    - there also is a local trash
 - sub-string searching of notes is possible and search results are highlighted in the notes
-- application can be operated with customizable keyboard shortcuts
+- application can be operated with **customizable keyboard shortcuts**
 - external changes of note files are watched (notes or note list are reloaded)
-- differences between current note and externally changed note are showed in a dialog
-- markdown highlighting of notes and a markdown preview mode
+- differences between current note and externally changed note are shown in a dialog
+- **markdown highlighting** of notes and a markdown **preview**
 - scripting support and an online [script repository](https://github.com/qownnotes/scripts)
   where you can install scripts inside the application
 - [QOwnNotes Web Companion browser extension](https://github.com/qownnotes/web-companion)
@@ -70,27 +71,27 @@ You can visit the [QOwnNotes project page](https://www.qownnotes.org) for more *
 	  page to install the app on Google Chrome
 	- visit the [Firefox Add-ons page](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion)
 	  page to install the app on Mozilla Firefox
-- notes are getting their name from the first line of the note text (just like in the ownCloud notes web-application) and the note text files are automatically renamed, if the the first line changes
+- notes are getting their name from the first line of the note text (just like in the Nextcloud / ownCloud notes web-application) and the note text files are automatically renamed, if the the first line changes
     - this feature can also be turned off and you can use any filename you like
-- manage your ownCloud todo lists (ownCloud tasks or Tasks Plus / Calendar Plus)
-- encryption of notes (AES-256 is built in or you can use custom encryption methods like
+- manage your Nextcloud / ownCloud todo lists (ownCloud tasks or Tasks Plus / Calendar Plus)
+- **encryption of notes** (AES-256 is built in or you can use custom encryption methods like
   **[Keybase.io](https://keybase.io)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) or
   **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml)))
-- dark mode theme support
-- all panels can be placed wherever you want, they can even float or stack (fully dockable)
-- toolbars are fully customizable
-- support for freedesktop theme icons, so you can use QOwnNotes with your
+- **dark mode** theme support
+- all **panels can be placed wherever you want**, they can even float or stack (fully dockable)
+- **toolbars** are **fully customizable**
+- support for **freedesktop theme icons**, so you can use QOwnNotes with your
   native desktop icons and with your favorite dark desktop theme
   QOwnNotes supports Freedesktop icon themes
-- QOwnNotes is available in many different languages like English, German,
-  French, Polish, Chinese, Russian, Portuguese, Hungarian, Dutch and Spanish
-    - [your kind help](https://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes)
-      is needed to maintain these translations or to translate QOwnNotes
-      in more languages
-- support for hierarchical note tagging and note subfolders
-- support for sharing notes on your ownCloud / Nextcloud server
-- portable mode for carrying QOwnNotes around on USB sticks
+- support for hierarchical **note tagging** and **note subfolders**
+- support for **sharing notes** on your Nextcloud / ownCloud server
+- **portable mode** for carrying QOwnNotes around on USB sticks
+- **Vim mode**
+- **distraction free mode**, **full-screen mode**, **typewriter mode**
 - Evernote import
+- QOwnNotes is **available in many different languages** like English, German, French, Polish, Chinese, Japanese, Russian, Portuguese, Hungarian, Dutch and Spanish
+	- [Your help](https://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes) is very much appreciated to improve these translations or to translate QOwnNotes in more languages
+	- Join the fun at **[Crowdin](https://crowdin.com/project/qownnotes/invite)** to **help** with the **translations**
 
 ## Building QOwnNotes
 
