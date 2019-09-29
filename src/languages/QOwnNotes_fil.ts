@@ -23,79 +23,79 @@
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="14"/>
       <source>Insert attachment</source>
-      <translation type="unfinished">Insert attachment</translation>
+      <translation>Ipasok ng naka attachment</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="20"/>
       <source>Image filename or URL</source>
-      <translation type="unfinished">Image filename or URL</translation>
+      <translation>Ang filename ng imahe o URL</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="26"/>
       <source>Path to file or URL</source>
-      <translation type="unfinished">Path to file or URL</translation>
+      <translation>Landas sa file o URL</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="36"/>
       <source>Select file</source>
-      <translation type="unfinished">Select file</translation>
+      <translation>Piliin ang file</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="46"/>
       <source>Title of the image link</source>
-      <translation type="unfinished">Title of the image link</translation>
+      <translation>Pamagat ng link ng imahe</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="49"/>
       <source>Title</source>
-      <translation type="unfinished">Title</translation>
+      <translation>Pamagat</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="94"/>
       <source>Cancel download</source>
-      <translation type="unfinished">Cancel download</translation>
+      <translation>Ikansela ang pag-download</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="117"/>
       <source>Download URL</source>
       <comment>The URL will be downloaded</comment>
-      <translation type="unfinished">Download URL</translation>
+      <translation>Mag-download ng URL</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="43"/>
       <source>Select file to insert</source>
-      <translation type="unfinished">Select file to insert</translation>
+      <translation>Piliin ang file na i-insert</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="140"/>
       <source>Download error</source>
-      <translation type="unfinished">Download error</translation>
+      <translation>I-download ang mali</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="141"/>
       <source>Error while downloading:
 %1</source>
-      <translation type="unfinished">Error while downloading:
+      <translation>Mali habang idina-download ang:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="169"/>
       <location filename="../dialogs/attachmentdialog.cpp" line="193"/>
       <source>File error</source>
-      <translation type="unfinished">File error</translation>
+      <translation>Mali sa file</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="170"/>
       <source>Could not open temporary file:
 %1</source>
-      <translation type="unfinished">Could not open temporary file:
+      <translation>Hindi mabuksan ng pansamantalang file:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="194"/>
       <source>Could not store downloaded file:
 %1</source>
-      <translation type="unfinished">Could not store downloaded file:
+      <translation>Maaaring itago ang mga file na na-download:
 %1</translation>
     </message>
   </context>
@@ -109,7 +109,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="121"/>
       <source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</source>
-      <translation type="unfinished">To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</translation>
+      <translation>Upang makakuha ng isang enex file na kailangan mong pumili ng isa o maraming mga tala sa iyong client sa Evernotes desktop at i-click ang "Mga tala sa I-export..." sa menu ng File.</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="74"/>
@@ -119,7 +119,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="30"/>
       <source>Select file</source>
-      <translation type="unfinished">Select file</translation>
+      <translation>Piliin ang file</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="54"/>
@@ -129,12 +129,12 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="91"/>
       <source>Metadata to import</source>
-      <translation type="unfinished">Metadata to import</translation>
+      <translation>Metadata upang i-import</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="165"/>
       <source>Import notes</source>
-      <translation type="unfinished">Import notes</translation>
+      <translation>Mag-import ng mga tala</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="23"/>
@@ -164,27 +164,27 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="648"/>
       <source>Basic attributes</source>
-      <translation type="unfinished">Basic attributes</translation>
+      <translation>Mga pangunahing katangian</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="649"/>
       <source>Created date</source>
-      <translation type="unfinished">Created date</translation>
+      <translation>Nilikha na petsa</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="651"/>
       <source>Updated date</source>
-      <translation type="unfinished">Updated date</translation>
+      <translation>Nai-update na petsa</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="654"/>
       <source>Note attributes</source>
-      <translation type="unfinished">Note attributes</translation>
+      <translation>Tandaan ang mga katangian</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="655"/>
       <source>Subject date</source>
-      <translation type="unfinished">Subject date</translation>
+      <translation>Petsa ng paksa</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="657"/>
@@ -194,72 +194,72 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="659"/>
       <source>Longitude</source>
-      <translation type="unfinished">Longitude</translation>
+      <translation>Haba</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="661"/>
       <source>Altitude</source>
-      <translation type="unfinished">Altitude</translation>
+      <translation>Pagkaluwang</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="663"/>
       <source>Author</source>
-      <translation type="unfinished">Author</translation>
+      <translation>May-akda</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="665"/>
       <source>Source</source>
-      <translation type="unfinished">Source</translation>
+      <translation>Pinagmulan</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="667"/>
       <source>Source URL</source>
-      <translation type="unfinished">Source URL</translation>
+      <translation>Pinagmulan ng URL</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="669"/>
       <source>Source application</source>
-      <translation type="unfinished">Source application</translation>
+      <translation>Application application</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="671"/>
       <source>Reminder order</source>
-      <translation type="unfinished">Reminder order</translation>
+      <translation>Order ng paalala</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="673"/>
       <source>Reminder time</source>
-      <translation type="unfinished">Reminder time</translation>
+      <translation>Oras ng paalala</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="675"/>
       <source>Reminder done time</source>
-      <translation type="unfinished">Reminder done time</translation>
+      <translation>Tapos na ang paalala</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="677"/>
       <source>Place name</source>
-      <translation type="unfinished">Place name</translation>
+      <translation>Pangalan ng lugar</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="679"/>
       <source>Content class</source>
-      <translation type="unfinished">Content class</translation>
+      <translation>Klase ng nilalaman</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="681"/>
       <source>Application data</source>
-      <translation type="unfinished">Application data</translation>
+      <translation>Data ng aplikasyon</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="755"/>
       <source>Attribute</source>
-      <translation type="unfinished">Attribute</translation>
+      <translation>Katangian</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="755"/>
       <source>Value</source>
-      <translation type="unfinished">Value</translation>
+      <translation>Halaga</translation>
     </message>
   </context>
   <context>
@@ -268,62 +268,62 @@
       <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="166"/>
       <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="174"/>
       <source>Unknown option: %1</source>
-      <translation type="unfinished">Unknown option: %1</translation>
+      <translation>Hindi kilalang pagpipilian: %1</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="169"/>
       <source>Argument must be positive: %1=%2</source>
-      <translation type="unfinished">Argument must be positive: %1=%2</translation>
+      <translation>Ang argumento ay dapat maging positibo: %1 = %2</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="958"/>
       <source>Mark "%1" not set.</source>
-      <translation type="unfinished">Mark "%1" not set.</translation>
+      <translation>Markahan ang "%1" hindi nakatakda.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="2836"/>
       <source>Recursive mapping</source>
-      <translation type="unfinished">Recursive mapping</translation>
+      <translation>Pagma-map ng recursive</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3705"/>
       <source>%1%2%</source>
-      <translation type="unfinished">%1%2%</translation>
+      <translation>%1%2%</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3707"/>
       <source>%1All</source>
-      <translation type="unfinished">%1All</translation>
+      <translation>%1All</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3721"/>
       <source>Not implemented in FakeVim.</source>
-      <translation type="unfinished">Not implemented in FakeVim.</translation>
+      <translation>Hindi ipinatupad sa FakeVim.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4301"/>
       <source>Type Alt-V, Alt-V to quit FakeVim mode.</source>
-      <translation type="unfinished">Type Alt-V, Alt-V to quit FakeVim mode.</translation>
+      <translation>I-type ang Alt-V, Alt-V upang umalis sa mode na FakeVim.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5749"/>
       <source>Unknown option:</source>
-      <translation type="unfinished">Unknown option:</translation>
+      <translation>Hindi kilalang pagpipilian:</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5759"/>
       <source>Invalid argument:</source>
-      <translation type="unfinished">Invalid argument:</translation>
+      <translation>Hindi wastong argumento:</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5761"/>
       <source>Trailing characters:</source>
-      <translation type="unfinished">Trailing characters:</translation>
+      <translation>Mga character ng trailing:</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5843"/>
       <source>Move lines into themselves.</source>
-      <translation type="unfinished">Move lines into themselves.</translation>
+      <translation>Ilipat ang mga linya sa kanilang sarili.</translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5885"/>
@@ -844,19 +844,19 @@
       <location filename="../widgets/layoutwidget.cpp" line="166"/>
       <source>Most of the panels, like the note list on the left, the tagging panels, the note edit panel in the center and the preview panel on the right are enabled by default.</source>
       <comment>Layout description</comment>
-      <translation type="unfinished">Most of the panels, like the note list on the left, the tagging panels, the note edit panel in the center and the preview panel on the right are enabled by default.</translation>
+      <translation>Karamihan sa mga panel, tulad ng listahan ng tala sa kaliwa, ang mga panel ng pag-tag, mga panel ng pag-edit ng tala sa gitna at ang panel ng preview sa kanan ay pinagana nang default.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="171"/>
       <source>Most of the panels, like the note list on the left, the tagging panels, the note edit panel on the right and the preview panel on top of the note edit panel are enabled by default.</source>
       <comment>Layout description</comment>
-      <translation type="unfinished">Most of the panels, like the note list on the left, the tagging panels, the note edit panel on the right and the preview panel on top of the note edit panel are enabled by default.</translation>
+      <translation>Karamihan sa mga panel, tulad ng listahan ng tala sa kaliwa, ang mga panel ng pag-tag, ang panel ng pag-edit ng nota sa kanan at ang panel ng preview sa itaas ng panel ng pag-edit ng nota ay pinagana nang default.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="176"/>
       <source>Tiny one column layout with note search, note list and note edit on top of each other.</source>
       <comment>Layout description</comment>
-      <translation type="unfinished">Tiny one column layout with note search, note list and note edit on top of each other.</translation>
+      <translation>Napakaliit ng isang layout ng haligi na may paghahanap ng tala, listahan ng tala at tala sa pag-edit sa tuktok ng bawat isa.</translation>
     </message>
   </context>
   <context>
@@ -879,27 +879,27 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="94"/>
       <source>Note</source>
-      <translation type="unfinished">Note</translation>
+      <translation>Tala</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="141"/>
       <source>Enter the name of the link (optional)</source>
-      <translation type="unfinished">Enter the name of the link (optional)</translation>
+      <translation>Ipasok ang pangalan ng link (opsyonal)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="144"/>
       <source>Name of link (optional)</source>
-      <translation type="unfinished">Name of link (optional)</translation>
+      <translation>Pangalan ng link (opsyonal)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="154"/>
       <source>Enter a description for the link (optional)</source>
-      <translation type="unfinished">Enter a description for the link (optional)</translation>
+      <translation>Maglagay ng isang paglalarawan para sa link (opsyonal)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="157"/>
       <source>Description of link (optional)</source>
-      <translation type="unfinished">Description of link (optional)</translation>
+      <translation>Paglalarawan ng link (opsyonal)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="109"/>
@@ -1090,13 +1090,13 @@
     <message>
       <location filename="../mainwindow.ui" line="391"/>
       <source>Find navigation item</source>
-      <translation type="unfinished">Find navigation item</translation>
+      <translation>Maghanap ng nabigasyon item</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="680"/>
       <location filename="../mainwindow.cpp" line="7856"/>
       <source>Add a tag to the current note</source>
-      <translation type="unfinished">Add a tag to the current note</translation>
+      <translation>Magdagdag ng isang tag sa kasalukuyang tala</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="850"/>
@@ -1171,7 +1171,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1336"/>
       <source>Post questions, feature requests or issues</source>
-      <translation type="unfinished">Post questions, feature requests or issues</translation>
+      <translation>Mag-post ng mga katanungan, tampok na mga kahilingan o isyu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1347"/>
@@ -1273,7 +1273,7 @@
     <message>
       <location filename="../mainwindow.cpp" line="7857"/>
       <source>Add a tag to the selected notes</source>
-      <translation type="unfinished">Add a tag to the selected notes</translation>
+      <translation>Magdagdag ng isang tag sa mga napiling tala</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="694"/>
@@ -1382,7 +1382,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1158"/>
       <source>Jump to</source>
-      <translation type="unfinished">Jump to</translation>
+      <translation>Tumalon sa</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1194"/>
@@ -1397,7 +1397,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1339"/>
       <source>Post questions, feature requests or problems with the help of the issue assistant</source>
-      <translation type="unfinished">Post questions, feature requests or problems with the help of the issue assistant</translation>
+      <translation>Mag-post ng mga katanungan, tampok na mga hiling o problema sa tulong ng isyu ng isyu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1397"/>
@@ -1408,7 +1408,7 @@
       <location filename="../mainwindow.ui" line="1437"/>
       <location filename="../mainwindow.ui" line="1440"/>
       <source>Auto format table</source>
-      <translation type="unfinished">Auto format table</translation>
+      <translation>Talahanayan ng format ng kotse</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1469"/>
@@ -1619,7 +1619,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2090"/>
       <source>Show note list under tag panel</source>
-      <translation type="unfinished">Show note list under tag panel</translation>
+      <translation>Show note list under tag panel</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2108"/>
@@ -1629,18 +1629,18 @@
     <message>
       <location filename="../mainwindow.ui" line="2129"/>
       <source>Import notes from text files</source>
-      <translation type="unfinished">Import notes from text files</translation>
+      <translation>Mag-import ng mga tala mula sa mga file ng teksto</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2138"/>
       <source>Manage orphaned image files</source>
-      <translation type="unfinished">Manage orphaned image files</translation>
+      <translation>Pamahalaan ang mga ulila na file ng imahe</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2150"/>
       <location filename="../mainwindow.ui" line="2153"/>
       <source>Open the Telegram group</source>
-      <translation type="unfinished">Open the Telegram group</translation>
+      <translation>Buksan ang pangkat ng Telegram</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2165"/>
@@ -1706,7 +1706,7 @@
       <location filename="../mainwindow.ui" line="2286"/>
       <location filename="../mainwindow.ui" line="2289"/>
       <source>Search selected text on the web</source>
-      <translation type="unfinished">Search selected text on the web</translation>
+      <translation>Maghanap ng mga napiling teksto sa web</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2297"/>
@@ -1721,7 +1721,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2313"/>
       <source>Copy note headline</source>
-      <translation type="unfinished">Copy note headline</translation>
+      <translation>Headline ng tala ng kopya</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2325"/>
@@ -1779,48 +1779,48 @@
       <location filename="../mainwindow.ui" line="2436"/>
       <location filename="../mainwindow.ui" line="2439"/>
       <source>Jump to note edit panel</source>
-      <translation type="unfinished">Jump to note edit panel</translation>
+      <translation>Tumalon upang tandaan ang panel ng pag-edit</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2451"/>
       <source>Manage orphaned attachments</source>
-      <translation type="unfinished">Manage orphaned attachments</translation>
+      <translation>Pamahalaan ang mga kalakihan sa ulila</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2456"/>
       <source>Jump to note subfolder panel</source>
-      <translation type="unfinished">Jump to note subfolder panel</translation>
+      <translation>Tumalon upang tandaan ang subfolder panel</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2464"/>
       <source>Jump to tags panel</source>
-      <translation type="unfinished">Jump to tags panel</translation>
+      <translation>Tumalon sa mga panel panel</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2472"/>
       <source>Jump to note list panel</source>
-      <translation type="unfinished">Jump to note list panel</translation>
+      <translation>Tumalon sa tala ng listahan ng listahan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2480"/>
       <source>Activate context menu</source>
-      <translation type="unfinished">Activate context menu</translation>
+      <translation>I-aktibo ang menu ng konteksto</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2488"/>
       <source>Import bookmarks from server</source>
-      <translation type="unfinished">Import bookmarks from server</translation>
+      <translation>Mag-import ng mga bookmark mula sa server</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2493"/>
       <location filename="../mainwindow.ui" line="2496"/>
       <source>Toggle full-screen mode</source>
-      <translation type="unfinished">Toggle full-screen mode</translation>
+      <translation>I-configure ang mode na full-screen</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2507"/>
       <source>Typewriter mode</source>
-      <translation type="unfinished">Typewriter mode</translation>
+      <translation>Mode ng makinilya</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1868"/>
@@ -1879,7 +1879,7 @@ Context | Edit Context</translation>
     <message>
       <location filename="../mainwindow.ui" line="510"/>
       <source>Note operations…</source>
-      <translation type="unfinished">Note operations…</translation>
+      <translation>Tandaan ang mga operasyon…</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1556"/>
@@ -1980,24 +1980,24 @@ Restore current note?</source>
     <message>
       <location filename="../mainwindow.cpp" line="2946"/>
       <source>Abort</source>
-      <translation type="unfinished">Abort</translation>
+      <translation>Pagpapalaglag</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2946"/>
       <source>Loading notes…</source>
-      <translation type="unfinished">Loading notes…</translation>
+      <translation>Naglo-load ng mga tala…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3149"/>
       <source>Delete conflicted database copies</source>
-      <translation type="unfinished">Delete conflicted database copies</translation>
+      <translation>Tanggalin ang salungat na mga kopya ng database</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3174"/>
       <source>Removed %n conflicted database copies</source>
-      <translation type="unfinished">
-        <numerusform>Removed %n conflicted database copies</numerusform>
-        <numerusform>Removed %n conflicted database copies</numerusform>
+      <translation>
+        <numerusform>Inalis ang %n salungat na kopya ng database</numerusform>
+        <numerusform>Inalis ang %n salungat na mga kopya ng database</numerusform>
       </translation>
     </message>
     <message>
@@ -2192,12 +2192,12 @@ Kung pinagana ang trash sa iyong sarilingCloud server dapat mong maibalik ang mg
     <message>
       <location filename="../mainwindow.cpp" line="5619"/>
       <source>Note was not found</source>
-      <translation type="unfinished">Note was not found</translation>
+      <translation>Ang nota ay hindi natagpuan</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5620"/>
       <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+      <translation>Hindi natagpuan ang tala, lumikha ng bagong tala &lt;strong&gt;%1 &lt;/strong&gt;?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5876"/>
@@ -2212,7 +2212,7 @@ Kung pinagana ang trash sa iyong sarilingCloud server dapat mong maibalik ang mg
     <message>
       <location filename="../mainwindow.cpp" line="5957"/>
       <source>Copy code block</source>
-      <translation type="unfinished">Copy code block</translation>
+      <translation>I-block ang code ng code</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5976"/>
@@ -2324,12 +2324,12 @@ Kung pinagana ang trash sa iyong sarilingCloud server dapat mong maibalik ang mg
     <message>
       <location filename="../mainwindow.cpp" line="7902"/>
       <source>Remove tag '%1' from the current note</source>
-      <translation type="unfinished">Remove tag '%1' from the current note</translation>
+      <translation>Alisin ang tag '%1' mula sa kasalukuyang tala</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7904"/>
       <source>Remove tag '%1' from the selected notes</source>
-      <translation type="unfinished">Remove tag '%1' from the selected notes</translation>
+      <translation>Alisin ang tag '%1' mula sa mga napiling tala</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8107"/>
@@ -2349,7 +2349,7 @@ Kung pinagana ang trash sa iyong sarilingCloud server dapat mong maibalik ang mg
     <message>
       <location filename="../mainwindow.cpp" line="8113"/>
       <source>&amp;Move tags to…</source>
-      <translation type="unfinished">&amp;Move tags to…</translation>
+      <translation>&amp;Ilipat ang mga tag sa…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8332"/>
@@ -2396,22 +2396,22 @@ Kung pinagana ang trash sa iyong sarilingCloud server dapat mong maibalik ang mg
     <message>
       <location filename="../mainwindow.cpp" line="9328"/>
       <source>&amp;Move notes to…</source>
-      <translation type="unfinished">&amp;Move notes to…</translation>
+      <translation>&amp;Ilipat ang mga tala sa…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9329"/>
       <source>&amp;Copy notes to…</source>
-      <translation type="unfinished">&amp;Copy notes to…</translation>
+      <translation>&amp;Kopyahin ang mga tala sa…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9364"/>
       <source>Move notes to subfolder…</source>
-      <translation type="unfinished">Move notes to subfolder…</translation>
+      <translation>Ilipat ang mga tala sa subfolder…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9368"/>
       <source>Copy notes to subfolder…</source>
-      <translation type="unfinished">Copy notes to subfolder…</translation>
+      <translation>Kopyahin ang mga tala sa subfolder…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9376"/>
@@ -3558,12 +3558,12 @@ Kung pinagana ang trash sa iyong sarilingCloud server dapat mong maibalik ang mg
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="416"/>
       <source>Note editing disabled</source>
-      <translation type="unfinished">Note editing disabled</translation>
+      <translation>Tandaan na hindi pinagana ang pag-edit</translation>
     </message>
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="417"/>
       <source>Note editing is currently disabled, do you want to allow again?</source>
-      <translation type="unfinished">Note editing is currently disabled, do you want to allow again?</translation>
+      <translation>Ang pag-edit ng tala ay kasalukuyang hindi pinagana, nais mo bang payagan muli?</translation>
     </message>
   </context>
   <context>
@@ -3576,32 +3576,32 @@ Kung pinagana ang trash sa iyong sarilingCloud server dapat mong maibalik ang mg
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="107"/>
       <source>Advanced search / replace text</source>
-      <translation type="unfinished">Advanced search / replace text</translation>
+      <translation>Advanced na paghahanap / palitan ang teksto</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="90"/>
       <source>Close search</source>
-      <translation type="unfinished">Close search</translation>
+      <translation>Isara ang paghahanap</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="32"/>
       <source>Find in text</source>
-      <translation type="unfinished">Find in text</translation>
+      <translation>Hanapin sa teksto</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="127"/>
       <source>Search forward</source>
-      <translation type="unfinished">Search forward</translation>
+      <translation>Maghanap ng pasulong</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="63"/>
       <source>Search backward</source>
-      <translation type="unfinished">Search backward</translation>
+      <translation>Paghahanap paatras</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="39"/>
       <source>Replace with</source>
-      <translation type="unfinished">Replace with</translation>
+      <translation>Palitan ng</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="80"/>
@@ -3626,7 +3626,7 @@ Kung pinagana ang trash sa iyong sarilingCloud server dapat mong maibalik ang mg
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="224"/>
       <source>Replace one text occurrence</source>
-      <translation type="unfinished">Replace one text occurrence</translation>
+      <translation>Palitan ang isang pangyayari sa teksto</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="227"/>
@@ -3636,12 +3636,12 @@ Kung pinagana ang trash sa iyong sarilingCloud server dapat mong maibalik ang mg
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="237"/>
       <source>Replace all text occurrences</source>
-      <translation type="unfinished">Replace all text occurrences</translation>
+      <translation>Palitan ang lahat ng mga pangyayari sa teksto</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="240"/>
       <source>Replace all</source>
-      <translation type="unfinished">Replace all</translation>
+      <translation>Palitan ang lahat</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="164"/>
@@ -3796,7 +3796,7 @@ Siguraduhin ang folder at ang file nakasulat?</translation>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="444"/>
       <source>Load more scripts</source>
-      <translation type="unfinished">Load more scripts</translation>
+      <translation>Mag-load ng higit pang mga script</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="228"/>
@@ -3958,12 +3958,12 @@ Gusto mo ba i-install ito gayun paman?</translation>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="14"/>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="20"/>
       <source>Import bookmarks</source>
-      <translation type="unfinished">Import bookmarks</translation>
+      <translation>Mag-import ng mga bookmark</translation>
     </message>
     <message>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="47"/>
       <source>%v of %m bookmark(s) imported</source>
-      <translation type="unfinished">%v of %m bookmark(s) imported</translation>
+      <translation>%v ng %m mga bookmark na na-import</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="79"/>
@@ -4536,7 +4536,7 @@ Subukan lang sa sarili mo kong ikaw ay makakuha ng sync conflicts at mataas na v
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="179"/>
       <source>Layout</source>
-      <translation type="unfinished">Layout</translation>
+      <translation>Layout</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="191"/>
@@ -4658,19 +4658,19 @@ Subukan lang sa sarili mo kong ikaw ay makakuha ng sync conflicts at mataas na v
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="991"/>
       <source>Select a connection to edit</source>
-      <translation type="unfinished">Select a connection to edit</translation>
+      <translation>Pumili ng isang koneksyon upang mai-edit</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="998"/>
       <location filename="../dialogs/settingsdialog.ui" line="1001"/>
       <source>Add connection</source>
-      <translation type="unfinished">Add connection</translation>
+      <translation>Magdagdag ng koneksyon</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1012"/>
       <location filename="../dialogs/settingsdialog.ui" line="1015"/>
       <source>Remove connection</source>
-      <translation type="unfinished">Remove connection</translation>
+      <translation>Alisin ang koneksyon</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1029"/>
@@ -4707,12 +4707,12 @@ Subukan lang sa sarili mo kong ikaw ay makakuha ng sync conflicts at mataas na v
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1311"/>
       <source>Connection name:</source>
-      <translation type="unfinished">Connection name:</translation>
+      <translation>Pangalan ng koneksyon:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1898"/>
       <source>Which cloud connection do you want to use?</source>
-      <translation type="unfinished">Which cloud connection do you want to use?</translation>
+      <translation>Aling koneksyon sa ulap ang nais mong gamitin?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1910"/>
@@ -4862,12 +4862,12 @@ Subukan lang sa sarili mo kong ikaw ay makakuha ng sync conflicts at mataas na v
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2597"/>
       <source>You might also want to choose another editor color schema in the editor settings in dark mode.</source>
-      <translation type="unfinished">You might also want to choose another editor color schema in the editor settings in dark mode.</translation>
+      <translation>Maaari mo ring pumili ng isa pang scheme ng kulay ng editor sa mga setting ng editor sa madilim na mode.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2700"/>
       <source>Enable dark mode icon theme</source>
-      <translation type="unfinished">Enable dark mode icon theme</translation>
+      <translation>Paganahin ang tema ng madilim na mode ng madilim</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2630"/>
@@ -4892,32 +4892,32 @@ Subukan lang sa sarili mo kong ikaw ay makakuha ng sync conflicts at mataas na v
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2690"/>
       <source>Enforce system icon theme</source>
-      <translation type="unfinished">Enforce system icon theme</translation>
+      <translation>Pagpapatupad ng tema ng icon ng system</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2796"/>
       <source>Override interface font size</source>
-      <translation type="unfinished">Override interface font size</translation>
+      <translation>Sobra ang laki ng font ng interface</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2805"/>
       <source>Interface font size:</source>
-      <translation type="unfinished">Interface font size:</translation>
+      <translation>Laki ng font ng interface:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3015"/>
       <source>&amp;Add script…</source>
-      <translation type="unfinished">&amp;Add script…</translation>
+      <translation>&amp;Magdagdag ng script…</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3661"/>
       <source>Use legacy way to link to notes, images and attachments</source>
-      <translation type="unfinished">Use legacy way to link to notes, images and attachments</translation>
+      <translation>Gumamit ng paraan ng pamana upang mai-link sa mga tala, larawan at mga kalakip</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3608"/>
       <source>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</source>
-      <translation type="unfinished">When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</translation>
+      <translation>Kapag binubuksan ang mga tala ng posisyon ng cursor sa loob ng tala ay maibabalik sa posisyon kapag ang tala ay huling binisita sa kasalukuyang session</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3628"/>
@@ -4932,12 +4932,12 @@ Subukan lang sa sarili mo kong ikaw ay makakuha ng sync conflicts at mataas na v
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3618"/>
       <source>Automatically close the note folder database to prevent problems with sync tools</source>
-      <translation type="unfinished">Automatically close the note folder database to prevent problems with sync tools</translation>
+      <translation>Awtomatikong isara ang database ng folder ng tala upang maiwasan ang mga problema sa mga tool sa pag-sync</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3621"/>
       <source>Automatically close the note folder database</source>
-      <translation type="unfinished">Automatically close the note folder database</translation>
+      <translation>Awtomatikong isara ang database ng folder ng tala</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3709"/>
@@ -4960,38 +4960,38 @@ Subukan lang sa sarili mo kong ikaw ay makakuha ng sync conflicts at mataas na v
       <location filename="../dialogs/settingsdialog.cpp" line="3695"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3718"/>
       <source>Import settings</source>
-      <translation type="unfinished">Import settings</translation>
+      <translation>Mga setting ng import</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3937"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3661"/>
       <source>Export settings</source>
-      <translation type="unfinished">Export settings</translation>
+      <translation>Mga setting ng pag-export</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4076"/>
       <source>Open issue assistant</source>
-      <translation type="unfinished">Open issue assistant</translation>
+      <translation>Bukas na katulong sa isyu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4087"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Ang pinakamahusay na paraan upang mag-post ng mga isyu ay ang paggamit ng katulong sa isyu sa pamamagitan ng pagpindot sa &lt;span style = "font-weight: 600;"&gt; Buksan ang isyu ng assist &lt;/span&gt; button sa sa ilalim. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4381"/>
       <source>Ignore code font size to allow zooming</source>
-      <translation type="unfinished">Ignore code font size to allow zooming</translation>
+      <translation>Huwag pansinin ang laki ng font ng font upang payagan ang pag-zoom</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4410"/>
       <source>Rendering</source>
-      <translation type="unfinished">Rendering</translation>
+      <translation>Pag-render</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4416"/>
       <source>Enable underline rendering</source>
-      <translation type="unfinished">Enable underline rendering</translation>
+      <translation>Paganahin ang underline na pag-render</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4672"/>
@@ -5006,77 +5006,77 @@ Subukan lang sa sarili mo kong ikaw ay makakuha ng sync conflicts at mataas na v
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4691"/>
       <source>Enable Vim mode (some QOwnNotes shortcuts will not work)</source>
-      <translation type="unfinished">Enable Vim mode (some QOwnNotes shortcuts will not work)</translation>
+      <translation>Paganahin ang mode ng Vim (hindi gumagana ang ilang mga shortcut sa QOwnNotes)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="756"/>
       <source>Cloud connection:</source>
-      <translation type="unfinished">Cloud connection:</translation>
+      <translation>Koneksyon ng ulap:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4776"/>
       <source>Disable cursor blinking</source>
-      <translation type="unfinished">Disable cursor blinking</translation>
+      <translation>Huwag paganahin ang blink ng cursor</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5158"/>
       <source>Ignored sub-folders</source>
-      <translation type="unfinished">Ignored sub-folders</translation>
+      <translation>Hindi pinansin ang mga sub-folder</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5174"/>
       <source>Reset ignored sub-folders</source>
-      <translation type="unfinished">Reset ignored sub-folders</translation>
+      <translation>Hindi na pinansin ang pag-reset ng mga sub-folder</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5194"/>
       <source>Note list panel</source>
-      <translation type="unfinished">Note list panel</translation>
+      <translation>Tandaan ang listahan ng panel</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5266"/>
       <source>Show notes in the note list with preview</source>
-      <translation type="unfinished">Show notes in the note list with preview</translation>
+      <translation>Ipakita ang mga tala sa tala ng tala na may preview</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5501"/>
       <source>Bookmarks</source>
-      <translation type="unfinished">Bookmarks</translation>
+      <translation>Mga bookmark</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5507"/>
       <source>Notes with this tag will be used for fetching bookmarks</source>
-      <translation type="unfinished">Notes with this tag will be used for fetching bookmarks</translation>
+      <translation>Ang mga tala na may tag na ito ay gagamitin para sa pagkuha ng mga bookmark</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5510"/>
       <source>Tag name for bookmarks notes</source>
-      <translation type="unfinished">Tag name for bookmarks notes</translation>
+      <translation>Pangalan ng tag para sa mga tala ng mga bookmark</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5517"/>
       <source>Bookmarks tag:</source>
-      <translation type="unfinished">Bookmarks tag:</translation>
+      <translation>Mga tag ng bookmark:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5524"/>
       <source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
-      <translation type="unfinished">By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</translation>
+      <translation>Sa pamamagitan ng default ang extension ng browser ay magpapakita sa lahat ng mga link ng kasalukuyang tala. Maaari mo ring gawin itong ipakita ang mga espesyal na link sa bookmark ng mga tala na may isang tiyak na tag. Para sa karagdagang impormasyon tungkol sa pag-click sa syntax link ng pag-click sa &lt;a href="%1"&gt; dito &lt;/a&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5537"/>
       <source>Bookmarks note name:</source>
-      <translation type="unfinished">Bookmarks note name:</translation>
+      <translation>Pangalan ng tala ng bookmark:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5544"/>
       <source>This note will be used for adding new bookmarks from the browser extension</source>
-      <translation type="unfinished">This note will be used for adding new bookmarks from the browser extension</translation>
+      <translation>Ang tala na ito ay gagamitin para sa pagdaragdag ng mga bagong bookmark mula sa extension ng browser</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5547"/>
       <source>Note name for adding new bookmarks</source>
-      <translation type="unfinished">Note name for adding new bookmarks</translation>
+      <translation>Tandaan ang pangalan para sa pagdaragdag ng mga bagong bookmark</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5557"/>
@@ -5091,17 +5091,17 @@ Subukan lang sa sarili mo kong ikaw ay makakuha ng sync conflicts at mataas na v
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5597"/>
       <source>Show security token</source>
-      <translation type="unfinished">Show security token</translation>
+      <translation>Ipakita ang token ng seguridad</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5633"/>
       <source>Web socket server support</source>
-      <translation type="unfinished">Web socket server support</translation>
+      <translation>Suporta sa web socket server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5639"/>
       <source>Enable socket server</source>
-      <translation type="unfinished">Enable socket server</translation>
+      <translation>Paganahin ang socket server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5614"/>
@@ -5111,32 +5111,32 @@ Subukan lang sa sarili mo kong ikaw ay makakuha ng sync conflicts at mataas na v
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3569"/>
       <source>Allow the note file name to be different from the headline.&lt;br&gt;Beware that ownCloud Notes needs the file name to be the same as the headline!</source>
-      <translation type="unfinished">Allow the note file name to be different from the headline.&lt;br&gt;Beware that ownCloud Notes needs the file name to be the same as the headline!</translation>
+      <translation>Pahintulutan ang pangalan ng file ng nota sa naiiba sa headline. &lt;br&gt; Mag-ingat na kailangan ng sariling Tala ng Tala ang file ng pangalan upang maging katulad ng headline!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4978"/>
       <source>Note edit panel</source>
-      <translation type="unfinished">Note edit panel</translation>
+      <translation>Tandaan ang panel ng pag-edit</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4984"/>
       <source>If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</source>
-      <translation type="unfinished">If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</translation>
+      <translation>Kung hindi ito pinagana magagawa mong lumikha ng mas kumplikadong mga layout ng panel, ngunit ang lahat ng mga panel ay baguhin ang laki kung ang laki ng window</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4987"/>
       <source>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</source>
-      <translation type="unfinished">Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</translation>
+      <translation>Gamitin ang panel ng pag-edit ng tala bilang nakapirming gitnang widget upang maiba-iba ang laki kung ang window o iba pang mga panel ay baguhin ang laki</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4997"/>
       <source>Note search panel</source>
-      <translation type="unfinished">Note search panel</translation>
+      <translation>Tandaan ang panel ng paghahanap</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5003"/>
       <source>Disable auto-completion of previous searches</source>
-      <translation type="unfinished">Disable auto-completion of previous searches</translation>
+      <translation>Huwag paganahin ang awtomatikong pagkumpleto ng mga nakaraang paghahanap</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5289"/>
@@ -5146,7 +5146,7 @@ Subukan lang sa sarili mo kong ikaw ay makakuha ng sync conflicts at mataas na v
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5295"/>
       <source>Hide navigation item search bar</source>
-      <translation type="unfinished">Hide navigation item search bar</translation>
+      <translation>Itago ang bar ng paghahanap ng item ng nabigasyon</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5309"/>
@@ -5182,12 +5182,12 @@ Subukan lang sa sarili mo kong ikaw ay makakuha ng sync conflicts at mataas na v
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5418"/>
       <source>Layout selector</source>
-      <translation type="unfinished">Layout selector</translation>
+      <translation>Tagapili ng layout</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5424"/>
       <source>You can set a new layout here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</source>
-      <translation type="unfinished">You can set a new layout here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</translation>
+      <translation>Maaari kang magtakda ng isang bagong layout dito. Tandaan na lagi mong maaaring baguhin ang posisyon ng mga panel na may pindutan na &lt;i&gt; I-Unlock ang mga panel &lt;/i&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4718"/>
@@ -5216,7 +5216,7 @@ Subukan lang sa sarili mo kong ikaw ay makakuha ng sync conflicts at mataas na v
       <location filename="../dialogs/settingsdialog.ui" line="5155"/>
       <location filename="../dialogs/settingsdialog.ui" line="5164"/>
       <source>Regular expressions of note sub-folders to ignore, separated by ";"</source>
-      <translation type="unfinished">Regular expressions of note sub-folders to ignore, separated by ";"</translation>
+      <translation>Regular na mga pagpapahayag ng mga sub-folder ng tala upang huwag pansinin, na pinaghiwalay ng ";"</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5259"/>
@@ -5384,7 +5384,7 @@ Subukan lang sa sarili mo kong ikaw ay makakuha ng sync conflicts at mataas na v
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="276"/>
       <source>Browser extension</source>
-      <translation type="unfinished">Browser extension</translation>
+      <translation>Extension ng browser</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1729"/>
@@ -5848,7 +5848,7 @@ burahin ang pagbigkas karacter</translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1548"/>
       <source>Shortcut already assigned</source>
-      <translation type="unfinished">Shortcut already assigned</translation>
+      <translation>Naka-assign na ang Shortcut</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1725"/>
@@ -5949,22 +5949,22 @@ Linyang error na mensahe: </translation>
       <location filename="../dialogs/settingsdialog.cpp" line="3660"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3717"/>
       <source>INI files</source>
-      <translation type="unfinished">INI files</translation>
+      <translation>INI na mga file</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3696"/>
       <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
-      <translation type="unfinished">Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</translation>
+      <translation>Nais mo bang i-import ang mga setting? Ang iyong kasalukuyang setting ay aalisin at hindi bawat setting ay maaaring maibalik, tulad ng mga setting ng folder ng tala at kung aling mga script ang iyong ginagamit. Kailangan mo ring ayusin ang ilang mga setting, lalo na sa mga platform, ngunit mananatiling buo ang iyong mga tala!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3706"/>
       <source>The application will be quit after the import.</source>
-      <translation type="unfinished">The application will be quit after the import.</translation>
+      <translation>Ang application ay hihinto matapos ang pag-import.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3707"/>
       <source>The application will be restarted after the import.</source>
-      <translation type="unfinished">The application will be restarted after the import.</translation>
+      <translation>Ang application ay mai-restart pagkatapos ng pag-import.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2584"/>
@@ -5984,7 +5984,7 @@ Linyang error na mensahe: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1549"/>
       <source>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</source>
-      <translation type="unfinished">The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</translation>
+      <translation>Ang shortcut &lt;strong&gt;%1 &lt;/strong&gt; ay naatasan na sa &lt;strong&gt;%2 &lt;/strong&gt;! Gusto mo bang tumalon sa shortcut?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2682"/>
@@ -6203,7 +6203,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="73"/>
       <source>Allow note editing</source>
-      <translation type="unfinished">Allow note editing</translation>
+      <translation>Payagang mag edit ng note</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="30"/>
@@ -6213,12 +6213,12 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="47"/>
       <source>Publicly share the current note file on your ownCloud server. You can send the generated link to others so they can view or download the file.</source>
-      <translation type="unfinished">Publicly share the current note file on your ownCloud server. You can send the generated link to others so they can view or download the file.</translation>
+      <translation>Publikong ibahagi ang kasalukuyang file ng tala sa iyong sariling server ng iCloud. Maaari mong ipadala ang nabuong link sa iba upang matingnan nila o mai-download ang file.</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.cpp" line="65"/>
       <source>Keep in mind that you still have to sync your notes with your server by using the ownCloud desktop sync tool to be able to share notes with others!</source>
-      <translation type="unfinished">Keep in mind that you still have to sync your notes with your server by using the ownCloud desktop sync tool to be able to share notes with others!</translation>
+      <translation>Tandaan na kailangan mo pa rin i-sync ang iyong mga tala sa iyong server sa pamamagitan ng paggamit ng sariling tool sa pag-sync ng desktop upang magawang ibahagi ang mga tala sa iba!</translation>
     </message>
   </context>
   <context>
@@ -6373,7 +6373,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tododialog.ui" line="222"/>
       <source>Note…</source>
-      <translation type="unfinished">Note…</translation>
+      <translation>Tandaan…</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="100"/>
@@ -6398,7 +6398,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tododialog.ui" line="288"/>
       <source>Reload…</source>
-      <translation type="unfinished">Reload…</translation>
+      <translation>Reload…</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="319"/>
@@ -6483,7 +6483,7 @@ ito ay hindi ma tapos!</translation>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="26"/>
       <source>Lists the available menus to get the corresponding actions</source>
-      <translation type="unfinished">Lists the available menus to get the corresponding actions</translation>
+      <translation>Listahan ng magagamit na mga menu upang makuha ang kaukulang mga aksyon</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="33"/>
@@ -6701,12 +6701,12 @@ ito ay hindi ma tapos!</translation>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="82"/>
       <source>&amp;Disable dialog</source>
-      <translation type="unfinished">&amp;Disable dialog</translation>
+      <translation>&amp;Huwag paganahin ang diyalogo</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="83"/>
       <source>Don't show this dialog automatically</source>
-      <translation type="unfinished">Don't show this dialog automatically</translation>
+      <translation>Huwag awtomatikong ipakita ang dialog na ito</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="93"/>
@@ -6881,17 +6881,17 @@ ito ay hindi ma tapos!</translation>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="58"/>
       <source>QOwnNotes server listening on port %1</source>
-      <translation type="unfinished">QOwnNotes server listening on port %1</translation>
+      <translation>Ang QOwnNotes server na nakikinig sa port %1</translation>
     </message>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="65"/>
       <source>Could not start QOwnNotes server on port %1!</source>
-      <translation type="unfinished">Could not start QOwnNotes server on port %1!</translation>
+      <translation>Hindi masimulan ang QOwnNotes server sa port %1!</translation>
     </message>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="109"/>
       <source>%1 connected to QOwnNotes server!</source>
-      <translation type="unfinished">%1 connected to QOwnNotes server!</translation>
+      <translation>Nakakonekta ang %1 sa QOwnNotes server!</translation>
     </message>
     <message numerus="yes">
       <location filename="../services/websocketserverservice.cpp" line="188"/>
@@ -6904,7 +6904,7 @@ ito ay hindi ma tapos!</translation>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="327"/>
       <source>%1 was disconnected from QOwnNotes server</source>
-      <translation type="unfinished">%1 was disconnected from QOwnNotes server</translation>
+      <translation>Nai-disconnect ang %1 mula sa QOwnNotes server</translation>
     </message>
   </context>
   <context>
@@ -6912,22 +6912,22 @@ ito ay hindi ma tapos!</translation>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="20"/>
       <source>Security token</source>
-      <translation type="unfinished">Security token</translation>
+      <translation>Ang token ng seguridad</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="26"/>
       <source>To let your QOwnNotes browser extension access your notes please paste this security token in the settings of your browser extension:</source>
-      <translation type="unfinished">To let your QOwnNotes browser extension access your notes please paste this security token in the settings of your browser extension:</translation>
+      <translation>Upang hayaan ang iyong QOwnNotes browser na ma-access ang iyong mga tala mangyaring i-paste ang token ng seguridad na ito sa mga setting ng iyong browser extension:</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="65"/>
       <source>Generate new token</source>
-      <translation type="unfinished">Generate new token</translation>
+      <translation>Bumuo ng bagong token</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="79"/>
       <source>Copy token</source>
-      <translation type="unfinished">Copy token</translation>
+      <translation>Kopyahin ang kopya</translation>
     </message>
   </context>
   <context>
@@ -6941,7 +6941,7 @@ ito ay hindi ma tapos!</translation>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="24"/>
       <source>plain-text file markdown note taking with ownCloud integration</source>
-      <translation type="unfinished">plain-text file markdown note taking with ownCloud integration</translation>
+      <translation>plain-text file markdown tala na kumukuha ng pagsasama sa sariling ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="88"/>
@@ -6987,12 +6987,12 @@ ito ay hindi ma tapos!</translation>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="246"/>
       <source>Show sub-folders</source>
-      <translation type="unfinished">Show sub-folders</translation>
+      <translation>Ipakita ang mga sub-folder</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="285"/>
       <source>Panel layout</source>
-      <translation type="unfinished">Panel layout</translation>
+      <translation>Layout ng panel</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="342"/>
@@ -7012,12 +7012,12 @@ ito ay hindi ma tapos!</translation>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="319"/>
       <source>If you want to be able to access your note versions and your trashed notes on your ownCloud server, you can configure QOwnNotes for it now. You can also do it at a later time.</source>
-      <translation type="unfinished">If you want to be able to access your note versions and your trashed notes on your ownCloud server, you can configure QOwnNotes for it now. You can also do it at a later time.</translation>
+      <translation>Kung nais mong ma-access ang iyong mga bersyon ng tala at ang iyong mga basurang tala sa iyong sariling server ng iCloud, maaari mong i-configure ang mga QOwnNotes para sa ngayon. Maaari mo ring gawin ito sa ibang pagkakataon.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="349"/>
       <source>In any case, you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</source>
-      <translation type="unfinished">In any case, you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</translation>
+      <translation>Sa anumang kaso kailangan mong ownCloud sync client (o anumang iba pang mga kliyente ng singk) upang i-sync ang iyong mga tala sa iyong server ng ownCloud.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="391"/>
@@ -7027,7 +7027,7 @@ ito ay hindi ma tapos!</translation>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="116"/>
       <source>Cannot create note path! You have to create the note folder manually!</source>
-      <translation type="unfinished">Cannot create note path! You have to create the note folder manually!</translation>
+      <translation>Hindi makagawa ng landas ng tala! Kailangan mong lumikha ng manu-manong folder nang manu-mano!</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="123"/>
@@ -7047,7 +7047,7 @@ ito ay hindi ma tapos!</translation>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="215"/>
       <source>Keep in mind that the note folder will be stored relative to the directory where QOwnNotes resides in portable mode! So you need to stay on the same drive.</source>
-      <translation type="unfinished">Keep in mind that the note folder will be stored relative to the directory where QOwnNotes resides in portable mode! So you need to stay on the same drive.</translation>
+      <translation>Tandaan na ang folder ng tala ay maiimbak na kamag-anak sa direktoryo kung saan naninirahan ang QOwnNotes sa portable mode! Kaya kailangan mong manatili sa parehong drive.</translation>
     </message>
   </context>
   <context>
@@ -7060,12 +7060,12 @@ ito ay hindi ma tapos!</translation>
     <message>
       <location filename="../main.cpp" line="81"/>
       <source>Prints out a dump of the settings and other information about the application and environment in GitHub Markdown and exits the application.</source>
-      <translation type="unfinished">Prints out a dump of the settings and other information about the application and environment in GitHub Markdown and exits the application.</translation>
+      <translation>Nag-print ng isang dump ng mga setting at iba pang impormasyon tungkol sa application at kapaligiran sa GitHub Markdown at lumabas ang application.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="87"/>
       <source>Allows multiple instances of QOwnNotes to be started even if disallowed in the settings.</source>
-      <translation type="unfinished">Allows multiple instances of QOwnNotes to be started even if disallowed in the settings.</translation>
+      <translation>Pinapayagan ang maraming mga pagkakataon ng QOwnNotes na magsimula kahit na hindi pinapayag sa mga setting.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="92"/>
@@ -7080,17 +7080,17 @@ ito ay hindi ma tapos!</translation>
     <message>
       <location filename="../main.cpp" line="457"/>
       <source>Single application mode is not supported on your system!</source>
-      <translation type="unfinished">Single application mode is not supported on your system!</translation>
+      <translation>Ang mode na solong application ay hindi suportado sa iyong system!</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="466"/>
       <source>Another instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</source>
-      <translation type="unfinished">Another instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</translation>
+      <translation>Ang isa pang halimbawa ng QOwnNotes ay nagsimula na! Maaari mong patayin ang nag-iisang mode ng pagkakataon sa mga setting o gamitin ang parameter - payagan - maramihang - mga pagkakataon.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="498"/>
       <source>A second instance of QOwnNotes was attempted to be started!</source>
-      <translation type="unfinished">A second instance of QOwnNotes was attempted to be started!</translation>
+      <translation>Ang pangalawang halimbawa ng QOwnNotes ay tinangka na masimulan!</translation>
     </message>
   </context>
 </TS>

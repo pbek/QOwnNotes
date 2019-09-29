@@ -23,79 +23,79 @@
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="14"/>
       <source>Insert attachment</source>
-      <translation type="unfinished">Insert attachment</translation>
+      <translation>Вставити вкладення</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="20"/>
       <source>Image filename or URL</source>
-      <translation type="unfinished">Image filename or URL</translation>
+      <translation>Назва файлу зображення або URL-адреса</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="26"/>
       <source>Path to file or URL</source>
-      <translation type="unfinished">Path to file or URL</translation>
+      <translation>Шлях до файлу чи URL-адреси</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="36"/>
       <source>Select file</source>
-      <translation type="unfinished">Select file</translation>
+      <translation>Виберіть файл</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="46"/>
       <source>Title of the image link</source>
-      <translation type="unfinished">Title of the image link</translation>
+      <translation>Назва посилання на зображення</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="49"/>
       <source>Title</source>
-      <translation type="unfinished">Title</translation>
+      <translation>Назва</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="94"/>
       <source>Cancel download</source>
-      <translation type="unfinished">Cancel download</translation>
+      <translation>Скасувати завантаження</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="117"/>
       <source>Download URL</source>
       <comment>The URL will be downloaded</comment>
-      <translation type="unfinished">Download URL</translation>
+      <translation>Завантажте URL-адресу</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="43"/>
       <source>Select file to insert</source>
-      <translation type="unfinished">Select file to insert</translation>
+      <translation>Вибрати файл для вставки</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="140"/>
       <source>Download error</source>
-      <translation type="unfinished">Download error</translation>
+      <translation>Помилка завантаження</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="141"/>
       <source>Error while downloading:
 %1</source>
-      <translation type="unfinished">Error while downloading:
+      <translation>Помилка під час завантаження:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="169"/>
       <location filename="../dialogs/attachmentdialog.cpp" line="193"/>
       <source>File error</source>
-      <translation type="unfinished">File error</translation>
+      <translation>Помилка файлу</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="170"/>
       <source>Could not open temporary file:
 %1</source>
-      <translation type="unfinished">Could not open temporary file:
+      <translation>Не вдалося відкрити тимчасовий файл:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="194"/>
       <source>Could not store downloaded file:
 %1</source>
-      <translation type="unfinished">Could not store downloaded file:
+      <translation>Не вдалося зберегти завантажений файл:
 %1</translation>
     </message>
   </context>
@@ -449,12 +449,12 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7766"/>
       <source>Already at oldest change.</source>
-      <translation type="unfinished">Already at oldest change.</translation>
+      <translation>Вже на найдавнішу зміну.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7767"/>
       <source>Already at newest change.</source>
-      <translation type="unfinished">Already at newest change.</translation>
+      <translation>Вже при новій зміні.</translation>
     </message>
   </context>
   <context>
@@ -718,27 +718,27 @@
     <message>
       <location filename="../dialogs/imagedialog.ui" line="14"/>
       <source>Insert image</source>
-      <translation type="unfinished">Insert image</translation>
+      <translation>Вставте зображення</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="40"/>
       <source>Image filename or URL</source>
-      <translation type="unfinished">Image filename or URL</translation>
+      <translation>Назва файлу зображення або URL-адреса</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="46"/>
       <source>Path to file or URL</source>
-      <translation type="unfinished">Path to file or URL</translation>
+      <translation>Шлях до файлу чи URL-адреси</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="121"/>
       <source>Scaling width:</source>
-      <translation type="unfinished">Scaling width:</translation>
+      <translation>Ширина масштабування:</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="217"/>
       <source>Crop image</source>
-      <translation type="unfinished">Crop image</translation>
+      <translation>Обрізати зображення</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="220"/>
@@ -748,37 +748,37 @@
     <message>
       <location filename="../dialogs/imagedialog.ui" line="30"/>
       <source>The path or url will be inserted directly, paths to files will be made relative to the current note</source>
-      <translation type="unfinished">The path or url will be inserted directly, paths to files will be made relative to the current note</translation>
+      <translation>Шлях або Url буде вставлено безпосередньо, шлях до файлів буде зроблений відносно поточної нотатки</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="33"/>
       <source>Don't copy image to media folder</source>
-      <translation type="unfinished">Don't copy image to media folder</translation>
+      <translation>Не копіюйте зображення у папку медіа</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="56"/>
       <source>Title of the image link</source>
-      <translation type="unfinished">Title of the image link</translation>
+      <translation>Назва посилання на зображення</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="59"/>
       <source>Title</source>
-      <translation type="unfinished">Title</translation>
+      <translation>Назва</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="20"/>
       <source>Select image file</source>
-      <translation type="unfinished">Select image file</translation>
+      <translation>Виберіть файл зображення</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.cpp" line="77"/>
       <source>Image files</source>
-      <translation type="unfinished">Image files</translation>
+      <translation>Файли зображень</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.cpp" line="78"/>
       <source>Select image to insert</source>
-      <translation type="unfinished">Select image to insert</translation>
+      <translation>Вибрати зображення для вставки</translation>
     </message>
   </context>
   <context>
@@ -889,7 +889,7 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="94"/>
       <source>Note</source>
-      <translation type="unfinished">Note</translation>
+      <translation>Нотатка</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="141"/>
@@ -899,12 +899,12 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="144"/>
       <source>Name of link (optional)</source>
-      <translation type="unfinished">Name of link (optional)</translation>
+      <translation>Назва посилання (необов’язково)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="154"/>
       <source>Enter a description for the link (optional)</source>
-      <translation type="unfinished">Enter a description for the link (optional)</translation>
+      <translation>Введіть опис посилання (необов’язково)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="157"/>
@@ -1108,7 +1108,7 @@
     <message>
       <location filename="../mainwindow.ui" line="391"/>
       <source>Find navigation item</source>
-      <translation type="unfinished">Find navigation item</translation>
+      <translation>Знайдіть елемент навігації</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="680"/>
@@ -1400,7 +1400,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1158"/>
       <source>Jump to</source>
-      <translation type="unfinished">Jump to</translation>
+      <translation>Перейти до</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1194"/>
@@ -1637,7 +1637,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2090"/>
       <source>Show note list under tag panel</source>
-      <translation type="unfinished">Show note list under tag panel</translation>
+      <translation>Показати список приміток на панелі тегів</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2108"/>
@@ -1807,27 +1807,27 @@
     <message>
       <location filename="../mainwindow.ui" line="2456"/>
       <source>Jump to note subfolder panel</source>
-      <translation type="unfinished">Jump to note subfolder panel</translation>
+      <translation>Перейти до примітки панелі підпапок</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2464"/>
       <source>Jump to tags panel</source>
-      <translation type="unfinished">Jump to tags panel</translation>
+      <translation>Перейти до панелі тегів</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2472"/>
       <source>Jump to note list panel</source>
-      <translation type="unfinished">Jump to note list panel</translation>
+      <translation>Перейти до панелі списку приміток</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2480"/>
       <source>Activate context menu</source>
-      <translation type="unfinished">Activate context menu</translation>
+      <translation>Активуйте контекстне меню</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2488"/>
       <source>Import bookmarks from server</source>
-      <translation type="unfinished">Import bookmarks from server</translation>
+      <translation>Імпорт закладок із сервера</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2493"/>
@@ -1838,7 +1838,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2507"/>
       <source>Typewriter mode</source>
-      <translation type="unfinished">Typewriter mode</translation>
+      <translation>Режим машинки</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1868"/>
@@ -1999,17 +1999,17 @@ Restore current note?</source>
     <message>
       <location filename="../mainwindow.cpp" line="2946"/>
       <source>Abort</source>
-      <translation type="unfinished">Abort</translation>
+      <translation>Аборт</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2946"/>
       <source>Loading notes…</source>
-      <translation type="unfinished">Loading notes…</translation>
+      <translation>Завантаження приміток…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3149"/>
       <source>Delete conflicted database copies</source>
-      <translation type="unfinished">Delete conflicted database copies</translation>
+      <translation>Видаліть конфліктні копії бази даних</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3174"/>
@@ -2544,7 +2544,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="11207"/>
       <source>Leave full-screen mode</source>
-      <translation type="unfinished">Leave full-screen mode</translation>
+      <translation>Вийдіть у повноекранному режимі</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7875"/>
@@ -3027,7 +3027,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="1551"/>
       <source>Leave distraction free mode</source>
-      <translation type="unfinished">Leave distraction free mode</translation>
+      <translation>Залиште відволікання режиму вільним</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2061"/>
@@ -3244,27 +3244,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="237"/>
       <source>Copy image file path</source>
-      <translation type="unfinished">Copy image file path</translation>
+      <translation>Копіювати шлях до файлу зображення</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="241"/>
       <source>Copy link location</source>
-      <translation type="unfinished">Copy link location</translation>
+      <translation>Скопіюйте розташування посилання</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="244"/>
       <source>Export generated raw HTML</source>
-      <translation type="unfinished">Export generated raw HTML</translation>
+      <translation>Експортувати генерований сировинний HTML</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="277"/>
       <source>HTML files</source>
-      <translation type="unfinished">HTML files</translation>
+      <translation>Файли HTML</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="278"/>
       <source>Export preview as raw HTML file</source>
-      <translation type="unfinished">Export preview as raw HTML file</translation>
+      <translation>Експортуйте попередній перегляд у сирому HTML-файлі</translation>
     </message>
   </context>
   <context>
@@ -3494,12 +3494,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="1934"/>
       <source>No bookmarks</source>
-      <translation type="unfinished">No bookmarks</translation>
+      <translation>Немає закладок</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1935"/>
       <source>No bookmarks were found on the server.</source>
-      <translation type="unfinished">No bookmarks were found on the server.</translation>
+      <translation>Закладки на сервері не знайдено.</translation>
     </message>
   </context>
   <context>
@@ -3560,7 +3560,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../entities/note.cpp" line="2770"/>
       <source>Note file path changed</source>
-      <translation type="unfinished">Note file path changed</translation>
+      <translation>Шлях файлу примітки змінено</translation>
     </message>
     <message numerus="yes">
       <location filename="../entities/note.cpp" line="2771"/>
@@ -3606,22 +3606,22 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../utils/git.cpp" line="74"/>
       <source>Command failed!</source>
-      <translation type="unfinished">Command failed!</translation>
+      <translation>Команда не вдалася!</translation>
     </message>
     <message>
       <location filename="../utils/git.cpp" line="75"/>
       <source>The command &lt;code&gt;%1&lt;/code&gt; failed!</source>
-      <translation type="unfinished">The command &lt;code&gt;%1&lt;/code&gt; failed!</translation>
+      <translation>Команда &lt;code&gt;%1 &lt;/code&gt; не вдалася!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3876"/>
       <source>New connection</source>
-      <translation type="unfinished">New connection</translation>
+      <translation>Нове з'єднання</translation>
     </message>
     <message>
       <location filename="../entities/cloudconnection.cpp" line="278"/>
       <source>Default</source>
-      <translation type="unfinished">Default</translation>
+      <translation>За замовчуванням</translation>
     </message>
   </context>
   <context>
@@ -3634,7 +3634,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="417"/>
       <source>Note editing is currently disabled, do you want to allow again?</source>
-      <translation type="unfinished">Note editing is currently disabled, do you want to allow again?</translation>
+      <translation>Редагування приміток наразі вимкнено, ви хочете знову дозволити?</translation>
     </message>
   </context>
   <context>
@@ -3647,32 +3647,32 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="107"/>
       <source>Advanced search / replace text</source>
-      <translation type="unfinished">Advanced search / replace text</translation>
+      <translation>Розширений пошук / заміна тексту</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="90"/>
       <source>Close search</source>
-      <translation type="unfinished">Close search</translation>
+      <translation>Закрити пошук</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="32"/>
       <source>Find in text</source>
-      <translation type="unfinished">Find in text</translation>
+      <translation>Знайдіть у тексті</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="127"/>
       <source>Search forward</source>
-      <translation type="unfinished">Search forward</translation>
+      <translation>Шукати вперед</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="63"/>
       <source>Search backward</source>
-      <translation type="unfinished">Search backward</translation>
+      <translation>Шукати назад</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="39"/>
       <source>Replace with</source>
-      <translation type="unfinished">Replace with</translation>
+      <translation>Замінити</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="80"/>
@@ -3697,7 +3697,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="224"/>
       <source>Replace one text occurrence</source>
-      <translation type="unfinished">Replace one text occurrence</translation>
+      <translation>Замініть одне текстове виникнення</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="227"/>
@@ -3707,12 +3707,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="237"/>
       <source>Replace all text occurrences</source>
-      <translation type="unfinished">Replace all text occurrences</translation>
+      <translation>Замініть всі текстові події</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="240"/>
       <source>Replace all</source>
-      <translation type="unfinished">Replace all</translation>
+      <translation>Замініть всіх</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="164"/>
@@ -4027,7 +4027,7 @@ Do you want to install it anyway?</source>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="14"/>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="20"/>
       <source>Import bookmarks</source>
-      <translation type="unfinished">Import bookmarks</translation>
+      <translation>Імпорт закладок</translation>
     </message>
     <message>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="47"/>
@@ -4726,19 +4726,19 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="991"/>
       <source>Select a connection to edit</source>
-      <translation type="unfinished">Select a connection to edit</translation>
+      <translation>Виберіть з'єднання для редагування</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="998"/>
       <location filename="../dialogs/settingsdialog.ui" line="1001"/>
       <source>Add connection</source>
-      <translation type="unfinished">Add connection</translation>
+      <translation>Додати з'єднання</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1012"/>
       <location filename="../dialogs/settingsdialog.ui" line="1015"/>
       <source>Remove connection</source>
-      <translation type="unfinished">Remove connection</translation>
+      <translation>Видаліть з'єднання</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1029"/>
@@ -4775,12 +4775,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1311"/>
       <source>Connection name:</source>
-      <translation type="unfinished">Connection name:</translation>
+      <translation>Назва з'єднання:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1898"/>
       <source>Which cloud connection do you want to use?</source>
-      <translation type="unfinished">Which cloud connection do you want to use?</translation>
+      <translation>Яке хмарне з'єднання ви хочете використовувати?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1910"/>
@@ -4820,12 +4820,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2148"/>
       <source>Danish</source>
-      <translation type="unfinished">Danish</translation>
+      <translation>Датська</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2170"/>
       <source>Basque</source>
-      <translation type="unfinished">Basque</translation>
+      <translation>Баскі</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2203"/>
@@ -4840,7 +4840,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2236"/>
       <source>Galician</source>
-      <translation type="unfinished">Galician</translation>
+      <translation>Галицька</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2247"/>
@@ -4850,7 +4850,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2258"/>
       <source>Hausa</source>
-      <translation type="unfinished">Hausa</translation>
+      <translation>Хауса</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2269"/>
@@ -4865,32 +4865,32 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2324"/>
       <source>Norwegian</source>
-      <translation type="unfinished">Norwegian</translation>
+      <translation>Норвезька</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2357"/>
       <source>Persian</source>
-      <translation type="unfinished">Persian</translation>
+      <translation>Перська</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2401"/>
       <source>Romanian</source>
-      <translation type="unfinished">Romanian</translation>
+      <translation>Румунська</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2423"/>
       <source>Serbian</source>
-      <translation type="unfinished">Serbian</translation>
+      <translation>Сербська</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2434"/>
       <source>Slovak</source>
-      <translation type="unfinished">Slovak</translation>
+      <translation>Словацька</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2445"/>
       <source>Slovenian</source>
-      <translation type="unfinished">Slovenian</translation>
+      <translation>Словенська</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2456"/>
@@ -4930,12 +4930,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2597"/>
       <source>You might also want to choose another editor color schema in the editor settings in dark mode.</source>
-      <translation type="unfinished">You might also want to choose another editor color schema in the editor settings in dark mode.</translation>
+      <translation>Ви також можете вибрати іншу кольорову схему редактора в налаштуваннях редактора в темному режимі.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2700"/>
       <source>Enable dark mode icon theme</source>
-      <translation type="unfinished">Enable dark mode icon theme</translation>
+      <translation>Увімкнути тему значка темного режиму</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2630"/>
@@ -4960,7 +4960,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2690"/>
       <source>Enforce system icon theme</source>
-      <translation type="unfinished">Enforce system icon theme</translation>
+      <translation>Застосовуйте тему значка системи</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2796"/>
@@ -4980,12 +4980,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3661"/>
       <source>Use legacy way to link to notes, images and attachments</source>
-      <translation type="unfinished">Use legacy way to link to notes, images and attachments</translation>
+      <translation>Використовуйте застарілий спосіб посилання на нотатки, зображення та вкладення</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3608"/>
       <source>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</source>
-      <translation type="unfinished">When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</translation>
+      <translation>Під час відкриття нотаток позиція курсору всередині нотатки буде відновлена до позиції, коли нотатку востаннє відвідували в поточному сеансі</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3628"/>
@@ -5049,17 +5049,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4381"/>
       <source>Ignore code font size to allow zooming</source>
-      <translation type="unfinished">Ignore code font size to allow zooming</translation>
+      <translation>Ігноруйте розмір шрифту коду, щоб дозволити масштабування</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4410"/>
       <source>Rendering</source>
-      <translation type="unfinished">Rendering</translation>
+      <translation>Візуалізація</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4416"/>
       <source>Enable underline rendering</source>
-      <translation type="unfinished">Enable underline rendering</translation>
+      <translation>Увімкнути підкреслення візуалізації</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4672"/>
@@ -5079,12 +5079,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="756"/>
       <source>Cloud connection:</source>
-      <translation type="unfinished">Cloud connection:</translation>
+      <translation>Увімкнути підкреслення візуалізації:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4776"/>
       <source>Disable cursor blinking</source>
-      <translation type="unfinished">Disable cursor blinking</translation>
+      <translation>Вимкнути моргання курсору</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5158"/>
@@ -5114,62 +5114,62 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5507"/>
       <source>Notes with this tag will be used for fetching bookmarks</source>
-      <translation type="unfinished">Notes with this tag will be used for fetching bookmarks</translation>
+      <translation>Примітки з цим тегом використовуватимуться для отримання закладок</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5510"/>
       <source>Tag name for bookmarks notes</source>
-      <translation type="unfinished">Tag name for bookmarks notes</translation>
+      <translation>Назва тегів для нотаток закладок</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5517"/>
       <source>Bookmarks tag:</source>
-      <translation type="unfinished">Bookmarks tag:</translation>
+      <translation>Тег закладок:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5524"/>
       <source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
-      <translation type="unfinished">By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</translation>
+      <translation>За замовчуванням розширення браузера покаже всі посилання поточної нотатки. Ви також можете змусити його показувати спеціальні посилання закладок приміток із певним тегом. Для отримання додаткової інформації про синтаксис посилань на закладку натисніть &lt;a href="%1"&gt; тут &lt;/a&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5537"/>
       <source>Bookmarks note name:</source>
-      <translation type="unfinished">Bookmarks note name:</translation>
+      <translation>Назва примітки закладок:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5544"/>
       <source>This note will be used for adding new bookmarks from the browser extension</source>
-      <translation type="unfinished">This note will be used for adding new bookmarks from the browser extension</translation>
+      <translation>Ця примітка використовуватиметься для додавання нових закладок із розширення браузера</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5547"/>
       <source>Note name for adding new bookmarks</source>
-      <translation type="unfinished">Note name for adding new bookmarks</translation>
+      <translation>Зауважте назву для додавання нових закладок</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5557"/>
       <source>Web socket server</source>
-      <translation type="unfinished">Web socket server</translation>
+      <translation>Сервер веб-сокет</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5563"/>
       <source>Socket server port:</source>
-      <translation type="unfinished">Socket server port:</translation>
+      <translation>Порт серверного сокета:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5597"/>
       <source>Show security token</source>
-      <translation type="unfinished">Show security token</translation>
+      <translation>Показати маркер безпеки</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5633"/>
       <source>Web socket server support</source>
-      <translation type="unfinished">Web socket server support</translation>
+      <translation>Підтримка сервера веб-сокетів</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5639"/>
       <source>Enable socket server</source>
-      <translation type="unfinished">Enable socket server</translation>
+      <translation>Увімкнути сервер сокетів</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5614"/>
@@ -5179,7 +5179,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3569"/>
       <source>Allow the note file name to be different from the headline.&lt;br&gt;Beware that ownCloud Notes needs the file name to be the same as the headline!</source>
-      <translation type="unfinished">Allow the note file name to be different from the headline.&lt;br&gt;Beware that ownCloud Notes needs the file name to be the same as the headline!</translation>
+      <translation>Дозвольте назві файлу примітки відрізнятися від заголовка. &lt;br&gt; Остерігайтеся, щоб власнаCloud Notes мала, щоб ім’я файлу було таким же, як заголовок!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4978"/>
@@ -5214,7 +5214,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5295"/>
       <source>Hide navigation item search bar</source>
-      <translation type="unfinished">Hide navigation item search bar</translation>
+      <translation>Сховати панель пошуку елементів навігації</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5309"/>
@@ -5426,7 +5426,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4816"/>
       <source>Commit interval</source>
-      <translation type="unfinished">Commit interval</translation>
+      <translation>Інтервал введення</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4822"/>
@@ -5447,7 +5447,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="227"/>
       <source>Preview</source>
-      <translation type="unfinished">Preview</translation>
+      <translation>Попередній перегляд</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="276"/>
@@ -6273,7 +6273,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="73"/>
       <source>Allow note editing</source>
-      <translation type="unfinished">Allow note editing</translation>
+      <translation>Дозволити редагування приміток</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="30"/>
@@ -6553,7 +6553,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="26"/>
       <source>Lists the available menus to get the corresponding actions</source>
-      <translation type="unfinished">Lists the available menus to get the corresponding actions</translation>
+      <translation>Списки доступних меню для отримання відповідних дій</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="33"/>
@@ -6951,12 +6951,12 @@ This cannot be undone!</source>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="58"/>
       <source>QOwnNotes server listening on port %1</source>
-      <translation type="unfinished">QOwnNotes server listening on port %1</translation>
+      <translation>Прослуховування сервера QOwnNotes на порту %1</translation>
     </message>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="65"/>
       <source>Could not start QOwnNotes server on port %1!</source>
-      <translation type="unfinished">Could not start QOwnNotes server on port %1!</translation>
+      <translation>Не вдалося запустити сервер QOwnNotes на порт %1!</translation>
     </message>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="109"/>
@@ -6976,7 +6976,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="327"/>
       <source>%1 was disconnected from QOwnNotes server</source>
-      <translation type="unfinished">%1 was disconnected from QOwnNotes server</translation>
+      <translation>%1 відключено від сервера QOwnNotes</translation>
     </message>
   </context>
   <context>
@@ -6984,17 +6984,17 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="20"/>
       <source>Security token</source>
-      <translation type="unfinished">Security token</translation>
+      <translation>Маркер безпеки</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="26"/>
       <source>To let your QOwnNotes browser extension access your notes please paste this security token in the settings of your browser extension:</source>
-      <translation type="unfinished">To let your QOwnNotes browser extension access your notes please paste this security token in the settings of your browser extension:</translation>
+      <translation>Щоб ваше розширення для веб-переглядача QOwnNotes отримало доступ до ваших нотаток, вставте цей маркер безпеки в налаштування розширення вашого браузера:</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="65"/>
       <source>Generate new token</source>
-      <translation type="unfinished">Generate new token</translation>
+      <translation>Створити новий маркер</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="79"/>

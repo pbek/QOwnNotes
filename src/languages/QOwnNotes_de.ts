@@ -1820,7 +1820,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2507"/>
       <source>Typewriter mode</source>
-      <translation type="unfinished">Typewriter mode</translation>
+      <translation>Schreibmaschinenmodus</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1868"/>
@@ -3545,12 +3545,12 @@ Falls Sie die Papierkorb-App auf Ihrem Nextcloud/ownCloud-Server aktiviert haben
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3876"/>
       <source>New connection</source>
-      <translation type="unfinished">New connection</translation>
+      <translation>Neue Verbindung</translation>
     </message>
     <message>
       <location filename="../entities/cloudconnection.cpp" line="278"/>
       <source>Default</source>
-      <translation type="unfinished">Default</translation>
+      <translation>Standard</translation>
     </message>
   </context>
   <context>
@@ -4655,19 +4655,19 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="991"/>
       <source>Select a connection to edit</source>
-      <translation type="unfinished">Select a connection to edit</translation>
+      <translation>Eine Verbindung auswählen und bearbeiten</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="998"/>
       <location filename="../dialogs/settingsdialog.ui" line="1001"/>
       <source>Add connection</source>
-      <translation type="unfinished">Add connection</translation>
+      <translation>Verbindung hinzufügen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1012"/>
       <location filename="../dialogs/settingsdialog.ui" line="1015"/>
       <source>Remove connection</source>
-      <translation type="unfinished">Remove connection</translation>
+      <translation>Verbindung entfernen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1029"/>
@@ -4704,12 +4704,12 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1311"/>
       <source>Connection name:</source>
-      <translation type="unfinished">Connection name:</translation>
+      <translation>Verbindungsname:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1898"/>
       <source>Which cloud connection do you want to use?</source>
-      <translation type="unfinished">Which cloud connection do you want to use?</translation>
+      <translation>Welche Cloud-Verbindung möchten Sie verwenden?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1910"/>
@@ -5008,7 +5008,7 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="756"/>
       <source>Cloud connection:</source>
-      <translation type="unfinished">Cloud connection:</translation>
+      <translation>Cloud-Verbindung:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4776"/>

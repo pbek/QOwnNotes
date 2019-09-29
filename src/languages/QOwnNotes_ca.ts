@@ -1817,7 +1817,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2507"/>
       <source>Typewriter mode</source>
-      <translation type="unfinished">Typewriter mode</translation>
+      <translation>Mode de màquina d'escriure</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1868"/>

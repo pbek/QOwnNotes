@@ -1820,7 +1820,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2507"/>
       <source>Typewriter mode</source>
-      <translation type="unfinished">Typewriter mode</translation>
+      <translation>Modo máquina de escribir</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1868"/>
@@ -4707,7 +4707,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1898"/>
       <source>Which cloud connection do you want to use?</source>
-      <translation type="unfinished">Which cloud connection do you want to use?</translation>
+      <translation>¿Cuál conexión cloud quieres utilizar?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1910"/>
@@ -5006,7 +5006,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="756"/>
       <source>Cloud connection:</source>
-      <translation type="unfinished">Cloud connection:</translation>
+      <translation>Conexión cloud:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4776"/>

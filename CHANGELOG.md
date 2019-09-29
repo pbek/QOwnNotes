@@ -5,9 +5,13 @@
     - in most cases the text will now also be centered if the cursor is at the
       bottom of the note
 - if you install a script from the **script repository** now the installed script
-  will be immediately selected and the **script settings** of the that script will
-  be **shown** if you close the script repository dialog (for [#1298](https://github.com/pbek/QOwnNotes/issues/1298))
+  will be immediately selected and the **script settings** of that script will be
+  **shown** if you close the script repository dialog (for [#1298](https://github.com/pbek/QOwnNotes/issues/1298))
 - the **highlighting of the current line** now also works in **read-only mode**
+- added more Spanish, Filipino, Turkish, Ukrainian, Urdu (Pakistan), Norwegian,
+  Basque, Serbian (Cyrillic), Russian, Slovenian, Polish, Romanian, Dutch,
+  Croatian, Finnish, Czech, Hungarian, Slovak, Danish, Swedish, Catalan, German
+  translation (thank you richarson, Fabijenna, mikhail-khokhlov, MGuerra, rakekniven)
 
 ## 19.9.19
 - there now is a **typewriter mode** that you can turn on in the *Window menu*
