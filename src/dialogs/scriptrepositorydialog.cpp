@@ -509,7 +509,7 @@ void ScriptRepositoryDialog::on_installButton_clicked() {
                 QUrl resourceUrl = script.remoteFileUrl(resourceFileName);
                 qDebug() << "Downloading: " << resourceUrl;
 
-                QFile *file = new QFile(scriptRepositoryPath + "/" +
+                auto *file = new QFile(scriptRepositoryPath + "/" +
                                                 resourceFileName);
 
                 if (!Utils::Misc::downloadUrlToFile(resourceUrl, file)) {

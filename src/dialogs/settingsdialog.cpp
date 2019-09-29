@@ -2615,8 +2615,7 @@ void SettingsDialog::reloadScriptList() const {
     // populate the script list
     if (scriptsCount > 0) {
         Q_FOREACH(Script script, scripts) {
-                QListWidgetItem *item =
-                        new QListWidgetItem(script.getName());
+                auto *item = new QListWidgetItem(script.getName());
                 item->setData(Qt::UserRole,
                               script.getId());
                 item->setFlags(item->flags() | Qt::ItemIsUserCheckable);
@@ -2646,8 +2645,7 @@ void SettingsDialog::addLocalScript() {
     _selectedScript.store();
 
     if (_selectedScript.isFetched()) {
-        QListWidgetItem *item =
-                new QListWidgetItem(_selectedScript.getName());
+        auto *item = new QListWidgetItem(_selectedScript.getName());
         item->setData(Qt::UserRole, _selectedScript.getId());
         item->setFlags(item->flags() | Qt::ItemIsUserCheckable);
         item->setCheckState(Qt::Checked);
