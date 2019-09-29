@@ -1,6 +1,9 @@
 # QOwnNotes Changelog
 
 ## 19.9.20
+- the **typewriter mode** was improved (for [#1296](https://github.com/pbek/QOwnNotes/issues/1296))
+    - in most cases the text will now also be centered if the cursor is at the
+      bottom of the note
 - the highlighting of the current line now also works in read-only mode
 
 ## 19.9.19
