@@ -262,7 +262,7 @@ Utils::Gui::showMessageBox(QWidget *parent, QMessageBox::Icon icon,
     QMessageBox msgBox(icon, title, text, QMessageBox::NoButton, parent);
     auto *buttonBox = msgBox.findChild<QDialogButtonBox*>();
     Q_ASSERT(buttonBox != nullptr);
-    QCheckBox *checkBox = new QCheckBox(
+    auto *checkBox = new QCheckBox(
             icon == QMessageBox::Icon::Question ?
             QObject::tr("Don't ask again!") : QObject::tr("Don't show again!"),
             parent);
