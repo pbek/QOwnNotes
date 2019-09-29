@@ -353,6 +353,7 @@ void QOwnNotesMarkdownTextEdit::updateSettings() {
     }
 
     _centerCursor = settings.value("Editor/centerCursor").toBool();
+    QMarkdownTextEdit::updateSettings();
 }
 
 /**
