@@ -20,6 +20,7 @@
 #include <QPlainTextEdit>
 #include <QTextBlock>
 #include <QComboBox>
+#include <QListWidget>
 
 /*  Gui functions that can be useful */
 
@@ -86,6 +87,9 @@ namespace Utils {
         QTreeWidgetItem *getTreeWidgetItemWithUserData(
                 QTreeWidget *treeWidget, const QVariant &userData,
                 int column = 0);
+
+        QListWidgetItem *getListWidgetItemWithUserData(
+                QListWidget *listWidget, const QVariant &userData);
 
         void resetBoldStateOfAllTreeWidgetItems(
                 QTreeWidget *treeWidget, int column = 0);

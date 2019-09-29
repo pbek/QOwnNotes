@@ -3554,13 +3554,24 @@ void SettingsDialog::on_setGitPathToolButton_clicked() {
 void SettingsDialog::searchScriptInRepository(bool checkForUpdates) {
     auto *dialog = new ScriptRepositoryDialog(this, checkForUpdates);
     dialog->exec();
+    Script lastInstalledScript = dialog->getLastInstalledScript();
     delete(dialog);
 
     // reload the script list
     reloadScriptList();
 
+    // select the last installed script
+    if (lastInstalledScript.isFetched()) {
+        auto item = Utils::Gui::getListWidgetItemWithUserData(
+                ui->scriptListWidget, lastInstalledScript.getId());
+        ui->scriptListWidget->setCurrentItem(item);
+    }
+
     // reload the scripting engine
     ScriptingService::instance()->reloadEngine();
+
+    // reload page so the script settings will be viewed
+    reloadCurrentScriptPage();
 }
 
 /**

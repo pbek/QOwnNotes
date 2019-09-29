@@ -19,6 +19,8 @@ public:
                                     bool checkForUpdates = false);
     ~ScriptRepositoryDialog();
 
+    Script getLastInstalledScript();
+
 private slots:
     void on_searchScriptEdit_returnPressed();
 
@@ -46,6 +48,7 @@ private:
     int _totalCount = 0;
     static const int _itemsPerPage = 30;
     QString _searchString;
+    Script _lastInstalledScript;
 
     void searchScript(int page = 1);
 

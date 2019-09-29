@@ -4,7 +4,10 @@
 - the **typewriter mode** was improved (for [#1296](https://github.com/pbek/QOwnNotes/issues/1296))
     - in most cases the text will now also be centered if the cursor is at the
       bottom of the note
-- the highlighting of the current line now also works in read-only mode
+- if you install a script from the **script repository** now the installed script
+  will be immediately selected and the **script settings** of the that script will
+  be **shown** if you close the script repository dialog (for [#1298](https://github.com/pbek/QOwnNotes/issues/1298))
+- the **highlighting of the current line** now also works in **read-only mode**
 
 ## 19.9.19
 - there now is a **typewriter mode** that you can turn on in the *Window menu*

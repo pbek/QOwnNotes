@@ -146,6 +146,21 @@ QTreeWidgetItem *Utils::Gui::getTreeWidgetItemWithUserData(
     return Q_NULLPTR;
 }
 
+QListWidgetItem *Utils::Gui::getListWidgetItemWithUserData(
+        QListWidget *listWidget, const QVariant &userData) {
+    // get all items
+    QList<QListWidgetItem*> allItems = listWidget->
+            findItems("", Qt::MatchContains);
+
+    Q_FOREACH(QListWidgetItem *item, allItems) {
+            if (userData == item->data(Qt::UserRole)) {
+                return item;
+            }
+        }
+
+    return Q_NULLPTR;
+}
+
 /**
  * Resets the bold state of all tree widget items of a tree widget
  *

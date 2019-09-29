@@ -35,6 +35,7 @@ ScriptRepositoryDialog::ScriptRepositoryDialog(QWidget *parent,
     _searchString.clear();
     _page = 1;
     _totalCount = 0;
+    _lastInstalledScript = Script();
 
     ui->downloadProgressBar->hide();
     ui->loadMoreScriptsButton->hide();
@@ -531,6 +532,7 @@ void ScriptRepositoryDialog::on_installButton_clicked() {
         MetricsService::instance()->sendVisitIfEnabled(
                 "script-repository/install/" + identifier);
         reloadCurrentScriptInfo();
+        _lastInstalledScript = script;
 
         Utils::Gui::information(this, tr("Install successful"),
                                 tr("The script was successfully installed!"),
@@ -555,4 +557,8 @@ void ScriptRepositoryDialog::on_searchScriptEdit_textChanged(
 
 void ScriptRepositoryDialog::on_loadMoreScriptsButton_clicked() {
     loadMoreItems();
+}
+
+Script ScriptRepositoryDialog::getLastInstalledScript() {
+    return _lastInstalledScript;
 }
