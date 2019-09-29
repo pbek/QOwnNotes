@@ -4,7 +4,6 @@
 #include <QJsonDocument>
 #include <QtCore/QJsonObject>
 #include <QtCore/QJsonArray>
-#include <entities/script.h>
 #include <QtCore/QFile>
 #include <utils/misc.h>
 #include <QtWidgets/QMessageBox>

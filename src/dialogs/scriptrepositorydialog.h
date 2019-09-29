@@ -1,6 +1,7 @@
 #pragma once
 
 #include "masterdialog.h"
+#include <entities/script.h>
 #include <QNetworkReply>
 #include <QNetworkAccessManager>
 #include <QSplitter>
