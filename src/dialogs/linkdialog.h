@@ -20,6 +20,7 @@ public:
     Note getSelectedNote();
     QString getURL();
     QString getLinkName();
+    void setLinkName(QString text);
     QString getLinkDescription();
     QString getTitleForUrl(const QUrl& url);
 

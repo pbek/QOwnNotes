@@ -56,5 +56,6 @@ files:
         "eu_ES" : "eu",
         "sr_SP" : "sr",
         "fa_IR" : "fa",
+        "bg_BG" : "bg",
       }
     }

@@ -106,6 +106,10 @@ QString LinkDialog::getLinkName() {
     return ui->nameLineEdit->text().trimmed();
 }
 
+void LinkDialog::setLinkName(QString text) {
+    ui->nameLineEdit->setText(text);
+}
+
 QString LinkDialog::getLinkDescription() {
     return ui->descriptionLineEdit->text().trimmed();
 }
