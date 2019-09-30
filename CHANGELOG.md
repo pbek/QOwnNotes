@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 19.10.0
+- after turning on the **typewriter mode** the cursor will now immediately
+  be centered (for [#1296](https://github.com/pbek/QOwnNotes/issues/1296))
+
 ## 19.9.20
 - the **typewriter mode** was improved (for [#1296](https://github.com/pbek/QOwnNotes/issues/1296))
     - in most cases the text will now also be centered if the cursor is at the

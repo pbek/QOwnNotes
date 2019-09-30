@@ -11230,4 +11230,9 @@ void MainWindow::on_actionTypewriter_mode_toggled(bool arg1) {
     settings.setValue("Editor/centerCursor", arg1);
     ui->noteTextEdit->updateSettings();
     ui->encryptedNoteTextEdit->updateSettings();
+
+    if (arg1) {
+        // center the cursor immediately if typewriter mode is turned on
+        activeNoteTextEdit()->centerTheCursor();
+    }
 }
