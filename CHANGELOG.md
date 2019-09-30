@@ -3,6 +3,8 @@
 ## 19.10.0
 - after turning on the **typewriter mode** the cursor will now immediately
   be centered (for [#1296](https://github.com/pbek/QOwnNotes/issues/1296))
+- if you select a text before using the **link dialog** to insert a link
+  the **selected text will now be used as link text** by default
 
 ## 19.9.20
 - the **typewriter mode** was improved (for [#1296](https://github.com/pbek/QOwnNotes/issues/1296))
