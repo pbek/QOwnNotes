@@ -9,6 +9,11 @@
 #include <utils/misc.h>
 #include "qownnotesmarkdowntextedit.h"
 
+#ifdef WITH_SONNET
+// needs libkf5sonnet-dev
+#include <KF5/SonnetUi/sonnet/spellcheckdecorator.h>
+#endif
+
 QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
         : QMarkdownTextEdit(parent, false) {
     mainWindow = Q_NULLPTR;
@@ -35,6 +40,11 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
     if (options != MarkdownHighlighter::HighlightingOption::None) {
         _highlighter->initHighlightingRules();
     }
+
+#ifdef WITH_SONNET
+    Sonnet::SpellCheckDecorator *decorator = new Sonnet::SpellCheckDecorator(this);
+    Q_UNUSED(decorator)
+#endif
 }
 
 /**
