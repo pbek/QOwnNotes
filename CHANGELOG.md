@@ -7,6 +7,9 @@
     - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes)
       to make QOwnNotes available in more languages or help with the current
       translation
+- added more Persian, Dutch, Hungarian, Brazilian Portuguese, Bulgarian, Catalan,
+  German, Italian, Polish, Russian translation (thank you Fabijenna, mlimacarlos,
+  MGuerra, rakekniven, mlocati, tiwi90, lucjan, mikhail-khokhlov)
 
 ## 19.10.0
 - after turning on the **typewriter mode** the cursor will now immediately
