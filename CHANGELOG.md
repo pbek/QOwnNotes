@@ -6,9 +6,9 @@
 - if you select a text before using the **link dialog** to insert a link
   the **selected text will now be used as link text** by default
 - added **Bulgarian translation** (a big thank you to Fabijenna)
-  - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes)
-    to make QOwnNotes available in more languages or help with the current
-    translation
+    - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes)
+      to make QOwnNotes available in more languages or help with the current
+      translation
 
 ## 19.9.20
 - the **typewriter mode** was improved (for [#1296](https://github.com/pbek/QOwnNotes/issues/1296))
