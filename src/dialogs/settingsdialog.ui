@@ -2362,17 +2362,6 @@
                        </item>
                        <item>
                         <property name="text">
-                         <string notr="true">ਪੰਜਾਬੀ پن٘جابی</string>
-                        </property>
-                        <property name="toolTip">
-                         <string>Punjabi</string>
-                        </property>
-                        <property name="whatsThis">
-                         <string notr="true">pa</string>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
                          <string notr="true">日本語</string>
                         </property>
                         <property name="toolTip">
@@ -2435,6 +2424,17 @@
                         </property>
                         <property name="whatsThis">
                          <string notr="true">pt_PT</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string notr="true">ਪੰਜਾਬੀ پن٘جابی</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Punjabi</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">pa</string>
                         </property>
                        </item>
                        <item>
