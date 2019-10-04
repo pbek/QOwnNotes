@@ -6,6 +6,7 @@
 #include <QJSValue>
 #include <QJSValueIterator>
 #include <utils/misc.h>
+#include <utils/gui.h>
 
 TrashDialog::TrashDialog(QJSValue notes, MainWindow *mainWindow,
                          QWidget *parent) :
@@ -116,7 +117,7 @@ TrashDialog::TrashDialog(QJSValue notes, MainWindow *mainWindow,
 void TrashDialog::setupMainSplitter() {
     trashSplitter = new QSplitter;
 
-    trashSplitter->addWidget(ui->trashListWidget);
+    trashSplitter->addWidget(ui->listFrame);
     trashSplitter->addWidget(ui->noteBrowserFrame);
 
     // restore splitter sizes
@@ -173,4 +174,8 @@ void TrashDialog::dialogButtonClicked(QAbstractButton *button) {
     }
 
     this->close();
+}
+
+void TrashDialog::on_searchLineEdit_textChanged(const QString &arg1) {
+    Utils::Gui::searchForTextInListWidget(ui->trashListWidget, arg1);
 }

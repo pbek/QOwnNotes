@@ -2274,6 +2274,17 @@
                        </item>
                        <item>
                         <property name="text">
+                         <string notr="true">עברית</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Hebrew</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">he</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
                          <string notr="true">हिन्दी</string>
                         </property>
                         <property name="toolTip">
@@ -2307,6 +2318,17 @@
                        </item>
                        <item>
                         <property name="text">
+                         <string notr="true">Islenska</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Icelandic</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">is</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
                          <string notr="true">Italiano</string>
                         </property>
                         <property name="toolTip">
@@ -2336,6 +2358,17 @@
                         </property>
                         <property name="whatsThis">
                          <string notr="true">no</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string notr="true">ਪੰਜਾਬੀ پن٘جابی</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Punjabi</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">pa</string>
                         </property>
                        </item>
                        <item>
@@ -2435,6 +2468,17 @@
                         </property>
                         <property name="whatsThis">
                          <string notr="true">sr</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string notr="true">Shqip</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Albanian</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">sq</string>
                         </property>
                        </item>
                        <item>

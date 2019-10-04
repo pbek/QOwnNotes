@@ -26,6 +26,8 @@ private slots:
     void storeSettings();
     void on_trashListWidget_currentRowChanged(int currentRow);
     void dialogButtonClicked(QAbstractButton *button);
+    void on_searchLineEdit_textChanged(const QString &arg1);
+
 private:
     enum ButtonRole {
         Unset,  // nothing was selected

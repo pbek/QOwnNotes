@@ -23,6 +23,7 @@ private slots:
     void storeSettings();
     void dialogButtonClicked(QAbstractButton *button);
     void on_trashTreeWidget_currentItemChanged(QTreeWidgetItem *current, QTreeWidgetItem *previous);
+    void on_searchLineEdit_textChanged(const QString &arg1);
 
 private:
     enum ButtonRole {

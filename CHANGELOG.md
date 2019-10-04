@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 19.10.1
+- you now can **search for note names** in the dialogs for the **remote trash**
+  and **local trash**
+
 ## 19.10.0
 - after turning on the **typewriter mode** the cursor will now immediately
   be centered (for [#1296](https://github.com/pbek/QOwnNotes/issues/1296))

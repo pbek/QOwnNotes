@@ -121,7 +121,7 @@ void LocalTrashDialog::loadTrashedNotes() {
 void LocalTrashDialog::setupMainSplitter() {
     trashSplitter = new QSplitter(this);
 
-    trashSplitter->addWidget(ui->trashTreeWidget);
+    trashSplitter->addWidget(ui->listFrame);
     trashSplitter->addWidget(ui->noteBrowserFrame);
 
     // restore splitter sizes
@@ -269,4 +269,8 @@ void LocalTrashDialog::removeSelectedTrashItems() {
             loadTrashedNotes();
         }
     }
+}
+
+void LocalTrashDialog::on_searchLineEdit_textChanged(const QString &arg1) {
+    Utils::Gui::searchForTextInTreeWidget(ui->trashTreeWidget, arg1);
 }

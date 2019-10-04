@@ -52,6 +52,8 @@ namespace Utils {
         void searchForTextInTreeWidget(
                 QTreeWidget *treeWidget, const QString& text,
                 TreeWidgetSearchFlags searchFlags = None);
+        void searchForTextInListWidget(QListWidget *listWidget,
+                                       const QString& text);
 
         QMessageBox::StandardButton showMessageBox(
                 QWidget *parent, QMessageBox::Icon icon,

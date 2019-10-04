@@ -116,6 +116,31 @@ void Utils::Gui::searchForTextInTreeWidget(QTreeWidget *treeWidget,
 }
 
 /**
+ * Searches for text in items of a list widget
+ */
+void Utils::Gui::searchForTextInListWidget(QListWidget *listWidget,
+                                           const QString& text) {
+    QList<QListWidgetItem*> allItems = listWidget->
+            findItems("", Qt::MatchContains | Qt::MatchRecursive);
+
+    // search text if at least one character was entered
+    if (text.count() >= 1) {
+        QList<QListWidgetItem*> items = listWidget->
+                findItems(text, Qt::MatchContains | Qt::MatchRecursive);
+
+        // hide all not found items
+        Q_FOREACH(QListWidgetItem *item, allItems) {
+            item->setHidden(!items.contains(item));
+        }
+    } else {
+        // show all items otherwise
+        Q_FOREACH(QListWidgetItem *item, allItems) {
+            item->setHidden(false);
+        }
+    }
+}
+
+/**
  * Checks if a variant exists as user data in a tree widget
  */
 bool Utils::Gui::userDataInTreeWidgetExists(QTreeWidget *treeWidget,
