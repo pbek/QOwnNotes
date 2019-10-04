@@ -3,6 +3,10 @@
 ## 19.10.1
 - you now can **search for note names** in the dialogs for the **remote trash**
   and **local trash**
+- added **Albanian, Hebrew, Icelandic and Punjabi translation** (a big thank you to Fabijenna)
+    - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes)
+      to make QOwnNotes available in more languages or help with the current
+      translation
 
 ## 19.10.0
 - after turning on the **typewriter mode** the cursor will now immediately

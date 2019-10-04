@@ -57,5 +57,9 @@ files:
         "sr_SP" : "sr",
         "fa_IR" : "fa",
         "bg_BG" : "bg",
+        "is_IS" : "is",
+        "pa_IN" : "pa",
+        "sq_AL" : "sq",
+        "he_IL" : "he",
       }
     }

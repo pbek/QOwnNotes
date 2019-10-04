@@ -52,4 +52,8 @@ languages/QOwnNotes_sr.qm usr/share/QOwnNotes/languages
 languages/QOwnNotes_fa.qm usr/share/QOwnNotes/languages
 languages/QOwnNotes_ha.qm usr/share/QOwnNotes/languages
 languages/QOwnNotes_bg.qm usr/share/QOwnNotes/languages
+languages/QOwnNotes_is.qm usr/share/QOwnNotes/languages
+languages/QOwnNotes_pa.qm usr/share/QOwnNotes/languages
+languages/QOwnNotes_sq.qm usr/share/QOwnNotes/languages
+languages/QOwnNotes_he.qm usr/share/QOwnNotes/languages
 QOwnNotes usr/bin
