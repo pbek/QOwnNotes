@@ -476,7 +476,7 @@ QString Utils::Misc::portableDataPath() {
  * @return
  */
 bool Utils::Misc::isInPortableMode() {
-    return qApp->property("portable").toBool();
+    return qApp != nullptr ? qApp->property("portable").toBool() : false;
 }
 
 /**
