@@ -44,6 +44,7 @@
 #include <QCoreApplication>
 #include <QUuid>
 #include <QTextLength>
+#include <QAbstractEventDispatcher>
 #include "ui_mainwindow.h"
 #include "dialogs/linkdialog.h"
 #include "services/owncloudservice.h"
@@ -357,9 +358,9 @@ MainWindow::MainWindow(QWidget *parent) :
     const int tabStop = 4;
     QFont font = ui->noteTextEdit->font();
     QFontMetrics metrics(font);
-    int width = tabStop * metrics.width(' ');
-    ui->noteTextEdit->setTabStopWidth(width);
-    ui->encryptedNoteTextEdit->setTabStopWidth(width);
+    int width = tabStop * metrics.horizontalAdvance(' ');
+    ui->noteTextEdit->setTabStopDistance(width);
+    ui->encryptedNoteTextEdit->setTabStopDistance(width);
 
     // called now in readSettingsFromSettingsDialog() line 494
     // set the edit mode for the note text edit
@@ -2069,7 +2070,7 @@ QTreeWidgetItem *MainWindow::addNoteSubFolderToTreeWidget(
                                 "folder",
                                 QIcon(":icons/breeze-qownnotes/16x16/"
                                               "folder.svg")));
-    item->setTextColor(1, QColor(Qt::gray));
+    item->setForeground(1, QColor(Qt::gray));
     item->setText(1, QString::number(linkCount));
     item->setToolTip(1, toolTip);
     item->setFlags(item->flags() | Qt::ItemIsEditable);
@@ -2981,7 +2982,8 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
 //            QCoreApplication::processEvents();
 
             // we try these two instead to update the UI
-            QCoreApplication::flush();
+            // QCoreApplication::flush() is obsolete since Qt 5.9
+//            QCoreApplication::flush();
 
             // this still causes double entries on OS X and maybe Windows
 #ifdef Q_OS_LINUX
@@ -3065,7 +3067,8 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
 //                    QCoreApplication::processEvents();
 
                     // we try these two instead to update the UI
-                    QCoreApplication::flush();
+                    // QCoreApplication::flush() is obsolete since Qt 5.9
+//                    QCoreApplication::flush();
 
                     // this still causes double entries on OS X and maybe
                     // Windows
@@ -5152,7 +5155,7 @@ void MainWindow::filterNotesBySearchLineEditText() {
             // count occurrences of search terms in notes
             if (!isHidden) {
                 Note note = Note::fetch(noteId);
-                item->setTextColor(1, QColor(Qt::gray));
+                item->setForeground(1, QColor(Qt::gray));
                 int count = 0;
 
                 Q_FOREACH(QString word, searchTextTerms) {
@@ -7175,7 +7178,7 @@ void MainWindow::reloadTagTree() {
 
     auto *allItem = new QTreeWidgetItem();
     allItem->setText(0, tr("All notes"));
-    allItem->setTextColor(1, QColor(Qt::gray));
+    allItem->setForeground(1, QColor(Qt::gray));
     allItem->setText(1, QString::number(linkCount));
     allItem->setToolTip(0, toolTip);
     allItem->setToolTip(1, toolTip);
@@ -7203,7 +7206,7 @@ void MainWindow::reloadTagTree() {
                 .arg(QString::number(linkCount));
         auto *untaggedItem = new QTreeWidgetItem();
         untaggedItem->setText(0, tr("Untagged notes"));
-        untaggedItem->setTextColor(1, QColor(Qt::gray));
+        untaggedItem->setForeground(1, QColor(Qt::gray));
         untaggedItem->setText(1, QString::number(linkCount));
         untaggedItem->setToolTip(0, toolTip);
         untaggedItem->setToolTip(1, toolTip);
@@ -7250,7 +7253,7 @@ void MainWindow::reloadNoteSubFolderTree() {
         allItem->setIcon(0, QIcon::fromTheme(
                 "edit-copy",
                 QIcon(":icons/breeze-qownnotes/16x16/edit-copy.svg")));
-        allItem->setTextColor(1, QColor(Qt::gray));
+        allItem->setForeground(1, QColor(Qt::gray));
         allItem->setText(1, QString::number(linkCount));
         allItem->setToolTip(1, toolTip);
         allItem->setFlags(allItem->flags() & ~Qt::ItemIsSelectable);
@@ -7275,7 +7278,7 @@ void MainWindow::reloadNoteSubFolderTree() {
     item->setIcon(0, QIcon::fromTheme(
             "folder",
             QIcon(":icons/breeze-qownnotes/16x16/folder.svg")));
-    item->setTextColor(1, QColor(Qt::gray));
+    item->setForeground(1, QColor(Qt::gray));
     item->setText(1, QString::number(linkCount));
     item->setToolTip(1, toolTip);
 
@@ -7435,7 +7438,7 @@ QTreeWidgetItem *MainWindow::addTagToTagTreeWidget(
     item->setData(0, Qt::UserRole, tagId);
     item->setText(0, name);
     item->setText(1, linkCount > 0 ? QString::number(linkCount) : "");
-    item->setTextColor(1, QColor(Qt::gray));
+    item->setForeground(1, QColor(Qt::gray));
     item->setIcon(0, QIcon::fromTheme(
                     "tag", QIcon(":icons/breeze-qownnotes/16x16/tag.svg")));
     item->setToolTip(0, toolTip);

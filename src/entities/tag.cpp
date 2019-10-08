@@ -6,6 +6,7 @@
 #include <QSqlRecord>
 #include <QSqlError>
 #include <QSettings>
+#include <algorithm>
 #include <utils/misc.h>
 #include <services/databaseservice.h>
 
@@ -396,7 +397,7 @@ QList<Tag> Tag::fetchAllOfNotes(QList<Note> notes) {
             }
     }
 
-    qSort(resultTagList);
+    std::sort(resultTagList.begin(), resultTagList.end());
 
     return resultTagList;
 }

@@ -288,7 +288,7 @@ void ScriptRepositoryDialog::parseInfoQMLReply(const QByteArray &arr) const {
     item->setData(0, Qt::UserRole, jsonData);
 
     if (!infoJson.platformSupported || !infoJson.appVersionSupported) {
-        item->setTextColor(0, QColor("#aaaaaa"));
+        item->setForeground(0, QColor("#aaaaaa"));
     }
 
     ui->scriptTreeWidget->addTopLevelItem(item);

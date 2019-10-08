@@ -54,7 +54,7 @@ void LayoutWidget::updateCurrentLayout() {
     auto scene = new QGraphicsScene();
 
     // adapt layoutGraphicsView background color
-    QColor bg = ui->layoutGraphicsView->palette().background().color();
+    QColor bg = ui->layoutGraphicsView->palette().window().color();
     ui->layoutGraphicsView->setStyleSheet(QString("background-color:") +
                                           bg.name(QColor::HexArgb));
 

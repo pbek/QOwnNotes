@@ -1,6 +1,7 @@
 #include <QSettings>
 #include <QApplication>
-#include <QDesktopWidget>
+#include <QGuiApplication>
+#include <QScreen>
 #include "masterdialog.h"
 #include "services/metricsservice.h"
 
@@ -74,7 +75,7 @@ void MasterDialog::handleOpenDialog() {
     if (geometryData.length() > 0) {
         restoreGeometry(geometryData);
     } else {
-        const QRect screenGeometry = QApplication::desktop()->screenGeometry();
+        const QRect screenGeometry = QGuiApplication::primaryScreen()->availableGeometry();
 
         // maximize the dialog window if it looks like that it doesn't fit on
         // the current screen

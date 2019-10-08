@@ -88,7 +88,7 @@ void ActionDialog::buildActionTreeForMenu(QMenu *menu,
             // add the shortcut in the 2nd column
             if (!shortcut.isEmpty()) {
                 item->setText(1, shortcut.toString(QKeySequence::NativeText));
-                item->setTextColor(1, QColor(Qt::gray));
+                item->setForeground(1, QColor(Qt::gray));
             }
 
             menuItem->addChild(item);

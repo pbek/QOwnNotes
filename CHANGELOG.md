@@ -6,6 +6,8 @@
 - fixed a crash when opening the settings dialog in the welcome dialog
   (for [#1303](https://github.com/pbek/QOwnNotes/issues/1303))
 - the parameter `--clear-settings` now also removes the settings database if not in portable mode
+- fixed several deprecation warnings to further advance the Qt 6 compatibility
+  of QOwnNotes (for [#1304](https://github.com/pbek/QOwnNotes/issues/1304))
 
 ## 19.10.1
 - you now can **search for note names** in the dialogs for the **remote trash**

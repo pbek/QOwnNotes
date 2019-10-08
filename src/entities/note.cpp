@@ -1660,7 +1660,7 @@ void Note::createFromFile(QFile &file, int noteSubFolderId,
         this->fileName = fileInfo.fileName();
         this->noteSubFolderId = noteSubFolderId;
         this->noteText = noteText;
-        this->fileCreated = fileInfo.created();
+        this->fileCreated = fileInfo.birthTime();
         this->fileLastModified = fileInfo.lastModified();
         this->store();
 

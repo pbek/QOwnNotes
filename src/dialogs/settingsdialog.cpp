@@ -1642,7 +1642,7 @@ void SettingsDialog::selectListWidgetValue(QListWidget* listWidget,
                 const QSignalBlocker blocker(listWidget);
                 Q_UNUSED(blocker)
 
-                listWidget->setItemSelected(item, true);
+                item->setSelected(true);
                 break;
             }
         }

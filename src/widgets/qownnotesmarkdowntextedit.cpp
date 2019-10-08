@@ -70,7 +70,7 @@ void QOwnNotesMarkdownTextEdit::setStyles() {
     // set the tab stop to the width of 4 spaces in the editor
     const int tabStop = 4;
     QFontMetrics metrics(font);
-    setTabStopWidth(tabStop * metrics.width(' '));
+    setTabStopDistance(tabStop * metrics.horizontalAdvance(' '));
 
     setFormatStyle(MarkdownHighlighter::HighlighterState::H1);
     setFormatStyle(MarkdownHighlighter::HighlighterState::H2);
