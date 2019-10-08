@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 19.10.2
+- fixed a crash when leaving the full-screen mode if app was restarted while in
+  full-screen mode and distraction free mode (for [#1302](https://github.com/pbek/QOwnNotes/issues/1302))
+
 ## 19.10.1
 - you now can **search for note names** in the dialogs for the **remote trash**
   and **local trash**

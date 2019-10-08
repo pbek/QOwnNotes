@@ -11199,6 +11199,10 @@ void MainWindow::on_actionRiot_triggered() {
 }
 
 void MainWindow::on_actionToggle_fullscreen_triggered() {
+    // #1302: we need to init the button in any case if the app was already in
+    //        fullscreen mode or "disconnect" will crash the app
+    _leaveFullScreenModeButton = new QPushButton(tr("leave"));
+
     if (isFullScreen()) {
         showNormal();
 
@@ -11207,7 +11211,6 @@ void MainWindow::on_actionToggle_fullscreen_triggered() {
     } else {
         showFullScreen();
 
-        _leaveFullScreenModeButton = new QPushButton(tr("leave"));
         _leaveFullScreenModeButton->setFlat(true);
         _leaveFullScreenModeButton->setToolTip(
                 tr("Leave full-screen mode"));
