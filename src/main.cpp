@@ -208,17 +208,21 @@ bool mainStartupMisc(const QStringList &arguments) {
 
     QDir dir(notesPath);
 
+    DatabaseService::createConnection();
+    DatabaseService::setupTables();
+
     // if the notes path is empty or doesn't exist open the welcome dialog
     if (notesPath.isEmpty() || !dir.exists()) {
         WelcomeDialog welcomeDialog;
         // exit QOwnNotes if the welcome dialog was canceled
         if (welcomeDialog.exec() != QDialog::Accepted) {
+            QSettings settings;
+            settings.clear();
+            DatabaseService::removeDiskDatabase();
+
             return false;
         }
     }
-
-    DatabaseService::createConnection();
-    DatabaseService::setupTables();
 
     // try to create note folders if they are missing
     NoteFolder::migrateToNoteFolders();
