@@ -358,9 +358,16 @@ MainWindow::MainWindow(QWidget *parent) :
     const int tabStop = 4;
     QFont font = ui->noteTextEdit->font();
     QFontMetrics metrics(font);
+
+#if QT_VERSION < QT_VERSION_CHECK(5,10,0)
+    int width = tabStop * metrics.width(' ');
+    ui->noteTextEdit->setTabStopWidth(width);
+    ui->encryptedNoteTextEdit->setTabStopWidth(width);
+#else
     int width = tabStop * metrics.horizontalAdvance(' ');
     ui->noteTextEdit->setTabStopDistance(width);
     ui->encryptedNoteTextEdit->setTabStopDistance(width);
+#endif
 
     // called now in readSettingsFromSettingsDialog() line 494
     // set the edit mode for the note text edit
