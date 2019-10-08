@@ -407,6 +407,11 @@ int main(int argc, char *argv[]) {
     if (clearSettings) {
         QSettings settings;
         settings.clear();
+
+        if (!portable) {
+            DatabaseService::removeDiskDatabase();
+        }
+
         qWarning("Your settings are now cleared!");
     }
 

@@ -1,10 +1,11 @@
 # QOwnNotes Changelog
 
 ## 19.10.2
-- fixed a crash when leaving the full-screen mode if app was restarted while in
+- fixed a crash when leaving the full-screen mode if the app was restarted while in
   full-screen mode and distraction free mode (for [#1302](https://github.com/pbek/QOwnNotes/issues/1302))
 - fixed a crash when opening the settings dialog in the welcome dialog
   (for [#1303](https://github.com/pbek/QOwnNotes/issues/1303))
+- the parameter `--clear-settings` now also removes the settings database if not in portable mode
 
 ## 19.10.1
 - you now can **search for note names** in the dialogs for the **remote trash**
