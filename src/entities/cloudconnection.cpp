@@ -63,7 +63,8 @@ int CloudConnection::getPriority() {
 }
 
 CloudConnection CloudConnection::firstCloudConnection() {
-    return CloudConnection::fetchAll()[0];
+    auto list = CloudConnection::fetchAll();
+    return list.count() > 0 ? list[0] : CloudConnection();
 }
 
 CloudConnection CloudConnection::currentCloudConnection() {
