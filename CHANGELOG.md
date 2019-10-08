@@ -8,6 +8,9 @@
 - the parameter `--clear-settings` now also removes the settings database if not in portable mode
 - fixed several deprecation warnings to further advance the Qt 6 compatibility
   of QOwnNotes (for [#1304](https://github.com/pbek/QOwnNotes/issues/1304))
+- added more Icelandic, Albanian, Punjabi, Hebrew, Brazilian Portuguese, Dutch,
+  Hungarian, Danish, Finnish, Norwegian, Catalan, Spanish, Italian, German
+  translation (thank you Fabijenna, mlimacarlos, MGuerra, richarson, tiwi90, rakekniven)
 
 ## 19.10.1
 - you now can **search for note names** in the dialogs for the **remote trash**

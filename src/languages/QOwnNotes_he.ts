@@ -3432,12 +3432,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="500"/>
       <source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
-      <translation type="unfinished">Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</translation>
+      <translation>אנא שקול לעדכן את אפליקציית QOwnNotesAPI בשרת שלך, גרסת האפליקציה שלך 1% נמוכה מדי ועלולה לגרום לבעיות ב- QOwnNotes.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1022"/>
       <source>ownCloud server connection error</source>
-      <translation type="unfinished">ownCloud server connection error</translation>
+      <translation>שגיאת חיבור שרת ownCloud</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1026"/>
@@ -3508,12 +3508,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="1934"/>
       <source>No bookmarks</source>
-      <translation type="unfinished">No bookmarks</translation>
+      <translation>אין סימניות</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1935"/>
       <source>No bookmarks were found on the server.</source>
-      <translation type="unfinished">No bookmarks were found on the server.</translation>
+      <translation>לא נמצאו סימניות בשרת.</translation>
     </message>
   </context>
   <context>
@@ -3521,27 +3521,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/passworddialog.ui" line="14"/>
       <source>Please enter your password</source>
-      <translation type="unfinished">Please enter your password</translation>
+      <translation>הזן את סיסמתך בבקשה</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="24"/>
       <source>Enter your password:</source>
-      <translation type="unfinished">Enter your password:</translation>
+      <translation>הכנס את הסיסמה שלך:</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="34"/>
       <source>Password</source>
-      <translation type="unfinished">Password</translation>
+      <translation>סיסמה</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="44"/>
       <source>Re-enter password</source>
-      <translation type="unfinished">Re-enter password</translation>
+      <translation>תכניס מחדש סיסמה</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="54"/>
       <source>Passwords don't match!</source>
-      <translation type="unfinished">Passwords don't match!</translation>
+      <translation>סיסמאות אינן תואמות!</translation>
     </message>
   </context>
   <context>
@@ -3549,32 +3549,32 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../entities/notefolder.cpp" line="468"/>
       <source>default</source>
-      <translation type="unfinished">default</translation>
+      <translation>ברירת מחדל</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="1188"/>
       <source>Could not store note file: %1 - Error message: %2</source>
-      <translation type="unfinished">Could not store note file: %1 - Error message: %2</translation>
+      <translation>לא ניתן לאחסן קובץ פתק: 1% - הודעת שגיאה: 2%</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="1259"/>
       <source>Renamed note-file was removed: %1</source>
-      <translation type="unfinished">Renamed note-file was removed: %1</translation>
+      <translation>קובץ ההערה ששמו שונה הוסר: 1%</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="1267"/>
       <source>Could not remove renamed note-file: %1 - Error message: %2</source>
-      <translation type="unfinished">Could not remove renamed note-file: %1 - Error message: %2</translation>
+      <translation>לא ניתן היה להסיר את שם הקובץ של הערה ששמה שונה: 1% - הודעת שגיאה: 2%</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="2143"/>
       <source>Could not read image file: %1</source>
-      <translation type="unfinished">Could not read image file: %1</translation>
+      <translation>לא ניתן היה לקרוא קובץ תמונה: 1%</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="2770"/>
       <source>Note file path changed</source>
-      <translation type="unfinished">Note file path changed</translation>
+      <translation>נתיב קובץ ההערה השתנה</translation>
     </message>
     <message numerus="yes">
       <location filename="../entities/note.cpp" line="2771"/>
@@ -4008,12 +4008,12 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="544"/>
       <source>Download failed</source>
-      <translation type="unfinished">Download failed</translation>
+      <translation>הורדה נכשלה</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="545"/>
       <source>The script could not be downloaded!</source>
-      <translation type="unfinished">The script could not be downloaded!</translation>
+      <translation>לא ניתן היה להוריד את התסריט!</translation>
     </message>
   </context>
   <context>
@@ -5396,90 +5396,90 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
       <location filename="../dialogs/settingsdialog.ui" line="5149"/>
       <location filename="../dialogs/settingsdialog.ui" line="5297"/>
       <source>Alphabetical</source>
-      <translation type="unfinished">Alphabetical</translation>
+      <translation>אלפביתי</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5087"/>
       <source>By last change / use</source>
-      <translation type="unfinished">By last change / use</translation>
+      <translation>לפי שינוי / שימוש אחרון</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5120"/>
       <source>Hide 'Find or create tag' search</source>
-      <translation type="unfinished">Hide 'Find or create tag' search</translation>
+      <translation>הסתר חיפוש 'מצא או צור תג'</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5130"/>
       <source>Note subfolders panel</source>
-      <translation type="unfinished">Note subfolders panel</translation>
+      <translation>הערה חלונית תיקיות המשנה</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5136"/>
       <source>Show with full path</source>
-      <translation type="unfinished">Show with full path</translation>
+      <translation>הצג עם מסלול מלא</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5156"/>
       <location filename="../dialogs/settingsdialog.ui" line="5304"/>
       <source>By last change</source>
-      <translation type="unfinished">By last change</translation>
+      <translation>לפי שינוי אחרון</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5166"/>
       <source>Show root folder name</source>
-      <translation type="unfinished">Show root folder name</translation>
+      <translation>הצג את שם תיקיית השורש</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5196"/>
       <source>Hide 'Find or create note subfolder' search</source>
-      <translation type="unfinished">Hide 'Find or create note subfolder' search</translation>
+      <translation>הסתר חיפוש 'מצא או צור תיקיית משנה פתק'</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5203"/>
       <source>Display note subfolders as full tree</source>
-      <translation type="unfinished">Display note subfolders as full tree</translation>
+      <translation>הצג תיקיות משנה של הערות כעץ מלא</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2580"/>
       <source>Search script repository</source>
-      <translation type="unfinished">Search script repository</translation>
+      <translation>מאגר סקריפט לחיפוש</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4923"/>
       <source>You optionally can use "%notePath%" for the path of the note.</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
-      <translation type="unfinished">You optionally can use "%notePath%" for the path of the note.</translation>
+      <translation>באפשרותך להשתמש "%notePath%" לנתיב של השטר.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4946"/>
       <source>Git client</source>
-      <translation type="unfinished">Git client</translation>
+      <translation>לקוח גיט</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4962"/>
       <source>Path to git executable:</source>
-      <translation type="unfinished">Path to git executable:</translation>
+      <translation>נתיב להפעלה של git:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4952"/>
       <source>Path to git client, leave empty for default</source>
-      <translation type="unfinished">Path to git client, leave empty for default</translation>
+      <translation>נתיב ללקוח git, השאר ריק כברירת מחדל</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4871"/>
       <source>Commit interval</source>
-      <translation type="unfinished">Commit interval</translation>
+      <translation>התחייב מרווח</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4877"/>
       <source>sec</source>
       <extracomment>seconds</extracomment>
-      <translation type="unfinished">sec</translation>
+      <translation>שניות</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4897"/>
       <source>git commit interval time [sec]</source>
-      <translation type="unfinished">git commit interval time [sec]</translation>
+      <translation>זמן הביצוע של git [שניות]</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="914"/>
@@ -5489,7 +5489,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="227"/>
       <source>Preview</source>
-      <translation type="unfinished">Preview</translation>
+      <translation>תצוגה מקדימה</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="276"/>
@@ -5499,32 +5499,32 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1729"/>
       <source>Which calendar backend do you want to use?</source>
-      <translation type="unfinished">Which calendar backend do you want to use?</translation>
+      <translation>באיזה backend בלוח השנה אתה רוצה להשתמש?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1742"/>
       <source>For most current ownCloud and Nextcloud installations</source>
-      <translation type="unfinished">For most current ownCloud and Nextcloud installations</translation>
+      <translation>עבור רוב ההתקנות הנוכחיות של ownCloud ו- Nextcloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1762"/>
       <source>For older versions of ownCloud where the default setting doesn't work</source>
-      <translation type="unfinished">For older versions of ownCloud where the default setting doesn't work</translation>
+      <translation>עבור גרסאות ישנות יותר של ownCloud בהן הגדרת ברירת המחדל אינה פועלת</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1765"/>
       <source>Legacy ownCloud calendar</source>
-      <translation type="unfinished">Legacy ownCloud calendar</translation>
+      <translation>לוח שנה משלה לעצמוCloud מדור קודם</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1778"/>
       <source>CalDAV server settings</source>
-      <translation type="unfinished">CalDAV server settings</translation>
+      <translation>הגדרות שרת CalDAV</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1787"/>
       <source>Calendar base url:</source>
-      <translation type="unfinished">Calendar base url:</translation>
+      <translation>כתובת אתר בסיס לוח השנה:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1809"/>
@@ -5534,7 +5534,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1879"/>
       <source>Please enter the password for your CalDAV username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.</source>
-      <translation type="unfinished">Please enter the password for your CalDAV username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.</translation>
+      <translation>אנא הכנס את הסיסמה עבור שם המשתמש שלך ב- CalDAV. &lt;br/&gt; נכון לעכשיו הסיסמה תאוחסן מוצפנת עם ההגדרות האחרות, אך אינה מאובטחת במיוחד.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2148"/>
@@ -5825,7 +5825,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3693"/>
       <source>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</source>
-      <translation type="unfinished">You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</translation>
+      <translation>אתה יכול להשתמש בזה למשל תחת Windows אם יש לך בעיות עם קווים חדשים באפליקציית הערות ה-Cloud / Nextcloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3726"/>

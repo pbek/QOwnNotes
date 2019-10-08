@@ -6,7 +6,7 @@
     <message>
       <location filename="../dialogs/aboutdialog.ui" line="14"/>
       <source>About QOwnNotes</source>
-      <translation type="unfinished">About QOwnNotes</translation>
+      <translation>QOwnNotes ਬਾਰੇ</translation>
     </message>
   </context>
   <context>
@@ -439,12 +439,12 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7766"/>
       <source>Already at oldest change.</source>
-      <translation type="unfinished">Already at oldest change.</translation>
+      <translation>ਪਹਿਲਾਂ ਤੋਂ ਪੁਰਾਣੀ ਤਬਦੀਲੀ ਤੇ.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7767"/>
       <source>Already at newest change.</source>
-      <translation type="unfinished">Already at newest change.</translation>
+      <translation>ਪਹਿਲਾਂ ਤੋਂ ਹੀ ਨਵੀਂ ਤਬਦੀਲੀ 'ਤੇ.</translation>
     </message>
   </context>
   <context>
@@ -452,7 +452,7 @@
     <message>
       <location filename="../helpers/fakevimproxy.cpp" line="26"/>
       <source>Information</source>
-      <translation type="unfinished">Information</translation>
+      <translation>ਜਾਣਕਾਰੀ</translation>
     </message>
   </context>
   <context>
@@ -460,84 +460,84 @@
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="38"/>
       <source>Text font</source>
-      <translation type="unfinished">Text font</translation>
+      <translation>ਟੈਕਸਟ ਫੋਂਟ</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="73"/>
       <source>Size:</source>
-      <translation type="unfinished">Size:</translation>
+      <translation>ਆਕਾਰ:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="80"/>
       <source>Family:</source>
-      <translation type="unfinished">Family:</translation>
+      <translation>ਪਰਿਵਾਰ:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="103"/>
       <source>Color schema</source>
-      <translation type="unfinished">Color schema</translation>
+      <translation>ਰੰਗ ਸਕੀਮ</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="124"/>
       <source>Delete schema</source>
-      <translation type="unfinished">Delete schema</translation>
+      <translation>ਸਕੀਮਾ ਮਿਟਾਓ</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="127"/>
       <source>Delete</source>
-      <translation type="unfinished">Delete</translation>
+      <translation>ਮਿਟਾਓ</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="169"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="631"/>
       <source>Export schema</source>
-      <translation type="unfinished">Export schema</translation>
+      <translation>ਐਕਸਪੋਰਟ ਸਕੀਮਾ</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="172"/>
       <source>Export</source>
-      <translation type="unfinished">Export</translation>
+      <translation>ਨਿਰਯਾਤ</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="271"/>
       <source>If you have created a nice color schema please export it and share it with everyone!</source>
-      <translation type="unfinished">If you have created a nice color schema please export it and share it with everyone!</translation>
+      <translation>ਜੇ ਤੁਸੀਂ ਇਕ ਵਧੀਆ ਰੰਗ ਸਕੀਮਾ ਬਣਾਈ ਹੈ, ਕਿਰਪਾ ਕਰਕੇ ਇਸ ਨੂੰ ਨਿਰਯਾਤ ਕਰੋ ਅਤੇ ਇਸ ਨੂੰ ਹਰ ਕਿਸੇ ਨਾਲ ਸਾਂਝਾ ਕਰੋ!</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="155"/>
       <source>Copy schema</source>
-      <translation type="unfinished">Copy schema</translation>
+      <translation>ਸਕੀਮਾ ਦੀ ਨਕਲ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="158"/>
       <source>Copy</source>
-      <translation type="unfinished">Copy</translation>
+      <translation>ਕਾੱਪੀ</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="141"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="671"/>
       <source>Import schema</source>
-      <translation type="unfinished">Import schema</translation>
+      <translation>ਆਯਾਤ ਸਕੀਮਾ</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="144"/>
       <source>Import</source>
-      <translation type="unfinished">Import</translation>
+      <translation>ਆਯਾਤ</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="315"/>
       <source>Share schema</source>
-      <translation type="unfinished">Share schema</translation>
+      <translation>ਸਕੀਮਾ ਨੂੰ ਸਾਂਝਾ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="288"/>
       <source>Background:</source>
-      <translation type="unfinished">Background:</translation>
+      <translation>ਪਿਛੋਕੜ:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="281"/>
       <source>Foreground:</source>
-      <translation type="unfinished">Foreground:</translation>
+      <translation>ਫੋਰਗਰਾਉਂਡ:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="264"/>
@@ -826,37 +826,37 @@
       <location filename="../widgets/layoutwidget.cpp" line="154"/>
       <source>The note edit panel is the central widget that will be resized automatically.</source>
       <comment>Layout description</comment>
-      <translation type="unfinished">The note edit panel is the central widget that will be resized automatically.</translation>
+      <translation>ਪਰਾਕਸੀ ਸਰਵਰ ਦਾ ਹੋਸਟ-ਨਾਂ.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="158"/>
       <source>Because of this there is no central widget that will be resized automatically.</source>
       <comment>Layout description</comment>
-      <translation type="unfinished">Because of this there is no central widget that will be resized automatically.</translation>
+      <translation>ਇਸ ਕਰਕੇ ਇੱਥੇ ਕੋਈ ਕੇਂਦਰੀ ਵਿਜੇਟ ਨਹੀਂ ਹੈ ਜਿਸ ਦਾ ਆਟੋਮੈਟਿਕ ਆਕਾਰ ਬਦਲਿਆ ਜਾਏਗਾ.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="162"/>
       <source>Just the note list on the left and the note edit panel on the right are enabled by default.</source>
       <comment>Layout description</comment>
-      <translation type="unfinished">Just the note list on the left and the note edit panel on the right are enabled by default.</translation>
+      <translation>ਖੱਬੇ ਪਾਸੇ ਬਸ ਨੋਟ ਲਿਸਟ ਅਤੇ ਸੱਜੇ ਪਾਸੇ ਨੋਟ ਐਡਿਟ ਪੈਨਲ ਡਿਫੌਲਟ ਯੋਗ ਹੈ.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="166"/>
       <source>Most of the panels, like the note list on the left, the tagging panels, the note edit panel in the center and the preview panel on the right are enabled by default.</source>
       <comment>Layout description</comment>
-      <translation type="unfinished">Most of the panels, like the note list on the left, the tagging panels, the note edit panel in the center and the preview panel on the right are enabled by default.</translation>
+      <translation>ਖੱਬੇ ਪਾਸੇ ਨੋਟ ਸੂਚੀ, ਟੈਗਿੰਗ ਪੈਨਲ, ਕੇਂਦਰ ਵਿਚਲੇ ਨੋਟ ਸੰਪਾਦਨ ਪੈਨਲ ਅਤੇ ਸੱਜੇ ਪਾਸੇ ਝਲਕ ਪੈਨਲ, ਮੂਲ ਰੂਪ ਵਿੱਚ ਯੋਗ ਹੁੰਦੇ ਹਨ.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="171"/>
       <source>Most of the panels, like the note list on the left, the tagging panels, the note edit panel on the right and the preview panel on top of the note edit panel are enabled by default.</source>
       <comment>Layout description</comment>
-      <translation type="unfinished">Most of the panels, like the note list on the left, the tagging panels, the note edit panel on the right and the preview panel on top of the note edit panel are enabled by default.</translation>
+      <translation>ਖੱਬੇ ਪਾਸੇ ਨੋਟ ਸੂਚੀ, ਟੈਗਿੰਗ ਪੈਨਲ, ਸੱਜੇ ਪਾਸੇ ਨੋਟ ਐਡਿਟ ਪੈਨਲ ਅਤੇ ਨੋਟ ਐਡਿਟ ਪੈਨਲ ਦੇ ਉੱਪਰ ਦਿੱਤੇ ਝਲਕ ਪੈਨਲ, ਮੂਲ ਰੂਪ ਵਿੱਚ ਯੋਗ ਕੀਤੇ ਜਾਂਦੇ ਹਨ.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="176"/>
       <source>Tiny one column layout with note search, note list and note edit on top of each other.</source>
       <comment>Layout description</comment>
-      <translation type="unfinished">Tiny one column layout with note search, note list and note edit on top of each other.</translation>
+      <translation>ਇਕ ਦੂਜੇ ਦੇ ਸਿਖਰ 'ਤੇ ਨੋਟ ਖੋਜ, ਨੋਟ ਸੂਚੀ ਅਤੇ ਨੋਟ ਸੰਪਾਦਨ ਦੇ ਨਾਲ ਇਕ ਕਾਲਮ ਦਾ ਖਾਕਾ.</translation>
     </message>
   </context>
   <context>
@@ -864,52 +864,52 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="14"/>
       <source>Link an url or note</source>
-      <translation type="unfinished">Link an url or note</translation>
+      <translation>ਇੱਕ url ਜਾਂ ਨੋਟ ਨੂੰ ਲਿੰਕ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="61"/>
       <source>Enter URL</source>
-      <translation type="unfinished">Enter URL</translation>
+      <translation>URL ਦਾਖਲ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="70"/>
       <source>Enter an URL to link to</source>
-      <translation type="unfinished">Enter an URL to link to</translation>
+      <translation>ਨਾਲ ਲਿੰਕ ਕਰਨ ਲਈ ਇੱਕ URL ਦਾਖਲ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="94"/>
       <source>Note</source>
-      <translation type="unfinished">Note</translation>
+      <translation>ਨੋਟ</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="141"/>
       <source>Enter the name of the link (optional)</source>
-      <translation type="unfinished">Enter the name of the link (optional)</translation>
+      <translation>ਲਿੰਕ ਦਾ ਨਾਮ ਦਰਜ ਕਰੋ (ਵਿਕਲਪਿਕ)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="144"/>
       <source>Name of link (optional)</source>
-      <translation type="unfinished">Name of link (optional)</translation>
+      <translation>ਲਿੰਕ ਦਾ ਨਾਮ (ਵਿਕਲਪਿਕ)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="154"/>
       <source>Enter a description for the link (optional)</source>
-      <translation type="unfinished">Enter a description for the link (optional)</translation>
+      <translation>ਲਿੰਕ ਲਈ ਵੇਰਵਾ ਦਰਜ ਕਰੋ (ਵਿਕਲਪਿਕ)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="157"/>
       <source>Description of link (optional)</source>
-      <translation type="unfinished">Description of link (optional)</translation>
+      <translation>ਲਿੰਕ ਦਾ ਵੇਰਵਾ (ਵਿਕਲਪਿਕ)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="109"/>
       <source>Search for notes or create new notes by entering text and pressing return</source>
-      <translation type="unfinished">Search for notes or create new notes by entering text and pressing return</translation>
+      <translation>ਨੋਟਸ ਦੀ ਖੋਜ ਕਰੋ ਜਾਂ ਟੈਕਸਟ ਦਰਜ ਕਰਕੇ ਅਤੇ ਵਾਪਸੀ ਦਬਾ ਕੇ ਨਵੇਂ ਨੋਟ ਬਣਾਓ</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="124"/>
       <source>Search for a note to link to</source>
-      <translation type="unfinished">Search for a note to link to</translation>
+      <translation>ਨਾਲ ਜੁੜਨ ਲਈ ਇਕ ਨੋਟ ਦੀ ਭਾਲ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="51"/>
@@ -919,7 +919,7 @@
     <message>
       <location filename="../dialogs/linkdialog.cpp" line="219"/>
       <source>Select file to link to</source>
-      <translation type="unfinished">Select file to link to</translation>
+      <translation>ਨਾਲ ਜੁੜਨ ਲਈ ਫਾਈਲ ਦੀ ਚੋਣ ਕਰੋ</translation>
     </message>
   </context>
   <context>
@@ -927,49 +927,49 @@
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="14"/>
       <source>Locally trashed notes</source>
-      <translation type="unfinished">Locally trashed notes</translation>
+      <translation>ਸਥਾਨਕ ਤੌਰ 'ਤੇ ਰੱਦੀ ਦੇ ਨੋਟ</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="55"/>
       <source>Find note name</source>
-      <translation type="unfinished">Find note name</translation>
+      <translation>ਨੋਟ ਦਾ ਨਾਮ ਲੱਭੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="81"/>
       <source>Name</source>
-      <translation type="unfinished">Name</translation>
+      <translation>ਨਾਮ</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="86"/>
       <source>Trashed</source>
-      <translation type="unfinished">Trashed</translation>
+      <translation>ਟ੍ਰੈਸ਼ ਹੋ ਗਿਆ</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="41"/>
       <source>Restore</source>
-      <translation type="unfinished">Restore</translation>
+      <translation>ਮੁੜ</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="42"/>
       <location filename="../dialogs/localtrashdialog.cpp" line="194"/>
       <source>Restore selected notes</source>
-      <translation type="unfinished">Restore selected notes</translation>
+      <translation>ਚੁਣੇ ਗਏ ਨੋਟਸ ਨੂੰ ਰੀਸਟੋਰ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="51"/>
       <source>Remove</source>
-      <translation type="unfinished">Remove</translation>
+      <translation>ਹਟਾਓ</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="52"/>
       <location filename="../dialogs/localtrashdialog.cpp" line="240"/>
       <source>Remove selected notes</source>
-      <translation type="unfinished">Remove selected notes</translation>
+      <translation>ਚੁਣੇ ਗਏ ਨੋਟ ਹਟਾਓ</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="97"/>
       <source>File will be restored to: %1</source>
-      <translation type="unfinished">File will be restored to: %1</translation>
+      <translation>ਫਾਈਲ ਨੂੰ ਇਸ ਤੇ ਰੀਸਟੋਰ ਕੀਤਾ ਜਾਏਗਾ: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="106"/>
@@ -1024,22 +1024,22 @@
     <message>
       <location filename="../widgets/logwidget.ui" line="26"/>
       <source>Logs</source>
-      <translation type="unfinished">Logs</translation>
+      <translation>ਲਾਗ</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="114"/>
       <source>Fatal</source>
-      <translation type="unfinished">Fatal</translation>
+      <translation>ਘਾਤਕ</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="100"/>
       <source>Warning</source>
-      <translation type="unfinished">Warning</translation>
+      <translation>ਚੇਤਾਵਨੀ</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="107"/>
       <source>Critical</source>
-      <translation type="unfinished">Critical</translation>
+      <translation>ਨਾਜ਼ੁਕ</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="86"/>
@@ -1083,7 +1083,7 @@
     <message>
       <location filename="../mainwindow.ui" line="683"/>
       <source>Add tag</source>
-      <translation type="unfinished">Add tag</translation>
+      <translation>ਟੈਗ ਸ਼ਾਮਲ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="408"/>
@@ -1345,7 +1345,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1071"/>
       <source>Encryption</source>
-      <translation type="unfinished">Encryption</translation>
+      <translation>ਇਨਕ੍ਰਿਪਸ਼ਨ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1098"/>
@@ -1361,33 +1361,33 @@
       <location filename="../mainwindow.ui" line="1120"/>
       <location filename="../mainwindow.cpp" line="644"/>
       <source>Workspaces</source>
-      <translation type="unfinished">Workspaces</translation>
+      <translation>ਵਰਕਸਪੇਸ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1125"/>
       <source>Panels</source>
-      <translation type="unfinished">Panels</translation>
+      <translation>ਪੈਨਲ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1130"/>
       <source>Toolbars</source>
-      <translation type="unfinished">Toolbars</translation>
+      <translation>ਟੂਲਬਾਰ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1135"/>
       <source>Show</source>
       <extracomment>To show or hide stuff</extracomment>
-      <translation type="unfinished">Show</translation>
+      <translation>ਦਿਖਾਓ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1149"/>
       <source>Workspace</source>
-      <translation type="unfinished">Workspace</translation>
+      <translation>ਵਰਕਸਪੇਸ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1158"/>
       <source>Jump to</source>
-      <translation type="unfinished">Jump to</translation>
+      <translation>'ਤੇ ਜਾਓ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1194"/>
@@ -1402,33 +1402,33 @@
     <message>
       <location filename="../mainwindow.ui" line="1339"/>
       <source>Post questions, feature requests or problems with the help of the issue assistant</source>
-      <translation type="unfinished">Post questions, feature requests or problems with the help of the issue assistant</translation>
+      <translation>ਮੁੱਦੇ ਸਹਾਇਕ ਦੀ ਸਹਾਇਤਾ ਨਾਲ ਪ੍ਰਸ਼ਨ, ਵਿਸ਼ੇਸ਼ਤਾ ਬੇਨਤੀਆਂ ਜਾਂ ਸਮੱਸਿਆਵਾਂ ਪੋਸਟ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1397"/>
       <source>Show remote trash</source>
-      <translation type="unfinished">Show remote trash</translation>
+      <translation>ਰਿਮੋਟ ਰੱਦੀ ਵੇਖਾਓ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1437"/>
       <location filename="../mainwindow.ui" line="1440"/>
       <source>Auto format table</source>
-      <translation type="unfinished">Auto format table</translation>
+      <translation>ਆਟੋ ਫਾਰਮੈਟ ਟੇਬਲ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1469"/>
       <source>Forward in note history</source>
-      <translation type="unfinished">Forward in note history</translation>
+      <translation>ਨੋਟ ਇਤਿਹਾਸ ਵਿਚ ਅੱਗੇ ਭੇਜੋ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1481"/>
       <source>Show shortcuts</source>
-      <translation type="unfinished">Show shortcuts</translation>
+      <translation>ਸ਼ਾਰਟਕੱਟ ਦਿਖਾਓ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1490"/>
       <source>&amp;Knowledge base</source>
-      <translation type="unfinished">&amp;Knowledge base</translation>
+      <translation>&amp;ਗਿਆਨ ਅਧਾਰ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1499"/>
@@ -1443,12 +1443,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1523"/>
       <source>&amp;Export note as PDF (preview)</source>
-      <translation type="unfinished">&amp;Export note as PDF (preview)</translation>
+      <translation>&amp;ਨੋਟ ਨੂੰ PDF ਦੇ ਰੂਪ ਵਿੱਚ ਨਿਰਯਾਤ ਕਰੋ (ਪੂਰਵਦਰਸ਼ਨ)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1526"/>
       <source>Export note as PDF (preview)</source>
-      <translation type="unfinished">Export note as PDF (preview)</translation>
+      <translation>ਨੋਟ ਨੂੰ PDF ਦੇ ਰੂਪ ਵਿੱਚ ਨਿਰਯਾਤ ਕਰੋ (ਪੂਰਵਦਰਸ਼ਨ)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1535"/>
@@ -1468,7 +1468,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1571"/>
       <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
-      <translation type="unfinished">Insert image (the image will be copied to the `media` folder in the current notes folder)</translation>
+      <translation>ਚਿੱਤਰ ਸ਼ਾਮਲ ਕਰੋ (ਮੌਜੂਦਾ ਨੋਟਿਸ ਫੋਲਡਰ ਵਿੱਚ `ਮੀਡੀਆ` ਫੋਲਡਰ ਵਿੱਚ ਚਿੱਤਰ ਨਕਲ ਕੀਤਾ ਜਾਵੇਗਾ)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1583"/>
@@ -1483,7 +1483,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1601"/>
       <source>Edit encrypted note</source>
-      <translation type="unfinished">Edit encrypted note</translation>
+      <translation>ਇਨਕ੍ਰਿਪਟਡ ਨੋਟ ਨੂੰ ਸੋਧੋ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1613"/>
@@ -1513,12 +1513,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1664"/>
       <source>Next note</source>
-      <translation type="unfinished">Next note</translation>
+      <translation>ਅਗਲਾ ਨੋਟ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1676"/>
       <source>Previous note</source>
-      <translation type="unfinished">Previous note</translation>
+      <translation>ਪਿਛਲਾ ਨੋਟ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1688"/>
@@ -1851,39 +1851,39 @@
     <message>
       <location filename="../mainwindow.ui" line="1894"/>
       <source>Solve a simple equation like '(2+3)*6=' in the current line</source>
-      <translation type="unfinished">Solve a simple equation like '(2+3)*6=' in the current line</translation>
+      <translation>ਮੌਜੂਦਾ ਲਾਈਨ ਵਿਚ '(2 + 3) * 6 =' ਜਿਹੇ ਸਧਾਰਣ ਸਮੀਕਰਣ ਨੂੰ ਹੱਲ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1902"/>
       <source>Select note folder</source>
-      <translation type="unfinished">Select note folder</translation>
+      <translation>ਨੋਟ ਫੋਲਡਰ ਚੁਣੋ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1917"/>
       <source>Reload scripting engine</source>
-      <translation type="unfinished">Reload scripting engine</translation>
+      <translation>ਸਕ੍ਰਿਪਟਿੰਗ ਇੰਜਣ ਨੂੰ ਮੁੜ ਲੋਡ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1950"/>
       <location filename="../mainwindow.ui" line="1953"/>
       <source>Open the #qownnotes IRC channel, you have to stay online to get a response</source>
-      <translation type="unfinished">Open the #qownnotes IRC channel, you have to stay online to get a response</translation>
+      <translation># ਕਾਨਾ ਨੋਟਸ ਆਈਆਰਸੀ ਚੈਨਲ ਖੋਲ੍ਹੋ, ਜਵਾਬ ਪ੍ਰਾਪਤ ਕਰਨ ਲਈ ਤੁਹਾਨੂੰ onlineਨਲਾਈਨ ਰਹਿਣਾ ਪਏਗਾ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2180"/>
       <location filename="../mainwindow.ui" line="2183"/>
       <source>Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</source>
-      <translation type="unfinished">Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</translation>
+      <translation>ਕਿownਨੋਟੇਸ ਗਿੱਟਰ ਰੂਮ ਖੋਲ੍ਹੋ, ਤੁਹਾਨੂੰ ਲੌਗਇਨ ਕਰਨ ਲਈ ਇੱਕ ਗਿੱਟਹੱਬ ਜਾਂ ਟਵਿੱਟਰ ਅਕਾਉਂਟ ਦੀ ਜ਼ਰੂਰਤ ਹੈ, ਪਰ ਤੁਸੀਂ offlineਫਲਾਈਨ ਸੁਨੇਹੇ ਪ੍ਰਾਪਤ ਕਰ ਸਕਦੇ ਹੋ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="970"/>
       <source>Open chat</source>
-      <translation type="unfinished">Open chat</translation>
+      <translation>ਖੁੱਲੀ ਗੱਲਬਾਤ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="510"/>
       <source>Note operations…</source>
-      <translation type="unfinished">Note operations…</translation>
+      <translation>ਨੋਟ ਓਪਰੇਸ਼ਨ…</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1556"/>
@@ -1893,75 +1893,75 @@
     <message>
       <location filename="../mainwindow.ui" line="1962"/>
       <source>Insert headline from note filename</source>
-      <translation type="unfinished">Insert headline from note filename</translation>
+      <translation>ਨੋਟ ਫਾਈਲ ਨਾਮ ਤੋਂ ਸਿਰਲੇਖ ਸ਼ਾਮਲ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1976"/>
       <source>Use softwrap in note editor and preview</source>
-      <translation type="unfinished">Use softwrap in note editor and preview</translation>
+      <translation>ਨੋਟ ਸੰਪਾਦਕ ਅਤੇ ਝਲਕ ਵਿੱਚ ਸਾਫਟਵਰਪ ਦੀ ਵਰਤੋਂ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1984"/>
       <source>Show status bar</source>
-      <translation type="unfinished">Show status bar</translation>
+      <translation>ਸਥਿਤੀ ਪੱਟੀ ਵੇਖੋ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1999"/>
       <source>Share note</source>
-      <translation type="unfinished">Share note</translation>
+      <translation>ਸ਼ੇਅਰ ਨੋਟ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2029"/>
       <source>Markdown cheatsheet</source>
-      <translation type="unfinished">Markdown cheatsheet</translation>
+      <translation>ਮਾਰਕਡਾਉਨ ਚੀਟਸਸ਼ੀਟ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2038"/>
       <source>Strike out text</source>
-      <translation type="unfinished">Strike out text</translation>
+      <translation>ਪਾਠ ਨੂੰ ਮਾਰੋ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2049"/>
       <source>Use one column mode</source>
-      <translation type="unfinished">Use one column mode</translation>
+      <translation>ਇੱਕ ਕਾਲਮ ਮੋਡ ਵਰਤੋ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2052"/>
       <location filename="../mainwindow.ui" line="2055"/>
       <source>Use a one column minimal mode (like NVAlt)</source>
-      <translation type="unfinished">Use a one column minimal mode (like NVAlt)</translation>
+      <translation>ਇੱਕ ਕਾਲਮ ਘੱਟੋ ਘੱਟ ਮੋਡ ਦੀ ਵਰਤੋਂ ਕਰੋ (ਜਿਵੇਂ ਕਿ ਐਨਵੀਏਲਟ)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2067"/>
       <source>Show menu bar</source>
-      <translation type="unfinished">Show menu bar</translation>
+      <translation>ਮੇਨੂ ਬਾਰ ਵੇਖਾਓ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2079"/>
       <source>Split note at cursor position</source>
-      <translation type="unfinished">Split note at cursor position</translation>
+      <translation>ਕਰਸਰ ਸਥਿਤੀ 'ਤੇ ਨੋਟ ਵੰਡੋ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2099"/>
       <source>Donate</source>
-      <translation type="unfinished">Donate</translation>
+      <translation>ਦਾਨ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2120"/>
       <source>Import notes from Evernote</source>
-      <translation type="unfinished">Import notes from Evernote</translation>
+      <translation>ਈਵਰਨੋਟ ਤੋਂ ਨੋਟ ਆਯਾਤ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2601"/>
       <source>Note was removed externally!</source>
-      <translation type="unfinished">Note was removed externally!</translation>
+      <translation>ਨੋਟ ਬਾਹਰੀ ਤੌਰ ਤੇ ਹਟਾ ਦਿੱਤਾ ਗਿਆ ਸੀ!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2602"/>
       <source>Current note was removed outside of this application!
 Restore current note?</source>
-      <translation type="unfinished">Current note was removed outside of this application!
-Restore current note?</translation>
+      <translation>ਮੌਜੂਦਾ ਨੋਟ ਨੂੰ ਇਸ ਐਪਲੀਕੇਸ਼ਨ ਦੇ ਬਾਹਰ ਹਟਾ ਦਿੱਤਾ ਗਿਆ ਸੀ!
+ਮੌਜੂਦਾ ਨੋਟ ਨੂੰ ਰੀਸਟੋਰ ਕਰਨਾ ਹੈ?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4967"/>
@@ -1980,22 +1980,22 @@ Restore current note?</translation>
     <message>
       <location filename="../mainwindow.cpp" line="2826"/>
       <source>new version %1 available</source>
-      <translation type="unfinished">new version %1 available</translation>
+      <translation>ਨਵਾਂ ਵਰਜਨ %1 ਉਪਲਬਧ ਹੈ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2946"/>
       <source>Abort</source>
-      <translation type="unfinished">Abort</translation>
+      <translation>ਅਧੂਰਾ ਛੱਡੋ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2946"/>
       <source>Loading notes…</source>
-      <translation type="unfinished">Loading notes…</translation>
+      <translation>ਨੋਟ ਲੋਡ ਕਰ ਰਿਹਾ ਹੈ…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3149"/>
       <source>Delete conflicted database copies</source>
-      <translation type="unfinished">Delete conflicted database copies</translation>
+      <translation>ਵਿਵਾਦਪੂਰਨ ਡਾਟਾਬੇਸ ਕਾਪੀਆਂ ਮਿਟਾਓ</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3174"/>
@@ -2008,17 +2008,17 @@ Restore current note?</translation>
     <message>
       <location filename="../mainwindow.cpp" line="3309"/>
       <source>Please select the folder where your notes will get stored</source>
-      <translation type="unfinished">Please select the folder where your notes will get stored</translation>
+      <translation>ਕਿਰਪਾ ਕਰਕੇ ਫੋਲਡਰ ਦੀ ਚੋਣ ਕਰੋ ਜਿੱਥੇ ਤੁਹਾਡੇ ਨੋਟਸ ਸਟੋਰ ਕੀਤੇ ਜਾਣਗੇ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3336"/>
       <source>No folder was selected</source>
-      <translation type="unfinished">No folder was selected</translation>
+      <translation>ਕੋਈ ਫੋਲਡਰ ਨਹੀਂ ਚੁਣਿਆ ਗਿਆ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3338"/>
       <source>You have to select your ownCloud notes folder to make this software work!</source>
-      <translation type="unfinished">You have to select your ownCloud notes folder to make this software work!</translation>
+      <translation>ਇਸ ਸੌਫਟਵੇਅਰ ਨੂੰ ਕੰਮ ਕਰਨ ਲਈ ਤੁਹਾਨੂੰ ਆਪਣਾ ਕਲਾਉਡ ਨੋਟਸ ਫੋਲਡਰ ਚੁਣਨਾ ਪਵੇਗਾ!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3340"/>
@@ -2488,12 +2488,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="10891"/>
       <source>Disallow all note editing</source>
-      <translation type="unfinished">Disallow all note editing</translation>
+      <translation>ਸਾਰੇ ਨੋਟ ਸੰਪਾਦਨ ਨੂੰ ਮਨਜ਼ੂਰੀ ਦਿਓ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="11037"/>
       <source>Select text files to import</source>
-      <translation type="unfinished">Select text files to import</translation>
+      <translation>ਸਾਰੇ ਨੋਟ ਸੰਪਾਦਨ ਮਨਜ਼ੂਰੀ ਦਿਓ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="11066"/>
@@ -2780,7 +2780,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="4935"/>
       <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
-      <translation type="unfinished">QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</translation>
+      <translation>QOwnNotes ਅਗਿਆਤ ਵਰਤੋਂ ਦੇ ਡੇਟਾ ਨੂੰ ਟਰੈਕ ਕਰੇਗਾ, ਜੋ ਕਿ ਇਹ ਫੈਸਲਾ ਕਰਨ ਵਿੱਚ ਮਦਦ ਕਰਦਾ ਹੈ ਕਿ QOwnNotes ਦੇ ਕਿਹੜੇ ਹਿੱਸਿਆਂ ਵਿੱਚ ਸੁਧਾਰ ਕਰਨਾ ਹੈ ਅਤੇ ਬੱਗਸ ਨੂੰ ਲੱਭਣ ਅਤੇ ਠੀਕ ਕਰਨ ਲਈ ਹੈ. ਤੁਸੀਂ ਵਿਵਹਾਰ ਨੂੰ ਵਿਵਸਥਾ ਵਿੱਚ ਅਯੋਗ ਕਰ ਸਕਦੇ ਹੋ.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4939"/>
@@ -2800,28 +2800,28 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="958"/>
       <source>Your tasks are being loaded from your server</source>
-      <translation type="unfinished">Your tasks are being loaded from your server</translation>
+      <translation>ਤੁਹਾਡੇ ਕੰਮ ਤੁਹਾਡੇ ਸਰਵਰ ਤੋਂ ਲੋਡ ਕੀਤੇ ਜਾ ਰਹੇ ਹਨ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2533"/>
       <source>Current note was modified externally</source>
-      <translation type="unfinished">Current note was modified externally</translation>
+      <translation>ਮੌਜੂਦਾ ਨੋਟ ਨੂੰ ਬਾਹਰੀ ਰੂਪ ਵਿੱਚ ਸੰਸ਼ੋਧਿਤ ਕੀਤਾ ਗਿਆ ਸੀ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2615"/>
       <location filename="../mainwindow.cpp" line="5403"/>
       <source>Stored current note to disk</source>
-      <translation type="unfinished">Stored current note to disk</translation>
+      <translation>ਮੌਜੂਦਾ ਨੋਟ ਨੂੰ ਡਿਸਕ ਤੇ ਸੰਭਾਲਿਆ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2634"/>
       <source>Note was modified externally: %1</source>
-      <translation type="unfinished">Note was modified externally: %1</translation>
+      <translation>ਨੋਟ ਬਾਹਰੀ ਤੌਰ ਤੇ ਸੋਧਿਆ ਗਿਆ ਸੀ: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2655"/>
       <source>Notes directory was modified externally</source>
-      <translation type="unfinished">Notes directory was modified externally</translation>
+      <translation>ਨੋਟਸ ਡਾਇਰੈਕਟਰੀ ਨੂੰ ਬਾਹਰੀ ਰੂਪ ਵਿੱਚ ਸੰਸ਼ੋਧਿਤ ਕੀਤਾ ਗਿਆ ਸੀ</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="2722"/>
@@ -2834,13 +2834,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="7174"/>
       <source>show all notes (%1)</source>
-      <translation type="unfinished">show all notes (%1)</translation>
+      <translation>ਸਾਰੇ ਨੋਟ ਦਿਖਾਓ (%1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7177"/>
       <location filename="../mainwindow.cpp" line="7247"/>
       <source>All notes</source>
-      <translation type="unfinished">All notes</translation>
+      <translation>ਸਾਰੇ ਨੋਟ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8105"/>
@@ -2850,17 +2850,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="8154"/>
       <source>Tag could not be created!</source>
-      <translation type="unfinished">Tag could not be created!</translation>
+      <translation>ਟੈਗ ਬਣਾਇਆ ਨਹੀਂ ਜਾ ਸਕਿਆ!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8339"/>
       <source>Move to this tag</source>
-      <translation type="unfinished">Move to this tag</translation>
+      <translation>ਇਸ ਟੈਗ ਤੇ ਜਾਓ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8389"/>
       <source>Tag this</source>
-      <translation type="unfinished">Tag this</translation>
+      <translation>ਇਸ ਨੂੰ ਟੈਗ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8422"/>
@@ -2885,87 +2885,87 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="4962"/>
       <source>No selected todo lists!</source>
-      <translation type="unfinished">No selected todo lists!</translation>
+      <translation>ਕੋਈ ਚੁਣੀ ਹੋਈ ਸੂਚੀ ਨਹੀਂ!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="658"/>
       <source>Subfolders</source>
-      <translation type="unfinished">Subfolders</translation>
+      <translation>ਸਬਫੋਲਡਰ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="669"/>
       <source>Tags</source>
-      <translation type="unfinished">Tags</translation>
+      <translation>ਟੈਗਸ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="678"/>
       <source>Note search</source>
-      <translation type="unfinished">Note search</translation>
+      <translation>ਨੋਟ ਖੋਜ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="696"/>
       <source>Note list</source>
-      <translation type="unfinished">Note list</translation>
+      <translation>ਨੋਟ ਸੂਚੀ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="720"/>
       <source>Note edit</source>
-      <translation type="unfinished">Note edit</translation>
+      <translation>ਨੋਟ ਸੰਪਾਦਨ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="731"/>
       <source>Note tags</source>
-      <translation type="unfinished">Note tags</translation>
+      <translation>ਨੋਟ ਟੈਗਸ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="742"/>
       <source>Note preview</source>
-      <translation type="unfinished">Note preview</translation>
+      <translation>ਨੋਟ ਪੂਰਵਦਰਸ਼ਨ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="749"/>
       <source>Log</source>
-      <translation type="unfinished">Log</translation>
+      <translation>ਲਾਗ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="758"/>
       <source>Scripting</source>
-      <translation type="unfinished">Scripting</translation>
+      <translation>ਸਕ੍ਰਿਪਟਿੰਗ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1004"/>
       <source>formatting toolbar</source>
-      <translation type="unfinished">formatting toolbar</translation>
+      <translation>ਫਾਰਮੈਟਿੰਗ ਟੂਲਬਾਰ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1013"/>
       <source>inserting toolbar</source>
-      <translation type="unfinished">inserting toolbar</translation>
+      <translation>ਸੰਮਿਲਿਤ ਕਰਨ ਵਾਲੀ ਟੂਲਬਾਰ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1020"/>
       <source>encryption toolbar</source>
-      <translation type="unfinished">encryption toolbar</translation>
+      <translation>ਇਨਕ੍ਰਿਪਸ਼ਨ ਟੂਲਬਾਰ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1027"/>
       <source>window toolbar</source>
-      <translation type="unfinished">window toolbar</translation>
+      <translation>ਵਿੰਡੋ ਟੂਲਬਾਰ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1032"/>
       <source>custom action toolbar</source>
-      <translation type="unfinished">custom action toolbar</translation>
+      <translation>ਕਸਟਮ ਐਕਸ਼ਨ ਟੂਲਬਾਰ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1052"/>
       <source>Workspace selector</source>
-      <translation type="unfinished">Workspace selector</translation>
+      <translation>ਵਰਕਸਪੇਸ ਚੋਣਕਾਰ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1191"/>
       <source>Show %1 panel</source>
-      <translation type="unfinished">Show %1 panel</translation>
+      <translation>%1 ਪੈਨਲ ਵੇਖੋ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1234"/>
@@ -3356,7 +3356,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="500"/>
       <source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
-      <translation type="unfinished">Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</translation>
+      <translation>ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੇ ਸਰਵਰ ਉੱਤੇ ਆਪਣੇ QOwnNotesAPI ਐਪ ਨੂੰ ਅਪਡੇਟ ਕਰਨ ਬਾਰੇ ਸੋਚੋ, ਤੁਹਾਡਾ ਐਪ ਦਾ ਵਰਜਨ% 1 ਬਹੁਤ ਘੱਟ ਹੈ ਅਤੇ QOwnNotes ਵਿੱਚ ਮੁਸੀਬਤਾਂ ਦਾ ਕਾਰਨ ਹੋ ਸਕਦਾ ਹੈ.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1022"/>
@@ -3371,7 +3371,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="1045"/>
       <source>You need to setup your ownCloud server!</source>
-      <translation type="unfinished">You need to setup your ownCloud server!</translation>
+      <translation>ਤੁਹਾਨੂੰ ਆਪਣਾ ਖੁਦ ਦਾ ਕਲਾਉਡ ਸਰਵਰ ਸੈਟ ਅਪ ਕਰਨ ਦੀ ਜ਼ਰੂਰਤ ਹੈ!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1058"/>
@@ -3386,43 +3386,43 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="1112"/>
       <source>Done with loading note versions</source>
-      <translation type="unfinished">Done with loading note versions</translation>
+      <translation>ਲੋਡ ਨੋਟ ਵਰਜ਼ਨ ਨਾਲ ਹੋ ਗਿਆ</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1151"/>
       <source>No versions found</source>
-      <translation type="unfinished">No versions found</translation>
+      <translation>ਕੋਈ ਸੰਸਕਰਣ ਨਹੀਂ ਮਿਲਿਆ</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1152"/>
       <source>There are no versions for this note or the note wasn't found on the server.</source>
-      <translation type="unfinished">There are no versions for this note or the note wasn't found on the server.</translation>
+      <translation>ਇਸ ਨੋਟ ਲਈ ਕੋਈ ਸੰਸਕਰਣ ਨਹੀਂ ਹਨ ਜਾਂ ਸਰਵਰ ਤੇ ਇਹ ਨੋਟ ਨਹੀਂ ਮਿਲਿਆ.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1173"/>
       <source>Done with loading trashed notes</source>
-      <translation type="unfinished">Done with loading trashed notes</translation>
+      <translation>ਟ੍ਰੈਸ਼ਡ ਨੋਟ ਲੋਡ ਕਰਨ ਨਾਲ ਹੋ ਗਿਆ</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1214"/>
       <source>No trashed notes</source>
-      <translation type="unfinished">No trashed notes</translation>
+      <translation>ਕੋਈ ਰੱਦੀ ਨੋਟ ਨਹੀਂ</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1215"/>
       <source>No trashed notes were found on the server.</source>
-      <translation type="unfinished">No trashed notes were found on the server.</translation>
+      <translation>ਸਰਵਰ ਉੱਤੇ ਕੋਈ ਰੱਦੀ ਭਰਿਆ ਨੋਟ ਨਹੀਂ ਮਿਲਿਆ.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1238"/>
       <location filename="../services/owncloudservice.cpp" line="1264"/>
       <source>Error while loading todo lists!</source>
-      <translation type="unfinished">Error while loading todo lists!</translation>
+      <translation>ਟੂਡੋ ਸੂਚੀਆਂ ਲੋਡ ਕਰਨ ਵੇਲੇ ਗਲਤੀ!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1239"/>
       <source>Your CalDAV server didn't reply anything!</source>
-      <translation type="unfinished">Your CalDAV server didn't reply anything!</translation>
+      <translation>ਤੁਹਾਡੇ CalDAV ਸਰਵਰ ਨੇ ਕੁਝ ਵੀ ਜਵਾਬ ਨਹੀਂ ਦਿੱਤਾ!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1265"/>
@@ -3432,12 +3432,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="1934"/>
       <source>No bookmarks</source>
-      <translation type="unfinished">No bookmarks</translation>
+      <translation>ਕੋਈ ਬੁੱਕਮਾਰਕ ਨਹੀਂ</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1935"/>
       <source>No bookmarks were found on the server.</source>
-      <translation type="unfinished">No bookmarks were found on the server.</translation>
+      <translation>ਸਰਵਰ ਉੱਤੇ ਕੋਈ ਬੁੱਕਮਾਰਕ ਨਹੀਂ ਮਿਲੇ.</translation>
     </message>
   </context>
   <context>
@@ -3445,27 +3445,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/passworddialog.ui" line="14"/>
       <source>Please enter your password</source>
-      <translation type="unfinished">Please enter your password</translation>
+      <translation>ਕਿਰਪਾ ਕਰਕੇ ਆਪਣਾ ਪਾਸਵਰਡ ਦਿਓ</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="24"/>
       <source>Enter your password:</source>
-      <translation type="unfinished">Enter your password:</translation>
+      <translation>ਆਪਣਾ ਪਾਸਵਰਡ ਦਰਜ ਕਰੋ:</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="34"/>
       <source>Password</source>
-      <translation type="unfinished">Password</translation>
+      <translation>ਪਾਸਵਰਡ</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="44"/>
       <source>Re-enter password</source>
-      <translation type="unfinished">Re-enter password</translation>
+      <translation>ਪਾਸਵਰਡ ਫਿਰਤੋਂ ਭਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="54"/>
       <source>Passwords don't match!</source>
-      <translation type="unfinished">Passwords don't match!</translation>
+      <translation>ਪਾਸਵਰਡ ਮੇਲ ਨਹੀਂ ਖਾਂਦਾ!</translation>
     </message>
   </context>
   <context>
@@ -3473,7 +3473,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../entities/notefolder.cpp" line="468"/>
       <source>default</source>
-      <translation type="unfinished">default</translation>
+      <translation>ਮੂਲ</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="1188"/>
@@ -3747,25 +3747,25 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/databaseservice.cpp" line="77"/>
       <source>Unable to establish a memory database connection.</source>
-      <translation type="unfinished">Unable to establish a memory database connection.</translation>
+      <translation>ਮੈਮੋਰੀ ਡਾਟਾਬੇਸ ਕਨੈਕਸ਼ਨ ਸਥਾਪਤ ਕਰਨ ਵਿੱਚ ਅਸਮਰੱਥ.</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="93"/>
       <source>Cannot open disk database</source>
-      <translation type="unfinished">Cannot open disk database</translation>
+      <translation>ਡਿਸਕ ਡਾਟਾਬੇਸ ਨੂੰ ਖੋਲ੍ਹਿਆ ਨਹੀਂ ਜਾ ਸਕਦਾ ਹੈ</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="94"/>
       <location filename="../services/databaseservice.cpp" line="116"/>
       <source>Unable to establish a database connection with file '%1'.
 Are the folder and the file writeable?</source>
-      <translation type="unfinished">Unable to establish a database connection with file '%1'.
-Are the folder and the file writeable?</translation>
+      <translation>ਫਾਈਲ '%1' ਨਾਲ ਡਾਟਾਬੇਸ ਕਨੈਕਸ਼ਨ ਸਥਾਪਤ ਕਰਨ ਵਿੱਚ ਅਸਮਰੱਥ.
+ਕੀ ਫੋਲਡਰ ਅਤੇ ਫਾਈਲ ਲਿਖਣ ਯੋਗ ਹਨ?</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="115"/>
       <source>Cannot open note folder database</source>
-      <translation type="unfinished">Cannot open note folder database</translation>
+      <translation>ਨੋਟ ਫੋਲਡਰ ਡਾਟਾਬੇਸ ਨੂੰ ਖੋਲ੍ਹਿਆ ਨਹੀਂ ਜਾ ਸਕਦਾ ਹੈ</translation>
     </message>
   </context>
   <context>
@@ -3773,110 +3773,110 @@ Are the folder and the file writeable?</translation>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="14"/>
       <source>Script repository</source>
-      <translation type="unfinished">Script repository</translation>
+      <translation>ਸਕ੍ਰਿਪਟ ਰਿਪੋਜ਼ਟਰੀ</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="55"/>
       <source>To search for a script please enter your query text and press &lt;i&gt;Return&lt;/i&gt;.</source>
-      <translation type="unfinished">To search for a script please enter your query text and press &lt;i&gt;Return&lt;/i&gt;.</translation>
+      <translation>ਕਿਸੇ ਸਕ੍ਰਿਪਟ ਦੀ ਭਾਲ ਕਰਨ ਲਈ ਕਿਰਪਾ ਕਰਕੇ ਆਪਣਾ ਪ੍ਰਸ਼ਨ ਟੈਕਸਟ ਦਰਜ ਕਰੋ ਅਤੇ &lt;i&gt; ਵਾਪਸੀ &lt;/ i&gt; ਦਬਾਓ.</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="127"/>
       <source>Currently installed version:</source>
-      <translation type="unfinished">Currently installed version:</translation>
+      <translation>ਵਰਤਮਾਨ ਵਿੱਚ ਸਥਾਪਿਤ ਕੀਤਾ ਸੰਸਕਰਣ:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="278"/>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="399"/>
       <source>Installs the script</source>
-      <translation type="unfinished">Installs the script</translation>
+      <translation>ਸਕ੍ਰਿਪਟ ਸਥਾਪਿਤ ਕਰਦਾ ਹੈ</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="281"/>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="398"/>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="459"/>
       <source>Install</source>
-      <translation type="unfinished">Install</translation>
+      <translation>ਸਥਾਪਿਤ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="444"/>
       <source>Load more scripts</source>
-      <translation type="unfinished">Load more scripts</translation>
+      <translation>ਹੋਰ ਸਕ੍ਰਿਪਟਾਂ ਲੋਡ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="228"/>
       <source>Version:</source>
-      <translation type="unfinished">Version:</translation>
+      <translation>ਸੰਸਕਰਣ:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="202"/>
       <source>Repository:</source>
-      <translation type="unfinished">Repository:</translation>
+      <translation>ਰਿਪੋਜ਼ਟਰੀ:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="137"/>
       <source>Minimum app version:</source>
-      <translation type="unfinished">Minimum app version:</translation>
+      <translation>ਨਿ appਨਤਮ ਐਪ ਵਰਜ਼ਨ:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="433"/>
       <source>Name</source>
-      <translation type="unfinished">Name</translation>
+      <translation>ਨਾਮ</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="413"/>
       <source>Enter your query text</source>
-      <translation type="unfinished">Enter your query text</translation>
+      <translation>ਆਪਣਾ ਪ੍ਰਸ਼ਨ ਟੈਕਸਟ ਦਰਜ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="416"/>
       <source>Find script</source>
-      <translation type="unfinished">Find script</translation>
+      <translation>ਸਕ੍ਰਿਪਟ ਲੱਭੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="47"/>
       <source>Script updates</source>
-      <translation type="unfinished">Script updates</translation>
+      <translation>ਸਕ੍ਰਿਪਟ ਅਪਡੇਟਾਂ</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="48"/>
       <source>All scripts are up-to-date.</source>
-      <translation type="unfinished">All scripts are up-to-date.</translation>
+      <translation>ਸਾਰੀਆਂ ਸਕ੍ਰਿਪਟਾਂ ਅਪ ਟੂ ਡੇਟ ਹਨ.</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="369"/>
       <source>Authors</source>
-      <translation type="unfinished">Authors</translation>
+      <translation>ਲੇਖਕ</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="369"/>
       <source>Author</source>
-      <translation type="unfinished">Author</translation>
+      <translation>ਲੇਖਕ</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="372"/>
       <source>Supported platforms</source>
-      <translation type="unfinished">Supported platforms</translation>
+      <translation>ਸਹਿਯੋਗੀ ਪਲੇਟਫਾਰਮ</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="373"/>
       <source>Supported platform</source>
-      <translation type="unfinished">Supported platform</translation>
+      <translation>ਸਹਿਯੋਗੀ ਪਲੇਟਫਾਰਮ</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="376"/>
       <source>Open repository</source>
-      <translation type="unfinished">Open repository</translation>
+      <translation>ਰਿਪੋਜ਼ਟਰੀ ਖੋਲ੍ਹੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="387"/>
       <source>Update</source>
-      <translation type="unfinished">Update</translation>
+      <translation>ਅਪਡੇਟ</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="388"/>
       <source>Updates the script</source>
-      <translation type="unfinished">Updates the script</translation>
+      <translation>ਸਕ੍ਰਿਪਟ ਨੂੰ ਅਪਡੇਟ ਕਰਦਾ ਹੈ</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="390"/>
@@ -4316,22 +4316,22 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2434"/>
       <source>Portuguese</source>
-      <translation type="unfinished">Portuguese</translation>
+      <translation>ਪੁਰਤਗਾਲੀ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2390"/>
       <source>Dutch</source>
-      <translation type="unfinished">Dutch</translation>
+      <translation>ਡੱਚ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2346"/>
       <source>Hungarian</source>
-      <translation type="unfinished">Hungarian</translation>
+      <translation>ਹੰਗਰੀਅਨ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2203"/>
       <source>Spanish</source>
-      <translation type="unfinished">Spanish</translation>
+      <translation>ਸਪੈਨਿਸ਼</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2065"/>
@@ -4341,27 +4341,27 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2636"/>
       <source>Dark mode</source>
-      <translation type="unfinished">Dark mode</translation>
+      <translation>ਡਾਰਕ ਮੋਡ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1580"/>
       <source>Disable tracking of usage data</source>
-      <translation type="unfinished">Disable tracking of usage data</translation>
+      <translation>ਵਰਤੋਂ ਡੇਟਾ ਦੀ ਟਰੈਕਿੰਗ ਨੂੰ ਅਸਮਰੱਥ ਬਣਾਓ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1624"/>
       <source>Usage tracking is done on a private Piwik server.</source>
-      <translation type="unfinished">Usage tracking is done on a private Piwik server.</translation>
+      <translation>ਉਪਯੋਗਤਾ ਟਰੈਕਿੰਗ ਇੱਕ ਨਿੱਜੀ ਪਿਵਿਕ ਸਰਵਰ ਤੇ ਕੀਤੀ ਜਾਂਦੀ ਹੈ.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1684"/>
       <source>Disable heartbeat</source>
-      <translation type="unfinished">Disable heartbeat</translation>
+      <translation>ਧੜਕਣ ਨੂੰ ਅਯੋਗ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2456"/>
       <source>Russian</source>
-      <translation type="unfinished">Russian</translation>
+      <translation>ਰੂਸੀ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1533"/>
@@ -4371,32 +4371,32 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2599"/>
       <source>If you change the language you have to restart the application for the changes to take action.</source>
-      <translation type="unfinished">If you change the language you have to restart the application for the changes to take action.</translation>
+      <translation>ਜੇ ਤੁਸੀਂ ਭਾਸ਼ਾ ਬਦਲਦੇ ਹੋ ਤਾਂ ਤਬਦੀਲੀਆਂ ਨੂੰ ਲਾਗੂ ਕਰਨ ਲਈ ਤੁਹਾਨੂੰ ਐਪਲੀਕੇਸ਼ਨ ਦੁਬਾਰਾ ਸ਼ੁਰੂ ਕਰਨੀ ਪਵੇਗੀ.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3350"/>
       <source>You need to reload the scripting engine if you modify a script file</source>
-      <translation type="unfinished">You need to reload the scripting engine if you modify a script file</translation>
+      <translation>ਤੁਹਾਨੂੰ ਸਕ੍ਰਿਪਟਿੰਗ ਇੰਜਣ ਨੂੰ ਮੁੜ ਲੋਡ ਕਰਨ ਦੀ ਜ਼ਰੂਰਤ ਹੈ ਜੇ ਤੁਸੀਂ ਸਕ੍ਰਿਪਟ ਫਾਈਲ ਨੂੰ ਸੰਸ਼ੋਧਿਤ ਕਰਦੇ ਹੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3353"/>
       <source>Reload scripting engine</source>
-      <translation type="unfinished">Reload scripting engine</translation>
+      <translation>ਸਕ੍ਰਿਪਟਿੰਗ ਇੰਜਣ ਨੂੰ ਮੁੜ ਲੋਡ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3343"/>
       <source>Validate script</source>
-      <translation type="unfinished">Validate script</translation>
+      <translation>ਪ੍ਰਮਾਣਿਤ ਸਕ੍ਰਿਪਟ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="288"/>
       <source>General</source>
-      <translation type="unfinished">General</translation>
+      <translation>ਜਨਰਲ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3515"/>
       <source>Notes</source>
-      <translation type="unfinished">Notes</translation>
+      <translation>ਨੋਟ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3703"/>
@@ -4409,66 +4409,66 @@ Do you want to install it anyway?</translation>
       <location filename="../dialogs/settingsdialog.ui" line="5394"/>
       <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
-      <translation type="unfinished">You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
-Just test yourself if you get sync conflicts and set a higher value if so.</translation>
+      <translation>ਜਦੋਂ ਤੁਸੀਂ 10 ਸੈਕਿੰਡ ਤੋਂ ਹੇਠਾਂ ਜਾ ਰਹੇ ਹੋਵੋ ਤਾਂ ਤੁਸੀਂ ਆਪਣੇ ਖੁਦ ਦੇ ਕਲਾਉਡ ਸਿੰਕ ਦੇ ਪੁਰਾਣੇ ਸੰਸਕਰਣਾਂ ਨਾਲ ਸਿੰਕ ਮੁਸੀਬਤਾਂ ਵਿੱਚ ਭੱਜੇ ਹੋ ਸਕਦੇ ਹੋ.
+ਸਿਰਫ ਆਪਣੇ ਆਪ ਨੂੰ ਪਰਖੋ ਜੇ ਤੁਸੀਂ ਸਿੰਕ ਵਿਵਾਦਾਂ ਨੂੰ ਪ੍ਰਾਪਤ ਕਰਦੇ ਹੋ ਅਤੇ ਉੱਚ ਕੀਮਤ ਨਿਰਧਾਰਤ ਕਰਦੇ ਹੋ ਜੇ ਅਜਿਹਾ ਹੈ.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2379"/>
       <source>Japanese</source>
-      <translation type="unfinished">Japanese</translation>
+      <translation>ਜਪਾਨੀ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3590"/>
       <source>note save interval time [sec]</source>
-      <translation type="unfinished">note save interval time [sec]</translation>
+      <translation>ਅੰਤਰਾਲ ਦਾ ਸਮਾਂ ਬਚਾਉਣ ਲਈ ਨੋਟ [ਸਕਿੰਟ]</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3706"/>
       <source>Notify about all external modifications of the current note</source>
-      <translation type="unfinished">Notify about all external modifications of the current note</translation>
+      <translation>ਮੌਜੂਦਾ ਨੋਟ ਦੇ ਸਾਰੇ ਬਾਹਰੀ ਸੋਧਾਂ ਬਾਰੇ ਸੂਚਿਤ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4008"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1994"/>
       <location filename="../dialogs/settingsdialog.cpp" line="2003"/>
       <source>Database</source>
-      <translation type="unfinished">Database</translation>
+      <translation>ਡਾਟਾਬੇਸ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4024"/>
       <source>Reinitialize Database</source>
-      <translation type="unfinished">Reinitialize Database</translation>
+      <translation>ਡਾਟਾਬੇਸ ਨੂੰ ਦੁਬਾਰਾ ਸ਼ੁਰੂ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3947"/>
       <source>Clear application data and exit</source>
-      <translation type="unfinished">Clear application data and exit</translation>
+      <translation>ਐਪਲੀਕੇਸ਼ਨ ਡੇਟਾ ਸਾਫ ਕਰੋ ਅਤੇ ਬੰਦ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3953"/>
       <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
-      <translation type="unfinished">This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</translation>
+      <translation>ਇਹ ਬਟਨ ਤੁਹਾਨੂੰ ਸਾਰੀਆਂ ਸੈਟਿੰਗਾਂ ਨੂੰ ਸਾਫ ਕਰਨ, ਸਥਾਨਕ ਟੂਡੋ ਡੇਟਾਬੇਸ ਨੂੰ ਹਟਾਉਣ ਅਤੇ QOwnNotes ਤੋਂ ਬਾਹਰ ਜਾਣ ਦੀ ਆਗਿਆ ਦਿੰਦਾ ਹੈ.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3963"/>
       <location filename="../dialogs/settingsdialog.cpp" line="2063"/>
       <source>Clear app data and exit</source>
-      <translation type="unfinished">Clear app data and exit</translation>
+      <translation>ਐਪ ਡਾਟਾ ਸਾਫ਼ ਕਰੋ ਅਤੇ ਬਾਹਰ ਜਾਓ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3742"/>
       <source>Update dialog</source>
-      <translation type="unfinished">Update dialog</translation>
+      <translation>ਅਪਡੇਟ ਡਾਇਲਾਗ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3822"/>
       <source>Default note file extension</source>
-      <translation type="unfinished">Default note file extension</translation>
+      <translation>ਡਿਫੌਲਟ ਨੋਟ ਫਾਈਲ ਐਕਸਟੈਂਸ਼ਨ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3907"/>
       <source>External editor</source>
-      <translation type="unfinished">External editor</translation>
+      <translation>ਬਾਹਰੀ ਸੰਪਾਦਕ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3920"/>
@@ -4484,42 +4484,42 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1549"/>
       <source>App metrics</source>
-      <translation type="unfinished">App metrics</translation>
+      <translation>ਐਪ ਮੈਟ੍ਰਿਕਸ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1567"/>
       <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</source>
-      <translation type="unfinished">Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</translation>
+      <translation>ਅਗਿਆਤ ਉਪਯੋਗਤਾ ਡਾਟਾ ਇਹ ਨਿਰਣਾ ਕਰਨ ਵਿੱਚ ਮਦਦ ਕਰਦਾ ਹੈ ਕਿ ਕਿO ਓਨਨੋਟਸ ਦੇ ਕਿਹੜੇ ਹਿੱਸੇ ਅਗਲੇ ਵਿੱਚ ਸੁਧਾਰ ਕਰਨ ਅਤੇ ਬੱਗ ਲੱਭਣ ਅਤੇ ਠੀਕ ਕਰਨ ਲਈ ਹਨ. ਕਿਰਪਾ ਕਰਕੇ ਇਸ ਨੂੰ ਅਯੋਗ ਕਰੋ ਜੇ ਤੁਸੀਂ ਸੱਚਮੁੱਚ ਇਸ ਨਾਲ ਨਹੀਂ ਰਹਿ ਸਕਦੇ.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1599"/>
       <source>This data includes anonymous information about what features of the app are used.</source>
-      <translation type="unfinished">This data includes anonymous information about what features of the app are used.</translation>
+      <translation>ਇਸ ਡੇਟਾ ਵਿੱਚ ਇਸ ਬਾਰੇ ਅਗਿਆਤ ਜਾਣਕਾਰੀ ਸ਼ਾਮਲ ਹੈ ਕਿ ਐਪ ਦੀਆਂ ਕਿਹੜੀਆਂ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਵਰਤੀਆਂ ਜਾਂਦੀਆਂ ਹਨ.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1653"/>
       <source>App heartbeat</source>
-      <translation type="unfinished">App heartbeat</translation>
+      <translation>ਐਪ ਦਿਲ ਦੀ ਧੜਕਣ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1671"/>
       <source>A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</source>
-      <translation type="unfinished">A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</translation>
+      <translation>ਦਿਲ ਦੀ ਧੜਕਣ ਦੀ ਇੱਕ ਛੋਟੀ ਜਿਹੀ ਬੇਨਤੀ ਸਮੇਂ-ਸਮੇਂ ਤੇ ਭੇਜੀ ਜਾਂਦੀ ਹੈ ਜਦੋਂ ਕਿ QOwnNotes ਚੱਲ ਰਿਹਾ ਹੈ. ਕਿਸੇ ਡਿਵੈਲਪਰ ਨੂੰ ਇਹ ਦੱਸ ਕੇ ਖੁਸ਼ ਕਰੋ ਕਿ ਕੋਈ QOwnNotes ਵਰਤ ਰਿਹਾ ਹੈ.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2335"/>
       <source>Italian</source>
-      <translation type="unfinished">Italian</translation>
+      <translation>ਇਤਾਲਵੀ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="264"/>
       <source>Scripting</source>
-      <translation type="unfinished">Scripting</translation>
+      <translation>ਸਕ੍ਰਿਪਟਿੰਗ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2997"/>
       <source>Your scripts</source>
-      <translation type="unfinished">Your scripts</translation>
+      <translation>ਤੁਹਾਡੀਆਂ ਸਕ੍ਰਿਪਟਾਂ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3081"/>
@@ -4529,22 +4529,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3360"/>
       <source>Click here to select your QML script</source>
-      <translation type="unfinished">Click here to select your QML script</translation>
+      <translation>ਆਪਣੀ QML ਸਕ੍ਰਿਪਟ ਦੀ ਚੋਣ ਕਰਨ ਲਈ ਇੱਥੇ ਕਲਿੱਕ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="92"/>
       <source>Find setting</source>
-      <translation type="unfinished">Find setting</translation>
+      <translation>ਸੈਟਿੰਗ ਲੱਭੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="179"/>
       <source>Layout</source>
-      <translation type="unfinished">Layout</translation>
+      <translation>ਲੇਆਉਟ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="191"/>
       <source>Editor</source>
-      <translation type="unfinished">Editor</translation>
+      <translation>ਸੰਪਾਦਕ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="202"/>
@@ -4554,32 +4554,32 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="215"/>
       <source>Panels</source>
-      <translation type="unfinished">Panels</translation>
+      <translation>ਪੈਨਲ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="239"/>
       <source>Toolbars</source>
-      <translation type="unfinished">Toolbars</translation>
+      <translation>ਟੂਲਬਾਰ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="299"/>
       <source>Portable mode</source>
-      <translation type="unfinished">Portable mode</translation>
+      <translation>ਪੋਰਟੇਬਲ ਮੋਡ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="311"/>
       <source>Git versioning</source>
-      <translation type="unfinished">Git versioning</translation>
+      <translation>ਗਿਟ ਵਰਜ਼ਨਿੰਗ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="323"/>
       <source>Local trash</source>
-      <translation type="unfinished">Local trash</translation>
+      <translation>ਸਥਾਨਕ ਰੱਦੀ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="347"/>
       <source>Debug options</source>
-      <translation type="unfinished">Debug options</translation>
+      <translation>ਡੀਬੱਗ ਚੋਣਾਂ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="568"/>
@@ -4815,122 +4815,122 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2357"/>
       <source>Norwegian</source>
-      <translation type="unfinished">Norwegian</translation>
+      <translation>ਨਾਰਵੇਜੀਅਨ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2368"/>
       <source>Punjabi</source>
-      <translation type="unfinished">Punjabi</translation>
+      <translation>ਪੰਜਾਬੀ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2401"/>
       <source>Persian</source>
-      <translation type="unfinished">Persian</translation>
+      <translation>ਫ਼ਾਰਸੀ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2445"/>
       <source>Romanian</source>
-      <translation type="unfinished">Romanian</translation>
+      <translation>ਰੋਮਾਨੀਅਨ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2467"/>
       <source>Serbian</source>
-      <translation type="unfinished">Serbian</translation>
+      <translation>ਸਰਬੀਅਨ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2478"/>
       <source>Albanian</source>
-      <translation type="unfinished">Albanian</translation>
+      <translation>ਅਲਬਾਨੀਅਨ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2489"/>
       <source>Slovak</source>
-      <translation type="unfinished">Slovak</translation>
+      <translation>ਸਲੋਵਾਕ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2500"/>
       <source>Slovenian</source>
-      <translation type="unfinished">Slovenian</translation>
+      <translation>ਸਲੋਵੇਨੀਅਨ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2511"/>
       <source>Swedish</source>
-      <translation type="unfinished">Swedish</translation>
+      <translation>ਸਵੀਡਿਸ਼</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2522"/>
       <source>Tagalog</source>
-      <translation type="unfinished">Tagalog</translation>
+      <translation>ਤਾਗਾਲੋਗ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2533"/>
       <source>Turkish</source>
-      <translation type="unfinished">Turkish</translation>
+      <translation>ਤੁਰਕੀ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2555"/>
       <source>Urdu</source>
-      <translation type="unfinished">Urdu</translation>
+      <translation>ਉਰਦੂ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2566"/>
       <source>Chinese Simplified</source>
-      <translation type="unfinished">Chinese Simplified</translation>
+      <translation>ਚੀਨੀ ਸਰਲੀਕ੍ਰਿਤ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2577"/>
       <source>Chinese Traditional</source>
-      <translation type="unfinished">Chinese Traditional</translation>
+      <translation>ਚੀਨੀ ਰਵਾਇਤੀ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2645"/>
       <source>Enable dark mode application icon and tray icon</source>
-      <translation type="unfinished">Enable dark mode application icon and tray icon</translation>
+      <translation>ਡਾਰਕ ਮੋਡ ਐਪਲੀਕੇਸ਼ਨ ਆਈਕਨ ਅਤੇ ਟਰੇ ਆਈਕਨ ਨੂੰ ਸਮਰੱਥ ਬਣਾਓ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2652"/>
       <source>You might also want to choose another editor color schema in the editor settings in dark mode.</source>
-      <translation type="unfinished">You might also want to choose another editor color schema in the editor settings in dark mode.</translation>
+      <translation>ਤੁਸੀਂ ਡਾਰਕ ਮੋਡ ਵਿੱਚ ਐਡੀਟਰ ਸੈਟਿੰਗਜ਼ ਵਿੱਚ ਇੱਕ ਹੋਰ ਐਡੀਟਰ ਰੰਗ ਸਕੀਮ ਚੁਣਨਾ ਚਾਹੋਗੇ.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2755"/>
       <source>Enable dark mode icon theme</source>
-      <translation type="unfinished">Enable dark mode icon theme</translation>
+      <translation>ਡਾਰਕ ਮੋਡ ਆਈਕਨ ਥੀਮ ਨੂੰ ਸਮਰੱਥ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2685"/>
       <source>System tray</source>
-      <translation type="unfinished">System tray</translation>
+      <translation>ਸਿਸਟਮ ਟਰੇ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2694"/>
       <source>Show system tray icon</source>
-      <translation type="unfinished">Show system tray icon</translation>
+      <translation>ਸਿਸਟਮ ਟਰੇ ਆਈਕਾਨ ਵੇਖੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2704"/>
       <source>Start application hidden</source>
-      <translation type="unfinished">Start application hidden</translation>
+      <translation>ਅਰਜ਼ੀ ਲੁਕਾਉਣੀ ਅਰੰਭ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2714"/>
       <source>Interface style</source>
-      <translation type="unfinished">Interface style</translation>
+      <translation>ਇੰਟਰਫੇਸ ਸ਼ੈਲੀ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2745"/>
       <source>Enforce system icon theme</source>
-      <translation type="unfinished">Enforce system icon theme</translation>
+      <translation>ਸਿਸਟਮ ਆਈਕਾਨ ਥੀਮ ਨੂੰ ਲਾਗੂ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2851"/>
       <source>Override interface font size</source>
-      <translation type="unfinished">Override interface font size</translation>
+      <translation>ਓਵਰਰਾਈਡ ਇੰਟਰਫੇਸ ਫੋਂਟ ਆਕਾਰ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2860"/>
       <source>Interface font size:</source>
-      <translation type="unfinished">Interface font size:</translation>
+      <translation>ਇੰਟਰਫੇਸ ਫੋਂਟ ਅਕਾਰ:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3070"/>
@@ -4940,66 +4940,66 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3716"/>
       <source>Use legacy way to link to notes, images and attachments</source>
-      <translation type="unfinished">Use legacy way to link to notes, images and attachments</translation>
+      <translation>ਨੋਟਸ, ਚਿੱਤਰਾਂ ਅਤੇ ਅਟੈਚਮੈਂਟਾਂ ਨੂੰ ਲਿੰਕ ਕਰਨ ਲਈ ਪੁਰਾਤਨ ਤਰੀਕੇ ਦੀ ਵਰਤੋਂ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3663"/>
       <source>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</source>
-      <translation type="unfinished">When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</translation>
+      <translation>ਜਦੋਂ ਨੋਟ ਖੋਲ੍ਹਣ ਸਮੇਂ ਨੋਟ ਦੇ ਅੰਦਰ ਕਰਸਰ ਪੋਜੀਸ਼ਨ ਹੋ ਜਾਂਦੀ ਹੈ ਤਾਂ ਹੁਣ ਮੌਜੂਦਾ ਸੈਸ਼ਨ ਵਿਚ ਜਦੋਂ ਨੋਟਿਸ ਨੂੰ ਆਖਰੀ ਵਾਰ ਵੇਖਿਆ ਗਿਆ ਸੀ ਤਾਂ ਪੁਨਰ ਸਥਾਪਨਾ ਕੀਤੀ ਜਾਏਗੀ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3683"/>
       <source>By default the headline will generated automatically</source>
-      <translation type="unfinished">By default the headline will generated automatically</translation>
+      <translation>ਮੂਲ ਰੂਪ ਵਿੱਚ ਸਿਰਲੇਖ ਆਪਣੇ ਆਪ ਤਿਆਰ ਹੋ ਜਾਵੇਗਾ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3686"/>
       <source>The shortcut to create a new note asks for a headline</source>
-      <translation type="unfinished">The shortcut to create a new note asks for a headline</translation>
+      <translation>ਨਵਾਂ ਨੋਟ ਬਣਾਉਣ ਲਈ ਸ਼ਾਰਟਕੱਟ ਇਕ ਸਿਰਲੇਖ ਦੀ ਮੰਗ ਕਰਦਾ ਹੈ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3673"/>
       <source>Automatically close the note folder database to prevent problems with sync tools</source>
-      <translation type="unfinished">Automatically close the note folder database to prevent problems with sync tools</translation>
+      <translation>ਸਿੰਕ ਟੂਲਸ ਨਾਲ ਸਮੱਸਿਆਵਾਂ ਨੂੰ ਰੋਕਣ ਲਈ ਨੋਟ ਫੋਲਡਰ ਡੇਟਾਬੇਸ ਨੂੰ ਆਟੋਮੈਟਿਕਲੀ ਬੰਦ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3676"/>
       <source>Automatically close the note folder database</source>
-      <translation type="unfinished">Automatically close the note folder database</translation>
+      <translation>ਨੋਟ ਫੋਲਡਰ ਡੇਟਾਬੇਸ ਨੂੰ ਆਟੋਮੈਟਿਕਲੀ ਬੰਦ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3764"/>
       <source>Search engine</source>
-      <translation type="unfinished">Search engine</translation>
+      <translation>ਖੋਜ ਇੰਜਣ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3786"/>
       <source>Message boxes</source>
-      <translation type="unfinished">Message boxes</translation>
+      <translation>ਸੁਨੇਹਾ ਬਕਸੇ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3792"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3638"/>
       <source>Reset message boxes</source>
-      <translation type="unfinished">Reset message boxes</translation>
+      <translation>ਸੰਦੇਸ਼ ਬਾਕਸ ਨੂੰ ਰੀਸੈਟ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3985"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3704"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3727"/>
       <source>Import settings</source>
-      <translation type="unfinished">Import settings</translation>
+      <translation>ਅਯਾਤ ਸੈਟਿੰਗਜ਼</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3992"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3670"/>
       <source>Export settings</source>
-      <translation type="unfinished">Export settings</translation>
+      <translation>ਸੈਟਿੰਗ ਨਿਰਯਾਤ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4131"/>
       <source>Open issue assistant</source>
-      <translation type="unfinished">Open issue assistant</translation>
+      <translation>ਖੁੱਲਾ ਮੁੱਦਾ ਸਹਾਇਕ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4142"/>
@@ -5009,62 +5009,62 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4436"/>
       <source>Ignore code font size to allow zooming</source>
-      <translation type="unfinished">Ignore code font size to allow zooming</translation>
+      <translation>ਜ਼ੂਮਿੰਗ ਦੀ ਆਗਿਆ ਦੇਣ ਲਈ ਕੋਡ ਫੋਂਟ ਸਾਈਜ਼ ਨੂੰ ਅਣਡਿੱਠ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4465"/>
       <source>Rendering</source>
-      <translation type="unfinished">Rendering</translation>
+      <translation>ਪੇਸ਼ਕਾਰੀ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4471"/>
       <source>Enable underline rendering</source>
-      <translation type="unfinished">Enable underline rendering</translation>
+      <translation>ਅੰਡਰਲਾਈਨ ਰੈਡਰਿੰਗ ਨੂੰ ਸਮਰੱਥ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4727"/>
       <source>Fully highlight blockquotes</source>
-      <translation type="unfinished">Fully highlight blockquotes</translation>
+      <translation>ਬਲਾਕਕੋਟਸ ਨੂੰ ਪੂਰੀ ਤਰ੍ਹਾਂ ਹਾਈਲਾਈਟ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4797"/>
       <source>Note-edit cursor width:</source>
-      <translation type="unfinished">Note-edit cursor width:</translation>
+      <translation>ਨੋਟ-ਸੰਪਾਦਨ ਕਰਸਰ ਦੀ ਚੌੜਾਈ:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4746"/>
       <source>Enable Vim mode (some QOwnNotes shortcuts will not work)</source>
-      <translation type="unfinished">Enable Vim mode (some QOwnNotes shortcuts will not work)</translation>
+      <translation>ਵਿਮ ਮੋਡ ਨੂੰ ਸਮਰੱਥ ਕਰੋ (ਕੁਝ QOwnNotes ਸ਼ੌਰਟਕਟ ਕੰਮ ਨਹੀਂ ਕਰਨਗੇ)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="756"/>
       <source>Cloud connection:</source>
-      <translation type="unfinished">Cloud connection:</translation>
+      <translation>ਬੱਦਲ ਕੁਨੈਕਸ਼ਨ:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4831"/>
       <source>Disable cursor blinking</source>
-      <translation type="unfinished">Disable cursor blinking</translation>
+      <translation>ਕਰਸਰ ਝਪਕਣ ਨੂੰ ਅਯੋਗ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5213"/>
       <source>Ignored sub-folders</source>
-      <translation type="unfinished">Ignored sub-folders</translation>
+      <translation>ਉਪ-ਫੋਲਡਰਾਂ ਨੂੰ ਨਜ਼ਰ ਅੰਦਾਜ਼</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5229"/>
       <source>Reset ignored sub-folders</source>
-      <translation type="unfinished">Reset ignored sub-folders</translation>
+      <translation>ਅਣਡਿੱਠ ਕੀਤੇ ਸਬ-ਫੋਲਡਰਾਂ ਨੂੰ ਰੀਸੈਟ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5249"/>
       <source>Note list panel</source>
-      <translation type="unfinished">Note list panel</translation>
+      <translation>ਨੋਟ ਸੂਚੀ ਪੈਨਲ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5321"/>
       <source>Show notes in the note list with preview</source>
-      <translation type="unfinished">Show notes in the note list with preview</translation>
+      <translation>ਪੂਰਵਦਰਸ਼ਨ ਦੇ ਨਾਲ ਨੋਟ ਸੂਚੀ ਵਿੱਚ ਨੋਟਸ ਦਿਖਾਓ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5556"/>
@@ -5324,255 +5324,255 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5120"/>
       <source>Hide 'Find or create tag' search</source>
-      <translation type="unfinished">Hide 'Find or create tag' search</translation>
+      <translation>ਖੋਜ ਲੱਭੋ ਜਾਂ ਬਣਾਓ ਟੈਗ ਬਣਾਓ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5130"/>
       <source>Note subfolders panel</source>
-      <translation type="unfinished">Note subfolders panel</translation>
+      <translation>ਨੋਟ ਸਬਫੋਲਡਰ ਪੈਨਲ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5136"/>
       <source>Show with full path</source>
-      <translation type="unfinished">Show with full path</translation>
+      <translation>ਪੂਰੇ ਮਾਰਗ ਨਾਲ ਦਿਖਾਓ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5156"/>
       <location filename="../dialogs/settingsdialog.ui" line="5304"/>
       <source>By last change</source>
-      <translation type="unfinished">By last change</translation>
+      <translation>ਆਖਰੀ ਤਬਦੀਲੀ ਨਾਲ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5166"/>
       <source>Show root folder name</source>
-      <translation type="unfinished">Show root folder name</translation>
+      <translation>ਰੂਟ ਫੋਲਡਰ ਦਾ ਨਾਮ ਵੇਖੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5196"/>
       <source>Hide 'Find or create note subfolder' search</source>
-      <translation type="unfinished">Hide 'Find or create note subfolder' search</translation>
+      <translation>'ਨੋਟ ਸਬਫੋਲਡਰ ਲੱਭੋ ਜਾਂ ਬਣਾਓ' ਖੋਜ ਨੂੰ ਲੁਕਾਓ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5203"/>
       <source>Display note subfolders as full tree</source>
-      <translation type="unfinished">Display note subfolders as full tree</translation>
+      <translation>ਨੋਟ ਸਬਫੋਲਡਰ ਨੂੰ ਪੂਰੇ ਰੁੱਖ ਦੇ ਰੂਪ ਵਿੱਚ ਪ੍ਰਦਰਸ਼ਿਤ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2580"/>
       <source>Search script repository</source>
-      <translation type="unfinished">Search script repository</translation>
+      <translation>ਸਕ੍ਰਿਪਟ ਰਿਪੋਜ਼ਟਰੀ ਖੋਜੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4923"/>
       <source>You optionally can use "%notePath%" for the path of the note.</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
-      <translation type="unfinished">You optionally can use "%notePath%" for the path of the note.</translation>
+      <translation>ਤੁਸੀਂ ਚੋਣਵੇਂ ਰੂਪ ਵਿੱਚ ਨੋਟ ਦੇ ਮਾਰਗ ਲਈ "%ਨੋਟਪਥ%" ਵਰਤ ਸਕਦੇ ਹੋ.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4946"/>
       <source>Git client</source>
-      <translation type="unfinished">Git client</translation>
+      <translation>ਗਿਟ ਕਲਾਇੰਟ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4962"/>
       <source>Path to git executable:</source>
-      <translation type="unfinished">Path to git executable:</translation>
+      <translation>ਐਗਜੀਕਿutਟਿਵ ਹੋਣ ਦੇ ਲਈ ਮਾਰਗ:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4952"/>
       <source>Path to git client, leave empty for default</source>
-      <translation type="unfinished">Path to git client, leave empty for default</translation>
+      <translation>ਗੀਟ ਕਲਾਇੰਟ ਦਾ ਮਾਰਗ, ਮੂਲ ਰੂਪ ਵਿੱਚ ਖਾਲੀ ਛੱਡੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4871"/>
       <source>Commit interval</source>
-      <translation type="unfinished">Commit interval</translation>
+      <translation>ਅੰਤਰਾਲ ਪ੍ਰਤੀਬੱਧ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4877"/>
       <source>sec</source>
       <extracomment>seconds</extracomment>
-      <translation type="unfinished">sec</translation>
+      <translation>ਸਕਿੰਟ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4897"/>
       <source>git commit interval time [sec]</source>
-      <translation type="unfinished">git commit interval time [sec]</translation>
+      <translation>git ਕਮਿਟ ਅੰਤਰਾਲ ਵਾਰ [ਸਕਿੰਟ]</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="914"/>
       <source>Open your ownCloud server &amp;Apps page</source>
-      <translation type="unfinished">Open your ownCloud server &amp;Apps page</translation>
+      <translation>ਆਪਣਾ ਕਲਾਉਡ ਸਰਵਰ ਐਪਸ &amp;ਪੰਨਾ ਖੋਲ੍ਹੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="227"/>
       <source>Preview</source>
-      <translation type="unfinished">Preview</translation>
+      <translation>ਝਲਕ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="276"/>
       <source>Browser extension</source>
-      <translation type="unfinished">Browser extension</translation>
+      <translation>ਬਰਾ Browਜ਼ਰ ਦਾ ਵਿਸਥਾਰ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1729"/>
       <source>Which calendar backend do you want to use?</source>
-      <translation type="unfinished">Which calendar backend do you want to use?</translation>
+      <translation>ਤੁਸੀਂ ਕਿਹੜਾ ਕੈਲੰਡਰ ਬੈਕਐਂਡ ਵਰਤਣਾ ਚਾਹੁੰਦੇ ਹੋ?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1742"/>
       <source>For most current ownCloud and Nextcloud installations</source>
-      <translation type="unfinished">For most current ownCloud and Nextcloud installations</translation>
+      <translation>ਬਹੁਤੀਆਂ ਮੌਜੂਦਾ ਖੁਦ ਦੀਆਂ ਕਲਾਉਡ ਅਤੇ ਨੈਕਸਟ ਕਲਾਉਡ ਸਥਾਪਨਾਵਾਂ ਲਈ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1762"/>
       <source>For older versions of ownCloud where the default setting doesn't work</source>
-      <translation type="unfinished">For older versions of ownCloud where the default setting doesn't work</translation>
+      <translation>ਖੁਦ ਦੇ ਕਲਾਉਡ ਦੇ ਪੁਰਾਣੇ ਸੰਸਕਰਣਾਂ ਲਈ ਜਿੱਥੇ ਡਿਫੌਲਟ ਸੈਟਿੰਗ ਕੰਮ ਨਹੀਂ ਕਰਦੀ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1765"/>
       <source>Legacy ownCloud calendar</source>
-      <translation type="unfinished">Legacy ownCloud calendar</translation>
+      <translation>ਪੁਰਾਤਨ ਆਪਣਾ ਕਲਾਉਡ ਕੈਲੰਡਰ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1778"/>
       <source>CalDAV server settings</source>
-      <translation type="unfinished">CalDAV server settings</translation>
+      <translation>CalDAV ਸਰਵਰ ਸੈਟਿੰਗਾਂ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1787"/>
       <source>Calendar base url:</source>
-      <translation type="unfinished">Calendar base url:</translation>
+      <translation>ਕੈਲੰਡਰ ਅਧਾਰ url:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1809"/>
       <source>Please enter the CalDAV base url to your calendar.</source>
-      <translation type="unfinished">Please enter the CalDAV base url to your calendar.</translation>
+      <translation>ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੇ ਕੈਲੰਡਰ ਵਿੱਚ CalDAV ਅਧਾਰ url ਦਾਖਲ ਕਰੋ.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1879"/>
       <source>Please enter the password for your CalDAV username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.</source>
-      <translation type="unfinished">Please enter the password for your CalDAV username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.</translation>
+      <translation>ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੇ CalDAV ਉਪਯੋਗਕਰਤਾ ਲਈ ਪਾਸਵਰਡ ਭਰੋ.&lt;br/&gt; ਇਸ ਸਮੇਂ ਪਾਸਵਰਡ ਨੂੰ ਦੂਜੀਆਂ ਸੈਟਿੰਗਾਂ ਨਾਲ ਇਨਕ੍ਰਿਪਟਡ ਸਟੋਰ ਕੀਤਾ ਜਾਵੇਗਾ, ਪਰ ਬਹੁਤ ਜ਼ਿਆਦਾ ਸੁਰੱਖਿਅਤ ਨਹੀਂ ਹੈ.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2148"/>
       <source>Czech</source>
-      <translation type="unfinished">Czech</translation>
+      <translation>ਚੈੱਕ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2423"/>
       <source>Brazilian Portuguese</source>
-      <translation type="unfinished">Brazilian Portuguese</translation>
+      <translation>ਬ੍ਰਾਜ਼ੀਲੀਅਨ ਪੁਰਤਗਾਲੀ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2544"/>
       <source>Ukrainian</source>
-      <translation type="unfinished">Ukrainian</translation>
+      <translation>ਯੂਕਰੇਨੀਅਨ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3472"/>
       <source>The name</source>
-      <translation type="unfinished">The name</translation>
+      <translation>ਨਾਮ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3569"/>
       <source>Maximum height:</source>
-      <translation type="unfinished">Maximum height:</translation>
+      <translation>ਅਧਿਕਤਮ ਉਚਾਈ:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3542"/>
       <source>Maximum width:</source>
-      <translation type="unfinished">Maximum width:</translation>
+      <translation>ਅਧਿਕਤਮ ਚੌੜਾਈ:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3607"/>
       <source>Scale images down when inserted into notes</source>
-      <translation type="unfinished">Scale images down when inserted into notes</translation>
+      <translation>ਨੋਟਾਂ ਵਿੱਚ ਪਾਉਣ ਵੇਲੇ ਚਿੱਤਰਾਂ ਨੂੰ ਸਕੇਲ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2302"/>
       <source>Croatian</source>
-      <translation type="unfinished">Croatian</translation>
+      <translation>ਕ੍ਰੋਏਸ਼ੀਅਨ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3387"/>
       <source>Path to your QML file</source>
-      <translation type="unfinished">Path to your QML file</translation>
+      <translation>ਤੁਹਾਡੀ QML ਫਾਈਲ ਲਈ ਮਾਰਗ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3178"/>
       <source>Script name</source>
-      <translation type="unfinished">Script name</translation>
+      <translation>ਸਕ੍ਰਿਪਟ ਦਾ ਨਾਮ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3200"/>
       <source>Description:</source>
-      <translation type="unfinished">Description:</translation>
+      <translation>ਵੇਰਵਾ:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3282"/>
       <source>Version:</source>
-      <translation type="unfinished">Version:</translation>
+      <translation>ਸੰਸਕਰਣ:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3243"/>
       <source>Repository:</source>
-      <translation type="unfinished">Repository:</translation>
+      <translation>ਰਿਪੋਜ਼ਟਰੀ:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3220"/>
       <source>Author(s):</source>
-      <translation type="unfinished">Author(s):</translation>
+      <translation>ਲੇਖਕ(ਹਵਾਈਅੱਡੇ):</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3634"/>
       <source>Check this if you want to accept all external modifications while you are editing the current note.</source>
-      <translation type="unfinished">Check this if you want to accept all external modifications while you are editing the current note.</translation>
+      <translation>ਇਸ ਨੂੰ ਚੈੱਕ ਕਰੋ ਜੇ ਤੁਸੀਂ ਮੌਜੂਦਾ ਨੋਟ ਨੂੰ ਸੰਪਾਦਿਤ ਕਰਦੇ ਸਮੇਂ ਸਾਰੀਆਂ ਬਾਹਰੀ ਸੋਧਾਂ ਨੂੰ ਸਵੀਕਾਰ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3637"/>
       <source>Accept all external modifications of the current note</source>
-      <translation type="unfinished">Accept all external modifications of the current note</translation>
+      <translation>ਮੌਜੂਦਾ ਨੋਟ ਦੇ ਸਾਰੇ ਬਾਹਰੀ ਸੋਧਾਂ ਸਵੀਕਾਰ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3696"/>
       <source>Use UNIX newline instead of native newline characters</source>
-      <translation type="unfinished">Use UNIX newline instead of native newline characters</translation>
+      <translation>ਦੇਸੀ ਨਵੇਂ ਲਾਈਨ ਅੱਖਰਾਂ ਦੀ ਬਜਾਏ ਯੂਨਿਕਸ ਨਵੀਂ ਲਾਈਨ ਦੀ ਵਰਤੋਂ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3666"/>
       <source>Restore cursor position when opening a note</source>
-      <translation type="unfinished">Restore cursor position when opening a note</translation>
+      <translation>ਜਦੋਂ ਕੋਈ ਨੋਟ ਖੋਲ੍ਹਦਾ ਹੈ ਤਾਂ ਕਰਸਰ ਸਥਿਤੀ ਨੂੰ ਮੁੜ ਪ੍ਰਾਪਤ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4014"/>
       <source>Be warned that this will also remove your cached todo items and configured note folders and scripts!</source>
-      <translation type="unfinished">Be warned that this will also remove your cached todo items and configured note folders and scripts!</translation>
+      <translation>Be warned that this will also remove your cached todo items and configured note folders and scripts!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4498"/>
       <source>Apply toolbar configuration</source>
-      <translation type="unfinished">Apply toolbar configuration</translation>
+      <translation>ਟੂਲਬਾਰ ਕੌਨਫਿਗਰੇਸ਼ਨ ਲਾਗੂ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4512"/>
       <source>Reset toolbars</source>
-      <translation type="unfinished">Reset toolbars</translation>
+      <translation>ਟੂਲਬਾਰਸ ਨੂੰ ਰੀਸੈਟ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4540"/>
       <source>Enable logging to file</source>
-      <translation type="unfinished">Enable logging to file</translation>
+      <translation>ਫਾਈਲ ਵਿੱਚ ਲੌਗਿੰਗ ਯੋਗ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4547"/>
       <source>Clear log file</source>
-      <translation type="unfinished">Clear log file</translation>
+      <translation>ਲਾਗ ਫਾਇਲ ਸਾਫ਼ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4558"/>
       <source>Fake old version number to trigger update</source>
-      <translation type="unfinished">Fake old version number to trigger update</translation>
+      <translation>ਅਪਡੇਟ ਨੂੰ ਟਰਿੱਗਰ ਕਰਨ ਲਈ ਨਕਲੀ ਪੁਰਾਣਾ ਵਰਜ਼ਨ ਨੰਬਰ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4586"/>
@@ -5835,56 +5835,56 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="450"/>
       <source>username for proxy server</source>
-      <translation type="unfinished">username for proxy server</translation>
+      <translation>ਪਰਾਕਸੀ ਸਰਵਰ ਲਈ ਯੂਜ਼ਰ ਨਾਂ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="451"/>
       <source>password for proxy server</source>
-      <translation type="unfinished">password for proxy server</translation>
+      <translation>ਪਰਾਕਸੀ ਸਰਵਰ ਲਈ ਪਾਸਵਰਡ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="453"/>
       <source>HTTP(S) proxy</source>
-      <translation type="unfinished">HTTP(S) proxy</translation>
+      <translation>HTTP(S) ਪ੍ਰੌਕਸੀ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="454"/>
       <source>SOCKS5 proxy</source>
-      <translation type="unfinished">SOCKS5 proxy</translation>
+      <translation>SOCKS5 ਪ੍ਰੌਕਸੀ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1301"/>
       <source>Automatic (needs restart)</source>
-      <translation type="unfinished">Automatic (needs restart)</translation>
+      <translation>ਆਟੋਮੈਟਿਕ (ਮੁੜ ਚਾਲੂ ਕਰਨ ਦੀ ਜ਼ਰੂਰਤ ਹੈ)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1463"/>
       <source>Undefined key</source>
-      <translation type="unfinished">Undefined key</translation>
+      <translation>ਪਰਿਭਾਸ਼ਤ ਕੁੰਜੀ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1468"/>
       <source>Assign a new key</source>
-      <translation type="unfinished">Assign a new key</translation>
+      <translation>ਇੱਕ ਨਵੀਂ ਕੁੰਜੀ ਨਿਰਧਾਰਤ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1469"/>
       <source>Reset to default key</source>
-      <translation type="unfinished">Reset to default key</translation>
+      <translation>ਡਿਫੌਲਟ ਕੁੰਜੀ ਨੂੰ ਰੀਸੈਟ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1548"/>
       <source>Shortcut already assigned</source>
-      <translation type="unfinished">Shortcut already assigned</translation>
+      <translation>ਸ਼ੌਰਟਕਟ ਪਹਿਲਾਂ ਹੀ ਨਿਰਧਾਰਤ ਕੀਤਾ ਗਿਆ ਹੈ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1725"/>
       <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
-      <translation type="unfinished">The connection was made successfully!
-Server version: %1
-QOwnNotesAPI version: %2</translation>
+      <translation>ਕੁਨੈਕਸ਼ਨ ਸਫਲਤਾਪੂਰਵਕ ਬਣਾਇਆ ਗਿਆ ਸੀ!
+ਸਰਵਰ ਵਰਜਨ: %1
+QOwnNotesAPI ਸੰਸਕਰਣ: %2</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1737"/>
