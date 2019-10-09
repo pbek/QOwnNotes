@@ -7,7 +7,6 @@
 #include <QListWidget>
 #include <QTreeWidgetItem>
 #include <QStatusBar>
-#include <QSignalMapper>
 #include <QSplitter>
 #include <entities/cloudconnection.h>
 #include <entities/notefolder.h>
@@ -290,7 +289,6 @@ private:
     QString connectionErrorMessage;
     NoteFolder _selectedNoteFolder;
     Script _selectedScript;
-    QSignalMapper *_keyWidgetSignalMapper;
     static const int _defaultMarkdownHighlightingInterval = 200;
     QSplitter *_mainSplitter;
     QButtonGroup *_noteNotificationButtonGroup;

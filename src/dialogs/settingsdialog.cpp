@@ -1421,7 +1421,6 @@ void SettingsDialog::loadShortcutSettings() {
                                          Qt::darkGray :
                                          palette.color(QPalette::Mid);
 
-    _keyWidgetSignalMapper = new QSignalMapper(this);
     QList<QMenu*> menus = mainWindow->menuList();
     ui->shortcutSearchLineEdit->clear();
     ui->shortcutTreeWidget->clear();
@@ -1470,13 +1469,9 @@ void SettingsDialog::loadShortcutSettings() {
                     keyWidget->setDefaultKeySequence(action->data().toString());
                     keyWidget->setKeySequence(action->shortcut());
 
-                    QObject::connect(keyWidget,
-                                     SIGNAL(keySequenceAccepted(QKeySequence)),
-                                     _keyWidgetSignalMapper, SLOT(map()));
-
-                    // add a parameter to the signal mapper
-                    _keyWidgetSignalMapper->setMapping(
-                            keyWidget, action->objectName());
+                    connect(keyWidget, &QKeySequenceWidget::keySequenceAccepted, [this, action](){
+                        keySequenceEvent(action->objectName());
+                    });
 
                     ui->shortcutTreeWidget->setItemWidget(
                             actionItem, 1, keyWidget);
@@ -1491,11 +1486,6 @@ void SettingsDialog::loadShortcutSettings() {
                 menuItem->setExpanded(true);
             }
     }
-
-    QObject::connect(_keyWidgetSignalMapper,
-                     SIGNAL(mapped(QString)),
-                     this,
-                     SLOT(keySequenceEvent(QString)));
 
     ui->shortcutTreeWidget->resizeColumnToContents(0);
 }

@@ -99,6 +99,7 @@
 #include <helpers/fakevimproxy.h>
 #include <QProgressDialog>
 #include <utility>
+#include <QScreen>
 
 MainWindow::MainWindow(QWidget *parent) :
         QMainWindow(parent),
@@ -202,9 +203,6 @@ MainWindow::MainWindow(QWidget *parent) :
     initTagButtonScrollArea();
 
     noteHistory = NoteHistory();
-
-    // set our signal mapper
-    recentNoteFolderSignalMapper = new QSignalMapper(this);
 
     // initialize the toolbars
     initToolbars();
@@ -359,7 +357,7 @@ MainWindow::MainWindow(QWidget *parent) :
     QFont font = ui->noteTextEdit->font();
     QFontMetrics metrics(font);
 
-#if QT_VERSION < QT_VERSION_CHECK(5,10,0)
+#if QT_VERSION < QT_VERSION_CHECK(5,11,0)
     int width = tabStop * metrics.width(' ');
     ui->noteTextEdit->setTabStopWidth(width);
     ui->encryptedNoteTextEdit->setTabStopWidth(width);
@@ -651,7 +649,6 @@ void MainWindow::initWorkspaceComboBox() {
             this, SLOT(onWorkspaceComboBoxCurrentIndexChanged(int)));
     _workspaceComboBox->setToolTip(tr("Workspaces"));
     _workspaceComboBox->setObjectName("workspaceComboBox");
-    _workspaceSignalMapper = new QSignalMapper(this);
 }
 
 /**
@@ -976,15 +973,8 @@ void MainWindow::reloadTodoLists() {
  * Initializes the scripting engine
  */
 void MainWindow::initScriptingEngine() {
-    _customActionSignalMapper = new QSignalMapper(this);
     ui->menuCustom_actions->hide();
 //    _customActionToolbar->hide();
-
-    // connect the custom action signal mapper
-    QObject::connect(_customActionSignalMapper,
-                     SIGNAL(mapped(QString)),
-                     this,
-                     SLOT(onCustomActionInvoked(QString)));
 
     ScriptingService* scriptingService = ScriptingService::createInstance(this);
     QQmlEngine* engine = scriptingService->engine();
@@ -1112,11 +1102,10 @@ void MainWindow::updateWorkspaceLists(bool rebuild) {
         _workspaceComboBox->addItem(name, uuid);
 
         auto *action = new QAction(name, ui->menuWorkspaces);
-        QObject::connect(action, SIGNAL(triggered()),
-                         _workspaceSignalMapper, SLOT(map()));
 
-        // add a parameter to the signal mapper
-        _workspaceSignalMapper->setMapping(action, uuid);
+        connect(action, &QAction::triggered, [this, uuid](){
+            setCurrentWorkspace(uuid);
+        });
 
         // set an object name for creating shortcuts
         action->setObjectName(objectName);
@@ -1138,12 +1127,6 @@ void MainWindow::updateWorkspaceLists(bool rebuild) {
     _workspaceComboBox->setCurrentIndex(currentIndex);
 
     if (rebuild) {
-        // set the new current workspace if a menu entry was triggered
-        QObject::connect(_workspaceSignalMapper,
-                         SIGNAL(mapped(QString)),
-                         this,
-                         SLOT(setCurrentWorkspace(QString)));
-
         // we need to adapt the width of the workspaces combo box
         updateWindowToolbar();
     }
@@ -1188,7 +1171,6 @@ void MainWindow::initToolbarMenu() {
  * Updates the panel menu entries
  */
 void MainWindow::updatePanelMenu() {
-    _panelSignalMapper = new QSignalMapper(this);
     ui->menuPanels->clear();
     QSettings settings;
 
@@ -1213,18 +1195,13 @@ void MainWindow::updatePanelMenu() {
                     "Shortcuts/MainWindow-" + objectName).toString());
             action->setShortcut(shortcut);
 
-            QObject::connect(action, SIGNAL(triggered()),
-                             _panelSignalMapper, SLOT(map()));
-
-            // add a parameter to the signal mapper
-            _panelSignalMapper->setMapping(action, dockWidget->objectName());
+            // toggle the panel if the checkbox was triggered
+            connect(action, &QAction::triggered, [this, dockWidget](){
+                togglePanelVisibility(dockWidget->objectName());
+            });
 
             ui->menuPanels->addAction(action);
         }
-
-    // toggle the panel if the checkbox was triggered
-    QObject::connect(_panelSignalMapper, SIGNAL(mapped(QString)),
-                     this, SLOT(togglePanelVisibility(QString)));
 
     // update the preview in case it was disable previously
     setNoteTextFromNote(&currentNote, true);
@@ -1234,7 +1211,6 @@ void MainWindow::updatePanelMenu() {
  * Updates the toolbar menu entries
  */
 void MainWindow::updateToolbarMenu() {
-    _toolbarSignalMapper = new QSignalMapper(this);
     ui->menuToolbars->clear();
 
     Q_FOREACH(QToolBar *toolbar, findChildren<QToolBar *>()) {
@@ -1244,18 +1220,13 @@ void MainWindow::updateToolbarMenu() {
             action->setCheckable(true);
             action->setChecked(!toolbar->isHidden());
 
-            QObject::connect(action, SIGNAL(triggered()),
-                             _toolbarSignalMapper, SLOT(map()));
-
-            // add a parameter to the signal mapper
-            _toolbarSignalMapper->setMapping(action, toolbar->objectName());
+            // toggle the panel if the checkbox was triggered
+            connect(action, &QAction::triggered, [this, toolbar](){
+                toggleToolbarVisibility(toolbar->objectName());
+            });
 
             ui->menuToolbars->addAction(action);
         }
-
-    // toggle the panel if the checkbox was triggered
-    QObject::connect(_toolbarSignalMapper, SIGNAL(mapped(QString)),
-                     this, SLOT(toggleToolbarVisibility(QString)));
 }
 
 /**
@@ -1618,34 +1589,25 @@ void MainWindow::showStatusBarMessage(const QString & message, int timeout) {
  * Sets the shortcuts for the note bookmarks up
  */
 void MainWindow::setupNoteBookmarkShortcuts() {
-    this->storeNoteBookmarkSignalMapper = new QSignalMapper(this);
-    this->gotoNoteBookmarkSignalMapper = new QSignalMapper(this);
-
     for (int number = 0; number <= 9; number++) {
         // setup the store shortcut
         QShortcut *storeShortcut = new QShortcut(
                 QKeySequence("Ctrl+Shift+" + QString::number(number)),
                 this);
 
-        connect(storeShortcut, SIGNAL(activated()),
-                storeNoteBookmarkSignalMapper, SLOT(map()));
-        storeNoteBookmarkSignalMapper->setMapping(storeShortcut, number);
+        connect(storeShortcut, &QShortcut::activated, [this, number](){
+            storeNoteBookmark(number);
+        });
 
         // setup the goto shortcut
         QShortcut *gotoShortcut = new QShortcut(
                 QKeySequence("Ctrl+" + QString::number(number)),
                 this);
 
-        connect(gotoShortcut, SIGNAL(activated()),
-                gotoNoteBookmarkSignalMapper, SLOT(map()));
-        gotoNoteBookmarkSignalMapper->setMapping(gotoShortcut, number);
+        connect(gotoShortcut, &QShortcut::activated, [this, number](){
+            gotoNoteBookmark(number);
+        });
     }
-
-    connect(storeNoteBookmarkSignalMapper, SIGNAL(mapped(int)),
-            this, SLOT(storeNoteBookmark(int)));
-
-    connect(gotoNoteBookmarkSignalMapper, SIGNAL(mapped(int)),
-            this, SLOT(gotoNoteBookmark(int)));
 }
 
 /*
@@ -1718,21 +1680,12 @@ void MainWindow::loadNoteFolderListMenu() {
                     noteFolderComboBoxIndex = index;
                 }
 
-                QObject::connect(
-                        action, SIGNAL(triggered()),
-                        recentNoteFolderSignalMapper, SLOT(map()));
-
-                // add a parameter to changeNoteFolder with the signal mapper
-                recentNoteFolderSignalMapper->setMapping(
-                        action, folderId);
+                connect(action, &QAction::triggered, [this, folderId](){
+                    changeNoteFolder(folderId);
+                });
 
                 index++;
             }
-
-        QObject::connect(recentNoteFolderSignalMapper,
-                         SIGNAL(mapped(int)),
-                         this,
-                         SLOT(changeNoteFolder(int)));
 
         // set the current row
         ui->noteFolderComboBox->setCurrentIndex(
@@ -5179,7 +5132,12 @@ void MainWindow::filterNotesBySearchLineEditText() {
 
                 // calculate the size of the search count column
                 QFontMetrics fm(item->font(1));
+
+#if QT_VERSION < QT_VERSION_CHECK(5,11,0)
                 maxWidth = std::max(maxWidth, fm.width(text));
+#else
+                maxWidth = std::max(maxWidth, fm.horizontalAdvance(text));
+#endif
             }
 
             ++it;
@@ -5794,7 +5752,6 @@ void MainWindow::generateSystemTrayContextMenu() {
         // add a menu for recent notes
         QMenu *noteMenu = menu->addMenu(tr("Recent notes"));
 
-        auto *noteSignalMapper = new QSignalMapper(this);
         QList<Note> noteList = Note::fetchAll(maxNotes);
 
         Q_FOREACH(Note note, noteList) {
@@ -5804,19 +5761,10 @@ void MainWindow::generateSystemTrayContextMenu() {
                         QIcon(":icons/breeze-qownnotes/16x16/"
                                       "text-x-generic.svg")));
 
-                QObject::connect(
-                        action, SIGNAL(triggered()),
-                        noteSignalMapper, SLOT(map()));
-
-                noteSignalMapper->setMapping(
-                        action, note.getId());
+                connect(action, &QAction::triggered, [this, &note](){
+                    setCurrentNoteFromNoteId(note.getId());
+                });
             }
-
-        // connect the signal mapper
-        QObject::connect(noteSignalMapper,
-                         SIGNAL(mapped(int)),
-                         this,
-                         SLOT(setCurrentNoteFromNoteId(int)));
     }
 
     menu->addSeparator();
@@ -5835,8 +5783,6 @@ void MainWindow::generateSystemTrayContextMenu() {
         // add a menu for recent tasks
         QMenu *taskMenu = menu->addMenu(tr("Recent tasks"));
 
-        QSignalMapper *taskSignalMapper = new QSignalMapper(this);
-
         // add menu entries to jump to tasks
         QListIterator<CalendarItem> itr(taskList);
         while (itr.hasNext()) {
@@ -5847,19 +5793,10 @@ void MainWindow::generateSystemTrayContextMenu() {
                     "view-task",
                     QIcon(":icons/breeze-qownnotes/16x16/view-task.svg")));
 
-            QObject::connect(
-                    action, SIGNAL(triggered()),
-                    taskSignalMapper, SLOT(map()));
-
-            taskSignalMapper->setMapping(
-                    action, task.getUid());
+            connect(action, &QAction::triggered, [this, &task](){
+                openTodoDialog(task.getUid());
+            });
         }
-
-        // connect the signal mapper
-        QObject::connect(taskSignalMapper,
-                         SIGNAL(mapped(QString)),
-                         this,
-                         SLOT(openTodoDialog(QString)));
     }
 
     menu->addSeparator();
@@ -8317,7 +8254,6 @@ void MainWindow::disableColorOfTagItem(QTreeWidgetItem *item) {
 void MainWindow::buildTagMoveMenuTree(QMenu *parentMenu,
                                       int parentTagId) {
     QList<Tag> tagList = Tag::fetchAllByParentId(parentTagId, "t.name ASC");
-    auto *tagMovingSignalMapper = new QSignalMapper(this);
 
     Q_FOREACH(Tag tag, tagList) {
             int tagId = tag.getId();
@@ -8332,12 +8268,9 @@ void MainWindow::buildTagMoveMenuTree(QMenu *parentMenu,
                 // if there are no sub-tags just create a named action
                 QAction *action = parentMenu->addAction(name);
 
-                QObject::connect(
-                        action, SIGNAL(triggered()),
-                        tagMovingSignalMapper, SLOT(map()));
-
-                tagMovingSignalMapper->setMapping(
-                        action, tagId);
+                connect(action, &QAction::triggered, [this, tagId](){
+                    moveSelectedTagsToTagId(tagId);
+                });
             }
         }
 
@@ -8349,18 +8282,9 @@ void MainWindow::buildTagMoveMenuTree(QMenu *parentMenu,
                     tr("Move to this tag"));
     action->setData(parentTagId);
 
-    QObject::connect(
-            action, SIGNAL(triggered()),
-            tagMovingSignalMapper, SLOT(map()));
-
-    tagMovingSignalMapper->setMapping(
-            action, parentTagId);
-
-    // connect the signal mapper
-    QObject::connect(tagMovingSignalMapper,
-                     SIGNAL(mapped(int)),
-                     this,
-                     SLOT(moveSelectedTagsToTagId(int)));
+    connect(action, &QAction::triggered, [this, parentTagId](){
+        moveSelectedTagsToTagId(parentTagId);
+    });
 }
 
 /**
@@ -8369,7 +8293,6 @@ void MainWindow::buildTagMoveMenuTree(QMenu *parentMenu,
 void MainWindow::buildBulkNoteTagMenuTree(QMenu *parentMenu,
                                           int parentTagId) {
     QList<Tag> tagList = Tag::fetchAllByParentId(parentTagId, "t.name ASC");
-    auto *signalMapper = new QSignalMapper(this);
 
     Q_FOREACH(Tag tag, tagList) {
             int tagId = tag.getId();
@@ -8384,12 +8307,9 @@ void MainWindow::buildBulkNoteTagMenuTree(QMenu *parentMenu,
                 // if there are no sub-tags just create a named action
                 QAction *action = parentMenu->addAction(name);
 
-                QObject::connect(
-                        action, SIGNAL(triggered()),
-                        signalMapper, SLOT(map()));
-
-                signalMapper->setMapping(
-                        action, tagId);
+                connect(action, &QAction::triggered, [this, tagId](){
+                    tagSelectedNotesToTagId(tagId);
+                });
             }
         }
 
@@ -8399,19 +8319,10 @@ void MainWindow::buildBulkNoteTagMenuTree(QMenu *parentMenu,
         QAction *action = parentMenu->addAction(tr("Tag this"));
         action->setData(parentTagId);
 
-        QObject::connect(
-                action, SIGNAL(triggered()),
-                signalMapper, SLOT(map()));
-
-        signalMapper->setMapping(
-                action, parentTagId);
+        connect(action, &QAction::triggered, [this, parentTagId](){
+            tagSelectedNotesToTagId(parentTagId);
+        });
     }
-
-    // connect the signal mapper
-    QObject::connect(signalMapper,
-                     SIGNAL(mapped(int)),
-                     this,
-                     SLOT(tagSelectedNotesToTagId(int)));
 }
 
 /**
@@ -8474,7 +8385,6 @@ void MainWindow::buildBulkNoteSubFolderMenuTree(QMenu *parentMenu, bool doCopy,
                                                 int parentNoteSubFolderId) {
     QList<NoteSubFolder> noteSubFolderList = NoteSubFolder::fetchAllByParentId(
             parentNoteSubFolderId, "name ASC");
-    auto *signalMapper = new QSignalMapper(this);
 
     Q_FOREACH(NoteSubFolder noteSubFolder, noteSubFolderList) {
             int noteSubFolderId = noteSubFolder.getId();
@@ -8490,12 +8400,11 @@ void MainWindow::buildBulkNoteSubFolderMenuTree(QMenu *parentMenu, bool doCopy,
                 // if there are no sub-noteSubFolders just create a named action
                 QAction *action = parentMenu->addAction(name);
 
-                QObject::connect(
-                        action, SIGNAL(triggered()),
-                        signalMapper, SLOT(map()));
-
-                signalMapper->setMapping(
-                        action, noteSubFolderId);
+                connect(action, &QAction::triggered, [this, doCopy, noteSubFolderId](){
+                    doCopy ?
+                        copySelectedNotesToNoteSubFolderId(noteSubFolderId) :
+                        moveSelectedNotesToNoteSubFolderId(noteSubFolderId);
+                });
             }
         }
 
@@ -8509,20 +8418,11 @@ void MainWindow::buildBulkNoteSubFolderMenuTree(QMenu *parentMenu, bool doCopy,
     QAction *action = parentMenu->addAction(text);
     action->setData(parentNoteSubFolderId);
 
-    QObject::connect(
-            action, SIGNAL(triggered()),
-            signalMapper, SLOT(map()));
-
-    signalMapper->setMapping(
-            action, parentNoteSubFolderId);
-
-    // connect the signal mapper
-    QObject::connect(signalMapper,
-                     SIGNAL(mapped(int)),
-                     this,
-                     doCopy ?
-                     SLOT(copySelectedNotesToNoteSubFolderId(int)) :
-                     SLOT(moveSelectedNotesToNoteSubFolderId(int)));
+    connect(action, &QAction::triggered, [this, doCopy, parentNoteSubFolderId](){
+        doCopy ?
+            copySelectedNotesToNoteSubFolderId(parentNoteSubFolderId) :
+            moveSelectedNotesToNoteSubFolderId(parentNoteSubFolderId);
+    });
 }
 
 /**
@@ -8532,7 +8432,6 @@ void MainWindow::buildBulkNoteFolderSubFolderMenuTree(QMenu *parentMenu, bool do
                                                 const QString &parentNoteSubFolderPath, bool isRoot) {
     QDir dir(parentNoteSubFolderPath);
     QStringList nameFilters;
-    auto *signalMapper = new QSignalMapper(this);
 
     if (isRoot) {
         nameFilters << "media" << "trash" << "attachments";
@@ -8562,10 +8461,11 @@ void MainWindow::buildBulkNoteFolderSubFolderMenuTree(QMenu *parentMenu, bool do
             action->setToolTip(fullPath);
             action->setStatusTip(fullPath);
 
-            QObject::connect(action, SIGNAL(triggered()),
-                             signalMapper, SLOT(map()));
-
-            signalMapper->setMapping(action, fullPath);
+            connect(action, &QAction::triggered, [this, doCopy, fullPath](){
+                doCopy ?
+                    copySelectedNotesToFolder(fullPath) :
+                    moveSelectedNotesToFolder(fullPath);
+            });
         }
     }
 
@@ -8580,18 +8480,11 @@ void MainWindow::buildBulkNoteFolderSubFolderMenuTree(QMenu *parentMenu, bool do
     action->setToolTip(parentNoteSubFolderPath);
     action->setStatusTip(parentNoteSubFolderPath);
 
-    QObject::connect(action, SIGNAL(triggered()),
-                     signalMapper, SLOT(map()));
-
-    signalMapper->setMapping(action, parentNoteSubFolderPath);
-
-    // connect the signal mapper
-    QObject::connect(signalMapper,
-                     SIGNAL(mapped(QString)),
-                     this,
-                     doCopy ?
-                         SLOT(copySelectedNotesToFolder(QString)) :
-                         SLOT(moveSelectedNotesToFolder(QString)));
+    connect(action, &QAction::triggered, [this, doCopy, parentNoteSubFolderPath](){
+        doCopy ?
+            copySelectedNotesToFolder(parentNoteSubFolderPath) :
+            moveSelectedNotesToFolder(parentNoteSubFolderPath);
+    });
 }
 
 /**
@@ -10042,10 +9935,9 @@ void MainWindow::addCustomAction(const QString& identifier, const QString& menuT
         _customActionToolbar->addAction(action);
     }
 
-    // connect to the custom action signal mapper
-    QObject::connect(action, SIGNAL(triggered()),
-                     _customActionSignalMapper, SLOT(map()));
-    _customActionSignalMapper->setMapping(action, identifier);
+    connect(action, &QAction::triggered, [this, identifier](){
+        onCustomActionInvoked(identifier);
+    });
 
     // add the custom action to the note text edit context menu later
     if (useInNoteEditContextMenu) {
@@ -11151,7 +11043,7 @@ void MainWindow::on_action_FormatTable_triggered() {
  */
 void MainWindow::centerAndResize() {
     // get the dimension available on this screen
-    QSize availableSize = qApp->desktop()->availableGeometry().size();
+    QSize availableSize = QGuiApplication::primaryScreen()->availableGeometry().size();
     int width = availableSize.width();
     int height = availableSize.height();
     qDebug() << "Available dimensions " << width << "x" << height;
@@ -11165,7 +11057,7 @@ void MainWindow::centerAndResize() {
                     Qt::LeftToRight,
                     Qt::AlignCenter,
                     newSize,
-                    qApp->desktop()->availableGeometry()
+                    QGuiApplication::primaryScreen()->availableGeometry()
             )
     );
 }

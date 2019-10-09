@@ -20,7 +20,6 @@
 #include <QHash>
 #include <QFileDialog>
 #include <QEvent>
-#include <QSignalMapper>
 #include <QSystemTrayIcon>
 #include <QTextEdit>
 #include <QFile>
@@ -586,13 +585,6 @@ private:
     Note currentNote;
     QString _currentNoteTextHash;
     NoteDiffDialog *noteDiffDialog;
-    QSignalMapper *recentNoteFolderSignalMapper;
-    QSignalMapper *storeNoteBookmarkSignalMapper;
-    QSignalMapper *gotoNoteBookmarkSignalMapper;
-    QSignalMapper *_customActionSignalMapper;
-    QSignalMapper *_workspaceSignalMapper;
-    QSignalMapper *_panelSignalMapper;
-    QSignalMapper *_toolbarSignalMapper;
     UpdateService *updateService;
     bool showSystemTray;
     QSystemTrayIcon *trayIcon;
