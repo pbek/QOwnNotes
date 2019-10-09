@@ -71,7 +71,7 @@ void QOwnNotesMarkdownTextEdit::setStyles() {
     const int tabStop = 4;
     QFontMetrics metrics(font);
 
-#if QT_VERSION < QT_VERSION_CHECK(5,10,0)
+#if QT_VERSION < QT_VERSION_CHECK(5,11,0)
     setTabStopWidth(tabStop * metrics.width(' '));
 #else
     setTabStopDistance(tabStop * metrics.horizontalAdvance(' '));
@@ -276,8 +276,13 @@ void QOwnNotesMarkdownTextEdit::setPaperMargins(int width) {
             }
 
             // set the size of characterAmount times the size of "O" characters
+#if QT_VERSION < QT_VERSION_CHECK(5,11,0)
             int proposedEditorWidth = metrics.width(
                             QString("O").repeated(characterAmount));
+#else
+            int proposedEditorWidth = metrics.horizontalAdvance(
+                            QString("O").repeated(characterAmount));
+#endif
 
             // apply a factor to correct the faulty calculated margin
             // TODO(pbek): I don't know better way to get around this yet
