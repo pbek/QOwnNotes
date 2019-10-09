@@ -1,9 +1,11 @@
 # QOwnNotes Changelog
 
 ## 19.10.3
-- fixed a Fedora build problem on the Open Build Service
-- fixed several deprecation warnings to further advance the Qt 6 compatibility
-  of QOwnNotes (for [#1304](https://github.com/pbek/QOwnNotes/issues/1304))
+- fixed a Fedora 28 build problem on the Open Build Service
+- fixed several more deprecation warnings to further advance the Qt 6 compatibility
+  of QOwnNotes in the future (for [#1304](https://github.com/pbek/QOwnNotes/issues/1304))
+- added more Russian, Icelandic, Albanian, Punjabi, Hebrew translation
+  (thank you unchase, Fabijenna)
 
 ## 19.10.2
 - fixed a crash when leaving the full-screen mode if the app was restarted while in

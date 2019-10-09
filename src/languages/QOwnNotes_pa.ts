@@ -5892,35 +5892,35 @@ QOwnNotesAPI ਸੰਸਕਰਣ: %2</translation>
 You also need to have the QOwnNotesAPI app installed and enabled!
 
 Connection error message: </source>
-      <translation type="unfinished">There was an error connecting to the ownCloud Server!
-You also need to have the QOwnNotesAPI app installed and enabled!
+      <translation>ਖੁਦ ਦੇ ਕਲਾਉਡ ਸਰਵਰ ਨਾਲ ਜੁੜਨ ਵਿੱਚ ਇੱਕ ਤਰੁੱਟੀ ਹੋ ਗਈ!
+ਤੁਹਾਨੂੰ QOwnNotesAPI ਐਪ ਨੂੰ ਸਥਾਪਿਤ ਅਤੇ ਸਮਰਥਿਤ ਕਰਨ ਦੀ ਜ਼ਰੂਰਤ ਹੈ!
 
-Connection error message: </translation>
+ਕੁਨੈਕਸ਼ਨ ਗਲਤੀ ਸੁਨੇਹਾ: </translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2016"/>
       <source>Markdown files</source>
-      <translation type="unfinished">Markdown files</translation>
+      <translation>ਮਾਰਕਡਾਉਨ ਫਾਈਲਾਂ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2043"/>
       <source>Disable usage tracking</source>
-      <translation type="unfinished">Disable usage tracking</translation>
+      <translation>ਵਰਤੋਂ ਟਰੈਕਿੰਗ ਨੂੰ ਅਯੋਗ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2044"/>
       <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
-      <translation type="unfinished">Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</translation>
+      <translation>ਅਗਿਆਤ ਉਪਯੋਗਤਾ ਡਾਟਾ ਇਹ ਨਿਰਣਾ ਕਰਨ ਵਿੱਚ ਮਦਦ ਕਰਦਾ ਹੈ ਕਿ ਕਿO ਓਨਨੋਟਸ ਦੇ ਕਿਹੜੇ ਹਿੱਸੇ ਅਗਲੇ ਵਿੱਚ ਸੁਧਾਰ ਕਰਨ ਅਤੇ ਬੱਗ ਲੱਭਣ ਅਤੇ ਠੀਕ ਕਰਨ ਲਈ ਹਨ.&lt;br /&gt;ਕਿਰਪਾ ਕਰਕੇ ਇਸ ਨੂੰ ਅਯੋਗ ਕਰੋ ਜੇ ਤੁਸੀਂ ਸੱਚਮੁੱਚ ਇਸ ਨਾਲ ਨਹੀਂ ਰਹਿ ਸਕਦੇ.&lt;br /&gt;&lt;br /&gt;ਸੱਚਮੁੱਚ ਵਰਤੋਂ ਟਰੈਕਿੰਗ ਨੂੰ ਅਸਮਰੱਥ ਬਣਾਉਣਾ ਹੈ?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2265"/>
       <source>new folder</source>
-      <translation type="unfinished">new folder</translation>
+      <translation>ਨਵਾਂ ਫੋਲਡਰ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2303"/>
       <source>Remove note folder</source>
-      <translation type="unfinished">Remove note folder</translation>
+      <translation>ਨੋਟ ਫੋਲਡਰ ਹਟਾਓ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2304"/>
@@ -5930,83 +5930,83 @@ Connection error message: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2379"/>
       <source>Please select the folder where your notes will get stored to</source>
-      <translation type="unfinished">Please select the folder where your notes will get stored to</translation>
+      <translation>ਕਿਰਪਾ ਕਰਕੇ ਫੋਲਡਰ ਦੀ ਚੋਣ ਕਰੋ ਜਿੱਥੇ ਤੁਹਾਡੇ ਨੋਟਸ ਸਟੋਰ ਕੀਤੇ ਜਾਣਗੇ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2416"/>
       <source>Loading folders from server</source>
-      <translation type="unfinished">Loading folders from server</translation>
+      <translation>ਸਰਵਰ ਤੋਂ ਫੋਲਡਰ ਲੋਡ ਕੀਤੇ ਜਾ ਰਹੇ ਹਨ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2430"/>
       <source>No more folders were found in the current folder</source>
-      <translation type="unfinished">No more folders were found in the current folder</translation>
+      <translation>ਮੌਜੂਦਾ ਫੋਲਡਰ ਵਿੱਚ ਕੋਈ ਹੋਰ ਫੋਲਡਰ ਨਹੀਂ ਮਿਲੇ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2503"/>
       <source>Loading folders in '%1' from server</source>
-      <translation type="unfinished">Loading folders in '%1' from server</translation>
+      <translation>ਸਰਵਰ ਤੋਂ '%1' ਵਿੱਚ ਫੋਲਡਰ ਲੋਡ ਕੀਤੇ ਜਾ ਰਹੇ ਹਨ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2567"/>
       <source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
-      <translation type="unfinished">Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</translation>
+      <translation>ਤੇਜ਼ੀ ਨਾਲ ਸ਼ੁਰੂ ਕਰਨ ਲਈ &lt;a href="%1"&gt; ਸਕ੍ਰਿਪਟਿੰਗ ਦਸਤਾਵੇਜ਼ &lt;/a&gt; ਤੇ ਇੱਕ ਨਜ਼ਰ ਮਾਰੋ.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2569"/>
       <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
-      <translation type="unfinished">If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</translation>
+      <translation>ਜੇ ਤੁਹਾਨੂੰ QOwnNotes ਵਿੱਚ ਕਿਸੇ ਖਾਸ ਕਾਰਜਕੁਸ਼ਲਤਾ ਦੀ ਐਕਸੈਸ ਦੀ ਜ਼ਰੂਰਤ ਹੈ ਤਾਂ ਕਿਰਪਾ ਕਰਕੇ &lt;a href="%1"&gt; QOwnNotes ਮੁੱਦੇ ਪੇਜ &lt;/a&gt; ਤੇ ਇੱਕ ਮੁੱਦਾ ਖੋਲ੍ਹੋ.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2590"/>
       <source>Check for script updates</source>
-      <translation type="unfinished">Check for script updates</translation>
+      <translation>ਸਕ੍ਰਿਪਟ ਦੇ ਅਪਡੇਟਾਂ ਦੀ ਜਾਂਚ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2597"/>
       <source>Add local script</source>
-      <translation type="unfinished">Add local script</translation>
+      <translation>ਸਥਾਨਕ ਸਕ੍ਰਿਪਟ ਸ਼ਾਮਲ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2601"/>
       <source>Add an existing, local script</source>
-      <translation type="unfinished">Add an existing, local script</translation>
+      <translation>ਇੱਕ ਮੌਜੂਦਾ, ਸਥਾਨਕ ਸਕ੍ਰਿਪਟ ਸ਼ਾਮਲ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3669"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3726"/>
       <source>INI files</source>
-      <translation type="unfinished">INI files</translation>
+      <translation>INI ਫਾਈਲਾਂ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3705"/>
       <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
-      <translation type="unfinished">Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</translation>
+      <translation>ਕੀ ਤੁਸੀਂ ਸੱਚਮੁੱਚ ਸੈਟਿੰਗਾਂ ਨੂੰ ਆਯਾਤ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ? ਤੁਹਾਡੀਆਂ ਮੌਜੂਦਾ ਸੈਟਿੰਗਾਂ ਹਟਾ ਦਿੱਤੀਆਂ ਜਾਣਗੀਆਂ ਅਤੇ ਹਰ ਸੈਟਿੰਗ ਮੁੜ ਪ੍ਰਾਪਤ ਨਹੀਂ ਹੋ ਸਕਦੀ, ਜਿਵੇਂ ਨੋਟ ਫੋਲਡਰ ਸੈਟਿੰਗਜ਼ ਅਤੇ ਤੁਸੀਂ ਕਿਹੜੀਆਂ ਸਕ੍ਰਿਪਟਾਂ ਵਰਤ ਰਹੇ ਹੋ. ਤੁਹਾਨੂੰ ਕੁਝ ਸੈਟਿੰਗਾਂ ਵਿਵਸਥਿਤ ਕਰਨ ਦੀ ਜ਼ਰੂਰਤ ਹੋਏਗੀ, ਖ਼ਾਸਕਰ ਪਲੇਟਫਾਰਮਾਂ ਵਿੱਚ, ਪਰ ਤੁਹਾਡੇ ਨੋਟ ਬਰਕਰਾਰ ਰਹਿਣਗੇ!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3715"/>
       <source>The application will be quit after the import.</source>
-      <translation type="unfinished">The application will be quit after the import.</translation>
+      <translation>ਆਯਾਤ ਦੇ ਬਾਅਦ ਐਪਲੀਕੇਸ਼ਨ ਨੂੰ ਬੰਦ ਕਰ ਦਿੱਤਾ ਜਾਵੇਗਾ.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3716"/>
       <source>The application will be restarted after the import.</source>
-      <translation type="unfinished">The application will be restarted after the import.</translation>
+      <translation>ਆਯਾਤ ਦੇ ਬਾਅਦ ਅਰਜ਼ੀ ਦੁਬਾਰਾ ਚਾਲੂ ਕੀਤੀ ਜਾਏਗੀ.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2584"/>
       <source>Find a script in the script repository</source>
-      <translation type="unfinished">Find a script in the script repository</translation>
+      <translation>ਆਯਾਤ ਦੀ ਅਰਜ਼ੀ ਦੁਬਾਰਾ ਪ੍ਰਬੰਧੂ ਜਾਗੀ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="262"/>
       <source>Menu bar</source>
-      <translation type="unfinished">Menu bar</translation>
+      <translation>ਮੀਨੂ ਬਾਰ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="263"/>
       <source>Show menu bar item</source>
-      <translation type="unfinished">Show menu bar item</translation>
+      <translation>ਮੇਨੂ ਬਾਰ ਦੀ ਇਕਾਈ ਦਿਖਾਓ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1549"/>
@@ -6016,7 +6016,7 @@ Connection error message: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2680"/>
       <source>Remove script</source>
-      <translation type="unfinished">Remove script</translation>
+      <translation>ਸਕ੍ਰਿਪਟ ਹਟਾਓ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2681"/>
@@ -6026,59 +6026,59 @@ Connection error message: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2732"/>
       <source>QML files</source>
-      <translation type="unfinished">QML files</translation>
+      <translation>QML ਫਾਈਲਾਂ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2733"/>
       <source>Please select your QML file</source>
-      <translation type="unfinished">Please select your QML file</translation>
+      <translation>ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੀ QML ਫਾਈਲ ਦੀ ਚੋਣ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2822"/>
       <source>Open repository</source>
-      <translation type="unfinished">Open repository</translation>
+      <translation>ਰਿਪੋਜ਼ਟਰੀ ਖੋਲ੍ਹੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2882"/>
       <source>Your script seems to be valid</source>
-      <translation type="unfinished">Your script seems to be valid</translation>
+      <translation>ਤੁਹਾਡੀ ਸਕ੍ਰਿਪਟ ਜਾਇਜ਼ ਜਾਪਦੀ ਹੈ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2883"/>
       <source>There were script errors:
 %1</source>
-      <translation type="unfinished">There were script errors:
+      <translation>ਸਕ੍ਰਿਪਟ ਵਿੱਚ ਗਲਤੀਆਂ ਸਨ:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2952"/>
       <source>File extension</source>
-      <translation type="unfinished">File extension</translation>
+      <translation>ਫਾਈਲ ਐਕਸਟੈਂਸ਼ਨ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2953"/>
       <source>Enter your custom file extension:</source>
-      <translation type="unfinished">Enter your custom file extension:</translation>
+      <translation>ਆਪਣੀ ਕਸਟਮ ਫਾਈਲ ਐਕਸ਼ਟੇਸ਼ਨ ਦਰਜ ਕਰੋ:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3245"/>
       <source>Calendar cache emptied</source>
-      <translation type="unfinished">Calendar cache emptied</translation>
+      <translation>ਕੈਲੰਡਰ ਕੈਸ਼ ਖਾਲੀ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3246"/>
       <source>Your calendar cache was emptied.</source>
-      <translation type="unfinished">Your calendar cache was emptied.</translation>
+      <translation>ਤੁਹਾਡੇ ਕੈਲੰਡਰ ਕੈਸ਼ ਨੂੰ ਖਾਲੀ ਕਰ ਦਿੱਤਾ ਗਿਆ ਸੀ.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3324"/>
       <source>Reset toolbars and exit</source>
-      <translation type="unfinished">Reset toolbars and exit</translation>
+      <translation>ਟੂਲਬਾਰਸ ਨੂੰ ਰੀਸੈਟ ਕਰੋ ਅਤੇ ਬੰਦ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3325"/>
       <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
-      <translation type="unfinished">Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</translation>
+      <translation>ਕੀ ਤੁਸੀਂ ਸੱਚਮੁੱਚ ਸਾਰੇ ਟੂਲਬਾਰਸ ਨੂੰ ਰੀਸੈਟ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ? ਐਪਲੀਕੇਸ਼ਨ ਨੂੰ ਪ੍ਰਕਿਰਿਆ ਵਿੱਚ ਬੰਦ ਕਰ ਦਿੱਤਾ ਜਾਵੇਗਾ, ਜਦੋਂ ਤੁਸੀਂ ਦੁਬਾਰਾ ਚਾਲੂ ਕਰਦੇ ਹੋ ਤਾਂ ਡਿਫੌਲਟ ਟੂਲਬਾਰਾਂ ਨੂੰ ਮੁੜ ਸਥਾਪਿਤ ਕੀਤਾ ਜਾਏਗਾ.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3329"/>
@@ -6326,32 +6326,32 @@ Your notes will stay intact!</translation>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="231"/>
       <source>CSV file</source>
-      <translation type="unfinished">CSV file</translation>
+      <translation>CSV ਫਾਈਲ</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="238"/>
       <source>First line is the table heading</source>
-      <translation type="unfinished">First line is the table heading</translation>
+      <translation>ਪਹਿਲੀ ਲਾਈਨ ਟੇਬਲ ਹੈਡਿੰਗ ਹੈ</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="261"/>
       <source>Text-delimiter:</source>
-      <translation type="unfinished">Text-delimiter:</translation>
+      <translation>ਟੈਕਸਟ-ਡੀਲਿਮਿਟਰ:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.cpp" line="150"/>
       <source>CSV files</source>
-      <translation type="unfinished">CSV files</translation>
+      <translation>CSV ਫਾਈਲਾਂ</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.cpp" line="151"/>
       <source>All files</source>
-      <translation type="unfinished">All files</translation>
+      <translation>ਸਾਰੀਆਂ ਫਾਈਲਾਂ</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.cpp" line="156"/>
       <source>Select CSV file to import</source>
-      <translation type="unfinished">Select CSV file to import</translation>
+      <translation>ਆਯਾਤ ਕਰਨ ਲਈ CSV ਫਾਈਲ ਦੀ ਚੋਣ ਕਰੋ</translation>
     </message>
   </context>
   <context>
@@ -6359,17 +6359,17 @@ Your notes will stay intact!</translation>
     <message>
       <location filename="../dialogs/tagadddialog.ui" line="20"/>
       <source>Add a new tag</source>
-      <translation type="unfinished">Add a new tag</translation>
+      <translation>ਇੱਕ ਨਵਾਂ ਟੈਗ ਸ਼ਾਮਲ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/tagadddialog.ui" line="30"/>
       <source>Add new tag</source>
-      <translation type="unfinished">Add new tag</translation>
+      <translation>ਨਵਾਂ ਟੈਗ ਸ਼ਾਮਲ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/tagadddialog.ui" line="47"/>
       <source>New tag</source>
-      <translation type="unfinished">New tag</translation>
+      <translation>ਨਵਾਂ ਦਿਨ</translation>
     </message>
   </context>
   <context>
@@ -6377,130 +6377,130 @@ Your notes will stay intact!</translation>
     <message>
       <location filename="../dialogs/tododialog.ui" line="14"/>
       <source>Todo</source>
-      <translation type="unfinished">Todo</translation>
+      <translation>ਸਾਰੇ</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="78"/>
       <location filename="../dialogs/tododialog.ui" line="85"/>
       <source>Priority</source>
-      <translation type="unfinished">Priority</translation>
+      <translation>ਤਰਜੀਹ</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="113"/>
       <source>Reminder</source>
-      <translation type="unfinished">Reminder</translation>
+      <translation>ਰੀਮਾਈਂਡਰ</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="157"/>
       <source>Summary</source>
-      <translation type="unfinished">Summary</translation>
+      <translation>ਸਾਰ</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="191"/>
       <source>Save</source>
-      <translation type="unfinished">Save</translation>
+      <translation>ਸੇਵ</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="222"/>
       <source>Note…</source>
-      <translation type="unfinished">Note…</translation>
+      <translation>ਨੋਟ…</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="100"/>
       <source>Save and insert into note</source>
-      <translation type="unfinished">Save and insert into note</translation>
+      <translation>ਸੰਭਾਲੋ ਅਤੇ ਨੋਟ ਵਿੱਚ ਪਾਓ</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="208"/>
       <source>Remove</source>
-      <translation type="unfinished">Remove</translation>
+      <translation>ਹਟਾਓ</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="278"/>
       <source>Show completed items</source>
-      <translation type="unfinished">Show completed items</translation>
+      <translation>ਪੂਰੀਆਂ ਹੋਈਆਂ ਚੀਜ਼ਾਂ ਦਿਖਾਓ</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="285"/>
       <source>Reload the todo list from server</source>
-      <translation type="unfinished">Reload the todo list from server</translation>
+      <translation>ਸਰਵਰ ਤੋਂ ਟੂਡੋ ਲਿਸਟ ਨੂੰ ਮੁੜ ਲੋਡ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="288"/>
       <source>Reload…</source>
-      <translation type="unfinished">Reload…</translation>
+      <translation>ਮੁੜ ਲੋਡ ਕਰੋ…</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="319"/>
       <source>Search or create todo item</source>
-      <translation type="unfinished">Search or create todo item</translation>
+      <translation>ਟੂਡ ਆਈਟਮ ਖੋਜੋ ਜਾਂ ਬਣਾਓ</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="302"/>
       <source>select your todo list</source>
-      <translation type="unfinished">select your todo list</translation>
+      <translation>ਆਪਣੀ ਟੂਡੋ ਸੂਚੀ ਚੁਣੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="188"/>
       <source>Save the current todo item</source>
-      <translation type="unfinished">Save the current todo item</translation>
+      <translation>ਮੌਜੂਦਾ ਟੂਡੋ ਆਈਟਮ ਨੂੰ ਸੇਵ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="104"/>
       <source>Save the current todo item and insert a link to it into the current note</source>
-      <translation type="unfinished">Save the current todo item and insert a link to it into the current note</translation>
+      <translation>ਮੌਜੂਦਾ ਟੂਡੋ ਆਈਟਮ ਨੂੰ ਸੇਵ ਕਰੋ ਅਤੇ ਮੌਜੂਦਾ ਨੋਟ ਵਿਚ ਇਸ ਨਾਲ ਲਿੰਕ ਪਾਓ</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="113"/>
       <source>Import the current todo item as new note</source>
-      <translation type="unfinished">Import the current todo item as new note</translation>
+      <translation>ਮੌਜੂਦਾ ਟੂਡੋ ਆਈਟਮ ਨੂੰ ਨਵੇਂ ਨੋਟ ਦੇ ਰੂਪ ਵਿੱਚ ਆਯਾਤ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="109"/>
       <source>Import as note</source>
-      <translation type="unfinished">Import as note</translation>
+      <translation>ਨੋਟ ਵਜੋਂ ਆਯਾਤ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="205"/>
       <source>Remove the current todo item</source>
-      <translation type="unfinished">Remove the current todo item</translation>
+      <translation>ਮੌਜੂਦਾ ਟੂਡੋ ਆਈਟਮ ਨੂੰ ਹਟਾਓ</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="309"/>
       <source>Todo list items are being loaded from the server</source>
-      <translation type="unfinished">Todo list items are being loaded from the server</translation>
+      <translation>ਟੋਡੋ ਲਿਸਟ ਆਈਟਮਾਂ ਨੂੰ ਸਰਵਰ ਤੋਂ ਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="124"/>
       <source>Reload from server</source>
-      <translation type="unfinished">Reload from server</translation>
+      <translation>ਸਰਵਰ ਤੋਂ ਮੁੜ ਲੋਡ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="128"/>
       <source>Reload tasks from server</source>
-      <translation type="unfinished">Reload tasks from server</translation>
+      <translation>ਸਰਵਰ ਤੋਂ ਕੰਮ ਮੁੜ ਲੋਡ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="133"/>
       <source>Clear cache and reload</source>
-      <translation type="unfinished">Clear cache and reload</translation>
+      <translation>ਕੈਚੇ ਸਾਫ਼ ਕਰੋ ਅਤੇ ਮੁੜ ਲੋਡ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="137"/>
       <source>Clear calendar cache and reload tasks from server</source>
-      <translation type="unfinished">Clear calendar cache and reload tasks from server</translation>
+      <translation>Clear calendar cache and reload tasks from server</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="578"/>
       <source>Remove todo item</source>
-      <translation type="unfinished">Remove todo item</translation>
+      <translation>ਟੂਡੋ ਆਈਟਮ ਹਟਾਓ</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="579"/>
       <source>Remove the selected todo item?
 This cannot be undone!</source>
-      <translation type="unfinished">Remove the selected todo item?
-This cannot be undone!</translation>
+      <translation>ਚੁਣੀ ਹੋਈ ਟੂਡੋ ਆਈਟਮ ਨੂੰ ਹਟਾਉਣਾ ਹੈ?
+ਇਸ ਨੂੰ ਵਾਪਸ ਨਹੀ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ!</translation>
     </message>
   </context>
   <context>
@@ -6508,63 +6508,63 @@ This cannot be undone!</translation>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="23"/>
       <source>Select a menu</source>
-      <translation type="unfinished">Select a menu</translation>
+      <translation>ਇੱਕ ਮੀਨੂੰ ਚੁਣੋ</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="26"/>
       <source>Lists the available menus to get the corresponding actions</source>
-      <translation type="unfinished">Lists the available menus to get the corresponding actions</translation>
+      <translation>ਅਨੁਸਾਰੀ ਕਿਰਿਆਵਾਂ ਪ੍ਰਾਪਤ ਕਰਨ ਲਈ ਉਪਲਬਧ ਮੇਨੂਆਂ ਦੀ ਸੂਚੀ ਬਣਾਉਂਦਾ ਹੈ</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="33"/>
       <source>Select toolbar</source>
-      <translation type="unfinished">Select toolbar</translation>
+      <translation>ਟੂਲਬਾਰ ਦੀ ਚੋਣ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="36"/>
       <source>List the available toolbars. The selected one will be edited</source>
-      <translation type="unfinished">List the available toolbars. The selected one will be edited</translation>
+      <translation>ਉਪਲੱਬਧ ਟੂਲਬਾਰਾਂ ਦੀ ਸੂਚੀ ਬਣਾਓ. ਚੁਣਿਆ ਇੱਕ ਸੰਪਾਦਿਤ ਕੀਤਾ ਜਾਵੇਗਾ</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="43"/>
       <source>Lists the actions in the selected toolbar</source>
-      <translation type="unfinished">Lists the actions in the selected toolbar</translation>
+      <translation>ਚੁਣੀ ਗਈ ਟੂਲਬਾਰ ਵਿੱਚ ਕਾਰਵਾਈਆਂ ਦੀ ਸੂਚੀ ਹੈ</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="52"/>
       <source>Add new Toolbar</source>
-      <translation type="unfinished">Add new Toolbar</translation>
+      <translation>ਨਵੀਂ ਟੂਲਬਾਰ ਸ਼ਾਮਲ ਕਰੋ</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="55"/>
       <source>New</source>
-      <translation type="unfinished">New</translation>
+      <translation>ਨਵਾਂ</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="66"/>
       <source>Delete selected toolbar</source>
-      <translation type="unfinished">Delete selected toolbar</translation>
+      <translation>ਚੁਣੀ ਗਈ ਟੂਲਬਾਰ ਨੂੰ ਮਿਟਾਓ</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="69"/>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="168"/>
       <source>Remove</source>
-      <translation type="unfinished">Remove</translation>
+      <translation>ਹਟਾਓ</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="82"/>
       <source>Lists the available actions for the selected menu</source>
-      <translation type="unfinished">Lists the available actions for the selected menu</translation>
+      <translation>ਚੁਣੇ ਮੀਨੂ ਲਈ ਉਪਲਬਧ ਕਿਰਿਆਵਾਂ ਦੀ ਸੂਚੀ ਬਣਾਓ</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="104"/>
       <source>Move Up</source>
-      <translation type="unfinished">Move Up</translation>
+      <translation>ਉੱਪਰ ਚੱਲੋ</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="107"/>
       <source>Moves the selected toolbar item up</source>
-      <translation type="unfinished">Moves the selected toolbar item up</translation>
+      <translation>ਚੁਣੀ ਗਈ ਟੂਲਬਾਰ ਆਈਟਮ ਨੂੰ ਉੱਪਰ ਭੇਜਦੀ ਹੈ</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="110"/>
@@ -6574,12 +6574,12 @@ This cannot be undone!</translation>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="121"/>
       <source>Move Down</source>
-      <translation type="unfinished">Move Down</translation>
+      <translation>ਹੇਠਾਂ ਭੇਜੋ</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="124"/>
       <source>moves the selected toolbar item down</source>
-      <translation type="unfinished">moves the selected toolbar item down</translation>
+      <translation>ਚੁਣੀ ਗਈ ਟੂਲਬਾਰ ਆਈਟਮ ਨੂੰ ਹੇਠਾਂ ਭੇਜੋ</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="127"/>
@@ -6860,27 +6860,27 @@ This cannot be undone!</translation>
     <message>
       <location filename="../services/updateservice.cpp" line="105"/>
       <source>Network reply error: %1</source>
-      <translation type="unfinished">Network reply error: %1</translation>
+      <translation>ਨੈੱਟਵਰਕ ਜਵਾਬ ਗਲਤੀ: %1</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="119"/>
       <source>No data was received by the network request!</source>
-      <translation type="unfinished">No data was received by the network request!</translation>
+      <translation>ਨੈਟਵਰਕ ਬੇਨਤੀ ਦੁਆਰਾ ਕੋਈ ਡਾਟਾ ਪ੍ਰਾਪਤ ਨਹੀਂ ਹੋਇਆ!</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="138"/>
       <source>The data from the network request could not be interpreted!</source>
-      <translation type="unfinished">The data from the network request could not be interpreted!</translation>
+      <translation>ਨੈਟਵਰਕ ਬੇਨਤੀ ਤੋਂ ਅੰਕੜੇ ਦੀ ਵਿਆਖਿਆ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕਦੀ!</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="230"/>
       <source>No updates</source>
-      <translation type="unfinished">No updates</translation>
+      <translation>ਕੋਈ ਅਪਡੇਟਸ ਨਹੀਂ</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="231"/>
       <source>There are no updates available.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; is the latest version.</source>
-      <translation type="unfinished">There are no updates available.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; is the latest version.</translation>
+      <translation>ਕੋਈ ਅਪਡੇਟਸ ਉਪਲਬਧ ਨਹੀਂ ਹਨ. &lt;br /&gt;&lt;strong&gt;%1&lt;/ strong&gt; ਇੱਕ ਨਵਾਂ ਵਰਜਨ ਹੈ.</translation>
     </message>
   </context>
   <context>
@@ -7007,27 +7007,27 @@ This cannot be undone!</translation>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="191"/>
       <source>Create note folder if not existing</source>
-      <translation type="unfinished">Create note folder if not existing</translation>
+      <translation>ਜੇ ਮੌਜੂਦ ਨਹੀਂ ਤਾਂ ਨੋਟ ਫੋਲਡਰ ਬਣਾਓ</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="225"/>
       <source>Note folder path</source>
-      <translation type="unfinished">Note folder path</translation>
+      <translation>ਨੋਟ ਫੋਲਡਰ ਮਾਰਗ</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="232"/>
       <source>Select folder</source>
-      <translation type="unfinished">Select folder</translation>
+      <translation>ਫੋਲਡਰ ਚੁਣੋ</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="246"/>
       <source>Show sub-folders</source>
-      <translation type="unfinished">Show sub-folders</translation>
+      <translation>ਉਪ-ਫੋਲਡਰ ਦਿਖਾਓ</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="285"/>
       <source>Panel layout</source>
-      <translation type="unfinished">Panel layout</translation>
+      <translation>ਪੈਨਲ ਲੇਆਉਟ</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="342"/>
@@ -7042,12 +7042,12 @@ This cannot be undone!</translation>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="184"/>
       <source>Please select where you want to store your notes:</source>
-      <translation type="unfinished">Please select where you want to store your notes:</translation>
+      <translation>ਕਿਰਪਾ ਕਰਕੇ ਚੁਣੋ ਕਿ ਤੁਸੀਂ ਆਪਣੇ ਨੋਟ ਕਿੱਥੇ ਸਟੋਰ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ:</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="319"/>
       <source>If you want to be able to access your note versions and your trashed notes on your ownCloud server, you can configure QOwnNotes for it now. You can also do it at a later time.</source>
-      <translation type="unfinished">If you want to be able to access your note versions and your trashed notes on your ownCloud server, you can configure QOwnNotes for it now. You can also do it at a later time.</translation>
+      <translation>ਜੇ ਤੁਸੀਂ ਆਪਣੇ ਖੁਦ ਦੇ ਕਲਾਉਡ ਸਰਵਰ 'ਤੇ ਆਪਣੇ ਨੋਟ ਸੰਸਕਰਣਾਂ ਅਤੇ ਤੁਹਾਡੇ ਰੱਦੀ ਨੋਟਾਂ ਤੱਕ ਪਹੁੰਚ ਪ੍ਰਾਪਤ ਕਰਨ ਦੇ ਯੋਗ ਹੋਣਾ ਚਾਹੁੰਦੇ ਹੋ, ਤਾਂ ਤੁਸੀਂ ਹੁਣ ਇਸਦੇ ਲਈ QOwnNotes ਨੂੰ ਕੌਂਫਿਗਰ ਕਰ ਸਕਦੇ ਹੋ. ਤੁਸੀਂ ਬਾਅਦ ਵਿਚ ਇਹ ਵੀ ਕਰ ਸਕਦੇ ਹੋ.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="349"/>
@@ -7062,27 +7062,27 @@ This cannot be undone!</translation>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="116"/>
       <source>Cannot create note path! You have to create the note folder manually!</source>
-      <translation type="unfinished">Cannot create note path! You have to create the note folder manually!</translation>
+      <translation>ਨੋਟ ਮਾਰਗ ਨਹੀਂ ਬਣਾਇਆ ਜਾ ਸਕਦਾ! ਤੁਹਾਨੂੰ ਨੋਟ ਫੋਲਡਰ ਨੂੰ ਹੱਥੀਂ ਤਿਆਰ ਕਰਨਾ ਪਏਗਾ!</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="123"/>
       <source>Cannot create note path!</source>
-      <translation type="unfinished">Cannot create note path!</translation>
+      <translation>ਨੋਟ ਮਾਰਗ ਨਹੀਂ ਬਣਾਇਆ ਜਾ ਸਕਦਾ!</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="128"/>
       <source>This note path doesn't exist!</source>
-      <translation type="unfinished">This note path doesn't exist!</translation>
+      <translation>ਇਹ ਨੋਟ ਮਾਰਗ ਮੌਜੂਦ ਨਹੀਂ ਹੈ!</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="200"/>
       <source>Please select the folder where your notes will get stored to</source>
-      <translation type="unfinished">Please select the folder where your notes will get stored to</translation>
+      <translation>ਕਿਰਪਾ ਕਰਕੇ ਫੋਲਡਰ ਦੀ ਚੋਣ ਕਰੋ ਜਿੱਥੇ ਤੁਹਾਡੇ ਨੋਟਸ ਸਟੋਰ ਕੀਤੇ ਜਾਣਗੇ</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="215"/>
       <source>Keep in mind that the note folder will be stored relative to the directory where QOwnNotes resides in portable mode! So you need to stay on the same drive.</source>
-      <translation type="unfinished">Keep in mind that the note folder will be stored relative to the directory where QOwnNotes resides in portable mode! So you need to stay on the same drive.</translation>
+      <translation>ਯਾਦ ਰੱਖੋ ਕਿ ਨੋਟ ਫੋਲਡਰ ਨੂੰ ਡਾਇਰੈਕਟਰੀ ਦੇ ਅਨੁਸਾਰ ਸੰਭਾਲਿਆ ਜਾਏਗਾ ਜਿੱਥੇ QOwnNotes ਪੋਰਟੇਬਲ ਮੋਡ ਵਿੱਚ ਰਹਿੰਦਾ ਹੈ! ਇਸ ਲਈ ਤੁਹਾਨੂੰ ਉਸੇ ਡ੍ਰਾਇਵ ਤੇ ਰਹਿਣ ਦੀ ਜ਼ਰੂਰਤ ਹੈ.</translation>
     </message>
   </context>
   <context>
@@ -7090,42 +7090,42 @@ This cannot be undone!</translation>
     <message>
       <location filename="../main.cpp" line="77"/>
       <source>Runs the application in portable mode.</source>
-      <translation type="unfinished">Runs the application in portable mode.</translation>
+      <translation>ਐਪਲੀਕੇਸ਼ਨ ਨੂੰ ਪੋਰਟੇਬਲ ਮੋਡ ਵਿੱਚ ਚਲਾਉਂਦਾ ਹੈ.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="81"/>
       <source>Prints out a dump of the settings and other information about the application and environment in GitHub Markdown and exits the application.</source>
-      <translation type="unfinished">Prints out a dump of the settings and other information about the application and environment in GitHub Markdown and exits the application.</translation>
+      <translation>GitHub ਮਾਰਕਡਾਉਨ ਵਿੱਚ ਸੈਟਿੰਗਾਂ ਅਤੇ ਐਪਲੀਕੇਸ਼ਨ ਅਤੇ ਵਾਤਾਵਰਣ ਬਾਰੇ ਹੋਰ ਜਾਣਕਾਰੀ ਦੇ ਇੱਕ ਡੰਪ ਨੂੰ ਬਾਹਰ ਕੱintsਦਾ ਹੈ ਅਤੇ ਐਪਲੀਕੇਸ਼ਨ ਨੂੰ ਬੰਦ ਕਰਦਾ ਹੈ.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="87"/>
       <source>Allows multiple instances of QOwnNotes to be started even if disallowed in the settings.</source>
-      <translation type="unfinished">Allows multiple instances of QOwnNotes to be started even if disallowed in the settings.</translation>
+      <translation>QOwnNotes ਦੇ ਮਲਟੀਪਲ ਉਦਾਹਰਨਾਂ ਨੂੰ ਅਰੰਭ ਕਰਨ ਦੀ ਆਗਿਆ ਦਿੰਦਾ ਹੈ ਭਾਵੇਂ ਸੈਟਿੰਗਜ਼ ਵਿੱਚ ਮਨ੍ਹਾ ਕਰ ਦਿੱਤਾ ਜਾਵੇ.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="92"/>
       <source>Clears the settings and runs the application.</source>
-      <translation type="unfinished">Clears the settings and runs the application.</translation>
+      <translation>ਸੈਟਿੰਗਾਂ ਨੂੰ ਸਾਫ਼ ਕਰਦਾ ਹੈ ਅਤੇ ਐਪਲੀਕੇਸ਼ਨ ਚਲਾਉਂਦਾ ਹੈ.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="96"/>
       <source>Runs the application in a different context for settings and internal files.</source>
-      <translation type="unfinished">Runs the application in a different context for settings and internal files.</translation>
+      <translation>ਸੈਟਿੰਗਾਂ ਅਤੇ ਅੰਦਰੂਨੀ ਫਾਈਲਾਂ ਲਈ ਐਪਲੀਕੇਸ਼ਨ ਨੂੰ ਵੱਖਰੇ ਪ੍ਰਸੰਗ ਵਿੱਚ ਚਲਾਉਂਦਾ ਹੈ.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="457"/>
       <source>Single application mode is not supported on your system!</source>
-      <translation type="unfinished">Single application mode is not supported on your system!</translation>
+      <translation>ਤੁਹਾਡੇ ਸਿਸਟਮ ਤੇ ਸਿੰਗਲ ਐਪਲੀਕੇਸ਼ਨ ਮੋਡ ਸਮਰਥਿਤ ਨਹੀਂ ਹੈ!</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="466"/>
       <source>Another instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</source>
-      <translation type="unfinished">Another instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</translation>
+      <translation>QOwnNotes ਦੀ ਇੱਕ ਹੋਰ ਉਦਾਹਰਣ ਪਹਿਲਾਂ ਹੀ ਅਰੰਭ ਕੀਤੀ ਗਈ ਸੀ! ਤੁਸੀਂ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਸਿੰਗਲ ਇਨਸੈਂਸ ਮੋਡ ਨੂੰ ਬੰਦ ਕਰ ਸਕਦੇ ਹੋ ਜਾਂ ਪੈਰਾਮੀਟਰ --ਨੇਲ - ਮਲਟੀਪਲ - ਉਦਾਹਰਣਾਂ ਦੀ ਵਰਤੋਂ ਕਰ ਸਕਦੇ ਹੋ.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="498"/>
       <source>A second instance of QOwnNotes was attempted to be started!</source>
-      <translation type="unfinished">A second instance of QOwnNotes was attempted to be started!</translation>
+      <translation>QOwnNotes ਦੀ ਇੱਕ ਦੂਜੀ ਉਦਾਹਰਣ ਨੂੰ ਅਰੰਭ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕੀਤੀ ਗਈ!</translation>
     </message>
   </context>
 </TS>
