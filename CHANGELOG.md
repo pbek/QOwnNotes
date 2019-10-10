@@ -3,6 +3,10 @@
 ## 19.10.4
 - attempted to fix occasional desktop environment session logout interruptions
   (for [#1269](https://github.com/pbek/QOwnNotes/issues/1269))
+- added **Estonian translation** (a big thank you to Fabijenna)
+    - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes)
+      to make QOwnNotes available in more languages or help with the current
+      translation
 - fixed deprecation warnings of Botan library for encrypting notes
   (for [#1304](https://github.com/pbek/QOwnNotes/issues/1304))
 

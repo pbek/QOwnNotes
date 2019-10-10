@@ -2208,6 +2208,17 @@
                        </item>
                        <item>
                         <property name="text">
+                         <string notr="true">Eesti keel</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Estonian</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">et</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
                          <string notr="true">Filipino</string>
                         </property>
                         <property name="toolTip">
