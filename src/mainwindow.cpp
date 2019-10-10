@@ -5107,6 +5107,8 @@ void MainWindow::filterNotesBySearchLineEditText() {
         ui->noteTreeWidget->setColumnCount(2);
         int maxWidth = 0;
         QStringList searchTextTerms = Note::buildQueryStringList(searchText);
+        QSettings settings;
+        bool showMatches = settings.value("showMatches", true).toBool();
 
         while (*it) {
             QTreeWidgetItem *item = *it;
@@ -5117,7 +5119,7 @@ void MainWindow::filterNotesBySearchLineEditText() {
             item->setHidden(isHidden);
 
             // count occurrences of search terms in notes
-            if (!isHidden) {
+            if (!isHidden && showMatches) {
                 Note note = Note::fetch(noteId);
                 item->setForeground(1, QColor(Qt::gray));
                 int count = 0;
