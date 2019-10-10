@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 19.10.4
+- attempted to fix occasional desktop environment session logout interruptions
+  (for [#1269](https://github.com/pbek/QOwnNotes/issues/1269))
 - fixed deprecation warnings of Botan library for encrypting notes
   (for [#1304](https://github.com/pbek/QOwnNotes/issues/1304))
 

@@ -522,6 +522,10 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // attempt to check the api app version
     startAppVersionTest();
+
+    // attempt to quit the application when a logout is initiated
+    connect(qApp, SIGNAL(commitDataRequest(QSessionManager&)),
+            this, SLOT(on_action_Quit_triggered()));
 }
 
 void MainWindow::initWebSocketServerService() {
