@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 19.10.4
+- fixed deprecation warnings of Botan library for encrypting notes
+  (for [#1304](https://github.com/pbek/QOwnNotes/issues/1304))
+
 ## 19.10.3
 - fixed a Fedora 28 build problem on the Open Build Service
 - fixed several more deprecation warnings to further advance the Qt 6 compatibility
