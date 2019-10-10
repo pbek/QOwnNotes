@@ -5063,10 +5063,17 @@ git config --global user.name &quot;Your name&quot;</string>
                 <string>Note search panel</string>
                </property>
                <layout class="QGridLayout" name="gridLayout_69">
-                <item row="0" column="1" colspan="2">
+                <item row="0" column="1">
                  <widget class="QCheckBox" name="disableSavedSearchesAutoCompletionCheckBox">
                   <property name="text">
                    <string>Disable auto-completion of previous searches</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QCheckBox" name="showMatchesCheckBox">
+                  <property name="text">
+                   <string>Show the number of matches in each note</string>
                   </property>
                  </widget>
                 </item>

@@ -888,6 +888,8 @@ void SettingsDialog::storePanelSettings() {
                       ui->disableSavedSearchesAutoCompletionCheckBox
                       ->isChecked());
 
+    settings.setValue("showMatches", ui->showMatchesCheckBox->isChecked());
+
     settings.setValue("noteSubfoldersPanelShowFullPath",
                       ui->noteSubfoldersPanelShowFullPathCheckBox->isChecked());
 
@@ -1346,6 +1348,9 @@ void SettingsDialog::readPanelSettings() {
 
     ui->disableSavedSearchesAutoCompletionCheckBox->setChecked(
             settings.value("disableSavedSearchesAutoCompletion").toBool());
+
+    ui->showMatchesCheckBox->setChecked(
+            settings.value("showMatches", true).toBool());
 
     if (settings.value(
             "noteSubfoldersPanelShowRootFolderName", true).toBool()) {
