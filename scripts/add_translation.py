@@ -54,7 +54,7 @@ insert_in_file('src/debian/qownnotes.install',
              'languages/QOwnNotes_{}.qm usr/share/QOwnNotes/languages'.format(iso_qon))
 insert_in_file('CHANGELOG.md',
              '# QOwnNotes Changelog',
-             '\n- added **XXXX** (a big thank you to YYYYY)\n    - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes)\n      to make QOwnNotes available in more languages or help with the current\n      translation')
+             '\n- added **XXXX translation** (a big thank you to YYYYY)\n    - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes)\n      to make QOwnNotes available in more languages or help with the current\n      translation')
 
-print 'Translation for "{}" was added'.format(iso_qon)
+print 'Translation for "{}" was added. Don\' forget to add the translation to src/dialogs/settingsdialog.ui!'.format(iso_qon)
 sys.exit(0)
