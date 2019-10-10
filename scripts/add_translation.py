@@ -7,54 +7,54 @@ import sys
 
 
 if len(sys.argv) < 3:
-    print 'Usage: {} <isoCrowdin> <isoQON>\ne.g. {} de_AT de'.format(sys.argv[0], sys.argv[0])
+    print 'Usage: {} <iso_crowdin> <iso_qon>\ne.g. {} de_AT de'.format(sys.argv[0], sys.argv[0])
     sys.exit(1)
 
 # e.g. "he_IL"
-isoCrowdin = sys.argv[1]
+iso_crowdin = sys.argv[1]
 
 # e.g. "he"
-isoQON = sys.argv[2]
+iso_qon = sys.argv[2]
 
 
-def insertInFile( fileName, text, addText ):
+def insert_in_file(fileName, text, addText):
     with open(fileName) as f:
-        newText=f.read()
-        if text not in newText:
+        new_text=f.read()
+        if text not in new_text:
             print '"{}" was not found in file "{}"!'.format(text, fileName)
             return
-        newText = newText.replace(text, text + "\n" + addText)
+        new_text = new_text.replace(text, text + "\n" + addText)
 
     with open(fileName, "w") as f:
-        f.write(newText) 
+        f.write(new_text)
 
     return
 
 
-insertInFile('crowdin.yaml',
+insert_in_file('crowdin.yaml',
              '"he_IL" : "he",',
-             '        "{}" : "{}",'.format(isoCrowdin, isoQON))
-insertInFile('scripts/download_translations.sh',
+             '        "{}" : "{}",'.format(iso_crowdin, iso_qon))
+insert_in_file('scripts/download_translations.sh',
              'mv QOwnNotes_he_IL.ts QOwnNotes_he.ts',
-             'mv QOwnNotes_{}.ts QOwnNotes_{}.ts'.format(isoCrowdin, isoQON))
-insertInFile('obs/qownnotes.spec',
+             'mv QOwnNotes_{}.ts QOwnNotes_{}.ts'.format(iso_crowdin, iso_qon))
+insert_in_file('obs/qownnotes.spec',
              'install -D -m 0644 languages/QOwnNotes_he.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_he.qm',
-             'install -D -m 0644 languages/QOwnNotes_{}.qm $RPM_BUILD_ROOT/%{{_datadir}}/QOwnNotes/languages/QOwnNotes_{}.qm'.format(isoQON, isoQON))
-insertInFile('obs/qownnotes.spec',
+             'install -D -m 0644 languages/QOwnNotes_{}.qm $RPM_BUILD_ROOT/%{{_datadir}}/QOwnNotes/languages/QOwnNotes_{}.qm'.format(iso_qon, iso_qon))
+insert_in_file('obs/qownnotes.spec',
              '%{_datadir}/QOwnNotes/languages/QOwnNotes_he.qm',
-             '%{{_datadir}}/QOwnNotes/languages/QOwnNotes_{}.qm'.format(isoQON))
-insertInFile('src/CMakeLists.txt',
+             '%{{_datadir}}/QOwnNotes/languages/QOwnNotes_{}.qm'.format(iso_qon))
+insert_in_file('src/CMakeLists.txt',
              '    languages/QOwnNotes_he.ts',
-             '    languages/QOwnNotes_{}.ts'.format(isoQON))
-insertInFile('src/QOwnNotes.pro',
+             '    languages/QOwnNotes_{}.ts'.format(iso_qon))
+insert_in_file('src/QOwnNotes.pro',
              '    languages/QOwnNotes_he.ts \\',
-             '    languages/QOwnNotes_{}.ts \\'.format(isoQON))
-insertInFile('src/debian/qownnotes.install',
+             '    languages/QOwnNotes_{}.ts \\'.format(iso_qon))
+insert_in_file('src/debian/qownnotes.install',
              'languages/QOwnNotes_he.qm usr/share/QOwnNotes/languages',
-             'languages/QOwnNotes_{}.qm usr/share/QOwnNotes/languages'.format(isoQON))
-insertInFile('CHANGELOG.md',
+             'languages/QOwnNotes_{}.qm usr/share/QOwnNotes/languages'.format(iso_qon))
+insert_in_file('CHANGELOG.md',
              '# QOwnNotes Changelog',
              '\n- added **XXXX** (a big thank you to YYYYY)\n    - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes)\n      to make QOwnNotes available in more languages or help with the current\n      translation')
 
-print 'Translation for "{}" was added'.format(isoQON)
+print 'Translation for "{}" was added'.format(iso_qon)
 sys.exit(0)
