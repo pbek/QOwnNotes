@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 19.10.5
+- a setting to disable the search result count calculation was added to improve search speed
+  in note folders with a lot of notes (for [#1248](https://github.com/pbek/QOwnNotes/issues/1248), thank you @smokris)
+
 ## 19.10.4
 - attempted to fix occasional desktop environment session logout interruptions
   (for [#1269](https://github.com/pbek/QOwnNotes/issues/1269))
