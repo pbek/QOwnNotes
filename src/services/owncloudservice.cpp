@@ -998,13 +998,14 @@ void OwnCloudService::addCalendarAuthHeader(QNetworkRequest *r) {
 /**
  * Checks if ownCloud settings are set
  */
-bool OwnCloudService::hasOwnCloudSettings(bool withEnabledCheck) {
+bool OwnCloudService::hasOwnCloudSettings(bool withEnabledCheck, bool ignoreTableWarning) {
     if (withEnabledCheck && !isOwnCloudSupportEnabled()) {
         return false;
     }
 
     QSettings settings;
-    CloudConnection cloudConnection = CloudConnection::currentCloudConnection();
+    CloudConnection cloudConnection = CloudConnection::currentCloudConnection(
+            ignoreTableWarning);
 
     QString serverUrl = cloudConnection.getServerUrl();
     QString userName = cloudConnection.getUsername();

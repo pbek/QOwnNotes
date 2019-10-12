@@ -10,7 +10,7 @@ public:
     int getId();
     static bool create(QString name, QString serverUrl,
                        QString username, QString password);
-    static CloudConnection fetch(int id);
+    static CloudConnection fetch(int id, bool ignoreTableWarning = false);
     static CloudConnection cloudConnectionFromQuery(const QSqlQuery& query);
     bool store();
     friend QDebug operator<<(QDebug dbg, const CloudConnection &CloudConnection);
@@ -32,7 +32,7 @@ public:
     static int countAll();
     static bool migrateToCloudConnections();
     bool isCurrent();
-    static CloudConnection currentCloudConnection();
+    static CloudConnection currentCloudConnection(bool ignoreTableWarning = false);
     static CloudConnection firstCloudConnection();
     static CloudConnection currentTodoCalendarCloudConnection();
     QString getServerUrlPath();

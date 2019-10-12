@@ -62,7 +62,7 @@ public:
 
     void settingsGetFileList(SettingsDialog *dialog, QString path);
 
-    static bool hasOwnCloudSettings(bool withEnabledCheck = true);
+    static bool hasOwnCloudSettings(bool withEnabledCheck = true, bool ignoreTableWarning = false);
 
     void shareNote(Note note, ShareDialog *dialog);
 

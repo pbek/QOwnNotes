@@ -570,7 +570,7 @@ bool DatabaseService::setupTables() {
 
     if (version < 19) {
         // set the ownCloud support enabled setting
-        bool ownCloudEnabled = OwnCloudService::hasOwnCloudSettings(false);
+        bool ownCloudEnabled = OwnCloudService::hasOwnCloudSettings(false, true);
         settings.setValue("ownCloud/supportEnabled", ownCloudEnabled);
 
         version = 19;

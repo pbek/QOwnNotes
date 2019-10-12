@@ -67,11 +67,11 @@ CloudConnection CloudConnection::firstCloudConnection() {
     return list.count() > 0 ? list[0] : CloudConnection();
 }
 
-CloudConnection CloudConnection::currentCloudConnection() {
+CloudConnection CloudConnection::currentCloudConnection(bool ignoreTableWarning) {
     NoteFolder noteFolder = NoteFolder::currentNoteFolder();
     const int id = noteFolder.getCloudConnectionId();
 
-    return CloudConnection::fetch(id);
+    return CloudConnection::fetch(id, ignoreTableWarning);
 }
 
 CloudConnection CloudConnection::currentTodoCalendarCloudConnection() {
@@ -117,7 +117,7 @@ bool CloudConnection::create(QString name, QString serverUrl,
     return query.exec();
 }
 
-CloudConnection CloudConnection::fetch(int id) {
+CloudConnection CloudConnection::fetch(int id, bool ignoreTableWarning) {
     QSqlDatabase db = QSqlDatabase::database("disk");
     QSqlQuery query(db);
 
@@ -127,7 +127,9 @@ CloudConnection CloudConnection::fetch(int id) {
     query.bindValue(":id", id);
 
     if (!query.exec()) {
-        qWarning() << __func__ << ": " << query.lastError();
+        if (!ignoreTableWarning) {
+            qWarning() << __func__ << ": " << query.lastError();
+        }
     } else if (query.first()) {
         cloudConnection.fillFromQuery(query);
     }
