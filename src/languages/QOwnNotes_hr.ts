@@ -1108,7 +1108,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="680"/>
-        <location filename="../mainwindow.cpp" line="7813"/>
+        <location filename="../mainwindow.cpp" line="7815"/>
         <source>Add a tag to the current note</source>
         <translation>Dodajte oznaku trenutnoj bilješci</translation>
     </message>
@@ -1224,13 +1224,13 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1405"/>
-        <location filename="../mainwindow.cpp" line="9357"/>
+        <location filename="../mainwindow.cpp" line="9359"/>
         <source>Select &amp;all notes</source>
         <translation>Izaberi &amp;sve bilješke</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1414"/>
-        <location filename="../mainwindow.cpp" line="5897"/>
+        <location filename="../mainwindow.cpp" line="5899"/>
         <source>Insert &amp;link</source>
         <translation>Umetni &amp;poveznicu</translation>
     </message>
@@ -1285,7 +1285,7 @@
         <translation>Nađi ili stvori bilješku</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7814"/>
+        <location filename="../mainwindow.cpp" line="7816"/>
         <source>Add a tag to the selected notes</source>
         <translation>Dodajte oznaku odabranim bilješkama</translation>
     </message>
@@ -1296,7 +1296,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="869"/>
-        <location filename="../mainwindow.cpp" line="5944"/>
+        <location filename="../mainwindow.cpp" line="5946"/>
         <source>Export</source>
         <translation>Eksport</translation>
     </message>
@@ -1307,7 +1307,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="907"/>
-        <location filename="../mainwindow.cpp" line="5926"/>
+        <location filename="../mainwindow.cpp" line="5928"/>
         <source>Print</source>
         <translation>Ispis</translation>
     </message>
@@ -1670,7 +1670,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2204"/>
-        <location filename="../mainwindow.cpp" line="10357"/>
+        <location filename="../mainwindow.cpp" line="10359"/>
         <source>Remove current workspace</source>
         <translation>Ukloni izabrani radni prostor</translation>
     </message>
@@ -1712,7 +1712,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2278"/>
-        <location filename="../mainwindow.cpp" line="5904"/>
+        <location filename="../mainwindow.cpp" line="5906"/>
         <source>Insert block &amp;quote</source>
         <translation>Umetni &amp;citat blok</translation>
     </message>
@@ -1739,7 +1739,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2325"/>
-        <location filename="../mainwindow.cpp" line="9332"/>
+        <location filename="../mainwindow.cpp" line="9334"/>
         <source>Open note in different window</source>
         <translation>Otvori bilješku u drugom prozoru</translation>
     </message>
@@ -1760,7 +1760,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2365"/>
-        <location filename="../mainwindow.cpp" line="9340"/>
+        <location filename="../mainwindow.cpp" line="9342"/>
         <source>Show note git versions</source>
         <translation>Prikaži git verzije bilješke</translation>
     </message>
@@ -1973,8 +1973,8 @@ Restore current note?</source>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4934"/>
-        <location filename="../mainwindow.cpp" line="6362"/>
-        <location filename="../mainwindow.cpp" line="9419"/>
+        <location filename="../mainwindow.cpp" line="6364"/>
+        <location filename="../mainwindow.cpp" line="9421"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Odustani</translation>
     </message>
@@ -2083,7 +2083,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4127"/>
-        <location filename="../mainwindow.cpp" line="9584"/>
+        <location filename="../mainwindow.cpp" line="9586"/>
         <source>Remove selected folders</source>
         <translation>Izbriši odabrane mape</translation>
     </message>
@@ -2117,7 +2117,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4213"/>
-        <location filename="../mainwindow.cpp" line="8531"/>
+        <location filename="../mainwindow.cpp" line="8533"/>
         <source>Move selected notes</source>
         <translation>Premjesti odabrane bilješke</translation>
     </message>
@@ -2132,7 +2132,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4306"/>
-        <location filename="../mainwindow.cpp" line="8629"/>
+        <location filename="../mainwindow.cpp" line="8631"/>
         <source>Copy selected notes</source>
         <translation>Kopiraj odabrane bilješke</translation>
     </message>
@@ -2200,7 +2200,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>PDF datoteke</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="5134"/>
+        <location filename="../mainwindow.cpp" line="5136"/>
         <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
         <translation>
             <numerusform>Pronađeno je &lt;strong&gt;%n&lt;/strong&gt; pojava bilo kojeg pojma &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
@@ -2209,94 +2209,94 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5597"/>
+        <location filename="../mainwindow.cpp" line="5599"/>
         <source>Note was not found</source>
         <translation>Napomena nije pronađena</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5598"/>
+        <location filename="../mainwindow.cpp" line="5600"/>
         <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
         <translation>Napomena nije pronađena, izradite novu napomenu &lt;strong&gt; %1 &lt;/strong&gt;?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5833"/>
+        <location filename="../mainwindow.cpp" line="5835"/>
         <source>Note versions are currently loaded from your ownCloud server</source>
         <translation>Verzije bilješki se trenutno učitavaju s poslužitelja ownCloud</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5848"/>
+        <location filename="../mainwindow.cpp" line="5850"/>
         <source>Trashed notes are currently loaded from your ownCloud server</source>
         <translation>Izbrisane bilješke trenutno se učitavaju s poslužitelja ownCloud</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5914"/>
+        <location filename="../mainwindow.cpp" line="5916"/>
         <source>Copy code block</source>
         <translation>Kopiraj blok koda</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5933"/>
+        <location filename="../mainwindow.cpp" line="5935"/>
         <source>Print selected text</source>
         <translation>Ispis odabranog teksta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5939"/>
+        <location filename="../mainwindow.cpp" line="5941"/>
         <source>Print selected text (preview)</source>
         <translation>Ispis odabranog teksta (pregled)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5955"/>
+        <location filename="../mainwindow.cpp" line="5957"/>
         <source>Export selected text as PDF</source>
         <translation>Izvezi odabrani tekst kao PDF</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5961"/>
+        <location filename="../mainwindow.cpp" line="5963"/>
         <source>Export selected text as PDF (preview)</source>
         <translation>Izvezi odabrani tekst kao PDF (pregled)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6358"/>
+        <location filename="../mainwindow.cpp" line="6360"/>
         <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
         <translation>Bilješka će biti dešifrirana i pohranjena kao otvoreni tekst. Imaj na umu da će tako dešifrirana vjerojatno biti sinkronizirana na poslužitelju i vrlo vjerojatno izložena drugima!&lt;br /&gt;Stvarno dešifrirati bilješku?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6451"/>
+        <location filename="../mainwindow.cpp" line="6453"/>
         <source>Markdown files</source>
         <translation>Datoteke oznaka</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6506"/>
+        <location filename="../mainwindow.cpp" line="6508"/>
         <source>Bookmarked note position at slot %1</source>
         <translation>Bilješka označena na mjestu %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6522"/>
+        <location filename="../mainwindow.cpp" line="6524"/>
         <source>Jumped to bookmark position at slot %1</source>
         <translation>Skok na oznaku na mjestu %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6742"/>
-        <location filename="../mainwindow.cpp" line="6812"/>
+        <location filename="../mainwindow.cpp" line="6744"/>
+        <location filename="../mainwindow.cpp" line="6814"/>
         <source>Inserting image</source>
         <translation>Umetanje slike</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6747"/>
-        <location filename="../mainwindow.cpp" line="6816"/>
+        <location filename="../mainwindow.cpp" line="6749"/>
+        <location filename="../mainwindow.cpp" line="6818"/>
         <source>Done inserting image</source>
         <translation>Umetanje slike završeno</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6749"/>
+        <location filename="../mainwindow.cpp" line="6751"/>
         <source>Inserting attachment</source>
         <translation>Umetanje privitka</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6754"/>
+        <location filename="../mainwindow.cpp" line="6756"/>
         <source>Done inserting attachment</source>
         <translation>Umetanje privitka završeno</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6766"/>
+        <location filename="../mainwindow.cpp" line="6768"/>
         <source>Copied %n note(s) to %1</source>
         <translation>
             <numerusform>Kopiraj %n bilješku na %1</numerusform>
@@ -2305,7 +2305,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6775"/>
+        <location filename="../mainwindow.cpp" line="6777"/>
         <source>Failed to copy %n note(s) (most likely already existing)</source>
         <translation>
             <numerusform>Neuspjelo kopiranje %n bilješke (vjerojatno već postoji)</numerusform>
@@ -2314,7 +2314,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6785"/>
+        <location filename="../mainwindow.cpp" line="6787"/>
         <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
         <translation>
             <numerusform>Izostavljeno kopiranje %n bilješke (nema oznaku ili je tekst datoteke nečitak)</numerusform>
@@ -2323,178 +2323,178 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6799"/>
+        <location filename="../mainwindow.cpp" line="6801"/>
         <source>Saving temporary image</source>
         <translation>Spremanje privremene slike</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6819"/>
+        <location filename="../mainwindow.cpp" line="6821"/>
         <source>Temporary file can&apos;t be opened</source>
         <translation>Privremenu datoteku nije moguće otvoriti</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6860"/>
+        <location filename="../mainwindow.cpp" line="6862"/>
         <source>Downloading %1</source>
         <translation>Skidanje %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7041"/>
+        <location filename="../mainwindow.cpp" line="7043"/>
         <source>Reset font size to %1 pt</source>
         <comment>Will be shown after the font size is reset by &apos;Reset note text size&apos;</comment>
         <translation>Vrati veličinu fonta na %1 pt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7859"/>
+        <location filename="../mainwindow.cpp" line="7861"/>
         <source>Remove tag &apos;%1&apos; from the current note</source>
         <translation>Ukloni oznaku &quot;%1&quot; iz trenutačne bilješke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7861"/>
+        <location filename="../mainwindow.cpp" line="7863"/>
         <source>Remove tag &apos;%1&apos; from the selected notes</source>
         <translation>Uklonite oznaku &quot;%1&quot; iz odabranih bilješki</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8064"/>
+        <location filename="../mainwindow.cpp" line="8066"/>
         <source>Rename tag</source>
         <translation>Preimenuj oznaku</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8065"/>
+        <location filename="../mainwindow.cpp" line="8067"/>
         <source>Assign color</source>
         <translation>Odredi boju</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8066"/>
+        <location filename="../mainwindow.cpp" line="8068"/>
         <source>Disable color</source>
         <translation>Isključi boju</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8070"/>
+        <location filename="../mainwindow.cpp" line="8072"/>
         <source>&amp;Move tags to…</source>
         <translation>&amp;Premjesti oznake za…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8285"/>
+        <location filename="../mainwindow.cpp" line="8287"/>
         <source>Move to the root</source>
         <comment>to move a tag to the current tag in the tag context menu</comment>
         <translation>Premjesti u korijen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8781"/>
+        <location filename="../mainwindow.cpp" line="8783"/>
         <source>An url was opened at the current cursor position</source>
         <translation>Url je otvoren na trenutnoj poziciji pokazivača</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8882"/>
+        <location filename="../mainwindow.cpp" line="8884"/>
         <source>No equation was found in front of the cursor</source>
         <translation>Jednadžba nije pronađena ispred pokazivča</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8899"/>
+        <location filename="../mainwindow.cpp" line="8901"/>
         <source>Result for equation: %1 = %2</source>
         <translation>Rezultat jednadžbe: %1 = %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9000"/>
+        <location filename="../mainwindow.cpp" line="9002"/>
         <source>The scripting engine was reloaded</source>
         <translation>Mehanizam skriptiranja je ponovno učitan</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9036"/>
+        <location filename="../mainwindow.cpp" line="9038"/>
         <source>HTML files</source>
         <translation>HTML datoteke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9228"/>
-        <location filename="../mainwindow.cpp" line="9402"/>
+        <location filename="../mainwindow.cpp" line="9230"/>
+        <location filename="../mainwindow.cpp" line="9404"/>
         <source>Rename note</source>
         <translation>Preimenuj bilješku</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9229"/>
+        <location filename="../mainwindow.cpp" line="9231"/>
         <source>Allows you to rename the filename of the note</source>
         <translation>Omogućuje vam preimenovanje imena bilješke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9241"/>
+        <location filename="../mainwindow.cpp" line="9243"/>
         <source>&amp;Move notes to…</source>
         <translation>&amp;Premjesti bilješke…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9242"/>
+        <location filename="../mainwindow.cpp" line="9244"/>
         <source>&amp;Copy notes to…</source>
         <translation>&amp;Kopiraj bilješke u…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9277"/>
+        <location filename="../mainwindow.cpp" line="9279"/>
         <source>Move notes to subfolder…</source>
         <translation>Premjesti bilješke u podmapu…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9281"/>
+        <location filename="../mainwindow.cpp" line="9283"/>
         <source>Copy notes to subfolder…</source>
         <translation>Kopiraj bilješke u podmapu…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9289"/>
+        <location filename="../mainwindow.cpp" line="9291"/>
         <source>&amp;Tag selected notes with…</source>
         <translation>&amp;Označi odabrane bilješke s…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9311"/>
+        <location filename="../mainwindow.cpp" line="9313"/>
         <source>&amp;Remove tag from selected notes…</source>
         <translation>&amp;Ukloni oznaku s odabranih bilješki…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9402"/>
+        <location filename="../mainwindow.cpp" line="9404"/>
         <source>Name:</source>
         <translation>Ime:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9414"/>
+        <location filename="../mainwindow.cpp" line="9416"/>
         <source>Note renaming not enabled!</source>
         <translation>Promjena naziva bilješki nije aktivirana!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9583"/>
+        <location filename="../mainwindow.cpp" line="9585"/>
         <source>Rename subfolder</source>
         <translation>Preimenuj podmapu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10137"/>
+        <location filename="../mainwindow.cpp" line="10139"/>
         <source>Create new workspace</source>
         <translation>Stvori novu radnu površinu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10137"/>
-        <location filename="../mainwindow.cpp" line="10395"/>
+        <location filename="../mainwindow.cpp" line="10139"/>
+        <location filename="../mainwindow.cpp" line="10397"/>
         <source>Workspace name:</source>
         <translation>Naziv radne površine:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10259"/>
+        <location filename="../mainwindow.cpp" line="10261"/>
         <source>full</source>
         <comment>full workspace</comment>
         <translation>potpuna</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10266"/>
+        <location filename="../mainwindow.cpp" line="10268"/>
         <source>minimal</source>
         <comment>minimal workspace</comment>
         <translation>minimalna</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10358"/>
+        <location filename="../mainwindow.cpp" line="10360"/>
         <source>Remove the current workspace?</source>
         <translation>Obrisati trenutnu radnu površinu?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10395"/>
+        <location filename="../mainwindow.cpp" line="10397"/>
         <source>Rename workspace</source>
         <translation>Preimenuj radnu površinu</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="10530"/>
+        <location filename="../mainwindow.cpp" line="10532"/>
         <source>%n chars</source>
         <comment>characters</comment>
         <translation>
@@ -2504,32 +2504,32 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10797"/>
+        <location filename="../mainwindow.cpp" line="10799"/>
         <source>Disallow all note editing</source>
         <translation>Onemogući sve uređivanje bilješki</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10943"/>
+        <location filename="../mainwindow.cpp" line="10945"/>
         <source>Select text files to import</source>
         <translation>Odaberite tekstualne datoteke za uvoz</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10972"/>
+        <location filename="../mainwindow.cpp" line="10974"/>
         <source>Importing: %1</source>
         <translation>Uvoz: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="11035"/>
+        <location filename="../mainwindow.cpp" line="11037"/>
         <source>Note headline &apos;%1&apos; was copied to the clipboard</source>
         <translation>Bilješka naslov &quot;%1&quot; kopiran je u međuspremnik</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="11122"/>
+        <location filename="../mainwindow.cpp" line="11124"/>
         <source>Leave full-screen mode</source>
         <translation>Napustite način rada preko cijelog zaslona</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="7832"/>
+        <location filename="../mainwindow.cpp" line="7834"/>
         <source>%n notes selected</source>
         <translation>
             <numerusform>Odabrana je %n nota</numerusform>
@@ -2539,7 +2539,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2410"/>
-        <location filename="../mainwindow.cpp" line="10798"/>
+        <location filename="../mainwindow.cpp" line="10800"/>
         <source>Allow all note editing</source>
         <translation>Dopusti uređivanje svih bilješki</translation>
     </message>
@@ -2622,81 +2622,81 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>Niste odabrali ni jednu listu zadataka.&lt;br /&gt;Molimo provjeri konfiguraciju &lt;strong&gt;Zadataka&lt;/strong&gt; u postavkama!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5732"/>
+        <location filename="../mainwindow.cpp" line="5734"/>
         <source>Open QOwnNotes</source>
         <translation>Otvori QOwnNotes</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5437"/>
-        <location filename="../mainwindow.cpp" line="5741"/>
-        <location filename="../mainwindow.cpp" line="9223"/>
-        <location filename="../mainwindow.cpp" line="9581"/>
+        <location filename="../mainwindow.cpp" line="5439"/>
+        <location filename="../mainwindow.cpp" line="5743"/>
+        <location filename="../mainwindow.cpp" line="9225"/>
+        <location filename="../mainwindow.cpp" line="9583"/>
         <source>New note</source>
         <translation>Nova bilješka</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5757"/>
+        <location filename="../mainwindow.cpp" line="5759"/>
         <source>Recent notes</source>
         <translation>Nedavne bilješke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5777"/>
+        <location filename="../mainwindow.cpp" line="5779"/>
         <source>Show todo lists</source>
         <translation>Prikaži listu zadataka</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5788"/>
+        <location filename="../mainwindow.cpp" line="5790"/>
         <source>Recent tasks</source>
         <translation>Nedavni zadatci</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5809"/>
+        <location filename="../mainwindow.cpp" line="5811"/>
         <source>Quit</source>
         <translation>Završi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7195"/>
+        <location filename="../mainwindow.cpp" line="7197"/>
         <source>show notes from all note subfolders (%1)</source>
         <translation>pokaži bilješke iz svih podmapa bilješki (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7214"/>
+        <location filename="../mainwindow.cpp" line="7216"/>
         <source>show notes in note root folder (%1)</source>
         <translation>pokaži bilješke iz korijenske mape (%1)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="316"/>
         <location filename="../mainwindow.cpp" line="696"/>
-        <location filename="../mainwindow.cpp" line="7222"/>
+        <location filename="../mainwindow.cpp" line="7224"/>
         <source>Note folder</source>
         <translation>Mapa bilješki</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8418"/>
-        <location filename="../mainwindow.cpp" line="8479"/>
+        <location filename="../mainwindow.cpp" line="8420"/>
+        <location filename="../mainwindow.cpp" line="8481"/>
         <source>Copy to note folder</source>
         <translation>Kopiraj u mapu bilješke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8419"/>
-        <location filename="../mainwindow.cpp" line="8480"/>
+        <location filename="../mainwindow.cpp" line="8421"/>
+        <location filename="../mainwindow.cpp" line="8482"/>
         <source>Move to note folder</source>
         <translation>Premjesti u mapu bilješke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8420"/>
-        <location filename="../mainwindow.cpp" line="8481"/>
+        <location filename="../mainwindow.cpp" line="8422"/>
+        <location filename="../mainwindow.cpp" line="8483"/>
         <source>Copy to this subfolder</source>
         <translation>Kopiraj u ovu podmapu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8421"/>
-        <location filename="../mainwindow.cpp" line="8482"/>
+        <location filename="../mainwindow.cpp" line="8423"/>
+        <location filename="../mainwindow.cpp" line="8484"/>
         <source>Move to this subfolder</source>
         <translation>Premjesti u ovu podmapu</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="8525"/>
+        <location filename="../mainwindow.cpp" line="8527"/>
         <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>Premjestiti %n odabranu bilješku u &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -2706,12 +2706,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4620"/>
-        <location filename="../mainwindow.cpp" line="10957"/>
+        <location filename="../mainwindow.cpp" line="10959"/>
         <source>Cancel</source>
         <translation>Odustani</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="8602"/>
+        <location filename="../mainwindow.cpp" line="8604"/>
         <source>%n note(s) were moved to note subfolder &quot;%2&quot;</source>
         <translation>
             <numerusform>%n bilješka preseljena u podmapu &quot;%2&quot;</numerusform>
@@ -2720,7 +2720,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="8623"/>
+        <location filename="../mainwindow.cpp" line="8625"/>
         <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>Kopiraj %n odabranu bilješku u podmapu &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -2729,7 +2729,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="8684"/>
+        <location filename="../mainwindow.cpp" line="8686"/>
         <source>%n note(s) were copied to note subfolder &quot;%2&quot;</source>
         <translation>
             <numerusform>%n bilješka kopirana u podmapu &quot;%2&quot;</numerusform>
@@ -2738,52 +2738,52 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9330"/>
+        <location filename="../mainwindow.cpp" line="9332"/>
         <source>Open note in external editor</source>
         <translation>Otvori bilješku u vanjskom uredniku</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9334"/>
+        <location filename="../mainwindow.cpp" line="9336"/>
         <source>Show note in file manager</source>
         <translation>Prikaži bilješku u upravljaču datoteka</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9415"/>
+        <location filename="../mainwindow.cpp" line="9417"/>
         <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
         <translation>Ako želite preimenovati bilješku morate aktivirati opciju koja omogućuje da se ime datoteke i naslov razlikuju.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9582"/>
+        <location filename="../mainwindow.cpp" line="9584"/>
         <source>New subfolder</source>
         <translation>Nova podmapa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9586"/>
+        <location filename="../mainwindow.cpp" line="9588"/>
         <source>Show folder in file manager</source>
         <translation>Prikaži mapu u upravljaču datoteka</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9622"/>
+        <location filename="../mainwindow.cpp" line="9624"/>
         <source>Create a new folder</source>
         <translation>Stvori novu mapu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9622"/>
+        <location filename="../mainwindow.cpp" line="9624"/>
         <source>Folder name:</source>
         <translation>Naziv mape:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7153"/>
+        <location filename="../mainwindow.cpp" line="7155"/>
         <source>show all untagged notes (%1)</source>
         <translation>pokaži sve nestrukturirane bilješke (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7156"/>
+        <location filename="../mainwindow.cpp" line="7158"/>
         <source>Untagged notes</source>
         <translation>Nestrukturirane bilješke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9037"/>
+        <location filename="../mainwindow.cpp" line="9039"/>
         <source>Export current note as HTML file</source>
         <translation>Eksportiraj izabranu bilješku kao HTML datoteku</translation>
     </message>
@@ -2813,12 +2813,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>&amp;U redu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9233"/>
+        <location filename="../mainwindow.cpp" line="9235"/>
         <source>&amp;Remove notes</source>
         <translation>&amp;Izbriši bilješke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5897"/>
+        <location filename="../mainwindow.cpp" line="5899"/>
         <source>&amp;Link selected text</source>
         <translation>&amp;Poveži odabrani tekst</translation>
     </message>
@@ -2834,7 +2834,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2580"/>
-        <location filename="../mainwindow.cpp" line="5375"/>
+        <location filename="../mainwindow.cpp" line="5377"/>
         <source>Stored current note to disk</source>
         <translation>Izabrana bilješka spremljena na disk</translation>
     </message>
@@ -2858,53 +2858,53 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7125"/>
+        <location filename="../mainwindow.cpp" line="7127"/>
         <source>show all notes (%1)</source>
         <translation>prikaži sve bilješke (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7128"/>
-        <location filename="../mainwindow.cpp" line="7198"/>
+        <location filename="../mainwindow.cpp" line="7130"/>
+        <location filename="../mainwindow.cpp" line="7200"/>
         <source>All notes</source>
         <translation>Sve bilješke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8056"/>
+        <location filename="../mainwindow.cpp" line="8058"/>
         <source>&amp;Add tag</source>
         <translation>&amp;Dodaj oznaku</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8105"/>
+        <location filename="../mainwindow.cpp" line="8107"/>
         <source>Tag could not be created!</source>
         <translation>Oznaka ne može biti stvorena!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8286"/>
+        <location filename="../mainwindow.cpp" line="8288"/>
         <source>Move to this tag</source>
         <translation>Premjesti u ovu oznaku</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8323"/>
+        <location filename="../mainwindow.cpp" line="8325"/>
         <source>Tag this</source>
         <translation>Označi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8347"/>
+        <location filename="../mainwindow.cpp" line="8349"/>
         <source>Cannot move tag &apos;%1&apos; to this tag</source>
         <translation>Ne možete premjestiti oznaku &apos;%1&apos; u ovu oznaku</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8363"/>
+        <location filename="../mainwindow.cpp" line="8365"/>
         <source>Moved tag &apos;%1&apos; to new tag</source>
         <translation>Oznaka &apos;%1&apos; pomaknuta u novu oznaku</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7384"/>
+        <location filename="../mainwindow.cpp" line="7386"/>
         <source>show all notes tagged with &apos;%1&apos; (%2)</source>
         <translation>pokaži sve bilješke označene sa &apos;%1&apos; (%2)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8067"/>
+        <location filename="../mainwindow.cpp" line="8069"/>
         <source>&amp;Remove tags</source>
         <translation>&amp;Ukloni oznake</translation>
     </message>
@@ -3035,7 +3035,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2581"/>
-        <location filename="../mainwindow.cpp" line="5376"/>
+        <location filename="../mainwindow.cpp" line="5378"/>
         <source>Current note could not be stored to disk</source>
         <translation>Trenutna bilješka nije mogla biti spremljena na disk</translation>
     </message>
@@ -3078,7 +3078,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="5133"/>
+        <location filename="../mainwindow.cpp" line="5135"/>
         <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
         <translation>
             <numerusform>Pronađeno je &lt;strong&gt;%n&lt;/strong&gt; pojava &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
@@ -3087,66 +3087,66 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5437"/>
+        <location filename="../mainwindow.cpp" line="5439"/>
         <source>Note headline</source>
         <translation>Naslov bilješke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5903"/>
+        <location filename="../mainwindow.cpp" line="5905"/>
         <source>Block &amp;quote selected text</source>
         <comment>Action to apply a block quote formatting to the selected text</comment>
         <translation>Blokiraj &amp;citiranje odabranog teksta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6872"/>
+        <location filename="../mainwindow.cpp" line="6874"/>
         <source>Downloading images finished</source>
         <translation>Preuzimanje slika završeno</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7014"/>
+        <location filename="../mainwindow.cpp" line="7016"/>
         <source>Increased font size to %1 pt</source>
         <translation>Veličina fonta povećana za %1 pt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7031"/>
+        <location filename="../mainwindow.cpp" line="7033"/>
         <source>Decreased font size to %1 pt</source>
         <translation>Veličina fonta smanjena za %1 pt</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4907"/>
         <location filename="../mainwindow.cpp" line="4933"/>
-        <location filename="../mainwindow.cpp" line="9418"/>
+        <location filename="../mainwindow.cpp" line="9420"/>
         <source>Open &amp;settings</source>
         <translation>Otvori &amp;postavke</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1531"/>
-        <location filename="../mainwindow.cpp" line="11110"/>
+        <location filename="../mainwindow.cpp" line="11112"/>
         <source>leave</source>
         <translation>ostavi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6301"/>
+        <location filename="../mainwindow.cpp" line="6303"/>
         <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
         <translation>Unesi &lt;strong&gt;zaporku&lt;/strong&gt; za šifriranje bilješke. &lt;br /&gt;&lt;strong&gt;Zapamti&lt;/strong&gt; zaporku za čitanje sadržaja poruke.&lt;br /&gt;Šifrirana poruka može biti dešifrirana &lt;strong&gt;isključivo u QOwnNotes&lt;/strong&gt;!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6357"/>
+        <location filename="../mainwindow.cpp" line="6359"/>
         <source>Decrypt note and store it as plain text</source>
         <translation>Dešifriraj bilješku i spremi kao otvoren tekst</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6362"/>
+        <location filename="../mainwindow.cpp" line="6364"/>
         <source>&amp;Decrypt</source>
         <translation>&amp;Dešifriraj</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6388"/>
+        <location filename="../mainwindow.cpp" line="6390"/>
         <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
         <translation>&lt;br /&gt;Biti ćete u mogućnosti urediti šifriranu bilješku.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6452"/>
+        <location filename="../mainwindow.cpp" line="6454"/>
         <source>Export current note as Markdown file</source>
         <translation>Eksportiraj izabranu bilješku kao datoteku oznake</translation>
     </message>
@@ -3581,7 +3581,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>Naredba &lt;code&gt;%1&lt;/code&gt; nije uspjela!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3875"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3880"/>
         <source>New connection</source>
         <translation>Nova veza</translation>
     </message>
@@ -4439,7 +4439,7 @@ Do you want to install it anyway?</source>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="3597"/>
         <location filename="../dialogs/settingsdialog.ui" line="4904"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5405"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5412"/>
         <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
         <translation>Možda ćete se suočiti s poteškoćama pri sinkronizaciji sa starijim verzijama sinkronizacije ownCloud kada idete daleko ispod 10 sekundi.
@@ -4462,8 +4462,8 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="4019"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1984"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1993"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1989"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1998"/>
         <source>Database</source>
         <translation>Baza podataka</translation>
     </message>
@@ -4484,7 +4484,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="3974"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="2053"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2058"/>
         <source>Clear app data and exit</source>
         <translation>Brisanje podataka aplikacije i izlaz</translation>
     </message>
@@ -5017,20 +5017,20 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="3803"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3628"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3633"/>
         <source>Reset message boxes</source>
         <translation>Poništite okvire poruka</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="3996"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3694"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3717"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3699"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3722"/>
         <source>Import settings</source>
         <translation>Uvezi postavke</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="4003"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3660"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3665"/>
         <source>Export settings</source>
         <translation>Izvezi postavke</translation>
     </message>
@@ -5085,92 +5085,97 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
         <translation>Onemogući treptanje kursora</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5224"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5076"/>
+        <source>Show the number of matches in each note</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="5231"/>
         <source>Ignored sub-folders</source>
         <translation>Zanemarene podmape</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5240"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5247"/>
         <source>Reset ignored sub-folders</source>
         <translation>Poništavanje ignoriranih podmapa</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5260"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5267"/>
         <source>Note list panel</source>
         <translation>Panel popisa bilješki</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5332"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5339"/>
         <source>Show notes in the note list with preview</source>
         <translation>Prikažite bilješke na popisu bilješki uz pregled</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5567"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5574"/>
         <source>Bookmarks</source>
         <translation>Oznake</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5573"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5580"/>
         <source>Notes with this tag will be used for fetching bookmarks</source>
         <translation>Napomene s ovom oznakom koristit će se za dohvaćanje oznaka</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5576"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5583"/>
         <source>Tag name for bookmarks notes</source>
         <translation>Naziv oznake za napomene oznaka</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5583"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5590"/>
         <source>Bookmarks tag:</source>
         <translation>Oznaka oznaka:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5590"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5597"/>
         <source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href=&quot;%1&quot;&gt;here&lt;/a&gt;.</source>
         <translation>Prema zadanim postavkama proširenje preglednika prikazat će sve veze trenutne bilješke. Također možete učiniti da se prikazuju posebne oznake bilješki s određenom oznakom. Za više informacija o sintaksi veza knjižnih oznaka kliknite &lt;a href=&quot;%1&quot;&gt; ovdje &lt;/a&gt;.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5603"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5610"/>
         <source>Bookmarks note name:</source>
         <translation>Naziv bilješke oznaka:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5610"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5617"/>
         <source>This note will be used for adding new bookmarks from the browser extension</source>
         <translation>Ova će se bilješka koristiti za dodavanje novih oznaka iz proširenja preglednika</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5613"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5620"/>
         <source>Note name for adding new bookmarks</source>
         <translation>Naziv bilješke za dodavanje novih oznaka</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5623"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5630"/>
         <source>Web socket server</source>
         <translation>Web utičnice poslužitelja</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5629"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5636"/>
         <source>Socket server port:</source>
         <translation>Port socket poslužitelja:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5663"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5670"/>
         <source>Show security token</source>
         <translation>Prikaži sigurnosni token</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5699"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5706"/>
         <source>Web socket server support</source>
         <translation>Podrška za poslužitelj web socket</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5705"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5712"/>
         <source>Enable socket server</source>
         <translation>Omogući poslužitelj socket</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5680"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5687"/>
         <source>Install the &lt;a href=&quot;%1&quot;&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href=&quot;%2&quot;&gt;Chrome Web Store&lt;/a&gt; or &lt;a href=&quot;%3&quot;&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
         <translation>Instalirajte &lt;a href=&quot;%1&quot;&gt; proširenje preglednika Web Companion &lt;/a&gt; iz &lt;a href=&quot;%2&quot;&gt; Chrome web-trgovine &lt;/a&gt; ili &lt;a href=&quot;%3&quot;&gt; dodatka za Firefox na stranici &lt;/a&gt; da biste koristili QOwnNotes kao web-kliper.</translation>
     </message>
@@ -5205,59 +5210,59 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
         <translation>Onemogući automatsko dovršavanje prethodnih pretraživanja</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5355"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5362"/>
         <source>Navigation panel</source>
         <translation>Ploča za navigaciju</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5361"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5368"/>
         <source>Hide navigation item search bar</source>
         <translation>Sakrij traku za pretraživanje navigacijske stavke</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5375"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5382"/>
         <source>Local trash settings</source>
         <translation>Postavke lokalnog otpada</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5409"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5416"/>
         <source>Remove trashed notes after:</source>
         <translation>Ukloni bilješke u otpadu nakon:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5416"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5423"/>
         <source> days</source>
         <extracomment>seconds</extracomment>
         <translation> dana</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5435"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5442"/>
         <source>Automatically remove trashed notes after a certain time</source>
         <translation>Automatski ukloni bilješke s otpadom nakon određenog vremena</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5461"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5468"/>
         <source>Local trash support</source>
         <translation>Lokalna podrška za smeće</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5467"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5474"/>
         <source>Enable local trash</source>
         <translation>Omogući lokalno smeće</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5484"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5491"/>
         <source>Layout selector</source>
         <translation>Izbornik izgleda</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5490"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5497"/>
         <source>You can set a new layout here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</source>
         <translation>Ovdje možete postaviti novi izgled. Imajte na umu da položaj ploča uvijek možete mijenjati pomoću gumba &lt;i&gt; Otključaj ploče &lt;/i&gt;.</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="4784"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5649"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5656"/>
         <source>Reset the cursor width</source>
         <translation>Ponovno postavite širinu pokazivača</translation>
     </message>
@@ -5279,18 +5284,18 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
         <translation>Ako koristite ovu postavku, dobit ćete novi unos u izborniku za prikaz git verzija ako desnom tipkom miša kliknete bilješku.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5221"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5230"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5228"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5237"/>
         <source>Regular expressions of note sub-folders to ignore, separated by &quot;;&quot;</source>
         <translation>Redovni izrazi podmapa bilješki za ignoriranje, odvojeni &quot;;&quot;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5325"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5332"/>
         <source>Show all notes of a tag including the notes of their children-tags</source>
         <translation>Prikaži sve bilješke oznake, uključujući bilješke njihovih dječjih oznaka</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5295"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5302"/>
         <source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
         <translation>Prikaži sve bilješke u mapi uključujući i njihove podmape (radi samo ako su uključene podmape)</translation>
     </message>
@@ -5310,35 +5315,35 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
         <translation>Ne zaboravite omogućiti git podršku za mape s bilješkama i konfigurirati svoje ime i adresu e-pošte za Git klijenta, na primjer s ovim terminalnim naredbama:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5079"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5086"/>
         <source>Tags panel</source>
         <translation>Ploča s oznakama</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5108"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5184"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5269"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5115"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5191"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5276"/>
         <source>Order</source>
         <translation>Redoslijed</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5114"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5190"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5278"/>
-        <source>Ascending</source>
-        <translation>Uzlazno</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="5121"/>
         <location filename="../dialogs/settingsdialog.ui" line="5197"/>
         <location filename="../dialogs/settingsdialog.ui" line="5285"/>
+        <source>Ascending</source>
+        <translation>Uzlazno</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="5128"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5204"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5292"/>
         <source>Descending</source>
         <translation>Silazno</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5085"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5154"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5302"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5092"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5161"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5309"/>
         <source>Sort</source>
         <translation>Sortiranje</translation>
     </message>
@@ -5348,55 +5353,55 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
         <translation>Koristite samo postavku širine urednika u načinu rada koji ne odvlači pozornost</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5091"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5160"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5308"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5098"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5167"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5315"/>
         <source>Alphabetical</source>
         <translation>Abecedno</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5098"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5105"/>
         <source>By last change / use</source>
         <translation>Po zadnjoj izmjeni / korištenju</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5131"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5138"/>
         <source>Hide &apos;Find or create tag&apos; search</source>
         <translation>Sakrij pretraživanje &quot;Traži ili izradi oznaku&quot;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5141"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5148"/>
         <source>Note subfolders panel</source>
         <translation>Panel podmapa bilješki</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5147"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5154"/>
         <source>Show with full path</source>
         <translation>Prikaži s punom stazom</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5167"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5315"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5174"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5322"/>
         <source>By last change</source>
         <translation>Po zadnjoj izmjeni</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5177"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5184"/>
         <source>Show root folder name</source>
         <translation>Prikaži naziv korijenske mape</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5207"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5214"/>
         <source>Hide &apos;Find or create note subfolder&apos; search</source>
         <translation>Sakrij pretraživanje &quot;Traži ili izradi podmape bilješki&quot;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5214"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5221"/>
         <source>Display note subfolders as full tree</source>
         <translation>Prikaži podmape bilješki kao cijelo stablo</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2570"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2575"/>
         <source>Search script repository</source>
         <translation>Skladište pretraživanja skripte</translation>
     </message>
@@ -5891,32 +5896,32 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
         <translation>SOCKS5 proxy</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1301"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1303"/>
         <source>Automatic (needs restart)</source>
         <translation>Automatski (ponovno pokretanje)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1462"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1467"/>
         <source>Undefined key</source>
         <translation>Nedefinirani ključ</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1467"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1472"/>
         <source>Assign a new key</source>
         <translation>Dodijelite novi ključ</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1468"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1473"/>
         <source>Reset to default key</source>
         <translation>Vrati na zadani ključ</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1538"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1543"/>
         <source>Shortcut already assigned</source>
         <translation>Prečac je već dodijeljen</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1715"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1720"/>
         <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
@@ -5925,7 +5930,7 @@ Verzija poslužitelja: %1
 Verzija QOwnNotesAPI: %2</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1727"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1732"/>
         <source>There was an error connecting to the ownCloud Server!
 You also need to have the QOwnNotesAPI app installed and enabled!
 
@@ -5936,103 +5941,103 @@ Također morate instalirati i omogućiti aplikaciju QOwnNotesAPI!
 Poruka o pogrešci veze: </translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2006"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2011"/>
         <source>Markdown files</source>
         <translation>Datoteke oznaka</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2033"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2038"/>
         <source>Disable usage tracking</source>
         <translation>Onemogući praćenje korištenja</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2034"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2039"/>
         <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can&apos;t live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
         <translation>Anonimni podaci o korištenju pomažu u određivanju sljedećih dijelova proizvoda QOwnNotes te u pronalaženju i otklanjanju grešaka. &lt;br/&gt; Isključite ga samo ako zaista ne možete živjeti s tim. &lt;br/&gt; &lt;br/&gt; Stvarno onemogućavanje praćenja korištenja?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2255"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2260"/>
         <source>new folder</source>
         <translation>nova mapa</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2293"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2298"/>
         <source>Remove note folder</source>
         <translation>Uklonite mapu s bilješkama</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2294"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2299"/>
         <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
         <translation>Ukloniti trenutnu mapu s bilješkama &lt;strong&gt; %1 &lt;/strong&gt;?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2369"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2374"/>
         <source>Please select the folder where your notes will get stored to</source>
         <translation>Molim odaberi mapu gdje će bilješke biti spremljene</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2406"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2411"/>
         <source>Loading folders from server</source>
         <translation>Učitavanje mapa s poslužitelja</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2420"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2425"/>
         <source>No more folders were found in the current folder</source>
         <translation>U trenutnoj mapi nije pronađeno više mapa</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2493"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2498"/>
         <source>Loading folders in &apos;%1&apos; from server</source>
         <translation>Učitavanje mapa u &apos;%1&apos; s poslužitelja</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2557"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2562"/>
         <source>Take a look at the &lt;a href=&quot;%1&quot;&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
         <translation>Da biste brzo počeli, pogledajte &lt;a href=&quot;%1&quot;&gt; dokumentaciju za skriptiranje &lt;/a&gt;.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2559"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2564"/>
         <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href=&quot;%1&quot;&gt; QOwnNotes issue page&lt;/a&gt;.</source>
         <translation>Ako vam je potreban pristup određenoj funkciji u usluzi QOwnNotes, otvorite problem na &lt;a href=&quot;%1&quot;&gt; stranici problema QOwnNotes &lt;/a&gt;.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2580"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2585"/>
         <source>Check for script updates</source>
         <translation>Provjerite ažuriranja skripti</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2587"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2592"/>
         <source>Add local script</source>
         <translation>Dodajte lokalnu skriptu</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2591"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2596"/>
         <source>Add an existing, local script</source>
         <translation>Dodajte postojeću, lokalnu skriptu</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3659"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3716"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3664"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3721"/>
         <source>INI files</source>
         <translation>INI datoteka</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3695"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3700"/>
         <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
         <translation>Doista želite uvesti postavke? Vaše trenutne postavke bit će uklonjene, a neće se obnoviti sve postavke, kao što su postavke mape s bilješkama i koje ste skripte koristili. Također ćete morati prilagoditi neke postavke, posebno na svim platformama, ali vaše bilješke ostaju netaknute!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3705"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3710"/>
         <source>The application will be quit after the import.</source>
         <translation>Aplikacija će se zatvoriti nakon uvoza.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3706"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3711"/>
         <source>The application will be restarted after the import.</source>
         <translation>Aplikacija će se ponovno pokrenuti nakon uvoza.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2574"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2579"/>
         <source>Find a script in the script repository</source>
         <translation>Pronađite skriptu u spremištu skripti</translation>
     </message>
@@ -6047,115 +6052,115 @@ Poruka o pogrešci veze: </translation>
         <translation>Pokaži stavku trake izbornika</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1539"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1544"/>
         <source>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</source>
         <translation>Prečac &lt;strong&gt; %1 &lt;/strong&gt; već je dodijeljen &lt;strong&gt; %2 &lt;/strong&gt;! Želite li skočiti na prečac?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2670"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2675"/>
         <source>Remove script</source>
         <translation>Ukloni skriptu</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2671"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2676"/>
         <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
         <translation>Ukloniti trenutnu skriptu &lt;strong&gt; %1 &lt;/strong&gt;?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2722"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2727"/>
         <source>QML files</source>
         <translation>QML datoteke</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2723"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2728"/>
         <source>Please select your QML file</source>
         <translation>Odaberite svoju QML datoteku</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2812"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2817"/>
         <source>Open repository</source>
         <translation>Otvorite spremište</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2872"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2877"/>
         <source>Your script seems to be valid</source>
         <translation>Čini se da je vaša skripta valjana</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2873"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2878"/>
         <source>There were script errors:
 %1</source>
         <translation>Bilo je pogrešaka skripte:
 %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2942"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2947"/>
         <source>File extension</source>
         <translation>Ekstenzija datoteke</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2943"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2948"/>
         <source>Enter your custom file extension:</source>
         <translation>Unesite prilagođeno proširenje datoteke:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3235"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3240"/>
         <source>Calendar cache emptied</source>
         <translation>Cache kalendara je ispražnjeno</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3236"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3241"/>
         <source>Your calendar cache was emptied.</source>
         <translation>Vaša je cache kalendara ispražnjena.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3314"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3319"/>
         <source>Reset toolbars and exit</source>
         <translation>Poništite alatne trake i izađite</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3315"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3320"/>
         <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
         <translation>Želite li zaista resetirati sve alatne trake? Aplikacija će biti zatvorena u procesu, zadane alatne trake bit će vraćene kada ga ponovno pokrenete.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3319"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3324"/>
         <source>Reset and &amp;exit</source>
         <translation>Resetiranje i &amp;izlazak</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3481"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3486"/>
         <source>Log file cleared</source>
         <translation>Dnevnik je izbrisan</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3482"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3487"/>
         <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
         <translation>Datoteka zapisnika &lt;strong&gt; %1 &lt;/strong&gt; je izbrisana.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3518"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3523"/>
         <source>Executable files</source>
         <translation>Izvršne datoteke</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3519"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3521"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3524"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3526"/>
         <source>All files</source>
         <translation>Sve datoteke</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3529"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3534"/>
         <source>Please select the path of your git executable</source>
         <translation>Odaberite put izvršne datoteke za Git</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3629"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3634"/>
         <source>Do you really want to reset the overrides of all message boxes?</source>
         <translation>Želite li zaista poništiti poništavanje svih okvira s porukama?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1994"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1999"/>
         <source>The Database was reinitialized.</source>
         <translation>Baza podataka je ponovno inicijalizirana.</translation>
     </message>
@@ -6210,12 +6215,12 @@ Poruka o pogrešci veze: </translation>
         <translation>Aktivirat će se ako pokrenete QOwnNotes s parametrom &lt;code&gt; --portable &lt;/code&gt;.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2007"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2012"/>
         <source>Save debug information</source>
         <translation>Spremite informacije za otklanjanje pogrešaka</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2054"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2059"/>
         <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
@@ -6224,14 +6229,14 @@ Your notes will stay intact!</source>
 Vaše bilješke će ostati netaknute!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2057"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2062"/>
         <source>Clear and &amp;exit</source>
         <translation>Brisanje i izlaz</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1988"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="2057"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3319"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1993"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2062"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3324"/>
         <source>&amp;Cancel</source>
         <translation>Brisanje</translation>
     </message>
@@ -6241,17 +6246,17 @@ Vaše bilješke će ostati netaknute!</translation>
         <translation>Pronaći ćete &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt; u vašoj stazi za oslobađanje za pokretanje QOwnNotes u prijenosnom načinu rada.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1985"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1990"/>
         <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
         <translation>Želite li zaista izbrisati lokalnu bazu podataka? Tako ćete ukloniti i konfigurirane mape bilješki i predmemorirane predmete u programu!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1988"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1993"/>
         <source>Clear &amp;database</source>
         <translation>Obriši &amp;bazu podataka</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2168"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2173"/>
         <source>Select editor application</source>
         <translation>Odaberite program za uređivanje</translation>
     </message>

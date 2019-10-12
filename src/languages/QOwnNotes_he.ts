@@ -1099,7 +1099,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="680"/>
-        <location filename="../mainwindow.cpp" line="7813"/>
+        <location filename="../mainwindow.cpp" line="7815"/>
         <source>Add a tag to the current note</source>
         <translation>הוסף תג לפתק הנוכחי</translation>
     </message>
@@ -1215,13 +1215,13 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1405"/>
-        <location filename="../mainwindow.cpp" line="9357"/>
+        <location filename="../mainwindow.cpp" line="9359"/>
         <source>Select &amp;all notes</source>
         <translation type="unfinished">Select &amp;all notes</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1414"/>
-        <location filename="../mainwindow.cpp" line="5897"/>
+        <location filename="../mainwindow.cpp" line="5899"/>
         <source>Insert &amp;link</source>
         <translation type="unfinished">Insert &amp;link</translation>
     </message>
@@ -1276,7 +1276,7 @@
         <translation>חפש או צור פתק</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7814"/>
+        <location filename="../mainwindow.cpp" line="7816"/>
         <source>Add a tag to the selected notes</source>
         <translation>הוסף תג להערות שנבחרו</translation>
     </message>
@@ -1287,7 +1287,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="869"/>
-        <location filename="../mainwindow.cpp" line="5944"/>
+        <location filename="../mainwindow.cpp" line="5946"/>
         <source>Export</source>
         <translation>ייצוא</translation>
     </message>
@@ -1298,7 +1298,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="907"/>
-        <location filename="../mainwindow.cpp" line="5926"/>
+        <location filename="../mainwindow.cpp" line="5928"/>
         <source>Print</source>
         <translation>הדפס</translation>
     </message>
@@ -1661,7 +1661,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2204"/>
-        <location filename="../mainwindow.cpp" line="10357"/>
+        <location filename="../mainwindow.cpp" line="10359"/>
         <source>Remove current workspace</source>
         <translation>הסר את סביבת העבודה הנוכחית</translation>
     </message>
@@ -1703,7 +1703,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2278"/>
-        <location filename="../mainwindow.cpp" line="5904"/>
+        <location filename="../mainwindow.cpp" line="5906"/>
         <source>Insert block &amp;quote</source>
         <translation type="unfinished">Insert block &amp;quote</translation>
     </message>
@@ -1730,7 +1730,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2325"/>
-        <location filename="../mainwindow.cpp" line="9332"/>
+        <location filename="../mainwindow.cpp" line="9334"/>
         <source>Open note in different window</source>
         <translation>פתח פתק בחלון אחר</translation>
     </message>
@@ -1751,7 +1751,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2365"/>
-        <location filename="../mainwindow.cpp" line="9340"/>
+        <location filename="../mainwindow.cpp" line="9342"/>
         <source>Show note git versions</source>
         <translation>הצג גרסאות הערה GIT</translation>
     </message>
@@ -1965,8 +1965,8 @@ Restore current note?</source>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4934"/>
-        <location filename="../mainwindow.cpp" line="6362"/>
-        <location filename="../mainwindow.cpp" line="9419"/>
+        <location filename="../mainwindow.cpp" line="6364"/>
+        <location filename="../mainwindow.cpp" line="9421"/>
         <source>&amp;Cancel</source>
         <translation>&amp;בטל</translation>
     </message>
@@ -2076,7 +2076,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4127"/>
-        <location filename="../mainwindow.cpp" line="9584"/>
+        <location filename="../mainwindow.cpp" line="9586"/>
         <source>Remove selected folders</source>
         <translation>הסר תיקיות שנבחרו</translation>
     </message>
@@ -2108,7 +2108,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4213"/>
-        <location filename="../mainwindow.cpp" line="8531"/>
+        <location filename="../mainwindow.cpp" line="8533"/>
         <source>Move selected notes</source>
         <translation>העבר הערות שנבחרו</translation>
     </message>
@@ -2122,7 +2122,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4306"/>
-        <location filename="../mainwindow.cpp" line="8629"/>
+        <location filename="../mainwindow.cpp" line="8631"/>
         <source>Copy selected notes</source>
         <translation>העתק הערות שנבחרו</translation>
     </message>
@@ -2187,7 +2187,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>קבצי PDF</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="5134"/>
+        <location filename="../mainwindow.cpp" line="5136"/>
         <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
         <translation type="unfinished">
             <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
@@ -2195,94 +2195,94 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5597"/>
+        <location filename="../mainwindow.cpp" line="5599"/>
         <source>Note was not found</source>
         <translation>הערה לא נמצאה</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5598"/>
+        <location filename="../mainwindow.cpp" line="5600"/>
         <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
         <translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5833"/>
+        <location filename="../mainwindow.cpp" line="5835"/>
         <source>Note versions are currently loaded from your ownCloud server</source>
         <translation>גרסאות הערה נטענות כרגע משרת ownCloud שלך</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5848"/>
+        <location filename="../mainwindow.cpp" line="5850"/>
         <source>Trashed notes are currently loaded from your ownCloud server</source>
         <translation>הערות זבל נטענות כרגע משרת ownCloud שלך</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5914"/>
+        <location filename="../mainwindow.cpp" line="5916"/>
         <source>Copy code block</source>
         <translation>העתק חסימת קוד</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5933"/>
+        <location filename="../mainwindow.cpp" line="5935"/>
         <source>Print selected text</source>
         <translation>הדפס טקסט שנבחר</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5939"/>
+        <location filename="../mainwindow.cpp" line="5941"/>
         <source>Print selected text (preview)</source>
         <translation>הדפס טקסט שנבחר (תצוגה מקדימה)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5955"/>
+        <location filename="../mainwindow.cpp" line="5957"/>
         <source>Export selected text as PDF</source>
         <translation>ייצא טקסט שנבחר כ- PDF</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5961"/>
+        <location filename="../mainwindow.cpp" line="5963"/>
         <source>Export selected text as PDF (preview)</source>
         <translation>ייצא טקסט שנבחר כ- PDF (תצוגה מקדימה)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6358"/>
+        <location filename="../mainwindow.cpp" line="6360"/>
         <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
         <translation>הפתק שלך יהיה מפוענח ויאוחסן כטקסט רגיל שוב. זכור כי ייתכן שהפתק הלא מוצפן יסונכרן לשרת שלך וטקסט רגיש עשוי להיחשף! &lt;br /&gt; האם אתה רוצה לפענח את הפתק שלך?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6451"/>
+        <location filename="../mainwindow.cpp" line="6453"/>
         <source>Markdown files</source>
         <translation>קבצי סימון</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6506"/>
+        <location filename="../mainwindow.cpp" line="6508"/>
         <source>Bookmarked note position at slot %1</source>
         <translation>מיקום הערה עם סימניות בחריץ 1%</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6522"/>
+        <location filename="../mainwindow.cpp" line="6524"/>
         <source>Jumped to bookmark position at slot %1</source>
         <translation>קפץ למיקום הסימניה בחריץ 1%</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6742"/>
-        <location filename="../mainwindow.cpp" line="6812"/>
+        <location filename="../mainwindow.cpp" line="6744"/>
+        <location filename="../mainwindow.cpp" line="6814"/>
         <source>Inserting image</source>
         <translation>הכנסת תמונה</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6747"/>
-        <location filename="../mainwindow.cpp" line="6816"/>
+        <location filename="../mainwindow.cpp" line="6749"/>
+        <location filename="../mainwindow.cpp" line="6818"/>
         <source>Done inserting image</source>
         <translation>הוספת תמונה</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6749"/>
+        <location filename="../mainwindow.cpp" line="6751"/>
         <source>Inserting attachment</source>
         <translation>הכנסת קובץ מצורף</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6754"/>
+        <location filename="../mainwindow.cpp" line="6756"/>
         <source>Done inserting attachment</source>
         <translation>הוספת קובץ מצורף</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6766"/>
+        <location filename="../mainwindow.cpp" line="6768"/>
         <source>Copied %n note(s) to %1</source>
         <translation type="unfinished">
             <numerusform>Copied %n note(s) to %1</numerusform>
@@ -2290,7 +2290,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6775"/>
+        <location filename="../mainwindow.cpp" line="6777"/>
         <source>Failed to copy %n note(s) (most likely already existing)</source>
         <translation type="unfinished">
             <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
@@ -2298,7 +2298,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6785"/>
+        <location filename="../mainwindow.cpp" line="6787"/>
         <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
         <translation type="unfinished">
             <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
@@ -2306,178 +2306,178 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6799"/>
+        <location filename="../mainwindow.cpp" line="6801"/>
         <source>Saving temporary image</source>
         <translation>שמירת תמונה זמנית</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6819"/>
+        <location filename="../mainwindow.cpp" line="6821"/>
         <source>Temporary file can&apos;t be opened</source>
         <translation>לא ניתן לפתוח קובץ זמני</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6860"/>
+        <location filename="../mainwindow.cpp" line="6862"/>
         <source>Downloading %1</source>
         <translation>מוריד 1%</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7041"/>
+        <location filename="../mainwindow.cpp" line="7043"/>
         <source>Reset font size to %1 pt</source>
         <comment>Will be shown after the font size is reset by &apos;Reset note text size&apos;</comment>
         <translation>אפס את גודל הגופן ל- 1% pt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7859"/>
+        <location filename="../mainwindow.cpp" line="7861"/>
         <source>Remove tag &apos;%1&apos; from the current note</source>
         <translation>הסר את התג &apos;1%&apos; מההערה הנוכחית</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7861"/>
+        <location filename="../mainwindow.cpp" line="7863"/>
         <source>Remove tag &apos;%1&apos; from the selected notes</source>
         <translation>הסר את התג &apos;1%&apos; מההערות שנבחרו</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8064"/>
+        <location filename="../mainwindow.cpp" line="8066"/>
         <source>Rename tag</source>
         <translation>שנה שם תג</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8065"/>
+        <location filename="../mainwindow.cpp" line="8067"/>
         <source>Assign color</source>
         <translation>הקצה צבע</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8066"/>
+        <location filename="../mainwindow.cpp" line="8068"/>
         <source>Disable color</source>
         <translation>השבת צבע</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8070"/>
+        <location filename="../mainwindow.cpp" line="8072"/>
         <source>&amp;Move tags to…</source>
         <translation>&amp;העבר תגים ל…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8285"/>
+        <location filename="../mainwindow.cpp" line="8287"/>
         <source>Move to the root</source>
         <comment>to move a tag to the current tag in the tag context menu</comment>
         <translation>עברו לשורש</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8781"/>
+        <location filename="../mainwindow.cpp" line="8783"/>
         <source>An url was opened at the current cursor position</source>
         <translation>כתובת URL נפתחה במיקום הסמן הנוכחי</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8882"/>
+        <location filename="../mainwindow.cpp" line="8884"/>
         <source>No equation was found in front of the cursor</source>
         <translation>לא נמצאה משוואה מול הסמן</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8899"/>
+        <location filename="../mainwindow.cpp" line="8901"/>
         <source>Result for equation: %1 = %2</source>
         <translation type="unfinished">Result for equation: %1 = %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9000"/>
+        <location filename="../mainwindow.cpp" line="9002"/>
         <source>The scripting engine was reloaded</source>
         <translation>טען מחדש של מנוע התסריטים</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9036"/>
+        <location filename="../mainwindow.cpp" line="9038"/>
         <source>HTML files</source>
         <translation>קבצי HTML</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9228"/>
-        <location filename="../mainwindow.cpp" line="9402"/>
+        <location filename="../mainwindow.cpp" line="9230"/>
+        <location filename="../mainwindow.cpp" line="9404"/>
         <source>Rename note</source>
         <translation>שנה שם פתק</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9229"/>
+        <location filename="../mainwindow.cpp" line="9231"/>
         <source>Allows you to rename the filename of the note</source>
         <translation>מאפשר לשנות את שם הקובץ של ההערה</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9241"/>
+        <location filename="../mainwindow.cpp" line="9243"/>
         <source>&amp;Move notes to…</source>
         <translation type="unfinished">&amp;Move notes to…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9242"/>
+        <location filename="../mainwindow.cpp" line="9244"/>
         <source>&amp;Copy notes to…</source>
         <translation type="unfinished">&amp;Copy notes to…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9277"/>
+        <location filename="../mainwindow.cpp" line="9279"/>
         <source>Move notes to subfolder…</source>
         <translation>העבר הערות לתיקיית משנה…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9281"/>
+        <location filename="../mainwindow.cpp" line="9283"/>
         <source>Copy notes to subfolder…</source>
         <translation>העתק הערות לתיקיית המשנה…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9289"/>
+        <location filename="../mainwindow.cpp" line="9291"/>
         <source>&amp;Tag selected notes with…</source>
         <translation>&amp;תייג פתקים שנבחרו עם…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9311"/>
+        <location filename="../mainwindow.cpp" line="9313"/>
         <source>&amp;Remove tag from selected notes…</source>
         <translation>&amp;הסר תג מההערות שנבחרו…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9402"/>
+        <location filename="../mainwindow.cpp" line="9404"/>
         <source>Name:</source>
         <translation>שם:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9414"/>
+        <location filename="../mainwindow.cpp" line="9416"/>
         <source>Note renaming not enabled!</source>
         <translation>הערה שינוי שם אינו מופעל!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9583"/>
+        <location filename="../mainwindow.cpp" line="9585"/>
         <source>Rename subfolder</source>
         <translation>שנה שם תיקיית משנה</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10137"/>
+        <location filename="../mainwindow.cpp" line="10139"/>
         <source>Create new workspace</source>
         <translation>צור סביבת עבודה חדשה</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10137"/>
-        <location filename="../mainwindow.cpp" line="10395"/>
+        <location filename="../mainwindow.cpp" line="10139"/>
+        <location filename="../mainwindow.cpp" line="10397"/>
         <source>Workspace name:</source>
         <translation>שם סביבת עבודה:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10259"/>
+        <location filename="../mainwindow.cpp" line="10261"/>
         <source>full</source>
         <comment>full workspace</comment>
         <translation>מלא</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10266"/>
+        <location filename="../mainwindow.cpp" line="10268"/>
         <source>minimal</source>
         <comment>minimal workspace</comment>
         <translation>מינימלי</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10358"/>
+        <location filename="../mainwindow.cpp" line="10360"/>
         <source>Remove the current workspace?</source>
         <translation>להסיר את סביבת העבודה הנוכחית?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10395"/>
+        <location filename="../mainwindow.cpp" line="10397"/>
         <source>Rename workspace</source>
         <translation>שינוי שם סביבת העבודה</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="10530"/>
+        <location filename="../mainwindow.cpp" line="10532"/>
         <source>%n chars</source>
         <comment>characters</comment>
         <translation type="unfinished">
@@ -2486,32 +2486,32 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10797"/>
+        <location filename="../mainwindow.cpp" line="10799"/>
         <source>Disallow all note editing</source>
         <translation>בטל את כל עריכת הערות</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10943"/>
+        <location filename="../mainwindow.cpp" line="10945"/>
         <source>Select text files to import</source>
         <translation>בחר קבצי טקסט לייבוא</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10972"/>
+        <location filename="../mainwindow.cpp" line="10974"/>
         <source>Importing: %1</source>
         <translation type="unfinished">Importing: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="11035"/>
+        <location filename="../mainwindow.cpp" line="11037"/>
         <source>Note headline &apos;%1&apos; was copied to the clipboard</source>
         <translation type="unfinished">Note headline &apos;%1&apos; was copied to the clipboard</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="11122"/>
+        <location filename="../mainwindow.cpp" line="11124"/>
         <source>Leave full-screen mode</source>
         <translation type="unfinished">Leave full-screen mode</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="7832"/>
+        <location filename="../mainwindow.cpp" line="7834"/>
         <source>%n notes selected</source>
         <translation type="unfinished">
             <numerusform>%n notes selected</numerusform>
@@ -2520,7 +2520,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2410"/>
-        <location filename="../mainwindow.cpp" line="10798"/>
+        <location filename="../mainwindow.cpp" line="10800"/>
         <source>Allow all note editing</source>
         <translation type="unfinished">Allow all note editing</translation>
     </message>
@@ -2601,81 +2601,81 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>לא בחרת רשימת רשימות. &lt;br /&gt; אנא בדוק את תצורת ה &lt;strong&gt; טודו &lt;/ strong&gt; שלך בהגדרות!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5732"/>
+        <location filename="../mainwindow.cpp" line="5734"/>
         <source>Open QOwnNotes</source>
         <translation>פתח QOwnNotes</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5437"/>
-        <location filename="../mainwindow.cpp" line="5741"/>
-        <location filename="../mainwindow.cpp" line="9223"/>
-        <location filename="../mainwindow.cpp" line="9581"/>
+        <location filename="../mainwindow.cpp" line="5439"/>
+        <location filename="../mainwindow.cpp" line="5743"/>
+        <location filename="../mainwindow.cpp" line="9225"/>
+        <location filename="../mainwindow.cpp" line="9583"/>
         <source>New note</source>
         <translation>פתק חדש</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5757"/>
+        <location filename="../mainwindow.cpp" line="5759"/>
         <source>Recent notes</source>
         <translation>הערות אחרונות</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5777"/>
+        <location filename="../mainwindow.cpp" line="5779"/>
         <source>Show todo lists</source>
         <translation>הצג רשימות טודו</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5788"/>
+        <location filename="../mainwindow.cpp" line="5790"/>
         <source>Recent tasks</source>
         <translation>משימות אחרונות</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5809"/>
+        <location filename="../mainwindow.cpp" line="5811"/>
         <source>Quit</source>
         <translation>צא</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7195"/>
+        <location filename="../mainwindow.cpp" line="7197"/>
         <source>show notes from all note subfolders (%1)</source>
         <translation>הצג הערות מכל תיקיות המשנה של הערות (1%)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7214"/>
+        <location filename="../mainwindow.cpp" line="7216"/>
         <source>show notes in note root folder (%1)</source>
         <translation>הצג הערות בתיקיית שורש הערות (1%)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="316"/>
         <location filename="../mainwindow.cpp" line="696"/>
-        <location filename="../mainwindow.cpp" line="7222"/>
+        <location filename="../mainwindow.cpp" line="7224"/>
         <source>Note folder</source>
         <translation>תיקיית הערות</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8418"/>
-        <location filename="../mainwindow.cpp" line="8479"/>
+        <location filename="../mainwindow.cpp" line="8420"/>
+        <location filename="../mainwindow.cpp" line="8481"/>
         <source>Copy to note folder</source>
         <translation>העתק לתיקיית הערות</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8419"/>
-        <location filename="../mainwindow.cpp" line="8480"/>
+        <location filename="../mainwindow.cpp" line="8421"/>
+        <location filename="../mainwindow.cpp" line="8482"/>
         <source>Move to note folder</source>
         <translation>העבר לתיקיית הערות</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8420"/>
-        <location filename="../mainwindow.cpp" line="8481"/>
+        <location filename="../mainwindow.cpp" line="8422"/>
+        <location filename="../mainwindow.cpp" line="8483"/>
         <source>Copy to this subfolder</source>
         <translation>העתק לתיקיית משנה זו</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8421"/>
-        <location filename="../mainwindow.cpp" line="8482"/>
+        <location filename="../mainwindow.cpp" line="8423"/>
+        <location filename="../mainwindow.cpp" line="8484"/>
         <source>Move to this subfolder</source>
         <translation>עבור לתיקיית משנה זו</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="8525"/>
+        <location filename="../mainwindow.cpp" line="8527"/>
         <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation type="unfinished">
             <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -2684,12 +2684,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4620"/>
-        <location filename="../mainwindow.cpp" line="10957"/>
+        <location filename="../mainwindow.cpp" line="10959"/>
         <source>Cancel</source>
         <translation>בטל</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="8602"/>
+        <location filename="../mainwindow.cpp" line="8604"/>
         <source>%n note(s) were moved to note subfolder &quot;%2&quot;</source>
         <translation type="unfinished">
             <numerusform>%n note(s) were moved to note subfolder &quot;%2&quot;</numerusform>
@@ -2697,7 +2697,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="8623"/>
+        <location filename="../mainwindow.cpp" line="8625"/>
         <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation type="unfinished">
             <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -2705,7 +2705,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="8684"/>
+        <location filename="../mainwindow.cpp" line="8686"/>
         <source>%n note(s) were copied to note subfolder &quot;%2&quot;</source>
         <translation type="unfinished">
             <numerusform>%n note(s) were copied to note subfolder &quot;%2&quot;</numerusform>
@@ -2713,52 +2713,52 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9330"/>
+        <location filename="../mainwindow.cpp" line="9332"/>
         <source>Open note in external editor</source>
         <translation>פתק פתוח בעורך חיצוני</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9334"/>
+        <location filename="../mainwindow.cpp" line="9336"/>
         <source>Show note in file manager</source>
         <translation>הצג הערה במנהל הקבצים</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9415"/>
+        <location filename="../mainwindow.cpp" line="9417"/>
         <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
         <translation>אם אתה רוצה לשנות את שם ההערה שלך עליך לאפשר את האפשרות לאפשר שם קובץ ההערה להיות שונה מהכותרת.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9582"/>
+        <location filename="../mainwindow.cpp" line="9584"/>
         <source>New subfolder</source>
         <translation>תיקיית משנה חדשה</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9586"/>
+        <location filename="../mainwindow.cpp" line="9588"/>
         <source>Show folder in file manager</source>
         <translation>הצג תיקיה במנהל הקבצים</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9622"/>
+        <location filename="../mainwindow.cpp" line="9624"/>
         <source>Create a new folder</source>
         <translation>צור תיקייה חדשה</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9622"/>
+        <location filename="../mainwindow.cpp" line="9624"/>
         <source>Folder name:</source>
         <translation>שם התיקיה:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7153"/>
+        <location filename="../mainwindow.cpp" line="7155"/>
         <source>show all untagged notes (%1)</source>
         <translation>הצג את כל ההערות הלא מתויגות (1%)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7156"/>
+        <location filename="../mainwindow.cpp" line="7158"/>
         <source>Untagged notes</source>
         <translation>הערות לא מתויגות</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9037"/>
+        <location filename="../mainwindow.cpp" line="9039"/>
         <source>Export current note as HTML file</source>
         <translation>ייצא הערה נוכחית כקובץ HTML</translation>
     </message>
@@ -2788,12 +2788,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished">&amp;Ok</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9233"/>
+        <location filename="../mainwindow.cpp" line="9235"/>
         <source>&amp;Remove notes</source>
         <translation>הסר פתקים</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5897"/>
+        <location filename="../mainwindow.cpp" line="5899"/>
         <source>&amp;Link selected text</source>
         <translation>&amp;קשר טקסט שנבחר</translation>
     </message>
@@ -2809,7 +2809,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2580"/>
-        <location filename="../mainwindow.cpp" line="5375"/>
+        <location filename="../mainwindow.cpp" line="5377"/>
         <source>Stored current note to disk</source>
         <translation>אחסן את ההערה הנוכחית לדיסק</translation>
     </message>
@@ -2832,53 +2832,53 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7125"/>
+        <location filename="../mainwindow.cpp" line="7127"/>
         <source>show all notes (%1)</source>
         <translation type="unfinished">show all notes (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7128"/>
-        <location filename="../mainwindow.cpp" line="7198"/>
+        <location filename="../mainwindow.cpp" line="7130"/>
+        <location filename="../mainwindow.cpp" line="7200"/>
         <source>All notes</source>
         <translation type="unfinished">All notes</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8056"/>
+        <location filename="../mainwindow.cpp" line="8058"/>
         <source>&amp;Add tag</source>
         <translation type="unfinished">&amp;Add tag</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8105"/>
+        <location filename="../mainwindow.cpp" line="8107"/>
         <source>Tag could not be created!</source>
         <translation>לא ניתן היה ליצור תג!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8286"/>
+        <location filename="../mainwindow.cpp" line="8288"/>
         <source>Move to this tag</source>
         <translation>עבור לתג זה</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8323"/>
+        <location filename="../mainwindow.cpp" line="8325"/>
         <source>Tag this</source>
         <translation>תייגו את זה</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8347"/>
+        <location filename="../mainwindow.cpp" line="8349"/>
         <source>Cannot move tag &apos;%1&apos; to this tag</source>
         <translation>לא ניתן להעביר את התג &apos;1%&apos; לתג זה</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8363"/>
+        <location filename="../mainwindow.cpp" line="8365"/>
         <source>Moved tag &apos;%1&apos; to new tag</source>
         <translation>הועבר התג &apos;1%&apos; לתג חדש</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7384"/>
+        <location filename="../mainwindow.cpp" line="7386"/>
         <source>show all notes tagged with &apos;%1&apos; (%2)</source>
         <translation>הצג את כל ההערות המתויגות עם &apos;1%&apos; (2%)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8067"/>
+        <location filename="../mainwindow.cpp" line="8069"/>
         <source>&amp;Remove tags</source>
         <translation>&amp;הסר תגים</translation>
     </message>
@@ -3009,7 +3009,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2581"/>
-        <location filename="../mainwindow.cpp" line="5376"/>
+        <location filename="../mainwindow.cpp" line="5378"/>
         <source>Current note could not be stored to disk</source>
         <translation>לא ניתן לאחסן את ההערה הנוכחית בדיסק</translation>
     </message>
@@ -3050,7 +3050,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="5133"/>
+        <location filename="../mainwindow.cpp" line="5135"/>
         <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
         <translation type="unfinished">
             <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
@@ -3058,66 +3058,66 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5437"/>
+        <location filename="../mainwindow.cpp" line="5439"/>
         <source>Note headline</source>
         <translation>שים לב לכותרת</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5903"/>
+        <location filename="../mainwindow.cpp" line="5905"/>
         <source>Block &amp;quote selected text</source>
         <comment>Action to apply a block quote formatting to the selected text</comment>
         <translation type="unfinished">Block &amp;quote selected text</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6872"/>
+        <location filename="../mainwindow.cpp" line="6874"/>
         <source>Downloading images finished</source>
         <translation>הורדת התמונות הסתיימה</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7014"/>
+        <location filename="../mainwindow.cpp" line="7016"/>
         <source>Increased font size to %1 pt</source>
         <translation>הגדלת גודל הגופן ל-1% pt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7031"/>
+        <location filename="../mainwindow.cpp" line="7033"/>
         <source>Decreased font size to %1 pt</source>
         <translation>הקטן את גודל הגופן ל-1% pt</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4907"/>
         <location filename="../mainwindow.cpp" line="4933"/>
-        <location filename="../mainwindow.cpp" line="9418"/>
+        <location filename="../mainwindow.cpp" line="9420"/>
         <source>Open &amp;settings</source>
         <translation type="unfinished">Open &amp;settings</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1531"/>
-        <location filename="../mainwindow.cpp" line="11110"/>
+        <location filename="../mainwindow.cpp" line="11112"/>
         <source>leave</source>
         <translation type="unfinished">leave</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6301"/>
+        <location filename="../mainwindow.cpp" line="6303"/>
         <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
         <translation type="unfinished">Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6357"/>
+        <location filename="../mainwindow.cpp" line="6359"/>
         <source>Decrypt note and store it as plain text</source>
         <translation type="unfinished">Decrypt note and store it as plain text</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6362"/>
+        <location filename="../mainwindow.cpp" line="6364"/>
         <source>&amp;Decrypt</source>
         <translation type="unfinished">&amp;Decrypt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6388"/>
+        <location filename="../mainwindow.cpp" line="6390"/>
         <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
         <translation type="unfinished">&lt;br /&gt;You will be able to edit your encrypted note.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6452"/>
+        <location filename="../mainwindow.cpp" line="6454"/>
         <source>Export current note as Markdown file</source>
         <translation type="unfinished">Export current note as Markdown file</translation>
     </message>
@@ -3548,7 +3548,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished">The command &lt;code&gt;%1&lt;/code&gt; failed!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3875"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3880"/>
         <source>New connection</source>
         <translation>חיבור חדש</translation>
     </message>
@@ -4406,7 +4406,7 @@ Do you want to install it anyway?</source>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="3597"/>
         <location filename="../dialogs/settingsdialog.ui" line="4904"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5405"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5412"/>
         <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
         <translation>אתה עלול להיתקל בבעיות סינכרון עם גרסאות ישנות יותר של סנכרון ownCloud כשאתה הולך הרבה מתחת ל 10 שניות.
@@ -4429,8 +4429,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="4019"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1984"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1993"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1989"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1998"/>
         <source>Database</source>
         <translation>מאגר מידע</translation>
     </message>
@@ -4451,7 +4451,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="3974"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="2053"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2058"/>
         <source>Clear app data and exit</source>
         <translation>נקה נתוני אפליקציות ויצא</translation>
     </message>
@@ -4984,20 +4984,20 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="3803"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3628"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3633"/>
         <source>Reset message boxes</source>
         <translation>אפס תיבות הודעה</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="3996"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3694"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3717"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3699"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3722"/>
         <source>Import settings</source>
         <translation>ייבא הגדרות</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="4003"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3660"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3665"/>
         <source>Export settings</source>
         <translation>ייצוא הגדרות</translation>
     </message>
@@ -5052,92 +5052,97 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>השבת מהבהב של הסמן</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5224"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5076"/>
+        <source>Show the number of matches in each note</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="5231"/>
         <source>Ignored sub-folders</source>
         <translation>התעלמו מתיקיות המשנה</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5240"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5247"/>
         <source>Reset ignored sub-folders</source>
         <translation>אפס תיקיות משנה שהתעלמו</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5260"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5267"/>
         <source>Note list panel</source>
         <translation>לוח רשימת הערות</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5332"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5339"/>
         <source>Show notes in the note list with preview</source>
         <translation>הצג הערות ברשימת ההערות בתצוגה מקדימה</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5567"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5574"/>
         <source>Bookmarks</source>
         <translation>סימניות</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5573"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5580"/>
         <source>Notes with this tag will be used for fetching bookmarks</source>
         <translation>הערות עם תג זה ישמשו לאחזור סימניות</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5576"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5583"/>
         <source>Tag name for bookmarks notes</source>
         <translation>תייג שם להערות סימניות</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5583"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5590"/>
         <source>Bookmarks tag:</source>
         <translation>תג סימניות:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5590"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5597"/>
         <source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href=&quot;%1&quot;&gt;here&lt;/a&gt;.</source>
         <translation>כברירת מחדל סיומת הדפדפן תציג את כל הקישורים של הפתק הנוכחי. אתה יכול גם לגרום לו להציג קישורים מיוחדים לסימניות של הערות עם תג מסוים. למידע נוסף על תחביר הקישור לסימניות לחץ על &lt;a href=&quot;%1&quot;&gt; כאן &lt;/a&gt;.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5603"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5610"/>
         <source>Bookmarks note name:</source>
         <translation>שם הערת סימניות:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5610"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5617"/>
         <source>This note will be used for adding new bookmarks from the browser extension</source>
         <translation>הערה זו תשמש להוספת סימניות חדשות מתוסף הדפדפן</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5613"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5620"/>
         <source>Note name for adding new bookmarks</source>
         <translation>שם הערה להוספת סימניות חדשות</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5623"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5630"/>
         <source>Web socket server</source>
         <translation>שרת שקעי אינטרנט</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5629"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5636"/>
         <source>Socket server port:</source>
         <translation>יציאת שרת שקע:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5663"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5670"/>
         <source>Show security token</source>
         <translation>הצג אסימון אבטחה</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5699"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5706"/>
         <source>Web socket server support</source>
         <translation>תמיכה בשרת שקעי רשת</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5705"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5712"/>
         <source>Enable socket server</source>
         <translation>אפשר שרת שקע</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5680"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5687"/>
         <source>Install the &lt;a href=&quot;%1&quot;&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href=&quot;%2&quot;&gt;Chrome Web Store&lt;/a&gt; or &lt;a href=&quot;%3&quot;&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
         <translation type="unfinished">Install the &lt;a href=&quot;%1&quot;&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href=&quot;%2&quot;&gt;Chrome Web Store&lt;/a&gt; or &lt;a href=&quot;%3&quot;&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</translation>
     </message>
@@ -5172,59 +5177,59 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>השבת השלמה אוטומטית של חיפושים קודמים</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5355"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5362"/>
         <source>Navigation panel</source>
         <translation>לוח ניווט</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5361"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5368"/>
         <source>Hide navigation item search bar</source>
         <translation>הסתר סרגל החיפוש של פריט הניווט</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5375"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5382"/>
         <source>Local trash settings</source>
         <translation>הגדרות זבל מקומיות</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5409"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5416"/>
         <source>Remove trashed notes after:</source>
         <translation>הסר פתקים שנשלחו לאחר:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5416"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5423"/>
         <source> days</source>
         <extracomment>seconds</extracomment>
         <translation>ימים</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5435"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5442"/>
         <source>Automatically remove trashed notes after a certain time</source>
         <translation>הסר אוטומטית הערות שנשלחו לאחר פרק זמן מסוים</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5461"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5468"/>
         <source>Local trash support</source>
         <translation>תמיכה באשפה מקומי</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5467"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5474"/>
         <source>Enable local trash</source>
         <translation>אפשר זבל מקומי</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5484"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5491"/>
         <source>Layout selector</source>
         <translation>בורר פריסה</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5490"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5497"/>
         <source>You can set a new layout here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</source>
         <translation>אתה יכול להגדיר פריסה חדשה כאן. זכור שתמיד תוכל לשנות את מיקום החלוניות באמצעות כפתור &lt;i&gt; ביטול נעילה &lt;/ i&gt;.</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="4784"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5649"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5656"/>
         <source>Reset the cursor width</source>
         <translation>אפס את רוחב הסמן</translation>
     </message>
@@ -5246,18 +5251,18 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>אם תשתמש בהגדרה זו תקבל רשומת תפריט חדשה שתציג את גרסאות ה- git אם תלחץ לחיצה ימנית על הערה.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5221"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5230"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5228"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5237"/>
         <source>Regular expressions of note sub-folders to ignore, separated by &quot;;&quot;</source>
         <translation>ביטויים קבועים של תיקיות המשנה להתעלמות, מופרדים על ידי &quot;;&quot;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5325"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5332"/>
         <source>Show all notes of a tag including the notes of their children-tags</source>
         <translation>הצג את כל ההערות של התג כולל ההערות של תגי הילדים שלהם</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5295"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5302"/>
         <source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
         <translation>הצג את כל ההערות בתיקיה כולל תיקיות המשנה שלהם (עובד רק אם תיקיות המשנה מופעלות)</translation>
     </message>
@@ -5277,35 +5282,35 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>אל תשכח לאפשר תמיכה ב- git בתיקיות הפתקים שלך ולהגדיר את שמך וכתובת הדוא&quot;ל עבור לקוח ה- git שלך, למשל באמצעות פקודות מסוף אלה:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5079"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5086"/>
         <source>Tags panel</source>
         <translation>חלונית התגים</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5108"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5184"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5269"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5115"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5191"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5276"/>
         <source>Order</source>
         <translation>להזמין</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5114"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5190"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5278"/>
-        <source>Ascending</source>
-        <translation>עולה</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="5121"/>
         <location filename="../dialogs/settingsdialog.ui" line="5197"/>
         <location filename="../dialogs/settingsdialog.ui" line="5285"/>
+        <source>Ascending</source>
+        <translation>עולה</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="5128"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5204"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5292"/>
         <source>Descending</source>
         <translation>יורד</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5085"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5154"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5302"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5092"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5161"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5309"/>
         <source>Sort</source>
         <translation>סוג</translation>
     </message>
@@ -5315,55 +5320,55 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>השתמש רק בהגדרת רוחב העורך במצב חופשי הסחה</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5091"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5160"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5308"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5098"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5167"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5315"/>
         <source>Alphabetical</source>
         <translation>אלפביתי</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5098"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5105"/>
         <source>By last change / use</source>
         <translation>לפי שינוי / שימוש אחרון</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5131"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5138"/>
         <source>Hide &apos;Find or create tag&apos; search</source>
         <translation>הסתר חיפוש &apos;מצא או צור תג&apos;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5141"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5148"/>
         <source>Note subfolders panel</source>
         <translation>הערה חלונית תיקיות המשנה</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5147"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5154"/>
         <source>Show with full path</source>
         <translation>הצג עם מסלול מלא</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5167"/>
-        <location filename="../dialogs/settingsdialog.ui" line="5315"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5174"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5322"/>
         <source>By last change</source>
         <translation>לפי שינוי אחרון</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5177"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5184"/>
         <source>Show root folder name</source>
         <translation>הצג את שם תיקיית השורש</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5207"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5214"/>
         <source>Hide &apos;Find or create note subfolder&apos; search</source>
         <translation>הסתר חיפוש &apos;מצא או צור תיקיית משנה פתק&apos;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="5214"/>
+        <location filename="../dialogs/settingsdialog.ui" line="5221"/>
         <source>Display note subfolders as full tree</source>
         <translation>הצג תיקיות משנה של הערות כעץ מלא</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2570"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2575"/>
         <source>Search script repository</source>
         <translation>מאגר סקריפט לחיפוש</translation>
     </message>
@@ -5858,32 +5863,32 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation type="unfinished">SOCKS5 proxy</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1301"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1303"/>
         <source>Automatic (needs restart)</source>
         <translation>אוטומטי (צריך הפעלה מחדש)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1462"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1467"/>
         <source>Undefined key</source>
         <translation>מפתח לא מוגדר</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1467"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1472"/>
         <source>Assign a new key</source>
         <translation>הקצה מפתח חדש</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1468"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1473"/>
         <source>Reset to default key</source>
         <translation>אפס למפתח ברירת המחדל</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1538"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1543"/>
         <source>Shortcut already assigned</source>
         <translation>קיצור הדרך כבר הוקצה</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1715"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1720"/>
         <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
@@ -5892,7 +5897,7 @@ QOwnNotesAPI version: %2</source>
 גרסת QOwnNotesAPI: %2</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1727"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1732"/>
         <source>There was an error connecting to the ownCloud Server!
 You also need to have the QOwnNotesAPI app installed and enabled!
 
@@ -5903,103 +5908,103 @@ You also need to have the QOwnNotesAPI app installed and enabled!
 Connection error message: </translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2006"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2011"/>
         <source>Markdown files</source>
         <translation>קבצי סימון</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2033"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2038"/>
         <source>Disable usage tracking</source>
         <translation>השבת את מעקב השימוש</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2034"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2039"/>
         <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can&apos;t live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
         <translation type="unfinished">Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can&apos;t live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2255"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2260"/>
         <source>new folder</source>
         <translation>תיקייה חדשה</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2293"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2298"/>
         <source>Remove note folder</source>
         <translation>הסר את תיקיית ההערות</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2294"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2299"/>
         <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
         <translation type="unfinished">Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2369"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2374"/>
         <source>Please select the folder where your notes will get stored to</source>
         <translation>אנא בחר את התיקיה שאליה יאוחסנו ההערות שלך</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2406"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2411"/>
         <source>Loading folders from server</source>
         <translation>טוען תיקיות מהשרת</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2420"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2425"/>
         <source>No more folders were found in the current folder</source>
         <translation>לא נמצאו תיקיות נוספות בתיקיה הנוכחית</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2493"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2498"/>
         <source>Loading folders in &apos;%1&apos; from server</source>
         <translation>טוען תיקיות ב- &apos;%1&apos; מהשרת</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2557"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2562"/>
         <source>Take a look at the &lt;a href=&quot;%1&quot;&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
         <translation>עיין ב &lt;a href=&quot;%1&quot;&gt; תיעוד סקריפטים &lt;/a&gt; כדי להתחיל מהר.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2559"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2564"/>
         <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href=&quot;%1&quot;&gt; QOwnNotes issue page&lt;/a&gt;.</source>
         <translation type="unfinished">If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href=&quot;%1&quot;&gt; QOwnNotes issue page&lt;/a&gt;.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2580"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2585"/>
         <source>Check for script updates</source>
         <translation>בדוק אם קיימים עדכוני סקריפט</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2587"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2592"/>
         <source>Add local script</source>
         <translation>הוסף תסריט מקומי</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2591"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2596"/>
         <source>Add an existing, local script</source>
         <translation>הוסף תסריט מקומי</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3659"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3716"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3664"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3721"/>
         <source>INI files</source>
         <translation>קבצי INI</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3695"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3700"/>
         <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
         <translation>האם אתה באמת רוצה לייבא הגדרות? ההגדרות הנוכחיות שלך יוסרו ולא כל הגדרה עשויה לשחזר, כמו הגדרות תיקיית ההערות ואילו סקריפטים השתמשת. יהיה עליך להתאים הגדרות מסוימות, במיוחד בפלטפורמות, אך ההערות שלך יישארו שלמות!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3705"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3710"/>
         <source>The application will be quit after the import.</source>
         <translation type="unfinished">The application will be quit after the import.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3706"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3711"/>
         <source>The application will be restarted after the import.</source>
         <translation type="unfinished">The application will be restarted after the import.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2574"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2579"/>
         <source>Find a script in the script repository</source>
         <translation type="unfinished">Find a script in the script repository</translation>
     </message>
@@ -6014,115 +6019,115 @@ Connection error message: </translation>
         <translation type="unfinished">Show menu bar item</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1539"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1544"/>
         <source>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</source>
         <translation type="unfinished">The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2670"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2675"/>
         <source>Remove script</source>
         <translation type="unfinished">Remove script</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2671"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2676"/>
         <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
         <translation type="unfinished">Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2722"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2727"/>
         <source>QML files</source>
         <translation type="unfinished">QML files</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2723"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2728"/>
         <source>Please select your QML file</source>
         <translation type="unfinished">Please select your QML file</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2812"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2817"/>
         <source>Open repository</source>
         <translation>מאגר פתוח</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2872"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2877"/>
         <source>Your script seems to be valid</source>
         <translation>נראה שהתסריט שלך תקף</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2873"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2878"/>
         <source>There were script errors:
 %1</source>
         <translation>היו שגיאות תסריט:
 1%</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2942"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2947"/>
         <source>File extension</source>
         <translation>סיומת קובץ</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2943"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2948"/>
         <source>Enter your custom file extension:</source>
         <translation>הזן את סיומת הקובץ המותאמת אישית שלך:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3235"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3240"/>
         <source>Calendar cache emptied</source>
         <translation>מטמון לוח השנה התרוקן</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3236"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3241"/>
         <source>Your calendar cache was emptied.</source>
         <translation>מטמון היומן שלך התרוקן.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3314"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3319"/>
         <source>Reset toolbars and exit</source>
         <translation>אפס סרגל כלים ויצא</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3315"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3320"/>
         <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
         <translation>האם אתה באמת רוצה לאפס את כל סרגלי הכלים? היישום ייסגר בתהליך, סרגלי הכלים המוגדרים כברירת מחדל ישוחזרו כשאתה מפעיל אותה מחדש.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3319"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3324"/>
         <source>Reset and &amp;exit</source>
         <translation>אפס &amp;ויצא</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3481"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3486"/>
         <source>Log file cleared</source>
         <translation>קובץ היומן נמחק</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3482"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3487"/>
         <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
         <translation>קובץ היומן &lt;strong&gt;%1&lt;/strong&gt; נוקה.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3518"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3523"/>
         <source>Executable files</source>
         <translation>קבצים הניתנים להפעלה</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3519"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3521"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3524"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3526"/>
         <source>All files</source>
         <translation>כל הקבצים</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3529"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3534"/>
         <source>Please select the path of your git executable</source>
         <translation>אנא בחר את הנתיב של ההפעלה Git שלך</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3629"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3634"/>
         <source>Do you really want to reset the overrides of all message boxes?</source>
         <translation>האם אתה באמת רוצה לאפס את עקיפות כל תיבות ההודעות?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1994"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1999"/>
         <source>The Database was reinitialized.</source>
         <translation>המאגר הופעל מחדש.</translation>
     </message>
@@ -6177,12 +6182,12 @@ Connection error message: </translation>
         <translation type="unfinished">It will be activated if you run QOwnNotes with the parameter &lt;code&gt;--portable&lt;/code&gt;.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2007"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2012"/>
         <source>Save debug information</source>
         <translation>שמור מידע על באגים</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2054"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2059"/>
         <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
@@ -6191,14 +6196,14 @@ Your notes will stay intact!</source>
 ההערות שלך יישארו שלמות!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2057"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2062"/>
         <source>Clear and &amp;exit</source>
         <translation type="unfinished">Clear and &amp;exit</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1988"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="2057"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3319"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1993"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2062"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3324"/>
         <source>&amp;Cancel</source>
         <translation type="unfinished">&amp;Cancel</translation>
     </message>
@@ -6208,17 +6213,17 @@ Your notes will stay intact!</source>
         <translation type="unfinished">You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1985"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1990"/>
         <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
         <translation>האם אתה באמת רוצה לנקות את בסיס הנתונים המקומי? פעולה זו תסיר גם את תיקיות ההערות שהוגדרו ואת פריטי ה- todo המטמון!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1988"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1993"/>
         <source>Clear &amp;database</source>
         <translation type="unfinished">Clear &amp;database</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2168"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2173"/>
         <source>Select editor application</source>
         <translation>בחר יישום עורך</translation>
     </message>
