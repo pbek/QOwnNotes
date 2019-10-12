@@ -4,6 +4,7 @@
 #
 
 import sys
+import re
 
 
 if len(sys.argv) < 3:
@@ -17,15 +18,15 @@ iso_crowdin = sys.argv[1]
 iso_qon = sys.argv[2]
 
 
-def insert_in_file(fileName, text, addText):
-    with open(fileName) as f:
+def insert_in_file(file_name, text, add_text):
+    with open(file_name) as f:
         new_text=f.read()
         if text not in new_text:
-            print '"{}" was not found in file "{}"!'.format(text, fileName)
+            print '"{}" was not found in file "{}"!'.format(text, file_name)
             return
-        new_text = new_text.replace(text, text + "\n" + addText)
+        new_text = re.sub(r'^(%s)' % re.escape(text), r'\1\n%s' % add_text, new_text, flags=re.MULTILINE)
 
-    with open(fileName, "w") as f:
+    with open(file_name, "w") as f:
         f.write(new_text)
 
     return
@@ -48,7 +49,7 @@ insert_in_file('src/CMakeLists.txt',
              '    languages/QOwnNotes_{}.ts'.format(iso_qon))
 insert_in_file('src/QOwnNotes.pro',
              '    languages/QOwnNotes_he.ts \\',
-             '    languages/QOwnNotes_{}.ts \\'.format(iso_qon))
+             r'    languages/QOwnNotes_{}.ts \\'.format(iso_qon))
 insert_in_file('src/debian/qownnotes.install',
              'languages/QOwnNotes_he.qm usr/share/QOwnNotes/languages',
              'languages/QOwnNotes_{}.qm usr/share/QOwnNotes/languages'.format(iso_qon))
@@ -56,5 +57,5 @@ insert_in_file('CHANGELOG.md',
              '# QOwnNotes Changelog',
              '\n- added **XXXX translation** (a big thank you to YYYYY)\n    - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes)\n      to make QOwnNotes available in more languages or help with the current\n      translation')
 
-print 'Translation for "{}" was added. Don\' forget to add the translation to src/dialogs/settingsdialog.ui!'.format(iso_qon)
+print 'Translation for "{}" was added. Don\'t forget to add the translation to src/dialogs/settingsdialog.ui!'.format(iso_qon)
 sys.exit(0)
