@@ -3360,83 +3360,83 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
         <translation>Mesedez, zure QOwnNotesAPI aplikazioa zure zerbitzarian eguneratu, %1 bertsioaren bertsio txikia da eta arazoak sor ditzake QOwnNotes-en.</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1022"/>
+        <location filename="../services/owncloudservice.cpp" line="1023"/>
         <source>ownCloud server connection error</source>
         <translation>ownCloud zerbitzariaren konexio errorea</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1026"/>
+        <location filename="../services/owncloudservice.cpp" line="1027"/>
         <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
         <translation>ownCloud zerbitzariaren errorea: &lt;strong&gt;%1 &lt;/strong&gt; &lt;br /&gt; Mesedez, egiaztatu your ownCloud konfigurazioa.</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1045"/>
+        <location filename="../services/owncloudservice.cpp" line="1046"/>
         <source>You need to setup your ownCloud server!</source>
         <translation>OwnCloud zerbitzaria konfiguratu behar duzu!</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1058"/>
+        <location filename="../services/owncloudservice.cpp" line="1059"/>
         <source>Open &amp;settings</source>
         <translation>Ireki &amp;ezarpenak</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1058"/>
+        <location filename="../services/owncloudservice.cpp" line="1059"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Utzi</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1112"/>
+        <location filename="../services/owncloudservice.cpp" line="1113"/>
         <source>Done with loading note versions</source>
         <translation>Kontuaren bertsioak kargatuta</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1151"/>
+        <location filename="../services/owncloudservice.cpp" line="1152"/>
         <source>No versions found</source>
         <translation>Ez da bertsio aurkitu</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1152"/>
+        <location filename="../services/owncloudservice.cpp" line="1153"/>
         <source>There are no versions for this note or the note wasn&apos;t found on the server.</source>
         <translation>Ez dago ohar honen bertsioik edo oharra ez da zerbitzarian aurkitu.</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1173"/>
+        <location filename="../services/owncloudservice.cpp" line="1174"/>
         <source>Done with loading trashed notes</source>
         <translation>Zabaldu oharrak kargatzean</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1214"/>
+        <location filename="../services/owncloudservice.cpp" line="1215"/>
         <source>No trashed notes</source>
         <translation>Ez da zaborrik oharrik</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1215"/>
+        <location filename="../services/owncloudservice.cpp" line="1216"/>
         <source>No trashed notes were found on the server.</source>
         <translation>Ez da zaborrik oharrik aurkitu zerbitzarian.</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1238"/>
-        <location filename="../services/owncloudservice.cpp" line="1264"/>
+        <location filename="../services/owncloudservice.cpp" line="1239"/>
+        <location filename="../services/owncloudservice.cpp" line="1265"/>
         <source>Error while loading todo lists!</source>
         <translation>Errorea todo zerrendak kargatzean!</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1239"/>
+        <location filename="../services/owncloudservice.cpp" line="1240"/>
         <source>Your CalDAV server didn&apos;t reply anything!</source>
         <translation>CalDAV zerbitzariak ez du ezer erantzun!</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1265"/>
+        <location filename="../services/owncloudservice.cpp" line="1266"/>
         <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
         <translation>Zure CalDAV zerbitzariaren errorea: &lt;strong&gt;%1&lt;/strong&gt;</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1934"/>
+        <location filename="../services/owncloudservice.cpp" line="1935"/>
         <source>No bookmarks</source>
         <translation>Ez dago laster-markarik</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1935"/>
+        <location filename="../services/owncloudservice.cpp" line="1936"/>
         <source>No bookmarks were found on the server.</source>
         <translation>Zerbitzarian ez da laster-marka aurkitu.</translation>
     </message>
@@ -3554,9 +3554,24 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
         <translation>Konexio berria</translation>
     </message>
     <message>
-        <location filename="../entities/cloudconnection.cpp" line="279"/>
+        <location filename="../entities/cloudconnection.cpp" line="281"/>
         <source>Default</source>
         <translation>Lehenetsia</translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="216"/>
+        <source>Note folder not found!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="217"/>
+        <source>Your note folder was not found any more! Do you want to select a new one?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="223"/>
+        <source>Please select the folder where your notes will get stored to</source>
+        <translation type="unfinished">Hautatu zure oharrak non gordeko diren karpeta</translation>
     </message>
 </context>
 <context>
@@ -7124,17 +7139,17 @@ Hau ezin da desegin!</translation>
         <translation>Aplikazioa beste testuinguru batean exekutatzen du ezarpenak eta barne fitxategiak.</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="466"/>
+        <location filename="../main.cpp" line="494"/>
         <source>Single application mode is not supported on your system!</source>
         <translation>Aplikazio bakar modua ez da zure sisteman onartzen!</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="475"/>
+        <location filename="../main.cpp" line="503"/>
         <source>Another instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</source>
         <translation>QOwnNotes-en beste instantzia bat hasi zen dagoeneko! Instantzia bakarreko modua desaktibatu dezakezu ezarpenetan edo erabili parametroa - baimendu - instantzia anitz.</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="507"/>
+        <location filename="../main.cpp" line="535"/>
         <source>A second instance of QOwnNotes was attempted to be started!</source>
         <translation>QOwnNotes-en bigarren instantzia saiatu zen abiarazteko!</translation>
     </message>

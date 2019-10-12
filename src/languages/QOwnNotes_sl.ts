@@ -3435,83 +3435,83 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>Prosimo, razmislite o posodabljanju aplikacije QOwnNotesAPI na strežniku, vaša različica aplikacije %1 je prenizka in lahko povzroči težave v QOwnNotes.</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1022"/>
+        <location filename="../services/owncloudservice.cpp" line="1023"/>
         <source>ownCloud server connection error</source>
         <translation>napaka povezave strežnika ownCloud</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1026"/>
+        <location filename="../services/owncloudservice.cpp" line="1027"/>
         <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
         <translation>napaka strežnika ownCloud: &lt;strong&gt;%1 &lt;/strong&gt; &lt;br /&gt; Preverite konfiguracijo lastnega kluba.</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1045"/>
+        <location filename="../services/owncloudservice.cpp" line="1046"/>
         <source>You need to setup your ownCloud server!</source>
         <translation>Vi potreba v setup strežnik ownCloud!</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1058"/>
+        <location filename="../services/owncloudservice.cpp" line="1059"/>
         <source>Open &amp;settings</source>
         <translation>Odpri &amp;nastavitve</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1058"/>
+        <location filename="../services/owncloudservice.cpp" line="1059"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Prekliči</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1112"/>
+        <location filename="../services/owncloudservice.cpp" line="1113"/>
         <source>Done with loading note versions</source>
         <translation>Z nalaganjem opomba različice</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1151"/>
+        <location filename="../services/owncloudservice.cpp" line="1152"/>
         <source>No versions found</source>
         <translation>Ni najdenih različic</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1152"/>
+        <location filename="../services/owncloudservice.cpp" line="1153"/>
         <source>There are no versions for this note or the note wasn&apos;t found on the server.</source>
         <translation>Za to beležko ni različic ali pa opomba ni bila najdena na strežniku.</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1173"/>
+        <location filename="../services/owncloudservice.cpp" line="1174"/>
         <source>Done with loading trashed notes</source>
         <translation>Končano z nalaganjem odpadkov</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1214"/>
+        <location filename="../services/owncloudservice.cpp" line="1215"/>
         <source>No trashed notes</source>
         <translation>Ni sporočil s smetmi</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1215"/>
+        <location filename="../services/owncloudservice.cpp" line="1216"/>
         <source>No trashed notes were found on the server.</source>
         <translation>Na strežniku ni bilo najdenih nobenih zapisanih sporočil.</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1238"/>
-        <location filename="../services/owncloudservice.cpp" line="1264"/>
+        <location filename="../services/owncloudservice.cpp" line="1239"/>
+        <location filename="../services/owncloudservice.cpp" line="1265"/>
         <source>Error while loading todo lists!</source>
         <translation>Napaka pri nalaganju seznama opravil!</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1239"/>
+        <location filename="../services/owncloudservice.cpp" line="1240"/>
         <source>Your CalDAV server didn&apos;t reply anything!</source>
         <translation>Vaš strežnik CalDAV ni ničesar odgovoril!</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1265"/>
+        <location filename="../services/owncloudservice.cpp" line="1266"/>
         <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
         <translation>Sporočilo o napaki strežnika CalDAV: &lt;strong&gt;%1&lt;/strong&gt;</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1934"/>
+        <location filename="../services/owncloudservice.cpp" line="1935"/>
         <source>No bookmarks</source>
         <translation>Ni zaznamkov</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1935"/>
+        <location filename="../services/owncloudservice.cpp" line="1936"/>
         <source>No bookmarks were found on the server.</source>
         <translation>Na strežniku ni bilo najdenih zaznamkov.</translation>
     </message>
@@ -3633,9 +3633,24 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>Nova povezava</translation>
     </message>
     <message>
-        <location filename="../entities/cloudconnection.cpp" line="279"/>
+        <location filename="../entities/cloudconnection.cpp" line="281"/>
         <source>Default</source>
         <translation>Privzeto</translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="216"/>
+        <source>Note folder not found!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="217"/>
+        <source>Your note folder was not found any more! Do you want to select a new one?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="223"/>
+        <source>Please select the folder where your notes will get stored to</source>
+        <translation type="unfinished">Izberite mapo, v katero bodo shranjene beležke</translation>
     </message>
 </context>
 <context>
@@ -7207,17 +7222,17 @@ To ni mogoče razveljaviti!</translation>
         <translation>Zažene aplikacijo v drugačnem kontekstu za nastavitve in notranje datoteke.</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="466"/>
+        <location filename="../main.cpp" line="494"/>
         <source>Single application mode is not supported on your system!</source>
         <translation>Način posamezne aplikacije ni podprt v vašem sistemu!</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="475"/>
+        <location filename="../main.cpp" line="503"/>
         <source>Another instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</source>
         <translation>Še en primer QOwnNotes se je že začel! V nastavitvah lahko izklopite način posameznega primerka ali uporabite parameter - zdravilo-več-primerkov.</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="507"/>
+        <location filename="../main.cpp" line="535"/>
         <source>A second instance of QOwnNotes was attempted to be started!</source>
         <translation>Poskušali smo začeti z drugim primerom QOwnNotes!</translation>
     </message>

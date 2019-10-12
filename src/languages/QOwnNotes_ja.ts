@@ -3321,83 +3321,83 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
         <translation>あなたのサーバーのQOwnNotesAPI アプリの更新を検討してください。あなたのアプリのバージョン %1 はとても古く、QOwnNotes で問題が発生する可能性があります。</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1022"/>
+        <location filename="../services/owncloudservice.cpp" line="1023"/>
         <source>ownCloud server connection error</source>
         <translation>ownCloud サーバーへの接続エラー</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1026"/>
+        <location filename="../services/owncloudservice.cpp" line="1027"/>
         <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
         <translation>ownCloud サーバーのエラー: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;あなたの ownCloud サーバーの構成を確認してください。</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1045"/>
+        <location filename="../services/owncloudservice.cpp" line="1046"/>
         <source>You need to setup your ownCloud server!</source>
         <translation>あなたの ownCloud サーバーを構成する必要があります！</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1058"/>
+        <location filename="../services/owncloudservice.cpp" line="1059"/>
         <source>Open &amp;settings</source>
         <translation>設定を開く(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1058"/>
+        <location filename="../services/owncloudservice.cpp" line="1059"/>
         <source>&amp;Cancel</source>
         <translation>中止(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1112"/>
+        <location filename="../services/owncloudservice.cpp" line="1113"/>
         <source>Done with loading note versions</source>
         <translation>ノートのバージョン履歴の読み込み完了</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1151"/>
+        <location filename="../services/owncloudservice.cpp" line="1152"/>
         <source>No versions found</source>
         <translation>履歴が見つかりません</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1152"/>
+        <location filename="../services/owncloudservice.cpp" line="1153"/>
         <source>There are no versions for this note or the note wasn&apos;t found on the server.</source>
         <translation>このノートの履歴がないかノートがサーバーにありません。</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1173"/>
+        <location filename="../services/owncloudservice.cpp" line="1174"/>
         <source>Done with loading trashed notes</source>
         <translation>削除したノートの読み込み完了</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1214"/>
+        <location filename="../services/owncloudservice.cpp" line="1215"/>
         <source>No trashed notes</source>
         <translation>削除したノートはありません</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1215"/>
+        <location filename="../services/owncloudservice.cpp" line="1216"/>
         <source>No trashed notes were found on the server.</source>
         <translation>サーバーには削除したノートはありませんでした。</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1238"/>
-        <location filename="../services/owncloudservice.cpp" line="1264"/>
+        <location filename="../services/owncloudservice.cpp" line="1239"/>
+        <location filename="../services/owncloudservice.cpp" line="1265"/>
         <source>Error while loading todo lists!</source>
         <translation>Todo リストの読み込みエラー！</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1239"/>
+        <location filename="../services/owncloudservice.cpp" line="1240"/>
         <source>Your CalDAV server didn&apos;t reply anything!</source>
         <translation>あなたの CalDAV サーバーから応答がありません！</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1265"/>
+        <location filename="../services/owncloudservice.cpp" line="1266"/>
         <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
         <translation>CalDAV サーバーからのエラーメッセージ: &lt;strong&gt;%1&lt;/strong&gt;</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1934"/>
+        <location filename="../services/owncloudservice.cpp" line="1935"/>
         <source>No bookmarks</source>
         <translation type="unfinished">No bookmarks</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1935"/>
+        <location filename="../services/owncloudservice.cpp" line="1936"/>
         <source>No bookmarks were found on the server.</source>
         <translation type="unfinished">No bookmarks were found on the server.</translation>
     </message>
@@ -3513,9 +3513,24 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
         <translation type="unfinished">New connection</translation>
     </message>
     <message>
-        <location filename="../entities/cloudconnection.cpp" line="279"/>
+        <location filename="../entities/cloudconnection.cpp" line="281"/>
         <source>Default</source>
         <translation type="unfinished">Default</translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="216"/>
+        <source>Note folder not found!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="217"/>
+        <source>Your note folder was not found any more! Do you want to select a new one?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="223"/>
+        <source>Please select the folder where your notes will get stored to</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -7081,17 +7096,17 @@ This cannot be undone!</source>
         <translation type="unfinished">Runs the application in a different context for settings and internal files.</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="466"/>
+        <location filename="../main.cpp" line="494"/>
         <source>Single application mode is not supported on your system!</source>
         <translation type="unfinished">Single application mode is not supported on your system!</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="475"/>
+        <location filename="../main.cpp" line="503"/>
         <source>Another instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</source>
         <translation type="unfinished">Another instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="507"/>
+        <location filename="../main.cpp" line="535"/>
         <source>A second instance of QOwnNotes was attempted to be started!</source>
         <translation type="unfinished">A second instance of QOwnNotes was attempted to be started!</translation>
     </message>

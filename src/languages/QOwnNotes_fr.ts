@@ -3358,83 +3358,83 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
         <translation>Veuillez considérer la mise à jour de l&apos;application QOwnNotesAPI sur votre serveur, la version %1 est trop ancienne et peut causer des problèmes dans QOwnNotes.</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1022"/>
+        <location filename="../services/owncloudservice.cpp" line="1023"/>
         <source>ownCloud server connection error</source>
         <translation>erreur de connexion avec le serveur ownCloud</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1026"/>
+        <location filename="../services/owncloudservice.cpp" line="1027"/>
         <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
         <translation>erreur du serveur ownCloud : &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt; Veuillez vérifier votre configuration ownCloud.</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1045"/>
+        <location filename="../services/owncloudservice.cpp" line="1046"/>
         <source>You need to setup your ownCloud server!</source>
         <translation>Vous devez configurer votre serveur ownCloud&#xa0;!</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1058"/>
+        <location filename="../services/owncloudservice.cpp" line="1059"/>
         <source>Open &amp;settings</source>
         <translation>Ouvrir les &amp;paramètres</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1058"/>
+        <location filename="../services/owncloudservice.cpp" line="1059"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Annuler</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1112"/>
+        <location filename="../services/owncloudservice.cpp" line="1113"/>
         <source>Done with loading note versions</source>
         <translation>Téléchargement des versions des notes terminé</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1151"/>
+        <location filename="../services/owncloudservice.cpp" line="1152"/>
         <source>No versions found</source>
         <translation>Pas de versions trouvées</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1152"/>
+        <location filename="../services/owncloudservice.cpp" line="1153"/>
         <source>There are no versions for this note or the note wasn&apos;t found on the server.</source>
         <translation>Il n&apos;y a pas de versions pour cette note ou la note n&apos;a pas été trouvée sur le serveur.</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1173"/>
+        <location filename="../services/owncloudservice.cpp" line="1174"/>
         <source>Done with loading trashed notes</source>
         <translation>Téléchargement des notes de la corbeille terminé</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1214"/>
+        <location filename="../services/owncloudservice.cpp" line="1215"/>
         <source>No trashed notes</source>
         <translation>Pas de notes supprimées</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1215"/>
+        <location filename="../services/owncloudservice.cpp" line="1216"/>
         <source>No trashed notes were found on the server.</source>
         <translation>Pas de notes supprimées sur le serveur.</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1238"/>
-        <location filename="../services/owncloudservice.cpp" line="1264"/>
+        <location filename="../services/owncloudservice.cpp" line="1239"/>
+        <location filename="../services/owncloudservice.cpp" line="1265"/>
         <source>Error while loading todo lists!</source>
         <translation>Erreur lors du chargement des listes de tâches&#xa0;!</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1239"/>
+        <location filename="../services/owncloudservice.cpp" line="1240"/>
         <source>Your CalDAV server didn&apos;t reply anything!</source>
         <translation>Aucune réponse du serveur CalDAV!</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1265"/>
+        <location filename="../services/owncloudservice.cpp" line="1266"/>
         <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
         <translation>Message d’erreur du serveur CalDAV&#xa0;: &lt;strong&gt;%1&lt;/strong&gt;</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1934"/>
+        <location filename="../services/owncloudservice.cpp" line="1935"/>
         <source>No bookmarks</source>
         <translation>Pas de marque-page</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1935"/>
+        <location filename="../services/owncloudservice.cpp" line="1936"/>
         <source>No bookmarks were found on the server.</source>
         <translation>Aucun marque-page sur le serveur.</translation>
     </message>
@@ -3552,9 +3552,24 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
         <translation type="unfinished">New connection</translation>
     </message>
     <message>
-        <location filename="../entities/cloudconnection.cpp" line="279"/>
+        <location filename="../entities/cloudconnection.cpp" line="281"/>
         <source>Default</source>
         <translation type="unfinished">Default</translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="216"/>
+        <source>Note folder not found!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="217"/>
+        <source>Your note folder was not found any more! Do you want to select a new one?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="223"/>
+        <source>Please select the folder where your notes will get stored to</source>
+        <translation type="unfinished">Veuillez sélectionner le dossier où seront stockés vos notes</translation>
     </message>
 </context>
 <context>
@@ -7115,17 +7130,17 @@ Cela ne peut être annuler !</translation>
         <translation>Exécute l’application dans un contexte différent pour les paramètres et fichiers internes.</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="466"/>
+        <location filename="../main.cpp" line="494"/>
         <source>Single application mode is not supported on your system!</source>
         <translation>Le mode d’instance unique n’est pas pris en charge sur votre système&#xa0;!</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="475"/>
+        <location filename="../main.cpp" line="503"/>
         <source>Another instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</source>
         <translation>Une autre instance de QOwnNotes a déjà été démarrée ! Vous pouvez désactiver le mode mono-instance dans les réglages ou alors utiliser le paramètre --allow-multiple-instances.</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="507"/>
+        <location filename="../main.cpp" line="535"/>
         <source>A second instance of QOwnNotes was attempted to be started!</source>
         <translation>Il y a eu une tentative de démarrage d&apos;une seconde instance de QOOwnNotes !</translation>
     </message>

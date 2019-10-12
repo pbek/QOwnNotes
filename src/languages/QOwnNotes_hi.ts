@@ -3360,83 +3360,83 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 कृपया अपने सर्वर पर अपने क्यूंनोटएपीआई ऐप को अपडेट करने पर विचार करें, आपका ऐप संस्करण %1 बहुत कम है और क्यूंनोट में परेशानी का कारण हो सकता है.</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1022"/>
+        <location filename="../services/owncloudservice.cpp" line="1023"/>
         <source>ownCloud server connection error</source>
         <translation>ओनक्लोड सर्वर संपर्क त्रुटि</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1026"/>
+        <location filename="../services/owncloudservice.cpp" line="1027"/>
         <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
         <translation>ओनक्लोड सर्वर त्रुटि: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;कृपया अपना ओनक्लोड व्यवस्था का प्रारूप जांचें.</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1045"/>
+        <location filename="../services/owncloudservice.cpp" line="1046"/>
         <source>You need to setup your ownCloud server!</source>
         <translation>आपको अपना स्वयं का क्लाउड सर्वर सेटअप करने की आवश्यकता है!</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1058"/>
+        <location filename="../services/owncloudservice.cpp" line="1059"/>
         <source>Open &amp;settings</source>
         <translation>खोलें &amp;सेटिंग्स</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1058"/>
+        <location filename="../services/owncloudservice.cpp" line="1059"/>
         <source>&amp;Cancel</source>
         <translation>&amp;रद्द करें</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1112"/>
+        <location filename="../services/owncloudservice.cpp" line="1113"/>
         <source>Done with loading note versions</source>
         <translation>नोट संस्करण लोड करने के साथ किया गया</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1151"/>
+        <location filename="../services/owncloudservice.cpp" line="1152"/>
         <source>No versions found</source>
         <translation>कोई संस्करण नहीं मिला</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1152"/>
+        <location filename="../services/owncloudservice.cpp" line="1153"/>
         <source>There are no versions for this note or the note wasn&apos;t found on the server.</source>
         <translation>इस नोट के लिए कोई संस्करण नहीं हैं या सर्वर पर नोट नहीं मिला।</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1173"/>
+        <location filename="../services/owncloudservice.cpp" line="1174"/>
         <source>Done with loading trashed notes</source>
         <translation>ट्रैश किए नोट लोड करने के साथ किया गया</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1214"/>
+        <location filename="../services/owncloudservice.cpp" line="1215"/>
         <source>No trashed notes</source>
         <translation>कोई ट्रैश किए नोट नहीं</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1215"/>
+        <location filename="../services/owncloudservice.cpp" line="1216"/>
         <source>No trashed notes were found on the server.</source>
         <translation>सर्वर पर कोई ट्रैश किए नोट नहीं मिला।</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1238"/>
-        <location filename="../services/owncloudservice.cpp" line="1264"/>
+        <location filename="../services/owncloudservice.cpp" line="1239"/>
+        <location filename="../services/owncloudservice.cpp" line="1265"/>
         <source>Error while loading todo lists!</source>
         <translation>कार्यसूची सूचियों को लोड करते हुए त्रुटि!</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1239"/>
+        <location filename="../services/owncloudservice.cpp" line="1240"/>
         <source>Your CalDAV server didn&apos;t reply anything!</source>
         <translation>आपके कालदेव सर्वर ने कुछ भी उत्तर नहीं दिया!</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1265"/>
+        <location filename="../services/owncloudservice.cpp" line="1266"/>
         <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
         <translation>त्रुटि संदेश आपके कालदेव सर्वर से: &lt;strong&gt;%1&lt;/strong&gt;</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1934"/>
+        <location filename="../services/owncloudservice.cpp" line="1935"/>
         <source>No bookmarks</source>
         <translation type="unfinished">No bookmarks</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1935"/>
+        <location filename="../services/owncloudservice.cpp" line="1936"/>
         <source>No bookmarks were found on the server.</source>
         <translation type="unfinished">No bookmarks were found on the server.</translation>
     </message>
@@ -3554,9 +3554,24 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished">New connection</translation>
     </message>
     <message>
-        <location filename="../entities/cloudconnection.cpp" line="279"/>
+        <location filename="../entities/cloudconnection.cpp" line="281"/>
         <source>Default</source>
         <translation type="unfinished">Default</translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="216"/>
+        <source>Note folder not found!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="217"/>
+        <source>Your note folder was not found any more! Do you want to select a new one?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="223"/>
+        <source>Please select the folder where your notes will get stored to</source>
+        <translation type="unfinished">कृपया फ़ोल्डर चुनें जहां आपके नोट्स को संग्रहीत किया जाएगा</translation>
     </message>
 </context>
 <context>
@@ -7122,17 +7137,17 @@ This cannot be undone!</translation>
         <translation>सेटिंग्स और आंतरिक फ़ाइलों के लिए एक अलग संदर्भ में एप्लिकेशन को चलाता है।</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="466"/>
+        <location filename="../main.cpp" line="494"/>
         <source>Single application mode is not supported on your system!</source>
         <translation>एकल अनुप्रयोग मोड आपके सिस्टम पर समर्थित नहीं है!</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="475"/>
+        <location filename="../main.cpp" line="503"/>
         <source>Another instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</source>
         <translation>QOwnNotes का एक और उदाहरण पहले ही शुरू कर दिया गया था! आप सेटिंग में एकल आवृत्ति मोड को बंद कर सकते हैं या पैरामीटर का उपयोग कर सकते हैं - कई - उदाहरण।</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="507"/>
+        <location filename="../main.cpp" line="535"/>
         <source>A second instance of QOwnNotes was attempted to be started!</source>
         <translation>QOwnNotes का दूसरा उदाहरण शुरू करने का प्रयास किया गया था!</translation>
     </message>

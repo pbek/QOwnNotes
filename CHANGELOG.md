@@ -1,6 +1,10 @@
 # QOwnNotes Changelog
 
 ## 19.10.5
+- if you start the application but your **note folder wasn't found** you now are
+  able to **select a new note folder** (for [#1307](https://github.com/pbek/QOwnNotes/issues/1307))
+    - you will not get into the *Welcome dialog* any more where your settings
+      will be removed if you cancel it
 - a setting to disable the search result count calculation was added to improve search speed
   in note folders with a lot of notes (for [#1248](https://github.com/pbek/QOwnNotes/issues/1248), thank you @smokris)
 

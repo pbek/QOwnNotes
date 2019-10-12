@@ -208,6 +208,35 @@ bool mainStartupMisc(const QStringList &arguments) {
 
     QDir dir(notesPath);
 
+    // if this isn't the first run but the note folder doesn't exist any more
+    // let the user select another one
+    if (!notesPath.isEmpty() && !dir.exists()) {
+        if (QMessageBox::question(
+                nullptr,
+                QObject::tr("Note folder not found!"),
+                QObject::tr("Your note folder was not found any more! Do you want to select a new one?")) != QMessageBox::Yes) {
+            return false;
+        }
+
+        notesPath = QFileDialog::getExistingDirectory(
+                nullptr,
+                QObject::tr("Please select the folder where your notes will get stored to"),
+                notesPath,
+                QFileDialog::ShowDirsOnly);
+
+        dir = QDir(notesPath);
+
+        if (notesPath.isEmpty() || !dir.exists()) {
+            return false;
+        }
+
+        settings.setValue("notesPath", notesPath);
+
+        // prepend the portable data path if we are in portable mode
+        notesPath = Utils::Misc::prependPortableDataPathIfNeeded(notesPath);
+        dir = QDir(notesPath);
+    }
+
     DatabaseService::createConnection();
     DatabaseService::setupTables();
 
@@ -216,7 +245,6 @@ bool mainStartupMisc(const QStringList &arguments) {
         WelcomeDialog welcomeDialog;
         // exit QOwnNotes if the welcome dialog was canceled
         if (welcomeDialog.exec() != QDialog::Accepted) {
-            QSettings settings;
             settings.clear();
             DatabaseService::removeDiskDatabase();
 
