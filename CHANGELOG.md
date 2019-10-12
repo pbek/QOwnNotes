@@ -7,6 +7,9 @@
       will be removed if you cancel it
 - a setting to disable the search result count calculation was added to improve search speed
   in note folders with a lot of notes (for [#1248](https://github.com/pbek/QOwnNotes/issues/1248), thank you @smokris)
+- added more German, Spanish, Estonian, Korean, Icelandic, Bulgarian, Catalan,
+  Russian, Italian translation (thank you rakekniven, richarson, Fabijenna,
+  MGuerra, unchase, tiwi90)
 
 ## 19.10.4
 - attempted to fix occasional desktop environment session logout interruptions
