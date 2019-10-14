@@ -247,6 +247,7 @@ set(SOURCE_FILES
     libraries/piwiktracker/piwiktracker.h
     libraries/piwiktracker/piwiktracker.cpp
     libraries/botan/botan.h
+    libraries/botan/botan_internal.h    
     libraries/botan/botan.cpp
     libraries/botan/botanwrapper.h
     libraries/botan/botanwrapper.cpp
