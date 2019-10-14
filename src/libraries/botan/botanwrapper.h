@@ -91,7 +91,7 @@ private:
     /*!
     * The botan libary initilizer
     */
-    Botan::LibraryInitializer mInit;
+    //Botan::LibraryInitializer mInit;
 
     /*!
     * The Salt
