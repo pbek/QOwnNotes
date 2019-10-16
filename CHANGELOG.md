@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 19.10.6
+- the Botan library for encrypting notes was updated to **Botan 2.0**
+  (for [#1263](https://github.com/pbek/QOwnNotes/issues/1263), thank you @Waqar144)
+
 ## 19.10.5
 - if you start the application but your **note folder wasn't found** you now are
   able to **select a new note folder** (for [#1307](https://github.com/pbek/QOwnNotes/issues/1307))

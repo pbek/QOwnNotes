@@ -24,7 +24,9 @@ private Q_SLOTS:
     void initTestCase();
     void cleanupTestCase();
     void testNoteCreating();
-
+    void testNoteEncryption();
+    void testNoteDecryption();
+    void testNoteDecryptionFail();
 };
 
 #endif // TESTNOTES_H
