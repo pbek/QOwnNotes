@@ -9,6 +9,7 @@
 #include <QFileDialog>
 #include <QSettings>
 #include <QClipboard>
+#include <QMenu>
 #include "helpers/htmlentities.h"
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
@@ -44,6 +45,8 @@ LinkDialog::LinkDialog(QString dialogTitle, QWidget *parent) :
     if (url.isValid() && !url.scheme().isEmpty()) {
         ui->urlEdit->setText(text);
     }
+
+    setupFileUrlMenu();
 }
 
 LinkDialog::~LinkDialog() {
@@ -206,7 +209,7 @@ QString LinkDialog::getTitleForUrl(const QUrl& url) {
 /**
  * Selects a local file to link to
  */
-void LinkDialog::on_fileUrlButton_clicked() {
+void LinkDialog::addFileUrl() {
     QSettings settings;
     // load last url
     QUrl fileUrl = settings.value("LinkDialog/lastSelectedFileUrl").toUrl();
@@ -235,6 +238,38 @@ void LinkDialog::on_fileUrlButton_clicked() {
     }
 }
 
+/**
+ * Selects a local directory to link to
+ */
+void LinkDialog::addDirectoryUrl() {
+    QSettings settings;
+    // load last url
+    QUrl directoryUrl = settings.value("LinkDialog/lastSelectedDirectoryUrl").toUrl();
+
+    if (Utils::Misc::isInPortableMode()) {
+        directoryUrl = QUrl("file://" + Utils::Misc::prependPortableDataPathIfNeeded(
+                Utils::Misc::removeIfStartsWith(directoryUrl.toLocalFile(), "/")));
+    }
+
+    directoryUrl = QFileDialog::getExistingDirectoryUrl(this, tr("Select directory to link to"),
+                                                        directoryUrl);
+    QString directoryUrlString = directoryUrl.toString(QUrl::FullyEncoded);
+
+    if (Utils::Misc::isInPortableMode()) {
+        directoryUrlString = "file://" + QUrl("../" +
+                Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(
+                        directoryUrl.toLocalFile())).toString(QUrl::FullyEncoded);
+    }
+
+    if (!directoryUrlString.isEmpty()) {
+        // store url for the next time
+        settings.setValue("LinkDialog/lastSelectedDirectoryUrl", directoryUrlString);
+
+        // write the directory-url to the url text-edit
+        ui->urlEdit->setText(directoryUrlString);
+    }
+}
+
 void LinkDialog::on_urlEdit_textChanged(const QString &arg1) {
     auto url = QUrl(arg1);
 
@@ -250,4 +285,26 @@ void LinkDialog::on_urlEdit_textChanged(const QString &arg1) {
             ui->nameLineEdit->setText(title);
         }
     }
+}
+
+void LinkDialog::setupFileUrlMenu() {
+    auto *addMenu = new QMenu(this);
+
+    QAction *addFileAction = addMenu->addAction(
+            tr("Select file to link to"));
+    addFileAction->setIcon(QIcon::fromTheme(
+            "document-open",
+            QIcon(":icons/breeze-qownnotes/16x16/document-open.svg")));
+    connect(addFileAction, SIGNAL(triggered()),
+            this, SLOT(addFileUrl()));
+
+    QAction *addDirectoryAction = addMenu->addAction(
+            tr("Select directory to link to"));
+    addDirectoryAction->setIcon(QIcon::fromTheme(
+            "folder",
+            QIcon(":icons/breeze-qownnotes/16x16/folder.svg")));
+    connect(addDirectoryAction, SIGNAL(triggered()),
+            this, SLOT(addDirectoryUrl()));
+
+    ui->fileUrlButton->setMenu(addMenu);
 }

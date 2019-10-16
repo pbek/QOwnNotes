@@ -27,12 +27,13 @@ public:
 private slots:
     void on_searchLineEdit_textChanged(const QString &arg1);
     void on_notesListWidget_doubleClicked(const QModelIndex &index);
-    void on_fileUrlButton_clicked();
     void on_urlEdit_textChanged(const QString &arg1);
-
+    void addFileUrl();
+    void addDirectoryUrl();
 private:
     Ui::LinkDialog *ui;
     int firstVisibleNoteListRow;
     bool eventFilter(QObject *obj, QEvent *event);
     QString selectedNoteText;
+    void setupFileUrlMenu();
 };

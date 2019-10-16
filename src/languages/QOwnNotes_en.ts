@@ -864,13 +864,18 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/linkdialog.ui" line="61"/>
+        <location filename="../dialogs/linkdialog.ui" line="51"/>
         <source>Enter URL</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/linkdialog.ui" line="70"/>
+        <location filename="../dialogs/linkdialog.ui" line="60"/>
         <source>Enter an URL to link to</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/linkdialog.ui" line="83"/>
+        <source>Select local file or directory to link to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -909,13 +914,15 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/linkdialog.ui" line="51"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;select local file to link to&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <location filename="../dialogs/linkdialog.cpp" line="222"/>
+        <location filename="../dialogs/linkdialog.cpp" line="294"/>
+        <source>Select file to link to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/linkdialog.cpp" line="219"/>
-        <source>Select file to link to</source>
+        <location filename="../dialogs/linkdialog.cpp" line="254"/>
+        <location filename="../dialogs/linkdialog.cpp" line="302"/>
+        <source>Select directory to link to</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

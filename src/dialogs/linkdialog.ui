@@ -45,16 +45,6 @@
          <property name="bottomMargin">
           <number>0</number>
          </property>
-         <item row="1" column="2">
-          <widget class="QToolButton" name="fileUrlButton">
-           <property name="toolTip">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;select local file to link to&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-           </property>
-           <property name="text">
-            <string notr="true">…</string>
-           </property>
-          </widget>
-         </item>
          <item row="1" column="1">
           <widget class="QLineEdit" name="urlEdit">
            <property name="statusTip">
@@ -86,6 +76,16 @@
             </size>
            </property>
           </spacer>
+         </item>
+         <item row="1" column="2">
+          <widget class="QPushButton" name="fileUrlButton">
+           <property name="toolTip">
+            <string>Select local file or directory to link to</string>
+           </property>
+           <property name="text">
+            <string notr="true">…</string>
+           </property>
+          </widget>
          </item>
         </layout>
        </widget>

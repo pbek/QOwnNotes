@@ -1,6 +1,9 @@
 # QOwnNotes Changelog
 
 ## 19.10.6
+- it is now also possible to **link to directories** in the *Link dialog*
+  (for [#1308](https://github.com/pbek/QOwnNotes/issues/1308))
+    - your local file manager should open if you click on those links
 - the Botan library for encrypting notes was updated to **Botan 2.0**
   (for [#1263](https://github.com/pbek/QOwnNotes/issues/1263), thank you @Waqar144)
 
