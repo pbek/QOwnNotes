@@ -7,6 +7,9 @@ set(CMAKE_AUTOUIC ON)
 #set(CMAKE_AUTORCC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
+# include some Botan settings
+include(libraries/botan/CMakeLists.txt)
+
 find_package( Qt5LinguistTools )
 find_package( Qt5Core 5.3 REQUIRED )
 find_package( Qt5Widgets REQUIRED )
