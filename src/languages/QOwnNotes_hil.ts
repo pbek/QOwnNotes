@@ -867,14 +867,19 @@
       <translation>I-konek ang url ukon listahan</translation>
     </message>
     <message>
-      <location filename="../dialogs/linkdialog.ui" line="61"/>
+      <location filename="../dialogs/linkdialog.ui" line="51"/>
       <source>Enter URL</source>
       <translation>Pasulod ang url</translation>
     </message>
     <message>
-      <location filename="../dialogs/linkdialog.ui" line="70"/>
+      <location filename="../dialogs/linkdialog.ui" line="60"/>
       <source>Enter an URL to link to</source>
       <translation>Ipasulod ang url kag i-konekta sa</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/linkdialog.ui" line="83"/>
+      <source>Select local file or directory to link to</source>
+      <translation type="unfinished">Select local file or directory to link to</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="94"/>
@@ -912,14 +917,16 @@
       <translation>Pangita-on para ang listahan para makakonek sa</translation>
     </message>
     <message>
-      <location filename="../dialogs/linkdialog.ui" line="51"/>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;select local file to link to&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;pili-a ang lokal nga papeles para maka konek sa&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/linkdialog.cpp" line="219"/>
+      <location filename="../dialogs/linkdialog.cpp" line="222"/>
+      <location filename="../dialogs/linkdialog.cpp" line="294"/>
       <source>Select file to link to</source>
       <translation>Pili-on ang papeles para makakonek sa</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/linkdialog.cpp" line="254"/>
+      <location filename="../dialogs/linkdialog.cpp" line="302"/>
+      <source>Select directory to link to</source>
+      <translation type="unfinished">Select directory to link to</translation>
     </message>
   </context>
   <context>

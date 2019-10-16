@@ -6,6 +6,9 @@
     - your local file manager should open if you click on those links
 - the Botan library for encrypting notes was updated to **Botan 2.12**
   (for [#1263](https://github.com/pbek/QOwnNotes/issues/1263), thank you @Waqar144)
+- added more Indonesian, Punjabi, Spanish, Catalan, Polish, Russian, Brazilian Portuguese,
+  Greek, Italian, German translation (thank you zmni, Fabijenna, DixTheDev,
+  MGuerra, lucjan, unchase, mlimacarlos, athrouss, tiwi90, rakekniven)
 
 ## 19.10.5
 - if you start the application but your **note folder wasn't found** you now are
