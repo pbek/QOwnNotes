@@ -2351,6 +2351,17 @@
                        </item>
                        <item>
                         <property name="text">
+                         <string notr="true">한국어</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Korean</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">ko</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
                          <string notr="true">Magyar</string>
                         </property>
                         <property name="toolTip">

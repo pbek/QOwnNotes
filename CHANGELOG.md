@@ -7,6 +7,10 @@
 - if you press <kbd>Return</kbd> in a checkbox list the next line will now be
   started with an unchecked checkbox, regardless if the checkbox in the current
   line was checked or not
+- added **Korean translation** (a big thank you to Fabijenna)
+    - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes)
+      to make QOwnNotes available in more languages or help with the current
+      translation
 
 ## 19.10.6
 - it is now also possible to **link to directories** in the *Link dialog*
