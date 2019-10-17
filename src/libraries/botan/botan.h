@@ -31,7 +31,7 @@
 
 /*
 * This file was automatically generated running
-* 'configure.py --cc=gcc --cc-bin=g++ --cpu=x86_64 --amalgamation --minimized-build --disable-shared --enable-modules=aes,aes_ni,aes_vperm,rng,base,base32,base58,base64,pbkdf,bigint,block,cbc,cbc_mac,checksum,cmac,codec_filt,cpuid,crc24,crc32,filters,hash,hash_id,hex,hkdf,hmac,hmac_drbg,kdf,kdf1,kdf1_iso18033,kdf2,md4,md5,pbkdf,pbkdf1,pbkdf2,sha1,sha1_sse2,sha1_x86 --without-documentation --cxxflags=-pipe -Wno-unused-parameter -fPIC'
+* 'configure.py --cc=gcc --cc-bin=g++ --cpu=x86_64 --amalgamation --minimized-build --disable-shared --enable-modules=aes,base,base64,block,cbc,cbc_mac,checksum,cmac,codec_filt,filters,hash,hash_id,hex,hmac,hmac_drbg,kdf,kdf2,pbkdf,pbkdf2,sha1 --without-documentation --disable-sse2 --disable-ssse3 --disable-sse4.1 --disable-sse4.2 --disable-aes-ni --disable-sha-ni --cxxflags=-pipe -Wno-unused-parameter -fPIC'
 *
 * Target
 *  - Compiler: g++ -fstack-protector -m64 -pthread -std=c++11 -D_REENTRANT -pipe -Wno-unused-parameter -fPIC
@@ -92,16 +92,11 @@
 #define BOTAN_TARGET_CPU_IS_X86_FAMILY
 //#define BOTAN_TARGET_CPU_HAS_NATIVE_64BIT
 
-#define BOTAN_TARGET_SUPPORTS_AESNI
 #define BOTAN_TARGET_SUPPORTS_AVX2
 #define BOTAN_TARGET_SUPPORTS_BMI2
 #define BOTAN_TARGET_SUPPORTS_RDRAND
 #define BOTAN_TARGET_SUPPORTS_RDSEED
 #define BOTAN_TARGET_SUPPORTS_SHA
-#define BOTAN_TARGET_SUPPORTS_SSE2
-#define BOTAN_TARGET_SUPPORTS_SSE41
-#define BOTAN_TARGET_SUPPORTS_SSE42
-#define BOTAN_TARGET_SUPPORTS_SSSE3
 
 
 
@@ -112,11 +107,7 @@
 * Module availability definitions
 */
 #define BOTAN_HAS_AES 20131128
-#define BOTAN_HAS_AES_NI 20131128
-#define BOTAN_HAS_AES_VPERM 20190901
 #define BOTAN_HAS_ASN1 20171109
-#define BOTAN_HAS_BASE32_CODEC 20180418
-#define BOTAN_HAS_BASE58_CODEC 20181209
 #define BOTAN_HAS_BASE64_CODEC 20131128
 #define BOTAN_HAS_BIGINT 20131128
 #define BOTAN_HAS_BIGINT_MP 20151225
@@ -127,39 +118,27 @@
 #define BOTAN_HAS_CMAC 20131128
 #define BOTAN_HAS_CODEC_FILTERS 20131128
 #define BOTAN_HAS_CPUID 20170917
-#define BOTAN_HAS_CRC24 20131128
-#define BOTAN_HAS_CRC32 20131128
 #define BOTAN_HAS_ENTROPY_SOURCE 20151120
 #define BOTAN_HAS_FILTERS 20160415
 #define BOTAN_HAS_HASH 20180112
 #define BOTAN_HAS_HASH_ID 20131128
 #define BOTAN_HAS_HEX_CODEC 20131128
-#define BOTAN_HAS_HKDF 20170927
 #define BOTAN_HAS_HMAC 20131128
 #define BOTAN_HAS_HMAC_DRBG 20140319
-#define BOTAN_HAS_KDF1 20131128
-#define BOTAN_HAS_KDF1_18033 20160128
 #define BOTAN_HAS_KDF2 20131128
 #define BOTAN_HAS_KDF_BASE 20131128
 #define BOTAN_HAS_MAC 20150626
-#define BOTAN_HAS_MD4 20131128
-#define BOTAN_HAS_MD5 20131128
 #define BOTAN_HAS_MDX_HASH_FUNCTION 20131128
 #define BOTAN_HAS_MODES 20150626
 #define BOTAN_HAS_MODE_CBC 20131128
 #define BOTAN_HAS_NUMBERTHEORY 20131128
 #define BOTAN_HAS_PBKDF 20180902
-#define BOTAN_HAS_PBKDF1 20131128
 #define BOTAN_HAS_PBKDF2 20180902
 #define BOTAN_HAS_PEM_CODEC 20131128
 #define BOTAN_HAS_PK_PADDING 20131128
 #define BOTAN_HAS_POLY_DBL 20170927
 #define BOTAN_HAS_PUBLIC_KEY_CRYPTO 20131128
 #define BOTAN_HAS_SHA1 20131128
-#define BOTAN_HAS_SHA1_SSE2 20160803
-#define BOTAN_HAS_SHA1_X86_SHA_NI 20170518
-#define BOTAN_HAS_SHA2_32 20131128
-#define BOTAN_HAS_SIMD_32 20131128
 #define BOTAN_HAS_STATEFUL_RNG 20160819
 #define BOTAN_HAS_UTIL_FUNCTIONS 20180903
 
@@ -2942,188 +2921,6 @@ bool BOTAN_PUBLIC_API(2,0) operator<(const X509_Time&, const X509_Time&);
 bool BOTAN_PUBLIC_API(2,0) operator>(const X509_Time&, const X509_Time&);
 
 typedef X509_Time ASN1_Time;
-
-}
-
-namespace Botan {
-
-/**
-* Perform base32 encoding
-* @param output an array of at least base32_encode_max_output bytes
-* @param input is some binary data
-* @param input_length length of input in bytes
-* @param input_consumed is an output parameter which says how many
-*        bytes of input were actually consumed. If less than
-*        input_length, then the range input[consumed:length]
-*        should be passed in later along with more input.
-* @param final_inputs true iff this is the last input, in which case
-         padding chars will be applied if needed
-* @return number of bytes written to output
-*/
-size_t BOTAN_PUBLIC_API(2, 7) base32_encode(char output[],
-      const uint8_t input[],
-      size_t input_length,
-      size_t& input_consumed,
-      bool final_inputs);
-
-/**
-* Perform base32 encoding
-* @param input some input
-* @param input_length length of input in bytes
-* @return base32 representation of input
-*/
-std::string BOTAN_PUBLIC_API(2, 7) base32_encode(const uint8_t input[],
-      size_t input_length);
-
-/**
-* Perform base32 encoding
-* @param input some input
-* @return base32 representation of input
-*/
-template <typename Alloc>
-std::string base32_encode(const std::vector<uint8_t, Alloc>& input)
-   {
-   return base32_encode(input.data(), input.size());
-   }
-
-/**
-* Perform base32 decoding
-* @param output an array of at least base32_decode_max_output bytes
-* @param input some base32 input
-* @param input_length length of input in bytes
-* @param input_consumed is an output parameter which says how many
-*        bytes of input were actually consumed. If less than
-*        input_length, then the range input[consumed:length]
-*        should be passed in later along with more input.
-* @param final_inputs true iff this is the last input, in which case
-         padding is allowed
-* @param ignore_ws ignore whitespace on input; if false, throw an
-                   exception if whitespace is encountered
-* @return number of bytes written to output
-*/
-size_t BOTAN_PUBLIC_API(2, 7) base32_decode(uint8_t output[],
-      const char input[],
-      size_t input_length,
-      size_t& input_consumed,
-      bool final_inputs,
-      bool ignore_ws = true);
-
-/**
-* Perform base32 decoding
-* @param output an array of at least base32_decode_max_output bytes
-* @param input some base32 input
-* @param input_length length of input in bytes
-* @param ignore_ws ignore whitespace on input; if false, throw an
-                   exception if whitespace is encountered
-* @return number of bytes written to output
-*/
-size_t BOTAN_PUBLIC_API(2, 7) base32_decode(uint8_t output[],
-      const char input[],
-      size_t input_length,
-      bool ignore_ws = true);
-
-/**
-* Perform base32 decoding
-* @param output an array of at least base32_decode_max_output bytes
-* @param input some base32 input
-* @param ignore_ws ignore whitespace on input; if false, throw an
-                   exception if whitespace is encountered
-* @return number of bytes written to output
-*/
-size_t BOTAN_PUBLIC_API(2, 7) base32_decode(uint8_t output[],
-      const std::string& input,
-      bool ignore_ws = true);
-
-/**
-* Perform base32 decoding
-* @param input some base32 input
-* @param input_length the length of input in bytes
-* @param ignore_ws ignore whitespace on input; if false, throw an
-                   exception if whitespace is encountered
-* @return decoded base32 output
-*/
-secure_vector<uint8_t> BOTAN_PUBLIC_API(2, 7) base32_decode(const char input[],
-      size_t input_length,
-      bool ignore_ws = true);
-
-/**
-* Perform base32 decoding
-* @param input some base32 input
-* @param ignore_ws ignore whitespace on input; if false, throw an
-                   exception if whitespace is encountered
-* @return decoded base32 output
-*/
-secure_vector<uint8_t> BOTAN_PUBLIC_API(2, 7) base32_decode(const std::string& input,
-      bool ignore_ws = true);
-
-} // namespace Botan
-
-namespace Botan {
-
-/**
-* Perform base58 encoding
-*
-* This is raw base58 encoding, without the checksum
-*/
-std::string
-BOTAN_PUBLIC_API(2,9) base58_encode(const uint8_t input[],
-                                    size_t input_length);
-
-/**
-* Perform base58 encoding
-*
-* This is raw base58 encoding, without the checksum
-*/
-/**
-* Perform base58 encoding with checksum
-*/
-std::string
-BOTAN_PUBLIC_API(2,9) base58_check_encode(const uint8_t input[],
-                                          size_t input_length);
-
-
-/**
-* Perform base58 decoding
-*
-* This is raw base58 encoding, without the checksum
-*/
-std::vector<uint8_t>
-BOTAN_PUBLIC_API(2,9) base58_decode(const char input[],
-                                    size_t input_length);
-
-/**
-* Perform base58 decoding with checksum
-*
-* This is raw base58 encoding, without the checksum
-*/
-std::vector<uint8_t>
-BOTAN_PUBLIC_API(2,9) base58_check_decode(const char input[],
-                                          size_t input_length);
-
-
-// Some convenience wrappers:
-
-template<typename Alloc>
-inline std::string base58_encode(const std::vector<uint8_t, Alloc>& vec)
-   {
-   return base58_encode(vec.data(), vec.size());
-   }
-
-template<typename Alloc>
-inline std::string base58_check_encode(const std::vector<uint8_t, Alloc>& vec)
-   {
-   return base58_check_encode(vec.data(), vec.size());
-   }
-
-inline std::vector<uint8_t> base58_decode(const std::string& s)
-   {
-   return base58_decode(s.data(), s.size());
-   }
-
-inline std::vector<uint8_t> base58_check_decode(const std::string& s)
-   {
-   return base58_check_decode(s.data(), s.size());
-   }
 
 }
 
@@ -6838,136 +6635,6 @@ class BOTAN_PUBLIC_API(2,1) CPUID final
 
 }
 
-namespace Botan {
-
-/**
-* This class represents hash function (message digest) objects
-*/
-class BOTAN_PUBLIC_API(2,0) HashFunction : public Buffered_Computation
-   {
-   public:
-      /**
-      * Create an instance based on a name, or return null if the
-      * algo/provider combination cannot be found. If provider is
-      * empty then best available is chosen.
-      */
-      static std::unique_ptr<HashFunction>
-         create(const std::string& algo_spec,
-                const std::string& provider = "");
-
-      /**
-      * Create an instance based on a name
-      * If provider is empty then best available is chosen.
-      * @param algo_spec algorithm name
-      * @param provider provider implementation to use
-      * Throws Lookup_Error if not found.
-      */
-      static std::unique_ptr<HashFunction>
-         create_or_throw(const std::string& algo_spec,
-                         const std::string& provider = "");
-
-      /**
-      * @return list of available providers for this algorithm, empty if not available
-      * @param algo_spec algorithm name
-      */
-      static std::vector<std::string> providers(const std::string& algo_spec);
-
-      /**
-      * @return new object representing the same algorithm as *this
-      */
-      virtual HashFunction* clone() const = 0;
-
-      /**
-      * @return provider information about this implementation. Default is "base",
-      * might also return "sse2", "avx2", "openssl", or some other arbitrary string.
-      */
-      virtual std::string provider() const { return "base"; }
-
-      virtual ~HashFunction() = default;
-
-      /**
-      * Reset the state.
-      */
-      virtual void clear() = 0;
-
-      /**
-      * @return the hash function name
-      */
-      virtual std::string name() const = 0;
-
-      /**
-      * @return hash block size as defined for this algorithm
-      */
-      virtual size_t hash_block_size() const { return 0; }
-
-      /**
-      * Return a new hash object with the same state as *this. This
-      * allows computing the hash of several messages with a common
-      * prefix more efficiently than would otherwise be possible.
-      *
-      * This function should be called `clone` but that was already
-      * used for the case of returning an uninitialized object.
-      * @return new hash object
-      */
-      virtual std::unique_ptr<HashFunction> copy_state() const = 0;
-   };
-
-}
-
-BOTAN_FUTURE_INTERNAL_HEADER(crc24.h)
-
-namespace Botan {
-
-/**
-* 24-bit cyclic redundancy check
-*/
-class BOTAN_PUBLIC_API(2,0) CRC24 final : public HashFunction
-   {
-   public:
-      std::string name() const override { return "CRC24"; }
-      size_t output_length() const override { return 3; }
-      HashFunction* clone() const override { return new CRC24; }
-      std::unique_ptr<HashFunction> copy_state() const override;
-
-      void clear() override { m_crc = 0XCE04B7L; }
-
-      CRC24() { clear(); }
-      ~CRC24() { clear(); }
-   private:
-      void add_data(const uint8_t[], size_t) override;
-      void final_result(uint8_t[]) override;
-      uint32_t m_crc;
-   };
-
-}
-
-BOTAN_FUTURE_INTERNAL_HEADER(crc32.h)
-
-namespace Botan {
-
-/**
-* 32-bit cyclic redundancy check
-*/
-class BOTAN_PUBLIC_API(2,0) CRC32 final : public HashFunction
-   {
-   public:
-      std::string name() const override { return "CRC32"; }
-      size_t output_length() const override { return 4; }
-      HashFunction* clone() const override { return new CRC32; }
-      std::unique_ptr<HashFunction> copy_state() const override;
-
-      void clear() override { m_crc = 0xFFFFFFFF; }
-
-      CRC32() { clear(); }
-      ~CRC32() { clear(); }
-   private:
-      void add_data(const uint8_t[], size_t) override;
-      void final_result(uint8_t[]) override;
-      uint32_t m_crc;
-   };
-
-}
-
 BOTAN_FUTURE_INTERNAL_HEADER(curve_nistp.h)
 
 namespace Botan {
@@ -8505,6 +8172,82 @@ BOTAN_PUBLIC_API(2,0) std::istream& operator>>(std::istream& in, Pipe& pipe);
 #endif
 
 #if defined(BOTAN_HAS_HASH)
+
+namespace Botan {
+
+/**
+* This class represents hash function (message digest) objects
+*/
+class BOTAN_PUBLIC_API(2,0) HashFunction : public Buffered_Computation
+   {
+   public:
+      /**
+      * Create an instance based on a name, or return null if the
+      * algo/provider combination cannot be found. If provider is
+      * empty then best available is chosen.
+      */
+      static std::unique_ptr<HashFunction>
+         create(const std::string& algo_spec,
+                const std::string& provider = "");
+
+      /**
+      * Create an instance based on a name
+      * If provider is empty then best available is chosen.
+      * @param algo_spec algorithm name
+      * @param provider provider implementation to use
+      * Throws Lookup_Error if not found.
+      */
+      static std::unique_ptr<HashFunction>
+         create_or_throw(const std::string& algo_spec,
+                         const std::string& provider = "");
+
+      /**
+      * @return list of available providers for this algorithm, empty if not available
+      * @param algo_spec algorithm name
+      */
+      static std::vector<std::string> providers(const std::string& algo_spec);
+
+      /**
+      * @return new object representing the same algorithm as *this
+      */
+      virtual HashFunction* clone() const = 0;
+
+      /**
+      * @return provider information about this implementation. Default is "base",
+      * might also return "sse2", "avx2", "openssl", or some other arbitrary string.
+      */
+      virtual std::string provider() const { return "base"; }
+
+      virtual ~HashFunction() = default;
+
+      /**
+      * Reset the state.
+      */
+      virtual void clear() = 0;
+
+      /**
+      * @return the hash function name
+      */
+      virtual std::string name() const = 0;
+
+      /**
+      * @return hash block size as defined for this algorithm
+      */
+      virtual size_t hash_block_size() const { return 0; }
+
+      /**
+      * Return a new hash object with the same state as *this. This
+      * allows computing the hash of several messages with a common
+      * prefix more efficiently than would otherwise be possible.
+      *
+      * This function should be called `clone` but that was already
+      * used for the case of returning an uninitialized object.
+      * @return new hash object
+      */
+      virtual std::unique_ptr<HashFunction> copy_state() const = 0;
+   };
+
+}
 #endif
 
 #if defined(BOTAN_HAS_MAC)
@@ -9373,289 +9116,6 @@ hex_decode_locked(const std::string& input,
 
 }
 
-namespace Botan {
-
-/**
-* Key Derivation Function
-*/
-class BOTAN_PUBLIC_API(2,0) KDF
-   {
-   public:
-      virtual ~KDF() = default;
-
-      /**
-      * Create an instance based on a name
-      * If provider is empty then best available is chosen.
-      * @param algo_spec algorithm name
-      * @param provider provider implementation to choose
-      * @return a null pointer if the algo/provider combination cannot be found
-      */
-      static std::unique_ptr<KDF>
-         create(const std::string& algo_spec,
-                const std::string& provider = "");
-
-      /**
-      * Create an instance based on a name, or throw if the
-      * algo/provider combination cannot be found. If provider is
-      * empty then best available is chosen.
-      */
-      static std::unique_ptr<KDF>
-         create_or_throw(const std::string& algo_spec,
-                         const std::string& provider = "");
-
-      /**
-      * @return list of available providers for this algorithm, empty if not available
-      */
-      static std::vector<std::string> providers(const std::string& algo_spec);
-
-      /**
-      * @return KDF name
-      */
-      virtual std::string name() const = 0;
-
-      /**
-      * Derive a key
-      * @param key buffer holding the derived key, must be of length key_len
-      * @param key_len the desired output length in bytes
-      * @param secret the secret input
-      * @param secret_len size of secret in bytes
-      * @param salt a diversifier
-      * @param salt_len size of salt in bytes
-      * @param label purpose for the derived keying material
-      * @param label_len size of label in bytes
-      * @return the derived key
-      */
-      virtual size_t kdf(uint8_t key[], size_t key_len,
-                         const uint8_t secret[], size_t secret_len,
-                         const uint8_t salt[], size_t salt_len,
-                         const uint8_t label[], size_t label_len) const = 0;
-
-      /**
-      * Derive a key
-      * @param key_len the desired output length in bytes
-      * @param secret the secret input
-      * @param secret_len size of secret in bytes
-      * @param salt a diversifier
-      * @param salt_len size of salt in bytes
-      * @param label purpose for the derived keying material
-      * @param label_len size of label in bytes
-      * @return the derived key
-      */
-      secure_vector<uint8_t> derive_key(size_t key_len,
-                                    const uint8_t secret[],
-                                    size_t secret_len,
-                                    const uint8_t salt[],
-                                    size_t salt_len,
-                                    const uint8_t label[] = nullptr,
-                                    size_t label_len = 0) const
-         {
-         secure_vector<uint8_t> key(key_len);
-         key.resize(kdf(key.data(), key.size(), secret, secret_len, salt, salt_len, label, label_len));
-         return key;
-         }
-
-      /**
-      * Derive a key
-      * @param key_len the desired output length in bytes
-      * @param secret the secret input
-      * @param salt a diversifier
-      * @param label purpose for the derived keying material
-      * @return the derived key
-      */
-      secure_vector<uint8_t> derive_key(size_t key_len,
-                                    const secure_vector<uint8_t>& secret,
-                                    const std::string& salt = "",
-                                    const std::string& label = "") const
-         {
-         return derive_key(key_len, secret.data(), secret.size(),
-                           cast_char_ptr_to_uint8(salt.data()),
-                           salt.length(),
-                           cast_char_ptr_to_uint8(label.data()),
-                           label.length());
-
-         }
-
-      /**
-      * Derive a key
-      * @param key_len the desired output length in bytes
-      * @param secret the secret input
-      * @param salt a diversifier
-      * @param label purpose for the derived keying material
-      * @return the derived key
-      */
-      template<typename Alloc, typename Alloc2, typename Alloc3>
-      secure_vector<uint8_t> derive_key(size_t key_len,
-                                     const std::vector<uint8_t, Alloc>& secret,
-                                     const std::vector<uint8_t, Alloc2>& salt,
-                                     const std::vector<uint8_t, Alloc3>& label) const
-         {
-         return derive_key(key_len,
-                           secret.data(), secret.size(),
-                           salt.data(), salt.size(),
-                           label.data(), label.size());
-         }
-
-      /**
-      * Derive a key
-      * @param key_len the desired output length in bytes
-      * @param secret the secret input
-      * @param salt a diversifier
-      * @param salt_len size of salt in bytes
-      * @param label purpose for the derived keying material
-      * @return the derived key
-      */
-      secure_vector<uint8_t> derive_key(size_t key_len,
-                                    const secure_vector<uint8_t>& secret,
-                                    const uint8_t salt[],
-                                    size_t salt_len,
-                                    const std::string& label = "") const
-         {
-         return derive_key(key_len,
-                           secret.data(), secret.size(),
-                           salt, salt_len,
-                           cast_char_ptr_to_uint8(label.data()),
-                           label.size());
-         }
-
-      /**
-      * Derive a key
-      * @param key_len the desired output length in bytes
-      * @param secret the secret input
-      * @param secret_len size of secret in bytes
-      * @param salt a diversifier
-      * @param label purpose for the derived keying material
-      * @return the derived key
-      */
-      secure_vector<uint8_t> derive_key(size_t key_len,
-                                    const uint8_t secret[],
-                                    size_t secret_len,
-                                    const std::string& salt = "",
-                                    const std::string& label = "") const
-         {
-         return derive_key(key_len, secret, secret_len,
-                           cast_char_ptr_to_uint8(salt.data()),
-                           salt.length(),
-                           cast_char_ptr_to_uint8(label.data()),
-                           label.length());
-         }
-
-      /**
-      * @return new object representing the same algorithm as *this
-      */
-      virtual KDF* clone() const = 0;
-   };
-
-/**
-* Factory method for KDF (key derivation function)
-* @param algo_spec the name of the KDF to create
-* @return pointer to newly allocated object of that type
-*/
-BOTAN_PUBLIC_API(2,0) KDF* get_kdf(const std::string& algo_spec);
-
-}
-
-/*
-* The definitions of HKDF, HKDF_Extract, HKDF_Expand will be made internal
-* in the future. However the function hkdf_expand_label will still be defined.
-*/
-//BOTAN_FUTURE_INTERNAL_HEADER(hkdf.h)
-
-namespace Botan {
-
-/**
-* HKDF from RFC 5869.
-*/
-class BOTAN_PUBLIC_API(2,0) HKDF final : public KDF
-   {
-   public:
-      /**
-      * @param prf MAC algorithm to use
-      */
-      explicit HKDF(MessageAuthenticationCode* prf) : m_prf(prf) {}
-
-      KDF* clone() const override { return new HKDF(m_prf->clone()); }
-
-      std::string name() const override { return "HKDF(" + m_prf->name() + ")"; }
-
-      size_t kdf(uint8_t key[], size_t key_len,
-                 const uint8_t secret[], size_t secret_len,
-                 const uint8_t salt[], size_t salt_len,
-                 const uint8_t label[], size_t label_len) const override;
-
-   private:
-      std::unique_ptr<MessageAuthenticationCode> m_prf;
-   };
-
-/**
-* HKDF Extraction Step from RFC 5869.
-*/
-class BOTAN_PUBLIC_API(2,0) HKDF_Extract final : public KDF
-   {
-   public:
-      /**
-      * @param prf MAC algorithm to use
-      */
-      explicit HKDF_Extract(MessageAuthenticationCode* prf) : m_prf(prf) {}
-
-      KDF* clone() const override { return new HKDF_Extract(m_prf->clone()); }
-
-      std::string name() const override { return "HKDF-Extract(" + m_prf->name() + ")"; }
-
-      size_t kdf(uint8_t key[], size_t key_len,
-                 const uint8_t secret[], size_t secret_len,
-                 const uint8_t salt[], size_t salt_len,
-                 const uint8_t label[], size_t label_len) const override;
-
-   private:
-      std::unique_ptr<MessageAuthenticationCode> m_prf;
-   };
-
-/**
-* HKDF Expansion Step from RFC 5869.
-*/
-class BOTAN_PUBLIC_API(2,0) HKDF_Expand final : public KDF
-   {
-   public:
-      /**
-      * @param prf MAC algorithm to use
-      */
-      explicit HKDF_Expand(MessageAuthenticationCode* prf) : m_prf(prf) {}
-
-      KDF* clone() const override { return new HKDF_Expand(m_prf->clone()); }
-
-      std::string name() const override { return "HKDF-Expand(" + m_prf->name() + ")"; }
-
-      size_t kdf(uint8_t key[], size_t key_len,
-                 const uint8_t secret[], size_t secret_len,
-                 const uint8_t salt[], size_t salt_len,
-                 const uint8_t label[], size_t label_len) const override;
-
-   private:
-      std::unique_ptr<MessageAuthenticationCode> m_prf;
-   };
-
-/**
-* HKDF-Expand-Label from TLS 1.3/QUIC
-* @param hash_fn the hash to use
-* @param secret the secret bits
-* @param secret_len the length of secret
-* @param label the full label (no "TLS 1.3, " or "tls13 " prefix
-*  is applied)
-* @param hash_val the previous hash value (used for chaining, may be empty)
-* @param hash_val_len the length of hash_val
-* @param length the desired output length
-*/
-secure_vector<uint8_t>
-BOTAN_PUBLIC_API(2,3) hkdf_expand_label(
-   const std::string& hash_fn,
-   const uint8_t secret[], size_t secret_len,
-   const std::string& label,
-   const uint8_t hash_val[], size_t hash_val_len,
-   size_t length);
-
-
-}
-
 BOTAN_FUTURE_INTERNAL_HEADER(hmac.h)
 
 namespace Botan {
@@ -9980,61 +9440,184 @@ class BOTAN_PUBLIC_API(2,0) HMAC_DRBG final : public Stateful_RNG
 
 }
 
-BOTAN_FUTURE_INTERNAL_HEADER(kdf1.h)
-
 namespace Botan {
 
 /**
-* KDF1, from IEEE 1363
+* Key Derivation Function
 */
-class BOTAN_PUBLIC_API(2,0) KDF1 final : public KDF
+class BOTAN_PUBLIC_API(2,0) KDF
    {
    public:
-      std::string name() const override { return "KDF1(" + m_hash->name() + ")"; }
-
-      KDF* clone() const override { return new KDF1(m_hash->clone()); }
-
-      size_t kdf(uint8_t key[], size_t key_len,
-                 const uint8_t secret[], size_t secret_len,
-                 const uint8_t salt[], size_t salt_len,
-                 const uint8_t label[], size_t label_len) const override;
+      virtual ~KDF() = default;
 
       /**
-      * @param h hash function to use
+      * Create an instance based on a name
+      * If provider is empty then best available is chosen.
+      * @param algo_spec algorithm name
+      * @param provider provider implementation to choose
+      * @return a null pointer if the algo/provider combination cannot be found
       */
-      explicit KDF1(HashFunction* h) : m_hash(h) {}
-   private:
-      std::unique_ptr<HashFunction> m_hash;
+      static std::unique_ptr<KDF>
+         create(const std::string& algo_spec,
+                const std::string& provider = "");
+
+      /**
+      * Create an instance based on a name, or throw if the
+      * algo/provider combination cannot be found. If provider is
+      * empty then best available is chosen.
+      */
+      static std::unique_ptr<KDF>
+         create_or_throw(const std::string& algo_spec,
+                         const std::string& provider = "");
+
+      /**
+      * @return list of available providers for this algorithm, empty if not available
+      */
+      static std::vector<std::string> providers(const std::string& algo_spec);
+
+      /**
+      * @return KDF name
+      */
+      virtual std::string name() const = 0;
+
+      /**
+      * Derive a key
+      * @param key buffer holding the derived key, must be of length key_len
+      * @param key_len the desired output length in bytes
+      * @param secret the secret input
+      * @param secret_len size of secret in bytes
+      * @param salt a diversifier
+      * @param salt_len size of salt in bytes
+      * @param label purpose for the derived keying material
+      * @param label_len size of label in bytes
+      * @return the derived key
+      */
+      virtual size_t kdf(uint8_t key[], size_t key_len,
+                         const uint8_t secret[], size_t secret_len,
+                         const uint8_t salt[], size_t salt_len,
+                         const uint8_t label[], size_t label_len) const = 0;
+
+      /**
+      * Derive a key
+      * @param key_len the desired output length in bytes
+      * @param secret the secret input
+      * @param secret_len size of secret in bytes
+      * @param salt a diversifier
+      * @param salt_len size of salt in bytes
+      * @param label purpose for the derived keying material
+      * @param label_len size of label in bytes
+      * @return the derived key
+      */
+      secure_vector<uint8_t> derive_key(size_t key_len,
+                                    const uint8_t secret[],
+                                    size_t secret_len,
+                                    const uint8_t salt[],
+                                    size_t salt_len,
+                                    const uint8_t label[] = nullptr,
+                                    size_t label_len = 0) const
+         {
+         secure_vector<uint8_t> key(key_len);
+         key.resize(kdf(key.data(), key.size(), secret, secret_len, salt, salt_len, label, label_len));
+         return key;
+         }
+
+      /**
+      * Derive a key
+      * @param key_len the desired output length in bytes
+      * @param secret the secret input
+      * @param salt a diversifier
+      * @param label purpose for the derived keying material
+      * @return the derived key
+      */
+      secure_vector<uint8_t> derive_key(size_t key_len,
+                                    const secure_vector<uint8_t>& secret,
+                                    const std::string& salt = "",
+                                    const std::string& label = "") const
+         {
+         return derive_key(key_len, secret.data(), secret.size(),
+                           cast_char_ptr_to_uint8(salt.data()),
+                           salt.length(),
+                           cast_char_ptr_to_uint8(label.data()),
+                           label.length());
+
+         }
+
+      /**
+      * Derive a key
+      * @param key_len the desired output length in bytes
+      * @param secret the secret input
+      * @param salt a diversifier
+      * @param label purpose for the derived keying material
+      * @return the derived key
+      */
+      template<typename Alloc, typename Alloc2, typename Alloc3>
+      secure_vector<uint8_t> derive_key(size_t key_len,
+                                     const std::vector<uint8_t, Alloc>& secret,
+                                     const std::vector<uint8_t, Alloc2>& salt,
+                                     const std::vector<uint8_t, Alloc3>& label) const
+         {
+         return derive_key(key_len,
+                           secret.data(), secret.size(),
+                           salt.data(), salt.size(),
+                           label.data(), label.size());
+         }
+
+      /**
+      * Derive a key
+      * @param key_len the desired output length in bytes
+      * @param secret the secret input
+      * @param salt a diversifier
+      * @param salt_len size of salt in bytes
+      * @param label purpose for the derived keying material
+      * @return the derived key
+      */
+      secure_vector<uint8_t> derive_key(size_t key_len,
+                                    const secure_vector<uint8_t>& secret,
+                                    const uint8_t salt[],
+                                    size_t salt_len,
+                                    const std::string& label = "") const
+         {
+         return derive_key(key_len,
+                           secret.data(), secret.size(),
+                           salt, salt_len,
+                           cast_char_ptr_to_uint8(label.data()),
+                           label.size());
+         }
+
+      /**
+      * Derive a key
+      * @param key_len the desired output length in bytes
+      * @param secret the secret input
+      * @param secret_len size of secret in bytes
+      * @param salt a diversifier
+      * @param label purpose for the derived keying material
+      * @return the derived key
+      */
+      secure_vector<uint8_t> derive_key(size_t key_len,
+                                    const uint8_t secret[],
+                                    size_t secret_len,
+                                    const std::string& salt = "",
+                                    const std::string& label = "") const
+         {
+         return derive_key(key_len, secret, secret_len,
+                           cast_char_ptr_to_uint8(salt.data()),
+                           salt.length(),
+                           cast_char_ptr_to_uint8(label.data()),
+                           label.length());
+         }
+
+      /**
+      * @return new object representing the same algorithm as *this
+      */
+      virtual KDF* clone() const = 0;
    };
-
-}
-
-BOTAN_FUTURE_INTERNAL_HEADER(kdf1_iso18033.h)
-
-namespace Botan {
 
 /**
-* KDF1, from ISO 18033-2
+* Factory method for KDF (key derivation function)
+* @param algo_spec the name of the KDF to create
+* @return pointer to newly allocated object of that type
 */
-class BOTAN_PUBLIC_API(2,0) KDF1_18033 final : public KDF
-   {
-   public:
-      std::string name() const override { return "KDF1-18033(" + m_hash->name() + ")"; }
-
-      KDF* clone() const override { return new KDF1_18033(m_hash->clone()); }
-
-      size_t kdf(uint8_t key[], size_t key_len,
-                 const uint8_t secret[], size_t secret_len,
-                 const uint8_t salt[], size_t salt_len,
-                 const uint8_t label[], size_t label_len) const override;
-
-      /**
-      * @param h hash function to use
-      */
-      explicit KDF1_18033(HashFunction* h) : m_hash(h) {}
-   private:
-      std::unique_ptr<HashFunction> m_hash;
-   };
+BOTAN_PUBLIC_API(2,0) KDF* get_kdf(const std::string& algo_spec);
 
 }
 
@@ -10811,75 +10394,6 @@ class BOTAN_PUBLIC_API(2,0) MDx_HashFunction : public HashFunction
 
 }
 
-BOTAN_FUTURE_INTERNAL_HEADER(md4.h)
-
-namespace Botan {
-
-/**
-* MD4
-*/
-class BOTAN_PUBLIC_API(2,0) MD4 final : public MDx_HashFunction
-   {
-   public:
-      std::string name() const override { return "MD4"; }
-      size_t output_length() const override { return 16; }
-      HashFunction* clone() const override { return new MD4; }
-      std::unique_ptr<HashFunction> copy_state() const override;
-
-      void clear() override;
-
-      MD4() : MDx_HashFunction(64, false, true), m_digest(4)
-         { clear(); }
-
-   private:
-      void compress_n(const uint8_t input[], size_t blocks) override;
-      void copy_out(uint8_t[]) override;
-
-      /**
-      * The digest value
-      */
-      secure_vector<uint32_t> m_digest;
-   };
-
-}
-
-BOTAN_FUTURE_INTERNAL_HEADER(md5.h)
-
-namespace Botan {
-
-/**
-* MD5
-*/
-class BOTAN_PUBLIC_API(2,0) MD5 final : public MDx_HashFunction
-   {
-   public:
-      std::string name() const override { return "MD5"; }
-      size_t output_length() const override { return 16; }
-      HashFunction* clone() const override { return new MD5; }
-      std::unique_ptr<HashFunction> copy_state() const override;
-
-      void clear() override;
-
-      MD5() : MDx_HashFunction(64, false, true), m_M(16), m_digest(4)
-         { clear(); }
-
-   private:
-      void compress_n(const uint8_t[], size_t blocks) override;
-      void copy_out(uint8_t[]) override;
-
-      /**
-      * The message buffer
-      */
-      secure_vector<uint32_t> m_M;
-
-      /**
-      * The digest value
-      */
-      secure_vector<uint32_t> m_digest;
-   };
-
-}
-
 namespace Botan {
 
 class Modular_Reducer;
@@ -11643,45 +11157,6 @@ inline PBKDF* get_s2k(const std::string& algo_spec)
    return get_pbkdf(algo_spec);
    }
 
-
-}
-
-BOTAN_FUTURE_INTERNAL_HEADER(pbkdf1.h)
-
-namespace Botan {
-
-/**
-* PKCS #5 v1 PBKDF, aka PBKDF1
-* Can only generate a key up to the size of the hash output.
-* Unless needed for backwards compatibility, use PKCS5_PBKDF2
-*/
-class BOTAN_PUBLIC_API(2,0) PKCS5_PBKDF1 final : public PBKDF
-   {
-   public:
-      /**
-      * Create a PKCS #5 instance using the specified hash function.
-      * @param hash pointer to a hash function object to use
-      */
-      explicit PKCS5_PBKDF1(HashFunction* hash) : m_hash(hash) {}
-
-      std::string name() const override
-         {
-         return "PBKDF1(" + m_hash->name() + ")";
-         }
-
-      PBKDF* clone() const override
-         {
-         return new PKCS5_PBKDF1(m_hash->clone());
-         }
-
-      size_t pbkdf(uint8_t output_buf[], size_t output_len,
-                           const std::string& passphrase,
-                           const uint8_t salt[], size_t salt_len,
-                           size_t iterations,
-                           std::chrono::milliseconds msec) const override;
-   private:
-      std::unique_ptr<HashFunction> m_hash;
-   };
 
 }
 
@@ -13998,87 +13473,6 @@ class BOTAN_PUBLIC_API(2,0) SHA_160 final : public MDx_HashFunction
    };
 
 typedef SHA_160 SHA_1;
-
-}
-
-BOTAN_FUTURE_INTERNAL_HEADER(sha2_32.h)
-
-namespace Botan {
-
-/**
-* SHA-224
-*/
-class BOTAN_PUBLIC_API(2,0) SHA_224 final : public MDx_HashFunction
-   {
-   public:
-      std::string name() const override { return "SHA-224"; }
-      size_t output_length() const override { return 28; }
-      HashFunction* clone() const override { return new SHA_224; }
-      std::unique_ptr<HashFunction> copy_state() const override;
-
-      void clear() override;
-
-      std::string provider() const override;
-
-      SHA_224() : MDx_HashFunction(64, true, true), m_digest(8)
-         { clear(); }
-   private:
-      void compress_n(const uint8_t[], size_t blocks) override;
-      void copy_out(uint8_t[]) override;
-
-      secure_vector<uint32_t> m_digest;
-   };
-
-/**
-* SHA-256
-*/
-class BOTAN_PUBLIC_API(2,0) SHA_256 final : public MDx_HashFunction
-   {
-   public:
-      std::string name() const override { return "SHA-256"; }
-      size_t output_length() const override { return 32; }
-      HashFunction* clone() const override { return new SHA_256; }
-      std::unique_ptr<HashFunction> copy_state() const override;
-
-      void clear() override;
-
-      std::string provider() const override;
-
-      SHA_256() : MDx_HashFunction(64, true, true), m_digest(8)
-         { clear(); }
-
-      /*
-      * Perform a SHA-256 compression. For internal use
-      */
-      static void compress_digest(secure_vector<uint32_t>& digest,
-                                  const uint8_t input[],
-                                  size_t blocks);
-
-   private:
-
-#if defined(BOTAN_HAS_SHA2_32_ARMV8)
-      static void compress_digest_armv8(secure_vector<uint32_t>& digest,
-                                        const uint8_t input[],
-                                        size_t blocks);
-#endif
-
-#if defined(BOTAN_HAS_SHA2_32_X86_BMI2)
-      static void compress_digest_x86_bmi2(secure_vector<uint32_t>& digest,
-                                           const uint8_t input[],
-                                           size_t blocks);
-#endif
-
-#if defined(BOTAN_HAS_SHA2_32_X86)
-      static void compress_digest_x86(secure_vector<uint32_t>& digest,
-                                      const uint8_t input[],
-                                      size_t blocks);
-#endif
-
-      void compress_n(const uint8_t[], size_t blocks) override;
-      void copy_out(uint8_t[]) override;
-
-      secure_vector<uint32_t> m_digest;
-   };
 
 }
 
