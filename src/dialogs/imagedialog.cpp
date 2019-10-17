@@ -71,10 +71,14 @@ QString ImageDialog::getImageTitle() {
 }
 
 void ImageDialog::on_openButton_clicked() {
+    QStringList nameFilters;
+    nameFilters << tr("Image files") + " (*.jpg *.jpeg *.png *.gif *.svg *.bmp *.pbm *.pgm *.ppm *.xbm *.xpm)"
+                << tr("Any files") + " (*)";
+
     FileDialog dialog("InsertImage");
     dialog.setFileMode(QFileDialog::ExistingFile);
     dialog.setAcceptMode(QFileDialog::AcceptOpen);
-    dialog.setNameFilter(tr("Image files") + " (*.jpg *.png *.gif)");
+    dialog.setNameFilters(nameFilters);
     dialog.setWindowTitle(tr("Select image to insert"));
     int ret = dialog.exec();
 

@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 19.10.7
+- now all supported image formats can be selected with the file picker of the
+  *Image dialog* (for [#1314](https://github.com/pbek/QOwnNotes/issues/1314))
+    - in addition you can now also choose `Any file` in the file picker
+
 ## 19.10.6
 - it is now also possible to **link to directories** in the *Link dialog*
   (for [#1308](https://github.com/pbek/QOwnNotes/issues/1308))
