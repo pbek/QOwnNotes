@@ -4,6 +4,9 @@
 - now all supported image formats can be selected with the file picker of the
   *Image dialog* (for [#1314](https://github.com/pbek/QOwnNotes/issues/1314))
     - in addition you can now also choose `Any file` in the file picker
+- if you press <kbd>Return</kbd> in a checkbox list the next line will now be
+  started with an unchecked checkbox, regardless if the checkbox in the current
+  line was checked or not
 
 ## 19.10.6
 - it is now also possible to **link to directories** in the *Link dialog*
