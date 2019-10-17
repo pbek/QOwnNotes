@@ -1,16 +1,18 @@
 # QOwnNotes Changelog
 
 ## 19.10.7
-- now all supported image formats can be selected with the file picker of the
-  *Image dialog* (for [#1314](https://github.com/pbek/QOwnNotes/issues/1314))
+- now **all supported image formats** can be **selected with the file picker**
+  of the **Image dialog** (for [#1314](https://github.com/pbek/QOwnNotes/issues/1314))
     - in addition you can now also choose `Any file` in the file picker
-- if you press <kbd>Return</kbd> in a checkbox list the next line will now be
-  started with an unchecked checkbox, regardless if the checkbox in the current
-  line was checked or not
+- if you press <kbd>Return</kbd> in a **checkbox list** the **next line** will
+  now be **started with an unchecked checkbox**, regardless of if the checkbox
+  in the current line was checked or not
 - added **Korean translation** (a big thank you to Fabijenna)
     - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes)
       to make QOwnNotes available in more languages or help with the current
       translation
+- an attempt was made to make the Botan 2.12 library work on non-SSE platforms
+  (for [#1263](https://github.com/pbek/QOwnNotes/issues/1263), thank you @Waqar144)
 
 ## 19.10.6
 - it is now also possible to **link to directories** in the *Link dialog*
