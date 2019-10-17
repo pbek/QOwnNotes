@@ -13,6 +13,11 @@
       translation
 - an attempt was made to make the Botan 2.12 library work on non-SSE platforms
   (for [#1263](https://github.com/pbek/QOwnNotes/issues/1263), thank you @Waqar144)
+- added more Punjabi, Estonian, Bengali, Serbian (Cyrillic), Persian, Ukrainian,
+  Russian, Czech, Icelandic, Croatian, Galician, Bulgarian, Romanian, Danish,
+  Slovak, Finnish, Dutch, Slovenian, Greek, Hausa, Hungarian, Swedish, Hebrew,
+  Spanish, German, Italian translation (thank you Fabijenna, unchase, richarson,
+  rakekniven, tiwi90)
 
 ## 19.10.6
 - it is now also possible to **link to directories** in the *Link dialog*
