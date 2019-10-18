@@ -7,6 +7,14 @@
       be at the beginning of the note and only one block can exist per note
 - if now you press <kbd>Return</kbd> after a `- []` in a checkbox list the
   current line will be removed just like with `- [x]` and `- [ ]`
+- there now is a new method `getFileURLFromFileName()` for `NoteApi` to get the
+  absolute file url from a relative file name (for [script issue #71](https://github.com/qownnotes/scripts/issues/71))
+    - for more information please take a look at
+      [scripting documentation](https://docs.qownnotes.org/en/develop/scripting/README.html#note)
+- there now is a new property `fullNoteFileDirPath` for `NoteApi` to get the
+  absolute directory path of the a note file (for [script issue #71](https://github.com/qownnotes/scripts/issues/71))
+    - for more information please take a look at
+      [scripting documentation](https://docs.qownnotes.org/en/develop/scripting/README.html#note)
 
 ## 19.10.7
 - now **all supported image formats** can be **selected with the file picker**

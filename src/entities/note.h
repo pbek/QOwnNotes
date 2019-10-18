@@ -147,6 +147,8 @@ public:
 
     QString fullNoteFilePath();
 
+    QString fullNoteFileDirPath();
+
     static QString encodeCssFont(const QFont& refFont);
 
     void setDecryptedNoteText(QString text);

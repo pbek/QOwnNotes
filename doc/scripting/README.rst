@@ -1858,6 +1858,7 @@ Note
         Q_PROPERTY(QString name)
         Q_PROPERTY(QString fileName)
         Q_PROPERTY(QString fullNoteFilePath)
+        Q_PROPERTY(QString fullNoteFileDirPath)
         Q_PROPERTY(int noteSubFolderId)
         Q_PROPERTY(QString noteText)
         Q_PROPERTY(QString decryptedNoteText)
@@ -1869,6 +1870,7 @@ Note
         Q_INVOKABLE bool addTag(QString tagName);
         Q_INVOKABLE bool removeTag(QString tagName);
         Q_INVOKABLE QString toMarkdownHtml(bool forExport = true);
+        Q_INVOKABLE QString getFileURLFromFileName(QString localFileName);
     };
 
 You can use the methods from `Date <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date>`__

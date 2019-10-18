@@ -145,3 +145,13 @@ QString NoteApi::toMarkdownHtml(bool forExport) {
     return _note.toMarkdownHtml(NoteFolder::currentLocalPath(), 980, forExport,
                                 true, true);
 }
+
+/**
+ * Returns the absolute file url from a relative file name
+ *
+ * @param fileName
+ * @return
+ */
+const QString NoteApi::getFileURLFromFileName(QString localFileName) {
+    return _note.getFileURLFromFileName(localFileName);
+}

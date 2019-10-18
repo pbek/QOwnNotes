@@ -1500,6 +1500,15 @@ QString Note::fullNoteFilePath() {
 }
 
 /**
+ * Returns the full path of direcotry of the note file
+ */
+QString Note::fullNoteFileDirPath() {
+    QFileInfo fileInfo;
+    fileInfo.setFile(fullNoteFilePath());
+    return fileInfo.dir().path();
+}
+
+/**
  * Returns the relative path of the note file
  */
 QString Note::relativeNoteFilePath(QString separator) {
