@@ -70,6 +70,7 @@ void QOwnNotesMarkdownHighlighter::highlightMarkdown(const QString& text) {
 
     highlightCommentBlock(text);
     highlightCodeBlock(text);
+    highlightFrontmatterBlock(text);
 }
 
 /**
