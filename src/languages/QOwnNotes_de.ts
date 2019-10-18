@@ -768,7 +768,7 @@
     <message>
       <location filename="../dialogs/imagedialog.cpp" line="76"/>
       <source>Any files</source>
-      <translation type="unfinished">Any files</translation>
+      <translation>Beliebige Dateien</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.cpp" line="82"/>
@@ -4846,7 +4846,7 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2357"/>
       <source>Korean</source>
-      <translation type="unfinished">Korean</translation>
+      <translation>Koreanisch</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2379"/>
@@ -4976,7 +4976,7 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3738"/>
       <source>Use legacy way to link to notes, images and attachments</source>
-      <translation>Verknüpfen Sie Notizen, Bilder und Anhänge auf herkömmliche Weise</translation>
+      <translation>Verknüpfen Sie Notizen, Bilder und Anhänge auf veraltete Weise</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3685"/>
@@ -5473,7 +5473,7 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1765"/>
       <source>Legacy ownCloud calendar</source>
-      <translation>Standard Nextcloud/ownCloud-Kalender</translation>
+      <translation>Alte Nextcloud/ownCloud-Kalender</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1778"/>

@@ -3141,7 +3141,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="5905"/>
       <source>Block &amp;quote selected text</source>
       <comment>Action to apply a block quote formatting to the selected text</comment>
-      <translation type="unfinished">Block &amp;quote selected text</translation>
+      <translation>Блокувати &amp;цитату вибраного тексту</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6874"/>

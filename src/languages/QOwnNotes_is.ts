@@ -768,7 +768,7 @@
     <message>
       <location filename="../dialogs/imagedialog.cpp" line="76"/>
       <source>Any files</source>
-      <translation type="unfinished">Any files</translation>
+      <translation>Allar skrár</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.cpp" line="82"/>
@@ -1535,7 +1535,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1688"/>
       <source>&amp;Distraction free mode</source>
-      <translation type="unfinished">&amp;Distraction free mode</translation>
+      <translation>&amp;Aðstoð án aðskilnaðar</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1691"/>
@@ -1545,7 +1545,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1702"/>
       <source>Show &amp;toolbar</source>
-      <translation type="unfinished">Show &amp;toolbar</translation>
+      <translation>Sýna &amp;tækjastiku</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1710"/>
@@ -1581,17 +1581,17 @@
     <message>
       <location filename="../mainwindow.ui" line="1773"/>
       <source>Show note in &amp;file manager</source>
-      <translation type="unfinished">Show note in &amp;file manager</translation>
+      <translation>Sýna athugasemd í &amp;skjalastjóra</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1785"/>
       <source>Format text &amp;bold</source>
-      <translation type="unfinished">Format text &amp;bold</translation>
+      <translation>Snið texta &amp;feitletrað</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1797"/>
       <source>Format text &amp;italic</source>
-      <translation type="unfinished">Format text &amp;italic</translation>
+      <translation>Snið texta &amp;skáletrað</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1809"/>
@@ -1601,7 +1601,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1821"/>
       <source>&amp;Decrease note text size</source>
-      <translation type="unfinished">&amp;Decrease note text size</translation>
+      <translation>&amp;Draga úr stærð athugasemda</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1833"/>
@@ -1842,7 +1842,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1868"/>
       <source>Use &amp;vertical preview layout</source>
-      <translation type="unfinished">Use &amp;vertical preview layout</translation>
+      <translation>Notaðu &amp;lóðrétt forsýning</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1871"/>
@@ -2035,12 +2035,12 @@ Endurheimta núverandi athugasemd?</translation>
     <message>
       <location filename="../mainwindow.cpp" line="3307"/>
       <source>&amp;Retry</source>
-      <translation type="unfinished">&amp;Retry</translation>
+      <translation>&amp;Reyndu aftur</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3307"/>
       <source>&amp;Exit</source>
-      <translation type="unfinished">&amp;Exit</translation>
+      <translation>&amp;Hætta</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3537"/>
@@ -2050,12 +2050,12 @@ Endurheimta núverandi athugasemd?</translation>
     <message>
       <location filename="../mainwindow.cpp" line="3538"/>
       <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation type="unfinished">Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+      <translation>Fjarlægja núverandi athugasemd: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3866"/>
       <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
-      <translation type="unfinished">Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</translation>
+      <translation>Vinsamlegast sláðu inn &lt;strong&gt; lykilorð &lt;/strong&gt; þessa dulkóðaða athugasemd.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3890"/>
@@ -2077,13 +2077,13 @@ Endurheimta núverandi athugasemd?</translation>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
-      <translation type="unfinished">
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
+      <translation>
+        <numerusform>Fjarlægja &lt;strong&gt;%n &lt;/strong&gt; valinn glósu?
 
-If the trash is enabled on your ownCloud server you should be able to restore them from there.</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
+Ef ruslið er virkt á þinn ownCloud netþjón skaltu vera fær um að endurheimta þaðan.</numerusform>
+        <numerusform>Fjarlægja &lt;strong&gt;%n&lt;/strong&gt; valda glósur?
 
-If the trash is enabled on your ownCloud server you should be able to restore them from there.</numerusform>
+Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurheimta þaðan.</numerusform>
       </translation>
     </message>
     <message>
@@ -2095,9 +2095,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4128"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
-      <translation type="unfinished">
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
+      <translation>
+        <numerusform>Fjarlægðu &lt;strong&gt;%n &lt;/strong&gt; valda möppu? &lt;ul&gt; &lt;li&gt;%1 &lt;/li&gt; &lt;/ul&gt; Allar skrár og möppur í þessum möppum verða einnig fjarlægðar!</numerusform>
+        <numerusform>Fjarlægðu &lt;strong&gt;%n &lt;/strong&gt; valdar möppur? &lt;ul&gt; &lt;li&gt;%1 &lt;/li&gt; &lt;/ul&gt; Allar skrár og möppur í þessum möppum verða einnig fjarlægðar!</numerusform>
       </translation>
     </message>
     <message>
@@ -2113,9 +2113,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4159"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
-      <translation type="unfinished">
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
+      <translation>
+        <numerusform>Fjarlægja &lt;strong&gt;%n &lt;/strong&gt; valið merki? Engar athugasemdir verða fjarlægðar í þessu ferli.</numerusform>
+        <numerusform>Fjarlægja &lt;strong&gt;%n &lt;/strong&gt; valið merki? Engar athugasemdir verða fjarlægðar í þessu ferli.</numerusform>
       </translation>
     </message>
     <message>
@@ -2136,7 +2136,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="4306"/>
       <location filename="../mainwindow.cpp" line="8631"/>
       <source>Copy selected notes</source>
-      <translation type="unfinished">Copy selected notes</translation>
+      <translation>Afritaðu valda minnispunkta</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4307"/>
@@ -2150,7 +2150,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="4330"/>
       <location filename="../mainwindow.cpp" line="4468"/>
       <source>Done</source>
-      <translation type="unfinished">Done</translation>
+      <translation>Lokið</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4331"/>
@@ -2163,7 +2163,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="4344"/>
       <source>Tag selected notes</source>
-      <translation type="unfinished">Tag selected notes</translation>
+      <translation>Merkið valda glósur</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4345"/>
@@ -2214,7 +2214,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="5600"/>
       <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+      <translation>Athugasemd fannst ekki, búa til nýja athugasemd &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5835"/>
@@ -2366,7 +2366,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="8072"/>
       <source>&amp;Move tags to…</source>
-      <translation type="unfinished">&amp;Move tags to…</translation>
+      <translation>&amp;Færa merki í…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8287"/>
@@ -2413,12 +2413,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="9243"/>
       <source>&amp;Move notes to…</source>
-      <translation type="unfinished">&amp;Move notes to…</translation>
+      <translation>&amp;Færa minnismiða til…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9244"/>
       <source>&amp;Copy notes to…</source>
-      <translation type="unfinished">&amp;Copy notes to…</translation>
+      <translation>&amp;Afritaðu minnispunkta til…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9279"/>
@@ -2433,12 +2433,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="9291"/>
       <source>&amp;Tag selected notes with…</source>
-      <translation type="unfinished">&amp;Tag selected notes with…</translation>
+      <translation>&amp;Merkið valda glósur með…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9313"/>
       <source>&amp;Remove tag from selected notes…</source>
-      <translation type="unfinished">&amp;Remove tag from selected notes…</translation>
+      <translation>&amp;Fjarlægðu merki úr völdum athugasemdum…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9404"/>
@@ -3577,7 +3577,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../main.cpp" line="217"/>
       <source>Your note folder was not found any more! Do you want to select a new one?</source>
-      <translation type="unfinished">Your note folder was not found any more! Do you want to select a new one?</translation>
+      <translation>Nótamöppan þín fannst ekki lengur! Viltu velja nýjan?</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="223"/>
@@ -4847,7 +4847,7 @@ Prófaðu bara sjálfan þig hvort þú fáir samstillingarárekstra og stilltu 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2357"/>
       <source>Korean</source>
-      <translation type="unfinished">Korean</translation>
+      <translation>Kóreska</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2379"/>

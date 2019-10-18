@@ -768,7 +768,7 @@
     <message>
       <location filename="../dialogs/imagedialog.cpp" line="76"/>
       <source>Any files</source>
-      <translation type="unfinished">Any files</translation>
+      <translation>هر پرونده ای</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.cpp" line="82"/>
@@ -3562,7 +3562,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3880"/>
       <source>New connection</source>
-      <translation type="unfinished">New connection</translation>
+      <translation>اتصال جدید</translation>
     </message>
     <message>
       <location filename="../entities/cloudconnection.cpp" line="281"/>
@@ -4847,7 +4847,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2357"/>
       <source>Korean</source>
-      <translation type="unfinished">Korean</translation>
+      <translation>کره ای</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2379"/>
@@ -6690,7 +6690,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/trashdialog.ui" line="55"/>
       <source>Find note name</source>
-      <translation type="unfinished">Find note name</translation>
+      <translation>نام یادداشت را پیدا کنید</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="26"/>

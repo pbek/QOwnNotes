@@ -5,6 +5,8 @@
   **ignored in the preview** (for [#1031](https://github.com/pbek/QOwnNotes/issues/1031))
     - the frontmatter block has to start and end with a `---` line, it has to
       be at the beginning of the note and only one block can exist per note
+    - don't forget that you have to enable `Allow note file name to be different from headline`
+      in the *General settings* if you want to use a frontmatter block
 - if now you press <kbd>Return</kbd> after a `- []` in a checkbox list the
   current line will be removed just like with `- [x]` and `- [ ]`
 - there now is a new method `getFileURLFromFileName()` for `NoteApi` to get the
@@ -15,6 +17,11 @@
   absolute directory path of the a note file (for [script issue #71](https://github.com/qownnotes/scripts/issues/71))
     - for more information please take a look at
       [scripting documentation](https://docs.qownnotes.org/en/develop/scripting/README.html#note)
+- added more Russian, Polish, German, Italian, Punjabi, Estonian, Bengali,
+  Icelandic, Ukrainian, Korean, Norwegian, Persian, Romanian, Slovak, Slovenian,
+  Swedish, Dutch, Croatian, Serbian (Cyrillic), Czech, Danish, Finnish, Galician,
+  Greek, Hausa, Hungarian, Spanish translation (thank you unchase, lucjan,
+  rakekniven, mlocati, Fabijenna, DixTheDev)
 
 ## 19.10.7
 - now **all supported image formats** can be **selected with the file picker**
