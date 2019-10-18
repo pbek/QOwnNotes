@@ -1919,6 +1919,11 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
     windowsSlash = "/";
 #endif
 
+    // remove frontmatter from markdown text
+    if (str.startsWith("---")) {
+        str.remove(QRegularExpression(R"(^---\n.+?\n---\n)", QRegularExpression::DotMatchesEverythingOption));
+    }
+
     // parse for relative file urls and make them absolute
     // (for example to show images under the note path)
     str.replace(

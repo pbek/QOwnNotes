@@ -1,6 +1,10 @@
 # QOwnNotes Changelog
 
 ## 19.10.8
+- **frontmatter blocks** are now **highlighted** as masked syntax and are also
+  **ignored in the preview** (for [#1031](https://github.com/pbek/QOwnNotes/issues/1031))
+    - the frontmatter block has to start and end with a `---` line, it has to
+      be at the beginning of the note and only one block can exist per note
 - if now you press <kbd>Return</kbd> after a `- []` in a checkbox list the
   current line will be removed just like with `- [x]` and `- [ ]`
 
