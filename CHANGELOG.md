@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 19.10.8
+- if now you press <kbd>Return</kbd> after a `- []` in a checkbox list the
+  current line will be removed just like with `- [x]` and `- [ ]`
+
 ## 19.10.7
 - now **all supported image formats** can be **selected with the file picker**
   of the **Image dialog** (for [#1314](https://github.com/pbek/QOwnNotes/issues/1314))
