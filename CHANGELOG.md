@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 19.10.10
+- another attempt was made to make the Botan 2.12 library work on non-x86 platforms
+  (for [#1263](https://github.com/pbek/QOwnNotes/issues/1263), thank you @Waqar144)
+
 ## 19.10.9
 - an attempt was made to make the Botan 2.12 library work on non-x86 platforms
   (for [#1263](https://github.com/pbek/QOwnNotes/issues/1263))
