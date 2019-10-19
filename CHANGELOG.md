@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 19.10.9
+- an attempt was made to make the Botan 2.12 library work on platforms without `cpuid.h`
+  (for [#1263](https://github.com/pbek/QOwnNotes/issues/1263))
+
 ## 19.10.8
 - **frontmatter blocks** are now **highlighted** as masked syntax and are also
   **ignored in the preview** (for [#1031](https://github.com/pbek/QOwnNotes/issues/1031))
