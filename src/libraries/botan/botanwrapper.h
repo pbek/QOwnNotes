@@ -12,7 +12,6 @@
 #include <memory>
 #include "botan.h"
 
-using namespace std;
 using namespace Botan;
 
 class BotanWrapper : public QObject
@@ -96,7 +95,7 @@ private:
     /*!
     * The Salt
     */
-    SecureVector<byte> mSalt;
+    secure_vector<byte> mSalt;
 
     /*!
     * The password
