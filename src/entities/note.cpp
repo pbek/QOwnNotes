@@ -1332,18 +1332,39 @@ bool Note::modifyNoteTextFileNameFromQMLHook() {
  */
 bool Note::handleNoteTextFileName() {
     // split the text into a string list
-    QStringList noteTextLines = this->noteText.split(
+    const QStringList noteTextLines = this->noteText.split(
             QRegExp(R"((\r\n)|(\n\r)|\r|\n)"));
+    const int noteTextLinesCount = noteTextLines.count();
 
     // do nothing if there is no text
-    if (noteTextLines.count() == 0) {
+    if (noteTextLinesCount == 0) {
         return false;
     }
 
-    QString name = noteTextLines[0];
+    QString name = noteTextLines[0].trimmed();
     // do nothing if the first line is empty
     if (name == "") {
         return false;
+    }
+    
+    // check if we have a frontmatter
+    if (name == "---" && noteTextLinesCount > 1) {
+        bool foundEnd = false;
+
+        for (int i = 1; i < noteTextLinesCount; i++) {
+            const QString& line = noteTextLines.at(i).trimmed();
+
+            if (foundEnd) {
+                if (!line.isEmpty()) {
+                    // set the name to the first non-empty line after the frontmatter
+                    name = line;
+                    break;
+                }
+            } else if (line == "---") {
+                // we found the end of the frontmatter
+                foundEnd = true;
+            }
+        }
     }
 
     // remove a leading "# " for markdown headlines

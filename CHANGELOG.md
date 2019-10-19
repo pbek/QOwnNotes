@@ -1,6 +1,9 @@
 # QOwnNotes Changelog
 
 ## 19.10.10
+- if a **frontmatter** was detected at the beginning of a note the **filename of the note**
+  now will be the **first non-empty line after the frontmatter** instead of the
+  first line of the note (for [#1031](https://github.com/pbek/QOwnNotes/issues/1031))
 - another attempt was made to make the Botan 2.12 library work on non-x86 platforms
   (for [#1263](https://github.com/pbek/QOwnNotes/issues/1263), thank you @Waqar144)
 
