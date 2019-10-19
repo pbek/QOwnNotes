@@ -1751,7 +1751,7 @@ class Block_Cipher_Fixed_Params : public BaseClass
 
 }
 
-BOTAN_FUTURE_INTERNAL_HEADER(aes.h)
+//BOTAN_FUTURE_INTERNAL_HEADER(aes.h)
 
 namespace Botan {
 
@@ -5076,7 +5076,7 @@ class BOTAN_PUBLIC_API(2,0) Modular_Reducer
 
 }
 
-BOTAN_FUTURE_INTERNAL_HEADER(blinding.h)
+//BOTAN_FUTURE_INTERNAL_HEADER(blinding.h)
 
 namespace Botan {
 
@@ -5145,7 +5145,7 @@ class BOTAN_PUBLIC_API(2,0) Blinder final
   #include <stdlib.h>
 #endif
 
-BOTAN_FUTURE_INTERNAL_HEADER(bswap.h)
+//BOTAN_FUTURE_INTERNAL_HEADER(bswap.h)
 
 namespace Botan {
 
@@ -5655,7 +5655,7 @@ inline Cipher_Mode* get_cipher_mode(const std::string& algo_spec,
 
 }
 
-BOTAN_FUTURE_INTERNAL_HEADER(mode_pad.h)
+//BOTAN_FUTURE_INTERNAL_HEADER(mode_pad.h)
 
 namespace Botan {
 
@@ -5800,7 +5800,7 @@ BOTAN_PUBLIC_API(2,0) BlockCipherModePaddingMethod* get_bc_pad(const std::string
 
 }
 
-BOTAN_FUTURE_INTERNAL_HEADER(cbc.h)
+//BOTAN_FUTURE_INTERNAL_HEADER(cbc.h)
 
 namespace Botan {
 
@@ -6068,7 +6068,7 @@ typedef MessageAuthenticationCode MAC;
 
 }
 
-BOTAN_FUTURE_INTERNAL_HEADER(cbc_mac.h)
+//BOTAN_FUTURE_INTERNAL_HEADER(cbc_mac.h)
 
 namespace Botan {
 
@@ -6104,7 +6104,7 @@ class BOTAN_PUBLIC_API(2,0) CBC_MAC final : public MessageAuthenticationCode
 
 }
 
-BOTAN_FUTURE_INTERNAL_HEADER(charset.h)
+//BOTAN_FUTURE_INTERNAL_HEADER(charset.h)
 
 namespace Botan {
 
@@ -6170,7 +6170,7 @@ char BOTAN_PUBLIC_API(2,0) digit2char(uint8_t b);
 
 }
 
-BOTAN_FUTURE_INTERNAL_HEADER(cmac.h)
+//BOTAN_FUTURE_INTERNAL_HEADER(cmac.h)
 
 namespace Botan {
 
@@ -6223,7 +6223,7 @@ class BOTAN_PUBLIC_API(2,0) CMAC final : public MessageAuthenticationCode
 
 }
 
-BOTAN_FUTURE_INTERNAL_HEADER(cpuid.h)
+//BOTAN_FUTURE_INTERNAL_HEADER(cpuid.h)
 
 namespace Botan {
 
@@ -6635,7 +6635,7 @@ class BOTAN_PUBLIC_API(2,1) CPUID final
 
 }
 
-BOTAN_FUTURE_INTERNAL_HEADER(curve_nistp.h)
+//BOTAN_FUTURE_INTERNAL_HEADER(curve_nistp.h)
 
 namespace Botan {
 
@@ -7167,7 +7167,7 @@ class BOTAN_PUBLIC_API(2,0) DER_Encoder final
 
 }
 
-BOTAN_FUTURE_INTERNAL_HEADER(divide.h)
+//BOTAN_FUTURE_INTERNAL_HEADER(divide.h)
 
 namespace Botan {
 
@@ -7247,7 +7247,7 @@ BigInt BOTAN_PUBLIC_API(2,9) ct_modulo(const BigInt& x,
 
 }
 
-BOTAN_FUTURE_INTERNAL_HEADER(eme.h)
+//BOTAN_FUTURE_INTERNAL_HEADER(eme.h)
 
 namespace Botan {
 
@@ -7327,7 +7327,7 @@ BOTAN_PUBLIC_API(2,0) EME*  get_eme(const std::string& algo_spec);
 
 }
 
-BOTAN_FUTURE_INTERNAL_HEADER(emsa.h)
+//BOTAN_FUTURE_INTERNAL_HEADER(emsa.h)
 
 namespace Botan {
 
@@ -8960,7 +8960,7 @@ class BOTAN_PUBLIC_API(2,0) Threaded_Fork final : public Fork
 
 }
 
-BOTAN_FUTURE_INTERNAL_HEADER(hash_id)
+//BOTAN_FUTURE_INTERNAL_HEADER(hash_id)
 
 namespace Botan {
 
@@ -9116,7 +9116,7 @@ hex_decode_locked(const std::string& input,
 
 }
 
-BOTAN_FUTURE_INTERNAL_HEADER(hmac.h)
+//BOTAN_FUTURE_INTERNAL_HEADER(hmac.h)
 
 namespace Botan {
 
@@ -9621,7 +9621,7 @@ BOTAN_PUBLIC_API(2,0) KDF* get_kdf(const std::string& algo_spec);
 
 }
 
-BOTAN_FUTURE_INTERNAL_HEADER(kdf2.h)
+//BOTAN_FUTURE_INTERNAL_HEADER(kdf2.h)
 
 namespace Botan {
 
@@ -9650,7 +9650,7 @@ class BOTAN_PUBLIC_API(2,0) KDF2 final : public KDF
 
 }
 
-BOTAN_FUTURE_INTERNAL_HEADER(loadstor.h)
+//BOTAN_FUTURE_INTERNAL_HEADER(loadstor.h)
 
 #if defined(BOTAN_TARGET_CPU_IS_BIG_ENDIAN)
    #define BOTAN_ENDIAN_N2L(x) reverse_bytes(x)
@@ -10334,7 +10334,7 @@ void copy_out_vec_le(uint8_t out[], size_t out_bytes, const std::vector<T, Alloc
 
 }
 
-BOTAN_FUTURE_INTERNAL_HEADER(mdx_hash.h)
+//BOTAN_FUTURE_INTERNAL_HEADER(mdx_hash.h)
 
 namespace Botan {
 
@@ -10572,7 +10572,7 @@ class BOTAN_UNSTABLE_API Montgomery_Params final
 
 }
 
-BOTAN_FUTURE_INTERNAL_HEADER(mul128.h)
+//BOTAN_FUTURE_INTERNAL_HEADER(mul128.h)
 
 namespace Botan {
 
@@ -10769,7 +10769,7 @@ inline OID BOTAN_DEPRECATED("Use str2oid_or_empty") str2oid(const std::string& n
 }
 
 
-BOTAN_FUTURE_INTERNAL_HEADER(parsing.h)
+//BOTAN_FUTURE_INTERNAL_HEADER(parsing.h)
 
 namespace Botan {
 
@@ -11306,7 +11306,7 @@ class BOTAN_PUBLIC_API(2,8) PasswordHashFamily
 
 }
 
-BOTAN_FUTURE_INTERNAL_HEADER(pbkdf2.h)
+//BOTAN_FUTURE_INTERNAL_HEADER(pbkdf2.h)
 
 namespace Botan {
 
@@ -12261,7 +12261,7 @@ std::unique_ptr<Private_Key> copy_key(const Private_Key& key);
 
 }
 
-BOTAN_FUTURE_INTERNAL_HEADER(pow_mod.h)
+//BOTAN_FUTURE_INTERNAL_HEADER(pow_mod.h)
 
 namespace Botan {
 
@@ -13153,7 +13153,7 @@ class BOTAN_PUBLIC_API(2,0) PK_KEM_Decryptor final
 
 }
 
-BOTAN_FUTURE_INTERNAL_HEADER(rotate.h)
+//BOTAN_FUTURE_INTERNAL_HEADER(rotate.h)
 
 namespace Botan {
 
@@ -13246,7 +13246,7 @@ inline T rotate_right(T input, size_t rot)
 
 }
 
-BOTAN_FUTURE_INTERNAL_HEADER(scan_name.h)
+//BOTAN_FUTURE_INTERNAL_HEADER(scan_name.h)
 
 namespace Botan {
 
@@ -13355,7 +13355,7 @@ std::vector<std::string> probe_providers_of(const std::string& algo_spec,
 
 }
 
-BOTAN_FUTURE_INTERNAL_HEADER(secqueue.h)
+//BOTAN_FUTURE_INTERNAL_HEADER(secqueue.h)
 
 namespace Botan {
 
@@ -13414,7 +13414,7 @@ class BOTAN_PUBLIC_API(2,0) SecureQueue final : public Fanout_Filter, public Dat
 
 }
 
-BOTAN_FUTURE_INTERNAL_HEADER(sha160.h)
+//BOTAN_FUTURE_INTERNAL_HEADER(sha160.h)
 
 namespace Botan {
 
@@ -13479,7 +13479,7 @@ typedef SHA_160 SHA_1;
 #if __cplusplus < 201402L
 #endif
 
-BOTAN_FUTURE_INTERNAL_HEADER(stl_compatability.h)
+//BOTAN_FUTURE_INTERNAL_HEADER(stl_compatability.h)
 
 namespace Botan
 {
@@ -13543,7 +13543,7 @@ typename stlCompatibilityDetails::_Unique_if<T>::_Known_bound make_unique(Args&&
 #if defined(BOTAN_HAS_STREAM_CIPHER)
 #endif
 
-BOTAN_FUTURE_INTERNAL_HEADER(stream_mode.h)
+//BOTAN_FUTURE_INTERNAL_HEADER(stream_mode.h)
 
 namespace Botan {
 
