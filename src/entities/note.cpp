@@ -2836,7 +2836,7 @@ void Note::handleNoteMoving(Note oldNote) {
 QString Note::createNoteHeader(const QString& name) {
     QString header = name.trimmed() + "\n";
 
-    for (int i = 0; i < min(name.length(), 40); i++) {
+    for (int i = 0; i < std::min(name.length(), 40); i++) {
         header.append("=");
     }
 
@@ -3199,7 +3199,7 @@ QString Note::getNotePreviewText(bool asHtml, int lines) {
     }
 
     noteText = "";
-    for (int i = 0; i < min(lines, lineList.count()); i++) {
+    for (int i = 0; i < std::min(lines, lineList.count()); i++) {
         if (i > 0) {
             noteText += "\n";
         }
