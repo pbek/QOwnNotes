@@ -19,10 +19,17 @@ SOURCES += $$PWD/loader.cpp \
            $$PWD/core_debug.cpp
 
 HEADERS += $$PWD/client_p.h \
+           $$PWD/guesslanguage.h \
+           $$PWD/languagefilter_p.h \
            $$PWD/loader_p.h \
            $$PWD/core_debug.h \
            $$PWD/backgroundchecker.h \
-           $$PWD/backgroundchecker_p.h
+           $$PWD/backgroundchecker_p.h \
+           $$PWD/settings_p.h \
+           $$PWD/speller.h \
+           $$PWD/spellerplugin_p.h \
+           $$PWD/textbreaks_p.h \
+           $$PWD/tokenizer_p.h
 #           $$PWD/sonnetcore_export.h
 
 # Sonnet Plugins

@@ -8,7 +8,8 @@ SOURCES += $$PWD/hunspelldict.cpp \
            $$PWD/hunspelldebug.cpp
 
 HEADERS += $$PWD/hunspellclient.h \
-           $$PWD/hunspelldebug.h
+           $$PWD/hunspelldebug.h \
+           $$PWD/hunspelldict.h
 
 include($$PWD/hunspell/hunspell_lib.pri)
 
@@ -18,7 +19,7 @@ DEFINES += INSTALLATION_PLUGIN_PATH=""
 DEFINES += SONNET_STATIC
 
 INCLUDEPATH += ../../core
-#INCLUDEPATH += hunspell/src/hunspell
-#INCLUDEPATH += hunspell/src/
+INCLUDEPATH += hunspell/src/hunspell
+INCLUDEPATH += hunspell/src/
 
 
