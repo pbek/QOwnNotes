@@ -37,9 +37,12 @@ unix:!macx {
     include($$PWD/../plugins/hunspell/hunspell.pri)
 }
 
+message("Building Sonnet-Core")
 win32 {
+     message("Including Hunspell plugin in sonnet - Windows")
     include($$PWD/../plugins/hunspell/hunspell.pri)
 }
+
 
 macx {
     include($$PWD/../plugins/nsspellchecker/nsspellchecker.pri)
