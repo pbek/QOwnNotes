@@ -45,3 +45,6 @@ SOURCES += \
   #  $$PWD/src/parsers/testparser.cxx \
     $$PWD/src/parsers/textparser.cxx \
     $$PWD/src/parsers/xmlparser.cxx
+
+INCLUDEPATH += $$PWD/src/hunspell
+INCLUDEPATH += $$PWD/src/parsers

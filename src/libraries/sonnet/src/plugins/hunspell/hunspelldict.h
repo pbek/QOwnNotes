@@ -22,7 +22,7 @@
 #define KSPELL_HUNSPELLDICT_H
 
 #include "spellerplugin_p.h"
-#include "hunspell/hunspell.hxx"
+#include "hunspell/src/hunspell/hunspell.hxx"
 
 class HunspellDict : public Sonnet::SpellerPlugin
 {
