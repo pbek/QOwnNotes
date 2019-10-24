@@ -48,11 +48,7 @@ SOURCES += \
 
 win32 {
     message("Hunspell Windows Build")
-    DEFINES += WIN32 \
-            += HUN_WINIDOWS
-#            += _WIN32 \
-#            += __MINGW32__ \
-#            += BUILDING_LIBHUNSPELL
+    DEFINES += WIN32
 }
 
 INCLUDEPATH += $$PWD/src/hunspell
