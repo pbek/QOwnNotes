@@ -3,6 +3,8 @@
 #CONFIG += staticlib
 QT -= gui
 
+include($$PWD/hunspell/hunspell_lib.pri)
+
 SOURCES += $$PWD/hunspelldict.cpp \
            $$PWD/hunspellclient.cpp \
            $$PWD/hunspelldebug.cpp
@@ -10,8 +12,6 @@ SOURCES += $$PWD/hunspelldict.cpp \
 HEADERS += $$PWD/hunspellclient.h \
            $$PWD/hunspelldebug.h \
            $$PWD/hunspelldict.h
-
-include($$PWD/hunspell/hunspell_lib.pri)
 
 DEFINES += SONNETUI_EXPORT=""
 #DEFINES += SONNETCORE_EXPORT=""

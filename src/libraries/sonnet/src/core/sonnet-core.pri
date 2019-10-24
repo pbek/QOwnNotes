@@ -33,8 +33,13 @@ HEADERS += $$PWD/client_p.h \
 #           $$PWD/sonnetcore_export.h
 
 # Sonnet Plugins
-include($$PWD/../plugins/hunspell/hunspell.pri)
-macx: include($$PWD/../plugins/nsspellchecker/nsspellchecker.pri)
+unix|win32 {
+    include($$PWD/../plugins/hunspell/hunspell.pri)
+}
+
+macx {
+    include($$PWD/../plugins/nsspellchecker/nsspellchecker.pri)
+}
 
 
 #DEFINES += SONNETCORE_EXPORT=""
