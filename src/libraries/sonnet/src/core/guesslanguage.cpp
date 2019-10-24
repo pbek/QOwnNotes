@@ -19,6 +19,7 @@
     Boston, MA 02110-1301, USA.
 */
 
+#include <QtGlobal>
 #include <QCoreApplication>
 #include <QFile>
 #include <QStandardPaths>
@@ -486,21 +487,26 @@ GuessLanguagePrivate::GuessLanguagePrivate()
         case QChar::Script_WarangCiti:
             names = getNames(QLocale::VarangKshitiScript);
             break;
+#if QT_VERSION >= 0x050700
         case QChar::Script_Ahom:
             names = getNames(QLocale::AhomScript);
             break;
+#endif
         case QChar::Script_AnatolianHieroglyphs:
             names = getNames(QLocale::AnatolianHieroglyphsScript);
             break;
+#if QT_VERSION >= 0x050700
         case QChar::Script_Hatran:
             names = getNames(QLocale::HatranScript);
             break;
+
         case QChar::Script_Multani:
             names = getNames(QLocale::MultaniScript);
             break;
         case QChar::Script_OldHungarian:
             names = getNames(QLocale::OldHungarianScript);
             break;
+#endif
         case QChar::Script_Unknown:
         case QChar::Script_Inherited:
         case QChar::Script_Common:
