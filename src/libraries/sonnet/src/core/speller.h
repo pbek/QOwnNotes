@@ -24,8 +24,6 @@
 #include <QString>
 #include <QMap>
 
-#include "sonnetcore_export.h"
-
 namespace Sonnet {
 class SpellerPrivate;
 /**
@@ -33,7 +31,7 @@ class SpellerPrivate;
  *
  * @short class used for actuall spell checking
  */
-class SONNETCORE_EXPORT Speller
+class Speller
 {
 public:
     explicit Speller(const QString &lang = QString());

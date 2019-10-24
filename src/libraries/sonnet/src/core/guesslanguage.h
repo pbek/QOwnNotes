@@ -23,8 +23,6 @@
 #include <QString>
 #include <QStringList>
 
-#include "sonnetcore_export.h"
-
 namespace Sonnet {
 // Amount of trigrams in each file
 static const int MAXGRAMS = 300;
@@ -46,7 +44,7 @@ class GuessLanguagePrivate;
  * @author Jacob Rideout <kde@jacobrideout.net>
  * @since 4.3
  */
-class SONNETCORE_EXPORT GuessLanguage
+class GuessLanguage
 {
 public:
 

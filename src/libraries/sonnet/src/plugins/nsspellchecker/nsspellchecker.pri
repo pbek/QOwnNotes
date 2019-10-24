@@ -11,7 +11,7 @@ HEADERS += $$PWD/nsspellcheckerclient.h \
            $$PWD/nsspellcheckerdict.h 
 
 DEFINES += SONNETUI_EXPORT=""
-DEFINES += SONNETCORE_EXPORT=""
+#DEFINES += SONNETCORE_EXPORT=""
 DEFINES += INSTALLATION_PLUGIN_PATH=""
 DEFINES += SONNET_STATIC
 

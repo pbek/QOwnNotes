@@ -89,7 +89,7 @@ while (t.hasNext()) {
 This example checks spelling of given buffer
  * @since 4.3
 */
-class SONNETCORE_EXPORT WordTokenizer : public AbstractTokenizer
+class WordTokenizer : public AbstractTokenizer
 {
 public:
     /**
@@ -121,7 +121,7 @@ private:
 SentenceTokenizer splits buffer into sentences according to rules from Unicode standard 5.1.
  * @since 4.3
 */
-class SONNETCORE_EXPORT SentenceTokenizer : public AbstractTokenizer
+class SentenceTokenizer : public AbstractTokenizer
 {
 public:
     SentenceTokenizer(const QString &buffer = QString());

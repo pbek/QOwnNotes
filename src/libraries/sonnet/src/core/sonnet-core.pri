@@ -22,20 +22,20 @@ HEADERS += $$PWD/client_p.h \
            $$PWD/loader_p.h \
            $$PWD/core_debug.h \
            $$PWD/backgroundchecker.h \
-           $$PWD/backgroundchecker_p.h \
-           $$PWD/sonnetcore_export.h
+           $$PWD/backgroundchecker_p.h
+#           $$PWD/sonnetcore_export.h
 
 # Sonnet Plugins
 include($$PWD/../plugins/hunspell/hunspell.pri)
 macx: include($$PWD/../plugins/nsspellchecker/nsspellchecker.pri)
 
 
-DEFINES += SONNETCORE_EXPORT=""
+#DEFINES += SONNETCORE_EXPORT=""
 DEFINES += INSTALLATION_PLUGIN_PATH=""
 #DEFINES += SONNET_STATIC
 
-unix:system("touch sonnetcore_export.h")
-win32:system("type nul > sonnetcore_export.h")
+#unix:system("touch sonnetcore_export.h")
+#win32:system("type nul > sonnetcore_export.h")
 
 # Copy trigrams.map to build dir
 defineTest(copyToDestDir) {

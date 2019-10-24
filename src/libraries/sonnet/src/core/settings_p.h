@@ -22,7 +22,6 @@
 
 #include <QStringList>
 #include <QString>
-#include "sonnetcore_export.h"
 
 namespace Sonnet {
 class Loader;
@@ -30,7 +29,7 @@ class SettingsPrivate;
 /**
  * Settings class
  */
-class SONNETCORE_EXPORT Settings
+class Settings
 {
 public:
     ~Settings();
