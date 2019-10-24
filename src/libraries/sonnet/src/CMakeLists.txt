@@ -1,0 +1,5 @@
+add_subdirectory(core)
+add_subdirectory(plugins)
+if(TARGET Qt5::Widgets)
+    add_subdirectory(ui)
+endif()

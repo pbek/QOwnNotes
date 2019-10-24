@@ -1,0 +1,566 @@
+# Translation of sonnet5_qt to Northern Sami
+#
+# Børre Gaup <boerre@skolelinux.no>, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-02-28 03:44+0000\n"
+"PO-Revision-Date: 2012-05-30 23:19+0200\n"
+"Last-Translator: Børre Gaup <boerre@skolelinux.no>\n"
+"Language-Team: Northern Sami <i18n-sme@lister.ping.uio.no>\n"
+"Language: se\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: qtrich\n"
+"X-Qt-Contexts: true\n"
+
+#: core/loader.cpp:190
+#, fuzzy
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "40"
+msgstr "40"
+
+#: core/loader.cpp:191
+#, fuzzy
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "60"
+msgstr "60"
+
+#: core/loader.cpp:192
+#, fuzzy
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "80"
+msgstr "80"
+
+#: core/loader.cpp:193
+#, fuzzy
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ise suffixes"
+msgstr "-ise suffivssat"
+
+#: core/loader.cpp:194
+#, fuzzy
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ize suffixes"
+msgstr "-ize suffivssat"
+
+#: core/loader.cpp:195
+#, fuzzy
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ise suffixes and with accents"
+msgstr "-ise suffivssat ja akseantamearkkat"
+
+#: core/loader.cpp:197
+#, fuzzy
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ise suffixes and without accents"
+msgstr "-ise suffivssat ja akseantamearkkaidkeahttá"
+
+#: core/loader.cpp:200
+#, fuzzy
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ize suffixes and with accents"
+msgstr "-ize suffivssat mas leat akseantamearkkat"
+
+#: core/loader.cpp:202
+#, fuzzy
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ize suffixes and without accents"
+msgstr "-ize suffivssat, aksentakeahttá"
+
+#: core/loader.cpp:205
+#, fuzzy
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "large"
+msgstr "stuoris"
+
+#: core/loader.cpp:206
+#, fuzzy
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "medium"
+msgstr "gaskageardán"
+
+#: core/loader.cpp:207
+#, fuzzy
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "small"
+msgstr "uhcci"
+
+#: core/loader.cpp:208
+#, fuzzy
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "variant 0"
+msgstr "variánta 0"
+
+#: core/loader.cpp:209
+#, fuzzy
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "variant 1"
+msgstr "variánta 1"
+
+#: core/loader.cpp:210
+#, fuzzy
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "variant 2"
+msgstr "variánta 2"
+
+#: core/loader.cpp:212
+#, fuzzy
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "without accents"
+msgstr "akseantakeahttá"
+
+#: core/loader.cpp:213
+#, fuzzy
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "with accents"
+msgstr "aksentaiguin"
+
+#: core/loader.cpp:215
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "with ye, modern russian"
+msgstr ""
+
+#: core/loader.cpp:217
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "with yeyo, modern and old russian"
+msgstr ""
+
+#: core/loader.cpp:220
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "with yo, old russian"
+msgstr ""
+
+#: core/loader.cpp:221
+#, fuzzy
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "extended"
+msgstr "viiddiduvvon"
+
+#: core/loader.cpp:256
+#, fuzzy, qt-format
+msgctxt ""
+"Sonnet::Loader|dictionary name; %1 = language name, %2 = country name and %3 "
+"= language variant name"
+msgid "%1 (%2) [%3]"
+msgstr "%1 (%2) [%3]"
+
+#: core/loader.cpp:259
+#, fuzzy, qt-format
+msgctxt "Sonnet::Loader|dictionary name; %1 = language name, %2 = country name"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: ui/configdialog.cpp:53
+#, fuzzy
+msgctxt "Sonnet::ConfigDialog|"
+msgid "Spell Checking Configuration"
+msgstr "Heivet čállindárkkisteami"
+
+#: ui/configui.ui:26
+msgctxt "SonnetConfigUI|"
+msgid "No backend found for spell checking"
+msgstr ""
+
+#: ui/configui.ui:36
+#, fuzzy
+msgctxt "SonnetConfigUI|"
+msgid "Default language:"
+msgstr "Standardgiella:"
+
+#: ui/configui.ui:63
+msgctxt "SonnetConfigUI|"
+msgid "Choose your preferred languages"
+msgstr ""
+
+#: ui/configui.ui:71
+#, fuzzy
+msgctxt "SonnetConfigUI|"
+msgid "Options"
+msgstr "Molssaeavttut"
+
+#: ui/configui.ui:77
+msgctxt "SonnetConfigUI|"
+msgid "Enable autodetection of &language"
+msgstr ""
+
+#: ui/configui.ui:84
+#, fuzzy
+msgctxt "SonnetConfigUI|"
+msgid "Enable &background spellchecking"
+msgstr "Bija čállindárkkisteami doaibmat &duogážis"
+
+#: ui/configui.ui:91
+#, fuzzy
+msgctxt "SonnetConfigUI|"
+msgid "&Automatic spell checking enabled by default"
+msgstr "&Automáhtalaš čállindárkkisteapmi lea alde standárdan"
+
+#: ui/configui.ui:98
+#, fuzzy
+msgctxt "SonnetConfigUI|"
+msgid "Skip all &uppercase words"
+msgstr "Ale beroš sániin mas leat &stuorra bustávat"
+
+#: ui/configui.ui:105
+#, fuzzy
+msgctxt "SonnetConfigUI|"
+msgid "S&kip run-together words"
+msgstr "Ale &beroš oktii čállojuvvon sániin"
+
+#: ui/configui.ui:115
+#, fuzzy
+msgctxt "SonnetConfigUI|"
+msgid "Ignored Words:"
+msgstr "Badjelgehččon sánit"
+
+#: ui/configui.ui:129
+#, fuzzy
+msgctxt "SonnetConfigUI|"
+msgid "&Add"
+msgstr "&Lasit"
+
+#: ui/configui.ui:142
+#, fuzzy
+msgctxt "SonnetConfigUI|"
+msgid "&Remove"
+msgstr "&Váldde eret"
+
+#: ui/dialog.cpp:96 ui/dialog.cpp:218 ui/dialog.cpp:429
+#, fuzzy
+msgctxt "Sonnet::Dialog|@title:window"
+msgid "Check Spelling"
+msgstr "Čállindárkkisteapmi"
+
+#: ui/dialog.cpp:217
+#, fuzzy
+msgctxt "Sonnet::Dialog|progress label"
+msgid "Spell checking in progress..."
+msgstr "Čállindárkkisteapmi lea jođus …"
+
+#: ui/dialog.cpp:238
+#, fuzzy
+msgctxt "Sonnet::Dialog|"
+msgid "Spell check stopped."
+msgstr "Čállindárkkisteapmi bissehuvvui."
+
+#: ui/dialog.cpp:248
+#, fuzzy
+msgctxt "Sonnet::Dialog|"
+msgid "Spell check canceled."
+msgstr "Čállindárkkisteapmi gaskkalduhttui."
+
+#: ui/dialog.cpp:425 ui/dialog.cpp:428
+#, fuzzy
+msgctxt "Sonnet::Dialog|"
+msgid "Spell check complete."
+msgstr "Čállindárkkisteapmi lea geargan."
+
+#: ui/highlighter.cpp:251 ui/highlighter.cpp:273
+#, fuzzy
+msgctxt "Sonnet::Highlighter|"
+msgid "As-you-type spell checking enabled."
+msgstr "Čáledettiin dárkkisteapmi lea jođus."
+
+#: ui/highlighter.cpp:254
+#, fuzzy
+msgctxt "Sonnet::Highlighter|"
+msgid "Too many misspelled words. As-you-type spell checking disabled."
+msgstr ""
+"Menddo máŋga boasttočállon sánit. Čáledettiin dárkkisteapmi ii leat šat "
+"jođus."
+
+#: ui/highlighter.cpp:275
+#, fuzzy
+msgctxt "Sonnet::Highlighter|"
+msgid "As-you-type spell checking disabled."
+msgstr "Čáledettiin dárkkisteapmi ii leat jođus."
+
+#: ui/sonnetui.ui:41 ui/sonnetui.ui:57
+#, fuzzy
+msgctxt "SonnetUi|"
+msgid ""
+"<qt><p>This word was considered to be an \"unknown word\" because it does "
+"not match any entry in the dictionary currently in use. It may also be a "
+"word in a foreign language.</p>\n"
+"<p>If the word is not misspelled, you may add it to the dictionary by "
+"clicking <b>Add to Dictionary</b>. If you do not want to add the unknown "
+"word to the dictionary, but you want to leave it unchanged, click <b>Ignore</"
+"b> or <b>Ignore All</b>.</p>\n"
+"<p>However, if the word is misspelled, you can try to find the correct "
+"replacement in the list below. If you cannot find a replacement there, you "
+"may type it in the text box below, and click <b>Replace</b> or <b>Replace "
+"All</b>.</p>\n"
+"</qt>"
+msgstr ""
+"<qt> <p>Dát sátni rehkenasto «amas sátnin» danne go dat ii gávdno "
+"sátnelisttus maid geavahat. Sáhttá leat boastut čállon vai eará gielas.</p> "
+"<p>Jos sátni ii leat boastut čállojuvvon, de sáhtát lasihit sátnelistui jos "
+"deaddilat <b>Lasit sátnelistui</b>. Jos it hálit sáni lasihit sátnelistui, "
+"muhto dušše guođđit dan, coahkkal <b>Badjelgeahča</b> dahje <b>Badjelgeahča "
+"visot</b>.</p> <p>Jos sátni lea boastut čállojuvvon, de sáhtát geahččalit "
+"gávdnat rievttes čállinvuogi listtus dás vuolábealde. Jos it gávnna juoga "
+"mii heive, de sáhtát ieš čállit sáni čállingieddái dás vuolábealde ja "
+"deaddilit <b>Buhtte</b> dahje <b>Buhtte visot</b>.</p></qt>"
+
+#: ui/sonnetui.ui:47
+#, fuzzy
+msgctxt "SonnetUi|"
+msgid "Unknown word:"
+msgstr "Amas sátni:"
+
+#: ui/sonnetui.ui:54
+#, fuzzy
+msgctxt "SonnetUi|"
+msgid "Unknown word"
+msgstr "Amas sátni"
+
+#: ui/sonnetui.ui:63
+#, fuzzy
+msgctxt "SonnetUi|"
+msgid "<b>misspelled</b>"
+msgstr "<b>boastut čállojuvvon</b>"
+
+#: ui/sonnetui.ui:70 ui/sonnetui.ui:180
+#, fuzzy
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Select the language of the document you are proofing here.</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Vállje makkár gillii teaksta lea čállojuvvon.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:75
+#, fuzzy
+msgctxt "SonnetUi|"
+msgid "&Language:"
+msgstr "&Giella:"
+
+#: ui/sonnetui.ui:85
+#, fuzzy
+msgctxt "SonnetUi|"
+msgid "Text excerpt showing the unknown word in its context."
+msgstr "Teakstabihttá mii čájeha boastut čállojuvvon sáni oktavuohta."
+
+#: ui/sonnetui.ui:88
+#, fuzzy
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Here you can see a text excerpt showing the unknown word in its context. "
+"If this information is not sufficient to choose the best replacement for the "
+"unknown word, you can click on the document you are proofing, read a larger "
+"part of the text and then return here to continue proofing.</p>\n"
+"</qt>"
+msgstr ""
+"<qt> <p>Dás oainnát oasi teavsttas gos boastut čállojuvvon sátni lea. Jos "
+"dát oktavuohta ii leat doarvái gávdnat buorre buhttádusa, de sáhtát "
+"coahkkalit dokumeantta vai lohkat stuorit oasi dokumeanttas ovdal go máhcat "
+"fas deikke ja joatkkát čállindárkkistemiin.</p></qt>"
+
+#: ui/sonnetui.ui:96
+#, fuzzy
+msgctxt "SonnetUi|"
+msgid "... the <b>misspelled</b> word shown in context ..."
+msgstr "… <b>boastut</b> čállojuvvon sáni oktavuohta …"
+
+#: ui/sonnetui.ui:106
+#, fuzzy
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>The unknown word was detected and considered unknown because it is not "
+"included in the dictionary.<br>\n"
+"Click here if you consider the unknown word not to be misspelled, and you "
+"want to avoid wrongly detecting it again in the future. If you want to let "
+"it remain as is, but not add it to the dictionary, then click <b>Ignore</b> "
+"or <b>Ignore All</b> instead.</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Sátni gávdnui ja rehkenasto amasin danne go ii gávdno sátnelisttus.<br /"
+"> \n"
+"Coahkkal dása jos dieđát ahte sátni ii leat boastut čállojuvvon ja háliidat "
+"ahte čállindárkkisteami ii gálgga beroštit das boahtteáiggis. Jos háliidat "
+"guođđit sáni, muhto iige bidjat dan sisa sátnelistui, geavat baicce boalu "
+"<b>Badjelgeahča</b> dahje <b>Badjelgeahča visot</b>.</p> \n"
+"</qt>"
+
+#: ui/sonnetui.ui:112
+#, fuzzy
+msgctxt "SonnetUi|"
+msgid "<< Add to Dictionary"
+msgstr "<< Lasit sátnegirjái"
+
+#: ui/sonnetui.ui:135
+#, fuzzy
+msgctxt "SonnetUi|"
+msgid "Suggestion List"
+msgstr "Evttohuslistu"
+
+#: ui/sonnetui.ui:138
+#, fuzzy
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>If the unknown word is misspelled, you should check if the correction for "
+"it is available and if it is, click on it. If none of the words in this list "
+"is a good replacement you may type the correct word in the edit box above.</"
+"p>\n"
+"<p>To correct this word click <b>Replace</b> if you want to correct only "
+"this occurrence or <b>Replace All</b> if you want to correct all occurrences."
+"</p>\n"
+"</qt>"
+msgstr ""
+"<qt> <p>Jos amas sátni lea boastut čállojuvvon, dárkkis ahte gávdno rievttes "
+"evttohus. Jos it gávnna buorre evttohus, de sáhtát čállit rievttes sáni "
+"čállingieddái dás bajábealde.</p> <p>Coahkkal <b>Buhtte</b> vai divvut juste "
+"dán sáni, dahje <b>Buhtte visot</b> vai divvut buot gávdnosa dán sánis.</p></"
+"qt>"
+
+#: ui/sonnetui.ui:151 ui/sonnetui.ui:167
+#, fuzzy
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>If the unknown word is misspelled, you should type the correction for "
+"your misspelled word here or select it from the list below.</p>\n"
+"<p>You can then click <b>Replace</b> if you want to correct only this "
+"occurrence of the word or <b>Replace All</b> if you want to correct all "
+"occurrences.</p>\n"
+"</qt>"
+msgstr ""
+"<qt> <p>Jos amas sátni lea boastut čállojuvvon, de sáhtát čállit buhttádusa "
+"dása dahje válljet rievttes sáni listtus dás vuolábealde.</p> <p>Don sáhtát "
+"coahkkalit <b>Buhtte</b> jos háliidat divvut dušše dán sáni, dahje <b>Buhtte "
+"visot</b> jos háliidat divvut buot seammalágána sáni oktanaga.</p></qt>"
+
+#: ui/sonnetui.ui:157
+#, fuzzy
+msgctxt "SonnetUi|"
+msgid "Replace &with:"
+msgstr "Buhtte &dáinna:"
+
+#: ui/sonnetui.ui:177
+#, fuzzy
+msgctxt "SonnetUi|"
+msgid "Language Selection"
+msgstr "Vállje giela"
+
+#: ui/sonnetui.ui:206
+#, fuzzy
+msgctxt "SonnetUi|"
+msgid "S&uggest"
+msgstr "&Evttohus"
+
+#: ui/sonnetui.ui:213
+#, fuzzy
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Click here to replace this occurrence of the unknown text with the text "
+"in the edit box above (to the left).</p>\n"
+"</qt>"
+msgstr ""
+"<qt> <p>Coahkkal dása vai buhttet dán amas teavstta sániin mii lea "
+"čállingiettis dás bajábealde (gurutbealde).</p></qt>"
+
+#: ui/sonnetui.ui:218
+#, fuzzy
+msgctxt "SonnetUi|"
+msgid "&Replace"
+msgstr "&Buhtte"
+
+#: ui/sonnetui.ui:225
+#, fuzzy
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Click here to replace all occurrences of the unknown text with the text "
+"in the edit box above (to the left).</p>\n"
+"</qt>"
+msgstr ""
+"<qt> <p>Coahkkal dása vai buhttet buot amas teakstagávdnosiid teavsttain mii "
+"lea čállingiettis dás bajábealde (gurutbealde).</p></qt>"
+
+#: ui/sonnetui.ui:230
+#, fuzzy
+msgctxt "SonnetUi|"
+msgid "R&eplace All"
+msgstr "Buhtte &visot"
+
+#: ui/sonnetui.ui:237
+#, fuzzy
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Click here to let this occurrence of the unknown word remain as is.</p>\n"
+"<p>This action is useful when the word is a name, an acronym, a foreign word "
+"or any other unknown word that you want to use but not add to the dictionary."
+"</p>\n"
+"</qt>"
+msgstr ""
+"<qt> <p>Coahkkal dása vai guođđit dán sáni nugo lea.</p> <p>Dát lea ávkkálaš "
+"juos sátni lea namma, oanádus, sátni eará gillii dahje amas sátni maid it "
+"hálit lasihit sátnelistui.</p></qt>"
+
+#: ui/sonnetui.ui:243
+#, fuzzy
+msgctxt "SonnetUi|"
+msgid "&Ignore"
+msgstr "Badjelgeahča"
+
+#: ui/sonnetui.ui:250 ui/sonnetui.ui:263
+#, fuzzy
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Click here to let all occurrences of the unknown word remain as they are."
+"</p>\n"
+"<p>This action is useful when the word is a name, an acronym, a foreign word "
+"or any other unknown word that you want to use but not add to the dictionary."
+"</p>\n"
+"</qt>"
+msgstr ""
+"<qt> <p>Coahkkal dása vai guođđit visot gávdnosa dan sánis.</p> <p>Dát lea "
+"ávkkálaš juos sátni lea namma, oanádus, sátni eará gillii dahje amas sátni "
+"maid it hálit lasihit sátnelistui.</p></qt>"
+
+#: ui/sonnetui.ui:256
+#, fuzzy
+msgctxt "SonnetUi|"
+msgid "I&gnore All"
+msgstr "Badjelgeahča visot"
+
+#: ui/sonnetui.ui:269
+#, fuzzy
+msgctxt "SonnetUi|"
+msgid "Autocorrect"
+msgstr "Divo automáhtalaččat"
+
+#: ui/spellcheckdecorator.cpp:172
+#, fuzzy, qt-format
+msgctxt "Sonnet::SpellCheckDecorator|"
+msgid "No suggestions for %1"
+msgstr "Eai leat evttohusat %1 várás"
+
+#: ui/spellcheckdecorator.cpp:183
+#, fuzzy
+msgctxt "Sonnet::SpellCheckDecorator|"
+msgid "Ignore"
+msgstr "Badjelgeahča"
+
+#: ui/spellcheckdecorator.cpp:184
+#, fuzzy
+msgctxt "Sonnet::SpellCheckDecorator|"
+msgid "Add to Dictionary"
+msgstr "Lasit sátnegirjái"

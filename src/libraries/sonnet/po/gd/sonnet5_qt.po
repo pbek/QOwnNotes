@@ -1,0 +1,531 @@
+# GunChleoc <fios@foramnagaidhlig.net>, 2015, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2016-04-30 12:12+0100\n"
+"Last-Translator: GunChleoc <fios@foramnagaidhlig.net>\n"
+"Language-Team: Fòram na Gàidhlig\n"
+"Language: gd\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 || n==11) ? 0 : (n==2 || n==12) ? 1 : "
+"(n > 2 && n < 20) ? 2 : 3;\n"
+"X-Generator: Virtaal 0.7.1\n"
+"X-Qt-Contexts: true\n"
+
+#: core/loader.cpp:190
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "40"
+msgstr "40"
+
+#: core/loader.cpp:191
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "60"
+msgstr "60"
+
+#: core/loader.cpp:192
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "80"
+msgstr "80"
+
+#: core/loader.cpp:193
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ise suffixes"
+msgstr "Iar-leasachain -ise"
+
+#: core/loader.cpp:194
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ize suffixes"
+msgstr "Iar-leasachain -ize"
+
+#: core/loader.cpp:195
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ise suffixes and with accents"
+msgstr "Iar-leasachain -ise is le sràcan"
+
+#: core/loader.cpp:197
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ise suffixes and without accents"
+msgstr "Iar-leasachain -ise is gun sràcan"
+
+#: core/loader.cpp:200
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ize suffixes and with accents"
+msgstr "Iar-leasachain -ize is le sràcan"
+
+#: core/loader.cpp:202
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ize suffixes and without accents"
+msgstr "Iar-leasachain -ize is gun sràcan"
+
+#: core/loader.cpp:205
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "large"
+msgstr "mòr"
+
+#: core/loader.cpp:206
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "medium"
+msgstr "meadhanach"
+
+#: core/loader.cpp:207
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "small"
+msgstr "beag"
+
+#: core/loader.cpp:208
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "variant 0"
+msgstr "eugsamhail 0"
+
+#: core/loader.cpp:209
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "variant 1"
+msgstr "eugsamhail 1"
+
+#: core/loader.cpp:210
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "variant 2"
+msgstr "eugsamhail 2"
+
+#: core/loader.cpp:212
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "without accents"
+msgstr "gun sràcan"
+
+#: core/loader.cpp:213
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "with accents"
+msgstr "le sràcan"
+
+#: core/loader.cpp:215
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "with ye, modern russian"
+msgstr "le Е, nua-Ruisis"
+
+#: core/loader.cpp:217
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "with yeyo, modern and old russian"
+msgstr "le E is Ё, nua- is seann-Ruisis"
+
+#: core/loader.cpp:220
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "with yo, old russian"
+msgstr "le Ё, seann-Ruisis"
+
+#: core/loader.cpp:221
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "extended"
+msgstr "leudaichte"
+
+#: core/loader.cpp:256
+#, qt-format
+msgctxt ""
+"Sonnet::Loader|dictionary name; %1 = language name, %2 = country name and %3 "
+"= language variant name"
+msgid "%1 (%2) [%3]"
+msgstr "%1 (%2) [%3]"
+
+#: core/loader.cpp:259
+#, qt-format
+msgctxt "Sonnet::Loader|dictionary name; %1 = language name, %2 = country name"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: ui/configdialog.cpp:53
+msgctxt "Sonnet::ConfigDialog|"
+msgid "Spell Checking Configuration"
+msgstr "Rèiteachadh airson dearbhadh an litreachaidh"
+
+#: ui/configui.ui:26
+msgctxt "SonnetConfigUI|"
+msgid "No backend found for spell checking"
+msgstr "Cha deach backend airson dearbhadh an litreachaidh a lorg"
+
+#: ui/configui.ui:36
+msgctxt "SonnetConfigUI|"
+msgid "Default language:"
+msgstr "An cànan tùsail:"
+
+#: ui/configui.ui:63
+msgctxt "SonnetConfigUI|"
+msgid "Choose your preferred languages"
+msgstr ""
+
+#: ui/configui.ui:71
+msgctxt "SonnetConfigUI|"
+msgid "Options"
+msgstr "Roghainnean"
+
+#: ui/configui.ui:77
+msgctxt "SonnetConfigUI|"
+msgid "Enable autodetection of &language"
+msgstr "Cuir an comas mothachadh fèin-obrachai&l a' chànain"
+
+#: ui/configui.ui:84
+msgctxt "SonnetConfigUI|"
+msgid "Enable &background spellchecking"
+msgstr "Cuir an comas dearbhadh an litreachaidh sa chùlai&bh"
+
+#: ui/configui.ui:91
+msgctxt "SonnetConfigUI|"
+msgid "&Automatic spell checking enabled by default"
+msgstr "Bidh dearbhadh fèin-obr&achail an litreachaidh an comas a ghnàth"
+
+#: ui/configui.ui:98
+msgctxt "SonnetConfigUI|"
+msgid "Skip all &uppercase words"
+msgstr "Gearr leum thairis air gach facal ann an litrichean &mòra"
+
+#: ui/configui.ui:105
+msgctxt "SonnetConfigUI|"
+msgid "S&kip run-together words"
+msgstr "Gearr leum thairis air faclan co-fhillte"
+
+#: ui/configui.ui:115
+msgctxt "SonnetConfigUI|"
+msgid "Ignored Words:"
+msgstr "Faclan a leigear seachad:"
+
+#: ui/configui.ui:129
+msgctxt "SonnetConfigUI|"
+msgid "&Add"
+msgstr "&Cuir ris"
+
+#: ui/configui.ui:142
+msgctxt "SonnetConfigUI|"
+msgid "&Remove"
+msgstr "Thoi&r air falbh"
+
+#: ui/dialog.cpp:96 ui/dialog.cpp:218 ui/dialog.cpp:429
+msgctxt "Sonnet::Dialog|@title:window"
+msgid "Check Spelling"
+msgstr "Dearbhaich an litreachadh"
+
+#: ui/dialog.cpp:217
+msgctxt "Sonnet::Dialog|progress label"
+msgid "Spell checking in progress..."
+msgstr "Tha an litreachadh 'ga dhearbhadh..."
+
+#: ui/dialog.cpp:238
+msgctxt "Sonnet::Dialog|"
+msgid "Spell check stopped."
+msgstr "Chaidh dearbhadh an litreachaidh a stad."
+
+#: ui/dialog.cpp:248
+msgctxt "Sonnet::Dialog|"
+msgid "Spell check canceled."
+msgstr "Chaidh sgur de dhearbhadh an litreachaidh."
+
+#: ui/dialog.cpp:425 ui/dialog.cpp:428
+msgctxt "Sonnet::Dialog|"
+msgid "Spell check complete."
+msgstr "Tha dearbhadh an litreachaidh deiseil."
+
+#: ui/highlighter.cpp:251 ui/highlighter.cpp:273
+msgctxt "Sonnet::Highlighter|"
+msgid "As-you-type spell checking enabled."
+msgstr "Tha an litreachaidh 'ga dhearbhadh fhad 's a bhios tu a' sgrìobhadh."
+
+#: ui/highlighter.cpp:254
+msgctxt "Sonnet::Highlighter|"
+msgid "Too many misspelled words. As-you-type spell checking disabled."
+msgstr ""
+"Tha cus mearachdan litreachaidh ann. Tha dearbhadh an litreachaidh fhad 's a "
+"bhios tu a' sgrìobhadh an comas."
+
+#: ui/highlighter.cpp:275
+msgctxt "Sonnet::Highlighter|"
+msgid "As-you-type spell checking disabled."
+msgstr ""
+"Chan eil an litreachaidh 'ga dhearbhadh fhad 's a bhios tu a' sgrìobhadh."
+
+#: ui/sonnetui.ui:41 ui/sonnetui.ui:57
+msgctxt "SonnetUi|"
+msgid ""
+"<qt><p>This word was considered to be an \"unknown word\" because it does "
+"not match any entry in the dictionary currently in use. It may also be a "
+"word in a foreign language.</p>\n"
+"<p>If the word is not misspelled, you may add it to the dictionary by "
+"clicking <b>Add to Dictionary</b>. If you do not want to add the unknown "
+"word to the dictionary, but you want to leave it unchanged, click <b>Ignore</"
+"b> or <b>Ignore All</b>.</p>\n"
+"<p>However, if the word is misspelled, you can try to find the correct "
+"replacement in the list below. If you cannot find a replacement there, you "
+"may type it in the text box below, and click <b>Replace</b> or <b>Replace "
+"All</b>.</p>\n"
+"</qt>"
+msgstr ""
+"<qt><p>Chaidh am facal seo a mheas mar \"fhacal nach aithne dhuinn\" air "
+"sgàth 's nach eil e a' freagairt ri facal sam bith san fhaclair a tha 'ga "
+"chleachdadh an-dràsta. dh'fhaoidte gur e facal ann an cànan eile a th' ann.</"
+"p>\n"
+"<p>Mur eil litreachadh an fhacail cearr, 's urrainn dhut a chur ris an "
+"fhaclair 's tu a' briogadh air <b>Cuir ris an fhaclair</b>. Mur eil thu "
+"airson am facal nach aithne dhuinn a chur ris an fhaclair ach ma tha thu "
+"airson a chumail mar a tha e, briog air <b>Leig seachad</b> no <b>Leig "
+"seachad na h-uile</b>.</p>\n"
+"<p>Co-dhiù, ma tha droch-litreachadh air an fhacal, feuch an lorg thu am "
+"facal ceart air an liosta gu h-ìosal gus a chur 'na àite. Mura lorg thu am "
+"facal ceart ann, cuir a-steach e sa bhogsa-teacsa gu h-ìosal ma thogras tu "
+"is briog air <b>Cuir 'na àite</b> or <b>Cuir an àite na h-uile</b>.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:47
+msgctxt "SonnetUi|"
+msgid "Unknown word:"
+msgstr "Facal nach aithne dhuinn:"
+
+#: ui/sonnetui.ui:54
+msgctxt "SonnetUi|"
+msgid "Unknown word"
+msgstr "Facal nach aithne dhuinn"
+
+#: ui/sonnetui.ui:63
+msgctxt "SonnetUi|"
+msgid "<b>misspelled</b>"
+msgstr "<b>droch-litreachadh</b>"
+
+#: ui/sonnetui.ui:70 ui/sonnetui.ui:180
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Select the language of the document you are proofing here.</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Tagh cànan na sgrìobhainn a tha thu a' dearbhadh an-seo.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:75
+msgctxt "SonnetUi|"
+msgid "&Language:"
+msgstr "&Cànan:"
+
+#: ui/sonnetui.ui:85
+msgctxt "SonnetUi|"
+msgid "Text excerpt showing the unknown word in its context."
+msgstr ""
+"Bloigh dhen teacsa a sheallas am facal nach aithne dhuinn ann an co-theacsa."
+
+#: ui/sonnetui.ui:88
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Here you can see a text excerpt showing the unknown word in its context. "
+"If this information is not sufficient to choose the best replacement for the "
+"unknown word, you can click on the document you are proofing, read a larger "
+"part of the text and then return here to continue proofing.</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Chì thu bloigh dhen teacsa an-seo a sheallas am facal nach aithne dhuinn "
+"'na cho-theacsa. Mur fhoghainn am fiosrachadh seo airson taghadh na chuireas "
+"tu 'na àite, 's urrainn dhut briogadh air an sgrìobhainn a tha thu a' "
+"ceartachadh, pàirt nas motha dhen theacsa a leughadh is tilleadh an-seo an "
+"uairsin gus leantainn air adhart leis a' cheartachadh.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:96
+msgctxt "SonnetUi|"
+msgid "... the <b>misspelled</b> word shown in context ..."
+msgstr ""
+"... am facal le <b>droch-litreachadh</b> ann ga shealltainn sa cho-"
+"theacsa ..."
+
+#: ui/sonnetui.ui:106
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>The unknown word was detected and considered unknown because it is not "
+"included in the dictionary.<br>\n"
+"Click here if you consider the unknown word not to be misspelled, and you "
+"want to avoid wrongly detecting it again in the future. If you want to let "
+"it remain as is, but not add it to the dictionary, then click <b>Ignore</b> "
+"or <b>Ignore All</b> instead.</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Chaidh mhothachadh dhan fhacal nach aithne dhuinn agus a mheas mar fhear "
+"nach aithne dhuinn air sgàth 's nach eil e am broinn an fhaclair.<br>\n"
+"Briog an-seo ma tha thu dhen bheachd gun deach am facal nach aithne dhuinn a "
+"litreachadh mar bu chòir is mur eil thu airson 's gum mothaich sinn dha a-"
+"rithist san àm ri teachd. Ma tha thu airson fhàgail mar a tha e gun a bhith "
+"'ga chur ris an fhaclair, briog air <b>Leig seachad</b> no <b>Leig seachad "
+"na h-uile</b> 'na àite.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:112
+msgctxt "SonnetUi|"
+msgid "<< Add to Dictionary"
+msgstr "<< Cuir ris an fhaclair"
+
+#: ui/sonnetui.ui:135
+msgctxt "SonnetUi|"
+msgid "Suggestion List"
+msgstr "Liosta nam molaidhean"
+
+#: ui/sonnetui.ui:138
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>If the unknown word is misspelled, you should check if the correction for "
+"it is available and if it is, click on it. If none of the words in this list "
+"is a good replacement you may type the correct word in the edit box above.</"
+"p>\n"
+"<p>To correct this word click <b>Replace</b> if you want to correct only "
+"this occurrence or <b>Replace All</b> if you want to correct all occurrences."
+"</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Mura deach am facal nach aithne dhuinn a litreachadh mar bu chòir, thoir "
+"sùil a bheil ceartachadh ri fhaighinn dha is ma tha, briog air. Mur eil gin "
+"dhe na faclan air an liosta seo iomchaidh, 's urrainn dhut am facal ceart a "
+"sgrìobhadh sa bhogsa-deasachaidh gu h-àrd.</p>\n"
+"<p>Gus am facal seo a cheartachadh, briog air <b>Cuir 'na àite</b> ma tha "
+"thu airson am fear seo a chur ceart a-mhàin no air <b>Cuir an àite na h-"
+"uile</b> ma tha thu airson a chur ceart gach turas a nochdas e.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:151 ui/sonnetui.ui:167
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>If the unknown word is misspelled, you should type the correction for "
+"your misspelled word here or select it from the list below.</p>\n"
+"<p>You can then click <b>Replace</b> if you want to correct only this "
+"occurrence of the word or <b>Replace All</b> if you want to correct all "
+"occurrences.</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Mura deach am facal nach aithne dhuinn a litreachadh mar bu chòir, bu "
+"chòir dhut an litreachadh ceart airson an fhacail le droch-litreachadh a "
+"sgrìobhadh an-seo no a thaghadh on liosta gu h-ìosal.</p>\n"
+"<p>'S urrainn dhut briogadh air <b>Cuir 'na àite</b> an uairsin ma tha thu "
+"airson am fear seo a chur ceart a-mhàin no air <b>Cuir an àite na h-uile</b> "
+"ma tha thu airson a chur ceart gach turas a nochdas e.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:157
+msgctxt "SonnetUi|"
+msgid "Replace &with:"
+msgstr "Cuir na &leanas 'na àite:"
+
+#: ui/sonnetui.ui:177
+msgctxt "SonnetUi|"
+msgid "Language Selection"
+msgstr "Taghadh cànain"
+
+#: ui/sonnetui.ui:206
+msgctxt "SonnetUi|"
+msgid "S&uggest"
+msgstr "&Mol"
+
+#: ui/sonnetui.ui:213
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Click here to replace this occurrence of the unknown text with the text "
+"in the edit box above (to the left).</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Briog an-seo gus an teacsa nach aithne dhuinn a chur ceart an-seo leis an "
+"teacsa sa bhogsa-deasachaidh gu h-àrd (air an taobh clì).</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:218
+msgctxt "SonnetUi|"
+msgid "&Replace"
+msgstr "Cui&r 'na àite"
+
+#: ui/sonnetui.ui:225
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Click here to replace all occurrences of the unknown text with the text "
+"in the edit box above (to the left).</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Briog an-seo gus an teacsa nach aithne dhuinn a chur ceart gach turas a "
+"nochdas e leis an teacsa sa bhogsa-deasachaidh gu h-àrd (air an taobh clì).</"
+"p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:230
+msgctxt "SonnetUi|"
+msgid "R&eplace All"
+msgstr "Cuir an àite &na h-uile"
+
+#: ui/sonnetui.ui:237
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Click here to let this occurrence of the unknown word remain as is.</p>\n"
+"<p>This action is useful when the word is a name, an acronym, a foreign word "
+"or any other unknown word that you want to use but not add to the dictionary."
+"</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Briog an-seo ach am mair am facal nach aithne dhuinn mar a tha e an turas "
+"seo.</p>\n"
+"<p>Tha an gnìomh seo feumail mas e ainm, giorrachadh, facal ann an cànan "
+"eile no facal nach aithne dhuinn sam bith eile a bu toigh leat cleachdadh a "
+"tha san facal 's mur eil thu airson a chur ris an fhaclair.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:243
+msgctxt "SonnetUi|"
+msgid "&Ignore"
+msgstr "Le&ig seachad"
+
+#: ui/sonnetui.ui:250 ui/sonnetui.ui:263
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Click here to let all occurrences of the unknown word remain as they are."
+"</p>\n"
+"<p>This action is useful when the word is a name, an acronym, a foreign word "
+"or any other unknown word that you want to use but not add to the dictionary."
+"</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Briog an-seo ach am mair am facal nach aithne dhuinn mar a tha e gach "
+"turas a nochdas e.</p>\n"
+"<p>Tha an gnìomh seo feumail mas e ainm, giorrachadh, facal ann an cànan "
+"eile no facal nach aithne dhuinn sam bith eile a bu toigh leat cleachdadh a "
+"tha san facal 's mur eil thu airson a chur ris an fhaclair.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:256
+msgctxt "SonnetUi|"
+msgid "I&gnore All"
+msgstr "Leig seachad na h-ui&le"
+
+#: ui/sonnetui.ui:269
+msgctxt "SonnetUi|"
+msgid "Autocorrect"
+msgstr "Fèin-cheartaich"
+
+#: ui/spellcheckdecorator.cpp:172
+#, qt-format
+msgctxt "Sonnet::SpellCheckDecorator|"
+msgid "No suggestions for %1"
+msgstr "Chan eil moladh airson %1 ann"
+
+#: ui/spellcheckdecorator.cpp:183
+msgctxt "Sonnet::SpellCheckDecorator|"
+msgid "Ignore"
+msgstr "Leig seachad"
+
+#: ui/spellcheckdecorator.cpp:184
+msgctxt "Sonnet::SpellCheckDecorator|"
+msgid "Add to Dictionary"
+msgstr "Cuir ris an fhaclair"

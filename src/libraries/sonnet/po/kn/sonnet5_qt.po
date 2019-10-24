@@ -1,0 +1,741 @@
+# translation of kdelibs4.po to Kannada
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Umesh Rudrapatna <urudrapatna@yahoo.com>, 2007.
+# Umesh Rudrapatna <umeshrs@gmail.com>, 2007, 2008, 2009.
+# Shankar Prasad <svenkate@redhat.com>, 2008, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-03-23 01:50+0000\n"
+"PO-Revision-Date: 2010-06-24 18:32+0530\n"
+"Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
+"Language-Team: kn_IN <kde-i18n-doc@kde.org>\n"
+"Language: kn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 1.0\n"
+"X-Qt-Contexts: true\n"
+
+#: core/loader.cpp:190
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "40"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "40"
+msgstr "೪೦"
+
+#: core/loader.cpp:191
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "60"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "60"
+msgstr "೬೦"
+
+#: core/loader.cpp:192
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "80"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "80"
+msgstr "೮೦"
+
+#: core/loader.cpp:193
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "-ise suffixes"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ise suffixes"
+msgstr "-ise ಉತ್ತರಪ್ರತ್ಯಯಗಳು"
+
+#: core/loader.cpp:194
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "-ize suffixes"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ize suffixes"
+msgstr "-ize ಉತ್ತರಪ್ರತ್ಯಯಗಳು"
+
+#: core/loader.cpp:195
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "-ise suffixes and with accents"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ise suffixes and with accents"
+msgstr "-ise ಉತ್ತರಪ್ರತ್ಯಯಗಳು ಮತ್ತು ಘಾತಚಿಹ್ನೆಗಳೊಡನೆ"
+
+#: core/loader.cpp:197
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "-ise suffixes and without accents"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ise suffixes and without accents"
+msgstr "-ise ಉತ್ತರಪ್ರತ್ಯಯಗಳು ಮತ್ತು ಘಾತಚಿಹ್ನೆಗಳಿಲ್ಲದೆ"
+
+#: core/loader.cpp:200
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "-ize suffixes and with accents"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ize suffixes and with accents"
+msgstr "-ize ಉತ್ತರಪ್ರತ್ಯಯಗಳು ಮತ್ತು ಘಾತಚಿಹ್ನೆಗಳೊಡನೆ"
+
+#: core/loader.cpp:202
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "-ize suffixes and without accents"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ize suffixes and without accents"
+msgstr "-ize ಉತ್ತರಪ್ರತ್ಯಯಗಳು ಮತ್ತು ಘಾತಚಿಹ್ನೆಗಳಿಲ್ಲದೆ"
+
+#: core/loader.cpp:205
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "large"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "large"
+msgstr "ದೊಡ್ಡದು"
+
+#: core/loader.cpp:206
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "medium"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "medium"
+msgstr "ಮಧ್ಯಮ"
+
+#: core/loader.cpp:207
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "small"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "small"
+msgstr "ಚಿಕ್ಕದು"
+
+#: core/loader.cpp:208
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "variant 0"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "variant 0"
+msgstr "ಭೇದ ೦"
+
+#: core/loader.cpp:209
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "variant 1"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "variant 1"
+msgstr "ಭೇದ ೧"
+
+#: core/loader.cpp:210
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "variant 2"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "variant 2"
+msgstr "ಭೇದ ೨"
+
+#: core/loader.cpp:212
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "without accents"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "without accents"
+msgstr "ಘಾತಚಿಹ್ನೆಗಳಿಲ್ಲದೆ"
+
+#: core/loader.cpp:213
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "with accents"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "with accents"
+msgstr "ಘಾತಚಿಹ್ನೆಗಳೊಂದಿಗೆ"
+
+#: core/loader.cpp:215
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "with ye, modern russian"
+msgstr ""
+
+#: core/loader.cpp:217
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "with yeyo, modern and old russian"
+msgstr ""
+
+#: core/loader.cpp:220
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "with yo, old russian"
+msgstr ""
+
+#: core/loader.cpp:221
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "extended"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "extended"
+msgstr "ವಿಸ್ತೃತ"
+
+#: core/loader.cpp:256
+#, fuzzy, qt-format
+#| msgctxt "dictionary name. %1-language, %2-country and %3 variant name"
+#| msgid "%1 (%2) [%3]"
+msgctxt ""
+"Sonnet::Loader|dictionary name; %1 = language name, %2 = country name and %3 "
+"= language variant name"
+msgid "%1 (%2) [%3]"
+msgstr "%1 (%2) [%3]"
+
+#: core/loader.cpp:259
+#, fuzzy, qt-format
+#| msgctxt "name of digit set with digit string, e.g. 'Arabic (0123456789)'"
+#| msgid "%1 (%2)"
+msgctxt "Sonnet::Loader|dictionary name; %1 = language name, %2 = country name"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: ui/configdialog.cpp:53
+#, fuzzy
+#| msgid "Send Confirmation"
+msgctxt "Sonnet::ConfigDialog|"
+msgid "Spell Checking Configuration"
+msgstr "ಖಚಿತಪಡಿಸುವಿಕೆಯನ್ನು ರವಾನಿಸು"
+
+#: ui/configui.ui:26
+#, fuzzy
+#| msgid "Enable &background spellchecking"
+msgctxt "SonnetConfigUI|"
+msgid "No backend found for spell checking"
+msgstr "ಹಿನ್ನೆಲೆ ಕಾಗುಣಿತ ಪರೀಕ್ಷೆಯನ್ನು ಕ್ರಿಯಾಶೀಲಗೊಳಿಸು(&b)"
+
+#: ui/configui.ui:36
+#, fuzzy
+#| msgid "Default language:"
+msgctxt "SonnetConfigUI|"
+msgid "Default language:"
+msgstr "ಪೂರ್ವನಿಯೋಜಿತ ಭಾಷೆ:"
+
+#: ui/configui.ui:63
+msgctxt "SonnetConfigUI|"
+msgid "Choose your preferred languages"
+msgstr ""
+
+#: ui/configui.ui:71
+#, fuzzy
+#| msgid "Options"
+msgctxt "SonnetConfigUI|"
+msgid "Options"
+msgstr "ಆಯ್ಕೆಗಳು"
+
+#: ui/configui.ui:77
+msgctxt "SonnetConfigUI|"
+msgid "Enable autodetection of &language"
+msgstr ""
+
+#: ui/configui.ui:84
+#, fuzzy
+#| msgid "Enable &background spellchecking"
+msgctxt "SonnetConfigUI|"
+msgid "Enable &background spellchecking"
+msgstr "ಹಿನ್ನೆಲೆ ಕಾಗುಣಿತ ಪರೀಕ್ಷೆಯನ್ನು ಕ್ರಿಯಾಶೀಲಗೊಳಿಸು(&b)"
+
+#: ui/configui.ui:91
+#, fuzzy
+#| msgid "&Automatic spell checking enabled by default"
+msgctxt "SonnetConfigUI|"
+msgid "&Automatic spell checking enabled by default"
+msgstr "ಬೆರಳಚ್ಚೊಳಗಣ ಕಾಗುಣಿತ ಪರಿಶೀಲನೆ ಕ್ರಿಯಾಶೀಲಗೊಂಡಿದೆ(&A)."
+
+#: ui/configui.ui:98
+#, fuzzy
+#| msgid "Skip all &uppercase words"
+msgctxt "SonnetConfigUI|"
+msgid "Skip all &uppercase words"
+msgstr "ಮೇಲು ಸ್ತರದ ಅಕ್ಷರಸ್ಥಿತಿಯ ಎಲ್ಲಾ ಪದಗಳನ್ನೂ ಉಪೇಕ್ಷಿಸು(&u)"
+
+#: ui/configui.ui:105
+#, fuzzy
+#| msgid "S&kip run-together words"
+msgctxt "SonnetConfigUI|"
+msgid "S&kip run-together words"
+msgstr "ಜಂಟಿ ಪದಗಳನ್ನು ಉಪೇಕ್ಷಿಸು(&k)"
+
+#: ui/configui.ui:115
+#, fuzzy
+#| msgid "Suggested Words"
+msgctxt "SonnetConfigUI|"
+msgid "Ignored Words:"
+msgstr "ಸೂಚಿತ ಪದಗಳು"
+
+#: ui/configui.ui:129
+#, fuzzy
+#| msgid "&Add"
+msgctxt "SonnetConfigUI|"
+msgid "&Add"
+msgstr "ಸೇರಿಸು(&A)"
+
+#: ui/configui.ui:142
+#, fuzzy
+#| msgid "&Remove"
+msgctxt "SonnetConfigUI|"
+msgid "&Remove"
+msgstr "ತೆಗೆದುಹಾಕು(&R)"
+
+#: ui/dialog.cpp:96 ui/dialog.cpp:218 ui/dialog.cpp:429
+#, fuzzy
+#| msgid "Check Spelling"
+msgctxt "Sonnet::Dialog|@title:window"
+msgid "Check Spelling"
+msgstr "ಕಾಗುಣಿತ ಪರೀಕ್ಷಣೆ"
+
+#: ui/dialog.cpp:217
+#, fuzzy
+#| msgctxt "progress label"
+#| msgid "Spell checking in progress..."
+msgctxt "Sonnet::Dialog|progress label"
+msgid "Spell checking in progress..."
+msgstr "ಕಾಗುಣಿತ ಪರಿಶೀಲನೆಯು ಪ್ರಗತಿಯಲ್ಲಿದೆ..."
+
+#: ui/dialog.cpp:238
+#, fuzzy
+#| msgid "Spell check stopped."
+msgctxt "Sonnet::Dialog|"
+msgid "Spell check stopped."
+msgstr "ಕಾಗುಣಿತ ಪರೀಕ್ಷೆಯನ್ನು ನಿಲ್ಲಿಸಲಾಗಿದೆ."
+
+#: ui/dialog.cpp:248
+#, fuzzy
+#| msgid "Spell check canceled."
+msgctxt "Sonnet::Dialog|"
+msgid "Spell check canceled."
+msgstr "ಕಾಗುಣಿತ ಪರೀಕ್ಷೆಯನ್ನು ರದ್ದು ಮಾಡಲಾಗಿದೆ."
+
+#: ui/dialog.cpp:425 ui/dialog.cpp:428
+#, fuzzy
+#| msgid "Spell check complete."
+msgctxt "Sonnet::Dialog|"
+msgid "Spell check complete."
+msgstr "ಕಾಗುಣಿತ ಪರೀಕ್ಷೆಯನ್ನು ಪೂರ್ಣಗೊಂಡಿದೆ."
+
+#: ui/highlighter.cpp:251 ui/highlighter.cpp:273
+#, fuzzy
+#| msgid "As-you-type spell checking enabled."
+msgctxt "Sonnet::Highlighter|"
+msgid "As-you-type spell checking enabled."
+msgstr "ಬೆರಳಚ್ಚೊಳಗಣ ಕಾಗುಣಿತ ಪರಿಶೀಲನೆ ಕ್ರಿಯಾಶೀಲಗೊಂಡಿದೆ."
+
+#: ui/highlighter.cpp:254
+#, fuzzy
+#| msgid "Too many misspelled words. As-you-type spell checking disabled."
+msgctxt "Sonnet::Highlighter|"
+msgid "Too many misspelled words. As-you-type spell checking disabled."
+msgstr ""
+"ಅನೇಕ ಕಾಗುಣಿತಭ್ರಷ್ಟ ಪದಗಳು. ಬೆರಳಚ್ಚೊಳಗಣ ಕಾಗುಣಿತ ಪರಿಶೀಲನೆಯನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ."
+
+#: ui/highlighter.cpp:275
+#, fuzzy
+#| msgid "As-you-type spell checking disabled."
+msgctxt "Sonnet::Highlighter|"
+msgid "As-you-type spell checking disabled."
+msgstr "ಬೆರಳಚ್ಚೊಳಗಣ ಕಾಗುಣಿತ ಪರಿಶೀಲನೆಯನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ."
+
+#: ui/sonnetui.ui:41 ui/sonnetui.ui:57
+#, fuzzy
+#| msgid ""
+#| "<qt><p>This word was considered to be an \"unknown word\" because it does "
+#| "not match any entry in the dictionary currently in use. It may also be a "
+#| "word in a foreign language.</p>\n"
+#| "<p>If the word is not misspelled, you may add it to the dictionary by "
+#| "clicking <b>Add to Dictionary</b>. If you do not want to add the unknown "
+#| "word to the dictionary, but you want to leave it unchanged, click "
+#| "<b>Ignore</b> or <b>Ignore All</b>.</p>\n"
+#| "<p>However, if the word is misspelled, you can try to find the correct "
+#| "replacement in the list below. If you cannot find a replacement there, "
+#| "you may type it in the text box below, and click <b>Replace</b> or "
+#| "<b>Replace All</b>.</p>\n"
+#| "</qt>"
+msgctxt "SonnetUi|"
+msgid ""
+"<qt><p>This word was considered to be an \"unknown word\" because it does "
+"not match any entry in the dictionary currently in use. It may also be a "
+"word in a foreign language.</p>\n"
+"<p>If the word is not misspelled, you may add it to the dictionary by "
+"clicking <b>Add to Dictionary</b>. If you do not want to add the unknown "
+"word to the dictionary, but you want to leave it unchanged, click <b>Ignore</"
+"b> or <b>Ignore All</b>.</p>\n"
+"<p>However, if the word is misspelled, you can try to find the correct "
+"replacement in the list below. If you cannot find a replacement there, you "
+"may type it in the text box below, and click <b>Replace</b> or <b>Replace "
+"All</b>.</p>\n"
+"</qt>"
+msgstr ""
+"<qt><p>ಈ ಪದವು ಗಣಕದ ಶಬ್ದಕೋಶದಲ್ಲಿ ಇಲ್ಲವಾದ್ದರಿಂದ \"ಗೊತ್ತಿಲ್ಲದ ಪದ\"ವೆಂದು "
+"ಪರಿಗಣಿಸಲಾಗಿದೆ. ಇದು ಬೇರೆ ಭಾಷಾ ಪದವಾಗಿಯೂ ಇರಬಹುದು.</p>\n"
+"<p>ಈ ಪದವು ಸರಿಯಾಗಿದೆಯಂದು ನಿಮಗೆ ಖಾತರಿಯಿದ್ದಲ್ಲಿ ನೀವುಈ ಪದವನ್ನು <b>ಶಬ್ದಕೋಶಕ್ಕೆ ಸೇರಿಸು</"
+"b> ಗುಂಡಿ ಒತ್ತುವುದರ ಮೂಲಕ ಗಣಕದ ಶಬ್ದಕೋಶಕ್ಕೆ ಸೇರಿಸಬಹುದು. ಅಥವಾ, ಈ ಪದವನ್ನು ಶಬ್ದಕೋಶಕ್ಕೆ "
+"ಸೇರಿಸದೇ, ಬದಲಾವಣೆಯನ್ನೂ ಮಾಡದೇ ಹಾಗೇ ಉಳಿಸಬೇಕೆಂದರೆ <b>ನಿರ್ಲಕ್ಷಿಸು</b> ಅಥವಾ "
+"<b>ಎಲ್ಲವನ್ನು ನಿರ್ಲಕ್ಷಿಸು</b> ಗುಂಡಿ ಒತ್ತಿರಿ.</p>\n"
+"<p>ಈ ಪದವು ತಪ್ಪಾಗಿದ್ದಲ್ಲಿ ಸರಿಯಾದ ಪದವನ್ನು ಕೆಳಗಿರುವ ಪಟ್ಟಿಯಲ್ಲಿ ಹುಡುಕಲು ಪ್ರಯತ್ನಿಸಿ. "
+"ಅಲ್ಲಿಯೂ ಕೂಡ ಸರಿಯಾದ ಪದ ಕಂಡು ಬರದಿದ್ದಲ್ಲಿ ನೀವೇ ಸರಿಯಾದ ಪದವನ್ನು ಟೈಪ್ ಮಾಡಿ. ನಂತರ, "
+"<b>ಬದಲಾಯಿಸು</b> ಅಥವಾ <b>ಎಲ್ಲವನ್ನು ಬದಲಾಯಿಸು</b>ಗುಂಡಿ ಒತ್ತಿರಿ.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:47
+#, fuzzy
+#| msgid "Unknown word:"
+msgctxt "SonnetUi|"
+msgid "Unknown word:"
+msgstr "ಗೊತ್ತಿಲ್ಲದ ಪದ:"
+
+#: ui/sonnetui.ui:54
+#, fuzzy
+#| msgid "Unknown word"
+msgctxt "SonnetUi|"
+msgid "Unknown word"
+msgstr "ಗೊತ್ತಿಲ್ಲದ ಪದ"
+
+#: ui/sonnetui.ui:63
+#, fuzzy
+#| msgid "<b>misspelled</b>"
+msgctxt "SonnetUi|"
+msgid "<b>misspelled</b>"
+msgstr "<b>ತಪ್ಪಾಗಿ ಬರೆಯಲಾದ ಪದ</b>"
+
+#: ui/sonnetui.ui:70 ui/sonnetui.ui:180
+#, fuzzy
+#| msgid ""
+#| "<qt>\n"
+#| "<p>Select the language of the document you are proofing here.</p>\n"
+#| "</qt>"
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Select the language of the document you are proofing here.</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>ನೀವು ತಿದ್ದುಪಡಿ ಮಾಡುತ್ತಿರುವ ದಸ್ತಾವೇಜಿನ ಭಾಷೆಯನ್ನು ಇಲ್ಲಿ ಆಯ್ಕೆಮಾಡಿಕೊಳ್ಳಿ.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:75
+#, fuzzy
+#| msgid "&Language:"
+msgctxt "SonnetUi|"
+msgid "&Language:"
+msgstr "ಭಾಷೆ(&L):"
+
+#: ui/sonnetui.ui:85
+#, fuzzy
+#| msgid "Text excerpt showing the unknown word in its context."
+msgctxt "SonnetUi|"
+msgid "Text excerpt showing the unknown word in its context."
+msgstr "ಗೊತ್ತಿಲ್ಲದ ಪದವಿರುವ ಸನ್ನಿವೇಶವನ್ನು ತೋರಿಸುವ ಪಠ್ಯದ ಒಂದು ಭಾಗ."
+
+#: ui/sonnetui.ui:88
+#, fuzzy
+#| msgid ""
+#| "<qt>\n"
+#| "<p>Here you can see a text excerpt showing the unknown word in its "
+#| "context. If this information is not sufficient to choose the best "
+#| "replacement for the unknown word, you can click on the document you are "
+#| "proofing, read a larger part of the text and then return here to continue "
+#| "proofing.</p>\n"
+#| "</qt>"
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Here you can see a text excerpt showing the unknown word in its context. "
+"If this information is not sufficient to choose the best replacement for the "
+"unknown word, you can click on the document you are proofing, read a larger "
+"part of the text and then return here to continue proofing.</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>ಇಲ್ಲಿ ನೀವು ಗೊತ್ತಿಲ್ಲದ ಪದವು ಕಂಡುಬಂದ ಸನ್ನಿವೇಶವನ್ನು ನೋಡಬಹುದು. ಸರಿಯಾದ ಪದವನ್ನು "
+"ಆಯ್ಕೆಮಾಡಲು ಇಷ್ಟು ಮಾಹಿತಿ ಸಾಕು ಎಂದೆನಿಸದಿದ್ದಲ್ಲಿ ತಿದ್ದುಪಡಿ ಮಾಡುತ್ತಿರುವ ದಸ್ತಾವೇಜಿನ ಮೇಲೆ "
+"ಕ್ಲಿಕ್ ಮಾಡಿ, ಪಠ್ಯದ ದೊಡ್ಡ ಭಾಗವನ್ನು ಓದಿ, ಮತ್ತೆ ತಿದ್ದುಪಡಿ ಮಾಡಲು ಇಲ್ಲಿಗೆ ಮರಳಬಹುದು.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:96
+#, fuzzy
+#| msgid "... the <b>misspelled</b> word shown in context ..."
+msgctxt "SonnetUi|"
+msgid "... the <b>misspelled</b> word shown in context ..."
+msgstr "... <b>ತಪ್ಪಾಗಿ ಬರೆಯಲಾದ ಪದ</b>ವನ್ನು ತೋರಿಸಲಾದ ಸನ್ನಿವೇಶ ..."
+
+#: ui/sonnetui.ui:106
+#, fuzzy
+#| msgid ""
+#| "<qt>\n"
+#| "<p>The unknown word was detected and considered unknown because it is not "
+#| "included in the dictionary.<br>\n"
+#| "Click here if you consider that the unknown word is not misspelled and "
+#| "you want to avoid wrongly detecting it again in the future. If you want "
+#| "to let it remain as is, but not add it to the dictionary, then click "
+#| "<b>Ignore</b> or <b>Ignore All</b> instead.</p>\n"
+#| "</qt>"
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>The unknown word was detected and considered unknown because it is not "
+"included in the dictionary.<br>\n"
+"Click here if you consider the unknown word not to be misspelled, and you "
+"want to avoid wrongly detecting it again in the future. If you want to let "
+"it remain as is, but not add it to the dictionary, then click <b>Ignore</b> "
+"or <b>Ignore All</b> instead.</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>ಈ ಪದವು ಗಣಕದ ಶಬ್ದಕೋಶದಲ್ಲಿ ಇಲ್ಲವಾದ್ದರಿಂದ ಗೊತ್ತಿಲ್ಲದ ಪದವೆಂದು ಪರಿಗಣಿಸಲಾಗಿದು.</p>\n"
+"<p>ಈ ಪದವು ಸರಿಯಾಗಿದೆಯಂದು ನಿಮಗೆ ಖಾತಿರಿಯಿದ್ದಲ್ಲಿ ಈ ಬಟನ್ ಮೇಲೆ ಕ್ಲಿಕ್‌ ಮಾಡುವುದರ ಮೂಲಕ ಈ "
+"ಪದವನ್ನು ಗಣಕದ ಶಬ್ದಕೋಶಕ್ಕೆ ಸೇರಿಸಬಹುದು. ಅಥವಾ, ಈ ಪದವನ್ನು ಶಬ್ದಕೋಶಕ್ಕೆ ಸೇರಿಸದೇ, "
+"ಬದಲಾವಣೆಯನ್ನೂ ಮಾಡದೇ ಹಾಗೇ ಉಳಿಸಬೇಕೆಂದರೆ <b>ನಿರ್ಲಕ್ಷಿಸು</b> ಅಥವಾ <b>ಎಲ್ಲವನ್ನು "
+"ನಿರ್ಲಕ್ಷಿಸು</b> ಬಟನ್ ಮೇಲೆ ಕ್ಲಿಕ್ ಮಾಡಿ.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:112
+#, fuzzy
+#| msgid "<< Add to Dictionary"
+msgctxt "SonnetUi|"
+msgid "<< Add to Dictionary"
+msgstr "<< ಶಬ್ದಕೋಶಕ್ಕೆ ಸೇರಿಸು"
+
+#: ui/sonnetui.ui:135
+#, fuzzy
+#| msgid "Suggestion List"
+msgctxt "SonnetUi|"
+msgid "Suggestion List"
+msgstr "ಸಲಹಾ ಪಟ್ಟಿ"
+
+#: ui/sonnetui.ui:138
+#, fuzzy
+#| msgid ""
+#| "<qt>\n"
+#| "<p>If the unknown word is misspelled, you should check if the correction "
+#| "for it is available and if it is, click on it. If none of the words in "
+#| "this list is a good replacement you may type the correct word in the edit "
+#| "box above.</p>\n"
+#| "<p>To correct this word click <b>Replace</b> if you want to correct only "
+#| "this occurrence or <b>Replace All</b> if you want to correct all "
+#| "occurrences.</p>\n"
+#| "</qt>"
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>If the unknown word is misspelled, you should check if the correction for "
+"it is available and if it is, click on it. If none of the words in this list "
+"is a good replacement you may type the correct word in the edit box above.</"
+"p>\n"
+"<p>To correct this word click <b>Replace</b> if you want to correct only "
+"this occurrence or <b>Replace All</b> if you want to correct all occurrences."
+"</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>ಗೊತ್ತಿಲ್ಲದ ಪದವು ತಪ್ಪಾಗಿ ಬರೆದ ಪದವಾಗಿದ್ದಲ್ಲಿ ಮತ್ತು ಸರಿಯಾದ ಪದವು ಈ ಪಟ್ಟಿಯಲ್ಲಿ ಕಂಡು "
+"ಬಂದಲ್ಲಿ ಆ ಪದದ ಮೇಲೆ ಕ್ಲಿಕ್ ಮಾಡಿ. ಈ ಪಟ್ಟಿಯಲ್ಲಿರುವ ಪದಗಳಾವೂ ಸರಿಯಾದ ಪದವಾಗಿರದಿದ್ದಲ್ಲಿ "
+"ಸರಿಯಾದ ಪದವನ್ನು ಮೇಲಿರುವ ಸಂಪಾದನಾ ಚೌಕದಲ್ಲಿ ನೀವೇ ಟೈಪ್ ಮಾಡಿ .</p>\n"
+"<p>ನಂತರ, <b>ಬದಲಾಯಿಸು</b> ಬಟನ್ ಮೇಲೆ ಕ್ಲಿಕ್ ಮಾಡುವುದರ ಮೂಲಕ ಪದದ ಈ ಸಂಭವನೆಯನ್ನು ಮಾತ್ರ "
+"ಬದಲಾಯಿಸಬಹುದು. ಅಥವಾ, <b>ಎಲ್ಲವನ್ನು ಬದಲಾಯಿಸು</b> ಬಟನ್ ಮೇಲೆ ಕ್ಲಿಕ್ ಮಾಡುವುದರ ಮೂಲಕ ಪದದ "
+"ಎಲ್ಲಾ ಸಂಭವನೆಗಳನ್ನು ಬದಲಾಯಿಸಬಹುದು.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:151 ui/sonnetui.ui:167
+#, fuzzy
+#| msgid ""
+#| "<qt>\n"
+#| "<p>If the unknown word is misspelled, you should type the correction for "
+#| "your misspelled word here or select it from the list below.</p>\n"
+#| "<p>You can then click <b>Replace</b> if you want to correct only this "
+#| "occurrence of the word or <b>Replace All</b> if you want to correct all "
+#| "occurrences.</p>\n"
+#| "</qt>"
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>If the unknown word is misspelled, you should type the correction for "
+"your misspelled word here or select it from the list below.</p>\n"
+"<p>You can then click <b>Replace</b> if you want to correct only this "
+"occurrence of the word or <b>Replace All</b> if you want to correct all "
+"occurrences.</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>ಗೊತ್ತಿಲ್ಲದ ಪದವು ತಪ್ಪಾಗಿ ಬರೆದ ಪದವಾಗಿದ್ದಲ್ಲಿ, ಸರಿಯಾದ ಪದವನ್ನು ಇಲ್ಲಿ ಟೈಪ್ ಮಾಡಿ ಅಥವಾ "
+"ಕೆಳಗಿರುವ ಪಟ್ಟಿಯಿಂದ ಆಯ್ಕೆ ಮಾಡಿ.</p>\n"
+"<p>ನಂತರ <b>ಪ್ರತಿಸ್ಥಾಪಿಸುಿಸು</b> ಗುಂಡಿ ಒತ್ತುವುದರ ಮೂಲಕ ಪದದ ಈ ಸಂಭವನೆಯನ್ನು ಮಾತ್ರ "
+"ಬದಲಾಯಿಸಬಹುದು. ಅಥವಾ, <b>ಎಲ್ಲವನ್ನು ಬದಲಾಯಿಸು</b> ಗುಂಡಿ ಒತ್ತುವುದರ ಮೂಲಕ ಪದದ ಎಲ್ಲಾ "
+"ಸಂಭವನೆಗಳನ್ನು ಬದಲಾಯಿಸಬಹುದು.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:157
+#, fuzzy
+#| msgid "Replace &with:"
+msgctxt "SonnetUi|"
+msgid "Replace &with:"
+msgstr "ಇದರಿಂದ ಬದಲಾಯಿಸು(&w):"
+
+#: ui/sonnetui.ui:177
+#, fuzzy
+#| msgid "Language Selection"
+msgctxt "SonnetUi|"
+msgid "Language Selection"
+msgstr "ಭಾಷೆಯ ಆಯ್ಕೆ"
+
+#: ui/sonnetui.ui:206
+#, fuzzy
+#| msgid "S&uggest"
+msgctxt "SonnetUi|"
+msgid "S&uggest"
+msgstr "ಸಲಹೆ ಕೊಡು(&u)"
+
+#: ui/sonnetui.ui:213
+#, fuzzy
+#| msgid ""
+#| "<qt>\n"
+#| "<p>Click here to replace this occurrence of the unknown text with the "
+#| "text in the edit box above (to the left).</p>\n"
+#| "</qt>"
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Click here to replace this occurrence of the unknown text with the text "
+"in the edit box above (to the left).</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>ಗೊತ್ತಿಲ್ಲದ ಪದದ ಈ ಸಂಭವನೆಯನ್ನು ಮೇಲಿರುವ (ಎಡಕ್ಕೆ) ಸಂಪಾದನಾಚೌಕದಲ್ಲಿರುವ ಪಠ್ಯದಿಂದ "
+"ಪ್ರತಿಸ್ಥಾಪಿಸಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:218
+#, fuzzy
+#| msgid "&Replace"
+msgctxt "SonnetUi|"
+msgid "&Replace"
+msgstr "ಬದಲಾಯಿಸು(&R)"
+
+#: ui/sonnetui.ui:225
+#, fuzzy
+#| msgid ""
+#| "<qt>\n"
+#| "<p>Click here to replace all occurrences of the unknown text with the "
+#| "text in the edit box above (to the left).</p>\n"
+#| "</qt>"
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Click here to replace all occurrences of the unknown text with the text "
+"in the edit box above (to the left).</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>ಗೊತ್ತಿಲ್ಲದ ಪದದ ಎಲ್ಲಾ ಸಂಭವನೆಗಳನ್ನು ಮೇಲಿರುವ (ಎಡಕ್ಕೆ) ಸಂಪಾದನಾಚೌಕದಲ್ಲಿರುವ ಪಠ್ಯದಿಂದ "
+"ಬದಲಾಯಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:230
+#, fuzzy
+#| msgid "R&eplace All"
+msgctxt "SonnetUi|"
+msgid "R&eplace All"
+msgstr "ಎಲ್ಲವನ್ನೂ ಪ್ರತಿಸ್ಥಾಪಿಸು(&e)"
+
+#: ui/sonnetui.ui:237
+#, fuzzy
+#| msgid ""
+#| "<qt>\n"
+#| "<p>Click here to let this occurrence of the unknown word remain as is.</"
+#| "p>\n"
+#| "<p>This action is useful when the word is a name, an acronym, a foreign "
+#| "word or any other unknown word that you want to use but not add to the "
+#| "dictionary.</p>\n"
+#| "</qt>"
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Click here to let this occurrence of the unknown word remain as is.</p>\n"
+"<p>This action is useful when the word is a name, an acronym, a foreign word "
+"or any other unknown word that you want to use but not add to the dictionary."
+"</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>ಗೊತ್ತಿಲ್ಲದ ಪದದ ಈ ಸಂಭವನೆಯನ್ನು ಹಾಗೇ ಉಳಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ</p>\n"
+"<p>ಗೊತ್ತಿಲ್ಲದ ಪದವು - ಹೆಸರು, ಬೇರೆ ಭಾಷೆಯ ಪದ ಅಥವಾ ಅಕ್ರೊನಿಮ್ ಆಗಿದ್ದು ನೀವು ಅದನ್ನು "
+"ಶಬ್ದಕೋಶಕ್ಕೆ ಸೇರಿಸದೆ ಈ ಸಂದರ್ಭದಲ್ಲಿ ಮಾತ್ರ ಉಪಯೋಗಿಸಬೇಕೆಂದಲ್ಲಿ ಈ ಕ್ರಿಯೆಯು ಉಪಯುಕ್ತವಾಗಿದೆ.</"
+"p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:243
+#, fuzzy
+#| msgid "&Ignore"
+msgctxt "SonnetUi|"
+msgid "&Ignore"
+msgstr "ನಿರ್ಲಕ್ಷಿಸು(&I)"
+
+#: ui/sonnetui.ui:250 ui/sonnetui.ui:263
+#, fuzzy
+#| msgid ""
+#| "<qt>\n"
+#| "<p>Click here to let all occurrences of the unknown word remain as they "
+#| "are.</p>\n"
+#| "<p>This action is useful when the word is a name, an acronym, a foreign "
+#| "word or any other unknown word that you want to use but not add to the "
+#| "dictionary.</p>\n"
+#| "</qt>"
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Click here to let all occurrences of the unknown word remain as they are."
+"</p>\n"
+"<p>This action is useful when the word is a name, an acronym, a foreign word "
+"or any other unknown word that you want to use but not add to the dictionary."
+"</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>ಗೊತ್ತಿಲ್ಲದ ಪದದ ಎಲ್ಲಾ ಸಂಭವನೆಗಳನ್ನೂ ಹಾಗೇ ಉಳಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ</p>\n"
+"<p>ಗೊತ್ತಿಲ್ಲದ ಪದವು - ಹೆಸರು, ಬೇರೆ ಭಾಷೆಯ ಪದ ಅಥವಾ ಅಕ್ರೊನಿಮ್ ಆಗಿದ್ದು ನೀವು ಅದನ್ನು "
+"ಶಬ್ದಕೋಶಕ್ಕೆ ಸೇರಿಸದೆ ಈ ಸಂದರ್ಭದಲ್ಲಿ ಮಾತ್ರ ಉಪಯೋಗಿಸಬೇಕೆಂದಲ್ಲಿ ಈ ಕ್ರಿಯೆಯು ಉಪಯುಕ್ತವಾಗಿದೆ.</"
+"p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:256
+#, fuzzy
+#| msgid "I&gnore All"
+msgctxt "SonnetUi|"
+msgid "I&gnore All"
+msgstr "ಎಲ್ಲವನ್ನೂ ನಿರ್ಲಕ್ಷಿಸು(&g)"
+
+#: ui/sonnetui.ui:269
+#, fuzzy
+#| msgid "Autocorrect"
+msgctxt "SonnetUi|"
+msgid "Autocorrect"
+msgstr "ಸ್ವಯಂತಿದ್ದುವಿಕೆ"
+
+#: ui/spellcheckdecorator.cpp:172
+#, fuzzy, qt-format
+#| msgid "No suggestions for %1"
+msgctxt "Sonnet::SpellCheckDecorator|"
+msgid "No suggestions for %1"
+msgstr "%1 ಗೆ ಯಾವುದೇ ಸಲಹೆಗಳಿಲ್ಲ"
+
+#: ui/spellcheckdecorator.cpp:183
+#, fuzzy
+#| msgid "Ignore"
+msgctxt "Sonnet::SpellCheckDecorator|"
+msgid "Ignore"
+msgstr "ನಿರ್ಲಕ್ಷಿಸು"
+
+#: ui/spellcheckdecorator.cpp:184
+#, fuzzy
+#| msgid "Add to Dictionary"
+msgctxt "Sonnet::SpellCheckDecorator|"
+msgid "Add to Dictionary"
+msgstr "ಶಬ್ಗಕೋಶಕ್ಕೆ ಸೇರಿಸು"

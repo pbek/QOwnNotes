@@ -11,7 +11,10 @@
 
 #ifdef WITH_SONNET
 // needs libkf5sonnet-dev
-#include <KF5/SonnetUi/sonnet/spellcheckdecorator.h>
+//#include <KF5/SonnetUi/sonnet/spellcheckdecorator.h>
+//#include <KF5/SonnetUi/Sonnet/Dialog>
+//#include <KF5/SonnetUi/Sonnet/Highlighter>
+//#include <KF5/SonnetCore/Sonnet/BackgroundChecker>
 #endif
 
 QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
@@ -42,8 +45,9 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
     }
 
 #ifdef WITH_SONNET
-    Sonnet::SpellCheckDecorator *decorator = new Sonnet::SpellCheckDecorator(this);
-    Q_UNUSED(decorator)
+    //Sonnet::SpellCheckDecorator *decorator = new Sonnet::SpellCheckDecorator(this);
+    //Q_UNUSED(decorator)
+    qDebug() <<"With SPELLING";
 #endif
 }
 

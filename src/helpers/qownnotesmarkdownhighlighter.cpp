@@ -20,7 +20,6 @@
 #include <entities/note.h>
 #include "qownnotesmarkdownhighlighter.h"
 
-
 /**
  * Markdown syntax highlighting
  *
@@ -31,10 +30,12 @@
  * @return
  */
 QOwnNotesMarkdownHighlighter::QOwnNotesMarkdownHighlighter(
-        QTextDocument *parent, HighlightingOptions highlightingOptions)
+        QTextDocument *parent,  HighlightingOptions highlightingOptions)
         : MarkdownHighlighter(parent, highlightingOptions) {
-    Q_UNUSED(parent);
-    Q_UNUSED(highlightingOptions);
+    Q_UNUSED(parent)
+    Q_UNUSED(highlightingOptions)
+
+    spellchecker = new Sonnet::Speller();
 }
 
 void QOwnNotesMarkdownHighlighter::updateCurrentNote() {
@@ -52,6 +53,7 @@ void QOwnNotesMarkdownHighlighter::highlightBlock(const QString &text) {
     setCurrentBlockState(HighlighterState::NoState);
     currentBlock().setUserState(HighlighterState::NoState);
     highlightMarkdown(text);
+    highlightSpellChecking(text);
     _highlightingFinished = true;
 }
 
@@ -127,3 +129,72 @@ void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(const QString& text)
 
     setFormat(match.capturedStart(0), match.capturedLength(0), _formats[state]);
 }
+
+
+/*
+ * Spellchecker lives here
+*/
+
+QString QOwnNotesMarkdownHighlighter::currentLanguage() const {
+    return spellchecker->language();
+}
+
+void QOwnNotesMarkdownHighlighter::setCurrentLanguage(const QString &lang) {
+    spellchecker->setLanguage(lang);
+}
+
+bool QOwnNotesMarkdownHighlighter::isWordMisspelled(const QString &word) {
+    return spellchecker->isMisspelled(word);
+}
+
+void QOwnNotesMarkdownHighlighter::setMisspelled(const int start, const int count) {
+    //append to the already existing text format.
+    //creating a new format will destroy pre-existing format
+    QTextCharFormat format = QSyntaxHighlighter::format(start+1);
+    format.setFontUnderline(true);
+    format.setUnderlineStyle(QTextCharFormat::SpellCheckUnderline);
+    format.setUnderlineColor(Qt::red);
+    setFormat(start, count, format);
+}
+
+void QOwnNotesMarkdownHighlighter::unsetMisspelled(int start, int count) {
+    //keep the existing format
+    QTextCharFormat format = QSyntaxHighlighter::format(start);
+
+    //turn off the spell-check underline if it is turned on.
+    //Note: Don't use - format.fontUnderline() - to check whether
+    //font underlining is on. It is often off but the lines are appearing
+    //so we just check whether it has spellcheck underline.
+    if(format.underlineStyle() == QTextCharFormat::SpellCheckUnderline) {
+        format.setFontUnderline(false);
+    }
+    setFormat(start, count, format);
+}
+
+void QOwnNotesMarkdownHighlighter::highlightSpellChecking(const QString &text) {
+    //TODO: include other characters, for other languages
+    //      add auto detection of languages
+//    static int i = 0;
+//    if(i=1){
+//    qDebug () <<"Langs: "<< spellchecker->availableLanguages();
+//    qDebug () <<"Bck: "<< spellchecker->availableBackends();
+//    qDebug () <<"Dicts: "<< spellchecker->availableDictionaries();
+//    qDebug () <<"Lang names: "<< spellchecker->availableLanguageNames();
+//    i++; }
+
+    QRegularExpression regex("[a-zA-Z]+");
+    QRegularExpressionMatchIterator it = regex.globalMatch(text);
+    while(it.hasNext()){
+        QRegularExpressionMatch m = it.next();
+        QString word = m.captured();
+        bool isMisspelled = !word.isEmpty()
+                         && word.length() > 1
+                         && isWordMisspelled(word);
+        if(isMisspelled)
+            setMisspelled(m.capturedStart(0), m.capturedEnd());
+        else {
+            unsetMisspelled(m.capturedStart(0), m.capturedEnd());
+        }
+    }
+}
+

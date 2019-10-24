@@ -19,6 +19,17 @@
 #include <libraries/qmarkdowntextedit/markdownhighlighter.h>
 #include <entities/note.h>
 
+#ifdef WITH_SONNET
+// needs libkf5sonnet-dev
+//#include <KF5/SonnetUi/sonnet/spellcheckdecorator.h>
+//#include <KF5/SonnetUi/Sonnet/Dialog>
+//#include <KF5/SonnetUi/Sonnet/Highlighter>
+#include <KF5/SonnetCore/Sonnet/Speller>
+#include <KF5/SonnetUi/Sonnet/Highlighter>
+#endif
+
+#include "libraries/sonnet/src/core/speller.h"
+
 QT_BEGIN_NAMESPACE
 class QTextDocument;
 
@@ -37,7 +48,20 @@ protected:
     void highlightBlock(const QString &text) Q_DECL_OVERRIDE;
     void highlightMarkdown(const QString& text);
     void highlightBrokenNotesLink(const QString& text);
+
+    QString currentLanguage() const;
+    void setCurrentLanguage(const QString &lang);
+    bool isWordMisspelled(const QString &word);
+    void unsetMisspelled(int start, int count);
+    void setMisspelled(const int start, const int count);
+    void highlightSpellChecking(const QString &text);
+
+    void rehighlight();
+    void onContentsChanged(int pos, int add, int mem);
+    void slotRehighlight();
 private:
     Note _currentNote;
     void updateCurrentNote();
+
+    Sonnet::Speller *spellchecker;
 };
