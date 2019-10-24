@@ -46,5 +46,12 @@ SOURCES += \
     $$PWD/src/parsers/textparser.cxx \
     $$PWD/src/parsers/xmlparser.cxx
 
+win32 {
+    DEFINES += WIN32 \
+            += _WIN32 \
+            += __MINGW32__ \
+            += BUILDING_LIBHUNSPELL
+}
+
 INCLUDEPATH += $$PWD/src/hunspell
 INCLUDEPATH += $$PWD/src/parsers

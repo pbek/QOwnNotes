@@ -37,7 +37,7 @@ unix:!macx {
     include($$PWD/../plugins/hunspell/hunspell.pri)
 }
 
-mingw {
+win32 {
     include($$PWD/../plugins/hunspell/hunspell.pri)
 }
 
