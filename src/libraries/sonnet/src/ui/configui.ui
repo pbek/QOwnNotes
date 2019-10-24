@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <author>Zack Rusin &lt;zack@kde.org&gt;</author>
+ <comment>Licensed under GNU LGPL</comment>
+ <class>SonnetConfigUI</class>
+ <widget class="QWidget" name="SonnetConfigUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>700</width>
+    <height>833</height>
+   </rect>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0" colspan="2">
+    <widget class="QLabel" name="nobackendfound">
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <italic>true</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>No backend found for spell checking</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="textLabel1">
+     <property name="text">
+      <string>Default language:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="Sonnet::DictionaryComboBox" name="m_langCombo">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0" colspan="2">
+    <widget class="QSplitter" name="splitter">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="childrenCollapsible">
+      <bool>true</bool>
+     </property>
+     <widget class="QListWidget" name="languageList">
+      <property name="toolTip">
+       <string>Choose your preferred languages</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QGroupBox" name="groupBox1">
+         <property name="title">
+          <string>Options</string>
+         </property>
+         <layout class="QGridLayout">
+          <item row="2" column="0">
+           <widget class="QCheckBox" name="m_autodetectCB">
+            <property name="text">
+             <string>Enable autodetection of &amp;language</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QCheckBox" name="m_bgSpellCB">
+            <property name="text">
+             <string>Enable &amp;background spellchecking</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QCheckBox" name="m_checkerEnabledByDefaultCB">
+            <property name="text">
+             <string>&amp;Automatic spell checking enabled by default</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QCheckBox" name="m_skipUpperCB">
+            <property name="text">
+             <string>Skip all &amp;uppercase words</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QCheckBox" name="m_skipRunTogetherCB">
+            <property name="text">
+             <string>S&amp;kip run-together words</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox">
+         <property name="title">
+          <string>Ignored Words:</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <layout class="QGridLayout" name="ignoredWordsLayout">
+            <item row="1" column="0">
+             <widget class="QListWidget" name="ignoreListWidget"/>
+            </item>
+            <item row="0" column="0">
+             <widget class="QLineEdit" name="newIgnoreEdit"/>
+            </item>
+            <item row="0" column="1">
+             <widget class="QPushButton" name="addButton">
+              <property name="text">
+               <string>&amp;Add</string>
+              </property>
+              <property name="icon">
+               <iconset theme="list-add">
+                <normaloff>.</normaloff>.</iconset>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <layout class="QVBoxLayout" name="removeButtonLayout">
+              <item>
+               <widget class="QPushButton" name="removeButton">
+                <property name="text">
+                 <string>&amp;Remove</string>
+                </property>
+                <property name="icon">
+                 <iconset theme="list-remove">
+                  <normaloff>.</normaloff>.</iconset>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="verticalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Sonnet::DictionaryComboBox</class>
+   <extends>QComboBox</extends>
+   <header>sonnet/dictionarycombobox.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

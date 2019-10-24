@@ -1,0 +1,539 @@
+# Finnish messages for kdelibs4.
+# Copyright © 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kdelibs package.
+# Kim Enkovaara <kim.enkovaara@iki.fi>, 2002,2003, 2005, 2006, 2007.
+# Tapio Kautto <eleknader@phnet.fi>, 2003, 2004.
+# Mikko Ikola <kola@netikka.fi>, 2003.
+# Teemu Rytilahti <teemu.rytilahti@d5k.net>, 2003, 2008.
+# Mikko Ikola <ikola@iki.fi>, 2003.
+# Teemu Rytilahti <teemu.rytilahti@kde-fi.org>, 2003, 2004, 2008.
+# Niklas Laxström <niklas.laxstrom+kdetrans@gmail.com>, 2006, 2007.
+# Joonas Niilola <juippis@roskakori.org>, 2006.
+# Mikko Piippo <piippo@cc.helsinki.fi>, 2007.
+# Teemu Rytilahti <tpr@d5k.net>, 2008.
+# Tommi Nieminen <translator@legisign.org>, 2009, 2010, 2011.
+# Tommi Nieminen <tommi.nieminen@legisign.org>, 2009, 2019.
+# Jorma Karvonen <karvonen.jorma@gmail.com>, 2010.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2006, 2010, 2011, 2012, 2013, 2014, 2015.
+#
+# KDE Finnish translation sprint participants:
+# Author: Artnay
+# Author: Jl
+# Author: Lliehu
+# Author: Niklas Laxström
+# Author: Suhviksi
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-03-23 01:50+0000\n"
+"PO-Revision-Date: 2019-01-23 12:40+0200\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 2.0\n"
+"X-POT-Import-Date: 2013-01-13 20:43:21+0000\n"
+"X-Qt-Contexts: true\n"
+
+#: core/loader.cpp:190
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "40"
+msgstr "40"
+
+#: core/loader.cpp:191
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "60"
+msgstr "60"
+
+#: core/loader.cpp:192
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "80"
+msgstr "80"
+
+#: core/loader.cpp:193
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ise suffixes"
+msgstr "sanan lopussa -ise"
+
+#: core/loader.cpp:194
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ize suffixes"
+msgstr "sanan lopussa -ize"
+
+#: core/loader.cpp:195
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ise suffixes and with accents"
+msgstr "sanan lopussa -ise, aksentit käytössä"
+
+#: core/loader.cpp:197
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ise suffixes and without accents"
+msgstr "sanan lopussa -ise, ei aksentteja"
+
+#: core/loader.cpp:200
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ize suffixes and with accents"
+msgstr "sanan lopussa -ize, aksentit käytössä"
+
+#: core/loader.cpp:202
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ize suffixes and without accents"
+msgstr "sanan lopussa -ize, ei aksentteja"
+
+#: core/loader.cpp:205
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "large"
+msgstr "suuri"
+
+#: core/loader.cpp:206
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "medium"
+msgstr "keskikokoinen"
+
+#: core/loader.cpp:207
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "small"
+msgstr "pieni"
+
+#: core/loader.cpp:208
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "variant 0"
+msgstr "muunnelma 0"
+
+#: core/loader.cpp:209
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "variant 1"
+msgstr "muunnelma 1"
+
+#: core/loader.cpp:210
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "variant 2"
+msgstr "muunnelma 2"
+
+#: core/loader.cpp:212
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "without accents"
+msgstr "ei aksentteja"
+
+#: core/loader.cpp:213
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "with accents"
+msgstr "aksentit käytössä"
+
+#: core/loader.cpp:215
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "with ye, modern russian"
+msgstr "with ye, nykyvenäjä"
+
+#: core/loader.cpp:217
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "with yeyo, modern and old russian"
+msgstr "with yeyo, nyky- ja muinaisvenäjä"
+
+#: core/loader.cpp:220
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "with yo, old russian"
+msgstr "with yo, muinaisvenäjä"
+
+#: core/loader.cpp:221
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "extended"
+msgstr "laajennettu"
+
+#: core/loader.cpp:256
+#, qt-format
+msgctxt ""
+"Sonnet::Loader|dictionary name; %1 = language name, %2 = country name and %3 "
+"= language variant name"
+msgid "%1 (%2) [%3]"
+msgstr "%1 (%2) [%3]"
+
+#: core/loader.cpp:259
+#, qt-format
+msgctxt "Sonnet::Loader|dictionary name; %1 = language name, %2 = country name"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: ui/configdialog.cpp:53
+msgctxt "Sonnet::ConfigDialog|"
+msgid "Spell Checking Configuration"
+msgstr "Oikoluvun asetukset"
+
+#: ui/configui.ui:26
+msgctxt "SonnetConfigUI|"
+msgid "No backend found for spell checking"
+msgstr "Yhtään oikoluvun taustaosaa ei löytynyt"
+
+#: ui/configui.ui:36
+msgctxt "SonnetConfigUI|"
+msgid "Default language:"
+msgstr "Oletuskieli:"
+
+#: ui/configui.ui:63
+msgctxt "SonnetConfigUI|"
+msgid "Choose your preferred languages"
+msgstr "Valitse suosimasi kielet"
+
+#: ui/configui.ui:71
+msgctxt "SonnetConfigUI|"
+msgid "Options"
+msgstr "Asetukset"
+
+#: ui/configui.ui:77
+msgctxt "SonnetConfigUI|"
+msgid "Enable autodetection of &language"
+msgstr "Tunnista &kieli automaattisesti"
+
+#: ui/configui.ui:84
+msgctxt "SonnetConfigUI|"
+msgid "Enable &background spellchecking"
+msgstr "Oikolue &taustalla"
+
+#: ui/configui.ui:91
+msgctxt "SonnetConfigUI|"
+msgid "&Automatic spell checking enabled by default"
+msgstr "&Automaattinen oikoluku oletusarvoisesti käytössä"
+
+#: ui/configui.ui:98
+msgctxt "SonnetConfigUI|"
+msgid "Skip all &uppercase words"
+msgstr "Ohita &isoin kirjaimin kirjoitetut sanat"
+
+#: ui/configui.ui:105
+msgctxt "SonnetConfigUI|"
+msgid "S&kip run-together words"
+msgstr "Ohita &yhteen kirjoitetut sanat"
+
+#: ui/configui.ui:115
+msgctxt "SonnetConfigUI|"
+msgid "Ignored Words:"
+msgstr "Ohitetut sanat:"
+
+#: ui/configui.ui:129
+msgctxt "SonnetConfigUI|"
+msgid "&Add"
+msgstr "&Lisää"
+
+#: ui/configui.ui:142
+msgctxt "SonnetConfigUI|"
+msgid "&Remove"
+msgstr "&Poista"
+
+#: ui/dialog.cpp:96 ui/dialog.cpp:218 ui/dialog.cpp:429
+msgctxt "Sonnet::Dialog|@title:window"
+msgid "Check Spelling"
+msgstr "Tarkista oikeinkirjoitus"
+
+#: ui/dialog.cpp:217
+msgctxt "Sonnet::Dialog|progress label"
+msgid "Spell checking in progress..."
+msgstr "Oikoluku käynnissä…"
+
+#: ui/dialog.cpp:238
+msgctxt "Sonnet::Dialog|"
+msgid "Spell check stopped."
+msgstr "Oikoluku pysähtyi."
+
+#: ui/dialog.cpp:248
+msgctxt "Sonnet::Dialog|"
+msgid "Spell check canceled."
+msgstr "Oikoluku peruttiin."
+
+#: ui/dialog.cpp:425 ui/dialog.cpp:428
+msgctxt "Sonnet::Dialog|"
+msgid "Spell check complete."
+msgstr "Oikoluku on valmis."
+
+#: ui/highlighter.cpp:251 ui/highlighter.cpp:273
+msgctxt "Sonnet::Highlighter|"
+msgid "As-you-type spell checking enabled."
+msgstr "Aktiivinen oikoluku otettu käyttöön."
+
+#: ui/highlighter.cpp:254
+msgctxt "Sonnet::Highlighter|"
+msgid "Too many misspelled words. As-you-type spell checking disabled."
+msgstr ""
+"Liian paljon virheellisiä sanoja. Aktiivinen oikoluku poistettiin käytöstä."
+
+#: ui/highlighter.cpp:275
+msgctxt "Sonnet::Highlighter|"
+msgid "As-you-type spell checking disabled."
+msgstr "Aktiivinen oikoluku poistettu käytöstä."
+
+#: ui/sonnetui.ui:41 ui/sonnetui.ui:57
+msgctxt "SonnetUi|"
+msgid ""
+"<qt><p>This word was considered to be an \"unknown word\" because it does "
+"not match any entry in the dictionary currently in use. It may also be a "
+"word in a foreign language.</p>\n"
+"<p>If the word is not misspelled, you may add it to the dictionary by "
+"clicking <b>Add to Dictionary</b>. If you do not want to add the unknown "
+"word to the dictionary, but you want to leave it unchanged, click <b>Ignore</"
+"b> or <b>Ignore All</b>.</p>\n"
+"<p>However, if the word is misspelled, you can try to find the correct "
+"replacement in the list below. If you cannot find a replacement there, you "
+"may type it in the text box below, and click <b>Replace</b> or <b>Replace "
+"All</b>.</p>\n"
+"</qt>"
+msgstr ""
+"<qt><p>Sana luokiteltiin ”tuntemattomaksi”, koska sitä ei löydy käytössä "
+"olevasta sanakirjasta. Sana voi olla myös vieraskielinen.</p>\n"
+"<p>Jos sana on kirjoitettu oikein, voit lisätä sen sanakirjaan "
+"napsauttamalla <b>Lisää sanakirjaan</b>-painiketta. Jos et halua lisätä "
+"sanaa sanakirjaan ja haluat jättää kohdan muuttamatta, napsauta <b>Ohita</"
+"b>- tai <b>Ohita kaikki</b>-painiketta.</p>\n"
+"<p>Jos sanassa on kirjoitusvirhe, voit valita sopivan korjauksen "
+"alapuolelta. Jos luettelosta ei löydy sopivaa vaihtoehtoa, voit kirjoittaa "
+"sen myös itse alapuolella olevaan tekstikenttään ja napsauttamalla sen "
+"jälkeen <b>Korvaa</b>- tai <b>Korvaa kaikki</b>-painiketta.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:47
+msgctxt "SonnetUi|"
+msgid "Unknown word:"
+msgstr "Tuntematon sana:"
+
+#: ui/sonnetui.ui:54
+msgctxt "SonnetUi|"
+msgid "Unknown word"
+msgstr "Tuntematon sana"
+
+#: ui/sonnetui.ui:63
+msgctxt "SonnetUi|"
+msgid "<b>misspelled</b>"
+msgstr "<b>kirjoitusvirhe</b>"
+
+#: ui/sonnetui.ui:70 ui/sonnetui.ui:180
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Select the language of the document you are proofing here.</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Valitse oikoluettavan tiedoston kieli.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:75
+msgctxt "SonnetUi|"
+msgid "&Language:"
+msgstr "&Kieli:"
+
+#: ui/sonnetui.ui:85
+msgctxt "SonnetUi|"
+msgid "Text excerpt showing the unknown word in its context."
+msgstr "Tekstikatkelma, jossa näet tunnistamattoman sanan käyttöyhteydessään."
+
+#: ui/sonnetui.ui:88
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Here you can see a text excerpt showing the unknown word in its context. "
+"If this information is not sufficient to choose the best replacement for the "
+"unknown word, you can click on the document you are proofing, read a larger "
+"part of the text and then return here to continue proofing.</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Tässä on tekstinäyte tuntemattoman sanan asiayhteydestä.Jos tämä tieto ei "
+"riitä parhaan korvauksen valitsemiseksi, voit napsauttaa tiedostoa ja lukea "
+"suuremman määrän ympäröivää tekstiä. Tämän jälkeen voit palata oikolukuun.</"
+"p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:96
+msgctxt "SonnetUi|"
+msgid "... the <b>misspelled</b> word shown in context ..."
+msgstr "… <b>virheellisesti kirjoitettu</b> sana kontekstissa …"
+
+#: ui/sonnetui.ui:106
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>The unknown word was detected and considered unknown because it is not "
+"included in the dictionary.<br>\n"
+"Click here if you consider the unknown word not to be misspelled, and you "
+"want to avoid wrongly detecting it again in the future. If you want to let "
+"it remain as is, but not add it to the dictionary, then click <b>Ignore</b> "
+"or <b>Ignore All</b> instead.</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Oikoluku löysi sanan, jota ei ole sanakirjassa.<br />\n"
+"Napsauta tästä, jos tunnistamaton sana on kirjoitettu oikein ja haluat "
+"välttää väärän tunnistuksen jatkossa. Jos haluat jättää sanan "
+"alkuperäiseksi, mutta et halua lisätä sitä sanakirjaan, napsauta <b>Ohita</"
+"b> tai <b>Ohita kaikki</b>.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:112
+msgctxt "SonnetUi|"
+msgid "<< Add to Dictionary"
+msgstr "<< Lisää sanakirjaan"
+
+#: ui/sonnetui.ui:135
+msgctxt "SonnetUi|"
+msgid "Suggestion List"
+msgstr "Ehdotuslista"
+
+#: ui/sonnetui.ui:138
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>If the unknown word is misspelled, you should check if the correction for "
+"it is available and if it is, click on it. If none of the words in this list "
+"is a good replacement you may type the correct word in the edit box above.</"
+"p>\n"
+"<p>To correct this word click <b>Replace</b> if you want to correct only "
+"this occurrence or <b>Replace All</b> if you want to correct all occurrences."
+"</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Jos tunnistamattomassa sanassa on kirjoitusvirhe, saatat löytää sille "
+"korjauksen luettelosta Jos löydät sopivan sanan, napsauta sitä. Jos mikään "
+"luettelon sanoista ei ole sopiva korjaus, voit kirjoittaa oman korjauksen "
+"yläpuolella olevaan tekstikenttään.</p>\n"
+"<p>Korvataksesi vain tämän sanan, napsauta <b>Korvaa</b> tai jos haluat "
+"korvata kaikki esiintymät, napsauta <b>Korvaa kaikki</b>.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:151 ui/sonnetui.ui:167
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>If the unknown word is misspelled, you should type the correction for "
+"your misspelled word here or select it from the list below.</p>\n"
+"<p>You can then click <b>Replace</b> if you want to correct only this "
+"occurrence of the word or <b>Replace All</b> if you want to correct all "
+"occurrences.</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Jos tunnistamattomassa sanassa on kirjoitusvirhe, voit kirjoittaa sopivan "
+"korjauksen sanalle tähän tai valita korjauksen alla olevasta luettelosta.</"
+"p>\n"
+"<p> Jos haluat korvata vain tämän osuman, napsauta <b>Korvaa</b>. Jos haluat "
+"korvata kaikki osumat, napsauta <b>Korvaa kaikki</b>.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:157
+msgctxt "SonnetUi|"
+msgid "Replace &with:"
+msgstr "&Korvaa tekstillä:"
+
+#: ui/sonnetui.ui:177
+msgctxt "SonnetUi|"
+msgid "Language Selection"
+msgstr "Kielen valinta"
+
+#: ui/sonnetui.ui:206
+msgctxt "SonnetUi|"
+msgid "S&uggest"
+msgstr "&Ehdota"
+
+#: ui/sonnetui.ui:213
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Click here to replace this occurrence of the unknown text with the text "
+"in the edit box above (to the left).</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Napsauta tästä korvataksesi tämän tuntemattoman sanan ylävasemmalla "
+"olevan tekstikentän tekstillä.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:218
+msgctxt "SonnetUi|"
+msgid "&Replace"
+msgstr "K&orvaa"
+
+#: ui/sonnetui.ui:225
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Click here to replace all occurrences of the unknown text with the text "
+"in the edit box above (to the left).</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Napsauta tästä korvataksesi kaikki tuntemattoman sanan osumat "
+"ylävasemmalla olevan tekstikentän tekstillä.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:230
+msgctxt "SonnetUi|"
+msgid "R&eplace All"
+msgstr "Korvaa &kaikki"
+
+#: ui/sonnetui.ui:237
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Click here to let this occurrence of the unknown word remain as is.</p>\n"
+"<p>This action is useful when the word is a name, an acronym, a foreign word "
+"or any other unknown word that you want to use but not add to the dictionary."
+"</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Napsauta tästä jättääksesi tuntemattoman sanan alkuperäiseen muotoon.</"
+"p>\n"
+"<p>Tämä on hyödyllistä jos sana on nimi, lyhenne, vieraskielinen tai mikä "
+"tahansa muu sana, jota et halua lisätä sanakirjaan.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:243
+msgctxt "SonnetUi|"
+msgid "&Ignore"
+msgstr "&Ohita"
+
+#: ui/sonnetui.ui:250 ui/sonnetui.ui:263
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Click here to let all occurrences of the unknown word remain as they are."
+"</p>\n"
+"<p>This action is useful when the word is a name, an acronym, a foreign word "
+"or any other unknown word that you want to use but not add to the dictionary."
+"</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Napsauta tästä jättääksesi kaikki tuntemattomat sanat alkuperäiseen "
+"muotoon.</p>\n"
+"<p>Tämä on hyödyllistä jos sana on nimi, lyhenne, vieraskielinen tai mikä "
+"tahansa muu sana, jota et halua lisätä sanakirjaan.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:256
+msgctxt "SonnetUi|"
+msgid "I&gnore All"
+msgstr "&Ohita kaikki"
+
+#: ui/sonnetui.ui:269
+msgctxt "SonnetUi|"
+msgid "Autocorrect"
+msgstr "Korjaa automaattisesti"
+
+#: ui/spellcheckdecorator.cpp:172
+#, qt-format
+msgctxt "Sonnet::SpellCheckDecorator|"
+msgid "No suggestions for %1"
+msgstr "Ei ehdotuksia: %1"
+
+#: ui/spellcheckdecorator.cpp:183
+msgctxt "Sonnet::SpellCheckDecorator|"
+msgid "Ignore"
+msgstr "Ohita"
+
+#: ui/spellcheckdecorator.cpp:184
+msgctxt "Sonnet::SpellCheckDecorator|"
+msgid "Add to Dictionary"
+msgstr "Lisää sanakirjaan"

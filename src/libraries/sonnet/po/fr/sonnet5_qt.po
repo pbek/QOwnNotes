@@ -1,0 +1,545 @@
+# translation of kdelibs4.po to Français
+# translation of kdelibs4.po to
+# Matthieu Robin <kde@macolu.org>, 2002,2003, 2004.
+# Robert Jacolin <rjacolin@ifrance.com>, 2003,2004.
+# Gilles Caulier <caulier.gilles@free.fr>, 2003.
+# Gérard Delafond <gerard@delafond.org>, 2003, 2004.
+# Matthieu Robin <kde@macolu.org>, 2004, 2005, 2006.
+# Cedric Pasteur <cedric.pasteur@free.fr>, 2004.
+# Nicolas Ternisien <nicolas.ternisien@gmail.com>, 2004, 2005, 2006, 2007, 2008.
+# Matthieu Robin <matthieu@macolu.org>, 2005.
+# Éric Bischoff <ebischoff@nerim.net>, 2005.
+# Sébastien Renard <Sebastien.Renard@digitalfox.org>, 2006, 2007, 2008.
+# Anne-Marie Mahfouf <annma@kde.org>, 2007, 2008, 2012.
+# Ludovic Grossard <grossard@kde.org>, 2008.
+# Mickael Sibelle <kimael@gmail.com>, 2008.
+# Nicolas Lécureuil <nlecureuil@mandriva.com>, 2010.
+# Joëlle Cornavin <jcorn@free.fr>, 2007, 2008, 2009, 2010, 2011, 2012, 2013.
+# Sebastien Renard <renard@kde.org>, 2013, 2014.
+# Vincent Pinon <vpinon@kde.org>, 2016.
+# Simon Depiets <sdepiets@gmail.com>, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-03-23 01:50+0000\n"
+"PO-Revision-Date: 2019-01-24 12:06+0800\n"
+"Last-Translator: Simon Depiets <sdepiets@gmail.com>\n"
+"Language-Team: French <kde-francophone@kde.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 19.03.70\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: qtrich\n"
+"X-Qt-Contexts: true\n"
+
+#: core/loader.cpp:190
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "40"
+msgstr "40"
+
+#: core/loader.cpp:191
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "60"
+msgstr "60"
+
+#: core/loader.cpp:192
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "80"
+msgstr "80"
+
+#: core/loader.cpp:193
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ise suffixes"
+msgstr "suffixes -ise"
+
+#: core/loader.cpp:194
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ize suffixes"
+msgstr "suffixes -ize"
+
+#: core/loader.cpp:195
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ise suffixes and with accents"
+msgstr "suffixes -ise et avec des accents"
+
+#: core/loader.cpp:197
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ise suffixes and without accents"
+msgstr "suffixes -ise et sans accents"
+
+#: core/loader.cpp:200
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ize suffixes and with accents"
+msgstr "suffixes -ize et avec des accents"
+
+#: core/loader.cpp:202
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ize suffixes and without accents"
+msgstr "Suffixes -ize et sans accents"
+
+#: core/loader.cpp:205
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "large"
+msgstr "grand"
+
+#: core/loader.cpp:206
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "medium"
+msgstr "moyen"
+
+#: core/loader.cpp:207
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "small"
+msgstr "petit"
+
+#: core/loader.cpp:208
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "variant 0"
+msgstr "variante 0"
+
+#: core/loader.cpp:209
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "variant 1"
+msgstr "variante 1"
+
+#: core/loader.cpp:210
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "variant 2"
+msgstr "variante 2"
+
+#: core/loader.cpp:212
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "without accents"
+msgstr "sans accents"
+
+#: core/loader.cpp:213
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "with accents"
+msgstr "avec des accents"
+
+#: core/loader.cpp:215
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "with ye, modern russian"
+msgstr "avec « ye », Russe moderne"
+
+#: core/loader.cpp:217
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "with yeyo, modern and old russian"
+msgstr "avec « yeyo », Russe moderne et ancien"
+
+#: core/loader.cpp:220
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "with yo, old russian"
+msgstr "avec yo, Russe ancien"
+
+#: core/loader.cpp:221
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "extended"
+msgstr "étendu"
+
+#: core/loader.cpp:256
+#, qt-format
+msgctxt ""
+"Sonnet::Loader|dictionary name; %1 = language name, %2 = country name and %3 "
+"= language variant name"
+msgid "%1 (%2) [%3]"
+msgstr "%1 (%2) [%3]"
+
+#: core/loader.cpp:259
+#, qt-format
+msgctxt "Sonnet::Loader|dictionary name; %1 = language name, %2 = country name"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: ui/configdialog.cpp:53
+msgctxt "Sonnet::ConfigDialog|"
+msgid "Spell Checking Configuration"
+msgstr "Configuration de la vérification de l'orthographe"
+
+#: ui/configui.ui:26
+msgctxt "SonnetConfigUI|"
+msgid "No backend found for spell checking"
+msgstr "Impossible de trouver un moteur de vérification orthographique"
+
+#: ui/configui.ui:36
+msgctxt "SonnetConfigUI|"
+msgid "Default language:"
+msgstr "Langue par défaut :"
+
+#: ui/configui.ui:63
+msgctxt "SonnetConfigUI|"
+msgid "Choose your preferred languages"
+msgstr "Choisissez vos langues préférées"
+
+#: ui/configui.ui:71
+msgctxt "SonnetConfigUI|"
+msgid "Options"
+msgstr "Options"
+
+#: ui/configui.ui:77
+msgctxt "SonnetConfigUI|"
+msgid "Enable autodetection of &language"
+msgstr "Activer la détection automatique de la &langue"
+
+#: ui/configui.ui:84
+msgctxt "SonnetConfigUI|"
+msgid "Enable &background spellchecking"
+msgstr "Activer la vérification orthographique en a&rrière-plan"
+
+#: ui/configui.ui:91
+msgctxt "SonnetConfigUI|"
+msgid "&Automatic spell checking enabled by default"
+msgstr "Vérification orthographique &automatique activée par défaut"
+
+#: ui/configui.ui:98
+msgctxt "SonnetConfigUI|"
+msgid "Skip all &uppercase words"
+msgstr "Ignorer les mots en maj&uscules"
+
+#: ui/configui.ui:105
+msgctxt "SonnetConfigUI|"
+msgid "S&kip run-together words"
+msgstr "Ignorer les mots acco&lés"
+
+#: ui/configui.ui:115
+msgctxt "SonnetConfigUI|"
+msgid "Ignored Words:"
+msgstr "Mots ignorés : "
+
+#: ui/configui.ui:129
+msgctxt "SonnetConfigUI|"
+msgid "&Add"
+msgstr "A&jouter"
+
+#: ui/configui.ui:142
+msgctxt "SonnetConfigUI|"
+msgid "&Remove"
+msgstr "Su&pprimer"
+
+#: ui/dialog.cpp:96 ui/dialog.cpp:218 ui/dialog.cpp:429
+msgctxt "Sonnet::Dialog|@title:window"
+msgid "Check Spelling"
+msgstr "Vérification de l'orthographe"
+
+#: ui/dialog.cpp:217
+msgctxt "Sonnet::Dialog|progress label"
+msgid "Spell checking in progress..."
+msgstr "Vérification orthographique en cours..."
+
+#: ui/dialog.cpp:238
+msgctxt "Sonnet::Dialog|"
+msgid "Spell check stopped."
+msgstr "Vérification orthographique arrêtée."
+
+#: ui/dialog.cpp:248
+msgctxt "Sonnet::Dialog|"
+msgid "Spell check canceled."
+msgstr "Vérification orthographique annulée."
+
+#: ui/dialog.cpp:425 ui/dialog.cpp:428
+msgctxt "Sonnet::Dialog|"
+msgid "Spell check complete."
+msgstr "Vérification orthographique terminée."
+
+#: ui/highlighter.cpp:251 ui/highlighter.cpp:273
+msgctxt "Sonnet::Highlighter|"
+msgid "As-you-type spell checking enabled."
+msgstr "Vérification orthographique au cours de la frappe activée."
+
+#: ui/highlighter.cpp:254
+msgctxt "Sonnet::Highlighter|"
+msgid "Too many misspelled words. As-you-type spell checking disabled."
+msgstr ""
+"Trop de mots mal orthographiés. Vérification orthographique au cours de la "
+"frappe désactivée."
+
+#: ui/highlighter.cpp:275
+msgctxt "Sonnet::Highlighter|"
+msgid "As-you-type spell checking disabled."
+msgstr "Vérification orthographique au cours de la frappe désactivée."
+
+#: ui/sonnetui.ui:41 ui/sonnetui.ui:57
+msgctxt "SonnetUi|"
+msgid ""
+"<qt><p>This word was considered to be an \"unknown word\" because it does "
+"not match any entry in the dictionary currently in use. It may also be a "
+"word in a foreign language.</p>\n"
+"<p>If the word is not misspelled, you may add it to the dictionary by "
+"clicking <b>Add to Dictionary</b>. If you do not want to add the unknown "
+"word to the dictionary, but you want to leave it unchanged, click <b>Ignore</"
+"b> or <b>Ignore All</b>.</p>\n"
+"<p>However, if the word is misspelled, you can try to find the correct "
+"replacement in the list below. If you cannot find a replacement there, you "
+"may type it in the text box below, and click <b>Replace</b> or <b>Replace "
+"All</b>.</p>\n"
+"</qt>"
+msgstr ""
+"<qt><p>Ce mot a été considéré comme étant un « mot inconnu » car il ne "
+"correspond à aucune entrée du dictionnaire actuellement utilisé. Ce peut "
+"aussi être un mot dans une langue étrangère.</p>\n"
+"<p>Si le mot n'est pas mal orthographié, vous pouvez l'ajouter au "
+"dictionnaire en cliquant sur <b>Ajouter au dictionnaire</b>. Si vous ne "
+"voulez pas ajouter le mot inconnu au dictionnaire mais le laisser inchangé, "
+"cliquez sur <b>Ignorer</b> ou <b>Tout ignorer</b>.</p>\n"
+"<p>Cependant, si le mot est mal orthographié, essayez de trouver le mot de "
+"remplacement correct dans la liste située au-dessous. Si elle ne contient "
+"pas de mot de remplacement, vous pouvez le saisir dans la zone de texte "
+"située au-dessous et cliquer sur <b>Remplacer</b> ou <b>Tout remplacer</b>.</"
+"p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:47
+msgctxt "SonnetUi|"
+msgid "Unknown word:"
+msgstr "Mot inconnu :"
+
+#: ui/sonnetui.ui:54
+msgctxt "SonnetUi|"
+msgid "Unknown word"
+msgstr "Mot inconnu"
+
+#: ui/sonnetui.ui:63
+msgctxt "SonnetUi|"
+msgid "<b>misspelled</b>"
+msgstr "<b>mal orthographié</b>"
+
+#: ui/sonnetui.ui:70 ui/sonnetui.ui:180
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Select the language of the document you are proofing here.</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Sélectionnez ici la langue du document que vous vérifiez.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:75
+msgctxt "SonnetUi|"
+msgid "&Language:"
+msgstr "&Langue :"
+
+#: ui/sonnetui.ui:85
+msgctxt "SonnetUi|"
+msgid "Text excerpt showing the unknown word in its context."
+msgstr "Extrait du texte affichant le mot inconnu dans son contexte."
+
+#: ui/sonnetui.ui:88
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Here you can see a text excerpt showing the unknown word in its context. "
+"If this information is not sufficient to choose the best replacement for the "
+"unknown word, you can click on the document you are proofing, read a larger "
+"part of the text and then return here to continue proofing.</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Vous pouvez voir ici un extrait du texte affichant le mot inconnu dans "
+"son contexte. Si cette information n'est pas suffisante pour choisir le "
+"meilleur remplacement pour le mot inconnu, vous pouvez cliquer sur le "
+"document que vous vérifiez, lire une plus grande partie du texte et ensuite "
+"retourner ici pour continuer la vérification.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:96
+msgctxt "SonnetUi|"
+msgid "... the <b>misspelled</b> word shown in context ..."
+msgstr "... le mot <b>mal orthographié</b> affiché dans le contexte..."
+
+#: ui/sonnetui.ui:106
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>The unknown word was detected and considered unknown because it is not "
+"included in the dictionary.<br>\n"
+"Click here if you consider the unknown word not to be misspelled, and you "
+"want to avoid wrongly detecting it again in the future. If you want to let "
+"it remain as is, but not add it to the dictionary, then click <b>Ignore</b> "
+"or <b>Ignore All</b> instead.</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Le mot inconnu a été détecté et considéré comme inconnu car il n'est pas "
+"inclus dans le dictionnaire.<br>\n"
+"Cliquez ici si vous considérez que le mot inconnu n'est pas mal orthographié "
+"et voulez éviter qu'il soit détecté comme erroné à nouveau à l'avenir. Si "
+"vous voulez le laisser tel quel, mais sans l'ajouter au dictionnaire, alors "
+"cliquez sur <b>Ignorer</b> ou <b>Tout ignorer</b> à la place.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:112
+msgctxt "SonnetUi|"
+msgid "<< Add to Dictionary"
+msgstr "<< Ajouter au dictionnaire"
+
+#: ui/sonnetui.ui:135
+msgctxt "SonnetUi|"
+msgid "Suggestion List"
+msgstr "Liste de suggestions"
+
+#: ui/sonnetui.ui:138
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>If the unknown word is misspelled, you should check if the correction for "
+"it is available and if it is, click on it. If none of the words in this list "
+"is a good replacement you may type the correct word in the edit box above.</"
+"p>\n"
+"<p>To correct this word click <b>Replace</b> if you want to correct only "
+"this occurrence or <b>Replace All</b> if you want to correct all occurrences."
+"</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Si le mot inconnu est mal orthographié, vous devrez vérifier si sa "
+"correction est disponible et, si tel est le cas, cliquez dessus. Si aucun "
+"des mots figurant dans la liste ne constitue un remplacement approprié, vous "
+"pouvez saisir le mot correct dans la zone de texte située au-dessus.</p>\n"
+"<p>Pour corriger ce mot, cliquez sur <b>Remplacer</b> si vous voulez ne "
+"corriger que cette occurrence ou sur <b>Tout remplacer</b> pour ne corriger "
+"toutes les occurrences.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:151 ui/sonnetui.ui:167
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>If the unknown word is misspelled, you should type the correction for "
+"your misspelled word here or select it from the list below.</p>\n"
+"<p>You can then click <b>Replace</b> if you want to correct only this "
+"occurrence of the word or <b>Replace All</b> if you want to correct all "
+"occurrences.</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Si le mot inconnu est mal orthographié, vous devrez en écrire la "
+"correction ici ou le sélectionner dans la liste dessous.</p>\n"
+"<p>Vous pouvez ensuite cliquer sur <b>Remplacer</b> si vous voulez ne "
+"corriger que cette occurrence du mot ou sur <b>Tout remplacer</b> pour "
+"corriger toutes les occurrences.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:157
+msgctxt "SonnetUi|"
+msgid "Replace &with:"
+msgstr "&Remplacer par :"
+
+#: ui/sonnetui.ui:177
+msgctxt "SonnetUi|"
+msgid "Language Selection"
+msgstr "Choix de la langue"
+
+#: ui/sonnetui.ui:206
+msgctxt "SonnetUi|"
+msgid "S&uggest"
+msgstr "S&uggérer"
+
+#: ui/sonnetui.ui:213
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Click here to replace this occurrence of the unknown text with the text "
+"in the edit box above (to the left).</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Cliquez ici pour remplacer cette occurrence du texte inconnu par le texte "
+"figurant dans la zone de texte au-dessus (à gauche).</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:218
+msgctxt "SonnetUi|"
+msgid "&Replace"
+msgstr "&Remplacer"
+
+#: ui/sonnetui.ui:225
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Click here to replace all occurrences of the unknown text with the text "
+"in the edit box above (to the left).</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Cliquez ici pour remplacer toutes les occurrences du texte inconnu par le "
+"texte figurant dans la zone de texte au-dessus (à gauche).</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:230
+msgctxt "SonnetUi|"
+msgid "R&eplace All"
+msgstr "&Tout remplacer"
+
+#: ui/sonnetui.ui:237
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Click here to let this occurrence of the unknown word remain as is.</p>\n"
+"<p>This action is useful when the word is a name, an acronym, a foreign word "
+"or any other unknown word that you want to use but not add to the dictionary."
+"</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Cliquez ici pour laisser telle quelle cette occurrence du mot inconnu.</"
+"p>\n"
+"<p>Cette action est utile quand le mot est un nom, un acronyme, un mot "
+"étranger ou n'importe quel autre mot inconnu que vous voulez utiliser mais "
+"ne pas ajouter au dictionnaire.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:243
+msgctxt "SonnetUi|"
+msgid "&Ignore"
+msgstr "&Ignorer"
+
+#: ui/sonnetui.ui:250 ui/sonnetui.ui:263
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Click here to let all occurrences of the unknown word remain as they are."
+"</p>\n"
+"<p>This action is useful when the word is a name, an acronym, a foreign word "
+"or any other unknown word that you want to use but not add to the dictionary."
+"</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Cliquez ici pour laisser telles quelles toutes les occurrences du mot "
+"inconnu.</p>\n"
+"<p>Cette action est utile quand le mot est un nom, un acronyme, un mot "
+"étranger ou n'importe quel autre mot que vous voulez utiliser mais ne pas "
+"ajouter au dictionnaire.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:256
+msgctxt "SonnetUi|"
+msgid "I&gnore All"
+msgstr "Tout i&gnorer"
+
+#: ui/sonnetui.ui:269
+msgctxt "SonnetUi|"
+msgid "Autocorrect"
+msgstr "Corriger automatiquement"
+
+#: ui/spellcheckdecorator.cpp:172
+#, qt-format
+msgctxt "Sonnet::SpellCheckDecorator|"
+msgid "No suggestions for %1"
+msgstr "Pas de suggestions pour %1"
+
+#: ui/spellcheckdecorator.cpp:183
+msgctxt "Sonnet::SpellCheckDecorator|"
+msgid "Ignore"
+msgstr "Ignorer"
+
+#: ui/spellcheckdecorator.cpp:184
+msgctxt "Sonnet::SpellCheckDecorator|"
+msgid "Add to Dictionary"
+msgstr "Ajouter au dictionnaire"

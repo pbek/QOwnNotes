@@ -1,0 +1,517 @@
+# translation of kdelibs4.po to Chinese Simplified
+# Copyright (C) 2007 Free Software Foundation, Inc.
+#
+# Lie Ex <lilith.ex@gmail.com> 2007-2011.
+# Wang Jian <lark@linux.ustc.edu.cn>, 1998.
+# Sarah Smith <sarahs@redhat.com>, 2002.
+# Xiong Jiang <jxiong@offtopic.org>, 2002,2003,2004.
+# Funda Wang <fundawang@linux.net.cn>, 2002,2003,2004.
+# Liang Qi <cavendish.qi@gmail.com>, 2007.
+# Feng Chao <chaofeng111@gmail.com>, 2010, 2012, 2014.
+# Ni Hui <shuizhuyuanluo@126.com>, 2010, 2011, 2012.
+# Weng Xuetian <wengxt@gmail.com>, 2011, 2012, 2013, 2014, 2016.
+# Xuetian Weng <xweng@cs.stonybrook.edu>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdeorg\n"
+"PO-Revision-Date: 2019-09-05 09:24\n"
+"Last-Translator: Guo Yunhe (guoyunhe)\n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Qt-Contexts: true\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: kdeorg\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /kf5-trunk/messages/frameworks/sonnet5_qt.pot\n"
+
+#: core/loader.cpp:190
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "40"
+msgstr "40"
+
+#: core/loader.cpp:191
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "60"
+msgstr "60"
+
+#: core/loader.cpp:192
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "80"
+msgstr "80"
+
+#: core/loader.cpp:193
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ise suffixes"
+msgstr "-ise 结尾"
+
+#: core/loader.cpp:194
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ize suffixes"
+msgstr "-ize 结尾"
+
+#: core/loader.cpp:195
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ise suffixes and with accents"
+msgstr "-ise 结尾并加重音"
+
+#: core/loader.cpp:197
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ise suffixes and without accents"
+msgstr "-ise 结尾不加重音"
+
+#: core/loader.cpp:200
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ize suffixes and with accents"
+msgstr "-ize 结尾并加重音"
+
+#: core/loader.cpp:202
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ize suffixes and without accents"
+msgstr "-ize 结尾不加重音"
+
+#: core/loader.cpp:205
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "large"
+msgstr "大"
+
+#: core/loader.cpp:206
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "medium"
+msgstr "中"
+
+#: core/loader.cpp:207
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "small"
+msgstr "小"
+
+#: core/loader.cpp:208
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "variant 0"
+msgstr "变型 0"
+
+#: core/loader.cpp:209
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "variant 1"
+msgstr "变型 1"
+
+#: core/loader.cpp:210
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "variant 2"
+msgstr "变型 2"
+
+#: core/loader.cpp:212
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "without accents"
+msgstr "不加重音"
+
+#: core/loader.cpp:213
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "with accents"
+msgstr "加重音"
+
+#: core/loader.cpp:215
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "with ye, modern russian"
+msgstr "加 ye，现代俄语"
+
+#: core/loader.cpp:217
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "with yeyo, modern and old russian"
+msgstr "加 yeyo，现代和老式俄语"
+
+#: core/loader.cpp:220
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "with yo, old russian"
+msgstr "加 yo，老式俄语"
+
+#: core/loader.cpp:221
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "extended"
+msgstr "延伸"
+
+#: core/loader.cpp:256
+#, qt-format
+msgctxt ""
+"Sonnet::Loader|dictionary name; %1 = language name, %2 = country name and %3 "
+"= language variant name"
+msgid "%1 (%2) [%3]"
+msgstr "%1 (%2) [%3]"
+
+#: core/loader.cpp:259
+#, qt-format
+msgctxt "Sonnet::Loader|dictionary name; %1 = language name, %2 = country name"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: ui/configdialog.cpp:53
+msgctxt "Sonnet::ConfigDialog|"
+msgid "Spell Checking Configuration"
+msgstr "拼写检查配置"
+
+#: ui/configui.ui:26
+msgctxt "SonnetConfigUI|"
+msgid "No backend found for spell checking"
+msgstr "未找到拼写检查后端"
+
+#: ui/configui.ui:36
+msgctxt "SonnetConfigUI|"
+msgid "Default language:"
+msgstr "默认语言："
+
+#: ui/configui.ui:63
+msgctxt "SonnetConfigUI|"
+msgid "Choose your preferred languages"
+msgstr "选择您的偏好语言"
+
+#: ui/configui.ui:71
+msgctxt "SonnetConfigUI|"
+msgid "Options"
+msgstr "选项"
+
+#: ui/configui.ui:77
+msgctxt "SonnetConfigUI|"
+msgid "Enable autodetection of &language"
+msgstr "启动语言自动检测(&L)"
+
+#: ui/configui.ui:84
+msgctxt "SonnetConfigUI|"
+msgid "Enable &background spellchecking"
+msgstr "启用后台拼写检查(&B)"
+
+#: ui/configui.ui:91
+msgctxt "SonnetConfigUI|"
+msgid "&Automatic spell checking enabled by default"
+msgstr "默认启用自动拼写检查(&A)"
+
+#: ui/configui.ui:98
+msgctxt "SonnetConfigUI|"
+msgid "Skip all &uppercase words"
+msgstr "跳过全部大写的单词(&U)"
+
+#: ui/configui.ui:105
+msgctxt "SonnetConfigUI|"
+msgid "S&kip run-together words"
+msgstr "跳过连字符连接的单词(&K)"
+
+#: ui/configui.ui:115
+msgctxt "SonnetConfigUI|"
+msgid "Ignored Words:"
+msgstr "忽略单词："
+
+#: ui/configui.ui:129
+msgctxt "SonnetConfigUI|"
+msgid "&Add"
+msgstr "添加(&A)"
+
+#: ui/configui.ui:142
+msgctxt "SonnetConfigUI|"
+msgid "&Remove"
+msgstr "删除(&R)"
+
+#: ui/dialog.cpp:96 ui/dialog.cpp:218 ui/dialog.cpp:429
+msgctxt "Sonnet::Dialog|@title:window"
+msgid "Check Spelling"
+msgstr "检查拼写"
+
+#: ui/dialog.cpp:217
+msgctxt "Sonnet::Dialog|progress label"
+msgid "Spell checking in progress..."
+msgstr "正在进行拼写检查..."
+
+#: ui/dialog.cpp:238
+msgctxt "Sonnet::Dialog|"
+msgid "Spell check stopped."
+msgstr "拼写检查已停止。"
+
+#: ui/dialog.cpp:248
+msgctxt "Sonnet::Dialog|"
+msgid "Spell check canceled."
+msgstr "拼写检查已取消。"
+
+#: ui/dialog.cpp:425 ui/dialog.cpp:428
+msgctxt "Sonnet::Dialog|"
+msgid "Spell check complete."
+msgstr "拼写检查已完成。"
+
+#: ui/highlighter.cpp:251 ui/highlighter.cpp:273
+msgctxt "Sonnet::Highlighter|"
+msgid "As-you-type spell checking enabled."
+msgstr "即输即查已启用。"
+
+#: ui/highlighter.cpp:254
+msgctxt "Sonnet::Highlighter|"
+msgid "Too many misspelled words. As-you-type spell checking disabled."
+msgstr "拼错的单词太多了。即输即查已禁用。"
+
+#: ui/highlighter.cpp:275
+msgctxt "Sonnet::Highlighter|"
+msgid "As-you-type spell checking disabled."
+msgstr "即输即查已禁用。"
+
+#: ui/sonnetui.ui:41 ui/sonnetui.ui:57
+msgctxt "SonnetUi|"
+msgid ""
+"<qt><p>This word was considered to be an \"unknown word\" because it does "
+"not match any entry in the dictionary currently in use. It may also be a "
+"word in a foreign language.</p>\n"
+"<p>If the word is not misspelled, you may add it to the dictionary by "
+"clicking <b>Add to Dictionary</b>. If you do not want to add the unknown "
+"word to the dictionary, but you want to leave it unchanged, click <b>Ignore</"
+"b> or <b>Ignore All</b>.</p>\n"
+"<p>However, if the word is misspelled, you can try to find the correct "
+"replacement in the list below. If you cannot find a replacement there, you "
+"may type it in the text box below, and click <b>Replace</b> or <b>Replace "
+"All</b>.</p>\n"
+"</qt>"
+msgstr ""
+"<qt><p>这个单词被认为是“未知单词”，因为它不和当前使用的词典中的任何条目相匹"
+"配。它也可能是一个外来语的单词。</p>\n"
+"<p>如果该单词并非拼写错误，您可以点击<b>添加到字典</b>将它添加到字典中。如果"
+"您不希望将未知的单词添加到字典中，但希望将它保持为原样，请点击<b>忽略</b>或者"
+"<b>全部忽略</b>。</p>\n"
+"<p>然而，如果单词的拼写是错误的，您可以尝试在下面的列表中寻找正确的词替换它。"
+"如果您无法找到可替换的词，您可以在下面的文本框中输入一个词，然后点击<b>替换</"
+"b>或者<b>全部替换</b>。</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:47
+msgctxt "SonnetUi|"
+msgid "Unknown word:"
+msgstr "未知单词："
+
+#: ui/sonnetui.ui:54
+msgctxt "SonnetUi|"
+msgid "Unknown word"
+msgstr "未知单词"
+
+#: ui/sonnetui.ui:63
+msgctxt "SonnetUi|"
+msgid "<b>misspelled</b>"
+msgstr "<b>拼错的</b>"
+
+#: ui/sonnetui.ui:70 ui/sonnetui.ui:180
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Select the language of the document you are proofing here.</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>在此可以选择您校对的文档的语种。</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:75
+msgctxt "SonnetUi|"
+msgid "&Language:"
+msgstr "语言(&L)："
+
+#: ui/sonnetui.ui:85
+msgctxt "SonnetUi|"
+msgid "Text excerpt showing the unknown word in its context."
+msgstr "含有该未知单词的上下文摘录文本。"
+
+#: ui/sonnetui.ui:88
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Here you can see a text excerpt showing the unknown word in its context. "
+"If this information is not sufficient to choose the best replacement for the "
+"unknown word, you can click on the document you are proofing, read a larger "
+"part of the text and then return here to continue proofing.</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>这里您可以查看含有该未知单词的上下文摘录文本。如果这些信息还不足以让您选择"
+"最合适的词替换未知单词，您可以点击正在校对的文档，查看更大范围的文本，然后返"
+"回到这里继续进行校对。</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:96
+msgctxt "SonnetUi|"
+msgid "... the <b>misspelled</b> word shown in context ..."
+msgstr "... 上下文中出现的<b>拼错的</b>单词 ..."
+
+#: ui/sonnetui.ui:106
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>The unknown word was detected and considered unknown because it is not "
+"included in the dictionary.<br>\n"
+"Click here if you consider the unknown word not to be misspelled, and you "
+"want to avoid wrongly detecting it again in the future. If you want to let "
+"it remain as is, but not add it to the dictionary, then click <b>Ignore</b> "
+"or <b>Ignore All</b> instead.</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>检测到未知单词，它之所以被认为是未知的，是因为字典中不包含它。<br>\n"
+"如果您认为该未知单词并非拼写错误，并且您希望避免下次继续错误地检测它，请点击"
+"这里。如果您希望将它保持原样，但并不添加到字典中，那么请点击<b>忽略</b>或者"
+"<b>全部忽略</b>。</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:112
+msgctxt "SonnetUi|"
+msgid "<< Add to Dictionary"
+msgstr "<< 添加到字典"
+
+#: ui/sonnetui.ui:135
+msgctxt "SonnetUi|"
+msgid "Suggestion List"
+msgstr "建议列表"
+
+#: ui/sonnetui.ui:138
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>If the unknown word is misspelled, you should check if the correction for "
+"it is available and if it is, click on it. If none of the words in this list "
+"is a good replacement you may type the correct word in the edit box above.</"
+"p>\n"
+"<p>To correct this word click <b>Replace</b> if you want to correct only "
+"this occurrence or <b>Replace All</b> if you want to correct all occurrences."
+"</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>如果未知单词是拼写错误，您应该检查是否有可用的正确拼写，如果存在，则点击"
+"它。如果这个列表中没有可进行替换的合适的词，您可以在上面的编辑框中输入正确的"
+"单词。</p>\n"
+"<p>要更正这个单词且并且只更正这一处，请点击<b>替换</b>，如果您要更正全部出现"
+"的这个错词，请点击<b>全部替换</b>。</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:151 ui/sonnetui.ui:167
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>If the unknown word is misspelled, you should type the correction for "
+"your misspelled word here or select it from the list below.</p>\n"
+"<p>You can then click <b>Replace</b> if you want to correct only this "
+"occurrence of the word or <b>Replace All</b> if you want to correct all "
+"occurrences.</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>如果该未知单词是拼写错误，您应该在这里输入或者从下面的列表中挑选拼写正确的"
+"单词。</p>\n"
+"<p>如果只要更正这一处，请点击<b>替换</b>，如果您要更正全部出现的这个错词，请"
+"点击<b>全部替换</b>。</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:157
+msgctxt "SonnetUi|"
+msgid "Replace &with:"
+msgstr "替换为(&W)："
+
+#: ui/sonnetui.ui:177
+msgctxt "SonnetUi|"
+msgid "Language Selection"
+msgstr "语言选择"
+
+#: ui/sonnetui.ui:206
+msgctxt "SonnetUi|"
+msgid "S&uggest"
+msgstr "建议(&U)"
+
+#: ui/sonnetui.ui:213
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Click here to replace this occurrence of the unknown text with the text "
+"in the edit box above (to the left).</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>点击此处可以用上面(左边)编辑框中的文本替换这里出现的未知文本。</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:218
+msgctxt "SonnetUi|"
+msgid "&Replace"
+msgstr "替换(&R)"
+
+#: ui/sonnetui.ui:225
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Click here to replace all occurrences of the unknown text with the text "
+"in the edit box above (to the left).</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>点击此处可以用上面(左边)编辑框中的文本替换全部出现的未知文本。</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:230
+msgctxt "SonnetUi|"
+msgid "R&eplace All"
+msgstr "全部替换(&E)"
+
+#: ui/sonnetui.ui:237
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Click here to let this occurrence of the unknown word remain as is.</p>\n"
+"<p>This action is useful when the word is a name, an acronym, a foreign word "
+"or any other unknown word that you want to use but not add to the dictionary."
+"</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>点击此处可以让这个出现的未知单词保持原样。</p>\n"
+"<p>如果该单词是一个专有名词、缩写词、外来语、或者任何其它未知的、您希望使用但"
+"不添加到字典中的单词，就可以使用这个动作。</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:243
+msgctxt "SonnetUi|"
+msgid "&Ignore"
+msgstr "忽略(&I)"
+
+#: ui/sonnetui.ui:250 ui/sonnetui.ui:263
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Click here to let all occurrences of the unknown word remain as they are."
+"</p>\n"
+"<p>This action is useful when the word is a name, an acronym, a foreign word "
+"or any other unknown word that you want to use but not add to the dictionary."
+"</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>点击此处可以让全部出现的这个未知单词保持原样。</p>\n"
+"<p>如果该单词是一个专有名词、缩写词、外来语、或者任何其它未知的、您希望使用但"
+"不添加到字典中的单词，就可以使用这个动作。</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:256
+msgctxt "SonnetUi|"
+msgid "I&gnore All"
+msgstr "全部忽略(&G)"
+
+#: ui/sonnetui.ui:269
+msgctxt "SonnetUi|"
+msgid "Autocorrect"
+msgstr "自动更正"
+
+#: ui/spellcheckdecorator.cpp:172
+#, qt-format
+msgctxt "Sonnet::SpellCheckDecorator|"
+msgid "No suggestions for %1"
+msgstr "没有对 %1 的建议"
+
+#: ui/spellcheckdecorator.cpp:183
+msgctxt "Sonnet::SpellCheckDecorator|"
+msgid "Ignore"
+msgstr "忽略(&I)"
+
+#: ui/spellcheckdecorator.cpp:184
+msgctxt "Sonnet::SpellCheckDecorator|"
+msgid "Add to Dictionary"
+msgstr "添加到字典"

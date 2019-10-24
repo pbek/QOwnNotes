@@ -1,0 +1,22 @@
+maintainer: sandsmark
+description: Support for spellchecking
+tier: 1
+type: solution
+platforms:
+    - name: Linux
+    - name: FreeBSD
+    - name: Windows
+    - name: MacOSX
+portingAid: false
+deprecated: false
+release: true
+libraries:
+ - qmake: SonnetCore
+   cmake: "KF5::SonnetCore"
+ - qmake: SonnetUi
+   cmake: "KF5::SonnetUi"
+cmakename: KF5Sonnet
+
+public_lib: true
+group: Frameworks
+subgroup: Tier 1

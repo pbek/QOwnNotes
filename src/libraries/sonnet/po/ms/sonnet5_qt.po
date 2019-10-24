@@ -1,0 +1,750 @@
+# kdelibs4 Bahasa Melayu (Malay) (ms)
+# Hasbullah bin Pit <sebol@ikhlas.com>, 2003.
+# Muhammad Najmi Ahmad Zabidi <md_najmi@yahoo.com>, 2003.
+# Mohd Nasir bin Che Embee <chadtce@linuxmail.org>, 2003.
+# Muhammad Najmi bin Ahmad Zabidi <najmi.zabidi@gmail.com>, 2006.
+# Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>, 2006, 2007, 2008, 2009, 2010.
+# Sharuzzaman Ahmat Raslan <sharuzzaman@gmail.com>, 2010, 2011.
+# Copyright (C) 2008, 2009 K Desktop Environment
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-03-23 01:50+0000\n"
+"PO-Revision-Date: 2011-07-16 00:57+0800\n"
+"Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@gmail.com>\n"
+"Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=1;\n"
+"X-Qt-Contexts: true\n"
+
+#: core/loader.cpp:190
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "40"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "40"
+msgstr "40"
+
+#: core/loader.cpp:191
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "60"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "60"
+msgstr "60"
+
+#: core/loader.cpp:192
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "80"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "80"
+msgstr "80"
+
+#: core/loader.cpp:193
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "-ise suffixes"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ise suffixes"
+msgstr "pengakhiran -ise"
+
+#: core/loader.cpp:194
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "-ize suffixes"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ize suffixes"
+msgstr "pengakhiran -ize"
+
+#: core/loader.cpp:195
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "-ise suffixes and with accents"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ise suffixes and with accents"
+msgstr "suffix -ise dan dengan accent"
+
+#: core/loader.cpp:197
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "-ise suffixes and without accents"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ise suffixes and without accents"
+msgstr "suffix -ise dan tanpa accent"
+
+#: core/loader.cpp:200
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "-ize suffixes and with accents"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ize suffixes and with accents"
+msgstr "suffix -ize dan dengan accent"
+
+#: core/loader.cpp:202
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "-ize suffixes and without accents"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ize suffixes and without accents"
+msgstr "suffix -ize dan tanpa accent"
+
+#: core/loader.cpp:205
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "large"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "large"
+msgstr "besar"
+
+#: core/loader.cpp:206
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "medium"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "medium"
+msgstr "sederhana"
+
+#: core/loader.cpp:207
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "small"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "small"
+msgstr "kecil"
+
+#: core/loader.cpp:208
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "variant 0"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "variant 0"
+msgstr "varian 0"
+
+#: core/loader.cpp:209
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "variant 1"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "variant 1"
+msgstr "varian 1"
+
+#: core/loader.cpp:210
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "variant 2"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "variant 2"
+msgstr "varian 2"
+
+#: core/loader.cpp:212
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "without accents"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "without accents"
+msgstr "tanpa accent"
+
+#: core/loader.cpp:213
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "with accents"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "with accents"
+msgstr "dengan accent"
+
+#: core/loader.cpp:215
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "with ye, modern russian"
+msgstr ""
+
+#: core/loader.cpp:217
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "with yeyo, modern and old russian"
+msgstr ""
+
+#: core/loader.cpp:220
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "with yo, old russian"
+msgstr ""
+
+#: core/loader.cpp:221
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "extended"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "extended"
+msgstr "tersambung"
+
+#: core/loader.cpp:256
+#, fuzzy, qt-format
+#| msgctxt "dictionary name. %1-language, %2-country and %3 variant name"
+#| msgid "%1 (%2) [%3]"
+msgctxt ""
+"Sonnet::Loader|dictionary name; %1 = language name, %2 = country name and %3 "
+"= language variant name"
+msgid "%1 (%2) [%3]"
+msgstr "%1 (%2) [%3]"
+
+#: core/loader.cpp:259
+#, fuzzy, qt-format
+#| msgctxt "name of digit set with digit string, e.g. 'Arabic (0123456789)'"
+#| msgid "%1 (%2)"
+msgctxt "Sonnet::Loader|dictionary name; %1 = language name, %2 = country name"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: ui/configdialog.cpp:53
+#, fuzzy
+#| msgid "Send Confirmation"
+msgctxt "Sonnet::ConfigDialog|"
+msgid "Spell Checking Configuration"
+msgstr "Tetapan"
+
+#: ui/configui.ui:26
+#, fuzzy
+#| msgid "Enable &background spellchecking"
+msgctxt "SonnetConfigUI|"
+msgid "No backend found for spell checking"
+msgstr "Hidupkan penyemak ejaan latar&belakang"
+
+#: ui/configui.ui:36
+#, fuzzy
+#| msgid "Default language:"
+msgctxt "SonnetConfigUI|"
+msgid "Default language:"
+msgstr "Bahasa default:"
+
+#: ui/configui.ui:63
+msgctxt "SonnetConfigUI|"
+msgid "Choose your preferred languages"
+msgstr ""
+
+#: ui/configui.ui:71
+#, fuzzy
+#| msgid "Options"
+msgctxt "SonnetConfigUI|"
+msgid "Options"
+msgstr "Pilihan"
+
+#: ui/configui.ui:77
+msgctxt "SonnetConfigUI|"
+msgid "Enable autodetection of &language"
+msgstr ""
+
+#: ui/configui.ui:84
+#, fuzzy
+#| msgid "Enable &background spellchecking"
+msgctxt "SonnetConfigUI|"
+msgid "Enable &background spellchecking"
+msgstr "Hidupkan penyemak ejaan latar&belakang"
+
+#: ui/configui.ui:91
+#, fuzzy
+#| msgid "&Automatic spell checking enabled by default"
+msgctxt "SonnetConfigUI|"
+msgid "&Automatic spell checking enabled by default"
+msgstr "Semakan ejaan &automatik dihidupkan dengan default"
+
+#: ui/configui.ui:98
+#, fuzzy
+#| msgid "Skip all &uppercase words"
+msgctxt "SonnetConfigUI|"
+msgid "Skip all &uppercase words"
+msgstr "Langkau semua perkataan &huruf besar"
+
+#: ui/configui.ui:105
+#, fuzzy
+#| msgid "S&kip run-together words"
+msgctxt "SonnetConfigUI|"
+msgid "S&kip run-together words"
+msgstr "&Langkau perkataan berganding"
+
+#: ui/configui.ui:115
+#, fuzzy
+#| msgid "Ignored Words"
+msgctxt "SonnetConfigUI|"
+msgid "Ignored Words:"
+msgstr "Perkataan Diabaikan"
+
+#: ui/configui.ui:129
+#, fuzzy
+#| msgid "&Add"
+msgctxt "SonnetConfigUI|"
+msgid "&Add"
+msgstr "T&ambah"
+
+#: ui/configui.ui:142
+#, fuzzy
+#| msgid "&Remove"
+msgctxt "SonnetConfigUI|"
+msgid "&Remove"
+msgstr "&Buang"
+
+#: ui/dialog.cpp:96 ui/dialog.cpp:218 ui/dialog.cpp:429
+#, fuzzy
+#| msgid "Check Spelling"
+msgctxt "Sonnet::Dialog|@title:window"
+msgid "Check Spelling"
+msgstr "Memeriksa ejaan"
+
+#: ui/dialog.cpp:217
+#, fuzzy
+#| msgid "Spell check stopped."
+msgctxt "Sonnet::Dialog|progress label"
+msgid "Spell checking in progress..."
+msgstr "dalam  progress."
+
+#: ui/dialog.cpp:238
+#, fuzzy
+#| msgid "Spell check stopped."
+msgctxt "Sonnet::Dialog|"
+msgid "Spell check stopped."
+msgstr "Semakan ejaan dihentikan."
+
+#: ui/dialog.cpp:248
+#, fuzzy
+#| msgid "Spell check canceled."
+msgctxt "Sonnet::Dialog|"
+msgid "Spell check canceled."
+msgstr "Semakan ejaan dibatalkan."
+
+#: ui/dialog.cpp:425 ui/dialog.cpp:428
+#, fuzzy
+#| msgid "Spell check complete."
+msgctxt "Sonnet::Dialog|"
+msgid "Spell check complete."
+msgstr "Semakan ejaan selesai."
+
+#: ui/highlighter.cpp:251 ui/highlighter.cpp:273
+#, fuzzy
+#| msgid "As-you-type spell checking enabled."
+msgctxt "Sonnet::Highlighter|"
+msgid "As-you-type spell checking enabled."
+msgstr "Penyemakan ejaan semasa-anda-taip diaktifkan."
+
+#: ui/highlighter.cpp:254
+#, fuzzy
+#| msgid "Too many misspelled words. As-you-type spell checking disabled."
+msgctxt "Sonnet::Highlighter|"
+msgid "Too many misspelled words. As-you-type spell checking disabled."
+msgstr ""
+"Terlalu banyak perkataan kesilapan ejaan. Penyemakan ejaan semasa-anda-taip "
+"dinyahaktifkan."
+
+#: ui/highlighter.cpp:275
+#, fuzzy
+#| msgid "As-you-type spell checking disabled."
+msgctxt "Sonnet::Highlighter|"
+msgid "As-you-type spell checking disabled."
+msgstr "Penyemakan ejaan semasa-anda-taip dinyahaktifkan."
+
+#: ui/sonnetui.ui:41 ui/sonnetui.ui:57
+#, fuzzy
+#| msgid ""
+#| "<qt><p>This word was considered to be an \"unknown word\" because it does "
+#| "not match any entry in the dictionary currently in use. It may also be a "
+#| "word in a foreign language.</p>\n"
+#| "<p>If the word is not misspelled, you may add it to the dictionary by "
+#| "clicking <b>Add to Dictionary</b>. If you do not want to add the unknown "
+#| "word to the dictionary, but you want to leave it unchanged, click "
+#| "<b>Ignore</b> or <b>Ignore All</b>.</p>\n"
+#| "<p>However, if the word is misspelled, you can try to find the correct "
+#| "replacement in the list below. If you cannot find a replacement there, "
+#| "you may type it in the text box below, and click <b>Replace</b> or "
+#| "<b>Replace All</b>.</p>\n"
+#| "</qt>"
+msgctxt "SonnetUi|"
+msgid ""
+"<qt><p>This word was considered to be an \"unknown word\" because it does "
+"not match any entry in the dictionary currently in use. It may also be a "
+"word in a foreign language.</p>\n"
+"<p>If the word is not misspelled, you may add it to the dictionary by "
+"clicking <b>Add to Dictionary</b>. If you do not want to add the unknown "
+"word to the dictionary, but you want to leave it unchanged, click <b>Ignore</"
+"b> or <b>Ignore All</b>.</p>\n"
+"<p>However, if the word is misspelled, you can try to find the correct "
+"replacement in the list below. If you cannot find a replacement there, you "
+"may type it in the text box below, and click <b>Replace</b> or <b>Replace "
+"All</b>.</p>\n"
+"</qt>"
+msgstr ""
+"<qt><p>Perkataan ini dianggap sebagai \"perkataan tidak diketahui\" kerana "
+"ia tidak sepadan dengan mana-mana masukan dalam kamus yang sedang digunakan. "
+"Ia juga mungkin perkataan dalam bahasa asing.</p>\n"
+"<p>Jika perkataan itu tiada kesilapan ejaan, anda boleh tambahkannya ke "
+"dalam kamus dengan mengklik <b>Tambah Dalam Kamus</b>. Jika anda tidak mahu "
+"tambah perkataan tidak diketahui ke dalam kamus, tetapi anda ingin biarkan "
+"ia tidak berubah, klik <b>Abai</b> atau <b>Abai Semua</b>.</p>\n"
+"<p>Bagaimanapun, jika perkataan itu tersilap ejaan, anda boleh cuba cari "
+"gantian yang betul dalam senarai di bawah. Jika anda tidak dapat cari "
+"gantiannya di sana, anda boleh taipkan ia di dalam kotak teks di bawah, dan "
+"klik <b>Ganti</b> atau <b>Ganti Semua</b>.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:47
+#, fuzzy
+#| msgid "Unknown word:"
+msgctxt "SonnetUi|"
+msgid "Unknown word:"
+msgstr "Perkataan tidak diketahui:"
+
+#: ui/sonnetui.ui:54
+#, fuzzy
+#| msgid "Unknown word"
+msgctxt "SonnetUi|"
+msgid "Unknown word"
+msgstr "Perkataan tidak diketahui"
+
+#: ui/sonnetui.ui:63
+#, fuzzy
+#| msgid "<b>misspelled</b>"
+msgctxt "SonnetUi|"
+msgid "<b>misspelled</b>"
+msgstr "<b>salah eja</b>"
+
+#: ui/sonnetui.ui:70 ui/sonnetui.ui:180
+#, fuzzy
+#| msgid ""
+#| "<qt>\n"
+#| "<p>Select the language of the document you are proofing here.</p>\n"
+#| "</qt>"
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Select the language of the document you are proofing here.</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Pilih bahasa dokumen yang anda sedang gunakan di sini.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:75
+#, fuzzy
+#| msgid "&Language:"
+msgctxt "SonnetUi|"
+msgid "&Language:"
+msgstr "&Bahasa:"
+
+#: ui/sonnetui.ui:85
+#, fuzzy
+#| msgid "Text excerpt showing the unknown word in its context."
+msgctxt "SonnetUi|"
+msgid "Text excerpt showing the unknown word in its context."
+msgstr "Petikan teks memaparkan perkataan tidak diketahui dalam konteksnya."
+
+#: ui/sonnetui.ui:88
+#, fuzzy
+#| msgid ""
+#| "<qt>\n"
+#| "<p>Here you can see a text excerpt showing the unknown word in its "
+#| "context. If this information is not sufficient to choose the best "
+#| "replacement for the unknown word, you can click on the document you are "
+#| "proofing, read a larger part of the text and then return here to continue "
+#| "proofing.</p>\n"
+#| "</qt>"
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Here you can see a text excerpt showing the unknown word in its context. "
+"If this information is not sufficient to choose the best replacement for the "
+"unknown word, you can click on the document you are proofing, read a larger "
+"part of the text and then return here to continue proofing.</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Di sini anda boleh lihat petikan teks memaparkan perkataan tidak "
+"diketahui dalam konteksnya. Jika maklumat ini tidak memadai untuk memilih "
+"gantian terbaik untuk perkataan yang tidak diketahui, anda boleh klik di "
+"atas dokumen yang anda ingin semak, baca bahagian besar teks dan kemudian "
+"kembali ke sini untuk teruskan kerja semakan.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:96
+#, fuzzy
+#| msgid "... the <b>misspelled</b> word shown in context ..."
+msgctxt "SonnetUi|"
+msgid "... the <b>misspelled</b> word shown in context ..."
+msgstr "... perkataan yang <b>salah ejaan</b> dipaparkan di konteks ..."
+
+#: ui/sonnetui.ui:106
+#, fuzzy
+#| msgid ""
+#| "<qt>\n"
+#| "<p>The unknown word was detected and considered unknown because it is not "
+#| "included in the dictionary.<br>\n"
+#| "Click here if you consider the unknown word not to be misspelled, and you "
+#| "want to avoid wrongly detecting it again in the future. If you want to "
+#| "let it remain as is, but not add it to the dictionary, then click "
+#| "<b>Ignore</b> or <b>Ignore All</b> instead.</p>\n"
+#| "</qt>"
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>The unknown word was detected and considered unknown because it is not "
+"included in the dictionary.<br>\n"
+"Click here if you consider the unknown word not to be misspelled, and you "
+"want to avoid wrongly detecting it again in the future. If you want to let "
+"it remain as is, but not add it to the dictionary, then click <b>Ignore</b> "
+"or <b>Ignore All</b> instead.</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Perkataan tidak diketahui dikesan dan dianggap tidak diketahui kerana "
+"tidak dimasukkan dalam kamus.<br>\n"
+"Klik di sini jika anda anggap perkataan tidak diketahui tidak silap eja dan "
+"anda ingin elak tersalah kesan lagi dimasa akan datang. Jika anda ingin "
+"biarkan ia kekal demikian, tetapi tidak ditambah ke dalam kamus, maka klik "
+"<b>Abai</b> atau <b>Abai Semua</b>.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:112
+#, fuzzy
+#| msgid "<< Add to Dictionary"
+msgctxt "SonnetUi|"
+msgid "<< Add to Dictionary"
+msgstr "<< Tambah ke Kamus"
+
+#: ui/sonnetui.ui:135
+#, fuzzy
+#| msgid "Suggestion List"
+msgctxt "SonnetUi|"
+msgid "Suggestion List"
+msgstr "Senarai Cadangan"
+
+#: ui/sonnetui.ui:138
+#, fuzzy
+#| msgid ""
+#| "<qt>\n"
+#| "<p>If the unknown word is misspelled, you should check if the correction "
+#| "for it is available and if it is, click on it. If none of the words in "
+#| "this list is a good replacement you may type the correct word in the edit "
+#| "box above.</p>\n"
+#| "<p>To correct this word click <b>Replace</b> if you want to correct only "
+#| "this occurrence or <b>Replace All</b> if you want to correct all "
+#| "occurrences.</p>\n"
+#| "</qt>"
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>If the unknown word is misspelled, you should check if the correction for "
+"it is available and if it is, click on it. If none of the words in this list "
+"is a good replacement you may type the correct word in the edit box above.</"
+"p>\n"
+"<p>To correct this word click <b>Replace</b> if you want to correct only "
+"this occurrence or <b>Replace All</b> if you want to correct all occurrences."
+"</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Jika perkataan tidak diketahui itu silap ejaan, anda perlu pastikan "
+"samaada pembetulan boleh dilakukan, dan jika boleh, klik di atasnya. Jika "
+"tiada perkataan dalam senarai ini yang merupakan gantian yang bagus, anda "
+"boleh taip perkataan betul di dalam kotak edit di atas.</p>\n"
+"<p>Untuk membetulkan perkataan ini, klik <b>Ganti</b> jika anda ingin "
+"membetulkan hanya kejadian ini atau <b>Ganti Semua</b> jika anda ingin "
+"membetulkan semua kejadian.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:151 ui/sonnetui.ui:167
+#, fuzzy
+#| msgid ""
+#| "<qt>\n"
+#| "<p>If the unknown word is misspelled, you should type the correction for "
+#| "your misspelled word here or select it from the list below.</p>\n"
+#| "<p>You can then click <b>Replace</b> if you want to correct only this "
+#| "occurrence of the word or <b>Replace All</b> if you want to correct all "
+#| "occurrences.</p>\n"
+#| "</qt>"
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>If the unknown word is misspelled, you should type the correction for "
+"your misspelled word here or select it from the list below.</p>\n"
+"<p>You can then click <b>Replace</b> if you want to correct only this "
+"occurrence of the word or <b>Replace All</b> if you want to correct all "
+"occurrences.</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Jika perkataan tidak diketahui itu silap eja, anda patut taip pembetulan "
+"untuk perkataan silap eja di sini atau pilih dari senarai di bawah.</p>\n"
+"<p>Anda boleh klik <b>Ganti</b>jika anda ingin betulkan hanya kemunculan "
+"yang ini bagi perkataan itu atau <b>Ganti Semua</b> jika anda ingin "
+"membetulkan semua kemunculan.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:157
+#, fuzzy
+#| msgid "Replace &with:"
+msgctxt "SonnetUi|"
+msgid "Replace &with:"
+msgstr "Ganti &dengan:"
+
+#: ui/sonnetui.ui:177
+#, fuzzy
+#| msgid "Language Selection"
+msgctxt "SonnetUi|"
+msgid "Language Selection"
+msgstr "Pilihan Bahasa"
+
+#: ui/sonnetui.ui:206
+#, fuzzy
+#| msgid "S&uggest"
+msgctxt "SonnetUi|"
+msgid "S&uggest"
+msgstr "Cadan&gan:"
+
+#: ui/sonnetui.ui:213
+#, fuzzy
+#| msgid ""
+#| "<qt>\n"
+#| "<p>Click here to replace this occurrence of the unknown text with the "
+#| "text in the edit box above (to the left).</p>\n"
+#| "</qt>"
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Click here to replace this occurrence of the unknown text with the text "
+"in the edit box above (to the left).</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Klik di sini untuk menggantikan ulangan ini bagi teks tidak diketahui "
+"dengan teks di dalam kotak di atas (ke kiri).</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:218
+#, fuzzy
+#| msgid "&Replace"
+msgctxt "SonnetUi|"
+msgid "&Replace"
+msgstr "&Ganti"
+
+#: ui/sonnetui.ui:225
+#, fuzzy
+#| msgid ""
+#| "<qt>\n"
+#| "<p>Click here to replace all occurrences of the unknown text with the "
+#| "text in the edit box above (to the left).</p>\n"
+#| "</qt>"
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Click here to replace all occurrences of the unknown text with the text "
+"in the edit box above (to the left).</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Klik di sini untuk menggantikan semua ulangan teks tidak diketahui dengan "
+"teks di dalam kotak edit di atas).</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:230
+#, fuzzy
+#| msgid "R&eplace All"
+msgctxt "SonnetUi|"
+msgid "R&eplace All"
+msgstr "Ganti S&emua"
+
+#: ui/sonnetui.ui:237
+#, fuzzy
+#| msgid ""
+#| "<qt>\n"
+#| "<p>Click here to let this occurrence of the unknown word remain as is.</"
+#| "p>\n"
+#| "<p>This action is useful when the word is a name, an acronym, a foreign "
+#| "word or any other unknown word that you want to use but not add to the "
+#| "dictionary.</p>\n"
+#| "</qt>"
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Click here to let this occurrence of the unknown word remain as is.</p>\n"
+"<p>This action is useful when the word is a name, an acronym, a foreign word "
+"or any other unknown word that you want to use but not add to the dictionary."
+"</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Klik di sini untuk membiarkan kemunculan perkataan tidak diketahui itu "
+"kekal sedemikian</p>\n"
+"<p>Tindakan ini berguna apabila perkataan adalah nama, akronim, perkataan "
+"asing atau sebarang perkataan tidak diketahui lain yang anda ingin guna "
+"tetapi tidak ditambah ke dalam kamus.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:243
+#, fuzzy
+#| msgid "&Ignore"
+msgctxt "SonnetUi|"
+msgid "&Ignore"
+msgstr "Aba&i"
+
+#: ui/sonnetui.ui:250 ui/sonnetui.ui:263
+#, fuzzy
+#| msgid ""
+#| "<qt>\n"
+#| "<p>Click here to let all occurrences of the unknown word remain as they "
+#| "are.</p>\n"
+#| "<p>This action is useful when the word is a name, an acronym, a foreign "
+#| "word or any other unknown word that you want to use but not add to the "
+#| "dictionary.</p>\n"
+#| "</qt>"
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Click here to let all occurrences of the unknown word remain as they are."
+"</p>\n"
+"<p>This action is useful when the word is a name, an acronym, a foreign word "
+"or any other unknown word that you want to use but not add to the dictionary."
+"</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Klik di sini untuk membenarkan semua kemunculan perkataan tidak diketahui "
+"itu kekal sedemikian.</p>\n"
+"<p>Tindakan ini berguna apabila perkataan itu adalah nama, akronim, "
+"perkataan asing atau sebarang perkataan tidak diketahui lain yang anda ingin "
+"guna tetapi tidak ditambah ke dalam kamus.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:256
+#, fuzzy
+#| msgid "I&gnore All"
+msgctxt "SonnetUi|"
+msgid "I&gnore All"
+msgstr "Aba&ikan Semua"
+
+#: ui/sonnetui.ui:269
+#, fuzzy
+#| msgid "Autocorrect"
+msgctxt "SonnetUi|"
+msgid "Autocorrect"
+msgstr "Autobetul"
+
+#: ui/spellcheckdecorator.cpp:172
+#, fuzzy, qt-format
+#| msgid "No suggestions for %1"
+msgctxt "Sonnet::SpellCheckDecorator|"
+msgid "No suggestions for %1"
+msgstr "Tiada cadangan untuk %1"
+
+#: ui/spellcheckdecorator.cpp:183
+#, fuzzy
+#| msgid "Ignore"
+msgctxt "Sonnet::SpellCheckDecorator|"
+msgid "Ignore"
+msgstr "Abai"
+
+#: ui/spellcheckdecorator.cpp:184
+#, fuzzy
+#| msgid "Add to Dictionary"
+msgctxt "Sonnet::SpellCheckDecorator|"
+msgid "Add to Dictionary"
+msgstr "Tambah ke Kamus"

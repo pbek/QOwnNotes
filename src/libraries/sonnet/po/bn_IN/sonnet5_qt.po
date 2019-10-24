@@ -1,0 +1,698 @@
+# translation of kdelibs4.po to Bengali INDIA
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Runa Bhattacharjee <runabh@gmail.com>, 2007.
+# Runa Bhattacharjee <runab@redhat.com>, 2008, 2009.
+# Runa Bhattacharjee <runab@fedoraproject.org>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-03-23 01:50+0000\n"
+"PO-Revision-Date: 2009-12-28 14:35+0530\n"
+"Last-Translator: Runa Bhattacharjee <runab@redhat.com>\n"
+"Language-Team: Bengali INDIA <anubad@lists.ankur.org.in>\n"
+"Language: bn_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: KBabel 1.11.4\n"
+"X-Qt-Contexts: true\n"
+
+#: core/loader.cpp:190
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "40"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "40"
+msgstr "৪০"
+
+#: core/loader.cpp:191
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "60"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "60"
+msgstr "৬০"
+
+#: core/loader.cpp:192
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "80"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "80"
+msgstr "৮০"
+
+#: core/loader.cpp:193
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "-ise suffixes"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ise suffixes"
+msgstr "-ise সাফিক্স"
+
+#: core/loader.cpp:194
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "-ize suffixes"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ize suffixes"
+msgstr "-ize সাফিক্স"
+
+#: core/loader.cpp:195
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "-ise suffixes and with accents"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ise suffixes and with accents"
+msgstr "স্বরাঘাত সহ -ise সাফিক্স"
+
+#: core/loader.cpp:197
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "-ise suffixes and without accents"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ise suffixes and without accents"
+msgstr "স্বরাঘাত বিহীন -ise সাফিক্স"
+
+#: core/loader.cpp:200
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "-ize suffixes and with accents"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ize suffixes and with accents"
+msgstr "স্বরাঘাত সহ -ize সাফিক্স"
+
+#: core/loader.cpp:202
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "-ize suffixes and without accents"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ize suffixes and without accents"
+msgstr "স্বরাঘাত বিহীন -ize সাফিক্স"
+
+#: core/loader.cpp:205
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "large"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "large"
+msgstr "বৃহৎ"
+
+#: core/loader.cpp:206
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "medium"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "medium"
+msgstr "মাঝারি"
+
+#: core/loader.cpp:207
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "small"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "small"
+msgstr "ক্ষুদ্র"
+
+#: core/loader.cpp:208
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "variant 0"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "variant 0"
+msgstr "variant 0"
+
+#: core/loader.cpp:209
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "variant 1"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "variant 1"
+msgstr "variant 1"
+
+#: core/loader.cpp:210
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "variant 2"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "variant 2"
+msgstr "variant 2"
+
+#: core/loader.cpp:212
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "without accents"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "without accents"
+msgstr "স্বরাঘাত বিহীন"
+
+#: core/loader.cpp:213
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "with accents"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "with accents"
+msgstr "স্বরাঘাত সহ"
+
+#: core/loader.cpp:215
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "with ye, modern russian"
+msgstr ""
+
+#: core/loader.cpp:217
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "with yeyo, modern and old russian"
+msgstr ""
+
+#: core/loader.cpp:220
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "with yo, old russian"
+msgstr ""
+
+#: core/loader.cpp:221
+#, fuzzy
+#| msgctxt "dictionary variant"
+#| msgid "extended"
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "extended"
+msgstr "প্রসারিত"
+
+#: core/loader.cpp:256
+#, fuzzy, qt-format
+#| msgctxt "dictionary name. %1-language, %2-country and %3 variant name"
+#| msgid "%1 (%2) [%3]"
+msgctxt ""
+"Sonnet::Loader|dictionary name; %1 = language name, %2 = country name and %3 "
+"= language variant name"
+msgid "%1 (%2) [%3]"
+msgstr "%1 (%2) [%3]"
+
+#: core/loader.cpp:259
+#, fuzzy, qt-format
+#| msgctxt "name of digit set with digit string, e.g. 'Arabic (0123456789)'"
+#| msgid "%1 (%2)"
+msgctxt "Sonnet::Loader|dictionary name; %1 = language name, %2 = country name"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: ui/configdialog.cpp:53
+#, fuzzy
+#| msgid "Send Confirmation"
+msgctxt "Sonnet::ConfigDialog|"
+msgid "Spell Checking Configuration"
+msgstr "নিশ্চিতি বার্তা প্রেরণ করুন"
+
+#: ui/configui.ui:26
+#, fuzzy
+#| msgid "Enable &background spellchecking"
+msgctxt "SonnetConfigUI|"
+msgid "No backend found for spell checking"
+msgstr "পটভূমিতে বানান পরীক্ষণ ব্যবস্থা সক্রিয় করা হবে (&b)"
+
+#: ui/configui.ui:36
+#, fuzzy
+#| msgid "Default language:"
+msgctxt "SonnetConfigUI|"
+msgid "Default language:"
+msgstr "ডিফল্ট ভাষা:"
+
+#: ui/configui.ui:63
+msgctxt "SonnetConfigUI|"
+msgid "Choose your preferred languages"
+msgstr ""
+
+#: ui/configui.ui:71
+#, fuzzy
+#| msgid "Options"
+msgctxt "SonnetConfigUI|"
+msgid "Options"
+msgstr "বিকল্প"
+
+#: ui/configui.ui:77
+msgctxt "SonnetConfigUI|"
+msgid "Enable autodetection of &language"
+msgstr ""
+
+#: ui/configui.ui:84
+#, fuzzy
+#| msgid "Enable &background spellchecking"
+msgctxt "SonnetConfigUI|"
+msgid "Enable &background spellchecking"
+msgstr "পটভূমিতে বানান পরীক্ষণ ব্যবস্থা সক্রিয় করা হবে (&b)"
+
+#: ui/configui.ui:91
+#, fuzzy
+#| msgid "&Automatic spell checking enabled by default"
+msgctxt "SonnetConfigUI|"
+msgid "&Automatic spell checking enabled by default"
+msgstr "ডিফল্টরূপে বানান-পরীক্ষণ সক্রিয় করা হয়েছে। (&A)"
+
+#: ui/configui.ui:98
+#, fuzzy
+#| msgid "Skip all &uppercase words"
+msgctxt "SonnetConfigUI|"
+msgid "Skip all &uppercase words"
+msgstr "বড় ছাঁদের হরফ সহযোগে লেখা সব শব্দ উপেক্ষা করা হবে (&u)"
+
+#: ui/configui.ui:105
+#, fuzzy
+#| msgid "S&kip run-together words"
+msgctxt "SonnetConfigUI|"
+msgid "S&kip run-together words"
+msgstr "একত্রিত শব্দ উপেক্ষা করা হবে (&k)"
+
+#: ui/configui.ui:115
+#, fuzzy
+#| msgid "Suggested Words"
+msgctxt "SonnetConfigUI|"
+msgid "Ignored Words:"
+msgstr "প্রস্তাবিত শব্দ"
+
+#: ui/configui.ui:129
+#, fuzzy
+#| msgid "&Add"
+msgctxt "SonnetConfigUI|"
+msgid "&Add"
+msgstr "যোগ করুন (&A)"
+
+#: ui/configui.ui:142
+#, fuzzy
+#| msgid "&Remove"
+msgctxt "SonnetConfigUI|"
+msgid "&Remove"
+msgstr "মুছে ফেলুন (&R)"
+
+#: ui/dialog.cpp:96 ui/dialog.cpp:218 ui/dialog.cpp:429
+#, fuzzy
+#| msgid "Check Spelling"
+msgctxt "Sonnet::Dialog|@title:window"
+msgid "Check Spelling"
+msgstr "বানান পরীক্ষা করা হবে"
+
+#: ui/dialog.cpp:217
+#, fuzzy
+#| msgctxt "progress label"
+#| msgid "Spell checking in progress..."
+msgctxt "Sonnet::Dialog|progress label"
+msgid "Spell checking in progress..."
+msgstr "বানান পরীক্ষণ চলছে..."
+
+#: ui/dialog.cpp:238
+#, fuzzy
+#| msgid "Spell check stopped."
+msgctxt "Sonnet::Dialog|"
+msgid "Spell check stopped."
+msgstr "বানান পরীক্ষণ বন্ধ করা হয়েছে।"
+
+#: ui/dialog.cpp:248
+#, fuzzy
+#| msgid "Spell check canceled."
+msgctxt "Sonnet::Dialog|"
+msgid "Spell check canceled."
+msgstr "বানান পরীক্ষণ বাতিল করা হয়েছে।"
+
+#: ui/dialog.cpp:425 ui/dialog.cpp:428
+#, fuzzy
+#| msgid "Spell check complete."
+msgctxt "Sonnet::Dialog|"
+msgid "Spell check complete."
+msgstr "বানান পরীক্ষণ সমাপ্ত।"
+
+#: ui/highlighter.cpp:251 ui/highlighter.cpp:273
+#, fuzzy
+#| msgid "As-you-type spell checking enabled."
+msgctxt "Sonnet::Highlighter|"
+msgid "As-you-type spell checking enabled."
+msgstr "টাইপ-করার-সময়-বানান-পরীক্ষণ সক্রিয় করা হয়েছে।"
+
+#: ui/highlighter.cpp:254
+#, fuzzy
+#| msgid "Too many misspelled words. As-you-type spell checking disabled."
+msgctxt "Sonnet::Highlighter|"
+msgid "Too many misspelled words. As-you-type spell checking disabled."
+msgstr ""
+"বানানে অত্যাধিক পরিমাণ ত্রুটি। টাইপ-করার-সময়-বানান-পরীক্ষণ নিষ্ক্রিয় করা হয়েছে।"
+
+#: ui/highlighter.cpp:275
+#, fuzzy
+#| msgid "As-you-type spell checking disabled."
+msgctxt "Sonnet::Highlighter|"
+msgid "As-you-type spell checking disabled."
+msgstr "টাইপ-করার-সময়-বানান-পরীক্ষণ নিষ্ক্রিয় করা হয়েছে।"
+
+#: ui/sonnetui.ui:41 ui/sonnetui.ui:57
+#, fuzzy
+#| msgid ""
+#| "<qt><p>This word was considered to be an \"unknown word\" because it does "
+#| "not match any entry in the dictionary currently in use. It may also be a "
+#| "word in a foreign language.</p>\n"
+#| "<p>If the word is not misspelled, you may add it to the dictionary by "
+#| "clicking <b>Add to Dictionary</b>. If you do not want to add the unknown "
+#| "word to the dictionary, but you want to leave it unchanged, click "
+#| "<b>Ignore</b> or <b>Ignore All</b>.</p>\n"
+#| "<p>However, if the word is misspelled, you can try to find the correct "
+#| "replacement in the list below. If you cannot find a replacement there, "
+#| "you may type it in the text box below, and click <b>Replace</b> or "
+#| "<b>Replace All</b>.</p>\n"
+#| "</qt>"
+msgctxt "SonnetUi|"
+msgid ""
+"<qt><p>This word was considered to be an \"unknown word\" because it does "
+"not match any entry in the dictionary currently in use. It may also be a "
+"word in a foreign language.</p>\n"
+"<p>If the word is not misspelled, you may add it to the dictionary by "
+"clicking <b>Add to Dictionary</b>. If you do not want to add the unknown "
+"word to the dictionary, but you want to leave it unchanged, click <b>Ignore</"
+"b> or <b>Ignore All</b>.</p>\n"
+"<p>However, if the word is misspelled, you can try to find the correct "
+"replacement in the list below. If you cannot find a replacement there, you "
+"may type it in the text box below, and click <b>Replace</b> or <b>Replace "
+"All</b>.</p>\n"
+"</qt>"
+msgstr ""
+"<qt><p>বর্তমানে ব্যবহৃত অভিধানের মধ্যে এই শব্দটির জন্য কোনো তথ্য উপস্থিত না থাকার "
+"ফলে এটিকে \"অজানা শব্দ\" রূপে ধার্য করা হয়েছে। এই শব্দটি কোনো ভিন্ন ভাষার "
+"অভিধানের মধ্যেও উপস্থিত থাকতে পারে।</p>\n"
+"<p>শব্দটির বানান ভুল না হলে, <b>অভিধানে যোগ করা হবে</b> ক্লিক করে শব্দটিকে "
+"অভিধানের মধ্যে অন্তর্ভুক্ত করুন। অজানা শব্দটি অভিধানে অন্তর্ভুক্ত না করেও এটি অপরিবর্তিত "
+"রাখতে হলে <b>অগ্রাহ্য করা হবে</b> অথবা <b>সমগ্র অগ্রাহ্য করা হবে</b>।</p>\n"
+"<p>শব্দটির বানান সঠিক না হলে, নীচের তালিকা থেকে সঠিক বানান নির্বাচন করতে "
+"পারবেন। যথাযত বিকল্প অনুপস্থিত থাকলে, নীচে উপস্থিত টেক্সট বক্সের মধ্যে  প্রযোজ্য "
+"শব্দটি লিখে <b>প্রতিস্থাপন</b> অথবা <b>সমস্ত প্রতিস্থাপন</b> ক্লিক করুন।</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:47
+#, fuzzy
+#| msgid "Unknown word:"
+msgctxt "SonnetUi|"
+msgid "Unknown word:"
+msgstr "অজানা শব্দ:"
+
+#: ui/sonnetui.ui:54
+#, fuzzy
+#| msgid "Unknown word"
+msgctxt "SonnetUi|"
+msgid "Unknown word"
+msgstr "অজানা শব্দ"
+
+#: ui/sonnetui.ui:63
+#, fuzzy
+#| msgid "<b>misspelled</b>"
+msgctxt "SonnetUi|"
+msgid "<b>misspelled</b>"
+msgstr "<b>ভুল বানান</b>"
+
+#: ui/sonnetui.ui:70 ui/sonnetui.ui:180
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Select the language of the document you are proofing here.</p>\n"
+"</qt>"
+msgstr ""
+
+#: ui/sonnetui.ui:75
+#, fuzzy
+#| msgid "&Language:"
+msgctxt "SonnetUi|"
+msgid "&Language:"
+msgstr "ভাষা: (&L)"
+
+#: ui/sonnetui.ui:85
+#, fuzzy
+#| msgid "Text excerpt showing the unknown word in its context."
+msgctxt "SonnetUi|"
+msgid "Text excerpt showing the unknown word in its context."
+msgstr "অজানা শব্দের প্রসঙ্গ নির্দেশকারী লেখার অংশ।"
+
+#: ui/sonnetui.ui:88
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Here you can see a text excerpt showing the unknown word in its context. "
+"If this information is not sufficient to choose the best replacement for the "
+"unknown word, you can click on the document you are proofing, read a larger "
+"part of the text and then return here to continue proofing.</p>\n"
+"</qt>"
+msgstr ""
+
+#: ui/sonnetui.ui:96
+#, fuzzy
+#| msgid "... the <b>misspelled</b> word shown in context ..."
+msgctxt "SonnetUi|"
+msgid "... the <b>misspelled</b> word shown in context ..."
+msgstr "... প্রসঙ্গ অনুসারে প্রদর্শিত শব্দের <b>ভুল বানান</b> ..."
+
+#: ui/sonnetui.ui:106
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>The unknown word was detected and considered unknown because it is not "
+"included in the dictionary.<br>\n"
+"Click here if you consider the unknown word not to be misspelled, and you "
+"want to avoid wrongly detecting it again in the future. If you want to let "
+"it remain as is, but not add it to the dictionary, then click <b>Ignore</b> "
+"or <b>Ignore All</b> instead.</p>\n"
+"</qt>"
+msgstr ""
+
+#: ui/sonnetui.ui:112
+#, fuzzy
+#| msgid "<< Add to Dictionary"
+msgctxt "SonnetUi|"
+msgid "<< Add to Dictionary"
+msgstr "<< অভিধানে যোগ করুন"
+
+#: ui/sonnetui.ui:135
+#, fuzzy
+#| msgid "Suggestion List"
+msgctxt "SonnetUi|"
+msgid "Suggestion List"
+msgstr "প্রস্তাবিত শব্দের তালিকা"
+
+#: ui/sonnetui.ui:138
+#, fuzzy
+#| msgid ""
+#| "<qt>\n"
+#| "<p>If the unknown word is misspelled, you should check if the correction "
+#| "for it is available and if it is, click on it. If none of the words in "
+#| "this list is a good replacement you may type the correct word in the edit "
+#| "box above.</p>\n"
+#| "<p>To correct this word click <b>Replace</b> if you want to correct only "
+#| "this occurrence or <b>Replace All</b> if you want to correct all "
+#| "occurrences.</p>\n"
+#| "</qt>"
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>If the unknown word is misspelled, you should check if the correction for "
+"it is available and if it is, click on it. If none of the words in this list "
+"is a good replacement you may type the correct word in the edit box above.</"
+"p>\n"
+"<p>To correct this word click <b>Replace</b> if you want to correct only "
+"this occurrence or <b>Replace All</b> if you want to correct all occurrences."
+"</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>অজানা শব্দটির বানান সঠিক না হলে, পরীক্ষা করুন সঠিক বানান উপস্থিত রয়েছে কি না। "
+"উপস্থিত থাকলে সেটি ক্লিক করুন। তালিকার মধ্যে প্রযোজ্য কোনো শব্দ উপস্থিত না থাকলে, "
+"উপরে উপস্থিত এডিট বক্সের মধ্যে সঠিক শব্দটি লেখা যাবে।</p>\n"
+"<p>এই শব্দটি সংশোধন করার উদ্দেশ্যে, শুধুমাত্র একবার পরিবর্তনের জন্য <b>প্রতিস্থাপন</b> "
+"এবং সর্বসংখ্যক উপস্থিতি পরিবর্তনের জন্য <b>সমগ্র প্রতিস্থাপন</b> ক্লিক করুন।</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:151 ui/sonnetui.ui:167
+#, fuzzy
+#| msgid ""
+#| "<qt>\n"
+#| "<p>If the unknown word is misspelled, you should type the correction for "
+#| "your misspelled word here or select it from the list below.</p>\n"
+#| "<p>You can then click <b>Replace</b> if you want to correct only this "
+#| "occurrence of the word or <b>Replace All</b> if you want to correct all "
+#| "occurrences.</p>\n"
+#| "</qt>"
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>If the unknown word is misspelled, you should type the correction for "
+"your misspelled word here or select it from the list below.</p>\n"
+"<p>You can then click <b>Replace</b> if you want to correct only this "
+"occurrence of the word or <b>Replace All</b> if you want to correct all "
+"occurrences.</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>অজানা শব্দটির বানান ভুল হলে, তালিকা থেকে সঠিক বানান নির্বাচন করুন অথবা নীচে "
+"লিখুন।</p>\n"
+"<p>এই শব্দটি সংশোধন করার উদ্দেশ্যে, শুধুমাত্র একবার পরিবর্তনের জন্য <b>প্রতিস্থাপন</b> "
+"এবং সর্বসংখ্যক উপস্থিতি পরিবর্তনের জন্য <b>সমগ্র প্রতিস্থাপন</b> ক্লিক করুন।</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:157
+#, fuzzy
+#| msgid "Replace &with:"
+msgctxt "SonnetUi|"
+msgid "Replace &with:"
+msgstr "প্রতিস্থাপনে ব্যবহৃত শব্দ: (&w)"
+
+#: ui/sonnetui.ui:177
+#, fuzzy
+#| msgid "Language Selection"
+msgctxt "SonnetUi|"
+msgid "Language Selection"
+msgstr "ভাষা নির্বাচন"
+
+#: ui/sonnetui.ui:206
+#, fuzzy
+#| msgid "S&uggest"
+msgctxt "SonnetUi|"
+msgid "S&uggest"
+msgstr "প্রস্তাবনা (&u)"
+
+#: ui/sonnetui.ui:213
+#, fuzzy
+#| msgid ""
+#| "<qt>\n"
+#| "<p>Click here to replace this occurrence of the unknown text with the "
+#| "text in the edit box above (to the left).</p>\n"
+#| "</qt>"
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Click here to replace this occurrence of the unknown text with the text "
+"in the edit box above (to the left).</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>অজানা টেক্সটের পরিবর্তে উপরে (বাঁদিকে) অবস্থিত বাক্সে লেখা তথ্য প্রয়োগ করার জন্য "
+"এই স্থানে ক্লিক করুন।</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:218
+#, fuzzy
+#| msgid "&Replace"
+msgctxt "SonnetUi|"
+msgid "&Replace"
+msgstr "প্রতিস্থাপন (&R)"
+
+#: ui/sonnetui.ui:225
+#, fuzzy
+#| msgid ""
+#| "<qt>\n"
+#| "<p>Click here to replace all occurrences of the unknown text with the "
+#| "text in the edit box above (to the left).</p>\n"
+#| "</qt>"
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Click here to replace all occurrences of the unknown text with the text "
+"in the edit box above (to the left).</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>অজানা টেক্সটের সমস্ত উপস্থিতির পরিবর্তে উপরে (বাঁদিকে) অবস্থিত বাক্সে লেখা তথ্য "
+"প্রয়োগ করার জন্য এই স্থানে ক্লিক করুন।</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:230
+#, fuzzy
+#| msgid "R&eplace All"
+msgctxt "SonnetUi|"
+msgid "R&eplace All"
+msgstr "সমস্ত প্রতিস্থাপন করা হবে (&e)"
+
+#: ui/sonnetui.ui:237
+#, fuzzy
+#| msgid ""
+#| "<qt>\n"
+#| "<p>Click here to let this occurrence of the unknown word remain as is.</"
+#| "p>\n"
+#| "<p>This action is useful when the word is a name, an acronym, a foreign "
+#| "word or any other unknown word that you want to use but not add to the "
+#| "dictionary.</p>\n"
+#| "</qt>"
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Click here to let this occurrence of the unknown word remain as is.</p>\n"
+"<p>This action is useful when the word is a name, an acronym, a foreign word "
+"or any other unknown word that you want to use but not add to the dictionary."
+"</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>অজানা শব্দটি অপরিবর্তিত রাখতে এই স্থানে ক্লিক করুন।</p>\n"
+"<p>নাম, acronym, বিদেশি শব্দ অথবা অন্যান্য কোনো অজানা শব্দ, অভিধানে অন্তভুক্ত না "
+"করেও ব্যবহার করতে ইচ্ছুক হলে এই পদ্ধতি ব্যবহার করা যাবে।</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:243
+#, fuzzy
+#| msgid "&Ignore"
+msgctxt "SonnetUi|"
+msgid "&Ignore"
+msgstr "উপেক্ষা করুন (&I)"
+
+#: ui/sonnetui.ui:250 ui/sonnetui.ui:263
+#, fuzzy
+#| msgid ""
+#| "<qt>\n"
+#| "<p>Click here to let all occurrences of the unknown word remain as they "
+#| "are.</p>\n"
+#| "<p>This action is useful when the word is a name, an acronym, a foreign "
+#| "word or any other unknown word that you want to use but not add to the "
+#| "dictionary.</p>\n"
+#| "</qt>"
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Click here to let all occurrences of the unknown word remain as they are."
+"</p>\n"
+"<p>This action is useful when the word is a name, an acronym, a foreign word "
+"or any other unknown word that you want to use but not add to the dictionary."
+"</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>অজানা শব্দের সমস্ত উপস্থিতি অপরিবর্তিত রাখতে এই স্থানে ক্লিক করুন।</p>\n"
+"<p>নাম, acronym, বিদেশি শব্দ অথবা অন্যান্য কোনো অজানা শব্দ, অভিধানে অন্তভুক্ত না "
+"করেও ব্যবহার করতে ইচ্ছুক হলে এই পদ্ধতি ব্যবহার করা যাবে।</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:256
+#, fuzzy
+#| msgid "I&gnore All"
+msgctxt "SonnetUi|"
+msgid "I&gnore All"
+msgstr "সমস্ত উপেক্ষা করা হবে (&g)"
+
+#: ui/sonnetui.ui:269
+#, fuzzy
+#| msgid "Autocorrect"
+msgctxt "SonnetUi|"
+msgid "Autocorrect"
+msgstr "স্বয়ং সংশোধন"
+
+#: ui/spellcheckdecorator.cpp:172
+#, fuzzy, qt-format
+#| msgid "No suggestions for %1"
+msgctxt "Sonnet::SpellCheckDecorator|"
+msgid "No suggestions for %1"
+msgstr "%1-র জন্য কোনো প্রস্তাবিত শব্দ নেই"
+
+#: ui/spellcheckdecorator.cpp:183
+#, fuzzy
+#| msgid "Ignore"
+msgctxt "Sonnet::SpellCheckDecorator|"
+msgid "Ignore"
+msgstr "উপেক্ষা করুন"
+
+#: ui/spellcheckdecorator.cpp:184
+#, fuzzy
+#| msgid "Add to Dictionary"
+msgctxt "Sonnet::SpellCheckDecorator|"
+msgid "Add to Dictionary"
+msgstr "অভিধানে যোগ করুন"

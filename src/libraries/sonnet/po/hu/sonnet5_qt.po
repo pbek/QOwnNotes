@@ -1,0 +1,522 @@
+# Kiszel Kristóf <ulysses@kubuntu.org>, 2010, 2017.
+# Kristóf Kiszel <ulysses@kubuntu.org>, 2010, 2011, 2012, 2014.
+# Balázs Úr <urbalazs@gmail.com>, 2012, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: KDE 4.4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-03-23 01:50+0000\n"
+"PO-Revision-Date: 2017-02-14 23:19+0100\n"
+"Last-Translator: Kiszel Kristóf <kiszel.kristof@gmail.com>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 2.0\n"
+"X-Qt-Contexts: true\n"
+
+#: core/loader.cpp:190
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "40"
+msgstr "40"
+
+#: core/loader.cpp:191
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "60"
+msgstr "60"
+
+#: core/loader.cpp:192
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "80"
+msgstr "80"
+
+#: core/loader.cpp:193
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ise suffixes"
+msgstr "-ise utótagok"
+
+#: core/loader.cpp:194
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ize suffixes"
+msgstr "-ize utótagok"
+
+#: core/loader.cpp:195
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ise suffixes and with accents"
+msgstr "-ise utótagok hangsúlyjelekkel"
+
+#: core/loader.cpp:197
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ise suffixes and without accents"
+msgstr "-ise utótagok hangsúlyjelek nélkül"
+
+#: core/loader.cpp:200
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ize suffixes and with accents"
+msgstr "-ize utótagok hangsúlyjelekkel"
+
+#: core/loader.cpp:202
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "-ize suffixes and without accents"
+msgstr "-ize utótagok hangsúlyjelek nélkül"
+
+#: core/loader.cpp:205
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "large"
+msgstr "nagy"
+
+#: core/loader.cpp:206
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "medium"
+msgstr "közepes"
+
+#: core/loader.cpp:207
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "small"
+msgstr "kicsi"
+
+#: core/loader.cpp:208
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "variant 0"
+msgstr "0. variáns"
+
+#: core/loader.cpp:209
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "variant 1"
+msgstr "1. variáns"
+
+#: core/loader.cpp:210
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "variant 2"
+msgstr "2. variáns"
+
+#: core/loader.cpp:212
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "without accents"
+msgstr "hangsúlyjelek nélkül"
+
+#: core/loader.cpp:213
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "with accents"
+msgstr "hangsúlyjelekkel"
+
+#: core/loader.cpp:215
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "with ye, modern russian"
+msgstr "ye: modern orosz"
+
+#: core/loader.cpp:217
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "with yeyo, modern and old russian"
+msgstr "yeyo: modern és régi orosz"
+
+#: core/loader.cpp:220
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "with yo, old russian"
+msgstr "yo: régi orosz"
+
+#: core/loader.cpp:221
+msgctxt "Sonnet::Loader|dictionary variant"
+msgid "extended"
+msgstr "kiterjesztett"
+
+#: core/loader.cpp:256
+#, qt-format
+msgctxt ""
+"Sonnet::Loader|dictionary name; %1 = language name, %2 = country name and %3 "
+"= language variant name"
+msgid "%1 (%2) [%3]"
+msgstr "%1 (%2) [%3]"
+
+#: core/loader.cpp:259
+#, qt-format
+msgctxt "Sonnet::Loader|dictionary name; %1 = language name, %2 = country name"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: ui/configdialog.cpp:53
+msgctxt "Sonnet::ConfigDialog|"
+msgid "Spell Checking Configuration"
+msgstr "Helyesírás-ellenőrzés beállítása"
+
+#: ui/configui.ui:26
+msgctxt "SonnetConfigUI|"
+msgid "No backend found for spell checking"
+msgstr "Nem található modul a helyesírás-ellenőrzéshez"
+
+#: ui/configui.ui:36
+msgctxt "SonnetConfigUI|"
+msgid "Default language:"
+msgstr "Alapértelmezett nyelv:"
+
+#: ui/configui.ui:63
+msgctxt "SonnetConfigUI|"
+msgid "Choose your preferred languages"
+msgstr ""
+
+#: ui/configui.ui:71
+msgctxt "SonnetConfigUI|"
+msgid "Options"
+msgstr "Beállítások"
+
+#: ui/configui.ui:77
+msgctxt "SonnetConfigUI|"
+msgid "Enable autodetection of &language"
+msgstr "Automatikus nye&lvfelismerés bekapcsolása"
+
+#: ui/configui.ui:84
+msgctxt "SonnetConfigUI|"
+msgid "Enable &background spellchecking"
+msgstr "&Helyesírás-ellenőrzés a háttérben"
+
+#: ui/configui.ui:91
+msgctxt "SonnetConfigUI|"
+msgid "&Automatic spell checking enabled by default"
+msgstr "&Automatikus helyesírás-ellenőrzés"
+
+#: ui/configui.ui:98
+msgctxt "SonnetConfigUI|"
+msgid "Skip all &uppercase words"
+msgstr "A na&gybetűs szavak kihagyása"
+
+#: ui/configui.ui:105
+msgctxt "SonnetConfigUI|"
+msgid "S&kip run-together words"
+msgstr "Az e&gybeírt szavak elfogadása helyesként"
+
+#: ui/configui.ui:115
+msgctxt "SonnetConfigUI|"
+msgid "Ignored Words:"
+msgstr "Mellőzött szavak:"
+
+#: ui/configui.ui:129
+msgctxt "SonnetConfigUI|"
+msgid "&Add"
+msgstr "&Hozzáadás"
+
+#: ui/configui.ui:142
+msgctxt "SonnetConfigUI|"
+msgid "&Remove"
+msgstr "&Eltávolítás"
+
+#: ui/dialog.cpp:96 ui/dialog.cpp:218 ui/dialog.cpp:429
+msgctxt "Sonnet::Dialog|@title:window"
+msgid "Check Spelling"
+msgstr "Helyesírás-ellenőrzés"
+
+#: ui/dialog.cpp:217
+msgctxt "Sonnet::Dialog|progress label"
+msgid "Spell checking in progress..."
+msgstr "Helyesírás-ellenőrzés…"
+
+#: ui/dialog.cpp:238
+msgctxt "Sonnet::Dialog|"
+msgid "Spell check stopped."
+msgstr "A helyesírás-ellenőrző leállt."
+
+#: ui/dialog.cpp:248
+msgctxt "Sonnet::Dialog|"
+msgid "Spell check canceled."
+msgstr "A helyesírás-ellenőrzés megszakadt."
+
+#: ui/dialog.cpp:425 ui/dialog.cpp:428
+msgctxt "Sonnet::Dialog|"
+msgid "Spell check complete."
+msgstr "A helyesírás-ellenőrzés befejeződött."
+
+#: ui/highlighter.cpp:251 ui/highlighter.cpp:273
+msgctxt "Sonnet::Highlighter|"
+msgid "As-you-type spell checking enabled."
+msgstr "Az automatikus helyesírás-ellenőrzés bekapcsolva."
+
+#: ui/highlighter.cpp:254
+msgctxt "Sonnet::Highlighter|"
+msgid "Too many misspelled words. As-you-type spell checking disabled."
+msgstr ""
+"Túl sok a hibásan írt szó, ezért az automatikus helyesírás-ellenőrzés ki "
+"lesz kapcsolva."
+
+#: ui/highlighter.cpp:275
+msgctxt "Sonnet::Highlighter|"
+msgid "As-you-type spell checking disabled."
+msgstr "Az automatikus helyesírás-ellenőrzés kikapcsolva."
+
+#: ui/sonnetui.ui:41 ui/sonnetui.ui:57
+msgctxt "SonnetUi|"
+msgid ""
+"<qt><p>This word was considered to be an \"unknown word\" because it does "
+"not match any entry in the dictionary currently in use. It may also be a "
+"word in a foreign language.</p>\n"
+"<p>If the word is not misspelled, you may add it to the dictionary by "
+"clicking <b>Add to Dictionary</b>. If you do not want to add the unknown "
+"word to the dictionary, but you want to leave it unchanged, click <b>Ignore</"
+"b> or <b>Ignore All</b>.</p>\n"
+"<p>However, if the word is misspelled, you can try to find the correct "
+"replacement in the list below. If you cannot find a replacement there, you "
+"may type it in the text box below, and click <b>Replace</b> or <b>Replace "
+"All</b>.</p>\n"
+"</qt>"
+msgstr ""
+"<qt><p>Ez a szó azért „ismeretlen”, mert nem szerepel a beállított "
+"szótárban. Elképzelhető, hogy például egy más nyelven írt szó.</p>\n"
+"<p>Ha a szó helyesen van leírva, akkor felvehető a szótárba a <b>Hozzáadás a "
+"szótárhoz</b> paranccsal. Ha nem szeretné felvenni a szót a szótárba, és így "
+"akarja hagyni, kattintson a <b>Figyelmen kívül hagyás</b> vagy <b>Az összes "
+"figyelmen kívül hagyása</b> gombra.</p>\n"
+"<p>Ha a szó hibásan lett leírva, próbálja kiválasztani a helyes írásmódot az "
+"alábbi listából. Ha a listában nem szerepel a helyes alak, írja be azt az "
+"alábbi szövegmezőbe, majd kattintson a <b>Csere</b> vagy <b>Az összes "
+"cseréje</b> gombra.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:47
+msgctxt "SonnetUi|"
+msgid "Unknown word:"
+msgstr "Ismeretlen szó:"
+
+#: ui/sonnetui.ui:54
+msgctxt "SonnetUi|"
+msgid "Unknown word"
+msgstr "Ismeretlen szó"
+
+#: ui/sonnetui.ui:63
+msgctxt "SonnetUi|"
+msgid "<b>misspelled</b>"
+msgstr "<b>hibásan írt</b>"
+
+#: ui/sonnetui.ui:70 ui/sonnetui.ui:180
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Select the language of the document you are proofing here.</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Válassza ki az ellenőrzendő dokumentum nyelvét.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:75
+msgctxt "SonnetUi|"
+msgid "&Language:"
+msgstr "Nyel&v:"
+
+#: ui/sonnetui.ui:85
+msgctxt "SonnetUi|"
+msgid "Text excerpt showing the unknown word in its context."
+msgstr "Az ismeretlen szó kontextussal együtt."
+
+#: ui/sonnetui.ui:88
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Here you can see a text excerpt showing the unknown word in its context. "
+"If this information is not sufficient to choose the best replacement for the "
+"unknown word, you can click on the document you are proofing, read a larger "
+"part of the text and then return here to continue proofing.</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Itt látható az ismeretlen szó kontextussal együtt. Ha ez nem elég a "
+"megfelelő szó kiválasztásához, kattintson a dokumentumra, olvasson be egy "
+"nagyobb szövegrészt, majd térjen ide vissza az ellenőrzés folytatásához.</"
+"p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:96
+msgctxt "SonnetUi|"
+msgid "... the <b>misspelled</b> word shown in context ..."
+msgstr "… a <b>hibásan írt</b> szó kontextusban …"
+
+#: ui/sonnetui.ui:106
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>The unknown word was detected and considered unknown because it is not "
+"included in the dictionary.<br>\n"
+"Click here if you consider the unknown word not to be misspelled, and you "
+"want to avoid wrongly detecting it again in the future. If you want to let "
+"it remain as is, but not add it to the dictionary, then click <b>Ignore</b> "
+"or <b>Ignore All</b> instead.</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>A szó ismeretlennek számít, mert nem szerepel a beállított szótárban."
+"<br>\n"
+"Kattintson ide, ha a szó valóban helyesen van leírva, és azt szeretné, hogy "
+"az ellenőrzés további részében a program fogadja el helyesnek. Ha így "
+"szeretné hagyni a szót, de nem akarja felvenni a szótárba, akkor kattintson "
+"a <b>Figyelmen kívül hagyás</b> vagy <b>Az összes figyelmen kívül hagyása</"
+"b> gombra.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:112
+msgctxt "SonnetUi|"
+msgid "<< Add to Dictionary"
+msgstr "<< Hozzáadás a szótárhoz"
+
+#: ui/sonnetui.ui:135
+msgctxt "SonnetUi|"
+msgid "Suggestion List"
+msgstr "Javaslatok"
+
+#: ui/sonnetui.ui:138
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>If the unknown word is misspelled, you should check if the correction for "
+"it is available and if it is, click on it. If none of the words in this list "
+"is a good replacement you may type the correct word in the edit box above.</"
+"p>\n"
+"<p>To correct this word click <b>Replace</b> if you want to correct only "
+"this occurrence or <b>Replace All</b> if you want to correct all occurrences."
+"</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Ha az ismeretlen szó hibásan lett leírva, ellenőrizze, szerepel-e a "
+"helyes alak a javaslatok listájában. Ha igen, kattintson rá. Ha egyik "
+"felajánlott szó sem megfelelő, írja be a kívánt alakot a fenti szövegmezőbe."
+"</p>\n"
+"<p>A szó javításához kattintson a <b>Csere</b> gombra, ha csak ezt, vagy a "
+"<b>Cserélje mindet</b> gombra, ha az összes előfordulást javítani szeretné.</"
+"p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:151 ui/sonnetui.ui:167
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>If the unknown word is misspelled, you should type the correction for "
+"your misspelled word here or select it from the list below.</p>\n"
+"<p>You can then click <b>Replace</b> if you want to correct only this "
+"occurrence of the word or <b>Replace All</b> if you want to correct all "
+"occurrences.</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Ha az ismeretlen szó hibásan van írva, írja be ide a helyes alakot vagy "
+"válassza ki az alábbi listából.</p>\n"
+"<p>Kattintson a <b>Csere</b> gombra, ha csak ezt, vagy a <b>Cserélje mindet</"
+"b> gombra, ha az összes előfordulást cserélni szeretné.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:157
+msgctxt "SonnetUi|"
+msgid "Replace &with:"
+msgstr "Csere e&zzel:"
+
+#: ui/sonnetui.ui:177
+msgctxt "SonnetUi|"
+msgid "Language Selection"
+msgstr "Nyelvválasztás"
+
+#: ui/sonnetui.ui:206
+msgctxt "SonnetUi|"
+msgid "S&uggest"
+msgstr "Ja&vaslat"
+
+#: ui/sonnetui.ui:213
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Click here to replace this occurrence of the unknown text with the text "
+"in the edit box above (to the left).</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Kattintson ide, ha ezt az ismeretlen szót le szeretné cserélni a fenti "
+"szövegmezőben megadott szövegre.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:218
+msgctxt "SonnetUi|"
+msgid "&Replace"
+msgstr "Cse&re"
+
+#: ui/sonnetui.ui:225
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Click here to replace all occurrences of the unknown text with the text "
+"in the edit box above (to the left).</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Kattintson ide, ha le szeretné cserélni a szó összes előfordulását a "
+"fenti mezőbe írt szöveggel.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:230
+msgctxt "SonnetUi|"
+msgid "R&eplace All"
+msgstr "Összes cs&eréje"
+
+#: ui/sonnetui.ui:237
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Click here to let this occurrence of the unknown word remain as is.</p>\n"
+"<p>This action is useful when the word is a name, an acronym, a foreign word "
+"or any other unknown word that you want to use but not add to the dictionary."
+"</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Kattintson ide, ha az ismeretlen szót úgy szeretné hagyni, ahogy van.</"
+"p>\n"
+"<p>Ez a lehetőség például nevek, rövidítések vagy idegen szavak esetén "
+"használható, vagy olyan szavaknál, amelyeket nem szeretne felvenni a "
+"szótárba.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:243
+msgctxt "SonnetUi|"
+msgid "&Ignore"
+msgstr "&Mellőzés"
+
+#: ui/sonnetui.ui:250 ui/sonnetui.ui:263
+msgctxt "SonnetUi|"
+msgid ""
+"<qt>\n"
+"<p>Click here to let all occurrences of the unknown word remain as they are."
+"</p>\n"
+"<p>This action is useful when the word is a name, an acronym, a foreign word "
+"or any other unknown word that you want to use but not add to the dictionary."
+"</p>\n"
+"</qt>"
+msgstr ""
+"<qt>\n"
+"<p>Kattintson ide, ha az ismeretlen szó minden előfordulását így szeretné "
+"hagyni.</p>\n"
+"<p>Ez a lehetőség például nevek, rövidítések vagy idegen szavak esetén "
+"használható, vagy olyan szavaknál, amelyeket nem szeretne felvenni a "
+"szótárba.</p>\n"
+"</qt>"
+
+#: ui/sonnetui.ui:256
+msgctxt "SonnetUi|"
+msgid "I&gnore All"
+msgstr "Mindegyik k&ihagyása"
+
+#: ui/sonnetui.ui:269
+msgctxt "SonnetUi|"
+msgid "Autocorrect"
+msgstr "Automatikus javítás"
+
+#: ui/spellcheckdecorator.cpp:172
+#, qt-format
+msgctxt "Sonnet::SpellCheckDecorator|"
+msgid "No suggestions for %1"
+msgstr "Nincs javaslat erre: %1"
+
+#: ui/spellcheckdecorator.cpp:183
+msgctxt "Sonnet::SpellCheckDecorator|"
+msgid "Ignore"
+msgstr "Mellőzés"
+
+#: ui/spellcheckdecorator.cpp:184
+msgctxt "Sonnet::SpellCheckDecorator|"
+msgid "Add to Dictionary"
+msgstr "Hozzáadás a szótárhoz"

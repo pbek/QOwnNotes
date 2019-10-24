@@ -309,6 +309,7 @@ include(libraries/qkeysequencewidget/qkeysequencewidget/qkeysequencewidget.pri)
 include(libraries/qttoolbareditor/toolbar_editor.pri)
 include(libraries/fakevim/fakevim/fakevim.pri)
 include(libraries/singleapplication/singleapplication.pri)
+include(libraries/sonnet/src/core/sonnet-core.pri)
 
 unix {
 
