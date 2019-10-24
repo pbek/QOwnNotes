@@ -1259,7 +1259,7 @@ void MainWindow::togglePanelVisibility(const QString& objectName) {
         // don't allow the note subfolder dock widget to be visible if the
         // note folder has no subfolders activated
         if (newVisibility) {
-            newVisibility = NoteFolder::isCurrentShowSubfolders();
+            newVisibility = NoteFolder::isCurrentNoteTreeEnabled();
         }
     }
 
@@ -1889,15 +1889,36 @@ void MainWindow::loadNoteDirectoryList() {
     const QSignalBlocker blocker2(ui->noteTreeWidget);
     Q_UNUSED(blocker2)
 
+    const bool isCurrentNoteTreeEnabled = NoteFolder::isCurrentNoteTreeEnabled();
     ui->noteTreeWidget->clear();
+//    ui->noteTreeWidget->setRootIsDecorated(isCurrentNoteTreeEnabled);
+    int itemCount;
 
-    // load all notes and add them to the note list widget
-    QList<Note> noteList = Note::fetchAll();
-    Q_FOREACH(Note note, noteList) {
-            addNoteToNoteTreeWidget(note);
-        }
+    if (isCurrentNoteTreeEnabled) {
+        auto *noteFolderItem = new QTreeWidgetItem();
+        noteFolderItem->setText(0, tr("Note folder"));
+        noteFolderItem->setData(0, Qt::UserRole, 0);
+        noteFolderItem->setData(0, Qt::UserRole + 1, FolderType);
+        noteFolderItem->setIcon(0, QIcon::fromTheme(
+                                    "folder",
+                                    QIcon(":icons/breeze-qownnotes/16x16/folder.svg")));
+        noteFolderItem->setForeground(1, QColor(Qt::gray));
+        ui->noteTreeWidget->addTopLevelItem(noteFolderItem);
 
-    int itemCount = noteList.count();
+        buildNoteSubFolderTreeForParentItem(noteFolderItem);
+        noteFolderItem->setExpanded(true);
+
+        itemCount = Note::countAll();
+    } else {
+        // load all notes and add them to the note list widget
+        QList<Note> noteList = Note::fetchAll();
+        Q_FOREACH(Note note, noteList) {
+                addNoteToNoteTreeWidget(note);
+            }
+
+        itemCount = noteList.count();
+    }
+
     MetricsService::instance()->sendEventIfEnabled(
             "note/list/loaded",
             "note",
@@ -1914,8 +1935,10 @@ void MainWindow::loadNoteDirectoryList() {
     // setup tagging
     setupTags();
 
-    // setup note sub folders
-    setupNoteSubFolders();
+    if (!isCurrentNoteTreeEnabled) {
+        // setup note sub folders
+        setupNoteSubFolders();
+    }
 
     // generate the tray context menu
     generateSystemTrayContextMenu();
@@ -1936,7 +1959,7 @@ void MainWindow::loadNoteDirectoryList() {
 /**
  * Adds a note to the note tree widget
  */
-bool MainWindow::addNoteToNoteTreeWidget(Note note) {
+bool MainWindow::addNoteToNoteTreeWidget(Note note, QTreeWidgetItem *parent) {
     QString name = note.getName();
 
     // skip notes without name
@@ -1951,6 +1974,7 @@ bool MainWindow::addNoteToNoteTreeWidget(Note note) {
     setTreeWidgetItemToolTipForNote(noteItem, &note);
     noteItem->setText(0, name);
     noteItem->setData(0, Qt::UserRole, note.getId());
+    noteItem->setData(0, Qt::UserRole + 1, NoteType);
     noteItem->setIcon(0, QIcon::fromTheme(
                     "text-x-generic",
                     QIcon(":icons/breeze-qownnotes/16x16/"
@@ -1970,8 +1994,12 @@ bool MainWindow::addNoteToNoteTreeWidget(Note note) {
     const QSignalBlocker blocker(ui->noteTreeWidget);
     Q_UNUSED(blocker)
 
-    // strange things happen if we insert with insertTopLevelItem
-    ui->noteTreeWidget->addTopLevelItem(noteItem);
+    if (parent == nullptr) {
+        // strange things happen if we insert with insertTopLevelItem
+        ui->noteTreeWidget->addTopLevelItem(noteItem);
+    } else {
+        parent->addChild(noteItem);
+    }
 
     if (isNoteListPreview) {
         updateNoteTreeWidgetItem(note, noteItem);
@@ -2029,6 +2057,7 @@ QTreeWidgetItem *MainWindow::addNoteSubFolderToTreeWidget(
     auto *item = new QTreeWidgetItem();
     item->setText(0, name);
     item->setData(0, Qt::UserRole, id);
+    item->setData(0, Qt::UserRole + 1, FolderType);
     item->setToolTip(0, toolTip);
     item->setIcon(0, QIcon::fromTheme(
                                 "folder",
@@ -2126,7 +2155,9 @@ QTreeWidgetItem *MainWindow::findNoteInNoteTreeWidget(Note note) {
 
     for (int i = 0; i < ui->noteTreeWidget->topLevelItemCount(); i++) {
         QTreeWidgetItem *item = ui->noteTreeWidget->topLevelItem(i);
-        if (item->data(0, Qt::UserRole).toInt() == noteId) {
+
+        if (item->data(0, Qt::UserRole + 1) == NoteType &&
+            item->data(0, Qt::UserRole).toInt() == noteId) {
             return item;
         }
     }
@@ -2974,7 +3005,7 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
     }
 
     // build the note sub folders
-    bool showSubfolders = NoteFolder::isCurrentShowSubfolders();
+    bool showSubfolders = NoteFolder::isCurrentHasSubfolders();
     if (showSubfolders) {
         QStringList folders = notesDir.entryList(
                 QStringList("*"), QDir::Dirs, QDir::Time);
@@ -3154,7 +3185,7 @@ void MainWindow::updateNoteDirectoryWatcher() {
         noteDirectoryWatcher.removePaths(fileList);
     }
 
-    bool showSubfolders = NoteFolder::isCurrentShowSubfolders();
+    bool hasSubfolders = NoteFolder::isCurrentHasSubfolders();
 //    if (showSubfolders) {
 //        return;
 //    }
@@ -3169,7 +3200,7 @@ void MainWindow::updateNoteDirectoryWatcher() {
         noteDirectoryWatcher.addPath(notePath);
     }
 
-    if (showSubfolders) {
+    if (hasSubfolders) {
         QList<NoteSubFolder> noteSubFolderList = NoteSubFolder::fetchAll();
         Q_FOREACH(NoteSubFolder noteSubFolder, noteSubFolderList) {
                 QString path = notePath + QDir::separator() +
@@ -4071,6 +4102,10 @@ void MainWindow::removeSelectedNotes() {
 
             Q_FOREACH(QTreeWidgetItem *item,
                       ui->noteTreeWidget->selectedItems()) {
+                    if (item->data(0, Qt::UserRole + 1) != NoteType) {
+                        continue;
+                    }
+
                     int id = item->data(0, Qt::UserRole).toInt();
                     Note note = Note::fetch(id);
                     note.remove(true);
@@ -4098,6 +4133,7 @@ void MainWindow::removeSelectedNotes() {
  * Removes selected note subfolders after a confirmation
  */
 void MainWindow::removeSelectedNoteSubFolders() {
+    // TODO: add note tree support
     int selectedItemsCount =
             ui->noteSubFolderTreeWidget->selectedItems().size();
 
@@ -4110,6 +4146,10 @@ void MainWindow::removeSelectedNoteSubFolders() {
     QList<NoteSubFolder> noteSubFolderList;
     Q_FOREACH(QTreeWidgetItem *item,
               ui->noteSubFolderTreeWidget->selectedItems()) {
+            if (item->data(0, Qt::UserRole + 1) != FolderType) {
+                continue;
+            }
+
             int id = item->data(0, Qt::UserRole).toInt();
             NoteSubFolder noteSubFolder = NoteSubFolder::fetch(id);
             if (noteSubFolder.isFetched()) {
@@ -4202,7 +4242,7 @@ void MainWindow::selectAllNotes() {
  * @brief Moves selected notes after a confirmation
  * @param destinationFolder
  */
-void MainWindow::moveSelectedNotesToFolder(const QString& destinationFolder, QString noteFolderPath) {
+void MainWindow::moveSelectedNotesToFolder(const QString& destinationFolder) {
     // store updated notes to disk
     storeUpdatedNotesToDisk();
 
@@ -4218,6 +4258,10 @@ void MainWindow::moveSelectedNotesToFolder(const QString& destinationFolder, QSt
         Q_UNUSED(blocker)
 
         Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
+                if (item->data(0, Qt::UserRole + 1) != NoteType) {
+                    continue;
+                }
+
                 int noteId = item->data(0, Qt::UserRole).toInt();
                 Note note = Note::fetch(noteId);
 
@@ -4255,6 +4299,10 @@ QList<Note> MainWindow::selectedNotes() {
     QList<Note> selectedNotes;
 
     Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
+            if (item->data(0, Qt::UserRole + 1) != NoteType) {
+                continue;
+            }
+
             int noteId = item->data(0, Qt::UserRole).toInt();
             Note note = Note::fetch(noteId);
 
@@ -4309,6 +4357,10 @@ void MainWindow::copySelectedNotesToFolder(const QString& destinationFolder, QSt
             "copy-notes") == QMessageBox::Yes) {
         int copyCount = 0;
         Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
+                if (item->data(0, Qt::UserRole + 1) != NoteType) {
+                    continue;
+                }
+
                 int noteId = item->data(0, Qt::UserRole).toInt();
                 Note note = Note::fetch(noteId);
 
@@ -4353,6 +4405,10 @@ void MainWindow::tagSelectedNotes(Tag tag) {
         directoryWatcherWorkaround(true, true);
 
         Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
+                if (item->data(0, Qt::UserRole + 1) != NoteType) {
+                    continue;
+                }
+
                 int noteId = item->data(0, Qt::UserRole).toInt();
                 Note note = Note::fetch(noteId);
 
@@ -4422,6 +4478,10 @@ void MainWindow::removeTagFromSelectedNotes(Tag tag) {
         directoryWatcherWorkaround(true, true);
 
         Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
+                if (item->data(0, Qt::UserRole + 1) != NoteType) {
+                    continue;
+                }
+
                 int noteId = item->data(0, Qt::UserRole).toInt();
                 Note note = Note::fetch(noteId);
 
@@ -5034,7 +5094,7 @@ void MainWindow::on_actionSet_ownCloud_Folder_triggered() {
 }
 
 void MainWindow::on_searchLineEdit_textChanged(const QString &arg1) {
-    Q_UNUSED(arg1);
+    Q_UNUSED(arg1)
     filterNotes();
 }
 
@@ -5112,6 +5172,11 @@ void MainWindow::filterNotesBySearchLineEditText() {
 
         while (*it) {
             QTreeWidgetItem *item = *it;
+
+            if (item->data(0, Qt::UserRole + 1) != NoteType) {
+                continue;
+            }
+
             const int noteId = item->data(0, Qt::UserRole).toInt();
             bool isHidden = noteIdList.indexOf(noteId) < 0;
 
@@ -7104,16 +7169,16 @@ void MainWindow::reloadTagTree() {
     QList<int> noteSubFolderIds;
     QList<int> noteIdList;
     int untaggedNoteCount = 0;
-    
+
     // check if the notes should be viewed recursively
     if (NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively()) {
         noteSubFolderIds = NoteSubFolder::fetchIdsRecursivelyByParentId(activeNoteSubFolderId);
     } else {
         noteSubFolderIds << activeNoteSubFolderId;
     }
-    
+
     qDebug() << __func__ << " - 'noteSubFolderIds': " << noteSubFolderIds;
-    
+
     // get the notes from the subfolders
     Q_FOREACH(int noteSubFolderId, noteSubFolderIds) {
         // get all notes of a note sub folder
@@ -7294,6 +7359,7 @@ void MainWindow::reloadNoteSubFolderTree() {
 void MainWindow::buildNoteSubFolderTreeForParentItem(QTreeWidgetItem *parent) {
     int parentId = parent == nullptr ? 0 : parent->data(0, Qt::UserRole).toInt();
     int activeNoteSubFolderId = NoteSubFolder::activeNoteSubFolderId();
+    const bool isCurrentNoteTreeEnabled = NoteFolder::isCurrentNoteTreeEnabled();
 
     QList<NoteSubFolder> noteSubFolderList =
             NoteSubFolder::fetchAllByParentId(parentId);
@@ -7303,12 +7369,21 @@ void MainWindow::buildNoteSubFolderTreeForParentItem(QTreeWidgetItem *parent) {
             QTreeWidgetItem *item =
                     addNoteSubFolderToTreeWidget(parent,
                                                  noteSubFolder);
-            // set the active item
-            if (activeNoteSubFolderId == noteSubFolder.getId()) {
-                const QSignalBlocker blocker(ui->noteSubFolderTreeWidget);
-                Q_UNUSED(blocker)
 
-                ui->noteSubFolderTreeWidget->setCurrentItem(item);
+            if (isCurrentNoteTreeEnabled) {
+                // load all notes of the subfolder and add them to the note list widget
+                QList<Note> noteList = Note::fetchAllByNoteSubFolderId(noteSubFolder.getId());
+                Q_FOREACH(Note note, noteList) {
+                        addNoteToNoteTreeWidget(note, item);
+                    }
+            } else {
+                // set the active item
+                if (activeNoteSubFolderId == noteSubFolder.getId()) {
+                    const QSignalBlocker blocker(ui->noteSubFolderTreeWidget);
+                    Q_UNUSED(blocker)
+
+                    ui->noteSubFolderTreeWidget->setCurrentItem(item);
+                }
             }
 
             buildNoteSubFolderTreeForParentItem(item);
@@ -7997,7 +8072,7 @@ void MainWindow::on_action_Reload_note_folder_triggered() {
  */
 void MainWindow::on_tagTreeWidget_itemChanged(
         QTreeWidgetItem *item, int column) {
-    Q_UNUSED(column);
+    Q_UNUSED(column)
 
     Tag tag = Tag::fetch(item->data(0, Qt::UserRole).toInt());
     if (tag.isFetched()) {
@@ -8026,7 +8101,7 @@ void MainWindow::on_tagTreeWidget_itemChanged(
  */
 void MainWindow::on_tagTreeWidget_currentItemChanged(
         QTreeWidgetItem *current, QTreeWidgetItem *previous) {
-    Q_UNUSED(previous);
+    Q_UNUSED(previous)
 
     if (current == nullptr) {
         return;
@@ -8545,6 +8620,10 @@ void MainWindow::moveSelectedNotesToNoteSubFolder(NoteSubFolder noteSubFolder) {
         _noteExternallyRemovedCheckEnabled = false;
 
         Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
+                if (item->data(0, Qt::UserRole + 1) != NoteType) {
+                    continue;
+                }
+
                 int noteId = item->data(0, Qt::UserRole).toInt();
                 Note note = Note::fetch(noteId);
                 Note oldNote = note;
@@ -8636,6 +8715,10 @@ void MainWindow::copySelectedNotesToNoteSubFolder(NoteSubFolder noteSubFolder) {
 
         int noteSubFolderCount = 0;
         Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
+                if (item->data(0, Qt::UserRole + 1) != NoteType) {
+                    continue;
+                }
+
                 int noteId = item->data(0, Qt::UserRole).toInt();
                 Note note = Note::fetch(noteId);
 
@@ -8695,6 +8778,10 @@ void MainWindow::copySelectedNotesToNoteSubFolder(NoteSubFolder noteSubFolder) {
  */
 bool MainWindow::selectedNotesHaveTags() {
     Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
+            if (item->data(0, Qt::UserRole + 1) != NoteType) {
+                continue;
+            }
+
             int noteId = item->data(0, Qt::UserRole).toInt();
             Note note = Note::fetch(noteId);
 
@@ -9186,12 +9273,15 @@ void MainWindow::on_actionShow_status_bar_triggered(bool checked) {
 }
 
 void MainWindow::on_noteTreeWidget_currentItemChanged(
-        QTreeWidgetItem *current, QTreeWidgetItem *previous)
-{
-    Q_UNUSED(previous);
+        QTreeWidgetItem *current, QTreeWidgetItem *previous) {
+    Q_UNUSED(previous)
 
     // in case all notes were removed
     if (current == nullptr) {
+        return;
+    }
+
+    if (current->data(0, Qt::UserRole + 1).toInt() != NoteType) {
         return;
     }
 
@@ -9217,7 +9307,6 @@ void MainWindow::openNotesContextMenu(
     auto *moveDestinationMenu = new QMenu(this);
     auto *copyDestinationMenu = new QMenu(this);
     auto *tagRemoveMenu = new QMenu(this);
-
     auto *createNoteAction = new QAction(this);
     auto *renameAction = new QAction(this);
 
@@ -9437,6 +9526,11 @@ void MainWindow::on_noteTreeWidget_itemChanged(QTreeWidgetItem *item,
         return;
     }
 
+    // TODO: add support to note subfolder renaming in a note tree
+    if (item->data(0, Qt::UserRole + 1) != NoteType) {
+        return;
+    }
+
     int noteId = item->data(0, Qt::UserRole).toInt();
     Note note = Note::fetch(noteId);
     if (note.isFetched()) {
@@ -9488,7 +9582,7 @@ void MainWindow::on_noteTreeWidget_itemChanged(QTreeWidgetItem *item,
 
 void MainWindow::on_noteSubFolderTreeWidget_currentItemChanged(
         QTreeWidgetItem *current, QTreeWidgetItem *previous) {
-    Q_UNUSED(previous);
+    Q_UNUSED(previous)
 
     if (current == nullptr) {
         return;

@@ -273,6 +273,11 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
                 ui->noteListPreviewCheckBox->text() + " (experimental)");
     }
 
+    if (!ui->enableNoteTreeCheckBox->text().contains("work in progress")) {
+        ui->enableNoteTreeCheckBox->setText(
+                    ui->enableNoteTreeCheckBox->text() + " (work in progress)");
+    }
+
     ui->webCompannionLabel->setText(ui->webCompannionLabel->text().arg(
             "https://github.com/qownnotes/web-companion",
             "https://chrome.google.com/webstore/detail/qownnotes-web-companion/"
@@ -925,6 +930,8 @@ void SettingsDialog::storePanelSettings() {
     // Navigation Panel Options
     settings.setValue("navigationPanelHideSearch",
             ui->navigationPanelHideSearchCheckBox->isChecked());
+
+    settings.setValue("enableNoteTree", ui->enableNoteTreeCheckBox->isChecked());
 }
 
 /**
@@ -1403,6 +1410,8 @@ void SettingsDialog::readPanelSettings() {
     // Navigation Panel Options
     ui->navigationPanelHideSearchCheckBox->setChecked(settings.value(
             "navigationPanelHideSearch").toBool());
+
+    ui->enableNoteTreeCheckBox->setChecked(Utils::Misc::isEnableNoteTree());
 }
 
 /**
