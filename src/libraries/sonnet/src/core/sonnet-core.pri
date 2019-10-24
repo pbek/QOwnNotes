@@ -33,7 +33,11 @@ HEADERS += $$PWD/client_p.h \
 #           $$PWD/sonnetcore_export.h
 
 # Sonnet Plugins
-unix|win32 {
+unix:!macx {
+    include($$PWD/../plugins/hunspell/hunspell.pri)
+}
+
+mingw {
     include($$PWD/../plugins/hunspell/hunspell.pri)
 }
 
