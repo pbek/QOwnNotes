@@ -47,10 +47,12 @@ SOURCES += \
     $$PWD/src/parsers/xmlparser.cxx
 
 win32 {
+    message("Hunspell Windows Build")
     DEFINES += WIN32 \
-            += _WIN32 \
-            += __MINGW32__ \
-            += BUILDING_LIBHUNSPELL
+            += HUN_WINIDOWS
+#            += _WIN32 \
+#            += __MINGW32__ \
+#            += BUILDING_LIBHUNSPELL
 }
 
 INCLUDEPATH += $$PWD/src/hunspell

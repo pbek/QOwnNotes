@@ -1,6 +1,10 @@
 #ifndef HUNSPELL_VISIBILITY_H_
 #define HUNSPELL_VISIBILITY_H_
 
+#if defined(HUN_WINIDOWS)
+#    define LIBHUNSPELL_DLL_EXPORTED __declspec(dllexport)
+#endif
+
 #if defined(HUNSPELL_STATIC)
 #  define LIBHUNSPELL_DLL_EXPORTED
 #elif defined(_WIN32)
