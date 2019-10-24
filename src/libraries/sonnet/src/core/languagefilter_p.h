@@ -35,7 +35,7 @@ This class takes fragments produced by supplied tokenizer and provides additiona
 language used in each fragment and if there is spell and grammar checker suitable for the fragment.
 
 */
-class SONNETCORE_EXPORT LanguageFilter : public AbstractTokenizer
+class LanguageFilter : public AbstractTokenizer
 {
 public:
     /** Creates language filter for given tokenizer. LanguageFilter takes complete ownership of given tokenizer.

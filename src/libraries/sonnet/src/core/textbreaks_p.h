@@ -22,8 +22,6 @@
 
 class QString;
 
-#include "sonnetcore_export.h"
-
 namespace Sonnet {
 class TextBreaksPrivate;
 
@@ -38,7 +36,7 @@ class TextBreaksPrivate;
  * @author Jacob Rideout <kde@jacobrideout.net>
  * @since 4.3
  */
-class SONNETCORE_EXPORT TextBreaks
+class TextBreaks
 {
 public:
 

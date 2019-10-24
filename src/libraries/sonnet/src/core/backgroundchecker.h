@@ -23,7 +23,6 @@
 
 #include "speller.h"
 
-#include "sonnetcore_export.h"
 #include "backgroundchecker_p.h"
 
 #include <QObject>
@@ -52,7 +51,7 @@ class Speller;
  * @author Zack Rusin <zack@kde.org>
  * @short class used for spell checking in the background
  */
-class SONNETCORE_EXPORT BackgroundChecker : public QObject
+class BackgroundChecker : public QObject
 {
     Q_OBJECT
 public:

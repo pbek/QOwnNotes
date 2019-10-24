@@ -23,8 +23,6 @@
 #include <QStringList>
 #include <QString>
 
-#include "sonnetcore_export.h"
-
 namespace Sonnet {
 /**
  * Class is returned by from Loader. It acts
@@ -34,7 +32,7 @@ namespace Sonnet {
  * @short class used for actuall spell checking
  */
 class SpellerPluginPrivate;
-class SONNETCORE_EXPORT SpellerPlugin
+class SpellerPlugin
 {
 public:
     virtual ~SpellerPlugin();

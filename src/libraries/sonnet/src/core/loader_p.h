@@ -20,8 +20,6 @@
 #ifndef SONNET_LOADER_P_H
 #define SONNET_LOADER_P_H
 
-#include "sonnetcore_export.h"
-
 #include <QObject>
 #include <QStringList>
 #include <QString>
@@ -39,7 +37,7 @@ class LoaderPrivate;
  * Sonnet class, you can think of it as the kernel or manager
  * of the Sonnet architecture.
  */
-class SONNETCORE_EXPORT Loader : public QObject
+class Loader : public QObject
 {
     Q_OBJECT
 public:

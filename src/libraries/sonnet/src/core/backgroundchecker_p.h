@@ -22,7 +22,7 @@
 #define SONNET_BACKGROUNDCHECKER_P_H
 
 #include <QObject>
-//#include "backgroundchecker.h"
+#include "backgroundchecker.h"
 #include "languagefilter_p.h"
 #include "tokenizer_p.h"
 #include "speller.h"
