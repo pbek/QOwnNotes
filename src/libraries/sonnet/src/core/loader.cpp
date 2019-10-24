@@ -315,7 +315,7 @@ void Loader::loadPlugins()
     }
 #else
 #ifdef Q_OS_MACOS
-    loadPlugin(QString());
+    loadPlugin(QStringLiteral("NSSpellchecker"));
 #endif
     loadPlugin(QStringLiteral("Hunspell"));
 #endif
@@ -340,13 +340,12 @@ void Loader::loadPlugin(const QString &pluginPath)
 #else
 //hunspell only for non Mac
     Client *client = nullptr;
-#ifndef Q_OS_MACOS
     if (pluginPath == QLatin1String("Hunspell")) {
         client = new HunspellClient(this);
     }
-#endif
 #ifdef Q_OS_MACOS
-    else {
+    else if (pluginPath == QLatin1String("NSSpellchecker")) {
+    //    else {
         client = new NSSpellCheckerClient(this);
     }
 #endif
