@@ -108,7 +108,11 @@ GuessLanguagePrivate::GuessLanguagePrivate()
 
     s_knownDictionaries = Loader::openLoader()->languages().toSet();
     QSet<QString> dictionaryLanguages;
+#if QT_VERSION >= 0x050700
     for (const QString &dictName : qAsConst(s_knownDictionaries)) {
+#else
+    for (const QString &dictName : (s_knownDictionaries)) {
+#endif
         QString languageName = QLocale(dictName).name();
         if (languageName.isEmpty()) {
             qCWarning(SONNET_LOG_CORE) << "Unable to parse name for dictionary" << dictName;
@@ -491,11 +495,10 @@ GuessLanguagePrivate::GuessLanguagePrivate()
         case QChar::Script_Ahom:
             names = getNames(QLocale::AhomScript);
             break;
-#endif
         case QChar::Script_AnatolianHieroglyphs:
             names = getNames(QLocale::AnatolianHieroglyphsScript);
             break;
-#if QT_VERSION >= 0x050700
+
         case QChar::Script_Hatran:
             names = getNames(QLocale::HatranScript);
             break;
@@ -521,7 +524,11 @@ GuessLanguagePrivate::GuessLanguagePrivate()
 
         { // Remove unknown languages
             QStringList pruned;
+#if QT_VERSION >= 0x050700
             for (const QString &name : qAsConst(names)) {
+#else
+            for (const QString &name : (names)) {
+#endif
                 if (!dictionaryLanguages.contains(name)) {
                     continue;
                 }
@@ -533,8 +540,11 @@ GuessLanguagePrivate::GuessLanguagePrivate()
         if (names.isEmpty()) {
             continue;
         }
-
+#if QT_VERSION >= 0x050700
         for (const QString &name : qAsConst(names)) {
+#else
+        for (const QString &name : (names)) {
+#endif
             s_scriptLanguages.insert(script, name);
         }
     }
