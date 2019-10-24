@@ -52,13 +52,15 @@ HunspellClient::HunspellClient(QObject *parent)
 
         }
     };
-#ifdef Q_OS_WIN
+//disable this for now
+/*#ifdef Q_OS_WIN
     maybeAddPath(QStringLiteral(SONNET_INSTALL_PREFIX "/bin/data/hunspell/"));
 #else
     maybeAddPath(QStringLiteral("/System/Library/Spelling"));
     maybeAddPath(QStringLiteral("/usr/share/hunspell/"));
     maybeAddPath(QStringLiteral("/usr/share/myspell/"));
 #endif
+*/
 
     for (const QString &dirString : dirList) {
         QDir dir(dirString);
