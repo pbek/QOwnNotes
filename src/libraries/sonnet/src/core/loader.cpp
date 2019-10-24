@@ -33,11 +33,18 @@
 
 #include <algorithm>
 
+#define SONNET_STATIC 1
+
 #ifdef SONNET_STATIC
+
+#ifndef Q_OS_MACOS
 #include "../plugins/hunspell/hunspellclient.h"
+#endif
+
 #ifdef Q_OS_MACOS
 #include "../plugins/nsspellchecker/nsspellcheckerclient.h"
 #endif
+
 #endif
 
 namespace Sonnet {
@@ -288,6 +295,7 @@ Settings *Loader::settings() const
 
 void Loader::loadPlugins()
 {
+
 #ifndef SONNET_STATIC
     const QStringList libPaths = QCoreApplication::libraryPaths() << QStringLiteral(INSTALLATION_PLUGIN_PATH);
     const QLatin1String pathSuffix("/kf5/sonnet/");
@@ -330,10 +338,13 @@ void Loader::loadPlugin(const QString &pluginPath)
         return;
     }
 #else
+//hunspell only for non Mac
     Client *client = nullptr;
+#ifndef Q_OS_MACOS
     if (pluginPath == QLatin1String("Hunspell")) {
         client = new HunspellClient(this);
     }
+#endif
 #ifdef Q_OS_MACOS
     else {
         client = new NSSpellCheckerClient(this);
