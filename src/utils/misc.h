@@ -87,6 +87,7 @@ namespace Utils {
         void printInfo(const QString& text);
         bool doAutomaticNoteFolderDatabaseClosing();
         bool isNoteListPreview();
+        bool isEnableNoteTree();
         QString toHumanReadableByteSize(qint64 size);
         QString prepareDebugInformationLine(
             const QString &headline, QString data,

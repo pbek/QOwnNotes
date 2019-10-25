@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 19.10.11
+- you now can choose to **show your notes together with your subfolders in a tree**
+  (for [#790](https://github.com/pbek/QOwnNotes/issues/790))
+    - you can enable this in the *Panels settings*
+    - this is work in progress and by far not fully implemented yet!
+    - the note tree will only be shown if subfolders are enabled for your current note folder
+
 ## 19.10.10
 - if a **frontmatter** was detected at the beginning of a note the **filename of the note**
   now will be the **first non-empty line after the frontmatter** instead of the

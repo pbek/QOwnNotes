@@ -47,6 +47,7 @@ public:
     int getActiveTagId();
     bool isShowSubfolders();
     void setShowSubfolders(bool value);
+    static bool isCurrentHasSubfolders();
     static bool isCurrentShowSubfolders();
     void setActiveNoteSubFolder(NoteSubFolder noteSubFolder);
     NoteSubFolder getActiveNoteSubFolder();
@@ -59,7 +60,7 @@ public:
     QJsonObject jsonObject();
     static QString noteFoldersWebServiceJsonText();
     static bool isPathNoteFolder(const QString &path);
-
+    static bool isCurrentNoteTreeEnabled();
 private:
     int id;
     QString name;
