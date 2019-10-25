@@ -922,7 +922,7 @@ void MainWindow::buildNotesIndexAndLoadNoteDirectoryList(bool forceBuild,
  * Returns the global main window instance
  */
 MainWindow *MainWindow::instance() {
-    return qApp->property("mainWindow").value<MainWindow *>();
+    return qApp ? qApp->property("mainWindow").value<MainWindow *>() : nullptr;
 }
 
 /**
