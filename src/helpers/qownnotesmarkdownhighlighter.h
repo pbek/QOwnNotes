@@ -29,6 +29,8 @@
 #endif
 
 #include "libraries/sonnet/src/core/speller.h"
+#include "libraries/sonnet/src/core/languagefilter_p.h"
+#include "libraries/sonnet/src/core/tokenizer_p.h"
 
 QT_BEGIN_NAMESPACE
 class QTextDocument;
@@ -64,4 +66,9 @@ private:
     void updateCurrentNote();
 
     Sonnet::Speller *spellchecker;
+    Sonnet::LanguageFilter *languageFilter;
+    Sonnet::WordTokenizer *wordTokenizer;
+    int wordCount;
+    int errorCount;
+    int codeBlock;
 };

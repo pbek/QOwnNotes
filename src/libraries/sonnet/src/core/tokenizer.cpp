@@ -22,6 +22,7 @@
 
 #include <QList>
 #include <QString>
+#include <QDebug>
 
 #include "tokenizer_p.h"
 #include "textbreaks_p.h"
