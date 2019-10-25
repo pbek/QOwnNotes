@@ -654,6 +654,8 @@ void GuessLanguagePrivate::loadModels()
             QCoreApplication::applicationDirPath());
 #endif
     }
+    triMapFile = QStringLiteral("%1/trigrams.map").arg(
+        QCoreApplication::applicationDirPath());
     qCDebug(SONNET_LOG_CORE) << "Loading trigrams from" << triMapFile;
 
     QFile sin(triMapFile);
