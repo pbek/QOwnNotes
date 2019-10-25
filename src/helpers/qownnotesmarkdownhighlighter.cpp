@@ -174,13 +174,12 @@ void QOwnNotesMarkdownHighlighter::unsetMisspelled(int start, int count) {
 void QOwnNotesMarkdownHighlighter::highlightSpellChecking(const QString &text) {
     //TODO: include other characters, for other languages
     //      add auto detection of languages
-//    static int i = 0;
-//    if(i=1){
-//    qDebug () <<"Langs: "<< spellchecker->availableLanguages();
-//    qDebug () <<"Bck: "<< spellchecker->availableBackends();
-//    qDebug () <<"Dicts: "<< spellchecker->availableDictionaries();
-//    qDebug () <<"Lang names: "<< spellchecker->availableLanguageNames();
-//    i++; }
+
+
+    qDebug () <<"[Sonnet]Available Langs: "<< spellchecker->availableLanguages();
+    qDebug () <<"[Sonnet]Available Backend: "<< spellchecker->availableBackends();
+    qDebug () <<"[Sonnet]Available Dicts: "<< spellchecker->availableDictionaries();
+    qDebug () <<"[Sonnet]Available Lang names: "<< spellchecker->availableLanguageNames();
 
     QRegularExpression regex("[a-zA-Z]+");
     QRegularExpressionMatchIterator it = regex.globalMatch(text);
@@ -190,8 +189,9 @@ void QOwnNotesMarkdownHighlighter::highlightSpellChecking(const QString &text) {
         bool isMisspelled = !word.isEmpty()
                          && word.length() > 1
                          && isWordMisspelled(word);
-        if(isMisspelled)
+        if(isMisspelled) {
             setMisspelled(m.capturedStart(0), m.capturedEnd());
+        }
         else {
             unsetMisspelled(m.capturedStart(0), m.capturedEnd());
         }
