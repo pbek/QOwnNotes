@@ -409,11 +409,25 @@ QString NoteFolder::currentAttachmentsPath() {
 }
 
 /**
+ * Checks if there are note subfolders in the current note folder
+ */
+bool NoteFolder::isCurrentHasSubfolders() {
+    NoteFolder noteFolder = currentNoteFolder();
+    return noteFolder.isFetched() ? noteFolder.isShowSubfolders() : false;
+}
+
+/**
  * Checks if the subfolders should be viewed for the current note folder
  */
 bool NoteFolder::isCurrentShowSubfolders() {
-    NoteFolder noteFolder = NoteFolder::currentNoteFolder();
-    return noteFolder.isFetched() ? noteFolder.isShowSubfolders() : false;
+    return !Utils::Misc::isEnableNoteTree() && isCurrentHasSubfolders();
+}
+
+/**
+ * Checks if a note tree (not a note list) should be used for the current note folder
+ */
+bool NoteFolder::isCurrentNoteTreeEnabled() {
+    return Utils::Misc::isEnableNoteTree() && isCurrentHasSubfolders();
 }
 
 /**

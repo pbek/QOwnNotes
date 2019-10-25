@@ -397,7 +397,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>4</number>
+            <number>16</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -5278,7 +5278,51 @@ git config --global user.name &quot;Your name&quot;</string>
                 <string>Note list panel</string>
                </property>
                <layout class="QGridLayout" name="gridLayout_61">
-                <item row="3" column="2">
+                <item row="2" column="1" colspan="2">
+                 <widget class="QCheckBox" name="noteListPreviewCheckBox">
+                  <property name="text">
+                   <string>Show notes in the note list with preview</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1" colspan="2">
+                 <widget class="QCheckBox" name="noteSubfoldersPanelShowNotesRecursivelyCheckBox">
+                  <property name="text">
+                   <string>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1" colspan="2">
+                 <widget class="QCheckBox" name="taggingShowNotesRecursivelyCheckBox">
+                  <property name="text">
+                   <string>Show all notes of a tag including the notes of their children-tags</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="1">
+                 <widget class="QGroupBox" name="notesPanelSortGroupBox">
+                  <property name="title">
+                   <string>Sort</string>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_16">
+                   <item>
+                    <widget class="QRadioButton" name="notesPanelSortAlphabeticalRadioButton">
+                     <property name="text">
+                      <string>Alphabetical</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QRadioButton" name="notesPanelSortByLastChangeRadioButton">
+                     <property name="text">
+                      <string>By last change</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item row="4" column="2">
                  <widget class="QGroupBox" name="notesPanelOrderGroupBox">
                   <property name="enabled">
                    <bool>true</bool>
@@ -5307,47 +5351,10 @@ git config --global user.name &quot;Your name&quot;</string>
                   </layout>
                  </widget>
                 </item>
-                <item row="0" column="1" colspan="2">
-                 <widget class="QCheckBox" name="noteSubfoldersPanelShowNotesRecursivelyCheckBox">
+                <item row="3" column="1" colspan="2">
+                 <widget class="QCheckBox" name="enableNoteTreeCheckBox">
                   <property name="text">
-                   <string>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="3" column="1">
-                 <widget class="QGroupBox" name="notesPanelSortGroupBox">
-                  <property name="title">
-                   <string>Sort</string>
-                  </property>
-                  <layout class="QVBoxLayout" name="verticalLayout_16">
-                   <item>
-                    <widget class="QRadioButton" name="notesPanelSortAlphabeticalRadioButton">
-                     <property name="text">
-                      <string>Alphabetical</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QRadioButton" name="notesPanelSortByLastChangeRadioButton">
-                     <property name="text">
-                      <string>By last change</string>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
-                <item row="1" column="1" colspan="2">
-                 <widget class="QCheckBox" name="taggingShowNotesRecursivelyCheckBox">
-                  <property name="text">
-                   <string>Show all notes of a tag including the notes of their children-tags</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="2" column="1" colspan="2">
-                 <widget class="QCheckBox" name="noteListPreviewCheckBox">
-                  <property name="text">
-                   <string>Show notes in the note list with preview</string>
+                   <string>Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</string>
                   </property>
                  </widget>
                 </item>

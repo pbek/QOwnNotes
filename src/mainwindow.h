@@ -86,6 +86,11 @@ public:
         DisableLoadNoteDirectoryList = 0x0004,
     };
 
+    enum NoteTreeWidgetItemType {
+        NoteType = 1,
+        FolderType = 2,
+    };
+
     Q_DECLARE_FLAGS(CreateNewNoteOptions, CreateNewNoteOption)
 
     explicit MainWindow(QWidget *parent = nullptr);
@@ -572,7 +577,7 @@ private slots:
 
     void disableFullScreenMode();
 
-    void moveSelectedNotesToFolder(const QString& destinationFolder, QString noteFolderPath = "");
+    void moveSelectedNotesToFolder(const QString& destinationFolder);
 
     void copySelectedNotesToFolder(const QString& destinationFolder, QString noteFolderPath = "");
 
@@ -785,7 +790,7 @@ private:
 
     void initToolbars();
 
-    void buildTagTreeForParentItem(QTreeWidgetItem *parent = 0, bool topLevel = false);
+    void buildTagTreeForParentItem(QTreeWidgetItem *parent = nullptr, bool topLevel = false);
 
     void buildTagMoveMenuTree(QMenu *parentMenu,
                               int parentTagId = 0);
@@ -818,7 +823,7 @@ private:
             QTreeWidgetItem *parentItem,
             NoteSubFolder noteSubFolder);
 
-    void buildNoteSubFolderTreeForParentItem(QTreeWidgetItem *parent = 0);
+    void buildNoteSubFolderTreeForParentItem(QTreeWidgetItem *parent = nullptr);
 
     void setupNoteSubFolders();
 
@@ -826,7 +831,7 @@ private:
 
     void updateNoteDirectoryWatcher();
 
-    bool addNoteToNoteTreeWidget(Note note);
+    bool addNoteToNoteTreeWidget(Note note, QTreeWidgetItem *parent = nullptr);
 
     void removeSelectedNoteSubFolders();
 

@@ -1125,6 +1125,16 @@ bool Utils::Misc::isNoteListPreview() {
 }
 
 /**
+ * Returns if "enableNoteTree" is turned on
+ *
+ * @return
+ */
+bool Utils::Misc::isEnableNoteTree() {
+    QSettings settings;
+    return settings.value("enableNoteTree").toBool();
+}
+
+/**
  * Unescapes some html special characters
  *
  * @param html
