@@ -32,7 +32,8 @@ HunspellClient::HunspellClient(QObject *parent)
     : Client(parent)
 {
     qCDebug(SONNET_HUNSPELL) << " HunspellClient::HunspellClient";
-
+    qDebug() <<"DICT PATH::: "<< QDir::homePath() + "/dicts";
+    qDebug() <<"DICT PATH::: "<<  QDir::currentPath() + "/dicts";
     QStringList dirList;
     // search QStandardPaths
     dirList.append(QStandardPaths::locateAll(
@@ -52,15 +53,20 @@ HunspellClient::HunspellClient(QObject *parent)
 
         }
     };
-//disable this for now
-/*#ifdef Q_OS_WIN
-    maybeAddPath(QStringLiteral(SONNET_INSTALL_PREFIX "/bin/data/hunspell/"));
+
+//custom paths
+#ifdef Q_OS_WIN
+//    maybeAddPath(QStringLiteral(SONNET_INSTALL_PREFIX "/bin/data/hunspell/"));
+      QString home = QDir::homePath() + "/dicts";
+      QString current = QDir::currentPath() + "/dicts";
+      maybeAddPath(home);
+      maybeAddPath(current);
 #else
     maybeAddPath(QStringLiteral("/System/Library/Spelling"));
     maybeAddPath(QStringLiteral("/usr/share/hunspell/"));
     maybeAddPath(QStringLiteral("/usr/share/myspell/"));
 #endif
-*/
+
 
     for (const QString &dirString : dirList) {
         QDir dir(dirString);
