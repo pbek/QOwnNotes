@@ -92,9 +92,9 @@ SpellerPlugin *Loader::createSpeller(const QString &language, const QString &cli
 {
     QString backend = clientName;
     QString plang = language;
-
     if (plang.isEmpty()) {
         plang = d->settings->defaultLanguage();
+        qDebug() << "SO LOADING: " << plang;
     }
 
     auto clientsItr = d->languageClients.constFind(plang);

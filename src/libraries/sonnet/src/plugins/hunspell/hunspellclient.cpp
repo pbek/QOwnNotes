@@ -32,8 +32,6 @@ HunspellClient::HunspellClient(QObject *parent)
     : Client(parent)
 {
     qCDebug(SONNET_HUNSPELL) << " HunspellClient::HunspellClient";
-    qDebug() <<"DICT PATH::: "<< QDir::homePath() + "/dicts";
-    qDebug() <<"DICT PATH::: "<<  QDir::currentPath() + "/dicts";
     QStringList dirList;
     // search QStandardPaths
     dirList.append(QStandardPaths::locateAll(

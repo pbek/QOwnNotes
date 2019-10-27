@@ -101,7 +101,7 @@ QByteArray HunspellDict::toDictEncoding(const QString &word) const
 
 bool HunspellDict::isCorrect(const QString &word) const
 {
-    qCDebug(SONNET_HUNSPELL) << " isCorrect :" << word;
+   // qCDebug(SONNET_HUNSPELL) << " isCorrect :" << word;
     if (!m_speller) {
         return false;
     }
@@ -112,7 +112,7 @@ bool HunspellDict::isCorrect(const QString &word) const
     return result != 0;
 #else
     bool result = m_speller->spell(toDictEncoding(word).toStdString());
-    qCDebug(SONNET_HUNSPELL) << " result :" << result;
+   // qCDebug(SONNET_HUNSPELL) << " result :" << result;
     return result;
 #endif
 }
