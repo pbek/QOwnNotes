@@ -11271,11 +11271,9 @@ void MainWindow::loadDictionaryNames() {
     languageGroup->setExclusive(true);
 
     //first add autoDetect
-    QAction *autoDetect = new QAction;
+    QAction *autoDetect = ui->menuLanguages->addAction("Auto Detect");
     autoDetect->setCheckable(true);
-    autoDetect->setText("Auto Detect");
     autoDetect->setData("auto");
-    ui->menuLanguages->addAction(autoDetect);
     autoDetect->setActionGroup(languageGroup);
     QString prevLang = settings.value("spellCheckLanguage", "auto").toString();
     if (prevLang == "auto") {
@@ -11292,11 +11290,9 @@ void MainWindow::loadDictionaryNames() {
     QStringList::const_iterator it=langNames.constBegin();
     QStringList::const_iterator itt=langs.constBegin();
     for (; it != langNames.constEnd(); ++it, ++itt) {
-        QAction *action = new QAction;
+        QAction *action = ui->menuLanguages->addAction(*it);
         action->setCheckable(true);
-        ui->menuLanguages->addAction(action);
         action->setActionGroup(languageGroup);
-        action->setText(*it);
         action->setData(*itt);
 
         if (*itt == prevLang){
