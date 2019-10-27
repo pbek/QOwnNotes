@@ -14,6 +14,7 @@
  */
 
 #include <QApplication>
+#include <QObject>
 #include <QDebug>
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
@@ -30,22 +31,24 @@
  * @return
  */
 QOwnNotesMarkdownHighlighter::QOwnNotesMarkdownHighlighter(
-        QTextDocument *parent,  HighlightingOptions highlightingOptions)
+        QTextDocument *parent,
+        QOwnSpellChecker *_spellchecker,
+        HighlightingOptions highlightingOptions)
         : MarkdownHighlighter(parent, highlightingOptions) {
     Q_UNUSED(parent)
     Q_UNUSED(highlightingOptions)
 
-    spellchecker = new Sonnet::Speller();
+    spellchecker = _spellchecker;
     languageFilter = new Sonnet::LanguageFilter(new Sonnet::SentenceTokenizer());
     wordTokenizer = new Sonnet::WordTokenizer();
-    wordCount = 0;
-    errorCount = 0;
-    codeBlock = 0;
+    inlineCode = 0; // for `
+    codeBlock = 0; // for ```
+}
 
-    qDebug () <<"[Sonnet]Available Langs: "<< spellchecker->availableLanguages();
-    qDebug () <<"[Sonnet]Available Backend: "<< spellchecker->availableBackends();
-    qDebug () <<"[Sonnet]Available Dicts: "<< spellchecker->availableDictionaries();
-    qDebug () <<"[Sonnet]Available Lang names: "<< spellchecker->availableLanguageNames();
+QOwnNotesMarkdownHighlighter::~QOwnNotesMarkdownHighlighter()
+{
+    delete languageFilter;
+    delete wordTokenizer;
 }
 
 void QOwnNotesMarkdownHighlighter::updateCurrentNote() {
@@ -63,7 +66,9 @@ void QOwnNotesMarkdownHighlighter::highlightBlock(const QString &text) {
     setCurrentBlockState(HighlighterState::NoState);
     currentBlock().setUserState(HighlighterState::NoState);
     highlightMarkdown(text);
-    highlightSpellChecking(text);
+    if (spellchecker->isActive()) {
+        highlightSpellChecking(text);
+    }
     _highlightingFinished = true;
 }
 
@@ -145,58 +150,6 @@ void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(const QString& text)
  * Spellchecker lives here
 */
 
-//LanguageCache class
-// * Copyright (C)  2004  Zack Rusin <zack@kde.org>
-// * Copyright (C)  2006  Laurent Montel <montel@kde.org>
-// * Copyright (C)  2013  Martin Sandsmark <martin.sandsmark@org>
-class LanguageCache : public QTextBlockUserData
-{
-public:
-    // Key: QPair<start, length>
-    // Value: language name
-    QMap<QPair<int, int>, QString> languages;
-
-    // Remove all cached language information after @p pos
-    void invalidate(int pos)
-    {
-        QMutableMapIterator<QPair<int, int>, QString> it(languages);
-        it.toBack();
-        while (it.hasPrevious()) {
-            it.previous();
-            if (it.key().first+it.key().second >= pos) {
-                it.remove();
-            } else {
-                break;
-            }
-        }
-    }
-
-    QString languageAtPos(int pos) const
-    {
-        // The data structure isn't really great for such lookups...
-        QMapIterator<QPair<int, int>, QString> it(languages);
-        while (it.hasNext()) {
-            it.next();
-            if (it.key().first <= pos && it.key().first + it.key().second >= pos) {
-                return it.value();
-            }
-        }
-        return QString();
-    }
-};
-
-QString QOwnNotesMarkdownHighlighter::currentLanguage() const {
-    return spellchecker->language();
-}
-
-void QOwnNotesMarkdownHighlighter::setCurrentLanguage(const QString &lang) {
-    spellchecker->setLanguage(lang);
-}
-
-bool QOwnNotesMarkdownHighlighter::isWordMisspelled(const QString &word) {
-    return spellchecker->isMisspelled(word);
-}
-
 void QOwnNotesMarkdownHighlighter::setMisspelled(const int start, const int count) {
     //append to the already existing text format.
     //creating a new format will destroy pre-existing format
@@ -231,20 +184,33 @@ static bool hasNotEmptyText(const QString &text)
     return false;
 }
 
+/**
+ * Uses the QOwnSpellChecker to check words for correctness and underlines the incorrect words
+ *
+ * @param text
+ */
 void QOwnNotesMarkdownHighlighter::highlightSpellChecking(const QString &text) {
-    //TODO: include other characters, for other languages
-    //      add auto detection of languages
+    //if it's inline code, don't spell check
+    if (text == "`") {
+        ++inlineCode;
+    }
+    if (inlineCode % 2 != 0) {
+        return;
+    }
+    //if it's a code block, don't spell check
     if (text == "```") {
-        codeBlock++;
+        ++codeBlock;
     }
     if (codeBlock % 2 != 0) {
         return;
     }
+    //if it's empty line or just spaces, don't spell check
     if (!hasNotEmptyText(text)) {
         return;
     }
     if (!spellchecker->isValid()) {
         qDebug () << "[Sonnet]Spellchercher invalid!";
+        return;
     }
 
     languageFilter->setBuffer(text);
@@ -255,7 +221,8 @@ void QOwnNotesMarkdownHighlighter::highlightSpellChecking(const QString &text) {
         setCurrentBlockUserData(languageCache);
     }
 
-    const bool autodetectLanguage = spellchecker->testAttribute(Sonnet::Speller::AutoDetectLanguage);
+    const bool autodetectLanguage = spellchecker->isAutoDetectOn() ?
+               spellchecker->testAttribute(Sonnet::Speller::AutoDetectLanguage) : false;
     while (languageFilter->hasNext()) {
         QStringRef sentence = languageFilter->next();
         if (autodetectLanguage) {
@@ -274,23 +241,18 @@ void QOwnNotesMarkdownHighlighter::highlightSpellChecking(const QString &text) {
             if (lang.isEmpty()) {
                 continue;
             }
-            qDebug () << "Sentence: " << sentence;
-            qDebug () << "Language detected: " << lang;
-            spellchecker->setLanguage(lang);
+            spellchecker->setCurrentLanguage(lang);
         }
 
         wordTokenizer->setBuffer(sentence.toString());
         int offset = sentence.position();
         while (wordTokenizer->hasNext()) {
             QStringRef word = wordTokenizer->next();
+            //in case it's not a word, like an email or a number
             if (!wordTokenizer->isSpellcheckable()) {
                 continue;
             }
-            ++wordCount;
-            if (spellchecker->isMisspelled(word.toString())) {
-                ++errorCount;
-                qDebug () << "Word->Position + offset" << word.position() + offset;
-                qDebug () << "Word->length" << word.length();
+            if (spellchecker->isWordMisspelled(word.toString())) {
                 setMisspelled(word.position()+offset, word.length());
             } else {
                 //unsetMisspelled(word.position()+offset, word.length());
@@ -299,27 +261,5 @@ void QOwnNotesMarkdownHighlighter::highlightSpellChecking(const QString &text) {
     }
 
     setCurrentBlockState(0);
-
-/*
- * Old implementation
- * Will be removed later
- */
-//    QRegularExpression regex("[a-zA-Z]+");
-//    QRegularExpressionMatchIterator it = regex.globalMatch(text);
-//    while(it.hasNext()){
-//        QRegularExpressionMatch m = it.next();
-//        QString word = m.captured();
-//        bool isMisspelled = !word.isEmpty()
-//                         && word.length() > 3
-//                         && isWordMisspelled(word)
-//                         && word != " ";
-//        if(isMisspelled) {
-//            setMisspelled(m.capturedStart(0), m.capturedEnd());
-//        }
-//        else {
-//            //disabling this for now because it's breaking the markdown highlighting
-//            //unsetMisspelled(m.capturedStart(0), m.capturedEnd());
-//        }
-//    }
 }
 

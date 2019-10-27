@@ -25,6 +25,7 @@ public:
     Q_ENUMS(FontModificationMode)
 
     explicit QOwnNotesMarkdownTextEdit(QWidget *parent = nullptr);
+    ~QOwnNotesMarkdownTextEdit();
 
     void setStyles();
     void openUrl(QString urlString);
@@ -47,8 +48,11 @@ private slots:
 
 private:
     MainWindow *mainWindow;
+    QOwnSpellChecker *spellchecker;
 
     void setFormatStyle(MarkdownHighlighter::HighlighterState index);
+
+    bool onContextMenuEvent(QContextMenuEvent *event);
 
 Q_SIGNALS:
     void resize(QResizeEvent* event);

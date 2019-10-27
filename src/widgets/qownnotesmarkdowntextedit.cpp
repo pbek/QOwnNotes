@@ -20,7 +20,10 @@
 QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
         : QMarkdownTextEdit(parent, false) {
     mainWindow = Q_NULLPTR;
-    _highlighter = new QOwnNotesMarkdownHighlighter(document());
+    spellchecker = new QOwnSpellChecker();
+    _highlighter = new QOwnNotesMarkdownHighlighter(document(), spellchecker);
+
+
     setStyles();
     updateSettings();
 
@@ -43,12 +46,15 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
     if (options != MarkdownHighlighter::HighlightingOption::None) {
         _highlighter->initHighlightingRules();
     }
-
 #ifdef WITH_SONNET
     //Sonnet::SpellCheckDecorator *decorator = new Sonnet::SpellCheckDecorator(this);
     //Q_UNUSED(decorator)
     qDebug() <<"With SPELLING";
 #endif
+}
+
+QOwnNotesMarkdownTextEdit::~QOwnNotesMarkdownTextEdit()
+{
 }
 
 /**
@@ -359,6 +365,19 @@ void QOwnNotesMarkdownTextEdit::updateSettings() {
         options |= QMarkdownTextEdit::AutoTextOption::BracketRemoval;
     }
 
+    //spell check active/inactive
+    bool spellcheckerActive = settings.value("checkSpelling", true).toBool();
+    spellchecker->setActive(spellcheckerActive);
+
+
+    QString lang = settings.value("spellCheckLanguage", "auto").toString();
+    if (lang == "auto") {
+        spellchecker->setAutoDetect(true);
+    } else {
+        spellchecker->setAutoDetect(false);
+        spellchecker->setCurrentLanguage(lang);
+    }
+
     setAutoTextOptions(options);
 
     // highlighting is always disabled for logTextEdit
@@ -411,7 +430,115 @@ void QOwnNotesMarkdownTextEdit::highlightCurrentLine()
     setExtraSelections(extraSelections);
 }
 
+bool QOwnNotesMarkdownTextEdit::onContextMenuEvent(QContextMenuEvent *event) {
+    //obtain the cursor at current mouse position
+    QTextCursor cursor = cursorForPosition(event->pos());
+    const int mousePos = cursor.position();
+
+    // Check if the user clicked a selected word
+    const bool selectedWordClicked = cursor.hasSelection()
+                                     && mousePos >= cursor.selectionStart()
+                                     && mousePos <= cursor.selectionEnd();
+
+    // Get the word under the (mouse-)cursor and see if it is misspelled.
+    // Don't include apostrophes at the start/end of the word in the selection.
+    QTextCursor wordSelectCursor(cursor);
+    wordSelectCursor.clearSelection();
+    wordSelectCursor.select(QTextCursor::WordUnderCursor);
+    QString selectedWord = wordSelectCursor.selectedText();
+
+    bool isMouseCursorInsideWord = true;
+    if ( (mousePos < wordSelectCursor.selectionStart()
+         || mousePos >= wordSelectCursor.selectionEnd())
+         && (selectedWord.length() > 1) ) {
+        isMouseCursorInsideWord = false;
+    }
+
+    // Clear the selection again, we re-select it below (without the apostrophes).
+    wordSelectCursor.setPosition(wordSelectCursor.position() - selectedWord.size());
+    if (selectedWord.startsWith(QLatin1Char('\'')) || selectedWord.startsWith(QLatin1Char('\"'))) {
+        selectedWord = selectedWord.right(selectedWord.size() - 1);
+        wordSelectCursor.movePosition(QTextCursor::NextCharacter, QTextCursor::MoveAnchor);
+    }
+    if (selectedWord.endsWith(QLatin1Char('\'')) || selectedWord.endsWith(QLatin1Char('\"'))) {
+        selectedWord.chop(1);
+    }
+
+    wordSelectCursor.movePosition(QTextCursor::NextCharacter,
+                                  QTextCursor::KeepAnchor, selectedWord.size());
+
+    const bool wordIsMisspelled = isMouseCursorInsideWord
+                                  && spellchecker
+                                  && spellchecker->isActive()
+                                  && !selectedWord.isEmpty()
+                                  && spellchecker->isWordMisspelled(selectedWord);
+
+    // If the user clicked a selected word, do nothing.
+    // If the user clicked somewhere else, move the cursor there.
+    // If the user clicked on a misspelled word, select that word.
+    if (!selectedWordClicked) {
+        if (wordIsMisspelled) {
+                setTextCursor(wordSelectCursor);
+        }
+        else {
+            setTextCursor(cursor);
+        }
+    }
+    cursor = textCursor();
+    // Use standard context menu for already selected words, correctly spelled
+    // words and words inside quotes.
+    if (!wordIsMisspelled || selectedWordClicked) {
+        return false;
+    }
+
+    //create the suggesstion menu
+    QMenu menu;
+    //Add the suggestions to the menu
+    const QStringList reps = spellchecker->suggestionsForWord(selectedWord, cursor, 8);
+    if (reps.isEmpty()) {
+        QAction *suggestionsAction = menu.addAction(tr("No suggestions for %1").arg(selectedWord));
+        suggestionsAction->setEnabled(false);
+    } else {
+        QStringList::const_iterator end(reps.constEnd());
+        for (QStringList::const_iterator it = reps.constBegin(); it != end; ++it) {
+            menu.addAction(*it);
+        }
+    }
+
+    menu.addSeparator();
+    const QPoint &pos = event->globalPos();
+    QAction *ignoreAction = menu.addAction(tr("Ignore"));
+    QAction *addToDictAction = menu.addAction(tr("Add to Dictionary"));
+    //Execute the popup inline
+    const QAction *selectedAction = menu.exec(pos);
+
+    if (selectedAction) {
+        Q_ASSERT(cursor.selectedText() == selectedWord);
+
+        if (selectedAction == ignoreAction) {
+            spellchecker->ignoreWord(selectedWord);
+            _highlighter->rehighlight();
+        } else if (selectedAction == addToDictAction) {
+            spellchecker->addWordToDictionary(selectedWord);
+            _highlighter->rehighlight();
+        }
+        // Other actions can only be one of the suggested words
+        else {
+            const QString replacement = selectedAction->text();
+            Q_ASSERT(reps.contains(replacement));
+            cursor.insertText(replacement);
+            setTextCursor(cursor);
+        }
+    }
+
+    return true;
+}
+
+
 bool QOwnNotesMarkdownTextEdit::eventFilter(QObject *obj, QEvent *event) {
+    if (event->type() == QEvent::ContextMenu) {
+        return onContextMenuEvent(static_cast<QContextMenuEvent *>(event));
+    }
     if (event->type() == QEvent::KeyPress) {
         auto *keyEvent = static_cast<QKeyEvent *>(event);
 
