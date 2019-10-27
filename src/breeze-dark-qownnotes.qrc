@@ -1,5 +1,5 @@
-<!DOCTYPE RCC><RCC version="1.0">
-    <qresource prefix="icons/breeze-dark-qownnotes">
+<RCC>
+    <qresource prefix="/icons/breeze-dark-qownnotes">
         <file alias="index.theme">icons/breeze-dark-qownnotes/index.theme</file>
         <file alias="16x16/document-edit.svg">icons/breeze-dark-qownnotes/16x16/document-edit.svg</file>
         <file alias="16x16/document-new.svg">icons/breeze-dark-qownnotes/16x16/document-new.svg</file>
@@ -97,5 +97,6 @@
         <file alias="16x16/window.svg">icons/breeze-dark-qownnotes/16x16/window.svg</file>
         <file alias="16x16/mail-attachment.svg">icons/breeze-dark-qownnotes/16x16/mail-attachment.svg</file>
         <file alias="16x16/transform-crop.svg">icons/breeze-dark-qownnotes/16x16/transform-crop.svg</file>
+        <file>icons/breeze-dark-qownnotes/16x16/tools-check-spelling.svg</file>
     </qresource>
 </RCC>

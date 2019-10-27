@@ -100,6 +100,7 @@
 #include <QProgressDialog>
 #include <utility>
 #include <QScreen>
+#include "libraries/sonnet/src/core/speller.h"
 
 MainWindow::MainWindow(QWidget *parent) :
         QMainWindow(parent),
@@ -2247,6 +2248,13 @@ void MainWindow::readSettings() {
     // we want to trigger the event afterwards so the settings of the note edits are updated
     bool centerCursor = settings.value("Editor/centerCursor").toBool();
     ui->actionTypewriter_mode->setChecked(centerCursor);
+
+    //restore old spell check settings
+    ui->actionCheck_spelling->setChecked(settings.value("checkSpelling").toBool());
+
+    //load language dicts names into menu
+    languageGroup = new QActionGroup(ui->menuLanguages);
+    loadDictionaryNames();
 }
 
 /**
@@ -11246,4 +11254,62 @@ void MainWindow::on_actionTypewriter_mode_toggled(bool arg1) {
         // center the cursor immediately if typewriter mode is turned on
         activeNoteTextEdit()->centerTheCursor();
     }
+}
+
+void MainWindow::on_actionCheck_spelling_toggled(bool checked) {
+    QSettings settings;
+    settings.setValue("checkSpelling", checked);
+    ui->noteTextEdit->updateSettings();
+}
+
+void MainWindow::loadDictionaryNames() {
+    Sonnet::Speller *speller = new Sonnet::Speller();
+    QSettings settings;
+    QStringList langs = speller->availableLanguages();
+    QStringList langNames = speller->availableLanguageNames();
+
+    languageGroup->setExclusive(true);
+
+    //first add autoDetect
+    QAction *autoDetect = new QAction;
+    autoDetect->setCheckable(true);
+    autoDetect->setText("Auto Detect");
+    autoDetect->setData("auto");
+    ui->menuLanguages->addAction(autoDetect);
+    autoDetect->setActionGroup(languageGroup);
+    QString prevLang = settings.value("spellCheckLanguage", "auto").toString();
+    if (prevLang == "auto") {
+        autoDetect->setChecked(true);
+        autoDetect->trigger();
+    }
+
+    //not really possible but just in case
+    if (langNames.length() != langs.length()) {
+        qDebug () << "Error: langNames.length != langs.length()";
+        return;
+    }
+
+    QStringList::const_iterator it=langNames.constBegin();
+    QStringList::const_iterator itt=langs.constBegin();
+    for (; it != langNames.constEnd(); ++it, ++itt) {
+        QAction *action = new QAction;
+        action->setCheckable(true);
+        ui->menuLanguages->addAction(action);
+        action->setActionGroup(languageGroup);
+        action->setText(*it);
+        action->setData(*itt);
+
+        if (*itt == prevLang){
+            action->setChecked(true);
+            action->trigger();
+        }
+    }
+    connect(languageGroup, SIGNAL(triggered(QAction*)), this, SLOT(onLanguageChanged(QAction*)));
+}
+
+void MainWindow::onLanguageChanged(QAction *action) {
+    QString lang = action->data().toString();
+    QSettings settings;
+    settings.setValue("spellCheckLanguage", lang);
+    ui->noteTextEdit->updateSettings();
 }
