@@ -537,7 +537,8 @@ bool QOwnNotesMarkdownTextEdit::onContextMenuEvent(QContextMenuEvent *event) {
 
 bool QOwnNotesMarkdownTextEdit::eventFilter(QObject *obj, QEvent *event) {
     if (event->type() == QEvent::ContextMenu) {
-        return onContextMenuEvent(static_cast<QContextMenuEvent *>(event));
+        if (spellchecker->isActive())
+            return onContextMenuEvent(static_cast<QContextMenuEvent *>(event));
     }
     if (event->type() == QEvent::KeyPress) {
         auto *keyEvent = static_cast<QKeyEvent *>(event);

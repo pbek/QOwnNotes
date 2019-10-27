@@ -69,11 +69,11 @@ bool QOwnSpellChecker::testAttribute(Sonnet::Speller::Attribute attr) const {
     return spellchecker->testAttribute(attr);
 }
 
-void QOwnSpellChecker::setAutoDetect(bool autoDetectt) {
-    if (autoDetectt == QOwnSpellChecker::autoDetect) {
+void QOwnSpellChecker::setAutoDetect(bool _autoDetect) {
+    if (_autoDetect == autoDetect) {
         return;
     }
-    QOwnSpellChecker::autoDetect = autoDetectt;
+    autoDetect = _autoDetect;
 }
 
 bool QOwnSpellChecker::isAutoDetectOn() const {
@@ -90,13 +90,17 @@ QStringList QOwnSpellChecker::suggestionsForWord(const QString &word, int max) {
 
 QStringList QOwnSpellChecker::suggestionsForWord(const QString &word,
                                                  const QTextCursor &cursor, int max) {
-    LanguageCache *cache = dynamic_cast<LanguageCache *>(cursor.block().userData());
-    if (cache) {
-        const QString cachedLanguage = cache->languageAtPos(cursor.positionInBlock());
-        if (!cachedLanguage.isEmpty()) {
-            spellchecker->setLanguage(cachedLanguage);
+    //detect the lang
+    if (autoDetect) {
+        LanguageCache *cache = dynamic_cast<LanguageCache *>(cursor.block().userData());
+        if (cache) {
+            const QString cachedLanguage = cache->languageAtPos(cursor.positionInBlock());
+            if (!cachedLanguage.isEmpty()) {
+                spellchecker->setLanguage(cachedLanguage);
+            }
         }
     }
+    //else use the user specified lang
     QStringList suggestions = spellchecker->suggest(word);
     if (max >= 0 && suggestions.count() > max) {
         suggestions = suggestions.mid(0, max);
