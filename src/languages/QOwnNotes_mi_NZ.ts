@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pcm" sourcelanguage="en">
+<TS version="2.1" language="mi" sourcelanguage="en">
   <context>
     <name>AboutDialog</name>
     <message>
       <location filename="../dialogs/aboutdialog.ui" line="14"/>
       <source>About QOwnNotes</source>
-      <translation>About QOwnNotes</translation>
+      <translation type="unfinished">About QOwnNotes</translation>
     </message>
   </context>
   <context>
@@ -15,7 +15,7 @@
       <location filename="../dialogs/actiondialog.ui" line="14"/>
       <location filename="../dialogs/actiondialog.ui" line="46"/>
       <source>Find action</source>
-      <translation>Find action</translation>
+      <translation type="unfinished">Find action</translation>
     </message>
   </context>
   <context>
@@ -104,7 +104,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="14"/>
       <source>Evernote Import</source>
-      <translation>Evernote Import</translation>
+      <translation type="unfinished">Evernote Import</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="121"/>
@@ -114,7 +114,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="74"/>
       <source>Please select the Evernote enex file you want to import:</source>
-      <translation>Abeg make you choose de Evernote enex file way you won import:</translation>
+      <translation type="unfinished">Please select the Evernote enex file you want to import:</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="30"/>
@@ -124,7 +124,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="54"/>
       <source>Import images</source>
-      <translation>Import Images</translation>
+      <translation type="unfinished">Import images</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="91"/>
@@ -139,27 +139,27 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="23"/>
       <source>Evernote enex file</source>
-      <translation>Evernote enex file</translation>
+      <translation type="unfinished">Evernote enex file</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="67"/>
       <source>%v of %m note(s) imported</source>
-      <translation>%v of %m note(s) way don import</translation>
+      <translation type="unfinished">%v of %m note(s) imported</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="81"/>
       <source>Import attachments</source>
-      <translation>Import attachments</translation>
+      <translation type="unfinished">Import attachments</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="59"/>
       <source>Enex files</source>
-      <translation>Enex files</translation>
+      <translation type="unfinished">Enex files</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="60"/>
       <source>Select Evernote enex file to import</source>
-      <translation>Choose Evernote enex way go import</translation>
+      <translation type="unfinished">Select Evernote enex file to import</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="648"/>
@@ -330,7 +330,6 @@
       <source>%n lines moved.</source>
       <translation type="unfinished">
         <numerusform>%n lines moved.</numerusform>
-        <numerusform>%n lines moved.</numerusform>
       </translation>
     </message>
     <message>
@@ -367,7 +366,6 @@
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6042"/>
       <source>%n lines filtered.</source>
       <translation type="unfinished">
-        <numerusform>%n lines filtered.</numerusform>
         <numerusform>%n lines filtered.</numerusform>
       </translation>
     </message>
@@ -416,7 +414,6 @@
       <source>%n lines indented.</source>
       <translation type="unfinished">
         <numerusform>%n lines indented.</numerusform>
-        <numerusform>%n lines indented.</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -425,14 +422,12 @@
       <comment>%1 can be '&gt;' or '&lt;'</comment>
       <translation type="unfinished">
         <numerusform>%n lines %1ed %2 time.</numerusform>
-        <numerusform>%n lines %1ed %2 time.</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7045"/>
       <source>%n lines yanked.</source>
       <translation type="unfinished">
-        <numerusform>%n lines yanked.</numerusform>
         <numerusform>%n lines yanked.</numerusform>
       </translation>
     </message>
@@ -460,195 +455,195 @@
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="38"/>
       <source>Text font</source>
-      <translation>Text font</translation>
+      <translation type="unfinished">Text font</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="73"/>
       <source>Size:</source>
-      <translation>Size:</translation>
+      <translation type="unfinished">Size:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="80"/>
       <source>Family:</source>
-      <translation>Family:</translation>
+      <translation type="unfinished">Family:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="103"/>
       <source>Color schema</source>
-      <translation>Color schema</translation>
+      <translation type="unfinished">Color schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="124"/>
       <source>Delete schema</source>
-      <translation>Delete schema</translation>
+      <translation type="unfinished">Delete schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="127"/>
       <source>Delete</source>
-      <translation>Delete</translation>
+      <translation type="unfinished">Delete</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="169"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="631"/>
       <source>Export schema</source>
-      <translation>Export schema</translation>
+      <translation type="unfinished">Export schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="172"/>
       <source>Export</source>
-      <translation>Export</translation>
+      <translation type="unfinished">Export</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="271"/>
       <source>If you have created a nice color schema please export it and share it with everyone!</source>
-      <translation>If you don create one better color schema abeg make you export am con share am with everybody!</translation>
+      <translation type="unfinished">If you have created a nice color schema please export it and share it with everyone!</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="155"/>
       <source>Copy schema</source>
-      <translation>Copy schema</translation>
+      <translation type="unfinished">Copy schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="158"/>
       <source>Copy</source>
-      <translation>Copy</translation>
+      <translation type="unfinished">Copy</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="141"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="671"/>
       <source>Import schema</source>
-      <translation>Import schema</translation>
+      <translation type="unfinished">Import schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="144"/>
       <source>Import</source>
-      <translation>Import</translation>
+      <translation type="unfinished">Import</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="315"/>
       <source>Share schema</source>
-      <translation>Share schema</translation>
+      <translation type="unfinished">Share schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="288"/>
       <source>Background:</source>
-      <translation>Background:</translation>
+      <translation type="unfinished">Background:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="281"/>
       <source>Foreground:</source>
-      <translation>Foreground:</translation>
+      <translation type="unfinished">Foreground:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="264"/>
       <source>Bold</source>
-      <translation>Bold</translation>
+      <translation type="unfinished">Bold</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="244"/>
       <source>Italic</source>
-      <translation>Italic</translation>
+      <translation type="unfinished">Italic</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="237"/>
       <source>Adapt font size:</source>
-      <translation>Adapt font size:</translation>
+      <translation type="unfinished">Adapt font size:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="208"/>
       <source>Underline</source>
-      <translation>Underline</translation>
+      <translation type="unfinished">Underline</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="195"/>
       <source>Text preset</source>
-      <translation>Text present</translation>
+      <translation type="unfinished">Text preset</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="196"/>
       <source>Emphasized text</source>
-      <translation>Emphasized text</translation>
+      <translation type="unfinished">Emphasized text</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="197"/>
       <source>Strong text</source>
-      <translation>Strong text</translation>
+      <translation type="unfinished">Strong text</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="214"/>
       <source>(HTML) Comment</source>
-      <translation>(HTML) Comment</translation>
+      <translation type="unfinished">(HTML) Comment</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="204"/>
       <source>Header, level 1</source>
-      <translation>Header, level 1</translation>
+      <translation type="unfinished">Header, level 1</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="198"/>
       <source>Link</source>
-      <translation>Link</translation>
+      <translation type="unfinished">Link</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="199"/>
       <source>Image</source>
-      <translation>Image</translation>
+      <translation type="unfinished">Image</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="200"/>
       <source>Code (block)</source>
-      <translation>Code (block)</translation>
+      <translation type="unfinished">Code (block)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="201"/>
       <source>Code (inline)</source>
-      <translation>Code (inline)</translation>
+      <translation type="unfinished">Code (inline)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="203"/>
       <source>List item</source>
-      <translation>List item</translation>
+      <translation type="unfinished">List item</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="205"/>
       <source>Header, level 2</source>
-      <translation>Header, level 2</translation>
+      <translation type="unfinished">Header, level 2</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="206"/>
       <source>Header, level 3</source>
-      <translation>Header, level 3</translation>
+      <translation type="unfinished">Header, level 3</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="207"/>
       <source>Header, level 4</source>
-      <translation>Header, level 4</translation>
+      <translation type="unfinished">Header, level 4</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="208"/>
       <source>Header, level 5</source>
-      <translation>Header, level 5</translation>
+      <translation type="unfinished">Header, level 5</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="209"/>
       <source>Header, level 6</source>
-      <translation>Header, level 6</translation>
+      <translation type="unfinished">Header, level 6</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="212"/>
       <source>Block quote</source>
-      <translation>Block quote</translation>
+      <translation type="unfinished">Block quote</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="213"/>
       <source>Table</source>
-      <translation>Table</translation>
+      <translation type="unfinished">Table</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="215"/>
       <source>Masked syntax</source>
       <comment>text that will highlighted in a way that it's barely visible</comment>
-      <translation>Masked syntax</translation>
+      <translation type="unfinished">Masked syntax</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="220"/>
@@ -993,7 +988,6 @@
       <source>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
       <translation type="unfinished">
         <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
-        <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
       </translation>
     </message>
     <message>
@@ -1006,14 +1000,12 @@
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</source>
       <translation type="unfinished">
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="241"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
       <translation type="unfinished">
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
         <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
       </translation>
     </message>
@@ -1026,7 +1018,6 @@
       <location filename="../dialogs/localtrashdialog.cpp" line="265"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</source>
       <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</numerusform>
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</numerusform>
       </translation>
     </message>
@@ -1986,7 +1977,6 @@ Restore current note?</translation>
       <source>stored %n note(s) to disk</source>
       <translation type="unfinished">
         <numerusform>stored %n note(s) to disk</numerusform>
-        <numerusform>stored %n note(s) to disk</numerusform>
       </translation>
     </message>
     <message>
@@ -2013,7 +2003,6 @@ Restore current note?</translation>
       <location filename="../mainwindow.cpp" line="3172"/>
       <source>Removed %n conflicted database copies</source>
       <translation type="unfinished">
-        <numerusform>Removed %n conflicted database copies</numerusform>
         <numerusform>Removed %n conflicted database copies</numerusform>
       </translation>
     </message>
@@ -2081,9 +2070,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
-
-If the trash is enabled on your ownCloud server you should be able to restore them from there.</numerusform>
       </translation>
     </message>
     <message>
@@ -2096,7 +2082,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="4168"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
       <translation type="unfinished">
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
         <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
       </translation>
     </message>
@@ -2115,7 +2100,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
       <translation type="unfinished">
         <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
       </translation>
     </message>
     <message>
@@ -2128,7 +2112,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="4254"/>
       <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation type="unfinished">
-        <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
         <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
@@ -2143,7 +2126,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation type="unfinished">
         <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
@@ -2157,7 +2139,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
       <translation type="unfinished">
         <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
-        <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
       </translation>
     </message>
     <message>
@@ -2169,7 +2150,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="4397"/>
       <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation type="unfinished">
-        <numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
         <numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
@@ -2202,7 +2182,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="5201"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
       <translation type="unfinished">
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
         <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
       </translation>
     </message>
@@ -2298,7 +2277,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <source>Copied %n note(s) to %1</source>
       <translation type="unfinished">
         <numerusform>Copied %n note(s) to %1</numerusform>
-        <numerusform>Copied %n note(s) to %1</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -2306,14 +2284,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <source>Failed to copy %n note(s) (most likely already existing)</source>
       <translation type="unfinished">
         <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
-        <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="6852"/>
       <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
       <translation type="unfinished">
-        <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
         <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
       </translation>
     </message>
@@ -2494,7 +2470,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <comment>characters</comment>
       <translation type="unfinished">
         <numerusform>%n chars</numerusform>
-        <numerusform>%n chars</numerusform>
       </translation>
     </message>
     <message>
@@ -2527,7 +2502,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <source>%n notes selected</source>
       <translation type="unfinished">
         <numerusform>%n notes selected</numerusform>
-        <numerusform>%n notes selected</numerusform>
       </translation>
     </message>
     <message>
@@ -2551,14 +2525,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
       <translation type="unfinished">
         <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
-        <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4529"/>
       <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
       <translation type="unfinished">
-        <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
         <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
       </translation>
     </message>
@@ -2692,7 +2664,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation type="unfinished">
         <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
@@ -2706,7 +2677,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <source>%n note(s) were moved to note subfolder "%2"</source>
       <translation type="unfinished">
         <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
-        <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -2714,14 +2684,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation type="unfinished">
         <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="8769"/>
       <source>%n note(s) were copied to note subfolder "%2"</source>
       <translation type="unfinished">
-        <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
         <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
       </translation>
     </message>
@@ -2840,7 +2808,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="2718"/>
       <source>Stored %n note(s) to disk</source>
       <translation type="unfinished">
-        <numerusform>Stored %n note(s) to disk</numerusform>
         <numerusform>Stored %n note(s) to disk</numerusform>
       </translation>
     </message>
@@ -3051,7 +3018,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
       <translation type="unfinished">
         <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -3059,14 +3025,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <source>%n note(s) were tagged with "%2"</source>
       <translation type="unfinished">
         <numerusform>%n note(s) were tagged with "%2"</numerusform>
-        <numerusform>%n note(s) were tagged with "%2"</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5200"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
       <translation type="unfinished">
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
         <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
       </translation>
     </message>
@@ -3294,7 +3258,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
       <translation type="unfinished">
         <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
       </translation>
     </message>
   </context>
@@ -3344,7 +3307,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
       <translation type="unfinished">
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
         <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
       </translation>
     </message>
@@ -3518,14 +3480,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
       <translation type="unfinished">
         <numerusform>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
-        <numerusform>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../entities/note.cpp" line="3289"/>
       <source>…and %n more note(s)</source>
       <translation type="unfinished">
-        <numerusform>…and %n more note(s)</numerusform>
         <numerusform>…and %n more note(s)</numerusform>
       </translation>
     </message>
@@ -4002,7 +3962,6 @@ Do you want to install it anyway?</translation>
       <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="79"/>
       <source>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</source>
       <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
         <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
       </translation>
     </message>
@@ -6980,7 +6939,6 @@ This cannot be undone!</translation>
       <location filename="../services/websocketserverservice.cpp" line="188"/>
       <source>%n bookmark(s) created</source>
       <translation type="unfinished">
-        <numerusform>%n bookmark(s) created</numerusform>
         <numerusform>%n bookmark(s) created</numerusform>
       </translation>
     </message>

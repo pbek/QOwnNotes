@@ -2109,6 +2109,17 @@
                        </item>
                        <item>
                         <property name="text">
+                         <string notr="true">босански</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Bosnian</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">bs</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
                          <string notr="true">български</string>
                         </property>
                         <property name="toolTip">
@@ -2358,6 +2369,17 @@
                         </property>
                         <property name="whatsThis">
                          <string notr="true">ko</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string notr="true">македонски јазик</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Macedonian</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">mk</string>
                         </property>
                        </item>
                        <item>

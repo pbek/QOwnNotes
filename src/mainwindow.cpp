@@ -2250,7 +2250,7 @@ void MainWindow::readSettings() {
     ui->actionTypewriter_mode->setChecked(centerCursor);
 
     //restore old spell check settings
-    ui->actionCheck_spelling->setChecked(settings.value("checkSpelling").toBool());
+    ui->actionCheck_spelling->setChecked(settings.value("checkSpelling", true).toBool());
 
     //load language dicts names into menu
     languageGroup = new QActionGroup(ui->menuLanguages);

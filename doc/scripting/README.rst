@@ -1733,6 +1733,29 @@ handleNewNoteHeadlineHook
 You may want to take a look at the example
 `custom-new-note-headline.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/custom-new-note-headline.qml>`__.
 
+preNoteToMarkdownHtmlHook
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code:: javascript
+
+    /**
+     * This function is called before the markdown html of a note is generated
+     *
+     * It allows you to modify what is passed to the markdown to html converter 
+     *
+     * The method can for example be used in multiple scripts to render code (like LaTeX math or mermaid)
+     * to its graphical representation for the preview
+     *
+     * The note will not be changed in this process
+     *
+     * @param {NoteApi} note - the note object
+     * @param {string} markdown - the markdown that is about to being converted to html
+     * @return {string} the modified markdown or an empty string if nothing should be modified
+     */
+    function preNoteToMarkdownHtmlHook(note, markdown);
+
+You may want to take a look at the example `preview-styling.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/preview-styling.qml>`__.
+
 noteToMarkdownHtmlHook
 ~~~~~~~~~~~~~~~~~~~~~~
 

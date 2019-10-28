@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pcm" sourcelanguage="en">
+<TS version="2.1" language="lt" sourcelanguage="en">
   <context>
     <name>AboutDialog</name>
     <message>
       <location filename="../dialogs/aboutdialog.ui" line="14"/>
       <source>About QOwnNotes</source>
-      <translation>About QOwnNotes</translation>
+      <translation>Apie QOwnNotes</translation>
     </message>
   </context>
   <context>
@@ -15,7 +15,7 @@
       <location filename="../dialogs/actiondialog.ui" line="14"/>
       <location filename="../dialogs/actiondialog.ui" line="46"/>
       <source>Find action</source>
-      <translation>Find action</translation>
+      <translation>Rasti veiksmą</translation>
     </message>
   </context>
   <context>
@@ -23,79 +23,79 @@
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="14"/>
       <source>Insert attachment</source>
-      <translation type="unfinished">Insert attachment</translation>
+      <translation>Įdėkite priedą</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="20"/>
       <source>Image filename or URL</source>
-      <translation type="unfinished">Image filename or URL</translation>
+      <translation>Vaizdo failo vardas arba URL</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="26"/>
       <source>Path to file or URL</source>
-      <translation type="unfinished">Path to file or URL</translation>
+      <translation>Kelias į failą arba URL</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="36"/>
       <source>Select file</source>
-      <translation type="unfinished">Select file</translation>
+      <translation>Pasirinkite failą</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="46"/>
       <source>Title of the image link</source>
-      <translation type="unfinished">Title of the image link</translation>
+      <translation>Vaizdo nuorodos pavadinimas</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="49"/>
       <source>Title</source>
-      <translation type="unfinished">Title</translation>
+      <translation>Pavadinimas</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="94"/>
       <source>Cancel download</source>
-      <translation type="unfinished">Cancel download</translation>
+      <translation>Atšaukti atsisiuntimą</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="117"/>
       <source>Download URL</source>
       <comment>The URL will be downloaded</comment>
-      <translation type="unfinished">Download URL</translation>
+      <translation>Atsisiųsti URL</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="43"/>
       <source>Select file to insert</source>
-      <translation type="unfinished">Select file to insert</translation>
+      <translation>Pasirinkite failą, kurį norite įterpti</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="140"/>
       <source>Download error</source>
-      <translation type="unfinished">Download error</translation>
+      <translation>Atsisiuntimo klaida</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="141"/>
       <source>Error while downloading:
 %1</source>
-      <translation type="unfinished">Error while downloading:
+      <translation>Klaida atsiunčiant:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="169"/>
       <location filename="../dialogs/attachmentdialog.cpp" line="193"/>
       <source>File error</source>
-      <translation type="unfinished">File error</translation>
+      <translation>Failo klaida</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="170"/>
       <source>Could not open temporary file:
 %1</source>
-      <translation type="unfinished">Could not open temporary file:
+      <translation>Nepavyko atidaryti laikino failo:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="194"/>
       <source>Could not store downloaded file:
 %1</source>
-      <translation type="unfinished">Could not store downloaded file:
+      <translation>Nepavyko išsaugoti atsisiųsto failo:
 %1</translation>
     </message>
   </context>
@@ -104,162 +104,162 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="14"/>
       <source>Evernote Import</source>
-      <translation>Evernote Import</translation>
+      <translation>„Evernote“ importas</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="121"/>
       <source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</source>
-      <translation type="unfinished">To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</translation>
+      <translation>Norėdami gauti „enex“ failą, „Evernotes“ darbalaukio kliente turite pasirinkti vieną ar kelis užrašus ir meniu „Failas“ spustelėkite „Eksportuoti užrašus…“.</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="74"/>
       <source>Please select the Evernote enex file you want to import:</source>
-      <translation>Abeg make you choose de Evernote enex file way you won import:</translation>
+      <translation>Pasirinkite „Evernote enex“ failą, kurį norite importuoti:</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="30"/>
       <source>Select file</source>
-      <translation type="unfinished">Select file</translation>
+      <translation>Pasirinkite failą</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="54"/>
       <source>Import images</source>
-      <translation>Import Images</translation>
+      <translation>Importuoti vaizdus</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="91"/>
       <source>Metadata to import</source>
-      <translation type="unfinished">Metadata to import</translation>
+      <translation>Importuoti metaduomenys</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="165"/>
       <source>Import notes</source>
-      <translation type="unfinished">Import notes</translation>
+      <translation>Importuoti užrašus</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="23"/>
       <source>Evernote enex file</source>
-      <translation>Evernote enex file</translation>
+      <translation>„Evernote“ enex failas</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="67"/>
       <source>%v of %m note(s) imported</source>
-      <translation>%v of %m note(s) way don import</translation>
+      <translation>%v importuota %m natų</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="81"/>
       <source>Import attachments</source>
-      <translation>Import attachments</translation>
+      <translation>Importuoti priedus</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="59"/>
       <source>Enex files</source>
-      <translation>Enex files</translation>
+      <translation>„Enex“ failai</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="60"/>
       <source>Select Evernote enex file to import</source>
-      <translation>Choose Evernote enex way go import</translation>
+      <translation>Pasirinkite „Evernote enex“ failą, kurį norite importuoti</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="648"/>
       <source>Basic attributes</source>
-      <translation type="unfinished">Basic attributes</translation>
+      <translation>Pagrindiniai atributai</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="649"/>
       <source>Created date</source>
-      <translation type="unfinished">Created date</translation>
+      <translation>Sukūrimo data</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="651"/>
       <source>Updated date</source>
-      <translation type="unfinished">Updated date</translation>
+      <translation>Atnaujinta data</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="654"/>
       <source>Note attributes</source>
-      <translation type="unfinished">Note attributes</translation>
+      <translation>Pastabos atributai</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="655"/>
       <source>Subject date</source>
-      <translation type="unfinished">Subject date</translation>
+      <translation>Dalyko data</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="657"/>
       <source>Latitude</source>
-      <translation type="unfinished">Latitude</translation>
+      <translation>Platuma</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="659"/>
       <source>Longitude</source>
-      <translation type="unfinished">Longitude</translation>
+      <translation>Ilguma</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="661"/>
       <source>Altitude</source>
-      <translation type="unfinished">Altitude</translation>
+      <translation>Aukštis</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="663"/>
       <source>Author</source>
-      <translation type="unfinished">Author</translation>
+      <translation>Autorius</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="665"/>
       <source>Source</source>
-      <translation type="unfinished">Source</translation>
+      <translation>Šaltinis</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="667"/>
       <source>Source URL</source>
-      <translation type="unfinished">Source URL</translation>
+      <translation>Šaltinio URL</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="669"/>
       <source>Source application</source>
-      <translation type="unfinished">Source application</translation>
+      <translation>Šaltinio programa</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="671"/>
       <source>Reminder order</source>
-      <translation type="unfinished">Reminder order</translation>
+      <translation>Priminimo tvarka</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="673"/>
       <source>Reminder time</source>
-      <translation type="unfinished">Reminder time</translation>
+      <translation>Priminimo laikas</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="675"/>
       <source>Reminder done time</source>
-      <translation type="unfinished">Reminder done time</translation>
+      <translation>Priminimas padarytas laiku</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="677"/>
       <source>Place name</source>
-      <translation type="unfinished">Place name</translation>
+      <translation>Vietovardis</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="679"/>
       <source>Content class</source>
-      <translation type="unfinished">Content class</translation>
+      <translation>Turinio klasė</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="681"/>
       <source>Application data</source>
-      <translation type="unfinished">Application data</translation>
+      <translation>Programos duomenys</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="755"/>
       <source>Attribute</source>
-      <translation type="unfinished">Attribute</translation>
+      <translation>Atributai</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="755"/>
       <source>Value</source>
-      <translation type="unfinished">Value</translation>
+      <translation>Vertė</translation>
     </message>
   </context>
   <context>
@@ -268,12 +268,12 @@
       <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="166"/>
       <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="174"/>
       <source>Unknown option: %1</source>
-      <translation type="unfinished">Unknown option: %1</translation>
+      <translation>Nežinoma parinktis: %1</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="169"/>
       <source>Argument must be positive: %1=%2</source>
-      <translation type="unfinished">Argument must be positive: %1=%2</translation>
+      <translation>Argumentas turi būti teigiamas: %1 = %2</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="958"/>
@@ -331,6 +331,8 @@
       <translation type="unfinished">
         <numerusform>%n lines moved.</numerusform>
         <numerusform>%n lines moved.</numerusform>
+        <numerusform>%n lines moved.</numerusform>
+        <numerusform>%n lines moved.</numerusform>
       </translation>
     </message>
     <message>
@@ -367,6 +369,8 @@
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6042"/>
       <source>%n lines filtered.</source>
       <translation type="unfinished">
+        <numerusform>%n lines filtered.</numerusform>
+        <numerusform>%n lines filtered.</numerusform>
         <numerusform>%n lines filtered.</numerusform>
         <numerusform>%n lines filtered.</numerusform>
       </translation>
@@ -417,6 +421,8 @@
       <translation type="unfinished">
         <numerusform>%n lines indented.</numerusform>
         <numerusform>%n lines indented.</numerusform>
+        <numerusform>%n lines indented.</numerusform>
+        <numerusform>%n lines indented.</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -426,12 +432,16 @@
       <translation type="unfinished">
         <numerusform>%n lines %1ed %2 time.</numerusform>
         <numerusform>%n lines %1ed %2 time.</numerusform>
+        <numerusform>%n lines %1ed %2 time.</numerusform>
+        <numerusform>%n lines %1ed %2 time.</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7045"/>
       <source>%n lines yanked.</source>
       <translation type="unfinished">
+        <numerusform>%n lines yanked.</numerusform>
+        <numerusform>%n lines yanked.</numerusform>
         <numerusform>%n lines yanked.</numerusform>
         <numerusform>%n lines yanked.</numerusform>
       </translation>
@@ -460,247 +470,247 @@
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="38"/>
       <source>Text font</source>
-      <translation>Text font</translation>
+      <translation type="unfinished">Text font</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="73"/>
       <source>Size:</source>
-      <translation>Size:</translation>
+      <translation type="unfinished">Size:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="80"/>
       <source>Family:</source>
-      <translation>Family:</translation>
+      <translation type="unfinished">Family:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="103"/>
       <source>Color schema</source>
-      <translation>Color schema</translation>
+      <translation type="unfinished">Color schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="124"/>
       <source>Delete schema</source>
-      <translation>Delete schema</translation>
+      <translation type="unfinished">Delete schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="127"/>
       <source>Delete</source>
-      <translation>Delete</translation>
+      <translation type="unfinished">Delete</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="169"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="631"/>
       <source>Export schema</source>
-      <translation>Export schema</translation>
+      <translation type="unfinished">Export schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="172"/>
       <source>Export</source>
-      <translation>Export</translation>
+      <translation type="unfinished">Export</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="271"/>
       <source>If you have created a nice color schema please export it and share it with everyone!</source>
-      <translation>If you don create one better color schema abeg make you export am con share am with everybody!</translation>
+      <translation type="unfinished">If you have created a nice color schema please export it and share it with everyone!</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="155"/>
       <source>Copy schema</source>
-      <translation>Copy schema</translation>
+      <translation type="unfinished">Copy schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="158"/>
       <source>Copy</source>
-      <translation>Copy</translation>
+      <translation type="unfinished">Copy</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="141"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="671"/>
       <source>Import schema</source>
-      <translation>Import schema</translation>
+      <translation type="unfinished">Import schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="144"/>
       <source>Import</source>
-      <translation>Import</translation>
+      <translation type="unfinished">Import</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="315"/>
       <source>Share schema</source>
-      <translation>Share schema</translation>
+      <translation type="unfinished">Share schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="288"/>
       <source>Background:</source>
-      <translation>Background:</translation>
+      <translation type="unfinished">Background:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="281"/>
       <source>Foreground:</source>
-      <translation>Foreground:</translation>
+      <translation type="unfinished">Foreground:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="264"/>
       <source>Bold</source>
-      <translation>Bold</translation>
+      <translation type="unfinished">Bold</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="244"/>
       <source>Italic</source>
-      <translation>Italic</translation>
+      <translation type="unfinished">Italic</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="237"/>
       <source>Adapt font size:</source>
-      <translation>Adapt font size:</translation>
+      <translation>Pritaikyti šrifto dydį:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="208"/>
       <source>Underline</source>
-      <translation>Underline</translation>
+      <translation>Pabrėžti</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="195"/>
       <source>Text preset</source>
-      <translation>Text present</translation>
+      <translation>Iš anksto nustatytas tekstas</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="196"/>
       <source>Emphasized text</source>
-      <translation>Emphasized text</translation>
+      <translation>Pabrėžtas tekstas</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="197"/>
       <source>Strong text</source>
-      <translation>Strong text</translation>
+      <translation>Stiprus tekstas</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="214"/>
       <source>(HTML) Comment</source>
-      <translation>(HTML) Comment</translation>
+      <translation>(HTML) komentaras</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="204"/>
       <source>Header, level 1</source>
-      <translation>Header, level 1</translation>
+      <translation>Antraštė, 1 lygis</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="198"/>
       <source>Link</source>
-      <translation>Link</translation>
+      <translation>Nuoroda</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="199"/>
       <source>Image</source>
-      <translation>Image</translation>
+      <translation>Vaizdas</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="200"/>
       <source>Code (block)</source>
-      <translation>Code (block)</translation>
+      <translation>Kodas (blokas)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="201"/>
       <source>Code (inline)</source>
-      <translation>Code (inline)</translation>
+      <translation>Kodas (įterptas)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="203"/>
       <source>List item</source>
-      <translation>List item</translation>
+      <translation>Išvardinkite elementą</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="205"/>
       <source>Header, level 2</source>
-      <translation>Header, level 2</translation>
+      <translation>Antraštė, 2 lygis</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="206"/>
       <source>Header, level 3</source>
-      <translation>Header, level 3</translation>
+      <translation>Antraštė, 3 lygis</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="207"/>
       <source>Header, level 4</source>
-      <translation>Header, level 4</translation>
+      <translation>Antraštė, 4 lygis</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="208"/>
       <source>Header, level 5</source>
-      <translation>Header, level 5</translation>
+      <translation>Antraštė, 5 lygis</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="209"/>
       <source>Header, level 6</source>
-      <translation>Header, level 6</translation>
+      <translation>Antraštė, 6 lygis</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="212"/>
       <source>Block quote</source>
-      <translation>Block quote</translation>
+      <translation>Blokuoti citatą</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="213"/>
       <source>Table</source>
-      <translation>Table</translation>
+      <translation>Lentelė</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="215"/>
       <source>Masked syntax</source>
       <comment>text that will highlighted in a way that it's barely visible</comment>
-      <translation>Masked syntax</translation>
+      <translation>Užmaskuota sintaksė</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="220"/>
       <source>Broken link</source>
-      <translation type="unfinished">Broken link</translation>
+      <translation>Sugadinta nuoroda</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="210"/>
       <source>Horizontal rule</source>
-      <translation type="unfinished">Horizontal rule</translation>
+      <translation>Horizontalioji taisyklė</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="218"/>
       <source>Current line background color</source>
-      <translation type="unfinished">Current line background color</translation>
+      <translation>Dabartinė eilutės fono spalva</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="229"/>
       <source>This item will be used to preset colors for the other items</source>
-      <translation type="unfinished">This item will be used to preset colors for the other items</translation>
+      <translation>Šis elementas bus naudojamas nustatant kitų elementų spalvas</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="460"/>
       <source>Copy color schema</source>
-      <translation type="unfinished">Copy color schema</translation>
+      <translation>Kopijuoti spalvų schemą</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="461"/>
       <source>Color schema name</source>
-      <translation type="unfinished">Color schema name</translation>
+      <translation>Spalvų schemos pavadinimas</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="463"/>
       <source>Copy</source>
       <comment>as noun</comment>
-      <translation type="unfinished">Copy</translation>
+      <translation>Kopijuoti</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="582"/>
       <source>Remove schema</source>
-      <translation type="unfinished">Remove schema</translation>
+      <translation>Pašalinkite schemą</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="583"/>
       <source>Remove current schema? This cannot be undone!</source>
-      <translation type="unfinished">Remove current schema? This cannot be undone!</translation>
+      <translation>Pašalinti dabartinę schemą? Tai negali būti anuliuota!</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="630"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="670"/>
       <source>INI files</source>
-      <translation type="unfinished">INI files</translation>
+      <translation>INI failai</translation>
     </message>
   </context>
   <context>
@@ -708,27 +718,27 @@
     <message>
       <location filename="../dialogs/imagedialog.ui" line="14"/>
       <source>Insert image</source>
-      <translation type="unfinished">Insert image</translation>
+      <translation>Įterpti vaizdą</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="40"/>
       <source>Image filename or URL</source>
-      <translation type="unfinished">Image filename or URL</translation>
+      <translation>Vaizdo failo vardas arba URL</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="46"/>
       <source>Path to file or URL</source>
-      <translation type="unfinished">Path to file or URL</translation>
+      <translation>Kelias į failą arba URL</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="121"/>
       <source>Scaling width:</source>
-      <translation type="unfinished">Scaling width:</translation>
+      <translation>Mastelio plotis:</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="217"/>
       <source>Crop image</source>
-      <translation type="unfinished">Crop image</translation>
+      <translation>Apkarpyti nuotrauką</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="220"/>
@@ -738,42 +748,42 @@
     <message>
       <location filename="../dialogs/imagedialog.ui" line="30"/>
       <source>The path or url will be inserted directly, paths to files will be made relative to the current note</source>
-      <translation type="unfinished">The path or url will be inserted directly, paths to files will be made relative to the current note</translation>
+      <translation>Kelias arba URL bus įterpiami tiesiogiai, keliai į failus bus sudaromi atsižvelgiant į esamą užrašą</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="33"/>
       <source>Don't copy image to media folder</source>
-      <translation type="unfinished">Don't copy image to media folder</translation>
+      <translation>Nekopijuokite vaizdo į laikmenos aplanką</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="56"/>
       <source>Title of the image link</source>
-      <translation type="unfinished">Title of the image link</translation>
+      <translation>Vaizdo nuorodos pavadinimas</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="59"/>
       <source>Title</source>
-      <translation type="unfinished">Title</translation>
+      <translation>Pavadinimas</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="20"/>
       <source>Select image file</source>
-      <translation type="unfinished">Select image file</translation>
+      <translation>Pasirinkite vaizdo failą</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.cpp" line="75"/>
       <source>Image files</source>
-      <translation type="unfinished">Image files</translation>
+      <translation>Vaizdo failai</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.cpp" line="76"/>
       <source>Any files</source>
-      <translation type="unfinished">Any files</translation>
+      <translation>Bet kokie failai</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.cpp" line="82"/>
       <source>Select image to insert</source>
-      <translation type="unfinished">Select image to insert</translation>
+      <translation>Pasirinkite vaizdą, kurį norite įterpti</translation>
     </message>
   </context>
   <context>
@@ -781,33 +791,33 @@
     <message>
       <location filename="../widgets/layoutwidget.ui" line="97"/>
       <source>Use layout</source>
-      <translation type="unfinished">Use layout</translation>
+      <translation>Naudokite išdėstymą</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="76"/>
       <source>Use new layout</source>
-      <translation type="unfinished">Use new layout</translation>
+      <translation>Naudokite naują išdėstymą</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="77"/>
       <source>Do you want to use the selected layout?</source>
-      <translation type="unfinished">Do you want to use the selected layout?</translation>
+      <translation>Ar norite naudoti pasirinktą išdėstymą?</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="81"/>
       <source>The application will be quit afterwards.</source>
-      <translation type="unfinished">The application will be quit afterwards.</translation>
+      <translation>Vėliau paraiška bus nutraukta.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="82"/>
       <source>The application will be restarted afterwards.</source>
-      <translation type="unfinished">The application will be restarted afterwards.</translation>
+      <translation>Vėliau programa bus paleista iš naujo.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="140"/>
       <source>Minimal</source>
       <comment>Layout name</comment>
-      <translation type="unfinished">Minimal</translation>
+      <translation>Minimalus</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="142"/>
@@ -994,6 +1004,8 @@
       <translation type="unfinished">
         <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
         <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
+        <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
+        <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
       </translation>
     </message>
     <message>
@@ -1007,12 +1019,16 @@
       <translation type="unfinished">
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</numerusform>
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="241"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
       <translation type="unfinished">
+        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
+        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
         <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
         <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
       </translation>
@@ -1026,6 +1042,8 @@
       <location filename="../dialogs/localtrashdialog.cpp" line="265"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</source>
       <translation type="unfinished">
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</numerusform>
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</numerusform>
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</numerusform>
       </translation>
@@ -1095,25 +1113,25 @@
     <message>
       <location filename="../mainwindow.ui" line="683"/>
       <source>Add tag</source>
-      <translation type="unfinished">Add tag</translation>
+      <translation>Pridėti žymą</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="408"/>
       <location filename="../mainwindow.ui" line="894"/>
       <location filename="../mainwindow.cpp" line="714"/>
       <source>Navigation</source>
-      <translation type="unfinished">Navigation</translation>
+      <translation>Naršymas</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="391"/>
       <source>Find navigation item</source>
-      <translation type="unfinished">Find navigation item</translation>
+      <translation>Raskite naršymo elementą</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="680"/>
       <location filename="../mainwindow.cpp" line="7890"/>
       <source>Add a tag to the current note</source>
-      <translation type="unfinished">Add a tag to the current note</translation>
+      <translation>Pridėkite žymą prie esamo užrašo</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="850"/>
@@ -1138,22 +1156,22 @@
     <message>
       <location filename="../mainwindow.ui" line="1108"/>
       <source>Editor width in distraction free mode</source>
-      <translation type="unfinished">Editor width in distraction free mode</translation>
+      <translation>Redaktoriaus plotis nesiblaškant</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1111"/>
       <source>Editor width</source>
-      <translation type="unfinished">Editor width</translation>
+      <translation>Redaktoriaus plotis</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1198"/>
       <source>Custom actions</source>
-      <translation type="unfinished">Custom actions</translation>
+      <translation>Individualūs veiksmai</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1218"/>
       <source>main toolbar</source>
-      <translation type="unfinished">main toolbar</translation>
+      <translation>pagrindinė įrankių juosta</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1252"/>
@@ -1188,27 +1206,27 @@
     <message>
       <location filename="../mainwindow.ui" line="1336"/>
       <source>Post questions, feature requests or issues</source>
-      <translation type="unfinished">Post questions, feature requests or issues</translation>
+      <translation>Paskelbkite klausimus, prašymus dėl funkcijų ar problemas</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1347"/>
       <source>Alphabetical</source>
-      <translation type="unfinished">Alphabetical</translation>
+      <translation>Abėcėlės tvarka</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1350"/>
       <source>Sort alphabetical</source>
-      <translation type="unfinished">Sort alphabetical</translation>
+      <translation>Rūšiuoti abėcėlės tvarka</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1358"/>
       <source>By date</source>
-      <translation type="unfinished">By date</translation>
+      <translation>Pagal datą</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1361"/>
       <source>Sort by date</source>
-      <translation type="unfinished">Sort by date</translation>
+      <translation>Rūšiuoti pagal datą</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1385"/>
@@ -1218,12 +1236,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1388"/>
       <source>Show note versions on server</source>
-      <translation type="unfinished">Show note versions on server</translation>
+      <translation>Rodyti užrašų versijas serveryje</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1400"/>
       <source>Show trashed notes on server</source>
-      <translation type="unfinished">Show trashed notes on server</translation>
+      <translation>Rodyti sugadintus užrašus serveryje</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1405"/>
@@ -1240,114 +1258,114 @@
     <message>
       <location filename="../mainwindow.ui" line="1417"/>
       <source>Insert link to an url or a note</source>
-      <translation type="unfinished">Insert link to an url or a note</translation>
+      <translation>Įterpkite nuorodą į URL arba užrašą</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1429"/>
       <source>&amp;Find in current note</source>
-      <translation type="unfinished">&amp;Find in current note</translation>
+      <translation>&amp;Rasti dabartiniame rašte</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1432"/>
       <source>Find text in current note</source>
-      <translation type="unfinished">Find text in current note</translation>
+      <translation>Rasti tekstą dabartiniame rašte</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1445"/>
       <source>&amp;Duplicate text</source>
-      <translation type="unfinished">&amp;Duplicate text</translation>
+      <translation>&amp;Kopijuoti tekstą</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1457"/>
       <source>&amp;Back in note history</source>
-      <translation type="unfinished">&amp;Back in note history</translation>
+      <translation>&amp;Atgal į užrašų istoriją</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1370"/>
       <source>&amp;Settings</source>
-      <translation type="unfinished">&amp;Settings</translation>
+      <translation>&amp;Nustatymai</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="119"/>
       <source>Find or create note sub folder</source>
-      <translation type="unfinished">Find or create note sub folder</translation>
+      <translation>Raskite arba sukurkite užrašų papildomą aplanką</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="196"/>
       <source>Find or create tag</source>
-      <translation type="unfinished">Find or create tag</translation>
+      <translation>Raskite arba sukurkite žymą</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="292"/>
       <source>Search for notes or create new notes by entering text and pressing return</source>
-      <translation type="unfinished">Search for notes or create new notes by entering text and pressing return</translation>
+      <translation>Ieškokite užrašų arba sukurkite naujus užrašus įvesdami tekstą ir paspausdami grįžimo mygtuką</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="306"/>
       <source>Search or create note</source>
-      <translation type="unfinished">Search or create note</translation>
+      <translation>Ieškokite arba sukurkite užrašą</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7891"/>
       <source>Add a tag to the selected notes</source>
-      <translation type="unfinished">Add a tag to the selected notes</translation>
+      <translation>Pridėkite žymą prie pasirinktų užrašų</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="694"/>
       <source>New tag</source>
-      <translation type="unfinished">New tag</translation>
+      <translation>Nauja žyma</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="869"/>
       <location filename="../mainwindow.cpp" line="6011"/>
       <source>Export</source>
-      <translation type="unfinished">Export</translation>
+      <translation>Eksportuoti</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="882"/>
       <source>Import</source>
-      <translation type="unfinished">Import</translation>
+      <translation>Importuoti</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="907"/>
       <location filename="../mainwindow.cpp" line="5993"/>
       <source>Print</source>
-      <translation type="unfinished">Print</translation>
+      <translation>Spausdinti</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="918"/>
       <source>View note</source>
-      <translation type="unfinished">View note</translation>
+      <translation>Žiūrėti užrašą</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="930"/>
       <source>Trash</source>
-      <translation type="unfinished">Trash</translation>
+      <translation>Šiukšlių dėžė</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="997"/>
       <source>&amp;Edit</source>
-      <translation type="unfinished">&amp;Edit</translation>
+      <translation>&amp;Redaguoti</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1001"/>
       <source>Insert</source>
-      <translation type="unfinished">Insert</translation>
+      <translation>Įdėti</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1018"/>
       <source>Format</source>
-      <translation type="unfinished">Format</translation>
+      <translation>Formatas</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1031"/>
       <source>Extra</source>
-      <translation type="unfinished">Extra</translation>
+      <translation>Papildoma</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1047"/>
       <source>Edit</source>
-      <translation type="unfinished">Edit</translation>
+      <translation>Redaguoti</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1060"/>
@@ -1540,7 +1558,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1691"/>
       <source>Distraction free mode, you can leave it with a button on the bottom right</source>
-      <translation type="unfinished">Distraction free mode, you can leave it with a button on the bottom right</translation>
+      <translation>„Trikdžių“ režimas, kurį galite palikti mygtuku apačioje, dešinėje</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1702"/>
@@ -1550,38 +1568,38 @@
     <message>
       <location filename="../mainwindow.ui" line="1710"/>
       <source>Narrow</source>
-      <translation type="unfinished">Narrow</translation>
+      <translation>Siauras</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1721"/>
       <source>Medium</source>
-      <translation type="unfinished">Medium</translation>
+      <translation>Vidutinis</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1732"/>
       <source>Wide</source>
-      <translation type="unfinished">Wide</translation>
+      <translation>Platus</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1743"/>
       <source>Full</source>
-      <translation type="unfinished">Full</translation>
+      <translation>Pilna</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1755"/>
       <source>Paste html or media</source>
-      <translation type="unfinished">Paste html or media</translation>
+      <translation>Įklijuokite html arba laikmeną</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1758"/>
       <location filename="../mainwindow.ui" line="1761"/>
       <source>Paste images, notes and html from the clipboard</source>
-      <translation type="unfinished">Paste images, notes and html from the clipboard</translation>
+      <translation>Įklijuokite vaizdus, užrašus ir html iš iškarpinės</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1773"/>
       <source>Show note in &amp;file manager</source>
-      <translation type="unfinished">Show note in &amp;file manager</translation>
+      <translation>Rodyti užrašą &amp;failų tvarkytuvėje</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1785"/>
@@ -1621,37 +1639,37 @@
     <message>
       <location filename="../mainwindow.ui" line="1929"/>
       <source>Show log</source>
-      <translation type="unfinished">Show log</translation>
+      <translation>Rodyti žurnalą</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1938"/>
       <source>Export note as HTML</source>
-      <translation type="unfinished">Export note as HTML</translation>
+      <translation>Eksportuoti užrašą kaip HTML</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2017"/>
       <source>Cycle text case</source>
-      <translation type="unfinished">Cycle text case</translation>
+      <translation>Ciklo teksto dėklas</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2090"/>
       <source>Show note list under tag panel</source>
-      <translation type="unfinished">Show note list under tag panel</translation>
+      <translation>Rodyti užrašų sąrašą žymų skydelyje</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2108"/>
       <source>Find notes in all tags / subfolders</source>
-      <translation type="unfinished">Find notes in all tags / subfolders</translation>
+      <translation>Raskite užrašus visose žymas / poaplankiuose</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2129"/>
       <source>Import notes from text files</source>
-      <translation type="unfinished">Import notes from text files</translation>
+      <translation>Importuokite pastabas iš tekstinių failų</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2138"/>
       <source>Manage orphaned image files</source>
-      <translation type="unfinished">Manage orphaned image files</translation>
+      <translation>Tvarkykite našlaičių atvaizdų failus</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2150"/>
@@ -1669,49 +1687,49 @@
     <message>
       <location filename="../mainwindow.ui" line="2195"/>
       <source>Unlock panels</source>
-      <translation type="unfinished">Unlock panels</translation>
+      <translation>Atrakinkite skydelius</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2204"/>
       <location filename="../mainwindow.cpp" line="10453"/>
       <source>Remove current workspace</source>
-      <translation type="unfinished">Remove current workspace</translation>
+      <translation>Pašalinkite dabartinę darbo vietą</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2213"/>
       <source>Add new workspace</source>
-      <translation type="unfinished">Add new workspace</translation>
+      <translation>Pridėti naują darbo vietą</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2222"/>
       <source>Rename current workspace</source>
-      <translation type="unfinished">Rename current workspace</translation>
+      <translation>Pervardyti dabartinę darbo vietą</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2231"/>
       <source>Switch to previous workspace</source>
-      <translation type="unfinished">Switch to previous workspace</translation>
+      <translation>Perjungti į ankstesnę darbo vietą</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2239"/>
       <source>Show all panels</source>
-      <translation type="unfinished">Show all panels</translation>
+      <translation>Rodyti visas skydelius</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2248"/>
       <source>Find action</source>
-      <translation type="unfinished">Find action</translation>
+      <translation>Rasti veiksmą</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2251"/>
       <location filename="../mainwindow.ui" line="2254"/>
       <source>Find an action from the menu</source>
-      <translation type="unfinished">Find an action from the menu</translation>
+      <translation>Meniu raskite veiksmą</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2266"/>
       <source>Insert table</source>
-      <translation type="unfinished">Insert table</translation>
+      <translation>Įdėkite lentelę</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2278"/>
@@ -1723,80 +1741,80 @@
       <location filename="../mainwindow.ui" line="2286"/>
       <location filename="../mainwindow.ui" line="2289"/>
       <source>Search selected text on the web</source>
-      <translation type="unfinished">Search selected text on the web</translation>
+      <translation>Search selected text on the web</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2297"/>
       <source>Delete line</source>
-      <translation type="unfinished">Delete line</translation>
+      <translation>Ištrinti eilutę</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2305"/>
       <source>Delete word</source>
-      <translation type="unfinished">Delete word</translation>
+      <translation>Ištrinti žodį</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2313"/>
       <source>Copy note headline</source>
-      <translation type="unfinished">Copy note headline</translation>
+      <translation>Nukopijuokite užrašo antraštę</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2325"/>
       <location filename="../mainwindow.cpp" line="9423"/>
       <source>Open note in different window</source>
-      <translation type="unfinished">Open note in different window</translation>
+      <translation>Atidarykite užrašą kitame lange</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2337"/>
       <source>Save modified notes</source>
-      <translation type="unfinished">Save modified notes</translation>
+      <translation>Įrašykite modifikuotus užrašus</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2348"/>
       <source>Ascending</source>
-      <translation type="unfinished">Ascending</translation>
+      <translation>Kylant aukštyn</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2356"/>
       <source>Descending</source>
-      <translation type="unfinished">Descending</translation>
+      <translation>Mažėja</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2365"/>
       <location filename="../mainwindow.cpp" line="9431"/>
       <source>Show note git versions</source>
-      <translation type="unfinished">Show note git versions</translation>
+      <translation>Rodyti „note git“ versijas</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2374"/>
       <source>Find scripts in script repository</source>
-      <translation type="unfinished">Find scripts in script repository</translation>
+      <translation>Raskite scenarijus scenarijų saugykloje</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2386"/>
       <source>Script settings</source>
-      <translation type="unfinished">Script settings</translation>
+      <translation>Scenarijaus nustatymai</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2395"/>
       <source>Insert attachment</source>
-      <translation type="unfinished">Insert attachment</translation>
+      <translation>Įdėkite priedą</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2422"/>
       <source>Check for script updates</source>
-      <translation type="unfinished">Check for script updates</translation>
+      <translation>Patikrinkite, ar nėra scenarijų atnaujinimų</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2431"/>
       <source>Show local trash</source>
-      <translation type="unfinished">Show local trash</translation>
+      <translation>Rodyti vietinį šiukšliadėžę</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2436"/>
       <location filename="../mainwindow.ui" line="2439"/>
       <source>Jump to note edit panel</source>
-      <translation type="unfinished">Jump to note edit panel</translation>
+      <translation>Peršokti į pastabų redagavimo skydelį</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2451"/>
@@ -1987,6 +2005,8 @@ Restore current note?</translation>
       <translation type="unfinished">
         <numerusform>stored %n note(s) to disk</numerusform>
         <numerusform>stored %n note(s) to disk</numerusform>
+        <numerusform>stored %n note(s) to disk</numerusform>
+        <numerusform>stored %n note(s) to disk</numerusform>
       </translation>
     </message>
     <message>
@@ -2015,22 +2035,24 @@ Restore current note?</translation>
       <translation type="unfinished">
         <numerusform>Removed %n conflicted database copies</numerusform>
         <numerusform>Removed %n conflicted database copies</numerusform>
+        <numerusform>Removed %n conflicted database copies</numerusform>
+        <numerusform>Removed %n conflicted database copies</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3307"/>
       <source>Please select the folder where your notes will get stored</source>
-      <translation type="unfinished">Please select the folder where your notes will get stored</translation>
+      <translation>Pasirinkite aplanką, kuriame bus saugomi jūsų užrašai</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3334"/>
       <source>No folder was selected</source>
-      <translation type="unfinished">No folder was selected</translation>
+      <translation>Nepasirinktas joks aplankas</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3336"/>
       <source>You have to select your ownCloud notes folder to make this software work!</source>
-      <translation type="unfinished">You have to select your ownCloud notes folder to make this software work!</translation>
+      <translation>Norėdami, kad ši programinė įranga veiktų, turite pasirinkti aplanką ownCloud!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3338"/>
@@ -2045,7 +2067,7 @@ Restore current note?</translation>
     <message>
       <location filename="../mainwindow.cpp" line="3568"/>
       <source>Remove current note</source>
-      <translation type="unfinished">Remove current note</translation>
+      <translation>Pašalinti dabartinį užrašą</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3569"/>
@@ -2060,17 +2082,17 @@ Restore current note?</translation>
     <message>
       <location filename="../mainwindow.cpp" line="3921"/>
       <source>Note can't be decrypted!</source>
-      <translation type="unfinished">Note can't be decrypted!</translation>
+      <translation>Pastabos negalima iššifruoti!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3922"/>
       <source>It seems that your password is not valid!</source>
-      <translation type="unfinished">It seems that your password is not valid!</translation>
+      <translation>Panašu, kad jūsų slaptažodis negalioja!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4077"/>
       <source>Remove selected notes</source>
-      <translation type="unfinished">Remove selected notes</translation>
+      <translation>Pašalinkite pasirinktas pastabas</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4079"/>
@@ -2084,18 +2106,26 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</numerusform>
+        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
+
+If the trash is enabled on your ownCloud server you should be able to restore them from there.</numerusform>
+        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
+
+If the trash is enabled on your ownCloud server you should be able to restore them from there.</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4167"/>
       <location filename="../mainwindow.cpp" line="9680"/>
       <source>Remove selected folders</source>
-      <translation type="unfinished">Remove selected folders</translation>
+      <translation>Pašalinkite pasirinktus aplankus</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4168"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
       <translation type="unfinished">
+        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
+        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
         <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
         <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
       </translation>
@@ -2108,12 +2138,14 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="4198"/>
       <source>Remove selected tags</source>
-      <translation type="unfinished">Remove selected tags</translation>
+      <translation>Pašalinkite pasirinktas žymas</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4199"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
       <translation type="unfinished">
+        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
+        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
         <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
         <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
       </translation>
@@ -2122,12 +2154,14 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="4253"/>
       <location filename="../mainwindow.cpp" line="8608"/>
       <source>Move selected notes</source>
-      <translation type="unfinished">Move selected notes</translation>
+      <translation>Perkelti pasirinktus užrašus</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4254"/>
       <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation type="unfinished">
+        <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
         <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
         <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
@@ -2136,12 +2170,14 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="4354"/>
       <location filename="../mainwindow.cpp" line="8710"/>
       <source>Copy selected notes</source>
-      <translation type="unfinished">Copy selected notes</translation>
+      <translation>Nukopijuokite pasirinktus užrašus</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4355"/>
       <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation type="unfinished">
+        <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
         <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
         <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
@@ -2158,12 +2194,14 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation type="unfinished">
         <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
         <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
+        <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
+        <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4396"/>
       <source>Tag selected notes</source>
-      <translation type="unfinished">Tag selected notes</translation>
+      <translation>Pažymėkite pažymėtus užrašus</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4397"/>
@@ -2171,32 +2209,34 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation type="unfinished">
         <numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
         <numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4666"/>
       <source>Restart application</source>
-      <translation type="unfinished">Restart application</translation>
+      <translation>Paleiskite programą iš naujo</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4672"/>
       <source>You may need to restart the application manually to let the changes take effect.</source>
-      <translation type="unfinished">You may need to restart the application manually to let the changes take effect.</translation>
+      <translation>Jei norite, kad pakeitimai įsigaliotų, gali tekti iš naujo paleisti programą rankiniu būdu.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4677"/>
       <source>You may need to restart the application to let the changes take effect.</source>
-      <translation type="unfinished">You may need to restart the application to let the changes take effect.</translation>
+      <translation>Jei norite, kad pakeitimai įsigaliotų, gali reikėti iš naujo paleisti programą.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4679"/>
       <source>Restart</source>
-      <translation type="unfinished">Restart</translation>
+      <translation>Perkrauti</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4893"/>
       <source>PDF files</source>
-      <translation type="unfinished">PDF files</translation>
+      <translation>PDF failai</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5201"/>
@@ -2204,99 +2244,103 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation type="unfinished">
         <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
         <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5664"/>
       <source>Note was not found</source>
-      <translation type="unfinished">Note was not found</translation>
+      <translation>Užrašas nerastas</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5665"/>
       <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+      <translation>Užrašas nerastas, sukurkite naują užrašą &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5900"/>
       <source>Note versions are currently loaded from your ownCloud server</source>
-      <translation type="unfinished">Note versions are currently loaded from your ownCloud server</translation>
+      <translation>Pastabų versijos šiuo metu įkeliamos iš jūsų „ownCloud“ serverio</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5915"/>
       <source>Trashed notes are currently loaded from your ownCloud server</source>
-      <translation type="unfinished">Trashed notes are currently loaded from your ownCloud server</translation>
+      <translation>Šiukšliadėžės šiuo metu įkeliamos iš jūsų „ownCloud“ serverio</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5981"/>
       <source>Copy code block</source>
-      <translation type="unfinished">Copy code block</translation>
+      <translation>Kopijuoti kodo bloką</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6000"/>
       <source>Print selected text</source>
-      <translation type="unfinished">Print selected text</translation>
+      <translation>Spausdinti pasirinktą tekstą</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6006"/>
       <source>Print selected text (preview)</source>
-      <translation type="unfinished">Print selected text (preview)</translation>
+      <translation>Spausdinti pasirinktą tekstą (peržiūra)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6022"/>
       <source>Export selected text as PDF</source>
-      <translation type="unfinished">Export selected text as PDF</translation>
+      <translation>Eksportuoti pasirinktą tekstą kaip PDF</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6028"/>
       <source>Export selected text as PDF (preview)</source>
-      <translation type="unfinished">Export selected text as PDF (preview)</translation>
+      <translation>Eksportuoti pasirinktą tekstą kaip PDF (peržiūra)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6425"/>
       <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
-      <translation type="unfinished">Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</translation>
+      <translation>Jūsų užrašas bus iššifruojamas ir vėl bus saugomas kaip paprastas tekstas. Atminkite, kad nešifruotas užrašas gali būti sinchronizuotas su jūsų serveriu ir gali būti matomas slaptas tekstas! &lt;br /&gt; Ar norite iššifruoti savo užrašą?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6518"/>
       <source>Markdown files</source>
-      <translation type="unfinished">Markdown files</translation>
+      <translation>Žymėjimo failai</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6573"/>
       <source>Bookmarked note position at slot %1</source>
-      <translation type="unfinished">Bookmarked note position at slot %1</translation>
+      <translation>Pažymėtų banknotų padėtis %1 lizde</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6589"/>
       <source>Jumped to bookmark position at slot %1</source>
-      <translation type="unfinished">Jumped to bookmark position at slot %1</translation>
+      <translation>Peršoko į žymių padėtį %1 srityje</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6809"/>
       <location filename="../mainwindow.cpp" line="6879"/>
       <source>Inserting image</source>
-      <translation type="unfinished">Inserting image</translation>
+      <translation>Įterpiamas vaizdas</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6814"/>
       <location filename="../mainwindow.cpp" line="6883"/>
       <source>Done inserting image</source>
-      <translation type="unfinished">Done inserting image</translation>
+      <translation>Vaizdas įterptas</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6816"/>
       <source>Inserting attachment</source>
-      <translation type="unfinished">Inserting attachment</translation>
+      <translation>Pridedamas priedas</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6821"/>
       <source>Done inserting attachment</source>
-      <translation type="unfinished">Done inserting attachment</translation>
+      <translation>Baigta įterpti priedą</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="6833"/>
       <source>Copied %n note(s) to %1</source>
       <translation type="unfinished">
+        <numerusform>Copied %n note(s) to %1</numerusform>
+        <numerusform>Copied %n note(s) to %1</numerusform>
         <numerusform>Copied %n note(s) to %1</numerusform>
         <numerusform>Copied %n note(s) to %1</numerusform>
       </translation>
@@ -2307,12 +2351,16 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation type="unfinished">
         <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
         <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
+        <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
+        <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="6852"/>
       <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
       <translation type="unfinished">
+        <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
+        <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
         <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
         <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
       </translation>
@@ -2486,7 +2534,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="10491"/>
       <source>Rename workspace</source>
-      <translation type="unfinished">Rename workspace</translation>
+      <translation>Pervardykite darbo vietą</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="10626"/>
@@ -2495,17 +2543,19 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation type="unfinished">
         <numerusform>%n chars</numerusform>
         <numerusform>%n chars</numerusform>
+        <numerusform>%n chars</numerusform>
+        <numerusform>%n chars</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10893"/>
       <source>Disallow all note editing</source>
-      <translation type="unfinished">Disallow all note editing</translation>
+      <translation>Neleisti redaguoti visų užrašų</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="11039"/>
       <source>Select text files to import</source>
-      <translation type="unfinished">Select text files to import</translation>
+      <translation>Pasirinkite tekstinius failus, kuriuos norite importuoti</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="11068"/>
@@ -2520,12 +2570,14 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="11218"/>
       <source>Leave full-screen mode</source>
-      <translation type="unfinished">Leave full-screen mode</translation>
+      <translation>Išjunkite viso ekrano režimą</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7909"/>
       <source>%n notes selected</source>
       <translation type="unfinished">
+        <numerusform>%n notes selected</numerusform>
+        <numerusform>%n notes selected</numerusform>
         <numerusform>%n notes selected</numerusform>
         <numerusform>%n notes selected</numerusform>
       </translation>
@@ -2534,7 +2586,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.ui" line="2410"/>
       <location filename="../mainwindow.cpp" line="10894"/>
       <source>Allow all note editing</source>
-      <translation type="unfinished">Allow all note editing</translation>
+      <translation>Leisti redaguoti visus užrašus</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1188"/>
@@ -2544,12 +2596,14 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="4469"/>
       <source>Remove tag from selected notes</source>
-      <translation type="unfinished">Remove tag from selected notes</translation>
+      <translation>Pašalinti žymą iš pasirinktų užrašų</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4470"/>
       <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
       <translation type="unfinished">
+        <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
+        <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
         <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
         <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
       </translation>
@@ -2560,52 +2614,54 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation type="unfinished">
         <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
         <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
+        <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
+        <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4573"/>
       <source>Current notes folder: </source>
-      <translation type="unfinished">Current notes folder: </translation>
+      <translation>Dabartinių užrašų aplankas:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4575"/>
       <source>Set the notes folder. Current notes folder: </source>
-      <translation type="unfinished">Set the notes folder. Current notes folder: </translation>
+      <translation>Nustatykite užrašų aplanką. Dabartinių užrašų aplankas:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4771"/>
       <source>Print note</source>
-      <translation type="unfinished">Print note</translation>
+      <translation>Spausdinti užrašą</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4837"/>
       <source>Letter</source>
-      <translation type="unfinished">Letter</translation>
+      <translation>Laiškas</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4866"/>
       <source>Portrait</source>
-      <translation type="unfinished">Portrait</translation>
+      <translation>Portretas</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4866"/>
       <source>Landscape</source>
-      <translation type="unfinished">Landscape</translation>
+      <translation>Peizažas</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4871"/>
       <source>Orientation</source>
-      <translation type="unfinished">Orientation</translation>
+      <translation>Orientacija</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4871"/>
       <source>Orientation:</source>
-      <translation type="unfinished">Orientation:</translation>
+      <translation>Orientacija:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4894"/>
       <source>Export current note as PDF</source>
-      <translation type="unfinished">Export current note as PDF</translation>
+      <translation>Eksportuoti dabartinę pastabą kaip PDF</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4990"/>
@@ -2623,37 +2679,37 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="9314"/>
       <location filename="../mainwindow.cpp" line="9677"/>
       <source>New note</source>
-      <translation type="unfinished">New note</translation>
+      <translation>Nauja pastaba</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5824"/>
       <source>Recent notes</source>
-      <translation type="unfinished">Recent notes</translation>
+      <translation>Naujausi užrašai</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5844"/>
       <source>Show todo lists</source>
-      <translation type="unfinished">Show todo lists</translation>
+      <translation>Rodyti užduočių sąrašus</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5855"/>
       <source>Recent tasks</source>
-      <translation type="unfinished">Recent tasks</translation>
+      <translation>Naujausios užduotys</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5876"/>
       <source>Quit</source>
-      <translation type="unfinished">Quit</translation>
+      <translation>Mesti</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7262"/>
       <source>show notes from all note subfolders (%1)</source>
-      <translation type="unfinished">show notes from all note subfolders (%1)</translation>
+      <translation>rodyti visų užrašų poaplankių užrašus (%1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7281"/>
       <source>show notes in note root folder (%1)</source>
-      <translation type="unfinished">show notes in note root folder (%1)</translation>
+      <translation>parodyti užrašus šaknies aplanke (%1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="316"/>
@@ -2661,36 +2717,38 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="1899"/>
       <location filename="../mainwindow.cpp" line="7289"/>
       <source>Note folder</source>
-      <translation type="unfinished">Note folder</translation>
+      <translation>Užrašų aplankas</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8495"/>
       <location filename="../mainwindow.cpp" line="8556"/>
       <source>Copy to note folder</source>
-      <translation type="unfinished">Copy to note folder</translation>
+      <translation>Nukopijuokite į užrašų aplanką</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8496"/>
       <location filename="../mainwindow.cpp" line="8557"/>
       <source>Move to note folder</source>
-      <translation type="unfinished">Move to note folder</translation>
+      <translation>Perkelti į užrašų aplanką</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8497"/>
       <location filename="../mainwindow.cpp" line="8558"/>
       <source>Copy to this subfolder</source>
-      <translation type="unfinished">Copy to this subfolder</translation>
+      <translation>Nukopijuokite į šį aplanką</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8498"/>
       <location filename="../mainwindow.cpp" line="8559"/>
       <source>Move to this subfolder</source>
-      <translation type="unfinished">Move to this subfolder</translation>
+      <translation>Perkelti į šį aplanką</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="8602"/>
       <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation type="unfinished">
+        <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
         <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
         <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
@@ -2699,12 +2757,14 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="4680"/>
       <location filename="../mainwindow.cpp" line="11053"/>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Atšaukti</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="8683"/>
       <source>%n note(s) were moved to note subfolder "%2"</source>
       <translation type="unfinished">
+        <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
+        <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
         <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
         <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
       </translation>
@@ -2715,6 +2775,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation type="unfinished">
         <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
         <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -2723,52 +2785,54 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation type="unfinished">
         <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
         <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
+        <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
+        <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9421"/>
       <source>Open note in external editor</source>
-      <translation type="unfinished">Open note in external editor</translation>
+      <translation>Atidaryti užrašą išoriniame redaktoriuje</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9425"/>
       <source>Show note in file manager</source>
-      <translation type="unfinished">Show note in file manager</translation>
+      <translation>Rodyti užrašą failų tvarkytuvėje</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9506"/>
       <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
-      <translation type="unfinished">If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</translation>
+      <translation>Jei norite pervadinti savo užrašą, turite įjungti parinktį, leidžiančią užrašo failo pavadinimą skirtis nuo antraštės.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9678"/>
       <source>New subfolder</source>
-      <translation type="unfinished">New subfolder</translation>
+      <translation>Naujas poaplankis</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9682"/>
       <source>Show folder in file manager</source>
-      <translation type="unfinished">Show folder in file manager</translation>
+      <translation>Rodyti aplanką failų tvarkyklėje</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9718"/>
       <source>Create a new folder</source>
-      <translation type="unfinished">Create a new folder</translation>
+      <translation>Sukurkite naują aplanką</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9718"/>
       <source>Folder name:</source>
-      <translation type="unfinished">Folder name:</translation>
+      <translation>Aplanko pavadinimas:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7220"/>
       <source>show all untagged notes (%1)</source>
-      <translation type="unfinished">show all untagged notes (%1)</translation>
+      <translation>rodyti visus nepažymėtus užrašus (%1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7223"/>
       <source>Untagged notes</source>
-      <translation type="unfinished">Untagged notes</translation>
+      <translation>Nepažymėti užrašai</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9126"/>
@@ -2840,6 +2904,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="2718"/>
       <source>Stored %n note(s) to disk</source>
       <translation type="unfinished">
+        <numerusform>Stored %n note(s) to disk</numerusform>
+        <numerusform>Stored %n note(s) to disk</numerusform>
         <numerusform>Stored %n note(s) to disk</numerusform>
         <numerusform>Stored %n note(s) to disk</numerusform>
       </translation>
@@ -2963,22 +3029,22 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="1029"/>
       <source>window toolbar</source>
-      <translation type="unfinished">window toolbar</translation>
+      <translation>lango įrankių juosta</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1034"/>
       <source>custom action toolbar</source>
-      <translation type="unfinished">custom action toolbar</translation>
+      <translation>pasirinktinių veiksmų įrankių juosta</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1054"/>
       <source>Workspace selector</source>
-      <translation type="unfinished">Workspace selector</translation>
+      <translation>Workspace selector</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1185"/>
       <source>Show %1 panel</source>
-      <translation type="unfinished">Show %1 panel</translation>
+      <translation>Rodyti %1 skydą</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1222"/>
@@ -3024,32 +3090,34 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="2612"/>
       <location filename="../mainwindow.cpp" line="5443"/>
       <source>Current note could not be stored to disk</source>
-      <translation type="unfinished">Current note could not be stored to disk</translation>
+      <translation>Dabartinio užrašo nepavyko išsaugoti diske</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2776"/>
       <source>Read-only</source>
-      <translation type="unfinished">Read-only</translation>
+      <translation>Tik skaitymui</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2777"/>
       <source>Note editing is disabled, click to enable</source>
-      <translation type="unfinished">Note editing is disabled, click to enable</translation>
+      <translation>Užrašų redagavimas neleidžiamas, spustelėkite, jei norite įgalinti</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2796"/>
       <source>Line numbers</source>
-      <translation type="unfinished">Line numbers</translation>
+      <translation>Linijų numeriai</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2806"/>
       <source>Click here to see what has changed and to be able to update to the latest version</source>
-      <translation type="unfinished">Click here to see what has changed and to be able to update to the latest version</translation>
+      <translation>Spustelėkite čia norėdami pamatyti, kas pasikeitė, ir atnaujinti versiją į naujausią versiją</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3149"/>
       <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
       <translation type="unfinished">
+        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
+        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
         <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
         <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
       </translation>
@@ -3060,12 +3128,16 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation type="unfinished">
         <numerusform>%n note(s) were tagged with "%2"</numerusform>
         <numerusform>%n note(s) were tagged with "%2"</numerusform>
+        <numerusform>%n note(s) were tagged with "%2"</numerusform>
+        <numerusform>%n note(s) were tagged with "%2"</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5200"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
       <translation type="unfinished">
+        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
         <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
         <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
       </translation>
@@ -3156,42 +3228,42 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="17"/>
       <source>Note was modified externally!</source>
-      <translation type="unfinished">Note was modified externally!</translation>
+      <translation>Pastaba buvo modifikuota išorėje!</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="41"/>
       <source>The current note was modified outside of this application!</source>
-      <translation type="unfinished">The current note was modified outside of this application!</translation>
+      <translation>The current note was modified outside of this application!</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="48"/>
       <source>Differences:</source>
-      <translation type="unfinished">Differences:</translation>
+      <translation>Skirtumai:</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="76"/>
       <source>Always accept external changes in the future</source>
-      <translation type="unfinished">Always accept external changes in the future</translation>
+      <translation>Ateityje visada sutikite su išoriniais pokyčiais</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="83"/>
       <source>Accept external changes?</source>
-      <translation type="unfinished">Accept external changes?</translation>
+      <translation>Priimti išorinius pakeitimus?</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="69"/>
       <source>Ignore all external modifications in the future</source>
-      <translation type="unfinished">Ignore all external modifications in the future</translation>
+      <translation>Ateityje nekreipkite dėmesio į visas išorines modifikacijas</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.cpp" line="33"/>
       <source>Yes</source>
-      <translation type="unfinished">Yes</translation>
+      <translation>Taip</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.cpp" line="38"/>
       <source>No</source>
-      <translation type="unfinished">No</translation>
+      <translation>Ne</translation>
     </message>
   </context>
   <context>
@@ -3199,27 +3271,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="237"/>
       <source>Copy image file path</source>
-      <translation type="unfinished">Copy image file path</translation>
+      <translation>Kopijuoti vaizdo failo kelią</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="241"/>
       <source>Copy link location</source>
-      <translation type="unfinished">Copy link location</translation>
+      <translation>Nukopijuokite nuorodos vietą</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="244"/>
       <source>Export generated raw HTML</source>
-      <translation type="unfinished">Export generated raw HTML</translation>
+      <translation>Eksportuoti sukurtą neapdorotą HTML</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="277"/>
       <source>HTML files</source>
-      <translation type="unfinished">HTML files</translation>
+      <translation>HTML failai</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="278"/>
       <source>Export preview as raw HTML file</source>
-      <translation type="unfinished">Export preview as raw HTML file</translation>
+      <translation>Eksportuoti peržiūrą kaip neapdorotą HTML failą</translation>
     </message>
   </context>
   <context>
@@ -3227,17 +3299,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="14"/>
       <source>Orphaned attachments</source>
-      <translation type="unfinished">Orphaned attachments</translation>
+      <translation>Našlaičių priedai</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="54"/>
       <source>Delete selected attachments</source>
-      <translation type="unfinished">Delete selected attachments</translation>
+      <translation>Ištrinkite pasirinktus priedus</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="57"/>
       <source>Delete</source>
-      <translation type="unfinished">Delete</translation>
+      <translation>Ištrinti</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="86"/>
@@ -3295,6 +3367,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation type="unfinished">
         <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
         <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
+        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
+        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
       </translation>
     </message>
   </context>
@@ -3346,6 +3420,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation type="unfinished">
         <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
         <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
+        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
+        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
       </translation>
     </message>
   </context>
@@ -3384,7 +3460,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="1046"/>
       <source>You need to setup your ownCloud server!</source>
-      <translation type="unfinished">You need to setup your ownCloud server!</translation>
+      <translation>Turite nustatyti „ownCloud“ serverį!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1059"/>
@@ -3399,58 +3475,58 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="1113"/>
       <source>Done with loading note versions</source>
-      <translation type="unfinished">Done with loading note versions</translation>
+      <translation>Nebegalima pakraunant užrašų versijų</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1152"/>
       <source>No versions found</source>
-      <translation type="unfinished">No versions found</translation>
+      <translation>Nerasta jokių versijų</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1153"/>
       <source>There are no versions for this note or the note wasn't found on the server.</source>
-      <translation type="unfinished">There are no versions for this note or the note wasn't found on the server.</translation>
+      <translation>Nėra šio užrašo versijų arba užrašas nerastas serveryje.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1174"/>
       <source>Done with loading trashed notes</source>
-      <translation type="unfinished">Done with loading trashed notes</translation>
+      <translation>Atlikta pakraunant užrašus</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1215"/>
       <source>No trashed notes</source>
-      <translation type="unfinished">No trashed notes</translation>
+      <translation>Jokių užrašų</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1216"/>
       <source>No trashed notes were found on the server.</source>
-      <translation type="unfinished">No trashed notes were found on the server.</translation>
+      <translation>Nebuvo rasta jokių sugadintų užrašų serveryje.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1239"/>
       <location filename="../services/owncloudservice.cpp" line="1265"/>
       <source>Error while loading todo lists!</source>
-      <translation type="unfinished">Error while loading todo lists!</translation>
+      <translation>Įkeliant todo sąrašus įvyko klaida!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1240"/>
       <source>Your CalDAV server didn't reply anything!</source>
-      <translation type="unfinished">Your CalDAV server didn't reply anything!</translation>
+      <translation>Jūsų „CalDAV“ serveris nieko neatsakė!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1266"/>
       <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation type="unfinished">Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</translation>
+      <translation>Klaidos pranešimas iš jūsų „CalDAV“ serverio: &lt;strong&gt;%1 &lt;/strong&gt;</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1935"/>
       <source>No bookmarks</source>
-      <translation type="unfinished">No bookmarks</translation>
+      <translation>Nėra žymių</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1936"/>
       <source>No bookmarks were found on the server.</source>
-      <translation type="unfinished">No bookmarks were found on the server.</translation>
+      <translation>Nebuvo rasta jokių žymių serveryje.</translation>
     </message>
   </context>
   <context>
@@ -3458,27 +3534,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/passworddialog.ui" line="14"/>
       <source>Please enter your password</source>
-      <translation type="unfinished">Please enter your password</translation>
+      <translation>Prašome įvesti savo slaptažodį</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="24"/>
       <source>Enter your password:</source>
-      <translation type="unfinished">Enter your password:</translation>
+      <translation>Įveskite savo slaptažodį:</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="34"/>
       <source>Password</source>
-      <translation type="unfinished">Password</translation>
+      <translation>Slaptažodis</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="44"/>
       <source>Re-enter password</source>
-      <translation type="unfinished">Re-enter password</translation>
+      <translation>Pakartokite slaptažodį</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="54"/>
       <source>Passwords don't match!</source>
-      <translation type="unfinished">Passwords don't match!</translation>
+      <translation>Slaptažodžiai nesutampa!</translation>
     </message>
   </context>
   <context>
@@ -3486,37 +3562,39 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../entities/notefolder.cpp" line="482"/>
       <source>default</source>
-      <translation type="unfinished">default</translation>
+      <translation>numatytas</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="1188"/>
       <source>Could not store note file: %1 - Error message: %2</source>
-      <translation type="unfinished">Could not store note file: %1 - Error message: %2</translation>
+      <translation>Nepavyko išsaugoti užrašų failo: %1 - klaidos pranešimas: %2</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="1259"/>
       <source>Renamed note-file was removed: %1</source>
-      <translation type="unfinished">Renamed note-file was removed: %1</translation>
+      <translation>Pervardytas užrašų failas buvo pašalintas: %1</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="1267"/>
       <source>Could not remove renamed note-file: %1 - Error message: %2</source>
-      <translation type="unfinished">Could not remove renamed note-file: %1 - Error message: %2</translation>
+      <translation>Nepavyko pašalinti pervardyto užrašo failo: %1 - klaidos pranešimas: %2</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="2184"/>
       <source>Could not read image file: %1</source>
-      <translation type="unfinished">Could not read image file: %1</translation>
+      <translation>Nepavyko nuskaityti vaizdo failo: %1</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="2811"/>
       <source>Note file path changed</source>
-      <translation type="unfinished">Note file path changed</translation>
+      <translation>Pastabos failo kelias pakeistas</translation>
     </message>
     <message numerus="yes">
       <location filename="../entities/note.cpp" line="2812"/>
       <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
       <translation type="unfinished">
+        <numerusform>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
+        <numerusform>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
         <numerusform>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
         <numerusform>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
       </translation>
@@ -3527,33 +3605,35 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation type="unfinished">
         <numerusform>…and %n more note(s)</numerusform>
         <numerusform>…and %n more note(s)</numerusform>
+        <numerusform>…and %n more note(s)</numerusform>
+        <numerusform>…and %n more note(s)</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../helpers/toolbarcontainer.cpp" line="37"/>
       <location filename="../helpers/toolbarcontainer.cpp" line="112"/>
       <source>Unknown action %1</source>
-      <translation type="unfinished">Unknown action %1</translation>
+      <translation>Nežinomas veiksmas %1</translation>
     </message>
     <message>
       <location filename="../helpers/toolbarcontainer.cpp" line="94"/>
       <source>Workspace selector</source>
-      <translation type="unfinished">Workspace selector</translation>
+      <translation>Workspace selector</translation>
     </message>
     <message>
       <location filename="../utils/gui.cpp" line="307"/>
       <source>Don't ask again!</source>
-      <translation type="unfinished">Don't ask again!</translation>
+      <translation>Neklauskite dar kartą!</translation>
     </message>
     <message>
       <location filename="../utils/gui.cpp" line="307"/>
       <source>Don't show again!</source>
-      <translation type="unfinished">Don't show again!</translation>
+      <translation>Daugiau nerodyti!</translation>
     </message>
     <message>
       <location filename="../utils/git.cpp" line="74"/>
       <source>Command failed!</source>
-      <translation type="unfinished">Command failed!</translation>
+      <translation>Komanda nepavyko!</translation>
     </message>
     <message>
       <location filename="../utils/git.cpp" line="75"/>
@@ -3563,27 +3643,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3889"/>
       <source>New connection</source>
-      <translation type="unfinished">New connection</translation>
+      <translation>Naujas ryšys</translation>
     </message>
     <message>
       <location filename="../entities/cloudconnection.cpp" line="281"/>
       <source>Default</source>
-      <translation type="unfinished">Default</translation>
+      <translation>Numatytas</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="216"/>
       <source>Note folder not found!</source>
-      <translation type="unfinished">Note folder not found!</translation>
+      <translation>Užrašų aplankas nerastas!</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="217"/>
       <source>Your note folder was not found any more! Do you want to select a new one?</source>
-      <translation type="unfinished">Your note folder was not found any more! Do you want to select a new one?</translation>
+      <translation>Jūsų užrašų aplankas daugiau nerastas! Ar norite pasirinkti naują?</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="223"/>
       <source>Please select the folder where your notes will get stored to</source>
-      <translation type="unfinished">Please select the folder where your notes will get stored to</translation>
+      <translation>Pasirinkite aplanką, kuriame bus saugomi jūsų užrašai</translation>
     </message>
   </context>
   <context>
@@ -3591,12 +3671,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="434"/>
       <source>Note editing disabled</source>
-      <translation type="unfinished">Note editing disabled</translation>
+      <translation>Užrašų redagavimas išjungtas</translation>
     </message>
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="435"/>
       <source>Note editing is currently disabled, do you want to allow again?</source>
-      <translation type="unfinished">Note editing is currently disabled, do you want to allow again?</translation>
+      <translation>Užrašų redagavimas šiuo metu yra išjungtas. Ar norite vėl leisti?</translation>
     </message>
   </context>
   <context>
@@ -3604,47 +3684,47 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="53"/>
       <source>Find:</source>
-      <translation type="unfinished">Find:</translation>
+      <translation>Rasti:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="107"/>
       <source>Advanced search / replace text</source>
-      <translation type="unfinished">Advanced search / replace text</translation>
+      <translation>Advanced search / replace text</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="90"/>
       <source>Close search</source>
-      <translation type="unfinished">Close search</translation>
+      <translation>Uždaryti paiešką</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="32"/>
       <source>Find in text</source>
-      <translation type="unfinished">Find in text</translation>
+      <translation>Rasti tekste</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="127"/>
       <source>Search forward</source>
-      <translation type="unfinished">Search forward</translation>
+      <translation>Ieškokite pirmyn</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="63"/>
       <source>Search backward</source>
-      <translation type="unfinished">Search backward</translation>
+      <translation>Paieška atgal</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="39"/>
       <source>Replace with</source>
-      <translation type="unfinished">Replace with</translation>
+      <translation>Pakeisti</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="80"/>
       <source>Replace:</source>
-      <translation type="unfinished">Replace:</translation>
+      <translation>Pakeisti:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="193"/>
       <source>Plain text</source>
-      <translation type="unfinished">Plain text</translation>
+      <translation>Paprastas tekstas</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="198"/>
@@ -3884,84 +3964,83 @@ Are the folder and the file writeable?</translation>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="372"/>
       <source>Supported platforms</source>
-      <translation type="unfinished">Supported platforms</translation>
+      <translation>Palaikomos platformos</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="373"/>
       <source>Supported platform</source>
-      <translation type="unfinished">Supported platform</translation>
+      <translation>Palaikoma platforma</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="376"/>
       <source>Open repository</source>
-      <translation type="unfinished">Open repository</translation>
+      <translation>Atidaryti saugyklą</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="387"/>
       <source>Update</source>
-      <translation type="unfinished">Update</translation>
+      <translation>Atnaujinti</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="388"/>
       <source>Updates the script</source>
-      <translation type="unfinished">Updates the script</translation>
+      <translation>Atnaujinamas scenarijus</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="390"/>
       <source>Reinstall</source>
-      <translation type="unfinished">Reinstall</translation>
+      <translation>Įdiekite iš naujo</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="391"/>
       <source>Reinstalls the script</source>
-      <translation type="unfinished">Reinstalls the script</translation>
+      <translation>Iš naujo įdiegia scenarijų</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="456"/>
       <source>Platform not supported!</source>
-      <translation type="unfinished">Platform not supported!</translation>
+      <translation>Nepalaikoma platforma!</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="457"/>
       <source>Your platform is not supported by this script!
 Do you want to install it anyway?</source>
-      <translation type="unfinished">Your platform is not supported by this script!
-Do you want to install it anyway?</translation>
+      <translation>Šis scenarijus nepalaiko jūsų platformos! Ar vis tiek norite jį įdiegti?</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="459"/>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Atšaukti</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="467"/>
       <source>Update app</source>
-      <translation type="unfinished">Update app</translation>
+      <translation>Atnaujinti programą</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="468"/>
       <source>Please don't forget to update your installation of QOwnNotes to make this script work!</source>
-      <translation type="unfinished">Please don't forget to update your installation of QOwnNotes to make this script work!</translation>
+      <translation>Nepamirškite atnaujinti „QOwnNotes“ diegimo, kad šis scenarijus veiktų!</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="536"/>
       <source>Install successful</source>
-      <translation type="unfinished">Install successful</translation>
+      <translation>Įdiegti pavyko</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="537"/>
       <source>The script was successfully installed!</source>
-      <translation type="unfinished">The script was successfully installed!</translation>
+      <translation>Scenarijus sėkmingai įdiegtas!</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="544"/>
       <source>Download failed</source>
-      <translation type="unfinished">Download failed</translation>
+      <translation>Atsisiuntimas nepavyko</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="545"/>
       <source>The script could not be downloaded!</source>
-      <translation type="unfinished">The script could not be downloaded!</translation>
+      <translation>Nepavyko atsisiųsti scenarijaus!</translation>
     </message>
   </context>
   <context>
@@ -4002,6 +4081,8 @@ Do you want to install it anyway?</translation>
       <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="79"/>
       <source>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</source>
       <translation type="unfinished">
+        <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
+        <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
         <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
         <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
       </translation>
@@ -6980,6 +7061,8 @@ This cannot be undone!</translation>
       <location filename="../services/websocketserverservice.cpp" line="188"/>
       <source>%n bookmark(s) created</source>
       <translation type="unfinished">
+        <numerusform>%n bookmark(s) created</numerusform>
+        <numerusform>%n bookmark(s) created</numerusform>
         <numerusform>%n bookmark(s) created</numerusform>
         <numerusform>%n bookmark(s) created</numerusform>
       </translation>
