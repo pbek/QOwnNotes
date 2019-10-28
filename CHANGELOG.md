@@ -7,6 +7,7 @@
     - this is work in progress and by far not fully implemented yet!
     - the note tree will only be shown if subfolders are enabled for your current note folder
 - fixed a highlighting problem for checkbox link lists like `- [ ] [QOwnNotes](https://www.qownnotes.org)`
+- fixed a possible crash when logging occurs on application exit
 
 ## 19.10.10
 - if a **frontmatter** was detected at the beginning of a note the **filename of the note**
