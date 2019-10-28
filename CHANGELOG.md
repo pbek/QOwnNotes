@@ -15,7 +15,7 @@
     - there is an example call in
       [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/preview-styling.qml)
   - for more information please take a look at the
-    [scripting documentation](https://docs.qownnotes.org/en/develop/scripting/README.html#preNoteToMarkdownHtmlHook)
+    [scripting documentation](https://docs.qownnotes.org/en/develop/scripting/README.html#prenotetomarkdownhtmlhook)
 - fixed a highlighting problem for checkbox link lists like `- [ ] [QOwnNotes](https://www.qownnotes.org)`
 - fixed a possible crash when logging occurs on application exit
 
