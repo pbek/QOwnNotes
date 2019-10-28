@@ -44,7 +44,6 @@ public:
         settings = loader->settings();
 
         language = lang;
-
         if (language.isEmpty()) {
             language = settings->defaultLanguage();
         }

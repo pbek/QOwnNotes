@@ -190,6 +190,10 @@ static bool hasNotEmptyText(const QString &text)
  * @param text
  */
 void QOwnNotesMarkdownHighlighter::highlightSpellChecking(const QString &text) {
+    if (!spellchecker->isValid()) {
+        qDebug () << "[Sonnet]Spellchecker invalid!";
+        return;
+    }
     //headline || subheadline
     if (text.contains("====") || text.contains("----")) {
         return;
@@ -204,10 +208,6 @@ void QOwnNotesMarkdownHighlighter::highlightSpellChecking(const QString &text) {
     }
     //if it's empty line or just spaces, don't spell check
     if (!hasNotEmptyText(text)) {
-        return;
-    }
-    if (!spellchecker->isValid()) {
-        qDebug () << "[Sonnet]Spellchercher invalid!";
         return;
     }
 
