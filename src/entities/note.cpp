@@ -2012,6 +2012,14 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
                     "[" + fileText + "](" + url + ")");
     }
 
+    // check if there is a script that wants to modify the markdown
+    QString preScriptResult = ScriptingService::instance()
+            ->callPreNoteToMarkdownHtmlHook(this, str);
+
+    if (!preScriptResult.isEmpty()) {
+        str = preScriptResult;
+    }
+
     unsigned char *sequence = (unsigned char *) qstrdup(
             str.toUtf8().constData());
     qint64 length = strlen((char *) sequence);

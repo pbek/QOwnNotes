@@ -711,6 +711,45 @@ QString ScriptingService::callNoteToMarkdownHtmlHook(
 }
 
 /**
+ * Calls the preNoteToMarkdownHtmlHook function for all script components
+ * This function is called before the markdown html of a note is generated
+ */
+QString ScriptingService::callPreNoteToMarkdownHtmlHook(
+        Note *note, const QString& markdown) {
+    QMapIterator<int, ScriptComponent> i(_scriptComponents);
+    QString resultMarkdown = markdown;
+
+    while (i.hasNext()) {
+        i.next();
+        ScriptComponent scriptComponent = i.value();
+
+        QString text = callNoteToMarkdownHtmlHookForObject(
+                    scriptComponent.object, note, resultMarkdown);
+
+        if (methodExistsForObject(
+                    scriptComponent.object,
+                    "preNoteToMarkdownHtmlHook(QVariant,QVariant)")) {
+            auto *noteApi = new NoteApi();
+            noteApi->fetch(note->getId());
+
+            QVariant resultText;
+            QMetaObject::invokeMethod(scriptComponent.object, "preNoteToMarkdownHtmlHook",
+                                      Q_RETURN_ARG(QVariant, resultText),
+                                      Q_ARG(QVariant, QVariant::fromValue(
+                                                static_cast<QObject*>(noteApi))),
+                                      Q_ARG(QVariant, resultMarkdown));
+            QString text = resultText.toString();
+
+            if (!text.isEmpty()) {
+                resultMarkdown = text;
+            }
+        }
+    }
+
+    return markdown == resultMarkdown ? "" : resultMarkdown;
+}
+
+/**
  * Calls the encryptionHook function for an object
  *
  * @param object
