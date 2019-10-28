@@ -65,10 +65,10 @@ void QOwnNotesMarkdownHighlighter::highlightBlock(const QString &text) {
     updateCurrentNote();
     setCurrentBlockState(HighlighterState::NoState);
     currentBlock().setUserState(HighlighterState::NoState);
-    highlightMarkdown(text);
     if (spellchecker->isActive()) {
         highlightSpellChecking(text);
     }
+    highlightMarkdown(text);
     _highlightingFinished = true;
 }
 
@@ -190,16 +190,14 @@ static bool hasNotEmptyText(const QString &text)
  * @param text
  */
 void QOwnNotesMarkdownHighlighter::highlightSpellChecking(const QString &text) {
-    //if it's inline code, don't spell check
-    if (text == "`") {
-        ++inlineCode;
-    }
-    if (inlineCode % 2 != 0) {
+    //headline || subheadline
+    if (text.contains("====") || text.contains("----")) {
         return;
     }
     //if it's a code block, don't spell check
     if (text == "```") {
         ++codeBlock;
+        return;
     }
     if (codeBlock % 2 != 0) {
         return;
@@ -248,12 +246,15 @@ void QOwnNotesMarkdownHighlighter::highlightSpellChecking(const QString &text) {
         int offset = sentence.position();
         while (wordTokenizer->hasNext()) {
             QStringRef word = wordTokenizer->next();
+
             //in case it's not a word, like an email or a number
             if (!wordTokenizer->isSpellcheckable()) {
                 continue;
             }
+            //if the word is misspelled
             if (spellchecker->isWordMisspelled(word.toString())) {
                 setMisspelled(word.position()+offset, word.length());
+            //else we do nothing and move on to the next word
             } else {
                 //unsetMisspelled(word.position()+offset, word.length());
             }
