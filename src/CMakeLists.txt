@@ -362,6 +362,8 @@ SET(QON_TS_FILES
     languages/QOwnNotes_pa.ts
     languages/QOwnNotes_sq.ts
     languages/QOwnNotes_he.ts
+    languages/QOwnNotes_bs.ts
+    languages/QOwnNotes_mk.ts
     languages/QOwnNotes_ko.ts
     languages/QOwnNotes_et.ts
 )

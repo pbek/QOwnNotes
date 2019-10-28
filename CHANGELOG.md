@@ -18,6 +18,10 @@
     [scripting documentation](https://docs.qownnotes.org/en/develop/scripting/README.html#prenotetomarkdownhtmlhook)
 - fixed a highlighting problem for checkbox link lists like `- [ ] [QOwnNotes](https://www.qownnotes.org)`
 - fixed a possible crash when logging occurs on application exit
+- added **Macedonian** and **Bosnian translation** (a big thank you to Fabijenna)
+    - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes)
+      to make QOwnNotes available in more languages or help with the current
+      translation
 - added more Dutch, Polish, Russian, German, Estonian, Brazilian Portuguese,
   Catalan, Urdu (Pakistan) translation (thank you Fabijenna, lucjan, unchase,
   rakekniven, mlimacarlos, MGuerra)
