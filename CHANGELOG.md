@@ -6,8 +6,9 @@
     - you can enable this in the *Panels settings*
     - this is work in progress and by far not fully implemented yet!
     - the note tree will only be shown if subfolders are enabled for your current note folder
-- there now is a new scripting hook `preNoteToMarkdownHtmlHook(note, markdown)`
-  that is called before the markdown html of a note is generated (for [#1328](https://github.com/pbek/QOwnNotes/issues/1328))
+- there now is a **new scripting hook** `preNoteToMarkdownHtmlHook(note, markdown)`
+  that is **called before the markdown html of a note is generated**
+  (for [#1328](https://github.com/pbek/QOwnNotes/issues/1328))
     - it allows you to modify the markdown before it is converted to html
     - it can for example be used in multiple scripts to render code (like LaTeX math or mermaid)
       to its graphical representation for the preview
