@@ -6,6 +6,7 @@
     - you can enable this in the *Panels settings*
     - this is work in progress and by far not fully implemented yet!
     - the note tree will only be shown if subfolders are enabled for your current note folder
+- fixed a highlighting problem for checkbox link lists like `- [ ] [QOwnNotes](https://www.qownnotes.org)`
 
 ## 19.10.10
 - if a **frontmatter** was detected at the beginning of a note the **filename of the note**
@@ -31,11 +32,11 @@
   current line will be removed just like with `- [x]` and `- [ ]`
 - there now is a new method `getFileURLFromFileName()` for `NoteApi` to get the
   absolute file url from a relative file name (for [script issue #71](https://github.com/qownnotes/scripts/issues/71))
-    - for more information please take a look at
+    - for more information please take a look at the
       [scripting documentation](https://docs.qownnotes.org/en/develop/scripting/README.html#note)
 - there now is a new property `fullNoteFileDirPath` for `NoteApi` to get the
   absolute directory path of the a note file (for [script issue #71](https://github.com/qownnotes/scripts/issues/71))
-    - for more information please take a look at
+    - for more information please take a look at the
       [scripting documentation](https://docs.qownnotes.org/en/develop/scripting/README.html#note)
 - added more Russian, Polish, German, Italian, Punjabi, Estonian, Bengali,
   Icelandic, Ukrainian, Korean, Norwegian, Persian, Romanian, Slovak, Slovenian,
@@ -2020,15 +2021,15 @@
     - for more information please take a look at the [scripting documentation](https://docs.qownnotes.org/en/develop/scripting/README.html#fetching-a-note-by-its-id)
 - there now is a new scripting command `script.getSaveFileName()` to show a 
   save file dialog (for [#871](https://github.com/pbek/QOwnNotes/issues/871))
-    - for more information please take a look at
+    - for more information please take a look at the
       [scripting documentation](https://docs.qownnotes.org/en/develop/scripting/README.html#showing-a-save-file-dialog)
 - there now is a new scripting command `script.selectedNotesIds()` to return a
   list of the ids of all selected notes (for [#871](https://github.com/pbek/QOwnNotes/issues/871))
-    - for more information please take a look at
+    - for more information please take a look at the
       [scripting documentation](https://docs.qownnotes.org/en/develop/scripting/README.html#getting-a-list-of-the-ids-of-all-selected-notes)
 - there now is a new scripting command `script.writeToFile()` to write text 
   to a file (for [#871](https://github.com/pbek/QOwnNotes/issues/871))
-    - for more information please take a look at
+    - for more information please take a look at the
       [scripting documentation](https://docs.qownnotes.org/en/develop/scripting/README.html#writing-text-to-a-file)
 - there now is a new method `toMarkdownHtml()` for `NoteApi` to get the
   generated html of a note (for [#871](https://github.com/pbek/QOwnNotes/issues/871))
