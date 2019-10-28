@@ -18,6 +18,9 @@
     [scripting documentation](https://docs.qownnotes.org/en/develop/scripting/README.html#prenotetomarkdownhtmlhook)
 - fixed a highlighting problem for checkbox link lists like `- [ ] [QOwnNotes](https://www.qownnotes.org)`
 - fixed a possible crash when logging occurs on application exit
+- added more Dutch, Polish, Russian, German, Estonian, Brazilian Portuguese,
+  Catalan, Urdu (Pakistan) translation (thank you Fabijenna, lucjan, unchase,
+  rakekniven, mlimacarlos, MGuerra)
 
 ## 19.10.10
 - if a **frontmatter** was detected at the beginning of a note the **filename of the note**
