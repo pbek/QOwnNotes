@@ -111,6 +111,7 @@ public:
                                                     Note *note);
     QString callHandleNoteTextFileNameHook(Note *note);
     QString callNoteToMarkdownHtmlHook(Note *note, const QString& html);
+    QString callPreNoteToMarkdownHtmlHook(Note *note, const QString& markdown);
 
     QString callHandleNewNoteHeadlineHookForObject(QObject *object,
                                                    const QString& headline);
