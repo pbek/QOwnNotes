@@ -1,5 +1,16 @@
 # QOwnNotes Changelog
 
+## 19.10.12
+- there now is a **spellchecker** integrated into QOwnNotes
+  (for [#125](https://github.com/pbek/QOwnNotes/issues/125), a big thank you to @Waqar144)
+	- [Sonnet](https://github.com/KDE/sonnet) with [Hunspell](https://hunspell.github.io/) is used for spellchecking
+	- under **Linux** you need to install the Hunspell dictionaries for your language
+	- under **Windows** you need to copy Hunspell dictionaries for your language to a folder `dicts` in your QOwnNotes application folder or in `C:\Users\[username]\dicts`
+		- you can download dictionaries from [LibreOffice dictionaries](https://github.com/LibreOffice/dictionaries)
+	- under **macOS** the native spellchecker will be used
+		- you can download more dictionaries from [LibreOffice dictionaries](https://github.com/LibreOffice/dictionaries) and copy them to `~/Library/Spelling`, if the directory doesn't exist you need to create it
+	- dictionary files are `*.dic` or `*.aff` files
+
 ## 19.10.11
 - you now can choose to **show your notes together with your subfolders in a tree**
   (for [#790](https://github.com/pbek/QOwnNotes/issues/790))
