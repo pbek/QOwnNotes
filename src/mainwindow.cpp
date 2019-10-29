@@ -11282,15 +11282,15 @@ void MainWindow::on_actionCheck_spelling_toggled(bool checked) {
 }
 
 void MainWindow::loadDictionaryNames() {
-    Sonnet::Speller *speller = new Sonnet::Speller();
+    auto *speller = new Sonnet::Speller();
     QSettings settings;
-    QStringList langs = speller->availableLanguages();
+    QStringList languages = speller->availableLanguages();
     QStringList langNames = speller->availableLanguageNames();
 
     languageGroup->setExclusive(true);
 
     //first add autoDetect
-    QAction *autoDetect = ui->menuLanguages->addAction("Auto Detect");
+    QAction *autoDetect = ui->menuLanguages->addAction(tr("Automatically detect"));
     autoDetect->setCheckable(true);
     autoDetect->setData("auto");
     autoDetect->setActionGroup(languageGroup);
@@ -11301,13 +11301,13 @@ void MainWindow::loadDictionaryNames() {
     }
 
     //not really possible but just in case
-    if (langNames.length() != langs.length()) {
-        qDebug () << "Error: langNames.length != langs.length()";
+    if (langNames.length() != languages.length()) {
+        qDebug () << "Error: langNames.length != languages.length()";
         return;
     }
 
-    QStringList::const_iterator it=langNames.constBegin();
-    QStringList::const_iterator itt=langs.constBegin();
+    QStringList::const_iterator it = langNames.constBegin();
+    QStringList::const_iterator itt = languages.constBegin();
     for (; it != langNames.constEnd(); ++it, ++itt) {
         QAction *action = ui->menuLanguages->addAction(*it);
         action->setCheckable(true);

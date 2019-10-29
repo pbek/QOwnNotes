@@ -2532,7 +2532,7 @@ p, li { white-space: pre-wrap; }
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>Auto Detect</string>
+    <string>Automatically detect</string>
    </property>
   </action>
  </widget>
