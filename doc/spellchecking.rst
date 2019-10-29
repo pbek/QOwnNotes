@@ -1,6 +1,20 @@
 Spellchecking
 ~~~~~~~~~~~~~
 
+-  `Sonnet <https://github.com/KDE/sonnet>`__ with
+  `Hunspell <https://hunspell.github.io/>`__ is used for
+  spellchecking
+-  Under **Linux** you need to install the Hunspell dictionaries for your language
+-  Under **Windows** you need to copy Hunspell dictionaries for your language to
+   a folder ``dicts`` in your QOwnNotes application folder or in ``C:\Users\[username]\dicts``
+  -  you can download dictionaries from `LibreOffice
+     dictionaries <https://github.com/LibreOffice/dictionaries>`__
+-  Under **macOS** the native spellchecker will be used
+  -  You can download more dictionaries from `LibreOffice
+     dictionaries <https://github.com/LibreOffice/dictionaries>`__
+     and copy them to ``~/Library/Spelling``, if the directory
+     doesn't exist you need to create it
+
 You can use the table below to find your language from `dictionary folders <https://github.com/LibreOffice/dictionaries>`_.
 
 - First open the relevant folder, for example **en**
