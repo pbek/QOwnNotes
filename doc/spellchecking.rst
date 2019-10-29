@@ -1,16 +1,16 @@
 Spellchecking
 ~~~~~~~~~~~~~
 
-You can use the table below to find your Language from `Dictionary Folders <https://github.com/LibreOffice/dictionaries>`_
+You can use the table below to find your language from `dictionary folders <https://github.com/LibreOffice/dictionaries>`_.
 
-- First open the relevant folder. For e.g **en**
-- Then find the **.dic** and **.aff** files in that folder. Open them. For e.g **(en_US.dic)**
-- Then click on **Raw** button.
-- Once the file is loaded, right-click and **Save Page as..** to download the dictionary to your computer.
+- First open the relevant folder, for example **en**
+- Then find the **.dic** and **.aff** files in that folder and open them, for example **(en_US.dic)**
+- Then click on **Raw** button
+- Once the file is loaded, right-click and **Save Page as..** to download the dictionary to your computer
 
 Note:
-- If you can't find your language in this table then unfortunately a dictionary for it doesn't exist in the LibreOffice files.
-- If you want to create a dictionary, go `here <https://wiki.documentfoundation.org/Development/Dictionaries>`_
+- If you can't find your language in this table then unfortunately a dictionary for it doesn't exist in the LibreOffice files
+- If you want to create a dictionary, go to the `Documentfoundation.org Dictionaries Development <https://wiki.documentfoundation.org/Development/Dictionaries>`_
 
 
 +------+-----------------+----------------------------+
