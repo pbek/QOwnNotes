@@ -7,7 +7,7 @@ Spellchecking
 -  Under **Linux** you need to install the Hunspell dictionaries for your language
 -  Under **Windows** you need to copy Hunspell dictionaries for your language to
    a folder ``dicts`` in your QOwnNotes application folder or in ``C:\Users\[username]\dicts``
-  -  you can download dictionaries from `LibreOffice
+  -  You can download dictionaries from `LibreOffice
      dictionaries <https://github.com/LibreOffice/dictionaries>`__
 -  Under **macOS** the native spellchecker will be used
   -  You can download more dictionaries from `LibreOffice
