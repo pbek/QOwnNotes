@@ -397,7 +397,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>16</number>
+            <number>3</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -1718,6 +1718,22 @@
               <number>0</number>
              </property>
              <item>
+              <widget class="QGroupBox" name="groupBox_35">
+               <property name="title">
+                <string>Todo settings</string>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_28">
+                <item>
+                 <widget class="QCheckBox" name="todoCalendarSupportCheckBox">
+                  <property name="text">
+                   <string>Enable todo calendar support</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
               <widget class="QGroupBox" name="calendarBackendGroupBox">
                <property name="minimumSize">
                 <size>
@@ -1729,26 +1745,6 @@
                 <string>Which calendar backend do you want to use?</string>
                </property>
                <layout class="QGridLayout" name="gridLayout_40">
-                <item row="2" column="0">
-                 <widget class="QRadioButton" name="calendarPlusRadioButton">
-                  <property name="text">
-                   <string notr="true">Calendar Plus</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="0" column="0">
-                 <widget class="QRadioButton" name="defaultOwnCloudCalendarRadioButton">
-                  <property name="toolTip">
-                   <string>For most current ownCloud and Nextcloud installations</string>
-                  </property>
-                  <property name="text">
-                   <string>Default ownCloud calendar</string>
-                  </property>
-                  <property name="checked">
-                   <bool>false</bool>
-                  </property>
-                 </widget>
-                </item>
                 <item row="3" column="0">
                  <widget class="QRadioButton" name="calDavCalendarRadioButton">
                   <property name="text">
@@ -1766,6 +1762,26 @@
                   </property>
                   <property name="checked">
                    <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QRadioButton" name="calendarPlusRadioButton">
+                  <property name="text">
+                   <string notr="true">Calendar Plus</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QRadioButton" name="defaultOwnCloudCalendarRadioButton">
+                  <property name="toolTip">
+                   <string>For most current ownCloud and Nextcloud installations</string>
+                  </property>
+                  <property name="text">
+                   <string>Default ownCloud calendar</string>
+                  </property>
+                  <property name="checked">
+                   <bool>false</bool>
                   </property>
                  </widget>
                 </item>
@@ -1980,7 +1996,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QGroupBox" name="groupBox_26">
+              <widget class="QGroupBox" name="todoListSettingsGroupBox">
                <property name="title">
                 <string>Todo list settings</string>
                </property>

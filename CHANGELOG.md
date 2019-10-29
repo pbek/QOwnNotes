@@ -10,6 +10,9 @@
 	- under **macOS** the native spellchecker will be used
 		- you can download more dictionaries from [LibreOffice dictionaries](https://github.com/LibreOffice/dictionaries) and copy them to `~/Library/Spelling`, if the directory doesn't exist you need to create it
 	- dictionary files are `*.dic` or `*.aff` files
+- you now can **disable todo lists** completely in the *Todo settings*
+    - no todo calendar items will be loaded in the background
+    - if you open the todo dialog you will get a message that todo lists are disabled
 
 ## 19.10.11
 - you now can choose to **show your notes together with your subfolders in a tree**

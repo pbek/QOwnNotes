@@ -274,6 +274,8 @@ private slots:
 
     void storeSelectedCloudConnection();
 
+    void on_todoCalendarSupportCheckBox_toggled();
+
 private:
 
     Ui::SettingsDialog *ui;

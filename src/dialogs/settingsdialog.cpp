@@ -616,6 +616,8 @@ void SettingsDialog::storeSettings() {
 
     settings.setValue("ownCloud/supportEnabled",
                       ui->ownCloudSupportCheckBox->isChecked());
+    settings.setValue("todoCalendarSupport",
+                      ui->todoCalendarSupportCheckBox->isChecked());
     settings.setValue("insertTimeFormat", ui->timeFormatLineEdit->text());
     settings.setValue("disableAutomaticUpdateDialog",
                       ui->disableAutomaticUpdateDialogCheckBox->isChecked());
@@ -954,6 +956,9 @@ void SettingsDialog::readSettings() {
     ui->ownCloudSupportCheckBox->setChecked(
             OwnCloudService::isOwnCloudSupportEnabled());
     on_ownCloudSupportCheckBox_toggled();
+    ui->todoCalendarSupportCheckBox->setChecked(
+                OwnCloudService::isTodoCalendarSupportEnabled());
+    on_todoCalendarSupportCheckBox_toggled();
     ui->serverUrlEdit->setText(_selectedCloudConnection.getServerUrl());
     ui->userNameEdit->setText(_selectedCloudConnection.getUsername());
     ui->passwordEdit->setText(_selectedCloudConnection.getPassword());
@@ -1816,6 +1821,10 @@ void SettingsDialog::refreshTodoCalendarList(const QList<CalDAVCalendarData>& it
     // clear the tasks calendar list
     ui->todoCalendarListWidget->clear();
 
+    if (!OwnCloudService::isTodoCalendarSupportEnabled()) {
+        return;
+    }
+
     QSettings settings;
     QStringList todoCalendarEnabledList = settings.value(
             "ownCloud/todoCalendarEnabledList").toStringList();
@@ -1975,6 +1984,10 @@ void SettingsDialog::on_reloadCalendarListButton_clicked() {
  * Reloads the calendar list
  */
 void SettingsDialog::reloadCalendarList() {
+    if (!OwnCloudService::isTodoCalendarSupportEnabled()) {
+        return;
+    }
+
     OwnCloudService *ownCloud = OwnCloudService::instance(true);
     ownCloud->settingsGetCalendarList(this);
 }
@@ -3916,4 +3929,13 @@ void SettingsDialog::on_calendarCloudConnectionComboBox_currentIndexChanged(int 
     settings.setValue("ownCloud/todoCalendarCloudConnectionId",
                       ui->calendarCloudConnectionComboBox->currentData().toInt());
     on_reloadCalendarListButton_clicked();
+}
+
+void SettingsDialog::on_todoCalendarSupportCheckBox_toggled() {
+    bool checked = ui->todoCalendarSupportCheckBox->isChecked();
+    ui->calendarBackendGroupBox->setEnabled(checked);
+    ui->calDavCalendarGroupBox->setEnabled(checked);
+    ui->calendarCloudConnectionGroupBox->setEnabled(checked);
+    ui->todoCalendarGroupBox->setEnabled(checked);
+    ui->todoListSettingsGroupBox->setEnabled(checked);
 }

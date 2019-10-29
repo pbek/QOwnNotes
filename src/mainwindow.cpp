@@ -950,6 +950,10 @@ void MainWindow::initEditorSoftWrap() {
  * Reloads all tasks from the ownCloud server
  */
 void MainWindow::reloadTodoLists() {
+    if (!OwnCloudService::isTodoCalendarSupportEnabled()) {
+        return;
+    }
+
     QSettings settings;
     QStringList calendars =
             settings.value("ownCloud/todoCalendarEnabledList").toStringList();
@@ -4983,6 +4987,21 @@ void MainWindow::showAppMetricsNotificationIfNeeded() {
  * Opens the task list dialog
  */
 void MainWindow::openTodoDialog(const QString& taskUid) {
+    if (!OwnCloudService::isTodoCalendarSupportEnabled()) {
+        if (QMessageBox::warning(
+                nullptr, tr("Todo lists disabled!"),
+                tr("You have disabled the todo lists.<br />"
+                           "Please check your <strong>Todo</strong> "
+                           "configuration in the settings!"),
+                tr("Open &settings"),
+                tr("&Cancel"),
+                QString(), 0, 1) == 0) {
+            openSettingsDialog(SettingsDialog::TodoPage);
+        }
+
+        return;
+    }
+
     // show main window to prevent crashes on Windows
     show();
 

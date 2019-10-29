@@ -78,6 +78,8 @@ public:
 
     static bool isOwnCloudSupportEnabled();
 
+    static bool isTodoCalendarSupportEnabled();
+
     static bool isTodoSupportEnabled();
 
     void startAppVersionTest();

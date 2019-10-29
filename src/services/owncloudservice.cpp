@@ -71,6 +71,16 @@ bool OwnCloudService::isOwnCloudSupportEnabled() {
 }
 
 /**
+ * Returns true if todo calendar support was enabled in the settings
+ *
+ * @return
+ */
+bool OwnCloudService::isTodoCalendarSupportEnabled() {
+    QSettings settings;
+    return settings.value("todoCalendarSupport", true).toBool();
+}
+
+/**
  * Returns true if todo support was enabled in the settings
  *
  * @return

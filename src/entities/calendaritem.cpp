@@ -9,6 +9,7 @@
 #include <QRegularExpression>
 #include <QUuid>
 #include <QSettings>
+#include <services/owncloudservice.h>
 
 
 CalendarItem::CalendarItem() {
@@ -1119,12 +1120,16 @@ QString CalendarItem::getCurrentCalendarUrl() {
  * Shows alerts for calendar items with an alarm date in the current minute
  */
 void CalendarItem::alertTodoReminders() {
+    if (!OwnCloudService::isTodoCalendarSupportEnabled()) {
+        return;
+    }
+
     QList<CalendarItem> calendarItemList = fetchAllForReminderAlert();
 
     QListIterator<CalendarItem> itr(calendarItemList);
     while (itr.hasNext()) {
         CalendarItem calItem = itr.next();
-        QMessageBox::information(NULL, "Reminder", "Reminder: <strong>" +
+        QMessageBox::information(nullptr, "Reminder", "Reminder: <strong>" +
                 calItem.getSummary() + "</strong>");
     }
 }
