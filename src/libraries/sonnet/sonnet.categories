@@ -1,8 +1,0 @@
-# Logging categories (for kdebugsettings)
-sonnet.plugins.hunspell Sonnet HUnspell plugin IDENTIFIER [SONNET_HUNSPELL]
-sonnet.plugins.hspell Sonnet Hspell plugin IDENTIFIER [SONNET_LOG_HSPELL]
-sonnet.plugins.aspell Sonnet Aspell plugin IDENTIFIER [SONNET_LOG_ASPELL]
-sonnet.plugins.voikko Sonnet Voikko plugin IDENTIFIER [SONNET_VOIKKO]
-sonnet.core Sonnet Core IDENTIFIER [SONNET_LOG_CORE]
-sonnet.ui Sonnet UI IDENTIFIER [SONNET_LOG_UI]
-

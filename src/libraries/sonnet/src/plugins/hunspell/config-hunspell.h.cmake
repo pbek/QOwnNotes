@@ -1,1 +1,0 @@
-#cmakedefine01 USE_OLD_HUNSPELL_API
