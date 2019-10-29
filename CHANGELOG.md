@@ -18,6 +18,9 @@
 - you now can **disable todo lists** completely in the *Todo settings*
     - no todo calendar items will be loaded in the background
     - if you open the todo dialog you will get a message that todo lists are disabled
+- added more Brazilian Portuguese, Catalan, Russian, German, Polish, Greek,
+  Italian translation (thank you mlimacarlos, MGuerra, unchase, rakekniven,
+  lucjan, athrouss, tiwi90)
 
 ## 19.10.11
 - you now can choose to **show your notes together with your subfolders in a tree**
