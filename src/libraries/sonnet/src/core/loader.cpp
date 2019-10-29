@@ -94,7 +94,6 @@ SpellerPlugin *Loader::createSpeller(const QString &language, const QString &cli
     QString plang = language;
     if (plang.isEmpty()) {
         plang = d->settings->defaultLanguage();
-        qDebug() << "SO LOADING: " << plang;
     }
 
     auto clientsItr = d->languageClients.constFind(plang);
@@ -360,7 +359,6 @@ void Loader::loadPlugin(const QString &pluginPath)
 
     for (const QString &language : languages) {
         QVector<Client *> &languageClients = d->languageClients[language];
-
         if (languageClients.isEmpty()
             || client->reliability() < languageClients.first()->reliability()) {
             languageClients.append(client);    // less reliable, to the end

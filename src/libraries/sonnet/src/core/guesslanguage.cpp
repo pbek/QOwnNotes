@@ -517,7 +517,9 @@ GuessLanguagePrivate::GuessLanguagePrivate()
         case QChar::Script_SignWriting:
             break;
         default:
+#ifdef SONNET_DEBUGGING_ON
             qCDebug(SONNET_LOG_CORE) << "Unhandled script" << script;
+#endif
             break;
         }
         allLanguages.unite(names.toSet());
