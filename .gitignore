@@ -1,4 +1,5 @@
 *.pro.user
+build
 build-QOwnNotes*
 build-tools
 .directory

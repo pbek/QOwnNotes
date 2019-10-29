@@ -9,6 +9,11 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 # include some Botan settings
 include(libraries/botan/CMakeLists.txt)
+#include sonnet core directory, required for building plugins
+include_directories(libraries/sonnet/src/core)
+#some hunspell settings for windows
+include(libraries/sonnet/src/plugins/hunspell/hunspell/CMakeLists.txt)
+
 
 find_package( Qt5LinguistTools )
 find_package( Qt5Core 5.3 REQUIRED )
@@ -181,6 +186,9 @@ set(SOURCE_FILES
     helpers/toolbarcontainer.h
     helpers/qownnotesmarkdownhighlighter.cpp
     helpers/qownnotesmarkdownhighlighter.h
+    helpers/LanguageCache.h
+    helpers/qownspellchecker.cpp
+    helpers/qownspellchecker.h
     api/noteapi.cpp
     api/noteapi.h
     api/tagapi.cpp
@@ -257,6 +265,31 @@ set(SOURCE_FILES
     libraries/qkeysequencewidget/qkeysequencewidget/src/qkeysequencewidget_p.h
     libraries/qkeysequencewidget/qkeysequencewidget/src/qkeysequencewidget.h
     libraries/qkeysequencewidget/qkeysequencewidget/src/qkeysequencewidget.cpp
+    libraries/sonnet/src/core/backgroundchecker.cpp
+    libraries/sonnet/src/core/backgroundchecker.h
+    libraries/sonnet/src/core/backgroundchecker_p.h
+    libraries/sonnet/src/core/client.cpp
+    libraries/sonnet/src/core/client_p.h
+    libraries/sonnet/src/core/core_debug.cpp
+    libraries/sonnet/src/core/core_debug.h
+    libraries/sonnet/src/core/guesslanguage.cpp
+    libraries/sonnet/src/core/guesslanguage.h
+    libraries/sonnet/src/core/languagefilter.cpp
+    libraries/sonnet/src/core/languagefilter_p.h
+    libraries/sonnet/src/core/loader.cpp
+    libraries/sonnet/src/core/loader_p.h
+    libraries/sonnet/src/core/settings.cpp
+    libraries/sonnet/src/core/settings_p.h
+    libraries/sonnet/src/core/sonnetcore_export.h
+    libraries/sonnet/src/core/speller.cpp
+    libraries/sonnet/src/core/speller.h
+    libraries/sonnet/src/core/spellerplugin.cpp
+    libraries/sonnet/src/core/spellerplugin_p.h
+    libraries/sonnet/src/core/textbreaks.cpp
+    libraries/sonnet/src/core/textbreaks_p.h
+    libraries/sonnet/src/core/tokenizer.cpp
+    libraries/sonnet/src/core/tokenizer_p.h
+
     widgets/qownnotesmarkdowntextedit.cpp
     widgets/qownnotesmarkdowntextedit.h
     widgets/navigationwidget.cpp
@@ -313,6 +346,70 @@ set(SOURCE_FILES
     services/websocketserverservice.cpp
     services/websocketserverservice.h
     entities/bookmark.h entities/bookmark.cpp)
+
+if(NOT APPLE)
+list(APPEND SOURCE_FILES
+    libraries/sonnet/src/plugins/hunspell/hunspellclient.cpp
+    libraries/sonnet/src/plugins/hunspell/hunspellclient.h
+    libraries/sonnet/src/plugins/hunspell/hunspelldebug.cpp
+    libraries/sonnet/src/plugins/hunspell/hunspelldebug.h
+    libraries/sonnet/src/plugins/hunspell/hunspelldict.cpp
+    libraries/sonnet/src/plugins/hunspell/hunspelldict.h
+    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/affentry.cxx
+    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/affentry.hxx
+    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/affixmgr.cxx
+    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/affixmgr.hxx
+    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/atypes.hxx
+    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/baseaffix.hxx
+    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/csutil.cxx
+    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/csutil.hxx
+    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/filemgr.cxx
+    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/filemgr.hxx
+    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/hashmgr.cxx
+    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/hashmgr.hxx
+    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/htypes.hxx
+    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/hunspell.cxx
+    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/hunspell.h
+    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/hunspell.hxx
+    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/hunvisapi.h
+    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/hunvisapi.h.in
+    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/hunzip.cxx
+    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/hunzip.hxx
+    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/langnum.hxx
+    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/phonet.cxx
+    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/phonet.hxx
+    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/replist.cxx
+    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/replist.hxx
+    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/suggestmgr.cxx
+    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/suggestmgr.hxx
+    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/utf_info.hxx
+    libraries/sonnet/src/plugins/hunspell/hunspell/src/hunspell/w_char.hxx
+    libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/firstparser.cxx
+    libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/firstparser.hxx
+    libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/htmlparser.cxx
+    libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/htmlparser.hxx
+    libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/latexparser.cxx
+    libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/latexparser.hxx
+    libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/manparser.cxx
+    libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/manparser.hxx
+    libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/odfparser.cxx
+    libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/odfparser.hxx
+    libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/textparser.cxx
+    libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/textparser.hxx
+    libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/xmlparser.cxx
+    libraries/sonnet/src/plugins/hunspell/hunspell/src/parsers/xmlparser.hxx
+)
+endif()
+
+if (APPLE)
+   list(APPEND SOURCE_FILES
+    libraries/sonnet/src/plugins/nsspellchecker/nsspellcheckerclient.h
+    libraries/sonnet/src/plugins/nsspellchecker/nsspellcheckerclient.mm
+    libraries/sonnet/src/plugins/nsspellchecker/nsspellcheckerdebug.cpp
+    libraries/sonnet/src/plugins/nsspellchecker/nsspellcheckerdebug.h
+    libraries/sonnet/src/plugins/nsspellchecker/nsspellcheckerdict.h
+    libraries/sonnet/src/plugins/nsspellchecker/nsspellcheckerdict.mm)
+endif()
 
 # Translation files
 SET(QON_TS_FILES

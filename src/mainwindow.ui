@@ -753,8 +753,8 @@
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>294</width>
-              <height>28</height>
+              <width>300</width>
+              <height>24</height>
              </rect>
             </property>
             <layout class="QVBoxLayout" name="scriptingScrollAreaLayout">
@@ -805,7 +805,7 @@
             <string notr="true">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; font-size:9pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
            <property name="acceptRichText">
@@ -842,7 +842,7 @@ p, li { white-space: pre-wrap; }
      <x>0</x>
      <y>0</y>
      <width>1383</width>
-     <height>34</height>
+     <height>23</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuQOwnNotes">
@@ -1078,6 +1078,11 @@ p, li { white-space: pre-wrap; }
      <addaction name="actionEdit_encrypted_note"/>
      <addaction name="actionDecrypt_note"/>
     </widget>
+    <widget class="QMenu" name="menuLanguages">
+     <property name="title">
+      <string>Languages</string>
+     </property>
+    </widget>
     <addaction name="menuEditNote"/>
     <addaction name="action_Remove_note"/>
     <addaction name="separator"/>
@@ -1092,6 +1097,9 @@ p, li { white-space: pre-wrap; }
     <addaction name="menuVersioning"/>
     <addaction name="menuEncryption"/>
     <addaction name="menuExtra"/>
+    <addaction name="separator"/>
+    <addaction name="actionCheck_spelling"/>
+    <addaction name="menuLanguages"/>
    </widget>
    <widget class="QMenu" name="menuTodo">
     <property name="title">
@@ -2505,6 +2513,26 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="text">
     <string>Typewriter mode</string>
+   </property>
+  </action>
+  <action name="actionCheck_spelling">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset theme="tools-check-spelling">
+     <normaloff>.</normaloff>.</iconset>
+   </property>
+   <property name="text">
+    <string>Check spelling</string>
+   </property>
+  </action>
+  <action name="actionAuto_Detect">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Auto Detect</string>
    </property>
   </action>
  </widget>

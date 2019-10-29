@@ -72,6 +72,7 @@ Q_SIGNALS:
     void currentNoteChanged(Note &note);
     void log(LogWidget::LogType logType, QString text);
 
+
 public:
     enum CreateNewNoteOption {
         None = 0x0000,
@@ -583,6 +584,11 @@ private slots:
 
     void on_actionTypewriter_mode_toggled(bool arg1);
 
+    //Spellchecker actions
+    void on_actionCheck_spelling_toggled(bool checked);
+
+    void onLanguageChanged(QAction* action);
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;
@@ -668,6 +674,7 @@ private:
     bool _noteEditIsCentralWidget;
     bool _lastNoteSelectionWasMultiple;
     WebSocketServerService *_webSocketServerService;
+    QActionGroup *languageGroup;
 
     void createSystemTrayIcon();
 
@@ -983,4 +990,6 @@ private:
     void insertNoteText(const QString &text);
 
     void handleNoteTextChanged();
+
+    void loadDictionaryNames();
 };
