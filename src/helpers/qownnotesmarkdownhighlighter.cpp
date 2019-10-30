@@ -195,11 +195,11 @@ void QOwnNotesMarkdownHighlighter::highlightSpellChecking(const QString &text) {
         return;
     }
     //headline || subheadline
-    if (text.contains("====") || text.contains("----")) {
+    if (text.contains(QStringLiteral("====")) || text.contains(QStringLiteral("----")) ) {
         return;
     }
     //if it's a code block, don't spell check
-    if (text == "```") {
+    if (text.contains(QStringLiteral("```"))) {
         ++codeBlock;
         return;
     }
