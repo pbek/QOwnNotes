@@ -422,6 +422,7 @@ GuessLanguagePrivate::GuessLanguagePrivate()
         case QChar::Script_Takri:
             names = getNames(QLocale::TakriScript);
             break;
+#if QT_VERSION >= 0x050500
         case QChar::Script_CaucasianAlbanian:
             names = getNames(QLocale::CaucasianAlbanianScript);
             break;
@@ -491,6 +492,7 @@ GuessLanguagePrivate::GuessLanguagePrivate()
         case QChar::Script_WarangCiti:
             names = getNames(QLocale::VarangKshitiScript);
             break;
+#endif
 #if QT_VERSION >= 0x050700
         case QChar::Script_Ahom:
             names = getNames(QLocale::AhomScript);
@@ -509,12 +511,13 @@ GuessLanguagePrivate::GuessLanguagePrivate()
         case QChar::Script_OldHungarian:
             names = getNames(QLocale::OldHungarianScript);
             break;
-#endif
+
         case QChar::Script_Unknown:
         case QChar::Script_Inherited:
         case QChar::Script_Common:
         case QChar::Script_OldTurkic:
         case QChar::Script_SignWriting:
+#endif
             break;
         default:
 #ifdef SONNET_DEBUGGING_ON
