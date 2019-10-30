@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 19.10.13
+- fixed spellchecking for notes with certain types of code blocks 
+  (for [#125](https://github.com/pbek/QOwnNotes/issues/125), thank you @Waqar144)
+- attempted to fix building the application on Qt <= 5.5
+  (for [#125](https://github.com/pbek/QOwnNotes/issues/125), thank you @Waqar144)
+
 ## 19.10.12
 - there now is a **spellchecker** integrated into QOwnNotes
   (for [#125](https://github.com/pbek/QOwnNotes/issues/125), a big thank you to @Waqar144)
