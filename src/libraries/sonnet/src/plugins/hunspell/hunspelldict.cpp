@@ -111,7 +111,13 @@ bool HunspellDict::isCorrect(const QString &word) const
     qCDebug(SONNET_HUNSPELL) << " result :" << result;
     return result != 0;
 #else
+
+#if QT_VERSION >= 0x050400
     bool result = m_speller->spell(toDictEncoding(word).toStdString());
+
+#else
+    bool result = m_speller->spell(QString(toDictEncoding(word)).toStdString());
+#endif
    // qCDebug(SONNET_HUNSPELL) << " result :" << result;
     return result;
 #endif
@@ -132,8 +138,12 @@ QStringList HunspellDict::suggest(const QString &word) const
     }
     m_speller->free_list(&selection, nbWord);
 #else
+#if QT_VERSION >= 0x050400
     const auto suggestions = m_speller->suggest(toDictEncoding(word).toStdString());
-    for_each (suggestions.begin(), suggestions.end(), [this, &lst](const std::string &suggestion) {
+#else
+    const auto suggestions = m_speller->suggest(QString(toDictEncoding(word)).toStdString());
+#endif
+    std::for_each (suggestions.begin(), suggestions.end(), [this, &lst](const std::string &suggestion) {
             lst << m_codec->toUnicode(suggestion.c_str()); });
 #endif
 
