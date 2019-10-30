@@ -5,6 +5,9 @@
   (for [#125](https://github.com/pbek/QOwnNotes/issues/125), thank you @Waqar144)
 - attempted to fix building the application on Qt <= 5.5
   (for [#125](https://github.com/pbek/QOwnNotes/issues/125), thank you @Waqar144)
+- added more Dutch, Finnish, Hungarian, Czech, Croatian, Danish, Indonesian,
+  Catalan, Spanish, Brazilian Portuguese, Russian, German, Polish translation
+  (thank you Fabijenna, zmni, MGuerra, richarson, mlimacarlos, unchase, rakekniven, lucjan)
 
 ## 19.10.12
 - there now is a **spellchecker** integrated into QOwnNotes

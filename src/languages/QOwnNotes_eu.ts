@@ -768,7 +768,7 @@
     <message>
       <location filename="../dialogs/imagedialog.cpp" line="76"/>
       <source>Any files</source>
-      <translation type="unfinished">Any files</translation>
+      <translation>Edozein fitxategi</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.cpp" line="82"/>
