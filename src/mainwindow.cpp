@@ -1215,7 +1215,9 @@ void MainWindow::updatePanelMenu() {
         }
 
     // update the preview in case it was disable previously
-    setNoteTextFromNote(&currentNote, true);
+    if(_notePreviewDockWidget->isVisible()) {
+        setNoteTextFromNote(&currentNote, true);
+    }
 }
 
 /**
