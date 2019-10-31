@@ -20,6 +20,8 @@
   (for [#125](https://github.com/pbek/QOwnNotes/issues/125))
     - check [Hunspell Dictionaries Content Snaps](https://snapcraft.io/docs/t/the-hunspell-dictionaries-content-snaps/7160)
       on how to connect the plug
+- fixed a note naming problem with the scripting function `createNote` if it was
+  called multiple times in the same second (for [#1345](https://github.com/pbek/QOwnNotes/issues/1345))
 
 ## 19.10.13
 - fixed spellchecking for notes with certain types of code blocks

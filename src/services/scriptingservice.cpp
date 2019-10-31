@@ -194,7 +194,7 @@ QList<QVariant> ScriptingService::registerSettingsVariables(
                 }
             }
     } else {
-        Q_UNUSED(script);
+        Q_UNUSED(script)
     }
 
     return list;
@@ -926,7 +926,7 @@ void ScriptingService::noteTextEditWrite(const QString& text) {
         mainWindow->writeToNoteTextEdit(text);
     }
 #else
-    Q_UNUSED(text);
+    Q_UNUSED(text)
 #endif
 }
 
@@ -1064,7 +1064,7 @@ QString ScriptingService::noteTextEditCurrentWord(bool withPreviousCharacters) {
     return mainWindow != Q_NULLPTR ?
            mainWindow->noteTextEditCurrentWord(withPreviousCharacters) : "";
 #else
-    Q_UNUSED(withPreviousCharacters);
+    Q_UNUSED(withPreviousCharacters)
     return "";
 #endif
 }
@@ -1084,7 +1084,7 @@ void ScriptingService::tagCurrentNote(const QString& tagName) {
         mainWindow->linkTagNameToCurrentNote(tagName);
     }
 #else
-    Q_UNUSED(tagName);
+    Q_UNUSED(tagName)
 #endif
 }
 
@@ -1104,7 +1104,7 @@ void ScriptingService::log(QString text) {
         emit(mainWindow->log(LogWidget::ScriptingLogType, std::move(text)));
     }
 #else
-    Q_UNUSED(text);
+    Q_UNUSED(text)
 #endif
 }
 
@@ -1211,13 +1211,13 @@ void ScriptingService::registerCustomAction(const QString& identifier,
                                     useInNoteListContextMenu);
     }
 #else
-    Q_UNUSED(identifier);
-    Q_UNUSED(menuText);
-    Q_UNUSED(buttonText);
-    Q_UNUSED(icon);
-    Q_UNUSED(useInNoteEditContextMenu);
-    Q_UNUSED(hideButtonInToolbar);
-    Q_UNUSED(useInNoteListContextMenu);
+    Q_UNUSED(identifier)
+    Q_UNUSED(menuText)
+    Q_UNUSED(buttonText)
+    Q_UNUSED(icon)
+    Q_UNUSED(useInNoteEditContextMenu)
+    Q_UNUSED(hideButtonInToolbar)
+    Q_UNUSED(useInNoteListContextMenu)
 #endif
 }
 
@@ -1238,8 +1238,8 @@ void ScriptingService::registerLabel(const QString& identifier, const QString& t
         mainWindow->addScriptingLabel(identifier, text);
     }
 #else
-    Q_UNUSED(identifier);
-    Q_UNUSED(text);
+    Q_UNUSED(identifier)
+    Q_UNUSED(text)
 #endif
 }
 
@@ -1260,8 +1260,8 @@ void ScriptingService::setLabelText(const QString& identifier, const QString& te
         mainWindow->setScriptingLabelText(identifier, text);
     }
 #else
-    Q_UNUSED(identifier);
-    Q_UNUSED(text);
+    Q_UNUSED(identifier)
+    Q_UNUSED(text)
 #endif
 }
 
@@ -1279,9 +1279,7 @@ void ScriptingService::createNote(QString text) {
                 "scripting/" + QString(__func__));
 
         // create a temporary name for the note
-        QDateTime currentDate = QDateTime::currentDateTime();
-        QString name = "Note " +
-                currentDate.toString(Qt::ISODate).replace(":", ".");
+        QString name = "Note " + Utils::Misc::createUuidString();
 
         // create the new note and move the cursor to the end
         mainWindow->createNewNote(
@@ -1289,7 +1287,7 @@ void ScriptingService::createNote(QString text) {
                         MainWindow::CreateNewNoteOption::CursorAtEnd));
     }
 #else
-    Q_UNUSED(text);
+    Q_UNUSED(text)
 #endif
 }
 
@@ -1474,7 +1472,7 @@ void ScriptingService::setCurrentNote(NoteApi *note) {
         mainWindow->setCurrentNoteFromNoteId(note->getId());
     }
 #else
-    Q_UNUSED(note);
+    Q_UNUSED(note)
 #endif
 }
 
@@ -1494,8 +1492,8 @@ void ScriptingService::informationMessageBox(const QString& text, const QString&
         QMessageBox::information(mainWindow, title, text);
     }
 #else
-    Q_UNUSED(text);
-    Q_UNUSED(title);
+    Q_UNUSED(text)
+    Q_UNUSED(title)
 #endif
 }
 
@@ -1525,10 +1523,10 @@ int ScriptingService::questionMessageBox(
                                              defaultButton));
     }
 #else
-    Q_UNUSED(text);
-    Q_UNUSED(title);
-    Q_UNUSED(buttons);
-    Q_UNUSED(defaultButton);
+    Q_UNUSED(text)
+    Q_UNUSED(title)
+    Q_UNUSED(buttons)
+    Q_UNUSED(defaultButton)
 #endif
 
     return QMessageBox::NoButton;
@@ -1554,9 +1552,9 @@ QString ScriptingService::getOpenFileName(const QString& caption,
         return QFileDialog::getOpenFileName(mainWindow, caption, dir, filter);
     }
 #else
-    Q_UNUSED(caption);
-    Q_UNUSED(dir);
-    Q_UNUSED(filter);
+    Q_UNUSED(caption)
+    Q_UNUSED(dir)
+    Q_UNUSED(filter)
 #endif
 
     return "";
@@ -1582,9 +1580,9 @@ QString ScriptingService::getSaveFileName(const QString& caption,
         return QFileDialog::getSaveFileName(mainWindow, caption, dir, filter);
     }
 #else
-    Q_UNUSED(caption);
-    Q_UNUSED(dir);
-    Q_UNUSED(filter);
+    Q_UNUSED(caption)
+    Q_UNUSED(dir)
+    Q_UNUSED(filter)
 #endif
 
     return "";
@@ -1711,11 +1709,11 @@ QString ScriptingService::inputDialogGetItem(
     return QInputDialog::getItem(
             Q_NULLPTR, title, label, items, current, editable);
 #else
-    Q_UNUSED(title);
-    Q_UNUSED(label);
-    Q_UNUSED(items);
-    Q_UNUSED(current);
-    Q_UNUSED(editable);
+    Q_UNUSED(title)
+    Q_UNUSED(label)
+    Q_UNUSED(items)
+    Q_UNUSED(current)
+    Q_UNUSED(editable)
     return "";
 #endif
 }
@@ -1737,9 +1735,9 @@ QString ScriptingService::inputDialogGetText(
     return QInputDialog::getText(Q_NULLPTR, title, label,
                                  QLineEdit::Normal, text);
 #else
-    Q_UNUSED(title);
-    Q_UNUSED(label);
-    Q_UNUSED(text);
+    Q_UNUSED(title)
+    Q_UNUSED(label)
+    Q_UNUSED(text)
     return "";
 #endif
 }
@@ -1822,8 +1820,8 @@ bool ScriptingService::jumpToNoteSubFolder(const QString &noteSubFolderPath,
     // jump to the note subfolder
     return mainWindow->jumpToNoteSubFolder(folder.getId());
 #else
-    Q_UNUSED(noteSubFolderPath);
-    Q_UNUSED(separator);
+    Q_UNUSED(noteSubFolderPath)
+    Q_UNUSED(separator)
     return false;
 #endif
 }
@@ -1908,7 +1906,7 @@ void ScriptingService::triggerMenuAction(const QString& objectName,
     // trigger the action
     action->trigger();
 #else
-    Q_UNUSED(objectName);
-    Q_UNUSED(checked);
+    Q_UNUSED(objectName)
+    Q_UNUSED(checked)
 #endif
 }
