@@ -26,11 +26,6 @@ apps:
       - removable-media
       - opengl
       - cups-control
-      - hunspell-dictionaries-plug:
-        - content: hunspell-dictionaries-1-3-1604
-        - interface: content
-        - target: $SNAP/usr/share/hunspell
-        - default-provider: hunspell-dictionaries
 
 parts:
   qownnotes:
