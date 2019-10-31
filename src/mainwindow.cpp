@@ -10288,9 +10288,7 @@ bool MainWindow::createNewWorkspace(QString name) {
     QString currentUuid = currentWorkspaceUuid();
     settings.setValue(QStringLiteral("previousWorkspace"), currentUuid);
 
-    QString uuid = QUuid::createUuid().toString();
-    uuid.replace(QStringLiteral("{"), QStringLiteral("")).replace(QStringLiteral("}"), QStringLiteral(""));
-
+    QString uuid = Utils::Misc::createUuidString();
     QStringList workspaces = getWorkspaceUuidList();
     workspaces.append(uuid);
 

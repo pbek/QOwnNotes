@@ -41,6 +41,7 @@
 #include <utility>
 #include <services/owncloudservice.h>
 #include <QMimeDatabase>
+#include <QUuid>
 
 #ifdef Q_OS_WIN
 #include <windows.h>
@@ -1593,4 +1594,12 @@ QString Utils::Misc::remotePreviewImageTagToInlineImageTag(QString imageTag) {
     const QString inlineImageTag = imageTag.replace(url, replace);
 
     return inlineImageTag;
+}
+
+QString Utils::Misc::createUuidString() {
+    QUuid uuid = QUuid::createUuid();
+    QString uuidString = uuid.toString();
+    uuidString.replace("{", "").replace("}", "");
+
+    return uuidString;
 }

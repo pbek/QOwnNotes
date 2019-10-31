@@ -467,8 +467,7 @@ void FontColorWidget::on_copySchemeButton_clicked() {
     }
 
     const QStringList& keys = Utils::Schema::schemaSettings->getSchemaKeys(_currentSchemaKey);
-    QString uuid = QUuid::createUuid().toString();
-    uuid.replace("{", "").replace("}", "");
+    QString uuid = Utils::Misc::createUuidString();
     _currentSchemaKey = "EditorColorSchema-" + uuid;
 
     // store the new color schema data
@@ -681,8 +680,7 @@ void FontColorWidget::on_importSchemeButton_clicked() {
                             "Export/SchemaKey").toString();
 
                     // create a new schema key for the import
-                    QString uuid = QUuid::createUuid().toString();
-                    uuid.replace("{", "").replace("}", "");
+                    QString uuid = Utils::Misc::createUuidString();
                     _currentSchemaKey = "EditorColorSchema-" + uuid;
 
                     QStringList schemes = settings->value(

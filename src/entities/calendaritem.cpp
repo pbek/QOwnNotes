@@ -10,6 +10,7 @@
 #include <QUuid>
 #include <QSettings>
 #include <services/owncloudservice.h>
+#include <utils/misc.h>
 
 
 CalendarItem::CalendarItem() {
@@ -1042,10 +1043,7 @@ QString CalendarItem::decodeICSDataLine(QString line) {
 
 CalendarItem CalendarItem::createNewTodoItem(
         QString summary, QString calendar) {
-    QUuid uuid = QUuid::createUuid();
-    QString uuidString = uuid.toString();
-    uuidString.replace("{", "").replace("}", "");
-
+    QString uuidString = Utils::Misc::createUuidString();
     CalendarItem calItem;
     calItem.setSummary(summary);
     calItem.setCalendar(calendar);

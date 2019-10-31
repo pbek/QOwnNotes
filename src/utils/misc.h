@@ -99,6 +99,7 @@ namespace Utils {
         void transformNextcloudPreviewImages(QString &html);
         void transformRemotePreviewImages(QString &html);
         QString remotePreviewImageTagToInlineImageTag(QString imageTag);
+        QString createUuidString();
     }  // namespace Misc
 }  // namespace Utils
 
