@@ -60,9 +60,12 @@ HunspellClient::HunspellClient(QObject *parent)
       maybeAddPath(home);
       maybeAddPath(current);
 #else
-    maybeAddPath(QStringLiteral("/System/Library/Spelling"));
     maybeAddPath(QStringLiteral("/usr/share/hunspell/"));
     maybeAddPath(QStringLiteral("/usr/share/myspell/"));
+    maybeAddPath(QStringLiteral("~/.local/share/hunspell/"));
+    maybeAddPath(QStringLiteral("~/.local/share/myspell/"));
+    //Waqar: enable this one only if we use hunspell for mac
+    //maybeAddPath(QStringLiteral("/System/Library/Spelling"));
 #endif
 
 
