@@ -20,8 +20,8 @@
 QOwnSpellChecker::QOwnSpellChecker(QObject *parent) : QObject(parent) {
     spellchecker = new Sonnet::Speller();
     QSettings settings;
-    active = settings.value("checkSpelling", true).toBool();
-    QString language = settings.value("spellCheckLanguage", "auto").toString();
+    active = settings.value(QStringLiteral("checkSpelling"), true).toBool();
+    QString language = settings.value(QStringLiteral("spellCheckLanguage"), QStringLiteral("auto")).toString();
 
 #ifdef Q_OS_MACOS
     QString s = spellchecker->availableLanguages().at(0);
@@ -39,6 +39,9 @@ QString QOwnSpellChecker::currentLanguage() const {
 }
 
 void QOwnSpellChecker::setCurrentLanguage(const QString &lang) {
+    if (lang.isEmpty()) {
+        return;
+    }
     spellchecker->setLanguage(lang);
 }
 
