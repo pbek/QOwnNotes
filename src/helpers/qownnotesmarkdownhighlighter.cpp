@@ -55,6 +55,16 @@ void QOwnNotesMarkdownHighlighter::updateCurrentNote() {
     _currentNote = Note::fetch(qApp->property("currentNoteId").toInt());
 }
 
+static bool hasNotEmptyText(const QString &text)
+{
+    for (int i = 0; i < text.length(); ++i) {
+        if (!text.at(i).isSpace()) {
+            return true;
+        }
+    }
+    return false;
+}
+
 /**
  * Does the markdown highlighting
  * We need to override this method so our highlightMarkdown gets called
@@ -62,6 +72,10 @@ void QOwnNotesMarkdownHighlighter::updateCurrentNote() {
  * @param text
  */
 void QOwnNotesMarkdownHighlighter::highlightBlock(const QString &text) {
+    //skip empty blocks and blocks with just "spaces"
+    if (text.isEmpty() || text.isNull() || !hasNotEmptyText(text)) {
+        return;
+    }
     updateCurrentNote();
     setCurrentBlockState(HighlighterState::NoState);
     currentBlock().setUserState(HighlighterState::NoState);
@@ -110,7 +124,7 @@ void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(const QString& text)
             return;
         }
     } else { // check <note file.md> links
-        regex = QRegularExpression("<([^\\s`][^`]*?\\.[^`]*?[^\\s`]\\.md)>");
+        regex = QRegularExpression(QStringLiteral("<([^\\s`][^`]*?\\.[^`]*?[^\\s`]\\.md)>"));
         match = regex.match(text);
 
         if (match.hasMatch()) {
@@ -172,16 +186,6 @@ void QOwnNotesMarkdownHighlighter::unsetMisspelled(int start, int count) {
         format.setFontUnderline(false);
     }
     setFormat(start, count, format);
-}
-
-static bool hasNotEmptyText(const QString &text)
-{
-    for (int i = 0; i < text.length(); ++i) {
-        if (!text.at(i).isSpace()) {
-            return true;
-        }
-    }
-    return false;
 }
 
 /**

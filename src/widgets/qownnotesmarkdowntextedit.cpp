@@ -9,14 +9,6 @@
 #include <utils/misc.h>
 #include "qownnotesmarkdowntextedit.h"
 
-#ifdef WITH_SONNET
-// needs libkf5sonnet-dev
-//#include <KF5/SonnetUi/sonnet/spellcheckdecorator.h>
-//#include <KF5/SonnetUi/Sonnet/Dialog>
-//#include <KF5/SonnetUi/Sonnet/Highlighter>
-//#include <KF5/SonnetCore/Sonnet/BackgroundChecker>
-#endif
-
 QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
         : QMarkdownTextEdit(parent, false) {
     mainWindow = Q_NULLPTR;
@@ -34,7 +26,7 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
     QSettings settings;
     MarkdownHighlighter::HighlightingOptions options;
 
-    if (settings.value("fullyHighlightedBlockquotes").toBool()) {
+    if (settings.value(QStringLiteral("fullyHighlightedBlockquotes")).toBool()) {
         options |= MarkdownHighlighter::HighlightingOption
         ::FullyHighlightedBlockQuote;
     }
@@ -46,11 +38,6 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
     if (options != MarkdownHighlighter::HighlightingOption::None) {
         _highlighter->initHighlightingRules();
     }
-#ifdef WITH_SONNET
-    //Sonnet::SpellCheckDecorator *decorator = new Sonnet::SpellCheckDecorator(this);
-    //Q_UNUSED(decorator)
-    qDebug() <<"With SPELLING";
-#endif
 }
 
 QOwnNotesMarkdownTextEdit::~QOwnNotesMarkdownTextEdit()
@@ -111,7 +98,7 @@ void QOwnNotesMarkdownTextEdit::setStyles() {
     QSettings settings;
 
     // set the selection background color to a light blue if not in dark mode
-    if (!settings.value("darkMode").toBool()) {
+    if (!settings.value(QStringLiteral("darkMode")).toBool()) {
         // light green (#9be29b) could be another choice, but be aware that
         // this color will be used for mouse and keyboard selections too
         setStyleSheet(styleSheet() +
@@ -132,7 +119,7 @@ int QOwnNotesMarkdownTextEdit::modifyFontSize(FontModificationMode mode) {
 
     // modify the text edit default font
     QString fontString = settings.value(
-            "MainWindow/noteTextEdit.font").toString();
+            QStringLiteral("MainWindow/noteTextEdit.font")).toString();
     if (fontString != "") {
         font.fromString(fontString);
 
@@ -166,11 +153,11 @@ int QOwnNotesMarkdownTextEdit::modifyFontSize(FontModificationMode mode) {
         }
 
         // store the font settings
-        settings.setValue("MainWindow/noteTextEdit.font", font.toString());
+        settings.setValue(QStringLiteral("MainWindow/noteTextEdit.font"), font.toString());
     }
 
     // modify the text edit code font
-    fontString = settings.value("MainWindow/noteTextEdit.code.font").toString();
+    fontString = settings.value(QStringLiteral("MainWindow/noteTextEdit.code.font")).toString();
     if (fontString != "") {
         font.fromString(fontString);
 
@@ -204,7 +191,7 @@ int QOwnNotesMarkdownTextEdit::modifyFontSize(FontModificationMode mode) {
         }
 
         // store the font settings
-        settings.setValue("MainWindow/noteTextEdit.code.font", font.toString());
+        settings.setValue(QStringLiteral("MainWindow/noteTextEdit.code.font"), font.toString());
     }
 
     if (doSetStyles) {
@@ -229,16 +216,17 @@ void QOwnNotesMarkdownTextEdit::openUrl(QString urlString) {
         << urlString;
 
     QString notesPath = NoteFolder::currentLocalPath();
-    QString windowsSlash = "";
+    QString windowsSlash = QStringLiteral("");
 
 #ifdef Q_OS_WIN32
     // we need another slash for Windows
-    windowsSlash = "/";
+    windowsSlash = QStringLiteral("/");
 #endif
 
     // parse for relative file urls and make them absolute
-    urlString.replace(QRegularExpression("^file:[\\/]{2}([^\\/].+)$"),
-                      "file://" + windowsSlash + notesPath + "/\\1");
+    urlString.replace(QRegularExpression(QStringLiteral("^file:[\\/]{2}([^\\/].+)$")),
+                      QStringLiteral("file://") + windowsSlash +
+                      notesPath + QStringLiteral("/\\1"));
 
     QMarkdownTextEdit::openUrl(urlString);
 }
@@ -254,9 +242,9 @@ void QOwnNotesMarkdownTextEdit::openUrl(QString urlString) {
 void QOwnNotesMarkdownTextEdit::setPaperMargins(int width) {
     QSettings settings;
     bool isInDistractionFreeMode =
-            settings.value("DistractionFreeMode/isEnabled").toBool();
+            settings.value(QStringLiteral("DistractionFreeMode/isEnabled")).toBool();
     bool editorWidthInDFMOnly =
-            settings.value("Editor/editorWidthInDFMOnly", true).toBool();
+            settings.value(QStringLiteral("Editor/editorWidthInDFMOnly"), true).toBool();
 
     if (isInDistractionFreeMode || !editorWidthInDFMOnly) {
         int margin = 0;
@@ -266,7 +254,7 @@ void QOwnNotesMarkdownTextEdit::setPaperMargins(int width) {
         }
 
         int editorWidthMode =
-                settings.value("DistractionFreeMode/editorWidthMode").toInt();
+                settings.value(QStringLiteral("DistractionFreeMode/editorWidthMode")).toInt();
 
         if (editorWidthMode != Full) {
             QFontMetrics metrics(font());
@@ -291,12 +279,12 @@ void QOwnNotesMarkdownTextEdit::setPaperMargins(int width) {
                             QString("O").repeated(characterAmount));
 #else
             int proposedEditorWidth = metrics.horizontalAdvance(
-                            QString("O").repeated(characterAmount));
+                            QStringLiteral("O").repeated(characterAmount));
 #endif
 
             // apply a factor to correct the faulty calculated margin
             // TODO(pbek): I don't know better way to get around this yet
-            proposedEditorWidth /= 1.332;
+            proposedEditorWidth /= static_cast<int>(1.332);
 
             // calculate the margin to be applied
             margin = (width - proposedEditorWidth) / 2;
@@ -357,21 +345,21 @@ void QOwnNotesMarkdownTextEdit::updateSettings() {
     QSettings settings;
     QMarkdownTextEdit::AutoTextOptions options;
 
-    if (settings.value("Editor/autoBracketClosing", true).toBool()) {
+    if (settings.value(QStringLiteral("Editor/autoBracketClosing"), true).toBool()) {
         options |= QMarkdownTextEdit::AutoTextOption::BracketClosing;
     }
 
-    if (settings.value("Editor/autoBracketRemoval", true).toBool()) {
+    if (settings.value(QStringLiteral("Editor/autoBracketRemoval"), true).toBool()) {
         options |= QMarkdownTextEdit::AutoTextOption::BracketRemoval;
     }
 
     //spell check active/inactive
-    bool spellcheckerActive = settings.value("checkSpelling", true).toBool();
+    bool spellcheckerActive = settings.value(QStringLiteral("checkSpelling"), true).toBool();
     spellchecker->setActive(spellcheckerActive);
 
 
-    QString lang = settings.value("spellCheckLanguage", "auto").toString();
-    if (lang == "auto") {
+    QString lang = settings.value(QStringLiteral("spellCheckLanguage"), QStringLiteral("auto")).toString();
+    if (lang == QStringLiteral("auto")) {
         spellchecker->setAutoDetect(true);
     } else {
         spellchecker->setAutoDetect(false);
@@ -381,9 +369,9 @@ void QOwnNotesMarkdownTextEdit::updateSettings() {
     setAutoTextOptions(options);
 
     // highlighting is always disabled for logTextEdit
-    if (objectName() != "logTextEdit") {
+    if (objectName() != QStringLiteral("logTextEdit")) {
         // enable or disable markdown highlighting
-        bool highlightingEnabled = settings.value("markdownHighlightingEnabled",
+        bool highlightingEnabled = settings.value(QStringLiteral("markdownHighlightingEnabled"),
                                                   true).toBool();
 
         setHighlightingEnabled(highlightingEnabled);
@@ -395,7 +383,7 @@ void QOwnNotesMarkdownTextEdit::updateSettings() {
         }
     }
 
-    _centerCursor = settings.value("Editor/centerCursor").toBool();
+    _centerCursor = settings.value(QStringLiteral("Editor/centerCursor")).toBool();
     QMarkdownTextEdit::updateSettings();
 }
 
@@ -405,7 +393,7 @@ void QOwnNotesMarkdownTextEdit::updateSettings() {
 void QOwnNotesMarkdownTextEdit::highlightCurrentLine()
 {
     QSettings settings;
-    if (!settings.value("Editor/highlightCurrentLine", true).toBool()) {
+    if (!settings.value(QStringLiteral("Editor/highlightCurrentLine"), true).toBool()) {
         return;
     }
 
@@ -543,7 +531,8 @@ bool QOwnNotesMarkdownTextEdit::eventFilter(QObject *obj, QEvent *event) {
     if (event->type() == QEvent::KeyPress) {
         auto *keyEvent = static_cast<QKeyEvent *>(event);
 
-        if (objectName() == "encryptedNoteTextEdit" || objectName() == "noteTextEdit") {
+        if (objectName() == QStringLiteral("encryptedNoteTextEdit")
+            || objectName() == QStringLiteral("noteTextEdit") ) {
             // deactivating the search widget has priority
             if ((keyEvent->key() == Qt::Key_Escape) && _searchWidget->isVisible()) {
                 _searchWidget->deactivate();
@@ -565,7 +554,7 @@ bool QOwnNotesMarkdownTextEdit::eventFilter(QObject *obj, QEvent *event) {
                             this,
                             tr("Note editing disabled"),
                             tr("Note editing is currently disabled, do you want to "
-                               "allow again?"), "readonly-mode-allow") ==
+                               "allow again?"), QStringLiteral("readonly-mode-allow")) ==
                         QMessageBox::Yes) {
                         if (mainWindow != Q_NULLPTR) {
                             mainWindow->allowNoteEditing();
