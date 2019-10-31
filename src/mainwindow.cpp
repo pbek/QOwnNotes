@@ -4147,10 +4147,8 @@ void MainWindow::removeSelectedNotes() {
 /**
  * Removes selected note subfolders after a confirmation
  */
-void MainWindow::removeSelectedNoteSubFolders() {
-    // TODO: add note tree support
-    int selectedItemsCount =
-            ui->noteSubFolderTreeWidget->selectedItems().size();
+void MainWindow::removeSelectedNoteSubFolders(QTreeWidget *treeWidget) {
+    int selectedItemsCount = treeWidget->selectedItems().size();
 
     if (selectedItemsCount == 0) {
         return;
@@ -4159,8 +4157,7 @@ void MainWindow::removeSelectedNoteSubFolders() {
     // gather the folders that are about to be deleted
     QStringList noteSubFolderPathList;
     QList<NoteSubFolder> noteSubFolderList;
-    Q_FOREACH(QTreeWidgetItem *item,
-              ui->noteSubFolderTreeWidget->selectedItems()) {
+    Q_FOREACH(QTreeWidgetItem *item, treeWidget->selectedItems()) {
             if (item->data(0, Qt::UserRole + 1) != FolderType) {
                 continue;
             }
@@ -5202,6 +5199,7 @@ void MainWindow::filterNotesBySearchLineEditText() {
             QTreeWidgetItem *item = *it;
 
             if (item->data(0, Qt::UserRole + 1) != NoteType) {
+                ++it;
                 continue;
             }
 
@@ -5329,6 +5327,11 @@ void MainWindow::filterNotesByTag() {
 
     // loop through all visible notes
     while (*it) {
+        if ((*it)->data(0, Qt::UserRole + 1) != NoteType) {
+            ++it;
+            continue;
+        }
+
         // hide all notes that are not linked to the active tag
         // note subfolder are not taken into account here (note names are now
         // not unique), but it should be ok because they are filtered by
@@ -9302,14 +9305,15 @@ void MainWindow::on_actionShow_status_bar_triggered(bool checked) {
 
 void MainWindow::on_noteTreeWidget_currentItemChanged(
         QTreeWidgetItem *current, QTreeWidgetItem *previous) {
-    Q_UNUSED(previous)
-
     // in case all notes were removed
     if (current == nullptr) {
         return;
     }
 
-    if (current->data(0, Qt::UserRole + 1).toInt() != NoteType) {
+    // handle changing of the current item for sub-folders
+    if (current->data(0, Qt::UserRole + 1).toInt() == FolderType) {
+        on_noteSubFolderTreeWidget_currentItemChanged(current, previous);
+
         return;
     }
 
@@ -9325,8 +9329,14 @@ void MainWindow::on_noteTreeWidget_currentItemChanged(
 
 void MainWindow::on_noteTreeWidget_customContextMenuRequested(
         const QPoint &pos) {
+    auto *item = ui->noteTreeWidget->itemAt(pos);
     QPoint globalPos = ui->noteTreeWidget->mapToGlobal(pos);
-    openNotesContextMenu(globalPos);
+
+    if (item->data(0, Qt::UserRole + 1).toInt() == NoteType) {
+        openNotesContextMenu(globalPos);
+    } else {
+        openNoteSubFolderContextMenu(globalPos, ui->noteTreeWidget);
+    }
 }
 
 void MainWindow::openNotesContextMenu(
@@ -9549,13 +9559,14 @@ void MainWindow::openNotesContextMenu(
  */
 void MainWindow::on_noteTreeWidget_itemChanged(QTreeWidgetItem *item,
                                                int column) {
-    Q_UNUSED(column)
-    if (item == nullptr || !Note::allowDifferentFileName()) {
+    // handle note subfolder renaming in a note tree
+    if (item->data(0, Qt::UserRole + 1) == FolderType) {
+        on_noteSubFolderTreeWidget_itemChanged(item, column);
+
         return;
     }
 
-    // TODO: add support to note subfolder renaming in a note tree
-    if (item->data(0, Qt::UserRole + 1) != NoteType) {
+    if (item == nullptr || !Note::allowDifferentFileName()) {
         return;
     }
 
@@ -9632,7 +9643,10 @@ void MainWindow::on_noteSubFolderTreeWidget_currentItemChanged(
 
     ui->searchLineEdit->clear();
 
-    filterNotes();
+    if (!NoteFolder::isCurrentNoteTreeEnabled()) {
+        filterNotes();
+    }
+
     reloadTagTree();
 }
 
@@ -9690,18 +9704,16 @@ void MainWindow::on_noteSubFolderTreeWidget_itemCollapsed(
 }
 
 /**
- * Shows the context menu for the note subfolder tree
+ * Shows the note subfolder context menu
  */
-void MainWindow::on_noteSubFolderTreeWidget_customContextMenuRequested(
-        const QPoint &pos) {
+void MainWindow::openNoteSubFolderContextMenu(
+        const QPoint &globalPos, QTreeWidget *treeWidget) {
     // don't open the context menu if no subfolders are selected
-    if (ui->noteSubFolderTreeWidget->selectedItems().count() == 0) {
+    if (treeWidget->selectedItems().count() == 0) {
         return;
     }
 
-    QPoint globalPos = ui->noteSubFolderTreeWidget->mapToGlobal(pos);
     QMenu menu;
-
     QAction *newNoteAction = menu.addAction(tr("New note"));
     QAction *newAction = menu.addAction(tr("New subfolder"));
     QAction *renameAction = menu.addAction(tr("Rename subfolder"));
@@ -9719,12 +9731,12 @@ void MainWindow::on_noteSubFolderTreeWidget_customContextMenuRequested(
             createNewNoteSubFolder();
         } else if (selectedItem == removeAction) {
             // remove folders
-            removeSelectedNoteSubFolders();
+            removeSelectedNoteSubFolders(treeWidget);
         } else if (selectedItem == renameAction) {
-            QTreeWidgetItem *item = ui->noteSubFolderTreeWidget->currentItem();
+            QTreeWidgetItem *item = treeWidget->currentItem();
 
             // rename folder
-            ui->noteSubFolderTreeWidget->editItem(item);
+            treeWidget->editItem(item);
         } else if (selectedItem == showInFileManagerAction) {
             NoteSubFolder noteSubFolder =
                     NoteFolder::currentNoteFolder().getActiveNoteSubFolder();
@@ -9733,6 +9745,15 @@ void MainWindow::on_noteSubFolderTreeWidget_customContextMenuRequested(
             Utils::Misc::openPath(noteSubFolder.fullPath());
         }
     }
+}
+
+/**
+ * Shows the context menu for the note subfolder tree
+ */
+void MainWindow::on_noteSubFolderTreeWidget_customContextMenuRequested(
+        const QPoint &pos) {
+    QPoint globalPos = ui->noteSubFolderTreeWidget->mapToGlobal(pos);
+    openNoteSubFolderContextMenu(globalPos, ui->noteSubFolderTreeWidget);
 }
 
 /**
@@ -9760,8 +9781,12 @@ bool MainWindow::createNewNoteSubFolder(QString folderName) {
     // rebuild the index of the note subfolders
     buildNotesIndex();
 
-    // reload note subfolders
-    setupNoteSubFolders();
+    if (NoteFolder::isCurrentNoteTreeEnabled()) {
+        loadNoteDirectoryList();
+    } else {
+        // reload note subfolders
+        setupNoteSubFolders();
+    }
 
     return success;
 }
@@ -9783,6 +9808,10 @@ void MainWindow::on_noteSubFolderTreeWidget_itemChanged(
         QTreeWidgetItem *item, int column) {
     Q_UNUSED(column)
 
+    if (item == nullptr) {
+        return;
+    }
+
     NoteSubFolder noteSubFolder = NoteSubFolder::fetch(
             item->data(0, Qt::UserRole).toInt());
     if (noteSubFolder.isFetched()) {
@@ -9791,8 +9820,11 @@ void MainWindow::on_noteSubFolderTreeWidget_itemChanged(
         // rename the note subfolder in the file system
         noteSubFolder.rename(name);
 
-        // reload tags, note subfolder and notes
-        on_action_Reload_note_folder_triggered();
+        // for some reason the app crashes if we are using this with a note tree
+        if (!NoteFolder::isCurrentNoteTreeEnabled()) {
+            // reload tags, note subfolder and notes
+            on_action_Reload_note_folder_triggered();
+        }
     }
 }
 

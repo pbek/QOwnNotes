@@ -840,7 +840,7 @@ private:
 
     bool addNoteToNoteTreeWidget(Note note, QTreeWidgetItem *parent = nullptr);
 
-    void removeSelectedNoteSubFolders();
+    void removeSelectedNoteSubFolders(QTreeWidget *treeWidget);
 
     bool createNewNoteSubFolder(QString folderName = "");
 
@@ -976,6 +976,8 @@ private:
 
     void openNotesContextMenu(const QPoint &globalPos,
             bool multiNoteMenuEntriesOnly = false);
+
+    void openNoteSubFolderContextMenu(const QPoint &globalPos, QTreeWidget *treeWidget);
 
     void updateCurrentNoteTextHash();
 

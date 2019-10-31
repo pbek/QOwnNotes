@@ -1,7 +1,20 @@
 # QOwnNotes Changelog
 
+## 19.11.0
+- improvements where made to the **note / sub-folder tree mode**
+  (for [#790](https://github.com/pbek/QOwnNotes/issues/790))
+    - note search by text and filtering by tag is now working
+    - if you right click on an item you will now either get the context menu
+      for a note or a sub-folder depending what item you have clicked
+        - you can create a new note or sub-folder via context menu
+        - you can show a sub-folder in file manager via context menu
+        - you can remove selected sub-folder via context menu
+        - you can rename the current sub-folder via context menu, by clicking it
+          twice or by pressing <kbd>F2</kbd>
+    - if you click a sub-folder the current note sub-folder will be changed to it
+
 ## 19.10.13
-- fixed spellchecking for notes with certain types of code blocks 
+- fixed spellchecking for notes with certain types of code blocks
   (for [#125](https://github.com/pbek/QOwnNotes/issues/125), thank you @Waqar144)
 - attempted to fix building the application on Qt <= 5.5
   (for [#125](https://github.com/pbek/QOwnNotes/issues/125), thank you @Waqar144)
@@ -12,18 +25,18 @@
 ## 19.10.12
 - there now is a **spellchecker** integrated into QOwnNotes
   (for [#125](https://github.com/pbek/QOwnNotes/issues/125), a big thank you to @Waqar144)
-	- [Sonnet](https://github.com/KDE/sonnet) with [Hunspell](https://hunspell.github.io/) is used for spellchecking
-	- under **Linux** you need to install the Hunspell dictionaries for your language
-	- under **Windows** you need to copy Hunspell dictionaries for your language
-	  to a folder `dicts` in your QOwnNotes application folder or in `C:\Users\[username]\dicts`
-		- you can download dictionaries from [LibreOffice dictionaries](https://github.com/LibreOffice/dictionaries)
-	- under **macOS** the native spellchecker will be used
-		- you can download more dictionaries from [LibreOffice dictionaries](https://github.com/LibreOffice/dictionaries)
-		  and copy them to `~/Library/Spelling`, if the directory doesn't exist
-		  you need to create it
-	- dictionary files are `*.dic` or `*.aff` files, visit
-	  [QOwnNotes Spellchecking](http://docs.qownnotes.org/en/develop/spellchecking.html)
-	  for more information
+    - [Sonnet](https://github.com/KDE/sonnet) with [Hunspell](https://hunspell.github.io/) is used for spellchecking
+    - under **Linux** you need to install the Hunspell dictionaries for your language
+    - under **Windows** you need to copy Hunspell dictionaries for your language
+      to a folder `dicts` in your QOwnNotes application folder or in `C:\Users\[username]\dicts`
+        - you can download dictionaries from [LibreOffice dictionaries](https://github.com/LibreOffice/dictionaries)
+    - under **macOS** the native spellchecker will be used
+        - you can download more dictionaries from [LibreOffice dictionaries](https://github.com/LibreOffice/dictionaries)
+          and copy them to `~/Library/Spelling`, if the directory doesn't exist
+          you need to create it
+    - dictionary files are `*.dic` or `*.aff` files, visit
+      [QOwnNotes Spellchecking](http://docs.qownnotes.org/en/develop/spellchecking.html)
+      for more information
 - you now can **disable todo lists** completely in the *Todo settings*
     - no todo calendar items will be loaded in the background
     - if you open the todo dialog you will get a message that todo lists are disabled
