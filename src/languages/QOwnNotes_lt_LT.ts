@@ -283,12 +283,12 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="2848"/>
       <source>Recursive mapping</source>
-      <translation type="unfinished">Recursive mapping</translation>
+      <translation>Rekursinis žemėlapių sudarymas</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3717"/>
       <source>%1%2%</source>
-      <translation type="unfinished">%1%2%</translation>
+      <translation>%1%2%</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3719"/>
@@ -298,32 +298,32 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3733"/>
       <source>Not implemented in FakeVim.</source>
-      <translation type="unfinished">Not implemented in FakeVim.</translation>
+      <translation>Neįgyvendintos FakeVim.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4313"/>
       <source>Type Alt-V, Alt-V to quit FakeVim mode.</source>
-      <translation type="unfinished">Type Alt-V, Alt-V to quit FakeVim mode.</translation>
+      <translation>Įveskite Alt-V, Alt-V, kad išeitumėte iš „FakeVim“ režimo.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5761"/>
       <source>Unknown option:</source>
-      <translation type="unfinished">Unknown option:</translation>
+      <translation>Nežinoma parinktis:</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5771"/>
       <source>Invalid argument:</source>
-      <translation type="unfinished">Invalid argument:</translation>
+      <translation>Netinkamas argumentas:</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5773"/>
       <source>Trailing characters:</source>
-      <translation type="unfinished">Trailing characters:</translation>
+      <translation>Galiniai ženklai:</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5855"/>
       <source>Move lines into themselves.</source>
-      <translation type="unfinished">Move lines into themselves.</translation>
+      <translation>Perkelkite linijas į save.</translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5897"/>
@@ -358,12 +358,12 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5987"/>
       <source>Cannot open file "%1" for reading</source>
-      <translation type="unfinished">Cannot open file "%1" for reading</translation>
+      <translation>Neįmanoma atidaryti failo „%1“ skaitymui</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6015"/>
       <source>"%1" %2L, %3C</source>
-      <translation type="unfinished">"%1" %2L, %3C</translation>
+      <translation>"%1" %2L, %3C</translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6042"/>
@@ -378,42 +378,42 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6130"/>
       <source>Cannot open file %1</source>
-      <translation type="unfinished">Cannot open file %1</translation>
+      <translation>Nepavyko atidaryti failo %1</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6203"/>
       <source>Not an editor command: %1</source>
-      <translation type="unfinished">Not an editor command: %1</translation>
+      <translation>Ne redaktoriaus komanda: %1</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6297"/>
       <source>Invalid regular expression: %1</source>
-      <translation type="unfinished">Invalid regular expression: %1</translation>
+      <translation>Neteisinga reguliari išraiška: %1</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6333"/>
       <source>Pattern not found: %1</source>
-      <translation type="unfinished">Pattern not found: %1</translation>
+      <translation>Šablonas nerastas: %1</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6337"/>
       <source>Search hit BOTTOM, continuing at TOP.</source>
-      <translation type="unfinished">Search hit BOTTOM, continuing at TOP.</translation>
+      <translation>Paieška atlikta apačioje, tęsiant viršuje.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6338"/>
       <source>Search hit TOP, continuing at BOTTOM.</source>
-      <translation type="unfinished">Search hit TOP, continuing at BOTTOM.</translation>
+      <translation>Paieška pasiekta viršuje, tęsiant apačioje.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6343"/>
       <source>Search hit BOTTOM without match for: %1</source>
-      <translation type="unfinished">Search hit BOTTOM without match for: %1</translation>
+      <translation>Paieškos rezultatų apačioje ieškokite: %1</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6344"/>
       <source>Search hit TOP without match for: %1</source>
-      <translation type="unfinished">Search hit TOP without match for: %1</translation>
+      <translation>Ieškokite populiariausių populiariausių žaidėjų sąraše: %1</translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6451"/>
@@ -449,12 +449,12 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7778"/>
       <source>Already at oldest change.</source>
-      <translation type="unfinished">Already at oldest change.</translation>
+      <translation>Jau seniausiai pasikeitus.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7779"/>
       <source>Already at newest change.</source>
-      <translation type="unfinished">Already at newest change.</translation>
+      <translation>Jau naujausi pokyčiai.</translation>
     </message>
   </context>
   <context>
@@ -462,7 +462,7 @@
     <message>
       <location filename="../helpers/fakevimproxy.cpp" line="26"/>
       <source>Information</source>
-      <translation type="unfinished">Information</translation>
+      <translation>Informacija</translation>
     </message>
   </context>
   <context>
@@ -470,94 +470,94 @@
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="38"/>
       <source>Text font</source>
-      <translation type="unfinished">Text font</translation>
+      <translation>Teksto šriftas</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="73"/>
       <source>Size:</source>
-      <translation type="unfinished">Size:</translation>
+      <translation>Dydis:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="80"/>
       <source>Family:</source>
-      <translation type="unfinished">Family:</translation>
+      <translation>Šeima:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="103"/>
       <source>Color schema</source>
-      <translation type="unfinished">Color schema</translation>
+      <translation>Color schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="124"/>
       <source>Delete schema</source>
-      <translation type="unfinished">Delete schema</translation>
+      <translation>Ištrinti schemą</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="127"/>
       <source>Delete</source>
-      <translation type="unfinished">Delete</translation>
+      <translation>Ištrinti</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="169"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="631"/>
       <source>Export schema</source>
-      <translation type="unfinished">Export schema</translation>
+      <translation>Eksporto schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="172"/>
       <source>Export</source>
-      <translation type="unfinished">Export</translation>
+      <translation>Eksportuoti</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="271"/>
       <source>If you have created a nice color schema please export it and share it with everyone!</source>
-      <translation type="unfinished">If you have created a nice color schema please export it and share it with everyone!</translation>
+      <translation>Jei sukūrėte gražią spalvų schemą, eksportuokite ją ir pasidalykite su visais!</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="155"/>
       <source>Copy schema</source>
-      <translation type="unfinished">Copy schema</translation>
+      <translation>Kopijuoti schemą</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="158"/>
       <source>Copy</source>
-      <translation type="unfinished">Copy</translation>
+      <translation>Kopijuoti</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="141"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="671"/>
       <source>Import schema</source>
-      <translation type="unfinished">Import schema</translation>
+      <translation>Importuoti schemą</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="144"/>
       <source>Import</source>
-      <translation type="unfinished">Import</translation>
+      <translation>Importuoti</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="315"/>
       <source>Share schema</source>
-      <translation type="unfinished">Share schema</translation>
+      <translation>Dalytis schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="288"/>
       <source>Background:</source>
-      <translation type="unfinished">Background:</translation>
+      <translation>Pagrindiniai faktai:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="281"/>
       <source>Foreground:</source>
-      <translation type="unfinished">Foreground:</translation>
+      <translation>Priekinio plano:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="264"/>
       <source>Bold</source>
-      <translation type="unfinished">Bold</translation>
+      <translation>Drąsiai</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="244"/>
       <source>Italic</source>
-      <translation type="unfinished">Italic</translation>
+      <translation>Kursyvas</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="237"/>
@@ -1054,58 +1054,58 @@
     <message>
       <location filename="../widgets/logwidget.ui" line="26"/>
       <source>Logs</source>
-      <translation type="unfinished">Logs</translation>
+      <translation>Rąstai</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="114"/>
       <source>Fatal</source>
-      <translation type="unfinished">Fatal</translation>
+      <translation>Mirtinas</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="100"/>
       <source>Warning</source>
-      <translation type="unfinished">Warning</translation>
+      <translation>Įspėjimas</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="107"/>
       <source>Critical</source>
-      <translation type="unfinished">Critical</translation>
+      <translation>Kritinis</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="86"/>
       <source>Debug</source>
-      <translation type="unfinished">Debug</translation>
+      <translation>Derinti</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="93"/>
       <source>Info</source>
-      <translation type="unfinished">Info</translation>
+      <translation>Informacija</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="121"/>
       <source>Status</source>
-      <translation type="unfinished">Status</translation>
+      <translation>Statusas</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="128"/>
       <source>Scripting</source>
-      <translation type="unfinished">Scripting</translation>
+      <translation>Scenarijus</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="135"/>
       <location filename="../widgets/logwidget.cpp" line="421"/>
       <source>Clear log</source>
-      <translation type="unfinished">Clear log</translation>
+      <translation>Išvalyti žurnalą</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.cpp" line="419"/>
       <source>Show options</source>
-      <translation type="unfinished">Show options</translation>
+      <translation>Rodyti parinktis</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.cpp" line="419"/>
       <source>Hide options</source>
-      <translation type="unfinished">Hide options</translation>
+      <translation>Slėpti parinktis</translation>
     </message>
   </context>
   <context>
@@ -1370,17 +1370,17 @@
     <message>
       <location filename="../mainwindow.ui" line="1060"/>
       <source>Versioning</source>
-      <translation type="unfinished">Versioning</translation>
+      <translation>Versija</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1071"/>
       <source>Encryption</source>
-      <translation type="unfinished">Encryption</translation>
+      <translation>Šifravimas</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1083"/>
       <source>Languages</source>
-      <translation type="unfinished">Languages</translation>
+      <translation>Kalbos</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1106"/>

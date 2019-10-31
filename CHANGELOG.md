@@ -18,6 +18,7 @@
     - if you need to add additional language files on Linux you can do so in `~/.local/share/hunspell`
 - fixed a note naming problem with the scripting function `createNote` if it was
   called multiple times in the same second (for [#1345](https://github.com/pbek/QOwnNotes/issues/1345))
+- added more Basque, German translation (thank you Fabijenna, rakekniven)
 
 ## 19.10.13
 - fixed spellchecking for notes with certain types of code blocks

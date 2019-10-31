@@ -884,7 +884,7 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="83"/>
       <source>Select local file or directory to link to</source>
-      <translation type="unfinished">Select local file or directory to link to</translation>
+      <translation>Aukeratu tokiko fitxategia edo direktoriora estekatzeko</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="94"/>
@@ -931,7 +931,7 @@
       <location filename="../dialogs/linkdialog.cpp" line="254"/>
       <location filename="../dialogs/linkdialog.cpp" line="302"/>
       <source>Select directory to link to</source>
-      <translation type="unfinished">Select directory to link to</translation>
+      <translation>Hautatu direktoriora estekatzeko</translation>
     </message>
   </context>
   <context>
@@ -944,7 +944,7 @@
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="55"/>
       <source>Find note name</source>
-      <translation type="unfinished">Find note name</translation>
+      <translation>Bilatu oharraren izena</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="81"/>
@@ -1362,7 +1362,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1083"/>
       <source>Languages</source>
-      <translation type="unfinished">Languages</translation>
+      <translation>Hizkuntzak</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1106"/>
@@ -1847,13 +1847,13 @@
     <message>
       <location filename="../mainwindow.ui" line="2527"/>
       <source>Check spelling</source>
-      <translation type="unfinished">Check spelling</translation>
+      <translation>Begiratu ortografia</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2535"/>
       <location filename="../mainwindow.cpp" line="11293"/>
       <source>Automatically detect</source>
-      <translation type="unfinished">Automatically detect</translation>
+      <translation>Automatikoki hautematea</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1876"/>
@@ -2219,12 +2219,12 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
     <message>
       <location filename="../mainwindow.cpp" line="4992"/>
       <source>Todo lists disabled!</source>
-      <translation type="unfinished">Todo lists disabled!</translation>
+      <translation>Todo zerrendak desgaituta daude!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4993"/>
       <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
-      <translation type="unfinished">You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</translation>
+      <translation>Zerrenda guztiak desgaitu dituzu. &lt;br /&gt; Egiaztatu zure &lt;strong&gt; Todo &lt;/strong&gt; ren konfigurazioa ezarpenetan!</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5228"/>
@@ -3602,17 +3602,17 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
     <message>
       <location filename="../main.cpp" line="216"/>
       <source>Note folder not found!</source>
-      <translation type="unfinished">Note folder not found!</translation>
+      <translation>Ohar karpeta ez da aurkitu!</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="217"/>
       <source>Your note folder was not found any more! Do you want to select a new one?</source>
-      <translation type="unfinished">Your note folder was not found any more! Do you want to select a new one?</translation>
+      <translation>Zure ohar karpeta ez da gehiago aurkitu! Berri bat aukeratu nahi duzu?</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="223"/>
       <source>Please select the folder where your notes will get stored to</source>
-      <translation type="unfinished">Please select the folder where your notes will get stored to</translation>
+      <translation>Hautatu zure oharrak non gordeko diren karpeta</translation>
     </message>
   </context>
   <context>
@@ -3620,17 +3620,17 @@ Zakarrontzia zure ownCloud zerbitzarian gaituta badago, hortik leheneratu behark
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="499"/>
       <source>No suggestions for %1</source>
-      <translation type="unfinished">No suggestions for %1</translation>
+      <translation>Ez da iradokizunik %1 erako</translation>
     </message>
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="510"/>
       <source>Ignore</source>
-      <translation type="unfinished">Ignore</translation>
+      <translation>Ez ikusi</translation>
     </message>
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="511"/>
       <source>Add to Dictionary</source>
-      <translation type="unfinished">Add to Dictionary</translation>
+      <translation>Gehitu hiztegian</translation>
     </message>
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="566"/>
@@ -4787,12 +4787,12 @@ Just probatu zeure burua sinkronizazio gatazkak lortzen badituzu eta balio handi
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1723"/>
       <source>Todo settings</source>
-      <translation type="unfinished">Todo settings</translation>
+      <translation>Todo ezarpenak</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1729"/>
       <source>Enable todo calendar support</source>
-      <translation type="unfinished">Enable todo calendar support</translation>
+      <translation>Gaitu guztia egutegiaren laguntza</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1914"/>
@@ -4827,12 +4827,12 @@ Just probatu zeure burua sinkronizazio gatazkak lortzen badituzu eta balio handi
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2131"/>
       <source>Bosnian</source>
-      <translation type="unfinished">Bosnian</translation>
+      <translation>Bosniako</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2142"/>
       <source>Bulgarian</source>
-      <translation type="unfinished">Bulgarian</translation>
+      <translation>Bulgariera</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2153"/>
@@ -4857,7 +4857,7 @@ Just probatu zeure burua sinkronizazio gatazkak lortzen badituzu eta balio handi
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2241"/>
       <source>Estonian</source>
-      <translation type="unfinished">Estonian</translation>
+      <translation>Estoniera</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2252"/>
@@ -4887,7 +4887,7 @@ Just probatu zeure burua sinkronizazio gatazkak lortzen badituzu eta balio handi
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2318"/>
       <source>Hebrew</source>
-      <translation type="unfinished">Hebrew</translation>
+      <translation>Hebreera</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2329"/>
@@ -4902,17 +4902,17 @@ Just probatu zeure burua sinkronizazio gatazkak lortzen badituzu eta balio handi
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2362"/>
       <source>Icelandic</source>
-      <translation type="unfinished">Icelandic</translation>
+      <translation>Islandiera</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2384"/>
       <source>Korean</source>
-      <translation type="unfinished">Korean</translation>
+      <translation>Koreera</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2395"/>
       <source>Macedonian</source>
-      <translation type="unfinished">Macedonian</translation>
+      <translation>Mazedoniera</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2417"/>
@@ -4922,7 +4922,7 @@ Just probatu zeure burua sinkronizazio gatazkak lortzen badituzu eta balio handi
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2494"/>
       <source>Punjabi</source>
-      <translation type="unfinished">Punjabi</translation>
+      <translation>Punjabera</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2450"/>
@@ -4942,7 +4942,7 @@ Just probatu zeure burua sinkronizazio gatazkak lortzen badituzu eta balio handi
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2538"/>
       <source>Albanian</source>
-      <translation type="unfinished">Albanian</translation>
+      <translation>Albaniera</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2549"/>
@@ -5151,7 +5151,7 @@ Just probatu zeure burua sinkronizazio gatazkak lortzen badituzu eta balio handi
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5125"/>
       <source>Show the number of matches in each note</source>
-      <translation type="unfinished">Show the number of matches in each note</translation>
+      <translation>Erakutsi nota bakoitzeko partida kopurua</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5280"/>
@@ -5176,7 +5176,7 @@ Just probatu zeure burua sinkronizazio gatazkak lortzen badituzu eta balio handi
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5395"/>
       <source>Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</source>
-      <translation type="unfinished">Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</translation>
+      <translation>Ohar-zerrenda erabili beharrean, erabili azpikarpeta guztiekin ohar-zuhaitza (ohar-karpeta aktibatuta badago)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5630"/>
@@ -6369,139 +6369,139 @@ Zure oharrak osorik egongo dira!</translation>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="196"/>
       <source>40</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">40</translation>
+      <translation>40</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="197"/>
       <source>60</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">60</translation>
+      <translation>60</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="198"/>
       <source>80</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">80</translation>
+      <translation>80</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="199"/>
       <source>-ise suffixes</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">-ise suffixes</translation>
+      <translation>-ise atzizkiak</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="200"/>
       <source>-ize suffixes</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">-ize suffixes</translation>
+      <translation>-ize atzizkiak</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="201"/>
       <source>-ise suffixes and with accents</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">-ise suffixes and with accents</translation>
+      <translation>-ise atzizkiak eta azentuekin</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="203"/>
       <source>-ise suffixes and without accents</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">-ise suffixes and without accents</translation>
+      <translation>-ise atzizkiak eta azenturik gabe</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="206"/>
       <source>-ize suffixes and with accents</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">-ize suffixes and with accents</translation>
+      <translation>-ize atzizkiak eta azentuekin</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="208"/>
       <source>-ize suffixes and without accents</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">-ize suffixes and without accents</translation>
+      <translation>-ize suffixes and without accents</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="211"/>
       <source>large</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">large</translation>
+      <translation>handiak</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="212"/>
       <source>medium</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">medium</translation>
+      <translation>ertain</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="213"/>
       <source>small</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">small</translation>
+      <translation>txiki</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="214"/>
       <source>variant 0</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">variant 0</translation>
+      <translation>0 aldaera</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="215"/>
       <source>variant 1</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">variant 1</translation>
+      <translation>1 aldaera</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="216"/>
       <source>variant 2</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">variant 2</translation>
+      <translation>2 aldaera</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="218"/>
       <source>without accents</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">without accents</translation>
+      <translation>azentu gabe</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="219"/>
       <source>with accents</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">with accents</translation>
+      <translation>azentuekin</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="221"/>
       <source>with ye, modern russian</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">with ye, modern russian</translation>
+      <translation>ye batera, modernoa russian</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="223"/>
       <source>with yeyo, modern and old russian</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">with yeyo, modern and old russian</translation>
+      <translation>yeyo-rekin, errusiar moderno eta zaharra</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="226"/>
       <source>with yo, old russian</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">with yo, old russian</translation>
+      <translation>yo-rekin, errusiar zaharra</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="227"/>
       <source>extended</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">extended</translation>
+      <translation>luzatu</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="262"/>
       <source>%1 (%2) [%3]</source>
       <comment>dictionary name; %1 = language name, %2 = country name and %3 = language variant name</comment>
-      <translation type="unfinished">%1 (%2) [%3]</translation>
+      <translation>%1 (%2) [%3]</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="265"/>
       <source>%1 (%2)</source>
       <comment>dictionary name; %1 = language name, %2 = country name</comment>
-      <translation type="unfinished">%1 (%2)</translation>
+      <translation>%1 (%2)</translation>
     </message>
   </context>
   <context>
@@ -6901,7 +6901,7 @@ Hau ezin da desegin!</translation>
     <message>
       <location filename="../dialogs/trashdialog.ui" line="55"/>
       <source>Find note name</source>
-      <translation type="unfinished">Find note name</translation>
+      <translation>Bilatu oharraren izena</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="26"/>

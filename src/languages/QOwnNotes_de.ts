@@ -2218,12 +2218,12 @@ Falls Sie die Papierkorb-App auf Ihrem Nextcloud/ownCloud-Server aktiviert haben
     <message>
       <location filename="../mainwindow.cpp" line="4992"/>
       <source>Todo lists disabled!</source>
-      <translation type="unfinished">Todo lists disabled!</translation>
+      <translation>ToDo-Listen sind deaktiviert!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4993"/>
       <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
-      <translation type="unfinished">You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</translation>
+      <translation>Sie haben keine ToDo-Liste ausgewählt. &lt;br /&gt;Bitte überprüfen Sie Ihre &lt;strong&gt;ToDo&lt;/strong&gt;-Konfiguration in den Einstellungen!</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5228"/>
@@ -3619,7 +3619,7 @@ Falls Sie die Papierkorb-App auf Ihrem Nextcloud/ownCloud-Server aktiviert haben
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="499"/>
       <source>No suggestions for %1</source>
-      <translation type="unfinished">No suggestions for %1</translation>
+      <translation>Keine Vorschläge für %1</translation>
     </message>
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="510"/>
@@ -3629,7 +3629,7 @@ Falls Sie die Papierkorb-App auf Ihrem Nextcloud/ownCloud-Server aktiviert haben
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="511"/>
       <source>Add to Dictionary</source>
-      <translation type="unfinished">Add to Dictionary</translation>
+      <translation>Zu Wörterbuch hinzufügen</translation>
     </message>
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="566"/>
@@ -4785,12 +4785,12 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1723"/>
       <source>Todo settings</source>
-      <translation type="unfinished">Todo settings</translation>
+      <translation>Todo-Einstellungen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1729"/>
       <source>Enable todo calendar support</source>
-      <translation type="unfinished">Enable todo calendar support</translation>
+      <translation>Unterstützung für ToDos in Kalendern aktivieren</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1914"/>
