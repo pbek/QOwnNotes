@@ -12,6 +12,14 @@
         - you can rename the current sub-folder via context menu, by clicking it
           twice or by pressing <kbd>F2</kbd>
     - if you click a sub-folder the current note sub-folder will be changed to it
+- attempted to fix building the application on Qt 5.3, add more dictionary paths
+  for Linux and skipping highlighting and spell checking if a text block is empty
+  or just has spaces (for [#125](https://github.com/pbek/QOwnNotes/issues/125), thank you @Waqar144)
+    - if you need to add additional language files on Linux you can do so in `~/.local/share/hunspell`
+- attempted to add hunspell dictionaries to the Snap build of the application
+  (for [#125](https://github.com/pbek/QOwnNotes/issues/125))
+    - check [Hunspell Dictionaries Content Snaps](https://snapcraft.io/docs/t/the-hunspell-dictionaries-content-snaps/7160)
+      on how to connect the plug
 
 ## 19.10.13
 - fixed spellchecking for notes with certain types of code blocks
