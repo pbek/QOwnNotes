@@ -7909,7 +7909,7 @@ void MainWindow::on_newNoteTagLineEdit_editingFinished() {
 void MainWindow::reloadCurrentNoteTags() {
     // remove all remove-tag buttons
     QLayoutItem *child;
-    while ((child = ui->noteTagButtonFrame->layout()->takeAt(0)) != 0) {
+    while ((child = ui->noteTagButtonFrame->layout()->takeAt(0)) != nullptr) {
         delete child->widget();
         delete child;
     }
