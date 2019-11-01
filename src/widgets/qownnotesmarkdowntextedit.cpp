@@ -284,7 +284,7 @@ void QOwnNotesMarkdownTextEdit::setPaperMargins(int width) {
 
             // apply a factor to correct the faulty calculated margin
             // TODO(pbek): I don't know better way to get around this yet
-            proposedEditorWidth /= static_cast<int>(1.332);
+            proposedEditorWidth /= 1.332;
 
             // calculate the margin to be applied
             margin = (width - proposedEditorWidth) / 2;

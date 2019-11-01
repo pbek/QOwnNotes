@@ -2,6 +2,7 @@
 
 ## 19.11.2
 - spellchecking is now enabled in formatted markdown (for [#125](https://github.com/pbek/QOwnNotes/issues/125), thank you @Waqar144)
+- fixed margin calculation in distraction free mode that was changed in 19.11.0
 
 ## 19.11.1
 - improvements where made to the **note / sub-folder tree mode**
