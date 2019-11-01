@@ -140,7 +140,7 @@ void CalendarItem::updateCompleted(bool value) {
 bool CalendarItem::addCalendarItemForRequest(QString calendar, QUrl url,
                                              QString etag,
                                              QString lastModifiedString) {
-    QSqlDatabase db = QSqlDatabase::database("disk");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
     query.prepare(
@@ -155,7 +155,7 @@ bool CalendarItem::addCalendarItemForRequest(QString calendar, QUrl url,
 }
 
 bool CalendarItem::addCalendarItem(QString summary, QString url, QString text) {
-    QSqlDatabase db = QSqlDatabase::database("disk");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
     query.prepare("INSERT INTO calendarItem ( summary, url, description )"
@@ -167,7 +167,7 @@ bool CalendarItem::addCalendarItem(QString summary, QString url, QString text) {
 }
 
 CalendarItem CalendarItem::fetch(int id) {
-    QSqlDatabase db = QSqlDatabase::database("disk");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
     CalendarItem calendarItem;
@@ -186,7 +186,7 @@ CalendarItem CalendarItem::fetch(int id) {
 
 CalendarItem CalendarItem::fetchByUrlAndCalendar(QString url, QString calendar) {
     CalendarItem calendarItem;
-    QSqlDatabase db = QSqlDatabase::database("disk");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
     query.prepare("SELECT * FROM calendarItem WHERE url = :url AND "
@@ -205,7 +205,7 @@ CalendarItem CalendarItem::fetchByUrlAndCalendar(QString url, QString calendar) 
 
 CalendarItem CalendarItem::fetchByUid(QString uid) {
     CalendarItem calendarItem;
-    QSqlDatabase db = QSqlDatabase::database("disk");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
     query.prepare("SELECT * FROM calendarItem WHERE uid = :uid");
@@ -222,7 +222,7 @@ CalendarItem CalendarItem::fetchByUid(QString uid) {
 
 CalendarItem CalendarItem::fetchByUrl(QUrl url) {
     CalendarItem calendarItem;
-    QSqlDatabase db = QSqlDatabase::database("disk");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
     query.prepare("SELECT * FROM calendarItem WHERE url = :url");
@@ -238,7 +238,7 @@ CalendarItem CalendarItem::fetchByUrl(QUrl url) {
 }
 
 bool CalendarItem::remove() {
-    QSqlDatabase db = QSqlDatabase::database("disk");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
     query.prepare("DELETE FROM calendarItem WHERE id = :id");
@@ -256,7 +256,7 @@ bool CalendarItem::remove() {
  * Deletes all calendar items
  */
 bool CalendarItem::removeAll() {
-    QSqlDatabase db = QSqlDatabase::database("disk");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
     query.prepare("DELETE FROM calendarItem");
@@ -298,7 +298,7 @@ bool CalendarItem::fillFromQuery(QSqlQuery query) {
 }
 
 QList<CalendarItem> CalendarItem::fetchAllByCalendar(QString calendar) {
-    QSqlDatabase db = QSqlDatabase::database("disk");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
     QList<CalendarItem> calendarItemList;
@@ -320,7 +320,7 @@ QList<CalendarItem> CalendarItem::fetchAllByCalendar(QString calendar) {
 }
 
 QList<CalendarItem> CalendarItem::fetchAll() {
-    QSqlDatabase db = QSqlDatabase::database("disk");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
     QList<CalendarItem> calendarItemList;
@@ -342,7 +342,7 @@ QList<CalendarItem> CalendarItem::fetchAll() {
  * Fetches tasks for the system tray menu
  */
 QList<CalendarItem> CalendarItem::fetchAllForSystemTray(int limit) {
-    QSqlDatabase db = QSqlDatabase::database("disk");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
     QList<CalendarItem> calendarItemList;
@@ -369,7 +369,7 @@ QList<CalendarItem> CalendarItem::fetchAllForSystemTray(int limit) {
  * @return
  */
 QList<CalendarItem> CalendarItem::fetchAllForReminderAlert() {
-    QSqlDatabase db = QSqlDatabase::database("disk");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
     QList<CalendarItem> calendarItemList;
@@ -404,7 +404,7 @@ QList<CalendarItem> CalendarItem::fetchAllForReminderAlert() {
 }
 
 QList<QUrl> CalendarItem::fetchAllUrlsByCalendar(QString calendar) {
-    QSqlDatabase db = QSqlDatabase::database("disk");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
     QList<QUrl> urlList;
 
@@ -423,7 +423,7 @@ QList<QUrl> CalendarItem::fetchAllUrlsByCalendar(QString calendar) {
 }
 
 QList<CalendarItem> CalendarItem::search(QString text) {
-    QSqlDatabase db = QSqlDatabase::database("disk");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
     QList<CalendarItem> calendarItemList;
@@ -451,7 +451,7 @@ QList<CalendarItem> CalendarItem::search(QString text) {
  * Returns a list of UIDs for the search in the TodoDialog
  */
 QList<QString> CalendarItem::searchAsUidList(QString text, QString calendar) {
-    QSqlDatabase db = QSqlDatabase::database("disk");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
     QList<QString> resultList;
 
@@ -501,7 +501,7 @@ void CalendarItem::updateAllSortPriorities() {
 // inserts or updates a CalendarItem object in the database
 //
 bool CalendarItem::store() {
-    QSqlDatabase db = QSqlDatabase::database("disk");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
     this->updateSortPriority();
@@ -693,7 +693,7 @@ void CalendarItem::updateICSDataKeyListFromHash() {
 // deletes all calendarItems of a calendar in the database
 //
 bool CalendarItem::deleteAllByCalendar(QString calendar) {
-    QSqlDatabase db = QSqlDatabase::database("disk");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
     query.prepare("DELETE FROM calendarItem WHERE calendar = :calendar");
@@ -1136,7 +1136,7 @@ void CalendarItem::alertTodoReminders() {
  * Counts all calendar items
  */
 int CalendarItem::countAll() {
-    QSqlDatabase db = QSqlDatabase::database("disk");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
     query.prepare("SELECT COUNT(*) AS cnt FROM calendarItem");

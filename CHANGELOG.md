@@ -2,6 +2,7 @@
 
 ## 19.11.1
 - fixed highlighting of code blocks with empty lines (for [#125](https://github.com/pbek/QOwnNotes/issues/125))
+- did some minor speed improvements
 
 ## 19.11.0
 - improvements where made to the **note / sub-folder tree mode**

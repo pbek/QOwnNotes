@@ -164,12 +164,12 @@ void Note::setDecryptedNoteText(QString text) {
 }
 
 bool Note::addNote(const QString& name, const QString& fileName, const QString& text) {
-    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
     query.prepare(
-            "INSERT INTO note ( name, file_name, note_text ) "
-                    "VALUES ( :name, :file_name, :note_text )");
+            QStringLiteral("INSERT INTO note ( name, file_name, note_text ) "
+                    "VALUES ( :name, :file_name, :note_text )"));
     query.bindValue(":name", name);
     query.bindValue(":file_name", fileName);
     query.bindValue(":note_text", text);
@@ -177,12 +177,12 @@ bool Note::addNote(const QString& name, const QString& fileName, const QString& 
 }
 
 Note Note::fetch(int id) {
-    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
     Note note;
 
-    query.prepare("SELECT * FROM note WHERE id = :id");
+    query.prepare(QStringLiteral("SELECT * FROM note WHERE id = :id"));
     query.bindValue(":id", id);
 
     if (!query.exec()) {
@@ -233,7 +233,7 @@ Note Note::fetchByFileName(QString fileName, int noteSubFolderId) {
 }
 
 bool Note::fillByFileName(QString fileName, int noteSubFolderId) {
-    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
     // get the active note subfolder id if none was set
@@ -265,7 +265,7 @@ bool Note::fillByFileName(QString fileName, int noteSubFolderId) {
  * @param relativePath
  * @return
  */
-Note Note::fetchByRelativeFilePath(const QString relativePath) {
+Note Note::fetchByRelativeFilePath(const QString& relativePath) {
     QFileInfo fileInfo(relativePath);
 
     // load note sub-folder and note from the relative path
@@ -283,7 +283,7 @@ Note Note::fetchByRelativeFilePath(const QString relativePath) {
  * @param url
  * @return
  */
-Note Note::fetchByFileUrl(const QUrl url) {
+Note Note::fetchByFileUrl(const QUrl& url) {
     QString relativePath = Note::fileUrlInCurrentNoteFolderToRelativePath(url);
     Note note = Note::fetchByRelativeFilePath(relativePath);
 
@@ -291,7 +291,7 @@ Note Note::fetchByFileUrl(const QUrl url) {
 }
 
 bool Note::remove(bool withFile) {
-    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
     query.prepare("DELETE FROM note WHERE id = :id");
@@ -386,7 +386,7 @@ bool Note::copyToPath(const QString& destinationPath, QString noteFolderPath) {
  * @return bool
  */
 bool Note::moveToPath(QString destinationPath, QString noteFolderPath) {
-    bool result = copyToPath(std::move(destinationPath), noteFolderPath);
+    bool result = copyToPath(destinationPath, noteFolderPath);
 
     if (result) {
         return remove(true);
@@ -508,7 +508,7 @@ bool Note::updateRelativeAttachmentFileLinks() {
  * @return
  */
 Note Note::fetchByShareId(int shareId) {
-    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
     Note note;
 
@@ -527,7 +527,7 @@ Note Note::fetchByShareId(int shareId) {
 }
 
 Note Note::fetchByName(const QString& name, int noteSubFolderId) {
-    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
     Note note;
 
@@ -581,7 +581,7 @@ bool Note::fillFromQuery(const QSqlQuery& query) {
 }
 
 QList<Note> Note::fetchAll(int limit) {
-    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
     QList<Note> noteList;
@@ -610,7 +610,7 @@ QList<Note> Note::fetchAll(int limit) {
 }
 
 QList<int> Note::fetchAllIds(int limit, int offset) {
-    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
     QList<int> noteIdList;
@@ -647,7 +647,7 @@ QList<int> Note::fetchAllIds(int limit, int offset) {
 }
 
 QList<Note> Note::fetchAllByNoteSubFolderId(int noteSubFolderId) {
-    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
     QList<Note> noteList;
@@ -738,7 +738,7 @@ int Note::countAllNotTagged(int activeNoteSubFolderId) {
 }
 
 QList<Note> Note::search(const QString& text) {
-    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
     QList<Note> noteList;
@@ -761,7 +761,7 @@ QList<Note> Note::search(const QString& text) {
 
 QList<QString> Note::searchAsNameListInCurrentNoteSubFolder(
         const QString& text, bool searchInNameOnly) {
-    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
     QList<QString> nameList;
@@ -786,7 +786,7 @@ QList<QString> Note::searchAsNameListInCurrentNoteSubFolder(
 }
 
 QList<QString> Note::searchAsNameList(const QString& text, bool searchInNameOnly) {
-    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
     QList<QString> nameList;
@@ -818,7 +818,7 @@ QList<QString> Note::searchAsNameList(const QString& text, bool searchInNameOnly
  */
 QList<int> Note::searchInNotes(QString search, bool ignoreNoteSubFolder,
                                int noteSubFolderId) {
-    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
     auto noteIdList = QList<int>();
     QStringList sqlList;
@@ -922,7 +922,7 @@ QStringList Note::buildQueryStringList(QString searchString,
 }
 
 QStringList Note::fetchNoteNamesInCurrentNoteSubFolder() {
-    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
     QStringList list;
@@ -948,7 +948,7 @@ QStringList Note::fetchNoteNamesInCurrentNoteSubFolder() {
 }
 
 QStringList Note::fetchNoteNames() {
-    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
     QStringList list;
@@ -971,7 +971,7 @@ QStringList Note::fetchNoteNames() {
 }
 
 QStringList Note::fetchNoteFileNames() {
-    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
     QStringList list;
@@ -990,7 +990,7 @@ QStringList Note::fetchNoteFileNames() {
 }
 
 QList<int> Note::fetchAllIdsByNoteTextPart(const QString& textPart) {
-    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
     QList<int> list;
@@ -1074,7 +1074,7 @@ bool Note::allowDifferentFileName() {
 // inserts or updates a note object in the database
 //
 bool Note::store() {
-    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
     if (fileName.isEmpty()) {
@@ -1607,7 +1607,7 @@ QUrl Note::fullNoteFileUrl() {
  */
 int Note::storeDirtyNotesToDisk(Note &currentNote, bool *currentNoteChanged,
                                 bool *noteWasRenamed) {
-    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
     ScriptingService* scriptingService = ScriptingService::instance();
     Note note;
@@ -1743,7 +1743,7 @@ Note Note::updateOrCreateFromFile(QFile &file, NoteSubFolder noteSubFolder,
 // deletes all notes in the database
 //
 bool Note::deleteAll() {
-    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
     // no truncate in sqlite
@@ -2573,7 +2573,7 @@ QString Note::getDecryptedNoteText() {
  * Expire crypto keys in the database after 10min
  */
 bool Note::expireCryptoKeys() {
-    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
     // 10min ago
@@ -2598,7 +2598,7 @@ bool Note::expireCryptoKeys() {
  * Counts all notes
  */
 int Note::countAll() {
-    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
     query.prepare("SELECT COUNT(*) AS cnt FROM note");
@@ -2616,7 +2616,7 @@ int Note::countAll() {
  * Counts all notes by note sub folder id
  */
 int Note::countByNoteSubFolderId(int noteSubFolderId, bool recursive) {
-    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
     QList<int> noteSubFolderIdList;
 

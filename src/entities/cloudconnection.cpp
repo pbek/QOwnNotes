@@ -103,7 +103,7 @@ void CloudConnection::setPriority(int value) {
 
 bool CloudConnection::create(QString name, QString serverUrl,
                         QString username, QString password) {
-    QSqlDatabase db = QSqlDatabase::database("disk");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
     query.prepare("INSERT INTO cloudConnection ( name, server_url, "
@@ -118,7 +118,7 @@ bool CloudConnection::create(QString name, QString serverUrl,
 }
 
 CloudConnection CloudConnection::fetch(int id, bool ignoreTableWarning) {
-    QSqlDatabase db = QSqlDatabase::database("disk");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
     CloudConnection cloudConnection;
@@ -138,7 +138,7 @@ CloudConnection CloudConnection::fetch(int id, bool ignoreTableWarning) {
 }
 
 int CloudConnection::countAll() {
-    QSqlDatabase db = QSqlDatabase::database("disk");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
     query.prepare("SELECT COUNT(*) AS cnt FROM cloudConnection");
@@ -153,7 +153,7 @@ int CloudConnection::countAll() {
 }
 
 bool CloudConnection::remove() {
-    QSqlDatabase db = QSqlDatabase::database("disk");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
     query.prepare("DELETE FROM cloudConnection WHERE id = :id");
@@ -185,7 +185,7 @@ bool CloudConnection::fillFromQuery(const QSqlQuery& query) {
 }
 
 QList<CloudConnection> CloudConnection::fetchAll() {
-    QSqlDatabase db = QSqlDatabase::database("disk");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
     QList<CloudConnection> cloudConnectionList;
@@ -207,7 +207,7 @@ QList<CloudConnection> CloudConnection::fetchAll() {
  * Inserts or updates a CloudConnection object in the database
  */
 bool CloudConnection::store() {
-    QSqlDatabase db = QSqlDatabase::database("disk");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
     if (this->id > 0) {

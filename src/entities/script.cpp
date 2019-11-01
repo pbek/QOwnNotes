@@ -118,7 +118,7 @@ void Script::setEnabled(bool value) {
 }
 
 bool Script::create(const QString& name, QString scriptPath) {
-    QSqlDatabase db = QSqlDatabase::database("disk");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
     query.prepare("INSERT INTO script ( name, script_path ) "
@@ -141,7 +141,7 @@ Script Script::fetch(int id) {
 }
 
 bool Script::fillFromId(int id) {
-    QSqlDatabase db = QSqlDatabase::database("disk");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
     Script script;
@@ -160,7 +160,7 @@ bool Script::fillFromId(int id) {
 }
 
 int Script::countAll() {
-    QSqlDatabase db = QSqlDatabase::database("disk");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
     query.prepare("SELECT COUNT(*) AS cnt FROM script");
@@ -175,7 +175,7 @@ int Script::countAll() {
 }
 
 int Script::countEnabled() {
-    QSqlDatabase db = QSqlDatabase::database("disk");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
     query.prepare("SELECT COUNT(*) AS cnt FROM script WHERE enabled = 1");
@@ -207,7 +207,7 @@ bool Script::scriptFromRepositoryExists(QString identifier) {
  * @return
  */
 Script Script::fetchByIdentifier(const QString& identifier) {
-    QSqlDatabase db = QSqlDatabase::database("disk");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
     Script script;
@@ -246,7 +246,7 @@ bool Script::scriptPathExists() {
  * @return
  */
 bool Script::remove() {
-    QSqlDatabase db = QSqlDatabase::database("disk");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
     QString path;
     bool isFromRepository = isScriptFromRepository();
@@ -300,7 +300,7 @@ bool Script::fillFromQuery(const QSqlQuery& query) {
 }
 
 QList<Script> Script::fetchAll(bool enabledOnly) {
-    QSqlDatabase db = QSqlDatabase::database("disk");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
     QList<Script> scriptList;
@@ -324,7 +324,7 @@ QList<Script> Script::fetchAll(bool enabledOnly) {
  * Inserts or updates a Script object in the database
  */
 bool Script::store() {
-    QSqlDatabase db = QSqlDatabase::database("disk");
+    QSqlDatabase db = QSqlDatabase::database(QStringLiteral("disk"));
     QSqlQuery query(db);
 
     if (this->id > 0) {

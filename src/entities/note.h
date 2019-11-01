@@ -293,9 +293,9 @@ public:
 
     QString relativeFilePath(const QString path);
 
-    static Note fetchByFileUrl(const QUrl url);
+    static Note fetchByFileUrl(const QUrl& url);
 
-    static Note fetchByRelativeFilePath(const QString relativePath);
+    static Note fetchByRelativeFilePath(const QString& relativePath);
 
     QString getNoteUrlForLinkingTo(Note note);
 

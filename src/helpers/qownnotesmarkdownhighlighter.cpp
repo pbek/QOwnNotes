@@ -57,8 +57,8 @@ void QOwnNotesMarkdownHighlighter::updateCurrentNote() {
 
 static bool hasNotEmptyText(const QString &text)
 {
-    for (int i = 0; i < text.length(); ++i) {
-        if (!text.at(i).isSpace()) {
+    for (auto i : text) {
+        if (!i.isSpace()) {
             return true;
         }
     }
@@ -218,7 +218,7 @@ void QOwnNotesMarkdownHighlighter::highlightSpellChecking(const QString &text) {
 
     languageFilter->setBuffer(text);
 
-    LanguageCache *languageCache = dynamic_cast<LanguageCache*>(currentBlockUserData());
+    auto *languageCache = dynamic_cast<LanguageCache*>(currentBlockUserData());
     if (!languageCache) {
         languageCache = new LanguageCache;
         setCurrentBlockUserData(languageCache);

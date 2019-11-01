@@ -206,7 +206,7 @@ qint64 SingleApplication::primaryPid()
     return d->primaryPid();
 }
 
-bool SingleApplication::sendMessage( QByteArray message, int timeout )
+bool SingleApplication::sendMessage( const QByteArray& message, int timeout )
 {
     Q_D(SingleApplication);
 

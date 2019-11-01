@@ -10,8 +10,8 @@ public:
     explicit NoteFolder();
 
     int getId();
-    static bool create(QString name, QString localPath,
-                       int cloudConnectionId, QString remotePath);
+    static bool create(const QString& name, const QString& localPath,
+                       int cloudConnectionId, const QString& remotePath);
     static NoteFolder fetch(int id);
     static NoteFolder noteFolderFromQuery(const QSqlQuery& query);
     bool store();
