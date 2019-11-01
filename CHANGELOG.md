@@ -1,7 +1,7 @@
 # QOwnNotes Changelog
 
 ## 19.11.1
-- fix highlighting of code blocks with empty lines (for [#125](https://github.com/pbek/QOwnNotes/issues/125))
+- fixed highlighting of code blocks with empty lines (for [#125](https://github.com/pbek/QOwnNotes/issues/125))
 
 ## 19.11.0
 - improvements where made to the **note / sub-folder tree mode**
