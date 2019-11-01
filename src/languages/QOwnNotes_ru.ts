@@ -1865,7 +1865,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2527"/>
       <source>Check spelling</source>
-      <translation>Проверить орфографию</translation>
+      <translation>Проверять орфографию</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2535"/>

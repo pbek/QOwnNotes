@@ -7,6 +7,8 @@
 - fixed highlighting of code blocks with empty lines (for [#125](https://github.com/pbek/QOwnNotes/issues/125))
 - fixed highlighting of two-line headlines when typing them in (for [#125](https://github.com/pbek/QOwnNotes/issues/125))
 - did some minor speed improvements
+- added more Russian, Bulgarian, Croatian, Basque, Swedish, Slovak translation
+  (thank you data-man, Fabijenna)
 
 ## 19.11.0
 - improvements where made to the **note / sub-folder tree mode**
