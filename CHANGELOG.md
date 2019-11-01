@@ -5,6 +5,7 @@
   (for [#790](https://github.com/pbek/QOwnNotes/issues/790))
   - on application startup the last opened note will be loaded from the correct sub-folder
 - fixed highlighting of code blocks with empty lines (for [#125](https://github.com/pbek/QOwnNotes/issues/125))
+- fixed highlighting of two-line headlines when typing them in (for [#125](https://github.com/pbek/QOwnNotes/issues/125))
 - did some minor speed improvements
 
 ## 19.11.0

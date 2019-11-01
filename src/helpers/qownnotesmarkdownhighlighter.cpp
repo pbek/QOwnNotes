@@ -266,6 +266,7 @@ void QOwnNotesMarkdownHighlighter::highlightSpellChecking(const QString &text) {
         }
     }
 
-    setCurrentBlockState(0);
+    // breaks highlighting of two-line headlines when typing them in
+//    setCurrentBlockState(0);
 }
 
