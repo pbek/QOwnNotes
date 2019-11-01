@@ -593,7 +593,7 @@ bool MainWindow::restoreActiveNoteHistoryItem() {
         NoteHistoryItem noteHistoryItem = var.value<NoteHistoryItem>();
 //        qDebug() << __func__ << " - 'noteHistoryItem': " << noteHistoryItem;
 
-        if (jumpToNoteName(noteHistoryItem.getNoteName())) {
+        if (jumpToNoteHistoryItem(noteHistoryItem)) {
             noteHistoryItem.restoreTextEditPosition(ui->noteTextEdit);
             reloadCurrentNoteTags();
             return true;
@@ -3271,10 +3271,37 @@ void MainWindow::jumpToWelcomeNote() {
 bool MainWindow::jumpToNoteName(const QString& name) {
     // search for the note
     QList<QTreeWidgetItem *> items = ui->noteTreeWidget->findItems(
-            name, Qt::MatchExactly, 0);
+            name, Qt::MatchExactly | Qt::MatchRecursive, 0);
 
     if (items.count() > 0) {
         ui->noteTreeWidget->setCurrentItem(items.at(0));
+        return true;
+    }
+
+    return false;
+}
+
+/**
+ * Jumps to a note in the note selector by NoteHistoryItem
+ */
+bool MainWindow::jumpToNoteHistoryItem(const NoteHistoryItem& historyItem) {
+    // search for the note
+    QList<QTreeWidgetItem *> items = ui->noteTreeWidget->findItems(
+            historyItem.getNoteName(), Qt::MatchExactly | Qt::MatchRecursive, 0);
+    const bool isCurrentNoteTreeEnabled = NoteFolder::isCurrentNoteTreeEnabled();
+
+    Q_FOREACH(QTreeWidgetItem *item, items) {
+        if (isCurrentNoteTreeEnabled) {
+            QString pathData = historyItem.getNoteSubFolderPathData();
+            auto noteSubFolder = NoteSubFolder::fetchByPathData(pathData);
+            int parentId = item->parent()->data(0, Qt::UserRole).toInt();
+
+            if (parentId != noteSubFolder.getId()) {
+                continue;
+            }
+        }
+
+        ui->noteTreeWidget->setCurrentItem(item);
         return true;
     }
 

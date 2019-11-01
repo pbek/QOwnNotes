@@ -808,6 +808,8 @@ private:
 
     bool jumpToNoteName(const QString& name);
 
+    bool jumpToNoteHistoryItem(const NoteHistoryItem& historyItem);
+
     void initScriptingEngine();
 
     int getMaxImageWidth();
