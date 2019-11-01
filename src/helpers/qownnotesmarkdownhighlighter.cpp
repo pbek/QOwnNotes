@@ -41,7 +41,6 @@ QOwnNotesMarkdownHighlighter::QOwnNotesMarkdownHighlighter(
     spellchecker = _spellchecker;
     languageFilter = new Sonnet::LanguageFilter(new Sonnet::SentenceTokenizer());
     wordTokenizer = new Sonnet::WordTokenizer();
-    inlineCode = 0; // for `
     codeBlock = 0; // for ```
 }
 
@@ -57,7 +56,7 @@ void QOwnNotesMarkdownHighlighter::updateCurrentNote() {
 
 static bool hasNotEmptyText(const QString &text)
 {
-    for (auto i : text) {
+    for (auto const &i : text) {
         if (!i.isSpace()) {
             return true;
         }
@@ -76,6 +75,10 @@ void QOwnNotesMarkdownHighlighter::highlightBlock(const QString &text) {
     setCurrentBlockState(HighlighterState::NoState);
     currentBlock().setUserState(HighlighterState::NoState);
 
+    //do the markdown highlighting before the spellcheck highlighting
+    //if we do it afterwards, it overwrites the spellcheck highlighting
+    highlightMarkdown(text);
+
     // skip spell checking empty blocks and blocks with just "spaces"
     // the rest of the highlighting needs to be done e.g. for code blocks with empty lines
     if (!(text.isEmpty() || text.isNull() || !hasNotEmptyText(text)) &&
@@ -83,7 +86,6 @@ void QOwnNotesMarkdownHighlighter::highlightBlock(const QString &text) {
         highlightSpellChecking(text);
     }
 
-    highlightMarkdown(text);
     _highlightingFinished = true;
 }
 
@@ -211,10 +213,6 @@ void QOwnNotesMarkdownHighlighter::highlightSpellChecking(const QString &text) {
     if (codeBlock % 2 != 0) {
         return;
     }
-    //if it's empty line or just spaces, don't spell check
-    if (!hasNotEmptyText(text)) {
-        return;
-    }
 
     languageFilter->setBuffer(text);
 
@@ -265,8 +263,5 @@ void QOwnNotesMarkdownHighlighter::highlightSpellChecking(const QString &text) {
             }
         }
     }
-
-    // breaks highlighting of two-line headlines when typing them in
-//    setCurrentBlockState(0);
 }
 

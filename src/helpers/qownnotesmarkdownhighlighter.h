@@ -66,6 +66,5 @@ private:
 
     Sonnet::LanguageFilter *languageFilter;
     Sonnet::WordTokenizer *wordTokenizer;
-    int inlineCode;
     int codeBlock;
 };
