@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 19.11.2
+- spellchecking is now enabled in formatted markdown (for [#125](https://github.com/pbek/QOwnNotes/issues/125), thank you @Waqar144)
+
 ## 19.11.1
 - improvements where made to the **note / sub-folder tree mode**
   (for [#790](https://github.com/pbek/QOwnNotes/issues/790))
