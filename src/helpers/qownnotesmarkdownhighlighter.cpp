@@ -72,16 +72,17 @@ static bool hasNotEmptyText(const QString &text)
  * @param text
  */
 void QOwnNotesMarkdownHighlighter::highlightBlock(const QString &text) {
-    //skip empty blocks and blocks with just "spaces"
-    if (text.isEmpty() || text.isNull() || !hasNotEmptyText(text)) {
-        return;
-    }
     updateCurrentNote();
     setCurrentBlockState(HighlighterState::NoState);
     currentBlock().setUserState(HighlighterState::NoState);
-    if (spellchecker->isActive()) {
+
+    // skip spell checking empty blocks and blocks with just "spaces"
+    // the rest of the highlighting needs to be done e.g. for code blocks with empty lines
+    if (!(text.isEmpty() || text.isNull() || !hasNotEmptyText(text)) &&
+        spellchecker->isActive()) {
         highlightSpellChecking(text);
     }
+
     highlightMarkdown(text);
     _highlightingFinished = true;
 }
