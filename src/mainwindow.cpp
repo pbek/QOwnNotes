@@ -229,7 +229,7 @@ MainWindow::MainWindow(QWidget *parent) :
 #endif
 
     // adding some alternate shortcuts for changing the current note
-    QShortcut *shortcut = new QShortcut(QKeySequence(QStringLiteral("Ctrl+PgDown")), this);
+    auto *shortcut = new QShortcut(QKeySequence(QStringLiteral("Ctrl+PgDown")), this);
     QObject::connect(shortcut, SIGNAL(activated()),
                      this, SLOT(on_actionNext_note_triggered()));
     shortcut = new QShortcut(QKeySequence(QStringLiteral("Ctrl+PgUp")), this);
@@ -4049,7 +4049,7 @@ void MainWindow::setCurrentNoteText(QString text) {
 void MainWindow::createNewNote(QString name, QString text,
                                CreateNewNoteOptions options) {
     QString extension = Note::defaultNoteFileExtension();
-    QFile *f = new QFile(this->notesPath + QDir::separator() + name + QStringLiteral(".")
+    auto *f = new QFile(this->notesPath + QDir::separator() + name + QStringLiteral(".")
                          + extension);
     const bool useNameAsHeadline = options.testFlag(
             CreateNewNoteOption::UseNameAsHeadline);
@@ -4095,9 +4095,9 @@ void MainWindow::createNewNote(QString name, QString text,
  *
  * This is a public callback function for the trash dialog.
  */
-void MainWindow::restoreTrashedNoteOnServer(QString fileName, int timestamp) {
+void MainWindow::restoreTrashedNoteOnServer(const QString& fileName, int timestamp) {
     OwnCloudService *ownCloud = OwnCloudService::instance();
-    ownCloud->restoreTrashedNoteOnServer(std::move(fileName), timestamp, this);
+    ownCloud->restoreTrashedNoteOnServer(fileName, timestamp, this);
 }
 
 /**
@@ -4383,7 +4383,7 @@ void MainWindow::unsetCurrentNote() {
  * @brief Copies selected notes after a confirmation
  * @param destinationFolder
  */
-void MainWindow::copySelectedNotesToFolder(const QString& destinationFolder, QString noteFolderPath) {
+void MainWindow::copySelectedNotesToFolder(const QString& destinationFolder, const QString& noteFolderPath) {
     int selectedItemsCount = ui->noteTreeWidget->selectedItems().size();
 
     if (Utils::Gui::question(
@@ -6427,7 +6427,7 @@ void MainWindow::on_action_Encrypt_note_triggered()
             "<br />Keep in mind that you have to <strong>remember</strong> "
             "your password to read the content of the note<br /> and that you "
             "can <strong>only</strong> do that <strong>in QOwnNotes</strong>!");
-        PasswordDialog* dialog = new PasswordDialog(this, labelText, true);
+        auto* dialog = new PasswordDialog(this, labelText, true);
         int dialogResult = dialog->exec();
 
         // if the user didn't pressed ok return
@@ -6697,8 +6697,8 @@ void MainWindow::on_actionNext_note_triggered() {
  * Jumps to the next visible note
  */
 void MainWindow::gotoNextNote() {
-    QKeyEvent *event = new QKeyEvent(QEvent::KeyPress, Qt::Key_Down,
-                                    Qt::NoModifier);
+    auto *event = new QKeyEvent(QEvent::KeyPress, Qt::Key_Down,
+                                Qt::NoModifier);
     QApplication::postEvent(ui->noteTreeWidget, event);
 }
 
@@ -6719,8 +6719,8 @@ void MainWindow::on_actionPrevious_Note_triggered() {
  */
 void MainWindow::gotoPreviousNote()
 {
-    QKeyEvent *event = new QKeyEvent(QEvent::KeyPress, Qt::Key_Up,
-                                     Qt::NoModifier);
+    auto *event = new QKeyEvent(QEvent::KeyPress, Qt::Key_Up,
+                                Qt::NoModifier);
     QApplication::postEvent(ui->noteTreeWidget, event);
 }
 
@@ -7756,12 +7756,12 @@ void MainWindow::linkTagNameToCurrentNote(const QString& tagName,
  * @param doRemove
  * @param triggerPostMethods
  */
-void MainWindow::handleScriptingNoteTagging(Note note, QString tagName,
+void MainWindow::handleScriptingNoteTagging(Note note, const QString& tagName,
                                             bool doRemove,
                                             bool triggerPostMethods) {
     QString oldNoteText = note.getNoteText();
     QString noteText = ScriptingService::instance()->callNoteTaggingHook(
-            note, doRemove ? QStringLiteral("remove") : QStringLiteral("add"), std::move(tagName)).toString();
+            note, doRemove ? QStringLiteral("remove") : QStringLiteral("add"), tagName).toString();
 
     if (noteText.isEmpty() || (oldNoteText == noteText)) {
         return;

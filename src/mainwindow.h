@@ -108,7 +108,7 @@ public:
 
     void openSettingsDialog(int page = 0, bool openScriptRepository = false);
 
-    void restoreTrashedNoteOnServer(QString fileName, int timestamp);
+    void restoreTrashedNoteOnServer(const QString& fileName, int timestamp);
 
     void showUpdateAvailableButton(const QString& version);
 
@@ -580,7 +580,7 @@ private slots:
 
     void moveSelectedNotesToFolder(const QString& destinationFolder);
 
-    void copySelectedNotesToFolder(const QString& destinationFolder, QString noteFolderPath = "");
+    void copySelectedNotesToFolder(const QString& destinationFolder, const QString& noteFolderPath = "");
 
     void on_actionTypewriter_mode_toggled(bool arg1);
 
@@ -765,9 +765,9 @@ private:
 
     int currentNoteLineNumber();
 
-    bool isValidMediaFile(QFile *file);
+    static bool isValidMediaFile(QFile *file);
 
-    bool isValidNoteFile(QFile *file);
+    static bool isValidNoteFile(QFile *file);
 
     bool isInDistractionFreeMode();
 
@@ -789,7 +789,7 @@ private:
 
     void tagSelectedNotes(Tag tag);
 
-    bool isMarkdownViewEnabled();
+    static bool isMarkdownViewEnabled();
 
     void removeTagFromSelectedNotes(Tag tag);
 
@@ -942,7 +942,7 @@ private:
 
     void selectAllNotesInTagTreeWidget() const;
 
-    void handleScriptingNoteTagging(Note note, QString tagName,
+    void handleScriptingNoteTagging(Note note, const QString& tagName,
                                     bool doRemove = false,
                                     bool triggerPostMethods = true);
 
