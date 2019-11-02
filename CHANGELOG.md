@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 19.11.3
+- attempted to fix inclusion of spellchecker dictionaries for Snap package
+  (for [#1348](https://github.com/pbek/QOwnNotes/issues/1348), thank you @Waqar144)
+
 ## 19.11.2
 - spellchecking is now enabled in formatted markdown (for [#125](https://github.com/pbek/QOwnNotes/issues/125), thank you @Waqar144)
 - fixed margin calculation in distraction free mode that was changed in 19.11.0
