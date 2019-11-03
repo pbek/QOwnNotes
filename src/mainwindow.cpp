@@ -2196,12 +2196,12 @@ void MainWindow::readSettings() {
     }
 
     // let us select a folder if we haven't find one in the settings
-    if (this->notesPath == QStringLiteral("")) {
+    if (this->notesPath.isEmpty()) {
         selectOwnCloudNotesFolder();
     }
 
     // migration: remove notes path from recent note folders
-    if (this->notesPath != QStringLiteral("")) {
+    if (!this->notesPath.isEmpty()) {
         QStringList recentNoteFolders =
                 settings.value(QStringLiteral("recentNoteFolders")).toStringList();
         if (recentNoteFolders.contains(this->notesPath)) {
@@ -2347,7 +2347,7 @@ void MainWindow::readSettingsFromSettingsDialog() {
             .toString();
 
     // store the current font if there isn't any set yet
-    if (fontString == QStringLiteral("")) {
+    if (fontString.isEmpty()) {
         fontString = ui->noteTextView->font().toString();
         settings.setValue(QStringLiteral("MainWindow/noteTextView.font"), fontString);
     }
@@ -3337,7 +3337,7 @@ bool MainWindow::jumpToNoteSubFolder(int noteSubFolderId) {
 QString MainWindow::selectOwnCloudNotesFolder() {
     QString path = this->notesPath;
 
-    if (path == QStringLiteral("")) {
+    if (path.isEmpty()) {
         path = Utils::Misc::defaultNotesPath();
     }
 
@@ -3351,7 +3351,7 @@ QString MainWindow::selectOwnCloudNotesFolder() {
 
     QDir d = QDir(dir);
 
-    if (d.exists() && (dir != QStringLiteral(""))) {
+    if (d.exists() && (!dir.isEmpty())) {
         // let's remove trailing slashes
         dir = d.path();
 
@@ -3370,7 +3370,7 @@ QString MainWindow::selectOwnCloudNotesFolder() {
         // update the current folder tooltip
         updateCurrentFolderTooltip();
     } else {
-        if (this->notesPath == QStringLiteral("")) {
+        if (this->notesPath.isEmpty()) {
             switch (QMessageBox::information(
                    this, tr("No folder was selected"),
                    Utils::Misc::replaceOwnCloudText(
@@ -3942,13 +3942,13 @@ void MainWindow::askForEncryptedNotePasswordIfNeeded(const QString& additionalTe
             labelText += QStringLiteral(" ") + additionalText;
         }
 
-        PasswordDialog* dialog = new PasswordDialog(this, labelText);
+        auto* dialog = new PasswordDialog(this, labelText);
         int dialogResult = dialog->exec();
 
         // if user pressed ok take the password
         if (dialogResult == QDialog::Accepted) {
             QString password = dialog->password();
-            if (password != QStringLiteral("")) {
+            if (!password.isEmpty()) {
                 // set the password so it can be decrypted
                 // for the markdown view
                 currentNote.setCryptoPassword(password);
@@ -4074,7 +4074,7 @@ void MainWindow::createNewNote(QString name, QString text,
     // check if to append the text or replace the text of the note
     if (useNameAsHeadline) {
         QTextCursor c = ui->noteTextEdit->textCursor();
-        c.insertText(QStringLiteral("") + text);
+        c.insertText(QStringLiteral("\n\n") + text);
         ui->noteTextEdit->setTextCursor(c);
     } else {
         ui->noteTextEdit->setText(text);
@@ -4682,7 +4682,7 @@ void MainWindow::openSettingsDialog(int page, bool openScriptRepository) {
 }
 
 void MainWindow::forceRegenerateNotePreview() {
-    _notePreviewHash = QStringLiteral("");
+    _notePreviewHash.clear();
     currentNote.resetNoteTextHtmlConversionHash();
     regenerateNotePreview();
 }
@@ -4753,19 +4753,19 @@ void MainWindow::handleTextNoteLinking() {
         QString linkDescription = dialog->getLinkDescription();
         QString noteName = dialog->getSelectedNoteName();
 
-        if ((noteName != QStringLiteral("")) || (url != QStringLiteral(""))) {
+        if ((!noteName.isEmpty()) || (!url.isEmpty())) {
             QString chosenLinkName = linkName.isEmpty() ?
                     textEdit->textCursor().selectedText() : linkName;
             QString newText;
 
             // if user has entered an url
-            if (url != QStringLiteral("")) {
-                newText = chosenLinkName != QStringLiteral("") ?
+            if (!url.isEmpty()) {
+                newText = !chosenLinkName.isEmpty() ?
                             QStringLiteral("[") + chosenLinkName + QStringLiteral("](") + url + QStringLiteral(")") :
                             QStringLiteral("<") + url + QStringLiteral(">");
             } else {
                 // if user has selected a note
-                if (chosenLinkName != QStringLiteral("")) {
+                if (!chosenLinkName.isEmpty()) {
                     noteName = chosenLinkName;
                 }
 
@@ -5467,7 +5467,7 @@ void MainWindow::jumpToNoteOrCreateNew(bool disableLoadNoteDirectoryList) {
             // fallback to the old text if no hook changed the text
             noteText = Note::createNoteHeader(text);
         } else {
-            noteText.append(QStringLiteral(""));
+            noteText.append(QStringLiteral("\n\n"));
         }
 
         NoteSubFolder noteSubFolder = NoteSubFolder::activeNoteSubFolder();
@@ -6659,7 +6659,7 @@ void MainWindow::on_actionInsert_code_block_triggered() {
     if (selectedText.isEmpty()) {
         // insert multi-line code block if cursor is in an empty line
         if (c.atBlockStart() && c.atBlockEnd()) {
-            c.insertText(QStringLiteral("``````"));
+            c.insertText(QStringLiteral("```\n\n```"));
             c.movePosition(QTextCursor::Left, QTextCursor::MoveAnchor, 3);
         } else {
             c.insertText(QStringLiteral("``"));
@@ -6671,20 +6671,20 @@ void MainWindow::on_actionInsert_code_block_triggered() {
         bool addNewline = false;
 
         // if the selected text has multiple lines add a multi-line code block
-        if (selectedText.contains(QStringLiteral(""))) {
+        if (selectedText.contains(QStringLiteral("\n"))) {
             // add another newline if there is no newline at the end of the
             // selected text
-            QString endNewline = selectedText.endsWith(QStringLiteral(""))
-                    ? QStringLiteral("") : QStringLiteral("");
+            QString endNewline = selectedText.endsWith(QStringLiteral("\n"))
+                    ? QStringLiteral("") : QStringLiteral("\n");
 
-            selectedText = QStringLiteral("``") + selectedText + endNewline + QStringLiteral("``");
+            selectedText = QStringLiteral("``\n") + selectedText + endNewline + QStringLiteral("``");
             addNewline = true;
         }
 
         c.insertText(QStringLiteral("`") + selectedText + QStringLiteral("`"));
 
         if (addNewline) {
-            c.insertText(QStringLiteral(""));
+            c.insertText(QStringLiteral("\n"));
         }
     }
 }
@@ -7958,7 +7958,7 @@ void MainWindow::reloadCurrentNoteTags() {
         // only refresh the preview if we previously selected multiple notes
         // because we used it for showing note information
         if (_lastNoteSelectionWasMultiple) {
-            _notePreviewHash = QStringLiteral("");
+            _notePreviewHash.clear();
             regenerateNotePreview();
         }
     } else {
@@ -9077,8 +9077,7 @@ QString MainWindow::noteTextEditCurrentWord(bool withPreviousCharacters) {
     QString text = c.selectedText();
 
     if (withPreviousCharacters) {
-        QRegularExpression re(QStringLiteral("^[\\s\
-][^\\s]*"));
+        QRegularExpression re(QStringLiteral("^[\\s\\n][^\\s]*"));
         do {
             c.movePosition(QTextCursor::Left, QTextCursor::KeepAnchor);
             text = c.selectedText();
@@ -10069,7 +10068,7 @@ void MainWindow::on_actionSplit_note_at_cursor_position_triggered() {
     previousNote.refetch();
     QString noteLink = previousNote.getNoteUrlForLinkingTo(currentNote);
     QString previousNoteText = previousNote.getNoteText();
-    previousNoteText += QStringLiteral("<") + noteLink + QStringLiteral(">");
+    previousNoteText += QStringLiteral("\n\n<") + noteLink + QStringLiteral(">");
     previousNote.storeNewText(previousNoteText);
 
     // add the previously removed text
@@ -10249,7 +10248,7 @@ QString MainWindow::selectedNoteTextEditText() {
     // transform Unicode line endings
     // this newline character seems to be used in multi-line selections
     QString newLine = QString::fromUtf8(QByteArray::fromHex("e280a9"));
-    selectedText.replace(newLine, QStringLiteral(""));
+    selectedText.replace(newLine, QStringLiteral("\n"));
 
     return selectedText;
 }
@@ -10661,7 +10660,7 @@ void MainWindow::on_actionInsert_block_quote_triggered() {
         // transform Unicode line endings
         // this newline character seems to be used in multi-line selections
         QString newLine = QString::fromUtf8(QByteArray::fromHex("e280a9"));
-        selectedText.replace(newLine, QStringLiteral("> "));
+        selectedText.replace(newLine, QStringLiteral("\n> "));
 
         // remove the block quote if it was placed at the end of the text
         selectedText.remove(QRegularExpression(QStringLiteral("> $")));
