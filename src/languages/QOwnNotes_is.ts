@@ -366,9 +366,9 @@
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6042"/>
       <source>%n lines filtered.</source>
-      <translation type="unfinished">
-        <numerusform>%n lines filtered.</numerusform>
-        <numerusform>%n lines filtered.</numerusform>
+      <translation>
+        <numerusform>%n lína síuð.</numerusform>
+        <numerusform>%n línur síaðar.</numerusform>
       </translation>
     </message>
     <message>
@@ -414,26 +414,26 @@
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6451"/>
       <source>%n lines indented.</source>
-      <translation type="unfinished">
-        <numerusform>%n lines indented.</numerusform>
-        <numerusform>%n lines indented.</numerusform>
+      <translation>
+        <numerusform>%n lína inndregin.</numerusform>
+        <numerusform>%n línur inndregnar.</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6507"/>
       <source>%n lines %1ed %2 time.</source>
       <comment>%1 can be '&gt;' or '&lt;'</comment>
-      <translation type="unfinished">
-        <numerusform>%n lines %1ed %2 time.</numerusform>
-        <numerusform>%n lines %1ed %2 time.</numerusform>
+      <translation>
+        <numerusform>%n lína %1ed %2 tíma.</numerusform>
+        <numerusform>%n línur %1ed %2 tími.</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7045"/>
       <source>%n lines yanked.</source>
-      <translation type="unfinished">
-        <numerusform>%n lines yanked.</numerusform>
-        <numerusform>%n lines yanked.</numerusform>
+      <translation>
+        <numerusform>%n lína reif.</numerusform>
+        <numerusform>%n línur strikuðu.</numerusform>
       </translation>
     </message>
     <message>
@@ -986,14 +986,14 @@
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="106"/>
       <source>File &lt;strong&gt;%1&lt;/strong&gt; isn't readable and can't be restored!</source>
-      <translation type="unfinished">File &lt;strong&gt;%1&lt;/strong&gt; isn't readable and can't be restored!</translation>
+      <translation>Skráin &lt;strong&gt;%1 &lt;/strong&gt; er ekki læsileg og ekki er hægt að endurheimta hana!</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="195"/>
       <source>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
-        <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
+      <translation>
+        <numerusform>Endurheimta &lt;strong&gt;%n&lt;/strong&gt; valinn glósu?</numerusform>
+        <numerusform>Endurheimta &lt;strong&gt;%n &lt;/strong&gt; valda glósur?</numerusform>
       </translation>
     </message>
     <message>
@@ -1004,17 +1004,17 @@
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="219"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</source>
-      <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n &lt;/strong&gt; athugasemd var endurheimt</numerusform>
+        <numerusform>&lt;strong&gt;%n &lt;/strong&gt; glósur voru endurheimtar</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="241"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
+      <translation>
+        <numerusform>Fjarlægja &lt;strong&gt;%n&lt;/strong&gt; valinn glósu?</numerusform>
+        <numerusform>Fjarlægja &lt;strong&gt;%n&lt;/strong&gt; valda glósur?</numerusform>
       </translation>
     </message>
     <message>
@@ -1362,7 +1362,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1083"/>
       <source>Languages</source>
-      <translation type="unfinished">Languages</translation>
+      <translation>Tungumál</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1106"/>
@@ -1480,7 +1480,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1576"/>
       <source>Insert &amp;image</source>
-      <translation type="unfinished">Insert &amp;image</translation>
+      <translation>Settu inn &amp;mynd</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1579"/>
@@ -1490,12 +1490,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1591"/>
       <source>Show &amp;changelog</source>
-      <translation type="unfinished">Show &amp;changelog</translation>
+      <translation>Sýna &amp;breytingaskrá</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1600"/>
       <source>&amp;Encrypt note</source>
-      <translation type="unfinished">&amp;Encrypt note</translation>
+      <translation>&amp;Dulkóða athugasemd</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1609"/>
@@ -1525,7 +1525,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1660"/>
       <source>Insert &amp;code block</source>
-      <translation type="unfinished">Insert &amp;code block</translation>
+      <translation>Settu inn &amp;kóðablokk</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1672"/>
@@ -1847,13 +1847,13 @@
     <message>
       <location filename="../mainwindow.ui" line="2527"/>
       <source>Check spelling</source>
-      <translation type="unfinished">Check spelling</translation>
+      <translation>Athugaðu stafsetningu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2535"/>
       <location filename="../mainwindow.cpp" line="11293"/>
       <source>Automatically detect</source>
-      <translation type="unfinished">Automatically detect</translation>
+      <translation>Greina sjálfkrafa</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1876"/>
@@ -2218,19 +2218,19 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
     <message>
       <location filename="../mainwindow.cpp" line="4992"/>
       <source>Todo lists disabled!</source>
-      <translation type="unfinished">Todo lists disabled!</translation>
+      <translation>Todo listar óvirkir!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4993"/>
       <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
-      <translation type="unfinished">You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</translation>
+      <translation>Þú hefur gert todo listana óvirkan. &lt;br /&gt; Vinsamlegast athugaðu stillingarnar þínar &lt;strong&gt; Todo &lt;/strong&gt; í stillingunum!</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5228"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation type="unfinished">
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+      <translation>
+        <numerusform>Fann &lt;strong&gt;%n &lt;/strong&gt; tilfelli af einhverju hugtaki &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
+        <numerusform>Fann &lt;strong&gt;%n &lt;/strong&gt; tilfelli af hvaða hugtak sem er &lt;strong&gt;%1 &lt;/strong&gt;</numerusform>
       </translation>
     </message>
     <message>
@@ -2323,25 +2323,25 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="6860"/>
       <source>Copied %n note(s) to %1</source>
-      <translation type="unfinished">
-        <numerusform>Copied %n note(s) to %1</numerusform>
-        <numerusform>Copied %n note(s) to %1</numerusform>
+      <translation>
+        <numerusform>%n athugasemd afrituð í %1</numerusform>
+        <numerusform>%n athugasemdar afrituð í %1</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="6869"/>
       <source>Failed to copy %n note(s) (most likely already existing)</source>
-      <translation type="unfinished">
-        <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
-        <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
+      <translation>
+        <numerusform>Ekki tókst að afrita %n athugasemd (líklega þegar til)</numerusform>
+        <numerusform>Ekki tókst að afrita %n athugasemdar (líklega þegar til)</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="6879"/>
       <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-      <translation type="unfinished">
-        <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
-        <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
+      <translation>
+        <numerusform>Afrit af %n athugasemd sleppt (engin merking eða textaskrá eða ekki læsileg)</numerusform>
+        <numerusform>Afrit af %n athugasemdum sleppt (engin merking eða textaskrá eða ekki læsileg)</numerusform>
       </translation>
     </message>
     <message>
@@ -4116,7 +4116,7 @@ Viltu setja það upp samt?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1086"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vinsamlegast sláðu inn lykilorðið fyrir notandanafnið þitt. &lt;br/&gt; Eins og er verður lykilorðið geymt dulkóðað með hinum stillingunum, en er ekki mjög öruggt.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1164"/>
@@ -4152,7 +4152,7 @@ Viltu setja það upp samt?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1114"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Smelltu hér til að prófa tenginguna við þinn ownCloud netþjón.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1232"/>
@@ -4172,7 +4172,7 @@ Viltu setja það upp samt?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="911"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Opnar þinn eiginCloud netþjón &lt;span style = "font-weight: 600;"&gt; Uppsetning appa &lt;/span&gt; síðu í vefskoðaranum þínum til að setja upp eða uppfæra QOwnNotesAPI og gera kleift að gera kjarna forrit &lt;span style = "font-weight: 600;"&gt; Útgáfur &lt;/span&gt; og &lt;span style = "font-weight: 600;"&gt; Skrár eytt &lt;/span&gt;. &lt;/p&gt; &lt;/body&gt; &lt;/ html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="715"/>
@@ -4197,7 +4197,7 @@ Viltu setja það upp samt?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="879"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Þú þarft einnig að hafa tvö eiginCloud kjarnaforrit &lt;span style = "font-weight: 600;"&gt; Útgáfur &lt;/span&gt; og &lt;span style = "font-weight: 600; "&gt; Eytt skrám &lt;/span&gt; virkt á þinn eiginCloud netþjón (það ætti að vera sjálfgefið). &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="958"/>
@@ -4407,7 +4407,7 @@ Viltu setja það upp samt?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2081"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Ef þú vilt hjálpa við að þýða QOwnNotes eða uppfæra núverandi þýðingu vinsamlegast lestu: &lt;a href = "http://www.qownnotes.org/Knowledge-base/How- get-I-help-to-translate-QOwnNotes "&gt; Hvernig get ég hjálpað til við að þýða QOwnNotes? &lt;/a&gt; &lt;/p&gt;&lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2696"/>
@@ -4437,7 +4437,7 @@ Viltu setja það upp samt?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1533"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Þú gætir viljað íhuga að fá ókeypis SSL vottorð frá &lt;a href="https://letsencrypt.org/"&gt; Dulkóða skulum &lt;/a&gt;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2659"/>
@@ -4472,7 +4472,7 @@ Viltu setja það upp samt?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3763"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Ef hakað við, verður þér alltaf tilkynnt um ytri breytingar, jafnvel þó að núverandi athugasemd hafi ekki verið breytt á síðustu stundu. Mælt er með &lt;span style = "font-style: italic;"&gt; ómerkt &lt;/span&gt;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3646"/>
@@ -4722,12 +4722,12 @@ Prófaðu bara sjálfan þig hvort þú fáir samstillingarárekstra og stilltu 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="866"/>
       <source>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
-      <translation type="unfinished">Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</translation>
+      <translation>Vinsamlegast settu upp nýjustu útgáfuna af &lt;a href="https://github.com/pbek/qownnotesapi"&gt; &lt;span style = "font-weight: 600;"&gt; QOwnNotesAPI &lt;/span&gt; &lt;/a&gt; (að minnsta kosti útgáfa QOWNNOTESAPI_MIN_VERSION) á þinn eiginCloud netþjón ef þú vilt að QOwnNotes geti fengið aðgang að athugasemdum og ruslbréfum.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="892"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Þú þarft enn &lt;a href="https://owncloud.org/"&gt; &lt;span style = "font-weight: 600"&gt; eiginCloud samstillingarforrit &lt;/ span&gt; &lt;/a&gt; (eða annar skrifborðssamstillingar viðskiptavinur) til að samstilla athugasemdir þínar! &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="991"/>
@@ -4786,12 +4786,12 @@ Prófaðu bara sjálfan þig hvort þú fáir samstillingarárekstra og stilltu 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1723"/>
       <source>Todo settings</source>
-      <translation type="unfinished">Todo settings</translation>
+      <translation>Todo stillingar</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1729"/>
       <source>Enable todo calendar support</source>
-      <translation type="unfinished">Enable todo calendar support</translation>
+      <translation>Virkja todo dagatalstuðning</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1914"/>
@@ -4826,7 +4826,7 @@ Prófaðu bara sjálfan þig hvort þú fáir samstillingarárekstra og stilltu 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2131"/>
       <source>Bosnian</source>
-      <translation type="unfinished">Bosnian</translation>
+      <translation>Bosníu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2142"/>
@@ -4841,7 +4841,7 @@ Prófaðu bara sjálfan þig hvort þú fáir samstillingarárekstra og stilltu 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2164"/>
       <source>Cebuano</source>
-      <translation type="unfinished">Cebuano</translation>
+      <translation>Kebúanó</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2186"/>
@@ -4911,7 +4911,7 @@ Prófaðu bara sjálfan þig hvort þú fáir samstillingarárekstra og stilltu 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2395"/>
       <source>Macedonian</source>
-      <translation type="unfinished">Macedonian</translation>
+      <translation>Makedónska</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2417"/>
@@ -5036,7 +5036,7 @@ Prófaðu bara sjálfan þig hvort þú fáir samstillingarárekstra og stilltu 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3130"/>
       <source>&amp;Add script…</source>
-      <translation type="unfinished">&amp;Add script…</translation>
+      <translation>&amp;Bættu við handriti…</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3776"/>
@@ -5105,7 +5105,7 @@ Prófaðu bara sjálfan þig hvort þú fáir samstillingarárekstra og stilltu 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4202"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Besta leiðin til að setja inn mál er að nota útgáfuaðstoðarmanninn með því að ýta á &lt;span style = "font-weight: 600;"&gt; Opna útgáfuaðstoðarmann &lt;/span&gt; hnappinn á botninn. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4496"/>
@@ -5175,7 +5175,7 @@ Prófaðu bara sjálfan þig hvort þú fáir samstillingarárekstra og stilltu 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5395"/>
       <source>Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</source>
-      <translation type="unfinished">Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</translation>
+      <translation>Í staðinn fyrir minnispunkta skal nota nótutré með öllum undirmöppunum (ef kveikt er á þeim fyrir minnismiða)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5630"/>
@@ -5245,7 +5245,7 @@ Prófaðu bara sjálfan þig hvort þú fáir samstillingarárekstra og stilltu 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5743"/>
       <source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
-      <translation type="unfinished">Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</translation>
+      <translation>Settu upp &lt;a href="%1"&gt; viðbót vafra viðbótar &lt;/a&gt; úr &lt;a href="%2"&gt; Chrome vefverslun &lt;/a&gt; eða &lt;a href="%3"&gt; Firefox viðbót- ons síðu &lt;/a&gt; til að nota QOwnNotes sem vefklippara.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3684"/>
@@ -5343,44 +5343,44 @@ Prófaðu bara sjálfan þig hvort þú fáir samstillingarárekstra og stilltu 
       <location filename="../dialogs/settingsdialog.ui" line="4973"/>
       <source>Enter a command to be used to show a git log (like for example "gitk")</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
-      <translation type="unfinished">Enter a command to be used to show a git log (like for example "gitk")</translation>
+      <translation>Sláðu inn skipun sem á að nota til að sýna git log (eins og til dæmis "gitk")</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4993"/>
       <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
-      <translation type="unfinished">If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</translation>
+      <translation>Ef þú notar þessa stillingu muntu fá nýja valmyndaratriði til að sýna git-útgáfurnar ef þú smellir á hægrismellt á athugasemd.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5277"/>
       <location filename="../dialogs/settingsdialog.ui" line="5286"/>
       <source>Regular expressions of note sub-folders to ignore, separated by ";"</source>
-      <translation type="unfinished">Regular expressions of note sub-folders to ignore, separated by ";"</translation>
+      <translation>Regluleg tjáning á undirtegundum möppum til að hunsa, aðskilin með ";"</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5336"/>
       <source>Show all notes of a tag including the notes of their children-tags</source>
-      <translation type="unfinished">Show all notes of a tag including the notes of their children-tags</translation>
+      <translation>Sýna allar glósur af merkimiði þar með talnum af barnamerkjunum</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5329"/>
       <source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
-      <translation type="unfinished">Show all notes in a folder including their subfolders (only works if subfolders are turned on)</translation>
+      <translation>Sýna allar minnispunkta í möppu þar á meðal undirmöppur þeirra (virkar aðeins ef kveikt er á undirmöppum)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4734"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Þú gætir viljað skoða allar tiltækar &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt; tíma snið &lt;/a&gt;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4884"/>
       <source>Highlight the current line</source>
-      <translation type="unfinished">Highlight the current line</translation>
+      <translation>Auðkenndu núverandi línu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5060"/>
       <source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
-      <translation type="unfinished">Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</translation>
+      <translation>Ekki gleyma að gera git stuðning fyrir athugasemdarmöppurnar þínar og stilla nafn þitt og netfang fyrir Git viðskiptavininn þinn, til dæmis með þessum flugstöðvaskipunum:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5135"/>
@@ -5931,7 +5931,7 @@ Prófaðu bara sjálfan þig hvort þú fáir samstillingarárekstra og stilltu 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4168"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Þú getur &lt;span style = "font-weight: 600;"&gt; afritað og límt &lt;/span&gt; þennan texta (eða hluta þessa texta) í &lt;span style = "font-weight: 600;"&gt; útgáfa &lt;/span&gt; á &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt; QOwnNotes málefnasíðuna &lt;/a&gt; ef þú ert með &lt;span style = "font-weight: 600;"&gt; spurningar eða vandræði &lt;/span&gt; með QOwnNotes. Gögn sem eru of viðkvæm eru falin í þessum upplýsingum. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4144"/>
@@ -6368,139 +6368,139 @@ Skýringar þínar haldast óbreyttir!</translation>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="196"/>
       <source>40</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">40</translation>
+      <translation>40</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="197"/>
       <source>60</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">60</translation>
+      <translation>60</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="198"/>
       <source>80</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">80</translation>
+      <translation>80</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="199"/>
       <source>-ise suffixes</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">-ise suffixes</translation>
+      <translation>-ise variant</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="200"/>
       <source>-ize suffixes</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">-ize suffixes</translation>
+      <translation>-ize variant</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="201"/>
       <source>-ise suffixes and with accents</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">-ise suffixes and with accents</translation>
+      <translation>-ise variant og sem nota kommur</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="203"/>
       <source>-ise suffixes and without accents</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">-ise suffixes and without accents</translation>
+      <translation>-ise variant og án kommur</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="206"/>
       <source>-ize suffixes and with accents</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">-ize suffixes and with accents</translation>
+      <translation>-ize variant og sem nota kommur</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="208"/>
       <source>-ize suffixes and without accents</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">-ize suffixes and without accents</translation>
+      <translation>-ise variant og án kommur</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="211"/>
       <source>large</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">large</translation>
+      <translation>stór</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="212"/>
       <source>medium</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">medium</translation>
+      <translation>miðlungs</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="213"/>
       <source>small</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">small</translation>
+      <translation>lítið</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="214"/>
       <source>variant 0</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">variant 0</translation>
+      <translation>afbrigði 0</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="215"/>
       <source>variant 1</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">variant 1</translation>
+      <translation>afbrigði 1</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="216"/>
       <source>variant 2</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">variant 2</translation>
+      <translation>afbrigði 2</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="218"/>
       <source>without accents</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">without accents</translation>
+      <translation>án kommur</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="219"/>
       <source>with accents</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">with accents</translation>
+      <translation>með kommur</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="221"/>
       <source>with ye, modern russian</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">with ye, modern russian</translation>
+      <translation>með ye, nútíma rússnesku</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="223"/>
       <source>with yeyo, modern and old russian</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">with yeyo, modern and old russian</translation>
+      <translation>með yeyo, nútíma og gömlum rússnesku</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="226"/>
       <source>with yo, old russian</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">with yo, old russian</translation>
+      <translation>með yo, gamall rússneskur</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="227"/>
       <source>extended</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">extended</translation>
+      <translation>framlengdur</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="262"/>
       <source>%1 (%2) [%3]</source>
       <comment>dictionary name; %1 = language name, %2 = country name and %3 = language variant name</comment>
-      <translation type="unfinished">%1 (%2) [%3]</translation>
+      <translation>%1 (%2) [%3]</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="265"/>
       <source>%1 (%2)</source>
       <comment>dictionary name; %1 = language name, %2 = country name</comment>
-      <translation type="unfinished">%1 (%2)</translation>
+      <translation>%1 (%2)</translation>
     </message>
   </context>
   <context>
@@ -7145,7 +7145,7 @@ Ekki er hægt að afturkalla þetta!</translation>
     <message>
       <location filename="../dialogs/versiondialog.ui" line="65"/>
       <source>Diff</source>
-      <translation type="unfinished">Diff</translation>
+      <translation>Diff</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.ui" line="98"/>
@@ -7183,9 +7183,9 @@ Ekki er hægt að afturkalla þetta!</translation>
     <message numerus="yes">
       <location filename="../services/websocketserverservice.cpp" line="188"/>
       <source>%n bookmark(s) created</source>
-      <translation type="unfinished">
-        <numerusform>%n bookmark(s) created</numerusform>
-        <numerusform>%n bookmark(s) created</numerusform>
+      <translation>
+        <numerusform>%n bókamerki búin til</numerusform>
+        <numerusform>%n bókamerkir búin til</numerusform>
       </translation>
     </message>
     <message>

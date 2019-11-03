@@ -189,17 +189,17 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="657"/>
       <source>Latitude</source>
-      <translation type="unfinished">Latitude</translation>
+      <translation>Ширина</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="659"/>
       <source>Longitude</source>
-      <translation type="unfinished">Longitude</translation>
+      <translation>Должина</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="661"/>
       <source>Altitude</source>
-      <translation type="unfinished">Altitude</translation>
+      <translation>Височина</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="663"/>
@@ -278,52 +278,52 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="958"/>
       <source>Mark "%1" not set.</source>
-      <translation type="unfinished">Mark "%1" not set.</translation>
+      <translation>Означи "%1" не е поставено.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="2848"/>
       <source>Recursive mapping</source>
-      <translation type="unfinished">Recursive mapping</translation>
+      <translation>Рекурзивно мапирање</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3717"/>
       <source>%1%2%</source>
-      <translation type="unfinished">%1%2%</translation>
+      <translation>%1%2%</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3719"/>
       <source>%1All</source>
-      <translation type="unfinished">%1All</translation>
+      <translation>%1Сите</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3733"/>
       <source>Not implemented in FakeVim.</source>
-      <translation type="unfinished">Not implemented in FakeVim.</translation>
+      <translation>Не е имплементирано во FakeVim.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4313"/>
       <source>Type Alt-V, Alt-V to quit FakeVim mode.</source>
-      <translation type="unfinished">Type Alt-V, Alt-V to quit FakeVim mode.</translation>
+      <translation>Напишете Alt-V, Alt-V за да го напуштите режимот FakeVim.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5761"/>
       <source>Unknown option:</source>
-      <translation type="unfinished">Unknown option:</translation>
+      <translation>Непозната опција:</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5771"/>
       <source>Invalid argument:</source>
-      <translation type="unfinished">Invalid argument:</translation>
+      <translation>Невалиден аргумент:</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5773"/>
       <source>Trailing characters:</source>
-      <translation type="unfinished">Trailing characters:</translation>
+      <translation>Заостани карактери:</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5855"/>
       <source>Move lines into themselves.</source>
-      <translation type="unfinished">Move lines into themselves.</translation>
+      <translation>Поместете ги линиите во себе.</translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5897"/>
@@ -336,32 +336,32 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5958"/>
       <source>File "%1" exists (add ! to override)</source>
-      <translation type="unfinished">File "%1" exists (add ! to override)</translation>
+      <translation>Датотеката "%1" постои (додајте ! За отфрлање)</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5972"/>
       <source>Cannot open file "%1" for writing</source>
-      <translation type="unfinished">Cannot open file "%1" for writing</translation>
+      <translation>Не можам да ја отворам датотеката "%1" за пишување</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5978"/>
       <source>"%1" %2 %3L, %4C written.</source>
-      <translation type="unfinished">"%1" %2 %3L, %4C written.</translation>
+      <translation>"%1" %2 %3L, %4C напишано.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5979"/>
       <source> [New] </source>
-      <translation type="unfinished"> [New] </translation>
+      <translation>[Ново]</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5987"/>
       <source>Cannot open file "%1" for reading</source>
-      <translation type="unfinished">Cannot open file "%1" for reading</translation>
+      <translation>Не можам да ја отворам датотеката "%1" за читање</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6015"/>
       <source>"%1" %2L, %3C</source>
-      <translation type="unfinished">"%1" %2L, %3C</translation>
+      <translation>"%1" %2L, %3C</translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6042"/>
@@ -374,42 +374,42 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6130"/>
       <source>Cannot open file %1</source>
-      <translation type="unfinished">Cannot open file %1</translation>
+      <translation>Не можам да ја отворам датотеката %1</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6203"/>
       <source>Not an editor command: %1</source>
-      <translation type="unfinished">Not an editor command: %1</translation>
+      <translation>Не е команда на уредувачот: %1</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6297"/>
       <source>Invalid regular expression: %1</source>
-      <translation type="unfinished">Invalid regular expression: %1</translation>
+      <translation>Невалиден редовен израз: %1</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6333"/>
       <source>Pattern not found: %1</source>
-      <translation type="unfinished">Pattern not found: %1</translation>
+      <translation>Не е пронајден моделот: %1</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6337"/>
       <source>Search hit BOTTOM, continuing at TOP.</source>
-      <translation type="unfinished">Search hit BOTTOM, continuing at TOP.</translation>
+      <translation>Пребарувањето го погоди дното, продолжувајќи на врвот.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6338"/>
       <source>Search hit TOP, continuing at BOTTOM.</source>
-      <translation type="unfinished">Search hit TOP, continuing at BOTTOM.</translation>
+      <translation>Пребарувањето погоди горе, продолжувајќи на дното.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6343"/>
       <source>Search hit BOTTOM without match for: %1</source>
-      <translation type="unfinished">Search hit BOTTOM without match for: %1</translation>
+      <translation>Пребарај го дното без да одговара за: %1</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6344"/>
       <source>Search hit TOP without match for: %1</source>
-      <translation type="unfinished">Search hit TOP without match for: %1</translation>
+      <translation>Пребарување највисокото место без натпревар за: %1</translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6451"/>
@@ -439,12 +439,12 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7778"/>
       <source>Already at oldest change.</source>
-      <translation type="unfinished">Already at oldest change.</translation>
+      <translation>Веќе по најстара промена.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7779"/>
       <source>Already at newest change.</source>
-      <translation type="unfinished">Already at newest change.</translation>
+      <translation>Веќе при најновата промена.</translation>
     </message>
   </context>
   <context>
@@ -452,7 +452,7 @@
     <message>
       <location filename="../helpers/fakevimproxy.cpp" line="26"/>
       <source>Information</source>
-      <translation type="unfinished">Information</translation>
+      <translation>Информации</translation>
     </message>
   </context>
   <context>
@@ -460,74 +460,74 @@
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="38"/>
       <source>Text font</source>
-      <translation type="unfinished">Text font</translation>
+      <translation>Фонт за текст</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="73"/>
       <source>Size:</source>
-      <translation type="unfinished">Size:</translation>
+      <translation>Големина:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="80"/>
       <source>Family:</source>
-      <translation type="unfinished">Family:</translation>
+      <translation>Семејство:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="103"/>
       <source>Color schema</source>
-      <translation type="unfinished">Color schema</translation>
+      <translation>Шема на бои</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="124"/>
       <source>Delete schema</source>
-      <translation type="unfinished">Delete schema</translation>
+      <translation>Избришете ја шемата</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="127"/>
       <source>Delete</source>
-      <translation type="unfinished">Delete</translation>
+      <translation>Избриши</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="169"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="631"/>
       <source>Export schema</source>
-      <translation type="unfinished">Export schema</translation>
+      <translation>Шема за извоз</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="172"/>
       <source>Export</source>
-      <translation type="unfinished">Export</translation>
+      <translation>Извоз</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="271"/>
       <source>If you have created a nice color schema please export it and share it with everyone!</source>
-      <translation type="unfinished">If you have created a nice color schema please export it and share it with everyone!</translation>
+      <translation>Доколку креирате убава шема на бои, изнесете ја и споделете ја со сите!</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="155"/>
       <source>Copy schema</source>
-      <translation type="unfinished">Copy schema</translation>
+      <translation>Копирајте шема</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="158"/>
       <source>Copy</source>
-      <translation type="unfinished">Copy</translation>
+      <translation>Копирај</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="141"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="671"/>
       <source>Import schema</source>
-      <translation type="unfinished">Import schema</translation>
+      <translation>Шема за увоз</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="144"/>
       <source>Import</source>
-      <translation type="unfinished">Import</translation>
+      <translation>Увоз</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="315"/>
       <source>Share schema</source>
-      <translation type="unfinished">Share schema</translation>
+      <translation>Сподели шема</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="288"/>
@@ -1041,32 +1041,32 @@
     <message>
       <location filename="../widgets/logwidget.ui" line="114"/>
       <source>Fatal</source>
-      <translation type="unfinished">Fatal</translation>
+      <translation>Фатално</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="100"/>
       <source>Warning</source>
-      <translation type="unfinished">Warning</translation>
+      <translation>Предупредување</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="107"/>
       <source>Critical</source>
-      <translation type="unfinished">Critical</translation>
+      <translation>Критички</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="86"/>
       <source>Debug</source>
-      <translation type="unfinished">Debug</translation>
+      <translation>Дебагирање</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="93"/>
       <source>Info</source>
-      <translation type="unfinished">Info</translation>
+      <translation>Информации</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="121"/>
       <source>Status</source>
-      <translation type="unfinished">Status</translation>
+      <translation>Статус</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="128"/>
@@ -1332,37 +1332,37 @@
     <message>
       <location filename="../mainwindow.ui" line="1001"/>
       <source>Insert</source>
-      <translation type="unfinished">Insert</translation>
+      <translation>Вметнете</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1018"/>
       <source>Format</source>
-      <translation type="unfinished">Format</translation>
+      <translation>Формат</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1031"/>
       <source>Extra</source>
-      <translation type="unfinished">Extra</translation>
+      <translation>Екстра</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1047"/>
       <source>Edit</source>
-      <translation type="unfinished">Edit</translation>
+      <translation>Уредување</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1060"/>
       <source>Versioning</source>
-      <translation type="unfinished">Versioning</translation>
+      <translation>Верзија</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1071"/>
       <source>Encryption</source>
-      <translation type="unfinished">Encryption</translation>
+      <translation>Екрипција</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1083"/>
       <source>Languages</source>
-      <translation type="unfinished">Languages</translation>
+      <translation>Јазици</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1106"/>
@@ -1378,74 +1378,74 @@
       <location filename="../mainwindow.ui" line="1128"/>
       <location filename="../mainwindow.cpp" line="655"/>
       <source>Workspaces</source>
-      <translation type="unfinished">Workspaces</translation>
+      <translation>Работни места</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1133"/>
       <source>Panels</source>
-      <translation type="unfinished">Panels</translation>
+      <translation>Панели</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1138"/>
       <source>Toolbars</source>
-      <translation type="unfinished">Toolbars</translation>
+      <translation>Лента со алатки</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1143"/>
       <source>Show</source>
       <extracomment>To show or hide stuff</extracomment>
-      <translation type="unfinished">Show</translation>
+      <translation>Прикажи</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1157"/>
       <source>Workspace</source>
-      <translation type="unfinished">Workspace</translation>
+      <translation>Работен простор</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1166"/>
       <source>Jump to</source>
-      <translation type="unfinished">Jump to</translation>
+      <translation>Скокни до</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1202"/>
       <source>&amp;Scripting</source>
-      <translation type="unfinished">&amp;Scripting</translation>
+      <translation>&amp;Скриптирање</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1308"/>
       <source>About &amp;QOwnNotes…</source>
-      <translation type="unfinished">About &amp;QOwnNotes…</translation>
+      <translation>За &amp;QOwnNotes…</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1347"/>
       <source>Post questions, feature requests or problems with the help of the issue assistant</source>
-      <translation type="unfinished">Post questions, feature requests or problems with the help of the issue assistant</translation>
+      <translation>Објавувајте прашања, барања за прашања или проблеми со помош на асистентот за издавање</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1405"/>
       <source>Show remote trash</source>
-      <translation type="unfinished">Show remote trash</translation>
+      <translation>Покажете далечинско ѓубре</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1445"/>
       <location filename="../mainwindow.ui" line="1448"/>
       <source>Auto format table</source>
-      <translation type="unfinished">Auto format table</translation>
+      <translation>Табела за автоматски формат</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1477"/>
       <source>Forward in note history</source>
-      <translation type="unfinished">Forward in note history</translation>
+      <translation>Напред кон историјата на белешки</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1489"/>
       <source>Show shortcuts</source>
-      <translation type="unfinished">Show shortcuts</translation>
+      <translation>Прикажи кратенки</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1498"/>
       <source>&amp;Knowledge base</source>
-      <translation type="unfinished">&amp;Knowledge base</translation>
+      <translation>&amp;База на знаење</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1507"/>
@@ -1465,7 +1465,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1534"/>
       <source>Export note as PDF (preview)</source>
-      <translation type="unfinished">Export note as PDF (preview)</translation>
+      <translation>Изведете белешка како PDF (преглед)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1543"/>
@@ -1780,80 +1780,80 @@
     <message>
       <location filename="../mainwindow.ui" line="2394"/>
       <source>Script settings</source>
-      <translation type="unfinished">Script settings</translation>
+      <translation>Поставки за сценарио</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2403"/>
       <source>Insert attachment</source>
-      <translation type="unfinished">Insert attachment</translation>
+      <translation>Вметнете приврзаност</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2430"/>
       <source>Check for script updates</source>
-      <translation type="unfinished">Check for script updates</translation>
+      <translation>Проверете дали се ажурираат скриптите</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2439"/>
       <source>Show local trash</source>
-      <translation type="unfinished">Show local trash</translation>
+      <translation>Прикажи локално ѓубре</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2444"/>
       <location filename="../mainwindow.ui" line="2447"/>
       <source>Jump to note edit panel</source>
-      <translation type="unfinished">Jump to note edit panel</translation>
+      <translation>Скокни до панелот за уредување белешка</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2459"/>
       <source>Manage orphaned attachments</source>
-      <translation type="unfinished">Manage orphaned attachments</translation>
+      <translation>Управувајте со сиромашните додатоци</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2464"/>
       <source>Jump to note subfolder panel</source>
-      <translation type="unfinished">Jump to note subfolder panel</translation>
+      <translation>Скокни до панелот за папка за белешка</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2472"/>
       <source>Jump to tags panel</source>
-      <translation type="unfinished">Jump to tags panel</translation>
+      <translation>Скокни до панелот со ознаки</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2480"/>
       <source>Jump to note list panel</source>
-      <translation type="unfinished">Jump to note list panel</translation>
+      <translation>Скокни до панелот со ознаки</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2488"/>
       <source>Activate context menu</source>
-      <translation type="unfinished">Activate context menu</translation>
+      <translation>Активирајте го менито за контекст</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2496"/>
       <source>Import bookmarks from server</source>
-      <translation type="unfinished">Import bookmarks from server</translation>
+      <translation>Увезете обележувачи од серверот</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2501"/>
       <location filename="../mainwindow.ui" line="2504"/>
       <source>Toggle full-screen mode</source>
-      <translation type="unfinished">Toggle full-screen mode</translation>
+      <translation>Вклучете го режимот на цел екран</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2515"/>
       <source>Typewriter mode</source>
-      <translation type="unfinished">Typewriter mode</translation>
+      <translation>Режим на машина за пишување</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2527"/>
       <source>Check spelling</source>
-      <translation type="unfinished">Check spelling</translation>
+      <translation>Проверете го правописот</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2535"/>
       <location filename="../mainwindow.cpp" line="11293"/>
       <source>Automatically detect</source>
-      <translation type="unfinished">Automatically detect</translation>
+      <translation>Автоматско откривање</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1876"/>
@@ -1864,79 +1864,79 @@
       <location filename="../mainwindow.ui" line="1879"/>
       <location filename="../mainwindow.ui" line="1882"/>
       <source>The note edit panel will be above the preview panel</source>
-      <translation type="unfinished">The note edit panel will be above the preview panel</translation>
+      <translation>Панелот за уредување белешки ќе биде над панелот за преглед</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1891"/>
       <source>Replace in current note</source>
-      <translation type="unfinished">Replace in current note</translation>
+      <translation>Заменете ја тековната белешка</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1899"/>
       <source>Autocomplete, solve equation or open URL</source>
-      <translation type="unfinished">Autocomplete, solve equation or open URL</translation>
+      <translation>Автоматски, решете ја равенката или отворете ја URL-то</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1902"/>
       <source>Solve a simple equation like '(2+3)*6=' in the current line</source>
-      <translation type="unfinished">Solve a simple equation like '(2+3)*6=' in the current line</translation>
+      <translation>Решете едноставна равенка како '(2 + 3) * 6 =' во тековната линија</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1910"/>
       <source>Select note folder</source>
-      <translation type="unfinished">Select note folder</translation>
+      <translation>Изберете папка со белешки</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1925"/>
       <source>Reload scripting engine</source>
-      <translation type="unfinished">Reload scripting engine</translation>
+      <translation>Вчитајте го моторот за скриптирање</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1958"/>
       <location filename="../mainwindow.ui" line="1961"/>
       <source>Open the #qownnotes IRC channel, you have to stay online to get a response</source>
-      <translation type="unfinished">Open the #qownnotes IRC channel, you have to stay online to get a response</translation>
+      <translation>Отворете го каналот #Qownnotes IRC, мора да останете на Интернет за да добиете одговор</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2188"/>
       <location filename="../mainwindow.ui" line="2191"/>
       <source>Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</source>
-      <translation type="unfinished">Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</translation>
+      <translation>Отворете ги просториите на командите за Податоци, потребна ви е сметка на GitHub или Twitter за да се најавите, но можете да добиете и присутни пораки</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="970"/>
       <source>Open chat</source>
-      <translation type="unfinished">Open chat</translation>
+      <translation>Отворен разговор</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="510"/>
       <source>Note operations…</source>
-      <translation type="unfinished">Note operations…</translation>
+      <translation>Операции за белешка…</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1564"/>
       <source>&amp;Print note (preview)</source>
-      <translation type="unfinished">&amp;Print note (preview)</translation>
+      <translation>&amp;Белешка за печатење (преглед)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1970"/>
       <source>Insert headline from note filename</source>
-      <translation type="unfinished">Insert headline from note filename</translation>
+      <translation>Вметнете наслов од името на името на белешката</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1984"/>
       <source>Use softwrap in note editor and preview</source>
-      <translation type="unfinished">Use softwrap in note editor and preview</translation>
+      <translation>Користете софтверот во уредникот за белешки и прегледот</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1992"/>
       <source>Show status bar</source>
-      <translation type="unfinished">Show status bar</translation>
+      <translation>Покажи лента за статус</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2007"/>
       <source>Share note</source>
-      <translation type="unfinished">Share note</translation>
+      <translation>Сподели белешка</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2037"/>
@@ -2009,17 +2009,17 @@ Restore current note?</source>
     <message>
       <location filename="../mainwindow.cpp" line="2834"/>
       <source>new version %1 available</source>
-      <translation type="unfinished">new version %1 available</translation>
+      <translation>достапна е нова верзија %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2954"/>
       <source>Abort</source>
-      <translation type="unfinished">Abort</translation>
+      <translation>Абортус</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2954"/>
       <source>Loading notes…</source>
-      <translation type="unfinished">Loading notes…</translation>
+      <translation>Се вчитуваат белешки…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3159"/>
@@ -2393,7 +2393,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="8174"/>
       <source>&amp;Move tags to…</source>
-      <translation type="unfinished">&amp;Move tags to…</translation>
+      <translation>&amp;Поместете ознаки на…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8389"/>
@@ -2440,12 +2440,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="9359"/>
       <source>&amp;Move notes to…</source>
-      <translation type="unfinished">&amp;Move notes to…</translation>
+      <translation>&amp;Премести белешки до…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9360"/>
       <source>&amp;Copy notes to…</source>
-      <translation type="unfinished">&amp;Copy notes to…</translation>
+      <translation>&amp;Копирајте белешки до…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9395"/>
@@ -2460,12 +2460,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="9407"/>
       <source>&amp;Tag selected notes with…</source>
-      <translation type="unfinished">&amp;Tag selected notes with…</translation>
+      <translation>&amp;Означете ги избраните белешки со…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9429"/>
       <source>&amp;Remove tag from selected notes…</source>
-      <translation type="unfinished">&amp;Remove tag from selected notes…</translation>
+      <translation>&amp;Отстранете ја ознаката од избраните белешки…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9520"/>

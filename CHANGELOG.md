@@ -7,6 +7,9 @@
 - fixed many optimization regressions from [7848f4de14fd152be8a8ffc7c8d97f8f37d1a431](https://github.com/pbek/QOwnNotes/commit/7848f4de14fd152be8a8ffc7c8d97f8f37d1a431)
 - attempted to fix inclusion of spellchecker dictionaries for Snap package
   (for [#1348](https://github.com/pbek/QOwnNotes/issues/1348), thank you @Waqar144)
+- added more Bosnian, Romanian, Norwegian, Icelandic, Macedonian, Finnish,
+  Slovenian, Czech, Croatian, Cebuano, Serbian (Cyrillic), French, Basque
+  translation (thank you Fabijenna, Jeeps)
 
 ## 19.11.2
 - spellchecking is now enabled in formatted markdown (for [#125](https://github.com/pbek/QOwnNotes/issues/125), thank you @Waqar144)

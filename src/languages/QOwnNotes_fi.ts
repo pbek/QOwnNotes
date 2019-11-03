@@ -3544,9 +3544,9 @@ Jos roskakoriin on otettu käyttöön omassa palvelinpalvelimessa, sinun pitäis
     <message numerus="yes">
       <location filename="../entities/note.cpp" line="2820"/>
       <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
-      <translation type="unfinished">
-        <numerusform>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
-        <numerusform>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
+      <translation>
+        <numerusform>Muistiinpanopolulla havaittiin muutos. Haluatko korvata kaikki &lt;strong&gt;%1 &lt;/strong&gt; -linkkien esiintymiset tiedoilla &lt;strong&gt;%2 &lt;/strong&gt; ja linkit tiedostonimellä &lt;strong&gt;%3 &lt;/strong&gt; tiedoilla &lt;strong&gt;%4 &lt;/strong&gt; sisään &lt;strong&gt;%n&lt;/strong&gt; huomautustiedosto?</numerusform>
+        <numerusform>Muistiinpanopolulla havaittiin muutos. Haluatko korvata kaikki &lt;strong&gt;%1 &lt;/strong&gt; -linkkien esiintymiset tiedoilla &lt;strong&gt;%2 &lt;/strong&gt; ja linkit tiedostonimellä &lt;strong&gt;%3 &lt;/strong&gt; tiedoilla &lt;strong&gt;%4 &lt;/strong&gt;sisään &lt;strong&gt;%n&lt;/strong&gt; muistiinpanotiedostoa?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -4727,7 +4727,7 @@ Kokeile itseäsi, jos saat synkronointiristiriitoja ja asetat korkeamman arvon, 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="892"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tarvitset edelleen &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt; ownCloud-synkronointiohjelman &lt;/span&gt;&lt;/a&gt; (tai muun työpöydän synkronointiohjelman) muistiinpanojen synkronoimiseksi! &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="991"/>

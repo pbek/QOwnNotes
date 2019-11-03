@@ -23,79 +23,79 @@
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="14"/>
       <source>Insert attachment</source>
-      <translation type="unfinished">Insert attachment</translation>
+      <translation>Isapaw sa pataban</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="20"/>
       <source>Image filename or URL</source>
-      <translation type="unfinished">Image filename or URL</translation>
+      <translation>Image filename o URL</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="26"/>
       <source>Path to file or URL</source>
-      <translation type="unfinished">Path to file or URL</translation>
+      <translation>Dalan sa file o URL</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="36"/>
       <source>Select file</source>
-      <translation type="unfinished">Select file</translation>
+      <translation>Magpili og file</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="46"/>
       <source>Title of the image link</source>
-      <translation type="unfinished">Title of the image link</translation>
+      <translation>Title of the image link</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="49"/>
       <source>Title</source>
-      <translation type="unfinished">Title</translation>
+      <translation>Titulo</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="94"/>
       <source>Cancel download</source>
-      <translation type="unfinished">Cancel download</translation>
+      <translation>Pagkansela sa pag-download</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="117"/>
       <source>Download URL</source>
       <comment>The URL will be downloaded</comment>
-      <translation type="unfinished">Download URL</translation>
+      <translation>Pag-download sa URL</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="43"/>
       <source>Select file to insert</source>
-      <translation type="unfinished">Select file to insert</translation>
+      <translation>Pagpili og file nga masal-ot</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="140"/>
       <source>Download error</source>
-      <translation type="unfinished">Download error</translation>
+      <translation>Pag-download sa sayop</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="141"/>
       <source>Error while downloading:
 %1</source>
-      <translation type="unfinished">Error while downloading:
+      <translation>Sayop samtang nag-download:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="169"/>
       <location filename="../dialogs/attachmentdialog.cpp" line="193"/>
       <source>File error</source>
-      <translation type="unfinished">File error</translation>
+      <translation>Kasayop sa file</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="170"/>
       <source>Could not open temporary file:
 %1</source>
-      <translation type="unfinished">Could not open temporary file:
+      <translation>Dili mabuksan ang temporaryo nga file:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="194"/>
       <source>Could not store downloaded file:
 %1</source>
-      <translation type="unfinished">Could not store downloaded file:
+      <translation>Dili makatago sa na-download nga file:
 %1</translation>
     </message>
   </context>
@@ -708,72 +708,72 @@
     <message>
       <location filename="../dialogs/imagedialog.ui" line="14"/>
       <source>Insert image</source>
-      <translation type="unfinished">Insert image</translation>
+      <translation>Ipasok ang imahe</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="40"/>
       <source>Image filename or URL</source>
-      <translation type="unfinished">Image filename or URL</translation>
+      <translation>Image filename o URL</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="46"/>
       <source>Path to file or URL</source>
-      <translation type="unfinished">Path to file or URL</translation>
+      <translation>Dalan sa file o URL</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="121"/>
       <source>Scaling width:</source>
-      <translation type="unfinished">Scaling width:</translation>
+      <translation>Gilapdon sa gilapdon:</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="217"/>
       <source>Crop image</source>
-      <translation type="unfinished">Crop image</translation>
+      <translation>Hulagway</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="220"/>
       <source>&amp;Crop</source>
-      <translation type="unfinished">&amp;Crop</translation>
+      <translation>&amp;Paghugpa</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="30"/>
       <source>The path or url will be inserted directly, paths to files will be made relative to the current note</source>
-      <translation type="unfinished">The path or url will be inserted directly, paths to files will be made relative to the current note</translation>
+      <translation>Ang agianan o url igsakup diretso, ang mga agianan sa mga file ipahiuyon sa kasamtangan nga mubo nga sulat</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="33"/>
       <source>Don't copy image to media folder</source>
-      <translation type="unfinished">Don't copy image to media folder</translation>
+      <translation>Ayaw kopyaha ang imahe sa folder sa media</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="56"/>
       <source>Title of the image link</source>
-      <translation type="unfinished">Title of the image link</translation>
+      <translation>Title of the image link</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="59"/>
       <source>Title</source>
-      <translation type="unfinished">Title</translation>
+      <translation>Titulo</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="20"/>
       <source>Select image file</source>
-      <translation type="unfinished">Select image file</translation>
+      <translation>Pagpili file nga file</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.cpp" line="75"/>
       <source>Image files</source>
-      <translation type="unfinished">Image files</translation>
+      <translation>Larawan sa mga file</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.cpp" line="76"/>
       <source>Any files</source>
-      <translation type="unfinished">Any files</translation>
+      <translation>Bisan unsang mga file</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.cpp" line="82"/>
       <source>Select image to insert</source>
-      <translation type="unfinished">Select image to insert</translation>
+      <translation>Pagpili og imahe aron isulod</translation>
     </message>
   </context>
   <context>
@@ -884,12 +884,12 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="83"/>
       <source>Select local file or directory to link to</source>
-      <translation type="unfinished">Select local file or directory to link to</translation>
+      <translation>Pagpili lokal nga file o direktoryo aron i-link sa</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="94"/>
       <source>Note</source>
-      <translation type="unfinished">Note</translation>
+      <translation>Nota</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="141"/>
@@ -931,7 +931,7 @@
       <location filename="../dialogs/linkdialog.cpp" line="254"/>
       <location filename="../dialogs/linkdialog.cpp" line="302"/>
       <source>Select directory to link to</source>
-      <translation type="unfinished">Select directory to link to</translation>
+      <translation>Pilia ang direktoryo aron ma-link sa</translation>
     </message>
   </context>
   <context>
@@ -944,7 +944,7 @@
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="55"/>
       <source>Find note name</source>
-      <translation type="unfinished">Find note name</translation>
+      <translation>Pangitag ngalan sa nota</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="81"/>
@@ -1362,7 +1362,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1083"/>
       <source>Languages</source>
-      <translation type="unfinished">Languages</translation>
+      <translation>Mga Sinultian</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1106"/>
@@ -1842,18 +1842,18 @@
     <message>
       <location filename="../mainwindow.ui" line="2515"/>
       <source>Typewriter mode</source>
-      <translation type="unfinished">Typewriter mode</translation>
+      <translation>Modus sa makinilya</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2527"/>
       <source>Check spelling</source>
-      <translation type="unfinished">Check spelling</translation>
+      <translation>Susihon ang spelling</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2535"/>
       <location filename="../mainwindow.cpp" line="11293"/>
       <source>Automatically detect</source>
-      <translation type="unfinished">Automatically detect</translation>
+      <translation>Awtomatik nga namatikdan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1876"/>
@@ -2127,7 +2127,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
       <translation type="unfinished">
         <numerusform>Kuhaa ang &lt;strong&gt;%n&lt;/strong&gt; gipili nga tag(s)? Walay notes nga tang-tangon sa kani nga proseso.</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
+        <numerusform>Kuhaa ang &lt;strong&gt;%n&lt;/strong&gt; gipili nga tags? Walay notes nga tang-tangon sa kani nga proseso.</numerusform>
       </translation>
     </message>
     <message>
@@ -2213,12 +2213,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="4992"/>
       <source>Todo lists disabled!</source>
-      <translation type="unfinished">Todo lists disabled!</translation>
+      <translation>Wala’y lista ang mga lista ni Todo!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4993"/>
       <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
-      <translation type="unfinished">You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</translation>
+      <translation>Gipugngan mo ang mga lista sa todo. &lt;br/&gt; Palihug susihon ang imong pagsulud sa &lt;strong&gt; Todo &lt;/strong&gt; sa mga setting!</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5228"/>
@@ -3534,14 +3534,14 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../entities/note.cpp" line="2819"/>
       <source>Note file path changed</source>
-      <translation type="unfinished">Note file path changed</translation>
+      <translation>Nausab ang landas sa file</translation>
     </message>
     <message numerus="yes">
       <location filename="../entities/note.cpp" line="2820"/>
       <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
-      <translation type="unfinished">
-        <numerusform>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
-        <numerusform>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
+      <translation>
+        <numerusform>Usa ka pagbag-o sa agianan sa nota nakita. Gusto ba nimong palitan ang tanan nga mga panghitabo sa mga link sa &lt;strong&gt;%1 &lt;/strong&gt; nga adunay &lt;strong&gt;%2 &lt;/strong&gt; ug mga link nga adunay filename &lt;strong&gt;%3 &lt;/strong&gt; sa &lt;strong&gt;%4 &lt;/strong&gt; &gt; sa &lt;strong&gt;%n &lt;/strong&gt; file nga nota?</numerusform>
+        <numerusform>Usa ka pagbag-o sa agianan sa nota nakita. Gusto ba nimong palitan ang tanan nga mga panghitabo sa mga link sa &lt;strong&gt;%1 &lt;/strong&gt; nga adunay &lt;strong&gt;%2 &lt;/strong&gt; ug mga link nga adunay filename &lt;strong&gt;%3 &lt;/strong&gt; sa &lt;strong&gt;%4 &lt;/strong&gt; &gt; sa &lt;strong&gt;%n &lt;/strong&gt;namatikdan ang mga file?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -3586,27 +3586,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3902"/>
       <source>New connection</source>
-      <translation type="unfinished">New connection</translation>
+      <translation>Bag-ong koneksyon</translation>
     </message>
     <message>
       <location filename="../entities/cloudconnection.cpp" line="281"/>
       <source>Default</source>
-      <translation type="unfinished">Default</translation>
+      <translation>Default</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="216"/>
       <source>Note folder not found!</source>
-      <translation type="unfinished">Note folder not found!</translation>
+      <translation>Hinumdumi ang folder nga wala makit-an!</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="217"/>
       <source>Your note folder was not found any more! Do you want to select a new one?</source>
-      <translation type="unfinished">Your note folder was not found any more! Do you want to select a new one?</translation>
+      <translation>Wala na nakit-an ang imong folder nga pahinumdom! Gusto ba nimo nga magpili usa ka bag-o?</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="223"/>
       <source>Please select the folder where your notes will get stored to</source>
-      <translation type="unfinished">Please select the folder where your notes will get stored to</translation>
+      <translation>Palihug pilia ang folder kung diin matipigan ang imong mga nota</translation>
     </message>
   </context>
   <context>
@@ -3614,17 +3614,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="499"/>
       <source>No suggestions for %1</source>
-      <translation type="unfinished">No suggestions for %1</translation>
+      <translation>Walay mga sugyot alang sa %1</translation>
     </message>
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="510"/>
       <source>Ignore</source>
-      <translation type="unfinished">Ignore</translation>
+      <translation>Dili manumbaling</translation>
     </message>
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="511"/>
       <source>Add to Dictionary</source>
-      <translation type="unfinished">Add to Dictionary</translation>
+      <translation>Pagdugang sa Diksyonaryo</translation>
     </message>
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="566"/>
@@ -4722,12 +4722,12 @@ Sulayi lang ang imong kaugalingon kon makasinati ka og panagbangi ug maghimo og 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="892"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Kinahanglan mo pa ang &lt;a href="https://owncloud.org/"&gt; &lt;span style = "font-weight: 600"&gt; ownCloud sync client &lt;/span&gt; &lt;/a&gt; (o laing kliyente sa pag-sync sa desktop) aron ma-sync ang imong mga nota! &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="991"/>
       <source>Select a connection to edit</source>
-      <translation type="unfinished">Select a connection to edit</translation>
+      <translation>Pagpili usa ka koneksyon nga paga-edit</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="998"/>

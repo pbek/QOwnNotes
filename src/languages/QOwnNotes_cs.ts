@@ -3614,11 +3614,11 @@ Jestliže je koš na Vašem ownCloud serveru povolen, budete z něj schopni odst
     <message numerus="yes">
       <location filename="../entities/note.cpp" line="2820"/>
       <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
-      <translation type="unfinished">
-        <numerusform>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
-        <numerusform>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
-        <numerusform>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
-        <numerusform>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
+      <translation>
+        <numerusform>Byla detekována změna cesty poznámky. Chcete nahradit všechny výskyty &lt;strong&gt;%1 &lt;/strong&gt; odkazů &lt;strong&gt;%2 &lt;/strong&gt; a odkazy s názvem &lt;strong&gt;%3 &lt;/strong&gt; za &lt;strong&gt;%4 &lt;/ strong &gt; v &lt;strong&gt;%n &lt;/strong&gt; souboru poznámek?</numerusform>
+        <numerusform>Byla detekována změna cesty poznámky. Chcete nahradit všechny výskyty &lt;strong&gt;%1 &lt;/strong&gt; odkazů &lt;strong&gt;%2 &lt;/strong&gt; a odkazy s názvem &lt;strong&gt;%3 &lt;/strong&gt; za &lt;strong&gt;%4 &lt;/ strong &gt; v &lt;strong&gt;%n &lt;/strong&gt; souborech poznámek?</numerusform>
+        <numerusform>Byla detekována změna cesty poznámky. Chcete nahradit všechny výskyty &lt;strong&gt;%1 &lt;/strong&gt; odkazů &lt;strong&gt;%2 &lt;/strong&gt; a odkazy s názvem &lt;strong&gt;%3 &lt;/strong&gt; za &lt;strong&gt;%4 &lt;/strong &gt; v &lt;strong&gt;%n &lt;/strong&gt; souborech poznámek?</numerusform>
+        <numerusform>Byla detekována změna cesty poznámky. Chcete nahradit všechny výskyty &lt;strong&gt;%1 &lt;/strong&gt; odkazů &lt;strong&gt;%2 &lt;/strong&gt; a odkazy s názvem &lt;strong&gt;%3 &lt;/strong&gt; za &lt;strong&gt;%4 &lt;/strong &gt; v &lt;strong&gt;%n &lt;/strong&gt; souborech poznámek?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -4803,7 +4803,7 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="892"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pro synchronizaci vašich poznámek budete stále potřebovat vlastního synchronizačního&lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt; ownCloud klienta &lt;/span&gt;&lt;/a&gt; (nebo jiného klientského synchronizačního počítače)!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="991"/>
@@ -6443,19 +6443,19 @@ Vaše poznámky zůstanou neporušené!</translation>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="196"/>
       <source>40</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">40</translation>
+      <translation>40</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="197"/>
       <source>60</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">60</translation>
+      <translation>60</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="198"/>
       <source>80</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">80</translation>
+      <translation>80</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="199"/>

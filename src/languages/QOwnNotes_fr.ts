@@ -752,17 +752,17 @@
     <message>
       <location filename="../dialogs/imagedialog.ui" line="59"/>
       <source>Title</source>
-      <translation type="unfinished">Title</translation>
+      <translation>Titre</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="20"/>
       <source>Select image file</source>
-      <translation type="unfinished">Select image file</translation>
+      <translation>Sélectionnez un fichier image</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.cpp" line="75"/>
       <source>Image files</source>
-      <translation type="unfinished">Image files</translation>
+      <translation>Fichiers images</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.cpp" line="76"/>
@@ -1025,7 +1025,7 @@
       <location filename="../dialogs/localtrashdialog.cpp" line="265"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</source>
       <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; notes ont été supprimée(s)</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) ont été supprimée(s)</numerusform>
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</numerusform>
       </translation>
     </message>
@@ -3538,13 +3538,13 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     <message>
       <location filename="../entities/note.cpp" line="2819"/>
       <source>Note file path changed</source>
-      <translation type="unfinished">Note file path changed</translation>
+      <translation>Le chemin de la note à changé</translation>
     </message>
     <message numerus="yes">
       <location filename="../entities/note.cpp" line="2820"/>
       <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
       <translation type="unfinished">
-        <numerusform>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
+        <numerusform>Un changement dans le chemin de la note a été détecté. Souhaitez-vous remplacer toutes les occurrences des liens &lt;strong&gt;%1&lt;/strong&gt; par &lt;strong&gt;%2&lt;/strong&gt; et les liens avec le nom de fichier &lt;strong&gt;%3&lt;/strong&gt; avec &lt;strong&gt;%4&lt;/strong&gt; dans &lt;strong&gt;%n&lt;/strong&gt; fichier(s) de notes?</numerusform>
         <numerusform>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
       </translation>
     </message>
@@ -3585,32 +3585,32 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     <message>
       <location filename="../utils/git.cpp" line="75"/>
       <source>The command &lt;code&gt;%1&lt;/code&gt; failed!</source>
-      <translation type="unfinished">The command &lt;code&gt;%1&lt;/code&gt; failed!</translation>
+      <translation>La commande &lt;code&gt;%1&lt;/code&gt; a échouée !</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3902"/>
       <source>New connection</source>
-      <translation type="unfinished">New connection</translation>
+      <translation>Nouvelle connection</translation>
     </message>
     <message>
       <location filename="../entities/cloudconnection.cpp" line="281"/>
       <source>Default</source>
-      <translation type="unfinished">Default</translation>
+      <translation>Par défaut</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="216"/>
       <source>Note folder not found!</source>
-      <translation type="unfinished">Note folder not found!</translation>
+      <translation>Dossier de note non trouvé !</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="217"/>
       <source>Your note folder was not found any more! Do you want to select a new one?</source>
-      <translation type="unfinished">Your note folder was not found any more! Do you want to select a new one?</translation>
+      <translation>Votre dossier de note n'a pas été trouvé ! Voulez-vous sélectionner une nouvelle note ?</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="223"/>
       <source>Please select the folder where your notes will get stored to</source>
-      <translation type="unfinished">Please select the folder where your notes will get stored to</translation>
+      <translation>Sélectionnez le dossier dans lequel la note sera sauvegardée</translation>
     </message>
   </context>
   <context>
@@ -3618,17 +3618,17 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="499"/>
       <source>No suggestions for %1</source>
-      <translation type="unfinished">No suggestions for %1</translation>
+      <translation>Pas de suggestion pour %1</translation>
     </message>
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="510"/>
       <source>Ignore</source>
-      <translation type="unfinished">Ignore</translation>
+      <translation>Ignorer</translation>
     </message>
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="511"/>
       <source>Add to Dictionary</source>
-      <translation type="unfinished">Add to Dictionary</translation>
+      <translation>Ajouter au dictionnaire</translation>
     </message>
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="566"/>
@@ -3651,7 +3651,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="107"/>
       <source>Advanced search / replace text</source>
-      <translation type="unfinished">Advanced search / replace text</translation>
+      <translation>Recherche avancée / remplacement de texte</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="90"/>
@@ -3701,7 +3701,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="224"/>
       <source>Replace one text occurrence</source>
-      <translation type="unfinished">Replace one text occurrence</translation>
+      <translation>Remplacer une occurrence de texte</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="227"/>
@@ -3711,12 +3711,12 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="237"/>
       <source>Replace all text occurrences</source>
-      <translation type="unfinished">Replace all text occurrences</translation>
+      <translation>Remplacer toutes les occurrences de texte</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="240"/>
       <source>Replace all</source>
-      <translation type="unfinished">Replace all</translation>
+      <translation>Tout remplacer</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="164"/>
@@ -4031,7 +4031,7 @@ Do you want to install it anyway?</source>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="14"/>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="20"/>
       <source>Import bookmarks</source>
-      <translation type="unfinished">Import bookmarks</translation>
+      <translation>Importer les marque-pages</translation>
     </message>
     <message>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="47"/>

@@ -1010,19 +1010,19 @@
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="219"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</source>
-      <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n &lt;/strong&gt; bilješka je vraćena</numerusform>
+        <numerusform>&lt;strong&gt;%n &lt;/strong&gt; bilješke su vraćene</numerusform>
+        <numerusform>&lt;strong&gt;%n &lt;/strong&gt; bilješke su vraćene</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="241"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
+      <translation>
+        <numerusform>Ukloniti &lt;strong&gt;%n&lt;/strong&gt; odabranu bilješku?</numerusform>
+        <numerusform>Ukloniti &lt;strong&gt;%n&lt;/strong&gt; odabrane bilješke?</numerusform>
+        <numerusform>Ukloniti &lt;strong&gt;%n&lt;/strong&gt; odabrane bilješke?</numerusform>
       </translation>
     </message>
     <message>
@@ -1033,10 +1033,10 @@
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="265"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</source>
-      <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; bilješke uklonjene su</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; bilješke uklonjene su</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; bilješke uklonjene su</numerusform>
       </translation>
     </message>
   </context>
@@ -3575,10 +3575,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../entities/note.cpp" line="2820"/>
       <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
-      <translation type="unfinished">
-        <numerusform>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
-        <numerusform>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
-        <numerusform>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
+      <translation>
+        <numerusform>Otkrivena je promjena staze bilješke. Želite li zamijeniti sve pojave veza &lt;strong&gt;%1 &lt;/strong&gt; s &lt;strong&gt;%2 &lt;/strong&gt; i veze s imenom datoteke %3 &lt;/strong&gt; s &lt;strong&gt;%4 &lt;/strong&gt; &gt; u &lt;strong&gt;%n &lt;/strong&gt; datoteci s napomenama?</numerusform>
+        <numerusform>Otkrivena je promjena staze bilješke. Želite li zamijeniti sve pojave veza &lt;strong&gt;%1 &lt;/strong&gt; s &lt;strong&gt;%2 &lt;/strong&gt; i veze s imenom datoteke %3 &lt;/strong&gt; s &lt;strong&gt;%4 &lt;/strong&gt; &gt; u &lt;strong&gt;%n &lt;/strong&gt; datotekama s napomenama?</numerusform>
+        <numerusform>Otkrivena je promjena staze bilješke. Želite li zamijeniti sve pojave veza &lt;strong&gt;%1 &lt;/strong&gt; s &lt;strong&gt;%2 &lt;/strong&gt; i veze s imenom datoteke %3 &lt;/strong&gt; s &lt;strong&gt;%4 &lt;/strong&gt; &gt; u &lt;strong&gt;%n &lt;/strong&gt; datotekama s napomenama?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -4760,7 +4760,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="892"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;I dalje će vam trebati klijent za sinkronizaciju&lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt; 'ownCloud' &lt;/span&gt;&lt;/a&gt;(ili drugi klijent za sinkronizaciju na radnoj površini) za sinkronizaciju bilješki!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="991"/>
@@ -5964,7 +5964,7 @@ Samo se testirajte ako dobijete sukobe pri sinkronizaciji i postavite višu vrij
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4168"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Možete &lt;span style = "font-weight: 600;"&gt; kopirati i zalijepiti &lt;/span&gt; ovaj tekst (ili dijelove ovog teksta) u &lt;span style = "font-weight: 600;"&gt; izdanje &lt;/span&gt; na &lt;a href="https://github.com/pbek/QOwnNotes/isissue"&gt; stranici s pitanjima QOwnNotes &lt;/a&gt; ako imate &lt;span style = "font-weight: 600;"&gt; pitanja ili problemi &lt;/span&gt; s QOwnNotes. Podaci koji su preosjetljivi u ovim podacima su skriveni. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4144"/>

@@ -1362,7 +1362,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1083"/>
       <source>Languages</source>
-      <translation type="unfinished">Languages</translation>
+      <translation>Språk</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1106"/>
@@ -1847,13 +1847,13 @@
     <message>
       <location filename="../mainwindow.ui" line="2527"/>
       <source>Check spelling</source>
-      <translation type="unfinished">Check spelling</translation>
+      <translation>Sjekk stavemåten</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2535"/>
       <location filename="../mainwindow.cpp" line="11293"/>
       <source>Automatically detect</source>
-      <translation type="unfinished">Automatically detect</translation>
+      <translation>Oppdage automatisk</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1876"/>
@@ -2218,12 +2218,12 @@ Hvis papirkurven er aktivert på din ownCloud-server, bør du kunne gjenopprette
     <message>
       <location filename="../mainwindow.cpp" line="4992"/>
       <source>Todo lists disabled!</source>
-      <translation type="unfinished">Todo lists disabled!</translation>
+      <translation>Todo lister deaktivert!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4993"/>
       <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
-      <translation type="unfinished">You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</translation>
+      <translation>Du har deaktivert todo-listene. &lt;br /&gt; Kontroller &lt;strong&gt; Todo &lt;/strong&gt; -konfigurasjonen i innstillingene!</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5228"/>
@@ -3544,9 +3544,9 @@ Hvis papirkurven er aktivert på din ownCloud-server, bør du kunne gjenopprette
     <message numerus="yes">
       <location filename="../entities/note.cpp" line="2820"/>
       <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
-      <translation type="unfinished">
-        <numerusform>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
-        <numerusform>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
+      <translation>
+        <numerusform>En endring av notatstien ble oppdaget. Vil du erstatte alle forekomster av &lt;strong&gt;%1&lt;/strong&gt; lenker med &lt;strong&gt;%2&lt;/strong&gt; og lenker med filnavn &lt;strong&gt;%3&lt;/strong&gt; med &lt;strong&gt;%4&lt;/ strong &gt; i &lt;strong&gt;%n&lt;/strong&gt; notatfil?</numerusform>
+        <numerusform>En endring av notatstien ble oppdaget. Vil du erstatte alle forekomster av &lt;strong&gt;%1 &lt;/strong&gt; lenker med &lt;strong&gt;%2 &lt;/strong&gt; og lenker med filnavn &lt;strong&gt;%3 &lt;/strong&gt; med &lt;strong&gt;%4 &lt;/ strong &gt; i &lt;strong&gt;%n&lt;/strong&gt; notatfiler?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -3619,17 +3619,17 @@ Hvis papirkurven er aktivert på din ownCloud-server, bør du kunne gjenopprette
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="499"/>
       <source>No suggestions for %1</source>
-      <translation type="unfinished">No suggestions for %1</translation>
+      <translation>Ingen forslag for %1</translation>
     </message>
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="510"/>
       <source>Ignore</source>
-      <translation type="unfinished">Ignore</translation>
+      <translation>Overse</translation>
     </message>
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="511"/>
       <source>Add to Dictionary</source>
-      <translation type="unfinished">Add to Dictionary</translation>
+      <translation>Legg til i ordbok</translation>
     </message>
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="566"/>
@@ -4727,7 +4727,7 @@ Bare test deg selv hvis du får synkroniseringskonflikter og sett en høyere ver
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="892"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Du vil fortsatt trenge &lt;a href="https://owncloud.org/"&gt; &lt;span style = "font-weight: 600"&gt; ownCloud sync-klient &lt;/span&gt; &lt;/a&gt; (eller en annen desktop sync-klient) for å synkronisere notatene dine! &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="991"/>
@@ -4786,12 +4786,12 @@ Bare test deg selv hvis du får synkroniseringskonflikter og sett en høyere ver
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1723"/>
       <source>Todo settings</source>
-      <translation type="unfinished">Todo settings</translation>
+      <translation>Todo innstillinger</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1729"/>
       <source>Enable todo calendar support</source>
-      <translation type="unfinished">Enable todo calendar support</translation>
+      <translation>Aktiver todo-kalenderstøtte</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1914"/>
@@ -4826,7 +4826,7 @@ Bare test deg selv hvis du får synkroniseringskonflikter og sett en høyere ver
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2131"/>
       <source>Bosnian</source>
-      <translation type="unfinished">Bosnian</translation>
+      <translation>Bosnisk</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2142"/>
@@ -4911,7 +4911,7 @@ Bare test deg selv hvis du får synkroniseringskonflikter og sett en høyere ver
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2395"/>
       <source>Macedonian</source>
-      <translation type="unfinished">Macedonian</translation>
+      <translation>Makedonske</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2417"/>
@@ -5175,7 +5175,7 @@ Bare test deg selv hvis du får synkroniseringskonflikter og sett en høyere ver
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5395"/>
       <source>Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</source>
-      <translation type="unfinished">Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</translation>
+      <translation>I stedet for en notatliste, bruk et notattre med alle undermappene (hvis de er slått på for notatmappen)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5630"/>
@@ -6368,139 +6368,139 @@ Notatene dine forblir intakte!</translation>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="196"/>
       <source>40</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">40</translation>
+      <translation>40</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="197"/>
       <source>60</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">60</translation>
+      <translation>60</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="198"/>
       <source>80</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">80</translation>
+      <translation>80</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="199"/>
       <source>-ise suffixes</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">-ise suffixes</translation>
+      <translation>-ise suffikser</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="200"/>
       <source>-ize suffixes</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">-ize suffixes</translation>
+      <translation>-ize suffikser</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="201"/>
       <source>-ise suffixes and with accents</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">-ise suffixes and with accents</translation>
+      <translation>-ise suffikser og med aksenter</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="203"/>
       <source>-ise suffixes and without accents</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">-ise suffixes and without accents</translation>
+      <translation>-ize suffikser og uten aksenter</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="206"/>
       <source>-ize suffixes and with accents</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">-ize suffixes and with accents</translation>
+      <translation>-ize suffikser og med aksenter</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="208"/>
       <source>-ize suffixes and without accents</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">-ize suffixes and without accents</translation>
+      <translation>-ize suffikser og uten aksenter</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="211"/>
       <source>large</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">large</translation>
+      <translation>stor</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="212"/>
       <source>medium</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">medium</translation>
+      <translation>middels</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="213"/>
       <source>small</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">small</translation>
+      <translation>liten</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="214"/>
       <source>variant 0</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">variant 0</translation>
+      <translation>variant 0</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="215"/>
       <source>variant 1</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">variant 1</translation>
+      <translation>variant 1</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="216"/>
       <source>variant 2</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">variant 2</translation>
+      <translation>variant 2</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="218"/>
       <source>without accents</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">without accents</translation>
+      <translation>uten aksenter</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="219"/>
       <source>with accents</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">with accents</translation>
+      <translation>med aksenter</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="221"/>
       <source>with ye, modern russian</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">with ye, modern russian</translation>
+      <translation>med ye, moderne russisk</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="223"/>
       <source>with yeyo, modern and old russian</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">with yeyo, modern and old russian</translation>
+      <translation>med yeyo, moderne og gammel russisk</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="226"/>
       <source>with yo, old russian</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">with yo, old russian</translation>
+      <translation>med yo, gammel russisk</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="227"/>
       <source>extended</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">extended</translation>
+      <translation>forlenget</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="262"/>
       <source>%1 (%2) [%3]</source>
       <comment>dictionary name; %1 = language name, %2 = country name and %3 = language variant name</comment>
-      <translation type="unfinished">%1 (%2) [%3]</translation>
+      <translation>%1 (%2) [%3]</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="265"/>
       <source>%1 (%2)</source>
       <comment>dictionary name; %1 = language name, %2 = country name</comment>
-      <translation type="unfinished">%1 (%2)</translation>
+      <translation>%1 (%2)</translation>
     </message>
   </context>
   <context>
