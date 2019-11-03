@@ -4074,6 +4074,9 @@ void MainWindow::createNewNote(QString name, QString text,
     // check if to append the text or replace the text of the note
     if (useNameAsHeadline) {
         QTextCursor c = ui->noteTextEdit->textCursor();
+        // make sure the cursor is really at the end to be able to
+        // insert the text on the correct position
+        c.movePosition(QTextCursor::End, QTextCursor::MoveAnchor);
         c.insertText(QStringLiteral("\n\n") + text);
         ui->noteTextEdit->setTextCursor(c);
     } else {
