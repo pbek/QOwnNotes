@@ -1,12 +1,12 @@
 # QOwnNotes Changelog
 
 ## 19.11.3
+- fixed wrong note text insertion from the web companion and other parts of the
+  application if the `=` headline markings were breaking into the next line in
+  the note text edit (for [#1351](https://github.com/pbek/QOwnNotes/issues/1351))
+- fixed many optimization regressions from [7848f4de14fd152be8a8ffc7c8d97f8f37d1a431](https://github.com/pbek/QOwnNotes/commit/7848f4de14fd152be8a8ffc7c8d97f8f37d1a431)
 - attempted to fix inclusion of spellchecker dictionaries for Snap package
   (for [#1348](https://github.com/pbek/QOwnNotes/issues/1348), thank you @Waqar144)
-- attempted to fix wrong note insertion from the web companion if the `=` headline
-  markings were breaking into the next line in the note text edit
-  (for [#1351](https://github.com/pbek/QOwnNotes/issues/1351))
-- fixed many optimization regressions from [7848f4de14fd152be8a8ffc7c8d97f8f37d1a431](https://github.com/pbek/QOwnNotes/commit/7848f4de14fd152be8a8ffc7c8d97f8f37d1a431)
 
 ## 19.11.2
 - spellchecking is now enabled in formatted markdown (for [#125](https://github.com/pbek/QOwnNotes/issues/125), thank you @Waqar144)
