@@ -7,6 +7,8 @@
   (for [#1353](https://github.com/pbek/QOwnNotes/issues/1353), thank you @Waqar144)
 - added `~/hunspell` as path for spellchecker dictionaries for Snap package
   (for [#1348](https://github.com/pbek/QOwnNotes/issues/1348))
+- when creating a new note folder now by default the local path of the active
+  note folder will be used (for [#1354](https://github.com/pbek/QOwnNotes/issues/1354))
 - added more Cebuano, German translation (thank you Fabijenna, rakekniven)
 
 ## 19.11.3

@@ -2277,11 +2277,11 @@ void SettingsDialog::on_noteFolderListWidget_currentItemChanged(
 
 void SettingsDialog::on_noteFolderAddButton_clicked() {
     const int cloudConnectionId = _selectedNoteFolder.getCloudConnectionId();
+    const QString currentPath = _selectedNoteFolder.getLocalPath();
 
     _selectedNoteFolder = NoteFolder();
     _selectedNoteFolder.setName(tr("new folder"));
-    _selectedNoteFolder.setLocalPath(
-            Utils::Misc::defaultNotesPath());
+    _selectedNoteFolder.setLocalPath(currentPath);
     _selectedNoteFolder.setPriority(ui->noteFolderListWidget->count());
     _selectedNoteFolder.setCloudConnectionId(cloudConnectionId);
     _selectedNoteFolder.suggestRemotePath();
