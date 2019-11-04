@@ -65,11 +65,13 @@ HunspellClient::HunspellClient(QObject *parent)
     maybeAddPath(QStringLiteral("/usr/share/myspell/"));
     maybeAddPath(QStringLiteral("~/.local/share/hunspell/"));
     maybeAddPath(QStringLiteral("~/.local/share/myspell/"));
-    //for snap packages
-    QString snapDictPath = QDir::homePath() + QStringLiteral("/.local/share/hunspell/");
-    snapDictPath.remove(QRegularExpression(R"(snap\/qownnotes\/\w\d+\/)"));
 
+    // for snap packages
+    // note that ~/.local is not readable for snaps
+    QString snapDictPath = QDir::homePath() + QStringLiteral("/hunspell/");
+    snapDictPath.remove(QRegularExpression(R"(snap\/qownnotes\/\w\d+\/)"));
     maybeAddPath(snapDictPath);
+
     //Waqar: enable this one only if we use hunspell for mac
     //maybeAddPath(QStringLiteral("/System/Library/Spelling"));
 #endif

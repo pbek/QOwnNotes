@@ -5,6 +5,8 @@
   (for [#1355](https://github.com/pbek/QOwnNotes/issues/1355), thank you @Waqar144)
 - fixed a possible crash when right-clicking on the note list
   (for [#1353](https://github.com/pbek/QOwnNotes/issues/1353), thank you @Waqar144)
+- added `~/hunspell` as path for spellchecker dictionaries for Snap package
+  (for [#1348](https://github.com/pbek/QOwnNotes/issues/1348))
 
 ## 19.11.3
 - fixed wrong note text insertion from the web companion and other parts of the
