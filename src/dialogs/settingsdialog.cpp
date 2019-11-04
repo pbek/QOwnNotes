@@ -2288,8 +2288,7 @@ void SettingsDialog::on_noteFolderAddButton_clicked() {
     _selectedNoteFolder.store();
 
     if (_selectedNoteFolder.isFetched()) {
-        QListWidgetItem *item =
-                new QListWidgetItem(_selectedNoteFolder.getName());
+        auto *item = new QListWidgetItem(_selectedNoteFolder.getName());
         item->setData(Qt::UserRole, _selectedNoteFolder.getId());
         ui->noteFolderListWidget->addItem(item);
 
