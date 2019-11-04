@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 19.11.4
+- fixed the default text edit context menu for the spellchecker
+  (for [#1355](https://github.com/pbek/QOwnNotes/issues/1355), thank you @Waqar144)
+- fixed a possible crash when right-clicking on the note list
+  (for [#1353](https://github.com/pbek/QOwnNotes/issues/1353), thank you @Waqar144)
+
 ## 19.11.3
 - fixed wrong note text insertion from the web companion and other parts of the
   application if the `=` headline markings were breaking into the next line in
