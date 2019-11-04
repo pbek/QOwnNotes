@@ -2477,7 +2477,7 @@ void MainWindow::updateTreeWidgetItemHeight(QTreeWidget *treeWidget,
 
     // remove the old height stylesheet
     styleText.remove(QRegularExpression(
-            QStringLiteral("QTreeWidget::item \\{height: \\d+px\\}"),
+            QStringLiteral("\nQTreeWidget::item \\{height: \\d+px\\}"),
             QRegularExpression::CaseInsensitiveOption));
 
     // add the new height stylesheet
