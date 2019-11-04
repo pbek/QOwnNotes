@@ -7,6 +7,7 @@
   (for [#1353](https://github.com/pbek/QOwnNotes/issues/1353), thank you @Waqar144)
 - added `~/hunspell` as path for spellchecker dictionaries for Snap package
   (for [#1348](https://github.com/pbek/QOwnNotes/issues/1348))
+- added more Cebuano, German translation (thank you Fabijenna, rakekniven)
 
 ## 19.11.3
 - fixed wrong note text insertion from the web companion and other parts of the

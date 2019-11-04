@@ -2125,8 +2125,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4211"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
-      <translation type="unfinished">
-        <numerusform>Kuhaa ang &lt;strong&gt;%n&lt;/strong&gt; gipili nga tag(s)? Walay notes nga tang-tangon sa kani nga proseso.</numerusform>
+      <translation>
+        <numerusform>Kuhaa ang &lt;strong&gt;%n&lt;/strong&gt; gipili nga tag? Walay notes nga tang-tangon sa kani nga proseso.</numerusform>
         <numerusform>Kuhaa ang &lt;strong&gt;%n&lt;/strong&gt; gipili nga tags? Walay notes nga tang-tangon sa kani nga proseso.</numerusform>
       </translation>
     </message>
