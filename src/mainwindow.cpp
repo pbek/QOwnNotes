@@ -11384,6 +11384,7 @@ void MainWindow::loadDictionaryNames() {
         }
     }
     connect(languageGroup, SIGNAL(triggered(QAction*)), this, SLOT(onLanguageChanged(QAction*)));
+    delete speller;
 }
 
 void MainWindow::onLanguageChanged(QAction *action) {
