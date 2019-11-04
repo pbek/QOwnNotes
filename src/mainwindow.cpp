@@ -9361,7 +9361,10 @@ void MainWindow::on_noteTreeWidget_customContextMenuRequested(
     auto *item = ui->noteTreeWidget->itemAt(pos);
     QPoint globalPos = ui->noteTreeWidget->mapToGlobal(pos);
 
-    if (item->data(0, Qt::UserRole + 1).toInt() == NoteType) {
+    //if the user clicks at empty space, this is null and if it isn't handled QON crashes
+    if (item == nullptr) {
+        openNoteSubFolderContextMenu(globalPos, ui->noteTreeWidget);
+    } else if (item->data(0, Qt::UserRole + 1).toInt() == NoteType) {
         openNotesContextMenu(globalPos);
     } else {
         openNoteSubFolderContextMenu(globalPos, ui->noteTreeWidget);
