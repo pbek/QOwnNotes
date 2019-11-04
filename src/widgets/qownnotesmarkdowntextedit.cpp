@@ -420,9 +420,10 @@ void QOwnNotesMarkdownTextEdit::highlightCurrentLine()
 
 bool QOwnNotesMarkdownTextEdit::onContextMenuEvent(QContextMenuEvent *event) {
     //obtain the cursor at current mouse position
-    QTextCursor cursor = cursorForPosition(event->pos());
-    const int mousePos = cursor.position();
+    QTextCursor cursorAtMouse = cursorForPosition(event->pos());
+    const int mousePos = cursorAtMouse.position();
 
+    QTextCursor cursor = textCursor();
     // Check if the user clicked a selected word
     const bool selectedWordClicked = cursor.hasSelection()
                                      && mousePos >= cursor.selectionStart()
@@ -430,7 +431,7 @@ bool QOwnNotesMarkdownTextEdit::onContextMenuEvent(QContextMenuEvent *event) {
 
     // Get the word under the (mouse-)cursor and see if it is misspelled.
     // Don't include apostrophes at the start/end of the word in the selection.
-    QTextCursor wordSelectCursor(cursor);
+    QTextCursor wordSelectCursor(cursorAtMouse);
     wordSelectCursor.clearSelection();
     wordSelectCursor.select(QTextCursor::WordUnderCursor);
     QString selectedWord = wordSelectCursor.selectedText();
@@ -461,18 +462,18 @@ bool QOwnNotesMarkdownTextEdit::onContextMenuEvent(QContextMenuEvent *event) {
                                   && !selectedWord.isEmpty()
                                   && spellchecker->isWordMisspelled(selectedWord);
 
-    // If the user clicked a selected word, do nothing.
-    // If the user clicked somewhere else, move the cursor there.
-    // If the user clicked on a misspelled word, select that word.
     if (!selectedWordClicked) {
+        // If the user clicked on a misspelled word, select that word.
         if (wordIsMisspelled) {
                 setTextCursor(wordSelectCursor);
         }
+        // If the user clicked somewhere else, move the cursor there.
         else {
-            setTextCursor(cursor);
+            setTextCursor(cursorAtMouse);
         }
+        cursor = textCursor();
     }
-    cursor = textCursor();
+
     // Use standard context menu for already selected words, correctly spelled
     // words and words inside quotes.
     if (!wordIsMisspelled || selectedWordClicked) {
