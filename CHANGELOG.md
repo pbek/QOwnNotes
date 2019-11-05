@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 19.11.5
+- fixed some memory leaks (for [#1360](https://github.com/pbek/QOwnNotes/issues/1360), thank you @Waqar144)
+- fixed the right click context menu in the note list if the folder has no notes
+  (for [#1361](https://github.com/pbek/QOwnNotes/issues/1361), thank you @Waqar144)
+- did highlighting speed improvements (for [#1362](https://github.com/pbek/QOwnNotes/issues/1362), thank you @Waqar144)
+- did spellchecking speed improvements (for [#1363](https://github.com/pbek/QOwnNotes/issues/1363), thank you @Waqar144)
+- improved initial note loading performance (for [#1365](https://github.com/pbek/QOwnNotes/issues/1365), thank you @Waqar144)
+
 ## 19.11.4
 - fixed the default text edit context menu for the spellchecker
   (for [#1355](https://github.com/pbek/QOwnNotes/issues/1355), thank you @Waqar144)
