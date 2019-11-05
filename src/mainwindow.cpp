@@ -3990,6 +3990,8 @@ int MainWindow::getMaxImageWidth()
 void MainWindow::setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly,
                                      bool ignorePreviewVisibility) {
     if (!updateNoteTextViewOnly) {
+        dynamic_cast<QOwnNotesMarkdownHighlighter*>(
+                    ui->noteTextEdit->highlighter())->updateCurrentNote();
         ui->noteTextEdit->setText(note->getNoteText());
     }
 

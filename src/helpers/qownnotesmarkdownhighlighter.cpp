@@ -50,8 +50,12 @@ QOwnNotesMarkdownHighlighter::~QOwnNotesMarkdownHighlighter()
     delete wordTokenizer;
 }
 
-void QOwnNotesMarkdownHighlighter::updateCurrentNote() {
-    _currentNote = Note::fetch(qApp->property("currentNoteId").toInt());
+void QOwnNotesMarkdownHighlighter::updateCurrentNote(Note *_note) {
+    if (_note == nullptr) {
+        _currentNote = Note::fetch(qApp->property("currentNoteId").toInt());
+    } else {
+        _currentNote = *_note;
+    }
 }
 
 static bool hasNotEmptyText(const QString &text)
@@ -71,7 +75,7 @@ static bool hasNotEmptyText(const QString &text)
  * @param text
  */
 void QOwnNotesMarkdownHighlighter::highlightBlock(const QString &text) {
-    updateCurrentNote();
+    //updateCurrentNote();
     setCurrentBlockState(HighlighterState::NoState);
     currentBlock().setUserState(HighlighterState::NoState);
 
