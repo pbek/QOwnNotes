@@ -5,6 +5,7 @@ Spellchecking
    is used for spellchecking
 -  Under **Linux** you need to install the Hunspell dictionaries for your language
     - If you need to add additional language files you can do so in ``~/.local/share/hunspell``
+    - If you are using the Snap package of QOwnNotes you can also use ``~/hunspell`` for language files, since the Snap can't access ``~/.local``
 -  Under **Windows** you need to copy Hunspell dictionaries for your language to
    a folder ``dicts`` in your QOwnNotes application folder or in ``C:\Users\[username]\dicts``
   -  You can download dictionaries from `LibreOffice
