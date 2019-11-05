@@ -262,12 +262,17 @@ QMenu::item
     border: 1px solid transparent; /* reserve space for selection border */
 }
 
-/* #1221 icon-text-overlap fix for checkboxes and radio groups */
+/* icon-text-overlap fix for checkboxes and radio groups */
+/* see: https://github.com/pbek/QOwnNotes/issues/1221 */
 /* also see: https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qmenu */
-QMenu::item::non-exclusive, QMenu::item::exclusive
-{
-    padding-left: 48px;
-    margin-left: 10px;
+QMenu::icon:checked {
+    background: gray;
+    border: 1px inset gray;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    left: 1px;
 }
 
 QMenu::item:selected
