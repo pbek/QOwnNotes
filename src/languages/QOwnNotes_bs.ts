@@ -2135,7 +2135,7 @@ Ako je smeće omogućeno na vašem ownCloud poslužitelju, trebali biste ih moć
     <message>
       <location filename="../mainwindow.cpp" line="4191"/>
       <source>Removed note subfolder: %1</source>
-      <translation type="unfinished">Removed note subfolder: %1</translation>
+      <translation>Uklonjena podmapa bilješke: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4210"/>
@@ -2464,12 +2464,12 @@ Ako je smeće omogućeno na vašem ownCloud poslužitelju, trebali biste ih moć
     <message>
       <location filename="../mainwindow.cpp" line="9359"/>
       <source>&amp;Move notes to…</source>
-      <translation type="unfinished">&amp;Move notes to…</translation>
+      <translation>&amp;Premjesti bilješke u…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9360"/>
       <source>&amp;Copy notes to…</source>
-      <translation type="unfinished">&amp;Copy notes to…</translation>
+      <translation>&amp;Kopirajte bilješke u…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9395"/>
@@ -2862,12 +2862,12 @@ Ako je smeće omogućeno na vašem ownCloud poslužitelju, trebali biste ih moć
     <message>
       <location filename="../mainwindow.cpp" line="9351"/>
       <source>&amp;Remove notes</source>
-      <translation type="unfinished">&amp;Remove notes</translation>
+      <translation>&amp;Uklonite bilješke</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5991"/>
       <source>&amp;Link selected text</source>
-      <translation type="unfinished">&amp;Link selected text</translation>
+      <translation>&amp;Povežite odabrani tekst</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="972"/>

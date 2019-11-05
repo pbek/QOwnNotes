@@ -10,6 +10,7 @@
 - fixed some memory leaks (for [#1360](https://github.com/pbek/QOwnNotes/pull/1360), thank you @Waqar144)
 - fixed the right click context menu in the note list if the folder has no notes
   (for [#1361](https://github.com/pbek/QOwnNotes/issues/1361), thank you @Waqar144)
+- added more Danish, Bosnian, Icelandic translation (thank you Fabijenna)
 
 ## 19.11.4
 - fixed the default text edit context menu for the spellchecker

@@ -1025,9 +1025,9 @@
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="265"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</source>
-      <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; athugasemd var fjarlægð</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; athugasemdum fjarlægðir</numerusform>
       </translation>
     </message>
   </context>
@@ -2029,9 +2029,9 @@ Endurheimta núverandi athugasemd?</translation>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3184"/>
       <source>Removed %n conflicted database copies</source>
-      <translation type="unfinished">
-        <numerusform>Removed %n conflicted database copies</numerusform>
-        <numerusform>Removed %n conflicted database copies</numerusform>
+      <translation>
+        <numerusform>Fjarlægt %n afrit af gagnagrunni eytt</numerusform>
+        <numerusform>Fjarlægði %n afrit af gagnagrunni</numerusform>
       </translation>
     </message>
     <message>
@@ -2144,9 +2144,9 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4266"/>
       <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
-        <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>Færa %n valinn glósu í &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
+        <numerusform>Færa %n valda glósur í &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
@@ -2158,9 +2158,9 @@ Ef ruslið er virkt á þinn eiginCloud netþjón skaltu vera fær um að endurh
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4367"/>
       <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
-        <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>Afritaðu %n valinn glósu í &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
+        <numerusform>Afritaðu %n valda minnispunkta til &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
