@@ -49,6 +49,10 @@ public:
     ~QOwnNotesMarkdownHighlighter() Q_DECL_OVERRIDE;
 
     void updateCurrentNote(Note *_note = nullptr);
+    void setCommentHighlighting(bool);
+    void setCodeHighlighting(bool);
+    void setFrontmatterHighlighting(bool);
+    void sethighlightBrokenNotesLink(bool);
 
 protected:
     void highlightBlock(const QString &text) Q_DECL_OVERRIDE;
@@ -63,6 +67,10 @@ protected:
 
 private:
     Note _currentNote;
+    bool commentHighlightingOn;
+    bool codeHighlightingOn;
+    bool frontMatterHighlightingOn;
+    bool highlightBrokenNotesLinkOn;
     QOwnSpellChecker *spellchecker;
 
     Sonnet::LanguageFilter *languageFilter;
