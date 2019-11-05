@@ -63,6 +63,7 @@ You can visit the [QOwnNotes project page](https://www.qownnotes.org) for more *
 - external changes of note files are watched (notes or note list are reloaded)
 - differences between current note and externally changed note are shown in a dialog
 - **markdown highlighting** of notes and a markdown **preview**
+- **[spellchecking](https://docs.qownnotes.org/en/develop/spellchecking.html)** support
 - scripting support and an online [script repository](https://github.com/qownnotes/scripts)
   where you can install scripts inside the application
 - [QOwnNotes Web Companion browser extension](https://github.com/qownnotes/web-companion)
