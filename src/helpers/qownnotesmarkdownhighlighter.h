@@ -48,6 +48,8 @@ public:
                                  HighlightingOption::None);
     ~QOwnNotesMarkdownHighlighter() Q_DECL_OVERRIDE;
 
+    void updateCurrentNote(Note *_note = nullptr);
+
 protected:
     void highlightBlock(const QString &text) Q_DECL_OVERRIDE;
     void highlightMarkdown(const QString& text);
@@ -61,7 +63,6 @@ protected:
 
 private:
     Note _currentNote;
-    void updateCurrentNote();
     QOwnSpellChecker *spellchecker;
 
     Sonnet::LanguageFilter *languageFilter;
