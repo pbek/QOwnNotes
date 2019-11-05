@@ -9743,9 +9743,9 @@ void MainWindow::on_noteSubFolderTreeWidget_itemCollapsed(
 void MainWindow::openNoteSubFolderContextMenu(
         const QPoint &globalPos, QTreeWidget *treeWidget) {
     // don't open the context menu if no subfolders are selected
-    if (treeWidget->selectedItems().count() == 0) {
-        return;
-    }
+ //   if (treeWidget->selectedItems().count() == 0) {
+   //     return;
+   // }
 
     QMenu menu;
     QAction *newNoteAction = menu.addAction(tr("New note"));
