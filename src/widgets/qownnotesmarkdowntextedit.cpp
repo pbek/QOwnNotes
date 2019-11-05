@@ -323,7 +323,7 @@ void QOwnNotesMarkdownTextEdit::setText(const QString &text) {
 
     //check for front matter
     if (h->document()->firstBlock().text() != "---") {
-
+        h->setFrontmatterHighlighting(false);
     }
 
     //check for broken links
