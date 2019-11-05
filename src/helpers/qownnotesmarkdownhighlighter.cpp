@@ -42,6 +42,11 @@ QOwnNotesMarkdownHighlighter::QOwnNotesMarkdownHighlighter(
     languageFilter = new Sonnet::LanguageFilter(new Sonnet::SentenceTokenizer());
     wordTokenizer = new Sonnet::WordTokenizer();
     codeBlock = 0; // for ```
+
+    commentHighlightingOn = true;
+    codeHighlightingOn = true;
+    frontMatterHighlightingOn = true;
+    highlightBrokenNotesLinkOn = true;
 }
 
 QOwnNotesMarkdownHighlighter::~QOwnNotesMarkdownHighlighter()
@@ -56,6 +61,38 @@ void QOwnNotesMarkdownHighlighter::updateCurrentNote(Note *_note) {
     } else {
         _currentNote = *_note;
     }
+}
+
+void QOwnNotesMarkdownHighlighter::setCommentHighlighting(bool state)
+{
+    if (state == commentHighlightingOn){
+        return;
+    }
+    commentHighlightingOn = state;
+}
+
+void QOwnNotesMarkdownHighlighter::setCodeHighlighting(bool state)
+{
+    if (state == codeHighlightingOn){
+        return;
+    }
+    codeHighlightingOn = state;
+}
+
+void QOwnNotesMarkdownHighlighter::setFrontmatterHighlighting(bool state)
+{
+    if (state == frontMatterHighlightingOn){
+        return;
+    }
+    frontMatterHighlightingOn = state;
+}
+
+void QOwnNotesMarkdownHighlighter::sethighlightBrokenNotesLink(bool state)
+{
+    if (state == highlightBrokenNotesLinkOn){
+        return;
+    }
+    highlightBrokenNotesLinkOn = state;
 }
 
 static bool hasNotEmptyText(const QString &text)
@@ -85,7 +122,7 @@ void QOwnNotesMarkdownHighlighter::highlightBlock(const QString &text) {
 
     // skip spell checking empty blocks and blocks with just "spaces"
     // the rest of the highlighting needs to be done e.g. for code blocks with empty lines
-    if (!(text.isEmpty() || text.isNull() || !hasNotEmptyText(text)) &&
+    if (!(text.isEmpty() || text.isNull()) &&
         spellchecker->isActive()) {
         highlightSpellChecking(text);
     }
@@ -103,12 +140,20 @@ void QOwnNotesMarkdownHighlighter::highlightMarkdown(const QString& text) {
         highlightAdditionalRules(_highlightingRulesAfter, text);
 
         // highlight broken note links
-        highlightBrokenNotesLink(text);
+        if (highlightBrokenNotesLinkOn) {
+            highlightBrokenNotesLink(text);
+        }
     }
 
-    highlightCommentBlock(text);
-    highlightCodeBlock(text);
-    highlightFrontmatterBlock(text);
+    if (commentHighlightingOn) {
+        highlightCommentBlock(text);
+    }
+    if (codeHighlightingOn) {
+        highlightCodeBlock(text);
+    }
+    if (frontMatterHighlightingOn) {
+        highlightFrontmatterBlock(text);
+    }
 }
 
 /**
