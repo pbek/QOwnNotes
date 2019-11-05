@@ -1090,7 +1090,7 @@ void SettingsDialog::readSettings() {
             "systemIconTheme").toBool());
 
     // toggle the dark mode colors check box with the dark mode checkbox
-    on_darkModeCheckBox_toggled();
+    handleDarkModeCheckBoxToggled();
 
     noteTextEditFont.fromString(
             settings.value("MainWindow/noteTextEdit.font").toString());
@@ -3031,16 +3031,20 @@ void SettingsDialog::on_defaultNoteFileExtensionListWidget_currentRowChanged(
     ui->removeCustomNoteFileExtensionButton->setEnabled(currentRow > 1);
 }
 
+void SettingsDialog::on_darkModeCheckBox_toggled() {
+    handleDarkModeCheckBoxToggled(true);
+}
+
 /**
  * Toggles the dark mode colors check box with the dark mode checkbox
  */
-void SettingsDialog::on_darkModeCheckBox_toggled() {
+void SettingsDialog::handleDarkModeCheckBoxToggled(bool updateCheckBoxes) {
     bool checked = ui->darkModeCheckBox->isChecked();
 
     ui->darkModeColorsCheckBox->setEnabled(!checked);
     ui->darkModeInfoLabel->setVisible(checked);
 
-    if (checked) {
+    if (checked && updateCheckBoxes) {
         ui->darkModeColorsCheckBox->setChecked(true);
         ui->darkModeIconThemeCheckBox->setChecked(true);
     }

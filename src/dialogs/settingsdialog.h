@@ -381,6 +381,8 @@ private:
     void storeOwncloudDebugData() const;
 
     void initCloudConnectionComboBox(int selectedId = -1);
+
+    void handleDarkModeCheckBoxToggled(bool updateCheckBoxes = false);
 };
 
 #endif // SETTINGSDIALOG_H

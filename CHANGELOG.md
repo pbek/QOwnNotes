@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 19.11.5
+- fixed a problem with automatic setting of the dark mode color and dark mode
+  icon theme checkboxes in dark mode
 - fixed a problem where you can't see see a checked state of menu items in dark mode
   if the menu item has an icon (for [#1221](https://github.com/pbek/QOwnNotes/issues/1221))
 - fixed some memory leaks (for [#1360](https://github.com/pbek/QOwnNotes/issues/1360), thank you @Waqar144)
