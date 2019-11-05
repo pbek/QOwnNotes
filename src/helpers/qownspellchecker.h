@@ -128,6 +128,7 @@ private:
     Sonnet::Speller *spellchecker;
     bool active;
     bool autoDetect;
+    QString language;
 
 signals:
     void activeChanged(bool state);
