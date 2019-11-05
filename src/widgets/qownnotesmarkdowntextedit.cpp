@@ -357,6 +357,7 @@ void QOwnNotesMarkdownTextEdit::setText(const QString &text) {
     //after we are done we turn everything back on
     h->setCodeHighlighting(true);
     h->setCommentHighlighting(true);
+    h->setFrontmatterHighlighting(true);
     h->sethighlightBrokenNotesLink(true);
 }
 
