@@ -3991,7 +3991,7 @@ void MainWindow::setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly,
                                      bool ignorePreviewVisibility) {
     if (!updateNoteTextViewOnly) {
         dynamic_cast<QOwnNotesMarkdownHighlighter*>(
-                    ui->noteTextEdit->highlighter())->updateCurrentNote();
+                    ui->noteTextEdit->highlighter())->updateCurrentNote(note);
         ui->noteTextEdit->setText(note->getNoteText());
     }
 
