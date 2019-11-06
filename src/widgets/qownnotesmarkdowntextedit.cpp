@@ -309,6 +309,13 @@ QMargins QOwnNotesMarkdownTextEdit::viewportMargins() {
 }
 
 void QOwnNotesMarkdownTextEdit::setText(const QString &text) {
+    QSettings settings;
+    bool highlightingEnabled = settings.value(QStringLiteral("markdownHighlightingEnabled"),
+                                              true).toBool();
+    if (!highlightingEnabled) {
+        QMarkdownTextEdit::setText(text);
+        return;
+    }
     QOwnNotesMarkdownHighlighter *h = dynamic_cast<QOwnNotesMarkdownHighlighter*>(_highlighter);
 
     //check for comment block
