@@ -21,7 +21,10 @@
 #include "nsspellcheckerdict.h"
 #include "nsspellcheckerdebug.h"
 
-#import <AppKit/AppKit.h>
+#import <AppKit/NSSpellChecker.h>
+#import <Foundation/NSArray.h>
+#import <Foundation/NSAutoreleasePool.h>
+#import <Foundation/NSString.h>
 
 using namespace Sonnet;
 
