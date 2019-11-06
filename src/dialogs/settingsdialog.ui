@@ -2389,6 +2389,28 @@
                        </item>
                        <item>
                         <property name="text">
+                         <string notr="true">Kurdî</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Kurdish</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">ku</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string notr="true">lietuvių kalba</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Lithuanian</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">lt</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
                          <string notr="true">македонски јазик</string>
                         </property>
                         <property name="toolTip">

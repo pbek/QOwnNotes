@@ -5,6 +5,10 @@
   (for [#1367](https://github.com/pbek/QOwnNotes/issues/1367), thank you @Waqar144)
 - attempted to improve macOS spellchecker performance
   (for [#1359](https://github.com/pbek/QOwnNotes/issues/1359), thank you @Waqar144)
+- added **Kurdish** and **Lithuanian translation** (a big thank you to Fabijenna)
+  - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes)
+    to make QOwnNotes available in more languages or help with the current
+    translation
 
 ## 19.11.5
 - fixed a problem with automatic setting of the dark mode color and dark mode
