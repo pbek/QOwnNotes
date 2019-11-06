@@ -46,12 +46,23 @@ SpellerPlugin *NSSpellCheckerClient::createSpeller(const QString &language)
 
 QStringList NSSpellCheckerClient::languages() const
 {
+    NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
+
     QStringList lst;
     NSArray* availableLanguages = [[NSSpellChecker sharedSpellChecker]
                                    availableLanguages];
-    for (NSString* lang_code in availableLanguages) {
-        lst.append(QString::fromNSString(lang_code));
+
+//    for (NSString* lang_code in availableLanguages) {
+//        lst.append(QString::fromNSString(lang_code));
+//    }
+
+    if (availableLanguages) {
+        for (unsigned int i = 0; i < [availableLanguages count]; ++i) {
+            lst += QString::fromUtf8([[availableLanguages objectAtIndex: i] UTF8String]);
+        }
     }
+
+    [pool release];
     return lst;
 }
 
