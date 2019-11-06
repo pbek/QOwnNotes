@@ -23,6 +23,8 @@
 
 #include "spellerplugin_p.h"
 
+#import <Foundation/Foundation.h>
+
 class NSSpellCheckerDict : public Sonnet::SpellerPlugin
 {
 public:
