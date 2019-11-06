@@ -27,9 +27,12 @@ QOwnSpellChecker::QOwnSpellChecker(QObject *parent) : QObject(parent) {
     } else {
         autoDetect = false;
     }
+
 #ifdef Q_OS_MACOS
-    QString s = spellchecker->availableLanguages().at(0);
-    spellchecker->setDefaultLanguage(s);
+    QStringList s = spellchecker->availableLanguages();
+    if (!s.contains(spellchecker->defaultLanguage())) {
+        spellchecker->setDefaultLanguage(spellchecker->availableLanguages().at(0));
+    }
 #endif
 }
 
