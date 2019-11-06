@@ -39,6 +39,7 @@ public:
 private:
 #ifdef __OBJC__
     NSString *m_langCode;
+    NSInteger m_tag;
 #else
     void *m_langCode;
 #endif
