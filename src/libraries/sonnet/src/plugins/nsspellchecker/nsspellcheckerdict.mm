@@ -30,7 +30,6 @@ using namespace Sonnet;
 
 NSSpellCheckerDict::NSSpellCheckerDict(const QString &lang)
     : SpellerPlugin(lang)
-    , m_langCode([lang.toNSString() retain])
 {
 
 	m_langCode = [[NSString alloc] initWithCharacters:reinterpret_cast<const unichar*>(lang.unicode()) length:lang.length()];
@@ -87,44 +86,41 @@ bool NSSpellCheckerDict::isCorrect(const QString &word) const
         }
     }
 */
-
-	if (range.length == 0) {
+    if (range.length == 0) {
         [pool release];
         return true;
-	}
-	
-	[pool release];
+    }
+    
+    [pool release];
     return false;
 }
 
 QStringList NSSpellCheckerDict::suggest(const QString &word) const
 {
-	NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
+    NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
 
     NSString *nsWord = [NSString stringWithCharacters:reinterpret_cast<const unichar*>(word.unicode()) length:word.length()];
     //NSString *nsWord = word.toNSString();
-    NSSpellChecker *checker = [NSSpellChecker sharedSpellChecker];
-    NSArray *suggestions = [checker guessesForWordRange:NSMakeRange(0, word.length())
-        inString:nsWord language:m_langCode inSpellDocumentWithTag:0];
+    //NSSpellChecker *checker = [NSSpellChecker sharedSpellChecker];
+    NSRange range;
+    range.location = 0;
+    range.length = word.length();
+    
+    NSArray *suggestions = [[NSSpellChecker sharedSpellChecker] guessesForWordRange:range
+                        inString:nsWord
+                        language:m_langCode
+                        inSpellDocumentWithTag:m_tag];
         
     QStringList lst;
-    NSDictionary *replacements = [checker userReplacementsDictionary];
-    QString replacement;
-    if ([replacements objectForKey:nsWord]) {
-        // return the replacement text from the userReplacementsDictionary first.
-        replacement = QString::fromNSString([replacements valueForKey:nsWord]);
-        lst << replacement;
-    }
-    for (NSString *suggestion in suggestions) {
-        // the replacement text from the userReplacementsDictionary will be in
-        // the suggestions list; don't add it again.
-        QString str = QString::fromNSString(suggestion);
-        if (str != replacement) {
-            lst << str;
+
+    if (suggestions) {
+        for (unsigned int i = 0; i < [suggestions count]; ++i) {
+            nsWord = [suggestions objectAtIndex: i];
+            lst += QString::fromUtf8([nsWord UTF8String]);
         }
     }
     
-	[pool release];
+    [pool release];
     return lst;
 }
 
@@ -137,11 +133,11 @@ bool NSSpellCheckerDict::storeReplacement(const QString &bad,
 
 bool NSSpellCheckerDict::addToPersonal(const QString &word)
 {
-    NSString *nsWord = word.toNSString();
-    NSSpellChecker *checker = [NSSpellChecker sharedSpellChecker];
-    if (![checker hasLearnedWord:nsWord]) {
-        [checker learnWord:nsWord];
-        [checker updatePanels];
+    NSString *nsWord = [NSString stringWithCharacters:reinterpret_cast<const unichar*>(word.unicode()) length:word.length()];
+    //NSSpellChecker *checker = [NSSpellChecker sharedSpellChecker];
+    if (![[NSSpellChecker sharedSpellChecker] hasLearnedWord:nsWord]) {
+        [[NSSpellChecker sharedSpellChecker] learnWord:nsWord];
+        [[NSSpellChecker sharedSpellChecker] updatePanels];
     }
     return true;
 }
