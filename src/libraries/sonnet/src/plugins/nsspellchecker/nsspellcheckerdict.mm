@@ -21,7 +21,10 @@
 #include "nsspellcheckerdict.h"
 #include "nsspellcheckerdebug.h"
 
-#import <AppKit/AppKit.h>
+#import <AppKit/NSSpellChecker.h>
+#import <Foundation/NSArray.h>
+#import <Foundation/NSAutoreleasePool.h>
+#import <Foundation/NSString.h>
 
 using namespace Sonnet;
 
@@ -29,10 +32,15 @@ NSSpellCheckerDict::NSSpellCheckerDict(const QString &lang)
     : SpellerPlugin(lang)
     , m_langCode([lang.toNSString() retain])
 {
-    NSSpellChecker *checker = [NSSpellChecker sharedSpellChecker];
-    if ([checker setLanguage:m_langCode]) {
+
+	m_langCode = [[NSString alloc] initWithCharacters:reinterpret_cast<const unichar*>(lang.unicode()) length:lang.length()];
+    
+    m_tag = [NSSpellChecker uniqueSpellDocumentTag];
+    
+    //NSSpellChecker *checker = [NSSpellChecker sharedSpellChecker];
+    if ([[NSSpellChecker sharedSpellChecker] setLanguage:m_langCode]) {
         qCDebug(SONNET_NSSPELLCHECKER) << "Loading dictionary for" << lang;
-        [checker updatePanels];
+        [[NSSpellChecker sharedSpellChecker] updatePanels];
     } else {
         qCWarning(SONNET_NSSPELLCHECKER) << "Loading dictionary for unsupported language" << lang;
     }
@@ -40,16 +48,34 @@ NSSpellCheckerDict::NSSpellCheckerDict(const QString &lang)
 
 NSSpellCheckerDict::~NSSpellCheckerDict()
 {
-    [m_langCode release];
+	NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
+
+	[m_langCode release];
+	
+	[[NSSpellChecker sharedSpellChecker] closeSpellDocumentWithTag:m_tag];
+
+	[pool release];
+    //[m_langCode release];
 }
 
 bool NSSpellCheckerDict::isCorrect(const QString &word) const
 {
-    NSString *nsWord = word.toNSString();
-    NSSpellChecker *checker = [NSSpellChecker sharedSpellChecker];
-    NSRange range = [checker checkSpellingOfString:nsWord
-        startingAt:0 language:m_langCode
-        wrap:NO inSpellDocumentWithTag:0 wordCount:nullptr];
+	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+	
+	NSString *nsWord = [NSString stringWithCharacters:reinterpret_cast<const unichar*>(word.unicode()) length:word.length()];
+	
+    //NSString *nsWord = word.toNSString();
+    //NSSpellChecker *checker = [NSSpellChecker sharedSpellChecker];
+    
+    NSRange range = [[NSSpellChecker sharedSpellChecker] checkSpellingOfString:nsWord
+                    startingAt:0
+                    language:m_langCode
+                    wrap:NO
+                    inSpellDocumentWithTag:m_tag
+                    wordCount:nullptr];
+                    
+//disable this for now
+/*
     if (range.length == 0) {
         // Check if the user configured a replacement text for this string. Sadly
         // we can only signal an error if that's the case, Sonnet has no other way
@@ -60,15 +86,27 @@ bool NSSpellCheckerDict::isCorrect(const QString &word) const
             return true;
         }
     }
+*/
+
+	if (range.length == 0) {
+        [pool release];
+        return true;
+	}
+	
+	[pool release];
     return false;
 }
 
 QStringList NSSpellCheckerDict::suggest(const QString &word) const
 {
-    NSString *nsWord = word.toNSString();
+	NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
+
+    NSString *nsWord = [NSString stringWithCharacters:reinterpret_cast<const unichar*>(word.unicode()) length:word.length()];
+    //NSString *nsWord = word.toNSString();
     NSSpellChecker *checker = [NSSpellChecker sharedSpellChecker];
     NSArray *suggestions = [checker guessesForWordRange:NSMakeRange(0, word.length())
         inString:nsWord language:m_langCode inSpellDocumentWithTag:0];
+        
     QStringList lst;
     NSDictionary *replacements = [checker userReplacementsDictionary];
     QString replacement;
@@ -85,6 +123,8 @@ QStringList NSSpellCheckerDict::suggest(const QString &word) const
             lst << str;
         }
     }
+    
+	[pool release];
     return lst;
 }
 
