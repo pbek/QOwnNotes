@@ -3421,6 +3421,7 @@ void MainWindow::setCurrentNote(Note note,
     // if note sub-folder was different than the current we will
     // switch to that note sub-folder
     // TODO: don't switch if "All notes" was selected!
+    // TODO: take "noteSubfoldersPanelShowNotesRecursively" into account
     if (!_showNotesFromAllNoteSubFolders && !note.isInCurrentNoteSubFolder()) {
         qDebug() << "Switching note subfolder";
         jumpToNoteSubFolder(note.getNoteSubFolderId());
