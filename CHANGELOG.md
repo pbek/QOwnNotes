@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 19.11.6
+- attempted to fix a possible segmentation fault on startup
+  (for [#1367](https://github.com/pbek/QOwnNotes/issues/1367), thank you @Waqar144)
+- attempted to improve macOS spellchecker performance
+  (for [#1359](https://github.com/pbek/QOwnNotes/issues/1359), thank you @Waqar144)
+
 ## 19.11.5
 - fixed a problem with automatic setting of the dark mode color and dark mode
   icon theme checkboxes in dark mode
