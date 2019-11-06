@@ -33,43 +33,13 @@ HEADERS += $$PWD/client_p.h \
 #           $$PWD/sonnetcore_export.h
 
 # Sonnet Plugins
-unix:!macx {
-    include($$PWD/../plugins/hunspell/hunspell.pri)
-}
+include($$PWD/../plugins/hunspell/hunspell.pri)
 
-win32 {
-    include($$PWD/../plugins/hunspell/hunspell.pri)
-}
-
-
-macx {
-    include($$PWD/../plugins/nsspellchecker/nsspellchecker.pri)
-}
+#macx {
+#    include($$PWD/../plugins/nsspellchecker/nsspellchecker.pri)
+#}
 
 
 #DEFINES += SONNETCORE_EXPORT=""
 DEFINES += INSTALLATION_PLUGIN_PATH=""
 DEFINES += SONNET_STATIC
-
-#unix:system("touch sonnetcore_export.h")
-#win32:system("type nul > sonnetcore_export.h")
-
-# Copy trigrams.map to build dir
-#defineTest(copyToDestDir) {
-#    files = $$1
-#    message
-#    for(FILE, files) {
-#        DDIR = $$OUT_PWD
-#                    FILE = $$absolute_path($$FILE)
-#        message($$FILE)
-#        # Replace slashes in paths with backslashes for Windows
-#        win32:FILE ~= s,/,\\,g
-#        win32:DDIR ~= s,/,\\,g
-
-#        QMAKE_POST_LINK += $$QMAKE_COPY $$quote($$FILE) $$quote($$DDIR) $$escape_expand(\\n\\t)
-#    }
-#    export(QMAKE_POST_LINK)
-#}
-
-#copyToDestDir(trigrams.map)
-

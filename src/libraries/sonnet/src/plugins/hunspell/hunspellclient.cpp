@@ -60,7 +60,8 @@ HunspellClient::HunspellClient(QObject *parent)
       QString current = QDir::currentPath() + "/dicts";
       maybeAddPath(home);
       maybeAddPath(current);
-#else
+#endif
+#ifdef Q_OS_LINUX
     maybeAddPath(QStringLiteral("/usr/share/hunspell/"));
     maybeAddPath(QStringLiteral("/usr/share/myspell/"));
     maybeAddPath(QStringLiteral("~/.local/share/hunspell/"));
@@ -71,9 +72,11 @@ HunspellClient::HunspellClient(QObject *parent)
     QString snapDictPath = QDir::homePath() + QStringLiteral("/hunspell/");
     snapDictPath.remove(QRegularExpression(R"(snap\/qownnotes\/\w\d+\/)"));
     maybeAddPath(snapDictPath);
-
+#endif
+#ifdef Q_OS_MACOS
     //Waqar: enable this one only if we use hunspell for mac
-    //maybeAddPath(QStringLiteral("/System/Library/Spelling"));
+    maybeAddPath(QStringLiteral("/System/Library/Spelling"));
+    maybeAddPath(QStringLiteral("~/Library/Spelling"));
 #endif
 
 

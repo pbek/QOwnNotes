@@ -37,14 +37,14 @@
 
 #ifdef SONNET_STATIC
 
-#ifndef Q_OS_MACOS
-#include "../plugins/hunspell/hunspellclient.h"
-#endif
 
+#include "../plugins/hunspell/hunspellclient.h"
+
+/*
 #ifdef Q_OS_MACOS
 #include "../plugins/nsspellchecker/nsspellcheckerclient.h"
 #endif
-
+*/
 #endif
 
 namespace Sonnet {
@@ -313,12 +313,12 @@ void Loader::loadPlugins()
         qCWarning(SONNET_LOG_CORE) << "Sonnet: No speller backends available!";
     }
 #else
-#ifdef Q_OS_MACOS
-    loadPlugin(QStringLiteral("NSSpellchecker"));
-#endif //define mac
-#ifndef Q_OS_MACOS
+//#ifdef Q_OS_MACOS
+//    loadPlugin(QStringLiteral("NSSpellchecker"));
+//#endif //define mac
+//#ifndef Q_OS_MACOS
     loadPlugin(QStringLiteral("Hunspell"));
-#endif //not def mac
+//#endif //not def mac
 #endif //not static
 }
 
@@ -341,17 +341,17 @@ void Loader::loadPlugin(const QString &pluginPath)
 #else
 //hunspell only for non Mac
     Client *client = nullptr;
-#ifndef Q_OS_MACOS
+//#ifndef Q_OS_MACOS
     if (pluginPath == QLatin1String("Hunspell")) {
         client = new HunspellClient(this);
     }
-#endif //not mac
-#ifdef Q_OS_MACOS
-    if (pluginPath == QLatin1String("NSSpellchecker")) {
+//#endif //not mac
+//#ifdef Q_OS_MACOS
+//    if (pluginPath == QLatin1String("NSSpellchecker")) {
     //    else {
-        client = new NSSpellCheckerClient(this);
-    }
-#endif //mac
+//        client = new NSSpellCheckerClient(this);
+//    }
+//#endif //mac
 #endif
 
     const QStringList languages = client->languages();
