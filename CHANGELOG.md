@@ -9,6 +9,7 @@
   - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes)
     to make QOwnNotes available in more languages or help with the current
     translation
+- added more Bosnian, Estonian translation (thank you Fabijenna)
 
 ## 19.11.5
 - fixed a problem with automatic setting of the dark mode color and dark mode

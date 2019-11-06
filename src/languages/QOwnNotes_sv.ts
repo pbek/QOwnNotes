@@ -488,7 +488,7 @@
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="169"/>
-      <location filename="../widgets/fontcolorwidget.cpp" line="631"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="630"/>
       <source>Export schema</source>
       <translation>Exportera schema</translation>
     </message>
@@ -514,7 +514,7 @@
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="141"/>
-      <location filename="../widgets/fontcolorwidget.cpp" line="671"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="670"/>
       <source>Import schema</source>
       <translation>Importera schema</translation>
     </message>
@@ -686,18 +686,18 @@
       <translation>Kopiera</translation>
     </message>
     <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="582"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="581"/>
       <source>Remove schema</source>
       <translation>Ta bort schema</translation>
     </message>
     <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="583"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="582"/>
       <source>Remove current schema? This cannot be undone!</source>
       <translation>Ta bort det aktuella schemat? Detta kan inte ångras!</translation>
     </message>
     <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="630"/>
-      <location filename="../widgets/fontcolorwidget.cpp" line="670"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="629"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="669"/>
       <source>INI files</source>
       <translation>INI-filer</translation>
     </message>
@@ -1099,7 +1099,7 @@
     <message>
       <location filename="../mainwindow.ui" line="408"/>
       <location filename="../mainwindow.ui" line="894"/>
-      <location filename="../mainwindow.cpp" line="715"/>
+      <location filename="../mainwindow.cpp" line="717"/>
       <source>Navigation</source>
       <translation>Navigering</translation>
     </message>
@@ -1110,7 +1110,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="680"/>
-      <location filename="../mainwindow.cpp" line="7917"/>
+      <location filename="../mainwindow.cpp" line="7953"/>
       <source>Add a tag to the current note</source>
       <translation>Lägg till en tagg i den aktuella noten</translation>
     </message>
@@ -1226,13 +1226,13 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1413"/>
-      <location filename="../mainwindow.cpp" line="9475"/>
+      <location filename="../mainwindow.cpp" line="9520"/>
       <source>Select &amp;all notes</source>
       <translation>Välj &amp;alla anteckningar</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1422"/>
-      <location filename="../mainwindow.cpp" line="5991"/>
+      <location filename="../mainwindow.cpp" line="6026"/>
       <source>Insert &amp;link</source>
       <translation>Infoga &amp;länk</translation>
     </message>
@@ -1287,7 +1287,7 @@
       <translation>Sök eller skapa anteckning</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7918"/>
+      <location filename="../mainwindow.cpp" line="7954"/>
       <source>Add a tag to the selected notes</source>
       <translation>Lägg till en tagg till de markerade anteckningarna</translation>
     </message>
@@ -1298,7 +1298,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="869"/>
-      <location filename="../mainwindow.cpp" line="6038"/>
+      <location filename="../mainwindow.cpp" line="6073"/>
       <source>Export</source>
       <translation>Exportera</translation>
     </message>
@@ -1309,7 +1309,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="907"/>
-      <location filename="../mainwindow.cpp" line="6020"/>
+      <location filename="../mainwindow.cpp" line="6055"/>
       <source>Print</source>
       <translation>Skriv ut</translation>
     </message>
@@ -1375,7 +1375,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1128"/>
-      <location filename="../mainwindow.cpp" line="655"/>
+      <location filename="../mainwindow.cpp" line="657"/>
       <source>Workspaces</source>
       <translation>Arbetsytor</translation>
     </message>
@@ -1677,7 +1677,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2212"/>
-      <location filename="../mainwindow.cpp" line="10480"/>
+      <location filename="../mainwindow.cpp" line="10545"/>
       <source>Remove current workspace</source>
       <translation>Ta bort aktuella arbetsytan</translation>
     </message>
@@ -1719,7 +1719,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2286"/>
-      <location filename="../mainwindow.cpp" line="5998"/>
+      <location filename="../mainwindow.cpp" line="6033"/>
       <source>Insert block &amp;quote</source>
       <translation>Infoga block &amp;citat</translation>
     </message>
@@ -1746,7 +1746,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2333"/>
-      <location filename="../mainwindow.cpp" line="9450"/>
+      <location filename="../mainwindow.cpp" line="9495"/>
       <source>Open note in different window</source>
       <translation>Öppna anteckningen i annat fönster</translation>
     </message>
@@ -1767,7 +1767,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2373"/>
-      <location filename="../mainwindow.cpp" line="9458"/>
+      <location filename="../mainwindow.cpp" line="9503"/>
       <source>Show note git versions</source>
       <translation>Visa anteckningens git-versoiner</translation>
     </message>
@@ -1850,7 +1850,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2535"/>
-      <location filename="../mainwindow.cpp" line="11293"/>
+      <location filename="../mainwindow.cpp" line="11358"/>
       <source>Automatically detect</source>
       <translation>Upptäck automatiskt</translation>
     </message>
@@ -1979,22 +1979,22 @@
       <translation>Importera anteckningar från Evernote</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2609"/>
+      <location filename="../mainwindow.cpp" line="2612"/>
       <source>Note was removed externally!</source>
       <translation>Anteckningen var borttagen externt!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2610"/>
+      <location filename="../mainwindow.cpp" line="2613"/>
       <source>Current note was removed outside of this application!
 Restore current note?</source>
       <translation>Aktuell anteckning är borttagen utanför denna applikationen!
 Återställ anteckning?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4997"/>
-      <location filename="../mainwindow.cpp" line="5021"/>
-      <location filename="../mainwindow.cpp" line="6456"/>
-      <location filename="../mainwindow.cpp" line="9537"/>
+      <location filename="../mainwindow.cpp" line="5027"/>
+      <location filename="../mainwindow.cpp" line="5051"/>
+      <location filename="../mainwindow.cpp" line="6491"/>
+      <location filename="../mainwindow.cpp" line="9582"/>
       <source>&amp;Cancel</source>
       <translation>&amp;Avbryt</translation>
     </message>
@@ -2006,27 +2006,27 @@ Restore current note?</source>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2834"/>
+      <location filename="../mainwindow.cpp" line="2836"/>
       <source>new version %1 available</source>
       <translation>ny version %1 tillgänglig</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2954"/>
+      <location filename="../mainwindow.cpp" line="2956"/>
       <source>Abort</source>
       <translation>Avbryta</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2954"/>
+      <location filename="../mainwindow.cpp" line="2956"/>
       <source>Loading notes…</source>
       <translation>Läser in anteckningar…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3159"/>
+      <location filename="../mainwindow.cpp" line="3161"/>
       <source>Delete conflicted database copies</source>
       <translation>Ta bort konflikter i databaser</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="3184"/>
+      <location filename="../mainwindow.cpp" line="3186"/>
       <source>Removed %n conflicted database copies</source>
       <translation>
         <numerusform>Borttagen %n konflikt med databaskopia</numerusform>
@@ -2034,62 +2034,62 @@ Restore current note?</source>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3319"/>
+      <location filename="../mainwindow.cpp" line="3348"/>
       <source>Please select the folder where your notes will get stored</source>
       <translation>Välj den mapp där dina anteckningar ska lagras</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3346"/>
+      <location filename="../mainwindow.cpp" line="3375"/>
       <source>No folder was selected</source>
       <translation>Ingen mapp var markerad</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3348"/>
+      <location filename="../mainwindow.cpp" line="3377"/>
       <source>You have to select your ownCloud notes folder to make this software work!</source>
       <translation>Du måste välja din anteckningsmapp i ownCloud för att denna mjukvara ska fungera!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3350"/>
+      <location filename="../mainwindow.cpp" line="3379"/>
       <source>&amp;Retry</source>
       <translation>&amp;Försök igen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3350"/>
+      <location filename="../mainwindow.cpp" line="3379"/>
       <source>&amp;Exit</source>
       <translation>&amp;Avsluta</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3580"/>
+      <location filename="../mainwindow.cpp" line="3609"/>
       <source>Remove current note</source>
       <translation>Ta bort aktuell anteckning</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3581"/>
+      <location filename="../mainwindow.cpp" line="3610"/>
       <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
       <translation>Radera aktuell anteckning: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3909"/>
+      <location filename="../mainwindow.cpp" line="3938"/>
       <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
       <translation>Ange &lt;strong&gt;lösenordet&lt;/strong&gt; för denna krypterade anteckning.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3933"/>
+      <location filename="../mainwindow.cpp" line="3962"/>
       <source>Note can't be decrypted!</source>
       <translation>Kan inte avkryptera anteckning!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3934"/>
+      <location filename="../mainwindow.cpp" line="3963"/>
       <source>It seems that your password is not valid!</source>
       <translation>Det verkar som att ditt lösenord inte är korrekt!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4089"/>
+      <location filename="../mainwindow.cpp" line="4123"/>
       <source>Remove selected notes</source>
       <translation>Ta bort valda anteckningar</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4091"/>
+      <location filename="../mainwindow.cpp" line="4125"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
@@ -2103,13 +2103,13 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4179"/>
-      <location filename="../mainwindow.cpp" line="9707"/>
+      <location filename="../mainwindow.cpp" line="4211"/>
+      <location filename="../mainwindow.cpp" line="9754"/>
       <source>Remove selected folders</source>
       <translation>Ta bort markerade mappar</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4180"/>
+      <location filename="../mainwindow.cpp" line="4212"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
       <translation>
         <numerusform>Ta bort &lt;strong&gt;%n&lt;/strong&gt; markerad map? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt; Alla filer och undermappar i dessa mappar tas också bort!</numerusform>
@@ -2117,17 +2117,17 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4191"/>
+      <location filename="../mainwindow.cpp" line="4222"/>
       <source>Removed note subfolder: %1</source>
       <translation>Ta bort underkatalog för anteckningar: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4210"/>
+      <location filename="../mainwindow.cpp" line="4241"/>
       <source>Remove selected tags</source>
       <translation>Ta bort valda taggar</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4211"/>
+      <location filename="../mainwindow.cpp" line="4242"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
       <translation>
         <numerusform>Ta bort &lt;strong&gt;%n&lt;/strong&gt; tagg(ar)? Inga anteckningar kommer bli borttagna.</numerusform>
@@ -2135,13 +2135,13 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4265"/>
-      <location filename="../mainwindow.cpp" line="8635"/>
+      <location filename="../mainwindow.cpp" line="4295"/>
+      <location filename="../mainwindow.cpp" line="8670"/>
       <source>Move selected notes</source>
       <translation>Flytta valda anteckningar</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4266"/>
+      <location filename="../mainwindow.cpp" line="4296"/>
       <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
         <numerusform>Flytta %n valda anteckning till &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -2149,13 +2149,13 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4366"/>
-      <location filename="../mainwindow.cpp" line="8737"/>
+      <location filename="../mainwindow.cpp" line="4396"/>
+      <location filename="../mainwindow.cpp" line="8772"/>
       <source>Copy selected notes</source>
       <translation>Kopiera valda anteckningar</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4367"/>
+      <location filename="../mainwindow.cpp" line="4397"/>
       <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
         <numerusform>Kopiera %n valda anteckning till &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -2163,13 +2163,13 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4394"/>
-      <location filename="../mainwindow.cpp" line="4540"/>
+      <location filename="../mainwindow.cpp" line="4424"/>
+      <location filename="../mainwindow.cpp" line="4570"/>
       <source>Done</source>
       <translation>Klar</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4395"/>
+      <location filename="../mainwindow.cpp" line="4425"/>
       <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
       <translation>
         <numerusform>%n anteckning(ar) har kopierats till &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
@@ -2177,12 +2177,12 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4408"/>
+      <location filename="../mainwindow.cpp" line="4438"/>
       <source>Tag selected notes</source>
       <translation>Tagga valda anteckningar med etikett</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4409"/>
+      <location filename="../mainwindow.cpp" line="4439"/>
       <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
         <numerusform>Tagga %n anteckning(ar) med &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -2190,42 +2190,42 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4678"/>
+      <location filename="../mainwindow.cpp" line="4708"/>
       <source>Restart application</source>
       <translation>Starta om programmet</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4684"/>
+      <location filename="../mainwindow.cpp" line="4714"/>
       <source>You may need to restart the application manually to let the changes take effect.</source>
       <translation>Du kan behöva starta om applikationen manuellt för att ändringarna ska få effekt.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4689"/>
+      <location filename="../mainwindow.cpp" line="4719"/>
       <source>You may need to restart the application to let the changes take effect.</source>
       <translation>Du kan behöva starta om applikationen för att ändringarna ska få effekt.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4691"/>
+      <location filename="../mainwindow.cpp" line="4721"/>
       <source>Restart</source>
       <translation>Starta om</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4905"/>
+      <location filename="../mainwindow.cpp" line="4935"/>
       <source>PDF files</source>
       <translation>PDF-filer</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4992"/>
+      <location filename="../mainwindow.cpp" line="5022"/>
       <source>Todo lists disabled!</source>
       <translation>Todo-listor är inaktiverade!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4993"/>
+      <location filename="../mainwindow.cpp" line="5023"/>
       <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
       <translation>Du har inaktiverat todo-listorna. &lt;br /&gt; Kontrollera din &lt;strong&gt; Todo &lt;/strong&gt; -konfiguration i inställningarna!</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="5228"/>
+      <location filename="../mainwindow.cpp" line="5259"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
       <translation>
         <numerusform>Hittade &lt;strong&gt;%n&lt;/strong&gt; förekomst av någon term på &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
@@ -2233,94 +2233,94 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5691"/>
+      <location filename="../mainwindow.cpp" line="5727"/>
       <source>Note was not found</source>
       <translation>Obs! Hittades inte</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5692"/>
+      <location filename="../mainwindow.cpp" line="5728"/>
       <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
       <translation>Obs! Hittades inte, skapa ny anteckning &lt;strong&gt; %1 &lt;/strong&gt;?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5927"/>
+      <location filename="../mainwindow.cpp" line="5962"/>
       <source>Note versions are currently loaded from your ownCloud server</source>
       <translation>Anteckningsversioner läses just nu från din ownCloud-server</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5942"/>
+      <location filename="../mainwindow.cpp" line="5977"/>
       <source>Trashed notes are currently loaded from your ownCloud server</source>
       <translation>Slängda anteckningar läses just nu från din ownCloud-server</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6008"/>
+      <location filename="../mainwindow.cpp" line="6043"/>
       <source>Copy code block</source>
       <translation>Kopiera kodblocket</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6027"/>
+      <location filename="../mainwindow.cpp" line="6062"/>
       <source>Print selected text</source>
       <translation>Skriv ut markerad text</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6033"/>
+      <location filename="../mainwindow.cpp" line="6068"/>
       <source>Print selected text (preview)</source>
       <translation>Skriv ut markerad text (förhandsgranskning)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6049"/>
+      <location filename="../mainwindow.cpp" line="6084"/>
       <source>Export selected text as PDF</source>
       <translation>Exportera markerad text som PDF</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6055"/>
+      <location filename="../mainwindow.cpp" line="6090"/>
       <source>Export selected text as PDF (preview)</source>
       <translation>Exportera markerad text som PDF (förhandsgranskning)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6452"/>
+      <location filename="../mainwindow.cpp" line="6487"/>
       <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
       <translation>Din anteckning kommer att dekrypteras och lagras som oformaterad text igen. Tänk på att den okrypterade anteckningen kommer eventuellt att synkas till din server och känslig text kan exponeras!&lt;br /&gt;Vill du dekryptera din anteckning?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6545"/>
+      <location filename="../mainwindow.cpp" line="6580"/>
       <source>Markdown files</source>
       <translation>Markdown-filer</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6600"/>
+      <location filename="../mainwindow.cpp" line="6635"/>
       <source>Bookmarked note position at slot %1</source>
       <translation>Bokmärket noteringsposition vid spåret %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6616"/>
+      <location filename="../mainwindow.cpp" line="6651"/>
       <source>Jumped to bookmark position at slot %1</source>
       <translation>Hoppad till bokmärkesposition vid platsen %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6836"/>
-      <location filename="../mainwindow.cpp" line="6906"/>
+      <location filename="../mainwindow.cpp" line="6872"/>
+      <location filename="../mainwindow.cpp" line="6942"/>
       <source>Inserting image</source>
       <translation>Infogar bild</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6841"/>
-      <location filename="../mainwindow.cpp" line="6910"/>
+      <location filename="../mainwindow.cpp" line="6877"/>
+      <location filename="../mainwindow.cpp" line="6946"/>
       <source>Done inserting image</source>
       <translation>Bild infogad</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6843"/>
+      <location filename="../mainwindow.cpp" line="6879"/>
       <source>Inserting attachment</source>
       <translation>Infogar bilaga</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6848"/>
+      <location filename="../mainwindow.cpp" line="6884"/>
       <source>Done inserting attachment</source>
       <translation>Bilaga infogad</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="6860"/>
+      <location filename="../mainwindow.cpp" line="6896"/>
       <source>Copied %n note(s) to %1</source>
       <translation>
         <numerusform>Kopierade %n anteckning(ar) till %1</numerusform>
@@ -2328,7 +2328,7 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="6869"/>
+      <location filename="../mainwindow.cpp" line="6905"/>
       <source>Failed to copy %n note(s) (most likely already existing)</source>
       <translation>
         <numerusform>Det gick inte att kopiera %n anteckning(ar) (existerar troligen redan)</numerusform>
@@ -2336,7 +2336,7 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="6879"/>
+      <location filename="../mainwindow.cpp" line="6915"/>
       <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
       <translation>
         <numerusform>%n anteckning ej kopierade (ingen markdown eller fil ej läsbar)</numerusform>
@@ -2344,178 +2344,178 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6893"/>
+      <location filename="../mainwindow.cpp" line="6929"/>
       <source>Saving temporary image</source>
       <translation>Sparar temporär bild</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6913"/>
+      <location filename="../mainwindow.cpp" line="6949"/>
       <source>Temporary file can't be opened</source>
       <translation>Kan ej öppna temporär fil</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6954"/>
+      <location filename="../mainwindow.cpp" line="6990"/>
       <source>Downloading %1</source>
       <translation>Laddar ned %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7135"/>
+      <location filename="../mainwindow.cpp" line="7171"/>
       <source>Reset font size to %1 pt</source>
       <comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
       <translation>Återställ typsnittsstorlek till %1 pt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7963"/>
+      <location filename="../mainwindow.cpp" line="7998"/>
       <source>Remove tag '%1' from the current note</source>
       <translation>Ta bort taggen '%1' från den aktuella noten</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7965"/>
+      <location filename="../mainwindow.cpp" line="8000"/>
       <source>Remove tag '%1' from the selected notes</source>
       <translation>Ta bort taggen '%1' från de valda noterna</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8168"/>
+      <location filename="../mainwindow.cpp" line="8203"/>
       <source>Rename tag</source>
       <translation>Byt namn på tag</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8169"/>
+      <location filename="../mainwindow.cpp" line="8204"/>
       <source>Assign color</source>
       <translation>Tilldela färg</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8170"/>
+      <location filename="../mainwindow.cpp" line="8205"/>
       <source>Disable color</source>
       <translation>Inaktivera färg</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8174"/>
+      <location filename="../mainwindow.cpp" line="8209"/>
       <source>&amp;Move tags to…</source>
       <translation>&amp;Flytta taggar till…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8389"/>
+      <location filename="../mainwindow.cpp" line="8424"/>
       <source>Move to the root</source>
       <comment>to move a tag to the current tag in the tag context menu</comment>
       <translation>Flytta till roten</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8897"/>
+      <location filename="../mainwindow.cpp" line="8932"/>
       <source>An url was opened at the current cursor position</source>
       <translation>En url öppnades på markörens nuvarande position</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8998"/>
+      <location filename="../mainwindow.cpp" line="9033"/>
       <source>No equation was found in front of the cursor</source>
       <translation>Ingen ekvation hittades framför markören</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9015"/>
+      <location filename="../mainwindow.cpp" line="9050"/>
       <source>Result for equation: %1 = %2</source>
       <translation>Resultatet för ekvation: %1 = %2</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9116"/>
+      <location filename="../mainwindow.cpp" line="9151"/>
       <source>The scripting engine was reloaded</source>
       <translation>Skriptmotorn laddades om</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9152"/>
+      <location filename="../mainwindow.cpp" line="9187"/>
       <source>HTML files</source>
       <translation>HTML-filer</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9346"/>
-      <location filename="../mainwindow.cpp" line="9520"/>
+      <location filename="../mainwindow.cpp" line="9391"/>
+      <location filename="../mainwindow.cpp" line="9565"/>
       <source>Rename note</source>
       <translation>Byt namn på anteckning</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9347"/>
+      <location filename="../mainwindow.cpp" line="9392"/>
       <source>Allows you to rename the filename of the note</source>
       <translation>Tillåter dig att byta filnamn på anteckningen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9359"/>
+      <location filename="../mainwindow.cpp" line="9404"/>
       <source>&amp;Move notes to…</source>
       <translation>&amp;Flytta anteckningar till…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9360"/>
+      <location filename="../mainwindow.cpp" line="9405"/>
       <source>&amp;Copy notes to…</source>
       <translation>&amp;Kopiera anteckningar till…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9395"/>
+      <location filename="../mainwindow.cpp" line="9440"/>
       <source>Move notes to subfolder…</source>
       <translation>Flytta anteckningar till undermapp…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9399"/>
+      <location filename="../mainwindow.cpp" line="9444"/>
       <source>Copy notes to subfolder…</source>
       <translation>Kopiera anteckningar till undermapp…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9407"/>
+      <location filename="../mainwindow.cpp" line="9452"/>
       <source>&amp;Tag selected notes with…</source>
       <translation>&amp;Tag markerade anteckningar med…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9429"/>
+      <location filename="../mainwindow.cpp" line="9474"/>
       <source>&amp;Remove tag from selected notes…</source>
       <translation>&amp;Ta bort tagg från valda anteckningar…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9520"/>
+      <location filename="../mainwindow.cpp" line="9565"/>
       <source>Name:</source>
       <translation>Namn:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9532"/>
+      <location filename="../mainwindow.cpp" line="9577"/>
       <source>Note renaming not enabled!</source>
       <translation>Namnbyte på anteckningar är ej aktiverat!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9706"/>
+      <location filename="../mainwindow.cpp" line="9753"/>
       <source>Rename subfolder</source>
       <translation>Byt namn på undermapp</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10260"/>
+      <location filename="../mainwindow.cpp" line="10327"/>
       <source>Create new workspace</source>
       <translation>Skapa ny arbetsyta</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10260"/>
-      <location filename="../mainwindow.cpp" line="10518"/>
+      <location filename="../mainwindow.cpp" line="10327"/>
+      <location filename="../mainwindow.cpp" line="10583"/>
       <source>Workspace name:</source>
       <translation>Arbetsytans namn:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10382"/>
+      <location filename="../mainwindow.cpp" line="10447"/>
       <source>full</source>
       <comment>full workspace</comment>
       <translation>full</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10389"/>
+      <location filename="../mainwindow.cpp" line="10454"/>
       <source>minimal</source>
       <comment>minimal workspace</comment>
       <translation>minimal</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10481"/>
+      <location filename="../mainwindow.cpp" line="10546"/>
       <source>Remove the current workspace?</source>
       <translation>Ta bort den aktuella arbetsytan?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10518"/>
+      <location filename="../mainwindow.cpp" line="10583"/>
       <source>Rename workspace</source>
       <translation>Byt namn på arbetsytan</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="10653"/>
+      <location filename="../mainwindow.cpp" line="10718"/>
       <source>%n chars</source>
       <comment>characters</comment>
       <translation>
@@ -2524,32 +2524,32 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10920"/>
+      <location filename="../mainwindow.cpp" line="10985"/>
       <source>Disallow all note editing</source>
       <translation>Tillåta all anteckningar redigering</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11066"/>
+      <location filename="../mainwindow.cpp" line="11131"/>
       <source>Select text files to import</source>
       <translation>Välj textfiler som ska importeras</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11095"/>
+      <location filename="../mainwindow.cpp" line="11160"/>
       <source>Importing: %1</source>
       <translation>Importerar: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11158"/>
+      <location filename="../mainwindow.cpp" line="11223"/>
       <source>Note headline '%1' was copied to the clipboard</source>
       <translation>Anmärkning rubrik "%1" kopierades till urklipp</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11245"/>
+      <location filename="../mainwindow.cpp" line="11310"/>
       <source>Leave full-screen mode</source>
       <translation>Lämna hela skärmläget</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="7936"/>
+      <location filename="../mainwindow.cpp" line="7972"/>
       <source>%n notes selected</source>
       <translation>
         <numerusform>%n anteckning vald</numerusform>
@@ -2558,7 +2558,7 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2418"/>
-      <location filename="../mainwindow.cpp" line="10921"/>
+      <location filename="../mainwindow.cpp" line="10986"/>
       <source>Allow all note editing</source>
       <translation>Tillåt all anteckning redigering</translation>
     </message>
@@ -2568,12 +2568,12 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
       <translation>&amp;Tagg</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4481"/>
+      <location filename="../mainwindow.cpp" line="4511"/>
       <source>Remove tag from selected notes</source>
       <translation>Ta bort tagg från valda anteckningar</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4482"/>
+      <location filename="../mainwindow.cpp" line="4512"/>
       <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
       <translation>
         <numerusform>Ta bort taggen &lt;strong&gt;%1&lt;/strong&gt; från %n valda anteckning?</numerusform>
@@ -2581,7 +2581,7 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4541"/>
+      <location filename="../mainwindow.cpp" line="4571"/>
       <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
       <translation>
         <numerusform>Tagen &lt;strong&gt;%1&lt;/strong&gt; borttagen från %n anteckning</numerusform>
@@ -2589,132 +2589,132 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4585"/>
+      <location filename="../mainwindow.cpp" line="4615"/>
       <source>Current notes folder: </source>
       <translation>Aktuell anteckningsmapp: </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4587"/>
+      <location filename="../mainwindow.cpp" line="4617"/>
       <source>Set the notes folder. Current notes folder: </source>
       <translation>Sätt anteckningsmapp. Aktuell anteckningsmapp: </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4783"/>
+      <location filename="../mainwindow.cpp" line="4813"/>
       <source>Print note</source>
       <translation>Skriv ut anteckning</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4849"/>
+      <location filename="../mainwindow.cpp" line="4879"/>
       <source>Letter</source>
       <translation>Brev</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4878"/>
+      <location filename="../mainwindow.cpp" line="4908"/>
       <source>Portrait</source>
       <translation>Porträtt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4878"/>
+      <location filename="../mainwindow.cpp" line="4908"/>
       <source>Landscape</source>
       <translation>Landskap</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4883"/>
+      <location filename="../mainwindow.cpp" line="4913"/>
       <source>Orientation</source>
       <translation>Orientering</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4883"/>
+      <location filename="../mainwindow.cpp" line="4913"/>
       <source>Orientation:</source>
       <translation>Orientering:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4906"/>
+      <location filename="../mainwindow.cpp" line="4936"/>
       <source>Export current note as PDF</source>
       <translation>Exportera den aktuella anteckningen som PDF</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5017"/>
+      <location filename="../mainwindow.cpp" line="5047"/>
       <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
       <translation>Du har inte valt några Att göra-listor.&lt;br /&gt;Kontrollera din &lt;strong&gt;Att göra&lt;/strong&gt; konfiguration i inställningarna!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5826"/>
+      <location filename="../mainwindow.cpp" line="5862"/>
       <source>Open QOwnNotes</source>
       <translation>Öppna QOwnNotes</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5531"/>
-      <location filename="../mainwindow.cpp" line="5835"/>
-      <location filename="../mainwindow.cpp" line="9341"/>
-      <location filename="../mainwindow.cpp" line="9704"/>
+      <location filename="../mainwindow.cpp" line="5567"/>
+      <location filename="../mainwindow.cpp" line="5871"/>
+      <location filename="../mainwindow.cpp" line="9386"/>
+      <location filename="../mainwindow.cpp" line="9751"/>
       <source>New note</source>
       <translation>Ny anteckning</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5851"/>
+      <location filename="../mainwindow.cpp" line="5887"/>
       <source>Recent notes</source>
       <translation>Senaste anteckningarna</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5871"/>
+      <location filename="../mainwindow.cpp" line="5906"/>
       <source>Show todo lists</source>
       <translation>Visa Att göra-lista</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5882"/>
+      <location filename="../mainwindow.cpp" line="5917"/>
       <source>Recent tasks</source>
       <translation>Senaste uppgifterna</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5903"/>
+      <location filename="../mainwindow.cpp" line="5938"/>
       <source>Quit</source>
       <translation>Avsluta</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7289"/>
+      <location filename="../mainwindow.cpp" line="7325"/>
       <source>show notes from all note subfolders (%1)</source>
       <translation>visa anteckningar från alla undermappar (%1)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7308"/>
+      <location filename="../mainwindow.cpp" line="7344"/>
       <source>show notes in note root folder (%1)</source>
       <translation>visa anteckningar i rotmapp (%1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="316"/>
-      <location filename="../mainwindow.cpp" line="697"/>
-      <location filename="../mainwindow.cpp" line="1904"/>
-      <location filename="../mainwindow.cpp" line="7316"/>
+      <location filename="../mainwindow.cpp" line="699"/>
+      <location filename="../mainwindow.cpp" line="1908"/>
+      <location filename="../mainwindow.cpp" line="7352"/>
       <source>Note folder</source>
       <translation>Anteckningsmapp</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8522"/>
-      <location filename="../mainwindow.cpp" line="8583"/>
+      <location filename="../mainwindow.cpp" line="8557"/>
+      <location filename="../mainwindow.cpp" line="8618"/>
       <source>Copy to note folder</source>
       <translation>Kopiera till anteckningsmapp</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8523"/>
-      <location filename="../mainwindow.cpp" line="8584"/>
+      <location filename="../mainwindow.cpp" line="8558"/>
+      <location filename="../mainwindow.cpp" line="8619"/>
       <source>Move to note folder</source>
       <translation>Flytta till anteckningsmapp</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8524"/>
-      <location filename="../mainwindow.cpp" line="8585"/>
+      <location filename="../mainwindow.cpp" line="8559"/>
+      <location filename="../mainwindow.cpp" line="8620"/>
       <source>Copy to this subfolder</source>
       <translation>Kopiera till denna undermapp</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8525"/>
-      <location filename="../mainwindow.cpp" line="8586"/>
+      <location filename="../mainwindow.cpp" line="8560"/>
+      <location filename="../mainwindow.cpp" line="8621"/>
       <source>Move to this subfolder</source>
       <translation>Flytta till denna undermapp</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="8629"/>
+      <location filename="../mainwindow.cpp" line="8664"/>
       <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
         <numerusform>Flytta %n markerad anteckning för att notera undermapp &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -2722,13 +2722,13 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4692"/>
-      <location filename="../mainwindow.cpp" line="11080"/>
+      <location filename="../mainwindow.cpp" line="4722"/>
+      <location filename="../mainwindow.cpp" line="11145"/>
       <source>Cancel</source>
       <translation>Avbryt</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="8710"/>
+      <location filename="../mainwindow.cpp" line="8745"/>
       <source>%n note(s) were moved to note subfolder "%2"</source>
       <translation>
         <numerusform>%n anteckning flyttades för att notera undermappen "%2"</numerusform>
@@ -2736,7 +2736,7 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="8731"/>
+      <location filename="../mainwindow.cpp" line="8766"/>
       <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
         <numerusform>Kopiera %n valda anteckning till undermappen &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -2744,7 +2744,7 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="8796"/>
+      <location filename="../mainwindow.cpp" line="8831"/>
       <source>%n note(s) were copied to note subfolder "%2"</source>
       <translation>
         <numerusform>%n anteckning kopierades för att notera undermappen "%2"</numerusform>
@@ -2752,118 +2752,118 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9448"/>
+      <location filename="../mainwindow.cpp" line="9493"/>
       <source>Open note in external editor</source>
       <translation>Öppna anteckningen i extern redigerare</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9452"/>
+      <location filename="../mainwindow.cpp" line="9497"/>
       <source>Show note in file manager</source>
       <translation>Visa anteckningen i filhanteraren</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9533"/>
+      <location filename="../mainwindow.cpp" line="9578"/>
       <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
       <translation>Om du vill byta namn på din anteckning måste du aktivera inställningen för att tillåta att filnamnet är olikt från rubriken.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9705"/>
+      <location filename="../mainwindow.cpp" line="9752"/>
       <source>New subfolder</source>
       <translation>Ny undermapp</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9709"/>
+      <location filename="../mainwindow.cpp" line="9756"/>
       <source>Show folder in file manager</source>
       <translation>Visa mapp i filhanteraren</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9745"/>
+      <location filename="../mainwindow.cpp" line="9801"/>
       <source>Create a new folder</source>
       <translation>Skapa ny mapp</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9745"/>
+      <location filename="../mainwindow.cpp" line="9801"/>
       <source>Folder name:</source>
       <translation>Mappnamn:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7247"/>
+      <location filename="../mainwindow.cpp" line="7283"/>
       <source>show all untagged notes (%1)</source>
       <translation>visa alla otaggade anteckningar (%1)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7250"/>
+      <location filename="../mainwindow.cpp" line="7286"/>
       <source>Untagged notes</source>
       <translation>Otaggade anteckningar</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9153"/>
+      <location filename="../mainwindow.cpp" line="9188"/>
       <source>Export current note as HTML file</source>
       <translation>Exportera den aktuella anteckningen som en HTML-fil</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4858"/>
+      <location filename="../mainwindow.cpp" line="4888"/>
       <source>Page size</source>
       <translation>Sidstorlek</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1044"/>
+      <location filename="../mainwindow.cpp" line="1046"/>
       <source>quit toolbar</source>
       <translation>avsluta verktygsfältet</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4858"/>
+      <location filename="../mainwindow.cpp" line="4888"/>
       <source>Page size:</source>
       <translation>Sidstorlek:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4974"/>
+      <location filename="../mainwindow.cpp" line="5004"/>
       <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
       <translation>QOwnNotes kommer spåra anonym användningsdata. Datan används till att avgöra vilka delar av QOwnNotes som behöver förbättras och för att hitta och lösa fel. Du kan inaktivera detta i inställningarna.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4978"/>
+      <location filename="../mainwindow.cpp" line="5008"/>
       <source>&amp;Ok</source>
       <translation>&amp;Ok</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9351"/>
+      <location filename="../mainwindow.cpp" line="9396"/>
       <source>&amp;Remove notes</source>
       <translation>&amp;Ta bort anteckningar</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5991"/>
+      <location filename="../mainwindow.cpp" line="6026"/>
       <source>&amp;Link selected text</source>
       <translation>&amp;Länka markerad text</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="972"/>
+      <location filename="../mainwindow.cpp" line="974"/>
       <source>Your tasks are being loaded from your server</source>
       <translation>Dina uppgifter hämtas från servern</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2541"/>
+      <location filename="../mainwindow.cpp" line="2544"/>
       <source>Current note was modified externally</source>
       <translation>Aktuell anteckning blev ändrad externt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2623"/>
-      <location filename="../mainwindow.cpp" line="5469"/>
+      <location filename="../mainwindow.cpp" line="2626"/>
+      <location filename="../mainwindow.cpp" line="5505"/>
       <source>Stored current note to disk</source>
       <translation>Spara aktuell anteckning till disk</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2642"/>
+      <location filename="../mainwindow.cpp" line="2645"/>
       <source>Note was modified externally: %1</source>
       <translation>Anteckningen blev ändrad externt: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2663"/>
+      <location filename="../mainwindow.cpp" line="2666"/>
       <source>Notes directory was modified externally</source>
       <translation>Anteckningsmappen blev modifierad externt</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="2730"/>
+      <location filename="../mainwindow.cpp" line="2732"/>
       <source>Stored %n note(s) to disk</source>
       <translation>
         <numerusform>Sparade %n anteckning till disk</numerusform>
@@ -2871,209 +2871,209 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7219"/>
+      <location filename="../mainwindow.cpp" line="7255"/>
       <source>show all notes (%1)</source>
       <translation>visa alla anteckningar (%1)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7222"/>
-      <location filename="../mainwindow.cpp" line="7292"/>
+      <location filename="../mainwindow.cpp" line="7258"/>
+      <location filename="../mainwindow.cpp" line="7328"/>
       <source>All notes</source>
       <translation>Alla anteckningar</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8160"/>
+      <location filename="../mainwindow.cpp" line="8195"/>
       <source>&amp;Add tag</source>
       <translation>&amp;Lägg till etikett</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8209"/>
+      <location filename="../mainwindow.cpp" line="8244"/>
       <source>Tag could not be created!</source>
       <translation>Tag kunde inte skapas!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8390"/>
+      <location filename="../mainwindow.cpp" line="8425"/>
       <source>Move to this tag</source>
       <translation>Flytta till denna tagg</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8427"/>
+      <location filename="../mainwindow.cpp" line="8462"/>
       <source>Tag this</source>
       <translation>Tagga denna</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8451"/>
+      <location filename="../mainwindow.cpp" line="8486"/>
       <source>Cannot move tag '%1' to this tag</source>
       <translation>Kan inte flytta taggen '%1' till denna tagg</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8467"/>
+      <location filename="../mainwindow.cpp" line="8502"/>
       <source>Moved tag '%1' to new tag</source>
       <translation>Flyttade taggen '%1' till ny tagg</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7488"/>
+      <location filename="../mainwindow.cpp" line="7524"/>
       <source>show all notes tagged with '%1' (%2)</source>
       <translation>visa alla anteckningar taggade med '%1' (%2)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8171"/>
+      <location filename="../mainwindow.cpp" line="8206"/>
       <source>&amp;Remove tags</source>
       <translation>&amp;Ta bort taggar</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5016"/>
+      <location filename="../mainwindow.cpp" line="5046"/>
       <source>No selected todo lists!</source>
       <translation>Inga valda att göra-listor!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="668"/>
+      <location filename="../mainwindow.cpp" line="670"/>
       <source>Subfolders</source>
       <translation>Undermappar</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="679"/>
+      <location filename="../mainwindow.cpp" line="681"/>
       <source>Tags</source>
       <translation>Taggar</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="688"/>
+      <location filename="../mainwindow.cpp" line="690"/>
       <source>Note search</source>
       <translation>Anteckningssök</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="706"/>
+      <location filename="../mainwindow.cpp" line="708"/>
       <source>Note list</source>
       <translation>Anteckningslista</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="730"/>
+      <location filename="../mainwindow.cpp" line="732"/>
       <source>Note edit</source>
       <translation>Redigera anteckning</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="741"/>
+      <location filename="../mainwindow.cpp" line="743"/>
       <source>Note tags</source>
       <translation>Anteckningstaggar</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="752"/>
+      <location filename="../mainwindow.cpp" line="754"/>
       <source>Note preview</source>
       <translation>Förhandsvisning av anteckning</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="759"/>
+      <location filename="../mainwindow.cpp" line="761"/>
       <source>Log</source>
       <translation>Loggar</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="768"/>
+      <location filename="../mainwindow.cpp" line="770"/>
       <source>Scripting</source>
       <translation>Skriptning</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1011"/>
+      <location filename="../mainwindow.cpp" line="1013"/>
       <source>formatting toolbar</source>
       <translation>formateringsverktygsfältet</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1020"/>
+      <location filename="../mainwindow.cpp" line="1022"/>
       <source>inserting toolbar</source>
       <translation>infogar verktygsfält</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1027"/>
+      <location filename="../mainwindow.cpp" line="1029"/>
       <source>encryption toolbar</source>
       <translation>krypteringsverktygsfältet</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1034"/>
+      <location filename="../mainwindow.cpp" line="1036"/>
       <source>window toolbar</source>
       <translation>verktygsfältet</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1039"/>
+      <location filename="../mainwindow.cpp" line="1041"/>
       <source>custom action toolbar</source>
       <translation>anpassade åtgärdsfältet</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1059"/>
+      <location filename="../mainwindow.cpp" line="1061"/>
       <source>Workspace selector</source>
       <translation>Arbetsytaväljare</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1190"/>
+      <location filename="../mainwindow.cpp" line="1192"/>
       <source>Show %1 panel</source>
       <translation>Visa %1 panel</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1227"/>
+      <location filename="../mainwindow.cpp" line="1231"/>
       <source>Show %1</source>
       <translation>Visa %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1539"/>
+      <location filename="../mainwindow.cpp" line="1543"/>
       <source>Leave distraction free mode</source>
       <translation>Lämna distributionsfria läge</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2059"/>
+      <location filename="../mainwindow.cpp" line="2063"/>
       <source>show notes in folder '%1' (%2)</source>
       <translation>visa anteckningar i mappen '%1' (%2)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2100"/>
+      <location filename="../mainwindow.cpp" line="2103"/>
       <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
       <translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt; senast modifierad: %2</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2105"/>
+      <location filename="../mainwindow.cpp" line="2108"/>
       <source>&lt;br /&gt;path: %1</source>
       <translation>&lt;br /&gt;sökväg: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2279"/>
+      <location filename="../mainwindow.cpp" line="2282"/>
       <source>Toolbar could not be loaded without name</source>
       <translation>Verktygsfältet kunde inte laddas utan namn</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2567"/>
+      <location filename="../mainwindow.cpp" line="2570"/>
       <source>Overwriting external changes of: %1</source>
       <translation>Skriver över externa ändringar på: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2589"/>
+      <location filename="../mainwindow.cpp" line="2592"/>
       <source>Loading external changes from: %1</source>
       <translation>Laddar externa ändringar från: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2624"/>
-      <location filename="../mainwindow.cpp" line="5470"/>
+      <location filename="../mainwindow.cpp" line="2627"/>
+      <location filename="../mainwindow.cpp" line="5506"/>
       <source>Current note could not be stored to disk</source>
       <translation>Aktuell anteckning kunde inte sparas på disk</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2788"/>
+      <location filename="../mainwindow.cpp" line="2790"/>
       <source>Read-only</source>
       <translation>Skrivskyddad</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2789"/>
+      <location filename="../mainwindow.cpp" line="2791"/>
       <source>Note editing is disabled, click to enable</source>
       <translation>Obsredigering är inaktiverad, klicka för att aktivera</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2808"/>
+      <location filename="../mainwindow.cpp" line="2810"/>
       <source>Line numbers</source>
       <translation>Radnummer</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2818"/>
+      <location filename="../mainwindow.cpp" line="2820"/>
       <source>Click here to see what has changed and to be able to update to the latest version</source>
       <translation>Klicka här för att se vad som har ändrats och för att kunna uppdatera till senaste version</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="3161"/>
+      <location filename="../mainwindow.cpp" line="3163"/>
       <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
       <translation>
         <numerusform>Fortsätt med automatisk radering av en konflikt med databaskopia som kan blockera din ownCloud-synkroniseringsprocess?</numerusform>
@@ -3081,7 +3081,7 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4465"/>
+      <location filename="../mainwindow.cpp" line="4495"/>
       <source>%n note(s) were tagged with "%2"</source>
       <translation>
         <numerusform>%n anteckning är taggade med "%2"</numerusform>
@@ -3089,7 +3089,7 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="5227"/>
+      <location filename="../mainwindow.cpp" line="5258"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
       <translation>
         <numerusform>Hittade &lt;strong&gt;%n &lt;/strong&gt; förekomst av &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
@@ -3097,67 +3097,67 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5531"/>
+      <location filename="../mainwindow.cpp" line="5567"/>
       <source>Note headline</source>
       <translation>Anteckningsrubrik</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5997"/>
+      <location filename="../mainwindow.cpp" line="6032"/>
       <source>Block &amp;quote selected text</source>
       <comment>Action to apply a block quote formatting to the selected text</comment>
       <translation>Blockera &amp;citat markerad text</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6966"/>
+      <location filename="../mainwindow.cpp" line="7002"/>
       <source>Downloading images finished</source>
       <translation>Nedladdning av bilder klar</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7108"/>
+      <location filename="../mainwindow.cpp" line="7144"/>
       <source>Increased font size to %1 pt</source>
       <translation>Ökad teckenstorlek till %1 pt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7125"/>
+      <location filename="../mainwindow.cpp" line="7161"/>
       <source>Decreased font size to %1 pt</source>
       <translation>Minskad teckenstorlek till %1 pt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4979"/>
-      <location filename="../mainwindow.cpp" line="4996"/>
-      <location filename="../mainwindow.cpp" line="5020"/>
-      <location filename="../mainwindow.cpp" line="9536"/>
+      <location filename="../mainwindow.cpp" line="5009"/>
+      <location filename="../mainwindow.cpp" line="5026"/>
+      <location filename="../mainwindow.cpp" line="5050"/>
+      <location filename="../mainwindow.cpp" line="9581"/>
       <source>Open &amp;settings</source>
       <translation>Öppna &amp;inställningar</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1536"/>
-      <location filename="../mainwindow.cpp" line="11233"/>
+      <location filename="../mainwindow.cpp" line="1540"/>
+      <location filename="../mainwindow.cpp" line="11298"/>
       <source>leave</source>
       <translation>lämna</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6395"/>
+      <location filename="../mainwindow.cpp" line="6430"/>
       <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
       <translation>Vänligen ange ditt &lt;strong&gt;lösenord&lt;/strong&gt; för att kryptera anteckningen. &lt;br /&gt; Tänk på att du måste komma &lt;strong&gt;ihåg&lt;/strong&gt; ditt lösenord för att läsa innehållet i anteckningen&lt;br /&gt; och att du kan &lt;strong&gt;bara&lt;/strong&gt; göra det &lt;strong&gt;i QOwnNotes&lt;/strong&gt;!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6451"/>
+      <location filename="../mainwindow.cpp" line="6486"/>
       <source>Decrypt note and store it as plain text</source>
       <translation>Avkryptera anteckning och lagra det i klartext</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6456"/>
+      <location filename="../mainwindow.cpp" line="6491"/>
       <source>&amp;Decrypt</source>
       <translation>&amp;Avkryptera</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6482"/>
+      <location filename="../mainwindow.cpp" line="6517"/>
       <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
       <translation>&lt;br /&gt;Du kommer att kunna redigera din krypterade anteckning.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6546"/>
+      <location filename="../mainwindow.cpp" line="6581"/>
       <source>Export current note as Markdown file</source>
       <translation>Exportera den aktuella anteckningen som en Markdown-fil</translation>
     </message>
@@ -3588,7 +3588,7 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
       <translation>Kommandot &lt;code&gt;%1 &lt;/code&gt; misslyckades!</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3902"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3905"/>
       <source>New connection</source>
       <translation>Ny anslutning</translation>
     </message>
@@ -3616,27 +3616,27 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
   <context>
     <name>QOwnNotesMarkdownTextEdit</name>
     <message>
-      <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="499"/>
+      <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="541"/>
       <source>No suggestions for %1</source>
       <translation>Inga förslag för %1</translation>
     </message>
     <message>
-      <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="510"/>
+      <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="552"/>
       <source>Ignore</source>
       <translation>Ignorera</translation>
     </message>
     <message>
-      <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="511"/>
+      <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="553"/>
       <source>Add to Dictionary</source>
       <translation>Lägg till i ordlistan</translation>
     </message>
     <message>
-      <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="566"/>
+      <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="609"/>
       <source>Note editing disabled</source>
       <translation>Obs! Redigering avaktiverad</translation>
     </message>
     <message>
-      <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="567"/>
+      <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="610"/>
       <source>Note editing is currently disabled, do you want to allow again?</source>
       <translation>Obs redigering är för närvarande inaktiverad, vill du tillåta igen?</translation>
     </message>
@@ -3826,14 +3826,14 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="94"/>
-      <location filename="../services/databaseservice.cpp" line="116"/>
+      <location filename="../services/databaseservice.cpp" line="117"/>
       <source>Unable to establish a database connection with file '%1'.
 Are the folder and the file writeable?</source>
       <translation>Det gick inte att skapa en databasanslutning med filen '%1'.
 Är mappen och filen skrivbar?</translation>
     </message>
     <message>
-      <location filename="../services/databaseservice.cpp" line="115"/>
+      <location filename="../services/databaseservice.cpp" line="116"/>
       <source>Cannot open note folder database</source>
       <translation>Kan inte öppna notkatalogkatalog</translation>
     </message>
@@ -4053,7 +4053,7 @@ Vill du installera det i alla fall?</translation>
     <name>SettingsDialog</name>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="26"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4039"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4061"/>
       <source>Settings</source>
       <translation>Inställningar</translation>
     </message>
@@ -4269,45 +4269,45 @@ Vill du installera det i alla fall?</translation>
       <translation>Annan CalDAV-server</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2732"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2754"/>
       <source>Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</source>
       <translation>Bara några färger kommer att anpassas, ditt skrivbordstema kommer att styra resten. Du måste starta om programmet för att låta ändringarna vidta åtgärder.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2735"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2757"/>
       <source>Optimize preview colors for dark mode desktop themes</source>
       <translation>Optimera förhandsgransknings färger för skrivbordstema i mörkt läge</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2722"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2744"/>
       <source>This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</source>
       <translation>Detta aktiverar det mörka läget, gränssnittet och ikonerna kommer att ändras. Du måste starta om applikationen för att dessa ändring ska gälla.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2725"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2747"/>
       <source>Enable dark mode</source>
       <translation>Aktivera mörkt läge</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2751"/>
-      <location filename="../dialogs/settingsdialog.ui" line="2761"/>
-      <location filename="../dialogs/settingsdialog.ui" line="2792"/>
-      <location filename="../dialogs/settingsdialog.ui" line="2802"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2773"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2783"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2814"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2824"/>
       <source>You need to restart the application to let this setting take effect</source>
       <translation>Du måste starta om programmet för att låta den här inställningen träda i kraft</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2831"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2853"/>
       <source>Item sizes in the main window</source>
       <translation>Artikelstorlekar i huvudfönstret</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4753"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4775"/>
       <source>Markdown highlighting</source>
       <translation>Markdown highlighting</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4759"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4781"/>
       <source>Enable markdown highlighting</source>
       <translation>Aktivera markdown highlighting</translation>
     </message>
@@ -4332,39 +4332,39 @@ Vill du installera det i alla fall?</translation>
       <translation>Genvägar</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4244"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4465"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4266"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4487"/>
       <source>Default font:</source>
       <translation>Standard typsnitt:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4286"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4427"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4308"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4449"/>
       <source>Code font:</source>
       <translation>Kod font:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2990"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3012"/>
       <source>Main window shortcuts</source>
       <translation>Huvudfönstret genvägar</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3657"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3679"/>
       <source>Do this at your own risk!</source>
       <translation>Gör detta på egen risk!</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3660"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3682"/>
       <source>Ignore all external note folder changes</source>
       <translation>Ignorera alla ändringar i extern anteckningskatalog</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4155"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4177"/>
       <source>No two spaces to do a line break are added here if checked</source>
       <translation>Inga två utrymmen behövs för att göra radbrytning läggs till här om de är markerade</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4158"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4180"/>
       <source>Use GitHub line breaks</source>
       <translation>Använd GitHub-radbrytningar</translation>
     </message>
@@ -4379,22 +4379,22 @@ Vill du installera det i alla fall?</translation>
       <translation>Franska</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2461"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2483"/>
       <source>Polish</source>
       <translation>Putsa</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2483"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2505"/>
       <source>Portuguese</source>
       <translation>Portugisiska</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2439"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2461"/>
       <source>Dutch</source>
       <translation>Holländska</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2406"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2428"/>
       <source>Hungarian</source>
       <translation>Ungerska</translation>
     </message>
@@ -4409,7 +4409,7 @@ Vill du installera det i alla fall?</translation>
       <translation>Om du vill hjälpa till att översätta QOwnNotes eller uppdatera en befintlig översättning, läs: &lt;a href = "http://www.qownnotes.org/Knowledge-base/How- kan jag hjälpa till att översätta-QOwnNotes "&gt; Hur kan jag hjälpa till att översätta QOwnNotes? &lt;/a&gt; &lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2696"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2718"/>
       <source>Dark mode</source>
       <translation>Mörkt läge</translation>
     </message>
@@ -4429,7 +4429,7 @@ Vill du installera det i alla fall?</translation>
       <translation>Inaktivera hjärtslag</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2516"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2538"/>
       <source>Russian</source>
       <translation>Ryska</translation>
     </message>
@@ -4439,22 +4439,22 @@ Vill du installera det i alla fall?</translation>
       <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Du kanske vill överväga att skaffa ett gratis SSL-certifikat från &lt;a href="https://letsencrypt.org/"&gt; Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2659"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2681"/>
       <source>If you change the language you have to restart the application for the changes to take action.</source>
       <translation>Om du ändrar språket måste du starta om programmet för ändringarna att vidta åtgärder.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3410"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3432"/>
       <source>You need to reload the scripting engine if you modify a script file</source>
       <translation>Du behöver ladda om skriptmotorn om du ändrar en skriptfil</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3413"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3435"/>
       <source>Reload scripting engine</source>
       <translation>Ladda om skriptmotorn</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3403"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3425"/>
       <source>Validate script</source>
       <translation>Validera skript</translation>
     </message>
@@ -4464,90 +4464,90 @@ Vill du installera det i alla fall?</translation>
       <translation>Allmänt</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3575"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3597"/>
       <source>Notes</source>
       <translation>Anteckningar</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3763"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3785"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; Om du är markerad kommer du alltid att bli underrättad om externa ändringar, även om den aktuella noten inte redigerades i sista minuten. Rekommenderas är &lt;span style = "font-style: italic;"&gt; avmarkerad &lt;/ span&gt;. &lt;/ P&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3646"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4953"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5468"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3668"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4975"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5490"/>
       <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
       <translation>Du kan eventuellt synkronisera problem med äldre versioner av ownCloud-synkronisering när du går långt under 10 sekunder.
 Testa själv om du får synkroniseringskonflikter och ställ ett högre värde om så är fallet.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2428"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2450"/>
       <source>Japanese</source>
       <translation>Japansk</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3650"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3672"/>
       <source>note save interval time [sec]</source>
       <translation>notera spara intervalltid [sek]</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3766"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3788"/>
       <source>Notify about all external modifications of the current note</source>
       <translation>Meddela mig om alla externa ändringar av nuvarande anteckning</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4068"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4090"/>
       <location filename="../dialogs/settingsdialog.cpp" line="2011"/>
       <location filename="../dialogs/settingsdialog.cpp" line="2020"/>
       <source>Database</source>
       <translation>Databas</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4084"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4106"/>
       <source>Reinitialize Database</source>
       <translation>Reinitialisera databasen</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4007"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4029"/>
       <source>Clear application data and exit</source>
       <translation>Rensa ansökningsdata och avsluta</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4013"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4035"/>
       <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
       <translation>Med den här knappen kan du rensa alla inställningar, ta bort den lokala todo-databasen och avsluta QOwnNotes.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4023"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4045"/>
       <location filename="../dialogs/settingsdialog.cpp" line="2080"/>
       <source>Clear app data and exit</source>
       <translation>Rensa appdata och avsluta</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3802"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3824"/>
       <source>Update dialog</source>
       <translation>Uppdateringsdialog</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3882"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3904"/>
       <source>Default note file extension</source>
       <translation>Standard anteckning-filtillägg</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3967"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3989"/>
       <source>External editor</source>
       <translation>Extern redigerare</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3980"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4002"/>
       <source>path to external editor, leave empty for default</source>
       <translation>sökväg till extern redigerare, lämna tom för standard</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3990"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5032"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4012"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5054"/>
       <source>set external editor</source>
       <translation>ange extern redigerare</translation>
     </message>
@@ -4587,17 +4587,17 @@ Testa själv om du får synkroniseringskonflikter och ställ ett högre värde o
       <translation>Skriptning</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3057"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3079"/>
       <source>Your scripts</source>
       <translation>Dina skript</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3141"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3163"/>
       <source>&amp;Remove script</source>
       <translation>&amp;Radera skript</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3420"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3442"/>
       <source>Click here to select your QML script</source>
       <translation>Klicka här för att markera din QML-skript</translation>
     </message>
@@ -4679,7 +4679,7 @@ Testa själv om du får synkroniseringskonflikter och ställ ett högre värde o
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="773"/>
-      <location filename="../dialogs/settingsdialog.ui" line="3231"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3253"/>
       <source>Name:</source>
       <translation>Namn:</translation>
     </message>
@@ -4909,230 +4909,240 @@ Testa själv om du får synkroniseringskonflikter och ställ ett högre värde o
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2395"/>
+      <source>Kurdish</source>
+      <translation type="unfinished">Kurdish</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="2406"/>
+      <source>Lithuanian</source>
+      <translation type="unfinished">Lithuanian</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="2417"/>
       <source>Macedonian</source>
       <translation>Makedonska</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2417"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2439"/>
       <source>Norwegian</source>
       <translation>Norska</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2494"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2516"/>
       <source>Punjabi</source>
       <translation>Punjabi</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2450"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2472"/>
       <source>Persian</source>
       <translation>Perser</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2505"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2527"/>
       <source>Romanian</source>
       <translation>Rumänska</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2527"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2549"/>
       <source>Serbian</source>
       <translation>Serb</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2538"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2560"/>
       <source>Albanian</source>
       <translation>Albanska</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2549"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2571"/>
       <source>Slovak</source>
       <translation>Slovakiska</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2560"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2582"/>
       <source>Slovenian</source>
       <translation>Slovenska</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2571"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2593"/>
       <source>Swedish</source>
       <translation>Svenska</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2582"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2604"/>
       <source>Tagalog</source>
       <translation>Tagalog</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2593"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2615"/>
       <source>Turkish</source>
       <translation>Turkiska</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2615"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2637"/>
       <source>Urdu</source>
       <translation>Urdu</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2626"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2648"/>
       <source>Chinese Simplified</source>
       <translation>Förenklad kinesiska</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2637"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2659"/>
       <source>Chinese Traditional</source>
       <translation>Traditionell Kinesisk</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2705"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2727"/>
       <source>Enable dark mode application icon and tray icon</source>
       <translation>Aktivera ikon för ikon för mörkläge och fackikon</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2712"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2734"/>
       <source>You might also want to choose another editor color schema in the editor settings in dark mode.</source>
       <translation>Du kanske också vill välja ett annat redigeringsfärgschema i redigeringsinställningarna i mörkt läge.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2815"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2837"/>
       <source>Enable dark mode icon theme</source>
       <translation>Aktivera tema för mörkt lägeikon</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2745"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2767"/>
       <source>System tray</source>
       <translation>Systemfältet</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2754"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2776"/>
       <source>Show system tray icon</source>
       <translation>Visa ikonen för systemfältet</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2764"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2786"/>
       <source>Start application hidden</source>
       <translation>Starta ansökan dold</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2774"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2796"/>
       <source>Interface style</source>
       <translation>Gränssnittsstil</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2805"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2827"/>
       <source>Enforce system icon theme</source>
       <translation>Fördjupa systemikons tema</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2911"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2933"/>
       <source>Override interface font size</source>
       <translation>Åsidosätt gränssnittstypstorlek</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2920"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2942"/>
       <source>Interface font size:</source>
       <translation>Gränssnittstypstorlek:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3130"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3152"/>
       <source>&amp;Add script…</source>
       <translation>&amp;Lägg till skript…</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3776"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3798"/>
       <source>Use legacy way to link to notes, images and attachments</source>
       <translation>Använd gammalt sätt för att länka till anteckningar, bilder och bilagor</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3723"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3745"/>
       <source>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</source>
       <translation>När du öppnar anteckningar återställs markörpositionen inne i noten nu till läget när noten senast besöktes i den aktuella sessionen</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3743"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3765"/>
       <source>By default the headline will generated automatically</source>
       <translation>Som standard genereras rubriken automatiskt</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3746"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3768"/>
       <source>The shortcut to create a new note asks for a headline</source>
       <translation>Genväg för att skapa en ny anteckning ber om en rubrik</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3733"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3755"/>
       <source>Automatically close the note folder database to prevent problems with sync tools</source>
       <translation>Stäng automatiskt databladet för notkatalog för att förhindra problem med synkroniseringsverktyg</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3736"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3758"/>
       <source>Automatically close the note folder database</source>
       <translation>Stäng automatiskt notkatalogdatabasen</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3824"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3846"/>
       <source>Search engine</source>
       <translation>Sökmotor</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3846"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3868"/>
       <source>Message boxes</source>
       <translation>Meddelande lådor</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3852"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3655"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3874"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3658"/>
       <source>Reset message boxes</source>
       <translation>Återställ meddelandefält</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4045"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3721"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3744"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4067"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3724"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3747"/>
       <source>Import settings</source>
       <translation>Importera inställningar</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4052"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3687"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4074"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3690"/>
       <source>Export settings</source>
       <translation>Exportera inställningar</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4191"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4213"/>
       <source>Open issue assistant</source>
       <translation>Öppna problemassistent</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4202"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4224"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt; &lt;head/&gt; &lt;body&gt; &lt;p&gt; Det bästa sättet att posta problem är att använda problemassistenten genom att trycka på knappen &lt;span style = "font-weight: 600;"&gt; Öppna problemassistent &lt;/span&gt; på botten. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4496"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4518"/>
       <source>Ignore code font size to allow zooming</source>
       <translation>Ignorera kodstorleken för att tillåta zoomning</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4525"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4547"/>
       <source>Rendering</source>
       <translation>Tolkning</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4531"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4553"/>
       <source>Enable underline rendering</source>
       <translation>Aktivera underteckning</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4787"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4809"/>
       <source>Fully highlight blockquotes</source>
       <translation>Fullständigt markera blockquotes</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4857"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4879"/>
       <source>Note-edit cursor width:</source>
       <translation>Notera-redigera markörbredd:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4806"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4828"/>
       <source>Enable Vim mode (some QOwnNotes shortcuts will not work)</source>
       <translation>Aktivera Vim-läge (vissa genvägar för QOwnNotes fungerar inte)</translation>
     </message>
@@ -5142,370 +5152,370 @@ Testa själv om du får synkroniseringskonflikter och ställ ett högre värde o
       <translation>Molnanslutning:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4891"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4913"/>
       <source>Disable cursor blinking</source>
       <translation>Inaktivera markören som blinkar</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5125"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5147"/>
       <source>Show the number of matches in each note</source>
       <translation>Visa antalet matcher i varje anteckning</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5280"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5302"/>
       <source>Ignored sub-folders</source>
       <translation>Ignorerade undermappar</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5296"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5318"/>
       <source>Reset ignored sub-folders</source>
       <translation>Återställ ignorerade undermappar</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5316"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5338"/>
       <source>Note list panel</source>
       <translation>Noteringslistan</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5322"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5344"/>
       <source>Show notes in the note list with preview</source>
       <translation>Visa anteckningar i noteringslistan med förhandsvisning</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5395"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5417"/>
       <source>Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</source>
       <translation>Istället för en anteckningslista använder du ett anteckningsträd med alla undermappar (om de är aktiverade för anteckningsmappen)</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5630"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5652"/>
       <source>Bookmarks</source>
       <translation>Bokmärken</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5636"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5658"/>
       <source>Notes with this tag will be used for fetching bookmarks</source>
       <translation>Notes med denna tagg kommer att användas för hämtning bokmärken</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5639"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5661"/>
       <source>Tag name for bookmarks notes</source>
       <translation>Taggenamn för bokmärken</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5646"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5668"/>
       <source>Bookmarks tag:</source>
       <translation>Bokmärke tagg:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5653"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5675"/>
       <source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
       <translation>Som standard visar webbläsarens tillägg alla länkar i den aktuella noten. Du kan också göra det visa speciella bokmärken. För mer information om synkronisera länken för bokmärke, klicka &lt;a href="%1"&gt; här &lt;/a&gt;.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5666"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5688"/>
       <source>Bookmarks note name:</source>
       <translation>Bokmärken noteringsnamn:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5673"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5695"/>
       <source>This note will be used for adding new bookmarks from the browser extension</source>
       <translation>Denna anteckning kommer att användas för att lägga till nya bokmärken från webbläsarens tillägg</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5676"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5698"/>
       <source>Note name for adding new bookmarks</source>
       <translation>Notnamn för att lägga till nya bokmärken</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5686"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5708"/>
       <source>Web socket server</source>
       <translation>Socket webbserver</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5692"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5714"/>
       <source>Socket server port:</source>
       <translation>Socket serverport:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5726"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5748"/>
       <source>Show security token</source>
       <translation>Visa säkerhetstoken</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5762"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5784"/>
       <source>Web socket server support</source>
       <translation>Stöd för webbuttagsserver</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5768"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5790"/>
       <source>Enable socket server</source>
       <translation>Aktivera socket-servern</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5743"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5765"/>
       <source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
       <translation>Installera &lt;a href="%1"&gt; webbansökningen för webbkompani &lt;/a&gt; från &lt;a href="%2"&gt; Chrome Web Store &lt;/a&gt;eller &lt;a href="%3"&gt; Firefox-tilläggssidan &lt;/a&gt; för att använda QOwnNotes som webbklippare.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3684"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3706"/>
       <source>Allow the note file name to be different from the headline.&lt;br&gt;Beware that ownCloud Notes needs the file name to be the same as the headline!</source>
       <translation>Låt anteckningsfilnamnet vara annorlunda än rubriken. &lt;br&gt; Akta dig för att ownCloud Notes behöver filnamnet vara detsamma som rubriken!</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5093"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5115"/>
       <source>Note edit panel</source>
       <translation>Notera redigeringspanelen</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5099"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5121"/>
       <source>If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</source>
       <translation>Om det här är inaktiverat kan du skapa mer komplexa paneldelningar, men alla paneler kommer att ändras om fönstret ändras</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5102"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5124"/>
       <source>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</source>
       <translation>Använd noteringsredigeringspanelen som en fast central widget som ska ändras om fönstret eller andra paneler ändras</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5112"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5134"/>
       <source>Note search panel</source>
       <translation>Notera sökpanelen</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5118"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5140"/>
       <source>Disable auto-completion of previous searches</source>
       <translation>Inaktivera automatisk slutförandet av tidigare sökningar</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5418"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5440"/>
       <source>Navigation panel</source>
       <translation>Navigationspanel</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5424"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5446"/>
       <source>Hide navigation item search bar</source>
       <translation>Dölj navigeringsobjektets sökfält</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5438"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5460"/>
       <source>Local trash settings</source>
       <translation>Lokala papperskorgsinställningar</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5472"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5494"/>
       <source>Remove trashed notes after:</source>
       <translation>Ta bort soptunnor efter:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5479"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5501"/>
       <source> days</source>
       <extracomment>seconds</extracomment>
       <translation> dagar</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5498"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5520"/>
       <source>Automatically remove trashed notes after a certain time</source>
       <translation>Ta bort borttagna anteckningar automatiskt efter en viss tid</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5524"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5546"/>
       <source>Local trash support</source>
       <translation>Lokalt skräpstöd</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5530"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5552"/>
       <source>Enable local trash</source>
       <translation>Aktivera lokala papperskorgen</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5547"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5569"/>
       <source>Layout selector</source>
       <translation>Layoutväljare</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5553"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5575"/>
       <source>You can set a new layout here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</source>
       <translation>Du kan ställa in en ny layout här. Tänk på att du alltid kan ändra panelernas position med knappen &lt;i&gt;Lås upp paneler&lt;/i&gt;.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4833"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5712"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4855"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5734"/>
       <source>Reset the cursor width</source>
       <translation>Återställ markören bredd</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4967"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4989"/>
       <source>External git log command to show the git versions of a note</source>
       <translation>Externt git-loggkommando för att visa git-versionerna av en note</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4973"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4995"/>
       <source>Enter a command to be used to show a git log (like for example "gitk")</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
       <translation>Ange ett kommando som används för att visa en git logg (som till exempel ”gitk”)</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4993"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5015"/>
       <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
       <translation>Om du använder den här inställningen får du en ny menypost som visar git-versioner om du högerklickar på en anteckning.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5277"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5286"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5299"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5308"/>
       <source>Regular expressions of note sub-folders to ignore, separated by ";"</source>
       <translation>Regelbundna uttryck av noteringsundermappar för att ignorera, åtskilda av ";"</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5336"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5358"/>
       <source>Show all notes of a tag including the notes of their children-tags</source>
       <translation>Visa alla anteckningar på en tagg inklusive anteckningarna i deras barn-taggar</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5329"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5351"/>
       <source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
       <translation>Visa alla noteringar i en mapp inklusive deras undermappar (fungerar bara om undermappar är på)</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4734"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4756"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Kanske du vill titta på alla tillgängliga &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt; tidsformat&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4884"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4906"/>
       <source>Highlight the current line</source>
       <translation>Markera den aktuella raden</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5060"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5082"/>
       <source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
       <translation>Glöm inte att aktivera git-support för dina noteringsmappar och för att konfigurera ditt namn och din e-postadress för din git-klient, till exempel med dessa terminalkommandon:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5135"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5157"/>
       <source>Tags panel</source>
       <translation>Märkordspanelen</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5164"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5240"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5369"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5186"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5262"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5391"/>
       <source>Order</source>
       <translation>Ordning</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5170"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5246"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5378"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5192"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5268"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5400"/>
       <source>Ascending</source>
       <translation>Stigande</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5177"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5253"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5385"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5199"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5275"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5407"/>
       <source>Descending</source>
       <translation>Fallande</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5141"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5210"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5343"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5163"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5232"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5365"/>
       <source>Sort</source>
       <translation>Sortera</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4877"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4899"/>
       <source>Only use editor width setting in distraction free mode</source>
       <translation>Använd bara editorbreddsinställning i distraktionsfritt läge</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5147"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5216"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5349"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5169"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5238"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5371"/>
       <source>Alphabetical</source>
       <translation>Alfabetisk</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5154"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5176"/>
       <source>By last change / use</source>
       <translation>Genom senaste ändring / använda</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5187"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5209"/>
       <source>Hide 'Find or create tag' search</source>
       <translation>Dölj sök efter "Sök eller skapa tagg"</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5197"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5219"/>
       <source>Note subfolders panel</source>
       <translation>Anteckning undermappar panel</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5203"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5225"/>
       <source>Show with full path</source>
       <translation>Visa med hela banan</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5223"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5356"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5245"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5378"/>
       <source>By last change</source>
       <translation>Senast ändrad</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5233"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5255"/>
       <source>Show root folder name</source>
       <translation>Visa rotmappsnamn</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5263"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5285"/>
       <source>Hide 'Find or create note subfolder' search</source>
       <translation>Dölj "Sök eller skapa noteringsundermapp" -sökning</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5270"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5292"/>
       <source>Display note subfolders as full tree</source>
       <translation>Visa anteckningsundermappar som fullt träd</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2597"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2596"/>
       <source>Search script repository</source>
       <translation>Sök skriptförrådet</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4983"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5005"/>
       <source>You optionally can use "%notePath%" for the path of the note.</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
       <translation>Du kan eventuellt använda "%notePath%" för vägen till noten.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5006"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5028"/>
       <source>Git client</source>
       <translation>Gitklient</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5022"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5044"/>
       <source>Path to git executable:</source>
       <translation>Sökväg till git-binären:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5012"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5034"/>
       <source>Path to git client, leave empty for default</source>
       <translation>Sökväg till git-klient, lämna tom för standard</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4931"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4953"/>
       <source>Commit interval</source>
       <translation>Commit interval</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4937"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4959"/>
       <source>sec</source>
       <extracomment>seconds</extracomment>
       <translation>sek</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4957"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4979"/>
       <source>git commit interval time [sec]</source>
       <translation>git commit intervalltid [sek]</translation>
     </message>
@@ -5570,32 +5580,32 @@ Testa själv om du får synkroniseringskonflikter och ställ ett högre värde o
       <translation>Tjeckiska</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2472"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2494"/>
       <source>Brazilian Portuguese</source>
       <translation>Brasiliansk portugisiska</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2604"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2626"/>
       <source>Ukrainian</source>
       <translation>Ukrainska</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3532"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3554"/>
       <source>The name</source>
       <translation>Skriptnamn</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3629"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3651"/>
       <source>Maximum height:</source>
       <translation>Maximal höjd:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3602"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3624"/>
       <source>Maximum width:</source>
       <translation>Maximal bredd:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3667"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3689"/>
       <source>Scale images down when inserted into notes</source>
       <translation>Förminska bilder när de infogas i anteckningar</translation>
     </message>
@@ -5605,127 +5615,127 @@ Testa själv om du får synkroniseringskonflikter och ställ ett högre värde o
       <translation>Kroatiska</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3447"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3469"/>
       <source>Path to your QML file</source>
       <translation>Sökvägen till din QML-fil</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3238"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3260"/>
       <source>Script name</source>
       <translation>Skriptnamn</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3260"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3282"/>
       <source>Description:</source>
       <translation>Beskrivning:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3342"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3364"/>
       <source>Version:</source>
       <translation>Version:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3303"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3325"/>
       <source>Repository:</source>
       <translation>Förråd:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3280"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3302"/>
       <source>Author(s):</source>
       <translation>Författare:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3694"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3716"/>
       <source>Check this if you want to accept all external modifications while you are editing the current note.</source>
       <translation>Markera det här om du vill acceptera alla externa ändringar medan du redigerar den aktuella noten.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3697"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3719"/>
       <source>Accept all external modifications of the current note</source>
       <translation>Godkänn alla externa ändringar av nuvarande anteckning</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3756"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3778"/>
       <source>Use UNIX newline instead of native newline characters</source>
       <translation>Använd UNIX newline istället för inbyggda newline-tecken</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3726"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3748"/>
       <source>Restore cursor position when opening a note</source>
       <translation>Återställ markörens position när en anteckning öppnas</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4074"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4096"/>
       <source>Be warned that this will also remove your cached todo items and configured note folders and scripts!</source>
       <translation>Varna att detta också tar bort dina cachade todo-objekt och konfigurerade noteringsmappar och skript!</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4558"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4580"/>
       <source>Apply toolbar configuration</source>
       <translation>Använda verktygsfältet konfiguration</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4572"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4594"/>
       <source>Reset toolbars</source>
       <translation>Återställa verktygsfält</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4600"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4622"/>
       <source>Enable logging to file</source>
       <translation>Aktivera loggning till fil</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4607"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4629"/>
       <source>Clear log file</source>
       <translation>Rensa loggfil</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4618"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4640"/>
       <source>Fake old version number to trigger update</source>
       <translation>Fake gammalt versionsnummer för att utlösa uppdatering</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4646"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4668"/>
       <source>Log file path:</source>
       <translation>Loggfilens sökväg:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4708"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4730"/>
       <source>Here you can set your own time format for inserting the current time into a note.</source>
       <translation>Här kan du ställa dina egna tidsformat för att infoga aktuell tid i en anteckning.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4711"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4733"/>
       <source>Insert current time</source>
       <translation>Infoga aktuell tid</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4717"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4739"/>
       <source>Time format:</source>
       <translation>Tidsformat:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4724"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4746"/>
       <source>Enter your custom time format, like "dd.MM.yyyy hh:mm"</source>
       <translation>Ange ditt anpassade tidsformat, såsom ”yyyy- MM-dd hh:mm ”</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4800"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4822"/>
       <source>Editor options</source>
       <translation>Alternativ för textredigerare</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4813"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4835"/>
       <source>Enable automatic closing of brackets and markdown formatting characters</source>
       <translation>Aktivera automatisk stängning av paranteser och markdown formateringstecken</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4867"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4889"/>
       <source>You have to use the backspace key to remove the opening character</source>
       <translation>Du måste använda backspace-knappen för att ta bort öppningstecknet</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4870"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4892"/>
       <source>Enable automatic removal of matching closing characters</source>
       <translation>Aktivera automatisk borttagning av matchande avslutande tecken</translation>
     </message>
@@ -5770,38 +5780,38 @@ Testa själv om du får synkroniseringskonflikter och ställ ett högre värde o
       <translation>&amp;Uppdatera kalenderlistan</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2702"/>
-      <location filename="../dialogs/settingsdialog.ui" line="2812"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2724"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2834"/>
       <source>You may need to restart the application to let these changes take effect</source>
       <translation>Du kan behöva starta om programmet för att låta ändringarna träda i kraft</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2847"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2869"/>
       <source>Toolbar icon size:</source>
       <translation>Verktygsfältets ikonstorlek:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2837"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2859"/>
       <source>List and tree item height:</source>
       <translation>Höjd och listhöjd:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2870"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2892"/>
       <source>Reset the icon size</source>
       <translation>Återställ ikonstorleken</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2884"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2906"/>
       <source>Reset the item height</source>
       <translation>Återställ objektets höjd</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4489"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4511"/>
       <source>View text right to left (RTL)</source>
       <translation>Visa text höger till vänster (RTL)</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3008"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3030"/>
       <source>Search for shortcut</source>
       <translation>Sök efter genväg</translation>
     </message>
@@ -5811,22 +5821,22 @@ Testa själv om du får synkroniseringskonflikter och ställ ett högre värde o
       <translation>Ignorera kalendrar som inte stöder todo-objekt</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2648"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2670"/>
       <source>Arabic</source>
       <translation>Arabiska</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2786"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2808"/>
       <source>Icons</source>
       <translation>Ikoner</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2795"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2817"/>
       <source>Use internal icon theme instead of system icon theme</source>
       <translation>Använd intern ikontema i stället för systemikontema</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3396"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3418"/>
       <source>Script path:</source>
       <translation>Sökväg till skript:</translation>
     </message>
@@ -5836,84 +5846,84 @@ Testa själv om du får synkroniseringskonflikter och ställ ett högre värde o
       <translation>Notmappsnamn</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3687"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3709"/>
       <source>Allow note file name to be different from headline</source>
       <translation>Tillåt noteringsfilnamnet vara annorlunda än rubrik</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3674"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3696"/>
       <source>Check this if you want to ignore all external modifications while you are editing the current note.</source>
       <translation>Markera det här om du vill ignorera alla externa ändringar medan du redigerar den aktuella noten.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3677"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3699"/>
       <source>Ignore all external modifications of the current note</source>
       <translation>Ignorera alla externa ändringar av nuvarande notering</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3753"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3775"/>
       <source>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</source>
       <translation>Du kan använda det här till exempel under Windows om du har problem med newlines i appen ownCloud / Nextcloud Notes</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3786"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3808"/>
       <source>App instance</source>
       <translation>App-instansen</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3792"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3814"/>
       <source>Only allow one app instance at the same time</source>
       <translation>Endast tillåta en app-instansen på samma gång</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3888"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3910"/>
       <source>Add a custom file extension</source>
       <translation>Lägga till en anpassad filändelsen</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3902"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3924"/>
       <source>Remove a custom file extension</source>
       <translation>Ta bort en anpassad filtillägg</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3941"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3963"/>
       <source>If you add custom extensions just type in the extension, like "taskpaper".</source>
       <translation>Om du lägger till anpassade tillägg skriver du bara in tillägget, som "taskpaper".</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3945"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3967"/>
       <source>Text file (txt)</source>
       <translation>Textfil (txt)</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3973"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3995"/>
       <source>Path to external editor:</source>
       <translation>Sökväg till extern redigerare:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3808"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3830"/>
       <source>Don't show the update dialog automatically</source>
       <translation>Visa inte dialogrutan uppdatering automatiskt</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4238"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4393"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4260"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4415"/>
       <source>Fonts</source>
       <translation>Teckensnitt</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4261"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4303"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4399"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4451"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4283"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4325"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4421"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4473"/>
       <source>Set a new font</source>
       <translation>Ange ett nytt teckensnitt</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4272"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4317"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4413"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4437"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4294"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4339"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4435"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4459"/>
       <source>Reset font</source>
       <translation>Återställ typsnitt</translation>
     </message>
@@ -5923,17 +5933,17 @@ Testa själv om du får synkroniseringskonflikter och ställ ett högre värde o
       <translation>Felsökning</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4125"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4147"/>
       <source>Debug information</source>
       <translation>Felsökningsinformation</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4168"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4190"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>Du kan &lt;span style = "font-weight: 600;"&gt; kopiera och klistra in &lt;/ span&gt; den här texten (eller delar av den här texten) i en &lt;span style = "font-weight: 600;"&gt; problemet &lt;/ span&gt; på &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt; QOwnNotes-frågesidan &lt;/a&gt; om du har &lt;span style = "font-weight: 600;"&gt; frågor eller problem &lt;/ span&gt; med QOwnNotes. Data som är för känslig är dold i denna information. &lt;/ P&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4144"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4166"/>
       <source>&amp;Save debug information</source>
       <translation>&amp;Spara felsökningsinformationen</translation>
     </message>
@@ -6020,88 +6030,88 @@ Connection error message: </source>
       <translation>Anonyma användardata bidrar till att bestämma vilka delar av QOwnNotes som ska förbättras nästa och för att hitta och åtgärda fel. &lt;br/&gt; Avaktivera det bara om du verkligen inte kan leva med det. &lt;br/&gt; &lt;br/&gt; Aktivera användningsspårning verkligen?</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2282"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2283"/>
       <source>new folder</source>
       <translation>ny mapp</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2320"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2319"/>
       <source>Remove note folder</source>
       <translation>Ta bort anteckningsmappen</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2321"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2320"/>
       <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
       <translation>Ta bort nuvarande anteckningsmapp &lt;strong&gt; %1&lt;/strong&gt;?</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2396"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2395"/>
       <source>Please select the folder where your notes will get stored to</source>
       <translation>Var god välj den mapp där dina anteckningar kommer att lagras till</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2433"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2432"/>
       <source>Loading folders from server</source>
       <translation>Laddar mappar från servern</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2447"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2446"/>
       <source>No more folders were found in the current folder</source>
       <translation>Inga fler mappar hittades i den aktuella mappen</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2520"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2519"/>
       <source>Loading folders in '%1' from server</source>
       <translation>Laddar mappar i '%1' från servern</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2584"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2583"/>
       <source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
       <translation>Ta en titt på &lt;a href="%1"&gt;skriptdokumentationen&lt;/a&gt; för att snabbt komma igång.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2586"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2585"/>
       <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
       <translation>Om du behöver tillgång till en viss funktionalitet i QOwnNotes, vänligen öppna ett problem på &lt;a href="%1"&gt; QOwnNotes-frågesidan &lt;/a&gt;.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2607"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2606"/>
       <source>Check for script updates</source>
       <translation>Kontrollera efter skriptuppdateringar</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2614"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2613"/>
       <source>Add local script</source>
       <translation>Lägg till lokalt skript</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2618"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2617"/>
       <source>Add an existing, local script</source>
       <translation>Lägg till ett befintligt lokalt skript</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3686"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3743"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3689"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3746"/>
       <source>INI files</source>
       <translation>INI-filer</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3722"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3725"/>
       <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
       <translation>Vill du verkligen importera inställningar? Dina nuvarande inställningar kommer att tas bort, och inte alla inställningar kan återställas, till exempel inställningarna för anteckningsmappen och vilka skript du använde. Du måste också justera vissa inställningar, särskilt över plattformar, men dina anteckningar kommer att förbli intakta!</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3732"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3735"/>
       <source>The application will be quit after the import.</source>
       <translation>Applikationen avslutas efter importen.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3733"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3736"/>
       <source>The application will be restarted after the import.</source>
       <translation>Applikationen startas om efter importen.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2601"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2600"/>
       <source>Find a script in the script repository</source>
       <translation>Sök ett skript i skriptförrådet</translation>
     </message>
@@ -6121,105 +6131,105 @@ Connection error message: </source>
       <translation>Genväg &lt;strong&gt; %1 &lt;/ strong&gt; är redan tilldelad &lt;strong&gt; %2 &lt;/ strong&gt;! Vill du hoppa till genväg?</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2697"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2696"/>
       <source>Remove script</source>
       <translation>Radera skript</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2698"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2697"/>
       <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
       <translation>Radera det aktuella skriptet &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2749"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2748"/>
       <source>QML files</source>
       <translation>QML-filer</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2750"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2749"/>
       <source>Please select your QML file</source>
       <translation>Var god välj din QML-fil</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2839"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2838"/>
       <source>Open repository</source>
       <translation>Öppna förråd</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2899"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2898"/>
       <source>Your script seems to be valid</source>
       <translation>Ditt skript verkar vara giltigt</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2900"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2899"/>
       <source>There were script errors:
 %1</source>
       <translation>Det fanns skriptfel:
 %1</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2969"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2968"/>
       <source>File extension</source>
       <translation>Filförlängning</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2970"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2969"/>
       <source>Enter your custom file extension:</source>
       <translation>Ange din anpassade filtillägg:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3262"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3265"/>
       <source>Calendar cache emptied</source>
       <translation>Kalendercache tömd</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3263"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3266"/>
       <source>Your calendar cache was emptied.</source>
       <translation>Din kalendercache tömdes.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3341"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3344"/>
       <source>Reset toolbars and exit</source>
       <translation>Återställ verktygsfält och avsluta</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3342"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3345"/>
       <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
       <translation>Vill du verkligen återställa alla verktygsfält? Applikationen stängs i processen, standardverktygsfälten återställs när du startar den igen.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3346"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3349"/>
       <source>Reset and &amp;exit</source>
       <translation>Återställ och &amp;avsluta</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3508"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3511"/>
       <source>Log file cleared</source>
       <translation>Loggfil rensad</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3509"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3512"/>
       <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
       <translation>Loggfilen &lt;strong&gt;%1&lt;/strong&gt; har rensats.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3545"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3548"/>
       <source>Executable files</source>
       <translation>Exekverbara filer</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3546"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3548"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3549"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3551"/>
       <source>All files</source>
       <translation>Alla filer</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3556"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3559"/>
       <source>Please select the path of your git executable</source>
       <translation>Var god välj sökvägen för din git-körbar</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3656"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3659"/>
       <source>Do you really want to reset the overrides of all message boxes?</source>
       <translation>Vill du verkligen återställa överskridandena för alla meddelandeskrin?</translation>
     </message>
@@ -6300,7 +6310,7 @@ Dina anteckningar kommer att förbli intakta!</translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2015"/>
       <location filename="../dialogs/settingsdialog.cpp" line="2084"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3346"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3349"/>
       <source>&amp;Cancel</source>
       <translation>&amp;Annullera</translation>
     </message>
