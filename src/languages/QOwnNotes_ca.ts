@@ -4906,12 +4906,12 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2395"/>
       <source>Kurdish</source>
-      <translation type="unfinished">Kurdish</translation>
+      <translation>Kurd</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2406"/>
       <source>Lithuanian</source>
-      <translation type="unfinished">Lithuanian</translation>
+      <translation>Lituà</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2417"/>

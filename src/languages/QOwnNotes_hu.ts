@@ -4910,12 +4910,12 @@ Tesztelje, ha szinkronizációs konfliktus lép fel és állítson be ilyen eset
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2395"/>
       <source>Kurdish</source>
-      <translation type="unfinished">Kurdish</translation>
+      <translation>Kurd</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2406"/>
       <source>Lithuanian</source>
-      <translation type="unfinished">Lithuanian</translation>
+      <translation>Litván</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2417"/>

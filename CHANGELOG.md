@@ -7,6 +7,11 @@
   (for [#1359](https://github.com/pbek/QOwnNotes/issues/1359), thank you @Waqar144)
     - visit [QOwnNotes Spellchecking](http://docs.qownnotes.org/en/develop/spellchecking.html)
       for more information
+- added more Cebuano, Kurdish, Lithuanian, Norwegian, Swedish, Ukrainian, Croatian,
+  Czech, Dutch, Danish, Estonian, Hungarian, Finnish, Galician, Bosnian, Bulgarian,
+  Greek, Romanian, Serbian (Cyrillic), Slovak, Slovenian, Italian, Indonesian,
+  Russian, Catalan translation (thank you Fabijenna, tiwi90, zmni, athrouss,
+  unchase, mlocati, MGuerra)
 
 ## 19.11.6
 - attempted to fix a possible segmentation fault on startup

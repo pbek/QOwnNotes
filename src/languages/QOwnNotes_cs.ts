@@ -4987,12 +4987,12 @@ Jen se otestujte, pokud máte konflikty synchronizace a pokud ano, nastavte vyš
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2395"/>
       <source>Kurdish</source>
-      <translation type="unfinished">Kurdish</translation>
+      <translation>Kurdština</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2406"/>
       <source>Lithuanian</source>
-      <translation type="unfinished">Lithuanian</translation>
+      <translation>Litevština</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2417"/>

@@ -2263,7 +2263,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="5023"/>
       <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
-      <translation type="unfinished">You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</translation>
+      <translation>Jūs išjungėte todo sąrašus. &lt;br /&gt; Patikrinkite &lt;strong&gt; Todo &lt;/strong&gt; konfigūraciją nustatymuose!</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5259"/>
@@ -3885,7 +3885,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="220"/>
       <source>Match case sensitive</source>
-      <translation type="unfinished">Match case sensitive</translation>
+      <translation>Rungtynių raidės yra jautrios</translation>
     </message>
   </context>
   <context>
@@ -3893,30 +3893,30 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/databaseservice.cpp" line="76"/>
       <source>Cannot open memory database</source>
-      <translation type="unfinished">Cannot open memory database</translation>
+      <translation>Neįmanoma atidaryti atminties duomenų bazės</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="77"/>
       <source>Unable to establish a memory database connection.</source>
-      <translation type="unfinished">Unable to establish a memory database connection.</translation>
+      <translation>Nepavyko užmegzti atminties duomenų bazės ryšio.</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="93"/>
       <source>Cannot open disk database</source>
-      <translation type="unfinished">Cannot open disk database</translation>
+      <translation>Neįmanoma atidaryti disko duomenų bazės</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="94"/>
       <location filename="../services/databaseservice.cpp" line="117"/>
       <source>Unable to establish a database connection with file '%1'.
 Are the folder and the file writeable?</source>
-      <translation type="unfinished">Unable to establish a database connection with file '%1'.
-Are the folder and the file writeable?</translation>
+      <translation>Nepavyko užmegzti duomenų bazės ryšio su failu „%1“.
+Ar aplanką ir failą galima rašyti?</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="116"/>
       <source>Cannot open note folder database</source>
-      <translation type="unfinished">Cannot open note folder database</translation>
+      <translation>Neįmanoma atidaryti užrašų aplanko duomenų bazės</translation>
     </message>
   </context>
   <context>
@@ -3924,7 +3924,7 @@ Are the folder and the file writeable?</translation>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="14"/>
       <source>Script repository</source>
-      <translation type="unfinished">Script repository</translation>
+      <translation>Scenarijų saugykla</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="55"/>
@@ -5346,117 +5346,117 @@ Tiesiog išbandykite save, jei kyla sinchronizavimo konfliktų, ir nustatykite d
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5115"/>
       <source>Note edit panel</source>
-      <translation type="unfinished">Note edit panel</translation>
+      <translation>Užrašų redagavimo skydelis</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5121"/>
       <source>If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</source>
-      <translation type="unfinished">If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</translation>
+      <translation>Jei tai neleidžiama, galite sukurti sudėtingesnius skydelio išdėstymus, tačiau lango dydis bus pakeistas visose plokštėse</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5124"/>
       <source>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</source>
-      <translation type="unfinished">Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</translation>
+      <translation>Naudokite užrašų taisymo skydelį kaip fiksuotą centrinį valdiklį, kurio dydis bus pakeistas, jei lango ar kitų skydelių dydis bus pakeistas</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5134"/>
       <source>Note search panel</source>
-      <translation type="unfinished">Note search panel</translation>
+      <translation>Užrašų paieškos skydelis</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5140"/>
       <source>Disable auto-completion of previous searches</source>
-      <translation type="unfinished">Disable auto-completion of previous searches</translation>
+      <translation>Išjungti ankstesnių paieškų automatinį užbaigimą</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5440"/>
       <source>Navigation panel</source>
-      <translation type="unfinished">Navigation panel</translation>
+      <translation>Naršymo pultas</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5446"/>
       <source>Hide navigation item search bar</source>
-      <translation type="unfinished">Hide navigation item search bar</translation>
+      <translation>Slėpti naršymo elemento paieškos juostą</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5460"/>
       <source>Local trash settings</source>
-      <translation type="unfinished">Local trash settings</translation>
+      <translation>Vietinių šiukšlių nustatymai</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5494"/>
       <source>Remove trashed notes after:</source>
-      <translation type="unfinished">Remove trashed notes after:</translation>
+      <translation>Pašalinkite sugadintus užrašus po:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5501"/>
       <source> days</source>
       <extracomment>seconds</extracomment>
-      <translation type="unfinished"> days</translation>
+      <translation>dienų</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5520"/>
       <source>Automatically remove trashed notes after a certain time</source>
-      <translation type="unfinished">Automatically remove trashed notes after a certain time</translation>
+      <translation>Automatiškai pašalinti sukauptus užrašus po tam tikro laiko</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5546"/>
       <source>Local trash support</source>
-      <translation type="unfinished">Local trash support</translation>
+      <translation>Vietinis šiukšlių palaikymas</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5552"/>
       <source>Enable local trash</source>
-      <translation type="unfinished">Enable local trash</translation>
+      <translation>Įgalinti vietinį šiukšliadėžę</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5569"/>
       <source>Layout selector</source>
-      <translation type="unfinished">Layout selector</translation>
+      <translation>Maketų parinkiklis</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5575"/>
       <source>You can set a new layout here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</source>
-      <translation type="unfinished">You can set a new layout here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</translation>
+      <translation>Čia galite nustatyti naują išdėstymą. Atminkite, kad skydelių padėtį visada galite pakeisti naudodami mygtuką &lt;i&gt; Atrakinti skydelius &lt;/i&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4855"/>
       <location filename="../dialogs/settingsdialog.ui" line="5734"/>
       <source>Reset the cursor width</source>
-      <translation type="unfinished">Reset the cursor width</translation>
+      <translation>Iš naujo nustatykite žymeklio plotį</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4989"/>
       <source>External git log command to show the git versions of a note</source>
-      <translation type="unfinished">External git log command to show the git versions of a note</translation>
+      <translation>Išorinė „git log“ komanda, skirta parodyti užrašo „git“ versijas</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4995"/>
       <source>Enter a command to be used to show a git log (like for example "gitk")</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
-      <translation type="unfinished">Enter a command to be used to show a git log (like for example "gitk")</translation>
+      <translation>Įveskite komandą, kuri bus naudojama „git log“ rodymui (pvz., „Gitk“)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5015"/>
       <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
-      <translation type="unfinished">If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</translation>
+      <translation>Jei naudosite šį nustatymą, gausite naują meniu įrašą, kuriame bus rodomos pagrindinės versijos, jei dešiniuoju pelės mygtuku spustelėsite užrašą.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5299"/>
       <location filename="../dialogs/settingsdialog.ui" line="5308"/>
       <source>Regular expressions of note sub-folders to ignore, separated by ";"</source>
-      <translation type="unfinished">Regular expressions of note sub-folders to ignore, separated by ";"</translation>
+      <translation>Įprastiniai pastabų poaplankių, kuriuos reikia ignoruoti, išraiškos, atskirtos ";"</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5358"/>
       <source>Show all notes of a tag including the notes of their children-tags</source>
-      <translation type="unfinished">Show all notes of a tag including the notes of their children-tags</translation>
+      <translation>Rodyti visus žymos užrašus, įskaitant jų vaikų etikečių užrašus</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5351"/>
       <source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
-      <translation type="unfinished">Show all notes in a folder including their subfolders (only works if subfolders are turned on)</translation>
+      <translation>Rodyti visus aplanko užrašus, įskaitant jų poaplankius (veikia tik tada, jei įjungti pakatalogiai)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4756"/>
@@ -5466,12 +5466,12 @@ Tiesiog išbandykite save, jei kyla sinchronizavimo konfliktų, ir nustatykite d
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4906"/>
       <source>Highlight the current line</source>
-      <translation type="unfinished">Highlight the current line</translation>
+      <translation>Pabrėžkite dabartinę eilutę</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5082"/>
       <source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
-      <translation type="unfinished">Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</translation>
+      <translation>Nepamirškite įjungti „git“ palaikymo jūsų užrašų aplankuose ir sukonfigūruoti „git“ kliento vardą ir el. Pašto adresą, pavyzdžiui, naudodami šias terminalo komandas:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5157"/>
@@ -5724,7 +5724,7 @@ Tiesiog išbandykite save, jei kyla sinchronizavimo konfliktų, ir nustatykite d
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3302"/>
       <source>Author(s):</source>
-      <translation type="unfinished">Author(s):</translation>
+      <translation>Autorius(-ai):</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3716"/>
@@ -5739,92 +5739,92 @@ Tiesiog išbandykite save, jei kyla sinchronizavimo konfliktų, ir nustatykite d
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3778"/>
       <source>Use UNIX newline instead of native newline characters</source>
-      <translation type="unfinished">Use UNIX newline instead of native newline characters</translation>
+      <translation>Naudokite UNIX nauja eilutė, o ne vietinius naujos eilutės simbolius</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3748"/>
       <source>Restore cursor position when opening a note</source>
-      <translation type="unfinished">Restore cursor position when opening a note</translation>
+      <translation>Atkurdami žymeklį, atkurkite žymeklio padėtį</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4096"/>
       <source>Be warned that this will also remove your cached todo items and configured note folders and scripts!</source>
-      <translation type="unfinished">Be warned that this will also remove your cached todo items and configured note folders and scripts!</translation>
+      <translation>Įspėjame, kad tai taip pat pašalins talpykloje esančius „Todo“ elementus ir sukonfigūruotus užrašų aplankus bei scenarijus!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4580"/>
       <source>Apply toolbar configuration</source>
-      <translation type="unfinished">Apply toolbar configuration</translation>
+      <translation>Taikyti įrankių juostos konfigūraciją</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4594"/>
       <source>Reset toolbars</source>
-      <translation type="unfinished">Reset toolbars</translation>
+      <translation>Iš naujo nustatyti įrankių juostas</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4622"/>
       <source>Enable logging to file</source>
-      <translation type="unfinished">Enable logging to file</translation>
+      <translation>Įgalinti prisijungimą prie failo</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4629"/>
       <source>Clear log file</source>
-      <translation type="unfinished">Clear log file</translation>
+      <translation>Išvalyti žurnalo failą</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4640"/>
       <source>Fake old version number to trigger update</source>
-      <translation type="unfinished">Fake old version number to trigger update</translation>
+      <translation>Netikras senas versijos numeris, kad būtų galima atnaujinti</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4668"/>
       <source>Log file path:</source>
-      <translation type="unfinished">Log file path:</translation>
+      <translation>Žurnalo failo kelias:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4730"/>
       <source>Here you can set your own time format for inserting the current time into a note.</source>
-      <translation type="unfinished">Here you can set your own time format for inserting the current time into a note.</translation>
+      <translation>Čia galite nustatyti savo laiko formatą, kurį reikia įterpti į esamą laiką.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4733"/>
       <source>Insert current time</source>
-      <translation type="unfinished">Insert current time</translation>
+      <translation>Įveskite dabartinį laiką</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4739"/>
       <source>Time format:</source>
-      <translation type="unfinished">Time format:</translation>
+      <translation>Laiko formatas:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4746"/>
       <source>Enter your custom time format, like "dd.MM.yyyy hh:mm"</source>
-      <translation type="unfinished">Enter your custom time format, like "dd.MM.yyyy hh:mm"</translation>
+      <translation>Įveskite pasirinktinį laiko formatą, pvz., „Dd.MM.yyyy hh: mm“</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4822"/>
       <source>Editor options</source>
-      <translation type="unfinished">Editor options</translation>
+      <translation>Redaktoriaus parinktys</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4835"/>
       <source>Enable automatic closing of brackets and markdown formatting characters</source>
-      <translation type="unfinished">Enable automatic closing of brackets and markdown formatting characters</translation>
+      <translation>Įgalinti automatinį skliaustų ir žymėjimo formatavimo ženklų uždarymą</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4889"/>
       <source>You have to use the backspace key to remove the opening character</source>
-      <translation type="unfinished">You have to use the backspace key to remove the opening character</translation>
+      <translation>Norėdami pašalinti atidarymo ženklą, turite naudoti klavišą „Backspace“</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4892"/>
       <source>Enable automatic removal of matching closing characters</source>
-      <translation type="unfinished">Enable automatic removal of matching closing characters</translation>
+      <translation>Įgalinti automatinį atitinkamų uždarymo simbolių pašalinimą</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1828"/>
       <source>Your CalDAV calendar base url</source>
-      <translation type="unfinished">Your CalDAV calendar base url</translation>
+      <translation>CalDAV kalendoriaus bazinis Url</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1860"/>
@@ -5859,7 +5859,7 @@ Tiesiog išbandykite save, jei kyla sinchronizavimo konfliktų, ir nustatykite d
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1980"/>
       <source>&amp;Reload calendar list</source>
-      <translation type="unfinished">&amp;Reload calendar list</translation>
+      <translation>&amp;Iš naujo įkelti kalendorių sąrašą</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2724"/>
@@ -6027,7 +6027,7 @@ Tiesiog išbandykite save, jei kyla sinchronizavimo konfliktų, ir nustatykite d
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4166"/>
       <source>&amp;Save debug information</source>
-      <translation type="unfinished">&amp;Save debug information</translation>
+      <translation>&amp;Išsaugokite derinimo informaciją</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="454"/>
@@ -6417,7 +6417,7 @@ Your notes will stay intact!</translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2195"/>
       <source>Select editor application</source>
-      <translation type="unfinished">Select editor application</translation>
+      <translation>Pasirinkite redaktoriaus programą</translation>
     </message>
   </context>
   <context>
@@ -6942,7 +6942,7 @@ Tai negali būti anuliuota!</translation>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="157"/>
       <source>&amp;Insert</source>
-      <translation type="unfinished">&amp;Insert</translation>
+      <translation>&amp;Įdėti</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="171"/>
@@ -6952,23 +6952,23 @@ Tai negali būti anuliuota!</translation>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="174"/>
       <source>&amp;Remove</source>
-      <translation type="unfinished">&amp;Remove</translation>
+      <translation>&amp;Pašalinti</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="198"/>
       <source>Separator</source>
-      <translation type="unfinished">Separator</translation>
+      <translation>Separatorius</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="201"/>
       <source>&amp;Separator</source>
-      <translation type="unfinished">&amp;Separator</translation>
+      <translation>&amp;Separatorius</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="192"/>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="216"/>
       <source>--(separator)--</source>
-      <translation type="unfinished">--(separator)--</translation>
+      <translation>--(separatorius)--</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="309"/>
@@ -7001,12 +7001,12 @@ Tai negali būti anuliuota!</translation>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="28"/>
       <source>&lt;h3&gt;Slower, but with note versions&lt;/h3&gt;&lt;p&gt;The note will be restored on your ownCloud server with all versions.&lt;/p&gt;&lt;p&gt;You will have to wait until it is synced to QOwnNotes by ownCloud sync.&lt;/p&gt;</source>
-      <translation type="unfinished">&lt;h3&gt;Slower, but with note versions&lt;/h3&gt;&lt;p&gt;The note will be restored on your ownCloud server with all versions.&lt;/p&gt;&lt;p&gt;You will have to wait until it is synced to QOwnNotes by ownCloud sync.&lt;/p&gt;</translation>
+      <translation>&lt;h3&gt; Lėtesnis, tačiau su užrašų versijomis &lt;/h3&gt; &lt;p&gt; Užrašas bus atkurtas jūsų „sajátCloud“ serveryje su visomis versijomis. &lt;/p&gt; &lt;p&gt; Turėsite palaukti, kol jis bus sinchronizuotas su „QOwnNotes“ naudojant „sajátCloud“ sinchronizavimą. &lt;/p&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="41"/>
       <source>&amp;Download selected note</source>
-      <translation type="unfinished">&amp;Download selected note</translation>
+      <translation>&amp;Atsisiųsti pasirinktą užrašą</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="43"/>
@@ -7372,62 +7372,62 @@ Tai negali būti anuliuota!</translation>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="285"/>
       <source>Panel layout</source>
-      <translation type="unfinished">Panel layout</translation>
+      <translation>Skydo išdėstymas</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="342"/>
       <source>Open ownCloud settings</source>
-      <translation type="unfinished">Open ownCloud settings</translation>
+      <translation>Atidarykite „ownCloud“ nustatymus</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="384"/>
       <source>Open network settings</source>
-      <translation type="unfinished">Open network settings</translation>
+      <translation>Atidarykite tinklo nustatymus</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="184"/>
       <source>Please select where you want to store your notes:</source>
-      <translation type="unfinished">Please select where you want to store your notes:</translation>
+      <translation>Pasirinkite, kur norite išsaugoti savo užrašus:</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="319"/>
       <source>If you want to be able to access your note versions and your trashed notes on your ownCloud server, you can configure QOwnNotes for it now. You can also do it at a later time.</source>
-      <translation type="unfinished">If you want to be able to access your note versions and your trashed notes on your ownCloud server, you can configure QOwnNotes for it now. You can also do it at a later time.</translation>
+      <translation>Jei norite turėti prieigą prie savo užrašų versijų ir sugadintus užrašus „ownCloud“ serveryje, dabar galite sukonfigūruoti „QOwnNotes“. Tai galite padaryti ir vėliau.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="349"/>
       <source>In any case, you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</source>
-      <translation type="unfinished">In any case, you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</translation>
+      <translation>Bet kokiu atveju jums reikia „ownCloud“ sinchronizavimo kliento (arba bet kurio kito sinchronizavimo kliento), kad sinchronizuotumėte savo užrašus su „ownCloud“ serveriu.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="391"/>
       <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
-      <translation type="unfinished">QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</translation>
+      <translation>„QOwnNotes“ stebės anoniminius naudojimo duomenis, kurie padės nuspręsti, kurias „QOwnNotes“ dalis patobulinti toliau, ir surasti bei ištaisyti klaidas. Tokį elgesį galite išjungti nustatymuose.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="116"/>
       <source>Cannot create note path! You have to create the note folder manually!</source>
-      <translation type="unfinished">Cannot create note path! You have to create the note folder manually!</translation>
+      <translation>Neįmanoma sukurti užrašo kelio! Užrašų aplanką turite sukurti rankiniu būdu!</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="123"/>
       <source>Cannot create note path!</source>
-      <translation type="unfinished">Cannot create note path!</translation>
+      <translation>Neįmanoma sukurti užrašo kelio!</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="128"/>
       <source>This note path doesn't exist!</source>
-      <translation type="unfinished">This note path doesn't exist!</translation>
+      <translation>Šio užrašo kelio nėra!</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="200"/>
       <source>Please select the folder where your notes will get stored to</source>
-      <translation type="unfinished">Please select the folder where your notes will get stored to</translation>
+      <translation>Pasirinkite aplanką, kuriame bus saugomi jūsų užrašai</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="215"/>
       <source>Keep in mind that the note folder will be stored relative to the directory where QOwnNotes resides in portable mode! So you need to stay on the same drive.</source>
-      <translation type="unfinished">Keep in mind that the note folder will be stored relative to the directory where QOwnNotes resides in portable mode! So you need to stay on the same drive.</translation>
+      <translation>Atminkite, kad užrašų aplankas bus saugomas atsižvelgiant į katalogą, kuriame „QOwnNotes“ yra nešiojamojo režimo! Taigi reikia likti tame pačiame diske.</translation>
     </message>
   </context>
   <context>
@@ -7435,42 +7435,42 @@ Tai negali būti anuliuota!</translation>
     <message>
       <location filename="../main.cpp" line="77"/>
       <source>Runs the application in portable mode.</source>
-      <translation type="unfinished">Runs the application in portable mode.</translation>
+      <translation>Paleidžia programą nešiojamu režimu.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="81"/>
       <source>Prints out a dump of the settings and other information about the application and environment in GitHub Markdown and exits the application.</source>
-      <translation type="unfinished">Prints out a dump of the settings and other information about the application and environment in GitHub Markdown and exits the application.</translation>
+      <translation>„GitHub Markdown“ išspausdina nustatymų ir kitos informacijos apie taikomąją programą bei aplinką sąrašą ir išeina iš programos.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="87"/>
       <source>Allows multiple instances of QOwnNotes to be started even if disallowed in the settings.</source>
-      <translation type="unfinished">Allows multiple instances of QOwnNotes to be started even if disallowed in the settings.</translation>
+      <translation>Leidžia paleisti kelis „QOwnNotes“ egzempliorius, net jei jie neleidžiami nustatymuose.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="92"/>
       <source>Clears the settings and runs the application.</source>
-      <translation type="unfinished">Clears the settings and runs the application.</translation>
+      <translation>Išvalo nustatymus ir paleidžia programą.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="96"/>
       <source>Runs the application in a different context for settings and internal files.</source>
-      <translation type="unfinished">Runs the application in a different context for settings and internal files.</translation>
+      <translation>Vykdo programą kitame kontekste nustatymams ir vidiniams failams.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="494"/>
       <source>Single application mode is not supported on your system!</source>
-      <translation type="unfinished">Single application mode is not supported on your system!</translation>
+      <translation>Jūsų sistemoje nepalaikomas vienos programos režimas!</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="503"/>
       <source>Another instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</source>
-      <translation type="unfinished">Another instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</translation>
+      <translation>Kitas „QOwnNotes“ egzempliorius jau buvo pradėtas! Nustatymuose galite išjungti vieno egzemplioriaus režimą arba naudoti parametrą - leisti kelis atvejus.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="535"/>
       <source>A second instance of QOwnNotes was attempted to be started!</source>
-      <translation type="unfinished">A second instance of QOwnNotes was attempted to be started!</translation>
+      <translation>Buvo bandoma pradėti antrą „QOwnNotes“ egzempliorių!</translation>
     </message>
   </context>
 </TS>

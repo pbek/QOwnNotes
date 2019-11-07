@@ -4911,12 +4911,12 @@ Bare test dig selv, hvis du får synkroniseringskonflikter og angiv en højere v
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2395"/>
       <source>Kurdish</source>
-      <translation type="unfinished">Kurdish</translation>
+      <translation>Kurdisk</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2406"/>
       <source>Lithuanian</source>
-      <translation type="unfinished">Lithuanian</translation>
+      <translation>Litauisk</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2417"/>

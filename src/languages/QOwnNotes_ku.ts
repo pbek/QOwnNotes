@@ -328,15 +328,15 @@
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5897"/>
       <source>%n lines moved.</source>
-      <translation type="unfinished">
-        <numerusform>%n lines moved.</numerusform>
-        <numerusform>%n lines moved.</numerusform>
+      <translation>
+        <numerusform>%n xet hatin veguheztin.</numerusform>
+        <numerusform>2 xet hatin veguheztin.</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5958"/>
       <source>File "%1" exists (add ! to override)</source>
-      <translation type="unfinished">File "%1" exists (add ! to override)</translation>
+      <translation>Το αρχείο "%1" υπάρχει (προσθέστε ! Για να παρακάμψετε)</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5972"/>
@@ -423,9 +423,9 @@
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6507"/>
       <source>%n lines %1ed %2 time.</source>
       <comment>%1 can be '&gt;' or '&lt;'</comment>
-      <translation type="unfinished">
-        <numerusform>%n lines %1ed %2 time.</numerusform>
-        <numerusform>%n lines %1ed %2 time.</numerusform>
+      <translation>
+        <numerusform>%n γραμμή %1ed %2 ώρα.</numerusform>
+        <numerusform>%n γραμμές %1ed %2 χρόνο.</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -813,55 +813,55 @@
       <location filename="../widgets/layoutwidget.cpp" line="142"/>
       <source>Full</source>
       <comment>Layout name</comment>
-      <translation type="unfinished">Full</translation>
+      <translation>Tije</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="144"/>
       <source>Full vertical</source>
       <comment>Layout name</comment>
-      <translation type="unfinished">Full vertical</translation>
+      <translation>Tiştek vertical</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="146"/>
       <source>Single column</source>
       <comment>Layout name</comment>
-      <translation type="unfinished">Single column</translation>
+      <translation>Kolona yek</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="154"/>
       <source>The note edit panel is the central widget that will be resized automatically.</source>
       <comment>Layout description</comment>
-      <translation type="unfinished">The note edit panel is the central widget that will be resized automatically.</translation>
+      <translation>Panelê guhartina nîşeyê wijdana navendî ye ku dê bixweber bête guherandin.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="158"/>
       <source>Because of this there is no central widget that will be resized automatically.</source>
       <comment>Layout description</comment>
-      <translation type="unfinished">Because of this there is no central widget that will be resized automatically.</translation>
+      <translation>Ji ber vê yekê widgetek navendî tune ku jixweber ji nû ve were guhertin.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="162"/>
       <source>Just the note list on the left and the note edit panel on the right are enabled by default.</source>
       <comment>Layout description</comment>
-      <translation type="unfinished">Just the note list on the left and the note edit panel on the right are enabled by default.</translation>
+      <translation>Tenê navnîşa nîşana li milê çepê û panelê guhartina tomarê ya li rastê ji hêla xwerû ve hatî çalak kirin.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="166"/>
       <source>Most of the panels, like the note list on the left, the tagging panels, the note edit panel in the center and the preview panel on the right are enabled by default.</source>
       <comment>Layout description</comment>
-      <translation type="unfinished">Most of the panels, like the note list on the left, the tagging panels, the note edit panel in the center and the preview panel on the right are enabled by default.</translation>
+      <translation>Piraniya panelan, mîna navnîşa nîşana li milê çepê, panelên nîşankirinê, panelê sererastkirina nîşanê li navendê û panela pêşdîtinê ya li rastê ji hêla xwerû ve hatî aktîfkirin.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="171"/>
       <source>Most of the panels, like the note list on the left, the tagging panels, the note edit panel on the right and the preview panel on top of the note edit panel are enabled by default.</source>
       <comment>Layout description</comment>
-      <translation type="unfinished">Most of the panels, like the note list on the left, the tagging panels, the note edit panel on the right and the preview panel on top of the note edit panel are enabled by default.</translation>
+      <translation>Piraniya panelan, mîna navnîşa nîşana li milê çepê, panelên nîşankirinê, panelê sererastkirina nîşanê li rastê û panela pêşdîtinê ya li jorê panelê guhartina notê ji hêla xwerû ve hatî çalak kirin.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="176"/>
       <source>Tiny one column layout with note search, note list and note edit on top of each other.</source>
       <comment>Layout description</comment>
-      <translation type="unfinished">Tiny one column layout with note search, note list and note edit on top of each other.</translation>
+      <translation>Sêwirana yek-stûnê ya yekjimar bi lêgerîna note, navnîşa navnîşê û guhêrîna note li ser hev û din.</translation>
     </message>
   </context>
   <context>
@@ -869,69 +869,69 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="14"/>
       <source>Link an url or note</source>
-      <translation type="unfinished">Link an url or note</translation>
+      <translation>Url an nîşe girêdan</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="51"/>
       <source>Enter URL</source>
-      <translation type="unfinished">Enter URL</translation>
+      <translation>URL binivîse</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="60"/>
       <source>Enter an URL to link to</source>
-      <translation type="unfinished">Enter an URL to link to</translation>
+      <translation>URLek binivîse ku hûn pêve bibin</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="83"/>
       <source>Select local file or directory to link to</source>
-      <translation type="unfinished">Select local file or directory to link to</translation>
+      <translation>Pelê an peldanka herêmî hilbijêrin ku pêve bikin</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="94"/>
       <source>Note</source>
-      <translation type="unfinished">Note</translation>
+      <translation>Not</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="141"/>
       <source>Enter the name of the link (optional)</source>
-      <translation type="unfinished">Enter the name of the link (optional)</translation>
+      <translation>Navê girêdanê binivîse (vebijarkî)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="144"/>
       <source>Name of link (optional)</source>
-      <translation type="unfinished">Name of link (optional)</translation>
+      <translation>Navê girêdanê (vebijarkî)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="154"/>
       <source>Enter a description for the link (optional)</source>
-      <translation type="unfinished">Enter a description for the link (optional)</translation>
+      <translation>Navnîşek ji bo girêdanê binivîse (vebijarkî)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="157"/>
       <source>Description of link (optional)</source>
-      <translation type="unfinished">Description of link (optional)</translation>
+      <translation>Danasîna girêdanê (vebijarkî)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="109"/>
       <source>Search for notes or create new notes by entering text and pressing return</source>
-      <translation type="unfinished">Search for notes or create new notes by entering text and pressing return</translation>
+      <translation>Bi ketina nivîsê û zivirandina vegera li ser nîşeyan bigerin an nîşanên nû biafirînin</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="124"/>
       <source>Search for a note to link to</source>
-      <translation type="unfinished">Search for a note to link to</translation>
+      <translation>Li ser girêdanek ji bo nîşankê bigerin</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.cpp" line="222"/>
       <location filename="../dialogs/linkdialog.cpp" line="294"/>
       <source>Select file to link to</source>
-      <translation type="unfinished">Select file to link to</translation>
+      <translation>Pelê hilbijêrin ku pêve bikin</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.cpp" line="254"/>
       <location filename="../dialogs/linkdialog.cpp" line="302"/>
       <source>Select directory to link to</source>
-      <translation type="unfinished">Select directory to link to</translation>
+      <translation>Peldanka hilbijêrin ku pêve bikin</translation>
     </message>
   </context>
   <context>
@@ -939,54 +939,54 @@
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="14"/>
       <source>Locally trashed notes</source>
-      <translation type="unfinished">Locally trashed notes</translation>
+      <translation>Nîşanên herêmî bişkojk kirin</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="55"/>
       <source>Find note name</source>
-      <translation type="unfinished">Find note name</translation>
+      <translation>Navê nîşangê bibînin</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="81"/>
       <source>Name</source>
-      <translation type="unfinished">Name</translation>
+      <translation>Nav</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="86"/>
       <source>Trashed</source>
-      <translation type="unfinished">Trashed</translation>
+      <translation>Xwe traş kirin</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="41"/>
       <source>Restore</source>
-      <translation type="unfinished">Restore</translation>
+      <translation>Nûvdekirin</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="42"/>
       <location filename="../dialogs/localtrashdialog.cpp" line="194"/>
       <source>Restore selected notes</source>
-      <translation type="unfinished">Restore selected notes</translation>
+      <translation>Nîşeyên bijarte nû bikin</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="51"/>
       <source>Remove</source>
-      <translation type="unfinished">Remove</translation>
+      <translation>Dûrxistin</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="52"/>
       <location filename="../dialogs/localtrashdialog.cpp" line="240"/>
       <source>Remove selected notes</source>
-      <translation type="unfinished">Remove selected notes</translation>
+      <translation>Nîşeyên bijarte derxistin</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="97"/>
       <source>File will be restored to: %1</source>
-      <translation type="unfinished">File will be restored to: %1</translation>
+      <translation>Pel dê were sererast kirin: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="106"/>
       <source>File &lt;strong&gt;%1&lt;/strong&gt; isn't readable and can't be restored!</source>
-      <translation type="unfinished">File &lt;strong&gt;%1&lt;/strong&gt; isn't readable and can't be restored!</translation>
+      <translation>Pelê &lt;strong&gt;%1&lt;/strong&gt; nayê xwendin û nabe ku were sererast kirin!</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="195"/>
@@ -999,14 +999,14 @@
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="218"/>
       <source>Notes restored</source>
-      <translation type="unfinished">Notes restored</translation>
+      <translation>Nişan danîn</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="219"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</source>
-      <translation type="unfinished">
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</numerusform>
+      <translation>
+        <numerusform>&lt;strong&gt;%n &lt;/strong&gt; nîşana sererast kirin</numerusform>
+        <numerusform>&lt;strong&gt;%n &lt;/strong&gt; nîşanas sererast kirin</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -1020,7 +1020,7 @@
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="264"/>
       <source>Notes removed</source>
-      <translation type="unfinished">Notes removed</translation>
+      <translation>Nîşan jêbirin</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="265"/>
@@ -1036,22 +1036,22 @@
     <message>
       <location filename="../widgets/logwidget.ui" line="26"/>
       <source>Logs</source>
-      <translation type="unfinished">Logs</translation>
+      <translation>Logs</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="114"/>
       <source>Fatal</source>
-      <translation type="unfinished">Fatal</translation>
+      <translation>Kûşte</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="100"/>
       <source>Warning</source>
-      <translation type="unfinished">Warning</translation>
+      <translation>Gazî</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="107"/>
       <source>Critical</source>
-      <translation type="unfinished">Critical</translation>
+      <translation>Rexneyan</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="86"/>
@@ -1575,13 +1575,13 @@
     <message>
       <location filename="../mainwindow.ui" line="1763"/>
       <source>Paste html or media</source>
-      <translation type="unfinished">Paste html or media</translation>
+      <translation>Html an medya biweşînin</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1766"/>
       <location filename="../mainwindow.ui" line="1769"/>
       <source>Paste images, notes and html from the clipboard</source>
-      <translation type="unfinished">Paste images, notes and html from the clipboard</translation>
+      <translation>Wêneyê, notayan û html ji klîpê derdixin</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1781"/>
@@ -1864,79 +1864,79 @@
       <location filename="../mainwindow.ui" line="1879"/>
       <location filename="../mainwindow.ui" line="1882"/>
       <source>The note edit panel will be above the preview panel</source>
-      <translation type="unfinished">The note edit panel will be above the preview panel</translation>
+      <translation>Panela guhêrbariyê ya nîşeyê dê li jorê panela pêşdîtinê be</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1891"/>
       <source>Replace in current note</source>
-      <translation type="unfinished">Replace in current note</translation>
+      <translation>Di nîşeya heyî de cih bigirin</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1899"/>
       <source>Autocomplete, solve equation or open URL</source>
-      <translation type="unfinished">Autocomplete, solve equation or open URL</translation>
+      <translation>Xweser, tevnehev an URL-a vekirî çareser bikin</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1902"/>
       <source>Solve a simple equation like '(2+3)*6=' in the current line</source>
-      <translation type="unfinished">Solve a simple equation like '(2+3)*6=' in the current line</translation>
+      <translation>Di xeta niha de wekheviyek hêsan wekî '(2 + 3) * 6 =' çareser bikin</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1910"/>
       <source>Select note folder</source>
-      <translation type="unfinished">Select note folder</translation>
+      <translation>Peldanka bîrdanê hilbijêrin</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1925"/>
       <source>Reload scripting engine</source>
-      <translation type="unfinished">Reload scripting engine</translation>
+      <translation>Motora scripting nûve bikin</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1958"/>
       <location filename="../mainwindow.ui" line="1961"/>
       <source>Open the #qownnotes IRC channel, you have to stay online to get a response</source>
-      <translation type="unfinished">Open the #qownnotes IRC channel, you have to stay online to get a response</translation>
+      <translation>Kanala #qownnotes IRC vekin, hûn neçar bimînin ku bersivê bigirin</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2188"/>
       <location filename="../mainwindow.ui" line="2191"/>
       <source>Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</source>
-      <translation type="unfinished">Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</translation>
+      <translation>Qownnotes Odeya Gitter vekin, hûn hewce ne ku hûn têkevin hesabek GitHub an Twitter-ê, lê hûn dikarin peyamên nexşandî bigirin</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="970"/>
       <source>Open chat</source>
-      <translation type="unfinished">Open chat</translation>
+      <translation>Chat-vekirî</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="510"/>
       <source>Note operations…</source>
-      <translation type="unfinished">Note operations…</translation>
+      <translation>Operasyonên têbînî…</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1564"/>
       <source>&amp;Print note (preview)</source>
-      <translation type="unfinished">&amp;Print note (preview)</translation>
+      <translation>&amp;Nîşana çapkirinê (pêşdîtinê)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1970"/>
       <source>Insert headline from note filename</source>
-      <translation type="unfinished">Insert headline from note filename</translation>
+      <translation>Sernavê ji navê pelê binivîsin</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1984"/>
       <source>Use softwrap in note editor and preview</source>
-      <translation type="unfinished">Use softwrap in note editor and preview</translation>
+      <translation>Di edîtor û pêşdîtinê de nermalav bikar bînin</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1992"/>
       <source>Show status bar</source>
-      <translation type="unfinished">Show status bar</translation>
+      <translation>Barê rewşê nîşan bikin</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2007"/>
       <source>Share note</source>
-      <translation type="unfinished">Share note</translation>
+      <translation>Nîşe parve bikin</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2037"/>
@@ -1946,33 +1946,33 @@
     <message>
       <location filename="../mainwindow.ui" line="2046"/>
       <source>Strike out text</source>
-      <translation type="unfinished">Strike out text</translation>
+      <translation>Nivîsar hişk kirin</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2057"/>
       <source>Use one column mode</source>
-      <translation type="unfinished">Use one column mode</translation>
+      <translation>Mode yek kolon bikar bînin</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2060"/>
       <location filename="../mainwindow.ui" line="2063"/>
       <source>Use a one column minimal mode (like NVAlt)</source>
-      <translation type="unfinished">Use a one column minimal mode (like NVAlt)</translation>
+      <translation>Moda hindiktirîn yek kolon bikar bînin (mîna NVAlt)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2075"/>
       <source>Show menu bar</source>
-      <translation type="unfinished">Show menu bar</translation>
+      <translation>Barîna menu nîşan bide</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2087"/>
       <source>Split note at cursor position</source>
-      <translation type="unfinished">Split note at cursor position</translation>
+      <translation>Di pozîsyona kursiyê de nîşangê parve bikin</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2107"/>
       <source>Donate</source>
-      <translation type="unfinished">Donate</translation>
+      <translation>Bêşdan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2128"/>
@@ -2430,7 +2430,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="9391"/>
       <location filename="../mainwindow.cpp" line="9565"/>
       <source>Rename note</source>
-      <translation type="unfinished">Rename note</translation>
+      <translation>Têbînî rename</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9392"/>
@@ -2440,12 +2440,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="9404"/>
       <source>&amp;Move notes to…</source>
-      <translation type="unfinished">&amp;Move notes to…</translation>
+      <translation>&amp;Nîşan bidin ber…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9405"/>
       <source>&amp;Copy notes to…</source>
-      <translation type="unfinished">&amp;Copy notes to…</translation>
+      <translation>&amp;Nivîsên li ser…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9440"/>
@@ -2547,7 +2547,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="11310"/>
       <source>Leave full-screen mode</source>
-      <translation type="unfinished">Leave full-screen mode</translation>
+      <translation>Moda full-screen hiştin</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7972"/>
@@ -2561,7 +2561,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.ui" line="2418"/>
       <location filename="../mainwindow.cpp" line="10986"/>
       <source>Allow all note editing</source>
-      <translation type="unfinished">Allow all note editing</translation>
+      <translation>Hemî sererastkirina note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1196"/>
@@ -2571,7 +2571,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="4511"/>
       <source>Remove tag from selected notes</source>
-      <translation type="unfinished">Remove tag from selected notes</translation>
+      <translation>Ji nîşanên hilbijartî rakirina tagê</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4512"/>
@@ -2592,32 +2592,32 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="4615"/>
       <source>Current notes folder: </source>
-      <translation type="unfinished">Current notes folder: </translation>
+      <translation>Peldanka naha ya niha:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4617"/>
       <source>Set the notes folder. Current notes folder: </source>
-      <translation type="unfinished">Set the notes folder. Current notes folder: </translation>
+      <translation>Peldanka nîşeyan bicîh bikin. Peldanka naha ya niha: </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4813"/>
       <source>Print note</source>
-      <translation type="unfinished">Print note</translation>
+      <translation>Nivîsa çapkirinê</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4879"/>
       <source>Letter</source>
-      <translation type="unfinished">Letter</translation>
+      <translation>Name</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4908"/>
       <source>Portrait</source>
-      <translation type="unfinished">Portrait</translation>
+      <translation>Portûgal</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4908"/>
       <source>Landscape</source>
-      <translation type="unfinished">Landscape</translation>
+      <translation>Dorhalî</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4913"/>
@@ -2632,7 +2632,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="4936"/>
       <source>Export current note as PDF</source>
-      <translation type="unfinished">Export current note as PDF</translation>
+      <translation>Nîşana niha wekî PDF-ê derxînin</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5047"/>
@@ -2885,7 +2885,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="8195"/>
       <source>&amp;Add tag</source>
-      <translation type="unfinished">&amp;Add tag</translation>
+      <translation>&amp;Tagê zêde bikin</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8244"/>
@@ -2915,17 +2915,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="7524"/>
       <source>show all notes tagged with '%1' (%2)</source>
-      <translation type="unfinished">show all notes tagged with '%1' (%2)</translation>
+      <translation>nîşangirên nîşankirî yên bi '%1' (%2) nîşan bidin</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8206"/>
       <source>&amp;Remove tags</source>
-      <translation type="unfinished">&amp;Remove tags</translation>
+      <translation>&amp;Tags derxistin</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5046"/>
       <source>No selected todo lists!</source>
-      <translation type="unfinished">No selected todo lists!</translation>
+      <translation>No navnîşên hilbijartinên todo hilbijartî!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="670"/>
@@ -2940,17 +2940,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="690"/>
       <source>Note search</source>
-      <translation type="unfinished">Note search</translation>
+      <translation>Têbigere lêgerîn</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="708"/>
       <source>Note list</source>
-      <translation type="unfinished">Note list</translation>
+      <translation>Navnîşa nîşeyê</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="732"/>
       <source>Note edit</source>
-      <translation type="unfinished">Note edit</translation>
+      <translation>Nîşe biguherîne</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="743"/>
@@ -3402,17 +3402,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="1033"/>
       <source>ownCloud server connection error</source>
-      <translation type="unfinished">ownCloud server connection error</translation>
+      <translation>ownCloud xeletiya girêdana serverê</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1037"/>
       <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
-      <translation type="unfinished">ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</translation>
+      <translation>errorewtiya serverê xweya serverê: &lt;strong&gt;%1 &lt;/strong&gt; &lt;br /&gt; Ji kerema xwe vesazkirina ownCloud' binihêrin.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1056"/>
       <source>You need to setup your ownCloud server!</source>
-      <translation type="unfinished">You need to setup your ownCloud server!</translation>
+      <translation>Pêdivî ye ku hûn servera ownCloud saz bikin!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1069"/>
@@ -3458,27 +3458,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../services/owncloudservice.cpp" line="1249"/>
       <location filename="../services/owncloudservice.cpp" line="1275"/>
       <source>Error while loading todo lists!</source>
-      <translation type="unfinished">Error while loading todo lists!</translation>
+      <translation>Whileewtî dema barkirina navnîşên todo!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1250"/>
       <source>Your CalDAV server didn't reply anything!</source>
-      <translation type="unfinished">Your CalDAV server didn't reply anything!</translation>
+      <translation>Servera we ya CalDAV tiştek bersiv neda!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1276"/>
       <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation type="unfinished">Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</translation>
+      <translation>Peyama çewtiyê ji servera xweya CalDAV: &lt;strong&gt;%1&lt;/strong&gt;</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1945"/>
       <source>No bookmarks</source>
-      <translation type="unfinished">No bookmarks</translation>
+      <translation>No nîşanker</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1946"/>
       <source>No bookmarks were found on the server.</source>
-      <translation type="unfinished">No bookmarks were found on the server.</translation>
+      <translation>Li ser serverê tû rûpelek nayên dîtin.</translation>
     </message>
   </context>
   <context>
@@ -3486,27 +3486,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/passworddialog.ui" line="14"/>
       <source>Please enter your password</source>
-      <translation type="unfinished">Please enter your password</translation>
+      <translation>Ji kerema xwe şîfreya xwe binivîse</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="24"/>
       <source>Enter your password:</source>
-      <translation type="unfinished">Enter your password:</translation>
+      <translation>Passwordîfreya xwe binivîse:</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="34"/>
       <source>Password</source>
-      <translation type="unfinished">Password</translation>
+      <translation>Şîfre</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="44"/>
       <source>Re-enter password</source>
-      <translation type="unfinished">Re-enter password</translation>
+      <translation>Passwordîfreya dîsa veke</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="54"/>
       <source>Passwords don't match!</source>
-      <translation type="unfinished">Passwords don't match!</translation>
+      <translation>Passwordîfre hev nagirin!</translation>
     </message>
   </context>
   <context>
@@ -3514,32 +3514,32 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../entities/notefolder.cpp" line="482"/>
       <source>default</source>
-      <translation type="unfinished">default</translation>
+      <translation>jidestrevandin</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="1188"/>
       <source>Could not store note file: %1 - Error message: %2</source>
-      <translation type="unfinished">Could not store note file: %1 - Error message: %2</translation>
+      <translation>Dosya tomar nekarin nekarin: %1 - Peyama çewtiyê: %2</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="1259"/>
       <source>Renamed note-file was removed: %1</source>
-      <translation type="unfinished">Renamed note-file was removed: %1</translation>
+      <translation>Nasname-pelê navê hate guhertin: %1</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="1267"/>
       <source>Could not remove renamed note-file: %1 - Error message: %2</source>
-      <translation type="unfinished">Could not remove renamed note-file: %1 - Error message: %2</translation>
+      <translation>Pel-paşnav-navê-guhertin nehat rakirin: %1 - Peyama çewtiyê: %2</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="2192"/>
       <source>Could not read image file: %1</source>
-      <translation type="unfinished">Could not read image file: %1</translation>
+      <translation>Nekariye pelê wêneyê bixwîne: %1</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="2819"/>
       <source>Note file path changed</source>
-      <translation type="unfinished">Note file path changed</translation>
+      <translation>Rêzeya pelê ya pelê guhertin</translation>
     </message>
     <message numerus="yes">
       <location filename="../entities/note.cpp" line="2820"/>
@@ -3561,42 +3561,42 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../helpers/toolbarcontainer.cpp" line="37"/>
       <location filename="../helpers/toolbarcontainer.cpp" line="112"/>
       <source>Unknown action %1</source>
-      <translation type="unfinished">Unknown action %1</translation>
+      <translation>Неизвестно действие %1</translation>
     </message>
     <message>
       <location filename="../helpers/toolbarcontainer.cpp" line="94"/>
       <source>Workspace selector</source>
-      <translation type="unfinished">Workspace selector</translation>
+      <translation>Hilbijarka cîhê kar</translation>
     </message>
     <message>
       <location filename="../utils/gui.cpp" line="307"/>
       <source>Don't ask again!</source>
-      <translation type="unfinished">Don't ask again!</translation>
+      <translation>Не питай отново!</translation>
     </message>
     <message>
       <location filename="../utils/gui.cpp" line="307"/>
       <source>Don't show again!</source>
-      <translation type="unfinished">Don't show again!</translation>
+      <translation>Не показвай отново!</translation>
     </message>
     <message>
       <location filename="../utils/git.cpp" line="74"/>
       <source>Command failed!</source>
-      <translation type="unfinished">Command failed!</translation>
+      <translation>Командата не бе успешна!</translation>
     </message>
     <message>
       <location filename="../utils/git.cpp" line="75"/>
       <source>The command &lt;code&gt;%1&lt;/code&gt; failed!</source>
-      <translation type="unfinished">The command &lt;code&gt;%1&lt;/code&gt; failed!</translation>
+      <translation>Командата &lt;code&gt;%1 &lt;/code&gt; не бе успешна!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3905"/>
       <source>New connection</source>
-      <translation type="unfinished">New connection</translation>
+      <translation>Нова връзка</translation>
     </message>
     <message>
       <location filename="../entities/cloudconnection.cpp" line="281"/>
       <source>Default</source>
-      <translation type="unfinished">Default</translation>
+      <translation>По подразбиране</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="216"/>
@@ -3606,12 +3606,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../main.cpp" line="217"/>
       <source>Your note folder was not found any more! Do you want to select a new one?</source>
-      <translation type="unfinished">Your note folder was not found any more! Do you want to select a new one?</translation>
+      <translation>Peldanka weya we qe naha hate dîtin! Ma hûn dixwazin yekek nû hilbijêrin?</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="223"/>
       <source>Please select the folder where your notes will get stored to</source>
-      <translation type="unfinished">Please select the folder where your notes will get stored to</translation>
+      <translation>Ji kerema xwe peldanka ku nivînên xwe li we digire hilbijêrin</translation>
     </message>
   </context>
   <context>
@@ -3619,7 +3619,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="541"/>
       <source>No suggestions for %1</source>
-      <translation type="unfinished">No suggestions for %1</translation>
+      <translation>Ji bo %1 pêşniyar tune</translation>
     </message>
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="552"/>
@@ -4136,7 +4136,7 @@ Ma hûn dixwazin wê yekê jî saz bikin?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1198"/>
       <source>username and password correct</source>
-      <translation type="unfinished">username and password correct</translation>
+      <translation>navê bikarhêner û şîfreyê rast e</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1154"/>
@@ -4147,7 +4147,7 @@ Ma hûn dixwazin wê yekê jî saz bikin?</translation>
       <location filename="../dialogs/settingsdialog.ui" line="1239"/>
       <location filename="../dialogs/settingsdialog.ui" line="1256"/>
       <source>unknown</source>
-      <translation type="unfinished">unknown</translation>
+      <translation>nenas</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1114"/>
@@ -4157,17 +4157,17 @@ Ma hûn dixwazin wê yekê jî saz bikin?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1232"/>
       <source>versions app enabled on server</source>
-      <translation type="unfinished">versions app enabled on server</translation>
+      <translation>guhertoyên sepanê li ser serverê çalak kirin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1249"/>
       <source>trash app enabled on server</source>
-      <translation type="unfinished">trash app enabled on server</translation>
+      <translation>app trash li ser server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1266"/>
       <source>notes path found on server</source>
-      <translation type="unfinished">notes path found on server</translation>
+      <translation>notes riya ku li ser server dîtiye</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="911"/>
@@ -4257,17 +4257,17 @@ Ma hûn dixwazin wê yekê jî saz bikin?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1781"/>
       <source>Default ownCloud calendar</source>
-      <translation type="unfinished">Default ownCloud calendar</translation>
+      <translation>Salnameya xwerû ya ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="168"/>
       <source>Interface</source>
-      <translation type="unfinished">Interface</translation>
+      <translation>Navberê</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1751"/>
       <source>Other CalDAV server</source>
-      <translation type="unfinished">Other CalDAV server</translation>
+      <translation>Din servera CalDAV</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2754"/>
@@ -4432,7 +4432,7 @@ Ma hûn dixwazin wê yekê jî saz bikin?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2538"/>
       <source>Russian</source>
-      <translation type="unfinished">Russian</translation>
+      <translation>Rûsî</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1533"/>
@@ -4442,32 +4442,32 @@ Ma hûn dixwazin wê yekê jî saz bikin?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2681"/>
       <source>If you change the language you have to restart the application for the changes to take action.</source>
-      <translation type="unfinished">If you change the language you have to restart the application for the changes to take action.</translation>
+      <translation>Ger hûn ziman biguherînin divê hûn serlêdana ji nû ve bidin dest pê kirin da ku hûn biguhezînin.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3432"/>
       <source>You need to reload the scripting engine if you modify a script file</source>
-      <translation type="unfinished">You need to reload the scripting engine if you modify a script file</translation>
+      <translation>Heke hûn pelek skrîptê biguherînin, hûn hewce ne ku motora scripting-ê nû bikin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3435"/>
       <source>Reload scripting engine</source>
-      <translation type="unfinished">Reload scripting engine</translation>
+      <translation>Motora scripting nûve bikin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3425"/>
       <source>Validate script</source>
-      <translation type="unfinished">Validate script</translation>
+      <translation>Nivîsara rast bikin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="288"/>
       <source>General</source>
-      <translation type="unfinished">General</translation>
+      <translation>Giştî</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3597"/>
       <source>Notes</source>
-      <translation type="unfinished">Notes</translation>
+      <translation>Nîşe</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3785"/>
@@ -4480,30 +4480,30 @@ Ma hûn dixwazin wê yekê jî saz bikin?</translation>
       <location filename="../dialogs/settingsdialog.ui" line="5490"/>
       <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
-      <translation type="unfinished">You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
-Just test yourself if you get sync conflicts and set a higher value if so.</translation>
+      <translation>Dibe ku hûn digel guhertoyên kevintir ên hevdemiya ownCloud-ê gava ku ji biniya 10 sec biçûyî de, tengasiyên sync bike.
+Heke hûn nakokiyên sync bikevin û xwe bi xwe nirxek bilindtir destnîşan bikin ger hûn xwe ceribînin.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2450"/>
       <source>Japanese</source>
-      <translation type="unfinished">Japanese</translation>
+      <translation>Japonî</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3672"/>
       <source>note save interval time [sec]</source>
-      <translation type="unfinished">note save interval time [sec]</translation>
+      <translation>nîşana dema interval hilîne [sec]</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3788"/>
       <source>Notify about all external modifications of the current note</source>
-      <translation type="unfinished">Notify about all external modifications of the current note</translation>
+      <translation>Li ser hemî guhêrên derveyî yên nîşana heyî agahdar bikin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4090"/>
       <location filename="../dialogs/settingsdialog.cpp" line="2011"/>
       <location filename="../dialogs/settingsdialog.cpp" line="2020"/>
       <source>Database</source>
-      <translation type="unfinished">Database</translation>
+      <translation>Databas</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4106"/>
@@ -4513,49 +4513,49 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4029"/>
       <source>Clear application data and exit</source>
-      <translation type="unfinished">Clear application data and exit</translation>
+      <translation>Daneyên serîlêdanê û derketinê vala bikin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4035"/>
       <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
-      <translation type="unfinished">This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</translation>
+      <translation>Vê bişkojka bihêle hûn hemî mîhengan paqij bikin, databasa herêmî ya todo ya herêmî rakin û QOwnNotes derkeve.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4045"/>
       <location filename="../dialogs/settingsdialog.cpp" line="2080"/>
       <source>Clear app data and exit</source>
-      <translation type="unfinished">Clear app data and exit</translation>
+      <translation>Daneyên serîlêdanê û derketinê vala bikin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3824"/>
       <source>Update dialog</source>
-      <translation type="unfinished">Update dialog</translation>
+      <translation>Diyaloga nûve bikin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3904"/>
       <source>Default note file extension</source>
-      <translation type="unfinished">Default note file extension</translation>
+      <translation>Pêveka dirêjkirina pelê nîşanker</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3989"/>
       <source>External editor</source>
-      <translation type="unfinished">External editor</translation>
+      <translation>Edîtorê derveyî</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4002"/>
       <source>path to external editor, leave empty for default</source>
-      <translation type="unfinished">path to external editor, leave empty for default</translation>
+      <translation>riya edîtorê derveyî, ji vala berbiçav vala bihêlin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4012"/>
       <location filename="../dialogs/settingsdialog.ui" line="5054"/>
       <source>set external editor</source>
-      <translation type="unfinished">set external editor</translation>
+      <translation>edîtorê derveyî saz bike</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1549"/>
       <source>App metrics</source>
-      <translation type="unfinished">App metrics</translation>
+      <translation>Metrên app</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1567"/>
@@ -4636,7 +4636,7 @@ Ji kerema xwe ew tenê neçalak bikin ku hûn bi rastî nikarin bi wê bijîn.</
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="299"/>
       <source>Portable mode</source>
-      <translation type="unfinished">Portable mode</translation>
+      <translation>Mode Portable</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="311"/>
@@ -4651,7 +4651,7 @@ Ji kerema xwe ew tenê neçalak bikin ku hûn bi rastî nikarin bi wê bijîn.</
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="347"/>
       <source>Debug options</source>
-      <translation type="unfinished">Debug options</translation>
+      <translation>Vebijarkên debug</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="568"/>
@@ -4713,12 +4713,12 @@ Ji kerema xwe ew tenê neçalak bikin ku hûn bi rastî nikarin bi wê bijîn.</
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="829"/>
       <source>ownCloud support</source>
-      <translation type="unfinished">ownCloud support</translation>
+      <translation>piştgiriya ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="835"/>
       <source>Enable ownCloud support</source>
-      <translation type="unfinished">Enable ownCloud support</translation>
+      <translation>Piştgiriya ownCloud çalak bikin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="866"/>
@@ -4767,12 +4767,12 @@ Ji kerema xwe ew tenê neçalak bikin ku hûn bi rastî nikarin bi wê bijîn.</
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1092"/>
       <source>Your ownCloud password</source>
-      <translation type="unfinished">Your ownCloud password</translation>
+      <translation>Şîfreya ownCloud te</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1120"/>
       <source>&amp;Connect to ownCloud server</source>
-      <translation type="unfinished">&amp;Connect to ownCloud server</translation>
+      <translation>&amp;Bi servera ownCloud ve girêdayî bikin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1147"/>
@@ -4912,12 +4912,12 @@ Ji kerema xwe ew tenê neçalak bikin ku hûn bi rastî nikarin bi wê bijîn.</
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2395"/>
       <source>Kurdish</source>
-      <translation type="unfinished">Kurdish</translation>
+      <translation>Kurdî</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2406"/>
       <source>Lithuanian</source>
-      <translation type="unfinished">Lithuanian</translation>
+      <translation>Lîtvanyayî</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2417"/>
@@ -4932,57 +4932,57 @@ Ji kerema xwe ew tenê neçalak bikin ku hûn bi rastî nikarin bi wê bijîn.</
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2516"/>
       <source>Punjabi</source>
-      <translation type="unfinished">Punjabi</translation>
+      <translation>Pencabî</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2472"/>
       <source>Persian</source>
-      <translation type="unfinished">Persian</translation>
+      <translation>Farsî</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2527"/>
       <source>Romanian</source>
-      <translation type="unfinished">Romanian</translation>
+      <translation>Romanyayî</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2549"/>
       <source>Serbian</source>
-      <translation type="unfinished">Serbian</translation>
+      <translation>Sirbî</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2560"/>
       <source>Albanian</source>
-      <translation type="unfinished">Albanian</translation>
+      <translation>Albanî</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2571"/>
       <source>Slovak</source>
-      <translation type="unfinished">Slovak</translation>
+      <translation>Slovakî</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2582"/>
       <source>Slovenian</source>
-      <translation type="unfinished">Slovenian</translation>
+      <translation>Slovenî</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2593"/>
       <source>Swedish</source>
-      <translation type="unfinished">Swedish</translation>
+      <translation>Swêdî</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2604"/>
       <source>Tagalog</source>
-      <translation type="unfinished">Tagalog</translation>
+      <translation>Tagalogî</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2615"/>
       <source>Turkish</source>
-      <translation type="unfinished">Turkish</translation>
+      <translation>Tirkî</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2637"/>
       <source>Urdu</source>
-      <translation type="unfinished">Urdu</translation>
+      <translation>Ûrdûyî</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2648"/>
@@ -4997,52 +4997,52 @@ Ji kerema xwe ew tenê neçalak bikin ku hûn bi rastî nikarin bi wê bijîn.</
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2727"/>
       <source>Enable dark mode application icon and tray icon</source>
-      <translation type="unfinished">Enable dark mode application icon and tray icon</translation>
+      <translation>Iconkona serlêdana moda tarî û îkona tray çalak bike</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2734"/>
       <source>You might also want to choose another editor color schema in the editor settings in dark mode.</source>
-      <translation type="unfinished">You might also want to choose another editor color schema in the editor settings in dark mode.</translation>
+      <translation>Hûn dikarin di moda edîtorê de di moda tarî de jî bixwazin ku rengek rengek rengîn ê edîtor hilbijêrin.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2837"/>
       <source>Enable dark mode icon theme</source>
-      <translation type="unfinished">Enable dark mode icon theme</translation>
+      <translation>Mijara îkonê ya moda tarî çalak bike</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2767"/>
       <source>System tray</source>
-      <translation type="unfinished">System tray</translation>
+      <translation>Tray pergala</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2776"/>
       <source>Show system tray icon</source>
-      <translation type="unfinished">Show system tray icon</translation>
+      <translation>Sembola tray ya pergalê nîşan bide</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2786"/>
       <source>Start application hidden</source>
-      <translation type="unfinished">Start application hidden</translation>
+      <translation>Serîlêdana veşartî dest pê bikin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2796"/>
       <source>Interface style</source>
-      <translation type="unfinished">Interface style</translation>
+      <translation>Şêwaza navbeynkariyê</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2827"/>
       <source>Enforce system icon theme</source>
-      <translation type="unfinished">Enforce system icon theme</translation>
+      <translation>Vebijarka îkona pergalê bicîh bikin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2933"/>
       <source>Override interface font size</source>
-      <translation type="unfinished">Override interface font size</translation>
+      <translation>Mezinahiya fontê ya nîgarkêşê kêmtir bikin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2942"/>
       <source>Interface font size:</source>
-      <translation type="unfinished">Interface font size:</translation>
+      <translation>Size font font:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3152"/>
@@ -5052,66 +5052,66 @@ Ji kerema xwe ew tenê neçalak bikin ku hûn bi rastî nikarin bi wê bijîn.</
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3798"/>
       <source>Use legacy way to link to notes, images and attachments</source>
-      <translation type="unfinished">Use legacy way to link to notes, images and attachments</translation>
+      <translation>Rêbaza mîras bikar bînin ku bi nîşeyan, wêneyan û pêvekan ve girêdayî bikin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3745"/>
       <source>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</source>
-      <translation type="unfinished">When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</translation>
+      <translation>Gava ku vekirina nîgaran rewşa kursiyê di nav note de be, wê ji nû ve li rewşa ku gava paşîn di civîna niha de hat ziyaret kirin de ji nû ve li ser pozîsyonê were vegerandin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3765"/>
       <source>By default the headline will generated automatically</source>
-      <translation type="unfinished">By default the headline will generated automatically</translation>
+      <translation>Bi xwerû sernavê dê bixweber çêbibe</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3768"/>
       <source>The shortcut to create a new note asks for a headline</source>
-      <translation type="unfinished">The shortcut to create a new note asks for a headline</translation>
+      <translation>Kurteya ji bo çêkirina niqteyek nû ji sernivîsek dipirse</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3755"/>
       <source>Automatically close the note folder database to prevent problems with sync tools</source>
-      <translation type="unfinished">Automatically close the note folder database to prevent problems with sync tools</translation>
+      <translation>Ji bo pêşî li pirsgirêkên bi amûrên hevgirtinê re nebe, bixweber databasa peldanka nîşangê nêzîk dibe</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3758"/>
       <source>Automatically close the note folder database</source>
-      <translation type="unfinished">Automatically close the note folder database</translation>
+      <translation>Bixweber databasesa peldanka nîşanê bigire</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3846"/>
       <source>Search engine</source>
-      <translation type="unfinished">Search engine</translation>
+      <translation>Motora lêgerînê</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3868"/>
       <source>Message boxes</source>
-      <translation type="unfinished">Message boxes</translation>
+      <translation>Qutiyên peyamê</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3874"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3658"/>
       <source>Reset message boxes</source>
-      <translation type="unfinished">Reset message boxes</translation>
+      <translation>Bişkojkên mesajê resen bikin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4067"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3724"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3747"/>
       <source>Import settings</source>
-      <translation type="unfinished">Import settings</translation>
+      <translation>Mîhengên import</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4074"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3690"/>
       <source>Export settings</source>
-      <translation type="unfinished">Export settings</translation>
+      <translation>Mîhengên export</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4213"/>
       <source>Open issue assistant</source>
-      <translation type="unfinished">Open issue assistant</translation>
+      <translation>Alîkarê pirsgirêka vekirî</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4224"/>
@@ -5121,37 +5121,37 @@ Ji kerema xwe ew tenê neçalak bikin ku hûn bi rastî nikarin bi wê bijîn.</
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4518"/>
       <source>Ignore code font size to allow zooming</source>
-      <translation type="unfinished">Ignore code font size to allow zooming</translation>
+      <translation>Mezinahiya fontê ya kodê ji bîr nekin da ku zoom bikin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4547"/>
       <source>Rendering</source>
-      <translation type="unfinished">Rendering</translation>
+      <translation>Rindkirin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4553"/>
       <source>Enable underline rendering</source>
-      <translation type="unfinished">Enable underline rendering</translation>
+      <translation>Rêzkirina binivîsê çalak bikin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4809"/>
       <source>Fully highlight blockquotes</source>
-      <translation type="unfinished">Fully highlight blockquotes</translation>
+      <translation>Blokkotên tevahî ronî bikin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4879"/>
       <source>Note-edit cursor width:</source>
-      <translation type="unfinished">Note-edit cursor width:</translation>
+      <translation>Girêja kursî ya nîşanker-biguherîne:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4828"/>
       <source>Enable Vim mode (some QOwnNotes shortcuts will not work)</source>
-      <translation type="unfinished">Enable Vim mode (some QOwnNotes shortcuts will not work)</translation>
+      <translation>Mode Vim çalak bike (hin kurteyên QOwnNot dê kar nekin)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="756"/>
       <source>Cloud connection:</source>
-      <translation type="unfinished">Cloud connection:</translation>
+      <translation>Girêdana cloud:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4913"/>
@@ -5211,7 +5211,7 @@ Ji kerema xwe ew tenê neçalak bikin ku hûn bi rastî nikarin bi wê bijîn.</
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5675"/>
       <source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
-      <translation type="unfinished">By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</translation>
+      <translation>Ji hêla xwerû ve pêveka geroka dê hemî girêdanên nîşana heyî nîşan bide. Hûn dikarin wê bi lêvekek taybetî nîşanên girêdanên nîşankirî yên taybetî nîşan bidin. Ji bo bêtir agahdarî li ser syntax girêdana nîşankirî &lt;a href="%1"&gt; li vir &lt;/a&gt; bikirtînin.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5688"/>
@@ -5441,80 +5441,80 @@ Ji kerema xwe ew tenê neçalak bikin ku hûn bi rastî nikarin bi wê bijîn.</
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5176"/>
       <source>By last change / use</source>
-      <translation type="unfinished">By last change / use</translation>
+      <translation>Bi guhertina paşîn / karanîna paşîn</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5209"/>
       <source>Hide 'Find or create tag' search</source>
-      <translation type="unfinished">Hide 'Find or create tag' search</translation>
+      <translation>Lêgerîna 'Find an afirandina tag' veşêrin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5219"/>
       <source>Note subfolders panel</source>
-      <translation type="unfinished">Note subfolders panel</translation>
+      <translation>Panelê subfolders-ê nîşan bikin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5225"/>
       <source>Show with full path</source>
-      <translation type="unfinished">Show with full path</translation>
+      <translation>Bi riya tevahî nîşan bidin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5245"/>
       <location filename="../dialogs/settingsdialog.ui" line="5378"/>
       <source>By last change</source>
-      <translation type="unfinished">By last change</translation>
+      <translation>Bi guhertina paşîn</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5255"/>
       <source>Show root folder name</source>
-      <translation type="unfinished">Show root folder name</translation>
+      <translation>Navê peldanka root nîşan bide</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5285"/>
       <source>Hide 'Find or create note subfolder' search</source>
-      <translation type="unfinished">Hide 'Find or create note subfolder' search</translation>
+      <translation>Lêgerîna 'Lêgerîn an Afirîna binê pelê binihêrin' veşêrin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5292"/>
       <source>Display note subfolders as full tree</source>
-      <translation type="unfinished">Display note subfolders as full tree</translation>
+      <translation>Dabeşên nîşankirinê wekî dara tevahî nîşan bikin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2596"/>
       <source>Search script repository</source>
-      <translation type="unfinished">Search script repository</translation>
+      <translation>Lêgerîna tomara lêgerînê</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5005"/>
       <source>You optionally can use "%notePath%" for the path of the note.</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
-      <translation type="unfinished">You optionally can use "%notePath%" for the path of the note.</translation>
+      <translation>Hûn bi vebijarkî dikarin ji bo riya nîşana "%notePath%" bikar bînin.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5028"/>
       <source>Git client</source>
-      <translation type="unfinished">Git client</translation>
+      <translation>Muwekîlê Git</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5044"/>
       <source>Path to git executable:</source>
-      <translation type="unfinished">Path to git executable:</translation>
+      <translation>Rê ji bo git îdamkirin:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5034"/>
       <source>Path to git client, leave empty for default</source>
-      <translation type="unfinished">Path to git client, leave empty for default</translation>
+      <translation>Riya ku bi xerîb git, dê ji bo xilafbûnê vala bimîne</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4953"/>
       <source>Commit interval</source>
-      <translation type="unfinished">Commit interval</translation>
+      <translation>Navberiya komîteyê</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4959"/>
       <source>sec</source>
       <extracomment>seconds</extracomment>
-      <translation type="unfinished">sec</translation>
+      <translation>sec</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4979"/>
@@ -5529,27 +5529,27 @@ Ji kerema xwe ew tenê neçalak bikin ku hûn bi rastî nikarin bi wê bijîn.</
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="227"/>
       <source>Preview</source>
-      <translation type="unfinished">Preview</translation>
+      <translation>Pêşnerîn</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="276"/>
       <source>Browser extension</source>
-      <translation type="unfinished">Browser extension</translation>
+      <translation>Berfirehiya gerokê</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1745"/>
       <source>Which calendar backend do you want to use?</source>
-      <translation type="unfinished">Which calendar backend do you want to use?</translation>
+      <translation>Hûn kîjan paşengiya salnameyê dixwazin hûn bikar bînin?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1778"/>
       <source>For most current ownCloud and Nextcloud installations</source>
-      <translation type="unfinished">For most current ownCloud and Nextcloud installations</translation>
+      <translation>Ji bo piranî sazkirinên xweya ownCloud û Nextcloud hene</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1758"/>
       <source>For older versions of ownCloud where the default setting doesn't work</source>
-      <translation type="unfinished">For older versions of ownCloud where the default setting doesn't work</translation>
+      <translation>Ji bo guhertoyên kevn ên ownCloud-yê ku mîhenga xwerû nexebite</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1761"/>
@@ -5564,77 +5564,77 @@ Ji kerema xwe ew tenê neçalak bikin ku hûn bi rastî nikarin bi wê bijîn.</
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1803"/>
       <source>Calendar base url:</source>
-      <translation type="unfinished">Calendar base url:</translation>
+      <translation>Url bingeha salnameyê:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1825"/>
       <source>Please enter the CalDAV base url to your calendar.</source>
-      <translation type="unfinished">Please enter the CalDAV base url to your calendar.</translation>
+      <translation>Ji kerema xwe salnameya xweya bingeha CalDAV binivîse.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1895"/>
       <source>Please enter the password for your CalDAV username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.</source>
-      <translation type="unfinished">Please enter the password for your CalDAV username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.</translation>
+      <translation>Ji kerema xwe şîfreya ji bo navê bikarhênerê ya CalDAV-yê binivîse. &lt;br/&gt; Niha şîfreya we bi mîhengên din re hatî şandin, lê pir ewle nine.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2175"/>
       <source>Czech</source>
-      <translation type="unfinished">Czech</translation>
+      <translation>Çekî</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2494"/>
       <source>Brazilian Portuguese</source>
-      <translation type="unfinished">Brazilian Portuguese</translation>
+      <translation>Portekîzî Brazilian</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2626"/>
       <source>Ukrainian</source>
-      <translation type="unfinished">Ukrainian</translation>
+      <translation>Ûkraynî</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3554"/>
       <source>The name</source>
-      <translation type="unfinished">The name</translation>
+      <translation>Nav</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3651"/>
       <source>Maximum height:</source>
-      <translation type="unfinished">Maximum height:</translation>
+      <translation>Bilindahiya herî zêde:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3624"/>
       <source>Maximum width:</source>
-      <translation type="unfinished">Maximum width:</translation>
+      <translation>Mezinahiya herî zêde:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3689"/>
       <source>Scale images down when inserted into notes</source>
-      <translation type="unfinished">Scale images down when inserted into notes</translation>
+      <translation>Wêneyê peldanka dakêşin jibergirtinê</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2340"/>
       <source>Croatian</source>
-      <translation type="unfinished">Croatian</translation>
+      <translation>Xirwatî</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3469"/>
       <source>Path to your QML file</source>
-      <translation type="unfinished">Path to your QML file</translation>
+      <translation>Riya pelê xweya QML</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3260"/>
       <source>Script name</source>
-      <translation type="unfinished">Script name</translation>
+      <translation>Navê script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3282"/>
       <source>Description:</source>
-      <translation type="unfinished">Description:</translation>
+      <translation>Terîf:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3364"/>
       <source>Version:</source>
-      <translation type="unfinished">Version:</translation>
+      <translation>Awa:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3325"/>
@@ -5890,22 +5890,22 @@ Ji kerema xwe ew tenê neçalak bikin ku hûn bi rastî nikarin bi wê bijîn.</
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3963"/>
       <source>If you add custom extensions just type in the extension, like "taskpaper".</source>
-      <translation type="unfinished">If you add custom extensions just type in the extension, like "taskpaper".</translation>
+      <translation>Heke hûn lêzêdanên xwerû bi navnîşan lê zêde bikin, wek "kaxezê peywirê".</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3967"/>
       <source>Text file (txt)</source>
-      <translation type="unfinished">Text file (txt)</translation>
+      <translation>Pelê nivîsê (txt)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3995"/>
       <source>Path to external editor:</source>
-      <translation type="unfinished">Path to external editor:</translation>
+      <translation>Rê ji bo edîtorê derveyî:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3830"/>
       <source>Don't show the update dialog automatically</source>
-      <translation type="unfinished">Don't show the update dialog automatically</translation>
+      <translation>Diyaloga nûvekirinê bixweber nîşan nedin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4260"/>
@@ -5919,7 +5919,7 @@ Ji kerema xwe ew tenê neçalak bikin ku hûn bi rastî nikarin bi wê bijîn.</
       <location filename="../dialogs/settingsdialog.ui" line="4421"/>
       <location filename="../dialogs/settingsdialog.ui" line="4473"/>
       <source>Set a new font</source>
-      <translation type="unfinished">Set a new font</translation>
+      <translation>Fontek nû veke</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4294"/>
@@ -6042,113 +6042,113 @@ Connection error message: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2319"/>
       <source>Remove note folder</source>
-      <translation type="unfinished">Remove note folder</translation>
+      <translation>Peldanka bîrdar derxistin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2320"/>
       <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation type="unfinished">Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+      <translation>Peldanka naha ya heyî &lt;strong&gt;%1 &lt;/strong&gt; rakirin?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2395"/>
       <source>Please select the folder where your notes will get stored to</source>
-      <translation type="unfinished">Please select the folder where your notes will get stored to</translation>
+      <translation>Ji kerema xwe peldanka ku nivînên xwe li we digire hilbijêrin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2432"/>
       <source>Loading folders from server</source>
-      <translation type="unfinished">Loading folders from server</translation>
+      <translation>Pelên ji serverê dakêşin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2446"/>
       <source>No more folders were found in the current folder</source>
-      <translation type="unfinished">No more folders were found in the current folder</translation>
+      <translation>Di peldanka naha de peldankên nayên dîtin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2519"/>
       <source>Loading folders in '%1' from server</source>
-      <translation type="unfinished">Loading folders in '%1' from server</translation>
+      <translation>Peldanka di '%1' de ji serverê dakêşin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2583"/>
       <source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
-      <translation type="unfinished">Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</translation>
+      <translation>Awirek li &lt;a href="%1"&gt; Belgekirinên Scriptting &lt;/a&gt; bigerin da ku hûn zûtirîn dest pê bikin.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2585"/>
       <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
-      <translation type="unfinished">If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</translation>
+      <translation>Heke hûn hewceyê gihîştina ji fonksiyonek diyarkirî di QOwnNotes de hebe ji kerema xwe mijarek li ser &lt;a href="%1"&gt; QOwnNotes pirsgirêka rûpelê vekin &lt;/a&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2606"/>
       <source>Check for script updates</source>
-      <translation type="unfinished">Check for script updates</translation>
+      <translation>Ji bo nûvekirina skripê kontrol bikin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2613"/>
       <source>Add local script</source>
-      <translation type="unfinished">Add local script</translation>
+      <translation>Skrîpta herêmî zêde bikin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2617"/>
       <source>Add an existing, local script</source>
-      <translation type="unfinished">Add an existing, local script</translation>
+      <translation>Nivîsarek heyî, herêmî zêde bikin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3689"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3746"/>
       <source>INI files</source>
-      <translation type="unfinished">INI files</translation>
+      <translation>Pelên INI</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3725"/>
       <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
-      <translation type="unfinished">Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</translation>
+      <translation>Hûn bi rastî dixwazin mîhengên pêvekirinê bidin? Mîhengên xweyê yên heyî dê werin jêbirin û her sazûmanek nabe ku ji nû ve bistînin, wek vebijarkên peldanka pelê ya note û kîjan tîpên ku hûn bikar tînin. Her weha hûn ê hewce ne ku hin mîhengan bikin, nemaze li seranserî platformê, lê nivînên we dê bimîne bimînin!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3735"/>
       <source>The application will be quit after the import.</source>
-      <translation type="unfinished">The application will be quit after the import.</translation>
+      <translation>Serlêdan dê piştî teşwîqê were qut kirin.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3736"/>
       <source>The application will be restarted after the import.</source>
-      <translation type="unfinished">The application will be restarted after the import.</translation>
+      <translation>Serlêdan piştî import dê ji nû ve dest pê bike.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2600"/>
       <source>Find a script in the script repository</source>
-      <translation type="unfinished">Find a script in the script repository</translation>
+      <translation>Di depoya tîpokê de skrîptek bibînin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="262"/>
       <source>Menu bar</source>
-      <translation type="unfinished">Menu bar</translation>
+      <translation>Barê menu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="263"/>
       <source>Show menu bar item</source>
-      <translation type="unfinished">Show menu bar item</translation>
+      <translation>Babeta menuê nîşan bide</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1558"/>
       <source>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</source>
-      <translation type="unfinished">The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</translation>
+      <translation>Kurteya &lt;strong&gt;%1 &lt;/strong&gt; yê jixwe ji hêla &lt;strong&gt;%2 &lt;/strong&gt; ve hatî destnîşankirin! Ma hûn dixwazin ku biçe kurtenûsê?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2696"/>
       <source>Remove script</source>
-      <translation type="unfinished">Remove script</translation>
+      <translation>Skrîpê rakirin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2697"/>
       <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation type="unfinished">Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+      <translation>Skrîpta heyî &lt;strong&gt;%1&lt;/strong&gt; rakin?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2748"/>
       <source>QML files</source>
-      <translation type="unfinished">QML files</translation>
+      <translation>Pelên QML</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2749"/>
@@ -6215,7 +6215,7 @@ Connection error message: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3512"/>
       <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
-      <translation type="unfinished">The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</translation>
+      <translation>Pelê log &lt;strong&gt;%1&lt;/strong&gt; hate paqij kirin.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3548"/>
@@ -6266,7 +6266,7 @@ Connection error message: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="416"/>
       <source>Portable mode is currently:</source>
-      <translation type="unfinished">Portable mode is currently:</translation>
+      <translation>Moda portable niha:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="419"/>
@@ -6308,19 +6308,19 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2084"/>
       <source>Clear and &amp;exit</source>
-      <translation type="unfinished">Clear and &amp;exit</translation>
+      <translation>Paqij û &amp;derketin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2015"/>
       <location filename="../dialogs/settingsdialog.cpp" line="2084"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3349"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>&amp;Bişûndekirin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="437"/>
       <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
-      <translation type="unfinished">You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</translation>
+      <translation>Hûn ê di riya serbestberdana we de &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt; bibînin da ku QOwnNotes di moda portable de dest pê bikin.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2012"/>
@@ -6348,27 +6348,27 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="40"/>
       <source>Share note on ownCloud</source>
-      <translation type="unfinished">Share note on ownCloud</translation>
+      <translation>Nîşe parve bikin li ser ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="73"/>
       <source>Allow note editing</source>
-      <translation type="unfinished">Allow note editing</translation>
+      <translation>Guhertin destûr bide</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="30"/>
       <source>The public url of your note</source>
-      <translation type="unfinished">The public url of your note</translation>
+      <translation>Url ya giştî ya nîşa we</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="47"/>
       <source>Publicly share the current note file on your ownCloud server. You can send the generated link to others so they can view or download the file.</source>
-      <translation type="unfinished">Publicly share the current note file on your ownCloud server. You can send the generated link to others so they can view or download the file.</translation>
+      <translation>Pelê nîşeya niha li ser servera xwe ya ownCloud parve bikin. Hûn dikarin girêdana çêkirî ji yên din re bişînin da ku ew dikarin pelê bibînin an dakêşin.</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.cpp" line="65"/>
       <source>Keep in mind that you still have to sync your notes with your server by using the ownCloud desktop sync tool to be able to share notes with others!</source>
-      <translation type="unfinished">Keep in mind that you still have to sync your notes with your server by using the ownCloud desktop sync tool to be able to share notes with others!</translation>
+      <translation>Li bîra xwe be ku hûn hîn neçar in ku bi karanîna amûreya sync ya sermaseyê ya ownCloud bikaribin notên xwe bi servera xwe re hevdeng bikin da ku hûn bikaribin notên bi yên din re parve bikin!</translation>
     </message>
   </context>
   <context>
@@ -6377,19 +6377,19 @@ Your notes will stay intact!</source>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="196"/>
       <source>40</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">40</translation>
+      <translation>40</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="197"/>
       <source>60</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">60</translation>
+      <translation>60</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="198"/>
       <source>80</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">80</translation>
+      <translation>80</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="199"/>
@@ -6669,99 +6669,99 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="100"/>
       <source>Save and insert into note</source>
-      <translation type="unfinished">Save and insert into note</translation>
+      <translation>Tomar bikin û di nav de bigirin</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="208"/>
       <source>Remove</source>
-      <translation type="unfinished">Remove</translation>
+      <translation>Dûrxistin</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="278"/>
       <source>Show completed items</source>
-      <translation type="unfinished">Show completed items</translation>
+      <translation>Tiştên qedandî nîşan bidin</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="285"/>
       <source>Reload the todo list from server</source>
-      <translation type="unfinished">Reload the todo list from server</translation>
+      <translation>Navnîşa todo ji serverê vekişînin</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="288"/>
       <source>Reload…</source>
-      <translation type="unfinished">Reload…</translation>
+      <translation>Daxistin…</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="319"/>
       <source>Search or create todo item</source>
-      <translation type="unfinished">Search or create todo item</translation>
+      <translation>Lêgerîn an çêkirina tişta todo</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="302"/>
       <source>select your todo list</source>
-      <translation type="unfinished">select your todo list</translation>
+      <translation>navnîşa xweya todo hilbijêrin</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="188"/>
       <source>Save the current todo item</source>
-      <translation type="unfinished">Save the current todo item</translation>
+      <translation>Tişta toda ya heyî hilîne</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="104"/>
       <source>Save the current todo item and insert a link to it into the current note</source>
-      <translation type="unfinished">Save the current todo item and insert a link to it into the current note</translation>
+      <translation>Tûreya heyî ya xwerû hilînin û girêdanek bi wê re têkevin nav nîşana niha</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="113"/>
       <source>Import the current todo item as new note</source>
-      <translation type="unfinished">Import the current todo item as new note</translation>
+      <translation>Tişta toda ya heyî binivîse wek nîşana nû</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="109"/>
       <source>Import as note</source>
-      <translation type="unfinished">Import as note</translation>
+      <translation>Wekî wekî nîşankirin</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="205"/>
       <source>Remove the current todo item</source>
-      <translation type="unfinished">Remove the current todo item</translation>
+      <translation>Tiştika toto ya heyî rakirin</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="309"/>
       <source>Todo list items are being loaded from the server</source>
-      <translation type="unfinished">Todo list items are being loaded from the server</translation>
+      <translation>Tiştên navnîşa todo ji serverê têne barkirin</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="124"/>
       <source>Reload from server</source>
-      <translation type="unfinished">Reload from server</translation>
+      <translation>Ji serverê dakêşin</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="128"/>
       <source>Reload tasks from server</source>
-      <translation type="unfinished">Reload tasks from server</translation>
+      <translation>Karûbarên ji serverê dakêşin</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="133"/>
       <source>Clear cache and reload</source>
-      <translation type="unfinished">Clear cache and reload</translation>
+      <translation>Cache hilweşandin û nûve bikin</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="137"/>
       <source>Clear calendar cache and reload tasks from server</source>
-      <translation type="unfinished">Clear calendar cache and reload tasks from server</translation>
+      <translation>Salixdana kêşeyê ya salnameyê vala bikin û ji serverê vekişînin</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="578"/>
       <source>Remove todo item</source>
-      <translation type="unfinished">Remove todo item</translation>
+      <translation>Tiştê hilkişînin</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="579"/>
       <source>Remove the selected todo item?
 This cannot be undone!</source>
-      <translation type="unfinished">Remove the selected todo item?
-This cannot be undone!</translation>
+      <translation>Tişteya bijare ya hilbijartî hilkişîne?
+Ev nayê piştguh kirin!</translation>
     </message>
   </context>
   <context>
@@ -6769,134 +6769,134 @@ This cannot be undone!</translation>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="23"/>
       <source>Select a menu</source>
-      <translation type="unfinished">Select a menu</translation>
+      <translation>Menuek hilbijêrin</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="26"/>
       <source>Lists the available menus to get the corresponding actions</source>
-      <translation type="unfinished">Lists the available menus to get the corresponding actions</translation>
+      <translation>Navnîşên heyî peyda dike da ku kirinên têkildar bistîne</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="33"/>
       <source>Select toolbar</source>
-      <translation type="unfinished">Select toolbar</translation>
+      <translation>Vebijêrk hilbijêrin</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="36"/>
       <source>List the available toolbars. The selected one will be edited</source>
-      <translation type="unfinished">List the available toolbars. The selected one will be edited</translation>
+      <translation>Vebijarkên amûrên heyî tomar bikin. Hilbijartî dê were guhertin</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="43"/>
       <source>Lists the actions in the selected toolbar</source>
-      <translation type="unfinished">Lists the actions in the selected toolbar</translation>
+      <translation>Kiryarên li ser amûrê amûrê bijarte listî dike</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="52"/>
       <source>Add new Toolbar</source>
-      <translation type="unfinished">Add new Toolbar</translation>
+      <translation>Vebijêrkên nû zêde bikin</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="55"/>
       <source>New</source>
-      <translation type="unfinished">New</translation>
+      <translation>Nşh</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="66"/>
       <source>Delete selected toolbar</source>
-      <translation type="unfinished">Delete selected toolbar</translation>
+      <translation>Vebijêrkek bijare hilbijêrin</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="69"/>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="168"/>
       <source>Remove</source>
-      <translation type="unfinished">Remove</translation>
+      <translation>Dûrxistin</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="82"/>
       <source>Lists the available actions for the selected menu</source>
-      <translation type="unfinished">Lists the available actions for the selected menu</translation>
+      <translation>Kiryarên heyî yên ji bo menuya bijare navnîş dike</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="104"/>
       <source>Move Up</source>
-      <translation type="unfinished">Move Up</translation>
+      <translation>Derketina jor</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="107"/>
       <source>Moves the selected toolbar item up</source>
-      <translation type="unfinished">Moves the selected toolbar item up</translation>
+      <translation>Materyona bijare ya bijare hilkişîne</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="110"/>
       <source>Move &amp;Up</source>
-      <translation type="unfinished">Move &amp;Up</translation>
+      <translation>Derketina &amp;jor</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="121"/>
       <source>Move Down</source>
-      <translation type="unfinished">Move Down</translation>
+      <translation>Biçve biçin</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="124"/>
       <source>moves the selected toolbar item down</source>
-      <translation type="unfinished">moves the selected toolbar item down</translation>
+      <translation>bijara amûrê bijartî dakêşe</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="127"/>
       <source>Move &amp;Down</source>
-      <translation type="unfinished">Move &amp;Down</translation>
+      <translation>Biçve &amp;biçin</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="151"/>
       <source>Insert</source>
-      <translation type="unfinished">Insert</translation>
+      <translation>Lêzêdekirin</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="154"/>
       <source>Adds the selected menu action to the toolbar</source>
-      <translation type="unfinished">Adds the selected menu action to the toolbar</translation>
+      <translation>Actionalakiya menu ya bijare li ser amûrê amûrê zêde dike</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="157"/>
       <source>&amp;Insert</source>
-      <translation type="unfinished">&amp;Insert</translation>
+      <translation>&amp;Lêzêdekirin</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="171"/>
       <source>Removes the selected item from the active toolbar</source>
-      <translation type="unfinished">Removes the selected item from the active toolbar</translation>
+      <translation>Tiştê bijarte ji makîneya çalak aşkera dike</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="174"/>
       <source>&amp;Remove</source>
-      <translation type="unfinished">&amp;Remove</translation>
+      <translation>&amp;Dûrxistin</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="198"/>
       <source>Separator</source>
-      <translation type="unfinished">Separator</translation>
+      <translation>Dabeşker</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="201"/>
       <source>&amp;Separator</source>
-      <translation type="unfinished">&amp;Separator</translation>
+      <translation>&amp;Dabeşker</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="192"/>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="216"/>
       <source>--(separator)--</source>
-      <translation type="unfinished">--(separator)--</translation>
+      <translation>--(dabeşker)--</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="309"/>
       <source>Remove current toolbar</source>
-      <translation type="unfinished">Remove current toolbar</translation>
+      <translation>Vebijêrka heyî rakin</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="310"/>
       <source>Remove the current toolbar?</source>
-      <translation type="unfinished">Remove the current toolbar?</translation>
+      <translation>Vebijêrka heyî hilweşîne?</translation>
     </message>
   </context>
   <context>
@@ -6904,27 +6904,27 @@ This cannot be undone!</translation>
     <message>
       <location filename="../dialogs/trashdialog.ui" line="14"/>
       <source>Trashed notes</source>
-      <translation type="unfinished">Trashed notes</translation>
+      <translation>Nîşaneyên hilweşandî</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.ui" line="55"/>
       <source>Find note name</source>
-      <translation type="unfinished">Find note name</translation>
+      <translation>Navê nîşangê bibînin</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="26"/>
       <source>&amp;Restore selected note on server</source>
-      <translation type="unfinished">&amp;Restore selected note on server</translation>
+      <translation>&amp;Nîşana bijarte li ser server nûve bikin</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="28"/>
       <source>&lt;h3&gt;Slower, but with note versions&lt;/h3&gt;&lt;p&gt;The note will be restored on your ownCloud server with all versions.&lt;/p&gt;&lt;p&gt;You will have to wait until it is synced to QOwnNotes by ownCloud sync.&lt;/p&gt;</source>
-      <translation type="unfinished">&lt;h3&gt;Slower, but with note versions&lt;/h3&gt;&lt;p&gt;The note will be restored on your ownCloud server with all versions.&lt;/p&gt;&lt;p&gt;You will have to wait until it is synced to QOwnNotes by ownCloud sync.&lt;/p&gt;</translation>
+      <translation>&lt;h3&gt; Hêdî hêdî, lê bi guhertoyên notê &lt;/h3&gt; &lt;p&gt; Tête paşnavê li ser servera xwe ya xweyê hemî guhertoyên nû bêne sererast kirin. &lt;/p&gt; &lt;p&gt; Hûn ê li bendê bin heya ku ew ji hevdemiya xweyaCloud-ê bi QOwnNotes re hevrû bibe. &lt;/p&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="41"/>
       <source>&amp;Download selected note</source>
-      <translation type="unfinished">&amp;Download selected note</translation>
+      <translation>&amp;Nîşeya bijarte dakêşin</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="43"/>
@@ -7218,12 +7218,12 @@ This cannot be undone!</translation>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="65"/>
       <source>Generate new token</source>
-      <translation type="unfinished">Generate new token</translation>
+      <translation>Nîşanek nû çêbikin</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="79"/>
       <source>Copy token</source>
-      <translation type="unfinished">Copy token</translation>
+      <translation>Token kopî kirin</translation>
     </message>
   </context>
   <context>
@@ -7232,118 +7232,118 @@ This cannot be undone!</translation>
       <location filename="../dialogs/welcomedialog.ui" line="14"/>
       <location filename="../dialogs/welcomedialog.ui" line="56"/>
       <source>Welcome to QOwnNotes</source>
-      <translation type="unfinished">Welcome to QOwnNotes</translation>
+      <translation>Ji bo QOwnNotes hatî</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="24"/>
       <source>plain-text file markdown note taking with ownCloud integration</source>
-      <translation type="unfinished">plain-text file markdown note taking with ownCloud integration</translation>
+      <translation>nîşana nîşana pelê sade ya nîşankirinê bi yekkirina ownCloud re bigirin</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="88"/>
       <source>&amp;Back</source>
-      <translation type="unfinished">&amp;Back</translation>
+      <translation>&amp;Paş</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="99"/>
       <source>&amp;Next</source>
-      <translation type="unfinished">&amp;Next</translation>
+      <translation>&amp;Piştî</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="116"/>
       <source>&amp;Finished</source>
-      <translation type="unfinished">&amp;Finished</translation>
+      <translation>&amp;Qedandin</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="139"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>&amp;Bişûndekirin</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="168"/>
       <location filename="../dialogs/welcomedialog.cpp" line="214"/>
       <source>Note folder</source>
-      <translation type="unfinished">Note folder</translation>
+      <translation>Peldanka bala</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="191"/>
       <source>Create note folder if not existing</source>
-      <translation type="unfinished">Create note folder if not existing</translation>
+      <translation>Heke nebes peldanka bîrdariyê çêbikin</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="225"/>
       <source>Note folder path</source>
-      <translation type="unfinished">Note folder path</translation>
+      <translation>Rêya peldanka bîr</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="232"/>
       <source>Select folder</source>
-      <translation type="unfinished">Select folder</translation>
+      <translation>Peldanka hilbijêrin</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="246"/>
       <source>Show sub-folders</source>
-      <translation type="unfinished">Show sub-folders</translation>
+      <translation>Pelên jêrîn nîşan bikin</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="285"/>
       <source>Panel layout</source>
-      <translation type="unfinished">Panel layout</translation>
+      <translation>Sêwirana panelê</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="342"/>
       <source>Open ownCloud settings</source>
-      <translation type="unfinished">Open ownCloud settings</translation>
+      <translation>Vebijarkên ownCloud veke</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="384"/>
       <source>Open network settings</source>
-      <translation type="unfinished">Open network settings</translation>
+      <translation>Vebijarkên torê vekin</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="184"/>
       <source>Please select where you want to store your notes:</source>
-      <translation type="unfinished">Please select where you want to store your notes:</translation>
+      <translation>Ji kerema xwe hilbijêrin ka hûn dixwazin nîşanên xwe hilînin:</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="319"/>
       <source>If you want to be able to access your note versions and your trashed notes on your ownCloud server, you can configure QOwnNotes for it now. You can also do it at a later time.</source>
-      <translation type="unfinished">If you want to be able to access your note versions and your trashed notes on your ownCloud server, you can configure QOwnNotes for it now. You can also do it at a later time.</translation>
+      <translation>Ger hûn bixwazin bikaribin bigihîjin guhertoyên danûstendinê û nîşanên weyên weyên windakirî li ser servera xwe ya xweya Cloud, hûn niha dikarin QOwnNotes ji bo wê vebikin. Her weha hûn dikarin di demek paşê de bikin.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="349"/>
       <source>In any case, you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</source>
-      <translation type="unfinished">In any case, you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</translation>
+      <translation>Di her rewşê de, hûn hewce ne ku ji bo muwekîlê syCloud hevalbendê xwe (an jî yek muwekîlê sync) re hevalbendiyek xwe bi servera xweCloud ve hev bikin.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="391"/>
       <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
-      <translation type="unfinished">QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</translation>
+      <translation>QOwnNotes dê daneyên karanîna naskirî bişopîne, ku alîkarî dike ku biryar bide ka kîjan parçeyên QOwnNotes ji bo başkirina next û baştir dît û çareserkirina xelet. Hûn dikarin wê tevgerê di mîhengan de neçalakirin.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="116"/>
       <source>Cannot create note path! You have to create the note folder manually!</source>
-      <translation type="unfinished">Cannot create note path! You have to create the note folder manually!</translation>
+      <translation>Nekare rêça nîşankirinê biafirîne! Pêdivî ye ku hûn peldanka bîrdariyê bi desta xwe bine afirandin!</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="123"/>
       <source>Cannot create note path!</source>
-      <translation type="unfinished">Cannot create note path!</translation>
+      <translation>Nekare rêça nîşankirinê biafirîne!</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="128"/>
       <source>This note path doesn't exist!</source>
-      <translation type="unfinished">This note path doesn't exist!</translation>
+      <translation>Riya vê nîşankirinê tune!</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="200"/>
       <source>Please select the folder where your notes will get stored to</source>
-      <translation type="unfinished">Please select the folder where your notes will get stored to</translation>
+      <translation>Ji kerema xwe peldanka ku nivînên xwe li we digire hilbijêrin</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="215"/>
       <source>Keep in mind that the note folder will be stored relative to the directory where QOwnNotes resides in portable mode! So you need to stay on the same drive.</source>
-      <translation type="unfinished">Keep in mind that the note folder will be stored relative to the directory where QOwnNotes resides in portable mode! So you need to stay on the same drive.</translation>
+      <translation>Di hişê xwe bigirin ku peldanka nivînê dê li peldanka ku QOwnNotes di moda portable de rûniştiye têkildar be! Ji ber vê yekê hûn hewce ne ku li ser heman ajokerê bisekinin.</translation>
     </message>
   </context>
   <context>
@@ -7351,42 +7351,42 @@ This cannot be undone!</translation>
     <message>
       <location filename="../main.cpp" line="77"/>
       <source>Runs the application in portable mode.</source>
-      <translation type="unfinished">Runs the application in portable mode.</translation>
+      <translation>Serîlêdanê di moda portable de birêve dibe.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="81"/>
       <source>Prints out a dump of the settings and other information about the application and environment in GitHub Markdown and exits the application.</source>
-      <translation type="unfinished">Prints out a dump of the settings and other information about the application and environment in GitHub Markdown and exits the application.</translation>
+      <translation>Parçeyek mîhengan û agahdariya din di derheqê serîlêdanê û jîngehê de li GitHub Markdown çap dike û serîlêdanê jê dike.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="87"/>
       <source>Allows multiple instances of QOwnNotes to be started even if disallowed in the settings.</source>
-      <translation type="unfinished">Allows multiple instances of QOwnNotes to be started even if disallowed in the settings.</translation>
+      <translation>Destûr dide ku gelek amûrên QOwnNotes dest bi dest pê bikin di heman demê de di navnîşan de neyên şandin.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="92"/>
       <source>Clears the settings and runs the application.</source>
-      <translation type="unfinished">Clears the settings and runs the application.</translation>
+      <translation>Mîhengan paqij dike û serîlêdanê diqedîne.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="96"/>
       <source>Runs the application in a different context for settings and internal files.</source>
-      <translation type="unfinished">Runs the application in a different context for settings and internal files.</translation>
+      <translation>Serlêdan di çarçoveyek cûda de ji bo mîhengan û pelên navxweyî dimeşîne.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="494"/>
       <source>Single application mode is not supported on your system!</source>
-      <translation type="unfinished">Single application mode is not supported on your system!</translation>
+      <translation>Mode serîlêdana yekane li ser pergala we nayê piştgirî kirin!</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="503"/>
       <source>Another instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</source>
-      <translation type="unfinished">Another instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</translation>
+      <translation>Nimûneyek din a QOwnNotes jixwe destpêk bû! Hûn dikarin di mîhengan de moda yek mînakî bizivirînin an jî bireserê - hemî - pirjimar - mînakan bikar bînin.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="535"/>
       <source>A second instance of QOwnNotes was attempted to be started!</source>
-      <translation type="unfinished">A second instance of QOwnNotes was attempted to be started!</translation>
+      <translation>Nimûneyek duyemîn a QOwnNotes hate ceribandin ku dest pê bikin!</translation>
     </message>
   </context>
 </TS>

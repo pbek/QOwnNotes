@@ -3408,10 +3408,10 @@ Ako je smeće omogućeno na vašem ownCloud poslužitelju, trebali biste ih moć
     <message numerus="yes">
       <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
-        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
+      <translation>
+        <numerusform>Želite li izbrisati &lt;strong&gt;%n &lt;/strong&gt; odabranu datoteku?</numerusform>
+        <numerusform>Želite li izbrisati &lt;strong&gt;%n &lt;/strong&gt; odabrane datoteke?</numerusform>
+        <numerusform>Želite li izbrisati &lt;strong&gt;%n &lt;/strong&gt; odabrane datoteke?</numerusform>
       </translation>
     </message>
   </context>
@@ -3445,7 +3445,7 @@ Ako je smeće omogućeno na vašem ownCloud poslužitelju, trebali biste ih moć
     <message>
       <location filename="../services/owncloudservice.cpp" line="1037"/>
       <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
-      <translation type="unfinished">ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</translation>
+      <translation>greška na serveru ownCloud: &lt;strong&gt;%1&lt;/strong&gt; &lt;br /&gt; Provjerite svoju konfiguraciju ownCloud.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1056"/>
@@ -4952,12 +4952,12 @@ Samo se testirajte ako dobijete sukobe u sinkronizaciji i postavite veću vrijed
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2395"/>
       <source>Kurdish</source>
-      <translation type="unfinished">Kurdish</translation>
+      <translation>Kurdski</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2406"/>
       <source>Lithuanian</source>
-      <translation type="unfinished">Lithuanian</translation>
+      <translation>Litvanski</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2417"/>
@@ -5087,7 +5087,7 @@ Samo se testirajte ako dobijete sukobe u sinkronizaciji i postavite veću vrijed
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3152"/>
       <source>&amp;Add script…</source>
-      <translation type="unfinished">&amp;Add script…</translation>
+      <translation>&amp;Dodaj skriptu…</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3798"/>

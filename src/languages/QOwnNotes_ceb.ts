@@ -4733,13 +4733,13 @@ Sulayi lang ang imong kaugalingon kon makasinati ka og panagbangi ug maghimo og 
       <location filename="../dialogs/settingsdialog.ui" line="998"/>
       <location filename="../dialogs/settingsdialog.ui" line="1001"/>
       <source>Add connection</source>
-      <translation type="unfinished">Add connection</translation>
+      <translation>Pagdugang koneksyon</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1012"/>
       <location filename="../dialogs/settingsdialog.ui" line="1015"/>
       <source>Remove connection</source>
-      <translation type="unfinished">Remove connection</translation>
+      <translation>Kuhaa ang koneksyon</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1029"/>
@@ -4776,22 +4776,22 @@ Sulayi lang ang imong kaugalingon kon makasinati ka og panagbangi ug maghimo og 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1311"/>
       <source>Connection name:</source>
-      <translation type="unfinished">Connection name:</translation>
+      <translation>Ngalan sa koneksyon:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1723"/>
       <source>Todo settings</source>
-      <translation type="unfinished">Todo settings</translation>
+      <translation>Mga setting sa bata</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1729"/>
       <source>Enable todo calendar support</source>
-      <translation type="unfinished">Enable todo calendar support</translation>
+      <translation>Pag-abag sa suporta sa kalendaryo</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1914"/>
       <source>Which cloud connection do you want to use?</source>
-      <translation type="unfinished">Which cloud connection do you want to use?</translation>
+      <translation>Unsang koneksyon sa pangan ang gusto nimong gamiton?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1926"/>
@@ -4821,12 +4821,12 @@ Sulayi lang ang imong kaugalingon kon makasinati ka og panagbangi ug maghimo og 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2131"/>
       <source>Bosnian</source>
-      <translation type="unfinished">Bosnian</translation>
+      <translation>Bosnian</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2142"/>
       <source>Bulgarian</source>
-      <translation type="unfinished">Bulgarian</translation>
+      <translation>Bulgaria</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2153"/>
@@ -4851,7 +4851,7 @@ Sulayi lang ang imong kaugalingon kon makasinati ka og panagbangi ug maghimo og 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2241"/>
       <source>Estonian</source>
-      <translation type="unfinished">Estonian</translation>
+      <translation>Estonian</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2252"/>
@@ -4876,12 +4876,12 @@ Sulayi lang ang imong kaugalingon kon makasinati ka og panagbangi ug maghimo og 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2307"/>
       <source>Hausa</source>
-      <translation type="unfinished">Hausa</translation>
+      <translation>Hausa</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2318"/>
       <source>Hebrew</source>
-      <translation type="unfinished">Hebrew</translation>
+      <translation>Hebreohanon</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2329"/>
@@ -4896,27 +4896,27 @@ Sulayi lang ang imong kaugalingon kon makasinati ka og panagbangi ug maghimo og 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2362"/>
       <source>Icelandic</source>
-      <translation type="unfinished">Icelandic</translation>
+      <translation>Islandiko</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2384"/>
       <source>Korean</source>
-      <translation type="unfinished">Korean</translation>
+      <translation>Koreano</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2395"/>
       <source>Kurdish</source>
-      <translation type="unfinished">Kurdish</translation>
+      <translation>Kurdada</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2406"/>
       <source>Lithuanian</source>
-      <translation type="unfinished">Lithuanian</translation>
+      <translation>Lithuanian</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2417"/>
       <source>Macedonian</source>
-      <translation type="unfinished">Macedonian</translation>
+      <translation>Macedonian</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2439"/>
@@ -4926,7 +4926,7 @@ Sulayi lang ang imong kaugalingon kon makasinati ka og panagbangi ug maghimo og 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2516"/>
       <source>Punjabi</source>
-      <translation type="unfinished">Punjabi</translation>
+      <translation>Punjabi</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2472"/>
@@ -4946,7 +4946,7 @@ Sulayi lang ang imong kaugalingon kon makasinati ka og panagbangi ug maghimo og 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2560"/>
       <source>Albanian</source>
-      <translation type="unfinished">Albanian</translation>
+      <translation>Albaniano</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2571"/>
@@ -4996,7 +4996,7 @@ Sulayi lang ang imong kaugalingon kon makasinati ka og panagbangi ug maghimo og 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2734"/>
       <source>You might also want to choose another editor color schema in the editor settings in dark mode.</source>
-      <translation type="unfinished">You might also want to choose another editor color schema in the editor settings in dark mode.</translation>
+      <translation>Mahimo usab nimong pilion ang lain nga pamaagi sa kolor sa editor sa mga setting sa editor sa itom nga mode.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2837"/>
@@ -5046,7 +5046,7 @@ Sulayi lang ang imong kaugalingon kon makasinati ka og panagbangi ug maghimo og 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3798"/>
       <source>Use legacy way to link to notes, images and attachments</source>
-      <translation type="unfinished">Use legacy way to link to notes, images and attachments</translation>
+      <translation>Paggamit pamaagi nga kabilin aron makakonek sa mga nota, mga imahe ug mga gilakip</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3745"/>
@@ -5145,7 +5145,7 @@ Sulayi lang ang imong kaugalingon kon makasinati ka og panagbangi ug maghimo og 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="756"/>
       <source>Cloud connection:</source>
-      <translation type="unfinished">Cloud connection:</translation>
+      <translation>Koneksyon sa panganod:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4913"/>
@@ -5155,7 +5155,7 @@ Sulayi lang ang imong kaugalingon kon makasinati ka og panagbangi ug maghimo og 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5147"/>
       <source>Show the number of matches in each note</source>
-      <translation type="unfinished">Show the number of matches in each note</translation>
+      <translation>Ipakita ang gidaghanon sa mga posporo sa matag mubo nga sulat</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5302"/>
@@ -5180,7 +5180,7 @@ Sulayi lang ang imong kaugalingon kon makasinati ka og panagbangi ug maghimo og 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5417"/>
       <source>Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</source>
-      <translation type="unfinished">Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</translation>
+      <translation>Imbis sa usa ka lista nga talaan gamiton ang usa ka kahoy nga nota sa tanan nga mga subfolders (kung gi-on alang sa folder nga nota)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5652"/>
@@ -6349,7 +6349,7 @@ Ang imong mga nota magpabilin nga wala'y labot!</translation>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="73"/>
       <source>Allow note editing</source>
-      <translation type="unfinished">Allow note editing</translation>
+      <translation>Tugot sa pag i-edit sa note</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="30"/>
@@ -6373,31 +6373,31 @@ Ang imong mga nota magpabilin nga wala'y labot!</translation>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="196"/>
       <source>40</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">40</translation>
+      <translation>40</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="197"/>
       <source>60</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">60</translation>
+      <translation>60</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="198"/>
       <source>80</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">80</translation>
+      <translation>80</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="199"/>
       <source>-ise suffixes</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">-ise suffixes</translation>
+      <translation>-ise suffix</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="200"/>
       <source>-ize suffixes</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">-ize suffixes</translation>
+      <translation>-ize suffix</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="201"/>
@@ -6427,37 +6427,37 @@ Ang imong mga nota magpabilin nga wala'y labot!</translation>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="211"/>
       <source>large</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">large</translation>
+      <translation>dako</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="212"/>
       <source>medium</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">medium</translation>
+      <translation>medium</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="213"/>
       <source>small</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">small</translation>
+      <translation>gamay</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="214"/>
       <source>variant 0</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">variant 0</translation>
+      <translation>lainlain 0</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="215"/>
       <source>variant 1</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">variant 1</translation>
+      <translation>lainlain 1</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="216"/>
       <source>variant 2</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">variant 2</translation>
+      <translation>lainlain 2</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="218"/>
@@ -6499,13 +6499,13 @@ Ang imong mga nota magpabilin nga wala'y labot!</translation>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="262"/>
       <source>%1 (%2) [%3]</source>
       <comment>dictionary name; %1 = language name, %2 = country name and %3 = language variant name</comment>
-      <translation type="unfinished">%1 (%2) [%3]</translation>
+      <translation>%1 (%2) [%3]</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="265"/>
       <source>%1 (%2)</source>
       <comment>dictionary name; %1 = language name, %2 = country name</comment>
-      <translation type="unfinished">%1 (%2)</translation>
+      <translation>%1 (%2)</translation>
     </message>
   </context>
   <context>
@@ -6905,7 +6905,7 @@ Kini dili mahimong dili mahuman!</translation>
     <message>
       <location filename="../dialogs/trashdialog.ui" line="55"/>
       <source>Find note name</source>
-      <translation type="unfinished">Find note name</translation>
+      <translation>Pangitag ngalan sa nota</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="26"/>
