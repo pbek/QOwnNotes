@@ -76,7 +76,7 @@ HunspellClient::HunspellClient(QObject *parent)
 #ifdef Q_OS_MACOS
     //Waqar: enable this one only if we use hunspell for mac
     maybeAddPath(QStringLiteral("/System/Library/Spelling"));
-    maybeAddPath(QStringLiteral("~/Library/Spelling"));
+    maybeAddPath(QDir::homePath() + QStringLiteral("/Library/Spelling"));
 #endif
 
 
