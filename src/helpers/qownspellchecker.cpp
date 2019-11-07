@@ -30,8 +30,8 @@ QOwnSpellChecker::QOwnSpellChecker(QObject *parent) : QObject(parent) {
 
 #ifdef Q_OS_MACOS
     QStringList s = spellchecker->availableLanguages();
-    if (!s.contains(spellchecker->defaultLanguage())) {
-        spellchecker->setDefaultLanguage(spellchecker->availableLanguages().at(0));
+    if (!s.contains(spellchecker->defaultLanguage()) && !s.isEmpty()) {
+        spellchecker->setDefaultLanguage(s.at(0));
     }
 #endif
 }
