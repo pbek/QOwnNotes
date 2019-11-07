@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 19.11.7
+- fixed a possible crash on startup if markdown highlighting is disabled
+  (for [#1367](https://github.com/pbek/QOwnNotes/issues/1367), thank you @Waqar144)
+- the macOS version of QOwnNotes now also uses the Hunspell spellchecker for more performance
+  (for [#1359](https://github.com/pbek/QOwnNotes/issues/1359), thank you @Waqar144)
+    - visit [QOwnNotes Spellchecking](http://docs.qownnotes.org/en/develop/spellchecking.html)
+      for more information
+
 ## 19.11.6
 - attempted to fix a possible segmentation fault on startup
   (for [#1367](https://github.com/pbek/QOwnNotes/issues/1367), thank you @Waqar144)
