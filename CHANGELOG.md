@@ -15,6 +15,10 @@
   in portable mode (for [#1378](https://github.com/pbek/QOwnNotes/issues/1378), thank you @Waqar144)
 - underscores at the end of a word are now ignored for `_italic_` formatting with underscores
   (for [#1379](https://github.com/pbek/QOwnNotes/issues/1379), thank you @Waqar144)
+- added more Spanish, Cebuano, Kurdish, Lithuanian, Ukrainian, Norwegian, Swedish,
+  Croatian, Czech, Dutch, Danish, Estonian, Hungarian, Finnish, Galician, Bosnian,
+  Bulgarian, Greek, Romanian, Serbian (Cyrillic), Slovak, Slovenian translation
+  (thank you fitoschido, Fabijenna)
 
 ## 19.11.7
 - fixed a possible crash on startup if markdown highlighting is disabled
