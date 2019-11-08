@@ -8,6 +8,9 @@
       XXXX
     - visit [QOwnNotes Spellchecking](http://docs.qownnotes.org/en/develop/spellchecking.html)
       for more information
+- automatic switching of note subfolders is now prevent if the setting to show notes in
+  note subfolders recursively is enabled (for [#1371](https://github.com/pbek/QOwnNotes/issues/1371))
+    - this is still experimental and might have side effects
 
 ## 19.11.7
 - fixed a possible crash on startup if markdown highlighting is disabled
