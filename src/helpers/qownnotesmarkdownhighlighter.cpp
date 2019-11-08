@@ -274,10 +274,10 @@ void QOwnNotesMarkdownHighlighter::highlightSpellChecking(const QString &text) {
     const bool autodetectLanguage = spellchecker->isAutoDetectOn() ?
                spellchecker->testAttribute(Sonnet::Speller::AutoDetectLanguage) : false;
     while (languageFilter->hasNext()) {
-        QStringRef sentence = languageFilter->next();
+        const QStringRef sentence = languageFilter->next();
         if (autodetectLanguage) {
             QString lang;
-            QPair<int, int> spos = QPair<int, int>(sentence.position(), sentence.length());
+            const QPair<int, int> spos = QPair<int, int>(sentence.position(), sentence.length());
             // try cache first
             if (languageCache->languages.contains(spos)) {
                 lang = languageCache->languages.value(spos);
@@ -301,7 +301,18 @@ void QOwnNotesMarkdownHighlighter::highlightSpellChecking(const QString &text) {
 
             //if the word has _ at the end, word tokenizer misses that, so cut it off
             if (word.endsWith('_')) {
-                word.truncate(word.length()-1);
+#if QT_VERSION >= 0x050800
+                word.chop(1);
+#elif QT_VERSION >= 0x050600
+                word.truncate(word.length() - 1);
+#else
+                QString temp = word.toString();
+                temp.chop(1);
+                word = QStringRef(&temp);
+#endif
+            }
+
+            if (word.endsWith('_')) {
             }
 
             //in case it's not a word, like an email or a number
