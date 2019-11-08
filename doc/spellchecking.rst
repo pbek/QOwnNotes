@@ -18,17 +18,18 @@ Spellchecking
 You can also use the **Dictionary manager** in the *Edit menu* to download or removed dictionaries.
 
 If you are missing a dictionary to download please look for it at `LibreOffice dictionaries <https://github.com/LibreOffice/dictionaries>`_
-and propose a change of XXXX to include it in the next release of QOwnNotes.
+and propose a change of the `dictionary manager dialog <https://github.com/pbek/QOwnNotes/blob/develop/src/dialogs/dictionarymanagerdialog.cpp>`_
+to include it in the next release of QOwnNotes.
 
 - First open the relevant folder, for example **en** (remember that folder name)
 - Then find the **.dic** and **.aff** files in that folder and note their name (remember the base name, likw ``en_GB``)
-- Open XXXX and press **Edit**
+- Open the `dictionary manager dialog <https://github.com/pbek/QOwnNotes/blob/develop/src/dialogs/dictionarymanagerdialog.cpp>`_ and press the **Edit** button
 - A line there might look like ``addDictionaryItem(tr("English (British)"), QStringLiteral("en"), QStringLiteral("en_GB"));``
 - Duplicate that line and edit it
   - Instead of ``English (British)`` write in the English name of your language
   - Instead of ``en`` write in above folder name
   - Instead of ``en_GB`` write in above file base name
-- Store the file and follow the instructions to open a pull request
+- Commit the changes of the file and follow the instructions to open a pull request
 
 Note:
 - If you can't find your language in this table then unfortunately a dictionary for it doesn't exist in the LibreOffice files

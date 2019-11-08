@@ -5,7 +5,7 @@
   and remove spellchecker dictionaries (for [#1378](https://github.com/pbek/QOwnNotes/issues/1378))
     - if you are missing a dictionary to download please look for it at
       [LibreOffice dictionaries](https://github.com/LibreOffice/dictionaries) and edit
-      XXXX
+      the [dictionary manager dialog](https://github.com/pbek/QOwnNotes/blob/develop/src/dialogs/dictionarymanagerdialog.cpp)
     - visit [QOwnNotes Spellchecking](http://docs.qownnotes.org/en/develop/spellchecking.html)
       for more information
 - automatic switching of note subfolders is now prevent if the setting to show notes in
