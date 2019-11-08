@@ -246,6 +246,9 @@ void QOwnNotesMarkdownHighlighter::unsetMisspelled(int start, int count) {
  * @param text
  */
 void QOwnNotesMarkdownHighlighter::highlightSpellChecking(const QString &text) {
+    if (text.length() < 2) {
+        return;
+    }
     if (!spellchecker->isValid()) {
         qDebug () << "[Sonnet]Spellchecker invalid!";
         return;
