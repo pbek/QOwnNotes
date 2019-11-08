@@ -32,6 +32,7 @@
 #include "tokenizer_p.h"
 #include "core_debug.h"
 #include "spellerplugin_p.h"
+#include <QRegularExpression>
 
 /*
 All language tags should be valid according to IETF BCP 47, as codified in RFC 4646.
@@ -585,7 +586,11 @@ GuessLanguage::~GuessLanguage()
 
 QString GuessLanguage::identify(const QString &text, const QStringList &suggestionsListIn) const
 {
-    if (text.isEmpty()) {
+    if (text.isEmpty() || text == QStringLiteral("  ")
+        || text == QStringLiteral("<!-- ") || text == QStringLiteral("-->")
+        || text == QStringLiteral("\t- ") || text.startsWith(QStringLiteral("`"))
+        || text.endsWith(QStringLiteral("`")) || text == QStringLiteral("- ")
+        || text == QStringLiteral("* ")) {
         return QString();
     }
 
@@ -625,7 +630,6 @@ QString GuessLanguage::identify(const QString &text, const QStringList &suggesti
     }
 
     qCDebug(SONNET_LOG_CORE()) << "Unable to identify string with dictionaries:" << text;
-
     // None of our methods worked, just return the best suggestion
     if (!suggestionsList.isEmpty()) {
         return suggestionsList.first();
