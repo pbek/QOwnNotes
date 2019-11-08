@@ -30,14 +30,16 @@
 #include <QTextCodec>
 #include <QTextStream>
 #include <QStandardPaths>
+#include <utils/misc.h>
 
 using namespace Sonnet;
 
 HunspellDict::HunspellDict(const QString &lang, QString path)
     : SpellerPlugin(lang)
 {
+#ifdef HUNSPELL_DEBUG_ON
     qCDebug(SONNET_HUNSPELL) << "Loading dictionary for" << lang << "from" << path;
-
+#endif
     if (!path.endsWith(QLatin1Char('/'))) {
         path += QLatin1Char('/');
     }
@@ -60,12 +62,19 @@ HunspellDict::HunspellDict(const QString &lang, QString path)
         qCWarning(SONNET_HUNSPELL) << "Unable to find dictionary for" << lang << "in path" << path;
     }
 
-    //QString userDic = QDir::home().filePath(QLatin1String(".hunspell_") % lang);
-    QString userDic = QDir::home().filePath(QLatin1String(".hunspell_") + lang);
-    //QString userDic = QDir::home().filePath(QLatin1String(".hunspell_"));
+    QString userDic;
+    if (Utils::Misc::isInPortableMode()) {
+        userDic = Utils::Misc::portableDataPath() + QLatin1Char('/')
+                           + QLatin1String(".hunspell_") + lang;
+    } else {
+        userDic = QDir::home().filePath(QLatin1String(".hunspell_") + lang);
+    }
+
     QFile userDicFile(userDic);
     if (userDicFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
+#ifdef HUNSPELL_DEBUG_ON
         qCDebug(SONNET_HUNSPELL) << "Load a user dictionary" << userDic;
+#endif
         QTextStream userDicIn(&userDicFile);
         while (!userDicIn.atEnd()) {
             QString word = userDicIn.readLine();
@@ -83,7 +92,9 @@ HunspellDict::HunspellDict(const QString &lang, QString path)
         }
         userDicFile.close();
     }
+#ifdef HUNSPELL_DEBUG_ON
     qCDebug(SONNET_HUNSPELL) << "Created " << m_speller;
+#endif
 }
 
 HunspellDict::~HunspellDict()
@@ -152,12 +163,14 @@ QStringList HunspellDict::suggest(const QString &word) const
 
 bool HunspellDict::storeReplacement(const QString &bad, const QString &good)
 {
-    Q_UNUSED(bad);
-    Q_UNUSED(good);
+    Q_UNUSED(bad)
+    Q_UNUSED(good)
     if (!m_speller) {
         return false;
     }
+#ifdef HUNSPELL_DEBUG_ON
     qCDebug(SONNET_HUNSPELL) << "HunspellDict::storeReplacement not implemented";
+#endif
     return false;
 }
 
@@ -169,7 +182,13 @@ bool HunspellDict::addToPersonal(const QString &word)
     m_speller->add(toDictEncoding(word).constData());
     //QString userDic = QDir::home().filePath(QLatin1String(".hunspell_"));
     //QString userDic = QDir::home().filePath(QLatin1String(".hunspell_") % language());
-    QString userDic = QDir::home().filePath(QLatin1String(".hunspell_") + language());
+    QString userDic;
+    if (Utils::Misc::isInPortableMode()) {
+        userDic = Utils::Misc::portableDataPath() + QLatin1Char('/')
+                           + QLatin1String(".hunspell_") + language();
+    } else {
+        userDic = QDir::home().filePath(QLatin1String(".hunspell_") + language());
+    }
     QFile userDicFile(userDic);
     if (userDicFile.open(QIODevice::Append | QIODevice::Text)) {
         QTextStream out(&userDicFile);
