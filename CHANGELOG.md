@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 19.11.9
+- did some optimization for spellchecking auto detect mode
+  (for [#1359](https://github.com/pbek/QOwnNotes/issues/1359), thank you @Waqar144)
+- fixed build process for Qt < 5.6 (for [#1379](https://github.com/pbek/QOwnNotes/issues/1379), thank you @Waqar144)
+ 
 ## 19.11.8
 - there now is a new menu entry `Manage dictionaries` in the *Edit* menu to download
   and remove spellchecker dictionaries (for [#1378](https://github.com/pbek/QOwnNotes/issues/1378))
