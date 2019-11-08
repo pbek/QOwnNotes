@@ -34,6 +34,7 @@
 #include <entities/script.h>
 #include <QtGui/QIcon>
 #include <services/updateservice.h>
+#include <helpers/qownspellchecker.h>
 #include "build_number.h"
 #include "version.h"
 #include "release.h"
