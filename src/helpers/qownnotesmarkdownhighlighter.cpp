@@ -299,6 +299,11 @@ void QOwnNotesMarkdownHighlighter::highlightSpellChecking(const QString &text) {
         while (wordTokenizer->hasNext()) {
             QStringRef word = wordTokenizer->next();
 
+            //if the word has _ at the end, word tokenizer misses that, so cut it off
+            if (word.endsWith('_')) {
+                word.truncate(word.length()-1);
+            }
+
             //in case it's not a word, like an email or a number
             if (!wordTokenizer->isSpellcheckable()) {
                 continue;

@@ -22,11 +22,8 @@ QOwnSpellChecker::QOwnSpellChecker(QObject *parent) : QObject(parent) {
     QSettings settings;
     active = settings.value(QStringLiteral("checkSpelling"), true).toBool();
     language = settings.value(QStringLiteral("spellCheckLanguage"), QStringLiteral("auto")).toString();
-    if (language == QStringLiteral("auto")) {
-        autoDetect = true;
-    } else {
-        autoDetect = false;
-    }
+
+    autoDetect = (language == QStringLiteral("auto"));
 
 #ifdef Q_OS_MACOS
     QStringList s = spellchecker->availableLanguages();
