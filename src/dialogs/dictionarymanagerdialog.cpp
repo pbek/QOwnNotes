@@ -5,7 +5,6 @@
 #include <utils/misc.h>
 #include <QMessageBox>
 #include <utils/gui.h>
-#include <helpers/qownspellchecker.h>
 #include "dictionarymanagerdialog.h"
 #include "ui_dictionarymanagerdialog.h"
 #include <QDir>
@@ -160,7 +159,7 @@ void DictionaryManagerDialog::slotReplyFinished(QNetworkReply *reply) {
     QFileInfo info(urlPath);
     QString suffix = info.completeSuffix();
 
-    QFile file(QOwnSpellChecker::localDictionariesPath() + "/" + info.fileName());
+    QFile file(Utils::Misc::localDictionariesPath() + "/" + info.fileName());
 
     if (!file.open(QIODevice::WriteOnly)) {
         QMessageBox::critical(
@@ -208,7 +207,7 @@ void DictionaryManagerDialog::loadLocalDictionaries() {
 //    ui->localDictionaryTreeWidget
 
     ui->localDictionaryTreeWidget->clear();
-    QDir dir(QOwnSpellChecker::localDictionariesPath());
+    QDir dir(Utils::Misc::localDictionariesPath());
 
     QStringList filters;
     filters << QStringLiteral("*.aff");
@@ -258,7 +257,7 @@ void DictionaryManagerDialog::on_deleteLocalDictionaryButton_clicked() {
 }
 
 bool DictionaryManagerDialog::deleteLocalDictionaryFile(const QString &fileName) {
-    QFile file(QOwnSpellChecker::localDictionariesPath() + "/" + fileName);
+    QFile file(Utils::Misc::localDictionariesPath() + "/" + fileName);
 
     if (!file.remove()) {
         QMessageBox::critical(

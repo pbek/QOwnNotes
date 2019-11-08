@@ -121,17 +121,3 @@ QStringList QOwnSpellChecker::suggestionsForWord(const QString &word,
     }
     return suggestions;
 }
-
-/**
- * Returns the path where the local dictionaries will be stored
- *
- * @return
- */
-QString QOwnSpellChecker::localDictionariesPath() {
-    QString path = Utils::Misc::appDataPath() + QStringLiteral("/dicts");
-    QDir dir;
-
-    // create path if it doesn't exist yet
-    dir.mkpath(path);
-    return path;
-}

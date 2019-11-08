@@ -100,6 +100,7 @@ namespace Utils {
         void transformRemotePreviewImages(QString &html);
         QString remotePreviewImageTagToInlineImageTag(QString imageTag);
         QString createUuidString();
+        QString localDictionariesPath();
     }  // namespace Misc
 }  // namespace Utils
 

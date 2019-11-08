@@ -22,12 +22,11 @@
 #include "hunspelldict.h"
 #include "hunspelldebug.h"
 
+#include <utils/misc.h>
 #include <QDir>
 #include <QString>
 #include <QStandardPaths>
 #include <QRegularExpression>
-
-#include <helpers/qownspellchecker.h>
 
 using namespace Sonnet;
 
@@ -83,7 +82,7 @@ HunspellClient::HunspellClient(QObject *parent)
     maybeAddPath(QDir::homePath() + QStringLiteral("/Library/Spelling"));
 #endif
 
-    maybeAddPath(QOwnSpellChecker::localDictionariesPath());
+    maybeAddPath(Utils::Misc::localDictionariesPath());
 
     for (const QString &dirString : dirList) {
         QDir dir(dirString);

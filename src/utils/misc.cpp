@@ -34,7 +34,6 @@
 #include <entities/script.h>
 #include <QtGui/QIcon>
 #include <services/updateservice.h>
-#include <helpers/qownspellchecker.h>
 #include "build_number.h"
 #include "version.h"
 #include "release.h"
@@ -1271,7 +1270,7 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
     output += prepareDebugInformationLine("Application database path",
                                           QDir::toNativeSeparators(DatabaseService::getDiskDatabasePath()), withGitHubLineBreaks);
     output += prepareDebugInformationLine("Application dictionaries path",
-                                          QDir::toNativeSeparators(QOwnSpellChecker::localDictionariesPath()), withGitHubLineBreaks);
+                                          QDir::toNativeSeparators(Utils::Misc::localDictionariesPath()), withGitHubLineBreaks);
     output += prepareDebugInformationLine("Application arguments",
                                           qApp->property("arguments").toStringList().join("`, `"), withGitHubLineBreaks);
 
@@ -1605,4 +1604,18 @@ QString Utils::Misc::createUuidString() {
     uuidString.replace("{", "").replace("}", "");
 
     return uuidString;
+}
+
+/**
+ * Returns the path where the local dictionaries will be stored
+ *
+ * @return
+ */
+QString Utils::Misc::localDictionariesPath() {
+    QString path = Utils::Misc::appDataPath() + QStringLiteral("/dicts");
+    QDir dir;
+
+    // create path if it doesn't exist yet
+    dir.mkpath(path);
+    return path;
 }
