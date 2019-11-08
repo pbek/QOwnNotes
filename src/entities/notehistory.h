@@ -9,7 +9,7 @@
 class NoteHistoryItem
 {
 public:
-    explicit NoteHistoryItem(Note *note = NULL, QPlainTextEdit *textEdit = NULL);
+    explicit NoteHistoryItem(Note *note = nullptr, QPlainTextEdit *textEdit = nullptr);
     explicit NoteHistoryItem(QString noteName, QString noteSubFolderPathData,
                              int cursorPosition,
                              float relativeScrollBarPosition);

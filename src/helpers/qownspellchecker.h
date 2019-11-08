@@ -124,6 +124,8 @@ public:
 
     void setAutoDetect(bool autoDetect);
     bool isAutoDetectOn() const;
+    static QString localDictionariesPath();
+
 private:
     Sonnet::Speller *spellchecker;
     bool active;

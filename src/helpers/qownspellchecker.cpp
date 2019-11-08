@@ -14,8 +14,10 @@
  */
 
 #include "qownspellchecker.h"
+#include "utils/misc.h"
 #include <QSettings>
 #include <QDebug>
+#include <QDir>
 
 QOwnSpellChecker::QOwnSpellChecker(QObject *parent) : QObject(parent) {
     spellchecker = new Sonnet::Speller();
@@ -118,4 +120,18 @@ QStringList QOwnSpellChecker::suggestionsForWord(const QString &word,
         suggestions = suggestions.mid(0, max);
     }
     return suggestions;
+}
+
+/**
+ * Returns the path where the local dictionaries will be stored
+ *
+ * @return
+ */
+QString QOwnSpellChecker::localDictionariesPath() {
+    QString path = Utils::Misc::appDataPath() + QStringLiteral("/dicts");
+    QDir dir;
+
+    // create path if it doesn't exist yet
+    dir.mkpath(path);
+    return path;
 }

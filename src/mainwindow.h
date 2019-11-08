@@ -589,6 +589,8 @@ private slots:
 
     void onLanguageChanged(QAction* action);
 
+    void on_actionManage_dictionaries_triggered();
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;

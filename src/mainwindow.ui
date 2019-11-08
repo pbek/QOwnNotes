@@ -1100,6 +1100,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="separator"/>
     <addaction name="actionCheck_spelling"/>
     <addaction name="menuLanguages"/>
+    <addaction name="actionManage_dictionaries"/>
    </widget>
    <widget class="QMenu" name="menuTodo">
     <property name="title">
@@ -2535,6 +2536,11 @@ p, li { white-space: pre-wrap; }
     <string>Automatically detect</string>
    </property>
   </action>
+  <action name="actionManage_dictionaries">
+   <property name="text">
+    <string>Manage dictionaries</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
@@ -2583,9 +2589,9 @@ p, li { white-space: pre-wrap; }
   <tabstop>noteTextView</tabstop>
  </tabstops>
  <resources>
-  <include location="breeze-dark-qownnotes.qrc"/>
   <include location="breeze-qownnotes.qrc"/>
   <include location="images.qrc"/>
+  <include location="breeze-dark-qownnotes.qrc"/>
  </resources>
  <connections/>
 </ui>

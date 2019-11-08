@@ -90,6 +90,7 @@
 #include <dialogs/scriptrepositorydialog.h>
 #include <entities/trashitem.h>
 #include <dialogs/attachmentdialog.h>
+#include <dialogs/dictionarymanagerdialog.h>
 #include <dialogs/imagedialog.h>
 #include <dialogs/localtrashdialog.h>
 #include <QRegularExpression>
@@ -11395,4 +11396,13 @@ void MainWindow::onLanguageChanged(QAction *action) {
     QSettings settings;
     settings.setValue(QStringLiteral("spellCheckLanguage"), lang);
     ui->noteTextEdit->updateSettings();
+}
+
+void MainWindow::on_actionManage_dictionaries_triggered() {
+    auto *dialog = new DictionaryManagerDialog(this);
+    dialog->exec();
+    delete(dialog);
+
+    // shows a restart application notification
+    showRestartNotificationIfNeeded();
 }

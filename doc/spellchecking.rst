@@ -11,16 +11,24 @@ Spellchecking
   -  You can download dictionaries from `LibreOffice
      dictionaries <https://github.com/LibreOffice/dictionaries>`__
 -  Under **macOS** the native spellchecker will be used
-  -  You can download more dictionaries from `LibreOffice
-     dictionaries <https://github.com/LibreOffice/dictionaries>`__
-     and copy them to ``~/Library/Spelling``, if the directory
-     doesn't exist you need to create it
+  -  You can download more dictionaries from `LibreOffice dictionaries
+     <https://github.com/LibreOffice/dictionaries>`__ and copy them to ``/Library/Spelling``
+     or ``~/Library/Spelling``, if the directory doesn't exist you need to create it
 
-You can use the table below to find your language from `dictionary folders <https://github.com/LibreOffice/dictionaries>`_.
+You can also use the **Dictionary manager** in the *Edit menu* to download or removed dictionaries.
 
-- First open the relevant folder, for example **en**
-- Then find the **.dic** and **.aff** files in that folder and open them, for example **(en_US.dic)**
-- Right-click on the **Raw** button or **View raw** link and click **Save Link As..** to download the dictionary to your computer
+If you are missing a dictionary to download please look for it at `LibreOffice dictionaries <https://github.com/LibreOffice/dictionaries>`_
+and propose a change of XXXX to include it in the next release of QOwnNotes.
+
+- First open the relevant folder, for example **en** (remember that folder name)
+- Then find the **.dic** and **.aff** files in that folder and note their name (remember the base name, likw ``en_GB``)
+- Open XXXX and press **Edit**
+- A line there might look like ``addDictionaryItem(tr("English (British)"), QStringLiteral("en"), QStringLiteral("en_GB"));``
+- Duplicate that line and edit it
+  - Instead of ``English (British)`` write in the English name of your language
+  - Instead of ``en`` write in above folder name
+  - Instead of ``en_GB`` write in above file base name
+- Store the file and follow the instructions to open a pull request
 
 Note:
 - If you can't find your language in this table then unfortunately a dictionary for it doesn't exist in the LibreOffice files

@@ -27,6 +27,8 @@
 #include <QStandardPaths>
 #include <QRegularExpression>
 
+#include <helpers/qownspellchecker.h>
+
 using namespace Sonnet;
 
 HunspellClient::HunspellClient(QObject *parent)
@@ -81,6 +83,7 @@ HunspellClient::HunspellClient(QObject *parent)
     maybeAddPath(QDir::homePath() + QStringLiteral("/Library/Spelling"));
 #endif
 
+    maybeAddPath(QOwnSpellChecker::localDictionariesPath());
 
     for (const QString &dirString : dirList) {
         QDir dir(dirString);

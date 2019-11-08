@@ -1,5 +1,14 @@
 # QOwnNotes Changelog
 
+## 19.11.8
+- there now is a new menu entry `Manage dictionaries` in the *Edit* menu to download
+  and remove spellchecker dictionaries (for [#1378](https://github.com/pbek/QOwnNotes/issues/1378))
+    - if you are missing a dictionary to download please look for it at
+      [LibreOffice dictionaries](https://github.com/LibreOffice/dictionaries) and edit
+      XXXX
+    - visit [QOwnNotes Spellchecking](http://docs.qownnotes.org/en/develop/spellchecking.html)
+      for more information
+
 ## 19.11.7
 - fixed a possible crash on startup if markdown highlighting is disabled
   (for [#1367](https://github.com/pbek/QOwnNotes/issues/1367), thank you @Waqar144)

@@ -1269,6 +1269,8 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
                                           settings.fileName(), withGitHubLineBreaks);
     output += prepareDebugInformationLine("Application database path",
                                           QDir::toNativeSeparators(DatabaseService::getDiskDatabasePath()), withGitHubLineBreaks);
+    output += prepareDebugInformationLine("Application dictionaries path",
+                                          QDir::toNativeSeparators(QOwnSpellChecker::localDictionariesPath()), withGitHubLineBreaks);
     output += prepareDebugInformationLine("Application arguments",
                                           qApp->property("arguments").toStringList().join("`, `"), withGitHubLineBreaks);
 

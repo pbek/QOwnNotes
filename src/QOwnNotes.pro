@@ -159,6 +159,7 @@ SOURCES += main.cpp\
     dialogs/notedialog.cpp \
     dialogs/filedialog.cpp \
     dialogs/scriptrepositorydialog.cpp \
+    dialogs/dictionarymanagerdialog.cpp \
     widgets/scriptsettingwidget.cpp \
     api/scriptapi.cpp \
     widgets/label.cpp \
@@ -253,6 +254,7 @@ HEADERS  += mainwindow.h \
     dialogs/notedialog.h \
     dialogs/filedialog.h \
     dialogs/scriptrepositorydialog.h \
+    dialogs/dictionarymanagerdialog.h \
     widgets/scriptsettingwidget.h \
     api/scriptapi.h \
     widgets/label.h \
@@ -292,6 +294,7 @@ FORMS    += mainwindow.ui \
     dialogs/tabledialog.ui \
     dialogs/notedialog.ui \
     dialogs/scriptrepositorydialog.ui \
+    dialogs/dictionarymanagerdialog.ui \
     widgets/qtexteditsearchwidget.ui \
     widgets/scriptsettingwidget.ui \
     widgets/notetreewidgetitem.ui \

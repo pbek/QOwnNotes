@@ -140,6 +140,9 @@ set(SOURCE_FILES
     dialogs/scriptrepositorydialog.cpp
     dialogs/scriptrepositorydialog.h
     dialogs/scriptrepositorydialog.ui
+    dialogs/dictionarymanagerdialog.cpp
+    dialogs/dictionarymanagerdialog.h
+    dialogs/dictionarymanagerdialog.ui
     dialogs/actiondialog.cpp
     dialogs/actiondialog.h
     dialogs/actiondialog.ui

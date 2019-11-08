@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DictionaryManagerDialog</class>
+ <widget class="QDialog" name="DictionaryManagerDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>930</width>
+    <height>657</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dictionary manager</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="0">
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="1" column="0">
+      <widget class="QFrame" name="selectFrame">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>1</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <layout class="QGridLayout" name="selectLayout">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>1</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item row="3" column="0" colspan="2">
+         <widget class="QFrame" name="downloadFrame">
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_3">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item row="0" column="0" colspan="2">
+            <widget class="QPushButton" name="downloadCancelButton">
+             <property name="text">
+              <string>Cancel</string>
+             </property>
+             <property name="icon">
+              <iconset theme="dialog-cancel" resource="../breeze-qownnotes.qrc">
+               <normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</iconset>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QProgressBar" name="downloadProgressBar">
+             <property name="value">
+              <number>24</number>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLabel" name="downloadSizeLabel">
+             <property name="text">
+              <string notr="true">size</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="2" column="0" colspan="2">
+         <widget class="QPushButton" name="downloadButton">
+          <property name="text">
+           <string>Download dictionary</string>
+          </property>
+          <property name="icon">
+           <iconset theme="edit-download" resource="../breeze-qownnotes.qrc">
+            <normaloff>:/icons/breeze-qownnotes/16x16/edit-download.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-download.svg</iconset>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <widget class="QTreeWidget" name="remoteDictionaryTreeWidget">
+          <property name="rootIsDecorated">
+           <bool>false</bool>
+          </property>
+          <property name="sortingEnabled">
+           <bool>true</bool>
+          </property>
+          <column>
+           <property name="text">
+            <string>Name</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item row="0" column="0" colspan="2">
+         <widget class="QLineEdit" name="searchDictionaryEdit">
+          <property name="toolTip">
+           <string>Enter your query text</string>
+          </property>
+          <property name="placeholderText">
+           <string>Find dictionary</string>
+          </property>
+          <property name="clearButtonEnabled">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QGroupBox" name="localDictionariesGroupBox">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>1</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="title">
+        <string>Downloaded dictionaries</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QTreeWidget" name="localDictionaryTreeWidget">
+          <property name="selectionMode">
+           <enum>QAbstractItemView::MultiSelection</enum>
+          </property>
+          <property name="rootIsDecorated">
+           <bool>false</bool>
+          </property>
+          <property name="sortingEnabled">
+           <bool>true</bool>
+          </property>
+          <column>
+           <property name="text">
+            <string>Name</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="deleteLocalDictionaryButton">
+          <property name="text">
+           <string>Delete selected dictionaries</string>
+          </property>
+          <property name="icon">
+           <iconset theme="edit-delete" resource="../breeze-qownnotes.qrc">
+            <normaloff>:/icons/breeze-qownnotes/16x16/edit-delete.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-delete.svg</iconset>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>searchDictionaryEdit</tabstop>
+  <tabstop>remoteDictionaryTreeWidget</tabstop>
+  <tabstop>downloadButton</tabstop>
+  <tabstop>downloadCancelButton</tabstop>
+  <tabstop>localDictionaryTreeWidget</tabstop>
+  <tabstop>deleteLocalDictionaryButton</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../breeze-qownnotes.qrc"/>
+ </resources>
+ <connections/>
+</ui>
