@@ -32,7 +32,9 @@ using namespace Sonnet;
 HunspellClient::HunspellClient(QObject *parent)
     : Client(parent)
 {
+#ifdef HUNSPELL_DEBUG_ON
     qCDebug(SONNET_HUNSPELL) << " HunspellClient::HunspellClient";
+#endif
     QStringList dirList;
     // search QStandardPaths
     dirList.append(QStandardPaths::locateAll(
@@ -95,8 +97,10 @@ HunspellClient::~HunspellClient()
 
 SpellerPlugin *HunspellClient::createSpeller(const QString &language)
 {
+#ifdef HUNSPELL_DEBUG_ON
     qCDebug(SONNET_HUNSPELL)
     << " SpellerPlugin *HunspellClient::createSpeller(const QString &language) ;" << language;
+#endif
     HunspellDict *ad = new HunspellDict(language, m_languagePaths.value(language));
     return ad;
 }

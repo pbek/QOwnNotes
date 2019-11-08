@@ -22,4 +22,6 @@ INCLUDEPATH += ../../core
 INCLUDEPATH += hunspell/src/hunspell
 INCLUDEPATH += hunspell/src/
 
+DEFINES += HUNSPELL_DEBUG_ON
+
 
