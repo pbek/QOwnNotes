@@ -37,9 +37,9 @@ public:
 
     BreakTokenizerPrivate(Type s)
         : breakFinder(new TextBreaks)
+        , type(s)
         , itemPosition(-1)
         , cacheValid(false)
-        , type(s)
         , inAddress(false)
         , ignoreUppercase(false)
     {
@@ -58,12 +58,12 @@ public:
     QStringRef currentItem() const;
 
     TextBreaks *breakFinder;
+    QStringRef last;
     QString buffer;
 
+    Type type;
     int itemPosition;
     mutable bool cacheValid;
-    QStringRef last;
-    Type type;
     bool inAddress;
     bool ignoreUppercase;
 
@@ -106,7 +106,8 @@ TextBreaks::Positions BreakTokenizerPrivate::breaks() const
 
 void BreakTokenizerPrivate::shiftBreaks(int from, int offset)
 {
-    for (int i = 0; i < cachedBreaks.size(); i++) {
+    auto size = cachedBreaks.size();
+    for (int i = 0; i < size; i++) {
         if (cachedBreaks[i].start > from) {
             cachedBreaks[i].start = cachedBreaks[i].start - offset;
         }
@@ -208,7 +209,8 @@ QString WordTokenizer::buffer() const
 
 bool WordTokenizer::isUppercase(const QStringRef &word) const
 {
-    for (int i = 0; i < word.length(); ++i) {
+    auto len = word.length();
+    for (int i = 0; i < len; ++i) {
         if (word.at(i).isLetter() && !word.at(i).isUpper()) {
             return false;
         }

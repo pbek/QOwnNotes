@@ -65,8 +65,8 @@ TextBreaks::Positions TextBreaks::wordBreaks(const QString &text)
     }
 
     QTextBoundaryFinder boundaryFinder(QTextBoundaryFinder::Word, text);
-
-    while (boundaryFinder.position() < text.length()) {
+    auto len = text.length();
+    while (boundaryFinder.position() < len) {
         if (!(boundaryFinder.boundaryReasons().testFlag(QTextBoundaryFinder::StartOfItem))) {
             if (boundaryFinder.toNextBoundary() == -1) {
                 break;
@@ -86,9 +86,9 @@ TextBreaks::Positions TextBreaks::wordBreaks(const QString &text)
         }
         breaks.append(pos);
 
-        if (boundaryFinder.toNextBoundary() == -1) {
-            break;
-        }
+//        if (boundaryFinder.toNextBoundary() == -1) {
+//            break;
+//        }
     }
     return breaks;
 }
@@ -102,8 +102,8 @@ TextBreaks::Positions TextBreaks::sentenceBreaks(const QString &text)
     }
 
     QTextBoundaryFinder boundaryFinder(QTextBoundaryFinder::Sentence, text);
-
-    while (boundaryFinder.position() < text.length()) {
+    auto len = text.length();
+    while (boundaryFinder.position() < len) {
         Position pos;
         pos.start = boundaryFinder.position();
         int end = boundaryFinder.toNextBoundary();
