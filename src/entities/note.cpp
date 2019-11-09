@@ -35,43 +35,43 @@ Note::Note() {
     this->fileSize = 0;
 }
 
-int Note::getId() {
+int Note::getId() const {
     return this->id;
 }
 
-QString Note::getName() {
+QString Note::getName() const {
     return this->name;
 }
 
-QDateTime Note::getFileLastModified() {
+QDateTime Note::getFileLastModified() const {
     return this->fileLastModified;
 }
 
-QDateTime Note::getFileCreated() {
+QDateTime Note::getFileCreated() const {
     return this->fileCreated;
 }
 
-QDateTime Note::getModified() {
+QDateTime Note::getModified() const {
     return this->modified;
 }
 
-qint64 Note::getCryptoKey() {
+qint64 Note::getCryptoKey() const {
     return this->cryptoKey;
 }
 
-QString Note::getCryptoPassword() {
+QString Note::getCryptoPassword() const {
     return this->cryptoPassword;
 }
 
-QString Note::getShareUrl() {
+QString Note::getShareUrl() const {
     return this->shareUrl;
 }
 
-int Note::getShareId() {
+int Note::getShareId() const  {
     return this->shareId;
 }
 
-unsigned int Note::getSharePermissions() {
+unsigned int Note::getSharePermissions() const {
     return this->sharePermissions;
 }
 
@@ -80,31 +80,31 @@ unsigned int Note::getSharePermissions() {
  *
  * @return
  */
-bool Note::isShareEditAllowed() {
+bool Note::isShareEditAllowed() const {
     return sharePermissions & 2;
 }
 
-qint64 Note::getFileSize() {
+qint64 Note::getFileSize() const  {
     return this->fileSize;
 }
 
-bool Note::isShared() {
+bool Note::isShared() const  {
     return this->shareId > 0;
 }
 
-QString Note::getFileName() {
+QString Note::getFileName() const {
     return this->fileName;
 }
 
-NoteSubFolder Note::getNoteSubFolder() {
+NoteSubFolder Note::getNoteSubFolder() const {
     return NoteSubFolder::fetch(this->noteSubFolderId);
 }
 
-int Note::getNoteSubFolderId() {
+int Note::getNoteSubFolderId() const {
     return this->noteSubFolderId;
 }
 
-bool Note::isInCurrentNoteSubFolder() {
+bool Note::isInCurrentNoteSubFolder() const {
     const int currentNoteSubFolderId = NoteSubFolder::activeNoteSubFolderId();
 
     // beware: the special "All notes" note sub-folder also uses the id 0
@@ -115,7 +115,7 @@ bool Note::isInCurrentNoteSubFolder() {
     return this->noteSubFolderId == currentNoteSubFolderId;
 }
 
-void Note::setNoteSubFolder(NoteSubFolder noteSubFolder) {
+void Note::setNoteSubFolder(const NoteSubFolder &noteSubFolder) {
     setNoteSubFolderId(noteSubFolder.getId());
 }
 
@@ -123,15 +123,15 @@ void Note::setNoteSubFolderId(int id) {
     this->noteSubFolderId = id;
 }
 
-QString Note::getNoteText() {
+QString Note::getNoteText() const {
     return this->noteText;
 }
 
-void Note::setHasDirtyData(bool hasDirtyData) {
+void Note::setHasDirtyData(const bool hasDirtyData)  {
     this->hasDirtyData = hasDirtyData;
 }
 
-bool Note::getHasDirtyData() {
+bool Note::getHasDirtyData() const {
     return this->hasDirtyData;
 }
 
@@ -151,7 +151,7 @@ void Note::setSharePermissions(unsigned int permissions) {
     this->sharePermissions = permissions;
 }
 
-void Note::setCryptoKey(qint64 cryptoKey) {
+void Note::setCryptoKey(const qint64 cryptoKey) {
     this->cryptoKey = cryptoKey;
 }
 
@@ -220,7 +220,7 @@ Note Note::fetchByName(const QRegularExpression& regExp, int noteSubFolderId) {
     return Note();
 }
 
-Note Note::fetchByFileName(QString fileName, int noteSubFolderId) {
+Note Note::fetchByFileName(const QString &fileName, int noteSubFolderId) {
     Note note;
 
     // get the active note subfolder id if none was set
@@ -232,7 +232,7 @@ Note Note::fetchByFileName(QString fileName, int noteSubFolderId) {
     return note;
 }
 
-bool Note::fillByFileName(QString fileName, int noteSubFolderId) {
+bool Note::fillByFileName(const QString &fileName, int noteSubFolderId) {
     QSqlDatabase db = QSqlDatabase::database(QStringLiteral("memory"));
     QSqlQuery query(db);
 
@@ -385,7 +385,7 @@ bool Note::copyToPath(const QString& destinationPath, QString noteFolderPath) {
  * @param destinationPath
  * @return bool
  */
-bool Note::moveToPath(QString destinationPath, QString noteFolderPath) {
+bool Note::moveToPath(const QString &destinationPath, const QString &noteFolderPath) {
     bool result = copyToPath(destinationPath, noteFolderPath);
 
     if (result) {
@@ -451,7 +451,7 @@ bool Note::updateRelativeMediaFileLinks() {
  * Returns a list of all linked attachments of the current note
  * @return
  */
-QStringList Note::getAttachmentsFileList() {
+QStringList Note::getAttachmentsFileList() const {
     QString text = getNoteText();
     QStringList fileList;
 
@@ -1492,14 +1492,14 @@ QString Note::getFullFilePathForFile(const QString& fileName) {
             Utils::Misc::dirSeparator() + fileName;
 }
 
-QString Note::getFilePathRelativeToNote(Note note) {
+QString Note::getFilePathRelativeToNote(const Note &note) const {
     QDir dir(fullNoteFilePath());
 
     // for some reason there is a leading "../" too much
     return dir.relativeFilePath(note.fullNoteFilePath()).remove(QRegularExpression(R"(^\.\.\/)"));
 }
 
-QString Note::getNoteUrlForLinkingTo(Note note) {
+QString Note::getNoteUrlForLinkingTo(const Note &note) const {
     QSettings settings;
     QString noteUrl;
 
@@ -1516,14 +1516,14 @@ QString Note::getNoteUrlForLinkingTo(Note note) {
 /**
  * Returns the full path of the note file
  */
-QString Note::fullNoteFilePath() {
+QString Note::fullNoteFilePath() const {
     return getFullFilePathForFile(relativeNoteFilePath());
 }
 
 /**
  * Returns the full path of direcotry of the note file
  */
-QString Note::fullNoteFileDirPath() {
+QString Note::fullNoteFileDirPath() const {
     QFileInfo fileInfo;
     fileInfo.setFile(fullNoteFilePath());
     return fileInfo.dir().path();
@@ -1532,7 +1532,7 @@ QString Note::fullNoteFileDirPath() {
 /**
  * Returns the relative path of the note file
  */
-QString Note::relativeNoteFilePath(QString separator) {
+QString Note::relativeNoteFilePath(QString separator) const {
     QString fullFileName = fileName;
 
     if (separator.isEmpty()) {
@@ -1552,7 +1552,7 @@ QString Note::relativeNoteFilePath(QString separator) {
 /**
  * Returns the relative path of the note subfolder
  */
-QString Note::relativeNoteSubFolderPath() {
+QString Note::relativeNoteSubFolderPath() const {
     QString path = "";
 
     if (noteSubFolderId > 0) {
@@ -1568,7 +1568,7 @@ QString Note::relativeNoteSubFolderPath() {
 /**
  * Returns the path-data of the note subfolder file
  */
-QString Note::noteSubFolderPathData() {
+QString Note::noteSubFolderPathData() const {
     QString path = "";
 
     if (noteSubFolderId > 0) {
@@ -1584,7 +1584,7 @@ QString Note::noteSubFolderPathData() {
 /**
  * Returns the full url of the note file
  */
-QUrl Note::fullNoteFileUrl() {
+QUrl Note::fullNoteFileUrl() const {
     QString windowsSlash = "";
 
 #ifdef Q_OS_WIN32
@@ -2437,7 +2437,7 @@ QString Note::encryptNoteText() {
 /**
  * Returns the regular expression to match encrypted text
  */
-QRegularExpression Note::getEncryptedNoteTextRegularExpression() {
+QRegularExpression Note::getEncryptedNoteTextRegularExpression() const {
     // match the encrypted string
     QRegularExpression re(
             QRegularExpression::escape(NOTE_TEXT_ENCRYPTION_PRE_STRING) +
@@ -2454,7 +2454,7 @@ QRegularExpression Note::getEncryptedNoteTextRegularExpression() {
 /**
  * Returns encrypted note text if it is encrypted
  */
-QString Note::getEncryptedNoteText() {
+QString Note::getEncryptedNoteText() const {
     QString noteText = this->noteText;
 
     // get regular expression for the encrypted string
@@ -2523,7 +2523,7 @@ void Note::setCryptoPassword(const QString& password) {
  * Returns decrypted note text if it is encrypted
  * The crypto key has to be set in the object
  */
-QString Note::getDecryptedNoteText() {
+QString Note::getDecryptedNoteText() const {
     QString noteText = this->noteText;
     QString encryptedNoteText = getEncryptedNoteText();
 
@@ -2650,7 +2650,7 @@ int Note::countByNoteSubFolderId(int noteSubFolderId, bool recursive) {
  * @param note
  * @return
  */
-bool Note::isSameFile(Note note) {
+bool Note::isSameFile(const Note &note) {
     return (id == note.getId()) &&
             (noteSubFolderId == note.getNoteSubFolderId());
 }
@@ -2661,7 +2661,7 @@ bool Note::isSameFile(Note note) {
  * @param fileName
  * @return list of note ids
  */
-QList<int> Note::findLinkedNoteIds() {
+QList<int> Note::findLinkedNoteIds() const {
     QList<int> noteIdList;
 
     // search for legacy links
@@ -2712,7 +2712,7 @@ const QString Note::getNoteURL(const QString &baseName) {
  *
  * @return
  */
-QString Note::getNoteIdURL() {
+QString Note::getNoteIdURL() const {
     return "noteid://note-" + QString::number(getId());
 }
 
@@ -2734,7 +2734,7 @@ const QString Note::getNoteURLFromFileName(const QString &fileName) {
  * @param fileName
  * @return
  */
-const QString Note::getFileURLFromFileName(QString fileName) {
+QString Note::getFileURLFromFileName(QString fileName) const {
     if (noteSubFolderId > 0) {
         NoteSubFolder noteSubFolder = getNoteSubFolder();
         if (noteSubFolder.isFetched()) {
@@ -2752,12 +2752,12 @@ const QString Note::getFileURLFromFileName(QString fileName) {
  * @param fileName
  * @return
  */
-const Note Note::fetchByRelativeFileName(const QString &fileName) {
+Note Note::fetchByRelativeFileName(const QString &fileName) const {
     QString url = getFileURLFromFileName(fileName);
     return fetchByFileUrl(QUrl(url));
 }
 
-bool Note::fileUrlIsNoteInCurrentNoteFolder(const QUrl url) {
+bool Note::fileUrlIsNoteInCurrentNoteFolder(const QUrl &url) {
     if (url.scheme() != "file") {
         return false;
     }
@@ -2771,7 +2771,7 @@ bool Note::fileUrlIsNoteInCurrentNoteFolder(const QUrl url) {
     return path.startsWith(NoteFolder::currentLocalPath()) && path.toLower().endsWith(".md");
 }
 
-QString Note::fileUrlInCurrentNoteFolderToRelativePath(const QUrl url) {
+QString Note::fileUrlInCurrentNoteFolderToRelativePath(const QUrl &url) {
     QString path = url.toLocalFile();
     qDebug() << __func__ << " - 'path': " << path;
 
@@ -2791,7 +2791,7 @@ QString Note::fileUrlInCurrentNoteFolderToRelativePath(const QUrl url) {
  * @param path
  * @return
  */
-QString Note::relativeFilePath(const QString path) {
+QString Note::relativeFilePath(const QString &path) const {
     QDir dir(fullNoteFilePath());
 
     // for some reason there is a leading "../" too much
@@ -2803,7 +2803,7 @@ QString Note::relativeFilePath(const QString path) {
  *
  * @param oldNote
  */
-void Note::handleNoteMoving(Note oldNote) {
+void Note::handleNoteMoving(const Note &oldNote) {
     QList<int> noteIdList = oldNote.findLinkedNoteIds();
     int noteCount = noteIdList.count();
 
@@ -2932,7 +2932,7 @@ QString Note::getInsertMediaMarkdown(QFile *file, bool addNewLine,
     return "";
 }
 
-QString Note::mediaUrlStringForFileName(const QString &fileName) {
+QString Note::mediaUrlStringForFileName(const QString &fileName) const {
     QString urlString = "";
     QSettings settings;
 
@@ -2951,7 +2951,7 @@ QString Note::mediaUrlStringForFileName(const QString &fileName) {
     return urlString;
 }
 
-QString Note::attachmentUrlStringForFileName(const QString &fileName) {
+QString Note::attachmentUrlStringForFileName(const QString &fileName) const {
     QString urlString = "";
     QSettings settings;
 
@@ -3208,7 +3208,7 @@ Note Note::fetchByUrlString(const QString& urlString) {
  *
  * @return
  */
-QString Note::getNotePreviewText(bool asHtml, int lines) {
+QString Note::getNotePreviewText(bool asHtml, int lines) const {
     QString noteText = getNoteText();
 
     // remove Windows line breaks
@@ -3254,7 +3254,7 @@ QString Note::getNotePreviewText(bool asHtml, int lines) {
  * @param notes
  * @return
  */
-QString Note::generateMultipleNotesPreviewText(QList<Note> notes) {
+QString Note::generateMultipleNotesPreviewText(const QList<Note> &notes) {
     QSettings settings;
     bool darkModeColors = settings.value("darkModeColors").toBool();
     QString oddBackgroundColor = darkModeColors ? "#444444" : "#f1f1f1";
@@ -3312,7 +3312,7 @@ QString Note::generateMultipleNotesPreviewText(QList<Note> notes) {
  *
  * @return
  */
-QString Note::getParsedBookmarksWebServiceJsonText() {
+QString Note::getParsedBookmarksWebServiceJsonText() const {
     return Bookmark::bookmarksWebServiceJsonText(getParsedBookmarks());
 }
 
@@ -3321,7 +3321,7 @@ QString Note::getParsedBookmarksWebServiceJsonText() {
  *
  * @return
  */
-QList<Bookmark> Note::getParsedBookmarks() {
+QList<Bookmark> Note::getParsedBookmarks() const {
     QString text = decryptedNoteText.isEmpty() ? noteText : decryptedNoteText;
     return Bookmark::parseBookmarks(text);
 }

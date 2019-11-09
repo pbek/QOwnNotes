@@ -3,8 +3,8 @@
 #include <entities/notefolder.h>
 #include "noteapi.h"
 
-NoteApi* NoteApi::fetch(int id) {
-    _note = Note::fetch(id);
+NoteApi* NoteApi::fetch(int _id) {
+    _note = Note::fetch(_id);
 
     if (_note.isFetched()) {
         this->id = _note.getId();
@@ -21,7 +21,7 @@ NoteApi* NoteApi::fetch(int id) {
     return this;
 }
 
-NoteApi* NoteApi::fromNote(Note note) {
+NoteApi* NoteApi::fromNote(const Note &note) {
     auto *noteApi = new NoteApi();
     noteApi->fetch(note.getId());
     return noteApi;
@@ -50,7 +50,7 @@ QQmlListProperty<TagApi> NoteApi::tags() {
         _tags.append(tagApi);
     }
 
-    return QQmlListProperty<TagApi>(this, _tags);
+    return {this, _tags};
 }
 
 /**
@@ -132,7 +132,7 @@ QQmlListProperty<NoteApi> NoteApi::fetchAll(int limit, int offset) {
             notes.append(note);
         }
 
-    return QQmlListProperty<NoteApi>(this, notes);
+    return {this, notes};
 }
 
 /**
@@ -152,6 +152,6 @@ QString NoteApi::toMarkdownHtml(bool forExport) {
  * @param fileName
  * @return
  */
-const QString NoteApi::getFileURLFromFileName(QString localFileName) {
+QString NoteApi::getFileURLFromFileName(const QString& localFileName) {
     return _note.getFileURLFromFileName(localFileName);
 }

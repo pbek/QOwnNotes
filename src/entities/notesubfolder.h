@@ -13,9 +13,9 @@ class NoteSubFolder {
 public:
     explicit NoteSubFolder();
 
-    int getId();
+    int getId() const;
 
-    QString getName();
+    QString getName() const;
 
     void setName(QString text);
 
@@ -31,36 +31,36 @@ public:
 
     static bool deleteAll();
 
-    bool exists();
+    bool exists() const;
 
     bool fillFromQuery(const QSqlQuery& query);
 
     bool remove();
 
-    bool isFetched();
+    bool isFetched() const;
 
-    QDateTime getFileLastModified();
+    QDateTime getFileLastModified() const;
 
-    QDateTime getModified();
+    QDateTime getModified() const;
 
     static int countAll();
 
-    int getParentId();
+    int getParentId() const;
 
     void setParentId(int parentId);
 
-    QString relativePath(QString separator = "");
+    QString relativePath(QString separator = "") const;
 
-    QString fullPath();
+    QString fullPath() const;
 
-    NoteSubFolder getParent();
+    NoteSubFolder getParent() const;
 
     static QList<NoteSubFolder> fetchAllByParentId(int parentId,
             const QString& sortBy = "file_last_modified DESC");
 
     static QList<int> fetchIdsRecursivelyByParentId(int parentId);
 
-    bool isActive();
+    bool isActive() const;
 
     static int activeNoteSubFolderId();
 
@@ -70,7 +70,7 @@ public:
 
     void setAsActive();
 
-    QString pathData();
+    QString pathData() const;
 
     static NoteSubFolder fetchByPathData(QString pathData,
                                          const QString& separator = "\n");
@@ -85,7 +85,7 @@ public:
 
     bool removeFromFileSystem();
 
-    QDir dir();
+    QDir dir() const;
 
     bool rename(const QString& newName);
 
