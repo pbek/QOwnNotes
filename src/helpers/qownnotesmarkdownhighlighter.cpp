@@ -122,7 +122,7 @@ void QOwnNotesMarkdownHighlighter::highlightBlock(const QString &text) {
 
     // skip spell checking empty blocks and blocks with just "spaces"
     // the rest of the highlighting needs to be done e.g. for code blocks with empty lines
-    if (!(text.isEmpty() || text.isNull()) &&
+    if (!(text.isEmpty()) &&
         spellchecker->isActive()) {
         highlightSpellChecking(text);
     }
