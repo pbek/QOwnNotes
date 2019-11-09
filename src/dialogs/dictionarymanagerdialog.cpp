@@ -75,7 +75,7 @@ void DictionaryManagerDialog::setupMainSplitter() {
     // restore splitter sizes
     QSettings settings;
     QByteArray state = settings.value(
-            "DictionaryManagerDialog/mainSplitterState").toByteArray();
+            QStringLiteral("DictionaryManagerDialog/mainSplitterState")).toByteArray();
     _mainSplitter->restoreState(state);
 
     ui->gridLayout->layout()->addWidget(_mainSplitter);
@@ -86,7 +86,7 @@ void DictionaryManagerDialog::setupMainSplitter() {
  */
 void DictionaryManagerDialog::storeSettings() {
     QSettings settings;
-    settings.setValue("DictionaryManagerDialog/mainSplitterState",
+    settings.setValue(QStringLiteral("DictionaryManagerDialog/mainSplitterState"),
                       _mainSplitter->saveState());
 }
 
@@ -103,7 +103,7 @@ void DictionaryManagerDialog::on_downloadButton_clicked() {
         return;
     }
 
-    QString url = item->data(0, Qt::UserRole).toString() + ".dic";
+    QString url = item->data(0, Qt::UserRole).toString() + QStringLiteral(".dic");
     downloadFile(url);
 }
 
@@ -159,7 +159,7 @@ void DictionaryManagerDialog::slotReplyFinished(QNetworkReply *reply) {
     QFileInfo info(urlPath);
     QString suffix = info.completeSuffix();
 
-    QFile file(Utils::Misc::localDictionariesPath() + "/" + info.fileName());
+    QFile file(Utils::Misc::localDictionariesPath() + QStringLiteral("/") + info.fileName());
 
     if (!file.open(QIODevice::WriteOnly)) {
         QMessageBox::critical(
@@ -174,11 +174,11 @@ void DictionaryManagerDialog::slotReplyFinished(QNetworkReply *reply) {
     file.close();
 
     // if the "dic" download is done start the "aff"
-    if (suffix == "dic") {
+    if (suffix == QStringLiteral("dic")) {
         auto *item = ui->remoteDictionaryTreeWidget->currentItem();
 
         if (item != nullptr) {
-            QString url = item->data(0, Qt::UserRole).toString() + ".aff";
+            QString url = item->data(0, Qt::UserRole).toString() + QStringLiteral(".aff");
             downloadFile(url);
         }
     } else {
@@ -199,7 +199,7 @@ void DictionaryManagerDialog::downloadProgress(
         qint64 bytesReceived, qint64 bytesTotal) {
     ui->downloadProgressBar->setMaximum(static_cast <int>(bytesTotal));
     ui->downloadProgressBar->setValue(static_cast <int>(bytesReceived));
-    ui->downloadSizeLabel->setText(Utils::Misc::toHumanReadableByteSize(bytesReceived) + " / "
+    ui->downloadSizeLabel->setText(Utils::Misc::toHumanReadableByteSize(bytesReceived) + QStringLiteral(" / ")
                                    + Utils::Misc::toHumanReadableByteSize(bytesTotal));
 }
 
@@ -240,15 +240,15 @@ QString DictionaryManagerDialog::getDictionaryName(const QString &fileNamePart) 
         }
     }
 
-    return "";
+    return QString();
 }
 
 void DictionaryManagerDialog::on_deleteLocalDictionaryButton_clicked() {
     foreach(QTreeWidgetItem *item, ui->localDictionaryTreeWidget->selectedItems()) {
-        QString fileNamePart = item->data(0, Qt::UserRole).toString();
+        const QString &fileNamePart = item->data(0, Qt::UserRole).toString();
 
-        if (deleteLocalDictionaryFile(fileNamePart + ".aff")) {
-            deleteLocalDictionaryFile(fileNamePart + ".dic");
+        if (deleteLocalDictionaryFile(fileNamePart + QStringLiteral(".aff"))) {
+            deleteLocalDictionaryFile(fileNamePart + QStringLiteral(".dic"));
         }
     }
 
@@ -257,7 +257,7 @@ void DictionaryManagerDialog::on_deleteLocalDictionaryButton_clicked() {
 }
 
 bool DictionaryManagerDialog::deleteLocalDictionaryFile(const QString &fileName) {
-    QFile file(Utils::Misc::localDictionariesPath() + "/" + fileName);
+    QFile file(Utils::Misc::localDictionariesPath() + QStringLiteral("/") + fileName);
 
     if (!file.remove()) {
         QMessageBox::critical(
