@@ -2561,7 +2561,7 @@ void MainWindow::notesWereModified(const QString &str) {
                 }
             }
 
-            int result = openNoteDiffDialog(std::move(note));
+            int result = openNoteDiffDialog(note);
             switch (result) {
                 // overwrite file with local changes
                 case NoteDiffDialog::Overwrite: {
@@ -2593,7 +2593,7 @@ void MainWindow::notesWereModified(const QString &str) {
                     showStatusBarMessage(
                             tr("Loading external changes from: %1").arg(
                                     currentNote.getFileName()), 3000);
-                    updateNoteTextFromDisk(std::move(note));
+                    updateNoteTextFromDisk(note);
                     break;
 
 //                case NoteDiffDialog::Cancel:
@@ -2637,7 +2637,7 @@ void MainWindow::notesWereModified(const QString &str) {
                 note.refetch();
 
                 // restore old selected row (but don't update the note text)
-                setCurrentNote(std::move(note), false);
+                setCurrentNote(note, false);
             }
         }
     } else {
@@ -3874,8 +3874,7 @@ void MainWindow::searchInNoteTextEdit(QString str) {
 
     if (str.count() >= 2) {
         // do a in-note search
-        doSearchInNote(std::move(str));
-
+        doSearchInNote(str);
         ui->noteTextEdit->moveCursor(QTextCursor::Start);
         ui->noteTextView->moveCursor(QTextCursor::Start);
         ui->encryptedNoteTextEdit->moveCursor(QTextCursor::Start);
@@ -9626,7 +9625,7 @@ void MainWindow::on_noteTreeWidget_itemChanged(QTreeWidgetItem *item,
 
             if (oldNoteName != newNoteName) {
                 note.refetch();
-                setCurrentNote(std::move(note));
+                setCurrentNote(note);
 
                 // rename the note file names of note tag links
                 Tag::renameNoteFileNamesOfLinks(oldNoteName, newNoteName);
@@ -11183,7 +11182,7 @@ void MainWindow::on_actionImport_notes_from_text_files_triggered() {
 
         options |= CreateNewNoteOption::DisableLoadNoteDirectoryList;
 
-        createNewNote(std::move(fileInfo.baseName()), text, options);
+        createNewNote(fileInfo.baseName(), text, options);
         progressDialog.setValue(i);
     }
 
