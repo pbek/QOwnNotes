@@ -825,14 +825,14 @@ private:
     bool isToolbarVisible();
 
     static void setTreeWidgetItemToolTipForNote(
-            QTreeWidgetItem *item, Note *note,
+            QTreeWidgetItem *item, const Note &note,
             QDateTime *overrideFileLastModified = nullptr);
 
     QTreeWidgetItem *firstVisibleNoteTreeWidgetItem();
 
     QTreeWidgetItem *addNoteSubFolderToTreeWidget(
             QTreeWidgetItem *parentItem,
-            NoteSubFolder noteSubFolder);
+            const NoteSubFolder &noteSubFolder);
 
     void buildNoteSubFolderTreeForParentItem(QTreeWidgetItem *parent = nullptr);
 
@@ -842,13 +842,13 @@ private:
 
     void updateNoteDirectoryWatcher();
 
-    bool addNoteToNoteTreeWidget(Note note, QTreeWidgetItem *parent = nullptr);
+    bool addNoteToNoteTreeWidget(const Note &note, QTreeWidgetItem *parent = nullptr);
 
     void removeSelectedNoteSubFolders(QTreeWidget *treeWidget);
 
     bool createNewNoteSubFolder(QString folderName = "");
 
-    QTreeWidgetItem *findNoteInNoteTreeWidget(Note note);
+    QTreeWidgetItem *findNoteInNoteTreeWidget(const Note &note);
 
     void jumpToNoteOrCreateNew(bool disableLoadNoteDirectoryList = false);
 
@@ -973,7 +973,7 @@ private:
 
     int getSelectedNotesCount() const;
 
-    void updateNoteTreeWidgetItem(Note &note,
+    void updateNoteTreeWidgetItem(const Note &note,
                                   QTreeWidgetItem *noteItem = nullptr);
 
     void initFakeVim(QOwnNotesMarkdownTextEdit *noteTextEdit);

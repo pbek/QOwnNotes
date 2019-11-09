@@ -48,7 +48,7 @@ public:
                                  HighlightingOption::None);
     ~QOwnNotesMarkdownHighlighter() Q_DECL_OVERRIDE;
 
-    void updateCurrentNote(Note *_note = nullptr);
+    void updateCurrentNote(const Note &_note);
     void setCommentHighlighting(bool);
     void setCodeHighlighting(bool);
     void setFrontmatterHighlighting(bool);

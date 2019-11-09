@@ -1761,7 +1761,7 @@ bool Note::deleteAll() {
  *
  * @return bool
  */
-bool Note::fileExists() {
+bool Note::fileExists() const {
     QFile file(fullNoteFilePath());
     QFileInfo fileInfo(file);
     return file.exists() && fileInfo.isFile() && fileInfo.isReadable();
@@ -1772,7 +1772,7 @@ bool Note::fileExists() {
  *
  * @return bool
  */
-bool Note::fileWriteable() {
+bool Note::fileWriteable() const{
     QFile file(fullNoteFilePath());
     QFileInfo fileInfo(file);
     return file.exists() && fileInfo.isFile() && fileInfo.isWritable();
@@ -1781,7 +1781,7 @@ bool Note::fileWriteable() {
 //
 // checks if the current note still exists in the database
 //
-bool Note::exists() {
+bool Note::exists() const {
     Note note = Note::fetch(this->id);
     return note.id > 0;
 }
@@ -1796,7 +1796,7 @@ bool Note::refetch() {
 /**
  * Returns the suffix of the note file name
  */
-QString Note::fileNameSuffix() {
+QString Note::fileNameSuffix() const {
     QFileInfo fileInfo;
     fileInfo.setFile(fileName);
     return fileInfo.suffix();

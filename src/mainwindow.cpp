@@ -1661,7 +1661,7 @@ void MainWindow::loadNoteFolderListMenu() {
 
     // populate the note folder list
     if (noteFoldersCount > 0) {
-        Q_FOREACH(NoteFolder noteFolder, noteFolders) {
+        Q_FOREACH(const NoteFolder &noteFolder, noteFolders) {
                 // don't show not existing folders or if path is empty
                 if (!noteFolder.localPathExists()) {
                     continue;
@@ -1794,8 +1794,8 @@ void MainWindow::changeNoteFolder(int noteFolderId, bool forceChange) {
 /*
  * Adds and removes a folder from the recent note folders
  */
-void MainWindow::storeRecentNoteFolder( const QString& addFolderName,
-        const QString& removeFolderName) {
+void MainWindow::storeRecentNoteFolder(const QString& addFolderName,
+                                       const QString& removeFolderName) {
     QSettings settings;
     QStringList recentNoteFolders =
             settings.value(QStringLiteral("recentNoteFolders")).toStringList();
@@ -1921,8 +1921,8 @@ void MainWindow::loadNoteDirectoryList() {
         itemCount = Note::countAll();
     } else {
         // load all notes and add them to the note list widget
-        QList<Note> noteList = Note::fetchAll();
-        Q_FOREACH(Note note, noteList) {
+        const QList<Note> noteList = Note::fetchAll();
+        Q_FOREACH(const Note &note, noteList) {
                 addNoteToNoteTreeWidget(note);
             }
 
@@ -1969,7 +1969,7 @@ void MainWindow::loadNoteDirectoryList() {
 /**
  * Adds a note to the note tree widget
  */
-bool MainWindow::addNoteToNoteTreeWidget(Note note, QTreeWidgetItem *parent) {
+bool MainWindow::addNoteToNoteTreeWidget(const Note &note, QTreeWidgetItem *parent) {
     QString name = note.getName();
 
     // skip notes without name
@@ -1981,7 +1981,7 @@ bool MainWindow::addNoteToNoteTreeWidget(Note note, QTreeWidgetItem *parent) {
 
     // add a note item to the tree
     auto *noteItem = new QTreeWidgetItem();
-    setTreeWidgetItemToolTipForNote(noteItem, &note);
+    setTreeWidgetItemToolTipForNote(noteItem, note);
     noteItem->setText(0, name);
     noteItem->setData(0, Qt::UserRole, note.getId());
     noteItem->setData(0, Qt::UserRole + 1, NoteType);
@@ -2026,7 +2026,7 @@ bool MainWindow::addNoteToNoteTreeWidget(Note note, QTreeWidgetItem *parent) {
 }
 
 void MainWindow::updateNoteTreeWidgetItem(
-        Note &note, QTreeWidgetItem *noteItem) {
+        const Note &note, QTreeWidgetItem *noteItem) {
     if (noteItem == nullptr) {
         noteItem = findNoteInNoteTreeWidget(note);
     }
@@ -2055,7 +2055,7 @@ void MainWindow::updateNoteTreeWidgetItem(
  * Adds a note sub folder to the note sub folder tree widget
  */
 QTreeWidgetItem *MainWindow::addNoteSubFolderToTreeWidget(
-        QTreeWidgetItem *parentItem, NoteSubFolder noteSubFolder) {
+        QTreeWidgetItem *parentItem, const NoteSubFolder &noteSubFolder) {
     int id = noteSubFolder.getId();
     QString name = noteSubFolder.getName();
     QSettings settings;
@@ -2091,20 +2091,20 @@ QTreeWidgetItem *MainWindow::addNoteSubFolderToTreeWidget(
  */
 void MainWindow::setTreeWidgetItemToolTipForNote(
         QTreeWidgetItem *item,
-        Note *note,
+        const Note &note,
         QDateTime *overrideFileLastModified) {
-    if ((item == nullptr) || (note == nullptr)) {
+    if (item == nullptr ) {
         return;
     }
 
-    QDateTime modified = note->getFileLastModified();
+    QDateTime modified = note.getFileLastModified();
     QDateTime *fileLastModified = (overrideFileLastModified != nullptr) ?
                                  overrideFileLastModified : &modified;
 
     QString toolTipText = tr("<strong>%1</strong><br />last modified: %2")
-            .arg(note->getFileName(), fileLastModified->toString());
+            .arg(note.getFileName(), fileLastModified->toString());
 
-    NoteSubFolder noteSubFolder = note->getNoteSubFolder();
+    NoteSubFolder noteSubFolder = note.getNoteSubFolder();
     if (noteSubFolder.isFetched()) {
         toolTipText += tr("<br />path: %1").arg(noteSubFolder.relativePath());
     }
@@ -2159,10 +2159,11 @@ void MainWindow::makeCurrentNoteFirstInNoteList() {
  * @param note
  * @return
  */
-QTreeWidgetItem *MainWindow::findNoteInNoteTreeWidget(Note note) {
+QTreeWidgetItem *MainWindow::findNoteInNoteTreeWidget(const Note &note) {
     int noteId = note.getId();
+    int count = ui->noteTreeWidget->topLevelItemCount();
 
-    for (int i = 0; i < ui->noteTreeWidget->topLevelItemCount(); i++) {
+    for (int i = 0; i < count; ++i) {
         QTreeWidgetItem *item = ui->noteTreeWidget->topLevelItem(i);
 
         if (item->data(0, Qt::UserRole + 1) == NoteType &&
@@ -2555,7 +2556,7 @@ void MainWindow::notesWereModified(const QString &str) {
                 // if we didn't change it for a minute
                 if (!this->currentNote.getHasDirtyData()
                     && isCurrentNoteNotEditedForAWhile) {
-                    updateNoteTextFromDisk(note);
+                    updateNoteTextFromDisk(std::move(note));
                     return;
                 }
             }
@@ -2647,7 +2648,7 @@ void MainWindow::notesWereModified(const QString &str) {
 
         // rebuild and reload the notes directory list
         buildNotesIndexAndLoadNoteDirectoryList();
-        setCurrentNote(this->currentNote, false);
+        setCurrentNote(std::move(this->currentNote), false);
     }
 }
 
@@ -2684,7 +2685,7 @@ void MainWindow::notesDirectoryWasModified(const QString &str) {
     qDebug() << "updateNoteText: " << updateNoteText;
 
     // restore old selected row (but don't update the note text)
-    setCurrentNote(this->currentNote, updateNoteText);
+    setCurrentNote(std::move(this->currentNote), updateNoteText);
 }
 
 /**
@@ -3110,11 +3111,11 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
                         .toList();
 
         // remove all missing note subfolders
-        Q_FOREACH(int noteSubFolderId, removedNoteSubFolderIdList) {
-                NoteSubFolder noteSubFolder = NoteSubFolder::fetch(
-                        noteSubFolderId);
-                if (noteSubFolder.isFetched()) {
-                    noteSubFolder.remove();
+        Q_FOREACH(int _noteSubFolderId, removedNoteSubFolderIdList) {
+                NoteSubFolder _noteSubFolder = NoteSubFolder::fetch(
+                        _noteSubFolderId);
+                if (_noteSubFolder.isFetched()) {
+                    _noteSubFolder.remove();
                     wasModified = true;
                 }
             }
@@ -3405,7 +3406,7 @@ void MainWindow::setCurrentNoteFromNoteId(int noteId) {
 
     Note note = Note::fetch(noteId);
     if (note.isFetched()) {
-        setCurrentNote(note);
+        setCurrentNote(std::move(note));
     }
 }
 
@@ -3874,7 +3875,6 @@ void MainWindow::searchInNoteTextEdit(QString str) {
     if (str.count() >= 2) {
         // do a in-note search
         doSearchInNote(str);
-
         ui->noteTextEdit->moveCursor(QTextCursor::Start);
         ui->noteTextView->moveCursor(QTextCursor::Start);
         ui->encryptedNoteTextEdit->moveCursor(QTextCursor::Start);
@@ -3924,7 +3924,7 @@ void MainWindow::searchInNoteTextEdit(QString str) {
  */
 void MainWindow::searchForSearchLineTextInNoteTextEdit() {
     QString searchString = ui->searchLineEdit->text();
-    searchInNoteTextEdit(searchString);
+    searchInNoteTextEdit(std::move(searchString));
 }
 
 /**
@@ -3991,9 +3991,12 @@ int MainWindow::getMaxImageWidth()
  */
 void MainWindow::setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly,
                                      bool ignorePreviewVisibility) {
+    if (note == nullptr) {
+        return;
+    }
     if (!updateNoteTextViewOnly) {
         dynamic_cast<QOwnNotesMarkdownHighlighter*>(
-                    ui->noteTextEdit->highlighter())->updateCurrentNote(note);
+                    ui->noteTextEdit->highlighter())->updateCurrentNote(*note);
         ui->noteTextEdit->setText(note->getNoteText());
     }
 
@@ -5124,7 +5127,7 @@ void MainWindow::handleNoteTextChanged() {
 
     // update the note list tooltip of the note
     setTreeWidgetItemToolTipForNote(ui->noteTreeWidget->currentItem(),
-                                    &currentNote,
+                                    currentNote,
                                     &currentNoteLastEdited);
 }
 
@@ -5536,7 +5539,7 @@ void MainWindow::jumpToNoteOrCreateNew(bool disableLoadNoteDirectoryList) {
     }
 
     // jump to the found or created note
-    setCurrentNote(note);
+    setCurrentNote(std::move(note));
 
     // hide the search widget after creating a new note
     activeNoteTextEdit()->hideSearchWidget(true);
@@ -5692,7 +5695,7 @@ void MainWindow::openLocalUrl(QString urlString) {
             Note note = Note::fetch(noteId);
             if (note.isFetched()) {
                 // set current note
-                setCurrentNote(note);
+                setCurrentNote(std::move(note));
             }
         } else {
             qDebug() << "malformed url: " << urlString;
@@ -5710,7 +5713,7 @@ void MainWindow::openLocalUrl(QString urlString) {
         // does this note really exist?
         if (note.isFetched()) {
             // set current note
-            setCurrentNote(note);
+            setCurrentNote(std::move(note));
         } else {
             // if the name of the linked note only consists of numbers we cannot
             // use host() to get the filename, it would get converted to an
@@ -7438,7 +7441,7 @@ void MainWindow::buildNoteSubFolderTreeForParentItem(QTreeWidgetItem *parent) {
             if (isCurrentNoteTreeEnabled) {
                 // load all notes of the subfolder and add them to the note list widget
                 QList<Note> noteList = Note::fetchAllByNoteSubFolderId(noteSubFolder.getId());
-                Q_FOREACH(Note note, noteList) {
+                Q_FOREACH(const Note &note, noteList) {
                         addNoteToNoteTreeWidget(note, item);
                     }
             } else {
@@ -9354,7 +9357,7 @@ void MainWindow::on_noteTreeWidget_currentItemChanged(
     Note note = Note::fetch(noteId);
     qDebug() << __func__;
 
-    setCurrentNote(note, true, false);
+    setCurrentNote(std::move(note), true, false);
 
     // let's highlight the text from the search line edit and do a "in note search"
     searchForSearchLineTextInNoteTextEdit();
@@ -10072,7 +10075,7 @@ void MainWindow::on_actionSplit_note_at_cursor_position_triggered() {
     Note previousNote = currentNote;
 
     // create a new note
-    createNewNote(name);
+    createNewNote(std::move(name));
 
     // adding a link to new note into the old note
     previousNote.refetch();
