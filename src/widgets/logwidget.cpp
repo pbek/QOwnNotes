@@ -114,7 +114,7 @@ void LogWidget::storeSettings() const {
 /**
  * Adds a log entry
  */
-void LogWidget::log(LogWidget::LogType logType, QString text) {
+void LogWidget::log(LogWidget::LogType logType, const QString &text) {
     // ignore "libpng sRGB profile", "QXcbConnection: XCB error: 8" and
     // "QFileSystemWatcher::removePaths" warnings
     if (logType == WarningLogType &&

@@ -48,7 +48,7 @@ public:
     QString getLogText();
 
 public slots:
-    void log(LogWidget::LogType logType, QString text);
+    void log(LogWidget::LogType logType, const QString &text);
 
 private slots:
     void storeSettings() const;
