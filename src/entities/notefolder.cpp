@@ -13,59 +13,61 @@
 #include <QtCore/QJsonDocument>
 
 
-NoteFolder::NoteFolder() {
+NoteFolder::NoteFolder() : name(QString()),
+                           localPath(QString()),
+                           remotePath(QString()) {
     id = 0;
-    name = "";
-    localPath = "";
+//    name = "";
+//    localPath = "";
     cloudConnectionId = 1;
-    remotePath = "";
+//    remotePath = "";
     priority = 0;
     activeTagId = 0;
     showSubfolders = false;
     useGit = false;
 }
 
-int NoteFolder::getId() {
+int NoteFolder::getId() const {
     return this->id;
 }
 
-QString NoteFolder::getLocalPath() {
+QString NoteFolder::getLocalPath() const {
     return this->localPath;
 }
 
-int NoteFolder::getCloudConnectionId() {
+int NoteFolder::getCloudConnectionId() const {
     return this->cloudConnectionId;
 }
 
-QString NoteFolder::getName() {
+QString NoteFolder::getName() const {
     return this->name;
 }
 
-QString NoteFolder::getRemotePath() {
+QString NoteFolder::getRemotePath() const {
     return this->remotePath;
 }
 
-int NoteFolder::getPriority() {
+int NoteFolder::getPriority() const {
     return this->priority;
 }
 
-bool NoteFolder::isShowSubfolders() {
+bool NoteFolder::isShowSubfolders() const {
     return showSubfolders;
 }
 
-bool NoteFolder::isUseGit() {
+bool NoteFolder::isUseGit() const {
     return useGit;
 }
 
-int NoteFolder::getActiveTagId() {
+int NoteFolder::getActiveTagId() const {
     return this->activeTagId;
 }
 
-NoteSubFolder NoteFolder::getActiveNoteSubFolder() {
+NoteSubFolder NoteFolder::getActiveNoteSubFolder() const {
     return NoteSubFolder::fetchByPathData(this->activeNoteSubFolderData);
 }
 
-void NoteFolder::setName(QString text) {
+void NoteFolder::setName(const QString &text) {
     this->name = text;
 }
 
@@ -73,11 +75,11 @@ void NoteFolder::setCloudConnectionId(int id) {
     this->cloudConnectionId = id;
 }
 
-void NoteFolder::setLocalPath(QString text) {
+void NoteFolder::setLocalPath(const QString &text) {
     this->localPath = text;
 }
 
-void NoteFolder::setRemotePath(QString text) {
+void NoteFolder::setRemotePath(const QString &text) {
     this->remotePath = text;
 }
 
@@ -97,7 +99,7 @@ void NoteFolder::setActiveTagId(int value) {
     this->activeTagId = value;
 }
 
-void NoteFolder::setActiveNoteSubFolder(NoteSubFolder noteSubFolder) {
+void NoteFolder::setActiveNoteSubFolder(const NoteSubFolder &noteSubFolder) {
     this->activeNoteSubFolderData = noteSubFolder.pathData();
 }
 
@@ -154,7 +156,7 @@ int NoteFolder::countAll() {
     return 0;
 }
 
-bool NoteFolder::localPathExists() {
+bool NoteFolder::localPathExists() const {
     QDir folder(localPath);
     return folder.exists() && !localPath.isEmpty();
 }
@@ -280,12 +282,12 @@ bool NoteFolder::store() {
 /**
  * Checks if the current noteFolder still exists in the database
  */
-bool NoteFolder::exists() {
+bool NoteFolder::exists() const {
     NoteFolder noteFolder = NoteFolder::fetch(this->id);
     return noteFolder.id > 0;
 }
 
-bool NoteFolder::isFetched() {
+bool NoteFolder::isFetched() const {
     return (this->id > 0);
 }
 
@@ -306,7 +308,7 @@ void NoteFolder::setAsCurrent() {
 /**
  * Checks if this note folder is the current one
  */
-bool NoteFolder::isCurrent() {
+bool NoteFolder::isCurrent() const {
     return currentNoteFolderId() == id;
 }
 
@@ -500,7 +502,7 @@ bool NoteFolder::migrateToNoteFolders() {
 
     // create recent note folders as NoteFolder
     if (!recentNoteFolders.empty()) {
-        Q_FOREACH(QString recentNoteFolderPath, recentNoteFolders) {
+        Q_FOREACH(const QString &recentNoteFolderPath, recentNoteFolders) {
                 if (notesPath != recentNoteFolderPath) {
                     NoteFolder noteFolder;
                     noteFolder.setName(recentNoteFolderPath);
@@ -516,7 +518,7 @@ bool NoteFolder::migrateToNoteFolders() {
     return priority > 0;
 }
 
-QJsonObject NoteFolder::jsonObject() {
+QJsonObject NoteFolder::jsonObject() const {
     QJsonObject object;
     object.insert("text", QJsonValue::fromVariant(name));
     object.insert("value", QJsonValue::fromVariant(id));
@@ -532,7 +534,7 @@ QString NoteFolder::noteFoldersWebServiceJsonText() {
     QJsonArray objectList;
     QList<NoteFolder> noteFolders = NoteFolder::fetchAll();
 
-    Q_FOREACH(NoteFolder noteFolder, noteFolders) {
+    Q_FOREACH(const NoteFolder &noteFolder, noteFolders) {
             objectList.push_back(noteFolder.jsonObject());
         }
 
@@ -554,7 +556,7 @@ QString NoteFolder::noteFoldersWebServiceJsonText() {
  * @return
  */
 bool NoteFolder::isPathNoteFolder(const QString &path) {
-    Q_FOREACH(NoteFolder noteFolder, fetchAll()) {
+    Q_FOREACH(const NoteFolder &noteFolder, fetchAll()) {
         if (path == noteFolder.getLocalPath()) {
             return true;
         }

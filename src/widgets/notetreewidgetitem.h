@@ -13,8 +13,8 @@ class NoteTreeWidgetItem : public QWidget
     Q_OBJECT
 
 public:
-    explicit NoteTreeWidgetItem(Note note, QWidget *parent = 0);
-    void updateUserInterface(Note &note) const;
+    explicit NoteTreeWidgetItem(const Note &note, QWidget *parent = 0);
+    void updateUserInterface(const Note &note) const;
     ~NoteTreeWidgetItem();
 
 private:

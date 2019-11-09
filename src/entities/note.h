@@ -101,11 +101,11 @@ public:
 
     static bool deleteAll();
 
-    bool fileExists();
+    bool fileExists() const;
 
-    bool fileWriteable();
+    bool fileWriteable() const;
 
-    bool exists();
+    bool exists() const;
 
     bool refetch();
 
@@ -169,7 +169,7 @@ public:
 
     bool renameNoteFile(QString newName);
 
-    QString fileNameSuffix();
+    QString fileNameSuffix() const;
 
     bool modifyNoteTextFileNameFromQMLHook();
 

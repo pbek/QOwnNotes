@@ -55,12 +55,9 @@ QOwnNotesMarkdownHighlighter::~QOwnNotesMarkdownHighlighter()
     delete wordTokenizer;
 }
 
-void QOwnNotesMarkdownHighlighter::updateCurrentNote(Note *_note) {
-    if (_note == nullptr) {
-        _currentNote = Note::fetch(qApp->property("currentNoteId").toInt());
-    } else {
-        _currentNote = *_note;
-    }
+void QOwnNotesMarkdownHighlighter::updateCurrentNote(const Note &_note) {
+        _currentNote = _note;
+
 }
 
 void QOwnNotesMarkdownHighlighter::setCommentHighlighting(bool state)
