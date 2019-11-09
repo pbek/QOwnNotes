@@ -446,7 +446,7 @@ private slots:
 
     void on_actionSplit_note_at_cursor_position_triggered();
 
-    void onCustomActionInvoked(QString identifier);
+    void onCustomActionInvoked(const QString &identifier);
 
     void on_actionDonate_triggered();
 
