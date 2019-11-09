@@ -1000,10 +1000,10 @@ void MainWindow::initScriptingEngine() {
  *
  * @param identifier
  */
-void MainWindow::onCustomActionInvoked(QString identifier) {
+void MainWindow::onCustomActionInvoked(const QString &identifier) {
     ScriptingService *scriptingService = ScriptingService::instance();
     if (scriptingService != Q_NULLPTR) {
-        scriptingService->onCustomActionInvoked(std::move(identifier));
+        scriptingService->onCustomActionInvoked(identifier);
     }
 }
 
