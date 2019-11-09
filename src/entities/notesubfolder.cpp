@@ -17,27 +17,27 @@ NoteSubFolder::NoteSubFolder() {
     this->name = "";
 }
 
-int NoteSubFolder::getId() {
+int NoteSubFolder::getId() const {
     return this->id;
 }
 
-int NoteSubFolder::getParentId() {
+int NoteSubFolder::getParentId() const {
     return this->parentId;
 }
 
-NoteSubFolder NoteSubFolder::getParent() {
+NoteSubFolder NoteSubFolder::getParent() const {
     return NoteSubFolder::fetch(parentId);
 }
 
-QString NoteSubFolder::getName() {
+QString NoteSubFolder::getName() const {
     return this->name;
 }
 
-QDateTime NoteSubFolder::getFileLastModified() {
+QDateTime NoteSubFolder::getFileLastModified() const {
     return this->fileLastModified;
 }
 
-QDateTime NoteSubFolder::getModified() {
+QDateTime NoteSubFolder::getModified() const {
     return this->modified;
 }
 
@@ -49,7 +49,7 @@ void NoteSubFolder::setParentId(int parentId) {
     this->parentId = parentId;
 }
 
-bool NoteSubFolder::isFetched() {
+bool NoteSubFolder::isFetched() const {
     return (this->id > 0);
 }
 
@@ -99,7 +99,7 @@ NoteSubFolder NoteSubFolder::fetchByNameAndParentId(
 /**
  * Gets the relative path name of the note sub folder
  */
-QString NoteSubFolder::relativePath(QString separator) {
+QString NoteSubFolder::relativePath(QString separator) const {
     if (separator.isEmpty()) {
         // be aware that the separator has to be same on all platforms to
         // work cross platform
@@ -114,7 +114,7 @@ QString NoteSubFolder::relativePath(QString separator) {
 /**
  * Gets the full path of the note sub folder
  */
-QString NoteSubFolder::fullPath() {
+QString NoteSubFolder::fullPath() const {
     return Utils::Misc::removeIfEndsWith(
             Note::getFullFilePathForFile(relativePath()), "/");
 }
@@ -122,14 +122,14 @@ QString NoteSubFolder::fullPath() {
 /**
  * Gets the full path of the note sub folder as QDir
  */
-QDir NoteSubFolder::dir() {
+QDir NoteSubFolder::dir() const {
     return QDir(fullPath());
 }
 
 /**
  * Gets the path data of the note sub folder
  */
-QString NoteSubFolder::pathData() {
+QString NoteSubFolder::pathData() const {
     return parentId == 0 ?
            name :
            getParent().pathData() + "\n" + name;
@@ -388,7 +388,7 @@ bool NoteSubFolder::deleteAll() {
 //
 // checks if the current noteSubFolder still exists in the database
 //
-bool NoteSubFolder::exists() {
+bool NoteSubFolder::exists() const {
     NoteSubFolder noteSubFolder = NoteSubFolder::fetch(this->id);
     return noteSubFolder.id > 0;
 }
@@ -454,7 +454,7 @@ bool NoteSubFolder::setAsActive(int noteSubFolderId) {
 /**
  * Checks if this note sub folder is the current one
  */
-bool NoteSubFolder::isActive() {
+bool NoteSubFolder::isActive() const {
     return activeNoteSubFolderId() == id;
 }
 
