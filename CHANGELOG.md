@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 19.11.10
+- did some general performance optimization (thank you @Waqar144)
+
 ## 19.11.9
 - did some optimization for spellchecking auto detect mode
   (for [#1359](https://github.com/pbek/QOwnNotes/issues/1359), thank you @Waqar144)
