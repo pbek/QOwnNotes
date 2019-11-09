@@ -157,7 +157,7 @@ void AttachmentDialog::slotReplyFinished(QNetworkReply *reply) {
         }
     }
 
-    QTemporaryFile *tempFile = new QTemporaryFile(
+    auto *tempFile = new QTemporaryFile(
             QDir::tempPath() + "/QOwnNotes-XXXXXX." + suffix);
 
     // we want to keep the file to be used in the update process
