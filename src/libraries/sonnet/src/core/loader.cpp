@@ -54,8 +54,12 @@ public:
     Settings *settings;
 
     // <language, Clients with that language >
-    QMap<QString, QVector<Client *> > languageClients;
-    QStringList clients;
+    //QMap<QString, QVector<Client *> > languageClients;
+    //since we are only using hunspell, we have only one client
+    //QString clients;
+    //QStringList clients;
+
+    Client *client;
 
     QStringList languagesNameCache;
     QHash<QString, QSharedPointer<SpellerPlugin> > spellerCache;
@@ -90,55 +94,68 @@ Loader::~Loader()
 
 SpellerPlugin *Loader::createSpeller(const QString &language, const QString &clientName) const
 {
-    QString backend = clientName;
+/*QOwnNotes Specific
+ * Waqar144: <waqar.17a@gmail.com>
+ * Disable support for multiple backends
+ * Since we are only using Hunspell, we have only one client and we don't need to do all this
+ * I am disabling it in favour of performance.
+ */
+//    QString backend = QStringLiteral("Hunspell");
     QString plang = language;
     if (plang.isEmpty()) {
         plang = d->settings->defaultLanguage();
     }
 
-    auto clientsItr = d->languageClients.constFind(plang);
-    if (clientsItr == d->languageClients.constEnd()) {
-        qCWarning(SONNET_LOG_CORE) << "No language dictionaries for the language:" << plang;
-        emit loadingDictionaryFailed(plang);
+//    auto clientsItr = d->languageClients.constFind(plang);
+//    if (clientsItr == d->languageClients.constEnd()) {
+//        qCWarning(SONNET_LOG_CORE) << "No language dictionaries for the language:" << plang;
+//        emit loadingDictionaryFailed(plang);
+//        return nullptr;
+//    }
+
+//    const QVector<Client *> lClients = *clientsItr;
+
+//    if (backend.isEmpty()) {
+//        backend = d->settings->defaultClient();
+//        if (!backend.isEmpty()) {
+//            // check if the default client supports the requested language;
+//            // if it does it will be an element of lClients.
+//            bool unknown = !std::any_of(lClients.constBegin(), lClients.constEnd(), [backend] (const Client *client) {
+//                    return client->name() == backend; });
+//            if (unknown) {
+//                qCWarning(SONNET_LOG_CORE) << "Default client" << backend << "doesn't support language:" << plang;
+//                backend = QString();
+//            }
+//        }
+//    }
+
+//    QVectorIterator<Client *> itr(lClients);
+//    while (itr.hasNext()) {
+//        Client *item = itr.next();
+//        if (!backend.isEmpty()) {
+//            if (backend == item->name()) {
+//                SpellerPlugin *dict = item->createSpeller(plang);
+//                qCDebug(SONNET_LOG_CORE) << "Using the" << item->name() << "plugin for language" << plang;
+//                return dict;
+//            }
+//        } else {
+//            //the first one is the one with the highest
+//            //reliability
+//            SpellerPlugin *dict = item->createSpeller(plang);
+//            qCDebug(SONNET_LOG_CORE) << "Using the" << item->name() << "plugin for language" << plang;
+//            return dict;
+//        }
+//    }
+
+    SpellerPlugin *dict = d->client->createSpeller(plang);
+    if (dict) {
+        return dict;
+    } else {
+        qWarning() << "Hunspell has no language dictionaries for the language: " <<plang;
         return nullptr;
     }
-
-    const QVector<Client *> lClients = *clientsItr;
-
-    if (backend.isEmpty()) {
-        backend = d->settings->defaultClient();
-        if (!backend.isEmpty()) {
-            // check if the default client supports the requested language;
-            // if it does it will be an element of lClients.
-            bool unknown = !std::any_of(lClients.constBegin(), lClients.constEnd(), [backend] (const Client *client) {
-                    return client->name() == backend; });
-            if (unknown) {
-                qCWarning(SONNET_LOG_CORE) << "Default client" << backend << "doesn't support language:" << plang;
-                backend = QString();
-            }
-        }
-    }
-
-    QVectorIterator<Client *> itr(lClients);
-    while (itr.hasNext()) {
-        Client *item = itr.next();
-        if (!backend.isEmpty()) {
-            if (backend == item->name()) {
-                SpellerPlugin *dict = item->createSpeller(plang);
-                qCDebug(SONNET_LOG_CORE) << "Using the" << item->name() << "plugin for language" << plang;
-                return dict;
-            }
-        } else {
-            //the first one is the one with the highest
-            //reliability
-            SpellerPlugin *dict = item->createSpeller(plang);
-            qCDebug(SONNET_LOG_CORE) << "Using the" << item->name() << "plugin for language" << plang;
-            return dict;
-        }
-    }
-
-    qCWarning(SONNET_LOG_CORE) << "The default client" << backend << "has no language dictionaries for the language:" << plang;
-    return nullptr;
+    //qCWarning(SONNET_LOG_CORE) << "The default client" << backend << "has no language dictionaries for the language:" << plang;
+    //return nullptr;
 }
 
 QSharedPointer<SpellerPlugin> Loader::cachedSpeller(const QString &language)
@@ -155,14 +172,15 @@ void Loader::clearSpellerCache()
     d->spellerCache.clear();
 }
 
-QStringList Loader::clients() const
+QString Loader::clients() const
 {
-    return d->clients;
+    return d->client->name();
 }
 
 QStringList Loader::languages() const
 {
-    return d->languageClients.keys();
+    return d->client->languages();
+    //return d->languageClients.keys();
 }
 
 QString Loader::languageNameForCode(const QString &langCode) const
@@ -324,6 +342,7 @@ void Loader::loadPlugins()
 
 void Loader::loadPlugin(const QString &pluginPath)
 {
+/*
 #ifndef SONNET_STATIC
     QPluginLoader plugin(pluginPath);
     if (!plugin.load()) { // We do this separately for better error handling
@@ -339,12 +358,13 @@ void Loader::loadPlugin(const QString &pluginPath)
         return;
     }
 #else
+*/
 //hunspell only for non Mac
-    Client *client = nullptr;
+    //Client *client = nullptr;
 //#ifndef Q_OS_MACOS
-    if (pluginPath == QLatin1String("Hunspell")) {
-        client = new HunspellClient(this);
-    }
+  //  if (pluginPath == QLatin1String("Hunspell")) {
+        d->client = new HunspellClient(this);
+   // }
 //#endif //not mac
 //#ifdef Q_OS_MACOS
 //    if (pluginPath == QLatin1String("NSSpellchecker")) {
@@ -352,20 +372,22 @@ void Loader::loadPlugin(const QString &pluginPath)
 //        client = new NSSpellCheckerClient(this);
 //    }
 //#endif //mac
-#endif
+//#endif
 
-    const QStringList languages = client->languages();
-    d->clients.append(client->name());
+    //const QStringList languages = client->languages();
+    //d->clients.append(client->name());
+    //d->clients = QStringLiteral("Hunspell");
 
-    for (const QString &language : languages) {
-        QVector<Client *> &languageClients = d->languageClients[language];
-        if (languageClients.isEmpty()
-            || client->reliability() < languageClients.first()->reliability()) {
-            languageClients.append(client);    // less reliable, to the end
-        } else {
-            languageClients.prepend(client);    // more reliable, to the front
-        }
-    }
+//    for (const QString &language : languages) {
+//        QVector<Client *> &languageClients = d->languageClients[language];
+//        languageClients.append(client);
+//        if (languageClients.isEmpty()
+//            || client->reliability() < languageClients.first()->reliability()) {
+//            languageClients.append(client);    // less reliable, to the end
+//        } else {
+//            languageClients.prepend(client);    // more reliable, to the front
+//        }
+//    }
 }
 
 void Loader::changed()
