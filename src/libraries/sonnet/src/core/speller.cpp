@@ -180,7 +180,7 @@ void Speller::restore()
     }
 }
 
-QStringList Speller::availableBackends() const
+QString Speller::availableBackends() const
 {
     Loader *l = Loader::openLoader();
     return l->clients();

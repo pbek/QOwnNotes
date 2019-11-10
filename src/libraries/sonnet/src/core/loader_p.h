@@ -95,7 +95,7 @@ public:
     /**
      * Returns names of all supported clients (e.g. ISpell, ASpell)
      */
-    QStringList clients() const;
+    QString clients() const;
 
     /**
      * Returns a list of supported languages.

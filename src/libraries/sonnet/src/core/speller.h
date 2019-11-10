@@ -111,7 +111,7 @@ public: // Configuration API
     /**
      * Returns names of all supported backends (e.g. ISpell, ASpell)
      */
-    QStringList availableBackends() const;
+    QString availableBackends() const;
 
     /**
      * Returns a list of supported languages.
