@@ -23,10 +23,12 @@ QOwnSpellChecker::QOwnSpellChecker(QObject *parent) : QObject(parent) {
     spellchecker = new Sonnet::Speller();
     QSettings settings;
     active = settings.value(QStringLiteral("checkSpelling"), true).toBool();
-    language = settings.value(QStringLiteral("spellCheckLanguage"), QStringLiteral("auto")).toString();
+    QString _language = settings.value(QStringLiteral("spellCheckLanguage"), QStringLiteral("auto")).toString();
 
-    autoDetect = (language == QStringLiteral("auto"));
-
+    autoDetect = (_language == QStringLiteral("auto"));
+    if (!autoDetect) {
+        setCurrentLanguage(_language);
+    }
 #ifdef Q_OS_MACOS
     QStringList s = spellchecker->availableLanguages();
     if (!s.contains(spellchecker->defaultLanguage()) && !s.isEmpty()) {
