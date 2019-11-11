@@ -6,7 +6,6 @@
     - if `Dark mode` will be un-selected a light color schema will be selected
 - did some general performance optimization (thank you @Waqar144)
 - fixed specific dictionary language not being setup at startup (thank you @Waqar144)
-- improved automatic dictionary detection and loading time (thank you @Waqar144)
 
 ## 19.11.9
 - did some optimization for spellchecking auto detect mode
