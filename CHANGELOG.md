@@ -13,6 +13,12 @@
 - fixed specific dictionary language not being setup at startup (thank you @Waqar144)
 - bracket auto-closing in combination with "undo" was improved
   (for [#24](https://github.com/pbek/qmarkdowntextedit/pull/24), thank you @Waqar144)
+- added more Latvian, Punjabi, Indonesian, Macedonian, Albanian, Lithuanian,
+  Catalan, Serbian (Cyrillic), Maori, Galician, Slovak, Slovenian, Romanian,
+  Norwegian, Swedish, French, Spanish, Russian, Bulgarian, Greek, Hungarian,
+  Icelandic, Croatian, Kurdish, Czech, Danish, Basque, Estonian, Dutch, Finnish,
+  Bosnian, German translation (thank you Fabijenna, zmni, MGuerra, Jeeps,
+  richarson, unchase, rakekniven)
 
 ## 19.11.9
 - did some optimization for spellchecking auto detect mode
