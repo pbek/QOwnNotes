@@ -1976,7 +1976,7 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
     // TODO: maybe we could do that per QTextBlock to check if it's done in comment block?
     // Important: The `\n` is needed to not crash under Windows if there is just
     //            an opening `<` and a lot of other text after it
-    i = QRegularExpression("<(((?!\\w+:\\/\\/)[^<>\n])+\\.[\\w\\d]+)>").globalMatch(str);
+    i = QRegularExpression("<(((?!\\w+:\\/\\/)[^\\*<>\n])+\\.[\\w\\d]+)>").globalMatch(str);
 
     while (i.hasNext()) {
         QRegularExpressionMatch match = i.next();

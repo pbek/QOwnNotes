@@ -4,6 +4,8 @@
 - if `Dark mode` will be selected in the *Interface settings* now a dark color schema
   will also be automatically selected in the *Editor fonts & colors settings*
     - if `Dark mode` will be un-selected a light color schema will be selected
+- texts like `<*.txt>` or `<file.*>` with `*` will now not be converted to note
+  links in the preview
 - did some general performance optimization (thank you @Waqar144)
 - fixed specific dictionary language not being setup at startup (thank you @Waqar144)
 
