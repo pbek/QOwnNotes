@@ -32,8 +32,6 @@
 #include <QStandardPaths>
 #include <utils/misc.h>
 #include <QStringBuilder>
-#include <QtConcurrent/QtConcurrent>
-#include <thread>
 
 using namespace Sonnet;
 
