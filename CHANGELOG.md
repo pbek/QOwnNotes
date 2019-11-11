@@ -6,6 +6,9 @@
     - if `Dark mode` will be un-selected a light color schema will be selected
 - texts like `<*.txt>` or `<file.*>` with `*` will now not be converted to note
   links in the preview
+- improved special character detection in the Evernote import, the HTML import
+  from the clipboard and the title detection of the link dialog
+  (for [#1400](https://github.com/pbek/QOwnNotes/issues/1400))
 - did some general performance optimization (thank you @Waqar144)
 - fixed specific dictionary language not being setup at startup (thank you @Waqar144)
 - bracket auto-closing in combination with "undo" was improved

@@ -42,6 +42,7 @@
 #include <services/owncloudservice.h>
 #include <QMimeDatabase>
 #include <QUuid>
+#include <QTextDocument>
 
 #ifdef Q_OS_WIN
 #include <windows.h>
@@ -1136,21 +1137,23 @@ bool Utils::Misc::isEnableNoteTree() {
 }
 
 /**
- * Unescapes some html special characters
+ * Unescapes html special characters
  *
  * @param html
  * @return
  */
 QString Utils::Misc::unescapeHtml(QString html) {
-    html.replace("&lt;","<");
-    html.replace("&gt;",">");
-    html.replace("&amp;","&");
-    return html;
+//    html.replace("&lt;","<");
+//    html.replace("&gt;",">");
+//    html.replace("&amp;","&");
+//    return html;
 
-//    QTextEdit textEdit;
-//    textEdit.setHtml(html);
-//    QString ret = textEdit.toPlainText();
-//    return ret;
+    // text.toPlainText() will remove all line breaks, we don't want that
+    html.replace("\n","<br>");
+
+    QTextDocument text;
+    text.setHtml(html);
+    return text.toPlainText();
 }
 
 /**

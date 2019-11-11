@@ -10,7 +10,6 @@
 #include <QSettings>
 #include <QClipboard>
 #include <QMenu>
-#include "helpers/htmlentities.h"
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
 #include <utils/misc.h>
@@ -189,8 +188,7 @@ QString LinkDialog::getTitleForUrl(const QUrl& url) {
     QString title = match.captured(1);
 
     // decode HTML entities
-    HTMLEntities htmlEntities;
-    title = htmlEntities.decodeHtmlEntities(title);
+    title = Utils::Misc::unescapeHtml(title);
 
     // replace some other characters we don't want
     title.replace("[", "(")

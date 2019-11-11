@@ -4,7 +4,6 @@
 #include <QXmlQuery>
 #include <QXmlResultItems>
 #include <QTemporaryFile>
-#include <helpers/htmlentities.h>
 #include <utils/misc.h>
 #include <entities/tag.h>
 #include <QCryptographicHash>
@@ -14,7 +13,7 @@
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
 #include <QRegularExpressionMatchIterator>
-#include <QtCore/QSettings>
+#include <QSettings>
 
 EvernoteImportDialog::EvernoteImportDialog(QWidget *parent) :
         MasterDialog(parent),
@@ -461,7 +460,6 @@ void EvernoteImportDialog::importNotes(const QString& data) {
     if (query.isValid()) {
         query.evaluateTo(&result);
         NoteSubFolder noteSubFolder = NoteSubFolder::activeNoteSubFolder();
-        HTMLEntities htmlEntities;
 
         while (!result.next().isNull()) {
             Note note = Note();
@@ -483,7 +481,7 @@ void EvernoteImportDialog::importNotes(const QString& data) {
             content.replace("\\\"", "\"");
 
             // decode HTML entities
-            content = htmlEntities.decodeHtmlEntities(content);
+            content = Utils::Misc::unescapeHtml(content);
 
             // add a newline in front of lists
 //            content.replace(QRegularExpression("<ul.*?>"), "\n<ul>");
@@ -504,6 +502,9 @@ void EvernoteImportDialog::importNotes(const QString& data) {
 
             // add a linebreak instead of div-containers
             content.replace(QRegularExpression("<\\/div>"), "\n");
+
+            // convert remaining special characters
+            content = Utils::Misc::unescapeHtml(content);
 
             // convert html tags to markdown
             content = Utils::Misc::htmlToMarkdown(content);
@@ -544,7 +545,7 @@ void EvernoteImportDialog::importNotes(const QString& data) {
                 noteText += generateMetaDataMarkdown(query);
             }
 
-            noteText += content;
+            noteText += content.trimmed();
 
 //            note.setName(title);
             note.setNoteText(noteText);
@@ -757,7 +758,7 @@ QString EvernoteImportDialog::generateMetaDataMarkdown(QXmlQuery query) {
                      tableText;
     }
 
-    return resultText;
+    return resultText + QStringLiteral("\n");
 }
 
 /**
