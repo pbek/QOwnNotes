@@ -5,7 +5,7 @@
   will also be automatically selected in the *Editor fonts & colors settings*
     - if `Dark mode` will be un-selected a light color schema will be selected
 - texts like `<*.txt>` or `<file.*>` with `*` will now not be converted to note
-  links in the preview
+  links in the preview (for [#266](https://github.com/pbek/QOwnNotes/issues/266))
 - improved special character detection in the Evernote import, the HTML import
   from the clipboard and the title detection of the link dialog
   (for [#1400](https://github.com/pbek/QOwnNotes/issues/1400))
