@@ -3044,9 +3044,14 @@ void SettingsDialog::handleDarkModeCheckBoxToggled(bool updateCheckBoxes) {
     ui->darkModeColorsCheckBox->setEnabled(!checked);
     ui->darkModeInfoLabel->setVisible(checked);
 
-    if (checked && updateCheckBoxes) {
-        ui->darkModeColorsCheckBox->setChecked(true);
-        ui->darkModeIconThemeCheckBox->setChecked(true);
+    if (updateCheckBoxes) {
+        if (checked) {
+            ui->editorFontColorWidget->selectFirstDarkSchema();
+            ui->darkModeColorsCheckBox->setChecked(true);
+            ui->darkModeIconThemeCheckBox->setChecked(true);
+        } else {
+            ui->editorFontColorWidget->selectFirstLightSchema();
+        }
     }
 }
 
@@ -3065,7 +3070,7 @@ void SettingsDialog::on_noteFolderShowSubfoldersCheckBox_toggled(bool checked) {
  * Toggles the line breaks in the debug output
  */
 void SettingsDialog::on_gitHubLineBreaksCheckBox_toggled(bool checked) {
-    Q_UNUSED(checked);
+    Q_UNUSED(checked)
     outputSettings();
 }
 

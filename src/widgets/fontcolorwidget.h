@@ -27,10 +27,15 @@ class FontColorWidget : public QFrame
     Q_OBJECT
 
 public:
-    explicit FontColorWidget(QWidget *parent = 0);
+    explicit FontColorWidget(QWidget *parent = nullptr);
     ~FontColorWidget();
 
     void updateAllTextItems();
+
+public slots:
+    bool selectFirstLightSchema();
+
+    bool selectFirstDarkSchema();
 
 private slots:
     void on_foregroundColorButton_clicked();

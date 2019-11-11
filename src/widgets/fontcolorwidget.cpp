@@ -391,6 +391,24 @@ void FontColorWidget::updateAllTextItems() {
     }
 }
 
+bool FontColorWidget::selectFirstLightSchema() {
+    if (ui->colorSchemeComboBox->count() >= 1) {
+        ui->colorSchemeComboBox->setCurrentIndex(0);
+        return true;
+    }
+
+    return false;
+}
+
+bool FontColorWidget::selectFirstDarkSchema() {
+    if (ui->colorSchemeComboBox->count() >= 2) {
+        ui->colorSchemeComboBox->setCurrentIndex(1);
+        return true;
+    }
+
+    return false;
+}
+
 /**
  * Updates the styling of certain items when the current text tree widget
  * item changes
@@ -400,8 +418,8 @@ void FontColorWidget::updateAllTextItems() {
  */
 void FontColorWidget::on_textTreeWidget_currentItemChanged(
         QTreeWidgetItem *current, QTreeWidgetItem *previous) {
-    Q_UNUSED(current);
-    Q_UNUSED(previous);
+    Q_UNUSED(current)
+    Q_UNUSED(previous)
 
     // update the schema edit frame for the current item
     updateSchemeEditFrame();

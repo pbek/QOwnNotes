@@ -1,6 +1,9 @@
 # QOwnNotes Changelog
 
 ## 19.11.10
+- if `Dark mode` will be selected in the *Interface settings* now a dark color schema
+  will also be automatically selected in the *Editor fonts & colors settings*
+    - if `Dark mode` will be un-selected a light color schema will be selected
 - did some general performance optimization (thank you @Waqar144)
 - fixed specific dictionary language not being setup at startup (thank you @Waqar144)
 - improved automatic dictionary detection and loading time (thank you @Waqar144)
