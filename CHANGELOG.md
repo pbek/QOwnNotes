@@ -8,6 +8,8 @@
   links in the preview
 - did some general performance optimization (thank you @Waqar144)
 - fixed specific dictionary language not being setup at startup (thank you @Waqar144)
+- bracket auto-closing in combination with "undo" was improved
+  (for [#24](https://github.com/pbek/qmarkdowntextedit/pull/24), thank you @Waqar144)
 
 ## 19.11.9
 - did some optimization for spellchecking auto detect mode
