@@ -92,16 +92,6 @@ void QOwnNotesMarkdownHighlighter::sethighlightBrokenNotesLink(bool state)
     highlightBrokenNotesLinkOn = state;
 }
 
-static bool hasNotEmptyText(const QString &text)
-{
-    for (auto const &i : text) {
-        if (!i.isSpace()) {
-            return true;
-        }
-    }
-    return false;
-}
-
 /**
  * Does the markdown highlighting
  * We need to override this method so our highlightMarkdown gets called
@@ -159,7 +149,7 @@ void QOwnNotesMarkdownHighlighter::highlightMarkdown(const QString& text) {
  * @param text
  */
 void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(const QString& text) {
-    QRegularExpression regex(R"(note:\/\/[^\s\)>]+)");
+    QRegularExpression regex(QStringLiteral(R"(note:\/\/[^\s\)>]+)"));
     QRegularExpressionMatch match = regex.match(text);
 
     if (match.hasMatch()) { // check legacy note:// links
@@ -185,7 +175,7 @@ void QOwnNotesMarkdownHighlighter::highlightBrokenNotesLink(const QString& text)
                 return;
             }
         } else { // check [note](note file.md) links
-            regex = QRegularExpression(R"(\[[^\[\]]+\]\((\S+\.md|.+?\.md)\)\B)");
+            regex = QRegularExpression(QStringLiteral(R"(\[[^\[\]]+\]\((\S+\.md|.+?\.md)\)\B)"));
             match = regex.match(text);
 
             if (match.hasMatch()) {
@@ -263,16 +253,19 @@ void QOwnNotesMarkdownHighlighter::highlightSpellChecking(const QString &text) {
         return;
     }
 
-    languageFilter->setBuffer(text);
 
-    auto *languageCache = dynamic_cast<LanguageCache*>(currentBlockUserData());
-    if (!languageCache) {
-        languageCache = new LanguageCache;
-        setCurrentBlockUserData(languageCache);
-    }
 
     const bool autodetectLanguage = spellchecker->isAutoDetectOn() ?
                spellchecker->testAttribute(Sonnet::Speller::AutoDetectLanguage) : false;
+    LanguageCache *languageCache = nullptr;
+    if (autodetectLanguage) {
+        languageCache = dynamic_cast<LanguageCache*>(currentBlockUserData());
+        if (!languageCache) {
+            languageCache = new LanguageCache;
+            setCurrentBlockUserData(languageCache);
+        }
+    }
+    languageFilter->setBuffer(text);
     while (languageFilter->hasNext()) {
         const QStringRef sentence = languageFilter->next();
         if (autodetectLanguage) {
@@ -310,9 +303,6 @@ void QOwnNotesMarkdownHighlighter::highlightSpellChecking(const QString &text) {
                 temp.chop(1);
                 word = QStringRef(&temp);
 #endif
-            }
-
-            if (word.endsWith('_')) {
             }
 
             //in case it's not a word, like an email or a number
