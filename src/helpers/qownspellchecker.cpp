@@ -54,9 +54,13 @@ void QOwnSpellChecker::setCurrentLanguage(const QString &lang) {
     spellchecker->setLanguage(lang);
 }
 
-bool QOwnSpellChecker::isWordMisspelled(const QString &word) {
-    return spellchecker->isMisspelled(word);
-}
+//bool QOwnSpellChecker::isWordMisspelled(const QString &word) {
+
+//    if (word == QLatin1String("etc") && language == QLatin1String("en_GB")) {
+//        return false;
+//    }
+//    return spellchecker->isMisspelled(word);
+//}
 
 void QOwnSpellChecker::setActive(bool _active) {
     if (active == _active) {

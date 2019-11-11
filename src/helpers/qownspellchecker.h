@@ -50,7 +50,13 @@ public:
      * @param word the word to be checked
      * @return true if the given word is misspelled.
      */
-    bool isWordMisspelled(const QString &word);
+    inline bool isWordMisspelled(const QString &word) {
+
+        if (word == QLatin1String("etc") && language == QLatin1String("en_GB")) {
+            return false;
+        }
+        return spellchecker->isMisspelled(word);
+    }
 
     /**
      * Returns a list of suggested replacements for the given misspelled word.

@@ -103,17 +103,17 @@ Speller &Speller::operator=(const Speller &speller)
 
 bool Speller::isCorrect(const QString &word) const
 {
-    if (!d->isValid()) {
-        return true;
-    }
+//    if (!d->isValid()) {
+//        return true;
+//    }
     return d->dict->isCorrect(word);
 }
 
 bool Speller::isMisspelled(const QString &word) const
 {
-    if (!d->isValid()) {
-        return false;
-    }
+//    if (!d->isValid()) {
+//        return false;
+//    }
     return d->dict->isMisspelled(word);
 }
 

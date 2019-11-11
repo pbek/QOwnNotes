@@ -67,7 +67,6 @@ public:
      * @return true if the word is misspelled. false otherwise
      */
     bool isMisspelled(const QString &word) const;
-
     /**
      * Fetches suggestions for the word.
      *
