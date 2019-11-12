@@ -1,9 +1,9 @@
 # QOwnNotes Changelog
 
 ## 19.11.10
-- if `Dark mode` will be selected in the *Interface settings* now a dark color schema
+- if you select `Dark mode` in the *Interface settings* now a dark color schema
   will also be automatically selected in the *Editor fonts & colors settings*
-    - if `Dark mode` will be un-selected a light color schema will be selected
+    - if you un-select `Dark mode` a light color schema will be selected
 - texts like `<*.txt>` or `<file.*>` with `*` will now not be converted to note
   links in the preview (for [#266](https://github.com/pbek/QOwnNotes/issues/266))
 - improved special character detection in the Evernote import, the HTML import
