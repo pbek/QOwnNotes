@@ -256,6 +256,16 @@ This line is only separated by two trailing spaces and a single newline, so it's
 [comment]: # (This comment will not appear in the preview)
 ```
 
+## Checkbox lists
+
+```markdown
+- [x] done
+- [ ] todo
+```
+
+- [x] done
+- [ ] todo
+
 ---
 
 Credit: [markdown-here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)  

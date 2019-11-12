@@ -11,6 +11,8 @@
     - more dictionaries were added to the dialog
 - added automatic spellchecking detection for British English and Austrian German
   (for [#1402](https://github.com/pbek/QOwnNotes/pull/1402), thank you @Waqar144)
+- updated the demo notes and [Markdown Cheatsheet](https://github.com/pbek/QOwnNotes/blob/develop/src/demonotes/Markdown%20Cheatsheet.md)
+  with checkbox list and spellchecking information
 
 ## 19.11.10
 - if you select `Dark mode` in the *Interface settings* now a dark color schema
