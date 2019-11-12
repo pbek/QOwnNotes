@@ -22,13 +22,14 @@ DictionaryManagerDialog::DictionaryManagerDialog(QWidget *parent) :
     QObject::connect(_networkManager, SIGNAL(finished(QNetworkReply *)),
                      this, SLOT(slotReplyFinished(QNetworkReply *)));
 
-    // you can add more dictionaries from https://github.com/LibreOffice/dictionaries/tree/master
+    // you can add more dictionaries from https://github.com/qownnotes/dictionaries/tree/master
     addDictionaryItem(tr("English (British)"), QStringLiteral("en"), QStringLiteral("en_GB"));
     addDictionaryItem(tr("English (American)"), QStringLiteral("en"), QStringLiteral("en_US"));
     addDictionaryItem(tr("German (Austrian)"), QStringLiteral("de"), QStringLiteral("de_AT_frami"));
     addDictionaryItem(tr("German (German)"), QStringLiteral("de"), QStringLiteral("de_DE_frami"));
     addDictionaryItem(tr("German (Swiss)"), QStringLiteral("de"), QStringLiteral("de_CH_frami"));
     addDictionaryItem(tr("Danish"), QStringLiteral("da_DK"));
+    addDictionaryItem(tr("Urdu"), QStringLiteral("ur_PK"));
 
     ui->downloadButton->setDisabled(true);
     ui->deleteLocalDictionaryButton->setDisabled(true);
@@ -58,7 +59,7 @@ void DictionaryManagerDialog::addDictionaryItem(const QString &name, const QStri
 
     auto *item = new QTreeWidgetItem();
     item->setText(0, name);
-    item->setData(0, Qt::UserRole, QStringLiteral("https://raw.githubusercontent.com/LibreOffice/dictionaries/master/") +
+    item->setData(0, Qt::UserRole, QStringLiteral("https://raw.githubusercontent.com/qownnotes/dictionaries/master/") +
                   pathPart + QStringLiteral("/") + fileNamePart);
     ui->remoteDictionaryTreeWidget->addTopLevelItem(item);
 }
