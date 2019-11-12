@@ -18,6 +18,7 @@
     - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes)
       to make QOwnNotes available in more languages or help with the current
       translation
+- added more Punjabi, Irish, Icelandic translation (thank you Fabijenna)
 
 ## 19.11.10
 - if you select `Dark mode` in the *Interface settings* now a dark color schema

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="lv" sourcelanguage="en">
+<TS version="2.1" language="vi" sourcelanguage="en">
   <context>
     <name>AboutDialog</name>
     <message>
       <location filename="../dialogs/aboutdialog.ui" line="14"/>
       <source>About QOwnNotes</source>
-      <translation>Par QOwnNotes</translation>
+      <translation>Giới thiệu về QOwnNote</translation>
     </message>
   </context>
   <context>
@@ -15,7 +15,7 @@
       <location filename="../dialogs/actiondialog.ui" line="14"/>
       <location filename="../dialogs/actiondialog.ui" line="46"/>
       <source>Find action</source>
-      <translation>Atrodi darbību</translation>
+      <translation>Tìm hành động</translation>
     </message>
   </context>
   <context>
@@ -23,79 +23,79 @@
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="14"/>
       <source>Insert attachment</source>
-      <translation>Ievietojiet pielikumu</translation>
+      <translation>Chèn tệp đính kèm</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="20"/>
       <source>Image filename or URL</source>
-      <translation>Attēla faila nosaukums vai URL</translation>
+      <translation>Tên tệp hình ảnh hoặc URL</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="26"/>
       <source>Path to file or URL</source>
-      <translation>Ceļš uz failu vai URL</translation>
+      <translation>Đường dẫn đến tệp hoặc URL</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="36"/>
       <source>Select file</source>
-      <translation>Atlasiet failu</translation>
+      <translation>Chọn tập tin</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="46"/>
       <source>Title of the image link</source>
-      <translation>Attēla saites nosaukums</translation>
+      <translation>Tiêu đề của liên kết hình ảnh</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="49"/>
       <source>Title</source>
-      <translation>Nosaukums</translation>
+      <translation>Tiêu đề</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="94"/>
       <source>Cancel download</source>
-      <translation>Atcelt lejupielādi</translation>
+      <translation>Hủy tải xuống</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.ui" line="117"/>
       <source>Download URL</source>
       <comment>The URL will be downloaded</comment>
-      <translation>Lejupielādēt URL</translation>
+      <translation>Tải xuống URL</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="43"/>
       <source>Select file to insert</source>
-      <translation>Atlasiet ievietojamo failu</translation>
+      <translation>Chọn tập tin để chèn</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="140"/>
       <source>Download error</source>
-      <translation>Lejupielādes kļūda</translation>
+      <translation>Lỗi tải xuống</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="141"/>
       <source>Error while downloading:
 %1</source>
-      <translation>Lejupielādes laikā radās kļūda:
+      <translation>Lỗi trong khi tải xuống:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="169"/>
       <location filename="../dialogs/attachmentdialog.cpp" line="193"/>
       <source>File error</source>
-      <translation>Faila kļūda</translation>
+      <translation>Lỗi tập tin</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="170"/>
       <source>Could not open temporary file:
 %1</source>
-      <translation>Nevarēja atvērt pagaidu failu:
+      <translation>Không thể mở tệp tạm thời:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/attachmentdialog.cpp" line="194"/>
       <source>Could not store downloaded file:
 %1</source>
-      <translation>Nevarēja saglabāt lejupielādēto failu:
+      <translation>Không thể lưu trữ tệp đã tải xuống:
 %1</translation>
     </message>
   </context>
@@ -104,104 +104,164 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="14"/>
       <source>Dictionary manager</source>
-      <translation>Vārdnīcas pārvaldnieks</translation>
+      <translation>Quản lý từ điển</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="61"/>
       <source>Cancel</source>
-      <translation>Atcelt</translation>
+      <translation>Hủy bỏ</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="89"/>
       <source>Download dictionary</source>
-      <translation>Lejupielādēt vārdnīcu</translation>
+      <translation>Tải từ điển</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="107"/>
-      <location filename="../dialogs/dictionarymanagerdialog.ui" line="162"/>
+      <location filename="../dialogs/dictionarymanagerdialog.ui" line="165"/>
       <source>Name</source>
-      <translation>Vārds</translation>
+      <translation>Tên</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="115"/>
       <source>Enter your query text</source>
-      <translation>Ievadiet vaicājuma tekstu</translation>
+      <translation>Nhập văn bản truy vấn của bạn</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="118"/>
       <source>Find dictionary</source>
-      <translation>Atrast vārdnīcu</translation>
+      <translation>Tìm từ điển</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="137"/>
       <source>Downloaded dictionaries</source>
-      <translation>Lejupielādētās vārdnīcas</translation>
+      <translation>Từ điển tải về</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.ui" line="170"/>
+      <location filename="../dialogs/dictionarymanagerdialog.ui" line="173"/>
+      <source>If checked only the downloaded dictionaries will be used</source>
+      <translation type="unfinished">If checked only the downloaded dictionaries will be used</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.ui" line="176"/>
+      <source>Disable external dictionaries</source>
+      <translation type="unfinished">Disable external dictionaries</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.ui" line="183"/>
       <source>Delete selected dictionaries</source>
-      <translation>Dzēst atlasītās vārdnīcas</translation>
+      <translation>Xóa từ điển đã chọn</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="26"/>
+      <source>English (British)</source>
+      <translation>Anh (Anh)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="27"/>
-      <source>English (British)</source>
-      <translation>Angļu (britu)</translation>
+      <source>English (American)</source>
+      <translation>Anh (mỹ)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="28"/>
-      <source>English (American)</source>
-      <translation>Angļu (amerikāņu)</translation>
+      <source>German (Austrian)</source>
+      <translation>Đức (Áo)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="29"/>
-      <source>German (Austrian)</source>
-      <translation>Vācu (austriešu)</translation>
+      <source>German (German)</source>
+      <translation>Tiếng Đức (tiếng Đức)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="30"/>
-      <source>German (German)</source>
-      <translation>Vācu (vācu)</translation>
+      <source>German (Swiss)</source>
+      <translation>Đức (Thụy Sĩ)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="31"/>
-      <source>German (Swiss)</source>
-      <translation>Vācu (Šveices)</translation>
+      <source>French</source>
+      <translation type="unfinished">French</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="32"/>
+      <source>Spanish</source>
+      <translation type="unfinished">Spanish</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="33"/>
+      <source>Russian</source>
+      <translation type="unfinished">Russian</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="34"/>
+      <source>Polish</source>
+      <translation type="unfinished">Polish</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="35"/>
+      <source>Italian</source>
+      <translation type="unfinished">Italian</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="36"/>
+      <source>Portugese (Brazilian)</source>
+      <translation type="unfinished">Portugese (Brazilian)</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="37"/>
+      <source>Portugese</source>
+      <translation type="unfinished">Portugese</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="38"/>
       <source>Danish</source>
-      <translation>Dāņu</translation>
+      <translation>Người Đan Mạch</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="152"/>
-      <source>Download error</source>
-      <translation>Lejupielādes kļūda</translation>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="39"/>
+      <source>Swedish</source>
+      <translation type="unfinished">Swedish</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="153"/>
-      <source>Error while downloading:
-%1</source>
-      <translation>Lejupielādes laikā radās kļūda:
-%1</translation>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="40"/>
+      <source>Czech</source>
+      <translation type="unfinished">Czech</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="41"/>
+      <source>Urdu</source>
+      <translation type="unfinished">Urdu</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="167"/>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="265"/>
-      <source>File error</source>
-      <translation>Faila kļūda</translation>
+      <source>Download error</source>
+      <translation>Lỗi tải xuống</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="168"/>
-      <source>Could not store downloaded file:
+      <source>Error while downloading:
 %1</source>
-      <translation>Nevarēja saglabāt lejupielādēto failu:
+      <translation>Lỗi trong khi tải xuống:
 %1</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="266"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="182"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="280"/>
+      <source>File error</source>
+      <translation>Lỗi tập tin</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="183"/>
+      <source>Could not store downloaded file:
+%1</source>
+      <translation>Không thể lưu trữ tệp đã tải xuống:
+%1</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="281"/>
       <source>Could not remove dictionary file:
 %1</source>
-      <translation>Nevarēja noņemt vārdnīcas failu:
+      <translation>Không thể xóa tệp từ điển:
 %1</translation>
     </message>
   </context>
@@ -210,162 +270,162 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="14"/>
       <source>Evernote Import</source>
-      <translation>Evernote imports</translation>
+      <translation>Nhập khẩu Evernote</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="121"/>
       <source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</source>
-      <translation>Lai iegūtu enex failu, Evernotes darbvirsmas klientā jāizvēlas viena vai vairākas piezīmes un izvēlnē Fails noklikšķiniet uz “Eksportēt piezīmes…”.</translation>
+      <translation>Để có được một tệp enex, bạn cần chọn một hoặc nhiều ghi chú trong ứng dụng khách máy tính để bàn Evernotes của bạn và nhấp vào "Xuất ghi chú" trong menu Tệp.</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="74"/>
       <source>Please select the Evernote enex file you want to import:</source>
-      <translation>Lūdzu, atlasiet Evernote enex failu, kuru vēlaties importēt:</translation>
+      <translation>Vui lòng chọn tệp enex Evernote bạn muốn nhập:</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="30"/>
       <source>Select file</source>
-      <translation>Atlasiet failu</translation>
+      <translation>Chọn tập tin</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="54"/>
       <source>Import images</source>
-      <translation>Import images</translation>
+      <translation>Nhập hình ảnh</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="91"/>
       <source>Metadata to import</source>
-      <translation>Importējamie metadati</translation>
+      <translation>Siêu dữ liệu để nhập</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="165"/>
       <source>Import notes</source>
-      <translation>Importēt piezīmes</translation>
+      <translation>Ghi chú nhập khẩu</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="23"/>
       <source>Evernote enex file</source>
-      <translation>Evernote enex fails</translation>
+      <translation>Tập tin Everex enex</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="67"/>
       <source>%v of %m note(s) imported</source>
-      <translation>%v no %m importētajām piezīmēm</translation>
+      <translation type="unfinished">%v of %m note(s) imported</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="81"/>
       <source>Import attachments</source>
-      <translation>Importēt pielikumus</translation>
+      <translation>Nhập tệp đính kèm</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/evernoteimportdialog.cpp" line="58"/>
+      <source>Enex files</source>
+      <translation>Tệp Enex</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="59"/>
-      <source>Enex files</source>
-      <translation>Enex faili</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/evernoteimportdialog.cpp" line="60"/>
       <source>Select Evernote enex file to import</source>
-      <translation>Atlasiet importējamo Evernote enex failu</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/evernoteimportdialog.cpp" line="648"/>
-      <source>Basic attributes</source>
-      <translation>Pamata atribūti</translation>
+      <translation>Chọn tệp enex Evernote để nhập</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="649"/>
+      <source>Basic attributes</source>
+      <translation>Thuộc tính cơ bản</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/evernoteimportdialog.cpp" line="650"/>
       <source>Created date</source>
-      <translation>Izveidošanas datums</translation>
+      <translation>Ngày tạo ra</translation>
     </message>
     <message>
-      <location filename="../dialogs/evernoteimportdialog.cpp" line="651"/>
+      <location filename="../dialogs/evernoteimportdialog.cpp" line="652"/>
       <source>Updated date</source>
-      <translation>Atjaunināts datums</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/evernoteimportdialog.cpp" line="654"/>
-      <source>Note attributes</source>
-      <translation>Piezīmju atribūti</translation>
+      <translation>Ngày cập nhật</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="655"/>
+      <source>Note attributes</source>
+      <translation>Ghi chú thuộc tính</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/evernoteimportdialog.cpp" line="656"/>
       <source>Subject date</source>
-      <translation>Priekšmeta datums</translation>
+      <translation>Ngày chủ đề</translation>
     </message>
     <message>
-      <location filename="../dialogs/evernoteimportdialog.cpp" line="657"/>
+      <location filename="../dialogs/evernoteimportdialog.cpp" line="658"/>
       <source>Latitude</source>
-      <translation>Platums</translation>
+      <translation>Vĩ độ</translation>
     </message>
     <message>
-      <location filename="../dialogs/evernoteimportdialog.cpp" line="659"/>
+      <location filename="../dialogs/evernoteimportdialog.cpp" line="660"/>
       <source>Longitude</source>
-      <translation>Garums</translation>
+      <translation>Kinh độ</translation>
     </message>
     <message>
-      <location filename="../dialogs/evernoteimportdialog.cpp" line="661"/>
+      <location filename="../dialogs/evernoteimportdialog.cpp" line="662"/>
       <source>Altitude</source>
-      <translation>Augstums</translation>
+      <translation>Độ cao</translation>
     </message>
     <message>
-      <location filename="../dialogs/evernoteimportdialog.cpp" line="663"/>
+      <location filename="../dialogs/evernoteimportdialog.cpp" line="664"/>
       <source>Author</source>
-      <translation>Autors</translation>
+      <translation>Tác giả</translation>
     </message>
     <message>
-      <location filename="../dialogs/evernoteimportdialog.cpp" line="665"/>
+      <location filename="../dialogs/evernoteimportdialog.cpp" line="666"/>
       <source>Source</source>
-      <translation>Avots</translation>
+      <translation>Nguồn</translation>
     </message>
     <message>
-      <location filename="../dialogs/evernoteimportdialog.cpp" line="667"/>
+      <location filename="../dialogs/evernoteimportdialog.cpp" line="668"/>
       <source>Source URL</source>
-      <translation>Avota URL</translation>
+      <translation>URL nguồn</translation>
     </message>
     <message>
-      <location filename="../dialogs/evernoteimportdialog.cpp" line="669"/>
+      <location filename="../dialogs/evernoteimportdialog.cpp" line="670"/>
       <source>Source application</source>
-      <translation>Avota lietojumprogramma</translation>
+      <translation>Ứng dụng nguồn</translation>
     </message>
     <message>
-      <location filename="../dialogs/evernoteimportdialog.cpp" line="671"/>
+      <location filename="../dialogs/evernoteimportdialog.cpp" line="672"/>
       <source>Reminder order</source>
-      <translation>Atgādinājuma pasūtījums</translation>
+      <translation>Nhắc nhở để</translation>
     </message>
     <message>
-      <location filename="../dialogs/evernoteimportdialog.cpp" line="673"/>
+      <location filename="../dialogs/evernoteimportdialog.cpp" line="674"/>
       <source>Reminder time</source>
-      <translation>Atgādinājuma laiks</translation>
+      <translation>Nhắc nhở thời gian</translation>
     </message>
     <message>
-      <location filename="../dialogs/evernoteimportdialog.cpp" line="675"/>
+      <location filename="../dialogs/evernoteimportdialog.cpp" line="676"/>
       <source>Reminder done time</source>
-      <translation>Atgādinājums izdarīts laikā</translation>
+      <translation>Nhắc nhở thời gian thực hiện</translation>
     </message>
     <message>
-      <location filename="../dialogs/evernoteimportdialog.cpp" line="677"/>
+      <location filename="../dialogs/evernoteimportdialog.cpp" line="678"/>
       <source>Place name</source>
-      <translation>Vietvārds</translation>
+      <translation>Tên địa điểm</translation>
     </message>
     <message>
-      <location filename="../dialogs/evernoteimportdialog.cpp" line="679"/>
+      <location filename="../dialogs/evernoteimportdialog.cpp" line="680"/>
       <source>Content class</source>
-      <translation>Satura klase</translation>
+      <translation>Lớp nội dung</translation>
     </message>
     <message>
-      <location filename="../dialogs/evernoteimportdialog.cpp" line="681"/>
+      <location filename="../dialogs/evernoteimportdialog.cpp" line="682"/>
       <source>Application data</source>
-      <translation>Lietojumprogrammas dati</translation>
+      <translation>Dữ liệu ứng dụng</translation>
     </message>
     <message>
-      <location filename="../dialogs/evernoteimportdialog.cpp" line="755"/>
+      <location filename="../dialogs/evernoteimportdialog.cpp" line="756"/>
       <source>Attribute</source>
-      <translation>Atribūts</translation>
+      <translation>Thuộc tính</translation>
     </message>
     <message>
-      <location filename="../dialogs/evernoteimportdialog.cpp" line="755"/>
+      <location filename="../dialogs/evernoteimportdialog.cpp" line="756"/>
       <source>Value</source>
-      <translation>Vērtība</translation>
+      <translation>Giá trị</translation>
     </message>
   </context>
   <context>
@@ -374,22 +434,22 @@
       <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="166"/>
       <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="174"/>
       <source>Unknown option: %1</source>
-      <translation>Nezināma opcija: %1</translation>
+      <translation>Tùy chọn không xác định: %1</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimactions.cpp" line="169"/>
       <source>Argument must be positive: %1=%2</source>
-      <translation>Argumentam jābūt pozitīvam: %1 = %2</translation>
+      <translation>Đối số phải tích cực: %1 = %2</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="958"/>
       <source>Mark "%1" not set.</source>
-      <translation>Atzīme "%1" nav iestatīta.</translation>
+      <translation>Đánh dấu "%1" chưa được đặt.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="2848"/>
       <source>Recursive mapping</source>
-      <translation>Rekursīvā kartēšana</translation>
+      <translation>Ánh xạ đệ quy</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3717"/>
@@ -399,71 +459,69 @@
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3719"/>
       <source>%1All</source>
-      <translation>%1Visi</translation>
+      <translation>%1Tất cả</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="3733"/>
       <source>Not implemented in FakeVim.</source>
-      <translation>Nav ieviests FakeVim.</translation>
+      <translation>Không được thực hiện trong FakeVim.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="4313"/>
       <source>Type Alt-V, Alt-V to quit FakeVim mode.</source>
-      <translation>Type Alt-V, Alt-V to quit FakeVim mode.</translation>
+      <translation>Nhập Alt-V, Alt-V để thoát chế độ FakeVim.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5761"/>
       <source>Unknown option:</source>
-      <translation>Nezināma opcija:</translation>
+      <translation>Tùy chọn không xác định:</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5771"/>
       <source>Invalid argument:</source>
-      <translation>Nederīgs arguments:</translation>
+      <translation>Đối số không hợp lệ:</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5773"/>
       <source>Trailing characters:</source>
-      <translation>Aizmugures rakstzīmes:</translation>
+      <translation>Trailing ký tự:</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5855"/>
       <source>Move lines into themselves.</source>
-      <translation>Pārvietojiet līnijas sevī.</translation>
+      <translation>Di chuyển dòng vào chính họ.</translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5897"/>
       <source>%n lines moved.</source>
-      <translation>
-        <numerusform>Pārvietota %n rinda.</numerusform>
-        <numerusform>Pārvietota %n rinda.</numerusform>
-        <numerusform>Pārvietotas %n līnijas.</numerusform>
+      <translation type="unfinished">
+        <numerusform>%n lines moved.</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5958"/>
       <source>File "%1" exists (add ! to override)</source>
-      <translation>Fails "%1" pastāv (pievienojiet ! Lai ignorētu)</translation>
+      <translation type="unfinished">File "%1" exists (add ! to override)</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5972"/>
       <source>Cannot open file "%1" for writing</source>
-      <translation>Nevar atvērt failu "%1" rakstīšanai</translation>
+      <translation type="unfinished">Cannot open file "%1" for writing</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5978"/>
       <source>"%1" %2 %3L, %4C written.</source>
-      <translation>"%1" %2 %3L, %4C rakstīts.</translation>
+      <translation>"%1" %2 %3L, %4C bằng văn bản.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5979"/>
       <source> [New] </source>
-      <translation>[Jauns] </translation>
+      <translation>[Mới]</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="5987"/>
       <source>Cannot open file "%1" for reading</source>
-      <translation>Nevar atvērt failu "%1" lasīšanai</translation>
+      <translation>Không thể mở tệp "%1" để đọc</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6015"/>
@@ -474,58 +532,54 @@
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6042"/>
       <source>%n lines filtered.</source>
       <translation>
-        <numerusform>%n līnija filtrēta.</numerusform>
-        <numerusform>%n līnija filtrēta.</numerusform>
-        <numerusform>%n līnijas filtrētas.</numerusform>
+        <numerusform>%n dòng được lọc.</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6130"/>
       <source>Cannot open file %1</source>
-      <translation>Nevar atvērt failu %1</translation>
+      <translation>Không thể mở tệp %1</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6203"/>
       <source>Not an editor command: %1</source>
-      <translation>Nav redaktora komanda: %1</translation>
+      <translation>Không phải lệnh biên tập: %1</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6297"/>
       <source>Invalid regular expression: %1</source>
-      <translation>Nederīga regulārā izteiksme: %1</translation>
+      <translation>Biểu thức chính quy không hợp lệ: %1</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6333"/>
       <source>Pattern not found: %1</source>
-      <translation>Raksts nav atrasts: %1</translation>
+      <translation>Không tìm thấy mẫu: %1</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6337"/>
       <source>Search hit BOTTOM, continuing at TOP.</source>
-      <translation>Meklēšana ir sasniegta apakšā, turpinot augšpusē.</translation>
+      <translation type="unfinished">Search hit BOTTOM, continuing at TOP.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6338"/>
       <source>Search hit TOP, continuing at BOTTOM.</source>
-      <translation>Meklēšana tika sasniegta augšdaļā, turpinot apakšā.</translation>
+      <translation type="unfinished">Search hit TOP, continuing at BOTTOM.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6343"/>
       <source>Search hit BOTTOM without match for: %1</source>
-      <translation>Meklēšanas rezultāts apakšā bez atbilstības meklēšanai: %1</translation>
+      <translation type="unfinished">Search hit BOTTOM without match for: %1</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6344"/>
       <source>Search hit TOP without match for: %1</source>
-      <translation>Meklēšanas rezultāts top bez sakritības: %1</translation>
+      <translation type="unfinished">Search hit TOP without match for: %1</translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="6451"/>
       <source>%n lines indented.</source>
       <translation>
-        <numerusform>%n līnija iegriezta.</numerusform>
-        <numerusform>%n līnija iegriezta.</numerusform>
-        <numerusform>%n līnijas iegrieztas.</numerusform>
+        <numerusform>%n dòng thụt vào.</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -533,29 +587,25 @@
       <source>%n lines %1ed %2 time.</source>
       <comment>%1 can be '&gt;' or '&lt;'</comment>
       <translation>
-        <numerusform>%n līnija %1ed %2 laiks.</numerusform>
-        <numerusform>%n līnija %1ed %2 laiks.</numerusform>
-        <numerusform>%n līnijas %1ed %2 laiks.</numerusform>
+        <numerusform>%n dòng %1ed %2 lần.</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7045"/>
       <source>%n lines yanked.</source>
-      <translation type="unfinished">
-        <numerusform>%n lines yanked.</numerusform>
-        <numerusform>%n lines yanked.</numerusform>
-        <numerusform>%n lines yanked.</numerusform>
+      <translation>
+        <numerusform>%n dòng được kéo dài.</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7778"/>
       <source>Already at oldest change.</source>
-      <translation>Jau pie vecākajām izmaiņām.</translation>
+      <translation>Đã thay đổi lâu đời nhất.</translation>
     </message>
     <message>
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7779"/>
       <source>Already at newest change.</source>
-      <translation>Jau pie jaunākajām izmaiņām.</translation>
+      <translation>Đã thay đổi mới nhất.</translation>
     </message>
   </context>
   <context>
@@ -563,7 +613,7 @@
     <message>
       <location filename="../helpers/fakevimproxy.cpp" line="26"/>
       <source>Information</source>
-      <translation>Informācija</translation>
+      <translation>Thông tin</translation>
     </message>
   </context>
   <context>
@@ -571,247 +621,247 @@
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="38"/>
       <source>Text font</source>
-      <translation>Teksta fonts</translation>
+      <translation>Phông chữ văn bản</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="73"/>
       <source>Size:</source>
-      <translation>Izmērs:</translation>
+      <translation>Kích thước:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="80"/>
       <source>Family:</source>
-      <translation>Ģimene:</translation>
+      <translation>Gia đình:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="103"/>
       <source>Color schema</source>
-      <translation>Krāsu shēma</translation>
+      <translation>Bảng màu</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="124"/>
       <source>Delete schema</source>
-      <translation>Dzēst shēmu</translation>
+      <translation>Xóa lược đồ</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="127"/>
       <source>Delete</source>
-      <translation>Dzēst</translation>
+      <translation>Xóa bỏ</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="169"/>
-      <location filename="../widgets/fontcolorwidget.cpp" line="630"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="648"/>
       <source>Export schema</source>
-      <translation>Eksporta shēma</translation>
+      <translation>Lược đồ xuất khẩu</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="172"/>
       <source>Export</source>
-      <translation>Eksportēt</translation>
+      <translation>Xuất khẩu</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="271"/>
       <source>If you have created a nice color schema please export it and share it with everyone!</source>
-      <translation>Ja esat izveidojis jauku krāsu shēmu, lūdzu, eksportējiet to un dalieties tajā ar visiem!</translation>
+      <translation>Nếu bạn đã tạo một lược đồ màu đẹp, vui lòng xuất nó và chia sẻ nó với mọi người!</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="155"/>
       <source>Copy schema</source>
-      <translation>Kopēt shēmu</translation>
+      <translation>Sao chép lược đồ</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="158"/>
       <source>Copy</source>
-      <translation>Kopēt</translation>
+      <translation>Sao chép</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="141"/>
-      <location filename="../widgets/fontcolorwidget.cpp" line="670"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="688"/>
       <source>Import schema</source>
-      <translation>Importēšanas shēma</translation>
+      <translation>Lược đồ nhập khẩu</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="144"/>
       <source>Import</source>
-      <translation>Importēt</translation>
+      <translation>Nhập khẩu</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="315"/>
       <source>Share schema</source>
-      <translation>Kopīgot shēmu</translation>
+      <translation>Chia sẻ lược đồ</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="288"/>
       <source>Background:</source>
-      <translation>Priekšvēsture:</translation>
+      <translation>Lý lịch:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="281"/>
       <source>Foreground:</source>
-      <translation>Priekšplāns:</translation>
+      <translation>Vấn đề xung quanh:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="264"/>
       <source>Bold</source>
-      <translation>Bold</translation>
+      <translation>Dũng cảm</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="244"/>
       <source>Italic</source>
-      <translation>Slīpraksts</translation>
+      <translation>Dũng cảm</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="237"/>
       <source>Adapt font size:</source>
-      <translation>Pielāgot fonta lielumu:</translation>
+      <translation>Chỉnh kích thước font chữ:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="208"/>
       <source>Underline</source>
-      <translation>Pasvītrojums</translation>
+      <translation>Gạch chân</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="195"/>
       <source>Text preset</source>
-      <translation>Iepriekš iestatīts teksts</translation>
+      <translation>Đặt trước văn bản</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="196"/>
       <source>Emphasized text</source>
-      <translation>Uzsvērts teksts</translation>
+      <translation>Đoạn văn bản được nhấn mạnh</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="197"/>
       <source>Strong text</source>
-      <translation>Spēcīgs teksts</translation>
+      <translation>Văn bản mạnh</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="214"/>
       <source>(HTML) Comment</source>
-      <translation>(HTML) komentārs</translation>
+      <translation>(HTML) Nhận xét</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="204"/>
       <source>Header, level 1</source>
-      <translation>Galvenes, 1. līmenis</translation>
+      <translation>Tiêu đề, cấp 1</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="198"/>
       <source>Link</source>
-      <translation>Saite</translation>
+      <translation>Liên kết</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="199"/>
       <source>Image</source>
-      <translation>Attēls</translation>
+      <translation>Hình ảnh</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="200"/>
       <source>Code (block)</source>
-      <translation>Kods (bloks)</translation>
+      <translation>Mã (khối)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="201"/>
       <source>Code (inline)</source>
-      <translation>Kods (iekļauts)</translation>
+      <translation>Mã (nội tuyến)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="203"/>
       <source>List item</source>
-      <translation>Saraksta vienums</translation>
+      <translation>Danh sách mục</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="205"/>
       <source>Header, level 2</source>
-      <translation>Galvenes, 2. līmenis</translation>
+      <translation>Tiêu đề, cấp 2</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="206"/>
       <source>Header, level 3</source>
-      <translation>Galvenes, 3. līmenis</translation>
+      <translation>Tiêu đề, cấp 3</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="207"/>
       <source>Header, level 4</source>
-      <translation>Galvenes, 4. līmenis</translation>
+      <translation>Tiêu đề, cấp 4</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="208"/>
       <source>Header, level 5</source>
-      <translation>Galvenes, 5. līmenis</translation>
+      <translation>Tiêu đề, cấp 5</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="209"/>
       <source>Header, level 6</source>
-      <translation>Galvenes, 6. līmenis</translation>
+      <translation>Tiêu đề, cấp 6</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="212"/>
       <source>Block quote</source>
-      <translation>Bloķēt cenu</translation>
+      <translation>Báo giá khối</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="213"/>
       <source>Table</source>
-      <translation>Tabula</translation>
+      <translation>Bàn</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="215"/>
       <source>Masked syntax</source>
       <comment>text that will highlighted in a way that it's barely visible</comment>
-      <translation>Maskēta sintakse</translation>
+      <translation>Cú pháp đeo mặt nạ</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="220"/>
       <source>Broken link</source>
-      <translation>Salauzta saite</translation>
+      <translation>Liên kết bị hỏng</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="210"/>
       <source>Horizontal rule</source>
-      <translation>Horizontālais noteikums</translation>
+      <translation>Quy tắc ngang</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="218"/>
       <source>Current line background color</source>
-      <translation>Pašreizējā līnijas fona krāsa</translation>
+      <translation>Màu nền hiện tại</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="229"/>
       <source>This item will be used to preset colors for the other items</source>
-      <translation>Šis elements tiks izmantots, lai iepriekš iestatītu krāsas citiem elementiem</translation>
+      <translation>Mục này sẽ được sử dụng để đặt trước màu sắc cho các mục khác</translation>
     </message>
     <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="460"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="478"/>
       <source>Copy color schema</source>
-      <translation>Kopēt krāsu shēmu</translation>
+      <translation>Sao chép bảng màu</translation>
     </message>
     <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="461"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="479"/>
       <source>Color schema name</source>
-      <translation>Krāsu shēmas nosaukums</translation>
+      <translation>Tên bảng màu</translation>
     </message>
     <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="463"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="481"/>
       <source>Copy</source>
       <comment>as noun</comment>
-      <translation>Kopēt</translation>
+      <translation>Sao chép</translation>
     </message>
     <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="581"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="599"/>
       <source>Remove schema</source>
-      <translation>Noņemt shēmu</translation>
+      <translation>Xóa lược đồ</translation>
     </message>
     <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="582"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="600"/>
       <source>Remove current schema? This cannot be undone!</source>
-      <translation>Vai noņemt pašreizējo shēmu? To nevar atsaukt!</translation>
+      <translation>Xóa lược đồ hiện tại? Điều này không thể được hoàn tác!</translation>
     </message>
     <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="629"/>
-      <location filename="../widgets/fontcolorwidget.cpp" line="669"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="647"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="687"/>
       <source>INI files</source>
-      <translation>INI faili</translation>
+      <translation>Tập tin INI</translation>
     </message>
   </context>
   <context>
@@ -819,72 +869,72 @@
     <message>
       <location filename="../dialogs/imagedialog.ui" line="14"/>
       <source>Insert image</source>
-      <translation>Ievietot attēlu</translation>
+      <translation>Chèn hình ảnh</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="40"/>
       <source>Image filename or URL</source>
-      <translation>Attēla faila nosaukums vai URL</translation>
+      <translation>Tên tệp hình ảnh hoặc URL</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="46"/>
       <source>Path to file or URL</source>
-      <translation>Ceļš uz failu vai URL</translation>
+      <translation>Đường dẫn đến tệp hoặc URL</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="121"/>
       <source>Scaling width:</source>
-      <translation>Mērogošanas platums:</translation>
+      <translation>Độ rộng tỷ lệ:</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="217"/>
       <source>Crop image</source>
-      <translation>Apgriezt attēlu</translation>
+      <translation>Cắt ảnh</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="220"/>
       <source>&amp;Crop</source>
-      <translation>&amp;Apgriezt</translation>
+      <translation>&amp;Mùa vụ</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="30"/>
       <source>The path or url will be inserted directly, paths to files will be made relative to the current note</source>
-      <translation>Ceļš vai Url tiks ievietots tieši, ceļi uz failiem tiks izveidoti attiecībā pret pašreizējo piezīmi</translation>
+      <translation>Đường dẫn hoặc url sẽ được chèn trực tiếp, đường dẫn đến tệp sẽ được thực hiện liên quan đến ghi chú hiện tại</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="33"/>
       <source>Don't copy image to media folder</source>
-      <translation>Nekopējiet attēlu multivides mapē</translation>
+      <translation>Không sao chép hình ảnh vào thư mục phương tiện</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="56"/>
       <source>Title of the image link</source>
-      <translation>Attēla saites nosaukums</translation>
+      <translation>Tiêu đề của liên kết hình ảnh</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="59"/>
       <source>Title</source>
-      <translation>Nosaukums</translation>
+      <translation>Tiêu đề</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.ui" line="20"/>
       <source>Select image file</source>
-      <translation>Atlasiet attēla failu</translation>
+      <translation>Chọn tập tin hình ảnh</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.cpp" line="75"/>
       <source>Image files</source>
-      <translation>Attēlu faili</translation>
+      <translation>Tập tin hình ảnh</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.cpp" line="76"/>
       <source>Any files</source>
-      <translation>Jebkuri faili</translation>
+      <translation>Bất kỳ tập tin</translation>
     </message>
     <message>
       <location filename="../dialogs/imagedialog.cpp" line="82"/>
       <source>Select image to insert</source>
-      <translation>Atlasiet ievietojamo attēlu</translation>
+      <translation>Chọn hình ảnh để chèn</translation>
     </message>
   </context>
   <context>
@@ -892,87 +942,87 @@
     <message>
       <location filename="../widgets/layoutwidget.ui" line="97"/>
       <source>Use layout</source>
-      <translation>Izmantojiet izkārtojumu</translation>
+      <translation>Sử dụng bố trí</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="76"/>
       <source>Use new layout</source>
-      <translation>Izmantojiet jaunu izkārtojumu</translation>
+      <translation>Sử dụng bố cục mới</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="77"/>
       <source>Do you want to use the selected layout?</source>
-      <translation>Vai vēlaties izmantot izvēlēto izkārtojumu?</translation>
+      <translation>Bạn có muốn sử dụng bố trí đã chọn?</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="81"/>
       <source>The application will be quit afterwards.</source>
-      <translation>Pēc tam pieteikums tiks aizvērts.</translation>
+      <translation>Ứng dụng sẽ được bỏ sau đó.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="82"/>
       <source>The application will be restarted afterwards.</source>
-      <translation>Pēc tam lietojumprogramma tiks restartēta.</translation>
+      <translation>Ứng dụng sẽ được khởi động lại sau đó.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="140"/>
       <source>Minimal</source>
       <comment>Layout name</comment>
-      <translation>Minimāls</translation>
+      <translation>Tối thiểu</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="142"/>
       <source>Full</source>
       <comment>Layout name</comment>
-      <translation>Pilns</translation>
+      <translation>Đầy</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="144"/>
       <source>Full vertical</source>
       <comment>Layout name</comment>
-      <translation>Pilnībā vertikāli</translation>
+      <translation>Toàn dọc</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="146"/>
       <source>Single column</source>
       <comment>Layout name</comment>
-      <translation>Viena kolonna</translation>
+      <translation>Cột đơn</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="154"/>
       <source>The note edit panel is the central widget that will be resized automatically.</source>
       <comment>Layout description</comment>
-      <translation>Piezīmju rediģēšanas panelis ir centrālais logrīks, kura lielums tiks automātiski mainīts.</translation>
+      <translation>Bảng chỉnh sửa ghi chú là tiện ích trung tâm sẽ được thay đổi kích thước tự động.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="158"/>
       <source>Because of this there is no central widget that will be resized automatically.</source>
       <comment>Layout description</comment>
-      <translation>Tādēļ nav neviena centrālā logrīka, kura izmēri tiks automātiski mainīti.</translation>
+      <translation>Bởi vì điều này không có widget trung tâm sẽ được thay đổi kích thước tự động.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="162"/>
       <source>Just the note list on the left and the note edit panel on the right are enabled by default.</source>
       <comment>Layout description</comment>
-      <translation>Tikai piezīmju saraksts kreisajā pusē un piezīmju rediģēšanas panelis labajā pusē ir iespējoti pēc noklusējuma.</translation>
+      <translation>Chỉ có danh sách ghi chú ở bên trái và bảng chỉnh sửa ghi chú ở bên phải được bật theo mặc định.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="166"/>
       <source>Most of the panels, like the note list on the left, the tagging panels, the note edit panel in the center and the preview panel on the right are enabled by default.</source>
       <comment>Layout description</comment>
-      <translation>Lielākā daļa paneļu, piemēram, piezīmju saraksts kreisajā pusē, iezīmēšanas paneļi, piezīmju rediģēšanas panelis centrā un priekšskatījuma panelis labajā pusē ir iespējoti pēc noklusējuma.</translation>
+      <translation>Hầu hết các bảng, như danh sách ghi chú ở bên trái, bảng gắn thẻ, bảng chỉnh sửa ghi chú ở giữa và bảng xem trước ở bên phải được bật theo mặc định.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="171"/>
       <source>Most of the panels, like the note list on the left, the tagging panels, the note edit panel on the right and the preview panel on top of the note edit panel are enabled by default.</source>
       <comment>Layout description</comment>
-      <translation>Lielākā daļa paneļu, piemēram, piezīmju saraksts kreisajā pusē, iezīmēšanas paneļi, piezīmju rediģēšanas panelis labajā pusē un priekšskatījuma panelis piezīmju rediģēšanas paneļa augšpusē, ir iespējoti pēc noklusējuma.</translation>
+      <translation>Hầu hết các bảng, như danh sách ghi chú ở bên trái, bảng gắn thẻ, bảng chỉnh sửa ghi chú ở bên phải và bảng xem trước ở trên cùng của bảng chỉnh sửa ghi chú được bật theo mặc định.</translation>
     </message>
     <message>
       <location filename="../widgets/layoutwidget.cpp" line="176"/>
       <source>Tiny one column layout with note search, note list and note edit on top of each other.</source>
       <comment>Layout description</comment>
-      <translation>Neliels vienas kolonnas izkārtojums ar piezīmju meklēšanu, piezīmju sarakstu un piezīmju rediģēšanu virs otra.</translation>
+      <translation>Bố cục một cột nhỏ với tìm kiếm ghi chú, danh sách ghi chú và chỉnh sửa ghi chú chồng lên nhau.</translation>
     </message>
   </context>
   <context>
@@ -980,69 +1030,69 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="14"/>
       <source>Link an url or note</source>
-      <translation>Saistiet Url vai piezīmi</translation>
+      <translation>Liên kết một url hoặc ghi chú</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="51"/>
       <source>Enter URL</source>
-      <translation>Ievadiet URL</translation>
+      <translation>Nhập URL</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="60"/>
       <source>Enter an URL to link to</source>
-      <translation>Ievadiet URL, ar kuru saistīt</translation>
+      <translation>Nhập một URL để liên kết đến</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="83"/>
       <source>Select local file or directory to link to</source>
-      <translation>Atlasiet vietējo failu vai direktoriju, ar kuru saistīt</translation>
+      <translation>Chọn tập tin hoặc thư mục cục bộ để liên kết đến</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="94"/>
       <source>Note</source>
-      <translation>Piezīme</translation>
+      <translation>Ghi chú</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="141"/>
       <source>Enter the name of the link (optional)</source>
-      <translation>Ievadiet saites nosaukumu (nav obligāti)</translation>
+      <translation>Nhập tên của liên kết (tùy chọn)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="144"/>
       <source>Name of link (optional)</source>
-      <translation>Saites nosaukums (nav obligāti)</translation>
+      <translation>Tên của liên kết (tùy chọn)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="154"/>
       <source>Enter a description for the link (optional)</source>
-      <translation>Ievadiet saites aprakstu (nav obligāti)</translation>
+      <translation>Nhập mô tả cho liên kết (tùy chọn)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="157"/>
       <source>Description of link (optional)</source>
-      <translation>Saites apraksts (nav obligāti)</translation>
+      <translation>Mô tả liên kết (tùy chọn)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="109"/>
       <source>Search for notes or create new notes by entering text and pressing return</source>
-      <translation>Meklējiet piezīmes vai izveidojiet jaunas piezīmes, ievadot tekstu un nospiežot atgriešanās</translation>
+      <translation>Tìm kiếm ghi chú hoặc tạo ghi chú mới bằng cách nhập văn bản và nhấn return</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="124"/>
       <source>Search for a note to link to</source>
-      <translation>Meklējiet piezīmi, ar kuru saistīt</translation>
+      <translation>Tìm kiếm một ghi chú để liên kết đến</translation>
     </message>
     <message>
-      <location filename="../dialogs/linkdialog.cpp" line="222"/>
-      <location filename="../dialogs/linkdialog.cpp" line="294"/>
+      <location filename="../dialogs/linkdialog.cpp" line="220"/>
+      <location filename="../dialogs/linkdialog.cpp" line="292"/>
       <source>Select file to link to</source>
-      <translation>Atlasiet failu, ar kuru saistīt</translation>
+      <translation>Chọn tập tin để liên kết đến</translation>
     </message>
     <message>
-      <location filename="../dialogs/linkdialog.cpp" line="254"/>
-      <location filename="../dialogs/linkdialog.cpp" line="302"/>
+      <location filename="../dialogs/linkdialog.cpp" line="252"/>
+      <location filename="../dialogs/linkdialog.cpp" line="300"/>
       <source>Select directory to link to</source>
-      <translation>Atlasiet direktoriju, ar kuru saistīt</translation>
+      <translation>Chọn thư mục để liên kết đến</translation>
     </message>
   </context>
   <context>
@@ -1050,99 +1100,91 @@
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="14"/>
       <source>Locally trashed notes</source>
-      <translation>Vietēji mētātas piezīmes</translation>
+      <translation>Ghi chú rác cục bộ</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="55"/>
       <source>Find note name</source>
-      <translation>Atrodiet piezīmes vārdu</translation>
+      <translation>Tìm tên ghi chú</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="81"/>
       <source>Name</source>
-      <translation>Vārds</translation>
+      <translation>Tên</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="86"/>
       <source>Trashed</source>
-      <translation>Mētāts</translation>
+      <translation>Vào thùng rác</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="41"/>
       <source>Restore</source>
-      <translation>Atjaunot</translation>
+      <translation>Khôi phục</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="42"/>
       <location filename="../dialogs/localtrashdialog.cpp" line="194"/>
       <source>Restore selected notes</source>
-      <translation>Atjaunot atlasītās piezīmes</translation>
+      <translation>Khôi phục ghi chú đã chọn</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="51"/>
       <source>Remove</source>
-      <translation>Noņemt</translation>
+      <translation>Tẩy</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="52"/>
       <location filename="../dialogs/localtrashdialog.cpp" line="240"/>
       <source>Remove selected notes</source>
-      <translation>Noņemiet atlasītās piezīmes</translation>
+      <translation>Xóa ghi chú đã chọn</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="97"/>
       <source>File will be restored to: %1</source>
-      <translation>Fails tiks atjaunots uz: %1</translation>
+      <translation>Tệp sẽ được khôi phục thành: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="106"/>
       <source>File &lt;strong&gt;%1&lt;/strong&gt; isn't readable and can't be restored!</source>
-      <translation>Fails &lt;strong&gt;%1 &lt;/strong&gt; nav lasāms un to nevar atjaunot!</translation>
+      <translation>Tệp &lt;strong&gt;%1&lt;/strong&gt; không thể đọc được và không thể khôi phục!</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="195"/>
       <source>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
-        <numerusform>Vai atjaunot atlasīto piezīmi &lt;strong&gt;%n &lt;/strong&gt;?</numerusform>
-        <numerusform>Vai atjaunot atlasītās piezīmes &lt;strong&gt;%n &lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>Khôi phục &lt;strong&gt;%n &lt;/strong&gt; ghi chú đã chọn?</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="218"/>
       <source>Notes restored</source>
-      <translation>Piezīmes ir atjaunotas</translation>
+      <translation>Ghi chú được khôi phục</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="219"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</source>
       <translation>
-        <numerusform>&lt;strong&gt;%n &lt;/strong&gt; piezīme tika atjaunota</numerusform>
-        <numerusform>&lt;strong&gt;%n &lt;/strong&gt; piezīme tika atjaunota</numerusform>
-        <numerusform>&lt;strong&gt;%n &lt;/strong&gt; piezīmes tika atjaunotas</numerusform>
+        <numerusform>Ghi chú &lt;strong&gt;%n &lt;/ strong&gt; đã được khôi phục</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="241"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
       <translation>
-        <numerusform>Vai noņemt atlasīto piezīmi &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
-        <numerusform>Vai noņemt atlasīto piezīmi &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
-        <numerusform>Vai noņemt atlasītās piezīmes &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
+        <numerusform>Xóa &lt;strong&gt;%n&lt;/strong&gt; ghi chú đã chọn?</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="264"/>
       <source>Notes removed</source>
-      <translation>Piezīmes noņemtas</translation>
+      <translation>Ghi chú đã bị xóa</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="265"/>
       <source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</source>
       <translation>
-        <numerusform>&lt;strong&gt;%n&lt;/string&gt; mezgls tika noņemts</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; mezgli tika noņemti</numerusform>
-        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; mezgli tika noņemti</numerusform>
+        <numerusform>&lt;strong&gt;%n&lt;/strong&gt; đã bị xóa</numerusform>
       </translation>
     </message>
   </context>
@@ -1151,58 +1193,58 @@
     <message>
       <location filename="../widgets/logwidget.ui" line="26"/>
       <source>Logs</source>
-      <translation>Baļķi</translation>
+      <translation>Nhật ký</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="114"/>
       <source>Fatal</source>
-      <translation>Liktenīgs</translation>
+      <translation>Gây tử vong</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="100"/>
       <source>Warning</source>
-      <translation>Brīdinājums</translation>
+      <translation>Cảnh báo</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="107"/>
       <source>Critical</source>
-      <translation>Kritisks</translation>
+      <translation>Chỉ trích</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="86"/>
       <source>Debug</source>
-      <translation>Atkļūdošana</translation>
+      <translation>Gỡ lỗi</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="93"/>
       <source>Info</source>
-      <translation>Informācija</translation>
+      <translation>Thông tin</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="121"/>
       <source>Status</source>
-      <translation>Statuss</translation>
+      <translation>Trạng thái</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="128"/>
       <source>Scripting</source>
-      <translation>Skriptu sastādīšana</translation>
+      <translation>Viết kịch bản</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="135"/>
       <location filename="../widgets/logwidget.cpp" line="421"/>
       <source>Clear log</source>
-      <translation>Notīrīt žurnālu</translation>
+      <translation>Xóa nhật ký</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.cpp" line="419"/>
       <source>Show options</source>
-      <translation>Rādīt opcijas</translation>
+      <translation>Hiển thị tùy chọn</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.cpp" line="419"/>
       <source>Hide options</source>
-      <translation>Slēpt opcijas</translation>
+      <translation>Ẩn tùy chọn</translation>
     </message>
   </context>
   <context>
@@ -1210,274 +1252,274 @@
     <message>
       <location filename="../mainwindow.ui" line="683"/>
       <source>Add tag</source>
-      <translation>Pievienojiet tagu</translation>
+      <translation>Thêm thẻ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="408"/>
       <location filename="../mainwindow.ui" line="894"/>
       <location filename="../mainwindow.cpp" line="718"/>
       <source>Navigation</source>
-      <translation>Navigācija</translation>
+      <translation>Dẫn đường</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="391"/>
       <source>Find navigation item</source>
-      <translation>Atrodiet navigācijas vienumu</translation>
+      <translation>Tìm mục điều hướng</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="680"/>
-      <location filename="../mainwindow.cpp" line="7955"/>
+      <location filename="../mainwindow.cpp" line="7958"/>
       <source>Add a tag to the current note</source>
-      <translation>Pievienojiet atzīmi pašreizējai piezīmei</translation>
+      <translation>Thêm một thẻ vào ghi chú hiện tại</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="850"/>
       <source>&amp;Note</source>
-      <translation>&amp;Piezīme</translation>
+      <translation type="unfinished">&amp;Note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="854"/>
       <source>Note &amp;folders</source>
-      <translation>Piezīmju &amp;mapes</translation>
+      <translation type="unfinished">Note &amp;folders</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="859"/>
       <source>Sort by</source>
-      <translation>Kārtot pēc</translation>
+      <translation>Sắp xếp theo</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="966"/>
       <source>&amp;Help</source>
-      <translation>&amp;Palīdzība</translation>
+      <translation>&amp;Cứu giúp</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1117"/>
       <source>Editor width in distraction free mode</source>
-      <translation>Redaktora platums bez uzmanības novēršanas</translation>
+      <translation>Chiều rộng biên tập trong chế độ miễn phí phân tâm</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1120"/>
       <source>Editor width</source>
-      <translation>Redaktora platums</translation>
+      <translation>Chiều rộng biên tập</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1207"/>
       <source>Custom actions</source>
-      <translation>Pielāgotas darbības</translation>
+      <translation>Hành động tùy chỉnh</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1227"/>
       <source>main toolbar</source>
-      <translation>galvenā rīkjosla</translation>
+      <translation>thanh công cụ chính</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1261"/>
       <source>&amp;Quit</source>
-      <translation>&amp;Aiziet</translation>
+      <translation>&amp;Thoát</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1276"/>
       <source>&amp;Setup note folders</source>
-      <translation>&amp;Iestatījumu mapes</translation>
+      <translation type="unfinished">&amp;Setup note folders</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1285"/>
       <source>&amp;Find note</source>
-      <translation>&amp;Atrodiet piezīmi</translation>
+      <translation type="unfinished">&amp;Find note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1297"/>
       <source>&amp;Remove current note</source>
-      <translation>&amp;Noņemt pašreizējo piezīmi</translation>
+      <translation type="unfinished">&amp;Remove current note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1321"/>
       <source>&amp;New note</source>
-      <translation>&amp;Jauna piezīme</translation>
+      <translation type="unfinished">&amp;New note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1333"/>
       <source>Check for &amp;updates</source>
-      <translation>Meklēt &amp;atjauninājumus</translation>
+      <translation type="unfinished">Check for &amp;updates</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1345"/>
       <source>Post questions, feature requests or issues</source>
-      <translation>Iesūtiet jautājumus, funkciju pieprasījumus vai jautājumus</translation>
+      <translation>Gửi câu hỏi, yêu cầu tính năng hoặc vấn đề</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1356"/>
       <source>Alphabetical</source>
-      <translation>Alfabētiski</translation>
+      <translation>Bảng chữ cái</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1359"/>
       <source>Sort alphabetical</source>
-      <translation>Kārtot alfabētiski</translation>
+      <translation>Sắp xếp theo thứ tự abc</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1367"/>
       <source>By date</source>
-      <translation>Pēc datuma</translation>
+      <translation>Theo ngày</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1370"/>
       <source>Sort by date</source>
-      <translation>Kārtot pēc datuma</translation>
+      <translation>Lọc theo ngày</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1394"/>
       <source>Show note &amp;versions</source>
-      <translation>Rādīt piezīmju &amp;versijas</translation>
+      <translation type="unfinished">Show note &amp;versions</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1397"/>
       <source>Show note versions on server</source>
-      <translation>Rādīt piezīmju versijas serverī</translation>
+      <translation>Hiển thị phiên bản ghi chú trên máy chủ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1409"/>
       <source>Show trashed notes on server</source>
-      <translation>Rādīt miskastes piezīmes serverī</translation>
+      <translation>Hiển thị ghi chú rác trên máy chủ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1414"/>
-      <location filename="../mainwindow.cpp" line="9522"/>
+      <location filename="../mainwindow.cpp" line="9525"/>
       <source>Select &amp;all notes</source>
-      <translation>Atlasiet &amp;visas piezīmes</translation>
+      <translation type="unfinished">Select &amp;all notes</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1423"/>
-      <location filename="../mainwindow.cpp" line="6028"/>
+      <location filename="../mainwindow.cpp" line="6031"/>
       <source>Insert &amp;link</source>
-      <translation>Ievietot &amp;saiti</translation>
+      <translation type="unfinished">Insert &amp;link</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1426"/>
       <source>Insert link to an url or a note</source>
-      <translation>Ievietojiet saiti uz Url vai piezīmi</translation>
+      <translation>Chèn liên kết đến một url hoặc ghi chú</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1438"/>
       <source>&amp;Find in current note</source>
-      <translation>&amp;Atrodiet pašreizējā piezīmē</translation>
+      <translation type="unfinished">&amp;Find in current note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1441"/>
       <source>Find text in current note</source>
-      <translation>Atrodiet tekstu pašreizējā piezīmē</translation>
+      <translation>Tìm văn bản trong ghi chú hiện tại</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1454"/>
       <source>&amp;Duplicate text</source>
-      <translation>&amp;Teksta dublikāts</translation>
+      <translation type="unfinished">&amp;Duplicate text</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1466"/>
       <source>&amp;Back in note history</source>
-      <translation>&amp;Atpakaļ piezīmju vēsturē</translation>
+      <translation type="unfinished">&amp;Back in note history</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1379"/>
       <source>&amp;Settings</source>
-      <translation>&amp;Iestatījumi</translation>
+      <translation type="unfinished">&amp;Settings</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="119"/>
       <source>Find or create note sub folder</source>
-      <translation>Atrodiet vai izveidojiet piezīmju apakšmapi</translation>
+      <translation type="unfinished">Find or create note sub folder</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="196"/>
       <source>Find or create tag</source>
-      <translation>Atrodiet vai izveidojiet tagu</translation>
+      <translation type="unfinished">Find or create tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="292"/>
       <source>Search for notes or create new notes by entering text and pressing return</source>
-      <translation>Meklējiet piezīmes vai izveidojiet jaunas piezīmes, ievadot tekstu un nospiežot atgriešanās</translation>
+      <translation type="unfinished">Search for notes or create new notes by entering text and pressing return</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="306"/>
       <source>Search or create note</source>
-      <translation>Meklējiet vai izveidojiet piezīmi</translation>
+      <translation type="unfinished">Search or create note</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7956"/>
+      <location filename="../mainwindow.cpp" line="7959"/>
       <source>Add a tag to the selected notes</source>
-      <translation>Pievienojiet atzīmi atlasītajām piezīmēm</translation>
+      <translation type="unfinished">Add a tag to the selected notes</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="694"/>
       <source>New tag</source>
-      <translation>Jauna atzīme</translation>
+      <translation type="unfinished">New tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="869"/>
-      <location filename="../mainwindow.cpp" line="6075"/>
+      <location filename="../mainwindow.cpp" line="6078"/>
       <source>Export</source>
-      <translation>Eksportēt</translation>
+      <translation type="unfinished">Export</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="882"/>
       <source>Import</source>
-      <translation>Importēt</translation>
+      <translation type="unfinished">Import</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="907"/>
-      <location filename="../mainwindow.cpp" line="6057"/>
+      <location filename="../mainwindow.cpp" line="6060"/>
       <source>Print</source>
-      <translation>Drukāt</translation>
+      <translation type="unfinished">Print</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="918"/>
       <source>View note</source>
-      <translation>Skatīt piezīmi</translation>
+      <translation type="unfinished">View note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="930"/>
       <source>Trash</source>
-      <translation>Atkritumi</translation>
+      <translation type="unfinished">Trash</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="997"/>
       <source>&amp;Edit</source>
-      <translation>&amp;Rediģēt</translation>
+      <translation type="unfinished">&amp;Edit</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1001"/>
       <source>Insert</source>
-      <translation>Ievietot</translation>
+      <translation type="unfinished">Insert</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1018"/>
       <source>Format</source>
-      <translation>Formāts</translation>
+      <translation type="unfinished">Format</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1031"/>
       <source>Extra</source>
-      <translation>Papildu</translation>
+      <translation type="unfinished">Extra</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1047"/>
       <source>Edit</source>
-      <translation>Rediģēt</translation>
+      <translation type="unfinished">Edit</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1060"/>
       <source>Versioning</source>
-      <translation>Versija</translation>
+      <translation type="unfinished">Versioning</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1071"/>
       <source>Encryption</source>
-      <translation>Šifrēšana</translation>
+      <translation type="unfinished">Encryption</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1083"/>
       <source>Languages</source>
-      <translation>Valodas</translation>
+      <translation type="unfinished">Languages</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1107"/>
@@ -1487,1218 +1529,1184 @@
     <message>
       <location filename="../mainwindow.ui" line="1113"/>
       <source>&amp;Window</source>
-      <translation>&amp;Logs</translation>
+      <translation type="unfinished">&amp;Window</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1129"/>
       <location filename="../mainwindow.cpp" line="658"/>
       <source>Workspaces</source>
-      <translation>Darbvietas</translation>
+      <translation type="unfinished">Workspaces</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1134"/>
       <source>Panels</source>
-      <translation>Paneļi</translation>
+      <translation type="unfinished">Panels</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1139"/>
       <source>Toolbars</source>
-      <translation>Rīkjoslas</translation>
+      <translation type="unfinished">Toolbars</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1144"/>
       <source>Show</source>
       <extracomment>To show or hide stuff</extracomment>
-      <translation>Izrāde</translation>
+      <translation type="unfinished">Show</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1158"/>
       <source>Workspace</source>
-      <translation>Darbvieta</translation>
+      <translation type="unfinished">Workspace</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1167"/>
       <source>Jump to</source>
-      <translation>Pārlēkt uz</translation>
+      <translation>Nhảy tới</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1203"/>
       <source>&amp;Scripting</source>
-      <translation>&amp;Skriptu sastādīšana</translation>
+      <translation>&amp;Viết kịch bản</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1309"/>
       <source>About &amp;QOwnNotes…</source>
-      <translation>Par &amp;QOwnNotes…</translation>
+      <translation type="unfinished">About &amp;QOwnNotes…</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1348"/>
       <source>Post questions, feature requests or problems with the help of the issue assistant</source>
-      <translation>Nosūtiet jautājumus, funkciju pieprasījumus vai problēmas, izmantojot izdošanas palīgu</translation>
+      <translation>Gửi câu hỏi, yêu cầu tính năng hoặc vấn đề với sự giúp đỡ của trợ lý vấn đề</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1406"/>
       <source>Show remote trash</source>
-      <translation>Rādīt attālo miskasti</translation>
+      <translation>Hiển thị thùng rác từ xa</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1446"/>
       <location filename="../mainwindow.ui" line="1449"/>
       <source>Auto format table</source>
-      <translation>Automātiskā formāta tabula</translation>
+      <translation>Bảng định dạng tự động</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1478"/>
       <source>Forward in note history</source>
-      <translation>Uz priekšu piezīmju vēsturē</translation>
+      <translation>Chuyển tiếp trong lịch sử ghi chú</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1490"/>
       <source>Show shortcuts</source>
-      <translation>Rādīt saīsnes</translation>
+      <translation>Hiển thị phím tắt</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1499"/>
       <source>&amp;Knowledge base</source>
-      <translation>&amp;Zināšanu pamats</translation>
+      <translation type="unfinished">&amp;Knowledge base</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1508"/>
       <source>Insert current &amp;time</source>
-      <translation>Ievietot pašreizējo &amp;laiku</translation>
+      <translation type="unfinished">Insert current &amp;time</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1520"/>
       <source>Show &amp;Todo List</source>
-      <translation>Rādīt &amp;Todo sarakstu</translation>
+      <translation type="unfinished">Show &amp;Todo List</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1532"/>
       <source>&amp;Export note as PDF (preview)</source>
-      <translation>&amp;Eksportēt piezīmi kā PDF (priekšskatījums)</translation>
+      <translation>&amp;Xuất ghi chú dưới dạng PDF (xem trước)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1535"/>
       <source>Export note as PDF (preview)</source>
-      <translation>Eksportēt piezīmi kā PDF (priekšskatījums)</translation>
+      <translation>Xuất ghi chú dưới dạng PDF (xem trước)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1544"/>
       <source>&amp;Export note as PDF (text)</source>
-      <translation>&amp;Eksportēt piezīmi kā PDF failu (teksts)</translation>
+      <translation>&amp;Xuất ghi chú dưới dạng PDF (văn bản)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1553"/>
       <source>&amp;Print note (text)</source>
-      <translation>&amp;Izdrukāt piezīmi (teksts)</translation>
+      <translation>&amp;Ghi chú in (văn bản)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1577"/>
       <source>Insert &amp;image</source>
-      <translation>Ievietot &amp;attēlu</translation>
+      <translation type="unfinished">Insert &amp;image</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1580"/>
       <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
-      <translation>Ievietot attēlu (attēls tiks kopēts mapē “multivide” pašreizējā piezīmju mapē)</translation>
+      <translation>Chèn hình ảnh (hình ảnh sẽ được sao chép vào thư mục `media` trong thư mục ghi chú hiện tại)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1592"/>
       <source>Show &amp;changelog</source>
-      <translation>Rādīt &amp;pārmaiņu žurnālu</translation>
+      <translation type="unfinished">Show &amp;changelog</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1601"/>
       <source>&amp;Encrypt note</source>
-      <translation>&amp;Šifrēt piezīmi</translation>
+      <translation>&amp;Mã hóa lưu ý</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1610"/>
       <source>Edit encrypted note</source>
-      <translation>Rediģēt šifrētu piezīmi</translation>
+      <translation>Chỉnh sửa ghi chú được mã hóa</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1622"/>
       <source>Decrypt note</source>
-      <translation>Atšifrējiet piezīmi</translation>
+      <translation>Giải mã lưu ý</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1631"/>
       <source>&amp;Open note in external editor</source>
-      <translation>&amp;Atvērt piezīmi ārējā redaktorā</translation>
+      <translation>&amp;Mở ghi chú trong trình soạn thảo bên ngoài</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1643"/>
       <source>&amp;Export note as markdown file</source>
-      <translation>&amp;Eksportēt piezīmi kā iezīmēšanas failu</translation>
+      <translation>&amp;Xuất ghi chú dưới dạng tệp đánh dấu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1652"/>
       <source>&amp;Get involved</source>
-      <translation>&amp;Iesaistīties</translation>
+      <translation>&amp;Tham gia vào</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1661"/>
       <source>Insert &amp;code block</source>
-      <translation>Ievietojiet &amp;koda bloku</translation>
+      <translation type="unfinished">Insert &amp;code block</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1673"/>
       <source>Next note</source>
-      <translation>Nākamā piezīme</translation>
+      <translation>Lưu ý tiếp theo</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1685"/>
       <source>Previous note</source>
-      <translation>Iepriekšējā piezīme</translation>
+      <translation>Ghi chú trước</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1697"/>
       <source>&amp;Distraction free mode</source>
-      <translation>&amp;Trauksmes novēršanas režīms</translation>
+      <translation>&amp;Chế độ mất tập trung</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1700"/>
       <source>Distraction free mode, you can leave it with a button on the bottom right</source>
-      <translation>Bez traucējumiem, varat to atstāt ar pogu labajā apakšējā stūrī</translation>
+      <translation>Chế độ miễn phí làm phiền, bạn có thể để nó bằng một nút ở phía dưới bên phải</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1711"/>
       <source>Show &amp;toolbar</source>
-      <translation>Rādīt &amp;rīkjoslu</translation>
+      <translation type="unfinished">Show &amp;toolbar</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1719"/>
       <source>Narrow</source>
-      <translation>Šaurs</translation>
+      <translation>Hẹp</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1730"/>
       <source>Medium</source>
-      <translation>Vidēja</translation>
+      <translation>Trung bình</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1741"/>
       <source>Wide</source>
-      <translation>Plašs</translation>
+      <translation>Rộng</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1752"/>
       <source>Full</source>
-      <translation>Pilns</translation>
+      <translation>Đầy</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1764"/>
       <source>Paste html or media</source>
-      <translation>Ielīmējiet Html vai multividi</translation>
+      <translation>Dán html hoặc phương tiện truyền thông</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1767"/>
       <location filename="../mainwindow.ui" line="1770"/>
       <source>Paste images, notes and html from the clipboard</source>
-      <translation>Ielīmējiet attēlus, piezīmes un Html no starpliktuves</translation>
+      <translation>Dán hình ảnh, ghi chú và html từ bảng ghi tạm</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1782"/>
       <source>Show note in &amp;file manager</source>
-      <translation>Rādīt piezīmi failu pārvaldniekā</translation>
+      <translation>Hiển thị ghi chú trong trình &amp;quản lý tập tin</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1794"/>
       <source>Format text &amp;bold</source>
-      <translation>Formāts &amp;treknrakstā</translation>
+      <translation>Định dạng văn bản in &amp;đậm</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1806"/>
       <source>Format text &amp;italic</source>
-      <translation>Formāta teksts &amp;slīpraksts</translation>
+      <translation>Định dạng chữ &amp;nghiêng</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1818"/>
       <source>&amp;Increase note text size</source>
-      <translation>&amp;Palieliniet piezīmes teksta lielumu</translation>
+      <translation>&amp;Tăng kích thước văn bản ghi chú</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1830"/>
       <source>&amp;Decrease note text size</source>
-      <translation>&amp;Samaziniet piezīmes teksta lielumu</translation>
+      <translation>&amp;Giảm kích thước văn bản ghi chú</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1842"/>
       <source>&amp;Reset note text size</source>
-      <translation>&amp;Atiestatīt piezīmes teksta lielumu</translation>
+      <translation>&amp;Đặt lại kích thước văn bản ghi chú</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1854"/>
       <source>&amp;Add tag to note</source>
-      <translation>&amp;Pievienojiet atzīmei piezīmi</translation>
+      <translation>&amp;Thêm thẻ để ghi chú</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1866"/>
       <source>&amp;Reload note folder</source>
-      <translation>&amp;Atkārtoti ielādēt piezīmju mapi</translation>
+      <translation>&amp;Tải lại thư mục ghi chú</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1938"/>
       <source>Show log</source>
-      <translation>Rādīt žurnālu</translation>
+      <translation>Hiển thị nhật ký</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1947"/>
       <source>Export note as HTML</source>
-      <translation>Eksportēt piezīmi kā HTML</translation>
+      <translation>Xuất ghi chú dưới dạng HTML</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2026"/>
       <source>Cycle text case</source>
-      <translation>Cikla teksta reģistru</translation>
+      <translation>Trường hợp văn bản chu kỳ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2099"/>
       <source>Show note list under tag panel</source>
-      <translation>Rādīt piezīmju sarakstu tagu panelī</translation>
+      <translation>Hiển thị danh sách ghi chú dưới bảng điều khiển thẻ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2117"/>
       <source>Find notes in all tags / subfolders</source>
-      <translation>Atrodiet piezīmes visos tagos / apakšmapēs</translation>
+      <translation>Tìm ghi chú trong tất cả các thẻ / thư mục con</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2138"/>
       <source>Import notes from text files</source>
-      <translation>Importējiet piezīmes no teksta failiem</translation>
+      <translation>Nhập ghi chú từ tệp văn bản</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2147"/>
       <source>Manage orphaned image files</source>
-      <translation>Pārvaldiet bāreņu attēlu failus</translation>
+      <translation>Quản lý tập tin hình ảnh mồ côi</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2159"/>
       <location filename="../mainwindow.ui" line="2162"/>
       <source>Open the Telegram group</source>
-      <translation>Atveriet grupu Telegram</translation>
+      <translation>Mở nhóm Telegram</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2174"/>
       <location filename="../mainwindow.ui" line="2177"/>
       <source>Open the Riot room</source>
       <extracomment>"Riot" as in the chat service</extracomment>
-      <translation>Atveriet Riot istabu</translation>
+      <translation>Mở phòng bạo loạn</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2204"/>
       <source>Unlock panels</source>
-      <translation>Atslēdziet paneļus</translation>
+      <translation>Mở khóa bảng</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2213"/>
-      <location filename="../mainwindow.cpp" line="10547"/>
+      <location filename="../mainwindow.cpp" line="10550"/>
       <source>Remove current workspace</source>
-      <translation>Noņemiet pašreizējo darbvietu</translation>
+      <translation>Xóa không gian làm việc hiện tại</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2222"/>
       <source>Add new workspace</source>
-      <translation>Pievienojiet jaunu darbvietu</translation>
+      <translation>Thêm không gian làm việc mới</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2231"/>
       <source>Rename current workspace</source>
-      <translation>Pārdēvēt pašreizējo darbvietu</translation>
+      <translation>Đổi tên không gian làm việc hiện tại</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2240"/>
       <source>Switch to previous workspace</source>
-      <translation>Pārslēgties uz iepriekšējo darbvietu</translation>
+      <translation>Chuyển sang không gian làm việc trước đó</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2248"/>
       <source>Show all panels</source>
-      <translation>Rādīt visus paneļus</translation>
+      <translation>Hiển thị tất cả các bảng</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2257"/>
       <source>Find action</source>
-      <translation>Atrodi darbību</translation>
+      <translation>Tìm hành động</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2260"/>
       <location filename="../mainwindow.ui" line="2263"/>
       <source>Find an action from the menu</source>
-      <translation>Izvēlnē atrodiet darbību</translation>
+      <translation>Tìm một hành động từ menu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2275"/>
       <source>Insert table</source>
-      <translation>Ievietojiet tabulu</translation>
+      <translation>Chèn bảng</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2287"/>
-      <location filename="../mainwindow.cpp" line="6035"/>
+      <location filename="../mainwindow.cpp" line="6038"/>
       <source>Insert block &amp;quote</source>
-      <translation>Ievietojiet bloka &amp;cenu</translation>
+      <translation>Chèn trích &amp;dẫn khối</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2295"/>
       <location filename="../mainwindow.ui" line="2298"/>
       <source>Search selected text on the web</source>
-      <translation>Meklēt atlasītajā tekstā tīmeklī</translation>
+      <translation>Tìm kiếm văn bản đã chọn trên web</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2306"/>
       <source>Delete line</source>
-      <translation>Dzēst rindu</translation>
+      <translation>Xóa dòng</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2314"/>
       <source>Delete word</source>
-      <translation>Dzēst vārdu</translation>
+      <translation>Xóa từ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2322"/>
       <source>Copy note headline</source>
-      <translation>Kopēt piezīmes virsrakstu</translation>
+      <translation>Sao chép tiêu đề ghi chú</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2334"/>
-      <location filename="../mainwindow.cpp" line="9497"/>
+      <location filename="../mainwindow.cpp" line="9500"/>
       <source>Open note in different window</source>
-      <translation>Atvērt piezīmi citā logā</translation>
+      <translation>Mở ghi chú trong cửa sổ khác nhau</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2346"/>
       <source>Save modified notes</source>
-      <translation>Saglabājiet modificētās piezīmes</translation>
+      <translation>Lưu ghi chú sửa đổi</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2357"/>
       <source>Ascending</source>
-      <translation>Augoši</translation>
+      <translation>Tăng dần</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2365"/>
       <source>Descending</source>
-      <translation>Dilstošā secībā</translation>
+      <translation>Giảm dần</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2374"/>
-      <location filename="../mainwindow.cpp" line="9505"/>
+      <location filename="../mainwindow.cpp" line="9508"/>
       <source>Show note git versions</source>
-      <translation>Rādīt piezīmju versijas</translation>
+      <translation>Hiển thị phiên bản ghi chú git</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2383"/>
       <source>Find scripts in script repository</source>
-      <translation>Atrodiet skriptus skriptu krātuvē</translation>
+      <translation>Tìm tập lệnh trong kho lưu trữ tập lệnh</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2395"/>
       <source>Script settings</source>
-      <translation>Skriptu iestatījumi</translation>
+      <translation>Cài đặt tập lệnh</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2404"/>
       <source>Insert attachment</source>
-      <translation>Ievietojiet pielikumu</translation>
+      <translation>Chèn tệp đính kèm</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2431"/>
       <source>Check for script updates</source>
-      <translation>Pārbaudiet, vai nav skriptu atjauninājumu</translation>
+      <translation>Kiểm tra cập nhật tập lệnh</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2440"/>
       <source>Show local trash</source>
-      <translation>Rādīt vietējo miskasti</translation>
+      <translation>Hiển thị thùng rác địa phương</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2445"/>
       <location filename="../mainwindow.ui" line="2448"/>
       <source>Jump to note edit panel</source>
-      <translation>Pāriet uz piezīmju rediģēšanas paneli</translation>
+      <translation>Chuyển đến bảng chỉnh sửa ghi chú</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2460"/>
       <source>Manage orphaned attachments</source>
-      <translation>Pārvaldiet bāreņu pielikumus</translation>
+      <translation>Quản lý tệp đính kèm mồ côi</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2465"/>
       <source>Jump to note subfolder panel</source>
-      <translation>Pārlēkt uz apakšmapes paneli</translation>
+      <translation>Chuyển đến bảng ghi chú thư mục con</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2473"/>
       <source>Jump to tags panel</source>
-      <translation>Pāriet uz tagu paneli</translation>
+      <translation>Chuyển đến bảng điều khiển thẻ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2481"/>
       <source>Jump to note list panel</source>
-      <translation>Pāriet uz piezīmju saraksta paneli</translation>
+      <translation>Chuyển đến bảng ghi chú danh sách</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2489"/>
       <source>Activate context menu</source>
-      <translation>Aktivizējiet konteksta izvēlni</translation>
+      <translation>Kích hoạt menu ngữ cảnh</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2497"/>
       <source>Import bookmarks from server</source>
-      <translation>Importējiet grāmatzīmes no servera</translation>
+      <translation>Nhập dấu trang từ máy chủ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2502"/>
       <location filename="../mainwindow.ui" line="2505"/>
       <source>Toggle full-screen mode</source>
-      <translation>Pārslēgt pilnekrāna režīmu</translation>
+      <translation>Bật chế độ toàn màn hình</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2516"/>
       <source>Typewriter mode</source>
-      <translation>Rakstāmmašīnas režīms</translation>
+      <translation>Chế độ máy đánh chữ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2528"/>
       <source>Check spelling</source>
-      <translation>Pārbaudiet pareizrakstību</translation>
+      <translation>Kiểm tra chính tả</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2536"/>
-      <location filename="../mainwindow.cpp" line="11360"/>
+      <location filename="../mainwindow.cpp" line="11363"/>
       <source>Automatically detect</source>
-      <translation>Automātiski noteikt</translation>
+      <translation>Tự động phát hiện</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2541"/>
       <source>Manage dictionaries</source>
-      <translation>Pārvaldiet vārdnīcas</translation>
+      <translation>Quản lý từ điển</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1877"/>
       <source>Use &amp;vertical preview layout</source>
-      <translation>Izmantojiet &amp;vertikālu priekšskatījuma izkārtojumu</translation>
+      <translation type="unfinished">Use &amp;vertical preview layout</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1880"/>
       <location filename="../mainwindow.ui" line="1883"/>
       <source>The note edit panel will be above the preview panel</source>
-      <translation>Piezīmju rediģēšanas panelis atradīsies virs priekšskatījuma paneļa</translation>
+      <translation>Bảng chỉnh sửa ghi chú sẽ ở trên bảng xem trước</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1892"/>
       <source>Replace in current note</source>
-      <translation>Aizstāt pašreizējā piezīmē</translation>
+      <translation>Thay thế trong ghi chú hiện tại</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1900"/>
       <source>Autocomplete, solve equation or open URL</source>
-      <translation>Automātiski pabeigt, atrisināt vienādojumu vai atvērt URL</translation>
+      <translation>Tự động hoàn tất, giải phương trình hoặc mở URL</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1903"/>
       <source>Solve a simple equation like '(2+3)*6=' in the current line</source>
-      <translation>Atrodiet vienkāršu vienādojumu, piemēram, '(2 + 3) * 6 =' pašreizējā rindā</translation>
+      <translation>Giải phương trình đơn giản như '(2 + 3) * 6 =' trong dòng hiện tại</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1911"/>
       <source>Select note folder</source>
-      <translation>Atlasiet piezīmju mapi</translation>
+      <translation>Chọn thư mục ghi chú</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1926"/>
       <source>Reload scripting engine</source>
-      <translation>Pārlādēt skriptu meklētājprogrammu</translation>
+      <translation>Tải lại công cụ kịch bản</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1959"/>
       <location filename="../mainwindow.ui" line="1962"/>
       <source>Open the #qownnotes IRC channel, you have to stay online to get a response</source>
-      <translation>Atveriet kanālu #qownnotes IRC, lai saņemtu atbildi, jums jāpaliek tiešsaistē</translation>
+      <translation>Mở kênh IRC #qownnotes, bạn phải ở lại trực tuyến để nhận được phản hồi</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2189"/>
       <location filename="../mainwindow.ui" line="2192"/>
       <source>Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</source>
-      <translation>Atveriet qownnotes Gitter istabu, lai pieteiktos, ir nepieciešams GitHub vai Twitter konts, taču varat saņemt ziņas bezsaistē</translation>
+      <translation>Mở phòng qitternotes Gitter, bạn cần có tài khoản GitHub hoặc Twitter để đăng nhập, nhưng bạn có thể nhận được tin nhắn ngoại tuyến</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="970"/>
       <source>Open chat</source>
-      <translation>Atvērt tērzēšanu</translation>
+      <translation>Mở trò chuyện</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="510"/>
       <source>Note operations…</source>
-      <translation>Piezīmju operācijas…</translation>
+      <translation>Ghi chú hoạt động…</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1565"/>
       <source>&amp;Print note (preview)</source>
-      <translation>&amp;Izdrukāt piezīmi (priekšskatījums)</translation>
+      <translation>&amp;Ghi chú in (xem trước)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1971"/>
       <source>Insert headline from note filename</source>
-      <translation>Ievietojiet virsrakstu no piezīmes faila nosaukuma</translation>
+      <translation>Chèn tiêu đề từ tên tệp ghi chú</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1985"/>
       <source>Use softwrap in note editor and preview</source>
-      <translation>Izmantojiet mīksto aptinumu piezīmju redaktorā un priekšskatījumu</translation>
+      <translation>Sử dụng softwrap trong trình chỉnh sửa ghi chú và xem trước</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1993"/>
       <source>Show status bar</source>
-      <translation>Rādīt statusa joslu</translation>
+      <translation>Thanh trạng thái chương trình</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2008"/>
       <source>Share note</source>
-      <translation>Kopīgot piezīmi</translation>
+      <translation>Chia sẻ lưu ý</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2038"/>
       <source>Markdown cheatsheet</source>
-      <translation type="unfinished">Markdown cheatsheet</translation>
+      <translation>Áo choàng Markdown</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2047"/>
       <source>Strike out text</source>
-      <translation>Svītrot tekstu</translation>
+      <translation>Xóa văn bản</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2058"/>
       <source>Use one column mode</source>
-      <translation>Izmantojiet vienas kolonnas režīmu</translation>
+      <translation>Sử dụng chế độ một cột</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2061"/>
       <location filename="../mainwindow.ui" line="2064"/>
       <source>Use a one column minimal mode (like NVAlt)</source>
-      <translation>Izmantojiet minimālās vienas kolonnas režīmu (piemēram, NVAlt)</translation>
+      <translation>Sử dụng chế độ tối thiểu một cột (như NVAlt)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2076"/>
       <source>Show menu bar</source>
-      <translation>Rādīt izvēlņu joslu</translation>
+      <translation>Hiển thị thanh menu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2088"/>
       <source>Split note at cursor position</source>
-      <translation>Sadaliet piezīmi kursora pozīcijā</translation>
+      <translation>Chia ghi chú ở vị trí con trỏ</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2108"/>
       <source>Donate</source>
-      <translation>Ziedo</translation>
+      <translation>Quyên góp</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2129"/>
       <source>Import notes from Evernote</source>
-      <translation>Importējiet piezīmes no Evernote</translation>
-    </message>
-    <message>
-      <location filename="../mainwindow.cpp" line="2613"/>
-      <source>Note was removed externally!</source>
-      <translation>Piezīme tika noņemta ārēji!</translation>
+      <translation>Nhập ghi chú từ Evernote</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2614"/>
-      <source>Current note was removed outside of this application!
-Restore current note?</source>
-      <translation>Pašreizējā piezīme tika noņemta ārpus šīs lietojumprogrammas.
-Vai atjaunot pašreizējo piezīmi?</translation>
+      <source>Note was removed externally!</source>
+      <translation>Lưu ý đã được loại bỏ bên ngoài!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5029"/>
-      <location filename="../mainwindow.cpp" line="5053"/>
-      <location filename="../mainwindow.cpp" line="6493"/>
-      <location filename="../mainwindow.cpp" line="9584"/>
+      <location filename="../mainwindow.cpp" line="2615"/>
+      <source>Current note was removed outside of this application!
+Restore current note?</source>
+      <translation>Lưu ý hiện tại đã được gỡ bỏ bên ngoài ứng dụng này!
+Khôi phục lưu ý hiện tại?</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="5032"/>
+      <location filename="../mainwindow.cpp" line="5056"/>
+      <location filename="../mainwindow.cpp" line="6496"/>
+      <location filename="../mainwindow.cpp" line="9587"/>
       <source>&amp;Cancel</source>
-      <translation>&amp;Atcelt</translation>
+      <translation>&amp;Hủy bỏ</translation>
     </message>
     <message numerus="yes">
       <source>stored %n note(s) to disk</source>
       <translation type="unfinished">
         <numerusform>stored %n note(s) to disk</numerusform>
-        <numerusform>stored %n note(s) to disk</numerusform>
-        <numerusform>stored %n note(s) to disk</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2837"/>
+      <location filename="../mainwindow.cpp" line="2838"/>
       <source>new version %1 available</source>
-      <translation>ir pieejama jaunā versija %1</translation>
+      <translation>phiên bản mới %1 có sẵn</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2957"/>
+      <location filename="../mainwindow.cpp" line="2958"/>
       <source>Abort</source>
-      <translation>Pārtraukt</translation>
+      <translation>Hủy bỏ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2957"/>
+      <location filename="../mainwindow.cpp" line="2958"/>
       <source>Loading notes…</source>
-      <translation>Notiek piezīmju ielāde…</translation>
+      <translation>Đang tải ghi chú…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3162"/>
+      <location filename="../mainwindow.cpp" line="3163"/>
       <source>Delete conflicted database copies</source>
-      <translation>Dzēst pretrunīgas datu bāzes kopijas</translation>
+      <translation>Xóa các bản sao cơ sở dữ liệu bị xung đột</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="3187"/>
+      <location filename="../mainwindow.cpp" line="3188"/>
       <source>Removed %n conflicted database copies</source>
       <translation>
-        <numerusform>Noņemta %n konfliktējošā datu bāzes kopija</numerusform>
-        <numerusform>Noņemta %n konfliktējošā datu bāzes kopija</numerusform>
-        <numerusform>Noņemtas %n konfliktējošās datu bāzes kopijas</numerusform>
+        <numerusform>Đã xóa %n bản sao cơ sở dữ liệu bị xung đột</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3349"/>
+      <location filename="../mainwindow.cpp" line="3350"/>
       <source>Please select the folder where your notes will get stored</source>
-      <translation>Lūdzu, atlasiet mapi, kurā tiks saglabātas jūsu piezīmes</translation>
+      <translation>Vui lòng chọn thư mục nơi ghi chú của bạn sẽ được lưu trữ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3376"/>
+      <location filename="../mainwindow.cpp" line="3377"/>
       <source>No folder was selected</source>
-      <translation>Neviena mape netika atlasīta</translation>
+      <translation>Không có thư mục nào được chọn</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3378"/>
+      <location filename="../mainwindow.cpp" line="3379"/>
       <source>You have to select your ownCloud notes folder to make this software work!</source>
-      <translation>Lai šī programmatūra darbotos, jums jāizvēlas mape ownCloud!</translation>
+      <translation>Bạn phải chọn ghi chú ownCloud của bạn thư mục để làm cho công việc phần mềm này!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3380"/>
+      <location filename="../mainwindow.cpp" line="3381"/>
       <source>&amp;Retry</source>
-      <translation>&amp;Mēģiniet vēlreiz</translation>
+      <translation>&amp;Thử lại</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3380"/>
+      <location filename="../mainwindow.cpp" line="3381"/>
       <source>&amp;Exit</source>
-      <translation>&amp;Izeja</translation>
-    </message>
-    <message>
-      <location filename="../mainwindow.cpp" line="3611"/>
-      <source>Remove current note</source>
-      <translation>Noņemt pašreizējo piezīmi</translation>
+      <translation type="unfinished">&amp;Exit</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3612"/>
+      <source>Remove current note</source>
+      <translation>Xóa ghi chú hiện tại</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="3613"/>
       <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation>Vai noņemt pašreizējo piezīmi: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+      <translation type="unfinished">Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3940"/>
       <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
-      <translation>Lūdzu, ievadiet šīs šifrētās piezīmes &lt;strong&gt; paroli &lt;/strong&gt;.</translation>
+      <translation type="unfinished">Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3964"/>
       <source>Note can't be decrypted!</source>
-      <translation>Piezīmi nevar atšifrēt!</translation>
+      <translation>Lưu ý không thể được giải mã!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3965"/>
       <source>It seems that your password is not valid!</source>
-      <translation>Šķiet, ka jūsu parole nav derīga!</translation>
+      <translation>Có vẻ như mật khẩu của bạn không hợp lệ!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4125"/>
+      <location filename="../mainwindow.cpp" line="4128"/>
       <source>Remove selected notes</source>
-      <translation>Noņemiet atlasītās piezīmes</translation>
+      <translation>Xóa ghi chú đã chọn</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4127"/>
+      <location filename="../mainwindow.cpp" line="4130"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
       <translation>
-        <numerusform>Vai noņemt atlasīto piezīmi &lt;strong&gt;%n &lt;/strong&gt;?
+        <numerusform>Xóa &lt;strong&gt;%n &lt;/ strong&gt; ghi chú đã chọn?
 
-Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespējai tos atjaunot no turienes.</numerusform>
-        <numerusform>Vai noņemt atlasīto piezīmi &lt;strong&gt;%n &lt;/strong&gt;?
-
-Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespējai tos atjaunot no turienes.</numerusform>
-        <numerusform>Vai noņemt atlasītās piezīmes &lt;strong&gt;%n &lt;/strong&gt;?
-
-Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespējai tos atjaunot no turienes.</numerusform>
+Nếu thùng rác được bật trên máy chủ của riêng bạn, bạn sẽ có thể khôi phục chúng từ đó.</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4213"/>
-      <location filename="../mainwindow.cpp" line="9756"/>
+      <location filename="../mainwindow.cpp" line="4216"/>
+      <location filename="../mainwindow.cpp" line="9759"/>
       <source>Remove selected folders</source>
-      <translation>Noņemiet atlasītās mapes</translation>
+      <translation>Xóa các thư mục đã chọn</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4214"/>
+      <location filename="../mainwindow.cpp" line="4217"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
-      <translation>
-        <numerusform>Vai noņemt atlasīto mapi &lt;strong&gt;%n &lt;/strong&gt;? &lt;ul&gt; &lt;li&gt;%1 &lt;/li&gt; &lt;/ul&gt; Tiks noņemti arī visi šajās mapēs esošie faili un mapes!</numerusform>
-        <numerusform>Vai noņemt atlasīto mapi &lt;strong&gt;%n &lt;/strong&gt;? &lt;ul&gt; &lt;li&gt;%1 &lt;/li&gt; &lt;/ul&gt; Tiks noņemti arī visi šajās mapēs esošie faili un mapes!</numerusform>
-        <numerusform>Vai noņemt &lt;strong&gt;%n &lt;/strong&gt; atlasītās mapes? &lt;ul&gt; &lt;li&gt;%1 &lt;/li&gt; &lt;/ul&gt; Tiks noņemti arī visi šajās mapēs esošie faili un mapes!</numerusform>
+      <translation type="unfinished">
+        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4224"/>
+      <location filename="../mainwindow.cpp" line="4227"/>
       <source>Removed note subfolder: %1</source>
-      <translation>Noņemtā piezīmes apakšmape: %1</translation>
+      <translation>Thư mục con đã xóa: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4243"/>
+      <location filename="../mainwindow.cpp" line="4246"/>
       <source>Remove selected tags</source>
-      <translation>Noņemt atlasītās atzīmes</translation>
+      <translation>Xóa các thẻ đã chọn</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4244"/>
+      <location filename="../mainwindow.cpp" line="4247"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
-      <translation>
-        <numerusform>Vai noņemt &lt;strong&gt;%n&lt;/strong&gt; atlasīto tagu? Šajā procesā netiks noņemtas piezīmes.</numerusform>
-        <numerusform>Vai noņemt &lt;strong&gt;%n&lt;/strong&gt; atlasīto tagu? Šajā procesā netiks noņemtas piezīmes.</numerusform>
-        <numerusform>Vai noņemt &lt;strong&gt;%n&lt;/strong&gt; atlasītos tagus? Šajā procesā netiks noņemtas piezīmes.</numerusform>
+      <translation type="unfinished">
+        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4297"/>
-      <location filename="../mainwindow.cpp" line="8672"/>
+      <location filename="../mainwindow.cpp" line="4300"/>
+      <location filename="../mainwindow.cpp" line="8675"/>
       <source>Move selected notes</source>
-      <translation>Pārvietot atlasītās piezīmes</translation>
+      <translation>Di chuyển các ghi chú đã chọn</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4298"/>
+      <location filename="../mainwindow.cpp" line="4301"/>
       <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation type="unfinished">
         <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4398"/>
-      <location filename="../mainwindow.cpp" line="8774"/>
+      <location filename="../mainwindow.cpp" line="4401"/>
+      <location filename="../mainwindow.cpp" line="8777"/>
       <source>Copy selected notes</source>
-      <translation>Kopēt atlasītās piezīmes</translation>
+      <translation>Sao chép ghi chú đã chọn</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4399"/>
+      <location filename="../mainwindow.cpp" line="4402"/>
       <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation type="unfinished">
         <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4426"/>
-      <location filename="../mainwindow.cpp" line="4572"/>
+      <location filename="../mainwindow.cpp" line="4429"/>
+      <location filename="../mainwindow.cpp" line="4575"/>
       <source>Done</source>
       <translation type="unfinished">Done</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4427"/>
+      <location filename="../mainwindow.cpp" line="4430"/>
       <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
       <translation type="unfinished">
         <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
-        <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
-        <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4440"/>
+      <location filename="../mainwindow.cpp" line="4443"/>
       <source>Tag selected notes</source>
-      <translation>Atzīmējiet atlasītās piezīmes</translation>
+      <translation type="unfinished">Tag selected notes</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4441"/>
+      <location filename="../mainwindow.cpp" line="4444"/>
       <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation type="unfinished">
         <numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4710"/>
+      <location filename="../mainwindow.cpp" line="4713"/>
       <source>Restart application</source>
-      <translation>Restartējiet lietojumprogrammu</translation>
+      <translation type="unfinished">Restart application</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4716"/>
+      <location filename="../mainwindow.cpp" line="4719"/>
       <source>You may need to restart the application manually to let the changes take effect.</source>
-      <translation>Jums, iespējams, būs jārestartē programma manuāli, lai izmaiņas stātos spēkā.</translation>
+      <translation type="unfinished">You may need to restart the application manually to let the changes take effect.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4721"/>
+      <location filename="../mainwindow.cpp" line="4724"/>
       <source>You may need to restart the application to let the changes take effect.</source>
-      <translation>Jums, iespējams, būs jārestartē programma, lai izmaiņas stātos spēkā.</translation>
+      <translation type="unfinished">You may need to restart the application to let the changes take effect.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4723"/>
+      <location filename="../mainwindow.cpp" line="4726"/>
       <source>Restart</source>
-      <translation>Restartēt</translation>
+      <translation type="unfinished">Restart</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4937"/>
+      <location filename="../mainwindow.cpp" line="4940"/>
       <source>PDF files</source>
-      <translation>PDF faili</translation>
+      <translation type="unfinished">PDF files</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5024"/>
+      <location filename="../mainwindow.cpp" line="5027"/>
       <source>Todo lists disabled!</source>
-      <translation>Todo saraksti ir atspējoti!</translation>
+      <translation type="unfinished">Todo lists disabled!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5025"/>
+      <location filename="../mainwindow.cpp" line="5028"/>
       <source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
-      <translation>Jūs esat atspējojis uzdevumu sarakstu. &lt;br /&gt; Lūdzu, iestatījumos pārbaudiet savu &lt;strong&gt; Todo &lt;/strong&gt; konfigurāciju!</translation>
+      <translation type="unfinished">You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="5261"/>
+      <location filename="../mainwindow.cpp" line="5264"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
       <translation type="unfinished">
         <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5729"/>
+      <location filename="../mainwindow.cpp" line="5732"/>
       <source>Note was not found</source>
-      <translation>Piezīme netika atrasta</translation>
+      <translation type="unfinished">Note was not found</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5730"/>
+      <location filename="../mainwindow.cpp" line="5733"/>
       <source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation>Piezīme netika atrasta. Vai izveidot jaunu piezīmi &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+      <translation type="unfinished">Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5964"/>
+      <location filename="../mainwindow.cpp" line="5967"/>
       <source>Note versions are currently loaded from your ownCloud server</source>
-      <translation>Piezīmju versijas pašlaik tiek ielādētas no jūsu ownCloud servera</translation>
+      <translation type="unfinished">Note versions are currently loaded from your ownCloud server</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5979"/>
+      <location filename="../mainwindow.cpp" line="5982"/>
       <source>Trashed notes are currently loaded from your ownCloud server</source>
-      <translation>Pašlaik miskastes tiek ielādētas no jūsu ownCloud servera</translation>
+      <translation type="unfinished">Trashed notes are currently loaded from your ownCloud server</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6045"/>
+      <location filename="../mainwindow.cpp" line="6048"/>
       <source>Copy code block</source>
-      <translation>Kopēt koda bloku</translation>
+      <translation type="unfinished">Copy code block</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6064"/>
+      <location filename="../mainwindow.cpp" line="6067"/>
       <source>Print selected text</source>
-      <translation>Izdrukājiet atlasīto tekstu</translation>
+      <translation type="unfinished">Print selected text</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6070"/>
+      <location filename="../mainwindow.cpp" line="6073"/>
       <source>Print selected text (preview)</source>
-      <translation>Izdrukāt atlasīto tekstu (priekšskatījums)</translation>
+      <translation type="unfinished">Print selected text (preview)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6086"/>
+      <location filename="../mainwindow.cpp" line="6089"/>
       <source>Export selected text as PDF</source>
-      <translation>Eksportēt atlasīto tekstu kā PDF</translation>
+      <translation type="unfinished">Export selected text as PDF</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6092"/>
+      <location filename="../mainwindow.cpp" line="6095"/>
       <source>Export selected text as PDF (preview)</source>
-      <translation>Eksportēt atlasīto tekstu kā PDF (priekšskatījums)</translation>
+      <translation type="unfinished">Export selected text as PDF (preview)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6489"/>
+      <location filename="../mainwindow.cpp" line="6492"/>
       <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
-      <translation>Jūsu piezīme tiks atšifrēta un atkal tiks saglabāta kā vienkāršs teksts. Ņemiet vērā, ka nešifrētā piezīme, iespējams, tiks sinhronizēta ar jūsu serveri, un var tikt atklāts sensitīvs teksts! &lt;br /&gt; Vai vēlaties atšifrēt piezīmi?</translation>
+      <translation type="unfinished">Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6582"/>
+      <location filename="../mainwindow.cpp" line="6585"/>
       <source>Markdown files</source>
-      <translation>Atzīmju faili</translation>
+      <translation type="unfinished">Markdown files</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6637"/>
+      <location filename="../mainwindow.cpp" line="6640"/>
       <source>Bookmarked note position at slot %1</source>
-      <translation>Grāmatzīmju banknotes pozīcija %1 slotā</translation>
+      <translation type="unfinished">Bookmarked note position at slot %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6653"/>
+      <location filename="../mainwindow.cpp" line="6656"/>
       <source>Jumped to bookmark position at slot %1</source>
-      <translation>Pārlēca uz grāmatzīmes pozīciju %1 slotā</translation>
+      <translation type="unfinished">Jumped to bookmark position at slot %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6874"/>
-      <location filename="../mainwindow.cpp" line="6944"/>
+      <location filename="../mainwindow.cpp" line="6877"/>
+      <location filename="../mainwindow.cpp" line="6947"/>
       <source>Inserting image</source>
-      <translation>Attēla ievietošana</translation>
+      <translation type="unfinished">Inserting image</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6879"/>
-      <location filename="../mainwindow.cpp" line="6948"/>
+      <location filename="../mainwindow.cpp" line="6882"/>
+      <location filename="../mainwindow.cpp" line="6951"/>
       <source>Done inserting image</source>
-      <translation>Pabeigts attēla ievietošana</translation>
+      <translation type="unfinished">Done inserting image</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6881"/>
+      <location filename="../mainwindow.cpp" line="6884"/>
       <source>Inserting attachment</source>
-      <translation>Pielikuma ievietošana</translation>
+      <translation type="unfinished">Inserting attachment</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6886"/>
+      <location filename="../mainwindow.cpp" line="6889"/>
       <source>Done inserting attachment</source>
-      <translation>Gatavs pielikuma ievietošana</translation>
+      <translation type="unfinished">Done inserting attachment</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="6898"/>
+      <location filename="../mainwindow.cpp" line="6901"/>
       <source>Copied %n note(s) to %1</source>
       <translation type="unfinished">
         <numerusform>Copied %n note(s) to %1</numerusform>
-        <numerusform>Copied %n note(s) to %1</numerusform>
-        <numerusform>Copied %n note(s) to %1</numerusform>
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="6907"/>
+      <location filename="../mainwindow.cpp" line="6910"/>
       <source>Failed to copy %n note(s) (most likely already existing)</source>
       <translation type="unfinished">
         <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
-        <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
-        <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="6917"/>
+      <location filename="../mainwindow.cpp" line="6920"/>
       <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
       <translation type="unfinished">
         <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
-        <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
-        <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6931"/>
+      <location filename="../mainwindow.cpp" line="6934"/>
       <source>Saving temporary image</source>
-      <translation>Pagaidu attēla saglabāšana</translation>
+      <translation type="unfinished">Saving temporary image</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6951"/>
+      <location filename="../mainwindow.cpp" line="6954"/>
       <source>Temporary file can't be opened</source>
-      <translation>Pagaidu failu nevar atvērt</translation>
+      <translation type="unfinished">Temporary file can't be opened</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6992"/>
+      <location filename="../mainwindow.cpp" line="6995"/>
       <source>Downloading %1</source>
-      <translation>Notiek %1 lejupielāde</translation>
+      <translation type="unfinished">Downloading %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7173"/>
+      <location filename="../mainwindow.cpp" line="7176"/>
       <source>Reset font size to %1 pt</source>
       <comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
-      <translation>Atiestatīt fonta lielumu uz %1 pt</translation>
+      <translation type="unfinished">Reset font size to %1 pt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8000"/>
+      <location filename="../mainwindow.cpp" line="8003"/>
       <source>Remove tag '%1' from the current note</source>
-      <translation>Noņemiet atzīmi “%1” no pašreizējās piezīmes</translation>
+      <translation>Xóa thẻ '%1' khỏi ghi chú hiện tại</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8002"/>
+      <location filename="../mainwindow.cpp" line="8005"/>
       <source>Remove tag '%1' from the selected notes</source>
-      <translation>Noņemiet atzīmi “%1” no atlasītajām piezīmēm</translation>
+      <translation>Xóa thẻ '%1' khỏi ghi chú đã chọn</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8205"/>
+      <location filename="../mainwindow.cpp" line="8208"/>
       <source>Rename tag</source>
-      <translation>Pārdēvēt tagu</translation>
+      <translation>Đổi tên thẻ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8206"/>
+      <location filename="../mainwindow.cpp" line="8209"/>
       <source>Assign color</source>
-      <translation>Piešķirt krāsu</translation>
+      <translation>Gán màu</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8207"/>
+      <location filename="../mainwindow.cpp" line="8210"/>
       <source>Disable color</source>
-      <translation>Atspējot krāsu</translation>
+      <translation>Tắt màu</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8211"/>
+      <location filename="../mainwindow.cpp" line="8214"/>
       <source>&amp;Move tags to…</source>
-      <translation type="unfinished">&amp;Move tags to…</translation>
+      <translation>&amp;Di chuyển các thẻ đến…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8426"/>
+      <location filename="../mainwindow.cpp" line="8429"/>
       <source>Move to the root</source>
       <comment>to move a tag to the current tag in the tag context menu</comment>
-      <translation>Pāriet uz sakni</translation>
+      <translation>Di chuyển đến gốc</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8934"/>
+      <location filename="../mainwindow.cpp" line="8937"/>
       <source>An url was opened at the current cursor position</source>
-      <translation>Pašreizējā kursora pozīcijā tika atvērts vietrādis URL</translation>
+      <translation>Một url đã được mở tại vị trí con trỏ hiện tại</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9035"/>
+      <location filename="../mainwindow.cpp" line="9038"/>
       <source>No equation was found in front of the cursor</source>
-      <translation>Kursora priekšā netika atrasts vienādojums</translation>
+      <translation>Không tìm thấy phương trình nào trước con trỏ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9052"/>
+      <location filename="../mainwindow.cpp" line="9055"/>
       <source>Result for equation: %1 = %2</source>
-      <translation>Rezultāts vienādojumam: %1 = %2</translation>
+      <translation>Kết quả cho phương trình: %1 = %2</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9153"/>
+      <location filename="../mainwindow.cpp" line="9156"/>
       <source>The scripting engine was reloaded</source>
-      <translation>Skriptu dzinējs tika atkārtoti ielādēts</translation>
+      <translation>Các công cụ kịch bản đã được tải lại</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9189"/>
+      <location filename="../mainwindow.cpp" line="9192"/>
       <source>HTML files</source>
-      <translation>HTML faili</translation>
+      <translation>Tệp HTML</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9393"/>
-      <location filename="../mainwindow.cpp" line="9567"/>
+      <location filename="../mainwindow.cpp" line="9396"/>
+      <location filename="../mainwindow.cpp" line="9570"/>
       <source>Rename note</source>
-      <translation>Pārdēvēt piezīmi</translation>
+      <translation>Đổi tên ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9394"/>
+      <location filename="../mainwindow.cpp" line="9397"/>
       <source>Allows you to rename the filename of the note</source>
-      <translation>Ļauj pārdēvēt piezīmes faila nosaukumu</translation>
+      <translation>Cho phép bạn đổi tên tập tin của ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9406"/>
+      <location filename="../mainwindow.cpp" line="9409"/>
       <source>&amp;Move notes to…</source>
-      <translation type="unfinished">&amp;Move notes to…</translation>
+      <translation>&amp;Di chuyển ghi chú đến lọ…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9407"/>
+      <location filename="../mainwindow.cpp" line="9410"/>
       <source>&amp;Copy notes to…</source>
-      <translation type="unfinished">&amp;Copy notes to…</translation>
+      <translation>&amp;Sao chép ghi chú vào lọ…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9442"/>
+      <location filename="../mainwindow.cpp" line="9445"/>
       <source>Move notes to subfolder…</source>
-      <translation>Pārvietot piezīmes apakšmapē …</translation>
+      <translation>Di chuyển ghi chú đến thư mục con…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9446"/>
+      <location filename="../mainwindow.cpp" line="9449"/>
       <source>Copy notes to subfolder…</source>
-      <translation>Kopēt piezīmes apakšmapē…</translation>
+      <translation>Sao chép ghi chú vào thư mục con…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9454"/>
+      <location filename="../mainwindow.cpp" line="9457"/>
       <source>&amp;Tag selected notes with…</source>
-      <translation>&amp;Atzīmējiet atlasītās piezīmes ar…</translation>
+      <translation>&amp;Gắn thẻ ghi chú đã chọn với…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9476"/>
+      <location filename="../mainwindow.cpp" line="9479"/>
       <source>&amp;Remove tag from selected notes…</source>
-      <translation>&amp;Noņemt atzīmi no atlasītajām piezīmēm…</translation>
+      <translation>&amp;Xóa thẻ khỏi ghi chú đã chọn…</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9567"/>
+      <location filename="../mainwindow.cpp" line="9570"/>
       <source>Name:</source>
-      <translation>Vārds:</translation>
+      <translation>Tên:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9579"/>
+      <location filename="../mainwindow.cpp" line="9582"/>
       <source>Note renaming not enabled!</source>
-      <translation>Piezīme pārdēvēšana nav iespējots!</translation>
+      <translation>Lưu ý đổi tên không được kích hoạt!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9755"/>
+      <location filename="../mainwindow.cpp" line="9758"/>
       <source>Rename subfolder</source>
-      <translation>Pārdēvēt apakšmapi</translation>
+      <translation>Đổi tên thư mục con</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10329"/>
+      <location filename="../mainwindow.cpp" line="10332"/>
       <source>Create new workspace</source>
-      <translation>Izveidojiet jaunu darbvietu</translation>
+      <translation>Tạo không gian làm việc mới</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10329"/>
-      <location filename="../mainwindow.cpp" line="10585"/>
+      <location filename="../mainwindow.cpp" line="10332"/>
+      <location filename="../mainwindow.cpp" line="10588"/>
       <source>Workspace name:</source>
-      <translation>Darbvietas nosaukums:</translation>
+      <translation>Tên không gian làm việc:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10449"/>
+      <location filename="../mainwindow.cpp" line="10452"/>
       <source>full</source>
       <comment>full workspace</comment>
-      <translation>pilns</translation>
+      <translation>đầy</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10456"/>
+      <location filename="../mainwindow.cpp" line="10459"/>
       <source>minimal</source>
       <comment>minimal workspace</comment>
-      <translation>minimāls</translation>
+      <translation>tối thiểu</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10548"/>
+      <location filename="../mainwindow.cpp" line="10551"/>
       <source>Remove the current workspace?</source>
-      <translation>Vai noņemt pašreizējo darbvietu?</translation>
+      <translation>Loại bỏ không gian làm việc hiện tại?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10585"/>
+      <location filename="../mainwindow.cpp" line="10588"/>
       <source>Rename workspace</source>
-      <translation>Pārdēvēt darbvietu</translation>
+      <translation>Đổi tên không gian làm việc</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="10720"/>
+      <location filename="../mainwindow.cpp" line="10723"/>
       <source>%n chars</source>
       <comment>characters</comment>
       <translation type="unfinished">
         <numerusform>%n chars</numerusform>
-        <numerusform>%n chars</numerusform>
-        <numerusform>%n chars</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="10987"/>
+      <location filename="../mainwindow.cpp" line="10990"/>
       <source>Disallow all note editing</source>
-      <translation>Neatļaut visu piezīmju rediģēšanu</translation>
+      <translation>Không cho phép chỉnh sửa ghi chú</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11133"/>
+      <location filename="../mainwindow.cpp" line="11136"/>
       <source>Select text files to import</source>
-      <translation>Atlasiet importējamos teksta failus</translation>
+      <translation>Chọn tệp văn bản để nhập</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11162"/>
+      <location filename="../mainwindow.cpp" line="11165"/>
       <source>Importing: %1</source>
-      <translation>Importēšana: %1</translation>
+      <translation>Nhập khẩu: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11225"/>
+      <location filename="../mainwindow.cpp" line="11228"/>
       <source>Note headline '%1' was copied to the clipboard</source>
-      <translation>Piezīmes virsraksts '%1' tika kopēts starpliktuvē</translation>
+      <translation>Lưu ý tiêu đề '%1' đã được sao chép vào bảng tạm</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="11312"/>
+      <location filename="../mainwindow.cpp" line="11315"/>
       <source>Leave full-screen mode</source>
-      <translation>Atstājiet pilnekrāna režīmu</translation>
+      <translation>Để chế độ toàn màn hình</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="7974"/>
+      <location filename="../mainwindow.cpp" line="7977"/>
       <source>%n notes selected</source>
       <translation type="unfinished">
-        <numerusform>%n notes selected</numerusform>
-        <numerusform>%n notes selected</numerusform>
         <numerusform>%n notes selected</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2419"/>
-      <location filename="../mainwindow.cpp" line="10988"/>
+      <location filename="../mainwindow.cpp" line="10991"/>
       <source>Allow all note editing</source>
-      <translation>Atļaut visu piezīmju rediģēšanu</translation>
+      <translation>Cho phép tất cả chỉnh sửa ghi chú</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1197"/>
@@ -2706,608 +2714,588 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
       <translation type="unfinished">&amp;Tag</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4513"/>
+      <location filename="../mainwindow.cpp" line="4516"/>
       <source>Remove tag from selected notes</source>
-      <translation>Noņemt atzīmi no atlasītajām piezīmēm</translation>
+      <translation>Xóa thẻ khỏi ghi chú đã chọn</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4514"/>
+      <location filename="../mainwindow.cpp" line="4517"/>
       <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
       <translation type="unfinished">
         <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
-        <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
-        <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4573"/>
+      <location filename="../mainwindow.cpp" line="4576"/>
       <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
       <translation type="unfinished">
-        <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
-        <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
         <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4617"/>
+      <location filename="../mainwindow.cpp" line="4620"/>
       <source>Current notes folder: </source>
-      <translation>Pašreizējo piezīmju mape:</translation>
+      <translation>Thư mục ghi chú hiện tại:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4619"/>
+      <location filename="../mainwindow.cpp" line="4622"/>
       <source>Set the notes folder. Current notes folder: </source>
-      <translation>Iestatiet piezīmju mapi. Pašreizējo piezīmju mape:</translation>
+      <translation>Đặt thư mục ghi chú. Thư mục ghi chú hiện tại:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4815"/>
+      <location filename="../mainwindow.cpp" line="4818"/>
       <source>Print note</source>
-      <translation>Izdrukājiet piezīmi</translation>
+      <translation>Ghi chú in</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4881"/>
+      <location filename="../mainwindow.cpp" line="4884"/>
       <source>Letter</source>
-      <translation>Vēstule</translation>
+      <translation>Lá thư</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4910"/>
+      <location filename="../mainwindow.cpp" line="4913"/>
       <source>Portrait</source>
-      <translation>Portrets</translation>
+      <translation>Chân dung</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4910"/>
+      <location filename="../mainwindow.cpp" line="4913"/>
       <source>Landscape</source>
-      <translation>Ainava</translation>
+      <translation>Phong cảnh</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4915"/>
+      <location filename="../mainwindow.cpp" line="4918"/>
       <source>Orientation</source>
-      <translation>Orientācija</translation>
+      <translation>Sự định hướng</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4915"/>
+      <location filename="../mainwindow.cpp" line="4918"/>
       <source>Orientation:</source>
-      <translation>Orientācija:</translation>
+      <translation>Sự định hướng:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4938"/>
+      <location filename="../mainwindow.cpp" line="4941"/>
       <source>Export current note as PDF</source>
-      <translation>Eksportēt pašreizējo piezīmi kā PDF</translation>
+      <translation>Xuất ghi chú hiện tại dưới dạng PDF</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5049"/>
+      <location filename="../mainwindow.cpp" line="5052"/>
       <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
-      <translation>Jūs neesat atlasījis nevienu uzdevumu sarakstu. &lt;br/&gt; Lūdzu, pārbaudiet sava &lt;strong&gt; Todo &lt;/strong&gt; konfigurāciju iestatījumos!</translation>
+      <translation>Bạn chưa chọn bất kỳ danh sách việc cần làm nào. &lt;br /&gt; Vui lòng kiểm tra cấu hình &lt;strong&gt; Todo &lt;/strong&gt; của bạn trong cài đặt!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5864"/>
+      <location filename="../mainwindow.cpp" line="5867"/>
       <source>Open QOwnNotes</source>
-      <translation>Atveriet QOwnNotes</translation>
+      <translation>Mở QOwnNote</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5569"/>
-      <location filename="../mainwindow.cpp" line="5873"/>
-      <location filename="../mainwindow.cpp" line="9388"/>
-      <location filename="../mainwindow.cpp" line="9753"/>
+      <location filename="../mainwindow.cpp" line="5572"/>
+      <location filename="../mainwindow.cpp" line="5876"/>
+      <location filename="../mainwindow.cpp" line="9391"/>
+      <location filename="../mainwindow.cpp" line="9756"/>
       <source>New note</source>
-      <translation>Jauna piezīme</translation>
+      <translation>Ghi chú mới</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5889"/>
+      <location filename="../mainwindow.cpp" line="5892"/>
       <source>Recent notes</source>
-      <translation>Jaunākās piezīmes</translation>
+      <translation>Ghi chú gần đây</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5908"/>
+      <location filename="../mainwindow.cpp" line="5911"/>
       <source>Show todo lists</source>
-      <translation>Rādīt uzdevumu sarakstu</translation>
+      <translation>Hiển thị danh sách việc cần làm</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5919"/>
+      <location filename="../mainwindow.cpp" line="5922"/>
       <source>Recent tasks</source>
-      <translation>Nesenie uzdevumi</translation>
+      <translation>Nhiệm vụ gần đây</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5940"/>
+      <location filename="../mainwindow.cpp" line="5943"/>
       <source>Quit</source>
-      <translation>Aiziet</translation>
+      <translation>Thoát</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7327"/>
+      <location filename="../mainwindow.cpp" line="7330"/>
       <source>show notes from all note subfolders (%1)</source>
-      <translation>rādīt piezīmes no visām piezīmju apakšmapes (%1)</translation>
+      <translation>hiển thị ghi chú từ tất cả các thư mục con ghi chú (%1)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7346"/>
+      <location filename="../mainwindow.cpp" line="7349"/>
       <source>show notes in note root folder (%1)</source>
-      <translation>rādīt piezīmes piezīmes saknes mapē (%1)</translation>
+      <translation>hiển thị ghi chú trong thư mục gốc ghi chú (%1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="316"/>
       <location filename="../mainwindow.cpp" line="700"/>
       <location filename="../mainwindow.cpp" line="1909"/>
-      <location filename="../mainwindow.cpp" line="7354"/>
+      <location filename="../mainwindow.cpp" line="7357"/>
       <source>Note folder</source>
-      <translation>Piezīmju mape</translation>
-    </message>
-    <message>
-      <location filename="../mainwindow.cpp" line="8559"/>
-      <location filename="../mainwindow.cpp" line="8620"/>
-      <source>Copy to note folder</source>
-      <translation>Kopēt piezīmju mapē</translation>
-    </message>
-    <message>
-      <location filename="../mainwindow.cpp" line="8560"/>
-      <location filename="../mainwindow.cpp" line="8621"/>
-      <source>Move to note folder</source>
-      <translation>Pārvietot uz piezīmju mapi</translation>
-    </message>
-    <message>
-      <location filename="../mainwindow.cpp" line="8561"/>
-      <location filename="../mainwindow.cpp" line="8622"/>
-      <source>Copy to this subfolder</source>
-      <translation>Kopēt šajā apakšmapē</translation>
+      <translation>Thư mục ghi chú</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8562"/>
       <location filename="../mainwindow.cpp" line="8623"/>
+      <source>Copy to note folder</source>
+      <translation>Sao chép vào thư mục ghi chú</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="8563"/>
+      <location filename="../mainwindow.cpp" line="8624"/>
+      <source>Move to note folder</source>
+      <translation>Di chuyển đến thư mục ghi chú</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="8564"/>
+      <location filename="../mainwindow.cpp" line="8625"/>
+      <source>Copy to this subfolder</source>
+      <translation>Sao chép vào thư mục con này</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="8565"/>
+      <location filename="../mainwindow.cpp" line="8626"/>
       <source>Move to this subfolder</source>
-      <translation>Pārvietot uz šo apakšmapi</translation>
+      <translation>Di chuyển đến thư mục con này</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="8666"/>
+      <location filename="../mainwindow.cpp" line="8669"/>
       <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation type="unfinished">
-        <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
         <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4724"/>
-      <location filename="../mainwindow.cpp" line="11147"/>
+      <location filename="../mainwindow.cpp" line="4727"/>
+      <location filename="../mainwindow.cpp" line="11150"/>
       <source>Cancel</source>
       <translation type="unfinished">Cancel</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="8747"/>
+      <location filename="../mainwindow.cpp" line="8750"/>
       <source>%n note(s) were moved to note subfolder "%2"</source>
       <translation type="unfinished">
         <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
-        <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
-        <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="8768"/>
+      <location filename="../mainwindow.cpp" line="8771"/>
       <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation type="unfinished">
         <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="8833"/>
+      <location filename="../mainwindow.cpp" line="8836"/>
       <source>%n note(s) were copied to note subfolder "%2"</source>
       <translation type="unfinished">
-        <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
-        <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
         <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9495"/>
+      <location filename="../mainwindow.cpp" line="9498"/>
       <source>Open note in external editor</source>
-      <translation>Atvērt piezīmi ārējā redaktorā</translation>
+      <translation>Mở ghi chú trong trình soạn thảo bên ngoài</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9499"/>
+      <location filename="../mainwindow.cpp" line="9502"/>
       <source>Show note in file manager</source>
-      <translation>Rādīt piezīmi failu pārvaldniekā</translation>
+      <translation>Hiển thị ghi chú trong trình quản lý tập tin</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9580"/>
+      <location filename="../mainwindow.cpp" line="9583"/>
       <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
-      <translation>Ja vēlaties pārdēvēt piezīmi, jums jāatspējo opcija, kas ļauj piezīmju faila nosaukumam atšķirties no virsraksta.</translation>
+      <translation>Nếu bạn muốn đổi tên ghi chú của mình, bạn phải bật tùy chọn cho phép tên tệp ghi chú khác với tiêu đề.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9754"/>
+      <location filename="../mainwindow.cpp" line="9757"/>
       <source>New subfolder</source>
-      <translation>Jauna apakšmape</translation>
+      <translation>Thư mục con mới</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9758"/>
+      <location filename="../mainwindow.cpp" line="9761"/>
       <source>Show folder in file manager</source>
-      <translation>Rādīt mapi failu pārvaldniekā</translation>
+      <translation>Hiển thị thư mục trong trình quản lý tập tin</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9803"/>
+      <location filename="../mainwindow.cpp" line="9806"/>
       <source>Create a new folder</source>
-      <translation>Izveidojiet jaunu mapi</translation>
+      <translation>Tạo một thư mục mới</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9803"/>
+      <location filename="../mainwindow.cpp" line="9806"/>
       <source>Folder name:</source>
-      <translation>Mapes nosaukums:</translation>
-    </message>
-    <message>
-      <location filename="../mainwindow.cpp" line="7285"/>
-      <source>show all untagged notes (%1)</source>
-      <translation>rādīt visas neatzīmētās piezīmes (%1)</translation>
+      <translation>Tên thư mục:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7288"/>
+      <source>show all untagged notes (%1)</source>
+      <translation>hiển thị tất cả các ghi chú chưa được đánh dấu (%1)</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="7291"/>
       <source>Untagged notes</source>
-      <translation>Nemarķētas piezīmes</translation>
+      <translation>Ghi chú chưa được đánh dấu</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9190"/>
+      <location filename="../mainwindow.cpp" line="9193"/>
       <source>Export current note as HTML file</source>
-      <translation>Eksportēt pašreizējo piezīmi kā HTML failu</translation>
+      <translation>Xuất ghi chú hiện tại dưới dạng tệp HTML</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4890"/>
+      <location filename="../mainwindow.cpp" line="4893"/>
       <source>Page size</source>
-      <translation>Lapas lielums</translation>
+      <translation>Kích thước trang</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1047"/>
       <source>quit toolbar</source>
-      <translation>iziet no rīkjoslas</translation>
+      <translation>thoát khỏi thanh công cụ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4890"/>
+      <location filename="../mainwindow.cpp" line="4893"/>
       <source>Page size:</source>
-      <translation>Lapas lielums:</translation>
+      <translation>Kích thước trang:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5006"/>
+      <location filename="../mainwindow.cpp" line="5009"/>
       <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
-      <translation>QOwnNotes izsekos anonīmus lietošanas datus, kas palīdz izlemt, kuras QOwnNotes daļas uzlabot nākamo, kā arī atrast un novērst kļūdas. Iestatījumos varat to atspējot.</translation>
+      <translation>QOwnNotes sẽ theo dõi dữ liệu sử dụng ẩn danh, giúp quyết định phần nào của QOwnNotes để cải thiện tiếp theo cũng như tìm và sửa lỗi. Bạn có thể vô hiệu hóa hành vi đó trong cài đặt.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5010"/>
+      <location filename="../mainwindow.cpp" line="5013"/>
       <source>&amp;Ok</source>
       <translation type="unfinished">&amp;Ok</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9398"/>
+      <location filename="../mainwindow.cpp" line="9401"/>
       <source>&amp;Remove notes</source>
       <translation type="unfinished">&amp;Remove notes</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6028"/>
+      <location filename="../mainwindow.cpp" line="6031"/>
       <source>&amp;Link selected text</source>
       <translation type="unfinished">&amp;Link selected text</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="975"/>
       <source>Your tasks are being loaded from your server</source>
-      <translation>Jūsu uzdevumi tiek ielādēti no servera</translation>
+      <translation>Nhiệm vụ của bạn đang được tải từ máy chủ của bạn</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2545"/>
+      <location filename="../mainwindow.cpp" line="2546"/>
       <source>Current note was modified externally</source>
-      <translation>Pašreizējā piezīme tika modificēta ārēji</translation>
+      <translation>Ghi chú hiện tại đã được sửa đổi bên ngoài</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2627"/>
-      <location filename="../mainwindow.cpp" line="5507"/>
+      <location filename="../mainwindow.cpp" line="2628"/>
+      <location filename="../mainwindow.cpp" line="5510"/>
       <source>Stored current note to disk</source>
-      <translation>Saglabātā pašreizējā piezīme diskā</translation>
+      <translation>Lưu ý hiện tại vào đĩa</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2646"/>
+      <location filename="../mainwindow.cpp" line="2647"/>
       <source>Note was modified externally: %1</source>
-      <translation>Piezīme tika modificēta ārēji: %1</translation>
+      <translation>Lưu ý đã được sửa đổi bên ngoài: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2667"/>
+      <location filename="../mainwindow.cpp" line="2668"/>
       <source>Notes directory was modified externally</source>
-      <translation>Piezīmju katalogs tika modificēts ārēji</translation>
+      <translation>Thư mục ghi chú đã được sửa đổi bên ngoài</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="2733"/>
+      <location filename="../mainwindow.cpp" line="2734"/>
       <source>Stored %n note(s) to disk</source>
       <translation type="unfinished">
-        <numerusform>Stored %n note(s) to disk</numerusform>
-        <numerusform>Stored %n note(s) to disk</numerusform>
         <numerusform>Stored %n note(s) to disk</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7257"/>
+      <location filename="../mainwindow.cpp" line="7260"/>
       <source>show all notes (%1)</source>
       <translation type="unfinished">show all notes (%1)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7260"/>
-      <location filename="../mainwindow.cpp" line="7330"/>
+      <location filename="../mainwindow.cpp" line="7263"/>
+      <location filename="../mainwindow.cpp" line="7333"/>
       <source>All notes</source>
       <translation type="unfinished">All notes</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8197"/>
+      <location filename="../mainwindow.cpp" line="8200"/>
       <source>&amp;Add tag</source>
       <translation type="unfinished">&amp;Add tag</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8246"/>
+      <location filename="../mainwindow.cpp" line="8249"/>
       <source>Tag could not be created!</source>
-      <translation>Tagu nevarēja izveidot!</translation>
+      <translation type="unfinished">Tag could not be created!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8427"/>
+      <location filename="../mainwindow.cpp" line="8430"/>
       <source>Move to this tag</source>
-      <translation>Pārvietot uz šo tagu</translation>
+      <translation type="unfinished">Move to this tag</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8464"/>
+      <location filename="../mainwindow.cpp" line="8467"/>
       <source>Tag this</source>
-      <translation>Atzīmēt šo</translation>
+      <translation type="unfinished">Tag this</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8488"/>
+      <location filename="../mainwindow.cpp" line="8491"/>
       <source>Cannot move tag '%1' to this tag</source>
-      <translation>Tagu '%1' nevar pārvietot uz šo tagu</translation>
+      <translation>Không thể di chuyển thẻ '%1' sang thẻ này</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8504"/>
+      <location filename="../mainwindow.cpp" line="8507"/>
       <source>Moved tag '%1' to new tag</source>
-      <translation>Tags '%1' tika pārvietots uz jauno tagu</translation>
+      <translation>Đã chuyển thẻ '%1' sang thẻ mới</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7526"/>
+      <location filename="../mainwindow.cpp" line="7529"/>
       <source>show all notes tagged with '%1' (%2)</source>
-      <translation>parādīt visas piezīmes, kas marķētas ar '%1' (%2)</translation>
+      <translation>hiển thị tất cả các ghi chú được gắn thẻ '%1' (%2)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8208"/>
+      <location filename="../mainwindow.cpp" line="8211"/>
       <source>&amp;Remove tags</source>
-      <translation type="unfinished">&amp;Remove tags</translation>
+      <translation>&amp;Xóa thẻ</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5048"/>
+      <location filename="../mainwindow.cpp" line="5051"/>
       <source>No selected todo lists!</source>
-      <translation>Nav atlasīts uzdevumu saraksts!</translation>
+      <translation>Không có danh sách việc cần chọn!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="671"/>
       <source>Subfolders</source>
-      <translation>Apakšmapes</translation>
+      <translation>Thư mục con</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="682"/>
       <source>Tags</source>
-      <translation>Tagi</translation>
+      <translation>Thẻ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="691"/>
       <source>Note search</source>
-      <translation>Piezīmju meklēšana</translation>
+      <translation>Lưu ý tìm kiếm</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="709"/>
       <source>Note list</source>
-      <translation>Piezīmju saraksts</translation>
+      <translation>Danh sách ghi chú</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="733"/>
       <source>Note edit</source>
-      <translation>Piezīmju rediģēšana</translation>
+      <translation>Lưu ý chỉnh sửa</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="744"/>
       <source>Note tags</source>
-      <translation>Piezīmju tagi</translation>
+      <translation>Thẻ ghi chú</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="755"/>
       <source>Note preview</source>
-      <translation>Piezīmes priekšskatījums</translation>
+      <translation>Xem trước ghi chú</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="762"/>
       <source>Log</source>
-      <translation>Žurnāls</translation>
+      <translation>Đăng nhập</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="771"/>
       <source>Scripting</source>
-      <translation>Skriptu sastādīšana</translation>
+      <translation>Viết kịch bản</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1014"/>
       <source>formatting toolbar</source>
-      <translation>formatēšanas rīkjosla</translation>
+      <translation>thanh công cụ định dạng</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1023"/>
       <source>inserting toolbar</source>
-      <translation>ievietojot rīkjoslu</translation>
+      <translation>chèn thanh công cụ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1030"/>
       <source>encryption toolbar</source>
-      <translation>šifrēšanas rīkjosla</translation>
+      <translation>thanh công cụ mã hóa</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1037"/>
       <source>window toolbar</source>
-      <translation>loga rīkjosla</translation>
+      <translation>thanh công cụ cửa sổ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1042"/>
       <source>custom action toolbar</source>
-      <translation>pielāgotu darbību rīkjosla</translation>
+      <translation>thanh công cụ hành động tùy chỉnh</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1062"/>
       <source>Workspace selector</source>
-      <translation>Darbvietas atlasītājs</translation>
+      <translation>Bộ chọn không gian làm việc</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1193"/>
       <source>Show %1 panel</source>
-      <translation>Rādīt paneli %1</translation>
+      <translation>Hiển thị bảng %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1232"/>
       <source>Show %1</source>
-      <translation>Rādīt %1</translation>
+      <translation>Hiển thị %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1544"/>
       <source>Leave distraction free mode</source>
-      <translation>Atstājiet uzmanības novēršanas režīmu</translation>
+      <translation>Để chế độ miễn phí phân tâm</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2064"/>
       <source>show notes in folder '%1' (%2)</source>
-      <translation>rādīt piezīmes mapē '%1' (%2)</translation>
+      <translation>hiển thị ghi chú trong thư mục '%1' (%2)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2104"/>
       <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
-      <translation>&lt;strong&gt;%1&lt;/strong&gt; &lt;br/&gt; pēdējoreiz modificēts: %2</translation>
+      <translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2109"/>
       <source>&lt;br /&gt;path: %1</source>
-      <translation>&lt;br/&gt;ceļš: %1</translation>
+      <translation type="unfinished">&lt;br /&gt;path: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2283"/>
+      <location filename="../mainwindow.cpp" line="2284"/>
       <source>Toolbar could not be loaded without name</source>
-      <translation>Rīkjoslu nevarēja ielādēt bez nosaukuma</translation>
+      <translation>Không thể tải thanh công cụ mà không có tên</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2571"/>
+      <location filename="../mainwindow.cpp" line="2572"/>
       <source>Overwriting external changes of: %1</source>
-      <translation>Ārējo izmaiņu pārrakstīšana: %1</translation>
+      <translation>Ghi đè các thay đổi bên ngoài của: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2593"/>
+      <location filename="../mainwindow.cpp" line="2594"/>
       <source>Loading external changes from: %1</source>
-      <translation>Notiek ārējo izmaiņu ielāde no: %1</translation>
+      <translation>Đang tải các thay đổi bên ngoài từ: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2628"/>
-      <location filename="../mainwindow.cpp" line="5508"/>
+      <location filename="../mainwindow.cpp" line="2629"/>
+      <location filename="../mainwindow.cpp" line="5511"/>
       <source>Current note could not be stored to disk</source>
-      <translation>Pašreizējo piezīmi nevarēja saglabāt diskā</translation>
-    </message>
-    <message>
-      <location filename="../mainwindow.cpp" line="2791"/>
-      <source>Read-only</source>
-      <translation>Tikai lasīt</translation>
+      <translation>Ghi chú hiện tại không thể được lưu trữ vào đĩa</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2792"/>
+      <source>Read-only</source>
+      <translation>Chỉ đọc</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="2793"/>
       <source>Note editing is disabled, click to enable</source>
-      <translation>Piezīmju rediģēšana ir atspējota, noklikšķiniet, lai iespējotu</translation>
+      <translation>Ghi chú chỉnh sửa bị vô hiệu hóa, nhấp để bật</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2811"/>
+      <location filename="../mainwindow.cpp" line="2812"/>
       <source>Line numbers</source>
-      <translation>Rindu numuri</translation>
+      <translation>Số dòng</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2821"/>
+      <location filename="../mainwindow.cpp" line="2822"/>
       <source>Click here to see what has changed and to be able to update to the latest version</source>
-      <translation>Noklikšķiniet šeit, lai redzētu, kas ir mainījies, un lai varētu atjaunināt uz jaunāko versiju</translation>
+      <translation>Nhấn vào đây để xem những gì đã thay đổi và để có thể cập nhật lên phiên bản mới nhất</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="3164"/>
+      <location filename="../mainwindow.cpp" line="3165"/>
       <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
       <translation type="unfinished">
         <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4497"/>
+      <location filename="../mainwindow.cpp" line="4500"/>
       <source>%n note(s) were tagged with "%2"</source>
       <translation type="unfinished">
         <numerusform>%n note(s) were tagged with "%2"</numerusform>
-        <numerusform>%n note(s) were tagged with "%2"</numerusform>
-        <numerusform>%n note(s) were tagged with "%2"</numerusform>
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="5260"/>
+      <location filename="../mainwindow.cpp" line="5263"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
       <translation type="unfinished">
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
         <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5569"/>
+      <location filename="../mainwindow.cpp" line="5572"/>
       <source>Note headline</source>
-      <translation>Piezīme virsraksts</translation>
+      <translation>Lưu ý tiêu đề</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6034"/>
+      <location filename="../mainwindow.cpp" line="6037"/>
       <source>Block &amp;quote selected text</source>
       <comment>Action to apply a block quote formatting to the selected text</comment>
-      <translation type="unfinished">Block &amp;quote selected text</translation>
+      <translation>Chặn &amp;trích dẫn văn bản đã chọn</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7004"/>
+      <location filename="../mainwindow.cpp" line="7007"/>
       <source>Downloading images finished</source>
-      <translation>Attēlu lejupielāde ir pabeigta</translation>
+      <translation>Đang tải ảnh xong</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7146"/>
+      <location filename="../mainwindow.cpp" line="7149"/>
       <source>Increased font size to %1 pt</source>
-      <translation>Palielināts fonta lielums līdz %1 pt</translation>
+      <translation>Tăng cỡ chữ lên %1 pt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7163"/>
+      <location filename="../mainwindow.cpp" line="7166"/>
       <source>Decreased font size to %1 pt</source>
-      <translation>Samazināts fonta lielums līdz %1 pt</translation>
+      <translation>Giảm cỡ chữ xuống %1 pt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5011"/>
-      <location filename="../mainwindow.cpp" line="5028"/>
-      <location filename="../mainwindow.cpp" line="5052"/>
-      <location filename="../mainwindow.cpp" line="9583"/>
+      <location filename="../mainwindow.cpp" line="5014"/>
+      <location filename="../mainwindow.cpp" line="5031"/>
+      <location filename="../mainwindow.cpp" line="5055"/>
+      <location filename="../mainwindow.cpp" line="9586"/>
       <source>Open &amp;settings</source>
       <translation type="unfinished">Open &amp;settings</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1541"/>
-      <location filename="../mainwindow.cpp" line="11300"/>
+      <location filename="../mainwindow.cpp" line="11303"/>
       <source>leave</source>
       <translation type="unfinished">leave</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6432"/>
+      <location filename="../mainwindow.cpp" line="6435"/>
       <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
       <translation type="unfinished">Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6488"/>
+      <location filename="../mainwindow.cpp" line="6491"/>
       <source>Decrypt note and store it as plain text</source>
-      <translation>Atšifrējiet piezīmi un saglabājiet to kā vienkāršu tekstu</translation>
+      <translation>Giải mã ghi chú và lưu trữ dưới dạng văn bản thuần túy</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6493"/>
+      <location filename="../mainwindow.cpp" line="6496"/>
       <source>&amp;Decrypt</source>
       <translation type="unfinished">&amp;Decrypt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6519"/>
+      <location filename="../mainwindow.cpp" line="6522"/>
       <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
       <translation type="unfinished">&lt;br /&gt;You will be able to edit your encrypted note.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6583"/>
+      <location filename="../mainwindow.cpp" line="6586"/>
       <source>Export current note as Markdown file</source>
-      <translation>Eksportēt pašreizējo piezīmi kā Markdown failu</translation>
+      <translation type="unfinished">Export current note as Markdown file</translation>
     </message>
   </context>
   <context>
@@ -3323,7 +3311,7 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
     <message>
       <location filename="../dialogs/notedialog.ui" line="14"/>
       <source>Note</source>
-      <translation>Piezīme</translation>
+      <translation type="unfinished">Note</translation>
     </message>
   </context>
   <context>
@@ -3331,42 +3319,42 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="17"/>
       <source>Note was modified externally!</source>
-      <translation>Piezīme tika modificēta ārēji!</translation>
+      <translation type="unfinished">Note was modified externally!</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="41"/>
       <source>The current note was modified outside of this application!</source>
-      <translation>Pašreizējā piezīme tika modificēta ārpus šīs lietojumprogrammas!</translation>
+      <translation type="unfinished">The current note was modified outside of this application!</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="48"/>
       <source>Differences:</source>
-      <translation>Atšķirības:</translation>
+      <translation type="unfinished">Differences:</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="76"/>
       <source>Always accept external changes in the future</source>
-      <translation>Nākotnē vienmēr pieņemiet ārējas izmaiņas</translation>
+      <translation type="unfinished">Always accept external changes in the future</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="83"/>
       <source>Accept external changes?</source>
-      <translation>Vai pieņemt ārējas izmaiņas?</translation>
+      <translation type="unfinished">Accept external changes?</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="69"/>
       <source>Ignore all external modifications in the future</source>
-      <translation>Ignorējiet visas ārējās modifikācijas nākotnē</translation>
+      <translation type="unfinished">Ignore all external modifications in the future</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.cpp" line="33"/>
       <source>Yes</source>
-      <translation>Jā</translation>
+      <translation type="unfinished">Yes</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.cpp" line="38"/>
       <source>No</source>
-      <translation>Nē</translation>
+      <translation type="unfinished">No</translation>
     </message>
   </context>
   <context>
@@ -3374,27 +3362,27 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="237"/>
       <source>Copy image file path</source>
-      <translation>Kopēt attēla faila ceļu</translation>
+      <translation type="unfinished">Copy image file path</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="241"/>
       <source>Copy link location</source>
-      <translation>Kopēt saites atrašanās vietu</translation>
+      <translation type="unfinished">Copy link location</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="244"/>
       <source>Export generated raw HTML</source>
-      <translation>Eksportēt ģenerētu neapstrādātu HTML</translation>
+      <translation type="unfinished">Export generated raw HTML</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="277"/>
       <source>HTML files</source>
-      <translation>HTML faili</translation>
+      <translation type="unfinished">HTML files</translation>
     </message>
     <message>
       <location filename="../widgets/notepreviewwidget.cpp" line="278"/>
       <source>Export preview as raw HTML file</source>
-      <translation>Eksportēt priekšskatījumu kā neapstrādātu HTML failu</translation>
+      <translation type="unfinished">Export preview as raw HTML file</translation>
     </message>
   </context>
   <context>
@@ -3402,75 +3390,73 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="14"/>
       <source>Orphaned attachments</source>
-      <translation>Bāreņu pielikumi</translation>
+      <translation type="unfinished">Orphaned attachments</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="54"/>
       <source>Delete selected attachments</source>
-      <translation>Dzēst atlasītos pielikumus</translation>
+      <translation type="unfinished">Delete selected attachments</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="57"/>
       <source>Delete</source>
-      <translation>Dzēst</translation>
+      <translation type="unfinished">Delete</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="86"/>
       <source>Add selected attachments to note</source>
-      <translation>Pievienojiet piezīmei atlasītos pielikumus</translation>
+      <translation type="unfinished">Add selected attachments to note</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="89"/>
       <source>Add to note</source>
-      <translation>Pievienot piezīmei</translation>
+      <translation>Thêm vào ghi chú</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="100"/>
       <source>Open &amp;attachment</source>
-      <translation>Atveriet &amp;pielikumu</translation>
+      <translation type="unfinished">Open &amp;attachment</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="111"/>
       <source>Open &amp;folder</source>
-      <translation>Atvērt &amp;mapi</translation>
+      <translation type="unfinished">Open &amp;folder</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="162"/>
       <source>File size:</source>
-      <translation>Faila lielums:</translation>
+      <translation>Kích thước tập tin:</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="182"/>
       <source>File type:</source>
-      <translation>Faila tips:</translation>
+      <translation>Loại tệp:</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="199"/>
       <source>File path:</source>
-      <translation>Faila ceļš:</translation>
+      <translation>Đường dẫn tập tin:</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.ui" line="229"/>
       <source>Attachments that are not used in notes:</source>
-      <translation>Pielikumi, kas netiek izmantoti piezīmēs:</translation>
+      <translation>Tệp đính kèm không được sử dụng trong ghi chú:</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="60"/>
       <source>Last modified at %1</source>
-      <translation>Pēdējoreiz modificēts %1</translation>
+      <translation>Sửa đổi lần cuối ở %1</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="140"/>
       <source>Delete selected files</source>
-      <translation>Dzēsiet atlasītos failus</translation>
+      <translation>Xóa các tập tin đã chọn</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/orphanedattachmentsdialog.cpp" line="141"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-      <translation>
-        <numerusform>Vai izdzēst atlasīto failu &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
-        <numerusform>Vai izdzēst atlasīto failu &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
-        <numerusform>Vai izdzēst atlasītos failus &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
+      <translation type="unfinished">
+        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
       </translation>
     </message>
   </context>
@@ -3479,50 +3465,48 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="14"/>
       <source>Orphaned images</source>
-      <translation>Bāreņu attēli</translation>
+      <translation>Hình ảnh mồ côi</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="80"/>
       <source>Delete selected images</source>
-      <translation>Dzēsiet atlasītos attēlus</translation>
+      <translation>Xóa hình ảnh đã chọn</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="83"/>
       <source>Delete</source>
-      <translation>Dzēst</translation>
+      <translation>Xóa bỏ</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="94"/>
       <source>Add selected images to note</source>
-      <translation>Pievienojiet atlasītos attēlus piezīmei</translation>
+      <translation>Thêm hình ảnh được chọn để ghi chú</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="97"/>
       <source>Add to note</source>
-      <translation>Pievienot piezīmei</translation>
+      <translation>Thêm vào ghi chú</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="146"/>
       <source>Images that are not used in notes:</source>
-      <translation>Attēli, kas netiek izmantoti piezīmēs:</translation>
+      <translation>Hình ảnh không được sử dụng trong ghi chú:</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.cpp" line="56"/>
       <source>Last modified at %1</source>
-      <translation>Pēdējoreiz modificēts %1</translation>
+      <translation>Sửa đổi lần cuối ở %1</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.cpp" line="122"/>
       <source>Delete selected files</source>
-      <translation>Dzēsiet atlasītos failus</translation>
+      <translation>Xóa các tập tin đã chọn</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-      <translation>
-        <numerusform>Vai izdzēst atlasītos failus &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
-        <numerusform>Vai izdzēst atlasītos failus &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
-        <numerusform>Vai izdzēst atlasītos failus &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
+      <translation type="unfinished">
+        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
       </translation>
     </message>
   </context>
@@ -3531,103 +3515,103 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
     <message>
       <location filename="../services/owncloudservice.cpp" line="202"/>
       <source>Username / password error</source>
-      <translation>Lietotājvārda / paroles kļūda</translation>
+      <translation>Lỗi tên người dùng / mật khẩu</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="203"/>
       <source>Your calendar username or password is incorrect!</source>
-      <translation>Jūsu kalendāra lietotājvārds vai parole nav pareiza!</translation>
+      <translation>Tên người dùng hoặc mật khẩu lịch của bạn không chính xác!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="509"/>
       <source>API app version too low</source>
-      <translation>API lietotnes versija ir pārāk zema</translation>
+      <translation>Phiên bản ứng dụng API quá thấp</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="510"/>
       <source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
-      <translation>Lūdzu, apsveriet iespēju atjaunināt QOwnNotesAPI lietotni uz jūsu servera, jūsu lietotnes versija %1 ir pārāk zema un var radīt problēmas ar QOwnNotes.</translation>
+      <translation>Vui lòng xem xét cập nhật ứng dụng QOwnNotesAPI trên máy chủ của bạn, phiên bản ứng dụng %1 của bạn quá thấp và có thể gây rắc rối trong QOwnNotes.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1033"/>
       <source>ownCloud server connection error</source>
-      <translation>ownCloud servera savienojuma kļūda</translation>
+      <translation>lỗi kết nối máy chủ ownCloud</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1037"/>
       <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
-      <translation>ownCloud servera kļūda: &lt;strong&gt;%1&lt;/strong&gt; &lt;br /&gt; Lūdzu, pārbaudiet ownCloud konfigurāciju.</translation>
+      <translation>lỗi máy chủ ownCloud: &lt;strong&gt;%1 &lt;/strong&gt; &lt;br /&gt; Vui lòng kiểm tra cấu hình ownCloud của bạn.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1056"/>
       <source>You need to setup your ownCloud server!</source>
-      <translation>Jums jāiestata savu ownCloud serveri!</translation>
+      <translation>Bạn cần phải thiết lập máy chủ ownCloud của bạn!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1069"/>
       <source>Open &amp;settings</source>
-      <translation>Atveriet &amp;iestatījumus</translation>
+      <translation type="unfinished">Open &amp;settings</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1069"/>
       <source>&amp;Cancel</source>
-      <translation>&amp;Atcelt</translation>
+      <translation type="unfinished">&amp;Cancel</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1123"/>
       <source>Done with loading note versions</source>
-      <translation>Vairs neveicat piezīmju versiju ielādi</translation>
+      <translation>Thực hiện với tải phiên bản ghi chú</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1162"/>
       <source>No versions found</source>
-      <translation>Netika atrasta neviena versija</translation>
+      <translation>Không tìm thấy phiên bản nào</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1163"/>
       <source>There are no versions for this note or the note wasn't found on the server.</source>
-      <translation>Šai piezīmei nav versiju, vai arī piezīme netika atrasta serverī.</translation>
+      <translation>Không có phiên bản cho ghi chú này hoặc ghi chú không được tìm thấy trên máy chủ.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1184"/>
       <source>Done with loading trashed notes</source>
-      <translation>Neveiciet piezemēto piezīmju ielādi</translation>
+      <translation>Thực hiện với tải ghi chú rác</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1225"/>
       <source>No trashed notes</source>
-      <translation>Nav dzēstie piezīmes</translation>
+      <translation>Không có ghi chú rác</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1226"/>
       <source>No trashed notes were found on the server.</source>
-      <translation>Nav dzēstie piezīmes netika atrasts uz servera.</translation>
+      <translation>Không có ghi chú rác được tìm thấy trên máy chủ.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1249"/>
       <location filename="../services/owncloudservice.cpp" line="1275"/>
       <source>Error while loading todo lists!</source>
-      <translation>Error while loading todo lists!</translation>
+      <translation>Lỗi trong khi tải danh sách việc cần làm!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1250"/>
       <source>Your CalDAV server didn't reply anything!</source>
-      <translation>Jūsu CalDAV serveris neatbildēja neko!</translation>
+      <translation>Máy chủ CalDAV của bạn đã không trả lời bất cứ điều gì!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1276"/>
       <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation>Kļūdas ziņojums no jūsu CalDAV servera: &lt;strong&gt;%1&lt;/strong&gt;</translation>
+      <translation>Thông báo lỗi từ máy chủ CalDAV của bạn: &lt;strong&gt;%1&lt;/ strong&gt;</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1945"/>
       <source>No bookmarks</source>
-      <translation>Nav grāmatzīmju</translation>
+      <translation>Không có dấu trang</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1946"/>
       <source>No bookmarks were found on the server.</source>
-      <translation>Neviena grāmatzīme serverī netika atrasta.</translation>
+      <translation>Không có dấu trang được tìm thấy trên máy chủ.</translation>
     </message>
   </context>
   <context>
@@ -3635,77 +3619,73 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
     <message>
       <location filename="../dialogs/passworddialog.ui" line="14"/>
       <source>Please enter your password</source>
-      <translation>Lūdzu ievadiet savu paroli</translation>
+      <translation>Vui lòng nhập mật khẩu của bạn</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="24"/>
       <source>Enter your password:</source>
-      <translation>Ievadiet savu paroli:</translation>
+      <translation>Nhập mật khẩu của bạn:</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="34"/>
       <source>Password</source>
-      <translation>Parole</translation>
+      <translation>Mật khẩu</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="44"/>
       <source>Re-enter password</source>
-      <translation>Ievadiet paroli vēlreiz</translation>
+      <translation>Nhập lại mật khẩu</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="54"/>
       <source>Passwords don't match!</source>
-      <translation>Paroles nesakrīt!</translation>
+      <translation>Mật khẩu không khớp!</translation>
     </message>
   </context>
   <context>
     <name>QObject</name>
     <message>
-      <location filename="../entities/notefolder.cpp" line="482"/>
+      <location filename="../entities/notefolder.cpp" line="484"/>
       <source>default</source>
-      <translation>noklusējuma</translation>
+      <translation>mặc định</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="1188"/>
       <source>Could not store note file: %1 - Error message: %2</source>
-      <translation>Nevarēja saglabāt piezīmju failu: %1 - kļūdas ziņojums: %2</translation>
+      <translation>Không thể lưu trữ tệp ghi chú: %1 - Thông báo lỗi: %2</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="1259"/>
       <source>Renamed note-file was removed: %1</source>
-      <translation>Pārdēvētais piezīmju fails tika noņemts: %1</translation>
+      <translation>Tệp ghi chú đã đổi tên đã bị xóa: %1</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="1267"/>
       <source>Could not remove renamed note-file: %1 - Error message: %2</source>
-      <translation>Nevarēja noņemt pārdēvēto piezīmju failu: %1 - kļūdas ziņojums: %2</translation>
+      <translation>Không thể xóa tên tệp ghi chú đã đổi tên: %1 - Thông báo lỗi: %2</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="2192"/>
       <source>Could not read image file: %1</source>
-      <translation>Nevarēja nolasīt attēla failu: %1</translation>
+      <translation>Không thể đọc tệp hình ảnh: %1</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="2819"/>
       <source>Note file path changed</source>
-      <translation>Piezīmes faila ceļš ir mainīts</translation>
+      <translation>Lưu ý đường dẫn tệp đã thay đổi</translation>
     </message>
     <message numerus="yes">
       <location filename="../entities/note.cpp" line="2820"/>
       <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
       <translation type="unfinished">
         <numerusform>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
-        <numerusform>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
-        <numerusform>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../entities/note.cpp" line="3297"/>
       <source>…and %n more note(s)</source>
-      <translation>
-        <numerusform>… Un vēl %n piezīme</numerusform>
-        <numerusform>… Un vēl %n piezīme</numerusform>
-        <numerusform>… Un vēl %n piezīmes</numerusform>
+      <translation type="unfinished">
+        <numerusform>…and %n more note(s)</numerusform>
       </translation>
     </message>
     <message>
@@ -3717,52 +3697,52 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
     <message>
       <location filename="../helpers/toolbarcontainer.cpp" line="94"/>
       <source>Workspace selector</source>
-      <translation>Darbvietas atlasītājs</translation>
+      <translation>Bộ chọn không gian làm việc</translation>
     </message>
     <message>
       <location filename="../utils/gui.cpp" line="307"/>
       <source>Don't ask again!</source>
-      <translation>Neprasi vēlreiz!</translation>
+      <translation>Đừng hỏi lại!</translation>
     </message>
     <message>
       <location filename="../utils/gui.cpp" line="307"/>
       <source>Don't show again!</source>
-      <translation>Nerādīt atkal!</translation>
+      <translation>Đừng hiển thị lại!</translation>
     </message>
     <message>
       <location filename="../utils/git.cpp" line="74"/>
       <source>Command failed!</source>
-      <translation>Komanda neizdevās!</translation>
+      <translation>Lệnh không thành công!</translation>
     </message>
     <message>
       <location filename="../utils/git.cpp" line="75"/>
       <source>The command &lt;code&gt;%1&lt;/code&gt; failed!</source>
-      <translation>Komanda &lt;code&gt;%1&lt;/code&gt; neizdevās!</translation>
+      <translation type="unfinished">The command &lt;code&gt;%1&lt;/code&gt; failed!</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3905"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3910"/>
       <source>New connection</source>
-      <translation>Jauns savienojums</translation>
+      <translation>Kết nối mới</translation>
     </message>
     <message>
       <location filename="../entities/cloudconnection.cpp" line="281"/>
       <source>Default</source>
-      <translation>Noklusējums</translation>
+      <translation>Mặc định</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="216"/>
       <source>Note folder not found!</source>
-      <translation>Piezīmju mape nav atrasta!</translation>
+      <translation>Không tìm thấy thư mục!</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="217"/>
       <source>Your note folder was not found any more! Do you want to select a new one?</source>
-      <translation>Jūsu piezīmju mape vairs netika atrasta. Vai vēlaties atlasīt jaunu?</translation>
+      <translation>Thư mục ghi chú của bạn không được tìm thấy nữa! Bạn có muốn chọn một cái mới?</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="223"/>
       <source>Please select the folder where your notes will get stored to</source>
-      <translation>Lūdzu, atlasiet mapi, kurā tiks glabātas jūsu piezīmes</translation>
+      <translation>Vui lòng chọn thư mục nơi ghi chú của bạn sẽ được lưu trữ vào</translation>
     </message>
   </context>
   <context>
@@ -3770,27 +3750,27 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="548"/>
       <source>No suggestions for %1</source>
-      <translation>Nav ieteikumu %1</translation>
+      <translation>Không có đề xuất nào cho %1</translation>
     </message>
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="559"/>
       <source>Ignore</source>
-      <translation>Ignorēt</translation>
+      <translation>Làm lơ</translation>
     </message>
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="560"/>
       <source>Add to Dictionary</source>
-      <translation>Pievienot vārdnīcai</translation>
+      <translation>Thêm vào từ điển</translation>
     </message>
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="616"/>
       <source>Note editing disabled</source>
-      <translation>Piezīmju rediģēšana ir atspējota</translation>
+      <translation>Ghi chú chỉnh sửa bị vô hiệu hóa</translation>
     </message>
     <message>
       <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="617"/>
       <source>Note editing is currently disabled, do you want to allow again?</source>
-      <translation>Piezīmju rediģēšana pašlaik ir atspējota. Vai vēlaties atļaut vēlreiz?</translation>
+      <translation>Lưu ý chỉnh sửa hiện đang bị vô hiệu hóa, bạn có muốn cho phép lại không?</translation>
     </message>
   </context>
   <context>
@@ -3798,87 +3778,87 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="53"/>
       <source>Find:</source>
-      <translation>Atrodi:</translation>
+      <translation>Tìm thấy:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="107"/>
       <source>Advanced search / replace text</source>
-      <translation>Izvērstā meklēšana / aizstājiet tekstu</translation>
+      <translation>Tìm kiếm nâng cao / thay thế văn bản</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="90"/>
       <source>Close search</source>
-      <translation>Aizveriet meklēšanu</translation>
+      <translation>Đóng tìm kiếm</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="32"/>
       <source>Find in text</source>
-      <translation>Atrast tekstā</translation>
+      <translation>Tìm trong văn bản</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="127"/>
       <source>Search forward</source>
-      <translation>Meklēt uz priekšu</translation>
+      <translation>Tìm kiếm phía trước</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="63"/>
       <source>Search backward</source>
-      <translation>Meklēt atpakaļ</translation>
+      <translation>Tìm kiếm ngược</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="39"/>
       <source>Replace with</source>
-      <translation>Aizvietot ar</translation>
+      <translation>Thay bằng</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="80"/>
       <source>Replace:</source>
-      <translation>Aizvietot:</translation>
+      <translation>Thay thế:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="193"/>
       <source>Plain text</source>
-      <translation>Vienkāršs teksts</translation>
+      <translation>Văn bản thô</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="198"/>
       <source>Whole words</source>
-      <translation>Veseli vārdi</translation>
+      <translation>Toàn bộ từ</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="203"/>
       <source>Regular expression</source>
-      <translation>Regulāra izteiksme</translation>
+      <translation>Biểu hiện thông thường</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="224"/>
       <source>Replace one text occurrence</source>
-      <translation>Aizstāt vienu teksta parādību</translation>
+      <translation>Thay thế một lần xuất hiện văn bản</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="227"/>
       <source>Replace</source>
-      <translation>Aizvietot</translation>
+      <translation>Thay thế</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="237"/>
       <source>Replace all text occurrences</source>
-      <translation>Aizstāt visus teksta gadījumus</translation>
+      <translation>Thay thế tất cả các lần xuất hiện văn bản</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="240"/>
       <source>Replace all</source>
-      <translation>Aizstāt visus</translation>
+      <translation>Thay thế tất cả</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="164"/>
       <source>Mode:</source>
-      <translation>Režīms:</translation>
+      <translation>Chế độ:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qplaintexteditsearchwidget.ui" line="144"/>
       <source>Match case sensitive</source>
-      <translation>Jūtīgs pret lielo burtu</translation>
+      <translation>Khớp chữ nhạy</translation>
     </message>
   </context>
   <context>
@@ -3886,77 +3866,77 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="32"/>
       <source>replace text</source>
-      <translation>aizstāt tekstu</translation>
+      <translation>thay thế văn bản</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="52"/>
       <source>Find:</source>
-      <translation>Atrodi:</translation>
+      <translation>Tìm thấy:</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="62"/>
       <source>close search</source>
-      <translation>aizvērt meklēšanu</translation>
+      <translation>tìm kiếm chặt chẽ</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="79"/>
       <source>find in text</source>
-      <translation>atrast tekstā</translation>
+      <translation>tìm trong văn bản</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="86"/>
       <source>search forward</source>
-      <translation>meklēt uz priekšu</translation>
+      <translation>tìm kiếm phía trước</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="103"/>
       <source>search backward</source>
-      <translation>meklēt atpakaļ</translation>
+      <translation>tìm kiếm lạc hậu</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="120"/>
       <source>replace with</source>
-      <translation>aizvietot ar</translation>
+      <translation>thay bằng</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="127"/>
       <source>Replace:</source>
-      <translation>Aizvietot:</translation>
+      <translation>Thay thế:</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="156"/>
       <source>Plain text</source>
-      <translation>Vienkāršs teksts</translation>
+      <translation>Văn bản thô</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="161"/>
       <source>Whole words</source>
-      <translation>Veseli vārdi</translation>
+      <translation>Toàn bộ từ</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="166"/>
       <source>Regular expression</source>
-      <translation>Regulāra izteiksme</translation>
+      <translation type="unfinished">Regular expression</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="187"/>
       <source>Replace</source>
-      <translation>Aizvietot</translation>
+      <translation type="unfinished">Replace</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="197"/>
       <source>Replace All</source>
-      <translation>Aizstāt visu</translation>
+      <translation type="unfinished">Replace All</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="210"/>
       <source>Mode:</source>
-      <translation>Režīms:</translation>
+      <translation type="unfinished">Mode:</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="220"/>
       <source>Match case sensitive</source>
-      <translation>Jūtīgs pret lielo burtu</translation>
+      <translation type="unfinished">Match case sensitive</translation>
     </message>
   </context>
   <context>
@@ -3964,30 +3944,30 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
     <message>
       <location filename="../services/databaseservice.cpp" line="76"/>
       <source>Cannot open memory database</source>
-      <translation>Nevar atvērt atmiņas datu bāzi</translation>
+      <translation type="unfinished">Cannot open memory database</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="77"/>
       <source>Unable to establish a memory database connection.</source>
-      <translation>Nevar izveidot atmiņas datu bāzes savienojumu.</translation>
+      <translation type="unfinished">Unable to establish a memory database connection.</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="93"/>
       <source>Cannot open disk database</source>
-      <translation>Nevar atvērt diska datu bāzi</translation>
+      <translation type="unfinished">Cannot open disk database</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="94"/>
       <location filename="../services/databaseservice.cpp" line="117"/>
       <source>Unable to establish a database connection with file '%1'.
 Are the folder and the file writeable?</source>
-      <translation>Nevar izveidot datu bāzes savienojumu ar failu '%1'.
-Vai mape un fails ir rakstāms?</translation>
+      <translation type="unfinished">Unable to establish a database connection with file '%1'.
+Are the folder and the file writeable?</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="116"/>
       <source>Cannot open note folder database</source>
-      <translation>Nevar atvērt piezīmju mapes datu bāzi</translation>
+      <translation type="unfinished">Cannot open note folder database</translation>
     </message>
   </context>
   <context>
@@ -3995,167 +3975,167 @@ Vai mape un fails ir rakstāms?</translation>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="14"/>
       <source>Script repository</source>
-      <translation>Skriptu krātuve</translation>
+      <translation type="unfinished">Script repository</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="55"/>
       <source>To search for a script please enter your query text and press &lt;i&gt;Return&lt;/i&gt;.</source>
-      <translation>Lai meklētu skriptu, lūdzu, ievadiet vaicājuma tekstu un nospiediet &lt;i&gt; Atgriezties &lt;/i&gt;.</translation>
+      <translation type="unfinished">To search for a script please enter your query text and press &lt;i&gt;Return&lt;/i&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="127"/>
       <source>Currently installed version:</source>
-      <translation>Pašlaik instalētā versija:</translation>
+      <translation type="unfinished">Currently installed version:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="278"/>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="399"/>
       <source>Installs the script</source>
-      <translation>Instalē skriptu</translation>
+      <translation type="unfinished">Installs the script</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="281"/>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="398"/>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="459"/>
       <source>Install</source>
-      <translation>Uzstādīt</translation>
+      <translation type="unfinished">Install</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="444"/>
       <source>Load more scripts</source>
-      <translation>Ielādēt vairāk skriptu</translation>
+      <translation type="unfinished">Load more scripts</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="228"/>
       <source>Version:</source>
-      <translation>Versija:</translation>
+      <translation type="unfinished">Version:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="202"/>
       <source>Repository:</source>
-      <translation>Repozitorijs:</translation>
+      <translation type="unfinished">Repository:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="137"/>
       <source>Minimum app version:</source>
-      <translation>Minimālā lietotnes versija:</translation>
+      <translation type="unfinished">Minimum app version:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="433"/>
       <source>Name</source>
-      <translation>Vārds</translation>
+      <translation type="unfinished">Name</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="413"/>
       <source>Enter your query text</source>
-      <translation>Ievadiet vaicājuma tekstu</translation>
+      <translation>Nhập văn bản truy vấn của bạn</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="416"/>
       <source>Find script</source>
-      <translation>Atrodiet skriptu</translation>
+      <translation>Tìm kịch bản</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="47"/>
       <source>Script updates</source>
-      <translation>Skriptu atjauninājumi</translation>
+      <translation>Cập nhật tập lệnh</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="48"/>
       <source>All scripts are up-to-date.</source>
-      <translation>Visi skripti ir atjaunināti.</translation>
+      <translation>Tất cả các kịch bản được cập nhật.</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="369"/>
       <source>Authors</source>
-      <translation>Autori</translation>
+      <translation>Tác giả</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="369"/>
       <source>Author</source>
-      <translation>Autors</translation>
+      <translation>Tác giả</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="372"/>
       <source>Supported platforms</source>
-      <translation>Atbalstītās platformas</translation>
+      <translation>Nền tảng được hỗ trợ</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="373"/>
       <source>Supported platform</source>
-      <translation>Atbalstītā platforma</translation>
+      <translation>Nền tảng được hỗ trợ</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="376"/>
       <source>Open repository</source>
-      <translation>Atvērt repozitoriju</translation>
+      <translation>Mở kho</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="387"/>
       <source>Update</source>
-      <translation>Atjaunināt</translation>
+      <translation>Cập nhật</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="388"/>
       <source>Updates the script</source>
-      <translation>Atjaunina skriptu</translation>
+      <translation>Cập nhật tập lệnh</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="390"/>
       <source>Reinstall</source>
-      <translation>Pārinstalēt</translation>
+      <translation>Cài đặt lại</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="391"/>
       <source>Reinstalls the script</source>
-      <translation>Pārinstalē skriptu</translation>
+      <translation>Cài đặt lại tập lệnh</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="456"/>
       <source>Platform not supported!</source>
-      <translation>Platforma netiek atbalstīta!</translation>
+      <translation>Nền tảng không được hỗ trợ!</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="457"/>
       <source>Your platform is not supported by this script!
 Do you want to install it anyway?</source>
-      <translation>Šis skripts neatbalsta jūsu platformu.
-Vai tomēr vēlaties to instalēt?</translation>
+      <translation>Nền tảng của bạn không được hỗ trợ bởi tập lệnh này!
+Bạn có muốn cài đặt nó không?</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="459"/>
       <source>Cancel</source>
-      <translation>Atcelt</translation>
+      <translation>Hủy bỏ</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="467"/>
       <source>Update app</source>
-      <translation>Atjaunināt lietotni</translation>
+      <translation>Cập nhật ứng dụng</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="468"/>
       <source>Please don't forget to update your installation of QOwnNotes to make this script work!</source>
-      <translation>Lūdzu, neaizmirstiet atjaunināt QOwnNotes instalēšanu, lai šis skripts darbotos!</translation>
+      <translation>Xin đừng quên cập nhật cài đặt QOwnNotes của bạn để làm cho tập lệnh này hoạt động!</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="536"/>
       <source>Install successful</source>
-      <translation>Instalēšana veiksmīga</translation>
+      <translation>Cài đặt thành công</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="537"/>
       <source>The script was successfully installed!</source>
-      <translation>Skripts tika veiksmīgi instalēts!</translation>
+      <translation>Kịch bản đã được cài đặt thành công!</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="544"/>
       <source>Download failed</source>
-      <translation>Lejupielāde neizdevās</translation>
+      <translation>Tải xuống thất bại</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="545"/>
       <source>The script could not be downloaded!</source>
-      <translation>Skriptu nevarēja lejupielādēt!</translation>
+      <translation>Kịch bản không thể tải xuống!</translation>
     </message>
   </context>
   <context>
@@ -4163,12 +4143,12 @@ Vai tomēr vēlaties to instalēt?</translation>
     <message>
       <location filename="../widgets/scriptsettingwidget.ui" line="92"/>
       <source>The setting name</source>
-      <translation>Iestatījuma nosaukums</translation>
+      <translation>Tên thiết lập</translation>
     </message>
     <message>
       <location filename="../widgets/scriptsettingwidget.cpp" line="193"/>
       <source>Please select a file</source>
-      <translation>Lūdzu, atlasiet failu</translation>
+      <translation>Vui lòng chọn một tập tin</translation>
     </message>
   </context>
   <context>
@@ -4176,7 +4156,7 @@ Vai tomēr vēlaties to instalēt?</translation>
     <message>
       <location filename="../services/scriptingservice.cpp" line="244"/>
       <source>file doesn't exist</source>
-      <translation>fails neeksistē</translation>
+      <translation>tập tin không tồn tại</translation>
     </message>
   </context>
   <context>
@@ -4185,20 +4165,18 @@ Vai tomēr vēlaties to instalēt?</translation>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="14"/>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="20"/>
       <source>Import bookmarks</source>
-      <translation>Importēt grāmatzīmes</translation>
+      <translation>Nhập dấu trang</translation>
     </message>
     <message>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="47"/>
       <source>%v of %m bookmark(s) imported</source>
-      <translation>%v no %m importētajām grāmatzīmēs/m</translation>
+      <translation>%v của %m bookmark đã nhập</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/serverbookmarksimportdialog.cpp" line="79"/>
       <source>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</source>
-      <translation>
-        <numerusform>&lt;strong&gt;%n grāmatzīme &lt;/strong&gt; atrasta serverī</numerusform>
-        <numerusform>&lt;strong&gt;%n grāmatzīme &lt;/strong&gt; atrasta serverī</numerusform>
-        <numerusform>&lt;strong&gt;%n grāmatzīmes &lt;/strong&gt; atrodamas serverī</numerusform>
+      <translation type="unfinished">
+        <numerusform>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</numerusform>
       </translation>
     </message>
   </context>
@@ -4206,54 +4184,54 @@ Vai tomēr vēlaties to instalēt?</translation>
     <name>SettingsDialog</name>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="26"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4061"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4083"/>
       <source>Settings</source>
-      <translation>Iestatījumi</translation>
+      <translation>Cài đặt</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="120"/>
       <source>Note folders</source>
-      <translation>Piezīmju mapes</translation>
+      <translation>Thư mục ghi chú</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="419"/>
       <source>Your note folders</source>
-      <translation>Jūsu piezīmju mapes</translation>
+      <translation>Thư mục ghi chú của bạn</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="495"/>
       <source>&amp;Add folder</source>
-      <translation>&amp;Pievienot mapi</translation>
+      <translation type="unfinished">&amp;Add folder</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="519"/>
       <source>&amp;Remove folder</source>
-      <translation>&amp;Noņemt mapi</translation>
+      <translation type="unfinished">&amp;Remove folder</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="733"/>
       <source>This name will be viewed in all the menus.</source>
-      <translation>Šis nosaukums tiks apskatīts visās izvēlnēs.</translation>
+      <translation>Tên này sẽ được xem trong tất cả các menu.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="575"/>
       <source>Set the ownCloud path where the note folder path will be synced to on your ownCloud server.</source>
-      <translation>Iestatiet ownCloud ceļu, kur piezīmju mapes ceļš tiks sinhronizēts uz jūsu ownCloud servera.</translation>
+      <translation>Đặt đường dẫn ownCloud nơi đường dẫn thư mục ghi chú sẽ được đồng bộ hóa trên máy chủ ownCloud của bạn.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="749"/>
       <source>Use as active note folder</source>
-      <translation>Izmantot kā aktīvo piezīmju mapi</translation>
+      <translation>Sử dụng như thư mục ghi chú hoạt động</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="852"/>
       <source>Your ownCloud server</source>
-      <translation>Jūsu ownCloud serveris</translation>
+      <translation>Máy chủ của riêng bạn</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1273"/>
       <source>ownCloud server url:</source>
-      <translation>ownCloud servera vietrādis URL:</translation>
+      <translation>url máy chủ ownCloud:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1295"/>
@@ -4273,22 +4251,22 @@ Vai tomēr vēlaties to instalēt?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1164"/>
       <source>connection to web server</source>
-      <translation>savienojums ar tīmekļa serveri</translation>
+      <translation>kết nối với máy chủ web</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1181"/>
       <source>ownCloud server detected</source>
-      <translation>atklāts serveris ownCloud</translation>
+      <translation>phát hiện máy chủ ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1215"/>
       <source>connection to QOwnNotesAPI</source>
-      <translation>savienojums ar QOwnNotesAPI</translation>
+      <translation>kết nối với QOwnNotesAPI</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1198"/>
       <source>username and password correct</source>
-      <translation>lietotājvārds un parole ir pareiza</translation>
+      <translation>tên người dùng và mật khẩu chính xác</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1154"/>
@@ -4299,7 +4277,7 @@ Vai tomēr vēlaties to instalēt?</translation>
       <location filename="../dialogs/settingsdialog.ui" line="1239"/>
       <location filename="../dialogs/settingsdialog.ui" line="1256"/>
       <source>unknown</source>
-      <translation>nezināms</translation>
+      <translation>không xác định</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1114"/>
@@ -4309,17 +4287,17 @@ Vai tomēr vēlaties to instalēt?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1232"/>
       <source>versions app enabled on server</source>
-      <translation>lietotnes versijas ir iespējotas serverī</translation>
+      <translation>phiên bản ứng dụng được kích hoạt trên máy chủ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1249"/>
       <source>trash app enabled on server</source>
-      <translation>miskaste ir iespējota serverī</translation>
+      <translation>ứng dụng rác được kích hoạt trên máy chủ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1266"/>
       <source>notes path found on server</source>
-      <translation>serverī atrasts ceļš</translation>
+      <translation>đường dẫn ghi chú được tìm thấy trên máy chủ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="911"/>
@@ -4329,22 +4307,22 @@ Vai tomēr vēlaties to instalēt?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="715"/>
       <source>path</source>
-      <translation>ceļš</translation>
+      <translation type="unfinished">path</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="551"/>
       <source>Click here to select your local note path</source>
-      <translation>Noklikšķiniet šeit, lai atlasītu vietējo piezīmju ceļu</translation>
+      <translation type="unfinished">Click here to select your local note path</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="628"/>
       <source>Click here to select your remote note path on your ownCloud server</source>
-      <translation>Noklikšķiniet šeit, lai atlasītu attālo piezīmju ceļu uz jūsu ownCloud servera</translation>
+      <translation type="unfinished">Click here to select your remote note path on your ownCloud server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="681"/>
       <source>Click here to use the selected folder from your server as note folder</source>
-      <translation>Noklikšķiniet šeit, lai atlasīto servera mapi izmantotu kā piezīmju mapi</translation>
+      <translation type="unfinished">Click here to use the selected folder from your server as note folder</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="879"/>
@@ -4354,207 +4332,207 @@ Vai tomēr vēlaties to instalēt?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="958"/>
       <source>Error Message</source>
-      <translation>Kļūdas ziņojums</translation>
+      <translation type="unfinished">Error Message</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="144"/>
       <source>Network</source>
-      <translation>Tīkls</translation>
+      <translation type="unfinished">Network</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1364"/>
       <source>Proxy Settings</source>
-      <translation>Starpniekservera iestatījumi</translation>
+      <translation type="unfinished">Proxy Settings</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1370"/>
       <source>No Proxy</source>
-      <translation>Nav starpniekservera</translation>
+      <translation type="unfinished">No Proxy</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1380"/>
       <source>Use system proxy</source>
-      <translation>Izmantojiet sistēmas starpniekserveri</translation>
+      <translation type="unfinished">Use system proxy</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1387"/>
       <source>Specify proxy manually as</source>
-      <translation>Manuāli norādiet starpniekserveri kā</translation>
+      <translation type="unfinished">Specify proxy manually as</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1412"/>
       <source>Host</source>
-      <translation>Saimnieks</translation>
+      <translation type="unfinished">Host</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1463"/>
       <source>Proxy server requires authentication</source>
-      <translation>Starpniekserverim ir nepieciešama autentifikācija</translation>
+      <translation type="unfinished">Proxy server requires authentication</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1520"/>
       <source>SSL Settings</source>
-      <translation>SSL iestatījumi</translation>
+      <translation>Cài đặt SSL</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1526"/>
       <source>Ignore SSL errors</source>
-      <translation>Ignorēt SSL kļūdas</translation>
+      <translation>Bỏ qua lỗi SSL</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="156"/>
       <source>Todo</source>
-      <translation>Darīt</translation>
+      <translation>Todo</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1781"/>
       <source>Default ownCloud calendar</source>
-      <translation type="unfinished">Default ownCloud calendar</translation>
+      <translation>Lịch ownCloud mặc định</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="168"/>
       <source>Interface</source>
-      <translation type="unfinished">Interface</translation>
+      <translation>Giao diện</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1751"/>
       <source>Other CalDAV server</source>
-      <translation type="unfinished">Other CalDAV server</translation>
+      <translation>Máy chủ CalDAV khác</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2754"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2776"/>
       <source>Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</source>
-      <translation type="unfinished">Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</translation>
+      <translation>Chỉ một số màu sẽ được điều chỉnh, chủ đề máy tính để bàn của bạn sẽ kiểm soát phần còn lại. Bạn cần khởi động lại ứng dụng để cho những thay đổi này hành động.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2757"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2779"/>
       <source>Optimize preview colors for dark mode desktop themes</source>
-      <translation type="unfinished">Optimize preview colors for dark mode desktop themes</translation>
+      <translation>Tối ưu hóa màu sắc xem trước cho chủ đề máy tính để bàn ở chế độ tối</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2744"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2766"/>
       <source>This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</source>
-      <translation>Tas ļauj tumšajā režīmā, interfeiss un ikonas tiks modificētas. Lai šīs izmaiņas varētu veikt, jums jārestartē programma.</translation>
+      <translation>Điều này cho phép chế độ tối, giao diện và biểu tượng sẽ được sửa đổi. Bạn cần khởi động lại ứng dụng để cho những thay đổi này hành động.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2747"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2769"/>
       <source>Enable dark mode</source>
-      <translation>Iespējot tumšo režīmu</translation>
+      <translation>Bật chế độ tối</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2773"/>
-      <location filename="../dialogs/settingsdialog.ui" line="2783"/>
-      <location filename="../dialogs/settingsdialog.ui" line="2814"/>
-      <location filename="../dialogs/settingsdialog.ui" line="2824"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2795"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2805"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2836"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2846"/>
       <source>You need to restart the application to let this setting take effect</source>
-      <translation>Lai šis iestatījums stātos spēkā, jums jārestartē programma</translation>
+      <translation>Bạn cần khởi động lại ứng dụng để cài đặt này có hiệu lực</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2853"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2875"/>
       <source>Item sizes in the main window</source>
-      <translation>Vienumu izmēri galvenajā logā</translation>
+      <translation>Kích thước mục trong cửa sổ chính</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4775"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4797"/>
       <source>Markdown highlighting</source>
-      <translation>Marķējuma izcelšana</translation>
+      <translation>Đánh dấu Markdown</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4781"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4803"/>
       <source>Enable markdown highlighting</source>
-      <translation>Iespējot atzīmju izcelšanu</translation>
+      <translation>Cho phép đánh dấu đánh dấu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2075"/>
       <source>Interface language</source>
-      <translation>Saskarnes valoda</translation>
+      <translation>Ngôn ngữ giao diện</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2095"/>
       <source>Automatic</source>
-      <translation>Automātiska</translation>
+      <translation>Tự động</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2219"/>
       <source>English</source>
-      <translation>Angļu</translation>
+      <translation>Anh</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="252"/>
       <source>Shortcuts</source>
-      <translation>Īsceļi</translation>
+      <translation>Phím tắt</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4266"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4487"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4288"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4509"/>
       <source>Default font:</source>
-      <translation>Noklusējuma fonts:</translation>
+      <translation>Phông chữ mặc định:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4308"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4449"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4330"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4471"/>
       <source>Code font:</source>
-      <translation>Kods fonts:</translation>
+      <translation>Phông chữ:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3012"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3034"/>
       <source>Main window shortcuts</source>
-      <translation>Galvenā loga saīsnes</translation>
+      <translation>Phím tắt cửa sổ chính</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3679"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3701"/>
       <source>Do this at your own risk!</source>
-      <translation>Dariet to uz savu risku!</translation>
+      <translation>Làm điều này có nguy cơ đến bạn!</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3682"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3704"/>
       <source>Ignore all external note folder changes</source>
-      <translation>Ignorējiet visas ārējo piezīmju mapes izmaiņas</translation>
+      <translation>Bỏ qua tất cả các thay đổi thư mục ghi chú bên ngoài</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4177"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4199"/>
       <source>No two spaces to do a line break are added here if checked</source>
-      <translation>Ja tas ir atzīmēts, šeit netiek pievienotas divas atstarpes, lai veiktu līnijas pārtraukumu</translation>
+      <translation>Không có hai khoảng trắng để ngắt dòng được thêm vào đây nếu được chọn</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4180"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4202"/>
       <source>Use GitHub line breaks</source>
-      <translation>Izmantojiet GitHub līnijas pārtraukumus</translation>
+      <translation>Sử dụng ngắt dòng GitHub</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2197"/>
       <source>German</source>
-      <translation>Vācu</translation>
+      <translation>Tiếng Đức</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2274"/>
       <source>French</source>
-      <translation>Franču</translation>
+      <translation>Tiếng pháp</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2483"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2494"/>
       <source>Polish</source>
-      <translation>Poļu</translation>
+      <translation type="unfinished">Polish</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2505"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2516"/>
       <source>Portuguese</source>
-      <translation>Portugālis</translation>
+      <translation type="unfinished">Portuguese</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2461"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2472"/>
       <source>Dutch</source>
-      <translation>Holandiešu</translation>
+      <translation>Hà Lan</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2428"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2439"/>
       <source>Hungarian</source>
-      <translation>Ungāru</translation>
+      <translation>Tiếng Hungary</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2230"/>
       <source>Spanish</source>
-      <translation>Spāņu</translation>
+      <translation>Tiếng Tây Ban Nha</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2081"/>
@@ -4562,29 +4540,29 @@ Vai tomēr vēlaties to instalēt?</translation>
       <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2718"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2740"/>
       <source>Dark mode</source>
-      <translation>Tumšais režīms</translation>
+      <translation>Chế độ tối</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1580"/>
       <source>Disable tracking of usage data</source>
-      <translation>Atspējot lietošanas datu izsekošanu</translation>
+      <translation>Vô hiệu hóa theo dõi dữ liệu sử dụng</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1624"/>
       <source>Usage tracking is done on a private Piwik server.</source>
-      <translation>Lietošanas izsekošana tiek veikta uz privāta Piwik servera.</translation>
+      <translation>Theo dõi sử dụng được thực hiện trên một máy chủ Piwik riêng.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1684"/>
       <source>Disable heartbeat</source>
-      <translation>Atspējot sirdsdarbību</translation>
+      <translation>Vô hiệu hóa nhịp tim</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2538"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2549"/>
       <source>Russian</source>
-      <translation>Krievu</translation>
+      <translation>Tiếng Nga</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1533"/>
@@ -4592,284 +4570,284 @@ Vai tomēr vēlaties to instalēt?</translation>
       <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2681"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2703"/>
       <source>If you change the language you have to restart the application for the changes to take action.</source>
-      <translation>Ja maināt valodu, jums ir restartēt pieteikumu izmaiņas rīkoties.</translation>
+      <translation>Nếu bạn thay đổi ngôn ngữ, bạn phải khởi động lại ứng dụng để các thay đổi thực hiện.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3432"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3454"/>
       <source>You need to reload the scripting engine if you modify a script file</source>
-      <translation>Ja modificējat skripta failu, jums atkārtoti jāielādē skriptu meklētājprogramma</translation>
+      <translation>Bạn cần tải lại công cụ kịch bản nếu bạn sửa đổi tệp tập lệnh</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3435"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3457"/>
       <source>Reload scripting engine</source>
-      <translation>Pārlādēt skriptu meklētājprogrammu</translation>
+      <translation>Tải lại công cụ kịch bản</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3425"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3447"/>
       <source>Validate script</source>
-      <translation>Apstipriniet skriptu</translation>
+      <translation>Xác thực tập lệnh</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="288"/>
       <source>General</source>
-      <translation>Vispārīgi</translation>
+      <translation>Chung</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3597"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3619"/>
       <source>Notes</source>
-      <translation>Piezīmes</translation>
+      <translation>Ghi chú</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3785"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3807"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3668"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4975"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5490"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3690"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4997"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5512"/>
       <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
-      <translation>Jums var rasties sinhronizācijas problēmas ar vecākām ownCloud sinhronizācijas versijām, ja tas notiek daudz mazāk par 10 sekundēm.
-Vienkārši pārbaudiet sevi, ja rodas sinhronizācijas konflikti, un iestatiet augstāku vērtību, ja tā.</translation>
+      <translation>Bạn có thể gặp rắc rối đồng bộ hóa với các phiên bản cũ hơn của đồng bộ ownCloud khi đi xa hơn 10 giây.
+Chỉ cần tự kiểm tra nếu bạn nhận được xung đột đồng bộ hóa và đặt giá trị cao hơn nếu có.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2450"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2461"/>
       <source>Japanese</source>
-      <translation>Japāņu</translation>
+      <translation>Tiếng Nhật</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3672"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3694"/>
       <source>note save interval time [sec]</source>
-      <translation>piezīmju saglabāšanas intervāla laiks [sek]</translation>
+      <translation>lưu ý lưu thời gian [giây]</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3788"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3810"/>
       <source>Notify about all external modifications of the current note</source>
-      <translation>Paziņojiet par visām pašreizējās piezīmes ārējām modifikācijām</translation>
+      <translation>Thông báo về tất cả các sửa đổi bên ngoài của ghi chú hiện tại</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4090"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4112"/>
       <location filename="../dialogs/settingsdialog.cpp" line="2011"/>
       <location filename="../dialogs/settingsdialog.cpp" line="2020"/>
       <source>Database</source>
-      <translation>Datu bāze</translation>
+      <translation>Cơ sở dữ liệu</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4106"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4128"/>
       <source>Reinitialize Database</source>
-      <translation>Atjaunināt datu bāzi</translation>
+      <translation>Tái khởi động lại cơ sở dữ liệu</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4029"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4051"/>
       <source>Clear application data and exit</source>
-      <translation>Notīriet lietojumprogrammas datus un izejiet no tā</translation>
+      <translation>Xóa dữ liệu ứng dụng và thoát</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4035"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4057"/>
       <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
-      <translation>Šī poga ļauj jums notīrīt visus iestatījumus, noņemt vietējo uzdevumu datu bāzi un iziet no QOwnNotes.</translation>
+      <translation>Nút này cho phép bạn xóa tất cả các cài đặt, xóa cơ sở dữ liệu việc cần làm cục bộ và thoát QOwnNotes.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4045"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4067"/>
       <location filename="../dialogs/settingsdialog.cpp" line="2080"/>
       <source>Clear app data and exit</source>
-      <translation>Notīriet lietotnes datus un izejiet no tā</translation>
+      <translation>Xóa dữ liệu ứng dụng và thoát</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3824"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3846"/>
       <source>Update dialog</source>
-      <translation>Atjaunināšanas dialogs</translation>
+      <translation>Hộp thoại cập nhật</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3904"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3926"/>
       <source>Default note file extension</source>
-      <translation>Noklusējuma piezīmju faila paplašinājums</translation>
+      <translation>Phần mở rộng tập tin ghi chú mặc định</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3989"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4011"/>
       <source>External editor</source>
-      <translation>Ārējais redaktors</translation>
+      <translation>Biên tập viên bên ngoài</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4002"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4024"/>
       <source>path to external editor, leave empty for default</source>
-      <translation>ceļš uz ārējo redaktoru, pēc noklusējuma atstājiet tukšu</translation>
+      <translation>đường dẫn đến trình soạn thảo bên ngoài, để trống</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4012"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5054"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4034"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5076"/>
       <source>set external editor</source>
-      <translation>iestatīt ārējo redaktoru</translation>
+      <translation>đặt trình soạn thảo bên ngoài</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1549"/>
       <source>App metrics</source>
-      <translation>Lietotāju metrika</translation>
+      <translation>Số liệu ứng dụng</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1567"/>
       <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</source>
-      <translation>Anonīmi lietošanas dati palīdz izlemt, kuras QOwnNotes daļas uzlabot nākamo, kā arī atrast un novērst kļūdas. Lūdzu, atspējojiet to tikai tad, ja tiešām nevarat ar to dzīvot.</translation>
+      <translation>Dữ liệu sử dụng ẩn danh giúp quyết định phần nào của QOwnNotes để cải thiện tiếp theo cũng như tìm và sửa lỗi. Vui lòng vô hiệu hóa nó chỉ khi bạn thực sự không thể sống với nó.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1599"/>
       <source>This data includes anonymous information about what features of the app are used.</source>
-      <translation>Šajos datos ir anonīma informācija par lietotnes funkcijām.</translation>
+      <translation>Dữ liệu này bao gồm thông tin ẩn danh về những tính năng của ứng dụng được sử dụng.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1653"/>
       <source>App heartbeat</source>
-      <translation>Lietotnes sirdsdarbība</translation>
+      <translation>Nhịp tim ứng dụng</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1671"/>
       <source>A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</source>
-      <translation>Periodiski tiek nosūtīts neliels sirdsdarbības pieprasījums, kamēr darbojas QOwnNotes. Padariet laimīgu izstrādātāju, paziņojot viņam, ka kāds izmanto pakalpojumu QOwnNotes.</translation>
+      <translation>Một yêu cầu nhịp tim nhỏ được gửi định kỳ trong khi QOwnNotes đang chạy. Làm cho nhà phát triển hài lòng bằng cách cho anh ta biết rằng ai đó đang sử dụng QOwnNotes.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2373"/>
       <source>Italian</source>
-      <translation type="unfinished">Italian</translation>
+      <translation>Người Ý</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="264"/>
       <source>Scripting</source>
-      <translation>Skriptu sastādīšana</translation>
+      <translation>Viết kịch bản</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3079"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3101"/>
       <source>Your scripts</source>
-      <translation>Jūsu skripti</translation>
+      <translation>Kịch bản của bạn</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3163"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3185"/>
       <source>&amp;Remove script</source>
       <translation type="unfinished">&amp;Remove script</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3442"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3464"/>
       <source>Click here to select your QML script</source>
-      <translation>Noklikšķiniet šeit, lai atlasītu savu QML skriptu</translation>
+      <translation>Nhấn vào đây để chọn tập lệnh QML của bạn</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="92"/>
       <source>Find setting</source>
-      <translation>Atrodi iestatījumu</translation>
+      <translation>Tìm cài đặt</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="179"/>
       <source>Layout</source>
-      <translation>Izkārtojums</translation>
+      <translation>Bố trí</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="191"/>
       <source>Editor</source>
-      <translation>Redaktors</translation>
+      <translation>Biên tập viên</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="202"/>
       <source>Editor fonts &amp; colors</source>
-      <translation type="unfinished">Editor fonts &amp; colors</translation>
+      <translation>Chỉnh sửa phông chữ &amp; màu sắc</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="215"/>
       <source>Panels</source>
-      <translation>Paneļi</translation>
+      <translation>Tấm</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="239"/>
       <source>Toolbars</source>
-      <translation>Rīkjoslas</translation>
+      <translation>Thanh công cụ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="299"/>
       <source>Portable mode</source>
-      <translation>Pārnēsājams režīms</translation>
+      <translation>Chế độ di động</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="311"/>
       <source>Git versioning</source>
-      <translation>Git versijas</translation>
+      <translation>Phiên bản Git</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="323"/>
       <source>Local trash</source>
-      <translation>Vietējā miskaste</translation>
+      <translation>Thùng rác địa phương</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="347"/>
       <source>Debug options</source>
-      <translation>Atkļūdošanas iespējas</translation>
+      <translation>Tùy chọn gỡ lỗi</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="568"/>
       <source>Path where your notes are stored locally</source>
-      <translation>Ceļš, kurā jūsu piezīmes tiek glabātas lokāli</translation>
+      <translation>Đường dẫn nơi ghi chú của bạn được lưu trữ cục bộ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="578"/>
       <source>"Notes" path on your server</source>
       <extracomment>"Notes" should not be translated</extracomment>
-      <translation>Ceļš "Piezīmes" uz jūsu servera</translation>
+      <translation>"Notes" đường dẫn trên máy chủ của bạn</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="684"/>
       <source>&amp;Use as ownCloud path</source>
-      <translation>&amp;Izmantot kā ownCloud ceļu</translation>
+      <translation>&amp;Sử dụng như đường dẫn ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="723"/>
       <source>Please select your note folder on your ownCloud server:</source>
-      <translation>Lūdzu, atlasiet piezīmju mapi uz ownCloud servera:</translation>
+      <translation>Vui lòng chọn thư mục ghi chú của bạn trên máy chủ của riêng bạn:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="766"/>
       <source>Path on your ownCloud server:</source>
-      <translation>Ceļš uz jūsu ownCloud serveri:</translation>
+      <translation>Đường dẫn trên máy chủ của riêng bạn:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="773"/>
-      <location filename="../dialogs/settingsdialog.ui" line="3253"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3275"/>
       <source>Name:</source>
-      <translation>Vārds:</translation>
+      <translation>Tên:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="780"/>
       <source>Note folder path:</source>
-      <translation>Piezīmju mapes ceļš:</translation>
+      <translation>Note folder path:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="787"/>
       <source>Be aware that the ownCloud notes app doesn't support sub-folders!</source>
-      <translation>Ņemiet vērā, ka lietotne ownCloud piezīmes neatbalsta apakšmapes!</translation>
+      <translation>Xin lưu ý rằng ứng dụng ghi chú ownCloud không hỗ trợ các thư mục con!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="790"/>
       <source>Use note sub-folders</source>
-      <translation>Izmantojiet piezīmju apakšmapes</translation>
+      <translation>Sử dụng thư mục con ghi chú</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="797"/>
       <source>You need to have git installed to make this work!</source>
-      <translation>Lai šis darbs darbotos, jums ir jābūt instalētam!</translation>
+      <translation>Bạn cần phải cài đặt git để thực hiện công việc này!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="800"/>
       <source>Use git to keep a local history of your notes</source>
-      <translation>Izmantojiet git, lai saglabātu piezīmju vietējo vēsturi</translation>
+      <translation>Sử dụng git để giữ một lịch sử địa phương của ghi chú của bạn</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="829"/>
       <source>ownCloud support</source>
-      <translation type="unfinished">ownCloud support</translation>
+      <translation>hỗ trợ ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="835"/>
       <source>Enable ownCloud support</source>
-      <translation type="unfinished">Enable ownCloud support</translation>
+      <translation>Kích hoạt hỗ trợ ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="866"/>
@@ -4884,1011 +4862,1021 @@ Vienkārši pārbaudiet sevi, ja rodas sinhronizācijas konflikti, un iestatiet 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="991"/>
       <source>Select a connection to edit</source>
-      <translation>Atlasiet rediģējamo savienojumu</translation>
+      <translation>Chọn một kết nối để chỉnh sửa</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="998"/>
       <location filename="../dialogs/settingsdialog.ui" line="1001"/>
       <source>Add connection</source>
-      <translation>Pievienojiet savienojumu</translation>
+      <translation type="unfinished">Add connection</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1012"/>
       <location filename="../dialogs/settingsdialog.ui" line="1015"/>
       <source>Remove connection</source>
-      <translation>Noņemiet savienojumu</translation>
+      <translation type="unfinished">Remove connection</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1029"/>
       <location filename="../dialogs/settingsdialog.ui" line="1838"/>
       <source>Username:</source>
-      <translation>Lietotājvārds:</translation>
+      <translation type="unfinished">Username:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1054"/>
       <source>Your ownCloud username</source>
-      <translation>Jūsu ownCloud lietotājvārds</translation>
+      <translation type="unfinished">Your ownCloud username</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1064"/>
       <location filename="../dialogs/settingsdialog.ui" line="1873"/>
       <source>Password:</source>
-      <translation>Parole:</translation>
+      <translation type="unfinished">Password:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1092"/>
       <source>Your ownCloud password</source>
-      <translation>Jūsu ownCloud parole</translation>
+      <translation type="unfinished">Your ownCloud password</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1120"/>
       <source>&amp;Connect to ownCloud server</source>
-      <translation>&amp;Izveidojiet savienojumu ar ownCloud serveri</translation>
+      <translation type="unfinished">&amp;Connect to ownCloud server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1147"/>
       <source>Connection status</source>
-      <translation>Savienojuma statuss</translation>
+      <translation type="unfinished">Connection status</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1311"/>
       <source>Connection name:</source>
-      <translation>Savienojuma nosaukums:</translation>
+      <translation type="unfinished">Connection name:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1723"/>
       <source>Todo settings</source>
-      <translation>Todo iestatījumi</translation>
+      <translation type="unfinished">Todo settings</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1729"/>
       <source>Enable todo calendar support</source>
-      <translation>Iespējot pārskata kalendāra atbalstu</translation>
+      <translation type="unfinished">Enable todo calendar support</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1914"/>
       <source>Which cloud connection do you want to use?</source>
-      <translation>Kuru mākoņa savienojumu vēlaties izmantot?</translation>
+      <translation type="unfinished">Which cloud connection do you want to use?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1926"/>
       <source>Select the calendars you want to use for the Todo list</source>
-      <translation>Atlasiet kalendārus, kurus vēlaties izmantot sarakstā Todo</translation>
+      <translation type="unfinished">Select the calendars you want to use for the Todo list</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2001"/>
       <source>Todo list settings</source>
-      <translation>Todo saraksta iestatījumi</translation>
+      <translation type="unfinished">Todo list settings</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2007"/>
       <source>Saving an item also closes the Todo list</source>
-      <translation>Vienuma saglabāšana aizver arī Todo sarakstu</translation>
+      <translation type="unfinished">Saving an item also closes the Todo list</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2109"/>
       <source>Indonesian</source>
-      <translation>Indonēziešu</translation>
+      <translation type="unfinished">Indonesian</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2120"/>
       <source>Bengali</source>
-      <translation>Bengāļu</translation>
+      <translation type="unfinished">Bengali</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2131"/>
       <source>Bosnian</source>
-      <translation>Bosniešu</translation>
+      <translation type="unfinished">Bosnian</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2142"/>
       <source>Bulgarian</source>
-      <translation>Bulgāru</translation>
+      <translation type="unfinished">Bulgarian</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2153"/>
       <source>Catalan</source>
-      <translation>Katalāņu</translation>
+      <translation type="unfinished">Catalan</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2164"/>
       <source>Cebuano</source>
-      <translation>Cebuano</translation>
+      <translation type="unfinished">Cebuano</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2186"/>
       <source>Danish</source>
-      <translation>Dāņu</translation>
+      <translation type="unfinished">Danish</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2208"/>
       <source>Basque</source>
-      <translation>Basku</translation>
+      <translation type="unfinished">Basque</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2241"/>
       <source>Estonian</source>
-      <translation>Igauņu</translation>
+      <translation type="unfinished">Estonian</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2252"/>
       <source>Filipino</source>
-      <translation>Filipīniešu</translation>
+      <translation type="unfinished">Filipino</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2263"/>
       <source>Finnish</source>
-      <translation>Somu</translation>
+      <translation type="unfinished">Finnish</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2285"/>
       <source>Galician</source>
-      <translation>Galisiešu</translation>
+      <translation type="unfinished">Galician</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2296"/>
       <source>Greek</source>
-      <translation>Grieķu</translation>
+      <translation type="unfinished">Greek</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2307"/>
       <source>Hausa</source>
-      <translation>Hausa</translation>
+      <translation type="unfinished">Hausa</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2318"/>
       <source>Hebrew</source>
-      <translation>Ebreju</translation>
+      <translation>Tiếng Do Thái</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2329"/>
       <source>Hindi</source>
-      <translation>Hindi</translation>
+      <translation>Tiếng Hindi</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2351"/>
       <source>Hiligaynon</source>
-      <translation>Hiligainons</translation>
+      <translation>Hiligaynon</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2362"/>
       <source>Icelandic</source>
-      <translation>Islandiešu</translation>
+      <translation>Tiếng Iceland</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2384"/>
       <source>Korean</source>
-      <translation>Korejiešu</translation>
+      <translation>Tiếng hàn</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2395"/>
       <source>Kurdish</source>
-      <translation>Kurdu</translation>
+      <translation>Tiếng Kurd</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2406"/>
-      <source>Lithuanian</source>
-      <translation>Lietuviešu</translation>
+      <source>Latvian</source>
+      <translation type="unfinished">Latvian</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2417"/>
+      <source>Lithuanian</source>
+      <translation>Tiếng Litva</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="2428"/>
       <source>Macedonian</source>
-      <translation>Maķedoniešu</translation>
+      <translation>Tiếng Macedonia</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2439"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2450"/>
       <source>Norwegian</source>
-      <translation>Norvēģi</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2516"/>
-      <source>Punjabi</source>
-      <translation>Punjabi</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2472"/>
-      <source>Persian</source>
-      <translation>Persiešu</translation>
+      <translation type="unfinished">Norwegian</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2527"/>
-      <source>Romanian</source>
-      <translation>Rumāņu</translation>
+      <source>Punjabi</source>
+      <translation type="unfinished">Punjabi</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2549"/>
-      <source>Serbian</source>
-      <translation>Serbu</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2483"/>
+      <source>Persian</source>
+      <translation type="unfinished">Persian</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="2538"/>
+      <source>Romanian</source>
+      <translation type="unfinished">Romanian</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2560"/>
-      <source>Albanian</source>
-      <translation>Albāņu</translation>
+      <source>Serbian</source>
+      <translation type="unfinished">Serbian</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2571"/>
-      <source>Slovak</source>
-      <translation>Slovāku</translation>
+      <source>Albanian</source>
+      <translation type="unfinished">Albanian</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2582"/>
-      <source>Slovenian</source>
-      <translation>Slovēņu</translation>
+      <source>Slovak</source>
+      <translation type="unfinished">Slovak</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2593"/>
-      <source>Swedish</source>
-      <translation>Zviedru</translation>
+      <source>Slovenian</source>
+      <translation type="unfinished">Slovenian</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2604"/>
-      <source>Tagalog</source>
-      <translation>Tagalogs</translation>
+      <source>Swedish</source>
+      <translation type="unfinished">Swedish</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2615"/>
-      <source>Turkish</source>
-      <translation>Turku</translation>
+      <source>Tagalog</source>
+      <translation type="unfinished">Tagalog</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2637"/>
-      <source>Urdu</source>
-      <translation>Urdu</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2648"/>
-      <source>Chinese Simplified</source>
-      <translation>Ķīniešu vienkāršotā</translation>
+      <source>Turkish</source>
+      <translation type="unfinished">Turkish</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2659"/>
+      <source>Urdu</source>
+      <translation type="unfinished">Urdu</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="2670"/>
+      <source>Chinese Simplified</source>
+      <translation type="unfinished">Chinese Simplified</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="2681"/>
       <source>Chinese Traditional</source>
-      <translation>Ķīniešu tradicionālā</translation>
+      <translation>Truyền thống Trung Hoa</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2727"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2749"/>
       <source>Enable dark mode application icon and tray icon</source>
-      <translation>Iespējojiet tumšā režīma lietojumprogrammas ikonu un teknes ikonu</translation>
+      <translation>Bật biểu tượng ứng dụng chế độ tối và biểu tượng khay</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2734"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2756"/>
       <source>You might also want to choose another editor color schema in the editor settings in dark mode.</source>
-      <translation>Jūs varētu vēlēties arī izvēlēties citu redaktora krāsu shēmu redaktora iestatījumos tumšajā režīmā.</translation>
+      <translation>Bạn cũng có thể muốn chọn một bảng phối màu khác trong cài đặt trình chỉnh sửa ở chế độ tối.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2837"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2859"/>
       <source>Enable dark mode icon theme</source>
-      <translation>Iespējot tumšā režīma ikonas motīvu</translation>
+      <translation>Bật chủ đề biểu tượng chế độ tối</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2767"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2789"/>
       <source>System tray</source>
-      <translation>Sistēmas tekne</translation>
+      <translation>Khay hệ thống</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2776"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2798"/>
       <source>Show system tray icon</source>
-      <translation>Rādīt sistēmas teknes ikonu</translation>
+      <translation>Hiển thị biểu tượng khay hệ thống</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2786"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2808"/>
       <source>Start application hidden</source>
-      <translation>Sākt lietojumprogrammas paslēptu</translation>
+      <translation>Hiển thị biểu tượng khay hệ thống</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2796"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2818"/>
       <source>Interface style</source>
-      <translation>Interfeisa stils</translation>
+      <translation>Giao diện phong cách</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2827"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2849"/>
       <source>Enforce system icon theme</source>
-      <translation>Izpildiet sistēmas ikonas motīvu</translation>
+      <translation>Thực thi chủ đề biểu tượng hệ thống</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2933"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2955"/>
       <source>Override interface font size</source>
-      <translation>Ignorēt interfeisa fonta lielumu</translation>
+      <translation>Ghi đè kích thước phông chữ giao diện</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2942"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2964"/>
       <source>Interface font size:</source>
-      <translation type="unfinished">Interface font size:</translation>
+      <translation>Cỡ chữ giao diện:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3152"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3174"/>
       <source>&amp;Add script…</source>
       <translation type="unfinished">&amp;Add script…</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3798"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3820"/>
       <source>Use legacy way to link to notes, images and attachments</source>
-      <translation type="unfinished">Use legacy way to link to notes, images and attachments</translation>
+      <translation>Sử dụng cách kế thừa để liên kết đến ghi chú, hình ảnh và tệp đính kèm</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3745"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3767"/>
       <source>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</source>
-      <translation type="unfinished">When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</translation>
+      <translation>Khi mở ghi chú, vị trí con trỏ bên trong ghi chú sẽ được khôi phục về vị trí khi ghi chú được truy cập lần cuối trong phiên hiện tại</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3765"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3787"/>
       <source>By default the headline will generated automatically</source>
-      <translation type="unfinished">By default the headline will generated automatically</translation>
+      <translation>Theo mặc định, tiêu đề sẽ được tạo tự động</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3768"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3790"/>
       <source>The shortcut to create a new note asks for a headline</source>
-      <translation type="unfinished">The shortcut to create a new note asks for a headline</translation>
+      <translation>Phím tắt để tạo ghi chú mới yêu cầu tiêu đề</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3755"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3777"/>
       <source>Automatically close the note folder database to prevent problems with sync tools</source>
-      <translation type="unfinished">Automatically close the note folder database to prevent problems with sync tools</translation>
+      <translation>Tự động đóng cơ sở dữ liệu thư mục ghi chú để ngăn sự cố với các công cụ đồng bộ hóa</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3758"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3780"/>
       <source>Automatically close the note folder database</source>
-      <translation type="unfinished">Automatically close the note folder database</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3846"/>
-      <source>Search engine</source>
-      <translation type="unfinished">Search engine</translation>
+      <translation>Tự động đóng cơ sở dữ liệu thư mục ghi chú</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3868"/>
+      <source>Search engine</source>
+      <translation>Máy tìm kiếm</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="3890"/>
       <source>Message boxes</source>
-      <translation type="unfinished">Message boxes</translation>
+      <translation>Hộp tin nhắn</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3874"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3658"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3896"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3663"/>
       <source>Reset message boxes</source>
-      <translation type="unfinished">Reset message boxes</translation>
+      <translation>Đặt lại hộp tin nhắn</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4067"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3724"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3747"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4089"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3729"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3752"/>
       <source>Import settings</source>
-      <translation type="unfinished">Import settings</translation>
+      <translation>Nhập cài đặt</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4074"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3690"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4096"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3695"/>
       <source>Export settings</source>
-      <translation type="unfinished">Export settings</translation>
+      <translation>Xuất cài đặt</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4213"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4235"/>
       <source>Open issue assistant</source>
-      <translation type="unfinished">Open issue assistant</translation>
+      <translation>Trợ lý vấn đề mở</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4224"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4246"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4518"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4540"/>
       <source>Ignore code font size to allow zooming</source>
-      <translation type="unfinished">Ignore code font size to allow zooming</translation>
+      <translation>Bỏ qua kích thước phông chữ mã để cho phép thu phóng</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4547"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4569"/>
       <source>Rendering</source>
-      <translation type="unfinished">Rendering</translation>
+      <translation>Kết xuất</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4553"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4575"/>
       <source>Enable underline rendering</source>
-      <translation type="unfinished">Enable underline rendering</translation>
+      <translation>Cho phép kết xuất gạch chân</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4809"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4831"/>
       <source>Fully highlight blockquotes</source>
-      <translation type="unfinished">Fully highlight blockquotes</translation>
+      <translation>Hoàn toàn làm nổi bật blockquote</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4879"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4901"/>
       <source>Note-edit cursor width:</source>
-      <translation type="unfinished">Note-edit cursor width:</translation>
+      <translation>Lưu ý chỉnh sửa độ rộng con trỏ:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4828"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4850"/>
       <source>Enable Vim mode (some QOwnNotes shortcuts will not work)</source>
-      <translation type="unfinished">Enable Vim mode (some QOwnNotes shortcuts will not work)</translation>
+      <translation>Bật chế độ Vim (một số phím tắt QOwnNotes sẽ không hoạt động)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="756"/>
       <source>Cloud connection:</source>
-      <translation type="unfinished">Cloud connection:</translation>
+      <translation>Kết nối đám mây:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4913"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2626"/>
+      <source>Vietnamese</source>
+      <translation type="unfinished">Vietnamese</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="4935"/>
       <source>Disable cursor blinking</source>
-      <translation type="unfinished">Disable cursor blinking</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5147"/>
-      <source>Show the number of matches in each note</source>
-      <translation type="unfinished">Show the number of matches in each note</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5302"/>
-      <source>Ignored sub-folders</source>
-      <translation type="unfinished">Ignored sub-folders</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5318"/>
-      <source>Reset ignored sub-folders</source>
-      <translation type="unfinished">Reset ignored sub-folders</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5338"/>
-      <source>Note list panel</source>
-      <translation type="unfinished">Note list panel</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5344"/>
-      <source>Show notes in the note list with preview</source>
-      <translation type="unfinished">Show notes in the note list with preview</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5417"/>
-      <source>Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</source>
-      <translation>Piezīmju saraksta vietā izmantojiet piezīmju koku ar visām apakšmapēm (ja tās ir ieslēgtas piezīmju mapei)</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5652"/>
-      <source>Bookmarks</source>
-      <translation>Grāmatzīmes</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5658"/>
-      <source>Notes with this tag will be used for fetching bookmarks</source>
-      <translation>Piezīmes ar šo tagu tiks izmantotas grāmatzīmju ielādēšanai</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5661"/>
-      <source>Tag name for bookmarks notes</source>
-      <translation>Grāmatzīmju piezīmju birkas nosaukums</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5668"/>
-      <source>Bookmarks tag:</source>
-      <translation>Grāmatzīmju tags:</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5675"/>
-      <source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
-      <translation>Pēc noklusējuma pārlūka paplašinājums parādīs visas pašreizējās piezīmes saites. Varat arī likt tai parādīt īpašas grāmatzīmju saites piezīmēm ar noteiktu tagu. Lai iegūtu papildinformāciju par grāmatzīmju saites sintakse, noklikšķiniet uz &lt;a href="%1"&gt; šeit &lt;/a&gt;.</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5688"/>
-      <source>Bookmarks note name:</source>
-      <translation>Grāmatzīmju piezīmes nosaukums:</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5695"/>
-      <source>This note will be used for adding new bookmarks from the browser extension</source>
-      <translation>Šī piezīme tiks izmantota jaunu grāmatzīmju pievienošanai no pārlūka paplašinājuma</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5698"/>
-      <source>Note name for adding new bookmarks</source>
-      <translation>Piezīmes nosaukums jaunu grāmatzīmju pievienošanai</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5708"/>
-      <source>Web socket server</source>
-      <translation>Web ligzdas serveris</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5714"/>
-      <source>Socket server port:</source>
-      <translation>Socket servera ports:</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5748"/>
-      <source>Show security token</source>
-      <translation>Rādīt drošības pilnvaru</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5784"/>
-      <source>Web socket server support</source>
-      <translation>Web ligzdas servera atbalsts</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5790"/>
-      <source>Enable socket server</source>
-      <translation>Iespējot kontaktligzdas serveri</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5765"/>
-      <source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
-      <translation type="unfinished">Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3706"/>
-      <source>Allow the note file name to be different from the headline.&lt;br&gt;Beware that ownCloud Notes needs the file name to be the same as the headline!</source>
-      <translation>Ļaujiet piezīmju faila nosaukumam atšķirties no virsraksta. &lt;br&gt; Uzmanieties, ka ownCloud Notes faila nosaukumam ir jābūt vienādam ar virsrakstu!</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5115"/>
-      <source>Note edit panel</source>
-      <translation>Piezīmju rediģēšanas panelis</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5121"/>
-      <source>If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</source>
-      <translation>Ja tas ir atspējots, jūs varat izveidot sarežģītākus paneļu izkārtojumus, bet, ja logs tiek mainīts, visi paneļi tiks mainīti</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5124"/>
-      <source>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</source>
-      <translation>Izmantojiet piezīmju rediģēšanas paneli kā fiksētu centrālo logrīku, kas jāmaina, ja loga vai citu paneļu izmēri tiek mainīti</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5134"/>
-      <source>Note search panel</source>
-      <translation>Piezīmju meklēšanas panelis</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5140"/>
-      <source>Disable auto-completion of previous searches</source>
-      <translation>Atspējojiet iepriekšējo meklēšanu automātisko pabeigšanu</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5440"/>
-      <source>Navigation panel</source>
-      <translation>Navigācijas panelis</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5446"/>
-      <source>Hide navigation item search bar</source>
-      <translation>Slēpt navigācijas vienumu meklēšanas joslu</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5460"/>
-      <source>Local trash settings</source>
-      <translation>Vietējie miskastes iestatījumi</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5494"/>
-      <source>Remove trashed notes after:</source>
-      <translation>Noņemt miskastes pēc:</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5501"/>
-      <source> days</source>
-      <extracomment>seconds</extracomment>
-      <translation>dienas</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5520"/>
-      <source>Automatically remove trashed notes after a certain time</source>
-      <translation>Automātiski noņemiet miskastes pēc noteikta laika</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5546"/>
-      <source>Local trash support</source>
-      <translation>Vietējais miskastes atbalsts</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5552"/>
-      <source>Enable local trash</source>
-      <translation>Iespējot vietējo miskasti</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5569"/>
-      <source>Layout selector</source>
-      <translation>Izkārtojuma atlasītājs</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5575"/>
-      <source>You can set a new layout here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</source>
-      <translation>Šeit varat iestatīt jaunu izkārtojumu. Ņemiet vērā, ka paneļu novietojumu vienmēr var mainīt, izmantojot pogu &lt;i&gt; Atbloķēt paneļus &lt;/i&gt;.</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4855"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5734"/>
-      <source>Reset the cursor width</source>
-      <translation>Atiestatiet kursora platumu</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4989"/>
-      <source>External git log command to show the git versions of a note</source>
-      <translation>Ārēja Git žurnāla komanda, lai parādītu piezīmes Git versijas</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4995"/>
-      <source>Enter a command to be used to show a git log (like for example "gitk")</source>
-      <extracomment>Please don't translate "%notePath%"</extracomment>
-      <translation>Ievadiet komandu, kas jāizmanto, lai parādītu “git log” (piemēram, piemēram, “gitk”)</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5015"/>
-      <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
-      <extracomment>Please don't translate "%notePath%"</extracomment>
-      <translation>Ja izmantosit šo iestatījumu, jūs iegūsit jaunu izvēlnes ierakstu, lai parādītu galvenās versijas, ja ar peles labo pogu noklikšķiniet uz piezīmes.</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5299"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5308"/>
-      <source>Regular expressions of note sub-folders to ignore, separated by ";"</source>
-      <translation>Regulāri izteikumi piezīmju apakšmapēs, kuras jāignorē, atdalot ar ";"</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5358"/>
-      <source>Show all notes of a tag including the notes of their children-tags</source>
-      <translation>Rādīt visas atzīmes piezīmes, ieskaitot viņu bērnu piezīmes</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5351"/>
-      <source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
-      <translation>Rādīt visas mapē esošās piezīmes, ieskaitot to apakšmapes (darbojas tikai tad, ja apakšmapes ir ieslēgtas)</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4756"/>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4906"/>
-      <source>Highlight the current line</source>
-      <translation>Iezīmējiet pašreizējo līniju</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5082"/>
-      <source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
-      <translation>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5157"/>
-      <source>Tags panel</source>
-      <translation>Tagu panelis</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5186"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5262"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5391"/>
-      <source>Order</source>
-      <translation>Pasūtīt</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5192"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5268"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5400"/>
-      <source>Ascending</source>
-      <translation>Augoši</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5199"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5275"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5407"/>
-      <source>Descending</source>
-      <translation>Dilstošā secībā</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5163"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5232"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5365"/>
-      <source>Sort</source>
-      <translation>Kārtot</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4899"/>
-      <source>Only use editor width setting in distraction free mode</source>
-      <translation>Redaktora platuma iestatījumu izmantojiet tikai bez uzmanības novēršanas režīmā</translation>
+      <translation>Tắt nhấp nháy con trỏ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5169"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5238"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5371"/>
+      <source>Show the number of matches in each note</source>
+      <translation>Hiển thị số lượng trận đấu trong mỗi ghi chú</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5324"/>
+      <source>Ignored sub-folders</source>
+      <translation>Bỏ qua các thư mục con</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5340"/>
+      <source>Reset ignored sub-folders</source>
+      <translation>Đặt lại các thư mục con bị bỏ qua</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5360"/>
+      <source>Note list panel</source>
+      <translation>Bảng ghi chú danh sách</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5366"/>
+      <source>Show notes in the note list with preview</source>
+      <translation>Hiển thị ghi chú trong danh sách ghi chú với xem trước</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5439"/>
+      <source>Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</source>
+      <translation>Thay vì danh sách ghi chú, hãy sử dụng cây ghi chú với tất cả các thư mục con (nếu chúng được bật cho thư mục ghi chú)</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5674"/>
+      <source>Bookmarks</source>
+      <translation>Dấu trang</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5680"/>
+      <source>Notes with this tag will be used for fetching bookmarks</source>
+      <translation>Ghi chú với thẻ này sẽ được sử dụng để tìm nạp dấu trang</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5683"/>
+      <source>Tag name for bookmarks notes</source>
+      <translation>Tên thẻ cho ghi chú đánh dấu</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5690"/>
+      <source>Bookmarks tag:</source>
+      <translation>Thẻ đánh dấu:</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5697"/>
+      <source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
+      <translation>Theo mặc định, phần mở rộng trình duyệt sẽ hiển thị tất cả các liên kết của ghi chú hiện tại. Bạn cũng có thể làm cho nó hiển thị các liên kết đánh dấu đặc biệt của ghi chú với một thẻ nhất định. Để biết thêm thông tin về cú pháp liên kết dấu trang, hãy nhấp vào &lt;a href="%1"&gt; tại đây &lt;/a&gt;.</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5710"/>
+      <source>Bookmarks note name:</source>
+      <translation>Tên ghi chú:</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5717"/>
+      <source>This note will be used for adding new bookmarks from the browser extension</source>
+      <translation>Ghi chú này sẽ được sử dụng để thêm dấu trang mới từ tiện ích mở rộng trình duyệt</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5720"/>
+      <source>Note name for adding new bookmarks</source>
+      <translation>Lưu ý tên để thêm dấu trang mới</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5730"/>
+      <source>Web socket server</source>
+      <translation>Máy chủ web socket</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5736"/>
+      <source>Socket server port:</source>
+      <translation>Cổng máy chủ socket:</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5770"/>
+      <source>Show security token</source>
+      <translation>Hiển thị mã thông báo bảo mật</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5806"/>
+      <source>Web socket server support</source>
+      <translation>Hỗ trợ máy chủ web socket</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5812"/>
+      <source>Enable socket server</source>
+      <translation>Cho phép máy chủ ổ cắm</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5787"/>
+      <source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
+      <translation>Cài đặt &lt;a href="%1"&gt; tiện ích mở rộng trình duyệt Đồng hành web &lt;/a&gt; từ &lt;a href="%2"&gt; Cửa hàng Chrome trực tuyến &lt;/a&gt; hoặc &lt;a href="%3"&gt; Firefox Add- trang ons &lt;/a&gt; để sử dụng QOwnNotes làm web clipper.</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="3728"/>
+      <source>Allow the note file name to be different from the headline.&lt;br&gt;Beware that ownCloud Notes needs the file name to be the same as the headline!</source>
+      <translation>Cho phép tên tệp ghi chú khác với tiêu đề. &lt;br&gt; Hãy coi chừng rằng Ghi chú của ownCloud cần tên tệp giống với tiêu đề!</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5137"/>
+      <source>Note edit panel</source>
+      <translation>Bảng chỉnh sửa ghi chú</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5143"/>
+      <source>If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</source>
+      <translation>Nếu điều này bị vô hiệu hóa, bạn có thể tạo bố cục bảng phức tạp hơn, nhưng tất cả các bảng sẽ được thay đổi kích thước nếu cửa sổ được thay đổi kích thước</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5146"/>
+      <source>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</source>
+      <translation>Sử dụng bảng chỉnh sửa ghi chú làm tiện ích trung tâm cố định được thay đổi kích thước nếu cửa sổ hoặc các bảng khác được thay đổi kích thước</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5156"/>
+      <source>Note search panel</source>
+      <translation>Bảng ghi chú tìm kiếm</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5162"/>
+      <source>Disable auto-completion of previous searches</source>
+      <translation>Vô hiệu hóa tự động hoàn thành các tìm kiếm trước đó</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5462"/>
+      <source>Navigation panel</source>
+      <translation>Bảng điều hướng</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5468"/>
+      <source>Hide navigation item search bar</source>
+      <translation>Ẩn thanh tìm kiếm mục điều hướng</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5482"/>
+      <source>Local trash settings</source>
+      <translation>Cài đặt thùng rác cục bộ</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5516"/>
+      <source>Remove trashed notes after:</source>
+      <translation>Xóa ghi chú rác sau:</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5523"/>
+      <source> days</source>
+      <extracomment>seconds</extracomment>
+      <translation>ngày</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5542"/>
+      <source>Automatically remove trashed notes after a certain time</source>
+      <translation>Tự động xóa ghi chú rác sau một thời gian nhất định</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5568"/>
+      <source>Local trash support</source>
+      <translation>Hỗ trợ rác địa phương</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5574"/>
+      <source>Enable local trash</source>
+      <translation>Cho phép rác cục bộ</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5591"/>
+      <source>Layout selector</source>
+      <translation>Công cụ chọn bố cục</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5597"/>
+      <source>You can set a new layout here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</source>
+      <translation>Bạn có thể thiết lập một bố cục mới ở đây. Hãy nhớ rằng bạn luôn có thể sửa đổi vị trí của các bảng bằng nút &lt;i&gt; Mở khóa bảng &lt;/i&gt;.</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="4877"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5756"/>
+      <source>Reset the cursor width</source>
+      <translation>Đặt lại chiều rộng con trỏ</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5011"/>
+      <source>External git log command to show the git versions of a note</source>
+      <translation>Lệnh git log bên ngoài để hiển thị các phiên bản git của ghi chú</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5017"/>
+      <source>Enter a command to be used to show a git log (like for example "gitk")</source>
+      <extracomment>Please don't translate "%notePath%"</extracomment>
+      <translation>Nhập một lệnh sẽ được sử dụng để hiển thị nhật ký git (ví dụ như "gitk")</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5037"/>
+      <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
+      <extracomment>Please don't translate "%notePath%"</extracomment>
+      <translation>Nếu bạn sử dụng cài đặt này, bạn sẽ nhận được một mục menu mới để hiển thị các phiên bản git nếu bạn nhấp chuột phải vào một ghi chú.</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5321"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5330"/>
+      <source>Regular expressions of note sub-folders to ignore, separated by ";"</source>
+      <translation>Biểu thức chính quy của các thư mục con ghi chú cần bỏ qua, phân tách bằng dấu ";"</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5380"/>
+      <source>Show all notes of a tag including the notes of their children-tags</source>
+      <translation>Hiển thị tất cả các ghi chú của một thẻ bao gồm các ghi chú của thẻ con của họ</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5373"/>
+      <source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
+      <translation>Hiển thị tất cả các ghi chú trong một thư mục bao gồm các thư mục con của chúng (chỉ hoạt động nếu các thư mục con được bật)</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="4778"/>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bạn có thể muốn xem tất cả &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt; định dạng thời gian &lt;/a&gt;. &lt;/ P&gt; &lt;/ body &gt; &lt;/ html&gt;</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="4928"/>
+      <source>Highlight the current line</source>
+      <translation>Đánh dấu dòng hiện tại</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5104"/>
+      <source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
+      <translation>Đừng quên bật hỗ trợ git cho các thư mục ghi chú của bạn và định cấu hình tên và địa chỉ email cho ứng dụng khách git của bạn, ví dụ như với các lệnh đầu cuối này:</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5179"/>
+      <source>Tags panel</source>
+      <translation>Bảng điều khiển thẻ</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5208"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5284"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5413"/>
+      <source>Order</source>
+      <translation>Đặt hàng</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5214"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5290"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5422"/>
+      <source>Ascending</source>
+      <translation>Tăng dần</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5221"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5297"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5429"/>
+      <source>Descending</source>
+      <translation>Giảm dần</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5185"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5254"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5387"/>
+      <source>Sort</source>
+      <translation>Sắp xếp</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="4921"/>
+      <source>Only use editor width setting in distraction free mode</source>
+      <translation>Chỉ sử dụng cài đặt độ rộng của trình chỉnh sửa trong chế độ miễn phí phân tâm</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="5191"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5260"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5393"/>
       <source>Alphabetical</source>
-      <translation>Alfabētiski</translation>
+      <translation>Bảng chữ cái</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5176"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5198"/>
       <source>By last change / use</source>
-      <translation>Ar pēdējām izmaiņām / izmantošanu</translation>
+      <translation>Thay đổi / sử dụng lần cuối</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5209"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5231"/>
       <source>Hide 'Find or create tag' search</source>
-      <translation>Paslēpt meklēšanu “atrast vai izveidot tagu”</translation>
+      <translation>Ẩn 'Tìm hoặc tạo thẻ' tìm kiếm</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5219"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5241"/>
       <source>Note subfolders panel</source>
-      <translation>Piezīme apakšmapes panelis</translation>
+      <translation>Bảng ghi chú con</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5225"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5247"/>
       <source>Show with full path</source>
-      <translation>Izrāde ar pilnu ceļu</translation>
+      <translation>Hiển thị với đường dẫn đầy đủ</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5245"/>
-      <location filename="../dialogs/settingsdialog.ui" line="5378"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5267"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5400"/>
       <source>By last change</source>
-      <translation>Ar pēdējām izmaiņām</translation>
+      <translation>Thay đổi cuối cùng</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5255"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5277"/>
       <source>Show root folder name</source>
-      <translation>Rādīt saknes mapes nosaukumu</translation>
+      <translation>Hiển thị tên thư mục gốc</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5285"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5307"/>
       <source>Hide 'Find or create note subfolder' search</source>
-      <translation>Slēpt meklēšanu “Atrast vai izveidot piezīmju apakšmapi”</translation>
+      <translation>Ẩn tìm kiếm 'Tìm hoặc tạo thư mục con'</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5292"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5314"/>
       <source>Display note subfolders as full tree</source>
-      <translation>Parādiet piezīmju apakšmapes kā pilnu koku</translation>
+      <translation>Hiển thị các thư mục con dưới dạng cây đầy đủ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2596"/>
       <source>Search script repository</source>
-      <translation>Meklēšanas skriptu krātuve</translation>
+      <translation>Tìm kiếm kho lưu trữ tập lệnh</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5005"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5027"/>
       <source>You optionally can use "%notePath%" for the path of the note.</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
-      <translation>Pēc izvēles jūs varat izmantot "%notePath%" piezīmes ceļam.</translation>
+      <translation>Bạn có thể tùy ý sử dụng "%notePath%" cho đường dẫn của ghi chú.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5028"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5050"/>
       <source>Git client</source>
-      <translation>Git klients</translation>
+      <translation>Khách hàng Git</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5044"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5066"/>
       <source>Path to git executable:</source>
-      <translation>Ceļš uz izpildāmu:</translation>
+      <translation>Đường dẫn đến git thực thi:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="5034"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5056"/>
       <source>Path to git client, leave empty for default</source>
-      <translation>Ceļš klienta sasniegšanai, pēc noklusējuma atstājiet tukšu</translation>
+      <translation>Đường dẫn đến git client, để trống cho mặc định</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4953"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4975"/>
       <source>Commit interval</source>
-      <translation>Saistības intervāls</translation>
+      <translation>Cam kết khoảng</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4959"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4981"/>
       <source>sec</source>
       <extracomment>seconds</extracomment>
-      <translation>sek</translation>
+      <translation>giây</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4979"/>
+      <location filename="../dialogs/settingsdialog.ui" line="5001"/>
       <source>git commit interval time [sec]</source>
-      <translation>git izdarīšanas intervāla laiks [sek]</translation>
+      <translation>thời gian cam kết git [giây]</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="914"/>
       <source>Open your ownCloud server &amp;Apps page</source>
-      <translation>Atveriet savu ownCloud servera &amp;lietotņu lapa</translation>
+      <translation>Mở trang ứng dụng và máy chủ của &amp;riêng bạn</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="227"/>
       <source>Preview</source>
-      <translation>Priekšskatījums</translation>
+      <translation>Xem trước</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="276"/>
       <source>Browser extension</source>
-      <translation>Pārlūka paplašinājums</translation>
+      <translation>Tiện ích mở rộng trình duyệt</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1745"/>
       <source>Which calendar backend do you want to use?</source>
-      <translation>Kurus kalendāra aizmugures failus vēlaties izmantot?</translation>
+      <translation>Bạn muốn sử dụng phụ trợ lịch nào?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1778"/>
       <source>For most current ownCloud and Nextcloud installations</source>
-      <translation>Lielākajai daļai pašreizējo “ownCloud” un “Nextcloud” instalāciju</translation>
+      <translation>Đối với hầu hết các cài đặt ownCloud và Nextcloud hiện tại</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1758"/>
       <source>For older versions of ownCloud where the default setting doesn't work</source>
-      <translation>Vecākām ownCloud versijām, kurās noklusējuma iestatījums nedarbojas</translation>
+      <translation>Đối với các phiên bản cũ hơn của ownCloud, nơi cài đặt mặc định không hoạt động</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1761"/>
       <source>Legacy ownCloud calendar</source>
-      <translation>Mantots ownCloud kalendārs</translation>
+      <translation>Lịch sở hữu riêng củaCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1794"/>
       <source>CalDAV server settings</source>
-      <translation>CalDAV servera iestatījumi</translation>
+      <translation>Cài đặt máy chủ CalDAV</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1803"/>
       <source>Calendar base url:</source>
-      <translation>Kalendāra bāzes Url:</translation>
+      <translation>Url cơ sở lịch:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1825"/>
       <source>Please enter the CalDAV base url to your calendar.</source>
-      <translation>Lūdzu, ievadiet CalDAV bāzes Url kalendārā.</translation>
+      <translation>Vui lòng nhập url cơ sở CalDAV vào lịch của bạn.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1895"/>
       <source>Please enter the password for your CalDAV username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.</source>
-      <translation>Lūdzu, ievadiet sava CalDAV lietotājvārda paroli. &lt;br/&gt; Pašlaik parole tiks saglabāta šifrētā veidā ar citiem iestatījumiem, taču tā nav ļoti droša.</translation>
+      <translation>Vui lòng nhập mật khẩu cho tên người dùng CalDAV của bạn. &lt;br/&gt; Hiện tại mật khẩu sẽ được lưu trữ được mã hóa với các cài đặt khác, nhưng không an toàn lắm.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2175"/>
       <source>Czech</source>
-      <translation type="unfinished">Czech</translation>
+      <translation>Séc</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2494"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2505"/>
       <source>Brazilian Portuguese</source>
-      <translation type="unfinished">Brazilian Portuguese</translation>
+      <translation>Tiếng Bồ Đào Nha Brazil</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2626"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2648"/>
       <source>Ukrainian</source>
-      <translation type="unfinished">Ukrainian</translation>
+      <translation>Tiếng Ukraina</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3554"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3576"/>
       <source>The name</source>
-      <translation type="unfinished">The name</translation>
+      <translation>Tên</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3651"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3673"/>
       <source>Maximum height:</source>
-      <translation type="unfinished">Maximum height:</translation>
+      <translation>Chiều cao tối đa:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3624"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3646"/>
       <source>Maximum width:</source>
-      <translation type="unfinished">Maximum width:</translation>
+      <translation>Chiều rộng tối đa:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3689"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3711"/>
       <source>Scale images down when inserted into notes</source>
-      <translation>Ievietojot piezīmēs, samaziniet attēlus</translation>
+      <translation>Thu nhỏ hình ảnh khi chèn vào ghi chú</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2340"/>
       <source>Croatian</source>
-      <translation>Horvātu</translation>
+      <translation>Tiếng Croatia</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3469"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3491"/>
       <source>Path to your QML file</source>
-      <translation>Ceļš uz jūsu QML failu</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3260"/>
-      <source>Script name</source>
-      <translation>Skripta nosaukums</translation>
+      <translation>Đường dẫn đến tệp QML của bạn</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3282"/>
+      <source>Script name</source>
+      <translation>Tên tập lệnh</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="3304"/>
       <source>Description:</source>
-      <translation>Apraksts:</translation>
+      <translation>Sự miêu tả:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3364"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3386"/>
       <source>Version:</source>
-      <translation>Versija:</translation>
+      <translation type="unfinished">Version:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3325"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3347"/>
       <source>Repository:</source>
-      <translation>Repozitorijs:</translation>
+      <translation type="unfinished">Repository:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3302"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3324"/>
       <source>Author(s):</source>
-      <translation>Autors(-i):</translation>
+      <translation type="unfinished">Author(s):</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3716"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3738"/>
       <source>Check this if you want to accept all external modifications while you are editing the current note.</source>
-      <translation>Atzīmējiet šo, ja pašreizējās piezīmes rediģēšanas laikā vēlaties pieņemt visas ārējās modifikācijas.</translation>
+      <translation type="unfinished">Check this if you want to accept all external modifications while you are editing the current note.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3719"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3741"/>
       <source>Accept all external modifications of the current note</source>
-      <translation>Pieņemiet visas pašreizējās piezīmes ārējās modifikācijas</translation>
+      <translation type="unfinished">Accept all external modifications of the current note</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3778"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3800"/>
       <source>Use UNIX newline instead of native newline characters</source>
-      <translation>Vietējo Newline rakstzīmju vietā izmantojiet UNIX newline</translation>
+      <translation type="unfinished">Use UNIX newline instead of native newline characters</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3748"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3770"/>
       <source>Restore cursor position when opening a note</source>
-      <translation>Atjaunot kursora pozīciju, atverot piezīmi</translation>
+      <translation type="unfinished">Restore cursor position when opening a note</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4096"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4118"/>
       <source>Be warned that this will also remove your cached todo items and configured note folders and scripts!</source>
-      <translation>Brīdinām, ka tādējādi tiks noņemti arī kešatmiņā saglabātie uzdevumu vienumi un konfigurētās piezīmju mapes un skripti!</translation>
+      <translation type="unfinished">Be warned that this will also remove your cached todo items and configured note folders and scripts!</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4580"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4602"/>
       <source>Apply toolbar configuration</source>
-      <translation>Lietot rīkjoslas konfigurāciju</translation>
+      <translation type="unfinished">Apply toolbar configuration</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4594"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4616"/>
       <source>Reset toolbars</source>
-      <translation>Reset rīkjoslas</translation>
+      <translation type="unfinished">Reset toolbars</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4622"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4644"/>
       <source>Enable logging to file</source>
-      <translation>Iespējot reģistrēšanu failā</translation>
+      <translation type="unfinished">Enable logging to file</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4629"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4651"/>
       <source>Clear log file</source>
-      <translation>Notīrīt žurnālfailu</translation>
+      <translation type="unfinished">Clear log file</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4640"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4662"/>
       <source>Fake old version number to trigger update</source>
-      <translation>Viltus vecās versijas numurs, lai sāktu atjaunināšanu</translation>
+      <translation type="unfinished">Fake old version number to trigger update</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4668"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4690"/>
       <source>Log file path:</source>
-      <translation>Žurnāla faila ceļš:</translation>
+      <translation type="unfinished">Log file path:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4730"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4752"/>
       <source>Here you can set your own time format for inserting the current time into a note.</source>
-      <translation>Šeit jūs varat iestatīt savu laika formātu pašreizējā laika ievietošanai piezīmē.</translation>
+      <translation type="unfinished">Here you can set your own time format for inserting the current time into a note.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4733"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4755"/>
       <source>Insert current time</source>
-      <translation>Ievietot pašreizējo laiku</translation>
+      <translation type="unfinished">Insert current time</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4739"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4761"/>
       <source>Time format:</source>
       <translation type="unfinished">Time format:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4746"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4768"/>
       <source>Enter your custom time format, like "dd.MM.yyyy hh:mm"</source>
       <translation type="unfinished">Enter your custom time format, like "dd.MM.yyyy hh:mm"</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4822"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4844"/>
       <source>Editor options</source>
       <translation type="unfinished">Editor options</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4835"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4857"/>
       <source>Enable automatic closing of brackets and markdown formatting characters</source>
       <translation type="unfinished">Enable automatic closing of brackets and markdown formatting characters</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4889"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4911"/>
       <source>You have to use the backspace key to remove the opening character</source>
       <translation type="unfinished">You have to use the backspace key to remove the opening character</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4892"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4914"/>
       <source>Enable automatic removal of matching closing characters</source>
       <translation type="unfinished">Enable automatic removal of matching closing characters</translation>
     </message>
@@ -5933,231 +5921,231 @@ Vienkārši pārbaudiet sevi, ja rodas sinhronizācijas konflikti, un iestatiet 
       <translation type="unfinished">&amp;Reload calendar list</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2724"/>
-      <location filename="../dialogs/settingsdialog.ui" line="2834"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2746"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2856"/>
       <source>You may need to restart the application to let these changes take effect</source>
-      <translation>Lai šīs izmaiņas stātos spēkā, iespējams, jums būs jārestartē programma</translation>
+      <translation type="unfinished">You may need to restart the application to let these changes take effect</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2869"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2891"/>
       <source>Toolbar icon size:</source>
-      <translation>Rīkjoslas ikonas lielums:</translation>
+      <translation type="unfinished">Toolbar icon size:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2859"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2881"/>
       <source>List and tree item height:</source>
-      <translation>Sarakstu un koku augstums:</translation>
+      <translation type="unfinished">List and tree item height:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2892"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2914"/>
       <source>Reset the icon size</source>
-      <translation>Atiestatīt ikonas lielumu</translation>
+      <translation type="unfinished">Reset the icon size</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2906"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2928"/>
       <source>Reset the item height</source>
-      <translation>Atiestatiet preces augstumu</translation>
+      <translation type="unfinished">Reset the item height</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4511"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4533"/>
       <source>View text right to left (RTL)</source>
-      <translation>Skatīt tekstu no labās uz kreiso (RTL)</translation>
+      <translation type="unfinished">View text right to left (RTL)</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3030"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3052"/>
       <source>Search for shortcut</source>
-      <translation>Meklēt saīsni</translation>
+      <translation type="unfinished">Search for shortcut</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1991"/>
       <source>Ignore calendars that don't support todo items</source>
-      <translation>Ignorējiet tos kalendārus, kuri neatbalsta uzdevumu vienumus</translation>
+      <translation>Bỏ qua các lịch không hỗ trợ các mục việc cần làm</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2670"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2692"/>
       <source>Arabic</source>
-      <translation>Arābu</translation>
+      <translation type="unfinished">Arabic</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2808"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2830"/>
       <source>Icons</source>
-      <translation>Ikonas</translation>
+      <translation type="unfinished">Icons</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2817"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2839"/>
       <source>Use internal icon theme instead of system icon theme</source>
-      <translation>Izmantojiet iekšējās ikonas motīvu, nevis sistēmas ikonas motīvu</translation>
+      <translation>Sử dụng chủ đề biểu tượng nội bộ thay vì chủ đề biểu tượng hệ thống</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3418"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3440"/>
       <source>Script path:</source>
-      <translation>Skripta ceļš:</translation>
+      <translation>Đường dẫn kịch bản:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="739"/>
       <source>Note folder name</source>
-      <translation>Piezīmes mapes nosaukums</translation>
+      <translation>Lưu ý tên thư mục</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3709"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3731"/>
       <source>Allow note file name to be different from headline</source>
-      <translation>Ļaut piezīmju faila nosaukumam atšķirties no virsraksta</translation>
+      <translation>Cho phép tên tệp ghi chú khác với tiêu đề</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3696"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3718"/>
       <source>Check this if you want to ignore all external modifications while you are editing the current note.</source>
-      <translation>Atzīmējiet šo, ja pašreizējās piezīmes rediģēšanas laikā vēlaties ignorēt visas ārējās modifikācijas.</translation>
+      <translation>Kiểm tra điều này nếu bạn muốn bỏ qua tất cả các sửa đổi bên ngoài trong khi bạn đang chỉnh sửa ghi chú hiện tại.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3699"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3721"/>
       <source>Ignore all external modifications of the current note</source>
-      <translation>Ignorējiet visas pašreizējās piezīmes ārējās modifikācijas</translation>
+      <translation>Bỏ qua tất cả các sửa đổi bên ngoài của ghi chú hiện tại</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3775"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3797"/>
       <source>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</source>
-      <translation>To var izmantot, piemēram, operētājsistēmā Windows, ja rodas problēmas ar jaunām rindiņām lietotnē ownCloud / Nextcloud</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3808"/>
-      <source>App instance</source>
-      <translation>Lietotnes piemērs</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3814"/>
-      <source>Only allow one app instance at the same time</source>
-      <translation>Vienlaicīgi atļaut tikai vienu lietotnes gadījumu</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3910"/>
-      <source>Add a custom file extension</source>
-      <translation>Pievienojiet pielāgotu faila paplašinājumu</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3924"/>
-      <source>Remove a custom file extension</source>
-      <translation>Noņemiet pielāgotu faila paplašinājumu</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3963"/>
-      <source>If you add custom extensions just type in the extension, like "taskpaper".</source>
-      <translation>Ja pievienojat pielāgotus paplašinājumus, vienkārši ierakstiet paplašinājumu, piemēram, “taskpaper”.</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3967"/>
-      <source>Text file (txt)</source>
-      <translation>Teksta fails (txt)</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3995"/>
-      <source>Path to external editor:</source>
-      <translation>Ceļš uz ārējo redaktoru:</translation>
+      <translation>Bạn có thể sử dụng ví dụ này trong Windows nếu bạn gặp rắc rối với các dòng mới trong ứng dụng ghi chú ownCloud / Nextcloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3830"/>
+      <source>App instance</source>
+      <translation>Ví dụ ứng dụng</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="3836"/>
+      <source>Only allow one app instance at the same time</source>
+      <translation>Chỉ cho phép một phiên bản ứng dụng cùng một lúc</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="3932"/>
+      <source>Add a custom file extension</source>
+      <translation>Thêm phần mở rộng tập tin tùy chỉnh</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="3946"/>
+      <source>Remove a custom file extension</source>
+      <translation>Xóa phần mở rộng tập tin tùy chỉnh</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="3985"/>
+      <source>If you add custom extensions just type in the extension, like "taskpaper".</source>
+      <translation>Nếu bạn thêm tiện ích mở rộng tùy chỉnh, chỉ cần nhập vào tiện ích mở rộng, như "giấy tờ nhiệm vụ".</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="3989"/>
+      <source>Text file (txt)</source>
+      <translation>Tệp văn bản (txt)</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="4017"/>
+      <source>Path to external editor:</source>
+      <translation>Đường dẫn đến trình soạn thảo bên ngoài:</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="3852"/>
       <source>Don't show the update dialog automatically</source>
-      <translation>Automātiski nerādīt atjaunināšanas dialogu</translation>
+      <translation>Không tự động hiển thị hộp thoại cập nhật</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4260"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4415"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4282"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4437"/>
       <source>Fonts</source>
-      <translation>Fonti</translation>
+      <translation>Phông chữ</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4283"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4325"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4421"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4473"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4305"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4347"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4443"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4495"/>
       <source>Set a new font</source>
-      <translation>Iestatiet jaunu fontu</translation>
+      <translation>Đặt một phông chữ mới</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4294"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4339"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4435"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4459"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4316"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4361"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4457"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4481"/>
       <source>Reset font</source>
-      <translation>Atiestatīt fontu</translation>
+      <translation>Đặt lại phông chữ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="336"/>
       <source>Debug</source>
-      <translation>Atkļūdošana</translation>
+      <translation>Gỡ lỗi</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4147"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4169"/>
       <source>Debug information</source>
-      <translation>Atkļūdošanas informācija</translation>
+      <translation>Thông tin gỡ lỗi</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4190"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4212"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4166"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4188"/>
       <source>&amp;Save debug information</source>
       <translation type="unfinished">&amp;Save debug information</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="454"/>
       <source>hostname of proxy server</source>
-      <translation>starpniekservera resursdators</translation>
+      <translation>tên máy chủ của máy chủ proxy</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="455"/>
       <source>username for proxy server</source>
-      <translation>starpniekservera lietotājvārds</translation>
+      <translation>tên người dùng cho máy chủ proxy</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="456"/>
       <source>password for proxy server</source>
-      <translation>parole starpniekserverim</translation>
+      <translation>mật khẩu cho máy chủ proxy</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="458"/>
       <source>HTTP(S) proxy</source>
-      <translation>HTTP(S) starpniekserveris</translation>
+      <translation>Proxy HTTP(S)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="459"/>
       <source>SOCKS5 proxy</source>
-      <translation>SOCKS5 starpniekserveris</translation>
+      <translation>SOCKS5 proxy</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1315"/>
       <source>Automatic (needs restart)</source>
-      <translation>Automātiska (nepieciešama restartēšana)</translation>
+      <translation>Tự động (cần khởi động lại)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1481"/>
       <source>Undefined key</source>
-      <translation>Nedefinēta atslēga</translation>
+      <translation>Khóa không xác định</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1486"/>
       <source>Assign a new key</source>
-      <translation>Piešķiriet jaunu atslēgu</translation>
+      <translation>Gán một khóa mới</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1487"/>
       <source>Reset to default key</source>
-      <translation>Atiestatīt uz noklusējuma taustiņu</translation>
+      <translation>Đặt lại về khóa mặc định</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1557"/>
       <source>Shortcut already assigned</source>
-      <translation>Saīsne jau ir piešķirta</translation>
+      <translation>Phím tắt đã được chỉ định</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1734"/>
       <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
-      <translation>Savienojums tika izveidots veiksmīgi!
-Servera versija: %1
-QOwnNotesAPI versija: %2</translation>
+      <translation>Kết nối đã được thực hiện thành công!
+Phiên bản máy chủ: %1
+Phiên bản QOwnNotesAPI: %2</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1746"/>
@@ -6165,60 +6153,60 @@ QOwnNotesAPI versija: %2</translation>
 You also need to have the QOwnNotesAPI app installed and enabled!
 
 Connection error message: </source>
-      <translation>Veidojot savienojumu ar ownCloud serveri, radās kļūda.
-Jums arī jābūt instalētai un iespējotai lietotnei QOwnNotesAPI!
+      <translation>Đã xảy ra lỗi khi kết nối với máy chủ ownCloud!
+Bạn cũng cần cài đặt và bật ứng dụng QOwnNotesAPI!
 
-Savienojuma kļūdas ziņojums:</translation>
+Thông báo lỗi kết nối: </translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2033"/>
       <source>Markdown files</source>
-      <translation>Atzīmju faili</translation>
+      <translation>Tập tin đánh dấu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2060"/>
       <source>Disable usage tracking</source>
-      <translation>Atspējot lietojuma izsekošanu</translation>
+      <translation>Vô hiệu hóa theo dõi sử dụng</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2061"/>
       <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
-      <translation>Anonīmi lietojuma dati palīdz izlemt, kuras QOwnNotes daļas uzlabot, kā arī atrast un novērst kļūdas. &lt;br /&gt; Lūdzu, atspējojiet to tikai tad, ja tiešām nevarat dzīvot ar to. &lt;br /&gt; &lt;br /&gt; Patiešām atspējojiet lietošanas izsekošanu?</translation>
+      <translation>Dữ liệu sử dụng ẩn danh giúp quyết định phần nào của QOwnNote sẽ cải thiện tiếp theo cũng như tìm và sửa lỗi. &lt;br /&gt; Vui lòng vô hiệu hóa nó chỉ khi bạn thực sự không thể sống với nó. &lt;br /&gt; &lt;br/&gt; Thực sự vô hiệu hóa theo dõi sử dụng?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2283"/>
       <source>new folder</source>
-      <translation>jauna mape</translation>
+      <translation>thư mục mới</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2319"/>
       <source>Remove note folder</source>
-      <translation>Noņemt piezīmju mapi</translation>
+      <translation>Xóa thư mục ghi chú</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2320"/>
       <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation type="unfinished">Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+      <translation>Xóa thư mục ghi chú hiện tại &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2395"/>
       <source>Please select the folder where your notes will get stored to</source>
-      <translation type="unfinished">Please select the folder where your notes will get stored to</translation>
+      <translation>Vui lòng chọn thư mục nơi ghi chú của bạn sẽ được lưu trữ vào</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2432"/>
       <source>Loading folders from server</source>
-      <translation type="unfinished">Loading folders from server</translation>
+      <translation>Đang tải thư mục từ máy chủ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2446"/>
       <source>No more folders were found in the current folder</source>
-      <translation type="unfinished">No more folders were found in the current folder</translation>
+      <translation>Không có thêm thư mục được tìm thấy trong thư mục hiện tại</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2519"/>
       <source>Loading folders in '%1' from server</source>
-      <translation type="unfinished">Loading folders in '%1' from server</translation>
+      <translation>Đang tải các thư mục trong '%1' từ máy chủ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2583"/>
@@ -6228,12 +6216,12 @@ Savienojuma kļūdas ziņojums:</translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2585"/>
       <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
-      <translation type="unfinished">If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</translation>
+      <translation>Nếu bạn cần quyền truy cập vào một chức năng nhất định trong QOwnNotes, vui lòng mở một vấn đề trên trang vấn đề &lt;a href="%1"&gt; QOwnNotes &lt;/a&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2606"/>
       <source>Check for script updates</source>
-      <translation type="unfinished">Check for script updates</translation>
+      <translation>Kiểm tra cập nhật tập lệnh</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2613"/>
@@ -6246,239 +6234,239 @@ Savienojuma kļūdas ziņojums:</translation>
       <translation type="unfinished">Add an existing, local script</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3689"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3746"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3694"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3751"/>
       <source>INI files</source>
       <translation type="unfinished">INI files</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3725"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3730"/>
       <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
       <translation type="unfinished">Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3735"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3740"/>
       <source>The application will be quit after the import.</source>
       <translation type="unfinished">The application will be quit after the import.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3736"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3741"/>
       <source>The application will be restarted after the import.</source>
       <translation type="unfinished">The application will be restarted after the import.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2600"/>
       <source>Find a script in the script repository</source>
-      <translation type="unfinished">Find a script in the script repository</translation>
+      <translation>Tìm một tập lệnh trong kho lưu trữ tập lệnh</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="262"/>
       <source>Menu bar</source>
-      <translation type="unfinished">Menu bar</translation>
+      <translation>Thanh menu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="263"/>
       <source>Show menu bar item</source>
-      <translation type="unfinished">Show menu bar item</translation>
+      <translation>Hiển thị mục thanh menu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1558"/>
       <source>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</source>
-      <translation type="unfinished">The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</translation>
+      <translation>Phím tắt &lt;strong&gt;%1 &lt;/ strong&gt; đã được gán cho &lt;strong&gt;%2 &lt;/ strong&gt;! Bạn có muốn nhảy đến phím tắt?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2696"/>
       <source>Remove script</source>
-      <translation type="unfinished">Remove script</translation>
+      <translation>Xóa tập lệnh</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2697"/>
       <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation type="unfinished">Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+      <translation>Xóa tập lệnh hiện tại &lt;strong&gt;%1&lt;/ strong&gt;?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2748"/>
       <source>QML files</source>
-      <translation type="unfinished">QML files</translation>
+      <translation>Tệp QML</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2749"/>
       <source>Please select your QML file</source>
-      <translation type="unfinished">Please select your QML file</translation>
+      <translation>Vui lòng chọn tệp QML của bạn</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2838"/>
       <source>Open repository</source>
-      <translation type="unfinished">Open repository</translation>
+      <translation>Mở kho</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2898"/>
       <source>Your script seems to be valid</source>
-      <translation type="unfinished">Your script seems to be valid</translation>
+      <translation>Kịch bản của bạn có vẻ hợp lệ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2899"/>
       <source>There were script errors:
 %1</source>
-      <translation type="unfinished">There were script errors:
+      <translation>Có lỗi tập lệnh:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2968"/>
       <source>File extension</source>
-      <translation type="unfinished">File extension</translation>
+      <translation>Phần mở rộng tập tin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2969"/>
       <source>Enter your custom file extension:</source>
-      <translation>Ievadiet pielāgoto faila paplašinājumu:</translation>
+      <translation>Nhập phần mở rộng tập tin tùy chỉnh của bạn:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3265"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3270"/>
       <source>Calendar cache emptied</source>
-      <translation>Kalendāra kešatmiņa ir iztukšota</translation>
+      <translation>Lịch trống</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3266"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3271"/>
       <source>Your calendar cache was emptied.</source>
-      <translation>Jūsu kalendāra kešatmiņa tika iztukšota.</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3344"/>
-      <source>Reset toolbars and exit</source>
-      <translation>Reset rīkjoslas un izejiet</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3345"/>
-      <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
-      <translation>Vai tiešām vēlaties atiestatīt visas rīkjoslas? Lietojumprogramma šajā procesā tiks aizvērta, noklusējuma rīkjoslas tiks atjaunotas, startējot to no jauna.</translation>
+      <translation>Bộ nhớ cache lịch của bạn đã được làm trống.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3349"/>
+      <source>Reset toolbars and exit</source>
+      <translation>Đặt lại thanh công cụ và thoát</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.cpp" line="3350"/>
+      <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
+      <translation>Bạn có thực sự muốn thiết lập lại tất cả các thanh công cụ? Ứng dụng sẽ được đóng trong quá trình, các thanh công cụ mặc định sẽ được khôi phục khi bạn khởi động lại.</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.cpp" line="3354"/>
       <source>Reset and &amp;exit</source>
-      <translation>Atiestatīt un &amp;iziet</translation>
+      <translation>Đặt &amp;lại và thoát</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3511"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3516"/>
       <source>Log file cleared</source>
-      <translation>Žurnāla fails ir notīrīts</translation>
+      <translation>Xóa tệp nhật ký</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3512"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3517"/>
       <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
-      <translation>Žurnāla fails &lt;strong&gt;%1 &lt;/strong&gt; tika notīrīts.</translation>
+      <translation>Tệp nhật ký &lt;strong&gt;%1&lt;/ strong&gt; đã bị xóa.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3548"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3553"/>
       <source>Executable files</source>
-      <translation>Izpildāmie faili</translation>
+      <translation>Các tập tin thực thi</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3549"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3551"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3554"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3556"/>
       <source>All files</source>
-      <translation>Visi faili</translation>
+      <translation>Tất cả các tập tin</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3559"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3564"/>
       <source>Please select the path of your git executable</source>
-      <translation>Lūdzu, atlasiet sava izpildāmā git ceļu</translation>
+      <translation>Vui lòng chọn đường dẫn thực thi git của bạn</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3659"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3664"/>
       <source>Do you really want to reset the overrides of all message boxes?</source>
-      <translation>Vai tiešām vēlaties atiestatīt visu ziņojumu lodziņu ignorēšanu?</translation>
+      <translation>Bạn có thực sự muốn đặt lại phần ghi đè của tất cả các hộp thông báo không?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2021"/>
       <source>The Database was reinitialized.</source>
-      <translation>Datubāze tika atkārtoti inicializēta.</translation>
+      <translation>Cơ sở dữ liệu đã được khởi tạo lại.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="89"/>
       <source>New script</source>
-      <translation>Jauns skripts</translation>
+      <translation>Kịch bản mới</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="92"/>
       <source>You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</source>
-      <translation>Jūs varat lejupielādēt savu Git klientu šeit: &lt;a href="%url"&gt; Git operētājsistēmai Windows &lt;/a&gt;</translation>
+      <translation>Bạn có thể tải xuống ứng dụng khách git của mình tại đây: &lt;a href="%url"&gt; Git cho Windows &lt;/a&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="413"/>
       <source>enabled</source>
-      <translation>iespējots</translation>
+      <translation>kích hoạt</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="413"/>
       <source>disabled</source>
-      <translation>invalīds</translation>
+      <translation>tàn tật</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="416"/>
       <source>Portable mode is currently:</source>
-      <translation>Portatīvais režīms pašlaik ir:</translation>
+      <translation>Chế độ di động hiện tại:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="419"/>
       <source>In portable mode</source>
-      <translation>Pārnēsājamā režīmā</translation>
+      <translation>Ở chế độ di động</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="420"/>
       <source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary's location</source>
-      <translation>iekšējā sqlite datu bāze un iestatījumi tiks saglabāti mapē &lt;code&gt; Dati &lt;/code&gt; binārā vietā</translation>
+      <translation>cơ sở dữ liệu sqlite nội bộ và các cài đặt sẽ được lưu trữ trong thư mục &lt;code&gt; Dữ liệu &lt;/ code&gt; tại vị trí của tệp nhị phân</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="423"/>
       <source>the settings will be stored in an ini file</source>
-      <translation>iestatījumi tiks saglabāti ini failā</translation>
+      <translation>các cài đặt sẽ được lưu trong tập tin ini</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="424"/>
       <source>the note folders, script paths and path to an external editor will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders, scripts and external editor will be loaded regardless where your QOwnNotes installation is currently located</source>
-      <translation>piezīmju mapes, skriptu ceļi un ceļš uz ārēju redaktoru tiks automātiski saglabāti salīdzinājumā ar mapi &lt;code&gt; Dati &lt;/code&gt;, lai pareizās piezīmju mapes, skripti un ārējais redaktors tiktu ielādēti neatkarīgi no tā, kur pašlaik atrodas jūsu QOwnNotes instalācija</translation>
+      <translation>các thư mục ghi chú, đường dẫn tập lệnh và đường dẫn đến trình soạn thảo bên ngoài sẽ được lưu trữ tự động liên quan đến thư mục &lt;code&gt; Dữ liệu &lt;/ code&gt; để các thư mục ghi chú, tập lệnh và trình soạn thảo bên ngoài sẽ được tải bất kể vị trí cài đặt QOwnNotes của bạn</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="432"/>
       <source>It will be activated if you run QOwnNotes with the parameter &lt;code&gt;--portable&lt;/code&gt;.</source>
-      <translation>Tas tiks aktivizēts, ja darbināsit QOwnNotes ar parametru &lt;code&gt; - pārnēsājams &lt;/code&gt;.</translation>
+      <translation>Nó sẽ được kích hoạt nếu bạn chạy QOwnNotes với tham số &lt;code&gt; Portable &lt;/ code&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2034"/>
       <source>Save debug information</source>
-      <translation>Saglabājiet atkļūdošanas informāciju</translation>
+      <translation>Lưu thông tin gỡ lỗi</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2081"/>
       <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
-      <translation>Vai tiešām vēlaties notīrīt visus iestatījumus, noņemt datu bāzi un iziet no QOwnNotes?
+      <translation>Bạn có thực sự muốn xóa tất cả các cài đặt, xóa cơ sở dữ liệu và thoát QOwnNotes không?
 
-Jūsu piezīmes paliks neskartas!</translation>
+Ghi chú của bạn sẽ được giữ nguyên!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2084"/>
       <source>Clear and &amp;exit</source>
-      <translation>Notīriet un &amp;izejiet</translation>
+      <translation type="unfinished">Clear and &amp;exit</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2015"/>
       <location filename="../dialogs/settingsdialog.cpp" line="2084"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3349"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3354"/>
       <source>&amp;Cancel</source>
-      <translation>&amp;Atcelt</translation>
+      <translation type="unfinished">&amp;Cancel</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="437"/>
       <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
-      <translation>Lai sāktu QOwnNotes pārnēsājamā režīmā, atbrīvošanas ceļā atradīsit &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt;.</translation>
+      <translation>Bạn sẽ tìm thấy &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt; trong đường dẫn phát hành của mình để bắt đầu QOwnNotes ở chế độ di động.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2012"/>
       <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
-      <translation>Vai tiešām vēlaties notīrīt vietējo datu bāzi? Tādējādi tiks noņemtas arī konfigurētās piezīmju mapes un kešatmiņā saglabātie uzdevumu vienumi!</translation>
+      <translation>Bạn có thực sự muốn xóa cơ sở dữ liệu địa phương? Điều này cũng sẽ loại bỏ các thư mục ghi chú được cấu hình của bạn và các mục việc cần lưu trong bộ nhớ cache của bạn!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2015"/>
@@ -6488,7 +6476,7 @@ Jūsu piezīmes paliks neskartas!</translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2195"/>
       <source>Select editor application</source>
-      <translation>Atlasiet redaktora lietojumprogrammu</translation>
+      <translation>Chọn ứng dụng biên tập</translation>
     </message>
   </context>
   <context>
@@ -6496,173 +6484,173 @@ Jūsu piezīmes paliks neskartas!</translation>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="20"/>
       <source>Share note</source>
-      <translation>Kopīgot piezīmi</translation>
+      <translation>Chia sẻ lưu ý</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="40"/>
       <source>Share note on ownCloud</source>
-      <translation>Kopīgojiet piezīmi vietnē ownCloud</translation>
+      <translation>Chia sẻ ghi chú trên ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="73"/>
       <source>Allow note editing</source>
-      <translation>Atļaut piezīmju rediģēšanu</translation>
+      <translation>Cho phép chỉnh sửa ghi chú</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="30"/>
       <source>The public url of your note</source>
-      <translation>Jūsu piezīmes publiskais Url</translation>
+      <translation>Url công khai ghi chú của bạn</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="47"/>
       <source>Publicly share the current note file on your ownCloud server. You can send the generated link to others so they can view or download the file.</source>
-      <translation>Publiski kopīgojiet pašreizējo piezīmju failu savā ownCloud serverī. Ģenerēto saiti var nosūtīt citiem, lai viņi varētu apskatīt vai lejupielādēt failu.</translation>
+      <translation>Chia sẻ công khai tệp ghi chú hiện tại trên máy chủ của riêng bạn. Bạn có thể gửi liên kết được tạo cho người khác để họ có thể xem hoặc tải xuống tệp.</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.cpp" line="65"/>
       <source>Keep in mind that you still have to sync your notes with your server by using the ownCloud desktop sync tool to be able to share notes with others!</source>
-      <translation>Ņemiet vērā, ka jums joprojām ir jāsinhronizē piezīmes ar serveri, izmantojot ownCloud darbvirsmas sinhronizācijas rīku, lai varētu koplietot piezīmes ar citiem!</translation>
+      <translation>Hãy nhớ rằng bạn vẫn phải đồng bộ hóa ghi chú của mình với máy chủ bằng cách sử dụng công cụ đồng bộ hóa máy tính để bàn ownCloud để có thể chia sẻ ghi chú với người khác!</translation>
     </message>
   </context>
   <context>
     <name>Sonnet::Loader</name>
     <message>
-      <location filename="../libraries/sonnet/src/core/loader.cpp" line="196"/>
+      <location filename="../libraries/sonnet/src/core/loader.cpp" line="214"/>
       <source>40</source>
       <comment>dictionary variant</comment>
-      <translation>40</translation>
-    </message>
-    <message>
-      <location filename="../libraries/sonnet/src/core/loader.cpp" line="197"/>
-      <source>60</source>
-      <comment>dictionary variant</comment>
-      <translation>60</translation>
-    </message>
-    <message>
-      <location filename="../libraries/sonnet/src/core/loader.cpp" line="198"/>
-      <source>80</source>
-      <comment>dictionary variant</comment>
-      <translation>80</translation>
-    </message>
-    <message>
-      <location filename="../libraries/sonnet/src/core/loader.cpp" line="199"/>
-      <source>-ise suffixes</source>
-      <comment>dictionary variant</comment>
-      <translation>-ise sufiksi</translation>
-    </message>
-    <message>
-      <location filename="../libraries/sonnet/src/core/loader.cpp" line="200"/>
-      <source>-ize suffixes</source>
-      <comment>dictionary variant</comment>
-      <translation>-ize sufiksi</translation>
-    </message>
-    <message>
-      <location filename="../libraries/sonnet/src/core/loader.cpp" line="201"/>
-      <source>-ise suffixes and with accents</source>
-      <comment>dictionary variant</comment>
-      <translation>-ise sufiksi un ar diakritiskajām</translation>
-    </message>
-    <message>
-      <location filename="../libraries/sonnet/src/core/loader.cpp" line="203"/>
-      <source>-ise suffixes and without accents</source>
-      <comment>dictionary variant</comment>
-      <translation>-ise sufiksi un bez akcentiem</translation>
-    </message>
-    <message>
-      <location filename="../libraries/sonnet/src/core/loader.cpp" line="206"/>
-      <source>-ize suffixes and with accents</source>
-      <comment>dictionary variant</comment>
-      <translation>-ize sufiksi un ar diakritiskajām</translation>
-    </message>
-    <message>
-      <location filename="../libraries/sonnet/src/core/loader.cpp" line="208"/>
-      <source>-ize suffixes and without accents</source>
-      <comment>dictionary variant</comment>
-      <translation>-ize sufiksi un bez akcentiem</translation>
-    </message>
-    <message>
-      <location filename="../libraries/sonnet/src/core/loader.cpp" line="211"/>
-      <source>large</source>
-      <comment>dictionary variant</comment>
-      <translation>lieli</translation>
-    </message>
-    <message>
-      <location filename="../libraries/sonnet/src/core/loader.cpp" line="212"/>
-      <source>medium</source>
-      <comment>dictionary variant</comment>
-      <translation>medium</translation>
-    </message>
-    <message>
-      <location filename="../libraries/sonnet/src/core/loader.cpp" line="213"/>
-      <source>small</source>
-      <comment>dictionary variant</comment>
-      <translation>mazs</translation>
-    </message>
-    <message>
-      <location filename="../libraries/sonnet/src/core/loader.cpp" line="214"/>
-      <source>variant 0</source>
-      <comment>dictionary variant</comment>
-      <translation>0 variants</translation>
+      <translation type="unfinished">40</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="215"/>
-      <source>variant 1</source>
+      <source>60</source>
       <comment>dictionary variant</comment>
-      <translation>1 variants</translation>
+      <translation type="unfinished">60</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="216"/>
-      <source>variant 2</source>
+      <source>80</source>
       <comment>dictionary variant</comment>
-      <translation>2 variants</translation>
+      <translation type="unfinished">80</translation>
+    </message>
+    <message>
+      <location filename="../libraries/sonnet/src/core/loader.cpp" line="217"/>
+      <source>-ise suffixes</source>
+      <comment>dictionary variant</comment>
+      <translation type="unfinished">-ise suffixes</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="218"/>
-      <source>without accents</source>
+      <source>-ize suffixes</source>
       <comment>dictionary variant</comment>
-      <translation>bez akcentiem</translation>
+      <translation type="unfinished">-ize suffixes</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="219"/>
-      <source>with accents</source>
+      <source>-ise suffixes and with accents</source>
       <comment>dictionary variant</comment>
-      <translation>ar akcentiem</translation>
+      <translation type="unfinished">-ise suffixes and with accents</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="221"/>
-      <source>with ye, modern russian</source>
+      <source>-ise suffixes and without accents</source>
       <comment>dictionary variant</comment>
-      <translation>ar ye, mūsdienu krievu</translation>
+      <translation type="unfinished">-ise suffixes and without accents</translation>
     </message>
     <message>
-      <location filename="../libraries/sonnet/src/core/loader.cpp" line="223"/>
+      <location filename="../libraries/sonnet/src/core/loader.cpp" line="224"/>
+      <source>-ize suffixes and with accents</source>
+      <comment>dictionary variant</comment>
+      <translation type="unfinished">-ize suffixes and with accents</translation>
+    </message>
+    <message>
+      <location filename="../libraries/sonnet/src/core/loader.cpp" line="226"/>
+      <source>-ize suffixes and without accents</source>
+      <comment>dictionary variant</comment>
+      <translation type="unfinished">-ize suffixes and without accents</translation>
+    </message>
+    <message>
+      <location filename="../libraries/sonnet/src/core/loader.cpp" line="229"/>
+      <source>large</source>
+      <comment>dictionary variant</comment>
+      <translation type="unfinished">large</translation>
+    </message>
+    <message>
+      <location filename="../libraries/sonnet/src/core/loader.cpp" line="230"/>
+      <source>medium</source>
+      <comment>dictionary variant</comment>
+      <translation type="unfinished">medium</translation>
+    </message>
+    <message>
+      <location filename="../libraries/sonnet/src/core/loader.cpp" line="231"/>
+      <source>small</source>
+      <comment>dictionary variant</comment>
+      <translation type="unfinished">small</translation>
+    </message>
+    <message>
+      <location filename="../libraries/sonnet/src/core/loader.cpp" line="232"/>
+      <source>variant 0</source>
+      <comment>dictionary variant</comment>
+      <translation type="unfinished">variant 0</translation>
+    </message>
+    <message>
+      <location filename="../libraries/sonnet/src/core/loader.cpp" line="233"/>
+      <source>variant 1</source>
+      <comment>dictionary variant</comment>
+      <translation type="unfinished">variant 1</translation>
+    </message>
+    <message>
+      <location filename="../libraries/sonnet/src/core/loader.cpp" line="234"/>
+      <source>variant 2</source>
+      <comment>dictionary variant</comment>
+      <translation type="unfinished">variant 2</translation>
+    </message>
+    <message>
+      <location filename="../libraries/sonnet/src/core/loader.cpp" line="236"/>
+      <source>without accents</source>
+      <comment>dictionary variant</comment>
+      <translation type="unfinished">without accents</translation>
+    </message>
+    <message>
+      <location filename="../libraries/sonnet/src/core/loader.cpp" line="237"/>
+      <source>with accents</source>
+      <comment>dictionary variant</comment>
+      <translation type="unfinished">with accents</translation>
+    </message>
+    <message>
+      <location filename="../libraries/sonnet/src/core/loader.cpp" line="239"/>
+      <source>with ye, modern russian</source>
+      <comment>dictionary variant</comment>
+      <translation type="unfinished">with ye, modern russian</translation>
+    </message>
+    <message>
+      <location filename="../libraries/sonnet/src/core/loader.cpp" line="241"/>
       <source>with yeyo, modern and old russian</source>
       <comment>dictionary variant</comment>
       <translation type="unfinished">with yeyo, modern and old russian</translation>
     </message>
     <message>
-      <location filename="../libraries/sonnet/src/core/loader.cpp" line="226"/>
+      <location filename="../libraries/sonnet/src/core/loader.cpp" line="244"/>
       <source>with yo, old russian</source>
       <comment>dictionary variant</comment>
       <translation type="unfinished">with yo, old russian</translation>
     </message>
     <message>
-      <location filename="../libraries/sonnet/src/core/loader.cpp" line="227"/>
+      <location filename="../libraries/sonnet/src/core/loader.cpp" line="245"/>
       <source>extended</source>
       <comment>dictionary variant</comment>
-      <translation>pagarināts</translation>
+      <translation type="unfinished">extended</translation>
     </message>
     <message>
-      <location filename="../libraries/sonnet/src/core/loader.cpp" line="262"/>
+      <location filename="../libraries/sonnet/src/core/loader.cpp" line="280"/>
       <source>%1 (%2) [%3]</source>
       <comment>dictionary name; %1 = language name, %2 = country name and %3 = language variant name</comment>
-      <translation>%1 (%2) [%3]</translation>
+      <translation type="unfinished">%1 (%2) [%3]</translation>
     </message>
     <message>
-      <location filename="../libraries/sonnet/src/core/loader.cpp" line="265"/>
+      <location filename="../libraries/sonnet/src/core/loader.cpp" line="283"/>
       <source>%1 (%2)</source>
       <comment>dictionary name; %1 = language name, %2 = country name</comment>
-      <translation>%1 (%2)</translation>
+      <translation type="unfinished">%1 (%2)</translation>
     </message>
   </context>
   <context>
@@ -6670,102 +6658,102 @@ Jūsu piezīmes paliks neskartas!</translation>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="14"/>
       <source>Insert table</source>
-      <translation>Ievietojiet tabulu</translation>
+      <translation type="unfinished">Insert table</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="24"/>
       <source>Create table</source>
-      <translation>Izveidot tabulu</translation>
+      <translation type="unfinished">Create table</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="30"/>
       <source>Column width:</source>
-      <translation>Kolonnas platums:</translation>
+      <translation type="unfinished">Column width:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="37"/>
       <source>Insert a table heading separator</source>
-      <translation>Ievietojiet tabulas virsraksta atdalītāju</translation>
+      <translation>Chèn một dấu phân cách tiêu đề bảng</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="47"/>
       <source>Columns:</source>
-      <translation>Kolonnas:</translation>
+      <translation>Cột:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="67"/>
       <source>Rows:</source>
-      <translation>Rindas:</translation>
+      <translation>Hàng:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="87"/>
       <source>The amount of spaces in a column</source>
-      <translation>Atstarpes daudzums kolonnā</translation>
+      <translation>Số lượng khoảng trắng trong một cột</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="119"/>
       <source>Select table layout:</source>
-      <translation>Atlasiet tabulas izkārtojumu:</translation>
+      <translation>Chọn cách bố trí bảng:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="126"/>
       <source>Separator column width:</source>
-      <translation>Atdalītāja kolonnas platums:</translation>
+      <translation>Chiều rộng cột phân cách:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="133"/>
       <source>The amount of dash characters in the separator</source>
-      <translation>Svītru rakstzīmju skaits atdalītājā</translation>
+      <translation>Số lượng ký tự gạch ngang trong dấu phân cách</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="150"/>
       <source>Import CSV file</source>
-      <translation>Importēt CSV failu</translation>
+      <translation>Nhập tệp CSV</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="173"/>
       <source>Separator:</source>
-      <translation type="unfinished">Separator:</translation>
+      <translation>Dấu phân cách:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="180"/>
       <source>Select file</source>
-      <translation type="unfinished">Select file</translation>
+      <translation>Chọn tập tin</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="191"/>
       <source>Please select the CSV file you want to import:</source>
-      <translation>Lūdzu, atlasiet CSV failu, kuru vēlaties importēt:</translation>
+      <translation>Vui lòng chọn tệp CSV bạn muốn nhập:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="231"/>
       <source>CSV file</source>
-      <translation>CSV fails</translation>
+      <translation>Tệp CSV</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="238"/>
       <source>First line is the table heading</source>
-      <translation>Pirmā rinda ir tabulas virsraksts</translation>
+      <translation>Dòng đầu tiên là tiêu đề bảng</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="261"/>
       <source>Text-delimiter:</source>
-      <translation>Teksta norobežotājs:</translation>
+      <translation>Phân cách văn bản:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.cpp" line="150"/>
       <source>CSV files</source>
-      <translation>CSV faili</translation>
+      <translation type="unfinished">CSV files</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.cpp" line="151"/>
       <source>All files</source>
-      <translation>Visi faili</translation>
+      <translation type="unfinished">All files</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.cpp" line="156"/>
       <source>Select CSV file to import</source>
-      <translation>Atlasiet importējamo CSV failu</translation>
+      <translation type="unfinished">Select CSV file to import</translation>
     </message>
   </context>
   <context>
@@ -6773,17 +6761,17 @@ Jūsu piezīmes paliks neskartas!</translation>
     <message>
       <location filename="../dialogs/tagadddialog.ui" line="20"/>
       <source>Add a new tag</source>
-      <translation>Pievienojiet jaunu tagu</translation>
+      <translation type="unfinished">Add a new tag</translation>
     </message>
     <message>
       <location filename="../dialogs/tagadddialog.ui" line="30"/>
       <source>Add new tag</source>
-      <translation>Pievienojiet jaunu tagu</translation>
+      <translation type="unfinished">Add new tag</translation>
     </message>
     <message>
       <location filename="../dialogs/tagadddialog.ui" line="47"/>
       <source>New tag</source>
-      <translation>Jauna atzīme</translation>
+      <translation type="unfinished">New tag</translation>
     </message>
   </context>
   <context>
@@ -6791,53 +6779,53 @@ Jūsu piezīmes paliks neskartas!</translation>
     <message>
       <location filename="../dialogs/tododialog.ui" line="14"/>
       <source>Todo</source>
-      <translation>Darīt</translation>
+      <translation type="unfinished">Todo</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="78"/>
       <location filename="../dialogs/tododialog.ui" line="85"/>
       <source>Priority</source>
-      <translation>Prioritāte</translation>
+      <translation type="unfinished">Priority</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="113"/>
       <source>Reminder</source>
-      <translation>Atgādinājums</translation>
+      <translation type="unfinished">Reminder</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="157"/>
       <source>Summary</source>
-      <translation>Kopsavilkums</translation>
+      <translation type="unfinished">Summary</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="191"/>
       <source>Save</source>
-      <translation>Saglabāt</translation>
+      <translation type="unfinished">Save</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="222"/>
       <source>Note…</source>
-      <translation>Piezīme…</translation>
+      <translation type="unfinished">Note…</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="100"/>
       <source>Save and insert into note</source>
-      <translation>Saglabājiet un ievietojiet piezīmē</translation>
+      <translation type="unfinished">Save and insert into note</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="208"/>
       <source>Remove</source>
-      <translation>Noņemt</translation>
+      <translation type="unfinished">Remove</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="278"/>
       <source>Show completed items</source>
-      <translation>Rādīt pabeigtos priekšmetus</translation>
+      <translation type="unfinished">Show completed items</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="285"/>
       <source>Reload the todo list from server</source>
-      <translation>Atkārtoti ielādējiet uzdevumu sarakstu no servera</translation>
+      <translation type="unfinished">Reload the todo list from server</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="288"/>
@@ -6867,54 +6855,54 @@ Jūsu piezīmes paliks neskartas!</translation>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="113"/>
       <source>Import the current todo item as new note</source>
-      <translation type="unfinished">Import the current todo item as new note</translation>
+      <translation>Nhập mục việc cần làm hiện tại làm ghi chú mới</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="109"/>
       <source>Import as note</source>
-      <translation type="unfinished">Import as note</translation>
+      <translation>Nhập dưới dạng ghi chú</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="205"/>
       <source>Remove the current todo item</source>
-      <translation type="unfinished">Remove the current todo item</translation>
+      <translation>Xóa mục việc cần làm hiện tại</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="309"/>
       <source>Todo list items are being loaded from the server</source>
-      <translation type="unfinished">Todo list items are being loaded from the server</translation>
+      <translation>Các mục danh sách Todo đang được tải từ máy chủ</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="124"/>
       <source>Reload from server</source>
-      <translation type="unfinished">Reload from server</translation>
+      <translation>Tải lại từ máy chủ</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="128"/>
       <source>Reload tasks from server</source>
-      <translation type="unfinished">Reload tasks from server</translation>
+      <translation>Tải lại tác vụ từ máy chủ</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="133"/>
       <source>Clear cache and reload</source>
-      <translation type="unfinished">Clear cache and reload</translation>
+      <translation>Xóa bộ nhớ cache và tải lại</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="137"/>
       <source>Clear calendar cache and reload tasks from server</source>
-      <translation type="unfinished">Clear calendar cache and reload tasks from server</translation>
+      <translation>Xóa bộ nhớ cache lịch và tải lại các tác vụ từ máy chủ</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="578"/>
       <source>Remove todo item</source>
-      <translation type="unfinished">Remove todo item</translation>
+      <translation>Xóa mục việc cần làm</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="579"/>
       <source>Remove the selected todo item?
 This cannot be undone!</source>
-      <translation type="unfinished">Remove the selected todo item?
-This cannot be undone!</translation>
+      <translation>Loại bỏ các mục việc cần chọn?
+Điều này không thể được hoàn tác!</translation>
     </message>
   </context>
   <context>
@@ -6922,134 +6910,134 @@ This cannot be undone!</translation>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="23"/>
       <source>Select a menu</source>
-      <translation type="unfinished">Select a menu</translation>
+      <translation>Chọn một menu</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="26"/>
       <source>Lists the available menus to get the corresponding actions</source>
-      <translation type="unfinished">Lists the available menus to get the corresponding actions</translation>
+      <translation>Liệt kê các menu có sẵn để có được các hành động tương ứng</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="33"/>
       <source>Select toolbar</source>
-      <translation type="unfinished">Select toolbar</translation>
+      <translation>Chọn thanh công cụ</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="36"/>
       <source>List the available toolbars. The selected one will be edited</source>
-      <translation type="unfinished">List the available toolbars. The selected one will be edited</translation>
+      <translation>Liệt kê các thanh công cụ có sẵn. Người được chọn sẽ được chỉnh sửa</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="43"/>
       <source>Lists the actions in the selected toolbar</source>
-      <translation type="unfinished">Lists the actions in the selected toolbar</translation>
+      <translation>Liệt kê các hành động trong thanh công cụ đã chọn</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="52"/>
       <source>Add new Toolbar</source>
-      <translation type="unfinished">Add new Toolbar</translation>
+      <translation>Thêm thanh công cụ mới</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="55"/>
       <source>New</source>
-      <translation>Jauns</translation>
+      <translation>Mới</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="66"/>
       <source>Delete selected toolbar</source>
-      <translation>Dzēst atlasīto rīkjoslu</translation>
+      <translation>Xóa thanh công cụ đã chọn</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="69"/>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="168"/>
       <source>Remove</source>
-      <translation>Noņemt</translation>
+      <translation>Tẩy</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="82"/>
       <source>Lists the available actions for the selected menu</source>
-      <translation>Sarakstā ir atlasītajā izvēlnē pieejamās darbības</translation>
+      <translation>Liệt kê các hành động có sẵn cho menu đã chọn</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="104"/>
       <source>Move Up</source>
-      <translation>Pārvietot uz augšu</translation>
+      <translation>Đi lên</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="107"/>
       <source>Moves the selected toolbar item up</source>
-      <translation>Paceļ izvēlēto rīkjoslas vienumu uz augšu</translation>
+      <translation>Di chuyển mục thanh công cụ đã chọn lên</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="110"/>
       <source>Move &amp;Up</source>
-      <translation type="unfinished">Move &amp;Up</translation>
+      <translation>Đi &amp;lên</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="121"/>
       <source>Move Down</source>
-      <translation>Pārvietot uz leju</translation>
+      <translation>Đi xuống</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="124"/>
       <source>moves the selected toolbar item down</source>
-      <translation>pārvieto izvēlēto rīkjoslas vienumu uz leju</translation>
+      <translation>di chuyển mục thanh công cụ đã chọn xuống</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="127"/>
       <source>Move &amp;Down</source>
-      <translation type="unfinished">Move &amp;Down</translation>
+      <translation>Đi &amp;xuống</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="151"/>
       <source>Insert</source>
-      <translation>Ievietot</translation>
+      <translation>Chèn</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="154"/>
       <source>Adds the selected menu action to the toolbar</source>
-      <translation>Rīkjoslā pievieno atlasīto izvēlnes darbību</translation>
+      <translation>Thêm hành động menu đã chọn vào thanh công cụ</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="157"/>
       <source>&amp;Insert</source>
-      <translation type="unfinished">&amp;Insert</translation>
+      <translation>&amp;Chèn</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="171"/>
       <source>Removes the selected item from the active toolbar</source>
-      <translation>Noņem aktīvo rīkjoslu atlasīto vienumu</translation>
+      <translation>Xóa mục đã chọn khỏi thanh công cụ hoạt động</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="174"/>
       <source>&amp;Remove</source>
-      <translation type="unfinished">&amp;Remove</translation>
+      <translation>&amp;Tẩy</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="198"/>
       <source>Separator</source>
-      <translation type="unfinished">Separator</translation>
+      <translation>Dấu phân cách</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="201"/>
       <source>&amp;Separator</source>
-      <translation type="unfinished">&amp;Separator</translation>
+      <translation>&amp;Dấu phân cách</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="192"/>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="216"/>
       <source>--(separator)--</source>
-      <translation type="unfinished">--(separator)--</translation>
+      <translation>- (dải phân cách) -</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="309"/>
       <source>Remove current toolbar</source>
-      <translation>Noņemiet pašreizējo rīkjoslu</translation>
+      <translation>Xóa thanh công cụ hiện tại</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="310"/>
       <source>Remove the current toolbar?</source>
-      <translation>Vai noņemt pašreizējo rīkjoslu?</translation>
+      <translation>Gỡ bỏ thanh công cụ hiện tại?</translation>
     </message>
   </context>
   <context>
@@ -7057,37 +7045,37 @@ This cannot be undone!</translation>
     <message>
       <location filename="../dialogs/trashdialog.ui" line="14"/>
       <source>Trashed notes</source>
-      <translation>Mētātas piezīmes</translation>
+      <translation>Ghi chú rác</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.ui" line="55"/>
       <source>Find note name</source>
-      <translation>Atrodiet piezīmes vārdu</translation>
+      <translation>Tìm tên ghi chú</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="26"/>
       <source>&amp;Restore selected note on server</source>
-      <translation>&amp;Atjaunojiet atlasīto piezīmi serverī</translation>
+      <translation>&amp;Khôi phục ghi chú đã chọn trên máy chủ</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="28"/>
       <source>&lt;h3&gt;Slower, but with note versions&lt;/h3&gt;&lt;p&gt;The note will be restored on your ownCloud server with all versions.&lt;/p&gt;&lt;p&gt;You will have to wait until it is synced to QOwnNotes by ownCloud sync.&lt;/p&gt;</source>
-      <translation>&lt;h3&gt; Lēnāks, bet ar piezīmju versijām &lt;/h3&gt; &lt;p&gt; Piezīme tiks atjaunota jūsu pašuCloud serverī ar visām versijām. &lt;/p&gt; &lt;p&gt; Jums būs jāgaida, līdz sinhronizācija sinhronizēs to ar QOwnNotes. &lt;/p&gt;</translation>
+      <translation>&lt;h3&gt; Chậm hơn, nhưng với các phiên bản ghi chú &lt;/h3&gt; &lt;p&gt; Ghi chú sẽ được khôi phục trên máy chủ của riêng bạn với tất cả các phiên bản. &lt;/p&gt; &lt;p&gt; Bạn sẽ phải đợi cho đến khi được đồng bộ hóa với QOwnNote bằng đồng bộ hóa ownCloud. &lt;/p&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="41"/>
       <source>&amp;Download selected note</source>
-      <translation>&amp;Lejupielādējiet atlasīto piezīmi</translation>
+      <translation>&amp;Tải về ghi chú đã chọn</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="43"/>
       <source>&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</source>
-      <translation type="unfinished">&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</translation>
+      <translation>&lt;h3&gt; Nhanh hơn, nhưng không có phiên bản &lt;/h3&gt; &lt;p&gt; Ghi chú sẽ được tạo bằng văn bản từ bản xem trước. &lt;/p&gt; &lt;p&gt;Các phiên bản ghi chú trên máy chủ của riêng bạn sẽ không được khôi phục và ghi chú sẽ vẫn còn trong thùng rác. &lt;/P&gt; &lt;p&gt; Bạn luôn có thể khôi phục ghi chú và các phiên bản của nó sau này. &lt;/P&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="56"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>&amp;Hủy bỏ</translation>
     </message>
   </context>
   <context>
@@ -7095,116 +7083,116 @@ This cannot be undone!</translation>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="14"/>
       <source>Update available</source>
-      <translation>Pieejams atjauninājums</translation>
+      <translation>Cập nhật có sẵn</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="26"/>
       <source>A new update of QOwnNotes is available!</source>
-      <translation>Ir pieejams jauns QOwnNotes atjauninājums!</translation>
+      <translation>Đã có bản cập nhật mới của QOwnNotes!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="69"/>
       <source>Do you want to download the new version?</source>
-      <translation>Vai vēlaties lejupielādēt jauno versiju?</translation>
+      <translation>Bạn có muốn tải xuống phiên bản mới?</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="76"/>
       <source>QOwnNotes will be downloaded in your default browser.</source>
-      <translation>QOwnNotes tiks lejupielādēti noklusējuma pārlūkā.</translation>
+      <translation>QOwnNotes sẽ được tải xuống trong trình duyệt mặc định của bạn.</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="83"/>
       <source>Keep in mind that QOwnNotes needs to run from a location where you have write access to for the automatic update to work!</source>
-      <translation>Ņemiet vērā: lai automātiskais atjauninājums darbotos, pakalpojumam QOwnNotes ir jādarbojas no vietas, kur jums ir piekļuves tiesības rakstīšanai!</translation>
+      <translation>Hãy nhớ rằng QOwnNotes cần chạy từ một vị trí mà bạn có quyền truy cập ghi để cập nhật tự động hoạt động!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="93"/>
       <source>&lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes"&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
-      <translation type="unfinished">&lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes"&gt;Get involved with QOwnNotes&lt;/a&gt;</translation>
+      <translation>&lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes"&gt;Tham gia với QOwnNotes&lt;/a&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="106"/>
       <source>%p% downloaded</source>
-      <translation type="unfinished">%p% downloaded</translation>
+      <translation>%p% đã tải xuống</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="45"/>
       <source>&amp;Update</source>
-      <translation type="unfinished">&amp;Update</translation>
+      <translation>&amp;Cập nhật</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="58"/>
       <source>&amp;Download latest</source>
-      <translation type="unfinished">&amp;Download latest</translation>
+      <translation>&amp;Tải về mới nhất</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="56"/>
       <source>Just download</source>
-      <translation type="unfinished">Just download</translation>
+      <translation>Chỉ cần tải về</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="72"/>
       <source>&amp;Skip version</source>
-      <translation type="unfinished">&amp;Skip version</translation>
+      <translation>&amp;Bỏ qua phiên bản</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="82"/>
       <source>&amp;Disable dialog</source>
-      <translation type="unfinished">&amp;Disable dialog</translation>
+      <translation>&amp;Vô hiệu hóa hộp thoại</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="83"/>
       <source>Don't show this dialog automatically</source>
-      <translation>Nerādīt šo dialogu automātiski</translation>
+      <translation>Không tự động hiển thị hộp thoại này</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="93"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>&amp;Hủy bỏ</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="249"/>
       <source>Download error</source>
-      <translation>Lejupielādes kļūda</translation>
+      <translation>Lỗi tải xuống</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="250"/>
       <source>Error while downloading:
 %1</source>
-      <translation>Lejupielādes laikā radās kļūda:
+      <translation>Lỗi trong khi tải xuống:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="252"/>
       <source>network error: %1</source>
-      <translation>tīkla kļūda: %1</translation>
+      <translation>lỗi mạng: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="275"/>
       <location filename="../dialogs/updatedialog.cpp" line="296"/>
       <location filename="../dialogs/updatedialog.cpp" line="393"/>
       <source>File error</source>
-      <translation>Faila kļūda</translation>
+      <translation>Lỗi tập tin</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="276"/>
       <location filename="../dialogs/updatedialog.cpp" line="394"/>
       <source>Could not open temporary file:
 %1</source>
-      <translation>Nevarēja atvērt pagaidu failu:
+      <translation>Không thể mở tệp tạm thời:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="297"/>
       <source>Could not store downloaded file:
 %1</source>
-      <translation>Nevarēja saglabāt lejupielādēto failu:
+      <translation>Không thể lưu trữ tệp đã tải xuống:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="351"/>
       <source>Do you want to update and restart QOwnNotes?</source>
-      <translation>Vai vēlaties atjaunināt un restartēt QOwnNotes?</translation>
+      <translation>Bạn có muốn cập nhật và khởi động lại QOwnNotes không?</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="366"/>
@@ -7215,51 +7203,51 @@ This cannot be undone!</translation>
       <location filename="../dialogs/updatedialog.cpp" line="490"/>
       <location filename="../dialogs/updatedialog.cpp" line="499"/>
       <source>Error</source>
-      <translation>Kļūda</translation>
+      <translation>Lỗi</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="367"/>
       <source>Could not find updater file:
 %1</source>
-      <translation>Nevarēju atrast atjauninātāja failu:
+      <translation>Không thể tìm thấy tệp cập nhật:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="454"/>
       <source>Updater script '%1' doesn't exist!</source>
-      <translation type="unfinished">Updater script '%1' doesn't exist!</translation>
+      <translation>Tập lệnh cập nhật '%1' không tồn tại!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="463"/>
       <source>Updater unzip executable '%1' doesn't exist!</source>
-      <translation type="unfinished">Updater unzip executable '%1' doesn't exist!</translation>
+      <translation>Trình cập nhật giải nén '%1' không tồn tại!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="472"/>
       <location filename="../dialogs/updatedialog.cpp" line="481"/>
       <source>Could not copy updater script '%1' to '%2'!</source>
-      <translation type="unfinished">Could not copy updater script '%1' to '%2'!</translation>
+      <translation>Không thể sao chép tập lệnh cập nhật '%1' thành '%2'!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="491"/>
       <source>Couldn't find updater script: %1</source>
-      <translation type="unfinished">Couldn't find updater script: %1</translation>
+      <translation>Không thể tìm thấy tập lệnh cập nhật: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="500"/>
       <source>Couldn't find unzip executable: %1</source>
-      <translation type="unfinished">Couldn't find unzip executable: %1</translation>
+      <translation>Không thể tìm thấy giải nén giải nén: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="350"/>
       <location filename="../dialogs/updatedialog.cpp" line="506"/>
       <source>Proceed with update</source>
-      <translation type="unfinished">Proceed with update</translation>
+      <translation>Tiến hành cập nhật</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="507"/>
       <source>The download is now finished. Do you want to update and restart QOwnNotes?</source>
-      <translation type="unfinished">The download is now finished. Do you want to update and restart QOwnNotes?</translation>
+      <translation>Quá trình tải xuống đã hoàn tất. Bạn có muốn cập nhật và khởi động lại QOwnNotes không?</translation>
     </message>
   </context>
   <context>
@@ -7269,32 +7257,32 @@ This cannot be undone!</translation>
       <location filename="../services/updateservice.cpp" line="118"/>
       <location filename="../services/updateservice.cpp" line="137"/>
       <source>Update-checker error</source>
-      <translation>Atjaunināšanas pārbaudītāja kļūda</translation>
+      <translation>Lỗi kiểm tra cập nhật</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="105"/>
       <source>Network reply error: %1</source>
-      <translation>Tīkla atbildes kļūda: %1</translation>
+      <translation>Lỗi trả lời mạng: %1</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="119"/>
       <source>No data was received by the network request!</source>
-      <translation>Tīkla pieprasījumā netika saņemti dati!</translation>
+      <translation>Không có dữ liệu được nhận bởi yêu cầu mạng!</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="138"/>
       <source>The data from the network request could not be interpreted!</source>
-      <translation>Tīkla pieprasījuma datus nevarēja interpretēt!</translation>
+      <translation>Dữ liệu từ yêu cầu mạng không thể diễn giải!</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="230"/>
       <source>No updates</source>
-      <translation type="unfinished">No updates</translation>
+      <translation>Không có cập nhật</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="231"/>
       <source>There are no updates available.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; is the latest version.</source>
-      <translation type="unfinished">There are no updates available.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; is the latest version.</translation>
+      <translation>Không có bản cập nhật nào. &lt;br /&gt; &lt;strong&gt;%1 &lt;/ strong&gt; là phiên bản mới nhất.</translation>
     </message>
   </context>
   <context>
@@ -7302,27 +7290,27 @@ This cannot be undone!</translation>
     <message>
       <location filename="../dialogs/versiondialog.ui" line="14"/>
       <source>Note versions on your ownCloud server</source>
-      <translation>Ņemiet vērā versijas jūsu ownCloud serverī</translation>
+      <translation>Phiên bản Note trên máy chủ của bạn ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.ui" line="65"/>
       <source>Diff</source>
-      <translation>Diff</translation>
+      <translation>Khác biệt</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.ui" line="98"/>
       <source>Note text</source>
-      <translation>Piezīmes teksts</translation>
+      <translation>Ghi chú văn bản</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.cpp" line="27"/>
       <source>&amp;Restore selected version</source>
-      <translation>&amp;Atjaunot atlasīto versiju</translation>
+      <translation>&amp;Khôi phục phiên bản đã chọn</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.cpp" line="36"/>
       <source>&amp;Cancel</source>
-      <translation>&amp;Atcelt</translation>
+      <translation>&amp;Hủy bỏ</translation>
     </message>
   </context>
   <context>
@@ -7330,31 +7318,29 @@ This cannot be undone!</translation>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="58"/>
       <source>QOwnNotes server listening on port %1</source>
-      <translation>QOwnNotes servera klausīšanās portā %1</translation>
+      <translation>QOwnNote máy chủ lắng nghe trên cổng %1</translation>
     </message>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="65"/>
       <source>Could not start QOwnNotes server on port %1!</source>
-      <translation>Nevarēja palaist QOwnNotes serveri %1 ostā!</translation>
+      <translation>Không thể khởi động máy chủ QOwnNotes trên cổng %1!</translation>
     </message>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="109"/>
       <source>%1 connected to QOwnNotes server!</source>
-      <translation>%1 savienots ar QOwnNotes serveri!</translation>
+      <translation>%1 được kết nối với máy chủ QOwnNotes!</translation>
     </message>
     <message numerus="yes">
       <location filename="../services/websocketserverservice.cpp" line="188"/>
       <source>%n bookmark(s) created</source>
       <translation type="unfinished">
         <numerusform>%n bookmark(s) created</numerusform>
-        <numerusform>%n bookmark(s) created</numerusform>
-        <numerusform>%n bookmark(s) created</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="327"/>
       <source>%1 was disconnected from QOwnNotes server</source>
-      <translation type="unfinished">%1 was disconnected from QOwnNotes server</translation>
+      <translation>%1 đã bị ngắt kết nối với máy chủ QOwnNotes</translation>
     </message>
   </context>
   <context>
@@ -7362,22 +7348,22 @@ This cannot be undone!</translation>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="20"/>
       <source>Security token</source>
-      <translation type="unfinished">Security token</translation>
+      <translation>Thẻ bảo mật</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="26"/>
       <source>To let your QOwnNotes browser extension access your notes please paste this security token in the settings of your browser extension:</source>
-      <translation>Lai ļautu savam QOwnNotes pārlūka paplašinājumam piekļūt jūsu piezīmēm, lūdzu, ielīmējiet šo drošības pilnvaru pārlūka paplašinājuma iestatījumos:</translation>
+      <translation>Để cho QOwnNote tiện ích mở rộng trình duyệt của bạn truy cập vào ghi chú của bạn, vui lòng dán mã thông báo bảo mật này vào cài đặt của tiện ích mở rộng trình duyệt của bạn:</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="65"/>
       <source>Generate new token</source>
-      <translation>Ģenerējiet jaunu marķieri</translation>
+      <translation>Tạo mã thông báo mới</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="79"/>
       <source>Copy token</source>
-      <translation>Kopēt marķieri</translation>
+      <translation>Sao chép mã thông báo</translation>
     </message>
   </context>
   <context>
@@ -7386,118 +7372,118 @@ This cannot be undone!</translation>
       <location filename="../dialogs/welcomedialog.ui" line="14"/>
       <location filename="../dialogs/welcomedialog.ui" line="56"/>
       <source>Welcome to QOwnNotes</source>
-      <translation>Laipni lūdzam vietnē QOwnNotes</translation>
+      <translation>Chào mừng bạn đến với QOwnNotes</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="24"/>
       <source>plain-text file markdown note taking with ownCloud integration</source>
-      <translation>vienkārša teksta faila marķējuma piezīmju veikšana ar ownCloud integrāciju</translation>
+      <translation>ghi chú đánh dấu tập tin văn bản đơn giản với tích hợp ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="88"/>
       <source>&amp;Back</source>
-      <translation>&amp;Atpakaļ</translation>
+      <translation>&amp;Trở lại</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="99"/>
       <source>&amp;Next</source>
-      <translation>&amp;Nākamais</translation>
+      <translation>&amp;Kế tiếp</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="116"/>
       <source>&amp;Finished</source>
-      <translation>&amp;Gatavs</translation>
+      <translation type="unfinished">&amp;Finished</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="139"/>
       <source>&amp;Cancel</source>
-      <translation>&amp;Atcelt</translation>
+      <translation type="unfinished">&amp;Cancel</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="168"/>
       <location filename="../dialogs/welcomedialog.cpp" line="214"/>
       <source>Note folder</source>
-      <translation>Piezīmju mape</translation>
+      <translation>Thư mục ghi chú</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="191"/>
       <source>Create note folder if not existing</source>
-      <translation>Izveidojiet piezīmju mapi, ja tāda nav</translation>
+      <translation>Tạo thư mục ghi chú nếu không tồn tại</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="225"/>
       <source>Note folder path</source>
-      <translation>Piezīmju mapes ceļš</translation>
+      <translation>Note folder path</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="232"/>
       <source>Select folder</source>
-      <translation>Atlasiet mapi</translation>
+      <translation>Chọn thư mục</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="246"/>
       <source>Show sub-folders</source>
-      <translation>Rādīt apakšmapes</translation>
+      <translation>Hiển thị các thư mục con</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="285"/>
       <source>Panel layout</source>
-      <translation>Paneļa izkārtojums</translation>
+      <translation>Bố trí bảng điều khiển</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="342"/>
       <source>Open ownCloud settings</source>
-      <translation>Atveriet ownCloud iestatījumus</translation>
+      <translation>Mở cài đặt ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="384"/>
       <source>Open network settings</source>
-      <translation>Atveriet tīkla iestatījumus</translation>
+      <translation>Mở cài đặt mạng</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="184"/>
       <source>Please select where you want to store your notes:</source>
-      <translation>Lūdzu, atlasiet, kur vēlaties saglabāt savas piezīmes:</translation>
+      <translation>Vui lòng chọn nơi bạn muốn lưu trữ ghi chú của bạn:</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="319"/>
       <source>If you want to be able to access your note versions and your trashed notes on your ownCloud server, you can configure QOwnNotes for it now. You can also do it at a later time.</source>
-      <translation>Ja vēlaties, lai varētu piekļūt piezīmju versijām un miskastē esošajām piezīmēm uz ownCloud servera, tagad varat konfigurēt QOwnNotes. To var izdarīt arī vēlāk.</translation>
+      <translation>Nếu bạn muốn có thể truy cập các phiên bản ghi chú và ghi chú đã bỏ vào máy chủ của riêng bạn, bạn có thể định cấu hình QOwnNotes cho nó ngay bây giờ. Bạn cũng có thể làm điều đó sau.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="349"/>
       <source>In any case, you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</source>
-      <translation>Jebkurā gadījumā jums ir nepieciešams ownCloud sinhronizācijas klients (vai jebkurš cits sinhronizācijas klients), lai sinhronizētu piezīmes ar savu ownCloud serveri.</translation>
+      <translation>Trong mọi trường hợp, bạn cần ứng dụng khách đồng bộ ownCloud (hoặc bất kỳ ứng dụng khách đồng bộ hóa nào khác) để đồng bộ hóa ghi chú của bạn với máy chủ ownCloud.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="391"/>
       <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
-      <translation>QOwnNotes izsekos anonīmus lietošanas datus, kas palīdz izlemt, kuras QOwnNotes daļas uzlabot nākamo, kā arī atrast un novērst kļūdas. Iestatījumos varat to atspējot.</translation>
+      <translation>QOwnNotes sẽ theo dõi dữ liệu sử dụng ẩn danh, giúp quyết định phần nào của QOwnNotes để cải thiện tiếp theo cũng như tìm và sửa lỗi. Bạn có thể vô hiệu hóa hành vi đó trong cài đặt.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="116"/>
       <source>Cannot create note path! You have to create the note folder manually!</source>
-      <translation>Nevar izveidot piezīmju ceļu! Piezīmju mape ir jāizveido manuāli!</translation>
+      <translation>Không thể tạo đường dẫn ghi chú! Bạn phải tạo thư mục ghi chú bằng tay!</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="123"/>
       <source>Cannot create note path!</source>
-      <translation>Nevar izveidot piezīmju ceļu!</translation>
+      <translation>Không thể tạo đường dẫn ghi chú!</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="128"/>
       <source>This note path doesn't exist!</source>
-      <translation>Šis piezīmju ceļš neeksistē!</translation>
+      <translation>Con đường ghi chú này không tồn tại!</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="200"/>
       <source>Please select the folder where your notes will get stored to</source>
-      <translation>Lūdzu, atlasiet mapi, kurā tiks glabātas jūsu piezīmes</translation>
+      <translation>Vui lòng chọn thư mục nơi ghi chú của bạn sẽ được lưu trữ vào</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="215"/>
       <source>Keep in mind that the note folder will be stored relative to the directory where QOwnNotes resides in portable mode! So you need to stay on the same drive.</source>
-      <translation>Ņemiet vērā, ka piezīmju mape tiks saglabāta attiecībā pret direktoriju, kurā portatīvajā režīmā atrodas QOwnNotes! Tātad jums jāpaliek vienā braucienā.</translation>
+      <translation>Hãy nhớ rằng thư mục ghi chú sẽ được lưu trữ liên quan đến thư mục nơi QOwnNotes nằm trong chế độ di động! Vì vậy, bạn cần phải ở trên cùng một ổ đĩa.</translation>
     </message>
   </context>
   <context>
@@ -7505,42 +7491,42 @@ This cannot be undone!</translation>
     <message>
       <location filename="../main.cpp" line="77"/>
       <source>Runs the application in portable mode.</source>
-      <translation>Palaiž programmu portatīvajā režīmā.</translation>
+      <translation>Chạy ứng dụng ở chế độ di động.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="81"/>
       <source>Prints out a dump of the settings and other information about the application and environment in GitHub Markdown and exits the application.</source>
-      <translation>Izdrukā iestatījumu un citu informāciju par lietojumprogrammu un vidi GitHub Markdown un aizver programmu.</translation>
+      <translation>In ra một đống các cài đặt và thông tin khác về ứng dụng và môi trường trong GitHub Markdown và thoát khỏi ứng dụng.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="87"/>
       <source>Allows multiple instances of QOwnNotes to be started even if disallowed in the settings.</source>
-      <translation>Ļauj startēt vairākus QOwnNotes gadījumus, pat ja tie ir aizliegti iestatījumos.</translation>
+      <translation>Cho phép nhiều phiên bản QOwnNote được bắt đầu ngay cả khi không được phép trong cài đặt.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="92"/>
       <source>Clears the settings and runs the application.</source>
-      <translation>Notīra iestatījumus un palaiž programmu.</translation>
+      <translation>Xóa các thiết lập và chạy các ứng dụng.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="96"/>
       <source>Runs the application in a different context for settings and internal files.</source>
-      <translation>Palaiž lietojumprogrammu citā kontekstā iestatījumiem un iekšējiem failiem.</translation>
+      <translation>Chạy ứng dụng trong một ngữ cảnh khác cho các cài đặt và tệp nội bộ.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="494"/>
       <source>Single application mode is not supported on your system!</source>
-      <translation>Jūsu sistēmā netiek atbalstīts vienas lietojumprogrammas režīms!</translation>
+      <translation>Chế độ ứng dụng duy nhất không được hỗ trợ trên hệ thống của bạn!</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="503"/>
       <source>Another instance of QOwnNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</source>
-      <translation>Jau tika sākts vēl viens QOwnNotes piemērs! Iestatījumos varat izslēgt vienas instances režīmu vai izmantot parametru - atļaut - vairākus - gadījumus.</translation>
+      <translation>Một phiên bản khác của QOwnNotes đã được bắt đầu! Bạn có thể tắt chế độ cá thể đơn trong cài đặt hoặc sử dụng tham số - cho phép nhiều phiên bản.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="535"/>
       <source>A second instance of QOwnNotes was attempted to be started!</source>
-      <translation>Mēģināja sākt otro QOwnNotes gadījumu!</translation>
+      <translation>Một phiên bản thứ hai của QOwnNotes đã được cố gắng bắt đầu!</translation>
     </message>
   </context>
 </TS>
