@@ -28,7 +28,16 @@ DictionaryManagerDialog::DictionaryManagerDialog(QWidget *parent) :
     addDictionaryItem(tr("German (Austrian)"), QStringLiteral("de"), QStringLiteral("de_AT_frami"));
     addDictionaryItem(tr("German (German)"), QStringLiteral("de"), QStringLiteral("de_DE_frami"));
     addDictionaryItem(tr("German (Swiss)"), QStringLiteral("de"), QStringLiteral("de_CH_frami"));
+    addDictionaryItem(tr("French"), QStringLiteral("fr_FR"), QStringLiteral("fr"));
+    addDictionaryItem(tr("Spanish"), QStringLiteral("es"), QStringLiteral("es_ANY"));
+    addDictionaryItem(tr("Russian"), QStringLiteral("ru_RU"));
+    addDictionaryItem(tr("Polish"), QStringLiteral("pl_PL"));
+    addDictionaryItem(tr("Italian"), QStringLiteral("it_IT"));
+    addDictionaryItem(tr("Portugese (Brazilian)"), QStringLiteral("pt_BR"));
+    addDictionaryItem(tr("Portugese"), QStringLiteral("pt_PT"));
     addDictionaryItem(tr("Danish"), QStringLiteral("da_DK"));
+    addDictionaryItem(tr("Swedish"), QStringLiteral("sv_SE"));
+    addDictionaryItem(tr("Czech"), QStringLiteral("cs_CZ"));
     addDictionaryItem(tr("Urdu"), QStringLiteral("ur_PK"));
 
     ui->downloadButton->setDisabled(true);
@@ -36,6 +45,12 @@ DictionaryManagerDialog::DictionaryManagerDialog(QWidget *parent) :
     ui->downloadFrame->hide();
     ui->searchDictionaryEdit->setFocus();
     ui->remoteDictionaryTreeWidget->sortByColumn(0, Qt::AscendingOrder);
+
+    QSettings settings;
+    const QSignalBlocker blocker(ui->disableExternalDictionariesCheckBox);
+    Q_UNUSED(blocker)
+    ui->disableExternalDictionariesCheckBox->setChecked(
+                settings.value(QStringLiteral("disableExternalDictionaries")).toBool());
 
     loadLocalDictionaries();
     ui->localDictionaryTreeWidget->sortByColumn(0, Qt::AscendingOrder);
@@ -286,4 +301,10 @@ void DictionaryManagerDialog::on_remoteDictionaryTreeWidget_itemDoubleClicked(QT
     Q_UNUSED(item)
     Q_UNUSED(column)
     on_downloadButton_clicked();
+}
+
+void DictionaryManagerDialog::on_disableExternalDictionariesCheckBox_toggled(bool checked) {
+    QSettings settings;
+    settings.setValue(QStringLiteral("disableExternalDictionaries"), checked);
+    qApp->setProperty("needsRestart", true);
 }

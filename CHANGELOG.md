@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 19.11.11
+- you now can disable all external dictionaries in the *Manage dictionaries dialog*
+  (for [#1399](https://github.com/pbek/QOwnNotes/issues/1399))
+    - if activated only the downloaded dictionaries will be used
+
 ## 19.11.10
 - if you select `Dark mode` in the *Interface settings* now a dark color schema
   will also be automatically selected in the *Editor fonts & colors settings*

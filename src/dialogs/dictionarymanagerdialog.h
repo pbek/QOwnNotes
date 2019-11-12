@@ -44,6 +44,8 @@ private slots:
 
     void on_remoteDictionaryTreeWidget_itemDoubleClicked(QTreeWidgetItem *item, int column);
 
+    void on_disableExternalDictionariesCheckBox_toggled(bool checked);
+
 private:
     Ui::DictionaryManagerDialog *ui;
     QNetworkAccessManager *_networkManager;

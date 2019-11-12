@@ -136,6 +136,9 @@
        <property name="title">
         <string>Downloaded dictionaries</string>
        </property>
+       <property name="flat">
+        <bool>true</bool>
+       </property>
        <layout class="QVBoxLayout" name="verticalLayout">
         <property name="leftMargin">
          <number>0</number>
@@ -162,6 +165,16 @@
             <string>Name</string>
            </property>
           </column>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="disableExternalDictionariesCheckBox">
+          <property name="toolTip">
+           <string>If checked only the downloaded dictionaries will be used</string>
+          </property>
+          <property name="text">
+           <string>Disable external dictionaries</string>
+          </property>
          </widget>
         </item>
         <item>
