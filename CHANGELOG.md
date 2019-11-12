@@ -13,6 +13,7 @@
   (for [#1402](https://github.com/pbek/QOwnNotes/pull/1402), thank you @Waqar144)
 - updated the demo notes and [Markdown Cheatsheet](https://github.com/pbek/QOwnNotes/blob/develop/src/demonotes/Markdown%20Cheatsheet.md)
   with checkbox list and spellchecking information
+- changed the *Readonly mode* icon to `document-edit`
 
 ## 19.11.10
 - if you select `Dark mode` in the *Interface settings* now a dark color schema
