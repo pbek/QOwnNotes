@@ -2400,6 +2400,17 @@
                        </item>
                        <item>
                         <property name="text">
+                         <string notr="true">latviešu valoda</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Latvian</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">lv</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
                          <string notr="true">lietuvių kalba</string>
                         </property>
                         <property name="toolTip">
@@ -2605,6 +2616,17 @@
                         </property>
                         <property name="whatsThis">
                          <string notr="true">tl</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string notr="true">Tiếng Việt</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Vietnamese</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">vi</string>
                         </property>
                        </item>
                        <item>

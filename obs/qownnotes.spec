@@ -169,6 +169,8 @@ install -D -m 0644 languages/QOwnNotes_is.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNot
 install -D -m 0644 languages/QOwnNotes_pa.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_pa.qm
 install -D -m 0644 languages/QOwnNotes_sq.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_sq.qm
 install -D -m 0644 languages/QOwnNotes_he.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_he.qm
+install -D -m 0644 languages/QOwnNotes_vi.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_vi.qm
+install -D -m 0644 languages/QOwnNotes_lv.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_lv.qm
 install -D -m 0644 languages/QOwnNotes_ku.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_ku.qm
 install -D -m 0644 languages/QOwnNotes_lt.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_lt.qm
 install -D -m 0644 languages/QOwnNotes_bs.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_bs.qm
@@ -247,6 +249,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/QOwnNotes/languages/QOwnNotes_pa.qm
 %{_datadir}/QOwnNotes/languages/QOwnNotes_sq.qm
 %{_datadir}/QOwnNotes/languages/QOwnNotes_he.qm
+%{_datadir}/QOwnNotes/languages/QOwnNotes_vi.qm
+%{_datadir}/QOwnNotes/languages/QOwnNotes_lv.qm
 %{_datadir}/QOwnNotes/languages/QOwnNotes_ku.qm
 %{_datadir}/QOwnNotes/languages/QOwnNotes_lt.qm
 %{_datadir}/QOwnNotes/languages/QOwnNotes_bs.qm

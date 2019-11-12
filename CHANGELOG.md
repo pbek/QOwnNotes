@@ -14,6 +14,10 @@
 - updated the demo notes and [Markdown Cheatsheet](https://github.com/pbek/QOwnNotes/blob/develop/src/demonotes/Markdown%20Cheatsheet.md)
   with checkbox list and spellchecking information
 - changed the *Readonly mode* icon to `document-edit`
+- added **Latvian and Vietnamese translation** (a big thank you to Fabijenna)
+    - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes)
+      to make QOwnNotes available in more languages or help with the current
+      translation
 
 ## 19.11.10
 - if you select `Dark mode` in the *Interface settings* now a dark color schema
