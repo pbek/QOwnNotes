@@ -1,6 +1,6 @@
 Spellchecking
 ~~~~~~~~~~~~~
-QOwnNotes has a builtin **Dictionary Manager**(in the *Edit* menu) which you can use to download dictionaries or delete them. (Dictionaries are being added so, currently only a few dictionaries are available for downloading). If you want to download the dictionaries manually, you can follow the instructions below:
+QOwnNotes has a builtin **Dictionary Manager** (in the *Edit* menu) which you can use to download dictionaries or delete them (if you are missing your language see below on how to request adding a dictionary). If you want to download the dictionaries manually, you can follow the instructions below:
 
 -  Under **Linux** you need to install the Hunspell dictionaries for your language using your distro's pkg manager
     - If you need to add additional language files you can do so in ``~/.local/share/hunspell``
