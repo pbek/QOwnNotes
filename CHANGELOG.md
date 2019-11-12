@@ -4,6 +4,13 @@
 - you now can disable all external dictionaries in the *Manage dictionaries dialog*
   (for [#1399](https://github.com/pbek/QOwnNotes/issues/1399))
     - if activated only the downloaded dictionaries will be used
+- the *Manage dictionaries dialog* now uses [QOwnNotes dictionaries](https://github.com/qownnotes/dictionaries)
+  as source to be able to quickly fix dictionary issues or add new dictionaries
+  (for [#1399](https://github.com/pbek/QOwnNotes/issues/1399), thank you @Waqar144)
+    - spellchecking for some abbreviations have been fixed
+    - more dictionaries were added to the dialog
+- added automatic spellchecking detection for British English and Austrian German
+  (for [#1402](https://github.com/pbek/QOwnNotes/pull/1402), thank you @Waqar144)
 
 ## 19.11.10
 - if you select `Dark mode` in the *Interface settings* now a dark color schema
