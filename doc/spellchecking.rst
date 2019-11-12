@@ -1,32 +1,28 @@
 Spellchecking
 ~~~~~~~~~~~~~
+QOwnNotes has a builtin **Dictionary Manager**(in the *Edit* menu) which you can use to download dictionaries or delete them. (Dictionaries are being added so, currently only a few dictionaries are available for downloading). If you want to download the dictionaries manually, you can follow the instructions below:
 
--  `Sonnet <https://github.com/KDE/sonnet>`__ with `Hunspell <https://hunspell.github.io/>`__
-   is used for spellchecking
--  Under **Linux** you need to install the Hunspell dictionaries for your language
+-  Under **Linux** you need to install the Hunspell dictionaries for your language using your distro's pkg manager
     - If you need to add additional language files you can do so in ``~/.local/share/hunspell``
     - If you are using the Snap package of QOwnNotes you can also use ``~/hunspell`` for language files, since the Snap can't access ``~/.local``
 -  Under **Windows** you need to copy Hunspell dictionaries for your language to
    a folder ``dicts`` in your QOwnNotes application folder or in ``C:\Users\[username]\dicts``
   -  You can download dictionaries from `LibreOffice
      dictionaries <https://github.com/LibreOffice/dictionaries>`__
--  Under **macOS** the native spellchecker will be used
-  -  You can download more dictionaries from `LibreOffice dictionaries
-     <https://github.com/LibreOffice/dictionaries>`__ and copy them to ``/Library/Spelling``
-     or ``~/Library/Spelling``, if the directory doesn't exist you need to create it
+-  Under **macOS** you need to copy Hunspell dictionaries for your language to ``/Library/Spelling`` or ``~/Library/Spelling``. If the directory doesn't exist you need to create it.
 
-You can also use the **Dictionary manager** in the *Edit menu* to download or removed dictionaries.
+Dictionaries can be downloaded from `QOwnNotes dictionaries <https://github.com/qownnotes/dictionaries>`_.
 
-If you are missing a dictionary to download please look for it at `LibreOffice dictionaries <https://github.com/LibreOffice/dictionaries>`_
+If the dictionary for your language is not in the **Dictionary Manager**, please look for it at `QOwnNotes dictionaries <https://github.com/qownnotes/dictionaries>`_
 and propose a change of the `dictionary manager dialog <https://github.com/pbek/QOwnNotes/blob/develop/src/dialogs/dictionarymanagerdialog.cpp>`_
-to include it in the next release of QOwnNotes.
+to include it in the next release of QOwnNotes using the instructions below: 
 
 - First open the relevant folder, for example **en** (remember that folder name)
-- Then find the **.dic** and **.aff** files in that folder and note their name (remember the base name, likw ``en_GB``)
+- Then find the **.dic** and **.aff** files in that folder and note their name (remember the base name, like ``en_GB``)
 - Open the `dictionary manager dialog <https://github.com/pbek/QOwnNotes/blob/develop/src/dialogs/dictionarymanagerdialog.cpp>`_ and press the **Edit** button
 - A line there might look like ``addDictionaryItem(tr("English (British)"), QStringLiteral("en"), QStringLiteral("en_GB"));``
 - Duplicate that line and edit it
-  - Instead of ``English (British)`` write in the English name of your language
+  - Instead of ``English (British)`` write in English the name of your language
   - Instead of ``en`` write in above folder name
   - Instead of ``en_GB`` write in above file base name
 - Commit the changes of the file and follow the instructions to open a pull request
@@ -143,3 +139,6 @@ Note:
 +------+-----------------+----------------------------+
 | 53   | zu\_ZA          | Zulu                       |
 +------+-----------------+----------------------------+
+
+Credits
+`Sonnet <https://github.com/KDE/sonnet>`__ with `Hunspell <https://hunspell.github.io/>`__ is used for spellchecking
