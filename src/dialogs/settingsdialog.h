@@ -382,7 +382,7 @@ private:
 
     void initCloudConnectionComboBox(int selectedId = -1);
 
-    void handleDarkModeCheckBoxToggled(bool updateCheckBoxes = false);
+    void handleDarkModeCheckBoxToggled(bool updateCheckBoxes = false, bool updateSchema = false);
 };
 
 #endif // SETTINGSDIALOG_H

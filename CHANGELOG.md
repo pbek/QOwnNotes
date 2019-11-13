@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 19.11.12
+- fixed automatic switching to the default dark editor schema when opening the settings
+  dialog in dark mode (for [#1408](https://github.com/pbek/QOwnNotes/issues/1408))
+
 ## 19.11.11
 - you now can disable all external dictionaries in the *Manage dictionaries dialog*
   (for [#1399](https://github.com/pbek/QOwnNotes/issues/1399))

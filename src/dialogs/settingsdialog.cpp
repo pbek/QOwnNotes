@@ -1075,6 +1075,8 @@ void SettingsDialog::readSettings() {
     ui->darkModeColorsCheckBox->setChecked(settings.value(
             "darkModeColors").toBool());
 
+    const QSignalBlocker darkModeCheckBoxBlocker(ui->darkModeCheckBox);
+    Q_UNUSED(darkModeCheckBoxBlocker)
     ui->darkModeCheckBox->setChecked(settings.value(
             "darkMode").toBool());
 
@@ -3032,23 +3034,26 @@ void SettingsDialog::on_defaultNoteFileExtensionListWidget_currentRowChanged(
 }
 
 void SettingsDialog::on_darkModeCheckBox_toggled() {
-    handleDarkModeCheckBoxToggled(true);
+    handleDarkModeCheckBoxToggled(true, true);
 }
 
 /**
  * Toggles the dark mode colors check box with the dark mode checkbox
  */
-void SettingsDialog::handleDarkModeCheckBoxToggled(bool updateCheckBoxes) {
+void SettingsDialog::handleDarkModeCheckBoxToggled(bool updateCheckBoxes, bool updateSchema) {
     bool checked = ui->darkModeCheckBox->isChecked();
 
     ui->darkModeColorsCheckBox->setEnabled(!checked);
     ui->darkModeInfoLabel->setVisible(checked);
 
-    if (updateCheckBoxes) {
+    if (updateCheckBoxes && checked) {
+        ui->darkModeColorsCheckBox->setChecked(true);
+        ui->darkModeIconThemeCheckBox->setChecked(true);
+    }
+
+    if (updateSchema) {
         if (checked) {
             ui->editorFontColorWidget->selectFirstDarkSchema();
-            ui->darkModeColorsCheckBox->setChecked(true);
-            ui->darkModeIconThemeCheckBox->setChecked(true);
         } else {
             ui->editorFontColorWidget->selectFirstLightSchema();
         }
