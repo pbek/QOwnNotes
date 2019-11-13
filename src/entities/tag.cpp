@@ -572,6 +572,7 @@ QList<Tag> Tag::fetchAllWithLinkToNoteNames(const QStringList& noteNameList) {
 /**
  * Fetches all linked note file names
  */
+
 QStringList Tag::fetchAllLinkedNoteFileNames(bool fromAllSubfolders) const {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
