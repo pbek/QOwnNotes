@@ -572,7 +572,7 @@ QList<Tag> Tag::fetchAllWithLinkToNoteNames(const QStringList& noteNameList) {
 /**
  * Fetches all linked note file names
  */
-QStringList Tag::fetchAllLinkedNoteFileNames(bool fromAllSubfolders) {
+QStringList Tag::fetchAllLinkedNoteFileNames(bool fromAllSubfolders) const {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     QStringList fileNameList;
@@ -677,7 +677,7 @@ QStringList Tag::fetchAllNames() {
 /**
  * Count the linked note file names
  */
-int Tag::countLinkedNoteFileNames(bool fromAllSubfolders, bool recursive) {
+int Tag::countLinkedNoteFileNames(bool fromAllSubfolders, bool recursive) const {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
@@ -785,7 +785,7 @@ QString Tag::colorFieldName() {
 /**
  * Links a note to a tag
  */
-bool Tag::linkToNote(const Note &note) {
+bool Tag::linkToNote(const Note &note) const {
     if (!isFetched()) {
         return false;
     }
@@ -836,7 +836,7 @@ bool Tag::linkToNote(const Note &note) {
 /**
  * Removes the link to a note
  */
-bool Tag::removeLinkToNote(const Note &note) {
+bool Tag::removeLinkToNote(const Note &note) const {
     if (!isFetched()) {
         return false;
     }
@@ -1014,7 +1014,7 @@ bool Tag::exists() const {
     return tag.id > 0;
 }
 
-bool Tag::isFetched() {
+bool Tag::isFetched() const {
     return (this->id > 0);
 }
 
