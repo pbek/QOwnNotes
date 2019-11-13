@@ -30,7 +30,7 @@ public:
 
     bool remove() const;
 
-    bool isFetched();
+    bool isFetched() const;
 
     QString getName() const;
 
@@ -44,17 +44,17 @@ public:
 
     bool isActive() const;
 
-    bool linkToNote(const Note &note);
+    bool linkToNote(const Note &note) const;
 
-    bool removeLinkToNote(const Note &note);
+    bool removeLinkToNote(const Note &note) const;
 
-    QStringList fetchAllLinkedNoteFileNames(bool fromAllSubfolders);
+    QStringList fetchAllLinkedNoteFileNames(bool fromAllSubfolders) const;
 
     QList<Note> fetchAllLinkedNotes();
 
     bool isLinkedToNote(const Note &note) const;
 
-    int countLinkedNoteFileNames(bool fromAllSubfolder, bool recursive);
+    int countLinkedNoteFileNames(bool fromAllSubfolder, bool recursive) const;
 
     int getParentId() const;
 

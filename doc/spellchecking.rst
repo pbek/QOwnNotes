@@ -2,8 +2,8 @@ Spellchecking
 ~~~~~~~~~~~~~
 QOwnNotes has a builtin **Dictionary Manager** (in the *Edit* menu) which you can use to download dictionaries or delete them (if you are missing your language see below on how to request adding a dictionary). If you want to download the dictionaries manually, you can follow the instructions below:
 
--  Under **Linux** you need to install the Hunspell dictionaries for your language using your distro's pkg manager
-    - If you need to add additional language files you can do so in ``~/.local/share/hunspell``
+-  Under **Linux** you can install the Hunspell dictionaries for your language using your distro's pkg manager
+    - If you need to add additional language files you can do so in ``~/.local/share/hunspell`` or ``/usr/share/hunspell``.
     - If you are using the Snap package of QOwnNotes you can also use ``~/hunspell`` for language files, since the Snap can't access ``~/.local``
 -  Under **Windows** you need to copy Hunspell dictionaries for your language to
    a folder ``dicts`` in your QOwnNotes application folder or in ``C:\Users\[username]\dicts``
@@ -11,21 +11,9 @@ QOwnNotes has a builtin **Dictionary Manager** (in the *Edit* menu) which you ca
      dictionaries <https://github.com/LibreOffice/dictionaries>`__
 -  Under **macOS** you need to copy Hunspell dictionaries for your language to ``/Library/Spelling`` or ``~/Library/Spelling``. If the directory doesn't exist you need to create it.
 
-Dictionaries can be downloaded from `QOwnNotes dictionaries <https://github.com/qownnotes/dictionaries>`_.
+Dictionaries can be downloaded from `QOwnNotes dictionaries <https://github.com/qownnotes/dictionaries>`_. Use the table at the end of this document to find your language and its respective language code.
 
-If the dictionary for your language is not in the **Dictionary Manager**, please look for it at `QOwnNotes dictionaries <https://github.com/qownnotes/dictionaries>`_
-and propose a change of the `dictionary manager dialog <https://github.com/pbek/QOwnNotes/blob/develop/src/dialogs/dictionarymanagerdialog.cpp>`_
-to include it in the next release of QOwnNotes using the instructions below: 
-
-- First open the relevant folder, for example **en** (remember that folder name)
-- Then find the **.dic** and **.aff** files in that folder and note their name (remember the base name, like ``en_GB``)
-- Open the `dictionary manager dialog <https://github.com/pbek/QOwnNotes/blob/develop/src/dialogs/dictionarymanagerdialog.cpp>`_ and press the **Edit** button
-- A line there might look like ``addDictionaryItem(tr("English (British)"), QStringLiteral("en"), QStringLiteral("en_GB"));``
-- Duplicate that line and edit it
-  - Instead of ``English (British)`` write in English the name of your language
-  - Instead of ``en`` write in above folder name
-  - Instead of ``en_GB`` write in above file base name
-- Commit the changes of the file and follow the instructions to open a pull request
+If the dictionary for your language is not in the **Dictionary Manager** or in the above mentioned link, please look for it on the internet or create an issue. We'll be sure to include it in the next release of QOwnNotes if the dictionary is found.
 
 Note:
 - If you can't find your language in this table then unfortunately a dictionary for it doesn't exist in the LibreOffice files
@@ -87,7 +75,7 @@ Note:
 +------+-----------------+----------------------------+
 | 26   | it\_IT          | Italian                    |
 +------+-----------------+----------------------------+
-| 27   | kmr\_Latn       | Kurdish (Kurmandji)        |
+| 27   | kmr\_Latn       | Kurdish (Turkey)           |
 +------+-----------------+----------------------------+
 | 28   | lo\_LA          | Lao                        |
 +------+-----------------+----------------------------+
@@ -137,7 +125,7 @@ Note:
 +------+-----------------+----------------------------+
 | 52   | vi              | Vietnamese                 |
 +------+-----------------+----------------------------+
-| 53   | zu\_ZA          | Zulu                       |
+| 53   | zu\_ZA          | Zulu(spell dict not avail) |
 +------+-----------------+----------------------------+
 
 Credits
