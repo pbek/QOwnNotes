@@ -4435,7 +4435,7 @@ void MainWindow::copySelectedNotesToFolder(const QString& destinationFolder, con
 /**
  * Tags selected notes
  */
-void MainWindow::tagSelectedNotes(Tag tag) {
+void MainWindow::tagSelectedNotes(const Tag &tag) {
     int selectedItemsCount = ui->noteTreeWidget->selectedItems().size();
 
     if (Utils::Gui::question(
@@ -4508,7 +4508,7 @@ void MainWindow::tagSelectedNotes(Tag tag) {
 /**
  * Removes a tag from the selected notes
  */
-void MainWindow::removeTagFromSelectedNotes(Tag tag) {
+void MainWindow::removeTagFromSelectedNotes(const Tag &tag) {
     int selectedItemsCount = ui->noteTreeWidget->selectedItems().size();
 
     if (Utils::Gui::question(
@@ -5347,7 +5347,7 @@ void MainWindow::filterNotesByTag() {
 
             qDebug() << __func__ << " - 'tags': " << tags;
 
-            Q_FOREACH(Tag tag, tags) {
+            Q_FOREACH(const Tag &tag, tags) {
                     // fetch all linked note names
                     fileNameList << tag.fetchAllLinkedNoteFileNames(
                             _showNotesFromAllNoteSubFolders);
@@ -7481,7 +7481,7 @@ void MainWindow::buildTagTreeForParentItem(QTreeWidgetItem *parent, bool topLeve
             QString::number(NoteFolder::currentNoteFolderId())).toStringList();
 
     QList<Tag> tagList = Tag::fetchAllByParentId(parentId);
-    Q_FOREACH(Tag tag, tagList) {
+    Q_FOREACH(const Tag &tag, tagList) {
             int tagId = tag.getId();
             QTreeWidgetItem *item = addTagToTagTreeWidget(parent, tag);
 
@@ -7513,7 +7513,7 @@ void MainWindow::buildTagTreeForParentItem(QTreeWidgetItem *parent, bool topLeve
  * Ads a tag to the tag tree widget
  */
 QTreeWidgetItem *MainWindow::addTagToTagTreeWidget(
-        QTreeWidgetItem *parent, Tag tag) {
+        QTreeWidgetItem *parent, const Tag &tag) {
     int parentId = parent == nullptr ? 0 : parent->data(0, Qt::UserRole).toInt();
 
     /*if (parentId < 0) {
@@ -7560,7 +7560,7 @@ QTreeWidgetItem *MainWindow::addTagToTagTreeWidget(
  * @param tag
  */
 void MainWindow::handleTreeWidgetItemTagColor(QTreeWidgetItem *item,
-                                              Tag &tag) const {
+                                              const Tag &tag) const {
     if (item == Q_NULLPTR) {
         return;
     }
@@ -7991,7 +7991,7 @@ void MainWindow::reloadCurrentNoteTags() {
     _lastNoteSelectionWasMultiple = !currentNoteOnly;
 
     // add all new remove-tag buttons
-    Q_FOREACH(Tag tag, tagList) {
+    Q_FOREACH(const Tag &tag, tagList) {
             QPushButton* button = new QPushButton(
                     Utils::Misc::shorten(tag.getName(), 25),
                     ui->noteTagButtonFrame);
@@ -8048,7 +8048,7 @@ void MainWindow::highlightCurrentNoteTagsInTagTree() {
 
     Utils::Gui::resetBoldStateOfAllTreeWidgetItems(ui->tagTreeWidget);
 
-    Q_FOREACH(Tag tag, tagList) {
+    Q_FOREACH(const Tag &tag, tagList) {
             QTreeWidgetItem* item =
                     Utils::Gui::getTreeWidgetItemWithUserData(
                             ui->tagTreeWidget,
@@ -8403,7 +8403,7 @@ void MainWindow::buildTagMoveMenuTree(QMenu *parentMenu,
                                       int parentTagId) {
     QList<Tag> tagList = Tag::fetchAllByParentId(parentTagId, QStringLiteral("t.name ASC"));
 
-    Q_FOREACH(Tag tag, tagList) {
+    Q_FOREACH(const Tag &tag, tagList) {
             int tagId = tag.getId();
             QString name = tag.getName();
 
@@ -8442,7 +8442,7 @@ void MainWindow::buildBulkNoteTagMenuTree(QMenu *parentMenu,
                                           int parentTagId) {
     QList<Tag> tagList = Tag::fetchAllByParentId(parentTagId, QStringLiteral("t.name ASC"));
 
-    Q_FOREACH(Tag tag, tagList) {
+    Q_FOREACH(const Tag &tag, tagList) {
             int tagId = tag.getId();
             QString name = tag.getName();
 
@@ -8717,7 +8717,7 @@ void MainWindow::moveSelectedNotesToNoteSubFolder(NoteSubFolder noteSubFolder) {
                     note.setNoteSubFolder(noteSubFolder);
 
                     // tag the note again
-                    Q_FOREACH(Tag tag, tags) {
+                    Q_FOREACH(const Tag &tag, tags) {
                             tag.linkToNote(note);
                         }
 
@@ -8806,7 +8806,7 @@ void MainWindow::copySelectedNotesToNoteSubFolder(NoteSubFolder noteSubFolder) {
                     note.setNoteSubFolder(noteSubFolder);
 
                     // tag the note again
-                    Q_FOREACH(Tag tag, tags) {
+                    Q_FOREACH(const Tag &tag, tags) {
                             tag.linkToNote(note);
                         }
 
@@ -9409,7 +9409,7 @@ void MainWindow::openNotesContextMenu(
         moveDestinationMenu = noteMenu.addMenu(tr("&Move notes to…"));
         copyDestinationMenu = noteMenu.addMenu(tr("&Copy notes to…"));
 
-        Q_FOREACH(NoteFolder noteFolder, noteFolders) {
+        Q_FOREACH(const NoteFolder &noteFolder, noteFolders) {
                 // don't show not existing folders or if path is empty
                 if (!noteFolder.localPathExists() || noteFolder.isCurrent()) {
                     continue;
@@ -9478,7 +9478,7 @@ void MainWindow::openNotesContextMenu(
         tagRemoveMenu = noteMenu.addMenu(
                 tr("&Remove tag from selected notes…"));
 
-        Q_FOREACH(Tag tag, tagRemoveList) {
+        Q_FOREACH(const Tag &tag, tagRemoveList) {
                 QAction *action = tagRemoveMenu->addAction(
                         tag.getName());
                 action->setData(tag.getId());
@@ -10089,7 +10089,7 @@ void MainWindow::on_actionSplit_note_at_cursor_position_triggered() {
     textEdit->insertPlainText(selectedText);
 
     // link the tags of the old note to the new note
-    Q_FOREACH(Tag tag, tags) {
+    Q_FOREACH(const Tag &tag, tags) {
             tag.linkToNote(currentNote);
         }
 }

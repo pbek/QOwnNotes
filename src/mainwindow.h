@@ -789,11 +789,11 @@ private:
 
     void initStyling();
 
-    void tagSelectedNotes(Tag tag);
+    void tagSelectedNotes(const Tag &tag);
 
     static bool isMarkdownViewEnabled();
 
-    void removeTagFromSelectedNotes(Tag tag);
+    void removeTagFromSelectedNotes(const Tag &tag);
 
     bool isNoteEditPaneEnabled();
 
@@ -806,7 +806,7 @@ private:
 
     void buildBulkNoteTagMenuTree(QMenu *parentMenu, int parentTagId = 0);
 
-    QTreeWidgetItem *addTagToTagTreeWidget(QTreeWidgetItem *parent, Tag tag);
+    QTreeWidgetItem *addTagToTagTreeWidget(QTreeWidgetItem *parent, const Tag &tag);
 
     bool jumpToNoteName(const QString& name);
 
@@ -910,7 +910,7 @@ private:
 
     void assignColorToTagItem(QTreeWidgetItem *item);
 
-    void handleTreeWidgetItemTagColor(QTreeWidgetItem *item, Tag &tag) const;
+    void handleTreeWidgetItemTagColor(QTreeWidgetItem *item, const Tag &tag) const;
 
     void disableColorOfTagItem(QTreeWidgetItem *item);
 
