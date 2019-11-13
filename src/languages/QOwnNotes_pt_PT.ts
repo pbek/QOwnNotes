@@ -153,112 +153,337 @@
       <translation type="unfinished">Delete selected dictionaries</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="26"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="41"/>
       <source>English (British)</source>
       <translation type="unfinished">English (British)</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="27"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="42"/>
       <source>English (American)</source>
       <translation type="unfinished">English (American)</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="28"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="48"/>
       <source>German (Austrian)</source>
       <translation type="unfinished">German (Austrian)</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="29"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="49"/>
       <source>German (German)</source>
       <translation type="unfinished">German (German)</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="30"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="50"/>
       <source>German (Swiss)</source>
       <translation type="unfinished">German (Swiss)</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="31"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="45"/>
       <source>French</source>
       <translation type="unfinished">French</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="32"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="78"/>
       <source>Spanish</source>
       <translation type="unfinished">Spanish</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="33"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="72"/>
       <source>Russian</source>
       <translation type="unfinished">Russian</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="34"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="68"/>
       <source>Polish</source>
       <translation type="unfinished">Polish</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="35"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="59"/>
       <source>Italian</source>
       <translation type="unfinished">Italian</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="36"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="69"/>
       <source>Portugese (Brazilian)</source>
       <translation type="unfinished">Portugese (Brazilian)</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="37"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="70"/>
       <source>Portugese</source>
       <translation type="unfinished">Portugese</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="38"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="37"/>
       <source>Danish</source>
       <translation type="unfinished">Danish</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="39"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="79"/>
       <source>Swedish</source>
       <translation type="unfinished">Swedish</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="40"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="36"/>
       <source>Czech</source>
       <translation type="unfinished">Czech</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="41"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="26"/>
+      <source>Afrikaans</source>
+      <translation type="unfinished">Afrikaans</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="27"/>
+      <source>Arabic</source>
+      <translation type="unfinished">Arabic</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="28"/>
+      <source>Argonese</source>
+      <translation type="unfinished">Argonese</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="29"/>
+      <source>Albanian</source>
+      <translation type="unfinished">Albanian</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="30"/>
+      <source>Belarusian</source>
+      <translation type="unfinished">Belarusian</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="31"/>
+      <source>Bulgarian</source>
+      <translation type="unfinished">Bulgarian</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="32"/>
+      <source>Bengali</source>
+      <translation type="unfinished">Bengali</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="33"/>
+      <source>Breton</source>
+      <translation type="unfinished">Breton</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="34"/>
+      <source>Catalan</source>
+      <translation type="unfinished">Catalan</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="35"/>
+      <source>Croatian</source>
+      <translation type="unfinished">Croatian</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="38"/>
+      <source>Dutch</source>
+      <translation type="unfinished">Dutch</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="39"/>
+      <source>English (Australian)</source>
+      <translation type="unfinished">English (Australian)</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="40"/>
+      <source>English (Canadian)</source>
+      <translation type="unfinished">English (Canadian)</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="43"/>
+      <source>English (South African)</source>
+      <translation type="unfinished">English (South African)</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="44"/>
+      <source>Estonian</source>
+      <translation type="unfinished">Estonian</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="46"/>
+      <source>Gaelic</source>
+      <translation type="unfinished">Gaelic</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="47"/>
+      <source>Galician</source>
+      <translation type="unfinished">Galician</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="51"/>
+      <source>Greek</source>
+      <translation type="unfinished">Greek</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="52"/>
+      <source>Gujrati</source>
+      <translation type="unfinished">Gujrati</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="53"/>
+      <source>Gurani</source>
+      <translation type="unfinished">Gurani</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="54"/>
+      <source>Hebrew</source>
+      <translation type="unfinished">Hebrew</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="55"/>
+      <source>Hindi</source>
+      <translation type="unfinished">Hindi</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="56"/>
+      <source>Hungarian</source>
+      <translation type="unfinished">Hungarian</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="57"/>
+      <source>Icelandic</source>
+      <translation type="unfinished">Icelandic</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="58"/>
+      <source>Indonesian</source>
+      <translation type="unfinished">Indonesian</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="60"/>
+      <source>Kurdish (Turkey)</source>
+      <translation type="unfinished">Kurdish (Turkey)</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="61"/>
+      <source>Lao</source>
+      <translation type="unfinished">Lao</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="62"/>
+      <source>Lithuanian</source>
+      <translation type="unfinished">Lithuanian</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="63"/>
+      <source>Latvian</source>
+      <translation type="unfinished">Latvian</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="64"/>
+      <source>Nepali</source>
+      <translation type="unfinished">Nepali</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="65"/>
+      <source>Norwegian (Bokmål)</source>
+      <translation type="unfinished">Norwegian (Bokmål)</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="66"/>
+      <source>Norwegian (Nynorsk)</source>
+      <translation type="unfinished">Norwegian (Nynorsk)</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="67"/>
+      <source>Occitan</source>
+      <translation type="unfinished">Occitan</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="71"/>
+      <source>Romanian</source>
+      <translation type="unfinished">Romanian</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="73"/>
+      <source>Serbian (Cyrillic)</source>
+      <translation type="unfinished">Serbian (Cyrillic)</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="74"/>
+      <source>Serbian (Latin)</source>
+      <translation type="unfinished">Serbian (Latin)</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="75"/>
+      <source>Sinhala</source>
+      <translation type="unfinished">Sinhala</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="76"/>
+      <source>Slovak</source>
+      <translation type="unfinished">Slovak</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="77"/>
+      <source>Slovenian</source>
+      <translation type="unfinished">Slovenian</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="80"/>
+      <source>Swahili</source>
+      <translation type="unfinished">Swahili</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="81"/>
+      <source>Telugu</source>
+      <translation type="unfinished">Telugu</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="82"/>
+      <source>Thai</source>
+      <translation type="unfinished">Thai</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="83"/>
+      <source>Turkish</source>
+      <translation type="unfinished">Turkish</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="84"/>
+      <source>Ukrainian</source>
+      <translation type="unfinished">Ukrainian</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="85"/>
       <source>Urdu</source>
       <translation type="unfinished">Urdu</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="167"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="86"/>
+      <source>Vietnamese</source>
+      <translation type="unfinished">Vietnamese</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="212"/>
       <source>Download error</source>
       <translation type="unfinished">Download error</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="168"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="213"/>
       <source>Error while downloading:
 %1</source>
       <translation type="unfinished">Error while downloading:
 %1</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="182"/>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="280"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="227"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="325"/>
       <source>File error</source>
       <translation type="unfinished">File error</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="183"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="228"/>
       <source>Could not store downloaded file:
 %1</source>
       <translation type="unfinished">Could not store downloaded file:
 %1</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="281"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="326"/>
       <source>Could not remove dictionary file:
 %1</source>
       <translation type="unfinished">Could not remove dictionary file:
@@ -3760,7 +3985,7 @@ Se a reciclagem não estiver ativada no servidor de ownCloud não será possíve
       <translation>O comando &lt;code&gt;%1&lt;/code&gt; falhou!</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3910"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3915"/>
       <source>New connection</source>
       <translation type="unfinished">New connection</translation>
     </message>
@@ -4671,8 +4896,8 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4112"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="2011"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="2020"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2013"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2022"/>
       <source>Database</source>
       <translation>Base de Dados</translation>
     </message>
@@ -4693,7 +4918,7 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4067"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="2080"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2082"/>
       <source>Clear app data and exit</source>
       <translation>Limpar dados do aplicativo e sair</translation>
     </message>
@@ -5266,20 +5491,20 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3896"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3663"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3668"/>
       <source>Reset message boxes</source>
       <translation>Reiniciar as caixas de mensagem</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4089"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3729"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3752"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3734"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3757"/>
       <source>Import settings</source>
       <translation>Importar definições</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4096"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3695"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3700"/>
       <source>Export settings</source>
       <translation>Exportar definições</translation>
     </message>
@@ -5660,7 +5885,7 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
       <translation>Exibir subpastas de notas como árvore completa</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2596"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2598"/>
       <source>Search script repository</source>
       <translation>Procurar repositório de scripts</translation>
     </message>
@@ -6155,32 +6380,32 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
       <translation>Proxy de SOCKS5</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1315"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1317"/>
       <source>Automatic (needs restart)</source>
       <translation>Automático (precisa reiniciar)</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1481"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1483"/>
       <source>Undefined key</source>
       <translation>Chave indefinida</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1486"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1488"/>
       <source>Assign a new key</source>
       <translation>Atribuir uma nova chave</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1487"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1489"/>
       <source>Reset to default key</source>
       <translation>Redefinir para a chave padrão</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1557"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1559"/>
       <source>Shortcut already assigned</source>
       <translation>Atalho já atribuído</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1734"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1736"/>
       <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
@@ -6189,7 +6414,7 @@ Versão do Servidor: %1
 Versão da API do QOwnNotes:%2</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1746"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1748"/>
       <source>There was an error connecting to the ownCloud Server!
 You also need to have the QOwnNotesAPI app installed and enabled!
 
@@ -6200,103 +6425,103 @@ Talvez você tenha que instalar a API do QOwnNotes e habilitá-la no servidor
 Mensagem de erro: </translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2033"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2035"/>
       <source>Markdown files</source>
       <translation>Arquivos de remarcação</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2060"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2062"/>
       <source>Disable usage tracking</source>
       <translation>Desativar rastreamento de uso</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2061"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2063"/>
       <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
       <translation>Dados de uso anônimos ajudam a decidir quais partes do QOwnNotes devem ser aprimoradas a seguir e encontrar e corrigir erros. &lt;br /&gt; Desative-o apenas se você realmente não puder conviver com ele. &lt;br /&gt; &lt;br /&gt; Desative realmente o rastreamento de uso?</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2283"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2285"/>
       <source>new folder</source>
       <translation>nova pasta</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2319"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2321"/>
       <source>Remove note folder</source>
       <translation>Remover pasta da nota</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2320"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2322"/>
       <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
       <translation>Remover a pasta de notas atual &lt;strong&gt;%1 &lt;/strong&gt;?</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2395"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2397"/>
       <source>Please select the folder where your notes will get stored to</source>
       <translation>Selecione a pasta onde suas anotações serão armazenadas</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2432"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2434"/>
       <source>Loading folders from server</source>
       <translation>Carregando pastas do servidor</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2446"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2448"/>
       <source>No more folders were found in the current folder</source>
       <translation>Não foram encontradas mais pastas na pasta atual</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2519"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2521"/>
       <source>Loading folders in '%1' from server</source>
       <translation>Carregando pastas em '%1' do servidor</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2583"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2585"/>
       <source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
       <translation type="unfinished">Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2585"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2587"/>
       <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
       <translation>Se você precisar acessar uma certa funcionalidade no QOwnNotes, abra um problema na &lt;a href="%1"&gt; página de problemas do QOwnNotes &lt;/a&gt;.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2606"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2608"/>
       <source>Check for script updates</source>
       <translation>Procurar por atualizações de script</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2613"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2615"/>
       <source>Add local script</source>
       <translation>Adicionar script local</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2617"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2619"/>
       <source>Add an existing, local script</source>
       <translation>Adicionar um existente, script local</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3694"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3751"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3699"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3756"/>
       <source>INI files</source>
       <translation>Ficheiros INI</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3730"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3735"/>
       <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
       <translation>Deseja realmente importar configurações? Suas configurações atuais serão removidas e nem todas as configurações poderão ser restauradas, como as configurações da pasta de anotações e quais scripts você estava usando. Você também precisará ajustar algumas configurações, especialmente entre plataformas, mas suas anotações permanecerão intactas!</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3740"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3745"/>
       <source>The application will be quit after the import.</source>
       <translation>O aplicativo será encerrado após a importação.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3741"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3746"/>
       <source>The application will be restarted after the import.</source>
       <translation>O aplicativo será reiniciado após a importação.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2600"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2602"/>
       <source>Find a script in the script repository</source>
       <translation>Encontre um script no repositório de scripts</translation>
     </message>
@@ -6311,115 +6536,115 @@ Mensagem de erro: </translation>
       <translation>Mostrar item da barra de menu</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1558"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1560"/>
       <source>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</source>
       <translation type="unfinished">The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2696"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2698"/>
       <source>Remove script</source>
       <translation>Remover script</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2697"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2699"/>
       <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
       <translation type="unfinished">Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2748"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2750"/>
       <source>QML files</source>
       <translation>Ficheiros QML</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2749"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2751"/>
       <source>Please select your QML file</source>
       <translation>Por favor, selecione o seu ficheiro QML</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2838"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2840"/>
       <source>Open repository</source>
       <translation>Abrir repositório</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2898"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2900"/>
       <source>Your script seems to be valid</source>
       <translation>Seu script parece ser válido</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2899"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2901"/>
       <source>There were script errors:
 %1</source>
       <translation>Ocorreram erros de script:
 %1</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2968"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2970"/>
       <source>File extension</source>
       <translation>Extensão de ficheiro</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2969"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2971"/>
       <source>Enter your custom file extension:</source>
       <translation>Digite sua extensão de arquivo personalizada:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3270"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3275"/>
       <source>Calendar cache emptied</source>
       <translation>Cache do calendário limpa</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3271"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3276"/>
       <source>Your calendar cache was emptied.</source>
       <translation>A cache do seu calendário foi limpa.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3349"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3354"/>
       <source>Reset toolbars and exit</source>
       <translation>Reiniciar barras de ferramentas e sair</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3350"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3355"/>
       <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
       <translation>Deseja realmente redefinir todas as barras de ferramentas? O aplicativo será fechado no processo, as barras de ferramentas padrão serão restauradas quando você o iniciar novamente.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3354"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3359"/>
       <source>Reset and &amp;exit</source>
       <translation>Reiniciar e &amp;fechar</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3516"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3521"/>
       <source>Log file cleared</source>
       <translation>Arquivo de log limpo</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3517"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3522"/>
       <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
       <translation>O arquivo de log &lt;strong&gt;%1 &lt;/strong&gt; foi limpo.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3553"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3558"/>
       <source>Executable files</source>
       <translation>Ficheiros executáveis</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3554"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3556"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3559"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3561"/>
       <source>All files</source>
       <translation>Todos os ficheiros</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3564"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3569"/>
       <source>Please select the path of your git executable</source>
       <translation>Por favor, selecione o caminho do seu executável git</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3664"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3669"/>
       <source>Do you really want to reset the overrides of all message boxes?</source>
       <translation>Deseja realmente redefinir as substituições de todas as caixas de mensagem?</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2021"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2023"/>
       <source>The Database was reinitialized.</source>
       <translation>A base de dados foi reinicializada.</translation>
     </message>
@@ -6474,12 +6699,12 @@ Mensagem de erro: </translation>
       <translation>Ele será ativado se você executar QOwnNotes com o parâmetro &lt;code&gt; - portátil &lt;/ code&gt;.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2034"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2036"/>
       <source>Save debug information</source>
       <translation>Salvar informação de debug</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2081"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2083"/>
       <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
@@ -6488,14 +6713,14 @@ Your notes will stay intact!</source>
 Suas Notas estarão intactas!</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2084"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2086"/>
       <source>Clear and &amp;exit</source>
       <translation>Limpar e &amp;Sair</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2015"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="2084"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3354"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2017"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2086"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3359"/>
       <source>&amp;Cancel</source>
       <translation>&amp;Cancelar</translation>
     </message>
@@ -6505,17 +6730,17 @@ Suas Notas estarão intactas!</translation>
       <translation>Você encontrará um &lt;code&gt; QOwnNotesPortable.bat &lt;/code&gt; no caminho da versão para iniciar o QOwnNotes no modo portátil.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2012"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2014"/>
       <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
       <translation>Deseja realmente limpar o banco de dados local? Isso também removerá suas pastas de anotações configuradas e seus itens de tarefas em cache!</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2015"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2017"/>
       <source>Clear &amp;database</source>
       <translation>Limpar &amp;base de dados</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2195"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2197"/>
       <source>Select editor application</source>
       <translation>Selecione o editor</translation>
     </message>

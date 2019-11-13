@@ -153,112 +153,337 @@
       <translation type="unfinished">Delete selected dictionaries</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="26"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="41"/>
       <source>English (British)</source>
       <translation type="unfinished">English (British)</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="27"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="42"/>
       <source>English (American)</source>
       <translation type="unfinished">English (American)</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="28"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="48"/>
       <source>German (Austrian)</source>
       <translation type="unfinished">German (Austrian)</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="29"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="49"/>
       <source>German (German)</source>
       <translation type="unfinished">German (German)</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="30"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="50"/>
       <source>German (Swiss)</source>
       <translation type="unfinished">German (Swiss)</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="31"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="45"/>
       <source>French</source>
       <translation type="unfinished">French</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="32"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="78"/>
       <source>Spanish</source>
       <translation type="unfinished">Spanish</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="33"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="72"/>
       <source>Russian</source>
       <translation type="unfinished">Russian</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="34"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="68"/>
       <source>Polish</source>
       <translation type="unfinished">Polish</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="35"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="59"/>
       <source>Italian</source>
       <translation type="unfinished">Italian</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="36"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="69"/>
       <source>Portugese (Brazilian)</source>
       <translation type="unfinished">Portugese (Brazilian)</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="37"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="70"/>
       <source>Portugese</source>
       <translation type="unfinished">Portugese</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="38"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="37"/>
       <source>Danish</source>
       <translation type="unfinished">Danish</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="39"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="79"/>
       <source>Swedish</source>
       <translation type="unfinished">Swedish</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="40"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="36"/>
       <source>Czech</source>
       <translation type="unfinished">Czech</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="41"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="26"/>
+      <source>Afrikaans</source>
+      <translation type="unfinished">Afrikaans</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="27"/>
+      <source>Arabic</source>
+      <translation type="unfinished">Arabic</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="28"/>
+      <source>Argonese</source>
+      <translation type="unfinished">Argonese</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="29"/>
+      <source>Albanian</source>
+      <translation type="unfinished">Albanian</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="30"/>
+      <source>Belarusian</source>
+      <translation type="unfinished">Belarusian</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="31"/>
+      <source>Bulgarian</source>
+      <translation type="unfinished">Bulgarian</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="32"/>
+      <source>Bengali</source>
+      <translation type="unfinished">Bengali</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="33"/>
+      <source>Breton</source>
+      <translation type="unfinished">Breton</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="34"/>
+      <source>Catalan</source>
+      <translation type="unfinished">Catalan</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="35"/>
+      <source>Croatian</source>
+      <translation type="unfinished">Croatian</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="38"/>
+      <source>Dutch</source>
+      <translation type="unfinished">Dutch</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="39"/>
+      <source>English (Australian)</source>
+      <translation type="unfinished">English (Australian)</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="40"/>
+      <source>English (Canadian)</source>
+      <translation type="unfinished">English (Canadian)</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="43"/>
+      <source>English (South African)</source>
+      <translation type="unfinished">English (South African)</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="44"/>
+      <source>Estonian</source>
+      <translation type="unfinished">Estonian</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="46"/>
+      <source>Gaelic</source>
+      <translation type="unfinished">Gaelic</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="47"/>
+      <source>Galician</source>
+      <translation type="unfinished">Galician</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="51"/>
+      <source>Greek</source>
+      <translation type="unfinished">Greek</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="52"/>
+      <source>Gujrati</source>
+      <translation type="unfinished">Gujrati</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="53"/>
+      <source>Gurani</source>
+      <translation type="unfinished">Gurani</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="54"/>
+      <source>Hebrew</source>
+      <translation type="unfinished">Hebrew</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="55"/>
+      <source>Hindi</source>
+      <translation type="unfinished">Hindi</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="56"/>
+      <source>Hungarian</source>
+      <translation type="unfinished">Hungarian</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="57"/>
+      <source>Icelandic</source>
+      <translation type="unfinished">Icelandic</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="58"/>
+      <source>Indonesian</source>
+      <translation type="unfinished">Indonesian</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="60"/>
+      <source>Kurdish (Turkey)</source>
+      <translation type="unfinished">Kurdish (Turkey)</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="61"/>
+      <source>Lao</source>
+      <translation type="unfinished">Lao</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="62"/>
+      <source>Lithuanian</source>
+      <translation type="unfinished">Lithuanian</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="63"/>
+      <source>Latvian</source>
+      <translation type="unfinished">Latvian</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="64"/>
+      <source>Nepali</source>
+      <translation type="unfinished">Nepali</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="65"/>
+      <source>Norwegian (Bokmål)</source>
+      <translation type="unfinished">Norwegian (Bokmål)</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="66"/>
+      <source>Norwegian (Nynorsk)</source>
+      <translation type="unfinished">Norwegian (Nynorsk)</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="67"/>
+      <source>Occitan</source>
+      <translation type="unfinished">Occitan</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="71"/>
+      <source>Romanian</source>
+      <translation type="unfinished">Romanian</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="73"/>
+      <source>Serbian (Cyrillic)</source>
+      <translation type="unfinished">Serbian (Cyrillic)</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="74"/>
+      <source>Serbian (Latin)</source>
+      <translation type="unfinished">Serbian (Latin)</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="75"/>
+      <source>Sinhala</source>
+      <translation type="unfinished">Sinhala</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="76"/>
+      <source>Slovak</source>
+      <translation type="unfinished">Slovak</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="77"/>
+      <source>Slovenian</source>
+      <translation type="unfinished">Slovenian</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="80"/>
+      <source>Swahili</source>
+      <translation type="unfinished">Swahili</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="81"/>
+      <source>Telugu</source>
+      <translation type="unfinished">Telugu</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="82"/>
+      <source>Thai</source>
+      <translation type="unfinished">Thai</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="83"/>
+      <source>Turkish</source>
+      <translation type="unfinished">Turkish</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="84"/>
+      <source>Ukrainian</source>
+      <translation type="unfinished">Ukrainian</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="85"/>
       <source>Urdu</source>
       <translation type="unfinished">Urdu</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="167"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="86"/>
+      <source>Vietnamese</source>
+      <translation type="unfinished">Vietnamese</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="212"/>
       <source>Download error</source>
       <translation type="unfinished">Download error</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="168"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="213"/>
       <source>Error while downloading:
 %1</source>
       <translation type="unfinished">Error while downloading:
 %1</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="182"/>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="280"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="227"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="325"/>
       <source>File error</source>
       <translation type="unfinished">File error</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="183"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="228"/>
       <source>Could not store downloaded file:
 %1</source>
       <translation type="unfinished">Could not store downloaded file:
 %1</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="281"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="326"/>
       <source>Could not remove dictionary file:
 %1</source>
       <translation type="unfinished">Could not remove dictionary file:
@@ -3720,7 +3945,7 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
       <translation type="unfinished">The command &lt;code&gt;%1&lt;/code&gt; failed!</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3910"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3915"/>
       <source>New connection</source>
       <translation type="unfinished">New connection</translation>
     </message>
@@ -4630,8 +4855,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4112"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="2011"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="2020"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2013"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2022"/>
       <source>Database</source>
       <translation>データベース</translation>
     </message>
@@ -4652,7 +4877,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4067"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="2080"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2082"/>
       <source>Clear app data and exit</source>
       <translation>アプリのデータを初期化して終了</translation>
     </message>
@@ -5225,20 +5450,20 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3896"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3663"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3668"/>
       <source>Reset message boxes</source>
       <translation>メッセージ ボックスをリセットする</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4089"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3729"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3752"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3734"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3757"/>
       <source>Import settings</source>
       <translation>設定のインポート</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4096"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3695"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3700"/>
       <source>Export settings</source>
       <translation>設定のエクスポート</translation>
     </message>
@@ -5619,7 +5844,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
       <translation>サブフォルダーを完全なツリーで表示する</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2596"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2598"/>
       <source>Search script repository</source>
       <translation>スクリプト リポジトリの検索</translation>
     </message>
@@ -6114,32 +6339,32 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
       <translation>SOCKS5 プロキシ</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1315"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1317"/>
       <source>Automatic (needs restart)</source>
       <translation>自動 (要再起動)</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1481"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1483"/>
       <source>Undefined key</source>
       <translation>未定義</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1486"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1488"/>
       <source>Assign a new key</source>
       <translation>新しいキーを割り当て</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1487"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1489"/>
       <source>Reset to default key</source>
       <translation>既定に戻す</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1557"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1559"/>
       <source>Shortcut already assigned</source>
       <translation type="unfinished">Shortcut already assigned</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1734"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1736"/>
       <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
@@ -6148,7 +6373,7 @@ QOwnNotesAPI version: %2</source>
 QOwnNotesAPIのバージョン: %2</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1746"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1748"/>
       <source>There was an error connecting to the ownCloud Server!
 You also need to have the QOwnNotesAPI app installed and enabled!
 
@@ -6159,103 +6384,103 @@ QOwnNotesAPI アプリをインストールして有効にする必要もあり�
 接続エラーメッセージ: </translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2033"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2035"/>
       <source>Markdown files</source>
       <translation>Markdown ファイル</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2060"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2062"/>
       <source>Disable usage tracking</source>
       <translation>使用状況データの収集を無効にする</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2061"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2063"/>
       <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
       <translation>匿名の使用データはQOwnNotesが次に改善すべき部分を決めたり、バグの発見や修正に役立ちます。&lt;br /&gt;どうしても容認できない場合にのみ無効にしてください。&lt;br /&gt;&lt;br /&gt;使用状況データの収集を無効にしますか？</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2283"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2285"/>
       <source>new folder</source>
       <translation>新しいフォルダー</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2319"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2321"/>
       <source>Remove note folder</source>
       <translation>ノート フォルダーの削除</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2320"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2322"/>
       <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
       <translation>このノート フォルダー &lt;strong&gt;%1&lt;/strong&gt; を削除しますか？</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2395"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2397"/>
       <source>Please select the folder where your notes will get stored to</source>
       <translation>ノートを保存するフォルダーを選択してください。</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2432"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2434"/>
       <source>Loading folders from server</source>
       <translation>サーバーからフォルダーを読み込み中</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2446"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2448"/>
       <source>No more folders were found in the current folder</source>
       <translation>このフォルダーにはフォルダーがありません</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2519"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2521"/>
       <source>Loading folders in '%1' from server</source>
       <translation>サーバーから '%1' のフォルダーを読み込み中</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2583"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2585"/>
       <source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
       <translation type="unfinished">Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2585"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2587"/>
       <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
       <translation>QOwnNotes の特定の機能にアクセスが必要な時は &lt;a href="%1"&gt; QOwnNotes Issue ページ&lt;/a&gt; に新しい Issueを作成してください。</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2606"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2608"/>
       <source>Check for script updates</source>
       <translation>スクリプトの更新確認</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2613"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2615"/>
       <source>Add local script</source>
       <translation>ローカル スクリプトを追加</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2617"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2619"/>
       <source>Add an existing, local script</source>
       <translation>既存のローカル スクリプトを追加</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3694"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3751"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3699"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3756"/>
       <source>INI files</source>
       <translation type="unfinished">INI files</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3730"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3735"/>
       <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
       <translation type="unfinished">Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3740"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3745"/>
       <source>The application will be quit after the import.</source>
       <translation type="unfinished">The application will be quit after the import.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3741"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3746"/>
       <source>The application will be restarted after the import.</source>
       <translation type="unfinished">The application will be restarted after the import.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2600"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2602"/>
       <source>Find a script in the script repository</source>
       <translation>スクリプト リポジトリからスクリプトを検索</translation>
     </message>
@@ -6270,115 +6495,115 @@ QOwnNotesAPI アプリをインストールして有効にする必要もあり�
       <translation type="unfinished">Show menu bar item</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1558"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1560"/>
       <source>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</source>
       <translation type="unfinished">The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2696"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2698"/>
       <source>Remove script</source>
       <translation>スクリプトの削除</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2697"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2699"/>
       <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
       <translation>現在のスクリプト &lt;strong&gt;%1&lt;/strong&gt; を削除しますか？</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2748"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2750"/>
       <source>QML files</source>
       <translation>QML ファイル</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2749"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2751"/>
       <source>Please select your QML file</source>
       <translation>あなたのQMLファイルを選択してください。</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2838"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2840"/>
       <source>Open repository</source>
       <translation>リポジトリを開く</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2898"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2900"/>
       <source>Your script seems to be valid</source>
       <translation>あなたのスクリプトは有効のようです</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2899"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2901"/>
       <source>There were script errors:
 %1</source>
       <translation>スクリプト エラーがあります:
 %1</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2968"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2970"/>
       <source>File extension</source>
       <translation>ファイルの拡張子</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2969"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2971"/>
       <source>Enter your custom file extension:</source>
       <translation>独自のファイル拡張子を入力:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3270"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3275"/>
       <source>Calendar cache emptied</source>
       <translation>カレンダー キャッシュの削除</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3271"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3276"/>
       <source>Your calendar cache was emptied.</source>
       <translation>カレンダーのキャッシュを空にしました。</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3349"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3354"/>
       <source>Reset toolbars and exit</source>
       <translation>ツールバーをリセットして終了</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3350"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3355"/>
       <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
       <translation>すべてのツールバーをリセットしますか？アプリは終了されます。次に起動したときに既定のツールバーが復元されます。</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3354"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3359"/>
       <source>Reset and &amp;exit</source>
       <translation>リセットして終了(&amp;E)</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3516"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3521"/>
       <source>Log file cleared</source>
       <translation>ログファイルの初期化</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3517"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3522"/>
       <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
       <translation>ログファイル &lt;strong&gt;%1&lt;/strong&gt; を初期化しました。</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3553"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3558"/>
       <source>Executable files</source>
       <translation>実行可能ファイル</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3554"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3556"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3559"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3561"/>
       <source>All files</source>
       <translation>すべてのファイル</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3564"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3569"/>
       <source>Please select the path of your git executable</source>
       <translation>Git の実行可能ファイルのパスを選択してください</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3664"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3669"/>
       <source>Do you really want to reset the overrides of all message boxes?</source>
       <translation type="unfinished">Do you really want to reset the overrides of all message boxes?</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2021"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2023"/>
       <source>The Database was reinitialized.</source>
       <translation>データベースは再初期化されました。</translation>
     </message>
@@ -6433,12 +6658,12 @@ QOwnNotesAPI アプリをインストールして有効にする必要もあり�
       <translation>QOwnNotes を &lt;code&gt;--portable&lt;/code&gt; パラメーターをつけて起動したときに有効になります。</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2034"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2036"/>
       <source>Save debug information</source>
       <translation>デバッグ情報の保存</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2081"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2083"/>
       <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
@@ -6447,14 +6672,14 @@ Your notes will stay intact!</source>
 あなたのノートはそのまま残ります。</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2084"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2086"/>
       <source>Clear and &amp;exit</source>
       <translation>初期化して終了(&amp;E)</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2015"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="2084"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3354"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2017"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2086"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3359"/>
       <source>&amp;Cancel</source>
       <translation>中止(&amp;C)</translation>
     </message>
@@ -6464,17 +6689,17 @@ Your notes will stay intact!</source>
       <translation>QOwnNotesをポータブル モードで起動するための &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; がアプリの場所にあります。</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2012"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2014"/>
       <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
       <translation>本当にローカル データベースを初期化しますか？ これはあなたのノート フォルダーの構成とキャッシュされたTodo項目も同時に削除します。</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2015"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2017"/>
       <source>Clear &amp;database</source>
       <translation>データベースの初期化(&amp;D)</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2195"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2197"/>
       <source>Select editor application</source>
       <translation>編集アプリケーションの選択</translation>
     </message>

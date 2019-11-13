@@ -140,12 +140,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="173"/>
       <source>If checked only the downloaded dictionaries will be used</source>
-      <translation type="unfinished">If checked only the downloaded dictionaries will be used</translation>
+      <translation>Má sheiceáiltear iad, ní úsáidfear ach na foclóirí a íoslódáil</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="176"/>
       <source>Disable external dictionaries</source>
-      <translation type="unfinished">Disable external dictionaries</translation>
+      <translation>Díchumasaigh foclóirí seachtracha</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.ui" line="183"/>
@@ -153,112 +153,337 @@
       <translation>Scrios na foclóirí roghnaithe</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="26"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="41"/>
       <source>English (British)</source>
       <translation>Béarla (Briotanach)</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="27"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="42"/>
       <source>English (American)</source>
       <translation>Béarla (Meiriceánach)</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="28"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="48"/>
       <source>German (Austrian)</source>
       <translation>Gearmáinis (hOstaire)</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="29"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="49"/>
       <source>German (German)</source>
       <translation>Gearmáinis (Gearmáinis)</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="30"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="50"/>
       <source>German (Swiss)</source>
       <translation>Gearmáinis (na hEilvéise)</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="31"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="45"/>
       <source>French</source>
-      <translation type="unfinished">French</translation>
+      <translation>Fraincis</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="32"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="78"/>
       <source>Spanish</source>
-      <translation type="unfinished">Spanish</translation>
+      <translation>Spainnis</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="33"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="72"/>
       <source>Russian</source>
-      <translation type="unfinished">Russian</translation>
+      <translation>Rúisis</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="34"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="68"/>
       <source>Polish</source>
-      <translation type="unfinished">Polish</translation>
+      <translation>Polainnis</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="35"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="59"/>
       <source>Italian</source>
-      <translation type="unfinished">Italian</translation>
+      <translation>Iodáilis</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="36"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="69"/>
       <source>Portugese (Brazilian)</source>
-      <translation type="unfinished">Portugese (Brazilian)</translation>
+      <translation>Portaingéilis (Brasaíle)</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="70"/>
+      <source>Portugese</source>
+      <translation>Portaingéilis</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="37"/>
-      <source>Portugese</source>
-      <translation type="unfinished">Portugese</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="38"/>
       <source>Danish</source>
       <translation>Danmhairgis</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="39"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="79"/>
       <source>Swedish</source>
-      <translation type="unfinished">Swedish</translation>
+      <translation>Sualainnis</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="36"/>
+      <source>Czech</source>
+      <translation>Seicis</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="26"/>
+      <source>Afrikaans</source>
+      <translation type="unfinished">Afrikaans</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="27"/>
+      <source>Arabic</source>
+      <translation type="unfinished">Arabic</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="28"/>
+      <source>Argonese</source>
+      <translation type="unfinished">Argonese</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="29"/>
+      <source>Albanian</source>
+      <translation type="unfinished">Albanian</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="30"/>
+      <source>Belarusian</source>
+      <translation type="unfinished">Belarusian</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="31"/>
+      <source>Bulgarian</source>
+      <translation type="unfinished">Bulgarian</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="32"/>
+      <source>Bengali</source>
+      <translation type="unfinished">Bengali</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="33"/>
+      <source>Breton</source>
+      <translation type="unfinished">Breton</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="34"/>
+      <source>Catalan</source>
+      <translation type="unfinished">Catalan</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="35"/>
+      <source>Croatian</source>
+      <translation type="unfinished">Croatian</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="38"/>
+      <source>Dutch</source>
+      <translation type="unfinished">Dutch</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="39"/>
+      <source>English (Australian)</source>
+      <translation type="unfinished">English (Australian)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="40"/>
-      <source>Czech</source>
-      <translation type="unfinished">Czech</translation>
+      <source>English (Canadian)</source>
+      <translation type="unfinished">English (Canadian)</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="41"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="43"/>
+      <source>English (South African)</source>
+      <translation type="unfinished">English (South African)</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="44"/>
+      <source>Estonian</source>
+      <translation type="unfinished">Estonian</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="46"/>
+      <source>Gaelic</source>
+      <translation type="unfinished">Gaelic</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="47"/>
+      <source>Galician</source>
+      <translation type="unfinished">Galician</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="51"/>
+      <source>Greek</source>
+      <translation type="unfinished">Greek</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="52"/>
+      <source>Gujrati</source>
+      <translation type="unfinished">Gujrati</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="53"/>
+      <source>Gurani</source>
+      <translation type="unfinished">Gurani</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="54"/>
+      <source>Hebrew</source>
+      <translation type="unfinished">Hebrew</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="55"/>
+      <source>Hindi</source>
+      <translation type="unfinished">Hindi</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="56"/>
+      <source>Hungarian</source>
+      <translation type="unfinished">Hungarian</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="57"/>
+      <source>Icelandic</source>
+      <translation type="unfinished">Icelandic</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="58"/>
+      <source>Indonesian</source>
+      <translation type="unfinished">Indonesian</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="60"/>
+      <source>Kurdish (Turkey)</source>
+      <translation type="unfinished">Kurdish (Turkey)</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="61"/>
+      <source>Lao</source>
+      <translation type="unfinished">Lao</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="62"/>
+      <source>Lithuanian</source>
+      <translation type="unfinished">Lithuanian</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="63"/>
+      <source>Latvian</source>
+      <translation type="unfinished">Latvian</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="64"/>
+      <source>Nepali</source>
+      <translation type="unfinished">Nepali</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="65"/>
+      <source>Norwegian (Bokmål)</source>
+      <translation type="unfinished">Norwegian (Bokmål)</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="66"/>
+      <source>Norwegian (Nynorsk)</source>
+      <translation type="unfinished">Norwegian (Nynorsk)</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="67"/>
+      <source>Occitan</source>
+      <translation type="unfinished">Occitan</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="71"/>
+      <source>Romanian</source>
+      <translation type="unfinished">Romanian</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="73"/>
+      <source>Serbian (Cyrillic)</source>
+      <translation type="unfinished">Serbian (Cyrillic)</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="74"/>
+      <source>Serbian (Latin)</source>
+      <translation type="unfinished">Serbian (Latin)</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="75"/>
+      <source>Sinhala</source>
+      <translation type="unfinished">Sinhala</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="76"/>
+      <source>Slovak</source>
+      <translation type="unfinished">Slovak</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="77"/>
+      <source>Slovenian</source>
+      <translation type="unfinished">Slovenian</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="80"/>
+      <source>Swahili</source>
+      <translation type="unfinished">Swahili</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="81"/>
+      <source>Telugu</source>
+      <translation type="unfinished">Telugu</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="82"/>
+      <source>Thai</source>
+      <translation type="unfinished">Thai</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="83"/>
+      <source>Turkish</source>
+      <translation type="unfinished">Turkish</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="84"/>
+      <source>Ukrainian</source>
+      <translation type="unfinished">Ukrainian</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="85"/>
       <source>Urdu</source>
-      <translation type="unfinished">Urdu</translation>
+      <translation>Urdais</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="167"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="86"/>
+      <source>Vietnamese</source>
+      <translation type="unfinished">Vietnamese</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="212"/>
       <source>Download error</source>
       <translation>Íoslódáil earráid</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="168"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="213"/>
       <source>Error while downloading:
 %1</source>
       <translation>Earráid agus é á íoslódáil:
 %1</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="182"/>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="280"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="227"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="325"/>
       <source>File error</source>
       <translation>Earráid chomhaid</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="183"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="228"/>
       <source>Could not store downloaded file:
 %1</source>
       <translation>Níorbh fhéidir comhad íoslódáilte a stóráil:
 %1</translation>
     </message>
     <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="281"/>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="326"/>
       <source>Could not remove dictionary file:
 %1</source>
       <translation>Níorbh fhéidir comhad foclóir a bhaint:
@@ -1050,69 +1275,69 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="14"/>
       <source>Link an url or note</source>
-      <translation type="unfinished">Link an url or note</translation>
+      <translation>Nasc nó nóta a nascadh</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="51"/>
       <source>Enter URL</source>
-      <translation type="unfinished">Enter URL</translation>
+      <translation>Cuir isteach URL</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="60"/>
       <source>Enter an URL to link to</source>
-      <translation type="unfinished">Enter an URL to link to</translation>
+      <translation>Cuir isteach URL le nascadh leis</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="83"/>
       <source>Select local file or directory to link to</source>
-      <translation type="unfinished">Select local file or directory to link to</translation>
+      <translation>Roghnaigh comhad áitiúil nó eolaire chun nasc a dhéanamh leis</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="94"/>
       <source>Note</source>
-      <translation type="unfinished">Note</translation>
+      <translation>Nóta</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="141"/>
       <source>Enter the name of the link (optional)</source>
-      <translation type="unfinished">Enter the name of the link (optional)</translation>
+      <translation>Cuir isteach ainm an naisc (roghnach)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="144"/>
       <source>Name of link (optional)</source>
-      <translation type="unfinished">Name of link (optional)</translation>
+      <translation>Ainm an naisc (roghnach)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="154"/>
       <source>Enter a description for the link (optional)</source>
-      <translation type="unfinished">Enter a description for the link (optional)</translation>
+      <translation>Cuir isteach cur síos ar an nasc (roghnach)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="157"/>
       <source>Description of link (optional)</source>
-      <translation type="unfinished">Description of link (optional)</translation>
+      <translation>Cur síos ar an nasc (roghnach)</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="109"/>
       <source>Search for notes or create new notes by entering text and pressing return</source>
-      <translation type="unfinished">Search for notes or create new notes by entering text and pressing return</translation>
+      <translation>Cuardaigh nótaí nó cruthaigh nótaí nua trí théacs a chur isteach agus an cnaipe a bhrú ar ais</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="124"/>
       <source>Search for a note to link to</source>
-      <translation type="unfinished">Search for a note to link to</translation>
+      <translation>Cuardaigh nóta le nasc a dhéanamh leis</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.cpp" line="220"/>
       <location filename="../dialogs/linkdialog.cpp" line="292"/>
       <source>Select file to link to</source>
-      <translation type="unfinished">Select file to link to</translation>
+      <translation>Roghnaigh comhad le nasc a dhéanamh leis</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.cpp" line="252"/>
       <location filename="../dialogs/linkdialog.cpp" line="300"/>
       <source>Select directory to link to</source>
-      <translation type="unfinished">Select directory to link to</translation>
+      <translation>Roghnaigh eolaire chun nasc a dhéanamh leis</translation>
     </message>
   </context>
   <context>
@@ -1120,54 +1345,54 @@
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="14"/>
       <source>Locally trashed notes</source>
-      <translation type="unfinished">Locally trashed notes</translation>
+      <translation>Nótaí a bhántar go háitiúil</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="55"/>
       <source>Find note name</source>
-      <translation type="unfinished">Find note name</translation>
+      <translation>Faigh ainm an nóta</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="81"/>
       <source>Name</source>
-      <translation type="unfinished">Name</translation>
+      <translation>Ainm</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.ui" line="86"/>
       <source>Trashed</source>
-      <translation type="unfinished">Trashed</translation>
+      <translation>Bhruscar</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="41"/>
       <source>Restore</source>
-      <translation type="unfinished">Restore</translation>
+      <translation>Athchóirigh</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="42"/>
       <location filename="../dialogs/localtrashdialog.cpp" line="194"/>
       <source>Restore selected notes</source>
-      <translation type="unfinished">Restore selected notes</translation>
+      <translation>Cuir nótaí roghnaithe ar ais</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="51"/>
       <source>Remove</source>
-      <translation type="unfinished">Remove</translation>
+      <translation>Bain amach</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="52"/>
       <location filename="../dialogs/localtrashdialog.cpp" line="240"/>
       <source>Remove selected notes</source>
-      <translation type="unfinished">Remove selected notes</translation>
+      <translation>Bain na nótaí roghnaithe</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="97"/>
       <source>File will be restored to: %1</source>
-      <translation type="unfinished">File will be restored to: %1</translation>
+      <translation>Cuirfear an comhad ar ais chuig: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="106"/>
       <source>File &lt;strong&gt;%1&lt;/strong&gt; isn't readable and can't be restored!</source>
-      <translation type="unfinished">File &lt;strong&gt;%1&lt;/strong&gt; isn't readable and can't be restored!</translation>
+      <translation>Níl comhad &lt;strong&gt;%1&lt;/strong&gt; inléite agus ní féidir é a athchóiriú!</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="195"/>
@@ -1183,7 +1408,7 @@
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="218"/>
       <source>Notes restored</source>
-      <translation type="unfinished">Notes restored</translation>
+      <translation>Nótaí athchóirithe</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="219"/>
@@ -1210,7 +1435,7 @@
     <message>
       <location filename="../dialogs/localtrashdialog.cpp" line="264"/>
       <source>Notes removed</source>
-      <translation type="unfinished">Notes removed</translation>
+      <translation>Nótaí bainte</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="265"/>
@@ -1229,12 +1454,12 @@
     <message>
       <location filename="../widgets/logwidget.ui" line="26"/>
       <source>Logs</source>
-      <translation type="unfinished">Logs</translation>
+      <translation>Logchomhaid</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="114"/>
       <source>Fatal</source>
-      <translation type="unfinished">Fatal</translation>
+      <translation>Marfach</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="100"/>
@@ -1678,27 +1903,27 @@
     <message>
       <location filename="../mainwindow.ui" line="1580"/>
       <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
-      <translation type="unfinished">Insert image (the image will be copied to the `media` folder in the current notes folder)</translation>
+      <translation>Cuir isteach íomhá (déanfar an íomhá a chóipeáil chuig an bhfillteán `meáin 'sa fhillteán nótaí reatha)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1592"/>
       <source>Show &amp;changelog</source>
-      <translation type="unfinished">Show &amp;changelog</translation>
+      <translation>Taispeáin &amp;changelog</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1601"/>
       <source>&amp;Encrypt note</source>
-      <translation type="unfinished">&amp;Encrypt note</translation>
+      <translation>&amp;Criptigh nóta</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1610"/>
       <source>Edit encrypted note</source>
-      <translation type="unfinished">Edit encrypted note</translation>
+      <translation>Cuir nóta criptithe in eagar</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1622"/>
       <source>Decrypt note</source>
-      <translation type="unfinished">Decrypt note</translation>
+      <translation>Nóta díchriptigh</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1631"/>
@@ -1718,7 +1943,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1661"/>
       <source>Insert &amp;code block</source>
-      <translation type="unfinished">Insert &amp;code block</translation>
+      <translation>Cuir isteach bloc na gcód</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1673"/>
@@ -1743,7 +1968,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1711"/>
       <source>Show &amp;toolbar</source>
-      <translation type="unfinished">Show &amp;toolbar</translation>
+      <translation>Taispeáin barra &amp;uirlisí</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1719"/>
@@ -1779,17 +2004,17 @@
     <message>
       <location filename="../mainwindow.ui" line="1782"/>
       <source>Show note in &amp;file manager</source>
-      <translation type="unfinished">Show note in &amp;file manager</translation>
+      <translation>Taispeáin nóta i &amp;mbainisteoir comhad</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1794"/>
       <source>Format text &amp;bold</source>
-      <translation type="unfinished">Format text &amp;bold</translation>
+      <translation>Téacs téacs &amp;trom</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1806"/>
       <source>Format text &amp;italic</source>
-      <translation type="unfinished">Format text &amp;italic</translation>
+      <translation>Téacs téacs &amp;iodálach</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1818"/>
@@ -1855,14 +2080,14 @@
       <location filename="../mainwindow.ui" line="2159"/>
       <location filename="../mainwindow.ui" line="2162"/>
       <source>Open the Telegram group</source>
-      <translation type="unfinished">Open the Telegram group</translation>
+      <translation>Oscail an grúpa Telegram</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2174"/>
       <location filename="../mainwindow.ui" line="2177"/>
       <source>Open the Riot room</source>
       <extracomment>"Riot" as in the chat service</extracomment>
-      <translation type="unfinished">Open the Riot room</translation>
+      <translation>Oscail an seomra Riot</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2204"/>
@@ -1915,7 +2140,7 @@
       <location filename="../mainwindow.ui" line="2287"/>
       <location filename="../mainwindow.cpp" line="6038"/>
       <source>Insert block &amp;quote</source>
-      <translation type="unfinished">Insert block &amp;quote</translation>
+      <translation>Cuir isteach luachana &amp;bloc</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2295"/>
@@ -1963,95 +2188,95 @@
       <location filename="../mainwindow.ui" line="2374"/>
       <location filename="../mainwindow.cpp" line="9508"/>
       <source>Show note git versions</source>
-      <translation type="unfinished">Show note git versions</translation>
+      <translation>Taispeáin leaganacha nótaí git</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2383"/>
       <source>Find scripts in script repository</source>
-      <translation type="unfinished">Find scripts in script repository</translation>
+      <translation>Faigh scripteanna i stór scripte</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2395"/>
       <source>Script settings</source>
-      <translation type="unfinished">Script settings</translation>
+      <translation>Socruithe Script</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2404"/>
       <source>Insert attachment</source>
-      <translation type="unfinished">Insert attachment</translation>
+      <translation>Cuir ceangaltán isteach</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2431"/>
       <source>Check for script updates</source>
-      <translation type="unfinished">Check for script updates</translation>
+      <translation>Seiceáil le haghaidh nuashonruithe scripte</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2440"/>
       <source>Show local trash</source>
-      <translation type="unfinished">Show local trash</translation>
+      <translation>Taispeáin an bruscar áitiúil</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2445"/>
       <location filename="../mainwindow.ui" line="2448"/>
       <source>Jump to note edit panel</source>
-      <translation type="unfinished">Jump to note edit panel</translation>
+      <translation>Léim chun nóta a dhéanamh den phainéal eagarthóireachta</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2460"/>
       <source>Manage orphaned attachments</source>
-      <translation type="unfinished">Manage orphaned attachments</translation>
+      <translation>Bainistigh iatáin dílleachta</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2465"/>
       <source>Jump to note subfolder panel</source>
-      <translation type="unfinished">Jump to note subfolder panel</translation>
+      <translation>Léim chun painéal an fhillteora a thabhairt faoi deara</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2473"/>
       <source>Jump to tags panel</source>
-      <translation type="unfinished">Jump to tags panel</translation>
+      <translation>Léim go painéal clibeanna</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2481"/>
       <source>Jump to note list panel</source>
-      <translation type="unfinished">Jump to note list panel</translation>
+      <translation>Léim go dtí an painéal liosta nótaí</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2489"/>
       <source>Activate context menu</source>
-      <translation type="unfinished">Activate context menu</translation>
+      <translation>Cuir roghchlár comhthéacs i bhfeidhm</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2497"/>
       <source>Import bookmarks from server</source>
-      <translation type="unfinished">Import bookmarks from server</translation>
+      <translation>Iompórtáil leabharmharcanna ón bhfreastalaí</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2502"/>
       <location filename="../mainwindow.ui" line="2505"/>
       <source>Toggle full-screen mode</source>
-      <translation type="unfinished">Toggle full-screen mode</translation>
+      <translation>Scoránaigh mód an scáileáin iomlán</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2516"/>
       <source>Typewriter mode</source>
-      <translation type="unfinished">Typewriter mode</translation>
+      <translation>Modh clóscríobháin</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2528"/>
       <source>Check spelling</source>
-      <translation type="unfinished">Check spelling</translation>
+      <translation>Seiceáil an litriú</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2536"/>
       <location filename="../mainwindow.cpp" line="11363"/>
       <source>Automatically detect</source>
-      <translation type="unfinished">Automatically detect</translation>
+      <translation>Braith go huathoibríoch</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2541"/>
       <source>Manage dictionaries</source>
-      <translation type="unfinished">Manage dictionaries</translation>
+      <translation>Foclóirí a bhainistiú</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1877"/>
@@ -2062,59 +2287,59 @@
       <location filename="../mainwindow.ui" line="1880"/>
       <location filename="../mainwindow.ui" line="1883"/>
       <source>The note edit panel will be above the preview panel</source>
-      <translation type="unfinished">The note edit panel will be above the preview panel</translation>
+      <translation>Beidh an painéal in eagar nóta os cionn an phainéil réamhamhairc</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1892"/>
       <source>Replace in current note</source>
-      <translation type="unfinished">Replace in current note</translation>
+      <translation>In ionad an nóta reatha</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1900"/>
       <source>Autocomplete, solve equation or open URL</source>
-      <translation type="unfinished">Autocomplete, solve equation or open URL</translation>
+      <translation>Comhlánaithe go hiomlán, réiteach cothromóid nó URL oscailte</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1903"/>
       <source>Solve a simple equation like '(2+3)*6=' in the current line</source>
-      <translation type="unfinished">Solve a simple equation like '(2+3)*6=' in the current line</translation>
+      <translation>Réitigh cothromóid shimplí cosúil le '(2 + 3) * 6 =' sa líne reatha</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1911"/>
       <source>Select note folder</source>
-      <translation type="unfinished">Select note folder</translation>
+      <translation>Roghnaigh fillteán nóta</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1926"/>
       <source>Reload scripting engine</source>
-      <translation type="unfinished">Reload scripting engine</translation>
+      <translation>Athlódáil inneall scriptithe</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1959"/>
       <location filename="../mainwindow.ui" line="1962"/>
       <source>Open the #qownnotes IRC channel, you have to stay online to get a response</source>
-      <translation type="unfinished">Open the #qownnotes IRC channel, you have to stay online to get a response</translation>
+      <translation>Oscail an cainéal #qownnotes IRC, caithfidh tú fanacht ar líne chun freagra a fháil</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2189"/>
       <location filename="../mainwindow.ui" line="2192"/>
       <source>Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</source>
-      <translation type="unfinished">Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</translation>
+      <translation>Oscailt an tseomra giuirléidí, is gá duit cuntas GitHub nó Twitter a úsáid chun logáil isteach, ach is féidir leat teachtaireachtaí as líne a fháil</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="970"/>
       <source>Open chat</source>
-      <translation type="unfinished">Open chat</translation>
+      <translation>Comhrá oscailte</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="510"/>
       <source>Note operations…</source>
-      <translation type="unfinished">Note operations…</translation>
+      <translation>Tabhair faoi deara oibríochtaí…</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1565"/>
       <source>&amp;Print note (preview)</source>
-      <translation type="unfinished">&amp;Print note (preview)</translation>
+      <translation>&amp;Priontáil nóta (réamhamharc)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1971"/>
@@ -2408,7 +2633,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="4443"/>
       <source>Tag selected notes</source>
-      <translation type="unfinished">Tag selected notes</translation>
+      <translation>Clibeáil nótaí roghnaithe</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4444"/>
@@ -2542,17 +2767,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="6882"/>
       <location filename="../mainwindow.cpp" line="6951"/>
       <source>Done inserting image</source>
-      <translation type="unfinished">Done inserting image</translation>
+      <translation>Arna chur isteach an íomhá</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6884"/>
       <source>Inserting attachment</source>
-      <translation type="unfinished">Inserting attachment</translation>
+      <translation>Ceangaltán a chur isteach</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6889"/>
       <source>Done inserting attachment</source>
-      <translation type="unfinished">Done inserting attachment</translation>
+      <translation>Arna chur isteach i gceangal</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="6901"/>
@@ -2590,38 +2815,38 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="6934"/>
       <source>Saving temporary image</source>
-      <translation type="unfinished">Saving temporary image</translation>
+      <translation>Ag cosaint íomhá shealadaigh</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6954"/>
       <source>Temporary file can't be opened</source>
-      <translation type="unfinished">Temporary file can't be opened</translation>
+      <translation>Ní féidir comhad sealadach a oscailt</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6995"/>
       <source>Downloading %1</source>
-      <translation type="unfinished">Downloading %1</translation>
+      <translation>%1 a íoslódáil</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7176"/>
       <source>Reset font size to %1 pt</source>
       <comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
-      <translation type="unfinished">Reset font size to %1 pt</translation>
+      <translation>Athraigh méid an chló go %1 pt</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8003"/>
       <source>Remove tag '%1' from the current note</source>
-      <translation type="unfinished">Remove tag '%1' from the current note</translation>
+      <translation>Bain an clib '%1' ón nóta reatha</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8005"/>
       <source>Remove tag '%1' from the selected notes</source>
-      <translation type="unfinished">Remove tag '%1' from the selected notes</translation>
+      <translation>Bain an clib '%1' as na nótaí roghnaithe</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8208"/>
       <source>Rename tag</source>
-      <translation type="unfinished">Rename tag</translation>
+      <translation>Athainmnigh an chlib</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8209"/>
@@ -2642,105 +2867,105 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="8429"/>
       <source>Move to the root</source>
       <comment>to move a tag to the current tag in the tag context menu</comment>
-      <translation type="unfinished">Move to the root</translation>
+      <translation>Bog go dtí an fhréamh</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8937"/>
       <source>An url was opened at the current cursor position</source>
-      <translation type="unfinished">An url was opened at the current cursor position</translation>
+      <translation>Osclaíodh url ag staid an chúrsóra reatha</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9038"/>
       <source>No equation was found in front of the cursor</source>
-      <translation type="unfinished">No equation was found in front of the cursor</translation>
+      <translation>Níor aimsíodh aon chothromóid os comhair an chúrsóra</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9055"/>
       <source>Result for equation: %1 = %2</source>
-      <translation type="unfinished">Result for equation: %1 = %2</translation>
+      <translation>Toradh ar chothromóid: %1 = %2</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9156"/>
       <source>The scripting engine was reloaded</source>
-      <translation type="unfinished">The scripting engine was reloaded</translation>
+      <translation>Rinneadh an t-inneall scripteála a athlódáil</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9192"/>
       <source>HTML files</source>
-      <translation type="unfinished">HTML files</translation>
+      <translation>Comhaid HTML</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9396"/>
       <location filename="../mainwindow.cpp" line="9570"/>
       <source>Rename note</source>
-      <translation type="unfinished">Rename note</translation>
+      <translation>Athainmnigh nóta</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9397"/>
       <source>Allows you to rename the filename of the note</source>
-      <translation type="unfinished">Allows you to rename the filename of the note</translation>
+      <translation>Ceadaíonn sé duit ainm comhaid an nóta a athainmniú</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9409"/>
       <source>&amp;Move notes to…</source>
-      <translation type="unfinished">&amp;Move notes to…</translation>
+      <translation>&amp;Bog nótaí go…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9410"/>
       <source>&amp;Copy notes to…</source>
-      <translation type="unfinished">&amp;Copy notes to…</translation>
+      <translation>&amp;Cóipeáil nótaí chuig…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9445"/>
       <source>Move notes to subfolder…</source>
-      <translation type="unfinished">Move notes to subfolder…</translation>
+      <translation>Bog nótaí chuig an bhfillteán…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9449"/>
       <source>Copy notes to subfolder…</source>
-      <translation type="unfinished">Copy notes to subfolder…</translation>
+      <translation>Cóipeáil nótaí chuig an bhfillteán…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9457"/>
       <source>&amp;Tag selected notes with…</source>
-      <translation type="unfinished">&amp;Tag selected notes with…</translation>
+      <translation>&amp;Clib na nótaí roghnaithe le…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9479"/>
       <source>&amp;Remove tag from selected notes…</source>
-      <translation type="unfinished">&amp;Remove tag from selected notes…</translation>
+      <translation>&amp;Bain an clib ó nótaí roghnaithe…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9570"/>
       <source>Name:</source>
-      <translation type="unfinished">Name:</translation>
+      <translation>Ainm:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9582"/>
       <source>Note renaming not enabled!</source>
-      <translation type="unfinished">Note renaming not enabled!</translation>
+      <translation>Tabhair faoi deara nach bhfuil an t-athainmniú ar chumas!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9758"/>
       <source>Rename subfolder</source>
-      <translation type="unfinished">Rename subfolder</translation>
+      <translation>Athfhuaimniú an fhillteán</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10332"/>
       <source>Create new workspace</source>
-      <translation type="unfinished">Create new workspace</translation>
+      <translation>Cruthaigh spás oibre nua</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10332"/>
       <location filename="../mainwindow.cpp" line="10588"/>
       <source>Workspace name:</source>
-      <translation type="unfinished">Workspace name:</translation>
+      <translation>Ainm an spáis oibre:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10452"/>
       <source>full</source>
       <comment>full workspace</comment>
-      <translation type="unfinished">full</translation>
+      <translation>iomlán</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="10459"/>
@@ -3062,32 +3287,32 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="7291"/>
       <source>Untagged notes</source>
-      <translation type="unfinished">Untagged notes</translation>
+      <translation>Nótaí neamhchaite</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9193"/>
       <source>Export current note as HTML file</source>
-      <translation type="unfinished">Export current note as HTML file</translation>
+      <translation>Easpórtáil nóta reatha mar chomhad HTML</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4893"/>
       <source>Page size</source>
-      <translation type="unfinished">Page size</translation>
+      <translation>Méid an leathanaigh</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1047"/>
       <source>quit toolbar</source>
-      <translation type="unfinished">quit toolbar</translation>
+      <translation>scor an barra uirlisí</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4893"/>
       <source>Page size:</source>
-      <translation type="unfinished">Page size:</translation>
+      <translation>Méid an leathanaigh:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5009"/>
       <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
-      <translation type="unfinished">QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</translation>
+      <translation>Déanfaidh QOwnNotes sonraí úsáide gan ainm a rianú, a chuidíonn le cinneadh a dhéanamh ar na codanna de QOwnNotes a fheabhsóidh seo chugainn agus chun bugaí a aimsiú agus a shocrú. Is féidir leat an t-iompar sin a dhíchumasú sna suíomhanna.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5013"/>
@@ -3107,28 +3332,28 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="975"/>
       <source>Your tasks are being loaded from your server</source>
-      <translation type="unfinished">Your tasks are being loaded from your server</translation>
+      <translation>Tá do chuid tascanna á luchtú ó do fhreastalaí</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2546"/>
       <source>Current note was modified externally</source>
-      <translation type="unfinished">Current note was modified externally</translation>
+      <translation>Athraíodh an nóta reatha go seachtrach</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2628"/>
       <location filename="../mainwindow.cpp" line="5510"/>
       <source>Stored current note to disk</source>
-      <translation type="unfinished">Stored current note to disk</translation>
+      <translation>Nóta reatha stóráilte ar an diosca</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2647"/>
       <source>Note was modified externally: %1</source>
-      <translation type="unfinished">Note was modified externally: %1</translation>
+      <translation>Athraíodh an Nóta go seachtrach: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2668"/>
       <source>Notes directory was modified externally</source>
-      <translation type="unfinished">Notes directory was modified externally</translation>
+      <translation>Athraíodh eolaire na nótaí go seachtrach</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="2734"/>
@@ -3195,77 +3420,77 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="5051"/>
       <source>No selected todo lists!</source>
-      <translation type="unfinished">No selected todo lists!</translation>
+      <translation>Uimh liostaí todo roghnaithe!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="671"/>
       <source>Subfolders</source>
-      <translation type="unfinished">Subfolders</translation>
+      <translation>Fillteáin</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="682"/>
       <source>Tags</source>
-      <translation type="unfinished">Tags</translation>
+      <translation>Clibeanna</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="691"/>
       <source>Note search</source>
-      <translation type="unfinished">Note search</translation>
+      <translation>Déan cuardach a thabhairt faoi deara</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="709"/>
       <source>Note list</source>
-      <translation type="unfinished">Note list</translation>
+      <translation>Liosta nótaí</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="733"/>
       <source>Note edit</source>
-      <translation type="unfinished">Note edit</translation>
+      <translation>Cuir nótaí in eagar</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="744"/>
       <source>Note tags</source>
-      <translation type="unfinished">Note tags</translation>
+      <translation>Clibeanna Nóta</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="755"/>
       <source>Note preview</source>
-      <translation type="unfinished">Note preview</translation>
+      <translation>Tabhair réamhamharc faoi deara</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="762"/>
       <source>Log</source>
-      <translation type="unfinished">Log</translation>
+      <translation>Logáil isteach</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="771"/>
       <source>Scripting</source>
-      <translation type="unfinished">Scripting</translation>
+      <translation>Scriptiú</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1014"/>
       <source>formatting toolbar</source>
-      <translation type="unfinished">formatting toolbar</translation>
+      <translation>barra uirlisí a fhormáidiú</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1023"/>
       <source>inserting toolbar</source>
-      <translation type="unfinished">inserting toolbar</translation>
+      <translation>cuir uirlisí isteach</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1030"/>
       <source>encryption toolbar</source>
-      <translation type="unfinished">encryption toolbar</translation>
+      <translation>barra uirlisí criptithe</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1037"/>
       <source>window toolbar</source>
-      <translation type="unfinished">window toolbar</translation>
+      <translation>barra uirlisí fuinneoige</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1042"/>
       <source>custom action toolbar</source>
-      <translation type="unfinished">custom action toolbar</translation>
+      <translation>barra uirlisí gníomh saincheaptha</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1062"/>
@@ -3667,103 +3892,103 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="202"/>
       <source>Username / password error</source>
-      <translation type="unfinished">Username / password error</translation>
+      <translation>Earráid ainm úsáideora / pasfhocal</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="203"/>
       <source>Your calendar username or password is incorrect!</source>
-      <translation type="unfinished">Your calendar username or password is incorrect!</translation>
+      <translation>Tá d’ainm úsáideora nó d'fhocal faire mícheart!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="509"/>
       <source>API app version too low</source>
-      <translation type="unfinished">API app version too low</translation>
+      <translation>Leagan app API ró-íseal</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="510"/>
       <source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
-      <translation type="unfinished">Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</translation>
+      <translation>Iarrtar ort smaoineamh ar thabhairt cothrom le dáta do app QOwnNotesAPI ar do fhreastalaí, tá do app leagan %1 ró-íseal agus a chur faoi deara Trioblóidí i QOwnNotes.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1033"/>
       <source>ownCloud server connection error</source>
-      <translation type="unfinished">ownCloud server connection error</translation>
+      <translation>earráid nasc freastalaí ownCloud</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1037"/>
       <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
-      <translation type="unfinished">ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</translation>
+      <translation>earráid fhreastalaí ownCloud: &lt;strong&gt;%1 &lt;/strong&gt; &lt;br /&gt; Déan seiceáil ar do chumraíocht ownCloud le do thoil.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1056"/>
       <source>You need to setup your ownCloud server!</source>
-      <translation type="unfinished">You need to setup your ownCloud server!</translation>
+      <translation>Ní mór duit do fhreastalaí ownCloud a chur ar bun!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1069"/>
       <source>Open &amp;settings</source>
-      <translation type="unfinished">Open &amp;settings</translation>
+      <translation>Suíomhanna &amp;oscailte</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1069"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>&amp;Cealaigh</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1123"/>
       <source>Done with loading note versions</source>
-      <translation type="unfinished">Done with loading note versions</translation>
+      <translation>Arna dhéanamh le leaganacha nóta luchtaithe</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1162"/>
       <source>No versions found</source>
-      <translation type="unfinished">No versions found</translation>
+      <translation>Níor aimsíodh aon leaganacha</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1163"/>
       <source>There are no versions for this note or the note wasn't found on the server.</source>
-      <translation type="unfinished">There are no versions for this note or the note wasn't found on the server.</translation>
+      <translation>Níl aon leaganacha ann don nóta seo nó níor aimsíodh an nóta ar an bhfreastalaí.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1184"/>
       <source>Done with loading trashed notes</source>
-      <translation type="unfinished">Done with loading trashed notes</translation>
+      <translation>Arna dhéanamh le lódáil nótaí sa Bhruscar</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1225"/>
       <source>No trashed notes</source>
-      <translation type="unfinished">No trashed notes</translation>
+      <translation>Níl nótaí sa Bhruscar</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1226"/>
       <source>No trashed notes were found on the server.</source>
-      <translation type="unfinished">No trashed notes were found on the server.</translation>
+      <translation>Níor aimsíodh nótaí ar bith ar an bhfreastalaí.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1249"/>
       <location filename="../services/owncloudservice.cpp" line="1275"/>
       <source>Error while loading todo lists!</source>
-      <translation type="unfinished">Error while loading todo lists!</translation>
+      <translation>Earráid agus liostaí todo á lódáil!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1250"/>
       <source>Your CalDAV server didn't reply anything!</source>
-      <translation type="unfinished">Your CalDAV server didn't reply anything!</translation>
+      <translation>Earráid agus liostaí todo á lódáil!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1276"/>
       <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation type="unfinished">Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</translation>
+      <translation>Earráid teachtaireacht ó do fhreastalaí CalDAV: &lt;strong&gt;%1&lt;/strong&gt;</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1945"/>
       <source>No bookmarks</source>
-      <translation type="unfinished">No bookmarks</translation>
+      <translation>Gan leabharmharcanna</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1946"/>
       <source>No bookmarks were found on the server.</source>
-      <translation type="unfinished">No bookmarks were found on the server.</translation>
+      <translation>Níor aimsíodh aon leabharmharcanna ar an bhfreastalaí.</translation>
     </message>
   </context>
   <context>
@@ -3771,22 +3996,22 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/passworddialog.ui" line="14"/>
       <source>Please enter your password</source>
-      <translation type="unfinished">Please enter your password</translation>
+      <translation>Cuir isteach do phasfhocal le do thoil</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="24"/>
       <source>Enter your password:</source>
-      <translation type="unfinished">Enter your password:</translation>
+      <translation>Cuir isteach do phasfhocal:</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="34"/>
       <source>Password</source>
-      <translation type="unfinished">Password</translation>
+      <translation>Pasfhocal</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="44"/>
       <source>Re-enter password</source>
-      <translation type="unfinished">Re-enter password</translation>
+      <translation>Cuir focal faire isteach arís</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="54"/>
@@ -3880,7 +4105,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation>Theip ar an ordú &lt;code&gt;%1&lt;/code&gt;!</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3910"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3915"/>
       <source>New connection</source>
       <translation>Nasc nua</translation>
     </message>
@@ -4066,37 +4291,37 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="156"/>
       <source>Plain text</source>
-      <translation type="unfinished">Plain text</translation>
+      <translation>Téacs soiléir</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="161"/>
       <source>Whole words</source>
-      <translation type="unfinished">Whole words</translation>
+      <translation>Focail iomlána</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="166"/>
       <source>Regular expression</source>
-      <translation type="unfinished">Regular expression</translation>
+      <translation>Léiriú rialta</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="187"/>
       <source>Replace</source>
-      <translation type="unfinished">Replace</translation>
+      <translation>Ionadaigh</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="197"/>
       <source>Replace All</source>
-      <translation type="unfinished">Replace All</translation>
+      <translation>Ionadaigh Uile</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="210"/>
       <source>Mode:</source>
-      <translation type="unfinished">Mode:</translation>
+      <translation>Mód:</translation>
     </message>
     <message>
       <location filename="../widgets/qtexteditsearchwidget.ui" line="220"/>
       <source>Match case sensitive</source>
-      <translation type="unfinished">Match case sensitive</translation>
+      <translation>Meaitseáil cás íogair</translation>
     </message>
   </context>
   <context>
@@ -4104,30 +4329,30 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/databaseservice.cpp" line="76"/>
       <source>Cannot open memory database</source>
-      <translation type="unfinished">Cannot open memory database</translation>
+      <translation>Ní féidir bunachar sonraí a oscailt</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="77"/>
       <source>Unable to establish a memory database connection.</source>
-      <translation type="unfinished">Unable to establish a memory database connection.</translation>
+      <translation>Ní féidir nasc bunachar sonraí cuimhne a bhunú.</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="93"/>
       <source>Cannot open disk database</source>
-      <translation type="unfinished">Cannot open disk database</translation>
+      <translation>Ní féidir bunachar sonraí diosca a oscailt</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="94"/>
       <location filename="../services/databaseservice.cpp" line="117"/>
       <source>Unable to establish a database connection with file '%1'.
 Are the folder and the file writeable?</source>
-      <translation type="unfinished">Unable to establish a database connection with file '%1'.
-Are the folder and the file writeable?</translation>
+      <translation>Ní féidir nasc bunachar sonraí a bhunú leis an gcomhad '%1'.
+An bhfuil an fillteán agus an comhad scríofa?</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="116"/>
       <source>Cannot open note folder database</source>
-      <translation type="unfinished">Cannot open note folder database</translation>
+      <translation>Ní féidir bunachar fillteáin nóta a oscailt</translation>
     </message>
   </context>
   <context>
@@ -4135,167 +4360,167 @@ Are the folder and the file writeable?</translation>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="14"/>
       <source>Script repository</source>
-      <translation type="unfinished">Script repository</translation>
+      <translation>Stór Script</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="55"/>
       <source>To search for a script please enter your query text and press &lt;i&gt;Return&lt;/i&gt;.</source>
-      <translation type="unfinished">To search for a script please enter your query text and press &lt;i&gt;Return&lt;/i&gt;.</translation>
+      <translation>Chun script a chuardach cuir isteach do théacs fiosrúcháin agus brúigh &lt;i&gt; Tuairisceán &lt;/i&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="127"/>
       <source>Currently installed version:</source>
-      <translation type="unfinished">Currently installed version:</translation>
+      <translation>Leagan suiteáilte faoi láthair:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="278"/>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="399"/>
       <source>Installs the script</source>
-      <translation type="unfinished">Installs the script</translation>
+      <translation>Cuireann sé an script i bhfeidhm</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="281"/>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="398"/>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="459"/>
       <source>Install</source>
-      <translation type="unfinished">Install</translation>
+      <translation>Suiteáil</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="444"/>
       <source>Load more scripts</source>
-      <translation type="unfinished">Load more scripts</translation>
+      <translation>Níos mó scripteanna a luchtú</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="228"/>
       <source>Version:</source>
-      <translation type="unfinished">Version:</translation>
+      <translation>Leagan:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="202"/>
       <source>Repository:</source>
-      <translation type="unfinished">Repository:</translation>
+      <translation>Stór:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="137"/>
       <source>Minimum app version:</source>
-      <translation type="unfinished">Minimum app version:</translation>
+      <translation>Íosleagan app:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="433"/>
       <source>Name</source>
-      <translation type="unfinished">Name</translation>
+      <translation>Ainm</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="413"/>
       <source>Enter your query text</source>
-      <translation type="unfinished">Enter your query text</translation>
+      <translation>Cuir isteach do théacs fiosrúcháin</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="416"/>
       <source>Find script</source>
-      <translation type="unfinished">Find script</translation>
+      <translation>Aimsigh an script</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="47"/>
       <source>Script updates</source>
-      <translation type="unfinished">Script updates</translation>
+      <translation>Nuashonruithe scripte</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="48"/>
       <source>All scripts are up-to-date.</source>
-      <translation type="unfinished">All scripts are up-to-date.</translation>
+      <translation>Tá na scripteanna go léir cothrom le dáta.</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="369"/>
       <source>Authors</source>
-      <translation type="unfinished">Authors</translation>
+      <translation>Údair</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="369"/>
       <source>Author</source>
-      <translation type="unfinished">Author</translation>
+      <translation>Údar</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="372"/>
       <source>Supported platforms</source>
-      <translation type="unfinished">Supported platforms</translation>
+      <translation>Ardáin tacaithe</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="373"/>
       <source>Supported platform</source>
-      <translation type="unfinished">Supported platform</translation>
+      <translation>Ardán tacaithe</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="376"/>
       <source>Open repository</source>
-      <translation type="unfinished">Open repository</translation>
+      <translation>Stór oscailte</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="387"/>
       <source>Update</source>
-      <translation type="unfinished">Update</translation>
+      <translation>Nuashonrú</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="388"/>
       <source>Updates the script</source>
-      <translation type="unfinished">Updates the script</translation>
+      <translation>Nuashonraíonn an script</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="390"/>
       <source>Reinstall</source>
-      <translation type="unfinished">Reinstall</translation>
+      <translation>Athshuiteáil</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="391"/>
       <source>Reinstalls the script</source>
-      <translation type="unfinished">Reinstalls the script</translation>
+      <translation>Reinstalls an script</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="456"/>
       <source>Platform not supported!</source>
-      <translation type="unfinished">Platform not supported!</translation>
+      <translation>Ní thacaítear leis an Ardán!</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="457"/>
       <source>Your platform is not supported by this script!
 Do you want to install it anyway?</source>
-      <translation type="unfinished">Your platform is not supported by this script!
-Do you want to install it anyway?</translation>
+      <translation>Ní thacaíonn an script seo le do ardán!
+Ar mhaith leat é a shuiteáil ar aon nós?</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="459"/>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Cealaigh</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="467"/>
       <source>Update app</source>
-      <translation type="unfinished">Update app</translation>
+      <translation>Nuashonraigh an app</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="468"/>
       <source>Please don't forget to update your installation of QOwnNotes to make this script work!</source>
-      <translation type="unfinished">Please don't forget to update your installation of QOwnNotes to make this script work!</translation>
+      <translation>Ná déan dearmad do shuiteáil QOwnNotes a nuashonrú chun an obair scripte seo a dhéanamh!</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="536"/>
       <source>Install successful</source>
-      <translation type="unfinished">Install successful</translation>
+      <translation>Suiteáil rathúil</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="537"/>
       <source>The script was successfully installed!</source>
-      <translation type="unfinished">The script was successfully installed!</translation>
+      <translation>Suiteáladh an script go rathúil!</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="544"/>
       <source>Download failed</source>
-      <translation type="unfinished">Download failed</translation>
+      <translation>Theip ar íoslódáil</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="545"/>
       <source>The script could not be downloaded!</source>
-      <translation type="unfinished">The script could not be downloaded!</translation>
+      <translation>Níorbh fhéidir an script a íoslódáil!</translation>
     </message>
   </context>
   <context>
@@ -4303,12 +4528,12 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../widgets/scriptsettingwidget.ui" line="92"/>
       <source>The setting name</source>
-      <translation type="unfinished">The setting name</translation>
+      <translation>Ainm an tsuímh</translation>
     </message>
     <message>
       <location filename="../widgets/scriptsettingwidget.cpp" line="193"/>
       <source>Please select a file</source>
-      <translation type="unfinished">Please select a file</translation>
+      <translation>Roghnaigh comhad</translation>
     </message>
   </context>
   <context>
@@ -4316,7 +4541,7 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../services/scriptingservice.cpp" line="244"/>
       <source>file doesn't exist</source>
-      <translation type="unfinished">file doesn't exist</translation>
+      <translation>níl comhad ann</translation>
     </message>
   </context>
   <context>
@@ -4325,7 +4550,7 @@ Do you want to install it anyway?</translation>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="14"/>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="20"/>
       <source>Import bookmarks</source>
-      <translation type="unfinished">Import bookmarks</translation>
+      <translation>Iompórtáil leabharmharcanna</translation>
     </message>
     <message>
       <location filename="../dialogs/serverbookmarksimportdialog.ui" line="47"/>
@@ -4599,94 +4824,94 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4797"/>
       <source>Markdown highlighting</source>
-      <translation type="unfinished">Markdown highlighting</translation>
+      <translation>Ag cur béime ar Markdown</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4803"/>
       <source>Enable markdown highlighting</source>
-      <translation type="unfinished">Enable markdown highlighting</translation>
+      <translation>Cumasaigh béim a chur ar mharcáil</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2075"/>
       <source>Interface language</source>
-      <translation type="unfinished">Interface language</translation>
+      <translation>Teanga comhéadain</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2095"/>
       <source>Automatic</source>
-      <translation type="unfinished">Automatic</translation>
+      <translation>Uathoibríoch</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2219"/>
       <source>English</source>
-      <translation type="unfinished">English</translation>
+      <translation>Béarla</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="252"/>
       <source>Shortcuts</source>
-      <translation type="unfinished">Shortcuts</translation>
+      <translation>Aicearraí</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4288"/>
       <location filename="../dialogs/settingsdialog.ui" line="4509"/>
       <source>Default font:</source>
-      <translation type="unfinished">Default font:</translation>
+      <translation>Cló réamhshocraithe:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4330"/>
       <location filename="../dialogs/settingsdialog.ui" line="4471"/>
       <source>Code font:</source>
-      <translation type="unfinished">Code font:</translation>
+      <translation>Cló an chóid:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3034"/>
       <source>Main window shortcuts</source>
-      <translation type="unfinished">Main window shortcuts</translation>
+      <translation>Aicearraí príomhfhuinneog</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3701"/>
       <source>Do this at your own risk!</source>
-      <translation type="unfinished">Do this at your own risk!</translation>
+      <translation>Déan é seo ar do phriacal féin!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3704"/>
       <source>Ignore all external note folder changes</source>
-      <translation type="unfinished">Ignore all external note folder changes</translation>
+      <translation>Déan neamhaird de gach athrú fillteáin nóta seachtraigh</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4199"/>
       <source>No two spaces to do a line break are added here if checked</source>
-      <translation type="unfinished">No two spaces to do a line break are added here if checked</translation>
+      <translation>Ní chuirtear aon dá spás chun briseadh líne a dhéanamh anseo má sheiceáiltear iad</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4202"/>
       <source>Use GitHub line breaks</source>
-      <translation type="unfinished">Use GitHub line breaks</translation>
+      <translation>Bain úsáid as briseadh líne GitHub</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2197"/>
       <source>German</source>
-      <translation type="unfinished">German</translation>
+      <translation>Gearmáinis</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2274"/>
       <source>French</source>
-      <translation type="unfinished">French</translation>
+      <translation>Fraincis</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2494"/>
       <source>Polish</source>
-      <translation type="unfinished">Polish</translation>
+      <translation>Polainnis</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2516"/>
       <source>Portuguese</source>
-      <translation type="unfinished">Portuguese</translation>
+      <translation>Portaingéilis</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2472"/>
       <source>Dutch</source>
-      <translation type="unfinished">Dutch</translation>
+      <translation>Ollainnis</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2439"/>
@@ -4741,32 +4966,32 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3454"/>
       <source>You need to reload the scripting engine if you modify a script file</source>
-      <translation type="unfinished">You need to reload the scripting engine if you modify a script file</translation>
+      <translation>Ní mór duit an t-inneall scripteála a athlódáil má athraíonn tú comhad scripte</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3457"/>
       <source>Reload scripting engine</source>
-      <translation type="unfinished">Reload scripting engine</translation>
+      <translation>Athlódáil inneall scriptithe</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3447"/>
       <source>Validate script</source>
-      <translation type="unfinished">Validate script</translation>
+      <translation>Bailíochtaigh script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="288"/>
       <source>General</source>
-      <translation type="unfinished">General</translation>
+      <translation>Ginearálta</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3619"/>
       <source>Notes</source>
-      <translation type="unfinished">Notes</translation>
+      <translation>Nótaí</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3807"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Má sheiceálfar thú cuirfear in iúl duit i gcónaí faoi mhodhnuithe seachtracha, fiú mura raibh an nóta reatha curtha in eagar sa nóiméad deireanach. Is é atá molta ná &lt;span style = "cló-stíl: iodálach;&gt;&gt; unchecked &lt;/span&gt;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3690"/>
@@ -4774,56 +4999,56 @@ Do you want to install it anyway?</translation>
       <location filename="../dialogs/settingsdialog.ui" line="5512"/>
       <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
-      <translation type="unfinished">You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
-Just test yourself if you get sync conflicts and set a higher value if so.</translation>
+      <translation>D'fhéadfá rith i dtrioblóidí info le leaganacha níos sine de infoCloud info nuair a théann i bhfad faoi bhun 10 soic.
+Ní gá ach tástáil a dhéanamh ort féin má fhaigheann tú coinbhleachtaí info agus socraigh luach níos airde má tá.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2461"/>
       <source>Japanese</source>
-      <translation type="unfinished">Japanese</translation>
+      <translation>Seapánach</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3694"/>
       <source>note save interval time [sec]</source>
-      <translation type="unfinished">note save interval time [sec]</translation>
+      <translation>nóta shábháil am eatraimh [soic]</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3810"/>
       <source>Notify about all external modifications of the current note</source>
-      <translation type="unfinished">Notify about all external modifications of the current note</translation>
+      <translation>Fógra a thabhairt faoi gach modhnú seachtrach ar an nóta reatha</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4112"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="2011"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="2020"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2013"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2022"/>
       <source>Database</source>
-      <translation type="unfinished">Database</translation>
+      <translation>Bunachar Sonraí</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4128"/>
       <source>Reinitialize Database</source>
-      <translation type="unfinished">Reinitialize Database</translation>
+      <translation>Reinitialize Bunachar Sonraí</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4051"/>
       <source>Clear application data and exit</source>
-      <translation type="unfinished">Clear application data and exit</translation>
+      <translation>Sonraí agus cur i bhfeidhm soiléir</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4057"/>
       <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
-      <translation type="unfinished">This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</translation>
+      <translation>Ligeann an cnaipe seo duit gach suíomh a ghlanadh, an bunachar sonraí todo áitiúil a bhaint agus QOwnNotes a fhágáil.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4067"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="2080"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2082"/>
       <source>Clear app data and exit</source>
-      <translation type="unfinished">Clear app data and exit</translation>
+      <translation>Sonraí agus app glan soiléir</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3846"/>
       <source>Update dialog</source>
-      <translation type="unfinished">Update dialog</translation>
+      <translation>Nuashonraigh an dialóg</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3926"/>
@@ -5016,12 +5241,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="866"/>
       <source>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
-      <translation type="unfinished">Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</translation>
+      <translation>Cuir an leagan is déanaí de &lt;a href="https://github.com/pbek/qownnotesapi"&gt; &lt;span style = "font-meáchan: 600;";&gt;&gt; QOwnNotesAPI &lt;/span&gt; &lt;/a&gt; (leagan ar a laghad QOWNNOTESAPI_MIN_VERSION) ar do fhreastalaí ownCloud más mian leat go mbeidh QOwnNotes in ann rochtain a fháil ar leaganacha nótaí agus ar nótaí sa Bhruscar.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="892"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Beidh ort fós &lt;a href="https://owncloud.org/"&gt; &lt;span style = "font-meáchan: 600"&gt; infoCloud sync cliant &lt;/ span&gt; &lt;/a&gt; (nó cliant eile deisce deisce) chun do nótaí a chomhshó! &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="991"/>
@@ -5085,162 +5310,162 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1729"/>
       <source>Enable todo calendar support</source>
-      <translation type="unfinished">Enable todo calendar support</translation>
+      <translation>Cumasaigh tacaíocht féilire todo</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1914"/>
       <source>Which cloud connection do you want to use?</source>
-      <translation type="unfinished">Which cloud connection do you want to use?</translation>
+      <translation>Cén nasc scamall ar mhaith leat a úsáid?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1926"/>
       <source>Select the calendars you want to use for the Todo list</source>
-      <translation type="unfinished">Select the calendars you want to use for the Todo list</translation>
+      <translation>Roghnaigh na féilirí is mian leat a úsáid don liosta Todo</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2001"/>
       <source>Todo list settings</source>
-      <translation type="unfinished">Todo list settings</translation>
+      <translation>Suíomhanna liosta Todo</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2007"/>
       <source>Saving an item also closes the Todo list</source>
-      <translation type="unfinished">Saving an item also closes the Todo list</translation>
+      <translation>Dúnann an t-earra liosta Todo freisin</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2109"/>
       <source>Indonesian</source>
-      <translation type="unfinished">Indonesian</translation>
+      <translation>Indinéisis</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2120"/>
       <source>Bengali</source>
-      <translation type="unfinished">Bengali</translation>
+      <translation>Beangáilis</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2131"/>
       <source>Bosnian</source>
-      <translation type="unfinished">Bosnian</translation>
+      <translation>Boisnis</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2142"/>
       <source>Bulgarian</source>
-      <translation type="unfinished">Bulgarian</translation>
+      <translation>Bulgáiris</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2153"/>
       <source>Catalan</source>
-      <translation type="unfinished">Catalan</translation>
+      <translation>Catalóinis</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2164"/>
       <source>Cebuano</source>
-      <translation type="unfinished">Cebuano</translation>
+      <translation>Cebuano</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2186"/>
       <source>Danish</source>
-      <translation type="unfinished">Danish</translation>
+      <translation>Danmhairgis</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2208"/>
       <source>Basque</source>
-      <translation type="unfinished">Basque</translation>
+      <translation>Bascais</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2241"/>
       <source>Estonian</source>
-      <translation type="unfinished">Estonian</translation>
+      <translation>Eastóinis</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2252"/>
       <source>Filipino</source>
-      <translation type="unfinished">Filipino</translation>
+      <translation>Tagálaigis</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2263"/>
       <source>Finnish</source>
-      <translation type="unfinished">Finnish</translation>
+      <translation>Fionlainnis</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2285"/>
       <source>Galician</source>
-      <translation type="unfinished">Galician</translation>
+      <translation>Gailísis</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2296"/>
       <source>Greek</source>
-      <translation type="unfinished">Greek</translation>
+      <translation>Gréigis</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2307"/>
       <source>Hausa</source>
-      <translation type="unfinished">Hausa</translation>
+      <translation>Hausa</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2318"/>
       <source>Hebrew</source>
-      <translation type="unfinished">Hebrew</translation>
+      <translation>Eabhrais</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2329"/>
       <source>Hindi</source>
-      <translation type="unfinished">Hindi</translation>
+      <translation>Hiondúis</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2351"/>
       <source>Hiligaynon</source>
-      <translation type="unfinished">Hiligaynon</translation>
+      <translation>Hiligaynon</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2362"/>
       <source>Icelandic</source>
-      <translation type="unfinished">Icelandic</translation>
+      <translation>Íoslainnis</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2384"/>
       <source>Korean</source>
-      <translation type="unfinished">Korean</translation>
+      <translation>Cóiré</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2395"/>
       <source>Kurdish</source>
-      <translation type="unfinished">Kurdish</translation>
+      <translation>Coirdis</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2406"/>
       <source>Latvian</source>
-      <translation type="unfinished">Latvian</translation>
+      <translation>Laitvis</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2417"/>
       <source>Lithuanian</source>
-      <translation type="unfinished">Lithuanian</translation>
+      <translation>Liotuáinis</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2428"/>
       <source>Macedonian</source>
-      <translation type="unfinished">Macedonian</translation>
+      <translation>Macadóinis</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2450"/>
       <source>Norwegian</source>
-      <translation type="unfinished">Norwegian</translation>
+      <translation>Ioruais</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2527"/>
       <source>Punjabi</source>
-      <translation type="unfinished">Punjabi</translation>
+      <translation>Puinseáibis</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2483"/>
       <source>Persian</source>
-      <translation type="unfinished">Persian</translation>
+      <translation>Peirsis</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2538"/>
       <source>Romanian</source>
-      <translation type="unfinished">Romanian</translation>
+      <translation>Rómáinis</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2560"/>
@@ -5389,20 +5614,20 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3896"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3663"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3668"/>
       <source>Reset message boxes</source>
       <translation>Athshocraigh boscaí teachtaireachta</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4089"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3729"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3752"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3734"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3757"/>
       <source>Import settings</source>
       <translation>Suíomhanna iompórtála</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4096"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3695"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3700"/>
       <source>Export settings</source>
       <translation>Suíomhanna onnmhairithe</translation>
     </message>
@@ -5646,40 +5871,40 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
       <location filename="../dialogs/settingsdialog.ui" line="4877"/>
       <location filename="../dialogs/settingsdialog.ui" line="5756"/>
       <source>Reset the cursor width</source>
-      <translation type="unfinished">Reset the cursor width</translation>
+      <translation>Athraigh leithead an chúrsóra</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5011"/>
       <source>External git log command to show the git versions of a note</source>
-      <translation type="unfinished">External git log command to show the git versions of a note</translation>
+      <translation>Ordú logála git sheachtraigh chun leaganacha git nóta a thaispeáint</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5017"/>
       <source>Enter a command to be used to show a git log (like for example "gitk")</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
-      <translation type="unfinished">Enter a command to be used to show a git log (like for example "gitk")</translation>
+      <translation>Iontráil ordú a úsáidfear chun log git a thaispeáint (mar shampla "gitk")</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5037"/>
       <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
-      <translation type="unfinished">If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</translation>
+      <translation>Má úsáideann tú an suíomh seo gheobhaidh tú iontráil roghchlár nua chun na leaganacha git a thaispeáint má chliceálann tú ar nóta ar dheis.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5321"/>
       <location filename="../dialogs/settingsdialog.ui" line="5330"/>
       <source>Regular expressions of note sub-folders to ignore, separated by ";"</source>
-      <translation type="unfinished">Regular expressions of note sub-folders to ignore, separated by ";"</translation>
+      <translation>Léirithe rialta d'fho-fhillteáin nótaí le neamhshuim a dhéanamh de, "scartha"</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5380"/>
       <source>Show all notes of a tag including the notes of their children-tags</source>
-      <translation type="unfinished">Show all notes of a tag including the notes of their children-tags</translation>
+      <translation>Taispeáin nótaí uile an chlib lena n-áirítear nótaí a gclibeanna leanaí</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5373"/>
       <source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
-      <translation type="unfinished">Show all notes in a folder including their subfolders (only works if subfolders are turned on)</translation>
+      <translation>Taispeáin na nótaí go léir i bhfillteán lena n-áirítear a bhfillteáin (ní oibríonn sé ach amháin má dhéantar fo-fhillteáin a chasadh orthu)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4778"/>
@@ -5689,7 +5914,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4928"/>
       <source>Highlight the current line</source>
-      <translation type="unfinished">Highlight the current line</translation>
+      <translation>Cuir béim ar an líne reatha</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5104"/>
@@ -5749,255 +5974,255 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5231"/>
       <source>Hide 'Find or create tag' search</source>
-      <translation type="unfinished">Hide 'Find or create tag' search</translation>
+      <translation>Folaigh cuardach 'Aimsigh nó cruthaigh clib'</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5241"/>
       <source>Note subfolders panel</source>
-      <translation type="unfinished">Note subfolders panel</translation>
+      <translation>Tabhair faoi deara painéal na bhfillteoirí</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5247"/>
       <source>Show with full path</source>
-      <translation type="unfinished">Show with full path</translation>
+      <translation>Taispeáin le cosán iomlán</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5267"/>
       <location filename="../dialogs/settingsdialog.ui" line="5400"/>
       <source>By last change</source>
-      <translation type="unfinished">By last change</translation>
+      <translation>An t-athrú deireanach</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5277"/>
       <source>Show root folder name</source>
-      <translation type="unfinished">Show root folder name</translation>
+      <translation>Taispeáin ainm an fhillteáin fhréamh</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5307"/>
       <source>Hide 'Find or create note subfolder' search</source>
-      <translation type="unfinished">Hide 'Find or create note subfolder' search</translation>
+      <translation>Folaigh cuardach 'Faigh nó cruthaigh fo-fhillteán nótaí'</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5314"/>
       <source>Display note subfolders as full tree</source>
-      <translation type="unfinished">Display note subfolders as full tree</translation>
+      <translation>Taispeáin fo-fhillteáin nótaí mar chrann iomlán</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2596"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2598"/>
       <source>Search script repository</source>
-      <translation type="unfinished">Search script repository</translation>
+      <translation>Stór scripte cuardaigh</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5027"/>
       <source>You optionally can use "%notePath%" for the path of the note.</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
-      <translation type="unfinished">You optionally can use "%notePath%" for the path of the note.</translation>
+      <translation>Is féidir leat "%notePath%" a úsáid le haghaidh cosán na nóta.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5050"/>
       <source>Git client</source>
-      <translation type="unfinished">Git client</translation>
+      <translation>Cliant git</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5066"/>
       <source>Path to git executable:</source>
-      <translation type="unfinished">Path to git executable:</translation>
+      <translation>Conair chun git inrite:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5056"/>
       <source>Path to git client, leave empty for default</source>
-      <translation type="unfinished">Path to git client, leave empty for default</translation>
+      <translation>Cosain an cliant chun an cliant a fháil, fág folamh le haghaidh réamhshocraithe</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4975"/>
       <source>Commit interval</source>
-      <translation type="unfinished">Commit interval</translation>
+      <translation>Eatramh gealltanais</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4981"/>
       <source>sec</source>
       <extracomment>seconds</extracomment>
-      <translation type="unfinished">sec</translation>
+      <translation>soic</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5001"/>
       <source>git commit interval time [sec]</source>
-      <translation type="unfinished">git commit interval time [sec]</translation>
+      <translation>git tiomantas ama eatramh [soic]</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="914"/>
       <source>Open your ownCloud server &amp;Apps page</source>
-      <translation type="unfinished">Open your ownCloud server &amp;Apps page</translation>
+      <translation>Oscail do fhreastalaí ownCloud &amp;Apps</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="227"/>
       <source>Preview</source>
-      <translation type="unfinished">Preview</translation>
+      <translation>Réamhamharc</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="276"/>
       <source>Browser extension</source>
-      <translation type="unfinished">Browser extension</translation>
+      <translation>Síneadh brabhsálaí</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1745"/>
       <source>Which calendar backend do you want to use?</source>
-      <translation type="unfinished">Which calendar backend do you want to use?</translation>
+      <translation>Cén t-inneall féilire ar mhaith leat a úsáid?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1778"/>
       <source>For most current ownCloud and Nextcloud installations</source>
-      <translation type="unfinished">For most current ownCloud and Nextcloud installations</translation>
+      <translation>Don chuid is mó de na suiteálacha ownCloud agus Nextcloud reatha</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1758"/>
       <source>For older versions of ownCloud where the default setting doesn't work</source>
-      <translation type="unfinished">For older versions of ownCloud where the default setting doesn't work</translation>
+      <translation>I gcás leaganacha níos sine de ownCloud nuair nach n-oibríonn an suíomh réamhshocraithe</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1761"/>
       <source>Legacy ownCloud calendar</source>
-      <translation type="unfinished">Legacy ownCloud calendar</translation>
+      <translation>Féilire Legacy ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1794"/>
       <source>CalDAV server settings</source>
-      <translation type="unfinished">CalDAV server settings</translation>
+      <translation>Socruithe freastalaí CalDAV</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1803"/>
       <source>Calendar base url:</source>
-      <translation type="unfinished">Calendar base url:</translation>
+      <translation>Url bonn féilire:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1825"/>
       <source>Please enter the CalDAV base url to your calendar.</source>
-      <translation type="unfinished">Please enter the CalDAV base url to your calendar.</translation>
+      <translation>Cuir isteach an bonn url le CalDAV le do fhéilire.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1895"/>
       <source>Please enter the password for your CalDAV username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.</source>
-      <translation type="unfinished">Please enter the password for your CalDAV username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.</translation>
+      <translation>Cuir isteach an focal faire le haghaidh do ainm úsáideora CalDAV. &lt;br/&gt; Faoi láthair stórálfar an focal faire leis na socruithe eile, ach níl sé an-slán.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2175"/>
       <source>Czech</source>
-      <translation type="unfinished">Czech</translation>
+      <translation>Seicis</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2505"/>
       <source>Brazilian Portuguese</source>
-      <translation type="unfinished">Brazilian Portuguese</translation>
+      <translation>Portaingéilis na Brasaíle</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2648"/>
       <source>Ukrainian</source>
-      <translation type="unfinished">Ukrainian</translation>
+      <translation>Úcráinis</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3576"/>
       <source>The name</source>
-      <translation type="unfinished">The name</translation>
+      <translation>An t-ainm</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3673"/>
       <source>Maximum height:</source>
-      <translation type="unfinished">Maximum height:</translation>
+      <translation>Uasairde:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3646"/>
       <source>Maximum width:</source>
-      <translation type="unfinished">Maximum width:</translation>
+      <translation>Leithead uasta:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3711"/>
       <source>Scale images down when inserted into notes</source>
-      <translation type="unfinished">Scale images down when inserted into notes</translation>
+      <translation>Scála íomhánna síos agus iad curtha isteach i nótaí</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2340"/>
       <source>Croatian</source>
-      <translation type="unfinished">Croatian</translation>
+      <translation>Cróitis</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3491"/>
       <source>Path to your QML file</source>
-      <translation type="unfinished">Path to your QML file</translation>
+      <translation>Conair go dtí do chomhad QML</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3282"/>
       <source>Script name</source>
-      <translation type="unfinished">Script name</translation>
+      <translation>Ainm scripte</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3304"/>
       <source>Description:</source>
-      <translation type="unfinished">Description:</translation>
+      <translation>Cur síos:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3386"/>
       <source>Version:</source>
-      <translation type="unfinished">Version:</translation>
+      <translation>Leagan:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3347"/>
       <source>Repository:</source>
-      <translation type="unfinished">Repository:</translation>
+      <translation>Stór:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3324"/>
       <source>Author(s):</source>
-      <translation type="unfinished">Author(s):</translation>
+      <translation>Údar(í):</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3738"/>
       <source>Check this if you want to accept all external modifications while you are editing the current note.</source>
-      <translation type="unfinished">Check this if you want to accept all external modifications while you are editing the current note.</translation>
+      <translation>Seiceáil é seo más mian leat glacadh le gach modhnú seachtrach agus tú ag eagarthóireacht an nóta reatha.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3741"/>
       <source>Accept all external modifications of the current note</source>
-      <translation type="unfinished">Accept all external modifications of the current note</translation>
+      <translation>Glac le gach modhnú seachtrach ar an nóta reatha</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3800"/>
       <source>Use UNIX newline instead of native newline characters</source>
-      <translation type="unfinished">Use UNIX newline instead of native newline characters</translation>
+      <translation>Úsáid líne nua UNIX in ionad na gcarachtar líne dúchais</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3770"/>
       <source>Restore cursor position when opening a note</source>
-      <translation type="unfinished">Restore cursor position when opening a note</translation>
+      <translation>Athraigh an cúrsóir nuair a osclaíonn tú nóta</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4118"/>
       <source>Be warned that this will also remove your cached todo items and configured note folders and scripts!</source>
-      <translation type="unfinished">Be warned that this will also remove your cached todo items and configured note folders and scripts!</translation>
+      <translation>Tabharfar rabhadh duit go mbainfidh sé seo as do chuid míreanna todo taisce agus bainfear úsáid as fillteáin nó scripteanna nótaí!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4602"/>
       <source>Apply toolbar configuration</source>
-      <translation type="unfinished">Apply toolbar configuration</translation>
+      <translation>Cuir cumraíocht an bharra uirlisí i bhfeidhm</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4616"/>
       <source>Reset toolbars</source>
-      <translation type="unfinished">Reset toolbars</translation>
+      <translation>Athshocraigh barraí uirlisí</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4644"/>
       <source>Enable logging to file</source>
-      <translation type="unfinished">Enable logging to file</translation>
+      <translation>Cumasaigh logáil isteach chun comhad a dhéanamh</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4651"/>
       <source>Clear log file</source>
-      <translation type="unfinished">Clear log file</translation>
+      <translation>Glanchomhad logála</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4662"/>
       <source>Fake old version number to trigger update</source>
-      <translation type="unfinished">Fake old version number to trigger update</translation>
+      <translation>Glanchomhad logála</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4690"/>
@@ -6260,289 +6485,289 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="455"/>
       <source>username for proxy server</source>
-      <translation type="unfinished">username for proxy server</translation>
+      <translation>ainm úsáideora le haghaidh seachfhreastalaí</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="456"/>
       <source>password for proxy server</source>
-      <translation type="unfinished">password for proxy server</translation>
+      <translation>pasfhocal le haghaidh seachfhreastalaí</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="458"/>
       <source>HTTP(S) proxy</source>
-      <translation type="unfinished">HTTP(S) proxy</translation>
+      <translation>Seachvótálaí HTTP(S)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="459"/>
       <source>SOCKS5 proxy</source>
-      <translation type="unfinished">SOCKS5 proxy</translation>
+      <translation>Seachfhreastalaí SOCKS5</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1315"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1317"/>
       <source>Automatic (needs restart)</source>
-      <translation type="unfinished">Automatic (needs restart)</translation>
+      <translation>Uathoibríoch (atosú riachtanais)</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1481"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1483"/>
       <source>Undefined key</source>
-      <translation type="unfinished">Undefined key</translation>
+      <translation>Eochair neamhshainithe</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1486"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1488"/>
       <source>Assign a new key</source>
-      <translation type="unfinished">Assign a new key</translation>
+      <translation>Sannáil eochair nua</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1487"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1489"/>
       <source>Reset to default key</source>
-      <translation type="unfinished">Reset to default key</translation>
+      <translation>Athshocraigh go eochair réamhshocraithe</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1557"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1559"/>
       <source>Shortcut already assigned</source>
-      <translation type="unfinished">Shortcut already assigned</translation>
+      <translation>Aicearra atá sannta cheana féin</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1734"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1736"/>
       <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
-      <translation type="unfinished">The connection was made successfully!
-Server version: %1
-QOwnNotesAPI version: %2</translation>
+      <translation>Rinneadh an nasc go rathúil!
+Leagan an fhreastalaí: %1
+Leagan QOwnNotesAPI: %2</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1746"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1748"/>
       <source>There was an error connecting to the ownCloud Server!
 You also need to have the QOwnNotesAPI app installed and enabled!
 
 Connection error message: </source>
-      <translation type="unfinished">There was an error connecting to the ownCloud Server!
-You also need to have the QOwnNotesAPI app installed and enabled!
+      <translation>Bhí earráid ag nascadh leis an bhfreastalaí ownCloud!
+Ní mór duit an app QOwnNotesAPI a shuiteáil agus a chumasú freisin!
 
-Connection error message: </translation>
+Teachtaireacht earráide ceangail:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2033"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2035"/>
       <source>Markdown files</source>
-      <translation type="unfinished">Markdown files</translation>
+      <translation>Comhaid marcáilte</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2060"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2062"/>
       <source>Disable usage tracking</source>
-      <translation type="unfinished">Disable usage tracking</translation>
+      <translation>Díchumasaigh rianú úsáide</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2061"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2063"/>
       <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
-      <translation type="unfinished">Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</translation>
+      <translation>Cabhraíonn sonraí úsáide gan ainm le cinneadh a dhéanamh ar na codanna de QOwnNotes a fheabhsóidh seo chugainn agus bugs a aimsiú agus a shocrú. &lt;br/&gt; Ná díchumasaigh é ach amháin más rud é nach féidir leat maireachtáil leis. &lt;br/&gt;&lt;br/&gt; Ar ndóigh, díchumasaigh rianú úsáide?</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2283"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2285"/>
       <source>new folder</source>
-      <translation type="unfinished">new folder</translation>
+      <translation>fillteán nua</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2319"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2321"/>
       <source>Remove note folder</source>
-      <translation type="unfinished">Remove note folder</translation>
+      <translation>Bain fillteán nóta</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2320"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2322"/>
       <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation type="unfinished">Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+      <translation>Bain an fillteán nóta reatha &lt;strong&gt;%1 &lt;/strong&gt;?</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2395"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2397"/>
       <source>Please select the folder where your notes will get stored to</source>
-      <translation type="unfinished">Please select the folder where your notes will get stored to</translation>
+      <translation>Roghnaigh an fillteán ina stórálfar do chuid nótaí</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2432"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2434"/>
       <source>Loading folders from server</source>
-      <translation type="unfinished">Loading folders from server</translation>
+      <translation>Fillteáin á lódáil ón bhfreastalaí</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2446"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2448"/>
       <source>No more folders were found in the current folder</source>
-      <translation type="unfinished">No more folders were found in the current folder</translation>
+      <translation>Níor aimsíodh aon fhillteáin eile san fhillteán reatha</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2519"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2521"/>
       <source>Loading folders in '%1' from server</source>
-      <translation type="unfinished">Loading folders in '%1' from server</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2583"/>
-      <source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
-      <translation type="unfinished">Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</translation>
+      <translation>Fillteáin á lódáil i '%1' ón bhfreastalaí</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2585"/>
+      <source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
+      <translation>Féach ar an &lt;a href="%1"&gt; doiciméadú Scripteála &lt;/a&gt; chun tús a chur go tapa.</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.cpp" line="2587"/>
       <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
-      <translation type="unfinished">If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</translation>
+      <translation>Má theastaíonn rochtain uait ar fheidhmiúlacht áirithe i QOwnNotes oscail ceist ar leathanach eisiúna &lt;a href="%1"&gt; QOwnNotes &lt;/a&gt;.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2606"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2608"/>
       <source>Check for script updates</source>
-      <translation type="unfinished">Check for script updates</translation>
+      <translation>Seiceáil le haghaidh nuashonruithe scripte</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2613"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2615"/>
       <source>Add local script</source>
-      <translation type="unfinished">Add local script</translation>
+      <translation>Cuir script áitiúil leis</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2617"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2619"/>
       <source>Add an existing, local script</source>
-      <translation type="unfinished">Add an existing, local script</translation>
+      <translation>Cuir script áitiúil atá ann cheana féin leis</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3694"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3751"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3699"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3756"/>
       <source>INI files</source>
-      <translation type="unfinished">INI files</translation>
+      <translation>Comhaid INI</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3730"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3735"/>
       <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
-      <translation type="unfinished">Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</translation>
+      <translation>Ar mhaith leat socruithe a allmhairiú i ndáiríre? Bainfear do chuid socruithe reatha agus ní fhéadfar gach suíomh a athbhunú, cosúil leis na socruithe fillteáin nóta agus na scripteanna a bhí á n-úsáid agat. Beidh ort roinnt suíomhanna a choigeartú freisin, go háirithe ar ardáin, ach fanfaidh do nótaí slán!</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3740"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3745"/>
       <source>The application will be quit after the import.</source>
-      <translation type="unfinished">The application will be quit after the import.</translation>
+      <translation>Scoirfear an t-iarratas tar éis an allmhairithe.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3741"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3746"/>
       <source>The application will be restarted after the import.</source>
-      <translation type="unfinished">The application will be restarted after the import.</translation>
+      <translation>Déanfar an t-iarratas a atosú tar éis an allmhairithe.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2600"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2602"/>
       <source>Find a script in the script repository</source>
-      <translation type="unfinished">Find a script in the script repository</translation>
+      <translation>Faigh script sa stór scripte</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="262"/>
       <source>Menu bar</source>
-      <translation type="unfinished">Menu bar</translation>
+      <translation>Barra barra</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="263"/>
       <source>Show menu bar item</source>
-      <translation type="unfinished">Show menu bar item</translation>
+      <translation>Taispeáin mír barra roghchláir</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1558"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1560"/>
       <source>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</source>
-      <translation type="unfinished">The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</translation>
+      <translation>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2696"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2698"/>
       <source>Remove script</source>
-      <translation type="unfinished">Remove script</translation>
+      <translation>Bain an script</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2697"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2699"/>
       <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation type="unfinished">Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+      <translation>Bain an script reatha &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2748"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2750"/>
       <source>QML files</source>
-      <translation type="unfinished">QML files</translation>
+      <translation>Comhaid QML</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2749"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2751"/>
       <source>Please select your QML file</source>
-      <translation type="unfinished">Please select your QML file</translation>
+      <translation>Roghnaigh do chomhad QML le do thoil</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2838"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2840"/>
       <source>Open repository</source>
-      <translation type="unfinished">Open repository</translation>
+      <translation>Stór oscailte</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2898"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2900"/>
       <source>Your script seems to be valid</source>
-      <translation type="unfinished">Your script seems to be valid</translation>
+      <translation>Is cosúil go bhfuil do script bailí</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2899"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2901"/>
       <source>There were script errors:
 %1</source>
-      <translation type="unfinished">There were script errors:
+      <translation>Bhí earráidí scripte ann:
 %1</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2968"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2970"/>
       <source>File extension</source>
-      <translation type="unfinished">File extension</translation>
+      <translation>Síneadh comhaid</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2969"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2971"/>
       <source>Enter your custom file extension:</source>
-      <translation type="unfinished">Enter your custom file extension:</translation>
+      <translation>Cuir isteach do shíneadh comhaid saincheaptha:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3270"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3275"/>
       <source>Calendar cache emptied</source>
-      <translation type="unfinished">Calendar cache emptied</translation>
+      <translation>Folaítear taisce an fhéilire</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3271"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3276"/>
       <source>Your calendar cache was emptied.</source>
-      <translation type="unfinished">Your calendar cache was emptied.</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3349"/>
-      <source>Reset toolbars and exit</source>
-      <translation type="unfinished">Reset toolbars and exit</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3350"/>
-      <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
-      <translation type="unfinished">Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</translation>
+      <translation>Folaíodh do taisce féilire.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3354"/>
+      <source>Reset toolbars and exit</source>
+      <translation>Athshocraigh barraí uirlisí agus imeacht</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.cpp" line="3355"/>
+      <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
+      <translation>An bhfuil tú cinnte gur mian leat gach barra uirlisí a athshocrú? Dúnfar an t-iarratas sa phróiseas, athchóirítear na barraí uirlisí réamhshocraithe nuair a thosaíonn tú é arís.</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.cpp" line="3359"/>
       <source>Reset and &amp;exit</source>
       <translation type="unfinished">Reset and &amp;exit</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3516"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3521"/>
       <source>Log file cleared</source>
-      <translation type="unfinished">Log file cleared</translation>
+      <translation>Glanadh an comhad logála</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3517"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3522"/>
       <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
-      <translation type="unfinished">The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</translation>
+      <translation>Glanadh an comhad logála &lt;strong&gt;%1 &lt;/strong&gt;.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3553"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3558"/>
       <source>Executable files</source>
       <translation type="unfinished">Executable files</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3554"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3556"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3559"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3561"/>
       <source>All files</source>
       <translation type="unfinished">All files</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3564"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3569"/>
       <source>Please select the path of your git executable</source>
       <translation type="unfinished">Please select the path of your git executable</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3664"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3669"/>
       <source>Do you really want to reset the overrides of all message boxes?</source>
       <translation type="unfinished">Do you really want to reset the overrides of all message boxes?</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2021"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2023"/>
       <source>The Database was reinitialized.</source>
       <translation type="unfinished">The Database was reinitialized.</translation>
     </message>
@@ -6597,12 +6822,12 @@ Connection error message: </translation>
       <translation type="unfinished">It will be activated if you run QOwnNotes with the parameter &lt;code&gt;--portable&lt;/code&gt;.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2034"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2036"/>
       <source>Save debug information</source>
       <translation type="unfinished">Save debug information</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2081"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2083"/>
       <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
@@ -6611,14 +6836,14 @@ Your notes will stay intact!</source>
 Your notes will stay intact!</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2084"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2086"/>
       <source>Clear and &amp;exit</source>
       <translation type="unfinished">Clear and &amp;exit</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2015"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="2084"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3354"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2017"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2086"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3359"/>
       <source>&amp;Cancel</source>
       <translation type="unfinished">&amp;Cancel</translation>
     </message>
@@ -6628,17 +6853,17 @@ Your notes will stay intact!</translation>
       <translation type="unfinished">You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2012"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2014"/>
       <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
       <translation type="unfinished">Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2015"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2017"/>
       <source>Clear &amp;database</source>
       <translation type="unfinished">Clear &amp;database</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2195"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2197"/>
       <source>Select editor application</source>
       <translation type="unfinished">Select editor application</translation>
     </message>
@@ -6802,19 +7027,19 @@ Your notes will stay intact!</translation>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="245"/>
       <source>extended</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">extended</translation>
+      <translation>leathnaithe</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="280"/>
       <source>%1 (%2) [%3]</source>
       <comment>dictionary name; %1 = language name, %2 = country name and %3 = language variant name</comment>
-      <translation type="unfinished">%1 (%2) [%3]</translation>
+      <translation>%1 (%2) [%3]</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="283"/>
       <source>%1 (%2)</source>
       <comment>dictionary name; %1 = language name, %2 = country name</comment>
-      <translation type="unfinished">%1 (%2)</translation>
+      <translation>%1 (%2)</translation>
     </message>
   </context>
   <context>
@@ -6822,102 +7047,102 @@ Your notes will stay intact!</translation>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="14"/>
       <source>Insert table</source>
-      <translation type="unfinished">Insert table</translation>
+      <translation>Cuir isteach an tábla</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="24"/>
       <source>Create table</source>
-      <translation type="unfinished">Create table</translation>
+      <translation>Cruthaigh tábla</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="30"/>
       <source>Column width:</source>
-      <translation type="unfinished">Column width:</translation>
+      <translation>Leithead an cholúin:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="37"/>
       <source>Insert a table heading separator</source>
-      <translation type="unfinished">Insert a table heading separator</translation>
+      <translation>Cuir deighilteoir ceannteidil tábla isteach</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="47"/>
       <source>Columns:</source>
-      <translation type="unfinished">Columns:</translation>
+      <translation>Colúin:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="67"/>
       <source>Rows:</source>
-      <translation type="unfinished">Rows:</translation>
+      <translation>Sraitheanna:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="87"/>
       <source>The amount of spaces in a column</source>
-      <translation type="unfinished">The amount of spaces in a column</translation>
+      <translation>An méid spásanna i gcolún</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="119"/>
       <source>Select table layout:</source>
-      <translation type="unfinished">Select table layout:</translation>
+      <translation>Roghnaigh leagan amach an tábla:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="126"/>
       <source>Separator column width:</source>
-      <translation type="unfinished">Separator column width:</translation>
+      <translation>Leithead colún an deighilteora:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="133"/>
       <source>The amount of dash characters in the separator</source>
-      <translation type="unfinished">The amount of dash characters in the separator</translation>
+      <translation>Méid na gcarachtar Fleasc sa deighilteoir</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="150"/>
       <source>Import CSV file</source>
-      <translation type="unfinished">Import CSV file</translation>
+      <translation>Iompórtáil comhad CSV</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="173"/>
       <source>Separator:</source>
-      <translation type="unfinished">Separator:</translation>
+      <translation>Deighilteoir:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="180"/>
       <source>Select file</source>
-      <translation type="unfinished">Select file</translation>
+      <translation>Roghnaigh comhad</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="191"/>
       <source>Please select the CSV file you want to import:</source>
-      <translation type="unfinished">Please select the CSV file you want to import:</translation>
+      <translation>Roghnaigh an comhad CSV is mian leat a allmhairiú le do thoil:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="231"/>
       <source>CSV file</source>
-      <translation type="unfinished">CSV file</translation>
+      <translation>Comhad CSV</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="238"/>
       <source>First line is the table heading</source>
-      <translation type="unfinished">First line is the table heading</translation>
+      <translation>Is é an chéad líne an ceannteideal tábla</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="261"/>
       <source>Text-delimiter:</source>
-      <translation type="unfinished">Text-delimiter:</translation>
+      <translation>Teidealóir téacs:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.cpp" line="150"/>
       <source>CSV files</source>
-      <translation type="unfinished">CSV files</translation>
+      <translation>Comhaid CSV</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.cpp" line="151"/>
       <source>All files</source>
-      <translation type="unfinished">All files</translation>
+      <translation>Gach comhad</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.cpp" line="156"/>
       <source>Select CSV file to import</source>
-      <translation type="unfinished">Select CSV file to import</translation>
+      <translation>Roghnaigh comhad CSV le hallmhairiú</translation>
     </message>
   </context>
   <context>
@@ -6925,17 +7150,17 @@ Your notes will stay intact!</translation>
     <message>
       <location filename="../dialogs/tagadddialog.ui" line="20"/>
       <source>Add a new tag</source>
-      <translation type="unfinished">Add a new tag</translation>
+      <translation>Cuir tag nua leis</translation>
     </message>
     <message>
       <location filename="../dialogs/tagadddialog.ui" line="30"/>
       <source>Add new tag</source>
-      <translation type="unfinished">Add new tag</translation>
+      <translation>Cuir tag nua leis</translation>
     </message>
     <message>
       <location filename="../dialogs/tagadddialog.ui" line="47"/>
       <source>New tag</source>
-      <translation type="unfinished">New tag</translation>
+      <translation>Clib nua</translation>
     </message>
   </context>
   <context>
@@ -6943,123 +7168,123 @@ Your notes will stay intact!</translation>
     <message>
       <location filename="../dialogs/tododialog.ui" line="14"/>
       <source>Todo</source>
-      <translation type="unfinished">Todo</translation>
+      <translation>A dhéanamh</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="78"/>
       <location filename="../dialogs/tododialog.ui" line="85"/>
       <source>Priority</source>
-      <translation type="unfinished">Priority</translation>
+      <translation>Tosaíocht</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="113"/>
       <source>Reminder</source>
-      <translation type="unfinished">Reminder</translation>
+      <translation>Meabhrúchán</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="157"/>
       <source>Summary</source>
-      <translation type="unfinished">Summary</translation>
+      <translation>Achoimre</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="191"/>
       <source>Save</source>
-      <translation type="unfinished">Save</translation>
+      <translation>Sábháil</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="222"/>
       <source>Note…</source>
-      <translation type="unfinished">Note…</translation>
+      <translation>Nóta…</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="100"/>
       <source>Save and insert into note</source>
-      <translation type="unfinished">Save and insert into note</translation>
+      <translation>Sábháil agus cuir isteach é</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="208"/>
       <source>Remove</source>
-      <translation type="unfinished">Remove</translation>
+      <translation>Bain amach</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="278"/>
       <source>Show completed items</source>
-      <translation type="unfinished">Show completed items</translation>
+      <translation>Taispeáin míreanna críochnaithe</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="285"/>
       <source>Reload the todo list from server</source>
-      <translation type="unfinished">Reload the todo list from server</translation>
+      <translation>Athlódáil an liosta todo ón bhfreastalaí</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="288"/>
       <source>Reload…</source>
-      <translation type="unfinished">Reload…</translation>
+      <translation>Athlódáil…</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="319"/>
       <source>Search or create todo item</source>
-      <translation type="unfinished">Search or create todo item</translation>
+      <translation>Cuardaigh nó cruthaigh mír todo</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="302"/>
       <source>select your todo list</source>
-      <translation type="unfinished">select your todo list</translation>
+      <translation>roghnaigh do liosta todo</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="188"/>
       <source>Save the current todo item</source>
-      <translation type="unfinished">Save the current todo item</translation>
+      <translation>Sábháil an mhír reatha todo</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="104"/>
       <source>Save the current todo item and insert a link to it into the current note</source>
-      <translation type="unfinished">Save the current todo item and insert a link to it into the current note</translation>
+      <translation>Sábháil an mhír reatha todo agus cuir nasc isteach sa nóta reatha</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="113"/>
       <source>Import the current todo item as new note</source>
-      <translation type="unfinished">Import the current todo item as new note</translation>
+      <translation>Iompórtáil an mhír reatha todo mar nóta nua</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="109"/>
       <source>Import as note</source>
-      <translation type="unfinished">Import as note</translation>
+      <translation>Iompórtáil mar nóta</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="205"/>
       <source>Remove the current todo item</source>
-      <translation type="unfinished">Remove the current todo item</translation>
+      <translation>Bain an mhír todo reatha</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="309"/>
       <source>Todo list items are being loaded from the server</source>
-      <translation type="unfinished">Todo list items are being loaded from the server</translation>
+      <translation>Tá míreanna liosta Todo á luchtú ón bhfreastalaí</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="124"/>
       <source>Reload from server</source>
-      <translation type="unfinished">Reload from server</translation>
+      <translation>Athlódáil ón bhfreastalaí</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="128"/>
       <source>Reload tasks from server</source>
-      <translation type="unfinished">Reload tasks from server</translation>
+      <translation>Athlódáil tascanna ón bhfreastalaí</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="133"/>
       <source>Clear cache and reload</source>
-      <translation type="unfinished">Clear cache and reload</translation>
+      <translation>Glan taisce agus athlódáil</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="137"/>
       <source>Clear calendar cache and reload tasks from server</source>
-      <translation type="unfinished">Clear calendar cache and reload tasks from server</translation>
+      <translation>Glan taisce féilire agus athlódáil tascanna ón bhfreastalaí</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="578"/>
       <source>Remove todo item</source>
-      <translation type="unfinished">Remove todo item</translation>
+      <translation>Bain mír todo</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="579"/>
@@ -7329,34 +7554,34 @@ This cannot be undone!</translation>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="252"/>
       <source>network error: %1</source>
-      <translation type="unfinished">network error: %1</translation>
+      <translation>earráid líonra: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="275"/>
       <location filename="../dialogs/updatedialog.cpp" line="296"/>
       <location filename="../dialogs/updatedialog.cpp" line="393"/>
       <source>File error</source>
-      <translation type="unfinished">File error</translation>
+      <translation>Earráid chomhaid</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="276"/>
       <location filename="../dialogs/updatedialog.cpp" line="394"/>
       <source>Could not open temporary file:
 %1</source>
-      <translation type="unfinished">Could not open temporary file:
+      <translation>Níorbh fhéidir comhad sealadach a oscailt:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="297"/>
       <source>Could not store downloaded file:
 %1</source>
-      <translation type="unfinished">Could not store downloaded file:
+      <translation>Níorbh fhéidir comhad íoslódáilte a stóráil:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="351"/>
       <source>Do you want to update and restart QOwnNotes?</source>
-      <translation type="unfinished">Do you want to update and restart QOwnNotes?</translation>
+      <translation>Ar mhaith leat QOwnNotes a nuashonrú agus a atosú?</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="366"/>
@@ -7367,51 +7592,51 @@ This cannot be undone!</translation>
       <location filename="../dialogs/updatedialog.cpp" line="490"/>
       <location filename="../dialogs/updatedialog.cpp" line="499"/>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Earráid</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="367"/>
       <source>Could not find updater file:
 %1</source>
-      <translation type="unfinished">Could not find updater file:
+      <translation>Níorbh fhéidir an comhad nuashonraithe a aimsiú:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="454"/>
       <source>Updater script '%1' doesn't exist!</source>
-      <translation type="unfinished">Updater script '%1' doesn't exist!</translation>
+      <translation>Níl script nuashonraithe '%1' ann!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="463"/>
       <source>Updater unzip executable '%1' doesn't exist!</source>
-      <translation type="unfinished">Updater unzip executable '%1' doesn't exist!</translation>
+      <translation>Ní dhéanann an t-uasdátaitheoir an inrite '%1' a dhífhabhtú!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="472"/>
       <location filename="../dialogs/updatedialog.cpp" line="481"/>
       <source>Could not copy updater script '%1' to '%2'!</source>
-      <translation type="unfinished">Could not copy updater script '%1' to '%2'!</translation>
+      <translation>Níorbh fhéidir an script nuashonraithe '%1' a chóipeáil go '%2'!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="491"/>
       <source>Couldn't find updater script: %1</source>
-      <translation type="unfinished">Couldn't find updater script: %1</translation>
+      <translation>Níorbh fhéidir script nuashonraithe a fháil: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="500"/>
       <source>Couldn't find unzip executable: %1</source>
-      <translation type="unfinished">Couldn't find unzip executable: %1</translation>
+      <translation>Níorbh fhéidir inrite unzip a fháil: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="350"/>
       <location filename="../dialogs/updatedialog.cpp" line="506"/>
       <source>Proceed with update</source>
-      <translation type="unfinished">Proceed with update</translation>
+      <translation>Lean ar aghaidh leis an nuashonrú</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="507"/>
       <source>The download is now finished. Do you want to update and restart QOwnNotes?</source>
-      <translation type="unfinished">The download is now finished. Do you want to update and restart QOwnNotes?</translation>
+      <translation>Tá an íoslódáil críochnaithe anois. Ar mhaith leat QOwnNotes a nuashonrú agus a atosú?</translation>
     </message>
   </context>
   <context>
@@ -7421,32 +7646,32 @@ This cannot be undone!</translation>
       <location filename="../services/updateservice.cpp" line="118"/>
       <location filename="../services/updateservice.cpp" line="137"/>
       <source>Update-checker error</source>
-      <translation type="unfinished">Update-checker error</translation>
+      <translation>Earráid nuashonraithe seiceálaí</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="105"/>
       <source>Network reply error: %1</source>
-      <translation type="unfinished">Network reply error: %1</translation>
+      <translation>Earráid freagra líonra: %1</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="119"/>
       <source>No data was received by the network request!</source>
-      <translation type="unfinished">No data was received by the network request!</translation>
+      <translation>Ní bhfuair an iarraidh líonra aon sonraí!</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="138"/>
       <source>The data from the network request could not be interpreted!</source>
-      <translation type="unfinished">The data from the network request could not be interpreted!</translation>
+      <translation>Níorbh fhéidir na sonraí ón iarraidh líonra a léirmhíniú!</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="230"/>
       <source>No updates</source>
-      <translation type="unfinished">No updates</translation>
+      <translation>Gan nuashonruithe</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="231"/>
       <source>There are no updates available.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; is the latest version.</source>
-      <translation type="unfinished">There are no updates available.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; is the latest version.</translation>
+      <translation>Níl aon nuashonruithe ar fáil. &lt;br/&gt; Is é &lt;strong&gt;%1&lt;/strong&gt; an leagan is déanaí.</translation>
     </message>
   </context>
   <context>
@@ -7454,27 +7679,27 @@ This cannot be undone!</translation>
     <message>
       <location filename="../dialogs/versiondialog.ui" line="14"/>
       <source>Note versions on your ownCloud server</source>
-      <translation type="unfinished">Note versions on your ownCloud server</translation>
+      <translation>Tabhair faoi deara leaganacha ar do fhreastalaí ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.ui" line="65"/>
       <source>Diff</source>
-      <translation type="unfinished">Diff</translation>
+      <translation>Diff</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.ui" line="98"/>
       <source>Note text</source>
-      <translation type="unfinished">Note text</translation>
+      <translation>Téacs nóta</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.cpp" line="27"/>
       <source>&amp;Restore selected version</source>
-      <translation type="unfinished">&amp;Restore selected version</translation>
+      <translation>&amp;Athraigh an leagan roghnaithe</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.cpp" line="36"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>&amp;Cealaigh</translation>
     </message>
   </context>
   <context>
@@ -7482,17 +7707,17 @@ This cannot be undone!</translation>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="58"/>
       <source>QOwnNotes server listening on port %1</source>
-      <translation type="unfinished">QOwnNotes server listening on port %1</translation>
+      <translation>QOwnNotes éisteacht freastalaí ar chalafort %1</translation>
     </message>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="65"/>
       <source>Could not start QOwnNotes server on port %1!</source>
-      <translation type="unfinished">Could not start QOwnNotes server on port %1!</translation>
+      <translation>Níorbh fhéidir an freastalaí QOwnNotes a thosú ar phort %1!</translation>
     </message>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="109"/>
       <source>%1 connected to QOwnNotes server!</source>
-      <translation type="unfinished">%1 connected to QOwnNotes server!</translation>
+      <translation>%1 ceangailte le freastalaí QOwnNotes!</translation>
     </message>
     <message numerus="yes">
       <location filename="../services/websocketserverservice.cpp" line="188"/>
@@ -7516,22 +7741,22 @@ This cannot be undone!</translation>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="20"/>
       <source>Security token</source>
-      <translation type="unfinished">Security token</translation>
+      <translation>Comhartha slándála</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="26"/>
       <source>To let your QOwnNotes browser extension access your notes please paste this security token in the settings of your browser extension:</source>
-      <translation type="unfinished">To let your QOwnNotes browser extension access your notes please paste this security token in the settings of your browser extension:</translation>
+      <translation>Chun do shíneadh bhrabhsálaí QOwnNotes a ligean rochtain ar do chuid nótaí greamaigh an dearbhán slándála seo i suímh shíneadh do bhrabhsálaí:</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="65"/>
       <source>Generate new token</source>
-      <translation type="unfinished">Generate new token</translation>
+      <translation>Cruthaigh comhartha nua</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="79"/>
       <source>Copy token</source>
-      <translation type="unfinished">Copy token</translation>
+      <translation>Cóipeáil chomhartha</translation>
     </message>
   </context>
   <context>
@@ -7540,12 +7765,12 @@ This cannot be undone!</translation>
       <location filename="../dialogs/welcomedialog.ui" line="14"/>
       <location filename="../dialogs/welcomedialog.ui" line="56"/>
       <source>Welcome to QOwnNotes</source>
-      <translation type="unfinished">Welcome to QOwnNotes</translation>
+      <translation>Fáilte go QOwnNotes</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="24"/>
       <source>plain-text file markdown note taking with ownCloud integration</source>
-      <translation type="unfinished">plain-text file markdown note taking with ownCloud integration</translation>
+      <translation>nóta marcáilte comhad plain-text ag glacadh le comhtháthú ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="88"/>
@@ -7571,52 +7796,52 @@ This cannot be undone!</translation>
       <location filename="../dialogs/welcomedialog.ui" line="168"/>
       <location filename="../dialogs/welcomedialog.cpp" line="214"/>
       <source>Note folder</source>
-      <translation type="unfinished">Note folder</translation>
+      <translation>Fillteán faoi deara</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="191"/>
       <source>Create note folder if not existing</source>
-      <translation type="unfinished">Create note folder if not existing</translation>
+      <translation>Cruthaigh fillteán nóta mura bhfuil sé ann cheana</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="225"/>
       <source>Note folder path</source>
-      <translation type="unfinished">Note folder path</translation>
+      <translation>Cosán fillteáin nóta</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="232"/>
       <source>Select folder</source>
-      <translation type="unfinished">Select folder</translation>
+      <translation>Roghnaigh fillteán</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="246"/>
       <source>Show sub-folders</source>
-      <translation type="unfinished">Show sub-folders</translation>
+      <translation>Taispeáin fo-fhillteáin</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="285"/>
       <source>Panel layout</source>
-      <translation type="unfinished">Panel layout</translation>
+      <translation>Leagan amach an phainéil</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="342"/>
       <source>Open ownCloud settings</source>
-      <translation type="unfinished">Open ownCloud settings</translation>
+      <translation>Oscail socruithe ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="384"/>
       <source>Open network settings</source>
-      <translation type="unfinished">Open network settings</translation>
+      <translation>Socruithe líonra oscailte</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="184"/>
       <source>Please select where you want to store your notes:</source>
-      <translation type="unfinished">Please select where you want to store your notes:</translation>
+      <translation>Roghnaigh an áit ar mhaith leat do chuid nótaí a stóráil:</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="319"/>
       <source>If you want to be able to access your note versions and your trashed notes on your ownCloud server, you can configure QOwnNotes for it now. You can also do it at a later time.</source>
-      <translation type="unfinished">If you want to be able to access your note versions and your trashed notes on your ownCloud server, you can configure QOwnNotes for it now. You can also do it at a later time.</translation>
+      <translation>Más mian leat a bheith in ann rochtain a fháil ar do leaganacha nótaí agus ar do nótaí sa Bhruscar ar do fhreastalaí ownCloud, is féidir leat QOwnNotes a chumrú dó anois. Is féidir leat é a dhéanamh níos déanaí.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="349"/>
