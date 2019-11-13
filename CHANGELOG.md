@@ -5,6 +5,9 @@
   dialog in dark mode (for [#1408](https://github.com/pbek/QOwnNotes/issues/1408))
 - added all available dictionaries to the *Manage dictionaries dialog*
   (for [#1409](https://github.com/pbek/QOwnNotes/pull/1409), thank you @Waqar144)
+- added more Bulgarian, Albanian, Slovak, Romanian, Croatian, Icelandic, Czech,
+  Danish, Dutch, Finnish, Hungarian, Greek, Norwegian, Basque, Slovenian, Bosnian,
+  German, Punjabi, Latvian, Russian translation (thank you Fabijenna, rakekniven, unchase)
 
 ## 19.11.11
 - you now can disable all external dictionaries in the *Manage dictionaries dialog*
