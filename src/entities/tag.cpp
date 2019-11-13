@@ -785,6 +785,7 @@ QString Tag::colorFieldName() {
 /**
  * Links a note to a tag
  */
+
 bool Tag::linkToNote(const Note &note) const {
     if (!isFetched()) {
         return false;
@@ -836,6 +837,7 @@ bool Tag::linkToNote(const Note &note) const {
 /**
  * Removes the link to a note
  */
+
 bool Tag::removeLinkToNote(const Note &note) const {
     if (!isFetched()) {
         return false;
