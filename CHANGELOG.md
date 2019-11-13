@@ -3,6 +3,8 @@
 ## 19.11.12
 - fixed automatic switching to the default dark editor schema when opening the settings
   dialog in dark mode (for [#1408](https://github.com/pbek/QOwnNotes/issues/1408))
+- added all available dictionaries to the *Manage dictionaries dialog*
+  (for [#1409](https://github.com/pbek/QOwnNotes/pull/1409), thank you @Waqar144)
 
 ## 19.11.11
 - you now can disable all external dictionaries in the *Manage dictionaries dialog*
