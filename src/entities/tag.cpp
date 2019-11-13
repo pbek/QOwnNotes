@@ -11,19 +11,22 @@
 #include <services/databaseservice.h>
 
 
-Tag::Tag() {
-    id = 0;
-    name = "";
-    priority = 0;
-    parentId = 0;
-    _color = QColor();
+Tag::Tag() :
+    id(0), priority(0), parentId(0),
+    _color(QColor()), name(QString()) {
+
+  //  id = 0;
+  //  name = "";
+  //  priority = 0;
+  //  parentId = 0;
+  //  _color = QColor();
 }
 
-int Tag::getId() {
+int Tag::getId() const {
     return this->id;
 }
 
-int Tag::getParentId() {
+int Tag::getParentId() const {
     return this->parentId;
 }
 
@@ -31,23 +34,23 @@ void Tag::setParentId(int id) {
     this->parentId = id;
 }
 
-QString Tag::getName() {
+QString Tag::getName() const {
     return this->name;
 }
 
-void Tag::setName(QString text) {
+void Tag::setName(const QString &text) {
     this->name = text;
 }
 
-QColor Tag::getColor() {
+QColor Tag::getColor() const {
     return this->_color;
 }
 
-void Tag::setColor(QColor color) {
+void Tag::setColor(const QColor &color) {
     this->_color = color;
 }
 
-int Tag::getPriority() {
+int Tag::getPriority() const {
     return this->priority;
 }
 
@@ -107,7 +110,7 @@ Tag Tag::fetchByName(QString name, bool startsWith) {
     return tag;
 }
 
-Tag Tag::fetchByName(QString name, int parentId) {
+Tag Tag::fetchByName(const QString &name, int parentId) {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     Tag tag;
@@ -151,7 +154,7 @@ int Tag::countAll() {
 /**
  * Removes the tag, their children and its note link items
  */
-bool Tag::remove() {
+bool Tag::remove() const {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
@@ -165,7 +168,7 @@ bool Tag::remove() {
         return false;
     } else {
         // remove all children tags
-        Q_FOREACH(Tag tag, fetchAllByParentId(id)) {
+        Q_FOREACH(const Tag &tag, fetchAllByParentId(id)) {
                 tag.remove();
             }
 
@@ -298,7 +301,7 @@ QList<Tag> Tag::fetchAllByParentId(int parentId, const QString& sortBy) {
 QList<Tag> Tag::fetchRecursivelyByParentId(int parentId) {
     QList<Tag> tagList = QList<Tag>() << fetch(parentId);
 
-    Q_FOREACH(Tag tag, fetchAllByParentId(parentId)) {
+    Q_FOREACH(const Tag &tag, fetchAllByParentId(parentId)) {
             tagList << fetchRecursivelyByParentId(tag.getId());
         }
 
@@ -337,8 +340,8 @@ int Tag::countAllParentId(int parentId) {
 /**
  * Checks if the current tag has a child with tagId
  */
-bool Tag::hasChild(int tagId) {
-    Q_FOREACH(Tag tag, fetchAllByParentId(id)) {
+bool Tag::hasChild(int tagId) const {
+    Q_FOREACH(const Tag &tag, fetchAllByParentId(id)) {
             qDebug() << __func__ << " - 'tag': " << tag;
 
             if ((tag.getId() == tagId) || tag.hasChild(tagId)) {
@@ -352,7 +355,7 @@ bool Tag::hasChild(int tagId) {
 /**
  * Fetches all linked tags of a note
  */
-QList<Tag> Tag::fetchAllOfNote(Note note) {
+QList<Tag> Tag::fetchAllOfNote(const Note &note) {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
@@ -384,13 +387,13 @@ QList<Tag> Tag::fetchAllOfNote(Note note) {
 /**
  * Fetches all linked tags of a list of notes
  */
-QList<Tag> Tag::fetchAllOfNotes(QList<Note> notes) {
+QList<Tag> Tag::fetchAllOfNotes(const QList<Note> &notes) {
     QList<Tag> resultTagList;
 
-    Q_FOREACH (Note note, notes) {
+    Q_FOREACH (const Note &note, notes) {
             QList<Tag> tagList = Tag::fetchAllOfNote(note);
 
-            Q_FOREACH (Tag tag, tagList) {
+            Q_FOREACH (const Tag &tag, tagList) {
                     if (!resultTagList.contains(tag)) {
                         resultTagList.append(tag);
                     }
@@ -405,7 +408,7 @@ QList<Tag> Tag::fetchAllOfNotes(QList<Note> notes) {
 /**
  * Fetches the names of all linked tags of a note
  */
-QStringList Tag::fetchAllNamesOfNote(Note note) {
+QStringList Tag::fetchAllNamesOfNote(const Note &note) {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     QStringList tagNameList;
@@ -461,8 +464,8 @@ QStringList Tag::searchAllNamesByName(const QString& name) {
 /**
  * Fetches one Tag of a note that has a color
  */
-Tag Tag::fetchOneOfNoteWithColor(const Note& note) {
-    Q_FOREACH(Tag tag, fetchAllOfNote(note)) {
+Tag Tag::fetchOneOfNoteWithColor(const Note &note) {
+    Q_FOREACH(const Tag &tag, fetchAllOfNote(note)) {
             if (tag.getColor().isValid()) {
                 return tag;
             }
@@ -474,7 +477,7 @@ Tag Tag::fetchOneOfNoteWithColor(const Note& note) {
 /**
  * Count all linked tags of a note
  */
-int Tag::countAllOfNote(Note note) {
+int Tag::countAllOfNote(const Note &note) {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
@@ -502,7 +505,7 @@ int Tag::countAllOfNote(Note note) {
 /**
  * Checks if tag is linked to a note
  */
-bool Tag::isLinkedToNote(Note note) {
+bool Tag::isLinkedToNote(const Note &note) const {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
 
@@ -780,7 +783,7 @@ QString Tag::colorFieldName() {
 /**
  * Links a note to a tag
  */
-bool Tag::linkToNote(Note note) {
+bool Tag::linkToNote(const Note &note) {
     if (!isFetched()) {
         return false;
     }
@@ -831,7 +834,7 @@ bool Tag::linkToNote(Note note) {
 /**
  * Removes the link to a note
  */
-bool Tag::removeLinkToNote(Note note) {
+bool Tag::removeLinkToNote(const Note &note) {
     if (!isFetched()) {
         return false;
     }
@@ -864,7 +867,7 @@ bool Tag::removeLinkToNote(Note note) {
 /**
  * Removes all links to a note
  */
-bool Tag::removeAllLinksToNote(Note note) {
+bool Tag::removeAllLinksToNote(const Note &note) {
     QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
     QSqlQuery query(db);
     query.prepare("DELETE FROM noteTagLink WHERE "
@@ -1004,7 +1007,7 @@ bool Tag::renameNoteSubFolderPathsOfLinks(QString &oldPath, QString &newPath) {
 /**
  * Checks if the active tag still exists in the database
  */
-bool Tag::exists() {
+bool Tag::exists() const {
     Tag tag = Tag::fetch(this->id);
     return tag.id > 0;
 }
@@ -1026,7 +1029,7 @@ void Tag::setAsActive(int tagId) {
 /**
  * Checks if this note folder is the active one
  */
-bool Tag::isActive() {
+bool Tag::isActive() const {
     return activeTagId() == id;
 }
 
