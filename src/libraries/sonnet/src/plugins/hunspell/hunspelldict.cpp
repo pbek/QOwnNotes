@@ -62,6 +62,9 @@ HunspellDict::HunspellDict(const QString &lang, QString path)
 
     } else {
         qCWarning(SONNET_HUNSPELL) << "Unable to find dictionary for" << lang << "in path" << path;
+
+        // don't load user dictionary if dictionary was not found, may lead to crashes
+        return;
     }
     QString userDic;
     if (Utils::Misc::isInPortableMode()) {

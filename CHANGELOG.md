@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 19.11.13
+- fixed a possible crash if a spellchecker dictionary was removed but its user
+  dictionary was still present
+
 ## 19.11.12
 - fixed automatic switching to the default dark editor schema when opening the settings
   dialog in dark mode (for [#1408](https://github.com/pbek/QOwnNotes/issues/1408))
