@@ -202,6 +202,11 @@
         <translation type="unfinished">Italian</translation>
     </message>
     <message>
+        <location filename="../dialogs/dictionarymanagerdialog.cpp" line="52"/>
+        <source>Gujarati</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/dictionarymanagerdialog.cpp" line="69"/>
         <source>Portugese (Brazilian)</source>
         <translation type="unfinished">Portugese (Brazilian)</translation>
@@ -317,9 +322,8 @@
         <translation type="unfinished">Greek</translation>
     </message>
     <message>
-        <location filename="../dialogs/dictionarymanagerdialog.cpp" line="52"/>
         <source>Gujrati</source>
-        <translation type="unfinished">Gujrati</translation>
+        <translation type="obsolete">Gujrati</translation>
     </message>
     <message>
         <location filename="../dialogs/dictionarymanagerdialog.cpp" line="53"/>

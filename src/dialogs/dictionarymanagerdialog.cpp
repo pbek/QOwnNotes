@@ -49,7 +49,7 @@ DictionaryManagerDialog::DictionaryManagerDialog(QWidget *parent) :
     addDictionaryItem(tr("German (German)"), QStringLiteral("de"), QStringLiteral("de_DE_frami"));
     addDictionaryItem(tr("German (Swiss)"), QStringLiteral("de"), QStringLiteral("de_CH_frami"));
     addDictionaryItem(tr("Greek"), QStringLiteral("el_GR"));
-    addDictionaryItem(tr("Gujrati"), QStringLiteral("gu_IN"));
+    addDictionaryItem(tr("Gujarati"), QStringLiteral("gu_IN"));
     addDictionaryItem(tr("Gurani"), QStringLiteral("gug"));
     addDictionaryItem(tr("Hebrew"), QStringLiteral("he_IL"));
     addDictionaryItem(tr("Hindi"), QStringLiteral("hi_IN"));
