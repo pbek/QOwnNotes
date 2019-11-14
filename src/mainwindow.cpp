@@ -11368,6 +11368,7 @@ void MainWindow::loadDictionaryNames() {
     }
 
     languageGroup->setExclusive(true);
+    connect(languageGroup, SIGNAL(triggered(QAction*)), this, SLOT(onLanguageChanged(QAction*)));
 
     //first add autoDetect
     QAction *autoDetect = ui->menuLanguages->addAction(tr("Automatically detect"));
@@ -11376,14 +11377,17 @@ void MainWindow::loadDictionaryNames() {
     autoDetect->setActionGroup(languageGroup);
     QString prevLang = settings.value(QStringLiteral("spellCheckLanguage"),
                                       QStringLiteral("auto") ).toString();
-    if (prevLang == QStringLiteral("auto")) {
+    if (prevLang == QStringLiteral("auto") && languages.length() > 1) {
         autoDetect->setChecked(true);
         autoDetect->trigger();
+    } else {
+        autoDetect->setChecked(false);
+        autoDetect->setEnabled(false);
     }
 
     //not really possible but just in case
     if (langNames.length() != languages.length()) {
-        qDebug () << "Error: langNames.length != languages.length()";
+        qWarning () << "Error: langNames.length != languages.length()";
         return;
     }
 
@@ -11395,12 +11399,12 @@ void MainWindow::loadDictionaryNames() {
         action->setActionGroup(languageGroup);
         action->setData(*itt);
 
-        if (*itt == prevLang){
+        if (*itt == prevLang || languages.length() == 1){
             action->setChecked(true);
             action->trigger();
         }
     }
-    connect(languageGroup, SIGNAL(triggered(QAction*)), this, SLOT(onLanguageChanged(QAction*)));
+
     delete speller;
 }
 
