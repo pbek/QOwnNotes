@@ -203,6 +203,11 @@
       <translation type="unfinished">Italian</translation>
     </message>
     <message>
+      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="52"/>
+      <source>Gujarati</source>
+      <translation type="unfinished">Gujarati</translation>
+    </message>
+    <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="69"/>
       <source>Portugese (Brazilian)</source>
       <translation type="unfinished">Portugese (Brazilian)</translation>
@@ -316,11 +321,6 @@
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="51"/>
       <source>Greek</source>
       <translation type="unfinished">Greek</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/dictionarymanagerdialog.cpp" line="52"/>
-      <source>Gujrati</source>
-      <translation type="unfinished">Gujrati</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="53"/>
@@ -880,7 +880,7 @@
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="169"/>
-      <location filename="../widgets/fontcolorwidget.cpp" line="648"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="649"/>
       <source>Export schema</source>
       <translation>Export schema</translation>
     </message>
@@ -906,7 +906,7 @@
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="141"/>
-      <location filename="../widgets/fontcolorwidget.cpp" line="688"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="689"/>
       <source>Import schema</source>
       <translation>Import schema</translation>
     </message>
@@ -1057,39 +1057,44 @@
       <translation type="unfinished">Current line background color</translation>
     </message>
     <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="229"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="221"/>
+      <source>Trailing space</source>
+      <translation type="unfinished">Trailing space</translation>
+    </message>
+    <message>
+      <location filename="../widgets/fontcolorwidget.cpp" line="230"/>
       <source>This item will be used to preset colors for the other items</source>
       <translation type="unfinished">This item will be used to preset colors for the other items</translation>
     </message>
     <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="478"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="479"/>
       <source>Copy color schema</source>
       <translation type="unfinished">Copy color schema</translation>
     </message>
     <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="479"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="480"/>
       <source>Color schema name</source>
       <translation type="unfinished">Color schema name</translation>
     </message>
     <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="481"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="482"/>
       <source>Copy</source>
       <comment>as noun</comment>
       <translation type="unfinished">Copy</translation>
     </message>
     <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="599"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="600"/>
       <source>Remove schema</source>
       <translation type="unfinished">Remove schema</translation>
     </message>
     <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="600"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="601"/>
       <source>Remove current schema? This cannot be undone!</source>
       <translation type="unfinished">Remove current schema? This cannot be undone!</translation>
     </message>
     <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="647"/>
-      <location filename="../widgets/fontcolorwidget.cpp" line="687"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="648"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="688"/>
       <source>INI files</source>
       <translation type="unfinished">INI files</translation>
     </message>
@@ -4013,27 +4018,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
   <context>
     <name>QOwnNotesMarkdownTextEdit</name>
     <message>
-      <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="548"/>
+      <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="549"/>
       <source>No suggestions for %1</source>
       <translation type="unfinished">No suggestions for %1</translation>
     </message>
     <message>
-      <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="559"/>
+      <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="560"/>
       <source>Ignore</source>
       <translation type="unfinished">Ignore</translation>
     </message>
     <message>
-      <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="560"/>
+      <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="561"/>
       <source>Add to Dictionary</source>
       <translation type="unfinished">Add to Dictionary</translation>
     </message>
     <message>
-      <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="616"/>
+      <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="617"/>
       <source>Note editing disabled</source>
       <translation type="unfinished">Note editing disabled</translation>
     </message>
     <message>
-      <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="617"/>
+      <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="618"/>
       <source>Note editing is currently disabled, do you want to allow again?</source>
       <translation type="unfinished">Note editing is currently disabled, do you want to allow again?</translation>
     </message>
