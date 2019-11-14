@@ -3,6 +3,11 @@
 ## 19.11.13
 - fixed a possible crash if a spellchecker dictionary was removed but its user
   dictionary was still present
+- trailing spaces are now highlighted in the note editor
+  (for [#1416](https://github.com/pbek/QOwnNotes/issues/1416))
+    - you can set a custom background color in the *Edit fonts & colors settings*
+- fixed multiple block undo with bracket auto close
+  (for [#1317](https://github.com/pbek/QOwnNotes/issues/1317), thank you @Waqar144)
 
 ## 19.11.12
 - fixed automatic switching to the default dark editor schema when opening the settings

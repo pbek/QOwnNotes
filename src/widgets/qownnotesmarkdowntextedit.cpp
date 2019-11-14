@@ -93,6 +93,7 @@ void QOwnNotesMarkdownTextEdit::setStyles() {
     setFormatStyle(MarkdownHighlighter::HighlighterState::Link);
     setFormatStyle(MarkdownHighlighter::HighlighterState::Table);
     setFormatStyle(MarkdownHighlighter::HighlighterState::BrokenLink);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::TrailingSpace);
 
 #ifdef Q_OS_WIN32
     QSettings settings;

@@ -218,6 +218,7 @@ void FontColorWidget::initTextTreeWidgetItems() {
     addTextTreeWidgetItem(tr("Current line background color"),
                           MarkdownHighlighter::CurrentLineBackgroundColor);
     addTextTreeWidgetItem(tr("Broken link"), MarkdownHighlighter::BrokenLink);
+    addTextTreeWidgetItem(tr("Trailing space"), MarkdownHighlighter::TrailingSpace);
 }
 
 void FontColorWidget::addTextTreeWidgetItem(const QString& text, int index) {
