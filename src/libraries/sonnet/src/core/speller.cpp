@@ -111,9 +111,9 @@ bool Speller::isCorrect(const QString &word) const
 
 bool Speller::isMisspelled(const QString &word) const
 {
-    if (!d->isValid()) {
-        return false;
-    }
+//    if (!d->isValid()) {
+//        return false;
+//    }
     return d->dict->isMisspelled(word);
 }
 
