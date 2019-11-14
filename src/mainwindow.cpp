@@ -11357,7 +11357,18 @@ void MainWindow::loadDictionaryNames() {
     QStringList languages = speller->availableLanguages();
     QStringList langNames = speller->availableLanguageNames();
 
+    //if there are no dictionaries installed, disable the spellchecker
+    if (languages.isEmpty()) {
+        settings.setValue(QStringLiteral("checkSpelling"), false);
+        ui->actionCheck_spelling->setEnabled(false);
+        ui->menuLanguages->setTitle("No dictionaries found");
+        ui->menuLanguages->setEnabled(false);
+        ui->noteTextEdit->updateSettings();
+        return;
+    }
+
     languageGroup->setExclusive(true);
+    connect(languageGroup, SIGNAL(triggered(QAction*)), this, SLOT(onLanguageChanged(QAction*)));
 
     //first add autoDetect
     QAction *autoDetect = ui->menuLanguages->addAction(tr("Automatically detect"));
@@ -11366,14 +11377,17 @@ void MainWindow::loadDictionaryNames() {
     autoDetect->setActionGroup(languageGroup);
     QString prevLang = settings.value(QStringLiteral("spellCheckLanguage"),
                                       QStringLiteral("auto") ).toString();
-    if (prevLang == QStringLiteral("auto")) {
+    if (prevLang == QStringLiteral("auto") && languages.length() > 1) {
         autoDetect->setChecked(true);
         autoDetect->trigger();
+    } else {
+        autoDetect->setChecked(false);
+        autoDetect->setEnabled(false);
     }
 
     //not really possible but just in case
     if (langNames.length() != languages.length()) {
-        qDebug () << "Error: langNames.length != languages.length()";
+        qWarning () << "Error: langNames.length != languages.length()";
         return;
     }
 
@@ -11385,12 +11399,12 @@ void MainWindow::loadDictionaryNames() {
         action->setActionGroup(languageGroup);
         action->setData(*itt);
 
-        if (*itt == prevLang){
+        if (*itt == prevLang || languages.length() == 1){
             action->setChecked(true);
             action->trigger();
         }
     }
-    connect(languageGroup, SIGNAL(triggered(QAction*)), this, SLOT(onLanguageChanged(QAction*)));
+
     delete speller;
 }
 
