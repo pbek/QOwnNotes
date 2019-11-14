@@ -11357,6 +11357,16 @@ void MainWindow::loadDictionaryNames() {
     QStringList languages = speller->availableLanguages();
     QStringList langNames = speller->availableLanguageNames();
 
+    //if there are no dictionaries installed, disable the spellchecker
+    if (languages.isEmpty()) {
+        settings.setValue(QStringLiteral("checkSpelling"), false);
+        ui->actionCheck_spelling->setEnabled(false);
+        ui->menuLanguages->setTitle("No dictionaries found");
+        ui->menuLanguages->setEnabled(false);
+        ui->noteTextEdit->updateSettings();
+        return;
+    }
+
     languageGroup->setExclusive(true);
 
     //first add autoDetect
