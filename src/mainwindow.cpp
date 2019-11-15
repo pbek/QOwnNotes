@@ -11377,9 +11377,12 @@ void MainWindow::loadDictionaryNames() {
     autoDetect->setActionGroup(languageGroup);
     QString prevLang = settings.value(QStringLiteral("spellCheckLanguage"),
                                       QStringLiteral("auto") ).toString();
-    if (prevLang == QStringLiteral("auto") && languages.length() > 1) {
-        autoDetect->setChecked(true);
-        autoDetect->trigger();
+    //if only one dictionary found, disable auto detect
+    if (languages.length() > 1) {
+        if (prevLang == QStringLiteral("auto")) {
+            autoDetect->setChecked(true);
+            autoDetect->trigger();
+        }
     } else {
         autoDetect->setChecked(false);
         autoDetect->setEnabled(false);
