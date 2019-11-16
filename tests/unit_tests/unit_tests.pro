@@ -3,6 +3,14 @@ QT       += core gui testlib sql widgets xml network qml xmlpatterns printsuppor
 
 #QT       -= gui
 
+CONFIG(with_sonnet) {
+    message("Sonnet activated")
+
+    QT += SonnetCore
+
+    DEFINES += WITH_SONNET
+}
+
 TARGET = tests
 TEMPLATE = app
 
