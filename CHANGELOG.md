@@ -4,6 +4,7 @@
 - the spellchecker is now disabled if no dictionaries are available and language
   auto-detection enabling is fixed for multiple languages
   (for [#1418](https://github.com/pbek/QOwnNotes/issues/1418), thank you @Waqar144)
+- spellchecker information was added to the *Debug settings*
 
 ## 19.11.13
 - fixed a possible crash if a spellchecker dictionary was removed but its user

@@ -1272,8 +1272,6 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
                                           settings.fileName(), withGitHubLineBreaks);
     output += prepareDebugInformationLine("Application database path",
                                           QDir::toNativeSeparators(DatabaseService::getDiskDatabasePath()), withGitHubLineBreaks);
-    output += prepareDebugInformationLine("Application dictionaries path",
-                                          QDir::toNativeSeparators(Utils::Misc::localDictionariesPath()), withGitHubLineBreaks);
     output += prepareDebugInformationLine("Application arguments",
                                           qApp->property("arguments").toStringList().join("`, `"), withGitHubLineBreaks);
 
@@ -1327,6 +1325,17 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
                 settings.value("ownCloudInfo/connectionErrorMessage").toString(),
                 withGitHubLineBreaks);
     }
+
+    // add spellcheker information
+    output += "\n## Spellchecking\n\n";
+    output += prepareDebugInformationLine("Enabled", settings.value("checkSpelling").toString(), withGitHubLineBreaks);
+    output += prepareDebugInformationLine("Selected language", settings.value("spellCheckLanguage").toString(), withGitHubLineBreaks);
+    auto *speller = new Sonnet::Speller();
+    output += prepareDebugInformationLine("Language codes", speller->availableLanguages().join(", "), withGitHubLineBreaks);
+    output += prepareDebugInformationLine("Language names", speller->availableLanguageNames().join(", "), withGitHubLineBreaks);
+    delete speller;
+    output += prepareDebugInformationLine("Application dictionaries path",
+                                          QDir::toNativeSeparators(Utils::Misc::localDictionariesPath()), withGitHubLineBreaks);
 
     // add note folder information
     output += "\n## Note folders\n\n";
