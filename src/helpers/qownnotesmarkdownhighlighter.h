@@ -43,7 +43,6 @@ Q_OBJECT
 
 public:
     QOwnNotesMarkdownHighlighter(QTextDocument *parent = 0,
-                                 QOwnSpellChecker *spellchecker = new QOwnSpellChecker(),
                                  HighlightingOptions highlightingOptions =
                                  HighlightingOption::None);
     ~QOwnNotesMarkdownHighlighter() Q_DECL_OVERRIDE;
@@ -53,6 +52,7 @@ public:
     void setCodeHighlighting(bool);
     void setFrontmatterHighlighting(bool);
     void sethighlightBrokenNotesLink(bool);
+    void setSpellChecker(QOwnSpellChecker*);
 
 protected:
     void highlightBlock(const QString &text) Q_DECL_OVERRIDE;

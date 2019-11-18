@@ -32,13 +32,12 @@
  */
 QOwnNotesMarkdownHighlighter::QOwnNotesMarkdownHighlighter(
         QTextDocument *parent,
-        QOwnSpellChecker *_spellchecker,
         HighlightingOptions highlightingOptions)
         : MarkdownHighlighter(parent, highlightingOptions) {
     Q_UNUSED(parent)
     Q_UNUSED(highlightingOptions)
 
-    spellchecker = _spellchecker;
+    spellchecker = nullptr;
     languageFilter = new Sonnet::LanguageFilter(new Sonnet::SentenceTokenizer());
     wordTokenizer = new Sonnet::WordTokenizer();
     codeBlock = 0; // for ```
@@ -55,9 +54,14 @@ QOwnNotesMarkdownHighlighter::~QOwnNotesMarkdownHighlighter()
     delete wordTokenizer;
 }
 
+
 void QOwnNotesMarkdownHighlighter::updateCurrentNote(const Note &_note) {
         _currentNote = _note;
+}
 
+void QOwnNotesMarkdownHighlighter::setSpellChecker(QOwnSpellChecker *spellChecker)
+{
+    spellchecker = spellChecker;
 }
 
 void QOwnNotesMarkdownHighlighter::setCommentHighlighting(bool state)
@@ -109,9 +113,10 @@ void QOwnNotesMarkdownHighlighter::highlightBlock(const QString &text) {
 
     // skip spell checking empty blocks and blocks with just "spaces"
     // the rest of the highlighting needs to be done e.g. for code blocks with empty lines
-    if (!(text.isEmpty()) &&
-        spellchecker->isActive()) {
-        highlightSpellChecking(text);
+    if (spellchecker != nullptr) {
+        if (!(text.isEmpty()) && spellchecker->isActive()) {
+            highlightSpellChecking(text);
+        }
     }
 
     _highlightingFinished = true;

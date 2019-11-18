@@ -11352,10 +11352,10 @@ void MainWindow::on_actionCheck_spelling_toggled(bool checked) {
 }
 
 void MainWindow::loadDictionaryNames() {
-    auto *speller = new Sonnet::Speller();
     QSettings settings;
-    QStringList languages = speller->availableLanguages();
-    QStringList langNames = speller->availableLanguageNames();
+
+    QStringList languages = Sonnet::Speller::availableLanguages();
+    QStringList langNames = Sonnet::Speller::availableLanguageNames();
 
     //if there are no dictionaries installed, disable the spellchecker
     if (languages.isEmpty()) {
@@ -11407,8 +11407,6 @@ void MainWindow::loadDictionaryNames() {
             action->trigger();
         }
     }
-
-    delete speller;
 }
 
 void MainWindow::onLanguageChanged(QAction *action) {

@@ -21,6 +21,12 @@ IssueAssistantDialog::IssueAssistantDialog(QWidget *parent) :
     on_issueTypeComboBox_currentIndexChanged(ProblemIssueType);
     ui->logOutputPlainTextEdit->setHighlightingEnabled(false);
 
+    //enable spellchecking
+    ui->expectedBehaviourPlainTextEdit->enableSpellChecker();
+    ui->actualBehaviourPlainTextEdit->enableSpellChecker();
+    ui->questionPlainTextEdit->enableSpellChecker();
+    ui->stepsPlainTextEdit->enableSpellChecker();
+
     QObject::connect(ui->titleLineEdit, SIGNAL(textChanged(QString)),
                      this, SLOT(allowIssuePageNextButton()));
     QObject::connect(ui->questionPlainTextEdit, SIGNAL(textChanged()),

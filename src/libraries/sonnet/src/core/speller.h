@@ -118,14 +118,14 @@ public: // Configuration API
      *
      * Note: use availableDictionaries
      */
-    QStringList availableLanguages() const;
+    static QStringList availableLanguages();
 
     /**
      * Returns a localized list of names of supported languages.
      *
      * Note: use availableDictionaries
      */
-    QStringList availableLanguageNames() const;
+    static QStringList availableLanguageNames();
 
     /**
      * Returns a map of all available dictionaies with language descriptions and

@@ -12,8 +12,10 @@
 QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
         : QMarkdownTextEdit(parent, false) {
     mainWindow = Q_NULLPTR;
-    spellchecker = new QOwnSpellChecker();
-    _highlighter = new QOwnNotesMarkdownHighlighter(document(), spellchecker);
+
+    spellchecker = nullptr;
+
+    _highlighter = new QOwnNotesMarkdownHighlighter(document());
 
 
     setStyles();
@@ -309,6 +311,14 @@ QMargins QOwnNotesMarkdownTextEdit::viewportMargins() {
 #endif
 }
 
+void QOwnNotesMarkdownTextEdit::enableSpellChecker(QOwnNotesMarkdownHighlighter *h) {
+    if (!h) {
+        h = dynamic_cast<QOwnNotesMarkdownHighlighter*>(_highlighter);
+    }
+    spellchecker = new QOwnSpellChecker;
+    h->setSpellChecker(spellchecker);
+}
+
 void QOwnNotesMarkdownTextEdit::setText(const QString &text) {
     QSettings settings;
     bool highlightingEnabled = settings.value(QStringLiteral("markdownHighlightingEnabled"),
@@ -318,6 +328,10 @@ void QOwnNotesMarkdownTextEdit::setText(const QString &text) {
         return;
     }
     QOwnNotesMarkdownHighlighter *h = dynamic_cast<QOwnNotesMarkdownHighlighter*>(_highlighter);
+
+    if (!spellchecker) {
+        enableSpellChecker(h);
+    }
 
     //check for comment block
     if (!text.contains(QStringLiteral("<!--"))) {
@@ -414,23 +428,26 @@ void QOwnNotesMarkdownTextEdit::updateSettings() {
         options |= QMarkdownTextEdit::AutoTextOption::BracketRemoval;
     }
 
-    //spell check active/inactive
-    bool spellcheckerActive = settings.value(QStringLiteral("checkSpelling"), true).toBool();
-    spellchecker->setActive(spellcheckerActive);
-
-
-    QString lang = settings.value(QStringLiteral("spellCheckLanguage"), QStringLiteral("auto")).toString();
-    if (lang == QStringLiteral("auto")) {
-        spellchecker->setAutoDetect(true);
-    } else {
-        spellchecker->setAutoDetect(false);
-        spellchecker->setCurrentLanguage(lang);
-    }
-
     setAutoTextOptions(options);
+
+    if (spellchecker) {
+        //spell check active/inactive
+        bool spellcheckerActive = settings.value(QStringLiteral("checkSpelling"), true).toBool();
+        spellchecker->setActive(spellcheckerActive);
+
+
+        QString lang = settings.value(QStringLiteral("spellCheckLanguage"), QStringLiteral("auto")).toString();
+        if (lang == QStringLiteral("auto")) {
+            spellchecker->setAutoDetect(true);
+        } else {
+            spellchecker->setAutoDetect(false);
+            spellchecker->setCurrentLanguage(lang);
+        }
+    }
 
     // highlighting is always disabled for logTextEdit
     if (objectName() != QStringLiteral("logTextEdit")) {
+
         // enable or disable markdown highlighting
         bool highlightingEnabled = settings.value(QStringLiteral("markdownHighlightingEnabled"),
                                                   true).toBool();
@@ -586,7 +603,7 @@ bool QOwnNotesMarkdownTextEdit::onContextMenuEvent(QContextMenuEvent *event) {
 
 
 bool QOwnNotesMarkdownTextEdit::eventFilter(QObject *obj, QEvent *event) {
-    if (event->type() == QEvent::ContextMenu) {
+    if (event->type() == QEvent::ContextMenu && spellchecker) {
         if (spellchecker->isActive())
             return onContextMenuEvent(static_cast<QContextMenuEvent *>(event));
     }
