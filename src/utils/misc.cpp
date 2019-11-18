@@ -1326,7 +1326,7 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
                 withGitHubLineBreaks);
     }
 
-    // add spellcheker information
+    // add spellchecker information
     output += "\n## Spellchecking\n\n";
     output += prepareDebugInformationLine("Enabled", settings.value("checkSpelling").toString(), withGitHubLineBreaks);
     output += prepareDebugInformationLine("Selected language", settings.value("spellCheckLanguage").toString(), withGitHubLineBreaks);
