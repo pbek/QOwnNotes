@@ -186,13 +186,13 @@ QString Speller::availableBackends() const
     return l->clients();
 }
 
-QStringList Speller::availableLanguages() const
+QStringList Speller::availableLanguages()
 {
     Loader *l = Loader::openLoader();
     return l->languages();
 }
 
-QStringList Speller::availableLanguageNames() const
+QStringList Speller::availableLanguageNames()
 {
     Loader *l = Loader::openLoader();
     return l->languageNames();
