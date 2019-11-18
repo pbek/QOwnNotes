@@ -202,6 +202,11 @@
         <translation>Italienska</translation>
     </message>
     <message>
+        <location filename="../dialogs/dictionarymanagerdialog.cpp" line="28"/>
+        <source>Aragonese</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/dictionarymanagerdialog.cpp" line="52"/>
         <source>Gujarati</source>
         <translation type="unfinished">Gujarati</translation>
@@ -242,9 +247,8 @@
         <translation>Arabiska</translation>
     </message>
     <message>
-        <location filename="../dialogs/dictionarymanagerdialog.cpp" line="28"/>
         <source>Argonese</source>
-        <translation>Aragonien</translation>
+        <translation type="vanished">Aragonien</translation>
     </message>
     <message>
         <location filename="../dialogs/dictionarymanagerdialog.cpp" line="29"/>
@@ -4017,27 +4021,27 @@ Om papperskorgen är aktiverad på din ownCloud-server bör du kunna återställ
 <context>
     <name>QOwnNotesMarkdownTextEdit</name>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="549"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="566"/>
         <source>No suggestions for %1</source>
         <translation>Inga förslag för %1</translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="560"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="577"/>
         <source>Ignore</source>
         <translation>Ignorera</translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="561"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="578"/>
         <source>Add to Dictionary</source>
         <translation>Lägg till i ordlistan</translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="617"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="634"/>
         <source>Note editing disabled</source>
         <translation>Obs! Redigering avaktiverad</translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="618"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="635"/>
         <source>Note editing is currently disabled, do you want to allow again?</source>
         <translation>Obs redigering är för närvarande inaktiverad, vill du tillåta igen?</translation>
     </message>

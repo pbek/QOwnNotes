@@ -203,6 +203,11 @@
         <translation type="unfinished">Italian</translation>
     </message>
     <message>
+        <location filename="../dialogs/dictionarymanagerdialog.cpp" line="28"/>
+        <source>Aragonese</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/dictionarymanagerdialog.cpp" line="52"/>
         <source>Gujarati</source>
         <translation type="unfinished">Gujarati</translation>
@@ -243,9 +248,8 @@
         <translation type="unfinished">Arabic</translation>
     </message>
     <message>
-        <location filename="../dialogs/dictionarymanagerdialog.cpp" line="28"/>
         <source>Argonese</source>
-        <translation type="unfinished">Argonese</translation>
+        <translation type="obsolete">Argonese</translation>
     </message>
     <message>
         <location filename="../dialogs/dictionarymanagerdialog.cpp" line="29"/>
@@ -3978,27 +3982,27 @@ Nếu thùng rác được bật trên máy chủ của riêng bạn, bạn sẽ
 <context>
     <name>QOwnNotesMarkdownTextEdit</name>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="549"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="566"/>
         <source>No suggestions for %1</source>
         <translation>Không có đề xuất nào cho %1</translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="560"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="577"/>
         <source>Ignore</source>
         <translation>Làm lơ</translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="561"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="578"/>
         <source>Add to Dictionary</source>
         <translation>Thêm vào từ điển</translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="617"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="634"/>
         <source>Note editing disabled</source>
         <translation>Ghi chú chỉnh sửa bị vô hiệu hóa</translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="618"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="635"/>
         <source>Note editing is currently disabled, do you want to allow again?</source>
         <translation>Lưu ý chỉnh sửa hiện đang bị vô hiệu hóa, bạn có muốn cho phép lại không?</translation>
     </message>

@@ -203,6 +203,11 @@
         <translation type="unfinished">Italian</translation>
     </message>
     <message>
+        <location filename="../dialogs/dictionarymanagerdialog.cpp" line="28"/>
+        <source>Aragonese</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/dictionarymanagerdialog.cpp" line="52"/>
         <source>Gujarati</source>
         <translation type="unfinished">Gujarati</translation>
@@ -243,9 +248,8 @@
         <translation type="unfinished">Arabic</translation>
     </message>
     <message>
-        <location filename="../dialogs/dictionarymanagerdialog.cpp" line="28"/>
         <source>Argonese</source>
-        <translation type="unfinished">Argonese</translation>
+        <translation type="obsolete">Argonese</translation>
     </message>
     <message>
         <location filename="../dialogs/dictionarymanagerdialog.cpp" line="29"/>
@@ -4018,27 +4022,27 @@ Se a papeleira está habilitada no teu servidor ownCloud, deberías poder restau
 <context>
     <name>QOwnNotesMarkdownTextEdit</name>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="549"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="566"/>
         <source>No suggestions for %1</source>
         <translation>Non hai suxestións para %1</translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="560"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="577"/>
         <source>Ignore</source>
         <translation>Ignorar</translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="561"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="578"/>
         <source>Add to Dictionary</source>
         <translation>Engadir ao dicionario</translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="617"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="634"/>
         <source>Note editing disabled</source>
         <translation>A edición de notas está desactivada</translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="618"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="635"/>
         <source>Note editing is currently disabled, do you want to allow again?</source>
         <translation>A edición de notas está desactivada actualmente. ¿Queres volver permitila?</translation>
     </message>

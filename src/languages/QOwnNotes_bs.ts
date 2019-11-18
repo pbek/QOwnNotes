@@ -203,6 +203,11 @@
         <translation>Italijanski</translation>
     </message>
     <message>
+        <location filename="../dialogs/dictionarymanagerdialog.cpp" line="28"/>
+        <source>Aragonese</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/dictionarymanagerdialog.cpp" line="52"/>
         <source>Gujarati</source>
         <translation type="unfinished">Gujarati</translation>
@@ -243,9 +248,8 @@
         <translation type="unfinished">Arabic</translation>
     </message>
     <message>
-        <location filename="../dialogs/dictionarymanagerdialog.cpp" line="28"/>
         <source>Argonese</source>
-        <translation type="unfinished">Argonese</translation>
+        <translation type="obsolete">Argonese</translation>
     </message>
     <message>
         <location filename="../dialogs/dictionarymanagerdialog.cpp" line="29"/>
@@ -4058,27 +4062,27 @@ Ako je smeće omogućeno na vašem ownCloud poslužitelju, trebali biste ih moć
 <context>
     <name>QOwnNotesMarkdownTextEdit</name>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="549"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="566"/>
         <source>No suggestions for %1</source>
         <translation>Nema prijedloga za %1</translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="560"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="577"/>
         <source>Ignore</source>
         <translation>Ignoriraj</translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="561"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="578"/>
         <source>Add to Dictionary</source>
         <translation>Dodaj u rječnik</translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="617"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="634"/>
         <source>Note editing disabled</source>
         <translation>Uređivanje napomena onemogućeno</translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="618"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="635"/>
         <source>Note editing is currently disabled, do you want to allow again?</source>
         <translation>Uređivanje bilješki trenutno je onemogućeno, želite li je ponovo omogućiti?</translation>
     </message>

@@ -203,6 +203,11 @@
         <translation>Italiană</translation>
     </message>
     <message>
+        <location filename="../dialogs/dictionarymanagerdialog.cpp" line="28"/>
+        <source>Aragonese</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/dictionarymanagerdialog.cpp" line="52"/>
         <source>Gujarati</source>
         <translation type="unfinished">Gujarati</translation>
@@ -243,9 +248,8 @@
         <translation>Arabic</translation>
     </message>
     <message>
-        <location filename="../dialogs/dictionarymanagerdialog.cpp" line="28"/>
         <source>Argonese</source>
-        <translation>Argonese</translation>
+        <translation type="vanished">Argonese</translation>
     </message>
     <message>
         <location filename="../dialogs/dictionarymanagerdialog.cpp" line="29"/>
@@ -4058,27 +4062,27 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
 <context>
     <name>QOwnNotesMarkdownTextEdit</name>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="549"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="566"/>
         <source>No suggestions for %1</source>
         <translation>Nu există sugestii pentru %1</translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="560"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="577"/>
         <source>Ignore</source>
         <translation>Ignora</translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="561"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="578"/>
         <source>Add to Dictionary</source>
         <translation>Adaugă în dicționar</translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="617"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="634"/>
         <source>Note editing disabled</source>
         <translation>Notă modificare este dezactivată</translation>
     </message>
     <message>
-        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="618"/>
+        <location filename="../widgets/qownnotesmarkdowntextedit.cpp" line="635"/>
         <source>Note editing is currently disabled, do you want to allow again?</source>
         <translation>Modificarea notelor este dezactivată în prezent, doriți să permiteți din nou?</translation>
     </message>

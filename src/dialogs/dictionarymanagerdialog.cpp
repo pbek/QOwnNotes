@@ -25,7 +25,7 @@ DictionaryManagerDialog::DictionaryManagerDialog(QWidget *parent) :
     // you can add more dictionaries from https://github.com/qownnotes/dictionaries/tree/master
     addDictionaryItem(tr("Afrikaans"), QStringLiteral("af_ZA"));
     addDictionaryItem(tr("Arabic"), QStringLiteral("ar"));
-    addDictionaryItem(tr("Argonese"), QStringLiteral("an_ES"));
+    addDictionaryItem(tr("Aragonese"), QStringLiteral("an_ES"));
     addDictionaryItem(tr("Albanian"), QStringLiteral("sq_AL"));
     addDictionaryItem(tr("Belarusian"), QStringLiteral("be_BY"));
     addDictionaryItem(tr("Bulgarian"), QStringLiteral("bg_BG"));
