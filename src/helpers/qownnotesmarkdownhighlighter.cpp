@@ -37,6 +37,7 @@ QOwnNotesMarkdownHighlighter::QOwnNotesMarkdownHighlighter(
     Q_UNUSED(parent)
     Q_UNUSED(highlightingOptions)
 
+    spellchecker = nullptr;
     languageFilter = new Sonnet::LanguageFilter(new Sonnet::SentenceTokenizer());
     wordTokenizer = new Sonnet::WordTokenizer();
     codeBlock = 0; // for ```
@@ -112,7 +113,7 @@ void QOwnNotesMarkdownHighlighter::highlightBlock(const QString &text) {
 
     // skip spell checking empty blocks and blocks with just "spaces"
     // the rest of the highlighting needs to be done e.g. for code blocks with empty lines
-    if (spellchecker) {
+    if (spellchecker != nullptr) {
         if (!(text.isEmpty()) && spellchecker->isActive()) {
             highlightSpellChecking(text);
         }
