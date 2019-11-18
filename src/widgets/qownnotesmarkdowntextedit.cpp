@@ -12,7 +12,10 @@
 QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
         : QMarkdownTextEdit(parent, false) {
     mainWindow = Q_NULLPTR;
-    spellchecker = new QOwnSpellChecker();
+
+     objectName() != QStringLiteral("logTextEdit") ? spellchecker = new QOwnSpellChecker()
+                                                  : spellchecker = nullptr;
+
     _highlighter = new QOwnNotesMarkdownHighlighter(document(), spellchecker);
 
 
@@ -414,23 +417,24 @@ void QOwnNotesMarkdownTextEdit::updateSettings() {
         options |= QMarkdownTextEdit::AutoTextOption::BracketRemoval;
     }
 
-    //spell check active/inactive
-    bool spellcheckerActive = settings.value(QStringLiteral("checkSpelling"), true).toBool();
-    spellchecker->setActive(spellcheckerActive);
-
-
-    QString lang = settings.value(QStringLiteral("spellCheckLanguage"), QStringLiteral("auto")).toString();
-    if (lang == QStringLiteral("auto")) {
-        spellchecker->setAutoDetect(true);
-    } else {
-        spellchecker->setAutoDetect(false);
-        spellchecker->setCurrentLanguage(lang);
-    }
-
     setAutoTextOptions(options);
 
     // highlighting is always disabled for logTextEdit
     if (objectName() != QStringLiteral("logTextEdit")) {
+
+        //spell check active/inactive
+        bool spellcheckerActive = settings.value(QStringLiteral("checkSpelling"), true).toBool();
+        spellchecker->setActive(spellcheckerActive);
+
+
+        QString lang = settings.value(QStringLiteral("spellCheckLanguage"), QStringLiteral("auto")).toString();
+        if (lang == QStringLiteral("auto")) {
+            spellchecker->setAutoDetect(true);
+        } else {
+            spellchecker->setAutoDetect(false);
+            spellchecker->setCurrentLanguage(lang);
+        }
+
         // enable or disable markdown highlighting
         bool highlightingEnabled = settings.value(QStringLiteral("markdownHighlightingEnabled"),
                                                   true).toBool();
@@ -586,7 +590,7 @@ bool QOwnNotesMarkdownTextEdit::onContextMenuEvent(QContextMenuEvent *event) {
 
 
 bool QOwnNotesMarkdownTextEdit::eventFilter(QObject *obj, QEvent *event) {
-    if (event->type() == QEvent::ContextMenu) {
+    if (event->type() == QEvent::ContextMenu && objectName() != QStringLiteral("logTextEdit")) {
         if (spellchecker->isActive())
             return onContextMenuEvent(static_cast<QContextMenuEvent *>(event));
     }
