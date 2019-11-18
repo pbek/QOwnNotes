@@ -10,6 +10,9 @@
   (for [#742](https://github.com/pbek/QOwnNotes/issues/742), thank you @Waqar144)
 - spellchecking is now disabled in the log panel and the text edit in the
   *Debug settings* (for [#1423](https://github.com/pbek/QOwnNotes/issues/1423), thank you @Waqar144)
+- added more Italian, Albanian, Bulgarian, Greek, Hungarian, Basque, Czech,
+  Bosnian, Finnish, Icelandic, Norwegian, Croatian, Danish, Dutch, Spanish
+  translation (thank you mlocati, Fabijenna, richarson)
 
 ## 19.11.14
 - the spellchecker is now disabled if no dictionaries are available and language
