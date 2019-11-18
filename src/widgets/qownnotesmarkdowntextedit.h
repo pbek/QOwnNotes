@@ -36,6 +36,7 @@ public:
     void updateSettings();
     QMargins viewportMargins();
     void setText(const QString &text);
+    void enableSpellChecker(QOwnNotesMarkdownHighlighter *h = nullptr);
 
 protected:
     // we must not override _highlighter or Windows will create a QOwnNotesMarkdownHighlighter and MarkdownHighlighter instance

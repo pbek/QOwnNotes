@@ -311,6 +311,14 @@ QMargins QOwnNotesMarkdownTextEdit::viewportMargins() {
 #endif
 }
 
+void QOwnNotesMarkdownTextEdit::enableSpellChecker(QOwnNotesMarkdownHighlighter *h) {
+    if (!h) {
+        h = dynamic_cast<QOwnNotesMarkdownHighlighter*>(_highlighter);
+    }
+    spellchecker = new QOwnSpellChecker;
+    h->setSpellChecker(spellchecker);
+}
+
 void QOwnNotesMarkdownTextEdit::setText(const QString &text) {
     QSettings settings;
     bool highlightingEnabled = settings.value(QStringLiteral("markdownHighlightingEnabled"),
@@ -322,8 +330,7 @@ void QOwnNotesMarkdownTextEdit::setText(const QString &text) {
     QOwnNotesMarkdownHighlighter *h = dynamic_cast<QOwnNotesMarkdownHighlighter*>(_highlighter);
 
     if (!spellchecker) {
-        spellchecker = new QOwnSpellChecker;
-        h->setSpellChecker(spellchecker);
+        enableSpellChecker(h);
     }
 
     //check for comment block
