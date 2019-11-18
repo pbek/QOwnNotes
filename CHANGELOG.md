@@ -8,6 +8,8 @@
     - the other buttons were a bit rearranged and some dialogs added
 - rendering of italic or bold text and links in headings was fixed
   (for [#742](https://github.com/pbek/QOwnNotes/issues/742), thank you @Waqar144)
+- spellchecking is now disabled in the log panel and the text edit in the
+  *Debug settings* (for [#1423](https://github.com/pbek/QOwnNotes/issues/1423), thank you @Waqar144)
 
 ## 19.11.14
 - the spellchecker is now disabled if no dictionaries are available and language
