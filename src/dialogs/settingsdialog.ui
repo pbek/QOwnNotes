@@ -397,7 +397,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>3</number>
+            <number>8</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -4169,44 +4169,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                 <string>Debug information</string>
                </property>
                <layout class="QGridLayout" name="gridLayout_8">
-                <item row="6" column="2">
-                 <spacer name="horizontalSpacer_14">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item row="6" column="0">
-                 <widget class="QPushButton" name="saveDebugInfoButton">
-                  <property name="text">
-                   <string>&amp;Save debug information</string>
-                  </property>
-                  <property name="icon">
-                   <iconset theme="document-save" resource="../breeze-qownnotes.qrc">
-                    <normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</iconset>
-                  </property>
-                 </widget>
-                </item>
-                <item row="5" column="0" colspan="3">
-                 <widget class="QCheckBox" name="gitHubLineBreaksCheckBox">
-                  <property name="toolTip">
-                   <string>No two spaces to do a line break are added here if checked</string>
-                  </property>
-                  <property name="text">
-                   <string>Use GitHub line breaks</string>
-                  </property>
-                  <property name="checked">
-                   <bool>true</bool>
-                  </property>
-                 </widget>
-                </item>
-                <item row="0" column="0" colspan="3">
+                <item row="0" column="0" colspan="7">
                  <widget class="Label" name="label">
                   <property name="text">
                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=&quot; font-weight:600;&quot;&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=&quot; font-weight:600;&quot;&gt;issue&lt;/span&gt; on the &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=&quot; font-weight:600;&quot;&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -4219,7 +4182,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                   </property>
                  </widget>
                 </item>
-                <item row="2" column="0" colspan="3">
+                <item row="2" column="0" colspan="7">
                  <widget class="QOwnNotesMarkdownTextEdit" name="debugInfoTextEdit">
                   <property name="readOnly">
                    <bool>true</bool>
@@ -4229,8 +4192,41 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                   </property>
                  </widget>
                 </item>
-                <item row="6" column="1">
+                <item row="1" column="0" colspan="7">
+                 <widget class="QLabel" name="label_9">
+                  <property name="text">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=&quot; font-weight:600;&quot;&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="5" column="0" colspan="7">
+                 <widget class="QCheckBox" name="gitHubLineBreaksCheckBox">
+                  <property name="toolTip">
+                   <string>No two spaces to do a line break are added here if checked</string>
+                  </property>
+                  <property name="text">
+                   <string>Use GitHub line breaks</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="0" colspan="7">
+                 <widget class="QFrame" name="debugInfoTextEditSearchFrame">
+                  <property name="frameShape">
+                   <enum>QFrame::NoFrame</enum>
+                  </property>
+                  <property name="lineWidth">
+                   <number>0</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="6" column="0">
                  <widget class="QPushButton" name="issueAssistantPushButton">
+                  <property name="toolTip">
+                   <string>This is the best way to open an issue</string>
+                  </property>
                   <property name="text">
                    <string>Open issue assistant</string>
                   </property>
@@ -4240,22 +4236,46 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                   </property>
                  </widget>
                 </item>
-                <item row="1" column="0" colspan="3">
-                 <widget class="QLabel" name="label_9">
+                <item row="6" column="1">
+                 <widget class="QPushButton" name="copyDebugInfoButton">
+                  <property name="toolTip">
+                   <string>Please use this in the issue tracker</string>
+                  </property>
                   <property name="text">
-                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=&quot; font-weight:600;&quot;&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   <string>&amp;Copy debug information to clipboard</string>
+                  </property>
+                  <property name="icon">
+                   <iconset theme="edit-copy" resource="../breeze-qownnotes.qrc">
+                    <normaloff>:/icons/breeze-qownnotes/16x16/edit-copy.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-copy.svg</iconset>
                   </property>
                  </widget>
                 </item>
-                <item row="4" column="0" colspan="3">
-                 <widget class="QFrame" name="debugInfoTextEditSearchFrame">
-                  <property name="frameShape">
-                   <enum>QFrame::NoFrame</enum>
+                <item row="6" column="2">
+                 <widget class="QPushButton" name="saveDebugInfoButton">
+                  <property name="toolTip">
+                   <string>Please don't use this in the issue tracker</string>
                   </property>
-                  <property name="lineWidth">
-                   <number>0</number>
+                  <property name="text">
+                   <string>&amp;Save debug information</string>
+                  </property>
+                  <property name="icon">
+                   <iconset theme="document-save" resource="../breeze-qownnotes.qrc">
+                    <normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</iconset>
                   </property>
                  </widget>
+                </item>
+                <item row="6" column="3" colspan="4">
+                 <spacer name="horizontalSpacer_14">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
                 </item>
                </layout>
               </widget>
@@ -5983,10 +6003,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
   <tabstop>importSettingsButton</tabstop>
   <tabstop>exportSettingsButton</tabstop>
   <tabstop>reinitializeDatabaseButton</tabstop>
-  <tabstop>saveDebugInfoButton</tabstop>
   <tabstop>gitHubLineBreaksCheckBox</tabstop>
   <tabstop>debugInfoTextEdit</tabstop>
-  <tabstop>issueAssistantPushButton</tabstop>
   <tabstop>noteTextEditFontLabel</tabstop>
   <tabstop>noteTextEditButton</tabstop>
   <tabstop>noteTextEditResetButton</tabstop>
@@ -6059,8 +6077,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
   <tabstop>enableSocketServerCheckBox</tabstop>
  </tabstops>
  <resources>
-  <include location="../breeze-dark-qownnotes.qrc"/>
   <include location="../breeze-qownnotes.qrc"/>
+  <include location="../breeze-dark-qownnotes.qrc"/>
  </resources>
  <connections>
   <connection>

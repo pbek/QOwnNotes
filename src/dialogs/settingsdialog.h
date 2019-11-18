@@ -276,6 +276,8 @@ private slots:
 
     void on_todoCalendarSupportCheckBox_toggled();
 
+    void on_copyDebugInfoButton_clicked();
+
 private:
 
     Ui::SettingsDialog *ui;

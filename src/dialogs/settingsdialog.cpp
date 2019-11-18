@@ -1,3 +1,4 @@
+#include <QClipboard>
 #include <utility>
 #include "services/owncloudservice.h"
 #include "services/databaseservice.h"
@@ -2029,6 +2030,11 @@ void SettingsDialog::on_reinitializeDatabaseButton_clicked() {
  * @brief Stores the debug information to a markdown file
  */
 void SettingsDialog::on_saveDebugInfoButton_clicked() {
+    Utils::Gui::information(this, tr("Debug information"),
+                             tr("Please don't use this in the issue tracker, "
+                                "copy the debug information text directly into the issue."),
+                            "debug-save");
+
     FileDialog dialog("SaveDebugInfo");
     dialog.setFileMode(QFileDialog::AnyFile);
     dialog.setAcceptMode(QFileDialog::AcceptSave);
@@ -3951,4 +3957,13 @@ void SettingsDialog::on_todoCalendarSupportCheckBox_toggled() {
     ui->calendarCloudConnectionGroupBox->setEnabled(checked);
     ui->todoCalendarGroupBox->setEnabled(checked);
     ui->todoListSettingsGroupBox->setEnabled(checked);
+}
+
+void SettingsDialog::on_copyDebugInfoButton_clicked() {
+    QClipboard *clipboard = QApplication::clipboard();
+    clipboard->setText(ui->debugInfoTextEdit->toPlainText());
+
+    Utils::Gui::information(this, tr("Debug information"),
+                             tr("The debug information was copied to the clipboard."),
+                            "debug-clipboard");
 }

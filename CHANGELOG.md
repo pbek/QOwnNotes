@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 19.11.15
+- a new button `Copy debug information to clipboard` was added to the
+  *Debug settings* to be used when posting issues on GitHub
+    - keep in mind that the preferred way to post issues is still the
+      *Issue assistant*, it does most of the work for
+    - the other buttons were a bit rearranged and some dialogs added
+
 ## 19.11.14
 - the spellchecker is now disabled if no dictionaries are available and language
   auto-detection enabling is fixed for multiple languages
