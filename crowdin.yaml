@@ -61,6 +61,13 @@ files:
         "pa_IN" : "pa",
         "sq_AL" : "sq",
         "he_IL" : "he",
+        "vi_VN" : "vi",
+        "lv_LV" : "vl",
+        "ku_TR" : "ku",
+        "lt_LT" : "lt",
+        "bs_BA" : "bs",
+        "mk_MK" : "mk",
+        "ko_KR" : "ko",
         "et_EE" : "et",
       }
     }

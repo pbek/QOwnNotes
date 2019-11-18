@@ -33,7 +33,7 @@ def insert_in_file(file_name, text, add_text):
 
 
 insert_in_file('crowdin.yaml',
-             '"he_IL" : "he",',
+             '        "he_IL" : "he",',
              '        "{}" : "{}",'.format(iso_crowdin, iso_qon))
 insert_in_file('scripts/download_translations.sh',
              'mv QOwnNotes_he_IL.ts QOwnNotes_he.ts',
