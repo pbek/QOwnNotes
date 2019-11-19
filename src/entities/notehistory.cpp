@@ -9,9 +9,9 @@
  * NoteHistoryItem implementation
  */
 
-NoteHistoryItem::NoteHistoryItem(Note *note, QPlainTextEdit *textEdit) {
-    _noteName = "";
-    _noteSubFolderPathData = "";
+NoteHistoryItem::NoteHistoryItem(Note *note, QPlainTextEdit *textEdit) :
+    _noteName(QString()), _noteSubFolderPathData(QString())
+{
     _cursorPosition = 0;
     _relativeScrollBarPosition = 0;
 
@@ -173,7 +173,7 @@ NoteHistory &NoteHistory::operator=(const NoteHistory &rhs) {
     return *this;
 }
 
-NoteHistory::NoteHistory(NoteHistory &&h) :
+NoteHistory::NoteHistory(NoteHistory &&h) noexcept :
     noteHistory(h.noteHistory),
     currentIndex(std::move(h.currentIndex)),
     currentHistoryItem(std::move(h.currentHistoryItem))
@@ -181,7 +181,7 @@ NoteHistory::NoteHistory(NoteHistory &&h) :
     h.noteHistory = nullptr;
 }
 
-NoteHistory &NoteHistory::operator=(NoteHistory &&rhs) {
+NoteHistory &NoteHistory::operator=(NoteHistory &&rhs) noexcept {
     if (&rhs == this)
         return *this;
 
@@ -189,8 +189,8 @@ NoteHistory &NoteHistory::operator=(NoteHistory &&rhs) {
     noteHistory = rhs.noteHistory;
     rhs.noteHistory = nullptr;
 
-    currentIndex = std::move(rhs.currentIndex);
-    currentHistoryItem = std::move(rhs.currentHistoryItem);
+    currentIndex = rhs.currentIndex;
+    currentHistoryItem = rhs.currentHistoryItem;
 
     return *this;
 }
@@ -257,7 +257,7 @@ void NoteHistory::updateCursorPositionOfNote(Note note, QPlainTextEdit *textEdit
  * @param note
  * @return
  */
-NoteHistoryItem NoteHistory::getLastItemOfNote(Note note) {
+NoteHistoryItem NoteHistory::getLastItemOfNote(const Note &note) const {
     if (!isEmpty()) {
         for (int i = 0; i < noteHistory->count(); i++) {
             NoteHistoryItem item = noteHistory->at(i);
@@ -319,7 +319,7 @@ NoteHistoryItem NoteHistory::getCurrentHistoryItem() {
     return currentHistoryItem;
 }
 
-bool NoteHistory::isEmpty() {
+bool NoteHistory::isEmpty() const {
     return noteHistory->empty();
 }
 
@@ -363,10 +363,10 @@ void NoteHistory::storeForCurrentNoteFolder() {
     }
 
     // store the note history settings of the old note folder
-    settings.setValue("NoteHistory-" + QString::number(currentNoteFolderId),
+    settings.setValue(QStringLiteral("NoteHistory-") + QString::number(currentNoteFolderId),
                       noteHistoryVariantItems);
 
-    settings.setValue("NoteHistoryCurrentIndex-" + QString::number(
+    settings.setValue(QStringLiteral("NoteHistoryCurrentIndex-") + QString::number(
             currentNoteFolderId), newCurrentIndex);
 }
 
@@ -380,7 +380,7 @@ void NoteHistory::restoreForCurrentNoteFolder() {
 
     // restore the note history of the new note folder
     QVariantList noteHistoryVariantItems = settings.value(
-            "NoteHistory-" + QString::number(currentNoteFolderId)).toList();
+            QStringLiteral("NoteHistory-") + QString::number(currentNoteFolderId)).toList();
 
     if (noteHistoryVariantItems.count() == 0) {
         return;
@@ -420,7 +420,7 @@ QList<NoteHistoryItem> NoteHistory::getNoteHistoryItems() const {
     QList<NoteHistoryItem> items;
 
     for (int i = 0; i < noteHistory->count(); i++) {
-        NoteHistoryItem item = noteHistory->at(i);
+        const NoteHistoryItem &item = noteHistory->at(i);
 
         items.append(item);
     }
