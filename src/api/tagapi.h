@@ -12,5 +12,5 @@ class TagApi : public QObject, public Tag {
 public:
     TagApi *fetch(int id);
 
-    TagApi *fetchByName(QString name, int parentId = 0);
+    TagApi *fetchByName(const QString &name, int parentId = 0);
 };

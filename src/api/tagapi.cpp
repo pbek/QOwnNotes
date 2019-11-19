@@ -14,8 +14,8 @@ TagApi* TagApi::fetch(int id) {
     return this;
 }
 
-TagApi* TagApi::fetchByName(QString name, int parentId) {
-    Tag tag = Tag::fetchByName(std::move(name), parentId);
+TagApi* TagApi::fetchByName(const QString &name, int parentId) {
+    Tag tag = Tag::fetchByName(name, parentId);
 
     if (tag.isFetched()) {
         this->id = tag.getId();
