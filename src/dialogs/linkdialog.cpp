@@ -14,7 +14,7 @@
 #include <QRegularExpressionMatch>
 #include <utils/misc.h>
 
-LinkDialog::LinkDialog(QString dialogTitle, QWidget *parent) :
+LinkDialog::LinkDialog(const QString &dialogTitle, QWidget *parent) :
         MasterDialog(parent),
         ui(new Ui::LinkDialog) {
     ui->setupUi(this);
@@ -108,7 +108,7 @@ QString LinkDialog::getLinkName() {
     return ui->nameLineEdit->text().trimmed();
 }
 
-void LinkDialog::setLinkName(QString text) {
+void LinkDialog::setLinkName(const QString &text) {
     ui->nameLineEdit->setText(text);
 }
 
