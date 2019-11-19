@@ -96,8 +96,8 @@ int EvernoteImportDialog::countNotes(const QString& data) {
  *
  * @param data
  */
-void EvernoteImportDialog::initNoteCount(QString data) {
-    int count = countNotes(std::move(data));
+void EvernoteImportDialog::initNoteCount(const QString &data) {
+    int count = countNotes(data);
 
     ui->progressBar->setMaximum(count);
     ui->progressBar->show();
@@ -108,7 +108,9 @@ void EvernoteImportDialog::initNoteCount(QString data) {
  *
  * @param content
  */
-QString EvernoteImportDialog::importImages(Note note, QString content, QXmlQuery query) {
+QString EvernoteImportDialog::importImages(const Note &note,
+                                           QString content,
+                                           QXmlQuery query) {
     query.setQuery("resource");
 
     QXmlResultItems result;
@@ -250,7 +252,7 @@ QString EvernoteImportDialog::importImages(Note note, QString content, QXmlQuery
  *
  * @param content
  */
-QString EvernoteImportDialog::importAttachments(Note note,
+QString EvernoteImportDialog::importAttachments(const Note &note,
                                                 QString content,
                                                 QXmlQuery query) {
     query.setQuery("resource");
@@ -406,7 +408,7 @@ QString EvernoteImportDialog::importAttachments(Note note,
  */
 QString EvernoteImportDialog::getMarkdownForMediaFileData(
         Note note,
-        EvernoteImportDialog::MediaFileData &mediaFileData) {
+        const EvernoteImportDialog::MediaFileData &mediaFileData) {
     QString data = mediaFileData.data;
     QString imageSuffix = mediaFileData.suffix;
 
@@ -421,7 +423,7 @@ QString EvernoteImportDialog::getMarkdownForMediaFileData(
  */
 QString EvernoteImportDialog::getMarkdownForAttachmentFileData(
         Note note,
-        EvernoteImportDialog::MediaFileData &mediaFileData) {
+        const EvernoteImportDialog::MediaFileData &mediaFileData) {
     QString data = mediaFileData.data;
     QString suffix = mediaFileData.suffix;
     QString fileName = mediaFileData.fileName;
@@ -481,7 +483,7 @@ void EvernoteImportDialog::importNotes(const QString& data) {
             content.replace("\\\"", "\"");
 
             // decode HTML entities
-            content = Utils::Misc::unescapeHtml(content);
+            content = Utils::Misc::unescapeHtml(std::move(content));
 
             // add a newline in front of lists
 //            content.replace(QRegularExpression("<ul.*?>"), "\n<ul>");
@@ -504,19 +506,19 @@ void EvernoteImportDialog::importNotes(const QString& data) {
             content.replace(QRegularExpression("<\\/div>"), "\n");
 
             // convert remaining special characters
-            content = Utils::Misc::unescapeHtml(content);
+            content = Utils::Misc::unescapeHtml(std::move(content));
 
             // convert html tags to markdown
-            content = Utils::Misc::htmlToMarkdown(content);
+            content = Utils::Misc::htmlToMarkdown(std::move(content));
 
             if (ui->imageImportCheckBox->isChecked()) {
                 // import images
-                content = importImages(note, content, query);
+                content = importImages(note, std::move(content), query);
             }
 
             if (ui->attachmentImportCheckBox->isChecked()) {
                 // import attachments
-                content = importAttachments(note, content, query);
+                content = importAttachments(note, std::move(content), query);
             }
 
             // remove all html tags
