@@ -114,12 +114,12 @@ void OwnCloudService::readSettings(int cloudConnectionId) {
     userName = cloudConnection.getUsername();
     password = cloudConnection.getPassword();
 
-    versionListPath = rootPath + QStringLiteral("note/versions");
-    trashListPath = rootPath + QStringLiteral("note/trashed");
-    appInfoPath = rootPath + QStringLiteral("note/app_info");
+    versionListPath = rootPath % QStringLiteral("note/versions");
+    trashListPath = rootPath % QStringLiteral("note/trashed");
+    appInfoPath = rootPath % QStringLiteral("note/app_info");
     capabilitiesPath = QStringLiteral("/ocs/v1.php/cloud/capabilities");
     ownCloudTestPath = QStringLiteral("/ocs/v1.php");
-    restoreTrashedNotePath = rootPath + QStringLiteral("note/restore_trashed");
+    restoreTrashedNotePath = rootPath % QStringLiteral("note/restore_trashed");
     webdavPath = QStringLiteral("/remote.php/webdav");
 //    sharePath = "/ocs/v1.php/apps/files_sharing/api/v1/shares";
     sharePath = QStringLiteral("/ocs/v2.php/apps/files_sharing/api/v1/shares");
@@ -148,11 +148,11 @@ void OwnCloudService::readSettings(int cloudConnectionId) {
             CloudConnection::currentTodoCalendarCloudConnection();
 
     QString calendarPath =
-            QStringLiteral("/remote.php/") + calendarBackendString + QStringLiteral("/calendars/") + todoCalendarCloudConnection.getUsername();
+            QStringLiteral("/remote.php/") % calendarBackendString % QStringLiteral("/calendars/") % todoCalendarCloudConnection.getUsername();
     todoCalendarServerUrl = todoCalendarCloudConnection.getServerUrl().isEmpty() ?
-                QStringLiteral("") : todoCalendarCloudConnection.getServerUrl() + calendarPath;
+                QStringLiteral("") : todoCalendarCloudConnection.getServerUrl() % calendarPath;
     todoCalendarServerUrlWithoutPath = todoCalendarCloudConnection.getServerUrlWithoutPath();
-    todoCalendarServerUrlPath = todoCalendarCloudConnection.getServerUrlPath() + calendarPath;
+    todoCalendarServerUrlPath = todoCalendarCloudConnection.getServerUrlPath() % calendarPath;
     todoCalendarUsername = todoCalendarCloudConnection.getUsername();
     todoCalendarPassword = todoCalendarCloudConnection.getPassword();
 
@@ -172,14 +172,14 @@ void OwnCloudService::readSettings(int cloudConnectionId) {
             // remove the path from the calendar server url
             todoCalendarServerUrlWithoutPath.replace(QRegularExpression(
                     QRegularExpression::escape(
-                            todoCalendarServerUrlPath) + QStringLiteral("$")), QStringLiteral(""));
+                            todoCalendarServerUrlPath) % QStringLiteral("$")), QStringLiteral(""));
         }
     }
 }
 
 void OwnCloudService::slotAuthenticationRequired(
         QNetworkReply *reply, QAuthenticator *authenticator) {
-    Q_UNUSED(authenticator);
+    Q_UNUSED(authenticator)
     qWarning() << "Username and/or password incorrect";
 
 #ifndef INTEGRATION_TESTS
@@ -195,7 +195,7 @@ void OwnCloudService::slotAuthenticationRequired(
 
 void OwnCloudService::slotCalendarAuthenticationRequired(
         QNetworkReply *reply, QAuthenticator *authenticator) {
-    Q_UNUSED(authenticator);
+    Q_UNUSED(authenticator)
     qWarning() << "Calendar username and/or password incorrect";
 
     if (!Utils::Gui::isMessageBoxPresent()) {
@@ -350,7 +350,7 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
                 // load the task items
                 loadTodoItems(data);
             }
-        } else if (urlPath.startsWith(serverUrlPath + webdavPath)) {
+        } else if (urlPath.startsWith(serverUrlPath % webdavPath)) {
             // this should be the reply of a calendar item list request
             qDebug() << "Reply from ownCloud webdav";
 
@@ -391,7 +391,7 @@ void OwnCloudService::checkAppInfo(QNetworkReply *reply) {
     // qDebug() << data;
 
     // we have to add [], so the string can be parsed as JSON
-    data = QString(QStringLiteral("[")) + data + QString(QStringLiteral("]"));
+    data = QStringLiteral("[") % data % QStringLiteral("]");
 
     QJSEngine engine;
     QJSValue result = engine.evaluate(data);
@@ -417,7 +417,7 @@ void OwnCloudService::checkAppInfo(QNetworkReply *reply) {
 
         if (minAppVersion > serverAppVersion) {
             settingsDialog->setOKLabelData(4,
-                                           QStringLiteral("version ") + appVersion + QStringLiteral(" too low"),
+                                           QStringLiteral("version ") % appVersion % QStringLiteral(" too low"),
                                            SettingsDialog::Warning);
         } else {
             settingsDialog->setOKLabelData(4, QStringLiteral("ok"), SettingsDialog::OK);
@@ -482,7 +482,7 @@ void OwnCloudService::checkAppVersion(QNetworkReply *reply) {
     // qDebug() << data;
 
     // we have to add [], so the string can be parsed as JSON
-    data = QString(QStringLiteral("[")) + data + QString(QStringLiteral("]"));
+    data = QStringLiteral("[") % data % QStringLiteral("]");
 
     QJSEngine engine;
     QJSValue result = engine.evaluate(data);
@@ -543,17 +543,17 @@ void OwnCloudService::settingsConnectionTest(SettingsDialog *dialog) {
 
     addAuthHeader(&r);
 
-    url.setUrl(serverUrl + capabilitiesPath);
+    url.setUrl(serverUrl % capabilitiesPath);
     r.setUrl(url);
     reply = networkManager->get(r);
     ignoreSslErrorsIfAllowed(reply);
 
-    url.setUrl(serverUrl + ownCloudTestPath);
+    url.setUrl(serverUrl % ownCloudTestPath);
     r.setUrl(url);
     reply = networkManager->get(r);
     ignoreSslErrorsIfAllowed(reply);
 
-    url.setUrl(serverUrl + appInfoPath);
+    url.setUrl(serverUrl % appInfoPath);
     QString serverNotesPath = NoteFolder::currentRemotePath();
     q.addQueryItem(QStringLiteral("notes_path"), serverNotesPath);
     url.setQuery(q);
@@ -569,7 +569,7 @@ void OwnCloudService::startAppVersionTest() {
     // try to ensure the network is accessible
     networkManager->setNetworkAccessible(QNetworkAccessManager::Accessible);
 
-    QUrl url(serverUrl + appInfoPath);
+    QUrl url(serverUrl % appInfoPath);
     QString serverNotesPath = NoteFolder::currentRemotePath();
     QUrlQuery q;
 
@@ -712,14 +712,14 @@ void OwnCloudService::shareNote(const Note &note, ShareDialog *dialog) {
         return;
     }
 
-    QUrl url(serverUrl + sharePath);
+    QUrl url(serverUrl % sharePath);
     QString path = NoteFolder::currentRemotePath() +
             note.relativeNoteFilePath(QStringLiteral("/"));
 
     QByteArray postData;
     // set to public link
     postData.append(QStringLiteral("shareType=3&"));
-    postData.append(QStringLiteral("path=") + QUrl::toPercentEncoding(path));
+    postData.append(QStringLiteral("path=") % QUrl::toPercentEncoding(path));
 
     qDebug() << __func__ << " - 'url': " << url;
     qDebug() << __func__ << " - 'postData': " << postData;
@@ -749,7 +749,7 @@ void OwnCloudService::setPermissionsOnSharedNote(const Note &note, ShareDialog *
         return;
     }
 
-    QUrl url(serverUrl + sharePath + QStringLiteral("/") + QString::number(note.getShareId()) + QStringLiteral("?format=xml"));
+    QUrl url(serverUrl % sharePath % QStringLiteral("/") % QString::number(note.getShareId()) % QStringLiteral("?format=xml"));
     QString path = NoteFolder::currentRemotePath() +
             note.relativeNoteFilePath(QStringLiteral("/"));
 
@@ -786,7 +786,7 @@ void OwnCloudService::removeNoteShare(const Note &note, ShareDialog *dialog) {
         return;
     }
 
-    QUrl url(serverUrl + sharePath + QStringLiteral("/") + QString::number(note.getShareId()));
+    QUrl url(serverUrl % sharePath % QStringLiteral("/") % QString::number(note.getShareId()));
 
     qDebug() << __func__ << " - 'url': " << url;
 
@@ -812,7 +812,7 @@ void OwnCloudService::fetchShares(const QString& path) {
         return;
     }
 
-    QUrl url(serverUrl + sharePath);
+    QUrl url(serverUrl % sharePath);
 
     if (!path.isEmpty()) {
         QUrlQuery q;
@@ -841,7 +841,7 @@ void OwnCloudService::fetchBookmarks() {
         return;
     }
 
-    QUrl url(serverUrl + bookmarkPath + QStringLiteral("?page=-1"));
+    QUrl url(serverUrl % bookmarkPath % QStringLiteral("?page=-1"));
 
     qDebug() << __func__ << " - 'url': " << url;
 
@@ -879,7 +879,7 @@ void OwnCloudService::restoreTrashedNoteOnServer(const QString& fileName,
                                                  MainWindow *mainWindow) {
     this->mainWindow = mainWindow;
 
-    QUrl url(serverUrl + restoreTrashedNotePath);
+    QUrl url(serverUrl % restoreTrashedNotePath);
     QString serverNotesPath = Utils::Misc::appendIfDoesNotEndWith(
             NoteFolder::currentRemotePath() +
             NoteSubFolder::activeNoteSubFolder().relativePath(QStringLiteral("/")), QStringLiteral("/"));
@@ -889,7 +889,7 @@ void OwnCloudService::restoreTrashedNoteOnServer(const QString& fileName,
 
     QUrlQuery q;
     q.addQueryItem(QStringLiteral("format"), format);
-    q.addQueryItem(QStringLiteral("file_name"), serverNotesPath + fileName);
+    q.addQueryItem(QStringLiteral("file_name"), serverNotesPath % fileName);
     q.addQueryItem(QStringLiteral("timestamp"), QString::number(timestamp));
     url.setQuery(q);
 
@@ -911,8 +911,8 @@ void OwnCloudService::restoreTrashedNoteOnServer(const QString& fileName,
 void OwnCloudService::loadVersions(const QString& fileName, MainWindow *mainWindow) {
     this->mainWindow = mainWindow;
 
-    QUrl url(serverUrl + versionListPath);
-    QString serverPath = NoteFolder::currentRemotePath() + fileName;
+    QUrl url(serverUrl % versionListPath);
+    QString serverPath = NoteFolder::currentRemotePath() % fileName;
     qDebug() << __func__ << " - 'serverPath': " << serverPath;
 
     url.setUserName(userName);
@@ -939,7 +939,7 @@ void OwnCloudService::loadVersions(const QString& fileName, MainWindow *mainWind
 void OwnCloudService::loadTrash(MainWindow *mainWindow) {
     this->mainWindow = mainWindow;
 
-    QUrl url(serverUrl + trashListPath);
+    QUrl url(serverUrl % trashListPath);
     QString serverNotesPath = NoteFolder::currentRemotePath() +
         NoteSubFolder::activeNoteSubFolder().relativePath(QStringLiteral("/"));
 
@@ -978,9 +978,9 @@ void OwnCloudService::loadTrash(MainWindow *mainWindow) {
 
 void OwnCloudService::addAuthHeader(QNetworkRequest *r) {
     if (r) {
-        QString concatenated = userName + QStringLiteral(":") + password;
+        QString concatenated = userName % QStringLiteral(":") % password;
         QByteArray data = concatenated.toLocal8Bit().toBase64();
-        QString headerData = QStringLiteral("Basic ") + data;
+        QString headerData = QStringLiteral("Basic ") % data;
         r->setRawHeader("Authorization", headerData.toLocal8Bit());
 
         // Nextcloud 11+ needs that
@@ -995,9 +995,9 @@ void OwnCloudService::addAuthHeader(QNetworkRequest *r) {
 void OwnCloudService::addCalendarAuthHeader(QNetworkRequest *r) {
     if (r) {
         QString concatenated =
-                todoCalendarUsername + QStringLiteral(":") + todoCalendarPassword;
+                todoCalendarUsername % QStringLiteral(":") % todoCalendarPassword;
         QByteArray data = concatenated.toLocal8Bit().toBase64();
-        QString headerData = QStringLiteral("Basic ") + data;
+        QString headerData = QStringLiteral("Basic ") % data;
         r->setRawHeader("Authorization", headerData.toLocal8Bit());
 
         // we set a user agent to prevent troubles with some ownCloud /
@@ -1131,7 +1131,7 @@ void OwnCloudService::handleVersionsLoading(QString data) {
     }
 
     // we have to add [], so the string can be parsed as JSON
-    data = QStringLiteral("[") + data + QStringLiteral("]");
+    data = QStringLiteral("[") % data % QStringLiteral("]");
 
     QJSEngine engine;
     QJSValue result = engine.evaluate(data);
@@ -1192,7 +1192,7 @@ void OwnCloudService::handleTrashedLoading(QString data) {
     }
 
     // we have to add [], so the string can be parsed as JSON
-    data = QStringLiteral("[") + data + QStringLiteral("]");
+    data = QStringLiteral("[") % data % QStringLiteral("]");
 
     QJSEngine engine;
     QJSValue result = engine.evaluate(data);
@@ -1419,7 +1419,7 @@ void OwnCloudService::loadTodoItems(QString &data) {
                 }
 
                 QUrl calendarItemUrl =
-                        QUrl(todoCalendarServerUrlWithoutPath + urlPart);
+                        QUrl(todoCalendarServerUrlWithoutPath % urlPart);
 
                 // check if we have an etag
                 QDomNodeList etagNodes = elem.elementsByTagNameNS(NS_DAV,
@@ -1543,7 +1543,7 @@ void OwnCloudService::handleUpdateNoteShareReply(const QString &urlPart,
 //    qDebug() << __func__ << " - 'data': " << data;
 
     QRegularExpression re(
-            QRegularExpression::escape(sharePath) + QStringLiteral("\\/(\\d+)$"));
+            QRegularExpression::escape(sharePath) % QStringLiteral("\\/(\\d+)$"));
 
     QRegularExpressionMatch match = re.match(urlPart);
     int shareId = match.hasMatch() ? match.captured(1).toInt() : 0;
@@ -1791,7 +1791,7 @@ void OwnCloudService::loadDirectory(QString &data) {
                 QString urlPart = urlPartNodes.at(0).toElement().text();
 
                 QRegularExpression re(
-                    QRegularExpression::escape(webdavPath) + QStringLiteral("\\/(.+)\\/$"));
+                    QRegularExpression::escape(webdavPath) % QStringLiteral("\\/(.+)\\/$"));
 
                 QRegularExpressionMatch match = re.match(urlPart);
                 QString folderString =
@@ -1904,7 +1904,7 @@ void OwnCloudService::settingsGetFileList(
         SettingsDialog *dialog, QString path) {
     settingsDialog = dialog;
 
-    QUrl url(serverUrl + webdavPath + QStringLiteral("/") + path);
+    QUrl url(serverUrl % webdavPath % QStringLiteral("/") % path);
     QNetworkRequest r(url);
     addAuthHeader(&r);
 
@@ -1933,7 +1933,7 @@ void OwnCloudService::handleImportBookmarksReply(QString &data) {
     qDebug() << __func__ << " - 'data': " << data;
 
     // we have to add [], so the string can be parsed as JSON
-    data = QStringLiteral("[") + data + QStringLiteral("]");
+    data = QStringLiteral("[") % data % QStringLiteral("]");
 
     QJSEngine engine;
     QJSValue result = engine.evaluate(data);
@@ -1973,7 +1973,7 @@ QByteArray OwnCloudService::downloadNextcloudPreviewImage(const QString& path) {
     // 10 sec timeout for the request
     timer.start(10000);
 
-    QUrl url(serverUrl + path);
+    QUrl url(serverUrl % path);
     qDebug() << __func__ << " - 'url': " << url;
 
     QNetworkRequest networkRequest = QNetworkRequest(url);
@@ -2034,8 +2034,8 @@ QString OwnCloudService::nextcloudPreviewImageTagToInlineImageTag(QString imageT
     QByteArray data = downloadNextcloudPreviewImage(path);
 
     // for now we do no caching, because we don't know when to invalidate the cache
-    QString inlineImageTag = QStringLiteral(R"(<img class="remote-img" src="data:)") + mimeType + QStringLiteral(";base64,") +
-            data.toBase64() + QStringLiteral("\" alt=\"") + alt + QStringLiteral("\"/>");
+    QString inlineImageTag = QStringLiteral(R"(<img class="remote-img" src="data:)") % mimeType % QStringLiteral(";base64,") +
+            data.toBase64() % QStringLiteral("\" alt=\"") % alt % QStringLiteral("\"/>");
 
     return inlineImageTag;
 }
