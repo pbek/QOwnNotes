@@ -35,7 +35,7 @@ NoteSubFolder TrashItem::getNoteSubFolder() {
     return NoteSubFolder::fetch(this->noteSubFolderId);
 }
 
-void TrashItem::setNoteSubFolder(NoteSubFolder noteSubFolder) {
+void TrashItem::setNoteSubFolder(const NoteSubFolder &noteSubFolder) {
     this->noteSubFolderPathData = noteSubFolder.pathData();
 }
 
