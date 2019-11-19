@@ -1,8 +1,8 @@
 #include <utility>
 #include "tagapi.h"
 
-TagApi* TagApi::fetch(int id) {
-    Tag tag = Tag::fetch(id);
+TagApi* TagApi::fetch(int Id) {
+    Tag tag = Tag::fetch(Id);
 
     if (tag.isFetched()) {
         this->id = tag.getId();
@@ -14,8 +14,8 @@ TagApi* TagApi::fetch(int id) {
     return this;
 }
 
-TagApi* TagApi::fetchByName(const QString &name, int parentId) {
-    Tag tag = Tag::fetchByName(name, parentId);
+TagApi* TagApi::fetchByName(const QString &Name, int ParentId) {
+    Tag tag = Tag::fetchByName(Name, ParentId);
 
     if (tag.isFetched()) {
         this->id = tag.getId();
