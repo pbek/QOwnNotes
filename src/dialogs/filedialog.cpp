@@ -2,7 +2,7 @@
 #include <QDebug>
 #include <QSettings>
 
-FileDialog::FileDialog(QString name) {
+FileDialog::FileDialog(const QString &name) {
     if (!name.isEmpty()) {
         setObjectName("FileDialog-" + name);
         _generalSettingsKey = "FileDialog/LastPath";

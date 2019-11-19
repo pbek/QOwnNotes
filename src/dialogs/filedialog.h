@@ -9,7 +9,7 @@ class FileDialog : public QFileDialog
 Q_OBJECT
 
 public:
-    explicit FileDialog(QString name = "");
+    explicit FileDialog(const QString &name = QString());
     QString selectedFile();
 
 private:
