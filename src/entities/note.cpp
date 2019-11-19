@@ -228,7 +228,7 @@ Note Note::fetchByFileName(const QString &fileName, int noteSubFolderId) {
         noteSubFolderId = NoteSubFolder::activeNoteSubFolderId();
     }
 
-    note.fillByFileName(std::move(fileName), noteSubFolderId);
+    note.fillByFileName(fileName, noteSubFolderId);
     return note;
 }
 
@@ -1720,7 +1720,7 @@ void Note::createFromFile(QFile &file, int noteSubFolderId,
  * @param noteSubFolder
  * @return
  */
-Note Note::updateOrCreateFromFile(QFile &file, NoteSubFolder noteSubFolder,
+Note Note::updateOrCreateFromFile(QFile &file, const NoteSubFolder &noteSubFolder,
                                   bool withNoteNameHook) {
     QFileInfo fileInfo(file);
     Note note = fetchByFileName(fileInfo.fileName(), noteSubFolder.getId());
@@ -1885,7 +1885,7 @@ bool Note::removeNoteFile() {
  * @param forExport defines whether the export or preview stylesheet
  * @return
  */
-QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth,
+QString Note::toMarkdownHtml(const QString &notesPath, int maxImageWidth,
                              bool forExport, bool decrypt, bool base64Images) {
     // get the decrypted note text (or the normal note text if there isn't any)
     QString str = decrypt ? getDecryptedNoteText() : noteText;
@@ -1902,7 +1902,7 @@ QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth,
         return _noteTextHtml;
     }
 
-    QString result = textToMarkdownHtml(str, std::move(notesPath), maxImageWidth,
+    QString result = textToMarkdownHtml(str, notesPath, maxImageWidth,
                                         forExport, base64Images);
 
     // cache the html output and conversion hash
