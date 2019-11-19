@@ -175,8 +175,8 @@ NoteHistory &NoteHistory::operator=(const NoteHistory &rhs) {
 
 NoteHistory::NoteHistory(NoteHistory &&h) noexcept :
     noteHistory(h.noteHistory),
-    currentIndex(std::move(h.currentIndex)),
-    currentHistoryItem(std::move(h.currentHistoryItem))
+    currentIndex(h.currentIndex),
+    currentHistoryItem(h.currentHistoryItem)
 {
     h.noteHistory = nullptr;
 }

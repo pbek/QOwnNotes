@@ -43,6 +43,7 @@
 #include <QMimeDatabase>
 #include <QUuid>
 #include <QTextDocument>
+#include <QStringBuilder>
 
 #ifdef Q_OS_WIN
 #include <windows.h>
@@ -72,7 +73,7 @@ void Utils::Misc::openPath(const QString& absolutePath)
     const QString path = QDir::fromNativeSeparators(absolutePath);
     // Hack to access samba shares with QDesktopServices::openUrl
     if (path.startsWith(QStringLiteral("//")))
-        QDesktopServices::openUrl(QDir::toNativeSeparators(QStringLiteral("file:") + path));
+        QDesktopServices::openUrl(QDir::toNativeSeparators(QStringLiteral("file:") % path));
     else
         QDesktopServices::openUrl(QUrl::fromLocalFile(path));
 }
@@ -318,7 +319,7 @@ QString Utils::Misc::toStartCase(const QString& text) {
 
     for (QString & word : words) {
         if (word.length() > 0) {
-            word = word.left(1).toUpper() + word.right(word.length() - 1);
+            word = word.left(1).toUpper() % word.right(word.length() - 1);
         }
     }
 
@@ -403,7 +404,7 @@ QString Utils::Misc::defaultNotesPath() {
     // because Windows also uses "/" in QDir::homePath()
     QString path = isInPortableMode() ?
                    portableDataPath() :
-                   QDir::homePath() + Utils::Misc::dirSeparator() + QStringLiteral("ownCloud");
+                   QDir::homePath() % Utils::Misc::dirSeparator() % QStringLiteral("ownCloud");
 
     // check if the ownCloud path already exists (because the user is using
     // ownCloud), if not use Nextcloud
@@ -415,11 +416,11 @@ QString Utils::Misc::defaultNotesPath() {
 
         QDir dir(path);
         if (!dir.exists()) {
-            path = QDir::homePath() + Utils::Misc::dirSeparator() + QStringLiteral("Nextcloud");
+            path = QDir::homePath() % Utils::Misc::dirSeparator() % QStringLiteral("Nextcloud");
         }
     }
 
-    path += Utils::Misc::dirSeparator() + QStringLiteral("Notes");
+    path += Utils::Misc::dirSeparator() % QStringLiteral("Notes");
 
     // remove the snap path for Snapcraft builds
     path.remove(QRegularExpression(QStringLiteral(R"(snap\/qownnotes\/\w\d+\/)")));
@@ -463,7 +464,7 @@ QString Utils::Misc::portableDataPath() {
 
     // it seems QDir::separator() is not needed, because Windows also
     // uses "/" in QCoreApplication::applicationDirPath()
-    path += dirSeparator() + QStringLiteral("Data");
+    path += dirSeparator() % QStringLiteral("Data");
 
     QDir dir;
     // create path if it doesn't exist yet
@@ -498,7 +499,7 @@ QString Utils::Misc::prependPortableDataPathIfNeeded(QString path,
 
         // check if the path already starts with the portable data path
         if (!path.startsWith(portableDataPath)) {
-            path = portableDataPath + QStringLiteral("/") + path;
+            path = portableDataPath % QStringLiteral("/") % path;
         }
     }
 
@@ -647,13 +648,13 @@ QString Utils::Misc::parseTaskList(const QString &html, bool clickable)
     // should be provided by the markdown parser
 
     const QString checkboxStart = QStringLiteral(R"(<a class="task-list-item-checkbox" href="checkbox://_)");
-    text.replace(QRegExp(QStringLiteral(R"((<li>\s*(<p>)*\s*)\[ ?\])"), Qt::CaseInsensitive), QStringLiteral("\\1") + checkboxStart + QStringLiteral("\">&#9744;</a>"));
-    text.replace(QRegExp(QStringLiteral(R"((<li>\s*(<p>)*\s*)\[[xX]\])"), Qt::CaseInsensitive), QStringLiteral("\\1") + checkboxStart + QStringLiteral("\">&#9745;</a>"));
+    text.replace(QRegExp(QStringLiteral(R"((<li>\s*(<p>)*\s*)\[ ?\])"), Qt::CaseInsensitive), QStringLiteral("\\1") % checkboxStart % QStringLiteral("\">&#9744;</a>"));
+    text.replace(QRegExp(QStringLiteral(R"((<li>\s*(<p>)*\s*)\[[xX]\])"), Qt::CaseInsensitive), QStringLiteral("\\1") % checkboxStart % QStringLiteral("\">&#9745;</a>"));
 
     int count = 0;
     int pos = 0;
     while (true) {
-        pos = text.indexOf(checkboxStart + QStringLiteral("\""), pos);
+        pos = text.indexOf(checkboxStart % QStringLiteral("\""), pos);
         if (pos == -1)
             break;
 
@@ -719,7 +720,7 @@ QString Utils::Misc::appDataPath() {
  * @return
  */
 QString Utils::Misc::logFilePath() {
-    return appDataPath() + QStringLiteral("/") + qAppName().replace(QStringLiteral(" "), QStringLiteral("-")) + QStringLiteral(".log");
+    return appDataPath() % QStringLiteral("/") % qAppName().replace(QStringLiteral(" "), QStringLiteral("-")) + QStringLiteral(".log");
 }
 
 /**
@@ -849,16 +850,16 @@ QString Utils::Misc::genericCSS() {
     QSettings settings;
     bool darkModeColors = settings.value(QStringLiteral("darkModeColors")).toBool();
     QString color = darkModeColors ? QStringLiteral("#ffd694") : QStringLiteral("#fc7600");
-    QString cssStyles = QStringLiteral("a {color: ") + color +  QStringLiteral("}");
+    QString cssStyles = QStringLiteral("a {color: ") % color %  QStringLiteral("}");
 
     color = darkModeColors ? QStringLiteral("#5b5b5b") : QStringLiteral("#e8e8e8");
-    cssStyles += QStringLiteral("kbd {background-color: ") + color +  QStringLiteral("}");
+    cssStyles += QStringLiteral("kbd {background-color: ") % color %  QStringLiteral("}");
 
     color = darkModeColors ? QStringLiteral("#336924") : QStringLiteral("#d6ffc7");
-    cssStyles += QStringLiteral("ins {background-color: ") + color +  QStringLiteral("}");
+    cssStyles += QStringLiteral("ins {background-color: ") % color %  QStringLiteral("}");
 
     color = darkModeColors ? QStringLiteral("#802c2c") : QStringLiteral("#ffd7d7");
-    cssStyles += QStringLiteral("del {background-color: ") + color +  QStringLiteral("}");
+    cssStyles += QStringLiteral("del {background-color: ") % color %  QStringLiteral("}");
     return cssStyles;
 }
 
@@ -1219,18 +1220,18 @@ QString Utils::Misc::prepareDebugInformationLine(
     QString spaces = withGitHubLineBreaks ? QStringLiteral("") : QStringLiteral("  ");
 
     if (data.contains(QStringLiteral("\n"))) {
-        data = QStringLiteral("\n```\n") + data.trimmed() + QStringLiteral("\n```");
+        data = QStringLiteral("\n```\n") % data.trimmed() % QStringLiteral("\n```");
     } else {
-        data = (data.isEmpty()) ? QStringLiteral("*empty*") : "`" + data + "`";
+        data = (data.isEmpty()) ? QStringLiteral("*empty*") : "`" % data % "`";
     }
 
-    QString resultText = QStringLiteral("**") + headline + QStringLiteral("**");
+    QString resultText = QStringLiteral("**") % headline % QStringLiteral("**");
 
     if (!typeText.isEmpty()) {
-        resultText += QStringLiteral(" (") + typeText + QStringLiteral(")");
+        resultText += QStringLiteral(" (") % typeText % QStringLiteral(")");
     }
 
-    resultText += QStringLiteral(": ") + data + spaces + QStringLiteral("\n");
+    resultText += QStringLiteral(": ") % data % spaces % QStringLiteral("\n");
     return resultText;
 }
 
@@ -1346,7 +1347,7 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
     const QList<NoteFolder> &noteFolders = NoteFolder::fetchAll();
     if (noteFolders.count() > 0) {
         Q_FOREACH(const NoteFolder &noteFolder, noteFolders) {
-                output += QStringLiteral("\n### Note folder `") + noteFolder.getName() +
+                output += QStringLiteral("\n### Note folder `") % noteFolder.getName() +
                           QStringLiteral("`\n\n");
                 output += prepareDebugInformationLine(
                         QStringLiteral("id"), QString::number(noteFolder.getId()), withGitHubLineBreaks);
@@ -1384,7 +1385,7 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
     output += QStringLiteral("\n## Cloud connections\n");
 
     Q_FOREACH(CloudConnection cloudConnection, CloudConnection::fetchAll()) {
-        output += "\n### Cloud connection `" + cloudConnection.getName() +
+        output += "\n### Cloud connection `" % cloudConnection.getName() +
                 "`\n\n";
         output += prepareDebugInformationLine(
                     "id", QString::number(cloudConnection.getId()), withGitHubLineBreaks);
@@ -1403,7 +1404,7 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
     QList<Script> scripts = Script::fetchAll(true);
     if (noteFolders.count() > 0) {
         Q_FOREACH(Script script, scripts) {
-                output += "\n### Script `" + script.getName() +
+                output += "\n### Script `" % script.getName() +
                           "`\n\n";
                 output += prepareDebugInformationLine(
                         "id", QString::number(script.getId()), withGitHubLineBreaks);
@@ -1604,7 +1605,7 @@ QString Utils::Misc::remotePreviewImageTagToInlineImageTag(QString imageTag) {
     auto type = db.mimeTypeForData(data);
 
     // for now we do no caching, because we don't know when to invalidate the cache
-    const QString replace = QStringLiteral("data:") + type.name() + QStringLiteral(";base64,") + data.toBase64();
+    const QString replace = QStringLiteral("data:") % type.name() % QStringLiteral(";base64,") % data.toBase64();
     const QString inlineImageTag = imageTag.replace(url, replace);
 
     return inlineImageTag;
@@ -1624,7 +1625,7 @@ QString Utils::Misc::createUuidString() {
  * @return
  */
 QString Utils::Misc::localDictionariesPath() {
-    QString path = Utils::Misc::appDataPath() + QStringLiteral("/dicts");
+    QString path = Utils::Misc::appDataPath() % QStringLiteral("/dicts");
     QDir dir;
 
     // create path if it doesn't exist yet
