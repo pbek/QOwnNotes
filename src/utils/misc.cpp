@@ -365,7 +365,7 @@ bool Utils::Misc::startDetachedProcess(const QString& executablePath,
  * @return the text that was returned by the process
  */
 QByteArray Utils::Misc::startSynchronousProcess(
-        const QString& executablePath, QStringList parameters, QByteArray data) {
+        const QString& executablePath, const QStringList &parameters, const QByteArray &data) {
     QProcess process;
 
     // start executablePath synchronous with parameters
@@ -821,7 +821,7 @@ QByteArray Utils::Misc::downloadUrl(const QUrl& url) {
 /**
  * Downloads an url and stores it to a file
  */
-bool Utils::Misc::downloadUrlToFile(QUrl url, QFile *file) {
+bool Utils::Misc::downloadUrlToFile(const QUrl &url, QFile *file) {
     if (!file->open(QIODevice::WriteOnly)) {
         return false;
     }
@@ -830,7 +830,7 @@ bool Utils::Misc::downloadUrlToFile(QUrl url, QFile *file) {
         return false;
     }
 
-    QByteArray data = downloadUrl(std::move(url));
+    QByteArray data = downloadUrl(url);
     if (data.size() > 0) {
         file->write(data);
         return true;
@@ -1521,7 +1521,7 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
  * @param regExpList
  * @return
  */
-bool Utils::Misc::regExpInListMatches(const QString& text, QStringList regExpList) {
+bool Utils::Misc::regExpInListMatches(const QString& text, const QStringList &regExpList) {
     Q_FOREACH(QString regExp, regExpList) {
             regExp = regExp.trimmed();
 

@@ -60,8 +60,8 @@ namespace Utils {
         QString htmlToMarkdown(QString text);
         QString parseTaskList(const QString &html, bool clickable);
         QByteArray startSynchronousProcess(
-                const QString& executablePath, QStringList parameters,
-                QByteArray data = QByteArray());
+                const QString& executablePath, const QStringList &parameters,
+                const QByteArray &data = QByteArray());
         QList<QObject *> getParents(QObject *object);
         QString appDataPath();
         QString logFilePath();
@@ -69,8 +69,8 @@ namespace Utils {
         QString replaceOwnCloudText(QString text, bool useShortText = false);
         void restartApplication();
         void needRestart();
-        bool downloadUrlToFile(QUrl url, QFile *file);
-        QByteArray downloadUrl(const QUrl& url);
+        bool downloadUrlToFile(const QUrl &url, QFile *file);
+        QByteArray downloadUrl(const QUrl &url);
         QString genericCSS();
         QHash<int, SearchEngine> getSearchEnginesHashMap();
         int getDefaultSearchEngineId();
@@ -94,7 +94,7 @@ namespace Utils {
             bool withGitHubLineBreaks = true,
             const QString& typeText = "");
         QString generateDebugInformation(bool withGitHubLineBreaks = true);
-        bool regExpInListMatches(const QString& text, QStringList regExpList);
+        bool regExpInListMatches(const QString& text, const QStringList &regExpList);
         bool isDarkModeIconTheme();
         void transformNextcloudPreviewImages(QString &html);
         void transformRemotePreviewImages(QString &html);
