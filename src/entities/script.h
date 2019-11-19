@@ -62,7 +62,7 @@ public:
     QString getName();
     QString getScriptPath();
     int getPriority();
-    void setName(QString text);
+    void setName(const QString &text);
     void setScriptPath(QString text);
     void setPriority(int value);
     static int countAll();
@@ -80,11 +80,11 @@ public:
     bool isScriptFromRepository();
     QUrl remoteScriptUrl();
     QUrl remoteFileUrl(const QString& fileName);
-    static bool scriptFromRepositoryExists(QString identifier);
+    static bool scriptFromRepositoryExists(const QString &identifier);
     void setSettingsVariablesJson(QString json);
     QString getSettingsVariablesJson();
     QJsonObject getSettingsVariablesJsonObject();
-    void setSettingsVariablesJson(QJsonObject jsonObject);
+    void setSettingsVariablesJson(const QJsonObject &jsonObject);
     QString getScriptDirPath();
     QList<QUrl> remoteFileUrls();
     ScriptInfoJson getScriptInfoJson();

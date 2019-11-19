@@ -84,7 +84,7 @@ bool Script::isEnabled() {
     return getEnabled();
 }
 
-void Script::setName(QString text) {
+void Script::setName(const QString &text) {
     this->name = text;
 }
 
@@ -100,7 +100,7 @@ void Script::setSettingsVariablesJson(QString json) {
     this->settingsVariablesJson = std::move(json);
 }
 
-void Script::setSettingsVariablesJson(QJsonObject jsonObject) {
+void Script::setSettingsVariablesJson(const QJsonObject &jsonObject) {
     QJsonDocument document(jsonObject);
     this->settingsVariablesJson = document.toJson();
 }
@@ -195,8 +195,8 @@ int Script::countEnabled() {
  * @param identifier
  * @return
  */
-bool Script::scriptFromRepositoryExists(QString identifier) {
-    Script script = fetchByIdentifier(std::move(identifier));
+bool Script::scriptFromRepositoryExists(const QString &identifier) {
+    Script script = fetchByIdentifier(identifier);
     return script.isFetched();
 }
 
