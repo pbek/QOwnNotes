@@ -14,7 +14,7 @@ struct ToolbarContainer {
     QStringList actions;
 
     ToolbarContainer() {}
-    ToolbarContainer(QString name, QString title, QStringList actions):
+    ToolbarContainer(const QString &name, const QString &title, const QStringList &actions):
         name(name), title(title), actions(actions)
     {}
     ToolbarContainer(QToolBar* toolbar);
