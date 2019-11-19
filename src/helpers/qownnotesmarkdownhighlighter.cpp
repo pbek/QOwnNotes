@@ -259,9 +259,9 @@ void QOwnNotesMarkdownHighlighter::highlightSpellChecking(const QString &text) {
     }
 
 
-
-    const bool autodetectLanguage = spellchecker->isAutoDetectOn() ?
-               spellchecker->testAttribute(Sonnet::Speller::AutoDetectLanguage) : false;
+    //use our own settings, as KDE users might face issues with Autodetection
+    const bool autodetectLanguage = spellchecker->isAutoDetectOn();
+               //spellchecker->testAttribute(Sonnet::Speller::AutoDetectLanguage) : false;
     LanguageCache *languageCache = nullptr;
     if (autodetectLanguage) {
         languageCache = dynamic_cast<LanguageCache*>(currentBlockUserData());
