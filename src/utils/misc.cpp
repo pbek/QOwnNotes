@@ -1330,10 +1330,10 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
     output += "\n## Spellchecking\n\n";
     output += prepareDebugInformationLine("Enabled", settings.value("checkSpelling").toString(), withGitHubLineBreaks);
     output += prepareDebugInformationLine("Selected language", settings.value("spellCheckLanguage").toString(), withGitHubLineBreaks);
-    auto *speller = new Sonnet::Speller();
-    output += prepareDebugInformationLine("Language codes", speller->availableLanguages().join(", "), withGitHubLineBreaks);
-    output += prepareDebugInformationLine("Language names", speller->availableLanguageNames().join(", "), withGitHubLineBreaks);
-    delete speller;
+    //auto *speller = new Sonnet::Speller();
+    output += prepareDebugInformationLine("Language codes", Sonnet::Speller::availableLanguages().join(", "), withGitHubLineBreaks);
+    output += prepareDebugInformationLine("Language names", Sonnet::Speller::availableLanguageNames().join(", "), withGitHubLineBreaks);
+    //delete speller;
     output += prepareDebugInformationLine("Application dictionaries path",
                                           QDir::toNativeSeparators(Utils::Misc::localDictionariesPath()), withGitHubLineBreaks);
 
