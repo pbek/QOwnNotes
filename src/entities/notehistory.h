@@ -45,7 +45,15 @@ private:
     int lastIndex();
 
 public:
-    explicit NoteHistory();
+    NoteHistory();
+    //copy
+    NoteHistory(const NoteHistory&);
+    NoteHistory &operator=(const NoteHistory& rhs);
+    //move
+    NoteHistory(NoteHistory&&);
+    NoteHistory &operator=(NoteHistory&& rhs);
+    ~NoteHistory();
+
     void add(Note note, QPlainTextEdit *textEdit);
     friend QDebug operator<<(QDebug dbg, const NoteHistory &history);
     bool back();
