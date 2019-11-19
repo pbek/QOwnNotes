@@ -28,9 +28,9 @@
 #include <utils/gui.h>
 
 const QString OwnCloudService::rootPath =
-        "/index.php/apps/qownnotesapi/api/v1/";
-const QString OwnCloudService::format = "json";
-const QString NS_DAV("DAV:");
+        QStringLiteral("/index.php/apps/qownnotesapi/api/v1/");
+const QString OwnCloudService::format = QStringLiteral("json");
+const QString NS_DAV(QStringLiteral("DAV:"));
 
 OwnCloudService::OwnCloudService(int cloudConnectionId, QObject *parent)
         : QObject(parent) {
@@ -639,7 +639,7 @@ void OwnCloudService::settingsGetCalendarList(SettingsDialog *dialog) {
 /**
  * @brief Gets the task list from the ownCloud server for the task list dialog
  */
-void OwnCloudService::todoGetTodoList(QString calendarName,
+void OwnCloudService::todoGetTodoList(const QString &calendarName,
                                       TodoDialog *dialog) {
     this->todoDialog = dialog;
     this->calendarName = calendarName;
@@ -700,7 +700,7 @@ void OwnCloudService::todoGetTodoList(QString calendarName,
 /**
  * Shares a note on ownCloud
  */
-void OwnCloudService::shareNote(Note note, ShareDialog *dialog) {
+void OwnCloudService::shareNote(const Note &note, ShareDialog *dialog) {
     this->shareDialog = dialog;
     qDebug() << __func__ << " - 'note': " << note;
 
@@ -738,7 +738,7 @@ void OwnCloudService::shareNote(Note note, ShareDialog *dialog) {
 /**
  * Allow note editing on a shared note on Nextcloud
  */
-void OwnCloudService::setPermissionsOnSharedNote(Note note, ShareDialog *dialog) {
+void OwnCloudService::setPermissionsOnSharedNote(const Note &note, ShareDialog *dialog) {
     this->shareDialog = dialog;
     qDebug() << __func__ << " - 'note': " << note;
 
@@ -774,7 +774,7 @@ void OwnCloudService::setPermissionsOnSharedNote(Note note, ShareDialog *dialog)
 /**
  * Removes a note shares on ownCloud
  */
-void OwnCloudService::removeNoteShare(Note note, ShareDialog *dialog) {
+void OwnCloudService::removeNoteShare(const Note &note, ShareDialog *dialog) {
     this->shareDialog = dialog;
     qDebug() << __func__ << " - 'note': " << note;
 
@@ -1498,7 +1498,7 @@ void OwnCloudService::loadTodoItems(QString &data) {
 
     // remove all not found items
     for (int i = 0; i < calendarItemUrlRemoveList.length(); ++i) {
-        QUrl url = calendarItemUrlRemoveList.at(i);
+        const QUrl &url = calendarItemUrlRemoveList.at(i);
         CalendarItem calItem = CalendarItem::fetchByUrl(url);
 
         if (calItem.isFetched()) {
@@ -1532,8 +1532,8 @@ void OwnCloudService::handleNoteShareReply(QString &data) {
 /**
  * Updates the share status of the note
  */
-void OwnCloudService::handleUpdateNoteShareReply(QString urlPart,
-                                                 QString &data) {
+void OwnCloudService::handleUpdateNoteShareReply(const QString &urlPart,
+                                                 const QString &data) {
     // return if we didn't get any data
     if (data.isEmpty()) {
         return;

@@ -51,7 +51,7 @@ public:
 
     void settingsGetCalendarList(SettingsDialog *dialog);
 
-    void todoGetTodoList(QString calendarName, TodoDialog *dialog);
+    void todoGetTodoList(const QString &calendarName, TodoDialog *dialog);
 
     void postCalendarItemToServer(CalendarItem calendarItem,
                                   TodoDialog *dialog);
@@ -64,15 +64,15 @@ public:
 
     static bool hasOwnCloudSettings(bool withEnabledCheck = true, bool ignoreTableWarning = false);
 
-    void shareNote(Note note, ShareDialog *dialog);
+    void shareNote(const Note &note, ShareDialog *dialog);
 
-    void setPermissionsOnSharedNote(Note note, ShareDialog *dialog);
+    void setPermissionsOnSharedNote(const Note &note, ShareDialog *dialog);
 
     void fetchShares(const QString& path = "");
 
     void fetchBookmarks();
 
-    void removeNoteShare(Note note, ShareDialog *dialog);
+    void removeNoteShare(const Note &note, ShareDialog *dialog);
 
     static OwnCloudService *instance(bool reset = false, int cloudConnectionId = -1);
 
@@ -152,7 +152,7 @@ private:
     void updateNoteShareStatus(QXmlQuery &query,
                                bool updateShareDialog = false);
 
-    void handleUpdateNoteShareReply(QString urlPart, QString &data);
+    void handleUpdateNoteShareReply(const QString &urlPart, const QString &data);
 
     static void checkAppVersion(QNetworkReply *reply);
 
