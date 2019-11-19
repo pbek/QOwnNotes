@@ -151,6 +151,56 @@ NoteHistory::NoteHistory() {
     currentIndex = 0;
 }
 
+NoteHistory::NoteHistory(const NoteHistory &h) :
+    currentIndex(h.currentIndex),
+    currentHistoryItem(h.currentHistoryItem)
+{
+    noteHistory = new QList<NoteHistoryItem>;
+    *noteHistory = *h.noteHistory;
+}
+
+NoteHistory &NoteHistory::operator=(const NoteHistory &rhs) {
+    if (&rhs == this)
+        return *this;
+
+    delete noteHistory;
+    noteHistory = new QList<NoteHistoryItem>;
+    *noteHistory = *rhs.noteHistory;
+
+    currentIndex = rhs.currentIndex;
+    currentHistoryItem = rhs.currentHistoryItem;
+
+    return *this;
+}
+
+NoteHistory::NoteHistory(NoteHistory &&h) :
+    noteHistory(h.noteHistory),
+    currentIndex(std::move(h.currentIndex)),
+    currentHistoryItem(std::move(h.currentHistoryItem))
+{
+    h.noteHistory = nullptr;
+}
+
+NoteHistory &NoteHistory::operator=(NoteHistory &&rhs) {
+    if (&rhs == this)
+        return *this;
+
+    delete noteHistory;
+    noteHistory = rhs.noteHistory;
+    rhs.noteHistory = nullptr;
+
+    currentIndex = std::move(rhs.currentIndex);
+    currentHistoryItem = std::move(rhs.currentHistoryItem);
+
+    return *this;
+}
+
+
+NoteHistory::~NoteHistory()
+{
+    delete noteHistory;
+}
+
 void NoteHistory::add(Note note, QPlainTextEdit *textEdit) {
     if (!note.exists()) {
         return;
