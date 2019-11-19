@@ -16,12 +16,12 @@ public:
     explicit LinkDialog(const QString &dialogTitle = QStringLiteral(""), QWidget *parent = nullptr);
     ~LinkDialog();
 
-    QString getSelectedNoteName();
-    Note getSelectedNote();
-    QString getURL();
-    QString getLinkName();
+    QString getSelectedNoteName() const;
+    Note getSelectedNote() const;
+    QString getURL() const;
+    QString getLinkName() const;
     void setLinkName(const QString &text);
-    QString getLinkDescription();
+    QString getLinkDescription() const;
     QString getTitleForUrl(const QUrl& url);
 
 private slots:

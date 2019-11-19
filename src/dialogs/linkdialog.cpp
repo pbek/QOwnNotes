@@ -79,12 +79,12 @@ void LinkDialog::on_searchLineEdit_textChanged(const QString &arg1) {
     }
 }
 
-QString LinkDialog::getSelectedNoteName() {
+QString LinkDialog::getSelectedNoteName() const {
     return ui->notesListWidget->currentRow() > -1
            ? ui->notesListWidget->currentItem()->text() : QStringLiteral("");
 }
 
-Note LinkDialog::getSelectedNote() {
+Note LinkDialog::getSelectedNote() const {
     if (ui->notesListWidget->currentRow() == -1) {
         return Note();
     }
@@ -94,7 +94,7 @@ Note LinkDialog::getSelectedNote() {
     return Note::fetch(noteId);
 }
 
-QString LinkDialog::getURL() {
+QString LinkDialog::getURL() const {
     QString url = ui->urlEdit->text().trimmed();
 
     if (!url.isEmpty() && !url.contains(QStringLiteral("://"))) {
@@ -104,7 +104,7 @@ QString LinkDialog::getURL() {
     return url;
 }
 
-QString LinkDialog::getLinkName() {
+QString LinkDialog::getLinkName() const {
     return ui->nameLineEdit->text().trimmed();
 }
 
@@ -112,7 +112,7 @@ void LinkDialog::setLinkName(const QString &text) {
     ui->nameLineEdit->setText(text);
 }
 
-QString LinkDialog::getLinkDescription() {
+QString LinkDialog::getLinkDescription() const {
     return ui->descriptionLineEdit->text().trimmed();
 }
 
