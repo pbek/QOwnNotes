@@ -8664,7 +8664,7 @@ void MainWindow::copySelectedNotesToNoteSubFolderId(int noteSubFolderId) {
 /**
  * Moves selected notes to a note subfolder
  */
-void MainWindow::moveSelectedNotesToNoteSubFolder(NoteSubFolder noteSubFolder) {
+void MainWindow::moveSelectedNotesToNoteSubFolder(const NoteSubFolder &noteSubFolder) {
     int selectedItemsCount = ui->noteTreeWidget->selectedItems().size();
     QString text = tr("Move %n selected note(s) to note subfolder "
                               "<strong>%2</strong>?", "",
@@ -8766,7 +8766,7 @@ void MainWindow::enableNoteExternallyRemovedCheck() {
 /**
  * Copies selected notes to a note subfolder
  */
-void MainWindow::copySelectedNotesToNoteSubFolder(NoteSubFolder noteSubFolder) {
+void MainWindow::copySelectedNotesToNoteSubFolder(const NoteSubFolder &noteSubFolder) {
     int selectedItemsCount = ui->noteTreeWidget->selectedItems().size();
     QString text = tr("Copy %n selected note(s) to note subfolder "
                        "<strong>%2</strong>?", "",
