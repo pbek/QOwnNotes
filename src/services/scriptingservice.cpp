@@ -62,8 +62,8 @@ ScriptingService * ScriptingService::instance() {
     ScriptingService *scriptingService =
             qApp->property("scriptingService").value<ScriptingService *>();
 
-    if (scriptingService == NULL) {
-        scriptingService = createInstance(NULL);
+    if (scriptingService == nullptr) {
+        scriptingService = createInstance(nullptr);
     }
 
     return scriptingService;
@@ -384,11 +384,11 @@ QString ScriptingService::callInsertMediaHook(QFile *file,
  * @param newTagName tag name to be renamed to if action = "rename"
  * @return QString or QStringList (if action = "list") inside a QVariant
  */
-QVariant ScriptingService::callNoteTaggingHook(Note note, const QString& action,
+QVariant ScriptingService::callNoteTaggingHook(const Note &note, const QString& action,
                                                const QString& tagName,
                                                const QString& newTagName) {
     QMapIterator<int, ScriptComponent> i(_scriptComponents);
-    NoteApi *noteApi = NoteApi::fromNote(std::move(note));
+    NoteApi *noteApi = NoteApi::fromNote(note);
 
     while (i.hasNext()) {
         i.next();
@@ -1129,11 +1129,11 @@ QString ScriptingService::downloadUrlToString(const QUrl& url) {
  * @param {bool} returnUrlOnly if true only the media url will be returned (default false)
  * @return {QString} the media markdown or url
  */
-QString ScriptingService::downloadUrlToMedia(QUrl url, bool returnUrlOnly) {
+QString ScriptingService::downloadUrlToMedia(const QUrl &url, bool returnUrlOnly) {
     MetricsService::instance()->sendVisitIfEnabled(
             "scripting/" + QString(__func__));
 
-    return _currentNote->downloadUrlToMedia(std::move(url), returnUrlOnly);
+    return _currentNote->downloadUrlToMedia(url, returnUrlOnly);
 }
 
 /**
@@ -1389,12 +1389,12 @@ void ScriptingService::clearCustomStyleSheets() {
  * @param noteSubFolderId integer id of the note subfolder
  * @return NoteApi*
  */
-NoteApi* ScriptingService::fetchNoteByFileName(QString fileName,
+NoteApi* ScriptingService::fetchNoteByFileName(const QString &fileName,
                                                int noteSubFolderId) {
     MetricsService::instance()->sendVisitIfEnabled(
             "scripting/" + QString(__func__));
 
-    return NoteApi::fromNote(Note::fetchByFileName(std::move(fileName), noteSubFolderId));
+    return NoteApi::fromNote(Note::fetchByFileName(fileName, noteSubFolderId));
 }
 
 /**
@@ -1420,13 +1420,13 @@ NoteApi* ScriptingService::fetchNoteById(int id) {
  * @param noteSubFolderId integer id of the note subfolder
  * @return bool
  */
-bool ScriptingService::noteExistsByFileName(QString fileName,
+bool ScriptingService::noteExistsByFileName(const QString &fileName,
                                             int ignoreNoteId,
                                             int noteSubFolderId) {
     MetricsService::instance()->sendVisitIfEnabled(
             "scripting/" + QString(__func__));
 
-    Note note = Note::fetchByFileName(std::move(fileName), noteSubFolderId);
+    Note note = Note::fetchByFileName(fileName, noteSubFolderId);
 
     // check if the note id should be ignored
     if ((ignoreNoteId > 0) && (note.getId() == ignoreNoteId)) {
@@ -1684,8 +1684,8 @@ QList<int> ScriptingService::selectedNotesIds() {
  *
  * @return {QList<int>} list of note ids
  */
-QList<int> ScriptingService::fetchNoteIdsByNoteTextPart(QString text) {
-    QList<int> noteIds = Note::fetchAllIdsByNoteTextPart(std::move(text));
+QList<int> ScriptingService::fetchNoteIdsByNoteTextPart(const QString &text) {
+    QList<int> noteIds = Note::fetchAllIdsByNoteTextPart(text);
     return noteIds;
 }
 
@@ -1800,7 +1800,7 @@ QVariant ScriptingService::getApplicationSettingsVariable(
  * @return true if jump was successful
  */
 bool ScriptingService::jumpToNoteSubFolder(const QString &noteSubFolderPath,
-                                           QString separator) {
+                                           const QString &separator) {
     MetricsService::instance()->sendVisitIfEnabled(
             "scripting/" + QString(__func__));
 
@@ -1811,7 +1811,7 @@ bool ScriptingService::jumpToNoteSubFolder(const QString &noteSubFolderPath,
     }
 
     NoteSubFolder folder = NoteSubFolder::fetchByPathData(noteSubFolderPath,
-                                                          std::move(separator));
+                                                          separator);
 
     if (!folder.isFetched()) {
         return false;
@@ -1832,11 +1832,11 @@ bool ScriptingService::jumpToNoteSubFolder(const QString &noteSubFolderPath,
  * @param name {QString} name to search for
  * @return {QStringList} list of tag names
  */
-QStringList ScriptingService::searchTagsByName(QString name) {
+QStringList ScriptingService::searchTagsByName(const QString &name) {
     MetricsService::instance()->sendVisitIfEnabled(
             "scripting/" + QString(__func__));
 
-    QStringList tags = Tag::searchAllNamesByName(std::move(name));
+    QStringList tags = Tag::searchAllNamesByName(name);
     return tags;
 }
 
