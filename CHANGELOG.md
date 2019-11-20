@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 19.11.17
+- lots of general performance and efficiency improvements were made
+  (for [#1430](https://github.com/pbek/QOwnNotes/pull/1430), thank you @Waqar144)
+
 ## 19.11.16
 - fixed AppVeyor Windows build (for [#1431](https://github.com/pbek/QOwnNotes/issues/1431))
 - spellchecking language autodetection in KDE was improved
