@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 19.11.17
+- the redo shortcut <kbd>Ctrl + Schift + Z</kbd> was fixed in the note text edit
+  (for [#1433](https://github.com/pbek/QOwnNotes/issues/1433), thank you @Waqar144)
 - lots of general performance and efficiency improvements were made
   (for [#1430](https://github.com/pbek/QOwnNotes/pull/1430), thank you @Waqar144)
 
