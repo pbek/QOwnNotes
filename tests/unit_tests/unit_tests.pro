@@ -24,7 +24,8 @@ SOURCES += \
 #RESOURCES += \
 #    $$SRC_DIR/resources/rdm.qrc
 
-include($$PWD/../../src/libraries/sonnet/src/core/sonnet-core.pri)
+# doesn't seem to work on AppVeyor
+#include($$PWD/../../src/libraries/sonnet/src/core/sonnet-core.pri)
 
 INCLUDEPATH += \
 #    $$SRC_DIR/modules/ \

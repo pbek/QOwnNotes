@@ -1328,13 +1328,17 @@ QString Utils::Misc::generateDebugInformation(bool withGitHubLineBreaks) {
     }
 
     // add spellchecker information
+
     output += QStringLiteral("\n## Spellchecking\n\n");
     output += prepareDebugInformationLine("Enabled", settings.value(QStringLiteral("checkSpelling")).toString(), withGitHubLineBreaks);
     output += prepareDebugInformationLine(QStringLiteral("Selected language"), settings.value(QStringLiteral("spellCheckLanguage")).toString(), withGitHubLineBreaks);
+
+#ifndef INTEGRATION_TESTS
     //auto *speller = new Sonnet::Speller();
     output += prepareDebugInformationLine(QStringLiteral("Language codes"), Sonnet::Speller::availableLanguages().join(", "), withGitHubLineBreaks);
     output += prepareDebugInformationLine(QStringLiteral("Language names"), Sonnet::Speller::availableLanguageNames().join(", "), withGitHubLineBreaks);
     //delete speller;
+#endif
     output += prepareDebugInformationLine(QStringLiteral("Application dictionaries path"),
                                           QDir::toNativeSeparators(Utils::Misc::localDictionariesPath()), withGitHubLineBreaks);
 

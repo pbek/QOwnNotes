@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 19.11.16
+- fixed AppVeyor Windows build (for [#1431](https://github.com/pbek/QOwnNotes/issues/1431))
+- spellchecking language autodetection in KDE was improved
+  (for [#1428](https://github.com/pbek/QOwnNotes/pull/1428), thank you @Waqar144)
+- fixed a note history memory leak (for [#1429](https://github.com/pbek/QOwnNotes/pull/1429), thank you @Waqar144)
+
 ## 19.11.15
 - a new button `Copy debug information to clipboard` was added to the
   *Debug settings* to be used when posting issues on GitHub
