@@ -14,7 +14,7 @@
 #include <QRegularExpressionMatch>
 #include <utils/misc.h>
 
-LinkDialog::LinkDialog(QString dialogTitle, QWidget *parent) :
+LinkDialog::LinkDialog(const QString &dialogTitle, QWidget *parent) :
         MasterDialog(parent),
         ui(new Ui::LinkDialog) {
     ui->setupUi(this);
@@ -79,12 +79,12 @@ void LinkDialog::on_searchLineEdit_textChanged(const QString &arg1) {
     }
 }
 
-QString LinkDialog::getSelectedNoteName() {
+QString LinkDialog::getSelectedNoteName() const {
     return ui->notesListWidget->currentRow() > -1
-           ? ui->notesListWidget->currentItem()->text() : "";
+           ? ui->notesListWidget->currentItem()->text() : QStringLiteral("");
 }
 
-Note LinkDialog::getSelectedNote() {
+Note LinkDialog::getSelectedNote() const {
     if (ui->notesListWidget->currentRow() == -1) {
         return Note();
     }
@@ -94,25 +94,25 @@ Note LinkDialog::getSelectedNote() {
     return Note::fetch(noteId);
 }
 
-QString LinkDialog::getURL() {
+QString LinkDialog::getURL() const {
     QString url = ui->urlEdit->text().trimmed();
 
-    if (!url.isEmpty() && !url.contains("://")) {
-        url = "http://" + url;
+    if (!url.isEmpty() && !url.contains(QStringLiteral("://"))) {
+        url = QStringLiteral("http://") + url;
     }
 
     return url;
 }
 
-QString LinkDialog::getLinkName() {
+QString LinkDialog::getLinkName() const {
     return ui->nameLineEdit->text().trimmed();
 }
 
-void LinkDialog::setLinkName(QString text) {
+void LinkDialog::setLinkName(const QString &text) {
     ui->nameLineEdit->setText(text);
 }
 
-QString LinkDialog::getLinkDescription() {
+QString LinkDialog::getLinkDescription() const {
     return ui->descriptionLineEdit->text().trimmed();
 }
 
@@ -162,7 +162,7 @@ bool LinkDialog::eventFilter(QObject *obj, QEvent *event) {
 }
 
 void LinkDialog::on_notesListWidget_doubleClicked(const QModelIndex &index) {
-    Q_UNUSED(index);
+    Q_UNUSED(index)
     ui->urlEdit->clear();
     this->close();
     this->setResult(QDialog::Accepted);
@@ -177,11 +177,12 @@ QString LinkDialog::getTitleForUrl(const QUrl& url) {
     const QString html = Utils::Misc::downloadUrl(url);
 
     if (html.isEmpty()) {
-        return "";
+        return QStringLiteral("");
     }
 
     // parse title from webpage
-    QRegularExpression regex(R"(<title>(.*)<\/title>)", QRegularExpression::MultilineOption |
+    QRegularExpression regex(QStringLiteral(R"(<title>(.*)<\/title>)"),
+                             QRegularExpression::MultilineOption |
                              QRegularExpression::DotMatchesEverythingOption |
                              QRegularExpression::InvertedGreedinessOption);
     QRegularExpressionMatch match = regex.match(html);
@@ -191,14 +192,14 @@ QString LinkDialog::getTitleForUrl(const QUrl& url) {
     title = Utils::Misc::unescapeHtml(title);
 
     // replace some other characters we don't want
-    title.replace("[", "(")
-            .replace("]", ")")
-            .replace("<", "(")
-            .replace(">", ")")
-            .replace("&#8211;", "-")
-            .replace("&#124;", "-")
-            .replace("&#038;", "&")
-            .replace("&#39;", "'");
+    title.replace(QStringLiteral("["), QStringLiteral("("))
+            .replace(QStringLiteral("]"), QStringLiteral(")"))
+            .replace(QStringLiteral("<"), QStringLiteral("("))
+            .replace(QStringLiteral(">"), QStringLiteral(")"))
+            .replace(QStringLiteral("&#8211;"), QStringLiteral("-"))
+            .replace(QStringLiteral("&#124;"), QStringLiteral("-"))
+            .replace(QStringLiteral("&#038;"), QStringLiteral("&"))
+            .replace(QStringLiteral("&#39;"), QStringLiteral("'"));
 
     // trim whitespaces and return title
     return title.simplified();
@@ -210,11 +211,11 @@ QString LinkDialog::getTitleForUrl(const QUrl& url) {
 void LinkDialog::addFileUrl() {
     QSettings settings;
     // load last url
-    QUrl fileUrl = settings.value("LinkDialog/lastSelectedFileUrl").toUrl();
+    QUrl fileUrl = settings.value(QStringLiteral("LinkDialog/lastSelectedFileUrl")).toUrl();
 
     if (Utils::Misc::isInPortableMode()) {
-        fileUrl = QUrl("file://" + Utils::Misc::prependPortableDataPathIfNeeded(
-                Utils::Misc::removeIfStartsWith(fileUrl.toLocalFile(), "/")));
+        fileUrl = QUrl(QStringLiteral("file://") + Utils::Misc::prependPortableDataPathIfNeeded(
+                Utils::Misc::removeIfStartsWith(fileUrl.toLocalFile(), QStringLiteral("/"))));
     }
 
     fileUrl = QFileDialog::getOpenFileUrl(this, tr("Select file to link to"),
@@ -222,14 +223,14 @@ void LinkDialog::addFileUrl() {
     QString fileUrlString = fileUrl.toString(QUrl::FullyEncoded);
 
     if (Utils::Misc::isInPortableMode()) {
-        fileUrlString = "file://" + QUrl("../" +
+        fileUrlString = QStringLiteral("file://") + QUrl(QStringLiteral("../") +
                 Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(
                         fileUrl.toLocalFile())).toString(QUrl::FullyEncoded);
     }
 
     if (!fileUrlString.isEmpty()) {
         // store url for the next time
-        settings.setValue("LinkDialog/lastSelectedFileUrl", fileUrlString);
+        settings.setValue(QStringLiteral("LinkDialog/lastSelectedFileUrl"), fileUrlString);
 
         // write the file-url to the url text-edit
         ui->urlEdit->setText(fileUrlString);
@@ -242,10 +243,10 @@ void LinkDialog::addFileUrl() {
 void LinkDialog::addDirectoryUrl() {
     QSettings settings;
     // load last url
-    QUrl directoryUrl = settings.value("LinkDialog/lastSelectedDirectoryUrl").toUrl();
+    QUrl directoryUrl = settings.value(QStringLiteral("LinkDialog/lastSelectedDirectoryUrl")).toUrl();
 
     if (Utils::Misc::isInPortableMode()) {
-        directoryUrl = QUrl("file://" + Utils::Misc::prependPortableDataPathIfNeeded(
+        directoryUrl = QUrl(QStringLiteral("file://") + Utils::Misc::prependPortableDataPathIfNeeded(
                 Utils::Misc::removeIfStartsWith(directoryUrl.toLocalFile(), "/")));
     }
 
@@ -254,14 +255,14 @@ void LinkDialog::addDirectoryUrl() {
     QString directoryUrlString = directoryUrl.toString(QUrl::FullyEncoded);
 
     if (Utils::Misc::isInPortableMode()) {
-        directoryUrlString = "file://" + QUrl("../" +
+        directoryUrlString = QStringLiteral("file://") + QUrl(QStringLiteral("../") +
                 Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(
                         directoryUrl.toLocalFile())).toString(QUrl::FullyEncoded);
     }
 
     if (!directoryUrlString.isEmpty()) {
         // store url for the next time
-        settings.setValue("LinkDialog/lastSelectedDirectoryUrl", directoryUrlString);
+        settings.setValue(QStringLiteral("LinkDialog/lastSelectedDirectoryUrl"), directoryUrlString);
 
         // write the directory-url to the url text-edit
         ui->urlEdit->setText(directoryUrlString);
@@ -276,7 +277,7 @@ void LinkDialog::on_urlEdit_textChanged(const QString &arg1) {
     }
 
     // try to get the title of the webpage if no link name was set
-    if (url.scheme().startsWith("http") && ui->nameLineEdit->text().isEmpty()) {
+    if (url.scheme().startsWith(QStringLiteral("http")) && ui->nameLineEdit->text().isEmpty()) {
         const QString title = getTitleForUrl(url);
 
         if (!title.isEmpty()) {
@@ -291,16 +292,16 @@ void LinkDialog::setupFileUrlMenu() {
     QAction *addFileAction = addMenu->addAction(
             tr("Select file to link to"));
     addFileAction->setIcon(QIcon::fromTheme(
-            "document-open",
-            QIcon(":icons/breeze-qownnotes/16x16/document-open.svg")));
+            QStringLiteral("document-open"),
+            QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/document-open.svg"))));
     connect(addFileAction, SIGNAL(triggered()),
             this, SLOT(addFileUrl()));
 
     QAction *addDirectoryAction = addMenu->addAction(
             tr("Select directory to link to"));
     addDirectoryAction->setIcon(QIcon::fromTheme(
-            "folder",
-            QIcon(":icons/breeze-qownnotes/16x16/folder.svg")));
+            QStringLiteral("folder"),
+            QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/folder.svg"))));
     connect(addDirectoryAction, SIGNAL(triggered()),
             this, SLOT(addDirectoryUrl()));
 

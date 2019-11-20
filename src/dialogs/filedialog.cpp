@@ -2,10 +2,10 @@
 #include <QDebug>
 #include <QSettings>
 
-FileDialog::FileDialog(QString name) {
+FileDialog::FileDialog(const QString &name) {
     if (!name.isEmpty()) {
-        setObjectName("FileDialog-" + name);
-        _generalSettingsKey = "FileDialog/LastPath";
+        setObjectName(QStringLiteral("FileDialog-") + name);
+        _generalSettingsKey = QStringLiteral("FileDialog/LastPath");
         _settingsKey = _generalSettingsKey + "-" + name;
 
         QSettings settings;
@@ -72,5 +72,5 @@ void FileDialog::storeDirectory(const QStringList& files) {
  */
 QString FileDialog::selectedFile() {
     QStringList fileNames = selectedFiles();
-    return fileNames.count() > 0 ? fileNames.at(0) : "";
+    return fileNames.count() > 0 ? fileNames.at(0) : QStringLiteral("");
 }

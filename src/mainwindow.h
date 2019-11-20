@@ -862,9 +862,9 @@ private:
     void buildBulkNoteFolderSubFolderMenuTree(QMenu *parentMenu, bool doCopy,
                                               const QString &parentNoteSubFolderPath, bool isRoot = true);
 
-    void moveSelectedNotesToNoteSubFolder(NoteSubFolder noteSubFolder);
+    void moveSelectedNotesToNoteSubFolder(const NoteSubFolder &noteSubFolder);
 
-    void copySelectedNotesToNoteSubFolder(NoteSubFolder noteSubFolder);
+    void copySelectedNotesToNoteSubFolder(const NoteSubFolder &noteSubFolder);
 
     void createNewNote(QString noteName = "", bool withNameAppend = true);
 

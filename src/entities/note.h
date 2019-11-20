@@ -117,7 +117,7 @@ public:
 
     bool remove(bool withFile = false);
 
-    QString toMarkdownHtml(QString notesPath, int maxImageWidth = 980,
+    QString toMarkdownHtml(const QString &notesPath, int maxImageWidth = 980,
                            bool forExport = false, bool decrypt = true,
                            bool base64Images = false);
 
@@ -228,7 +228,7 @@ public:
 
     qint64 getFileSize() const;
 
-    static Note updateOrCreateFromFile(QFile &file, NoteSubFolder noteSubFolder,
+    static Note updateOrCreateFromFile(QFile &file, const NoteSubFolder &noteSubFolder,
                                            bool withNoteNameHook = false);
 
     static QList<int> fetchAllIds(int limit = -1, int offset = -1);

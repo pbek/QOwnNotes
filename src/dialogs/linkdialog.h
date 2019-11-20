@@ -13,15 +13,15 @@ class LinkDialog : public MasterDialog
     Q_OBJECT
 
 public:
-    explicit LinkDialog(QString dialogTitle = "", QWidget *parent = nullptr);
+    explicit LinkDialog(const QString &dialogTitle = QStringLiteral(""), QWidget *parent = nullptr);
     ~LinkDialog();
 
-    QString getSelectedNoteName();
-    Note getSelectedNote();
-    QString getURL();
-    QString getLinkName();
-    void setLinkName(QString text);
-    QString getLinkDescription();
+    QString getSelectedNoteName() const;
+    Note getSelectedNote() const;
+    QString getURL() const;
+    QString getLinkName() const;
+    void setLinkName(const QString &text);
+    QString getLinkDescription() const;
     QString getTitleForUrl(const QUrl& url);
 
 private slots:

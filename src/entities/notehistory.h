@@ -50,19 +50,19 @@ public:
     NoteHistory(const NoteHistory&);
     NoteHistory &operator=(const NoteHistory& rhs);
     //move
-    NoteHistory(NoteHistory&&);
-    NoteHistory &operator=(NoteHistory&& rhs);
+    NoteHistory(NoteHistory&&) noexcept;
+    NoteHistory &operator=(NoteHistory&& rhs) noexcept;
     ~NoteHistory();
 
     void add(Note note, QPlainTextEdit *textEdit);
     friend QDebug operator<<(QDebug dbg, const NoteHistory &history);
     bool back();
     bool forward();
-    bool isEmpty();
+    bool isEmpty() const;
     NoteHistoryItem getCurrentHistoryItem();
     void updateCursorPositionOfNote(Note note, QPlainTextEdit *textEdit);
     void clear();
-    NoteHistoryItem getLastItemOfNote(Note note);
+    NoteHistoryItem getLastItemOfNote(const Note &note) const;
     QList<NoteHistoryItem> getNoteHistoryItems() const;
     void addNoteHistoryItem(const NoteHistoryItem& item);
     void storeForCurrentNoteFolder();
