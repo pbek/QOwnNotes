@@ -5568,22 +5568,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4228"/>
       <source>This is the best way to open an issue</source>
-      <translation type="unfinished">This is the best way to open an issue</translation>
+      <translation>Αυτός είναι ο καλύτερος τρόπος για να ξεκινήσεις ένα θέμα</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4242"/>
       <source>Please use this in the issue tracker</source>
-      <translation type="unfinished">Please use this in the issue tracker</translation>
+      <translation>Παρακαλώ χρησιμοποίησε αυτό στον ανιχνευτή θεμάτων</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4245"/>
       <source>&amp;Copy debug information to clipboard</source>
-      <translation type="unfinished">&amp;Copy debug information to clipboard</translation>
+      <translation>Αντιγραφή πληροφοριών εκσφαλμάτωσης στο πρόχειρο</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4256"/>
       <source>Please don't use this in the issue tracker</source>
-      <translation type="unfinished">Please don't use this in the issue tracker</translation>
+      <translation>Παρακαλώ μην χρησιμοποιείς αυτό στον ανιχνευτή θεμάτων</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4955"/>
@@ -6456,7 +6456,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2034"/>
       <source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
-      <translation type="unfinished">Please don't use this in the issue tracker, copy the debug information text directly into the issue.</translation>
+      <translation>Παρακαλώ μην χρησιμοποιείς αυτό στον ανιχνευτή θεμάτων, αντέγραψε την πληροφορία εκσφαλμάτωσης κατευθείαν στο θέμα.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2041"/>
@@ -6557,7 +6557,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3967"/>
       <source>The debug information was copied to the clipboard.</source>
-      <translation type="unfinished">The debug information was copied to the clipboard.</translation>
+      <translation>Η πληροφορία εκσφαλμάτωσης αντιγράφηκε στο πρόχειρο.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2608"/>

@@ -205,7 +205,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="28"/>
       <source>Aragonese</source>
-      <translation type="unfinished">Aragonese</translation>
+      <translation>Арагонский</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="52"/>
@@ -5646,22 +5646,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4228"/>
       <source>This is the best way to open an issue</source>
-      <translation type="unfinished">This is the best way to open an issue</translation>
+      <translation>Это лучший способ открыть issue</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4242"/>
       <source>Please use this in the issue tracker</source>
-      <translation type="unfinished">Please use this in the issue tracker</translation>
+      <translation>Пожалуйста, используйте это в системе отслеживания ошибок</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4245"/>
       <source>&amp;Copy debug information to clipboard</source>
-      <translation type="unfinished">&amp;Copy debug information to clipboard</translation>
+      <translation>&amp;Копировать отладочную информацию в буфер обмена</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4256"/>
       <source>Please don't use this in the issue tracker</source>
-      <translation type="unfinished">Please don't use this in the issue tracker</translation>
+      <translation>Пожалуйста, не используйте это в системе отслеживания ошибок</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4955"/>
@@ -6534,7 +6534,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2034"/>
       <source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
-      <translation type="unfinished">Please don't use this in the issue tracker, copy the debug information text directly into the issue.</translation>
+      <translation>Пожалуйста, не используйте это в системе отслеживания ошибок, скопируйте текст отладочной информации непосредственно в issue.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2041"/>
@@ -6635,7 +6635,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3967"/>
       <source>The debug information was copied to the clipboard.</source>
-      <translation type="unfinished">The debug information was copied to the clipboard.</translation>
+      <translation>Отладочная информация была скопирована в буфер обмена.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2608"/>

@@ -5,6 +5,9 @@
   (for [#1433](https://github.com/pbek/QOwnNotes/issues/1433), thank you @Waqar144)
 - lots of general performance and efficiency improvements were made
   (for [#1430](https://github.com/pbek/QOwnNotes/pull/1430), thank you @Waqar144)
+- added more Catalan, Vietnamese, Dutch, Spanish, Italian, Chinese Simplified,
+  Russian, Greek, German translation (thank you MGuerra, Fabijenna, richarson,
+  mlocati, admiraldesvl, unchase, athrouss, rakekniven)
 
 ## 19.11.16
 - fixed AppVeyor Windows build (for [#1431](https://github.com/pbek/QOwnNotes/issues/1431))
