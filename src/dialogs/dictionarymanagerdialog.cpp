@@ -32,6 +32,7 @@ DictionaryManagerDialog::DictionaryManagerDialog(QWidget *parent) :
     addDictionaryItem(tr("Bengali"), QStringLiteral("bn_BD"));
     addDictionaryItem(tr("Breton"), QStringLiteral("br_FR"));
     addDictionaryItem(tr("Catalan"), QStringLiteral("ca"));
+    addDictionaryItem(tr("Catalan (Valencian)"), QStringLiteral("ca"), QStringLiteral("ca-valencia"));
     addDictionaryItem(tr("Croatian"), QStringLiteral("hr_HR"));
     addDictionaryItem(tr("Czech"), QStringLiteral("cs_CZ"));
     addDictionaryItem(tr("Danish"), QStringLiteral("da_DK"));
@@ -57,6 +58,7 @@ DictionaryManagerDialog::DictionaryManagerDialog(QWidget *parent) :
     addDictionaryItem(tr("Icelandic"), QStringLiteral("is"));
     addDictionaryItem(tr("Indonesian"), QStringLiteral("id"), QStringLiteral("id_ID"));
     addDictionaryItem(tr("Italian"), QStringLiteral("it_IT"));
+    addDictionaryItem(tr("Korean"), QStringLiteral("ko_KR"), QStringLiteral("ko-KR"));
     addDictionaryItem(tr("Kurdish (Turkey)"), QStringLiteral("kmr_Latn"));
     addDictionaryItem(tr("Lao"), QStringLiteral("lo_LA"));
     addDictionaryItem(tr("Lithuanian"), QStringLiteral("lt_LT"));
