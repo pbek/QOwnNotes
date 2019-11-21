@@ -5,6 +5,9 @@
 #include "libraries/qmarkdowntextedit/qmarkdowntextedit.h"
 #include "mainwindow.h"
 
+#define QOWNNOTESMARKDOWNTEXTEDIT_OVERRIDE_FONT_SIZE_STYLESHEET_PRE_STRING "/* BEGIN FONT SIZE OVERRIDE STYLESHEET */"
+#define QOWNNOTESMARKDOWNTEXTEDIT_OVERRIDE_FONT_SIZE_STYLESHEET_POST_STRING "/* END FONT SIZE OVERRIDE STYLESHEET */"
+
 class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
 Q_OBJECT
 
@@ -56,6 +59,7 @@ private:
 
     bool onContextMenuEvent(QContextMenuEvent *event);
 
+    void overrideFontSizeStyle(int fontSize);
 Q_SIGNALS:
     void resize(QResizeEvent* event);
 };

@@ -60,11 +60,40 @@ void QOwnNotesMarkdownTextEdit::setFormatStyle(
 }
 
 /**
+ * Overrides the font size style if overrideInterfaceFontSize was set to prevent
+ * Utils::Gui::updateInterfaceFontSize from overriding the default text size on Windows 10
+ *
+ * @param fontSize
+ */
+void QOwnNotesMarkdownTextEdit::overrideFontSizeStyle(int fontSize) {
+    QSettings settings;
+    bool overrideInterfaceFontSize = settings.value(
+            "overrideInterfaceFontSize", false).toBool();
+
+    // remove old style
+    QString stylesheet = styleSheet().remove(QRegularExpression(
+            QRegularExpression::escape(QOWNNOTESMARKDOWNTEXTEDIT_OVERRIDE_FONT_SIZE_STYLESHEET_PRE_STRING) +
+            ".*" + QRegularExpression::escape(QOWNNOTESMARKDOWNTEXTEDIT_OVERRIDE_FONT_SIZE_STYLESHEET_POST_STRING)));
+
+    if (overrideInterfaceFontSize) {
+        // using pt is important here, px didn't work properly
+        stylesheet += QString(QOWNNOTESMARKDOWNTEXTEDIT_OVERRIDE_FONT_SIZE_STYLESHEET_PRE_STRING) +
+                "QOwnNotesMarkdownTextEdit {font-size: " + QString::number(fontSize) +
+                "pt;}" + QString(QOWNNOTESMARKDOWNTEXTEDIT_OVERRIDE_FONT_SIZE_STYLESHEET_POST_STRING);
+    }
+
+    setStyleSheet(stylesheet);
+}
+
+/**
  * Sets the highlighting styles for the text edit
  */
 void QOwnNotesMarkdownTextEdit::setStyles() {
     QFont font = Utils::Schema::schemaSettings->getEditorTextFont();
     setFont(font);
+
+    // workaround for Windows 10 if overrideInterfaceFontSize was set
+    overrideFontSizeStyle(font.pointSize());
 
     // set the tab stop to the width of 4 spaces in the editor
     const int tabStop = 4;

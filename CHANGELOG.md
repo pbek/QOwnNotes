@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 19.11.18
+- fixed possible jumping of text on Windows 10 if the interface font size was overwritten
+  (for [#1422](https://github.com/pbek/QOwnNotes/issues/1422))
+- fixed custom editor font size on Windows 10 if the interface font size was overwritten
+  (for [#1423](https://github.com/pbek/QOwnNotes/issues/1423))
+
 ## 19.11.17
 - the redo shortcut <kbd>Ctrl + Schift + Z</kbd> was fixed in the note text edit
   (for [#1433](https://github.com/pbek/QOwnNotes/issues/1433), thank you @Waqar144)
