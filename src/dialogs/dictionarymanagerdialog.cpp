@@ -60,6 +60,7 @@ DictionaryManagerDialog::DictionaryManagerDialog(QWidget *parent) :
     addDictionaryItem(tr("Italian"), QStringLiteral("it_IT"));
     addDictionaryItem(tr("Korean"), QStringLiteral("ko_KR"), QStringLiteral("ko-KR"));
     addDictionaryItem(tr("Kurdish (Turkey)"), QStringLiteral("kmr_Latn"));
+    addDictionaryItem(tr("Low German / Low Saxon"), QStringLiteral("nds"));
     addDictionaryItem(tr("Lao"), QStringLiteral("lo_LA"));
     addDictionaryItem(tr("Lithuanian"), QStringLiteral("lt_LT"));
     addDictionaryItem(tr("Latvian"), QStringLiteral("lv_LV"));
