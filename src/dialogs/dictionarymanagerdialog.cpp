@@ -44,6 +44,7 @@ DictionaryManagerDialog::DictionaryManagerDialog(QWidget *parent) :
     addDictionaryItem(tr("English (South African)"), QStringLiteral("en"), QStringLiteral("en_ZA"));
     addDictionaryItem(tr("Estonian"), QStringLiteral("et_EE"));
     addDictionaryItem(tr("French"), QStringLiteral("fr_FR"), QStringLiteral("fr"));
+    addDictionaryItem(tr("Friulian"), QStringLiteral("fur"));
     addDictionaryItem(tr("Gaelic"), QStringLiteral("gd_GB"));
     addDictionaryItem(tr("Galician"), QStringLiteral("gl"), QStringLiteral("gl_ES"));
     addDictionaryItem(tr("German (Austrian)"), QStringLiteral("de"), QStringLiteral("de_AT_frami"));
@@ -60,10 +61,13 @@ DictionaryManagerDialog::DictionaryManagerDialog(QWidget *parent) :
     addDictionaryItem(tr("Italian"), QStringLiteral("it_IT"));
     addDictionaryItem(tr("Korean"), QStringLiteral("ko_KR"), QStringLiteral("ko-KR"));
     addDictionaryItem(tr("Kurdish (Turkey)"), QStringLiteral("kmr_Latn"));
-    addDictionaryItem(tr("Low German / Low Saxon"), QStringLiteral("nds"));
     addDictionaryItem(tr("Lao"), QStringLiteral("lo_LA"));
-    addDictionaryItem(tr("Lithuanian"), QStringLiteral("lt_LT"));
+    addDictionaryItem(tr("Latgalian"), QStringLiteral("ltg"));
     addDictionaryItem(tr("Latvian"), QStringLiteral("lv_LV"));
+    addDictionaryItem(tr("Lithuanian"), QStringLiteral("lt_LT"));
+    addDictionaryItem(tr("Low German / Low Saxon"), QStringLiteral("nds"));
+    addDictionaryItem(tr("Luxembourgish (Letzeburgesch)"), QStringLiteral("lb"));
+    addDictionaryItem(tr("Mongolian"), QStringLiteral("mn"));
     addDictionaryItem(tr("Nepali"), QStringLiteral("ne_NP"));
     addDictionaryItem(tr("Norwegian (Bokmål)"), QStringLiteral("no"), QStringLiteral("nb_NO"));
     addDictionaryItem(tr("Norwegian (Nynorsk)"), QStringLiteral("no"), QStringLiteral("nn_NO"));
