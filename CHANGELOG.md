@@ -11,6 +11,7 @@
     - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes)
       to make QOwnNotes available in more languages or help with the current
       translation
+- added more Vietnamese, Italian translation (thank you Fabijenna, tiwi90)
 
 ## 19.11.18
 - fixed possible jumping of text on Windows 10 if the interface font size was overwritten
