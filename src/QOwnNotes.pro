@@ -71,6 +71,8 @@ TRANSLATIONS = languages/QOwnNotes_en.ts \
     languages/QOwnNotes_is.ts \
     languages/QOwnNotes_pa.ts \
     languages/QOwnNotes_he.ts \
+    languages/QOwnNotes_ga.ts \
+    languages/QOwnNotes_uz.ts \
     languages/QOwnNotes_vi.ts \
     languages/QOwnNotes_lv.ts \
     languages/QOwnNotes_ku.ts \

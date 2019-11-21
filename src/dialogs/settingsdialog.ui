@@ -2279,6 +2279,17 @@
                        </item>
                        <item>
                         <property name="text">
+                         <string notr="true">Gaeilge</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Irish</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">ga</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
                          <string notr="true">Galego</string>
                         </property>
                         <property name="toolTip">
@@ -2484,6 +2495,17 @@
                         </property>
                         <property name="whatsThis">
                          <string notr="true">fa</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string notr="true">ózbekça</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Uzbek</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">uz</string>
                         </property>
                        </item>
                        <item>
