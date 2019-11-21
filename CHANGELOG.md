@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 19.11.19
+- fixed a problem where the background of masked characters (for example `*` in italic text)
+  is overwriting parts of the neighboring characters even if the masked characters
+  have no background configured (for [#1434](https://github.com/pbek/QOwnNotes/issues/1434))
+
 ## 19.11.18
 - fixed possible jumping of text on Windows 10 if the interface font size was overwritten
   (for [#1422](https://github.com/pbek/QOwnNotes/issues/1422))

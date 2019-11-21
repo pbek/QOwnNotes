@@ -226,8 +226,12 @@ void Utils::Schema::Settings::setFormatStyle(MarkdownHighlighter::HighlighterSta
     // set the foreground color
     format.setForeground(QBrush(getForegroundColor(index)));
 
-    // set the background color
-    format.setBackground(QBrush(getBackgroundColor(index)));
+    bool backgroundColorEnabled = getSchemaValue(
+            textSettingsKey("BackgroundColorEnabled", index)).toBool();
+
+    // set the background (color) only if the background color is enabled, otherwise we get troubles
+    // with the background overwriting the foreground of neighboring text (e.g. for italic text)
+    format.setBackground(backgroundColorEnabled ? QBrush(getBackgroundColor(index)) : QBrush());
 
     // set the bold state
     format.setFontWeight(getSchemaValue(
