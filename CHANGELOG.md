@@ -7,6 +7,10 @@
 - a lot more dictionaries have been added to the *dictionary manager* to download
   (for [#1435](https://github.com/pbek/QOwnNotes/pull/1435), thank you @Waqar144)
     - we now have **dictionaries for 100 languages**
+- added **Irish and Uzbek translation** (a big thank you to Fabijenna)
+    - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes)
+      to make QOwnNotes available in more languages or help with the current
+      translation
 
 ## 19.11.18
 - fixed possible jumping of text on Windows 10 if the interface font size was overwritten
