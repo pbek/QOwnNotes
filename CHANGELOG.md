@@ -4,6 +4,9 @@
 - fixed a problem where the background of masked characters (for example `*` in italic text)
   is overwriting parts of the neighboring characters even if the masked characters
   have no background configured (for [#1434](https://github.com/pbek/QOwnNotes/issues/1434))
+- a lot more dictionaries have been added to the *dictionary manager* to download
+  (for [#1435](https://github.com/pbek/QOwnNotes/pull/1435), thank you @Waqar144)
+    - we now have **dictionaries for 100 languages**
 
 ## 19.11.18
 - fixed possible jumping of text on Windows 10 if the interface font size was overwritten
