@@ -44,7 +44,6 @@ QOwnNotesMarkdownHighlighter::QOwnNotesMarkdownHighlighter(
 
     commentHighlightingOn = true;
     codeHighlightingOn = true;
-    frontMatterHighlightingOn = true;
     highlightBrokenNotesLinkOn = true;
 }
 
@@ -78,14 +77,6 @@ void QOwnNotesMarkdownHighlighter::setCodeHighlighting(bool state)
         return;
     }
     codeHighlightingOn = state;
-}
-
-void QOwnNotesMarkdownHighlighter::setFrontmatterHighlighting(bool state)
-{
-    if (state == frontMatterHighlightingOn){
-        return;
-    }
-    frontMatterHighlightingOn = state;
 }
 
 void QOwnNotesMarkdownHighlighter::sethighlightBrokenNotesLink(bool state)
@@ -127,13 +118,22 @@ void QOwnNotesMarkdownHighlighter::highlightMarkdown(const QString& text) {
         highlightAdditionalRules(_highlightingRulesPre, text);
 
         // needs to be called after the horizontal ruler highlighting
-        highlightHeadline(text);
+        const QString &next = currentBlock().next().text();
+        if (text.contains(QStringLiteral("# ")) || text.contains(QStringLiteral("## ")) ||
+            text.contains(QStringLiteral("### ")) || text.contains(QStringLiteral("#### ")) ||
+            text.contains(QStringLiteral("##### ")) || text.contains(QStringLiteral("###### ")) ||
+            next.contains(QStringLiteral("===")) || next.contains(QStringLiteral("---")) ||
+            text.contains(QStringLiteral("===")) || text.contains(QStringLiteral("---"))) {
+            highlightHeadline(text);
+        }
 
         highlightAdditionalRules(_highlightingRulesAfter, text);
 
         // highlight broken note links
         if (highlightBrokenNotesLinkOn) {
+            if (text.contains(QStringLiteral("note://")) || text.contains(QStringLiteral(".md"))) {
             highlightBrokenNotesLink(text);
+            }
         }
     }
 
@@ -141,9 +141,13 @@ void QOwnNotesMarkdownHighlighter::highlightMarkdown(const QString& text) {
         highlightCommentBlock(text);
     }
     if (codeHighlightingOn) {
-        highlightCodeBlock(text);
+        if (previousBlockState() == HighlighterState::CodeBlock ||
+            previousBlockState() == HighlighterState::CodeBlockEnd ||
+            text.contains(QStringLiteral("```"))) {
+            highlightCodeBlock(text);
+        }
     }
-    if (frontMatterHighlightingOn) {
+    if (currentBlock().position() == 0) {
         highlightFrontmatterBlock(text);
     }
 }
