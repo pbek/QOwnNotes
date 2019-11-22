@@ -164,6 +164,7 @@ MainWindow::MainWindow(QWidget *parent) :
     _lastNoteSelectionWasMultiple = false;
     _webSocketServerService = Q_NULLPTR;
     _closeEventWasFired = false;
+    _leaveFullScreenModeButton = nullptr;
 
     this->setWindowTitle(
             QStringLiteral("QOwnNotes - version ") + QString(VERSION) +
@@ -11300,13 +11301,17 @@ void MainWindow::on_actionRiot_triggered() {
 void MainWindow::on_actionToggle_fullscreen_triggered() {
     // #1302: we need to init the button in any case if the app was already in
     //        fullscreen mode or "disconnect" will crash the app
-    _leaveFullScreenModeButton = new QPushButton(tr("leave"));
+    if (_leaveFullScreenModeButton == nullptr) {
+        _leaveFullScreenModeButton = new QPushButton(tr("leave"));
+    }
 
     if (isFullScreen()) {
         showNormal();
 
         statusBar()->removeWidget(_leaveFullScreenModeButton);
         disconnect(_leaveFullScreenModeButton, Q_NULLPTR, Q_NULLPTR, Q_NULLPTR);
+        delete _leaveFullScreenModeButton;
+        _leaveFullScreenModeButton = nullptr;
     } else {
         showFullScreen();
 

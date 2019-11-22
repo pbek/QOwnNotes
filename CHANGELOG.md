@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 19.11.20
+- fixed a problem with the `leave` button showing up multiple times when repeatedly
+  entering and exiting full-screen mode (for [#1438](https://github.com/pbek/QOwnNotes/issues/1438))
+
 ## 19.11.19
 - fixed a problem where the background of masked characters (for example `*` in italic text)
   is overwriting parts of the neighboring characters even if the masked characters
