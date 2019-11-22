@@ -147,7 +147,11 @@ void QOwnNotesMarkdownHighlighter::highlightMarkdown(const QString& text) {
         highlightCommentBlock(text);
     }
     if (codeHighlightingOn) {
-        highlightCodeBlock(text);
+        if (previousBlockState() == HighlighterState::CodeBlock ||
+            previousBlockState() == HighlighterState::CodeBlockEnd ||
+            text.contains("```")) {
+            highlightCodeBlock(text);
+        }
     }
     if (frontMatterHighlightingOn) {
         highlightFrontmatterBlock(text);
