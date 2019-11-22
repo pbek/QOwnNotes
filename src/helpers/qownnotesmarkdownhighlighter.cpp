@@ -153,7 +153,7 @@ void QOwnNotesMarkdownHighlighter::highlightMarkdown(const QString& text) {
             highlightCodeBlock(text);
         }
     }
-    if (frontMatterHighlightingOn) {
+    if (currentBlock().position() == 0) {
         highlightFrontmatterBlock(text);
     }
 }
