@@ -127,7 +127,13 @@ void QOwnNotesMarkdownHighlighter::highlightMarkdown(const QString& text) {
         highlightAdditionalRules(_highlightingRulesPre, text);
 
         // needs to be called after the horizontal ruler highlighting
-        highlightHeadline(text);
+        const QString &next = currentBlock().next().text();
+        if (text.contains(QStringLiteral("# ")) || text.contains(QStringLiteral("## ")) ||
+            text.contains(QStringLiteral("### ")) || text.contains(QStringLiteral("#### ")) ||
+            text.contains(QStringLiteral("##### ")) || text.contains(QStringLiteral("###### ")) ||
+             next.contains(QStringLiteral("===")) || next.contains(QStringLiteral("---"))) {
+            highlightHeadline(text);
+        }
 
         highlightAdditionalRules(_highlightingRulesAfter, text);
 
