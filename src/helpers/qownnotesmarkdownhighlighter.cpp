@@ -44,7 +44,6 @@ QOwnNotesMarkdownHighlighter::QOwnNotesMarkdownHighlighter(
 
     commentHighlightingOn = true;
     codeHighlightingOn = true;
-    frontMatterHighlightingOn = true;
     highlightBrokenNotesLinkOn = true;
 }
 
@@ -78,14 +77,6 @@ void QOwnNotesMarkdownHighlighter::setCodeHighlighting(bool state)
         return;
     }
     codeHighlightingOn = state;
-}
-
-void QOwnNotesMarkdownHighlighter::setFrontmatterHighlighting(bool state)
-{
-    if (state == frontMatterHighlightingOn){
-        return;
-    }
-    frontMatterHighlightingOn = state;
 }
 
 void QOwnNotesMarkdownHighlighter::sethighlightBrokenNotesLink(bool state)

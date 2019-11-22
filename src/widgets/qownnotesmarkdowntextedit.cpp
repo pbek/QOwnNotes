@@ -372,11 +372,6 @@ void QOwnNotesMarkdownTextEdit::setText(const QString &text) {
         h->setCodeHighlighting(false);
     }
 
-    //check for front matter
-    if (h->document()->firstBlock().text() != "---") {
-        h->setFrontmatterHighlighting(false);
-    }
-
     //check for broken links
     h->sethighlightBrokenNotesLink(false);
     // check legacy note:// links
@@ -408,7 +403,6 @@ void QOwnNotesMarkdownTextEdit::setText(const QString &text) {
     //after we are done we turn everything back on
     h->setCodeHighlighting(true);
     h->setCommentHighlighting(true);
-    h->setFrontmatterHighlighting(true);
     h->sethighlightBrokenNotesLink(true);
 }
 

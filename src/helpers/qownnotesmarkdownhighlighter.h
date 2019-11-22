@@ -50,7 +50,6 @@ public:
     void updateCurrentNote(const Note &_note);
     void setCommentHighlighting(bool);
     void setCodeHighlighting(bool);
-    void setFrontmatterHighlighting(bool);
     void sethighlightBrokenNotesLink(bool);
     void setSpellChecker(QOwnSpellChecker*);
 
@@ -69,7 +68,6 @@ private:
     Note _currentNote;
     bool commentHighlightingOn;
     bool codeHighlightingOn;
-    bool frontMatterHighlightingOn;
     bool highlightBrokenNotesLinkOn;
     QOwnSpellChecker *spellchecker;
 
