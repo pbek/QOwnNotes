@@ -130,9 +130,7 @@ void QOwnNotesMarkdownHighlighter::highlightMarkdown(const QString& text) {
 
         // highlight broken note links
         if (highlightBrokenNotesLinkOn) {
-            if (text.contains("note://") || text.contains(".md") || text.contains("[") ||
-                text.contains("]") || text.contains("<") || text.contains(">") ||
-                text.contains("<")) {
+            if (text.contains(QStringLiteral("note://")) || text.contains(QStringLiteral(".md"))) {
             highlightBrokenNotesLink(text);
             }
         }
@@ -144,7 +142,7 @@ void QOwnNotesMarkdownHighlighter::highlightMarkdown(const QString& text) {
     if (codeHighlightingOn) {
         if (previousBlockState() == HighlighterState::CodeBlock ||
             previousBlockState() == HighlighterState::CodeBlockEnd ||
-            text.contains("```")) {
+            text.contains(QStringLiteral("```"))) {
             highlightCodeBlock(text);
         }
     }
