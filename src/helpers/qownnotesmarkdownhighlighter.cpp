@@ -122,7 +122,8 @@ void QOwnNotesMarkdownHighlighter::highlightMarkdown(const QString& text) {
         if (text.contains(QStringLiteral("# ")) || text.contains(QStringLiteral("## ")) ||
             text.contains(QStringLiteral("### ")) || text.contains(QStringLiteral("#### ")) ||
             text.contains(QStringLiteral("##### ")) || text.contains(QStringLiteral("###### ")) ||
-             next.contains(QStringLiteral("===")) || next.contains(QStringLiteral("---"))) {
+            next.contains(QStringLiteral("===")) || next.contains(QStringLiteral("---")) ||
+            text.contains(QStringLiteral("===")) || text.contains(QStringLiteral("---"))) {
             highlightHeadline(text);
         }
 
