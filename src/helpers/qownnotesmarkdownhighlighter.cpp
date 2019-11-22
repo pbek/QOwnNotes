@@ -130,7 +130,11 @@ void QOwnNotesMarkdownHighlighter::highlightMarkdown(const QString& text) {
 
         // highlight broken note links
         if (highlightBrokenNotesLinkOn) {
+            if (text.contains("note://") || text.contains(".md") || text.contains("[") ||
+                text.contains("]") || text.contains("<") || text.contains(">") ||
+                text.contains("<")) {
             highlightBrokenNotesLink(text);
+            }
         }
     }
 
