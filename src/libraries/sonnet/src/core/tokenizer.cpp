@@ -20,9 +20,9 @@
     Boston, MA 02110-1301, USA.
 */
 
-#include <QList>
+#include <QVector>
 #include <QString>
-#include <QDebug>
+//#include <QDebug>
 
 #include "tokenizer_p.h"
 #include "textbreaks_p.h"
