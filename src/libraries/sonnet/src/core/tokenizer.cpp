@@ -20,9 +20,9 @@
     Boston, MA 02110-1301, USA.
 */
 
-#include <QList>
+#include <QVector>
 #include <QString>
-#include <QDebug>
+//#include <QDebug>
 
 #include "tokenizer_p.h"
 #include "textbreaks_p.h"
@@ -143,7 +143,10 @@ QStringRef BreakTokenizerPrivate::next()
     }
 
     itemPosition++;
-    last = QStringRef(&buffer, breaks().at(itemPosition).start, breaks().at(itemPosition).length);
+    int st = breaks().at(itemPosition).start;
+    int len = breaks().at(itemPosition).length;
+    last = buffer.midRef(st, len);
+
     return last;
 }
 

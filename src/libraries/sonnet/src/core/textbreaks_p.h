@@ -20,6 +20,8 @@
 #ifndef TEXTBREAKS_H
 #define TEXTBREAKS_H
 
+#include <QVector>
+
 class QString;
 
 namespace Sonnet {
@@ -48,7 +50,7 @@ public:
      * This structure abstracts the positions of breaks in the test. As per the
      * unicode annex, both the start and end of the text are returned.
      */
-    typedef QList<Position> Positions;
+    typedef QVector<Position> Positions;
 
     /** Constructor
      * Creates a new TextBreaks instance. If @p text is specified,
