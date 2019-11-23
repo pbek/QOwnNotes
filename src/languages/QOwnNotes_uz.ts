@@ -250,7 +250,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="28"/>
       <source>Ancient Greek</source>
-      <translation type="unfinished">Ancient Greek</translation>
+      <translation>Qadimgi yunon</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="29"/>
@@ -270,7 +270,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="33"/>
       <source>Basque</source>
-      <translation type="unfinished">Basque</translation>
+      <translation>Baskcha</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="34"/>
@@ -300,12 +300,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="39"/>
       <source>Catalan (Valencian)</source>
-      <translation type="unfinished">Catalan (Valencian)</translation>
+      <translation>Katalon (Valensiya)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="40"/>
       <source>Chuvash (Russia)</source>
-      <translation type="unfinished">Chuvash (Russia)</translation>
+      <translation>Chuvash (Rossiya)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="41"/>
@@ -330,7 +330,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="49"/>
       <source>English (Medical Dictionary)</source>
-      <translation type="unfinished">English (Medical Dictionary)</translation>
+      <translation>Inglizcha (tibbiy lug'at)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="50"/>
@@ -340,7 +340,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="51"/>
       <source>Esperanto</source>
-      <translation type="unfinished">Esperanto</translation>
+      <translation>Esperanto</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="52"/>
@@ -375,12 +375,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="60"/>
       <source>German (Classical Spelling)</source>
-      <translation type="unfinished">German (Classical Spelling)</translation>
+      <translation>Nemis (klassik imlo)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="63"/>
       <source>German (Medical Dictionary)</source>
-      <translation type="unfinished">German (Medical Dictionary)</translation>
+      <translation>Nemis (tibbiy lug'at)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="64"/>
@@ -390,7 +390,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="65"/>
       <source>Modern Greek (Polytonic Greek)</source>
-      <translation type="unfinished">Modern Greek (Polytonic Greek)</translation>
+      <translation>Zamonaviy yunon (politonik yunon)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="67"/>
@@ -480,17 +480,17 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="85"/>
       <source>Low German / Low Saxon</source>
-      <translation type="unfinished">Low German / Low Saxon</translation>
+      <translation>Kam nemis / quyi Sakson</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="86"/>
       <source>Luxembourgish (Letzeburgesch)</source>
-      <translation type="unfinished">Luxembourgish (Letzeburgesch)</translation>
+      <translation>Lyuksemburg (Letzeburgesch)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="87"/>
       <source>Macedonian</source>
-      <translation type="unfinished">Macedonian</translation>
+      <translation>Makedoniyalik</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="88"/>

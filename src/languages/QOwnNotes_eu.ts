@@ -205,7 +205,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="30"/>
       <source>Aragonese</source>
-      <translation type="unfinished">Aragonese</translation>
+      <translation>Aragoiko</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="66"/>
@@ -245,12 +245,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="27"/>
       <source>Amharic</source>
-      <translation type="unfinished">Amharic</translation>
+      <translation>Amharera</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="28"/>
       <source>Ancient Greek</source>
-      <translation type="unfinished">Ancient Greek</translation>
+      <translation>Antzinako Grezia</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="29"/>
@@ -260,7 +260,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="31"/>
       <source>Armenian</source>
-      <translation type="unfinished">Armenian</translation>
+      <translation>Armeniako</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="32"/>
@@ -270,7 +270,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="33"/>
       <source>Basque</source>
-      <translation type="unfinished">Basque</translation>
+      <translation>Euskal</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="34"/>
@@ -300,12 +300,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="39"/>
       <source>Catalan (Valencian)</source>
-      <translation type="unfinished">Catalan (Valencian)</translation>
+      <translation>Katalana (valentziera)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="40"/>
       <source>Chuvash (Russia)</source>
-      <translation type="unfinished">Chuvash (Russia)</translation>
+      <translation>Chuvash (Errusia)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="41"/>
@@ -330,7 +330,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="49"/>
       <source>English (Medical Dictionary)</source>
-      <translation type="unfinished">English (Medical Dictionary)</translation>
+      <translation>Ingelesa (Medical Dictionary)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="50"/>
@@ -340,7 +340,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="51"/>
       <source>Esperanto</source>
-      <translation type="unfinished">Esperanto</translation>
+      <translation>Esperantoa</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="52"/>
@@ -375,7 +375,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="60"/>
       <source>German (Classical Spelling)</source>
-      <translation type="unfinished">German (Classical Spelling)</translation>
+      <translation>Alemaniera (ortografia klasikoa)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="63"/>

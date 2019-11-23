@@ -250,7 +250,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="28"/>
       <source>Ancient Greek</source>
-      <translation type="unfinished">Ancient Greek</translation>
+      <translation>Griego antiguo</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="29"/>
@@ -260,7 +260,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="31"/>
       <source>Armenian</source>
-      <translation type="unfinished">Armenian</translation>
+      <translation>Armenio</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="32"/>
@@ -270,7 +270,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="33"/>
       <source>Basque</source>
-      <translation type="unfinished">Basque</translation>
+      <translation>Vasco</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="34"/>
@@ -300,7 +300,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="39"/>
       <source>Catalan (Valencian)</source>
-      <translation type="unfinished">Catalan (Valencian)</translation>
+      <translation>Catalán (Valencia)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="40"/>
@@ -340,7 +340,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="51"/>
       <source>Esperanto</source>
-      <translation type="unfinished">Esperanto</translation>
+      <translation>Esperanto</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="52"/>
@@ -445,7 +445,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="78"/>
       <source>Korean</source>
-      <translation type="unfinished">Korean</translation>
+      <translation>Coreano</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="79"/>
@@ -465,7 +465,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="82"/>
       <source>Latin</source>
-      <translation type="unfinished">Latin</translation>
+      <translation>Latín</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="84"/>
@@ -490,7 +490,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="87"/>
       <source>Macedonian</source>
-      <translation type="unfinished">Macedonian</translation>
+      <translation>Macedónio</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="88"/>
@@ -525,7 +525,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="94"/>
       <source>Persian</source>
-      <translation type="unfinished">Persian</translation>
+      <translation>Persa</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="98"/>
@@ -590,7 +590,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="113"/>
       <source>Tagalog</source>
-      <translation type="unfinished">Tagalog</translation>
+      <translation>Tagalog</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="114"/>
@@ -5484,7 +5484,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2285"/>
       <source>Irish</source>
-      <translation type="unfinished">Irish</translation>
+      <translation>Irlandés</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2296"/>
