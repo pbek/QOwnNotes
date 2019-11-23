@@ -20,6 +20,8 @@
 #ifndef TEXTBREAKS_H
 #define TEXTBREAKS_H
 
+#include <QVector>
+
 class QString;
 
 namespace Sonnet {
