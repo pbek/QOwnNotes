@@ -119,11 +119,11 @@ void QOwnNotesMarkdownHighlighter::highlightMarkdown(const QString& text) {
 
         // needs to be called after the horizontal ruler highlighting
         const QString &next = currentBlock().next().text();
-        if (text.contains(QStringLiteral("# ")) || text.contains(QStringLiteral("## ")) ||
-            text.contains(QStringLiteral("### ")) || text.contains(QStringLiteral("#### ")) ||
-            text.contains(QStringLiteral("##### ")) || text.contains(QStringLiteral("###### ")) ||
-            next.contains(QStringLiteral("===")) || next.contains(QStringLiteral("---")) ||
-            text.contains(QStringLiteral("===")) || text.contains(QStringLiteral("---"))) {
+        if (text.startsWith(QStringLiteral("# ")) || text.startsWith(QStringLiteral("## ")) ||
+            next.startsWith(QStringLiteral("===")) || next.startsWith(QStringLiteral("---")) ||
+            text.startsWith(QStringLiteral("===")) || text.startsWith(QStringLiteral("---")) ||
+            text.startsWith(QStringLiteral("### ")) || text.startsWith(QStringLiteral("#### ")) ||
+            text.startsWith(QStringLiteral("##### ")) || text.startsWith(QStringLiteral("###### "))) {
             highlightHeadline(text);
         }
 
@@ -147,9 +147,9 @@ void QOwnNotesMarkdownHighlighter::highlightMarkdown(const QString& text) {
             highlightCodeBlock(text);
         }
     }
-    if (currentBlock().position() == 0) {
-        highlightFrontmatterBlock(text);
-    }
+
+    highlightFrontmatterBlock(text);
+
 }
 
 /**
