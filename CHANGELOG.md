@@ -1,6 +1,7 @@
 # QOwnNotes Changelog
 
 ## 19.11.20
+- greatly improved performance of highlighting (for [#1440](https://github.com/pbek/QOwnNotes/pull/1440), thank you @Waqar144)
 - fixed highlighting for links like `<http://hostname>` (for [#1436](https://github.com/pbek/QOwnNotes/issues/1436))
 - fixed a problem with the `leave` button showing up multiple times when repeatedly
   entering and exiting full-screen mode (for [#1438](https://github.com/pbek/QOwnNotes/issues/1438))
