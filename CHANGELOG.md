@@ -5,6 +5,7 @@
 - fixed highlighting for links like `<http://hostname>` (for [#1436](https://github.com/pbek/QOwnNotes/issues/1436))
 - fixed a problem with the `leave` button showing up multiple times when repeatedly
   entering and exiting full-screen mode (for [#1438](https://github.com/pbek/QOwnNotes/issues/1438))
+- added additional information text to the *Layout settings*
 - added more German, Uzbek, Basque, Italian, Russian, Vietnamese, Hungarian, Dutch,
   Spanish translation (thank you rakekniven, Fabijenna, mlocati, unchase, richarson)
 
