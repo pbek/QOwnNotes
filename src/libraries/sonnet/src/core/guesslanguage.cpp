@@ -745,12 +745,6 @@ QStringList GuessLanguagePrivate::identify(const QString &sample,
     }
 
     QStringList guesses;
-    //if we have only one script, don't check trigrams
-    if (scripts.count() == 1) {
-        guesses << s_scriptLanguages.value(scripts.first());
-        return guesses;
-    }
-
     for (const QChar::Script script : scripts) {
         guesses.append(guessFromTrigrams(sample, s_scriptLanguages.values(script)));
     }
