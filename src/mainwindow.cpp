@@ -9440,8 +9440,13 @@ void MainWindow::openNotesContextMenu(
             }
     }
 
+    QAction *moveToThisSubFolderAction = nullptr;
     bool showSubFolders = NoteFolder::isCurrentShowSubfolders();
     if (showSubFolders) {
+        if (ui->noteTreeWidget->selectedItems().count() == 1) {
+            moveToThisSubFolderAction = noteMenu.addAction(tr("Jump to the note's sub-folder"));
+        }
+
         QMenu *subFolderMoveMenu = noteMenu.addMenu(
                 tr("Move notes to subfolder…"));
         buildBulkNoteSubFolderMenuTree(subFolderMoveMenu, false);
@@ -9546,6 +9551,12 @@ void MainWindow::openNotesContextMenu(
         } else if (selectedItem == removeAction) {
             // remove notes
             removeSelectedNotes();
+        } else if (selectedItem == moveToThisSubFolderAction){
+            int subFolderId = getCurrentNote().getNoteSubFolderId();
+            if (NoteSubFolder::activeNoteSubFolderId() != subFolderId) {
+                NoteSubFolder::setAsActive(subFolderId);
+                jumpToNoteSubFolder(subFolderId);
+            }
         } else if (selectedItem == selectAllAction) {
             // select all notes
             selectAllNotes();
