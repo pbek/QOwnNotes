@@ -9400,6 +9400,12 @@ void MainWindow::openNotesContextMenu(
     }
 
     QAction *removeAction = noteMenu.addAction(tr("&Remove notes"));
+
+    QAction *moveToThisSubFolderAction = nullptr;
+    if (ui->noteTreeWidget->selectedItems().count() == 1) {
+        moveToThisSubFolderAction = noteMenu.addAction(tr("Go to this note's folder"));
+    }
+
     noteMenu.addSeparator();
 
     QList<NoteFolder> noteFolders = NoteFolder::fetchAll();
@@ -9546,6 +9552,12 @@ void MainWindow::openNotesContextMenu(
         } else if (selectedItem == removeAction) {
             // remove notes
             removeSelectedNotes();
+        } else if (selectedItem == moveToThisSubFolderAction){
+            int subFolderId = getCurrentNote().getNoteSubFolderId();
+            if (NoteSubFolder::activeNoteSubFolderId() != subFolderId) {
+                NoteSubFolder::setAsActive(subFolderId);
+                jumpToNoteSubFolder(subFolderId);
+            }
         } else if (selectedItem == selectAllAction) {
             // select all notes
             selectAllNotes();
