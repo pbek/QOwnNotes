@@ -269,9 +269,9 @@ QString Loader::languageNameForCode(const QString &langCode) const
     }
 
     QLocale locale(isoCode);
-    localizedCountry = locale.nativeCountryName();
+    if (isoCode.length() > 3)
+        localizedCountry = locale.nativeCountryName();
     localizedLang = locale.nativeLanguageName();
-
     if (localizedLang.isEmpty() && localizedCountry.isEmpty()) {
         return isoCode;    // We have nothing
     }
@@ -282,6 +282,9 @@ QString Loader::languageNameForCode(const QString &langCode) const
     } else if (!localizedCountry.isEmpty()) { // We have a country name
         return tr("%1 (%2)", "dictionary name; %1 = language name, %2 = country name"
                   ).arg(localizedLang, localizedCountry);
+    } else if (!localizedLang.isEmpty() && !localizedVariant.isEmpty()) {
+        return tr("%1 (%2)", "dictionary name; %1 = language name, %2 = language variant name"
+                  ).arg(localizedLang, localizedVariant);
     } else { // We only have a language name
         return localizedLang;
     }
