@@ -1847,7 +1847,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1414"/>
-        <location filename="../mainwindow.cpp" line="9526"/>
+        <location filename="../mainwindow.cpp" line="9531"/>
         <source>Select &amp;all notes</source>
         <translation>Selectaţi &amp;toate notele</translation>
     </message>
@@ -2298,7 +2298,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2213"/>
-        <location filename="../mainwindow.cpp" line="10551"/>
+        <location filename="../mainwindow.cpp" line="10562"/>
         <source>Remove current workspace</source>
         <translation>Elimina spațiu de lucru curent</translation>
     </message>
@@ -2367,7 +2367,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2334"/>
-        <location filename="../mainwindow.cpp" line="9501"/>
+        <location filename="../mainwindow.cpp" line="9506"/>
         <source>Open note in different window</source>
         <translation>Notă deschisă în fereastra diferite</translation>
     </message>
@@ -2388,7 +2388,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2374"/>
-        <location filename="../mainwindow.cpp" line="9509"/>
+        <location filename="../mainwindow.cpp" line="9514"/>
         <source>Show note git versions</source>
         <translation>Arată versiunile de git notă</translation>
     </message>
@@ -2471,7 +2471,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2536"/>
-        <location filename="../mainwindow.cpp" line="11379"/>
+        <location filename="../mainwindow.cpp" line="11390"/>
         <source>Automatically detect</source>
         <translation>Detectează automat</translation>
     </message>
@@ -2620,7 +2620,7 @@ Restabiliți nota curentă?</translation>
         <location filename="../mainwindow.cpp" line="5033"/>
         <location filename="../mainwindow.cpp" line="5057"/>
         <location filename="../mainwindow.cpp" line="6497"/>
-        <location filename="../mainwindow.cpp" line="9588"/>
+        <location filename="../mainwindow.cpp" line="9599"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Revocare</translation>
     </message>
@@ -2735,7 +2735,7 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4217"/>
-        <location filename="../mainwindow.cpp" line="9760"/>
+        <location filename="../mainwindow.cpp" line="9771"/>
         <source>Remove selected folders</source>
         <translation>Eliminați notele selectate</translation>
     </message>
@@ -3068,7 +3068,7 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="9397"/>
-        <location filename="../mainwindow.cpp" line="9571"/>
+        <location filename="../mainwindow.cpp" line="9582"/>
         <source>Rename note</source>
         <translation>Redenumiți nota</translation>
     </message>
@@ -3088,75 +3088,80 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
         <translation>&amp;Copiați notele la…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9446"/>
+        <location filename="../mainwindow.cpp" line="9447"/>
+        <source>Jump to the note&apos;s sub-folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="9451"/>
         <source>Move notes to subfolder…</source>
         <translation>Mutați notele în subdosar…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9450"/>
+        <location filename="../mainwindow.cpp" line="9455"/>
         <source>Copy notes to subfolder…</source>
         <translation>Copiați notele în subdosar…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9458"/>
+        <location filename="../mainwindow.cpp" line="9463"/>
         <source>&amp;Tag selected notes with…</source>
         <translation>&amp;Etichetați notele selectate cu…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9480"/>
+        <location filename="../mainwindow.cpp" line="9485"/>
         <source>&amp;Remove tag from selected notes…</source>
         <translation>&amp;Eliminați eticheta din notele selectate…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9571"/>
+        <location filename="../mainwindow.cpp" line="9582"/>
         <source>Name:</source>
         <translation>Nume:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9583"/>
+        <location filename="../mainwindow.cpp" line="9594"/>
         <source>Note renaming not enabled!</source>
         <translation>Notă redenumirea nu este activată!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9759"/>
+        <location filename="../mainwindow.cpp" line="9770"/>
         <source>Rename subfolder</source>
         <translation>Redenumiți subfolderul</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10333"/>
+        <location filename="../mainwindow.cpp" line="10344"/>
         <source>Create new workspace</source>
         <translation>Creați un spațiu de lucru nou</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10333"/>
-        <location filename="../mainwindow.cpp" line="10589"/>
+        <location filename="../mainwindow.cpp" line="10344"/>
+        <location filename="../mainwindow.cpp" line="10600"/>
         <source>Workspace name:</source>
         <translation>Numele spațiului de lucru:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10453"/>
+        <location filename="../mainwindow.cpp" line="10464"/>
         <source>full</source>
         <comment>full workspace</comment>
         <translation>deplin</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10460"/>
+        <location filename="../mainwindow.cpp" line="10471"/>
         <source>minimal</source>
         <comment>minimal workspace</comment>
         <translation>minim</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10552"/>
+        <location filename="../mainwindow.cpp" line="10563"/>
         <source>Remove the current workspace?</source>
         <translation>Eliminați spațiul de lucru curent?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10589"/>
+        <location filename="../mainwindow.cpp" line="10600"/>
         <source>Rename workspace</source>
         <translation>Redenumiți spațiul de lucru</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="10724"/>
+        <location filename="../mainwindow.cpp" line="10735"/>
         <source>%n chars</source>
         <comment>characters</comment>
         <translation>
@@ -3166,27 +3171,27 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="10991"/>
+        <location filename="../mainwindow.cpp" line="11002"/>
         <source>Disallow all note editing</source>
         <translation>Nu permiteți editarea tuturor notelor</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="11137"/>
+        <location filename="../mainwindow.cpp" line="11148"/>
         <source>Select text files to import</source>
         <translation>Selectați fișierele text de importat</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="11166"/>
+        <location filename="../mainwindow.cpp" line="11177"/>
         <source>Importing: %1</source>
         <translation>Importarea: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="11229"/>
+        <location filename="../mainwindow.cpp" line="11240"/>
         <source>Note headline &apos;%1&apos; was copied to the clipboard</source>
         <translation>Notă titlul &apos;%1&apos; a fost copiat în clipboard</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="11320"/>
+        <location filename="../mainwindow.cpp" line="11331"/>
         <source>Leave full-screen mode</source>
         <translation>Părăsește modul ecran complet</translation>
     </message>
@@ -3201,7 +3206,7 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2419"/>
-        <location filename="../mainwindow.cpp" line="10992"/>
+        <location filename="../mainwindow.cpp" line="11003"/>
         <source>Allow all note editing</source>
         <translation>Permiteți editarea tuturor notelor</translation>
     </message>
@@ -3292,7 +3297,7 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
         <location filename="../mainwindow.cpp" line="5573"/>
         <location filename="../mainwindow.cpp" line="5877"/>
         <location filename="../mainwindow.cpp" line="9392"/>
-        <location filename="../mainwindow.cpp" line="9757"/>
+        <location filename="../mainwindow.cpp" line="9768"/>
         <source>New note</source>
         <translation>Notă nouă</translation>
     </message>
@@ -3369,7 +3374,7 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4728"/>
-        <location filename="../mainwindow.cpp" line="11151"/>
+        <location filename="../mainwindow.cpp" line="11162"/>
         <source>Cancel</source>
         <translation>Revocare</translation>
     </message>
@@ -3401,37 +3406,37 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9499"/>
+        <location filename="../mainwindow.cpp" line="9504"/>
         <source>Open note in external editor</source>
         <translation>Deschideți nota în editorul extern</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9503"/>
+        <location filename="../mainwindow.cpp" line="9508"/>
         <source>Show note in file manager</source>
         <translation>Afișați nota în managerul de fișiere</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9584"/>
+        <location filename="../mainwindow.cpp" line="9595"/>
         <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
         <translation>Dacă doriți să redenumiți nota dvs., trebuie să activați opțiunea de a permite ca numele fișierului notei să fie diferit de titlu.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9758"/>
+        <location filename="../mainwindow.cpp" line="9769"/>
         <source>New subfolder</source>
         <translation>Subfolder nou</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9762"/>
+        <location filename="../mainwindow.cpp" line="9773"/>
         <source>Show folder in file manager</source>
         <translation>Afișați folderul în managerul de fișiere</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9807"/>
+        <location filename="../mainwindow.cpp" line="9818"/>
         <source>Create a new folder</source>
         <translation>Creați un nou dosar</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9807"/>
+        <location filename="../mainwindow.cpp" line="9818"/>
         <source>Folder name:</source>
         <translation>Numele fisierului:</translation>
     </message>
@@ -3779,13 +3784,13 @@ Dacă coșul de gunoi este activat pe serverul propriuCloud, ar trebui să îl p
         <location filename="../mainwindow.cpp" line="5015"/>
         <location filename="../mainwindow.cpp" line="5032"/>
         <location filename="../mainwindow.cpp" line="5056"/>
-        <location filename="../mainwindow.cpp" line="9587"/>
+        <location filename="../mainwindow.cpp" line="9598"/>
         <source>Open &amp;settings</source>
         <translation>Deschidere &amp;setările</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1542"/>
-        <location filename="../mainwindow.cpp" line="11305"/>
+        <location filename="../mainwindow.cpp" line="11316"/>
         <source>leave</source>
         <translation>concediu</translation>
     </message>
@@ -7226,6 +7231,12 @@ Notele dvs. vor rămâne intacte!</translation>
         <comment>dictionary name; %1 = language name, %2 = country name</comment>
         <translation>%1 (%2)</translation>
     </message>
+    <message>
+        <location filename="../libraries/sonnet/src/core/loader.cpp" line="286"/>
+        <source>%1 (%2)</source>
+        <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
+        <translation type="unfinished">%1 (%2)</translation>
+    </message>
 </context>
 <context>
     <name>TableDialog</name>
@@ -7265,9 +7276,13 @@ Notele dvs. vor rămâne intacte!</translation>
         <translation>Cantitatea de spații dintr-o coloană</translation>
     </message>
     <message>
-        <location filename="../dialogs/tabledialog.ui" line="119"/>
         <source>Select table layout:</source>
-        <translation>Selectați aspectul tabelului:</translation>
+        <translation type="vanished">Selectați aspectul tabelului:</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tabledialog.ui" line="119"/>
+        <source>Select table layout or enter text:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/tabledialog.ui" line="126"/>
@@ -7315,17 +7330,17 @@ Notele dvs. vor rămâne intacte!</translation>
         <translation>Text-delimitator:</translation>
     </message>
     <message>
-        <location filename="../dialogs/tabledialog.cpp" line="150"/>
+        <location filename="../dialogs/tabledialog.cpp" line="170"/>
         <source>CSV files</source>
         <translation>Fișiere CSV</translation>
     </message>
     <message>
-        <location filename="../dialogs/tabledialog.cpp" line="151"/>
+        <location filename="../dialogs/tabledialog.cpp" line="171"/>
         <source>All files</source>
         <translation>Toate filele</translation>
     </message>
     <message>
-        <location filename="../dialogs/tabledialog.cpp" line="156"/>
+        <location filename="../dialogs/tabledialog.cpp" line="176"/>
         <source>Select CSV file to import</source>
         <translation>Selectați fișierul CSV pentru a importa</translation>
     </message>
