@@ -1,6 +1,7 @@
 #pragma once
 
 #include <QDialog>
+#include <QTableWidget>
 #include "masterdialog.h"
 
 namespace Ui {
@@ -24,6 +25,8 @@ private slots:
 
     void on_fileButton_clicked();
 
+    void on_createTableWidget_itemChanged(QTableWidgetItem *item);
+
 private:
     enum Tab {
         CreateTab,
@@ -31,8 +34,10 @@ private:
     };
 
     Ui::TableDialog *ui;
+    int _maxColumns = 0;
+    int _maxRows = 0;
 
     void createMarkdownTable();
-
     void importCSV();
+    void updateMaxItems();
 };

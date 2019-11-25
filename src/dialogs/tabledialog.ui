@@ -116,7 +116,7 @@
        <item row="2" column="0" colspan="2">
         <widget class="QLabel" name="label_4">
          <property name="text">
-          <string>Select table layout:</string>
+          <string>Select table layout or enter text:</string>
          </property>
         </widget>
        </item>

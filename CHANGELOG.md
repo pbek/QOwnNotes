@@ -11,6 +11,14 @@
 - you can now also set the horizontal pixels directly in the *Image dialog*
   (for [#1445](https://github.com/pbek/QOwnNotes/issues/1445))
 - fixed dark mode hover color for newer Qt versions (for [#1394](https://github.com/pbek/QOwnNotes/issues/1394))
+- you can now not only select the table layout in a table widget in the *Table dialog*,
+  but also **enter text directly in the fields** which will be used as table text when
+  inserting the table (for [#1446](https://github.com/pbek/QOwnNotes/issues/1446))
+    - if you enter text then all the spinboxes to define the table specs will
+      be updated automatically
+    - if you select a table layout via mouse after text was added to the table
+      the spinboxes will now only update if you are selecting a larger range
+      than the text entered
 
 ## 19.11.20
 - greatly improved performance of highlighting (for [#1440](https://github.com/pbek/QOwnNotes/pull/1440), thank you @Waqar144)
