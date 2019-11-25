@@ -669,10 +669,11 @@ QPushButton:checked{
     border-color: #6A6969;
 }
 
+/* We don't want to set a color any more, since it also sets the foreground color in TextEdits in Qt 5.13 */
 QComboBox:hover,QPushButton:hover,QAbstractSpinBox:hover,QLineEdit:hover,QTextEdit:hover,QPlainTextEdit:hover,QAbstractView:hover,QTreeView:hover
 {
     border: 1px solid #78879b;
-    color: silver;
+/*    color: silver;*/
 }
 
 QComboBox:on

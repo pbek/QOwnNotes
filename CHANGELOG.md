@@ -10,6 +10,7 @@
 - improved *List item* and *Trailing spaces* colors for `Mountain` highlighting color schema
 - you can now also set the horizontal pixels directly in the *Image dialog*
   (for [#1445](https://github.com/pbek/QOwnNotes/issues/1445))
+- fixed dark mode hover color for newer Qt versions (for [#1394](https://github.com/pbek/QOwnNotes/issues/1394))
 
 ## 19.11.20
 - greatly improved performance of highlighting (for [#1440](https://github.com/pbek/QOwnNotes/pull/1440), thank you @Waqar144)
