@@ -46,7 +46,7 @@ DictionaryManagerDialog::DictionaryManagerDialog(QWidget *parent) :
     addDictionaryItem(tr("English (Australian)"), QStringLiteral("en"), QStringLiteral("en_AU"));
     addDictionaryItem(tr("English (British)"), QStringLiteral("en"), QStringLiteral("en_GB"));
     addDictionaryItem(tr("English (Canadian)"), QStringLiteral("en"), QStringLiteral("en_CA"));
-    addDictionaryItem(tr("English (Medical Dictionary)"), QStringLiteral("en"), QStringLiteral("en_med"));
+    addDictionaryItem(tr("English (Medical Dictionary)"), QStringLiteral("en"), QStringLiteral("en-medical"));
     addDictionaryItem(tr("English (South African)"), QStringLiteral("en"), QStringLiteral("en_ZA"));
     addDictionaryItem(tr("Esperanto"), QStringLiteral("eo"));
     addDictionaryItem(tr("Estonian"), QStringLiteral("et_EE"));
@@ -55,12 +55,12 @@ DictionaryManagerDialog::DictionaryManagerDialog(QWidget *parent) :
     addDictionaryItem(tr("Friulian"), QStringLiteral("fur"));
     addDictionaryItem(tr("Gaelic"), QStringLiteral("gd_GB"));
     addDictionaryItem(tr("Galician"), QStringLiteral("gl"), QStringLiteral("gl_ES"));
-    addDictionaryItem(tr("Georgian"), QStringLiteral("ka-GE"));
+    addDictionaryItem(tr("Georgian"), QStringLiteral("ka_GE"));
     addDictionaryItem(tr("German (Austrian)"), QStringLiteral("de"), QStringLiteral("de_AT_frami"));
-    addDictionaryItem(tr("German (Classical Spelling)"), QStringLiteral("de"), QStringLiteral("de-DE-1901"));
+    addDictionaryItem(tr("German (Classical Spelling)"), QStringLiteral("de"), QStringLiteral("de_DE-oldspell"));
     addDictionaryItem(tr("German (German)"), QStringLiteral("de"), QStringLiteral("de_DE_frami"));
     addDictionaryItem(tr("German (Swiss)"), QStringLiteral("de"), QStringLiteral("de_CH_frami"));
-    addDictionaryItem(tr("German (Medical Dictionary)"), QStringLiteral("de"), QStringLiteral("de_med"));
+    addDictionaryItem(tr("German (Medical Dictionary)"), QStringLiteral("de"), QStringLiteral("de-medical"));
     addDictionaryItem(tr("Greek"), QStringLiteral("el_GR"));
     addDictionaryItem(tr("Modern Greek (Polytonic Greek)"), QStringLiteral("el_GR"), QStringLiteral("el-polyton"));
     addDictionaryItem(tr("Gujarati"), QStringLiteral("gu_IN"));
@@ -75,8 +75,8 @@ DictionaryManagerDialog::DictionaryManagerDialog(QWidget *parent) :
     addDictionaryItem(tr("Kazakh"), QStringLiteral("kk"));
     addDictionaryItem(tr("Khmer"), QStringLiteral("km_KH"));
     addDictionaryItem(tr("Komi (Russia)"), QStringLiteral("kv"));
-    addDictionaryItem(tr("Korean"), QStringLiteral("ko_KR"), QStringLiteral("ko-KR"));
-    addDictionaryItem(tr("Kurdish (Turkey)"), QStringLiteral("kmr_Latn"));
+    addDictionaryItem(tr("Korean"), QStringLiteral("ko_KR"));
+    addDictionaryItem(tr("Kurdish (Turkey)"), QStringLiteral("ku_TR"));
     addDictionaryItem(tr("Lao"), QStringLiteral("lo_LA"));
     addDictionaryItem(tr("Latgalian"), QStringLiteral("ltg"));
     addDictionaryItem(tr("Latin"), QStringLiteral("la"));
@@ -90,7 +90,7 @@ DictionaryManagerDialog::DictionaryManagerDialog(QWidget *parent) :
     addDictionaryItem(tr("Norwegian (Bokmål)"), QStringLiteral("no"), QStringLiteral("nb_NO"));
     addDictionaryItem(tr("Norwegian (Nynorsk)"), QStringLiteral("no"), QStringLiteral("nn_NO"));
     addDictionaryItem(tr("Occitan"), QStringLiteral("oc_FR"));
-    addDictionaryItem(tr("Papiamentu"), QStringLiteral("pap_CW"), QStringLiteral("papiamentu"));
+    addDictionaryItem(tr("Papiamentu"), QStringLiteral("pap_CW"));
     addDictionaryItem(tr("Persian"), QStringLiteral("fa_IR"));
     addDictionaryItem(tr("Polish"), QStringLiteral("pl_PL"));
     addDictionaryItem(tr("Portugese (Brazilian)"), QStringLiteral("pt_BR"));
@@ -122,7 +122,7 @@ DictionaryManagerDialog::DictionaryManagerDialog(QWidget *parent) :
     addDictionaryItem(tr("Urdu"), QStringLiteral("ur_PK"));
     addDictionaryItem(tr("Uzbek"), QStringLiteral("uz_UZ"));
     addDictionaryItem(tr("Venda"), QStringLiteral("ve_ZA"));
-    addDictionaryItem(tr("Venetian"), QStringLiteral("vec-IT"));
+    addDictionaryItem(tr("Venetian"), QStringLiteral("vec_IT"));
     addDictionaryItem(tr("Vietnamese"), QStringLiteral("vi"), QStringLiteral("vi_VN"));
     addDictionaryItem(tr("Welsh"), QStringLiteral("cy_GB"));
     addDictionaryItem(tr("Xhosa"), QStringLiteral("xh_ZA"));
