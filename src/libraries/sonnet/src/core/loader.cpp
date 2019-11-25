@@ -322,10 +322,10 @@ currentDictionary = "ar-1990";
     } else if (!localizedCountry.isEmpty()) { // We have a country name
         return tr("%1 (%2)", "dictionary name; %1 = language name, %2 = country name"
                   ).arg(localizedLang, localizedCountry);
-    } else if (!localizedLang.isEmpty() && !localizedVariant.isEmpty()){
+    } else if (!localizedLang.isEmpty() && !localizedVariant.isEmpty()) {
         return tr("%1 (%2)", "dictionary name; %1 = language name, %2 = language variant name"
                   ).arg(localizedLang, localizedVariant);
-    }else { // We only have a language name
+    } else { // We only have a language name
         return localizedLang;
     }
 }

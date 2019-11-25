@@ -25,9 +25,9 @@ DictionaryManagerDialog::DictionaryManagerDialog(QWidget *parent) :
     // you can add more dictionaries from https://github.com/qownnotes/dictionaries/tree/master
     addDictionaryItem(tr("Afrikaans"), QStringLiteral("af_ZA"));
     addDictionaryItem(tr("Amharic"), QStringLiteral("am_ET"));
-    addDictionaryItem(tr("Ancient Greek"), QStringLiteral("grc_GR"));
+    addDictionaryItem(tr("Ancient Greek"), QStringLiteral("grc_GR"), QStringLiteral("el_GR-Ancient"));
     addDictionaryItem(tr("Arabic"), QStringLiteral("ar"));
-    addDictionaryItem(tr("Aragonese"), QStringLiteral("an_ES"));
+    addDictionaryItem(tr("Aragonese"), QStringLiteral("an_ES"), QStringLiteral("Aragonés"));
     addDictionaryItem(tr("Armenian"), QStringLiteral("hy"));
     addDictionaryItem(tr("Albanian"), QStringLiteral("sq_AL"));
     addDictionaryItem(tr("Basque"), QStringLiteral("eu"));
@@ -52,7 +52,7 @@ DictionaryManagerDialog::DictionaryManagerDialog(QWidget *parent) :
     addDictionaryItem(tr("Estonian"), QStringLiteral("et_EE"));
     addDictionaryItem(tr("Faroese"), QStringLiteral("fo"));
     addDictionaryItem(tr("French"), QStringLiteral("fr_FR"), QStringLiteral("fr"));
-    addDictionaryItem(tr("Friulian"), QStringLiteral("fur"));
+    addDictionaryItem(tr("Friulian"), QStringLiteral("fur_IT"));
     addDictionaryItem(tr("Gaelic"), QStringLiteral("gd_GB"));
     addDictionaryItem(tr("Galician"), QStringLiteral("gl"), QStringLiteral("gl_ES"));
     addDictionaryItem(tr("Georgian"), QStringLiteral("ka_GE"));
@@ -71,7 +71,7 @@ DictionaryManagerDialog::DictionaryManagerDialog(QWidget *parent) :
     addDictionaryItem(tr("Icelandic"), QStringLiteral("is"));
     addDictionaryItem(tr("Indonesian"), QStringLiteral("id"), QStringLiteral("id_ID"));
     addDictionaryItem(tr("Italian"), QStringLiteral("it_IT"));
-    addDictionaryItem(tr("Kaszebsczi"), QStringLiteral("csb_PL"));
+    addDictionaryItem(tr("Kaszebsczi"), QStringLiteral("csb_PL"), QStringLiteral("Kaszebsczi"));
     addDictionaryItem(tr("Kazakh"), QStringLiteral("kk"));
     addDictionaryItem(tr("Khmer"), QStringLiteral("km_KH"));
     addDictionaryItem(tr("Komi (Russia)"), QStringLiteral("koi"));
