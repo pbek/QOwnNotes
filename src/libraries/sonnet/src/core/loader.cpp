@@ -245,7 +245,7 @@ QString Loader::languageNameForCode(const QString &langCode) const
         { "extended", QT_TRANSLATE_NOOP3("Sonnet::Loader", "extended", "dictionary variant") },
         { nullptr, nullptr }
     };
-currentDictionary = "ar-1990";
+
     minusPos = currentDictionary.indexOf(QLatin1Char('-'));
     if (minusPos != -1) {
         variantName = currentDictionary.right(currentDictionary.length() - minusPos - 1);
@@ -268,52 +268,12 @@ currentDictionary = "ar-1990";
         isoCode = currentDictionary;
     }
 
-    //These iso codes are missing in QLocale
-    QMap<QString, QPair<QString, QString> > missingLocales = {
-        //iso code                                 //lang                         //country    //English name of language
-        {QLatin1String("an"),      {QStringLiteral("aragonés"),          QString()}},          //Aragonese
-        {QLatin1String("an_ES"),   {QStringLiteral("aragonés"),          QStringLiteral("España")}},
-        {QLatin1String("csb"),     {QStringLiteral("kaszëbsczi"),        QString()}},          //Kashubian
-        {QLatin1String("csb_PL"),  {QStringLiteral("kaszëbsczi"),        QStringLiteral("Polska")}},
-        {QLatin1String("cv"),      {QStringLiteral("Чӑвашла"),           QString()}},          //Chuvash
-        {QLatin1String("cv_RU"),   {QStringLiteral("Чӑвашла"),           QStringLiteral("Росси́я")}},
-        {QLatin1String("grc"),     {QStringLiteral("Αρχαία Ελληνικά"),   QString()}},          //Ancient Greek
-        {QLatin1String("grc_GR"),  {QStringLiteral("Αρχαία Ελληνικά"),   QStringLiteral("Ελλάδα")}},
-        {QLatin1String("gug"),     {QStringLiteral("Guarani"),           QString()}},          //Gurarani
-        {QLatin1String("gug_PY"),  {QStringLiteral("Guarani"),           QStringLiteral("Paraguái")}},
-        {QLatin1String("koi"),     {QStringLiteral("коми"),              QString()}},          //Komi
-        {QLatin1String("koi_RU"),  {QStringLiteral("коми"),              QStringLiteral("Росси́я")}},
-        {QLatin1String("lb"),      {QStringLiteral("Lëtzebuergesch"),    QString()}},          //Luxembourgish
-        {QLatin1String("lb_LU"),   {QStringLiteral("Lëtzebuergesch"),    QStringLiteral("Lëtzebuerg")}},
-        {QLatin1String("ltg"),     {QStringLiteral("latgalīšu"),         QString()}},          //Latgalian
-        {QLatin1String("ltz"),     {QStringLiteral("Lëtzebuergesch"),    QString()}},          //Luxembourgish
-        {QLatin1String("ltz_LU"),  {QStringLiteral("Lëtzebuergesch"),    QStringLiteral("Lëtzebuerg")}},
-        {QLatin1String("nds"),     {QStringLiteral("Plattdüütsch"),      QString()}},          //Low German / Low Saxon
-        {QLatin1String("pap"),     {QStringLiteral("Papiamentu"),        QString()}},          //Papiamentu
-        {QLatin1String("pap_CW"),  {QStringLiteral("Papiamentu"),        QStringLiteral("Kòrsou")}},
-        {QLatin1String("vec"),     {QStringLiteral("vèneto"),            QString()}},          //Venetian
-        {QLatin1String("vec_IT"),  {QStringLiteral("vèneto"),            QStringLiteral("Italia")}},
-        {QLatin1String("udm"),     {QStringLiteral("удмурт"),            QString()}},          //Udmurt
-        {QLatin1String("udm_RU"),  {QStringLiteral("удмурт"),            QStringLiteral("Росси́я")}},
-    };
-
     QLocale locale(isoCode);
-    if (isoCode.length() > 3) {
+    if (isoCode.length() > 3)
         localizedCountry = locale.nativeCountryName();
-    }
     localizedLang = locale.nativeLanguageName();
-
-    //QLocale didn't have this iso code, try to find in the missingLocales table
     if (localizedLang.isEmpty() && localizedCountry.isEmpty()) {
-        localizedLang = missingLocales.value(isoCode).first;
-        if (isoCode.length() > 3) {
-            localizedCountry = missingLocales.value(isoCode).second;
-        }
-
-        //still empty, so just return the iso code
-        if (localizedLang.isEmpty() && localizedCountry.isEmpty()) {
-            return isoCode;
-        }
+        return isoCode;    // We have nothing
     }
 
     if (!localizedCountry.isEmpty() && !localizedVariant.isEmpty()) { // We have both a country name and a variant
