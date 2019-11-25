@@ -6,6 +6,7 @@
 - did more spellchecker optimization (for [#1442](https://github.com/pbek/QOwnNotes/pull/1442), thank you @Waqar144)
 - fixed autodetection for some languages that do not have trigrams (e.g. for Malayan)
   (for [#1443](https://github.com/pbek/QOwnNotes/pull/1443), thank you @Waqar144)
+- fixed dictionary names not being displayed correctly (for [#1450](https://github.com/pbek/QOwnNotes/pull/1450), thank you @Waqar144)
 
 ## 19.11.20
 - greatly improved performance of highlighting (for [#1440](https://github.com/pbek/QOwnNotes/pull/1440), thank you @Waqar144)
