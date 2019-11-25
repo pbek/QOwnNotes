@@ -142,11 +142,14 @@ void ImageDialog::on_buttonBox_accepted() {
 
 void ImageDialog::on_widthSpinBox_valueChanged(int arg1) {
     double factor = (double) arg1 / _basePixmap.width();
-    updateWidthScaleLabelValue();
 
     const QSignalBlocker blocker(ui->widthScaleHorizontalSlider);
     Q_UNUSED(blocker)
     ui->widthScaleHorizontalSlider->setValue((int) (factor * 10));
+    updateWidthScaleLabelValue();
+
+    QPixmap pixmap = _basePixmap.scaledToWidth(arg1, Qt::SmoothTransformation);
+    setPixmap(pixmap);
 }
 
 void ImageDialog::updateWidthScaleLabelValue() const {
@@ -157,14 +160,8 @@ void ImageDialog::updateWidthScaleLabelValue() const {
 void ImageDialog::on_widthScaleHorizontalSlider_valueChanged(int value) {
     updateWidthScaleLabelValue();
 
-    const QSignalBlocker blocker(ui->widthSpinBox);
-    Q_UNUSED(blocker)
-
     int width = (int) (_basePixmap.width() * value / 10);
     ui->widthSpinBox->setValue(width);
-
-    QPixmap pixmap = _basePixmap.scaledToWidth(width, Qt::SmoothTransformation);
-    setPixmap(pixmap);
 }
 
 void ImageDialog::on_fileEdit_textChanged(const QString &arg1) {
