@@ -85,6 +85,7 @@ DictionaryManagerDialog::DictionaryManagerDialog(QWidget *parent) :
     addDictionaryItem(tr("Low German / Low Saxon"), QStringLiteral("nds"));
     addDictionaryItem(tr("Luxembourgish (Letzeburgesch)"), QStringLiteral("lb"));
     addDictionaryItem(tr("Macedonian"), QStringLiteral("mk"));
+    addDictionaryItem(tr("Malayalam"), QStringLiteral("ml_IN"));
     addDictionaryItem(tr("Mongolian"), QStringLiteral("mn"));
     addDictionaryItem(tr("Nepali"), QStringLiteral("ne_NP"));
     addDictionaryItem(tr("Norwegian (Bokmål)"), QStringLiteral("no"), QStringLiteral("nb_NO"));
