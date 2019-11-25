@@ -74,7 +74,7 @@ DictionaryManagerDialog::DictionaryManagerDialog(QWidget *parent) :
     addDictionaryItem(tr("Kaszebsczi"), QStringLiteral("csb_PL"));
     addDictionaryItem(tr("Kazakh"), QStringLiteral("kk"));
     addDictionaryItem(tr("Khmer"), QStringLiteral("km_KH"));
-    addDictionaryItem(tr("Komi (Russia)"), QStringLiteral("kv"));
+    addDictionaryItem(tr("Komi (Russia)"), QStringLiteral("koi"));
     addDictionaryItem(tr("Korean"), QStringLiteral("ko_KR"));
     addDictionaryItem(tr("Kurdish (Turkey)"), QStringLiteral("ku_TR"));
     addDictionaryItem(tr("Lao"), QStringLiteral("lo_LA"));
