@@ -19,6 +19,7 @@
     - if you select a table layout via mouse after text was added to the table
       the spinboxes will now only update if you are selecting a larger range
       than the text entered
+- added Ubuntu 20.04 (Focal Fossa) support to the Launchpad build system
 
 ## 19.11.20
 - greatly improved performance of highlighting (for [#1440](https://github.com/pbek/QOwnNotes/pull/1440), thank you @Waqar144)
