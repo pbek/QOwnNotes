@@ -245,7 +245,7 @@ QString Loader::languageNameForCode(const QString &langCode) const
         { "extended", QT_TRANSLATE_NOOP3("Sonnet::Loader", "extended", "dictionary variant") },
         { nullptr, nullptr }
     };
-currentDictionary = "ar-1990";
+
     minusPos = currentDictionary.indexOf(QLatin1Char('-'));
     if (minusPos != -1) {
         variantName = currentDictionary.right(currentDictionary.length() - minusPos - 1);
