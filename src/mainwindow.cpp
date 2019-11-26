@@ -389,7 +389,13 @@ MainWindow::MainWindow(QWidget *parent) :
     // we need to restore the current workspace a little later when
     // application window is maximized or in full-screen mode
     if (isMaximized() || isFullScreen()) {
-        QTimer::singleShot(500, this, SLOT(restoreCurrentWorkspace()));
+        //if it is in distraction mode we restore it immediately
+        //otherwise it can result in mixed state
+        if (isInDistractionFreeMode()) {
+            restoreCurrentWorkspace();
+        } else {
+            QTimer::singleShot(500, this, SLOT(restoreCurrentWorkspace()));
+        }
     }
 
     // update the current folder tooltip
