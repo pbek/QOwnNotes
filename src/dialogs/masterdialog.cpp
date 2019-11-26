@@ -88,3 +88,16 @@ void MasterDialog::handleOpenDialog() {
     // send metrics
     MetricsService::instance()->sendVisitIfEnabled("dialog/" + objectName());
 }
+
+void MasterDialog::setIgnoreReturnKey(bool ignore) {
+    _ignoreReturnKey = ignore;
+}
+
+void MasterDialog::keyPressEvent(QKeyEvent *keyEvent) {
+    if (_ignoreReturnKey &&
+            (keyEvent->key() == Qt::Key_Enter || keyEvent->key() == Qt::Key_Return)) {
+        return;
+    }
+
+    QDialog::keyPressEvent(keyEvent);
+}

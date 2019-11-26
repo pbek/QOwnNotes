@@ -11,6 +11,9 @@ TableDialog::TableDialog(QWidget *parent) :
     ui(new Ui::TableDialog) {
     ui->setupUi(this);
 
+    // ignore the return key so we can better edit text in the table
+    setIgnoreReturnKey(true);
+
     ui->tabWidget->setCurrentIndex(Tab::CreateTab);
     ui->createTableWidget->setColumnCount(50);
     ui->createTableWidget->setRowCount(100);
