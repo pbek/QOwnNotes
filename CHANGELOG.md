@@ -7,6 +7,8 @@
   (for [#1432](https://github.com/pbek/QOwnNotes/issues/1432))
 - the return key is now ignored in the *Table dialog* so you can better edit text
   in the table (for [#1446](https://github.com/pbek/QOwnNotes/issues/1446))
+- fixed distraction free mode not restored properly on app restart if the app
+  previously was maximized (for [#1448](https://github.com/pbek/QOwnNotes/issues/1448), thank you @Waqar144)
 
 ## 19.11.21
 - added a note list context menu item to jump to the note sub-folder of the
