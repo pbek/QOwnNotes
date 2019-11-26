@@ -3065,7 +3065,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
     <message>
       <location filename="../mainwindow.cpp" line="9447"/>
       <source>Jump to the note's sub-folder</source>
-      <translation type="unfinished">Jump to the note's sub-folder</translation>
+      <translation>Vai alla sotto-cartella della nota</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9451"/>
@@ -7191,7 +7191,7 @@ Le proprie note non verranno modificate!</translation>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="286"/>
       <source>%1 (%2)</source>
       <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-      <translation type="unfinished">%1 (%2)</translation>
+      <translation>%1 (%2)</translation>
     </message>
   </context>
   <context>
@@ -7234,7 +7234,7 @@ Le proprie note non verranno modificate!</translation>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="119"/>
       <source>Select table layout or enter text:</source>
-      <translation type="unfinished">Select table layout or enter text:</translation>
+      <translation>Seleziona disposizione tabella o inserisci testo:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="126"/>
