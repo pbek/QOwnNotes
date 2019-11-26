@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 19.11.22
+- more missing locales and dictionary names were fixed (for [#1459](https://github.com/pbek/QOwnNotes/issues/1459), thank you @Waqar144)
+- fixed unable to switch back to last note subfolder after jumping to a subfolder
+  with the `Jump to the note's sub-folder` note list context menu item
+  (for [#1432](https://github.com/pbek/QOwnNotes/issues/1432))
+- the return key is now ignored in the *Table dialog* so you can better edit text
+  in the table (for [#1446](https://github.com/pbek/QOwnNotes/issues/1446))
+
 ## 19.11.21
 - added a note list context menu item to jump to the note sub-folder of the
   selected note (for [#1432](https://github.com/pbek/QOwnNotes/issues/1432), thank you @Waqar144)
