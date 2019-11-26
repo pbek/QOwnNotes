@@ -9670,6 +9670,13 @@ void MainWindow::on_noteTreeWidget_itemChanged(QTreeWidgetItem *item,
     }
 }
 
+void MainWindow::on_noteSubFolderTreeWidget_itemClicked(QTreeWidgetItem *item, int column) {
+    Q_UNUSED(column)
+    if (item != nullptr) {
+       emit ui->noteSubFolderTreeWidget->currentItemChanged(item, ui->noteSubFolderTreeWidget->currentItem());
+    }
+}
+
 void MainWindow::on_noteSubFolderTreeWidget_currentItemChanged(
         QTreeWidgetItem *current, QTreeWidgetItem *previous) {
     Q_UNUSED(previous)
