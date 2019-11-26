@@ -3312,7 +3312,7 @@ bool MainWindow::jumpToNoteHistoryItem(const NoteHistoryItem& historyItem) {
 }
 
 /**
- * Jumps to a note subfolder in the note subfolder selector
+ * Jumps to a note subfolder in the note subfolder tree
  *
  * @param noteSubFolderId
  * @return
@@ -3322,14 +3322,8 @@ bool MainWindow::jumpToNoteSubFolder(int noteSubFolderId) {
             Utils::Gui::getTreeWidgetItemWithUserData(
                 ui->noteSubFolderTreeWidget, noteSubFolderId);
 
-    if (item != Q_NULLPTR) {
-        const QSignalBlocker blocker(ui->noteSubFolderTreeWidget);
-        Q_UNUSED(blocker)
-
-        ui->noteSubFolderTreeWidget->clearSelection();
-        item->setSelected(true);
-
-        on_noteSubFolderTreeWidget_currentItemChanged(item, Q_NULLPTR);
+    if (item != nullptr) {
+        ui->noteSubFolderTreeWidget->setCurrentItem(item);
 
         return true;
     }
@@ -9554,7 +9548,6 @@ void MainWindow::openNotesContextMenu(
         } else if (selectedItem == moveToThisSubFolderAction){
             int subFolderId = getCurrentNote().getNoteSubFolderId();
             if (NoteSubFolder::activeNoteSubFolderId() != subFolderId) {
-                NoteSubFolder::setAsActive(subFolderId);
                 jumpToNoteSubFolder(subFolderId);
             }
         } else if (selectedItem == selectAllAction) {
@@ -9667,13 +9660,6 @@ void MainWindow::on_noteTreeWidget_itemChanged(QTreeWidgetItem *item,
         if (Utils::Misc::isNoteListPreview()) {
             updateNoteTreeWidgetItem(note, item);
         }
-    }
-}
-
-void MainWindow::on_noteSubFolderTreeWidget_itemClicked(QTreeWidgetItem *item, int column) {
-    Q_UNUSED(column)
-    if (item != nullptr) {
-       emit ui->noteSubFolderTreeWidget->currentItemChanged(item, ui->noteSubFolderTreeWidget->currentItem());
     }
 }
 
