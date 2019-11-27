@@ -23,7 +23,7 @@ class NotePreviewWidget : public QTextBrowser
     Q_OBJECT
 
 public:
-    explicit NotePreviewWidget(QWidget *parent = 0);
+    explicit NotePreviewWidget(QWidget *parent = nullptr);
     void initSearchFrame(QWidget *searchFrame, bool darkMode = false);
     QTextEditSearchWidget *searchWidget();
 
