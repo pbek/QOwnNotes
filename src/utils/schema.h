@@ -69,5 +69,14 @@ namespace Utils {
         const int TextPresetIndex = -1;
 
         QString textSettingsKey(const QString& key, int index);
+
+        QString encodeCssTextCharFormat(QTextCharFormat format);
+
+        QString encodeCssStyleForState(MarkdownHighlighter::HighlighterState index,
+                                           const QString &htmlTag);
+
+        QString encodeCssFont(const QFont &refFont);
+
+        QString getSchemaStyles();
     }
 }

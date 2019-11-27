@@ -24,6 +24,7 @@
 #include <QMimeDatabase>
 #include <QTemporaryFile>
 #include <utils/gui.h>
+#include <utils/schema.h>
 
 
 Note::Note() {
@@ -1931,9 +1932,8 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
     // we want to show quotes in the html, so we don't translate them into
     // `<q>` tags
     // HOEDOWN_EXT_MATH and HOEDOWN_EXT_MATH_EXPLICIT don't seem to do anything
-    hoedown_extensions extensions =
-            (hoedown_extensions) ((HOEDOWN_EXT_BLOCK | HOEDOWN_EXT_SPAN |
-                                   HOEDOWN_EXT_MATH_EXPLICIT) & ~HOEDOWN_EXT_QUOTE);
+    auto extensions = (hoedown_extensions) ((HOEDOWN_EXT_BLOCK | HOEDOWN_EXT_SPAN |
+            HOEDOWN_EXT_MATH_EXPLICIT) & ~HOEDOWN_EXT_QUOTE);
 
     QSettings settings;
     if (!settings.value("MainWindow/noteTextView.underline", true).toBool()) {
@@ -2076,7 +2076,7 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
 
         // add the font for the code block
         codeStyleSheet = QString(
-                "pre, code { %1; }").arg(encodeCssFont(font));
+                "pre, code { %1; }").arg(Utils::Schema::encodeCssFont(font));
 
         // ignore code font size to allow zooming (#1202)
         if (settings.value("MainWindow/noteTextView.ignoreCodeFontSize", true).toBool()) {
@@ -2102,6 +2102,10 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
     bool rtl = settings.value("MainWindow/noteTextView.rtl").toBool();
     QString rtlStyle = rtl ? "body {text-align: right; direction: rtl;}" : "";
 
+    // TODO: enable with setting
+//    QString schemaStyles = Utils::Schema::getSchemaStyles();
+    QString schemaStyles;
+
     if (forExport) {
         // get defined body font from settings
         QString bodyFontString = settings.value("MainWindow/noteTextView.font")
@@ -2114,7 +2118,7 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
             bodyFont.fromString(bodyFontString);
 
             exportStyleSheet = QString(
-                    "body { %1; }").arg(encodeCssFont(bodyFont));
+                    "body { %1; }").arg(Utils::Schema::encodeCssFont(bodyFont));
         }
 
         result = QString("<html><head><meta charset=\"utf-8\"/><style>"
@@ -2125,9 +2129,9 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
                                  "pre > code { padding: 0; }"
                                  "table {border-spacing: 0; border-style: solid; border-width: 1px; border-collapse: collapse; margin-top: 0.5em;}"
                                  "th, td {padding: 2px 5px;}"
-                                 "a { color: #FF9137; text-decoration: none; } %1 %2 %4"
+                                 "a { color: #FF9137; text-decoration: none; } %1 %2 %4 %6"
                                  "</style></head><body class=\"export\">%3</body></html>")
-                .arg(codeStyleSheet, exportStyleSheet, result, rtlStyle, codeBackgroundColor);
+                .arg(codeStyleSheet, exportStyleSheet, result, rtlStyle, codeBackgroundColor, schemaStyles);
     } else {
         // for preview
         result = QString("<html><head><style>"
@@ -2135,9 +2139,11 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
                                  "h2, h3 { margin: 10px 0 15px 0; }"
                                  "table {border-spacing: 0; border-style: solid; border-width: 1px; border-collapse: collapse; margin-top: 0.5em;}"
                                  "th, td {padding: 2px 5px;}"
-                                 "a { color: #FF9137; text-decoration: none; } %1 %3"
+                                 "a { color: #FF9137; text-decoration: none; } %1 %3 %4"
                                  "</style></head><body class=\"preview\">%2</body></html>")
-                .arg(codeStyleSheet, result, rtlStyle);
+                .arg(codeStyleSheet, result, rtlStyle, schemaStyles);
+
+        qDebug() << "result: " << result;
     }
 
     // check if there is a script that wants to modify the content
@@ -2210,113 +2216,6 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
 
 //    qDebug() << __func__ << " - 'result': " << result;
     return result;
-}
-
-/**
- * Returns the CSS code for a QFont
- * Thank you to Phil Weinstein for the code
- */
-QString Note::encodeCssFont(const QFont& refFont) {
-//-----------------------------------------------------------------------
-// This function assembles a CSS Font specification string from
-// a QFont. This supports most of the QFont attributes settable in
-// the Qt 4.8 and Qt 5.3 QFontDialog.
-//
-// (1) Font Family
-// (2) Font Weight (just bold or not)
-// (3) Font Style (possibly Italic or Oblique)
-// (4) Font Size (in either pixels or points)
-// (5) Decorations (possibly Underline or Strikeout)
-//
-// Not supported: Writing System (e.g. Latin).
-//
-// See the corresponding decode function, below.
-// QFont decodeCssFontString (const QString cssFontStr)
-//-----------------------------------------------------------------------
-
-    QStringList fields; // CSS font attribute fields
-
-// ***************************************************
-// *** (1) Font Family: Primary plus Substitutes ***
-// ***************************************************
-
-    const QString family = refFont.family();
-
-// NOTE [9-2014, Qt 4.8.6]: This isn't what I thought it was. It
-// does not return a list of "fallback" font faces (e.g. Georgia,
-// Serif for "Times New Roman"). In my testing, this is always
-// returning an empty list.
-//
-    QStringList famSubs = QFont::substitutes (family);
-
-    if (!famSubs.contains (family))
-        famSubs.prepend (family);
-
-    static const QChar DBL_QUOT ('"');
-    const int famCnt = famSubs.count();
-    QStringList famList;
-    for (int inx = 0; inx < famCnt; ++inx)
-    {
-// Place double quotes around family names having space characters,
-// but only if double quotes are not already there.
-//
-        const QString fam = famSubs [inx];
-        if (fam.contains (' ') && !fam.startsWith (DBL_QUOT))
-            famList << (DBL_QUOT + fam + DBL_QUOT);
-        else
-            famList << fam;
-    }
-
-    const QString famStr = QString ("font-family: ") + famList.join (", ");
-    fields << famStr;
-
-// **************************************
-// *** (2) Font Weight: Bold or Not ***
-// **************************************
-
-    const bool bold = refFont.bold();
-    if (bold)
-        fields << "font-weight: bold";
-
-// ****************************************************
-// *** (3) Font Style: possibly Italic or Oblique ***
-// ****************************************************
-
-    const QFont::Style style = refFont.style();
-    switch (style)
-    {
-        case QFont::StyleNormal: break;
-        case QFont::StyleItalic: fields << "font-style: italic"; break;
-        case QFont::StyleOblique: fields << "font-style: oblique"; break;
-    }
-
-// ************************************************
-// *** (4) Font Size: either Pixels or Points ***
-// ************************************************
-
-    const double sizeInPoints = refFont.pointSizeF(); // <= 0 if not defined.
-    const int sizeInPixels = refFont.pixelSize(); // <= 0 if not defined.
-    if (sizeInPoints > 0.0)
-        fields << QString ("font-size: %1pt") .arg (sizeInPoints);
-    else if (sizeInPixels > 0)
-        fields << QString ("font-size: %1px") .arg (sizeInPixels);
-
-// ***********************************************
-// *** (5) Decorations: Underline, Strikeout ***
-// ***********************************************
-
-    const bool underline = refFont.underline();
-    const bool strikeOut = refFont.strikeOut();
-
-    if (underline && strikeOut)
-        fields << "text-decoration: underline line-through";
-    else if (underline)
-        fields << "text-decoration: underline";
-    else if (strikeOut)
-        fields << "text-decoration: line-through";
-
-    const QString cssFontStr = fields.join ("; ");
-    return cssFontStr;
 }
 
 bool Note::isFetched() {

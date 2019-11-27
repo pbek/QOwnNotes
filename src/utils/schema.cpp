@@ -21,7 +21,7 @@
 #include <QTextEdit>
 #include <QFontDatabase>
 #include "schema.h"
-#include "math.h"
+#include <cmath>
 
 Utils::Schema::Settings* Utils::Schema::schemaSettings = nullptr;
 
@@ -333,4 +333,153 @@ QFont Utils::Schema::Settings::getEditorFont(int index) const {
     } else {
         return getEditorTextFont();
     }
+}
+
+QString Utils::Schema::getSchemaStyles() {
+    QString schemaStyles;
+
+    schemaStyles += encodeCssStyleForState(MarkdownHighlighter::NoState, "body");
+    schemaStyles += encodeCssStyleForState(MarkdownHighlighter::H1, "h1");
+    schemaStyles += encodeCssStyleForState(MarkdownHighlighter::H2, "h2");
+    schemaStyles += encodeCssStyleForState(MarkdownHighlighter::H3, "h3");
+    schemaStyles += encodeCssStyleForState(MarkdownHighlighter::H4, "h4");
+    schemaStyles += encodeCssStyleForState(MarkdownHighlighter::H5, "h5");
+    schemaStyles += encodeCssStyleForState(MarkdownHighlighter::H6, "h6");
+    schemaStyles += encodeCssStyleForState(MarkdownHighlighter::Link, "a");
+    schemaStyles += encodeCssStyleForState(MarkdownHighlighter::Bold, "b, strong");
+    schemaStyles += encodeCssStyleForState(MarkdownHighlighter::Italic, "i, em");
+    schemaStyles += encodeCssStyleForState(MarkdownHighlighter::CodeBlock, "pre > code");
+    schemaStyles += encodeCssStyleForState(MarkdownHighlighter::InlineCodeBlock, "p > code");
+
+    qDebug()<<schemaStyles;
+
+    return schemaStyles;
+}
+
+QString Utils::Schema::encodeCssTextCharFormat(QTextCharFormat format) {
+    auto css = QString("%1; color: %2;").arg(
+                encodeCssFont(format.font()),
+                format.foreground().color().name());
+
+    auto brush = format.background();
+    if (brush.isOpaque()) {
+        css += QString(" background-color: %1").arg(
+                    brush.color().name());
+    }
+
+    return css;
+}
+
+QString Utils::Schema::encodeCssStyleForState(MarkdownHighlighter::HighlighterState index,
+                                   const QString &htmlTag) {
+    QTextCharFormat format;
+    Utils::Schema::schemaSettings->setFormatStyle(index, format);
+    return QString("%1 {%2}").arg(htmlTag, encodeCssTextCharFormat(format));
+}
+
+/**
+ * Returns the CSS code for a QFont
+ * Thank you to Phil Weinstein for the code
+ */
+QString Utils::Schema::encodeCssFont(const QFont& refFont) {
+//-----------------------------------------------------------------------
+// This function assembles a CSS Font specification string from
+// a QFont. This supports most of the QFont attributes settable in
+// the Qt 4.8 and Qt 5.3 QFontDialog.
+//
+// (1) Font Family
+// (2) Font Weight (just bold or not)
+// (3) Font Style (possibly Italic or Oblique)
+// (4) Font Size (in either pixels or points)
+// (5) Decorations (possibly Underline or Strikeout)
+//
+// Not supported: Writing System (e.g. Latin).
+//
+// See the corresponding decode function, below.
+// QFont decodeCssFontString (const QString cssFontStr)
+//-----------------------------------------------------------------------
+
+    QStringList fields; // CSS font attribute fields
+
+// ***************************************************
+// *** (1) Font Family: Primary plus Substitutes ***
+// ***************************************************
+
+    const QString family = refFont.family();
+
+// NOTE [9-2014, Qt 4.8.6]: This isn't what I thought it was. It
+// does not return a list of "fallback" font faces (e.g. Georgia,
+// Serif for "Times New Roman"). In my testing, this is always
+// returning an empty list.
+//
+    QStringList famSubs = QFont::substitutes (family);
+
+    if (!famSubs.contains (family))
+        famSubs.prepend (family);
+
+    static const QChar DBL_QUOT ('"');
+    const int famCnt = famSubs.count();
+    QStringList famList;
+    for (int inx = 0; inx < famCnt; ++inx)
+    {
+// Place double quotes around family names having space characters,
+// but only if double quotes are not already there.
+//
+        const QString fam = famSubs [inx];
+        if (fam.contains (' ') && !fam.startsWith (DBL_QUOT))
+            famList << (DBL_QUOT + fam + DBL_QUOT);
+        else
+            famList << fam;
+    }
+
+    const QString famStr = QString ("font-family: ") + famList.join (", ");
+    fields << famStr;
+
+// **************************************
+// *** (2) Font Weight: Bold or Not ***
+// **************************************
+
+    const bool bold = refFont.bold();
+    if (bold)
+        fields << "font-weight: bold";
+
+// ****************************************************
+// *** (3) Font Style: possibly Italic or Oblique ***
+// ****************************************************
+
+    const QFont::Style style = refFont.style();
+    switch (style)
+    {
+        case QFont::StyleNormal: break;
+        case QFont::StyleItalic: fields << "font-style: italic"; break;
+        case QFont::StyleOblique: fields << "font-style: oblique"; break;
+    }
+
+// ************************************************
+// *** (4) Font Size: either Pixels or Points ***
+// ************************************************
+
+    const double sizeInPoints = refFont.pointSizeF(); // <= 0 if not defined.
+    const int sizeInPixels = refFont.pixelSize(); // <= 0 if not defined.
+    if (sizeInPoints > 0.0)
+        fields << QString ("font-size: %1pt") .arg (sizeInPoints);
+    else if (sizeInPixels > 0)
+        fields << QString ("font-size: %1px") .arg (sizeInPixels);
+
+// ***********************************************
+// *** (5) Decorations: Underline, Strikeout ***
+// ***********************************************
+
+    const bool underline = refFont.underline();
+    const bool strikeOut = refFont.strikeOut();
+
+    if (underline && strikeOut)
+        fields << "text-decoration: underline line-through";
+    else if (underline)
+        fields << "text-decoration: underline";
+    else if (strikeOut)
+        fields << "text-decoration: line-through";
+
+    const QString cssFontStr = fields.join ("; ");
+    return cssFontStr;
 }
