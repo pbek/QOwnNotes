@@ -5248,6 +5248,10 @@ void MainWindow::filterNotesBySearchLineEditText() {
 
             // hide all filtered notes
             item->setHidden(isHidden);
+            //set the item as filtered
+            //we will use this value in multiple note folder filtering
+            //to check whether a note is filtered
+            item->setData(3, Qt::UserRole, isHidden);
 
             // count occurrences of search terms in notes
             if (!isHidden && showMatches) {
@@ -9743,9 +9747,12 @@ void MainWindow::filterNotesByMultipleNoteSubFolders() {
         if (!noteIdList.contains((*it)->data(0, Qt::UserRole).toInt())) {
             (*it)->setHidden(true);
         } else {
-            (*it)->setHidden(false);
+            //if the item wasn't filtered by the searchLineEdit
+            if (!(*it)->data(3, Qt::UserRole).toBool())
+                (*it)->setHidden(false);
         }
-
+        //reset the value
+        (*it)->setData(3, Qt::UserRole, false);
         ++it;
     }
 }
