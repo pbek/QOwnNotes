@@ -5176,6 +5176,8 @@ void MainWindow::filterNotes(bool searchForText) {
         filterNotesByNoteSubFolders();
     }
 
+    filterNotesByMultipleNoteSubFolders();
+
     // moved condition whether to filter notes by tag at all into
     // filterNotesByTag() -- it can now be used as a slot at startup
     filterNotesByTag();
@@ -9707,8 +9709,12 @@ void MainWindow::on_noteSubFolderTreeWidget_currentItemChanged(
     reloadTagTree();
 }
 
-void MainWindow::on_noteSubFolderTreeWidget_itemSelectionChanged()
-{
+void MainWindow::on_noteSubFolderTreeWidget_itemSelectionChanged() {
+    filterNotes();
+}
+
+void MainWindow::filterNotesByMultipleNoteSubFolders() {
+
     auto items = ui->noteSubFolderTreeWidget->selectedItems();
     //if no items selected
     if (items.count() < 1) {
