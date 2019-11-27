@@ -9673,6 +9673,13 @@ void MainWindow::on_noteSubFolderTreeWidget_currentItemChanged(
         QTreeWidgetItem *current, QTreeWidgetItem *previous) {
     Q_UNUSED(previous)
 
+    auto items = ui->noteSubFolderTreeWidget->selectedItems();
+    //if multiple items are selected, we just set the last selected
+    //as active and return;
+    if (items.size() > 1) {
+        return;
+    }
+
     if (current == nullptr) {
         return;
     }
@@ -9698,6 +9705,43 @@ void MainWindow::on_noteSubFolderTreeWidget_currentItemChanged(
     }
 
     reloadTagTree();
+}
+
+void MainWindow::on_noteSubFolderTreeWidget_itemSelectionChanged()
+{
+    auto items = ui->noteSubFolderTreeWidget->selectedItems();
+    //if no items selected
+    if (items.count() < 1) {
+        return;
+    }
+
+    QList<int> noteSubFolderIds;
+    QList<int> noteIdList;
+    //get all the folder ids
+    Q_FOREACH(QTreeWidgetItem *item, items) {
+        noteSubFolderIds << item->data(0, Qt::UserRole).toInt();
+    }
+
+    // get the notes from the subfolders
+    Q_FOREACH(int noteSubFolderId, noteSubFolderIds) {
+        // get all notes of a note sub folder
+        QList<Note> noteList = Note::fetchAllByNoteSubFolderId(
+                    noteSubFolderId);
+        noteIdList << Note::noteIdListFromNoteList(noteList);
+    }
+
+    QTreeWidgetItemIterator it(ui->noteTreeWidget);
+
+    while (*it) {
+        // hide all notes that are not in selection
+        if (!noteIdList.contains((*it)->data(0, Qt::UserRole).toInt())) {
+            (*it)->setHidden(true);
+        } else {
+            (*it)->setHidden(false);
+        }
+
+        ++it;
+    }
 }
 
 /**
