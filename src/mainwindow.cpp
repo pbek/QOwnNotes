@@ -9721,7 +9721,7 @@ void MainWindow::filterNotesByMultipleNoteSubFolders() {
 
     auto items = ui->noteSubFolderTreeWidget->selectedItems();
     //if no items selected
-    if (items.count() < 1) {
+    if (items.count() <= 1) {
         return;
     }
 
