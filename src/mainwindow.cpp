@@ -1796,6 +1796,8 @@ void MainWindow::changeNoteFolder(int noteFolderId, bool forceChange) {
         // commit the changes in the selected note folder to git
         gitCommitCurrentNoteFolder();
     }
+
+    generateSystemTrayContextMenu();
 }
 
 /*
@@ -5872,6 +5874,51 @@ void MainWindow::generateSystemTrayContextMenu() {
             this, SLOT(showWindow()));
 
     menu->addSeparator();
+
+    QList<NoteFolder> noteFolders = NoteFolder::fetchAll();
+    int noteFoldersCount = noteFolders.count();
+
+    if (noteFoldersCount > 1) {
+
+        // didn't resulted in a visible text
+//        QWidgetAction* action = new QWidgetAction(menu);
+//        QLabel* label = new QLabel(NoteFolder::currentNoteFolder().getName(), menu);
+//        action->setDefaultWidget(label);
+//        menu->addAction(action);
+
+        QMenu *noteFolderMenu = menu->addMenu(tr("Note folders"));
+
+        // populate the note folder menu
+        Q_FOREACH(const NoteFolder &noteFolder, noteFolders) {
+            // don't show not existing folders or if path is empty
+            if (!noteFolder.localPathExists()) {
+                continue;
+            }
+
+            // add a menu entry
+            QAction *action = noteFolderMenu->addAction(noteFolder.getName());
+            action->setToolTip(noteFolder.getLocalPath());
+            action->setStatusTip(noteFolder.getLocalPath());
+
+            if (noteFolder.isCurrent()) {
+                QFont font = action->font();
+                // setting it bold didn't do anything for me
+                font.setBold(true);
+                action->setFont(font);
+
+                action->setIcon(QIcon::fromTheme(
+                        QStringLiteral("folder"),
+                        QIcon(QStringLiteral(":icons/breeze-qownnotes/16x16/folder.svg"))));
+            }
+
+            int folderId = noteFolder.getId();
+            connect(action, &QAction::triggered, [this, folderId](){
+                changeNoteFolder(folderId);
+            });
+        }
+
+        menu->addSeparator();
+    }
 
     // add menu entry to create a new note
     QAction *createNoteAction = menu->addAction(tr("New note"));
