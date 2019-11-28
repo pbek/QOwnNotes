@@ -5382,6 +5382,9 @@ void MainWindow::filterNotesByTag() {
         // filterNotesByNoteSubFolders
         if (!fileNameList.contains((*it)->text(0))) {
             (*it)->setHidden(true);
+            //we set column 4 as true
+            //we will use this value later in multiple folder filtering
+            (*it)->setData(4, Qt::UserRole, true);
         }
 
         ++it;
@@ -9758,11 +9761,13 @@ void MainWindow::filterNotesByMultipleNoteSubFolders() {
             (*it)->setHidden(true);
         } else {
             //if the item wasn't filtered by the searchLineEdit
-            if (!(*it)->data(3, Qt::UserRole).toBool())
+            if (!(*it)->data(3, Qt::UserRole).toBool() &&
+                !(*it)->data(4, Qt::UserRole).toBool())
                 (*it)->setHidden(false);
         }
         //reset the value
         (*it)->setData(3, Qt::UserRole, false);
+        (*it)->setData(4, Qt::UserRole, false);
         ++it;
     }
 }
