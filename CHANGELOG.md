@@ -7,6 +7,7 @@
 - you now change the current note folder in the tray icon
   (for [#1451](https://github.com/pbek/QOwnNotes/issues/1451))
     - the current note folder is marked with an icon (making it bold didn't seem to work)
+- added more Uzbek, Japanese translation (thank you Fabijenna, shitennouji)
 
 ## 19.11.22
 - more missing locales and dictionary names were fixed (for [#1459](https://github.com/pbek/QOwnNotes/issues/1459), thank you @Waqar144)
