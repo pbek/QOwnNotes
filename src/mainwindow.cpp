@@ -9732,8 +9732,18 @@ void MainWindow::filterNotesByMultipleNoteSubFolders() {
         noteSubFolderIds << item->data(0, Qt::UserRole).toInt();
     }
 
+    QList<int> noteSubFolderRecursiveIds;
+    if (NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively()) {
+        Q_FOREACH(int subFolId, noteSubFolderIds) {
+            noteSubFolderRecursiveIds << NoteSubFolder::fetchIdsRecursivelyByParentId(subFolId);
+        }
+    }
+    else {
+        noteSubFolderRecursiveIds << noteSubFolderIds;
+    }
+
     // get the notes from the subfolders
-    Q_FOREACH(int noteSubFolderId, noteSubFolderIds) {
+    Q_FOREACH(int noteSubFolderId, noteSubFolderRecursiveIds) {
         // get all notes of a note sub folder
         QList<Note> noteList = Note::fetchAllByNoteSubFolderId(
                     noteSubFolderId);
