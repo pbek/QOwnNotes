@@ -683,6 +683,8 @@ void SettingsDialog::storeSettings() {
                       ui->noteTextViewIgnoreCodeFontSizeCheckBox->isChecked());
     settings.setValue("MainWindow/noteTextView.underline",
                       ui->noteTextViewUnderlineCheckBox->isChecked());
+    settings.setValue("MainWindow/noteTextView.useEditorStyles",
+                      ui->noteTextViewUseEditorStylesCheckBox->isChecked());
     settings.setValue("Debug/fakeOldVersionNumber",
                       ui->oldVersionNumberCheckBox->isChecked());
     settings.setValue("Debug/fileLogging",
@@ -1014,6 +1016,8 @@ void SettingsDialog::readSettings() {
             settings.value("MainWindow/noteTextView.ignoreCodeFontSize", true).toBool());
     ui->noteTextViewUnderlineCheckBox->setChecked(
             settings.value("MainWindow/noteTextView.underline", true).toBool());
+    ui->noteTextViewUseEditorStylesCheckBox->setChecked(
+                settings.value("MainWindow/noteTextView.useEditorStyles", true).toBool());
     ui->oldVersionNumberCheckBox->setChecked(
             settings.value("Debug/fakeOldVersionNumber").toBool());
     ui->fileLoggingCheckBox->setChecked(

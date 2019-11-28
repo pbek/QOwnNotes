@@ -2102,10 +2102,6 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
     bool rtl = settings.value("MainWindow/noteTextView.rtl").toBool();
     QString rtlStyle = rtl ? "body {text-align: right; direction: rtl;}" : "";
 
-    // TODO: enable with setting
-//    QString schemaStyles = Utils::Schema::getSchemaStyles();
-    QString schemaStyles;
-
     if (forExport) {
         // get defined body font from settings
         QString bodyFontString = settings.value("MainWindow/noteTextView.font")
@@ -2129,10 +2125,13 @@ QString Note::textToMarkdownHtml(QString str, const QString& notesPath,
                                  "pre > code { padding: 0; }"
                                  "table {border-spacing: 0; border-style: solid; border-width: 1px; border-collapse: collapse; margin-top: 0.5em;}"
                                  "th, td {padding: 2px 5px;}"
-                                 "a { color: #FF9137; text-decoration: none; } %1 %2 %4 %6"
+                                 "a { color: #FF9137; text-decoration: none; } %1 %2 %4"
                                  "</style></head><body class=\"export\">%3</body></html>")
-                .arg(codeStyleSheet, exportStyleSheet, result, rtlStyle, codeBackgroundColor, schemaStyles);
+                .arg(codeStyleSheet, exportStyleSheet, result, rtlStyle, codeBackgroundColor);
     } else {
+        QString schemaStyles = settings.value("MainWindow/noteTextView.useEditorStyles", true).toBool() ?
+                    Utils::Schema::getSchemaStyles() : "";
+
         // for preview
         result = QString("<html><head><style>"
                                  "h1 { margin: 5px 0 20px 0; }"

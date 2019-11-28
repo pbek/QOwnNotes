@@ -397,7 +397,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>18</number>
+            <number>11</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -4618,6 +4618,13 @@ p, li { white-space: pre-wrap; }
                   </property>
                  </widget>
                 </item>
+                <item row="1" column="0" colspan="2">
+                 <widget class="QCheckBox" name="noteTextViewUseEditorStylesCheckBox">
+                  <property name="text">
+                   <string>Use editor highlighting styles also for the preview</string>
+                  </property>
+                 </widget>
+                </item>
                </layout>
               </widget>
              </item>
@@ -6112,8 +6119,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
   <tabstop>enableSocketServerCheckBox</tabstop>
  </tabstops>
  <resources>
-  <include location="../breeze-qownnotes.qrc"/>
   <include location="../breeze-dark-qownnotes.qrc"/>
+  <include location="../breeze-qownnotes.qrc"/>
  </resources>
  <connections>
   <connection>
