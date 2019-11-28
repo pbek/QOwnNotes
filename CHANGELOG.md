@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 19.11.23
+- now most of the editor styling will be also used in the preview by default
+  (for [#1462](https://github.com/pbek/QOwnNotes/issues/1462))
+    - this can be turned off in the *Preview settings*
+- you now change the current note folder in the tray icon
+  (for [#1451](https://github.com/pbek/QOwnNotes/issues/1451))
+    - the current note folder is marked with an icon (making it bold didn't seem to work)
+
 ## 19.11.22
 - more missing locales and dictionary names were fixed (for [#1459](https://github.com/pbek/QOwnNotes/issues/1459), thank you @Waqar144)
 - fixed unable to switch back to last note subfolder after jumping to a subfolder
