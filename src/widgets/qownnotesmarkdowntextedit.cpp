@@ -372,38 +372,11 @@ void QOwnNotesMarkdownTextEdit::setText(const QString &text) {
         h->setCodeHighlighting(false);
     }
 
-    //check for broken links
-    h->sethighlightBrokenNotesLink(false);
-    // check legacy note:// links
-    QRegularExpression regex(R"(note:\/\/[^\s\)>]+)");
-    QRegularExpressionMatch match = regex.match(text);
-
-    if (match.hasMatch()) {
-        h->sethighlightBrokenNotesLink(true);
-    }
-
-    // else we check for <note file.md> links
-    regex = QRegularExpression(QStringLiteral("<([^\\s`][^`]*?\\.[^`]*?[^\\s`]\\.md)>"));
-    match = regex.match(text);
-
-    if (match.hasMatch()) {
-        h->sethighlightBrokenNotesLink(true);
-    }
-
-    // else we check for [note](note file.md) links
-    regex = QRegularExpression(R"(\[[^\[\]]+\]\((\S+\.md|.+?\.md)\)\B)");
-    match = regex.match(text);
-
-    if (match.hasMatch()) {
-        h->sethighlightBrokenNotesLink(true);
-    }
-
     QMarkdownTextEdit::setText(text);
 
     //after we are done we turn everything back on
     h->setCodeHighlighting(true);
     h->setCommentHighlighting(true);
-    h->sethighlightBrokenNotesLink(true);
 }
 
 void QOwnNotesMarkdownTextEdit::resizeEvent(QResizeEvent* event) {
