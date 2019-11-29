@@ -44,7 +44,6 @@ QOwnNotesMarkdownHighlighter::QOwnNotesMarkdownHighlighter(
 
     commentHighlightingOn = true;
     codeHighlightingOn = true;
-    highlightBrokenNotesLinkOn = true;
 }
 
 QOwnNotesMarkdownHighlighter::~QOwnNotesMarkdownHighlighter()
@@ -77,14 +76,6 @@ void QOwnNotesMarkdownHighlighter::setCodeHighlighting(bool state)
         return;
     }
     codeHighlightingOn = state;
-}
-
-void QOwnNotesMarkdownHighlighter::sethighlightBrokenNotesLink(bool state)
-{
-    if (state == highlightBrokenNotesLinkOn){
-        return;
-    }
-    highlightBrokenNotesLinkOn = state;
 }
 
 /**
@@ -130,11 +121,11 @@ void QOwnNotesMarkdownHighlighter::highlightMarkdown(const QString& text) {
         highlightAdditionalRules(_highlightingRulesAfter, text);
 
         // highlight broken note links
-        if (highlightBrokenNotesLinkOn) {
-            if (text.contains(QStringLiteral("note://")) || text.contains(QStringLiteral(".md"))) {
+
+        if (text.contains(QStringLiteral("note://")) || text.contains(QStringLiteral(".md"))) {
             highlightBrokenNotesLink(text);
-            }
         }
+
     }
 
     if (commentHighlightingOn) {

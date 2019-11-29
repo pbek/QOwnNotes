@@ -50,7 +50,6 @@ public:
     void updateCurrentNote(const Note &_note);
     void setCommentHighlighting(bool);
     void setCodeHighlighting(bool);
-    void sethighlightBrokenNotesLink(bool);
     void setSpellChecker(QOwnSpellChecker*);
 
 protected:
@@ -65,13 +64,11 @@ protected:
     void highlightSpellChecking(const QString &text);
 
 private:
+    Sonnet::WordTokenizer *wordTokenizer;
+    Sonnet::LanguageFilter *languageFilter;
+    QOwnSpellChecker *spellchecker;
+    int codeBlock;
     Note _currentNote;
     bool commentHighlightingOn;
     bool codeHighlightingOn;
-    bool highlightBrokenNotesLinkOn;
-    QOwnSpellChecker *spellchecker;
-
-    Sonnet::LanguageFilter *languageFilter;
-    Sonnet::WordTokenizer *wordTokenizer;
-    int codeBlock;
 };
