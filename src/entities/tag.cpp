@@ -676,6 +676,42 @@ QStringList Tag::fetchAllNames() {
 }
 
 /**
+ * Count the linked note file names for a note folder
+ */
+int Tag::countLinkedNoteFileNamesForNoteFolder(NoteSubFolder noteSubFolder, bool recursive) const {
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlQuery query(db);
+
+    if (recursive) {
+        query.prepare(QStringLiteral("SELECT COUNT(note_file_name) AS cnt FROM noteTagLink "
+                              "WHERE tag_id = :id AND "
+                              "note_sub_folder_path LIKE :noteSubFolderPath"));
+        query.bindValue(QStringLiteral(":noteSubFolderPath"),
+                        noteSubFolder.relativePath() + QLatin1Char('%'));
+    } else {
+        query.prepare(QStringLiteral("SELECT COUNT(note_file_name) AS cnt FROM noteTagLink "
+                      "WHERE tag_id = :id AND "
+                      "note_sub_folder_path = :noteSubFolderPath"));
+        query.bindValue(QStringLiteral(":noteSubFolderPath"),
+                        noteSubFolder.relativePath() + QLatin1Char('%'));
+    }
+    query.bindValue(QStringLiteral(":id"), this->id);
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else if (query.first()) {
+        int result = query.value(QStringLiteral("cnt")).toInt();
+        DatabaseService::closeDatabaseConnection(db, query);
+
+        return result;
+    }
+
+    DatabaseService::closeDatabaseConnection(db, query);
+
+    return 0;
+}
+
+/**
  * Count the linked note file names
  */
 int Tag::countLinkedNoteFileNames(bool fromAllSubfolders, bool recursive) const {

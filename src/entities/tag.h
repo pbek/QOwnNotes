@@ -56,6 +56,8 @@ public:
 
     int countLinkedNoteFileNames(bool fromAllSubfolder, bool recursive) const;
 
+    int countLinkedNoteFileNamesForNoteFolder(NoteSubFolder noteSubFolder, bool recursive) const;
+
     int getParentId() const;
 
     void setParentId(int id);

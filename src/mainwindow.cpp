@@ -5176,11 +5176,11 @@ void MainWindow::filterNotes(bool searchForText) {
         filterNotesByNoteSubFolders();
     }
 
-    filterNotesByMultipleNoteSubFolders();
-
     // moved condition whether to filter notes by tag at all into
     // filterNotesByTag() -- it can now be used as a slot at startup
     filterNotesByTag();
+
+    filterNotesByMultipleNoteSubFolders();
 
     if (searchForText) {
         // let's highlight the text from the search line edit
@@ -7248,11 +7248,16 @@ void MainWindow::reloadTagTree() {
     QList<int> noteIdList;
     int untaggedNoteCount = 0;
 
-    // check if the notes should be viewed recursively
-    if (NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively()) {
-        noteSubFolderIds = NoteSubFolder::fetchIdsRecursivelyByParentId(activeNoteSubFolderId);
-    } else {
-        noteSubFolderIds << activeNoteSubFolderId;
+    auto noteSubFolderWidgetItems = ui->noteSubFolderTreeWidget->selectedItems();
+
+    Q_FOREACH (QTreeWidgetItem *i, noteSubFolderWidgetItems) {
+        int id = i->data(0, Qt::UserRole).toInt();
+        // check if the notes should be viewed recursively
+        if (NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively()) {
+            noteSubFolderIds << NoteSubFolder::fetchIdsRecursivelyByParentId(id);
+        } else {
+            noteSubFolderIds << id;
+        }
     }
 
     qDebug() << __func__ << " - 'noteSubFolderIds': " << noteSubFolderIds;
@@ -7534,8 +7539,22 @@ QTreeWidgetItem *MainWindow::addTagToTagTreeWidget(
 
     auto *item = new QTreeWidgetItem();
     QString name = tag.getName();
-    int linkCount = tag.countLinkedNoteFileNames(_showNotesFromAllNoteSubFolders,
+
+    int linkCount = 0;
+    auto items = ui->noteSubFolderTreeWidget->selectedItems();
+    if (items.count() > 1) {
+        Q_FOREACH(const QTreeWidgetItem *folderItem, items) {
+            int id = folderItem->data(0, Qt::UserRole).toInt();
+            NoteSubFolder folder = NoteSubFolder::fetch(id);
+            if (folder.isFetched()) {
+                linkCount += tag.countLinkedNoteFileNamesForNoteFolder(folder,
+                                    NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively());
+            }
+        }
+    } else {
+        linkCount = tag.countLinkedNoteFileNames(_showNotesFromAllNoteSubFolders,
                             NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively());
+    }
     QString toolTip = tr("show all notes tagged with '%1' (%2)")
                     .arg(name, QString::number(linkCount));
     item->setData(0, Qt::UserRole, tagId);
@@ -9682,13 +9701,6 @@ void MainWindow::on_noteSubFolderTreeWidget_currentItemChanged(
         QTreeWidgetItem *current, QTreeWidgetItem *previous) {
     Q_UNUSED(previous)
 
-    auto items = ui->noteSubFolderTreeWidget->selectedItems();
-    //if multiple items are selected, we just set the last selected
-    //as active and return;
-    if (items.size() > 1) {
-        return;
-    }
-
     if (current == nullptr) {
         return;
     }
@@ -9699,6 +9711,13 @@ void MainWindow::on_noteSubFolderTreeWidget_currentItemChanged(
 
     NoteSubFolder::setAsActive(_showNotesFromAllNoteSubFolders ?
                                0 : noteSubFolderId);
+
+    auto items = ui->noteSubFolderTreeWidget->selectedItems();
+    //if multiple items are selected, we just set the last selected
+    //as active and return;
+    if (items.count() > 1) {
+        return;
+    }
 
     QSettings settings;
     settings.setValue(QStringLiteral("MainWindow/showNotesFromAllNoteSubFolders"),
@@ -9718,6 +9737,7 @@ void MainWindow::on_noteSubFolderTreeWidget_currentItemChanged(
 
 void MainWindow::on_noteSubFolderTreeWidget_itemSelectionChanged() {
     filterNotes();
+    reloadTagTree();
 }
 
 void MainWindow::filterNotesByMultipleNoteSubFolders() {
