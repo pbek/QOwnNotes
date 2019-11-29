@@ -604,6 +604,39 @@ QStringList Tag::fetchAllLinkedNoteFileNames(bool fromAllSubfolders) const {
 }
 
 /**
+ * Fetches all linked note file names for a given subfolder
+ */
+
+QStringList Tag::fetchAllLinkedNoteFileNamesForFolder(const NoteSubFolder &noteSubFolder, bool fromAllSubfolders) const {
+    QSqlDatabase db = DatabaseService::getNoteFolderDatabase();
+    QSqlQuery query(db);
+    QStringList fileNameList;
+
+    if (fromAllSubfolders) {
+         // 'All notes' selected in note subfolder panel
+        query.prepare(QStringLiteral("SELECT note_file_name FROM noteTagLink WHERE tag_id = :id"));
+    } else {
+        query.prepare(QStringLiteral("SELECT note_file_name FROM noteTagLink WHERE tag_id = :id "
+                              "AND note_sub_folder_path LIKE :noteSubFolderPath"));
+        query.bindValue(QStringLiteral(":noteSubFolderPath"), noteSubFolder.relativePath() + "%");
+    }
+
+    query.bindValue(QStringLiteral(":id"), this->id);
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        for (int r = 0; query.next(); r++) {
+            fileNameList.append(query.value(QStringLiteral("note_file_name")).toString());
+        }
+    }
+
+    DatabaseService::closeDatabaseConnection(db, query);
+
+    return fileNameList;
+}
+
+/**
  * Fetches all linked notes
  */
 QList<Note> Tag::fetchAllLinkedNotes() {

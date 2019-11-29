@@ -5176,11 +5176,12 @@ void MainWindow::filterNotes(bool searchForText) {
         filterNotesByNoteSubFolders();
     }
 
+    filterNotesByMultipleNoteSubFolders();
+
     // moved condition whether to filter notes by tag at all into
     // filterNotesByTag() -- it can now be used as a slot at startup
     filterNotesByTag();
 
-    filterNotesByMultipleNoteSubFolders();
 
     if (searchForText) {
         // let's highlight the text from the search line edit
@@ -5354,11 +5355,22 @@ void MainWindow::filterNotesByTag() {
 
             qDebug() << __func__ << " - 'tags': " << tags;
 
+            auto selectedFolderItems = ui->noteSubFolderTreeWidget->selectedItems();
+
             Q_FOREACH(const Tag &tag, tags) {
                     // fetch all linked note names
+                if (selectedFolderItems.count() > 1) {
+                    Q_FOREACH(const QTreeWidgetItem *i, selectedFolderItems) {
+                        int id = i->data(0, Qt::UserRole).toInt();
+                        NoteSubFolder folder = NoteSubFolder::fetch(id);
+                        fileNameList << tag.fetchAllLinkedNoteFileNamesForFolder(folder,
+                                        _showNotesFromAllNoteSubFolders);
+                    }
+                } else {
                     fileNameList << tag.fetchAllLinkedNoteFileNames(
-                            _showNotesFromAllNoteSubFolders);
+                                        _showNotesFromAllNoteSubFolders);
                 }
+            }
 
             break;
     }
@@ -5382,9 +5394,6 @@ void MainWindow::filterNotesByTag() {
         // filterNotesByNoteSubFolders
         if (!fileNameList.contains((*it)->text(0))) {
             (*it)->setHidden(true);
-            //we set column 4 as true
-            //we will use this value later in multiple folder filtering
-            (*it)->setData(4, Qt::UserRole, true);
         }
 
         ++it;
@@ -8211,7 +8220,6 @@ void MainWindow::on_tagTreeWidget_currentItemChanged(
     Q_UNUSED(blocker)
 
     ui->searchLineEdit->clear();
-
     filterNotes();
 }
 
@@ -9781,13 +9789,24 @@ void MainWindow::filterNotesByMultipleNoteSubFolders() {
             (*it)->setHidden(true);
         } else {
             //if the item wasn't filtered by the searchLineEdit
-            if (!(*it)->data(3, Qt::UserRole).toBool() &&
-                !(*it)->data(4, Qt::UserRole).toBool())
+            if (!(*it)->data(3, Qt::UserRole).toBool()) {
                 (*it)->setHidden(false);
+            }
         }
-        //reset the value
+        //reset the value for searchLineEdit
         (*it)->setData(3, Qt::UserRole, false);
-        (*it)->setData(4, Qt::UserRole, false);
+        ++it;
+    }
+}
+
+void MainWindow::clearTagFilteringColumn() {
+    QTreeWidgetItemIterator it(ui->noteTreeWidget);
+    while (*it) {
+        //if the item wasn't filtered by the searchLineEdit
+        if ((*it)->data(4, Qt::UserRole).toBool()) {
+            (*it)->setData(4, Qt::UserRole, false);
+        }
+        //reset the value for searchLineEdit
         ++it;
     }
 }
