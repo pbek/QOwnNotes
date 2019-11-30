@@ -35,6 +35,10 @@ HEADERS += $$PWD/client_p.h \
 # Sonnet Plugins
 include($$PWD/../plugins/hunspell/hunspell.pri)
 
+unix:!macx {
+    include($$PWD/../plugins/aspell/aspell.pri)
+}
+
 #macx {
 #    include($$PWD/../plugins/nsspellchecker/nsspellchecker.pri)
 #}
