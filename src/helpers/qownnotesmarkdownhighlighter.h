@@ -18,16 +18,6 @@
 
 #include <libraries/qmarkdowntextedit/markdownhighlighter.h>
 #include <entities/note.h>
-
-#ifdef WITH_SONNET
-// needs libkf5sonnet-dev
-//#include <KF5/SonnetUi/sonnet/spellcheckdecorator.h>
-//#include <KF5/SonnetUi/Sonnet/Dialog>
-//#include <KF5/SonnetUi/Sonnet/Highlighter>
-#include <KF5/SonnetCore/Sonnet/Speller>
-#include <KF5/SonnetUi/Sonnet/Highlighter>
-#endif
-
 #include "qownspellchecker.h"
 #include "libraries/sonnet/src/core/languagefilter_p.h"
 #include "libraries/sonnet/src/core/tokenizer_p.h"
