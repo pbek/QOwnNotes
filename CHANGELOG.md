@@ -1,5 +1,14 @@
 # QOwnNotes Changelog
 
+## 19.12.0
+- improved code block styling matching (for [#1462](https://github.com/pbek/QOwnNotes/issues/1462))
+- fixed link headline styling (for [#29](https://github.com/pbek/qmarkdowntextedit/pull/29), thank you @Waqar144)
+- improved headline highlighting parsing speed (for [#30](https://github.com/pbek/qmarkdowntextedit/pull/30), thank you @Waqar144)
+- improved broken link highlighting speed (for [#1465](https://github.com/pbek/QOwnNotes/issues/1465), thank you @Waqar144)
+- added more Albanian, Latvian, Punjabi, Hungarian, Dutch, Indonesian, Russian,
+  Spanish, German, Italian translation (thank you Fabijenna, zmni, unchase,
+  richarson, rakekniven, mlocati)
+
 ## 19.11.23
 - now most of the editor styling will be also used in the preview by default
   (for [#1462](https://github.com/pbek/QOwnNotes/issues/1462))

@@ -12,17 +12,6 @@ QT       += core gui widgets sql svg network xml xmlpatterns printsupport qml we
 
 #CONFIG += with_aspell
 
-# Sonnet support if we can get it to run in the future
-#CONFIG += with_sonnet
-
-CONFIG(with_sonnet) {
-    message("Sonnet activated")
-
-    QT += SonnetCore SonnetUi
-
-    DEFINES += WITH_SONNET
-}
-
 TARGET = QOwnNotes
 TEMPLATE = app
 ICON = QOwnNotes.icns

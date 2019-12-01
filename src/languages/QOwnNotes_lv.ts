@@ -205,12 +205,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="30"/>
       <source>Aragonese</source>
-      <translation type="unfinished">Aragonese</translation>
+      <translation>Aragoniešu</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="66"/>
       <source>Gujarati</source>
-      <translation type="unfinished">Gujarati</translation>
+      <translation>Gudžarati</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="97"/>
@@ -245,12 +245,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="27"/>
       <source>Amharic</source>
-      <translation type="unfinished">Amharic</translation>
+      <translation>Amharic</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="28"/>
       <source>Ancient Greek</source>
-      <translation type="unfinished">Ancient Greek</translation>
+      <translation>Sengrieķu valoda</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="29"/>
@@ -260,7 +260,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="31"/>
       <source>Armenian</source>
-      <translation type="unfinished">Armenian</translation>
+      <translation>Armēņu</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="32"/>
@@ -270,7 +270,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="33"/>
       <source>Basque</source>
-      <translation type="unfinished">Basque</translation>
+      <translation>Basku</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="34"/>
@@ -300,12 +300,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="39"/>
       <source>Catalan (Valencian)</source>
-      <translation type="unfinished">Catalan (Valencian)</translation>
+      <translation>Katalāņu (Valensijas)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="40"/>
       <source>Chuvash (Russia)</source>
-      <translation type="unfinished">Chuvash (Russia)</translation>
+      <translation>Čuvaša (Krievija)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="41"/>
@@ -330,7 +330,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="49"/>
       <source>English (Medical Dictionary)</source>
-      <translation type="unfinished">English (Medical Dictionary)</translation>
+      <translation>Angļu valoda (medicīniskā vārdnīca)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="50"/>
@@ -340,7 +340,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="51"/>
       <source>Esperanto</source>
-      <translation type="unfinished">Esperanto</translation>
+      <translation>Esperanto</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="52"/>
@@ -350,12 +350,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="53"/>
       <source>Faroese</source>
-      <translation type="unfinished">Faroese</translation>
+      <translation>Fēru salas</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="55"/>
       <source>Friulian</source>
-      <translation type="unfinished">Friulian</translation>
+      <translation>Friūlu</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="56"/>
@@ -370,17 +370,17 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="58"/>
       <source>Georgian</source>
-      <translation type="unfinished">Georgian</translation>
+      <translation>Gruzīns</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="60"/>
       <source>German (Classical Spelling)</source>
-      <translation type="unfinished">German (Classical Spelling)</translation>
+      <translation>Vācu valoda (klasiskā pareizrakstība)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="63"/>
       <source>German (Medical Dictionary)</source>
-      <translation type="unfinished">German (Medical Dictionary)</translation>
+      <translation>Vācu valoda (medicīniskā vārdnīca)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="64"/>
@@ -390,7 +390,7 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="65"/>
       <source>Modern Greek (Polytonic Greek)</source>
-      <translation type="unfinished">Modern Greek (Polytonic Greek)</translation>
+      <translation>Mūsdienu grieķu valoda (politoniskais grieķu)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="67"/>
@@ -425,27 +425,27 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="74"/>
       <source>Kaszebsczi</source>
-      <translation type="unfinished">Kaszebsczi</translation>
+      <translation>Kaszebsczi</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="75"/>
       <source>Kazakh</source>
-      <translation type="unfinished">Kazakh</translation>
+      <translation>Kazahu</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="76"/>
       <source>Khmer</source>
-      <translation type="unfinished">Khmer</translation>
+      <translation>Khmeru</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="77"/>
       <source>Komi (Russia)</source>
-      <translation type="unfinished">Komi (Russia)</translation>
+      <translation>Komi (Krievija)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="78"/>
       <source>Korean</source>
-      <translation type="unfinished">Korean</translation>
+      <translation>Korejiešu</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="79"/>
@@ -460,12 +460,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="81"/>
       <source>Latgalian</source>
-      <translation type="unfinished">Latgalian</translation>
+      <translation>Latgaliešu</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="82"/>
       <source>Latin</source>
-      <translation type="unfinished">Latin</translation>
+      <translation>Latīņu valoda</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="84"/>
@@ -480,27 +480,27 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="85"/>
       <source>Low German / Low Saxon</source>
-      <translation type="unfinished">Low German / Low Saxon</translation>
+      <translation>Zema vācu valoda / zema Saksija</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="86"/>
       <source>Luxembourgish (Letzeburgesch)</source>
-      <translation type="unfinished">Luxembourgish (Letzeburgesch)</translation>
+      <translation>Luksemburgiešu (Letzeburgesch)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="87"/>
       <source>Macedonian</source>
-      <translation type="unfinished">Macedonian</translation>
+      <translation>Maķedoniešu</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="88"/>
       <source>Malayalam</source>
-      <translation type="unfinished">Malayalam</translation>
+      <translation>Malajalu</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="89"/>
       <source>Mongolian</source>
-      <translation type="unfinished">Mongolian</translation>
+      <translation>Mongoļu</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="90"/>
@@ -525,12 +525,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="94"/>
       <source>Papiamentu</source>
-      <translation type="unfinished">Papiamentu</translation>
+      <translation>Papiamentu</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="95"/>
       <source>Persian</source>
-      <translation type="unfinished">Persian</translation>
+      <translation>Persiešu</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="99"/>
@@ -540,17 +540,17 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="100"/>
       <source>Romansh</source>
-      <translation type="unfinished">Romansh</translation>
+      <translation>Romāns</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="102"/>
       <source>Russian Medical Dictionary</source>
-      <translation type="unfinished">Russian Medical Dictionary</translation>
+      <translation>Krievu medicīnas vārdnīca</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="103"/>
       <source>Rusyn / Ruthene (Slovakia)</source>
-      <translation type="unfinished">Rusyn / Ruthene (Slovakia)</translation>
+      <translation>Rusyn / Ruthene (Slovākija)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="104"/>
@@ -565,12 +565,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="106"/>
       <source>Shona</source>
-      <translation type="unfinished">Shona</translation>
+      <translation>Šona</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="107"/>
       <source>Sindhi</source>
-      <translation type="unfinished">Sindhi</translation>
+      <translation>Sindhi</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="108"/>
@@ -595,17 +595,17 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="114"/>
       <source>Tagalog</source>
-      <translation type="unfinished">Tagalog</translation>
+      <translation>Tagalogs</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="115"/>
       <source>Tajik</source>
-      <translation type="unfinished">Tajik</translation>
+      <translation>Tadžiku</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="116"/>
       <source>Tatar (Russia)</source>
-      <translation type="unfinished">Tatar (Russia)</translation>
+      <translation>Tatāru (Krievija)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="117"/>
@@ -625,12 +625,12 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="120"/>
       <source>Turkmen</source>
-      <translation type="unfinished">Turkmen</translation>
+      <translation>Turkmēņu</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="121"/>
       <source>Udmurt (Russia)</source>
-      <translation type="unfinished">Udmurt (Russia)</translation>
+      <translation>Udmurts (Krievija)</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="122"/>
@@ -645,17 +645,17 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="124"/>
       <source>Uzbek</source>
-      <translation type="unfinished">Uzbek</translation>
+      <translation>Uzbeki</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="125"/>
       <source>Venda</source>
-      <translation type="unfinished">Venda</translation>
+      <translation>Venda</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="126"/>
       <source>Venetian</source>
-      <translation type="unfinished">Venetian</translation>
+      <translation>Venēcietis</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="127"/>
@@ -665,17 +665,17 @@
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="128"/>
       <source>Welsh</source>
-      <translation type="unfinished">Welsh</translation>
+      <translation>Velsietis</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="129"/>
       <source>Xhosa</source>
-      <translation type="unfinished">Xhosa</translation>
+      <translation>Ksosa</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="130"/>
       <source>Zulu</source>
-      <translation type="unfinished">Zulu</translation>
+      <translation>Zulu</translation>
     </message>
     <message>
       <location filename="../dialogs/dictionarymanagerdialog.cpp" line="256"/>
@@ -1046,10 +1046,10 @@
     <message numerus="yes">
       <location filename="../libraries/fakevim/fakevim/fakevimhandler.cpp" line="7045"/>
       <source>%n lines yanked.</source>
-      <translation type="unfinished">
-        <numerusform>%n lines yanked.</numerusform>
-        <numerusform>%n lines yanked.</numerusform>
-        <numerusform>%n lines yanked.</numerusform>
+      <translation>
+        <numerusform>%n līnija tika sašūta.</numerusform>
+        <numerusform>%n rindas tika iespiesti.</numerusform>
+        <numerusform>%n rindas tika iespiesti.</numerusform>
       </translation>
     </message>
     <message>
@@ -1284,7 +1284,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="221"/>
       <source>Trailing space</source>
-      <translation type="unfinished">Trailing space</translation>
+      <translation>Atstarpes telpa</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="230"/>
@@ -1612,9 +1612,9 @@
     <message numerus="yes">
       <location filename="../dialogs/localtrashdialog.cpp" line="195"/>
       <source>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</numerusform>
-        <numerusform>Vai atjaunot atlasīto piezīmi &lt;strong&gt;%n &lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>Vai atjaunot atlasīto piezīmi &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
+        <numerusform>Vai atjaunot atlasītās piezīmes &lt;strong&gt;%n&lt;/strong&gt;?</numerusform>
         <numerusform>Vai atjaunot atlasītās piezīmes &lt;strong&gt;%n &lt;/strong&gt;?</numerusform>
       </translation>
     </message>
@@ -1992,7 +1992,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1107"/>
       <source>To&amp;do</source>
-      <translation type="unfinished">To&amp;do</translation>
+      <translation>&amp;Darīt</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1113"/>
@@ -2571,7 +2571,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2038"/>
       <source>Markdown cheatsheet</source>
-      <translation type="unfinished">Markdown cheatsheet</translation>
+      <translation>Markdown cheatsheet</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2047"/>
@@ -2781,10 +2781,10 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4304"/>
       <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
-        <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>Pārvietot %n atlasīto piezīmi uz &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Pārvietot %n atlasīto piezīmi uz &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Pārvietot %n atlasītās piezīmes uz &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
@@ -2796,25 +2796,25 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4405"/>
       <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
-        <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>Vai kopē %n atlasīto piezīmi uz &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Vai kopē %n atlasīto piezīmi uz &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Vai kopē% n atlasītoās piezīmies uz &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4432"/>
       <location filename="../mainwindow.cpp" line="4578"/>
       <source>Done</source>
-      <translation type="unfinished">Done</translation>
+      <translation>Gatavs</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4433"/>
       <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
-      <translation type="unfinished">
-        <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
-        <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
-        <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
+      <translation>
+        <numerusform>%n piezīme tika kopēta uz &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
+        <numerusform>%n piezīmes tika nokopētas mapē &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
+        <numerusform>%n piezīmes tika nokopētas mapē &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
       </translation>
     </message>
     <message>
@@ -2825,10 +2825,10 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4447"/>
       <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
-        <numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>Vai atzīmēt %n atlasīto piezīmi ar &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Vai atzīmēt %n atlasītoās piezīmies ar &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
+        <numerusform>Vai atzīmēt %n atlasītoās piezīmies ar &lt;strong&gt;%2 &lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
@@ -2869,10 +2869,10 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5267"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation type="unfinished">
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+      <translation>
+        <numerusform>Atrasts &lt;strong&gt;%n&lt;/strong&gt; jebkura veida termins &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+        <numerusform>Atrasts &lt;strong&gt;%n&lt;/strong&gt; jebkura veida termins &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+        <numerusform>Atrasts &lt;strong&gt;%n&lt;/strong&gt; jebkura veida termins &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
       </translation>
     </message>
     <message>
@@ -2888,7 +2888,7 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
     <message>
       <location filename="../mainwindow.cpp" line="5889"/>
       <source>Note folders</source>
-      <translation type="unfinished">Note folders</translation>
+      <translation>Piezīmju mapes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6015"/>
@@ -2970,28 +2970,28 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="6949"/>
       <source>Copied %n note(s) to %1</source>
-      <translation type="unfinished">
-        <numerusform>Copied %n note(s) to %1</numerusform>
-        <numerusform>Copied %n note(s) to %1</numerusform>
-        <numerusform>Copied %n note(s) to %1</numerusform>
+      <translation>
+        <numerusform>Kopēta %n piezīme uz %1</numerusform>
+        <numerusform>Kopēta %n piezīme uz %1</numerusform>
+        <numerusform>Kopēta %n piezīmes uz %1</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="6958"/>
       <source>Failed to copy %n note(s) (most likely already existing)</source>
-      <translation type="unfinished">
-        <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
-        <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
-        <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
+      <translation>
+        <numerusform>Neizdevās nokopēt %n piezīmi (visticamāk, ka tā jau ir)</numerusform>
+        <numerusform>Neizdevās nokopēt %n piezīmi (visticamāk, ka tā jau ir)</numerusform>
+        <numerusform>Neizdevās nokopēt %n piezīmi (iespējams, jau pastāv)</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="6968"/>
       <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-      <translation type="unfinished">
-        <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
-        <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
-        <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
+      <translation>
+        <numerusform>Izlaidta %n piezīmes kopēšana (nav atzīmju vai teksta faila vai nav lasāma)</numerusform>
+        <numerusform>Izlaidta %n piezīmes kopēšana (nav atzīmju vai teksta faila vai nav lasāma)</numerusform>
+        <numerusform>Izlaidta %n piezīmesu kopēšana (nav atzīmju vai teksta faila vai nav lasāma)</numerusform>
       </translation>
     </message>
     <message>
@@ -3043,7 +3043,7 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
     <message>
       <location filename="../mainwindow.cpp" line="8262"/>
       <source>&amp;Move tags to…</source>
-      <translation type="unfinished">&amp;Move tags to…</translation>
+      <translation>&amp;Pārvietot tagus uz…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8477"/>
@@ -3090,17 +3090,17 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
     <message>
       <location filename="../mainwindow.cpp" line="9457"/>
       <source>&amp;Move notes to…</source>
-      <translation type="unfinished">&amp;Move notes to…</translation>
+      <translation>&amp;Pārvietot piezīmes uz…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9458"/>
       <source>&amp;Copy notes to…</source>
-      <translation type="unfinished">&amp;Copy notes to…</translation>
+      <translation>&amp;Kopēt piezīmes uz…</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9494"/>
       <source>Jump to the note's sub-folder</source>
-      <translation type="unfinished">Jump to the note's sub-folder</translation>
+      <translation>Pārlēkt uz piezīmes apakšmapi</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9498"/>
@@ -3174,8 +3174,8 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
       <location filename="../mainwindow.cpp" line="10781"/>
       <source>%n chars</source>
       <comment>characters</comment>
-      <translation type="unfinished">
-        <numerusform>%n chars</numerusform>
+      <translation>
+        <numerusform>%n char</numerusform>
         <numerusform>%n chars</numerusform>
         <numerusform>%n chars</numerusform>
       </translation>
@@ -3208,10 +3208,10 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="8025"/>
       <source>%n notes selected</source>
-      <translation type="unfinished">
-        <numerusform>%n notes selected</numerusform>
-        <numerusform>%n notes selected</numerusform>
-        <numerusform>%n notes selected</numerusform>
+      <translation>
+        <numerusform>Atlasīta %n piezīme</numerusform>
+        <numerusform>Atlasītas %n piezīmes</numerusform>
+        <numerusform>Atlasītas %n piezīmes</numerusform>
       </translation>
     </message>
     <message>
@@ -3223,7 +3223,7 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
     <message>
       <location filename="../mainwindow.ui" line="1197"/>
       <source>&amp;Tag</source>
-      <translation type="unfinished">&amp;Tag</translation>
+      <translation>&amp;Birka</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4519"/>
@@ -3233,19 +3233,19 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4520"/>
       <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
-        <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
-        <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
+      <translation>
+        <numerusform>Vai noņemt atzīmi &lt;strong&gt;%1&lt;/strong&gt; no %n atlasītās piezīmes?</numerusform>
+        <numerusform>Vai noņemt atzīmi &lt;strong&gt;%1&lt;/strong&gt; no %n atlasītās piezīmes?</numerusform>
+        <numerusform>Vai noņemt atzīmi &lt;strong&gt;%1&lt;/strong&gt; no %n atlasītajām piezīmēm?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4579"/>
       <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
-      <translation type="unfinished">
-        <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
-        <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
-        <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
+      <translation>
+        <numerusform>Atzīme &lt;strong&gt;%1&lt;/strong&gt; tika noņemta no %n piezīmes</numerusform>
+        <numerusform>Atzīme &lt;strong&gt;%1&lt;/strong&gt; tika noņemta no %n piezīmes</numerusform>
+        <numerusform>Atzīme &lt;strong&gt;%1 &lt;/strong&gt; tika noņemta no %n piezīmēm</numerusform>
       </translation>
     </message>
     <message>
@@ -3376,43 +3376,43 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="8717"/>
       <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
-        <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>Pārvietot %n atlasīto piezīmi uz piezīmes apakšmapi &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Pārvietot %n atlasīto piezīmi uz piezīmes apakšmapi &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Pārvietot %n atlasītās piezīmes piezīmju apakšmapē &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4730"/>
       <location filename="../mainwindow.cpp" line="11208"/>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Atcelt</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="8798"/>
       <source>%n note(s) were moved to note subfolder "%2"</source>
-      <translation type="unfinished">
-        <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
-        <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
-        <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
+      <translation>
+        <numerusform>%n piezīme tika pārvietota uz piezīmju apakšmapi "%2"</numerusform>
+        <numerusform>%n piezīmes tika pārvietotas uz piezīmju apakšmapi “%2”</numerusform>
+        <numerusform>%n piezīmes tika pārvietotas uz piezīmju apakšmapi “%2”</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="8819"/>
       <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
-        <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>Vai kopēt atlasīto piezīmi %n piezīmju apakšmapē &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Vai kopēt atlasīto piezīmi %n piezīmju apakšmapē &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Vai kopēt atlasītās piezīmes %n piezīmju apakšmapē &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="8884"/>
       <source>%n note(s) were copied to note subfolder "%2"</source>
-      <translation type="unfinished">
-        <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
-        <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
-        <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
+      <translation>
+        <numerusform>%n piezīme tika nokopēta piezīmju apakšmapē “%2”</numerusform>
+        <numerusform>%n piezīme tika nokopēta piezīmju apakšmapē “%2”</numerusform>
+        <numerusform>%n piezīmeas tika nokopētaas piezīmju apakšmapē “%2”</numerusform>
       </translation>
     </message>
     <message>
@@ -3488,17 +3488,17 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
     <message>
       <location filename="../mainwindow.cpp" line="5016"/>
       <source>&amp;Ok</source>
-      <translation type="unfinished">&amp;Ok</translation>
+      <translation>&amp;Labi</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9449"/>
       <source>&amp;Remove notes</source>
-      <translation type="unfinished">&amp;Remove notes</translation>
+      <translation>&amp;Noņemiet piezīmes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6079"/>
       <source>&amp;Link selected text</source>
-      <translation type="unfinished">&amp;Link selected text</translation>
+      <translation>&amp;Saistīt atlasīto tekstu</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="982"/>
@@ -3529,27 +3529,27 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="2743"/>
       <source>Stored %n note(s) to disk</source>
-      <translation type="unfinished">
-        <numerusform>Stored %n note(s) to disk</numerusform>
-        <numerusform>Stored %n note(s) to disk</numerusform>
-        <numerusform>Stored %n note(s) to disk</numerusform>
+      <translation>
+        <numerusform>Saglabāta %n piezīme diskā</numerusform>
+        <numerusform>Saglabāta %n piezīme diskā</numerusform>
+        <numerusform>Saglabātas %n piezīmes diskā</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7308"/>
       <source>show all notes (%1)</source>
-      <translation type="unfinished">show all notes (%1)</translation>
+      <translation>rādīt visas piezīmes (%1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7311"/>
       <location filename="../mainwindow.cpp" line="7381"/>
       <source>All notes</source>
-      <translation type="unfinished">All notes</translation>
+      <translation>Visas piezīmes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8248"/>
       <source>&amp;Add tag</source>
-      <translation type="unfinished">&amp;Add tag</translation>
+      <translation>&amp;Pievienojiet tagu</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8297"/>
@@ -3584,7 +3584,7 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
     <message>
       <location filename="../mainwindow.cpp" line="8259"/>
       <source>&amp;Remove tags</source>
-      <translation type="unfinished">&amp;Remove tags</translation>
+      <translation>&amp;Noņemt tagus</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5054"/>
@@ -3740,28 +3740,28 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3174"/>
       <source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</source>
-      <translation type="unfinished">
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
-        <numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your ownCloud sync process?</numerusform>
+      <translation>
+        <numerusform>Turpiniet automātisku &lt;strong&gt;%n&lt;/strong&gt; pretrunīgas datu bāzes kopijas dzēšanu, kas var bloķēt jūsu ownCloud sinhronizācijas procesu?</numerusform>
+        <numerusform>Turpiniet automātisku &lt;strong&gt;%n&lt;/strong&gt; pretrunīgas datu bāzes kopijas dzēšanu, kas var bloķēt jūsu ownCloud sinhronizācijas procesu?</numerusform>
+        <numerusform>Turpiniet automātisku &lt;strong&gt;%n&lt;/strong&gt; pretrunīgu datu bāzes kopiju dzēšanu, kas var bloķēt jūsu ownCloud sinhronizācijas procesu?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4503"/>
       <source>%n note(s) were tagged with "%2"</source>
-      <translation type="unfinished">
-        <numerusform>%n note(s) were tagged with "%2"</numerusform>
-        <numerusform>%n note(s) were tagged with "%2"</numerusform>
-        <numerusform>%n note(s) were tagged with "%2"</numerusform>
+      <translation>
+        <numerusform>%n piezīme tika atzīmēta ar "%2"</numerusform>
+        <numerusform>%n piezīme tika atzīmēta ar "%2"</numerusform>
+        <numerusform>%n piezīmes tika marķētas ar "%2"</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5266"/>
       <source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation type="unfinished">
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
-        <numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+      <translation>
+        <numerusform>Atrasts &lt;strong&gt;%n&lt;/strong&gt; notikums&lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+        <numerusform>Atrasts &lt;strong&gt;%n&lt;/strong&gt; notikums&lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+        <numerusform>Atrasts &lt;strong&gt;%n&lt;/strong&gt; notikumsi &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
       </translation>
     </message>
     <message>
@@ -3773,7 +3773,7 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
       <location filename="../mainwindow.cpp" line="6085"/>
       <source>Block &amp;quote selected text</source>
       <comment>Action to apply a block quote formatting to the selected text</comment>
-      <translation type="unfinished">Block &amp;quote selected text</translation>
+      <translation>Bloka &amp;citāts izvēlēto tekstu</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7055"/>
@@ -3796,18 +3796,18 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
       <location filename="../mainwindow.cpp" line="5058"/>
       <location filename="../mainwindow.cpp" line="9644"/>
       <source>Open &amp;settings</source>
-      <translation type="unfinished">Open &amp;settings</translation>
+      <translation>Atveriet &amp;iestatījumus</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1548"/>
       <location filename="../mainwindow.cpp" line="11362"/>
       <source>leave</source>
-      <translation type="unfinished">leave</translation>
+      <translation>aizbraukt</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6483"/>
       <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
-      <translation type="unfinished">Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</translation>
+      <translation>Lūdzu, ievadiet savu &lt;strong&gt; paroli &lt;/strong&gt;, lai šifrētu piezīmi. &lt;br/&gt; Ņemiet vērā, ka jums ir &lt;strong&gt; jāatceras &lt;/strong&gt; sava parole, lai lasītu piezīmes saturu &lt;br/&gt; un ka jūs varat &lt;strong&gt; tikai &lt;/strong&gt; to izdarīt &lt;strong&gt; pakalpojumā QOwnNotes &lt;/strong&gt;!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6539"/>
@@ -3817,12 +3817,12 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
     <message>
       <location filename="../mainwindow.cpp" line="6544"/>
       <source>&amp;Decrypt</source>
-      <translation type="unfinished">&amp;Decrypt</translation>
+      <translation>&amp;Atšifrēt</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6570"/>
       <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
-      <translation type="unfinished">&lt;br /&gt;You will be able to edit your encrypted note.</translation>
+      <translation>&lt;br/&gt;Jūs varēsit rediģēt šifrēto piezīmi.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6634"/>
@@ -3835,7 +3835,7 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
     <message>
       <location filename="../widgets/navigationwidget.cpp" line="100"/>
       <source>headline %1</source>
-      <translation type="unfinished">headline %1</translation>
+      <translation>virsraksts %1</translation>
     </message>
   </context>
   <context>
@@ -4213,10 +4213,10 @@ Ja miskaste ir iespējota jūsu ownCloud serverī, jums vajadzētu būt iespēja
     <message numerus="yes">
       <location filename="../entities/note.cpp" line="2718"/>
       <source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
-      <translation type="unfinished">
-        <numerusform>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
-        <numerusform>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
-        <numerusform>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
+      <translation>
+        <numerusform>Tika konstatētas piezīmju ceļa izmaiņas. Vai vēlaties aizstāt visus &lt;strong&gt;%1&lt;/strong&gt; saišu gadījumus ar &lt;strong&gt;%2&lt;/strong&gt; un saites ar faila nosaukumu &lt;strong&gt;%3&lt;/strong&gt; ar &lt;strong&gt;%4&lt;/strong&gt; &gt; vai &lt;strong&gt;%n&lt;/strong&gt; piezīmju failā?</numerusform>
+        <numerusform>Tika konstatētas piezīmju ceļa izmaiņas. Vai vēlaties aizstāt visus &lt;strong&gt;%1&lt;/strong&gt; saišu gadījumus ar &lt;strong&gt;%2&lt;/strong&gt; un saites ar faila nosaukumu &lt;strong&gt;%3&lt;/strong&gt; ar &lt;strong&gt;%4&lt;/strong&gt; &gt; vai &lt;strong&gt;%n&lt;/strong&gt; piezīmju failā?</numerusform>
+        <numerusform>Tika konstatētas piezīmju ceļa izmaiņas. Vai vēlaties aizstāt visus &lt;strong&gt;%1 &lt;/strong&gt; saišu gadījumus ar &lt;strong&gt;%2&lt;/strong&gt; un saites ar faila nosaukumu &lt;strong&gt;%3&lt;/strong&gt; ar &lt;strong&gt;%n&lt;/strong&gt; &gt; vai &lt;strong&gt;%n&lt;/strong&gt; piezīmju failos?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -4778,17 +4778,17 @@ Vai tomēr vēlaties to instalēt?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1295"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Lūdzu, ievadiet sava ownCloud servera URL, piemēram: &lt;span style="font-style: italic;"&gt; https://cloud.yourserver.com &lt;/span &gt; &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1051"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Lūdzu, ievadiet lietotājvārdu uz savaCloud servera. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1086"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Lūdzu, ievadiet sava lietotājvārda paroli. &lt;br/&gt; Pašlaik parole tiks saglabāta šifrētā veidā ar citiem iestatījumiem, taču tā nav ļoti droša. &lt;/p&gt; &lt;/ body &gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1164"/>
@@ -4824,7 +4824,7 @@ Vai tomēr vēlaties to instalēt?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1114"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Noklikšķiniet šeit, lai pārbaudītu savienojumu ar savuCloud serveri. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1232"/>
@@ -4844,7 +4844,7 @@ Vai tomēr vēlaties to instalēt?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="911"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Atver savu ownCloud serveri &lt;span style = "font-weight: 600;"&gt; Lietotņu konfigurācijas &lt;/span&gt; lapa jūsu tīmekļa pārlūkprogrammā, lai instalētu vai atjauninātu QOwnNotesAPI un iespējotu galveno lietotnes &lt;span style = "font-weight: 600;"&gt; Versijas &lt;/span&gt; un &lt;span style = "font-weight: 600;"&gt; Izdzēstie faili &lt;/span&gt;,&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="715"/>
@@ -4929,27 +4929,27 @@ Vai tomēr vēlaties to instalēt?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1781"/>
       <source>Default ownCloud calendar</source>
-      <translation type="unfinished">Default ownCloud calendar</translation>
+      <translation>Noklusētais ownCloud kalendārs</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="168"/>
       <source>Interface</source>
-      <translation type="unfinished">Interface</translation>
+      <translation>Saskarne</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1751"/>
       <source>Other CalDAV server</source>
-      <translation type="unfinished">Other CalDAV server</translation>
+      <translation>Cits CalDAV serveris</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2798"/>
       <source>Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</source>
-      <translation type="unfinished">Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</translation>
+      <translation>Tiks pielāgotas tikai dažas krāsas, pārējo kontrolēs darbvirsmas motīvs. Lai šīs izmaiņas varētu veikt, jums jārestartē programma.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2801"/>
       <source>Optimize preview colors for dark mode desktop themes</source>
-      <translation type="unfinished">Optimize preview colors for dark mode desktop themes</translation>
+      <translation>Optimizējiet priekšskatījuma krāsas tumša režīma darbvirsmas motīviem</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2788"/>
@@ -5079,7 +5079,7 @@ Vai tomēr vēlaties to instalēt?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2081"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Ja vēlaties palīdzēt tulkot QOwnNotes vai atjaunināt esošu tulkojumu, lūdzu, izlasiet: &lt;a href = "http://www.qownnotes.org/Knowledge-base/Kā es varu palīdzēt tulkot-QOwnNotes "&gt; Kā es varu palīdzēt tulkot QOwnNotes? &lt;/a&gt; &lt;/p&gt;&lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2762"/>
@@ -5109,7 +5109,7 @@ Vai tomēr vēlaties to instalēt?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1533"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Jūs varētu vēlēties apsvērt bezmaksas SSL sertifikāta iegūšanu no &lt;a href="https://letsencrypt.org/"&gt; Šifrēsim &lt;/a&gt;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2725"/>
@@ -5144,7 +5144,7 @@ Vai tomēr vēlaties to instalēt?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3829"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Ja ir atzīmēts, jūs vienmēr tiks informēts par ārējām modifikācijām, pat ja pašreizējā piezīme netika rediģēta pēdējā minūtē. Ieteicamais ir &lt;span style = "font-style: italic;"&gt; nav atzīmēts &lt;/span&gt;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3712"/>
@@ -5252,7 +5252,7 @@ Vienkārši pārbaudiet sevi, ja rodas sinhronizācijas konflikti, un iestatiet 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2384"/>
       <source>Italian</source>
-      <translation type="unfinished">Italian</translation>
+      <translation>Itāļu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="264"/>
@@ -5267,7 +5267,7 @@ Vienkārši pārbaudiet sevi, ja rodas sinhronizācijas konflikti, un iestatiet 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3207"/>
       <source>&amp;Remove script</source>
-      <translation type="unfinished">&amp;Remove script</translation>
+      <translation>&amp;Noņemt skriptu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3486"/>
@@ -5292,7 +5292,7 @@ Vienkārši pārbaudiet sevi, ja rodas sinhronizācijas konflikti, un iestatiet 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="202"/>
       <source>Editor fonts &amp; colors</source>
-      <translation type="unfinished">Editor fonts &amp; colors</translation>
+      <translation>Redaktora fontu &amp; krāsas</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="215"/>
@@ -5384,22 +5384,22 @@ Vienkārši pārbaudiet sevi, ja rodas sinhronizācijas konflikti, un iestatiet 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="829"/>
       <source>ownCloud support</source>
-      <translation type="unfinished">ownCloud support</translation>
+      <translation>ownCloud atbalsts</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="835"/>
       <source>Enable ownCloud support</source>
-      <translation type="unfinished">Enable ownCloud support</translation>
+      <translation>Iespējot ownCloud atbalstu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="866"/>
       <source>Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
-      <translation type="unfinished">Please install the latest version of &lt;a href="https://github.com/pbek/qownnotesapi"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</translation>
+      <translation>Lūdzu, instalējiet jaunāko &lt;a href="https://github.com/pbek/qownnotesapi"&gt; &lt;span style = "font-weight: 600;"&gt; QOwnNotesAPI &lt;/span&gt; &lt;/a&gt; versiju (vismaz versija) QOWNNOTESAPI_MIN_VERSION uz jūsu pašuCloud servera, ja vēlaties, lai QOwnNotes varētu piekļūt piezīmju versijām un miskastēm.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="892"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Jums joprojām būs nepieciešams &lt;a href="https://owncloud.org/"&gt; &lt;span style = "font-weight: 600"&gt; ownCloud sinhronizācijas klients &lt;/span&gt; &lt;/a&gt; (vai cits darbvirsmas sinhronizācijas klients), lai sinhronizētu savas piezīmes! &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="991"/>
@@ -5543,7 +5543,7 @@ Vienkārši pārbaudiet sevi, ja rodas sinhronizācijas konflikti, un iestatiet 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2285"/>
       <source>Irish</source>
-      <translation type="unfinished">Irish</translation>
+      <translation>Īru</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2296"/>
@@ -5593,7 +5593,7 @@ Vienkārši pārbaudiet sevi, ja rodas sinhronizācijas konflikti, un iestatiet 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2417"/>
       <source>Latvian</source>
-      <translation type="unfinished">Latvian</translation>
+      <translation>Latvietis</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2428"/>
@@ -5613,7 +5613,7 @@ Vienkārši pārbaudiet sevi, ja rodas sinhronizācijas konflikti, un iestatiet 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2505"/>
       <source>Uzbek</source>
-      <translation type="unfinished">Uzbek</translation>
+      <translation>Uzbeki</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2549"/>
@@ -5728,176 +5728,176 @@ Vienkārši pārbaudiet sevi, ja rodas sinhronizācijas konflikti, un iestatiet 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2986"/>
       <source>Interface font size:</source>
-      <translation type="unfinished">Interface font size:</translation>
+      <translation>Saskarnes fonta lielums:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3196"/>
       <source>&amp;Add script…</source>
-      <translation type="unfinished">&amp;Add script…</translation>
+      <translation>&amp;Pievienot skriptu…</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3842"/>
       <source>Use legacy way to link to notes, images and attachments</source>
-      <translation type="unfinished">Use legacy way to link to notes, images and attachments</translation>
+      <translation>Izmantojiet mantoto veidu, kā izveidot saiti ar piezīmēm, attēliem un pielikumiem</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3789"/>
       <source>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</source>
-      <translation type="unfinished">When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</translation>
+      <translation>Atverot piezīmes, kursora pozīcija piezīmes iekšpusē tagad tiks atjaunota tajā pozīcijā, kurā piezīme pēdējoreiz tika apmeklēta pašreizējā sesijā</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3809"/>
       <source>By default the headline will generated automatically</source>
-      <translation type="unfinished">By default the headline will generated automatically</translation>
+      <translation>Pēc noklusējuma virsraksts tiks ģenerēts automātiski</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3812"/>
       <source>The shortcut to create a new note asks for a headline</source>
-      <translation type="unfinished">The shortcut to create a new note asks for a headline</translation>
+      <translation>Īsceļš, lai izveidotu jaunu piezīmi, prasa virsrakstu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3799"/>
       <source>Automatically close the note folder database to prevent problems with sync tools</source>
-      <translation type="unfinished">Automatically close the note folder database to prevent problems with sync tools</translation>
+      <translation>Automātiski aizveriet piezīmju mapes datu bāzi, lai novērstu problēmas ar sinhronizācijas rīkiem</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3802"/>
       <source>Automatically close the note folder database</source>
-      <translation type="unfinished">Automatically close the note folder database</translation>
+      <translation>Automātiski aizveriet piezīmju mapes datu bāzi</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3890"/>
       <source>Search engine</source>
-      <translation type="unfinished">Search engine</translation>
+      <translation>Meklētājs</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3912"/>
       <source>Message boxes</source>
-      <translation type="unfinished">Message boxes</translation>
+      <translation>Ziņojumu lodziņi</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3918"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3678"/>
       <source>Reset message boxes</source>
-      <translation type="unfinished">Reset message boxes</translation>
+      <translation>Atiestatīt ziņojumu lodziņus</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4111"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3744"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3767"/>
       <source>Import settings</source>
-      <translation type="unfinished">Import settings</translation>
+      <translation>Importēt iestatījumus</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4118"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3710"/>
       <source>Export settings</source>
-      <translation type="unfinished">Export settings</translation>
+      <translation>Eksportēt iestatījumus</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4253"/>
       <source>Open issue assistant</source>
-      <translation type="unfinished">Open issue assistant</translation>
+      <translation>Atklātā numura asistents</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4220"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Labākais veids, kā izlikt problēmas, ir izdošanas palīga izmantošana, nospiežot pogu &lt;span style = "font-weight: 600;"&gt; Ieslēgt numura palīgu &lt;/span&gt; apakšā. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4582"/>
       <source>Ignore code font size to allow zooming</source>
-      <translation type="unfinished">Ignore code font size to allow zooming</translation>
+      <translation>Ignorējiet koda fonta lielumu, lai atļautu tuvināšanu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4611"/>
       <source>Rendering</source>
-      <translation type="unfinished">Rendering</translation>
+      <translation>Atveidošana</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4617"/>
       <source>Enable underline rendering</source>
-      <translation type="unfinished">Enable underline rendering</translation>
+      <translation>Iespējot pasvītrošanas atveidošanu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4880"/>
       <source>Fully highlight blockquotes</source>
-      <translation type="unfinished">Fully highlight blockquotes</translation>
+      <translation>Pilnībā izceliet pēdiņas</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4950"/>
       <source>Note-edit cursor width:</source>
-      <translation type="unfinished">Note-edit cursor width:</translation>
+      <translation>Piezīme. Rediģēt kursora platumu:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4899"/>
       <source>Enable Vim mode (some QOwnNotes shortcuts will not work)</source>
-      <translation type="unfinished">Enable Vim mode (some QOwnNotes shortcuts will not work)</translation>
+      <translation>Iespējot režīmu Vim (daži saīsnes QOwnNotes saīsnes nedarbosies)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="756"/>
       <source>Cloud connection:</source>
-      <translation type="unfinished">Cloud connection:</translation>
+      <translation>Mākoņa savienojums:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2648"/>
       <source>Vietnamese</source>
-      <translation type="unfinished">Vietnamese</translation>
+      <translation>Vjetnamiešu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4250"/>
       <source>This is the best way to open an issue</source>
-      <translation type="unfinished">This is the best way to open an issue</translation>
+      <translation>Tas ir labākais veids, kā atvērt jautājumu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4264"/>
       <source>Please use this in the issue tracker</source>
-      <translation type="unfinished">Please use this in the issue tracker</translation>
+      <translation>Lūdzu, izmantojiet to problēmu izsekotājā</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4267"/>
       <source>&amp;Copy debug information to clipboard</source>
-      <translation type="unfinished">&amp;Copy debug information to clipboard</translation>
+      <translation>&amp;Kopējiet atkļūdošanas informāciju starpliktuvē</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4278"/>
       <source>Please don't use this in the issue tracker</source>
-      <translation type="unfinished">Please don't use this in the issue tracker</translation>
+      <translation>Lūdzu, nelietojiet to problēmu izsekotājā</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4624"/>
       <source>Use editor highlighting styles also for the preview</source>
-      <translation type="unfinished">Use editor highlighting styles also for the preview</translation>
+      <translation>Priekšskatījumam izmantojiet arī redaktora izcelšanas stilus</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4984"/>
       <source>Disable cursor blinking</source>
-      <translation type="unfinished">Disable cursor blinking</translation>
+      <translation>Atspējojiet kursora mirgošanu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5218"/>
       <source>Show the number of matches in each note</source>
-      <translation type="unfinished">Show the number of matches in each note</translation>
+      <translation>Parādiet sakritību skaitu katrā piezīmē</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5373"/>
       <source>Ignored sub-folders</source>
-      <translation type="unfinished">Ignored sub-folders</translation>
+      <translation>Ignorētās apakšmapes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5389"/>
       <source>Reset ignored sub-folders</source>
-      <translation type="unfinished">Reset ignored sub-folders</translation>
+      <translation>Atiestatīt ignorētās apakšmapes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5409"/>
       <source>Note list panel</source>
-      <translation type="unfinished">Note list panel</translation>
+      <translation>Piezīmju saraksta panelis</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5415"/>
       <source>Show notes in the note list with preview</source>
-      <translation type="unfinished">Show notes in the note list with preview</translation>
+      <translation>Rādīt piezīmes piezīmju sarakstā ar priekšskatījumu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5488"/>
@@ -5907,7 +5907,7 @@ Vienkārši pārbaudiet sevi, ja rodas sinhronizācijas konflikti, un iestatiet 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5659"/>
       <source>Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Workspaces&lt;/i&gt; for different panel configurations.</source>
-      <translation type="unfinished">Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Workspaces&lt;/i&gt; for different panel configurations.</translation>
+      <translation>Paneļus var ieslēgt un izslēgt galvenajā izvēlnē &lt;i&gt; Window / Panels &lt;/i&gt; un dažādām paneļu konfigurācijām varat arī konfigurēt dažādas &lt;i&gt; darbvietas &lt;/i&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5736"/>
@@ -5977,7 +5977,7 @@ Vienkārši pārbaudiet sevi, ja rodas sinhronizācijas konflikti, un iestatiet 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="5849"/>
       <source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</source>
-      <translation type="unfinished">Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use QOwnNotes as web clipper.</translation>
+      <translation>Instalējiet &lt;a href="%1"&gt; Web Companion pārlūka paplašinājumu &lt;/a&gt; no &lt;a href="%2"&gt; Chrome interneta veikala &lt;/a&gt; vai &lt;a href="%3"&gt; Firefox Add- lapā &lt;/a&gt;, lai izmantotu QOwnNotes kā tīmekļa izgriezumu.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3750"/>
@@ -6102,7 +6102,7 @@ Vienkārši pārbaudiet sevi, ja rodas sinhronizācijas konflikti, un iestatiet 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4827"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Jūs varētu vēlēties apskatīt visu pieejamo &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt; pieejamo laiku formāti &lt;/a&gt;. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4977"/>
@@ -6300,32 +6300,32 @@ Vienkārši pārbaudiet sevi, ja rodas sinhronizācijas konflikti, un iestatiet 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2175"/>
       <source>Czech</source>
-      <translation type="unfinished">Czech</translation>
+      <translation>Čehu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2527"/>
       <source>Brazilian Portuguese</source>
-      <translation type="unfinished">Brazilian Portuguese</translation>
+      <translation>Brazīlijas portugāļi</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2670"/>
       <source>Ukrainian</source>
-      <translation type="unfinished">Ukrainian</translation>
+      <translation>Ukraiņu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3598"/>
       <source>The name</source>
-      <translation type="unfinished">The name</translation>
+      <translation>Vārds</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3695"/>
       <source>Maximum height:</source>
-      <translation type="unfinished">Maximum height:</translation>
+      <translation>Maksimālais augstums:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3668"/>
       <source>Maximum width:</source>
-      <translation type="unfinished">Maximum width:</translation>
+      <translation>Maksimālais platums:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3733"/>
@@ -6435,72 +6435,72 @@ Vienkārši pārbaudiet sevi, ja rodas sinhronizācijas konflikti, un iestatiet 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4810"/>
       <source>Time format:</source>
-      <translation type="unfinished">Time format:</translation>
+      <translation>Laika formāts:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4817"/>
       <source>Enter your custom time format, like "dd.MM.yyyy hh:mm"</source>
-      <translation type="unfinished">Enter your custom time format, like "dd.MM.yyyy hh:mm"</translation>
+      <translation>Ievadiet pielāgoto laika formātu, piemēram, "dd.MM.gggg hh:mm"</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4893"/>
       <source>Editor options</source>
-      <translation type="unfinished">Editor options</translation>
+      <translation>Redaktora opcijas</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4906"/>
       <source>Enable automatic closing of brackets and markdown formatting characters</source>
-      <translation type="unfinished">Enable automatic closing of brackets and markdown formatting characters</translation>
+      <translation>Iespējojiet iekavu un atzīmju formatēšanas rakstzīmju automātisku aizvēršanu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4960"/>
       <source>You have to use the backspace key to remove the opening character</source>
-      <translation type="unfinished">You have to use the backspace key to remove the opening character</translation>
+      <translation>Lai noņemtu sākuma rakstzīmi, ir jāizmanto atpakaļatkāpes taustiņš</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4963"/>
       <source>Enable automatic removal of matching closing characters</source>
-      <translation type="unfinished">Enable automatic removal of matching closing characters</translation>
+      <translation>Iespējot atbilstošu noslēdzošo rakstzīmju automātisku noņemšanu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1828"/>
       <source>Your CalDAV calendar base url</source>
-      <translation type="unfinished">Your CalDAV calendar base url</translation>
+      <translation>Jūsu CalDAV kalendāra bāzes Url</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1860"/>
       <source>Please enter the username of your CalDAV server.</source>
-      <translation type="unfinished">Please enter the username of your CalDAV server.</translation>
+      <translation>Lūdzu, ievadiet sava CalDAV servera lietotājvārdu.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1863"/>
       <source>Your CalDAV username</source>
-      <translation type="unfinished">Your CalDAV username</translation>
+      <translation>Jūsu CalDAV lietotājvārds</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1901"/>
       <source>Your CalDAV password</source>
-      <translation type="unfinished">Your CalDAV password</translation>
+      <translation>Jūsu CalDAV lietotājvārds</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1948"/>
       <source>This causes all todo list items to be reloaded from your server the next time you open your todo dialog.</source>
-      <translation type="unfinished">This causes all todo list items to be reloaded from your server the next time you open your todo dialog.</translation>
+      <translation>Tas izraisa visu uzdevumu saraksta vienumu atkārtotu ielādi no servera, nākamreiz atverot uzdevumu sarakstu.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1951"/>
       <source>Empty calendar item cache</source>
-      <translation type="unfinished">Empty calendar item cache</translation>
+      <translation>Tukša kalendāra vienības kešatmiņa</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1974"/>
       <source>Click here to reload the list of calendars from your calendar server.</source>
-      <translation type="unfinished">Click here to reload the list of calendars from your calendar server.</translation>
+      <translation>Noklikšķiniet šeit, lai no kalendāra servera atkārtoti ielādētu kalendāru sarakstu.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1980"/>
       <source>&amp;Reload calendar list</source>
-      <translation type="unfinished">&amp;Reload calendar list</translation>
+      <translation>&amp;Atkārtoti ielādēt kalendāru sarakstu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2768"/>
@@ -6665,12 +6665,12 @@ Vienkārši pārbaudiet sevi, ja rodas sinhronizācijas konflikti, un iestatiet 
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4197"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Jūs varat &lt;span style = "font-weight: 600;"&gt; kopēt un ielīmēt &lt;/span&gt; šo tekstu (vai šī teksta daļas) &lt;span style = "font-weight: 600;"&gt; izdošana &lt;/span&gt; &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt; QOwnNotes izdošanas lapā &lt;/a&gt;, ja jums ir &lt;span style = "font-weight: 600;"&gt; jautājumi vai problēmas &lt;/span&gt; ar QOwnNotes. Šajā informācijā ir paslēpti pārāk jutīgi dati. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4281"/>
       <source>&amp;Save debug information</source>
-      <translation type="unfinished">&amp;Save debug information</translation>
+      <translation>&amp;Saglabājiet atkļūdošanas informāciju</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="455"/>
@@ -6745,7 +6745,7 @@ Savienojuma kļūdas ziņojums:</translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2038"/>
       <source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
-      <translation type="unfinished">Please don't use this in the issue tracker, copy the debug information text directly into the issue.</translation>
+      <translation>Lūdzu, nelietojiet to problēmu izsekotājā, kopējiet atkļūdošanas informācijas tekstu tieši izdevumā.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2045"/>
@@ -6775,140 +6775,140 @@ Savienojuma kļūdas ziņojums:</translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2332"/>
       <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation type="unfinished">Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+      <translation>Vai noņemt pašreizējo piezīmju mapi &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2407"/>
       <source>Please select the folder where your notes will get stored to</source>
-      <translation type="unfinished">Please select the folder where your notes will get stored to</translation>
+      <translation>Lūdzu, atlasiet mapi, kurā tiks glabātas jūsu piezīmes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2444"/>
       <source>Loading folders from server</source>
-      <translation type="unfinished">Loading folders from server</translation>
+      <translation>Ielādē mapes no servera</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2458"/>
       <source>No more folders were found in the current folder</source>
-      <translation type="unfinished">No more folders were found in the current folder</translation>
+      <translation>Pašreizējā mapē vairs netika atrasta neviena mape</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2531"/>
       <source>Loading folders in '%1' from server</source>
-      <translation type="unfinished">Loading folders in '%1' from server</translation>
+      <translation>Mapi tiek ielādēti no servera '%1'</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2595"/>
       <source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
-      <translation type="unfinished">Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</translation>
+      <translation>Apskatiet &lt;a href="%1"&gt; skriptu dokumentāciju &lt;/a&gt;, lai ātri sāktu.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2597"/>
       <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
-      <translation type="unfinished">If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</translation>
+      <translation>Ja jums ir nepieciešama piekļuve noteiktai QOwnNotes funkcionalitātei, lūdzu, atveriet problēmu &lt;a href="%1"&gt; QOwnNotes izdošanas lapā &lt;/a&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2618"/>
       <source>Check for script updates</source>
-      <translation type="unfinished">Check for script updates</translation>
+      <translation>Pārbaudiet, vai nav skriptu atjauninājumu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2625"/>
       <source>Add local script</source>
-      <translation type="unfinished">Add local script</translation>
+      <translation>Pievienojiet vietējo skriptu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2629"/>
       <source>Add an existing, local script</source>
-      <translation type="unfinished">Add an existing, local script</translation>
+      <translation>Pievienojiet esošu vietējo skriptu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3709"/>
       <location filename="../dialogs/settingsdialog.cpp" line="3766"/>
       <source>INI files</source>
-      <translation type="unfinished">INI files</translation>
+      <translation>INI faili</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3745"/>
       <source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
-      <translation type="unfinished">Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</translation>
+      <translation>Vai tiešām vēlaties importēt iestatījumus? Jūsu pašreizējie iestatījumi tiks noņemti, un ne visi iestatījumi, iespējams, tiks atjaunoti, piemēram, piezīmju mapes iestatījumi un izmantotie skripti. Jums būs jāpielāgo arī daži iestatījumi, jo īpaši dažādās platformās, taču jūsu piezīmes paliks neskartas!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3755"/>
       <source>The application will be quit after the import.</source>
-      <translation type="unfinished">The application will be quit after the import.</translation>
+      <translation>Pēc importēšanas lietojumprogramma tiks aizvērta.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3756"/>
       <source>The application will be restarted after the import.</source>
-      <translation type="unfinished">The application will be restarted after the import.</translation>
+      <translation>Pēc importēšanas lietojumprogramma tiks restartēta.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3971"/>
       <source>The debug information was copied to the clipboard.</source>
-      <translation type="unfinished">The debug information was copied to the clipboard.</translation>
+      <translation>Atkļūdošanas informācija tika kopēta starpliktuvē.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2612"/>
       <source>Find a script in the script repository</source>
-      <translation type="unfinished">Find a script in the script repository</translation>
+      <translation>Atrodiet skriptu skriptu krātuvē</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="263"/>
       <source>Menu bar</source>
-      <translation type="unfinished">Menu bar</translation>
+      <translation>Ēdienkarte</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="264"/>
       <source>Show menu bar item</source>
-      <translation type="unfinished">Show menu bar item</translation>
+      <translation>Rādīt izvēlnes joslas vienumu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1565"/>
       <source>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</source>
-      <translation type="unfinished">The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</translation>
+      <translation>Saīsne &lt;strong&gt;%1 &lt;/strong&gt; jau ir piešķirta kategorijai &lt;strong&gt;%2&lt;/strong&gt;! Vai vēlaties pāriet uz saīsni?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2708"/>
       <source>Remove script</source>
-      <translation type="unfinished">Remove script</translation>
+      <translation>Noņemt skriptu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2709"/>
       <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation type="unfinished">Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+      <translation>Vai noņemt pašreizējo skriptu &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2760"/>
       <source>QML files</source>
-      <translation type="unfinished">QML files</translation>
+      <translation>QML faili</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2761"/>
       <source>Please select your QML file</source>
-      <translation type="unfinished">Please select your QML file</translation>
+      <translation>Lūdzu, atlasiet savu QML failu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2850"/>
       <source>Open repository</source>
-      <translation type="unfinished">Open repository</translation>
+      <translation>Atvērt repozitoriju</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2910"/>
       <source>Your script seems to be valid</source>
-      <translation type="unfinished">Your script seems to be valid</translation>
+      <translation>Šķiet, ka jūsu skripts ir derīgs</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2911"/>
       <source>There were script errors:
 %1</source>
-      <translation type="unfinished">There were script errors:
+      <translation>Radās skripta kļūdas:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2980"/>
       <source>File extension</source>
-      <translation type="unfinished">File extension</translation>
+      <translation>Faila paplašinājums</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2981"/>
@@ -7065,7 +7065,7 @@ Jūsu piezīmes paliks neskartas!</translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2022"/>
       <source>Clear &amp;database</source>
-      <translation type="unfinished">Clear &amp;database</translation>
+      <translation>Notīrīt &amp;datu bāzi</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2207"/>
@@ -7220,13 +7220,13 @@ Jūsu piezīmes paliks neskartas!</translation>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="241"/>
       <source>with yeyo, modern and old russian</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">with yeyo, modern and old russian</translation>
+      <translation>modernais un vecais krievu</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="244"/>
       <source>with yo, old russian</source>
       <comment>dictionary variant</comment>
-      <translation type="unfinished">with yo, old russian</translation>
+      <translation>vecais krievu</translation>
     </message>
     <message>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="245"/>
@@ -7250,7 +7250,7 @@ Jūsu piezīmes paliks neskartas!</translation>
       <location filename="../libraries/sonnet/src/core/loader.cpp" line="326"/>
       <source>%1 (%2)</source>
       <comment>dictionary name; %1 = language name, %2 = language variant name</comment>
-      <translation type="unfinished">%1 (%2)</translation>
+      <translation>%1 (%2)</translation>
     </message>
   </context>
   <context>
@@ -7293,7 +7293,7 @@ Jūsu piezīmes paliks neskartas!</translation>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="119"/>
       <source>Select table layout or enter text:</source>
-      <translation type="unfinished">Select table layout or enter text:</translation>
+      <translation>Atlasiet tabulas izkārtojumu vai ievadiet tekstu:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="126"/>
@@ -7313,12 +7313,12 @@ Jūsu piezīmes paliks neskartas!</translation>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="173"/>
       <source>Separator:</source>
-      <translation type="unfinished">Separator:</translation>
+      <translation>Atdalītājs:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="180"/>
       <source>Select file</source>
-      <translation type="unfinished">Select file</translation>
+      <translation>Atlasiet failu</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="191"/>
@@ -7430,79 +7430,79 @@ Jūsu piezīmes paliks neskartas!</translation>
     <message>
       <location filename="../dialogs/tododialog.ui" line="288"/>
       <source>Reload…</source>
-      <translation type="unfinished">Reload…</translation>
+      <translation>Pārlādēt…</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="319"/>
       <source>Search or create todo item</source>
-      <translation type="unfinished">Search or create todo item</translation>
+      <translation>Meklējiet vai izveidojiet uzdevumu vienumu</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="302"/>
       <source>select your todo list</source>
-      <translation type="unfinished">select your todo list</translation>
+      <translation>atlasiet savu uzdevumu sarakstu</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="188"/>
       <source>Save the current todo item</source>
-      <translation type="unfinished">Save the current todo item</translation>
+      <translation>Saglabājiet pašreizējo uzdevumu vienumu</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="104"/>
       <source>Save the current todo item and insert a link to it into the current note</source>
-      <translation type="unfinished">Save the current todo item and insert a link to it into the current note</translation>
+      <translation>Saglabājiet pašreizējo uzdevumu vienumu un ievietojiet saiti uz to pašreizējā piezīmē</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="113"/>
       <source>Import the current todo item as new note</source>
-      <translation type="unfinished">Import the current todo item as new note</translation>
+      <translation>Importējiet pašreizējo uzdevuma vienumu kā jaunu piezīmi</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="109"/>
       <source>Import as note</source>
-      <translation type="unfinished">Import as note</translation>
+      <translation>Importēt kā piezīmi</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="205"/>
       <source>Remove the current todo item</source>
-      <translation type="unfinished">Remove the current todo item</translation>
+      <translation>Noņemiet pašreizējo uzdevuma vienumu</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="309"/>
       <source>Todo list items are being loaded from the server</source>
-      <translation type="unfinished">Todo list items are being loaded from the server</translation>
+      <translation>Todo saraksta vienumi tiek ielādēti no servera</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="124"/>
       <source>Reload from server</source>
-      <translation type="unfinished">Reload from server</translation>
+      <translation>Pārlādēt no servera</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="128"/>
       <source>Reload tasks from server</source>
-      <translation type="unfinished">Reload tasks from server</translation>
+      <translation>Pārlādēt uzdevumus no servera</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="133"/>
       <source>Clear cache and reload</source>
-      <translation type="unfinished">Clear cache and reload</translation>
+      <translation>Notīriet kešatmiņu un atkārtoti ielādējiet</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="137"/>
       <source>Clear calendar cache and reload tasks from server</source>
-      <translation type="unfinished">Clear calendar cache and reload tasks from server</translation>
+      <translation>Notīriet kalendāra kešatmiņu un atkārtoti ielādējiet uzdevumus no servera</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="578"/>
       <source>Remove todo item</source>
-      <translation type="unfinished">Remove todo item</translation>
+      <translation>Noņemt uzdevumu vienumu</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="579"/>
       <source>Remove the selected todo item?
 This cannot be undone!</source>
-      <translation type="unfinished">Remove the selected todo item?
-This cannot be undone!</translation>
+      <translation>Vai noņemt atlasīto uzdevumu vienumu?
+To nevar atsaukt!</translation>
     </message>
   </context>
   <context>
@@ -7510,32 +7510,32 @@ This cannot be undone!</translation>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="23"/>
       <source>Select a menu</source>
-      <translation type="unfinished">Select a menu</translation>
+      <translation>Atlasiet izvēlni</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="26"/>
       <source>Lists the available menus to get the corresponding actions</source>
-      <translation type="unfinished">Lists the available menus to get the corresponding actions</translation>
+      <translation>Tiek uzskaitītas pieejamās izvēlnes, lai iegūtu atbilstošās darbības</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="33"/>
       <source>Select toolbar</source>
-      <translation type="unfinished">Select toolbar</translation>
+      <translation>Atlasiet rīkjoslu</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="36"/>
       <source>List the available toolbars. The selected one will be edited</source>
-      <translation type="unfinished">List the available toolbars. The selected one will be edited</translation>
+      <translation>Uzskaitiet pieejamās rīkjoslas. Atlasītais tiks rediģēts</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="43"/>
       <source>Lists the actions in the selected toolbar</source>
-      <translation type="unfinished">Lists the actions in the selected toolbar</translation>
+      <translation>Tiek uzskaitītas darbības atlasītajā rīkjoslā</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="52"/>
       <source>Add new Toolbar</source>
-      <translation type="unfinished">Add new Toolbar</translation>
+      <translation>Pievienojiet jaunu rīkjoslu</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="55"/>
@@ -7571,7 +7571,7 @@ This cannot be undone!</translation>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="110"/>
       <source>Move &amp;Up</source>
-      <translation type="unfinished">Move &amp;Up</translation>
+      <translation>Pārvietot uz &amp;augšu</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="121"/>
@@ -7586,7 +7586,7 @@ This cannot be undone!</translation>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="127"/>
       <source>Move &amp;Down</source>
-      <translation type="unfinished">Move &amp;Down</translation>
+      <translation>Pārvietot uz &amp;leju</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="151"/>
@@ -7601,7 +7601,7 @@ This cannot be undone!</translation>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="157"/>
       <source>&amp;Insert</source>
-      <translation type="unfinished">&amp;Insert</translation>
+      <translation>&amp;Ievietot</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="171"/>
@@ -7611,23 +7611,23 @@ This cannot be undone!</translation>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="174"/>
       <source>&amp;Remove</source>
-      <translation type="unfinished">&amp;Remove</translation>
+      <translation>&amp;Noņemt</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="198"/>
       <source>Separator</source>
-      <translation type="unfinished">Separator</translation>
+      <translation>Atdalītājs</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="201"/>
       <source>&amp;Separator</source>
-      <translation type="unfinished">&amp;Separator</translation>
+      <translation>&amp;Atdalītājs</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="192"/>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="216"/>
       <source>--(separator)--</source>
-      <translation type="unfinished">--(separator)--</translation>
+      <translation>--(atdalītājs)--</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="309"/>
@@ -7670,12 +7670,12 @@ This cannot be undone!</translation>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="43"/>
       <source>&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</source>
-      <translation type="unfinished">&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</translation>
+      <translation>&lt;h3&gt; Ātrāk, bet bez versijām &lt;/h3&gt; &lt;p&gt; Piezīme tiks izveidota ar tekstu no priekšskatījuma. &lt;/p&gt; &lt;p&gt; Piezīmju versijas jūsu pašuCloud serverī netiks atjaunotas, un piezīme paliks. miskastē. &lt;/p&gt; &lt;p&gt; Piezīmi un tās versijas vienmēr varat atjaunot vēlāk. &lt;/p&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="56"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>&amp;Atcelt</translation>
     </message>
   </context>
   <context>
@@ -7708,37 +7708,37 @@ This cannot be undone!</translation>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="93"/>
       <source>&lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes"&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
-      <translation type="unfinished">&lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes"&gt;Get involved with QOwnNotes&lt;/a&gt;</translation>
+      <translation>&lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes"&gt; Iesaistieties QOwnNotes &lt;/a&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="106"/>
       <source>%p% downloaded</source>
-      <translation type="unfinished">%p% downloaded</translation>
+      <translation>%p% lejupielādēts</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="45"/>
       <source>&amp;Update</source>
-      <translation type="unfinished">&amp;Update</translation>
+      <translation>&amp;Atjaunināt</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="58"/>
       <source>&amp;Download latest</source>
-      <translation type="unfinished">&amp;Download latest</translation>
+      <translation>&amp;Lejupielādēt jaunāko</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="56"/>
       <source>Just download</source>
-      <translation type="unfinished">Just download</translation>
+      <translation>Tikai lejupielādēt</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="72"/>
       <source>&amp;Skip version</source>
-      <translation type="unfinished">&amp;Skip version</translation>
+      <translation>&amp;Izlaist versiju</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="82"/>
       <source>&amp;Disable dialog</source>
-      <translation type="unfinished">&amp;Disable dialog</translation>
+      <translation>&amp;Atspējot dialoglodziņu</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="83"/>
@@ -7748,7 +7748,7 @@ This cannot be undone!</translation>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="93"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>&amp;Atcelt</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="249"/>
@@ -7815,39 +7815,39 @@ This cannot be undone!</translation>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="454"/>
       <source>Updater script '%1' doesn't exist!</source>
-      <translation type="unfinished">Updater script '%1' doesn't exist!</translation>
+      <translation>Atjauninātāja skripts '%1' neeksistē!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="463"/>
       <source>Updater unzip executable '%1' doesn't exist!</source>
-      <translation type="unfinished">Updater unzip executable '%1' doesn't exist!</translation>
+      <translation>Atjauninātāja unzip izpildāmā '%1' neeksistē!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="472"/>
       <location filename="../dialogs/updatedialog.cpp" line="481"/>
       <source>Could not copy updater script '%1' to '%2'!</source>
-      <translation type="unfinished">Could not copy updater script '%1' to '%2'!</translation>
+      <translation>Nevarēja nokopēt atjauninātāja skriptu '%1' uz '%2'!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="491"/>
       <source>Couldn't find updater script: %1</source>
-      <translation type="unfinished">Couldn't find updater script: %1</translation>
+      <translation>Nevarēju atrast atjauninātāja skriptu: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="500"/>
       <source>Couldn't find unzip executable: %1</source>
-      <translation type="unfinished">Couldn't find unzip executable: %1</translation>
+      <translation>Nevarēju atrast izkopējamo izpildāmo: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="350"/>
       <location filename="../dialogs/updatedialog.cpp" line="506"/>
       <source>Proceed with update</source>
-      <translation type="unfinished">Proceed with update</translation>
+      <translation>Turpiniet ar atjaunināšanu</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="507"/>
       <source>The download is now finished. Do you want to update and restart QOwnNotes?</source>
-      <translation type="unfinished">The download is now finished. Do you want to update and restart QOwnNotes?</translation>
+      <translation>Lejupielāde ir pabeigta. Vai vēlaties atjaunināt un restartēt QOwnNotes?</translation>
     </message>
   </context>
   <context>
@@ -7877,12 +7877,12 @@ This cannot be undone!</translation>
     <message>
       <location filename="../services/updateservice.cpp" line="230"/>
       <source>No updates</source>
-      <translation type="unfinished">No updates</translation>
+      <translation>Nav atjauninājumu</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="231"/>
       <source>There are no updates available.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; is the latest version.</source>
-      <translation type="unfinished">There are no updates available.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; is the latest version.</translation>
+      <translation>Nav pieejami atjauninājumi. &lt;br/&gt; &lt;strong&gt;%1&lt;/strong&gt; ir jaunākā versija.</translation>
     </message>
   </context>
   <context>
@@ -7933,16 +7933,16 @@ This cannot be undone!</translation>
     <message numerus="yes">
       <location filename="../services/websocketserverservice.cpp" line="188"/>
       <source>%n bookmark(s) created</source>
-      <translation type="unfinished">
-        <numerusform>%n bookmark(s) created</numerusform>
-        <numerusform>%n bookmark(s) created</numerusform>
-        <numerusform>%n bookmark(s) created</numerusform>
+      <translation>
+        <numerusform>Izveidota %n grāmatzīme</numerusform>
+        <numerusform>Izveidotas %n grāmatzīmes</numerusform>
+        <numerusform>Izveidotas %n grāmatzīmes</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../services/websocketserverservice.cpp" line="327"/>
       <source>%1 was disconnected from QOwnNotes server</source>
-      <translation type="unfinished">%1 was disconnected from QOwnNotes server</translation>
+      <translation>%1 tika atvienots no QOwnNotes servera</translation>
     </message>
   </context>
   <context>
@@ -7950,7 +7950,7 @@ This cannot be undone!</translation>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="20"/>
       <source>Security token</source>
-      <translation type="unfinished">Security token</translation>
+      <translation>Drošības marķieris</translation>
     </message>
     <message>
       <location filename="../dialogs/websockettokendialog.ui" line="26"/>
