@@ -53,7 +53,7 @@ install:
     if [[ "$TRAVIS_OS_NAME" == "osx" ]]
     then
       brew update > /dev/null
-      brew install qt5 ccache
+      brew install qt5 ccache aspell
       export PATH="/usr/local/opt/ccache/bin:$PATH"
       export QTDIR="/usr/local/opt/qt5"
     fi

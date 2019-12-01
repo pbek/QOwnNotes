@@ -2549,7 +2549,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionasd">
    <property name="text">
-    <string>asd</string>
+    <string notr="true">asd</string>
    </property>
   </action>
  </widget>
