@@ -17,6 +17,7 @@ NoteHistoryItem::NoteHistoryItem(Note *note, QPlainTextEdit *textEdit) :
 
     if (note != nullptr) {
         _noteName = note->getName();
+        _noteId = note->getId();
         _noteSubFolderPathData = note->noteSubFolderPathData();
     }
 
@@ -28,10 +29,12 @@ NoteHistoryItem::NoteHistoryItem(Note *note, QPlainTextEdit *textEdit) :
 }
 
 NoteHistoryItem::NoteHistoryItem(QString noteName,
+                                 int noteId,
                                  QString noteSubFolderPathData,
                                  int cursorPosition,
                                  float relativeScrollBarPosition) {
     _noteName = std::move(noteName);
+    _noteId = noteId;
     _noteSubFolderPathData = std::move(noteSubFolderPathData);
     _cursorPosition = cursorPosition;
     _relativeScrollBarPosition = relativeScrollBarPosition;
@@ -53,11 +56,15 @@ QString NoteHistoryItem::getNoteName() const {
     return _noteName;
 }
 
+int NoteHistoryItem::getNoteId() const {
+    return _noteId;
+}
+
 QString NoteHistoryItem::getNoteSubFolderPathData() const {
     return _noteSubFolderPathData;
 }
 
-Note NoteHistoryItem::getNote() {
+Note NoteHistoryItem::getNote() const {
     NoteSubFolder noteSubFolder = NoteSubFolder::fetchByPathData(
             _noteSubFolderPathData);
     return Note::fetchByName(_noteName, noteSubFolder.getId());
@@ -114,7 +121,7 @@ QDebug operator<<(QDebug dbg, const NoteHistoryItem &item) {
  * @return
  */
 QDataStream &operator<<(QDataStream &out, const NoteHistoryItem &item) {
-    out << item.getNoteName() << item.getNoteSubFolderPathData()
+    out << item.getNoteName() << item.getNoteId() << item.getNoteSubFolderPathData()
         << item.getCursorPosition() << item.getRelativeScrollBarPosition();
 
     return out;
@@ -129,13 +136,14 @@ QDataStream &operator<<(QDataStream &out, const NoteHistoryItem &item) {
  */
 QDataStream &operator>>(QDataStream &in, NoteHistoryItem &item) {
     QString noteName;
+    int noteId;
     QString noteSubFolderPathData;
     int cursorPosition;
     float relativeScrollBarPosition;
 
-    in >> noteName >> noteSubFolderPathData >> cursorPosition >>
+    in >> noteName >> noteId >> noteSubFolderPathData >> cursorPosition >>
        relativeScrollBarPosition;
-    item = NoteHistoryItem(noteName, noteSubFolderPathData, cursorPosition,
+    item = NoteHistoryItem(noteName, noteId, noteSubFolderPathData, cursorPosition,
             relativeScrollBarPosition);
 
     return in;
@@ -259,10 +267,10 @@ void NoteHistory::updateCursorPositionOfNote(Note note, QPlainTextEdit *textEdit
  */
 NoteHistoryItem NoteHistory::getLastItemOfNote(const Note &note) const {
     if (!isEmpty()) {
-        for (int i = 0; i < noteHistory->count(); i++) {
-            NoteHistoryItem item = noteHistory->at(i);
+        for (int i = 0; i < noteHistory->count(); ++i) {
+            const NoteHistoryItem &item = noteHistory->at(i);
 
-            if (item.getNote().getId() == note.getId()) {
+            if (item.getNoteId() == note.getId()) {
                 return item;
             }
         }

@@ -10,21 +10,23 @@ class NoteHistoryItem
 {
 public:
     explicit NoteHistoryItem(Note *note = nullptr, QPlainTextEdit *textEdit = nullptr);
-    explicit NoteHistoryItem(QString noteName, QString noteSubFolderPathData,
+    explicit NoteHistoryItem(QString noteName, int noteId, QString noteSubFolderPathData,
                              int cursorPosition,
                              float relativeScrollBarPosition);
     friend QDebug operator<<(QDebug dbg, const NoteHistoryItem &item);
     QString getNoteName() const;
+    int getNoteId() const;
     QString getNoteSubFolderPathData() const;
     int getCursorPosition() const;
     float getRelativeScrollBarPosition() const;
-    Note getNote();
+    Note getNote() const;
     bool isNoteValid();
     bool operator ==(const NoteHistoryItem &item) const;
     void restoreTextEditPosition(QPlainTextEdit *textEdit);
 
 private:
     QString _noteName;
+    int _noteId;
     QString _noteSubFolderPathData;
     int _cursorPosition;
     float _relativeScrollBarPosition;
