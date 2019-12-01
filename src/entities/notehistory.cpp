@@ -155,7 +155,7 @@ QDataStream &operator>>(QDataStream &in, NoteHistoryItem &item) {
  */
 
 NoteHistory::NoteHistory() {
-    noteHistory = new QList<NoteHistoryItem>;
+    noteHistory = new QVector<NoteHistoryItem>;
     currentIndex = 0;
 }
 
@@ -163,7 +163,7 @@ NoteHistory::NoteHistory(const NoteHistory &h) :
     currentIndex(h.currentIndex),
     currentHistoryItem(h.currentHistoryItem)
 {
-    noteHistory = new QList<NoteHistoryItem>;
+    noteHistory = new QVector<NoteHistoryItem>;
     *noteHistory = *h.noteHistory;
 }
 
@@ -172,7 +172,7 @@ NoteHistory &NoteHistory::operator=(const NoteHistory &rhs) {
         return *this;
 
     delete noteHistory;
-    noteHistory = new QList<NoteHistoryItem>;
+    noteHistory = new QVector<NoteHistoryItem>;
     *noteHistory = *rhs.noteHistory;
 
     currentIndex = rhs.currentIndex;

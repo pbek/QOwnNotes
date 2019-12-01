@@ -41,7 +41,7 @@ Q_DECLARE_METATYPE(NoteHistoryItem)
 class NoteHistory
 {
 private:
-    QList<NoteHistoryItem> *noteHistory;
+    QVector<NoteHistoryItem> *noteHistory;
     int currentIndex;
     NoteHistoryItem currentHistoryItem;
     int lastIndex();
