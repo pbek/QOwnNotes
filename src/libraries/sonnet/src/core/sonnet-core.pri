@@ -45,7 +45,7 @@ exists("/usr/include/aspell.h") {
 }
 
 #wont work for now
-unix: {
+win32: {
 exists ("C:\\Qt\\5.13\\mingw73_32\\include\\aspell.h") {
     message ("Windows ASpell enabled")
     LIBS += -laspell-15
