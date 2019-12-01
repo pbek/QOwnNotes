@@ -2276,7 +2276,7 @@ void MainWindow::readSettings() {
     spellBackendGroup = new QActionGroup(ui->menuSpelling_backend);
     loadSpellingBackends();
 #else
-    ui->menuSpelling_backend->hide();
+    ui->menuSpelling_backend->menuAction()->setVisible(false);
 #endif
 
     //load language dicts names into menu
